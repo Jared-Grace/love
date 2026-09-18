@@ -1,14 +1,14 @@
-import { html_div_code_lines } from "./html_div_code_lines.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { html_div_code_lines } from "./html_div_code_lines.mjs";
 import { html_div_code } from "./html_div_code.mjs";
+import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { app_code_lesson_name_no_quotes_box } from "./app_code_lesson_name_no_quotes_box.mjs";
 export function app_code_lesson_statement_name_copy_code_box(
   root,
@@ -55,7 +55,9 @@ export function app_code_lesson_statement_name_copy_code_box(
     "Then we write out what is inside ",
     name_copy,
   ]);
-  app_code_code_lines_writes_out(box_code, [logged], word_first);
+  ("A BOX THAT SHOWS WHAT A PROGRAM WRITES OUT SHOWS THE WHOLE PROGRAM. The two lines that make the cups and the line that copies one of them stand above as the lines being taught, and stand here again because the word written out underneath is a claim, and a claim about what a program writes out is only checkable against a program that runs on its own. Shown as the log line alone, the answer rested on three lines a learner had to carry down the box - and this screen's whole point is which cup the copied word came from, which only the copying line says.");
+  let lines = [held_first, held_last, copied, logged];
+  app_code_code_lines_writes_out(box_code, lines, word_first);
   app_code_lesson_name_no_quotes_box(root, name_first, name_copy, word_first);
   return box_code;
 }

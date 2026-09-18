@@ -1,3 +1,4 @@
+import { lyric_video_line_lit_colour } from "./lyric_video_line_lit_colour.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { subtract } from "./subtract.mjs";
 import { multiply_round } from "./multiply_round.mjs";
@@ -11,7 +12,8 @@ import { list_join_space } from "./list_join_space.mjs";
 export function lyric_video_line_words_text(line, lead) {
   "$plain line";
   "$plain lead";
-  "The words of one sung line as subtitle text in which each word fades to red as it begins to be sung and back to white as it is done.";
+  "The words of one sung line as subtitle text in which each word fades to its line's lit colour as it begins to be sung and back to white as it is done.";
+  "★ WHICH COLOUR IS ASKED OF THE LINE RATHER THAN SETTLED HERE, AND IT USED TO BE RED WRITTEN OUT IN THIS FILE. One colour for a whole song says the same thing over the cross and over the empty tomb, and a song that goes through both is saying two things; a line is the smallest piece of a song that has a single thing to say, so it is the piece that carries the colour. A line that asks for nothing still lights red, so nothing already watched changes.";
   "★ EACH FADE IS CENTRED ON THE MOMENT, SO THE WORD IS HALF RED EXACTLY WHEN IT BEGINS AND HALF WHITE EXACTLY WHEN IT IS DONE. It used to begin a fifth of a second early and end as late, so a word timed a little wrong was still red while it was sung; the human then placed the words by hand, which lights them exactly, and asked for no pad. They asked for the fade back without the pad: a word is done the moment the next begins, so the one fading out and the one fading in cross over each other on the same moment rather than one waiting for the other.";
   "★ A FADE IS NEVER LONGER THAN THE WORD IS LIT. Centred fades on a word shorter than the fade would have its fade out begin before its fade in ends, and the two changes of colour would fight; shortened to the word, the fade in ends exactly where the fade out begins.";
   "★ NO CHANGE OF COLOUR ENDS AT ZERO. The renderer reads a change whose end is written as zero as one that lasts the whole line, so a first word begun before its line goes up would creep to red over the entire card. Every change ends at least a millisecond after it begins, and a millisecond is far shorter than a frame.";
@@ -23,6 +25,7 @@ export function lyric_video_line_words_text(line, lead) {
   let shown = subtract(line.start, lead);
   let words = line.words;
   let fade_most = 0.3;
+  let lit_colour = lyric_video_line_lit_colour(line);
   function moment(seconds) {
     let since = subtract(seconds, shown);
     let ms = multiply_round(since, 1000);
@@ -45,9 +48,9 @@ export function lyric_video_line_words_text(line, lead) {
     let lit = subtract(done, word.start);
     let lit_kept = math_max(lit, 0);
     let fade = math_min(fade_most, lit_kept);
-    let red = change(word.start, fade, "&H0000FF&");
+    let to_lit = change(word.start, fade, lit_colour);
     let white = change(done, fade, "&HFFFFFF&");
-    let text = "{\\1c&HFFFFFF&" + red + white + "}" + word.text;
+    let text = "{\\1c&HFFFFFF&" + to_lit + white + "}" + word.text;
     return text;
   }
   let texts = list_map_index(words, word_text);
