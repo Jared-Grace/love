@@ -744,7 +744,7 @@ export function bible_glyph_chapter_exo06() {
           "in",
           "order",
           "to",
-          "bring",
+          "$walking+tray_out",
           "the",
           "$son",
           "of",
