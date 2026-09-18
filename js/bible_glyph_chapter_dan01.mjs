@@ -183,7 +183,7 @@ export function bible_glyph_chapter_dan01() {
           "trained",
           "for",
           "three",
-          "years,",
+          "$year,",
           "after",
           "which",
           "they",
