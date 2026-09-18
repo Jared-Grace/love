@@ -1103,7 +1103,7 @@ export function bible_glyph_chapter_exo12() {
           "So",
           "the",
           "$family",
-          "took",
+          "$lifting",
           "their",
           "dough",
           "before",
