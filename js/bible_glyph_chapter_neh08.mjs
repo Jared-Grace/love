@@ -449,7 +449,7 @@ export function bible_glyph_chapter_neh08() {
           "and",
           "drink,",
           "to",
-          "send",
+          "$hand_sending",
           "out",
           "portions,",
           "and",
