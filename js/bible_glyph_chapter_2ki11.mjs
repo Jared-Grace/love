@@ -524,7 +524,7 @@ export function bible_glyph_chapter_2ki11() {
           "of",
           "the",
           "army,",
-          "Bring",
+          "$walking+tray_out",
           "her",
           "out",
           "between",
