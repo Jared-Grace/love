@@ -455,7 +455,7 @@ export function bible_glyph_chapter_gen02() {
           "$speech,",
           "You",
           "may",
-          "eat",
+          "$eating",
           "freely",
           "from",
           "every",
