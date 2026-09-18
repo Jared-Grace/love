@@ -136,7 +136,7 @@ export function bible_glyph_chapter_mic05() {
           "in",
           "the",
           "majestic",
-          "name",
+          "$name_tag",
           "of",
           "the",
           "$i_am",
