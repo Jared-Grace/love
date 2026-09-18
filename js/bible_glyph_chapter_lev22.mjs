@@ -312,7 +312,7 @@ export function bible_glyph_chapter_lev22() {
           "hand",
           "may",
           "$no_entry",
-          "eat",
+          "$eating",
           "$sparkle.",
         ],
       },
