@@ -222,7 +222,7 @@ export function reply_proposals() {
       },
       {
         from: "",
-        message: "I am evangelist Grace from ***REMOVED*** Kenya",
+        message: "I am evangelist Grace from Mombasa Kenya",
         answered: true,
         outputs: located,
       },
