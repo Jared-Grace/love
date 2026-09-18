@@ -90,7 +90,7 @@ export function bible_glyph_chapter_1sa17() {
           "Then",
           "a",
           "$man_beard",
-          "named",
+          "$name_tag",
           "Goliath,",
           "who",
           "was",
