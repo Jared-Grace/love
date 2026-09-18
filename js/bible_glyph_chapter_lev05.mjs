@@ -439,7 +439,7 @@ export function bible_glyph_chapter_lev05() {
       },
       {
         verse_number: 14,
-        words: ["Then", "$i_am", "$mouth", "to", "Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
       },
       {
         verse_number: 15,
