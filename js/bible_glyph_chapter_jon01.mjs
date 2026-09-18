@@ -48,7 +48,7 @@ export function bible_glyph_chapter_jon01() {
           "its",
           "$thumbs_down",
           "has",
-          "come",
+          "$walking+pointing_up",
           "up",
           "before",
           "Me.",
