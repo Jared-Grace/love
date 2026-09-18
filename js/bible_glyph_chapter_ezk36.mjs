@@ -544,7 +544,7 @@ export function bible_glyph_chapter_ezk36() {
           "will",
           "$no_entry",
           "longer",
-          "endure",
+          "$lifting",
           "the",
           "reproach",
           "of",
