@@ -20,7 +20,7 @@ export function bible_glyph_chapter_exo24() {
           "$speech",
           "to",
           "$proper_name$Moses,",
-          "Come",
+          "$walking+pointing_up",
           "up",
           "to",
           "$i_am,",
