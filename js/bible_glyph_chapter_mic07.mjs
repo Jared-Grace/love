@@ -263,7 +263,7 @@ export function bible_glyph_chapter_mic07() {
           "arise;",
           "though",
           "I",
-          "sit",
+          "$person+house",
           "in",
           "$darkness,",
           "the",
