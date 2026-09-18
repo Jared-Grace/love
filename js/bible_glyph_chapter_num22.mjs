@@ -865,7 +865,7 @@ export function bible_glyph_chapter_num22() {
           "became",
           "furious",
           "and",
-          "beat",
+          "$fist",
           "her",
           "with",
           "his",
