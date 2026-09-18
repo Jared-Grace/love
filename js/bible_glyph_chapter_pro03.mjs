@@ -42,7 +42,7 @@ export function bible_glyph_chapter_pro03() {
           "to",
           "your",
           "$sun,",
-          "years",
+          "$year",
           "to",
           "your",
           "$sprout,",
