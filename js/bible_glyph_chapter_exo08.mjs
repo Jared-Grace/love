@@ -243,7 +243,7 @@ export function bible_glyph_chapter_exo08() {
           "let",
           "your",
           "$family",
-          "go,",
+          "$hand_sending,",
           "that",
           "they",
           "may",
