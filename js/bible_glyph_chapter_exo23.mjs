@@ -17,7 +17,7 @@ export function bible_glyph_chapter_exo23() {
           "You",
           "shall",
           "$no_entry",
-          "spread",
+          "$lifting",
           "a",
           "false",
           "report.",
