@@ -254,7 +254,7 @@ export function bible_glyph_chapter_deu14() {
           "$water,",
           "you",
           "may",
-          "eat",
+          "$eating",
           "anything",
           "with",
           "fins",
