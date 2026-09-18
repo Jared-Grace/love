@@ -98,7 +98,7 @@ export function bible_glyph_chapter_deu14() {
           "that",
           "you",
           "may",
-          "eat:",
+          "$eating:",
           "The",
           "$ox,",
           "the",
