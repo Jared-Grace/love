@@ -86,7 +86,7 @@ export function bible_glyph_chapter_jos02() {
           "$king",
           "of",
           "$proper_name$Jericho",
-          "sent",
+          "$hand_sending",
           "word",
           "to",
           "$proper_name$Rahab",
