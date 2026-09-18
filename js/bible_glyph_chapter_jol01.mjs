@@ -41,7 +41,7 @@ export function bible_glyph_chapter_jol01() {
           "all",
           "you",
           "who",
-          "dwell",
+          "$person+house",
           "in",
           "the",
           "$earth.",
