@@ -23,10 +23,10 @@ export function bible_glyph_chapter_jol01() {
           "that",
           "came",
           "to",
-          "Joel",
+          "$proper_name$Joel",
           "$son",
           "of",
-          "Pethuel:",
+          "$proper_name$Pethuel:",
         ],
       },
       {
