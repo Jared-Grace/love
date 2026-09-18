@@ -586,7 +586,7 @@ export function bible_glyph_chapter_isa49() {
       {
         verse_number: 18,
         words: [
-          "Lift",
+          "$lifting",
           "up",
           "your",
           "$eyes",
