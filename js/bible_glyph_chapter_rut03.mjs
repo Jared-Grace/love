@@ -105,7 +105,7 @@ export function bible_glyph_chapter_rut03() {
           "he",
           "has",
           "finished",
-          "eating",
+          "$eating",
           "and",
           "drinking.",
         ],
