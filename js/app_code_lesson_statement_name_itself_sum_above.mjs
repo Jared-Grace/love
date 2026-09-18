@@ -6,13 +6,13 @@ import { add } from "./add.mjs";
 import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
 import { app_code_lesson_statement_name_third } from "./app_code_lesson_statement_name_third.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_total } from "./app_code_lesson_statement_name_total.mjs";
-import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
-import { app_code_lesson_statement_name_again } from "./app_code_lesson_statement_name_again.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
+import { app_code_lesson_statement_name_again } from "./app_code_lesson_statement_name_again.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div_code } from "./html_div_code.mjs";
 export function app_code_lesson_statement_name_itself_sum_above(root, context) {
@@ -34,6 +34,8 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   let name_third = app_code_lesson_statement_name_third();
   let box_total = app_code_container_light_blue(root);
   ("Every reminder names its cups in brackets as well, not just the box the lesson turns on. A reminder is read fastest of all - a learner is checking that they already know it rather than working it out - and a sentence made only of the words a name and two names makes them look down at the code to find out which cups it is talking about, which is slower than reading the letters in place.");
+  ("A reminder ends by naming the line it is about, whole and with its semicolon, because that line is drawn a few rows below it and again further down the screen. Described in words alone, a learner has to read the sentence, look down at the program and work out which of its lines the sentence was pointing at - and this screen is about one line turning into another, so which line is the whole question.");
+  let code_total = js_code_let_statement(name_third, names_sum);
   app_code_remember_from_lesson(
     box_total,
     context,
@@ -45,25 +47,27 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
       name_first,
       ", ",
       name_last,
-      ") add up to:",
+      ") add up to (",
+      code_total,
+      "):",
     ],
   );
   ("each box's lines are handed over together rather than one at a time, because nothing is said between them: each box is one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
   let held_first = js_code_let_statement(name_first, number_first);
   let held_last = js_code_let_statement(name_last, number_last);
-  let code_total = js_code_let_statement(name_third, names_sum);
   let logged_third = js_code_console_log_statement(name_third);
   let lines_total = [held_first, held_last, code_total, logged_third];
   app_code_code_lines_writes_out(box_total, lines_total, total);
   let box_again = app_code_container_light_blue(root);
+  ("the line itself stands where the new value alone used to, because the line holds that value and says what is done with it. The number on its own named half of what the reminder is about and left the other half - the name being filled rather than made - to be found by looking down at the program.");
+  let given_again = js_code_assign_statement(name_first, number_new);
   app_code_remember_from_lesson(
     box_again,
     context,
     app_code_lesson_statement_name_again,
-    ["we can give a name (", name_first, ") a new value (", number_new, "):"],
+    ["we can give a name (", name_first, ") a new value (", given_again, "):"],
   );
   let held_again = js_code_let_statement(name_first, number_first);
-  let given_again = js_code_assign_statement(name_first, number_new);
   let logged_again = js_code_console_log_statement(name_first);
   let lines_again = [held_again, given_again, logged_again];
   app_code_code_lines_writes_out(box_again, lines_again, number_new);
