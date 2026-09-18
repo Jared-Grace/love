@@ -43,7 +43,7 @@ export function bible_glyph_chapter_gen37() {
           "Joseph",
           "was",
           "seventeen",
-          "years",
+          "$year",
           "$son,",
           "he",
           "was",
