@@ -701,7 +701,7 @@ export function bible_glyph_chapter_2ki06() {
         verse_number: 22,
         words: [
           "$no_entry",
-          "kill",
+          "$fist",
           "them,",
           "he",
           "$speech.",
