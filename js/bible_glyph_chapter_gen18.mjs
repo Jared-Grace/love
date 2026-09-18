@@ -392,7 +392,7 @@ export function bible_glyph_chapter_gen18() {
           "Can",
           "I",
           "really",
-          "bear",
+          "$baby",
           "a",
           "child",
           "when",
