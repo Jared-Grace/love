@@ -467,7 +467,7 @@ export function bible_glyph_chapter_2ch07() {
           "or",
           "if",
           "I",
-          "send",
+          "$hand_sending",
           "a",
           "plague",
           "among",
