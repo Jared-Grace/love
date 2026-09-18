@@ -73,7 +73,7 @@ export function bible_glyph_chapter_psa146() {
         words: [
           "His",
           "$wind",
-          "departs,",
+          "$walking+tray_out,",
           "he",
           "$turn_back",
           "to",
