@@ -626,7 +626,7 @@ export function bible_glyph_chapter_exo12() {
           "$house.",
           "If",
           "anyone",
-          "eats",
+          "$eating",
           "something",
           "leavened,",
           "that",
