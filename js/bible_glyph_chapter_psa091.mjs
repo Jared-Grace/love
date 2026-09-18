@@ -312,7 +312,7 @@ export function bible_glyph_chapter_psa091() {
           "he",
           "$lightbulb",
           "My",
-          "name,",
+          "$name_tag,",
           "I",
           "will",
           "protect",
