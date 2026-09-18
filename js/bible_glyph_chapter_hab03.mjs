@@ -121,7 +121,7 @@ export function bible_glyph_chapter_hab03() {
           "Him,",
           "and",
           "fever",
-          "followed",
+          "$walking+tray_out",
           "in",
           "His",
           "steps.",
