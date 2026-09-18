@@ -665,7 +665,7 @@ export function bible_glyph_chapter_exo12() {
           "all",
           "your",
           "homes;",
-          "eat",
+          "$eating",
           "unleavened",
           "bread.",
         ],
