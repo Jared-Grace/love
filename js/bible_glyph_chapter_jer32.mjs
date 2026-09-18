@@ -439,7 +439,7 @@ export function bible_glyph_chapter_jer32() {
           "all",
           "the",
           "$menorah",
-          "sitting",
+          "$person+house",
           "in",
           "the",
           "courtyard",
