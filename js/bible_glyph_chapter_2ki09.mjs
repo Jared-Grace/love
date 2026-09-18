@@ -1020,7 +1020,7 @@ export function bible_glyph_chapter_2ki09() {
           "pursued",
           "him,",
           "$speech,",
-          "Shoot",
+          "$fist",
           "him",
           "too.",
           "So",
