@@ -707,7 +707,7 @@ export function bible_glyph_chapter_1sa24() {
           "me",
           "by",
           "the",
-          "LORD",
+          "$i_am",
           "that",
           "you",
           "will",
