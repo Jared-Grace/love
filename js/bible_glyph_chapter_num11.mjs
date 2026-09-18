@@ -610,7 +610,7 @@ export function bible_glyph_chapter_num11() {
         words: [
           "You",
           "will",
-          "eat",
+          "$eating",
           "it",
           "$no_entry",
           "for",
