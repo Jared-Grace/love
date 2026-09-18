@@ -135,7 +135,7 @@ export function bible_glyph_chapter_2ki05() {
           "$crown",
           "what",
           "the",
-          "girl",
+          "$girl",
           "from",
           "the",
           "$earth",
