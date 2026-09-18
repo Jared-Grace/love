@@ -591,7 +591,7 @@ export function bible_glyph_chapter_lev25() {
           "in",
           "the",
           "seventh",
-          "year",
+          "$year",
           "if",
           "we",
           "do",
