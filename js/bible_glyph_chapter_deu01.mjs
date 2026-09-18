@@ -657,7 +657,7 @@ export function bible_glyph_chapter_deu01() {
           "$speech,",
           "Let",
           "us",
-          "send",
+          "$hand_sending",
           "men",
           "ahead",
           "of",
