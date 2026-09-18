@@ -86,7 +86,7 @@ export function bible_glyph_chapter_mal04() {
           "and",
           "you",
           "will",
-          "go",
+          "$walking+tray_out",
           "out",
           "and",
           "leap",
