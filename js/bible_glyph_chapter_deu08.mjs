@@ -311,7 +311,7 @@ export function bible_glyph_chapter_deu08() {
         words: [
           "When",
           "you",
-          "eat",
+          "$eating",
           "and",
           "are",
           "satisfied,",
