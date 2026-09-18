@@ -590,7 +590,7 @@ export function bible_glyph_chapter_hag02() {
           "The",
           "vine,",
           "the",
-          "fig,",
+          "$fig,",
           "the",
           "pomegranate,",
           "and",
