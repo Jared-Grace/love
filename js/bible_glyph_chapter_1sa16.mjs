@@ -704,7 +704,7 @@ export function bible_glyph_chapter_1sa16() {
         words: [
           "Then",
           "Saul",
-          "sent",
+          "$hand_sending",
           "word",
           "to",
           "$proper_name$Jesse,",
