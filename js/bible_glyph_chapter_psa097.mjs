@@ -146,7 +146,7 @@ export function bible_glyph_chapter_psa097() {
       {
         verse_number: 8,
         words: [
-          "Zion",
+          "$proper_name$Zion",
           "$ear",
           "and",
           "rejoices,",
@@ -154,7 +154,7 @@ export function bible_glyph_chapter_psa097() {
           "the",
           "$woman",
           "of",
-          "Judah",
+          "$proper_name$Judah",
           "exult,",
           "because",
           "of",
