@@ -660,7 +660,7 @@ export function bible_glyph_chapter_rut01() {
           "me,",
           "and",
           "the",
-          "Almighty",
+          "$might",
           "has",
           "afflicted",
           "me.",
