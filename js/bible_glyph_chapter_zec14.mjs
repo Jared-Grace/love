@@ -542,7 +542,7 @@ export function bible_glyph_chapter_zec14() {
           "against",
           "$proper_name$Jerusalem",
           "will",
-          "go",
+          "$walking+pointing_up",
           "up",
           "year",
           "after",
