@@ -1,3 +1,4 @@
+import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_calls_walk_unwaited } from "./functions_calls_walk_unwaited.mjs";
 import { property_get } from "./property_get.mjs";
@@ -10,7 +11,7 @@ export async function functions_calls_walk_unwaited_gate_run() {
   ("The count of walkers is checked before the verdict is, because an empty set of walkers makes every call in the repo innocent and the answer comes out green either way.");
   let found = await functions_calls_walk_unwaited();
   let walkers = property_get(found, "walkers");
-  let reading_is = walkers > 0;
+  let reading_is = greater_than(walkers, 0);
   assert_json(reading_is, {
     found,
     hint: "no walker was found anywhere in the repo, which cannot be true - the reading itself has stopped working, so a green verdict from it means nothing",
