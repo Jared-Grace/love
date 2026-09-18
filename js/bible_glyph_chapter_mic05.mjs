@@ -145,7 +145,7 @@ export function bible_glyph_chapter_mic05() {
           "And",
           "they",
           "will",
-          "dwell",
+          "$person+house",
           "securely,",
           "for",
           "then",
