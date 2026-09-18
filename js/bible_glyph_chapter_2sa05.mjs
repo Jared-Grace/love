@@ -701,7 +701,7 @@ export function bible_glyph_chapter_2sa05() {
           "before",
           "you",
           "to",
-          "strike",
+          "$fist",
           "the",
           "camp",
           "of",
