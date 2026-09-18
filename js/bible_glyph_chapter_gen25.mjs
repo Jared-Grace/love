@@ -117,7 +117,7 @@ export function bible_glyph_chapter_gen25() {
           "and",
           "sent",
           "them",
-          "away",
+          "$hand_sending",
           "from",
           "$proper_name$Isaac",
           "his",
