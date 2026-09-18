@@ -770,7 +770,7 @@ export function bible_glyph_chapter_amo05() {
           "the",
           "$i_am,",
           "whose",
-          "name",
+          "$name_tag",
           "is",
           "the",
           "$fire",
