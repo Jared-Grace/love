@@ -819,7 +819,7 @@ export function bible_glyph_chapter_jol02() {
           "will",
           "praise",
           "the",
-          "name",
+          "$name_tag",
           "of",
           "the",
           "$i_am",
