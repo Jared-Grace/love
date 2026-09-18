@@ -767,7 +767,7 @@ export function bible_glyph_chapter_1sa17() {
           "the",
           "$man_beard",
           "who",
-          "kills",
+          "$fist",
           "this",
           "$proper_name$Philistine",
           "and",
