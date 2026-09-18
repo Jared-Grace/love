@@ -472,7 +472,7 @@ export function bible_glyph_chapter_gen02() {
           "you",
           "must",
           "$no_entry",
-          "eat",
+          "$eating",
           "$tray_out",
           "the",
           "$tree",
