@@ -133,7 +133,7 @@ export function bible_glyph_chapter_jon04() {
         words: [
           "Then",
           "Jonah",
-          "left",
+          "$walking+tray_out",
           "the",
           "$city",
           "and",
