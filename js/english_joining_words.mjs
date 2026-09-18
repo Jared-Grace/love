@@ -4,6 +4,7 @@ export function english_joining_words() {
   ("The English words that carry no picture of their own - the articles, the joining words, the pronouns and the little helping verbs - so a reading that is trying to find a MEANING inside a sentence can tell the meaning apart from the sentence holding it.");
   ("IT EXISTS BECAUSE A PHRASE GLOSS MATCHED ON ITS SMALLEST WORD. The interlinear glosses the covenant name as The LORD, and a reading asking whether that meaning is still in an English verse split it into its words and found the, which is in every verse ever written. The answer came back yes on hundreds of verses that did not hold the word at all.");
   ("IT IS NOT A LIST OF WORDS TO THROW AWAY. Some original words mean exactly one of these and nothing else - the Greek kai is and, the Hebrew lo is not - and there the little word IS the meaning. So a caller drops these only while the gloss has something else left, which is the difference between ignoring a word and ignoring a gloss.");
+  ("FOUR PREPOSITIONS WERE MISSING AND ONE OF THEM DREW A MARK (2026-09-18). Cain named the city after his son holds the Hebrew word for name twice, and English carries the second one as the bare preposition after. The guard that stops a mark landing on a little word only knows the words spelled here, after was not among them, and the name tag was drawn on it - one wrong mark in a hundred and twenty four, found by reading back which English words had taken marks rather than by counting how many had. Under, after, before and through were added together, since any of the four could have done the same thing and the list is the only place the guard looks.");
   let r = [
     "a",
     "an",
@@ -30,6 +31,10 @@ export function english_joining_words() {
     "off",
     "over",
     "upon",
+    "under",
+    "after",
+    "before",
+    "through",
     "as",
     "that",
     "this",
