@@ -475,7 +475,7 @@ export function bible_glyph_chapter_jol02() {
           "Let",
           "the",
           "bridegroom",
-          "leave",
+          "$walking+tray_out",
           "his",
           "room,",
           "and",
