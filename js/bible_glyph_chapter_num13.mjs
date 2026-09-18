@@ -298,7 +298,7 @@ export function bible_glyph_chapter_num13() {
         words: [
           "When",
           "Moses",
-          "sent",
+          "$hand_sending",
           "them",
           "to",
           "spy",
