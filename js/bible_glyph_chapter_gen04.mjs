@@ -590,7 +590,7 @@ export function bible_glyph_chapter_gen04() {
         words: [
           "And",
           "the",
-          "name",
+          "$name_tag",
           "of",
           "his",
           "$brother",
