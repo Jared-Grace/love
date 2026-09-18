@@ -44,7 +44,7 @@ export function bible_glyph_chapter_psa134() {
       {
         verse_number: 2,
         words: [
-          "Lift",
+          "$lifting",
           "up",
           "your",
           "$hand",
