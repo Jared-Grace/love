@@ -737,7 +737,7 @@ export function bible_glyph_chapter_gen41() {
           "them",
           "are",
           "seven",
-          "years,",
+          "$year,",
           "and",
           "so",
           "are",
