@@ -433,7 +433,7 @@ export function bible_glyph_chapter_1ki02() {
           "$castle",
           "thirty",
           "three",
-          "years",
+          "$year",
           "in",
           "$proper_name$Jerusalem.",
         ],
