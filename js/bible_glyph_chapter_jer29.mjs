@@ -1074,7 +1074,7 @@ export function bible_glyph_chapter_jer29() {
           "have",
           "$no_entry",
           "$man_beard",
-          "left",
+          "$person+house",
           "among",
           "this",
           "$family,",
