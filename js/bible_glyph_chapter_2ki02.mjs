@@ -654,7 +654,7 @@ export function bible_glyph_chapter_2ki02() {
           "$speech,",
           "Do",
           "$no_entry",
-          "send",
+          "$hand_sending",
           "them.",
         ],
       },
