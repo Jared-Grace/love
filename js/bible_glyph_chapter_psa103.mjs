@@ -18,7 +18,7 @@ export function bible_glyph_chapter_psa103() {
           "David.",
           "$speech+thumbs_up",
           "the",
-          "LORD,",
+          "$i_am,",
           "O",
           "my",
           "$person_other;",
