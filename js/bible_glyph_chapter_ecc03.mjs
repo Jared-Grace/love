@@ -540,7 +540,7 @@ export function bible_glyph_chapter_ecc03() {
           "spirit",
           "of",
           "$son",
-          "rises",
+          "$walking+pointing_up",
           "upward",
           "and",
           "the",
