@@ -30,7 +30,7 @@ export function bible_glyph_chapter_psa091() {
           "shadow",
           "of",
           "the",
-          "Almighty.",
+          "$might.",
         ],
       },
       {
