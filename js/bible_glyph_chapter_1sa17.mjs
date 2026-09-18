@@ -1475,7 +1475,7 @@ export function bible_glyph_chapter_1sa17() {
           "by",
           "$sword",
           "or",
-          "spear",
+          "$spear",
           "that",
           "the",
           "$i_am",
