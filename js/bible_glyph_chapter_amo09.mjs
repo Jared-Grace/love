@@ -457,7 +457,7 @@ export function bible_glyph_chapter_amo09() {
           "name,",
           "declares",
           "the",
-          "LORD,",
+          "$i_am,",
           "who",
           "will",
           "$hammer",
