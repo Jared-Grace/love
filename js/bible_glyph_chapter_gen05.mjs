@@ -462,7 +462,7 @@ export function bible_glyph_chapter_gen05() {
           "$proper_name$Methuselah",
           "three",
           "hundred",
-          "years,",
+          "$year,",
           "and",
           "he",
           "fathered",
