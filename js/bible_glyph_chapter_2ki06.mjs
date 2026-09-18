@@ -938,7 +938,7 @@ export function bible_glyph_chapter_2ki06() {
           "tomorrow",
           "we",
           "will",
-          "eat",
+          "$eating",
           "my",
           "$son.",
         ],
