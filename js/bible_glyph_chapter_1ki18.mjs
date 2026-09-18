@@ -1046,7 +1046,7 @@ export function bible_glyph_chapter_1ki18() {
           "$altar",
           "in",
           "the",
-          "name",
+          "$name_tag",
           "of",
           "the",
           "$i_am.",
