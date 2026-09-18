@@ -363,7 +363,7 @@ export function bible_glyph_chapter_job01() {
           "you",
           "must",
           "$no_entry",
-          "lay",
+          "$hand_sending",
           "a",
           "$hand",
           "on",
