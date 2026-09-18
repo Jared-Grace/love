@@ -716,7 +716,7 @@ export function bible_glyph_chapter_exo06() {
           "$son",
           "of",
           "Israel",
-          "out",
+          "$walking+tray_out",
           "of",
           "the",
           "$earth",
