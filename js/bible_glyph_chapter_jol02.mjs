@@ -566,7 +566,7 @@ export function bible_glyph_chapter_jol02() {
           "Behold,",
           "I",
           "will",
-          "send",
+          "$hand_sending",
           "you",
           "grain,",
           "new",
