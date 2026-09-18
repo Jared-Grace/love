@@ -19,7 +19,7 @@ export function bible_glyph_chapter_pro31() {
           "$speech",
           "of",
           "$king",
-          "Lemuel,",
+          "$proper_name$Lemuel,",
           "the",
           "burden",
           "that",
