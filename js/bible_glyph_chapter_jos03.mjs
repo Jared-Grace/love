@@ -251,7 +251,7 @@ export function bible_glyph_chapter_jos03() {
           "Command",
           "the",
           "$priest",
-          "carrying",
+          "$lifting",
           "the",
           "ark",
           "of",
