@@ -1272,7 +1272,7 @@ export function bible_glyph_chapter_deu01() {
           "them",
           "$no_entry",
           "to",
-          "go",
+          "$walking+pointing_up",
           "up",
           "and",
           "fight,",
