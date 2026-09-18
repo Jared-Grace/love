@@ -1372,7 +1372,7 @@ export function bible_glyph_chapter_1ki18() {
           "went",
           "up",
           "to",
-          "eat",
+          "$eating",
           "and",
           "drink.",
           "But",
