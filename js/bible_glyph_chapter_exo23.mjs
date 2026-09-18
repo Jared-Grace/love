@@ -838,7 +838,7 @@ export function bible_glyph_chapter_exo23() {
           "in",
           "a",
           "single",
-          "year,",
+          "$year,",
           "otherwise",
           "the",
           "$earth",
