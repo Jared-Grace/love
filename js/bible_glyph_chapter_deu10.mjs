@@ -576,7 +576,7 @@ export function bible_glyph_chapter_deu10() {
           "who",
           "shows",
           "$no_entry",
-          "partiality",
+          "$lifting",
           "and",
           "$hand_receiving",
           "$no_entry",
