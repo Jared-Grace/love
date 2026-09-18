@@ -858,7 +858,7 @@ export function bible_glyph_chapter_1ki01() {
           "$lightbulb",
           "who",
           "should",
-          "sit",
+          "$person+house",
           "on",
           "the",
           "throne",
