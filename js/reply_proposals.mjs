@@ -238,7 +238,7 @@ export function reply_proposals() {
       "a title is still required in front of the name, so evangelist Grace is recognised and a bare Grace is not. That was deliberate while any run of letters counted as a name, because a run of letters after I am matches every message ever sent. It need not stay that way now. A dictionary does not match I am hungry, so the title could be dropped and a bare Grace answered on the strength of the dictionary alone. Should it be?",
       "the dictionary is two thousand one hundred and sixty five names as of 2026-09-08, and it costs about a sixth of a second to read one message against it, measured on a full sentence rather than a short one. That is the whole price of the change and it is paid per message.",
       "the list is short of somebody, always. What is wanted is a way of noticing that - a message that was answered as though it said nothing when a person plainly gave a name - because otherwise the only person who finds out is the one who got the wrong reply.",
-      "the messages above are made up in the shape of real ones rather than quoted from them, because the real ones are the thing being taken out of here.",
+      "the messages above are made up in the shape of real ones rather than quoted from them, because the real ones are the thing being taken out of here. That claim was false when it was first written - the examples beside the word lists had been quoted, a town and a person's name among them, and a scrub that read the lists walked straight past them. Trivial openings like a bare greeting are the one exception: they identify nobody and stay.",
     ],
   };
   let f_name17 = fn_name("reply_word_in");
@@ -323,14 +323,14 @@ export function reply_proposals() {
     cases: [
       {
         from: "3d27ef64ea033e69",
-        message: "Hello mydearinChrist, am from NairobiinKenya,ampastor,",
+        message: "Hello myfriendinChrist, am from AccrainGhana,amteacher,",
         answered: true,
         outputs: located,
       },
       {
         from: "40d47c1ec2a9759d",
         message:
-          "I'mpastorDanielPeterJohnFromKarachiPakistancontact 92 03001234567MainRoadKarachiCity",
+          "I'mpastorSamuelAndrewMarkFromKarachiPakistancontact 92 03001234567MainRoadKarachiCity",
         answered: true,
         outputs: located,
       },
@@ -512,7 +512,7 @@ export function reply_proposals() {
       {
         from: "40d47c1ec2a9759d",
         message:
-          "I'mpastorDanielPeterJohnFromKarachiPakistancontact 92 03001234567MainRoadKarachiCity",
+          "I'mpastorSamuelAndrewMarkFromKarachiPakistancontact 92 03001234567MainRoadKarachiCity",
         answered: true,
         outputs: located,
       },
