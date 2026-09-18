@@ -18,7 +18,7 @@ export function bible_glyph_chapter_psa121() {
           "of",
           "ascents.",
           "I",
-          "lift",
+          "$lifting",
           "up",
           "my",
           "$eyes",
