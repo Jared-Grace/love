@@ -19,7 +19,7 @@ export function bible_glyph_chapter_gen17() {
           "Abram",
           "was",
           "ninety-nine",
-          "years",
+          "$year",
           "old,",
           "the",
           "$i_am",
