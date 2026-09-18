@@ -620,7 +620,7 @@ export function bible_glyph_chapter_ezk18() {
           "$son",
           "will",
           "$no_entry",
-          "bear",
+          "$lifting",
           "the",
           "iniquity",
           "of",
