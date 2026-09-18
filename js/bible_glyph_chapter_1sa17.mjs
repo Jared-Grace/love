@@ -253,7 +253,7 @@ export function bible_glyph_chapter_1sa17() {
           "fight",
           "me",
           "and",
-          "kill",
+          "$fist",
           "me,",
           "then",
           "we",
