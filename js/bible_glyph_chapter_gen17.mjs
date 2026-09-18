@@ -31,7 +31,7 @@ export function bible_glyph_chapter_gen17() {
           '"I',
           "am",
           "$fire",
-          "Almighty.",
+          "$might.",
           "$walking",
           "before",
           "Me",
