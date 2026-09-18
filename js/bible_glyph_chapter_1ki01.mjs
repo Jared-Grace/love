@@ -54,7 +54,7 @@ export function bible_glyph_chapter_1ki01() {
           "search",
           "for",
           "a",
-          "young",
+          "$girl",
           "virgin",
           "for",
           "our",
