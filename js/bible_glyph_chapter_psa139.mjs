@@ -184,7 +184,7 @@ export function bible_glyph_chapter_psa139() {
           "wings",
           "of",
           "the",
-          "dawn,",
+          "$dawn,",
           "if",
           "I",
           "settle",
