@@ -1236,7 +1236,7 @@ export function bible_glyph_chapter_1sa25() {
           "$speech",
           "to",
           "her,",
-          "Go",
+          "$walking+pointing_up",
           "up",
           "to",
           "your",
