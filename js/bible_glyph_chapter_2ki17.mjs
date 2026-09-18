@@ -857,7 +857,7 @@ export function bible_glyph_chapter_2ki17() {
           "the",
           "settlers",
           "first",
-          "lived",
+          "$person+house",
           "there,",
           "they",
           "did",
