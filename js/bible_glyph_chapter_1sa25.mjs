@@ -441,7 +441,7 @@ export function bible_glyph_chapter_1sa25() {
           "four",
           "hundred",
           "$man_beard",
-          "followed",
+          "$walking+pointing_up",
           "$proper_name$David,",
           "while",
           "two",
