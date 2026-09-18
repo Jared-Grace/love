@@ -819,7 +819,7 @@ export function bible_glyph_chapter_gen32() {
           "tell",
           "me",
           "your",
-          "name.",
+          "$name_tag.",
           "But",
           "he",
           "$speech,",
