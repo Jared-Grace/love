@@ -171,7 +171,7 @@ export function bible_glyph_chapter_exo33() {
           "If",
           "I",
           "should",
-          "go",
+          "$walking+pointing_up",
           "with",
           "you",
           "for",
