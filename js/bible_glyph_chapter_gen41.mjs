@@ -952,7 +952,7 @@ export function bible_glyph_chapter_gen41() {
           "from",
           "these",
           "$thumbs_up",
-          "years",
+          "$year",
           "that",
           "are",
           "$footprints,",
