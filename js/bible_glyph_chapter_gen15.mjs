@@ -375,7 +375,7 @@ export function bible_glyph_chapter_gen15() {
           "mistreated",
           "four",
           "hundred",
-          "years.",
+          "$year.",
         ],
       },
       {
