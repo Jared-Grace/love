@@ -1,15 +1,15 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
 import { bible_interlinear_chapters_words_cache } from "./bible_interlinear_chapters_words_cache.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { add } from "./add.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_set } from "./property_set.mjs";
-import { text_includes } from "./text_includes.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
+import { text_includes } from "./text_includes.mjs";
 import { text_upper_to } from "./text_upper_to.mjs";
 import { divide } from "./divide.mjs";
 import { less_than } from "./less_than.mjs";
@@ -24,6 +24,8 @@ export async function bible_glyph_proper_name_numbers(testament_name) {
   "IT IS DECIDED PER NUMBER AND NOT PER OCCURRENCE, because a picture is bought per number. The Hebrew for son is parsed proper the few times it is half of somebody's name, and treating those occurrences as names while the same number is seated on a picture would have one number be two things at once. A number is a name when nearly all of it is, and otherwise it is the word it mostly means.";
   "WHAT IT GETS WRONG IS SMALL AND IS IN THE THIN TAIL. Around three hundred Greek numbers rest on a single sighting away from the front, and reading them by hand found four that are not names - an inscription printed in capitals, and three ordinary words that happened to be capitalised. That is about one word in two hundred of what this claims, and it errs by claiming a name rather than missing one, so a share built on it reads very slightly high.";
   arguments_assert(arguments, 1);
+  ("WHICH TESTAMENT IS THE GREEK ONE IS ASKED RATHER THAN TYPED, by naming a chapter that is certainly in it and reading back what the book divisions call that. Typing the words would be a second place the division names are spelled, and the two would part the day either moved.");
+  let greek_testament_name = bible_chapter_testament_name("JHN01");
   let chapters_words = await bible_interlinear_chapters_words_cache();
   let counts = {};
   for (let chapter_code of object_property_names(chapters_words)) {
@@ -60,7 +62,7 @@ export async function bible_glyph_proper_name_numbers(testament_name) {
           found.said = add(found.said, 1);
           continue;
         }
-        let greek = equal(testament_name, "greek");
+        let greek = equal(testament_name, greek_testament_name);
         if (not(greek)) {
           found.asked = add(found.asked, 1);
           continue;
