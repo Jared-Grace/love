@@ -220,7 +220,7 @@ export function bible_glyph_chapter_1ki03() {
           "a",
           "$son",
           "to",
-          "sit",
+          "$person+house",
           "on",
           "his",
           "throne",
