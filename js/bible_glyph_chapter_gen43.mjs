@@ -91,7 +91,7 @@ export function bible_glyph_chapter_gen43() {
           "If",
           "you",
           "will",
-          "send",
+          "$hand_sending",
           "our",
           "$brother",
           "with",
