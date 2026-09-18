@@ -115,7 +115,7 @@ export function bible_glyph_chapter_gen43() {
           "you",
           "will",
           "not",
-          "send",
+          "$hand_sending",
           "him,",
           "we",
           "will",
