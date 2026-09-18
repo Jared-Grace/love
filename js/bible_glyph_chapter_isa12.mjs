@@ -121,7 +121,7 @@ export function bible_glyph_chapter_isa12() {
           "declare",
           "that",
           "His",
-          "name",
+          "$name_tag",
           "is",
           "exalted.",
         ],
