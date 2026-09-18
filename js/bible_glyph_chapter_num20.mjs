@@ -770,7 +770,7 @@ export function bible_glyph_chapter_num20() {
           "$son",
           "$proper_name$Eleazar",
           "and",
-          "bring",
+          "$walking+pointing_up",
           "them",
           "up",
           "$mountain",
