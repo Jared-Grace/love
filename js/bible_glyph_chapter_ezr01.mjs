@@ -121,7 +121,7 @@ export function bible_glyph_chapter_ezr01() {
           "and",
           "may",
           "he",
-          "go",
+          "$walking+pointing_up",
           "up",
           "to",
           "$proper_name$Jerusalem",
