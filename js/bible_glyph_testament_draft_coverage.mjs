@@ -8,8 +8,8 @@ import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { bible_glyph_chapter_draft_coverage } from "./bible_glyph_chapter_draft_coverage.mjs";
-import { list_map_async } from "./list_map_async.mjs";
 import { property_get } from "./property_get.mjs";
+import { list_map_async } from "./list_map_async.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_size } from "./list_size.mjs";
@@ -25,6 +25,7 @@ export async function bible_glyph_testament_draft_coverage(
   ("IT FINDS ITS OWN SET, which is the whole of what it adds over the reading next door. That one weighs the chapters it is handed, so the shortlist is typed by a person - and a typed shortlist is a guess about where to look, made before looking. Five chapters were compared to choose the fourth, twelve to choose the fifth and thirty to choose the sixth, each list longer than the last and each one still somebody's hunch about which thirty were worth asking about. There is no hunch left in asking about all of them.");
   ("A CHAPTER ALREADY WRITTEN IS LEFT OUT, because the question this answers is which one to author NEXT. The six that exist would otherwise sit at the top of every answer forever - they were chosen for coming top - and a reader would have to know the written list by heart to skip past them. Reading the written list is cheaper than remembering it, so it is read.");
   ("THE CHAPTERS COME FROM THE INTERLINEAR RATHER THAN FROM THE CANON, and that is the difference between a survey that runs and one that stops. The canon names every chapter that exists; the interlinear holds the ones there are words for, and asking it about a chapter it does not hold is refused rather than answered thinly. Surveying from the canon would therefore die on the first gap, and a survey is exactly the caller that meets every gap there is.");
+  ("THE NAME COUNT RIDES ALONG BECAUSE WITHOUT IT THE ROW CANNOT BE READ. A share counts a proper name as settled, so a genealogy comes back saying eighty six out of a hundred while its drawn count is a quarter of its words, and the two numbers look like a contradiction rather than a chapter that is mostly names. The count is what joins them, and it is the one figure a reader needs to tell a chapter that will read as pictures from one that will read as a list of people.");
   ("A HIGH SHARE STILL DOES NOT DECIDE, and a longer list makes that easier to forget rather than harder. What chose the last three chapters was never the share alone: John fourteen won on its blanks being the article and the pronouns rather than its vocabulary, and both letters of John won partly on being short enough to finish. This narrows two hundred and sixty chapters to a handful; a person still reads the handful.");
   let chapters_words = await bible_interlinear_chapters_words_cache();
   let chapter_codes = object_property_names(chapters_words);
@@ -52,6 +53,7 @@ export async function bible_glyph_testament_draft_coverage(
       verses: property_get(coverage, "verses"),
       words: property_get(coverage, "words"),
       drawn: property_get(coverage, "drawn"),
+      named: property_get(coverage, "named"),
       share: property_get(coverage, "share"),
     };
     return measured;
