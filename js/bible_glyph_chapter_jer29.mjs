@@ -24,7 +24,7 @@ export function bible_glyph_chapter_jer29() {
           "$proper_name$Jeremiah",
           "the",
           "$megaphone",
-          "sent",
+          "$hand_sending",
           "from",
           "$proper_name$Jerusalem",
           "to",
