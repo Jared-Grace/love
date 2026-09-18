@@ -1061,7 +1061,7 @@ export function bible_glyph_chapter_exo28() {
           "that",
           "he",
           "may",
-          "bear",
+          "$lifting",
           "the",
           "iniquity",
           "of",
