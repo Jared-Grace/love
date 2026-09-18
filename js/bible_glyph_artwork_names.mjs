@@ -397,6 +397,10 @@ export function bible_glyph_artwork_names() {
       asset: "Flexed biceps",
     },
     {
+      glyph: "rescue",
+      asset: "Ring buoy",
+    },
+    {
       glyph: "i_am",
       asset: "Infinity",
     },
