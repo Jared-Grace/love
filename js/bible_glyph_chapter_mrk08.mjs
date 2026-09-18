@@ -664,7 +664,7 @@ export function bible_glyph_chapter_mrk08() {
           "$speech,",
           "Do",
           "not",
-          "go",
+          "$footprints+tray_in",
           "back",
           "into",
           "the",
