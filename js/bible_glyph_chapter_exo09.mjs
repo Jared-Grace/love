@@ -999,7 +999,7 @@ export function bible_glyph_chapter_exo09() {
         words: [
           "Then",
           "Moses",
-          "departed",
+          "$walking+tray_out",
           "from",
           "$proper_name$Pharaoh",
           "and",
