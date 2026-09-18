@@ -1367,7 +1367,7 @@ export function bible_glyph_chapter_1sa17() {
           "with",
           "$sword",
           "and",
-          "spear",
+          "$spear",
           "and",
           "javelin,",
           "but",
