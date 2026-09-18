@@ -545,7 +545,7 @@ export function bible_glyph_chapter_lev17() {
           "or",
           "$foreigner,",
           "who",
-          "eats",
+          "$eating",
           "anything",
           "found",
           "dead",
