@@ -197,7 +197,7 @@ export function bible_glyph_chapter_1sa01() {
           "on",
           "$year",
           "after",
-          "year.",
+          "$year.",
           "Whenever",
           "Hannah",
           "went",
