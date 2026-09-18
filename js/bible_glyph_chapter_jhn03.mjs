@@ -145,7 +145,7 @@ export function bible_glyph_chapter_jhn03() {
           "$no_entry",
           "one",
           "can",
-          "enter",
+          "$footprints+tray_in",
           "the",
           "$castle",
           "of",
