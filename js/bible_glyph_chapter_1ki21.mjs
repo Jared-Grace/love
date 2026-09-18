@@ -817,7 +817,7 @@ export function bible_glyph_chapter_1ki21() {
           "The",
           "dogs",
           "will",
-          "devour",
+          "$eating",
           "$proper_name$Jezebel",
           "by",
           "the",
