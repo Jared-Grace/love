@@ -1,21 +1,21 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_statement_name_copy } from "./app_code_lesson_statement_name_copy.mjs";
-import { html_div_code_lines } from "./html_div_code_lines.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_third } from "./app_code_lesson_statement_name_third.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
 import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_statement_name_copy } from "./app_code_lesson_statement_name_copy.mjs";
 import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
+import { list_join_empty } from "./list_join_empty.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { html_div_code_lines } from "./html_div_code_lines.mjs";
 import { html_div_code } from "./html_div_code.mjs";
-import { list_join_empty } from "./list_join_empty.mjs";
+import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 export function app_code_lesson_statement_name_copy_kept_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: the two cups the copying lesson left standing, then one of them emptied and refilled while the other keeps what it was given, and then the same story as one program");
@@ -82,7 +82,9 @@ export function app_code_lesson_statement_name_copy_kept_above(root, context) {
     "Then we write out what is inside ",
     name_copy,
   ]);
-  app_code_code_lines_writes_out(box_code, [logged], word_first);
+  ("A BOX THAT SHOWS WHAT A PROGRAM WRITES OUT SHOWS THE WHOLE PROGRAM. The filling, the copying and the changing stand above as the three lines being taught, and stand here again because the word written out underneath is a claim, and a claim about what a program writes out is only checkable against a program that runs on its own. Shown as the log line alone, the answer rested on three lines a learner had to carry down the box - and this screen turns entirely on the order of those three, since the word that comes out is the one the middle line copied and not the one the last line put in.");
+  let lines = [held, copied, changed, logged];
+  app_code_code_lines_writes_out(box_code, lines, word_first);
   html_div_cycle_code(box_code, [
     "Cup ",
     name_copy,
