@@ -213,7 +213,7 @@ export function bible_glyph_chapter_psa095() {
         words: [
           "For",
           "forty",
-          "years",
+          "$year",
           "I",
           "was",
           "angry",
