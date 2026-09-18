@@ -68,7 +68,7 @@ export function bible_glyph_chapter_deu32() {
           "will",
           "proclaim",
           "the",
-          "name",
+          "$name_tag",
           "of",
           "the",
           "$i_am.",
