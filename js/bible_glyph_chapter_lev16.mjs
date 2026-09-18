@@ -824,7 +824,7 @@ export function bible_glyph_chapter_lev16() {
           "The",
           "goat",
           "will",
-          "carry",
+          "$lifting",
           "on",
           "itself",
           "all",
