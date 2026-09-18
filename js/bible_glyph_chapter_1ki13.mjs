@@ -701,7 +701,7 @@ export function bible_glyph_chapter_1ki13() {
           "with",
           "him,",
           "and",
-          "ate",
+          "$eating",
           "$bread",
           "in",
           "his",
