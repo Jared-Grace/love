@@ -612,7 +612,7 @@ export function bible_glyph_chapter_jer32() {
           "name",
           "is",
           "the",
-          "LORD",
+          "$i_am",
           "of",
           "Hosts,",
         ],
