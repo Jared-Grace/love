@@ -808,7 +808,7 @@ export function bible_glyph_chapter_ezk34() {
           "that",
           "they",
           "may",
-          "dwell",
+          "$person+house",
           "securely",
           "in",
           "the",
