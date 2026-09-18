@@ -436,7 +436,7 @@ export function bible_glyph_chapter_job42() {
           "$proper_name$Job",
           "$sprout",
           "140",
-          "years",
+          "$year",
           "and",
           "$eye",
           "his",
