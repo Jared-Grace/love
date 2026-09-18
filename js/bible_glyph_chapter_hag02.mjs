@@ -352,7 +352,7 @@ export function bible_glyph_chapter_hag02() {
           "If",
           "a",
           "$man_beard",
-          "carries",
+          "$lifting",
           "$sparkle",
           "$meat",
           "in",
