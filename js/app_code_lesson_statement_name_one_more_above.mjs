@@ -19,8 +19,15 @@ export function app_code_lesson_statement_name_one_more_above(root, context) {
   let start = property_get(r, "start");
   let more = property_get(r, "more");
   let once = property_get(r, "once");
+  let name_last = property_get(r, "name_last");
+  let number_more = property_get(r, "number_more");
+  ("the name being replaced and the number replacing it are spelled out in brackets, drawn as code, the way the reminder above spells its cups. Said as the other name and a number, a learner has to look down at the line and work out which of the two names moved and what stood in for it - which is the one thing this screen is saying.");
   html_div_cycle_code(box_one, [
-    "The other name can be a written number instead:",
+    "The other name (",
+    name_last,
+    ") can be written as a number (",
+    number_more,
+    ") instead of a name:",
   ]);
   ("lines with nothing said between them are handed over together, because they are one program - the shape the quiz and the worked example of this same lesson have always drawn a program in.");
   let held = js_code_let_statement(name, start);
