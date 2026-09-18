@@ -1958,7 +1958,7 @@ export function bible_glyph_chapter_deu28() {
           "$i_am",
           "will",
           "also",
-          "bring",
+          "$walking+pointing_up",
           "upon",
           "you",
           "every",
