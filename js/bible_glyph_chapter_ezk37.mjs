@@ -240,7 +240,7 @@ export function bible_glyph_chapter_ezk37() {
           "on",
           "them,",
           "$meat",
-          "grew,",
+          "$walking+pointing_up,",
           "and",
           "skin",
           "covered",
