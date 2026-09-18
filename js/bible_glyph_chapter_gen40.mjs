@@ -267,7 +267,7 @@ export function bible_glyph_chapter_gen40() {
           "budded,",
           "its",
           "blossoms",
-          "opened,",
+          "$walking+pointing_up,",
           "and",
           "its",
           "clusters",
