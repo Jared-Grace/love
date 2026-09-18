@@ -83,7 +83,7 @@ export function bible_glyph_chapter_gen16() {
           "had",
           "lived",
           "ten",
-          "years",
+          "$year",
           "in",
           "the",
           "$earth",
