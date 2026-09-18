@@ -543,7 +543,7 @@ export function bible_glyph_chapter_jdg13() {
           "I",
           "will",
           "$no_entry",
-          "eat",
+          "$eating",
           "your",
           "$bread.",
           "But",
