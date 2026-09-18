@@ -1079,7 +1079,7 @@ export function bible_glyph_chapter_exo12() {
           "in",
           "order",
           "to",
-          "send",
+          "$hand_sending",
           "them",
           "quickly",
           "$tray_out",
