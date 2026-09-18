@@ -70,7 +70,7 @@ export function bible_glyph_chapter_psa034() {
         words: [
           "Magnify",
           "the",
-          "LORD",
+          "$i_am",
           "with",
           "me;",
           "let",
