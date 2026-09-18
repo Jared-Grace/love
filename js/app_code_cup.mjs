@@ -1,4 +1,3 @@
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -8,7 +7,8 @@ import { app_shared_button_border_width } from "./app_shared_button_border_width
 import { html_div_text } from "./html_div_text.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { app_code_note_name_color_or_null } from "./app_code_note_name_color_or_null.mjs";
-import { app_code_note_name_pill } from "./app_code_note_name_pill.mjs";
+import { app_code_note_name_tag } from "./app_code_note_name_tag.mjs";
+import { not } from "./not.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
@@ -80,7 +80,10 @@ export function app_code_cup(parent, inside, name, names) {
   ("the name is written ON the cup rather than beside it - a label somebody wrote on the side, which is the whole of what a name is here");
   ("Written heavier than the words around it. Most names here are a single letter, and a single letter at reading weight, standing on its own with nothing either side of it to be read against, is the hardest thing on the screen to make out - a lower-case a inside a glass is a smudge. It is also the one thing on the picture that has to be read, since it is what the code will say.");
   ("The lesson's names are handed in so the letter can be written in that name's own colour, the same colour it is written in inside the code box further down the screen. A cup and a line of code are the two pictures of one thing, and a reader who has to work out which cup the a in the program means has been left to do the joining the picture was drawn to do for them.");
-  ("The colour is a patch behind the letter rather than the letter's own colour, and it is LITERALLY the same colour as on the code chip - not a version of it remade for this card. It was a remade version once, and a reader looking at the two said the green here was not the green down there. They were right; it was a second green, and the reason it existed was that a colour written in a letter has to be read against what it is written on, so a green bright enough for a black chip was invisible on this pale card. Behind the letter, none of that applies: the letter is read against the patch's own ink, so the patch can be any colour at all and is the same one everywhere.");
+  ("THE LETTER IS WRITTEN IN THE NAME'S OWN COLOUR, ON A GROUND MADE BY DARKENING THAT SAME COLOUR. So the letter is the coloured thing here exactly as it is in the code chip below, and the two are the same colour because there is only one colour: the ground is computed from it and cannot be a different one.");
+  ("The darkening exists because this card is pale. A colour bright enough to be read as ink on a black chip is not readable on this card at all - the green measures about 1.2 to 1 against it, against a floor of 4.5 - so a letter in the name's colour needs something darker under it, and the name's own colour scaled down is the only candidate that adds no second colour to pick.");
+  ("The reading rejected here: putting the colour behind the letter as a bright patch and writing the letter dark, which is what this did before and what the code chip still does. It is legible and it is one colour, and it costs the correspondence - the cup then shows a green block where the program shows a green letter, and a reader comparing them across the screen is comparing two different arrangements of one colour rather than the same mark twice.");
+  ("The reading rejected before that: remaking the colour darker by hand for this card. That is a second colour however carefully it is chosen, and it drifted - a reader looking at the cup and the code said the green here was not the green down there, and they were right. Scaling is what makes the companion underivable from anything but the colour itself.");
   ("The whole list is handed in rather than a colour, because which colour a name gets is decided by where it stands among the lesson's names, and that is a fact about the lesson rather than about this cup. A screen that has not been given colours yet hands in an empty list, and every letter comes out the ordinary dark blue - which is what the cup was always drawn in and is still the right answer, not a missing one.");
   ("Only the letter changes colour. The glass, the stem and the foot stay the one blue they have always been, because they are the cup and not the name: three cups drawn in three colours would say the cups differed, when the whole story is that they are the same cup with different writing on it.");
   let named = text_empty_not_is(name);
@@ -88,7 +91,7 @@ export function app_code_cup(parent, inside, name, names) {
     let written = html_div_text(bowl, name);
     let lent = app_code_note_name_color_or_null(names, name);
     if (lent) {
-      app_code_note_name_pill(written, lent);
+      app_code_note_name_tag(written, lent);
     }
     if (not(lent)) {
       html_font_color_set(written, dark);
