@@ -311,7 +311,7 @@ export function bible_glyph_chapter_1ki08() {
           "after",
           "they",
           "had",
-          "come",
+          "$walking+tray_out",
           "out",
           "of",
           "the",
