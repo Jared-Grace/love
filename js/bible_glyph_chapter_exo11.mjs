@@ -142,7 +142,7 @@ export function bible_glyph_chapter_exo11() {
           "$night",
           "I",
           "will",
-          "go",
+          "$walking+tray_out",
           "throughout",
           "$proper_name$Egypt,",
         ],
