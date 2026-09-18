@@ -1356,7 +1356,7 @@ export function bible_glyph_chapter_1ki22() {
           "he",
           "$castle",
           "twenty-five",
-          "years",
+          "$year",
           "in",
           "$proper_name$Jerusalem.",
           "His",
