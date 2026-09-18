@@ -589,7 +589,7 @@ export function bible_glyph_chapter_num27() {
           "entire",
           "congregation,",
           "will",
-          "go",
+          "$walking+tray_out",
           "out",
           "and",
           "$footprints.",
