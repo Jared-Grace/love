@@ -611,7 +611,7 @@ export function bible_glyph_chapter_gen30() {
           "$speech",
           "to",
           "$proper_name$Laban,",
-          "Send",
+          "$hand_sending",
           "me",
           "away,",
           "that",
