@@ -527,7 +527,7 @@ export function bible_glyph_chapter_gen29() {
           "Jacob",
           "$kneeling",
           "seven",
-          "years",
+          "$year",
           "for",
           "$proper_name$Rachel,",
           "yet",
