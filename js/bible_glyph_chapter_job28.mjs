@@ -311,7 +311,7 @@ export function bible_glyph_chapter_job28() {
           "the",
           "gold",
           "of",
-          "Ophir,",
+          "$proper_name$Ophir,",
           "in",
           "precious",
           "onyx",
@@ -366,7 +366,7 @@ export function bible_glyph_chapter_job28() {
         words: [
           "Topaz",
           "from",
-          "Cush",
+          "$proper_name$Cush",
           "$no_entry",
           "compare",
           "to",
