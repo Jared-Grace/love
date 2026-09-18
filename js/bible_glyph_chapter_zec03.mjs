@@ -247,7 +247,7 @@ export function bible_glyph_chapter_zec03() {
           "and",
           "your",
           "companions",
-          "seated",
+          "$person+house",
           "before",
           "you,",
           "who",
