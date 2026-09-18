@@ -167,7 +167,7 @@ export function bible_glyph_chapter_exo34() {
           "and",
           "proclaimed",
           "His",
-          "name,",
+          "$name_tag,",
           "the",
           "$i_am.",
         ],
