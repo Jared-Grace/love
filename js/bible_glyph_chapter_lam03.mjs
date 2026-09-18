@@ -128,7 +128,7 @@ export function bible_glyph_chapter_lam03() {
           "so",
           "I",
           "$no_entry",
-          "escape;",
+          "$walking+tray_out;",
           "He",
           "has",
           "weighed",
