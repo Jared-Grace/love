@@ -986,7 +986,7 @@ export function bible_glyph_chapter_exo09() {
           "spelt",
           "were",
           "$no_entry",
-          "destroyed,",
+          "$fist,",
           "because",
           "they",
           "are",
