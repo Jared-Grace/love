@@ -239,7 +239,7 @@ export function bible_glyph_chapter_lev14() {
           "but",
           "he",
           "must",
-          "remain",
+          "$person+house",
           "outside",
           "his",
           "$tent",
