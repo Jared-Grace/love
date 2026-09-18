@@ -720,7 +720,7 @@ export function bible_glyph_chapter_1sa24() {
           "wipe",
           "out",
           "my",
-          "name",
+          "$name_tag",
           "from",
           "my",
           "$father's",
