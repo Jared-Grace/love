@@ -451,7 +451,7 @@ export function bible_glyph_chapter_jos03() {
           "$proper_name$Jordan,",
           "the",
           "$priest",
-          "carried",
+          "$lifting",
           "the",
           "ark",
           "of",
