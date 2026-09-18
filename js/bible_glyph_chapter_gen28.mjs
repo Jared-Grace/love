@@ -78,7 +78,7 @@ export function bible_glyph_chapter_gen28() {
         words: [
           "May",
           "$fire",
-          "Almighty",
+          "$might",
           "$speech+thumbs_up",
           "you",
           "and",
