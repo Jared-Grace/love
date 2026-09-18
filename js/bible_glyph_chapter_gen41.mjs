@@ -1328,7 +1328,7 @@ export function bible_glyph_chapter_gen41() {
           "During",
           "those",
           "seven",
-          "years,",
+          "$year,",
           "Joseph",
           "collected",
           "all",
