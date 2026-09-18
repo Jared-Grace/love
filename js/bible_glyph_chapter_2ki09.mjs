@@ -235,7 +235,7 @@ export function bible_glyph_chapter_2ki09() {
           "you",
           "are",
           "to",
-          "strike",
+          "$fist",
           "down",
           "the",
           "$house",
