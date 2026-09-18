@@ -400,7 +400,7 @@ export function bible_glyph_chapter_2ki06() {
           "that",
           "I",
           "may",
-          "send",
+          "$hand_sending",
           "men",
           "to",
           "$hand_receiving",
