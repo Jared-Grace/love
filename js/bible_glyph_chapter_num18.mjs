@@ -838,7 +838,7 @@ export function bible_glyph_chapter_num18() {
           "and",
           "they",
           "must",
-          "bear",
+          "$lifting",
           "their",
           "iniquity.",
           "This",
