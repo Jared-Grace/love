@@ -31,7 +31,7 @@ export function bible_glyph_chapter_psa103() {
           "bless",
           "His",
           "$sparkle",
-          "name.",
+          "$name_tag.",
         ],
       },
       {
