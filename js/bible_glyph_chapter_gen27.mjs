@@ -512,7 +512,7 @@ export function bible_glyph_chapter_gen27() {
           "$mouth",
           "me.",
           "Please",
-          "sit",
+          "$person+house",
           "up",
           "and",
           "eat",
