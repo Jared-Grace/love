@@ -333,7 +333,7 @@ export function bible_glyph_chapter_lev22() {
           "that",
           "slave",
           "may",
-          "eat.",
+          "$eating.",
           "And",
           "those",
           "born",
