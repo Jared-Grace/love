@@ -924,7 +924,7 @@ export function bible_glyph_chapter_jdg11() {
           "the",
           "$speech",
           "$proper_name$Jephthah",
-          "sent",
+          "$hand_sending",
           "him.",
         ],
       },
