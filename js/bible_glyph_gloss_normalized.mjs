@@ -1,4 +1,4 @@
-import { bible_gloss_brackets_dropped } from "./bible_gloss_brackets_dropped.mjs";
+import { bible_gloss_notation_dropped } from "./bible_gloss_notation_dropped.mjs";
 import { not_equal } from "./not_equal.mjs";
 export function bible_glyph_gloss_normalized(gloss) {
   "$plain gloss";
@@ -8,7 +8,7 @@ export function bible_glyph_gloss_normalized(gloss) {
   "So the leading function words go, the possessive tail goes, and the square brackets and braces the tables use for words the translation supplies go with them. What is left is the word.";
   "CAPITALISATION STAYS, and that is a deliberate choice rather than an oversight. Man and Man are the same word in English but Son of Man is a title, and the tables mark the title by capitalising it; folding case would erase the one signal separating a title from a common noun. Holy and holy stay apart for the same reason. The cost is that a word starting a sentence counts separately from the same word inside one, which inflates the count a little - a smaller and more honest error than erasing titles.";
   "THE MARKS AROUND A SUPPLIED WORD ARE TAKEN OFF NEXT DOOR AND NOT HERE, because the band of English under the pictures wants exactly that much stripping and none of the rest of this. Two copies of the same short line is the arrangement where somebody meets a third kind of mark, adds it to the copy in front of them, and never learns of the other.";
-  let text = bible_gloss_brackets_dropped(gloss);
+  let text = bible_gloss_notation_dropped(gloss);
   text = text.replaceAll(/[’']s\b/g, " ");
   text = text.replaceAll(/\s+/g, " ");
   text = text.trim();

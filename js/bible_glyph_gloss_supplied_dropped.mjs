@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_gloss_markup_dropped } from "./bible_gloss_markup_dropped.mjs";
 import { equal } from "./equal.mjs";
-import { bible_gloss_brackets_dropped } from "./bible_gloss_brackets_dropped.mjs";
+import { bible_gloss_notation_dropped } from "./bible_gloss_notation_dropped.mjs";
 export function bible_glyph_gloss_supplied_dropped(gloss) {
   arguments_assert(arguments, 1);
   ("$plain gloss");
@@ -19,7 +19,7 @@ export function bible_glyph_gloss_supplied_dropped(gloss) {
   text = text.replaceAll(/\s+/g, " ");
   text = text.trim();
   let emptied = equal(text, "");
-  let kept = bible_gloss_brackets_dropped(gloss);
+  let kept = bible_gloss_notation_dropped(gloss);
   let r = emptied || unpaired ? kept : text;
   return r;
 }
