@@ -292,7 +292,7 @@ export function bible_glyph_chapter_zec14() {
           "that",
           "$sun",
           "the",
-          "LORD",
+          "$i_am",
           "will",
           "become",
           "$king",
