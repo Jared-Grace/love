@@ -568,7 +568,7 @@ export function bible_glyph_chapter_1ch29() {
         verse_number: 16,
         words: [
           "O",
-          "LORD",
+          "$i_am",
           "our",
           "$fire,",
           "all",
