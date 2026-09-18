@@ -130,7 +130,7 @@ export function bible_glyph_chapter_zec12() {
           "$i_am,",
           "I",
           "will",
-          "strike",
+          "$fist",
           "every",
           "horse",
           "with",
