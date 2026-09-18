@@ -824,7 +824,7 @@ export function bible_glyph_chapter_num35() {
           "the",
           "manslayer",
           "must",
-          "remain",
+          "$person+house",
           "in",
           "his",
           "$city",
