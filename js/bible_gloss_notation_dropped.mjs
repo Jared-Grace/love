@@ -1,5 +1,5 @@
 import { bible_gloss_markup_dropped } from "./bible_gloss_markup_dropped.mjs";
-export function bible_gloss_brackets_dropped(gloss) {
+export function bible_gloss_notation_dropped(gloss) {
   "$plain gloss";
   "the wording is one the interlinear printed under a word. It is text to look at and nothing that runs.";
   "One wording the interlinear printed with the marks around a supplied word taken off, so what is left is the English and nothing about how it got there.";
