@@ -133,7 +133,7 @@ export function bible_glyph_chapter_1ki19() {
           "have",
           "had",
           "enough,",
-          "LORD,",
+          "$i_am,",
           "he",
           "$speech.",
           "$hand_receiving",
