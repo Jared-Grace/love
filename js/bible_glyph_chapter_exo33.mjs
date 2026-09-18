@@ -430,7 +430,7 @@ export function bible_glyph_chapter_exo33() {
           "whom",
           "You",
           "will",
-          "send",
+          "$hand_sending",
           "with",
           "me.",
           "Yet",
