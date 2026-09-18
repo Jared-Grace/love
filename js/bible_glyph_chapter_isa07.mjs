@@ -663,7 +663,7 @@ export function bible_glyph_chapter_isa07() {
           "$hammer,",
           "he",
           "will",
-          "eat",
+          "$eating",
           "curds;",
           "for",
           "all",
