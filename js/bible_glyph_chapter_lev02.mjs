@@ -320,7 +320,7 @@ export function bible_glyph_chapter_lev02() {
           "but",
           "they",
           "$no_entry",
-          "go",
+          "$walking+pointing_up",
           "up",
           "on",
           "$altar",
