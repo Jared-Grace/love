@@ -161,7 +161,7 @@ export function bible_glyph_chapter_gen50() {
         words: [
           "$proper_name$Pharaoh",
           "$speech,",
-          "Go",
+          "$walking+pointing_up",
           "up",
           "and",
           "bury",
