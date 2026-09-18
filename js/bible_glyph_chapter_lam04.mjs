@@ -617,7 +617,7 @@ export function bible_glyph_chapter_lam04() {
           "$proper_name$Edom,",
           "you",
           "who",
-          "dwell",
+          "$person+house",
           "in",
           "the",
           "$earth",
