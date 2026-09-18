@@ -257,7 +257,7 @@ export function bible_glyph_chapter_jer23() {
           "$i_am",
           "$sprout,",
           "who",
-          "brought",
+          "$walking+pointing_up",
           "the",
           "$son",
           "up",
