@@ -50,7 +50,7 @@ export function bible_glyph_chapter_job31() {
           "heritage",
           "from",
           "the",
-          "Almighty",
+          "$might",
           "on",
           "high?",
         ],
