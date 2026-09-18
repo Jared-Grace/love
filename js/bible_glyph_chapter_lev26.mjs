@@ -801,7 +801,7 @@ export function bible_glyph_chapter_lev26() {
           "that",
           "you",
           "will",
-          "eat",
+          "$eating",
           "but",
           "$no_entry",
           "be",
