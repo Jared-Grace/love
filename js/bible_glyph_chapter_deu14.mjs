@@ -135,7 +135,7 @@ export function bible_glyph_chapter_deu14() {
         words: [
           "You",
           "may",
-          "eat",
+          "$eating",
           "any",
           "animal",
           "that",
