@@ -1343,7 +1343,7 @@ export function bible_glyph_chapter_gen27() {
           "Then",
           "I",
           "will",
-          "send",
+          "$hand_sending",
           "for",
           "you",
           "and",
