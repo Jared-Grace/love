@@ -346,7 +346,7 @@ export function bible_glyph_chapter_jer17() {
           "it",
           "did",
           "$no_entry",
-          "lay",
+          "$baby",
           "is",
           "the",
           "man",
