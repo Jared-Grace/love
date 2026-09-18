@@ -173,7 +173,7 @@ export function bible_glyph_chapter_1ki19() {
           "Get",
           "up",
           "and",
-          "eat.",
+          "$eating.",
         ],
       },
       {
