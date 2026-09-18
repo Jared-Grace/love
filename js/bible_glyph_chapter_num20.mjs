@@ -572,7 +572,7 @@ export function bible_glyph_chapter_num20() {
           "or",
           "we",
           "will",
-          "come",
+          "$walking+tray_out",
           "out",
           "and",
           "confront",
