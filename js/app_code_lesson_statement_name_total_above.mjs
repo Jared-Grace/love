@@ -1,5 +1,3 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_statement_name_sum } from "./app_code_lesson_statement_name_sum.mjs";
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
@@ -9,9 +7,11 @@ import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { add } from "./add.mjs";
 import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_statement_name_sum } from "./app_code_lesson_statement_name_sum.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { html_div_code_lines } from "./html_div_code_lines.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div_code } from "./html_div_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
@@ -62,8 +62,10 @@ export function app_code_lesson_statement_name_total_above(root, context) {
     name_total,
     "):",
   ]);
+  ("A BOX THAT SHOWS WHAT A PROGRAM WRITES OUT SHOWS THE WHOLE PROGRAM. The two naming lines stand in the reminder box above, and the third line stands on its own a row up as the line this lesson adds; all three are drawn again here because the value written out underneath is a claim, and a claim about what a program writes out is only checkable against a program that runs on its own. Shown as the log line alone, it rested on three lines a learner had to carry down from two boxes above.");
   let logged = js_code_console_log_statement(name_total);
-  app_code_code_lines_writes_out(box_named, [logged], total);
+  let lines_named = [held_first, held_last, code_total, logged];
+  app_code_code_lines_writes_out(box_named, lines_named, total);
   ("Then rather than now, because the two lines happen one after the other and that order is the whole of what a program is. Now says only that the second line is available; then says it comes after.");
   ("The total is a code chip wherever it stands, here and in the line that follows. A number written in a program is code, and it is drawn as code everywhere else on this screen, so a total set in plain writing would be the one number on the screen dressed as prose.");
   ("The reason under the two lines is written as code a learner can already read, not as a claim about the code. A sum standing equal to its value is what the equals lesson of the Operators course taught, so nothing new has to be introduced to justify the swap.");
