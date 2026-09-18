@@ -44,7 +44,7 @@ export function bible_glyph_chapter_1ki08() {
           "in",
           "$proper_name$Jerusalem,",
           "to",
-          "bring",
+          "$walking+pointing_up",
           "up",
           "the",
           "ark",
