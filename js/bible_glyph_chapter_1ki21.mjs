@@ -165,7 +165,7 @@ export function bible_glyph_chapter_1ki21() {
           "and",
           "would",
           "$no_entry",
-          "eat",
+          "$eating",
           "$bread.",
         ],
       },
