@@ -488,7 +488,7 @@ export function bible_glyph_chapter_deu14() {
           "you",
           "are",
           "to",
-          "eat",
+          "$eating",
           "a",
           "tenth",
           "of",
