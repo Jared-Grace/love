@@ -21,7 +21,7 @@ export function bible_glyph_chapter_jos02() {
           "of",
           "$proper_name$Nun",
           "secretly",
-          "sent",
+          "$hand_sending",
           "two",
           "spies",
           "from",
