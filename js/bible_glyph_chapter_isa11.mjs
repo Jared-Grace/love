@@ -134,7 +134,7 @@ export function bible_glyph_chapter_isa11() {
           "$earth.",
           "He",
           "will",
-          "strike",
+          "$fist",
           "the",
           "$earth",
           "with",
