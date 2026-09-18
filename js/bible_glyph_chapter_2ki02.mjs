@@ -30,7 +30,7 @@ export function bible_glyph_chapter_2ki02() {
           "$proper_name$Elisha",
           "were",
           "$walking",
-          "$tray_out",
+          "from",
           "$proper_name$Gilgal.",
         ],
       },
