@@ -535,7 +535,7 @@ export function bible_glyph_chapter_1ki13() {
           "and",
           "found",
           "him",
-          "sitting",
+          "$person+house",
           "under",
           "an",
           "oak",
