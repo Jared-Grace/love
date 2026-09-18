@@ -39,7 +39,7 @@ export function bible_glyph_chapter_psa001() {
           "sinners,",
           "does",
           "$no_entry",
-          "sit",
+          "$person+house",
           "in",
           "the",
           "seat",
