@@ -488,7 +488,7 @@ export function bible_glyph_chapter_lev26() {
           "your",
           "enemies",
           "will",
-          "eat",
+          "$eating",
           "it.",
         ],
       },
