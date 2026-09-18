@@ -733,7 +733,7 @@ export function bible_glyph_chapter_exo12() {
           "of",
           "you",
           "shall",
-          "go",
+          "$walking+tray_out",
           "out",
           "the",
           "door",
