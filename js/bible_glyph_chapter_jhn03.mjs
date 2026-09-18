@@ -431,7 +431,7 @@ export function bible_glyph_chapter_jhn03() {
           "$globe,",
           "but",
           "to",
-          "save",
+          "$rescue",
           "the",
           "$globe",
           "through",
