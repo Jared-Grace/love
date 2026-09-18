@@ -305,7 +305,7 @@ export function bible_glyph_chapter_ecc03() {
           "every",
           "$person",
           "should",
-          "eat",
+          "$eating",
           "and",
           "drink",
           "and",
