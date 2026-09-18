@@ -712,7 +712,7 @@ export function bible_glyph_chapter_1sa20() {
           "Then",
           "I",
           "will",
-          "send",
+          "$hand_sending",
           "a",
           "boy",
           "and",
