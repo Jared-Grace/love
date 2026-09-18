@@ -18,7 +18,7 @@ export function bible_glyph_chapter_1ki22() {
         words: [
           "Then",
           "three",
-          "years",
+          "$year",
           "$person+house",
           "without",
           "war",
