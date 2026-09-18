@@ -35,7 +35,7 @@ export function bible_glyph_chapter_1ki22() {
           "in",
           "the",
           "third",
-          "year,",
+          "$year,",
           "$proper_name$Jehoshaphat",
           "$king",
           "of",
