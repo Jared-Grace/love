@@ -337,7 +337,7 @@ export function bible_glyph_chapter_1sa17() {
           "of",
           "a",
           "$man_beard",
-          "named",
+          "$name_tag",
           "Jesse,",
           "an",
           "Ephrathite",
