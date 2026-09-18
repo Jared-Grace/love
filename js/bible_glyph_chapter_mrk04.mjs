@@ -382,7 +382,7 @@ export function bible_glyph_chapter_mrk04() {
           "they",
           "$ear",
           "it,",
-          "Satan",
+          "$proper_name$Satan",
           "$footprints",
           "$plus",
           "takes",
