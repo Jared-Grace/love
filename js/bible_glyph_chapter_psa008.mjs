@@ -14,7 +14,7 @@ export function bible_glyph_chapter_psa008() {
         verse_number: 1,
         words: [
           "O",
-          "LORD,",
+          "$i_am,",
           "our",
           "$crown,",
           "how",
