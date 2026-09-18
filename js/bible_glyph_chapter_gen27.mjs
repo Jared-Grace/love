@@ -515,7 +515,7 @@ export function bible_glyph_chapter_gen27() {
           "$person+house",
           "up",
           "and",
-          "eat",
+          "$eating",
           "some",
           "of",
           "my",
