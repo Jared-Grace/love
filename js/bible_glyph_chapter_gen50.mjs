@@ -352,7 +352,7 @@ export function bible_glyph_chapter_gen50() {
         words: [
           "The",
           "$son",
-          "carried",
+          "$lifting",
           "him",
           "to",
           "the",
