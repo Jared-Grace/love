@@ -138,7 +138,7 @@ export function bible_glyph_chapter_jdg04() {
           "the",
           "Israelites",
           "would",
-          "go",
+          "$walking+pointing_up",
           "up",
           "to",
           "her",
