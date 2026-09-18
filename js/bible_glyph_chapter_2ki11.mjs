@@ -111,7 +111,7 @@ export function bible_glyph_chapter_2ki11() {
           "$i_am",
           "for",
           "six",
-          "years",
+          "$year",
           "while",
           "$proper_name$Athaliah",
           "$castle",
