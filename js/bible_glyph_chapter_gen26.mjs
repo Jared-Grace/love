@@ -179,7 +179,7 @@ export function bible_glyph_chapter_gen26() {
       },
       {
         verse_number: 6,
-        words: ["So", "Isaac", "settled", "in", "$proper_name$Gerar."],
+        words: ["So", "Isaac", "$person+house", "in", "$proper_name$Gerar."],
       },
       {
         verse_number: 7,
