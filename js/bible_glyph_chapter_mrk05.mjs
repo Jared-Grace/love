@@ -205,7 +205,7 @@ export function bible_glyph_chapter_mrk05() {
         "$speech",
         "to",
         "$pointing_back,",
-        "“Come",
+        "“$footprints+tray_out",
         "$tray_out",
         "this",
         "$person,",
