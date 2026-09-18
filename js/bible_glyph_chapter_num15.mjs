@@ -1012,7 +1012,7 @@ export function bible_glyph_chapter_num15() {
           "the",
           "whole",
           "congregation",
-          "took",
+          "$walking+tray_out",
           "him",
           "outside",
           "the",
