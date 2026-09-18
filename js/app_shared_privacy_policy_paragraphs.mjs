@@ -16,13 +16,22 @@ export function app_shared_privacy_policy_paragraphs() {
       "Bible text and the other things an app needs are downloaded from Google storage as you read. Those files are the same for everybody, and they are only ever read.",
     ],
     [
-      "One thing leaves your device, and only when you send it. If you write a message on a contact screen and press send, three things are stored: the message you wrote, the address of the page you wrote it on, and the time. They are filed under a random number your browser made up the first time you used a contact screen. That number is not a name and is not connected to one.",
+      "Three things can leave your device. Each is filed under a random number your browser made up the first time it needed one. That number is not a name and is not connected to one.",
     ],
     [
-      "Messages can be written but not read back. The place they are kept is closed to reading over the web, so no visitor to this website can read anybody's messages, including their own. Only the person who runs this website can read them, with the website's own administrative credentials.",
+      "Visits. At most once a day for each app you open, your browser sends the date and the app's name. Nothing else about you or your device is sent.",
     ],
     [
-      "There is no analytics here, no advertising, and no tracking. This website sets no cookies.",
+      "Errors. If an app goes wrong, your browser sends what went wrong: the error's own words, where in the app's code it happened, the address of the page, and the time.",
+    ],
+    [
+      "Messages, only when you send one. If you write a message on a contact screen and press send, three things are stored: the message you wrote, the address of the page you wrote it on, and the time.",
+    ],
+    [
+      "None of these can be read back. The place they are kept is closed to reading over the web, so no visitor to this website can read them, including their own. Only the person who runs this website can read them, with the website's own administrative credentials.",
+    ],
+    [
+      "There is no advertising and no other tracking. This website sets no cookies.",
     ],
     ["Nothing is sold, and nothing is passed on to anybody."],
     [
