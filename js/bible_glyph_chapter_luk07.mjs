@@ -754,7 +754,7 @@ export function bible_glyph_chapter_luk07() {
         "then",
         "did",
         "you",
-        "go",
+        "$footprints+tray_out",
         "out",
         "to",
         "$eye?",
