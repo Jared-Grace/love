@@ -15,7 +15,7 @@ export function bible_glyph_chapter_exo15() {
         verse_number: 1,
         words: [
           "Then",
-          "Moses",
+          "$proper_name$Moses",
           "and",
           "the",
           "$son",
@@ -586,7 +586,7 @@ export function bible_glyph_chapter_exo15() {
           "Then",
           "Moses",
           "led",
-          "Israel",
+          "$proper_name$Israel",
           "from",
           "the",
           "Red",
