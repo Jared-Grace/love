@@ -26,7 +26,7 @@ export function bible_glyph_chapter_1sa01() {
           "$mountain",
           "of",
           "Ephraim,",
-          "named",
+          "$name_tag",
           "Elkanah,",
           "the",
           "$son",
