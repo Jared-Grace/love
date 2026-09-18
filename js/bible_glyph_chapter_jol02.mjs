@@ -67,7 +67,7 @@ export function bible_glyph_chapter_jol02() {
           "blackness.",
           "Like",
           "the",
-          "dawn",
+          "$dawn",
           "overspreading",
           "the",
           "$mountain,",
