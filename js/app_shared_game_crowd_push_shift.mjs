@@ -1,19 +1,20 @@
-import { g_ripple_delay_seconds } from "./g_ripple_delay_seconds.mjs";
-import { add } from "./add.mjs";
-import { each_index } from "./each_index.mjs";
 import { g_path_steps } from "./g_path_steps.mjs";
 import { list_copy_reverse } from "./list_copy_reverse.mjs";
 import { property_get } from "./property_get.mjs";
 import { g_coordinates_key } from "./g_coordinates_key.mjs";
 import { property_delete_if_exists } from "./property_delete_if_exists.mjs";
 import { property_set } from "./property_set.mjs";
-import { app_shared_game_npc_move } from "./app_shared_game_npc_move.mjs";
+import { g_ripple_delay_seconds } from "./g_ripple_delay_seconds.mjs";
+import { add } from "./add.mjs";
+import { app_shared_game_npc_shove } from "./app_shared_game_npc_shove.mjs";
+import { each_index } from "./each_index.mjs";
 export function app_shared_game_crowd_push_shift(npc_index, route, delay) {
   "a run of people all shuffle one tile along the run they were given, and the tile at the head of it is left empty.";
   "The one furthest out goes first, into the free tile the run was built to reach, and each one after that steps into the tile just vacated by the one beyond them. Going in the other order would ask somebody to step onto a tile that is still occupied.";
   "They go one after another rather than all at once, each waiting a little longer than the one beyond them - the same wave a line of people walking behind the player moves in, where each of them steps into the space the one ahead has just left. Moving the whole run in one piece would look like a wall sliding; moving it as a wave shows WHY each of them moved, because the space they step into opens a moment before they take it.";
   "The run says where each of them goes, tile by tile, so it can turn a corner - the people in it are not all walking the same way, only all walking one step further along the same run.";
   "Where everybody is standing is kept up to date as they go, so a later run cannot be worked out against people who have already moved.";
+  "Nobody here CHOSE to move, so they are shoved rather than walked: they go whatever happens, and they turn to face the way they went only if they have rested since their last turn. One person can be shuffled twice by one walk - once for the step of it that reached them and again for a later step - and two turns run together is the spin the rest exists to stop.";
   let steps = g_path_steps(route);
   let outward = list_copy_reverse(steps);
   function shift(step, index) {
@@ -26,7 +27,7 @@ export function app_shared_game_crowd_push_shift(npc_index, route, delay) {
     property_set(npc_index, key_next, npc);
     let wait = g_ripple_delay_seconds(index);
     let waited = add(delay, wait);
-    app_shared_game_npc_move(npc, to, waited);
+    app_shared_game_npc_shove(npc, to, waited);
   }
   each_index(outward, shift);
 }
