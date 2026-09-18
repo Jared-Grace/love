@@ -1131,7 +1131,7 @@ export function bible_glyph_chapter_ezk33() {
           "$speech",
           "that",
           "has",
-          "come",
+          "$walking+tray_out",
           "from",
           "the",
           "$i_am.",
