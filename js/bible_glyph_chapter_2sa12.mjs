@@ -17,7 +17,7 @@ export function bible_glyph_chapter_2sa12() {
         words: [
           "Then",
           "$i_am",
-          "sent",
+          "$hand_sending",
           "$proper_name$Nathan",
           "to",
           "$proper_name$David.",
