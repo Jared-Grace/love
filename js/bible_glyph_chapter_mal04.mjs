@@ -208,7 +208,7 @@ export function bible_glyph_chapter_mal04() {
           "will",
           "$footprints",
           "and",
-          "strike",
+          "$fist",
           "the",
           "$earth",
           "with",
