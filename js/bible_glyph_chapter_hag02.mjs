@@ -311,7 +311,7 @@ export function bible_glyph_chapter_hag02() {
           "in",
           "the",
           "second",
-          "year",
+          "$year",
           "of",
           "$proper_name$Darius,",
           "the",
