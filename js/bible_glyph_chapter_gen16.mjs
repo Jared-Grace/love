@@ -342,7 +342,7 @@ export function bible_glyph_chapter_gen16() {
           "conceived",
           "and",
           "will",
-          "bear",
+          "$baby",
           "a",
           "$son,",
           "and",
