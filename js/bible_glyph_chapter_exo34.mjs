@@ -214,7 +214,7 @@ export function bible_glyph_chapter_exo34() {
           "a",
           "thousand",
           "generations,",
-          "forgiving",
+          "$lifting",
           "iniquity,",
           "transgression,",
           "and",
