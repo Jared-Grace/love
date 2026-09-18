@@ -549,7 +549,7 @@ export function bible_glyph_chapter_2sa06() {
           "it.",
           "Then",
           "$proper_name$David",
-          "offered",
+          "$walking+pointing_up",
           "burnt",
           "offerings",
           "and",
