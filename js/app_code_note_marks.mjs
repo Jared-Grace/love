@@ -1,0 +1,44 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_note_name_mark_open } from "./app_code_note_name_mark_open.mjs";
+import { app_code_note_name_mark_close } from "./app_code_note_name_mark_close.mjs";
+import { js_comments_get } from "./js_comments_get.mjs";
+import { property_get } from "./property_get.mjs";
+import { text_slice } from "./text_slice.mjs";
+import { text_index_of_from_try } from "./text_index_of_from_try.mjs";
+import { add } from "./add.mjs";
+export function app_code_note_marks(code) {
+  arguments_assert(arguments, 1);
+  ("every marked name a program's notes hold, in the order they stand, each as the name and the two places in the whole program where its mark opens and closes");
+  ("THE ONE SCAN, because two different questions are asked of the same marks and neither may find them for itself. Which names a program teaches is one; where on the screen to fade a bracket and colour what it holds is the other. Scanned twice, a change to the mark has to be made twice, and the day it is made once the colour lands somewhere the reader sees no bracket.");
+  ("Places are counted in the whole program rather than inside the note, because that is what every other reader of this program speaks in - the parser gives a name's place in the program, and the painter writes the program out from end to end.");
+  ("Only the notes are looked in, never the whole program, because the mark is a round bracket and a program is full of round brackets that mean calling something. Asking the parser where the notes are is what keeps a call from being read as a mark.");
+  ("A bracket that opens and never closes ends the search of that note rather than throwing. What is being painted is a lesson's own writing, and the worst an unclosed bracket can do here is leave a note drawn plainly - which is what it looked like before any of this existed.");
+  let open = app_code_note_name_mark_open();
+  let close = app_code_note_name_mark_close();
+  let comments = js_comments_get(code);
+  let marks = [];
+  for (let comment of comments) {
+    let start = property_get(comment, "start");
+    let end = property_get(comment, "end");
+    let note = text_slice(code, start, end);
+    let from = 0;
+    while (less(from, end)) {
+      let open_at = text_index_of_from_try(note, open, from);
+      if (less(open_at, 0)) {
+        break;
+      }
+      let name_at = add(open_at, 1);
+      let close_at = text_index_of_from_try(note, close, name_at);
+      if (less(close_at, 0)) {
+        break;
+      }
+      let name = text_slice(note, name_at, close_at);
+      let mark_from = add(start, open_at);
+      let right = add(close_at, 1);
+      let mark_to = add(start, right);
+      marks.push([name, mark_from, mark_to]);
+      from = add(close_at, 1);
+    }
+  }
+  return marks;
+}
