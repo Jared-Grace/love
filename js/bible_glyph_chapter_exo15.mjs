@@ -90,7 +90,7 @@ export function bible_glyph_chapter_exo15() {
         verse_number: 3,
         words: [
           "The",
-          "LORD",
+          "$i_am",
           "is",
           "a",
           "$man_beard;",
