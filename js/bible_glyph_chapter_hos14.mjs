@@ -183,7 +183,7 @@ export function bible_glyph_chapter_hos14() {
           "will",
           "$turn_back",
           "and",
-          "dwell",
+          "$person+house",
           "in",
           "his",
           "shade;",
