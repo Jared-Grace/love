@@ -185,7 +185,7 @@ export function bible_glyph_chapter_num32() {
           "war",
           "while",
           "you",
-          "sit",
+          "$person+house",
           "here?",
         ],
       },
