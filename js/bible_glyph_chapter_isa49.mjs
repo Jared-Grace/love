@@ -901,7 +901,7 @@ export function bible_glyph_chapter_isa49() {
           "make",
           "your",
           "oppressors",
-          "eat",
+          "$eating",
           "their",
           "own",
           "$meat;",
