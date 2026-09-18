@@ -107,7 +107,7 @@ export function bible_glyph_chapter_isa12() {
           "$hands_raised",
           "to",
           "the",
-          "LORD,",
+          "$i_am,",
           "proclaim",
           "His",
           "name;",
