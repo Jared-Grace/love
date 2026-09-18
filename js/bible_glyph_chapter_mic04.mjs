@@ -219,7 +219,7 @@ export function bible_glyph_chapter_mic04() {
           "$walking",
           "in",
           "the",
-          "name",
+          "$name_tag",
           "of",
           "the",
           "$i_am",
