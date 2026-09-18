@@ -15,7 +15,7 @@ export function bible_glyph_chapter_gen37() {
         words: [
           "Now",
           "Jacob",
-          "lived",
+          "$person+house",
           "in",
           "the",
           "$earth",
