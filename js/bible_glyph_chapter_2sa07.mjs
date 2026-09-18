@@ -843,7 +843,7 @@ export function bible_glyph_chapter_2sa07() {
           "is",
           "$speech,",
           "The",
-          "LORD",
+          "$i_am",
           "of",
           "Hosts",
           "is",
