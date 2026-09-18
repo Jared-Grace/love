@@ -1532,7 +1532,7 @@ export function bible_glyph_chapter_exo12() {
           "uncircumcised",
           "man",
           "may",
-          "eat",
+          "$eating",
           "of",
           "it.",
         ],
