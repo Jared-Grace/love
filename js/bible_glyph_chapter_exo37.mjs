@@ -706,7 +706,7 @@ export function bible_glyph_chapter_exo37() {
           "poles",
           "used",
           "to",
-          "carry",
+          "$lifting",
           "it.",
         ],
       },
