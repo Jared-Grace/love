@@ -1449,7 +1449,7 @@ export function bible_glyph_chapter_2ch06() {
           "built",
           "for",
           "Your",
-          "name,",
+          "$name_tag,",
         ],
       },
       {
