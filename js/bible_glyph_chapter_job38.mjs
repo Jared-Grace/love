@@ -17,7 +17,7 @@ export function bible_glyph_chapter_job38() {
           "the",
           "$i_am",
           "answered",
-          "Job",
+          "$proper_name$Job",
           "$tray_out",
           "the",
           "whirlwind",
