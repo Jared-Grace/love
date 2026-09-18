@@ -478,7 +478,7 @@ export function bible_glyph_chapter_hos02() {
           "the",
           "Valley",
           "of",
-          "Achor",
+          "$proper_name$Achor",
           "into",
           "a",
           "gateway",
@@ -506,7 +506,7 @@ export function bible_glyph_chapter_hos02() {
           "up",
           "out",
           "of",
-          "Egypt.",
+          "$proper_name$Egypt.",
         ],
       },
       {
@@ -706,7 +706,7 @@ export function bible_glyph_chapter_hos02() {
           "will",
           "respond",
           "to",
-          "Jezreel.",
+          "$proper_name$Jezreel.",
         ],
       },
       {
