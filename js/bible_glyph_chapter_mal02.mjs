@@ -552,7 +552,7 @@ export function bible_glyph_chapter_mal02() {
           "For",
           "I",
           "hate",
-          "divorce,",
+          "$hand_sending,",
           "$speech",
           "the",
           "$i_am,",
