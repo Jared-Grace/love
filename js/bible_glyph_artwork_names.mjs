@@ -648,6 +648,86 @@ export function bible_glyph_artwork_names() {
       glyph: "baby",
       asset: "Baby",
     },
+    {
+      glyph: "tomb",
+      asset: "Headstone",
+    },
+    {
+      glyph: "cloak",
+      asset: "Coat",
+    },
+    {
+      glyph: "garment",
+      asset: "T-shirt",
+    },
+    {
+      glyph: "snare",
+      asset: "Mouse trap",
+    },
+    {
+      glyph: "cup",
+      asset: "Teacup without handle",
+    },
+    {
+      glyph: "dream",
+      asset: "Thought balloon",
+    },
+    {
+      glyph: "tower",
+      asset: "Tokyo tower",
+    },
+    {
+      glyph: "wall",
+      asset: "Brick",
+    },
+    {
+      glyph: "raven",
+      asset: "Blackbird",
+    },
+    {
+      glyph: "locusts",
+      asset: "Cricket",
+    },
+    {
+      glyph: "lots",
+      asset: "Game die",
+    },
+    {
+      glyph: "harp",
+      asset: "Banjo",
+    },
+    {
+      glyph: "tambourine",
+      asset: "Long drum",
+    },
+    {
+      glyph: "cave",
+      asset: "Hole",
+    },
+    {
+      glyph: "wheat",
+      asset: "Sheaf of rice",
+    },
+    {
+      glyph: "throne",
+      asset: "Chair",
+    },
+    {
+      glyph: "queen",
+      asset: "Person with crown",
+    },
+    {
+      glyph: "dawn",
+      asset: "Sunrise over mountains",
+    },
+    {
+      glyph: "thorns",
+      asset: "Cactus",
+    },
+    {
+      glyph: "bull",
+      asset: "Cow",
+    },
   ];
   return names;
 }
