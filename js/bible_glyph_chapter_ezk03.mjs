@@ -23,7 +23,7 @@ export function bible_glyph_chapter_ezk03() {
           "$son",
           "of",
           "$person,",
-          "eat",
+          "$eating",
           "what",
           "you",
           "find",
