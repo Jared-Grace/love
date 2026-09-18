@@ -320,7 +320,7 @@ export function bible_glyph_chapter_ezk36() {
           "$hands_giving",
           "branches",
           "and",
-          "bear",
+          "$lifting",
           "fruit",
           "for",
           "My",
