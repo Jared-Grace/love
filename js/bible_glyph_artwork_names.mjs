@@ -345,6 +345,10 @@ export function bible_glyph_artwork_names() {
       asset: "Backhand index pointing right",
     },
     {
+      glyph: "pointing_down",
+      asset: "Backhand index pointing down",
+    },
+    {
       glyph: "pointing_back",
       asset: "Backhand index pointing left",
     },
@@ -367,6 +371,10 @@ export function bible_glyph_artwork_names() {
     {
       glyph: "pin",
       asset: "Pushpin",
+    },
+    {
+      glyph: "link",
+      asset: "Link",
     },
     {
       glyph: "equals",
