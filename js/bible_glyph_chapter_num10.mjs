@@ -297,7 +297,7 @@ export function bible_glyph_chapter_num10() {
           "of",
           "the",
           "second",
-          "year,",
+          "$year,",
           "the",
           "$cloud",
           "was",
