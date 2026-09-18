@@ -554,7 +554,7 @@ export function bible_glyph_chapter_lev05() {
           "guilty",
           "and",
           "shall",
-          "bear",
+          "$lifting",
           "his",
           "punishment.",
         ],
