@@ -1,5 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { number_from_text } from "./number_from_text.mjs";
+import { bible_glyph_proper_name_numbers_cache } from "./bible_glyph_proper_name_numbers_cache.mjs";
+import { property_set } from "./property_set.mjs";
 import { bible_strong_chapter_tallies_cache } from "./bible_strong_chapter_tallies_cache.mjs";
 import { bible_glyph_roots_testament_table } from "./bible_glyph_roots_testament_table.mjs";
 import { bible_glyph_roots_drawn_lookup } from "./bible_glyph_roots_drawn_lookup.mjs";
@@ -12,7 +14,6 @@ import { property_get } from "./property_get.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { property_set } from "./property_set.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { list_take } from "./list_take.mjs";
@@ -32,7 +33,13 @@ export async function bible_glyph_roots_unseated_common(
   ("IT KEEPS MORE THAN THE TOP WORDING ON PURPOSE. A number split evenly between two unrelated wordings has two meanings under one key, and a picture seated on it draws one of them and lies about the other. The top wording alone would hide that split and would make an unseatable word look ready.");
   ("A COUNT IS PER TESTAMENT AND MAY NEVER CROSS ONE. The Greek and the Hebrew numberings both start at one and name unrelated words, so a total that spanned the testaments would add two different words together and report the sum as one common word.");
   ("AN ALREADY SEATED NUMBER IS LEFT OUT RATHER THAN MARKED, because the question this answers is what to draw next, and a list whose top is entirely made of words that are already drawn answers a different question badly.");
+  ("A PROPER NAME IS UNSEATED AND IS NOT UNDRAWN, AND THE FIRST READING OF THIS CONFUSED THE TWO. Israel, David, Judah, Moses, Jerusalem and Egypt came back in the first thirty, ahead of almost every verb, and every one of them is already finished on the page: a name carries the name badge and its own letters, because a reader who saw a picture where Habakkuk stands would have lost the one fact the word carries. So they are counted apart rather than dropped. Dropping them would hide how much of the apparent gap is not a gap at all, and leaving them in the one list would answer what to draw next with the name of a man.");
   let shown_wanted = number_from_text(wanted);
+  let told = await bible_glyph_proper_name_numbers_cache(testament_name);
+  let is_name = {};
+  for (let strong of told.numbers) {
+    property_set(is_name, strong, true);
+  }
   let tallies = await bible_strong_chapter_tallies_cache();
   let roots = bible_glyph_roots_testament_table(testament_name);
   let drawn = bible_glyph_roots_drawn_lookup(roots);
@@ -63,8 +70,16 @@ export async function bible_glyph_roots_unseated_common(
   }
   let ranked = [];
   let occurrences = 0;
+  let names = 0;
+  let name_occurrences = 0;
   for (let strong of object_property_names(totals)) {
     let total = property_get(totals, strong);
+    let named_word = property_exists(is_name, strong);
+    if (named_word) {
+      names = add(names, 1);
+      name_occurrences = add(name_occurrences, total);
+      continue;
+    }
     occurrences = add(occurrences, total);
     list_add(ranked, {
       strong,
@@ -92,6 +107,8 @@ export async function bible_glyph_roots_unseated_common(
     chapters,
     numbers: ranked.length,
     occurrences,
+    names,
+    name_occurrences,
     shown,
   };
   return r;
