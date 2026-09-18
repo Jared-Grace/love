@@ -169,7 +169,7 @@ export function bible_glyph_chapter_exo34() {
           "His",
           "name,",
           "the",
-          "LORD.",
+          "$i_am.",
         ],
       },
       {
