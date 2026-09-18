@@ -502,7 +502,7 @@ export function bible_glyph_chapter_num15() {
         words: [
           "and",
           "you",
-          "eat",
+          "$eating",
           "the",
           "$bread",
           "of",
