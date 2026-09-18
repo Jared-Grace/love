@@ -397,7 +397,7 @@ export function bible_glyph_chapter_hos02() {
           "the",
           "field",
           "will",
-          "devour",
+          "$eating",
           "them.",
         ],
       },
