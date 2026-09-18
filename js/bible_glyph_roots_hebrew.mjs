@@ -60,7 +60,9 @@ export function bible_glyph_roots_hebrew() {
   "This is a SEED and not a finished mapping, exactly as the Greek table is. It exists to be run through the survey, which reports what is still undrawn in order of how often a reader would meet it, so the next words to author are measured rather than guessed at.";
   "THE STANDING PRONOUNS AND SMALL WORDS WEAR THE PICTURES THEIR JOINED FORMS ALREADY WEAR (2026-09-17). Hebrew writes my as a letter on the end of a word and I as a word of its own, and a reader meeting the person bust on my soul and the English letters on I would learn two things for one. So ani and anokhi and anachnu take the bust, attah takes the finger pointing at the reader, el takes the target that the joined le takes, kemo takes the mirror that the joined ke takes, and hu and hem take the pointing-back hand that the joined he and they already take. None of those says how many, and the joined forms were chosen for exactly that, so I and we sharing one mark is the same choice made again rather than a new one. The Greek table seats ego, su, pros and hos on the same four, so the shared vocabulary holds across the two testaments as well as across the two ways Hebrew writes a word.";
   "THE WORDINGS WERE READ BEFORE SEATING AND THEY ARE CLEAN IN THE WAY A PRONOUN CAN BE. Ani is I five hundred and forty six times and anokhi two hundred and twenty one; attah is you in every one of its top wordings; el is to eighteen hundred and ninety six times against into a hundred and thirty four and against a hundred and two, which is a direction in all three; kemo is like and as. Hu is he and it and she and also that - on that day - and the pointing-back hand draws that one honestly too, since that day is a day already named.";
-  "THE OBJECT MARKER ET IS DELIBERATELY NOT SEATED HERE. It has no English of its own - its wordings are the pronouns the interlinear resolved onto it - so whether it is silent, as the article is, is the article's question asked again, and nobody has asked it.";
+  "HAYAH IS SEATED ON THE CHAIN LINK (2026-09-18), the same mark the Greek eimi takes, because the two words are the one verb the two testaments are written in. It is will be two hundred and four times, came a hundred and fifty five, was a hundred and forty eight and be a hundred. The coming and the being are one Hebrew word and take one mark, which is the rule this table already follows wherever a number carries two senses: the mark teaches the reader that the original said one thing there.";
+  "THE OBJECT MARKER ET IS SEATED ON THE HAND POINTING DOWN (2026-09-18). It has no English of its own - its wordings are the pronouns the interlinear resolved onto it, and it was left unseated while that looked like the article's question over again. It is not the same question. The article says WHICH one; et says what the action lands on, which is a thing the English sentence says with word order and the Hebrew says with a word, so a reader of the pictures has nothing to read it off unless it is drawn.";
+  "THE DOWNWARD HAND IS THE FOURTH DIRECTION A HAND CAN POINT, and the other three are already spoken for in this vocabulary - the hand pointing forward is this, the hand pointing back is he and that, the hand pointing out of the picture is you. A hand pointing down at what is under it is the nearest a picture comes to here is the one it happens to, which is the whole of what et does.";
   let roots = [
     {
       root: "yhwh",
@@ -1033,6 +1035,26 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "4480",
           glyph: "tray_out",
+        },
+      ],
+    },
+    {
+      root: "hayah",
+      gloss: "will be, came, was, be, were, is",
+      words: [
+        {
+          strong: "1961",
+          glyph: "link",
+        },
+      ],
+    },
+    {
+      root: "et",
+      gloss: "the one acted on",
+      words: [
+        {
+          strong: "853",
+          glyph: "pointing_down",
         },
       ],
     },

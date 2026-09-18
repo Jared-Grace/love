@@ -45,6 +45,11 @@ export function bible_glyph_characters() {
   "THE LAST FOUR RELATIONS WERE BOUGHT FOR THE SMALL WORDS JOINED ONTO A HEBREW WORD, which had been left in letters on purpose until the goal became pictures only. The person with no face is me - the profile picture every screen already uses for whoever is looking at it - and the hand pointing straight out of the picture is you, which joins the two pointing hands as the third direction a hand can point. The target is to and for, a going toward and a being meant for. The mirror is like and as, because a likeness is what a mirror hands back; the equals sign was not reused for it, since that sign is held back as the record of a claim this Bible refused to make.";
   "NONE OF THE FOUR SAYS HOW MANY. We shares the mark for me and a crowd of you shares the mark for you, the way he and they already share the hand pointing back. The two busts were not taken for we because they already draw a crowd.";
   "THE PUSHPIN IS THE ARTICLE, bought on 2026-09-17 when the goal was widened from pictures only to every word of the original having one. A pin marks this particular one out of all the others on the board, which is what the does to a noun. The digit one was proposed and refused because the article sits on plurals and on things nobody counts - the men, the waters, the truth - and a one there claims a number the text does not. Drawing it is what lets a reader SEE where it is missing: the first verse of John leaves it off God in its last clause, and that absence only shows on a page where every present article is drawn.";
+  "THE HAND POINTING DOWN IS THE HEBREW OBJECT MARKER, bought on 2026-09-18. Et is a whole word that English has no word for at all: it stands in front of a definite direct object and says that this is the one the verb happens to, which English says by putting the noun after the verb and by nothing else. A picture line has no word order to lean on in the way an English sentence does, so the one language that spells the relation out is the one whose reader would lose it.";
+  "IT IS THE FOURTH DIRECTION AND THE OTHER THREE ARE ALREADY THIS VOCABULARY'S. Forward is this, backward is he and that, out of the picture is you, and down is what is under the hand - the thing being pointed at rather than the person being addressed. A reader who has learnt the three learns the fourth from them, which is worth more than any single picture chosen on its own merits.";
+  "THE CHAIN LINK IS THE VERB TO BE, bought on 2026-09-18 for the one word the equals sign was taken back off. Being is the commonest verb in either testament and it had no picture at all, so every is and was and am in the picture Bible stood in letters, which the goal of every original word having a picture does not allow. The equals sign could not be given back for the reason written above it, and the both-ways arrow carries the same fault; a link is the third thing a mark between two words can say.";
+  "IT SAYS JOINED AND IT DOES NOT SAY THE SAME, which is the whole of why it is the honest one. Two rings of a chain are plainly two rings - a reader sees them held together and does not see one turn into the other - so the mark carries what a copula does, that the second word is said of the first, without the arithmetic the equals sign drags in from a reader's schooling. God is love drawn with a link does not read backwards as love is God, because nothing about a link claims the two ends are interchangeable.";
+  "IT IS TAUGHT AND IT IS NOT GUESSED, and that is not a weakness peculiar to this mark. A picture Bible's small words are all taught - the pushpin is no more the article by nature than a link is the verb to be - and what a mark must earn is that the meaning a reader arrives with does not fight the meaning it is taught. A chain arrives meaning connected, which is where the teaching starts rather than something it has to undo.";
   let characters = [
     {
       name: "cross",
@@ -379,6 +384,10 @@ export function bible_glyph_characters() {
       character: "👈",
     },
     {
+      name: "pointing_down",
+      character: "👇",
+    },
+    {
       name: "equals",
       character: "🟰",
     },
@@ -409,6 +418,10 @@ export function bible_glyph_characters() {
     {
       name: "pin",
       character: "📌",
+    },
+    {
+      name: "link",
+      character: "🔗",
     },
     {
       name: "water",
