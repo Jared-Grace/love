@@ -91,7 +91,7 @@ export function bible_glyph_chapter_isa61() {
           "the",
           "mourners",
           "in",
-          "Zion",
+          "$proper_name$Zion",
           "-",
           "to",
           "$hands_giving",
