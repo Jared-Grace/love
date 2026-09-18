@@ -422,7 +422,7 @@ export function bible_glyph_chapter_isa55() {
           "will",
           "make",
           "a",
-          "name",
+          "$name_tag",
           "for",
           "the",
           "$i_am,",
