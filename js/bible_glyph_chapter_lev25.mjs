@@ -284,7 +284,7 @@ export function bible_glyph_chapter_lev25() {
           "$sparkle",
           "the",
           "fiftieth",
-          "year",
+          "$year",
           "and",
           "proclaim",
           "liberty",
