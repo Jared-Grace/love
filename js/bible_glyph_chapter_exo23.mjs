@@ -489,7 +489,7 @@ export function bible_glyph_chapter_exo23() {
           "Three",
           "times",
           "a",
-          "year",
+          "$year",
           "all",
           "your",
           "males",
