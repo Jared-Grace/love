@@ -596,7 +596,7 @@ export function bible_glyph_chapter_1ki18() {
         words: [
           "So",
           "Ahab",
-          "summoned",
+          "$hand_sending",
           "all",
           "the",
           "$son",
