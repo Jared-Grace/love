@@ -527,7 +527,7 @@ export function bible_glyph_chapter_2sa05() {
           "$speech,",
           "Should",
           "I",
-          "go",
+          "$walking+pointing_up",
           "up",
           "against",
           "the",
