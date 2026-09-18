@@ -1,3 +1,4 @@
+import { app_shared_game_npc_face } from "./app_shared_game_npc_face.mjs";
 import { app_g_hero_ground_div } from "./app_g_hero_ground_div.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_add } from "./list_add.mjs";
@@ -10,7 +11,6 @@ import { property_set } from "./property_set.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { app_shared_game_npc_img_get } from "./app_shared_game_npc_img_get.mjs";
 import { g_direction } from "./g_direction.mjs";
-import { app_shared_game_character_turn_start } from "./app_shared_game_character_turn_start.mjs";
 import { html_animate } from "./html_animate.mjs";
 import { app_shared_game_npc_elements } from "./app_shared_game_npc_elements.mjs";
 import { each } from "./each.mjs";
@@ -30,9 +30,9 @@ export async function app_g_hero_kill(hero, evil, victim) {
   let div_map = property_get(hero, "div_map");
   property_set(victim, "held_still", "dead");
   list_remove(npcs, victim);
-  let evil_img = app_shared_game_npc_img_get(evil);
+  ("The killer's turn toward whoever they are about to strike is WRITTEN DOWN like any other turn of theirs, so their next one rests after it. Turned by the drawing straight, it was a turn nobody knew had happened, and the step they took next turned them again at once - the two drawn as one sweep, which for a turn about followed by a quarter the same way round is three quarters of a circle in one movement.");
   let direction = g_direction(evil, victim);
-  app_shared_game_character_turn_start(evil, evil_img, direction);
+  app_shared_game_npc_face(evil, direction);
   let victim_img = app_shared_game_npc_img_get(victim);
   await html_animate(
     victim_img,
