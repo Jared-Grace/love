@@ -751,7 +751,7 @@ export function bible_glyph_chapter_lev06() {
           "male",
           "$priest",
           "may",
-          "eat",
+          "$eating",
           "it.",
           "It",
           "is",
