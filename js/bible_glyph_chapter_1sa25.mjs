@@ -1399,7 +1399,7 @@ export function bible_glyph_chapter_1sa25() {
           "head.",
           "Then",
           "$proper_name$David",
-          "sent",
+          "$hand_sending",
           "$mouth",
           "to",
           "$proper_name$Abigail,",
