@@ -367,7 +367,7 @@ export function bible_glyph_chapter_num14() {
         words: [
           "I",
           "will",
-          "strike",
+          "$fist",
           "them",
           "with",
           "a",
