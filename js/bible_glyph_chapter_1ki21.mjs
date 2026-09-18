@@ -394,7 +394,7 @@ export function bible_glyph_chapter_1ki21() {
           "and",
           "nobles",
           "who",
-          "lived",
+          "$person+house",
           "in",
           "his",
           "$city,",
