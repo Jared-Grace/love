@@ -287,7 +287,7 @@ export function bible_glyph_chapter_exo16() {
           "you",
           "$meat",
           "to",
-          "eat",
+          "$eating",
           "this",
           "evening",
           "and",
