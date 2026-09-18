@@ -563,7 +563,7 @@ export function bible_glyph_chapter_2ki22() {
           "the",
           "$man_beard",
           "who",
-          "sent",
+          "$hand_sending",
           "you",
         ],
       },
