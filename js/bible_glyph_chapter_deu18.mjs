@@ -656,7 +656,7 @@ export function bible_glyph_chapter_deu18() {
           "a",
           "$speech",
           "the",
-          "LORD",
+          "$i_am",
           "has",
           "$no_entry",
           "$mouth.",
