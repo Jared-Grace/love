@@ -92,7 +92,7 @@ export function bible_glyph_chapter_mrk10() {
         "were",
         "in",
         "$speech,",
-        "“Moses",
+        "$proper_name$“Moses",
         "permitted",
         "a",
         "man",
