@@ -662,7 +662,7 @@ export function bible_glyph_chapter_job01() {
           "name",
           "of",
           "the",
-          "LORD.",
+          "$i_am.",
         ],
       },
       {
