@@ -390,7 +390,7 @@ export function bible_glyph_chapter_exo19() {
           "careful",
           "not",
           "to",
-          "go",
+          "$walking+pointing_up",
           "up",
           "on",
           "the",
