@@ -520,7 +520,7 @@ export function bible_glyph_chapter_gen24() {
         words: [
           "Now",
           "the",
-          "girl",
+          "$girl",
           "was",
           "very",
           "$thumbs_up,",
