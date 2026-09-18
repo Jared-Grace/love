@@ -603,7 +603,7 @@ export function bible_glyph_chapter_gen22() {
           "$proper_name$Milcah",
           "has",
           "also",
-          "borne",
+          "$baby",
           "$son",
           "to",
           "your",
