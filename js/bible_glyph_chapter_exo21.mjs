@@ -116,7 +116,7 @@ export function bible_glyph_chapter_exo21() {
           "the",
           "man",
           "shall",
-          "go",
+          "$walking+tray_out",
           "free.",
         ],
       },
