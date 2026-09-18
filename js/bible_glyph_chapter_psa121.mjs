@@ -109,7 +109,7 @@ export function bible_glyph_chapter_psa121() {
           "sun",
           "will",
           "$no_entry",
-          "strike",
+          "$fist",
           "you",
           "by",
           "day,",
