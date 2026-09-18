@@ -1322,7 +1322,7 @@ export function bible_glyph_chapter_lev14() {
           "the",
           "$priest",
           "shall",
-          "go",
+          "$walking+tray_out",
           "out",
           "$tray_out",
           "the",
