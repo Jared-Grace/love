@@ -1,3 +1,4 @@
+import { bible_word_voice_chapter_rows } from "./bible_word_voice_chapter_rows.mjs";
 import { bible_word_voice_trial_phoneme_rows } from "./bible_word_voice_trial_phoneme_rows.mjs";
 import { bible_word_voice_trial_short_rows } from "./bible_word_voice_trial_short_rows.mjs";
 import { bible_interlinear_chapter_word_forms_first } from "./bible_interlinear_chapter_word_forms_first.mjs";
@@ -125,6 +126,12 @@ export async function bible_word_voice_trial_rows() {
       rows,
     });
   }
+  result.push({
+    key: "gen01",
+    label: "Genesis 1 · whole chapter",
+    rtl: true,
+    rows: await bible_word_voice_chapter_rows("GEN01", "Achird,Vindemiatrix"),
+  });
   result.push({
     key: "test",
     label: "Short-word tests",
