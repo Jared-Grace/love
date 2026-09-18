@@ -205,7 +205,7 @@ export function bible_glyph_chapter_nam03() {
           "better",
           "than",
           "$proper_name$Thebes,",
-          "stationed",
+          "$person+house",
           "by",
           "the",
           "Nile",
