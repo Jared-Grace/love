@@ -282,7 +282,7 @@ export function bible_glyph_chapter_mic06() {
           "$voice",
           "of",
           "the",
-          "LORD",
+          "$i_am",
           "calls",
           "out",
           "to",
