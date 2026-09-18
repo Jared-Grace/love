@@ -568,7 +568,7 @@ export function bible_glyph_chapter_job38() {
           "does",
           "the",
           "ice",
-          "emerge?",
+          "$walking+tray_out?",
           "Who",
           "gives",
           "birth",
