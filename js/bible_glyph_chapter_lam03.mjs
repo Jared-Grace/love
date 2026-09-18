@@ -962,7 +962,7 @@ export function bible_glyph_chapter_lam03() {
           "Your",
           "name,",
           "O",
-          "LORD,",
+          "$i_am,",
           "out",
           "of",
           "the",
