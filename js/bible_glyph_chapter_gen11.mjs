@@ -110,7 +110,7 @@ export function bible_glyph_chapter_gen11() {
           "may",
           "$hammer",
           "a",
-          "name",
+          "$name_tag",
           "for",
           "ourselves",
           "and",
