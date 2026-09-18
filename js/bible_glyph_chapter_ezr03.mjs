@@ -283,7 +283,7 @@ export function bible_glyph_chapter_ezr03() {
           "of",
           "the",
           "second",
-          "year",
+          "$year",
           "after",
           "they",
           "$footprints",
