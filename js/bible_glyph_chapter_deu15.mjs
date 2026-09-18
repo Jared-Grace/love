@@ -592,7 +592,7 @@ export function bible_glyph_chapter_deu15() {
           "because",
           "his",
           "six",
-          "years",
+          "$year",
           "of",
           "$kneeling",
           "were",
