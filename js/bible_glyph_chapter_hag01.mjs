@@ -500,7 +500,7 @@ export function bible_glyph_chapter_hag01() {
           "of",
           "the",
           "second",
-          "year",
+          "$year",
           "of",
           "$king",
           "$proper_name$Darius.",
