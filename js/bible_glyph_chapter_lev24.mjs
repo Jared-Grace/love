@@ -220,7 +220,7 @@ export function bible_glyph_chapter_lev24() {
           "who",
           "are",
           "to",
-          "eat",
+          "$eating",
           "it",
           "in",
           "a",
