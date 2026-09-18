@@ -95,7 +95,7 @@ export function bible_glyph_chapter_exo15() {
           "a",
           "$man_beard;",
           "the",
-          "LORD",
+          "$i_am",
           "is",
           "His",
           "name.",
