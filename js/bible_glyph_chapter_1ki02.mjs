@@ -1336,7 +1336,7 @@ export function bible_glyph_chapter_1ki02() {
           "the",
           "$sun",
           "you",
-          "go",
+          "$walking+tray_out",
           "out",
           "and",
           "cross",
