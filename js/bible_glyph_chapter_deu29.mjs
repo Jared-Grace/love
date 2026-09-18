@@ -140,7 +140,7 @@ export function bible_glyph_chapter_deu29() {
         words: [
           "For",
           "forty",
-          "years",
+          "$year",
           "I",
           "$walking",
           "you",
