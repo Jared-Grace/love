@@ -61,7 +61,7 @@ export function bible_glyph_chapter_est01() {
           "In",
           "the",
           "third",
-          "year",
+          "$year",
           "of",
           "his",
           "$castle,",
