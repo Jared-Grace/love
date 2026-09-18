@@ -57,7 +57,7 @@ export function bible_glyph_chapter_2sa06() {
           "the",
           "$name_tag,",
           "the",
-          "name",
+          "$name_tag",
           "of",
           "the",
           "$i_am",
