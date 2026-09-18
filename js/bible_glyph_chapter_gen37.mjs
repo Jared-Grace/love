@@ -604,7 +604,7 @@ export function bible_glyph_chapter_gen37() {
           "Let",
           "us",
           "$no_entry",
-          "take",
+          "$fist",
           "his",
           "$person_other,",
           "he",
