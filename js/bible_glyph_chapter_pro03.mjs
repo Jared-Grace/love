@@ -580,7 +580,7 @@ export function bible_glyph_chapter_pro03() {
           "neighbor,",
           "for",
           "he",
-          "dwells",
+          "$person+house",
           "trustfully",
           "beside",
           "you.",
