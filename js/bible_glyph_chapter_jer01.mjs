@@ -83,7 +83,7 @@ export function bible_glyph_chapter_jer01() {
           "of",
           "the",
           "eleventh",
-          "year",
+          "$year",
           "of",
           "$proper_name$Zedekiah",
           "$son",
