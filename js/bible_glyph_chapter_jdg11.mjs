@@ -537,7 +537,7 @@ export function bible_glyph_chapter_jdg11() {
           "$ear.",
           "They",
           "also",
-          "sent",
+          "$hand_sending",
           "messengers",
           "to",
           "the",
