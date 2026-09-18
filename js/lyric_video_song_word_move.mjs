@@ -29,6 +29,7 @@ export async function lyric_video_song_word_move(
   ("★ HOW FAR THE WORD HAS BEEN MOVED BY HAND IS KEPT ON THE WORD, IN QUARTER NOTES. Snapping the words to the melody again starts from what the aligner heard and would put every word back on its nearest note, throwing these moves away without a word; the count is what lets whatever runs next see that a person placed this word and by how much.");
   ("A MOMENT BEFORE THE SONG BEGINS IS NOT ALLOWED. The first word moved earlier than the start stops at the start.");
   ("A document that names no Ardour session has no tempo to measure a note by, and is refused rather than guessed at.");
+  ("★ THE STEP IS READ AS A NUMBER BEFORE ANYTHING IS DONE WITH IT, because this is run from a command line and every argument arrives there as text. Multiplying by text quietly works, so the moment landed right while the running total of how far the word had been moved was built with a plus that joins text end to end: half a quarter added to none gave the four characters 00.5, and the next move would have given 00.50.5. The count is the one part of this nobody looks at until something else reads it.");
   let folder = lyric_video_songs_folder();
   let file_name = name + ".json";
   let path_document = path_join([folder, file_name]);
@@ -45,7 +46,8 @@ export async function lyric_video_song_word_move(
   let quarter_seconds = multiply(tick_seconds, 1920);
   let line = document.lines[line_index];
   let word = line.words[word_index];
-  let quarters_number = Number(quarters); let seconds = multiply(quarters_number, quarter_seconds);
+  let quarters_number = Number(quarters);
+  let seconds = multiply(quarters_number, quarter_seconds);
   let moved = add(word.start, seconds);
   let rounded = number_round_places(moved, 3);
   let start = math_max(rounded, 0);
