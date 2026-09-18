@@ -574,7 +574,7 @@ export function bible_glyph_chapter_jdg06() {
           "You.",
           "Let",
           "me",
-          "bring",
+          "$walking+tray_out",
           "my",
           "offering",
           "and",
