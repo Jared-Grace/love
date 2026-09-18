@@ -25,7 +25,7 @@ export function bible_glyph_chapter_psa085() {
           "$i_am;",
           "You",
           "$turn_back",
-          "Jacob",
+          "$proper_name$Jacob",
           "from",
           "captivity.",
         ],
