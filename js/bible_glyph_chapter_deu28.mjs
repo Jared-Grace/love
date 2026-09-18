@@ -1661,7 +1661,7 @@ export function bible_glyph_chapter_deu28() {
           "Then",
           "you",
           "will",
-          "eat",
+          "$eating",
           "the",
           "fruit",
           "of",
