@@ -74,7 +74,7 @@ export function bible_glyph_chapter_gen21() {
           "the",
           "$son",
           "$proper_name$Sarah",
-          "bore",
+          "$baby",
           "to",
           "him.",
         ],
