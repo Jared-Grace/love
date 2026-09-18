@@ -746,7 +746,7 @@ export function bible_glyph_chapter_job31() {
           "signature.",
           "Let",
           "the",
-          "Almighty",
+          "$might",
           "answer",
           "me;",
           "let",
