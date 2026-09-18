@@ -602,7 +602,7 @@ export function bible_glyph_chapter_lev21() {
         words: [
           "He",
           "may",
-          "eat",
+          "$eating",
           "the",
           "$bread",
           "of",
