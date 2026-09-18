@@ -16,7 +16,7 @@ export function bible_glyph_chapter_gen08() {
           "But",
           "$fire",
           "remembered",
-          "Noah",
+          "$proper_name$Noah",
           "and",
           "all",
           "the",
@@ -161,7 +161,7 @@ export function bible_glyph_chapter_gen08() {
           "After",
           "forty",
           "$sun",
-          "Noah",
+          "$proper_name$Noah",
           "opened",
           "the",
           "window",
@@ -420,7 +420,7 @@ export function bible_glyph_chapter_gen08() {
       },
       {
         verse_number: 15,
-        words: ["Then", "$fire", "$mouth", "to", "Noah,"],
+        words: ["Then", "$fire", "$mouth", "to", "$proper_name$Noah,"],
       },
       {
         verse_number: 16,
