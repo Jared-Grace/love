@@ -181,7 +181,7 @@ export function bible_glyph_chapter_1ki22() {
           "refrain?",
           "They",
           "$speech,",
-          "Go",
+          "$walking+pointing_up",
           "up,",
           "and",
           "the",
