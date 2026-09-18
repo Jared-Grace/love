@@ -707,7 +707,7 @@ export function bible_glyph_chapter_2ki06() {
           "$speech.",
           "Would",
           "you",
-          "kill",
+          "$fist",
           "those",
           "you",
           "have",
