@@ -1234,7 +1234,7 @@ export function bible_glyph_chapter_exo28() {
           "they",
           "will",
           "$no_entry",
-          "incur",
+          "$lifting",
           "guilt",
           "and",
           "$skull.",
