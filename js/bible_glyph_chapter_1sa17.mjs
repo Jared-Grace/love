@@ -1526,7 +1526,7 @@ export function bible_glyph_chapter_1sa17() {
         words: [
           "Then",
           "David",
-          "reached",
+          "$hand_sending",
           "into",
           "his",
           "bag,",
