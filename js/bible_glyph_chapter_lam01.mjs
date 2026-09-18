@@ -97,7 +97,7 @@ export function bible_glyph_chapter_lam01() {
           "harsh",
           "slavery;",
           "she",
-          "dwells",
+          "$person+house",
           "among",
           "the",
           "$map",
