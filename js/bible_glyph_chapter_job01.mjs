@@ -650,7 +650,7 @@ export function bible_glyph_chapter_job01() {
           "will",
           "$turn_back.",
           "The",
-          "LORD",
+          "$i_am",
           "$hands_giving",
           "and",
           "the",
