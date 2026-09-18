@@ -273,7 +273,7 @@ export function bible_glyph_chapter_rev01() {
           "is",
           "$footprints,",
           "the",
-          "Almighty.",
+          "$all+might.",
         ],
       },
       {
