@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_note_name_mark_open } from "./app_code_note_name_mark_open.mjs";
 import { app_code_note_name_mark_close } from "./app_code_note_name_mark_close.mjs";
@@ -22,14 +23,14 @@ export function app_code_note_marks(code) {
     let end = property_get(comment, "end");
     let note = text_slice(code, start, end);
     let from = 0;
-    while (less(from, end)) {
+    while (less_than(from, end)) {
       let open_at = text_index_of_from_try(note, open, from);
-      if (less(open_at, 0)) {
+      if (less_than(open_at, 0)) {
         break;
       }
       let name_at = add(open_at, 1);
       let close_at = text_index_of_from_try(note, close, name_at);
-      if (less(close_at, 0)) {
+      if (less_than(close_at, 0)) {
         break;
       }
       let name = text_slice(note, name_at, close_at);
