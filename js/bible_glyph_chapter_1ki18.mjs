@@ -835,7 +835,7 @@ export function bible_glyph_chapter_1ki18() {
           "called",
           "on",
           "the",
-          "name",
+          "$name_tag",
           "of",
           "Baal",
           "from",
