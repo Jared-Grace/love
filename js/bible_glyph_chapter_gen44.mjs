@@ -36,7 +36,7 @@ export function bible_glyph_chapter_gen44() {
           "as",
           "they",
           "can",
-          "carry,",
+          "$lifting,",
           "and",
           "put",
           "each",
