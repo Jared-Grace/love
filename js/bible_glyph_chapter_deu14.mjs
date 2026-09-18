@@ -82,7 +82,7 @@ export function bible_glyph_chapter_deu14() {
           "You",
           "must",
           "$no_entry",
-          "eat",
+          "$eating",
           "any",
           "detestable",
           "thing.",
