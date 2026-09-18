@@ -574,7 +574,7 @@ export function bible_glyph_chapter_gen47() {
           "livestock",
           "throughout",
           "that",
-          "year.",
+          "$year.",
         ],
       },
       {
