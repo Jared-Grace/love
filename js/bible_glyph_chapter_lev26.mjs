@@ -359,7 +359,7 @@ export function bible_glyph_chapter_lev26() {
           "your",
           "$fire,",
           "who",
-          "brought",
+          "$walking+tray_out",
           "you",
           "out",
           "of",
