@@ -546,7 +546,7 @@ export function bible_glyph_chapter_rut03() {
       {
         verse_number: 18,
         words: [
-          "Wait,",
+          "$person+house,",
           "my",
           "$woman,",
           "$speech",
