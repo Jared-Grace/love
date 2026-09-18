@@ -16,7 +16,7 @@ export function bible_glyph_chapter_dan01() {
           "In",
           "the",
           "third",
-          "year",
+          "$year",
           "of",
           "the",
           "reign",
