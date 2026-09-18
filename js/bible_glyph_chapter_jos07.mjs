@@ -139,7 +139,7 @@ export function bible_glyph_chapter_jos07() {
           "are",
           "enough",
           "to",
-          "go",
+          "$walking+pointing_up",
           "up",
           "and",
           "attack",
