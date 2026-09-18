@@ -848,7 +848,7 @@ export function bible_glyph_chapter_neh09() {
           "them",
           "the",
           "$proper_name$Canaanites",
-          "dwelling",
+          "$person+house",
           "in",
           "the",
           "$earth;",
