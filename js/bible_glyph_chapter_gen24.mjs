@@ -1685,7 +1685,7 @@ export function bible_glyph_chapter_gen24() {
           "Let",
           "the",
           "girl",
-          "remain",
+          "$person+house",
           "with",
           "us",
           "ten",
