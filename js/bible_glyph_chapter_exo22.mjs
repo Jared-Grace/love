@@ -653,7 +653,7 @@ export function bible_glyph_chapter_exo22() {
           "the",
           "$earth",
           "of",
-          "Egypt.",
+          "$proper_name$Egypt.",
         ],
       },
       {
