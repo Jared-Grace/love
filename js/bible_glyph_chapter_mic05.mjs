@@ -132,7 +132,7 @@ export function bible_glyph_chapter_mic05() {
           "strength",
           "of",
           "the",
-          "LORD,",
+          "$i_am,",
           "in",
           "the",
           "majestic",
