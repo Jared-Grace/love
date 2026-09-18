@@ -680,7 +680,7 @@ export function bible_glyph_chapter_jdg06() {
           "of",
           "the",
           "$i_am",
-          "extended",
+          "$hand_sending",
           "the",
           "tip",
           "of",
