@@ -56,7 +56,7 @@ export function bible_glyph_chapter_exo34() {
           "the",
           "morning,",
           "and",
-          "come",
+          "$walking+pointing_up",
           "up",
           "$mountain",
           "$proper_name$Sinai",
