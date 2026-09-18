@@ -223,7 +223,7 @@ export function bible_glyph_chapter_lam05() {
         words: [
           "Young",
           "men",
-          "toil",
+          "$lifting",
           "at",
           "millstones;",
           "boys",
