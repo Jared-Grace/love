@@ -152,7 +152,7 @@ export function bible_glyph_chapter_lev23() {
           "$sun",
           "you",
           "must",
-          "eat",
+          "$eating",
           "unleavened",
           "bread.",
         ],
