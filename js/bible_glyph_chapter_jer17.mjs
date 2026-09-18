@@ -276,7 +276,7 @@ export function bible_glyph_chapter_jer17() {
           "worry",
           "in",
           "a",
-          "year",
+          "$year",
           "of",
           "drought,",
           "nor",
