@@ -774,7 +774,7 @@ export function bible_glyph_chapter_num13() {
           "$earth",
           "we",
           "explored",
-          "devours",
+          "$eating",
           "its",
           "inhabitants,",
           "and",
