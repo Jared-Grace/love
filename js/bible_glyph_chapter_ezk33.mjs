@@ -905,7 +905,7 @@ export function bible_glyph_chapter_ezk33() {
           "$i_am",
           "$speech:",
           "You",
-          "eat",
+          "$eating",
           "with",
           "the",
           "$blood",
