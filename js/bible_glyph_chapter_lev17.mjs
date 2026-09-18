@@ -277,7 +277,7 @@ export function bible_glyph_chapter_lev17() {
           "living",
           "among",
           "them,",
-          "offers",
+          "$walking+pointing_up",
           "a",
           "$burnt_offering",
           "or",
