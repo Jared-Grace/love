@@ -438,7 +438,7 @@ export function bible_glyph_chapter_deu26() {
           "that",
           "they",
           "may",
-          "eat",
+          "$eating",
           "within",
           "your",
           "gates",
