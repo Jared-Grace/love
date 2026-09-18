@@ -1035,7 +1035,7 @@ export function bible_glyph_chapter_1ki02() {
           "$altar.",
           "So",
           "$proper_name$Solomon",
-          "sent",
+          "$hand_sending",
           "$proper_name$Benaiah",
           "$son",
           "of",
