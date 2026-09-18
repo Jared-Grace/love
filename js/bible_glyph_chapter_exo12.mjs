@@ -233,7 +233,7 @@ export function bible_glyph_chapter_exo12() {
         words: [
           "Do",
           "$no_entry",
-          "eat",
+          "$eating",
           "any",
           "$tray_out",
           "the",
