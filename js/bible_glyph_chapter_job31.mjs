@@ -157,7 +157,7 @@ export function bible_glyph_chapter_job31() {
           "then",
           "may",
           "another",
-          "eat",
+          "$eating",
           "what",
           "I",
           "have",
