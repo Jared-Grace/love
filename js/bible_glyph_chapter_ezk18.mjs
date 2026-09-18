@@ -575,7 +575,7 @@ export function bible_glyph_chapter_ezk18() {
           "shouldn’t",
           "the",
           "$son",
-          "bear",
+          "$lifting",
           "the",
           "iniquity",
           "of",
