@@ -1749,7 +1749,7 @@ export function bible_glyph_chapter_deu28() {
           "that",
           "he",
           "will",
-          "eat,",
+          "$eating,",
           "because",
           "he",
           "has",
