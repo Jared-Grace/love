@@ -623,7 +623,7 @@ export function bible_glyph_chapter_job38() {
         words: [
           "Can",
           "you",
-          "bring",
+          "$walking+tray_out",
           "forth",
           "the",
           "constellations",
