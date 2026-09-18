@@ -280,7 +280,7 @@ export function bible_glyph_chapter_lev16() {
           "present",
           "the",
           "goat",
-          "chosen",
+          "$walking+pointing_up",
           "by",
           "lot",
           "for",
