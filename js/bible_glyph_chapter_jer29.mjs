@@ -517,7 +517,7 @@ export function bible_glyph_chapter_jer29() {
           "who",
           "did",
           "$no_entry",
-          "go",
+          "$walking+tray_out",
           "with",
           "you",
           "into",
