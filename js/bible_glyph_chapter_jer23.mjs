@@ -226,7 +226,7 @@ export function bible_glyph_chapter_jer23() {
           "be",
           "called:",
           "The",
-          "LORD",
+          "$i_am",
           "Our",
           "$ruler.",
         ],
