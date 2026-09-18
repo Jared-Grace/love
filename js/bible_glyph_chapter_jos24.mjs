@@ -950,7 +950,7 @@ export function bible_glyph_chapter_jos24() {
           "sent",
           "the",
           "$family",
-          "away,",
+          "$hand_sending,",
           "$man_beard",
           "to",
           "his",
