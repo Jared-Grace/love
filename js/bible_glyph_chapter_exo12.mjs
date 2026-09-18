@@ -1338,7 +1338,7 @@ export function bible_glyph_chapter_exo12() {
           "that",
           "night",
           "to",
-          "bring",
+          "$walking+tray_out",
           "them",
           "out",
           "of",
