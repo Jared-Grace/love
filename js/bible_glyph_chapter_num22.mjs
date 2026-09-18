@@ -157,7 +157,7 @@ export function bible_glyph_chapter_num22() {
           "a",
           "$family",
           "has",
-          "come",
+          "$walking+tray_out",
           "out",
           "of",
           "$proper_name$Egypt.",
