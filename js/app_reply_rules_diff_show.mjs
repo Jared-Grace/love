@@ -1,6 +1,6 @@
-import { app_reply_rules_font_size_small } from "./app_reply_rules_font_size_small.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
+import { app_reply_rules_font_size_small } from "./app_reply_rules_font_size_small.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { html_style_overflow_wrap } from "./html_style_overflow_wrap.mjs";
 import { app_shared_color_green_deep } from "./app_shared_color_green_deep.mjs";
@@ -10,9 +10,8 @@ import { equal } from "./equal.mjs";
 import { app_shared_color_green_tint } from "./app_shared_color_green_tint.mjs";
 import { app_shared_color_red_tint } from "./app_shared_color_red_tint.mjs";
 import { text_take } from "./text_take.mjs";
-import { html_pre_text } from "./html_pre_text.mjs";
+import { app_reply_rules_diff_line } from "./app_reply_rules_diff_line.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-import { html_style_margin } from "./html_style_margin.mjs";
 import { not } from "./not.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { property_get } from "./property_get.mjs";
@@ -64,9 +63,8 @@ export function app_reply_rules_diff_show(root, diff) {
     let sign = text_take(line, 1);
     let color = color_of(sign);
     let background = background_of(sign);
-    let one = html_pre_text(block, line);
+    let one = app_reply_rules_diff_line(block, line);
     html_font_color_set(one, color);
-    html_style_margin(one, "0");
     let plain = equal(background, null);
     if (not(plain)) {
       html_style_background_color_set(one, background);

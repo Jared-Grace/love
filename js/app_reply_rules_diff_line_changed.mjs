@@ -1,6 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_pre_text } from "./html_pre_text.mjs";
-import { html_style_margin } from "./html_style_margin.mjs";
+import { app_reply_rules_diff_line } from "./app_reply_rules_diff_line.mjs";
 import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_shared_color_yellow_tint } from "./app_shared_color_yellow_tint.mjs";
@@ -24,8 +23,7 @@ export function app_reply_rules_diff_line_changed(block, segments) {
   "THE WHOLE ROW IS WASHED IN A THIRD COLOUR SO THAT IT CAN BE FOUND FROM ACROSS THE PAGE. Lines that wholly go and lines that wholly come are already blocks of colour, and without a wash of its own a reworded line is the one kind of change that looks exactly like the hundred untouched lines around it - findable only by reading them.";
   "THE MARKS INSIDE IT KEEP THEIR OWN COLOURS AND ARE NOT RESTATED IN THE WASH. The wash answers where, and the marks answer what: a reader crossing the page sees that something happened on this line, and reading it sees which characters. One colour asked to do both would have to be either too faint to find or too strong to read through.";
   arguments_assert(arguments, 2);
-  let line = html_pre_text(block, "~");
-  html_style_margin(line, "0");
+  let line = app_reply_rules_diff_line(block, "~");
   let gray = app_shared_color_gray_dark();
   html_font_color_set(line, gray);
   let yellow_tint = app_shared_color_yellow_tint();
