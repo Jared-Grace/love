@@ -99,7 +99,7 @@ export function bible_glyph_chapter_deu16() {
           "you",
           "are",
           "to",
-          "eat",
+          "$eating",
           "with",
           "it",
           "unleavened",
