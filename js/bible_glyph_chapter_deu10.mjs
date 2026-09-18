@@ -286,7 +286,7 @@ export function bible_glyph_chapter_deu10() {
           "$speech+thumbs_up",
           "in",
           "His",
-          "name,",
+          "$name_tag,",
           "as",
           "they",
           "do",
