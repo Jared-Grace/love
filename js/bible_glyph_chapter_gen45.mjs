@@ -531,7 +531,7 @@ export function bible_glyph_chapter_gen45() {
           "and",
           "you",
           "shall",
-          "eat",
+          "$eating",
           "from",
           "the",
           "fat",
