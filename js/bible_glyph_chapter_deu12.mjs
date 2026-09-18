@@ -501,7 +501,7 @@ export function bible_glyph_chapter_deu12() {
           "and",
           "unclean",
           "may",
-          "eat",
+          "$eating",
           "it",
           "as",
           "they",
