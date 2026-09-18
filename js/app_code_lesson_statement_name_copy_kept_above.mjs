@@ -34,10 +34,16 @@ export function app_code_lesson_statement_name_copy_kept_above(root, context) {
     app_code_lesson_statement_name_copy,
     ["we gave cup ", name_copy, " whatever was in cup ", name_first],
   );
-  app_code_lesson_cups_row_holding(box_have, [
-    [word_first, name_first],
-    [word_first, name_copy],
-  ]);
+  ("No names are lent to these cups, so their letters come out the dark blue every cup on these screens has always been written in. The colours belong to a lesson whose code box draws the same names in the same colours, and this screen's does not yet.");
+  let uncolored = [];
+  app_code_lesson_cups_row_holding(
+    box_have,
+    [
+      [word_first, name_first],
+      [word_first, name_copy],
+    ],
+    uncolored,
+  );
   ("the word for what is in a cup is joined into the writing around it rather than given as a part of its own. The parts alternate between plain writing and code all the way along, so a part standing in an odd place comes out dressed as code - and only the names on the cups are code here.");
   let both = list_join_empty(["So both cups have ", word_first, " in them"]);
   html_div_cycle_code(box_have, [both]);
@@ -49,10 +55,14 @@ export function app_code_lesson_statement_name_copy_kept_above(root, context) {
   ]);
   let put = list_join_empty([" and put ", word_last, " in instead"]);
   html_div_cycle_code(box_change, [took, name_first, put]);
-  app_code_lesson_cups_row_holding(box_change, [
-    [word_last, name_first],
-    [word_first, name_copy],
-  ]);
+  app_code_lesson_cups_row_holding(
+    box_change,
+    [
+      [word_last, name_first],
+      [word_first, name_copy],
+    ],
+    uncolored,
+  );
   let still = list_join_empty([
     " still has ",
     word_first,
