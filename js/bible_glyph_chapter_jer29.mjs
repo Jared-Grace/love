@@ -552,7 +552,7 @@ export function bible_glyph_chapter_jer29() {
           "them",
           "like",
           "rotten",
-          "figs",
+          "$fig",
           "so",
           "bad",
           "they",
