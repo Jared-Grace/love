@@ -275,7 +275,7 @@ export function bible_glyph_chapter_1ki02() {
           "among",
           "those",
           "who",
-          "eat",
+          "$eating",
           "at",
           "your",
           "table,",
