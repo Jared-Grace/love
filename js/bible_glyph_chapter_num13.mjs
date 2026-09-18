@@ -17,7 +17,7 @@ export function bible_glyph_chapter_num13() {
       {
         verse_number: 2,
         words: [
-          "Send",
+          "$hand_sending",
           "out",
           "men",
           "for",
