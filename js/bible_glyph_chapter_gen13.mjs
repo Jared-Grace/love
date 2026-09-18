@@ -393,7 +393,7 @@ export function bible_glyph_chapter_gen13() {
           "parted",
           "from",
           "him,",
-          "Lift",
+          "$lifting",
           "up",
           "now",
           "your",
