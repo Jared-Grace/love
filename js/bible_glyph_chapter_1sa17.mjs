@@ -268,7 +268,7 @@ export function bible_glyph_chapter_1sa17() {
           "against",
           "him",
           "and",
-          "kill",
+          "$fist",
           "him,",
           "then",
           "you",
