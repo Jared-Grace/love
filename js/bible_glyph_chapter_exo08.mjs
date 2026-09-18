@@ -151,7 +151,7 @@ export function bible_glyph_chapter_exo08() {
           "the",
           "$frog",
           "to",
-          "come",
+          "$walking+pointing_up",
           "up",
           "onto",
           "the",
