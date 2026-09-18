@@ -634,7 +634,7 @@ export function bible_glyph_chapter_1ki08() {
           "$proper_name$David,",
           "and",
           "I",
-          "sit",
+          "$person+house",
           "on",
           "the",
           "throne",
