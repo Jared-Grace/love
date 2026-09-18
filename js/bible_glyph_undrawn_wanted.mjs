@@ -13,6 +13,9 @@ export function bible_glyph_undrawn_wanted() {
   "THE NINE THE GATE FOUND WERE ALL THE SAME MISTAKE IN ITS MILD FORM: a second Hebrew word put on a picture a first Hebrew word already had, because English says both with one word. The heavy rain beside the rain, the needy beside the poor, the male goat and the leading he goat beside the goat, the Babylonian furnace beside the smelting one, the bird trap beside the snare, the thrusting spear beside the spear, the ground meal beside the fine flour, the word for in front beside the sunrise, and the metal trumpet beside the ram horn. Each one was dropped and the commoner word kept, because the alphabet holds one rule here and holds it one way - a root may have many pictures, a picture may not have many roots. A reader meeting a picture has only the picture, and no amount of kinship between two words gives back which was meant. These are not wants and they are not refusals; they are listed so nobody measures them and seats them a second time.";
   "A REFUSAL CAN ALSO BE ANSWERED BY SEATING A DIFFERENT WORD, and the grain proved it. The grain sat here refused because the number the lines were asking for is the grain offering and not the crop, so a sheaf of wheat on it would have drawn a harvest where the text has a sacrifice. That reading was right and the conclusion was too small: the offering is a thing, it is one sense in a hundred and sixty of its two hundred and three wordings, and it can hold a picture of its own. It is seated now as the grain offering, beside the burnt offering, and the entry is gone from this list because the want it recorded has been met under the name the text actually uses. The gate caught the entry the moment the seat landed, which is the second time that gate has answered a question nobody thought to ask it.";
   "TWENTY SIX WORDS, AND FIVE MORE THAT THE TEXT HAS NO WORD FOR AT ALL. A razor, a ladder, a suit of armour, a prison and a wedding were each looked for and each turned out to be a phrase rather than a word - a prison is the house of confinement and a wedding is taking a wife. Those five are not refusals and they are not work outstanding, because there is nothing there to seat a picture on. They are here so that nobody measures them a third time.";
+  "PANIM WAS TAKEN OFF THIS LIST ON 2026-09-18 AND SEATED ON A FACE, and the entry it had here is worth knowing about because the argument it made is a good one made from the wrong side. It counted the English the interlinear puts under the word - only fifteen in a hundred of those wordings say face, and the commonest is before - and concluded that a face would be drawn on the word for in front of five times out of six.";
+  "WHAT DECIDED AGAINST IT IS THAT THE ENGLISH WORDING IS NOT THE ORIGINAL WORD. Panim is the face. Before is what a face does in this language, the way anger is what a nose does - and the nose entry still on this list refuses the anger picture for exactly that reason, keeping the body part and turning down the sense English reached for. Counting wordings measures which English the translators chose; the goal of this Bible is the word underneath them, and drawing the face is what lets a reader see that in front of and to the face of are one word rather than two.";
+  "SO THE MEASURE STAYS USEFUL AND ITS CONCLUSION DOES NOT FOLLOW AUTOMATICALLY. A lopsided wording count is a reason to look hard at a seat, and it settles the question whenever the two senses are unrelated - the fear entry is decided that way. It does not settle it when the rarer wording is the word itself and the commoner one is built out of it.";
   let wanted = [
     {
       gloss: "elders",
@@ -38,15 +41,6 @@ export function bible_glyph_undrawn_wanted() {
       wordings_total: 199,
       because:
         "the Hebrew word is as much the act of governing as the person who does it, and sixty in every hundred of its wordings are the verb. The balance picture is already seated on the Hebrew word for a judgment, so a judge picture here would put two marks from the same family on two different parts of speech and leave a reader to work out which is which.",
-    },
-    {
-      gloss: "face",
-      root: "panim",
-      strong: "6440",
-      wordings_for: 275,
-      wordings_total: 1840,
-      because:
-        "this is the largest want on the whole list and the Hebrew word is a preposition. Only fifteen in every hundred of its wordings say face at all, and the wording it takes most often is before. A face drawn on this number would be drawn on the word for in front of, five times out of six.",
     },
     {
       gloss: "anger",
