@@ -1332,7 +1332,7 @@ export function bible_glyph_chapter_1ki22() {
           "in",
           "the",
           "fourth",
-          "year",
+          "$year",
           "of",
           "Ahab",
           "$king",
