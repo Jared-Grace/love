@@ -618,7 +618,7 @@ export function bible_glyph_chapter_deu01() {
           "$earth",
           "before",
           "you.",
-          "Go",
+          "$walking+pointing_up",
           "up",
           "and",
           "take",
