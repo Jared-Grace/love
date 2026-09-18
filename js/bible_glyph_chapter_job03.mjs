@@ -202,7 +202,7 @@ export function bible_glyph_chapter_job03() {
           "the",
           "breaking",
           "of",
-          "dawn.",
+          "$dawn.",
         ],
       },
       {
