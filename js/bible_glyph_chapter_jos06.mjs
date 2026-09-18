@@ -391,7 +391,7 @@ export function bible_glyph_chapter_jos06() {
           "and",
           "the",
           "$priest",
-          "took",
+          "$lifting",
           "up",
           "the",
           "ark",
