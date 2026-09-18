@@ -361,7 +361,7 @@ export function bible_glyph_chapter_1ki17() {
           "that",
           "we",
           "may",
-          "eat",
+          "$eating",
           "it",
           "and",
           "$skull.",
