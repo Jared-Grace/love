@@ -1135,6 +1135,7 @@ export function qa_gates() {
     bible_glyph_divine_numbers_assert,
     app_code_lessons_released_gate_run,
     bible_glyph_seats_contested_gate_run,
+    messages_real_quoted_gate_run,
   ];
   return gates;
 }
