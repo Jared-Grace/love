@@ -564,7 +564,7 @@ export function bible_glyph_chapter_psa022() {
           "The",
           "poor",
           "will",
-          "eat",
+          "$eating",
           "and",
           "be",
           "satisfied;",
