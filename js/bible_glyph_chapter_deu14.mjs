@@ -287,7 +287,7 @@ export function bible_glyph_chapter_deu14() {
       },
       {
         verse_number: 11,
-        words: ["You", "may", "eat", "any", "clean", "bird,"],
+        words: ["You", "may", "$eating", "any", "clean", "bird,"],
       },
       {
         verse_number: 12,
