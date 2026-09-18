@@ -201,7 +201,7 @@ export function bible_glyph_chapter_jon04() {
         verse_number: 7,
         words: [
           "When",
-          "dawn",
+          "$dawn",
           "$walking+pointing_up",
           "the",
           "next",
