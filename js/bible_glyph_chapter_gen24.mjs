@@ -1718,7 +1718,7 @@ export function bible_glyph_chapter_gen24() {
           "$road",
           "a",
           "success.",
-          "Send",
+          "$hand_sending",
           "me",
           "on",
           "my",
