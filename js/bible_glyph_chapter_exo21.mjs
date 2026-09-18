@@ -329,7 +329,7 @@ export function bible_glyph_chapter_exo21() {
           "is",
           "free",
           "to",
-          "go,",
+          "$walking+tray_out,",
           "without",
           "any",
           "$silver.",
