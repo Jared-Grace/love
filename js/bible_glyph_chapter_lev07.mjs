@@ -488,7 +488,7 @@ export function bible_glyph_chapter_lev07() {
           "eats",
           "$tray_out",
           "shall",
-          "bear",
+          "$lifting",
           "his",
           "iniquity.",
         ],
