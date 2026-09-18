@@ -71,7 +71,7 @@ export function bible_glyph_chapter_deu32() {
           "name",
           "of",
           "the",
-          "LORD.",
+          "$i_am.",
           "Ascribe",
           "greatness",
           "to",
