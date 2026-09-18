@@ -412,7 +412,7 @@ export function bible_glyph_chapter_lam02() {
           "$woman",
           "of",
           "$proper_name$Zion",
-          "sit",
+          "$person+house",
           "on",
           "the",
           "$earth",
