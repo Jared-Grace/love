@@ -7,7 +7,6 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { js_code_assign } from "./js_code_assign.mjs";
 export function app_code_lesson_statement_name_one_more_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: the line the screen before this one ended on, then the same line with a written 1 where the second name was, and then that line with its sum already worked out");
@@ -42,19 +41,18 @@ export function app_code_lesson_statement_name_one_more_above(root, context) {
   app_code_code_lines_writes_out(box_one, [held, code, logged], once);
   let box_two = app_code_container_light_blue(root);
   ("the sum, what it comes to, and both of the lines are code chips, because every one of them is code. Set in plain writing, a line of a program would be the one thing on this screen dressed as prose.");
-  let given_more = js_code_assign(name, more);
-  let given_once_said = js_code_assign(name, once);
+  ("the two lines named in this sentence are the very lines drawn below it and in the box above, semicolon and all, rather than shortened halves of them. Said without the semicolon they were a second spelling of a line already on the screen, and the box before this one names its lines whole.");
+  let given_once = js_code_assign_statement(name, once);
   html_div_cycle_code(box_two, [
     "",
     more,
     " solves to ",
     once,
     ", so ",
-    given_once_said,
+    given_once,
     " instead of ",
-    given_more,
+    code,
     " will log the same output value:",
   ]);
-  let given_once = js_code_assign_statement(name, once);
   app_code_code_lines_writes_out(box_two, [held, given_once, logged], once);
 }
