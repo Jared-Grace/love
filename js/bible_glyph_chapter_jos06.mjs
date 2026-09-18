@@ -407,7 +407,7 @@ export function bible_glyph_chapter_jos06() {
           "the",
           "seven",
           "$priest",
-          "carrying",
+          "$lifting",
           "seven",
           "rams",
           "horns",
