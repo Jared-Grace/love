@@ -779,7 +779,7 @@ export function bible_glyph_chapter_deu01() {
           "$no_entry",
           "willing",
           "to",
-          "go",
+          "$walking+pointing_up",
           "up;",
           "you",
           "rebelled",
