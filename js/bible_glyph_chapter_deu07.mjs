@@ -690,7 +690,7 @@ export function bible_glyph_chapter_deu07() {
           "your",
           "$fire",
           "will",
-          "send",
+          "$hand_sending",
           "the",
           "hornet",
           "against",
