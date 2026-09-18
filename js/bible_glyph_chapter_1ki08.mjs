@@ -651,7 +651,7 @@ export function bible_glyph_chapter_1ki08() {
           "$house",
           "for",
           "the",
-          "Name",
+          "$name_tag",
           "of",
           "the",
           "$i_am,",
