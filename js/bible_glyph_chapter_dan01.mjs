@@ -623,7 +623,7 @@ export function bible_glyph_chapter_dan01() {
           "until",
           "the",
           "first",
-          "year",
+          "$year",
           "of",
           "$king",
           "$proper_name$Cyrus.",
