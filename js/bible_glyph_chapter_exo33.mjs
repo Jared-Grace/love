@@ -587,7 +587,7 @@ export function bible_glyph_chapter_exo33() {
         words: [
           "So",
           "the",
-          "LORD",
+          "$i_am",
           "$speech",
           "to",
           "Moses,",
