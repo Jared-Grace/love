@@ -282,7 +282,7 @@ export function bible_glyph_chapter_jdg16() {
           "of",
           "the",
           "$proper_name$Philistines",
-          "brought",
+          "$walking+pointing_up",
           "her",
           "seven",
           "fresh",
