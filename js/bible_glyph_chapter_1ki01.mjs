@@ -1093,7 +1093,7 @@ export function bible_glyph_chapter_1ki01() {
           "Then",
           "you",
           "shall",
-          "go",
+          "$walking+pointing_up",
           "up",
           "with",
           "him,",
