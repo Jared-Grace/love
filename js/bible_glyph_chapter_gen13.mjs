@@ -111,7 +111,7 @@ export function bible_glyph_chapter_gen13() {
           "name",
           "of",
           "the",
-          "LORD.",
+          "$i_am.",
         ],
       },
       {
