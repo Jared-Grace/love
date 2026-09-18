@@ -630,7 +630,7 @@ export function bible_glyph_chapter_gen37() {
           "but",
           "do",
           "$no_entry",
-          "lay",
+          "$hand_sending",
           "a",
           "$hand",
           "on",
