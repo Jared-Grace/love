@@ -107,7 +107,7 @@ export function bible_glyph_chapter_gen44() {
           "They",
           "had",
           "$no_entry",
-          "gone",
+          "$walking+tray_out",
           "far",
           "from",
           "the",
