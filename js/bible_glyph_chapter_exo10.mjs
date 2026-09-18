@@ -619,7 +619,7 @@ export function bible_glyph_chapter_exo10() {
         verse_number: 17,
         words: [
           "Now",
-          "forgive",
+          "$lifting",
           "my",
           "$bow",
           "once",
