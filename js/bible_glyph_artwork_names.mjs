@@ -378,7 +378,7 @@ export function bible_glyph_artwork_names() {
     },
     {
       glyph: "pointing_up",
-      asset: "Index pointing up",
+      asset: "Backhand index pointing up",
     },
     {
       glyph: "finish",
