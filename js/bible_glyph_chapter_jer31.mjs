@@ -1321,7 +1321,7 @@ export function bible_glyph_chapter_jer31() {
           "Me,",
           "from",
           "the",
-          "tower",
+          "$tower",
           "of",
           "$proper_name$Hananel",
           "to",
