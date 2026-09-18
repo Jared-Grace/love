@@ -787,7 +787,7 @@ export function bible_glyph_chapter_dan09() {
           "I",
           "have",
           "now",
-          "come",
+          "$walking+tray_out",
           "to",
           "give",
           "you",
