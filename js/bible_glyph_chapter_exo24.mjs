@@ -334,7 +334,7 @@ export function bible_glyph_chapter_exo24() {
           "He",
           "did",
           "$no_entry",
-          "lay",
+          "$hand_sending",
           "His",
           "$hand",
           "on",
