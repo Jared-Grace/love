@@ -306,7 +306,7 @@ export function bible_glyph_chapter_exo25() {
           "the",
           "$ark,",
           "to",
-          "carry",
+          "$lifting",
           "the",
           "$ark",
           "with",
