@@ -475,7 +475,7 @@ export function bible_glyph_chapter_jdg13() {
           "eat",
           "anything",
           "that",
-          "comes",
+          "$walking+tray_out",
           "from",
           "the",
           "vine,",
