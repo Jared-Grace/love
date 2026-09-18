@@ -363,7 +363,7 @@ export function bible_glyph_chapter_isa55() {
           "You",
           "will",
           "indeed",
-          "go",
+          "$walking+tray_out",
           "out",
           "with",
           "joy",
