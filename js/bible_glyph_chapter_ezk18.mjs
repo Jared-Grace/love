@@ -144,7 +144,7 @@ export function bible_glyph_chapter_ezk18() {
           "He",
           "does",
           "$no_entry",
-          "eat",
+          "$eating",
           "at",
           "the",
           "$mountain",
