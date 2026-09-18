@@ -1386,7 +1386,7 @@ export function bible_glyph_chapter_1ki02() {
           "$hammer.",
           "And",
           "$proper_name$Shimei",
-          "lived",
+          "$person+house",
           "in",
           "$proper_name$Jerusalem",
           "for",
