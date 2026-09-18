@@ -1346,7 +1346,7 @@ export function bible_glyph_chapter_num14() {
           "they",
           "dared",
           "to",
-          "go",
+          "$walking+pointing_up",
           "up",
           "to",
           "the",
