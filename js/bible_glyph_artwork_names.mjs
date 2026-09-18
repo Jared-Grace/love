@@ -628,6 +628,18 @@ export function bible_glyph_artwork_names() {
       glyph: "rain",
       asset: "Cloud with rain",
     },
+    {
+      glyph: "year",
+      asset: "Calendar",
+    },
+    {
+      glyph: "eating",
+      asset: "Fork and knife with plate",
+    },
+    {
+      glyph: "lifting",
+      asset: "Person lifting weights",
+    },
   ];
   return names;
 }
