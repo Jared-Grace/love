@@ -20,6 +20,8 @@ export function color_contrast_or_null(color_a, color_b) {
   }
   let lighter = numbers_larger(light_a, light_b);
   let darker = numbers_smaller(light_a, light_b);
-  let ratio = divide(add(lighter, 0.05), add(darker, 0.05));
+  let top = add(lighter, 0.05);
+  let bottom = add(darker, 0.05);
+  let ratio = divide(top, bottom);
   return ratio;
 }
