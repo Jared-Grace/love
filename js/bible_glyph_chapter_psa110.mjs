@@ -45,7 +45,7 @@ export function bible_glyph_chapter_psa110() {
         words: [
           "The",
           "$i_am",
-          "extends",
+          "$hand_sending",
           "Your",
           "mighty",
           "scepter",
