@@ -712,7 +712,7 @@ export function bible_glyph_chapter_ezk11() {
           "Then",
           "the",
           "$cherub",
-          "spread",
+          "$lifting",
           "their",
           "wings,",
           "with",
