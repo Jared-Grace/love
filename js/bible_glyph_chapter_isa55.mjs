@@ -330,7 +330,7 @@ export function bible_glyph_chapter_isa55() {
           "My",
           "$speech",
           "that",
-          "proceeds",
+          "$walking+tray_out",
           "from",
           "My",
           "mouth",
