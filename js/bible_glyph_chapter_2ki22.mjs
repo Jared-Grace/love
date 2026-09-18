@@ -125,7 +125,7 @@ export function bible_glyph_chapter_2ki22() {
       {
         verse_number: 4,
         words: [
-          "Go",
+          "$walking+pointing_up",
           "up",
           "to",
           "$proper_name$Hilkiah",
