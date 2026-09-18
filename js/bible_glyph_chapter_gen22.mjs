@@ -664,7 +664,7 @@ export function bible_glyph_chapter_gen22() {
           "$name_tag",
           "was",
           "$proper_name$Reumah,",
-          "bore",
+          "$baby",
           "$proper_name$Tebah,",
           "$proper_name$Gaham,",
           "$proper_name$Tahash,",
