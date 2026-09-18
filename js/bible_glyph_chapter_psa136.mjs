@@ -177,7 +177,7 @@ export function bible_glyph_chapter_psa136() {
           "and",
           "brought",
           "$proper_name$Israel",
-          "out",
+          "$walking+tray_out",
           "from",
           "among",
           "them.",
