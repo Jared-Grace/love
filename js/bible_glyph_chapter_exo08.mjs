@@ -474,7 +474,7 @@ export function bible_glyph_chapter_exo08() {
           "your",
           "staff",
           "and",
-          "strike",
+          "$fist",
           "the",
           "$dust",
           "of",
