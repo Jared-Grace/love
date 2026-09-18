@@ -55,6 +55,18 @@ export async function bible_word_voice_trial_rows() {
       rtl: true,
     },
     {
+      key: "gem_careful",
+      label: "Hebrew · every syllable",
+      chapter_code: "GEN01",
+      voices: [
+        ["Achird_plain", "Achird plain", "achird_plain"],
+        ["Achird_careful", "Achird asked", "achird_careful"],
+        ["Vindemiatrix_plain", "Vindemiatrix plain", "vindemiatrix_plain"],
+        ["Vindemiatrix_careful", "Vindemiatrix asked", "vindemiatrix_careful"],
+      ],
+      rtl: true,
+    },
+    {
       key: "grc",
       label: "Greek · John 1",
       chapter_code: "JHN01",
