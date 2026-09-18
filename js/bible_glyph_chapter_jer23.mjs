@@ -218,7 +218,7 @@ export function bible_glyph_chapter_jer23() {
           "this",
           "is",
           "His",
-          "name",
+          "$name_tag",
           "by",
           "which",
           "He",
