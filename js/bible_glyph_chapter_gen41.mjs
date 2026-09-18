@@ -806,7 +806,7 @@ export function bible_glyph_chapter_gen41() {
         words: [
           "but",
           "seven",
-          "years",
+          "$year",
           "of",
           "famine",
           "will",
