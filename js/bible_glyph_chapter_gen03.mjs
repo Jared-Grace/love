@@ -685,7 +685,7 @@ export function bible_glyph_chapter_gen03() {
           "of",
           "skin",
           "for",
-          "Adam",
+          "$proper_name$Adam",
           "and",
           "his",
           "$woman,",
