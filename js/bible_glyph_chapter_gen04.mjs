@@ -507,7 +507,7 @@ export function bible_glyph_chapter_gen04() {
           "named",
           "the",
           "$city",
-          "$name_tag",
+          "after",
           "his",
           "$son",
           "Enoch.",
