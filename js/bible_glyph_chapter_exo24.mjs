@@ -427,7 +427,7 @@ export function bible_glyph_chapter_exo24() {
           "to",
           "the",
           "elders,",
-          "Wait",
+          "$person+house",
           "here",
           "for",
           "us",
