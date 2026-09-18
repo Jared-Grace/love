@@ -1151,7 +1151,7 @@ export function bible_glyph_chapter_deu32() {
           "while",
           "My",
           "$sword",
-          "devours",
+          "$eating",
           "$meat,",
           "the",
           "$blood",
