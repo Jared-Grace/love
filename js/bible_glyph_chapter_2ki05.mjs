@@ -158,7 +158,7 @@ export function bible_glyph_chapter_2ki05() {
           "and",
           "I",
           "will",
-          "send",
+          "$hand_sending",
           "you",
           "with",
           "a",
