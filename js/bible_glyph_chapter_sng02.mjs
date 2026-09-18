@@ -65,7 +65,7 @@ export function bible_glyph_chapter_sng02() {
           "I",
           "delight",
           "to",
-          "sit",
+          "$person+house",
           "in",
           "his",
           "shade,",
