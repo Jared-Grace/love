@@ -510,7 +510,7 @@ export function bible_glyph_chapter_hab02() {
           "your",
           "violence",
           "against",
-          "Lebanon",
+          "$proper_name$Lebanon",
           "will",
           "overwhelm",
           "you,",
