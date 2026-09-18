@@ -174,7 +174,7 @@ export function bible_glyph_chapter_neh09() {
           "be",
           "Your",
           "$star",
-          "name,",
+          "$name_tag,",
           "and",
           "may",
           "it",
