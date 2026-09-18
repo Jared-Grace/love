@@ -112,7 +112,7 @@ export function bible_glyph_chapter_exo30() {
           "poles",
           "used",
           "to",
-          "carry",
+          "$lifting",
           "it.",
         ],
       },
