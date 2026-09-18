@@ -358,7 +358,7 @@ export function bible_glyph_chapter_zec14() {
           "and",
           "from",
           "the",
-          "Tower",
+          "$tower",
           "of",
           "$proper_name$Hananel",
           "to",
