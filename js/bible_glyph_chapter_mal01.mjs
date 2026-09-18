@@ -421,7 +421,7 @@ export function bible_glyph_chapter_mal01() {
           "presented",
           "in",
           "My",
-          "name,",
+          "$name_tag,",
           "because",
           "My",
           "name",
