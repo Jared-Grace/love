@@ -823,7 +823,7 @@ export function bible_glyph_chapter_jer31() {
           "its",
           "$city",
           "will",
-          "dwell",
+          "$person+house",
           "in",
           "the",
           "land",
