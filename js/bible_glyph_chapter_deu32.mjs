@@ -674,7 +674,7 @@ export function bible_glyph_chapter_deu32() {
           "plague;",
           "I",
           "will",
-          "send",
+          "$hand_sending",
           "against",
           "them",
           "the",
