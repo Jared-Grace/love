@@ -1015,7 +1015,7 @@ export function bible_glyph_chapter_jol02() {
           "deliverance,",
           "as",
           "the",
-          "LORD",
+          "$i_am",
           "has",
           "promised,",
           "among",
