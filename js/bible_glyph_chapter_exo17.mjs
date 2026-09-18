@@ -291,7 +291,7 @@ export function bible_glyph_chapter_exo17() {
           "our",
           "men",
           "and",
-          "go",
+          "$walking+tray_out",
           "out",
           "to",
           "fight",
