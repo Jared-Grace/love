@@ -24,7 +24,7 @@ export function bible_glyph_chapter_amo09() {
           "and",
           "He",
           "$speech:",
-          "Strike",
+          "$fist",
           "the",
           "tops",
           "of",
