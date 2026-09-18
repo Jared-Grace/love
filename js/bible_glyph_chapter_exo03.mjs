@@ -400,7 +400,7 @@ export function bible_glyph_chapter_exo03() {
           "brought",
           "the",
           "$family",
-          "out",
+          "$walking+tray_out",
           "of",
           "$proper_name$Egypt,",
           "all",
