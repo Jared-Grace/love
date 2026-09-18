@@ -929,7 +929,7 @@ export function bible_glyph_chapter_gen47() {
         words: [
           "Now",
           "Israel",
-          "settled",
+          "$person+house",
           "in",
           "the",
           "$earth",
