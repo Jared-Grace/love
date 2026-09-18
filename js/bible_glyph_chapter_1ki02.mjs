@@ -421,7 +421,7 @@ export function bible_glyph_chapter_1ki02() {
           "$proper_name$Israel",
           "were",
           "forty",
-          "years.",
+          "$year.",
           "He",
           "$castle",
           "seven",
