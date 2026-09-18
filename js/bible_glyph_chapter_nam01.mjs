@@ -375,7 +375,7 @@ export function bible_glyph_chapter_nam01() {
         verse_number: 14,
         words: [
           "The",
-          "LORD",
+          "$i_am",
           "has",
           "issued",
           "a",
