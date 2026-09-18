@@ -395,7 +395,7 @@ export function bible_glyph_chapter_gen40() {
           "that",
           "he",
           "may",
-          "bring",
+          "$walking+tray_out",
           "me",
           "$tray_out",
           "of",
