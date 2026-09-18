@@ -547,7 +547,7 @@ export function bible_glyph_chapter_mal01() {
           "$king,",
           "$speech",
           "the",
-          "LORD",
+          "$i_am",
           "of",
           "Hosts,",
           "and",
