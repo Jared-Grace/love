@@ -599,7 +599,7 @@ export function bible_glyph_chapter_1ki03() {
           "$woman",
           "and",
           "I",
-          "live",
+          "$person+house",
           "in",
           "the",
           "same",
