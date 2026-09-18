@@ -410,7 +410,7 @@ export function bible_glyph_chapter_1ki08() {
           "for",
           "You",
           "to",
-          "dwell",
+          "$person+house",
           "$hourglass.",
         ],
       },
