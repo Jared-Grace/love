@@ -223,7 +223,7 @@ export function bible_glyph_chapter_2ki02() {
           "to",
           "him,",
           "Please",
-          "stay",
+          "$person+house",
           "here,",
           "for",
           "the",
