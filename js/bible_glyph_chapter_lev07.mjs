@@ -705,7 +705,7 @@ export function bible_glyph_chapter_lev07() {
         words: [
           "If",
           "$person_other",
-          "eats",
+          "$eating",
           "$blood,",
           "that",
           "$person_other",
