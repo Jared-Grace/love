@@ -539,7 +539,7 @@ export function bible_glyph_chapter_rut04() {
           "Blessed",
           "be",
           "the",
-          "LORD,",
+          "$i_am,",
           "who",
           "has",
           "$no_entry",
