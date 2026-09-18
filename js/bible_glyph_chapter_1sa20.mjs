@@ -480,7 +480,7 @@ export function bible_glyph_chapter_1sa20() {
           "tell",
           "you",
           "and",
-          "send",
+          "$hand_sending",
           "you",
           "away",
           "to",
