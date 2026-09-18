@@ -384,7 +384,7 @@ export function bible_glyph_chapter_neh08() {
           "is",
           "sweet,",
           "and",
-          "send",
+          "$hand_sending",
           "out",
           "portions",
           "to",
