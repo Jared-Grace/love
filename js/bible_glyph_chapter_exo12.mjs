@@ -1412,7 +1412,7 @@ export function bible_glyph_chapter_exo12() {
           "been",
           "purchased",
           "may",
-          "eat",
+          "$eating",
           "of",
           "it",
           "after",
