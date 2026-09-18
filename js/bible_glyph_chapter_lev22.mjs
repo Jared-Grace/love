@@ -430,7 +430,7 @@ export function bible_glyph_chapter_lev22() {
         words: [
           "If",
           "$man_beard",
-          "eats",
+          "$eating",
           "a",
           "$sparkle",
           "in",
