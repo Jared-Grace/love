@@ -712,7 +712,7 @@ export function bible_glyph_chapter_gen41() {
           "grain",
           "are",
           "seven",
-          "years.",
+          "$year.",
           "The",
           "dreams",
           "have",
