@@ -422,7 +422,7 @@ export function bible_glyph_chapter_hab03() {
           "of",
           "distress",
           "to",
-          "come",
+          "$walking+pointing_up",
           "upon",
           "the",
           "$family",
