@@ -169,7 +169,7 @@ export function bible_glyph_chapter_mic04() {
           "each",
           "$man_beard",
           "will",
-          "sit",
+          "$person+house",
           "under",
           "his",
           "own",
