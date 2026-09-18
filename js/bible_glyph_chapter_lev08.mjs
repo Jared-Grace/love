@@ -13,13 +13,13 @@ export function bible_glyph_chapter_lev08() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "$i_am", "$mouth", "to", "Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
       },
       {
         verse_number: 2,
         words: [
           "$hand_receiving",
-          "Aaron",
+          "$proper_name$Aaron",
           "and",
           "$son",
           "with",
@@ -101,7 +101,7 @@ export function bible_glyph_chapter_lev08() {
           "Then",
           "Moses",
           "presented",
-          "Aaron",
+          "$proper_name$Aaron",
           "and",
           "$son",
           "and",
@@ -312,7 +312,7 @@ export function bible_glyph_chapter_lev08() {
           "$bow",
           "near,",
           "and",
-          "Aaron",
+          "$proper_name$Aaron",
           "and",
           "$son",
           "laid",
@@ -328,7 +328,7 @@ export function bible_glyph_chapter_lev08() {
       {
         verse_number: 15,
         words: [
-          "Moses",
+          "$proper_name$Moses",
           "slaughtered",
           "it,",
           "$hand_receiving",
@@ -369,7 +369,7 @@ export function bible_glyph_chapter_lev08() {
       {
         verse_number: 16,
         words: [
-          "Moses",
+          "$proper_name$Moses",
           "also",
           "$hand_receiving",
           "all",
@@ -429,7 +429,7 @@ export function bible_glyph_chapter_lev08() {
           "$ram",
           "$burnt_offering,",
           "and",
-          "Aaron",
+          "$proper_name$Aaron",
           "and",
           "$son",
           "laid",
@@ -444,7 +444,7 @@ export function bible_glyph_chapter_lev08() {
       {
         verse_number: 19,
         words: [
-          "Moses",
+          "$proper_name$Moses",
           "slaughtered",
           "it",
           "and",
@@ -505,7 +505,7 @@ export function bible_glyph_chapter_lev08() {
           "$i_am",
           "had",
           "commanded",
-          "Moses.",
+          "$proper_name$Moses.",
         ],
       },
       {
@@ -522,7 +522,7 @@ export function bible_glyph_chapter_lev08() {
           "of",
           "ordination,",
           "and",
-          "Aaron",
+          "$proper_name$Aaron",
           "and",
           "$son",
           "laid",
@@ -537,7 +537,7 @@ export function bible_glyph_chapter_lev08() {
       {
         verse_number: 23,
         words: [
-          "Moses",
+          "$proper_name$Moses",
           "slaughtered",
           "it,",
           "$hand_receiving",
@@ -572,7 +572,7 @@ export function bible_glyph_chapter_lev08() {
       {
         verse_number: 24,
         words: [
-          "Moses",
+          "$proper_name$Moses",
           "also",
           "presented",
           "$son",
@@ -704,7 +704,7 @@ export function bible_glyph_chapter_lev08() {
           "the",
           "hands",
           "of",
-          "Aaron",
+          "$proper_name$Aaron",
           "and",
           "$son,",
           "and",
@@ -774,7 +774,7 @@ export function bible_glyph_chapter_lev08() {
           "the",
           "portion",
           "of",
-          "Moses,",
+          "$proper_name$Moses,",
           "as",
           "$i_am",
           "had",
@@ -802,7 +802,7 @@ export function bible_glyph_chapter_lev08() {
           "sprinkled",
           "them",
           "on",
-          "Aaron",
+          "$proper_name$Aaron",
           "and",
           "$garment,",
           "and",
@@ -814,7 +814,7 @@ export function bible_glyph_chapter_lev08() {
           "So",
           "he",
           "$sparkle",
-          "Aaron",
+          "$proper_name$Aaron",
           "and",
           "$garment,",
           "as",
@@ -833,7 +833,7 @@ export function bible_glyph_chapter_lev08() {
           "Moses",
           "$speech",
           "to",
-          "Aaron",
+          "$proper_name$Aaron",
           "and",
           "$son,",
           "Boil",
@@ -858,7 +858,7 @@ export function bible_glyph_chapter_lev08() {
           "I",
           "commanded,",
           "$speech",
-          "Aaron",
+          "$proper_name$Aaron",
           "and",
           "$son",
           "are",
@@ -985,7 +985,7 @@ export function bible_glyph_chapter_lev08() {
           "had",
           "commanded",
           "$hand",
-          "Moses.",
+          "$proper_name$Moses.",
         ],
       },
     ],
