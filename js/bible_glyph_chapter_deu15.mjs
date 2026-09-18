@@ -673,7 +673,7 @@ export function bible_glyph_chapter_deu15() {
           "$house",
           "are",
           "to",
-          "eat",
+          "$eating",
           "it",
           "before",
           "the",
