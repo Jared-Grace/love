@@ -1,4 +1,3 @@
-import { app_shared_button_inline_sentence } from "./app_shared_button_inline_sentence.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
 import { list_index_of } from "./list_index_of.mjs";
@@ -7,8 +6,13 @@ import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_screen_go_tab } from "./app_shared_screen_go_tab.mjs";
 import { app_code_examples } from "./app_code_examples.mjs";
+import { app_code_lesson_current_id } from "./app_code_lesson_current_id.mjs";
+import { app_code_lesson_index_by_id } from "./app_code_lesson_index_by_id.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { equal } from "./equal.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
+import { app_shared_button_inline_sentence } from "./app_shared_button_inline_sentence.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -36,9 +40,26 @@ export function app_code_remember_from_lesson(
       app_code_examples,
     );
   }
+  ("THE LESSON JUST BEFORE THIS ONE IS NAMED BY THE RELATION AND NOT BY ITS NUMBER. A number is an address, and an address is what a learner needs for a lesson they finished a week ago - they must be able to find it on the list. For the lesson they were reading a minute ago the address is the one thing they do not need, and reading it as a number makes them subtract to find out that the reminder is about the screen they just left. So the near one says the previous lesson and every other one says its number, and the two shapes standing on one screen are themselves the reading: this one is behind you, that one is far back.");
+  ("Which of the two it is, is worked out from where the lessons stand rather than written at the call. A reminder that said the previous lesson in typed words would go on saying it after a lesson was put in between the two, and would then be plainly false.");
+  ("It is asked of the run this reader was handed rather than of every lesson that exists, because previous means the lesson they actually came from. On a page where some lessons are held back, the one before them is the one before them on their list.");
+  let current_id = app_code_lesson_current_id(context);
+  let index_current = app_code_lesson_index_by_id(current_id);
+  let index_shown = app_code_lesson_index_by_id(lesson_id);
+  ("The first lesson of the run is excluded rather than compared. A lesson the reader was not handed is not on their list at all and answers minus one, which sits one before the first - so on the first screen alone the two would agree and a reminder pointing somewhere else would call itself the previous lesson.");
+  let after_first_is = greater_than(index_current, 0);
+  let left = add_1(index_shown);
+  let follows_is = equal(left, index_current);
+  let previous_is = after_first_is && follows_is;
+  let opening_words = "Remember, from lesson ";
+  let label = number;
+  if (previous_is) {
+    opening_words = "Remember, from ";
+    label = "the previous lesson";
+  }
   let div = html_div(parent);
-  html_span_text_content(div, "Remember, from lesson ");
-  app_shared_button_inline_sentence(div, number, on_click);
+  html_span_text_content(div, opening_words);
+  app_shared_button_inline_sentence(div, label, on_click);
   let first = list_first(parts);
   let rest = list_skip(parts, 1);
   let opening = text_combine_multiple([", ", first]);
