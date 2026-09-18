@@ -233,7 +233,7 @@ export function bible_glyph_chapter_isa40() {
       {
         verse_number: 9,
         words: [
-          "Go",
+          "$walking+pointing_up",
           "up",
           "on",
           "a",
