@@ -616,7 +616,7 @@ export function bible_glyph_chapter_gen17() {
           "whom",
           "$proper_name$Sarah",
           "will",
-          "bear",
+          "$baby",
           "to",
           "you",
           "at",
