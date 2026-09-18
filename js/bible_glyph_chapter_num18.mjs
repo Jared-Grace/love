@@ -512,7 +512,7 @@ export function bible_glyph_chapter_num18() {
           "your",
           "$house",
           "may",
-          "eat",
+          "$eating",
           "them.",
         ],
       },
