@@ -1306,7 +1306,7 @@ export function bible_glyph_chapter_gen27() {
       {
         verse_number: 44,
         words: [
-          "Stay",
+          "$person+house",
           "with",
           "him",
           "a",
