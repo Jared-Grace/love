@@ -435,7 +435,7 @@ export function bible_glyph_chapter_jos01() {
           "your",
           "livestock",
           "may",
-          "remain",
+          "$person+house",
           "in",
           "the",
           "$earth",
