@@ -206,7 +206,7 @@ export function bible_glyph_chapter_exo08() {
           "also",
           "brought",
           "$frog",
-          "up",
+          "$walking+pointing_up",
           "onto",
           "the",
           "$earth",
