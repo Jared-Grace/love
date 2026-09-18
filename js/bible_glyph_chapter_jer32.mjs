@@ -39,7 +39,7 @@ export function bible_glyph_chapter_jer32() {
           "was",
           "the",
           "eighteenth",
-          "year",
+          "$year",
           "of",
           "$proper_name$Nebuchadnezzar.",
         ],
