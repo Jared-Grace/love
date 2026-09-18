@@ -775,7 +775,7 @@ export function bible_glyph_chapter_deu12() {
           "sure",
           "not",
           "to",
-          "eat",
+          "$eating",
           "the",
           "$blood,",
           "because",
