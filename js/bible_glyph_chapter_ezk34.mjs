@@ -929,7 +929,7 @@ export function bible_glyph_chapter_ezk34() {
           "them.",
           "They",
           "will",
-          "dwell",
+          "$person+house",
           "securely,",
           "and",
           "no",
