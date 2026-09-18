@@ -1037,7 +1037,7 @@ export function bible_glyph_chapter_jhn04() {
           "truly",
           "is",
           "the",
-          "Savior",
+          "$rescue",
           "of",
           "the",
           "$globe.”",
