@@ -532,7 +532,7 @@ export function bible_glyph_chapter_est04() {
           "me.",
           "Do",
           "$no_entry",
-          "eat",
+          "$eating",
           "or",
           "drink",
           "for",
