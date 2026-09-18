@@ -652,7 +652,7 @@ export function bible_glyph_chapter_deu10() {
           "oaths",
           "in",
           "His",
-          "name.",
+          "$name_tag.",
         ],
       },
       {
