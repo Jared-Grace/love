@@ -523,7 +523,7 @@ export function bible_glyph_chapter_exo13() {
           "let",
           "the",
           "$family",
-          "go,",
+          "$hand_sending,",
           "$fire",
           "did",
           "$no_entry",
