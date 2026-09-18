@@ -150,7 +150,7 @@ export function bible_glyph_chapter_nam01() {
           "away;",
           "the",
           "$earth",
-          "trembles",
+          "$lifting",
           "at",
           "His",
           "presence",
