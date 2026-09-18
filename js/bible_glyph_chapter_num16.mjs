@@ -488,7 +488,7 @@ export function bible_glyph_chapter_num16() {
           "I",
           "have",
           "$no_entry",
-          "taken",
+          "$lifting",
           "one",
           "donkey",
           "from",
