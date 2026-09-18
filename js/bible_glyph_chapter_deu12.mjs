@@ -519,7 +519,7 @@ export function bible_glyph_chapter_deu12() {
           "you",
           "must",
           "$no_entry",
-          "eat",
+          "$eating",
           "the",
           "$blood;",
           "pour",
