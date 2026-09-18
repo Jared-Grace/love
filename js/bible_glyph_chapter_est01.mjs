@@ -495,7 +495,7 @@ export function bible_glyph_chapter_est01() {
           "$speech,",
           "$proper_name$Vashti",
           "the",
-          "Queen",
+          "$queen",
           "has",
           "$no_entry",
           "wronged",
