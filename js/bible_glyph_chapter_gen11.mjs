@@ -99,7 +99,7 @@ export function bible_glyph_chapter_gen11() {
           "$city",
           "with",
           "a",
-          "tower",
+          "$tower",
           "that",
           "reaches",
           "to",
