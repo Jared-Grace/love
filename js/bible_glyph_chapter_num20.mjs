@@ -31,7 +31,7 @@ export function bible_glyph_chapter_num20() {
           "and",
           "the",
           "$family",
-          "stayed",
+          "$person+house",
           "in",
           "$proper_name$Kadesh.",
           "There",
