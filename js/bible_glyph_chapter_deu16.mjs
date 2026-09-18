@@ -254,7 +254,7 @@ export function bible_glyph_chapter_deu16() {
           "roast",
           "it",
           "and",
-          "eat",
+          "$eating",
           "it",
           "in",
           "the",
