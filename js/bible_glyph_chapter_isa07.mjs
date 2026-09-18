@@ -272,7 +272,7 @@ export function bible_glyph_chapter_isa07() {
           "$proper_name$Rezin.",
           "Within",
           "sixty-five",
-          "years",
+          "$year",
           "$proper_name$Ephraim",
           "will",
           "be",
