@@ -738,7 +738,7 @@ export function bible_glyph_chapter_lev27() {
         words: [
           "In",
           "the",
-          "Year",
+          "$year",
           "of",
           "Jubilee",
           "the",
