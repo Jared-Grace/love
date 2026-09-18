@@ -145,7 +145,7 @@ export function bible_glyph_chapter_exo16() {
           "$family",
           "are",
           "to",
-          "go",
+          "$walking+tray_out",
           "out",
           "each",
           "$sun",
