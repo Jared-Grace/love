@@ -527,7 +527,7 @@ export function bible_glyph_chapter_lev27() {
           "$field",
           "during",
           "the",
-          "Year",
+          "$year",
           "of",
           "Jubilee,",
           "the",
