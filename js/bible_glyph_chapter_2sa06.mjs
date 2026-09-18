@@ -118,7 +118,7 @@ export function bible_glyph_chapter_2sa06() {
       {
         verse_number: 4,
         words: [
-          "bringing",
+          "$lifting",
           "with",
           "it",
           "the",
