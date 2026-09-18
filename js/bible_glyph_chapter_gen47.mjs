@@ -337,7 +337,7 @@ export function bible_glyph_chapter_gen47() {
         words: [
           "So",
           "Joseph",
-          "settled",
+          "$person+house",
           "his",
           "$father",
           "and",
