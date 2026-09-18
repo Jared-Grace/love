@@ -541,7 +541,7 @@ export function bible_glyph_chapter_pro31() {
           "and",
           "does",
           "$no_entry",
-          "eat",
+          "$eating",
           "the",
           "$bread",
           "of",
