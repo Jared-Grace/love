@@ -898,7 +898,7 @@ export function bible_glyph_chapter_gen32() {
           "Israel",
           "do",
           "$no_entry",
-          "eat",
+          "$eating",
           "the",
           "tendon",
           "attached",
