@@ -1532,7 +1532,7 @@ export function bible_glyph_chapter_1ki08() {
           "$hands_praying",
           "to",
           "the",
-          "LORD",
+          "$i_am",
           "in",
           "the",
           "$road",
