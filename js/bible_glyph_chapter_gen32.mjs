@@ -790,7 +790,7 @@ export function bible_glyph_chapter_gen32() {
           "longer",
           "that",
           "your",
-          "name",
+          "$name_tag",
           "is",
           "Jacob,",
           "but",
