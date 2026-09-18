@@ -618,7 +618,7 @@ export function bible_glyph_chapter_jdg07() {
           "and",
           "a",
           "large",
-          "jar",
+          "$jar",
           "with",
           "a",
           "torch",
