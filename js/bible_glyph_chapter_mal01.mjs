@@ -24,9 +24,9 @@ export function bible_glyph_chapter_mal01() {
           "the",
           "$i_am",
           "to",
-          "Israel",
+          "$proper_name$Israel",
           "$hand",
-          "Malachi:",
+          "$proper_name$Malachi:",
         ],
       },
       {
@@ -49,7 +49,7 @@ export function bible_glyph_chapter_mal01() {
           "us?",
           "Was",
           "$no_entry",
-          "Esau",
+          "$proper_name$Esau",
           "Jacob",
           "$brother?",
           "declares",
@@ -66,7 +66,7 @@ export function bible_glyph_chapter_mal01() {
         verse_number: 3,
         words: [
           "but",
-          "Esau",
+          "$proper_name$Esau",
           "I",
           "have",
           "hated,",
@@ -92,7 +92,7 @@ export function bible_glyph_chapter_mal01() {
         verse_number: 4,
         words: [
           "Though",
-          "Edom",
+          "$proper_name$Edom",
           "may",
           "$speech,",
           "We",
@@ -166,7 +166,7 @@ export function bible_glyph_chapter_mal01() {
           "the",
           "borders",
           "of",
-          "Israel.",
+          "$proper_name$Israel.",
         ],
       },
       {
