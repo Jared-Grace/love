@@ -228,7 +228,7 @@ export function bible_glyph_chapter_job38() {
           "or",
           "$lightbulb",
           "the",
-          "dawn",
+          "$dawn",
           "its",
           "place,",
         ],
