@@ -236,7 +236,7 @@ export function bible_glyph_chapter_2ki11() {
           "divisions",
           "that",
           "would",
-          "go",
+          "$walking+tray_out",
           "off",
           "duty",
           "on",
