@@ -18,7 +18,7 @@ export function bible_glyph_chapter_lev01() {
           "$i_am",
           "called",
           "to",
-          "Moses",
+          "$proper_name$Moses",
           "and",
           "$mouth",
           "to",
@@ -183,7 +183,7 @@ export function bible_glyph_chapter_lev01() {
         words: [
           "$son",
           "of",
-          "Aaron",
+          "$proper_name$Aaron",
           "$priest",
           "$hands_giving",
           "a",
