@@ -88,7 +88,7 @@ export function bible_glyph_chapter_deu16() {
           "You",
           "must",
           "$no_entry",
-          "eat",
+          "$eating",
           "leavened",
           "bread",
           "with",
