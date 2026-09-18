@@ -421,7 +421,7 @@ export function bible_glyph_chapter_deu14() {
           "and",
           "he",
           "may",
-          "eat",
+          "$eating",
           "it,",
           "or",
           "you",
