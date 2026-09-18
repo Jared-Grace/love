@@ -632,7 +632,7 @@ export function bible_glyph_chapter_deu15() {
           "every",
           "firstborn",
           "male",
-          "produced",
+          "$baby",
           "by",
           "your",
           "herds",
