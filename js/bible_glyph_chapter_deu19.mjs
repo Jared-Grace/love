@@ -436,7 +436,7 @@ export function bible_glyph_chapter_deu19() {
           "to",
           "purge",
           "from",
-          "Israel",
+          "$proper_name$Israel",
           "the",
           "guilt",
           "of",
