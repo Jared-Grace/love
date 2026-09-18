@@ -701,7 +701,7 @@ export function bible_glyph_chapter_jdg06() {
           "bread.",
           "And",
           "fire",
-          "flared",
+          "$walking+pointing_up",
           "$tray_out",
           "the",
           "rock",
