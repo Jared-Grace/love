@@ -736,7 +736,7 @@ export function bible_glyph_chapter_exo34() {
           "Three",
           "times",
           "a",
-          "year",
+          "$year",
           "all",
           "your",
           "males",
