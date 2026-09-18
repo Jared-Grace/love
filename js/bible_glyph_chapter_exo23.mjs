@@ -471,7 +471,7 @@ export function bible_glyph_chapter_exo23() {
           "end",
           "of",
           "the",
-          "year,",
+          "$year,",
           "when",
           "you",
           "gather",
