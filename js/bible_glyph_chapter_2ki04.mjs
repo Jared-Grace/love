@@ -594,7 +594,7 @@ export function bible_glyph_chapter_2ki04() {
           "$speech",
           "a",
           "servant,",
-          "Carry",
+          "$lifting",
           "him",
           "to",
           "his",
