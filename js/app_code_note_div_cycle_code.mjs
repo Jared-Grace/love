@@ -3,7 +3,7 @@ import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_style_code_dark_nowrap } from "./html_style_code_dark_nowrap.mjs";
 import { app_code_note_name_color_or_null } from "./app_code_note_name_color_or_null.mjs";
-import { html_font_color_set } from "./html_font_color_set.mjs";
+import { app_code_note_name_pill } from "./app_code_note_name_pill.mjs";
 export function app_code_note_div_cycle_code(parent, parts, names) {
   arguments_assert(arguments, 3);
   ("a line of the lesson's own writing with pieces of code set into it, where a piece that is one of the lesson's names is written in that name's colour");
@@ -22,7 +22,7 @@ export function app_code_note_div_cycle_code(parent, parts, names) {
     html_style_code_dark_nowrap(span);
     let color = app_code_note_name_color_or_null(names, part);
     if (color) {
-      html_font_color_set(span, color);
+      app_code_note_name_pill(span, color);
     }
     plain = true;
   }

@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_color_code_font } from "./app_shared_color_code_font.mjs";
 import { app_shared_color_gray } from "./app_shared_color_gray.mjs";
 import { app_code_note_name_mark_opacity } from "./app_code_note_name_mark_opacity.mjs";
+import { app_code_note_name_ink } from "./app_code_note_name_ink.mjs";
 import { text_size } from "./text_size.mjs";
 import { subtract } from "./subtract.mjs";
 import { range_from } from "./range_from.mjs";
@@ -14,7 +15,8 @@ import { add } from "./add.mjs";
 import { app_code_note_name_spans } from "./app_code_note_name_spans.mjs";
 export function app_code_note_styles(code) {
   arguments_assert(arguments, 1);
-  ("one colour and one strength for every single character of a program, in the order the characters stand, so that whoever draws it never has to decide anything");
+  ("one colour, one strength and one patch colour for every single character of a program, in the order the characters stand, so that whoever draws it never has to decide anything");
+  ("A NAME CARRIES ITS COLOUR BEHIND IT RATHER THAN IN IT, so a name's characters come back written in the one dark ink with the name's own colour as the third thing. Everything else comes back with no patch colour at all. This is what lets the same three colours be used here and on the cups: a patch is read against its own ink, so nothing about what it is drawn on has to be known here.");
   ("EVERY CHARACTER IS ANSWERED SEPARATELY, because the things being said overlap. A note is dim; a mark inside that note is dimmer still; the name between the two marks is coloured; and the same name out in the code is coloured too, where nothing around it is dim at all. Written as ranges those four would have to be cut against each other, and the last one written would quietly win. Written a character at a time they simply lie on top of one another in the order they are laid down, which is the order they are written here.");
   ("Laid down weakest first: the code, then the notes over it, then the marks, then the names. So a name inside a note ends up coloured and a bracket around it ends up faded, whatever else was true of that character before.");
   ("A program is a few hundred characters long, so answering each one costs nothing worth measuring, and it is the shape that can be reasoned about rather than tested.");
@@ -22,11 +24,13 @@ export function app_code_note_styles(code) {
   let dim = app_shared_color_gray();
   let full = "1";
   let faded = app_code_note_name_mark_opacity();
+  let ink = app_code_note_name_ink();
+  let bare = "";
   let size = text_size(code);
   let last_of_code = subtract(size, 1);
   let styles = [];
   for (let index of range_from(0, last_of_code)) {
-    styles.push([white, full]);
+    styles.push([white, full, bare]);
   }
   let comments = js_comments_get(code);
   for (let comment of comments) {
@@ -34,7 +38,7 @@ export function app_code_note_styles(code) {
     let end = property_get(comment, "end");
     let last = subtract(end, 1);
     for (let index of range_from(start, last)) {
-      styles[index] = [dim, full];
+      styles[index] = [dim, full, bare];
     }
   }
   let names = app_code_note_names_marked(code);
@@ -44,14 +48,14 @@ export function app_code_note_styles(code) {
     let mark_from = mark[1];
     let mark_to = mark[2];
     let mark_last = subtract(mark_to, 1);
-    styles[mark_from] = [dim, faded];
-    styles[mark_last] = [dim, faded];
+    styles[mark_from] = [dim, faded, bare];
+    styles[mark_last] = [dim, faded, bare];
     let color = app_code_note_name_color_or_null(names, name);
     if (color) {
       let name_from = add(mark_from, 1);
       let name_last = subtract(mark_last, 1);
       for (let index of range_from(name_from, name_last)) {
-        styles[index] = [color, full];
+        styles[index] = [ink, full, color];
       }
     }
   }
@@ -59,7 +63,7 @@ export function app_code_note_styles(code) {
   for (let span of spans) {
     let span_last = subtract(span[1], 1);
     for (let index of range_from(span[0], span_last)) {
-      styles[index] = [span[2], full];
+      styles[index] = [ink, full, span[2]];
     }
   }
   return styles;
