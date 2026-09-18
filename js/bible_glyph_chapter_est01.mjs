@@ -353,7 +353,7 @@ export function bible_glyph_chapter_est01() {
       {
         verse_number: 12,
         words: [
-          "Queen",
+          "$queen",
           "$proper_name$Vashti,",
           "however,",
           "refused",
