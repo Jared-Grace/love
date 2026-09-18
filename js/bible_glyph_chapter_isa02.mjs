@@ -299,7 +299,7 @@ export function bible_glyph_chapter_isa02() {
           "humbled.",
           "Do",
           "$no_entry",
-          "forgive",
+          "$lifting",
           "them.",
         ],
       },
