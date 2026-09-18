@@ -455,6 +455,10 @@ export function bible_glyph_characters() {
       character: "💯",
     },
     {
+      name: "might",
+      character: "💪",
+    },
+    {
       name: "i_am",
       character: "♾️",
     },

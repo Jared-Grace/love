@@ -6,17 +6,15 @@ export function bible_glyph_divine_numbers() {
   "SO THE LIST IS MEANT TO EMPTY ITSELF AND A SEATED NUMBER MUST LEAVE IT. Once a number is drawn, nothing here is doing any work - the drawer already passes over every number that has a picture, because a number with a picture is not a name waiting for one. The gate beside this asks exactly that of every row, so seating Shaddai turns this file red and the repair is to delete the row. That is the difference between a list that expires and a register that quietly outlives its reason.";
   "TWO NAMES WERE HERE ON THE DAY IT WAS WRITTEN AND LEFT THE SAME DAY. Yah turned out to be the covenant name said short and Messias the word John translates as the Christ in the verse he uses it in, so both were seated on marks already drawn rather than listed here, and the list is shorter by the two that were never really undecided. What is left is the two titles and the one ordinary noun, which is the whole of what anybody had to think about.";
   "THE TESTAMENT IS CARRIED BY A CHAPTER AND NOT BY ITS NAME, because a Strong's number means different things on the two sides and the division names are already spelled in one place. Hebrew 4990 and Greek 4990 are both real numbers and only one of them is the saviour, so a row that gave the number alone would refuse a badge in the wrong half of the Bible. Naming a chapter that is certainly in the testament meant, and asking what testament that chapter is in, keeps the spelling where it already lives.";
+  "PANTOKRATOR LEFT BY BEING DRAWN, WHICH IS THE WAY OUT OF HERE THAT WAS ALWAYS INTENDED. Its own word is two words - all joined to one who holds power - so the picture is those two pictures, and nothing had to be decided that the Greek had not already said. That is the test any remaining row has to meet: can the word's parts be read off the word itself. Where they can, the title is drawn and the row goes; where they cannot, the row stays and somebody has to choose.";
+  "SHADDAI CANNOT MEET THAT TEST AND THE REASON IS NOT REVERENCE. The Almighty is what the ancient Greek translators made of it and what every English Bible has kept, but the Hebrew word is not transparently made of parts the way pantokrator is, and the root behind it is genuinely argued over - to overpower, the breast that feeds, the mountain, the one who is enough. Drawing it literally therefore means choosing one of those, and that is a scholar's verdict rather than a reading of the word. The interlinear hands one word, Almighty, and one word is a label rather than a set of parts.";
+  "SEATING IT ON THE PANTOKRATOR PICTURES WOULD BE FOLLOWING THE SEPTUAGINT AND NOT THE HEBREW, which is worth naming because it is the tempting shortcut. The Greek translators did render Shaddai with pantokrator, so the two pictures are already the ancient answer - but this Bible is drawn from the original and a translation's choice is not the original's word. That is a decision about which text to follow, so it belongs to a person and not to this list.";
   "SOTER IS HERE AND IS NOT A NAME, which is the one row that needs explaining. The capital test calls it a name because English capitalises Saviour when it means God, but the Greek word is the ordinary noun a saviour, the one who rescues - Paul uses it of God and the wider Greek used it of a general who lifted a siege. So it is not waiting for a badge, it is waiting for a picture like any other noun, and the badge would have frozen it as a name it never was.";
   let rows = [
     {
       strong: "7706",
       gloss: "Shaddai, the Almighty",
       testament_chapter: "GEN01",
-    },
-    {
-      strong: "3841",
-      gloss: "Pantokrator, the Almighty, ruler of all",
-      testament_chapter: "JHN01",
     },
     {
       strong: "4990",

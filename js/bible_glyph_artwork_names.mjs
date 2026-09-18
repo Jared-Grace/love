@@ -393,6 +393,10 @@ export function bible_glyph_artwork_names() {
       asset: "Hundred points",
     },
     {
+      glyph: "might",
+      asset: "Flexed biceps",
+    },
+    {
       glyph: "i_am",
       asset: "Infinity",
     },
