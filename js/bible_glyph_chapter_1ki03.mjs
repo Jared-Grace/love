@@ -263,7 +263,7 @@ export function bible_glyph_chapter_1ki03() {
           "$lightbulb",
           "how",
           "to",
-          "go",
+          "$walking+tray_out",
           "out",
           "or",
           "$footprints",
