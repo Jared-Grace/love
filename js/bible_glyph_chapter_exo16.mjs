@@ -814,7 +814,7 @@ export function bible_glyph_chapter_exo16() {
         words: [
           "$proper_name$Moses",
           "$speech,",
-          "Eat",
+          "$eating",
           "it",
           "$sun,",
           "because",
