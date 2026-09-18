@@ -727,7 +727,7 @@ export function bible_glyph_chapter_2ki06() {
           "that",
           "they",
           "may",
-          "eat",
+          "$eating",
           "and",
           "drink",
           "and",
