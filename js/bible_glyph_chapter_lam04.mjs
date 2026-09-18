@@ -343,7 +343,7 @@ export function bible_glyph_chapter_lam04() {
           "$anchor,",
           "nor",
           "any",
-          "people",
+          "$person+house",
           "of",
           "the",
           "$globe,",
