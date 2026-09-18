@@ -296,7 +296,7 @@ export function bible_glyph_chapter_1ki21() {
           "letters",
           "in",
           "Ahab's",
-          "name,",
+          "$name_tag,",
           "sealed",
           "them",
           "with",
