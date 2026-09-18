@@ -217,7 +217,7 @@ export function bible_glyph_chapter_deu06() {
           "them",
           "when",
           "you",
-          "sit",
+          "$person+house",
           "in",
           "your",
           "$house",
