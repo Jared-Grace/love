@@ -757,7 +757,7 @@ export function bible_glyph_chapter_ezk33() {
           "In",
           "the",
           "twelfth",
-          "year",
+          "$year",
           "of",
           "our",
           "exile,",
