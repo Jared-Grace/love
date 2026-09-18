@@ -239,7 +239,7 @@ export function bible_glyph_chapter_1sa01() {
           "will",
           "you",
           "$no_entry",
-          "eat?",
+          "$eating?",
           "Why",
           "is",
           "your",
