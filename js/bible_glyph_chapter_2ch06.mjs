@@ -177,7 +177,7 @@ export function bible_glyph_chapter_2ch06() {
           "Jerusalem,",
           "that",
           "My",
-          "name",
+          "$name_tag",
           "may",
           "be",
           "there,",
