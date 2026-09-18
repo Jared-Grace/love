@@ -325,7 +325,7 @@ export function bible_glyph_chapter_est01() {
         words: [
           "to",
           "$footprints",
-          "Queen",
+          "$queen",
           "$proper_name$Vashti",
           "before",
           "$king,",
