@@ -68,6 +68,8 @@ export function bible_glyph_characters() {
   "THE LAST THREE WERE BOUGHT BY A COUNT AND NOT BY A CHAPTER (2026-09-18), which is the second time the count has chosen and the first time it has cost anything. The list of Hebrew words no picture seats was read down past the grammar, and the year, the eating and the lifting were the commonest things on it that nothing already here could say. The going out and the going up came off the same list a day earlier and cost nothing, because the vocabulary happened to hold both halves of each; these three did not, and a word used eight hundred times is worth a picture rather than a compromise.";
   "EACH ONE WAS ASKED OF THE ARTWORK SET BEFORE IT WAS WRITTEN HERE, the cheap way round that the table next door recommends. The set answers to Calendar, to Fork and knife with plate, and to Person lifting weights, so all three can be drawn and none of them is a guess.";
   "THE CHAIR WAS REFUSED BECAUSE THE SET HAS NO CHAIR. Yashab - to sit, to dwell, to remain - is the commonest undrawn Hebrew word of all, and a seat was the obvious picture for it. Searching the set for one returns wheelchairs and nothing else, and searching for sitting returns the lotus position, which this Bible must not spend: a figure sitting cross-legged beside the praying hands would read as a second kind of prayer. So yashab is drawn as a human and a house instead, a pair already bought, and no picture was added for it.";
+  "THE FIST AND THE BABY CAME OFF THE SAME COUNT LATER THE SAME DAY (2026-09-18), and they are what is left of a list of six after four of them were refused. Nakah, to strike, stands five hundred times and the set answers to Oncoming fist; yalad, to bear and to beget, stands nearly as often and the set answers to Baby. Both were asked of the set before they were written here, which is the whole reason this paragraph can name the assets.";
+  "THE PREGNANT FIGURE WAS REFUSED THOUGH IT IS THE BETTER PICTURE OF BEARING, because most of the times yalad is written it is a father begetting rather than a mother bearing. The genealogies are the bulk of the word - and he begot sons and daughters, over and over - and a pregnant figure standing on those puts the wrong body in every one of them. The baby is the thing brought forth either way, so it is the half of the word that does not have to choose.";
   let characters = [
     {
       name: "cross",
@@ -1032,6 +1034,14 @@ export function bible_glyph_characters() {
     {
       name: "lifting",
       character: "🏋️",
+    },
+    {
+      name: "fist",
+      character: "👊",
+    },
+    {
+      name: "baby",
+      character: "👶",
     },
   ];
   return characters;
