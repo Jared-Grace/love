@@ -231,7 +231,7 @@ export function bible_glyph_chapter_deu14() {
           "You",
           "must",
           "not",
-          "eat",
+          "$eating",
           "its",
           "$meat",
           "or",
