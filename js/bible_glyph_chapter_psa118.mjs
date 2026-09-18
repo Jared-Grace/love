@@ -48,7 +48,7 @@ export function bible_glyph_chapter_psa118() {
           "the",
           "$house",
           "of",
-          "Aaron",
+          "$proper_name$Aaron",
           "$speech:",
           "His",
           "$gift",
