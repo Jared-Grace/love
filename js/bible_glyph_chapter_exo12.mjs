@@ -408,7 +408,7 @@ export function bible_glyph_chapter_exo12() {
           "you",
           "when",
           "I",
-          "strike",
+          "$fist",
           "the",
           "$earth",
           "of",
