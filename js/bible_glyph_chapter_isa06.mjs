@@ -345,7 +345,7 @@ export function bible_glyph_chapter_isa06() {
           "ruined",
           "and",
           "without",
-          "inhabitant,",
+          "$person+house,",
           "until",
           "the",
           "$house",
