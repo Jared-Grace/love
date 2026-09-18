@@ -569,7 +569,7 @@ export function bible_glyph_chapter_lev25() {
           "your",
           "fill",
           "and",
-          "dwell",
+          "$person+house",
           "in",
           "safety",
           "in",
