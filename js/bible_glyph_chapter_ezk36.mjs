@@ -689,7 +689,7 @@ export function bible_glyph_chapter_ezk36() {
           "profaned",
           "My",
           "$sparkle",
-          "name,",
+          "$name_tag,",
           "because",
           "it",
           "was",
