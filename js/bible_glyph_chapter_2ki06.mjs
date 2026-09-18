@@ -693,7 +693,7 @@ export function bible_glyph_chapter_2ki06() {
           "them?",
           "Shall",
           "I",
-          "kill",
+          "$fist",
           "them?",
         ],
       },
