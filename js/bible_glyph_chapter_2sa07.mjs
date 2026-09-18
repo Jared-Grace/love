@@ -134,7 +134,7 @@ export function bible_glyph_chapter_2sa07() {
           "a",
           "$house",
           "to",
-          "dwell",
+          "$person+house",
           "in?",
         ],
       },
