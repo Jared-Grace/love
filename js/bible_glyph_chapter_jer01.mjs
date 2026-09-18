@@ -192,7 +192,7 @@ export function bible_glyph_chapter_jer01() {
           "to",
           "everyone",
           "I",
-          "send",
+          "$hand_sending",
           "you,",
           "you",
           "must",
