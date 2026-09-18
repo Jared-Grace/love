@@ -1252,7 +1252,7 @@ export function bible_glyph_chapter_deu01() {
           "it",
           "easy",
           "to",
-          "go",
+          "$walking+pointing_up",
           "up",
           "into",
           "the",
