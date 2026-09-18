@@ -838,7 +838,7 @@ export function bible_glyph_chapter_deu01() {
           "Where",
           "can",
           "we",
-          "go?",
+          "$walking+pointing_up?",
           "Our",
           "$brother$s",
           "have",
