@@ -925,7 +925,7 @@ export function bible_glyph_chapter_ezk34() {
           "$earth",
           "will",
           "$no_entry",
-          "consume",
+          "$eating",
           "them.",
           "They",
           "will",
