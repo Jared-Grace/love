@@ -829,7 +829,7 @@ export function bible_glyph_chapter_1sa15() {
           "Now",
           "therefore,",
           "please",
-          "forgive",
+          "$lifting",
           "my",
           "$bow",
           "and",
