@@ -723,7 +723,7 @@ export function bible_glyph_chapter_jer29() {
           "and",
           "he",
           "will",
-          "kill",
+          "$fist",
           "them",
           "before",
           "your",
