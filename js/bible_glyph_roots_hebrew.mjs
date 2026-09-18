@@ -73,6 +73,8 @@ export function bible_glyph_roots_hebrew() {
   "THOSE HUNDRED AND SIXTY FOUR ARE NOW RECOVERABLE AND ARE NOT YET RECOVERED. Parting the seats is what makes them drawable; it does not draw them, because the redraw command works on marks that are already on the page and these never were. They want a pass of their own that reads the interlinear, finds a written-out word the tables can now seat, and marks it - which is the same shape as the underdrawn gate and should be built as one command rather than a chapter at a time.";
   "THE PAGES WERE REDRAWN BY COMMAND AND NOT BY HAND. Three thousand six hundred and thirty two marks were already standing, and a mark on a page records the picture rather than the word, so every one of them became a question the moment the seats parted. The collision walk answered all of them from the interlinear - three thousand four hundred and one were the name and two hundred and thirty one were the word - with nothing ambiguous and nothing unseated, which is what the walk was built for and the first time it has been spent.";
   "ADONAI KEEPS THE CROWN AND IS NOT AFFECTED. The lord is a title and may be said of a man - Sarah says it of Abraham - so it is drawn as a crown wherever it stands, and 3069 is the covenant name behind that title rather than the title itself. So a Lord GOD in the prophets now draws the crown and the sign, which is two words and two marks, and says exactly what the Hebrew says.";
+  "YAH JOINED THE COVENANT NAME ON 2026-09-18 AND COST NO PICTURE, because it is not a second name. Yah is the covenant name said short - the two letters that end hallelujah and that Moses sings at the sea, praise Yah - so seating it anywhere else would have been saying there are two names where the Hebrew has one said two lengths. It is the cheapest kind of seat there is: the reader has already met the mark, and meets it again in the place they would have been told to look it up.";
+  "IT WAS FOUND BY LOOKING FOR NAMES AND NOT BY LOOKING FOR GAPS, which is worth writing down because the two searches find different things. A reading that asks which words still stand in plain English letters turns up proper names in their thousands, and seven of those turned out to be Yah - a name of God sitting in the pile of names waiting for a badge that says A NAME STANDS HERE. The badge would not have been wrong, but it would have been a smaller truth than the one available, and a mark that is merely not wrong is how a picture Bible goes flat.";
   let roots = [
     {
       root: "yhwh",
@@ -84,6 +86,10 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "3069",
+          glyph: "i_am",
+        },
+        {
+          strong: "3050",
           glyph: "i_am",
         },
       ],
