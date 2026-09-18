@@ -1,20 +1,20 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_expression_less_than } from "./app_code_lesson_expression_less_than.mjs";
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
-import { html_div_code_lines } from "./html_div_code_lines.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
-import { js_keyword_true } from "./js_keyword_true.mjs";
-import { js_keyword_false } from "./js_keyword_false.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_expression_less_than } from "./app_code_lesson_expression_less_than.mjs";
+import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
+import { js_keyword_true } from "./js_keyword_true.mjs";
+import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { html_div_code_lines } from "./html_div_code_lines.mjs";
+import { js_keyword_false } from "./js_keyword_false.mjs";
 export function app_code_lesson_statement_name_compare_above(root, context) {
   function_duplicate_kind_parallel();
   arguments_assert(arguments, 2);
@@ -46,10 +46,11 @@ export function app_code_lesson_statement_name_compare_above(root, context) {
   );
   ("the symbol is a part of its own, so it comes out dressed as code. The parts alternate between plain writing and code all the way along, and a symbol standing in an odd place is what makes a symbol callout - the same device the Operators lessons name their symbol with, and the same one the sixth Statements lesson names its plus with. The numbers in the third box's line are not callouts and stay joined into the writing: they are being counted, not named.");
   let turned_line = list_join_empty([
-    "Asked the other way round the answer is different, because ",
+    "Now the answer is different, because ",
     number_last,
     " is not smaller than ",
     number_first,
+    ":",
   ]);
   let box_remember = app_code_container_light_blue(root);
   app_code_remember_from_lesson(
@@ -66,15 +67,34 @@ export function app_code_lesson_statement_name_compare_above(root, context) {
   let value = js_keyword_true();
   app_code_code_lines_writes_out(box_remember, [logged_numbers], value);
   let box_names = app_code_container_light_blue(root);
-  html_div_cycle_code(box_names, ["Suppose we give two numbers names:"]);
+  ("the names and the numbers are named in brackets, drawn as code, rather than left as the words two numbers and names. The two lines under this one give one name each to one number each, and which letter went with which number is the thing every later line on this screen rests on.");
+  html_div_cycle_code(box_names, [
+    "Suppose we give names (",
+    name_first,
+    ", ",
+    name_last,
+    ") to two numbers (",
+    number_first,
+    ", ",
+    number_last,
+    "):",
+  ]);
   ("the two lines are handed over together rather than one at a time, because nothing is said between them: they are one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
   let held_first = js_code_let_statement(name_first, number_first);
   let held_last = js_code_let_statement(name_last, number_last);
   html_div_code_lines(box_names, [held_first, held_last]);
+  ("two lines rather than one, because they are two facts: what the symbol has been used with so far, and what else it may be used with. Said in one sentence the old way is a subordinate clause a learner reads past on the way to the new one, and the two forms are then never set against each other.");
   html_div_cycle_code(box_names, [
-    "Instead of writing out the numbers themselves (",
+    "So far we have only used ",
+    smaller_than,
+    " with numbers (like ",
     numbers_compared,
-    "), we can also ask the same question using their names (",
+    ")",
+  ]);
+  html_div_cycle_code(box_names, [
+    "We can also use ",
+    smaller_than,
+    " with names (like ",
     names_compared,
     "):",
   ]);
@@ -82,6 +102,17 @@ export function app_code_lesson_statement_name_compare_above(root, context) {
   let value2 = js_keyword_true();
   app_code_code_lines_writes_out(box_names, [logged_names], value2);
   let box_turned = app_code_container_light_blue(root);
+  ("the swap is written out as the two comparisons themselves, one turning into the other, before the answer is spoken about. Asked the other way round named the change in words only, and a learner had to build the turned-round line in their head to see what was being asked - which is exactly the line drawn a row below.");
+  html_div_cycle_code(box_turned, [
+    "We swap the ",
+    name_first,
+    " and the ",
+    name_last,
+    " in ",
+    names_compared,
+    " to get ",
+    names_turned,
+  ]);
   html_div_cycle_code(box_turned, [turned_line]);
   let logged_turned = js_code_console_log_statement(names_turned);
   let lines_turned = [held_first, held_last, logged_turned];
