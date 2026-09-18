@@ -945,7 +945,7 @@ export function bible_glyph_chapter_jer17() {
           "its",
           "gates",
           "to",
-          "consume",
+          "$eating",
           "the",
           "citadels",
           "of",
