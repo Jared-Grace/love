@@ -46,7 +46,7 @@ export function bible_glyph_chapter_mal02() {
           "honor",
           "to",
           "My",
-          "name,",
+          "$name_tag,",
           "$speech",
           "the",
           "$i_am",
