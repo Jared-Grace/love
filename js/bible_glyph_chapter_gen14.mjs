@@ -112,7 +112,7 @@ export function bible_glyph_chapter_gen14() {
           "In",
           "the",
           "fourteenth",
-          "year",
+          "$year",
           "$proper_name$Chedorlaomer",
           "and",
           "the",
