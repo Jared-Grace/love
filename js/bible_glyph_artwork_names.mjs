@@ -728,6 +728,18 @@ export function bible_glyph_artwork_names() {
       glyph: "bull",
       asset: "Cow",
     },
+    {
+      glyph: "mother",
+      asset: "Woman feeding baby",
+    },
+    {
+      glyph: "net",
+      asset: "Goal net",
+    },
+    {
+      glyph: "camp",
+      asset: "Camping",
+    },
   ];
   return names;
 }
