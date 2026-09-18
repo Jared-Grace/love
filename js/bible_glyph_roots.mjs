@@ -88,6 +88,9 @@ export function bible_glyph_roots() {
   ("EIS IS SEATED ON THE TARGET AND THE IN-TRAY TOGETHER (2026-09-18). It is to four hundred and sixty two times, into two hundred and ninety four, in a hundred and seventy two and for a hundred and twenty three, and the question the row was held open for - target or tray - had a third answer that is the word itself. Eis is a going that ENDS INSIDE: pros is facing toward and en is resting in, and eis is the one that travels the first and arrives at the second.");
   ("THE GROUP IS SPELLABLE ONE WAY AND THAT WAY CANNOT OCCUR. The spellable-groups report names it, because pros ends on the target and en opens on the tray, so a pros standing immediately in front of an en would draw the same two touching pictures eis draws. A preposition is never immediately in front of another preposition: its own object stands between them, and the object is the reason the preposition is there. The one opening left is an object drawn with neither a picture nor any English of its own, which is rare and is the same opening the four groups already in the report live with.");
   ("THE PAIR ALSO KEEPS EIS AND PROS APART, which one mark could not have done. Both are to in English more often than they are anything else, so seating eis on the target alone would have drawn the two prepositions identically in the verse that needs them separated - the first of John says the Word was pros God, facing him, and says nothing about being in him. A group spends no new picture and says the difference.");
+  ("FOUR SEATS WERE ADDED ON 2026-09-18 AS THE GREEK HALVES OF FOUR HEBREW ONES. Epi, heos, prosopon and pas are the same four relations as al, ad, panim and kol, and they were seated in the same hour on purpose. A mark that means over in the Old Testament and something else in the New would be two marks wearing one picture, and a reader who learns this Bible in Genesis would have to learn it again in Matthew. Seating both sides together is what keeps the vocabulary one vocabulary.");
+  ("IT ALSO COSTS NOTHING EXTRA, which is why it is worth doing every time rather than when somebody remembers. The picture was already argued for on the Hebrew side and the artwork is already fetched; the Greek half is a row. The cheap moment is the moment the mark is bought, and a Greek seat left for later is a seat somebody has to re-argue from scratch.");
+  ("DE AND GAR WERE LOOKED AT AND LEFT IN LETTERS. De stands on two thousand seven hundred and seventy seven New Testament words and gar on one thousand and thirty nine, which makes them the two biggest unseated numbers here, and neither has an honest picture. De is the softest of connectives - and, but, now, and very often nothing English says at all - so any mark strong enough to see would say more than the word does; the plus sign is already kai's and giving it to de would tell a reader the two words are one, which is exactly the difference a Greek reader is hearing. Gar is a cause, and a cause is a relation between clauses that nothing in this vocabulary draws.");
   let roots = [
     {
       root: "agape",
@@ -1348,6 +1351,46 @@ export function bible_glyph_roots() {
         {
           strong: "4058",
           glyph: "dove",
+        },
+      ],
+    },
+    {
+      root: "epi",
+      gloss: "on, upon, over",
+      words: [
+        {
+          strong: "1909",
+          glyph: "pointing_up",
+        },
+      ],
+    },
+    {
+      root: "heos",
+      gloss: "until, as far as",
+      words: [
+        {
+          strong: "2193",
+          glyph: "finish",
+        },
+      ],
+    },
+    {
+      root: "prosopon",
+      gloss: "face, presence",
+      words: [
+        {
+          strong: "4383",
+          glyph: "face",
+        },
+      ],
+    },
+    {
+      root: "pas",
+      gloss: "all, every, the whole of",
+      words: [
+        {
+          strong: "3956",
+          glyph: "all",
         },
       ],
     },

@@ -63,6 +63,10 @@ export function bible_glyph_roots_hebrew() {
   "HAYAH IS SEATED ON THE CHAIN LINK (2026-09-18), the same mark the Greek eimi takes, because the two words are the one verb the two testaments are written in. It is will be two hundred and four times, came a hundred and fifty five, was a hundred and forty eight and be a hundred. The coming and the being are one Hebrew word and take one mark, which is the rule this table already follows wherever a number carries two senses: the mark teaches the reader that the original said one thing there.";
   "THE OBJECT MARKER ET IS SEATED ON THE HAND POINTING DOWN (2026-09-18). It has no English of its own - its wordings are the pronouns the interlinear resolved onto it, and it was left unseated while that looked like the article's question over again. It is not the same question. The article says WHICH one; et says what the action lands on, which is a thing the English sentence says with word order and the Hebrew says with a word, so a reader of the pictures has nothing to read it off unless it is drawn.";
   "THE DOWNWARD HAND IS THE FOURTH DIRECTION A HAND CAN POINT, and the other three are already spoken for in this vocabulary - the hand pointing forward is this, the hand pointing back is he and that, the hand pointing out of the picture is you. A hand pointing down at what is under it is the nearest a picture comes to here is the one it happens to, which is the whole of what et does.";
+  "FOUR MORE WERE SEATED ON 2026-09-18 AND THE FOUR WERE CHOSEN BY COUNTING. Every unseated number in the Hebrew Bible was tallied against this table, and these are the four commonest that a picture could be found for honestly: al on five thousand seven hundred and seventy four words, kol on five thousand four hundred and twelve, panim on two thousand one hundred and twenty eight, ad on one thousand two hundred and sixty one. Choosing by frequency is not a preference about which words matter; it is the only ordering that empties the letters fastest, and the goal is that no original word stands in letters at all.";
+  "AL IS THE HAND POINTING UP AND ET IS THE HAND POINTING DOWN, which is the whole reason this one was cheap. The downward hand had been bought the same week for the thing under it, so a reader who has met it reads the upward one without being told. Al is wider than the picture - it is also against and concerning - and those senses stay in letters where a chapter's writer can see which is in front of them, the same rule the screaming face already lives under.";
+  "KOL IS THE HUNDRED, AND IT IS THE ONE SEAT HERE THAT IS ARGUED RATHER THAN OBVIOUS. The mark is made of digits, which is the closest this Bible comes to letters, and it was taken because the alternative was worse rather than because it is good: unseated, kol prints the English word all five thousand four hundred times. What decided it is that the mark a reader already arrives with - completely, the whole of it - does not fight the word it is being taught, which is the test the pushpin was admitted under.";
+  "THE THREE COMMONER NUMBERS ABOVE THESE WERE LOOKED AT AND LEFT. Asher, the relative who and which, stands on five thousand five hundred and two words and has no honest picture: every arrow and loop the vocabulary could spare says repeat or return, and a relative pronoun says neither. Ki, for and because, stands on four thousand four hundred and eighty six and is the same problem - a cause is a relation between two clauses and nothing draws it. They are left in letters deliberately, which is not the same as overlooked, and whoever finds a mark for either should take it.";
   let roots = [
     {
       root: "yhwh",
@@ -1055,6 +1059,46 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "853",
           glyph: "pointing_down",
+        },
+      ],
+    },
+    {
+      root: "al",
+      gloss: "on, upon, over, above",
+      words: [
+        {
+          strong: "5921",
+          glyph: "pointing_up",
+        },
+      ],
+    },
+    {
+      root: "ad",
+      gloss: "until, as far as, up to",
+      words: [
+        {
+          strong: "5704",
+          glyph: "finish",
+        },
+      ],
+    },
+    {
+      root: "panim",
+      gloss: "face, before, in the presence of",
+      words: [
+        {
+          strong: "6440",
+          glyph: "face",
+        },
+      ],
+    },
+    {
+      root: "kol",
+      gloss: "all, every, the whole of",
+      words: [
+        {
+          strong: "3605",
+          glyph: "all",
         },
       ],
     },

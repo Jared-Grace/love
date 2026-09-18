@@ -377,6 +377,22 @@ export function bible_glyph_artwork_names() {
       asset: "Link",
     },
     {
+      glyph: "pointing_up",
+      asset: "Index pointing up",
+    },
+    {
+      glyph: "finish",
+      asset: "Chequered flag",
+    },
+    {
+      glyph: "face",
+      asset: "Neutral face",
+    },
+    {
+      glyph: "all",
+      asset: "Hundred points",
+    },
+    {
       glyph: "equals",
       asset: "Heavy equals sign",
     },
