@@ -791,7 +791,7 @@ export function bible_glyph_chapter_1ki12() {
           "are",
           "$no_entry",
           "to",
-          "go",
+          "$walking+pointing_up",
           "up",
           "and",
           "you",
