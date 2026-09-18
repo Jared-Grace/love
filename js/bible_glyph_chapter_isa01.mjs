@@ -218,7 +218,7 @@ export function bible_glyph_chapter_isa01() {
           "with",
           "fire.",
           "Foreigners",
-          "devour",
+          "$eating",
           "your",
           "fields",
           "before",
