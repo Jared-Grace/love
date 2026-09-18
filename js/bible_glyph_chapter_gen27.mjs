@@ -192,7 +192,7 @@ export function bible_glyph_chapter_gen27() {
           "tasty",
           "dish",
           "to",
-          "eat,",
+          "$eating,",
           "so",
           "that",
           "I",
