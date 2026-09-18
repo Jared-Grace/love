@@ -958,7 +958,7 @@ export function bible_glyph_chapter_1ki01() {
           "and",
           "he",
           "will",
-          "sit",
+          "$person+house",
           "on",
           "my",
           "throne",
