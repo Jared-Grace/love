@@ -447,7 +447,7 @@ export function bible_glyph_chapter_exo37() {
         words: [
           "Six",
           "branches",
-          "extended",
+          "$walking+tray_out",
           "from",
           "the",
           "sides,",
