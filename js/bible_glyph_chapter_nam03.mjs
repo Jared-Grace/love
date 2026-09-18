@@ -58,7 +58,7 @@ export function bible_glyph_chapter_nam03() {
           "flashing",
           "$sword,",
           "shining",
-          "spear,",
+          "$spear,",
           "heaps",
           "of",
           "slain,",
