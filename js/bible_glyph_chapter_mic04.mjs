@@ -147,7 +147,7 @@ export function bible_glyph_chapter_mic04() {
           "will",
           "$no_entry",
           "longer",
-          "take",
+          "$lifting",
           "up",
           "the",
           "$sword",
