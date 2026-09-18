@@ -373,7 +373,7 @@ export function bible_glyph_chapter_exo23() {
           "Three",
           "$foot",
           "a",
-          "year",
+          "$year",
           "you",
           "are",
           "to",
