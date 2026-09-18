@@ -1344,7 +1344,7 @@ export function bible_glyph_chapter_jdg11() {
           "four",
           "$sun",
           "each",
-          "year.",
+          "$year.",
         ],
       },
     ],
