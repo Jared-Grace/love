@@ -47,7 +47,7 @@ export function bible_glyph_chapter_jer01() {
           "in",
           "the",
           "thirteenth",
-          "year",
+          "$year",
           "of",
           "the",
           "$castle",
