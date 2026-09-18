@@ -673,7 +673,7 @@ export function bible_glyph_chapter_num13() {
           "$proper_name$Jebusites",
           "and",
           "$proper_name$Amorites",
-          "live",
+          "$person+house",
           "in",
           "the",
           "$mountain;",
