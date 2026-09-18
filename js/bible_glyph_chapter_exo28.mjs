@@ -786,7 +786,7 @@ export function bible_glyph_chapter_exo28() {
         words: [
           "He",
           "shall",
-          "bear",
+          "$lifting",
           "the",
           "$name_tag",
           "of",
