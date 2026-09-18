@@ -506,7 +506,7 @@ export function bible_glyph_chapter_ezk36() {
           "will",
           "$no_entry",
           "longer",
-          "devour",
+          "$eating",
           "$person",
           "or",
           "deprive",
