@@ -474,7 +474,7 @@ export function bible_glyph_chapter_1sa24() {
           "proverb",
           "$speech,",
           "'Wickedness",
-          "proceeds",
+          "$walking+tray_out",
           "from",
           "the",
           "$thumbs_down.'",
