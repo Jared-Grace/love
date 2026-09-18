@@ -119,7 +119,7 @@ export function bible_glyph_chapter_psa029() {
           "the",
           "cedars",
           "of",
-          "Lebanon.",
+          "$proper_name$Lebanon.",
         ],
       },
       {
@@ -133,7 +133,7 @@ export function bible_glyph_chapter_psa029() {
           "a",
           "calf,",
           "and",
-          "Sirion",
+          "$proper_name$Sirion",
           "like",
           "a",
           "$son",
@@ -173,7 +173,7 @@ export function bible_glyph_chapter_psa029() {
           "the",
           "Wilderness",
           "of",
-          "Kadesh.",
+          "$proper_name$Kadesh.",
         ],
       },
       {
