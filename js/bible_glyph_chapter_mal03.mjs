@@ -559,7 +559,7 @@ export function bible_glyph_chapter_mal03() {
           "who",
           "feared",
           "the",
-          "LORD",
+          "$i_am",
           "and",
           "honored",
           "His",
