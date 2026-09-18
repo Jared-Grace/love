@@ -159,7 +159,7 @@ export function bible_glyph_chapter_lev26() {
           "fill,",
           "and",
           "will",
-          "dwell",
+          "$person+house",
           "securely",
           "in",
           "your",
