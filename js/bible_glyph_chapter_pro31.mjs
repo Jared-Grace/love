@@ -578,7 +578,7 @@ export function bible_glyph_chapter_pro31() {
           "things,",
           "but",
           "you",
-          "surpass",
+          "$walking+pointing_up",
           "them",
           "all.",
         ],
