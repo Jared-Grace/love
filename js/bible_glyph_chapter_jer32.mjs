@@ -609,7 +609,7 @@ export function bible_glyph_chapter_jer32() {
           "mighty",
           "$fire",
           "whose",
-          "name",
+          "$name_tag",
           "is",
           "the",
           "$i_am",
