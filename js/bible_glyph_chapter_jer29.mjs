@@ -681,7 +681,7 @@ export function bible_glyph_chapter_jer29() {
           "is",
           "what",
           "the",
-          "LORD",
+          "$i_am",
           "of",
           "Hosts,",
           "the",
