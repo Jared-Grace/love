@@ -239,7 +239,7 @@ export function bible_glyph_chapter_lev11() {
           "$water,",
           "you",
           "may",
-          "eat",
+          "$eating",
           "anything",
           "with",
           "fins",
