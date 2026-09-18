@@ -297,7 +297,7 @@ export function bible_glyph_chapter_isa56() {
           "the",
           "dispersed",
           "of",
-          "Israel,",
+          "$proper_name$Israel,",
           "I",
           "will",
           "gather",
