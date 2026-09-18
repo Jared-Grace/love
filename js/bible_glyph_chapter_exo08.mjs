@@ -983,7 +983,7 @@ export function bible_glyph_chapter_exo08() {
         words: [
           "Then",
           "Moses",
-          "left",
+          "$walking+tray_out",
           "$proper_name$Pharaoh",
           "and",
           "prayed",
