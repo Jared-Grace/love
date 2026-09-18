@@ -682,7 +682,7 @@ export function bible_glyph_chapter_lam03() {
           "$thumbs_down",
           "and",
           "$thumbs_up",
-          "come",
+          "$walking+tray_out",
           "from",
           "the",
           "mouth",
