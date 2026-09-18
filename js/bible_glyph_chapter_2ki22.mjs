@@ -96,7 +96,7 @@ export function bible_glyph_chapter_2ki22() {
           "in",
           "the",
           "eighteenth",
-          "year",
+          "$year",
           "of",
           "$king",
           "$proper_name$Josiah,",
