@@ -108,7 +108,7 @@ export function bible_glyph_chapter_ezk47() {
           "As",
           "the",
           "$man_beard",
-          "went",
+          "$walking+tray_out",
           "eastward",
           "with",
           "a",
