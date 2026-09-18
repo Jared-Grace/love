@@ -81,7 +81,7 @@ export function bible_glyph_chapter_num06() {
           "grape",
           "juice",
           "or",
-          "eat",
+          "$eating",
           "fresh",
           "grapes",
           "or",
