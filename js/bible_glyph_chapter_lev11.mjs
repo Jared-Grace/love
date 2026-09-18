@@ -50,7 +50,7 @@ export function bible_glyph_chapter_lev11() {
           "things",
           "you",
           "may",
-          "eat:",
+          "$eating:",
         ],
       },
       {
