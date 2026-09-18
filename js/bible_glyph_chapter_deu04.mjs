@@ -1652,7 +1652,7 @@ export function bible_glyph_chapter_deu04() {
           "after",
           "they",
           "had",
-          "come",
+          "$walking+tray_out",
           "out",
           "of",
           "$proper_name$Egypt.",
