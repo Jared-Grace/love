@@ -778,7 +778,7 @@ export function bible_glyph_chapter_exo34() {
           "$earth",
           "when",
           "you",
-          "go",
+          "$walking+pointing_up",
           "up",
           "to",
           "$eye",
