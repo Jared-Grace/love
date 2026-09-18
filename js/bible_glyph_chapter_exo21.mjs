@@ -42,7 +42,7 @@ export function bible_glyph_chapter_exo21() {
           "$kneeling",
           "for",
           "six",
-          "years.",
+          "$year.",
           "But",
           "in",
           "the",
