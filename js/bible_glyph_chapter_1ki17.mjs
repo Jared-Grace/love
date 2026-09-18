@@ -329,7 +329,7 @@ export function bible_glyph_chapter_1ki17() {
           "flour",
           "in",
           "a",
-          "jar",
+          "$jar",
           "and",
           "a",
           "little",
