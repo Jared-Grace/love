@@ -989,7 +989,7 @@ export function bible_glyph_chapter_jer31() {
           "iniquity.",
           "If",
           "anyone",
-          "eats",
+          "$eating",
           "the",
           "sour",
           "grapes,",
