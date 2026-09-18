@@ -795,7 +795,7 @@ export function bible_glyph_chapter_gen42() {
           "sack.",
           "Their",
           "$heart_organ",
-          "sank,",
+          "$walking+tray_out,",
           "and",
           "trembling",
           "they",
