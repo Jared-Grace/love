@@ -180,7 +180,7 @@ export function bible_glyph_chapter_isa56() {
           "them",
           "an",
           "$hourglass",
-          "name",
+          "$name_tag",
           "that",
           "will",
           "$no_entry",
