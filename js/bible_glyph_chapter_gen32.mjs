@@ -246,7 +246,7 @@ export function bible_glyph_chapter_gen32() {
           "$father",
           "Isaac,",
           "the",
-          "$name_tag",
+          "$i_am",
           "who",
           "$speech",
           "to",

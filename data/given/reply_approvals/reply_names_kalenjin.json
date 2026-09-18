@@ -1,0 +1,1 @@
+{"f_name":"reply_names_kalenjin","text":"+import { arguments_assert } from \"./arguments_assert.mjs\";\n+export function reply_names_kalenjin() {\n+  arguments_assert(arguments, 0);\n+  (\"Given names in Kalenjin, spoken in Kenya.\");\n+  let names = [\"chebet\", \"cheruiyot\", \"kiptoo\", \"korir\", \"rotich\"];\n+  return names;\n+}\n+"}

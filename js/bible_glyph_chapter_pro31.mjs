@@ -599,7 +599,7 @@ export function bible_glyph_chapter_pro31() {
           "who",
           "fears",
           "the",
-          "$name_tag",
+          "$i_am",
           "is",
           "to",
           "be",

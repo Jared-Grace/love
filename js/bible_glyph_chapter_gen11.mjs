@@ -131,7 +131,7 @@ export function bible_glyph_chapter_gen11() {
         words: [
           "Then",
           "the",
-          "$name_tag",
+          "$i_am",
           "came",
           "down",
           "to",
@@ -155,7 +155,7 @@ export function bible_glyph_chapter_gen11() {
         words: [
           "And",
           "the",
-          "$name_tag",
+          "$i_am",
           "$speech,",
           "If",
           "as",
@@ -213,7 +213,7 @@ export function bible_glyph_chapter_gen11() {
         words: [
           "So",
           "the",
-          "$name_tag",
+          "$i_am",
           "scattered",
           "them",
           "from",

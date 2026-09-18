@@ -95,7 +95,7 @@ export function bible_glyph_chapter_pro02() {
           "fear",
           "of",
           "the",
-          "$name_tag",
+          "$i_am",
           "and",
           "discover",
           "the",
@@ -109,7 +109,7 @@ export function bible_glyph_chapter_pro02() {
         words: [
           "For",
           "the",
-          "$name_tag",
+          "$i_am",
           "$hands_giving",
           "wisdom.",
           "From",

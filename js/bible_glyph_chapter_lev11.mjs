@@ -14,7 +14,7 @@ export function bible_glyph_chapter_lev11() {
       {
         verse_number: 1,
         words: [
-          "$name_tag",
+          "$i_am",
           "$mouth",
           "again",
           "to",
@@ -1074,7 +1074,7 @@ export function bible_glyph_chapter_lev11() {
           "For",
           "I",
           "am",
-          "$name_tag",
+          "$i_am",
           "your",
           "$fire.",
           "$sparkle",
@@ -1109,7 +1109,7 @@ export function bible_glyph_chapter_lev11() {
           "For",
           "I",
           "am",
-          "$name_tag,",
+          "$i_am,",
           "who",
           "brought",
           "you",

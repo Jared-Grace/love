@@ -152,7 +152,7 @@ export function bible_glyph_chapter_psa046() {
         verse_number: 7,
         words: [
           "The",
-          "$name_tag",
+          "$i_am",
           "of",
           "Hosts",
           "is",
@@ -177,7 +177,7 @@ export function bible_glyph_chapter_psa046() {
           "works",
           "of",
           "the",
-          "$name_tag,",
+          "$i_am,",
           "who",
           "brings",
           "devastation",
@@ -245,7 +245,7 @@ export function bible_glyph_chapter_psa046() {
         verse_number: 11,
         words: [
           "The",
-          "$name_tag",
+          "$i_am",
           "of",
           "Hosts",
           "is",

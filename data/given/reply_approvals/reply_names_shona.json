@@ -1,0 +1,1 @@
+{"f_name":"reply_names_shona","text":"+import { arguments_assert } from \"./arguments_assert.mjs\";\n+export function reply_names_shona() {\n+  arguments_assert(arguments, 0);\n+  (\"Given names in Shona, spoken in Zimbabwe.\");\n+  let names = [\"farai\", \"rutendo\", \"tapiwa\", \"tendai\"];\n+  return names;\n+}\n+"}

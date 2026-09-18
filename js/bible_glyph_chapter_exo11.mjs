@@ -14,7 +14,7 @@ export function bible_glyph_chapter_exo11() {
       {
         verse_number: 1,
         words: [
-          "$name_tag",
+          "$i_am",
           "$speech",
           "to",
           "Moses,",
@@ -83,7 +83,7 @@ export function bible_glyph_chapter_exo11() {
         verse_number: 3,
         words: [
           "And",
-          "$name_tag",
+          "$i_am",
           "$hands_giving",
           "the",
           "$family",
@@ -132,7 +132,7 @@ export function bible_glyph_chapter_exo11() {
           "This",
           "is",
           "what",
-          "$name_tag",
+          "$i_am",
           "$speech:",
           "About",
           "the",
@@ -248,7 +248,7 @@ export function bible_glyph_chapter_exo11() {
           "will",
           "$lightbulb",
           "that",
-          "$name_tag",
+          "$i_am",
           "makes",
           "a",
           "distinction",
@@ -308,7 +308,7 @@ export function bible_glyph_chapter_exo11() {
       {
         verse_number: 9,
         words: [
-          "$name_tag",
+          "$i_am",
           "$speech",
           "to",
           "Moses,",
@@ -345,7 +345,7 @@ export function bible_glyph_chapter_exo11() {
           "before",
           "Pharaoh,",
           "but",
-          "$name_tag",
+          "$i_am",
           "hardened",
           "the",
           "$heart_organ",

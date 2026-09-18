@@ -66,7 +66,7 @@ export function bible_glyph_chapter_psa145() {
           "Great",
           "is",
           "the",
-          "$name_tag,",
+          "$i_am,",
           "and",
           "greatly",
           "to",
@@ -170,7 +170,7 @@ export function bible_glyph_chapter_psa145() {
         verse_number: 8,
         words: [
           "The",
-          "$name_tag",
+          "$i_am",
           "is",
           "gracious",
           "and",
@@ -188,7 +188,7 @@ export function bible_glyph_chapter_psa145() {
         verse_number: 9,
         words: [
           "The",
-          "$name_tag",
+          "$i_am",
           "is",
           "$thumbs_up",
           "to",
@@ -215,7 +215,7 @@ export function bible_glyph_chapter_psa145() {
           "$hands_raised",
           "You,",
           "O",
-          "$name_tag,",
+          "$i_am,",
           "and",
           "Your",
           "saints",
@@ -301,7 +301,7 @@ export function bible_glyph_chapter_psa145() {
         verse_number: 14,
         words: [
           "The",
-          "$name_tag",
+          "$i_am",
           "upholds",
           "all",
           "who",
@@ -357,7 +357,7 @@ export function bible_glyph_chapter_psa145() {
         verse_number: 17,
         words: [
           "The",
-          "$name_tag",
+          "$i_am",
           "is",
           "$ruler",
           "in",
@@ -376,7 +376,7 @@ export function bible_glyph_chapter_psa145() {
         verse_number: 18,
         words: [
           "The",
-          "$name_tag",
+          "$i_am",
           "is",
           "near",
           "to",
@@ -422,7 +422,7 @@ export function bible_glyph_chapter_psa145() {
         verse_number: 20,
         words: [
           "The",
-          "$name_tag",
+          "$i_am",
           "preserves",
           "all",
           "who",

@@ -15,7 +15,7 @@ export function bible_glyph_chapter_lev13() {
         verse_number: 1,
         words: [
           "Then",
-          "$name_tag",
+          "$i_am",
           "$mouth",
           "to",
           "Moses",

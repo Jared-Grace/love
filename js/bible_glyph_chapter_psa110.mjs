@@ -18,7 +18,7 @@ export function bible_glyph_chapter_psa110() {
           "of",
           "David.",
           "The",
-          "$name_tag",
+          "$i_am",
           "said",
           "to",
           "my",
@@ -44,7 +44,7 @@ export function bible_glyph_chapter_psa110() {
         verse_number: 2,
         words: [
           "The",
-          "$name_tag",
+          "$i_am",
           "extends",
           "Your",
           "mighty",
@@ -97,7 +97,7 @@ export function bible_glyph_chapter_psa110() {
         verse_number: 4,
         words: [
           "The",
-          "$name_tag",
+          "$i_am",
           "has",
           "sworn",
           "and",

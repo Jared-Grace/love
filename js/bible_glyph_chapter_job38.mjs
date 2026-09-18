@@ -15,7 +15,7 @@ export function bible_glyph_chapter_job38() {
         words: [
           "Then",
           "the",
-          "$name_tag",
+          "$i_am",
           "answered",
           "Job",
           "$tray_out",

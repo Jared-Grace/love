@@ -1,0 +1,1 @@
+{"f_name":"reply_names_sotho","text":"+import { arguments_assert } from \"./arguments_assert.mjs\";\n+export function reply_names_sotho() {\n+  arguments_assert(arguments, 0);\n+  (\"Given names in Sotho and Tswana, spoken in southern Africa.\");\n+  let names = [\"lerato\", \"thabo\"];\n+  return names;\n+}\n+"}

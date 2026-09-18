@@ -228,7 +228,7 @@ export function bible_glyph_chapter_psa042() {
           "By",
           "day",
           "the",
-          "$name_tag",
+          "$i_am",
           "decrees",
           "His",
           "$gift,",

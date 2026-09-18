@@ -63,7 +63,7 @@ export function bible_glyph_chapter_gen06() {
         words: [
           "So",
           "the",
-          "$name_tag",
+          "$i_am",
           "$speech,",
           "My",
           "$wind",
@@ -133,7 +133,7 @@ export function bible_glyph_chapter_gen06() {
         words: [
           "Then",
           "the",
-          "$name_tag",
+          "$i_am",
           "$eye",
           "that",
           "the",
@@ -168,7 +168,7 @@ export function bible_glyph_chapter_gen06() {
         words: [
           "And",
           "the",
-          "$name_tag",
+          "$i_am",
           "regretted",
           "that",
           "He",
@@ -192,7 +192,7 @@ export function bible_glyph_chapter_gen06() {
         words: [
           "So",
           "the",
-          "$name_tag",
+          "$i_am",
           "$speech,",
           "I",
           "will",
@@ -244,7 +244,7 @@ export function bible_glyph_chapter_gen06() {
           "$eyes",
           "of",
           "the",
-          "$name_tag.",
+          "$i_am.",
         ],
       },
       {

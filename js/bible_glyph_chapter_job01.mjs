@@ -186,7 +186,7 @@ export function bible_glyph_chapter_job01() {
           "themselves",
           "before",
           "the",
-          "$name_tag,",
+          "$i_am,",
           "and",
           "Satan",
           "$footprints",
@@ -199,7 +199,7 @@ export function bible_glyph_chapter_job01() {
         words: [
           "And",
           "the",
-          "$name_tag",
+          "$i_am",
           "$speech",
           "to",
           "Satan,",
@@ -229,7 +229,7 @@ export function bible_glyph_chapter_job01() {
         words: [
           "Then",
           "the",
-          "$name_tag",
+          "$i_am",
           "$speech",
           "to",
           "Satan,",
@@ -268,7 +268,7 @@ export function bible_glyph_chapter_job01() {
           "Satan",
           "answered",
           "the",
-          "$name_tag,",
+          "$i_am,",
           "Does",
           "Job",
           "fear",
@@ -346,7 +346,7 @@ export function bible_glyph_chapter_job01() {
         verse_number: 12,
         words: [
           "The",
-          "$name_tag",
+          "$i_am",
           "$speech",
           "to",
           "Satan,",
@@ -379,7 +379,7 @@ export function bible_glyph_chapter_job01() {
           "presence",
           "of",
           "the",
-          "$name_tag.",
+          "$i_am.",
         ],
       },
       {

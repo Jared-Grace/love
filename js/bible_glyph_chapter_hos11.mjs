@@ -287,7 +287,7 @@ export function bible_glyph_chapter_hos11() {
           "walk",
           "after",
           "the",
-          "$name_tag;",
+          "$i_am;",
           "He",
           "will",
           "roar",
@@ -336,7 +336,7 @@ export function bible_glyph_chapter_hos11() {
           "$house,",
           "declares",
           "the",
-          "$name_tag.",
+          "$i_am.",
         ],
       },
       {

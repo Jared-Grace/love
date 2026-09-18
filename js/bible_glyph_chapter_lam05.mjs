@@ -15,7 +15,7 @@ export function bible_glyph_chapter_lam05() {
         words: [
           "Remember,",
           "O",
-          "$name_tag,",
+          "$i_am,",
           "what",
           "has",
           "happened",
@@ -327,7 +327,7 @@ export function bible_glyph_chapter_lam05() {
         words: [
           "You,",
           "O",
-          "$name_tag,",
+          "$i_am,",
           "reign",
           "$hourglass;",
           "Your",
@@ -366,7 +366,7 @@ export function bible_glyph_chapter_lam05() {
           "to",
           "Yourself,",
           "O",
-          "$name_tag,",
+          "$i_am,",
           "so",
           "we",
           "may",

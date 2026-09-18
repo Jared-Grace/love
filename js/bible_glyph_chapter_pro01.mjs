@@ -117,7 +117,7 @@ export function bible_glyph_chapter_pro01() {
           "fear",
           "of",
           "the",
-          "$name_tag",
+          "$i_am",
           "is",
           "the",
           "beginning",
@@ -579,7 +579,7 @@ export function bible_glyph_chapter_pro01() {
           "to",
           "fear",
           "the",
-          "$name_tag.",
+          "$i_am.",
         ],
       },
       {

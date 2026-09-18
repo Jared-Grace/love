@@ -13,7 +13,7 @@ export function bible_glyph_chapter_lev14() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "$name_tag", "$mouth", "to", "Moses,", "$speech:"],
+        words: ["Then", "$i_am", "$mouth", "to", "Moses,", "$speech:"],
       },
       {
         verse_number: 2,
@@ -364,7 +364,7 @@ export function bible_glyph_chapter_lev14() {
           "these",
           "offerings,",
           "before",
-          "$name_tag",
+          "$i_am",
           "at",
           "the",
           "entrance",
@@ -413,7 +413,7 @@ export function bible_glyph_chapter_lev14() {
           "wave",
           "offering",
           "before",
-          "$name_tag.",
+          "$i_am.",
         ],
       },
       {
@@ -569,7 +569,7 @@ export function bible_glyph_chapter_lev14() {
           "seven",
           "times",
           "before",
-          "$name_tag.",
+          "$i_am.",
         ],
       },
       {
@@ -660,7 +660,7 @@ export function bible_glyph_chapter_lev14() {
           "for",
           "him",
           "before",
-          "$name_tag.",
+          "$i_am.",
         ],
       },
       {
@@ -843,7 +843,7 @@ export function bible_glyph_chapter_lev14() {
           "of",
           "Meeting,",
           "before",
-          "$name_tag.",
+          "$i_am.",
         ],
       },
       {
@@ -877,7 +877,7 @@ export function bible_glyph_chapter_lev14() {
           "wave",
           "offering",
           "before",
-          "$name_tag.",
+          "$i_am.",
         ],
       },
       {
@@ -982,7 +982,7 @@ export function bible_glyph_chapter_lev14() {
           "seven",
           "times",
           "before",
-          "$name_tag.",
+          "$i_am.",
         ],
       },
       {
@@ -1070,7 +1070,7 @@ export function bible_glyph_chapter_lev14() {
           "for",
           "him",
           "before",
-          "$name_tag.",
+          "$i_am.",
         ],
       },
       {
@@ -1130,7 +1130,7 @@ export function bible_glyph_chapter_lev14() {
           "make",
           "atonement",
           "before",
-          "$name_tag",
+          "$i_am",
           "for",
           "the",
           "one",
@@ -1170,7 +1170,7 @@ export function bible_glyph_chapter_lev14() {
         verse_number: 33,
         words: [
           "Then",
-          "$name_tag",
+          "$i_am",
           "$mouth",
           "to",
           "Moses",
