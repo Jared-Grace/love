@@ -225,7 +225,7 @@ export function bible_glyph_chapter_gen43() {
           "$proper_name$Israel",
           "his",
           "$father,",
-          "Send",
+          "$hand_sending",
           "the",
           "boy",
           "with",
