@@ -576,7 +576,7 @@ export function bible_glyph_chapter_gen11() {
           "$sprout",
           "two",
           "hundred",
-          "years",
+          "$year",
           "and",
           "had",
           "other",
