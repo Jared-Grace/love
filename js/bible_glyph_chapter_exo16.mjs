@@ -1106,7 +1106,7 @@ export function bible_glyph_chapter_exo16() {
           "ate",
           "manna",
           "forty",
-          "years,",
+          "$year,",
           "until",
           "they",
           "$footprints",
