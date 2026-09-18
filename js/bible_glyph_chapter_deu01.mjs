@@ -285,7 +285,7 @@ export function bible_glyph_chapter_deu01() {
           "you,",
           "I",
           "$no_entry",
-          "carry",
+          "$lifting",
           "the",
           "burden",
           "for",
