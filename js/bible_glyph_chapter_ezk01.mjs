@@ -60,7 +60,7 @@ export function bible_glyph_chapter_ezk01() {
           "was",
           "the",
           "fifth",
-          "year",
+          "$year",
           "of",
           "the",
           "exile",
