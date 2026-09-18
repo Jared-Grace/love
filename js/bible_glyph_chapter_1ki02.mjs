@@ -1324,7 +1324,7 @@ export function bible_glyph_chapter_1ki02() {
           "but",
           "do",
           "$no_entry",
-          "go",
+          "$walking+tray_out",
           "anywhere",
           "else.",
         ],
