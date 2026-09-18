@@ -303,7 +303,7 @@ export function bible_glyph_chapter_jdg06() {
           "whose",
           "$earth",
           "you",
-          "dwell.",
+          "$person+house.",
           "But",
           "you",
           "did",
