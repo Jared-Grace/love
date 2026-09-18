@@ -534,7 +534,7 @@ export function bible_glyph_chapter_lev07() {
           "who",
           "is",
           "unclean",
-          "eats",
+          "$eating",
           "$meat",
           "$sacrifice",
           "from",
