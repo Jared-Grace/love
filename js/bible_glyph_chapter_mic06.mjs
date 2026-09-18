@@ -399,7 +399,7 @@ export function bible_glyph_chapter_mic06() {
         words: [
           "You",
           "will",
-          "eat",
+          "$eating",
           "but",
           "$no_entry",
           "be",
