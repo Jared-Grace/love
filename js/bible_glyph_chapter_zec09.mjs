@@ -466,7 +466,7 @@ export function bible_glyph_chapter_zec09() {
           "His",
           "arrow",
           "will",
-          "go",
+          "$walking+tray_out",
           "forth",
           "like",
           "lightning.",
