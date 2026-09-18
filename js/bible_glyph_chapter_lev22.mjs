@@ -298,7 +298,7 @@ export function bible_glyph_chapter_lev22() {
           "a",
           "priest",
           "may",
-          "eat",
+          "$eating",
           "the",
           "$sparkle.",
           "The",
