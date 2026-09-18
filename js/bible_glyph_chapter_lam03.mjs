@@ -545,7 +545,7 @@ export function bible_glyph_chapter_lam03() {
           "one",
           "who",
           "would",
-          "strike",
+          "$fist",
           "him;",
           "let",
           "him",
