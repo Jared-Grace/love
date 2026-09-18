@@ -315,7 +315,7 @@ export function bible_glyph_chapter_jer23() {
           "Then",
           "they",
           "will",
-          "dwell",
+          "$person+house",
           "once",
           "more",
           "in",
