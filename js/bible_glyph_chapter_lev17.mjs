@@ -422,7 +422,7 @@ export function bible_glyph_chapter_lev17() {
           "among",
           "you",
           "may",
-          "eat",
+          "$eating",
           "$blood,",
           "and",
           "the",
