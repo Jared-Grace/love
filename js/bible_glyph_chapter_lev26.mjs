@@ -150,7 +150,7 @@ export function bible_glyph_chapter_lev26() {
           "time.",
           "You",
           "will",
-          "eat",
+          "$eating",
           "your",
           "$bread",
           "and",
