@@ -730,7 +730,7 @@ export function bible_glyph_chapter_lam03() {
         words: [
           "Let",
           "us",
-          "lift",
+          "$lifting",
           "up",
           "our",
           "$heart_organ",
