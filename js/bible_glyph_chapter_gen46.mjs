@@ -368,7 +368,7 @@ export function bible_glyph_chapter_gen46() {
           "$son",
           "of",
           "$proper_name$Leah,",
-          "born",
+          "$baby",
           "to",
           "$proper_name$Jacob",
           "in",
