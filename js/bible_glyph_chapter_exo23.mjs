@@ -230,7 +230,7 @@ export function bible_glyph_chapter_exo23() {
         words: [
           "For",
           "six",
-          "years",
+          "$year",
           "you",
           "are",
           "to",
