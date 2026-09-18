@@ -893,7 +893,7 @@ export function bible_glyph_chapter_2ch34() {
           "the",
           "$man_beard",
           "who",
-          "sent",
+          "$hand_sending",
           "you",
         ],
       },
