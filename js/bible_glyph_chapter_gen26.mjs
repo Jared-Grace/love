@@ -792,7 +792,7 @@ export function bible_glyph_chapter_gen26() {
           "and",
           "sent",
           "me",
-          "away",
+          "$hand_sending",
           "from",
           "you.",
         ],
