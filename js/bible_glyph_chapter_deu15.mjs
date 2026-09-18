@@ -274,7 +274,7 @@ export function bible_glyph_chapter_deu15() {
           "seventh",
           "$year,",
           "the",
-          "year",
+          "$year",
           "of",
           "release,",
           "is",
