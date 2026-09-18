@@ -383,7 +383,7 @@ export function bible_glyph_chapter_num16() {
           "We",
           "will",
           "$no_entry",
-          "come.",
+          "$walking+pointing_up.",
         ],
       },
       {
