@@ -65,7 +65,7 @@ export function bible_glyph_chapter_1sa07() {
           "many",
           "$sun,",
           "twenty",
-          "years",
+          "$year",
           "in",
           "all.",
           "And",
