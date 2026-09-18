@@ -946,7 +946,7 @@ export function bible_glyph_chapter_1sa25() {
         verse_number: 28,
         words: [
           "Please",
-          "forgive",
+          "$lifting",
           "the",
           "offense",
           "of",
