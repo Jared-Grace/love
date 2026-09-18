@@ -222,7 +222,7 @@ export function bible_glyph_chapter_psa032() {
           "the",
           "horse",
           "or",
-          "mule,",
+          "$mule,",
           "which",
           "have",
           "no",
