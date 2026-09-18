@@ -24,7 +24,7 @@ export function bible_glyph_chapter_isa06() {
           "$eye",
           "the",
           "$crown",
-          "seated",
+          "$person+house",
           "on",
           "a",
           "throne,",
