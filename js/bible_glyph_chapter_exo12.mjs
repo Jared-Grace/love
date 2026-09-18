@@ -318,7 +318,7 @@ export function bible_glyph_chapter_exo12() {
           "You",
           "are",
           "to",
-          "eat",
+          "$eating",
           "it",
           "in",
           "haste.",
