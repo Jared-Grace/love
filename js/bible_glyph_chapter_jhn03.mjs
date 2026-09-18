@@ -235,7 +235,7 @@ export function bible_glyph_chapter_jhn03() {
       },
       {
         verse_number: 9,
-        words: ["“How", "can", "this", "be?”", "Nicodemus", "$speech."],
+        words: ["“How", "can", "this", "be?”", "$proper_name$Nicodemus", "$speech."],
       },
       {
         verse_number: 10,
