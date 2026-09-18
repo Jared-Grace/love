@@ -259,7 +259,7 @@ export function bible_glyph_chapter_gen11() {
           "that",
           "place",
           "the",
-          "LORD",
+          "$i_am",
           "scattered",
           "them",
           "over",
