@@ -567,7 +567,7 @@ export function bible_glyph_chapter_2sa06() {
           "David",
           "had",
           "finished",
-          "sacrificing",
+          "$walking+pointing_up",
           "the",
           "burnt",
           "offerings",
