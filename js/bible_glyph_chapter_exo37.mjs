@@ -128,7 +128,7 @@ export function bible_glyph_chapter_exo37() {
           "in",
           "order",
           "to",
-          "carry",
+          "$lifting",
           "the",
           "$ark.",
         ],
