@@ -1,15 +1,17 @@
-import { add } from "./add.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { bible_glyph_chapter_glyph_counts } from "./bible_glyph_chapter_glyph_counts.mjs";
 import { bible_glyph_chapter_draft_glyph_counts } from "./bible_glyph_chapter_draft_glyph_counts.mjs";
+import { object_property_names } from "./object_property_names.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { bible_glyph_marks_wordless } from "./bible_glyph_marks_wordless.mjs";
+import { add } from "./add.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { list_add } from "./list_add.mjs";
-import { object_property_names } from "./object_property_names.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { not } from "./not.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { list_add } from "./list_add.mjs";
 export async function bible_glyph_chapters_marks_overdrawn_walked() {
   arguments_assert(arguments, 0);
   ("Every place an authored picture Bible chapter draws a mark MORE often than the root table seats it in that chapter, which is a mark standing on a word the table never gave it.");
@@ -17,6 +19,7 @@ export async function bible_glyph_chapters_marks_overdrawn_walked() {
   ("THE CASE THIS EXISTS FOR IS A MARK MEETING ITS OWN PICTURE. The flame is seated on God and not on fire, the breath on Spirit and not on wind, the star on glory and not on star - so a letter mentioning eternal fire, or clouds carried by the wind, or wandering stars, looks to an author like three verses with an obvious picture missing. Drawing them would teach a reader that the flame means flame, which silently unteaches every page where it means God. Nothing before this could tell that a chapter had done it.");
   ("IT COMPARES COUNTS AND NEVER POSITIONS, which bounds what it can promise. A chapter that drew the right number of flames on the wrong words passes, because the authored chapter is readable English and the interlinear is word-for-word Greek and there is no honest way to line one up against the other. What it does catch completely is a mark drawn where the table seats none at all, which is the only shape the fire-on-fire mistake can take.");
   ("It walks the chapters rather than taking a list, so it cannot fall behind the ones that have been written.");
+  ("A MARK THAT STANDS FOR NO ORIGINAL WORD IS SKIPPED RATHER THAN COMPARED, AND IT IS SKIPPED BEFORE IT IS COUNTED. The name badge says the letters beside it are somebody's name; nothing in the Hebrew or the Greek is under it, so the table seats it nought times in every verse it will ever stand in, and that is the loudest fault this reading knows. Comparing it would be asking how often a table seats a thing the table is not about, and every answer would be wrong in the same direction. It is left out of the walk count too, because the count is how many marks were compared and these are not compared.");
   ("HOW MUCH WAS REACHED IS COUNTED WHERE THE READING HAPPENS and travels out beside the answer, because on a good day the answer is empty and an empty answer is also what a sweep that opened nothing hands back. The number counted is marks compared, one for every picture a chapter drew, and it is the only number here that falls when either half goes quiet - no chapters to walk empties it, and chapters that parse to no pictures empties it too. The length of the answer and the size of the record it is measured against both stay exactly the same on that run.");
   let chapters = bible_glyph_chapters();
   let overdrawn = [];
@@ -26,6 +29,11 @@ export async function bible_glyph_chapters_marks_overdrawn_walked() {
     let drawn = bible_glyph_chapter_glyph_counts(chapter_code);
     let seated = await bible_glyph_chapter_draft_glyph_counts(chapter_code);
     for (let glyph of object_property_names(drawn)) {
+      let list = bible_glyph_marks_wordless();
+      let wordless = list_includes(list, glyph);
+      if (wordless) {
+        continue;
+      }
       walked = add(walked, 1);
       let drew = property_get(drawn, glyph);
       let found = property_get_or_null(seated, glyph);
