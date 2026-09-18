@@ -17,7 +17,7 @@ export function bible_glyph_chapter_mal03() {
           "Behold,",
           "I",
           "will",
-          "send",
+          "$hand_sending",
           "My",
           "$angel,",
           "who",
