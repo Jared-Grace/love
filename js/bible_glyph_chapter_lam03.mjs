@@ -485,7 +485,7 @@ export function bible_glyph_chapter_lam03() {
           "a",
           "man",
           "to",
-          "bear",
+          "$lifting",
           "the",
           "yoke",
           "while",
