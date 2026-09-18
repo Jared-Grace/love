@@ -1276,7 +1276,7 @@ export function bible_glyph_chapter_lev23() {
           "You",
           "are",
           "to",
-          "dwell",
+          "$person+house",
           "in",
           "booths",
           "for",
