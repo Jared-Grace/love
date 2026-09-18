@@ -166,7 +166,7 @@ export function bible_glyph_chapter_exo06() {
           "and",
           "I",
           "will",
-          "bring",
+          "$walking+tray_out",
           "you",
           "out",
           "from",
