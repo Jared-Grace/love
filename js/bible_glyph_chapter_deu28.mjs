@@ -1549,7 +1549,7 @@ export function bible_glyph_chapter_deu28() {
           "$map",
           "with",
           "$no_entry",
-          "respect",
+          "$lifting",
           "for",
           "the",
           "old",
