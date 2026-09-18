@@ -31,7 +31,6 @@
   "qa_gates -> app_code_lesson_telling_symbols_gate_run",
   "qa_gates -> app_code_lesson_titles_capital_gate_run",
   "qa_gates -> app_code_lessons_above_broken_gate_run",
-  "qa_gates -> app_code_lessons_order_ahead_gate_run",
   "qa_gates -> app_code_lessons_released_gate_run",
   "qa_gates -> app_code_lessons_rights_space_gate_run",
   "qa_gates -> app_code_quiz_choice_pool_gate_run",
