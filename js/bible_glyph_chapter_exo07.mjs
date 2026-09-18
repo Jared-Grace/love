@@ -120,7 +120,7 @@ export function bible_glyph_chapter_exo07() {
           "judgment",
           "I",
           "will",
-          "bring",
+          "$walking+tray_out",
           "the",
           "divisions",
           "of",
