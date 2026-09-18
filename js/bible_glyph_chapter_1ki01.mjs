@@ -1045,7 +1045,7 @@ export function bible_glyph_chapter_1ki01() {
           "on",
           "my",
           "own",
-          "mule",
+          "$mule",
           "and",
           "take",
           "him",
