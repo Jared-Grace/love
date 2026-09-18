@@ -689,7 +689,7 @@ export function bible_glyph_chapter_2ki06() {
           "$father,",
           "shall",
           "I",
-          "kill",
+          "$fist",
           "them?",
           "Shall",
           "I",
