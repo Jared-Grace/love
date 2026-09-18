@@ -472,7 +472,7 @@ export function bible_glyph_chapter_jdg13() {
           "She",
           "must",
           "$no_entry",
-          "eat",
+          "$eating",
           "anything",
           "that",
           "$walking+tray_out",
