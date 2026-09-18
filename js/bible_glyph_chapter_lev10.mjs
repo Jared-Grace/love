@@ -338,7 +338,7 @@ export function bible_glyph_chapter_lev10() {
           "offerings",
           "$i_am",
           "and",
-          "eat",
+          "$eating",
           "it",
           "without",
           "leaven",
