@@ -595,7 +595,7 @@ export function bible_glyph_chapter_gen49() {
           "and",
           "by",
           "the",
-          "Almighty",
+          "$might",
           "who",
           "$speech+thumbs_up",
           "you",
