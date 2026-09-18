@@ -410,7 +410,7 @@ export function bible_glyph_chapter_num09() {
           "That",
           "$man_beard",
           "will",
-          "bear",
+          "$lifting",
           "the",
           "consequences",
           "of",
