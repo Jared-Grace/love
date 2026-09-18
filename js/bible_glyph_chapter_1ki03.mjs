@@ -138,7 +138,7 @@ export function bible_glyph_chapter_1ki03() {
           "place,",
           "and",
           "$proper_name$Solomon",
-          "offered",
+          "$walking+pointing_up",
           "a",
           "thousand",
           "burnt",
