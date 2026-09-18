@@ -271,7 +271,7 @@ export function bible_glyph_chapter_gen27() {
           "your",
           "$father",
           "to",
-          "eat,",
+          "$eating,",
           "so",
           "that",
           "he",
