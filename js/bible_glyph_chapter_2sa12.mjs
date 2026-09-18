@@ -840,7 +840,7 @@ export function bible_glyph_chapter_2sa12() {
           "Solomon.",
           "Now",
           "the",
-          "LORD",
+          "$i_am",
           "$heart_red",
           "the",
           "child.",
