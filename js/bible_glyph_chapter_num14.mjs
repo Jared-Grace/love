@@ -575,7 +575,7 @@ export function bible_glyph_chapter_num14() {
           "abounding",
           "in",
           "$gift,",
-          "forgiving",
+          "$lifting",
           "iniquity",
           "and",
           "transgression.",
