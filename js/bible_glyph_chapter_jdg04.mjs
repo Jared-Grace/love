@@ -90,7 +90,7 @@ export function bible_glyph_chapter_jdg04() {
           "Israelites",
           "for",
           "twenty",
-          "years.",
+          "$year.",
         ],
       },
       {
