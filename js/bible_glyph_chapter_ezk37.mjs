@@ -433,7 +433,7 @@ export function bible_glyph_chapter_ezk37() {
           "your",
           "graves",
           "and",
-          "bring",
+          "$walking+pointing_up",
           "you",
           "up",
           "from",
