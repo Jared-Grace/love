@@ -326,7 +326,7 @@ export function bible_glyph_chapter_2sa06() {
           "of",
           "the",
           "$i_am",
-          "remained",
+          "$person+house",
           "in",
           "the",
           "$house",
