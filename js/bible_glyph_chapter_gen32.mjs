@@ -699,7 +699,7 @@ export function bible_glyph_chapter_gen32() {
           "with",
           "him",
           "until",
-          "daybreak.",
+          "$walking+pointing_up.",
         ],
       },
       {
