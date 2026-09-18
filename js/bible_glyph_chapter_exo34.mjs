@@ -457,7 +457,7 @@ export function bible_glyph_chapter_exo34() {
           "the",
           "$i_am,",
           "whose",
-          "name",
+          "$name_tag",
           "is",
           "$heart_on_fire,",
           "is",
