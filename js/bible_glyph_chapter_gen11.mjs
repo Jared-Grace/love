@@ -246,7 +246,7 @@ export function bible_glyph_chapter_gen11() {
           "for",
           "there",
           "the",
-          "LORD",
+          "$i_am",
           "confused",
           "the",
           "language",
