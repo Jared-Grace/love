@@ -13,6 +13,7 @@ export async function qa_commit_named_at_when_wanted(commit) {
   "What comes back when it says no is the count of runs and shards and the load that decided it, not a bare refusal. The numbers are what tell the asker whether to come back in a quarter of an hour or in an hour, and they are already in hand at that moment.";
   "The guard also asks how long it has been since anything at all was judged, because being careful every single minute added up to being wrong across a whole afternoon: measured 2026-08-11, this door had said no on every line of the daemon's journal, the record held thirty-nine commits judged in its whole life, and sixty-three from one day sat unjudged. So once the record has gone stale a full machine stops counting as a reason and only another judging does. Where the numbers come back with a stale record beside them, the refusal was that.";
   "Whether the judging was written down travels out with it, and so does whether a neighbouring repo moved while it ran. The judging underneath already works both of those out and hands them over; this door used to take the verdict alone and drop them, so a run that answered about every gate and filed nothing looked from out here exactly like a run that filed. Measured 2026-09-02: a quarter of an hour of judging came back naming eight red gates, left no entry in the record at all, and the only way to discover that was to go and search the record for the commit by hand - after which the deploy that was waiting on it still could not go. A verdict nobody can look up afterwards is a verdict the next asker pays for again, and the asker that paid for this one is the one that wanted to be told.";
+  "★ AND THE NEIGHBOURS THAT COULD NOT SAY TRAVEL OUT TOO, BECAUSE THEY ARE THE OTHER HALF OF WHY NOTHING WAS WRITTEN DOWN. Two different things stop a judging being filed - a neighbour that moved underneath it, and a share of the gates that stopped without ever complaining - and the judging underneath was taught to tell them apart on the very day this door was taught to say that it had not filed. Only one of the two lessons was carried up here. Measured 2026-09-18: a quarter of an hour came back from this door saying it had filed nothing and naming no neighbour that had moved, which is exactly what the other reason looks like, and finding out which it was meant reading three functions underneath - the one thing the layer below had already been fixed so that nobody would have to do. A reason worked out and then dropped one floor above where it was worked out is the same as never having worked it out.";
   let known = await qa_commit_named();
   let remembered = property_get_or_null(known, commit);
   if (remembered) {
@@ -24,6 +25,7 @@ export async function qa_commit_named_at_when_wanted(commit) {
       stale: null,
       filed: true,
       moved: null,
+      silent: null,
     };
     return r;
   }
@@ -41,6 +43,7 @@ export async function qa_commit_named_at_when_wanted(commit) {
       judged: property_get_or_null(judged, "judged"),
       filed: property_get_or_null(judged, "filed"),
       moved: property_get_or_null(judged, "moved"),
+      silent: property_get_or_null(judged, "silent"),
     };
     return started;
   }
@@ -52,6 +55,7 @@ export async function qa_commit_named_at_when_wanted(commit) {
     judged: null,
     filed: false,
     moved: null,
+    silent: null,
   };
   return refused;
 }
