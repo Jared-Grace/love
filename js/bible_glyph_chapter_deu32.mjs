@@ -495,7 +495,7 @@ export function bible_glyph_chapter_deu32() {
           "who",
           "brought",
           "you",
-          "forth;",
+          "$baby;",
           "you",
           "forgot",
           "the",
