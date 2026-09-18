@@ -58,7 +58,7 @@ export function bible_glyph_chapter_jhn10() {
           "the",
           "one",
           "who",
-          "enters",
+          "$footprints+tray_in",
           "by",
           "the",
           "$door",
