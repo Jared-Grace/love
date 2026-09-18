@@ -86,7 +86,7 @@ export function bible_glyph_chapter_gen35() {
           "us",
           "arise",
           "and",
-          "go",
+          "$walking+pointing_up",
           "up",
           "to",
           "Bethel,",
