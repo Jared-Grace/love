@@ -676,7 +676,7 @@ export function bible_glyph_chapter_jer17() {
           "$person_other,",
           "do",
           "$no_entry",
-          "carry",
+          "$lifting",
           "a",
           "load",
           "on",
