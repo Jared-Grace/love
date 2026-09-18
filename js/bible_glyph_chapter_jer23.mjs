@@ -454,7 +454,7 @@ export function bible_glyph_chapter_jer23() {
           "them",
           "in",
           "the",
-          "year",
+          "$year",
           "of",
           "their",
           "punishment,",
