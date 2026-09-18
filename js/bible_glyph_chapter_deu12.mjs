@@ -802,7 +802,7 @@ export function bible_glyph_chapter_deu12() {
           "You",
           "must",
           "$no_entry",
-          "eat",
+          "$eating",
           "the",
           "blood;",
           "pour",
