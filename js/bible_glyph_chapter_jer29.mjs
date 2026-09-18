@@ -1038,7 +1038,7 @@ export function bible_glyph_chapter_jer29() {
           "I",
           "did",
           "$no_entry",
-          "send",
+          "$hand_sending",
           "him,",
           "and",
           "has",
