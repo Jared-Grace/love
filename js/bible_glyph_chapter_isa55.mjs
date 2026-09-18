@@ -425,7 +425,7 @@ export function bible_glyph_chapter_isa55() {
           "name",
           "for",
           "the",
-          "LORD,",
+          "$i_am,",
           "an",
           "$hourglass",
           "sign,",
