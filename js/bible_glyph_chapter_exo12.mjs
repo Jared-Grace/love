@@ -658,7 +658,7 @@ export function bible_glyph_chapter_exo12() {
           "are",
           "$no_entry",
           "to",
-          "eat",
+          "$eating",
           "anything",
           "leavened",
           "in",
