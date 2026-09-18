@@ -783,7 +783,7 @@ export function bible_glyph_chapter_1sa20() {
           "has",
           "sent",
           "you",
-          "away.",
+          "$hand_sending.",
         ],
       },
       {
