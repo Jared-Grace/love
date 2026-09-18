@@ -33,7 +33,9 @@ export function app_code_lesson_statement_name_again_above(root, context) {
     app_code_lesson_statement_name_value,
     ["the cup called ", name, has],
   );
-  app_code_lesson_cup_fruit(box_before, word_before, name);
+  ("No names are lent to these cups, so their letters come out the dark blue every cup on these screens has always been written in. The colours belong to a lesson whose code box draws the same names in the same colours, and this screen's does not yet.");
+  let uncolored = [];
+  app_code_lesson_cup_fruit(box_before, word_before, name, uncolored);
   let box_after = app_code_container_light_blue(root);
   let swap = list_join_empty([
     "Now take the ",
@@ -43,7 +45,7 @@ export function app_code_lesson_statement_name_again_above(root, context) {
     " in",
   ]);
   html_div_cycle_code(box_after, [swap]);
-  app_code_lesson_cup_fruit(box_after, word_after, name);
+  app_code_lesson_cup_fruit(box_after, word_after, name, uncolored);
   html_div_cycle_code(box_after, ["It is the same cup, still called ", name]);
   ("the line begins with a however, because the line above it has just said that nothing about the cup changed - same cup, same name - and this one says the one thing that did. Without the however the two lines read as two more facts about a cup, and the second is the whole lesson.");
   let gone = list_join_empty([

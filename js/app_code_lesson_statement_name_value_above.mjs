@@ -1,17 +1,17 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
+import { text_empty } from "./text_empty.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_identifiers_letters_spaces } from "./app_code_lesson_identifiers_letters_spaces.mjs";
-import { app_code_code_output_explain_box } from "./app_code_code_output_explain_box.mjs";
-import { app_code_lesson_cup_code_box } from "./app_code_lesson_cup_code_box.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_cup } from "./app_code_cup.mjs";
 import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_value_line } from "./app_code_value_line.mjs";
 import { html_div_cycle_bold } from "./html_div_cycle_bold.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { app_code_cup } from "./app_code_cup.mjs";
-import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { text_empty } from "./text_empty.mjs";
+import { app_code_lesson_cup_code_box } from "./app_code_lesson_cup_code_box.mjs";
+import { app_code_code_output_explain_box } from "./app_code_code_output_explain_box.mjs";
 export function app_code_lesson_statement_name_value_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: what a learner has already been told about names, a cup with grapes in it, the word for such a cup, and the same thing written as code");
@@ -31,15 +31,17 @@ export function app_code_lesson_statement_name_value_above(root, context) {
   );
   let box_cup = app_code_container_light_blue(root);
   html_div_cycle_code(box_cup, ["Suppose you had a cup"]);
-  app_code_cup(box_cup, nothing, nothing);
+  ("No names are lent to these cups, so their letters come out the dark blue every cup on these screens has always been written in. The colours belong to a lesson whose code box draws the same names in the same colours, and this screen's does not yet.");
+  let uncolored = [];
+  app_code_cup(box_cup, nothing, nothing, uncolored);
   html_div_cycle_code(box_cup, ["Suppose you called the cup ", name]);
-  app_code_cup(box_cup, nothing, name);
+  app_code_cup(box_cup, nothing, name, uncolored);
   html_div_cycle_code(box_cup, [
     "Then suppose you put some ",
     word,
     " in the cup",
   ]);
-  app_code_lesson_cup_fruit(box_cup, word, name);
+  app_code_lesson_cup_fruit(box_cup, word, name, uncolored);
   html_div_cycle_code(box_cup, [
     "Now if someone asked you what is inside the cup called ",
     name,

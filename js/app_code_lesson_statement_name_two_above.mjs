@@ -32,10 +32,16 @@ export function app_code_lesson_statement_name_two_above(root, context) {
     " and one called ",
     name_last,
   ]);
-  app_code_lesson_cups_row_holding(box_two, [
-    [word_first, name_first],
-    [word_last, name_last],
-  ]);
+  ("No names are lent to these cups, so their letters come out the dark blue every cup on these screens has always been written in. The colours belong to a lesson whose code box draws the same names in the same colours, and this screen's does not yet.");
+  let uncolored = [];
+  app_code_lesson_cups_row_holding(
+    box_two,
+    [
+      [word_first, name_first],
+      [word_last, name_last],
+    ],
+    uncolored,
+  );
   ("asked one at a time, and answered one at a time, because the name is what picks which of the two is being talked about and that is the only new thing on this screen");
   let box_ask = app_code_container_light_blue(root);
   html_div_cycle_code(box_ask, [
