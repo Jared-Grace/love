@@ -857,7 +857,7 @@ export function bible_glyph_chapter_deu12() {
           "you",
           "are",
           "to",
-          "take",
+          "$lifting",
           "your",
           "$sparkle",
           "and",
