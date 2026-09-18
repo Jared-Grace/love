@@ -486,7 +486,7 @@ export function bible_glyph_chapter_luk07() {
         "$speech",
         "about",
         "$pointing_back",
-        "spread",
+        "$footprints+tray_out",
         "$tray_in",
         "$proper_name$Judea",
         "$plus",
