@@ -582,7 +582,7 @@ export function bible_glyph_chapter_gen02() {
           "The",
           "$person",
           "gave",
-          "names",
+          "$name_tag",
           "to",
           "all",
           "the",
