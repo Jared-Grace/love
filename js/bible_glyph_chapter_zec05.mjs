@@ -114,7 +114,7 @@ export function bible_glyph_chapter_zec05() {
           "out,",
           "declares",
           "the",
-          "LORD",
+          "$i_am",
           "of",
           "Hosts,",
           "and",
