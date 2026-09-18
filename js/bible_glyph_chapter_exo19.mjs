@@ -591,7 +591,7 @@ export function bible_glyph_chapter_exo19() {
           "fire.",
           "The",
           "smoke",
-          "rose",
+          "$walking+pointing_up",
           "like",
           "the",
           "smoke",
