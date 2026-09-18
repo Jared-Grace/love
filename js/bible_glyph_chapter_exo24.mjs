@@ -67,7 +67,7 @@ export function bible_glyph_chapter_exo24() {
           "$family",
           "may",
           "$no_entry",
-          "go",
+          "$walking+pointing_up",
           "up",
           "with",
           "him.",
