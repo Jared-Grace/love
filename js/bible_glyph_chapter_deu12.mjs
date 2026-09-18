@@ -729,7 +729,7 @@ export function bible_glyph_chapter_deu12() {
           "and",
           "you",
           "may",
-          "eat",
+          "$eating",
           "it",
           "within",
           "your",
