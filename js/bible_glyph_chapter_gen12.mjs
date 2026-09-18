@@ -277,7 +277,7 @@ export function bible_glyph_chapter_gen12() {
           "altar",
           "to",
           "the",
-          "LORD,",
+          "$i_am,",
           "and",
           "he",
           "called",
