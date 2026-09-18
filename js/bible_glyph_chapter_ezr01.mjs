@@ -17,7 +17,7 @@ export function bible_glyph_chapter_ezr01() {
           "In",
           "the",
           "first",
-          "year",
+          "$year",
           "of",
           "$proper_name$Cyrus",
           "$king",
