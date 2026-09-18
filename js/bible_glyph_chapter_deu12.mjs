@@ -819,7 +819,7 @@ export function bible_glyph_chapter_deu12() {
         words: [
           "Do",
           "$no_entry",
-          "eat",
+          "$eating",
           "it,",
           "so",
           "that",
