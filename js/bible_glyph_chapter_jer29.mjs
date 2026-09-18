@@ -667,7 +667,7 @@ export function bible_glyph_chapter_jer29() {
           "I",
           "have",
           "sent",
-          "away",
+          "$hand_sending",
           "from",
           "$proper_name$Jerusalem",
           "to",
