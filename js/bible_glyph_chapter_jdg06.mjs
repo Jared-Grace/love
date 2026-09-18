@@ -521,7 +521,7 @@ export function bible_glyph_chapter_jdg06() {
           "and",
           "you",
           "will",
-          "strike",
+          "$fist",
           "down",
           "the",
           "$proper_name$Midianites",
