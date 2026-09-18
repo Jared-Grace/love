@@ -320,7 +320,7 @@ export function bible_glyph_chapter_num09() {
           "They",
           "are",
           "to",
-          "eat",
+          "$eating",
           "the",
           "lamb",
           "together",
