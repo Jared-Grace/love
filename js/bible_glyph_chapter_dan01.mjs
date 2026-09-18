@@ -383,7 +383,7 @@ export function bible_glyph_chapter_dan01() {
           "$tray_out",
           "vegetables",
           "to",
-          "eat",
+          "$eating",
           "and",
           "$water",
           "to",
