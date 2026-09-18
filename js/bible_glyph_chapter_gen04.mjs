@@ -452,7 +452,7 @@ export function bible_glyph_chapter_gen04() {
           "found",
           "him",
           "would",
-          "kill",
+          "$fist",
           "him.",
         ],
       },
