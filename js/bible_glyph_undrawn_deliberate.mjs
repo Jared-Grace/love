@@ -1,16 +1,10 @@
 export function bible_glyph_undrawn_deliberate() {
   "The words this picture Bible has decided to draw as NOTHING, with the reason each one earned that decision.";
-  "A word in here is not a gap. Every other undrawn word is work outstanding - nobody has chosen its picture yet - and these are words where the choosing was done and the answer was that no picture belongs. Without this list the two cases look identical, and the largest entry here is also the single most frequent word in the New Testament, so a coverage figure that counts it as missing is wrong by nine points about a problem that does not exist.";
-  "THE TEST IS WHETHER A READER LOSES ANYTHING, and it is deliberately not whether the word is small or frequent. A word belongs here only if drawing it would add a mark to the page that the reader must learn to ignore. That is a real cost: a picture language is read by trusting that every mark means something, and a mark that means nothing teaches the reader to stop trusting the marks.";
-  "This list is CONSULTED and never assumed. A survey that quietly subtracted these would be reporting a number nobody could check; a survey that reports them separately can be argued with, which is the point of writing the reason next to each one.";
-  let undrawn = [
-    {
-      strong: "3588",
-      root: "ho",
-      gloss: "the",
-      because:
-        "the Greek article marks that a noun is a particular one, and the picture of that noun already is a particular one - so the mark would be carried by every noun on the page and distinguish nothing. It is the most frequent word in the New Testament by a wide margin, which makes leaving it undrawn the single largest decision in this table rather than a detail.",
-    },
-  ];
+  "A word in here is not a gap. Every other undrawn word is work outstanding - nobody has chosen its picture yet - and these are words where the choosing was done and the answer was that no picture belongs. Without this list the two cases look identical.";
+  "THE LIST IS EMPTY AND ONLY ONE KIND OF THING MAY EVER JOIN IT (2026-09-18). A word that stands in the original always gets a picture. The only thing that may be drawn as nothing is a SIGN WITH NO WORD UNDER IT - a letter of spelling such as a paragogic nun, which nobody ever said aloud as a word. Nothing else qualifies, so the list being empty is the expected state rather than a table waiting to be filled.";
+  "THE GREEK ARTICLE WAS THE ONE ENTRY AND IT WAS TAKEN BACK. The reason written here was that the article marks a noun as a particular one, the picture of that noun already is a particular one, and so the mark would be carried by every noun and distinguish nothing. Being the most frequent word in the New Testament, that made it the largest single decision in the table.";
+  "WHAT THAT REASONING MISSED IS THAT A READER CANNOT SEE AN ABSENCE OF SOMETHING NEVER DRAWN. The human ruled on 2026-09-17 that the edition is literal and every original word gets a picture, and asked directly for a picture for the. John 1:1 is the case: there is no article in front of beginning, and in front of God the second time, and those absences are the reading. Draw the article nowhere and a reader can never meet them. The article is now seated on the pushpin.";
+  "THE OLD TEST - DOES A READER LOSE ANYTHING - WAS NOT WRONG, IT WAS ANSWERED TOO NARROWLY. It was asked about the places the word appears and answered no. It has to be asked about the places the word DOES NOT appear, and there the answer is yes. A mark that is carried by nearly every noun still earns its place, because it is the only thing that makes the few bare nouns visible.";
+  let undrawn = [];
   return undrawn;
 }
