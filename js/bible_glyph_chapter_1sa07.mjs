@@ -529,7 +529,7 @@ export function bible_glyph_chapter_1sa07() {
         verse_number: 16,
         words: [
           "Every",
-          "year",
+          "$year",
           "he",
           "would",
           "$walking",
