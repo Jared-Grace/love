@@ -1494,7 +1494,7 @@ export function bible_glyph_chapter_gen41() {
         words: [
           "the",
           "seven",
-          "years",
+          "$year",
           "of",
           "famine",
           "began",
