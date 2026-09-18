@@ -21,7 +21,7 @@ export function bible_glyph_chapter_psa008() {
           "majestic",
           "is",
           "Your",
-          "name",
+          "$name_tag",
           "in",
           "all",
           "the",
