@@ -608,7 +608,7 @@ export function bible_glyph_chapter_zec14() {
           "$proper_name$Egypt",
           "will",
           "$no_entry",
-          "go",
+          "$walking+pointing_up",
           "up",
           "and",
           "$footprints",
