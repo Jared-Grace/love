@@ -3,15 +3,9 @@ export function bible_glyph_undrawn_sentence_decides() {
   "THIS IS NOT THE LIST OF WORDS DRAWN AS NOTHING ON PURPOSE, and the difference is the test that list sets itself: does a reader lose anything. The article is drawn as nothing because a reader loses nothing - every noun is already a particular one. A reader DOES lose something here. The relation is real information and the page keeps an English word standing where the picture should be, so these are work outstanding with a reason attached rather than questions that have been answered.";
   "A MARK MUST NOT CLAIM MORE THAN THE WORD CLAIMS. That is the whole rule, and it is what a frequency table can never check. A word that appears two thousand times looks like the best possible investment right up until the one mark available says something the text does not say, and then every one of those two thousand places is wrong instead of blank.";
   "NO SURVEY WOULD HAVE FOUND THESE. The reports look for one glyph seated on several roots, and for one glyph stretched over senses too far apart to share it. This is one glyph on ONE root, doing several jobs that are grammatical rather than lexical - so the counts all look healthy and the mapping looks clean. This list is filled by reading a drawn page and never by a run.";
-  let undrawn = [
-    {
-      strong: "1510",
-      root: "eimi",
-      gloss: "is, are, was",
-      was_drawn: "equals",
-      because:
-        "the word does at least three different jobs and the equals sign was drawn for only one of them. In the beginning was the Word says the Word EXISTED, and there is no second thing on the other side of the verb at all. The Word was with God says the Word stood in a relation to somebody, and it is the preposition carrying that and not the verb. The Word was God says what the Word IS, and that alone is the job the equals sign was drawn for. One mark over all three tells a reader that the first two say something they do not say.",
-    },
-  ];
+  "THE ONE ENTRY WAS EIMI AND IT HAS BEEN SEATED (2026-09-18). It was held back because the word does at least three different jobs and the equals sign that had been drawn for it was true of only one. In the beginning was the Word says the Word EXISTED, and there is no second thing on the other side of the verb at all. The Word was with God says the Word stood in a relation to somebody, and it is the preposition carrying that and not the verb. The Word was God says what the Word IS, and that alone is the job the equals sign was drawn for. One mark over all three told a reader that the first two say something they do not say.";
+  "WHAT CHANGED IS THE MARK AND NOT THE ARGUMENT. The chain link replaced the equals sign, and it survives all three jobs because it claims only that the two ends are JOINED and never that they are the same. A thing joined to nothing still reads as standing there; a thing joined to God through a preposition reads as beside Him; a thing joined to God with nothing in between reads as being Him. The old objection was never to drawing the word, it was to drawing a claim the word does not make - so the answer was a humbler mark, not silence. The Hebrew hayah is seated on the same link for the same reason.";
+  "THE LIST IS EMPTY AND THAT IS A HIGH BAR RATHER THAN A FINISHED JOB. Nothing goes in here that could be answered by finding a mark that claims less. A word only belongs if no mark exists that is true everywhere the word stands, and the eimi case says how hard that is to establish: the first mark tried failed, and the second one worked.";
+  let undrawn = [];
   return undrawn;
 }

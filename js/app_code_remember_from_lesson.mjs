@@ -29,7 +29,7 @@ export function app_code_remember_from_lesson(
   ("The number is itself the button, so a learner who does not remember can go and look without hunting through the list for it.");
   let fns = app_code_lessons_fns();
   let index = list_index_of(fns, lesson_fn);
-  let number = add_1(index);
+  let number_whole = add_1(index);
   let ids = app_code_lesson_ids_short();
   let lesson_id = property_get(ids, lesson_fn.name);
   async function on_click() {
@@ -47,6 +47,13 @@ export function app_code_remember_from_lesson(
   let index_current = app_code_lesson_index_by_id(current_id);
   let index_shown = app_code_lesson_index_by_id(lesson_id);
   ("The first lesson of the run is excluded rather than compared. A lesson the reader was not handed is not on their list at all and answers minus one, which sits one before the first - so on the first screen alone the two would agree and a reminder pointing somewhere else would call itself the previous lesson.");
+  ("★ THE NUMBER IS COUNTED OFF THE READER'S OWN LIST, WHICH IS THE ONLY LIST THEY CAN LOOK THE LESSON UP ON. Counted off every lesson that exists it named a lesson the reader has no way to reach: measured 2026-09-18, a hundred and twenty five of a hundred and fifty nine lessons were handed to a reader, and from the fortieth of them onward the home list and every reminder gave one lesson two different numbers. A number that does not match the list underneath it is worse than no number, because a learner who goes looking finds the wrong lesson and has no way of knowing it.");
+  ("The whole-list number is kept for the one case the reader's list cannot answer: a reminder pointing at a lesson held back from them, which is not on their list and so has no number on it. That points at nothing they can reach either way, and the gate over the reading order is where that is caught; here it is only a number that does not pretend to be theirs.");
+  let shown_is = greater_than(index_shown, -1);
+  let number = number_whole;
+  if (shown_is) {
+    number = add_1(index_shown);
+  }
   let after_first_is = greater_than(index_current, 0);
   let left = add_1(index_shown);
   let follows_is = equal(left, index_current);
