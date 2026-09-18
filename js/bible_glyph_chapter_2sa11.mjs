@@ -846,7 +846,7 @@ export function bible_glyph_chapter_2sa11() {
           "for",
           "the",
           "$sword",
-          "devours",
+          "$eating",
           "one",
           "as",
           "well",
