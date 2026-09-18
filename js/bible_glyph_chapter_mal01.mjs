@@ -433,7 +433,7 @@ export function bible_glyph_chapter_mal01() {
           "$map,",
           "$speech",
           "the",
-          "LORD",
+          "$i_am",
           "of",
           "Hosts.",
         ],
