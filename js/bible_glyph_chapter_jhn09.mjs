@@ -170,7 +170,7 @@ export function bible_glyph_chapter_jhn09() {
           "$proper_name$Siloam",
           "(which",
           "means",
-          "Sent).",
+          "$hand_sending).",
           "So",
           "the",
           "man",
