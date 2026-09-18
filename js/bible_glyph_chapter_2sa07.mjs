@@ -415,7 +415,7 @@ export function bible_glyph_chapter_2sa07() {
           "you,",
           "who",
           "will",
-          "come",
+          "$walking+tray_out",
           "from",
           "your",
           "own",
