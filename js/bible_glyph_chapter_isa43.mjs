@@ -460,7 +460,7 @@ export function bible_glyph_chapter_isa43() {
           "sake",
           "I",
           "will",
-          "send",
+          "$hand_sending",
           "to",
           "$proper_name$Babylon",
           "and",
