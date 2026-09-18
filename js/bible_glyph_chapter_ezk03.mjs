@@ -28,7 +28,7 @@ export function bible_glyph_chapter_ezk03() {
           "you",
           "find",
           "here.",
-          "Eat",
+          "$eating",
           "this",
           "scroll,",
           "then",
