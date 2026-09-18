@@ -552,7 +552,7 @@ export function bible_glyph_chapter_1sa01() {
           "she",
           "began",
           "to",
-          "eat,",
+          "$eating,",
           "and",
           "her",
           "face",
