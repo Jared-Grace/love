@@ -596,7 +596,7 @@ export function bible_glyph_chapter_lev17() {
           "then",
           "he",
           "shall",
-          "bear",
+          "$lifting",
           "his",
           "iniquity.",
         ],
