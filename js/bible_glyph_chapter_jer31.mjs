@@ -1221,7 +1221,7 @@ export function bible_glyph_chapter_jer31() {
           "roar",
           "-",
           "the",
-          "LORD",
+          "$i_am",
           "of",
           "Hosts",
           "is",
