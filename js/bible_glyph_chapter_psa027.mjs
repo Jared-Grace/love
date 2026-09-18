@@ -110,7 +110,7 @@ export function bible_glyph_chapter_psa027() {
           "I",
           "desire:",
           "to",
-          "dwell",
+          "$person+house",
           "in",
           "the",
           "$house",
