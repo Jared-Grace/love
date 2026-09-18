@@ -12,13 +12,13 @@ export function bible_glyph_chapter_lev22() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "$i_am", "$mouth", "to", "Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
       },
       {
         verse_number: 2,
         words: [
           "$mouth",
-          "Aaron",
+          "$proper_name$Aaron",
           "and",
           "his",
           "$son",
@@ -108,7 +108,7 @@ export function bible_glyph_chapter_lev22() {
           "the",
           "$seed",
           "of",
-          "Aaron",
+          "$proper_name$Aaron",
           "has",
           "a",
           "skin",
@@ -504,14 +504,14 @@ export function bible_glyph_chapter_lev22() {
       },
       {
         verse_number: 17,
-        words: ["Then", "$i_am", "$mouth", "to", "Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
       },
       {
         verse_number: 18,
         words: [
           "$mouth",
           "to",
-          "Aaron",
+          "$proper_name$Aaron",
           "and",
           "his",
           "$son",
@@ -520,7 +520,7 @@ export function bible_glyph_chapter_lev22() {
           "the",
           "$son",
           "of",
-          "Israel,",
+          "$proper_name$Israel,",
           "and",
           "$speech",
           "them:",
@@ -530,7 +530,7 @@ export function bible_glyph_chapter_lev22() {
           "the",
           "$house",
           "of",
-          "Israel,",
+          "$proper_name$Israel,",
           "or",
           "any",
           "$foreigner",
@@ -804,7 +804,7 @@ export function bible_glyph_chapter_lev22() {
       },
       {
         verse_number: 26,
-        words: ["Then", "$i_am", "$mouth", "to", "Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
       },
       {
         verse_number: 27,
@@ -969,7 +969,7 @@ export function bible_glyph_chapter_lev22() {
           "the",
           "$earth",
           "of",
-          "Egypt",
+          "$proper_name$Egypt",
           "to",
           "be",
           "your",
