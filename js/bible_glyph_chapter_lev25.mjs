@@ -1554,7 +1554,7 @@ export function bible_glyph_chapter_lev25() {
         words: [
           "If",
           "many",
-          "years",
+          "$year",
           "remain,",
           "he",
           "must",
