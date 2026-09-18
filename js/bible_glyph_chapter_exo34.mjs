@@ -727,7 +727,7 @@ export function bible_glyph_chapter_exo34() {
           "turn",
           "of",
           "the",
-          "year.",
+          "$year.",
         ],
       },
       {
