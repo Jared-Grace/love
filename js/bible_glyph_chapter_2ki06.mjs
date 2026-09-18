@@ -932,7 +932,7 @@ export function bible_glyph_chapter_2ki06() {
           "that",
           "we",
           "may",
-          "eat",
+          "$eating",
           "him,",
           "and",
           "tomorrow",
