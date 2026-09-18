@@ -108,7 +108,7 @@ export function bible_glyph_chapter_psa084() {
           "are",
           "those",
           "who",
-          "dwell",
+          "$person+house",
           "in",
           "Your",
           "$house;",
