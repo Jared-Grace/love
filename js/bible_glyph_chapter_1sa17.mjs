@@ -1377,7 +1377,7 @@ export function bible_glyph_chapter_1sa17() {
           "you",
           "in",
           "the",
-          "name",
+          "$name_tag",
           "of",
           "the",
           "$i_am",
