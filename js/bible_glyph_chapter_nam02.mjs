@@ -46,12 +46,12 @@ export function bible_glyph_chapter_nam02() {
           "the",
           "splendor",
           "of",
-          "Jacob,",
+          "$proper_name$Jacob,",
           "like",
           "the",
           "splendor",
           "of",
-          "Israel,",
+          "$proper_name$Israel,",
           "though",
           "destroyers",
           "have",
@@ -202,7 +202,7 @@ export function bible_glyph_chapter_nam02() {
       {
         verse_number: 8,
         words: [
-          "Nineveh",
+          "$proper_name$Nineveh",
           "has",
           "been",
           "like",
