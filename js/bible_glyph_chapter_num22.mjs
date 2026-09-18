@@ -1028,7 +1028,7 @@ export function bible_glyph_chapter_num22() {
           "Behold,",
           "I",
           "have",
-          "come",
+          "$walking+tray_out",
           "out",
           "to",
           "oppose",
