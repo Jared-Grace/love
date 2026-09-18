@@ -918,7 +918,7 @@ export function bible_glyph_chapter_1ki03() {
           "her",
           "the",
           "$sprout",
-          "baby,",
+          "$baby,",
           "and",
           "do",
           "$no_entry",
