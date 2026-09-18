@@ -78,7 +78,7 @@ export function bible_glyph_chapter_2ch34() {
           "In",
           "the",
           "eighth",
-          "year",
+          "$year",
           "of",
           "his",
           "$castle,",
