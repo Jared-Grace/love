@@ -201,7 +201,7 @@ export function bible_glyph_chapter_amo09() {
           "all",
           "the",
           "land",
-          "rises",
+          "$walking+pointing_up",
           "like",
           "the",
           "Nile,",
