@@ -381,7 +381,7 @@ export function bible_glyph_chapter_ezk01() {
           "bright,",
           "and",
           "lightning",
-          "flashed",
+          "$walking+tray_out",
           "$tray_out",
           "it.",
         ],
