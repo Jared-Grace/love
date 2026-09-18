@@ -102,7 +102,7 @@ export function bible_glyph_chapter_psa019() {
           "Like",
           "a",
           "bridegroom",
-          "emerging",
+          "$walking+tray_out",
           "from",
           "his",
           "chamber,",
