@@ -1,11 +1,11 @@
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_div_code } from "./html_div_code.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
+import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { html_div_code } from "./html_div_code.mjs";
+import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 export function app_code_lesson_cup_code_box(root, name, word) {
   arguments_assert(arguments, 3);
   ("the box that says in code what a one-cup screen has just said in a story: the cup is made and filled, then it is asked what is inside it, then the answer comes out");
@@ -26,6 +26,8 @@ export function app_code_lesson_cup_code_box(root, name, word) {
   html_div_cycle_code(box_code, [
     "Then we can write out whatever is inside the cup like this:",
   ]);
-  app_code_code_lines_writes_out(box_code, [logged], word);
+  ("A BOX THAT SHOWS WHAT A PROGRAM WRITES OUT SHOWS THE WHOLE PROGRAM. The line that makes the cup stands on its own a row up, as the line being taught, and stands here again because the word written out underneath is a claim, and a claim about what a program writes out is only checkable against a program that runs on its own. Shown as the log line alone, the answer rested on a line a learner had to carry down from higher in the box - and nothing in the log line says which cup was filled with what.");
+  let lines = [held, logged];
+  app_code_code_lines_writes_out(box_code, lines, word);
   return box_code;
 }
