@@ -454,7 +454,7 @@ export function bible_glyph_chapter_amo09() {
           "that",
           "bear",
           "My",
-          "name,",
+          "$name_tag,",
           "declares",
           "the",
           "$i_am,",
