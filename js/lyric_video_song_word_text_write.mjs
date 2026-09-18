@@ -28,12 +28,10 @@ export async function lyric_video_song_word_text_write(
   let line = document.lines[line_index];
   let word = line.words[word_index];
   let text_before = word.text;
-  let letters_before = text_lower(
-    text_punctuation_apostrophe_kept_removed(text_before),
-  );
-  let letters_after = text_lower(
-    text_punctuation_apostrophe_kept_removed(text),
-  );
+  let trimmed = text_punctuation_apostrophe_kept_removed(text_before);
+  let letters_before = text_lower_to(trimmed);
+  let trimmed2 = text_punctuation_apostrophe_kept_removed(text);
+  let letters_after = text_lower_to(trimmed2);
   let letters_same = equal(letters_before, letters_after);
   let letters_changed = not(letters_same);
   word.text = text;
