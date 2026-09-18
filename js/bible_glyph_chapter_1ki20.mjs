@@ -766,7 +766,7 @@ export function bible_glyph_chapter_1ki20() {
           "of",
           "$proper_name$Aram",
           "will",
-          "come",
+          "$walking+pointing_up",
           "up",
           "against",
           "you.",
