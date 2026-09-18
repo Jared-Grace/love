@@ -397,7 +397,7 @@ export function bible_glyph_chapter_num18() {
           "every",
           "male",
           "may",
-          "eat",
+          "$eating",
           "it.",
           "You",
           "shall",
