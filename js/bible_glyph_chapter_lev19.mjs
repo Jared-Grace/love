@@ -284,7 +284,7 @@ export function bible_glyph_chapter_lev19() {
           "falsely",
           "by",
           "My",
-          "name",
+          "$name_tag",
           "and",
           "so",
           "profane",
