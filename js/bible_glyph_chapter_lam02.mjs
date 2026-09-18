@@ -850,7 +850,7 @@ export function bible_glyph_chapter_lam02() {
           "this?",
           "Should",
           "$woman",
-          "eat",
+          "$eating",
           "their",
           "offspring,",
           "the",
