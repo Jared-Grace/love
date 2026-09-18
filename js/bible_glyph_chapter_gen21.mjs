@@ -16,7 +16,7 @@ export function bible_glyph_chapter_gen21() {
         words: [
           "Now",
           "the",
-          "$name_tag",
+          "$i_am",
           "attended",
           "to",
           "Sarah",
@@ -26,7 +26,7 @@ export function bible_glyph_chapter_gen21() {
           "$speech,",
           "and",
           "the",
-          "$name_tag",
+          "$i_am",
           "$hammer",
           "for",
           "Sarah",

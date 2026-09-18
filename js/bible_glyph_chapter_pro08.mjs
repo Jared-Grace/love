@@ -232,7 +232,7 @@ export function bible_glyph_chapter_pro08() {
           "To",
           "fear",
           "the",
-          "$name_tag",
+          "$i_am",
           "is",
           "to",
           "hate",
@@ -386,7 +386,7 @@ export function bible_glyph_chapter_pro08() {
         verse_number: 22,
         words: [
           "The",
-          "$name_tag",
+          "$i_am",
           "created",
           "me",
           "as",
@@ -666,7 +666,7 @@ export function bible_glyph_chapter_pro08() {
           "favor",
           "of",
           "the",
-          "$name_tag.",
+          "$i_am.",
         ],
       },
       {

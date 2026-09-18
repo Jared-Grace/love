@@ -23,7 +23,7 @@ export function bible_glyph_chapter_psa112() {
           "who",
           "fears",
           "the",
-          "$name_tag,",
+          "$i_am,",
           "who",
           "greatly",
           "delights",
@@ -148,7 +148,7 @@ export function bible_glyph_chapter_psa112() {
           "trusting",
           "in",
           "the",
-          "$name_tag.",
+          "$i_am.",
         ],
       },
       {

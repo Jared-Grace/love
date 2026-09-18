@@ -110,7 +110,7 @@ export function bible_glyph_chapter_isa07() {
         words: [
           "Then",
           "the",
-          "$name_tag",
+          "$i_am",
           "$speech",
           "to",
           "Isaiah,",
@@ -241,7 +241,7 @@ export function bible_glyph_chapter_isa07() {
           "what",
           "the",
           "$crown",
-          "$name_tag",
+          "$i_am",
           "$speech:",
           "'It",
           "will",
@@ -321,7 +321,7 @@ export function bible_glyph_chapter_isa07() {
         words: [
           "Again",
           "the",
-          "$name_tag",
+          "$i_am",
           "$mouth",
           "to",
           "Ahaz,",
@@ -333,7 +333,7 @@ export function bible_glyph_chapter_isa07() {
         words: [
           '"Ask',
           "the",
-          "$name_tag",
+          "$i_am",
           "your",
           "$fire",
           "for",
@@ -367,7 +367,7 @@ export function bible_glyph_chapter_isa07() {
           "$no_entry",
           "test",
           "the",
-          '$name_tag."',
+          '$i_am."',
         ],
       },
       {
@@ -494,7 +494,7 @@ export function bible_glyph_chapter_isa07() {
         verse_number: 17,
         words: [
           "The",
-          "$name_tag",
+          "$i_am",
           "will",
           "$footprints",
           "on",
@@ -537,7 +537,7 @@ export function bible_glyph_chapter_isa07() {
           "that",
           "$sun",
           "the",
-          "$name_tag",
+          "$i_am",
           "will",
           "whistle",
           "to",

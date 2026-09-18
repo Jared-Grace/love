@@ -21,7 +21,7 @@ export function bible_glyph_chapter_psa136() {
           "$hands_raised",
           "to",
           "the",
-          "$name_tag,",
+          "$i_am,",
           "for",
           "He",
           "is",

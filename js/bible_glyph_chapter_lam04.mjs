@@ -303,7 +303,7 @@ export function bible_glyph_chapter_lam04() {
         verse_number: 11,
         words: [
           "The",
-          "$name_tag",
+          "$i_am",
           "has",
           "exhausted",
           "His",
@@ -457,7 +457,7 @@ export function bible_glyph_chapter_lam04() {
           "presence",
           "of",
           "the",
-          "$name_tag",
+          "$i_am",
           "has",
           "scattered",
           "them;",
@@ -576,7 +576,7 @@ export function bible_glyph_chapter_lam04() {
         verse_number: 20,
         words: [
           "The",
-          "$name_tag",
+          "$i_am",
           "$oil",
           "one,",
           "the",

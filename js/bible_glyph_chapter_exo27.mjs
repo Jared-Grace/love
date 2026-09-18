@@ -567,7 +567,7 @@ export function bible_glyph_chapter_exo27() {
           "until",
           "$morning",
           "before",
-          "$name_tag.",
+          "$i_am.",
           "This",
           "is",
           "to",

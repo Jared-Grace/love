@@ -14,7 +14,7 @@ export function bible_glyph_chapter_num35() {
       {
         verse_number: 1,
         words: [
-          "$name_tag",
+          "$i_am",
           "$mouth",
           "to",
           "Moses",
@@ -288,7 +288,7 @@ export function bible_glyph_chapter_num35() {
       },
       {
         verse_number: 9,
-        words: ["Then", "$name_tag", "$mouth", "to", "Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "Moses,", "$speech"],
       },
       {
         verse_number: 10,
@@ -1029,7 +1029,7 @@ export function bible_glyph_chapter_num35() {
           "dwell.",
           "For",
           "I,",
-          "$name_tag,",
+          "$i_am,",
           "dwell",
           "among",
           "the",

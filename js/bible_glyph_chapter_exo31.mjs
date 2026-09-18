@@ -13,7 +13,7 @@ export function bible_glyph_chapter_exo31() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "$name_tag", "$mouth", "to", "Moses,", "$speech,"],
+        words: ["Then", "$i_am", "$mouth", "to", "Moses,", "$speech,"],
       },
       {
         verse_number: 2,
@@ -279,7 +279,7 @@ export function bible_glyph_chapter_exo31() {
       },
       {
         verse_number: 12,
-        words: ["And", "$name_tag", "$speech", "to", "Moses,", "$speech,"],
+        words: ["And", "$i_am", "$speech", "to", "Moses,", "$speech,"],
       },
       {
         verse_number: 13,
@@ -320,7 +320,7 @@ export function bible_glyph_chapter_exo31() {
           "that",
           "I",
           "am",
-          "$name_tag",
+          "$i_am",
           "who",
           "$sparkle",
           "you.",
@@ -385,7 +385,7 @@ export function bible_glyph_chapter_exo31() {
           "rest,",
           "$sparkle",
           "to",
-          "$name_tag.",
+          "$i_am.",
           "Whoever",
           "$hammer",
           "any",
@@ -443,7 +443,7 @@ export function bible_glyph_chapter_exo31() {
           "in",
           "six",
           "$sun",
-          "$name_tag",
+          "$i_am",
           "$hammer",
           "the",
           "$sky",

@@ -1,0 +1,1 @@
+{"f_name":"reply_names_mandinka","text":"+import { arguments_assert } from \"./arguments_assert.mjs\";\n+export function reply_names_mandinka() {\n+  arguments_assert(arguments, 0);\n+  (\"Given names in the Mandinka form, used across West Africa.\");\n+  let names = [\"aminata\"];\n+  return names;\n+}\n+"}

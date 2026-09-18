@@ -1,0 +1,1 @@
+{"f_name":"reply_names_persian","text":"+import { arguments_assert } from \"./arguments_assert.mjs\";\n+export function reply_names_persian() {\n+  arguments_assert(arguments, 0);\n+  (\"Given names from Persian, mostly as they are given in Pakistan.\");\n+  let names = [\"javed\", \"nasreen\", \"naveed\", \"sarfraz\", \"shazia\"];\n+  return names;\n+}\n+"}

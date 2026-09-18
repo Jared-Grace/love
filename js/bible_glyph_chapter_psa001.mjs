@@ -59,7 +59,7 @@ export function bible_glyph_chapter_psa001() {
           "$scroll",
           "of",
           "the",
-          "$name_tag,",
+          "$i_am,",
           "and",
           "on",
           "His",
@@ -150,7 +150,7 @@ export function bible_glyph_chapter_psa001() {
         words: [
           "For",
           "the",
-          "$name_tag",
+          "$i_am",
           "$lightbulb",
           "the",
           "$road",

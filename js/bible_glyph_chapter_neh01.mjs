@@ -151,7 +151,7 @@ export function bible_glyph_chapter_neh01() {
           "I",
           "$speech,",
           "O",
-          "$name_tag,",
+          "$i_am,",
           "$fire",
           "of",
           "$sky,",
