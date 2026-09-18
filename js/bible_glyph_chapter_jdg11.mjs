@@ -362,7 +362,7 @@ export function bible_glyph_chapter_jdg11() {
         words: [
           "Then",
           "Jephthah",
-          "sent",
+          "$hand_sending",
           "$angel",
           "to",
           "the",
