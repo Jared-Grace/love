@@ -369,7 +369,7 @@ export function bible_glyph_chapter_num16() {
         words: [
           "Then",
           "Moses",
-          "summoned",
+          "$hand_sending",
           "$proper_name$Dathan",
           "and",
           "$proper_name$Abiram",
