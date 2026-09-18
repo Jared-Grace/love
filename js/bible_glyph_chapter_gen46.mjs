@@ -760,7 +760,7 @@ export function bible_glyph_chapter_gen46() {
           "$house,",
           "I",
           "will",
-          "go",
+          "$walking+pointing_up",
           "up",
           "and",
           "inform",
