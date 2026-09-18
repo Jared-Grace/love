@@ -19,7 +19,7 @@ export function bible_glyph_chapter_1ki22() {
           "Then",
           "three",
           "years",
-          "passed",
+          "$person+house",
           "without",
           "war",
           "between",
