@@ -292,7 +292,7 @@ export function bible_glyph_chapter_exo01() {
           "$speech",
           "to",
           "the",
-          "Hebrew",
+          "$proper_name$Hebrew",
           "midwives,",
           "whose",
           "$name_tag",
