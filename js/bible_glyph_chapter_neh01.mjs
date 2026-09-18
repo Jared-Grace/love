@@ -32,7 +32,7 @@ export function bible_glyph_chapter_neh01() {
           "in",
           "the",
           "twentieth",
-          "year,",
+          "$year,",
           "while",
           "I",
           "was",
