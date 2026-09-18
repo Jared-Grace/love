@@ -337,7 +337,7 @@ export function bible_glyph_chapter_zec05() {
           "the",
           "$earth",
           "of",
-          "Shinar.",
+          "$proper_name$Shinar.",
           "And",
           "when",
           "it",
