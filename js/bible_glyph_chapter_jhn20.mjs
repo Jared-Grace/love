@@ -149,7 +149,7 @@ export function bible_glyph_chapter_jhn20() {
           "he",
           "did",
           "$no_entry",
-          "go",
+          "$footprints+tray_in",
           "in.",
         ],
       },
