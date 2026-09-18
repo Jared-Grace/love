@@ -810,7 +810,7 @@ export function bible_glyph_chapter_jol02() {
           "have",
           "plenty",
           "to",
-          "eat,",
+          "$eating,",
           "until",
           "you",
           "are",
