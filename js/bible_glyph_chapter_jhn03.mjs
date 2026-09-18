@@ -119,7 +119,7 @@ export function bible_glyph_chapter_jhn03() {
           "$speech.",
           "“Can",
           "he",
-          "enter",
+          "$footprints+tray_in",
           "his",
           "mother’s",
           "womb",
