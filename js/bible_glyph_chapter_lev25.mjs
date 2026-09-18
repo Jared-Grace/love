@@ -642,7 +642,7 @@ export function bible_glyph_chapter_lev25() {
           "in",
           "the",
           "eighth",
-          "year,",
+          "$year,",
           "you",
           "will",
           "be",
