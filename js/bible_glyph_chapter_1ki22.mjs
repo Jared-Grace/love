@@ -1131,7 +1131,7 @@ export function bible_glyph_chapter_1ki22() {
         words: [
           "The",
           "battle",
-          "raged",
+          "$walking+pointing_up",
           "throughout",
           "that",
           "$sun,",
