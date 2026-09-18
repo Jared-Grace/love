@@ -481,7 +481,7 @@ export function bible_glyph_chapter_1ki08() {
           "My",
           "$family",
           "$proper_name$Israel",
-          "out",
+          "$walking+tray_out",
           "of",
           "$proper_name$Egypt,",
           "I",
