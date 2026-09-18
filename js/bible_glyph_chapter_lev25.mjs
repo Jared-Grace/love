@@ -891,7 +891,7 @@ export function bible_glyph_chapter_lev25() {
           "of",
           "a",
           "full",
-          "year,",
+          "$year,",
           "then",
           "the",
           "$house",
