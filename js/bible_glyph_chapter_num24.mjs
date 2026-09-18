@@ -222,7 +222,7 @@ export function bible_glyph_chapter_num24() {
           "wild",
           "ox,",
           "to",
-          "devour",
+          "$eating",
           "hostile",
           "$map,",
           "to",
