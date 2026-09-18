@@ -562,6 +562,7 @@ import { bible_glyph_chapters_unlisted_gate_run } from "./bible_glyph_chapters_u
 import { gloss_same_as_gate_run } from "./gloss_same_as_gate_run.mjs";
 import { bible_glyph_chapters_name_tag_fire_joined_gate_run } from "./bible_glyph_chapters_name_tag_fire_joined_gate_run.mjs";
 import { bible_glyph_marks_wordless_assert } from "./bible_glyph_marks_wordless_assert.mjs";
+import { bible_glyph_divine_numbers_assert } from "./bible_glyph_divine_numbers_assert.mjs";
 import { app_code_lessons_released_gate_run } from "./app_code_lessons_released_gate_run.mjs";
 export function qa_gates() {
   "Every gate the repo-wide check runs, gathered in one list, so adding a function here is the whole of wiring a new gate in.";
@@ -1130,6 +1131,7 @@ export function qa_gates() {
     gloss_same_as_gate_run,
     bible_glyph_chapters_name_tag_fire_joined_gate_run,
     bible_glyph_marks_wordless_assert,
+    bible_glyph_divine_numbers_assert,
     app_code_lessons_released_gate_run,
   ];
   return gates;
