@@ -682,7 +682,7 @@ export function bible_glyph_chapter_2sa11() {
         verse_number: 21,
         words: [
           "Who",
-          "struck",
+          "$fist",
           "$proper_name$Abimelech",
           "$son",
           "of",
