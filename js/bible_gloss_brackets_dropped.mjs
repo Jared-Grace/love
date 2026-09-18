@@ -1,3 +1,4 @@
+import { bible_gloss_markup_dropped } from "./bible_gloss_markup_dropped.mjs";
 export function bible_gloss_brackets_dropped(gloss) {
   "$plain gloss";
   "the wording is one the interlinear printed under a word. It is text to look at and nothing that runs.";
@@ -7,7 +8,8 @@ export function bible_gloss_brackets_dropped(gloss) {
   "WHAT IS GENUINELY LOST IS WHICH WORDS THE TRANSLATOR SUPPLIED, and it is lost to a reader who could not have used it. The band is a whole line of English under a whole line of pictures rather than a word standing under a word, so nothing on the page says which original word a bracketed word would have hung under. A mark that cannot be resolved is not information, it is decoration.";
   "IT IS ONE FUNCTION BECAUSE TWO PLACES WANT IT. The survey that counts how many meanings a word has been given asks for it on the way to stripping the grammar as well, and the band under the pictures wants only this much and none of the rest. Written twice, the day somebody meets a third mark only one of them would learn it.";
   "THE SPACES ARE PUT RIGHT AFTERWARDS. A mark becomes a space rather than nothing, because two words may sit either side of it and joining them would invent a word; and the run of spaces that leaves is squeezed back to one, because a double space in the band is the same unpronounceable nothing a bracket was.";
-  let text = gloss;
+  "A PIECE OF PAGE MARKUP GOES THE SAME WAY AND FOR THE SAME REASON. Four chunks still carry the tag that indented a line of poetry on the page the tables were made from, and it is the same fault as a bracket and worse: a bracket is at least one character a reader might guess at. It is taken out here rather than at one reader, because all three readers of this function show it. The reasoning is in the function that does it.";
+  let text = bible_gloss_markup_dropped(gloss);
   text = text.replaceAll(/[\[\]{}]/g, " ");
   text = text.replaceAll(/\s+/g, " ");
   text = text.trim();
