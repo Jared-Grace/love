@@ -188,7 +188,7 @@ export function bible_glyph_chapter_hab02() {
           "all",
           "of",
           "these",
-          "take",
+          "$lifting",
           "up",
           "a",
           "taunt",
