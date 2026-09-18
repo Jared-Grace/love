@@ -237,7 +237,7 @@ export function bible_glyph_chapter_psa116() {
         words: [
           "I",
           "will",
-          "lift",
+          "$lifting",
           "the",
           "cup",
           "of",
