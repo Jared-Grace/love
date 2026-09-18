@@ -156,7 +156,7 @@ export function bible_glyph_chapter_hag01() {
           "$footprints",
           "little.",
           "You",
-          "eat",
+          "$eating",
           "but",
           "never",
           "have",
