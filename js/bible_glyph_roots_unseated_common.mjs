@@ -57,7 +57,8 @@ export async function bible_glyph_roots_unseated_common(
       if (unmet) {
         before = 0;
       }
-      property_set(totals, strong, add(before, seen));
+      let value = add(before, seen);
+      property_set(totals, strong, value);
     }
   }
   let ranked = [];
@@ -70,7 +71,11 @@ export async function bible_glyph_roots_unseated_common(
       count: total,
     });
   }
-  list_sort_number_mapper_reverse(ranked, (row) => row.count);
+  function lambda(row) {
+    let r2 = row.count;
+    return r2;
+  }
+  list_sort_number_mapper_reverse(ranked, lambda);
   let shown = list_take(ranked, shown_wanted);
   let glosses = await bible_strong_glosses(testament_name);
   for (let row of shown) {
@@ -79,7 +84,8 @@ export async function bible_glyph_roots_unseated_common(
     if (silent) {
       wordings = [];
     }
-    property_set(row, "wordings", list_take(wordings, 3));
+    let value2 = list_take(wordings, 3);
+    property_set(row, "wordings", value2);
   }
   let r = {
     testament_name,
