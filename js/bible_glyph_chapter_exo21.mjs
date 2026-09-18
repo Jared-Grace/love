@@ -50,7 +50,7 @@ export function bible_glyph_chapter_exo21() {
           "year",
           "he",
           "shall",
-          "go",
+          "$walking+tray_out",
           "free,",
           "without",
           "paying",
