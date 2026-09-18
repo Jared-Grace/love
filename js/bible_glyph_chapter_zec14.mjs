@@ -64,7 +64,7 @@ export function bible_glyph_chapter_zec14() {
           "the",
           "$city",
           "will",
-          "go",
+          "$walking+tray_out",
           "into",
           "exile,",
           "but",
