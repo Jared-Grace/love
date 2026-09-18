@@ -145,7 +145,7 @@ export function bible_glyph_chapter_2sa07() {
           "I",
           "have",
           "$no_entry",
-          "dwelt",
+          "$person+house",
           "in",
           "a",
           "$house",
