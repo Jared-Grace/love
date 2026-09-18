@@ -65,7 +65,7 @@ export function bible_glyph_chapter_jos24() {
           "ago",
           "your",
           "$father",
-          "lived",
+          "$person+house",
           "beyond",
           "the",
           "Euphrates,",
