@@ -1248,7 +1248,7 @@ export function bible_glyph_chapter_lev23() {
           "seven",
           "$sun",
           "each",
-          "year.",
+          "$year.",
           "This",
           "is",
           "a",
