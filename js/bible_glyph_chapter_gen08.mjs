@@ -425,7 +425,7 @@ export function bible_glyph_chapter_gen08() {
       {
         verse_number: 16,
         words: [
-          "Come",
+          "$walking+tray_out",
           "$tray_out",
           "the",
           "ark,",
