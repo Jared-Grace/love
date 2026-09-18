@@ -7,12 +7,11 @@ import { app_code_note_runs } from "./app_code_note_runs.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
-import { app_code_note_name_pill } from "./app_code_note_name_pill.mjs";
 export function app_code_code_dark_lines_comments(component, code) {
   "code standing on more than one line, written into a code chip with every note in it drawn dimmer than the code around it, and every name a note marks drawn in the same colour there as in the code";
   "A note is the one part of the screen the machine does not read, and the only thing a picture can do to say so is draw it as less than what surrounds it.";
   "A NAME IS SAID THREE WAYS AT ONCE, and each way is the one that still works when the way above it is gone. The brackets survive plain text, a reader with no colour vision at all, and a screen read aloud. The brightness differs between names as well as the hue, so a reader who cannot tell two hues apart can still pair the name in the note with the name in the code. The hue is the fastest of the three for the reader who has it, and it is not decoration for being the fastest - three greys have to be compared, three colours are known at a glance.";
-  "A name wears its colour as a patch behind it rather than in its letters, and the patch is put on here rather than decided here - the list of pieces next door says which pieces have one and what colour it is. That is what lets the same three colours be used on the cups, which stand on a pale card where a letter in any of these colours would be unreadable.";
+  "A name is written in its colour rather than on a patch of that colour. A filled patch behind every name was built and taken out again: this chip is black, so a bright colour is already at its most legible as ink here and the patch bought nothing, while a program with a dozen names in it came back looking like a program with a dozen coloured blocks stamped through it. The patch is still how the cup card says the same thing, because that card is pale and a bright letter on it would not be readable - and it is the same three colours in both places, because a colour bright enough to be ink on black is also a fill that dark ink reads well on.";
   "The count of arguments is deliberately not asserted, because this stands in the slot a lesson paints its code with, and that slot is called with three arguments by the worked example and with two by the quiz - the same reason its plain twin has never asserted either.";
   "The chip is emptied before anything is put in it, because what goes in is a run of spans rather than a single piece of text, and a chip drawn twice would otherwise keep the first drawing underneath the second.";
   "Only the note is dimmed, not the line it stands on. A note may start after code on the same line - console.log(1); // a note - and there the code before the slashes still runs, so drawing the whole line dim would say it did not.";
@@ -28,9 +27,5 @@ export function app_code_code_dark_lines_comments(component, code) {
     let span = html_span_text(component, run[0]);
     html_font_color_set(span, run[1]);
     html_style_opacity(span, run[2]);
-    let patch = run[3];
-    if (patch) {
-      app_code_note_name_pill(span, patch);
-    }
   }
 }
