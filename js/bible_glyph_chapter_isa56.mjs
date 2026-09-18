@@ -166,7 +166,7 @@ export function bible_glyph_chapter_isa56() {
           "$hand",
           "and",
           "a",
-          "name",
+          "$name_tag",
           "better",
           "than",
           "that",
