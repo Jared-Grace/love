@@ -1,10 +1,10 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_one_more_above_box_one } from "./app_code_lesson_statement_name_one_more_above_box_one.mjs";
 import { property_get } from "./property_get.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { js_code_assign } from "./js_code_assign.mjs";
@@ -22,18 +22,23 @@ export function app_code_lesson_statement_name_one_more_above(root, context) {
   let once = property_get(r, "once");
   let name_last = property_get(r, "name_last");
   let number_more = property_get(r, "number_more");
-  ("the name being replaced and the number replacing it are spelled out in brackets, drawn as code, the way the reminder above spells its cups. Said as the other name and a number, a learner has to look down at the line and work out which of the two names moved and what stood in for it - which is the one thing this screen is saying.");
+  let given_sum = property_get(r, "given_sum");
+  let held = js_code_let_statement(name, start);
+  let code = js_code_assign_statement(name, more);
+  let logged = js_code_console_log_statement(name);
+  ("the name being replaced, the number replacing it, and both lines whole are spelled out in brackets, drawn as code. Said in words alone, a learner has to look down at the line and work out which of the two names moved and what stood in for it - which is the one thing this screen is saying. The line it changed FROM is said beside it, because a change is two lines and the other one is a box further up.");
   html_div_cycle_code(box_one, [
     "The other name (",
     name_last,
     ") can be written as a number (",
     number_more,
-    ") instead of a name:",
+    ") instead of a name (",
+    code,
+    " instead of ",
+    given_sum,
+    "):",
   ]);
   ("EACH BOX HOLDS A WHOLE PROGRAM AND WHAT IT WRITES OUT, rather than one box holding a line and the next holding the line it comes to. Shown as a part, the two lines had to be held together in the reader's head to be compared at all, and neither part wrote anything out - so the claim that the two say the same thing rested on nothing the screen showed. Shown whole, the same output under both boxes is the claim, drawn.");
-  let held = js_code_let_statement(name, start);
-  let code = js_code_assign_statement(name, more);
-  let logged = js_code_console_log_statement(name);
   app_code_code_lines_writes_out(box_one, [held, code, logged], once);
   let box_two = app_code_container_light_blue(root);
   ("the sum, what it comes to, and both of the lines are code chips, because every one of them is code. Set in plain writing, a line of a program would be the one thing on this screen dressed as prose.");
