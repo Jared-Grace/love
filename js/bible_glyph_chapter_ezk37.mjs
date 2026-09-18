@@ -168,7 +168,7 @@ export function bible_glyph_chapter_ezk37() {
           "and",
           "make",
           "$meat",
-          "grow",
+          "$walking+pointing_up",
           "upon",
           "you",
           "and",
