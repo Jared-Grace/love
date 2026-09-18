@@ -483,7 +483,7 @@ export function bible_glyph_chapter_gen16() {
           "was",
           "eighty",
           "six",
-          "years",
+          "$year",
           "old",
           "when",
           "$proper_name$Hagar",
