@@ -30,7 +30,7 @@ export function bible_glyph_chapter_2ki06() {
           "place",
           "where",
           "we",
-          "meet",
+          "$person+house",
           "with",
           "you",
           "is",
