@@ -16,7 +16,7 @@ export function bible_glyph_chapter_rut03() {
           "day",
           "Ruth",
           "mother-in-law",
-          "Naomi",
+          "$proper_name$Naomi",
           "$speech",
           "to",
           "her,",
