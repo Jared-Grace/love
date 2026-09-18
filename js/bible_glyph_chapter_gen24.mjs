@@ -1743,7 +1743,7 @@ export function bible_glyph_chapter_gen24() {
           "will",
           "call",
           "the",
-          "girl",
+          "$girl",
           "and",
           "ask",
           "her",
