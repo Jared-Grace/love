@@ -224,7 +224,7 @@ export function bible_glyph_chapter_num20() {
           "$water.",
           "You",
           "will",
-          "bring",
+          "$walking+tray_out",
           "$tray_out",
           "$water",
           "from",
