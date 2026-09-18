@@ -1479,7 +1479,7 @@ export function bible_glyph_chapter_deu28() {
           "the",
           "$i_am",
           "will",
-          "send",
+          "$hand_sending",
           "against",
           "you,",
           "in",
