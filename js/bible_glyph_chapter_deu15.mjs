@@ -272,7 +272,7 @@ export function bible_glyph_chapter_deu15() {
           "$heart_organ:",
           "The",
           "seventh",
-          "year,",
+          "$year,",
           "the",
           "year",
           "of",
