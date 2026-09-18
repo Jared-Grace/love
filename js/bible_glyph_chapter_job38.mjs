@@ -683,7 +683,7 @@ export function bible_glyph_chapter_job38() {
         words: [
           "Can",
           "you",
-          "send",
+          "$hand_sending",
           "the",
           "lightning",
           "bolts",
