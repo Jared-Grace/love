@@ -38,7 +38,7 @@ export function bible_glyph_chapter_mrk05() {
         "when",
         "$pointing_back",
         "had",
-        "got",
+        "$footprints+tray_out",
         "$tray_out",
         "the",
         "boat,",
