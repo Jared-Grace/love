@@ -44,7 +44,7 @@ export function bible_glyph_chapter_num13() {
           "their",
           "$father",
           "tribes",
-          "send",
+          "$hand_sending",
           "one",
           "$man_beard",
           "who",
