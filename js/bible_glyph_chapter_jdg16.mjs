@@ -1225,7 +1225,7 @@ export function bible_glyph_chapter_jdg16() {
           "judged",
           "$proper_name$Israel",
           "twenty",
-          "years.",
+          "$year.",
         ],
       },
     ],
