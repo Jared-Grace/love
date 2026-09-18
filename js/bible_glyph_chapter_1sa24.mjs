@@ -363,7 +363,7 @@ export function bible_glyph_chapter_1sa24() {
           "'I",
           "will",
           "$no_entry",
-          "lift",
+          "$hand_sending",
           "my",
           "$hand",
           "against",
