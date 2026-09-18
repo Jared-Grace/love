@@ -635,7 +635,7 @@ export function bible_glyph_chapter_1ki22() {
           "$eye",
           "the",
           "$i_am",
-          "sitting",
+          "$person+house",
           "on",
           "His",
           "throne,",
