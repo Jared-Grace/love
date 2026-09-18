@@ -138,7 +138,7 @@ export function bible_glyph_chapter_gen22() {
       {
         verse_number: 5,
         words: [
-          "Stay",
+          "$person+house",
           "here",
           "with",
           "the",
