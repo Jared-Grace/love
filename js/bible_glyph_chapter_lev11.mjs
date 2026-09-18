@@ -487,7 +487,7 @@ export function bible_glyph_chapter_lev11() {
           "these",
           "you",
           "may",
-          "eat",
+          "$eating",
           "any",
           "kind",
           "of",
