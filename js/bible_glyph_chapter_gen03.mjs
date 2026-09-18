@@ -733,7 +733,7 @@ export function bible_glyph_chapter_gen03() {
           "of",
           "$sprout,",
           "and",
-          "eat,",
+          "$eating,",
           "and",
           "$sprout",
           "$hourglass.",
