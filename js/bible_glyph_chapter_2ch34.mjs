@@ -857,7 +857,7 @@ export function bible_glyph_chapter_2ch34() {
           "the",
           "wardrobe.",
           "She",
-          "lived",
+          "$person+house",
           "in",
           "$proper_name$Jerusalem",
           "in",
