@@ -998,7 +998,7 @@ export function bible_glyph_chapter_jol02() {
           "name",
           "of",
           "the",
-          "LORD",
+          "$i_am",
           "will",
           "be",
           "saved;",
