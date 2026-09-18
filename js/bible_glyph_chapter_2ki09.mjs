@@ -624,7 +624,7 @@ export function bible_glyph_chapter_2ki09() {
           "a",
           "rider",
           "and",
-          "send",
+          "$hand_sending",
           "him",
           "out",
           "to",
