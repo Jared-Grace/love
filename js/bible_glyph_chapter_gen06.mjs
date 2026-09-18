@@ -82,7 +82,7 @@ export function bible_glyph_chapter_gen06() {
           "will",
           "be",
           "120",
-          "years.",
+          "$year.",
         ],
       },
       {
