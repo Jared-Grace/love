@@ -6,7 +6,7 @@ import { reply_optional } from "./reply_optional.mjs";
 import { reply_choices_location } from "./reply_choices_location.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 import { reply_sequence_output } from "./reply_sequence_output.mjs";
-export function app_message_reply_from_city_country() {
+export function app_message_reply_from_country() {
   "Answers a message whose writer says where they are from - `i am from pakistan`, `i am pastor john from kenya` - with the fixed sentence giving our own location back.";
   "★ THE COUNTRY IS THE WHOLE OF WHERE, BECAUSE A COUNTRY IS THE ONLY PART OF AN ADDRESS THAT CAN BE WRITTEN DOWN IN FULL. Every country there is comes to about three hundred words counting the other names people use, and the list is complete by construction, so asking for one costs nothing anybody would have wanted. Towns are not a list: the ones people actually write from run to tens of thousands and no source here could check a single entry.";
   "There was a town slot, and it held two words - the home towns of two real people who had written in. Beside a name, a street and a country that were equally short, those two words were part of an identification sitting in a public repository, and no honest list could have been grown around them to hide them in.";
