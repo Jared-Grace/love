@@ -56,7 +56,7 @@ export function bible_glyph_chapter_1sa01() {
           "two",
           "$woman,",
           "one",
-          "named",
+          "$name_tag",
           "Hannah",
           "and",
           "the",
