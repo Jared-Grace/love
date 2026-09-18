@@ -66,7 +66,7 @@ export function bible_glyph_chapter_psa134() {
           "$speech+thumbs_up",
           "you",
           "from",
-          "Zion,",
+          "$proper_name$Zion,",
           "He",
           "who",
           "$hammer",
