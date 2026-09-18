@@ -106,7 +106,7 @@ export function bible_glyph_chapter_2sa11() {
         words: [
           "So",
           "David",
-          "sent",
+          "$hand_sending",
           "and",
           "inquired",
           "about",
