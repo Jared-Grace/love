@@ -525,7 +525,7 @@ export function bible_glyph_chapter_amo09() {
           "ruined",
           "$city",
           "and",
-          "inhabit",
+          "$person+house",
           "them.",
           "They",
           "will",
