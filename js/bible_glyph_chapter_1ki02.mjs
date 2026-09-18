@@ -1065,7 +1065,7 @@ export function bible_glyph_chapter_1ki02() {
           "The",
           "$king",
           "$speech,",
-          "Come",
+          "$walking+tray_out",
           "out.",
           "But",
           "$proper_name$Joab",
