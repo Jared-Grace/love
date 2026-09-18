@@ -1126,7 +1126,7 @@ export function bible_glyph_chapter_1ki20() {
           "our",
           "heads",
           "and",
-          "go",
+          "$walking+tray_out",
           "out",
           "to",
           "the",
