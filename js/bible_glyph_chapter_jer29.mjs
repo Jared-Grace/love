@@ -1012,7 +1012,7 @@ export function bible_glyph_chapter_jer29() {
       {
         verse_number: 31,
         words: [
-          "Send",
+          "$hand_sending",
           "a",
           "message",
           "to",
