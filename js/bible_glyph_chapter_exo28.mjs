@@ -363,7 +363,7 @@ export function bible_glyph_chapter_exo28() {
           "$proper_name$Aaron",
           "is",
           "to",
-          "bear",
+          "$lifting",
           "their",
           "$name_tag",
           "before",
