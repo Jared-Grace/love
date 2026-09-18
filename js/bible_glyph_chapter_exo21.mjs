@@ -549,7 +549,7 @@ export function bible_glyph_chapter_exo21() {
           "If",
           "a",
           "$man_beard",
-          "strikes",
+          "$fist",
           "his",
           "$kneeling",
           "or",
