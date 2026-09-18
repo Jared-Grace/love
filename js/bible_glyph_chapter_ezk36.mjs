@@ -754,7 +754,7 @@ export function bible_glyph_chapter_ezk36() {
           "what",
           "the",
           "$crown",
-          "GOD",
+          "$i_am",
           "$speech:",
           "It",
           "is",
