@@ -255,7 +255,7 @@ export function bible_glyph_chapter_isa43() {
       {
         verse_number: 8,
         words: [
-          "Bring",
+          "$walking+tray_out",
           "out",
           "a",
           "$family",
