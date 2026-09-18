@@ -526,7 +526,7 @@ export function bible_glyph_chapter_gen40() {
           "$sun",
           "$proper_name$Pharaoh",
           "will",
-          "lift",
+          "$lifting",
           "up",
           "your",
           "head",
