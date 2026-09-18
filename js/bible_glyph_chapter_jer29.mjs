@@ -316,7 +316,7 @@ export function bible_glyph_chapter_jer29() {
           "When",
           "$proper_name$Babylons",
           "seventy",
-          "years",
+          "$year",
           "are",
           "complete,",
           "I",
