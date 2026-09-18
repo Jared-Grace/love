@@ -23,7 +23,7 @@ export function bible_glyph_chapter_job01() {
           "of",
           "Uz",
           "whose",
-          "name",
+          "$name_tag",
           "was",
           "Job.",
           "And",
