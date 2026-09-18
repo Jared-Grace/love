@@ -77,6 +77,12 @@ export function bible_glyph_roots_hebrew() {
   "IT WAS FOUND BY LOOKING FOR NAMES AND NOT BY LOOKING FOR GAPS, which is worth writing down because the two searches find different things. A reading that asks which words still stand in plain English letters turns up proper names in their thousands, and seven of those turned out to be Yah - a name of God sitting in the pile of names waiting for a badge that says A NAME STANDS HERE. The badge would not have been wrong, but it would have been a smaller truth than the one available, and a mark that is merely not wrong is how a picture Bible goes flat.";
   "SHADDAI IS DRAWN BY MIGHT ALONE AND THE MISSING ALL IS THE ARGUMENT. Every translation since the Septuagint says Almighty, so might is the reading the whole transmission agrees on and is safe to draw. The all is a different matter - it entered with the Greek pantokrator and no proposed Hebrew root has ever contained it, so drawing it would be drawing the translators. One mighty God is what every candidate reading can live with, and it keeps Shaddai and pantokrator as two pictures for two words rather than one picture for both.";
   "THE READINGS THAT LOST ARE WRITTEN DOWN NEXT DOOR RATHER THAN HERE. This seat was a judgement and not a reading - the root behind Shaddai is genuinely argued over - so the mountain, the breast that feeds and the one who is enough are each recorded with the case for them in the contested seats list, where a reader who objects can find them. A row here says what is drawn; that list says what else was on the table, which is the half a table can never hold.";
+  "THE GOING OUT AND THE GOING UP WERE SEATED ON 2026-09-18 AND THEY WERE CHOSEN BY A COUNT RATHER THAN BY A CHAPTER. Until that day the order words got their pictures in was decided by which words felt important, and a guess about frequency is wrong quietly - the guesser remembers the words that moved them and not the ones that are everywhere. The reading that replaced the guess ranks every number this testament uses that nothing seats, commonest first, and yatsa and alah stand first and third on it among the words a picture can be drawn for: a thousand and sixty eight occurrences and eight hundred and eighty nine, which is more text than everything seated in the last two passes put together.";
+  "WHAT STANDS ABOVE THEM ON THAT LIST CANNOT BE DRAWN AND THAT IS THE LIST'S MOST USEFUL ANSWER. The first two places are asher and ki - that, who, for, because - and the rest of the top is if, with, this, these, there, so and what. Grammar of that kind is already drawn where it can be, and the remainder is the residue of a real limit rather than a queue: a picture for because would teach a reader nothing they cannot already read, and would cost a mark that a concrete word wants. So the frequency list is read past its own head, and the first thing on it worth buying is a verb of motion.";
+  "NEITHER OF THEM COST A PICTURE, BECAUSE THE VOCABULARY HAD ALREADY BOUGHT BOTH HALVES. The going is halak's walking figure, which a reader meets in the first chapters; the out is min's outward tray, and the up is al's hand pointing above. So the going out is the walking figure beside the tray and the going up is the walking figure beside the pointing hand, and each half says on its own exactly what it says in the pair - which is the test the altar failed, where the meat beside the fire would have read as meat God. A reader who has met halak and min reads the going out on sight, and a reader who has met neither learns two marks from one verb.";
+  "A DEDICATED ARROW WAS PROPOSED FOR EACH AND BOTH WERE REFUSED, and this is the losing reading worth recording. An arrow pointing up is clearer at a glance than a walking figure beside a pointing hand, and it is free to take. What it is not is a verb: an arrow says up and alah says to go up, and the difference shows the moment the word is causative - Moses brings the people up, and an arrow standing there says up about a sentence whose subject is a man doing something. The pair keeps the going in the mark, so the causative reads as a going that somebody caused, which is what the Hebrew is.";
+  "THE GOING DOWN WAS REFUSED IN THE SAME PASS FOR A REASON THAT IS ABOUT THIS TABLE AND NOT ABOUT YARAD. The obvious mark is the walking figure beside a hand pointing down, and the hand pointing down is already spent: it is et, the mark Hebrew puts in front of the thing a verb acts on. A group whose second half is a grammar particle does not read as down, it reads as going, object - so yarad waits for a mark of its own rather than borrowing one that says something else. Half of a pair is still worth having, and the blank beside it asks the reader a question instead of answering one wrongly.";
+  "BOTH ARE ONE SENSE AND NEITHER NEEDED A SPLIT, which had to be asked because both are common enough to hide a second meaning. The interlinear gives yatsa went out, came out and go out, and gives alah went up, Go up and came up; every wording of both is the same motion seen from a different side of it, and the sides are the English translator's rather than the Hebrew's. A word being frequent is not the same as a word being ambiguous, and only the second costs a pair.";
   let roots = [
     {
       root: "yhwh",
@@ -337,6 +343,26 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "935",
           glyph: "footprints",
+        },
+      ],
+    },
+    {
+      root: "yatsa",
+      gloss: "go out, come out, bring out",
+      words: [
+        {
+          strong: "3318",
+          glyph: "walking+tray_out",
+        },
+      ],
+    },
+    {
+      root: "alah",
+      gloss: "go up, come up, bring up",
+      words: [
+        {
+          strong: "5927",
+          glyph: "walking+pointing_up",
         },
       ],
     },
