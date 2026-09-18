@@ -388,7 +388,7 @@ export function bible_glyph_chapter_1ki22() {
           "the",
           "same,",
           "$speech,",
-          "Go",
+          "$walking+pointing_up",
           "up",
           "to",
           "$proper_name$Ramoth-gilead",
