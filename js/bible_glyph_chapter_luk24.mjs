@@ -641,7 +641,7 @@ export function bible_glyph_chapter_luk24() {
           "$plus",
           "then",
           "to",
-          "enter",
+          "$footprints+tray_in",
           "$pointing_back",
           "$star?",
         ],
