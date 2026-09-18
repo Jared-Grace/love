@@ -1,6 +1,3 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_statement_name_total } from "./app_code_lesson_statement_name_total.mjs";
-import { app_code_lesson_statement_name_again } from "./app_code_lesson_statement_name_again.mjs";
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
@@ -9,11 +6,14 @@ import { add } from "./add.mjs";
 import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
 import { app_code_lesson_statement_name_third } from "./app_code_lesson_statement_name_third.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_statement_name_total } from "./app_code_lesson_statement_name_total.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_code_lesson_statement_name_again } from "./app_code_lesson_statement_name_again.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div_code } from "./html_div_code.mjs";
 export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   function_duplicate_kind_parallel();
@@ -77,7 +77,13 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   let box_itself = app_code_container_light_blue(root);
   ("the earlier line is set above the changed one so the change can be seen rather than described, which is the shape the screen before this one ended on and so the shape a learner read a moment ago.");
   ("Neither line is said to be the other. They do different things - one makes a name and one fills a name that is already there - and the whole misreading this screen guards against is a learner taking the sum to be tied to the name for good, so the two lines are never put forward as swaps for each other. The word instead appears twice below and neither time stands between those two lines. Once it stands between two names, a new one and one we already have, which really are alternatives and the sentence is choosing between them. Once it stands between the sum and the value the sum comes to, which really are swaps, and the line above it says so.");
-  html_div_cycle_code(box_itself, ["In the lesson before we wrote:"]);
+  ("Which lesson that line came from is asked of the lesson order here too, rather than written into the sentence, so this box points the same way the two boxes above it do. In the lesson before said it in words a learner could not press, and it stops being true the moment a lesson is put in between the two - while the number is worked out from where the lessons actually stand and so cannot come to name the wrong one.");
+  app_code_remember_from_lesson(
+    box_itself,
+    context,
+    app_code_lesson_statement_name_total,
+    ["we wrote:"],
+  );
   html_div_code(box_itself, code_total);
   ("The third name is named in the line that says we do not need it, and the name we already have is named in the line that offers it. Both lines are about which cup is being filled, and a learner reading them without the letters has to look back up at the code to find out which cups are meant - so the letters are put where the sentence needs them, drawn as code because that is what they are everywhere else on this screen.");
   html_div_cycle_code(box_itself, [
