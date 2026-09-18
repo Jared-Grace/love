@@ -828,7 +828,7 @@ export function bible_glyph_chapter_jer26() {
           "Then",
           "$king",
           "$proper_name$Jehoiakim",
-          "sent",
+          "$hand_sending",
           "men",
           "to",
           "$proper_name$Egypt:",
