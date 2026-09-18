@@ -649,7 +649,7 @@ export function bible_glyph_chapter_2sa11() {
           "the",
           "$king",
           "anger",
-          "flares,",
+          "$walking+pointing_up,",
           "he",
           "may",
           "$speech",
