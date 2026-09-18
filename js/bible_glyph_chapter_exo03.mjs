@@ -360,7 +360,7 @@ export function bible_glyph_chapter_exo03() {
           "to",
           "$proper_name$Pharaoh",
           "and",
-          "bring",
+          "$walking+tray_out",
           "the",
           "$son",
           "of",
