@@ -754,7 +754,7 @@ export function bible_glyph_chapter_1ki18() {
           "name",
           "of",
           "the",
-          "LORD.",
+          "$i_am.",
           "The",
           "$fire",
           "who",
