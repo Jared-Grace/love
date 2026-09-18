@@ -16,7 +16,7 @@ export function bible_glyph_chapter_ezk01() {
           "In",
           "the",
           "thirtieth",
-          "year,",
+          "$year,",
           "on",
           "the",
           "fifth",
