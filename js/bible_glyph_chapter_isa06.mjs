@@ -255,7 +255,7 @@ export function bible_glyph_chapter_isa06() {
           "Here",
           "am",
           "I.",
-          "Send",
+          "$hand_sending",
           "me!",
         ],
       },
