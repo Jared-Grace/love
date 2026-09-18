@@ -144,7 +144,7 @@ export function bible_glyph_chapter_lev25() {
           "must",
           "have",
           "a",
-          "year",
+          "$year",
           "of",
           "complete",
           "rest.",
