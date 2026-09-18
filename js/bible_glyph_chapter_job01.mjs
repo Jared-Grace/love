@@ -129,7 +129,7 @@ export function bible_glyph_chapter_job01() {
           "over,",
           "$proper_name$Job",
           "would",
-          "send",
+          "$hand_sending",
           "for",
           "them",
           "to",
