@@ -96,7 +96,7 @@ export function bible_glyph_chapter_lev11() {
           "are",
           "$no_entry",
           "to",
-          "eat",
+          "$eating",
           "the",
           "following:",
           "The",
