@@ -1103,7 +1103,7 @@ export function bible_glyph_chapter_1ki01() {
           "to",
           "$footprints",
           "and",
-          "sit",
+          "$person+house",
           "on",
           "my",
           "throne",
