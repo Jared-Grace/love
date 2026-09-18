@@ -549,7 +549,7 @@ export function bible_glyph_chapter_exo19() {
         words: [
           "Then",
           "Moses",
-          "brought",
+          "$walking+tray_out",
           "the",
           "$family",
           "$tray_out",
