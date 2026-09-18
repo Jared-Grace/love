@@ -340,7 +340,7 @@ export function bible_glyph_chapter_exo02() {
           "$eye",
           "an",
           "$proper_name$Egyptian",
-          "beating",
+          "$fist",
           "a",
           "$proper_name$Hebrew,",
           "one",
