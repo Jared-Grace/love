@@ -144,7 +144,7 @@ export function bible_glyph_chapter_neh08() {
           "high",
           "wooden",
           "$tree",
-          "platform",
+          "$tower",
           "$hammer",
           "for",
           "this",
