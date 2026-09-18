@@ -702,7 +702,7 @@ export function bible_glyph_chapter_gen50() {
           "visit",
           "you",
           "and",
-          "bring",
+          "$walking+pointing_up",
           "you",
           "up",
           "$tray_out",
