@@ -30,7 +30,7 @@ export function bible_glyph_chapter_jhn10() {
           "whoever",
           "does",
           "$no_entry",
-          "enter",
+          "$footprints+tray_in",
           "the",
           "$sheep",
           "pen",
