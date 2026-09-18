@@ -1225,7 +1225,7 @@ export function bible_glyph_chapter_deu01() {
           "replied.",
           "We",
           "will",
-          "go",
+          "$walking+pointing_up",
           "up",
           "and",
           "fight,",
