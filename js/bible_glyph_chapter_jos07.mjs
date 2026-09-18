@@ -72,7 +72,7 @@ export function bible_glyph_chapter_jos07() {
         words: [
           "Meanwhile",
           "Joshua",
-          "sent",
+          "$hand_sending",
           "men",
           "from",
           "$proper_name$Jericho",
