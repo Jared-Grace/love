@@ -493,7 +493,7 @@ export function bible_glyph_chapter_exo07() {
           "Behold,",
           "I",
           "will",
-          "strike",
+          "$fist",
           "the",
           "$water",
           "of",
