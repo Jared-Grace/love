@@ -190,7 +190,7 @@ export function bible_glyph_chapter_zec04() {
           "Then",
           "he",
           "will",
-          "bring",
+          "$walking+tray_out",
           "forth",
           "the",
           "capstone",
