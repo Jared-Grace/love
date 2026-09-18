@@ -436,7 +436,7 @@ export function bible_glyph_chapter_lev19() {
           "you",
           "will",
           "$no_entry",
-          "incur",
+          "$lifting",
           "guilt",
           "on",
           "account",
