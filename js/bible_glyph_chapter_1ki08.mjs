@@ -836,7 +836,7 @@ export function bible_glyph_chapter_1ki08() {
           "a",
           "$man_beard",
           "to",
-          "sit",
+          "$person+house",
           "before",
           "Me",
           "on",
