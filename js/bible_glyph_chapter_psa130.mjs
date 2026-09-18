@@ -168,7 +168,7 @@ export function bible_glyph_chapter_psa130() {
           "He",
           "will",
           "redeem",
-          "Israel",
+          "$proper_name$Israel",
           "from",
           "all",
           "iniquity.",
