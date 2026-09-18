@@ -1120,7 +1120,7 @@ export function bible_glyph_chapter_neh09() {
           "them",
           "for",
           "many",
-          "years,",
+          "$year,",
           "and",
           "Your",
           "$wind",
