@@ -301,7 +301,7 @@ export function bible_glyph_chapter_isa58() {
           "forth",
           "like",
           "the",
-          "dawn,",
+          "$dawn,",
           "and",
           "your",
           "healing",
