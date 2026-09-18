@@ -301,7 +301,7 @@ export function reply_proposals() {
   let f_name56 = fn_name("reply_word_any");
   let town_out = {
     title: "answer somebody from a town the rules were never told about",
-    fn: fn_name("app_message_reply_from_city_country"),
+    fn: fn_name("app_message_reply_from_country"),
     whole: [f_name56],
     diff: [
       combined17,
