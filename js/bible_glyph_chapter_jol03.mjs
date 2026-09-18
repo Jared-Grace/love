@@ -346,7 +346,7 @@ export function bible_glyph_chapter_jol03() {
           "there",
           "I",
           "will",
-          "sit",
+          "$person+house",
           "down",
           "to",
           "judge",
