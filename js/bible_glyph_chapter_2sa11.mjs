@@ -53,7 +53,7 @@ export function bible_glyph_chapter_2sa11() {
           "$proper_name$Rabbah,",
           "but",
           "$proper_name$David",
-          "remained",
+          "$person+house",
           "in",
           "$proper_name$Jerusalem.",
         ],
