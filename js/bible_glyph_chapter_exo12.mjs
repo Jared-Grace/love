@@ -1286,7 +1286,7 @@ export function bible_glyph_chapter_exo12() {
           "duration",
           "of",
           "the",
-          "stay",
+          "$person+house",
           "of",
           "the",
           "$son",
