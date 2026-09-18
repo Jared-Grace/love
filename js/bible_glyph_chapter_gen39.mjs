@@ -217,7 +217,7 @@ export function bible_glyph_chapter_gen39() {
           "his",
           "$crown",
           "$woman",
-          "cast",
+          "$lifting",
           "her",
           "$eyes",
           "upon",
