@@ -158,7 +158,7 @@ export function bible_glyph_chapter_2sa05() {
           "he",
           "$castle",
           "thirty-three",
-          "years",
+          "$year",
           "over",
           "all",
           "$proper_name$Israel",
