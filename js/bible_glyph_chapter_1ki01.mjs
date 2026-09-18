@@ -97,7 +97,7 @@ export function bible_glyph_chapter_1ki01() {
           "for",
           "a",
           "beautiful",
-          "girl,",
+          "$girl,",
           "and",
           "they",
           "found",
