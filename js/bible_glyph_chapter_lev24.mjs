@@ -37,7 +37,7 @@ export function bible_glyph_chapter_lev24() {
           "keep",
           "the",
           "$lamp",
-          "burning",
+          "$walking+pointing_up",
           "continually.",
         ],
       },
