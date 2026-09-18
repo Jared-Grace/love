@@ -420,7 +420,7 @@ export function bible_glyph_chapter_zep01() {
           "$house",
           "but",
           "$no_entry",
-          "inhabit",
+          "$person+house",
           "them,",
           "and",
           "plant",
