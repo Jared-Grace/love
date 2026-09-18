@@ -758,7 +758,7 @@ export function bible_glyph_chapter_jos06() {
           "the",
           "prostitute,",
           "and",
-          "bring",
+          "$walking+tray_out",
           "out",
           "her",
           "and",
