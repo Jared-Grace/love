@@ -292,7 +292,7 @@ export function bible_glyph_chapter_jer29() {
           "you",
           "in",
           "My",
-          "name.",
+          "$name_tag.",
           "I",
           "have",
           "$no_entry",
