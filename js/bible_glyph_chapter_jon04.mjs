@@ -202,7 +202,7 @@ export function bible_glyph_chapter_jon04() {
         words: [
           "When",
           "dawn",
-          "came",
+          "$walking+pointing_up",
           "the",
           "next",
           "day,",
