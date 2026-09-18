@@ -432,7 +432,7 @@ export function bible_glyph_chapter_lev17() {
           "you",
           "may",
           "$no_entry",
-          "eat",
+          "$eating",
           "$blood.",
         ],
       },
