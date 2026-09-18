@@ -794,7 +794,7 @@ export function bible_glyph_chapter_1ki22() {
           "went",
           "up",
           "and",
-          "struck",
+          "$fist",
           "$proper_name$Micaiah",
           "in",
           "the",
