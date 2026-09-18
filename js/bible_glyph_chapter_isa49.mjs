@@ -578,7 +578,7 @@ export function bible_glyph_chapter_isa49() {
           "destroyers",
           "and",
           "wreckers",
-          "depart",
+          "$walking+tray_out",
           "from",
           "you.",
         ],
