@@ -354,7 +354,7 @@ export function bible_glyph_chapter_isa49() {
           "to",
           "the",
           "prisoners,",
-          "Come",
+          "$walking+tray_out",
           "out,",
           "and",
           "to",
