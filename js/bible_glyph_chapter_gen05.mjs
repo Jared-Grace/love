@@ -683,7 +683,7 @@ export function bible_glyph_chapter_gen05() {
           "of",
           "five",
           "hundred",
-          "years,",
+          "$year,",
           "and",
           "$proper_name$Noah",
           "fathered",
