@@ -745,7 +745,7 @@ export function bible_glyph_chapter_1ki22() {
           "him",
           "and",
           "prevail.",
-          "Go",
+          "$walking+tray_out",
           "and",
           "$hammer",
           "it.",
