@@ -1,5 +1,3 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_statement_name_itself_sum } from "./app_code_lesson_statement_name_itself_sum.mjs";
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
@@ -9,6 +7,8 @@ import { add } from "./add.mjs";
 import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_statement_name_itself_sum } from "./app_code_lesson_statement_name_itself_sum.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
@@ -27,7 +27,9 @@ export function app_code_lesson_statement_name_one_more_above_box_one(
   let total = add(number_first, number_last);
   let names_sum = app_code_lesson_statement_names_added();
   let start = 7;
-  let more = js_code_binary_spaced_nb(name, plus, 1);
+  ("the number added is handed back as well as written into the line, because the sentence above the line names it - written twice, a reworded line and the sentence introducing it could say different numbers.");
+  let number_more = 1;
+  let more = js_code_binary_spaced_nb(name, plus, number_more);
   let once = add(start, 1);
   let box_sum = app_code_container_light_blue(root);
   ("The reminder names its cups in brackets, drawn as code because that is what they are. It says a name twice over - once for the cup being filled and once for the same cup being read - and the words a name and it are the only thing telling a learner those two are the same cup. Written with the letter in place they can see it, instead of looking down at the code to work out which cup each phrase meant.");
@@ -55,6 +57,8 @@ export function app_code_lesson_statement_name_one_more_above_box_one(
   let box_one = app_code_container_light_blue(root);
   let r = {
     name,
+    name_last,
+    number_more,
     start,
     more,
     once,

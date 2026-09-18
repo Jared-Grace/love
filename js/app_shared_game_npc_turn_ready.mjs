@@ -1,11 +1,10 @@
-import { date_milliseconds_since } from "./date_milliseconds_since.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { property_get } from "./property_get.mjs";
-import { app_shared_game_npc_turn_quarters } from "./app_shared_game_npc_turn_quarters.mjs";
 import { property_get_or } from "./property_get_or.mjs";
+import { app_shared_game_npc_turn_quarters } from "./app_shared_game_npc_turn_quarters.mjs";
 import { list_max } from "./list_max.mjs";
 import { app_shared_game_npc_turn_rest_ms } from "./app_shared_game_npc_turn_rest_ms.mjs";
 import { multiply } from "./multiply.mjs";
+import { date_milliseconds_since } from "./date_milliseconds_since.mjs";
 import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
 export function app_shared_game_npc_turn_ready(person, direction) {
@@ -13,7 +12,8 @@ export function app_shared_game_npc_turn_ready(person, direction) {
   ("Whether somebody on the street has rested long enough since their last turn to turn to face this way now.");
   ("The rest is set by the BIGGEST of the turns - the one they last made, the one they are about to make, and the two taken together - so a turn about is kept away from other turns on both sides of it.");
   ("Somebody who has never turned is ready at once.");
-  let facing = property_get(person, "direction");
+  ("Somebody never yet faced anywhere faces south, the same default the turn itself starts from and the same one the note of a turn writes down. Asked of a person made without a facing - anybody a game stands on the map and leaves to be turned by whatever happens to them first - it would otherwise be the reading that failed rather than the rest that was skipped.");
+  let facing = property_get_or(person, "direction", "south");
   let quarters = app_shared_game_npc_turn_quarters(facing, direction);
   let quarters_last = property_get_or(person, "turn_quarters", 0);
   ("Two quarter turns the same way ARE a turn about, just taken in two goes - west, then south, then east is facing the other way. Measured one at a time each was only a quarter turn, so a person looking about swept round half a circle in a moment and read as twirling. So the two turns are also measured together, from the way they faced before the last turn to the way they would face after this one.");
