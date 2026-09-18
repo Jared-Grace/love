@@ -53,6 +53,9 @@ export function app_shared_privacy_policy_paragraphs() {
       },
       ". Send it from the same device you wrote the first one on, because the random number is the only thing tying the two together and it belongs to that browser.",
     ],
+    [
+      "This page changes when what this website does changes. The date below says when it last did.",
+    ],
   ];
   return paragraphs;
 }
