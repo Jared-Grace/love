@@ -163,7 +163,7 @@ export function bible_glyph_chapter_neh09() {
           "and",
           "bless",
           "the",
-          "LORD",
+          "$i_am",
           "your",
           "$fire",
           "$tray_out",
