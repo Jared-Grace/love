@@ -403,7 +403,7 @@ export function bible_glyph_chapter_deu19() {
           "his",
           "$city",
           "must",
-          "send",
+          "$hand_sending",
           "for",
           "him,",
           "$hand_receiving",
