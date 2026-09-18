@@ -891,7 +891,7 @@ export function bible_glyph_chapter_gen27() {
           "sit",
           "up",
           "and",
-          "eat",
+          "$eating",
           "some",
           "of",
           "the",
