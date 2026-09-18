@@ -412,7 +412,7 @@ export function bible_glyph_chapter_deu11() {
           "beginning",
           "of",
           "the",
-          "year",
+          "$year",
           "to",
           "its",
           "end.",
