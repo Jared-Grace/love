@@ -1537,7 +1537,7 @@ export function bible_glyph_chapter_1sa17() {
           "and",
           "slung",
           "it,",
-          "striking",
+          "$fist",
           "the",
           "$proper_name$Philistine",
           "on",
