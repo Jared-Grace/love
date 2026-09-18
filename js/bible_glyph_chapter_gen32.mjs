@@ -522,7 +522,7 @@ export function bible_glyph_chapter_gen32() {
           "are",
           "a",
           "gift",
-          "sent",
+          "$hand_sending",
           "to",
           "my",
           "$crown",
