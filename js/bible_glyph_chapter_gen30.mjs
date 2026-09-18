@@ -21,7 +21,7 @@ export function bible_glyph_chapter_gen30() {
           "she",
           "was",
           "$no_entry",
-          "bearing",
+          "$baby",
           "for",
           "$proper_name$Jacob,",
           "she",
