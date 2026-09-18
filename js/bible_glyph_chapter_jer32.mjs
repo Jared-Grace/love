@@ -1222,7 +1222,7 @@ export function bible_glyph_chapter_jer32() {
           "had",
           "it",
           "$no_entry",
-          "entered",
+          "$walking+pointing_up",
           "My",
           "$heart_organ,",
           "that",
