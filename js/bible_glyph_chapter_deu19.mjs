@@ -221,7 +221,7 @@ export function bible_glyph_chapter_deu19() {
           "is",
           "great,",
           "and",
-          "strike",
+          "$fist",
           "him",
           "dead",
           "though",
