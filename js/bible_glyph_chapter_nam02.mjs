@@ -16,7 +16,7 @@ export function bible_glyph_chapter_nam02() {
           "One",
           "who",
           "scatters",
-          "advances",
+          "$walking+pointing_up",
           "against",
           "you,",
           "O",
