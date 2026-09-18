@@ -544,7 +544,7 @@ export function bible_glyph_chapter_zec14() {
           "will",
           "$walking+pointing_up",
           "up",
-          "year",
+          "$year",
           "after",
           "year",
           "to",
