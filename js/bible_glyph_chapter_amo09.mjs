@@ -276,7 +276,7 @@ export function bible_glyph_chapter_amo09() {
           "Did",
           "I",
           "$no_entry",
-          "bring",
+          "$walking+pointing_up",
           "$proper_name$Israel",
           "up",
           "from",
