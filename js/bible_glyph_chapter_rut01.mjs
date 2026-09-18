@@ -429,7 +429,7 @@ export function bible_glyph_chapter_rut01() {
           "Again",
           "they",
           "wept",
-          "aloud,",
+          "$lifting,",
           "and",
           "$proper_name$Orpah",
           "kissed",
