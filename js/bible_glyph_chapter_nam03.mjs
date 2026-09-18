@@ -53,7 +53,7 @@ export function bible_glyph_chapter_nam03() {
       {
         verse_number: 3,
         words: [
-          "Charging",
+          "$walking+pointing_up",
           "horseman,",
           "flashing",
           "$sword,",
