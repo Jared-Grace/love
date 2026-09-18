@@ -69,7 +69,7 @@ export function bible_glyph_chapter_isa55() {
           "to",
           "Me,",
           "and",
-          "eat",
+          "$eating",
           "what",
           "is",
           "$thumbs_up,",
