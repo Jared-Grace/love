@@ -13,7 +13,7 @@ export function bible_glyph_chapter_lev06() {
     verses: [
       {
         verse_number: 1,
-        words: ["And", "$i_am", "$mouth", "to", "Moses,", "$speech"],
+        words: ["And", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
       },
       {
         verse_number: 2,
@@ -194,13 +194,13 @@ export function bible_glyph_chapter_lev06() {
       },
       {
         verse_number: 8,
-        words: ["Then", "$i_am", "$mouth", "to", "Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
       },
       {
         verse_number: 9,
         words: [
           "Command",
-          "Aaron",
+          "$proper_name$Aaron",
           "and",
           "$son,",
           "$speech",
@@ -419,7 +419,7 @@ export function bible_glyph_chapter_lev06() {
       {
         verse_number: 16,
         words: [
-          "Aaron",
+          "$proper_name$Aaron",
           "and",
           "$son",
           "are",
@@ -487,7 +487,7 @@ export function bible_glyph_chapter_lev06() {
           "male",
           "$son",
           "of",
-          "Aaron",
+          "$proper_name$Aaron",
           "may",
           "eat",
           "it.",
@@ -514,7 +514,7 @@ export function bible_glyph_chapter_lev06() {
       },
       {
         verse_number: 19,
-        words: ["Then", "$i_am", "$mouth", "to", "Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
       },
       {
         verse_number: 20,
@@ -524,7 +524,7 @@ export function bible_glyph_chapter_lev06() {
           "the",
           "offering",
           "that",
-          "Aaron",
+          "$proper_name$Aaron",
           "and",
           "$son",
           "must",
@@ -628,13 +628,13 @@ export function bible_glyph_chapter_lev06() {
       },
       {
         verse_number: 24,
-        words: ["And", "$i_am", "$mouth", "to", "Moses,", "$speech"],
+        words: ["And", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
       },
       {
         verse_number: 25,
         words: [
           "$mouth",
-          "Aaron",
+          "$proper_name$Aaron",
           "and",
           "$son,",
           "$speech",
