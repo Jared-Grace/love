@@ -60,7 +60,7 @@ export function bible_glyph_chapter_2sa06() {
           "name",
           "of",
           "the",
-          "LORD",
+          "$i_am",
           "of",
           "Hosts,",
           "who",
