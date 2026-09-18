@@ -845,7 +845,7 @@ export function bible_glyph_chapter_lev08() {
           "of",
           "Meeting",
           "and",
-          "eat",
+          "$eating",
           "it",
           "there",
           "$bread",
