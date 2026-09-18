@@ -43,7 +43,7 @@ export function bible_glyph_chapter_num18() {
           "$son",
           "alone",
           "must",
-          "bear",
+          "$lifting",
           "the",
           "iniquity",
           "of",
