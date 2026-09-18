@@ -586,7 +586,7 @@ export function bible_glyph_chapter_exo13() {
           "$son",
           "of",
           "Israel",
-          "left",
+          "$walking+pointing_up",
           "the",
           "$earth",
           "of",
