@@ -609,7 +609,7 @@ export function bible_glyph_chapter_zep01() {
           "of",
           "all",
           "who",
-          "dwell",
+          "$person+house",
           "on",
           "the",
           "$earth.",
