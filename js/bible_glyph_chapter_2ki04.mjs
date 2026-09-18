@@ -1368,7 +1368,7 @@ export function bible_glyph_chapter_2ki04() {
           "the",
           "$family",
           "to",
-          "eat.",
+          "$eating.",
           "And",
           "there",
           "was",
