@@ -90,6 +90,11 @@ export function bible_glyph_roots_hebrew() {
   "THE YEAR, THE EATING AND THE LIFTING WERE ASKED OF THE ARTWORK SET FIRST. Each of the three exists there - a calendar, a plate with a fork and knife, a person lifting weights - so none of them is a name nothing can draw. The hourglass could not be reused for the year because it is olam, forever, and a picture of time already spent on the endless one must not also mean a countable one.";
   "THE LIFTING WILL DRAW THE FORGIVING AS A CARRYING, AND THAT IS THE LITERAL READING RATHER THAN A FAULT. Nasa lifts, carries, bears and takes away, and where it is used of sin the Hebrew idiom is to carry it; a reader who sees the lifting in bear his iniquity has read what the text says, and forgive is the interpretation English translations add. The mark is a gym figure and nothing in this Bible is a gym, which was the argument against it - but the set has no picture of carrying at all, and no mark is worse than an anachronistic one.";
   "FOUR WORDS ABOVE THESE ON THE LIST WERE LOOKED AT AND LEFT. Qara to call, qum to arise, hinneh behold and the two words for with are all commoner than the lifting and none of them found an honest mark. The pointing hand is hoti on the Greek side and so cannot be behold; the upward hand is al, the preposition, so a human beside it says man upon rather than man rising; and calling would need a second horn beside the megaphone, which is the prophet, and two horns drawn alike read as one word. They are left undrawn on purpose and this paragraph is the record of why, so nobody spends a day rediscovering it.";
+  "TWO MORE CAME OFF THE COUNT AND FOUR WERE TURNED DOWN IN THE SAME SITTING (2026-09-18). Nakah, to strike, takes the fist; yalad, to bear and beget, takes the baby. The four left standing in letters are rosh the head, abar to cross over, amad to stand and tsavah to command, and every one of them is commoner than the two that were seated - so the reason each was refused is written here rather than left for somebody to rediscover by trying.";
+  "THE HEAD HAS NO PICTURE IN THE SET AND THE NEAR MISSES ARE ALL WORSE THAN NOTHING. Searching it for a head returns an exploding one, a bandaged one, a headstone, a pair of headphones and a speaking head; the speaking head is the voice and is already spent, and a gravestone standing on the word for chief would be a different sentence. A brain is an organ and not a head. Rosh is left in letters until the set grows.";
+  "CROSSING OVER WAS REFUSED TWICE, AND THE SECOND REFUSAL IS THE ONE WORTH KEEPING. The first was the plain right arrow, which says direction and not passage, and would read beside the target as a second preposition. The second was the cross, which is unspent on this side of the Bible and fits the English word exactly - and that is the trap. Abar has nothing to do with the crucifixion; the two words only meet in English, and a picture that means Calvary standing on Israel walking through the Jordan would teach a reader a connection the Hebrew does not make. A pun in the translation is never a reason to spend a mark.";
+  "STANDING WAS REFUSED BECAUSE THE STANDING FIGURE IS ALREADY THE HUMAN. Amad would want a person on their feet, and a person on their feet is what this table has been drawing for adam since the beginning. Seating amad there would make every human in the Bible read as the verb to stand, which is the loudest kind of damage a shared mark can do.";
+  "COMMANDING WAS REFUSED BECAUSE EVERY CANDIDATE IS SOMETHING ELSE ALREADY. A mouth, a voice and a speech bubble are speaking; the megaphone is the prophet; a pointing hand is hoti on the Greek side. Tsavah is a word of authority rather than of sound, and the set has no picture of authority that is not a crown or a king, both of which are nouns this Bible already spends elsewhere.";
   let roots = [
     {
       root: "yhwh",
@@ -420,6 +425,26 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "5375",
           glyph: "lifting",
+        },
+      ],
+    },
+    {
+      root: "nakah",
+      gloss: "strike, smite, beat, kill",
+      words: [
+        {
+          strong: "5221",
+          glyph: "fist",
+        },
+      ],
+    },
+    {
+      root: "yalad",
+      gloss: "bear, beget, bring forth",
+      words: [
+        {
+          strong: "3205",
+          glyph: "baby",
         },
       ],
     },
