@@ -512,7 +512,7 @@ export function bible_glyph_chapter_lev10() {
         words: [
           "Why",
           "$no_entry",
-          "eat",
+          "$eating",
           "$bow",
           "in",
           "the",
