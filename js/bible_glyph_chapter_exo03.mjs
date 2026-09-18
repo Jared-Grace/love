@@ -608,7 +608,7 @@ export function bible_glyph_chapter_exo03() {
           "have",
           "$speech",
           "to",
-          "bring",
+          "$walking+pointing_up",
           "you",
           "up",
           "out",
