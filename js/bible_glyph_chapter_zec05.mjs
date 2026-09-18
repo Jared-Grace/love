@@ -228,7 +228,7 @@ export function bible_glyph_chapter_zec05() {
           "was",
           "a",
           "$woman",
-          "sitting",
+          "$person+house",
           "inside",
           "the",
           "basket.",
