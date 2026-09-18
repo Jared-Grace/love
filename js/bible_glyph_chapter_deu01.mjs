@@ -351,7 +351,7 @@ export function bible_glyph_chapter_deu01() {
           "how",
           "can",
           "I",
-          "bear",
+          "$lifting",
           "your",
           "troubles,",
           "burdens,",
