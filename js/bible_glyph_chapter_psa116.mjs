@@ -246,7 +246,7 @@ export function bible_glyph_chapter_psa116() {
           "call",
           "on",
           "the",
-          "name",
+          "$name_tag",
           "of",
           "the",
           "$i_am.",
