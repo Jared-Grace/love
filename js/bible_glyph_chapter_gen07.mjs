@@ -169,7 +169,7 @@ export function bible_glyph_chapter_gen07() {
           "Noah",
           "was",
           "600",
-          "years",
+          "$year",
           "old",
           "when",
           "the",
