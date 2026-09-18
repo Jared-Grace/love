@@ -371,7 +371,7 @@ export function bible_glyph_chapter_1sa16() {
           "$sheep.",
           "$proper_name$Samuel",
           "$speech,",
-          "Send",
+          "$hand_sending",
           "and",
           "$hand_receiving",
           "him,",
