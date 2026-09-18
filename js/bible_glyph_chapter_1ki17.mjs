@@ -429,7 +429,7 @@ export function bible_glyph_chapter_1ki17() {
           "$proper_name$Israel,",
           "$speech:",
           "The",
-          "jar",
+          "$jar",
           "of",
           "flour",
           "will",
