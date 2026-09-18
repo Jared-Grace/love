@@ -623,7 +623,7 @@ export function bible_glyph_chapter_rut01() {
           "Mara,",
           "because",
           "the",
-          "Almighty",
+          "$might",
           "has",
           "dealt",
           "quite",
