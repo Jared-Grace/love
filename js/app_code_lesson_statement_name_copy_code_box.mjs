@@ -5,8 +5,9 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { js_code_comment_line } from "./js_code_comment_line.mjs";
+import { text_wrap_parenthesis } from "./text_wrap_parenthesis.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
+import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
@@ -37,23 +38,27 @@ export function app_code_lesson_statement_name_copy_code_box(
   ("THE EXPLANATION IS WRITTEN AS NOTES INSIDE THE PROGRAM. Each line of English stands directly above the line it is about, so nothing has to be matched up by eye, and no line is drawn twice. Said as writing outside the box, each line had to be shown twice over - once where it was being explained and once inside the program - and the three lines of this screen came out six.");
   ("Notes rather than writing, because a note may be as long as it needs to be and costs nothing: the machine does not read it, the painter of this chip draws every note dimmer than the code around it, and this course taught notes four lessons before this one. Two slashes only - the other kind of note is not taught anywhere in this course, and a screen is not the place to introduce one.");
   ("A blank line between each note and the group before it, because the notes are what would otherwise have been separate sentences with code between them, and the blank line is what is left of that break.");
+  ("A NAME STANDING IN A SENTENCE IS PUT IN ROUND BRACKETS. The first name a learner meets is a, which is also an English word, so 'this does not remove it from a' reads as a sentence that stops before its last word. The brackets say the letter is the name of a cup and not the start of a phrase, and they say it in writing rather than in a colour, so the reader who cannot tell two colours apart is told the same thing as everybody else. The same mark is what the lines above this box already use.");
+  let first_named = text_wrap_parenthesis(name_first);
+  let last_named = text_wrap_parenthesis(name_last);
+  let copy_named = text_wrap_parenthesis(name_copy);
   let words = list_join_empty([
     "We make cups ",
-    name_first,
+    first_named,
     " and ",
-    name_last,
+    last_named,
   ]);
   let note_cups = js_code_comment_line(words);
   let words2 = list_join_empty([
     "We make ",
-    name_copy,
+    copy_named,
     " and fill it with whatever is in ",
-    name_first,
+    first_named,
   ]);
   let note_copy = js_code_comment_line(words2);
-  let words3 = list_join_empty(["This does not remove it from ", name_first]);
+  let words3 = list_join_empty(["This does not remove it from ", first_named]);
   let note_kept = js_code_comment_line(words3);
-  let words4 = list_join_empty(["We write out what is inside ", name_copy]);
+  let words4 = list_join_empty(["We write out what is inside ", copy_named]);
   let note_logged = js_code_comment_line(words4);
   let blank = text_empty();
   html_div_cycle_code(box_code, ["In JS we write the same thing like this:"]);
