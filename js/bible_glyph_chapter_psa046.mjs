@@ -204,7 +204,7 @@ export function bible_glyph_chapter_psa046() {
           "and",
           "shatters",
           "the",
-          "spear;",
+          "$spear;",
           "He",
           "burns",
           "the",
