@@ -66,7 +66,7 @@ export function bible_glyph_chapter_exo33() {
           "And",
           "I",
           "will",
-          "send",
+          "$hand_sending",
           "an",
           "$angel",
           "before",
