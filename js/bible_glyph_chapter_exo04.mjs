@@ -420,7 +420,7 @@ export function bible_glyph_chapter_exo04() {
           "$speech,",
           '"Please,',
           "$crown,",
-          "send",
+          "$hand_sending",
           "someone",
           'else."',
         ],
