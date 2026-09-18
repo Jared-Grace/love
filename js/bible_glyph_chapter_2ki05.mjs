@@ -396,7 +396,7 @@ export function bible_glyph_chapter_2ki05() {
           "he",
           "would",
           "surely",
-          "come",
+          "$walking+tray_out",
           "out,",
           "stand",
           "and",
