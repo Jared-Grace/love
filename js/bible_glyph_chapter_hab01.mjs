@@ -83,7 +83,7 @@ export function bible_glyph_chapter_hab01() {
           "ongoing,",
           "and",
           "conflict",
-          "abounds.",
+          "$lifting.",
         ],
       },
       {
