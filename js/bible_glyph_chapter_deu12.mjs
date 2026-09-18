@@ -679,7 +679,7 @@ export function bible_glyph_chapter_deu12() {
           "$meat,",
           "you",
           "may",
-          "eat",
+          "$eating",
           "$meat",
           "whenever",
           "you",
