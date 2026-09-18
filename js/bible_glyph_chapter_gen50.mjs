@@ -505,7 +505,7 @@ export function bible_glyph_chapter_gen50() {
           "So",
           "now,",
           "please",
-          "forgive",
+          "$lifting",
           "the",
           "transgression",
           "of",
