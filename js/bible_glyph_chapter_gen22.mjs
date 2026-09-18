@@ -586,7 +586,7 @@ export function bible_glyph_chapter_gen22() {
           "Beersheba.",
           "And",
           "$proper_name$Abraham",
-          "settled",
+          "$person+house",
           "in",
           "Beersheba.",
         ],
