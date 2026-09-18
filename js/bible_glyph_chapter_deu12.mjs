@@ -750,7 +750,7 @@ export function bible_glyph_chapter_deu12() {
           "as",
           "you",
           "would",
-          "eat",
+          "$eating",
           "a",
           "gazelle",
           "or",
