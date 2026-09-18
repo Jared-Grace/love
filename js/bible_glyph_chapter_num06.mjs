@@ -13,7 +13,7 @@ export function bible_glyph_chapter_num06() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "the", "$i_am", "$mouth", "to", "Moses,"],
+        words: ["Then", "the", "$i_am", "$mouth", "to", "$proper_name$Moses,"],
       },
       {
         verse_number: 2,
@@ -738,13 +738,13 @@ export function bible_glyph_chapter_num06() {
       },
       {
         verse_number: 22,
-        words: ["Then", "the", "$i_am", "$mouth", "to", "Moses,"],
+        words: ["Then", "the", "$i_am", "$mouth", "to", "$proper_name$Moses,"],
       },
       {
         verse_number: 23,
         words: [
           "$mouth",
-          "Aaron",
+          "$proper_name$Aaron",
           "and",
           "his",
           "$son:",
