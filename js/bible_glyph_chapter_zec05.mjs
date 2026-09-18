@@ -171,7 +171,7 @@ export function bible_glyph_chapter_zec05() {
           "$speech",
           "me,",
           "Now",
-          "lift",
+          "$lifting",
           "up",
           "your",
           "$eyes",
