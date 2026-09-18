@@ -273,7 +273,7 @@ export function bible_glyph_chapter_zec05() {
           "$eye",
           "two",
           "$woman",
-          "approaching,",
+          "$walking+tray_out,",
           "with",
           "the",
           "$wind",
