@@ -110,7 +110,7 @@ export function bible_glyph_chapter_psa063() {
           "$name_tag",
           "I",
           "will",
-          "lift",
+          "$lifting",
           "my",
           "hands.",
         ],
