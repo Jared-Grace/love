@@ -1550,7 +1550,7 @@ export function bible_glyph_chapter_1ki08() {
           "built",
           "for",
           "Your",
-          "Name,",
+          "$name_tag,",
         ],
       },
       {
