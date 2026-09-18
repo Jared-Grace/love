@@ -1030,7 +1030,7 @@ export function bible_glyph_chapter_1ki18() {
           "shall",
           "be",
           "your",
-          "name.",
+          "$name_tag.",
         ],
       },
       {
