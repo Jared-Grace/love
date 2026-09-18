@@ -35,7 +35,7 @@ export function bible_glyph_chapter_deu18() {
           "They",
           "are",
           "to",
-          "eat",
+          "$eating",
           "the",
           "food",
           "offerings",
