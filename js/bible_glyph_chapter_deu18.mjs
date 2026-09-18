@@ -160,7 +160,7 @@ export function bible_glyph_chapter_deu18() {
           "minister",
           "in",
           "His",
-          "name",
+          "$name_tag",
           "for",
           "all",
           "the",
