@@ -173,7 +173,7 @@ export function bible_glyph_chapter_1ki20() {
           "tomorrow",
           "I",
           "will",
-          "send",
+          "$hand_sending",
           "my",
           "$kneeling",
           "to",
