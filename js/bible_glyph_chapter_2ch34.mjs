@@ -1136,7 +1136,7 @@ export function bible_glyph_chapter_2ch34() {
           "Then",
           "the",
           "$king",
-          "summoned",
+          "$hand_sending",
           "all",
           "the",
           "elders",
