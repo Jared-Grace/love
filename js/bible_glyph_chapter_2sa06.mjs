@@ -55,7 +55,7 @@ export function bible_glyph_chapter_2sa06() {
           "called",
           "by",
           "the",
-          "Name,",
+          "$name_tag,",
           "the",
           "name",
           "of",
