@@ -99,7 +99,7 @@ export function bible_glyph_chapter_gen03() {
           "You",
           "must",
           "$no_entry",
-          "eat",
+          "$eating",
           "$tray_out",
           "it",
           "and",
