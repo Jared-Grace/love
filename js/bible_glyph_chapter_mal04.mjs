@@ -160,7 +160,7 @@ export function bible_glyph_chapter_mal04() {
           "Behold,",
           "I",
           "will",
-          "send",
+          "$hand_sending",
           "you",
           "$proper_name$Elijah",
           "the",
