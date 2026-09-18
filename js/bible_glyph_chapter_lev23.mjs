@@ -371,7 +371,7 @@ export function bible_glyph_chapter_lev23() {
           "You",
           "must",
           "$no_entry",
-          "eat",
+          "$eating",
           "any",
           "$bread,",
           "or",
