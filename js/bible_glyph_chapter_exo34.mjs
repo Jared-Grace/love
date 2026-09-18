@@ -154,7 +154,7 @@ export function bible_glyph_chapter_exo34() {
         words: [
           "And",
           "the",
-          "LORD",
+          "$i_am",
           "descended",
           "in",
           "a",
