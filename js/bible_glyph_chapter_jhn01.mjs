@@ -313,7 +313,7 @@ export function bible_glyph_chapter_jhn01() {
       {
         verse_number: 15,
         words: [
-          "John",
+          "$proper_name$John",
           "$witness$ed",
           "about",
           "$pointing_back.",
@@ -576,7 +576,7 @@ export function bible_glyph_chapter_jhn01() {
       {
         verse_number: 26,
         words: [
-          "John",
+          "$proper_name$John",
           "$speech,",
           "“I",
           "baptize",
@@ -627,7 +627,7 @@ export function bible_glyph_chapter_jhn01() {
           "the",
           "$proper_name$Jordan,",
           "where",
-          "John",
+          "$proper_name$John",
           "was",
           "baptizing.",
         ],
@@ -716,7 +716,7 @@ export function bible_glyph_chapter_jhn01() {
         verse_number: 32,
         words: [
           "$plus",
-          "John",
+          "$proper_name$John",
           "$witness$ed,",
           "$speech,",
           "“$pointing",
@@ -804,7 +804,7 @@ export function bible_glyph_chapter_jhn01() {
           "The",
           "next",
           "day",
-          "John",
+          "$proper_name$John",
           "was",
           "there",
           "again",
