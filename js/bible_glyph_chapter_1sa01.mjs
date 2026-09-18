@@ -79,7 +79,7 @@ export function bible_glyph_chapter_1sa01() {
           "$sun",
           "Elkanah",
           "would",
-          "go",
+          "$walking+pointing_up",
           "up",
           "from",
           "his",
