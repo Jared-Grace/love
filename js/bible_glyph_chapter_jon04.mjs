@@ -237,7 +237,7 @@ export function bible_glyph_chapter_jon04() {
           "and",
           "the",
           "sun",
-          "beat",
+          "$fist",
           "down",
           "on",
           "Jonah",
