@@ -428,7 +428,7 @@ export function bible_glyph_chapter_2sa11() {
           "tomorrow",
           "I",
           "will",
-          "send",
+          "$hand_sending",
           "you",
           "back.",
           "So",
