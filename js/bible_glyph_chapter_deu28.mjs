@@ -609,7 +609,7 @@ export function bible_glyph_chapter_deu28() {
           "$speech+thumbs_down",
           "when",
           "you",
-          "go",
+          "$walking+tray_out",
           "out.",
         ],
       },
