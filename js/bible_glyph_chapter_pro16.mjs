@@ -569,7 +569,7 @@ export function bible_glyph_chapter_pro16() {
           "A",
           "perverse",
           "$man_beard",
-          "spreads",
+          "$hand_sending",
           "dissension,",
           "and",
           "a",
