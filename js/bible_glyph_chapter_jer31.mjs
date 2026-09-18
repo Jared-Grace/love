@@ -1188,7 +1188,7 @@ export function bible_glyph_chapter_jer31() {
           "Thus",
           "says",
           "the",
-          "LORD,",
+          "$i_am,",
           "who",
           "$hands_giving",
           "the",
