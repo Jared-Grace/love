@@ -831,7 +831,7 @@ export function bible_glyph_chapter_ezk03() {
           "that",
           "you",
           "$no_entry",
-          "go",
+          "$walking+tray_out",
           "out",
           "among",
           "the",
