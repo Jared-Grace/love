@@ -635,7 +635,7 @@ export function bible_glyph_chapter_gen50() {
         words: [
           "Now",
           "$proper_name$Joseph",
-          "remained",
+          "$person+house",
           "in",
           "$proper_name$Egypt",
           "with",
