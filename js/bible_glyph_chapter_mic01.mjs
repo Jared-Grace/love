@@ -356,7 +356,7 @@ export function bible_glyph_chapter_mic01() {
           "$proper_name$Zaanan",
           "will",
           "$no_entry",
-          "come",
+          "$walking+tray_out",
           "out.",
           "Beth-ezel",
           "is",
