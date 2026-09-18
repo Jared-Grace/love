@@ -105,7 +105,7 @@ export function bible_glyph_chapter_2ki17() {
           "had",
           "conspired",
           "to",
-          "send",
+          "$hand_sending",
           "$angel",
           "to",
           "So",
