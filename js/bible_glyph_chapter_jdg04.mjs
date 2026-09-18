@@ -433,7 +433,7 @@ export function bible_glyph_chapter_jdg04() {
           "the",
           "$i_am",
           "$no_entry",
-          "gone",
+          "$walking+tray_out",
           "before",
           "you?",
           "So",
