@@ -676,7 +676,7 @@ export function bible_glyph_chapter_1sa20() {
           "trouble",
           "began,",
           "and",
-          "remain",
+          "$person+house",
           "beside",
           "the",
           "stone",
