@@ -438,7 +438,7 @@ export function bible_glyph_chapter_2sa07() {
           "$house",
           "for",
           "My",
-          "name,",
+          "$name_tag,",
           "and",
           "I",
           "will",
