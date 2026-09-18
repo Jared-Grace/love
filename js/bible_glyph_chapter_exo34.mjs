@@ -790,7 +790,7 @@ export function bible_glyph_chapter_exo34() {
           "three",
           "times",
           "a",
-          "year.",
+          "$year.",
         ],
       },
       {
