@@ -455,7 +455,7 @@ export function bible_glyph_chapter_exo34() {
           "god,",
           "for",
           "the",
-          "LORD,",
+          "$i_am,",
           "whose",
           "name",
           "is",
