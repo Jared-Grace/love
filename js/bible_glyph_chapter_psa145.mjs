@@ -455,7 +455,7 @@ export function bible_glyph_chapter_psa145() {
           "$speech+thumbs_up",
           "His",
           "$sparkle",
-          "name",
+          "$name_tag",
           "$hourglass",
           "and",
           "ever.",
