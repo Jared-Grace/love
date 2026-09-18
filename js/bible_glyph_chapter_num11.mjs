@@ -1105,7 +1105,7 @@ export function bible_glyph_chapter_num11() {
           "and",
           "the",
           "$i_am",
-          "struck",
+          "$fist",
           "$family",
           "with",
           "a",
