@@ -654,7 +654,7 @@ export function bible_glyph_chapter_job01() {
           "$hands_giving",
           "and",
           "the",
-          "LORD",
+          "$i_am",
           "$hand_receiving.",
           "$speech+thumbs_up",
           "be",
