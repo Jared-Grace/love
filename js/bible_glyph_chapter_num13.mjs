@@ -680,7 +680,7 @@ export function bible_glyph_chapter_num13() {
           "and",
           "the",
           "$proper_name$Canaanites",
-          "live",
+          "$person+house",
           "by",
           "the",
           "$sea",
