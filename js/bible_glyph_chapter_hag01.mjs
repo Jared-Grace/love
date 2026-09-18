@@ -329,7 +329,7 @@ export function bible_glyph_chapter_hag01() {
           "whatever",
           "the",
           "ground",
-          "yields,",
+          "$walking+tray_out,",
           "on",
           "$person",
           "and",
