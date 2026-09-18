@@ -219,7 +219,7 @@ export function bible_glyph_chapter_deu12() {
           "your",
           "$house$s",
           "shall",
-          "eat",
+          "$eating",
           "and",
           "rejoice",
           "in",
