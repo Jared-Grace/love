@@ -285,7 +285,7 @@ export function bible_glyph_chapter_deu16() {
           "$sun",
           "you",
           "must",
-          "eat",
+          "$eating",
           "unleavened",
           "bread,",
           "and",
