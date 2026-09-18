@@ -487,7 +487,7 @@ export function bible_glyph_chapter_gen16() {
           "old",
           "when",
           "$proper_name$Hagar",
-          "bore",
+          "$baby",
           "$proper_name$Ishmael",
           "to",
           "him.",
