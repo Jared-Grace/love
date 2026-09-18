@@ -499,7 +499,7 @@ export function bible_glyph_chapter_mat05() {
           "you",
           "will",
           "$no_entry",
-          "enter",
+          "$footprints+tray_in",
           "the",
           "$castle",
           "of",
