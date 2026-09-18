@@ -84,7 +84,10 @@ export function bible_glyph_roots() {
     " is where it lives.");
   ("EGO, SU, PROS AND HOS WEAR THE PICTURES THE HEBREW JOINED SMALL WORDS WEAR (2026-09-17): the bust for I and we, the finger pointing at the reader for you, the target for to, and the mirror for as and like. The interlinear files every form of I and we under 1473 and every form of you under 4771, so one number each carries the singular and the plural, and none of the four pictures says how many - which is why they were chosen for the Hebrew in the first place. Pros is to three hundred and forty five times against with forty two; hos is as and like, and kathos and hosper are that word built on, so the three sit in one row.");
   ("THE ARTICLE IS SEATED ON THE PUSHPIN (2026-09-17), the same mark the Hebrew article draws, because every word of the original is to have a picture. It is the in five thousand five hundred and eighty three of its top wordings, and its who and those who are the article standing for the one who, which is the same word doing its own work. Drawing every article is also what makes the one left off God in the first verse of John visible, where silence would have hidden that difference along with all the rest.");
-  ("EIS IS DELIBERATELY NOT SEATED ON THE TARGET. It is to four hundred and sixty two times, into two hundred and ninety four, in a hundred and seventy two and for a hundred and twenty three, and whether a movement into a place wants the target or the tray that en already draws is a question about the word rather than a count.");
+  ("EIMI IS SEATED ON THE CHAIN LINK (2026-09-18), which is the seat the equals sign was taken back off two paragraphs above. The argument there was against that particular mark and not against seating the word at all, and while the row stayed empty the commonest verb in the New Testament stood in bare letters on every line it appeared on - is four hundred and ninety five times, are a hundred and eighty seven, was a hundred and sixty six. The character table carries why a link claims what a copula claims and the equals sign claims more.");
+  ("EIS IS SEATED ON THE TARGET AND THE IN-TRAY TOGETHER (2026-09-18). It is to four hundred and sixty two times, into two hundred and ninety four, in a hundred and seventy two and for a hundred and twenty three, and the question the row was held open for - target or tray - had a third answer that is the word itself. Eis is a going that ENDS INSIDE: pros is facing toward and en is resting in, and eis is the one that travels the first and arrives at the second.");
+  ("THE GROUP IS SPELLABLE ONE WAY AND THAT WAY CANNOT OCCUR. The spellable-groups report names it, because pros ends on the target and en opens on the tray, so a pros standing immediately in front of an en would draw the same two touching pictures eis draws. A preposition is never immediately in front of another preposition: its own object stands between them, and the object is the reason the preposition is there. The one opening left is an object drawn with neither a picture nor any English of its own, which is rare and is the same opening the four groups already in the report live with.");
+  ("THE PAIR ALSO KEEPS EIS AND PROS APART, which one mark could not have done. Both are to in English more often than they are anything else, so seating eis on the target alone would have drawn the two prepositions identically in the verse that needs them separated - the first of John says the Word was pros God, facing him, and says nothing about being in him. A group spends no new picture and says the difference.");
   let roots = [
     {
       root: "agape",
@@ -1159,6 +1162,26 @@ export function bible_glyph_roots() {
         {
           strong: "240",
           glyph: "arrow_both_ways",
+        },
+      ],
+    },
+    {
+      root: "eimi",
+      gloss: "is, are, was, will be, am, were",
+      words: [
+        {
+          strong: "1510",
+          glyph: "link",
+        },
+      ],
+    },
+    {
+      root: "eis",
+      gloss: "to, into, in, for",
+      words: [
+        {
+          strong: "1519",
+          glyph: "toward+tray_in",
         },
       ],
     },

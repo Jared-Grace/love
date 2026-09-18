@@ -1,7 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { g_coordinates_key } from "./g_coordinates_key.mjs";
-import { property_exists_not } from "./property_exists_not.mjs";
-import { list_filter } from "./list_filter.mjs";
+import { g_coordinates_outside_index } from "./g_coordinates_outside_index.mjs";
 export function bless_coordinates_footway(coordinates, roads) {
   arguments_assert(arguments, 2);
   ("The ground somebody on foot may be SET DOWN on: every square of land except the road.");
@@ -13,11 +11,10 @@ export function bless_coordinates_footway(coordinates, roads) {
   ("Somebody already on the road is let off the kerb so they can get away from the cars,");
   ("which means a person placed there does not merely start in the road - they are the one");
   ("kind of person allowed to go on walking down it.");
-  function road_not_is(tile) {
-    let key = g_coordinates_key(tile);
-    let off = property_exists_not(roads, key);
-    return off;
-  }
-  let footway = list_filter(coordinates, road_not_is);
+  ("The choosing itself is said in one place for the whole repo, because a crowd being");
+  ("parted keeps the same kerb from the other side and asks the same question of the map.");
+  ("What is left here is the NAME: the ground a person may be set down on is called the");
+  ("footway, and a caller says that rather than saying the road twice.");
+  let footway = g_coordinates_outside_index(coordinates, roads);
   return footway;
 }
