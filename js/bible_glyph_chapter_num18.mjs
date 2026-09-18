@@ -30,7 +30,7 @@ export function bible_glyph_chapter_num18() {
           "your",
           "$father",
           "must",
-          "bear",
+          "$lifting",
           "the",
           "iniquity",
           "of",
