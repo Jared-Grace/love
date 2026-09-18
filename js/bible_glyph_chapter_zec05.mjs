@@ -136,7 +136,7 @@ export function bible_glyph_chapter_zec05() {
           "falsely",
           "by",
           "My",
-          "name.",
+          "$name_tag.",
           "It",
           "will",
           "remain",
