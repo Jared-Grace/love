@@ -88,7 +88,7 @@ export function bible_glyph_chapter_zec14() {
           "Then",
           "$i_am",
           "will",
-          "go",
+          "$walking+tray_out",
           "out",
           "to",
           "fight",
