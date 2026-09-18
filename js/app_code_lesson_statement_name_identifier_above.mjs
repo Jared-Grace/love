@@ -1,11 +1,11 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_identifier_name } from "./app_code_lesson_statement_name_identifier_name.mjs";
 import { app_code_lesson_statement_name_identifier_word } from "./app_code_lesson_statement_name_identifier_word.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
 import { app_code_value_line } from "./app_code_value_line.mjs";
@@ -31,13 +31,15 @@ export function app_code_lesson_statement_name_identifier_above(root, context) {
     "So far every cup has been called ",
     name_before,
   ]);
-  app_code_lesson_cup_fruit(box_before, grapes, name_before);
+  ("No names are lent to these cups, so their letters come out the dark blue every cup on these screens has always been written in. The colours belong to a lesson whose code box draws the same names in the same colours, and this screen's does not yet.");
+  let uncolored = [];
+  app_code_lesson_cup_fruit(box_before, grapes, name_before, uncolored);
   ("the second picture is the first one with a different word written on it, and the line under it says the one thing a learner has to carry away - that nothing else about the cup moved");
   let box_any = app_code_container_light_blue(root);
   html_div_cycle_code(box_any, ["But you can call a cup whatever you like"]);
   ("THIS CUP rather than THIS ONE. One is a word that has to be resolved before the sentence means anything, and the thing it stands for was named two boxes up; naming the cup outright costs one word and leaves nothing to resolve. It also lines the sentence up with every other line on these screens, which all say cup.");
   html_div_cycle_code(box_any, ["Suppose you called this cup ", name]);
-  app_code_lesson_cup_fruit(box_any, grapes, name);
+  app_code_lesson_cup_fruit(box_any, grapes, name, uncolored);
   html_div_cycle_code(box_any, ["What is in the cup did not change"]);
   app_code_value_line(box_any, "Inside the cup: ", grapes);
   let box_id = app_code_container_light_blue(root);

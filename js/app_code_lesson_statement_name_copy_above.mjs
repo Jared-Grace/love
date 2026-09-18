@@ -6,7 +6,7 @@ import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_sta
 import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_note_div_cycle_code } from "./app_code_note_div_cycle_code.mjs";
 import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_code_lesson_statement_name_copy_code_box } from "./app_code_lesson_statement_name_copy_code_box.mjs";
@@ -23,46 +23,63 @@ export function app_code_lesson_statement_name_copy_above(root, context) {
   let name_copy = app_code_lesson_statement_name_third();
   let word_first = app_code_lesson_statement_name_value_word();
   let word_last = app_code_lesson_statement_name_two_word();
+  ("THE ORDER OF THIS LIST IS WHAT DECIDES WHICH NAME IS WHICH COLOUR, on the cups, in the sentences, and in the program at the bottom of the screen. It is the order the screen introduces them in, which is also the order the program's notes first mark them in - and it has to stay that way, because the code box works its own order out from the notes rather than being told this one.");
+  ("Written out here rather than fetched from the code box, because the story starts long before the program does: a reader meets the first cup several boxes above anything that could be parsed, and a colour that arrived late would be the joining work put back on them.");
+  let names = [name_first, name_last, name_copy];
   let nothing = text_empty();
   let cup_first = [word_first, name_first];
   let cup_last = [word_last, name_last];
   let box_have = app_code_container_light_blue(root);
-  html_div_cycle_code(box_have, [
-    "Suppose you had two cups, one called ",
-    name_first,
-    " and one called ",
-    name_last,
-  ]);
-  app_code_lesson_cups_row_holding(box_have, [
-    [nothing, name_first],
-    [nothing, name_last],
-  ]);
+  app_code_note_div_cycle_code(
+    box_have,
+    [
+      "Suppose you had two cups, one called ",
+      name_first,
+      " and one called ",
+      name_last,
+    ],
+    names,
+  );
+  app_code_lesson_cups_row_holding(
+    box_have,
+    [
+      [nothing, name_first],
+      [nothing, name_last],
+    ],
+    names,
+  );
   ("the words for what is in a cup are joined into the writing around them rather than given as parts of their own. The parts alternate between plain writing and code, one and then the other all the way along, so a part standing in an odd place comes out dressed as code - and grapes is not code, it is what is in the cup. Only the names on the cups are code here.");
   let has_first = list_join_empty([" has ", word_first, " and cup "]);
   let has_last = list_join_empty([" has ", word_last]);
-  html_div_cycle_code(box_have, [
-    "Suppose cup ",
-    name_first,
-    has_first,
-    name_last,
-    has_last,
-  ]);
-  app_code_lesson_cups_row_holding(box_have, [cup_first, cup_last]);
+  app_code_note_div_cycle_code(
+    box_have,
+    ["Suppose cup ", name_first, has_first, name_last, has_last],
+    names,
+  );
+  app_code_lesson_cups_row_holding(box_have, [cup_first, cup_last], names);
   let box_new = app_code_container_light_blue(root);
-  html_div_cycle_code(box_new, ["Suppose you have a third cup ", name_copy]);
-  app_code_lesson_cups_row_holding(box_new, [
-    cup_first,
-    cup_last,
-    [nothing, name_copy],
-  ]);
-  html_div_cycle_code(box_new, [
-    "Suppose you asked someone to look inside cup ",
-    name_first,
-    ", and whatever was in cup ",
-    name_first,
-    ", also put some in cup ",
-    name_copy,
-  ]);
+  app_code_note_div_cycle_code(
+    box_new,
+    ["Suppose you have a third cup ", name_copy],
+    names,
+  );
+  app_code_lesson_cups_row_holding(
+    box_new,
+    [cup_first, cup_last, [nothing, name_copy]],
+    names,
+  );
+  app_code_note_div_cycle_code(
+    box_new,
+    [
+      "Suppose you asked someone to look inside cup ",
+      name_first,
+      ", and whatever was in cup ",
+      name_first,
+      ", also put some in cup ",
+      name_copy,
+    ],
+    names,
+  );
   let found = list_join_empty([
     " has ",
     word_first,
@@ -72,20 +89,22 @@ export function app_code_lesson_statement_name_copy_above(root, context) {
     word_first,
     " in cup ",
   ]);
-  html_div_cycle_code(box_new, ["Cup ", name_first, found, name_copy]);
-  app_code_lesson_cups_row_holding(box_new, [
-    cup_first,
-    cup_last,
-    [word_first, name_copy],
-  ]);
+  app_code_note_div_cycle_code(
+    box_new,
+    ["Cup ", name_first, found, name_copy],
+    names,
+  );
+  app_code_lesson_cups_row_holding(
+    box_new,
+    [cup_first, cup_last, [word_first, name_copy]],
+    names,
+  );
   let both = list_join_empty([" both have ", word_first, " in them"]);
-  html_div_cycle_code(box_new, [
-    "So now cups ",
-    name_first,
-    " and ",
-    name_copy,
-    both,
-  ]);
+  app_code_note_div_cycle_code(
+    box_new,
+    ["So now cups ", name_first, " and ", name_copy, both],
+    names,
+  );
   let removed = list_join_empty(["No ", word_first, " were removed from cup "]);
   ("A colon and THE PERSON, not a comma and THEY. The half before the colon says what did not happen and the half after says what did, and a comma joins them as though the second were more of the first - the colon marks it as the correction it is. THEY, this far down the box, has the two cups and the person all behind it to point at; the person is the one who did the fetching, and saying so costs two words and leaves nothing to work out.");
   let other = list_join_empty([
@@ -93,7 +112,11 @@ export function app_code_lesson_statement_name_copy_above(root, context) {
     word_first,
     " to put in cup ",
   ]);
-  html_div_cycle_code(box_new, [removed, name_first, other, name_copy]);
+  app_code_note_div_cycle_code(
+    box_new,
+    [removed, name_first, other, name_copy],
+    names,
+  );
   app_code_lesson_statement_name_copy_code_box(
     root,
     cup_first,
