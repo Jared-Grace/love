@@ -57,7 +57,7 @@ export function bible_glyph_chapter_jdg04() {
           "was",
           "$proper_name$Sisera,",
           "who",
-          "lived",
+          "$person+house",
           "in",
           "$proper_name$Harosheth-hagoyim.",
         ],
