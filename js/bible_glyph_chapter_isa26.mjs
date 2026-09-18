@@ -108,7 +108,7 @@ export function bible_glyph_chapter_isa26() {
           "humbled",
           "those",
           "who",
-          "dwell",
+          "$person+house",
           "on",
           "high;",
           "He",
