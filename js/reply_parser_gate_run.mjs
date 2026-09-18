@@ -9,7 +9,7 @@ import { reply_messages_inner } from "./reply_messages_inner.mjs";
 import { json_equal_assert_json } from "./json_equal_assert_json.mjs";
 import { each_async } from "./each_async.mjs";
 import { list_size } from "./list_size.mjs";
-export async function reply_test() {
+export async function reply_parser_gate_run() {
   "Checks the reply parser against written-down messages and the tokens each one should come apart into - a sequence a choice an optional and a once-or-more each read both where they match and where they must not";
   "★ THE WALK MUST BE AWAITED, AND THAT IS THE ONE THING THIS FILE CAN GET WRONG WITHOUT ANYONE FINDING OUT. Reading a message is asynchronous, so a walk that calls the check without awaiting it launches every case and returns before a single one has answered: the function hands back success, and the failures arrive afterwards as rejections nobody is holding a catch around. Measured 2026-09-18, it printed its result first and crashed second, and that is why no gate could run it.";
   ("★ THE EXPECTED RESULT IS THE WHOLE RECORD, SPELLED IN THE ORDER THE READER BUILDS IT. The comparison goes through ",
