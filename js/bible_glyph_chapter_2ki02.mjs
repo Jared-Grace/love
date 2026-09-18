@@ -17,7 +17,7 @@ export function bible_glyph_chapter_2ki02() {
           "before",
           "the",
           "$i_am",
-          "took",
+          "$walking+pointing_up",
           "$proper_name$Elijah",
           "up",
           "to",
