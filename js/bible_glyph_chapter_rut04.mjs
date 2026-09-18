@@ -477,7 +477,7 @@ export function bible_glyph_chapter_rut04() {
           "$proper_name$Perez,",
           "whom",
           "$proper_name$Tamar",
-          "bore",
+          "$baby",
           "to",
           "$proper_name$Judah,",
           "$tray_out",
