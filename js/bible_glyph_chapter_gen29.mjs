@@ -490,7 +490,7 @@ export function bible_glyph_chapter_gen29() {
           "$kneeling",
           "you",
           "seven",
-          "years",
+          "$year",
           "for",
           "your",
           "younger",
