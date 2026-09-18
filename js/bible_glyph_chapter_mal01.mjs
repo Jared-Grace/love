@@ -224,7 +224,7 @@ export function bible_glyph_chapter_mal01() {
           "we",
           "despised",
           "Your",
-          "name?",
+          "$name_tag?",
         ],
       },
       {
