@@ -127,7 +127,7 @@ export function bible_glyph_chapter_est04() {
           "told",
           "her,",
           "the",
-          "queen",
+          "$queen",
           "was",
           "overcome",
           "with",
