@@ -691,7 +691,7 @@ export function bible_glyph_chapter_2ki03() {
           "the",
           "$king",
           "had",
-          "come",
+          "$walking+pointing_up",
           "up",
           "to",
           "fight",
