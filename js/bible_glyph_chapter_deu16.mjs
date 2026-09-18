@@ -566,7 +566,7 @@ export function bible_glyph_chapter_deu16() {
           "Three",
           "times",
           "a",
-          "year",
+          "$year",
           "all",
           "your",
           "men",
