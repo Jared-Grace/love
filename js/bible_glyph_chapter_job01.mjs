@@ -321,7 +321,7 @@ export function bible_glyph_chapter_job01() {
         verse_number: 11,
         words: [
           "But",
-          "stretch",
+          "$hand_sending",
           "out",
           "Your",
           "$hand",
