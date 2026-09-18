@@ -300,7 +300,7 @@ export function bible_glyph_chapter_jer29() {
           "them,",
           "declares",
           "the",
-          "LORD.",
+          "$i_am.",
         ],
       },
       {
