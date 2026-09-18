@@ -101,7 +101,7 @@ export function bible_glyph_chapter_num06() {
           "is",
           "$no_entry",
           "to",
-          "eat",
+          "$eating",
           "anything",
           "that",
           "$hammer",
