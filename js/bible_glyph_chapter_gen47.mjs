@@ -591,7 +591,7 @@ export function bible_glyph_chapter_gen47() {
           "him",
           "the",
           "second",
-          "year",
+          "$year",
           "and",
           "$speech,",
           "We",
