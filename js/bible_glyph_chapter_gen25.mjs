@@ -238,7 +238,7 @@ export function bible_glyph_chapter_gen25() {
           "$son,",
           "and",
           "$proper_name$Isaac",
-          "lived",
+          "$person+house",
           "near",
           "Beer",
           "Lahai",
