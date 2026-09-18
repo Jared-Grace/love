@@ -122,7 +122,7 @@ export function bible_glyph_chapter_jhn14() {
       {
         verse_number: 5,
         words: [
-          "Thomas",
+          "$proper_name$Thomas",
           "$speech",
           "to",
           "$pointing_back,",
@@ -202,7 +202,7 @@ export function bible_glyph_chapter_jhn14() {
       {
         verse_number: 8,
         words: [
-          "Philip",
+          "$proper_name$Philip",
           "$speech",
           "to",
           "$pointing_back,",
@@ -233,7 +233,7 @@ export function bible_glyph_chapter_jhn14() {
           "all",
           "this",
           "time,",
-          "Philip,",
+          "$proper_name$Philip,",
           "$plus",
           "you",
           "still",
@@ -603,9 +603,9 @@ export function bible_glyph_chapter_jhn14() {
       {
         verse_number: 22,
         words: [
-          "Judas",
+          "$proper_name$Judas",
           "($no_entry",
-          "Iscariot)",
+          "$proper_name$Iscariot)",
           "$speech",
           "to",
           "$pointing_back,",
