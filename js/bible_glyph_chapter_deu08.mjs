@@ -382,7 +382,7 @@ export function bible_glyph_chapter_deu08() {
           "in",
           "which",
           "to",
-          "dwell,",
+          "$person+house,",
         ],
       },
       {
