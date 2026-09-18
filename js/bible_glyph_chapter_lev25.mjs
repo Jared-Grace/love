@@ -366,7 +366,7 @@ export function bible_glyph_chapter_lev25() {
           "you.",
           "You",
           "may",
-          "eat",
+          "$eating",
           "only",
           "the",
           "crops",
