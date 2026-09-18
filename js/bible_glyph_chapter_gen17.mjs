@@ -623,7 +623,7 @@ export function bible_glyph_chapter_gen17() {
           "this",
           "time",
           "next",
-          'year."',
+          '$year."',
         ],
       },
       {
