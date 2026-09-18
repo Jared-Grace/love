@@ -288,7 +288,7 @@ export function bible_glyph_chapter_num22() {
           "princes",
           "of",
           "$proper_name$Moab",
-          "stayed",
+          "$person+house",
           "with",
           "$proper_name$Balaam.",
         ],
