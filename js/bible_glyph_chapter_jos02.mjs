@@ -818,7 +818,7 @@ export function bible_glyph_chapter_jos02() {
           "Indeed,",
           "all",
           "who",
-          "dwell",
+          "$person+house",
           "in",
           "the",
           "$earth",
