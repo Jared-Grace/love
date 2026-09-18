@@ -296,7 +296,7 @@ export function bible_glyph_chapter_rut01() {
           "as",
           "they",
           "wept",
-          "aloud",
+          "$lifting",
         ],
       },
       {
