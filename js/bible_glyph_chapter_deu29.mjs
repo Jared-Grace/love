@@ -727,7 +727,7 @@ export function bible_glyph_chapter_deu29() {
           "with",
           "$no_entry",
           "plant",
-          "growing",
+          "$walking+pointing_up",
           "on",
           "it,",
           "just",
