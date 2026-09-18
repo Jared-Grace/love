@@ -10,7 +10,7 @@ import { json_equal } from "./json_equal.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 export function app_code_note_runs(code) {
   arguments_assert(arguments, 1);
-  ("a program cut into the longest pieces that are all drawn the same way, each piece as the text of it, the colour it is drawn in, how strongly, and the colour of the patch behind it");
+  ("a program cut into the longest pieces that are all drawn the same way, each piece as the text of it, the colour it is drawn in, and how strongly");
   ("THE CUTTING IS DONE HERE AND THE DRAWING NEXT DOOR, because one of the two is arithmetic over text and the other is a run of spans put into a page, and neither is easier to read while the other is in front of it. This half can be asked a question and its answer read; the half that draws can only be looked at.");
   ("Neighbours drawn alike are joined rather than left as one piece each, because a character in a span of its own is a chance for a browser to break a line inside a word, and code that wraps mid-word is code the reader has to reassemble.");
   let styles = app_code_note_styles(code);
@@ -28,13 +28,13 @@ export function app_code_note_runs(code) {
       continue;
     }
     if (style) {
-      runs.push([saying, style[0], style[1], style[2]]);
+      runs.push([saying, style[0], style[1]]);
     }
     saying = character;
     style = next;
   }
   if (style) {
-    runs.push([saying, style[0], style[1], style[2]]);
+    runs.push([saying, style[0], style[1]]);
   }
   return runs;
 }
