@@ -378,7 +378,7 @@ export function bible_glyph_chapter_1ki13() {
           "You",
           "must",
           "$no_entry",
-          "eat",
+          "$eating",
           "$bread",
           "$no_entry",
           "drink",
