@@ -293,7 +293,7 @@ export function bible_glyph_chapter_mrk05() {
         "that",
         "we",
         "may",
-        "enter",
+        "$footprints+tray_in",
         "$pointing_back.”",
       ],
     },
