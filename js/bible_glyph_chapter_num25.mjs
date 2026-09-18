@@ -472,7 +472,7 @@ export function bible_glyph_chapter_num25() {
           "the",
           "$proper_name$Midianites",
           "and",
-          "strike",
+          "$fist",
           "them",
           "dead,",
         ],
