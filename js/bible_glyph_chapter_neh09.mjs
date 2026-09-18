@@ -261,7 +261,7 @@ export function bible_glyph_chapter_neh09() {
           "gave",
           "him",
           "the",
-          "name",
+          "$name_tag",
           "Abraham.",
         ],
       },
