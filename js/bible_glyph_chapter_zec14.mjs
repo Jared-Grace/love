@@ -301,7 +301,7 @@ export function bible_glyph_chapter_zec14() {
           "the",
           "$earth,",
           "the",
-          "LORD",
+          "$i_am",
           "alone,",
           "and",
           "His",
