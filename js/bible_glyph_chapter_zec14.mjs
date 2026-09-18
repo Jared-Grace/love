@@ -305,7 +305,7 @@ export function bible_glyph_chapter_zec14() {
           "alone,",
           "and",
           "His",
-          "name",
+          "$name_tag",
           "alone.",
         ],
       },
