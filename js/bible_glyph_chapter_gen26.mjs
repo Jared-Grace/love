@@ -373,7 +373,7 @@ export function bible_glyph_chapter_gen26() {
           "found",
           "in",
           "that",
-          "year",
+          "$year",
           "a",
           "hundred",
           "measures,",
