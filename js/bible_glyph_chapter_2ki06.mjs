@@ -761,7 +761,7 @@ export function bible_glyph_chapter_2ki06() {
           "he",
           "sent",
           "them",
-          "away,",
+          "$hand_sending,",
           "and",
           "they",
           "$walking",
