@@ -942,7 +942,7 @@ export function bible_glyph_chapter_lev08() {
         words: [
           "You",
           "must",
-          "remain",
+          "$person+house",
           "at",
           "the",
           "entrance",
