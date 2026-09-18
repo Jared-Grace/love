@@ -868,7 +868,7 @@ export function bible_glyph_chapter_2ki17() {
           "so",
           "the",
           "$i_am",
-          "sent",
+          "$hand_sending",
           "lions",
           "among",
           "them,",
