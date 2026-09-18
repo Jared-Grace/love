@@ -344,7 +344,7 @@ export function bible_glyph_chapter_gen45() {
           "be",
           "five",
           "more",
-          "years",
+          "$year",
           "of",
           "famine.",
           "Otherwise,",
