@@ -34,7 +34,7 @@ export function bible_glyph_chapter_num09() {
           "after",
           "Israel",
           "had",
-          "come",
+          "$walking+tray_out",
           "out",
           "of",
           "the",
