@@ -916,7 +916,7 @@ export function bible_glyph_chapter_exo22() {
           "You",
           "must",
           "$no_entry",
-          "eat",
+          "$eating",
           "the",
           "$meat",
           "of",
