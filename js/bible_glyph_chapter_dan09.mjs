@@ -510,7 +510,7 @@ export function bible_glyph_chapter_dan09() {
           "our",
           "$fire,",
           "who",
-          "brought",
+          "$walking+tray_out",
           "Your",
           "$family",
           "out",
