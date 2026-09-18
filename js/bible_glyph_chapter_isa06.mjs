@@ -243,7 +243,7 @@ export function bible_glyph_chapter_isa06() {
           "Whom",
           "shall",
           "I",
-          "send?",
+          "$hand_sending?",
           "Who",
           "will",
           "$walking",
