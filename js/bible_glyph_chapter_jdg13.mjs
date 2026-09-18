@@ -74,7 +74,7 @@ export function bible_glyph_chapter_jdg13() {
           "and",
           "had",
           "$no_entry",
-          "children.",
+          "$baby.",
         ],
       },
       {
