@@ -69,7 +69,7 @@ export function bible_glyph_chapter_exo05() {
           "and",
           "let",
           "$proper_name$Israel",
-          "go?",
+          "$hand_sending?",
           "I",
           "do",
           "$no_entry",
