@@ -226,7 +226,7 @@ export function bible_glyph_chapter_deu18() {
           "there",
           "before",
           "the",
-          "LORD.",
+          "$i_am.",
         ],
       },
       {
