@@ -543,7 +543,7 @@ export function bible_glyph_chapter_gen05() {
           "eighty",
           "and",
           "two",
-          "years,",
+          "$year,",
           "and",
           "he",
           "fathered",
