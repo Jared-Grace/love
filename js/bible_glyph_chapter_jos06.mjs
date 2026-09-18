@@ -693,7 +693,7 @@ export function bible_glyph_chapter_jos06() {
           "all",
           "the",
           "$family",
-          "charged",
+          "$walking+pointing_up",
           "straight",
           "into",
           "the",
