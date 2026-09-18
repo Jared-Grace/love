@@ -848,7 +848,7 @@ export function bible_glyph_chapter_jer29() {
           "In",
           "your",
           "own",
-          "name",
+          "$name_tag",
           "you",
           "have",
           "sent",
