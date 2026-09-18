@@ -954,7 +954,7 @@ export function bible_glyph_chapter_lev25() {
           "they",
           "shall",
           "be",
-          "released",
+          "$walking+tray_out",
           "in",
           "the",
           "Jubilee.",
