@@ -207,7 +207,7 @@ export function bible_glyph_chapter_exo17() {
           "rock,",
           "$water",
           "will",
-          "come",
+          "$walking+tray_out",
           "$tray_out",
           "it",
           "for",
