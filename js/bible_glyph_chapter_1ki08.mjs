@@ -1524,7 +1524,7 @@ export function bible_glyph_chapter_1ki08() {
           "enemies,",
           "$road",
           "You",
-          "send",
+          "$hand_sending",
           "them,",
           "and",
           "when",
