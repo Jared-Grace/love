@@ -51,7 +51,7 @@ export function bible_glyph_chapter_num25() {
           "And",
           "the",
           "$family",
-          "ate",
+          "$eating",
           "and",
           "$bowing",
           "to",
