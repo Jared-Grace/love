@@ -40,7 +40,7 @@ export function bible_glyph_chapter_1ki19() {
         words: [
           "So",
           "Jezebel",
-          "sent",
+          "$hand_sending",
           "an",
           "$angel",
           "to",
