@@ -213,7 +213,7 @@ export function bible_glyph_chapter_ezr01() {
           "stirred,",
           "prepared",
           "to",
-          "go",
+          "$walking+pointing_up",
           "up",
           "and",
           "rebuild",
