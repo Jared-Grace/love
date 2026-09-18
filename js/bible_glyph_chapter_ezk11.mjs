@@ -266,7 +266,7 @@ export function bible_glyph_chapter_ezk11() {
         words: [
           "I",
           "will",
-          "bring",
+          "$walking+tray_out",
           "you",
           "out",
           "of",
