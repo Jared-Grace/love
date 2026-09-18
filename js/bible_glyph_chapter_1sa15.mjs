@@ -75,7 +75,7 @@ export function bible_glyph_chapter_1sa15() {
           "on",
           "their",
           "$road",
-          "up",
+          "$walking+pointing_up",
           "from",
           "$proper_name$Egypt.",
         ],
