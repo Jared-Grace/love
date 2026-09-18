@@ -209,7 +209,7 @@ export function bible_glyph_chapter_exo32() {
           "sat",
           "down",
           "to",
-          "eat",
+          "$eating",
           "and",
           "drink,",
           "and",
