@@ -606,7 +606,7 @@ export function bible_glyph_chapter_gen03() {
           "and",
           "you",
           "will",
-          "eat",
+          "$eating",
           "the",
           "plants",
           "of",
