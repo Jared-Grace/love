@@ -1059,7 +1059,7 @@ export function bible_glyph_chapter_num14() {
           "year,",
           "you",
           "shall",
-          "bear",
+          "$lifting",
           "your",
           "guilt",
           "forty",
