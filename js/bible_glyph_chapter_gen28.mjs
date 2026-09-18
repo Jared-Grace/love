@@ -276,7 +276,7 @@ export function bible_glyph_chapter_gen28() {
         words: [
           "Meanwhile",
           "Jacob",
-          "left",
+          "$walking+tray_out",
           "Beersheba",
           "and",
           "$walking",
