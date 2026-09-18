@@ -1022,7 +1022,7 @@ export function bible_glyph_chapter_exo12() {
           "$speech,",
           "Get",
           "up,",
-          "leave",
+          "$walking+tray_out",
           "my",
           "$family,",
           "both",
