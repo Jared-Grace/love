@@ -907,7 +907,7 @@ export function bible_glyph_chapter_exo34() {
           "forty",
           "nights,",
           "$no_entry",
-          "eating",
+          "$eating",
           "$bread",
           "or",
           "drinking",
