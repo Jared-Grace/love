@@ -586,7 +586,7 @@ export function bible_glyph_chapter_1ch29() {
           "for",
           "Your",
           "$sparkle",
-          "Name",
+          "$name_tag",
           "comes",
           "from",
           "Your",
