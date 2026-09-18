@@ -611,7 +611,7 @@ export function bible_glyph_chapter_2ch20() {
           "afraid",
           "or",
           "discouraged.",
-          "Go",
+          "$walking+tray_out",
           "out",
           "tomorrow",
           "and",
