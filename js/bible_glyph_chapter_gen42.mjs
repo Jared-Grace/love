@@ -401,7 +401,7 @@ export function bible_glyph_chapter_gen42() {
           "you",
           "shall",
           "not",
-          "leave",
+          "$walking+tray_out",
           "this",
           "place",
           "unless",
