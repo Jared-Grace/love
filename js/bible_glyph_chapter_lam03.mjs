@@ -960,7 +960,7 @@ export function bible_glyph_chapter_lam03() {
           "called",
           "on",
           "Your",
-          "name,",
+          "$name_tag,",
           "O",
           "$i_am,",
           "out",
