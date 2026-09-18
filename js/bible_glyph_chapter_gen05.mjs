@@ -402,7 +402,7 @@ export function bible_glyph_chapter_gen05() {
           "$proper_name$Enoch",
           "eight",
           "hundred",
-          "years,",
+          "$year,",
           "and",
           "he",
           "fathered",
