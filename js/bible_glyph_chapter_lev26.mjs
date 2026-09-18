@@ -956,7 +956,7 @@ export function bible_glyph_chapter_lev26() {
           "your",
           "enemies",
           "who",
-          "dwell",
+          "$person+house",
           "in",
           "it",
           "will",
