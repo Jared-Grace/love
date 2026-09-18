@@ -5,7 +5,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { text_wrap_parenthesis } from "./text_wrap_parenthesis.mjs";
+import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { text_empty } from "./text_empty.mjs";
@@ -38,10 +38,11 @@ export function app_code_lesson_statement_name_copy_code_box(
   ("THE EXPLANATION IS WRITTEN AS NOTES INSIDE THE PROGRAM. Each line of English stands directly above the line it is about, so nothing has to be matched up by eye, and no line is drawn twice. Said as writing outside the box, each line had to be shown twice over - once where it was being explained and once inside the program - and the three lines of this screen came out six.");
   ("Notes rather than writing, because a note may be as long as it needs to be and costs nothing: the machine does not read it, the painter of this chip draws every note dimmer than the code around it, and this course taught notes four lessons before this one. Two slashes only - the other kind of note is not taught anywhere in this course, and a screen is not the place to introduce one.");
   ("A blank line between each note and the group before it, because the notes are what would otherwise have been separate sentences with code between them, and the blank line is what is left of that break.");
-  ("A NAME STANDING IN A SENTENCE IS PUT IN ROUND BRACKETS. The first name a learner meets is a, which is also an English word, so 'this does not remove it from a' reads as a sentence that stops before its last word. The brackets say the letter is the name of a cup and not the start of a phrase, and they say it in writing rather than in a colour, so the reader who cannot tell two colours apart is told the same thing as everybody else. The same mark is what the lines above this box already use.");
-  let first_named = text_wrap_parenthesis(name_first);
-  let last_named = text_wrap_parenthesis(name_last);
-  let copy_named = text_wrap_parenthesis(name_copy);
+  ("A NAME STANDING IN A SENTENCE IS MARKED. The first name a learner meets is a, which is also an English word, so 'this does not remove it from a' reads as a sentence that stops before its last word. The mark says the letter is the name of a cup and not the start of a phrase, and it says it in writing, so the reader who cannot tell two colours apart is told the same thing as everybody else.");
+  ("What the mark is made of is not spelled here and is not this screen's to choose. Marking a name is asked for by name, and the same asking is what the painter looks for again when it comes to fade the mark and colour what it holds - so the two cannot fall out of step, and the day the course wants a different mark it is changed once for every lesson at once.");
+  let first_named = app_code_note_name_mark(name_first);
+  let last_named = app_code_note_name_mark(name_last);
+  let copy_named = app_code_note_name_mark(name_copy);
   let words = list_join_empty([
     "We make cups ",
     first_named,
