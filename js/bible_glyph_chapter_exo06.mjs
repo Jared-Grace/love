@@ -395,7 +395,7 @@ export function bible_glyph_chapter_exo06() {
           "of",
           "$proper_name$Egypt,",
           "to",
-          "bring",
+          "$walking+tray_out",
           "the",
           "$son",
           "of",
