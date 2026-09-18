@@ -722,7 +722,7 @@ export function bible_glyph_chapter_exo19() {
           "The",
           "$family",
           "$no_entry",
-          "come",
+          "$walking+pointing_up",
           "up",
           "$mountain",
           "$proper_name$Sinai,",
