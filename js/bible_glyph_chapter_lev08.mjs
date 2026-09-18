@@ -886,7 +886,7 @@ export function bible_glyph_chapter_lev08() {
         words: [
           "You",
           "$no_entry",
-          "go",
+          "$walking+tray_out",
           "outside",
           "the",
           "entrance",
