@@ -14,7 +14,7 @@ export function bible_glyph_chapter_exo37() {
       {
         verse_number: 1,
         words: [
-          "Bezalel",
+          "$proper_name$Bezalel",
           "went",
           "on",
           "to",
