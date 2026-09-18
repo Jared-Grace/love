@@ -110,7 +110,7 @@ export function bible_glyph_chapter_isa12() {
           "$i_am,",
           "proclaim",
           "His",
-          "name;",
+          "$name_tag;",
           "$lightbulb",
           "His",
           "works",
