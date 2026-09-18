@@ -849,7 +849,7 @@ export function bible_glyph_chapter_gen24() {
         verse_number: 28,
         words: [
           "The",
-          "girl",
+          "$girl",
           "ran",
           "and",
           "told",
