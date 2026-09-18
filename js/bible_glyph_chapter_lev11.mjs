@@ -198,7 +198,7 @@ export function bible_glyph_chapter_lev11() {
           "You",
           "must",
           "$no_entry",
-          "eat",
+          "$eating",
           "their",
           "$meat,",
           "and",
