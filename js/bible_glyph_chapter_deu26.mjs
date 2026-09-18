@@ -416,7 +416,7 @@ export function bible_glyph_chapter_deu26() {
           "third",
           "$year,",
           "the",
-          "year",
+          "$year",
           "of",
           "the",
           "tithe,",
