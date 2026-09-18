@@ -745,7 +745,7 @@ export function bible_glyph_chapter_deu12() {
           "Indeed,",
           "you",
           "may",
-          "eat",
+          "$eating",
           "it",
           "as",
           "you",
