@@ -38,7 +38,7 @@ export function bible_glyph_chapter_psa139() {
           "$lightbulb",
           "when",
           "I",
-          "sit",
+          "$person+house",
           "and",
           "when",
           "I",
