@@ -432,7 +432,7 @@ export function bible_glyph_chapter_oba01() {
           "their",
           "disaster,",
           "$no_entry",
-          "loot",
+          "$hand_sending",
           "their",
           "wealth",
           "in",
