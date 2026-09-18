@@ -1548,7 +1548,7 @@ export function bible_glyph_chapter_1ki01() {
           "$hands_giving",
           "one",
           "to",
-          "sit",
+          "$person+house",
           "on",
           "my",
           "throne",
