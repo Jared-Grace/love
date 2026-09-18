@@ -873,7 +873,7 @@ export function bible_glyph_chapter_jdg07() {
         verse_number: 24,
         words: [
           "$proper_name$Gideon",
-          "sent",
+          "$hand_sending",
           "$angel",
           "throughout",
           "the",
