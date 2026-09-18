@@ -703,7 +703,7 @@ export function bible_glyph_chapter_jud01() {
           "only",
           "$fire",
           "our",
-          "Savior,",
+          "$rescue,",
           "through",
           "$cross",
           "$oil",
