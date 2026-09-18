@@ -641,7 +641,7 @@ export function bible_glyph_chapter_gen01() {
           "Let",
           "the",
           "$earth",
-          "bring",
+          "$walking+tray_out",
           "forth",
           "$sprout",
           "$person_other",
