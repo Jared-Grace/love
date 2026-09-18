@@ -114,7 +114,7 @@ export function bible_glyph_chapter_isa55() {
           "$gift",
           "$anchor",
           "to",
-          "David.",
+          "$proper_name$David.",
         ],
       },
       {
