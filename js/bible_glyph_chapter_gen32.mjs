@@ -768,7 +768,7 @@ export function bible_glyph_chapter_gen32() {
           "What",
           "is",
           "your",
-          "name?",
+          "$name_tag?",
           "He",
           "$speech,",
           "Jacob.",
