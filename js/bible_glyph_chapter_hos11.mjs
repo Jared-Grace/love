@@ -160,7 +160,7 @@ export function bible_glyph_chapter_hos11() {
           "their",
           "gates",
           "and",
-          "consume",
+          "$eating",
           "them",
           "in",
           "their",
