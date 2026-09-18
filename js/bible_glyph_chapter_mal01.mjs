@@ -552,7 +552,7 @@ export function bible_glyph_chapter_mal01() {
           "Hosts,",
           "and",
           "My",
-          "name",
+          "$name_tag",
           "is",
           "to",
           "be",
