@@ -65,6 +65,9 @@ export function bible_glyph_characters() {
   "A NAME WAS ALWAYS GOING TO STAY IN LETTERS AND THE READER HAD NO WAY OF KNOWING THAT. Undrawn English on this page means one thing today - a word waiting for a picture - so a reader meeting Abraham in letters is being told, wrongly, that somebody has not got round to him yet. Nobody ever will, and that is not a gap but a decision: a name is a sound a person answers to, and drawing it would be translating it, which is the one thing a name must never have done to it. The mark is how the page says so.";
   "IT IS A SECOND MARK AND NOT THE TAG REUSED, AND THAT WAS TRIED FIRST. The proposal was that the tag alone means the word name and the tag with letters after it means a name - one picture, read by what follows it. That cannot be read left to right. The fourteenth of Ruth now says may his TAG become famous, where the tag is shem and the word after it is become; a reader following the rule sees letters after a tag and reads the name Become. The rule needs the reader to already know which English words are names, which is the very thing the mark was bought to tell them.";
   "SO THE TWO PICTURES DIVIDE THE WORK THE WAY THE FLAME AND THE SIGN DO. The tag is a word of the original text and is drawn where that word stands. The badge is a mark ABOUT the text, and the letters beside it are the text. A reader who has met the pair reads may his TAG become famous and BADGE David without either one needing the other explained, because nothing in the first is waiting for a second word and nothing in the second is a translation.";
+  "THE LAST THREE WERE BOUGHT BY A COUNT AND NOT BY A CHAPTER (2026-09-18), which is the second time the count has chosen and the first time it has cost anything. The list of Hebrew words no picture seats was read down past the grammar, and the year, the eating and the lifting were the commonest things on it that nothing already here could say. The going out and the going up came off the same list a day earlier and cost nothing, because the vocabulary happened to hold both halves of each; these three did not, and a word used eight hundred times is worth a picture rather than a compromise.";
+  "EACH ONE WAS ASKED OF THE ARTWORK SET BEFORE IT WAS WRITTEN HERE, the cheap way round that the table next door recommends. The set answers to Calendar, to Fork and knife with plate, and to Person lifting weights, so all three can be drawn and none of them is a guess.";
+  "THE CHAIR WAS REFUSED BECAUSE THE SET HAS NO CHAIR. Yashab - to sit, to dwell, to remain - is the commonest undrawn Hebrew word of all, and a seat was the obvious picture for it. Searching the set for one returns wheelchairs and nothing else, and searching for sitting returns the lotus position, which this Bible must not spend: a figure sitting cross-legged beside the praying hands would read as a second kind of prayer. So yashab is drawn as a human and a house instead, a pair already bought, and no picture was added for it.";
   let characters = [
     {
       name: "cross",
@@ -1017,6 +1020,18 @@ export function bible_glyph_characters() {
     {
       name: "statute",
       character: "statute",
+    },
+    {
+      name: "year",
+      character: "📅",
+    },
+    {
+      name: "eating",
+      character: "🍽️",
+    },
+    {
+      name: "lifting",
+      character: "🏋️",
     },
   ];
   return characters;
