@@ -239,7 +239,7 @@ export function bible_glyph_chapter_lev22() {
           "He",
           "must",
           "$no_entry",
-          "eat",
+          "$eating",
           "anything",
           "found",
           "dead",
