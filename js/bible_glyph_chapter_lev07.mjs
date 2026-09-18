@@ -610,7 +610,7 @@ export function bible_glyph_chapter_lev07() {
           "You",
           "$no_entry",
           "to",
-          "eat",
+          "$eating",
           "any",
           "of",
           "the",
