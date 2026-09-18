@@ -764,7 +764,7 @@ export function bible_glyph_chapter_jer23() {
           "I",
           "did",
           "$no_entry",
-          "send",
+          "$hand_sending",
           "these",
           "$megaphone,",
           "yet",
