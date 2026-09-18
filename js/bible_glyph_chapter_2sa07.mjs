@@ -561,7 +561,7 @@ export function bible_glyph_chapter_2sa07() {
           "$proper_name$David",
           "$footprints",
           "in,",
-          "sat",
+          "$person+house",
           "before",
           "the",
           "$i_am,",
