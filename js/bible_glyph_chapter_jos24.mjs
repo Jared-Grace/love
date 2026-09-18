@@ -450,7 +450,7 @@ export function bible_glyph_chapter_jos24() {
           "in",
           "them",
           "and",
-          "eat",
+          "$eating",
           "from",
           "vineyards",
           "and",
