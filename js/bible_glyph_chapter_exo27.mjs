@@ -531,7 +531,7 @@ export function bible_glyph_chapter_exo27() {
           "keep",
           "the",
           "$lamp",
-          "burning",
+          "$walking+pointing_up",
           "continually.",
         ],
       },
