@@ -1100,7 +1100,7 @@ export function bible_glyph_chapter_1sa20() {
           "be",
           "established.",
           "Now",
-          "send",
+          "$hand_sending",
           "and",
           "$hand_receiving",
           "him",
