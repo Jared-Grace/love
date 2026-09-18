@@ -668,7 +668,7 @@ export function bible_glyph_chapter_gen45() {
           "following:",
           "ten",
           "donkeys",
-          "loaded",
+          "$lifting",
           "with",
           "the",
           "best",
