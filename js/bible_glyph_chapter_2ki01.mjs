@@ -87,7 +87,7 @@ export function bible_glyph_chapter_2ki01() {
           "$proper_name$Elijah",
           "the",
           "$proper_name$Tishbite,",
-          "Go",
+          "$walking+pointing_up",
           "up",
           "to",
           "meet",
