@@ -833,7 +833,7 @@ export function bible_glyph_chapter_2sa07() {
           "so",
           "that",
           "Your",
-          "name",
+          "$name_tag",
           "will",
           "be",
           "magnified",
