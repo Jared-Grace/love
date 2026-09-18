@@ -386,7 +386,7 @@ export function bible_glyph_chapter_exo07() {
           "let",
           "the",
           "$family",
-          "go.",
+          "$hand_sending.",
         ],
       },
       {
