@@ -475,7 +475,7 @@ export function bible_glyph_chapter_gen21() {
         words: [
           "Get",
           "up,",
-          "lift",
+          "$lifting",
           "up",
           "the",
           "boy",
