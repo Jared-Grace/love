@@ -393,7 +393,7 @@ export function bible_glyph_chapter_nam01() {
           "carry",
           "on",
           "your",
-          "name.",
+          "$name_tag.",
           "I",
           "will",
           "cut",
