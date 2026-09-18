@@ -1396,7 +1396,7 @@ export function bible_glyph_chapter_exo12() {
           "$son",
           "is",
           "to",
-          "eat",
+          "$eating",
           "of",
           "it.",
         ],
