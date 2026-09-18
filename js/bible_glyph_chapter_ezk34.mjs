@@ -967,7 +967,7 @@ export function bible_glyph_chapter_ezk34() {
           "$earth",
           "or",
           "$no_entry",
-          "bear",
+          "$lifting",
           "the",
           "scorn",
           "of",
