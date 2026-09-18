@@ -12,7 +12,7 @@ export function bible_glyph_chapter_lev19() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "the", "$i_am", "$mouth", "to", "Moses,"],
+        words: ["Then", "the", "$i_am", "$mouth", "to", "$proper_name$Moses,"],
       },
       {
         verse_number: 2,
@@ -23,7 +23,7 @@ export function bible_glyph_chapter_lev19() {
           "whole",
           "congregation",
           "of",
-          "Israel",
+          "$proper_name$Israel",
           "and",
           "$speech",
           "them,",
@@ -944,7 +944,7 @@ export function bible_glyph_chapter_lev19() {
           "the",
           "$earth",
           "of",
-          "Egypt.",
+          "$proper_name$Egypt.",
           "I",
           "am",
           "the",
@@ -1000,7 +1000,7 @@ export function bible_glyph_chapter_lev19() {
           "the",
           "$earth",
           "of",
-          "Egypt.",
+          "$proper_name$Egypt.",
         ],
       },
       {
