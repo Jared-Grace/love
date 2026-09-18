@@ -274,7 +274,7 @@ export function bible_glyph_chapter_num13() {
           "the",
           "men",
           "$proper_name$Moses",
-          "sent",
+          "$hand_sending",
           "to",
           "spy",
           "out",
