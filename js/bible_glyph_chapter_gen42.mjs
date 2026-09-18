@@ -93,7 +93,7 @@ export function bible_glyph_chapter_gen42() {
           "Jacob",
           "did",
           "$no_entry",
-          "send",
+          "$hand_sending",
           "$proper_name$Benjamin,",
           "$proper_name$Josephs",
           "$brother,",
