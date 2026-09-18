@@ -319,7 +319,7 @@ export function bible_glyph_chapter_num12() {
           "$meat",
           "is",
           "half",
-          "consumed",
+          "$eating",
           "when",
           "he",
           "comes",
