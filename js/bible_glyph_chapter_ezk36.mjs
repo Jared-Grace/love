@@ -722,7 +722,7 @@ export function bible_glyph_chapter_ezk36() {
           "for",
           "My",
           "$sparkle",
-          "name,",
+          "$name_tag,",
           "which",
           "the",
           "$house",
