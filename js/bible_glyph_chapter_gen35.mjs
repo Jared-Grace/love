@@ -20,7 +20,7 @@ export function bible_glyph_chapter_gen35() {
           "to",
           "$proper_name$Jacob,",
           "Arise,",
-          "go",
+          "$walking+pointing_up",
           "up",
           "to",
           "Bethel",
