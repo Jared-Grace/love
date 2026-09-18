@@ -640,7 +640,7 @@ export function bible_glyph_chapter_lev16() {
           "Then",
           "he",
           "shall",
-          "go",
+          "$walking+tray_out",
           "out",
           "to",
           "the",
