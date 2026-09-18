@@ -752,7 +752,7 @@ export function bible_glyph_chapter_lev26() {
           "$city,",
           "I",
           "will",
-          "send",
+          "$hand_sending",
           "a",
           "plague",
           "among",
