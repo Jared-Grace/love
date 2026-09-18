@@ -271,7 +271,7 @@ export function bible_glyph_chapter_mrk08() {
           "$plus",
           "the",
           "$proper_name$Pharisees",
-          "came",
+          "$footprints+tray_out",
           "$plus",
           "began",
           "to",
