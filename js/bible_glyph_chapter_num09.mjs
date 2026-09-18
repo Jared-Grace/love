@@ -30,7 +30,7 @@ export function bible_glyph_chapter_num09() {
           "of",
           "the",
           "second",
-          "year",
+          "$year",
           "after",
           "Israel",
           "had",
