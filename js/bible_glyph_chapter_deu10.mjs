@@ -272,7 +272,7 @@ export function bible_glyph_chapter_deu10() {
           "covenant",
           "of",
           "the",
-          "LORD,",
+          "$i_am,",
           "to",
           "stand",
           "before",
