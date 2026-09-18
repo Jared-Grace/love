@@ -114,7 +114,7 @@ export function bible_glyph_chapter_gen46() {
           "I",
           "will",
           "surely",
-          "bring",
+          "$walking+pointing_up",
           "you",
           "back",
           "up",
