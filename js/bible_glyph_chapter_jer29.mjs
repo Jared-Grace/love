@@ -814,7 +814,7 @@ export function bible_glyph_chapter_jer29() {
           "$witness,",
           "declares",
           "the",
-          "LORD.",
+          "$i_am.",
         ],
       },
       {
