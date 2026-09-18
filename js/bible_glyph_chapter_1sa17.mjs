@@ -1413,7 +1413,7 @@ export function bible_glyph_chapter_1sa17() {
           "$sun",
           "I",
           "will",
-          "strike",
+          "$fist",
           "you",
           "down",
           "and",
