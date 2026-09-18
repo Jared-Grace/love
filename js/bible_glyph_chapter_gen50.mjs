@@ -144,7 +144,7 @@ export function bible_glyph_chapter_gen50() {
           "Now",
           "let",
           "me",
-          "go",
+          "$walking+pointing_up",
           "and",
           "bury",
           "my",
