@@ -846,7 +846,7 @@ export function bible_glyph_chapter_2ch06() {
           "and",
           "$hands_raised",
           "Your",
-          "name,",
+          "$name_tag,",
           "$hands_praying",
           "and",
           "pleading",
