@@ -1566,7 +1566,7 @@ export function bible_glyph_chapter_deu28() {
         words: [
           "They",
           "will",
-          "eat",
+          "$eating",
           "the",
           "offspring",
           "of",
