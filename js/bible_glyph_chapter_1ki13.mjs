@@ -596,7 +596,7 @@ export function bible_glyph_chapter_1ki13() {
           "$no_entry",
           "will",
           "I",
-          "eat",
+          "$eating",
           "$bread",
           "$no_entry",
           "drink",
