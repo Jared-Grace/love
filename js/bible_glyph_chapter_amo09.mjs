@@ -249,7 +249,7 @@ export function bible_glyph_chapter_amo09() {
           "the",
           "$earth.",
           "The",
-          "LORD",
+          "$i_am",
           "is",
           "His",
           "name.",
