@@ -311,7 +311,7 @@ export function bible_glyph_chapter_1ki21() {
           "and",
           "nobles",
           "who",
-          "lived",
+          "$person+house",
           "with",
           "$proper_name$Naboth",
           "in",
