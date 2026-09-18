@@ -366,7 +366,7 @@ export function bible_glyph_chapter_hab03() {
           "ready",
           "to",
           "secretly",
-          "devour",
+          "$eating",
           "the",
           "weak.",
         ],
