@@ -283,7 +283,7 @@ export function bible_glyph_chapter_gen12() {
           "called",
           "on",
           "the",
-          "name",
+          "$name_tag",
           "of",
           "the",
           "$i_am.",
