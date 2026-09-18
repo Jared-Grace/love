@@ -1359,7 +1359,7 @@ export function bible_glyph_chapter_gen24() {
           "out",
           "with",
           "her",
-          "jar",
+          "$jar",
           "on",
           "her",
           "shoulder,",
