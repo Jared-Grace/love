@@ -754,7 +754,7 @@ export function bible_glyph_chapter_deu15() {
           "you",
           "must",
           "$no_entry",
-          "eat",
+          "$eating",
           "the",
           "$blood;",
           "pour",
