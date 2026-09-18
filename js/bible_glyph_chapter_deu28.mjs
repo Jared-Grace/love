@@ -1062,7 +1062,7 @@ export function bible_glyph_chapter_deu28() {
           "$no_entry",
           "$lightbulb",
           "will",
-          "eat",
+          "$eating",
           "the",
           "produce",
           "of",
