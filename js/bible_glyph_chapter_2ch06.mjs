@@ -146,7 +146,7 @@ export function bible_glyph_chapter_2ch06() {
           "so",
           "that",
           "My",
-          "name",
+          "$name_tag",
           "would",
           "be",
           "there,",
