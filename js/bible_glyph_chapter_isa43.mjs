@@ -495,7 +495,7 @@ export function bible_glyph_chapter_isa43() {
           "the",
           "Creator",
           "of",
-          "Israel,",
+          "$proper_name$Israel,",
           "and",
           "your",
           "$king.",
