@@ -698,7 +698,7 @@ export function bible_glyph_chapter_num11() {
           "and",
           "they",
           "will",
-          "eat",
+          "$eating",
           "for",
           "a",
           "month.",
