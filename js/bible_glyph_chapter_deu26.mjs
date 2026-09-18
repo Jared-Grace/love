@@ -513,7 +513,7 @@ export function bible_glyph_chapter_deu26() {
           "I",
           "have",
           "$no_entry",
-          "eaten",
+          "$eating",
           "$tray_out",
           "it",
           "while",
