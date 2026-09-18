@@ -209,7 +209,7 @@ export function bible_glyph_chapter_jdg06() {
         words: [
           "the",
           "$i_am",
-          "sent",
+          "$hand_sending",
           "them",
           "a",
           "$megaphone,",
