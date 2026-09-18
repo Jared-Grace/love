@@ -307,7 +307,7 @@ export function bible_glyph_chapter_isa26() {
           "Your",
           "enemies",
           "will",
-          "consume",
+          "$eating",
           "them!",
         ],
       },
