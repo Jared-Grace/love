@@ -254,7 +254,7 @@ export function bible_glyph_chapter_exo30() {
         words: [
           "Once",
           "a",
-          "year",
+          "$year",
           "$proper_name$Aaron",
           "shall",
           "make",
