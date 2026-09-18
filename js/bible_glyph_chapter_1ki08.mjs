@@ -2311,7 +2311,7 @@ export function bible_glyph_chapter_1ki08() {
           "sent",
           "the",
           "$family",
-          "away.",
+          "$hand_sending.",
           "So",
           "they",
           "blessed",
