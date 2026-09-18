@@ -440,7 +440,7 @@ export function bible_glyph_chapter_1sa20() {
           "will",
           "I",
           "$no_entry",
-          "send",
+          "$hand_sending",
           "for",
           "you",
           "and",
