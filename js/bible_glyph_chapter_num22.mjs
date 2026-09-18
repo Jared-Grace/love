@@ -587,7 +587,7 @@ export function bible_glyph_chapter_num22() {
           "So",
           "now",
           "please",
-          "stay",
+          "$person+house",
           "here",
           "overnight",
           "as",
