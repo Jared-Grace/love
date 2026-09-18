@@ -150,7 +150,7 @@ export function bible_glyph_chapter_lev11() {
           "rabbit,",
           "though",
           "it",
-          "chews",
+          "$walking+pointing_up",
           "the",
           "cud,",
           "does",
