@@ -578,7 +578,7 @@ export function bible_glyph_chapter_gen12() {
           "they",
           "sent",
           "him",
-          "away",
+          "$hand_sending",
           "with",
           "his",
           "$woman",
