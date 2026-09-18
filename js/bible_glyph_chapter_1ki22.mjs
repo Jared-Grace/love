@@ -1346,7 +1346,7 @@ export function bible_glyph_chapter_1ki22() {
           "$proper_name$Jehoshaphat",
           "was",
           "thirty-five",
-          "years",
+          "$year",
           "old",
           "when",
           "he",
