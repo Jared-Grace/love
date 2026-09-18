@@ -30,7 +30,7 @@ export function bible_glyph_chapter_isa55() {
           "$walking,",
           "buy,",
           "and",
-          "eat!",
+          "$eating!",
           "$walking,",
           "buy",
           "wine",
