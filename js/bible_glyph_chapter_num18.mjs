@@ -386,7 +386,7 @@ export function bible_glyph_chapter_num18() {
           "You",
           "are",
           "to",
-          "eat",
+          "$eating",
           "it",
           "as",
           "a",
