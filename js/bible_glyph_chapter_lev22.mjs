@@ -368,7 +368,7 @@ export function bible_glyph_chapter_lev22() {
           "is",
           "$no_entry",
           "to",
-          "eat",
+          "$eating",
           "the",
           "contributions",
           "of",
