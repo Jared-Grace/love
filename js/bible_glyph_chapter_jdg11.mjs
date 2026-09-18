@@ -1263,7 +1263,7 @@ export function bible_glyph_chapter_jdg11() {
           "he",
           "sent",
           "her",
-          "away",
+          "$hand_sending",
           "for",
           "two",
           "months.",
