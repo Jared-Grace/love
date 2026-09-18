@@ -148,7 +148,7 @@ export function bible_glyph_chapter_deu05() {
           "and",
           "would",
           "$no_entry",
-          "go",
+          "$walking+pointing_up",
           "up",
           "the",
           "$mountain.",
