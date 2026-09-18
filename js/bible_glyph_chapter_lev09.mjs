@@ -576,7 +576,7 @@ export function bible_glyph_chapter_lev09() {
         verse_number: 24,
         words: [
           "Fire",
-          "came",
+          "$walking+tray_out",
           "out",
           "from",
           "the",
