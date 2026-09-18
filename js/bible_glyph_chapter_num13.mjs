@@ -633,7 +633,7 @@ export function bible_glyph_chapter_num13() {
           "Nevertheless,",
           "the",
           "$family",
-          "living",
+          "$person+house",
           "in",
           "the",
           "$earth",
