@@ -75,6 +75,9 @@ export function bible_glyph_characters() {
   "THE CHAIR PARAGRAPH ABOVE IS THE CLEAREST CASE AND IS LEFT STANDING SO IT CAN BE READ AGAINST THIS ONE. It says the set has no chair and that searching returns wheelchairs. The set holds Chair. The wheelchairs crowded the answer and the one plain name was taken for absence, which is exactly the fault this paragraph is about. The chair is spent here on kisse, the Hebrew word that itself means seat, rather than on yashab, the verb to sit: yashab already has the human and the house, and a noun that IS a chair has the better claim on the picture of one than a verb that happens to be done in it.";
   "WHAT WAS STILL REFUSED, AND WHY, SO NOBODY PAYS FOR THE SEARCH TWICE. The veil is paroketh, the curtain across the temple, and the set's nearest name is Woman with headscarf - a garment on a person, which would turn the thing that hid the holy place into a way of dressing. The lamb, the seed and the cherub each have a picture in the set that is already spent on another Hebrew word: Ewe is the sheep, Seedling is the sprout, Baby angel is the messenger, and drawing two Hebrew words with one picture costs more than leaving one of them in letters. Peace was offered the peace symbol and refused, because that badge belongs to a movement of the last century and shalom is wholeness, not disarmament. The mule, the fig, the spear, the calf and the beard have nothing in the set that is not either another animal, another plant or another man.";
   "THE CACTUS IS THE ONE TO ARGUE WITH FIRST. Qots is a thornbush of that country and a cactus grows in another hemisphere entirely, so the picture teaches a plant the writer never saw. It was taken anyway because what a reader takes from it is a plant that hurts to touch, which is the whole of what qots does in every verse it stands in. If that trade looks wrong, this is the sentence to overturn.";
+  "A SECOND PASS OVER THE FIFTY-NINE STILL IN LETTERS FOUND THREE MORE, and the shape of what it found is the point. The mother is Woman feeding baby, the net is Goal net, the camp is Camping. Three out of fifty-nine, against twenty out of seventy-nine the pass before, which says the easy half is now spent: what is left is mostly words the set was never going to hold, not words it holds under another name.";
+  "THE APPLE WAS THE MOST TEMPTING REFUSAL AND THE MOST NECESSARY. Peri is fruit in general and the set answers to Red apple, which is the picture everyone draws when they mean fruit. Putting it on peri would print an apple in the third chapter of Genesis, and the apple in that garden is a legend of later Europe that the Hebrew never says. A picture that teaches a false detail in the one verse everybody knows is worse than letters in all of them.";
+  "THE OTHER REFUSALS OF THAT PASS, SHORTLY. The gate is shaar, the gate of a city, and the set's Door is a door of a house and is already spent on the Greek thura. The barley was offered Ear of corn, which is maize and grows in another hemisphere, and unlike the cactus the Bible distinguishes barley from wheat by name, so a wrong grain would be read as the wrong word rather than as a rough picture. The calf was offered Cow face, which a reader beside the bull's Cow reads as the same animal twice. The garden was offered Potted plant, and a pot is not a garden. Everything else on the list - the altar, the priest, the covenant, the ark, the widow, the yoke, the ashes, the famine - the set genuinely does not hold, and those wait on something drawn rather than something found.";
   let characters = [
     {
       name: "cross",
@@ -582,7 +585,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "mother",
-      character: "mother",
+      character: "🤱",
     },
     {
       name: "wilderness",
@@ -590,7 +593,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "camp",
-      character: "camp",
+      character: "🏕️",
     },
     {
       name: "foot",
@@ -890,7 +893,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "net",
-      character: "net",
+      character: "🥅",
     },
     {
       name: "lots",
