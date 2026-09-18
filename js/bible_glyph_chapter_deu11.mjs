@@ -331,7 +331,7 @@ export function bible_glyph_chapter_deu11() {
           "which",
           "you",
           "have",
-          "come,",
+          "$walking+tray_out,",
           "where",
           "you",
           "sowed",
