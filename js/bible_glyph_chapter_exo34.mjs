@@ -569,7 +569,7 @@ export function bible_glyph_chapter_exo34() {
           "you",
           "are",
           "to",
-          "eat",
+          "$eating",
           "unleavened",
           "bread,",
           "as",
