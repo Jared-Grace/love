@@ -570,7 +570,7 @@ export function bible_glyph_chapter_isa01() {
           "$ear,",
           "you",
           "will",
-          "eat",
+          "$eating",
           "the",
           "best",
           "of",
