@@ -319,7 +319,7 @@ export function bible_glyph_chapter_gen29() {
       },
       {
         verse_number: 11,
-        words: ["Then", "Jacob", "kissed", "$proper_name$Rachel", "and", "wept", "aloud."],
+        words: ["Then", "Jacob", "kissed", "$proper_name$Rachel", "and", "wept", "$lifting."],
       },
       {
         verse_number: 12,
