@@ -859,7 +859,7 @@ export function bible_glyph_chapter_gen21() {
           "called",
           "upon",
           "the",
-          "name",
+          "$name_tag",
           "of",
           "the",
           "$i_am,",
