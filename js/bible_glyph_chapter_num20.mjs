@@ -477,7 +477,7 @@ export function bible_glyph_chapter_num20() {
           "our",
           "$voice",
           "and",
-          "sent",
+          "$hand_sending",
           "an",
           "$angel",
           "and",
