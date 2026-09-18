@@ -491,7 +491,7 @@ export function bible_glyph_chapter_gen11() {
           "hundred",
           "and",
           "nine",
-          "years",
+          "$year",
           "and",
           "had",
           "other",
