@@ -572,7 +572,7 @@ export function bible_glyph_chapter_2sa05() {
           "and",
           "$speech,",
           "The",
-          "LORD",
+          "$i_am",
           "has",
           "burst",
           "out",
