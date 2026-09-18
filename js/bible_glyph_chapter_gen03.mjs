@@ -66,7 +66,7 @@ export function bible_glyph_chapter_gen03() {
           "serpent,",
           "We",
           "may",
-          "eat",
+          "$eating",
           "the",
           "fruit",
           "of",
