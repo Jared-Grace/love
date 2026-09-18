@@ -311,7 +311,7 @@ export function bible_glyph_chapter_nam03() {
           "your",
           "fortresses",
           "are",
-          "fig",
+          "$fig",
           "trees",
           "with",
           "the",
