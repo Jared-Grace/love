@@ -230,7 +230,7 @@ export function bible_glyph_chapter_hab01() {
           "swooping",
           "down",
           "to",
-          "devour.",
+          "$eating.",
         ],
       },
       {
