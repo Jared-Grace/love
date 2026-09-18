@@ -109,7 +109,7 @@ export function bible_glyph_chapter_gen05() {
           "were",
           "eight",
           "hundred",
-          "years,",
+          "$year,",
           "and",
           "he",
           "fathered",
