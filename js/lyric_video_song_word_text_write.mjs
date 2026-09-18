@@ -1,3 +1,4 @@
+import { text_lower_to } from "./text_lower_to.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { lyric_video_songs_folder } from "./lyric_video_songs_folder.mjs";
 import { text_combine } from "./text_combine.mjs";
