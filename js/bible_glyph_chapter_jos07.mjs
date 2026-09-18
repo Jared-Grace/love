@@ -862,7 +862,7 @@ export function bible_glyph_chapter_jos07() {
         words: [
           "So",
           "Joshua",
-          "sent",
+          "$hand_sending",
           "$angel,",
           "who",
           "ran",
