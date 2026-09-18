@@ -169,7 +169,7 @@ export function bible_glyph_chapter_1sa17() {
           "shaft",
           "of",
           "his",
-          "spear",
+          "$spear",
           "was",
           "like",
           "a",
