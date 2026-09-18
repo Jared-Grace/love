@@ -335,7 +335,7 @@ export function bible_glyph_chapter_1ki20() {
           "Then",
           "Ben",
           "hadad",
-          "sent",
+          "$hand_sending",
           "him",
           "another",
           "$speech.",
