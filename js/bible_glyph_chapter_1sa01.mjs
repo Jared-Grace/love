@@ -667,7 +667,7 @@ export function bible_glyph_chapter_1sa01() {
           "$proper_name$Hannah",
           "did",
           "$no_entry",
-          "go.",
+          "$walking+pointing_up.",
           "She",
           "$speech",
           "to",
