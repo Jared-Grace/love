@@ -70,6 +70,11 @@ export function bible_glyph_characters() {
   "THE CHAIR WAS REFUSED BECAUSE THE SET HAS NO CHAIR. Yashab - to sit, to dwell, to remain - is the commonest undrawn Hebrew word of all, and a seat was the obvious picture for it. Searching the set for one returns wheelchairs and nothing else, and searching for sitting returns the lotus position, which this Bible must not spend: a figure sitting cross-legged beside the praying hands would read as a second kind of prayer. So yashab is drawn as a human and a house instead, a pair already bought, and no picture was added for it.";
   "THE FIST AND THE BABY CAME OFF THE SAME COUNT LATER THE SAME DAY (2026-09-18), and they are what is left of a list of six after four of them were refused. Nakah, to strike, stands five hundred times and the set answers to Oncoming fist; yalad, to bear and to beget, stands nearly as often and the set answers to Baby. Both were asked of the set before they were written here, which is the whole reason this paragraph can name the assets.";
   "THE PREGNANT FIGURE WAS REFUSED THOUGH IT IS THE BETTER PICTURE OF BEARING, because most of the times yalad is written it is a father begetting rather than a mother bearing. The genealogies are the bulk of the word - and he begot sons and daughters, over and over - and a pregnant figure standing on those puts the wrong body in every one of them. The baby is the thing brought forth either way, so it is the half of the word that does not have to choose.";
+  "TWENTY WORDS THAT HAD NO PICTURE TURNED OUT TO HAVE ONE ALL ALONG (2026-09-18), and the reason none of them was found is worth more than the twenty. Seventy-nine names in this table carried the English word as their own character, each one recorded as a thing the artwork set does not hold. It holds most of them. The set names its pictures in its own English, and a search for the Bible's word for a thing returns nothing while the thing itself sits there under another name: the tomb is Headstone, the cloak is Coat, the snare is Mouse trap, the cup is Teacup without handle, the dream is Thought balloon, the tower is Tokyo tower, the wall is Brick, the raven is Blackbird, the locusts are Cricket, the lots are Game die, the harp is Banjo, the tambourine is Long drum, the cave is Hole, the wheat is Sheaf of rice, the throne is Chair, the queen is Person with crown, the dawn is Sunrise over mountains, the garment is T-shirt, the thorns are Cactus and the bull is Cow.";
+  "SO THE ABSENCE WAS NEVER A FACT ABOUT THE SET, IT WAS A FAILED JOIN. Asking the set for a word is asking whether two vocabularies happen to spell one thing the same way, and they mostly do not. Ask it for the THING instead - what shape would a reader see - and then ask which of the names it answers to is that shape. Every refusal written here on the grounds that the set holds nothing must be read as a claim that can expire, because it is a claim about spelling and not about pictures.";
+  "THE CHAIR PARAGRAPH ABOVE IS THE CLEAREST CASE AND IS LEFT STANDING SO IT CAN BE READ AGAINST THIS ONE. It says the set has no chair and that searching returns wheelchairs. The set holds Chair. The wheelchairs crowded the answer and the one plain name was taken for absence, which is exactly the fault this paragraph is about. The chair is spent here on kisse, the Hebrew word that itself means seat, rather than on yashab, the verb to sit: yashab already has the human and the house, and a noun that IS a chair has the better claim on the picture of one than a verb that happens to be done in it.";
+  "WHAT WAS STILL REFUSED, AND WHY, SO NOBODY PAYS FOR THE SEARCH TWICE. The veil is paroketh, the curtain across the temple, and the set's nearest name is Woman with headscarf - a garment on a person, which would turn the thing that hid the holy place into a way of dressing. The lamb, the seed and the cherub each have a picture in the set that is already spent on another Hebrew word: Ewe is the sheep, Seedling is the sprout, Baby angel is the messenger, and drawing two Hebrew words with one picture costs more than leaving one of them in letters. Peace was offered the peace symbol and refused, because that badge belongs to a movement of the last century and shalom is wholeness, not disarmament. The mule, the fig, the spear, the calf and the beard have nothing in the set that is not either another animal, another plant or another man.";
+  "THE CACTUS IS THE ONE TO ARGUE WITH FIRST. Qots is a thornbush of that country and a cactus grows in another hemisphere entirely, so the picture teaches a plant the writer never saw. It was taken anyway because what a reader takes from it is a plant that hurts to touch, which is the whole of what qots does in every verse it stands in. If that trade looks wrong, this is the sentence to overturn.";
   let characters = [
     {
       name: "cross",
@@ -597,7 +602,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "throne",
-      character: "throne",
+      character: "🪑",
     },
     {
       name: "gate",
@@ -633,7 +638,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "wall",
-      character: "wall",
+      character: "🧱",
     },
     {
       name: "sabbath",
@@ -713,7 +718,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "bull",
-      character: "bull",
+      character: "🐄",
     },
     {
       name: "lamb",
@@ -721,7 +726,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "tomb",
-      character: "tomb",
+      character: "🪦",
     },
     {
       name: "honey",
@@ -733,7 +738,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "cloak",
-      character: "cloak",
+      character: "🧥",
     },
     {
       name: "plunder",
@@ -741,7 +746,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "dream",
-      character: "dream",
+      character: "💭",
     },
     {
       name: "goat",
@@ -781,7 +786,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "thorns",
-      character: "thorns",
+      character: "🌵",
     },
     {
       name: "girl",
@@ -789,7 +794,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "garment",
-      character: "garment",
+      character: "👕",
     },
     {
       name: "veil",
@@ -801,7 +806,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "queen",
-      character: "queen",
+      character: "🫅",
     },
     {
       name: "widow",
@@ -813,11 +818,11 @@ export function bible_glyph_characters() {
     },
     {
       name: "dawn",
-      character: "dawn",
+      character: "🌄",
     },
     {
       name: "cave",
-      character: "cave",
+      character: "🕳️",
     },
     {
       name: "snow",
@@ -829,15 +834,15 @@ export function bible_glyph_characters() {
     },
     {
       name: "tower",
-      character: "tower",
+      character: "🗼",
     },
     {
       name: "cup",
-      character: "cup",
+      character: "☕",
     },
     {
       name: "locusts",
-      character: "locusts",
+      character: "🦗",
     },
     {
       name: "vine",
@@ -861,11 +866,11 @@ export function bible_glyph_characters() {
     },
     {
       name: "snare",
-      character: "snare",
+      character: "🪤",
     },
     {
       name: "harp",
-      character: "harp",
+      character: "🪕",
     },
     {
       name: "ship",
@@ -877,11 +882,11 @@ export function bible_glyph_characters() {
     },
     {
       name: "tambourine",
-      character: "tambourine",
+      character: "🪘",
     },
     {
       name: "raven",
-      character: "raven",
+      character: "🐦‍⬛",
     },
     {
       name: "net",
@@ -889,7 +894,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "lots",
-      character: "lots",
+      character: "🎲",
     },
     {
       name: "enemy",
@@ -961,7 +966,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "wheat",
-      character: "wheat",
+      character: "🌾",
     },
     {
       name: "barley",
