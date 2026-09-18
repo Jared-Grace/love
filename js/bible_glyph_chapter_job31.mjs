@@ -839,7 +839,7 @@ export function bible_glyph_chapter_job31() {
           "then",
           "let",
           "briers",
-          "grow",
+          "$walking+tray_out",
           "instead",
           "of",
           "wheat",
