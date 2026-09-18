@@ -666,7 +666,7 @@ export function bible_glyph_chapter_deu15() {
         verse_number: 20,
         words: [
           "Each",
-          "year",
+          "$year",
           "you",
           "and",
           "your",
