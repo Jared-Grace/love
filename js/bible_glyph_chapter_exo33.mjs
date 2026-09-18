@@ -409,7 +409,7 @@ export function bible_glyph_chapter_exo33() {
           "$speech",
           "to",
           "the",
-          "LORD,",
+          "$i_am,",
           "$eye,",
           "You",
           "have",
