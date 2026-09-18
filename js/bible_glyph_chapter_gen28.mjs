@@ -630,7 +630,7 @@ export function bible_glyph_chapter_gen28() {
           "me",
           "$bread",
           "to",
-          "eat",
+          "$eating",
           "and",
           "clothes",
           "to",
