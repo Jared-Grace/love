@@ -59,7 +59,7 @@ export function bible_glyph_chapter_1sa07() {
           "$sun",
           "the",
           "$ark",
-          "remained",
+          "$person+house",
           "at",
           "Kiriath-jearim",
           "many",
