@@ -951,7 +951,7 @@ export function bible_glyph_chapter_1ki03() {
           "$hands_giving",
           "the",
           "$sprout",
-          "baby",
+          "$baby",
           "to",
           "the",
           "first",
