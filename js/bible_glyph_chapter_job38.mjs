@@ -412,7 +412,7 @@ export function bible_glyph_chapter_job38() {
           "you",
           "were",
           "already",
-          "born!",
+          "$baby!",
           "And",
           "the",
           "number",
