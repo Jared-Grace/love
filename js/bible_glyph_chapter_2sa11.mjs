@@ -606,7 +606,7 @@ export function bible_glyph_chapter_2sa11() {
         verse_number: 18,
         words: [
           "$proper_name$Joab",
-          "sent",
+          "$hand_sending",
           "to",
           "$proper_name$David",
           "all",
