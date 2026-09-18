@@ -694,7 +694,7 @@ export function bible_glyph_chapter_jos24() {
           "He",
           "will",
           "$no_entry",
-          "forgive",
+          "$lifting",
           "your",
           "rebellion",
           "or",
