@@ -821,7 +821,7 @@ export function bible_glyph_chapter_lev25() {
           "buyer",
           "until",
           "the",
-          "Year",
+          "$year",
           "of",
           "Jubilee.",
           "In",
