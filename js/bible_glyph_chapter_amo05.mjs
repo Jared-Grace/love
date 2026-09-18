@@ -173,7 +173,7 @@ export function bible_glyph_chapter_amo05() {
           "$proper_name$Joseph;",
           "it",
           "will",
-          "devour",
+          "$eating",
           "everything,",
           "with",
           "no",
