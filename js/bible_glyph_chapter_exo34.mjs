@@ -499,7 +499,7 @@ export function bible_glyph_chapter_exo34() {
           "and",
           "you",
           "will",
-          "eat",
+          "$eating",
           "their",
           "sacrifices.",
         ],
