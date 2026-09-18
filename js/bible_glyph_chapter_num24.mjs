@@ -492,7 +492,7 @@ export function bible_glyph_chapter_num24() {
           "vision",
           "from",
           "the",
-          "Almighty,",
+          "$might,",
           "who",
           "bows",
           "down",
