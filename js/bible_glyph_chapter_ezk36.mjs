@@ -702,7 +702,7 @@ export function bible_glyph_chapter_ezk36() {
           "$family",
           "of",
           "the",
-          "LORD,",
+          "$i_am,",
           "yet",
           "they",
           "had",
