@@ -198,7 +198,7 @@ export function bible_glyph_chapter_gen39() {
           "the",
           "$bread",
           "he",
-          "ate.",
+          "$eating.",
           "Now",
           "Joseph",
           "was",
