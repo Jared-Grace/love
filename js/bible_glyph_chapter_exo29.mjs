@@ -1014,7 +1014,7 @@ export function bible_glyph_chapter_exo29() {
           "$no_entry",
           "outsider",
           "may",
-          "eat",
+          "$eating",
           "them,",
           "because",
           "these",
