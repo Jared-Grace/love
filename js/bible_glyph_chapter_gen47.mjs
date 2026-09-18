@@ -582,7 +582,7 @@ export function bible_glyph_chapter_gen47() {
         words: [
           "When",
           "that",
-          "year",
+          "$year",
           "was",
           "over,",
           "they",
