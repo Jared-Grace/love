@@ -138,7 +138,7 @@ export function bible_glyph_chapter_2sa11() {
         words: [
           "Then",
           "David",
-          "sent",
+          "$hand_sending",
           "$angel",
           "to",
           "$hand_receiving",
