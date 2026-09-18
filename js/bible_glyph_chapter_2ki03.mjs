@@ -212,7 +212,7 @@ export function bible_glyph_chapter_2ki03() {
           "$speech,",
           "I",
           "will",
-          "go.",
+          "$walking+pointing_up.",
           "I",
           "am",
           "as",
