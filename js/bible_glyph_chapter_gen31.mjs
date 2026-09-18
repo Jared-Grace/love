@@ -195,7 +195,7 @@ export function bible_glyph_chapter_gen31() {
           "all",
           "the",
           "$sheep",
-          "bore",
+          "$baby",
           "speckled.",
           "And",
           "if",
