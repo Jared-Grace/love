@@ -118,7 +118,7 @@ export function bible_glyph_chapter_jdg04() {
           "And",
           "she",
           "would",
-          "sit",
+          "$person+house",
           "under",
           "the",
           "Palm",
