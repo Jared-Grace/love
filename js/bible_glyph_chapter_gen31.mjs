@@ -1153,7 +1153,7 @@ export function bible_glyph_chapter_gen31() {
         words: [
           "These",
           "twenty",
-          "years",
+          "$year",
           "I",
           "have",
           "been",
