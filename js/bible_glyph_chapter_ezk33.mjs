@@ -1148,7 +1148,7 @@ export function bible_glyph_chapter_ezk33() {
           "as",
           "usual",
           "and",
-          "sit",
+          "$person+house",
           "before",
           "you",
           "as",
