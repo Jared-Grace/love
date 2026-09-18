@@ -553,7 +553,7 @@ export function bible_glyph_chapter_deu14() {
           "$tray_out",
           "you",
           "to",
-          "carry",
+          "$lifting",
           "that",
           "with",
           "which",
