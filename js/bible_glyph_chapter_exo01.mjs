@@ -293,7 +293,7 @@ export function bible_glyph_chapter_exo01() {
           "to",
           "the",
           "$proper_name$Hebrew",
-          "midwives,",
+          "$baby,",
           "whose",
           "$name_tag",
           "were",
