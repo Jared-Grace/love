@@ -705,7 +705,7 @@ export function bible_glyph_chapter_2ki01() {
           "in",
           "the",
           "second",
-          "year",
+          "$year",
           "of",
           "$proper_name$Jehoram",
           "$son",
