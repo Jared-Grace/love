@@ -882,7 +882,7 @@ export function bible_glyph_chapter_2ki09() {
           "shoulders.",
           "The",
           "arrow",
-          "pierced",
+          "$walking+tray_out",
           "his",
           "$heart_organ",
           "and",
