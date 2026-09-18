@@ -40,7 +40,7 @@ export function bible_glyph_chapter_jdg11() {
           "$proper_name$Gilead",
           "was",
           "his",
-          "father.",
+          "$baby.",
         ],
       },
       {
