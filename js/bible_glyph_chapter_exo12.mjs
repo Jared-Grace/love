@@ -1592,7 +1592,7 @@ export function bible_glyph_chapter_exo12() {
           "$sun",
           "the",
           "$i_am",
-          "brought",
+          "$walking+tray_out",
           "the",
           "$son",
           "of",
