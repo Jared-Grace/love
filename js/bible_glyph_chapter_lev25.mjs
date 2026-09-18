@@ -587,7 +587,7 @@ export function bible_glyph_chapter_lev25() {
           "What",
           "will",
           "we",
-          "eat",
+          "$eating",
           "in",
           "the",
           "seventh",
