@@ -223,7 +223,7 @@ export function bible_glyph_chapter_zec12() {
           "sheaves;",
           "they",
           "will",
-          "consume",
+          "$eating",
           "all",
           "the",
           "$family",
