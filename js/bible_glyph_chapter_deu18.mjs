@@ -212,7 +212,7 @@ export function bible_glyph_chapter_deu18() {
           "name",
           "of",
           "the",
-          "LORD",
+          "$i_am",
           "his",
           "$fire,",
           "like",
