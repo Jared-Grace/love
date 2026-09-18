@@ -29,7 +29,7 @@ export function bible_glyph_chapter_ezk47() {
           "I",
           "saw",
           "$water",
-          "flowing",
+          "$walking+tray_out",
           "from",
           "under",
           "the",
