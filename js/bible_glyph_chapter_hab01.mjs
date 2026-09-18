@@ -418,7 +418,7 @@ export function bible_glyph_chapter_hab01() {
           "all",
           "of",
           "them",
-          "up",
+          "$walking+pointing_up",
           "with",
           "a",
           "hook;",
