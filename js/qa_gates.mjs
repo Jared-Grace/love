@@ -1,3 +1,4 @@
+import { bible_glyph_seats_contested_gate_run } from "./bible_glyph_seats_contested_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { stop_next_steps_hook_gate_run } from "./stop_next_steps_hook_gate_run.mjs";
@@ -1133,6 +1134,7 @@ export function qa_gates() {
     bible_glyph_marks_wordless_assert,
     bible_glyph_divine_numbers_assert,
     app_code_lessons_released_gate_run,
+    bible_glyph_seats_contested_gate_run,
   ];
   return gates;
 }
