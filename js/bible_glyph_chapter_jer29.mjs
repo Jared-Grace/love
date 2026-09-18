@@ -795,7 +795,7 @@ export function bible_glyph_chapter_jer29() {
           "lies",
           "in",
           "My",
-          "name,",
+          "$name_tag,",
           "which",
           "I",
           "did",
