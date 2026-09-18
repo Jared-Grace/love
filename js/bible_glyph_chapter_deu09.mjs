@@ -826,7 +826,7 @@ export function bible_glyph_chapter_deu09() {
           "Kadesh-barnea,",
           "He",
           "$speech:",
-          "Go",
+          "$walking+pointing_up",
           "up",
           "and",
           "possess",
