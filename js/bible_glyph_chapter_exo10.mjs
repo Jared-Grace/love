@@ -506,7 +506,7 @@ export function bible_glyph_chapter_exo10() {
         words: [
           "The",
           "$locusts",
-          "swarmed",
+          "$walking+pointing_up",
           "across",
           "the",
           "$earth",
