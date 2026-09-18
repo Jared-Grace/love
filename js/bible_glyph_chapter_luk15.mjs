@@ -34,7 +34,7 @@ export function bible_glyph_chapter_luk15() {
       words: [
         "$plus",
         "the",
-        "Pharisees",
+        "$proper_name$Pharisees",
         "$plus",
         "the",
         "scribes",
