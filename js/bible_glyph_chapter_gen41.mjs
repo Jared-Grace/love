@@ -1295,7 +1295,7 @@ export function bible_glyph_chapter_gen41() {
           "$proper_name$Egypt.",
           "And",
           "Joseph",
-          "left",
+          "$walking+tray_out",
           "$proper_name$Pharaoh's",
           "presence",
           "and",
