@@ -236,7 +236,7 @@ export function bible_glyph_chapter_gen30() {
           "servant",
           "of",
           "Leah,",
-          "bore",
+          "$baby",
           "$proper_name$Jacob",
           "$son.",
         ],
