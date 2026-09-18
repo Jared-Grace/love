@@ -994,7 +994,7 @@ export function bible_glyph_chapter_exo29() {
         words: [
           "They",
           "must",
-          "eat",
+          "$eating",
           "those",
           "things",
           "by",
