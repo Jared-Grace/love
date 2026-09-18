@@ -352,7 +352,7 @@ export function bible_glyph_chapter_1ki18() {
           "the",
           "$i_am",
           "may",
-          "carry",
+          "$lifting",
           "you",
           "off",
           "where",
