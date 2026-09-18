@@ -640,6 +640,14 @@ export function bible_glyph_artwork_names() {
       glyph: "lifting",
       asset: "Person lifting weights",
     },
+    {
+      glyph: "fist",
+      asset: "Oncoming fist",
+    },
+    {
+      glyph: "baby",
+      asset: "Baby",
+    },
   ];
   return names;
 }
