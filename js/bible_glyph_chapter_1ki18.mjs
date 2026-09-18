@@ -741,7 +741,7 @@ export function bible_glyph_chapter_1ki18() {
           "call",
           "on",
           "the",
-          "name",
+          "$name_tag",
           "of",
           "your",
           "$fire,",
