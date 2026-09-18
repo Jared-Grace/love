@@ -265,7 +265,7 @@ export function bible_glyph_chapter_1ki21() {
           "$proper_name$Israel?",
           "Get",
           "up,",
-          "eat",
+          "$eating",
           "some",
           "$bread,",
           "and",
