@@ -661,7 +661,7 @@ export function bible_glyph_chapter_num13() {
         words: [
           "The",
           "Amalekites",
-          "live",
+          "$person+house",
           "in",
           "the",
           "$earth",
