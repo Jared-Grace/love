@@ -808,7 +808,7 @@ export function bible_glyph_chapter_lam02() {
           "of",
           "the",
           "$crown.",
-          "Lift",
+          "$lifting",
           "up",
           "your",
           "hands",
