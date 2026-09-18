@@ -28,7 +28,7 @@ export function bible_glyph_chapter_isa40() {
           "$mouth",
           "tenderly",
           "to",
-          "Jerusalem,",
+          "$proper_name$Jerusalem,",
           "and",
           "proclaim",
           "to",
@@ -267,7 +267,7 @@ export function bible_glyph_chapter_isa40() {
           "the",
           "$city",
           "of",
-          "Judah,",
+          "$proper_name$Judah,",
           "Here",
           "is",
           "your",
@@ -472,7 +472,7 @@ export function bible_glyph_chapter_isa40() {
       {
         verse_number: 16,
         words: [
-          "Lebanon",
+          "$proper_name$Lebanon",
           "is",
           "not",
           "sufficient",
