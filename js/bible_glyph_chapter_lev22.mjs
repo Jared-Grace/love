@@ -490,7 +490,7 @@ export function bible_glyph_chapter_lev22() {
           "allowing",
           "them",
           "to",
-          "eat",
+          "$eating",
           "the",
           "$sparkle.",
           "For",
