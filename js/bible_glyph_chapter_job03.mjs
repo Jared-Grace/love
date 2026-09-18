@@ -18,7 +18,7 @@ export function bible_glyph_chapter_job03() {
         words: [
           "After",
           "this,",
-          "Job",
+          "$proper_name$Job",
           "opened",
           "his",
           "mouth",
