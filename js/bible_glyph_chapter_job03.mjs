@@ -128,7 +128,7 @@ export function bible_glyph_chapter_job03() {
           "$sun",
           "of",
           "the",
-          "year,",
+          "$year,",
           "may",
           "it",
           "$no_entry",
