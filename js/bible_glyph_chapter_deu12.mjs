@@ -915,7 +915,7 @@ export function bible_glyph_chapter_deu12() {
           "but",
           "you",
           "may",
-          "eat",
+          "$eating",
           "the",
           "$meat.",
         ],
