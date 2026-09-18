@@ -113,7 +113,7 @@ export function bible_glyph_chapter_jer29() {
           "$king",
           "of",
           "$proper_name$Judah",
-          "sent",
+          "$hand_sending",
           "to",
           "$proper_name$Nebuchadnezzar",
           "$king",
