@@ -583,7 +583,7 @@ export function bible_glyph_chapter_deu12() {
           "Instead,",
           "you",
           "must",
-          "eat",
+          "$eating",
           "them",
           "in",
           "the",
