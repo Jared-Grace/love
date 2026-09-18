@@ -42,7 +42,7 @@ export function bible_glyph_chapter_2sa06() {
           "of",
           "Judah",
           "to",
-          "bring",
+          "$walking+pointing_up",
           "up",
           "from",
           "there",
