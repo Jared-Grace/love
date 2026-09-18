@@ -1350,7 +1350,7 @@ export function bible_glyph_chapter_1ki18() {
           "$proper_name$Ahab,",
           "$walking+pointing_up",
           "up,",
-          "eat",
+          "$eating",
           "and",
           "drink,",
           "for",
