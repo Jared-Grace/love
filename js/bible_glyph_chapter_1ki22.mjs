@@ -721,7 +721,7 @@ export function bible_glyph_chapter_1ki22() {
           "$speech,",
           "I",
           "will",
-          "go",
+          "$walking+tray_out",
           "out",
           "and",
           "be",
