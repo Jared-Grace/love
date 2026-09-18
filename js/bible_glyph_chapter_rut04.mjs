@@ -552,7 +552,7 @@ export function bible_glyph_chapter_rut04() {
           "$sun.",
           "May",
           "his",
-          "name",
+          "$name_tag",
           "become",
           "famous",
           "in",
