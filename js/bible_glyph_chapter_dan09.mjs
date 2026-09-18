@@ -17,7 +17,7 @@ export function bible_glyph_chapter_dan09() {
           "In",
           "the",
           "first",
-          "year",
+          "$year",
           "of",
           "$proper_name$Darius",
           "$son",
