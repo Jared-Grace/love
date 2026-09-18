@@ -381,7 +381,7 @@ export function bible_glyph_chapter_lev25() {
         words: [
           "In",
           "this",
-          "Year",
+          "$year",
           "of",
           "Jubilee,",
           "each",
