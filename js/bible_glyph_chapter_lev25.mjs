@@ -1611,7 +1611,7 @@ export function bible_glyph_chapter_lev25() {
           "man",
           "hired",
           "from",
-          "year",
+          "$year",
           "to",
           "year,",
           "but",
