@@ -98,6 +98,16 @@ export function bible_glyph_roots() {
   ("DE AND GAR WERE LOOKED AT AND LEFT IN LETTERS. De stands on two thousand seven hundred and seventy seven New Testament words and gar on one thousand and thirty nine, which makes them the two biggest unseated numbers here, and neither has an honest picture. De is the softest of connectives - and, but, now, and very often nothing English says at all - so any mark strong enough to see would say more than the word does; the plus sign is already kai's and giving it to de would tell a reader the two words are one, which is exactly the difference a Greek reader is hearing. Gar is a cause, and a cause is a relation between clauses that nothing in this vocabulary draws.");
   ("MESSIAS JOINED CHRISTOS ON 2026-09-18 AND THE TEXT ITSELF SETTLED IT. John writes the word twice and both times translates it in the same breath - we have found the Messias, WHICH IS TO SAY the Christ - so the seat is not an argument from the meaning of the two words, it is the argument the evangelist already made in the verse. Messias is the Hebrew word carried across in Greek letters and christos is the same word carried across in Greek meaning, and both are the anointed one, so both are the oil.");
   ("IT WAS ONE OF FIVE NAMES OF GOD FOUND STANDING IN PLAIN LETTERS, and the five did not all end the same way. A reading of every word still written in English turned up Yah, Messias, soter, shaddai and pantokrator sitting among the proper names. Two of them were the same word as a mark already drawn and cost nothing - Yah is the covenant name said short, and this one. Soter is not a name at all but the ordinary noun a saviour, and belongs in the queue of words waiting for a picture rather than among names. The last two are titles with no mark yet and are the only part of this that anybody had to decide.");
+  ("FOUR MORE GREEK SEATS WERE TRIED LATER THE SAME DAY AND ONLY ONE SURVIVED, WHICH IS THE USEFUL PART OF THE STORY. The plan was to spend nothing: apo would take the out-tray that ek and Hebrew min already wear, oude the no entry sign that ou and me already wear, holos the everything mark that pas and Hebrew kol already wear, and sozo would join soter on the rescue ring. A thousand New Testament words seated and no picture invented. Three of the four were refused by this repo's own rule and were taken back out; only sozo stands, and it stands because it is not a shared mark at all.");
+  ("THE RULE IS THAT ONE PICTURE MAY NOT STAND FOR TWO ROOTS, AND IT IS ENFORCED TWICE ON PURPOSE. The collisions gate goes red, and the command that records a known collision refuses to record a new one - so a second root moving onto an occupied picture cannot be blessed by the ordinary accept-the-baseline move that clears every other ratchet here. Two enforcements is the repo saying this is not a warning to be waved through. Read plainly: a shared mark makes two different Greek words come out of the alphabet looking identical, and somebody reading the pictures back cannot recover which one stood there.");
+  ("THE PRECEDENT THAT LOOKED LIKE PERMISSION WAS NOT ONE, AND THIS IS THE TRAP TO NAME. The collision record already holds ou and me sharing the no entry sign, which reads exactly like a licence to do the same again - it is instead a single grandfathered entry that predates the writer's refusal. An existing row in a ratchet's record says what was once let through; it never says what may be added. Ask the writer, not the record.");
+  ("THE SECOND SHAPE THAT WORKS IS A GROUP, AND IT IS WHAT THE GREEK COMPOUNDS WERE WAITING FOR. Exerchomai and eiserchomai stand on two hundred and seventeen and one hundred and ninety four New Testament words and are erchomai with a preposition welded to the front - go with out, go with in. They are seated as footprints with the out-tray and footprints with the in-tray, which is the Greek's own construction drawn rather than translated: the reader already knows all three marks and the compound spells itself. No collision is possible because each pair is a different pair.");
+  ("THE TEMPTING WRONG MOVE THERE WAS TO PUT BOTH COMPOUNDS ON PLAIN FOOTPRINTS, INSIDE ERCHOMAI'S OWN ROW. That would have passed every gate, because nothing looks for collisions inside a row, and it would have been the same coarsening the rule had just refused three seats for - going out and coming in are not one idea. A rule that is enforced by a check can always be stepped around by moving the offence somewhere the check does not look; the check is not the rule.");
+  ("SOZO IS THE SHAPE THAT DOES WORK, AND IT IS WORTH COPYING. It sits inside soter's own row rather than beside it, because a verb and the noun made from it are one root and were never two marks - to save and a saviour are the same word twice. No collision is possible inside a row, so the free seats in this table are the ones where an unseated number is another spelling of a root that is already here. Look for those before looking for pictures.");
+  ("THE THREE BIGGEST UNSEATED WORDS AFTER DE AND GAR WERE LOOKED AT AND REFUSED, AND THE REASONS ARE HERE TO BE ARGUED WITH. Echo stands on seven hundred and eight words and means to have, and nothing in a picture Bible holds anything - the hand marks are all spent on giving, receiving and sending, which are the three things a hand does that a reader can see happening. Ginomai stands on six hundred and sixty seven and means to come to be; it is the most tempting of the three because becoming is a real event, but every candidate picture drawn for it says what the thing became rather than the becoming. Hos and houtos stand on fourteen hundred and thirteen hundred and are the relative and the near demonstrative, which are pointing without a hand - the pointing marks are already spent on hoti and autos, and a fourth pointer would be a fourth arrow, which this vocabulary has refused before.");
+  ("THE CASE FOR THE THREE THAT WERE REFUSED IS WRITTEN HERE ANYWAY, BECAUSE SOMEBODY MAY WANT TO OVERTURN THE RULE RATHER THAN THE SEATS. Apo and ek are one relation that Greek spells twice and that Hebrew spells once, with min, so a reader who learned the out-tray in Genesis has already learned the whole of that idea and would lose nothing. Oude is ou with a connective welded on, and holos and pas are whole and all. The counter-argument, which is the one that won, is that the picture Bible is meant to be readable back: a reader who cannot tell apo from ek is reading a coarser text than the Greek, and the coarsening is invisible to them. If somebody decides readability forward matters more than recoverability backward, these three are the first seats to take and this paragraph is their argument.");
+  ("THE ALTERNATIVE NOBODY HAS PAID FOR YET IS A SECOND PICTURE FOR EACH. That is what the rule asks for, and it is expensive in the way that matters - a second out-tray whose only job is to not be the first out-tray teaches a reader a distinction by sight that the picture cannot actually carry, so it buys recoverability with a mark that means nothing on its own. That is why these three were dropped rather than drawn.");
+  ("THE REFUSALS ABOVE ARE MEASUREMENTS WITH A DATE ON THEM, NOT FACTS. A sentence here saying a picture does not exist was true of the artwork set on the day it was written, and the set grows. Read any of them as a lead to re-run rather than a question already closed.");
   let roots = [
     {
       root: "agape",
@@ -348,6 +358,26 @@ export function bible_glyph_roots() {
         {
           strong: "2064",
           glyph: "footprints",
+        },
+      ],
+    },
+    {
+      root: "exerchomai",
+      gloss: "go out, come out",
+      words: [
+        {
+          strong: "1831",
+          glyph: "footprints+tray_out",
+        },
+      ],
+    },
+    {
+      root: "eiserchomai",
+      gloss: "go in, enter",
+      words: [
+        {
+          strong: "1525",
+          glyph: "footprints+tray_in",
         },
       ],
     },
@@ -1421,6 +1451,10 @@ export function bible_glyph_roots() {
       words: [
         {
           strong: "4990",
+          glyph: "rescue",
+        },
+        {
+          strong: "4982",
           glyph: "rescue",
         },
       ],

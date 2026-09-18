@@ -7,6 +7,9 @@ export function bible_glyph_artwork_absent() {
   "BOTH WERE ASKED A SECOND TIME, on a later day and through a listing fetched fresh, and the set held nothing carrying holding hands, nothing carrying family, and nothing carrying men at all. Asking twice is what tells a fact about the set apart from a listing that happened to be short the first time, and the second answer is what makes this list something to trust rather than something to re-check.";
   "THE FINDING WAS READ FROM THE SET rather than assumed from a failed fetch. The set's own list of names was searched for the words - family, holding hands - and holds nothing carrying either of them, which is a different and much stronger statement than one address not answering.";
   "THE REST CAME IN ONE BATCH, for the glyphs seated with an English word as their character, and they were read from the set the same way - every glyph's own word searched against one listing of the set's names. Each reason says what the search found: nothing at all, or a near picture turned down because it draws something else or is already spent on another glyph. They are waiting on somebody drawing, as the altar and the priest are, and the drawn text prints the English for them until then.";
+  "TWENTY THREE ENTRIES WERE TAKEN OUT OF THIS LIST ON 2026-09-18 BECAUSE THEY WERE WRONG, and the shape of the mistake matters more than the count. Each one said the set holds no picture for a word - no chair, no tomb, no cup, no wall, no raven - and the set held every one of them, under the name a picture catalogue uses rather than the name scripture uses. The tomb is Headstone, the cup is Teacup without handle, the wall is Brick, the raven is Blackbird, the throne is Chair. One entry even said that searching for a chair returns wheelchairs, which was true, and the true plain Chair was in the same answer further down.";
+  "SO READ THE PARAGRAPH ABOVE THIS ONE AGAINST WHAT ACTUALLY HAPPENED. It says the rest were read from the set the same careful way, every glyph's own word searched against one listing. That was done, and it was still wrong, because searching the set for the Bible's word asks whether two vocabularies happen to spell one thing the same - and they mostly do not. Ask the set for the shape a reader would see and pick from what comes back.";
+  "AND THE READING THAT OUTLIVES THE FIX: A REFUSAL WRITTEN DOWN AS PROSE IS A MEASUREMENT WITH A DATE ON IT, NOT A FACT. Every because line in this list was true of some listing on some day. Prose is never re-run, so a wrong one sits here looking as settled as a right one for as long as nobody doubts it. Treat any sentence here saying the set holds nothing as a lead to check rather than a question already closed.";
   let absent = [
     {
       glyph: "brother",
@@ -43,12 +46,6 @@ export function bible_glyph_artwork_absent() {
       because: "the set's names hold nothing carrying the word ark.",
     },
     {
-      glyph: "dawn",
-      wanted: "Dawn",
-      because:
-        "the Sunrise is spent on the morning, and the set's only other sunrise is the same picture with mountains behind it, so the two words would read as one.",
-    },
-    {
       glyph: "gold",
       wanted: "Gold",
       because:
@@ -61,28 +58,10 @@ export function bible_glyph_artwork_absent() {
         "the set draws second place medals, which say a race, not the metal.",
     },
     {
-      glyph: "mother",
-      wanted: "Mother",
-      because:
-        "the set draws a woman breast feeding and a pregnant woman, and each says one act rather than the relation.",
-    },
-    {
-      glyph: "camp",
-      wanted: "Camp",
-      because:
-        "the set's Camping draws a leisure campsite, and the Tent is already spent on the tent.",
-    },
-    {
       glyph: "stone",
       wanted: "Stone",
       because:
         "the Rock is spent on the rock, and the set's other stones are a curling stone, a gem and a headstone.",
-    },
-    {
-      glyph: "throne",
-      wanted: "Throne",
-      because:
-        "the set's names hold nothing carrying the word throne, and its Chair and Seat are furniture.",
     },
     {
       glyph: "gate",
@@ -110,11 +89,6 @@ export function bible_glyph_artwork_absent() {
       glyph: "incense",
       wanted: "Incense",
       because: "the set's names hold nothing carrying the word incense.",
-    },
-    {
-      glyph: "wall",
-      wanted: "Wall",
-      because: "the set draws a single Brick, which is not a wall.",
     },
     {
       glyph: "sabbath",
@@ -176,37 +150,14 @@ export function bible_glyph_artwork_absent() {
       because: "the set's names hold nothing carrying the word poor.",
     },
     {
-      glyph: "bull",
-      wanted: "Bull",
-      because:
-        "the Ox is spent on the ox, and the set's Cow and Water buffalo are other animals.",
-    },
-    {
       glyph: "lamb",
       wanted: "Lamb",
       because: "the set draws no lamb, and the Ewe is spent on the flock.",
     },
     {
-      glyph: "tomb",
-      wanted: "Tomb",
-      because:
-        "the set draws a Headstone and a Coffin, which are modern burial rather than a tomb cut in rock.",
-    },
-    {
-      glyph: "cloak",
-      wanted: "Cloak",
-      because: "the set's Coat and Lab coat are modern dress.",
-    },
-    {
       glyph: "plunder",
       wanted: "Plunder",
       because: "the set's names hold nothing carrying the word plunder.",
-    },
-    {
-      glyph: "dream",
-      wanted: "Dream",
-      because:
-        "the set draws a Thought balloon and Zzz, which say thinking and sleeping rather than a dream.",
     },
     {
       glyph: "calf",
@@ -225,27 +176,10 @@ export function bible_glyph_artwork_absent() {
         "the set draws people with a kind of hair and a Hair pick, never hair itself.",
     },
     {
-      glyph: "thorns",
-      wanted: "Thorns",
-      because: "the set's names hold nothing carrying the word thorns.",
-    },
-    {
-      glyph: "garment",
-      wanted: "Garment",
-      because:
-        "the set's clothes are named modern garments - T-shirt, Dress, Kimono, Coat.",
-    },
-    {
       glyph: "veil",
       wanted: "Veil",
       because:
         "the set's Person with veil draws a bride, a person rather than the veil.",
-    },
-    {
-      glyph: "queen",
-      wanted: "Queen",
-      because:
-        "the set draws a Princess and a Person with crown, and the Crown is already spent.",
     },
     {
       glyph: "widow",
@@ -257,28 +191,6 @@ export function bible_glyph_artwork_absent() {
       wanted: "Arrow",
       because:
         "the Bow and arrow is already spent, and the set's other arrows are direction signs.",
-    },
-    {
-      glyph: "cave",
-      wanted: "Cave",
-      because: "the set's names hold nothing carrying the word cave.",
-    },
-    {
-      glyph: "tower",
-      wanted: "Tower",
-      because: "the set's only tower is Tokyo tower, one real building.",
-    },
-    {
-      glyph: "cup",
-      wanted: "Cup",
-      because:
-        "the set's cups are a Teacup without handle and a Cup with straw, which are modern drinks.",
-    },
-    {
-      glyph: "locusts",
-      wanted: "Locusts",
-      because:
-        "the set's names hold nothing carrying the word locust, and its Cricket is another insect.",
     },
     {
       glyph: "vine",
@@ -297,43 +209,9 @@ export function bible_glyph_artwork_absent() {
       because: "the set's names hold nothing carrying the word furnace.",
     },
     {
-      glyph: "snare",
-      wanted: "Snare",
-      because: "the set's only trap is a Mouse trap, a modern spring trap.",
-    },
-    {
-      glyph: "harp",
-      wanted: "Harp",
-      because:
-        "the set's names hold nothing carrying the word harp, and its Guitar and Violin are other instruments.",
-    },
-    {
       glyph: "beard",
       wanted: "Beard",
       because: "the Person beard is already spent.",
-    },
-    {
-      glyph: "tambourine",
-      wanted: "Tambourine",
-      because:
-        "the set's names hold nothing carrying the word tambourine, and its Drum and Long drum are other instruments.",
-    },
-    {
-      glyph: "raven",
-      wanted: "Raven",
-      because:
-        "the Bird is already spent, and the set holds no raven or black bird.",
-    },
-    {
-      glyph: "net",
-      wanted: "Net",
-      because:
-        "the set's only net is a Goal net, and its Fishing pole is a rod.",
-    },
-    {
-      glyph: "lots",
-      wanted: "Lots",
-      because: "the set's Game die says gambling rather than casting lots.",
     },
     {
       glyph: "enemy",
@@ -397,11 +275,6 @@ export function bible_glyph_artwork_absent() {
       glyph: "fig",
       wanted: "Fig",
       because: "the set's names hold nothing carrying the word fig.",
-    },
-    {
-      glyph: "wheat",
-      wanted: "Wheat",
-      because: "the set's only sheaf is a Sheaf of rice, another grain.",
     },
     {
       glyph: "barley",
