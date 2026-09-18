@@ -161,7 +161,7 @@ export function bible_glyph_chapter_exo13() {
           "you",
           "are",
           "to",
-          "eat",
+          "$eating",
           "unleavened",
           "bread,",
           "and",
