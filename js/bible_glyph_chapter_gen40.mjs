@@ -543,7 +543,7 @@ export function bible_glyph_chapter_gen40() {
           "the",
           "$bird",
           "will",
-          "eat",
+          "$eating",
           "the",
           "$meat",
           "off",
