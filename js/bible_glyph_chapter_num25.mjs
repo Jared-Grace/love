@@ -74,7 +74,7 @@ export function bible_glyph_chapter_num25() {
           "the",
           "anger",
           "of",
-          "$name_tag",
+          "$i_am",
           "burned",
           "against",
           "them.",
@@ -84,7 +84,7 @@ export function bible_glyph_chapter_num25() {
         verse_number: 4,
         words: [
           "Then",
-          "$name_tag",
+          "$i_am",
           "$speech",
           "to",
           "Moses,",
@@ -99,7 +99,7 @@ export function bible_glyph_chapter_num25() {
           "execute",
           "them",
           "before",
-          "$name_tag",
+          "$i_am",
           "in",
           "broad",
           "daylight,",
@@ -109,7 +109,7 @@ export function bible_glyph_chapter_num25() {
           "fierce",
           "anger",
           "of",
-          "$name_tag",
+          "$i_am",
           "may",
           "$turn_back",
           "from",
@@ -291,7 +291,7 @@ export function bible_glyph_chapter_num25() {
         verse_number: 10,
         words: [
           "Then",
-          "$name_tag",
+          "$i_am",
           "$mouth",
           "to",
           "Moses",
@@ -463,7 +463,7 @@ export function bible_glyph_chapter_num25() {
       },
       {
         verse_number: 16,
-        words: ["And", "$name_tag", "$mouth", "to", "Moses", "and", "$speech,"],
+        words: ["And", "$i_am", "$mouth", "to", "Moses", "and", "$speech,"],
       },
       {
         verse_number: 17,

@@ -12,7 +12,7 @@ export function bible_glyph_chapter_num13() {
     verses: [
       {
         verse_number: 1,
-        words: ["The", "$name_tag", "$mouth", "to", "Moses,"],
+        words: ["The", "$i_am", "$mouth", "to", "Moses,"],
       },
       {
         verse_number: 2,
@@ -64,7 +64,7 @@ export function bible_glyph_chapter_num13() {
           "command",
           "of",
           "the",
-          "$name_tag,",
+          "$i_am,",
           "Moses",
           "sent",
           "them",

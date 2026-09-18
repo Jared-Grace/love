@@ -1,0 +1,1 @@
+{"f_name":"reply_names_kamba","text":"+import { arguments_assert } from \"./arguments_assert.mjs\";\n+export function reply_names_kamba() {\n+  arguments_assert(arguments, 0);\n+  (\"Given names in Kamba, spoken in Kenya.\");\n+  let names = [\"kilonzo\", \"mueni\", \"musyoka\", \"mutua\", \"mwende\"];\n+  return names;\n+}\n+"}

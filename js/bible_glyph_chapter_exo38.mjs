@@ -589,7 +589,7 @@ export function bible_glyph_chapter_exo38() {
           "$hammer",
           "everything",
           "that",
-          "$name_tag",
+          "$i_am",
           "had",
           "commanded",
           "Moses.",

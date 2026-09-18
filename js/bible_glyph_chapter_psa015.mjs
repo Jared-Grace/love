@@ -14,7 +14,7 @@ export function bible_glyph_chapter_psa015() {
         verse_number: 1,
         words: [
           "O",
-          "$name_tag,",
+          "$i_am,",
           "who",
           "may",
           "abide",
@@ -92,7 +92,7 @@ export function bible_glyph_chapter_psa015() {
           "who",
           "fear",
           "the",
-          "$name_tag,",
+          "$i_am,",
           "who",
           "does",
           "$no_entry",

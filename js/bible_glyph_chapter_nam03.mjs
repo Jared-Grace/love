@@ -116,7 +116,7 @@ export function bible_glyph_chapter_nam03() {
           "you,",
           "declares",
           "the",
-          "$name_tag",
+          "$i_am",
           "of",
           "Hosts.",
           "I",

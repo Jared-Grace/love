@@ -40,7 +40,7 @@ export function bible_glyph_chapter_nam02() {
         words: [
           "For",
           "the",
-          "$name_tag",
+          "$i_am",
           "will",
           "$turn_back",
           "the",
@@ -354,7 +354,7 @@ export function bible_glyph_chapter_nam02() {
           "you,",
           "declares",
           "the",
-          "$name_tag",
+          "$i_am",
           "of",
           "Hosts.",
           "I",

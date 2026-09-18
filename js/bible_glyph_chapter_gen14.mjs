@@ -626,7 +626,7 @@ export function bible_glyph_chapter_gen14() {
           "my",
           "$hand",
           "to",
-          "$name_tag,",
+          "$i_am,",
           "$fire",
           "Most",
           "High,",

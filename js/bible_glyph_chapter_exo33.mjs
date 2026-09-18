@@ -15,7 +15,7 @@ export function bible_glyph_chapter_exo33() {
         words: [
           "Then",
           "the",
-          "$name_tag",
+          "$i_am",
           "$mouth",
           "to",
           "Moses,",
@@ -152,7 +152,7 @@ export function bible_glyph_chapter_exo33() {
         words: [
           "For",
           "the",
-          "$name_tag",
+          "$i_am",
           "had",
           "$speech",
           "to",
@@ -248,7 +248,7 @@ export function bible_glyph_chapter_exo33() {
           "inquiring",
           "of",
           "the",
-          "$name_tag",
+          "$i_am",
           "would",
           "go",
           "to",
@@ -364,7 +364,7 @@ export function bible_glyph_chapter_exo33() {
         words: [
           "Thus",
           "the",
-          "$name_tag",
+          "$i_am",
           "would",
           "$mouth",
           "to",
@@ -702,7 +702,7 @@ export function bible_glyph_chapter_exo33() {
         verse_number: 21,
         words: [
           "The",
-          "$name_tag",
+          "$i_am",
           "$speech,",
           "There",
           "is",

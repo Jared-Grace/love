@@ -22,7 +22,7 @@ export function bible_glyph_chapter_gen17() {
           "years",
           "old,",
           "the",
-          "$name_tag",
+          "$i_am",
           "$eye",
           "to",
           "him",

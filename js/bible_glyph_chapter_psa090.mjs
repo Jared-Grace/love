@@ -280,7 +280,7 @@ export function bible_glyph_chapter_psa090() {
         words: [
           "$turn_back,",
           "O",
-          "$name_tag!",
+          "$i_am!",
           "How",
           "long",
           "will",

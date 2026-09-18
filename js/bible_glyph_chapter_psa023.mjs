@@ -16,7 +16,7 @@ export function bible_glyph_chapter_psa023() {
         verse_number: 1,
         words: [
           "The",
-          "$name_tag",
+          "$i_am",
           "is",
           "my",
           "$person+sheep;",
@@ -154,7 +154,7 @@ export function bible_glyph_chapter_psa023() {
           "$house",
           "of",
           "the",
-          "$name_tag",
+          "$i_am",
           "for",
           "the",
           "length",

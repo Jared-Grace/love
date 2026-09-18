@@ -455,7 +455,7 @@ export function bible_glyph_chapter_gen49() {
       },
       {
         verse_number: 18,
-        words: ["For", "your", "salvation", "I", "wait,", "$name_tag."],
+        words: ["For", "your", "salvation", "I", "wait,", "$i_am."],
       },
       {
         verse_number: 19,

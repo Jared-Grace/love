@@ -1,0 +1,1 @@
+{"f_name":"reply_names_zulu","text":"+import { arguments_assert } from \"./arguments_assert.mjs\";\n+export function reply_names_zulu() {\n+  arguments_assert(arguments, 0);\n+  (\"Given names in Zulu, spoken in South Africa.\");\n+  let names = [\"mandla\", \"nomsa\", \"sipho\", \"zodwa\"];\n+  return names;\n+}\n+"}

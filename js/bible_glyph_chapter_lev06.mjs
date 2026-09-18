@@ -13,7 +13,7 @@ export function bible_glyph_chapter_lev06() {
     verses: [
       {
         verse_number: 1,
-        words: ["And", "$name_tag", "$mouth", "to", "Moses,", "$speech"],
+        words: ["And", "$i_am", "$mouth", "to", "Moses,", "$speech"],
       },
       {
         verse_number: 2,
@@ -24,7 +24,7 @@ export function bible_glyph_chapter_lev06() {
           "and",
           "acts",
           "unfaithfully",
-          "$name_tag",
+          "$i_am",
           "by",
           "deceiving",
           "his",
@@ -149,7 +149,7 @@ export function bible_glyph_chapter_lev06() {
           "his",
           "guilt",
           "offering",
-          "$name_tag,",
+          "$i_am,",
           "an",
           "unblemished",
           "$ram",
@@ -175,7 +175,7 @@ export function bible_glyph_chapter_lev06() {
           "for",
           "him",
           "before",
-          "$name_tag,",
+          "$i_am,",
           "and",
           "he",
           "will",
@@ -194,7 +194,7 @@ export function bible_glyph_chapter_lev06() {
       },
       {
         verse_number: 8,
-        words: ["Then", "$name_tag", "$mouth", "to", "Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "Moses,", "$speech"],
       },
       {
         verse_number: 9,
@@ -374,7 +374,7 @@ export function bible_glyph_chapter_lev06() {
           "present",
           "it",
           "before",
-          "$name_tag",
+          "$i_am",
           "in",
           "front",
           "of",
@@ -413,7 +413,7 @@ export function bible_glyph_chapter_lev06() {
           "a",
           "pleasing",
           "aroma",
-          "$name_tag.",
+          "$i_am.",
         ],
       },
       {
@@ -504,7 +504,7 @@ export function bible_glyph_chapter_lev06() {
           "the",
           "food",
           "offerings",
-          "$name_tag.",
+          "$i_am.",
           "Anything",
           "that",
           "touches",
@@ -514,7 +514,7 @@ export function bible_glyph_chapter_lev06() {
       },
       {
         verse_number: 19,
-        words: ["Then", "$name_tag", "$mouth", "to", "Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "Moses,", "$speech"],
       },
       {
         verse_number: 20,
@@ -529,7 +529,7 @@ export function bible_glyph_chapter_lev06() {
           "$son",
           "must",
           "present",
-          "$name_tag",
+          "$i_am",
           "$sun",
           "$oil:",
           "a",
@@ -580,7 +580,7 @@ export function bible_glyph_chapter_lev06() {
           "a",
           "pleasing",
           "aroma",
-          "$name_tag.",
+          "$i_am.",
         ],
       },
       {
@@ -601,7 +601,7 @@ export function bible_glyph_chapter_lev06() {
           "As",
           "$hourglass",
           "portion",
-          "$name_tag",
+          "$i_am",
           "it",
           "must",
           "be",
@@ -628,7 +628,7 @@ export function bible_glyph_chapter_lev06() {
       },
       {
         verse_number: 24,
-        words: ["And", "$name_tag", "$mouth", "to", "Moses,", "$speech"],
+        words: ["And", "$i_am", "$mouth", "to", "Moses,", "$speech"],
       },
       {
         verse_number: 25,
@@ -654,7 +654,7 @@ export function bible_glyph_chapter_lev06() {
           "be",
           "slaughtered",
           "before",
-          "$name_tag.",
+          "$i_am.",
           "It",
           "is",
           "$sparkle",

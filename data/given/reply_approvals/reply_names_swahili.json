@@ -1,0 +1,1 @@
+{"f_name":"reply_names_swahili","text":"+import { arguments_assert } from \"./arguments_assert.mjs\";\n+export function reply_names_swahili() {\n+  arguments_assert(arguments, 0);\n+  (\"Given names in the Swahili form, spoken across East Africa.\");\n+  let names = [\"bakari\", \"juma\", \"ramadhan\", \"rukia\"];\n+  return names;\n+}\n+"}

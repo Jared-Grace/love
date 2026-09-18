@@ -210,7 +210,7 @@ export function bible_glyph_chapter_exo30() {
           "$incense",
           "perpetually",
           "before",
-          "$name_tag",
+          "$i_am",
           "for",
           "the",
           "generations",
@@ -290,12 +290,12 @@ export function bible_glyph_chapter_exo30() {
           "of",
           "$sparkle",
           "to",
-          "$name_tag.",
+          "$i_am.",
         ],
       },
       {
         verse_number: 11,
-        words: ["Then", "$name_tag", "$mouth", "to", "Moses,", "$speech,"],
+        words: ["Then", "$i_am", "$mouth", "to", "Moses,", "$speech,"],
       },
       {
         verse_number: 12,
@@ -323,7 +323,7 @@ export function bible_glyph_chapter_exo30() {
           "his",
           "$person_other",
           "to",
-          "$name_tag",
+          "$i_am",
           "when",
           "he",
           "is",
@@ -373,7 +373,7 @@ export function bible_glyph_chapter_exo30() {
           "an",
           "offering",
           "to",
-          "$name_tag.",
+          "$i_am.",
         ],
       },
       {
@@ -395,7 +395,7 @@ export function bible_glyph_chapter_exo30() {
           "this",
           "offering",
           "to",
-          "$name_tag.",
+          "$i_am.",
         ],
       },
       {
@@ -423,7 +423,7 @@ export function bible_glyph_chapter_exo30() {
           "the",
           "offering",
           "to",
-          "$name_tag",
+          "$i_am",
           "to",
           "atone",
           "for",
@@ -466,7 +466,7 @@ export function bible_glyph_chapter_exo30() {
           "of",
           "Israel",
           "before",
-          "$name_tag,",
+          "$i_am,",
           "to",
           "atone",
           "for",
@@ -476,7 +476,7 @@ export function bible_glyph_chapter_exo30() {
       },
       {
         verse_number: 17,
-        words: ["And", "$name_tag", "$mouth", "to", "Moses,", "$speech,"],
+        words: ["And", "$i_am", "$mouth", "to", "Moses,", "$speech,"],
       },
       {
         verse_number: 18,
@@ -562,7 +562,7 @@ export function bible_glyph_chapter_exo30() {
           "food",
           "offering",
           "to",
-          "$name_tag.",
+          "$i_am.",
         ],
       },
       {
@@ -604,7 +604,7 @@ export function bible_glyph_chapter_exo30() {
       },
       {
         verse_number: 22,
-        words: ["Then", "$name_tag", "$mouth", "to", "Moses,", "$speech,"],
+        words: ["Then", "$i_am", "$mouth", "to", "Moses,", "$speech,"],
       },
       {
         verse_number: 23,
@@ -885,7 +885,7 @@ export function bible_glyph_chapter_exo30() {
       {
         verse_number: 34,
         words: [
-          "$name_tag",
+          "$i_am",
           "also",
           "$speech",
           "to",
@@ -996,7 +996,7 @@ export function bible_glyph_chapter_exo30() {
           "as",
           "$sparkle",
           "to",
-          "$name_tag.",
+          "$i_am.",
         ],
       },
       {

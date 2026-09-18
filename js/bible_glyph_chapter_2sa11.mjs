@@ -923,7 +923,7 @@ export function bible_glyph_chapter_2sa11() {
           "$eyes",
           "of",
           "the",
-          "$name_tag.",
+          "$i_am.",
         ],
       },
     ],

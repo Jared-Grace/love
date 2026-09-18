@@ -704,7 +704,7 @@ export function bible_glyph_chapter_gen09() {
           "Blessed",
           "be",
           "the",
-          "$name_tag,",
+          "$i_am,",
           "the",
           "$fire",
           "of",

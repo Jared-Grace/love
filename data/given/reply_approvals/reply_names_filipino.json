@@ -1,0 +1,1 @@
+{"f_name":"reply_names_filipino","text":"+import { arguments_assert } from \"./arguments_assert.mjs\";\n+export function reply_names_filipino() {\n+  arguments_assert(arguments, 0);\n+  (\"Given names used in the Philippines that neither the English nor the Spanish list carries.\");\n+  let names = [\"angelo\", \"arnel\"];\n+  return names;\n+}\n+"}

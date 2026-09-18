@@ -63,7 +63,7 @@ export function bible_glyph_chapter_gen31() {
       {
         verse_number: 3,
         words: [
-          "$name_tag",
+          "$i_am",
           "$speech",
           "to",
           "Jacob,",
@@ -1404,7 +1404,7 @@ export function bible_glyph_chapter_gen31() {
           "he",
           "$speech,",
           "May",
-          "$name_tag",
+          "$i_am",
           "watch",
           "between",
           "me",

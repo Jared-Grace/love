@@ -523,7 +523,7 @@ export function bible_glyph_chapter_psa073() {
           "made",
           "the",
           "$crown",
-          "$name_tag",
+          "$i_am",
           "my",
           "refuge,",
           "that",

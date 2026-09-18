@@ -13,7 +13,7 @@ export function bible_glyph_chapter_lev12() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "$name_tag", "$mouth", "to", "Moses,", "$speech:"],
+        words: ["Then", "$i_am", "$mouth", "to", "Moses,", "$speech:"],
       },
       {
         verse_number: 2,
@@ -226,7 +226,7 @@ export function bible_glyph_chapter_lev12() {
           "present",
           "them",
           "before",
-          "$name_tag",
+          "$i_am",
           "and",
           "make",
           "atonement",

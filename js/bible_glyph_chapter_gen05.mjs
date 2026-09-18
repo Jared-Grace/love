@@ -622,7 +622,7 @@ export function bible_glyph_chapter_gen05() {
           "the",
           "ground",
           "that",
-          "$name_tag",
+          "$i_am",
           "$speech+thumbs_down.",
         ],
       },

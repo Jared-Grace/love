@@ -13,7 +13,7 @@ export function bible_glyph_chapter_num17() {
     verses: [
       {
         verse_number: 1,
-        words: ["$name_tag", "$mouth", "to", "Moses,", "$speech"],
+        words: ["$i_am", "$mouth", "to", "Moses,", "$speech"],
       },
       {
         verse_number: 2,
@@ -193,7 +193,7 @@ export function bible_glyph_chapter_num17() {
           "the",
           "staffs",
           "before",
-          "$name_tag",
+          "$i_am",
           "in",
           "the",
           "$tent",
@@ -256,7 +256,7 @@ export function bible_glyph_chapter_num17() {
           "the",
           "presence",
           "of",
-          "$name_tag",
+          "$i_am",
           "to",
           "all",
           "the",
@@ -278,7 +278,7 @@ export function bible_glyph_chapter_num17() {
       {
         verse_number: 10,
         words: [
-          "$name_tag",
+          "$i_am",
           "$speech",
           "to",
           "Moses,",
@@ -328,7 +328,7 @@ export function bible_glyph_chapter_num17() {
           "Moses",
           "$hammer",
           "as",
-          "$name_tag",
+          "$i_am",
           "had",
           "commanded",
           "him;",
@@ -372,7 +372,7 @@ export function bible_glyph_chapter_num17() {
           "the",
           "tabernacle",
           "of",
-          "$name_tag",
+          "$i_am",
           "will",
           "$skull.",
           "Are",
