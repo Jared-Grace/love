@@ -618,7 +618,7 @@ export function bible_glyph_chapter_jdg11() {
         words: [
           "And",
           "Israel",
-          "sent",
+          "$hand_sending",
           "$angel",
           "to",
           "$proper_name$Sihon",
