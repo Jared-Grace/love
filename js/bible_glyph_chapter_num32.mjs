@@ -112,7 +112,7 @@ export function bible_glyph_chapter_num32() {
           "$earth",
           "that",
           "$i_am",
-          "conquered",
+          "$fist",
           "before",
           "the",
           "congregation",
