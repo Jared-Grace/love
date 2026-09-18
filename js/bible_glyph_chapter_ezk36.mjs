@@ -588,7 +588,7 @@ export function bible_glyph_chapter_ezk36() {
           "$house",
           "of",
           "$proper_name$Israel",
-          "lived",
+          "$person+house",
           "in",
           "their",
           "own",
