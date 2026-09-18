@@ -359,7 +359,7 @@ export function bible_glyph_chapter_lev24() {
       {
         verse_number: 14,
         words: [
-          "Take",
+          "$walking+tray_out",
           "the",
           "$speech+thumbs_down",
           "outside",
