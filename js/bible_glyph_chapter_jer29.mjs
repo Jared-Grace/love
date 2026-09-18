@@ -163,7 +163,7 @@ export function bible_glyph_chapter_jer29() {
           "Plant",
           "gardens",
           "and",
-          "eat",
+          "$eating",
           "their",
           "produce.",
         ],
