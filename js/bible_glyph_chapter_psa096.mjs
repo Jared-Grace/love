@@ -157,7 +157,7 @@ export function bible_glyph_chapter_psa096() {
           "due",
           "His",
           "$name_tag;",
-          "bring",
+          "$lifting",
           "an",
           "offering",
           "and",
