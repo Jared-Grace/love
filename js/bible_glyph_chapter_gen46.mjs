@@ -445,7 +445,7 @@ export function bible_glyph_chapter_gen46() {
           "are",
           "the",
           "$son",
-          "born",
+          "$baby",
           "to",
           "$proper_name$Jacob",
           "by",
