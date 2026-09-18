@@ -704,7 +704,7 @@ export function bible_glyph_chapter_num13() {
           "$speech,",
           "We",
           "must",
-          "go",
+          "$walking+pointing_up",
           "up",
           "and",
           "take",
