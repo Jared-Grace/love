@@ -659,7 +659,7 @@ export function bible_glyph_chapter_job01() {
           "$speech+thumbs_up",
           "be",
           "the",
-          "name",
+          "$name_tag",
           "of",
           "the",
           "$i_am.",
