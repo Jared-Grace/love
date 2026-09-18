@@ -806,7 +806,7 @@ export function bible_glyph_chapter_exo23() {
         words: [
           "I",
           "will",
-          "send",
+          "$hand_sending",
           "the",
           "hornet",
           "before",
