@@ -49,7 +49,7 @@ export function bible_glyph_chapter_isa43() {
           "you",
           "by",
           "your",
-          "name;",
+          "$name_tag;",
           "you",
           "are",
           "Mine.",
