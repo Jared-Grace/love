@@ -480,7 +480,7 @@ export function bible_glyph_chapter_exo17() {
           "named",
           "it",
           "The",
-          "LORD",
+          "$i_am",
           "Is",
           "My",
           "Banner.",
