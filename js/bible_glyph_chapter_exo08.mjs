@@ -75,7 +75,7 @@ export function bible_glyph_chapter_exo08() {
           "and",
           "they",
           "will",
-          "come",
+          "$walking+pointing_up",
           "up",
           "into",
           "your",
