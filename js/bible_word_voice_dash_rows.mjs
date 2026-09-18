@@ -8,6 +8,7 @@ export async function bible_word_voice_dash_rows(
   "$plain chapter_code";
   "Every word of one chapter that carries the joining dash as a row of the voice trial screen, each voice offering the recording that kept the dash next to the one that dropped it.";
   "★ THE TWO READINGS SIT NEXT TO EACH OTHER IN ONE ROW rather than in two tabs, because the question is which of the pair is clipped, and a difference that has to be remembered across a tap is a difference the listener cannot judge.";
+  "★ THE READING COMPARED AGAINST THE PLAIN ONE IS THE LATEST ONE TRIED, and the one before it is dropped from the row once it has been judged, because a row of six buttons is six plays before a verdict and the listener pays that for every word.";
   arguments_assert(arguments, 2);
   let voice_names = text_split_comma(voice_names_comma);
   let forms = await bible_interlinear_chapter_word_forms(chapter_code);
@@ -37,8 +38,8 @@ export async function bible_word_voice_dash_rows(
         return r;
       }
       let both = [
-        ["", "with dash"],
-        ["_dashless", "no dash"],
+        ["", "plain"],
+        ["_stop", "full stop"],
       ].map(lambda4);
       return both;
     }

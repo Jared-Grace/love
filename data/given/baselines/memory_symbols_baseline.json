@@ -22,6 +22,7 @@
   "list_count",
   "list_empty",
   "object_map_async",
+  "reply_cities",
   "uplifting_package_upload",
   "uplifting_packages_upload_all"
  ]
