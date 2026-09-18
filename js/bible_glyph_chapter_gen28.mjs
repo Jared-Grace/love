@@ -142,7 +142,7 @@ export function bible_glyph_chapter_gen28() {
         words: [
           "So",
           "Isaac",
-          "sent",
+          "$hand_sending",
           "$proper_name$Jacob",
           "$walking",
           "to",
