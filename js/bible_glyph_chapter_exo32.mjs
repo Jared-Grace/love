@@ -1031,7 +1031,7 @@ export function bible_glyph_chapter_exo32() {
           "Now",
           "I",
           "will",
-          "go",
+          "$walking+pointing_up",
           "up",
           "to",
           "the",
