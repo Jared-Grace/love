@@ -29,7 +29,7 @@ export function bible_glyph_chapter_gen45() {
           "out,",
           "Send",
           "everyone",
-          "away",
+          "$walking+tray_out",
           "from",
           "me!",
           "So",
