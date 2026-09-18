@@ -87,7 +87,7 @@ export function bible_glyph_chapter_1sa02() {
           "or",
           "let",
           "arrogance",
-          "come",
+          "$walking+tray_out",
           "from",
           "your",
           "mouth,",
