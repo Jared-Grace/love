@@ -1285,7 +1285,7 @@ export function bible_glyph_chapter_num14() {
         words: [
           "Do",
           "$no_entry",
-          "go",
+          "$walking+pointing_up",
           "up,",
           "because",
           "the",
