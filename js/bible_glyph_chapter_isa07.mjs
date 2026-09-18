@@ -114,7 +114,7 @@ export function bible_glyph_chapter_isa07() {
           "$speech",
           "to",
           "$proper_name$Isaiah,",
-          '"Go',
+          '"$walking+tray_out',
           "out",
           "with",
           "your",
