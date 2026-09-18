@@ -61,7 +61,7 @@ export function bible_glyph_chapter_psa099() {
           "great",
           "and",
           "awesome",
-          "name;",
+          "$name_tag;",
           "$sparkle",
           "is",
           "He.",
