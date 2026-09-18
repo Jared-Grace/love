@@ -476,7 +476,7 @@ export function bible_glyph_chapter_deu12() {
           "may",
           "slaughter",
           "and",
-          "eat",
+          "$eating",
           "$meat",
           "within",
           "any",
