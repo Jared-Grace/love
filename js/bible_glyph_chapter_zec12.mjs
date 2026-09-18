@@ -154,7 +154,7 @@ export function bible_glyph_chapter_zec12() {
           "but",
           "I",
           "will",
-          "strike",
+          "$fist",
           "with",
           "blindness",
           "all",
