@@ -15,7 +15,7 @@ export function bible_glyph_chapter_isa06() {
         words: [
           "In",
           "the",
-          "year",
+          "$year",
           "that",
           "$king",
           "$proper_name$Uzziah",
