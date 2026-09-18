@@ -469,7 +469,7 @@ export function bible_glyph_chapter_jer07() {
           "$family.",
           "Do",
           "$no_entry",
-          "offer",
+          "$lifting",
           "a",
           "plea",
           "or",
