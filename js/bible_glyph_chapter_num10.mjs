@@ -526,7 +526,7 @@ export function bible_glyph_chapter_num10() {
           "Kohathites",
           "set",
           "out,",
-          "transporting",
+          "$lifting",
           "the",
           "holy",
           "objects,",
