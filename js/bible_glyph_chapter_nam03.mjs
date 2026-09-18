@@ -355,7 +355,7 @@ export function bible_glyph_chapter_nam03() {
           "your",
           "enemies;",
           "fire",
-          "consumes",
+          "$eating",
           "their",
           "bars.",
         ],
