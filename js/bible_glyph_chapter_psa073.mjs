@@ -129,7 +129,7 @@ export function bible_glyph_chapter_psa073() {
           "From",
           "their",
           "prosperity",
-          "proceeds",
+          "$walking+tray_out",
           "iniquity;",
           "the",
           "imaginations",
