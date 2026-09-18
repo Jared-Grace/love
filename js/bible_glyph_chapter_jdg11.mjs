@@ -551,7 +551,7 @@ export function bible_glyph_chapter_jdg11() {
           "consent.",
           "So",
           "Israel",
-          "stayed",
+          "$person+house",
           "in",
           "$proper_name$Kadesh.",
         ],
