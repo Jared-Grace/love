@@ -881,7 +881,7 @@ export function bible_glyph_chapter_num35() {
         words: [
           "If",
           "anyone",
-          "kills",
+          "$fist",
           "$person_other,",
           "the",
           "murderer",
