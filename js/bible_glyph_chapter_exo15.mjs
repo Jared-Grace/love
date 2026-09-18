@@ -386,7 +386,7 @@ export function bible_glyph_chapter_exo15() {
           "$proper_name$Moab;",
           "those",
           "who",
-          "dwell",
+          "$person+house",
           "in",
           "$proper_name$Canaan",
           "will",
