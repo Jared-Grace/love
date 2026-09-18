@@ -138,7 +138,7 @@ export function bible_glyph_chapter_gen48() {
           "your",
           "two",
           "$son",
-          "born",
+          "$baby",
           "to",
           "you",
           "in",
