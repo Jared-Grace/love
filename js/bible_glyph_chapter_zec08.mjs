@@ -120,7 +120,7 @@ export function bible_glyph_chapter_zec08() {
           "women",
           "will",
           "again",
-          "sit",
+          "$person+house",
           "along",
           "the",
           "streets",
