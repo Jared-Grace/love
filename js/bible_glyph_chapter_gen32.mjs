@@ -55,7 +55,7 @@ export function bible_glyph_chapter_gen32() {
         verse_number: 3,
         words: [
           "$proper_name$Jacob",
-          "sent",
+          "$hand_sending",
           "$angel",
           "ahead",
           "of",
