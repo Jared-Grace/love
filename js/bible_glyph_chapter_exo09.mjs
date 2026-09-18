@@ -410,7 +410,7 @@ export function bible_glyph_chapter_exo09() {
           "Otherwise",
           "I",
           "will",
-          "send",
+          "$hand_sending",
           "all",
           "My",
           "plagues",
