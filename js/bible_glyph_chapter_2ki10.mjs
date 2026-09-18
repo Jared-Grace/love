@@ -1204,7 +1204,7 @@ export function bible_glyph_chapter_2ki10() {
           "of",
           "$proper_name$Israel.",
           "$proper_name$Hazael",
-          "defeated",
+          "$fist",
           "the",
           "$proper_name$Israelites",
           "throughout",
