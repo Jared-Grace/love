@@ -921,7 +921,7 @@ export function bible_glyph_chapter_jer17() {
           "$sparkle",
           "by",
           "not",
-          "carrying",
+          "$lifting",
           "a",
           "load",
           "while",
