@@ -755,7 +755,7 @@ export function bible_glyph_chapter_gen24() {
           "$son",
           "that",
           "$proper_name$Milcah",
-          "bore",
+          "$baby",
           "to",
           "$proper_name$Nahor.",
         ],
