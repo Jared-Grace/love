@@ -475,7 +475,7 @@ export function bible_glyph_chapter_deu14() {
           "brought",
           "forth",
           "each",
-          "year",
+          "$year",
           "from",
           "your",
           "$field$s.",
