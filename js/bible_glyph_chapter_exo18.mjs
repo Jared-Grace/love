@@ -826,7 +826,7 @@ export function bible_glyph_chapter_exo18() {
         words: [
           "Then",
           "Moses",
-          "sent",
+          "$hand_sending",
           "his",
           "father",
           "in",
