@@ -677,7 +677,7 @@ export function bible_glyph_chapter_exo20() {
           "you",
           "must",
           "$no_entry",
-          "go",
+          "$walking+pointing_up",
           "up",
           "to",
           "My",
