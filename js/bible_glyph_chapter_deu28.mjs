@@ -311,7 +311,7 @@ export function bible_glyph_chapter_deu28() {
           "name",
           "of",
           "the",
-          "LORD,",
+          "$i_am,",
           "and",
           "they",
           "will",
