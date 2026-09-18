@@ -732,7 +732,7 @@ export function bible_glyph_chapter_ezk03() {
           "me,",
           "Get",
           "up,",
-          "go",
+          "$walking+tray_out",
           "out",
           "to",
           "the",
