@@ -173,7 +173,7 @@ export function bible_glyph_chapter_gen48() {
         words: [
           "Any",
           "children",
-          "born",
+          "$baby",
           "to",
           "you",
           "after",
