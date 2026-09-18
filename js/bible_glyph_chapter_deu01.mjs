@@ -1397,7 +1397,7 @@ export function bible_glyph_chapter_deu01() {
           "a",
           "long",
           "time",
-          "-",
+          "$person+house-",
           "a",
           "very",
           "long",
