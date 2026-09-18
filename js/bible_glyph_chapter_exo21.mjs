@@ -479,7 +479,7 @@ export function bible_glyph_chapter_exo21() {
           "and",
           "one",
           "$man_beard",
-          "strikes",
+          "$fist",
           "the",
           "other",
           "with",
