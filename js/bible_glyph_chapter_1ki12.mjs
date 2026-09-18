@@ -582,7 +582,7 @@ export function bible_glyph_chapter_1ki12() {
           "Israel",
           "who",
           "were",
-          "living",
+          "$person+house",
           "in",
           "the",
           "$city",
