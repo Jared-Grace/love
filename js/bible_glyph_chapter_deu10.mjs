@@ -636,7 +636,7 @@ export function bible_glyph_chapter_deu10() {
           "to",
           "fear",
           "the",
-          "LORD",
+          "$i_am",
           "your",
           "$fire",
           "and",
