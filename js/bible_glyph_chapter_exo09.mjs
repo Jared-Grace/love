@@ -832,7 +832,7 @@ export function bible_glyph_chapter_exo09() {
         words: [
           "Then",
           "Pharaoh",
-          "summoned",
+          "$hand_sending",
           "$proper_name$Moses",
           "and",
           "$proper_name$Aaron",
