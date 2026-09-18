@@ -107,7 +107,7 @@ export function bible_glyph_chapter_lam03() {
           "has",
           "made",
           "me",
-          "dwell",
+          "$person+house",
           "in",
           "darkness",
           "like",
