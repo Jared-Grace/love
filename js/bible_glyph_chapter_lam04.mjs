@@ -95,7 +95,7 @@ export function bible_glyph_chapter_lam04() {
           "ostrich",
           "in",
           "the",
-          "wilderness.",
+          "$wilderness.",
         ],
       },
       {
