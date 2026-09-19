@@ -518,7 +518,7 @@ export function bible_glyph_chapter_job38() {
           "inhabited,",
           "on",
           "a",
-          "desert",
+          "$wilderness",
           "where",
           "$no_entry",
           "$person",
