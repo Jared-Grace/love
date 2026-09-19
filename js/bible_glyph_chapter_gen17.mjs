@@ -83,7 +83,7 @@ export function bible_glyph_chapter_gen17() {
           "this",
           "is",
           "My",
-          "covenant",
+          "$covenant",
           "with",
           "you:",
           "You",
