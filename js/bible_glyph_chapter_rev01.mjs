@@ -519,7 +519,7 @@ export function bible_glyph_chapter_rev01() {
           "fell",
           "at",
           "$pointing_back",
-          "feet",
+          "$foot",
           "like",
           "a",
           "$skull",
