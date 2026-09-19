@@ -732,7 +732,7 @@ export function bible_glyph_chapter_1ki19() {
           "my",
           "$father",
           "and",
-          "mother",
+          "$mother",
           "goodbye,",
           "and",
           "then",
