@@ -275,7 +275,7 @@ export function bible_glyph_chapter_jol01() {
         verse_number: 10,
         words: [
           "The",
-          "field",
+          "$field",
           "is",
           "ruined;",
           "the",
