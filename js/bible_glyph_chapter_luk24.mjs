@@ -49,7 +49,7 @@ export function bible_glyph_chapter_luk24() {
           "They",
           "found",
           "the",
-          "stone",
+          "$stone",
           "rolled",
           "away",
           "from",
