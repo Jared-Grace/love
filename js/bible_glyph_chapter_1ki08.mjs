@@ -193,7 +193,7 @@ export function bible_glyph_chapter_1ki08() {
           "$i_am",
           "to",
           "its",
-          "place",
+          "$place",
           "in",
           "the",
           "inner",
