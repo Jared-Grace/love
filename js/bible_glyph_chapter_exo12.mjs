@@ -1348,7 +1348,7 @@ export function bible_glyph_chapter_exo12() {
           "$proper_name$Egypt,",
           "this",
           "same",
-          "night",
+          "$night",
           "is",
           "to",
           "be",
