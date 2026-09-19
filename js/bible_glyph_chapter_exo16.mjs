@@ -366,7 +366,7 @@ export function bible_glyph_chapter_exo16() {
           "looked",
           "toward",
           "the",
-          "desert,",
+          "$wilderness,",
           "and",
           "there",
           "the",
