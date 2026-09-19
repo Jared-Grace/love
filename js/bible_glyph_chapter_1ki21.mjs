@@ -934,7 +934,7 @@ export function bible_glyph_chapter_1ki21() {
           "he",
           "tore",
           "his",
-          "clothes,",
+          "$garment,",
           "put",
           "sackcloth",
           "on",
