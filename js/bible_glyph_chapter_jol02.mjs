@@ -570,7 +570,7 @@ export function bible_glyph_chapter_jol02() {
           "you",
           "grain,",
           "new",
-          "wine,",
+          "$wine,",
           "and",
           "oil,",
           "and",
