@@ -545,7 +545,7 @@ export function bible_glyph_chapter_gen21() {
           "settled",
           "in",
           "the",
-          "wilderness",
+          "$wilderness",
           "and",
           "became",
           "a",
