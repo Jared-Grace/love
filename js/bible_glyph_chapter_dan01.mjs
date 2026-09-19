@@ -263,7 +263,7 @@ export function bible_glyph_chapter_dan01() {
           "$king",
           "food",
           "or",
-          "wine.",
+          "$wine.",
           "So",
           "he",
           "asked",
