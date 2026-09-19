@@ -961,7 +961,7 @@ export function bible_glyph_chapter_2ki04() {
         words: [
           "And",
           "the",
-          "mother",
+          "$mother",
           "of",
           "the",
           "boy",
