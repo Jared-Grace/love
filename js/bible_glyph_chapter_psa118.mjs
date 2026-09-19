@@ -439,7 +439,7 @@ export function bible_glyph_chapter_psa118() {
         verse_number: 22,
         words: [
           "The",
-          "stone",
+          "$stone",
           "the",
           "builders",
           "rejected",
