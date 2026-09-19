@@ -374,7 +374,7 @@ export function bible_glyph_chapter_gen01() {
           "day",
           "from",
           "the",
-          "night,",
+          "$night,",
           "and",
           "let",
           "them",
