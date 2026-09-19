@@ -456,7 +456,7 @@ export function bible_glyph_chapter_hos02() {
           "her",
           "to",
           "the",
-          "wilderness,",
+          "$wilderness,",
           "and",
           "$mouth",
           "to",
