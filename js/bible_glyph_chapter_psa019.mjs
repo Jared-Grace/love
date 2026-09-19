@@ -42,7 +42,7 @@ export function bible_glyph_chapter_psa019() {
           "speech;",
           "$night",
           "after",
-          "night",
+          "$night",
           "they",
           "reveal",
           "knowledge.",
