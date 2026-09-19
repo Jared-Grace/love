@@ -68,7 +68,7 @@ export function bible_glyph_chapter_gen03() {
           "may",
           "$eating",
           "the",
-          "fruit",
+          "$fruit",
           "of",
           "the",
           "$tree",
