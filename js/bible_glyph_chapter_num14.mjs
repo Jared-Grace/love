@@ -536,7 +536,7 @@ export function bible_glyph_chapter_num14() {
           "them",
           "in",
           "the",
-          "wilderness.",
+          "$wilderness.",
         ],
       },
       {
