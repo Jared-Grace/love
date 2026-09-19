@@ -518,7 +518,7 @@ export function bible_glyph_chapter_num20() {
           "go",
           "through",
           "any",
-          "field",
+          "$field",
           "or",
           "vineyard,",
           "$no_entry",
