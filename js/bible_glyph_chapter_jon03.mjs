@@ -155,7 +155,7 @@ export function bible_glyph_chapter_jon03() {
           "up",
           "from",
           "his",
-          "throne,",
+          "$throne,",
           "took",
           "off",
           "his",
