@@ -571,7 +571,7 @@ export function bible_glyph_chapter_jer07() {
           "Is",
           "it",
           "$no_entry",
-          "themselves",
+          "$pointing_down",
           "they",
           "spite,",
           "to",
