@@ -1498,7 +1498,7 @@ export function bible_glyph_chapter_num16() {
           "had",
           "$skull",
           "on",
-          "account",
+          "$speech",
           "of",
           "$proper_name$Korah.",
         ],
