@@ -74,7 +74,7 @@ export function bible_glyph_chapter_jud01() {
           "you",
           "about",
           "the",
-          "salvation",
+          "$rescue",
           "we",
           "share,",
           "I",
