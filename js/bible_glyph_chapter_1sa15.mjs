@@ -372,7 +372,7 @@ export function bible_glyph_chapter_1sa15() {
           "$i_am",
           "all",
           "that",
-          "night.",
+          "$night.",
         ],
       },
       {
