@@ -143,7 +143,7 @@ export function bible_glyph_chapter_exo18() {
           "him",
           "in",
           "the",
-          "desert",
+          "$wilderness",
           "with",
           "$proper_name$Moses",
           "$woman",
