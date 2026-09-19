@@ -1361,7 +1361,7 @@ export function bible_glyph_chapter_mrk10() {
         "Throwing",
         "off",
         "$pointing_back",
-        "cloak,",
+        "$garment,",
         "he",
         "jumped",
         "up,",
