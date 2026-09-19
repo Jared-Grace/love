@@ -364,7 +364,7 @@ export function bible_glyph_chapter_pro31() {
           "$no_entry",
           "extinguished",
           "at",
-          "night.",
+          "$night.",
         ],
       },
       {
