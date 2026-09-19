@@ -953,7 +953,7 @@ export function bible_glyph_chapter_luk02() {
         "the",
         "temple,",
         "worshiping",
-        "night",
+        "$night",
         "$plus",
         "$sun,",
         "fasting",
