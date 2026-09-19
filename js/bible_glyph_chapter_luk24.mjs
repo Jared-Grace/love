@@ -236,7 +236,7 @@ export function bible_glyph_chapter_luk24() {
           "this",
           "to",
           "the",
-          "apostles.",
+          "$hand_sending.",
         ],
       },
       {
