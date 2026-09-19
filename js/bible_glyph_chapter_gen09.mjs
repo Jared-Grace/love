@@ -243,7 +243,7 @@ export function bible_glyph_chapter_gen09() {
           "now",
           "establish",
           "My",
-          "covenant",
+          "$covenant",
           "with",
           "you",
           "and",
