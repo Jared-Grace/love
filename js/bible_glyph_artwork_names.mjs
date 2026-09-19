@@ -740,6 +740,10 @@ export function bible_glyph_artwork_names() {
       glyph: "camp",
       asset: "Camping",
     },
+    {
+      glyph: "away",
+      asset: "Left arrow",
+    },
   ];
   return names;
 }
