@@ -1689,7 +1689,7 @@ export function bible_glyph_chapter_deu28() {
           "distress",
           "that",
           "your",
-          "enemy",
+          "$enemy",
           "will",
           "inflict",
           "on",
