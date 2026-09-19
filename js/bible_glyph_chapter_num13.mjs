@@ -512,7 +512,7 @@ export function bible_glyph_chapter_num13() {
         verse_number: 24,
         words: [
           "That",
-          "place",
+          "$place",
           "was",
           "called",
           "the",
