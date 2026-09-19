@@ -213,7 +213,7 @@ export function bible_glyph_chapter_pro08() {
         verse_number: 12,
         words: [
           "I,",
-          "wisdom,",
+          "$wisdom,",
           "dwell",
           "together",
           "with",
