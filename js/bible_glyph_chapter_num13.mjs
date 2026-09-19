@@ -584,7 +584,7 @@ export function bible_glyph_chapter_num13() {
           "$eye",
           "them",
           "the",
-          "fruit",
+          "$fruit",
           "of",
           "the",
           "$earth.",
