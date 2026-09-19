@@ -238,7 +238,7 @@ export function bible_glyph_chapter_rut02() {
           "glean",
           "in",
           "another",
-          "field,",
+          "$field,",
           "and",
           "$no_entry",
           "go",
