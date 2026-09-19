@@ -65,7 +65,7 @@ export function bible_glyph_chapter_jhn02() {
           "ran",
           "out,",
           "the",
-          "mother",
+          "$mother",
           "of",
           "$cross",
           "$speech",
