@@ -929,7 +929,7 @@ export function bible_glyph_chapter_lam03() {
           "pit",
           "and",
           "$hands_raised",
-          "stones",
+          "$stone",
           "upon",
           "me.",
         ],
