@@ -458,7 +458,7 @@ export function bible_glyph_chapter_job03() {
           "they",
           "reach",
           "the",
-          "grave?",
+          "$tomb?",
         ],
       },
       {
