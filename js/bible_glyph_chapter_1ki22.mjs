@@ -916,7 +916,7 @@ export function bible_glyph_chapter_1ki22() {
           "you",
           "ever",
           "$turn_back",
-          "safely,",
+          "$peace,",
           "the",
           "$i_am",
           "has",
