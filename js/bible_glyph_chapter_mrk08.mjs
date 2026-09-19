@@ -906,7 +906,7 @@ export function bible_glyph_chapter_mrk08() {
           "deny",
           "$pointing_back+pointing_back",
           "$plus",
-          "take",
+          "$lifting",
           "up",
           "$pointing_back",
           "cross",
