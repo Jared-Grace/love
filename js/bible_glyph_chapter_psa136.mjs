@@ -148,7 +148,7 @@ export function bible_glyph_chapter_psa136() {
           "to",
           "govern",
           "the",
-          "night.",
+          "$night.",
           "His",
           "$gift",
           "endures",
