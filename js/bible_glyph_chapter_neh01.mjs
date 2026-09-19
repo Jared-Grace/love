@@ -204,7 +204,7 @@ export function bible_glyph_chapter_neh01() {
           "this",
           "$sun",
           "and",
-          "night",
+          "$night",
           "for",
           "the",
           "$son",
