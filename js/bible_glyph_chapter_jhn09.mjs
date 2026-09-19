@@ -333,7 +333,7 @@ export function bible_glyph_chapter_jhn09() {
           "it",
           "was",
           "a",
-          "Sabbath",
+          "$sabbath",
           "$sun",
           "when",
           "$cross",
