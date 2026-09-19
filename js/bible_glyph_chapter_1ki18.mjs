@@ -1065,7 +1065,7 @@ export function bible_glyph_chapter_1ki18() {
           "two",
           "seahs",
           "of",
-          "seed.",
+          "$seed.",
         ],
       },
       {
