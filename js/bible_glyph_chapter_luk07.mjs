@@ -1416,7 +1416,7 @@ export function bible_glyph_chapter_luk07() {
         "in",
         "$speech",
         "$tray_in",
-        "themselves,",
+        "$pointing_back+pointing_back,",
         "“Who",
         "is",
         "this",
