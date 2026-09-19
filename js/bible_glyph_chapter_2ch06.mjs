@@ -310,7 +310,7 @@ export function bible_glyph_chapter_2ch06() {
           "$person+house",
           "on",
           "the",
-          "throne",
+          "$throne",
           "of",
           "$proper_name$Israel,",
           "as",
