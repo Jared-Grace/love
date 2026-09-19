@@ -628,7 +628,7 @@ export function bible_glyph_chapter_1sa02() {
           "$i_am",
           "give",
           "you",
-          "children",
+          "$seed",
           "by",
           "this",
           "$woman",
