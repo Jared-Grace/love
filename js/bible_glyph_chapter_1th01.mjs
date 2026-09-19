@@ -40,7 +40,7 @@ export function bible_glyph_chapter_1th01() {
           "to",
           "you",
           "$plus",
-          "peace.",
+          "$peace.",
         ],
       },
       {
