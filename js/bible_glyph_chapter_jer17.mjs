@@ -932,7 +932,7 @@ export function bible_glyph_chapter_jer17() {
           "$proper_name$Jerusalem",
           "on",
           "the",
-          "Sabbath",
+          "$sabbath",
           "$sun,",
           "then",
           "I",
