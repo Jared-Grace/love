@@ -73,7 +73,7 @@ export function bible_glyph_chapter_jdg02() {
           "to",
           "make",
           "a",
-          "covenant",
+          "$covenant",
           "with",
           "the",
           "people",
