@@ -453,7 +453,7 @@ export function bible_glyph_chapter_mrk10() {
         "your",
         "$father",
         "$plus",
-        "mother.”",
+        "$mother.”",
       ],
     },
     {
