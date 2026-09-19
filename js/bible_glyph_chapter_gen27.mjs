@@ -1093,7 +1093,7 @@ export function bible_glyph_chapter_gen27() {
           "grain",
           "and",
           "new",
-          "wine.",
+          "$wine.",
           "What",
           "is",
           "left",
