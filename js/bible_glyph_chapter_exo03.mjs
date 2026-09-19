@@ -686,7 +686,7 @@ export function bible_glyph_chapter_exo03() {
           "$road",
           "into",
           "the",
-          "wilderness,",
+          "$wilderness,",
           "so",
           "that",
           "we",
