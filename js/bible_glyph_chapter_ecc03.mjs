@@ -394,7 +394,7 @@ export function bible_glyph_chapter_ecc03() {
           "that",
           "in",
           "the",
-          "place",
+          "$place",
           "of",
           "$scales",
           "there",
