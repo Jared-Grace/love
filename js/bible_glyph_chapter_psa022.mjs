@@ -58,7 +58,7 @@ export function bible_glyph_chapter_psa022() {
           "answer,",
           "and",
           "by",
-          "night,",
+          "$night,",
           "but",
           "I",
           "have",
