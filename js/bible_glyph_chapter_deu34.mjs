@@ -279,7 +279,7 @@ export function bible_glyph_chapter_deu34() {
           "the",
           "$wind",
           "of",
-          "wisdom,",
+          "$wisdom,",
           "because",
           "$proper_name$Moses",
           "had",
