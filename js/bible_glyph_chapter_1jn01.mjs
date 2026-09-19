@@ -238,7 +238,7 @@ export function bible_glyph_chapter_1jn01() {
           "$son",
           "cleanses",
           "us",
-          "from",
+          "$away",
           "all",
           "$bow.",
         ],
