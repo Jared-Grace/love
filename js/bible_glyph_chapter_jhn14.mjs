@@ -186,7 +186,7 @@ export function bible_glyph_chapter_jhn14() {
           "know",
           "My",
           "$father.",
-          "From",
+          "$away",
           "now",
           "on",
           "you",
