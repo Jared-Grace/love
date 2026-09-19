@@ -839,7 +839,7 @@ export function bible_glyph_chapter_num20() {
           "had",
           "removed",
           "the",
-          "garments",
+          "$garment",
           "of",
           "$proper_name$Aaron",
           "and",
