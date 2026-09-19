@@ -444,7 +444,7 @@ export function bible_glyph_chapter_2sa07() {
           "will",
           "establish",
           "the",
-          "throne",
+          "$throne",
           "of",
           "his",
           "$castle",
