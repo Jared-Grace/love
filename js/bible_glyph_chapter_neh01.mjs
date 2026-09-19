@@ -163,7 +163,7 @@ export function bible_glyph_chapter_neh01() {
           "who",
           "keeps",
           "His",
-          "covenant",
+          "$covenant",
           "of",
           "$gift",
           "with",
