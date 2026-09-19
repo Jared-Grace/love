@@ -173,7 +173,7 @@ export function bible_glyph_chapter_jdg02() {
           "they",
           "called",
           "that",
-          "place",
+          "$place",
           "$proper_name$Bochim,",
           "and",
           "they",
