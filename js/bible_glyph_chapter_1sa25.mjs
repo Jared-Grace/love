@@ -472,7 +472,7 @@ export function bible_glyph_chapter_1sa25() {
           "messengers",
           "from",
           "the",
-          "wilderness",
+          "$wilderness",
           "to",
           "$speech+thumbs_up",
           "our",
