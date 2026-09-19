@@ -61,7 +61,7 @@ export function bible_glyph_chapter_rut03() {
           "ours?",
           "In",
           "fact,",
-          "tonight",
+          "$night",
           "he",
           "is",
           "winnowing",
