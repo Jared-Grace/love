@@ -853,7 +853,7 @@ export function bible_glyph_chapter_exo04() {
           "$proper_name$Moses",
           "in",
           "the",
-          'wilderness."',
+          '$wilderness."',
           "So",
           "he",
           "$walking",
