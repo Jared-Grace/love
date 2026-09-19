@@ -239,7 +239,7 @@ export function bible_glyph_chapter_1ki02() {
           "according",
           "to",
           "your",
-          "wisdom,",
+          "$wisdom,",
           "and",
           "do",
           "$no_entry",
