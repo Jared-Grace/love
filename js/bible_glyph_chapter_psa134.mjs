@@ -32,7 +32,7 @@ export function bible_glyph_chapter_psa134() {
           "who",
           "stand",
           "by",
-          "night",
+          "$night",
           "in",
           "the",
           "$house",
