@@ -149,7 +149,7 @@ export function bible_glyph_chapter_mrk05() {
         "he",
         "$eye",
         "$cross",
-        "from",
+        "$away",
         "a",
         "distance,",
         "he",
