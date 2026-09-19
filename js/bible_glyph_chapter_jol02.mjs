@@ -691,7 +691,7 @@ export function bible_glyph_chapter_jol02() {
           "$tree",
           "$lifting",
           "their",
-          "fruit,",
+          "$fruit,",
           "and",
           "the",
           "fig",
