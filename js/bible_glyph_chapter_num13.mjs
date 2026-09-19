@@ -624,7 +624,7 @@ export function bible_glyph_chapter_num13() {
           "some",
           "of",
           "its",
-          "fruit.",
+          "$fruit.",
         ],
       },
       {
