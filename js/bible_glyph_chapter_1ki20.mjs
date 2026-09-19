@@ -635,7 +635,7 @@ export function bible_glyph_chapter_1ki20() {
           "marched",
           "out",
           "in",
-          "peace,",
+          "$peace,",
           "take",
           "them",
           "$sprout.",
