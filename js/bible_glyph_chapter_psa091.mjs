@@ -268,7 +268,7 @@ export function bible_glyph_chapter_psa091() {
           "not",
           "strike",
           "your",
-          "foot",
+          "$foot",
           "against",
           "a",
           "stone.",
