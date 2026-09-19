@@ -216,7 +216,7 @@ export function bible_glyph_chapter_2jn01() {
         verse_number: 8,
         words: [
           "$eyes",
-          "yourselves,",
+          "$pointing_back+pointing_back,",
           "so",
           "that",
           "you",
