@@ -110,7 +110,7 @@ export function bible_glyph_chapter_zec03() {
           "off",
           "his",
           "filthy",
-          "clothes!",
+          "$garment!",
           "Then",
           "he",
           "$speech",
