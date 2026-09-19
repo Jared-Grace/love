@@ -327,7 +327,7 @@ export function bible_glyph_chapter_lev09() {
           "piece",
           "by",
           "piece,",
-          "including",
+          "$pointing_down",
           "the",
           "head,",
           "and",
