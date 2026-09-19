@@ -1263,7 +1263,7 @@ export function bible_glyph_chapter_1ki02() {
           "$house",
           "in",
           "the",
-          "wilderness.",
+          "$wilderness.",
         ],
       },
       {
