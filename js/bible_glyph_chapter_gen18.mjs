@@ -998,7 +998,7 @@ export function bible_glyph_chapter_gen18() {
           "and",
           "$proper_name$Abraham",
           "$turn_back",
-          "home.",
+          "$place.",
         ],
       },
     ],
