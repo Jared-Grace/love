@@ -826,7 +826,7 @@ export function bible_glyph_chapter_lev16() {
           "will",
           "$lifting",
           "on",
-          "itself",
+          "$pointing_down",
           "all",
           "their",
           "iniquities",
