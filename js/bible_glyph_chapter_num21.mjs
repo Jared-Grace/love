@@ -101,7 +101,7 @@ export function bible_glyph_chapter_num21() {
           "destruction,",
           "so",
           "the",
-          "place",
+          "$place",
           "was",
           "called",
           "$proper_name$Hormah.",
