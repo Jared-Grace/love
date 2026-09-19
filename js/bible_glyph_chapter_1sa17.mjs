@@ -858,7 +858,7 @@ export function bible_glyph_chapter_1sa17() {
           "$sheep",
           "in",
           "the",
-          "wilderness?",
+          "$wilderness?",
           "I",
           "$lightbulb",
           "your",
