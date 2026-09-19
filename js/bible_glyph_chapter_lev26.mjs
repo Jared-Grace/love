@@ -1006,7 +1006,7 @@ export function bible_glyph_chapter_lev26() {
           "shall",
           "enjoy",
           "its",
-          "Sabbaths",
+          "$sabbath",
           "all",
           "the",
           "$sun",
