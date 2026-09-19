@@ -147,7 +147,7 @@ export function bible_glyph_chapter_job03() {
           "Behold,",
           "may",
           "that",
-          "night",
+          "$night",
           "be",
           "barren.",
           "May",
