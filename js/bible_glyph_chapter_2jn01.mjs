@@ -158,7 +158,7 @@ export function bible_glyph_chapter_2jn01() {
           "that",
           "we",
           "$walking",
-          "according",
+          "$pointing_down",
           "to",
           "$pointing_back",
           "$scroll.",
