@@ -611,7 +611,7 @@ export function bible_glyph_chapter_luk15() {
         "sandals",
         "on",
         "his",
-        "feet.",
+        "$foot.",
       ],
     },
     {
