@@ -232,7 +232,7 @@ export function bible_glyph_chapter_ezk34() {
           "food",
           "for",
           "every",
-          "wild",
+          "$field",
           "$sprout,",
           "and",
           "because",
