@@ -53,7 +53,7 @@ export function bible_glyph_chapter_lam01() {
           "aloud",
           "in",
           "the",
-          "night,",
+          "$night,",
           "with",
           "tears",
           "upon",
