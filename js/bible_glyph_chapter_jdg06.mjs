@@ -801,7 +801,7 @@ export function bible_glyph_chapter_jdg06() {
           "The",
           "$i_am",
           "Is",
-          "Peace.",
+          "$peace.",
           "To",
           "this",
           "$sun",
