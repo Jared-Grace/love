@@ -313,7 +313,7 @@ export function bible_glyph_chapter_pro02() {
           "and",
           "forgets",
           "the",
-          "covenant",
+          "$covenant",
           "of",
           "her",
           "$fire.",
