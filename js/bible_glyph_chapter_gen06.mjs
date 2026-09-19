@@ -503,7 +503,7 @@ export function bible_glyph_chapter_gen06() {
           "will",
           "establish",
           "My",
-          "covenant",
+          "$covenant",
           "with",
           "you,",
           "and",
