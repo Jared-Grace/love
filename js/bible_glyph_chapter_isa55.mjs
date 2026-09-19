@@ -389,7 +389,7 @@ export function bible_glyph_chapter_isa55() {
           "$tree",
           "of",
           "the",
-          "field",
+          "$field",
           "will",
           "clap",
           "their",
