@@ -946,7 +946,7 @@ export function bible_glyph_chapter_lam02() {
           "or",
           "survived;",
           "my",
-          "enemy",
+          "$enemy",
           "has",
           "destroyed",
           "those",
