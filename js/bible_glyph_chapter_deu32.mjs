@@ -260,7 +260,7 @@ export function bible_glyph_chapter_deu32() {
           "him",
           "in",
           "a",
-          "desert",
+          "$wilderness",
           "$earth,",
           "in",
           "a",
