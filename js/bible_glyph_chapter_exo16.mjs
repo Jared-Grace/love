@@ -466,7 +466,7 @@ export function bible_glyph_chapter_exo16() {
           "there",
           "on",
           "the",
-          "desert",
+          "$wilderness",
           "floor",
           "were",
           "thin",
