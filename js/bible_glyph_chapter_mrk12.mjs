@@ -524,7 +524,7 @@ export function bible_glyph_chapter_mrk12() {
         "$plus",
         "raise",
         "up",
-        "offspring",
+        "$seed",
         "for",
         "$brother",
         "$pointing_back.",
