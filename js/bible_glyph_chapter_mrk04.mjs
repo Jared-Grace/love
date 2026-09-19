@@ -755,7 +755,7 @@ export function bible_glyph_chapter_mrk04() {
           "soon",
           "as",
           "the",
-          "grain",
+          "$fruit",
           "is",
           "ripe,",
           "he",
