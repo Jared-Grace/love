@@ -288,7 +288,7 @@ export function bible_glyph_chapter_hos02() {
           "and",
           "My",
           "new",
-          "wine",
+          "$wine",
           "in",
           "its",
           "season;",
