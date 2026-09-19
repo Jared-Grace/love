@@ -432,7 +432,7 @@ export function bible_glyph_chapter_gen07() {
           "$fire",
           "had",
           "commanded",
-          "Noah.",
+          "$pointing_down.",
           "Then",
           "the",
           "$i_am",
