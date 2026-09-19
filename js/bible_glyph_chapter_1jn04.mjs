@@ -544,7 +544,7 @@ export function bible_glyph_chapter_1jn04() {
         words: [
           "If",
           "anyone",
-          "says,",
+          "$speech,",
           "“I",
           "$heart_red",
           "$fire,”",
