@@ -849,7 +849,7 @@ export function bible_glyph_chapter_1ki21() {
           "$skull",
           "in",
           "the",
-          "field",
+          "$field",
           "will",
           "be",
           "eaten",
