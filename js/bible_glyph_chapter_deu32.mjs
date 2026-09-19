@@ -1453,7 +1453,7 @@ export function bible_glyph_chapter_deu32() {
           "kadesh",
           "in",
           "the",
-          "Wilderness",
+          "$wilderness",
           "of",
           "$proper_name$Zin,",
           "by",
