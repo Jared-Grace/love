@@ -450,7 +450,7 @@ export function bible_glyph_chapter_mrk05() {
         "getting",
         "into",
         "the",
-        "boat,",
+        "$ship,",
         "the",
         "man",
         "who",
