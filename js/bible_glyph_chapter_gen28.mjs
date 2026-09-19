@@ -402,7 +402,7 @@ export function bible_glyph_chapter_gen28() {
           "you",
           "and",
           "your",
-          "descendants.",
+          "$seed.",
         ],
       },
       {
