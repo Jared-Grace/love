@@ -125,7 +125,7 @@ export function bible_glyph_chapter_deu18() {
           "your",
           "grain,",
           "new",
-          "wine",
+          "$wine",
           "and",
           "oil,",
           "and",
