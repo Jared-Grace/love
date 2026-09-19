@@ -171,7 +171,7 @@ export function bible_glyph_chapter_2jn01() {
           "you",
           "have",
           "$ear",
-          "from",
+          "$away",
           "the",
           "beginning,",
           "that",
