@@ -332,7 +332,7 @@ export function bible_glyph_chapter_pro08() {
         verse_number: 19,
         words: [
           "My",
-          "fruit",
+          "$fruit",
           "is",
           "$thumbs_up",
           "than",
