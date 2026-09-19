@@ -71,7 +71,7 @@ export function bible_glyph_chapter_sng02() {
           "shade,",
           "and",
           "his",
-          "fruit",
+          "$fruit",
           "is",
           "sweet",
           "to",
