@@ -311,7 +311,7 @@ export function bible_glyph_chapter_luk24() {
           "about",
           "seven",
           "miles",
-          "from",
+          "$away",
           "$proper_name$Jerusalem.",
         ],
       },
