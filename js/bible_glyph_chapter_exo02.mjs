@@ -243,7 +243,7 @@ export function bible_glyph_chapter_exo02() {
           "called",
           "the",
           "$child",
-          "mother.",
+          "$mother.",
         ],
       },
       {
