@@ -596,7 +596,7 @@ export function bible_glyph_chapter_1sa25() {
           "two",
           "skins",
           "of",
-          "wine,",
+          "$wine,",
           "five",
           "$sheep",
           "she",
