@@ -1125,7 +1125,7 @@ export function bible_glyph_chapter_mrk05() {
         "$hands_giving",
         "$pointing_back",
         "to",
-        "eat.",
+        "$eating.",
       ],
     },
   ];
