@@ -446,7 +446,7 @@ export function bible_glyph_chapter_1ki02() {
           "$person+house",
           "on",
           "the",
-          "throne",
+          "$throne",
           "of",
           "his",
           "$father",
