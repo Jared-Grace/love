@@ -222,7 +222,7 @@ export function bible_glyph_chapter_gen01() {
           "gathered",
           "into",
           "one",
-          "place,",
+          "$place,",
           "and",
           "let",
           "the",
