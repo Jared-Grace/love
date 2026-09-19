@@ -1027,7 +1027,7 @@ export function bible_glyph_chapter_ezk36() {
           "also",
           "make",
           "the",
-          "fruit",
+          "$fruit",
           "of",
           "the",
           "$tree",
