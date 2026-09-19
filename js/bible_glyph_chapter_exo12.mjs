@@ -951,7 +951,7 @@ export function bible_glyph_chapter_exo12() {
           "sat",
           "on",
           "his",
-          "throne",
+          "$throne",
           "to",
           "the",
           "firstborn",
