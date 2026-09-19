@@ -1475,7 +1475,7 @@ export function bible_glyph_chapter_1ki01() {
           "on",
           "the",
           "royal",
-          "throne.",
+          "$throne.",
         ],
       },
       {
