@@ -431,7 +431,7 @@ export function bible_glyph_chapter_ecc01() {
           "For",
           "with",
           "much",
-          "wisdom",
+          "$wisdom",
           "comes",
           "much",
           "sorrow,",
