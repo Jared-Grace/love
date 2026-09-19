@@ -70,7 +70,7 @@ export function bible_glyph_chapter_jdg16() {
           "quiet",
           "throughout",
           "the",
-          "night,",
+          "$night,",
           "$speech,",
           "Let",
           "us",
