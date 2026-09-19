@@ -231,7 +231,7 @@ export function bible_glyph_chapter_2th01() {
           "$no_entry",
           "obey",
           "the",
-          "gospel",
+          "$angel+thumbs_up",
           "of",
           "our",
           "$crown",
