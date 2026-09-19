@@ -90,7 +90,7 @@ export function bible_glyph_chapter_jhn01() {
         words: [
           "The",
           "$light",
-          "shines",
+          "$light",
           "$tray_in",
           "the",
           "$darkness,",
