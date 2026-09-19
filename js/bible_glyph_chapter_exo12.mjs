@@ -977,7 +977,7 @@ export function bible_glyph_chapter_exo12() {
         words: [
           "During",
           "the",
-          "night",
+          "$night",
           "$proper_name$Pharaoh",
           "got",
           "up,",
