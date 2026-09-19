@@ -566,7 +566,7 @@ export function bible_glyph_chapter_deu05() {
           "neighbor's",
           "$house",
           "or",
-          "field,",
+          "$field,",
           "or",
           "his",
           "$kneeling",
