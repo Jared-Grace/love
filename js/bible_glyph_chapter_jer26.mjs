@@ -668,7 +668,7 @@ export function bible_glyph_chapter_jer26() {
           "plowed",
           "like",
           "a",
-          "field,",
+          "$field,",
           "$proper_name$Jerusalem",
           "will",
           "become",
