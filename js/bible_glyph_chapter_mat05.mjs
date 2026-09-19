@@ -211,7 +211,7 @@ export function bible_glyph_chapter_mat05() {
           "kinds",
           "of",
           "$thumbs_down",
-          "against",
+          "$pointing_down",
           "you",
           "because",
           "of",
