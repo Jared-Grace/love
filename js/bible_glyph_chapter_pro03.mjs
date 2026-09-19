@@ -516,7 +516,7 @@ export function bible_glyph_chapter_pro03() {
           "will",
           "keep",
           "your",
-          "foot",
+          "$foot",
           "from",
           "the",
           "snare.",
