@@ -692,7 +692,7 @@ export function bible_glyph_chapter_neh09() {
           "of",
           "fire",
           "by",
-          "night",
+          "$night",
           "from",
           "illuminating",
           "the",
