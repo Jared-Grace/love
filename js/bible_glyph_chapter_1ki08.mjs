@@ -288,7 +288,7 @@ export function bible_glyph_chapter_1ki08() {
           "except",
           "the",
           "two",
-          "stone",
+          "$stone",
           "tablets",
           "that",
           "$proper_name$Moses",
