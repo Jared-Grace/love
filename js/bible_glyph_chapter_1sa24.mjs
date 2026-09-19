@@ -132,7 +132,7 @@ export function bible_glyph_chapter_1sa24() {
           "will",
           "$hands_giving",
           "your",
-          "enemy",
+          "$enemy",
           "into",
           "your",
           "$hand,",
