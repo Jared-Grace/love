@@ -639,7 +639,7 @@ export function bible_glyph_chapter_isa43() {
           "$water",
           "in",
           "the",
-          "wilderness",
+          "$wilderness",
           "and",
           "rivers",
           "in",
