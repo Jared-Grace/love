@@ -155,7 +155,7 @@ export function bible_glyph_chapter_isa53() {
           "that",
           "brought",
           "us",
-          "peace",
+          "$peace",
           "was",
           "upon",
           "Him,",
