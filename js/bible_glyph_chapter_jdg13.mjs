@@ -346,7 +346,7 @@ export function bible_glyph_chapter_jdg13() {
           "sitting",
           "in",
           "the",
-          "field,",
+          "$field,",
           "but",
           "$proper_name$Manoah",
           "her",
