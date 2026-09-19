@@ -491,7 +491,7 @@ export function bible_glyph_chapter_jhn04() {
           "$proper_name$Jerusalem",
           "is",
           "the",
-          "place",
+          "$place",
           "where",
           "one",
           "must",
