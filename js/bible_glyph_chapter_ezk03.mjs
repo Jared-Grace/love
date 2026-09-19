@@ -367,7 +367,7 @@ export function bible_glyph_chapter_ezk03() {
           "in",
           "His",
           "dwelling",
-          "place.",
+          "$place.",
         ],
       },
       {
