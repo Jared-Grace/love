@@ -743,7 +743,7 @@ export function bible_glyph_chapter_lev26() {
           "vengeance",
           "of",
           "the",
-          "covenant.",
+          "$covenant.",
           "Though",
           "you",
           "withdraw",
