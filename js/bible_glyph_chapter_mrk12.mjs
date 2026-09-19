@@ -933,7 +933,7 @@ export function bible_glyph_chapter_mrk12() {
         "are",
         "$no_entry",
         "far",
-        "from",
+        "$away",
         "the",
         "$castle",
         "of",
