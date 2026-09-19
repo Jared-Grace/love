@@ -114,7 +114,7 @@ export function bible_glyph_chapter_1th01() {
         words: [
           "$pointing",
           "our",
-          "gospel",
+          "$angel+thumbs_up",
           "came",
           "to",
           "you",
