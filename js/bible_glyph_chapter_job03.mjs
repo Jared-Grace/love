@@ -47,7 +47,7 @@ export function bible_glyph_chapter_job03() {
           "perish,",
           "and",
           "the",
-          "night",
+          "$night",
           "it",
           "was",
           "$speech,",
