@@ -1282,7 +1282,7 @@ export function bible_glyph_chapter_1ki08() {
           "grasshoppers,",
           "when",
           "their",
-          "enemy",
+          "$enemy",
           "besieges",
           "them",
           "in",
