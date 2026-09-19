@@ -678,7 +678,7 @@ export function bible_glyph_chapter_lev19() {
           "$year",
           "all",
           "its",
-          "fruit",
+          "$fruit",
           "must",
           "be",
           "$sparkle",
