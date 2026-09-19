@@ -833,7 +833,7 @@ export function bible_glyph_chapter_mrk11() {
         "they",
         "$speech",
         "among",
-        "themselves,",
+        "$pointing_back+pointing_back,",
         "“If",
         "we",
         "$speech,",
