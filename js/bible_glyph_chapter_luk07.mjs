@@ -1013,7 +1013,7 @@ export function bible_glyph_chapter_luk07() {
       verse_number: 35,
       words: [
         "$plus",
-        "wisdom",
+        "$wisdom",
         "is",
         "$ruler",
         "by",
