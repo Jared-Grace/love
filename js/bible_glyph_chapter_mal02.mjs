@@ -201,7 +201,7 @@ export function bible_glyph_chapter_mal02() {
           "with",
           "Me",
           "in",
-          "peace",
+          "$peace",
           "and",
           "uprightness,",
           "and",
