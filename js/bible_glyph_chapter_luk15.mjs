@@ -91,7 +91,7 @@ export function bible_glyph_chapter_luk15() {
         "$tray_in",
         "the",
         "open",
-        "pasture",
+        "$wilderness",
         "$plus",
         "$walking",
         "after",
