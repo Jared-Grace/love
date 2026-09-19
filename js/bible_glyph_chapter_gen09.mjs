@@ -486,7 +486,7 @@ export function bible_glyph_chapter_gen09() {
           "sign",
           "of",
           "the",
-          "covenant",
+          "$covenant",
           "that",
           "I",
           "have",
