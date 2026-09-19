@@ -130,7 +130,7 @@ export function bible_glyph_chapter_deu34() {
           "it",
           "to",
           "your",
-          "descendants.'",
+          "$seed.'",
           "I",
           "have",
           "let",
