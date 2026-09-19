@@ -747,7 +747,7 @@ export function bible_glyph_chapter_1ki17() {
           "him",
           "to",
           "his",
-          "mother.",
+          "$mother.",
           "$proper_name$Elijah",
           "$speech,",
           "$eye,",
