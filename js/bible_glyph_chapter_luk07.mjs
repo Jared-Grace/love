@@ -1033,7 +1033,7 @@ export function bible_glyph_chapter_luk07() {
         "invited",
         "$pointing_back",
         "to",
-        "eat",
+        "$eating",
         "with",
         "$pointing_back,",
         "$plus",
