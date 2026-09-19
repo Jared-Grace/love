@@ -1018,7 +1018,7 @@ export function bible_glyph_chapter_mrk10() {
         "you",
         "drink",
         "the",
-        "cup",
+        "$cup",
         "I",
         "will",
         "drink,",
