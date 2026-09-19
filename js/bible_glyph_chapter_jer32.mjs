@@ -653,7 +653,7 @@ export function bible_glyph_chapter_jer32() {
           "according",
           "to",
           "the",
-          "fruit",
+          "$fruit",
           "of",
           "his",
           "deeds.",
