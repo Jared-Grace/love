@@ -498,7 +498,7 @@ export function bible_glyph_chapter_lam02() {
           "the",
           "grain",
           "and",
-          "wine?",
+          "$wine?",
           "as",
           "they",
           "faint",
