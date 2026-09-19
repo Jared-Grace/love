@@ -87,7 +87,7 @@ export function bible_glyph_chapter_pro31() {
           "$king",
           "to",
           "drink",
-          "wine,",
+          "$wine,",
           "or",
           "for",
           "rulers",
