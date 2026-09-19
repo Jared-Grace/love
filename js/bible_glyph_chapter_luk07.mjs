@@ -918,7 +918,7 @@ export function bible_glyph_chapter_luk07() {
         "They",
         "are",
         "like",
-        "children",
+        "$baby",
         "sitting",
         "$tray_in",
         "the",
