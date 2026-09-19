@@ -575,7 +575,7 @@ export function bible_glyph_chapter_hos02() {
           "$sprout",
           "of",
           "the",
-          "field",
+          "$field",
           "and",
           "the",
           "$bird",
