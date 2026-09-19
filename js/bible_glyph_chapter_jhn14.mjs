@@ -756,7 +756,7 @@ export function bible_glyph_chapter_jhn14() {
           "with",
           "you;",
           "My",
-          "peace",
+          "$peace",
           "I",
           "$hands_giving",
           "to",
