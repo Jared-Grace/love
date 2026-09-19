@@ -403,7 +403,7 @@ export function bible_glyph_chapter_ecc03() {
           "and",
           "in",
           "the",
-          "place",
+          "$place",
           "of",
           "$ruler",
           "there",
