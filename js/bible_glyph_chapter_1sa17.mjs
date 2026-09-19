@@ -1225,7 +1225,7 @@ export function bible_glyph_chapter_1sa17() {
           "selected",
           "five",
           "smooth",
-          "stones",
+          "$stone",
           "$tray_out",
           "the",
           "brook,",
