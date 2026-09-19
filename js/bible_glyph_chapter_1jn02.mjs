@@ -604,7 +604,7 @@ export function bible_glyph_chapter_1jn02() {
           "have",
           "an",
           "anointing",
-          "from",
+          "$away",
           "the",
           "$sparkle",
           "One,",
