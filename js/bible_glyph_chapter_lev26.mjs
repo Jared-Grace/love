@@ -121,7 +121,7 @@ export function bible_glyph_chapter_lev26() {
           "$tree",
           "of",
           "the",
-          "field",
+          "$field",
           "will",
           "$hands_giving",
           "their",
