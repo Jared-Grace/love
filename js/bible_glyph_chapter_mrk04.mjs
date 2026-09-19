@@ -705,7 +705,7 @@ export function bible_glyph_chapter_mrk04() {
           "sleeps",
           "$plus",
           "wakes,",
-          "night",
+          "$night",
           "$plus",
           "$sun,",
           "$plus",
