@@ -30,7 +30,7 @@ export function bible_glyph_chapter_num14() {
           "$family",
           "wept",
           "that",
-          "night.",
+          "$night.",
         ],
       },
       {
