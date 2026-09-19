@@ -502,7 +502,7 @@ export function bible_glyph_chapter_jer29() {
           "sits",
           "on",
           "$proper_name$Davids",
-          "throne",
+          "$throne",
           "and",
           "all",
           "the",
