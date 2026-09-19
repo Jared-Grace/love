@@ -1404,7 +1404,7 @@ export function bible_glyph_chapter_lev26() {
           "will",
           "remember",
           "the",
-          "covenant",
+          "$covenant",
           "with",
           "their",
           "fathers,",
