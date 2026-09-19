@@ -381,7 +381,7 @@ export function bible_glyph_chapter_num22() {
         words: [
           "But",
           "$fire",
-          "said",
+          "$speech",
           "to",
           "$proper_name$Balaam,",
           "Do",
