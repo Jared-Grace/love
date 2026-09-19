@@ -62,7 +62,7 @@ export function bible_glyph_chapter_pro04() {
           "child",
           "of",
           "my",
-          "mother,",
+          "$mother,",
         ],
       },
       {
