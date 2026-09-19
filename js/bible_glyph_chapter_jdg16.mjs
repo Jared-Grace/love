@@ -659,7 +659,7 @@ export function bible_glyph_chapter_jdg16() {
           "womb",
           "of",
           "my",
-          "mother.",
+          "$mother.",
           "If",
           "I",
           "am",
