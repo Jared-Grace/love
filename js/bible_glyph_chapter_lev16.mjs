@@ -890,7 +890,7 @@ export function bible_glyph_chapter_lev16() {
           "in",
           "a",
           "$sparkle",
-          "place",
+          "$place",
           "and",
           "put",
           "on",
