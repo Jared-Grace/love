@@ -489,7 +489,7 @@ export function bible_glyph_chapter_gen15() {
           "$speech,",
           "To",
           "your",
-          "descendants",
+          "$seed",
           "I",
           "have",
           "$hands_giving",
