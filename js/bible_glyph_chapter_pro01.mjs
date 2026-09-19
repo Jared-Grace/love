@@ -30,7 +30,7 @@ export function bible_glyph_chapter_pro01() {
         words: [
           "For",
           "$lightbulb",
-          "wisdom",
+          "$wisdom",
           "and",
           "discipline,",
           "for",
