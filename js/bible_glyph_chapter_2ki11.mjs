@@ -733,7 +733,7 @@ export function bible_glyph_chapter_2ki11() {
           "on",
           "the",
           "$king",
-          "throne.",
+          "$throne.",
         ],
       },
       {
