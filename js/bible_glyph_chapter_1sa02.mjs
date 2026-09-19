@@ -586,7 +586,7 @@ export function bible_glyph_chapter_1sa02() {
           "Each",
           "$sun",
           "his",
-          "mother",
+          "$mother",
           "would",
           "$hammer",
           "him",
