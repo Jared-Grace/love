@@ -58,7 +58,7 @@ export function bible_glyph_chapter_psa121() {
           "$no_entry",
           "$hands_giving",
           "your",
-          "foot",
+          "$foot",
           "to",
           "slip;",
           "your",
