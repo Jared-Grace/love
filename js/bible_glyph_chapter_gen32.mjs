@@ -374,7 +374,7 @@ export function bible_glyph_chapter_gen32() {
           "Jacob",
           "spent",
           "the",
-          "night",
+          "$night",
           "there,",
           "and",
           "from",
