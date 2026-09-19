@@ -47,7 +47,7 @@ export function bible_glyph_chapter_pro03() {
           "your",
           "$sprout,",
           "and",
-          "peace",
+          "$peace",
           "to",
           "you.",
         ],
