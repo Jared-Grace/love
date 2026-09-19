@@ -841,7 +841,7 @@ export function bible_glyph_chapter_2ki09() {
           "witchcraft",
           "of",
           "your",
-          "mother",
+          "$mother",
           "$proper_name$Jezebel",
           "abound?",
         ],
