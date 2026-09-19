@@ -586,7 +586,7 @@ export function bible_glyph_chapter_dan01() {
           "every",
           "$speech",
           "of",
-          "wisdom",
+          "$wisdom",
           "and",
           "understanding",
           "about",
