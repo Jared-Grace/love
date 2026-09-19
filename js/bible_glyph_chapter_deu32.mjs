@@ -351,7 +351,7 @@ export function bible_glyph_chapter_deu32() {
           "produce",
           "of",
           "the",
-          "field.",
+          "$field.",
           "He",
           "nourished",
           "him",
