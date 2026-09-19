@@ -37,7 +37,7 @@ export function bible_glyph_chapter_mat05() {
           "down,",
           "$pointing_back",
           "$learner",
-          "came",
+          "$footprints+toward",
           "to",
           "$pointing_back.",
         ],
