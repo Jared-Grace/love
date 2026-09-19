@@ -526,7 +526,7 @@ export function bible_glyph_chapter_mal02() {
           "He",
           "seeks",
           "$fire",
-          "offspring.",
+          "$seed.",
           "So",
           "guard",
           "yourselves",
