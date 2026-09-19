@@ -1119,7 +1119,7 @@ export function bible_glyph_chapter_1ki13() {
           "me",
           "in",
           "the",
-          "tomb",
+          "$tomb",
           "where",
           "the",
           "$man_beard",
