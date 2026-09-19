@@ -708,7 +708,7 @@ export function bible_glyph_chapter_jer17() {
           "$house",
           "on",
           "the",
-          "Sabbath",
+          "$sabbath",
           "$sun",
           "or",
           "$hammer",
