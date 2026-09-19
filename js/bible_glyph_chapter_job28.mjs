@@ -541,7 +541,7 @@ export function bible_glyph_chapter_job28() {
           "$crown,",
           "that",
           "is",
-          "wisdom;",
+          "$wisdom;",
           "and",
           "to",
           "turn",
