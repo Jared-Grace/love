@@ -569,7 +569,7 @@ export function bible_glyph_chapter_lam04() {
           "us",
           "in",
           "the",
-          "wilderness.",
+          "$wilderness.",
         ],
       },
       {
