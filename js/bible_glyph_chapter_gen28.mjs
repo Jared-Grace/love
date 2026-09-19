@@ -558,7 +558,7 @@ export function bible_glyph_chapter_gen28() {
           "$proper_name$Jacob",
           "$hand_receiving",
           "the",
-          "stone",
+          "$stone",
           "he",
           "had",
           "placed",
