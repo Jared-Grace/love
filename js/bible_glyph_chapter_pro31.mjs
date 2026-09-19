@@ -130,7 +130,7 @@ export function bible_glyph_chapter_pro31() {
           "is",
           "perishing,",
           "and",
-          "wine",
+          "$wine",
           "to",
           "the",
           "bitter",
