@@ -41,7 +41,7 @@ export function bible_glyph_chapter_mrk05() {
         "$footprints+tray_out",
         "$tray_out",
         "the",
-        "boat,",
+        "$ship,",
         "at",
         "once",
         "a",
