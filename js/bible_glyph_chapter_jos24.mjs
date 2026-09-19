@@ -110,7 +110,7 @@ export function bible_glyph_chapter_jos24() {
           "I",
           "multiplied",
           "his",
-          "descendants.",
+          "$seed.",
           "I",
           "$hands_giving",
           "him",
