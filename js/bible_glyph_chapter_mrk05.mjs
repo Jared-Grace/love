@@ -656,7 +656,7 @@ export function bible_glyph_chapter_mrk05() {
         "$blood",
         "for",
         "twelve",
-        "years,",
+        "$year,",
       ],
     },
     {
