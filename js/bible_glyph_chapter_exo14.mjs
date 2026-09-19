@@ -610,7 +610,7 @@ export function bible_glyph_chapter_exo14() {
           "$night.",
           "So",
           "all",
-          "night",
+          "$night",
           "long",
           "$no_entry",
           "camp",
