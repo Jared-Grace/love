@@ -1259,7 +1259,7 @@ export function bible_glyph_chapter_2ch34() {
           "$speech",
           "of",
           "the",
-          "covenant",
+          "$covenant",
           "that",
           "were",
           "written",
