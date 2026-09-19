@@ -943,7 +943,7 @@ export function bible_glyph_chapter_jdg06() {
           "$hammer",
           "it",
           "by",
-          "night",
+          "$night",
           "rather",
           "than",
           "in",
