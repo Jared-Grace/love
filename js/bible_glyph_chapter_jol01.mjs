@@ -288,7 +288,7 @@ export function bible_glyph_chapter_jol01() {
           "destroyed,",
           "the",
           "new",
-          "wine",
+          "$wine",
           "is",
           "dried",
           "up,",
