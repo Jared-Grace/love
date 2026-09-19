@@ -968,7 +968,7 @@ export function bible_glyph_chapter_2ch20() {
           "$i_am.",
           "Therefore",
           "that",
-          "place",
+          "$place",
           "is",
           "called",
           "the",
