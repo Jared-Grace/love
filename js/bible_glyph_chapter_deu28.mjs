@@ -1218,7 +1218,7 @@ export function bible_glyph_chapter_deu28() {
           "$seed",
           "in",
           "the",
-          "field",
+          "$field",
           "but",
           "harvest",
           "little,",
