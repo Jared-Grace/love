@@ -144,7 +144,7 @@ export function bible_glyph_chapter_zep01() {
           "off",
           "$tray_out",
           "this",
-          "place",
+          "$place",
           "every",
           "remnant",
           "of",
