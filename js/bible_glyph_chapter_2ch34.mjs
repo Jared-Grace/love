@@ -1065,7 +1065,7 @@ export function bible_glyph_chapter_2ch34() {
           "have",
           "torn",
           "your",
-          "clothes",
+          "$garment",
           "and",
           "wept",
           "before",
