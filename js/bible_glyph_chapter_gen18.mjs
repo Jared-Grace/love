@@ -696,7 +696,7 @@ export function bible_glyph_chapter_gen18() {
           "$no_entry",
           "$lifting",
           "the",
-          "place",
+          "$place",
           "for",
           "the",
           "sake",
