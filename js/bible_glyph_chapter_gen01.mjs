@@ -282,7 +282,7 @@ export function bible_glyph_chapter_gen01() {
           "$fruit",
           "$tree",
           "bearing",
-          "fruit",
+          "$fruit",
           "after",
           "their",
           "kind,",
