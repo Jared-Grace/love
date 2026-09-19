@@ -389,7 +389,7 @@ export function bible_glyph_chapter_jer17() {
           "beginning,",
           "is",
           "the",
-          "place",
+          "$place",
           "of",
           "our",
           "sanctuary.",
