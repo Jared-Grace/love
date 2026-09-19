@@ -538,7 +538,7 @@ export function bible_glyph_chapter_jud01() {
           "foretold",
           "by",
           "the",
-          "apostles",
+          "$hand_sending",
           "of",
           "our",
           "$crown",
