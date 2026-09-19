@@ -702,7 +702,7 @@ export function bible_glyph_chapter_gen27() {
           "he",
           "$footprints",
           "him",
-          "wine",
+          "$wine",
           "and",
           "he",
           "drank.",
