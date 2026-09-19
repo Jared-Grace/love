@@ -725,7 +725,7 @@ export function bible_glyph_chapter_lam02() {
           "has",
           "let",
           "the",
-          "enemy",
+          "$enemy",
           "gloat",
           "over",
           "you",
