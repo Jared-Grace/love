@@ -210,7 +210,7 @@ export function bible_glyph_chapter_1th01() {
           "has",
           "rung",
           "out",
-          "from",
+          "$away",
           "you,",
           "$no_entry",
           "only",
