@@ -1296,7 +1296,7 @@ export function bible_glyph_chapter_2ch34() {
           "according",
           "to",
           "the",
-          "covenant",
+          "$covenant",
           "of",
           "$fire,",
           "the",
