@@ -654,7 +654,7 @@ export function bible_glyph_chapter_1ki02() {
           "brought",
           "for",
           "the",
-          "mother",
+          "$mother",
           "of",
           "the",
           "$king,",
