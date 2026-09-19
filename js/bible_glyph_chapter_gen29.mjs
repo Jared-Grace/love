@@ -63,7 +63,7 @@ export function bible_glyph_chapter_gen29() {
           "And",
           "a",
           "large",
-          "stone",
+          "$stone",
           "covered",
           "the",
           "mouth",
