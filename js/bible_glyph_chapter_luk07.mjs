@@ -1110,7 +1110,7 @@ export function bible_glyph_chapter_luk07() {
         "she",
         "kissed",
         "$pointing_back",
-        "feet",
+        "$foot",
         "$plus",
         "anointed",
         "them",
