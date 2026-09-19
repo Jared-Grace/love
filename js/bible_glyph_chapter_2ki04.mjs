@@ -1280,7 +1280,7 @@ export function bible_glyph_chapter_2ki04() {
           "gourds",
           "as",
           "his",
-          "garment",
+          "$garment",
           "could",
           "hold.",
           "Then",
