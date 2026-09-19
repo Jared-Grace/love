@@ -26,7 +26,7 @@ export function bible_glyph_chapter_mrk08() {
           "had",
           "$no_entry",
           "to",
-          "eat.",
+          "$eating.",
           "Jesus",
           "called",
           "the",
