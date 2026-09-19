@@ -307,7 +307,7 @@ export function bible_glyph_chapter_exo14() {
           "us",
           "into",
           "the",
-          "wilderness",
+          "$wilderness",
           "to",
           "$skull?",
           "What",
