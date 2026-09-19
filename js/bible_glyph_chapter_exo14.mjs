@@ -607,7 +607,7 @@ export function bible_glyph_chapter_exo14() {
           "lit",
           "up",
           "the",
-          "night.",
+          "$night.",
           "So",
           "all",
           "night",
