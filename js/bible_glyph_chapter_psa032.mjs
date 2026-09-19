@@ -80,7 +80,7 @@ export function bible_glyph_chapter_psa032() {
           "For",
           "day",
           "and",
-          "night",
+          "$night",
           "Your",
           "$hand",
           "was",
