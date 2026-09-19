@@ -132,7 +132,7 @@ export function bible_glyph_chapter_mal02() {
           "so",
           "that",
           "My",
-          "covenant",
+          "$covenant",
           "with",
           "$proper_name$Levi",
           "may",
