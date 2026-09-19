@@ -378,7 +378,7 @@ export function bible_glyph_chapter_mrk11() {
         "no",
         "one",
         "$eating",
-        "fruit",
+        "$fruit",
         "$tray_out",
         "you",
         "again",
