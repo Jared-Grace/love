@@ -564,7 +564,7 @@ export function bible_glyph_chapter_jdg11() {
           "$walking",
           "through",
           "the",
-          "wilderness",
+          "$wilderness",
           "and",
           "bypassed",
           "the",
