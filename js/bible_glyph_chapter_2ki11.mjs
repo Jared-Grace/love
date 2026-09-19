@@ -241,7 +241,7 @@ export function bible_glyph_chapter_2ki11() {
           "duty",
           "on",
           "the",
-          "Sabbath",
+          "$sabbath",
           "are",
           "to",
           "guard",
