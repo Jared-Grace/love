@@ -256,7 +256,7 @@ export function bible_glyph_chapter_1jn01() {
           "$bow,",
           "we",
           "deceive",
-          "ourselves",
+          "$pointing_back+pointing_back",
           "$plus",
           "the",
           "$check",
