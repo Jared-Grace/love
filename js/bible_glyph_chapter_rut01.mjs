@@ -373,7 +373,7 @@ export function bible_glyph_chapter_rut01() {
           "have",
           "a",
           "$man_beard",
-          "tonight",
+          "$night",
           "and",
           "to",
           "$baby",
