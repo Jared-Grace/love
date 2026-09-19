@@ -156,7 +156,7 @@ export function bible_glyph_chapter_mal02() {
           "of",
           "$sprout",
           "and",
-          "peace,",
+          "$peace,",
           "which",
           "I",
           "$hands_giving",
