@@ -45,7 +45,7 @@ export function bible_glyph_chapter_mic02() {
         words: [
           "They",
           "covet",
-          "fields",
+          "$field",
           "and",
           "seize",
           "them;",
