@@ -442,7 +442,7 @@ export function bible_glyph_chapter_gen01() {
           "to",
           "rule",
           "the",
-          "night;",
+          "$night;",
           "and",
           "the",
           "stars.",
