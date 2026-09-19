@@ -594,7 +594,7 @@ export function bible_glyph_chapter_1jn05() {
       },
       {
         verse_number: 21,
-        words: ["Little", "children,", "keep", "yourselves", "from", "idols."],
+        words: ["Little", "children,", "keep", "$pointing_back+pointing_back", "from", "idols."],
       },
     ],
   };
