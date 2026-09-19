@@ -851,7 +851,7 @@ export function bible_glyph_chapter_exo16() {
           "seventh",
           "$sun,",
           "the",
-          "Sabbath,",
+          "$sabbath,",
           "it",
           "will",
           "not",
