@@ -670,7 +670,7 @@ export function bible_glyph_chapter_mrk04() {
           "be",
           "taken",
           "$lifting",
-          "from",
+          "$away",
           "$pointing_back.",
         ],
       },
