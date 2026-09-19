@@ -186,7 +186,7 @@ export function bible_glyph_chapter_psa095() {
           "$proper_name$Massah",
           "in",
           "the",
-          "wilderness,",
+          "$wilderness,",
         ],
       },
       {
