@@ -354,7 +354,7 @@ export function bible_glyph_chapter_gen15() {
           "$lightbulb",
           "that",
           "your",
-          "descendants",
+          "$seed",
           "will",
           "be",
           "strangers",
