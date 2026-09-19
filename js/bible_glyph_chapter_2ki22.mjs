@@ -397,7 +397,7 @@ export function bible_glyph_chapter_2ki22() {
           "he",
           "tore",
           "his",
-          "clothes.",
+          "$garment.",
         ],
       },
       {
