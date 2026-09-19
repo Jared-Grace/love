@@ -621,7 +621,7 @@ export function bible_glyph_chapter_isa43() {
           "$sprout",
           "of",
           "the",
-          "field",
+          "$field",
           "will",
           "honor",
           "Me,",
