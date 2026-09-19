@@ -777,7 +777,7 @@ export function bible_glyph_chapter_gen24() {
           "well",
           "as",
           "a",
-          "place",
+          "$place",
           "for",
           "you",
           "to",
