@@ -645,7 +645,7 @@ export function bible_glyph_chapter_jer23() {
           "You",
           "will",
           "have",
-          "peace;",
+          "$peace;",
           "and",
           "to",
           "everyone",
