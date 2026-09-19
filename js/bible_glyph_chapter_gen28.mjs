@@ -508,7 +508,7 @@ export function bible_glyph_chapter_gen28() {
           "is",
           "in",
           "this",
-          "place,",
+          "$place,",
           "and",
           "I",
           "did",
