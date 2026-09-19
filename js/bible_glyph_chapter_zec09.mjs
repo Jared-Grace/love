@@ -339,7 +339,7 @@ export function bible_glyph_chapter_zec09() {
           "He",
           "will",
           "$mouth",
-          "peace",
+          "$peace",
           "to",
           "the",
           "$map.",
