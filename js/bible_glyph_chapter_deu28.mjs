@@ -2158,7 +2158,7 @@ export function bible_glyph_chapter_deu28() {
           "will",
           "be",
           "afraid",
-          "night",
+          "$night",
           "and",
           "day,",
           "$no_entry",
