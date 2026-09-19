@@ -285,7 +285,7 @@ export function bible_glyph_chapter_hag02() {
           "And",
           "in",
           "this",
-          "place",
+          "$place",
           "I",
           "will",
           "$hands_giving",
