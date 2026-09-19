@@ -220,7 +220,7 @@ export function bible_glyph_chapter_est04() {
           "happened",
           "to",
           "him,",
-          "including",
+          "$pointing_down",
           "the",
           "exact",
           "amount",
