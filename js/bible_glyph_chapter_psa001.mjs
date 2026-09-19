@@ -87,7 +87,7 @@ export function bible_glyph_chapter_psa001() {
           "which",
           "$hands_giving",
           "its",
-          "fruit",
+          "$fruit",
           "in",
           "season,",
           "whose",
