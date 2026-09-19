@@ -291,7 +291,7 @@ export function bible_glyph_chapter_gen27() {
           "to",
           "$proper_name$Rebekah",
           "his",
-          "mother,",
+          "$mother,",
           '"Look,',
           "my",
           "$brother",
