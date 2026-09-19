@@ -111,7 +111,7 @@ export function bible_glyph_chapter_pro02() {
           "the",
           "$i_am",
           "$hands_giving",
-          "wisdom.",
+          "$wisdom.",
           "From",
           "His",
           "mouth",
