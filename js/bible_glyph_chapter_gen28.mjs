@@ -209,7 +209,7 @@ export function bible_glyph_chapter_gen28() {
           "$father",
           "and",
           "his",
-          "mother",
+          "$mother",
           "and",
           "$walking",
           "to",
