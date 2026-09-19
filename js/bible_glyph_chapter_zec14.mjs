@@ -238,7 +238,7 @@ export function bible_glyph_chapter_zec14() {
           "$no_entry",
           "$sun",
           "or",
-          "night,",
+          "$night,",
           "but",
           "when",
           "evening",
