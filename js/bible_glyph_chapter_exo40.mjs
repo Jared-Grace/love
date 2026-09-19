@@ -918,7 +918,7 @@ export function bible_glyph_chapter_exo40() {
           "the",
           "cloud",
           "by",
-          "night,",
+          "$night,",
           "in",
           "the",
           "$eyes",
