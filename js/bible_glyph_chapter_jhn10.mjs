@@ -702,7 +702,7 @@ export function bible_glyph_chapter_jhn10() {
         verse_number: 28,
         words: [
           "$plus",
-          "I",
+          "$plus+me",
           "$hands_giving",
           "$pointing_back",
           "$sprout",
