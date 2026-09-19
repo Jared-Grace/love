@@ -279,7 +279,7 @@ export function bible_glyph_chapter_lev19() {
         words: [
           "You",
           "must",
-          "not",
+          "$no_entry",
           "swear",
           "falsely",
           "by",
