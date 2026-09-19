@@ -587,7 +587,7 @@ export function bible_glyph_chapter_gen39() {
           "into",
           "the",
           "$house",
-          "where",
+          "$place",
           "the",
           "$king",
           "prisoners",
