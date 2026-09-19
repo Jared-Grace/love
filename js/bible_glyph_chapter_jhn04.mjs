@@ -793,7 +793,7 @@ export function bible_glyph_chapter_jhn04() {
           "have",
           "brought",
           "$pointing_back",
-          "food?”",
+          "$eating?”",
         ],
       },
       {
