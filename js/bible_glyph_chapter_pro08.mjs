@@ -16,7 +16,7 @@ export function bible_glyph_chapter_pro08() {
         words: [
           "Does",
           "$no_entry",
-          "wisdom",
+          "$wisdom",
           "call",
           "out,",
           "and",
