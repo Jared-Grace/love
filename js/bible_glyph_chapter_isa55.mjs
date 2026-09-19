@@ -109,7 +109,7 @@ export function bible_glyph_chapter_isa55() {
           "you",
           "an",
           "$hourglass",
-          "covenant,",
+          "$covenant,",
           "My",
           "$gift",
           "$anchor",
