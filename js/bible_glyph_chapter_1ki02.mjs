@@ -1219,7 +1219,7 @@ export function bible_glyph_chapter_1ki02() {
           "$proper_name$David",
           "and",
           "his",
-          "descendants",
+          "$seed",
           "and",
           "his",
           "$house",
