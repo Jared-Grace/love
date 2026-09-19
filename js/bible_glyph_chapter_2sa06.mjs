@@ -537,7 +537,7 @@ export function bible_glyph_chapter_2sa06() {
           "it",
           "in",
           "its",
-          "place",
+          "$place",
           "inside",
           "the",
           "tent",
