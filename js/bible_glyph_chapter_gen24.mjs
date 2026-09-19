@@ -1887,7 +1887,7 @@ export function bible_glyph_chapter_gen24() {
           "out",
           "to",
           "the",
-          "field",
+          "$field",
           "to",
           "meditate,",
           "and",
