@@ -1031,7 +1031,7 @@ export function bible_glyph_chapter_luk02() {
         "strong,",
         "filled",
         "with",
-        "wisdom,",
+        "$wisdom,",
         "$plus",
         "the",
         "$gift",
