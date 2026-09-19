@@ -47,7 +47,7 @@ export function bible_glyph_chapter_gen17() {
           "will",
           "$hands_giving",
           "My",
-          "covenant",
+          "$covenant",
           "between",
           "Me",
           "and",
