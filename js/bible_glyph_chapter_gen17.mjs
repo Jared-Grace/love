@@ -368,7 +368,7 @@ export function bible_glyph_chapter_gen17() {
           "$meat,",
           "an",
           "$hourglass",
-          "covenant.",
+          "$covenant.",
         ],
       },
       {
