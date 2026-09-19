@@ -375,7 +375,7 @@ export function bible_glyph_chapter_zec09() {
           "$blood",
           "of",
           "My",
-          "covenant,",
+          "$covenant,",
           "I",
           "will",
           "release",
