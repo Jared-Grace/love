@@ -782,7 +782,7 @@ export function bible_glyph_chapter_jer17() {
           "$city",
           "on",
           "the",
-          "Sabbath",
+          "$sabbath",
           "$sun,",
           "and",
           "keep",
