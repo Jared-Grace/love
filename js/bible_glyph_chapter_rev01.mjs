@@ -134,7 +134,7 @@ export function bible_glyph_chapter_rev01() {
           "the",
           "seven",
           "$wind",
-          "before",
+          "$face+tray_in",
           "$pointing_back",
           "throne,",
         ],
