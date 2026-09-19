@@ -453,7 +453,7 @@ export function bible_glyph_chapter_mrk12() {
         "$cross",
         "$speech",
         "$pointing_back,",
-        "Give",
+        "$hands_giving+away",
         "to",
         "$proper_name$Caesar",
         "what",
