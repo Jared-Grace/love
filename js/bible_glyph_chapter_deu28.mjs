@@ -1913,7 +1913,7 @@ export function bible_glyph_chapter_deu28() {
           "you",
           "and",
           "your",
-          "descendants",
+          "$seed",
           "extraordinary",
           "disasters,",
           "severe",
