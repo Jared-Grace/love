@@ -1252,7 +1252,7 @@ export function bible_glyph_chapter_num14() {
           "go",
           "to",
           "the",
-          "place",
+          "$place",
           "the",
           "$i_am",
           "has",
