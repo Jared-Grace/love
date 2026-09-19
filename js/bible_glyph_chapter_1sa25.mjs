@@ -45,7 +45,7 @@ export function bible_glyph_chapter_1sa25() {
           "down",
           "to",
           "the",
-          "Wilderness",
+          "$wilderness",
           "of",
           "$proper_name$Paran.",
         ],
