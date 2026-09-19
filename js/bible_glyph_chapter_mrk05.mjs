@@ -1041,7 +1041,7 @@ export function bible_glyph_chapter_mrk05() {
         "in",
         "where",
         "the",
-        "child",
+        "$baby",
         "was.",
       ],
     },
