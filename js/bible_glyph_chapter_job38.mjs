@@ -588,7 +588,7 @@ export function bible_glyph_chapter_job38() {
           "become",
           "hard",
           "as",
-          "stone",
+          "$stone",
           "and",
           "the",
           "surface",
