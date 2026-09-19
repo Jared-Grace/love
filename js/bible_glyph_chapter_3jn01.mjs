@@ -363,7 +363,7 @@ export function bible_glyph_chapter_3jn01() {
           "face",
           "to",
           "face.",
-          "Peace",
+          "$peace",
           "to",
           "you.",
           "The",
