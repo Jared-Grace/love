@@ -398,7 +398,7 @@ export function bible_glyph_chapter_jer18() {
           "leave",
           "its",
           "rocky",
-          "slopes?",
+          "$field?",
           "Or",
           "do",
           "its",
