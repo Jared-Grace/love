@@ -478,7 +478,7 @@ export function bible_glyph_chapter_isa58() {
           "you",
           "$turn_back",
           "your",
-          "foot",
+          "$foot",
           "from",
           "breaking",
           "the",
