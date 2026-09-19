@@ -139,7 +139,7 @@ export function bible_glyph_chapter_exo15() {
           "sank",
           "like",
           "a",
-          "stone.",
+          "$stone.",
         ],
       },
       {
