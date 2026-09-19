@@ -114,6 +114,8 @@ export function bible_glyph_roots() {
   ("THE SECOND SHAPE IS THE GROUP, AND ITS PREFIX NEED NOT BE A PREPOSITION. Exerchomai and eiserchomai were drawn root-mark plus preposition-mark, and that reads as the shape being about prepositions, but eulogeo was already speech plus thumbs-up and eu is not a preposition. So the shape is really root-mark plus whatever-the-prefix-means-mark, and it opens as soon as you stop looking only for prepositions. Euangelion is angel plus thumbs-up, which is literally what the word says - a good message, built on the same angel- root as angelos. Eucharisteo is gift plus thumbs-up, good grace. Epiginosko is lightbulb plus pointing-up. Proserchomai is footprints plus toward, ekporeuomai is walking plus out-tray, and enopion is face plus in-tray, which is exactly what en-opion spells.");
   ("THE REFLEXIVES CAME OUT AS A FAMILY AND THAT IS WHY THE THIRD ONE LOOKS ODD. Emautou is me plus him, seautou is you plus him, and heautou - three hundred and eighteen occurrences, the biggest single seat in this batch - is him plus him. Doubling the same mark is not a trick; it is what the Greek does, because the third-person reflexive is built from the third-person pronoun and there is no other stem to draw. A reader who has met the first two reads the third correctly without being told, which is the only test that matters here.");
   ("AND HERE IS THE FINDING THAT OUTGREW THE EPISODE: A PICTURE ALREADY SPENT ON A HEBREW ROOT IS FREE FOR A GREEK ONE. The collisions rule is one picture may not stand for two roots, and it is checked within a testament, not across them - which is not a loophole but the intended reading, because father is already pater in the Greek table and ab in the Hebrew one, and house is oikos and bayith. The same thing in both testaments SHOULD wear the same mark; that is the picture Bible working. Counted on 2026-09-19 there are a hundred and thirty eight pictures that no Greek root uses, most of them drawn for the Old Testament, and the unseated Greek frequency list is full of words they fit - mother, stone, field, fruit, wine, night, foot, throne, sabbath, peace, wilderness, tomb, garment, ship, wisdom, enemy, place, seed, cup, year, poor, covenant. None of those needs anything drawn. They are not in this batch only because this batch was about compounds.");
+  ("SO THE FINDING WAS SPENT THE SAME DAY IT WAS WRITTEN, AND TWENTY SIX MORE GREEK ROOTS WENT IN, worth about seventeen hundred occurrences and again costing nothing to draw. They are plain nouns and verbs that the Old Testament had already been given a picture for and the New Testament had not: mother, stone, field, fruit, wine, night, foot, throne, sabbath, peace, wilderness, tomb, garment, ship, wisdom, enemy, place, seed, cup, year, poor, covenant, little child, to lift, to eat, and to judge. The paragraph above is left standing rather than corrected, because the reason it gives is the reusable part and the list in it was only the evidence.");
+  ("TWO OF THOSE TWENTY SIX ARE WORTH POINTING AT. Krino and krisis share the scales, which a Hebrew root already wears for judgment, so the New Testament's word for judging now looks like the Old Testament's without anybody having decided that in this file - the tables agreed by both reaching for the same picture. And esthio and phago are one more suppletive pair like lego and eipon: Greek's word for eat borrows its aorist from a different stem, so they sit in one row.");
   ("THE ONE PLACE THE RULE BITES BACKWARDS IS THE BODY PARTS, AND IT IS WORTH ARGUING ABOUT. Ophthalmos the eye cannot have the eye, because horao to see took it. Ous the ear cannot have the ear, because akouo took it. Stoma the mouth cannot have the mouth, because laleo took it. In each pair the ORGAN is the more literal owner of the picture and the VERB got there first, so the rule now protects the looser claim against the tighter one. Three hundred occurrences sit behind those three words. Whoever revisits this should consider moving each verb to a doing-mark and giving the organ its own body part back, rather than inventing a second eye.");
   let roots = [
     {
@@ -1615,6 +1617,274 @@ export function bible_glyph_roots() {
         {
           strong: "4991",
           glyph: "rescue",
+        },
+      ],
+    },
+    {
+      root: "krino",
+      gloss: "judge, judgment",
+      words: [
+        {
+          strong: "2919",
+          glyph: "scales",
+        },
+        {
+          strong: "2920",
+          glyph: "scales",
+        },
+      ],
+    },
+    {
+      root: "airo",
+      gloss: "lift, take up, take away",
+      words: [
+        {
+          strong: "142",
+          glyph: "lifting",
+        },
+      ],
+    },
+    {
+      root: "topos",
+      gloss: "place",
+      words: [
+        {
+          strong: "5117",
+          glyph: "place",
+        },
+      ],
+    },
+    {
+      root: "esthio",
+      gloss: "eat",
+      words: [
+        {
+          strong: "2068",
+          glyph: "eating",
+        },
+        {
+          strong: "5315",
+          glyph: "eating",
+        },
+      ],
+    },
+    {
+      root: "pous",
+      gloss: "foot",
+      words: [
+        {
+          strong: "4228",
+          glyph: "foot",
+        },
+      ],
+    },
+    {
+      root: "eirene",
+      gloss: "peace",
+      words: [
+        {
+          strong: "1515",
+          glyph: "peace",
+        },
+      ],
+    },
+    {
+      root: "meter",
+      gloss: "mother",
+      words: [
+        {
+          strong: "3384",
+          glyph: "mother",
+        },
+      ],
+    },
+    {
+      root: "sabbaton",
+      gloss: "sabbath",
+      words: [
+        {
+          strong: "4521",
+          glyph: "sabbath",
+        },
+      ],
+    },
+    {
+      root: "ploion",
+      gloss: "boat, ship",
+      words: [
+        {
+          strong: "4143",
+          glyph: "ship",
+        },
+      ],
+    },
+    {
+      root: "karpos",
+      gloss: "fruit",
+      words: [
+        {
+          strong: "2590",
+          glyph: "fruit",
+        },
+      ],
+    },
+    {
+      root: "thronos",
+      gloss: "throne",
+      words: [
+        {
+          strong: "2362",
+          glyph: "throne",
+        },
+      ],
+    },
+    {
+      root: "nux",
+      gloss: "night",
+      words: [
+        {
+          strong: "3571",
+          glyph: "night",
+        },
+      ],
+    },
+    {
+      root: "himation",
+      gloss: "garment, cloak",
+      words: [
+        {
+          strong: "2440",
+          glyph: "garment",
+        },
+      ],
+    },
+    {
+      root: "lithos",
+      gloss: "stone",
+      words: [
+        {
+          strong: "3037",
+          glyph: "stone",
+        },
+      ],
+    },
+    {
+      root: "paidion",
+      gloss: "little child, infant",
+      words: [
+        {
+          strong: "3813",
+          glyph: "baby",
+        },
+      ],
+    },
+    {
+      root: "sophia",
+      gloss: "wisdom",
+      words: [
+        {
+          strong: "4678",
+          glyph: "wisdom",
+        },
+      ],
+    },
+    {
+      root: "etos",
+      gloss: "year",
+      words: [
+        {
+          strong: "2094",
+          glyph: "year",
+        },
+      ],
+    },
+    {
+      root: "eremos",
+      gloss: "wilderness, a deserted place",
+      words: [
+        {
+          strong: "2048",
+          glyph: "wilderness",
+        },
+      ],
+    },
+    {
+      root: "sperma",
+      gloss: "seed, offspring",
+      words: [
+        {
+          strong: "4690",
+          glyph: "seed",
+        },
+      ],
+    },
+    {
+      root: "mnemeion",
+      gloss: "tomb, grave",
+      words: [
+        {
+          strong: "3419",
+          glyph: "tomb",
+        },
+      ],
+    },
+    {
+      root: "agros",
+      gloss: "field, countryside",
+      words: [
+        {
+          strong: "68",
+          glyph: "field",
+        },
+      ],
+    },
+    {
+      root: "ptochos",
+      gloss: "poor, beggar",
+      words: [
+        {
+          strong: "4434",
+          glyph: "poor",
+        },
+      ],
+    },
+    {
+      root: "oinos",
+      gloss: "wine",
+      words: [
+        {
+          strong: "3631",
+          glyph: "wine",
+        },
+      ],
+    },
+    {
+      root: "diatheke",
+      gloss: "covenant",
+      words: [
+        {
+          strong: "1242",
+          glyph: "covenant",
+        },
+      ],
+    },
+    {
+      root: "echthros",
+      gloss: "enemy",
+      words: [
+        {
+          strong: "2190",
+          glyph: "enemy",
+        },
+      ],
+    },
+    {
+      root: "poterion",
+      gloss: "cup",
+      words: [
+        {
+          strong: "4221",
+          glyph: "cup",
         },
       ],
     },
