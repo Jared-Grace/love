@@ -288,7 +288,7 @@ export function bible_glyph_chapter_jhn02() {
           "$proper_name$Galilee.",
           "$plus",
           "He",
-          "revealed",
+          "$light",
           "$pointing_back",
           "$star,",
           "$plus",
