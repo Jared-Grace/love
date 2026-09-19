@@ -686,7 +686,7 @@ export function bible_glyph_chapter_1ki03() {
           "middle",
           "of",
           "the",
-          "night",
+          "$night",
           "and",
           "$hand_receiving",
           "my",
