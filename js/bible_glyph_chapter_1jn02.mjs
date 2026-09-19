@@ -236,7 +236,7 @@ export function bible_glyph_chapter_1jn02() {
           "$light",
           "is",
           "already",
-          "shining.",
+          "$light.",
         ],
       },
       {
