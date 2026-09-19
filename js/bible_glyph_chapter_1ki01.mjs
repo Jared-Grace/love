@@ -339,7 +339,7 @@ export function bible_glyph_chapter_1ki01() {
           "to",
           "Bathsheba,",
           "the",
-          "mother",
+          "$mother",
           "of",
           "$proper_name$Solomon.",
           "What",
