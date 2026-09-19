@@ -159,7 +159,7 @@ export function bible_glyph_chapter_gen28() {
           "of",
           "$proper_name$Rebekah,",
           "the",
-          "mother",
+          "$mother",
           "of",
           "$proper_name$Jacob",
           "and",
