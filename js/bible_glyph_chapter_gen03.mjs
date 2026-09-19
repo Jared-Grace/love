@@ -190,7 +190,7 @@ export function bible_glyph_chapter_gen03() {
           "she",
           "$hand_receiving",
           "the",
-          "fruit",
+          "$fruit",
           "and",
           "ate",
           "it.",
