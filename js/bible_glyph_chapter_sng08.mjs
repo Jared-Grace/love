@@ -144,7 +144,7 @@ export function bible_glyph_chapter_sng08() {
           "you;",
           "there",
           "your",
-          "mother",
+          "$mother",
           "conceived",
           "you;",
           "there",
