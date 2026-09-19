@@ -1091,7 +1091,7 @@ export function bible_glyph_chapter_mrk12() {
         "widows",
         "of",
         "their",
-        "houses,",
+        "$house,",
         "$plus",
         "for",
         "a",
