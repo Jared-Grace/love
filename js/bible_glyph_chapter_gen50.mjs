@@ -367,7 +367,7 @@ export function bible_glyph_chapter_gen50() {
           "cave",
           "in",
           "the",
-          "field",
+          "$field",
           "at",
           "$proper_name$Machpelah,",
           "which",
