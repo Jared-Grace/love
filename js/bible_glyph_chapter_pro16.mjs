@@ -332,7 +332,7 @@ export function bible_glyph_chapter_pro16() {
           "$thumbs_up",
           "to",
           "acquire",
-          "wisdom",
+          "$wisdom",
           "than",
           "gold!",
           "To",
