@@ -831,7 +831,7 @@ export function bible_glyph_chapter_2ch06() {
           "defeated",
           "before",
           "an",
-          "enemy",
+          "$enemy",
           "because",
           "they",
           "have",
