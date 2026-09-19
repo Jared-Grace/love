@@ -1034,7 +1034,7 @@ export function bible_glyph_chapter_gen37() {
           "the",
           "Midianites",
           "sold",
-          "Joseph",
+          "$pointing_down",
           "in",
           "$proper_name$Egypt",
           "to",
