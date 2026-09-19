@@ -227,7 +227,7 @@ export function bible_glyph_chapter_mic06() {
           "my",
           "transgression,",
           "the",
-          "fruit",
+          "$fruit",
           "of",
           "my",
           "body",
