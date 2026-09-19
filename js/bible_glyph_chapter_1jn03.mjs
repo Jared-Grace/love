@@ -228,7 +228,7 @@ export function bible_glyph_chapter_1jn03() {
           "has",
           "been",
           "$bow",
-          "from",
+          "$away",
           "the",
           "very",
           "start.",
