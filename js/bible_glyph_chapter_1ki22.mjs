@@ -903,7 +903,7 @@ export function bible_glyph_chapter_1ki22() {
           "until",
           "I",
           "$footprints",
-          "safely.",
+          "$peace.",
         ],
       },
       {
