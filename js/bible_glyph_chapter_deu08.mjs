@@ -489,7 +489,7 @@ export function bible_glyph_chapter_deu08() {
           "manna",
           "in",
           "the",
-          "wilderness,",
+          "$wilderness,",
           "which",
           "your",
           "$father",
