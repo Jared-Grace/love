@@ -335,7 +335,7 @@ export function bible_glyph_chapter_lev11() {
       {
         verse_number: 13,
         words: [
-          "Additionally,",
+          "$pointing_down,",
           "you",
           "are",
           "to",
