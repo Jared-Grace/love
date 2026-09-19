@@ -83,7 +83,7 @@ export function bible_glyph_chapter_gen03() {
           "but",
           "about",
           "the",
-          "fruit",
+          "$fruit",
           "of",
           "the",
           "$tree",
