@@ -527,7 +527,7 @@ export function bible_glyph_chapter_1sa25() {
           "around",
           "us,",
           "both",
-          "night",
+          "$night",
           "and",
           "day,",
           "the",
