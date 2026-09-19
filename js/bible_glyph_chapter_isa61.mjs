@@ -298,7 +298,7 @@ export function bible_glyph_chapter_isa61() {
           "make",
           "an",
           "$hourglass",
-          "covenant",
+          "$covenant",
           "with",
           "them.",
         ],
