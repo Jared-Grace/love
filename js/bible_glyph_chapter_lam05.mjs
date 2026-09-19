@@ -331,7 +331,7 @@ export function bible_glyph_chapter_lam05() {
           "$person+house",
           "$hourglass;",
           "Your",
-          "throne",
+          "$throne",
           "endures",
           "from",
           "generation",
