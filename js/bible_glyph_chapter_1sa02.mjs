@@ -646,7 +646,7 @@ export function bible_glyph_chapter_1sa02() {
           "they",
           "would",
           "$walking",
-          "home.",
+          "$place.",
         ],
       },
       {
