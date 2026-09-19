@@ -502,7 +502,7 @@ export function bible_glyph_chapter_mrk10() {
         "$hands_giving",
         "to",
         "the",
-        "poor,",
+        "$poor,",
         "$plus",
         "you",
         "will",
