@@ -454,7 +454,7 @@ export function bible_glyph_chapter_gen09() {
           "remember",
           "the",
           "$hourglass",
-          "covenant",
+          "$covenant",
           "between",
           "$fire",
           "and",
