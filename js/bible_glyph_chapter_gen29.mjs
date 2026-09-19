@@ -230,7 +230,7 @@ export function bible_glyph_chapter_gen29() {
           "gathered",
           "and",
           "the",
-          "stone",
+          "$stone",
           "has",
           "been",
           "rolled",
