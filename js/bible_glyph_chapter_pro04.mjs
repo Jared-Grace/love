@@ -346,7 +346,7 @@ export function bible_glyph_chapter_pro04() {
           "and",
           "drink",
           "the",
-          "wine",
+          "$wine",
           "of",
           "violence.",
         ],
