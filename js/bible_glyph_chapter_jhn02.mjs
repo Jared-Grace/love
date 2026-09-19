@@ -311,7 +311,7 @@ export function bible_glyph_chapter_jhn02() {
           "$proper_name$Capernaum,",
           "$plus",
           "$pointing_back",
-          "mother",
+          "$mother",
           "$plus",
           "$pointing_back",
           "$brother",
