@@ -259,7 +259,7 @@ export function bible_glyph_chapter_jos01() {
           "it",
           "day",
           "and",
-          "night,",
+          "$night,",
           "so",
           "that",
           "you",
