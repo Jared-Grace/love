@@ -703,7 +703,7 @@ export function bible_glyph_chapter_lev19() {
           "may",
           "$eating",
           "its",
-          "fruit,",
+          "$fruit,",
           "and",
           "thus",
           "your",
