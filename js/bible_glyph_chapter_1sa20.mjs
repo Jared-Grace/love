@@ -912,7 +912,7 @@ export function bible_glyph_chapter_1sa20() {
           "second",
           "day,",
           "the",
-          "place",
+          "$place",
           "of",
           "David",
           "was",
