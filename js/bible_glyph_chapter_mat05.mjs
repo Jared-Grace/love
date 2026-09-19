@@ -754,7 +754,7 @@ export function bible_glyph_chapter_mat05() {
           "$plus",
           "throw",
           "it",
-          "away.",
+          "$away.",
           "It",
           "is",
           "better",
