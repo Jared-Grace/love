@@ -84,7 +84,7 @@ export function bible_glyph_chapter_mal01() {
           "inheritance",
           "to",
           "the",
-          "desert",
+          "$wilderness",
           "jackals.",
         ],
       },
