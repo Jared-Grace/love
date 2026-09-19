@@ -1051,7 +1051,7 @@ export function bible_glyph_chapter_mrk10() {
         "to",
         "$pointing_back,",
         "“The",
-        "cup",
+        "$cup",
         "that",
         "I",
         "drink",
