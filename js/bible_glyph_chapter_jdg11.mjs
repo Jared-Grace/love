@@ -1143,7 +1143,7 @@ export function bible_glyph_chapter_jdg11() {
           "he",
           "tore",
           "his",
-          "clothes",
+          "$garment",
           "and",
           "$speech,",
           "No,",
