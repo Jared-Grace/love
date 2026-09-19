@@ -254,7 +254,7 @@ export function bible_glyph_chapter_hos02() {
           "grain,",
           "the",
           "new",
-          "wine,",
+          "$wine,",
           "and",
           "the",
           "oil,",
