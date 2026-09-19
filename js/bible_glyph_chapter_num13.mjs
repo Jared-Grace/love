@@ -567,7 +567,7 @@ export function bible_glyph_chapter_num13() {
           "$proper_name$Israel",
           "in",
           "the",
-          "Wilderness",
+          "$wilderness",
           "of",
           "$proper_name$Paran",
           "at",
