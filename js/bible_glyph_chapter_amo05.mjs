@@ -324,7 +324,7 @@ export function bible_glyph_chapter_amo05() {
           "$no_entry",
           "drink",
           "the",
-          "wine",
+          "$wine",
           "from",
           "the",
           "lush",
