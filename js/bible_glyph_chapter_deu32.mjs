@@ -758,7 +758,7 @@ export function bible_glyph_chapter_deu32() {
           "taunt",
           "of",
           "the",
-          "enemy,",
+          "$enemy,",
           "lest",
           "their",
           "adversaries",
