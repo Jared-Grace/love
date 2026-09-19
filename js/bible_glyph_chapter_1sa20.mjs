@@ -819,7 +819,7 @@ export function bible_glyph_chapter_1sa20() {
           "hid",
           "in",
           "the",
-          "field.",
+          "$field.",
           "And",
           "when",
           "the",
