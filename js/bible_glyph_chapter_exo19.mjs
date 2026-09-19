@@ -35,7 +35,7 @@ export function bible_glyph_chapter_exo19() {
           "they",
           "$footprints",
           "the",
-          "Wilderness",
+          "$wilderness",
           "of",
           "$proper_name$Sinai.",
         ],
