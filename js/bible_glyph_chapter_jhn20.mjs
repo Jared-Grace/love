@@ -166,7 +166,7 @@ export function bible_glyph_chapter_jhn20() {
           "he",
           "entered",
           "the",
-          "tomb",
+          "$tomb",
           "$plus",
           "saw",
           "the",
