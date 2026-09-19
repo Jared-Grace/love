@@ -53,7 +53,7 @@ export function bible_glyph_chapter_gen28() {
           "$father",
           "of",
           "your",
-          "mother,",
+          "$mother,",
           "and",
           "$hand_receiving",
           "a",
