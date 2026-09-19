@@ -1229,7 +1229,7 @@ export function bible_glyph_chapter_gen41() {
           "his",
           "$hand",
           "or",
-          "foot",
+          "$foot",
           "in",
           "all",
           "the",
