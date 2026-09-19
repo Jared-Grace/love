@@ -474,7 +474,7 @@ export function bible_glyph_chapter_zep03() {
           "turned",
           "back",
           "your",
-          "enemy.",
+          "$enemy.",
           "Israel",
           "$king,",
           "the",
