@@ -577,7 +577,7 @@ export function bible_glyph_chapter_rut02() {
           "grain",
           "in",
           "the",
-          "field",
+          "$field",
           "until",
           "evening.",
           "And",
