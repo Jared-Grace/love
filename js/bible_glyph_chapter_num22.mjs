@@ -109,7 +109,7 @@ export function bible_glyph_chapter_num22() {
           "grass",
           "of",
           "the",
-          "field.",
+          "$field.",
           "Now",
           "Balak",
           "$son",
