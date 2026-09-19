@@ -84,7 +84,7 @@ export function bible_glyph_chapter_gen15() {
           "$hands_giving",
           "me",
           "$no_entry",
-          "offspring,",
+          "$seed,",
           "so",
           "a",
           "$son",
