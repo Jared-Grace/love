@@ -1590,7 +1590,7 @@ export function bible_glyph_chapter_deu28() {
           "grain",
           "or",
           "new",
-          "wine",
+          "$wine",
           "or",
           "oil,",
           "no",
