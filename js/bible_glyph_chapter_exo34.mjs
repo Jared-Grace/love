@@ -315,7 +315,7 @@ export function bible_glyph_chapter_exo34() {
           "am",
           "making",
           "a",
-          "covenant.",
+          "$covenant.",
           "Before",
           "all",
           "your",
