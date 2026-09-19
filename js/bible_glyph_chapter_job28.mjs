@@ -233,7 +233,7 @@ export function bible_glyph_chapter_job28() {
           "where",
           "does",
           "understanding",
-          "dwell?",
+          "$place?",
         ],
       },
       {
