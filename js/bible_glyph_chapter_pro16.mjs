@@ -255,7 +255,7 @@ export function bible_glyph_chapter_pro16() {
           "$king,",
           "for",
           "a",
-          "throne",
+          "$throne",
           "is",
           "established",
           "through",
