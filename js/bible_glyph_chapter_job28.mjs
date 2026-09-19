@@ -86,7 +86,7 @@ export function bible_glyph_chapter_job28() {
           "forgotten",
           "by",
           "the",
-          "foot",
+          "$foot",
           "of",
           "man;",
           "far",
