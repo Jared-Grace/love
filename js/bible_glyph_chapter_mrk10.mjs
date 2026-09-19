@@ -671,7 +671,7 @@ export function bible_glyph_chapter_mrk10() {
         "all",
         "things",
         "are",
-        "possible",
+        "$lightning",
         "with",
         "$fire.”",
       ],
