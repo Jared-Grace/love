@@ -485,7 +485,7 @@ export function bible_glyph_chapter_deu05() {
           "$father",
           "and",
           "your",
-          "mother,",
+          "$mother,",
           "as",
           "the",
           "$i_am",
