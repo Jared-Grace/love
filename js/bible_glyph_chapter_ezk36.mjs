@@ -51,7 +51,7 @@ export function bible_glyph_chapter_ezk36() {
           "$speech:",
           "Because",
           "the",
-          "enemy",
+          "$enemy",
           "has",
           "$speech",
           "of",
