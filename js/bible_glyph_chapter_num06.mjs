@@ -812,7 +812,7 @@ export function bible_glyph_chapter_num06() {
           "and",
           "give",
           "you",
-          "peace.",
+          "$peace.",
         ],
       },
       {
