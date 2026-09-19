@@ -273,7 +273,7 @@ export function bible_glyph_chapter_gen22() {
           "$footprints",
           "at",
           "the",
-          "place",
+          "$place",
           "$fire",
           "had",
           "$speech,",
