@@ -320,7 +320,7 @@ export function bible_glyph_chapter_isa56() {
           "$sprout",
           "of",
           "the",
-          "field;",
+          "$field;",
           "come",
           "and",
           "$eating",
