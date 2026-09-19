@@ -964,7 +964,7 @@ export function bible_glyph_chapter_1ki03() {
           "She",
           "is",
           "his",
-          "mother.",
+          "$mother.",
         ],
       },
       {
