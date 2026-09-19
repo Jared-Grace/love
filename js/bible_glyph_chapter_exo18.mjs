@@ -740,7 +740,7 @@ export function bible_glyph_chapter_exo18() {
           "$footprints",
           "$place",
           "in",
-          "peace.",
+          "$peace.",
         ],
       },
       {
