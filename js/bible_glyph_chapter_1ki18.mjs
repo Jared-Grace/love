@@ -1006,7 +1006,7 @@ export function bible_glyph_chapter_1ki18() {
           "Elijah",
           "$hand_receiving",
           "twelve",
-          "stones,",
+          "$stone,",
           "one",
           "for",
           "each",
