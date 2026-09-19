@@ -136,7 +136,7 @@ export function bible_glyph_chapter_mrk05() {
         "out",
         "$plus",
         "cutting",
-        "himself",
+        "$pointing_back+pointing_back",
         "with",
         "stones.",
       ],
