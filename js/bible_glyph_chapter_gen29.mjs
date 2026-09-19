@@ -105,7 +105,7 @@ export function bible_glyph_chapter_gen29() {
           "would",
           "$turn_back",
           "the",
-          "stone",
+          "$stone",
           "over",
           "the",
           "mouth",
