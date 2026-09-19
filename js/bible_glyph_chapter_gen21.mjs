@@ -567,7 +567,7 @@ export function bible_glyph_chapter_gen21() {
           "of",
           "$proper_name$Paran,",
           "his",
-          "mother",
+          "$mother",
           "$hand_receiving",
           "a",
           "$woman",
