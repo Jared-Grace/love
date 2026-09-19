@@ -414,7 +414,7 @@ export function bible_glyph_chapter_isa56() {
           "me",
           "$hand_receiving",
           "the",
-          "wine,",
+          "$wine,",
           "let",
           "us",
           "imbibe",
