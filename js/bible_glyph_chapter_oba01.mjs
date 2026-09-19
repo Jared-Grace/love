@@ -156,7 +156,7 @@ export function bible_glyph_chapter_oba01() {
           "if",
           "robbers",
           "by",
-          "night,",
+          "$night,",
           "oh,",
           "how",
           "you",
