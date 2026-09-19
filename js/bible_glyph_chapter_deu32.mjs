@@ -898,7 +898,7 @@ export function bible_glyph_chapter_deu32() {
         verse_number: 33,
         words: [
           "Their",
-          "wine",
+          "$wine",
           "is",
           "the",
           "venom",
