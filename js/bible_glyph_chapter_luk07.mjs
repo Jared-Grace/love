@@ -1350,7 +1350,7 @@ export function bible_glyph_chapter_luk07() {
         "has",
         "anointed",
         "My",
-        "feet",
+        "$foot",
         "with",
         "perfume.",
       ],
