@@ -767,7 +767,7 @@ export function bible_glyph_chapter_lev26() {
           "$hand",
           "of",
           "the",
-          "enemy.",
+          "$enemy.",
         ],
       },
       {
