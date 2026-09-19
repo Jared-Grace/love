@@ -107,7 +107,7 @@ export function bible_glyph_chapter_jhn20() {
           "$footprints",
           "for",
           "the",
-          "tomb.",
+          "$tomb.",
         ],
       },
       {
