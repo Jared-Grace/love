@@ -1219,7 +1219,7 @@ export function bible_glyph_chapter_luk02() {
         "astonished,",
         "$plus",
         "$pointing_back",
-        "mother",
+        "$mother",
         "was",
         "$speech",
         "to",
