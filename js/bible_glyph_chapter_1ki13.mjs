@@ -797,7 +797,7 @@ export function bible_glyph_chapter_1ki13() {
           "$water",
           "in",
           "the",
-          "place",
+          "$place",
           "where",
           "He",
           "$mouth",
