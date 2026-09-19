@@ -650,7 +650,7 @@ export function bible_glyph_chapter_lev19() {
           "shall",
           "regard",
           "the",
-          "fruit",
+          "$fruit",
           "as",
           "forbidden.",
           "For",
