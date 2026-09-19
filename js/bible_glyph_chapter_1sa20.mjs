@@ -399,7 +399,7 @@ export function bible_glyph_chapter_1sa20() {
           "out",
           "into",
           "the",
-          "field.",
+          "$field.",
         ],
       },
       {
