@@ -642,7 +642,7 @@ export function bible_glyph_chapter_2ki22() {
           "kindled",
           "against",
           "this",
-          "place",
+          "$place",
           "and",
           "will",
           "$no_entry",
