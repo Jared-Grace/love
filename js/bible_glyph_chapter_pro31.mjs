@@ -515,7 +515,7 @@ export function bible_glyph_chapter_pro31() {
           "her",
           "mouth",
           "with",
-          "wisdom,",
+          "$wisdom,",
           "and",
           "the",
           "$scroll",
