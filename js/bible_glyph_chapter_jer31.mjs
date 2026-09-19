@@ -58,7 +58,7 @@ export function bible_glyph_chapter_jer31() {
           "favor",
           "in",
           "the",
-          "wilderness",
+          "$wilderness",
           "when",
           "$proper_name$Israel",
           "$walking",
