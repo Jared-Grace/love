@@ -360,7 +360,7 @@ export function bible_glyph_chapter_mrk08() {
           "them",
           "$tray_in",
           "the",
-          "boat,",
+          "$ship,",
           "$no_entry",
           "but",
           "one.",
