@@ -1138,7 +1138,7 @@ export function bible_glyph_chapter_2ki09() {
           "you",
           "come",
           "in",
-          "peace,",
+          "$peace,",
           "O",
           "Zimri,",
           "murderer",
