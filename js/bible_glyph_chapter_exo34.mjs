@@ -118,7 +118,7 @@ export function bible_glyph_chapter_exo34() {
           "two",
           "tablets",
           "of",
-          "stone",
+          "$stone",
           "like",
           "the",
           "originals.",
