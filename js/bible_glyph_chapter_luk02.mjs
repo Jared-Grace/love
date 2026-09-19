@@ -1024,7 +1024,7 @@ export function bible_glyph_chapter_luk02() {
       verse_number: 40,
       words: [
         "The",
-        "Child",
+        "$baby",
         "grew",
         "$plus",
         "became",
