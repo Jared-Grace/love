@@ -162,7 +162,7 @@ export function bible_glyph_chapter_1sa16() {
           "you",
           "$footprints",
           "in",
-          "peace?",
+          "$peace?",
         ],
       },
       {
