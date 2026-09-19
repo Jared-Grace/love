@@ -653,7 +653,7 @@ export function bible_glyph_chapter_jhn01() {
           "$fire,",
           "who",
           "takes",
-          "away",
+          "$lifting",
           "the",
           "$bow",
           "of",
