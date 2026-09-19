@@ -89,7 +89,7 @@ export function bible_glyph_chapter_gen29() {
           "roll",
           "away",
           "the",
-          "stone",
+          "$stone",
           "from",
           "the",
           "mouth",
