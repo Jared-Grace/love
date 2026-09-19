@@ -283,7 +283,7 @@ export function bible_glyph_chapter_pro01() {
           "them",
           "or",
           "set",
-          "foot",
+          "$foot",
           "upon",
           "their",
           "path.",
