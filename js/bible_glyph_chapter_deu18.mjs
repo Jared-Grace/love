@@ -78,7 +78,7 @@ export function bible_glyph_chapter_deu18() {
           "shall",
           "be",
           "the",
-          "share",
+          "$scales",
           "of",
           "the",
           "$priest",
