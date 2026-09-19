@@ -62,7 +62,7 @@ export function bible_glyph_chapter_exo14() {
           "in",
           "confusion;",
           "the",
-          "wilderness",
+          "$wilderness",
           "has",
           "boxed",
           "them",
