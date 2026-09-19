@@ -125,7 +125,7 @@ export function bible_glyph_chapter_psa023() {
           "with",
           "oil;",
           "my",
-          "cup",
+          "$cup",
           "overflows.",
         ],
       },
