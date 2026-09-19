@@ -14,7 +14,7 @@ export function bible_glyph_chapter_isa35() {
         verse_number: 1,
         words: [
           "The",
-          "wilderness",
+          "$wilderness",
           "and",
           "the",
           "dry",
