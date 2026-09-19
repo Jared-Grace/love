@@ -36,7 +36,7 @@ export function bible_glyph_chapter_psa112() {
         verse_number: 2,
         words: [
           "His",
-          "descendants",
+          "$seed",
           "will",
           "be",
           "mighty",
