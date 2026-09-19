@@ -781,7 +781,7 @@ export function bible_glyph_chapter_1jn02() {
           "anointing",
           "you",
           "$hand_receiving",
-          "from",
+          "$away",
           "$pointing_back",
           "remains",
           "$tray_in",
