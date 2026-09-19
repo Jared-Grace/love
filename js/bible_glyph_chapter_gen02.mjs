@@ -133,7 +133,7 @@ export function bible_glyph_chapter_gen02() {
           "shrub",
           "of",
           "the",
-          "field",
+          "$field",
           "had",
           "yet",
           "appeared",
