@@ -393,7 +393,7 @@ export function bible_glyph_chapter_gen17() {
           "has",
           "broken",
           "My",
-          'covenant."',
+          '$covenant."',
         ],
       },
       {
