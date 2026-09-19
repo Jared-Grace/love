@@ -377,7 +377,7 @@ export function bible_glyph_chapter_mrk11() {
         "“May",
         "no",
         "one",
-        "eat",
+        "$eating",
         "fruit",
         "$tray_out",
         "you",
