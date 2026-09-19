@@ -580,7 +580,7 @@ export function bible_glyph_chapter_luk24() {
           "went",
           "to",
           "the",
-          "tomb",
+          "$tomb",
           "$plus",
           "found",
           "it",
