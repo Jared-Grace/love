@@ -678,7 +678,7 @@ export function bible_glyph_chapter_2ki17() {
           "rejected",
           "all",
           "the",
-          "descendants",
+          "$seed",
           "of",
           "$proper_name$Israel.",
           "He",
