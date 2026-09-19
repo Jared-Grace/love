@@ -130,7 +130,7 @@ export function bible_glyph_chapter_rev01() {
           "is",
           "$footprints,",
           "$plus",
-          "from",
+          "$away",
           "the",
           "seven",
           "$wind",
