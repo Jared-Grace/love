@@ -561,7 +561,7 @@ export function bible_glyph_chapter_jhn09() {
           "to",
           "$mouth",
           "for",
-          "himself.",
+          "$pointing_back+pointing_back.",
         ],
       },
       {
