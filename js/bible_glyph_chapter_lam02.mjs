@@ -148,7 +148,7 @@ export function bible_glyph_chapter_lam02() {
           "bow",
           "like",
           "an",
-          "enemy;",
+          "$enemy;",
           "His",
           "right",
           "hand",
