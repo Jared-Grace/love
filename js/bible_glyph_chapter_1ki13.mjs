@@ -605,7 +605,7 @@ export function bible_glyph_chapter_1ki13() {
           "you",
           "in",
           "this",
-          "place.",
+          "$place.",
         ],
       },
       {
