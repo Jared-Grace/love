@@ -500,7 +500,7 @@ export function bible_glyph_chapter_2ki11() {
           "Athaliah",
           "tore",
           "her",
-          "clothes",
+          "$garment",
           "and",
           "screamed,",
           "Treason!",
