@@ -162,7 +162,7 @@ export function bible_glyph_chapter_exo15() {
           "has",
           "shattered",
           "the",
-          "enemy.",
+          "$enemy.",
         ],
       },
       {
