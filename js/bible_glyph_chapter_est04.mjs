@@ -134,7 +134,7 @@ export function bible_glyph_chapter_est04() {
           "distress.",
           "She",
           "sent",
-          "clothes",
+          "$garment",
           "for",
           "$proper_name$Mordecai",
           "to",
