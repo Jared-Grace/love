@@ -610,7 +610,7 @@ export function bible_glyph_chapter_num21() {
           "aside",
           "into",
           "any",
-          "field",
+          "$field",
           "or",
           "vineyard,",
           "and",
