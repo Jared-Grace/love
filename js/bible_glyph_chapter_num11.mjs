@@ -84,7 +84,7 @@ export function bible_glyph_chapter_num11() {
         words: [
           "So",
           "that",
-          "place",
+          "$place",
           "was",
           "called",
           "$proper_name$Taberah,",
