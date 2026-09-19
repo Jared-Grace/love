@@ -653,7 +653,7 @@ export function bible_glyph_chapter_luk07() {
         "are",
         "raised,",
         "the",
-        "poor",
+        "$poor",
         "have",
         "the",
         "good",
