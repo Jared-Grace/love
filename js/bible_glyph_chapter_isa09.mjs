@@ -227,7 +227,7 @@ export function bible_glyph_chapter_isa09() {
           "His",
           "government",
           "and",
-          "peace",
+          "$peace",
           "there",
           "will",
           "be",
