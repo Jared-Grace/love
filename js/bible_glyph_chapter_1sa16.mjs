@@ -169,7 +169,7 @@ export function bible_glyph_chapter_1sa16() {
         verse_number: 5,
         words: [
           "In",
-          "peace,",
+          "$peace,",
           "he",
           "$speech.",
           "I",
