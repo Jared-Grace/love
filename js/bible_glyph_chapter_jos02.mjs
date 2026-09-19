@@ -70,7 +70,7 @@ export function bible_glyph_chapter_jos02() {
           "have",
           "$footprints",
           "here",
-          "tonight",
+          "$night",
           "to",
           "spy",
           "out",
