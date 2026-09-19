@@ -617,7 +617,7 @@ export function bible_glyph_chapter_luk02() {
         "$hands_giving",
         "the",
         "sacrifice",
-        "specified",
+        "$speech",
         "$tray_in",
         "the",
         "$scroll",
