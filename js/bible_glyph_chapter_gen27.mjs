@@ -398,7 +398,7 @@ export function bible_glyph_chapter_gen27() {
           "$hand_receiving",
           "the",
           "finest",
-          "clothes",
+          "$garment",
           "of",
           "her",
           "older",
