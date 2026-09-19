@@ -19,7 +19,7 @@ export function bible_glyph_chapter_1jn01() {
           "That",
           "which",
           "was",
-          "from",
+          "$away",
           "the",
           "beginning,",
           "which",
