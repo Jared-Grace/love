@@ -133,7 +133,7 @@ export function bible_glyph_chapter_dan01() {
           "gifted",
           "in",
           "all",
-          "wisdom,",
+          "$wisdom,",
           "$lightbulb,",
           "quick",
           "to",
