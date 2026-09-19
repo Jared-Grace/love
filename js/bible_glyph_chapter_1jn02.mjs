@@ -352,7 +352,7 @@ export function bible_glyph_chapter_1jn02() {
           "Him",
           "who",
           "is",
-          "from",
+          "$away",
           "the",
           "beginning.",
           "I",
