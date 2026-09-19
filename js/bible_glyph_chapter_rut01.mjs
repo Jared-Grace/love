@@ -212,7 +212,7 @@ export function bible_glyph_chapter_rut01() {
           "she",
           "left",
           "the",
-          "place",
+          "$place",
           "where",
           "she",
           "had",
