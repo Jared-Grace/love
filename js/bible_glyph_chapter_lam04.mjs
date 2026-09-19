@@ -625,7 +625,7 @@ export function bible_glyph_chapter_lam04() {
           "$proper_name$Uz.",
           "Yet",
           "the",
-          "cup",
+          "$cup",
           "will",
           "pass",
           "to",
