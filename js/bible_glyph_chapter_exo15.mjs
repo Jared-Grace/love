@@ -417,7 +417,7 @@ export function bible_glyph_chapter_exo15() {
           "still",
           "as",
           "a",
-          "stone,",
+          "$stone,",
           "until",
           "Your",
           "$family",
