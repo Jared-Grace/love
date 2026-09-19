@@ -486,7 +486,7 @@ export function bible_glyph_chapter_1ki02() {
           "$speech,",
           "Yes,",
           "in",
-          "peace.",
+          "$peace.",
         ],
       },
       {
