@@ -705,7 +705,7 @@ export function bible_glyph_chapter_jdg02() {
           "has",
           "transgressed",
           "the",
-          "covenant",
+          "$covenant",
           "I",
           "laid",
           "down",
