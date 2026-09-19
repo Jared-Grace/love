@@ -234,7 +234,7 @@ export function bible_glyph_chapter_psa042() {
           "$gift,",
           "and",
           "at",
-          "night",
+          "$night",
           "His",
           "song",
           "is",
