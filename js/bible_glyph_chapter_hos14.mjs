@@ -236,7 +236,7 @@ export function bible_glyph_chapter_hos14() {
           "flourishing",
           "cypress;",
           "your",
-          "fruit",
+          "$fruit",
           "comes",
           "$tray_out",
           "Me.",
