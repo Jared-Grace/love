@@ -1048,7 +1048,7 @@ export function bible_glyph_chapter_2ch34() {
           "$speech",
           "against",
           "this",
-          "place",
+          "$place",
           "and",
           "against",
           "its",
