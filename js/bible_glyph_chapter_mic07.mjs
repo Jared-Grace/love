@@ -196,7 +196,7 @@ export function bible_glyph_chapter_mic07() {
           "rises",
           "against",
           "her",
-          "mother,",
+          "$mother,",
           "and",
           "a",
           "daughter-in-law",
