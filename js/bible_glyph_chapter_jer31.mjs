@@ -1289,7 +1289,7 @@ export function bible_glyph_chapter_jer31() {
           "all",
           "of",
           "$proper_name$Israel's",
-          "descendants",
+          "$seed",
           "because",
           "of",
           "all",
