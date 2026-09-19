@@ -167,7 +167,7 @@ export function bible_glyph_chapter_2ki06() {
           "$eye",
           "him",
           "the",
-          "place,",
+          "$place,",
           "the",
           "man",
           "of",
