@@ -52,7 +52,7 @@ export function bible_glyph_chapter_deu15() {
           "$no_entry",
           "to",
           "collect",
-          "anything",
+          "$pointing_down",
           "from",
           "his",
           "neighbor",
