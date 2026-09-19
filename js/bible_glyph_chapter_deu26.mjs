@@ -83,7 +83,7 @@ export function bible_glyph_chapter_deu26() {
           "$walking",
           "to",
           "the",
-          "place",
+          "$place",
           "the",
           "$i_am",
           "your",
