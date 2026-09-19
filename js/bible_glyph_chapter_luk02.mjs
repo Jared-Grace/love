@@ -821,7 +821,7 @@ export function bible_glyph_chapter_luk02() {
         "$pointing_back",
         "$father",
         "$plus",
-        "mother",
+        "$mother",
         "were",
         "amazed",
         "at",
