@@ -534,7 +534,7 @@ export function bible_glyph_chapter_luk24() {
           "were",
           "at",
           "the",
-          "tomb",
+          "$tomb",
           "early",
           "this",
           "morning,",
