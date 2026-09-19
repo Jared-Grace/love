@@ -219,7 +219,7 @@ export function bible_glyph_chapter_oba01() {
           "the",
           "men",
           "at",
-          "peace",
+          "$peace",
           "with",
           "you",
           "will",
