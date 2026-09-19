@@ -824,7 +824,7 @@ export function bible_glyph_chapter_1ki02() {
           "me",
           "on",
           "the",
-          "throne",
+          "$throne",
           "of",
           "my",
           "$father",
