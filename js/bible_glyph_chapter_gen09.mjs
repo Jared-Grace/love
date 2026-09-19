@@ -575,7 +575,7 @@ export function bible_glyph_chapter_gen09() {
           "some",
           "$tray_out",
           "its",
-          "wine,",
+          "$wine,",
           "he",
           "became",
           "drunk",
