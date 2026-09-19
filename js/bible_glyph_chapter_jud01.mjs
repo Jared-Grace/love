@@ -390,7 +390,7 @@ export function bible_glyph_chapter_jud01() {
           "shamelessly,",
           "$person+sheep",
           "only",
-          "themselves.",
+          "$pointing_back+pointing_back.",
           "They",
           "are",
           "clouds",
