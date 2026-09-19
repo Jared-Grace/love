@@ -300,7 +300,7 @@ export function bible_glyph_chapter_1sa20() {
           "$kneeling",
           "into",
           "a",
-          "covenant",
+          "$covenant",
           "with",
           "you",
           "before",
