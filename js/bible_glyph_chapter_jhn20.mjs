@@ -248,7 +248,7 @@ export function bible_glyph_chapter_jhn20() {
       },
       {
         verse_number: 10,
-        words: ["Then", "the", "$learner", "returned", "to", "their", "homes."],
+        words: ["Then", "the", "$learner", "$footprints+away", "to", "their", "homes."],
       },
       {
         verse_number: 11,
