@@ -1120,7 +1120,7 @@ export function bible_glyph_chapter_num11() {
           "they",
           "called",
           "that",
-          "place",
+          "$place",
           "Kibroth-hattaavah,",
           "because",
           "there",
