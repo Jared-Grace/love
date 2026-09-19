@@ -349,7 +349,7 @@ export function bible_glyph_chapter_luk07() {
         "$son",
         "of",
         "$pointing_back",
-        "mother,",
+        "$mother,",
         "$plus",
         "$pointing_back",
         "was",
