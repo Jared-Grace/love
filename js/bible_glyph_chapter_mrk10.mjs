@@ -733,7 +733,7 @@ export function bible_glyph_chapter_mrk10() {
         "$plus",
         "for",
         "the",
-        "gospel",
+        "$angel+thumbs_up",
       ],
     },
     {
