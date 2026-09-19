@@ -387,7 +387,7 @@ export function bible_glyph_chapter_job28() {
           "where,",
           "then,",
           "does",
-          "wisdom",
+          "$wisdom",
           "$footprints,",
           "and",
           "where",
