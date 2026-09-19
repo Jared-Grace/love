@@ -1360,7 +1360,7 @@ export function bible_glyph_chapter_num14() {
           "ark",
           "of",
           "the",
-          "covenant",
+          "$covenant",
           "of",
           "the",
           "$i_am",
