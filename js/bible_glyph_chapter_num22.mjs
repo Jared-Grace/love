@@ -900,7 +900,7 @@ export function bible_glyph_chapter_num22() {
           "me",
           "these",
           "three",
-          "times?",
+          "$foot?",
         ],
       },
       {
