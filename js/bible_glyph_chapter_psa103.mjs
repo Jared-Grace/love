@@ -382,7 +382,7 @@ export function bible_glyph_chapter_psa103() {
           "has",
           "established",
           "His",
-          "throne",
+          "$throne",
           "in",
           "$sky,",
           "and",
