@@ -132,7 +132,7 @@ export function bible_glyph_chapter_hos02() {
         words: [
           "For",
           "their",
-          "mother",
+          "$mother",
           "has",
           "played",
           "the",
