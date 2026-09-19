@@ -1050,7 +1050,7 @@ export function bible_glyph_chapter_luk02() {
         "parents",
         "$walking",
         "every",
-        "year",
+        "$year",
         "to",
         "$proper_name$Jerusalem",
         "for",
