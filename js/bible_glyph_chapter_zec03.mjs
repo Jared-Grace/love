@@ -85,7 +85,7 @@ export function bible_glyph_chapter_zec03() {
           "dressed",
           "in",
           "filthy",
-          "garments",
+          "$garment",
           "as",
           "he",
           "stood",
