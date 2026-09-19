@@ -344,7 +344,7 @@ export function bible_glyph_chapter_num21() {
           "abarim,",
           "in",
           "the",
-          "wilderness",
+          "$wilderness",
           "opposite",
           "$proper_name$Moab,",
           "to",
