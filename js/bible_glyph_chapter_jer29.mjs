@@ -333,7 +333,7 @@ export function bible_glyph_chapter_jer29() {
           "you",
           "to",
           "this",
-          "place.",
+          "$place.",
         ],
       },
       {
