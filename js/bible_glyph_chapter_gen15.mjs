@@ -483,7 +483,7 @@ export function bible_glyph_chapter_gen15() {
           "$i_am",
           "made",
           "a",
-          "covenant",
+          "$covenant",
           "with",
           "$proper_name$Abram,",
           "$speech,",
