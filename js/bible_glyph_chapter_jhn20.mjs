@@ -833,7 +833,7 @@ export function bible_glyph_chapter_jhn20() {
           "signs",
           "in",
           "the",
-          "presence",
+          "$face+tray_in",
           "of",
           "the",
           "$learner,",
