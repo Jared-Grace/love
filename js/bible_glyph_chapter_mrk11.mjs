@@ -700,7 +700,7 @@ export function bible_glyph_chapter_mrk11() {
         "whatever",
         "you",
         "hold",
-        "against",
+        "$pointing_down",
         "anyone,",
         "$plus",
         "so",
