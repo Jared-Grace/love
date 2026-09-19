@@ -375,7 +375,7 @@ export function bible_glyph_chapter_1jn05() {
           "we",
           "ask",
           "anything",
-          "according",
+          "$pointing_down",
           "to",
           "$pointing_back",
           "will,",
