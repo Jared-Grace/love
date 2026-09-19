@@ -961,7 +961,7 @@ export function bible_glyph_chapter_luk07() {
         "$proper_name$Baptist",
         "$footprints",
         "$no_entry",
-        "eating",
+        "$eating",
         "$bread",
         "nor",
         "drinking",
