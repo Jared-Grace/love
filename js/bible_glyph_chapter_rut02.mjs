@@ -265,7 +265,7 @@ export function bible_glyph_chapter_rut02() {
           "be",
           "on",
           "the",
-          "field",
+          "$field",
           "they",
           "are",
           "harvesting,",
