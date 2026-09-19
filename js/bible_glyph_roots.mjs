@@ -108,6 +108,13 @@ export function bible_glyph_roots() {
   ("THE CASE FOR THE THREE THAT WERE REFUSED IS WRITTEN HERE ANYWAY, BECAUSE SOMEBODY MAY WANT TO OVERTURN THE RULE RATHER THAN THE SEATS. Apo and ek are one relation that Greek spells twice and that Hebrew spells once, with min, so a reader who learned the out-tray in Genesis has already learned the whole of that idea and would lose nothing. Oude is ou with a connective welded on, and holos and pas are whole and all. The counter-argument, which is the one that won, is that the picture Bible is meant to be readable back: a reader who cannot tell apo from ek is reading a coarser text than the Greek, and the coarsening is invisible to them. If somebody decides readability forward matters more than recoverability backward, these three are the first seats to take and this paragraph is their argument.");
   ("THE ALTERNATIVE NOBODY HAS PAID FOR YET IS A SECOND PICTURE FOR EACH. That is what the rule asks for, and it is expensive in the way that matters - a second out-tray whose only job is to not be the first out-tray teaches a reader a distinction by sight that the picture cannot actually carry, so it buys recoverability with a mark that means nothing on its own. That is why these three were dropped rather than drawn.");
   ("THE REFUSALS ABOVE ARE MEASUREMENTS WITH A DATE ON THEM, NOT FACTS. A sentence here saying a picture does not exist was true of the artwork set on the day it was written, and the set grows. Read any of them as a lead to re-run rather than a question already closed.");
+  ("TWENTY THREE MORE GREEK WORDS WERE SEATED ON 2026-09-19 AND NOT ONE OF THEM NEEDED A NEW PICTURE. That is the whole point of the two paragraphs above: they name two shapes that cost nothing, and the shapes turned out to have far more members than the episode that found them. Together the twenty three stand on about seventeen hundred and forty occurrences, which is two thirds of what de is worth and more than gar, bought for no drawing at all.");
+  ("THE FIRST SHAPE IS THE ONE SOZO NAMED - an unseated number that is another spelling of a root already here, which goes INSIDE that root's row where no collision is possible. Ten went in that way. Dunamai and dunatos joined dunamis, which alone is two hundred and forty occurrences for a lightning bolt that was already drawn. Ergazomai joined ergon, apostolos joined apostello, soteria joined soter, oikia joined oikos, hapas joined pas, ouchi joined ou, emos joined ego, and phaino and phaneroo joined phos.");
+  ("THE LINE THAT DECIDES WHETHER A WORD MAY GO IN A ROW IS SAME ROOT, NOT SAME MEANING, and ereo is the case that shows why the line is where it is. Lego's row already held eipon, which is not a form of lego at all - Greek builds one verb out of three unrelated stems, and lego, eipon and ereo are say, said and will say of that single verb. So ereo went in. Rhema did NOT, though it is a noun meaning a saying and shares the er- root with ereo, because a separate lexeme sharing a root is a relative and not the same word - and logos already sits in that row as the noun. Put another way: a row may hold one verb's suppletive stems, and it may not become a synonym bin. A synonym bin is exactly the coarsening the collisions rule refuses between rows, and moving it inside a row does not make it something else.");
+  ("THE SECOND SHAPE IS THE GROUP, AND ITS PREFIX NEED NOT BE A PREPOSITION. Exerchomai and eiserchomai were drawn root-mark plus preposition-mark, and that reads as the shape being about prepositions, but eulogeo was already speech plus thumbs-up and eu is not a preposition. So the shape is really root-mark plus whatever-the-prefix-means-mark, and it opens as soon as you stop looking only for prepositions. Euangelion is angel plus thumbs-up, which is literally what the word says - a good message, built on the same angel- root as angelos. Eucharisteo is gift plus thumbs-up, good grace. Epiginosko is lightbulb plus pointing-up. Proserchomai is footprints plus toward, ekporeuomai is walking plus out-tray, and enopion is face plus in-tray, which is exactly what en-opion spells.");
+  ("THE REFLEXIVES CAME OUT AS A FAMILY AND THAT IS WHY THE THIRD ONE LOOKS ODD. Emautou is me plus him, seautou is you plus him, and heautou - three hundred and eighteen occurrences, the biggest single seat in this batch - is him plus him. Doubling the same mark is not a trick; it is what the Greek does, because the third-person reflexive is built from the third-person pronoun and there is no other stem to draw. A reader who has met the first two reads the third correctly without being told, which is the only test that matters here.");
+  ("AND HERE IS THE FINDING THAT OUTGREW THE EPISODE: A PICTURE ALREADY SPENT ON A HEBREW ROOT IS FREE FOR A GREEK ONE. The collisions rule is one picture may not stand for two roots, and it is checked within a testament, not across them - which is not a loophole but the intended reading, because father is already pater in the Greek table and ab in the Hebrew one, and house is oikos and bayith. The same thing in both testaments SHOULD wear the same mark; that is the picture Bible working. Counted on 2026-09-19 there are a hundred and thirty eight pictures that no Greek root uses, most of them drawn for the Old Testament, and the unseated Greek frequency list is full of words they fit - mother, stone, field, fruit, wine, night, foot, throne, sabbath, peace, wilderness, tomb, garment, ship, wisdom, enemy, place, seed, cup, year, poor, covenant. None of those needs anything drawn. They are not in this batch only because this batch was about compounds.");
+  ("THE ONE PLACE THE RULE BITES BACKWARDS IS THE BODY PARTS, AND IT IS WORTH ARGUING ABOUT. Ophthalmos the eye cannot have the eye, because horao to see took it. Ous the ear cannot have the ear, because akouo took it. Stoma the mouth cannot have the mouth, because laleo took it. In each pair the ORGAN is the more literal owner of the picture and the VERB got there first, so the rule now protects the looser claim against the tighter one. Three hundred occurrences sit behind those three words. Whoever revisits this should consider moving each verb to a doing-mark and giving the organ its own body part back, rather than inventing a second eye.");
   let roots = [
     {
       root: "agape",
@@ -329,6 +336,10 @@ export function bible_glyph_roots() {
           strong: "2036",
           glyph: "speech",
         },
+        {
+          strong: "2046",
+          glyph: "speech",
+        },
       ],
     },
     {
@@ -382,6 +393,16 @@ export function bible_glyph_roots() {
       ],
     },
     {
+      root: "proserchomai",
+      gloss: "come to, approach",
+      words: [
+        {
+          strong: "4334",
+          glyph: "footprints+toward",
+        },
+      ],
+    },
+    {
       root: "poieo",
       gloss: "do, make",
       words: [
@@ -412,6 +433,16 @@ export function bible_glyph_roots() {
         {
           strong: "1097",
           glyph: "lightbulb",
+        },
+      ],
+    },
+    {
+      root: "epiginosko",
+      gloss: "know upon, recognise, know fully",
+      words: [
+        {
+          strong: "1921",
+          glyph: "lightbulb+pointing_up",
         },
       ],
     },
@@ -602,6 +633,20 @@ export function bible_glyph_roots() {
       ],
     },
     {
+      root: "euangelion",
+      gloss: "good message, gospel, to announce good news",
+      words: [
+        {
+          strong: "2098",
+          glyph: "angel+thumbs_up",
+        },
+        {
+          strong: "2097",
+          glyph: "angel+thumbs_up",
+        },
+      ],
+    },
+    {
       root: "cheir",
       gloss: "hand",
       words: [
@@ -623,10 +668,14 @@ export function bible_glyph_roots() {
     },
     {
       root: "ergon",
-      gloss: "work, deed",
+      gloss: "work, deed, to work",
       words: [
         {
           strong: "2041",
+          glyph: "tools",
+        },
+        {
+          strong: "2038",
           glyph: "tools",
         },
       ],
@@ -708,6 +757,16 @@ export function bible_glyph_roots() {
         {
           strong: "5463",
           glyph: "smile",
+        },
+      ],
+    },
+    {
+      root: "eucharisteo",
+      gloss: "give thanks, good grace",
+      words: [
+        {
+          strong: "2168",
+          glyph: "gift+thumbs_up",
         },
       ],
     },
@@ -861,10 +920,18 @@ export function bible_glyph_roots() {
     },
     {
       root: "dunamis",
-      gloss: "power",
+      gloss: "power, be able, possible",
       words: [
         {
           strong: "1411",
+          glyph: "lightning",
+        },
+        {
+          strong: "1410",
+          glyph: "lightning",
+        },
+        {
+          strong: "1415",
           glyph: "lightning",
         },
       ],
@@ -885,6 +952,10 @@ export function bible_glyph_roots() {
       words: [
         {
           strong: "3624",
+          glyph: "house",
+        },
+        {
+          strong: "3614",
           glyph: "house",
         },
       ],
@@ -1046,6 +1117,16 @@ export function bible_glyph_roots() {
       ],
     },
     {
+      root: "ekporeuomai",
+      gloss: "go out from, proceed",
+      words: [
+        {
+          strong: "1607",
+          glyph: "walking+tray_out",
+        },
+      ],
+    },
+    {
       root: "amen",
       gloss: "truly, amen",
       words: [
@@ -1071,7 +1152,7 @@ export function bible_glyph_roots() {
     },
     {
       root: "phos",
-      gloss: "light",
+      gloss: "light, shine, bring to light",
       words: [
         {
           strong: "5457",
@@ -1079,6 +1160,14 @@ export function bible_glyph_roots() {
         },
         {
           strong: "5461",
+          glyph: "light",
+        },
+        {
+          strong: "5316",
+          glyph: "light",
+        },
+        {
+          strong: "5319",
           glyph: "light",
         },
       ],
@@ -1126,6 +1215,16 @@ export function bible_glyph_roots() {
       ],
     },
     {
+      root: "kago",
+      gloss: "and I, I also",
+      words: [
+        {
+          strong: "2504",
+          glyph: "plus+me",
+        },
+      ],
+    },
+    {
       root: "en",
       gloss: "in, within",
       words: [
@@ -1166,6 +1265,16 @@ export function bible_glyph_roots() {
       ],
     },
     {
+      root: "heautou",
+      gloss: "himself, herself, themselves",
+      words: [
+        {
+          strong: "1438",
+          glyph: "pointing_back+pointing_back",
+        },
+      ],
+    },
+    {
       root: "ou",
       gloss: "not, no",
       words: [
@@ -1175,6 +1284,10 @@ export function bible_glyph_roots() {
         },
         {
           strong: "3756",
+          glyph: "no_entry",
+        },
+        {
+          strong: "3780",
           glyph: "no_entry",
         },
       ],
@@ -1191,10 +1304,14 @@ export function bible_glyph_roots() {
     },
     {
       root: "apostello",
-      gloss: "send, send out",
+      gloss: "send, send out, one who is sent",
       words: [
         {
           strong: "649",
+          glyph: "hand_sending",
+        },
+        {
+          strong: "652",
           glyph: "hand_sending",
         },
       ],
@@ -1237,6 +1354,20 @@ export function bible_glyph_roots() {
           strong: "1473",
           glyph: "me",
         },
+        {
+          strong: "1699",
+          glyph: "me",
+        },
+      ],
+    },
+    {
+      root: "emautou",
+      gloss: "myself",
+      words: [
+        {
+          strong: "1683",
+          glyph: "me+pointing_back",
+        },
       ],
     },
     {
@@ -1246,6 +1377,16 @@ export function bible_glyph_roots() {
         {
           strong: "4771",
           glyph: "you",
+        },
+      ],
+    },
+    {
+      root: "seautou",
+      gloss: "yourself",
+      words: [
+        {
+          strong: "4572",
+          glyph: "you+pointing_back",
         },
       ],
     },
@@ -1426,11 +1567,25 @@ export function bible_glyph_roots() {
       ],
     },
     {
+      root: "enopion",
+      gloss: "in the face of, before, in the presence of",
+      words: [
+        {
+          strong: "1799",
+          glyph: "face+tray_in",
+        },
+      ],
+    },
+    {
       root: "pas",
       gloss: "all, every, the whole of",
       words: [
         {
           strong: "3956",
+          glyph: "all",
+        },
+        {
+          strong: "537",
           glyph: "all",
         },
       ],
@@ -1455,6 +1610,10 @@ export function bible_glyph_roots() {
         },
         {
           strong: "4982",
+          glyph: "rescue",
+        },
+        {
+          strong: "4991",
           glyph: "rescue",
         },
       ],
