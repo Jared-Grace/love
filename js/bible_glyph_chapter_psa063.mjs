@@ -22,7 +22,7 @@ export function bible_glyph_chapter_psa063() {
           "was",
           "in",
           "the",
-          "Wilderness",
+          "$wilderness",
           "of",
           "$proper_name$Judah.",
           "O",
