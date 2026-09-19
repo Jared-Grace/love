@@ -194,7 +194,7 @@ export function bible_glyph_chapter_luk24() {
           "returned",
           "from",
           "the",
-          "tomb,",
+          "$tomb,",
           "they",
           "reported",
           "all",
