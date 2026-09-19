@@ -447,7 +447,7 @@ export function bible_glyph_chapter_psa103() {
           "works",
           "in",
           "all",
-          "places",
+          "$place",
           "of",
           "His",
           "dominion.",
