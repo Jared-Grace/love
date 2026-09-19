@@ -304,7 +304,7 @@ export function bible_glyph_chapter_gen37() {
           "had?",
           "Will",
           "your",
-          "mother",
+          "$mother",
           "and",
           "$brother",
           "and",
