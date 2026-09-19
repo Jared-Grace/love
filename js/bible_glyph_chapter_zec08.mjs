@@ -641,7 +641,7 @@ export function bible_glyph_chapter_zec08() {
           "$heart_red",
           "$check",
           "and",
-          "peace.",
+          "$peace.",
         ],
       },
       {
