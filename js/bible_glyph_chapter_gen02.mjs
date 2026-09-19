@@ -540,7 +540,7 @@ export function bible_glyph_chapter_gen02() {
           "$sprout",
           "of",
           "the",
-          "field",
+          "$field",
           "and",
           "every",
           "$bird",
