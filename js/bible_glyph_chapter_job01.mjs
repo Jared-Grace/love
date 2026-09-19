@@ -558,7 +558,7 @@ export function bible_glyph_chapter_job01() {
           "eating",
           "and",
           "drinking",
-          "wine",
+          "$wine",
           "in",
           "the",
           "$house",
