@@ -987,7 +987,7 @@ export function bible_glyph_chapter_luk24() {
           "His",
           "$hand",
           "$plus",
-          "feet.",
+          "$foot.",
         ],
       },
       {
