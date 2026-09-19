@@ -496,7 +496,7 @@ export function bible_glyph_chapter_1jn03() {
           "withholds",
           "$pointing_back",
           "compassion",
-          "from",
+          "$away",
           "$pointing_back,",
           "how",
           "can",
