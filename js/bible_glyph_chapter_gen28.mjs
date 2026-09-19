@@ -530,7 +530,7 @@ export function bible_glyph_chapter_gen28() {
           "awesome",
           "is",
           "this",
-          "place!",
+          "$place!",
           "This",
           "is",
           "none",
