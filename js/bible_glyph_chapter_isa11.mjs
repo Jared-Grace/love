@@ -53,7 +53,7 @@ export function bible_glyph_chapter_isa11() {
           "the",
           "$wind",
           "of",
-          "wisdom",
+          "$wisdom",
           "and",
           "understanding,",
           "the",
