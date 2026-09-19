@@ -706,7 +706,7 @@ export function bible_glyph_chapter_job38() {
           "Who",
           "has",
           "put",
-          "wisdom",
+          "$wisdom",
           "in",
           "the",
           "heart,",
