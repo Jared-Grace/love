@@ -118,7 +118,7 @@ export function bible_glyph_chapter_gen30() {
           "a",
           "$woman,",
           "and",
-          "Jacob",
+          "$pointing_down",
           "$footprints",
           "her.",
         ],
