@@ -507,7 +507,7 @@ export function bible_glyph_chapter_lev19() {
           "shall",
           "$no_entry",
           "wear",
-          "clothing",
+          "$garment",
           "made",
           "of",
           "two",
