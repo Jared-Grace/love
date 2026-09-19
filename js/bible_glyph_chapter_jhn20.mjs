@@ -258,7 +258,7 @@ export function bible_glyph_chapter_jhn20() {
           "stood",
           "outside",
           "the",
-          "tomb",
+          "$tomb",
           "weeping.",
           "As",
           "she",
