@@ -468,7 +468,7 @@ export function bible_glyph_chapter_jud01() {
         words: [
           "to",
           "$hammer",
-          "judgment",
+          "$scales",
           "on",
           "everyone,",
           "$plus",
