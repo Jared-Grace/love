@@ -632,7 +632,7 @@ export function bible_glyph_chapter_gen28() {
           "to",
           "$eating",
           "and",
-          "clothes",
+          "$garment",
           "to",
           "wear,",
         ],
