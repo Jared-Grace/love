@@ -689,7 +689,7 @@ export function bible_glyph_chapter_jhn10() {
           "$ear",
           "My",
           "$voice;",
-          "I",
+          "$plus+me",
           "$lightbulb",
           "$pointing_back,",
           "$plus",
