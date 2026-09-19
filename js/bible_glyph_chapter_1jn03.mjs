@@ -263,7 +263,7 @@ export function bible_glyph_chapter_1jn03() {
           "$bow,",
           "$pointing",
           "$pointing_back",
-          "seed",
+          "$seed",
           "abides",
           "$tray_in",
           "$pointing_back;",
