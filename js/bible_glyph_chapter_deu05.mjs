@@ -330,7 +330,7 @@ export function bible_glyph_chapter_deu05() {
         words: [
           "Observe",
           "the",
-          "Sabbath",
+          "$sabbath",
           "$sun",
           "by",
           "keeping",
