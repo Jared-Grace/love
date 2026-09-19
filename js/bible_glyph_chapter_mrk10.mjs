@@ -207,7 +207,7 @@ export function bible_glyph_chapter_mrk10() {
         "back",
         "inside",
         "the",
-        "house,",
+        "$house,",
         "the",
         "$learner",
         "asked",
