@@ -183,7 +183,7 @@ export function bible_glyph_chapter_psa112() {
           "$hands_giving",
           "to",
           "the",
-          "poor;",
+          "$poor;",
           "his",
           "$ruler",
           "endures",
