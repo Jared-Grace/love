@@ -1214,7 +1214,7 @@ export function bible_glyph_chapter_jdg16() {
           "$proper_name$Eshtaol",
           "in",
           "the",
-          "tomb",
+          "$tomb",
           "of",
           "$proper_name$Manoah",
           "his",
