@@ -824,7 +824,7 @@ export function bible_glyph_chapter_2ki09() {
           "you",
           "come",
           "in",
-          "peace?",
+          "$peace?",
           "How",
           "can",
           "there",
