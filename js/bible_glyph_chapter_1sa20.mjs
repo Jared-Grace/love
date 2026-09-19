@@ -1218,7 +1218,7 @@ export function bible_glyph_chapter_1sa20() {
           "out",
           "to",
           "the",
-          "field",
+          "$field",
           "for",
           "the",
           "appointment",
