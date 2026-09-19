@@ -208,7 +208,7 @@ export function bible_glyph_chapter_jud01() {
           "darkness",
           "for",
           "the",
-          "judgment",
+          "$scales",
           "of",
           "the",
           "great",
