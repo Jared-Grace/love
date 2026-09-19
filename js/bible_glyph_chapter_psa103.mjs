@@ -364,7 +364,7 @@ export function bible_glyph_chapter_psa103() {
           "who",
           "keep",
           "His",
-          "covenant",
+          "$covenant",
           "and",
           "remember",
           "His",
