@@ -642,7 +642,7 @@ export function bible_glyph_chapter_1sa24() {
           "$man_beard",
           "finds",
           "his",
-          "enemy,",
+          "$enemy,",
           "does",
           "he",
           "send",
