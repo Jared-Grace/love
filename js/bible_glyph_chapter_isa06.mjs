@@ -27,7 +27,7 @@ export function bible_glyph_chapter_isa06() {
           "$person+house",
           "on",
           "a",
-          "throne,",
+          "$throne,",
           "high",
           "and",
           "exalted;",
