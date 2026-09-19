@@ -269,7 +269,7 @@ export function bible_glyph_chapter_luk24() {
           "ran",
           "to",
           "the",
-          "tomb.",
+          "$tomb.",
           "$plus",
           "bending",
           "down,",
