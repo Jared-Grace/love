@@ -125,7 +125,7 @@ export function bible_glyph_chapter_lev26() {
           "will",
           "$hands_giving",
           "their",
-          "fruit.",
+          "$fruit.",
         ],
       },
       {
