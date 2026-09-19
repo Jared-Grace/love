@@ -442,7 +442,7 @@ export function bible_glyph_chapter_luk07() {
         "$pointing_back",
         "to",
         "$pointing_back",
-        "mother.",
+        "$mother.",
       ],
     },
     {
