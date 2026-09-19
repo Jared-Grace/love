@@ -187,7 +187,7 @@ export function bible_glyph_chapter_mrk04() {
           "they",
           "$hands_giving",
           "$no_entry",
-          "crop.",
+          "$fruit.",
         ],
       },
       {
