@@ -808,7 +808,7 @@ export function bible_glyph_chapter_num14() {
           "head",
           "for",
           "the",
-          "wilderness",
+          "$wilderness",
           "along",
           "the",
           "$road",
