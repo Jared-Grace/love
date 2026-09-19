@@ -69,7 +69,7 @@ export function bible_glyph_chapter_sng08() {
           "give",
           "you",
           "spiced",
-          "wine",
+          "$wine",
           "to",
           "drink,",
           "the",
