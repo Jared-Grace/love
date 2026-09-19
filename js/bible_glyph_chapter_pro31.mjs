@@ -317,7 +317,7 @@ export function bible_glyph_chapter_pro31() {
           "She",
           "appraises",
           "a",
-          "field",
+          "$field",
           "and",
           "$hand_receiving",
           "it;",
