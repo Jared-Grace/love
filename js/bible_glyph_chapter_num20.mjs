@@ -133,7 +133,7 @@ export function bible_glyph_chapter_num20() {
           "is",
           "$no_entry",
           "a",
-          "place",
+          "$place",
           "of",
           "grain",
           "or",
