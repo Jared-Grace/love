@@ -321,7 +321,7 @@ export function bible_glyph_chapter_ezk36() {
           "branches",
           "and",
           "$lifting",
-          "fruit",
+          "$fruit",
           "for",
           "My",
           "$family",
