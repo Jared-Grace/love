@@ -54,7 +54,7 @@ export function bible_glyph_chapter_luk24() {
           "away",
           "from",
           "the",
-          "tomb,",
+          "$tomb,",
         ],
       },
       {
