@@ -1,3 +1,4 @@
+import { app_code_screen_name_short } from "./app_code_screen_name_short.mjs";
 import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
 import { app_code_screen_buttons } from "./app_code_screen_buttons.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -19,16 +20,19 @@ export async function app_code_screens_crawl_screen(
   arguments_assert(arguments, 4);
   let name = property_get(screen, "name");
   let key = app_code_screen_hash_key();
+  let short = app_code_screen_name_short(name);
   let url = text_combine_multiple([
     url_prefix,
     "?s=",
     name,
     "#",
     key,
-x
+    "=",
+    short,
   ]);
   await page.goto(url);
-  await page.waitForTimeout(page_capture_settle_ms());
+  let v = page_capture_settle_ms();
+  await page.waitForTimeout(v);
   let record = await app_code_screen_capture(page);
   let buttons = await app_code_screen_buttons(page);
   ("a screen made of nothing but buttons - which the settings screen is - reads as empty to the text capture, because that capture walks past every button. So the blank-screen signal is asked again here with the buttons counted: a screen is blank when there is neither text nor a button on it, and only then");
