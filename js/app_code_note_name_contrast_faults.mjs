@@ -13,11 +13,11 @@ import { less_than } from "./less_than.mjs";
 export function app_code_note_name_contrast_faults() {
   arguments_assert(arguments, 0);
   ("every way a name standing in a lesson note is drawn that a reader could not read, as a list of what was drawn on what and how far apart the two were - empty when every one of them can be read");
-  ("A NAME IN A NOTE IS DRAWN SEVERAL WAYS AND EVERY ONE OF THEM HAS TO BE READABLE. On a run of code it is the lettering, coloured against the dark the code sits on. On a filled patch the same colour is behind dark lettering instead. On a cup it is the lettering again, over a ground made by darkening that same colour, and that ground has itself to be told from the pale card it stands on. One colour doing all of those jobs is the whole design, so one colour going wrong breaks it in several places and a check of one way round would find only one of them.");
+  ("A NAME IN A NOTE IS DRAWN SEVERAL WAYS AND EVERY ONE OF THEM HAS TO BE READABLE. On a run of code it is the lettering, coloured against the dark the code sits on. On a filled patch the same colour is behind dark lettering instead. On a cup it is the lettering again, ringed by a darker amount of that same colour, and that ring has itself to be told from the pale card it is written on. One colour doing all of those jobs is the whole design, so one colour going wrong breaks it in several places and a check of one way round would find only one of them.");
   ("THE PAIRS ARE WORKED OUT FROM THE COLOUR FUNCTIONS RATHER THAN WRITTEN OUT HERE. A fourth name colour arriving is then checked the day it arrives, with nothing to remember to add; a list typed in here would go on passing while saying nothing about the colour that was actually added. This has already bitten twice - a name drawn in the dark on the dark and read as nothing at all, and a name drawn red where red was the mark for something else entirely.");
   ("The floors are the web's own rule rather than this repo's opinion about what looks alright, and that is why they are worth having: an opinion drifts to fit whatever was drawn last, and a rule someone else wrote cannot.");
-  ("EACH WAY CARRIES ITS OWN FLOOR, BECAUSE THE WAYS ARE NOT ALL ASKING THE SAME QUESTION. Three of them are lettering that has to be read, and the rule for lettering asks four and a half. The last one is a tinted ground told apart from the card behind it, which is a shape and not a word, and the rule for shapes asks three. Held to the lettering floor that one would refuse a drawing a reader can see perfectly well - and a check that refuses what is provably fine teaches whoever meets it to raise the number rather than fix the drawing, which costs the whole gate its authority.");
-  ("The darkened ground is worked out here the way the cup works it out, from the colour and the one darkening amount, rather than being written down again. Written down, this would go on passing after the amount was changed - it would be checking a colour nothing draws.");
+  ("EACH WAY CARRIES ITS OWN FLOOR, BECAUSE THE WAYS ARE NOT ALL ASKING THE SAME QUESTION. Three of them are lettering that has to be read, and the rule for lettering asks four and a half. The last one is a tinted ring told apart from the card around it, which is a shape and not a word, and the rule for shapes asks three. Held to the lettering floor that one would refuse a drawing a reader can see perfectly well - and a check that refuses what is provably fine teaches whoever meets it to raise the number rather than fix the drawing, which costs the whole gate its authority.");
+  ("The darker colour is worked out here the way the cup works it out, from the colour and the one darkening amount, rather than being written down again. Written down, this would go on passing after the amount was changed - it would be checking a colour nothing draws.");
   ("A colour that cannot be read at all counts as a fault rather than as a pair passed over. Skipping it would let a misspelled colour, or a name nothing here knows, sit in the palette forever wearing the appearance of having been checked - and the whole point of asking is that every colour here must be one this can measure.");
   let text_floor = color_contrast_floor_text();
   let shape_floor = color_contrast_floor_shape();
@@ -44,13 +44,13 @@ export function app_code_note_name_contrast_faults() {
     let tag = [
       color,
       ground,
-      "the name as lettering on its darkened tag",
+      "the name as lettering inside its darker ring",
       text_floor,
     ];
     let tag_seen = [
       ground,
       card,
-      "the name's darkened tag against the pale card it stands on",
+      "the name's darker ring against the pale card it is written on",
       shape_floor,
     ];
     let ways = [lettering, patch, tag, tag_seen];
