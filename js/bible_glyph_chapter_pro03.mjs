@@ -457,7 +457,7 @@ export function bible_glyph_chapter_pro03() {
           "safety,",
           "and",
           "your",
-          "foot",
+          "$foot",
           "will",
           "$no_entry",
           "stumble.",
