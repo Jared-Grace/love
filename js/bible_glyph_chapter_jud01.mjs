@@ -675,7 +675,7 @@ export function bible_glyph_chapter_jud01() {
           "him",
           "who",
           "is",
-          "able",
+          "$lightning",
           "to",
           "keep",
           "you",
