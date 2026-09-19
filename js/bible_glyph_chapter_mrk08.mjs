@@ -939,7 +939,7 @@ export function bible_glyph_chapter_mrk08() {
           "$plus",
           "for",
           "the",
-          "gospel",
+          "$angel+thumbs_up",
           "will",
           "save",
           "$pointing_back.",
