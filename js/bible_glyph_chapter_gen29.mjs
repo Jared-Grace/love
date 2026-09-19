@@ -584,7 +584,7 @@ export function bible_glyph_chapter_gen29() {
           "men",
           "of",
           "that",
-          "place",
+          "$place",
           "and",
           "$hammer",
           "a",
