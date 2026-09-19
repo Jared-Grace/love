@@ -512,7 +512,7 @@ export function bible_glyph_chapter_zec09() {
           "roar",
           "as",
           "with",
-          "wine,",
+          "$wine,",
           "and",
           "they",
           "will",
