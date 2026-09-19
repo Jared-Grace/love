@@ -221,7 +221,7 @@ export function bible_glyph_chapter_1th01() {
           "but",
           "$tray_in",
           "every",
-          "place",
+          "$place",
           "your",
           "$anchor",
           "in",
