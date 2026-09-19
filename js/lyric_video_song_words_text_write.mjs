@@ -16,6 +16,7 @@ export async function lyric_video_song_words_text_write(name, path_text) {
   "★ THE WORDS COME OFF THE DISK because a whole lyric cannot go on a command line, and writing it word by word would be seventy commands recording one change.";
   "★ IT WRITES NOTHING AT ALL unless every line count and every word count already matches, because a miscount slides every later word onto the wrong note and the film still renders.";
   "★ IT REPORTS THE WORDS WHOSE LETTERS MOVED, ignoring case and punctuation, so a capitalisation pass can be proved to have swapped no actual word.";
+  "★ THE TEXT OF THE LINE IS REWRITTEN ALONGSIDE ITS WORDS, BECAUSE A DOCUMENT HOLDS THE SAME LINE TWICE AND ONLY ONE OF THE TWO WAS BEING WRITTEN. The aligner rebuilds every line from the text of the line and never from its words, so a capitalisation pass that moved only the words left the aligner holding the spelling from before the pass, and the next hearing of the song would have quietly put all of it back. Twenty eight lines of one song sat in exactly that state.";
   arguments_assert(arguments, 2);
   let folder = lyric_video_songs_folder();
   let file_name = text_combine(name, ".json");
@@ -89,6 +90,7 @@ export async function lyric_video_song_words_text_write(name, path_text) {
       word.text = text_after;
     }
     line.words.forEach(lambda3);
+    line.text = lines_text[line_index];
   }
   lines.forEach(lambda4);
   await file_overwrite_json(path_document, document);
