@@ -1,3 +1,4 @@
+import { audio_master_target_loudness } from "./audio_master_target_loudness.mjs";
 import { subtract } from "./subtract.mjs";
 import { audio_balance_differences } from "./audio_balance_differences.mjs";
 import { audio_balance_curve } from "./audio_balance_curve.mjs";
@@ -16,7 +17,7 @@ export async function ffmpeg_audio_balance_write(path_in, path_out) {
   "IT WRITES SOMEWHERE NEW rather than over what it read, because a program reading and writing one file at once has already destroyed the thing it is halfway through reading.";
   "It says yes in advance to overwriting, because ffmpeg otherwise asks that question on the terminal and waits for an answer that is never coming.";
   "The new recording is written in plain uncompressed samples at twenty-four bits, because this is a master rather than a delivery - whatever it is squeezed into afterwards should be squeezed from something that lost nothing here.";
-  let target_loudness = -10;
+  let target_loudness = audio_master_target_loudness();
   let differences = await audio_balance_differences(path_in);
   let curve_found = audio_balance_curve(differences);
   let expression_left = audio_balance_volume_expression(
