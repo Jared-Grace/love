@@ -431,7 +431,7 @@ export function bible_glyph_chapter_2ch07() {
           "have",
           "chosen",
           "this",
-          "place",
+          "$place",
           "for",
           "Myself",
           "as",
