@@ -374,7 +374,7 @@ export function bible_glyph_chapter_1jn02() {
           "written",
           "to",
           "you,",
-          "children,",
+          "$baby,",
           "$pointing",
           "you",
           "$lightbulb",
