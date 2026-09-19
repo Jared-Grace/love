@@ -1223,7 +1223,7 @@ export function bible_glyph_chapter_2ki17() {
           "had",
           "made",
           "a",
-          "covenant",
+          "$covenant",
           "with",
           "them",
           "and",
