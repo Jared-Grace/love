@@ -124,7 +124,7 @@ export function bible_glyph_chapter_jol02() {
           "is",
           "like",
           "a",
-          "desert",
+          "$wilderness",
           "wasteland;",
           "surely",
           "$no_entry",
