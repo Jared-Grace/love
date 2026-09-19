@@ -334,7 +334,7 @@ export function bible_glyph_chapter_jer32() {
           "I",
           "bought",
           "the",
-          "field",
+          "$field",
           "in",
           "$proper_name$Anathoth",
           "from",
