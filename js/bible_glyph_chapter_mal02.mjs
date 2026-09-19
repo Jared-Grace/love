@@ -342,7 +342,7 @@ export function bible_glyph_chapter_mal02() {
           "to",
           "profane",
           "the",
-          "covenant",
+          "$covenant",
           "of",
           "our",
           "$father?",
