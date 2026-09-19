@@ -265,7 +265,7 @@ export function bible_glyph_chapter_1ki19() {
           "$sun",
           "and",
           "forty",
-          "nights",
+          "$night",
           "until",
           "he",
           "reached",
