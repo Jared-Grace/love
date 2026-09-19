@@ -213,7 +213,7 @@ export function bible_glyph_chapter_jhn20() {
           "$footprints",
           "to",
           "the",
-          "tomb",
+          "$tomb",
           "first,",
           "$plus",
           "went",
