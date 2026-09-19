@@ -482,7 +482,7 @@ export function bible_glyph_chapter_isa58() {
           "from",
           "breaking",
           "the",
-          "Sabbath,",
+          "$sabbath,",
           "from",
           "$hammer",
           "as",
