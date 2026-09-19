@@ -286,7 +286,7 @@ export function bible_glyph_chapter_gen29() {
           "of",
           "$proper_name$Laban,",
           "his",
-          "mother",
+          "$mother",
           "$brother,",
           "and",
           "the",
