@@ -207,7 +207,7 @@ export function bible_glyph_chapter_jhn02() {
           "been",
           "turned",
           "into",
-          "wine,",
+          "$wine,",
           "$plus",
           "he",
           "did",
