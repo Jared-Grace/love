@@ -59,7 +59,7 @@ export function bible_glyph_chapter_mrk08() {
           "have",
           "$no_entry",
           "to",
-          "eat.",
+          "$eating.",
         ],
       },
       {
