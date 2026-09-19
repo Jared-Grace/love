@@ -586,7 +586,7 @@ export function bible_glyph_chapter_1sa20() {
           "$i_am",
           "hold",
           "the",
-          "enemies",
+          "$enemy",
           "of",
           "$proper_name$David",
           "to",
