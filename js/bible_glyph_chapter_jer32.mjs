@@ -1380,7 +1380,7 @@ export function bible_glyph_chapter_jer32() {
           "make",
           "an",
           "$hourglass",
-          "covenant",
+          "$covenant",
           "with",
           "them:",
           "I",
