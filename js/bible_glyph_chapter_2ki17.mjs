@@ -492,7 +492,7 @@ export function bible_glyph_chapter_2ki17() {
           "statutes",
           "and",
           "the",
-          "covenant",
+          "$covenant",
           "He",
           "had",
           "made",
