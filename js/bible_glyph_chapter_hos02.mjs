@@ -33,7 +33,7 @@ export function bible_glyph_chapter_hos02() {
         words: [
           "Rebuke",
           "your",
-          "mother,",
+          "$mother,",
           "rebuke",
           "her,",
           "for",
