@@ -1246,7 +1246,7 @@ export function bible_glyph_chapter_jer31() {
           "$i_am,",
           "would",
           "$proper_name$Israel's",
-          "descendants",
+          "$seed",
           "ever",
           "cease",
           "to",
