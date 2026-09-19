@@ -152,7 +152,7 @@ export function bible_glyph_chapter_lev16() {
           "linen",
           "turban.",
           "These",
-          "garments",
+          "$garment",
           "are",
           "$sparkle,",
           "and",
