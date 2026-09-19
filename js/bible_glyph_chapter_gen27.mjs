@@ -147,7 +147,7 @@ export function bible_glyph_chapter_gen27() {
           "$walking",
           "into",
           "the",
-          "field",
+          "$field",
           "to",
           "hunt",
           "game",
