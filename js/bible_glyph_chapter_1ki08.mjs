@@ -224,7 +224,7 @@ export function bible_glyph_chapter_1ki08() {
           "wings",
           "over",
           "the",
-          "place",
+          "$place",
           "of",
           "the",
           "ark",
