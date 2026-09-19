@@ -236,7 +236,7 @@ export function bible_glyph_chapter_psa029() {
           "His",
           "$family",
           "with",
-          "peace.",
+          "$peace.",
         ],
       },
     ],
