@@ -384,7 +384,7 @@ export function bible_glyph_chapter_mic04() {
           "camp",
           "in",
           "the",
-          "open",
+          "$field",
           "fields.",
           "You",
           "will",
