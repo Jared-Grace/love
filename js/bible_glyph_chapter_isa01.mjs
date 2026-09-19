@@ -175,7 +175,7 @@ export function bible_glyph_chapter_isa01() {
           "sole",
           "of",
           "your",
-          "foot",
+          "$foot",
           "to",
           "the",
           "top",
