@@ -171,7 +171,7 @@ export function bible_glyph_chapter_psa029() {
           "$i_am",
           "shakes",
           "the",
-          "Wilderness",
+          "$wilderness",
           "of",
           "$proper_name$Kadesh.",
         ],
