@@ -376,7 +376,7 @@ export function bible_glyph_chapter_rut02() {
           "your",
           "$father",
           "and",
-          "mother",
+          "$mother",
           "and",
           "the",
           "$earth",
