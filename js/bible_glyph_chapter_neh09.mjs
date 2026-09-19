@@ -670,7 +670,7 @@ export function bible_glyph_chapter_neh09() {
           "them",
           "in",
           "the",
-          "wilderness.",
+          "$wilderness.",
           "By",
           "day",
           "the",
