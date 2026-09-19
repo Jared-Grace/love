@@ -177,7 +177,7 @@ export function bible_glyph_chapter_mic03() {
         verse_number: 6,
         words: [
           "Therefore",
-          "night",
+          "$night",
           "will",
           "come",
           "over",
