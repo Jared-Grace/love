@@ -1032,7 +1032,7 @@ export function bible_glyph_chapter_lev26() {
           "and",
           "enjoy",
           "its",
-          "Sabbaths.",
+          "$sabbath.",
         ],
       },
       {
