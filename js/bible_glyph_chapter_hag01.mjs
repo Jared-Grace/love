@@ -321,7 +321,7 @@ export function bible_glyph_chapter_hag01() {
           "the",
           "grain,",
           "new",
-          "wine,",
+          "$wine,",
           "and",
           "oil,",
           "and",
