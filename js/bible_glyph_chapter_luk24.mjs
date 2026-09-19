@@ -52,7 +52,7 @@ export function bible_glyph_chapter_luk24() {
           "$stone",
           "rolled",
           "away",
-          "from",
+          "$away",
           "the",
           "$tomb,",
         ],
