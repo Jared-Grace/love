@@ -284,7 +284,7 @@ export function bible_glyph_chapter_exo40() {
           "with",
           "the",
           "$sparkle",
-          "garments,",
+          "$garment,",
           "$oil",
           "him",
           "and",
