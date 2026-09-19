@@ -1137,7 +1137,7 @@ export function bible_glyph_chapter_mat05() {
           "you,",
           "$heart_red",
           "your",
-          "enemies",
+          "$enemy",
           "$plus",
           "$hands_praying",
           "for",
