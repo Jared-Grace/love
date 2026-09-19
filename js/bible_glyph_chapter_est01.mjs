@@ -47,7 +47,7 @@ export function bible_glyph_chapter_est01() {
           "on",
           "his",
           "royal",
-          "throne",
+          "$throne",
           "in",
           "the",
           "citadel",
