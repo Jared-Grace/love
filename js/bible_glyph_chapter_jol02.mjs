@@ -679,7 +679,7 @@ export function bible_glyph_chapter_jol02() {
           "beasts",
           "of",
           "the",
-          "field,",
+          "$field,",
           "for",
           "the",
           "open",
