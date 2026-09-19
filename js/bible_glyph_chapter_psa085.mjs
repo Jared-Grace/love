@@ -204,7 +204,7 @@ export function bible_glyph_chapter_psa085() {
           "together;",
           "$ruler",
           "and",
-          "peace",
+          "$peace",
           "have",
           "kissed.",
         ],
