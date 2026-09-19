@@ -566,7 +566,7 @@ export function bible_glyph_chapter_deu08() {
           "to",
           "confirm",
           "His",
-          "covenant",
+          "$covenant",
           "that",
           "He",
           "swore",
