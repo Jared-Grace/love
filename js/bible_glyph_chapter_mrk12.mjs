@@ -1138,7 +1138,7 @@ export function bible_glyph_chapter_mrk12() {
       words: [
         "$plus",
         "one",
-        "poor",
+        "$poor",
         "widow",
         "$footprints",
         "and",
