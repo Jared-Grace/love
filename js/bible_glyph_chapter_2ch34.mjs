@@ -443,7 +443,7 @@ export function bible_glyph_chapter_2ch34() {
           "to",
           "buy",
           "dressed",
-          "stone,",
+          "$stone,",
           "as",
           "well",
           "as",
