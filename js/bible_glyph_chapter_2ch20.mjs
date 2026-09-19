@@ -879,7 +879,7 @@ export function bible_glyph_chapter_2ch20() {
           "place",
           "overlooking",
           "the",
-          "wilderness,",
+          "$wilderness,",
           "they",
           "looked",
           "for",
