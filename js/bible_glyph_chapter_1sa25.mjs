@@ -193,7 +193,7 @@ export function bible_glyph_chapter_1sa25() {
           "to",
           "you,",
           "and",
-          "peace",
+          "$peace",
           "to",
           "you",
           "and",
