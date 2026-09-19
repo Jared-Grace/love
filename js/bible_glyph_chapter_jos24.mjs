@@ -740,7 +740,7 @@ export function bible_glyph_chapter_jos24() {
         words: [
           "The",
           "$family",
-          "replied,",
+          "$speech,",
           "$no_entry!",
           "We",
           "will",
