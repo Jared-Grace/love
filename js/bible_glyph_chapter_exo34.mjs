@@ -883,7 +883,7 @@ export function bible_glyph_chapter_exo34() {
           "have",
           "made",
           "a",
-          "covenant",
+          "$covenant",
           "with",
           "you",
           "and",
