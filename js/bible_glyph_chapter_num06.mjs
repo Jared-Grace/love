@@ -689,7 +689,7 @@ export function bible_glyph_chapter_num06() {
           "Nazirite",
           "may",
           "drink",
-          "wine.",
+          "$wine.",
         ],
       },
       {
