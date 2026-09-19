@@ -559,7 +559,7 @@ export function bible_glyph_chapter_2sa11() {
           "$hands_giving",
           "$proper_name$Uriah",
           "a",
-          "place",
+          "$place",
           "where",
           "he",
           "$lightbulb",
