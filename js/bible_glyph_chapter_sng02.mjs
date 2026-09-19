@@ -154,7 +154,7 @@ export function bible_glyph_chapter_sng02() {
           "does",
           "of",
           "the",
-          "field:",
+          "$field:",
           "Do",
           "not",
           "arouse",
