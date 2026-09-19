@@ -1032,7 +1032,7 @@ export function bible_glyph_chapter_lev16() {
           "must",
           "wash",
           "his",
-          "clothes",
+          "$garment",
           "and",
           "bathe",
           "his",
