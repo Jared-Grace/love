@@ -173,7 +173,7 @@ export function bible_glyph_chapter_luk02() {
         "there",
         "was",
         "$no_entry",
-        "room",
+        "$place",
         "for",
         "$pointing_back",
         "$tray_in",
