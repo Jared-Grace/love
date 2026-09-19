@@ -520,7 +520,7 @@ export function bible_glyph_chapter_1ki19() {
           "have",
           "forsaken",
           "Your",
-          "covenant,",
+          "$covenant,",
           "torn",
           "down",
           "Your",
