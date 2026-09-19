@@ -775,7 +775,7 @@ export function bible_glyph_chapter_2sa11() {
           "us",
           "in",
           "the",
-          "field,",
+          "$field,",
           "but",
           "we",
           "drove",
