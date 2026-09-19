@@ -518,7 +518,7 @@ export function bible_glyph_chapter_ecc03() {
           "$walking",
           "to",
           "one",
-          "place;",
+          "$place;",
           "all",
           "come",
           "$tray_out",
