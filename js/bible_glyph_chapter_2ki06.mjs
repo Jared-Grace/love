@@ -259,7 +259,7 @@ export function bible_glyph_chapter_2ki06() {
           "pass",
           "by",
           "this",
-          "place,",
+          "$place,",
           "for",
           "the",
           "$proper_name$Arameans",
