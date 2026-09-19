@@ -87,7 +87,7 @@ export function bible_glyph_chapter_rut02() {
           "$footprints",
           "into",
           "the",
-          "field",
+          "$field",
           "and",
           "gleaned",
           "after",
