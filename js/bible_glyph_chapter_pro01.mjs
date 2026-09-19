@@ -126,7 +126,7 @@ export function bible_glyph_chapter_pro01() {
           "but",
           "fools",
           "despise",
-          "wisdom",
+          "$wisdom",
           "and",
           "discipline.",
         ],
