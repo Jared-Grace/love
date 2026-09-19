@@ -941,7 +941,7 @@ export function bible_glyph_chapter_deu32() {
           "due",
           "time",
           "their",
-          "foot",
+          "$foot",
           "will",
           "slip,",
           "for",
