@@ -912,7 +912,7 @@ export function bible_glyph_chapter_jdg16() {
           "$hands_giving",
           "$proper_name$Samson",
           "our",
-          "enemy",
+          "$enemy",
           "into",
           "our",
           "$hand.",
