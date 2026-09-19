@@ -318,7 +318,7 @@ export function bible_glyph_chapter_jol01() {
           "harvest",
           "of",
           "the",
-          "field",
+          "$field",
           "has",
           "perished.",
         ],
