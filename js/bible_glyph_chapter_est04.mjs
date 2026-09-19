@@ -469,7 +469,7 @@ export function bible_glyph_chapter_est04() {
           "$menorah",
           "from",
           "another",
-          "place,",
+          "$place,",
           "but",
           "you",
           "and",
