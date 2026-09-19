@@ -252,7 +252,7 @@ export function bible_glyph_chapter_mrk08() {
           "got",
           "into",
           "the",
-          "boat",
+          "$ship",
           "with",
           "the",
           "$learner",
