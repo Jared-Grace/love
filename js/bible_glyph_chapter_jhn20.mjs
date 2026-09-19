@@ -79,7 +79,7 @@ export function bible_glyph_chapter_jhn20() {
           "$crown",
           "$tray_out",
           "the",
-          "tomb,",
+          "$tomb,",
           "$plus",
           "we",
           "do",
