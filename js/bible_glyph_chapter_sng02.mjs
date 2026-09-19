@@ -90,7 +90,7 @@ export function bible_glyph_chapter_sng02() {
           "the",
           "$house",
           "of",
-          "wine,",
+          "$wine,",
           "and",
           "his",
           "banner",
