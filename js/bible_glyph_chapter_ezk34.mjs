@@ -854,7 +854,7 @@ export function bible_glyph_chapter_ezk34() {
           "$tree",
           "of",
           "the",
-          "field",
+          "$field",
           "will",
           "$hands_giving",
           "their",
