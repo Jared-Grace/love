@@ -70,7 +70,7 @@ export function bible_glyph_chapter_gen32() {
           "of",
           "$proper_name$Seir,",
           "the",
-          "country",
+          "$field",
           "of",
           "$proper_name$Edom.",
         ],
