@@ -99,7 +99,7 @@ export function bible_glyph_chapter_jhn09() {
           "who",
           "sent",
           "Me.",
-          "Night",
+          "$night",
           "$footprints,",
           "when",
           "$no_entry",
