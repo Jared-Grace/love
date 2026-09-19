@@ -135,7 +135,7 @@ export function bible_glyph_chapter_mrk10() {
       verse_number: 6,
       words: [
         "However,",
-        "from",
+        "$away",
         "the",
         "beginning",
         "of",
