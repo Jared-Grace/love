@@ -546,7 +546,7 @@ export function bible_glyph_chapter_deu28() {
           "$speech+thumbs_down",
           "in",
           "the",
-          "country.",
+          "$field.",
         ],
       },
       {
