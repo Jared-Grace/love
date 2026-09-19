@@ -287,7 +287,7 @@ export function bible_glyph_chapter_jer23() {
           "and",
           "$footprints",
           "the",
-          "descendants",
+          "$seed",
           "of",
           "the",
           "$house",
