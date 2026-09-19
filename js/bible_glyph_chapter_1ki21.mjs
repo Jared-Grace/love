@@ -666,7 +666,7 @@ export function bible_glyph_chapter_1ki21() {
           "$speech,",
           "In",
           "the",
-          "place",
+          "$place",
           "where",
           "the",
           "dogs",
