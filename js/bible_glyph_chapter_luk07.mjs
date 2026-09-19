@@ -1295,7 +1295,7 @@ export function bible_glyph_chapter_luk07() {
         "$water",
         "for",
         "My",
-        "feet,",
+        "$foot,",
         "but",
         "she",
         "wet",
