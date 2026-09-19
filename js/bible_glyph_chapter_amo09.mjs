@@ -542,7 +542,7 @@ export function bible_glyph_chapter_amo09() {
           "and",
           "$eating",
           "their",
-          "fruit.",
+          "$fruit.",
         ],
       },
       {
