@@ -57,7 +57,7 @@ export function bible_glyph_chapter_jhn04() {
       },
       {
         verse_number: 3,
-        words: ["He", "left", "$proper_name$Judea", "$plus", "returned", "to", "$proper_name$Galilee."],
+        words: ["He", "left", "$proper_name$Judea", "$plus", "$footprints+away", "to", "$proper_name$Galilee."],
       },
       {
         verse_number: 4,
