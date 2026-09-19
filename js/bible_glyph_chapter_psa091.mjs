@@ -115,7 +115,7 @@ export function bible_glyph_chapter_psa091() {
           "terror",
           "of",
           "the",
-          "night,",
+          "$night,",
           "nor",
           "the",
           "arrow",
