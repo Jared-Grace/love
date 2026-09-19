@@ -75,7 +75,7 @@ export function bible_glyph_chapter_gen11() {
           "brick",
           "instead",
           "of",
-          "stone,",
+          "$stone,",
           "and",
           "tar",
           "instead",
