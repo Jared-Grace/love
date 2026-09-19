@@ -826,7 +826,7 @@ export function bible_glyph_chapter_mat05() {
           "has",
           "also",
           "been",
-          "said,",
+          "$speech,",
           "Whoever",
           "divorces",
           "$pointing_back",
