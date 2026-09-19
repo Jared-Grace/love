@@ -49,7 +49,7 @@ export function bible_glyph_chapter_mrk10() {
         "$plus",
         "some",
         "Pharisees",
-        "came",
+        "$footprints+toward",
         "to",
         "test",
         "$pointing_back.",
