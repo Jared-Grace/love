@@ -299,7 +299,7 @@ export function bible_glyph_chapter_gen29() {
           "and",
           "rolled",
           "the",
-          "stone",
+          "$stone",
           "away",
           "from",
           "the",
