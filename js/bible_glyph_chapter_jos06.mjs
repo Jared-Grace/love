@@ -263,7 +263,7 @@ export function bible_glyph_chapter_jos06() {
           "ark",
           "of",
           "the",
-          "covenant",
+          "$covenant",
           "of",
           "the",
           "$i_am",
