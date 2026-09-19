@@ -1223,7 +1223,7 @@ export function bible_glyph_chapter_luk07() {
         "$no_entry",
         "able",
         "to",
-        "repay",
+        "$hands_giving+away",
         "$pointing_back,",
         "so",
         "he",
