@@ -875,7 +875,7 @@ export function bible_glyph_chapter_jos24() {
           "$hand_receiving",
           "a",
           "large",
-          "stone",
+          "$stone",
           "and",
           "set",
           "it",
