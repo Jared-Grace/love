@@ -293,7 +293,7 @@ export function bible_glyph_chapter_gen21() {
           "through",
           "$proper_name$Isaac",
           "your",
-          "offspring",
+          "$seed",
           "will",
           "be",
           "reckoned.",
