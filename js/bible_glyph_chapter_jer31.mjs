@@ -1067,7 +1067,7 @@ export function bible_glyph_chapter_jer31() {
           "$proper_name$Egypt",
           "-",
           "a",
-          "covenant",
+          "$covenant",
           "they",
           "broke,",
           "though",
