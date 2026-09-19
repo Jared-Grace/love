@@ -297,7 +297,7 @@ export function bible_glyph_chapter_pro31() {
           "it",
           "is",
           "still",
-          "night",
+          "$night",
           "to",
           "$hands_giving",
           "food",
