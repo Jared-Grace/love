@@ -222,7 +222,7 @@ export function bible_glyph_chapter_jhn09() {
           "he.",
           "Others",
           "$speech,",
-          "No,",
+          "$no_entry,",
           "but",
           "he",
           "looks",
