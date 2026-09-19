@@ -379,7 +379,7 @@ export function bible_glyph_chapter_pro03() {
           "the",
           "$earth",
           "by",
-          "wisdom",
+          "$wisdom",
           "and",
           "established",
           "the",
