@@ -429,7 +429,7 @@ export function bible_glyph_chapter_mic07() {
           "inhabitants,",
           "as",
           "the",
-          "fruit",
+          "$fruit",
           "of",
           "their",
           "deeds.",
