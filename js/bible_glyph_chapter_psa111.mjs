@@ -183,7 +183,7 @@ export function bible_glyph_chapter_psa111() {
           "has",
           "ordained",
           "His",
-          "covenant",
+          "$covenant",
           "$hourglass.",
           "$sparkle",
           "and",
