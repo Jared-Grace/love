@@ -668,7 +668,7 @@ export function bible_glyph_chapter_luk15() {
         "was",
         "$tray_in",
         "the",
-        "field,",
+        "$field,",
         "$plus",
         "as",
         "he",
