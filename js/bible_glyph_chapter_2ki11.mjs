@@ -17,7 +17,7 @@ export function bible_glyph_chapter_2ki11() {
           "When",
           "Athaliah",
           "the",
-          "mother",
+          "$mother",
           "of",
           "$proper_name$Ahaziah",
           "$eye",
