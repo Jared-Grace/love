@@ -424,7 +424,7 @@ export function bible_glyph_chapter_zep02() {
           "dry",
           "as",
           "a",
-          "desert.",
+          "$wilderness.",
         ],
       },
       {
