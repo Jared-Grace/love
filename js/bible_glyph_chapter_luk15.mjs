@@ -264,7 +264,7 @@ export function bible_glyph_chapter_luk15() {
         "$smile",
         "in",
         "the",
-        "presence",
+        "$face+tray_in",
         "of",
         "the",
         "$angel",
