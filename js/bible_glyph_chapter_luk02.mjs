@@ -1314,7 +1314,7 @@ export function bible_glyph_chapter_luk02() {
         "$pointing_back,",
         "$plus",
         "$pointing_back",
-        "mother",
+        "$mother",
         "treasured",
         "up",
         "all",
