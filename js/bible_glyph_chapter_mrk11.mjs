@@ -65,7 +65,7 @@ export function bible_glyph_chapter_mrk11() {
         "there,",
         "on",
         "which",
-        "no",
+        "$no_entry",
         "$person",
         "has",
         "yet",
