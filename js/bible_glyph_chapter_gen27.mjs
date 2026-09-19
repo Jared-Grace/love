@@ -89,7 +89,7 @@ export function bible_glyph_chapter_gen27() {
           "out",
           "into",
           "the",
-          "field",
+          "$field",
           "to",
           "hunt",
           "some",
