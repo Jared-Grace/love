@@ -704,7 +704,7 @@ export function bible_glyph_chapter_luk07() {
         "out",
         "into",
         "the",
-        "wilderness",
+        "$wilderness",
         "to",
         "see?",
         "A",
