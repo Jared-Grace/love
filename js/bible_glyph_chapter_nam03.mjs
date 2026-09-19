@@ -301,7 +301,7 @@ export function bible_glyph_chapter_nam03() {
           "refuge",
           "from",
           "the",
-          "enemy.",
+          "$enemy.",
         ],
       },
       {
