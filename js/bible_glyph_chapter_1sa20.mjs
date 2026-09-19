@@ -665,7 +665,7 @@ export function bible_glyph_chapter_1sa20() {
           "$footprints",
           "to",
           "the",
-          "place",
+          "$place",
           "where",
           "you",
           "hid",
