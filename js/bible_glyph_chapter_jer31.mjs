@@ -1089,7 +1089,7 @@ export function bible_glyph_chapter_jer31() {
           "this",
           "is",
           "the",
-          "covenant",
+          "$covenant",
           "I",
           "will",
           "make",
