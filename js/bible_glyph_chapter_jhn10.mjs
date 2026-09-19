@@ -473,7 +473,7 @@ export function bible_glyph_chapter_jhn10() {
         words: [
           "$no_entry",
           "one",
-          "takes",
+          "$lifting",
           "$pointing_back",
           "from",
           "Me,",
