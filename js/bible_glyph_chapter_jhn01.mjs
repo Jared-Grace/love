@@ -500,7 +500,7 @@ export function bible_glyph_chapter_jhn01() {
           "you",
           "$speech",
           "about",
-          "yourself?”",
+          "$you+pointing_back?”",
         ],
       },
       {
