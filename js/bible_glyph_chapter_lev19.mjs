@@ -215,7 +215,7 @@ export function bible_glyph_chapter_lev19() {
           "edges",
           "of",
           "your",
-          "field",
+          "$field",
           "or",
           "gather",
           "the",
