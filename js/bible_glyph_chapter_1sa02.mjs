@@ -740,7 +740,7 @@ export function bible_glyph_chapter_1sa02() {
           "$speech?",
           "I",
           "$ear",
-          "about",
+          "$pointing_down",
           "your",
           "$thumbs_down",
           "$speech",
