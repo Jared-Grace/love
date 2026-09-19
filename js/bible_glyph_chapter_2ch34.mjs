@@ -915,7 +915,7 @@ export function bible_glyph_chapter_2ch34() {
           "$thumbs_down",
           "on",
           "this",
-          "place",
+          "$place",
           "and",
           "on",
           "its",
