@@ -924,7 +924,7 @@ export function bible_glyph_chapter_ezk36() {
           "your",
           "$heart_organ",
           "of",
-          "stone",
+          "$stone",
           "and",
           "$hands_giving",
           "you",
