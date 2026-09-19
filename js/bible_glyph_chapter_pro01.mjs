@@ -149,7 +149,7 @@ export function bible_glyph_chapter_pro01() {
           "$scroll",
           "of",
           "your",
-          "mother.",
+          "$mother.",
         ],
       },
       {
