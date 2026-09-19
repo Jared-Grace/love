@@ -1328,7 +1328,7 @@ export function bible_glyph_chapter_luk07() {
         "stopped",
         "kissing",
         "My",
-        "feet",
+        "$foot",
         "since",
         "I",
         "arrived.",
