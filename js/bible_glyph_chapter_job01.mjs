@@ -579,7 +579,7 @@ export function bible_glyph_chapter_job01() {
           "$footprints",
           "from",
           "the",
-          "desert",
+          "$wilderness",
           "and",
           "struck",
           "the",
