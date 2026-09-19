@@ -858,7 +858,7 @@ export function bible_glyph_chapter_gen24() {
           "$house",
           "about",
           "these",
-          "things.",
+          "$speech.",
         ],
       },
       {
