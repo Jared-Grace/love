@@ -1129,7 +1129,7 @@ export function bible_glyph_chapter_jhn04() {
           "the",
           "$water",
           "into",
-          "wine.",
+          "$wine.",
           "$plus",
           "there",
           "was",
