@@ -355,7 +355,7 @@ export function bible_glyph_chapter_job28() {
           "the",
           "price",
           "of",
-          "wisdom",
+          "$wisdom",
           "is",
           "beyond",
           "rubies.",
