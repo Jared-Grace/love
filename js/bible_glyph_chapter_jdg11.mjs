@@ -732,7 +732,7 @@ export function bible_glyph_chapter_jdg11() {
           "and",
           "from",
           "the",
-          "wilderness",
+          "$wilderness",
           "to",
           "the",
           "$proper_name$Jordan.",
