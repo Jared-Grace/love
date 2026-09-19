@@ -224,7 +224,7 @@ export function bible_glyph_chapter_isa56() {
           "who",
           "keep",
           "the",
-          "Sabbath",
+          "$sabbath",
           "without",
           "profaning",
           "it,",
