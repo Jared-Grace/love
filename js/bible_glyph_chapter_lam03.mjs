@@ -312,7 +312,7 @@ export function bible_glyph_chapter_lam03() {
           "been",
           "deprived",
           "of",
-          "peace;",
+          "$peace;",
           "I",
           "have",
           "forgotten",
