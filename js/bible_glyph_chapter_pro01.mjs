@@ -606,7 +606,7 @@ export function bible_glyph_chapter_pro01() {
           "will",
           "$eating",
           "the",
-          "fruit",
+          "$fruit",
           "of",
           "their",
           "own",
