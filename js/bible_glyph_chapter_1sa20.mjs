@@ -556,7 +556,7 @@ export function bible_glyph_chapter_1sa20() {
           "$man_beard",
           "of",
           "the",
-          "enemies",
+          "$enemy",
           "of",
           "David",
           "from",
