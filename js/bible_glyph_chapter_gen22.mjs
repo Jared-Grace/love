@@ -434,7 +434,7 @@ export function bible_glyph_chapter_gen22() {
           "Abraham",
           "called",
           "that",
-          "place",
+          "$place",
           "The",
           "$i_am",
           "Will",
