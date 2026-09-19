@@ -301,7 +301,7 @@ export function bible_glyph_chapter_mrk10() {
         "$pointing_back,",
         "“Let",
         "the",
-        "little",
+        "$baby",
         "children",
         "$footprints",
         "to",
