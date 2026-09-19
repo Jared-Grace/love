@@ -40,7 +40,7 @@ export function bible_glyph_chapter_psa019() {
           "pour",
           "forth",
           "speech;",
-          "night",
+          "$night",
           "after",
           "night",
           "they",
