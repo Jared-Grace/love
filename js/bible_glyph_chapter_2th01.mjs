@@ -358,7 +358,7 @@ export function bible_glyph_chapter_2th01() {
           "you",
           "$tray_in",
           "$pointing_back,",
-          "according",
+          "$pointing_down",
           "to",
           "the",
           "$gift",
