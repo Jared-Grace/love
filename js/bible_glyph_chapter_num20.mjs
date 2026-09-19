@@ -99,7 +99,7 @@ export function bible_glyph_chapter_num20() {
           "$i_am",
           "into",
           "this",
-          "wilderness,",
+          "$wilderness,",
           "for",
           "us",
           "and",
