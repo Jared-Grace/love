@@ -645,7 +645,7 @@ export function bible_glyph_chapter_1ki02() {
           "down",
           "on",
           "his",
-          "throne.",
+          "$throne.",
           "Then",
           "he",
           "had",
