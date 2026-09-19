@@ -143,7 +143,7 @@ export function bible_glyph_chapter_jhn10() {
           "they",
           "will",
           "flee",
-          "from",
+          "$away",
           "$pointing_back,",
           "$pointing",
           "they",
