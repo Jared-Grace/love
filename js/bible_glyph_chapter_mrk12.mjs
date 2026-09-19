@@ -837,7 +837,7 @@ export function bible_glyph_chapter_mrk12() {
         "your",
         "neighbor",
         "as",
-        "yourself.",
+        "$you+pointing_back.",
         "$no_entry",
         "other",
         "$scroll",
