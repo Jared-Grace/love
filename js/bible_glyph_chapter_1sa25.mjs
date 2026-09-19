@@ -707,7 +707,7 @@ export function bible_glyph_chapter_1sa25() {
           "man",
           "in",
           "the",
-          "wilderness.",
+          "$wilderness.",
           "$no_entry",
           "of",
           "his",
