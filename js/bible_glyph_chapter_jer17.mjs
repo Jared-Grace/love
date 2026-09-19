@@ -818,7 +818,7 @@ export function bible_glyph_chapter_jer17() {
           "sit",
           "on",
           "the",
-          "throne",
+          "$throne",
           "of",
           "$proper_name$David,",
           "riding",
