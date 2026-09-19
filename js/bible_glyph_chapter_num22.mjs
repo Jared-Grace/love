@@ -267,7 +267,7 @@ export function bible_glyph_chapter_num22() {
           "$speech,",
           "Spend",
           "the",
-          "night",
+          "$night",
           "here,",
           "and",
           "I",
