@@ -1000,7 +1000,7 @@ export function bible_glyph_chapter_mrk05() {
         "$plus",
         "weeping?",
         "The",
-        "child",
+        "$baby",
         "has",
         "$no_entry",
         "$skull",
