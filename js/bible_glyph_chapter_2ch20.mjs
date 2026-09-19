@@ -703,7 +703,7 @@ export function bible_glyph_chapter_2ch20() {
           "left",
           "for",
           "the",
-          "Wilderness",
+          "$wilderness",
           "of",
           "$proper_name$Tekoa.",
           "As",
