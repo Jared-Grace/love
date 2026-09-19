@@ -819,7 +819,7 @@ export function bible_glyph_chapter_gen21() {
           "had",
           "made",
           "the",
-          "covenant",
+          "$covenant",
           "at",
           "Beersheba,",
           "$proper_name$Abimelech",
