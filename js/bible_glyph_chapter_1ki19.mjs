@@ -568,7 +568,7 @@ export function bible_glyph_chapter_1ki19() {
           "go",
           "to",
           "the",
-          "Desert",
+          "$wilderness",
           "of",
           "$proper_name$Damascus.",
           "When",
