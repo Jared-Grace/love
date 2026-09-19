@@ -54,7 +54,7 @@ export function bible_glyph_chapter_psa019() {
           "Without",
           "speech",
           "or",
-          "language,",
+          "$speech,",
           "without",
           "a",
           "$voice",
