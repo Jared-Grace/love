@@ -150,7 +150,7 @@ export function bible_glyph_chapter_job01() {
           "them.",
           "For",
           "$proper_name$Job",
-          "thought,",
+          "$speech,",
           "Perhaps",
           "my",
           "$son",
