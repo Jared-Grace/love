@@ -812,7 +812,7 @@ export function bible_glyph_chapter_ezk34() {
           "securely",
           "in",
           "the",
-          "wilderness",
+          "$wilderness",
           "and",
           "sleep",
           "in",
