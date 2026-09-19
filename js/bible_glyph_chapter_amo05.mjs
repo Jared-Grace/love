@@ -723,7 +723,7 @@ export function bible_glyph_chapter_amo05() {
           "$year",
           "in",
           "the",
-          "wilderness,",
+          "$wilderness,",
           "O",
           "$house",
           "of",
