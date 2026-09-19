@@ -196,7 +196,7 @@ export function bible_glyph_chapter_exo20() {
         words: [
           "Remember",
           "the",
-          "Sabbath",
+          "$sabbath",
           "$sun",
           "by",
           "keeping",
