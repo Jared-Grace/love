@@ -1326,7 +1326,7 @@ export function bible_glyph_chapter_2ki17() {
           "$no_entry",
           "forget",
           "the",
-          "covenant",
+          "$covenant",
           "I",
           "have",
           "made",
