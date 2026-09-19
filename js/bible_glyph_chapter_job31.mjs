@@ -19,7 +19,7 @@ export function bible_glyph_chapter_job31() {
           "have",
           "made",
           "a",
-          "covenant",
+          "$covenant",
           "with",
           "my",
           "$eyes.",
