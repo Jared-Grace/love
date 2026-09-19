@@ -33,7 +33,7 @@ export function bible_glyph_chapter_2ki11() {
           "all",
           "the",
           "$castle",
-          "heirs.",
+          "$seed.",
         ],
       },
       {
