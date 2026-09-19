@@ -727,7 +727,7 @@ export function bible_glyph_chapter_gen24() {
           "me,",
           "is",
           "there",
-          "room",
+          "$place",
           "in",
           "your",
           "$father",
