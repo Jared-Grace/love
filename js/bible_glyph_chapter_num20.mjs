@@ -25,7 +25,7 @@ export function bible_glyph_chapter_num20() {
           "$footprints",
           "into",
           "the",
-          "Wilderness",
+          "$wilderness",
           "of",
           "$proper_name$Zin,",
           "and",
