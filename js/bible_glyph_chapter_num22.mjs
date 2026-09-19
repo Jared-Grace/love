@@ -1024,7 +1024,7 @@ export function bible_glyph_chapter_num22() {
           "donkey",
           "these",
           "three",
-          "times?",
+          "$foot?",
           "Behold,",
           "I",
           "have",
