@@ -768,7 +768,7 @@ export function bible_glyph_chapter_lam02() {
           "river",
           "day",
           "and",
-          "night.",
+          "$night.",
           "$hands_giving",
           "yourself",
           "$no_entry",
