@@ -653,7 +653,7 @@ export function bible_glyph_chapter_deu19() {
           "$no_entry",
           "again",
           "$hammer",
-          "anything",
+          "$speech",
           "so",
           "$thumbs_down",
           "among",
