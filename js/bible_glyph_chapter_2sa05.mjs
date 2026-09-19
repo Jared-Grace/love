@@ -105,7 +105,7 @@ export function bible_glyph_chapter_2sa05() {
           "$proper_name$David",
           "made",
           "a",
-          "covenant",
+          "$covenant",
           "with",
           "them",
           "before",
