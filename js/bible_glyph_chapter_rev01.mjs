@@ -452,7 +452,7 @@ export function bible_glyph_chapter_rev01() {
         words: [
           "$plus",
           "$pointing_back",
-          "feet",
+          "$foot",
           "were",
           "like",
           "polished",
