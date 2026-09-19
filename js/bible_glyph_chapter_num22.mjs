@@ -742,7 +742,7 @@ export function bible_glyph_chapter_num22() {
           "$walking",
           "into",
           "a",
-          "field.",
+          "$field.",
           "So",
           "Balaam",
           "$fist",
