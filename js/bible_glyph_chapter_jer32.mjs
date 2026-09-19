@@ -251,7 +251,7 @@ export function bible_glyph_chapter_jer32() {
           "for",
           "yourself",
           "my",
-          "field",
+          "$field",
           "in",
           "$proper_name$Anathoth,",
           "for",
