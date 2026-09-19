@@ -1245,7 +1245,7 @@ export function bible_glyph_chapter_deu28() {
           "$no_entry",
           "drink",
           "the",
-          "wine",
+          "$wine",
           "$no_entry",
           "gather",
           "the",
