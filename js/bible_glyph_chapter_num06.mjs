@@ -192,7 +192,7 @@ export function bible_glyph_chapter_num06() {
           "his",
           "$father",
           "or",
-          "mother",
+          "$mother",
           "or",
           "$brother",
           "or",
