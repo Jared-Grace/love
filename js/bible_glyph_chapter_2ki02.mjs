@@ -482,7 +482,7 @@ export function bible_glyph_chapter_2ki02() {
           "of",
           "his",
           "own",
-          "clothes",
+          "$garment",
           "and",
           "tore",
           "them",
