@@ -361,7 +361,7 @@ export function bible_glyph_chapter_amo05() {
           "you",
           "deprive",
           "the",
-          "poor",
+          "$poor",
           "of",
           "justice",
           "in",
