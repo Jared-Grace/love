@@ -24,7 +24,7 @@ export function bible_glyph_chapter_luk24() {
           "day",
           "of",
           "the",
-          "week,",
+          "$sabbath,",
           "very",
           "early",
           "in",
