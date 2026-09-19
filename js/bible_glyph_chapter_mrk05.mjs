@@ -708,7 +708,7 @@ export function bible_glyph_chapter_mrk05() {
         "and",
         "touched",
         "$pointing_back",
-        "cloak.",
+        "$garment.",
       ],
     },
     {
