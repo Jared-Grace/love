@@ -873,7 +873,7 @@ export function bible_glyph_chapter_mrk05() {
         "you.",
         "Go",
         "in",
-        "peace,",
+        "$peace,",
         "$plus",
         "be",
         "free",
