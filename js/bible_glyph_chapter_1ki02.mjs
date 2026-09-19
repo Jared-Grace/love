@@ -1604,7 +1604,7 @@ export function bible_glyph_chapter_1ki02() {
           "$speech+thumbs_up,",
           "and",
           "the",
-          "throne",
+          "$throne",
           "of",
           "David",
           "will",
