@@ -484,7 +484,7 @@ export function bible_glyph_chapter_exo32() {
           "will",
           "$hands_giving",
           "your",
-          "descendants",
+          "$seed",
           "all",
           "this",
           "$earth",
