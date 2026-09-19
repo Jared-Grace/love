@@ -457,7 +457,7 @@ export function bible_glyph_chapter_1sa01() {
           "$no_entry",
           "had",
           "any",
-          "wine",
+          "$wine",
           "or",
           "strong",
           "drink,",
