@@ -42,7 +42,7 @@ export function bible_glyph_chapter_gen29() {
           "well",
           "in",
           "the",
-          "field,",
+          "$field,",
           "and",
           "three",
           "flocks",
