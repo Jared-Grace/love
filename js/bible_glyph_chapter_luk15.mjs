@@ -400,7 +400,7 @@ export function bible_glyph_chapter_luk15() {
         "$pointing_back",
         "into",
         "$pointing_back",
-        "fields",
+        "$field",
         "to",
         "feed",
         "pigs.",
