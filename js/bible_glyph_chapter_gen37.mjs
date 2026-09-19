@@ -626,7 +626,7 @@ export function bible_glyph_chapter_gen37() {
           "pit",
           "in",
           "the",
-          "wilderness,",
+          "$wilderness,",
           "but",
           "do",
           "$no_entry",
