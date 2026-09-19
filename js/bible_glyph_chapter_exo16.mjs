@@ -112,7 +112,7 @@ export function bible_glyph_chapter_exo16() {
           "us",
           "into",
           "this",
-          "desert",
+          "$wilderness",
           "to",
           "starve",
           "this",
