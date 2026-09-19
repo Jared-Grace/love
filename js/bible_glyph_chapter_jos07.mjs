@@ -627,7 +627,7 @@ export function bible_glyph_chapter_jos07() {
           "has",
           "transgressed",
           "the",
-          "covenant",
+          "$covenant",
           "of",
           "the",
           "$i_am",
