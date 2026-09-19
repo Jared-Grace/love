@@ -53,7 +53,7 @@ export function bible_glyph_chapter_exo33() {
           "$speech,",
           "To",
           "your",
-          "descendants",
+          "$seed",
           "I",
           "will",
           "$hands_giving",
