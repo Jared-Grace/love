@@ -256,7 +256,7 @@ export function bible_glyph_chapter_jos03() {
           "ark",
           "of",
           "the",
-          "covenant,",
+          "$covenant,",
           "$speech,",
           "When",
           "you",
