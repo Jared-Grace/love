@@ -281,7 +281,7 @@ export function bible_glyph_chapter_2ki06() {
           "word",
           "to",
           "the",
-          "place",
+          "$place",
           "the",
           "$man_beard",
           "of",
