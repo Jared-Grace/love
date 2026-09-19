@@ -62,7 +62,7 @@ export function bible_glyph_chapter_jhn14() {
           "to",
           "prepare",
           "a",
-          "place",
+          "$place",
           "for",
           "you?",
         ],
