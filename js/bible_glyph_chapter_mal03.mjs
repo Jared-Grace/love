@@ -405,7 +405,7 @@ export function bible_glyph_chapter_mal03() {
           "vine",
           "in",
           "your",
-          "field",
+          "$field",
           "will",
           "$no_entry",
           "fail",
