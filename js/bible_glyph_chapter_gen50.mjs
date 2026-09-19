@@ -130,7 +130,7 @@ export function bible_glyph_chapter_gen50() {
           "me",
           "in",
           "the",
-          "tomb",
+          "$tomb",
           "that",
           "I",
           "dug",
