@@ -218,7 +218,7 @@ export function bible_glyph_chapter_mrk11() {
         "cut",
         "$tray_out",
         "the",
-        "fields.",
+        "$field.",
       ],
     },
     {
