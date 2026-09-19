@@ -276,7 +276,7 @@ export function bible_glyph_chapter_psa042() {
           "oppression",
           "of",
           "the",
-          "enemy?",
+          "$enemy?",
         ],
       },
       {
