@@ -995,7 +995,7 @@ export function bible_glyph_chapter_jhn10() {
           "$proper_name$Jordan",
           "to",
           "the",
-          "place",
+          "$place",
           "where",
           "$proper_name$John",
           "had",
