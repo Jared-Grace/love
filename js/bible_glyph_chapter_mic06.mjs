@@ -346,7 +346,7 @@ export function bible_glyph_chapter_mic06() {
           "bags",
           "of",
           "false",
-          "weights?",
+          "$stone?",
         ],
       },
       {
