@@ -480,7 +480,7 @@ export function bible_glyph_chapter_jhn03() {
           "this",
           "is",
           "the",
-          "verdict:",
+          "$scales:",
           "The",
           "$light",
           "has",
