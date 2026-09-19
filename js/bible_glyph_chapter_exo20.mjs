@@ -315,7 +315,7 @@ export function bible_glyph_chapter_exo20() {
           "your",
           "$father",
           "and",
-          "mother,",
+          "$mother,",
           "so",
           "that",
           "your",
