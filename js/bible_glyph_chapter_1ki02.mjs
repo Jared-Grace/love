@@ -1225,7 +1225,7 @@ export function bible_glyph_chapter_1ki02() {
           "$house",
           "and",
           "his",
-          "throne",
+          "$throne",
           "there",
           "shall",
           "be",
