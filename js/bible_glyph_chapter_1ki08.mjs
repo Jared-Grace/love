@@ -670,7 +670,7 @@ export function bible_glyph_chapter_1ki08() {
           "have",
           "provided",
           "a",
-          "place",
+          "$place",
           "for",
           "the",
           "ark,",
