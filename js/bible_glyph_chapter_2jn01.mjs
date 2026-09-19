@@ -69,7 +69,7 @@ export function bible_glyph_chapter_2jn01() {
           "$gift,",
           "mercy,",
           "and",
-          "peace",
+          "$peace",
           "from",
           "$fire",
           "the",
