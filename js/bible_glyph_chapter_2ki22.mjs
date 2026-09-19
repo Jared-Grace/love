@@ -766,7 +766,7 @@ export function bible_glyph_chapter_2ki22() {
           "gathered",
           "to",
           "your",
-          "grave",
+          "$tomb",
           "in",
           "$peace.",
           "Your",
