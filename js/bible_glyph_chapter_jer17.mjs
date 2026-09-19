@@ -719,7 +719,7 @@ export function bible_glyph_chapter_jer17() {
           "must",
           "keep",
           "the",
-          "Sabbath",
+          "$sabbath",
           "$sun",
           "$sparkle,",
           "just",
