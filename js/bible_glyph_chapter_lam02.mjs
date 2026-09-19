@@ -121,7 +121,7 @@ export function bible_glyph_chapter_lam02() {
           "approach",
           "of",
           "the",
-          "enemy.",
+          "$enemy.",
           "He",
           "has",
           "burned",
