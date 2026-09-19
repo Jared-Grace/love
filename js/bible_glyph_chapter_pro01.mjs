@@ -371,7 +371,7 @@ export function bible_glyph_chapter_pro01() {
       {
         verse_number: 20,
         words: [
-          "Wisdom",
+          "$wisdom",
           "calls",
           "out",
           "in",
