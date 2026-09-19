@@ -212,7 +212,7 @@ export function bible_glyph_chapter_deu30() {
           "$heart_organ",
           "of",
           "your",
-          "descendants,",
+          "$seed,",
           "so",
           "that",
           "you",
