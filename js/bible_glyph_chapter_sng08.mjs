@@ -60,7 +60,7 @@ export function bible_glyph_chapter_sng08() {
           "$house",
           "of",
           "my",
-          "mother,",
+          "$mother,",
           "who",
           "taught",
           "me.",
