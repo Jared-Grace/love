@@ -765,7 +765,7 @@ export function bible_glyph_chapter_luk15() {
         "Look,",
         "all",
         "these",
-        "years",
+        "$year",
         "I",
         "have",
         "served",
