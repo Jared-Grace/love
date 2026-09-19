@@ -904,7 +904,7 @@ export function bible_glyph_chapter_mrk08() {
           "he",
           "must",
           "deny",
-          "himself",
+          "$pointing_back+pointing_back",
           "$plus",
           "take",
           "up",
