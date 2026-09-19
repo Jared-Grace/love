@@ -643,7 +643,7 @@ export function bible_glyph_chapter_job01() {
           "womb",
           "of",
           "my",
-          "mother,",
+          "$mother,",
           "and",
           "naked",
           "I",
