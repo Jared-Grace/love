@@ -520,7 +520,7 @@ export function bible_glyph_chapter_jdg04() {
           "had",
           "fled",
           "on",
-          "foot",
+          "$foot",
           "to",
           "the",
           "tent",
