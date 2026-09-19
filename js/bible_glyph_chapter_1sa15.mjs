@@ -526,7 +526,7 @@ export function bible_glyph_chapter_1sa15() {
           "to",
           "me",
           "last",
-          "night.",
+          "$night.",
           "Saul",
           "$speech,",
           "$mouth",
