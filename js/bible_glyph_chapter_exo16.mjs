@@ -753,7 +753,7 @@ export function bible_glyph_chapter_exo16() {
           "rest,",
           "a",
           "$sparkle",
-          "Sabbath",
+          "$sabbath",
           "to",
           "the",
           "$i_am.",
