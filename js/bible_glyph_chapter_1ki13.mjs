@@ -1085,7 +1085,7 @@ export function bible_glyph_chapter_1ki13() {
           "in",
           "his",
           "own",
-          "tomb,",
+          "$tomb,",
           "and",
           "they",
           "lamented",
