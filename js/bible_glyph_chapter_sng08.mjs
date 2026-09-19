@@ -338,7 +338,7 @@ export function bible_glyph_chapter_sng08() {
           "tenants.",
           "For",
           "its",
-          "fruit",
+          "$fruit",
           "$man_beard",
           "was",
           "to",
