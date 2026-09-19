@@ -645,7 +645,7 @@ export function bible_glyph_chapter_gen08() {
           "winter,",
           "$sun",
           "and",
-          "night",
+          "$night",
           "shall",
           "$no_entry",
           "cease.",
