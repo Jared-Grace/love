@@ -117,6 +117,11 @@ export function bible_glyph_roots() {
   ("SO THE FINDING WAS SPENT THE SAME DAY IT WAS WRITTEN, AND TWENTY SIX MORE GREEK ROOTS WENT IN, worth about seventeen hundred occurrences and again costing nothing to draw. They are plain nouns and verbs that the Old Testament had already been given a picture for and the New Testament had not: mother, stone, field, fruit, wine, night, foot, throne, sabbath, peace, wilderness, tomb, garment, ship, wisdom, enemy, place, seed, cup, year, poor, covenant, little child, to lift, to eat, and to judge. The paragraph above is left standing rather than corrected, because the reason it gives is the reusable part and the list in it was only the evidence.");
   ("TWO OF THOSE TWENTY SIX ARE WORTH POINTING AT. Krino and krisis share the scales, which a Hebrew root already wears for judgment, so the New Testament's word for judging now looks like the Old Testament's without anybody having decided that in this file - the tables agreed by both reaching for the same picture. And esthio and phago are one more suppletive pair like lego and eipon: Greek's word for eat borrows its aorist from a different stem, so they sit in one row.");
   ("THE ONE PLACE THE RULE BITES BACKWARDS IS THE BODY PARTS, AND IT IS WORTH ARGUING ABOUT. Ophthalmos the eye cannot have the eye, because horao to see took it. Ous the ear cannot have the ear, because akouo took it. Stoma the mouth cannot have the mouth, because laleo took it. In each pair the ORGAN is the more literal owner of the picture and the VERB got there first, so the rule now protects the looser claim against the tighter one. Three hundred occurrences sit behind those three words. Whoever revisits this should consider moving each verb to a doing-mark and giving the organ its own body part back, rather than inventing a second eye.");
+  ("THE PREPOSITIONS WERE OPENED NEXT AND THEY ARE WHERE THE COUNTS ARE (2026-09-19). Ranking every Greek number no glyph seats yet put eight prepositions in the top forty, apo at six hundred and forty five and dia at six hundred and sixty six, above every verb left unseated. That is not a surprise about Greek so much as a correction to how this table was being filled: the words picked first were the ones that FELT important - light, power, salvation - and the words a reader actually meets on every line are the small ones holding the sentence together.");
+  ("AND A PREPOSITION IS THE CHEAPEST THING TO SEAT, BECAUSE IT PAYS TWICE. Apo stands alone six hundred and forty five times AND it is the front half of aperchomai, apodidomi, apoluo, apothnesko and a dozen more, each of which becomes writable as its root plus the one new mark. A noun seats one word. A preposition seats one word and unlocks a family, which is why these should have come before the nouns and not after them.");
+  ("THE WORDINGS DECIDED WHICH OF THE EIGHT COULD GO IN, AND THE COUNT DECIDED NOTHING. Apo's commonest English is from and covers three hundred and thirty nine of its six hundred and forty five. Para's commonest is also from and covers fifty seven of a hundred and ninety two - so para is both thin and, worse, thin on a word apo already owns, and seating it would have taught a reader that two different Greek words are one. Dia is spread over through, by and because of; sun is simply too small. So of the five asked for, two went in and three were refused, and the refusal is a measurement rather than a taste.");
+  ("KATA WENT IN ON AN ARGUMENT AND NOT ON ITS NUMBERS, which makes it the row in this file most likely to be wrong. Its English is scattered - down, against, according to, none covering more than an eighth - but the scatter belongs to the translation and not to the original, and this Bible's whole promise is the original's word. So it takes the downward hand, and the downward hand was free for Greek because a Hebrew root already carries it. What that buys beyond the word itself is a PAIR: epi already wears the upward hand, so upon and down are now one hand in two directions, and a reader who learns either reads the other unaided.");
+  ("APOKRINOMAI WAS REFUSED AND IT IS THE REFUSAL WORTH READING. It stands two hundred and thirty one times, it is apo plus krinomai, both halves are now seated, and by the rule this table has been following all week it should have gone straight in as the scales and the arrow. It did not, because its etymology and its meaning have come apart: the word means he answered, and judge-away is what the picture would say. Every other compound here still means its parts - to go out, to come to, to know upon - and that is the quiet condition the shape depends on. Where the parts no longer add up to the word, the compound shape stops being literal and starts being a false etymology printed in the text.");
   let roots = [
     {
       root: "agape",
@@ -1885,6 +1890,46 @@ export function bible_glyph_roots() {
         {
           strong: "4221",
           glyph: "cup",
+        },
+      ],
+    },
+    {
+      root: "apo",
+      gloss: "from, away from",
+      words: [
+        {
+          strong: "575",
+          glyph: "away",
+        },
+      ],
+    },
+    {
+      root: "kata",
+      gloss: "down, against, according to",
+      words: [
+        {
+          strong: "2596",
+          glyph: "pointing_down",
+        },
+      ],
+    },
+    {
+      root: "aperchomai",
+      gloss: "go away, depart",
+      words: [
+        {
+          strong: "565",
+          glyph: "footprints+away",
+        },
+      ],
+    },
+    {
+      root: "apodidomi",
+      gloss: "give back, pay, repay",
+      words: [
+        {
+          strong: "591",
+          glyph: "hands_giving+away",
         },
       ],
     },
