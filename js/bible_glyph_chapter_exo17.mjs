@@ -380,7 +380,7 @@ export function bible_glyph_chapter_exo17() {
           "they",
           "$hand_receiving",
           "a",
-          "stone",
+          "$stone",
           "and",
           "put",
           "it",
