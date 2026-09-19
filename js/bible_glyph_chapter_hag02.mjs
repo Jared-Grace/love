@@ -360,7 +360,7 @@ export function bible_glyph_chapter_hag02() {
           "fold",
           "of",
           "his",
-          "garment,",
+          "$garment,",
           "and",
           "it",
           "touches",
