@@ -60,7 +60,7 @@ export function bible_glyph_chapter_exo16() {
           "there",
           "in",
           "the",
-          "desert",
+          "$wilderness",
           "the",
           "whole",
           "congregation",
