@@ -1385,7 +1385,7 @@ export function bible_glyph_chapter_jdg06() {
           "$hammer",
           "so",
           "that",
-          "night.",
+          "$night.",
           "Only",
           "the",
           "fleece",
