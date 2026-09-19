@@ -1517,7 +1517,7 @@ export function bible_glyph_chapter_1ki01() {
           "greater",
           "than",
           "your",
-          "throne.",
+          "$throne.",
           "And",
           "the",
           "$king",
