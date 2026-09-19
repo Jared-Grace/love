@@ -692,7 +692,7 @@ export function bible_glyph_chapter_1ki02() {
           "your",
           "request,",
           "my",
-          "mother,",
+          "$mother,",
           "for",
           "I",
           "will",
