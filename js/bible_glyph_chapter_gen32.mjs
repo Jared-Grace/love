@@ -627,7 +627,7 @@ export function bible_glyph_chapter_gen32() {
           "he",
           "spent",
           "the",
-          "night",
+          "$night",
           "in",
           "the",
           "camp.",
