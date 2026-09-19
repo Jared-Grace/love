@@ -88,7 +88,7 @@ export function bible_glyph_chapter_exo18() {
           "for",
           "Moses",
           "had",
-          "said,",
+          "$speech,",
           "I",
           "have",
           "been",
