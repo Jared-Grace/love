@@ -67,7 +67,7 @@ export function bible_glyph_chapter_deu08() {
           "$year",
           "in",
           "the",
-          "wilderness,",
+          "$wilderness,",
           "to",
           "humble",
           "you",
