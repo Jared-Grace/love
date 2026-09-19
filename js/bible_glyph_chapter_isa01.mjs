@@ -400,7 +400,7 @@ export function bible_glyph_chapter_isa01() {
           "-",
           "New",
           "Moons,",
-          "Sabbaths,",
+          "$sabbath,",
           "and",
           "convocations.",
           "I",
