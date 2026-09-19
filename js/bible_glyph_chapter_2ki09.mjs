@@ -912,7 +912,7 @@ export function bible_glyph_chapter_2ki09() {
           "him",
           "into",
           "the",
-          "field",
+          "$field",
           "of",
           "$proper_name$Naboth",
           "the",
