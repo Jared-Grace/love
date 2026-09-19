@@ -1177,7 +1177,7 @@ export function bible_glyph_chapter_mrk12() {
         "you",
         "$pointing",
         "this",
-        "poor",
+        "$poor",
         "widow",
         "has",
         "put",
