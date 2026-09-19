@@ -40,7 +40,7 @@ export function bible_glyph_chapter_lev26() {
           "$hands_giving",
           "a",
           "sculpted",
-          "stone",
+          "$stone",
           "a",
           "place",
           "in",
