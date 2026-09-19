@@ -1300,7 +1300,7 @@ export function bible_glyph_chapter_luk07() {
         "she",
         "wet",
         "My",
-        "feet",
+        "$foot",
         "with",
         "her",
         "tears",
