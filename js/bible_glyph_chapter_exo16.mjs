@@ -917,7 +917,7 @@ export function bible_glyph_chapter_exo16() {
           "$hands_giving",
           "you",
           "the",
-          "Sabbath.",
+          "$sabbath.",
           "That",
           "is",
           "why",
