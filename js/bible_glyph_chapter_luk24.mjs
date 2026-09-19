@@ -512,7 +512,7 @@ export function bible_glyph_chapter_luk24() {
           "the",
           "third",
           "$sun",
-          "since",
+          "$away",
           "these",
           "things",
           "took",
