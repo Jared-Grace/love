@@ -282,7 +282,7 @@ export function bible_glyph_chapter_zec03() {
           "on",
           "that",
           "one",
-          "stone",
+          "$stone",
           "are",
           "seven",
           "$eyes.",
