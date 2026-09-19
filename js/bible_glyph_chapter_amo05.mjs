@@ -223,7 +223,7 @@ export function bible_glyph_chapter_amo05() {
           "darkens",
           "$sun",
           "into",
-          "night,",
+          "$night,",
           "who",
           "summons",
           "the",
