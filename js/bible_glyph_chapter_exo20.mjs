@@ -301,7 +301,7 @@ export function bible_glyph_chapter_exo20() {
           "$i_am",
           "$speech+thumbs_up",
           "the",
-          "Sabbath",
+          "$sabbath",
           "$sun",
           "and",
           "$sparkle",
