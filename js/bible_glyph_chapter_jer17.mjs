@@ -285,7 +285,7 @@ export function bible_glyph_chapter_jer17() {
           "cease",
           "to",
           "$hammer",
-          "fruit.",
+          "$fruit.",
         ],
       },
       {
