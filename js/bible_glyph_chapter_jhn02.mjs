@@ -513,7 +513,7 @@ export function bible_glyph_chapter_jhn02() {
           "$speech,",
           "“Forty",
           "six",
-          "years",
+          "$year",
           "this",
           "temple",
           "was",
