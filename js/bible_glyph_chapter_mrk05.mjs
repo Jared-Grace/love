@@ -120,7 +120,7 @@ export function bible_glyph_chapter_mrk05() {
       verse_number: 5,
       words: [
         "$plus",
-        "night",
+        "$night",
         "$plus",
         "$sun,",
         "$tray_in",
