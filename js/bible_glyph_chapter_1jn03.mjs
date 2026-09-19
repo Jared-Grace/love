@@ -329,7 +329,7 @@ export function bible_glyph_chapter_1jn03() {
           "you",
           "have",
           "$ear",
-          "from",
+          "$away",
           "the",
           "beginning:",
           "We",
