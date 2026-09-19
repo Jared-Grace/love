@@ -1198,7 +1198,7 @@ export function bible_glyph_chapter_neh09() {
           "keeps",
           "His",
           "$gift",
-          "covenant,",
+          "$covenant,",
           "do",
           "$no_entry",
           "view",
