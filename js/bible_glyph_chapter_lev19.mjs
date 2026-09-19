@@ -978,7 +978,7 @@ export function bible_glyph_chapter_lev19() {
           "$ruler",
           "scales,",
           "$ruler",
-          "weights,",
+          "$stone,",
           "an",
           "$ruler",
           "ephah,",
