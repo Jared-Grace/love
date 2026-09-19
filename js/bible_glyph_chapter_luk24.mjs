@@ -784,7 +784,7 @@ export function bible_glyph_chapter_luk24() {
           "to",
           "$arrow_both_ways,",
           "Were",
-          "not",
+          "$no_entry",
           "our",
           "$heart_organ",
           "burning",
