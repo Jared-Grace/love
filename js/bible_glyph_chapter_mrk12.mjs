@@ -902,7 +902,7 @@ export function bible_glyph_chapter_mrk12() {
         "your",
         "neighbor",
         "as",
-        "yourself,",
+        "$pointing_back+pointing_back,",
         "is",
         "more",
         "important",
