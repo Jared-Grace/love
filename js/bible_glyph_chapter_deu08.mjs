@@ -456,7 +456,7 @@ export function bible_glyph_chapter_deu08() {
           "vast",
           "and",
           "terrifying",
-          "wilderness,",
+          "$wilderness,",
           "with",
           "its",
           "venomous",
