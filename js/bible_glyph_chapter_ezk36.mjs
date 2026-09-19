@@ -1036,7 +1036,7 @@ export function bible_glyph_chapter_ezk36() {
           "crops",
           "of",
           "the",
-          "field",
+          "$field",
           "plentiful,",
           "so",
           "that",
