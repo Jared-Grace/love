@@ -1251,7 +1251,7 @@ export function bible_glyph_chapter_2ch20() {
           "agreed",
           "to",
           "$hammer",
-          "ships",
+          "$ship",
           "to",
           "$walking",
           "to",
