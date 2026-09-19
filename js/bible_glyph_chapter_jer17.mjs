@@ -787,7 +787,7 @@ export function bible_glyph_chapter_jer17() {
           "and",
           "keep",
           "the",
-          "Sabbath",
+          "$sabbath",
           "$sun",
           "$sparkle,",
           "and",
