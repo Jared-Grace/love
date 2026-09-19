@@ -985,7 +985,7 @@ export function bible_glyph_chapter_luk07() {
         "of",
         "$person",
         "$footprints",
-        "eating",
+        "$eating",
         "$plus",
         "drinking,",
         "$plus",
