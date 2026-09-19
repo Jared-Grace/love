@@ -322,7 +322,7 @@ export function bible_glyph_chapter_jhn03() {
       {
         verse_number: 13,
         words: [
-          "No",
+          "$no_entry",
           "one",
           "has",
           "ascended",
