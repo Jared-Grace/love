@@ -732,7 +732,7 @@ export function bible_glyph_chapter_ezk01() {
           "likeness",
           "of",
           "a",
-          "throne",
+          "$throne",
           "with",
           "the",
           "appearance",
