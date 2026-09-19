@@ -146,7 +146,7 @@ export function bible_glyph_chapter_1jn03() {
           "$lightbulb",
           "$pointing",
           "Christ",
-          "appeared",
+          "$light",
           "to",
           "take",
           "away",
