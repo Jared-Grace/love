@@ -799,7 +799,7 @@ export function bible_glyph_chapter_jer29() {
           "which",
           "I",
           "did",
-          "not",
+          "$no_entry",
           "command",
           "them.",
           "I",
