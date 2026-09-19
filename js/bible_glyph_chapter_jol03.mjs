@@ -565,7 +565,7 @@ export function bible_glyph_chapter_jol03() {
           "and",
           "$proper_name$Edom",
           "a",
-          "desert",
+          "$wilderness",
           "wasteland,",
           "because",
           "of",
