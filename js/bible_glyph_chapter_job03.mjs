@@ -117,7 +117,7 @@ export function bible_glyph_chapter_job03() {
           "had",
           "$hand_receiving",
           "that",
-          "night",
+          "$night",
           "away.",
           "May",
           "it",
