@@ -128,7 +128,7 @@ export function bible_glyph_chapter_dan09() {
           "who",
           "keeps",
           "His",
-          "covenant",
+          "$covenant",
           "of",
           "$gift",
           "to",
