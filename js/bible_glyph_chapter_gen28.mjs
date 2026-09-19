@@ -588,7 +588,7 @@ export function bible_glyph_chapter_gen28() {
           "he",
           "called",
           "that",
-          "place",
+          "$place",
           "Bethel,",
           "though",
           "the",
