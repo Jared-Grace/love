@@ -768,7 +768,7 @@ export function bible_glyph_chapter_jdg06() {
           "$speech",
           "to",
           "him,",
-          "Peace",
+          "$peace",
           "be",
           "with",
           "you.",
