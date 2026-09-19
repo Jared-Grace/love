@@ -979,7 +979,7 @@ export function bible_glyph_chapter_2ch34() {
           "out",
           "upon",
           "this",
-          "place",
+          "$place",
           "and",
           "will",
           "$no_entry",
