@@ -1028,7 +1028,7 @@ export function bible_glyph_chapter_mrk05() {
         "$father",
         "of",
         "the",
-        "child",
+        "$baby",
         "$plus",
         "the",
         "$mother",
