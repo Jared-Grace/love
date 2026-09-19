@@ -22,7 +22,7 @@ export function app_code_hash_write(context) {
   let v = app_code_lesson_hash_key();
   add_part(v, value2);
   let value3 = app_shared_screen_stored_get(context);
-  let v2 = app_code_screen_hash_key();
+  let v2 = app_code_screen_hash_key(); if (null_not_is(value3)) { value3 = app_code_screen_name_short(value3); }
   add_part(v2, value3);
   let value4 = storage_session_get_context(context, "quiz_index");
   let v3 = app_code_quiz_hash_key();
