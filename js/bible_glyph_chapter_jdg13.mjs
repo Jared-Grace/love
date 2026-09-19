@@ -252,7 +252,7 @@ export function bible_glyph_chapter_jdg13() {
           "therefore",
           "drink",
           "$no_entry",
-          "wine",
+          "$wine",
           "or",
           "strong",
           "drink,",
