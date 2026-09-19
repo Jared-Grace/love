@@ -496,7 +496,7 @@ export function bible_glyph_chapter_isa58() {
           "you",
           "call",
           "the",
-          "Sabbath",
+          "$sabbath",
           "a",
           "delight",
           "and",
