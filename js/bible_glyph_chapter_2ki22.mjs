@@ -733,7 +733,7 @@ export function bible_glyph_chapter_2ki22() {
           "have",
           "torn",
           "your",
-          "clothes",
+          "$garment",
           "and",
           "wept",
           "before",
