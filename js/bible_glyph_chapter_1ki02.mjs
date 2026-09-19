@@ -481,7 +481,7 @@ export function bible_glyph_chapter_1ki02() {
           "you",
           "$footprints",
           "in",
-          "peace?",
+          "$peace?",
           "He",
           "$speech,",
           "Yes,",
