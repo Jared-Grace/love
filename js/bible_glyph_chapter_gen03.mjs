@@ -482,7 +482,7 @@ export function bible_glyph_chapter_gen03() {
           "$seed",
           "and",
           "her",
-          "seed.",
+          "$seed.",
           "He",
           "will",
           "crush",
