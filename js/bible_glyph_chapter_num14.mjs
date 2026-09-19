@@ -781,7 +781,7 @@ export function bible_glyph_chapter_num14() {
           "$footprints,",
           "and",
           "his",
-          "descendants",
+          "$seed",
           "will",
           "inherit",
           "it.",
