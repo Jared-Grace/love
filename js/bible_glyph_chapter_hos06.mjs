@@ -211,7 +211,7 @@ export function bible_glyph_chapter_hos06() {
           "have",
           "transgressed",
           "the",
-          "covenant;",
+          "$covenant;",
           "there",
           "they",
           "were",
