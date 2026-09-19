@@ -470,7 +470,7 @@ export function bible_glyph_chapter_exo32() {
           "will",
           "make",
           "your",
-          "descendants",
+          "$seed",
           "as",
           "numerous",
           "as",
