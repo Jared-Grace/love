@@ -30,7 +30,7 @@ export function bible_glyph_chapter_1sa24() {
           "is",
           "in",
           "the",
-          "wilderness",
+          "$wilderness",
           "of",
           'En-gedi."',
         ],
