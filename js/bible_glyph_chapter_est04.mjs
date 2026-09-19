@@ -23,7 +23,7 @@ export function bible_glyph_chapter_est04() {
           "he",
           "tore",
           "his",
-          "clothes,",
+          "$garment,",
           "put",
           "on",
           "sackcloth",
