@@ -173,7 +173,7 @@ export function bible_glyph_chapter_lev26() {
           "I",
           "will",
           "$hands_giving",
-          "peace",
+          "$peace",
           "to",
           "the",
           "$earth,",
