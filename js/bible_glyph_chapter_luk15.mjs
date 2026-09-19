@@ -211,7 +211,7 @@ export function bible_glyph_chapter_luk15() {
         "$plus",
         "sweep",
         "the",
-        "house",
+        "$house",
         "$plus",
         "search",
         "carefully",
