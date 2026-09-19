@@ -1066,7 +1066,7 @@ export function bible_glyph_chapter_1sa20() {
           "shame",
           "of",
           "the",
-          "mother",
+          "$mother",
           "who",
           "bore",
           "you?",
