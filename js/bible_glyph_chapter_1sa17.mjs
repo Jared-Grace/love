@@ -1533,7 +1533,7 @@ export function bible_glyph_chapter_1sa17() {
           "$hand_receiving",
           "out",
           "a",
-          "stone,",
+          "$stone,",
           "and",
           "slung",
           "it,",
