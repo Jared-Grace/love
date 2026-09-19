@@ -730,7 +730,7 @@ export function bible_glyph_chapter_1ki02() {
           "$proper_name$Solomon",
           "answered",
           "his",
-          "mother,",
+          "$mother,",
           "$speech,",
           "Why",
           "do",
