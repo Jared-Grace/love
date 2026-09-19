@@ -635,7 +635,7 @@ export function bible_glyph_chapter_exo14() {
           "and",
           "all",
           "that",
-          "night",
+          "$night",
           "the",
           "$i_am",
           "$walking",
