@@ -523,7 +523,7 @@ export function bible_glyph_chapter_lev19() {
           "a",
           "$man_beard",
           "lies",
-          "carnally",
+          "$seed",
           "with",
           "a",
           "slave",
