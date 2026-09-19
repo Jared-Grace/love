@@ -1100,7 +1100,7 @@ export function bible_glyph_chapter_2ch34() {
           "your",
           "grave",
           "in",
-          "peace.",
+          "$peace.",
           "Your",
           "$eyes",
           "will",
