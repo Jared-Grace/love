@@ -285,7 +285,7 @@ export function bible_glyph_chapter_isa53() {
           "was",
           "$hands_giving",
           "a",
-          "grave",
+          "$tomb",
           "with",
           "the",
           "$thumbs_down,",
