@@ -522,7 +522,7 @@ export function bible_glyph_chapter_deu10() {
           "chose",
           "you,",
           "their",
-          "descendants",
+          "$seed",
           "after",
           "them,",
           "above",
