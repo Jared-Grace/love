@@ -843,7 +843,7 @@ export function bible_glyph_chapter_gen32() {
           "Jacob",
           "called",
           "the",
-          "place",
+          "$place",
           "$proper_name$Peniel,",
           "saying,",
           "Indeed",
