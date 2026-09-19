@@ -720,7 +720,7 @@ export function bible_glyph_chapter_gen02() {
           "his",
           "$father",
           "and",
-          "mother",
+          "$mother",
           "and",
           "be",
           "united",
