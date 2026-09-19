@@ -678,7 +678,7 @@ export function bible_glyph_chapter_gen29() {
           "$no_entry",
           "our",
           "custom",
-          "here",
+          "$place",
           "to",
           "give",
           "the",
