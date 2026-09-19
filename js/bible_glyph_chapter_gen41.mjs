@@ -1111,7 +1111,7 @@ export function bible_glyph_chapter_gen41() {
           "regard",
           "to",
           "the",
-          "throne",
+          "$throne",
           "will",
           "I",
           "be",
