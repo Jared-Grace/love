@@ -139,7 +139,7 @@ export function bible_glyph_chapter_isa07() {
           "to",
           "the",
           "Launderer's",
-          "Field,",
+          "$field,",
         ],
       },
       {
