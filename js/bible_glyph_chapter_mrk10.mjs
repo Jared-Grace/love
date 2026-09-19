@@ -756,7 +756,7 @@ export function bible_glyph_chapter_mrk10() {
         "$plus",
         "sisters",
         "$plus",
-        "mothers",
+        "$mother",
         "$plus",
         "$child",
         "$plus",
