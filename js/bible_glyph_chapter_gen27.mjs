@@ -820,7 +820,7 @@ export function bible_glyph_chapter_gen27() {
           "$son",
           "of",
           "your",
-          "mother",
+          "$mother",
           "$bowing",
           "to",
           "you.",
