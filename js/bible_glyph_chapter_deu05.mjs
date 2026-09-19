@@ -473,7 +473,7 @@ export function bible_glyph_chapter_deu05() {
           "to",
           "$hammer",
           "the",
-          "Sabbath",
+          "$sabbath",
           "$sun.",
         ],
       },
