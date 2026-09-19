@@ -385,7 +385,7 @@ export function bible_glyph_chapter_jer23() {
           "pastures",
           "of",
           "the",
-          "wilderness",
+          "$wilderness",
           "have",
           "dried",
           "up.",
