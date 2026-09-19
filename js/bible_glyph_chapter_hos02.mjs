@@ -696,7 +696,7 @@ export function bible_glyph_chapter_hos02() {
           "to",
           "the",
           "new",
-          "wine,",
+          "$wine,",
           "and",
           "to",
           "the",
