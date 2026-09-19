@@ -40,7 +40,7 @@ export function bible_glyph_chapter_jhn14() {
           "$tray_in",
           "My",
           "$father’s",
-          "house",
+          "$house",
           "are",
           "many",
           "rooms.",
