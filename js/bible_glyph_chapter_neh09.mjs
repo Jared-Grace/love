@@ -279,7 +279,7 @@ export function bible_glyph_chapter_neh09() {
           "You",
           "made",
           "a",
-          "covenant",
+          "$covenant",
           "with",
           "him",
           "to",
