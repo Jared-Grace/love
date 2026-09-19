@@ -372,7 +372,7 @@ export function bible_glyph_chapter_isa55() {
           "led",
           "forth",
           "in",
-          "peace;",
+          "$peace;",
           "the",
           "$mountain",
           "and",
