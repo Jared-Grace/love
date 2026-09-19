@@ -24,7 +24,7 @@ export function bible_glyph_chapter_pro31() {
           "burden",
           "that",
           "his",
-          "mother",
+          "$mother",
           "taught",
           "him.",
         ],
