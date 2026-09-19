@@ -128,7 +128,7 @@ export function bible_glyph_chapter_num20() {
           "to",
           "this",
           "$thumbs_down",
-          "place?",
+          "$place?",
           "It",
           "is",
           "$no_entry",
