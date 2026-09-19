@@ -190,7 +190,7 @@ export function bible_glyph_chapter_1jn02() {
           "you",
           "have",
           "had",
-          "from",
+          "$away",
           "the",
           "beginning.",
           "This",
