@@ -610,7 +610,7 @@ export function bible_glyph_chapter_jhn17() {
           "have",
           "$hands_giving",
           "me",
-          "I",
+          "$plus+me",
           "have",
           "$hands_giving",
           "$pointing_back,",
