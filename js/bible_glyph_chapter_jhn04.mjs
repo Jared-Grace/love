@@ -1211,7 +1211,7 @@ export function bible_glyph_chapter_jhn04() {
           "down",
           "before",
           "my",
-          "child",
+          "$baby",
           "$skull.”",
         ],
       },
