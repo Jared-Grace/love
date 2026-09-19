@@ -150,7 +150,7 @@ export function bible_glyph_chapter_exo19() {
           "and",
           "keep",
           "My",
-          "covenant,",
+          "$covenant,",
           "you",
           "will",
           "be",
