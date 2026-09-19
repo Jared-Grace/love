@@ -421,7 +421,7 @@ export function bible_glyph_chapter_num13() {
           "$earth",
           "from",
           "the",
-          "Wilderness",
+          "$wilderness",
           "of",
           "$proper_name$Zin",
           "as",
