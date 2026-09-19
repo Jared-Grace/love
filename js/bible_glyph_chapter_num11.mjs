@@ -249,7 +249,7 @@ export function bible_glyph_chapter_num11() {
           "the",
           "camp",
           "at",
-          "night,",
+          "$night,",
           "the",
           "manna",
           "would",
