@@ -264,7 +264,7 @@ export function bible_glyph_chapter_pro03() {
           "$person",
           "who",
           "finds",
-          "wisdom,",
+          "$wisdom,",
           "the",
           "$person",
           "who",
