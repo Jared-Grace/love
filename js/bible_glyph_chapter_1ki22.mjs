@@ -587,7 +587,7 @@ export function bible_glyph_chapter_1ki22() {
           "his",
           "$house",
           "in",
-          "peace.",
+          "$peace.",
         ],
       },
       {
