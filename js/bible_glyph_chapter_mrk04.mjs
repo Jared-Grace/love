@@ -585,7 +585,7 @@ export function bible_glyph_chapter_mrk04() {
           "will",
           "$no_entry",
           "be",
-          "disclosed,",
+          "$light,",
           "nor",
           "anything",
           "concealed",
