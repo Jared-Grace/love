@@ -86,7 +86,7 @@ export function bible_glyph_chapter_jos01() {
           "sole",
           "of",
           "your",
-          "foot",
+          "$foot",
           "will",
           "tread,",
           "just",
