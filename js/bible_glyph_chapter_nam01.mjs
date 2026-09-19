@@ -414,7 +414,7 @@ export function bible_glyph_chapter_nam01() {
           "will",
           "prepare",
           "your",
-          "grave,",
+          "$tomb,",
           "for",
           "you",
           "are",
