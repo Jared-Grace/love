@@ -342,7 +342,7 @@ export function bible_glyph_chapter_jdg07() {
         verse_number: 9,
         words: [
           "That",
-          "night",
+          "$night",
           "the",
           "$i_am",
           "$speech",
