@@ -253,7 +253,7 @@ export function bible_glyph_chapter_mic07() {
           "over",
           "me,",
           "my",
-          "enemy!",
+          "$enemy!",
           "Though",
           "I",
           "have",
