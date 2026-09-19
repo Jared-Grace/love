@@ -33,7 +33,7 @@ export function bible_glyph_chapter_isa55() {
           "$eating!",
           "$walking,",
           "buy",
-          "wine",
+          "$wine",
           "and",
           "milk",
           "$no_entry",
