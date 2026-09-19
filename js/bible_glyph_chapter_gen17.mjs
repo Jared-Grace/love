@@ -258,7 +258,7 @@ export function bible_glyph_chapter_gen17() {
           "you",
           "and",
           "your",
-          "descendants",
+          "$seed",
           "after",
           "you:",
           "Every",
