@@ -716,7 +716,7 @@ export function bible_glyph_chapter_2ki04() {
           "and",
           "$no_entry",
           "a",
-          "Sabbath.",
+          "$sabbath.",
           "She",
           "$speech,",
           "Everything",
