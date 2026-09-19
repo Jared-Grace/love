@@ -572,7 +572,7 @@ export function bible_glyph_chapter_jol01() {
           "$tree",
           "of",
           "the",
-          "field.",
+          "$field.",
         ],
       },
       {
