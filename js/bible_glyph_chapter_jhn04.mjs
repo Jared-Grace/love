@@ -1323,7 +1323,7 @@ export function bible_glyph_chapter_jhn04() {
           "$plus",
           "$pointing_back",
           "whole",
-          "household.",
+          "$house.",
         ],
       },
       {
