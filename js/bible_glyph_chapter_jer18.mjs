@@ -492,7 +492,7 @@ export function bible_glyph_chapter_jer18() {
           "them",
           "before",
           "the",
-          "enemy.",
+          "$enemy.",
           "I",
           "will",
           "show",
