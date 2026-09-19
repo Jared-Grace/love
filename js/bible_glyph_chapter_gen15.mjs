@@ -410,7 +410,7 @@ export function bible_glyph_chapter_gen15() {
           "your",
           "$father",
           "in",
-          "peace",
+          "$peace",
           "and",
           "be",
           "buried",
