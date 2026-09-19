@@ -1199,7 +1199,7 @@ export function bible_glyph_chapter_2ch34() {
           "Book",
           "of",
           "the",
-          "Covenant",
+          "$covenant",
           "that",
           "had",
           "been",
