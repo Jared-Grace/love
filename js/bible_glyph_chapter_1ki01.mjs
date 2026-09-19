@@ -1513,7 +1513,7 @@ export function bible_glyph_chapter_1ki01() {
           "He",
           "make",
           "his",
-          "throne",
+          "$throne",
           "greater",
           "than",
           "your",
