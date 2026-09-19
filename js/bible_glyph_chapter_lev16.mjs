@@ -896,7 +896,7 @@ export function bible_glyph_chapter_lev16() {
           "on",
           "his",
           "own",
-          "clothes.",
+          "$garment.",
           "Then",
           "he",
           "must",
