@@ -793,7 +793,7 @@ export function bible_glyph_chapter_gen21() {
         words: [
           "So",
           "that",
-          "place",
+          "$place",
           "was",
           "called",
           "Beersheba,",
