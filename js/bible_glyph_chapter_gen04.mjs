@@ -84,7 +84,7 @@ export function bible_glyph_chapter_gen04() {
           "some",
           "of",
           "the",
-          "fruit",
+          "$fruit",
           "of",
           "the",
           "soil",
