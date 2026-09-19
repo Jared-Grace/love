@@ -266,7 +266,7 @@ export function bible_glyph_chapter_mal02() {
           "have",
           "violated",
           "the",
-          "covenant",
+          "$covenant",
           "of",
           "$proper_name$Levi,",
           "$speech",
