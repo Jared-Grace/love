@@ -905,7 +905,7 @@ export function bible_glyph_chapter_jos24() {
           "You",
           "see",
           "this",
-          "stone.",
+          "$stone.",
           "It",
           "will",
           "be",
