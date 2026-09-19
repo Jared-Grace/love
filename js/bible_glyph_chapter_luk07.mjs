@@ -1136,7 +1136,7 @@ export function bible_glyph_chapter_luk07() {
         "in",
         "$speech",
         "$tray_in",
-        "himself,",
+        "$pointing_back+pointing_back,",
         "in",
         "$speech,",
         "“If",
