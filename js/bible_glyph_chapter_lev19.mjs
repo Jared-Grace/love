@@ -48,7 +48,7 @@ export function bible_glyph_chapter_lev19() {
           "must",
           "respect",
           "his",
-          "mother",
+          "$mother",
           "and",
           "$father,",
           "and",
