@@ -327,7 +327,7 @@ export function bible_glyph_chapter_zec08() {
           "nor",
           "was",
           "there",
-          "safety",
+          "$peace",
           "$tray_out",
           "the",
           "enemy",
