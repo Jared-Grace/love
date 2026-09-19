@@ -21,7 +21,7 @@ export function app_code_happy_trail_quizzes_skipped(trail) {
   "It reads the address rather than the screen, because the address is all a finished walk kept - and the address is enough: the quiz says which lesson and which question it is, so a run of steps sharing one says how many presses that one question took.";
   arguments_assert(arguments, 1);
   let key = app_code_screen_hash_key();
-  let screen = fn_name("app_code_quiz");
+  let screen = app_code_screen_name_short(fn_name("app_code_quiz"));
   let quiz_marker = text_combine_multiple([key, "=", screen]);
   ("the steps are gathered into runs of one address rather than counted per address, because a course comes back: a review asks about a lesson already walked, and the same question answered properly twice would otherwise be one address seen four times and look fine even if each visit had been skipped");
   let runs = [];

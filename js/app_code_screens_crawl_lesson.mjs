@@ -30,7 +30,7 @@ export async function app_code_screens_crawl_lesson(
   );
   await app_code_screen_capture_record(page, quiz_url, id, "quiz", 0, records);
   let v6 = app_code_screen_hash_key();
-  let f_name = fn_name("app_code_quiz");
+  let f_name = app_code_screen_name_short(fn_name("app_code_quiz"));
   let combined = text_combine_multiple([",", v6, "=", f_name]);
   let v7 = app_code_lesson_hash_key();
   let quiz_marker = text_combine_multiple([v7, "=", id, combined]);

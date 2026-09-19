@@ -25,8 +25,7 @@ export async function app_code_screens_crawl_screen(
     name,
     "#",
     key,
-    "=",
-    name,
+x
   ]);
   await page.goto(url);
   await page.waitForTimeout(page_capture_settle_ms());
