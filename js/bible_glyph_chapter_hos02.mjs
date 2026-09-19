@@ -569,7 +569,7 @@ export function bible_glyph_chapter_hos02() {
           "for",
           "them",
           "a",
-          "covenant",
+          "$covenant",
           "with",
           "the",
           "$sprout",
