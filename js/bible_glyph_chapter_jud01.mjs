@@ -443,7 +443,7 @@ export function bible_glyph_chapter_jud01() {
           "$proper_name$Enoch,",
           "the",
           "seventh",
-          "from",
+          "$away",
           "$proper_name$Adam,",
           "$plus",
           "prophesied",
