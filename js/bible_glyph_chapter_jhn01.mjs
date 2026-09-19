@@ -739,7 +739,7 @@ export function bible_glyph_chapter_jhn01() {
       {
         verse_number: 33,
         words: [
-          "I",
+          "$plus+me",
           "myself",
           "did",
           "$no_entry",
