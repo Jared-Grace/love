@@ -1020,7 +1020,7 @@ export function bible_glyph_chapter_jer31() {
           "make",
           "a",
           "new",
-          "covenant",
+          "$covenant",
           "with",
           "the",
           "$house",
