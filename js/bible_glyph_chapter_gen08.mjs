@@ -634,7 +634,7 @@ export function bible_glyph_chapter_gen08() {
           "the",
           "$earth",
           "last,",
-          "seedtime",
+          "$seed",
           "and",
           "harvest,",
           "cold",
