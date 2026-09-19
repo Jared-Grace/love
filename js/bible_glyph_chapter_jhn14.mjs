@@ -750,7 +750,7 @@ export function bible_glyph_chapter_jhn14() {
       {
         verse_number: 27,
         words: [
-          "Peace",
+          "$peace",
           "I",
           "leave",
           "with",
