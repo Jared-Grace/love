@@ -239,7 +239,7 @@ export function bible_glyph_chapter_psa116() {
           "will",
           "$lifting",
           "the",
-          "cup",
+          "$cup",
           "of",
           "salvation",
           "and",
