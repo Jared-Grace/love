@@ -188,7 +188,7 @@ export function bible_glyph_chapter_mrk11() {
         "$plus",
         "threw",
         "$pointing_back",
-        "cloaks",
+        "$garment",
         "over",
         "$pointing_back,",
         "$plus",
