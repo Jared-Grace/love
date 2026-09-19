@@ -534,7 +534,7 @@ export function bible_glyph_chapter_gen22() {
           "the",
           "$sea.",
           "Your",
-          "descendants",
+          "$seed",
           "will",
           "possess",
           "the",
