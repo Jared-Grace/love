@@ -817,7 +817,7 @@ export function bible_glyph_chapter_1ki13() {
           "$footprints",
           "to",
           "the",
-          "tomb",
+          "$tomb",
           "of",
           "your",
           "$father.",
