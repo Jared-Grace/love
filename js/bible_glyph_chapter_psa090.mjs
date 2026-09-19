@@ -96,7 +96,7 @@ export function bible_glyph_chapter_psa090() {
           "watch",
           "of",
           "the",
-          "night.",
+          "$night.",
         ],
       },
       {
