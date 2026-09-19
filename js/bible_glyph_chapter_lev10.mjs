@@ -477,7 +477,7 @@ export function bible_glyph_chapter_lev10() {
       {
         verse_number: 16,
         words: [
-          "Later",
+          "$pointing_down",
           "$proper_name$Moses",
           "searched",
           "carefully",
