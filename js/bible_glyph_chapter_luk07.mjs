@@ -882,7 +882,7 @@ export function bible_glyph_chapter_luk07() {
         "$fire",
         "purpose",
         "for",
-        "themselves,",
+        "$pointing_back+pointing_back,",
         "$no_entry",
         "having",
         "been",
