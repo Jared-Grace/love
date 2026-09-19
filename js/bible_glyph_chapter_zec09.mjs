@@ -583,7 +583,7 @@ export function bible_glyph_chapter_zec09() {
           "flourish,",
           "and",
           "new",
-          "wine",
+          "$wine",
           "the",
           "young",
           "women.",
