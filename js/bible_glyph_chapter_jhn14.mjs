@@ -595,7 +595,7 @@ export function bible_glyph_chapter_jhn14() {
           "$pointing_back",
           "$plus",
           "reveal",
-          "Myself",
+          "$me+pointing_back",
           "to",
           "$pointing_back.",
         ],
