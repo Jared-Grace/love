@@ -1062,7 +1062,7 @@ export function bible_glyph_chapter_mat05() {
           "$pointing_back",
           "have",
           "your",
-          "cloak",
+          "$garment",
           "$plus.",
         ],
       },
