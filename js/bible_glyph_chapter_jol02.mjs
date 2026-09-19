@@ -761,7 +761,7 @@ export function bible_glyph_chapter_jol02() {
           "overflow",
           "with",
           "new",
-          "wine",
+          "$wine",
           "and",
           "oil.",
         ],
