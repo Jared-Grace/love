@@ -31,7 +31,7 @@ export function bible_glyph_chapter_deu10() {
           "two",
           "tablets",
           "of",
-          "stone",
+          "$stone",
           "like",
           "the",
           "originals,",
