@@ -583,7 +583,7 @@ export function bible_glyph_chapter_jol01() {
           "beasts",
           "of",
           "the",
-          "field",
+          "$field",
           "pant",
           "for",
           "You,",
