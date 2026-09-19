@@ -542,7 +542,7 @@ export function bible_glyph_chapter_1ki03() {
           "ark",
           "of",
           "the",
-          "covenant",
+          "$covenant",
           "of",
           "the",
           "$crown,",
