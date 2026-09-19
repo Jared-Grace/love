@@ -356,7 +356,7 @@ export function bible_glyph_chapter_1ki13() {
           "$water",
           "in",
           "this",
-          "place.",
+          "$place.",
         ],
       },
       {
