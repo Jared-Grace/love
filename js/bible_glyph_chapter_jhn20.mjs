@@ -25,7 +25,7 @@ export function bible_glyph_chapter_jhn20() {
           "day",
           "of",
           "the",
-          "week,",
+          "$sabbath,",
           "while",
           "it",
           "was",
