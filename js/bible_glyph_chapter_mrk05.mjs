@@ -323,7 +323,7 @@ export function bible_glyph_chapter_mrk05() {
         "two",
         "thousand",
         "rushed",
-        "down",
+        "$pointing_down",
         "the",
         "steep",
         "bank",
