@@ -563,7 +563,7 @@ export function bible_glyph_chapter_gen21() {
           "dwelling",
           "in",
           "the",
-          "Wilderness",
+          "$wilderness",
           "of",
           "$proper_name$Paran,",
           "his",
