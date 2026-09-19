@@ -58,7 +58,7 @@ export function bible_glyph_chapter_psa008() {
           "to",
           "silence",
           "the",
-          "enemy",
+          "$enemy",
           "and",
           "avenger.",
         ],
