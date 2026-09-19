@@ -666,7 +666,7 @@ export function bible_glyph_chapter_gen03() {
           "would",
           "be",
           "the",
-          "mother",
+          "$mother",
           "of",
           "all",
           "the",
