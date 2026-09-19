@@ -98,7 +98,7 @@ export function bible_glyph_chapter_jol03() {
           "a",
           "$child",
           "for",
-          "wine",
+          "$wine",
           "to",
           "drink.",
         ],
