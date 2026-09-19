@@ -39,7 +39,7 @@ export function bible_glyph_chapter_pro02() {
           "your",
           "ear",
           "to",
-          "wisdom",
+          "$wisdom",
           "and",
           "direct",
           "your",
