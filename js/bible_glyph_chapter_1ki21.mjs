@@ -21,7 +21,7 @@ export function bible_glyph_chapter_1ki21() {
           "time",
           "after",
           "these",
-          "events,",
+          "$speech,",
           "$proper_name$Naboth",
           "the",
           "$proper_name$Jezreelite",
