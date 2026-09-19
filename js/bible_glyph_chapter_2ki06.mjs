@@ -433,7 +433,7 @@ export function bible_glyph_chapter_2ki06() {
           "$footprints",
           "there",
           "by",
-          "night",
+          "$night",
           "and",
           "surrounded",
           "the",
