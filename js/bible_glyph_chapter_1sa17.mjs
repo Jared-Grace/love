@@ -1544,7 +1544,7 @@ export function bible_glyph_chapter_1sa17() {
           "the",
           "forehead.",
           "The",
-          "stone",
+          "$stone",
           "sank",
           "into",
           "his",
