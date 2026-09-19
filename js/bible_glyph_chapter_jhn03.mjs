@@ -353,7 +353,7 @@ export function bible_glyph_chapter_jhn03() {
           "snake",
           "$tray_in",
           "the",
-          "wilderness,",
+          "$wilderness,",
           "so",
           "the",
           "$son",
