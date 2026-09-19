@@ -304,7 +304,7 @@ export function bible_glyph_chapter_ezk34() {
           "$no_entry",
           "longer",
           "feed",
-          "themselves.",
+          "$pointing_down.",
           "For",
           "I",
           "will",
