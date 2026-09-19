@@ -723,7 +723,7 @@ export function bible_glyph_chapter_luk02() {
         "brought",
         "in",
         "the",
-        "child",
+        "$baby",
         "$cross",
         "to",
         "$hammer",
