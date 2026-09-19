@@ -223,7 +223,7 @@ export function bible_glyph_chapter_exo15() {
         verse_number: 9,
         words: [
           "The",
-          "enemy",
+          "$enemy",
           "$speech,",
           "I",
           "will",
