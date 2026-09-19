@@ -228,7 +228,7 @@ export function bible_glyph_chapter_gen17() {
           "must",
           "keep",
           "My",
-          "covenant,",
+          "$covenant,",
           "you",
           "and",
           "your",
