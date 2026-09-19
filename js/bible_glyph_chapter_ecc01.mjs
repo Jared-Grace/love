@@ -288,7 +288,7 @@ export function bible_glyph_chapter_ecc01() {
           "and",
           "explore",
           "by",
-          "wisdom",
+          "$wisdom",
           "all",
           "that",
           "is",
