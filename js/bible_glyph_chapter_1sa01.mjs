@@ -510,7 +510,7 @@ export function bible_glyph_chapter_1sa01() {
           "$speech,",
           "$walking",
           "in",
-          "peace,",
+          "$peace,",
           "and",
           "may",
           "the",
