@@ -768,7 +768,7 @@ export function bible_glyph_chapter_luk02() {
         "Your",
         "$kneeling",
         "$tray_in",
-        "peace,",
+        "$peace,",
         "as",
         "You",
         "have",
