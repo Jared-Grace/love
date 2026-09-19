@@ -114,7 +114,7 @@ export function bible_glyph_chapter_gen29() {
           "well",
           "to",
           "its",
-          "place.",
+          "$place.",
         ],
       },
       {
