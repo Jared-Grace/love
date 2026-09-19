@@ -291,7 +291,7 @@ export function bible_glyph_chapter_gen09() {
           "I",
           "establish",
           "My",
-          "covenant",
+          "$covenant",
           "with",
           "you:",
           "$no_entry",
