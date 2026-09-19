@@ -334,7 +334,7 @@ export function bible_glyph_chapter_exo12() {
         words: [
           "On",
           "that",
-          "night",
+          "$night",
           "I",
           "will",
           "pass",
