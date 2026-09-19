@@ -248,7 +248,7 @@ export function bible_glyph_chapter_psa139() {
           "You,",
           "but",
           "the",
-          "night",
+          "$night",
           "shines",
           "like",
           "the",
