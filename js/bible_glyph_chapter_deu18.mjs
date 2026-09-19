@@ -193,7 +193,7 @@ export function bible_glyph_chapter_deu18() {
           "earnestness",
           "to",
           "the",
-          "place",
+          "$place",
           "the",
           "$i_am",
           "will",
