@@ -1208,7 +1208,7 @@ export function bible_glyph_chapter_jer31() {
           "for",
           "$light",
           "by",
-          "night,",
+          "$night,",
           "who",
           "stirs",
           "up",
