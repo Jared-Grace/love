@@ -60,7 +60,7 @@ export function bible_glyph_chapter_ezk34() {
           "who",
           "only",
           "feed",
-          "themselves!",
+          "$pointing_down!",
           "Should",
           "$no_entry",
           "the",
