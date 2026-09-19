@@ -113,7 +113,7 @@ export function bible_glyph_chapter_1jn03() {
           "in",
           "$pointing_back",
           "purifies",
-          "himself,",
+          "$pointing_back+pointing_back,",
           "just",
           "as",
           "Christ",
