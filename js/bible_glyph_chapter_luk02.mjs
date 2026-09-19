@@ -75,7 +75,7 @@ export function bible_glyph_chapter_luk02() {
         "$plus",
         "went",
         "up",
-        "from",
+        "$away",
         "$proper_name$Galilee,",
         "$tray_out",
         "the",
