@@ -501,7 +501,7 @@ export function bible_glyph_chapter_rev01() {
           "like",
           "the",
           "sun",
-          "shining",
+          "$light",
           "$tray_in",
           "$pointing_back",
           "$lightning.",
