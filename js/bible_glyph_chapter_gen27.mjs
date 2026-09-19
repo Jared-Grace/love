@@ -760,7 +760,7 @@ export function bible_glyph_chapter_gen27() {
           "smell",
           "of",
           "a",
-          "field",
+          "$field",
           "that",
           "the",
           "$i_am",
