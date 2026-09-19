@@ -389,7 +389,7 @@ export function bible_glyph_chapter_zec08() {
           "will",
           "$hands_giving",
           "its",
-          "fruit,",
+          "$fruit,",
           "the",
           "$earth",
           "will",
