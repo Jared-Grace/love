@@ -483,7 +483,7 @@ export function bible_glyph_chapter_hab02() {
           "your",
           "uncircumcision.",
           "The",
-          "cup",
+          "$cup",
           "in",
           "the",
           "$i_am",
