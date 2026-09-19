@@ -561,7 +561,7 @@ export function bible_glyph_chapter_luk02() {
         "of",
         "$pointing_back",
         "purification",
-        "according",
+        "$pointing_down",
         "to",
         "the",
         "$scroll",
