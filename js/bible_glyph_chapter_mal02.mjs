@@ -91,7 +91,7 @@ export function bible_glyph_chapter_mal02() {
           "will",
           "rebuke",
           "your",
-          "descendants,",
+          "$seed,",
           "and",
           "I",
           "will",
