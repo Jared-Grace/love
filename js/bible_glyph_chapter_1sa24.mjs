@@ -715,7 +715,7 @@ export function bible_glyph_chapter_1sa24() {
           "cut",
           "off",
           "my",
-          "descendants",
+          "$seed",
           "or",
           "wipe",
           "out",
