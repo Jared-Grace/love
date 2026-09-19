@@ -226,7 +226,7 @@ export function bible_glyph_chapter_job28() {
           "But",
           "where",
           "can",
-          "wisdom",
+          "$wisdom",
           "be",
           "found,",
           "and",
