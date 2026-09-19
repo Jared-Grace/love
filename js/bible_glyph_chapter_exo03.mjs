@@ -154,7 +154,7 @@ export function bible_glyph_chapter_exo03() {
           "sandals,",
           "for",
           "the",
-          "place",
+          "$place",
           "where",
           "you",
           "are",
