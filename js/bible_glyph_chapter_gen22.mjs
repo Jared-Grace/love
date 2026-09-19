@@ -517,7 +517,7 @@ export function bible_glyph_chapter_gen22() {
           "will",
           "multiply",
           "your",
-          "descendants",
+          "$seed",
           "like",
           "the",
           "stars",
