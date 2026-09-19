@@ -38,7 +38,7 @@ export function bible_glyph_chapter_exo03() {
           "side",
           "of",
           "the",
-          "wilderness",
+          "$wilderness",
           "and",
           "$footprints",
           "to",
