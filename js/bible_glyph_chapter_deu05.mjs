@@ -58,7 +58,7 @@ export function bible_glyph_chapter_deu05() {
           "$fire",
           "made",
           "a",
-          "covenant",
+          "$covenant",
           "with",
           "us",
           "at",
