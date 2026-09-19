@@ -571,7 +571,7 @@ export function bible_glyph_chapter_2ch20() {
           "valley",
           "facing",
           "the",
-          "Wilderness",
+          "$wilderness",
           "of",
           "$proper_name$Jeruel.",
         ],
