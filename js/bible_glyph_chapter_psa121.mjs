@@ -117,7 +117,7 @@ export function bible_glyph_chapter_psa121() {
           "the",
           "moon",
           "by",
-          "night.",
+          "$night.",
         ],
       },
       {
