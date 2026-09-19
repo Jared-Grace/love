@@ -1002,7 +1002,7 @@ export function bible_glyph_chapter_mrk12() {
         "I",
         "put",
         "Your",
-        "enemies",
+        "$enemy",
         "under",
         "Your",
         "$foot.",
