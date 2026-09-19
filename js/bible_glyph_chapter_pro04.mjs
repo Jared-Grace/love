@@ -94,7 +94,7 @@ export function bible_glyph_chapter_pro04() {
         verse_number: 5,
         words: [
           "Get",
-          "wisdom,",
+          "$wisdom,",
           "get",
           "understanding;",
           "$no_entry",
