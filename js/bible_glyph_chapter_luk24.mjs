@@ -770,7 +770,7 @@ export function bible_glyph_chapter_luk24() {
           "$plus",
           "$pointing_back",
           "disappeared",
-          "from",
+          "$away",
           "$pointing_back",
           "sight.",
         ],
