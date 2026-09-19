@@ -866,7 +866,7 @@ export function bible_glyph_chapter_gen01() {
           "every",
           "$tree",
           "with",
-          "fruit",
+          "$fruit",
           "yielding",
           "seed;",
           "it",
