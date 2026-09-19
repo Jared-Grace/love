@@ -360,7 +360,7 @@ export function bible_glyph_chapter_gen17() {
           "circumcised.",
           "So",
           "My",
-          "covenant",
+          "$covenant",
           "will",
           "be",
           "in",
