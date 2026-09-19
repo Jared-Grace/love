@@ -68,7 +68,7 @@ export function bible_glyph_chapter_num06() {
           "vinegar",
           "made",
           "from",
-          "wine",
+          "$wine",
           "or",
           "strong",
           "drink,",
