@@ -1043,7 +1043,7 @@ export function bible_glyph_chapter_jer31() {
           "be",
           "like",
           "the",
-          "covenant",
+          "$covenant",
           "I",
           "made",
           "with",
