@@ -80,7 +80,7 @@ export function bible_glyph_chapter_jon01() {
           "and",
           "found",
           "a",
-          "ship",
+          "$ship",
           "$footprints",
           "for",
           "$proper_name$Tarshish.",
