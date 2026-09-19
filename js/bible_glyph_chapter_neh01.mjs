@@ -337,7 +337,7 @@ export function bible_glyph_chapter_neh01() {
           "them",
           "to",
           "the",
-          "place",
+          "$place",
           "I",
           "have",
           "chosen",
