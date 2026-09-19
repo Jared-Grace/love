@@ -1680,7 +1680,7 @@ export function bible_glyph_chapter_gen24() {
           "her",
           "$brother",
           "and",
-          "mother",
+          "$mother",
           "$speech,",
           "Let",
           "the",
