@@ -175,7 +175,7 @@ export function bible_glyph_chapter_dan01() {
           "$king",
           "food",
           "and",
-          "wine.",
+          "$wine.",
           "They",
           "were",
           "to",
