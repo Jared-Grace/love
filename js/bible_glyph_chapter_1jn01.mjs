@@ -159,7 +159,7 @@ export function bible_glyph_chapter_1jn01() {
           "we",
           "have",
           "$ear",
-          "from",
+          "$away",
           "$pointing_back",
           "$plus",
           "announce",
