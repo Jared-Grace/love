@@ -156,7 +156,7 @@ export function bible_glyph_chapter_psa051() {
           "You",
           "$lightbulb",
           "me",
-          "wisdom",
+          "$wisdom",
           "in",
           "the",
           "inmost",
