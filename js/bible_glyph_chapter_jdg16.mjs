@@ -940,7 +940,7 @@ export function bible_glyph_chapter_jdg16() {
           "our",
           "$hand",
           "our",
-          "enemy,",
+          "$enemy,",
           "who",
           "destroyed",
           "our",
