@@ -1329,7 +1329,7 @@ export function bible_glyph_chapter_luk07() {
         "kissing",
         "My",
         "$foot",
-        "since",
+        "$away",
         "I",
         "arrived.",
       ],
