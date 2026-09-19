@@ -21,7 +21,7 @@ export function bible_glyph_chapter_exo17() {
           "$proper_name$Israel",
           "left",
           "the",
-          "Desert",
+          "$wilderness",
           "of",
           "$proper_name$Sin,",
           "moving",
