@@ -1572,7 +1572,7 @@ export function bible_glyph_chapter_1sa17() {
           "sling",
           "and",
           "a",
-          "stone;",
+          "$stone;",
           "without",
           "a",
           "$sword",
