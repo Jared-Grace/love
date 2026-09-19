@@ -928,7 +928,7 @@ export function bible_glyph_chapter_ezk37() {
           "be",
           "an",
           "$hourglass",
-          "covenant.",
+          "$covenant.",
           "I",
           "will",
           "$hands_giving",
