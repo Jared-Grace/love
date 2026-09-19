@@ -294,7 +294,7 @@ export function bible_glyph_chapter_1sa03() {
           "down",
           "in",
           "his",
-          "place.",
+          "$place.",
         ],
       },
       {
