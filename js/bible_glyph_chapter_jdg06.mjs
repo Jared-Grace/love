@@ -820,7 +820,7 @@ export function bible_glyph_chapter_jdg06() {
           "On",
           "that",
           "very",
-          "night",
+          "$night",
           "the",
           "$i_am",
           "$speech",
