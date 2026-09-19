@@ -304,7 +304,7 @@ export function bible_glyph_chapter_deu26() {
           "us",
           "to",
           "this",
-          "place",
+          "$place",
           "and",
           "$hands_giving",
           "us",
