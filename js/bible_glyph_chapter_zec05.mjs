@@ -253,7 +253,7 @@ export function bible_glyph_chapter_zec05() {
           "pushing",
           "the",
           "lead",
-          "cover",
+          "$stone",
           "down",
           "over",
           "its",
