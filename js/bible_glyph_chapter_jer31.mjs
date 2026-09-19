@@ -562,7 +562,7 @@ export function bible_glyph_chapter_jer31() {
           "$earth",
           "of",
           "the",
-          "enemy.",
+          "$enemy.",
         ],
       },
       {
