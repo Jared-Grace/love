@@ -516,7 +516,7 @@ export function bible_glyph_chapter_jer32() {
           "$proper_name$Israel,",
           "$speech,",
           "$house,",
-          "fields,",
+          "$field,",
           "and",
           "vineyards",
           "will",
