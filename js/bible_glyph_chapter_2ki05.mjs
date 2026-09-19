@@ -1045,7 +1045,7 @@ export function bible_glyph_chapter_2ki05() {
           "you",
           "and",
           "your",
-          "descendants",
+          "$seed",
           "$hourglass.",
           "And",
           "as",
