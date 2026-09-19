@@ -741,7 +741,7 @@ export function bible_glyph_chapter_ezk01() {
           "and",
           "on",
           "the",
-          "throne,",
+          "$throne,",
           "high",
           "above,",
           "was",
