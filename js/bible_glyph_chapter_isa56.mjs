@@ -234,7 +234,7 @@ export function bible_glyph_chapter_isa56() {
           "fast",
           "to",
           "My",
-          "covenant,",
+          "$covenant,",
         ],
       },
       {
