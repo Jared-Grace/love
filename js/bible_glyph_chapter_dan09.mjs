@@ -992,7 +992,7 @@ export function bible_glyph_chapter_dan09() {
           "will",
           "confirm",
           "a",
-          "covenant",
+          "$covenant",
           "with",
           "many",
           "for",
