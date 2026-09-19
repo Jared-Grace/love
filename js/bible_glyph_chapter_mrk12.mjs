@@ -74,7 +74,7 @@ export function bible_glyph_chapter_mrk12() {
         "share",
         "of",
         "the",
-        "fruit",
+        "$fruit",
         "of",
         "the",
         "vineyard.",
