@@ -666,7 +666,7 @@ export function bible_glyph_chapter_gen28() {
         words: [
           "and",
           "this",
-          "stone",
+          "$stone",
           "I",
           "have",
           "set",
