@@ -432,7 +432,7 @@ export function bible_glyph_chapter_jdg11() {
           "therefore,",
           "$turn_back",
           "it",
-          "peaceably.",
+          "$peace.",
         ],
       },
       {
