@@ -595,7 +595,7 @@ export function bible_glyph_chapter_hab02() {
           "or",
           "to",
           "silent",
-          "stone,",
+          "$stone,",
           "Arise!",
           "Can",
           "it",
