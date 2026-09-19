@@ -705,7 +705,7 @@ export function bible_glyph_chapter_num14() {
           "and",
           "in",
           "the",
-          "wilderness,",
+          "$wilderness,",
           "yet",
           "have",
           "tested",
