@@ -211,7 +211,7 @@ export function bible_glyph_chapter_1sa20() {
           "hide",
           "in",
           "the",
-          "field",
+          "$field",
           "until",
           "the",
           "evening",
