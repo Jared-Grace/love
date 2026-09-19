@@ -992,7 +992,7 @@ export function bible_glyph_chapter_1ki03() {
           "$eye",
           "that",
           "the",
-          "wisdom",
+          "$wisdom",
           "of",
           "$fire",
           "was",
