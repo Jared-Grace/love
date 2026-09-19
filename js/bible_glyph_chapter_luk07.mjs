@@ -136,7 +136,7 @@ export function bible_glyph_chapter_luk07() {
         "far",
         "from",
         "the",
-        "house,",
+        "$house,",
         "the",
         "centurion",
         "sent",
