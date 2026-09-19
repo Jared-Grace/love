@@ -388,7 +388,7 @@ export function bible_glyph_chapter_num21() {
           "$proper_name$Arnon,",
           "in",
           "the",
-          "wilderness",
+          "$wilderness",
           "that",
           "extends",
           "into",
