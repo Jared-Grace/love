@@ -190,7 +190,7 @@ export function bible_glyph_chapter_2ki11() {
           "$footprints",
           "on",
           "the",
-          "Sabbath",
+          "$sabbath",
           "shall",
           "guard",
           "the",
