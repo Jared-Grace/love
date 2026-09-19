@@ -42,7 +42,7 @@ export function bible_glyph_chapter_jhn03() {
           "to",
           "$pointing_back",
           "at",
-          "night",
+          "$night",
           "$plus",
           "$speech,",
           "“Rabbi,",
