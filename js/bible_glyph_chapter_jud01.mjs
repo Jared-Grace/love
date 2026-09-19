@@ -612,7 +612,7 @@ export function bible_glyph_chapter_jud01() {
         verse_number: 21,
         words: [
           "keep",
-          "yourselves",
+          "$pointing_back+pointing_back",
           "$tray_in",
           "the",
           "$heart_red",
