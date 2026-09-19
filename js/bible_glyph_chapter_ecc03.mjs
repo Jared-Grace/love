@@ -198,7 +198,7 @@ export function bible_glyph_chapter_ecc03() {
           "a",
           "time",
           "for",
-          "peace.",
+          "$peace.",
         ],
       },
       {
