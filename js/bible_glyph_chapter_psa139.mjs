@@ -229,7 +229,7 @@ export function bible_glyph_chapter_psa139() {
           "the",
           "$light",
           "become",
-          "night",
+          "$night",
           "around",
           "me",
           "-",
