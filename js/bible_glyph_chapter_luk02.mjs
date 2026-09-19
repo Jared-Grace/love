@@ -926,7 +926,7 @@ export function bible_glyph_chapter_luk02() {
         "$man_beard",
         "for",
         "seven",
-        "years",
+        "$year",
         "after",
         "$pointing_back",
         "marriage.",
