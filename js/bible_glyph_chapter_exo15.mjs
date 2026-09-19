@@ -597,7 +597,7 @@ export function bible_glyph_chapter_exo15() {
           "out",
           "into",
           "the",
-          "Desert",
+          "$wilderness",
           "of",
           "$proper_name$Shur.",
           "For",
