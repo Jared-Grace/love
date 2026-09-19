@@ -294,7 +294,7 @@ export function bible_glyph_chapter_lam02() {
           "$hand",
           "of",
           "the",
-          "enemy.",
+          "$enemy.",
           "They",
           "have",
           "$hands_giving",
