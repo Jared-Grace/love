@@ -577,7 +577,7 @@ export function bible_glyph_chapter_luk24() {
           "of",
           "our",
           "companions",
-          "went",
+          "$footprints+away",
           "to",
           "the",
           "$tomb",
