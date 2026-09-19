@@ -607,7 +607,7 @@ export function bible_glyph_chapter_exo15() {
           "$walking",
           "in",
           "the",
-          "desert",
+          "$wilderness",
           "$no_entry",
           "finding",
           "$water.",
