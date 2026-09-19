@@ -169,7 +169,7 @@ export function bible_glyph_chapter_mic05() {
           "will",
           "be",
           "our",
-          "peace",
+          "$peace",
           "when",
           "$proper_name$Assyria",
           "$footprints",
