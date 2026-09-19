@@ -193,7 +193,7 @@ export function bible_glyph_chapter_lam02() {
           "is",
           "like",
           "an",
-          "enemy;",
+          "$enemy;",
           "He",
           "has",
           "swallowed",
