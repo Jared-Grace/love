@@ -576,7 +576,7 @@ export function bible_glyph_chapter_jhn20() {
           "$speech",
           "$pointing_back",
           "again,",
-          "Peace",
+          "$peace",
           "be",
           "with",
           "you.",
