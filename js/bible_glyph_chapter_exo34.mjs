@@ -473,7 +473,7 @@ export function bible_glyph_chapter_exo34() {
           "not",
           "make",
           "a",
-          "covenant",
+          "$covenant",
           "with",
           "the",
           "inhabitants",
