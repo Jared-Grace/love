@@ -267,7 +267,7 @@ export function bible_glyph_chapter_2ki01() {
           "to",
           "them,",
           "What",
-          "sort",
+          "$scales",
           "of",
           "$man_beard",
           "came",
