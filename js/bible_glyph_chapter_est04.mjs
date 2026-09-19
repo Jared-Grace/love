@@ -538,7 +538,7 @@ export function bible_glyph_chapter_est04() {
           "for",
           "three",
           "$sun,",
-          "night",
+          "$night",
           "or",
           "$sun.",
           "I",
