@@ -79,7 +79,7 @@ export function bible_glyph_chapter_psa042() {
           "both",
           "day",
           "and",
-          "night,",
+          "$night,",
           "while",
           "men",
           "$speech",
