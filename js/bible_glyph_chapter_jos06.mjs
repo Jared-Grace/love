@@ -187,7 +187,7 @@ export function bible_glyph_chapter_jos06() {
           "ark",
           "of",
           "the",
-          "covenant,",
+          "$covenant,",
           "and",
           "have",
           "seven",
