@@ -250,7 +250,7 @@ export function bible_glyph_chapter_mic02() {
           "up",
           "like",
           "an",
-          "enemy:",
+          "$enemy:",
           "You",
           "strip",
           "off",
