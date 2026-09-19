@@ -1025,7 +1025,7 @@ export function bible_glyph_chapter_exo16() {
           "you",
           "in",
           "the",
-          "wilderness",
+          "$wilderness",
           "when",
           "I",
           "brought",
