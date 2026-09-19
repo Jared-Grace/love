@@ -282,7 +282,7 @@ export function bible_glyph_chapter_luk24() {
           "$plus",
           "he",
           "went",
-          "away,",
+          "$footprints+away,",
           "wondering",
           "to",
           "himself",
