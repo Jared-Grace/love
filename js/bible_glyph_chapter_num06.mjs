@@ -57,7 +57,7 @@ export function bible_glyph_chapter_num06() {
           "must",
           "abstain",
           "from",
-          "wine",
+          "$wine",
           "and",
           "strong",
           "drink.",
