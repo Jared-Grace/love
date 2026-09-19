@@ -153,7 +153,7 @@ export function bible_glyph_chapter_mrk08() {
           "seven",
           "$bread,",
           "gave",
-          "thanks,",
+          "$gift+thumbs_up,",
           "broke",
           "them",
           "$plus",
