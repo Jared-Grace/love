@@ -79,7 +79,7 @@ export function bible_glyph_chapter_deu05() {
           "$i_am",
           "made",
           "this",
-          "covenant,",
+          "$covenant,",
           "but",
           "with",
           "us,",
