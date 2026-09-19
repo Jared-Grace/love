@@ -2124,7 +2124,7 @@ export function bible_glyph_chapter_deu28() {
           "sole",
           "of",
           "your",
-          "foot.",
+          "$foot.",
           "There",
           "the",
           "$i_am",
