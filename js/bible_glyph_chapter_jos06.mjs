@@ -789,7 +789,7 @@ export function bible_glyph_chapter_jos06() {
           "her",
           "$father",
           "and",
-          "mother",
+          "$mother",
           "and",
           "$brother",
           "and",
