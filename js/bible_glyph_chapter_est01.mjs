@@ -301,7 +301,7 @@ export function bible_glyph_chapter_est01() {
           "was",
           "merry",
           "with",
-          "wine,",
+          "$wine,",
           "he",
           "$speech",
           "$proper_name$Mehuman,",
