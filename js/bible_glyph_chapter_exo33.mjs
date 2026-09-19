@@ -707,7 +707,7 @@ export function bible_glyph_chapter_exo33() {
           "There",
           "is",
           "a",
-          "place",
+          "$place",
           "near",
           "Me",
           "where",
