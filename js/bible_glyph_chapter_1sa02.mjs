@@ -223,7 +223,7 @@ export function bible_glyph_chapter_1sa02() {
           "on",
           "them",
           "a",
-          "throne",
+          "$throne",
           "of",
           "$star.",
           "For",
