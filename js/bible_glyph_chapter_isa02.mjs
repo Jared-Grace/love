@@ -446,7 +446,7 @@ export function bible_glyph_chapter_isa02() {
         words: [
           "against",
           "every",
-          "ship",
+          "$ship",
           "of",
           "$proper_name$Tarshish",
           "and",
