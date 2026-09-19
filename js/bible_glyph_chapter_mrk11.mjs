@@ -205,7 +205,7 @@ export function bible_glyph_chapter_mrk11() {
         "many",
         "spread",
         "$pointing_back",
-        "cloaks",
+        "$garment",
         "on",
         "the",
         "$road,",
