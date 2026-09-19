@@ -475,7 +475,7 @@ export function bible_glyph_chapter_luk15() {
         "my",
         "$father",
         "$plus",
-        "say",
+        "$speech",
         "to",
         "$pointing_back,",
         "$father,",
