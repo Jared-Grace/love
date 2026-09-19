@@ -537,7 +537,7 @@ export function bible_glyph_chapter_exo05() {
           "$walking",
           "and",
           "$kneeling.",
-          "No",
+          "$no_entry",
           "straw",
           "will",
           "be",
