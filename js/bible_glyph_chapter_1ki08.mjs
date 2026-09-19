@@ -677,7 +677,7 @@ export function bible_glyph_chapter_1ki08() {
           "which",
           "contains",
           "the",
-          "covenant",
+          "$covenant",
           "of",
           "the",
           "$i_am",
