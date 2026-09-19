@@ -616,7 +616,7 @@ export function bible_glyph_chapter_2ki04() {
           "him",
           "to",
           "his",
-          "mother,",
+          "$mother,",
           "the",
           "boy",
           "sat",
