@@ -549,7 +549,7 @@ export function bible_glyph_chapter_mrk12() {
         "$skull,",
         "leaving",
         "$no_entry",
-        "children.",
+        "$seed.",
       ],
     },
     {
