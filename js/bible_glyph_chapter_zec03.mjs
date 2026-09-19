@@ -273,7 +273,7 @@ export function bible_glyph_chapter_zec03() {
         words: [
           "See",
           "the",
-          "stone",
+          "$stone",
           "I",
           "have",
           "$hands_giving",
