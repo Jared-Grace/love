@@ -100,7 +100,7 @@ export function bible_glyph_chapter_job31() {
           "falsehood",
           "or",
           "my",
-          "foot",
+          "$foot",
           "has",
           "rushed",
           "to",
