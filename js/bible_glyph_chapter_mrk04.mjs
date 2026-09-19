@@ -386,7 +386,7 @@ export function bible_glyph_chapter_mrk04() {
           "$footprints",
           "$plus",
           "takes",
-          "away",
+          "$lifting",
           "the",
           "$speech",
           "that",
