@@ -485,7 +485,7 @@ export function bible_glyph_chapter_neh09() {
           "them",
           "Your",
           "$sparkle",
-          "Sabbath,",
+          "$sabbath,",
           "and",
           "gave",
           "them",
