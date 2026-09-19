@@ -805,7 +805,7 @@ export function bible_glyph_chapter_lev16() {
           "away",
           "into",
           "the",
-          "wilderness",
+          "$wilderness",
           "by",
           "the",
           "$hand",
