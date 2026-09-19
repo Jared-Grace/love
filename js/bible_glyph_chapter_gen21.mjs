@@ -728,7 +728,7 @@ export function bible_glyph_chapter_gen21() {
           "men",
           "made",
           "a",
-          "covenant.",
+          "$covenant.",
         ],
       },
       {
