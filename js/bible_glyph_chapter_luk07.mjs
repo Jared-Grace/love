@@ -1288,7 +1288,7 @@ export function bible_glyph_chapter_luk07() {
         "I",
         "entered",
         "your",
-        "house,",
+        "$house,",
         "you",
         "$no_entry",
         "$hands_giving",
