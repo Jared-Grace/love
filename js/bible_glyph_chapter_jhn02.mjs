@@ -61,7 +61,7 @@ export function bible_glyph_chapter_jhn02() {
           "$plus",
           "when",
           "the",
-          "wine",
+          "$wine",
           "ran",
           "out,",
           "the",
