@@ -1005,7 +1005,7 @@ export function bible_glyph_chapter_mrk12() {
         "enemies",
         "under",
         "Your",
-        "feet.",
+        "$foot.",
       ],
     },
     {
