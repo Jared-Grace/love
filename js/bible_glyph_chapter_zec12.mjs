@@ -102,7 +102,7 @@ export function bible_glyph_chapter_zec12() {
           "$proper_name$Jerusalem",
           "a",
           "heavy",
-          "stone",
+          "$stone",
           "for",
           "all",
           "the",
