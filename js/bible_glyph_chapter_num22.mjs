@@ -589,7 +589,7 @@ export function bible_glyph_chapter_num22() {
           "please",
           "$person+house",
           "here",
-          "overnight",
+          "$night",
           "as",
           "the",
           "others",
