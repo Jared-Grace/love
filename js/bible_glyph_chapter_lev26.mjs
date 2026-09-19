@@ -442,7 +442,7 @@ export function bible_glyph_chapter_lev26() {
           "so",
           "break",
           "My",
-          "covenant,",
+          "$covenant,",
         ],
       },
       {
