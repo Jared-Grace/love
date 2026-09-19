@@ -791,7 +791,7 @@ export function bible_glyph_chapter_ezk34() {
           "will",
           "make",
           "a",
-          "covenant",
+          "$covenant",
           "of",
           "$peace",
           "with",
