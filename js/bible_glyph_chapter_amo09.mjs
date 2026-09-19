@@ -490,7 +490,7 @@ export function bible_glyph_chapter_amo09() {
           "the",
           "sower",
           "of",
-          "seed.",
+          "$seed.",
           "The",
           "$mountain",
           "will",
