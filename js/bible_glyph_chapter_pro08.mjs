@@ -195,7 +195,7 @@ export function bible_glyph_chapter_pro08() {
         verse_number: 11,
         words: [
           "For",
-          "wisdom",
+          "$wisdom",
           "is",
           "$thumbs_up",
           "than",
