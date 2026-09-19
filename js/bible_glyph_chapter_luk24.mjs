@@ -452,7 +452,7 @@ export function bible_glyph_chapter_luk24() {
           "$man_beard,",
           "a",
           "$megaphone",
-          "powerful",
+          "$lightning",
           "$tray_in",
           "$tools",
           "$plus",
