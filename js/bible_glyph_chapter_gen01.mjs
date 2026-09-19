@@ -852,7 +852,7 @@ export function bible_glyph_chapter_gen01() {
           "every",
           "plant",
           "yielding",
-          "seed",
+          "$seed",
           "which",
           "is",
           "upon",
