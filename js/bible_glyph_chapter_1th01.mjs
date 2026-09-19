@@ -261,7 +261,7 @@ export function bible_glyph_chapter_1th01() {
           "$turn_back",
           "to",
           "$fire",
-          "from",
+          "$away",
           "idols",
           "to",
           "serve",
