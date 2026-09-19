@@ -290,7 +290,7 @@ export function bible_glyph_chapter_jdg07() {
           "are",
           "to",
           "$walking",
-          "home.",
+          "$place.",
         ],
       },
       {
