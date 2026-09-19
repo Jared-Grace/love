@@ -90,7 +90,7 @@ export function bible_glyph_chapter_mic01() {
           "from",
           "His",
           "dwelling",
-          "place;",
+          "$place;",
           "He",
           "will",
           "come",
