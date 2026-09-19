@@ -1227,7 +1227,7 @@ export function bible_glyph_chapter_mat05() {
           "than",
           "others?",
           "Do",
-          "not",
+          "$no_entry",
           "$plus",
           "the",
           "Gentiles",
