@@ -1332,7 +1332,7 @@ export function bible_glyph_chapter_luk02() {
         "$cross",
         "grew",
         "$tray_in",
-        "wisdom",
+        "$wisdom",
         "$plus",
         "stature",
         "$plus",
