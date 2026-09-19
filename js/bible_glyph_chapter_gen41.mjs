@@ -280,7 +280,7 @@ export function bible_glyph_chapter_gen41() {
         verse_number: 11,
         words: [
           "One",
-          "night",
+          "$night",
           "both",
           "he",
           "and",
