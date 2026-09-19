@@ -202,7 +202,7 @@ export function bible_glyph_chapter_hos14() {
           "be",
           "like",
           "the",
-          "wine",
+          "$wine",
           "of",
           "$proper_name$Lebanon.",
         ],
