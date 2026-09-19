@@ -1360,7 +1360,7 @@ export function bible_glyph_chapter_1ki22() {
           "in",
           "$proper_name$Jerusalem.",
           "His",
-          "mother",
+          "$mother",
           "$name_tag",
           "was",
           "$proper_name$Azubah",
