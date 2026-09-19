@@ -238,7 +238,7 @@ export function bible_glyph_chapter_isa09() {
           "reign",
           "on",
           "the",
-          "throne",
+          "$throne",
           "of",
           "$proper_name$David",
           "and",
