@@ -96,7 +96,7 @@ export function bible_glyph_chapter_2sa12() {
           "drank",
           "from",
           "his",
-          "cup;",
+          "$cup;",
           "it",
           "slept",
           "in",
