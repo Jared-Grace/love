@@ -26,7 +26,7 @@ export function bible_glyph_chapter_exo16() {
           "$footprints",
           "to",
           "the",
-          "Desert",
+          "$wilderness",
           "of",
           "$proper_name$Sin,",
           "which",
