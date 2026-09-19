@@ -235,7 +235,7 @@ export function bible_glyph_chapter_exo17() {
           "He",
           "named",
           "the",
-          "place",
+          "$place",
           "$proper_name$Massah",
           "and",
           "$proper_name$Meribah,",
