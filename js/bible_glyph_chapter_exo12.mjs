@@ -1017,7 +1017,7 @@ export function bible_glyph_chapter_exo12() {
           "and",
           "$proper_name$Aaron",
           "by",
-          "night",
+          "$night",
           "and",
           "$speech,",
           "Get",
