@@ -146,7 +146,7 @@ export function bible_glyph_chapter_gen02() {
           "plant",
           "of",
           "the",
-          "field",
+          "$field",
           "sprouted;",
           "for",
           "the",
