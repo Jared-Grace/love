@@ -585,7 +585,7 @@ export function bible_glyph_chapter_mrk05() {
         "fell",
         "at",
         "$pointing_back",
-        "feet.",
+        "$foot.",
       ],
     },
     {
