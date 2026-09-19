@@ -624,7 +624,7 @@ export function bible_glyph_chapter_num20() {
           "pass",
           "through",
           "on",
-          "foot.",
+          "$foot.",
         ],
       },
       {
