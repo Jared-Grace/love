@@ -958,7 +958,7 @@ export function bible_glyph_chapter_1ki08() {
           "toward",
           "this",
           "$house",
-          "night",
+          "$night",
           "and",
           "$sun,",
           "toward",
