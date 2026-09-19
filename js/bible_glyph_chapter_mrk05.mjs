@@ -724,7 +724,7 @@ export function bible_glyph_chapter_mrk05() {
         "only",
         "touch",
         "$pointing_back",
-        "garments,",
+        "$garment,",
         "I",
         "will",
         "be",
