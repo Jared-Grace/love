@@ -871,7 +871,7 @@ export function bible_glyph_chapter_jer32() {
           "for",
           "yourself",
           "the",
-          "field",
+          "$field",
           "with",
           "silver",
           "and",
