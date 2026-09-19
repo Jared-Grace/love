@@ -113,7 +113,7 @@ export function bible_glyph_chapter_gen01() {
           "$darkness",
           "He",
           "called",
-          "Night.",
+          "$night.",
           "And",
           "there",
           "was",
