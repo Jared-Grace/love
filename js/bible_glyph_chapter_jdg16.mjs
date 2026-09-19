@@ -60,7 +60,7 @@ export function bible_glyph_chapter_jdg16() {
           "for",
           "him",
           "all",
-          "night",
+          "$night",
           "at",
           "the",
           "$city",
