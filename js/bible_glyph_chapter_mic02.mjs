@@ -335,7 +335,7 @@ export function bible_glyph_chapter_mic02() {
           "to",
           "you",
           "of",
-          "wine",
+          "$wine",
           "and",
           "strong",
           "drink,",
