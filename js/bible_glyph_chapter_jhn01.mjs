@@ -517,7 +517,7 @@ export function bible_glyph_chapter_jhn01() {
           "calling",
           "$tray_in",
           "the",
-          "wilderness,",
+          "$wilderness,",
           "‘Make",
           "straight",
           "the",
