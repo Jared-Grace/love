@@ -130,7 +130,7 @@ export function bible_glyph_chapter_sng08() {
           "up",
           "$tray_out",
           "the",
-          "wilderness,",
+          "$wilderness,",
           "leaning",
           "on",
           "her",
