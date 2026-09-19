@@ -893,7 +893,7 @@ export function bible_glyph_chapter_luk24() {
           "$plus",
           "$speech",
           "$pointing_back,",
-          "Peace",
+          "$peace",
           "be",
           "with",
           "you.",
