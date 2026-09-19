@@ -612,7 +612,7 @@ export function bible_glyph_chapter_pro31() {
           "$hands_giving",
           "her",
           "the",
-          "fruit",
+          "$fruit",
           "of",
           "her",
           "$hand,",
