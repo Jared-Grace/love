@@ -591,7 +591,7 @@ export function bible_glyph_chapter_exo04() {
           '$sprout."',
           '"$walking',
           "in",
-          'peace,"',
+          '$peace,"',
           "$proper_name$Jethro",
           "$speech.",
         ],
