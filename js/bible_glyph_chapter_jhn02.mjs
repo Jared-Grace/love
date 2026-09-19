@@ -74,7 +74,7 @@ export function bible_glyph_chapter_jhn02() {
           "“They",
           "have",
           "$no_entry",
-          "wine.”",
+          "$wine.”",
         ],
       },
       {
