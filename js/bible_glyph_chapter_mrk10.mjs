@@ -750,7 +750,7 @@ export function bible_glyph_chapter_mrk10() {
         "present",
         "age",
         "—",
-        "houses",
+        "$house",
         "$plus",
         "$brother",
         "$plus",
