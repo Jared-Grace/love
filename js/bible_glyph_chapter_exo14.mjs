@@ -298,7 +298,7 @@ export function bible_glyph_chapter_exo14() {
           "there",
           "were",
           "no",
-          "graves",
+          "$tomb",
           "in",
           "$proper_name$Egypt",
           "that",
