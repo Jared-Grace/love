@@ -669,7 +669,7 @@ export function bible_glyph_chapter_luk24() {
           "the",
           "Scriptures",
           "about",
-          "Himself.",
+          "$pointing_back+pointing_back.",
         ],
       },
       {
