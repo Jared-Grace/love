@@ -407,7 +407,7 @@ export function bible_glyph_chapter_ecc01() {
           "$heart_organ",
           "to",
           "$lightbulb",
-          "wisdom,",
+          "$wisdom,",
           "and",
           "madness",
           "and",
