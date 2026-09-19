@@ -965,7 +965,7 @@ export function bible_glyph_chapter_luk07() {
         "$bread",
         "nor",
         "drinking",
-        "wine,",
+        "$wine,",
         "$plus",
         "you",
         "are",
