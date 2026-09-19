@@ -666,7 +666,7 @@ export function bible_glyph_chapter_hag02() {
           "will",
           "overturn",
           "$castle",
-          "thrones",
+          "$throne",
           "and",
           "destroy",
           "the",
