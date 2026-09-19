@@ -64,7 +64,7 @@ export function bible_glyph_chapter_2ki06() {
           "$hammer",
           "ourselves",
           "a",
-          "place",
+          "$place",
           "to",
           "live",
           "there.",
