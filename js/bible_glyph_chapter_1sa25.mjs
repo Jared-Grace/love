@@ -1242,7 +1242,7 @@ export function bible_glyph_chapter_1sa25() {
           "your",
           "$house",
           "in",
-          "peace.",
+          "$peace.",
           "$eye,",
           "I",
           "have",
