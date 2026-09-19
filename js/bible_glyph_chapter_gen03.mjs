@@ -479,7 +479,7 @@ export function bible_glyph_chapter_gen03() {
           "and",
           "between",
           "your",
-          "seed",
+          "$seed",
           "and",
           "her",
           "seed.",
