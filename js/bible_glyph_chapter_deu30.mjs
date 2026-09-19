@@ -678,7 +678,7 @@ export function bible_glyph_chapter_deu30() {
           "you",
           "and",
           "your",
-          "descendants",
+          "$seed",
           "may",
           "$sprout,",
         ],
