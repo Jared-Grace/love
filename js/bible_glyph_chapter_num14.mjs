@@ -181,7 +181,7 @@ export function bible_glyph_chapter_num14() {
           "$earth,",
           "tore",
           "their",
-          "clothes",
+          "$garment",
         ],
       },
       {
