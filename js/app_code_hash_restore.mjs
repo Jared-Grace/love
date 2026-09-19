@@ -1,3 +1,4 @@
+import { app_code_screen_name_full } from "./app_code_screen_name_full.mjs";
 import { app_code_hash_review_restore } from "./app_code_hash_review_restore.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
@@ -21,7 +22,8 @@ export function app_code_hash_restore(context) {
   let screen_name = property_get_or_null(hash, property2);
   let screen_said = null_not_is(screen_name);
   if (screen_said) {
-    let screen_name_full = app_code_screen_name_full(screen_name); app_shared_screen_stored_set_context(context, screen_name_full);
+    let screen_name_full = app_code_screen_name_full(screen_name);
+    app_shared_screen_stored_set_context(context, screen_name_full);
   }
   let property3 = app_code_quiz_hash_key();
   let quiz_index = property_get_or_null(hash, property3);

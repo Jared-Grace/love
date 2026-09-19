@@ -1,3 +1,4 @@
+import { app_code_screen_name_short } from "./app_code_screen_name_short.mjs";
 import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_screen_hash_key } from "./app_code_screen_hash_key.mjs";
@@ -24,7 +25,8 @@ export async function app_code_reload_persists_test_on_page(
   async function check(id) {
     "the three words this address stands on are frozen, so each is read off the function holding it rather than spelled into the joined-up text - a word fused into a separator is invisible to everything that watches for a wording change";
     let v = app_code_screen_hash_key();
-    let f_name = app_code_screen_name_short(fn_name("app_code_quiz"));
+    let screen_name = fn_name("app_code_quiz");
+    let f_name = app_code_screen_name_short(screen_name);
     let v2 = app_code_quiz_hash_key();
     let combined = text_combine_multiple([",", v, "=", f_name, ",", v2, "=0"]);
     let v3 = app_code_lesson_hash_key();
@@ -39,13 +41,15 @@ export async function app_code_reload_persists_test_on_page(
       combined,
     ]);
     await page.goto(url);
-    await page.waitForTimeout(page_capture_settle_ms());
+    let v4 = page_capture_settle_ms();
+    await page.waitForTimeout(v4);
     let first = await app_code_screen_capture(page);
     let text = property_get(first, "text");
     let kind0 = app_code_screen_text_normalize(text);
     let script = app_code_screen_next_click_script();
     await page.evaluate(script);
-    await page.waitForTimeout(page_capture_settle_ms());
+    let v5 = page_capture_settle_ms();
+    await page.waitForTimeout(v5);
     let second = await app_code_screen_capture(page);
     let text2 = property_get(second, "text");
     let kind = app_code_screen_text_normalize(text2);
@@ -53,7 +57,8 @@ export async function app_code_reload_persists_test_on_page(
     ("reload the way F5 does - re-load the CURRENT address including the hash that Next updated. page.reload() can re-load the originally committed url (quiz=0) instead of the SPA-updated hash, which would falsely look like a reset");
     let current = page.url();
     await page.goto(current);
-    await page.waitForTimeout(page_capture_settle_ms());
+    let v6 = page_capture_settle_ms();
+    await page.waitForTimeout(v6);
     let reloaded = await app_code_screen_capture(page);
     let text3 = property_get(reloaded, "text");
     let after = app_code_screen_text_normalize(text3);

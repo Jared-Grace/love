@@ -1,3 +1,4 @@
+import { app_code_screen_name_short } from "./app_code_screen_name_short.mjs";
 import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
 import { app_code_screen_capture_record } from "./app_code_screen_capture_record.mjs";
 import { app_code_screens_crawl_lesson_quiz_url } from "./app_code_screens_crawl_lesson_quiz_url.mjs";
@@ -30,7 +31,8 @@ export async function app_code_screens_crawl_lesson(
   );
   await app_code_screen_capture_record(page, quiz_url, id, "quiz", 0, records);
   let v6 = app_code_screen_hash_key();
-  let f_name = app_code_screen_name_short(fn_name("app_code_quiz"));
+  let screen_name = fn_name("app_code_quiz");
+  let f_name = app_code_screen_name_short(screen_name);
   let combined = text_combine_multiple([",", v6, "=", f_name]);
   let v7 = app_code_lesson_hash_key();
   let quiz_marker = text_combine_multiple([v7, "=", id, combined]);
@@ -41,7 +43,8 @@ export async function app_code_screens_crawl_lesson(
     if (not(clicked)) {
       break;
     }
-    await page.waitForTimeout(page_capture_settle_ms());
+    let v2 = page_capture_settle_ms();
+    await page.waitForTimeout(v2);
     ("detect leaving the lesson by the url, not the title: the title collapses to just the category (Operators) which is shared, so it can never mark a boundary. Next writes the new lesson and screen into the hash, so if the hash no longer names this lesson's quiz we have walked out of it - into the next lesson or a review - and stop before capturing that as a kind of this lesson");
     let url = page.url();
     let still = text_includes(url, quiz_marker);
