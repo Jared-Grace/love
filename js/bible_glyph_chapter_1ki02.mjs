@@ -1212,7 +1212,7 @@ export function bible_glyph_chapter_1ki02() {
           "$proper_name$Joab",
           "and",
           "his",
-          "descendants",
+          "$seed",
           "$hourglass,",
           "but",
           "for",
