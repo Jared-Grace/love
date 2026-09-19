@@ -513,7 +513,7 @@ export function bible_glyph_chapter_mrk05() {
         "$plus",
         "he",
         "went",
-        "away",
+        "$footprints+away",
         "$plus",
         "began",
         "to",
