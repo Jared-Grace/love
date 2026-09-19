@@ -153,7 +153,7 @@ export function bible_glyph_chapter_mic03() {
           "astray,",
           "who",
           "proclaim",
-          "peace",
+          "$peace",
           "while",
           "they",
           "chew",
