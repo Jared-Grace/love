@@ -529,7 +529,7 @@ export function bible_glyph_chapter_2sa07() {
           "Me,",
           "and",
           "your",
-          "throne",
+          "$throne",
           "will",
           "be",
           "established",
