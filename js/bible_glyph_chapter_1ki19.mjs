@@ -115,7 +115,7 @@ export function bible_glyph_chapter_1ki19() {
           "$road",
           "into",
           "the",
-          "wilderness.",
+          "$wilderness.",
           "He",
           "sat",
           "down",
