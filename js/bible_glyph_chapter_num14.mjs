@@ -1006,7 +1006,7 @@ export function bible_glyph_chapter_num14() {
           "$person+sheep",
           "in",
           "the",
-          "wilderness",
+          "$wilderness",
           "for",
           "forty",
           "$year,",
