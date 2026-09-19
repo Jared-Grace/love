@@ -2,6 +2,8 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_note_name_tag_darkness } from "./app_code_note_name_tag_darkness.mjs";
 import { color_darkened } from "./color_darkened.mjs";
 import { html_style_code_unfonted } from "./html_style_code_unfonted.mjs";
+import { app_code_note_name_tag_padding_x } from "./app_code_note_name_tag_padding_x.mjs";
+import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { html_box_shadow_inset_value } from "./html_box_shadow_inset_value.mjs";
 import { html_box_shadow_set } from "./html_box_shadow_set.mjs";
 export function app_code_note_name_tag(component, color) {
@@ -12,9 +14,12 @@ export function app_code_note_name_tag(component, color) {
   ("ONE AUTHORED COLOUR STILL, WHICH IS THE CONDITION THIS HAD TO MEET. A second palette for pale grounds is exactly what was tried before and what a reader caught - they said the green on the cup was not the green in the code, and they were right, because somebody had picked it separately. Here nobody picks it: the ground is the colour scaled down, so it cannot be a different colour, only a darker amount of the same one.");
   ("The ground carries the colour as well as the letter does, which is why it is a tinted ground and not a black one. How easily two things across a screen are seen to be the same colour goes with how much colour there is to look at, and a name here is often one lower-case letter - a few thin strokes. Left on black, the mark would be those strokes alone; tinted, the whole mark is the hue and the letter is the bright part of it.");
   ("Edged in the same ground colour, drawn inside the box for the reason the patch gives: a border is drawn outside and grows the box, and a name inside a line of code must leave the line's height alone.");
+  ("THE SHARED CODE SHAPE IS TAKEN AND THEN NARROWED, RATHER THAN BUILT UP FROM NOTHING. The rounding, the absence of a drawn border and the room inside all come from the one place every run of code on the page gets them, so this ground is the same shape as the chips it stands among; only the sideways room is then replaced, because that is the single part of the shape a cup argues with. Written out as a takeback rather than avoided by not calling the shared shape at all, since the other two are exactly what should follow the shared answer if it ever changes.");
   let dark = app_code_note_name_tag_darkness();
   let ground = color_darkened(color, dark);
   html_style_code_unfonted(component, ground, color);
+  let padding = app_code_note_name_tag_padding_x();
+  html_style_padding_x(component, padding);
   let style_value = html_box_shadow_inset_value(ground, "0.06em");
   html_box_shadow_set(component, style_value);
   return component;

@@ -1,9 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_span_text } from "./html_span_text.mjs";
-import { html_style_code_dark_nowrap } from "./html_style_code_dark_nowrap.mjs";
-import { app_code_note_name_color_or_null } from "./app_code_note_name_color_or_null.mjs";
-import { html_font_color_set } from "./html_font_color_set.mjs";
+import { app_code_note_cycle_code } from "./app_code_note_cycle_code.mjs";
 export function app_code_note_div_cycle_code(parent, parts, names) {
   arguments_assert(arguments, 3);
   ("a line of the lesson's own writing with pieces of code set into it, where a piece that is one of the lesson's names is written in that name's colour");
@@ -12,20 +9,8 @@ export function app_code_note_div_cycle_code(parent, parts, names) {
   ("A code piece that is not one of the names keeps the ordinary code colour. Most of them are not - a word, a quoted thing, a whole small program - and colouring one of those would say it was a name being followed.");
   ("The name is written in its colour, not on a patch of it, for the reason the code box gives: every chip here is black, and on black a bright colour is already at its most legible as ink. The patch belongs to the cup card, which is pale.");
   ("The brackets the code box puts round a name are not put round it here, because a chip is already the mark: the name is standing on a black ground in a different letterform from every word beside it, which is the same thing the brackets are for and is not lost by a reader who sees no colour.");
+  ("This is a line of its own around the writer that fills one, and holds nothing else. Sentences that begin with something before the alternating part - a reminder opening with a button naming a lesson - need the writer without the line, so the two were split; this one is what a caller that just wants a line still asks for, and the split is not something it should have to know about.");
   let div = html_div(parent);
-  let plain = true;
-  for (let part of parts) {
-    let span = html_span_text(div, part);
-    if (plain) {
-      plain = false;
-      continue;
-    }
-    html_style_code_dark_nowrap(span);
-    let color = app_code_note_name_color_or_null(names, part);
-    if (color) {
-      html_font_color_set(span, color);
-    }
-    plain = true;
-  }
+  app_code_note_cycle_code(div, parts, names);
   return div;
 }
