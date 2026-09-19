@@ -169,7 +169,7 @@ export function bible_glyph_chapter_psa008() {
           "beasts",
           "of",
           "the",
-          "field,",
+          "$field,",
         ],
       },
       {
