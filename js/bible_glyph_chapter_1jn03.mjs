@@ -600,7 +600,7 @@ export function bible_glyph_chapter_1jn03() {
           "we",
           "will",
           "$hand_receiving",
-          "from",
+          "$away",
           "$pointing_back",
           "whatever",
           "we",
