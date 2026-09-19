@@ -514,7 +514,7 @@ export function bible_glyph_chapter_1sa25() {
           "them",
           "in",
           "the",
-          "field.",
+          "$field.",
         ],
       },
       {
