@@ -26,7 +26,7 @@ export function bible_glyph_chapter_gen03() {
           "$sprout",
           "of",
           "the",
-          "field",
+          "$field",
           "that",
           "the",
           "$i_am",
