@@ -246,7 +246,7 @@ export function bible_glyph_chapter_gen17() {
           "This",
           "is",
           "My",
-          "covenant,",
+          "$covenant,",
           "which",
           "you",
           "are",
