@@ -656,7 +656,7 @@ export function bible_glyph_chapter_1sa16() {
           "a",
           "skin",
           "of",
-          "wine",
+          "$wine",
           "and",
           "one",
           "young",
