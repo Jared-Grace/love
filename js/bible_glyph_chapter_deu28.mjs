@@ -1663,7 +1663,7 @@ export function bible_glyph_chapter_deu28() {
           "will",
           "$eating",
           "the",
-          "fruit",
+          "$fruit",
           "of",
           "your",
           "womb,",
