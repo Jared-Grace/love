@@ -1325,7 +1325,7 @@ export function bible_glyph_chapter_2ki09() {
           "dung",
           "in",
           "the",
-          "field",
+          "$field",
           "on",
           "the",
           "plot",
