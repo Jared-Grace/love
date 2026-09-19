@@ -360,7 +360,7 @@ export function bible_glyph_chapter_gen21() {
           "wandered",
           "in",
           "the",
-          "Wilderness",
+          "$wilderness",
           "of",
           "Beersheba.",
         ],
