@@ -279,7 +279,7 @@ export function bible_glyph_chapter_gen01() {
           "yielding",
           "seed,",
           "and",
-          "fruit",
+          "$fruit",
           "$tree",
           "bearing",
           "fruit",
