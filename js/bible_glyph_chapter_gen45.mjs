@@ -800,7 +800,7 @@ export function bible_glyph_chapter_gen45() {
           "to",
           "$lifting",
           "him",
-          "back,",
+          "$pointing_down,",
           "the",
           "spirit",
           "of",
