@@ -106,7 +106,7 @@ export function bible_glyph_chapter_jos01() {
           "extend",
           "from",
           "the",
-          "wilderness",
+          "$wilderness",
           "and",
           "$proper_name$Lebanon",
           "to",
