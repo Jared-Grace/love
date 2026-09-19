@@ -129,7 +129,7 @@ export function bible_glyph_chapter_gen22() {
           "and",
           "$eye",
           "the",
-          "place",
+          "$place",
           "in",
           "the",
           "distance.",
