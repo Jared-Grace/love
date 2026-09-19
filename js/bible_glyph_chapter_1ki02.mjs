@@ -650,7 +650,7 @@ export function bible_glyph_chapter_1ki02() {
           "he",
           "had",
           "a",
-          "throne",
+          "$throne",
           "brought",
           "for",
           "the",
