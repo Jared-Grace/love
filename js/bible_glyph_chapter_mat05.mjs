@@ -1200,7 +1200,7 @@ export function bible_glyph_chapter_mat05() {
           "you",
           "get?",
           "Do",
-          "not",
+          "$no_entry",
           "$plus",
           "the",
           "tax",
