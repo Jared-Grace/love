@@ -302,7 +302,7 @@ export function bible_glyph_chapter_neh09() {
           "it",
           "to",
           "his",
-          "descendants.",
+          "$seed.",
           "You",
           "have",
           "kept",
