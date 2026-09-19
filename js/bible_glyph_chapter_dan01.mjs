@@ -115,7 +115,7 @@ export function bible_glyph_chapter_dan01() {
           "$tray_out",
           "the",
           "royal",
-          "family",
+          "$seed",
           "and",
           "the",
           "nobility",
