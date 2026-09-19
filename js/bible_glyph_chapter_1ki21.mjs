@@ -703,7 +703,7 @@ export function bible_glyph_chapter_1ki21() {
           "me",
           "out,",
           "my",
-          "enemy.",
+          "$enemy.",
           "He",
           "$speech,",
           "I",
