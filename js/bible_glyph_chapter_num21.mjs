@@ -165,7 +165,7 @@ export function bible_glyph_chapter_num21() {
           "$skull",
           "in",
           "the",
-          "wilderness?",
+          "$wilderness?",
           "There",
           "is",
           "no",
