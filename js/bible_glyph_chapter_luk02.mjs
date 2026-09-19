@@ -1049,7 +1049,7 @@ export function bible_glyph_chapter_luk02() {
         "$pointing_back",
         "parents",
         "$walking",
-        "every",
+        "$pointing_down",
         "$year",
         "to",
         "$proper_name$Jerusalem",
