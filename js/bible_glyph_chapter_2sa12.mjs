@@ -993,7 +993,7 @@ export function bible_glyph_chapter_2sa12() {
           "set",
           "with",
           "precious",
-          "stones,",
+          "$stone,",
           "and",
           "it",
           "was",
