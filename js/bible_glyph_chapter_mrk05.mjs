@@ -355,7 +355,7 @@ export function bible_glyph_chapter_mrk05() {
         "$plus",
         "in",
         "the",
-        "countryside,",
+        "$field,",
         "$plus",
         "people",
         "$footprints",
