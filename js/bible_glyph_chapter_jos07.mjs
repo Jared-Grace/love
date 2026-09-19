@@ -1032,7 +1032,7 @@ export function bible_glyph_chapter_jos07() {
           "anger.",
           "Therefore",
           "that",
-          "place",
+          "$place",
           "is",
           "called",
           "the",
