@@ -183,7 +183,7 @@ export function bible_glyph_chapter_num11() {
           "manna",
           "resembled",
           "coriander",
-          "seed,",
+          "$seed,",
           "and",
           "its",
           "$eyes",
