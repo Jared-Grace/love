@@ -1,18 +1,12 @@
-import { color_oklch } from "./color_oklch.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_chip_colors } from "./app_code_lesson_chip_colors.mjs";
 import { list_get } from "./list_get.mjs";
 export function app_code_lesson_chip_color(index) {
-  "one of four categorical chip colors - red, green, blue, amber - hand-picked to be as distinct and familiar as possible (NOT an even-hue formula) so a learner tells one number from another at a glance; each is kept dark enough for the white chip text";
-  "All four are spelled here because nothing outside asks for one of them by itself. The amber was lifted out under its own name for a while, when the second of the colours that point at a piece of code was taken from this list; that pointer is a green of its own now and the name went back where it came from. Lift one out again the moment a second reader wants exactly one of these - never by its place in the list, because the order these happen to be written in is not a name for what sits there.";
-  "TWO THINGS ARE KNOWN TO BE WRONG WITH THESE FOUR AND ARE LEFT STANDING ON PURPOSE, BECAUSE BOTH FIXES ARE JUDGMENTS ABOUT COLOUR AND NOBODY WHO HAS WORKED IN COLOUR HAS LOOKED AT THEM YET. Measured 2026-09-19, and written down here so whoever does look arrives holding the numbers rather than having to find them again.";
-  "The first: a reader with no green cone, about one man in twelve, sees hue collapse onto a single blue-yellow line, and the red at 25 lands on that line beside the amber at 56. As a distance in the perceptual space that pair stands at 0.070, against 0.135 for the same pair to a normal eye and 0.2 or better for every other pair here. So the dot grid, whose whole promise is that the eye can follow any single row, hands that reader two colours where it says four. Moving the red round to 345 nearly doubles the worst pair, to 0.186 - but 345 renders as a magenta and the course loses a red, which is a decision about what this course looks like and not a number to be improved.";
-  "Two readings are already ruled out, so nobody need spend them again. Hues spread evenly were tried and revised away as not distinct enough, so an even formula is a rejected answer rather than an unconsidered one. And keeping the red while making the FOURTH colour a magenta measures 0.032, worse than changing nothing at all, because a magenta lands on top of the blue for that same reader. True red, amber, green and blue cannot all be told apart on that one line; one of the red and the amber has to leave, and only the red has anywhere to go.";
-  "The second: the amber measures 3.91 against the pale blue card where lettering needs 4.5. It passes comfortably as a shape, and the grid uses it as a shape, so the fault is live only where a chip colour colours LETTERING - which today is the digits in the rounding screen. It can be fixed by pulling the amber darker, which changes a colour somebody chose by looking, or by leaving the palette alone and colouring those digits with a different member, which changes a screen. Either is somebody's call.";
-  "The written chroma of the amber and the green asks for more colourfulness than sRGB can show, 0.16 and 0.15 against the 0.1413 and 0.1405 that actually appear. That is not a third fault: the squashed colour is the one that was looked at and approved. Rewriting the numbers to what shows would be honest and would render identically here, and it is left alone anyway, so that the person who revises these is revising the numbers that were revised before.";
-  let red = color_oklch(0.5, 0.2, 25);
-  let green = color_oklch(0.51, 0.15, 150);
-  let blue = color_oklch(0.5, 0.15, 255);
-  let amber = color_oklch(0.58, 0.16, 56.38);
-  let colors = [red, green, blue, amber];
+  arguments_assert(arguments, 1);
+  ("one of the categorical chip colours by its place in the list, for the screens that want several of them at once and only need each to differ from the last");
+  ("Everything about which colours these are, what is known to be wrong with them and what has already been ruled out is said where they are spelled, one name along, because that is what a person revising them has to read. Nothing is said twice here.");
+  ("THE PLACE IS NOT A NAME FOR WHAT SITS THERE, and a caller wanting a particular one of these is a caller wanting a colour lifted out under its own name. Asking for the third because the third is currently the blue would make the order of the list a thing nobody may reorder, which it was never meant to be.");
+  let colors = app_code_lesson_chip_colors();
   let color = list_get(colors, index);
   return color;
 }
