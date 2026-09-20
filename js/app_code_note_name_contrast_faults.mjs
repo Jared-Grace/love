@@ -17,7 +17,7 @@ export function app_code_note_name_contrast_faults() {
     let front = way[0];
     let behind = way[1];
     let drawn = way[2];
-    let floor = way[3];
+    let floor_wanted = way[3];
     let apart = color_contrast_or_null(front, behind);
     let unreadable = null_is(apart);
     if (unreadable) {
@@ -29,14 +29,14 @@ export function app_code_note_name_contrast_faults() {
       });
       continue;
     }
-    let short = less_than(apart, floor);
+    let short = less_than(apart, floor_wanted);
     if (short) {
       faults.push({
         drawn,
         front,
         behind,
         apart,
-        floor,
+        floor: floor_wanted,
       });
     }
   }
