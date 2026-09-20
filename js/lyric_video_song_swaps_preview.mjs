@@ -1,3 +1,5 @@
+import { html_hash_name_third_or_empty } from "./html_hash_name_third_or_empty.mjs";
+import { lyric_video_song_swaps_narrow } from "./lyric_video_song_swaps_narrow.mjs";
 import { lyric_video_song_buttons } from "./lyric_video_song_buttons.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div } from "./html_body_div.mjs";
@@ -14,6 +16,7 @@ import { each } from "./each.mjs";
 export async function lyric_video_song_swaps_preview() {
   "The screen for choosing between a song's current background pictures and the pictures offered to replace them, on the sandbox app at hash lyric_video_song_swaps.";
   "BEFORE AND AFTER SIT SIDE BY SIDE, because a replacement is judged against what it replaces; seen alone, a candidate is judged against nothing.";
+  "A THIRD PART IN THE ADDRESS KEEPS ONLY THE PLACES OFFERING A PICTURE FROM THAT FOLDER, as mixed in #lyric_video_song_swaps/agape/mixed. Asking someone to look at seven rows out of twenty-four, and leaving them to find which seven, spends their attention on the finding rather than on the looking.";
   "NOTHING IS CHANGED FROM HERE. Choosing is said to whoever is at the keyboard, who points the song's document at the picture and renders again.";
   arguments_assert(arguments, 0);
   let root = html_body_div();
@@ -34,7 +37,9 @@ export async function lyric_video_song_swaps_preview() {
       app_shared_text_quiet(cards, "this song has no pictures on offer");
       return;
     }
-    let listed = property_get(swaps, "swaps");
+    let listed2 = property_get(swaps, "swaps");
+    let folder_name = html_hash_name_third_or_empty();
+    let listed = lyric_video_song_swaps_narrow(listed2, folder_name);
     function card(swap) {
       lyric_video_song_swap_card(cards, document, swap, name);
     }
