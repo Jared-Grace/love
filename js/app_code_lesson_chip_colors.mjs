@@ -1,11 +1,14 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { color_oklch } from "./color_oklch.mjs";
+import { app_shared_color_chips } from "./app_shared_color_chips.mjs";
 export function app_code_lesson_chip_colors() {
   arguments_assert(arguments, 0);
-  ("the categorical chip colours - a red, a green, a blue and an amber - hand-picked to be as distinct and familiar as possible, NOT an even-hue formula, so a learner tells one number from another at a glance");
+  ("the categorical chip colours - a red, a green, a blue and an amber, hand-picked to be as distinct and familiar as possible, NOT an even-hue formula, so a learner tells one number from another at a glance");
   ("THE WHOLE LIST IS ANSWERED RATHER THAN ONE OF THEM, SO THAT WHATEVER COUNTS THEM CANNOT DISAGREE WITH WHATEVER USES THEM. A gate checking this palette has to know how many there are; told four, it would go on checking four the day a fifth arrived, and would pass while saying nothing at all about the colour that was actually added. Asked for the list, it checks whatever is here.");
-  ("They are spelled together because nothing outside asks for one of them by itself. The amber was lifted out under its own name for a while, when the second of the colours that point at a piece of code was taken from this list; that pointer is a green of its own now and the name went back where it came from. Lift one out again the moment a second reader wants exactly one of these - never by its place in the list, because the order these happen to be written in is not a name for what sits there.");
+  ("They are asked for together because nothing outside asks for one of them by itself. The amber was lifted out under its own name for a while, when the second of the colours that point at a piece of code was taken from this list; that pointer is a green of its own now and the name went back where it came from. Lift one out again the moment a second reader wants exactly one of these - never by its place in the list, because the order these happen to be written in is not a name for what sits there.");
+  "THE FOUR VALUES ARE SPELLED IN " +
+    fn_name("app_shared_color_chips") +
+    " AND ASKED FOR HERE, WHICH IS THE PALETTE RULE AND NOT A CHANGE OF MIND ABOUT ANYTHING BELOW. A screen colour is spelled in one of the shared colour functions and asked for everywhere else; this file used to spell its own four. Nothing about the colours moved - the same four numbers, in the same order - and the whole reading of what is wrong with them stays here, because it is about how this app draws them and it is one argument rather than four.";
   "FIVE THINGS ARE KNOWN TO BE WRONG HERE AND ARE ALL LEFT STANDING ON PURPOSE, BECAUSE EVERY FIX IS A JUDGMENT ABOUT COLOUR AND NOBODY WHO HAS WORKED IN COLOUR HAS LOOKED AT THEM YET. Measured 2026-09-19 and 2026-09-20, and written down so whoever does look arrives holding the numbers rather than having to find them again. None of them is a reason to change anything today; every one of them is a reason not to let the palette change quietly while the question waits, which is what " +
     fn_name("app_code_lesson_chip_color_gate_run") +
     " is for.";
@@ -28,10 +31,6 @@ export function app_code_lesson_chip_colors() {
     fn_name("app_code_color_tones") +
     " rather than here, because it is about all three palettes and this is one of them. Everything above about the amber, the cone-blindness pairs and the rejected hues stays true and stays the reason this list is what it is.";
   ("The written chroma of the amber and the green asks for more colourfulness than sRGB can show, 0.16 and 0.15 against the 0.1413 and 0.1405 that actually appear. That is not a sixth fault: the squashed colour is the one that was looked at and approved. Rewriting the numbers to what shows would be honest and would render identically here, and it is left alone anyway, so that the person who revises these is revising the numbers that were revised before.");
-  let red = color_oklch(0.5, 0.2, 25);
-  let green = color_oklch(0.51, 0.15, 150);
-  let blue = color_oklch(0.5, 0.15, 255);
-  let amber = color_oklch(0.58, 0.16, 56.38);
-  let colors = [red, green, blue, amber];
+  let colors = app_shared_color_chips();
   return colors;
 }
