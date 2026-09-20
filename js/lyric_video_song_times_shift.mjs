@@ -1,3 +1,4 @@
+import { add } from "./add.mjs";
 import { round } from "./round.mjs";
 import { equal } from "./equal.mjs";
 import { divide } from "./divide.mjs";
@@ -14,8 +15,10 @@ export async function lyric_video_song_times_shift(name, seconds) {
   "★ IT MOVES THE WHOLE DOCUMENT AND NOT ONLY THE SINGING, BECAUSE THE PICTURES ARE TIMED AGAINST THE SAME CLOCK. A shift applied to the lines alone leaves every painting where it was, so each one now changes over a word instead of between two lines, and nothing reports it - the film still renders, and the fault is only visible by watching.";
   "★ IT IS THE ANSWER WHEN THE SINGING DID NOT CHANGE, AND HEARING THE SONG AGAIN IS THE ANSWER WHEN IT DID. Listening rebuilds every line from scratch, which throws away every word a person moved by hand, every word held longer than its note, and the snapping of the words onto the melody. None of that is recoverable, and none of it is wrong merely because silence was added in front of it. So a longer opening is a shift; a re-sung line is a hearing.";
   "★ A MOMENT OF EXACTLY ZERO STAYS AT ZERO, because it is not a moment in the song at all - it is the beginning of the film. Moved with everything else it opens the film on nothing, and the first picture arrives late for the rest of its life.";
-  "★ THE AMOUNT IS READ AS A NUMBER BEFORE ANYTHING IS ADDED TO IT. A command line hands every argument over as text, and adding text to a number joins the two instead of adding them, so every moment in the document becomes a word rather than a time and the rounding afterwards turns each one into nothing at all. The document is then overwritten with a full set of unusable times and the command still reports success."; "The moments are rounded back to five figures after the shift, because adding two decimals in binary leaves a tail of noise that is far below a frame and still rewrites every number in the document into something nobody can read.";
-  let seconds_number = Number(seconds); let folder = lyric_video_songs_folder();
+  "★ THE AMOUNT IS READ AS A NUMBER BEFORE ANYTHING IS ADDED TO IT. A command line hands every argument over as text, and adding text to a number joins the two instead of adding them, so every moment in the document becomes a word rather than a time and the rounding afterwards turns each one into nothing at all. The document is then overwritten with a full set of unusable times and the command still reports success.";
+  "The moments are rounded back to five figures after the shift, because adding two decimals in binary leaves a tail of noise that is far below a frame and still rewrites every number in the document into something nobody can read.";
+  let seconds_number = Number(seconds);
+  let folder = lyric_video_songs_folder();
   let file_name = text_combine(name, ".json");
   let path_document = path_join([folder, file_name]);
   let document = await file_read_json(path_document);
