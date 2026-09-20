@@ -1,10 +1,14 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { app_shared_color_name_marks } from "./app_shared_color_name_marks.mjs";
 export function app_code_note_name_colors() {
   arguments_assert(arguments, 0);
   ("the colours a lesson's program lends to the names inside it, one per name, taken in the order the names are first marked in a note");
   ("EACH COLOUR IS A DIFFERENT BRIGHTNESS AS WELL AS A DIFFERENT HUE, AND THE BRIGHTNESS IS THE PART THAT MUST BE READ. A reader who cannot tell two hues apart still sees three different shades, so the pairing between a name in a note and the same name in the code reaches them too. A hue is not a slower copy of that: three shades have to be compared, three hues are known at a glance, so the reader who has both gets the faster signal and nobody is left with none.");
   ("THE HUE IS CHOSEN FIRST AND THE BRIGHTNESS SECOND, and it was the other way round once. Picking three lightnesses first and then looking for a hue at each one gave three colours a reader called almost white and light grey - the lightest of them had to be so pale to sit where it was told to that almost no colour was left in it. So each of these is a full colour first, and only then nudged until the three sit at different lightnesses. A colour nobody can see the colour of has already lost the layer it was added for.");
+  "THE THREE VALUES ARE SPELLED IN " +
+    fn_name("app_shared_color_name_marks") +
+    " AND ASKED FOR HERE, WHICH IS THE PALETTE RULE. A screen colour is spelled in one of the shared colour functions and asked for everywhere else; this file used to spell its own three. Nothing about the colours moved - the same three, in the same order - and everything below stays here, because it is the reading of why they are what they are and it is one argument rather than three.";
   ("THE THREE ARE A RED, A GREEN AND A BLUE, WHICH IS THE ONLY NAMING A READER DOES NOT HAVE TO BE TAUGHT. There is one of each and no second member of any, so the colour of a name can be said out loud, matched against a cup across the screen, and remembered after the screen is gone. A gold and an orange were each tried in the first slot and each had to be described rather than named.");
   ("BRIGHTEST IS THE GREEN, NOT THE FIRST NAME, AND THAT ORDER IS WHAT LETS THE RED BE RED. The first attempt ranked the three by the order the lesson introduces them, so the first name had to take the top lightness - and a red that light is a pink, so the slot went to an orange instead to keep a ranking nothing depended on. The brightness layer only has to make the three tellable; it was never asked to rank them. Freed of the ranking, each colour sits where its own hue is strongest: the green climbs furthest before it pales, the blue stops in the middle, and the red stays deep enough to still read as red.");
   ("The red against the green is the pair a red-green reader has no hue for, so it is the pair given the most brightness between them - 0.155 of perceptual lightness, with the blue standing between the two. Under the old ranking that same pair was the closest of the three rather than the furthest. Choosing the colours first and letting the order fall out is what turned that round.");
@@ -22,9 +26,6 @@ export function app_code_note_name_colors() {
   "What stops it today is instead that the hues do not quite agree - 23.7 against 25, 154.0 against 150, 251.7 against 255 - so naming one hue per colour and spelling both tones from it would move what is on the screen. That is a change to a colour rather than to how a colour is written down, and colour decisions here are waiting on somebody who has worked in colour. " +
     fn_name("app_code_color_tones") +
     " holds the rest of that question: these three are the light tone of a two-tone set, the chip and pointing colours are the dark one, and the four things standing between the app and one hue list at two tones are written out there rather than here.";
-  let red = "#ff7474";
-  let green = "#7bf5a8";
-  let blue = "#7fbcff";
-  let colors = [red, green, blue];
+  let colors = app_shared_color_name_marks();
   return colors;
 }
