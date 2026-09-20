@@ -1,0 +1,8 @@
+{
+ "known": [
+  "2 dark colours at one hue, where one is wanted: oklch(0.55 0.2 15), oklch(0.5 0.2 25)",
+  "no light colour at the hue of the dark oklch(0.58 0.16 56.38)",
+  "2 dark colours at one hue, where one is wanted: oklch(0.51 0.15 150), oklch(0.55 0.15 150)",
+  "2 dark colours at one hue, where one is wanted: oklch(0.5 0.15 255), rgb(37, 99, 235)"
+ ]
+}
