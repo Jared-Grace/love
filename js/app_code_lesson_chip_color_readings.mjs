@@ -27,12 +27,12 @@ export function app_code_lesson_chip_color_readings() {
   let contrast_places = 1;
   let apart_places = 2;
   let readings = [];
-  function reading_add(subject, measured, floor) {
+  function reading_add(subject, measured, floor_wanted) {
     "one job of one colour, added to the record.";
     let sentence = color_reading_sentence(
       subject,
       measured,
-      floor,
+      floor_wanted,
       contrast_places,
     );
     readings.push(sentence);
