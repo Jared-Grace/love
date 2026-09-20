@@ -1,4 +1,3 @@
-import { functions_calls_walk_unwaited_gate_run } from "./functions_calls_walk_unwaited_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { stop_next_steps_hook_gate_run } from "./stop_next_steps_hook_gate_run.mjs";
@@ -245,6 +244,7 @@ import { examples_registers_gate_run } from "./examples_registers_gate_run.mjs";
 import { functions_selects_unsafe_gate_run } from "./functions_selects_unsafe_gate_run.mjs";
 import { color_near_miss_gate_run } from "./color_near_miss_gate_run.mjs";
 import { color_palette_outside_gate_run } from "./color_palette_outside_gate_run.mjs";
+import { app_code_lesson_chip_color_gate_run } from "./app_code_lesson_chip_color_gate_run.mjs";
 import { functions_shadowing_operator_gate_run } from "./functions_shadowing_operator_gate_run.mjs";
 import { functions_native_callback_gate_run } from "./functions_native_callback_gate_run.mjs";
 import { functions_shadowing_function_gate_run } from "./functions_shadowing_function_gate_run.mjs";
@@ -570,6 +570,7 @@ import { bible_glyph_seats_contested_gate_run } from "./bible_glyph_seats_contes
 import { messages_real_quoted_gate_run } from "./messages_real_quoted_gate_run.mjs";
 import { reply_parser_gate_run } from "./reply_parser_gate_run.mjs";
 import { app_code_note_name_contrast_gate_run } from "./app_code_note_name_contrast_gate_run.mjs";
+import { functions_calls_walk_unwaited_gate_run } from "./functions_calls_walk_unwaited_gate_run.mjs";
 export function qa_gates() {
   "Every gate the repo-wide check runs, gathered in one list, so adding a function here is the whole of wiring a new gate in.";
   let gates = [
@@ -819,6 +820,7 @@ export function qa_gates() {
     functions_selects_unsafe_gate_run,
     color_near_miss_gate_run,
     color_palette_outside_gate_run,
+    app_code_lesson_chip_color_gate_run,
     functions_shadowing_operator_gate_run,
     functions_native_callback_gate_run,
     functions_shadowing_function_gate_run,
