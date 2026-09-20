@@ -18,7 +18,14 @@ export function app_code_color_tones() {
     ", and its chroma of 0.215 and hue of 262.9 were never a decision taken here. That one is the only genuine reason of the three, because it is not this app's to change.";
   ("The missing light is the amber. The red, the green and the blue each have both tones; the amber has a dark and nothing else. So a fourth name colour cannot be an amber today without one being invented, and the amber is also the colour every known contrast fault in the chip palette belongs to. Those two facts are probably one fact.");
   ("THE NUMBERS THE TWO TONES ACTUALLY REACH, measured the same day, so whoever revises them starts from readings rather than from this argument. Each light colour on the near-black ink it carries: 7.20 to one for the red, 9.48 for the blue, 13.91 for the green. Each dark colour under white lettering: 6.65 for the chip red, 6.07 for the chip blue, 5.40 for the chip green, 5.41 for the pointing red, 5.17 for the brand blue, and then 4.51 for the pointing green and 4.48 for the chip amber - the last of those being under the four and a half that lettering asks for, which is one of the amber's known faults.");
-  ("NOTHING CALLS THIS YET. It is the set, for whatever comes to reason about the set - a check that no hue grows a third tone would ask it, and so would any revision that wants to hold eight colours apart instead of ten. It is worked out from the three palette functions rather than written out here, so a colour added to any of them arrives in the right band the day it is added, and this cannot drift from what is really drawn.");
+  "THE CHECK THIS WAS WRITTEN FOR NOW EXISTS AND ASKS IT. " +
+    fn_name("app_code_color_hue_groups") +
+    " stands the colours in order round the wheel and cuts them into hues, " +
+    fn_name("app_code_color_tone_faults") +
+    " asks each hue for exactly one dark and one light, and " +
+    fn_name("app_code_color_tone_gate_run") +
+    " holds the answer still against what is already known. The four faults it reports are the four written out in the paragraph above, arrived at independently - which is the only reason to believe either of them.";
+  ("IT IS WORKED OUT FROM THE THREE PALETTE FUNCTIONS RATHER THAN WRITTEN OUT HERE, so a colour added to any of them arrives in the right band the day it is added, and this cannot drift from what is really drawn. That is also what makes the gate above worth having: it reads the palettes through this, so nobody has to remember to tell it about a new colour.");
   let chip = app_code_lesson_chip_colors();
   let pointing = app_code_highlight_colors();
   let dark = chip.concat(pointing);
