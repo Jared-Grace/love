@@ -1,9 +1,10 @@
 import { color_oklch_read_or_null } from "./color_oklch_read_or_null.mjs";
-import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
+import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { color_oklch_channels } from "./color_oklch_channels.mjs";
 import { equal } from "./equal.mjs";
+import { text_hex_digits_is } from "./text_hex_digits_is.mjs";
 import { divide } from "./divide.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -41,6 +42,12 @@ export function color_parse(written) {
     }
     let full = equal(hex_digits.length, 6) || equal(hex_digits.length, 8);
     if (not(full)) {
+      return null;
+    }
+    ("THE DIGITS ARE READ AS WELL AS COUNTED, because counting them is not reading them. The other way of writing a colour asks whether its numbers came out as numbers before it builds anything; this way only ever asked how many characters there were, and the reader that turns a pair of them into a number stops at the first character it does not know and keeps what came before it rather than complaining. So a six-character colour with a typo in the fifth came back as a real, believable colour that nobody had written, and everything downstream measured that colour and found nothing wrong with it.");
+    ("A colour that cannot be read comes back as nothing, which is what this function says of itself at the top and what every caller is built around. That promise was kept on the one branch and quietly broken on this one.");
+    let readable_digits = text_hex_digits_is(hex_digits);
+    if (not(readable_digits)) {
       return null;
     }
     let alpha = 1;
