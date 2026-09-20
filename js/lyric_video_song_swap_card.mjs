@@ -1,3 +1,4 @@
+import { lyric_video_review_notes } from "./lyric_video_review_notes.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -25,6 +26,7 @@ export function lyric_video_song_swap_card(parent, document, swap, name) {
   "$plain name";
   "One picture of a song set beside the pictures offered to take its place, under the words sung over it.";
   "THE CURRENT PICTURE COMES FIRST IN THE ROW, so before and after read left to right.";
+  "THE BOX AT THE FOOT IS THE ONE THE REVIEW SCREEN USES, KEYED BY THE SAME PICTURE, so a note left here and a note left there are the same note rather than two that have to be gathered up later. Choosing says which picture is wanted; only the box can say why, and a choice with no reason kept beside it is the one that gets argued through again from the start.";
   "THE WORDS ARE FOUND THROUGH THE DOCUMENT'S OWN PICTURE AT THAT PATH, because that entry holds the start and end the words are chosen by; a candidate has no times of its own until it is chosen.";
   "A PRESS ON ANY PICTURE CHOOSES IT, AND A SECOND PRESS UNCHOOSES IT. Any number may be chosen, the current one included, and the choice is written to disk at once, so nothing is lost by closing the page.";
   "THE FRAMES ARE DRAWN FROM WHAT THE DISK ANSWERS, never from what the press assumed, so a frame on screen is a choice that was really kept.";
@@ -83,5 +85,6 @@ export function lyric_video_song_swap_card(parent, document, swap, name) {
   each(after, candidate);
   let chosen_before = property_get_or(swap, "chosen", []);
   marks(chosen_before);
+  lyric_video_review_notes(card, picture);
   return card;
 }
