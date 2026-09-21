@@ -1,4 +1,4 @@
-import { list_map_squash } from "./list_map_squash.mjs";
+import { list_map_then_squash } from "../../***REMOVED***/js/list_map_then_squash.mjs";
 import { app_replace_rule_sets } from "./app_replace_rule_sets.mjs";
 import { app_replace_rule_set_abbreviations_unexplained } from "./app_replace_rule_set_abbreviations_unexplained.mjs";
 import { app_replace_abbreviations_unseen } from "./app_replace_abbreviations_unseen.mjs";
@@ -8,7 +8,7 @@ export function app_replace_abbreviations_mismatches() {
   "Both ways it breaks are silent. A symbol the rules rewrite with nothing explaining it hands the player a word whose meaning the page never gives; an explanation nothing spells anywhere is never drawn, so the source says something no page does.";
   "The two are asked of different things now that the words are kept in one place for the whole app rather than by each exercise. Whether a symbol is explained is still a question about one set, because it is that set's player who meets it; whether an explanation is ever seen is a question about all of them at once, since any exercise spelling it is enough.";
   let rule_sets = app_replace_rule_sets();
-  let mismatches = list_map_squash(
+  let mismatches = list_map_then_squash(
     rule_sets,
     app_replace_rule_set_abbreviations_unexplained,
   );

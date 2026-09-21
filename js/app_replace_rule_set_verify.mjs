@@ -1,4 +1,4 @@
-import { list_map_squash } from "./list_map_squash.mjs";
+import { list_map_then_squash } from "../../***REMOVED***/js/list_map_then_squash.mjs";
 import { list_map_properties_unique } from "./list_map_properties_unique.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -22,7 +22,7 @@ export function app_replace_rule_set_verify(rule_set) {
   return;
   ("the following code was used to make sure each rule was used somewhere in a goal - however became too much to sort through for expression rule sets");
   let squashed = list_squash(dfss);
-  let squashed2 = list_map_squash(
+  let squashed2 = list_map_then_squash(
     squashed,
     app_replace_rule_set_verify_path_get,
   );

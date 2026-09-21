@@ -1,4 +1,4 @@
-import { list_map_squash } from "./list_map_squash.mjs";
+import { list_map_then_squash } from "../../***REMOVED***/js/list_map_then_squash.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { js_node_is } from "./js_node_is.mjs";
 import { error } from "./error.mjs";
@@ -16,7 +16,7 @@ export function js_function_declaration_params_names_node(node) {
     let type_is = js_node_type_is(node, "ObjectPattern");
     if (type_is) {
       let properties = property_get(node, "properties");
-      names = list_map_squash(
+      names = list_map_then_squash(
         properties,
         js_function_declaration_params_names_node,
       );
@@ -36,7 +36,7 @@ export function js_function_declaration_params_names_node(node) {
             let elements = property_get(node, "elements");
             ("a hole, as in the first slot of a two-name unpacking that skips it, is an absent element and names nothing");
             let filled = list_filter(elements, js_node_is);
-            names = list_map_squash(
+            names = list_map_then_squash(
               filled,
               js_function_declaration_params_names_node,
             );

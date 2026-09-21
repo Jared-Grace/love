@@ -3,7 +3,7 @@ import { fn_name } from "./fn_name.mjs";
 import { js_identifiers_named } from "./js_identifiers_named.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { js_imports_declarations } from "./js_imports_declarations.mjs";
-import { list_map_squash } from "./list_map_squash.mjs";
+import { list_map_then_squash } from "../../***REMOVED***/js/list_map_then_squash.mjs";
 import { js_identifiers } from "./js_identifiers.mjs";
 import { js_function_node_find_named_list } from "./js_function_node_find_named_list.mjs";
 import { list_difference } from "./list_difference.mjs";
@@ -23,7 +23,7 @@ export function js_name_value_use_nodes(ast, f_name) {
   let callees = list_map_property(calls, "callee");
   let imports = js_imports_declarations(ast);
   let declarations = list_map_property(imports, "declaration");
-  let imported = list_map_squash(declarations, js_identifiers);
+  let imported = list_map_then_squash(declarations, js_identifiers);
   let functions = js_function_node_find_named_list(ast, f_name);
   let nodes = list_map_property(functions, "node");
   let ids = list_map_property(nodes, "id");

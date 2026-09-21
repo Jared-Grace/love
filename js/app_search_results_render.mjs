@@ -1,4 +1,4 @@
-import { list_map_squash } from "./list_map_squash.mjs";
+import { list_map_then_squash } from "../../***REMOVED***/js/list_map_then_squash.mjs";
 import { app_search_results_top_buttons_add } from "./app_search_results_top_buttons_add.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_shared_folds } from "./app_shared_folds.mjs";
@@ -75,7 +75,7 @@ export function app_search_results_render(
     );
     return r4;
   }
-  let button_list = list_map_squash(results, each_result);
+  let button_list = list_map_then_squash(results, each_result);
   property_set(buttons, "list", button_list);
   let r = {
     button_list,

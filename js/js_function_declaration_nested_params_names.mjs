@@ -4,7 +4,7 @@ import { js_list_function_nodes_visitors } from "./js_list_function_nodes_visito
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_map_squash } from "./list_map_squash.mjs";
+import { list_map_then_squash } from "../../***REMOVED***/js/list_map_then_squash.mjs";
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 export function js_function_declaration_nested_params_names(declaration) {
   "The names the functions written inside this one give to what is handed to them, however deep they sit.";
@@ -23,6 +23,6 @@ export function js_function_declaration_nested_params_names(declaration) {
     return nested;
   }
   let inner = list_filter(nodes, inner_is);
-  let names = list_map_squash(inner, js_function_declaration_params_names);
+  let names = list_map_then_squash(inner, js_function_declaration_params_names);
   return names;
 }
