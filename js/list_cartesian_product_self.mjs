@@ -4,7 +4,7 @@ import { list_map } from "./list_map.mjs";
 import { each } from "./each.mjs";
 import { list_add } from "./list_add.mjs";
 import { json_copy } from "./json_copy.mjs";
-export function list_cartesian_product_self(colors, slots) {
+export function list_cartesian_product_self(colors, slot_count) {
   let possbilities = [[]];
   function lambda3(i) {
     function lambda(color) {
@@ -18,6 +18,6 @@ export function list_cartesian_product_self(colors, slots) {
     let m = list_map(colors, lambda);
     possbilities = list_concat_multiple(m);
   }
-  each_range(slots, lambda3);
+  each_range(slot_count, lambda3);
   return possbilities;
 }
