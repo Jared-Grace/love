@@ -4,7 +4,7 @@ import { each_range_unordered_async } from "./each_range_unordered_async.mjs";
 import { list_empty_not_is_while_async } from "./list_empty_not_is_while_async.mjs";
 import { app_replace_tests_run_e2e_goal } from "./app_replace_tests_run_e2e_goal.mjs";
 import { list_pop_first } from "./list_pop_first.mjs";
-import { list_map_squash } from "./list_map_squash.mjs";
+import { list_map_then_squash } from "../../***REMOVED***/js/list_map_then_squash.mjs";
 import { object_merge_multiple } from "./object_merge_multiple.mjs";
 import { object_wrap_multiple } from "./object_wrap_multiple.mjs";
 import { property_get } from "./property_get.mjs";
@@ -26,7 +26,7 @@ export async function app_replace_tests_run_e2e_all_rule_sets(
     object_merge_multiple(mapped, merged);
     return mapped;
   }
-  let remaining = list_map_squash(rule_sets, lambda2);
+  let remaining = list_map_then_squash(rule_sets, lambda2);
   let parallel_count = app_replace_tests_parallel_count(url_prefix);
   async function lambda(index) {
     async function on_page(page) {

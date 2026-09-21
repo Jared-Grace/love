@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_map_squash } from "./list_map_squash.mjs";
+import { list_map_then_squash } from "../../***REMOVED***/js/list_map_then_squash.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_node_is } from "./js_node_is.mjs";
 import { not } from "./not.mjs";
@@ -20,6 +20,6 @@ export function js_declared_names_of_nodes(binding_nodes) {
     let names_inner = js_function_declaration_params_names_node(id);
     return names_inner;
   }
-  let names = list_map_squash(binding_nodes, names_of);
+  let names = list_map_then_squash(binding_nodes, names_of);
   return names;
 }

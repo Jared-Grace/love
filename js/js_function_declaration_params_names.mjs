@@ -1,4 +1,4 @@
-import { list_map_squash } from "./list_map_squash.mjs";
+import { list_map_then_squash } from "../../***REMOVED***/js/list_map_then_squash.mjs";
 import { js_function_declaration_params_get } from "./js_function_declaration_params_get.mjs";
 import { js_function_declaration_params_names_node } from "./js_function_declaration_params_names_node.mjs";
 export function js_function_declaration_params_names(declaration) {
@@ -7,7 +7,7 @@ export function js_function_declaration_params_names(declaration) {
   "over from the day the unpacking one replaced it. A branch nothing can enter reads";
   "as a choice still being weighed, and this one was not.";
   let params = js_function_declaration_params_get(declaration);
-  let params_names = list_map_squash(
+  let params_names = list_map_then_squash(
     params,
     js_function_declaration_params_names_node,
   );
