@@ -12,9 +12,14 @@ export function list_set_intersect(list, known) {
       la(l);
     }
   }
+  let intersection = list_adder_each(list, lambda);
+  return intersection;
+}
+function list_adder_each(list, lambda) {
   function lambda2(la) {
     each(list, lambda);
   }
-  let intersection = list_adder(lambda2);
-  return intersection;
+  let result = list_adder(lambda2);
+  return result;
 }
+
