@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_map_then_squash } from "../../***REMOVED***/js/list_map_then_squash.mjs";
+import { list_map_then_squash } from "./list_map_then_squash.mjs";
 import { js_catch_clause_names } from "./js_catch_clause_names.mjs";
 export function js_catch_clause_names_of_nodes(clauses) {
   arguments_assert(arguments, 1);

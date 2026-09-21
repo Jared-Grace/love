@@ -5,7 +5,7 @@ import { js_node_is } from "./js_node_is.mjs";
 import { list_map } from "./list_map.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { js_function_declaration_params_names_node } from "./js_function_declaration_params_names_node.mjs";
-import { list_map_then_squash } from "../../***REMOVED***/js/list_map_then_squash.mjs";
+import { list_map_then_squash } from "./list_map_then_squash.mjs";
 import { not } from "./not.mjs";
 export function js_exports_names(ast) {
   "The names a file gives out for others to import - what it writes export in front of, and what it lists in an export block";

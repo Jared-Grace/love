@@ -1,4 +1,4 @@
-import { list_map_then_squash } from "../../***REMOVED***/js/list_map_then_squash.mjs";
+import { list_map_then_squash } from "./list_map_then_squash.mjs";
 import { app_replace_rule_sets } from "./app_replace_rule_sets.mjs";
 import { app_replace_rule_set_abbreviations_unexplained } from "./app_replace_rule_set_abbreviations_unexplained.mjs";
 import { app_replace_abbreviations_unseen } from "./app_replace_abbreviations_unseen.mjs";
