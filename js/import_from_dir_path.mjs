@@ -6,6 +6,8 @@ import { repo_path } from "./repo_path.mjs";
 export function import_from_dir_path(f_path) {
   arguments_assert(arguments, 1);
   let dir = path_directory(f_path);
-  let from_dir = path_join([repo_path(repo_current_name()), dir]);
+  let repo_name = repo_current_name();
+  let r_path = repo_path(repo_name);
+  let from_dir = path_join([r_path, dir]);
   return from_dir;
 }
