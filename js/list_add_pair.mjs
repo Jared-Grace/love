@@ -1,5 +1,5 @@
 import { list_add } from "./list_add.mjs";
 import { each_pair } from "./each_pair.mjs";
-export function list_add_pair(texts, texts_add) {
-  each_pair(texts, texts_add, list_add);
+export function list_add_pair(list_a, list_b) {
+  each_pair(list_a, list_b, list_add);
 }
