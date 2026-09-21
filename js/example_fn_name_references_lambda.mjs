@@ -9,7 +9,7 @@ export function example_fn_name_references_lambda() {
   async function lambda(ast) {
     await js_fn_name_references_to_calls(ast);
     let dict = await functions_names_to_paths();
-    let from_dir = import_from_dir_root();
+    let from_dir = await import_from_dir_root();
     await js_imports_auto_relative(ast, dict, from_dir);
   }
   return lambda;

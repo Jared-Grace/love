@@ -5,7 +5,7 @@ import { function_imports_add_relative } from "./function_imports_add_relative.m
 export function example_imports_lambda() {
   async function lambda(ast) {
     let dict = await functions_names_to_paths();
-    let from_dir = import_from_dir_root();
+    let from_dir = await import_from_dir_root();
     let missing = await js_imports_missing_all(ast);
     await function_imports_add_relative(ast, missing, dict, from_dir);
   }
