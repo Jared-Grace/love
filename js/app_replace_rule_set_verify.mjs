@@ -1,4 +1,4 @@
-import { list_map_then_squash } from "../../***REMOVED***/js/list_map_then_squash.mjs";
+import { list_map_then_squash } from "./list_map_then_squash.mjs";
 import { list_map_properties_unique } from "./list_map_properties_unique.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";

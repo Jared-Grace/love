@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_map_then_squash } from "../../***REMOVED***/js/list_map_then_squash.mjs";
+import { list_map_then_squash } from "./list_map_then_squash.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_node_is } from "./js_node_is.mjs";
 import { not } from "./not.mjs";

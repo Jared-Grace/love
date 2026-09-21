@@ -1,4 +1,4 @@
-import { list_map_then_squash } from "../../***REMOVED***/js/list_map_then_squash.mjs";
+import { list_map_then_squash } from "./list_map_then_squash.mjs";
 import { functions_imports_paths_fix_list } from "./functions_imports_paths_fix_list.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { data_identifiers_get } from "./data_identifiers_get.mjs";

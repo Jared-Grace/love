@@ -4,7 +4,7 @@ import { each_range_unordered_async } from "./each_range_unordered_async.mjs";
 import { list_empty_not_is_while_async } from "./list_empty_not_is_while_async.mjs";
 import { app_replace_tests_run_e2e_goal } from "./app_replace_tests_run_e2e_goal.mjs";
 import { list_pop_first } from "./list_pop_first.mjs";
-import { list_map_then_squash } from "../../***REMOVED***/js/list_map_then_squash.mjs";
+import { list_map_then_squash } from "./list_map_then_squash.mjs";
 import { object_merge_multiple } from "./object_merge_multiple.mjs";
 import { object_wrap_multiple } from "./object_wrap_multiple.mjs";
 import { property_get } from "./property_get.mjs";

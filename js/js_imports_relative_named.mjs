@@ -3,7 +3,7 @@ import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_starts_with } from "./property_starts_with.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
-import { list_map_then_squash } from "../../***REMOVED***/js/list_map_then_squash.mjs";
+import { list_map_then_squash } from "./list_map_then_squash.mjs";
 import { not } from "./not.mjs";
 export function js_imports_relative_named(ast) {
   "Each name an import line asks a neighbouring file for, beside the place that file was named by - one entry per name, so a line asking for several gives several";

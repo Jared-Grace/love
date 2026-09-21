@@ -1,4 +1,4 @@
-import { list_map_then_squash } from "../../***REMOVED***/js/list_map_then_squash.mjs";
+import { list_map_then_squash } from "./list_map_then_squash.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { js_node_is } from "./js_node_is.mjs";
 import { error } from "./error.mjs";
