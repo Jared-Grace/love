@@ -1,6 +1,5 @@
 import { function_nested_lift_skip_or_null } from "./function_nested_lift_skip_or_null.mjs";
 import { function_nested_lift_or_wrapper } from "./function_nested_lift_or_wrapper.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
@@ -19,9 +18,7 @@ export async function function_nested_lift_pass(f_name) {
   ("The list is asked again before each move rather than read once at the start, because a piece written inside another piece leaves with the one that holds it, and a walk working from a list made before the first move would then ask for something that is no longer there.");
   ("What is stepped over rather than thrown is stepped over because none of it is a fault: a piece that was never named by anybody, a piece whose name is spelled in another way, and a piece whose new name is already spoken for. Each is handed back with its reason, because each one names a file that wants a person to read it.");
   ("Two moves can make each cut, and the narrower one is taken wherever it will go. It takes the name away with the body and rewrites every call, so nothing is left behind; the wider one leaves the name standing on a line that calls the moved body, which is the only way to move a piece that is handed on as a value rather than called.");
-  ("Which one is not a preference, it is the difference between a walk that finishes and one that does not. A name left standing is still a name the pieces beside it reach out for, so each of them still has to be handed it, and the walk hands out one more parameter per cut instead of one fewer. Taking the name away frees every sibling that reached for it at once, which is exactly what the order these are walked in was built to exploit - leaves first, so that the big one they serve comes out with nothing left to be handed. Measured on ",
-    fn_name("***REMOVED***"),
-    ": walked with the wider move alone, eleven pieces came out and the eleven lines left behind hand each other five functions by name.");
+  ("Which one is not a preference, it is the difference between a walk that finishes and one that does not. A name left standing is still a name the pieces beside it reach out for, so each of them still has to be handed it, and the walk hands out one more parameter per cut instead of one fewer. Taking the name away frees every sibling that reached for it at once, which is exactly what the order these are walked in was built to exploit - leaves first, so that the big one they serve comes out with nothing left to be handed. Measured on one function holding eleven nested pieces: walked with the wider move alone, all eleven came out and the eleven lines left behind hand each other five functions by name.");
   await ai_git_noted();
   let ranked = await function_lift_wrapper_candidates(f_name);
   let names = list_map_property(ranked, "name");

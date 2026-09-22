@@ -23,13 +23,13 @@ export function qa_commit_entry_beside_moved_cases() {
         green: 1,
         beside: {
           karate_code: "7fcff35ee820",
-          ***REMOVED***: "383c69452c06",
+          neighbour_repo: "383c69452c06",
           portfolio_qa: "4536c3d4d002",
         },
       },
       heads: {
         karate_code: "cf5620f2341e",
-        ***REMOVED***: "383c69452c06",
+        neighbour_repo: "383c69452c06",
         portfolio_qa: "4536c3d4d002",
       },
       moved: [

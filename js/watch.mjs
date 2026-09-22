@@ -17,13 +17,15 @@ import { import_install } from "./import_install.mjs";
 import { property_set } from "./property_set.mjs";
 import { command_line_node_g } from "./command_line_node_g.mjs";
 export async function watch() {
-  ("The tree this watcher was started in wins over the tool repo's own tree whenever it is a repo the process may stand in, so a save in another tree is watched and transformed like a neighbour rather than missed. The dispatcher re-homes the process beside the tool repo, and every watched folder and every child command then answered about that one tree - so a watcher started inside the ***REMOVED*** copy of this tool missed ***REMOVED*** saves entirely and watched only the love neighbours.");
+  "The tree this watcher was started in wins over the tool repo's own tree whenever it is a repo the process may stand in, so a save in another tree is watched and transformed like a neighbour rather than missed. The dispatcher re-homes the process beside the tool repo, and every watched folder and every child command then answered about that one tree - so a watcher started inside a second copy of this tool missed every save in the tree it was started in and watched only the tool repo's own neighbours.";
   let chokidar = (await import_install("chokidar")).default;
   ("The process is stood back where it was started only when that folder is a repo: one whose parent lists it, and that holds a function store to watch. Started anywhere else it stays where the dispatcher stood it and watches that tree exactly as it always did.");
   let started_here = process_env("PWD") || "";
-  let store_here = path_join([started_here, functions_path()]);
+  let second = functions_path();
+  let store_here = path_join([started_here, second]);
   let store_there = await folder_exists(store_here);
-  let parent_here = path_join([started_here, repos_folder()]);
+  let previous = repos_folder();
+  let parent_here = path_join([started_here, previous]);
   let parent_there = await folder_exists(parent_here);
   let here_name = path_name(started_here);
   let parent_lists = false;
@@ -54,24 +56,31 @@ export async function watch() {
       property_set(in_progress, path, true);
       async function lambda3() {
         try {
-          await command_line_node_g(fn_name("function_auto_path"), [path]);
+          let f_name = fn_name("function_auto_path");
+          await command_line_node_g(f_name, [path]);
         } finally {
           property_set(in_progress, path, false);
           if (0) {
             try {
               let args = [path];
-              await command_line_node_g(fn_name("data_file_update"), args);
+              let f_name2 = fn_name("data_file_update");
+              await command_line_node_g(f_name2, args);
             } finally {
               property_set(in_progress, path, false);
             }
           }
         }
       }
-      log(fn_name("watch"), {
+      let f_name3 = fn_name("watch");
+      log(watch.name, {
         path,
       });
       try {
-        ("run the transform directly rather than under the repo-wide function_run_prompt lock. That lock made ONE stuck transform wedge the watcher for EVERY file: it is taken per transform, so a child that hung or was killed left it held, and every later save was logged and then dropped with 'is locked, skipping held by watch:<the stuck file>'. Concurrency is already handled per path by in_progress above, and Claude's edits by claude_edit_claim_fresh_is, so the lock was buying nothing that survived its own failure mode");
+        ("run the transform directly rather than under the repo-wide ",
+          fn_name("function_run_prompt"),
+          " lock. That lock made ONE stuck transform wedge the watcher for EVERY file: it is taken per transform, so a child that hung or was killed left it held, and every later save was logged and then dropped with 'is locked, skipping held by watch:<the stuck file>'. Concurrency is already handled per path by in_progress above, and Claude's edits by ",
+          fn_name("claude_edit_claim_fresh_is"),
+          ", so the lock was buying nothing that survived its own failure mode");
         await lambda3();
       } finally {
         property_set(in_progress, path, false);

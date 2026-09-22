@@ -7,9 +7,9 @@ export function function_part_name_cases() {
   arguments_assert(arguments, 0);
   let cases = [
     {
-      f_name: fn_name("***REMOVED***"),
-      nested: "clause_add",
-      named: "***REMOVED***",
+      f_name: fn_name("function_lift_wrapper_candidates"),
+      nested: "row_rank",
+      named: "function_lift_wrapper_candidates_row_rank",
       why: "the ordinary case: the holder's name, then the name the piece already answers to",
     },
     {

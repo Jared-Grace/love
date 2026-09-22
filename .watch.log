@@ -21,7 +21,6 @@ webpack_watch
   watching: [
     '../karate_code/js',
     '../love/js',
-    '../***REMOVED***/js',
     '../portfolio_qa/js'
   ]
 }
