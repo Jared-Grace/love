@@ -2694,6 +2694,7 @@ export function permission_grant_names() {
   let spelled2547 = fn_name("app_code_expression_written_gate_run");
   let spelled2548 = fn_name("app_en_learn_bible_gloss_urdu_passages_reworded");
   let spelled2549 = fn_name("lyric_video_song_document_draft");
+  let spelled2550 = fn_name("git_history_purge_paths");
   let names = [
     spelled,
     spelled2,
@@ -5244,6 +5245,7 @@ export function permission_grant_names() {
     spelled2547,
     spelled2548,
     spelled2549,
+    spelled2550,
   ];
   return names;
 }
