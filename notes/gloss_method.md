@@ -1,6 +1,8 @@
 # Glossing method
 
-**Read this before authoring gloss content for a passage.** It is the rubric for `app_original_bible` (Greek and Hebrew) and `app_ceb_bible` (Cebuano). One passage at a time, one entry per word.
+**Read this before authoring gloss content for a passage.** It is the rubric for `app_original_bible` (Greek and Hebrew), `app_ceb_bible` (Cebuano) and `app_en_learn_bible` (English words explained in Urdu). One entry per word, whether you author a passage at a time or a whole chapter at a time.
+
+**The Urdu store differs only in which two languages sit on either side of an entry.** The `word` is the English word, the `gloss` is its Urdu, and the `explain` is written *in Urdu* for a reader whose English is beginning. Everything below about simplicity, about defining a term where it is used, about never writing "same as above", and about minimum additional meaning applies to it word for word.
 
 The point of the note is that 260 chapters get authored across many sessions by many Claudes. Without a fixed method they drift, and drift is visible to the reader as unevenness. A settled method is also what lets review converge — you refine early chapters until corrections stop, then the rest is just reading.
 
@@ -114,7 +116,9 @@ On etymology: it is the best tool in the box and the easiest to fake. **Never in
 
 ## Simplest words
 
-**Every explain and every gloss is written as simply as it can be while staying true.** The human asked for this outright on 2026-09-15, for explanations and for translations alike. The test for each entry: **could a ten-year-old follow it on a first read?** If not, say it again in plainer words.
+**Every explain and every gloss is written as simply as it can be while staying true.** The human asked for this outright on 2026-09-15, for explanations and for translations alike, and again on 2026-09-22 with the instruction that it be **written down so it never has to be asked for again**. So it is a standing requirement of every gloss store, in force on every chapter, in every session, asked for or not. **Do not wait to be told; do not treat a request for "simple" as new information.** The test for each entry: **could a ten-year-old follow it on a first read?** If not, say it again in plainer words.
+
+**This is the sentence that discharges the asking.** A chapter authored to this note is authored simply by definition, so a session that follows the note owes the human no promise about simplicity and the human owes it no reminder. The only thing that can put simplicity back on the human's plate is an entry that breaks the test — which is a defect in the entry, not a missing instruction.
 
 - **Everyday words over exact-sounding ones.** "Shows there is more than one" over "makes what it marks many". "Prophecy" over "oracle".
 - **Short sentences, one idea each.** Split a sentence with a comma-chain in it.
@@ -167,6 +171,7 @@ Small choices, fixed once, so chapters authored months apart match:
 - [ ] Every `word` field is copied from `original`, not retyped.
 - [ ] No explain contradicts or exceeds its `parsing_long`. `app_original_bible_gloss_parsings_gate_run` (in `q`) settles the half of this a machine can: an explain naming a tense, mood or case that **no word of its passage** carries fails the build. Naming one that a *neighbouring* word carries is fine and expected — that is the comparison this rubric asks for — but it must still be a term you defined in this passage, because the passage is all the reader can see.
 - [ ] No "same as above", no empty explain, no markdown, no line breaks.
+- [ ] Every gloss and every explain passes the ten-year-old test — plain everyday words, short sentences, one idea each. This is standing, not a per-request extra.
 - [ ] Every grammar term used is defined somewhere in this passage before or where it is used.
 - [ ] No explain names a thing by a word borrowed from the English rendering that is never one of your own glosses, and no explain stacks a figure of speech on a figure of speech.
 - [ ] Every etymology is one you are certain of.
