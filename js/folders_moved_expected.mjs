@@ -50,10 +50,6 @@ export function folders_moved_expected() {
       after: folder_home_repo("portfolio_qa"),
     },
     {
-      before: "/home/j/repos/***REMOVED***",
-      after: folder_home_repo("***REMOVED***"),
-    },
-    {
       before: "/media/j/JPM/user",
       after: folder_drive_user(),
     },
