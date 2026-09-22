@@ -14,7 +14,7 @@ import { path_join } from "./path_join.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { list_set_difference } from "./list_set_difference.mjs";
-import { list_set } from "./list_set.mjs";
+import { list_unique_set } from "./list_unique_set.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
@@ -60,14 +60,14 @@ export async function git_history_texts_replace_rehearse(folder, words_text) {
   let blobs_after = await git_folder_head_path_blobs(clone_folder);
   let paths_before = properties_get(blobs_before);
   let paths_after = properties_get(blobs_after);
-  let known = list_set(paths_after);
+  let known = list_unique_set(paths_after);
   let gone = list_set_difference(paths_before, known);
   list_empty_is_assert_json(gone, {
     hint: "the rewrite took files out of the current commit, which taking words out of them can never do - the copy is left in place to look at, and nothing has been sent anywhere",
     clone_folder,
     gone,
   });
-  let known2 = list_set(paths_before);
+  let known2 = list_unique_set(paths_before);
   let arrived = list_set_difference(paths_after, known2);
   list_empty_is_assert_json(arrived, {
     hint: "the rewrite put files into the current commit that were not there before - the copy is left in place to look at, and nothing has been sent anywhere",
@@ -82,7 +82,7 @@ export async function git_history_texts_replace_rehearse(folder, words_text) {
     return n;
   }
   let changed = list_filter(paths_before, moved_is);
-  let known3 = list_set(holding);
+  let known3 = list_unique_set(holding);
   let stray = list_set_difference(changed, known3);
   list_empty_is_assert_json(stray, {
     hint: "the rewrite changed files that never held any of the named words, so it did something other than what it was asked - the copy is left in place to look at, and nothing has been sent anywhere",
