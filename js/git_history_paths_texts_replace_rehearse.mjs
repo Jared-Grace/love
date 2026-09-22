@@ -62,14 +62,13 @@ export async function git_history_paths_texts_replace_rehearse(
   let replacements_path = path_join([temp, name]);
   let fs = await import("node:fs");
   await fs.promises.writeFile(replacements_path, replacements, "utf8");
-  let asked = [
-    "filter-repo",
-    "--force",
+  let asked = git_filter_repo_asked_start();
+  list_add_multiple(asked, [
     "--replace-text",
     replacements_path,
     "--file-info-callback",
     callback,
-  ];
+  ]);
   await git_folder_run(clone_folder, asked);
   let blobs_after = await git_folder_head_path_blobs(clone_folder);
   let paths_before = properties_get(blobs_before);
