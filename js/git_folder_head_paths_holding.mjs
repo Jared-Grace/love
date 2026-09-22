@@ -1,3 +1,4 @@
+import { list_is_assert_json } from "./list_is_assert_json.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_add } from "./list_add.mjs";
@@ -15,6 +16,10 @@ export async function git_folder_head_paths_holding(folder, words) {
   ("This is the list a rewrite is proved against. A rewrite that takes words out is allowed to change a file that holds one of them and nothing else, so what has to be known beforehand is which files those are - and it has to be known from the present rather than from what came out, or the proof is reading the answer it is checking.");
   ("The words are looked for as plain runs of letters rather than as whole words, on purpose, and that is what makes this safe to prove against. It finds every file a whole-word sweep could touch and some it will not, so a file that changed and is not here is a real fault, while a file here that did not change is nothing at all. A narrower question asked here would let a real fault through.");
   ("Nothing found is an answer and not a failure. The tool says so by refusing rather than by printing an empty list, so the refusal is caught and read as the empty list it means.");
+  list_is_assert_json(words, {
+    hint: "the words have to arrive as a list, and a run of text handed in here is walked one letter at a time - which asks for every file holding any single letter, gets an answer, and looks exactly like a real one",
+    folder,
+  });
   let asked = ["grep", "-l", "-F"];
   for (let word of words) {
     list_add_multiple(asked, ["-e", word]);
