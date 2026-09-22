@@ -72,7 +72,8 @@ export async function git_history_purge_rehearse(
   let replacements_path = path_join([temp, name]);
   let fs = await import("fs");
   await fs.promises.writeFile(replacements_path, replacements, "utf-8");
-  let asked = ["filter-repo", "--force", "--invert-paths"];
+  let asked = git_filter_repo_asked_start();
+  list_add_multiple(asked, ["--invert-paths"]);
   for (let path of paths) {
     list_add_multiple(asked, ["--path", path]);
   }

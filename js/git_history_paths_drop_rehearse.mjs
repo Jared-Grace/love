@@ -43,7 +43,8 @@ export async function git_history_paths_drop_rehearse(folder, paths_text) {
   let commits_before = await git_folder_commits_count(folder);
   let clone_folder = await git_folder_clone_bare_temp(folder);
   let commit = await git_folder_head_commit(clone_folder);
-  let asked = ["filter-repo", "--force", "--invert-paths"];
+  let asked = git_filter_repo_asked_start();
+  list_add_multiple(asked, ["--invert-paths"]);
   for (let path of paths) {
     list_add_multiple(asked, ["--path", path]);
   }

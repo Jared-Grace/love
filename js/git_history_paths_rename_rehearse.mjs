@@ -47,7 +47,7 @@ export async function git_history_paths_rename_rehearse(
     pairs,
     clone_folder,
   );
-  let asked = ["filter-repo", "--force"];
+  let asked = git_filter_repo_asked_start();
   for (let pair of pairs) {
     let spelled = text_combine_3(pair.before, ":", pair.after);
     list_add_multiple(asked, ["--path-rename", spelled]);
