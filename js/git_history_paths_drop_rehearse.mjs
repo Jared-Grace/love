@@ -57,6 +57,12 @@ export async function git_history_paths_drop_rehearse(folder, paths_text) {
     paths,
   });
   let commits_after = await git_folder_commits_count(clone_folder);
+  equal_assert_json(commits_after, commits_before, {
+    hint: "the rewrite came back holding a different number of commits than it was given, so some of the past was thrown away rather than only changed - the copy is left in place to look at, and nothing has been sent anywhere",
+    clone_folder,
+    commits_before,
+    commits_after,
+  });
   let r = {
     clone_folder,
     paths,
