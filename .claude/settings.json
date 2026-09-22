@@ -2658,6 +2658,7 @@
       "Bash(node scripts/ai.mjs app_code_expression_written_gate_run:*)",
       "Bash(node scripts/ai.mjs app_en_learn_bible_gloss_urdu_passages_reworded:*)",
       "Bash(node scripts/ai.mjs lyric_video_song_document_draft:*)",
+      "Bash(node scripts/ai.mjs git_history_purge_paths:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -5207,6 +5208,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args app_code_expression_written_gate_run:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args app_en_learn_bible_gloss_urdu_passages_reworded:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args lyric_video_song_document_draft:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args git_history_purge_paths:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -7755,6 +7757,7 @@
       "Bash(node scripts/aig.mjs app_code_expression_written_gate_run:*)",
       "Bash(node scripts/aig.mjs app_en_learn_bible_gloss_urdu_passages_reworded:*)",
       "Bash(node scripts/aig.mjs lyric_video_song_document_draft:*)",
+      "Bash(node scripts/aig.mjs git_history_purge_paths:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -10303,7 +10306,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args folder_secret:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args app_code_expression_written_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args app_en_learn_bible_gloss_urdu_passages_reworded:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args lyric_video_song_document_draft:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args lyric_video_song_document_draft:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args git_history_purge_paths:*)"
     ],
     "defaultMode": "acceptEdits"
   },
