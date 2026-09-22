@@ -1,3 +1,4 @@
+import { git_history_rehearse_quietly } from "./git_history_rehearse_quietly.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { git_history_purge_rehearse } from "./git_history_purge_rehearse.mjs";
 import { git_history_rewrite_accept } from "./git_history_rewrite_accept.mjs";
