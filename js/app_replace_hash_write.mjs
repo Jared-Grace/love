@@ -1,3 +1,5 @@
+import { app_replace_rule_set_get } from "./app_replace_rule_set_get.mjs";
+import { app_replace_rule_set_hash_id } from "./app_replace_rule_set_hash_id.mjs";
 import { app_shared_hash_screen_add } from "./app_shared_hash_screen_add.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { app_replace_rule_set_hash_key } from "./app_replace_rule_set_hash_key.mjs";
@@ -7,7 +9,6 @@ import { app_shared_screen_stored_get } from "./app_shared_screen_stored_get.mjs
 import { property_set } from "./property_set.mjs";
 import { equal } from "./equal.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_replace_rule_set_index_get } from "./app_replace_rule_set_index_get.mjs";
 import { storage_session_get_context } from "./storage_session_get_context.mjs";
 import { html_hash_set_object } from "./html_hash_set_object.mjs";
 export function app_replace_hash_write(context) {
@@ -27,9 +28,7 @@ export function app_replace_hash_write(context) {
   let right2 = fn_name("app_replace_rule_set");
   let on_rule_set = equal(screen_name, right2);
   if (on_goals || on_rule_set) {
-    let rule_set_index = app_replace_rule_set_index_get(context);
-    let rule_sets = app_replace_rule_sets();
-    let rule_set = list_get(rule_sets, rule_set_index);
+    let rule_set = app_replace_rule_set_get(context);
     let id = app_replace_rule_set_hash_id(rule_set);
     property_set(hash, key, id);
   }
