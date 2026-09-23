@@ -17,8 +17,7 @@ export function app_replace_hash_restore(context) {
   "A screen is believed only once what it shows is in hand: the goals screen shows one rule set and the playing screen one goal of it, and either drawn without its choice dies on a blank page. A link naming the screen without them lands home instead - the same place a screen nobody has is sent.";
   let hash = html_hash_object_get();
   let rule_sets = app_replace_rule_sets();
-  let key = app_replace_rule_set_hash_key();
-  let rule_set_index = app_replace_hash_index_get(hash, key, rule_sets);
+  let rule_set_index = app_replace_hash_rule_set_index_get(hash, rule_sets);
   let rule_set_said = null_not_is(rule_set_index);
   let goal_said = false;
   if (rule_set_said) {

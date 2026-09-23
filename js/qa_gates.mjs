@@ -1,3 +1,4 @@
+import { app_en_learn_bible_gloss_urdu_published_unfinished_gate_run } from "./app_en_learn_bible_gloss_urdu_published_unfinished_gate_run.mjs";
 import { git_history_purge_case_blind_gate_run } from "./git_history_purge_case_blind_gate_run.mjs";
 import { app_code_color_tone_gate_run } from "./app_code_color_tone_gate_run.mjs";
 import { app_code_highlight_color_gate_run } from "./app_code_highlight_color_gate_run.mjs";
@@ -1153,6 +1154,7 @@ export function qa_gates() {
     app_code_highlight_color_gate_run,
     app_code_color_tone_gate_run,
     git_history_purge_case_blind_gate_run,
+    app_en_learn_bible_gloss_urdu_published_unfinished_gate_run,
   ];
   return gates;
 }
