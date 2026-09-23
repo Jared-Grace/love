@@ -73,12 +73,16 @@ export function app_reply_rules_approve_button(
       html_font_color_set(said, gray);
     }
     async function on_press() {
-      let f = fn_name("reply_approved_write");
-      await app_shared_api_named(f, [f_name, text]);
+      await app_shared_api_named(fn_name("reply_approved_write"), [
+        f_name,
+        text,
+      ]);
       state_show("approved");
       ("Every approval may be the last one a change was waiting on, so each one asks for the finished changes to be put into the code, and says so here when one was.");
-      let f_apply = fn_name("reply_proposals_approved_apply");
-      let applied = await app_shared_api_named(f_apply, []);
+      let applied = await app_shared_api_named(
+        fn_name("reply_proposals_approved_apply"),
+        [],
+      );
       let none = list_empty_is(applied);
       if (none) {
         return;
