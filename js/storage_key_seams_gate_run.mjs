@@ -31,14 +31,12 @@ export async function storage_key_seams_gate_run() {
     return n;
   }
   let unclassified = list_filter(callers, classified_not_is);
-  let f_name = fn_name("storage_key_seams_durable");
-  let f_name2 = fn_name("storage_key_seams_durable_not");
   list_empty_is_assert_json(unclassified, {
     hint: text_combine_multiple([
       "a new place composes a browser storage key and nothing says which store stands behind it - if what it writes is still there after the tab closes, name it in ",
-      f_name,
+      fn_name("storage_key_seams_durable"),
       " so a rename of an owner is watched; if it is not, name it in ",
-      f_name2,
+      fn_name("storage_key_seams_durable_not"),
       " with the reason",
     ]),
     unclassified,
