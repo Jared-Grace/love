@@ -16,14 +16,13 @@ export async function qa_gates_countless_gate_run() {
   let gates = property_get(walked, "gates");
   let countless = property_get(walked, "countless");
   let path = qa_gates_countless_baseline_path();
-  let name_write = fn_name("qa_gates_countless_baseline_write");
   let hint =
     "these gates say nothing a reader could tell a clean run from a blind one by - hand back how much was reached alongside the verdict, a count of what the sweep walked rather than a length worked out from the offenders, which is nothing on every run that passes anyway";
   let told = await baseline_names_gate_generic(
     countless,
     path,
     hint,
-    name_write,
+    fn_name("qa_gates_countless_baseline_write"),
   );
   let added = property_get(told, "added");
   let stale = property_get(told, "stale");
