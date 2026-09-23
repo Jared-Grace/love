@@ -25,8 +25,7 @@ export async function app_code_reload_persists_test_on_page(
   async function check(id) {
     "the three words this address stands on are frozen, so each is read off the function holding it rather than spelled into the joined-up text - a word fused into a separator is invisible to everything that watches for a wording change";
     let v = app_shared_screen_hash_key();
-    let screen_name = fn_name("app_code_quiz");
-    let f_name = app_code_screen_name_short(screen_name);
+    let f_name = app_code_screen_name_short(fn_name("app_code_quiz"));
     let v2 = app_code_quiz_hash_key();
     let combined = text_combine_multiple([",", v, "=", f_name, ",", v2, "=0"]);
     let v3 = app_code_lesson_hash_key();
