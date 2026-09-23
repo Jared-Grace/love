@@ -23,7 +23,11 @@ export async function functions_tail_duplicates_gate_run() {
   let path = functions_tail_duplicates_baseline_path();
   let hint =
     "these functions now end in the same run of work, which is a helper waiting to be written - give the shared ending its own name and call it from each. The record only ever shrinks, so a new group cannot be recorded as known: collapsing the ending is the only way out";
-  let name_write = fn_name("functions_tail_duplicates_baseline_write");
-  let r = await baseline_names_gate_generic(named, path, hint, name_write);
+  let r = await baseline_names_gate_generic(
+    named,
+    path,
+    hint,
+    fn_name("functions_tail_duplicates_baseline_write"),
+  );
   return r;
 }
