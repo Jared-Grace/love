@@ -40,8 +40,7 @@ export async function js_literal_prefix_folder_join(
     let quoted = text_quote_double(rest);
     let joined = js_code_join_comma_space([getter_code, quoted]);
     let listed = js_code_wrap_brackets(joined);
-    let f_name = fn_name("path_join");
-    let code = js_code_call_args(f_name, [listed]);
+    let code = js_code_call_args(fn_name("path_join"), [listed]);
     return code;
   }
   let changed = await js_strings_code_replace_generic(ast, join_code_or_null);
