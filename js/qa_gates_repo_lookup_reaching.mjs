@@ -11,8 +11,10 @@ export async function qa_gates_repo_lookup_reaching() {
   "What the offender should do instead is work the folder out from where the code is standing. That reading is right in both places at once - inside a frozen copy it names that copy, in the working folder it names the working folder - while a name looked up in a setting names one same place whichever copy is asking.";
   arguments_assert(arguments, 0);
   let names = await qa_gates_names();
-  let target = fn_name("user_repo_path_combine");
-  let offenders = await function_names_reaching(names, target);
+  let offenders = await function_names_reaching(
+    names,
+    fn_name("user_repo_path_combine"),
+  );
   let r = {
     walked: names.length,
     offenders,
