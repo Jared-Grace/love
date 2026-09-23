@@ -20,8 +20,10 @@ export function js_function_arguments_assert_add(declaration) {
   }
   let count = property_list_size(declaration, "params");
   let counted = text_to(count);
-  let name = fn_name("arguments_assert");
-  let code = js_code_call_args_statement(name, ["arguments", counted]);
+  let code = js_code_call_args_statement(fn_name("arguments_assert"), [
+    "arguments",
+    counted,
+  ]);
   let statement = js_parse_statement(code);
   list_add_first(statements, statement);
 }
