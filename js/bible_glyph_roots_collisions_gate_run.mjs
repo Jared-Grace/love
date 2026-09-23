@@ -14,13 +14,12 @@ export async function bible_glyph_roots_collisions_gate_run() {
   let walked = property_get(told, "walked");
   let offenders = property_get(told, "offenders");
   let path = bible_glyph_roots_collisions_baseline_path();
-  let name_write = fn_name("bible_glyph_roots_collisions_baseline_write");
   let r = await baseline_names_gate_walked_generic(
     walked,
     offenders,
     path,
     "these pictures each stand for two roots at once, so two different words come out of the alphabet looking identical - give the second root a picture of its own, or drop it from the table if English really does say it with the same word",
-    name_write,
+    fn_name("bible_glyph_roots_collisions_baseline_write"),
   );
   return r;
 }
