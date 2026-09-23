@@ -39,8 +39,7 @@ export function js_code_fn_names_pieces(segments, fn_names) {
       ("in the first place.");
       let quoted = js_code_string(text);
       let args = [quoted];
-      let f_name = fn_name("fn_name");
-      let code = js_code_call_args(f_name, args);
+      let code = js_code_call_args(fn_name("fn_name"), args);
       list_add(pieces, code);
     } else {
       buffer = text_combine(buffer, text);
