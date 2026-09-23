@@ -39,12 +39,11 @@ export async function function_reachable_bytes_ranked(f_name) {
   let shown_count = 30;
   let largest = list_take(ranked, shown_count);
   let carried = list_size(reached);
-  let hint = fn_name("function_reachable_names");
   let r = {
     carried,
     total,
     largest,
-    walked_by: hint,
+    walked_by: fn_name("function_reachable_names"),
   };
   return r;
 }
