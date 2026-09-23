@@ -265,7 +265,7 @@ export function song_image_couplet_glosses() {
         "Described. A pure river of water of life, and on either side of the river was there the tree of life. The trees stand on both banks because the verse puts them on both, which is the detail most pictures of it drop.",
     },
     33: {
-      kept: 20,
+      kept: 21,
       lyric_ref: "Revelation 21:4, Isaiah 25:8, Revelation 7:17",
       lyric_explain:
         "GOD shall wipe away all tears from their eyes. Isaiah had said the same, that the Lord GOD will wipe away tears from off all faces, and Revelation says it twice over.",

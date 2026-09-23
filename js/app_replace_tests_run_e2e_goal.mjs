@@ -1,5 +1,5 @@
+import { app_replace_tests_refresh } from "./app_replace_tests_refresh.mjs";
 import { log_keep } from "./log_keep.mjs";
-import { playwright_refresh } from "./playwright_refresh.mjs";
 import { app_replace_rule_set_success_attribute_next } from "./app_replace_rule_set_success_attribute_next.mjs";
 import { playwright_by_attribute_test_exists_assert } from "./playwright_by_attribute_test_exists_assert.mjs";
 import { app_replace_rule_set_success_attribute_completed } from "./app_replace_rule_set_success_attribute_completed.mjs";
@@ -30,7 +30,7 @@ export async function app_replace_tests_run_e2e_goal(
       goal,
       e2e_inner_fn_name: e2e_inner_fn.name,
     });
-    await playwright_refresh(page);
+    await app_replace_tests_refresh(page);
     let json = json_to(goal);
     let fns = app_replace_rule_sets_fns();
     let last = list_last(fns);
