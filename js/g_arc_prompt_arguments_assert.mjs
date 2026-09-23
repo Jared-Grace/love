@@ -37,13 +37,11 @@ export function g_arc_prompt_arguments_assert(
     hint: "the settled facts about the person, printed as the JSON the prompt says is there",
   });
   let bi = boolean_is(leader);
-  let f_name = fn_name("g_arc_prompt_chapter");
-  let f_name2 = fn_name("g_arc_prompt_chapter_leader");
   let hint = list_join_space([
     "whether this person is the elder the plant is left with - a real boolean, because the word false read off a command line is truthy. Call",
-    f_name,
+    fn_name("g_arc_prompt_chapter"),
     "or",
-    f_name2,
+    fn_name("g_arc_prompt_chapter_leader"),
     "instead, which name the answer rather than passing it",
   ]);
   assert_json(bi, {
