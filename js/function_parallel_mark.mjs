@@ -16,8 +16,11 @@ export async function function_parallel_mark(f_name) {
   async function mark(ast) {
     let block = js_find_body_block(ast);
     let selects = [block];
-    let mark_name = fn_name("function_duplicate_kind_parallel");
-    await js_block_call_add_first(ast, selects, mark_name);
+    await js_block_call_add_first(
+      ast,
+      selects,
+      fn_name("function_duplicate_kind_parallel"),
+    );
   }
   await function_transform_auto(f_name, mark);
   return f_name;
