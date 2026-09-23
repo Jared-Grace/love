@@ -19,9 +19,11 @@ export async function bible_usfm_books_render(
   ("Which books to offer is asked of the machine serving the page rather than assumed, because a usfm shelf is a folder of files and only that machine can see it.");
   ("THE WAIT FOR THAT ANSWER IS SAID OUT LOUD. It is a fetch, so it can take long enough that the place this draws into sits empty, and an empty place after a press is indistinguishable from a press that did nothing at all. The same line is shown for the same reason on the chapters next door.");
   let said = text_loading_said("the books");
-  let f_name = fn_name("bible_usfm_version_books");
   async function books_ask() {
-    let asked = await app_shared_api_named(f_name, [version]);
+    let asked = await app_shared_api_named(
+      fn_name("bible_usfm_version_books"),
+      [version],
+    );
     return asked;
   }
   let books = await html_parent_waiting_run(parent, said, books_ask);
