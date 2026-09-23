@@ -14,12 +14,15 @@ export async function baselines_folder_literal_repair() {
   arguments_assert(arguments, 0);
   let folder = data_given_baselines_folder();
   let inside = text_combine(folder, "/");
-  let getter = fn_name("data_given_baselines_folder");
   let before = await baselines_folder_literal_names();
   let repaired = [];
   for (let f_name of before) {
     async function join_prefixed(ast) {
-      await js_literal_prefix_folder_join(ast, inside, getter);
+      await js_literal_prefix_folder_join(
+        ast,
+        inside,
+        fn_name("data_given_baselines_folder"),
+      );
     }
     await function_transform_imports(f_name, join_prefixed);
     list_add(repaired, f_name);
