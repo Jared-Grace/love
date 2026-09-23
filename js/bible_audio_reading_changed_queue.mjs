@@ -16,7 +16,9 @@ export async function bible_audio_reading_changed_queue(
   "Which folder to read, which three doors to stand on, and how the named chapters are split are the same for every reading-changed measurement, and are asked for whole rather than assembled again here.";
   arguments_assert(arguments, 2);
   let args = await bible_audio_reading_changed_args(bible_folder, chapters);
-  let script_name = fn_name("bible_audio_reading_changed_queue");
-  let reported = await py_script_speech_json_report(script_name, args);
+  let reported = await py_script_speech_json_report(
+    fn_name("bible_audio_reading_changed_queue"),
+    args,
+  );
   return reported;
 }
