@@ -18,22 +18,20 @@ export async function data_rooms_gate_run() {
   let expected = data_rooms_expected();
   let unexpected = list_difference(present, expected);
   let absent = list_difference(expected, present);
-  let f_name = fn_name("data_rooms_expected");
   list_empty_is_assert_json(unexpected, {
     hint: text_combine_multiple([
       "something is in the data folder that is neither of its two rooms - if it is read to decide what happens next it belongs in the given room, and if it is a record of what already happened it belongs in the found one; if it is a file that came back on its own, a reader is still holding the path it had before the move and the empty file it left can go",
       ", or, if there really is a third kind, ",
-      f_name,
+      fn_name("data_rooms_expected"),
       " should say so",
     ]),
     unexpected,
     expected,
   });
-  let f_name2 = fn_name("data_rooms_expected");
   list_empty_is_assert_json(absent, {
     hint: text_combine_multiple([
       "a room the data folder is made of is not there any more - if it moved, say where in the function naming it; if the split itself changed, ",
-      f_name2,
+      fn_name("data_rooms_expected"),
       " should say so",
     ]),
     absent,
