@@ -15,7 +15,11 @@ export async function app_code_lesson_ids_gate_run() {
   let path = app_code_lesson_ids_baseline_path();
   let hint =
     "these lesson ids are being taught and the record does not hold them - if they are meant to be what learners' progress is stored under, record them";
-  let name_write = fn_name("app_code_lesson_ids_baseline_write");
-  let r = await baseline_names_gate_generic(ids, path, hint, name_write);
+  let r = await baseline_names_gate_generic(
+    ids,
+    path,
+    hint,
+    fn_name("app_code_lesson_ids_baseline_write"),
+  );
   return r;
 }
