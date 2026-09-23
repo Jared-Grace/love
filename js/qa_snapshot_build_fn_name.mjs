@@ -16,6 +16,5 @@ export async function qa_snapshot_build_fn_name(folder) {
     return leaner;
   }
   ("The older command builds the local bundle for trying things out as well as the one that ships. That is waste inside a copy nobody serves from, and it is the waste this whole question exists to skip - but a build that wastes a minute is a build, and a build asking for a name that is not there is nothing at all");
-  let older = fn_name("html_update_latest_promote");
-  return older;
+  return fn_name("html_update_latest_promote");
 }
