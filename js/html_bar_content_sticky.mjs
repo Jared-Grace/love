@@ -3,9 +3,9 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { html_viewport_height_visible } from "./html_viewport_height_visible.mjs";
 import { html_sticky_top } from "./html_sticky_top.mjs";
 import { html_style_flex } from "./html_style_flex.mjs";
-import { html_sticky_bottom } from "./html_sticky_bottom.mjs";
 import { html_foot_tail_attribute_name } from "./html_foot_tail_attribute_name.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
+import { html_sticky_bottom } from "./html_sticky_bottom.mjs";
 export function html_bar_content_sticky(root) {
   "a bar that stays at the top while the page itself does the scrolling. The twin next door instead gives the body its own scrollbar inside a box as tall as the screen - which on Android Firefox re-lays-out the moment the soft keyboard opens, at the exact instant the keyboard is taking hold of the box being typed into, and typing then reaches nothing. A page that scrolls the ordinary way keeps the keyboard on the path every plain web page uses, so screens holding a place to type belong here.";
   "A foot is handed back beside the bar, staying against the bottom of the screen the way the bar stays against the top, and it is a place rather than a thing - empty it has no height and a reader never learns it is there.";
@@ -22,11 +22,12 @@ export function html_bar_content_sticky(root) {
   html_sticky_top(bar);
   let content = html_div(shell);
   html_style_flex(content, "1 0 auto");
+  ("Between the body and the foot is a place kept for the two ways out of an app, marked on the page so they can find it - they are added once a screen has drawn, by something handed the page and nothing else. It is not held: the ways out are met at the end of the reading, not carried the whole way down it. Coming after the body that grows to fill the screen, it sits at the bottom of the screen on a short page, just above the foot.");
+  let tail = html_div(shell);
+  let name = html_foot_tail_attribute_name();
+  html_attribute_set(tail, name, "");
   let foot = html_div(shell);
   html_sticky_bottom(foot);
-  ("The foot is marked on the page, so the two ways out of an app - added once a screen has drawn, by something handed the page and nothing else - join this foot instead of holding themselves against the same edge and covering it.");
-  let name = html_foot_tail_attribute_name();
-  html_attribute_set(foot, name, "");
   let v = {
     bar,
     content,
