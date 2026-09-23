@@ -31,10 +31,9 @@ export async function functions_native_callback_gate_run() {
   let methods = js_array_methods_callback();
   let offenders = await functions_native_callback_imported();
   let names = list_map_property(offenders, "f_name");
-  let f_name = fn_name("list_map");
   let advice = text_combine_multiple([
     "these hand an imported name straight to a native array method, which passes the index and the whole list after the item - wrap it in a lambda taking one argument, or call ",
-    f_name,
+    fn_name("list_map"),
     " and its siblings, which hand the lambda exactly one thing",
   ]);
   let hint = {
