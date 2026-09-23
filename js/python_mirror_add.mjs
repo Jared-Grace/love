@@ -60,7 +60,6 @@ export async function python_mirror_add(f_name, constant) {
     let elements = property_get(init, "elements");
     list_add(elements, record);
   }
-  let target = fn_name("python_mirrors");
-  let output = await function_transform_auto(target, lambda);
+  let output = await function_transform_auto(fn_name("python_mirrors"), lambda);
   return output;
 }
