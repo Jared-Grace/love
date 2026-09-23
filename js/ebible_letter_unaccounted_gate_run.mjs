@@ -15,13 +15,11 @@ export async function ebible_letter_unaccounted_gate_run() {
   let published = await ebible_readaloud_lines_differ_as_published_names();
   let walked = list_size(published);
   let offenders = await ebible_letter_unaccounted_names();
-  let f_name = fn_name("ebible_letter_accounted_path");
-  let f_name_names = fn_name("ebible_letter_unaccounted_names");
   let hint = text_combine_multiple([
     "eBible publishes this chapter with its verse marks and its spoken lines disagreeing, and nobody has said what it is. Open the chapter's page and decide: a page marking two verses together as one range, or a read-aloud edition merging some, is no fault and the translation meant it; a marker missing where the words are there, or words missing outright, is worth telling them about. Then write what you decided into the record at ",
-    f_name,
+    fn_name("ebible_letter_accounted_path"),
     ", one line under the chapter's name saying either why it is no fault or that it has gone into the draft letter at notes/letters/ebible_letter.md. Which chapters are waiting is ",
-    f_name_names,
+    fn_name("ebible_letter_unaccounted_names"),
   ]);
   let r = list_empty_is_assert_walked_generic(walked, offenders, hint);
   return r;
