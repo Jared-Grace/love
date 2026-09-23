@@ -35,6 +35,6 @@ export function js_call_fn_name_literal_is(node) {
     return false;
   }
   let value = property_get(arg, "value");
-  let text_is = equal(typeof value, "string");
-  return text_is;
+  let string_is = equal(typeof value, "string");
+  return string_is;
 }
