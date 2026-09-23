@@ -20,8 +20,10 @@ export async function folder_moved_stale(before) {
   "The copies are asked about the folder alone, because where a copy pulls from is an address and an address is written the one way.";
   "The links are asked for too, and this line used to say they were not worth asking about - that only the one reaching the assistant's memory mattered, and that it would fail loudly. Both halves were wrong. A move left two links pointing into the old place, one starting the desktop's keyboard shortcuts at login and one standing in the folder of programs; neither failed loudly, and what they did instead was stop happening.";
   let folders = folders_moved_stale_folders();
-  let f_name = fn_name("folders_moved_expected");
-  let register = text_combine_multiple([f_name, ".mjs"]);
+  let register = text_combine_multiple([
+    fn_name("folders_moved_expected"),
+    ".mjs",
+  ]);
   let spellings = folder_spellings(before);
   let files = [];
   for (let folder of folders) {
