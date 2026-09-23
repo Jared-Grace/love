@@ -26,8 +26,9 @@ export async function lyric_timing_desk_load(desk) {
   let chapter_said = lyric_timing_chapter_said(asked);
   let said = text_loading_said(book_name + " " + chapter_said);
   html_text_content_set(desk.cards.said, said);
-  let f_name = fn_name("lyric_timing_open");
-  let opened = await app_shared_api_named(f_name, [asked]);
+  let opened = await app_shared_api_named(fn_name("lyric_timing_open"), [
+    asked,
+  ]);
   lyric_timing_held_open(desk.held, opened);
   lyric_timing_cards_show(desk.cards, desk.held);
   desk.path_document = opened.path_document;
