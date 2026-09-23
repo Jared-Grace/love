@@ -13,13 +13,12 @@ export async function bible_gathered_gaps_gate_run() {
   ("Two holes remain invisible to this and are worth knowing about. A gap at the END of a chapter needs that chapter's verse count, which lives in the Bible text on a device and not in this repo; a gap at the end of a BOOK needs the book's chapter count the same way. So a green result here means no hole was FOUND, never that no verse was missed.");
   let told = await bible_gathered_gaps_named();
   let path = bible_gathered_gaps_baseline_path();
-  let name_write = fn_name("bible_gathered_gaps_baseline_write");
   let r = await baseline_names_gate_walked_generic(
     told.walked,
     told.names,
     path,
     "the gathered corpus has holes it did not have before - gather these verses, or if they are being left out on purpose say why in the span's prose and record them",
-    name_write,
+    fn_name("bible_gathered_gaps_baseline_write"),
   );
   return r;
 }
