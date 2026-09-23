@@ -24,43 +24,37 @@ export async function bible_sentence_end_marks_gate_run() {
   let unreached = property_get(findings, "unreached");
   ("A BIBLE STORAGE HOLDS NOTHING FOR IS COUNTED AND NOT REFUSED, which is the one finding here that passes on purpose. It is a real fault and it is not this one: nothing was uploaded, so there was no chapter to read, and every hint below would send its reader to a list of languages or to a set of marks where there is nothing to correct. The gate that names those bibles is the one that can be acted on, and a fault refused in two places is a fault repaired in neither.");
   let unstored = property_get(findings, "unstored");
-  let f_name = fn_name("bible_sentence_end_marks_write");
   list_empty_is_assert_json(unmeasured, {
     hint: text_combine_multiple([
       "a bible is shipped that has never been read for how it ends a sentence - read them all with ",
-      f_name,
+      fn_name("bible_sentence_end_marks_write"),
       ", which reaches the network and rewrites the record",
     ]),
     unmeasured,
   });
-  let f_name2 = fn_name("bible_sentence_end_marks_write");
   list_empty_is_assert_json(departed, {
     hint: text_combine_multiple([
       "the record holds a bible this repo no longer ships - write it again with ",
-      f_name2,
+      fn_name("bible_sentence_end_marks_write"),
       " so what is checked is what is here",
     ]),
     departed,
   });
-  let f_name3 = fn_name("ebible_languages");
-  let f_name4 = fn_name("bible_sentence_end_marks_write");
   list_empty_is_assert_json(unread, {
     hint: text_combine_multiple([
       "not one verse of this bible could be read, so nothing is known about how it ends a sentence and the record only looks like it says so - check the folder name against ",
-      f_name3,
+      fn_name("ebible_languages"),
       ", then read them again with ",
-      f_name4,
+      fn_name("bible_sentence_end_marks_write"),
     ]),
     unread,
   });
-  let f_name5 = fn_name("bible_verse_end_suffixes");
-  let f_name6 = fn_name("bible_folders_sentence_end_unmarked");
   list_empty_is_assert_json(unnamed, {
     hint: text_combine_multiple([
       "this bible was read and not one of its verses ended on a mark known here, so anything waiting for one of its sentences to finish waits until it gives up. The record says beside it what its verses did end on: if one of those is its full stop, add that mark to ",
-      f_name5,
+      fn_name("bible_verse_end_suffixes"),
       "; if it truly writes none, name it in ",
-      f_name6,
+      fn_name("bible_folders_sentence_end_unmarked"),
       " so it is left out of the asking rather than answered no",
     ]),
     unnamed,
@@ -68,34 +62,31 @@ export async function bible_sentence_end_marks_gate_run() {
   });
   ("A NAME LEFT BEHIND BY A BIBLE THAT WENT AWAY IS REFUSED BEFORE THE ONE BESIDE IT, and the two are worth keeping apart even though both are about the same list. This one is certain - the name is in no roster and no reading of it exists anywhere - so there is nothing to measure again and nothing to look at by hand. The one below rests on a reading, and a reading can be redone.");
   ("THE FIRST TIME THIS FIRED IT WAS ANSWERED BY READING AND NOT BY ASKING, and the hint used to say the opposite. Thai was refused here, the hint said a person had to decide whether the bible was meant to go, and the repo had already decided: one commit had taken it out of the languages, out of the licence baseline and into the sources note, all on its terms, a day earlier. So the hint now sends its reader to look before it tells them to choose. A bible is let go of for its licence far more often than for anything else, and that is written down every time.");
-  let f_name9 = fn_name("bible_folders_sentence_end_unmarked");
   let f_name10 = fn_name("ebible_languages");
   list_empty_is_assert_json(named_unshipped, {
     hint: text_combine_multiple([
       "this name is in the list of bibles whose sentences cannot be found, and this repo ships no bible by that name - so it says nothing about anybody's reading and is only a word left behind. Look before deciding: search the history of ",
       f_name10,
       " for the name, and read notes/bible_sources.md, because a translation is dropped for its licence more often than for anything else and that is always written up. If the bible was let go of on purpose, the name goes with it, out of ",
-      f_name9,
+      fn_name("bible_folders_sentence_end_unmarked"),
       ". If nothing anywhere says it was meant to go, it went by accident and belongs back in ",
       f_name10,
       ", and that second case is the only one a person has to answer",
     ]),
     named_unshipped,
   });
-  let f_name7 = fn_name("bible_folders_sentence_end_unmarked");
   list_empty_is_assert_json(named_wrongly, {
     hint: text_combine_multiple([
       "this bible is named as one whose sentences cannot be found, and it was read finishing them - so its readers are being denied a whole reading they could have had. Take it out of ",
-      f_name7,
+      fn_name("bible_folders_sentence_end_unmarked"),
     ]),
     named_wrongly,
   });
   ("The passing finding is refused after the standing ones on purpose. A bible read and found to write no marks is true until somebody changes the bible; a chapter that would not answer this afternoon may answer this evening. Reporting the passing thing first would bury the lasting one under it.");
-  let f_name8 = fn_name("bible_sentence_end_marks_write");
   list_empty_is_assert_json(unreached, {
     hint: text_combine_multiple([
       "these bibles were asked and the far end never answered, so nothing is known about how they end a sentence - that is this run having failed rather than anything being wrong with the bible, so measure again with ",
-      f_name8,
+      fn_name("bible_sentence_end_marks_write"),
       ", and if the same bibles come back unreached twice then the far end really is refusing them and it is worth looking at by hand",
     ]),
     unreached,
