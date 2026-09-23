@@ -12,10 +12,9 @@ export async function bible_glyph_chapters_language_functions() {
   let repo_name = repo_love_name();
   let mark = bible_glyph_language_written_mark();
   let found = await repo_functions_names_code_includes(repo_name, mark);
-  let keeper = fn_name("bible_glyph_language_written_mark");
   let names = [];
   for (let name of found) {
-    let itself = equal(name, keeper);
+    let itself = equal(name, fn_name("bible_glyph_language_written_mark"));
     if (itself) {
       continue;
     }
