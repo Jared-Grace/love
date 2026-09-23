@@ -9,7 +9,9 @@ export function g_arc_approved_write_path(chapter_code) {
   "A SNAPSHOT AND NOT A MARK, for the same reason the reading store keeps one. What a later reviewer needs is not whether the arc has been approved but WHICH LINES were approved as they now stand, and only the text as it was passed can answer that. It also means no flag can go stale: an edited line stops matching on its own, so a revision withdraws the approval of exactly the lines it changed and of no others.";
   "THE NAME IS SPELLED RATHER THAN IMPORTED for the same reason the reading store's is: the writer imports this, so importing the writer back to borrow its name would close a ring.";
   arguments_assert(arguments, 1);
-  let f_name = fn_name("g_arc_approved_write");
-  let path = storage_function_path_json(chapter_code, f_name);
+  let path = storage_function_path_json(
+    chapter_code,
+    fn_name("g_arc_approved_write"),
+  );
   return path;
 }
