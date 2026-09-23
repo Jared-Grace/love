@@ -27,8 +27,7 @@ export function js_function_arguments_assert_each_size_or_null(declaration) {
     }
     let callee = property_get(call, "callee");
     let name = js_identifier_name_try(callee);
-    let right = fn_name("arguments_assert_each");
-    let each_is = equal(name, right);
+    let each_is = equal(name, fn_name("arguments_assert_each"));
     if (not(each_is)) {
       return;
     }
