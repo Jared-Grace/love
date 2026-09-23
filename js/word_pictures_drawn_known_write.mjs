@@ -36,11 +36,9 @@ export async function word_pictures_drawn_known_write() {
       known[word] = drawn;
     }
   }
-  let f_name = fn_name("word_pictures_drawn_known");
-  let f_name2 = fn_name("word_pictures_drawn_known_write");
   let first = text_combine_multiple([
     "Which attempts exist for each taught word, as a plain table written out by ",
-    f_name2,
+    fn_name("word_pictures_drawn_known_write"),
     " and never edited by hand.",
   ]);
   let prose = [
@@ -48,6 +46,10 @@ export async function word_pictures_drawn_known_write() {
     "THE FOLDER IS THE TRUTH ABOUT WHAT HAS BEEN DRAWN, and this is a copy of it for the one reader that cannot count files: the review screen runs in a browser and decides what to draw in a single pass with nothing to wait for. A screen that had to ask the disk mid-render would have to become asynchronous all the way up for a fact that only changes when somebody runs a draw.",
     "IT IS GENERATED AND NOT KEPT BY HAND for the usual reason - a hand-kept list disagrees with the folder silently, and the disagreement shows up as a picture that will not load rather than as an error.",
   ];
-  await function_constant_json_write(f_name, prose, known);
+  await function_constant_json_write(
+    fn_name("word_pictures_drawn_known"),
+    prose,
+    known,
+  );
   return known;
 }
