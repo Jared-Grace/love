@@ -4,8 +4,6 @@ export function qa_gate_said_listed_cases() {
   "Everything a gate said while it was failing, and the offenders a reader must be able to pick out of it.";
   "This reading decides whether a red gate can be shown to be about somewhere else, and a gate that names nobody holds every app in the repo out of a deployment. So the cases that must answer with a name and the cases that must answer with nothing carry equal weight: reading too little blocks work that was never at fault, and reading a sentence as if it were a name lets a gate claim to have named somebody while naming nothing that could ever match.";
   "Written as the run really sees it, not as the gate wrote it. A gate is free to print as it goes, so the lines it printed stand in front of the record it threw, and a reader given only the record would answer every one of these correctly while answering nothing the run ever hands it.";
-  let f_name = fn_name("app_shared_bible_verse_line");
-  let f_name2 = fn_name("app_shared_bible_verse_line");
   let cases = [
     {
       said: '{"list":["ceb_bible"],"json":{"hint":"gloss chapters explain words the passage does not carry"}}',
@@ -25,10 +23,10 @@ export function qa_gate_said_listed_cases() {
     {
       said: text_combine_multiple([
         '{"list":[{"name":"',
-        f_name,
+        fn_name("app_shared_bible_verse_line"),
         '","hint":"this function is longer than the ceiling"}]}',
       ]),
-      listed: [f_name2],
+      listed: [fn_name("app_shared_bible_verse_line")],
       why: "an offender written as a record carrying a hint beside its name - the name is a word anything can answer to, the hint is prose and must be left where it is",
     },
     {
