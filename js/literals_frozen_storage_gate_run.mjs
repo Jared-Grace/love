@@ -16,11 +16,10 @@ export async function literals_frozen_storage_gate_run() {
   let walked = await literals_frozen_storage_walked();
   let openers = property_get(walked, "openers");
   let offenders = property_get(walked, "offenders");
-  let f_name = fn_name("literals_frozen_name_add");
   list_empty_is_assert_json(offenders, {
     hint: text_combine_multiple([
       "a browser database is opened with a word nothing has frozen, so it could be changed here while readers' browsers go on looking under the old one - name it with ",
-      f_name,
+      fn_name("literals_frozen_name_add"),
       ", which puts it on the frozen list and records what it says today in one go, and then write the paragraph above the line it added saying how the word escaped",
     ]),
     offenders,
