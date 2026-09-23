@@ -7,7 +7,6 @@ export async function function_browser_guarded_is(f_name) {
   "The path is searched for across every repo rather than assumed to be this one, because an entry point can live in a sibling repo and the question about it is the same question. Assuming one repo turned that case into a file-not-found rather than an answer.";
   let f_path = await function_name_to_path_found(f_name);
   let code = await file_read(f_path);
-  let guard = fn_name("browser_is");
-  let guarded = text_includes(code, guard);
+  let guarded = text_includes(code, fn_name("browser_is"));
   return guarded;
 }
