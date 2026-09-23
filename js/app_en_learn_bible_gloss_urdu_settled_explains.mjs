@@ -7,7 +7,9 @@ export function app_en_learn_bible_gloss_urdu_settled_explains() {
   "They are joined here rather than in either table so that the pass which writes settled wordings over shared labels asks one question and not two, and so that a third kind of word - the verbs are the next - is added by writing a third table and one line here.";
   "The merge is the strict one, so a word appearing in both tables is an error rather than a silent choice between two wordings. That is the whole of the check this needs: a word belongs to one kind, and if somebody has written it down twice the two entries will disagree sooner or later and nothing afterwards could say which was meant.";
   let r = {};
-  object_merge(r, app_en_learn_bible_gloss_urdu_word_explains());
-  object_merge(r, app_en_learn_bible_gloss_urdu_noun_explains());
+  let from2 = app_en_learn_bible_gloss_urdu_word_explains();
+  object_merge(r, from2);
+  let from3 = app_en_learn_bible_gloss_urdu_noun_explains();
+  object_merge(r, from3);
   return r;
 }
