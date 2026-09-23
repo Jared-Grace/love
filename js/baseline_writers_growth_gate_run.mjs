@@ -10,12 +10,11 @@ export async function baseline_writers_growth_gate_run() {
   "The named let-offs are asked about afterwards, because they are the one hand typed part and the only part that can go on being believed after it stops being true. They are asked second rather than first on purpose: a real writer that can record growth is the substantive fault, and the first assert to throw is the only one that gets to speak.";
   let offenders = await baseline_writers_growth_unguarded();
   console.log("ratchet writers that cannot refuse growth: " + offenders.length);
-  let f_name = fn_name("baseline_growth_guarded_is");
   let f_name2 = fn_name("baseline_writers_growth_exempt");
   list_empty_is_assert_json(offenders, {
     hint: text_combine_multiple([
       "each of these can record something its file did not already hold, so the ratchet turns both ways and the rewrite gets reached for at exactly the moment the gate goes red - import one of the growth asserts ",
-      f_name,
+      fn_name("baseline_growth_guarded_is"),
       " counts as a refusal and call it before writing, or, if growing really is honest here, name the writer with its reason in ",
       f_name2,
     ]),
