@@ -25,7 +25,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 33,
-      note: "Still on 26. An edit asked for the drop to be cut into deeper and lighter panes; it changed the field instead. Three fresh drawings came back with the shell again, lines across the drop, or plainer than 26. So 26 is still the best.",
+      note: "You are on 32, drawn from new wording that asks for five panes inside the drop. It has a white highlight, a deeper blue right side and a small violet pane. Still wrong: a white band sits above the green, and extra lines fan across the field. 26 is the plainer fallback.",
     },
     {
       n: 26,
