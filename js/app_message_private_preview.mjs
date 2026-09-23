@@ -62,11 +62,15 @@ export async function app_message_private_preview() {
   let status = html_p_text(root, "Bringing down anything new...");
   let chooser = html_div(root);
   let listed = html_div(root);
-  let f_missing = fn_name("app_message_download_private_missing");
-  let written = await app_shared_api_named(f_missing, []);
+  let written = await app_shared_api_named(
+    fn_name("app_message_download_private_missing"),
+    [],
+  );
   let count_new = list_size(written);
-  let f_records = fn_name("app_message_private_records_replied");
-  let records = await app_shared_api_named(f_records, []);
+  let records = await app_shared_api_named(
+    fn_name("app_message_private_records_replied"),
+    [],
+  );
   let count = list_size(records);
   let names_answered = ["reply", "answered"];
   let replied = list_filter_property_path(records, names_answered, true);
