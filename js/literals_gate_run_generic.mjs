@@ -13,18 +13,15 @@ export function literals_gate_run_generic(walked, complaint) {
   arguments_assert(arguments, 2);
   let files = property_get(walked, "files");
   let sites = property_get(walked, "sites");
-  let f_name = fn_name("function_new_getter");
-  let f_name2 = fn_name("function_literal_route");
-  let f_name3 = fn_name("literals_frozen_name_add");
   list_empty_is_assert_json(sites, {
     hint: text_combine_multiple([
       complaint,
       ", where nothing can watch it - give it a function of its own with ",
-      f_name,
+      fn_name("function_new_getter"),
       ", move the sites onto that function with ",
-      f_name2,
+      fn_name("function_literal_route"),
       ", then freeze that function with ",
-      f_name3,
+      fn_name("literals_frozen_name_add"),
     ]),
     sites,
   });
