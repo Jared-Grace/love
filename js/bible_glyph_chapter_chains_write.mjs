@@ -30,15 +30,13 @@ export async function bible_glyph_chapter_chains_write() {
     chapter_codes,
     bible_glyph_chapter_chain_branch_text,
   );
-  let f_name = fn_name("bible_glyph_chapter_fetch_found");
-  let f_name3 = fn_name("not_equal");
   let before_text = text_combine_multiple([
     "  let found = ",
-    f_name3,
+    fn_name("not_equal"),
     "(stored, null);",
   ]);
   let fetch_written = await bible_glyph_chapter_chain_spliced(
-    f_name,
+    fn_name("bible_glyph_chapter_fetch_found"),
     "  let stored = null;\n",
     before_text,
     fetch_chain,
@@ -59,15 +57,13 @@ export async function bible_glyph_chapter_chains_write() {
     rosetta_codes,
     bible_glyph_chapter_rosetta_lines_chain_branch_text,
   );
-  let f_name2 = fn_name("bible_glyph_chapter_rosetta_lines_fetched_known");
-  let f_name4 = fn_name("not_equal");
   let before_text2 = text_combine_multiple([
     "  let known = ",
-    f_name4,
+    fn_name("not_equal"),
     "(found, null);",
   ]);
   let rosetta_written = await bible_glyph_chapter_chain_spliced(
-    f_name2,
+    fn_name("bible_glyph_chapter_rosetta_lines_fetched_known"),
     "  let found = null;\n",
     before_text2,
     rosetta_chain,
