@@ -1,6 +1,6 @@
 import { property_equals } from "./property_equals.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_shared_titles } from "./app_shared_titles.mjs";
+import { app_shared_taglines } from "./app_shared_taglines.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { each } from "./each.mjs";
 export function html_code_app_name(title_text) {
@@ -11,7 +11,7 @@ export function html_code_app_name(title_text) {
     fn_name("app_shared_title"),
     "(name) into the title, and that turns a short name into a sentence for the six apps that have been given one. Reading the page back has to undo the same step, or the sentence gets used as the name: measured 2026-08-23, regenerating a page that way asked for the description and the card picture of an app called Bible - read it in your own language, got nothing for either, and wrote a page with no social tags at all.");
   ("An app with no title of its own is called by its short name already, so a title that matches no app is the name.");
-  let titles = app_shared_titles();
+  let titles = app_shared_taglines();
   let names = object_property_names(titles);
   let found = title_text;
   function lambda(name) {

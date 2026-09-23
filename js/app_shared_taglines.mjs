@@ -1,4 +1,4 @@
-export function app_shared_titles() {
+export function app_shared_taglines() {
   "What each app that has been given one calls itself where a person reads it, kept in one place and read by name.";
   "Read in the browser tab and as the heading of a card built from a shared link, so it carries the short name and then says plainly what the thing does - a name on its own tells somebody who has not opened it nothing.";
   "An app absent from here is called by its own short name, which is what every app was called before this existed.";
