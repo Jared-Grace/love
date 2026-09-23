@@ -57,8 +57,7 @@ export function js_record_read_rows(ast) {
         after,
       });
     }
-    let f_name = fn_name("property_path_get_2");
-    js_visit_calls_named_nodes(ast, f_name, step_each);
+    js_visit_calls_named_nodes(ast, fn_name("property_path_get_2"), step_each);
   }
   let rows = list_adder(collect);
   return rows;
