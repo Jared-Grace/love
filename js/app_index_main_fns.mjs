@@ -1,6 +1,9 @@
 import { fn_name } from "./fn_name.mjs";
-export function app_index_main_fns() {
+import { app_shared_about_text } from "./app_shared_about_text.mjs";
+export function app_index_main_fns(about_opened) {
   "The apps the front page offers, each with the sentence shown under it.";
+  "What the about card opens is handed in, because it is drawn over the front page and comes back by drawing the front page again, which only the front page knows how to do.";
+  "About went from the working cards to every visitor on 2026-09-23, asked for by name, beside the privacy policy. They are two different pages: about says why everything here is free and what happens with a gift, the policy says what is done with anything a person gives.";
   "THIS IS A FRONT PAGE, NOT A REGISTER OF WHAT IS NEEDED, and the difference has already misled one reading. Fifteen apps are named here; thirty-three existed when they were last counted, on 2026-08-25. The ones left out are not leftovers - at that count every one of them was wanted. Some are infrastructure nobody browses to, some are tools for the person building this, and one is a kept address that only forwards. What they have in common is that none of them is what a visitor arriving for the first time should be shown, which is the only question this list answers.";
   "So an app being absent here says nothing at all about whether it may go. Counting references does not help either and looks as though it does: an app named here picks up references BECAUSE it is named here, so few references and not on the front page are one fact wearing two faces, not two findings agreeing. There is no reading in the repo that separates an app somebody still uses from one nobody does - that answer is held by the person who uses them, and asking is cheaper than any measurement of it.";
   "The praying game came off this list on 2026-08-26, and it came off for a reason that says nothing about the game. Its page in the folder that gets sent had no bytes in it, so the card here was offering a first-time visitor a link that opened onto a blank screen, and had been for at least six days. A built copy of the game exists and works; only the sent one is empty. Put the line back the moment a real page is standing at that address.";
@@ -60,6 +63,11 @@ export function app_index_main_fns() {
       category: sharing,
     },
     {
+      app_fn: fn_name("app_next"),
+      text: "Opens a Bible passage and copies it, ready to send to someone as a message",
+      category: sharing,
+    },
+    {
       app_fn: fn_name("app_g"),
       text: "Gospel sharing game",
       category: games,
@@ -98,6 +106,11 @@ export function app_index_main_fns() {
       category: worship,
     },
     {
+      app_fn: fn_name("app_autopray"),
+      text: "Prays through the whole Bible one verse at a time, asking the Lord to lead all creation to hear, believe and obey each verse",
+      category: worship,
+    },
+    {
       app_fn: fn_name("app_code"),
       text: "Teaches the JavaScript programming language one small step at a time, by solving code",
       category: programming,
@@ -126,6 +139,17 @@ export function app_index_main_fns() {
     {
       app_fn: fn_name("app_g_bible"),
       text: "App for me",
+      category: more,
+    },
+    {
+      label: app_shared_about_text(),
+      text: "Why everything here is free, and what happens with a gift",
+      opened: about_opened,
+      category: more,
+    },
+    {
+      app_fn: fn_name("app_privacy_policy"),
+      text: "What these apps do with anything you give them",
       category: more,
     },
   ];

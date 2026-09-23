@@ -1,5 +1,6 @@
 import { property_get } from "./property_get.mjs";
 import { property_exists } from "./property_exists.mjs";
+import { app_index_card } from "./app_index_card.mjs";
 import { app_index_card_link } from "./app_index_card_link.mjs";
 import { app_index_label } from "./app_index_label.mjs";
 import { window_app_url_generic } from "./window_app_url_generic.mjs";
@@ -17,6 +18,19 @@ export function app_index_cards_draw(root, entries) {
   ("A card may instead lead off this site - a video channel, say - and then it carries its own address and its own label, and no app. Its row is handed back with no app, so nothing written late about an app can land on it.");
   function card_drawn(entry) {
     let text = property_get(entry, "text");
+    ("A card may also open something in place over this page rather than lead anywhere, and then it carries what to run when pressed. It has no line to write into later, so its row hands back no caption.");
+    let in_place = property_exists(entry, "opened");
+    if (in_place) {
+      let label_in_place = property_get(entry, "label");
+      let opened = property_get(entry, "opened");
+      app_index_card(root, label_in_place, text, opened);
+      let r2 = {
+        app_fn: null,
+        text,
+        caption: null,
+      };
+      return r2;
+    }
     let away = property_exists(entry, "url");
     if (away) {
       let label_away = property_get(entry, "label");

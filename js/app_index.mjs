@@ -9,10 +9,10 @@ export async function app_index(context) {
   app_shared_app_fn_set(context, app_index);
   let root = property_get(context, "root");
   ("★ THE GROUPS OF APPS COME FIRST, above everything shown only while working, asked for by name on 2026-09-23. Shut, the groups are a short list of names, so they cost the working links below them one screen at most, and the page opens on what every visitor came for rather than on what only the person building it uses.");
-  let entries = app_index_main_fns();
+  let entries = app_index_main_fns(lambda_about);
   let cards = app_index_categories_show(context, entries);
   ("the cards shown only while working come after the apps, and only on a machine on this same network. Waited on: they are fetched at the moment they are wanted rather than imported, to keep them out of the public page's bundle, and a fetch that is not waited on would let the rest of this page overtake them");
-  await app_index_dev_cards_show(root, lambda_about);
+  await app_index_dev_cards_show(root);
   ("★ HOW FAR THE TWO LANGUAGE APPS HAVE GOT IS ASKED LAST, WITH EVERY CARD ALREADY ON THE SCREEN, which is the opposite of the line above about the working links, and the two differ in what waiting costs. Those are drawn only on this network and only above the apps, so waiting for them holds up a part of the page nobody outside this house ever sees. This is a store somewhere else, asked by everybody who opens the site, and the browser half of fetching gives up after eight seconds and tries twice more - so drawing anything behind it risks a blank front page for half a minute in order to put a number in a sentence.");
   ("It is last rather than started here and waited on further down, which is the shape that would have read better and does not survive: the canonical pass writes an await back in front of a call whose answer is thrown away, so a page whose ordering depended on that await being absent would be one pass away from being wrong without a word of this file changing. Being last needs no await to be absent - there is nothing after it to hold up. It never throws: what it does when the store says nothing is leave every card exactly as it was written.");
   await app_index_gloss_coverage_show(cards);
