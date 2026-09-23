@@ -29,12 +29,11 @@ export function js_template_comment_text(template) {
     if (not(call_is)) {
       return;
     }
-    let value = fn_name("fn_name");
     let wrapper_is = property_path_equals_2(
       expression,
       "callee",
       "name",
-      value,
+      fn_name("fn_name"),
     );
     if (wrapper_is) {
       let args = property_get(expression, "arguments");
