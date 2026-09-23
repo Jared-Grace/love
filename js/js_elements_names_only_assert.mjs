@@ -25,14 +25,12 @@ export function js_elements_names_only_assert(elements, declared) {
       let none_bound = list_all_is(elements, element_unbound_is);
       if (none_bound) {
         let size = list_size(elements);
-        let f_name = fn_name("function_list_name_add");
-        let f_name2 = fn_name("qa_gate_add");
         error_json({
           hint: text_combine_multiple([
             "this list holds the functions themselves rather than what they hand back, so joining it means adding a name and not a call - ",
-            f_name,
+            fn_name("function_list_name_add"),
             " is the half that does that, and ",
-            f_name2,
+            fn_name("qa_gate_add"),
             " is the one to reach for when the list is the repo-wide check's",
           ]),
           size,
