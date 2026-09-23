@@ -34,14 +34,13 @@ export function bible_glyph_gate_run_chapter(characters) {
           }
           for (let name of piece) {
             let drawn = property_exists(known, name);
-            let f_name = fn_name("bible_glyph_characters");
             assert_json(drawn, {
               chapter_code: chapter.chapter_code,
               verse_number: verse.verse_number,
               name,
               hint: text_combine_multiple([
                 "an authored verse names a glyph the vocabulary does not carry, so it draws as its own name in angle brackets - add it to ",
-                f_name,
+                fn_name("bible_glyph_characters"),
                 " or fix the spelling",
               ]),
             });
