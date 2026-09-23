@@ -15,8 +15,7 @@ export async function g_sermon_scripture_key_migrate() {
   "ENGLISH named the language the text happened to be in, which is a fact about today rather than about the field. The same slot holds the passage whatever tongue it is read in, and a translated game would have had to keep writing its Tagalog into a key called english or fork the shape. SCRIPTURE names what the value is, and the reader beside it already drew that line in prose - the lines are the game's own words and only the Scripture may be answered from.";
   "TEXT was the obvious other candidate and is taken: inside lines a passage already has text, meaning one sermon line, so the same word would mean the Scripture at one level and a paraphrase of it one level down.";
   "Written as a migration rather than as a reader that accepts either key, because a reader that accepts both never finishes - the old key stays legible forever and nothing ever tells you the store has moved.";
-  let f_name = fn_name("g_sermon_write");
-  let folder = storage_function_folder_path(f_name);
+  let folder = storage_function_folder_path(fn_name("g_sermon_write"));
   let files = await folder_read_files(folder);
   let chapters = [];
   let migrated_total = 0;
