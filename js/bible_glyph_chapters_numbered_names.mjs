@@ -22,8 +22,7 @@ export async function bible_glyph_chapters_numbered_names() {
   ("IT READS THE SOURCE AND NOT THE RUNNING LIST, for the same reason the sentence about the count is read from the source: a local name is not a value anything can ask for, and the array a reader is trying to check is the one thing every other reading already trusts.");
   ("THE THREE LISTS ARE ANSWERED AS LINES OF WORDS rather than as lists, because whoever repairs this has to see where two of them part company, and two lines one under the other show that where two lists of thirty three names do not.");
   ("AN ARRAY THAT CANNOT BE FOUND AT ALL IS ANSWERED AS NOTHING rather than as a disagreement. One is a line to correct and the other is somebody having reworded the list past recognising, and no name can be put back until it is written again.");
-  let f_name = fn_name("bible_glyph_chapters");
-  let code = await function_read(f_name);
+  let code = await function_read(fn_name("bible_glyph_chapters"));
   let lines = text_split_newline(code);
   let bound_regex = new RegExp(
     "^  let ([a-z_]+) = bible_glyph_chapter_[a-z0-9_]+\\(\\);$",
