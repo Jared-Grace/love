@@ -9,8 +9,10 @@ export async function webpack_watch_app_deps_get(a_name) {
   arguments_assert(arguments, 1);
   async function lambda() {
     let main = await app_shared_name_main(a_name);
-    let f_name = fn_name("app_shared_context_initialize");
-    let deps = await function_dependencies_bundled([main, f_name]);
+    let deps = await function_dependencies_bundled([
+      main,
+      fn_name("app_shared_context_initialize"),
+    ]);
     let r2 = {
       a_name,
       deps,
