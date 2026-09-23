@@ -55,8 +55,7 @@ export function song_image_audit_picture(parent, key, kept, open_on) {
     let at = shown_get();
     let attempt = attempts[at];
     html_text_set(keep, "keeping");
-    let f_name = fn_name("song_image_kept_set");
-    await api_read(f_name, [key, attempt]);
+    await api_read(fn_name("song_image_kept_set"), [key, attempt]);
     kept_now = attempt;
     html_text_set(keep, "keep");
     redraw(at);
