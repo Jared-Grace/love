@@ -19,8 +19,7 @@ export function app_bible_pictures_button(parent, chapter_code) {
   let text = text_combine_middle_space(sign, "In pictures");
   function lambda() {
     let chapter_hash = app_shared_bible_pictures_chapter_hash(chapter_code);
-    let app_fn_name = fn_name("app_emoji_bible");
-    window_open_app_hash_name(app_fn_name, chapter_hash);
+    window_open_app_hash_name(fn_name("app_emoji_bible"), chapter_hash);
   }
   let component = app_shared_button(parent, text, lambda);
   return component;
