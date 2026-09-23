@@ -21,12 +21,11 @@ export async function g_npc_nickname_index(nickname) {
       return index;
     }
   }
-  let f_name = fn_name("g_npc_nickname");
   error_json({
     nickname,
     hint: text_combine_multiple([
       "nobody in the pool is called this; the names are the Bible names the game draws from, spelled as they are written there, and one is handed out per person - ask ",
-      f_name,
+      fn_name("g_npc_nickname"),
       " of a number to see what a given person is called",
     ]),
   });
