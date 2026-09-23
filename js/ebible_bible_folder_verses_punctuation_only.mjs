@@ -1,14 +1,15 @@
-import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_version_downloaded_page_stems } from "./ebible_version_downloaded_page_stems.mjs";
 import { text_size } from "./text_size.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { ebible_verses } from "./ebible_verses.mjs";
+import { ebible_verses_kept } from "./ebible_verses_kept.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_punctuation_removed } from "./text_punctuation_removed.mjs";
 import { whitespace_normalize } from "./whitespace_normalize.mjs";
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
+import { text_punctuation_removed } from "./text_punctuation_removed.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { ebible_chapter_verse_code } from "./ebible_chapter_verse_code.mjs";
 import { list_map } from "./list_map.mjs";
@@ -22,7 +23,7 @@ export async function ebible_bible_folder_verses_punctuation_only(
 ) {
   "$plain bible_folder";
   "Every verse in one downloaded translation that carries punctuation and nothing else, named by chapter and verse, beside the marks it holds.";
-  "THIS IS THE CLASS THE HAS-WORDS TEST CANNOT SEE. That test takes the square brackets off a verse and asks whether anything is left, because a bracket is how most translations print a verse they have nothing to say for. A translation that prints a bare full stop instead survives it, so the verse is carried all the way to a reader as a numbered line with nothing on it - and to every counter that asks how much of a chapter is finished, as work nobody can ever do.";
+  "★ IT READS THE WHOLE CUT AND NOT THE READING THAT DROPS. This is the class the has-words test used to be unable to see: that test took the square brackets off a verse and asked whether anything was left, and a translation that printed a bare full stop instead survived it and was carried all the way to a reader as a numbered line with nothing on it. That is mended - the test now takes off punctuation of every kind - and the mending is exactly why this asks the page for its whole cut rather than for the verses that survive the test. Asked of the survivors it would find none, every time, for ever, and read as a translation with nothing wrong with it. A measurement that cannot come back with anything is not a clean result.";
   "It reads the pages already on this disk and reaches nothing over the network. The last run that asked the network one question of every bible at once came back reporting six thousand fetch failures as gaps in the bibles, so a measurement of this shape is made from what is already here or not at all.";
   "A chapter that will not parse is left out and counted separately rather than read as holding no such verses, because a chapter nobody could read taught nobody anything about that translation.";
   arguments_assert(arguments, 1);
@@ -35,7 +36,7 @@ export async function ebible_bible_folder_verses_punctuation_only(
   let chapter_codes = list_filter(stems, chapter_stem_is);
   async function chapter_scan(chapter_code) {
     async function chapter_read() {
-      let read = await ebible_verses(bible_folder, chapter_code);
+      let read = await ebible_verses_kept(bible_folder, chapter_code);
       return read;
     }
     let verses = await catch_null_async(chapter_read);
@@ -49,10 +50,14 @@ export async function ebible_bible_folder_verses_punctuation_only(
     }
     function punctuation_only_is(verse) {
       let text = property_get(verse, "text");
-      let worded = text_punctuation_removed(text);
-      let trimmed = whitespace_normalize(worded);
-      let bare = text_empty_is(trimmed);
-      return bare;
+      let trimmed = whitespace_normalize(text);
+      let printed = text_empty_not_is(trimmed);
+      if (printed) {
+        let worded = text_punctuation_removed(trimmed);
+        let bare = text_empty_is(worded);
+        return bare;
+      }
+      return false;
     }
     let bare_verses = list_filter(verses, punctuation_only_is);
     function verse_named(verse) {
