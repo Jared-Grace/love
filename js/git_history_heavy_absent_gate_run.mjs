@@ -13,13 +13,12 @@ export async function git_history_heavy_absent_gate_run() {
   let walked = property_get(reading, "walked");
   let offenders = property_get(reading, "paths");
   let path = git_history_heavy_absent_baseline_path();
-  let name_write = fn_name("git_history_heavy_absent_baseline_write");
   let r = await baseline_names_gate_walked_generic(
     walked,
     offenders,
     path,
     "each of these is a large file this repo's history is carrying that the present no longer has, so it travels in every copy and nothing shows it - take it out of the history while that is still one small change",
-    name_write,
+    fn_name("git_history_heavy_absent_baseline_write"),
   );
   return r;
 }
