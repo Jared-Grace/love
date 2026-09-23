@@ -16,6 +16,5 @@ export function app_shared_bible_reference_open(reference) {
   let spelled = text_replace_space_to(reference, plus);
   let hash = {};
   property_set(hash, key, spelled);
-  let f_name = fn_name("app_bible");
-  window_open_app(f_name, hash);
+  window_open_app(fn_name("app_bible"), hash);
 }
