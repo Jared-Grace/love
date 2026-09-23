@@ -16,8 +16,7 @@ export async function lyric_timing_saved(asked, held, duration, file_name) {
   ("A lag of nothing skips the second step rather than applying a shift of zero. Somebody who taps on the beat should not have their document rewritten to say the same thing it already said.");
   ("THE SONG'S NAME TRAVELS WITH THE TIMES RATHER THAN BEING FETCHED WHEN A VIDEO IS RENDERED. Saving and rendering are two presses that can be days apart, and in between a downloads folder collects more takes; a name looked up at the second press is a name looked up in a folder that has changed. Carried at the first, it is the name of the file that was actually playing while the hand was moving.");
   let lines = lyric_timing_lines_timed(held.starts, held.texts, duration);
-  let f_name = fn_name("lyric_timing_save");
-  let saved = await app_shared_api_named(f_name, [
+  let saved = await app_shared_api_named(fn_name("lyric_timing_save"), [
     asked,
     duration,
     lines,
@@ -26,8 +25,7 @@ export async function lyric_timing_saved(asked, held, duration, file_name) {
   let earlier = number_from_text(asked.earlier_text);
   let lagged = greater_than(earlier, 0);
   if (lagged) {
-    let f_name2 = fn_name("lyric_video_document_earlier");
-    await app_shared_api_named(f_name2, [
+    await app_shared_api_named(fn_name("lyric_video_document_earlier"), [
       saved.path_document,
       asked.earlier_text,
     ]);
