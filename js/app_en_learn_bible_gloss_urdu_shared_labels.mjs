@@ -14,6 +14,9 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
   "The bare label over a name joined the list last and is the largest single thing on it, standing over six hundred entries and thirty one names. It is also the label whose replacement is worth most: a reader told only that a word is a proper noun has been told the one thing they could already see from the capital letter, and every settled wording written for a name says who the person is instead. The test is passed the ordinary way - each of those wordings says in its own words that the word is a name - and one of them had to be reworded to pass it rather than being waved through.";
   "The pointers standing over names came next, and they are where the pointer paragraph above stops being an argument and starts being four hundred and fifty entries. A name is what a passage says over and over, and every place after the first was handed ‘the same man's name as came above’ - so the reader who most needs telling who this is, the one who opened the page in the middle, is the one who is told nothing. The test is passed because the settled wording of a name says it is a name of a man or of a town, which is the whole of what the pointer said before it pointed.";
   "One wording over a name is refused and it is worth saying why, because the reason is the test being read strictly rather than loosely. ‘It is God's name and is written with a capital’ stands over ‘God’ and over ‘Lord’, and the settled wording for ‘God’ says both of those things while the settled wording for ‘Lord’ says only that a capital falls there, since that capital falls on a human master addressed at the head of a sentence as readily as on God. A label passes only when every word carrying it says the label again, so one word out of two carrying it is a refusal, not a majority.";
+  "The helping verbs joined last and are the largest single family on the list: forty two wordings, and the store was carrying more than two thousand five hundred entries under them. One wording the verbs needed was already on the list, licensed earlier for a different family, which is a good sign rather than a wasted step: a bare pointer says the same nothing whatever kind of word it stands over. The scale is the point rather than a boast about it. ‘will’ alone had thirteen different sentences written for it in thirteen different places, ‘is’ had eight, and no two of them were wrong - each was a true sentence saying the same true thing in different words. What was wrong was that a reader meeting ‘will’ in one chapter and again in the next met two strangers, and had no way to know they had already been told this.";
+  "Three of the verb wordings are refused, and the three are worth naming because they are the same three kinds the rest of this note already names, met again in a new family. ‘A helping verb: is’ settles that this occurrence of ‘is’ is helping another verb rather than standing on its own as the whole of the verb, which is a job-in-this-verse claim and is the kind refused above. ‘be, present, singular, third person’ carries a grammatical case the settled wording does not carry, which is the kind refused for ‘it’. ‘A verb, and this form gives a command’ is about the line it stands in and could not be written from the word alone, which is the kind refused for the preposition Urdu did not write.";
+  "The doubled-l wording is worth one line on its own, because it shows the test working in the direction nobody expects. ‘Future helper. ll is doubled.’ failed when it was first read, since the settled wording for ‘will’ said nothing about spelling. The wording was not waived through and the label was not dropped; the settled wording was given the clause, because a beginner copying the word out by hand does need telling that the l is written twice. A label that fails the test is a question about the settled wording as often as it is a verdict on the label.";
   let labels = [
     "معرفہ حرفِ تعریف۔",
     "نکرہ حرفِ تعریف۔",
@@ -100,6 +103,48 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
     "وُہی شہر کا خاص نام ہے جو اُوپر آیا۔",
     "وُہی نام کا لفظ ہے۔",
     "یہ نام ہے: یِسوعؔ۔",
+    "یہ لفظ آنے والے وقت کی طرف لے جاتا ہے: ہوگا۔",
+    "وُہی فعل ہے جو آنے والا زمانہ بناتا ہے۔",
+    "مدد کرنے والا فعل ہے۔ آنے والا وقت بتاتا ہے۔",
+    "فعلِ اِمدادی: آنے والا وقت۔",
+    "فعلِ اِمدادی: آنے والا زمانہ۔",
+    "فعلِ اِمدادی: مُستقبِل کا نِشان۔",
+    "مُستقبِل کا فعلِ اِمدادی۔",
+    "فعلِ اِمدادی: مُستقبِل کا نِشان۔ ll دُہرا ہے۔",
+    "مددگار فعل برائے مُستقبل۔",
+    "آیٔندہ کا فعلِ اِمدادی۔",
+    "آیندہ کا مددگار فعل۔",
+    "مستقبل بنانے والا مددگار فعل ہے۔",
+    "be کی حال کی واحد صُورت۔",
+    "یہ فعل 'be' کی حال کی وہ صُورت ہے جو ایک کے ساتھ آتی ہے۔",
+    "فعل ہے۔ 'be' کی حال کی صُورت، واحد کے لیٔے۔",
+    "فعل ہے: 'ہے'۔",
+    "be کا حال، واحد۔",
+    "be کی حال واحد صُورت۔",
+    "be کا ماضی، واحد۔",
+    "یہ فعل 'be' کی ماضی کی وہ صُورت ہے جو ایک کے ساتھ آتی ہے۔",
+    "be کا گُزرا زمانہ، واحد۔",
+    "be کی گُذشتہ واحد صُورت۔",
+    "be کا ماضی، جمع۔",
+    "be کا گُزرا زمانہ، جمع۔",
+    "be کا حال، جمع۔",
+    "یہ فعل 'be' کی وہ صُورت ہے جو 'I' کے ساتھ آتی ہے۔",
+    "be کی بُنیادی صُورت۔",
+    "فعل، بےقاعدہ: be → was → been۔",
+    "have کا ماضی، بےقاعدہ: have → had → had۔",
+    "فعل ہے اَور گُزرے ہوئے زمانے کا ہے، اَور ہونے کو بتاتا ہے۔",
+    "وُہی فعل ہے جو اُوپر آیا۔",
+    "فعل ہے اَور یہ وہ شکل ہے جو ’have‘ کے ساتھ آتی ہے۔",
+    "فعل ہے اَور یہ وہ شکل ہے جو چلتے ہوئے کام کے لیٔے آتی ہے۔",
+    "فعل ہے اَور گُزرے ہوئے زمانے کی شکل ہے۔",
+    "فعل ہے اَور گُزرے ہوئے زمانے کا ہے اَور ایک سے زیادہ کے لیٔے آیا ہے۔",
+    "فعل ہے اَور اِس وقت کے زمانے کا ہے اَور ایک سے زیادہ کے لیٔے آیا ہے۔",
+    "فعل ہے اَور اِس وقت کے زمانے کا ہے، اَور ہونے کو بتاتا ہے۔",
+    "فعل ہے اَور 'be' کی وہ صُورت ہے جو ایک ہی چیز کے ساتھ آتی ہے۔",
+    "یہ فعل 'be' کی وہ صُورت ہے جو ایک چیز کے ساتھ آتی ہے۔",
+    "فعل ہے، مگر یہاں یہ اگلے فعل سے پہلے آ کر آنے والا وقت بتاتا ہے۔",
+    "یہ لفظ آنے والے وقت کی طرف اشارہ کرتا ہے۔",
+    "فعل۔",
   ];
   return labels;
 }
