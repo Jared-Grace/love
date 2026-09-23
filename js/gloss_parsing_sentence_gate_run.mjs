@@ -14,12 +14,11 @@ export async function gloss_parsing_sentence_gate_run() {
   let unphrased = await gloss_parsing_words_unphrased(testament_name);
   let unphrased_count = list_size(unphrased);
   let b = not(unphrased_count);
-  let f_name = fn_name("gloss_parsing_phrases");
   assert_json(b, {
     unphrased,
     hint: text_combine_multiple([
       "every word the New Testament's parsings are built out of needs an entry in ",
-      f_name,
+      fn_name("gloss_parsing_phrases"),
       "; add one for each word listed here",
     ]),
   });
@@ -27,12 +26,11 @@ export async function gloss_parsing_sentence_gate_run() {
   let unsaid = list_filter_property(ranked, "sentence", null);
   let unsaid_count = list_size(unsaid);
   let b2 = not(unsaid_count);
-  let f_name2 = fn_name("gloss_parsing_sentence");
   assert_json(b2, {
     unsaid,
     hint: text_combine_multiple([
       "every parsing in the New Testament must compose into a sentence; these composed into nothing, which means ",
-      f_name2,
+      fn_name("gloss_parsing_sentence"),
       " found no kind to build a head out of",
     ]),
   });
