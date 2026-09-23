@@ -29,12 +29,11 @@ export async function functions_shadowing_function_gate_run() {
     log_console(message2);
   }
   each(bound, lambda2);
-  let f_name2 = fn_name("functions_shadowing_rename_all");
   let joined2 = list_join(pairs, "; ");
   list_empty_is_assert_json(bound, {
     hint: text_combine_multiple([
       "these functions bind a name the repo already answers to, so a call written there reaches the local instead - rename it with ",
-      f_name2,
+      fn_name("functions_shadowing_rename_all"),
       ". What each of them hides is ",
       joined2,
     ]),
