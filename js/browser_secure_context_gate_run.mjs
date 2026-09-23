@@ -16,7 +16,11 @@ export async function browser_secure_context_gate_run() {
   let hint = browser_secure_context_hint(
     "this file reaches for something the browser hands out only over https, so on any other address the call throws where it stands and the page dies before it is drawn - see ",
   );
-  let f_name = fn_name("browser_secure_context_baseline_write");
-  let r = await baseline_names_gate_generic(offenders, path, hint, f_name);
+  let r = await baseline_names_gate_generic(
+    offenders,
+    path,
+    hint,
+    fn_name("browser_secure_context_baseline_write"),
+  );
   return r;
 }
