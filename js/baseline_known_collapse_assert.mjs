@@ -24,11 +24,10 @@ export async function baseline_known_collapse_assert(known, path) {
   }
   let recorded = await baseline_known_read(path);
   let held = list_empty_not_is(recorded);
-  let f_name = fn_name("baseline_known_clear");
   not_assert_json(held, {
     hint: text_combine_multiple([
       "this would rewrite a record that is holding names so that it holds none, and a ratchet only ever shrinks - so nothing further on would ever say the names had gone. If the reading came back empty because it could not reach what it reads, the record is fine and the reading is what needs looking at. If every one of them really has been cleared, that is worth saying out loud: ",
-      f_name,
+      fn_name("baseline_known_clear"),
       " named with this file empties it on purpose",
     ]),
     path,
