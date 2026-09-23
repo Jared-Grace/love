@@ -1,7 +1,7 @@
-import { text_word_start_regex } from "./text_word_start_regex.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { assert_json } from "./assert_json.mjs";
+import { text_word_start_regex } from "./text_word_start_regex.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
 import { text_trim } from "./text_trim.mjs";
@@ -16,10 +16,12 @@ export async function git_folder_history_paths_word_commits_count(
   "$plain folder";
   "$plain word";
   arguments_assert(arguments, 3);
-  ("How many commits anywhere in a repository's whole history change how many times a word appears in any of the named files, counting every branch it knows about rather than only the one it is standing on.");
+  ("How many commits anywhere in a repository's whole history change how many times a word appears in any of the named files, counting every branch it knows about rather than only the one it is standing on, and reading a capital letter as the same letter as a small one.");
   ("★ THIS IS THE READING THAT SAYS A PURGE DID ANYTHING AT ALL. Every other proof around a scoped replacement is a proof that nothing broke: no file added, none dropped, no commit gained or lost, the present unchanged. All of those pass perfectly for a rewrite that ran for an hour and replaced nothing - a mistyped path, a word spelled a way the repository never used, instructions that hand every file back untouched. Asked before and after, this one tells the two apart: it has to be more than nothing to begin with, and nothing when the work is done.");
   ("It counts commits rather than occurrences because that is what the tool underneath can be asked cheaply, and because the number is only ever compared against nothing. Anything above nothing means the word is still somewhere in the past of these files, and how far above says nothing more useful than that.");
   ("★ IT ASKS BY THE SAME RULE THE WORD WAS TAKEN OUT BY, AND ASKING FOR THE PLAIN SPELLING INSTEAD IS WRONG IN A WAY THAT LOOKS CAUTIOUS. The first version of this looked for the letters as they are spelled, anywhere, reasoning that a proof should not be cleverer than the thing it is checking. That reasoning is backwards. The replacement deliberately leaves the word alone where it sits inside a longer one, because that is where it is innocent - so a reading that counts those finds them all still there and calls a finished purge unfinished. Measured on a real note, a correct rewrite reported two commits still holding the word, and both were the file name it was named after. A proof that fails correct work is worse than no proof, because it is believed.");
+  ("★ A CAPITAL LETTER IS THE SAME LETTER HERE, AND FOR A WHILE IT WAS NOT. The words worth taking out of a past are names - of a person, a town, a street - and a name is written with a capital wherever it stands in an ordinary sentence. Asked for the small spelling only, this counted nothing at all in a file that held the name twice, and answering nothing is exactly how a finished purge answers. So the one reading that exists to tell a real purge from a purge that did nothing was, for the only words anybody would ever run it on, guaranteed to say the work was done. Measured: one file, nothing found reading capitals apart, two commits found reading them together.");
+  ("The letter is set aside here, by the flag the tool underneath offers, and not inside the pattern. The pattern is spelled once and handed to three different readers, and only one of them would take an instruction about letters written into it - the tool that rewrites the past accepts it, this one refuses to run at all, and the one that reads names in this language refuses to be built. So where a reader is told to ignore the letter is the reader's own business; what must not differ between them is that they are all told.");
   ("An empty list of files is refused rather than answered. Naming no files and asking what they hold reads to the tool as naming every file, which is the opposite question and would answer it confidently.");
   let any = list_empty_not_is(paths);
   assert_json(any, {
@@ -28,7 +30,7 @@ export async function git_folder_history_paths_word_commits_count(
     word,
   });
   let pattern = text_word_start_regex(word);
-  let asked = ["log", "--all", "--format=%H", "-G" + pattern, "--"];
+  let asked = ["log", "--all", "--format=%H", "-i", "-G" + pattern, "--"];
   list_add_multiple(asked, paths);
   let printed = await git_folder_run(folder, asked);
   let text = text_trim(printed);
