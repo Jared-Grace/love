@@ -10,12 +10,13 @@ export function qa_gate_judged_list_names(ast) {
   "Only a name is collected. A list built in the argument itself has nothing to be recognised by later, and a gate written that way is rare enough that guessing at it would cost more than it caught.";
   "The walk it is written out of asks one named function what names it was handed first, which is the whole of what a check like this is - so all that is left here is which functions to ask, and the reasoning above about why those.";
   arguments_assert(arguments, 1);
-  let plain = fn_name("list_empty_is_assert");
-  let recorded = fn_name("list_empty_is_assert_json");
-  let ratchet = fn_name("baseline_names_gate_generic");
-  let ratchet_advice = fn_name("baseline_names_gate_advice_generic");
-  let ratchet_entries = fn_name("baseline_entries_gate_generic");
-  let checks = [plain, recorded, ratchet, ratchet_advice, ratchet_entries];
+  let checks = [
+    fn_name("list_empty_is_assert"),
+    fn_name("list_empty_is_assert_json"),
+    fn_name("baseline_names_gate_generic"),
+    fn_name("baseline_names_gate_advice_generic"),
+    fn_name("baseline_entries_gate_generic"),
+  ];
   let names = [];
   for (let check of checks) {
     let found = js_call_named_first_argument_names(ast, check);
