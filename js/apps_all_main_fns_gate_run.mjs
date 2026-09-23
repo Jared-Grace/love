@@ -18,10 +18,9 @@ export async function apps_all_main_fns_gate_run() {
   let missing = property_get(report, "missing");
   let extra = property_get(report, "extra");
   let both = list_concat(missing, extra);
-  let fix = fn_name("apps_all_main_fns_generate");
   let hint = text_combine_multiple([
     "the written list of every app no longer matches the apps that are here - write it out again with ",
-    fix,
+    fn_name("apps_all_main_fns_generate"),
   ]);
   list_empty_is_assert_json(both, {
     hint,
