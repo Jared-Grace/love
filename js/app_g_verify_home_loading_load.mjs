@@ -15,26 +15,34 @@ export async function app_g_verify_home_loading_load(chapter_code) {
   let chapter_state = null;
   let chapter_codes = [];
   async function initial_load() {
-    let f_name = fn_name("g_sermon_write_read");
-    chapter = await api_read_or(f_name, [chapter_code], {
-      chapter_code: chapter_code,
-      passages: [],
-    });
-    let f_name2 = fn_name("g_verify_status_read");
-    status = await api_read_or(f_name2, [chapter_code], {
-      busy: false,
-      verse: "",
-      note: "",
-    });
-    let f_name3 = fn_name("g_verify_chapter_next");
-    chapter_state = await api_read_or(f_name3, [chapter_code], {
-      approved: "",
-      latest: null,
-      next: null,
-      action: "wait",
-    });
-    let f_name4 = fn_name("g_verify_chapters_available");
-    let object = await api_read_or(f_name4, [], {
+    chapter = await api_read_or(
+      fn_name("g_sermon_write_read"),
+      [chapter_code],
+      {
+        chapter_code: chapter_code,
+        passages: [],
+      },
+    );
+    status = await api_read_or(
+      fn_name("g_verify_status_read"),
+      [chapter_code],
+      {
+        busy: false,
+        verse: "",
+        note: "",
+      },
+    );
+    chapter_state = await api_read_or(
+      fn_name("g_verify_chapter_next"),
+      [chapter_code],
+      {
+        approved: "",
+        latest: null,
+        next: null,
+        action: "wait",
+      },
+    );
+    let object = await api_read_or(fn_name("g_verify_chapters_available"), [], {
       chapters: [],
     });
     chapter_codes = property_get(object, "chapters");
