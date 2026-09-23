@@ -25,12 +25,11 @@ export function bible_verses_hyphen_words_measured_gate_run() {
       expected,
     });
   }
-  let f_name = fn_name("bible_verses_hyphen_words_measured");
   list_empty_is_assert_json(defects, {
     defects,
     hint: text_combine_multiple([
       "the hyphen reading answered differently than its corpus - read got beside expected, then mend ",
-      f_name,
+      fn_name("bible_verses_hyphen_words_measured"),
       " or the corpus, whichever is wrong",
     ]),
   });
