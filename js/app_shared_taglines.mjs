@@ -1,14 +1,13 @@
 export function app_shared_taglines() {
-  "What each app that has been given one calls itself where a person reads it, kept in one place and read by name.";
-  "Read in the browser tab and as the heading of a card built from a shared link, so it carries the short name and then says plainly what the thing does - a name on its own tells somebody who has not opened it nothing.";
-  "An app absent from here is called by its own short name, which is what every app was called before this existed.";
+  "What an app does, said plainly after its name wherever a person reads its title - the browser tab, and the heading of a card built from a shared link. A name on its own tells somebody who has not opened it nothing.";
+  "Only the words AFTER the name are written here. The name itself is written once, in the list of names, and joined on in front when a title is made, so renaming an app is one edit and never leaves a title calling it by the old name.";
+  "An app absent from here has a title that is its name alone.";
   let r = {
-    index: "Apps for reading the Bible and learning to program",
-    bible: "Bible - read it in your own language",
-    verses: "Verses - encouraging Bible verses to share",
-    code: "Code - learn to program one step at a time",
-    replace: "Replace - turn one row of symbols into another",
-    music: "Music - the words of the songs, and the Scripture behind them",
+    bible: "read it in your own language",
+    verses: "encouraging Bible verses to share",
+    code: "learn to program one step at a time",
+    replace: "turn one row of symbols into another",
+    music: "the words of the songs, and the Scripture behind them",
   };
   return r;
 }

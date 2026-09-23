@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { lyric_video_song_swap_picture_or_null } from "./lyric_video_song_swap_picture_or_null.mjs";
 import { lyric_video_review_notes } from "./lyric_video_review_notes.mjs";
 import { null_is } from "./null_is.mjs";
@@ -78,7 +79,10 @@ export function lyric_video_song_swap_card(parent, document, swap, name) {
       path,
     });
   }
-  offer("now", before);
+  let b = property_get_or(swap, "original_hide", false);
+  if (not(b)) {
+    offer("now", before);
+  }
   let after = property_get(swap, "after");
   function candidate(offered) {
     let label = property_get(offered, "label");
