@@ -69,7 +69,6 @@ export async function watch() {
           }
         }
       }
-      let f_name3 = fn_name("watch");
       log(watch.name, {
         path,
       });
