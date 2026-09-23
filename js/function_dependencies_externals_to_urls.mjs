@@ -20,6 +20,7 @@ export function function_dependencies_externals_to_urls(externals) {
     astring: "https://cdn.jsdelivr.net/npm/astring/dist/astring.mjs",
     "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm",
     luxon: "https://esm.sh/luxon",
+    uuid: "https://esm.sh/uuid@11.1.0",
     "firebase/app": "https://esm.sh/firebase@12.10.0/app",
     "firebase/auth": "https://esm.sh/firebase@12.10.0/auth",
     "firebase/storage": "https://esm.sh/firebase@12.10.0/storage",
