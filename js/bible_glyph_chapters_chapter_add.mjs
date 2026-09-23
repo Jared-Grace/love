@@ -19,8 +19,11 @@ export async function bible_glyph_chapters_chapter_add(chapter_code) {
   arguments_assert(arguments, 1);
   let short_name = chapter_code.toLowerCase();
   let chapter_fn_name = "bible_glyph_chapter_" + short_name;
-  let f_name = fn_name("bible_glyph_chapters");
-  let f_path = text_combine_multiple(["js/", f_name, ".mjs"]);
+  let f_path = text_combine_multiple([
+    "js/",
+    fn_name("bible_glyph_chapters"),
+    ".mjs",
+  ]);
   let before = await file_read(f_path);
   let bound = " = " + chapter_fn_name + "();";
   if (before.includes(bound)) {
@@ -42,8 +45,11 @@ export async function bible_glyph_chapters_chapter_add(chapter_code) {
   let ordinal = text_number_ordinal_spelled_underscore(bindings + 1);
   let import_line =
     "import { " + chapter_fn_name + ' } from "./' + chapter_fn_name + '.mjs";';
-  let f_name2 = fn_name("bible_glyph_chapters");
-  let opener = text_combine_multiple(["export function ", f_name2, "() {"]);
+  let opener = text_combine_multiple([
+    "export function ",
+    fn_name("bible_glyph_chapters"),
+    "() {",
+  ]);
   let with_import = before;
   let b = before.includes(import_line);
   if (not(b)) {
