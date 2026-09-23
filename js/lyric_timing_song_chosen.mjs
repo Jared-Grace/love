@@ -16,8 +16,10 @@ export async function lyric_timing_song_chosen(desk, file_name) {
   ("It is written down for next time on the way through, because choosing a song is now the press that settles the passage and that is the press worth remembering. Coming back to the screen and finding the last take already loaded is the whole point of remembering anything.");
   ("A SONG THE MACHINE DOES NOT RECOGNISE LEAVES THE ROW ALONE AND SAYS SO. It may be a song of another book, or named in a way the readers do not know, and moving the row to a guess would be worse than moving nothing: the person would see a passage named confidently and no sign that it was invented. Leaving it standing keeps the hand-chosen passage working exactly as it did.");
   let version = html_value_get(desk.inputs.version_input);
-  let f_name = fn_name("lyric_timing_song_found");
-  let found = await app_shared_api_named(f_name, [version, file_name]);
+  let found = await app_shared_api_named(fn_name("lyric_timing_song_found"), [
+    version,
+    file_name,
+  ]);
   let unknown = not(found.found);
   if (unknown) {
     let unsaid =
