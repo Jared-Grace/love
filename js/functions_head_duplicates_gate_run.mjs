@@ -9,9 +9,13 @@ export async function functions_head_duplicates_gate_run() {
   "Measured against what was already here, because a group that is really two ideas beginning alike is a judgment, and the record is where that judgment is written down rather than argued again every run.";
   let named = await functions_head_duplicate_names();
   let path = functions_head_duplicates_baseline_path();
-  let name_write = fn_name("functions_head_duplicates_baseline_write");
   let hint =
     "these functions now begin with the same run of work, which is a helper waiting to be written - give the shared opening its own name and call it from each. The record only ever shrinks, so a new group cannot be recorded as known: collapsing the opening is the only way out";
-  let r = await baseline_names_gate_generic(named, path, hint, name_write);
+  let r = await baseline_names_gate_generic(
+    named,
+    path,
+    hint,
+    fn_name("functions_head_duplicates_baseline_write"),
+  );
   return r;
 }
