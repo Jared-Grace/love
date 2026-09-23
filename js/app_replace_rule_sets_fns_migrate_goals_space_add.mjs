@@ -6,8 +6,7 @@ import { list_map } from "./list_map.mjs";
 import { function_ast } from "./function_ast.mjs";
 import { js_array_expression_single_elements } from "./js_array_expression_single_elements.mjs";
 export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
-  let f_name = fn_name("app_replace_rule_sets_fns");
-  let ast = await function_ast(f_name);
+  let ast = await function_ast(fn_name("app_replace_rule_sets_fns"));
   let elements = js_array_expression_single_elements(ast);
   let mapped = list_map(elements, js_identifier_name);
   async function lambda(name) {
