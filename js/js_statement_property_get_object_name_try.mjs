@@ -28,8 +28,7 @@ export function js_statement_property_get_object_name_try(statement) {
   }
   let call = property_get(got, "call");
   let called = js_call_callee_name_try(call);
-  let reader = fn_name("property_get");
-  if (not_equal(called, reader)) {
+  if (not_equal(called, fn_name("property_get"))) {
     return null;
   }
   let args = js_call_arguments_get(call);
