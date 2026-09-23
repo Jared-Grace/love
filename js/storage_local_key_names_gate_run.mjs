@@ -18,20 +18,18 @@ export async function storage_local_key_names_gate_run() {
   let found = await storage_local_key_names_found();
   let gone = list_difference(recorded, live);
   let fresh = list_difference(found, recorded);
-  let f_name = fn_name("storage_local_key_names_write");
   list_empty_is_assert_json(gone, {
     hint: text_combine_multiple([
       "a function whose name is written into keys in people's browsers no longer answers to that name - every setting saved under it is now unreachable. Put the old name back, or, if losing that data was meant, say so with ",
-      f_name,
+      fn_name("storage_local_key_names_write"),
       " so the shrunken record stands in the commit",
     ]),
     gone,
   });
-  let f_name3 = fn_name("storage_local_key_names_record_new");
   list_empty_is_assert_json(fresh, {
     hint: text_combine_multiple([
       "a function name has newly reached a browser storage key and the record has never held it - nothing is lost, so record it with ",
-      f_name3,
+      fn_name("storage_local_key_names_record_new"),
       " which only ever adds and cannot clear a name that has gone",
     ]),
     fresh,
