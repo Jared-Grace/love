@@ -9,7 +9,9 @@ export async function query_function_names() {
   "The part after the hash is narrowed by a plain word instead, because it has two doors and the word they share is what they are both called. Here there is one door and it has a name, so the name is the better question.";
   arguments_assert(arguments, 0);
   let repo_name = repo_love_name();
-  let word = fn_name("html_query_property_get");
-  let names = await repo_functions_names_code_includes(repo_name, word);
+  let names = await repo_functions_names_code_includes(
+    repo_name,
+    fn_name("html_query_property_get"),
+  );
   return names;
 }
