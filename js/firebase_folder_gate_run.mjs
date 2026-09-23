@@ -19,12 +19,15 @@ export async function firebase_folder_gate_run() {
   }
   let offenders = await firebase_folder_sites_unfrozen();
   let path = firebase_folder_baseline_path();
-  let name_write = fn_name("firebase_folder_baseline_write");
-  let f_name = fn_name("literals_frozen_names");
   let hint = text_combine_multiple([
     "a bucket folder is being built here out of a word nothing is watching, so retyping it moves every future read while the uploaded files stay where they are - give the word a function of its own and add that function to ",
-    f_name,
+    fn_name("literals_frozen_names"),
   ]);
-  let r = await baseline_names_gate_generic(offenders, path, hint, name_write);
+  let r = await baseline_names_gate_generic(
+    offenders,
+    path,
+    hint,
+    fn_name("firebase_folder_baseline_write"),
+  );
   return r;
 }
