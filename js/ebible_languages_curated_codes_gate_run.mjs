@@ -35,11 +35,10 @@ export async function ebible_languages_curated_codes_gate_run() {
     return bible_folder;
   }
   let unplaced = list_map_filter_null_not_is(curated, unplaced_or_null);
-  let f_name = fn_name("ebible_bible_folder_language_code_or_null");
   list_empty_is_assert_json(unplaced, {
     hint: text_combine_multiple([
       "these offered bible folders belong to no catalogue this app carries, so nothing can say what language they are in and the covered-languages answer drops them — was one added by hand without a catalogue entry beside it, or does it come from a third source that ",
-      f_name,
+      fn_name("ebible_bible_folder_language_code_or_null"),
       " has not been taught yet?",
     ]),
     unplaced,
