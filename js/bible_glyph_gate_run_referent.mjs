@@ -20,13 +20,12 @@ export function bible_glyph_gate_run_referent(characters) {
     });
     for (let glyph of referent.glyphs) {
       let drawn = property_exists(known, glyph);
-      let f_name = fn_name("bible_glyph_characters");
       assert_json(drawn, {
         strong: referent.strong,
         glyph,
         hint: text_combine_multiple([
           "a referent rule names a glyph the vocabulary does not carry - add it to ",
-          f_name,
+          fn_name("bible_glyph_characters"),
           " or fix the spelling",
         ]),
       });
