@@ -9,8 +9,9 @@ export function functions_repack_only_deliberate() {
   "Each reason ends differently, and a reader wanting to take a name off this list should say which ending has arrived. The first ends if the caller stops keeping what it was handed - then nothing is being shared and there is nothing to break. The second ends if the left-out field ever becomes something the reader is meant to see - then the function hands back everything it was given and is a repack with no reason left.";
   "Kept as a list of names rather than as a mark in each file, so that the whole of what has been let through can be read in one place. A mark spread over the repo is a list nobody can count.";
   arguments_assert(arguments, 0);
-  let f_name = fn_name("g_coordinates_tile");
-  let f_name2 = fn_name("bundle_sizes_steps_report");
-  let names = [f_name, f_name2];
+  let names = [
+    fn_name("g_coordinates_tile"),
+    fn_name("bundle_sizes_steps_report"),
+  ];
   return names;
 }
