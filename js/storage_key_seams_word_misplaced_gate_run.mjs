@@ -16,11 +16,10 @@ export async function storage_key_seams_word_misplaced_gate_run() {
     console.log(seam);
   }
   let misplaced = await storage_key_seams_word_misplaced();
-  let f_name = fn_name("function_param_swap");
   list_empty_is_assert_json(misplaced, {
     hint: text_combine_multiple([
       "a front door onto browser storage takes its key word somewhere other than second, so the reading of published keys looks at the wrong argument and never sees the word its callers write - move the key word to second with ",
-      f_name,
+      fn_name("function_param_swap"),
       ", which moves the call sites with it",
     ]),
     misplaced,
