@@ -37,8 +37,11 @@ export async function instructions_commands() {
     let holes = text_regex_match(said, /<[^>]*>|\[[^\]]*\]/g);
     let filled = said;
     if (equal_not(holes, null)) {
-      let stand_in = fn_name("commands_only_level");
-      filled = text_replace_multiple_to(said, holes, stand_in);
+      filled = text_replace_multiple_to(
+        said,
+        holes,
+        fn_name("commands_only_level"),
+      );
     }
     let marks = ["…", "...", ":*"];
     let whole = text_includes_not_multiple(filled, marks);
