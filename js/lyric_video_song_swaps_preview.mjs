@@ -28,10 +28,10 @@ export async function lyric_video_song_swaps_preview() {
   let cards = html_div(root);
   async function song_show(name) {
     html_clear(cards);
-    let f_document = fn_name("lyric_video_song_document_read");
-    let document = await api_read(f_document, [name]);
-    let f_swaps = fn_name("lyric_video_song_swaps_read");
-    let swaps = await api_read(f_swaps, [name]);
+    let document = await api_read(fn_name("lyric_video_song_document_read"), [
+      name,
+    ]);
+    let swaps = await api_read(fn_name("lyric_video_song_swaps_read"), [name]);
     let none = null_is(document) || null_is(swaps);
     if (none) {
       app_shared_text_quiet(cards, "this song has no pictures on offer");
