@@ -48,9 +48,8 @@ export function bible_words_slips_all_gate_run() {
     };
     let wrong = json_equal_not(got, expected);
     if (wrong) {
-      let f_name = fn_name("bible_words_slips_all");
       let defect =
-        text_combine_multiple([f_name, " from "]) +
+        text_combine_multiple([fn_name("bible_words_slips_all"), " from "]) +
         letters +
         " letters up answered " +
         json_to(got) +
