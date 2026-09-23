@@ -18,12 +18,11 @@ export async function functions_gate_walk_escapes_gate_run() {
   let offenders = property_get(found, "names");
   let walked = property_get(found, "walked");
   let path = functions_gate_walk_escapes_baseline_path();
-  let name_write = fn_name("functions_gate_walk_escapes_baseline_write");
   let told = await baseline_names_gate_generic(
     offenders,
     path,
     "these gates wait on a call uncaught inside a loop they are gathering in, so the first item that refuses ends the walk and the gate throws the callee's complaint instead of its own list of offenders - hand the call to a catcher and collect the refusal as an offender beside the item it came from",
-    name_write,
+    fn_name("functions_gate_walk_escapes_baseline_write"),
   );
   let r = baseline_names_gate_walked_verdict(walked, told);
   return r;
