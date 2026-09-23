@@ -11,14 +11,12 @@ export async function function_aliases_dead_gate_run() {
   let aliases = await function_aliases();
   let dead = await function_aliases_dead();
   let keys = properties_get(dead);
-  let f_name = fn_name("function_aliases_dead_remove");
-  let f_name2 = fn_name("function_alias_change");
   list_empty_is_assert_json(keys, {
     hint: text_combine_multiple([
       "these alias keys name a function nothing answers to, so typing one reaches nothing - take them all out with ",
-      f_name,
+      fn_name("function_aliases_dead_remove"),
       ", or, where the target was renamed rather than deleted, point the key at the new name with ",
-      f_name2,
+      fn_name("function_alias_change"),
     ]),
     dead,
   });
