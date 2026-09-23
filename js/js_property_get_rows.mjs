@@ -39,8 +39,7 @@ export function js_property_get_rows(ast) {
         key,
       });
     }
-    let f_name = fn_name("property_get");
-    js_visit_calls_named_nodes(ast, f_name, call_each);
+    js_visit_calls_named_nodes(ast, fn_name("property_get"), call_each);
   }
   let rows = list_adder(collect);
   return rows;
