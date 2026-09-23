@@ -79,10 +79,9 @@ export function bible_glyph_seats_contested_gate_run() {
       }
     }
   }
-  let f_name = fn_name("bible_glyph_seats_contested");
   let hint = text_combine_multiple([
     "the record of contested seats no longer matches the root tables - a row whose table field names a different picture is a word that has been reseated since the argument was written, and a row naming a glyph the vocabulary has no character for is offering a reader a picture they cannot have; repair ",
-    f_name,
+    fn_name("bible_glyph_seats_contested"),
     " so that it describes the seats as they now are, and keep the old reading as an alternative rather than deleting it",
   ]);
   let r = list_empty_is_assert_walked_generic(walked, faults, hint);
