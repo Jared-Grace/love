@@ -27,17 +27,14 @@ export async function machine_path_literals_gate_run() {
     return b;
   }
   let left = list_filter(sites, allowed_not_is);
-  let f_name = fn_name("function_new_getter");
-  let f_name2 = fn_name("function_literal_route");
-  let f_name3 = fn_name("machine_path_literals_allowed");
   list_empty_is_assert_json(left, {
     hint: text_combine_multiple([
       "a folder belonging to one machine is written out where nothing else can find it - give it a function of its own with ",
-      f_name,
+      fn_name("function_new_getter"),
       ", move the places that write it onto that function with ",
-      f_name2,
+      fn_name("function_literal_route"),
       ", or, if it truly has to stay written out, say so and say why in ",
-      f_name3,
+      fn_name("machine_path_literals_allowed"),
     ]),
     left,
   });
