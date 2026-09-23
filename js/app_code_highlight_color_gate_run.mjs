@@ -16,12 +16,11 @@ export async function app_code_highlight_color_gate_run() {
   let readings = app_code_highlight_color_readings();
   let taken = list_size(readings);
   let path = app_code_highlight_color_baseline_path();
-  let name_write = fn_name("app_code_highlight_color_baseline_write");
   let told = await baseline_names_gate_generic(
     readings,
     path,
     "the pointing colours measure differently than they did - read these against the ones that went away, decide whether the change is wanted, and bank it if it is",
-    name_write,
+    fn_name("app_code_highlight_color_baseline_write"),
   );
   let added = property_get(told, "added");
   let stale = property_get(told, "stale");
