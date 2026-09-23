@@ -16,8 +16,7 @@ export function js_compare_text_number(ast) {
   let r = js_compare_text_number_calls_kind_of(ast);
   let kind_of = property_get(r, "kind_of");
   let calls = property_get(r, "calls");
-  let f_name = fn_name("not_equal");
-  let compares = [fn_name("equal"), f_name];
+  let compares = [fn_name("equal"), fn_name("not_equal")];
   let found = [];
   let call_each = js_compare_text_number_call_each(compares, kind_of, found);
   each(calls, call_each);
