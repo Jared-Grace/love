@@ -16,14 +16,17 @@ export async function ebible_versions_english_readaloud_gate_run() {
   let bible_folders = await ebible_versions_english_downloadable_cache();
   let missing = await ebible_versions_readaloud_missing(bible_folders);
   let path = ebible_versions_english_readaloud_baseline_path();
-  let f_name = fn_name("ebible_versions_english_readaloud_download");
-  let write = fn_name("ebible_versions_english_readaloud_baseline_write");
   let hint = text_combine_multiple([
     "this English bible has no read-aloud edition on this disk, so the search index walks every chapter of it and takes nothing, and says nothing about it. Fetch what is missing with ",
-    f_name,
+    fn_name("ebible_versions_english_readaloud_download"),
     ", which finds its own set and leaves alone what is already here",
   ]);
-  await baseline_names_gate_generic(missing, path, hint, write);
+  await baseline_names_gate_generic(
+    missing,
+    path,
+    hint,
+    fn_name("ebible_versions_english_readaloud_baseline_write"),
+  );
   let r = {
     offered: list_size(bible_folders),
     missing: list_size(missing),
