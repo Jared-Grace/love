@@ -52,10 +52,9 @@ export async function bible_glyph_chapters_language_gate_run() {
     }
   }
   ("THE FUNCTION THIS POINTS A READER AT IS NAMED INSIDE THE HINT AND NEVER BESIDE IT. A failed gate's words are read back afterwards for function names, and every name found is taken as an accusation - so a name in its own field of the complaint holds an innocent function's app out of its deployment. The hint is dropped before the names are read, which is what lets a person be told where to look without anybody being blamed for it.");
-  let f_name = fn_name("bible_glyph_chapter_bands_write");
   let hint_short = text_combine_multiple([
     "these reveal languages are short of chapters the picture Bible has already written, so a reader of that language meets those verses with no translation band at all - the whole repair for a chapter that was just authored is one run of ",
-    f_name,
+    fn_name("bible_glyph_chapter_bands_write"),
     " with the code of that chapter, which refetches every reveal language and writes the Rosetta band beside them; a language listed as short of every chapter at once refused to answer at all, and the words it refused with stand beside it",
   ]);
   list_empty_is_assert_json(short, {
