@@ -1,3 +1,4 @@
+import { js_call_fn_name_literal_is } from "./js_call_fn_name_literal_is.mjs";
 import { js_stack_logical_right_is } from "./js_stack_logical_right_is.mjs";
 import { js_stack_loop_condition_is } from "./js_stack_loop_condition_is.mjs";
 import { list_get_end_2 } from "./list_get_end_2.mjs";
@@ -39,6 +40,12 @@ export async function js_atomize(ast) {
       let guarded = js_stack_logical_right_is(stack);
       if (guarded) {
         ("the right of an and, an or, or a nullish, which is only run when the left side says so. the name would go above the whole line, so the piece would run in front of the very guard that decides whether it should run at all - and a guard asked after the thing it guards is no guard");
+        return;
+      }
+      let node = property_get(v, "node");
+      let marker_is = js_call_fn_name_literal_is(node);
+      if (marker_is) {
+        ("a function name written as a marked reference. it is a unit the way the string inside it is - it runs nothing but handing its string back - so giving it a line of its own only makes the name be written twice");
         return;
       }
       let variable_name = js_node_atomize_name();
