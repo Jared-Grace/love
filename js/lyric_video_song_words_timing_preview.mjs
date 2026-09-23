@@ -107,8 +107,7 @@ export async function lyric_video_song_words_timing_preview() {
       html_text_set(label, "Tap a word first");
       return;
     }
-    let f_move = fn_name("lyric_video_song_word_move");
-    let answered = await api_read(f_move, [
+    let answered = await api_read(fn_name("lyric_video_song_word_move"), [
       desk.name,
       entry.line_index,
       entry.word_index,
@@ -198,8 +197,9 @@ export async function lyric_video_song_words_timing_preview() {
   }
   async function song_show(name_song) {
     html_clear(box);
-    let f_read = fn_name("lyric_video_song_document_read");
-    let song = await api_read(f_read, [name_song]);
+    let song = await api_read(fn_name("lyric_video_song_document_read"), [
+      name_song,
+    ]);
     if (null_is(song)) {
       html_div_text(box, "this song has no document yet");
       return;
