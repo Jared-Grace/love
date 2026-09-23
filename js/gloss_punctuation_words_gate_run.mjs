@@ -17,11 +17,10 @@ export async function gloss_punctuation_words_gate_run() {
   let counts = property_get(measured, "counts");
   let missing = property_get(measured, "missing");
   let offending = list_filter(counts, gloss_found_any_is);
-  let f_name = fn_name("gloss_stores_punctuation_entries_repair");
   list_empty_is_assert_json(offending, {
     hint: text_combine_multiple([
       "these gloss stores explain a mark as though it were a word, which paints every explanation after it one word along from the word it is about - drop them with node scripts/ai.mjs ",
-      f_name,
+      fn_name("gloss_stores_punctuation_entries_repair"),
     ]),
     offending,
   });
