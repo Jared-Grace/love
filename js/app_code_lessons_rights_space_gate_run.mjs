@@ -14,10 +14,9 @@ export async function app_code_lessons_rights_space_gate_run() {
   "one, and the sweep would have to be rediscovered from scratch.";
   "The lessons at fault are thrown as a record rather than printed and then summed up in a sentence, because whoever reads a failure next reads it for names and cannot tell a name being accused from a name being named as the cure. Here the cure is one command, and naming it in the same breath as the offenders made every app that ships it look guilty.";
   let carrying = await app_code_lessons_rights_space_carrying();
-  let f_name = fn_name("app_code_lessons_rights_space_strip");
   let hint = text_combine_multiple([
     "these hand over a name-word starting with a space - take it off with ",
-    f_name,
+    fn_name("app_code_lessons_rights_space_strip"),
   ]);
   list_empty_is_assert_json(carrying, {
     hint,
