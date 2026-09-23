@@ -19,13 +19,11 @@ export async function app_en_learn_bible_gloss_urdu_published_unfinished_gate_ru
     app_en_learn_bible_gloss_urdu_passages,
     app_en_learn_bible_gloss_urdu_generate_upload_namespace,
   );
-  let f_name = fn_name("app_en_learn_bible_gloss_urdu_write_coverage");
-  let f_name2 = fn_name("app_en_learn_bible_gloss_urdu_chapter_upload_stored");
   let fault = text_combine_multiple([
     "are published with passages nobody has explained yet - read the verses each one is missing with ",
-    f_name,
+    fn_name("app_en_learn_bible_gloss_urdu_write_coverage"),
     ", write them, then carry the chapter up again with ",
-    f_name2,
+    fn_name("app_en_learn_bible_gloss_urdu_chapter_upload_stored"),
   ]);
   let r = gloss_chapters_offenders_assert(walked, "en_learn_bible", fault);
   return r;
