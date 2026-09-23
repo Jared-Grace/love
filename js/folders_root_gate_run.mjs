@@ -16,21 +16,19 @@ export async function folders_root_gate_run() {
   let expected = folders_root_expected();
   let unexpected = list_difference(tracked, expected);
   let absent = list_difference(expected, tracked);
-  let f_name = fn_name("folders_root_expected");
   list_empty_is_assert_json(unexpected, {
     hint: text_combine_multiple([
       "a folder is at the top of the repo that is not written down as one of the kinds this repo is made of - either it belongs inside one of the folders already there, or it is a kind of its own and ",
-      f_name,
+      fn_name("folders_root_expected"),
       " should say so",
     ]),
     unexpected,
     expected,
   });
-  let f_name2 = fn_name("folders_root_expected");
   list_empty_is_assert_json(absent, {
     hint: text_combine_multiple([
       "a folder written down as one of the kinds this repo is made of is not there any more - if it moved, say where it moved to in ",
-      f_name2,
+      fn_name("folders_root_expected"),
       "; if it went, take the name out",
     ]),
     absent,
