@@ -37,12 +37,10 @@ export async function literals_frozen_name_add(name) {
     };
     return known;
   }
-  let f_name = fn_name("literals_frozen_names");
   function lambda(ast) {
     let elements = js_array_expression_only_elements(ast);
     ("The word is put into a string that was parsed empty rather than into one built out of the name, so nothing handed to this command can arrive as code. It is the same move the string builder itself makes, and it is what lets this be approved once instead of at every use.");
-    let f_name3 = fn_name("fn_name");
-    let code_expression = text_combine_multiple([f_name3, '("")']);
+    let code_expression = text_combine_multiple([fn_name("fn_name"), '("")']);
     let call = js_parse_expression(code_expression);
     let argument = js_string(name);
     let call_arguments = property_get(call, "arguments");
@@ -56,11 +54,12 @@ export async function literals_frozen_name_add(name) {
     let at = js_body_list_declaration_index(body);
     body.splice(at, 0, declare);
   }
-  await function_transform_auto(f_name, lambda);
+  await function_transform_auto(fn_name("literals_frozen_names"), lambda);
   ("Recording follows in the same breath, because the two halves are one promise and a list naming a word nothing has read is a promise nobody is keeping. It is also what the gates check, so stopping halfway would leave them exactly as red as before.");
   ("It is asked for in a process of its own, and that is not carelessness about what a process costs - it is the only way it can see the line just written. The list is a function, and a run that has already loaded it goes on holding the version it loaded; the file changing underneath it changes nothing about what is in hand. Asked for directly from here it answered that it had added nothing, which reads exactly like the trap this exists to close.");
-  let f_name2 = fn_name("literals_frozen_record_new");
-  let recorded = await function_run_fresh(f_name2);
+  let recorded = await function_run_fresh(
+    fn_name("literals_frozen_record_new"),
+  );
   let report = {
     name,
     added: true,
