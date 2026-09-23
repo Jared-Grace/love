@@ -3,13 +3,16 @@ import { property_set } from "./property_set.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_en_learn_bible_gloss_urdu_word_explains } from "./app_en_learn_bible_gloss_urdu_word_explains.mjs";
+import { list_includes_not } from "./list_includes_not.mjs";
+import { text_first_upper_to } from "./text_first_upper_to.mjs";
 export function app_en_learn_bible_gloss_urdu_adverb_conjunction_explains() {
   "The small English words that are not a kind of word so much as a leftover: the ones that shade a sentence, the ones that place it in time or space, the ones that count roughly, and the ones that join one clause to the next.";
   "Urdu grammar would split these into ظرف and حرفِ ربط and would be right to. They are in one table because the reason for every entry in it is the same: a reader meets the word in the first chapter, keeps meeting it, and cannot work it out from a root or a suffix. The reader either is told or is stuck. Splitting them four ways would have given four tables of a dozen words each with no separate reason standing behind any of them.";
   "The sentences are short on purpose, and shorter than the ones in the verb table next door. A verb needs its three forms explained because English will not give them up; ‘here’ needs the word یہاں and then nothing. Saying more would not be teaching, it would be filling.";
   "Where a word honestly does two jobs the entry says both, in the order a reader meets them, and says nothing about which job it is doing in this particular verse. That restraint is the whole reason these entries can stand where a shared label stood: a wording that picked one job would be a job-in-this-verse claim, which is the thing refused all the way down the shared-label note. ‘just’, ‘so’, ‘since’, ‘how’, ‘still’, ‘while’, ‘where’, ‘when’ and ‘as’ are the nine that needed it.";
   "Several entries name their Urdu grammar class - وقت کا ظرف for the time words, حرفِ ربط for the joining ones - and then say in plain words what the class means. That is not decoration. The shared labels these entries replace are written in exactly those terms, and a settled wording may only stand where a label stood if it says everything the label said. Naming the class and glossing it says the label's whole content and then says more.";
-  "The capitals are written out rather than derived, the same way the verb table writes its two. A word standing at the start of a verse gets one extra sentence about why its first letter is big, and that sentence is copied word for word from the verb table rather than composed again, because two true sentences saying one thing in different words is exactly what the store is trying to stop doing. ‘After’ is the odd one: its lowercase lives in the closed-class table rather than here, so its capital is built by reading that table instead of this one. The alternative was writing a second wording for ‘after’, which is the failure just named.";
+  "The capitals are written out rather than derived, the same way the verb table writes its two. A word standing at the start of a verse gets one extra sentence about why its first letter is big, and that sentence is copied word for word from the verb table rather than composed again, because two true sentences saying one thing in different words is exactly what the store is trying to stop doing. The capitals of the closed-class table next door are not written out at all. They are read off that table and given the same extra sentence, because a list of sixty capitals copied by hand is sixty chances to write a second wording for a word that already has one, which is the failure just named. Reading them means the list cannot fall behind the table it is made from: a word added there arrives here capitalised on the same commit.";
+  "Eleven words are held back from that reading, and they are held back for one reason: their capital has two possible causes and this table cannot tell which. ‘He’, ‘Him’, ‘His’, ‘You’, ‘Your’, ‘My’, ‘Me’ and ‘I’ are written with a big letter either because the verse starts there or because the word is pointing at the Lord, and a sentence saying ‘the big letter is because the word stands at the start of the sentence’ would be flatly false wherever the second reason is the true one. ‘Who’ and ‘Whom’ join them because some translations capitalise them for the same reverence. Every other word in that table is never capitalised for reverence by anyone, so for those the extra sentence has only one thing it could mean and is safe to say.";
   let r = {
     even: "یہ لفظ بات پر زور دیتا ہے: اُردُو میں 'تک' یا 'بھی'۔ جَیسے 'even the wind' یعنی 'ہَوا تک'۔",
     just: "یہ لفظ دو کام کرتا ہے: 'صِرف' یعنی اَور کُچھ نہیں، اَور 'ابھی' یعنی اِسی وقت۔",
@@ -84,8 +87,29 @@ export function app_en_learn_bible_gloss_urdu_adverb_conjunction_explains() {
   }
   let capital_words = object_property_names(capitals);
   list_map(capital_words, capital_write);
+  let reverent = [
+    "i",
+    "I",
+    "me",
+    "you",
+    "he",
+    "him",
+    "his",
+    "my",
+    "your",
+    "who",
+    "whom",
+  ];
   let elsewhere = app_en_learn_bible_gloss_urdu_word_explains();
-  let after_said = property_get(elsewhere, "after");
-  property_set(r, "After", after_said + capital_tail);
+  let elsewhere_words = object_property_names(elsewhere);
+  function elsewhere_capital_write(word) {
+    let writable = list_includes_not(reverent, word);
+    if (writable) {
+      let said = property_get(elsewhere, word);
+      let property_name = text_first_upper_to(word);
+      property_set(r, property_name, said + capital_tail);
+    }
+  }
+  list_map(elsewhere_words, elsewhere_capital_write);
   return r;
 }
