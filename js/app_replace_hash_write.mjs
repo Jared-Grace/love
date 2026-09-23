@@ -38,7 +38,7 @@ export function app_replace_hash_write(context) {
     let goal_index = storage_session_get_context(context, "goal_index");
     let rule_set2 = app_replace_rule_set_get(context);
     let goal = property_list_get(rule_set2, "goals", goal_index);
-    let goal_id = app_replace_goal_hash_id(goal);
+    let goal_id = text_url_encode(app_replace_goal_hash_id(goal));
     property_set(hash, key2, goal_id);
   }
   html_hash_set_object(hash);

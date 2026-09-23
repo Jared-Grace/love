@@ -1,3 +1,4 @@
+import { repo_love_name } from "./repo_love_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
@@ -10,18 +11,18 @@ export async function functions_fn_name_declarations_inline_repair() {
   "The set is found by the words such a line is written in, which catches more than it needs - a line the step must leave alone is spelled the same way - so the step itself decides, and a function it leaves unchanged is handed back as left rather than hidden.";
   "Each function is committed the moment it is done, under its own name, because a run over hundreds of files lasts long enough that somebody else's sweep takes them first.";
   await ai_git_noted();
-  let names = await repo_functions_names_code_includes(
-    text_combine_multiple([" = ", fn_name("fn_name"), '("']),
-  );
+  let repo_name = repo_love_name();
+  let text = text_combine_multiple([" = ", fn_name("fn_name"), '("']);
+  let names = await repo_functions_names_code_includes(repo_name, text);
   let done = [];
   for (let name of names) {
     let args = [name];
     await function_call_commit(function_fn_name_declarations_inline, args);
     list_add(done, name);
   }
-  let left = await repo_functions_names_code_includes(
-    text_combine_multiple([" = ", fn_name("fn_name"), '("']),
-  );
+  let repo_name2 = repo_love_name();
+  let text2 = text_combine_multiple([" = ", fn_name("fn_name"), '("']);
+  let left = await repo_functions_names_code_includes(repo_name2, text2);
   let r = {
     done,
     left,

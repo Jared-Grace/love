@@ -13,7 +13,8 @@ export function app_replace_hash_index_by_id_get(hash, key, list, id_get) {
   if (null_is(word)) {
     return null;
   }
-  let lower = text_lower_to(word);
+  let decoded = catch_null(() => text_url_decode(word)) ?? word;
+  let lower = text_lower_to(decoded);
   let ids = list_map(list, id_get);
   let named = list_includes(ids, lower);
   if (named) {
