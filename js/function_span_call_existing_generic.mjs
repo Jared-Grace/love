@@ -35,14 +35,13 @@ export async function function_span_call_existing_generic(
   let f_name_new = function_span_scratch_name(f_name);
   await function_exists_not_assert(f_name_new);
   let before = await function_read(f_name);
-  let apply_fn_name = fn_name("js_selects_functionize");
   await function_functionize_generic(
     f_name,
     address_from,
     address_to,
     f_name_new,
     select_fn_name,
-    apply_fn_name,
+    fn_name("js_selects_functionize"),
   );
   let cut = await function_read(f_name_new);
   let existing = await function_read(f_name_call);
