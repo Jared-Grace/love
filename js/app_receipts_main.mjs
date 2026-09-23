@@ -33,12 +33,14 @@ export function app_receipts_main(context) {
     "Folder code",
   );
   let saved = storage_local_name_get(app_name, key);
-  if (not(null_is(saved))) {
+  let b = null_is(saved);
+  if (not(b)) {
     html_value_set(code_input, saved);
   }
   function on_code() {
     let typed = html_value_get(code_input);
-    storage_local_name_set(app_name, key, typed.trim());
+    let value = typed.trim();
+    storage_local_name_set(app_name, key, value);
   }
   html_on_input(code_input, on_code);
   html_p_text(root, "Take a photo of a receipt 🧾");
@@ -48,7 +50,8 @@ export function app_receipts_main(context) {
   async function on_photo(file) {
     html_clear(shown);
     let folder_code = html_value_get(code_input).trim();
-    if (not(app_receipts_folder_code_valid_is(folder_code))) {
+    let b2 = app_receipts_folder_code_valid_is(folder_code);
+    if (not(b2)) {
       html_p_text(
         shown,
         "⚠️ Type a folder code first - letters, numbers, - and _ only",
