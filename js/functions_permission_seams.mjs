@@ -9,9 +9,10 @@ export function functions_permission_seams() {
   ("The third name is the one that proves the list has to be written by hand rather than derived. It used to append a rule straight into the settings file through the ordinary file writer, so nothing about its imports marked it out from the hundreds of functions that write some file or other, and it was found by reading it rather than by following anything.");
   ("It no longer writes that way. It hands the granted names to the one funnel that writes the list and regenerates the file from it, so it now reaches the other two names here and a reader following the generators would arrive at it. That makes its place on this list redundant for the reachability walk rather than load-bearing, and it keeps that place anyway: what the walk needs and what a reader needs are different, and a roster of the ways a rule gets written should still name the one place a rule is written for a name that arrived while the program was running instead of out of committed source.");
   ("Why it wrote directly is worth keeping, because it is what the funnel exists to prevent. Writing the settings file alone left the granted-names list — the source the file is generated from — never opened, so every rule written that way was thrown away by the next thing that regenerated the file. Three approvals the human had already given departed exactly so before the cause was found.");
-  let f_name = fn_name("permission_settings_allow_write_from");
-  let f_name2 = fn_name("permission_grant_names_write");
-  let f_name3 = fn_name("permission_rule_grant_checked_context");
-  let names = [f_name, f_name2, f_name3];
+  let names = [
+    fn_name("permission_settings_allow_write_from"),
+    fn_name("permission_grant_names_write"),
+    fn_name("permission_rule_grant_checked_context"),
+  ];
   return names;
 }
