@@ -16,10 +16,9 @@ export async function functions_assert_json_get_lambda_gate_run() {
   "The functions at fault are thrown as a record rather than printed and then summed up in a sentence, because whoever reads a failure next reads it for names and cannot tell a name being accused from a name being named as the cure. Here the cure is the sweep that unwraps them all, and naming it beside the offenders made it look like one.";
   let sites = await functions_assert_json_get_lambda_sites();
   let names = list_map_property(sites, "f_name");
-  let f_name = fn_name("functions_assert_json_get_lambda_collapse");
   let hint = text_combine_multiple([
     "these build a payload wrapper by hand that the eager check already builds - unwrap them with ",
-    f_name,
+    fn_name("functions_assert_json_get_lambda_collapse"),
   ]);
   list_empty_is_assert_json(names, {
     hint,
