@@ -15,10 +15,9 @@ export async function apps_pages_not_app_gate_run() {
     hint: "no page was looked at at all, which is not a pass - it is a sweep that found nothing to check. The public folders it reads have moved",
   });
   let offenders = property_get(report, "offenders");
-  let sandbox_named = fn_name("app_sandbox");
   let hint = text_combine_multiple([
     "these pages have an address of their own and no app behind them - either give each one an entry point named after it, or take the page down and put the screen behind the hash of ",
-    sandbox_named,
+    fn_name("app_sandbox"),
     " instead",
   ]);
   list_empty_is_assert_json(offenders, {
