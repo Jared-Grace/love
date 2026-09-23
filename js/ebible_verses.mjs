@@ -1,33 +1,16 @@
-import { ebible_chapter_verse_texts } from "./ebible_chapter_verse_texts.mjs";
-import { property_get } from "./property_get.mjs";
-import { ebible_verses_before } from "./ebible_verses_before.mjs";
-import { ebible_verse_new_text } from "./ebible_verse_new_text.mjs";
-import { list_copy } from "./list_copy.mjs";
-import { list_add_first } from "./list_add_first.mjs";
-import { ebible_verse_cleaned } from "./ebible_verse_cleaned.mjs";
-import { list_map_filter } from "./list_map_filter.mjs";
+import { ebible_verses_kept } from "./ebible_verses_kept.mjs";
+import { list_filter } from "./list_filter.mjs";
 import { ebible_verse_words_is } from "./ebible_verse_words_is.mjs";
 export async function ebible_verses(bible_folder, chapter_code) {
   "$plain chapter_code";
   "$plain bible_folder";
-  "Cuts one chapter of a Bible into its verses, each with the number it is known by.";
+  "Cuts one chapter of a Bible into its verses, each with the number it is known by, and hands back only the ones that have words in them.";
   "Where each verse begins is written into the source page, so the cutting goes by that and searches for nothing.";
   "It used to search. A chapter was flattened into one run of words with the verse numbers standing among them as words of their own, and each number was then hunted down from the end of the chapter backwards. The hunt had no way to tell a number that marks a verse from a number the verse happens to say, and it was wrong: Cebuano 2 Kings 25 verse 17 opens on the words eighteen cubits, so eighteen was taken for the start of verse 18, verse 17 was left with nothing in it and dropped, and nothing anywhere said so.";
   "Both readings begin at the same page, and this one is written down rather than worked out, so it is the answer wherever they disagreed.";
-  "Anything standing before the first number is kept as a verse of its own under a nought, because a chapter often opens with a title or a heading and dropping it would lose words that are in the book.";
-  "A verse left with nothing in it once the empty brackets are taken out is dropped. Those are places the translation has no words for rather than verses somebody could read, and a reader shown a numbered blank would take it for a fault in the app.";
-  "What one publisher got wrong about one of their own words is put right by name, asked of the bible the chapter came from. It used to be asked of the words alone, which is the same repair pointed at every translation the archive ships: the Urdu one turns the Arabic spelling of the name of God into the Urdu word for it, and the Arabic bible here writes that name in six hundred and thirty-seven of its chapters.";
-  let cut = await ebible_chapter_verse_texts(bible_folder, chapter_code);
-  let before = property_get(cut, "before");
-  let marked = property_get(cut, "verses");
-  let verse_number = ebible_verses_before();
-  let heading = ebible_verse_new_text(before, verse_number);
-  let all = list_copy(marked);
-  list_add_first(all, heading);
-  function lambda(item) {
-    let v = ebible_verse_cleaned(bible_folder, item);
-    return v;
-  }
-  let verses = list_map_filter(all, lambda, ebible_verse_words_is);
+  "Anything standing before the first number is kept as a verse of its own under a nought, because a chapter often opens with a title or a heading and dropping it would lose words that are in the book. A chapter with nothing standing there loses its nought, since a nought with nothing in it has no words and is dropped by the same test as any other verse.";
+  "A verse the translation printed no words for is dropped. Those are places the translation has nothing to say rather than verses somebody could read, and a reader shown a numbered blank would take it for a fault in the app. The dropping is the whole of what this adds to the cut beneath it, and it is the reason the two are separate: a reading that has to see what was dropped asks the cut instead.";
+  let all = await ebible_verses_kept(bible_folder, chapter_code);
+  let verses = list_filter(all, ebible_verse_words_is);
   return verses;
 }

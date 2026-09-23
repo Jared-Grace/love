@@ -45,7 +45,7 @@ export function app_index_main_fns() {
     },
     {
       app_fn: fn_name("app_en_learn_bible"),
-      text: "Allows learning English by reading the Bible in English, with every English word explained in Urdu",
+      text: "Allows learning English by reading the Bible, with every word explained in Urdu",
       category: languages,
     },
     {
@@ -71,19 +71,19 @@ export function app_index_main_fns() {
     {
       url: "https://www.youtube.com/@CHRISTrosetolifesinging",
       label: "▶️ Bible singing",
-      text: "Videos on YouTube of Bible verses put to music, and songs of praise and worship",
+      text: "Bible verses put to music, and songs of praise and worship, on YouTube",
       category: worship,
     },
     {
       url: "https://www.youtube.com/@CHRISTrosetolifemusiclearn",
       label: "▶️ Music learn",
-      text: "Videos on YouTube that teach how to write Christian songs: the tune, the words, the chords",
+      text: "Videos on YouTube teaching how to write Christian songs",
       category: worship,
     },
     {
       url: "https://www.youtube.com/@CHRISTrosetolifemusicai",
       label: "▶️ Music: AI",
-      text: "Videos on YouTube of Bible verses put to music using AI",
+      text: "Bible verses put to music using AI, on YouTube",
       category: worship,
     },
     {
