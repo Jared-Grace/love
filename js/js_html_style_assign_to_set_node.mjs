@@ -26,8 +26,7 @@ export function js_html_style_assign_to_set_node(node) {
   }
   let key_expression = js_property_key_string_expression(property);
   let value = js_property_value_get(property);
-  let f_name = fn_name("html_style_set");
-  let expression = js_code_call_parse_expression(f_name);
+  let expression = js_code_call_parse_expression(fn_name("html_style_set"));
   let arguments2 = js_call_arguments_get(expression);
   let copy = object_copy(b);
   let copy2 = object_copy(value);
