@@ -6,6 +6,6 @@ export function commits_message_rules_since() {
   "IT IS THE HEAD OF THE DAY THE GATE WAS WRITTEN, 2026-08-22, and it should not be moved forward afterwards. Moving it is how a red gate gets made green without the offending commit being accounted for, which is the one thing this must not make easy.";
   "THE DAY IS WHAT IS WRITTEN DOWN HERE, AND THE ID ONLY SPELLS IT. A rewrite of the history in September gave every commit of that day a new id, and the old one named nothing afterwards - so both readings stopped with git calling the range invalid, which is a stop rather than a verdict and had been mistaken for one for weeks. Set again to the head of the same day under its new id, which is a restoring and not the moving forward the line above refuses: the place is the same place, and every commit that was answerable before is answerable still.";
   arguments_assert(arguments, 0);
-  let commit = "64018b90e34edd515e8731b1decc30781eba0ef4";
+  let commit = "ccb10375c74fd3ecc7b26e68af708bbdbeee3ae0";
   return commit;
 }
