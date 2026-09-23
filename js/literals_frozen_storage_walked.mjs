@@ -19,8 +19,10 @@ export async function literals_frozen_storage_walked() {
   let identifiers = await data_identifiers_get();
   ("Both ways of reaching a database count: the ones that ask the shared opener, and the two that still speak to the browser directly. Asking the index for the browser's own name is what finds the second kind, and it is the same question, so a third one written tomorrow is found without anybody adding it here.");
   let direct = property_or_null(identifiers, "indexedDB");
-  let property_name = fn_name("indexeddb_database_open");
-  let shared = property_or_null(identifiers, property_name);
+  let shared = property_or_null(
+    identifiers,
+    fn_name("indexeddb_database_open"),
+  );
   let openers = list_concat_unique(direct, shared);
   let frozen = literals_frozen_names();
   let offenders = [];
