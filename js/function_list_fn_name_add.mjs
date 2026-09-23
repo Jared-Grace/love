@@ -23,8 +23,7 @@ export async function function_list_fn_name_add(f_name, name) {
   await function_exists_assert(name);
   function lambda(ast) {
     let elements = js_array_expression_only_elements(ast);
-    let f_name2 = fn_name("fn_name");
-    let code_expression = text_combine_multiple([f_name2, '("")']);
+    let code_expression = text_combine_multiple([fn_name("fn_name"), '("")']);
     let call = js_parse_expression(code_expression);
     let argument = js_string(name);
     let call_arguments = property_get(call, "arguments");
