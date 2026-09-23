@@ -12,12 +12,13 @@ export async function qa_gates_folder_uncommitted_reaching() {
   "The folders are named here one at a time rather than read off the ignore file, because the ignore file spells paths and this has to ask about functions, and no reading turns one into the other. Adding a folder means adding the function that spells it.";
   arguments_assert(arguments, 0);
   let names = await qa_gates_names();
-  let f_name = fn_name("folder_web_dev");
-  let f_name2 = fn_name("folder_web_latest");
-  let f_name3 = fn_name("folder_web_latest_absolute");
-  let f_name4 = fn_name("folder_gitignore_name");
-  let f_name5 = fn_name("folder_gitignore_join");
-  let targets = [f_name, f_name2, f_name3, f_name4, f_name5];
+  let targets = [
+    fn_name("folder_web_dev"),
+    fn_name("folder_web_latest"),
+    fn_name("folder_web_latest_absolute"),
+    fn_name("folder_gitignore_name"),
+    fn_name("folder_gitignore_join"),
+  ];
   let offenders = {};
   for (let target of targets) {
     let reaching = await function_names_reaching(names, target);
