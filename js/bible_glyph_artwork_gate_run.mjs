@@ -38,18 +38,15 @@ export function bible_glyph_artwork_gate_run() {
     list_add(undecided, glyph.name);
   }
   let none = list_empty_is(undecided);
-  let f_name = fn_name("bible_glyph_artwork_names_search");
-  let f_name2 = fn_name("bible_glyph_artwork_names");
-  let f_name3 = fn_name("bible_glyph_artwork_absent");
   assert_json(none, {
     undecided,
     hint: text_combine_multiple([
       "these glyphs have no artwork decision - ask ",
-      f_name,
+      fn_name("bible_glyph_artwork_names_search"),
       " what the set draws, then either record the name it draws each one under in ",
-      f_name2,
+      fn_name("bible_glyph_artwork_names"),
       " or name it in ",
-      f_name3,
+      fn_name("bible_glyph_artwork_absent"),
       " as one the set has no picture for",
     ]),
   });
