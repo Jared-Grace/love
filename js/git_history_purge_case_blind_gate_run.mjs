@@ -26,10 +26,9 @@ export function git_history_purge_case_blind_gate_run() {
   }
   let failed = list_filter(cases, git_history_purge_case_blind_gate_run_broken);
   let offenders = list_map(failed, git_history_purge_case_blind_gate_run_claim);
-  let f_name = fn_name("text_word_start_regex");
   let hint = text_combine_multiple([
     "a history purge has stopped reading a capital letter as the same letter, or has started matching a word inside longer ones - the word shape comes from ",
-    f_name,
+    fn_name("text_word_start_regex"),
     " and each of its three readers is told about the letter in its own words, so one of those has been dropped",
   ]);
   let result = list_empty_is_assert_walked_generic(walked, offenders, hint);
