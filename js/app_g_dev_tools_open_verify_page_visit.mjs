@@ -33,8 +33,10 @@ export async function app_g_dev_tools_open_verify_page_visit(r) {
     await card.click();
     await page.waitForTimeout(8000);
     let routed = page.url();
-    let f_name = fn_name("app_g_dev_tools_open_verify");
-    let name = text_combine_multiple([f_name, ".png"]);
+    let name = text_combine_multiple([
+      fn_name("app_g_dev_tools_open_verify"),
+      ".png",
+    ]);
     let picture = folder_gitignore_join(name);
     await page.screenshot({
       path: picture,
