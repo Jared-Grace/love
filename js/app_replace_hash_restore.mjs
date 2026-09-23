@@ -1,7 +1,7 @@
+import { app_replace_rule_set_hash_ids } from "./app_replace_rule_set_hash_ids.mjs";
+import { app_replace_goal_hash_ids } from "./app_replace_goal_hash_ids.mjs";
 import { app_replace_rule_set_hash_key } from "./app_replace_rule_set_hash_key.mjs";
 import { app_replace_hash_index_by_id_get } from "./app_replace_hash_index_by_id_get.mjs";
-import { app_replace_rule_set_hash_id } from "./app_replace_rule_set_hash_id.mjs";
-import { app_replace_goal_hash_id } from "./app_replace_goal_hash_id.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { app_shared_hash_screen_get } from "./app_shared_hash_screen_get.mjs";
 import { not } from "./not.mjs";
@@ -24,7 +24,7 @@ export function app_replace_hash_restore(context) {
     hash,
     key_set,
     rule_sets,
-    app_replace_rule_set_hash_id,
+    app_replace_rule_set_hash_ids,
   );
   let rule_set_said = null_not_is(rule_set_index);
   let goal_said = false;
@@ -36,7 +36,7 @@ export function app_replace_hash_restore(context) {
       hash,
       key,
       goals,
-      app_replace_goal_hash_id,
+      app_replace_goal_hash_ids,
     );
     goal_said = null_not_is(goal_index);
     if (goal_said) {
