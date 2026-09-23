@@ -16,8 +16,7 @@ export async function bible_glyph_chapters_count_stated() {
   ("SPELLED WORDS ARE LOWERED BEFORE THEY ARE COMPARED, because a sentence begins with a capital and a spelling does not. Comparing them as written would fail on prose that is perfectly correct, which is the way a gate teaches everybody to ignore it.");
   ("Nothing said at all is answered as nothing rather than as a disagreement, because the two are different mistakes with different repairs - one is a sentence to correct and the other is a sentence to write.");
   ("The words are handed back twice, once lowered for comparing and once exactly as the sentence spells them, because whoever repairs the sentence has to find those words in the file and a lowered copy of them is not there.");
-  let f_name = fn_name("bible_glyph_chapters");
-  let code = await function_read(f_name);
+  let code = await function_read(fn_name("bible_glyph_chapters"));
   let lines = function_prose_lines(code);
   let regex = new RegExp("^([A-Za-z]+(?: [A-Za-z]+)*) chapters today,");
   let said = null;
