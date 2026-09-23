@@ -16,7 +16,6 @@ export function js_statement_arguments_assert_is(statement) {
   }
   let callee = property_get(call, "callee");
   let called = js_identifier_name_try(callee);
-  let right = fn_name("arguments_assert");
-  let guard_is = equal(called, right);
+  let guard_is = equal(called, fn_name("arguments_assert"));
   return guard_is;
 }
