@@ -25,7 +25,6 @@ export function js_statements_span_repack_only_is(span, tail) {
   if (few_is) {
     return false;
   }
-  let getter = fn_name("property_get");
   let lifted = 0;
   let made = 0;
   for (let statement of span) {
@@ -43,7 +42,10 @@ export function js_statements_span_repack_only_is(span, tail) {
         let name = property_or_null(id, "name");
         let source = property_or_null(declarator, "init");
         let handed_is = list_includes(outputs, name);
-        let unpack_is = js_call_callee_name_equal(source, getter);
+        let unpack_is = js_call_callee_name_equal(
+          source,
+          fn_name("property_get"),
+        );
         if (handed_is && unpack_is) {
           lifted = add(lifted, 1);
           continue;
