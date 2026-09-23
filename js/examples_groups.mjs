@@ -2,8 +2,7 @@ import { fn_name } from "./fn_name.mjs";
 export function examples_groups() {
   "The single ordered source for the curriculum. Groups run SIMPLE → COMPLEX and";
   "are CONTIGUOUS in the reading order, so a group header marks a rung on the";
-  let f_name = fn_name("examples_order");
-  `complexity climb (not a topic — imports, say, span several rungs). ${f_name}`;
+  `complexity climb (not a topic — imports, say, span several rungs). ${fn_name("examples_order")}`;
   ("is just these flattened; the menu draws a header before each group's examples.");
   let groups = [
     {
