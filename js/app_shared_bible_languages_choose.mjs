@@ -1,3 +1,4 @@
+import { app_shared_bible_languages_hash_value } from "./app_shared_bible_languages_hash_value.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { language_code_key } from "./language_code_key.mjs";
 import { app_shared_bible_language_hash_key } from "./app_shared_bible_language_hash_key.mjs";
@@ -6,10 +7,6 @@ import { app_shared_bible_panel_open } from "./app_shared_bible_panel_open.mjs";
 import { app_shared_bible_subset_sorted_choose } from "./app_shared_bible_subset_sorted_choose.mjs";
 import { app_shared_languages_prompt_text } from "./app_shared_languages_prompt_text.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { list_join_plus } from "./list_join_plus.mjs";
-import { ebible_language_en_code } from "./ebible_language_en_code.mjs";
 import { app_shared_language_codes_save } from "./app_shared_language_codes_save.mjs";
 import { html_hash_transform } from "./html_hash_transform.mjs";
 import { property_set } from "./property_set.mjs";
@@ -31,13 +28,7 @@ export function app_shared_bible_languages_choose(
   }
   let chosen = list_map_filter_null_not_is(languages_chosen, to_language);
   function on_change() {
-    let property_name3 = language_code_key();
-    let codes = list_map_property(chosen, property_name3);
-    if (list_empty_is(codes)) {
-      let v = ebible_language_en_code();
-      codes = [v];
-    }
-    let l = list_join_plus(codes);
+    let l = app_shared_bible_languages_hash_value(chosen);
     app_shared_language_codes_save(l);
     function transform(hash) {
       let property_name = app_shared_bible_language_hash_key();

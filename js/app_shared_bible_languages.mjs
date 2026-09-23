@@ -1,10 +1,7 @@
+import { app_shared_bible_languages_hash_value } from "./app_shared_bible_languages_hash_value.mjs";
 import { language_code_key } from "./language_code_key.mjs";
 import { app_shared_bible_language_hash_key } from "./app_shared_bible_language_hash_key.mjs";
 import { app_shared_bible_languages_offered } from "./app_shared_bible_languages_offered.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { ebible_language_en_code } from "./ebible_language_en_code.mjs";
-import { list_join_plus } from "./list_join_plus.mjs";
 import { html_hash_property_set } from "./html_hash_property_set.mjs";
 import { app_shared_bible_languages_chosen_get } from "./app_shared_bible_languages_chosen_get.mjs";
 import { app_shared_bible_subset_screen_generic } from "./app_shared_bible_subset_screen_generic.mjs";
@@ -17,15 +14,9 @@ export function app_shared_bible_languages(context) {
   let languages_chosen = app_shared_bible_languages_chosen_get();
   function on_change() {
     "write the chosen languages back to the url hash (key l) so the choice is shareable, survives a reload, and matches the chapter reader";
-    let property_name = language_code_key();
-    let codes = list_map_property(languages_chosen, property_name);
-    if (list_empty_is(codes)) {
-      let v = ebible_language_en_code();
-      codes = [v];
-    }
-    let l = list_join_plus(codes);
-    let property_name2 = app_shared_bible_language_hash_key();
-    html_hash_property_set(property_name2, l);
+    let l = app_shared_bible_languages_hash_value(languages_chosen);
+    let property_name = app_shared_bible_language_hash_key();
+    html_hash_property_set(property_name, l);
   }
   ("reached from the settings hub, so back returns there");
   let back = app_shared_screen_later(context, app_shared_bible_settings);

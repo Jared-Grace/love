@@ -1,9 +1,9 @@
-import { less_than } from "./less_than.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { not } from "./not.mjs";
-import { app_replace_goal_hash_tokens } from "./app_replace_goal_hash_tokens.mjs";
 import { property_get } from "./property_get.mjs";
+import { app_replace_goal_hash_tokens } from "./app_replace_goal_hash_tokens.mjs";
 import { list_map } from "./list_map.mjs";
+import { less_than } from "./less_than.mjs";
+import { app_replace_goal_hash_ids_grow } from "./app_replace_goal_hash_ids_grow.mjs";
+import { not } from "./not.mjs";
 export function app_replace_goal_hash_ids_whole(goals) {
   "The words for each goal of one rule set before any run is left out: the first letter of each symbol of where it starts, a wave, and the first letter of each symbol of where it has to end - the goal from 1 = 1 to 1 + 1 = 1 1 is 1e1~1p1e11, and function average ( x y ) shortens to fa(xy).";
   "Where two goals of the set would come out alike, the symbols that tell them apart get one more letter each, again and again until the words differ - mae [ mae ] = mue and mae [ mae ] = mae become m(m)emu and m(m)ema. Only symbols in the same place that differ grow, so the rest stays as short as it was.";
@@ -46,30 +46,8 @@ export function app_replace_goal_hash_ids_whole(goals) {
       if (less_than(group.length, 2)) {
         continue;
       }
-      function count_get(index) {
-        let r6 = tokens[index].length;
-        return r6;
-      }
-      let places = Math.max(...group.map(count_get));
-      for (let place = 0; less_than(place, places); place++) {
-        function text_get(index) {
-          let r7 = tokens[index][place] ?? "";
-          return r7;
-        }
-        let texts = group.map(text_get);
-        if (less_than(new Set(texts).size, 2)) {
-          continue;
-        }
-        for (let index of group) {
-          let token = tokens[index][place];
-          if (
-            not_equal(token, undefined) &&
-            less_than(lengths[index][place], token.length)
-          ) {
-            lengths[index][place] += 1;
-            grew = true;
-          }
-        }
+      if (app_replace_goal_hash_ids_grow(tokens, lengths, group)) {
+        grew = true;
       }
     }
     if (not(grew)) {

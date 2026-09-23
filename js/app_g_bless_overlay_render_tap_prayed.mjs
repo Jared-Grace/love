@@ -1,3 +1,5 @@
+import { app_g_bless_discern_button_highlight } from "./app_g_bless_discern_button_highlight.mjs";
+import { not } from "./not.mjs";
 import { app_g_bless_overlay_render_tap_prayed_pray_makers } from "./app_g_bless_overlay_render_tap_prayed_pray_makers.mjs";
 import { bless_view_discerned } from "./bless_view_discerned.mjs";
 import { app_g_bless_discern } from "./app_g_bless_discern.mjs";
@@ -39,7 +41,10 @@ export function app_g_bless_overlay_render_tap_prayed(
     let view = bless_view_discerned(blessed, view_everyone);
     discern_set(view);
   }
-  app_g_bless_discern(container_map, bar, discerned_ask);
+  let discern_button = app_g_bless_discern(container_map, bar, discerned_ask);
+  ("The first prayer of a visit ends by lighting up the who next button, because nothing");
+  ("on the street points anywhere by itself and the player has to be shown where to ask.");
+  let prayed_yet = false;
   async function person_pray(person) {
     "Saying the prayer over one person and showing everything it reached. It is the whole of";
     "what praying DOES, and it is written here rather than inside the tap because a tap is";
@@ -80,6 +85,10 @@ export function app_g_bless_overlay_render_tap_prayed(
       ground_show,
       faces_show,
     });
+    if (not(prayed_yet)) {
+      app_g_bless_discern_button_highlight(discern_button);
+    }
+    prayed_yet = true;
   }
   let r3 = app_g_bless_overlay_render_tap_prayed_pray_makers(
     view_everyone,
