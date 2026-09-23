@@ -17,7 +17,6 @@ export function js_rewrite_targets(ast) {
   ("THE ARGUMENT IS FOLLOWED ONE STEP, NO FURTHER. A rewriting command is handed either the word itself or a local bound from the marker call on the line above, and those two shapes are the whole of how this repo spells a name for a command. Anything else - a name arriving as a parameter, or built out of pieces - is answered as nothing, because a guess about what it holds would be a guess this reading then reports as a fact.");
   ("A NAME ARRIVING AS A PARAMETER IS SILENCE RATHER THAN A COMPLAINT, and that is the honest direction. A command told at run time which function to rewrite cannot be read here at all, so naming it would be naming every call site it might ever have.");
   let seams = functions_rewrite_seams();
-  let marker_fn_name = fn_name("fn_name");
   function collect(la) {
     function seam_lambda(seam) {
       function on_call(called) {
@@ -26,7 +25,7 @@ export function js_rewrite_targets(ast) {
         let target = js_rewrite_targets_spelled_or_null(
           first,
           ast,
-          marker_fn_name,
+          fn_name("fn_name"),
         );
         let found = null_not_is(target);
         if (found) {
