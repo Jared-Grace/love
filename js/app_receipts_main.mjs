@@ -1,53 +1,41 @@
-import { html_focus } from "./html_focus.mjs";
-import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_frozen } from "./text_frozen.mjs";
-import { html_input_label_placeholder_wide } from "./html_input_label_placeholder_wide.mjs";
+import { html_query_property_get } from "./html_query_property_get.mjs";
 import { storage_local_name_get } from "./storage_local_name_get.mjs";
 import { null_is } from "./null_is.mjs";
-import { html_value_set } from "./html_value_set.mjs";
-import { html_on_enter } from "./html_on_enter.mjs";
-import { app_shared_button_wide_next } from "./app_shared_button_wide_next.mjs";
-import { html_div } from "./html_div.mjs";
-import { html_clear } from "./html_clear.mjs";
-import { html_value_get } from "./html_value_get.mjs";
 import { app_receipts_folder_code_valid_is } from "./app_receipts_folder_code_valid_is.mjs";
-import { html_p_text } from "./html_p_text.mjs";
+import { app_receipts_code_screen } from "./app_receipts_code_screen.mjs";
 import { storage_local_name_set } from "./storage_local_name_set.mjs";
 import { app_receipts_photo_screen } from "./app_receipts_photo_screen.mjs";
 export function app_receipts_main(context) {
-  "The first screen is only the folder code and Next, so the one thing a person must do before anything else is the only thing they see.";
-  "The code is kept on this device once accepted, so next time the box arrives already filled and Next is one press.";
+  "Opens straight onto the camera when a folder code is already known - from the link first, then from this device - and onto the code box only when none is.";
+  "A code in the link wins over the one kept here, because a link sent for one folder must send into that folder; it is then kept, so the next opening needs no link.";
+  "Pressing the folder's name on the camera screen goes back to the code box, filled with the current code.";
   let root = property_get(context, "root");
   let app_name = fn_name("app_receipts");
   let key = text_frozen("folder_code");
-  let code_input = html_input_label_placeholder_wide(
-    root,
-    "Folder code",
-    "Folder code",
-  );
+  let key2 = text_frozen("folder");
+  let linked = html_query_property_get(key2);
   let saved = storage_local_name_get(app_name, key);
-  let b = null_is(saved);
-  if (not(b)) {
-    html_value_set(code_input, saved);
+  let known = linked;
+  if (null_is(known)) {
+    known = saved;
   }
-  html_focus(code_input);
-  html_on_enter(code_input, on_next);
-  app_shared_button_wide_next(root, on_next);
-  let warning = html_div(root);
-  function on_next() {
-    html_clear(warning);
-    let folder_code = html_value_get(code_input).trim();
-    let b2 = app_receipts_folder_code_valid_is(folder_code);
-    if (not(b2)) {
-      html_p_text(
-        warning,
-        "⚠️ Type a folder code - letters, numbers, - and _ only",
-      );
-      return;
-    }
+  if (null_is(known)) {
+    known = "";
+  }
+  known = known.trim();
+  if (app_receipts_folder_code_valid_is(known)) {
+    on_code(known);
+  } else {
+    app_receipts_code_screen(root, known, on_code);
+  }
+  function on_code(folder_code) {
     storage_local_name_set(app_name, key, folder_code);
-    app_receipts_photo_screen(root, folder_code);
+    app_receipts_photo_screen(root, folder_code, on_change);
+  }
+  function on_change(folder_code) {
+    app_receipts_code_screen(root, folder_code, on_code);
   }
 }
