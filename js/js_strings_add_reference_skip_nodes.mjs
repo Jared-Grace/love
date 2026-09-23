@@ -6,25 +6,16 @@ import { js_import_expression_source_nodes } from "./js_import_expression_source
 import { js_object_key_nodes } from "./js_object_key_nodes.mjs";
 import { list_adder } from "./list_adder.mjs";
 export function js_strings_add_reference_skip_nodes(ast) {
-  let f_name2 = fn_name("property_get");
-  let f_name3 = fn_name("property_set");
-  let f_name4 = fn_name("property_exists");
-  let f_name5 = fn_name("property_delete");
-  let f_name6 = fn_name("global_function_property_get");
-  let f_name7 = fn_name("global_function_property_set");
-  let f_name8 = fn_name("global_function_property_exists");
-  let f_name9 = fn_name("fn_name");
-  let f_name10 = fn_name("text_frozen");
   let key_fns = [
-    f_name2,
-    f_name3,
-    f_name4,
-    f_name5,
-    f_name6,
-    f_name7,
-    f_name8,
-    f_name9,
-    f_name10,
+    fn_name("property_get"),
+    fn_name("property_set"),
+    fn_name("property_exists"),
+    fn_name("property_delete"),
+    fn_name("global_function_property_get"),
+    fn_name("global_function_property_set"),
+    fn_name("global_function_property_exists"),
+    fn_name("fn_name"),
+    fn_name("text_frozen"),
   ];
   function lambda2(la) {
     function lambda(f_name) {
