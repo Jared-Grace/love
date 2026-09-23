@@ -25,8 +25,11 @@ export async function functions_new_baseline_ratchet_growth_new(
     hint,
   );
   let json = json_to(object);
-  let f_name = fn_name("baseline_known_growth_assert");
-  let combined = text_combine_multiple(["await ", f_name, "(known, path, "]);
+  let combined = text_combine_multiple([
+    "await ",
+    fn_name("baseline_known_growth_assert"),
+    "(known, path, ",
+  ]);
   let combined4 = text_combine_multiple([combined, json, ");"]);
   await function_new_code(name_growth, ["known"], true, [
     combined2,
