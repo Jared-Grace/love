@@ -17,46 +17,46 @@ export function reply_proposals() {
   let said = [greeting];
   let t = reply_choices_location();
   let located = [t];
-  let f_name = fn_name("reply_response_greetings");
   let combined = text_combine_multiple([
     "   let greeting_response = ",
-    f_name,
+    fn_name("reply_response_greetings"),
     "();",
   ]);
-  let f_name2 = fn_name("reply_word_hello");
-  let combined2 = text_combine_multiple(["   let hello = ", f_name2, "();"]);
-  let f_name3 = fn_name("reply_choice");
+  let combined2 = text_combine_multiple([
+    "   let hello = ",
+    fn_name("reply_word_hello"),
+    "();",
+  ]);
   let combined3 = text_combine_multiple([
     "+  let time_of_day = ",
-    f_name3,
+    fn_name("reply_choice"),
     '(["morning", "afternoon", "evening"]);',
   ]);
-  let f_name4 = fn_name("reply_sequence");
   let combined4 = text_combine_multiple([
     "+  let good_time = ",
-    f_name4,
+    fn_name("reply_sequence"),
     '(["good", time_of_day]);',
   ]);
-  let f_name5 = fn_name("reply_choice");
   let combined5 = text_combine_multiple([
     "-  let hi_word = ",
-    f_name5,
+    fn_name("reply_choice"),
     '(["hi", hello, "hey"]);',
   ]);
-  let f_name6 = fn_name("reply_choice");
   let combined6 = text_combine_multiple([
     "+  let hi_word = ",
-    f_name6,
+    fn_name("reply_choice"),
     '(["hi", hello, "hey", good_time]);',
   ]);
-  let f_name7 = fn_name("reply_phrase_my_dear_brother");
   let combined7 = text_combine_multiple([
     "   let my_dear_brother = ",
-    f_name7,
+    fn_name("reply_phrase_my_dear_brother"),
     "();",
   ]);
-  let f_name8 = fn_name("reply_sequence_output");
-  let combined8 = text_combine_multiple(["   let greeting = ", f_name8, "("]);
+  let combined8 = text_combine_multiple([
+    "   let greeting = ",
+    fn_name("reply_sequence_output"),
+    "(",
+  ]);
   let time_of_day = {
     title: "answer good morning, good afternoon and good evening",
     fn: fn_name("app_message_reply_greeting"),
@@ -115,89 +115,79 @@ export function reply_proposals() {
   ("The four below are one change cut along the lines of the files it lands in. Three real people's details are written into these rules today - a name, a town and a street - and each one sits in a different function, so each gets its own set of lines to read. They were measured together and the measurements below are of all four applied at once; accepting only some of them leaves one of the three still written down here.");
   ("★ WHAT IS BEING TAKEN OUT IS SOMEBODY ELSE'S NAME AND ADDRESS OUT OF A PUBLIC REPOSITORY, AND WHAT REPLACES IT IS A DICTIONARY OF NAMES MILLIONS OF PEOPLE HAVE. The rules had to be told a name before they could recognise one, so every person the rules answered was a person whose details had been published here to make it work. A dictionary recognises a great many people and publishes nobody, because every name in it would be in it if this correspondence had never happened.");
   ("A dictionary was chosen over the simpler thing, which was to accept any run of letters at all after a title. Any run of letters would also publish nobody, and it would recognise everybody rather than only the people whose names somebody thought to write down - but it would equally read I am pastor hungry as a name, and it would give the rules no way to tell a name from a word. The dictionary can be wrong about a person, and when it is, that person is on the list by the next commit; a rule that asks nothing can never be wrong and never be improved either.");
-  let f_name9 = fn_name("reply_choices_name");
-  let combined9 = text_combine_multiple(["   let response = ", f_name9, "();"]);
-  let f_name10 = fn_name("reply_names");
-  let combined10 = text_combine_multiple(["-  let names = ", f_name10, "();"]);
+  let combined9 = text_combine_multiple([
+    "   let response = ",
+    fn_name("reply_choices_name"),
+    "();",
+  ]);
+  let combined10 = text_combine_multiple([
+    "-  let names = ",
+    fn_name("reply_names"),
+    "();",
+  ]);
   let f_name11 = fn_name("reply_once_or_more");
   let combined11 = text_combine_multiple([
     "-  let names_once_or_more = ",
     f_name11,
     "(names);",
   ]);
-  let f_name12 = fn_name("reply_names_common");
-  let combined12 = text_combine_multiple(["+  let names = ", f_name12, "();"]);
+  let combined12 = text_combine_multiple([
+    "+  let names = ",
+    fn_name("reply_names_common"),
+    "();",
+  ]);
   let combined12b = text_combine_multiple([
     "+  let names_once_or_more = ",
     f_name11,
     "(names);",
   ]);
-  let f_name13 = fn_name("reply_titles_ministry");
-  let combined13 = text_combine_multiple(["   let titles = ", f_name13, "();"]);
-  let f_name14 = fn_name("reply_phrase_i_am");
-  let combined14 = text_combine_multiple(["   let iam = ", f_name14, "();"]);
-  let f_name15 = fn_name("reply_sequence_output");
+  let combined13 = text_combine_multiple([
+    "   let titles = ",
+    fn_name("reply_titles_ministry"),
+    "();",
+  ]);
+  let combined14 = text_combine_multiple([
+    "   let iam = ",
+    fn_name("reply_phrase_i_am"),
+    "();",
+  ]);
   let combined15 = text_combine_multiple([
     "   let iam_titled_name = ",
-    f_name15,
+    fn_name("reply_sequence_output"),
     "(",
   ]);
-  let f_name16 = fn_name("reply_names");
   let combined16 = text_combine_multiple([
     "the three names this rule was told are then named by nothing, and ",
-    f_name16,
+    fn_name("reply_names"),
     " goes with them. Deleting it is what actually takes them out of the repository - left in place unused they are still published, just unreachable.",
   ]);
-  let f_name55 = fn_name("reply_names_common");
-  let f_name_bible = fn_name("reply_names_bible");
-  let f_name_authored = fn_name("reply_names_authored");
-  let f_name68 = fn_name("list_adder_unique_sorted");
-  let f_name69 = fn_name("reply_names_akan");
-  let f_name70 = fn_name("reply_names_arabic");
-  let f_name71 = fn_name("reply_names_english");
-  let f_name72 = fn_name("reply_names_filipino");
-  let f_name73 = fn_name("reply_names_igbo");
-  let f_name74 = fn_name("reply_names_kalenjin");
-  let f_name75 = fn_name("reply_names_kamba");
-  let f_name76 = fn_name("reply_names_kikuyu");
-  let f_name77 = fn_name("reply_names_luhya");
-  let f_name78 = fn_name("reply_names_luo");
-  let f_name79 = fn_name("reply_names_mandinka");
-  let f_name80 = fn_name("reply_names_persian");
-  let f_name81 = fn_name("reply_names_sanskrit");
-  let f_name82 = fn_name("reply_names_shona");
-  let f_name83 = fn_name("reply_names_sotho");
-  let f_name84 = fn_name("reply_names_spanish");
-  let f_name85 = fn_name("reply_names_swahili");
-  let f_name86 = fn_name("reply_names_yoruba");
-  let f_name87 = fn_name("reply_names_zulu");
   let name_out = {
     title: "stop needing to be told somebody's name before it will answer them",
     fn: fn_name("app_message_reply_iam_titled_name"),
     whole: [
-      f_name55,
-      f_name_bible,
-      f_name68,
-      f_name_authored,
-      f_name69,
-      f_name70,
-      f_name71,
-      f_name72,
-      f_name73,
-      f_name74,
-      f_name75,
-      f_name76,
-      f_name77,
-      f_name78,
-      f_name79,
-      f_name80,
-      f_name81,
-      f_name82,
-      f_name83,
-      f_name84,
-      f_name85,
-      f_name86,
-      f_name87,
+      fn_name("reply_names_common"),
+      fn_name("reply_names_bible"),
+      fn_name("list_adder_unique_sorted"),
+      fn_name("reply_names_authored"),
+      fn_name("reply_names_akan"),
+      fn_name("reply_names_arabic"),
+      fn_name("reply_names_english"),
+      fn_name("reply_names_filipino"),
+      fn_name("reply_names_igbo"),
+      fn_name("reply_names_kalenjin"),
+      fn_name("reply_names_kamba"),
+      fn_name("reply_names_kikuyu"),
+      fn_name("reply_names_luhya"),
+      fn_name("reply_names_luo"),
+      fn_name("reply_names_mandinka"),
+      fn_name("reply_names_persian"),
+      fn_name("reply_names_sanskrit"),
+      fn_name("reply_names_shona"),
+      fn_name("reply_names_sotho"),
+      fn_name("reply_names_spanish"),
+      fn_name("reply_names_swahili"),
+      fn_name("reply_names_yoruba"),
+      fn_name("reply_names_zulu"),
     ],
     diff: [
       combined9,
@@ -241,68 +231,67 @@ export function reply_proposals() {
       "the messages above are made up in the shape of real ones rather than quoted from them, because the real ones are the thing being taken out of here. That claim was false when it was first written - the examples beside the word lists had been quoted, a town and a person's name among them, and a scrub that read the lists walked straight past them. Trivial openings like a bare greeting are the one exception: they identify nobody and stay.",
     ],
   };
-  let f_name17 = fn_name("reply_word_in");
-  let combined17 = text_combine_multiple(["   let n = ", f_name17, "();"]);
-  let f_name18 = fn_name("reply_countries");
+  let combined17 = text_combine_multiple([
+    "   let n = ",
+    fn_name("reply_word_in"),
+    "();",
+  ]);
   let combined18 = text_combine_multiple([
     "   let r_countries = ",
-    f_name18,
+    fn_name("reply_countries"),
     "();",
   ]);
-  let f_name19 = fn_name("reply_cities");
   let combined19 = text_combine_multiple([
     "-  let r_cities = ",
-    f_name19,
+    fn_name("reply_cities"),
     "();",
   ]);
-  let f_name20 = fn_name("reply_optional");
-  let combined20 = text_combine_multiple(["   let o_n = ", f_name20, "(n);"]);
-  let f_name21 = fn_name("reply_word_any");
+  let combined20 = text_combine_multiple([
+    "   let o_n = ",
+    fn_name("reply_optional"),
+    "(n);",
+  ]);
   let combined21 = text_combine_multiple([
     "+  let any_word = ",
-    f_name21,
+    fn_name("reply_word_any"),
     "();",
   ]);
-  let f_name22 = fn_name("reply_optional");
-  let f_name23 = fn_name("reply_sequence");
   let combined22 = text_combine_multiple([
     "+  let r_cities = ",
-    f_name22,
+    fn_name("reply_optional"),
     "(",
-    f_name23,
+    fn_name("reply_sequence"),
     "([any_word, o_n]));",
   ]);
-  let f_name24 = fn_name("reply_choice_optional");
   let combined23 = text_combine_multiple([
     "+  let o_the = ",
-    f_name24,
+    fn_name("reply_choice_optional"),
     '(["the"]);',
   ]);
-  let f_name25 = fn_name("reply_choices_location");
-  let combined24 = text_combine_multiple(["   let item = ", f_name25, "();"]);
-  let f_name26 = fn_name("reply_choice");
+  let combined24 = text_combine_multiple([
+    "   let item = ",
+    fn_name("reply_choices_location"),
+    "();",
+  ]);
   let combined25 = text_combine_multiple([
     "   let iam_o_titled_name = ",
-    f_name26,
+    fn_name("reply_choice"),
     "([iam, iam_titled_name]);",
   ]);
-  let f_name27 = fn_name("reply_sequence_output");
   let combined26 = text_combine_multiple([
     "   let from_city_country = ",
-    f_name27,
+    fn_name("reply_sequence_output"),
     "(",
   ]);
-  let f_name28 = fn_name("reply_cities");
   let combined27 = text_combine_multiple([
     "the two towns this rule was told are then named by nothing, and ",
-    f_name28,
+    fn_name("reply_cities"),
     " goes with them once the contact line below has stopped asking for it too.",
   ]);
-  let f_name56 = fn_name("reply_word_any");
   let town_out = {
     title: "answer somebody from a town the rules were never told about",
     fn: fn_name("app_message_reply_from_country"),
-    whole: [f_name56],
+    whole: [fn_name("reply_word_any")],
     diff: [
       combined17,
       combined18,
@@ -354,18 +343,29 @@ export function reply_proposals() {
       "the first two messages here are real ones and are shown beside what was really sent. They get nothing back today.",
     ],
   };
-  let f_name29 = fn_name("list_concat_multiple");
-  let combined28 = text_combine_multiple(["+  let v = ", f_name29, "(["]);
-  let f_name30 = fn_name("reply_countries_names");
-  let combined29 = text_combine_multiple(["+    ", f_name30, "(),"]);
-  let f_name31 = fn_name("reply_countries_aliases");
-  let combined30 = text_combine_multiple(["+    ", f_name31, "(),"]);
-  let f_name32 = fn_name("reply_countries_authored");
-  let combined31 = text_combine_multiple(["+    ", f_name32, "(),"]);
-  let f_name33 = fn_name("reply_choice");
+  let combined28 = text_combine_multiple([
+    "+  let v = ",
+    fn_name("list_concat_multiple"),
+    "([",
+  ]);
+  let combined29 = text_combine_multiple([
+    "+    ",
+    fn_name("reply_countries_names"),
+    "(),",
+  ]);
+  let combined30 = text_combine_multiple([
+    "+    ",
+    fn_name("reply_countries_aliases"),
+    "(),",
+  ]);
+  let combined31 = text_combine_multiple([
+    "+    ",
+    fn_name("reply_countries_authored"),
+    "(),",
+  ]);
   let combined32 = text_combine_multiple([
     "   let countries = ",
-    f_name33,
+    fn_name("reply_choice"),
     "(v);",
   ]);
   let combined33 = text_combine_multiple([
@@ -373,13 +373,14 @@ export function reply_proposals() {
     "china, korea, america, england, scotland, wales, usa, uk and drc",
     ", among others. The register would not supply those, because it is a register of identities and refuses a word that names more than one thing - it holds the People's Republic of China and holds no bare China at all. Every one of them is a word real messages actually use.",
   ]);
-  let f_name57 = fn_name("reply_countries_names");
-  let f_name58 = fn_name("reply_countries_aliases");
-  let f_name59 = fn_name("reply_countries_authored");
   let countries_in = {
     title: "know the world's countries rather than two of them",
     fn: fn_name("reply_countries"),
-    whole: [f_name57, f_name58, f_name59],
+    whole: [
+      fn_name("reply_countries_names"),
+      fn_name("reply_countries_aliases"),
+      fn_name("reply_countries_authored"),
+    ],
     diff: [
       '-  let v = ["kenya", "pakistan"];',
       combined28,
@@ -434,63 +435,53 @@ export function reply_proposals() {
       "three hundred and twenty words is four thousand bytes on every page that loads these rules. Nothing else on the page is charged for it, because only the reply rules read it.",
     ],
   };
-  let f_name34 = fn_name("reply_once_or_more");
   let combined34 = text_combine_multiple([
     "   let digits_oom = ",
-    f_name34,
+    fn_name("reply_once_or_more"),
     "(rc_digits);",
   ]);
-  let f_name35 = fn_name("reply_roads");
   let combined35 = text_combine_multiple([
     "-  let r_roads = ",
-    f_name35,
+    fn_name("reply_roads"),
     "();",
   ]);
-  let f_name36 = fn_name("reply_cities");
   let combined36 = text_combine_multiple([
     "-  let r_cities = ",
-    f_name36,
+    fn_name("reply_cities"),
     "();",
   ]);
-  let f_name37 = fn_name("reply_choice");
   let combined37 = text_combine_multiple([
     "+  let road_kinds = ",
-    f_name37,
+    fn_name("reply_choice"),
     "([",
   ]);
-  let f_name38 = fn_name("reply_sequence");
-  let f_name39 = fn_name("reply_word_any");
   let combined38 = text_combine_multiple([
     "+  let r_roads = ",
-    f_name38,
+    fn_name("reply_sequence"),
     "([",
-    f_name39,
+    fn_name("reply_word_any"),
     "(), road_kinds]);",
   ]);
-  let f_name40 = fn_name("reply_word_any");
   let combined39 = text_combine_multiple([
     "+  let r_cities = ",
-    f_name40,
+    fn_name("reply_word_any"),
     "();",
   ]);
-  let f_name41 = fn_name("reply_sequence");
   let combined40 = text_combine_multiple([
     "   let fn = ",
-    f_name41,
+    fn_name("reply_sequence"),
     '(["contact", digits_oom, r_roads, r_cities]);',
   ]);
-  let f_name42 = fn_name("reply_roads");
   let combined41 = text_combine_multiple([
     "the seven words that say what kind of road it is move here out of ",
-    f_name42,
+    fn_name("reply_roads"),
     ", which then holds nothing but one real street and is deleted. The street name itself was the only thing in it that had to be told in advance.",
   ]);
-  let f_name60 = fn_name("reply_word_any");
   let street_out = {
     title:
       "stop needing to be told somebody's street before it will read their contact line",
     fn: fn_name("app_message_reply_choices"),
-    whole: [f_name60],
+    whole: [fn_name("reply_word_any")],
     diff: [
       combined34,
       combined35,
@@ -525,78 +516,68 @@ export function reply_proposals() {
   ("The two below are one change in two places: the first makes a written-out word forgive the ways it gets mistyped, the second makes the cheapest reading of a message win. They are separate because the first is useful on its own and the second is not, and because the first is the one with numbers in it to argue with.");
   ("★ EVERY WORD THESE RULES WAIT FOR IS SPELLED CORRECTLY, AND ALMOST NOBODY WRITING TO THEM SPELLS EVERY WORD CORRECTLY. Today one wrong letter anywhere in a country's name means no reply at all - not a worse reply, no reply - and the person who wrote it is left thinking nobody read it. The rules cannot be told every misspelling, because misspellings are not a list; what they can be told is what a mistake looks like.");
   ("The single place all of this hangs off is that a word longer than one letter is split into its letters and matched letter by letter. Replacing that split is the whole switch: everything above it and everything below it is untouched, and nothing else in the rules changes at all.");
-  let f_name43 = fn_name("text_is");
-  let combined42 = text_combine_multiple(["   let si = ", f_name43, "(item);"]);
-  let f_name44 = fn_name("text_size");
-  let combined43 = text_combine_multiple(["     size = ", f_name44, "(item);"]);
-  let f_name45 = fn_name("greater_than");
+  let combined42 = text_combine_multiple([
+    "   let si = ",
+    fn_name("text_is"),
+    "(item);",
+  ]);
+  let combined43 = text_combine_multiple([
+    "     size = ",
+    fn_name("text_size"),
+    "(item);",
+  ]);
   let combined44 = text_combine_multiple([
     "     if (",
-    f_name45,
+    fn_name("greater_than"),
     "(size, 1)) {",
   ]);
-  let f_name46 = fn_name("text_split_empty");
   let combined45 = text_combine_multiple([
     "-      let split = ",
-    f_name46,
+    fn_name("text_split_empty"),
     "(item);",
   ]);
-  let f_name47 = fn_name("reply_sequence");
   let combined46 = text_combine_multiple([
     "-      wrapped = ",
-    f_name47,
+    fn_name("reply_sequence"),
     "(split);",
   ]);
-  let f_name48 = fn_name("reply_word_cost");
   let combined47 = text_combine_multiple([
     "+      wrapped = ",
-    f_name48,
+    fn_name("reply_word_cost"),
     "(item);",
   ]);
-  let f_name49 = fn_name("reply_typo_costs");
   let combined48 = text_combine_multiple([
     "what a mistake costs, which is a ranking and not a measurement, and is yours to reorder. A neighbouring key, a doubled letter and a word spelled the way it sounds cost one each. Two letters the wrong way round cost two. A letter missing, or a letter too many, costs three. The numbers live in ",
-    f_name49,
+    fn_name("reply_typo_costs"),
     " and only ever decide which of two allowed readings wins - they never decide whether a reading is allowed.",
   ]);
-  let f_name50 = fn_name("reply_typo_budget");
   let combined49 = text_combine_multiple([
     "how much is forgiven, which is what actually decides. One mistake for every five letters, counted down, in ",
-    f_name50,
+    fn_name("reply_typo_budget"),
     ". So usa and uk and from forgive nothing at all - form is not read as from, and that matters, because form is a real word a real sentence could mean. kenya and nigeria forgive one. philippines forgives two, and needs to.",
   ]);
-  let f_name51 = fn_name("reply_typo_sounds");
   let combined50 = text_combine_multiple([
     "fourteen pairs of spellings that sound the same are forgiven as one mistake, in ",
-    f_name51,
+    fn_name("reply_typo_sounds"),
     ": ph and f, c and k, ck and k, s and z, x and ks, ei and ie, y and i, ou and u, each way round. filippines is not a slip of the finger - it is somebody spelling a sound correctly.",
   ]);
-  let f_name52 = fn_name("reply_keys_nearby");
   let combined51 = text_combine_multiple([
     "a letter swapped for a letter nowhere near it on the keyboard is not forgiven at all, and that absence matters more than any number here. It was in the first draft, and it let kenza be read as kenya - which is not a misspelling of Kenya, it is somebody's name. Only the keys a finger can actually hit by mistake count, read off the three letter rows in ",
-    f_name52,
+    fn_name("reply_keys_nearby"),
     ".",
   ]);
-  let f_name61 = fn_name("reply_word_cost");
-  let f_name62 = fn_name("reply_typo_budget");
-  let f_name63 = fn_name("reply_typo_ends");
-  let f_name64 = fn_name("reply_typo_costs");
-  let f_name65 = fn_name("reply_typo_sounds");
-  let f_name66 = fn_name("reply_keys_nearby");
-  let f_name88 = fn_name("list_pairs_both_ways");
-  let f_name89 = fn_name("keyboard_letter_rows");
   let typo_layer = {
     title: "read a word that was mistyped, and know what the forgiving cost",
     fn: fn_name("reply_wrap_invoke"),
     whole: [
-      f_name61,
-      f_name62,
-      f_name63,
-      f_name64,
-      f_name65,
-      f_name88,
-      f_name66,
-      f_name89,
+      fn_name("reply_word_cost"),
+      fn_name("reply_typo_budget"),
+      fn_name("reply_typo_ends"),
+      fn_name("reply_typo_costs"),
+      fn_name("reply_typo_sounds"),
+      fn_name("list_pairs_both_ways"),
+      fn_name("reply_keys_nearby"),
+      fn_name("keyboard_letter_rows"),
     ],
     diff: [
       combined42,
@@ -672,24 +653,21 @@ export function reply_proposals() {
       "of the one hundred and sixteen runs of letters that appear in the real messages, none newly reads as a country that it is not.",
     ],
   };
-  let f_name53 = fn_name("list_first");
   let combined52 = text_combine_multiple([
     "-    result = ",
-    f_name53,
+    fn_name("list_first"),
     "(result);",
   ]);
-  let f_name54 = fn_name("reply_cheapest");
   let combined53 = text_combine_multiple([
     "+    result = ",
-    f_name54,
+    fn_name("reply_cheapest"),
     "(result);",
   ]);
-  let f_name67 = fn_name("reply_cheapest");
   let cheapest_reading = {
     title:
       "when a message can be read several ways, take the one that needed the least forgiving",
     fn: fn_name("reply_messages_inner"),
-    whole: [f_name67],
+    whole: [fn_name("reply_cheapest")],
     diff: [
       "   let possbility_start = {",
       "     tokens,",
