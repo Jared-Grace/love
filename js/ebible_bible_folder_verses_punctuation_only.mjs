@@ -39,8 +39,8 @@ export async function ebible_bible_folder_verses_punctuation_only(
       let read = await ebible_verses_kept(bible_folder, chapter_code);
       return read;
     }
-    let verses = await catch_null_async(chapter_read);
-    let unread = null_is(verses);
+    let cut = await catch_null_async(chapter_read);
+    let unread = null_is(cut);
     if (unread) {
       let r2 = {
         unreadable: chapter_code,
@@ -59,7 +59,7 @@ export async function ebible_bible_folder_verses_punctuation_only(
       }
       return false;
     }
-    let bare_verses = list_filter(verses, punctuation_only_is);
+    let bare_verses = list_filter(cut, punctuation_only_is);
     function verse_named(verse) {
       let verse_number = property_get(verse, "verse_number");
       let code = ebible_chapter_verse_code(chapter_code, verse_number);
