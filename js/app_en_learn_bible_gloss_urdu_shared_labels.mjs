@@ -12,6 +12,8 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
   "The labels standing over ordinary nouns joined the list once there were settled wordings for those nouns to be written. A bare ‘noun’ is the same failure as a bare ‘conjunction’ and a worse one, because the reader of a conjunction at least learns it joins, and the reader of a noun learns nothing at all about what the thing is. Two of these say more than the bare label - that the word names a place lived in, that its plural is irregular - and each was checked against the settled wording of every word carrying it before being added, the same way as the rest.";
   "A wording carrying case where the settled wording carries none is refused. ‘Object pronoun, inanimate’ over ‘it’ says the word stands where the action lands, and the settled wording for ‘it’ says which things it stands for without saying where it stands. The same wording over ‘him’ is admitted, because there the settled wording does say it.";
   "The bare label over a name joined the list last and is the largest single thing on it, standing over six hundred entries and thirty one names. It is also the label whose replacement is worth most: a reader told only that a word is a proper noun has been told the one thing they could already see from the capital letter, and every settled wording written for a name says who the person is instead. The test is passed the ordinary way - each of those wordings says in its own words that the word is a name - and one of them had to be reworded to pass it rather than being waved through.";
+  "The pointers standing over names came next, and they are where the pointer paragraph above stops being an argument and starts being four hundred and fifty entries. A name is what a passage says over and over, and every place after the first was handed ‘the same man's name as came above’ - so the reader who most needs telling who this is, the one who opened the page in the middle, is the one who is told nothing. The test is passed because the settled wording of a name says it is a name of a man or of a town, which is the whole of what the pointer said before it pointed.";
+  "One wording over a name is refused and it is worth saying why, because the reason is the test being read strictly rather than loosely. ‘It is God's name and is written with a capital’ stands over ‘God’ and over ‘Lord’, and the settled wording for ‘God’ says both of those things while the settled wording for ‘Lord’ says only that a capital falls there, since that capital falls on a human master addressed at the head of a sentence as readily as on God. A label passes only when every word carrying it says the label again, so one word out of two carrying it is a refusal, not a majority.";
   let labels = [
     "معرفہ حرفِ تعریف۔",
     "نکرہ حرفِ تعریف۔",
@@ -93,6 +95,11 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
     "نام کا لفظ ہے اَور رہنے کی جگہ کو بتاتا ہے۔",
     "اِسم؛ جمع بےقاعدہ: man → men۔",
     "اِسمِ خاص۔",
+    "اِسمِ معرفہ۔",
+    "وُہی شخص کا خاص نام ہے جو اُوپر آیا۔",
+    "وُہی شہر کا خاص نام ہے جو اُوپر آیا۔",
+    "وُہی نام کا لفظ ہے۔",
+    "یہ نام ہے: یِسوعؔ۔",
   ];
   return labels;
 }
