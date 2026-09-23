@@ -14,7 +14,7 @@ export function app_replace_hash_write(context) {
   "keep the address in step with where the learner is - the screen, and the rule set and goal it shows - so the link is shareable and reopens on the same exercise; runs after every draw";
   "The address is read first and only these words are rewritten, so a word something else put there - how fast the replacing runs - survives.";
   "A number is written only on a screen that reads it, the same as the code app leaves its review off every other screen: a rule set left in a link copied from home would quietly send whoever opened it somewhere the sender never was.";
-  "Numbers count from 1, the way the buttons the learner pressed are labelled.";
+  "A rule set is written as its word, so a rule set put in earlier in the list later on does not send saved links elsewhere; a goal has no name, so it is written as its number, counting from 1 the way the buttons the learner pressed are labelled.";
   let hash = html_hash_object_get();
   let key = app_replace_rule_set_hash_key();
   let key2 = app_replace_goal_hash_key();
@@ -28,7 +28,10 @@ export function app_replace_hash_write(context) {
   let on_rule_set = equal(screen_name, right2);
   if (on_goals || on_rule_set) {
     let rule_set_index = app_replace_rule_set_index_get(context);
-    property_set(hash, key, rule_set_index + 1);
+    let rule_sets = app_replace_rule_sets();
+    let rule_set = list_get(rule_sets, rule_set_index);
+    let id = app_replace_rule_set_hash_id(rule_set);
+    property_set(hash, key, id);
   }
   if (on_rule_set) {
     let goal_index = storage_session_get_context(context, "goal_index");
