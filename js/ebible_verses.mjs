@@ -4,8 +4,7 @@ import { ebible_verses_before } from "./ebible_verses_before.mjs";
 import { ebible_verse_new_text } from "./ebible_verse_new_text.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_add_first } from "./list_add_first.mjs";
-import { whitespace_normalize } from "./whitespace_normalize.mjs";
-import { ebible_bible_folder_text_repaired } from "./ebible_bible_folder_text_repaired.mjs";
+import { ebible_verse_cleaned } from "./ebible_verse_cleaned.mjs";
 import { list_map_filter } from "./list_map_filter.mjs";
 import { ebible_verse_words_is } from "./ebible_verse_words_is.mjs";
 export async function ebible_verses(bible_folder, chapter_code) {
@@ -26,11 +25,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let all = list_copy(marked);
   list_add_first(all, heading);
   function lambda(item) {
-    let text = property_get(item, "text");
-    let normalized = whitespace_normalize(text);
-    let worded = ebible_bible_folder_text_repaired(bible_folder, normalized);
-    let number = property_get(item, "verse_number");
-    let v = ebible_verse_new_text(worded, number);
+    let v = ebible_verse_cleaned(bible_folder, item);
     return v;
   }
   let verses = list_map_filter(all, lambda, ebible_verse_words_is);
