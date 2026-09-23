@@ -14,13 +14,11 @@ export async function apps_names_way_in_gate_run() {
   let told = await apps_names_way_in_missing_walked();
   let walked = property_get(told, "walked");
   let offenders = property_get(told, "missing");
-  let f_name = fn_name("apps_names_file_path");
-  let f_name2 = fn_name("app_shared_name_main");
   let hint = text_combine_multiple([
     "an app name is written down that nothing here answers to, so anything walking the list of apps will hand it on as a real app and the throw will arrive later out of a build. Each repo's list is at ",
-    f_name,
+    fn_name("apps_names_file_path"),
     ". Either the name is misspelled and the spelling is the fix, or the app is gone and the name should go with it. A way in is either spelling - the combined one where it exists and the prefixed one where it does not, which is the rule ",
-    f_name2,
+    fn_name("app_shared_name_main"),
     " follows - so a name is only named here when neither is written anywhere.",
   ]);
   let r = list_empty_is_assert_walked_generic(walked, offenders, hint);
