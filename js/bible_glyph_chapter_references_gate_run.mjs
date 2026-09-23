@@ -53,13 +53,12 @@ export function bible_glyph_chapter_references_gate_run() {
   let wanted_text = list_join(wanted_words, ",");
   let held_text = list_join(held_words, ",");
   let same = equal(wanted_text, held_text);
-  let f_name = fn_name("bible_glyph_chapter_references");
   assert_json(same, {
     wanted,
     held,
     hint: text_combine_multiple([
       "the light list of chapters has drifted from the chapters themselves - a chapter was written, or renamed, and only one of the two lists heard about it. Put the pairs under wanted into ",
-      f_name,
+      fn_name("bible_glyph_chapter_references"),
       ", in that order, and nothing else needs deciding",
     ]),
   });
