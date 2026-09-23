@@ -17,10 +17,9 @@ export async function bible_verse_holes_gate_run() {
   ("So the answer is measured for every bible on the list and kept in a file, and this refuses a bible that is on the list and not in the file. The holes themselves are left in the record rather than refused, because a bible numbering its verses its own way is not a fault to be fixed by failing a build - it is a thing somebody has to read and decide about. What is refused is not knowing.");
   ("This reads only the file. The measuring reaches the network and is a command somebody runs; the checking has to run wherever the rest of the gates run.");
   let path = bible_verse_holes_path();
-  let f_name = fn_name("bible_verse_holes_write");
   let record = await bible_shipped_record_checked(
     path,
-    f_name,
+    fn_name("bible_verse_holes_write"),
     "whether it holds the verses a page will ask it for",
   );
   ("WHEN THE RECORD WAS MEASURED TRAVELS WITH EVERY FINDING TAKEN OUT OF IT, because both of the ones refused below are answered with the same instruction - go and measure again - and how old the record is decides whether that instruction is worth anything. A far end that would not answer an hour ago is worth asking again; one that would not answer in a record from before the last upload says nothing about today at all.");
@@ -45,24 +44,21 @@ export async function bible_verse_holes_gate_run() {
     return any;
   }
   let unreachable = list_filter(bibles, lambda3);
-  let f_name3 = fn_name("ebible_folder_english");
-  let f_name4 = fn_name("bible_verse_holes_write");
   list_empty_is_assert_json(unasked, {
     hint: text_combine_multiple([
       "nothing was asked of this bible at all, so the record says nothing about it while looking like it says it is whole - the list of verses to ask for comes from the English index, so check ",
-      f_name3,
+      fn_name("ebible_folder_english"),
       " has a bible with one uploaded, then measure again with ",
-      f_name4,
+      fn_name("bible_verse_holes_write"),
     ]),
     unasked,
     measured_at,
   });
   ("The transient finding is refused after the standing ones on purpose. A bible that is shipped and never measured, or measured and no longer shipped, is true until somebody changes the roster; a chapter that would not answer this afternoon may answer this evening. Reporting the passing thing first would bury the lasting one under it.");
-  let f_name6 = fn_name("bible_verse_holes_write");
   list_empty_is_assert_json(unreachable, {
     hint: text_combine_multiple([
       "these bibles were asked and the far end never answered, so the record says nothing about the chapters named - that is this run having failed rather than anything being wrong with the bible, so measure again with ",
-      f_name6,
+      fn_name("bible_verse_holes_write"),
       ", and if the same chapters come back unreachable twice then the far end really is refusing them and it is worth looking at by hand",
     ]),
     unreachable,
