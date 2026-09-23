@@ -25,10 +25,9 @@ export async function app_g_design() {
     " and read here. one collapsible card per note - its name and one-line description always showing, the whole note underneath when you open it - so the design can be read in the game itself rather than from the files.");
   ("the notes live outside this repo and are never bundled, so this asks the dev api for them. a page with no dev api behind it says so gently instead of showing an empty screen.");
   let div = app_shared_dev_overlay("Design");
-  let f_name = fn_name("g_design_notes");
   let notes = await catch_null_async(read);
   async function read() {
-    let r = await api_read(f_name, []);
+    let r = await api_read(fn_name("g_design_notes"), []);
     return r;
   }
   if (not(notes)) {
