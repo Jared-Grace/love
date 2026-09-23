@@ -40,8 +40,12 @@ export function lyric_video_picture_bench_size(size) {
   };
   let one = sizes[size];
   if (not(one)) {
-    let f_name = fn_name("lyric_video_picture_bench_size");
-    throw new Error(text_combine_multiple([f_name, ": unknown size "]) + size);
+    throw new Error(
+      text_combine_multiple([
+        fn_name("lyric_video_picture_bench_size"),
+        ": unknown size ",
+      ]) + size,
+    );
   }
   return one;
 }
