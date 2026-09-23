@@ -6,7 +6,10 @@ export async function lyric_video_picture_note_done(key, words) {
   "$plain words";
   "Mark every note against one background picture whose words are the ones given as answered, so it comes off the list a watcher is shown.";
   arguments_assert(arguments, 2);
-  let store = fn_name("lyric_video_picture_note_add");
-  let path = await notes_done(store, key, words);
+  let path = await notes_done(
+    fn_name("lyric_video_picture_note_add"),
+    key,
+    words,
+  );
   return path;
 }
