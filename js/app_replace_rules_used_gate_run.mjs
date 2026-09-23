@@ -8,11 +8,10 @@ export function app_replace_rules_used_gate_run() {
     fn_name("app_replace_rule_sets_fns_rules_used_generate"),
     " - so there is nothing here to grandfather.");
   let offenders = app_replace_rules_used_stale();
-  let f_name = fn_name("app_replace_rule_sets_fns_rules_used_generate");
   list_empty_is_assert_json(offenders, {
     hint: text_combine_multiple([
       "an exercise changed and the saved rules-for-a-goal list has fallen behind it - rerun ",
-      f_name,
+      fn_name("app_replace_rule_sets_fns_rules_used_generate"),
     ]),
   });
 }
