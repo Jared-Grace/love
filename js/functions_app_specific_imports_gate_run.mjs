@@ -16,7 +16,6 @@ export async function functions_app_specific_imports_gate_run() {
   let walked = property_get(told, "walked");
   let offenders = property_get(told, "offenders");
   let path = functions_app_specific_imports_baseline_path();
-  let name_write = fn_name("functions_app_specific_imports_baseline_write");
   let hint_get = functions_app_import_advice_curried(
     "these functions belong to no app and reach into one, and did not before - move what they need into shared code, or move the unit into the app it belongs to",
   );
@@ -25,7 +24,7 @@ export async function functions_app_specific_imports_gate_run() {
     offenders,
     path,
     hint_get,
-    name_write,
+    fn_name("functions_app_specific_imports_baseline_write"),
   );
   return r;
 }
