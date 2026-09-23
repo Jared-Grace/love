@@ -20,24 +20,20 @@ export function song_image_review_couplets() {
   "NOTES LEFT OPEN ON A COUPLET THAT HAS COME OFF THE BENCH ARE NOW REPORTED RATHER THAN LOST. Closing a round hands back the strays alongside what it closed, and it does not close them - marking them answered would clear the count and destroy the only record that nobody ever replied. Twenty-one across couplets 9, 14, 25, 32 and 33 were found that way. Answer them and put those couplets back here.";
   let couplets = [
     {
-      n: 28,
-      note: "Yes, near enough. Israel's silver trumpets of Numbers 10:2 were a straight narrow tube, a little under a cubit long, flaring into a bell - Josephus describes them so, and the Arch of Titus shows them. Valves came only in the 1800s. So 6 stays as it is.",
-    },
-    {
       n: 32,
-      note: "You are on 31. Six trees each side, the river cut into curved panes like a current, and the violet field is back. Still wrong: the field's lead lines run across the river. 28 is the one with a pale blue field; 26 is the fallback.",
+      note: "Yes. You are on 37. The river now runs behind every tree, and the field is pale violet above and violet below. Still wrong: the field is cut into many small panes, and the top of the arch is violet instead of blue. 31 is the fallback.",
     },
     {
       n: 33,
-      note: "You are on 21. The drop is now plain water: one pale blue pane with a single white glint, and no field line crosses it. Still wrong: a thin dark ring shows behind the drop. 22 looked more like a tear but lines ran across it.",
+      note: "You are on 26. The dark blue shell is gone: one blue drop with one black outline and a white glint. Still wrong: the glint is a curved shine rather than flat glass. 21 is the fallback.",
     },
     {
       n: 26,
-      note: "You are on 111. The wording now asks for more rays and it drew about ten, with no lead lines across them. Still wrong: the rays are bold rather than light, and the glass has a painted texture. 113 is lighter and cleaner but has six rays; 104 is the fallback.",
+      note: "You are on 114, an edit of 111. The sky behind is now pale, and the rays are lighter and glowing. Still wrong: the rays keep a slight painted texture. 111 is the fallback.",
     },
     {
       n: 9,
-      note: "You are on 22, an edit of 19. The band behind the drops is now light blue, so the red drop stands out. The top of the arch went light blue with it. A first edit had turned the spearhead white; this one kept it grey.",
+      note: "Yes. You are on 24, an edit of 19. It keeps 19's shiny 3D drops and grey iron spearhead, and the band behind the drops is light blue. Still wrong: the top of the arch went light blue too, instead of deep blue.",
     },
   ];
   return couplets;
