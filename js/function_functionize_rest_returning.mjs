@@ -11,15 +11,13 @@ export async function function_functionize_rest_returning(
   ("The twin of the plain rest cutter, for the one shape it refuses: a function that ends in a run of decisions, each answering and returning. The plain cutter is right to refuse a return anywhere else - moved into a called function it would return from there and let the caller carry quietly on - but where the run closes the function there is no carrying on, and returning the call gives back exactly what the function gave back before.");
   ("It checks that the line named really stands at the top level of the function's body, so a run closing an inner block cannot be cut this way by mistake.");
   ("The name is handed over twice below because the machinery that finds the ends finds one line per name and wants two. Both come back as the same line, and the cutter behind this takes the beginning from it and ignores the rest.");
-  let select_fn_name = fn_name("js_statement_find_name_body");
-  let apply_fn_name = fn_name("js_selects_functionize_rest_returning");
   let output = await function_functionize_generic(
     f_name,
     name_from,
     name_from,
     f_name_new,
-    select_fn_name,
-    apply_fn_name,
+    fn_name("js_statement_find_name_body"),
+    fn_name("js_selects_functionize_rest_returning"),
   );
   return output;
 }
