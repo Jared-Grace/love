@@ -16,8 +16,7 @@ export function app_code_hash_review_add(context, hash) {
   let number = storage_session_get_context(context, key);
   let present = null_not_is(number);
   let screen = app_shared_screen_stored_get(context);
-  let right = fn_name("app_code_review");
-  let on_review = equal(screen, right);
+  let on_review = equal(screen, fn_name("app_code_review"));
   if (present && on_review) {
     let word = app_code_review_hash_key();
     property_set(hash, word, number);
