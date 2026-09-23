@@ -11,12 +11,11 @@ export async function bible_glyph_chapter_rosetta_lines_fetched(chapter_code) {
   let r = await bible_glyph_chapter_rosetta_lines_fetched_known(chapter_code);
   let known = property_get(r, "known");
   let found = property_get(r, "found");
-  let f_name = fn_name("bible_glyph_chapters_rosetta_lines_write");
   assert_json(known, {
     chapter_code,
     hint: text_combine_multiple([
       "no picture Bible chapter has its Rosetta bands written out under that code - run ",
-      f_name,
+      fn_name("bible_glyph_chapters_rosetta_lines_write"),
       " to write the ones that are missing",
     ]),
   });
