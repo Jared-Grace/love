@@ -15,7 +15,6 @@ export function baseline_growth_guarded_is(imports) {
   if (asserted) {
     return asserted;
   }
-  let f_name = fn_name("baseline_known_shrink_write");
-  let shrinks = list_includes(imports, f_name);
+  let shrinks = list_includes(imports, fn_name("baseline_known_shrink_write"));
   return shrinks;
 }
