@@ -18,7 +18,6 @@ export function js_storage_local_key_f_names(ast, seams) {
   "Which calls to read is not decided here, and is handed in. It was three names written out in this file until a fourth and a fifth were found sitting beside them, and a sixth kind arrived later still - the front doors that pass a key word straight through, which have to be read at their callers because that is where the word is written. Only the caller that walks the repo can know which those are, so this asks.";
   "A name is collected as written, without asking whether it is a function at all - the caller that walks the repo is the one holding the list of live names, and a word standing here that answers to nothing is a parameter, which is a real hole and cannot be closed from inside one file.";
   arguments_assert(arguments, 2);
-  let spelled = fn_name("fn_name");
   let found = [];
   function collect(node) {
     let owner_node = js_call_argument_at_try(node, "1");
@@ -28,7 +27,7 @@ export function js_storage_local_key_f_names(ast, seams) {
       list_add(found, owner);
     }
     let word_node = js_call_argument_at_try(node, "2");
-    let by_reference = js_call_callee_name_equal(word_node, spelled);
+    let by_reference = js_call_callee_name_equal(word_node, fn_name("fn_name"));
     if (by_reference) {
       let inner = js_call_argument_at(word_node, "1");
       let word = property_get(inner, "value");
