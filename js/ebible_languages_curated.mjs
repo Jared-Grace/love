@@ -15,8 +15,7 @@ export function ebible_languages_curated() {
   "The languages chosen for this repo one at a time by hand, each carrying the one translation chosen with it - the list this app shipped before every language eBible gives away freely was added beside it.";
   "Kept apart from the generated list next door for one reason: the code each of these is stored under lives in readers' browsers already, so it may be corrected by nobody. A curated entry wins over a generated one naming the same language, which is what keeps a reader's chosen language where they left it.";
   "It is not sorted here. Both lists are sorted together once they are joined, because sorting a part of a list says nothing about where its entries land in the whole.";
-  let right = fn_name("ebible_languages_add");
-  text_combine("to add an entry, run: ", right);
+  text_combine("to add an entry, run: ", fn_name("ebible_languages_add"));
   let en = ebible_language_english();
   let o = ebible_language_original();
   let ur = ebible_language_urdu();
