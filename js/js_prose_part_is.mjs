@@ -31,8 +31,7 @@ export function js_prose_part_is(node) {
   if (call_is) {
     let callee = property_get(node, "callee");
     let called = js_identifier_name_try(callee);
-    let naming = fn_name("fn_name");
-    let naming_is = equal(called, naming);
+    let naming_is = equal(called, fn_name("fn_name"));
     return naming_is;
   }
   return false;
