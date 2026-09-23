@@ -1,3 +1,4 @@
+import { git_history_purge_case_blind_gate_run } from "./git_history_purge_case_blind_gate_run.mjs";
 import { app_code_color_tone_gate_run } from "./app_code_color_tone_gate_run.mjs";
 import { app_code_highlight_color_gate_run } from "./app_code_highlight_color_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
@@ -1151,6 +1152,7 @@ export function qa_gates() {
     functions_calls_walk_unwaited_gate_run,
     app_code_highlight_color_gate_run,
     app_code_color_tone_gate_run,
+    git_history_purge_case_blind_gate_run,
   ];
   return gates;
 }
