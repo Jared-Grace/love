@@ -1,7 +1,6 @@
+import { text_prefix_without_inner } from "./text_prefix_without_inner.mjs";
 import { html_hash_symbol } from "./html_hash_symbol.mjs";
 import { text_split_first } from "./text_split_first.mjs";
-import { text_skip } from "./text_skip.mjs";
-import { text_size } from "./text_size.mjs";
 import { hash_text_object } from "./hash_text_object.mjs";
 import { app_shared_screen_hash_key } from "./app_shared_screen_hash_key.mjs";
 import { app_replace_rule_set_hash_key } from "./app_replace_rule_set_hash_key.mjs";
@@ -17,8 +16,7 @@ export async function app_replace_tests_refresh(page) {
   let url = page.url();
   let symbol = html_hash_symbol();
   let before = text_split_first(url, symbol);
-  let skip_count = text_size(before);
-  let hash_url = text_skip(url, skip_count);
+  let hash_url = text_prefix_without_inner(url, before);
   let hash = hash_text_object(hash_url);
   let v = app_shared_screen_hash_key();
   let v2 = app_replace_rule_set_hash_key();
