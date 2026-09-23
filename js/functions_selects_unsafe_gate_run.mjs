@@ -24,13 +24,12 @@ export async function functions_selects_unsafe_gate_run() {
   let walked = property_get(told, "walked");
   let names = property_get(told, "offenders");
   let path = functions_selects_unsafe_baseline_path();
-  let name_write = fn_name("functions_selects_unsafe_baseline_write");
   let r = await baseline_names_gate_walked_generic(
     walked,
     names,
     path,
     "these transforms can be handed written code through an already approved command and could not before — narrow the parameter to a name",
-    name_write,
+    fn_name("functions_selects_unsafe_baseline_write"),
   );
   return r;
 }
