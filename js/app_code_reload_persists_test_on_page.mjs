@@ -1,7 +1,7 @@
 import { app_code_screen_name_short } from "./app_code_screen_name_short.mjs";
 import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_screen_hash_key } from "./app_code_screen_hash_key.mjs";
+import { app_shared_screen_hash_key } from "./app_shared_screen_hash_key.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_quiz_hash_key } from "./app_code_quiz_hash_key.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -24,7 +24,7 @@ export async function app_code_reload_persists_test_on_page(
   arguments_assert(arguments, 4);
   async function check(id) {
     "the three words this address stands on are frozen, so each is read off the function holding it rather than spelled into the joined-up text - a word fused into a separator is invisible to everything that watches for a wording change";
-    let v = app_code_screen_hash_key();
+    let v = app_shared_screen_hash_key();
     let screen_name = fn_name("app_code_quiz");
     let f_name = app_code_screen_name_short(screen_name);
     let v2 = app_code_quiz_hash_key();

@@ -4,7 +4,7 @@ import { app_code_screen_buttons } from "./app_code_screen_buttons.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { and } from "./and.mjs";
 import { app_code_screen_capture } from "./app_code_screen_capture.mjs";
-import { app_code_screen_hash_key } from "./app_code_screen_hash_key.mjs";
+import { app_shared_screen_hash_key } from "./app_shared_screen_hash_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
@@ -19,7 +19,7 @@ export async function app_code_screens_crawl_screen(
   "a unique query string on each load forces a fresh render, so the address is read rather than the screen the tab was last left on";
   arguments_assert(arguments, 4);
   let name = property_get(screen, "name");
-  let key = app_code_screen_hash_key();
+  let key = app_shared_screen_hash_key();
   let short = app_code_screen_name_short(name);
   let url = text_combine_multiple([
     url_prefix,

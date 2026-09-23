@@ -1,7 +1,7 @@
 import { app_code_screen_name_short } from "./app_code_screen_name_short.mjs";
 import { property_text_includes } from "./property_text_includes.mjs";
 import { less_than } from "./less_than.mjs";
-import { app_code_screen_hash_key } from "./app_code_screen_hash_key.mjs";
+import { app_shared_screen_hash_key } from "./app_shared_screen_hash_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { equal } from "./equal.mjs";
@@ -21,7 +21,7 @@ export function app_code_happy_trail_quizzes_skipped(trail) {
   "This is the check on the CHECK. The walk is kept honest by an ordering nothing enforces: every screen marks its way on, and a quiz marks its answer too, standing earlier in the page, so the earliest mark is the answer and the way on is only reached afterwards. Draw the same two the other way round and the walk still passes, still reports thousands of steps, and has quietly stopped asking any questions. Nothing else would go red, because from the outside a course walked without answering looks exactly like a course walked correctly.";
   "It reads the address rather than the screen, because the address is all a finished walk kept - and the address is enough: the quiz says which lesson and which question it is, so a run of steps sharing one says how many presses that one question took.";
   arguments_assert(arguments, 1);
-  let key = app_code_screen_hash_key();
+  let key = app_shared_screen_hash_key();
   let screen_name = fn_name("app_code_quiz");
   let screen = app_code_screen_name_short(screen_name);
   let quiz_marker = text_combine_multiple([key, "=", screen]);

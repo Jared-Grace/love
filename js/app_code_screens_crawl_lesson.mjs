@@ -2,7 +2,7 @@ import { app_code_screen_name_short } from "./app_code_screen_name_short.mjs";
 import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
 import { app_code_screen_capture_record } from "./app_code_screen_capture_record.mjs";
 import { app_code_screens_crawl_lesson_quiz_url } from "./app_code_screens_crawl_lesson_quiz_url.mjs";
-import { app_code_screen_hash_key } from "./app_code_screen_hash_key.mjs";
+import { app_shared_screen_hash_key } from "./app_shared_screen_hash_key.mjs";
 import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_includes } from "./text_includes.mjs";
@@ -21,7 +21,7 @@ export async function app_code_screens_crawl_lesson(
   "crawl one lesson the way a learner meets it: its examples screen, then its quiz starting at the first kind and clicking Next through every following kind (forwards, backwards, unscramble, ...). A unique query string on each load forces a fresh render so the hash seeds the right screen. Stops walking when the lesson title changes, which means Next has carried us out of this lesson (into the next lesson or a review). Every screen is tagged and pushed onto records";
   "the three words this address stands on are frozen, so each is read off the function holding it rather than spelled into the joined-up text - a word fused into a separator is invisible to everything that watches for a wording change";
   "BROWSER-SERIALIZED - do NOT auto-canonicalize";
-  let v = app_code_screen_hash_key();
+  let v = app_shared_screen_hash_key();
   let quiz_url = await app_code_screens_crawl_lesson_quiz_url(
     v,
     url_prefix,
@@ -30,7 +30,7 @@ export async function app_code_screens_crawl_lesson(
     records,
   );
   await app_code_screen_capture_record(page, quiz_url, id, "quiz", 0, records);
-  let v6 = app_code_screen_hash_key();
+  let v6 = app_shared_screen_hash_key();
   let screen_name = fn_name("app_code_quiz");
   let f_name = app_code_screen_name_short(screen_name);
   let combined = text_combine_multiple([",", v6, "=", f_name]);

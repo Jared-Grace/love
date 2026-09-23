@@ -30,7 +30,7 @@ export function literals_frozen_names() {
   let spelled20 = fn_name("app_shared_bible_reference_hash_key");
   ("Three the readings could not have found, because the code app builds its link as text rather than as an object - the words joined with an equals sign and an ampersand by hand, and taken apart the same way on the way back in. Nothing about that shape says an address is being made until the last line, so a reading keyed on where a field is named walks straight past it. These were found by asking who else writes an address at all.");
   let spelled21 = fn_name("app_code_lesson_hash_key");
-  let spelled22 = fn_name("app_code_screen_hash_key");
+  let spelled22 = fn_name("app_shared_screen_hash_key");
   let spelled23 = fn_name("app_code_quiz_hash_key");
   ("Two of a kind this list had no example of. Every other address word here sits after the hash, and the readings that find them all look there; this one sits after the question mark, which nothing in the repo reads for words at all. A verify link is sent with a chapter in it the same way a bible link is, and it breaks the same way if the word is retyped.");
   ("Beside it is the first frozen key that nothing in this repo ever writes. It is set by hand in a browser to hold a page on one chapter, so the value lives only on that disk - which is exactly the condition this list is about, and is easier to miss than a key with a writer, because searching for what saves it finds nothing.");

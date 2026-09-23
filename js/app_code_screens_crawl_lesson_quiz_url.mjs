@@ -4,7 +4,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
-import { app_code_screen_hash_key } from "./app_code_screen_hash_key.mjs";
+import { app_shared_screen_hash_key } from "./app_shared_screen_hash_key.mjs";
 import { app_code_quiz_hash_key } from "./app_code_quiz_hash_key.mjs";
 export async function app_code_screens_crawl_lesson_quiz_url(
   v,
@@ -37,7 +37,7 @@ export async function app_code_screens_crawl_lesson_quiz_url(
     0,
     records,
   );
-  let v3 = app_code_screen_hash_key();
+  let v3 = app_shared_screen_hash_key();
   let screen_name2 = fn_name("app_code_quiz");
   let f_name2 = app_code_screen_name_short(screen_name2);
   let v4 = app_code_quiz_hash_key();
