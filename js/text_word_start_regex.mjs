@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { assert_json } from "./assert_json.mjs";
+import { text_word_regex_plain_assert } from "./text_word_regex_plain_assert.mjs";
 export function text_word_start_regex(word) {
   "$plain word";
   arguments_assert(arguments, 1);
@@ -9,12 +9,8 @@ export function text_word_start_regex(word) {
   ("The mark at the start is the whole of the safety. The words worth taking out are short, and a short word is a run of letters in the middle of many innocent ones: one of them sat inside the name of a drawing function in three files that had nothing to do with it, and a plain sweep would have rewritten those in every commit since they were written, quietly, with no way back. A letter standing in front of the word takes the match away.");
   ("That mark is also what makes setting the letter aside safe rather than reckless. The fear worth having about ignoring capitals is that a word starts matching inside other words; it does not, because the mark still stands between a letter and something that is not one. Measured on a throwaway: with the letter set aside the word went wherever it began a word, and the one sitting inside a longer word stayed exactly where it was.");
   ("Past the start the name is allowed to run on, because the names worth taking out come in families sharing a beginning - one beginning here had eleven endings - and marking the far end too would mean writing every ending down, where the one that gets forgotten is the one nobody will look for again.");
-  ("A word is refused unless it is made of letters, digits and the mark between parts. That is not fussiness about input: everything else - a dot, a slash, a bracket - means something of its own to anything reading a pattern, so a path or a phrase handed in here would quietly ask for something other than itself. Refusing is also what makes the mark at the start mean anything, because it stands between a letter and something that is not one.");
-  let plain = /^[A-Za-z0-9_]+$/.test(word);
-  assert_json(plain, {
-    hint: "this is not one plain word of letters, digits and underscores, and everything else means something of its own to a pattern - would you like to name the word itself rather than a path or a phrase holding it?",
-    word,
-  });
+  ("What a word may be made of is asked elsewhere, because the pattern that asks for several words at once has to refuse exactly the same things. Two spellings of that refusal could drift apart, and the looser of them would take a bracket or a bar and ask for something other than what it was handed.");
+  text_word_regex_plain_assert(word);
   let pattern = "\\b" + word + "\\w*";
   return pattern;
 }
