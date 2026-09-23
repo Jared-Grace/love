@@ -21,8 +21,7 @@ export async function function_eachify_unordered(f_name) {
         " instead? Or should the function be async?",
       ]),
     );
-    let each_name = fn_name("each_unordered_async");
-    return each_name;
+    return fn_name("each_unordered_async");
   }
   function f_name_multiple_get(unaliased) {
     let f_name_multiple = function_name_combine_multiple([
