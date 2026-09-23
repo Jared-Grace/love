@@ -11,7 +11,14 @@ export function app_en_learn_bible_gloss_urdu_name_explains() {
   "Places are written down here beside people, because a place name is a proper name and fails the reader the same way. What the wording owes a place is smaller: that it is a town, and now and then one thing about it a passage keeps assuming, such as its standing on the sea.";
   "The wordings that sent the reader back up the passage - ‘the same man's name as came above’, ‘the same town's name as came above’ - are what this table was enlarged to replace. A pointer is the worst of the shared wordings, because the entry it points at is often another pointer, and a name is the place they gather: a name stands in a passage over and over, and every place after the first was handed one.";
   "The closing sentence about capital letters is written once here and joined onto every wording, because it is the same sentence in all of them and a reader meets only one of them at a time.";
+  "Three of the wordings are written once and given to a whole group of names, and each of the three is the honest thing to say rather than a saving of effort. The longest list of names in these passages is the one that counts Jesus' forefathers, and it is a list: the passage says nothing about those men except that each stood between the one before him and the one after. A wording claiming more would be invented. The same holds for the men who travelled with those who carried the good news, and for the two names that stand both in that list of forefathers and on an old prophet's book.";
   let tail = " انگریزی میں ہر خاص نام کا پہلا حرف بڑا لکھا جاتا ہے۔";
+  let forefather =
+    "ایک آدمی کا خاص نام ہے، جو اُس فہرست میں آتا ہے جو یِسُوع کے باپ دادا گِنواتی ہے۔";
+  let prophet_forefather =
+    "ایک آدمی کا خاص نام ہے۔ یہ نام اُس فہرست میں بھی آتا ہے جو یِسُوع کے باپ دادا گِنواتی ہے، اَور ایک پُرانے نبی کا نام بھی یِہی ہے۔";
+  let traveller =
+    "ایک آدمی کا خاص نام ہے، جو خُوشخبری سُنانے والوں کے ساتھ سفر کرتا تھا۔";
   let who = {
     Jesus: "اُن ہی کا خاص نام ہے جِن کی خُوشخبری یہ کِتاب سُناتی ہے۔",
     JESUS:
@@ -95,6 +102,169 @@ export function app_en_learn_bible_gloss_urdu_name_explains() {
     Sidon: "ایک شہر کا خاص نام ہے، جو سمُندر کے کنارے تھا۔",
     Sodom:
       "ایک پُرانے شہر کا خاص نام ہے، جو اپنی بُرایٔی کے سبب سے برباد ہُوا۔",
+    Abraham:
+      "اُس آدمی کا خاص نام ہے جِس سے اِسرائیل کی قَوم چلی، اَور جِس سے خُدا نے بڑا وعدہ کِیا تھا۔",
+    Isaac: "ایک آدمی کا خاص نام ہے، جو اِسرائیل کی قَوم کے باپ دادا میں سے ہے۔",
+    Jacob:
+      "ایک آدمی کا خاص نام ہے، جو اِسرائیل کی قَوم کے باپ دادا میں سے ہے۔ یہ نام اِن آیتوں میں ایک سے زیادہ آدمِیوں کا ہے۔",
+    Philip:
+      "ایک آدمی کا خاص نام ہے۔ یہ نام اِن آیتوں میں ایک سے زیادہ آدمِیوں کا ہے: یِسُوع کے بارہ شاگِردوں میں سے ایک کا، اَور ایک خُوشخبری سُنانے والے کا۔",
+    Stephen:
+      "اُس آدمی کا خاص نام ہے جو یِسُوع کی گواہی دینے پر سَب سے پہلے جان سے مارا گیا۔",
+    Ananias:
+      "ایک آدمی کا خاص نام ہے۔ یہ نام اِن آیتوں میں ایک سے زیادہ آدمِیوں کا ہے۔",
+    Cornelius:
+      "اُس رُومی فَوجی اَفسر کا خاص نام ہے جِس کے گھر خُوشخبری پہلی بار غَیر قَوموں تک پہُنچی۔",
+    Lazarus:
+      "ایک آدمی کا خاص نام ہے۔ یہ نام اِن آیتوں میں ایک سے زیادہ آدمِیوں کا ہے: ایک وہ جِسے یِسُوع نے مَوت سے زِندہ کِیا، اَور ایک وہ غرِیب آدمی جِس کی یِسُوع نے مِثال دی۔",
+    Simeon:
+      "ایک آدمی کا خاص نام ہے۔ یہ نام اِن آیتوں میں ایک سے زیادہ آدمِیوں کا ہے۔",
+    Zechariah:
+      "ایک آدمی کا خاص نام ہے، جو کاہِن تھا اَور جِس کا بیٹا آگے چل کر لوگوں کو بپتِسمہ دیتا تھا۔",
+    Zacchaeus:
+      "اُس آدمی کا خاص نام ہے جو مَحصُول لیتا تھا اَور یِسُوع کو دیکھنے کے لیٔے درخت پر چڑھ گیا۔",
+    Lot: "ایک آدمی کا خاص نام ہے، جو اُس شہر میں رہتا تھا جو اپنی بُرایٔی کے سبب سے برباد ہُوا۔",
+    Martha: "ایک عورت کا خاص نام ہے، جِس کے گھر یِسُوع مہمان ہُوئے۔",
+    Joanna:
+      "ایک عورت کا خاص نام ہے، جو یِسُوع کے پِیچھے چلنے والوں میں سے تھی۔",
+    Cleopas:
+      "ایک آدمی کا خاص نام ہے، جِس نے جی اُٹھنے کے دِن یِسُوع کو راستے میں دیکھا۔",
+    Thomas: "یِسُوع کے بارہ شاگِردوں میں سے ایک کا خاص نام ہے۔",
+    Alphaeus: "ایک آدمی کا خاص نام ہے، جو یِسُوع کے دو شاگِردوں کا باپ تھا۔",
+    Caiaphas: "اُس آدمی کا خاص نام ہے جو اُن دِنوں سَب سے بڑا کاہِن تھا۔",
+    Annas: "ایک آدمی کا خاص نام ہے، جو بڑے کاہِنوں میں سے تھا۔",
+    Gamaliel:
+      "اُس آدمی کا خاص نام ہے جو شَرِیعت کا اُستاد تھا اَور لوگوں میں عِزّت رکھتا تھا۔",
+    Aaron: "اُس آدمی کا خاص نام ہے جو اِسرائیل کا پہلا بڑا کاہِن تھا۔",
+    Samuel: "ایک پُرانے نبی کا خاص نام ہے۔",
+    Joel: "ایک پُرانے نبی کا خاص نام ہے۔",
+    Elisha: "ایک پُرانے نبی کا خاص نام ہے۔",
+    Naaman:
+      "ایک آدمی کا خاص نام ہے، جو دُوسرے مُلک کا فَوجی سردار تھا اَور کوڑھ سے شِفا پایا۔",
+    Noah: "اُس آدمی کا خاص نام ہے جِس نے خُدا کے کہنے پر کشتی بنایٔی۔",
+    Abel: "اُس آدمی کا خاص نام ہے جو سَب سے پہلے اپنے بھایٔی کے ہاتھوں مارا گیا۔",
+    Joshua:
+      "ایک آدمی کا خاص نام ہے، جو اِسرائیل کو اُس مُلک میں لے گیا جِس کا خُدا نے وعدہ کِیا تھا۔",
+    Kish: "ایک آدمی کا خاص نام ہے، جو اِسرائیل کے پہلے بادشاہ کا باپ تھا۔",
+    Jesse:
+      "ایک آدمی کا خاص نام ہے، جو اُس بادشاہ کا باپ تھا جِس کی نسل سے یِسُوع آئے۔",
+    Judah:
+      "ایک آدمی کا خاص نام ہے، اَور اِسرائیل کے ایک قبِیلے اَور اُس کے عِلاقے کا نام بھی یِہی ہے۔",
+    Hamor:
+      "ایک آدمی کا خاص نام ہے، جِس کے بیٹوں سے ایک قبر کی جگہ خرِیدی گیٔی تھی۔",
+    Theophilus: "اُس آدمی کا خاص نام ہے جِس کے لیٔے یہ کِتاب لِکھی گیٔی۔",
+    Anna: "ایک عورت کا خاص نام ہے، جو نبِیّہ تھی اَور ہَیکل میں خُدا کی عِبادت کرتی رہتی تھی۔",
+    Phanuel:
+      "ایک آدمی کا خاص نام ہے، جو اُس نبِیّہ کا باپ تھا جو ہَیکل میں تھی۔",
+    Chuza: "ایک آدمی کا خاص نام ہے، جو بادشاہ کے گھر کا مُختار تھا۔",
+    Tiberius:
+      "اُس رُومی بادشاہ کا خاص نام ہے جو یِسُوع کے دِنوں میں حکُومت کرتا تھا۔",
+    Claudius:
+      "ایک رُومی بادشاہ کا خاص نام ہے۔ اِن آیتوں میں ایک اَور آدمی کا نام بھی یِہی ہے۔",
+    Quirinius:
+      "ایک آدمی کا خاص نام ہے، جو رُوم کی طرف سے ایک عِلاقے کا حاکِم تھا۔",
+    Lysanias: "ایک آدمی کا خاص نام ہے، جو ایک عِلاقے کا حاکِم تھا۔",
+    Porcius: "ایک رُومی حاکِم کا خاص نام ہے۔",
+    Sergius: "ایک رُومی حاکِم کا خاص نام ہے۔",
+    Elymas:
+      "ایک آدمی کا خاص نام ہے، جو جادُو کرتا تھا اَور خُوشخبری کی مُخالفت کی۔",
+    Agabus:
+      "ایک آدمی کا خاص نام ہے، جو نبی تھا اَور آگے ہونے والی باتیں بتاتا تھا۔",
+    Aeneas:
+      "ایک آدمی کا خاص نام ہے، جو آٹھ برس سے بِستر پر پڑا تھا اَور شِفا پایا۔",
+    Eutychus:
+      "ایک جوان کا خاص نام ہے، جو کھِڑکی سے گِر پڑا اَور پھِر زِندہ اُٹھا۔",
+    Matthias: "ایک آدمی کا خاص نام ہے، جو بارہ رسُولوں میں شامِل کِیا گیا۔",
+    Justus:
+      "ایک آدمی کا خاص نام ہے۔ یہ نام اِن آیتوں میں ایک سے زیادہ آدمِیوں کا ہے۔",
+    Barsabbas:
+      "ایک آدمی کا خاص نام ہے۔ یہ نام اِن آیتوں میں ایک سے زیادہ آدمِیوں کا ہے۔",
+    Alexander:
+      "ایک آدمی کا خاص نام ہے۔ یہ نام اِن آیتوں میں ایک سے زیادہ آدمِیوں کا ہے۔",
+    Sceva: "ایک آدمی کا خاص نام ہے، جو کاہِنوں کے سرداروں میں سے تھا۔",
+    Tyrannus: "ایک آدمی کا خاص نام ہے، جِس کے مدرسے میں روز بات چیت ہوتی تھی۔",
+    Sosthenes: "ایک آدمی کا خاص نام ہے، جو عِبادت خانے کا سردار تھا۔",
+    Crispus:
+      "ایک آدمی کا خاص نام ہے، جو عِبادت خانے کا سردار تھا اَور اِیمان لایا۔",
+    Dionysius:
+      "ایک آدمی کا خاص نام ہے، جو شہر کی عدالت کا ایک رُکن تھا اَور اِیمان لایا۔",
+    Blastus: "ایک آدمی کا خاص نام ہے، جو بادشاہ کے کمرے کا داروغہ تھا۔",
+    Theudas:
+      "ایک آدمی کا خاص نام ہے، جِس نے اپنے آپ کو بڑا بنایا اَور مارا گیا۔",
+    Mnason: "ایک آدمی کا خاص نام ہے، جِس کے گھر مُسافر ٹھہرے۔",
+    Erastus: "ایک آدمی کا خاص نام ہے، جو خُوشخبری کے کام میں مدد کرتا تھا۔",
+    Titus: "ایک آدمی کا خاص نام ہے، جو خُوشخبری کے کام میں ساتھ دیتا تھا۔",
+    Pyrrhus:
+      "ایک آدمی کا خاص نام ہے، جو خُوشخبری سُنانے والوں میں سے ایک کا باپ تھا۔",
+    Manaen: "ایک آدمی کا خاص نام ہے، جو کلِیسیا میں اُستاد تھا۔",
+    Lucius: "ایک آدمی کا خاص نام ہے، جو کلِیسیا میں اُستاد تھا۔",
+    Nicolas: "ایک آدمی کا خاص نام ہے، جو کلِیسیا کی خِدمت کے لیٔے چُنا گیا۔",
+    Parmenas: "ایک آدمی کا خاص نام ہے، جو کلِیسیا کی خِدمت کے لیٔے چُنا گیا۔",
+    Timon: "ایک آدمی کا خاص نام ہے، جو کلِیسیا کی خِدمت کے لیٔے چُنا گیا۔",
+    Nicanor: "ایک آدمی کا خاص نام ہے، جو کلِیسیا کی خِدمت کے لیٔے چُنا گیا۔",
+    Prochorus: "ایک آدمی کا خاص نام ہے، جو کلِیسیا کی خِدمت کے لیٔے چُنا گیا۔",
+    Aristarchus: traveller,
+    Trophimus: traveller,
+    Tychicus: traveller,
+    Secundus: traveller,
+    Sopater: traveller,
+    Gaius: traveller,
+    Amos: prophet_forefather,
+    Nahum: prophet_forefather,
+    Seth: forefather,
+    Enosh: forefather,
+    Mahalalel: forefather,
+    Jared: forefather,
+    Enoch: forefather,
+    Methuselah: forefather,
+    Lamech: forefather,
+    Shem: forefather,
+    Arphaxad: forefather,
+    Cainan: forefather,
+    Shelah: forefather,
+    Eber: forefather,
+    Peleg: forefather,
+    Reu: forefather,
+    Serug: forefather,
+    Nahor: forefather,
+    Terah: forefather,
+    Perez: forefather,
+    Hezron: forefather,
+    Arni: forefather,
+    Admin: forefather,
+    Amminadab: forefather,
+    Nahshon: forefather,
+    Sala: forefather,
+    Boaz: forefather,
+    Obed: forefather,
+    Nathan: forefather,
+    Mattatha: forefather,
+    Menna: forefather,
+    Melea: forefather,
+    Eliakim: forefather,
+    Jonam: forefather,
+    Jorim: forefather,
+    Eliezer: forefather,
+    Er: forefather,
+    Elmadam: forefather,
+    Cosam: forefather,
+    Addi: forefather,
+    Neri: forefather,
+    Shealtiel: forefather,
+    Zerubbabel: forefather,
+    Rhesa: forefather,
+    Joanan: forefather,
+    Joda: forefather,
+    Josech: forefather,
+    Semein: forefather,
+    Maath: forefather,
+    Naggai: forefather,
+    Esli: forefather,
+    Mattathias: forefather,
+    Jannai: forefather,
+    Melchi: forefather,
+    Matthat: forefather,
+    Heli: forefather,
   };
   let r = {};
   let names = object_property_names(who);
