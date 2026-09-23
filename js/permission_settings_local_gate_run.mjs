@@ -17,19 +17,20 @@ export async function permission_settings_local_gate_run() {
   ("Throws so the dispatcher seam exits nonzero");
   let unwatched = await permission_settings_local_unwatched();
   let path = permission_settings_local_baseline_path();
-  let f_name = fn_name("permission_grant_add");
-  let f_name2 = fn_name("permission_settings_local_baseline_write");
-  let f_name3 = fn_name("permission_rules_other_domain_add");
   let hint = text_combine_multiple([
     "these per-machine allow rules are not in the record, so a standing approval was written where nothing watches it. If the rule names a dispatcher function, hand that name to ",
-    f_name,
+    fn_name("permission_grant_add"),
     " and it moves to the watched list. If it names a fetched site, hand the domain to ",
-    f_name3,
+    fn_name("permission_rules_other_domain_add"),
     " and it moves there too. If it names anything else - a path, a command - that list has no room for it and the only way out is to take it out of the local file. Recording it is not a third way: ",
-    f_name2,
+    fn_name("permission_settings_local_baseline_write"),
     " refuses to grow, so it can shrink this record but never take a new rule into it",
   ]);
-  let name_write = fn_name("permission_settings_local_baseline_write");
-  let r = await baseline_names_gate_generic(unwatched, path, hint, name_write);
+  let r = await baseline_names_gate_generic(
+    unwatched,
+    path,
+    hint,
+    fn_name("permission_settings_local_baseline_write"),
+  );
   return r;
 }
