@@ -22,13 +22,11 @@ export async function commits_message_alias_baseline_write() {
   let rows = property_get(told, "rows");
   let path = commits_message_alias_baseline_path();
   let after = await commits_message_alias_offenders_after_door(rows);
-  let f_name = fn_name("git_call_message");
-  let f_name2 = fn_name("commits_message_alias_door_commit");
   let hint = text_combine_multiple([
     "a commit made after the door was shut is messaged with an alias key - the spelling out in ",
-    f_name,
+    fn_name("git_call_message"),
     " stands in front of every commit this repo makes, so a name here says a commit was worded somewhere that does not pass through it. Find that way in and shut it. Do not move the place named in ",
-    f_name2,
+    fn_name("commits_message_alias_door_commit"),
     " forward, which hides the commit instead of accounting for it",
   ]);
   list_empty_is_assert_json(after, {
