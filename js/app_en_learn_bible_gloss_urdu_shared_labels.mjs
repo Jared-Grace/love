@@ -20,6 +20,9 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
   "The eleven longest wordings on the list were found by asking the opposite question and are worth a paragraph for that reason. Everything above was found by looking for wordings too SHORT to be saying anything, which is the shape a useless wording usually has. Sorting the store by how many entries a wording carries and reading down past the short ones turns up a second kind entirely: a whole sentence, in good Urdu, saying a true and general thing, carried by a thousand entries. ‘It is one person's proper name and is written with a capital letter’ stands over nine hundred entries and a hundred and sixty eight different names, and it is a worse failure than ‘proper noun’ rather than a better one, because a reader has no reason to doubt it. Length is not the test and never was; the test is whether the reader learns the word in front of them.";
   "Three of that second batch are refused and the reasons are already named above, met in longer sentences. ‘It shows possession and it belongs to more than one’ stands over ‘their’, ‘our’ and ‘your’, and the settled wording for ‘your’ says the thing belongs to the one being spoken to, which is not more than one - one word out of three, so a refusal. ‘A verb, but it does not carry the work alone: with the next verb it says the work is already done’ stands over ‘have’, ‘has’ and ‘had’, and the settled wording for ‘have’ says it helps other verbs without saying it makes a completed time, so the one thing the label adds is the one thing that would go. The same sentence ending in ‘makes the time to come’ over ‘will’ and ‘shall’ IS admitted, because those two words never do anything else and both settled wordings say so.";
   "A wording that gives the reason for a capital letter is refused wherever the reason is where the line happens to fall. ‘The first letter is capital because the verse starts here’ stands over ‘And’, ‘But’ and ‘When’, and it is true where it stands and could not be written from the word alone. The capital wordings that ARE admitted say the opposite kind of thing - a name takes a capital wherever it stands, ‘I’ takes one in the middle of a sentence too - and a reader carries those away.";
+  "Nine more joined once the names had been written, and one of them settles a question the test had not been asked before: what to do when the label says MORE than the settled wording, and the more is wrong. ‘A pronoun, that is, the word that stands in place of a name, and it shows possession’ stands over ‘his’, ‘your’, ‘our’, ‘her’, ‘my’ and ‘their’, and not one of those settled wordings calls the word a pronoun. They decline it on purpose: a word like ‘his’ does not stand in place of a name, it stands in front of one, so the label teaches a beginner a thing they will have to unlearn. The test asks whether anything the reader would keep is lost, and a false claim is not something the reader keeps. Admitted, with the reason written here rather than left to be re-argued.";
+  "Two pure pointers joined in the same batch - ‘the same pronoun’, twice, spelled two ways - and they are the easiest admission there has ever been. A pointer says nothing whatever the word under it is, and every word carrying these two already has a settled wording. They are listed separately rather than folded together because the store holds both spellings and a licence is matched as the text it is.";
+  "Refused this round, so that a later reader does not spend the search again: ‘a preposition, and here it tells time’ and its kind, which say what the word is doing in the line rather than what the word is; ‘here Urdu did not write it’, in all three of its forms, which is about this translation of this verse; ‘a pointing word’ over ‘that’ and ‘this’, because ‘that’ does three jobs and the settled wording settles a different one; and ‘a name of a region’ over nineteen regions, refused for the plainest reason of all - not one of those nineteen has a settled wording yet, so licensing it would change nothing and only make the list longer.";
   let labels = [
     "معرفہ حرفِ تعریف۔",
     "نکرہ حرفِ تعریف۔",
@@ -159,6 +162,15 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
     "دو باتوں کو جوڑنے والا لفظ، بالکل اُردو کے 'اَور' کی طرح۔",
     "یہ لفظ اِسم سے پہلے آ کر بتاتا ہے کہ ایک خاص چیز مُراد ہے۔",
     "وُہی حرفِ تعریف ہے جو کِسی ایک اَن جانی چیز کے لیٔے آتا ہے۔",
+    "حرفِ جار ہے، یعنی وہ چھوٹا لفظ جو دو باتوں کا رِشتہ بتاتا ہے۔",
+    "اِسم ہے۔ نام ہے، اِس لیٔے بڑے حرف سے لِکھا ہے۔",
+    "ضمیر ہے اَور یہ وہ شکل ہے جو حرفِ جار کے بعد آتی ہے۔",
+    "ضمیر ہے اَور یہ وہ شکل ہے جو فعل کے بعد آتی ہے۔",
+    "ضمیر ہے، یعنی وہ لفظ جو کسی نام کی جگہ کھڑا ہوتا ہے، اَور یہ مِلکیّت بتاتا ہے۔",
+    "ضمیر ہے اَور مِلکیّت بتاتا ہے۔",
+    "فعل ہے، مگر یہ اکیلا کام نہیں بتاتا: اگلے فعل کے ساتھ مِل کر بتاتا ہے کہ کام ہو سکنے کی بات ہے۔",
+    "وُہی ضمیر ہے۔",
+    "وہی ضمیر۔",
   ];
   return labels;
 }
