@@ -64,6 +64,16 @@ export function js_atomize_cases() {
       code: text_frozen("let both = js_node_is(node) && js_node_type(node);\n"),
       lifted: 0,
     },
+    {
+      name: "a marked function name, which is a unit like the string inside it",
+      code: text_frozen('let same = equal(name, fn_name("x"));\n'),
+      lifted: 0,
+    },
+    {
+      name: "the marker given something other than one plain string, which is an ordinary call",
+      code: text_frozen("let same = equal(name, fn_name(other));\n"),
+      lifted: 1,
+    },
   ];
   return cases;
 }
