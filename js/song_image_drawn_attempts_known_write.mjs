@@ -21,11 +21,9 @@ export async function song_image_drawn_attempts_known_write() {
       known[couplet.n] = attempts;
     }
   }
-  let f_name = fn_name("song_image_drawn_attempts_known");
-  let f_name2 = fn_name("song_image_drawn_attempts_known_write");
   let combined = text_combine_multiple([
     "which attempts exist for each couplet, as a plain table written out by ",
-    f_name2,
+    fn_name("song_image_drawn_attempts_known_write"),
     " and never edited by hand",
   ]);
   let prose = [
@@ -33,6 +31,10 @@ export async function song_image_drawn_attempts_known_write() {
     "the folder is the truth about what has been drawn, and this is a copy of it for the one reader that cannot count files: the picker runs in a browser, and every part of it decides what to draw in a single pass with nothing to wait for. A page that had to ask the disk mid-render would have to become asynchronous all the way up for a fact that only changes when somebody runs a draw.",
     "it is generated rather than kept by hand for the usual reason - a hand-kept list disagrees with the folder silently, and the disagreement shows up as a picture that will not load rather than as an error",
   ];
-  await function_constant_json_write(f_name, prose, known);
+  await function_constant_json_write(
+    fn_name("song_image_drawn_attempts_known"),
+    prose,
+    known,
+  );
   return known;
 }
