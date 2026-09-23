@@ -31,11 +31,10 @@ export async function permission_settings_allow_assert() {
   ("Each fault is thrown as a record and nothing is printed beside it. Whoever reads a failure next reads it for names and takes every one of them as accused, so the repair command has to sit under the hint that reader drops - and a second block of JSON printed above the complaint is worse than a sentence, because the reading takes everything from the first brace to the last and gets something it cannot parse at all, which leaves the whole of it standing.");
   let grew = equal(verdict, "addition");
   if (grew) {
-    let f_name = fn_name("permission_grant_add");
     let hint = {
       advice: text_combine_multiple([
         "these hold an allow rule the JS list does not account for, so authority grew and no human gave it. A rule is added by naming the function to ",
-        f_name,
+        fn_name("permission_grant_add"),
         ", which asks first - never by editing the settings file or the names list directly.",
       ]),
       departed,
@@ -54,11 +53,10 @@ export async function permission_settings_allow_assert() {
     return b;
   }
   let restorable = list_filter(departed, restorable_is);
-  let f_name4 = fn_name("permission_grants_departed_restore");
   let hint_lost = {
     advice: text_combine_multiple([
       "these hold an allow rule on disk while the JS list no longer names them, and every one of them is still live and still grantable - so this is a lost write rather than a rename, and regenerating would throw away approvals the human already gave. Put them back with ",
-      f_name4,
+      fn_name("permission_grants_departed_restore"),
       ", which restores only names the settings file already carries.",
     ]),
     verdict,
@@ -68,13 +66,12 @@ export async function permission_settings_allow_assert() {
   list_empty_is_assert_json(restorable, {
     hint: hint_lost,
   });
-  let f_name2 = fn_name("permission_settings_allow_write");
   let hint_shrank = {
     advice: text_combine_multiple([
       "authority did not grow - this is a ",
       verdict,
       ", so the standing approvals are simply following their functions. Write the rules out again with ",
-      f_name2,
+      fn_name("permission_settings_allow_write"),
       " and this passes.",
     ]),
     verdict,
