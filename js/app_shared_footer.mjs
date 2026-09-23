@@ -1,4 +1,5 @@
 import { app_shared_footer_box } from "./app_shared_footer_box.mjs";
+import { app_shared_footer_box_row } from "./app_shared_footer_box_row.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_display_flex } from "./html_display_flex.mjs";
 import { html_style_gap_em } from "./html_style_gap_em.mjs";
@@ -16,7 +17,8 @@ export function app_shared_footer(parent) {
   "They share the row equally, whatever their words, for the same reason the arrows of a bible chapter do: buttons dividing only what is left over differ by however much their words differ, which reads as one of them being the important one.";
   "The row is pointed the way the reader reads, so reaching the developer comes first and going to the apps last in that reader's own direction.";
   let footer = app_shared_footer_box(parent);
-  let row = html_div(footer);
+  let inside = app_shared_footer_box_row(footer);
+  let row = html_div(inside);
   html_display_flex(row);
   html_style_gap_em(row, "0.5");
   let rtl = app_shared_rtl_is();
