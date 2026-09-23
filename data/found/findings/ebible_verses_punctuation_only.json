@@ -1,0 +1,51 @@
+{
+ "summary": {
+  "bible_folders": 1528,
+  "walked": 30,
+  "folders_unreadable": [],
+  "folders_with_any": 1,
+  "verses": 7
+ },
+ "measured": [
+  {
+   "bible_folder": "agt",
+   "chapters": 287,
+   "chapters_unreadable": [
+    "copr",
+    "copyright",
+    "index"
+   ],
+   "verses": 7,
+   "found": [
+    {
+     "code": "1CO14:34",
+     "marks": "(-)"
+    },
+    {
+     "code": "ACT15:30",
+     "marks": "(-)"
+    },
+    {
+     "code": "JHN12:37",
+     "marks": "(-)"
+    },
+    {
+     "code": "LUK11:16",
+     "marks": "(-)"
+    },
+    {
+     "code": "LUK16:16",
+     "marks": "(-)"
+    },
+    {
+     "code": "REV18:14",
+     "marks": "(-)"
+    },
+    {
+     "code": "ROM01:7",
+     "marks": "(-)"
+    }
+   ]
+  }
+ ]
+}

@@ -3,7 +3,6 @@ import { catch_null } from "./catch_null.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { app_replace_hash_index_get } from "./app_replace_hash_index_get.mjs";

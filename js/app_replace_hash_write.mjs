@@ -1,6 +1,6 @@
-import { text_url_encode } from "./text_url_encode.mjs";
-import { property_list_get } from "./property_list_get.mjs";
-import { app_replace_goal_hash_id } from "./app_replace_goal_hash_id.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_replace_goal_hash_ids } from "./app_replace_goal_hash_ids.mjs";
+import { list_get } from "./list_get.mjs";
 import { app_replace_rule_set_get } from "./app_replace_rule_set_get.mjs";
 import { app_replace_rule_set_hash_id } from "./app_replace_rule_set_hash_id.mjs";
 import { app_shared_hash_screen_add } from "./app_shared_hash_screen_add.mjs";
@@ -18,7 +18,7 @@ export function app_replace_hash_write(context) {
   "keep the address in step with where the learner is - the screen, and the rule set and goal it shows - so the link is shareable and reopens on the same exercise; runs after every draw";
   "The address is read first and only these words are rewritten, so a word something else put there - how fast the replacing runs - survives.";
   "A number is written only on a screen that reads it, the same as the code app leaves its review off every other screen: a rule set left in a link copied from home would quietly send whoever opened it somewhere the sender never was.";
-  "A rule set is written as its word, so a rule set put in earlier in the list later on does not send saved links elsewhere; a goal has no name, so it is written as a short code made from what it asks, and a goal put in between others later on does not send saved links elsewhere either.";
+  "A rule set is written as its word, so a rule set put in earlier in the list later on does not send saved links elsewhere; a goal has no name, so it is written as a short spelling of what it asks, made against the other goals of its set and never needing escapes, and a goal put in between others later on does not send saved links elsewhere either.";
   let hash = html_hash_object_get();
   let key = app_replace_rule_set_hash_key();
   let key2 = app_replace_goal_hash_key();
@@ -36,9 +36,9 @@ export function app_replace_hash_write(context) {
   if (on_rule_set) {
     let goal_index = storage_session_get_context(context, "goal_index");
     let rule_set2 = app_replace_rule_set_get(context);
-    let goal = property_list_get(rule_set2, "goals", goal_index);
-    let word = app_replace_goal_hash_id(goal);
-    let goal_id = text_url_encode(word);
+    let goals = property_get(rule_set2, "goals");
+    let ids = app_replace_goal_hash_ids(goals);
+    let goal_id = list_get(ids, goal_index);
     property_set(hash, key2, goal_id);
   }
   html_hash_set_object(hash);
