@@ -39,10 +39,9 @@ export function ebible_bible_folder_changes(bible_folder) {
     "The publisher did not make these changes and does not necessarily endorse them.",
     "The original Work by its copyright holders is available for free at www.biblica.com and open.bible.",
   ]);
-  let f_name = fn_name("urdu_glued_words_decided_two");
   let url = text_combine_multiple([
     "https://github.com/Jared-Grace/love/blob/main/js/",
-    f_name,
+    fn_name("urdu_glued_words_decided_two"),
     ".mjs",
   ]);
   let r = {
