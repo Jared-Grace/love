@@ -24,20 +24,18 @@ export async function storage_local_key_names_rename_report(
     f_name_after,
   ]);
   console.log(told);
-  let f_name = fn_name("function_rename");
   let combined = text_combine_multiple([
     "  to undo    node scripts/ai.mjs ",
-    f_name,
+    fn_name("function_rename"),
     " ",
     f_name_after,
     " ",
     f_name_before,
   ]);
   console.log(combined);
-  let f_name2 = fn_name("storage_local_key_names_write");
   let combined2 = text_combine_multiple([
     "  if meant   node scripts/ai.mjs ",
-    f_name2,
+    fn_name("storage_local_key_names_write"),
   ]);
   console.log(combined2);
 }
