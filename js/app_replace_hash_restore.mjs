@@ -1,9 +1,9 @@
+import { app_replace_hash_rule_set_index_get } from "./app_replace_hash_rule_set_index_get.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { app_shared_hash_screen_get } from "./app_shared_hash_screen_get.mjs";
 import { not } from "./not.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { app_replace_rule_sets } from "./app_replace_rule_sets.mjs";
-import { app_replace_rule_set_hash_key } from "./app_replace_rule_set_hash_key.mjs";
 import { app_replace_hash_index_get } from "./app_replace_hash_index_get.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { storage_session_set_context } from "./storage_session_set_context.mjs";
@@ -23,8 +23,8 @@ export function app_replace_hash_restore(context) {
   if (rule_set_said) {
     storage_session_set_context(context, "rule_set_index", rule_set_index);
     let goals = list_get_property(rule_sets, rule_set_index, "goals");
-    let key2 = app_replace_goal_hash_key();
-    let goal_index = app_replace_hash_index_get(hash, key2, goals);
+    let key = app_replace_goal_hash_key();
+    let goal_index = app_replace_hash_index_get(hash, key, goals);
     goal_said = null_not_is(goal_index);
     if (goal_said) {
       storage_session_set_context(context, "goal_index", goal_index);
