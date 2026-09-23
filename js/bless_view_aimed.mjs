@@ -1,19 +1,18 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_view_people } from "./bless_view_people.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { not } from "./not.mjs";
 import { bless_person_blessed_is } from "./bless_person_blessed_is.mjs";
+import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { bless_view_of_people } from "./bless_view_of_people.mjs";
-export function bless_view_aimed(blessed, started, discerned) {
-  arguments_assert(arguments, 3);
-  ("Who the arrows point at: the house that should be finished next, or - when there is no");
-  ("such house - whoever the last prayer for discernment named.");
-  ("The two answers never compete. Somebody left in a house the player has opened is always");
-  ("the better place to pray, because that house is on its way to earning a rung and a");
-  ("stranger is not, so the discerned person is only ever shown when there is nothing to");
-  ("finish. That is also the only moment the player has any reason to ask: the street has");
-  ("gone quiet, every house they opened is closed, and nothing on the map says where to go.");
+export function bless_view_aimed(blessed, discerned) {
+  arguments_assert(arguments, 2);
+  ("Who the arrows point at: whoever the last prayer for discernment named, and nobody");
+  ("else.");
+  ("The game does not point on its own. It used to aim at the rest of any house the player");
+  ("had opened, so after one prayer an arrow was already telling them who was next - and");
+  ("the question the discernment prayer exists to ask had been answered before anybody");
+  ("asked it. The ring on the ground still says a house was started; only the pointing is");
+  ("reserved for the answer to a prayer.");
   ("A discerned person who has since been prayed for is dropped. The answer is remembered");
   ("until the next one is asked for, and it easily outlives its own usefulness - the player");
   ("may walk to somebody else first, or a prayer over a block may cover the discerned");
@@ -24,11 +23,6 @@ export function bless_view_aimed(blessed, started, discerned) {
   ("prayer instead, every path that can bless somebody - by name, by house, by block, from");
   ("a dev opening - would have to remember to look, and the one that forgot would leave a");
   ("stale arrow up with nothing red.");
-  let people = bless_view_people(started);
-  let none = list_empty_is(people);
-  if (not(none)) {
-    return started;
-  }
   let named = bless_view_people(discerned);
   function person_left_is(person) {
     let prayed = bless_person_blessed_is(blessed, person);
