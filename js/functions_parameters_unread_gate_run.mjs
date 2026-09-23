@@ -10,14 +10,13 @@ export async function functions_parameters_unread_gate_run() {
   let fields = ["unread"];
   let hint =
     "nothing reads these parameters - either the body was meant to use them and does not, which is the bug, or they should come off the declaration and off every call site";
-  let name_write = fn_name("functions_parameters_unread_baseline_write");
   let result = await baseline_entries_gate_generic(
     offenders,
     path,
     fields,
     parameters_unread_entries_print,
     hint,
-    name_write,
+    fn_name("functions_parameters_unread_baseline_write"),
   );
   return result;
 }
