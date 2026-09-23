@@ -53,8 +53,7 @@ export async function functions_name_references_mixed() {
     function each_call(v) {
       let callee = property_path_get_2(v, "node", "callee");
       let callee_name = property_get_or_null(callee, "name");
-      let right = fn_name("fn_name");
-      let is_marker = equal(callee_name, right);
+      let is_marker = equal(callee_name, fn_name("fn_name"));
       if (not(is_marker)) {
         return;
       }
