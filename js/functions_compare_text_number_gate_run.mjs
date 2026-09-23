@@ -17,10 +17,9 @@ export async function functions_compare_text_number_gate_run() {
   let walked = property_get(read, "walked");
   let offenders = property_get(read, "offenders");
   let names = list_map_property(offenders, "f_name");
-  let f_name = fn_name("text_from_number");
   let advice = text_combine_multiple([
     "these compare writing taken out of a file with a number, which is never true - write the number out once with ",
-    f_name,
+    fn_name("text_from_number"),
     " before the comparison, or make a number of the writing if the writing is what varies",
   ]);
   let hint = {
