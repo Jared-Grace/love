@@ -22,13 +22,12 @@ export function hash_reading_names_word_gate_run() {
       list_add(silent, name);
     }
   }
-  let f_name = fn_name("hash_function_names");
   list_empty_is_assert_json(silent, {
     hint: text_combine_multiple([
       "a way of reaching the address of a page is named without the word ",
       word,
       " in it, so ",
-      f_name,
+      fn_name("hash_function_names"),
       " would never open the files that use it and every reading of published address words would go quiet - either name it so it says the word, or stop narrowing by a word and derive the files from these names",
     ]),
     word,
