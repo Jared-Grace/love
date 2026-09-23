@@ -19,8 +19,7 @@ export async function qa_gate_throws_own_is(f_name) {
     if (equal(called, null)) {
       continue;
     }
-    let right = fn_name("arguments_assert");
-    let head_line = equal(called, right);
+    let head_line = equal(called, fn_name("arguments_assert"));
     if (head_line) {
       continue;
     }
