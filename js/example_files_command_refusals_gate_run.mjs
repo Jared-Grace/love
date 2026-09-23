@@ -14,7 +14,11 @@ export async function example_files_command_refusals_gate_run() {
   let hint = example_files_command_refusals_hint(
     "this command is run by the corpus with no example proving it refuses anything, so a guard that lives in the command rather than in its twin would go unnoticed - see ",
   );
-  let f_name = fn_name("example_files_command_refusals_baseline_write");
-  let r = await baseline_names_gate_generic(offenders, path, hint, f_name);
+  let r = await baseline_names_gate_generic(
+    offenders,
+    path,
+    hint,
+    fn_name("example_files_command_refusals_baseline_write"),
+  );
   return r;
 }
