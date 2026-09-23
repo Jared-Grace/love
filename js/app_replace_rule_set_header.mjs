@@ -1,6 +1,6 @@
+import { text_combine_space_between } from "./text_combine_space_between.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { emoji_question } from "./emoji_question.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_replace_rule_set_attribute_hint } from "./app_replace_rule_set_attribute_hint.mjs";
 import { html_data_set_test } from "./html_data_set_test.mjs";
@@ -19,7 +19,7 @@ export function app_replace_rule_set_header(
 ) {
   arguments_assert(arguments, 5);
   let left = emoji_question();
-  let hint_text = text_combine(left, "Hint");
+  let hint_text = text_combine_space_between(left, "Hint");
   let hint_button = app_shared_button(root, hint_text, on_hint);
   let value = app_replace_rule_set_attribute_hint();
   html_data_set_test(hint_button, value);

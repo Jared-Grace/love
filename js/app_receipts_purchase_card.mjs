@@ -5,11 +5,13 @@ import { app_receipts_purchase_save } from "./app_receipts_purchase_save.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_date_time_edit } from "./app_shared_date_time_edit.mjs";
 import { html_div } from "./html_div.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { html_element } from "./html_element.mjs";
-import { html_style_max_width } from "./html_style_max_width.mjs";
+import { app_shared_photo_screen } from "./app_shared_photo_screen.mjs";
+import { html_on_click } from "./html_on_click.mjs";
 import { html_media_source_file_set } from "./html_media_source_file_set.mjs";
-import { property_exists } from "./property_exists.mjs";
 import { html_src_set } from "./html_src_set.mjs";
+import { property_exists } from "./property_exists.mjs";
 import { app_receipts_purchase_photo_add } from "./app_receipts_purchase_photo_add.mjs";
 import { app_shared_button_wide_camera } from "./app_shared_button_wide_camera.mjs";
 import { emoji_camera } from "./emoji_camera.mjs";
@@ -30,24 +32,42 @@ export function app_receipts_purchase_card(parent, purchase, on_saved) {
   let date = property_get(purchase, "date");
   let time = property_get(purchase, "time");
   app_shared_date_time_edit(card, date, time, on_when);
+  ("Photos are small squares side by side, cropped to fill the square; pressing one opens it whole on a screen of its own.");
   let pictures = html_div(card);
-  function picture_add() {
+  html_style_set(pictures, "display", "flex");
+  html_style_set(pictures, "flex-wrap", "wrap");
+  html_style_set(pictures, "gap", "0.5em");
+  function thumbnail_add(picture_set) {
     let picture = html_element(pictures, "img");
-    html_style_max_width(picture, "100%");
-    return picture;
+    html_style_set(picture, "width", "6em");
+    html_style_set(picture, "height", "6em");
+    html_style_set(picture, "object-fit", "cover");
+    html_style_set(picture, "border-radius", "0.3em");
+    picture_set(picture);
+    function on_open() {
+      app_shared_photo_screen(picture_set);
+    }
+    html_on_click(picture, on_open);
   }
   function file_show(file) {
-    let picture = picture_add();
-    html_media_source_file_set(picture, file);
+    function picture_set(picture) {
+      html_media_source_file_set(picture, file);
+    }
+    thumbnail_add(picture_set);
+  }
+  function url_show(src) {
+    function picture_set(picture) {
+      html_src_set(picture, src);
+    }
+    thumbnail_add(picture_set);
   }
   for (let photo of property_get(purchase, "photos")) {
     if (property_exists(photo, "file")) {
       let value = property_get(photo, "file");
       file_show(value);
     } else {
-      let picture = picture_add();
       let src = property_get(photo, "url");
-      html_src_set(picture, src);
+      url_show(src);
     }
   }
   async function on_photo(file) {

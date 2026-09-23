@@ -5,6 +5,10 @@ import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { bless_view_of_people } from "./bless_view_of_people.mjs";
+import { bless_view_family_started } from "./bless_view_family_started.mjs";
+import { bless_view_finish_first } from "./bless_view_finish_first.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { list_random_item } from "./list_random_item.mjs";
 import { bless_person_place } from "./bless_person_place.mjs";
 import { bless_place_members } from "./bless_place_members.mjs";
 import { bless_place_done_is } from "./bless_place_done_is.mjs";
@@ -12,16 +16,13 @@ import { list_filter_size } from "./list_filter_size.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_min } from "./list_min.mjs";
 import { equal } from "./equal.mjs";
-import { list_random_item } from "./list_random_item.mjs";
 export function bless_view_discerned(blessed, everyone) {
   arguments_assert(arguments, 2);
   ("One person on the street who has not been prayed for - the answer to the prayer asking");
   ("God who to go to next.");
-  ("It is the one question this game refuses to answer for free. Who is left in a house the");
-  ("player has already opened is pointed at, because finding the FIRST person in a house is");
-  ("meant to be the discovery and the rest are meant to be aimed at. So a player who has");
-  ("finished everything they started has no arrow anywhere and no way to be told where to");
-  ("begin again except by walking until somebody dark walks past.");
+  ("It is the one question this game refuses to answer for free. Nothing on the street");
+  ("points at anybody until this prayer has been said, so without it a player has no way to");
+  ("be told where to go except by walking until somebody dark walks past.");
   ("Praying is how they find out, which is the whole reason it may be answered here at all.");
   ("The player does not pick who is next and neither does the game hand it over for");
   ("nothing: they ask, and the answer comes. That is the day walk of the gospel game acted");
@@ -35,12 +36,14 @@ export function bless_view_discerned(blessed, everyone) {
   ("Fewest families left, counted over the whole building. A building with two of its three");
   ("families finished is one household from earning a rung and a fresh one is three, so being");
   ("sent to the near one is strictly the shorter way to the same place.");
-  ("This is not a second opinion about the question the ARROW answers, which was the reason");
-  ("for drawing over everybody before. The arrow only ever looks at houses the player has");
-  ("already STARTED, and this prayer is asked exactly when there are none of those left. A");
-  ("building at two families of three with nobody half prayed for in the third is invisible to");
-  ("the arrow and is the closest thing on the street to being done - so this fills the gap the");
-  ("arrow leaves rather than repeating what it says.");
+  ("A HOUSE ALREADY STARTED COMES FIRST. While any family the player has prayed into still");
+  ("has somebody left, the answer is one of them - from the house nearest finishing - so the");
+  ("prayers after the first one lead up to the first family being finished, and the first");
+  ("rung is earned by asking rather than stumbled on. The street no longer points at the rest");
+  ("of a house by itself, so this prayer is now the only thing that does.");
+  ("A building at two families of three with nobody half prayed for in the third is the");
+  ("closest thing on the street to being done once no house is half finished, which is what");
+  ("the building count below is for.");
   ("A player reported the miss: the prayer sent them to one building, then to another, while");
   ("a building behind them sat one family from finished. Answered that way it opens buildings");
   ("faster than it closes them and the rung above stays out of reach - which is the same");
@@ -74,6 +77,15 @@ export function bless_view_discerned(blessed, everyone) {
   if (none) {
     let empty = bless_view_of_people(left);
     return empty;
+  }
+  let started = bless_view_family_started(blessed, everyone);
+  let house = bless_view_finish_first(blessed, started);
+  let house_people = bless_view_people(house);
+  let house_any = list_empty_not_is(house_people);
+  if (house_any) {
+    let member = list_random_item(house_people);
+    let view_member = bless_view_of_people([member]);
+    return view_member;
   }
   function person_score(person) {
     let building = bless_person_place(person, "building");
