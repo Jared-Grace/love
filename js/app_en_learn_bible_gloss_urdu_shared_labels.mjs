@@ -17,6 +17,9 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
   "The helping verbs joined last and are the largest single family on the list: forty two wordings, and the store was carrying more than two thousand five hundred entries under them. One wording the verbs needed was already on the list, licensed earlier for a different family, which is a good sign rather than a wasted step: a bare pointer says the same nothing whatever kind of word it stands over. The scale is the point rather than a boast about it. ‘will’ alone had thirteen different sentences written for it in thirteen different places, ‘is’ had eight, and no two of them were wrong - each was a true sentence saying the same true thing in different words. What was wrong was that a reader meeting ‘will’ in one chapter and again in the next met two strangers, and had no way to know they had already been told this.";
   "Three of the verb wordings are refused, and the three are worth naming because they are the same three kinds the rest of this note already names, met again in a new family. ‘A helping verb: is’ settles that this occurrence of ‘is’ is helping another verb rather than standing on its own as the whole of the verb, which is a job-in-this-verse claim and is the kind refused above. ‘be, present, singular, third person’ carries a grammatical case the settled wording does not carry, which is the kind refused for ‘it’. ‘A verb, and this form gives a command’ is about the line it stands in and could not be written from the word alone, which is the kind refused for the preposition Urdu did not write.";
   "The doubled-l wording is worth one line on its own, because it shows the test working in the direction nobody expects. ‘Future helper. ll is doubled.’ failed when it was first read, since the settled wording for ‘will’ said nothing about spelling. The wording was not waived through and the label was not dropped; the settled wording was given the clause, because a beginner copying the word out by hand does need telling that the l is written twice. A label that fails the test is a question about the settled wording as often as it is a verdict on the label.";
+  "The eleven longest wordings on the list were found by asking the opposite question and are worth a paragraph for that reason. Everything above was found by looking for wordings too SHORT to be saying anything, which is the shape a useless wording usually has. Sorting the store by how many entries a wording carries and reading down past the short ones turns up a second kind entirely: a whole sentence, in good Urdu, saying a true and general thing, carried by a thousand entries. ‘It is one person's proper name and is written with a capital letter’ stands over nine hundred entries and a hundred and sixty eight different names, and it is a worse failure than ‘proper noun’ rather than a better one, because a reader has no reason to doubt it. Length is not the test and never was; the test is whether the reader learns the word in front of them.";
+  "Three of that second batch are refused and the reasons are already named above, met in longer sentences. ‘It shows possession and it belongs to more than one’ stands over ‘their’, ‘our’ and ‘your’, and the settled wording for ‘your’ says the thing belongs to the one being spoken to, which is not more than one - one word out of three, so a refusal. ‘A verb, but it does not carry the work alone: with the next verb it says the work is already done’ stands over ‘have’, ‘has’ and ‘had’, and the settled wording for ‘have’ says it helps other verbs without saying it makes a completed time, so the one thing the label adds is the one thing that would go. The same sentence ending in ‘makes the time to come’ over ‘will’ and ‘shall’ IS admitted, because those two words never do anything else and both settled wordings say so.";
+  "A wording that gives the reason for a capital letter is refused wherever the reason is where the line happens to fall. ‘The first letter is capital because the verse starts here’ stands over ‘And’, ‘But’ and ‘When’, and it is true where it stands and could not be written from the word alone. The capital wordings that ARE admitted say the opposite kind of thing - a name takes a capital wherever it stands, ‘I’ takes one in the middle of a sentence too - and a reader carries those away.";
   let labels = [
     "معرفہ حرفِ تعریف۔",
     "نکرہ حرفِ تعریف۔",
@@ -145,6 +148,17 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
     "فعل ہے، مگر یہاں یہ اگلے فعل سے پہلے آ کر آنے والا وقت بتاتا ہے۔",
     "یہ لفظ آنے والے وقت کی طرف اشارہ کرتا ہے۔",
     "فعل۔",
+    "ایک شخص کا خاص نام ہے اَور بڑے حرف سے لکھا جاتا ہے۔",
+    "یہ ایک شخص کا نام ہے، اِس لیٔے پہلا حرف بڑا ہے۔",
+    "ایک شہر کا خاص نام ہے اَور بڑے حرف سے لکھا جاتا ہے۔",
+    "ضمیر ہے اَور بولنے والے کے لیٔے آتا ہے۔ یہ لفظ ہمیشہ بڑے حرف سے لکھا جاتا ہے۔",
+    "ضمیر ہے اَور جِس سے بات ہو رہی ہو، اُس کے لیٔے آتا ہے۔",
+    "ضمیر ہے اَور جِن سے بات ہو رہی ہو، اُن کے لیٔے آتا ہے۔",
+    "ضمیر ہے اَور کِسی چیز کے لیٔے آتا ہے۔",
+    "فعل ہے، مگر یہ اکیلا کام نہیں بتاتا: اگلے فعل کے ساتھ مِل کر آنے والا زمانہ بناتا ہے۔",
+    "دو باتوں کو جوڑنے والا لفظ، بالکل اُردو کے 'اَور' کی طرح۔",
+    "یہ لفظ اِسم سے پہلے آ کر بتاتا ہے کہ ایک خاص چیز مُراد ہے۔",
+    "وُہی حرفِ تعریف ہے جو کِسی ایک اَن جانی چیز کے لیٔے آتا ہے۔",
   ];
   return labels;
 }
