@@ -15,8 +15,7 @@ export async function ebible_version_books_browser_or_node(bible_folder) {
     let here = await ebible_version_books_browser(bible_folder);
     return here;
   }
-  let f_name = fn_name("ebible_version_books");
-  let fn = await function_import_relative(f_name);
+  let fn = await function_import_relative(fn_name("ebible_version_books"));
   let there = await fn(bible_folder);
   return there;
 }
