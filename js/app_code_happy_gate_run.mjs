@@ -32,8 +32,7 @@ export async function app_code_happy_gate_run() {
   let failed = await catch_error_text_or_null_async(served);
   let broken = null_not_is(failed);
   if (broken) {
-    let app = fn_name("app_code");
-    list_empty_is_assert_json([app], {
+    list_empty_is_assert_json([fn_name("app_code")], {
       hint: "the code course cannot be walked to its end in the copy this commit carries, so the code app is held out of a deployment and nothing else is - what the walk ran into is under walk here",
       walk: failed,
     });
