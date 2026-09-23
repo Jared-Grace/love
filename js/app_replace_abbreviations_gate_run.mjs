@@ -8,12 +8,11 @@ export async function app_replace_abbreviations_gate_run() {
   "Measured against what the app already carried rather than against zero, because clearing one is not mechanical: some want an explanation written, some want a set to take in the explanations of the rules it borrowed, and one pair reads as a symbol renamed with its explanation left behind under the old spelling. Each is somebody's judgement. So the record only shrinks.";
   let offenders = app_replace_abbreviations_mismatches();
   let path = app_replace_abbreviations_baseline_path();
-  let name_write = fn_name("app_replace_abbreviations_baseline_write");
   let r = await baseline_names_gate_generic(
     offenders,
     path,
     "a symbol and its explanation stopped answering to each other - explain the symbol the rules rewrite, or take away the explanation no rule spells",
-    name_write,
+    fn_name("app_replace_abbreviations_baseline_write"),
   );
   return r;
 }
