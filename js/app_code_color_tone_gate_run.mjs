@@ -23,12 +23,11 @@ export async function app_code_color_tone_gate_run() {
   }
   let faults = app_code_color_tone_faults();
   let path = app_code_color_tone_baseline_path();
-  let name_write = fn_name("app_code_color_tone_baseline_write");
   let told = await baseline_names_gate_generic(
     faults,
     path,
     "the hues this app draws are not held at one dark colour and one light one the way they were - read what arrived against what went away, and bank it only once the change is the one that was wanted",
-    name_write,
+    fn_name("app_code_color_tone_baseline_write"),
   );
   let added = property_get(told, "added");
   let stale = property_get(told, "stale");
