@@ -63,14 +63,11 @@ export async function example_new_from_temp(
     ",",
     name_after,
   ]);
-  let f_name = fn_name("examples_groups");
-  let select_fn_name = fn_name("js_find_object_containing_text");
-  let apply_fn_name = fn_name("js_object_property_text_add_after");
   await function_select_apply_args_auto(
-    f_name,
-    select_fn_name,
+    fn_name("examples_groups"),
+    fn_name("js_find_object_containing_text"),
     group_name,
-    apply_fn_name,
+    fn_name("js_object_property_text_add_after"),
     apply_args,
   );
   await scripts_temp_delete(file_name);
