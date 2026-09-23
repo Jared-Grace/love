@@ -20,8 +20,7 @@ export async function text_to_speech(args) {
   async function lambda(temp_path) {
     let contents = json_to(args);
     await file_write(temp_path, contents);
-    let script_name = fn_name("text_to_speech");
-    let v = py_script_run_speech_cmd(script_name);
+    let v = py_script_run_speech_cmd(fn_name("text_to_speech"));
     let c = text_combine_multiple([v, " ", temp_path]);
     let ran = await command_line(c);
     let printed = property_get(ran, "stdout");
