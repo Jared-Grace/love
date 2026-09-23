@@ -26,8 +26,7 @@ export async function ebible_index_flat(bible_folder) {
     return value;
   }
   ("★ THE OTHER HALF IS ASKED FOR BY NAME RATHER THAN IMPORTED. Branching here stops a page WALKING the road that reads a whole bible off a disk; it does nothing about the page CARRYING it, because a bundler follows a plain import whether the branch runs or not. Named and fetched at the moment it is wanted, the fetching, the unzipping and the chapter-by-chapter reading are not in the page at all.");
-  let f_name = fn_name("ebible_index_flat_node");
-  let fn = await function_import_relative(f_name);
+  let fn = await function_import_relative(fn_name("ebible_index_flat_node"));
   let list = await fn(bible_folder);
   return list;
 }
