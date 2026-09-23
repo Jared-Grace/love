@@ -25,7 +25,7 @@ export function app_index_dev_links() {
     {
       app_fn: fn_name("app_g_bible"),
       hash_name: "",
-      label: "g_bible",
+      label: "g Bible",
       text: "App for me",
     },
   ];
