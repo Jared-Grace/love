@@ -7,7 +7,6 @@ import { list_filter_text_includes_not } from "./list_filter_text_includes_not.m
 import { ebible_versions_english_choices_browser } from "./ebible_versions_english_choices_browser.mjs";
 import { app_shared_bible_languages_chosen_default } from "./app_shared_bible_languages_chosen_default.mjs";
 import { app_reply_languages_chosen_reset } from "./app_reply_languages_chosen_reset.mjs";
-import { app_reply_languages_prompt } from "./app_reply_languages_prompt.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_reply_initialize } from "./app_reply_initialize.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
@@ -35,7 +34,6 @@ export async function app_reply(context) {
   };
   typed_reset();
   let card = app_shared_container_blue(root);
-  app_reply_languages_prompt(card);
   function languages_chosen_reset() {
     let languages_chosen2 = property_get(
       languages_chosen_held,
