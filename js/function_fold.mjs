@@ -7,13 +7,10 @@ import { js_imports_fix } from "./js_imports_fix.mjs";
 import { js_imports_verify_assert } from "./js_imports_verify_assert.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 export async function function_fold(x_name, f_name) {
-  let f_name2 = fn_name("js_fold_all");
-  `Brick 5b: the CLI wrapper over ${f_name2}. Read pure fn x's AST (read-only), then transform F in`;
+  `Brick 5b: the CLI wrapper over ${fn_name("js_fold_all")}. Read pure fn x's AST (read-only), then transform F in`;
   ("place — fold EVERY contiguous occurrence of x's body inside F into a call to x. When no sound fold");
-  let f_name3 = fn_name("js_fold_all");
-  `applies ${f_name3} mutates nothing (returns null) and F is written back unchanged.`;
-  let f_name4 = fn_name("function_fold");
-  `Run: \`node scripts/r.mjs ${f_name4} <x_name> <f_name>\`. Both should already be atomized (the`;
+  `applies ${fn_name("js_fold_all")} mutates nothing (returns null) and F is written back unchanged.`;
+  `Run: \`node scripts/r.mjs ${fn_name("function_fold")} <x_name> <f_name>\`. Both should already be atomized (the`;
   ("`ao` keeps repo files atomized); the match is on the atomized dataflow DAG.");
   arguments_assert(arguments, 2);
   let x_ast = await function_ast(x_name);
