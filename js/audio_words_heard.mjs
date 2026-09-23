@@ -15,8 +15,10 @@ export async function audio_words_heard(path_audio, model) {
     audio: path_audio,
     model: model,
   };
-  let script_name = fn_name("audio_words_heard");
-  let reported = await py_script_speech_json_report(script_name, args);
+  let reported = await py_script_speech_json_report(
+    fn_name("audio_words_heard"),
+    args,
+  );
   if (equal(reported, null)) {
     return null;
   }
