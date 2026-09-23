@@ -40,14 +40,12 @@ export async function permission_rules_other_domain_add(domain) {
     let selects = [node];
     js_array_text_add_after(ast, selects, rule, last);
   }
-  let f_name = fn_name("permission_rules_other");
-  await function_transform_auto(f_name, lambda);
-  let f_name2 = fn_name("permission_settings_allow_write");
+  await function_transform_auto(fn_name("permission_rules_other"), lambda);
   let r = {
     rule,
     added: true,
     after: last,
-    write_with: f_name2,
+    write_with: fn_name("permission_settings_allow_write"),
     held_already: null,
   };
   return r;
