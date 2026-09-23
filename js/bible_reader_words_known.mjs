@@ -10,10 +10,12 @@ export async function bible_reader_words_known(words) {
   "The words arrive as one comma-joined word, as every list does on a command line, and are split here rather than at the far end, where a word handed over whole is read letter by letter and quietly matches nothing.";
   arguments_assert(arguments, 1);
   let asked = text_split_comma_or_empty(words);
-  let script_name = fn_name("bible_reader_words_known");
   let args = {
     words: asked,
   };
-  let reported = await py_script_speech_json_report(script_name, args);
+  let reported = await py_script_speech_json_report(
+    fn_name("bible_reader_words_known"),
+    args,
+  );
   return reported;
 }
