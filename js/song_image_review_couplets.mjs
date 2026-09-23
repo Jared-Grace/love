@@ -20,40 +20,28 @@ export function song_image_review_couplets() {
   "NOTES LEFT OPEN ON A COUPLET THAT HAS COME OFF THE BENCH ARE NOW REPORTED RATHER THAN LOST. Closing a round hands back the strays alongside what it closed, and it does not close them - marking them answered would clear the count and destroy the only record that nobody ever replied. Twenty-one across couplets 9, 14, 25, 32 and 33 were found that way. Answer them and put those couplets back here.";
   let couplets = [
     {
-      n: 7,
-      note: "Fixed, and here is what did it. The shared sheet already said the field's lead lines stop where they meet the symbol, but it sat third in a long clause. I moved it to the front of that clause - no new words anywhere - and the next draw stopped the violet/red line dead at each cross. Still wrong: the tall cross no longer runs up into the head of the arch, its top now sits below the upper line.",
+      n: 6,
+      note: "Yes - you are on 34 now. It is an edit of 33 that only lightened the wood to a pale tan, so the cross stands clear of the red glass. The wood grain went with it, which the style asks for anyway.",
     },
     {
-      n: 15,
-      note: "Done - you are on 44 now. I swapped the wording rather than adding to it: half sheathed became mostly sheathed, two thirds became three quarters, and the flame moved from the upper third of the window to the upper quarter. 44 has only the tip of the blade standing clear of the sheath's mouth. The cost is that its field runs to three colours instead of two.",
-    },
-    {
-      n: 24,
-      note: "Reverted - you are back on 285. 291 was my own edit and you are right that it flattened the rock and killed the transparency, so it is off. 285 has the photographic rock, the near-black sky, and coloured beams you can see the rock through. Still wrong: the white beam is opaque, and white is the one colour the editor will not repaint, now six refusals deep.",
-    },
-    {
-      n: 26,
-      note: "Both changed in the wording, neither drawn yet. The beams now ask to stay light and airy the whole way down instead of deepening to full strength at the foot, and the cloud's five or six round lobes became billows broad and low and flat along their tops. Then the drawing service ran out of credits, so 104 is the old picture. Top it up and this redraws first.",
-    },
-    {
-      n: 9,
-      note: "No - I tried it on 15 and the editor cannot do it. Asked to break the lines at the shaft it repainted the entire background into coloured scales instead, which is the sixth time it has failed to remove a thing rather than recolour one. Removing needs a fresh draw, and the drawing service ran out of credits mid-batch. You are still on 16 until it is topped up.",
-    },
-    {
-      n: 14,
-      note: "Five of your six are done. The background is not white, it is emerald green - the wording always asked for green precisely so it would contrast with the veil's four colours, and the older drawing had disobeyed that. It is torn, and it carries all four colours. Still wrong: the field lines cross the veil, and the gap between the halves shows red rather than green.",
-    },
-    {
-      n: 25,
-      note: "Nothing is wrong with 115, and I should have said so long ago rather than leaving you waiting. It is already the thing you proposed - all gold, told apart by shape and by different coloured jewels. There are no flowers or plants in it either. I have changed nothing, because all three of your notes were questions the picture already answered.",
+      n: 28,
+      note: "No, it does not need to be white. White was only there because the real colour, brass, is too close to gold, and gold is kept for the word of GOD. Bright yellow is allowed where a couplet asks for it, so it now asks for that. You are on 6: a plain yellow trumpet with no valves.",
     },
     {
       n: 32,
-      note: "Yes, and Scripture is with you - Ezekiel 47:7 has very many trees on the one side and the other, and Revelation 22 is drawn from it. So it is now three trees in a row along each bank, six in all, still twelve leaves between them. I also made the river taper and stopped the branches reaching over the water, which is what was hiding it. Not drawn yet: the service ran out of credits.",
+      note: "Yes - you are on 26. The river now swings side to side and narrows as it climbs to the top of the window. Still wrong: it drew ten small trees instead of six.",
     },
     {
       n: 33,
-      note: "You are right that lines dividing one colour from itself are pointless, so the lower band is now violet and only the band the drop sits in stays green. For the flatness the drop's own glass now asks for a lighter blue over its face and a deeper blue along its edge. Neither is drawn - the service ran out of credits. 18 is still the old all-green one.",
+      note: "Yes - you are on 20. The drop is now cut into several panes, lightest blue at its heart and deepest at its edge, and the lower band is violet. Still wrong: two field lines run across the drop.",
+    },
+    {
+      n: 34,
+      note: "Both done - you are on 77. The sceptre is grey iron now, as in the rod of iron of Revelation 19:15, and the right-most flame is orange and yellow like the rest. It is an edit of 74, so nothing else moved; the wording no longer asks for white flames.",
+    },
+    {
+      n: 35,
+      note: "Yes - you are on 9, a fresh drawing. The fire is red at its edge, then orange, then yellow at the heart, and the leaves stay green. Two edits of the old picture were tried first; one turned the leaves yellow and one gave the flames heart shapes.",
     },
   ];
   return couplets;
