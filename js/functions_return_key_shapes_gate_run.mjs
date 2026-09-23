@@ -21,14 +21,13 @@ export async function functions_return_key_shapes_gate_run() {
     fn_name("function_return_key_shapes_agree"),
     " names in each record the keys the other records carry, each holding nothing",
   ]);
-  let name_write = fn_name("functions_return_key_shapes_baseline_write");
   let told = await baseline_entries_gate_generic(
     offenders,
     path,
     fields,
     return_key_shapes_entries_print,
     hint,
-    name_write,
+    fn_name("functions_return_key_shapes_baseline_write"),
   );
   let added = property_get(told, "added");
   let stale = property_get(told, "stale");
