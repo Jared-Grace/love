@@ -16,7 +16,7 @@ import { html_style_max_width } from "./html_style_max_width.mjs";
 import { html_media_source_file_set } from "./html_media_source_file_set.mjs";
 import { app_receipts_upload_path } from "./app_receipts_upload_path.mjs";
 import { app_receipts_unsent_add } from "./app_receipts_unsent_add.mjs";
-export function app_receipts_photo_screen(root, folder_code, on_change) {
+export function app_receipts_purchases_screen(root, folder_code, on_change) {
   "$plain root";
   "$plain folder_code";
   "The screen for adding purchases: each photo is kept on this phone first and then sent, so a purchase added with no internet is not lost and goes up once there is.";

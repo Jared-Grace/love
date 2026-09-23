@@ -9,7 +9,7 @@ import { null_is } from "./null_is.mjs";
 import { app_receipts_folder_code_valid_is } from "./app_receipts_folder_code_valid_is.mjs";
 import { app_receipts_code_screen } from "./app_receipts_code_screen.mjs";
 import { storage_local_name_set } from "./storage_local_name_set.mjs";
-import { app_receipts_photo_screen } from "./app_receipts_photo_screen.mjs";
+import { app_receipts_purchases_screen } from "./app_receipts_purchases_screen.mjs";
 export function app_receipts_main(context) {
   "Opens straight onto the camera when a folder code is already known - from the link first, then from this device - and onto the code box only when none is.";
   "A code in the link wins over the one kept here, because a link sent for one folder must send into that folder; it is then kept, so the next opening needs no link.";
@@ -41,7 +41,7 @@ export function app_receipts_main(context) {
   }
   function on_code(folder_code) {
     storage_local_name_set(app_name, key, folder_code);
-    sync_shown = app_receipts_photo_screen(root, folder_code, on_change);
+    sync_shown = app_receipts_purchases_screen(root, folder_code, on_change);
   }
   function on_change(folder_code) {
     sync_shown = app_receipts_sync;
