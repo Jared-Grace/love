@@ -49,7 +49,7 @@ export function song_image_couplet_glosses() {
         "Described in part. The nails are in John 20:25. That there were three of them is church tradition rather than Scripture, which never counts them; the count is kept because it is what a viewer already reads as this.",
     },
     6: {
-      kept: 33,
+      kept: 34,
       lyric_ref: "1 Corinthians 1:23, Ephesians 1:7, Colossians 1:14",
       lyric_explain:
         "Paul says we preach CHRIST crucified, and that in HIM we have redemption through HIS blood, the forgiveness of sins. The couplet says what the cross was for rather than what happened on it.",
@@ -225,7 +225,7 @@ export function song_image_couplet_glosses() {
         "Described. Couplet 26 draws the glory itself as light breaking outward, which is inherited and in no verse; this draws the giving of it, and for that Revelation names an object twice over. A harp is one shape everybody can name, it belongs to nothing else in this table, and its wood and its white strings are already on the colour list.",
     },
     28: {
-      kept: 3,
+      kept: 6,
       lyric_ref: "Acts 1:11, Matthew 24:31, Psalm 96:13, 2 Timothy 4:1",
       lyric_explain:
         "This same JESUS shall so come in like manner as ye have seen HIM go into heaven. HE cometh to judge the earth, and HE shall judge the quick and the dead at HIS appearing.",
@@ -257,7 +257,7 @@ export function song_image_couplet_glosses() {
         "Described. The fig branch in leaf is the sign CHRIST HIMSELF gives for knowing the time is near, and the leaves are the whole of the sign, so the picture draws the branch and nothing around it.",
     },
     32: {
-      kept: 22,
+      kept: 26,
       lyric_ref: "Revelation 21:4, Revelation 22:1-2",
       lyric_explain:
         "There shall be no more death, neither sorrow, nor crying, neither shall there be any more pain. The leaves of the tree were for the healing of the nations.",
@@ -265,7 +265,7 @@ export function song_image_couplet_glosses() {
         "Described. A pure river of water of life, and on either side of the river was there the tree of life. The trees stand on both banks because the verse puts them on both, which is the detail most pictures of it drop.",
     },
     33: {
-      kept: 18,
+      kept: 20,
       lyric_ref: "Revelation 21:4, Isaiah 25:8, Revelation 7:17",
       lyric_explain:
         "GOD shall wipe away all tears from their eyes. Isaiah had said the same, that the Lord GOD will wipe away tears from off all faces, and Revelation says it twice over.",
@@ -273,7 +273,7 @@ export function song_image_couplet_glosses() {
         "Described as the thing wiped away rather than the wiping. A hand at a face cannot be drawn where no faces are allowed, so the tear itself is drawn, alone and large, which is what the verse is about.",
     },
     34: {
-      kept: 74,
+      kept: 77,
       lyric_ref: "Revelation 11:15, Psalm 45:6, Hebrews 1:8, 1 John 4:8",
       lyric_explain:
         "The kingdoms of this world are become the kingdoms of our Lord, and HE shall reign for ever and ever. Thy throne, O God, is for ever and ever, said of the SON in Hebrews 1:8, and GOD is love.",
@@ -281,7 +281,7 @@ export function song_image_couplet_glosses() {
         "Described. A sceptre of righteousness is the sceptre of thy kingdom, in the same verse as the throne. The throne is drawn empty because the One who sits on it may not be drawn at all.",
     },
     35: {
-      kept: 4,
+      kept: 9,
       lyric_ref: "Exodus 3:14, John 8:58, Exodus 3:2",
       lyric_explain:
         "I AM THAT I AM is the name given at the bush. Before Abraham was, I am is HIS own claim to that name, and it is the claim the whole hymn has been building towards since its title.",
