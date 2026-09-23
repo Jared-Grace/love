@@ -16,7 +16,11 @@ export async function storage_browser_direct_gate_run() {
   let hint = storage_browser_direct_hint(
     "this file speaks straight to a browser store, where no reading that watches a kept word can see it - keep the word through one of the storing functions instead, or, if speaking to the browser is the whole of what this file does, name it to ",
   );
-  let f_name = fn_name("storage_browser_direct_baseline_write");
-  let r = await baseline_names_gate_generic(offenders, path, hint, f_name);
+  let r = await baseline_names_gate_generic(
+    offenders,
+    path,
+    hint,
+    fn_name("storage_browser_direct_baseline_write"),
+  );
   return r;
 }
