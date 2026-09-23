@@ -66,11 +66,10 @@ export async function lyric_video_caption_held_gate_run() {
   list_empty_is_assert_json(over, {
     hint: "a caption stands on the screen while the recording sings words it does not say - read the transcript around the named line, and if a verse is genuinely sung twice, author the repeat into the document and time it from the hearing; never raise the floor to make this green",
   });
-  let f_name = fn_name("lyric_video_caption_unwritten_allowed");
   list_empty_is_assert_json(paid, {
     hint: text_combine_multiple([
       "a song listed as a known offender no longer holds the fault - take its name out of ",
-      f_name,
+      fn_name("lyric_video_caption_unwritten_allowed"),
       " so the list keeps meaning what it says",
     ]),
   });
