@@ -1,3 +1,5 @@
+import { property_list_get } from "./property_list_get.mjs";
+import { app_replace_goal_hash_id } from "./app_replace_goal_hash_id.mjs";
 import { app_replace_rule_set_get } from "./app_replace_rule_set_get.mjs";
 import { app_replace_rule_set_hash_id } from "./app_replace_rule_set_hash_id.mjs";
 import { app_shared_hash_screen_add } from "./app_shared_hash_screen_add.mjs";
