@@ -54,10 +54,8 @@ export async function app_original_bible_word_voice_trial_preview() {
     color: app_shared_color_gray_dark(),
   });
   let list = html_div(root);
-  let f_name = fn_name("bible_word_voice_trial_rows");
-  let sets = await api_read(f_name, []);
-  let f_name2 = fn_name("bible_word_voice_trial_reviews");
-  let reviews = await api_read(f_name2, []);
+  let sets = await api_read(fn_name("bible_word_voice_trial_rows"), []);
+  let reviews = await api_read(fn_name("bible_word_voice_trial_reviews"), []);
   let timers = {};
   function review_of(id) {
     let r2 = {
@@ -114,8 +112,11 @@ export async function app_original_bible_word_voice_trial_preview() {
   async function save(id, saved) {
     let r = review_of(id);
     html_text_set(saved, "saving…");
-    let f_name3 = fn_name("bible_word_voice_trial_review_set");
-    await api_read(f_name3, [id, r.pick, r.note]);
+    await api_read(fn_name("bible_word_voice_trial_review_set"), [
+      id,
+      r.pick,
+      r.note,
+    ]);
     html_text_set(saved, "saved");
   }
   function shown(row) {
