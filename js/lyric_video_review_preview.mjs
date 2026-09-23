@@ -67,8 +67,7 @@ export async function lyric_video_review_preview() {
   }
   async function on_settled() {
     let version = html_value_get(version_input);
-    let f_read = fn_name("lyric_video_bible_document_read");
-    let document = await api_read(f_read, [
+    let document = await api_read(fn_name("lyric_video_bible_document_read"), [
       version,
       chosen.book_code,
       chosen.chapter_number,
