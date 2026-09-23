@@ -2665,6 +2665,7 @@
       "Bash(node scripts/ai.mjs app_en_learn_bible_gloss_urdu_chapters_absent:*)",
       "Bash(node scripts/ai.mjs app_original_bible_gloss_chapters_uploaded:*)",
       "Bash(node scripts/ai.mjs git_objects_tidy_love:*)",
+      "Bash(node scripts/ai.mjs function_temp_write:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -5221,6 +5222,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args app_en_learn_bible_gloss_urdu_chapters_absent:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args app_original_bible_gloss_chapters_uploaded:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args git_objects_tidy_love:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args function_temp_write:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -7776,6 +7778,7 @@
       "Bash(node scripts/aig.mjs app_en_learn_bible_gloss_urdu_chapters_absent:*)",
       "Bash(node scripts/aig.mjs app_original_bible_gloss_chapters_uploaded:*)",
       "Bash(node scripts/aig.mjs git_objects_tidy_love:*)",
+      "Bash(node scripts/aig.mjs function_temp_write:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -10331,7 +10334,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args qa_snapshot_folder_named:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args app_en_learn_bible_gloss_urdu_chapters_absent:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args app_original_bible_gloss_chapters_uploaded:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args git_objects_tidy_love:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args git_objects_tidy_love:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args function_temp_write:*)"
     ],
     "defaultMode": "acceptEdits"
   },

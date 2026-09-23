@@ -1,6 +1,5 @@
 import { fn_name } from "./fn_name.mjs";
 import { app_shared_g_dev_index_hash_name } from "./app_shared_g_dev_index_hash_name.mjs";
-import { hash_pairs_text } from "./hash_pairs_text.mjs";
 export function app_index_dev_links() {
   "The short list of places worth going straight to while something is being worked on - the one place to add a link so it can be reached from a phone without typing an address.";
   "Typing an address on a phone is the slowest thing in the whole loop: a long one takes longer to peck out than the change it was meant to check took to make, and a single wrong character sends you to a blank page that looks exactly like a broken app. A card is one tap and cannot be mistyped.";
@@ -28,14 +27,6 @@ export function app_index_dev_links() {
       hash_name: "",
       label: "Hero game",
       text: "A large town of people walking about. One of them may turn to evil and hunt the others. The hero waits for the cars before crossing, and grows a little taller each time evil is overpowered",
-    },
-    {
-      app_fn: fn_name("app_ceb_bible"),
-      hash_name: hash_pairs_text({
-        c: "PRO31",
-      }),
-      label: "Cebuano Proverbs 31",
-      text: "The first Cebuano chapter with word explanations written by hand rather than generated",
     },
     {
       app_fn: fn_name("app_g_bible"),
