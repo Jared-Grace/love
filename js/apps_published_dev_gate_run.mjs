@@ -18,13 +18,12 @@ export async function apps_published_dev_gate_run() {
   let path = apps_published_dev_baseline_path();
   let hint =
     "these addresses are being served and this repo can no longer build them - give the app a working build, or take the address down";
-  let name_write = fn_name("apps_published_dev_baseline_write");
   let r = await baseline_names_gate_walked_generic(
     walked,
     offenders,
     path,
     hint,
-    name_write,
+    fn_name("apps_published_dev_baseline_write"),
   );
   return r;
 }
