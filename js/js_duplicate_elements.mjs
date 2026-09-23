@@ -42,8 +42,7 @@ export function js_duplicate_elements(ast, size) {
     }
     let names = list_map_property(elements, "name");
     ("A list one of whose places holds the do-nothing name is passed over as well, and that is what tells a register apart from a list standing beside another one. A register never names doing nothing - a thing that is not to be done is simply left out of it - so a list that does name it has one place for each place of something else, and a name written twice there is that one thing wanted at two of those places rather than listed twice. The cycle of stylings handed to a sentence built a piece at a time is the shape: nothing, dark, nothing, green, nothing, green, one for each piece of the sentence.");
-    let doing_nothing = fn_name("noop");
-    let positional = list_includes(names, doing_nothing);
+    let positional = list_includes(names, fn_name("noop"));
     if (positional) {
       continue;
     }
