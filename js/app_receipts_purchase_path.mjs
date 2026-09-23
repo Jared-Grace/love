@@ -5,10 +5,10 @@ export function app_receipts_purchase_path(folder_code, id, name) {
   "$plain id";
   "$plain name";
   "Where one file of one purchase is stored: each purchase is a folder of its own inside the folder the code names, holding its details and its photos.";
-  "It sits under user/uuid because storage already lets anybody write there and nobody read there. A purchase is somebody's spending, so a folder that cannot be read back from a browser is the private one without any change to the rules.";
+  "The folder code is the password. Storage lets whoever knows a code read, list and add to that folder, lets nobody list the codes, and lets nobody delete - so every phone given the code sees the same purchases, and nobody without it can find them.";
   arguments_assert(arguments, 3);
   let path = text_combine_multiple([
-    "user/uuid/receipts/",
+    "receipts/",
     folder_code,
     "/",
     id,
