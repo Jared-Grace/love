@@ -12,8 +12,10 @@ export function functions_call_pairs_atoms_by_key(file_keys) {
   arguments_assert(arguments, 1);
   ("Every function whose whole body is one wired pair, filed under the pair it is - so a row proposing that pair can be told the atom has already been written.");
   ("A function whose whole body IS one of these pairs is the atom the pair is asking for, already written under a name the composed one never guesses: the pair");
-  let f_name2 = fn_name("list_size");
-  (text_combine_multiple([f_name2, " then equal-to-zero is called "]),
+  (text_combine_multiple([
+    fn_name("list_size"),
+    " then equal-to-zero is called ",
+  ]),
     fn_name("list_empty_is"),
     " here.");
   ("Whole body means the file holds one wired pair, that pair's result is what the");
