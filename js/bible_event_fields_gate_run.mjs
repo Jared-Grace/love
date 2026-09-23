@@ -57,11 +57,10 @@ export async function bible_event_fields_gate_run() {
     each(events, each_event);
   }
   each_pair_min(events_lists, f_names, each_gathered);
-  let f_name2 = fn_name("bible_event_fields");
   list_empty_is_assert_json(wrong, {
     hint: text_combine_multiple([
       "a gathered Bible event carries fields the record does not declare, or is missing one it does; the record is deliberately small, so widen it in ",
-      f_name2,
+      fn_name("bible_event_fields"),
       " on purpose or take the extra field back out",
     ]),
     declared,
