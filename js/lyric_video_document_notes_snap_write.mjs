@@ -59,11 +59,10 @@ export async function lyric_video_document_notes_snap_write(path_document) {
   let words = [];
   for (let line of document.lines) {
     if (equal(line.words, undefined)) {
-      let f_name = fn_name("lyric_video_document_words_write");
       error(
         text_combine_multiple([
           "a line of this song has no words timed yet, which ",
-          f_name,
+          fn_name("lyric_video_document_words_write"),
           " gives it: ",
         ]) + line.text,
       );
