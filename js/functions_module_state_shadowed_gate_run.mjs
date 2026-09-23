@@ -16,10 +16,9 @@ export async function functions_module_state_shadowed_gate_run() {
   "The functions at fault are thrown as a record rather than printed and then summed up in a sentence, because whoever reads a failure next reads it for names and cannot tell a name being accused from a name being named as the cure. The names being hidden are advice too - a hidden name is the victim here, not the offender.";
   let offenders = await functions_module_state_shadowed();
   let names = list_map_property(offenders, "f_name");
-  let f_name = fn_name("function_shadowing_assign");
   let advice = text_combine_multiple([
     "these fill a copy of their own shared state and throw it away - if the inner line was meant to write the shared name, ",
-    f_name,
+    fn_name("function_shadowing_assign"),
     " takes the word let off it, and if it was not, the inner binding wants a name of its own",
   ]);
   let hint = {
