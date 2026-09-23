@@ -13,10 +13,9 @@ export async function commits_message_path_baseline_write() {
   let told = await commits_message_path_named();
   let known = property_get(told, "offenders");
   let path = commits_message_path_baseline_path();
-  let f_name = fn_name("ai_git");
   let hint = text_combine_multiple([
     "a commit message carries a path reaching out of this repo that was not recorded before - the message cannot be changed, so find out what wrote it and stop that, and take ",
-    f_name,
+    fn_name("ai_git"),
     " where the real argument cannot be written publicly, before recording anything here",
   ]);
   await baseline_known_growth_assert(known, path, hint);
