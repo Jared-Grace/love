@@ -10,14 +10,13 @@ export async function functions_unbound_gate_run() {
   let fields = ["unbound"];
   let hint =
     "these functions read a name that nothing binds and no function answers to - bind it, correct the spelling, or delete the line";
-  let name_write = fn_name("functions_unbound_baseline_write");
   let result = await baseline_entries_gate_generic(
     offenders,
     path,
     fields,
     unbound_entries_print,
     hint,
-    name_write,
+    fn_name("functions_unbound_baseline_write"),
   );
   return result;
 }
