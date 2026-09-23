@@ -11,6 +11,8 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
   "The irregular verbs get one clause more, and that clause is why the label reading ‘a verb, irregular’ can be written over at all. A reader told only that a verb is irregular has been told that something is coming which they cannot guess, and not what it is. The clause gives the three forms, so the reader can actually use the word: ‘go’ makes ‘went’ and ‘gone’ rather than ‘goed’.";
   "Where all three forms are the same word the clause says so in those words rather than spelling the word out three times, because ‘from cut comes cut and cut’ reads like a mistake and teaches nothing. That a verb can be irregular by not changing at all is worth a beginner's attention on its own.";
   "A form carrying an ‘s’ is written under its own key rather than left to the base form, for the reason the plural nouns are: the store answers a word by the spelling in front of the reader, so ‘falls’ handed the sentence written for ‘fall’ would lose the one thing its own spelling was telling them.";
+  "The past and the third form are written as their own keys off the same map that names them, which is the whole reason that map holds the forms rather than a bare flag saying ‘irregular’. A reader meeting ‘told’ is not meeting ‘tell’ - the store hands them the spelling in front of them and nothing else - and a beginner has no way to walk backwards from ‘told’ to ‘tell’, which is exactly what makes the verb irregular in the first place. So every irregular form gets an entry saying which verb it belongs to, which time it stands for, and the three forms again.";
+  "Where the past and the third form are the same word one entry is written and it says both jobs, and where the third form is the base word again - ‘come’ makes ‘came’ and then ‘come’ - no third entry is written at all, because it would overwrite the base entry with a narrower one. Both cases are read off the map rather than listed by hand, so a verb added later cannot be added wrongly.";
   "A capitalised verb is written only where the store actually holds one. For a verb the capital has a single cause - the word stands at the head of what is being said - and that is what its entry says. A name is the harder case and is handled in the name table, because there a capital has two causes and naming only one of them would mislead.";
   let meaning = {
     say: "کہنا",
@@ -97,6 +99,7 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
   };
   let s_forms = {
     falls: "fall",
+    comes: "come",
     receives: "receive",
   };
   let capitals = {
@@ -183,5 +186,38 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
   }
   let capital_spellings = object_property_names(capitals);
   list_map(capital_spellings, capital_write);
+  function past_write(word) {
+    let parts = property_get(irregular, word);
+    let past = parts[0];
+    let done = parts[1];
+    let urdu = property_get(meaning, word);
+    let head = "فعل '" + word + "' یعنی '" + urdu + "' کی ";
+    let unchanged = equal(past, word);
+    if (unchanged) {
+      return;
+    }
+    let both = equal(past, done);
+    if (both) {
+      let one =
+        head +
+        "گُزرے ہوئے زمانے کی شکل ہے، اَور یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔" +
+        irregular_read(word);
+      property_set(r, past, one);
+      return;
+    }
+    let told = head + "گُزرے ہوئے زمانے کی شکل ہے۔" + irregular_read(word);
+    property_set(r, past, told);
+    let same_as_base = equal(done, word);
+    if (same_as_base) {
+      return;
+    }
+    let third =
+      head +
+      "وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔" +
+      irregular_read(word);
+    property_set(r, done, third);
+  }
+  let irregular_words = object_property_names(irregular);
+  list_map(irregular_words, past_write);
   return r;
 }

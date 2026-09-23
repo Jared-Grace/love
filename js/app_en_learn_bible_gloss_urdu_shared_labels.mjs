@@ -30,6 +30,8 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
   "The third is refused, and by now the reason is a familiar one wearing a new sentence. ‘It is the same word that joins what comes next to what came before’ stands over ‘who’, ‘that’, ‘whom’, ‘which’ and ‘what’, and four of those settled wordings say exactly that. ‘that’ does not: its settled wording says the word does three different jobs and leaves the reader to see which is in front of them. So ‘that’ has now blocked four labels on its own, always for the same reason, and that is worth writing down rather than rediscovering - a word that genuinely does several jobs cannot have a settled wording that picks one, and so can never carry a label that picks one either.";
   "‘A verb, irregular’ joined once the ordinary verbs had a table, and it is the case where the test is hardest to pass and worth passing. The label names the one thing about the word a beginner cannot work out - that its past will not be made by adding ‘ed’ - and then stops, which leaves the reader knowing that something is coming they cannot guess and not what it is. A settled wording that only said ‘it is a doing word meaning to go’ would have been a straight loss, so the table gives the three forms in the entry itself. The label passes because every word carrying it has that clause and four words more.";
   "The bare ‘verb’ next to it was licensed long before any of this and had been sitting there doing nothing, which is worth one line because it is the shape the list takes on purpose. A licence is not an instruction, so a label over words nobody has written for changes nothing until somebody writes them. Those words are written now, and the entries fall without the list being touched.";
+  "Two more verb wordings joined once the irregular forms had entries of their own, and they are worth naming together because one of them looks like a refusal and is not. ‘A verb, past tense, and it tells of saying’ stands over ‘said’, ‘spoke’ and ‘told’, and reads at first like the job-in-this-verse claims refused all the way down this note. It is not one: those three words are past forms of speaking verbs wherever they stand, so every part of the label can be read off the word alone. The settled wordings say the verb, say the time, and hand over the Urdu for the saying, which is the label and four things more.";
+  "The other is ‘a verb, irregular: come → came → come’, and it is the only label on this list that already did the job a settled wording does. It names the verb, it gives the three forms, and a reader is genuinely better off for it. It is written over anyway, because the settled wording says all of that and then says what the word MEANS, which is the one thing the label never got to. A label being good is not a reason to keep it; being as good as the wording that would replace it would be, and it is not.";
   let labels = [
     "معرفہ حرفِ تعریف۔",
     "نکرہ حرفِ تعریف۔",
@@ -184,6 +186,8 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
     "وُہی خاص نام ہے جو اُوپر آیا۔",
     "وُہی نام کا لفظ ہے جو اُوپر آیا۔",
     "فعل، بےقاعدہ۔",
+    "فعل ہے اَور گُزرے ہوئے زمانے کا ہے، اَور کہنے کو بتاتا ہے۔",
+    "فعل، بےقاعدہ: come → came → come۔",
   ];
   return labels;
 }
