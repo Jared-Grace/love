@@ -20,36 +20,24 @@ export function song_image_review_couplets() {
   "NOTES LEFT OPEN ON A COUPLET THAT HAS COME OFF THE BENCH ARE NOW REPORTED RATHER THAN LOST. Closing a round hands back the strays alongside what it closed, and it does not close them - marking them answered would clear the count and destroy the only record that nobody ever replied. Twenty-one across couplets 9, 14, 25, 32 and 33 were found that way. Answer them and put those couplets back here.";
   let couplets = [
     {
-      n: 6,
-      note: "Yes - you are on 34 now. It is an edit of 33 that only lightened the wood to a pale tan, so the cross stands clear of the red glass. The wood grain went with it, which the style asks for anyway.",
-    },
-    {
       n: 28,
-      note: "No, it does not need to be white. White was only there because the real colour, brass, is too close to gold, and gold is kept for the word of GOD. Bright yellow is allowed where a couplet asks for it, so it now asks for that. You are on 6: a plain yellow trumpet with no valves.",
+      note: "Yes, near enough. Israel's silver trumpets of Numbers 10:2 were a straight narrow tube, a little under a cubit long, flaring into a bell - Josephus describes them so, and the Arch of Titus shows them. Valves came only in the 1800s. So 6 stays as it is.",
     },
     {
       n: 32,
-      note: "Yes - you are on 26. The river now swings side to side and narrows as it climbs to the top of the window. Still wrong: it drew ten small trees instead of six.",
+      note: "You are on 28. It has about six trees each side and the river is cut into curved panes like a current. Still wrong: the field is pale blue, not violet, and it is drawn in depth rather than flat. 29 kept the violet but grouped the trees in threes; 26 is the fallback.",
     },
     {
       n: 33,
-      note: "Yes - you are on 20. The drop is now cut into several panes, lightest blue at its heart and deepest at its edge, and the lower band is violet. Still wrong: two field lines run across the drop.",
-    },
-    {
-      n: 34,
-      note: "Both done - you are on 77. The sceptre is grey iron now, as in the rod of iron of Revelation 19:15, and the right-most flame is orange and yellow like the rest. It is an edit of 74, so nothing else moved; the wording no longer asks for white flames.",
-    },
-    {
-      n: 35,
-      note: "Yes - you are on 9, a fresh drawing. The fire is red at its edge, then orange, then yellow at the heart, and the leaves stay green. Two edits of the old picture were tried first; one turned the leaves yellow and one gave the flames heart shapes.",
+      note: "You are on 21. The drop is now plain water: one pale blue pane with a single white glint, and no field line crosses it. Still wrong: a thin dark ring shows behind the drop. 22 looked more like a tear but lines ran across it.",
     },
     {
       n: 26,
-      note: "Redrawn - you are on 105. The cloud is now broad and flat instead of a row of round balls. Still wrong: the rays are as bold as before, not light and airy, and the sky is deep blue, not pale. 106 had airy rays but lost their colours; 104 is the fallback.",
+      note: "You are on 110. The wording now asks for eight rays and it drew eight, in the right colours. Still wrong: two lead lines run straight across the rays, and the glass has a painted texture. 104 is the fallback.",
     },
     {
       n: 9,
-      note: "Still on 16. The new drawing, 19, put the red blood drop on red glass, where it vanishes. In 16 the field lines already stop at the shaft.",
+      note: "You are on 22, an edit of 19. The band behind the drops is now light blue, so the red drop stands out. The top of the arch went light blue with it. A first edit had turned the spearhead white; this one kept it grey.",
     },
   ];
   return couplets;
