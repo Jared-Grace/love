@@ -13,8 +13,9 @@ export async function functions_parallel_marks_stale() {
   "Sharing a shape is asked of all four readings, not of the whole body alone. A mark is honoured by all four, so a mark placed over a shared opening or a shared middle is alive and doing its work while the whole-body reading has never heard of it - and reported as dead it comes with an instruction to take it off, which would hand the group straight back to the reader who had already answered for it.";
   arguments_assert(arguments, 0);
   let grouped = await functions_duplicates_any_names();
-  let mark_name = fn_name("function_duplicate_kind_parallel");
-  let search = await data_identifiers_search(mark_name);
+  let search = await data_identifiers_search(
+    fn_name("function_duplicate_kind_parallel"),
+  );
   let referrers = properties_get(search);
   let stale = [];
   for (let f_name of referrers) {
