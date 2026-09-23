@@ -10,10 +10,9 @@ export async function bible_glyph_chapter_tagalog_verses_fetched_gate_run() {
     fn_name("bible_glyph_chapter_language_verses_fetched_gate_run_check"),
     " and this names which pair to ask. Read that one for why the sending is done rather than the source read.");
   ("THE WHOLE TAGALOG IS ONE FILE AND IS SENT FOR AS ONE, which is not how the picture chapters and their Rosetta bands are sent for, and the difference is where the text happens to live rather than a judgment about how much anybody should download.");
-  let f_name = fn_name("bible_glyph_chapter_tagalog_verses_fetched");
   let r = await bible_glyph_chapter_language_verses_fetched_gate_run_check(
     "Tagalog",
-    f_name,
+    fn_name("bible_glyph_chapter_tagalog_verses_fetched"),
     bible_glyph_chapter_tagalog_verses,
     bible_glyph_chapter_tagalog_verses_fetched,
   );
