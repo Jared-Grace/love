@@ -31,13 +31,12 @@ export function key_getters_frozen_gate_run_generic(pairs, part) {
     list_add_unique(unfrozen, named);
   }
   unfrozen.sort();
-  let f_name2 = fn_name("literals_frozen_name_add");
   list_empty_is_assert_json(unfrozen, {
     hint: text_combine_multiple([
       "a word is being written into ",
       part,
       " of a page address by a function nothing has frozen, so rewording it there would quietly break every link already saved with it. Name it with ",
-      f_name2,
+      fn_name("literals_frozen_name_add"),
       ", which puts it on the frozen list and records what it says today in one go - and then write the paragraph above the line it added, saying how the word escaped",
     ]),
     unfrozen,
