@@ -32,13 +32,12 @@ export async function app_shared_imports_gate_run() {
   let walked = property_get(told, "walked");
   let offenders = property_get(told, "offenders");
   let path = app_shared_imports_baseline_path();
-  let name_write = fn_name("app_shared_imports_baseline_write");
   let r = await baseline_names_gate_walked_generic(
     walked,
     offenders,
     path,
     "these shared units reach into one app and did not before - move what they need into shared code, or move the unit into the app it belongs to",
-    name_write,
+    fn_name("app_shared_imports_baseline_write"),
   );
   return r;
 }
