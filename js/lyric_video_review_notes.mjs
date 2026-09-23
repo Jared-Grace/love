@@ -13,9 +13,14 @@ export function lyric_video_review_notes(parent, picture) {
   arguments_assert(arguments, 2);
   let path = property_get(picture, "path");
   let key = lyric_video_picture_note_key(picture);
-  let store = fn_name("lyric_video_picture_note_add");
   let subject = path_name(path);
   let names = lyric_video_picture_note_parts();
-  let holder = app_shared_notes_review(parent, store, key, subject, names);
+  let holder = app_shared_notes_review(
+    parent,
+    fn_name("lyric_video_picture_note_add"),
+    key,
+    subject,
+    names,
+  );
   return holder;
 }
