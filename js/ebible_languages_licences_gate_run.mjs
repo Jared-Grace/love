@@ -44,12 +44,11 @@ export async function ebible_languages_licences_gate_run() {
   let offenders =
     await ebible_languages_licences_commercial_not_bible_folders();
   let path = ebible_languages_licences_baseline_path();
-  let name_write = fn_name("ebible_languages_licences_baseline_write");
   await baseline_names_gate_generic(
     offenders,
     path,
     "this translation is offered on terms this repo may not ship - find a different translation for that language, or get written permission from whoever holds it",
-    name_write,
+    fn_name("ebible_languages_licences_baseline_write"),
   );
   let r = {
     checked: list_size(bible_folders),
