@@ -28,11 +28,10 @@ export async function gloss_pointers_dangling_gate_run() {
     added,
   });
   let stale = property_get(change, "stale");
-  let f_name = fn_name("gloss_pointers_dangling_baseline_write");
   list_empty_is_assert_json(stale, {
     hint: text_combine_multiple([
       "these gloss stores point at nothing less often than the record holds, which is good news the record has not been told - run ",
-      f_name,
+      fn_name("gloss_pointers_dangling_baseline_write"),
       " to keep the ground that was gained",
     ]),
     stale,
