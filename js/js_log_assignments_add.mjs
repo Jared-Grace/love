@@ -56,8 +56,7 @@ export async function js_log_assignments_add(ast) {
       }
       each(names, lambda_add_name);
       let args_code = [f_name + ".name", "{" + properties.join(", ") + "}"];
-      let f_name2 = fn_name("log");
-      let statement = js_call_statement(f_name2, args_code);
+      let statement = js_call_statement(fn_name("log"), args_code);
       function lambda_insert() {
         let index = list_index_of(list, node);
         list_insert(list, index + 1, statement);
@@ -67,6 +66,5 @@ export async function js_log_assignments_add(ast) {
     js_visit_declarations(ast, lambda_visit);
   }
   list_adder_invoke(lambda);
-  let name_new = fn_name("log");
-  await js_imports_missing_add_specified_single(ast, name_new);
+  await js_imports_missing_add_specified_single(ast, fn_name("log"));
 }
