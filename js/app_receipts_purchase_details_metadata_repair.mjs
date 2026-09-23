@@ -1,3 +1,5 @@
+import { json_from } from "./json_from.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { firebase_storage_prefix_names } from "./firebase_storage_prefix_names.mjs";
 import { firebase_bucket } from "./firebase_bucket.mjs";
@@ -16,7 +18,8 @@ export async function app_receipts_purchase_details_metadata_repair(
   let bucket = await firebase_bucket();
   let repaired = [];
   for (let name of names) {
-    if (!text_ends_with(name, "/" + app_receipts_purchase_details_name())) {
+    let b = text_ends_with(name, "/" + app_receipts_purchase_details_name());
+    if (not(b)) {
       continue;
     }
     let file = bucket.file(name);
@@ -26,7 +29,8 @@ export async function app_receipts_purchase_details_metadata_repair(
       continue;
     }
     let [contents] = await file.download();
-    let details = JSON.parse(contents.toString());
+    let json = contents.toString();
+    let details = json_from(json);
     await file.setMetadata({
       metadata: {
         date: details.date,
