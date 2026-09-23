@@ -21,7 +21,10 @@ export async function function_wrap_copy(f_name) {
   return checked;
   async function lambda(ast) {
     "The one line of code this adds is the copying call, given the answer the wrapper is already holding. Both halves of that - writing the call and pointing its argument at the returned value - are one named verb next door, because a call added before a return is unfinished until its arguments say something true about where it landed, and that is not particular to copying.";
-    let copier = fn_name("clipboard_copy_value");
-    await js_call_add_before_return_argument_returned(ast, copier, "value");
+    await js_call_add_before_return_argument_returned(
+      ast,
+      fn_name("clipboard_copy_value"),
+      "value",
+    );
   }
 }
