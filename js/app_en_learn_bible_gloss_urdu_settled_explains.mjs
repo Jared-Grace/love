@@ -4,11 +4,13 @@ import { app_en_learn_bible_gloss_urdu_noun_explains } from "./app_en_learn_bibl
 import { app_en_learn_bible_gloss_urdu_name_explains } from "./app_en_learn_bible_gloss_urdu_name_explains.mjs";
 import { app_en_learn_bible_gloss_urdu_verb_explains } from "./app_en_learn_bible_gloss_urdu_verb_explains.mjs";
 import { app_en_learn_bible_gloss_urdu_plural_noun_explains } from "./app_en_learn_bible_gloss_urdu_plural_noun_explains.mjs";
+import { app_en_learn_bible_gloss_urdu_adjective_explains } from "./app_en_learn_bible_gloss_urdu_adjective_explains.mjs";
 export function app_en_learn_bible_gloss_urdu_settled_explains() {
   "Every English word the store that teaches English to an Urdu reader has a settled wording for, whatever kind of word it is, in one lookup.";
-  "There are four tables behind this and they are kept apart because their reasons are different. One holds the small closed classes - the articles, the joining words, the prepositions, the pronouns - where what the word does in a sentence is the whole of what there is to say and no dictionary work stands behind any of it. One holds the ordinary nouns, where the whole of the entry is the Urdu word for the thing and every line of it is dictionary work. The third holds the names, where the entry is neither of those: it is who the person is, which is read off the passages themselves rather than out of a dictionary, and it goes stale for a different reason than either of the others.";
+  "There are six tables behind this and they are kept apart because their reasons are different. One holds the small closed classes - the articles, the joining words, the prepositions, the pronouns - where what the word does in a sentence is the whole of what there is to say and no dictionary work stands behind any of it. One holds the ordinary nouns, where the whole of the entry is the Urdu word for the thing and every line of it is dictionary work. The third holds the names, where the entry is neither of those: it is who the person is, which is read off the passages themselves rather than out of a dictionary, and it goes stale for a different reason than either of the others.";
   "The fourth holds the helping verbs, where the entry is neither a job in a sentence nor a thing in the world but a place in a grid: which verb the form belongs to, which time it stands for, and whether it goes with one or with more than one.";
   "The fifth holds the plural nouns, and it is separate from the ordinary nouns for a reason worth keeping: a plural owes the reader the singular it was made from and the rule that made it, and neither of those is a thing in the world. Folding the two together would have meant either writing that rule out by hand seventy times or letting a plural be answered with the wording for its singular, which would quietly drop the one thing the reader was being told. The strict merge below is what holds the two apart: a word written in both tables stops the build rather than silently taking one of the two wordings.";
+  "The sixth holds the describing words, and it is the first table here whose entries are mostly one Urdu word and nothing else. That is not laziness but the shape of the class: a reader told that ‘red’ is لال has been told the whole of it, where a reader told that ‘day’ is دِن still has the plural and its rule waiting for them. What the table adds beyond the Urdu word it adds by rule - the four pairs of opposites are written in by a loop rather than eight times by hand - so the reader gets both ends of a pair wherever both ends are in the passages.";
   "They are joined here rather than in any one of them so that the pass which writes settled wordings over shared labels asks one question and not four, and so that a further kind of word - the ordinary verbs carrying meanings of their own are the next - is added by writing another table and one line here.";
   "The merge is the strict one, so a word appearing in both tables is an error rather than a silent choice between two wordings. That is the whole of the check this needs: a word belongs to one kind, and if somebody has written it down twice the two entries will disagree sooner or later and nothing afterwards could say which was meant.";
   let r = {};
@@ -22,5 +24,7 @@ export function app_en_learn_bible_gloss_urdu_settled_explains() {
   object_merge(r, from5);
   let from6 = app_en_learn_bible_gloss_urdu_plural_noun_explains();
   object_merge(r, from6);
+  let from7 = app_en_learn_bible_gloss_urdu_adjective_explains();
+  object_merge(r, from7);
   return r;
 }
