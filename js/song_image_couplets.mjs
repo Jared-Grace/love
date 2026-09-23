@@ -488,7 +488,7 @@ export function song_image_couplets() {
       first: "the great I AM",
       second: song_image_couplets_title(),
       symbol:
-        "A bush standing in ruby red flame with its leaves whole and green, unburnt and untouched by the fire, drawn very large so that the flame reaches almost to the white border on both sides, and the flat field standing behind the flame deep cobalt blue everywhere it shows so that the flame stands out sharply against it and is nowhere the same colour as the glass behind it",
+        "A bush standing in flame of ruby red, bright orange and bright yellow, with its leaves whole and green, unburnt and untouched by the fire, drawn very large so that the flame reaches almost to the white border on both sides, and the flat field standing behind the flame deep cobalt blue everywhere it shows so that the flame stands out sharply against it and is nowhere the same colour as the glass behind it",
       symbol_ref: "Exodus 3:2, Exodus 3:14",
       same_as: 0,
     },
