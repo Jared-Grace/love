@@ -14,19 +14,17 @@ export async function app_shared_description_gate_run() {
   let walked = property_get(swept, "walked");
   let missing = property_get(swept, "names");
   let path = app_shared_description_baseline_path();
-  let f_name = fn_name("app_shared_description");
   let hint = text_combine_multiple([
     "these apps say nothing about themselves, so anywhere their address is pasted it arrives bare - write a sentence in ",
-    f_name,
+    fn_name("app_shared_description"),
     ", or record the silence on purpose",
   ]);
-  let name_write = fn_name("app_shared_description_baseline_write");
   let r = await baseline_names_gate_walked_generic(
     walked,
     missing,
     path,
     hint,
-    name_write,
+    fn_name("app_shared_description_baseline_write"),
   );
   return r;
 }
