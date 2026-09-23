@@ -14,7 +14,6 @@ export async function functions_prose_silent_oversize_gate_run() {
   let told = await functions_prose_silent_oversize_names();
   let walked = property_get(told, "walked");
   let names = property_get(told, "names");
-  let name_write = fn_name("functions_prose_silent_oversize_baseline_write");
   let r = await baseline_names_gate_walked_generic(
     walked,
     names,
@@ -24,7 +23,7 @@ export async function functions_prose_silent_oversize_gate_run() {
       fn_name("function_prose_add"),
       ", or cut them back under the floor",
     ]),
-    name_write,
+    fn_name("functions_prose_silent_oversize_baseline_write"),
   );
   return r;
 }
