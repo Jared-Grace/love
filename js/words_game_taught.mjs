@@ -12,8 +12,10 @@ export async function words_game_taught() {
   "IT IS DRAWN FROM WHAT THE CORPUS SAYS and grows the same way, rather than being guessed at ahead of the writing. Every word in it was said by somebody in a written arc; nothing was added because it seemed likely to come up. A word guessed at is a word nobody can check, and a list nobody can check is a list that quietly excuses whatever lands in it.";
   "BASE FORMS ONLY, and the same reader that takes endings off for the other list takes them off for this one. Listing sinned beside sin, and prays beside pray, would double the file to say nothing new.";
   let folder = data_given_accepted_folder();
-  let f_name = fn_name("words_game_taught");
-  let combined = text_combine_multiple([f_name, json_extension()]);
+  let combined = text_combine_multiple([
+    fn_name("words_game_taught"),
+    json_extension(),
+  ]);
   let path = path_join([folder, combined]);
   let words = await file_read_json(path);
   return words;
