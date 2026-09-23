@@ -13,13 +13,12 @@ export async function bible_glyph_chapters_marks_doubled_gate_run() {
   let walked = property_get(told, "walked");
   let offenders = property_get(told, "offenders");
   let path = bible_glyph_chapters_marks_doubled_baseline_path();
-  let name_write = fn_name("bible_glyph_chapters_marks_doubled_baseline_write");
   let r = await baseline_names_gate_walked_generic(
     walked,
     offenders,
     path,
     "these picture Bible chapters draw a mark at least twice as often as the root table seats it, which is one English word drawn on two different original roots - read the chapter's glossed draft, find the occurrences the table does not seat, and pull those back to plain English",
-    name_write,
+    fn_name("bible_glyph_chapters_marks_doubled_baseline_write"),
   );
   return r;
 }
