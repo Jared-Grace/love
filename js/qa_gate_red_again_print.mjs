@@ -13,10 +13,9 @@ export function qa_gate_red_again_print(failed) {
   if (none) {
     return false;
   }
-  let f_name = fn_name("qa_gates_red_results");
   let line = text_combine_multiple([
     "\nTO ASK THESE AGAIN  node scripts/ai.mjs ",
-    f_name,
+    fn_name("qa_gates_red_results"),
     "\n  It reads the gates just written down against this commit, so nothing has to be named. What it answers is about the folder as it stands now, which is how a gate a neighbour has since put right comes back green.",
   ]);
   console.log(line);
