@@ -59,8 +59,7 @@ export async function function_shadowing_rename_refusal(
   let scopes = js_scopes_shadowing(ast, name);
   let several = list_multiple_is(scopes);
   if (several) {
-    let inner = fn_name("function_shadowing_rename_in");
-    let many = `the file hides the word in more than one place, so there is no single inner binding to move and the choice belongs to whoever is reading it — ${inner} asks for that choice as its second argument, the function the binding sits in, and clears one binding per run`;
+    let many = `the file hides the word in more than one place, so there is no single inner binding to move and the choice belongs to whoever is reading it — ${fn_name("function_shadowing_rename_in")} asks for that choice as its second argument, the function the binding sits in, and clears one binding per run`;
     return many;
   }
   let unknown = "";
