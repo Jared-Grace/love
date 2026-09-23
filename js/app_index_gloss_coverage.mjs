@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { gloss_upload_namespace_original_bible } from "./gloss_upload_namespace_original_bible.mjs";
 import { gloss_upload_namespace_ceb_bible } from "./gloss_upload_namespace_ceb_bible.mjs";
+import { app_en_learn_bible_gloss_urdu_generate_upload_namespace } from "./app_en_learn_bible_gloss_urdu_generate_upload_namespace.mjs";
 import { property_get } from "./property_get.mjs";
 import { firebase_function_chapters_uploaded } from "./firebase_function_chapters_uploaded.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
@@ -26,6 +27,10 @@ export async function app_index_gloss_coverage() {
       {
         app_fn: fn_name("app_ceb_bible"),
         namespace_fn: gloss_upload_namespace_ceb_bible,
+      },
+      {
+        app_fn: fn_name("app_en_learn_bible"),
+        namespace_fn: app_en_learn_bible_gloss_urdu_generate_upload_namespace,
       },
     ];
     async function store_counted(store) {
