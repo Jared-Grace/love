@@ -23,12 +23,15 @@ export async function app_g_verify_home_refresh(
     return;
   }
   try {
-    let f_name = fn_name("g_sermon_write_read");
-    let fresh_chapter = await api_read(f_name, [chapter_code]);
-    let f_name6 = fn_name("g_verify_status_read");
-    let fresh_status = await api_read(f_name6, [chapter_code]);
-    let f_name7 = fn_name("g_verify_chapter_next");
-    let fresh_state = await api_read(f_name7, [chapter_code]);
+    let fresh_chapter = await api_read(fn_name("g_sermon_write_read"), [
+      chapter_code,
+    ]);
+    let fresh_status = await api_read(fn_name("g_verify_status_read"), [
+      chapter_code,
+    ]);
+    let fresh_state = await api_read(fn_name("g_verify_chapter_next"), [
+      chapter_code,
+    ]);
     if (chapter_advance_armed) {
       let latest_key = property_get(fresh_state, "latest");
       let left = property_get(fresh_state, "action");
@@ -39,8 +42,7 @@ export async function app_g_verify_home_refresh(
         equal(left3, latest_key);
       if (fully_approved) {
         let next_chapter = g_chapter_code_next(chapter_code);
-        let f_name8 = fn_name("g_verify_chapters_available");
-        let object = await api_read(f_name8, []);
+        let object = await api_read(fn_name("g_verify_chapters_available"), []);
         let codes = property_get(object, "chapters");
         if (list_includes(codes, next_chapter)) {
           location.href = g_verify_chapter_url(location.pathname, next_chapter);
