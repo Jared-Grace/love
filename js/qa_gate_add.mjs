@@ -29,7 +29,6 @@ export async function qa_gate_add(gate_f_name) {
     let selects = list_ensure(found);
     js_array_identifier_add(ast, selects, gate_f_name);
   }
-  let f_name = fn_name("qa_gates");
-  let output = await function_transform_auto(f_name, lambda);
+  let output = await function_transform_auto(fn_name("qa_gates"), lambda);
   return output;
 }
