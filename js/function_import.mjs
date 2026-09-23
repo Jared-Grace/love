@@ -5,8 +5,10 @@ import { path_resolve } from "./path_resolve.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function function_import(f_name) {
-  let right = fn_name("function_import_unalias");
-  text_combine("if you need to unalias use ", right);
+  text_combine(
+    "if you need to unalias use ",
+    fn_name("function_import_unalias"),
+  );
   let f = await function_name_to_path_found(f_name);
   let f_path = await path_resolve(f);
   let imported = await import(text_combine("file://", f_path));
