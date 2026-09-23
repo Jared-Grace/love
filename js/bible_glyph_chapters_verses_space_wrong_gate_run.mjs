@@ -20,12 +20,11 @@ export function bible_glyph_chapters_verses_space_wrong_gate_run() {
   });
   let offenders = property_get(reading, "offenders");
   let none = list_empty_is(offenders);
-  let f_name = fn_name("bible_glyph_word_pair_separator");
   assert_json(none, {
     offenders,
     hint: text_combine_multiple([
       "these drawn verses set a gap at the wrong width. Each entry names the position, the character standing there and the one that belongs there: thirty two is the ordinary space and eight thousand one hundred and ninety five is the wide one. An ordinary space between two pictures loses a word boundary and the reader meets one long word nobody wrote; a wide space anywhere else sets English a picture's width apart and a sentence reads as a list. Whatever joined the words here should ask ",
-      f_name,
+      fn_name("bible_glyph_word_pair_separator"),
       " for the character instead of spelling one",
     ]),
   });
