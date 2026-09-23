@@ -15,18 +15,13 @@ export async function app_shared_text_reader_carried_unpicked_gate_run() {
   let walked = property_get(told, "walked");
   let offenders = property_get(told, "names");
   let path = app_shared_text_reader_carried_unpicked_baseline_path();
-  let name_write = fn_name(
-    "app_shared_text_reader_carried_unpicked_baseline_write",
-  );
-  let name_read = fn_name("app_shared_text_reader_carried_unpicked");
-  let name_pick = fn_name("app_shared_text_reader_language");
   let hint = text_combine_multiple([
     "these functions type words out and hand them to a door onto the page without ever asking what language the reader reads, so what they say arrives in english whoever is reading. ",
     "ask ",
-    name_read,
+    fn_name("app_shared_text_reader_carried_unpicked"),
     " for the app to see the words and the door each one leaves by. ",
     "the repair is to say the words through ",
-    name_pick,
+    fn_name("app_shared_text_reader_language"),
     ", which takes what to say in each language and picks by the reader's own",
   ]);
   let r = await baseline_names_gate_walked_generic(
@@ -34,7 +29,7 @@ export async function app_shared_text_reader_carried_unpicked_gate_run() {
     offenders,
     path,
     hint,
-    name_write,
+    fn_name("app_shared_text_reader_carried_unpicked_baseline_write"),
   );
   return r;
 }
