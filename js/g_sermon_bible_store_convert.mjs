@@ -24,8 +24,7 @@ export async function g_sermon_bible_store_convert() {
   ("A chapter the write store already holds is SKIPPED rather than overwritten. The write store is where reviewed work lands, and the bible store is the older, hand-edited one - so where both have a chapter, the newer one wins and this must not step on it.");
   let f_name = g_sermon_edited_store_name();
   let from_folder = storage_function_folder_path(f_name);
-  let f_name_write = fn_name("g_sermon_write");
-  let to_folder = storage_function_folder_path(f_name_write);
+  let to_folder = storage_function_folder_path(fn_name("g_sermon_write"));
   let files = await folder_read_files(from_folder);
   let converted = [];
   let skipped = [];
