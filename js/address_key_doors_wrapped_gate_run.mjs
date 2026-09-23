@@ -16,14 +16,12 @@ export async function address_key_doors_wrapped_gate_run() {
     console.log(pair);
   }
   let wrapped = await address_key_doors_wrapped();
-  let f_name = fn_name("hash_key_doors");
-  let f_name2 = fn_name("query_key_doors");
   list_empty_is_assert_json(wrapped, {
     hint: text_combine_multiple([
       "a function hands one of its own parameters where the name of a field of a page address goes, which makes it a door onto that address - so a word written at a call to it is published with nothing watching, and it belongs beside the doors already written down, in ",
-      f_name,
+      fn_name("hash_key_doors"),
       " for the part after the hash or ",
-      f_name2,
+      fn_name("query_key_doors"),
       " for the part after the question mark",
     ]),
     wrapped,
