@@ -13,8 +13,7 @@ export function app_index_dev_build_card(root) {
   arguments_assert(arguments, 1);
   ("the address is built from the dev folder's own word and this app's own name, so it follows a rename of either instead of having to be noticed and typed again");
   let folder = app_shared_name_dev_text();
-  let name2 = fn_name("app_index");
-  let name = app_shared_name_prefix_without(name2);
+  let name = app_shared_name_prefix_without(fn_name("app_index"));
   let file = file_name_html(name);
   let path = list_join_slash_forward([folder, file]);
   let already = app_shared_page_dev_build_is();
