@@ -47,10 +47,9 @@ export async function bible_glyph_chapters_language_credit_gate_run() {
     }
   }
   ("THE FUNCTION THIS POINTS A READER AT IS NAMED INSIDE THE HINT AND NEVER BESIDE IT, because a failed gate's words are read back afterwards for function names and every name found is taken as an accusation.");
-  let writer = fn_name("bible_glyph_chapters_language_write");
   let hint_faulty = text_combine_multiple([
     "these generated files hold somebody else's scripture and do not say what that licence asks them to say about it - the credit is read off the translation and written in by ",
-    writer,
+    fn_name("bible_glyph_chapters_language_write"),
     ", so the repair is to run that again for the language named, and if it refuses for want of a downloaded copyright page then the file was written from a bible this machine no longer has and the download is the first step; a language carrying an unread word instead of a list of defects is one whose file would not open at all, and the words it refused with stand beside it",
   ]);
   list_empty_is_assert_json(faulty, {
