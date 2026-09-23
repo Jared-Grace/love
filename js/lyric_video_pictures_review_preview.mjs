@@ -31,8 +31,9 @@ export async function lyric_video_pictures_review_preview() {
   let cards = html_div(root);
   async function document_show(name) {
     html_clear(cards);
-    let f_read = fn_name("lyric_video_document_name_read");
-    let document = await api_read(f_read, [name]);
+    let document = await api_read(fn_name("lyric_video_document_name_read"), [
+      name,
+    ]);
     let none = null_is(document);
     if (none) {
       app_shared_text_quiet(cards, "this chapter has no document yet");
@@ -52,8 +53,7 @@ export async function lyric_video_pictures_review_preview() {
   function name_text(name) {
     return name;
   }
-  let f_names = fn_name("lyric_video_document_names");
-  let names = await api_read(f_names, []);
+  let names = await api_read(fn_name("lyric_video_document_names"), []);
   html_button_list(chosen, names, name_text, document_show);
   return root;
 }
