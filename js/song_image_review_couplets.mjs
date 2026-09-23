@@ -21,19 +21,15 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 32,
-      note: "Yes. You are on 37. The river now runs behind every tree, and the field is pale violet above and violet below. Still wrong: the field is cut into many small panes, and the top of the arch is violet instead of blue. 31 is the fallback.",
+      note: "You are on 40, a fresh drawing. About six tall trees stand on each side, and none of them is under the river. Still wrong: extra lead lines run across the field, and the arch has no white border. 37 is the fallback.",
     },
     {
       n: 33,
-      note: "You are on 26. The dark blue shell is gone: one blue drop with one black outline and a white glint. Still wrong: the glint is a curved shine rather than flat glass. 21 is the fallback.",
+      note: "Still on 26. An edit asked for the drop to be cut into deeper and lighter panes; it changed the field instead. Three fresh drawings came back with the shell again, lines across the drop, or plainer than 26. So 26 is still the best.",
     },
     {
       n: 26,
-      note: "You are on 114, an edit of 111. The sky behind is now pale, and the rays are lighter and glowing. Still wrong: the rays keep a slight painted texture. 111 is the fallback.",
-    },
-    {
-      n: 9,
-      note: "Yes. You are on 24, an edit of 19. It keeps 19's shiny 3D drops and grey iron spearhead, and the band behind the drops is light blue. Still wrong: the top of the arch went light blue too, instead of deep blue.",
+      note: "Yes. You are on 115, an edit of 114. The pink ray on the left is now white, so three rays are white. Still wrong: the rays keep a slight painted texture.",
     },
   ];
   return couplets;
