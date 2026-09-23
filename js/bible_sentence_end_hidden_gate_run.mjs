@@ -38,32 +38,29 @@ export async function bible_sentence_end_hidden_gate_run() {
     unrecorded_rows,
     bible_sentence_end_unrecorded_folder,
   );
-  let f_name = fn_name("bible_sentence_end_marks_write");
   list_empty_is_assert_json(unrecorded, {
     hint: text_combine_multiple([
       "this bible was measured before the hidden sentence marks were counted, so the record is silent about it and silence here looks exactly like nothing wrong - read them all again with ",
-      f_name,
+      fn_name("bible_sentence_end_marks_write"),
       ", which reaches the network and rewrites the record",
     ]),
     unrecorded,
   });
   let blocked_named = bible_sentence_end_hidden_named(rows, "blocked");
-  let f_name2 = fn_name("bible_verse_trim_right");
   list_empty_is_assert_json(blocked_named, {
     hint: text_combine_multiple([
       "these verses end a sentence and then close a quotation over it in a mark that is not taken off before the asking, so anyone reading this bible beside another is carried on into a verse whose sentence had already finished. The marks are named beside each bible: add them to ",
-      f_name2,
+      fn_name("bible_verse_trim_right"),
       " - and prefer widening what is asked of Unicode there to writing another mark out by hand, because a hand-written list is what was short every time this has happened",
     ]),
     blocked: blocked_named,
   });
   ("A SPAN OF WORDS HIDES A SENTENCE MARK EXACTLY AS A SINGLE MARK DOES, and it is refused here beside them because only its size tells the two apart. A Hindi bible here finishes a sentence and then prints where else the verse is spoken of, in brackets; taken one character at a time that never clears, because the first figure inside the brackets is not a mark and stops the taking. Nothing about adding a bible asks whether it prints its references that way, so this asks that too.");
   let apparatus_named = bible_sentence_end_hidden_named(rows, "apparatus");
-  let f_name3 = fn_name("bible_verse_end_apparatus_or_null");
   list_empty_is_assert_json(apparatus_named, {
     hint: text_combine_multiple([
       "these verses end a sentence and then print something in brackets behind it, so anyone reading this bible beside another is carried on into a verse whose sentence had already finished. The span is named beside each bible, and ",
-      f_name3,
+      fn_name("bible_verse_end_apparatus_or_null"),
       " is what found it - the taking off is done where every other closing mark is taken off, and it happens only when a sentence mark is actually uncovered by doing it",
     ]),
     apparatus: apparatus_named,
