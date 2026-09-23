@@ -5,7 +5,6 @@ export function js_repack_only_is_cases() {
   "The two allowances are the reason this exists rather than a shorter list of the plain shapes. Each was added because the strict rule missed something real, and each is one sentence away from letting a function that does work through, so a corpus that only held the obvious cases would let either be dropped without a word.";
   "The bodies are written as text because the reading takes a parsed function and there is nowhere else to say what was parsed. The one real name among them is the getter the reading looks for, joined in rather than spelled, so that renaming the getter carries the corpus with it; every other name they call is one nothing answers to, because what is being asked is the shape of the lines.";
   let getter = fn_name("property_get");
-  let arity_line = fn_name("arguments_assert");
   let cases = [
     {
       code: text_combine_multiple([
@@ -150,7 +149,7 @@ export function js_repack_only_is_cases() {
     {
       code: text_combine_multiple([
         "function a(r) { ",
-        arity_line,
+        fn_name("arguments_assert"),
         "(arguments, 1); let x = ",
         getter,
         '(r, "x"); let y = ',
