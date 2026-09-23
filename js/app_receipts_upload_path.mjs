@@ -11,7 +11,7 @@ export async function app_receipts_upload_path(file) {
   ("A random part follows the time so two photos sent in the same moment cannot land on one name.");
   let user_id = await app_shared_contact_user_id();
   let when = date_iso_to(new Date());
-  let random = uuid_browser();
+  let random_part = uuid_browser();
   let extension = file.name.split(".").pop();
   let path = text_combine_multiple([
     "user/uuid/receipts/",
@@ -19,7 +19,7 @@ export async function app_receipts_upload_path(file) {
     "/",
     when,
     "_",
-    random,
+    random_part,
     ".",
     extension,
   ]);
