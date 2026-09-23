@@ -3,11 +3,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function functions_gate_run_unwired_exempt() {
   "The gates the whole-repo gate is not expected to list, each named with the reason it is not one of its members.";
   "Named one at a time rather than spotted by shape, because a rule guessing which gate is allowed to sit outside the list would go wrong in the one direction that matters - quietly excusing the next gate somebody wrote and forgot to wire in.";
-  let f_name = fn_name("app_replace");
-  let f_name2 = fn_name("app_g_dev_routes_phone_gate_run");
-  let f_name4 = fn_name("apps_prod_chunks_missing_gate_run");
   let f_name5 = fn_name("qa_stage_pieces_assert");
-  let f_name6 = fn_name("qa_app_e2e_happy_run");
   let exempt = [
     {
       name: fn_name("qa_gate_run"),
@@ -17,7 +13,7 @@ export function functions_gate_run_unwired_exempt() {
       name: fn_name("app_g_dev_routes_phone_gate_run"),
       why: text_combine_multiple([
         "it opens every screen of the game in a real browser at the size of a phone, so it needs the local server running and a browser to drive - it is slower than everything in the list and it goes red for want of a server rather than for anything wrong with the code. run on its own after touching the game's screens, the same way the ",
-        f_name,
+        fn_name("app_replace"),
         " end-to-end tests are",
       ]),
     },
@@ -25,7 +21,7 @@ export function functions_gate_run_unwired_exempt() {
       name: fn_name("apps_boot_cold_gate_run"),
       why: text_combine_multiple([
         "it opens every app in a real browser the way a stranger opens it - nothing after the address, nothing remembered - so it needs the local server running and a fresh browser for each one, and it goes red for want of a server rather than for anything wrong with the code. it is also the slowest thing here by a long way, because a browser is built and thrown away per app on purpose: they all share one origin, so reusing a browser would let each app read what the app before it had written and the arrival being tested would no longer be the first one. run it on its own after touching anything an app does while it opens, the same way the ",
-        f_name2,
+        fn_name("app_g_dev_routes_phone_gate_run"),
         " sweep above is",
       ]),
     },
@@ -33,7 +29,7 @@ export function functions_gate_run_unwired_exempt() {
       name: fn_name("apps_prod_chunks_unreachable_gate_run"),
       why: text_combine_multiple([
         "it asks the live site whether every piece of every app that is already being served can actually be got, so all of it is network and none of it is about the files. measured at sixty-seven seconds over twenty-seven apps, and the fault it looks for can only arrive when something is sent out - so it is asked at a sending rather than at every commit, where it would be paid for constantly and could tell nobody anything new. its twin ",
-        f_name4,
+        fn_name("apps_prod_chunks_missing_gate_run"),
         " reads the folder an app is about to be sent out of and is in the list, and the two answer different questions: that one catches the fault before it goes out, this one says whether it went out already",
       ]),
     },
@@ -57,7 +53,7 @@ export function functions_gate_run_unwired_exempt() {
       name: fn_name("app_code_happy_gate_run"),
       why: text_combine_multiple([
         "it walks the whole code course as somebody who gets every question right, and the course is served out of a stage folder that a copy of what a commit tracks does not carry - so it refused itself in seconds rather than walking anything, and a refusal that fast reads like a pass. the walk is run instead by ",
-        f_name6,
+        fn_name("qa_app_e2e_happy_run"),
         " on the way up, against the very pieces about to go out, which is both the only place the course exists to be walked and the only place walking it is worth the half hour",
       ]),
     },
