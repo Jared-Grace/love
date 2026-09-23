@@ -22,8 +22,7 @@ export async function html_update_dev(name) {
   let path = await function_name_repo_path_combine(a_name, file_path);
   let name_prefixed = await app_shared_name_main(name);
   let call = js_code_call_app_shared_context_initialize(name_prefixed);
-  let f_name = fn_name("app_shared_context_initialize");
-  let imports = [name_prefixed, f_name];
+  let imports = [name_prefixed, fn_name("app_shared_context_initialize")];
   let mapped =
     await function_name_to_path_import_code_root_multiple_map(imports);
   list_add(mapped, call);
