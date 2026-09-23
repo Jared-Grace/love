@@ -10,10 +10,9 @@ export async function bible_glyph_chapters_language_functions_found() {
   "THE SENTENCE THIS IS FOUND BY IS NAMED INSIDE THE HINT AND NEVER BESIDE IT. A failed gate's words are read back afterwards for function names, and every name found is taken as an accusation - so a name in its own field of the complaint holds an innocent function's app out of its deployment. The hint is dropped before the names are read, which is what lets a person be told where to look without anybody being blamed for it.";
   arguments_assert(arguments, 0);
   let names = await bible_glyph_chapters_language_functions();
-  let mark = fn_name("bible_glyph_language_written_mark");
   let hint_none = text_combine_multiple([
     "no reveal-language function was found at all, so this gate checked nothing and would have passed for that reason - has the sentence they are found by been reworded in one place and not the other? The sentence is spelled in ",
-    mark,
+    fn_name("bible_glyph_language_written_mark"),
   ]);
   list_empty_not_is_assert_json(names, {
     hint: hint_none,
