@@ -10,10 +10,9 @@ export async function cors_gate_run() {
   "Only the addresses we work out are required to be there. The store may know others - a machine somebody else develops on - and those are none of this repo's business to remove.";
   let wanted = cors_origins();
   let live = await cors_bucket_origins();
-  let repair = fn_name("cors_upload");
   let hint = text_combine_multiple([
     "the store has not been told about every address these pages are opened at, so a page opened at one of the missing ones will paint nothing and throw nothing - send them with ",
-    repair,
+    fn_name("cors_upload"),
   ]);
   list_included_in_assert_json(wanted, live, {
     hint,
