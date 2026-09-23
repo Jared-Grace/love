@@ -12,8 +12,7 @@ export async function word_picture_wording_set(word, wording) {
   async function lambda(ast) {
     js_object_property_text_set(ast, word, wording);
   }
-  let f_name = fn_name("word_picture_wordings");
-  await function_transform(f_name, lambda);
+  await function_transform(fn_name("word_picture_wordings"), lambda);
   let r = {
     word,
     wording,
