@@ -24,13 +24,11 @@ export async function word_picture_chosen_set(word, attempt) {
     let number = property_get(one, "attempt");
     list_add(numbers, number);
   }
-  let f_name3 = fn_name("word_pictures_drawn_known");
-  let f_name4 = fn_name("word_pictures_drawn_known_write");
   let hint = text_combine_multiple([
     "that attempt number is not on disk for that word; ",
-    f_name3,
+    fn_name("word_pictures_drawn_known"),
     " says which numbers exist, and ",
-    f_name4,
+    fn_name("word_pictures_drawn_known_write"),
     " counts the folders again",
   ]);
   list_includes_assert_json(numbers, kept, {
@@ -39,11 +37,9 @@ export async function word_picture_chosen_set(word, attempt) {
   });
   let chosen = word_picture_chosen();
   property_set(chosen, word, kept);
-  let f_name = fn_name("word_picture_chosen");
-  let f_name2 = fn_name("word_picture_chosen_set");
   let first = text_combine_multiple([
     "Which attempt has been kept for each taught word, as a plain table written out by ",
-    f_name2,
+    fn_name("word_picture_chosen_set"),
     " and never edited by hand.",
   ]);
   let prose = [
@@ -51,6 +47,10 @@ export async function word_picture_chosen_set(word, attempt) {
     "A WORD WITH NO ENTRY HAS NOT BEEN JUDGED YET, which is not the same as having no picture worth keeping. Every drawn word starts absent from here and stays absent until somebody looks at its attempts side by side and presses Keep under one of them, so the length of this table is the length of the review that has actually happened.",
     "IT HOLDS THE ATTEMPT'S OWN NUMBER and nothing else, because that number is already the name of the file on disk. Copying the picture somewhere, or its wording, would make a second thing to keep in step with the folder; a number cannot drift from the file it names.",
   ];
-  await function_constant_json_write(f_name, prose, chosen);
+  await function_constant_json_write(
+    fn_name("word_picture_chosen"),
+    prose,
+    chosen,
+  );
   return chosen;
 }
