@@ -24,14 +24,12 @@ export async function functions_new_baseline_ratchet_gate_new(
   let abc = text_combine_3("let offenders = await ", lister, "();");
   let abc7 = text_combine_3("let path = ", name_path, "();");
   let b = json_to(name_write);
-  let f_name = fn_name("fn_name");
-  let a = text_combine_multiple(["let name_write = ", f_name, "("]);
+  let a = text_combine_multiple(["let name_write = ", fn_name("fn_name"), "("]);
   let abc8 = text_combine_3(a, b, ");");
   let json = json_to(hint);
-  let f_name5 = fn_name("baseline_names_gate_generic");
   let combined10 = text_combine_multiple([
     "let r = await ",
-    f_name5,
+    fn_name("baseline_names_gate_generic"),
     "(offenders, path, ",
   ]);
   let combined8 = text_combine_multiple([combined10, json, ", name_write);"]);
