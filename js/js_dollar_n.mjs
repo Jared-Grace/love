@@ -27,8 +27,7 @@ export function js_dollar_n({
     log(js_dollar_n.name, {
       name,
     });
-    let right = fn_name("not");
-    if (equal(name, right)) {
+    if (equal(name, fn_name("not"))) {
       let arguments2 = js_call_arguments_get(test);
       let only = list_single(arguments2);
       js_statement_if_test_set(n, only);
