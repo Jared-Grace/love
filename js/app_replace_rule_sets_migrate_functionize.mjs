@@ -11,8 +11,11 @@ import { function_transform_marker_specified } from "./function_transform_marker
 import { each_async } from "./each_async.mjs";
 export async function app_replace_rule_sets_migrate_functionize() {
   "this took a list of objects and moved each object to its own file";
-  let f_name = fn_name("app_replace_rule_sets");
-  await function_transform_marker_specified(f_name, "rules", lambda);
+  await function_transform_marker_specified(
+    fn_name("app_replace_rule_sets"),
+    "rules",
+    lambda,
+  );
   async function lambda(a) {
     let elements = marker_next_declare_single_init_elements(a);
     async function lambda2(e) {
