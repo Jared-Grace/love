@@ -9,19 +9,17 @@ export async function commits_message_path_gate_run() {
   "Throws so the dispatcher seam exits nonzero.";
   arguments_assert(arguments, 0);
   let told = await commits_message_path_named();
-  let f_name = fn_name("ai_git");
   let opening = text_combine_multiple([
     "these commit messages carry a path beginning at the root of the machine or at somebody's home, which this repo being public publishes unreviewed to anybody who clones it - say the file the way the repo says it, relative to the repo, or take the honest fallback ",
-    f_name,
+    fn_name("ai_git"),
     " where the real argument cannot be written publicly. ",
   ]);
   let path = commits_message_path_baseline_path();
-  let name_write = fn_name("commits_message_path_baseline_write");
   let r = await commits_message_rules_gate_generic(
     told,
     opening,
     path,
-    name_write,
+    fn_name("commits_message_path_baseline_write"),
   );
   return r;
 }
