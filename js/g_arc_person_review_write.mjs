@@ -26,13 +26,12 @@ export async function g_arc_person_review_write(chapter_code, index) {
   let wanted = number_from_text(index);
   let found = g_arc_chapter_person_or_null(written, wanted);
   let there = equal_not(found, null);
-  let f_name = fn_name("g_arc_written_gate_run");
   assert_json(there, {
     chapter_code,
     index: wanted,
     hint: text_combine_multiple([
       "no person of that number is written in this chapter - ask ",
-      f_name,
+      fn_name("g_arc_written_gate_run"),
       " how many there are",
     ]),
   });
