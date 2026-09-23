@@ -1,3 +1,4 @@
+import { html_p_text } from "./html_p_text.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_mobile_default_bible_font_size } from "./app_shared_mobile_default_bible_font_size.mjs";
@@ -18,6 +19,8 @@ export function app_index_categories_show(context, entries) {
   arguments_assert(arguments, 2);
   let root = property_get(context, "root");
   app_shared_mobile_default_bible_font_size(context);
+  ("the groups are named first, in words, so a visitor knows before opening any of them that everything the site offers them is somewhere below - asked for by name on 2026-09-23");
+  html_p_text(root, "All public apps and links on this site:");
   let folds = app_shared_folds();
   function expand_all() {
     app_shared_folds_set(folds, false);
