@@ -1,0 +1,9 @@
+export function app_en_learn_bible_gloss_urdu_explain_capital_claims_elsewhere() {
+  "The turns of phrase an Urdu gloss uses to say that a capital letter stands on some other word, and not on the word the reader is looking at.";
+  "They are listed so that the reading which asks whether an explanation claims a capital can take them out of the text before it looks. Without that, a sentence teaching the reader that 'the' comes before a title although the title is written with a capital reads as a sentence claiming that 'the' itself is written with a capital, and 'the' never is.";
+  "Each is spelled with its vowel mark and is matched against the explanation as written, before any mark is taken off. That is the opposite of how a claim is matched, and it is deliberate: the mark is the whole of the difference. Take the marks off and اُس کا, meaning that one's, becomes the same six letters as اِس کا, meaning this one's - so a reading that folded them would throw away every honest claim written the second way along with the one dishonest claim written the first.";
+  "Measured 2026-09-23 across the whole store: twenty-two explanations write the claim after a possessive that points, twenty of them with اِس کا, two with اُس کا, and not one of them without a mark at all. So the mark is what the authors have in fact been using to tell the two apart, and reading it is reading what they wrote rather than imposing a rule on them.";
+  "A possessive naming a thing rather than pointing at one - the sentence's first letter, a name's first letter - is not listed. A word standing at the head of its sentence is the word whose first letter the sentence is talking about, so that claim is about the word in front of the reader after all.";
+  let wordings = ["اُس کا پہلا حرف بڑا ہے"];
+  return wordings;
+}
