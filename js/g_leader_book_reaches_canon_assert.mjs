@@ -71,12 +71,11 @@ export function g_leader_book_reaches_canon_assert() {
     }
   }
   let clean = list_empty_is(problems);
-  let f_name = fn_name("g_leader_book_reaches");
   assert_json(clean, {
     problems,
     hint: text_combine_multiple([
       "each entry of ",
-      f_name,
+      fn_name("g_leader_book_reaches"),
       " is one book followed by the neighbours it may borrow arcs from; every code must be a canon book, every neighbour must come BEFORE that book in the canon so a capped arc loses none of them, the entry must cover an unbroken run of the canon, and each book may be the first code of only one entry",
     ]),
   });
