@@ -21,11 +21,12 @@ export async function ebible_upload_doors_commercial_gate_run() {
   let offered = ebible_languages_without_original_bible_folders();
   await ebible_bible_folders_commercial_assert(offered);
   let check = ebible_bible_folder_commercial_assert.name;
-  let f_name = fn_name("ebible_verses_upload");
-  let f_name2 = fn_name("ebible_chapters_upload");
-  let f_name3 = fn_name("ebible_version_books_upload");
-  let f_name4 = fn_name("ebible_offline_version_upload");
-  let doors = [f_name, f_name2, f_name3, f_name4];
+  let doors = [
+    fn_name("ebible_verses_upload"),
+    fn_name("ebible_chapters_upload"),
+    fn_name("ebible_version_books_upload"),
+    fn_name("ebible_offline_version_upload"),
+  ];
   let wired = await function_names_reaching(doors, check);
   function unwired_is(door) {
     let missing = list_includes_not(wired, door);
