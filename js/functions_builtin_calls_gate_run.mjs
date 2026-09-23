@@ -14,11 +14,10 @@ export async function functions_builtin_calls_gate_run() {
   arguments_assert(arguments, 0);
   let pending = await functions_builtin_calls_pending();
   let names = list_map_property(pending, "name");
-  let f_name = fn_name("functions_builtin_calls_repair");
   list_empty_is_assert_json(names, {
     hint: text_combine_multiple([
       "a built-in method is still being called where the repo keeps a name for it - move every one of them with ",
-      f_name,
+      fn_name("functions_builtin_calls_repair"),
       ", which repairs exactly these files and commits each one on its own",
     ]),
     names,
