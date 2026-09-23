@@ -19,9 +19,8 @@ export function song_image_review_note_pills(parent, key, notes, render) {
   function note_line(one) {
     let line = app_shared_note_pill(parent, one);
     async function answered() {
-      let f_name = fn_name("song_image_note_done");
       let words = property_get(one, "note");
-      await api_read(f_name, [key, words]);
+      await api_read(fn_name("song_image_note_done"), [key, words]);
       await render();
     }
     let press = html_button(line, "answered", answered);
