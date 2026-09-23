@@ -1,3 +1,4 @@
+import { text_url_encode } from "./text_url_encode.mjs";
 import { property_list_get } from "./property_list_get.mjs";
 import { app_replace_goal_hash_id } from "./app_replace_goal_hash_id.mjs";
 import { app_replace_rule_set_get } from "./app_replace_rule_set_get.mjs";
@@ -25,10 +26,8 @@ export function app_replace_hash_write(context) {
   property_delete_if_exists(hash, key2);
   let screen_name = app_shared_screen_stored_get(context);
   app_shared_hash_screen_add(context, hash);
-  let right = fn_name("app_replace_goals");
-  let on_goals = equal(screen_name, right);
-  let right2 = fn_name("app_replace_rule_set");
-  let on_rule_set = equal(screen_name, right2);
+  let on_goals = equal(screen_name, fn_name("app_replace_goals"));
+  let on_rule_set = equal(screen_name, fn_name("app_replace_rule_set"));
   if (on_goals || on_rule_set) {
     let rule_set = app_replace_rule_set_get(context);
     let id = app_replace_rule_set_hash_id(rule_set);
@@ -38,7 +37,8 @@ export function app_replace_hash_write(context) {
     let goal_index = storage_session_get_context(context, "goal_index");
     let rule_set2 = app_replace_rule_set_get(context);
     let goal = property_list_get(rule_set2, "goals", goal_index);
-    let goal_id = text_url_encode(app_replace_goal_hash_id(goal));
+    let word = app_replace_goal_hash_id(goal);
+    let goal_id = text_url_encode(word);
     property_set(hash, key2, goal_id);
   }
   html_hash_set_object(hash);
