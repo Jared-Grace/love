@@ -19,12 +19,11 @@ export function bible_glyph_chapter_rosetta_lines(chapter_code) {
     chapter_code,
   );
   let b = not_equal(found, null);
-  let f_name = fn_name("bible_glyph_chapters_rosetta_lines_write");
   assert_json(b, {
     chapter_code,
     hint: text_combine_multiple([
       "no picture Bible chapter has its Rosetta bands written out under that code - run ",
-      f_name,
+      fn_name("bible_glyph_chapters_rosetta_lines_write"),
       " to write the ones that are missing",
     ]),
   });
