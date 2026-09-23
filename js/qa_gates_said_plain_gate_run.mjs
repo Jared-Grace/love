@@ -10,13 +10,16 @@ export async function qa_gates_said_plain_gate_run() {
   "This same bug was found three times in one day, each time only because it had already stopped a deployment. That is the shape a gate is for - the cost of finding it that way is paid by whoever was shipping, and it is paid again every time.";
   let plain = await qa_gates_said_plain();
   let path = qa_gates_said_plain_baseline_path();
-  let name_write = fn_name("qa_gates_said_plain_baseline_write");
-  let f_name = fn_name("list_empty_is_assert_json");
   let hint = text_combine_multiple([
     "these gates can only complain in a sentence, so everything they mention is read as an accusation - throw the offenders with ",
-    f_name,
+    fn_name("list_empty_is_assert_json"),
     " and put the advice and any bystanders under its hint, which is dropped before the names are read",
   ]);
-  let r = await baseline_names_gate_generic(plain, path, hint, name_write);
+  let r = await baseline_names_gate_generic(
+    plain,
+    path,
+    hint,
+    fn_name("qa_gates_said_plain_baseline_write"),
+  );
   return r;
 }
