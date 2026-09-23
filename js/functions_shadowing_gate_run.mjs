@@ -10,14 +10,13 @@ export async function functions_shadowing_gate_run() {
   let fields = ["shadows_outer", "shadows_function"];
   let hint =
     "these functions hide a name that was already in scope - rename the inner one, and if a line below it was reading the outer name, that line was the bug";
-  let name_write = fn_name("functions_shadowing_baseline_write");
   let result = await baseline_entries_gate_generic(
     offenders,
     path,
     fields,
     shadowing_entries_print,
     hint,
-    name_write,
+    fn_name("functions_shadowing_baseline_write"),
   );
   return result;
 }
