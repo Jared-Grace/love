@@ -23,10 +23,7 @@ export function app_replace_hash_write(context) {
   property_delete_if_exists(hash, key);
   property_delete_if_exists(hash, key2);
   let screen_name = app_shared_screen_stored_get(context);
-  let prefix = app_replace_screen_name_prefix();
-  let short = text_prefix_without_try(screen_name, prefix);
-  let key3 = app_replace_screen_hash_key();
-  property_set(hash, key3, short);
+  app_shared_hash_screen_add(context, hash);
   let right = fn_name("app_replace_goals");
   let on_goals = equal(screen_name, right);
   let right2 = fn_name("app_replace_rule_set");

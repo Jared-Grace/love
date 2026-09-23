@@ -37,14 +37,10 @@ export function app_replace_hash_restore(context) {
       storage_session_set_context(context, "goal_index", goal_index);
     }
   }
-  let key3 = app_replace_screen_hash_key();
-  let word = property_get_or_null(hash, key3);
-  if (null_is(word)) {
+  let screen_name = app_shared_hash_screen_get(context, hash);
+  if (null_is(screen_name)) {
     return;
   }
-  let prefix = app_replace_screen_name_prefix();
-  let short = text_prefix_without_try(word, prefix);
-  let screen_name = text_combine(prefix, short);
   let right = fn_name("app_replace_goals");
   let on_goals = equal(screen_name, right);
   let right2 = fn_name("app_replace_rule_set");

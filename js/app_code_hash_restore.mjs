@@ -18,11 +18,9 @@ export function app_code_hash_restore(context) {
   if (lesson_said) {
     storage_session_set_context(context, "lesson_id", lesson_id);
   }
-  let property2 = app_code_screen_hash_key();
-  let screen_name = property_get_or_null(hash, property2);
-  let screen_said = null_not_is(screen_name);
+  let screen_name_full = app_shared_hash_screen_get(context, hash);
+  let screen_said = null_not_is(screen_name_full);
   if (screen_said) {
-    let screen_name_full = app_code_screen_name_full(screen_name);
     app_shared_screen_stored_set_context(context, screen_name_full);
   }
   let property3 = app_code_quiz_hash_key();
