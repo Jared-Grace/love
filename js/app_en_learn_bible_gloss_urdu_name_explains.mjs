@@ -11,7 +11,8 @@ export function app_en_learn_bible_gloss_urdu_name_explains() {
   "Places are written down here beside people, because a place name is a proper name and fails the reader the same way. What the wording owes a place is smaller: that it is a town, and now and then one thing about it a passage keeps assuming, such as its standing on the sea.";
   "The wordings that sent the reader back up the passage - ‘the same man's name as came above’, ‘the same town's name as came above’ - are what this table was enlarged to replace. A pointer is the worst of the shared wordings, because the entry it points at is often another pointer, and a name is the place they gather: a name stands in a passage over and over, and every place after the first was handed one.";
   "The closing sentence about capital letters is written once here and joined onto every wording, because it is the same sentence in all of them and a reader meets only one of them at a time.";
-  "Five of the wordings are written once and given to a whole group of names, and each of the five is the honest thing to say rather than a saving of effort. The longest list of names in these passages is the one that counts Jesus' forefathers, and it is a list: the passage says nothing about those men except that each stood between the one before him and the one after. A wording claiming more would be invented. The same holds for the men who travelled with those who carried the good news, for the two names that stand both in that list of forefathers and on an old prophet's book, and for the towns a sea voyage or a road passed through, where all the passage says is that the journey went by.";
+  "Regions are written down here as well, and the sixth shared wording is theirs: most of the regions these passages cross are provinces of the empire, and that is the whole of what a passage naming one is assuming. Two are written out on their own because a reader would otherwise be misled. ‘Asia’ here is one province on the west of what we now call Turkey, not the continent the reader knows by that name, and a wording that left the reader with the continent would make the journeys nonsense. ‘Macedonia’ is where the good news first crossed into Europe, which is the one thing its passage turns on.";
+  "Six of the wordings are written once and given to a whole group of names, and each of the six is the honest thing to say rather than a saving of effort. The longest list of names in these passages is the one that counts Jesus' forefathers, and it is a list: the passage says nothing about those men except that each stood between the one before him and the one after. A wording claiming more would be invented. The same holds for the men who travelled with those who carried the good news, for the two names that stand both in that list of forefathers and on an old prophet's book, and for the towns a sea voyage or a road passed through, where all the passage says is that the journey went by.";
   "A wording is not allowed to go looking outside these passages for something interesting to say about a name. Several of the towns here are famous elsewhere, and a sentence about what happened in one of them a century later would read as though the reader had missed it in the verse. What a name is owed is what its own passages assume about it: that it stood on the sea, that it was where somebody was born, that a journey stopped there.";
   let tail = " انگریزی میں ہر خاص نام کا پہلا حرف بڑا لکھا جاتا ہے۔";
   let forefather =
@@ -24,6 +25,7 @@ export function app_en_learn_bible_gloss_urdu_name_explains() {
     "ایک شہر کا خاص نام ہے، جو سمُندر کے کنارے تھا اَور جہاز وہاں سے گُزرتے یا ٹھہرتے تھے۔";
   let road_stop =
     "ایک شہر کا خاص نام ہے، جو اُس راستے پر تھا جہاں سے یہ سفر گُزرا۔";
+  let province = "ایک عِلاقے کا خاص نام ہے، جو رُومی سلطنت کا ایک صُوبہ تھا۔";
   let who = {
     Jesus: "اُن ہی کا خاص نام ہے جِن کی خُوشخبری یہ کِتاب سُناتی ہے۔",
     JESUS:
@@ -312,6 +314,29 @@ export function app_en_learn_bible_gloss_urdu_name_explains() {
     Apollonia: road_stop,
     Amphipolis: road_stop,
     Antipatris: road_stop,
+    Judea: "اُس عِلاقے کا خاص نام ہے جہاں یَہُودی لوگ رہتے تھے۔",
+    Samaria: "ایک عِلاقے کا خاص نام ہے، جِس کے لوگ یَہُودیوں سے الگ رہتے تھے۔",
+    Galilee:
+      "اُس عِلاقے کا خاص نام ہے جہاں یِسُوع پلے بڑھے اَور جہاں اُنہوں نے سَب سے زیادہ کام کِیا۔",
+    Phoenicia: "ایک عِلاقے کا خاص نام ہے، جو سمُندر کے کنارے تھا۔",
+    Sharon: "ایک عِلاقے کا خاص نام ہے، جو سمُندر کے قرِیب ایک کھُلا میدان تھا۔",
+    Mesopotamia: "ایک عِلاقے کا خاص نام ہے، جو دو بڑے دریاؤں کے بیچ تھا۔",
+    Asia: "ایک عِلاقے کا خاص نام ہے، جو رُومی سلطنت کا ایک صُوبہ تھا۔ یہ آج کے بَرِّاعظم ایشیا جِتنا بڑا نہیں تھا۔",
+    Macedonia:
+      "ایک عِلاقے کا خاص نام ہے، جو رُومی سلطنت کا ایک صُوبہ تھا اَور جہاں خُوشخبری پہلی بار یُورپ میں پہُنچی۔",
+    Eve: "سَب سے پہلی عورت کا خاص نام ہے۔",
+    Syria: province,
+    Cilicia: province,
+    Pamphylia: province,
+    Phrygia: province,
+    Galatia: province,
+    Pontus: province,
+    Lycia: province,
+    Bithynia: province,
+    Mysia: province,
+    Pisidia: province,
+    Cappadocia: province,
+    Achaia: province,
   };
   let r = {};
   let names = object_property_names(who);

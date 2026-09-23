@@ -35,5 +35,9 @@ service firebase.storage {
     match /user/uuid/{allPaths=**} {
       allow write;
     }
+    // receipts: the folder code is the password - whoever knows it may read and add to that folder, and nobody may list the codes themselves
+    match /receipts/{code}/{allPaths=**} {
+      allow get, list, write;
+    }
   }
 }
