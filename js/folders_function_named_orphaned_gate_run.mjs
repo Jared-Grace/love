@@ -17,13 +17,12 @@ export async function folders_function_named_orphaned_gate_run() {
   let walked = property_get(told, "walked");
   let offenders = property_get(told, "orphaned");
   let path = folders_function_named_orphaned_baseline_path();
-  let name_write = fn_name("folders_function_named_orphaned_baseline_write");
   let r = await baseline_names_gate_walked_generic(
     walked,
     offenders,
     path,
     "stored data is now sitting under a name nothing answers to - a rename walked away from it, so move the folder onto the new name, or delete it on purpose",
-    name_write,
+    fn_name("folders_function_named_orphaned_baseline_write"),
   );
   return r;
 }
