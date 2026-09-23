@@ -22,20 +22,18 @@ export async function lyric_timing_rendered(asked, file_name, path_document) {
     let nothing = "No passage is loaded yet, so there is nothing to render.";
     return nothing;
   }
-  let f_name = fn_name("song_path_downloads");
-  let song = await app_shared_api_named(f_name, [file_name]);
+  let song = await app_shared_api_named(fn_name("song_path_downloads"), [
+    file_name,
+  ]);
   let missing = not(song.found);
   if (missing) {
     let unfound = "No song of that name in the downloads folder: " + file_name;
     return unfound;
   }
-  let f_name2 = fn_name("lyric_video_song_video_stale_write");
-  let written = await app_shared_api_named_minutes(f_name2, [
-    asked.version,
-    song.path_audio,
-    path_document,
-    asked.mark,
-  ]);
+  let written = await app_shared_api_named_minutes(
+    fn_name("lyric_video_song_video_stale_write"),
+    [asked.version, song.path_audio, path_document, asked.mark],
+  );
   if (not(written.wrote)) {
     let kept =
       "Kept " +
