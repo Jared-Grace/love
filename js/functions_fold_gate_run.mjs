@@ -34,22 +34,19 @@ export async function functions_fold_gate_run() {
   console.log("hand-written bodies: " + soundable.length);
   console.log("pairs defining each other: " + unmarked.length);
   console.log("pairs meant to be alike: " + meant);
-  let f_name = fn_name("function_replace");
-  let f_name3 = fn_name("function_duplicate_kind_parallel");
   list_empty_is_assert_json(unmarked, {
     hint: text_combine_multiple([
       "each pair here is two functions written as each other's definition - keep whichever name reads better, move any assert or prose the other carried onto it, and point everything at it with ",
-      f_name,
+      fn_name("function_replace"),
       ", or if the two are one arithmetic asked of different arguments, mark every one of them with ",
-      f_name3,
+      fn_name("function_duplicate_kind_parallel"),
     ]),
   });
-  let f_name2 = fn_name("functions_fold_repair");
   let result = list_join_comma(copied);
   list_empty_is_assert_json(inside, {
     hint: text_combine_multiple([
       "each of these writes out a function's body instead of calling it - ",
-      f_name2,
+      fn_name("functions_fold_repair"),
       " folds every one of them and commits each under its own name. The bodies written out, in the same order, are ",
       result,
     ]),
