@@ -17,11 +17,12 @@ export async function qa_promoted_publish_imports_gate_run() {
   arguments_assert(arguments, 0);
   ("★ THE NAME IS SPELLED RATHER THAN READ OFF THE FUNCTION, BECAUSE IMPORTING THE SUBJECT MADE THIS GATE THROW INSTEAD OF FAIL. Bringing the sending step in to read its own name brought in everything the sending step brings in, and somewhere down there a folder is worked out from whichever repo this machine is pointed at - a question with no answer inside the frozen copy every gate is judged in. A gate that throws writes down no offenders, and a gate naming nobody is counted against every app, so the whole site is held out of every deployment. Spelling the name is also the only way to talk about a function's dependencies without taking them on.");
   let f_name = fn_name("qa_promoted_publish");
-  let f_name2 = fn_name("firebase_apps_frozen_unchanged_assert_deploy");
-  let f_name3 = fn_name("firebase_deploy_locked_generic");
-  let f_name4 = fn_name("list_empty_is_assert_json");
-  let f_name5 = fn_name("qa_promoted_unaccounted");
-  let allowed = [f_name2, f_name3, f_name4, f_name5];
+  let allowed = [
+    fn_name("firebase_apps_frozen_unchanged_assert_deploy"),
+    fn_name("firebase_deploy_locked_generic"),
+    fn_name("list_empty_is_assert_json"),
+    fn_name("qa_promoted_unaccounted"),
+  ];
   let found = await function_imports(f_name);
   let added = list_without_multiple(found, allowed);
   let missing = list_without_multiple(allowed, found);
