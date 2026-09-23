@@ -81,19 +81,19 @@ export function app_index_main_fns(about_opened) {
     },
     {
       url: "https://www.youtube.com/@CHRISTrosetolifesinging",
-      label: "▶️ Bible singing",
+      label: "📖🎤 Bible singing",
       text: "Bible verses put to music, and songs of praise and worship, on YouTube",
       category: worship,
     },
     {
       url: "https://www.youtube.com/@CHRISTrosetolifemusiclearn",
-      label: "▶️ Music learn",
+      label: "🎵📝 Music learn",
       text: "Videos on YouTube teaching how to write Christian songs",
       category: worship,
     },
     {
       url: "https://www.youtube.com/@CHRISTrosetolifemusicai",
-      label: "▶️ Music: AI",
+      label: "📖🎵🤖 Music: AI",
       text: "Bible verses put to music using AI, on YouTube",
       category: worship,
     },
