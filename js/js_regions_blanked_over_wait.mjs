@@ -24,10 +24,11 @@ export function js_regions_blanked_over_wait(ast) {
     "FunctionExpression",
     "ArrowFunctionExpression",
   ];
-  let f_name = fn_name("html_clear");
-  let f_name2 = fn_name("html_clear_context");
-  let f_name3 = fn_name("html_text_set");
-  let emptier_names = [f_name, f_name2, f_name3];
+  let emptier_names = [
+    fn_name("html_clear"),
+    fn_name("html_clear_context"),
+    fn_name("html_text_set"),
+  ];
   function body_read(body) {
     for (let index = 0; less_than(index, body.length); index++) {
       let region = js_statement_emptied_region_here_or_null(
