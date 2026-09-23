@@ -20,11 +20,10 @@ export async function permission_grant_names_written_assert(names) {
   let named = list_filter_text_empty_not_is(named_all);
   let on_disk = list_unique(named);
   let lost = list_without_multiple(names, on_disk);
-  let f_name = fn_name("permission_grant_add_multiple");
   let hint = {
     advice: text_combine_multiple([
       "these names were just written and are already not on disk, so another Claude granting at the same time rendered the settings file from a list read before this write landed. Nothing is broken and nothing was approved that should not have been - the grants simply are not there. Ask for them again with ",
-      f_name,
+      fn_name("permission_grant_add_multiple"),
       ", which is safe to re-run and will say so if they have come back by themselves.",
     ]),
   };
