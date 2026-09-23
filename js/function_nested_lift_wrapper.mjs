@@ -11,14 +11,12 @@ export async function function_nested_lift_wrapper(
   ("The one to reach for when the plain lift refuses. That one takes the name away as well as the body, so it needs every use of the name to be a call it can add arguments to; this leaves the name exactly where it was, so a function handed on as a value - a callback given to a visitor, a renderer given to a page - comes out just as easily as one that is only ever called.");
   ("The price of leaving the name behind is that the siblings beside it still reach out for it, so each of them still has to be handed it when its own turn comes. That is why this is the second choice rather than the general one: reach for the plain lift wherever it will go, and for this where it will not.");
   ("The function inside is addressed by its own name, the same as the plain lift. That is the one address that does not move while the lines around it are edited.");
-  let select_fn_name = fn_name("js_function_nested_find_named_any");
-  let apply_fn_name = fn_name("js_selects_function_lift_wrapper");
   let output = await function_nested_lift_generic(
     f_name,
     nested_name,
     f_name_new,
-    select_fn_name,
-    apply_fn_name,
+    fn_name("js_function_nested_find_named_any"),
+    fn_name("js_selects_function_lift_wrapper"),
   );
   return output;
 }
