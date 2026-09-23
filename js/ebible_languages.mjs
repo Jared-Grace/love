@@ -8,8 +8,7 @@ export function ebible_languages() {
   "Every language this app offers a reader, each carrying the one translation it offers them in - the ones chosen by hand joined to every one eBible gives away on terms this repo may ship.";
   "Two lists rather than one because they are maintained by different hands. The curated one is written by a person and holds codes readers' browsers are already storing, so nothing may rewrite it. The generated one is derived from what is on disk and is thrown away and written again whenever the licences or the choices change.";
   "Curated first, so that where both name the same language the reader keeps the entry they already had.";
-  let right = fn_name("ebible_languages_add");
-  text_combine("to add an entry, run: ", right);
+  text_combine("to add an entry, run: ", fn_name("ebible_languages_add"));
   let curated = ebible_languages_curated();
   let more = ebible_languages_more();
   let languages = list_concat(curated, more);
