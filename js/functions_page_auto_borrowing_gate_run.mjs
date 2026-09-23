@@ -25,10 +25,9 @@ export async function functions_page_auto_borrowing_gate_run() {
   let skipped = property_get(v, "skipped");
   let offenders = property_get(v, "offenders");
   let names = list_map_property(offenders, "name");
-  let f_name = fn_name("js_page_serializing_call_is");
   let advice = text_combine_multiple([
     "these files would come back broken from the normalize pass - the step doing it must ask ",
-    f_name,
+    fn_name("js_page_serializing_call_is"),
     " and leave such a file alone, the way the built-in rewrite already does",
   ]);
   let hint = {
