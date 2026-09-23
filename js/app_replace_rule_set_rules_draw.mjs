@@ -35,13 +35,11 @@ export function app_replace_rule_set_rules_draw({
   let value = list_map_index(list, each_rule);
   property_set(rule_buttons_held, "rule_buttons", value);
   function rbs_each(rule_button, rule_index) {
-    let success = property_get(success_held, "success");
-    let index_selected = property_get(index_selected_held, "index_selected");
     let r3 = app_replace_rule_set_rbs_each(
       rule_button,
       rule_index,
-      index_selected,
-      success,
+      index_selected_held,
+      success_held,
     );
     return r3;
   }
