@@ -9,10 +9,6 @@ export function js_identifiers_renamed_without_naming_check_cases() {
   let name_walk_plain = fn_name("js_visit_identifiers");
   let name_write = fn_name("property_set");
   let name_write_curried = fn_name("property_set_if_equals_curried_right_3");
-  let name_ask_naming = fn_name("js_identifiers_naming_nodes");
-  let name_ask_expand = fn_name("js_shorthand_properties_expand");
-  let name_add = fn_name("list_add");
-  let name_each = fn_name("each");
   let head_rename = text_frozen(
     "export function f(ast, name_from, name_to) {\n  let r = ",
   );
@@ -31,7 +27,7 @@ export function js_identifiers_renamed_without_naming_check_cases() {
   let t4 = text_frozen("(ast, blanked);\n}\n");
   let code_asked = text_combine_multiple([
     t,
-    name_ask_naming,
+    fn_name("js_identifiers_naming_nodes"),
     t2,
     name_write,
     t3,
@@ -45,7 +41,7 @@ export function js_identifiers_renamed_without_naming_check_cases() {
   let t7 = text_frozen("(ast, each_one);\n  return collected;\n}\n");
   let code_reading = text_combine_multiple([
     t5,
-    name_add,
+    fn_name("list_add"),
     t6,
     name_walk_plain,
     t7,
@@ -55,12 +51,18 @@ export function js_identifiers_renamed_without_naming_check_cases() {
   );
   let t9 = text_frozen("(node, 'name', name_to);\n  }\n  ");
   let t10 = text_frozen("(nodes, each_one);\n}\n");
-  let code_handed = text_combine_multiple([t8, name_write, t9, name_each, t10]);
+  let code_handed = text_combine_multiple([
+    t8,
+    name_write,
+    t9,
+    fn_name("each"),
+    t10,
+  ]);
   let t11 = text_frozen("export function f(ast, name_from, name_to) {\n  ");
   let t12 = text_frozen("(ast, name_from);\n  let r = ");
   let code_expanded = text_combine_multiple([
     t11,
-    name_ask_expand,
+    fn_name("js_shorthand_properties_expand"),
     t12,
     name_write_curried,
     between_rename,
