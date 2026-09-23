@@ -2116,7 +2116,7 @@ export function permission_grant_names() {
     fn_name("g_arc_person_assert"),
     fn_name("apps_all_main_fns_gate_run"),
     fn_name("apps_pages_not_app"),
-    fn_name("app_shared_titles"),
+    fn_name("app_shared_taglines"),
     fn_name("app_shared_card_image_url"),
     fn_name("bundle_sizes_now"),
     fn_name("webpack_build_dev_stale"),
