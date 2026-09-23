@@ -23,9 +23,11 @@ export function js_function_work_none_is(declaration) {
     return false;
   }
   let own = js_function_declaration_name(declaration);
-  let guard = fn_name("arguments_assert");
   let markers = markers_names();
-  let not_reaching = list_concat_multiple([[own, guard], markers]);
+  let not_reaching = list_concat_multiple([
+    [own, fn_name("arguments_assert")],
+    markers,
+  ]);
   let free = js_free_names_generic(declaration, not_reaching);
   let none = list_empty_is(free);
   return none;
