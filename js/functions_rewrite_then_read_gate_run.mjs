@@ -16,21 +16,18 @@ export async function functions_rewrite_then_read_gate_run() {
   let walked = property_get(told, "walked");
   let offenders = property_get(told, "names");
   let path = functions_rewrite_then_read_baseline_path();
-  let name_write = fn_name("functions_rewrite_then_read_baseline_write");
-  let f_name = fn_name("functions_rewrite_then_read");
-  let f_name2 = fn_name("function_run_fresh");
   let hint = text_combine_multiple([
     "this rewrites a function by name and then asks something that reads it, so it is answered about the repo as it was before its own edit - ask ",
-    f_name,
+    fn_name("functions_rewrite_then_read"),
     " for the pairing that says which, and ask the second half in its own run with ",
-    f_name2,
+    fn_name("function_run_fresh"),
   ]);
   let r = await baseline_names_gate_walked_generic(
     walked,
     offenders,
     path,
     hint,
-    name_write,
+    fn_name("functions_rewrite_then_read_baseline_write"),
   );
   return r;
 }
