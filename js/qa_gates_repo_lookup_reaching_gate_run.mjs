@@ -13,10 +13,9 @@ export async function qa_gates_repo_lookup_reaching_gate_run() {
   let found = await qa_gates_repo_lookup_reaching();
   let walked = property_get(found, "walked");
   let offenders = property_get(found, "offenders");
-  let f_name = fn_name("folder_public_absolute");
   let hint = text_combine_multiple([
     "this gate spells a folder by joining the public folder onto whichever repo this machine is pointed at, and that lookup throws inside the frozen copy every gate is judged in - work the folder out from where the code is standing instead, with ",
-    f_name,
+    fn_name("folder_public_absolute"),
     " or its joining neighbour",
   ]);
   let r = list_empty_is_assert_walked_generic(walked, offenders, hint);
