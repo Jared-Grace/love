@@ -26,11 +26,10 @@ export async function gloss_explains_repeated_gate_run() {
     added,
   });
   let stale = property_get(change, "stale");
-  let f_name = fn_name("gloss_explains_repeated_baseline_write");
   list_empty_is_assert_json(stale, {
     hint: text_combine_multiple([
       "these gloss stores hand one word's explanation to a smaller share of their other words than the record holds, which is good news the record has not been told - run ",
-      f_name,
+      fn_name("gloss_explains_repeated_baseline_write"),
       " to keep the ground that was gained",
     ]),
     stale,
