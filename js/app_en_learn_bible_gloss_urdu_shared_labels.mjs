@@ -11,6 +11,7 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
   "The test is about what a wording tells the reader and not about the words it spells that in. ‘Preposition: alongside’ over ‘with’ hands over a word the settled wording does not use, and the settled wording hands over a commoner one meaning the same thing, so the reader loses nothing by the trade. Read the test the other way and a whole family of short labels naming the Urdu equivalent would have been refused over a synonym, which is a rule about spelling pretending to be a rule about meaning.";
   "The labels standing over ordinary nouns joined the list once there were settled wordings for those nouns to be written. A bare ‘noun’ is the same failure as a bare ‘conjunction’ and a worse one, because the reader of a conjunction at least learns it joins, and the reader of a noun learns nothing at all about what the thing is. Two of these say more than the bare label - that the word names a place lived in, that its plural is irregular - and each was checked against the settled wording of every word carrying it before being added, the same way as the rest.";
   "A wording carrying case where the settled wording carries none is refused. ‘Object pronoun, inanimate’ over ‘it’ says the word stands where the action lands, and the settled wording for ‘it’ says which things it stands for without saying where it stands. The same wording over ‘him’ is admitted, because there the settled wording does say it.";
+  "The bare label over a name joined the list last and is the largest single thing on it, standing over six hundred entries and thirty one names. It is also the label whose replacement is worth most: a reader told only that a word is a proper noun has been told the one thing they could already see from the capital letter, and every settled wording written for a name says who the person is instead. The test is passed the ordinary way - each of those wordings says in its own words that the word is a name - and one of them had to be reworded to pass it rather than being waved through.";
   let labels = [
     "معرفہ حرفِ تعریف۔",
     "نکرہ حرفِ تعریف۔",
@@ -91,6 +92,7 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
     "نام کا لفظ ہے۔",
     "نام کا لفظ ہے اَور رہنے کی جگہ کو بتاتا ہے۔",
     "اِسم؛ جمع بےقاعدہ: man → men۔",
+    "اِسمِ خاص۔",
   ];
   return labels;
 }
