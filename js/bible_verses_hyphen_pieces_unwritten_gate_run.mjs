@@ -25,12 +25,11 @@ export function bible_verses_hyphen_pieces_unwritten_gate_run() {
       expected,
     });
   }
-  let f_name = fn_name("bible_verses_hyphen_pieces_unwritten");
   list_empty_is_assert_json(defects, {
     defects,
     hint: text_combine_multiple([
       "the words a search would wrongly affirm have changed - read got beside expected, then mend ",
-      f_name,
+      fn_name("bible_verses_hyphen_pieces_unwritten"),
       " or the corpus, whichever is wrong",
     ]),
   });
