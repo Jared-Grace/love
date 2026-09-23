@@ -20,8 +20,12 @@ export async function functions_repack_only_gate_run() {
   let hint = functions_repack_only_hint(
     "this hands back nothing it did not lift out of something else, so every line of it is carrying a name from one side to the other - put the lines back where they were called from, or, if a fresh record is the whole of what it is for, name it to ",
   );
-  let f_name = fn_name("functions_repack_only_baseline_write");
-  await baseline_names_gate_generic(offenders, path, hint, f_name);
+  await baseline_names_gate_generic(
+    offenders,
+    path,
+    hint,
+    fn_name("functions_repack_only_baseline_write"),
+  );
   let r = {
     walked,
   };
