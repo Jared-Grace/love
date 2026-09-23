@@ -15,8 +15,7 @@ export function js_dollar_aa({
 }) {
   list_remove(stack_2, stack_);
   let body_block = js_flo_body(ast);
-  let f_name = fn_name("arguments_assert");
-  let code = js_code_call(f_name);
+  let code = js_code_call(fn_name("arguments_assert"));
   let expression = js_parse_statement(code);
   list_add_first(body_block, expression);
 }
