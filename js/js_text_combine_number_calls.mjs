@@ -12,7 +12,6 @@ export function js_text_combine_number_calls(ast) {
   "Every place this file joins text to a plain number written out on the spot, handed back as the calls themselves.";
   "This is the one judgment, and both the audit that counts these and the change that corrects them ask it here, so neither can go looking for a different set than the other reports.";
   "The calls come back whole rather than as their names, because the change has to reach inside one and the audit has to write one out, and only the call itself answers both.";
-  let joiner = fn_name("text_combine");
   let found = [];
   function lambda(visited) {
     let node = property_get(visited, "node");
@@ -21,7 +20,7 @@ export function js_text_combine_number_calls(ast) {
     if (not(plain)) {
       return;
     }
-    let joining = property_equals(callee, "name", joiner);
+    let joining = property_equals(callee, "name", fn_name("text_combine"));
     if (not(joining)) {
       return;
     }
