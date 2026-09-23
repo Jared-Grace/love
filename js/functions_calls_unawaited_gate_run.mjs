@@ -10,12 +10,11 @@ export async function functions_calls_unawaited_gate_run() {
   ("Measured against what the repo already carried rather than against zero. A call handed to something that waits for it - a lambda given to a catcher, a click handler that has nothing to wait for - reads the same way from here and is not a mistake, so the record only shrinks.");
   let offenders = await functions_calls_unawaited_names();
   let path = functions_calls_unawaited_baseline_path();
-  let name_write = fn_name("functions_calls_unawaited_baseline_write");
   let r = await baseline_names_gate_generic(
     offenders,
     path,
     "these functions hold a call that has to be waited for and is not - write the wait in, or hand the call to something that waits for it",
-    name_write,
+    fn_name("functions_calls_unawaited_baseline_write"),
   );
   return r;
 }
