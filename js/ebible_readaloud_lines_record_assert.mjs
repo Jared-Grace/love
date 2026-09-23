@@ -56,21 +56,21 @@ export async function ebible_readaloud_lines_record_assert({
   }
   let differ_each = list_map(bibles, lambda);
   let differ = lists_combine(differ_each);
-  let f_name2 = fn_name("ebible_readaloud_lines_write");
   let names = await ebible_readaloud_lines_differ_to_fix_names();
   let baseline_path = ebible_readaloud_lines_baseline_path();
-  let name_write = fn_name("ebible_readaloud_lines_baseline_write");
-  let f_name_prove = fn_name(
-    "ebible_readaloud_lines_differ_as_published_record",
-  );
   let hint = text_combine_multiple([
     "a chapter is written for reading aloud in a different number of lines from the number of verses its page marks, so its verses cannot be laid against their numbers and nobody is shown that chapter at all. Look at the chapter itself; when it is put right, measure again with ",
-    f_name2,
+    fn_name("ebible_readaloud_lines_write"),
     ". If what is wrong looks like it came with the download - a chapter stopping partway through - fetch that bible again from scratch and see, with ",
-    f_name_prove,
+    fn_name("ebible_readaloud_lines_differ_as_published_record"),
     ", which records the ones that come back the same rather than leaving them here to be looked at twice",
   ]);
-  await baseline_names_gate_generic(names, baseline_path, hint, name_write);
+  await baseline_names_gate_generic(
+    names,
+    baseline_path,
+    hint,
+    fn_name("ebible_readaloud_lines_baseline_write"),
+  );
   let property_name2 = bible_folder_key();
   let measured_names = list_map_property(bibles, property_name2);
   let answered = lists_combine([measured_names, unmeasured]);
