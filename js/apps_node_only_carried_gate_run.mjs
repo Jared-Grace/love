@@ -15,11 +15,9 @@ export async function apps_node_only_carried_gate_run() {
   let walked = property_get(told, "walked");
   let offenders = property_get(told, "names");
   let path = apps_node_only_carried_baseline_path();
-  let name_write = fn_name("apps_node_only_carried_baseline_write");
-  let f_name = fn_name("apps_node_only_carried_steps");
   let hint = text_combine_multiple([
     "a page now downloads this in order never to execute it - ask ",
-    f_name,
+    fn_name("apps_node_only_carried_steps"),
     " for the chain, then give the build machine's half its own name and ask for it by that name, so a bundler cannot see through the address",
   ]);
   let r = await baseline_names_gate_walked_generic(
@@ -27,7 +25,7 @@ export async function apps_node_only_carried_gate_run() {
     offenders,
     path,
     hint,
-    name_write,
+    fn_name("apps_node_only_carried_baseline_write"),
   );
   return r;
 }
