@@ -19,12 +19,11 @@ export async function bible_glyph_chapters_unlisted_gate_run() {
   });
   let unlisted = await bible_glyph_chapters_unlisted();
   let none = list_empty_is(unlisted);
-  let f_name = fn_name("bible_glyph_chapters_unlisted_add");
   assert_json(none, {
     unlisted,
     hint: text_combine_multiple([
       "these chapters are written and not named in the list of chapters, so no page, band or gate reaches them. Run ",
-      f_name,
+      fn_name("bible_glyph_chapters_unlisted_add"),
       ", then land them with the added write and the missing bands repair, each from a fresh process",
     ]),
   });
