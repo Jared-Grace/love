@@ -11,15 +11,13 @@ export function qa_app_e2e_happy_fns() {
   "It is put here because it was needed. The game could not be played at all for nine days - every symbol was drawn as one no rule could touch - and no gate went red the whole time, because no gate opens a page. The walk that finds it in one click was sitting in the repo the entire nine days, unrun.";
   "Each walk named here takes the stage to walk rather than naming one itself, which is what lets this list be read at the moment an app is about to go out and be pointed at the very folder that is going out. Named walks that fix a stage still exist for whoever is at a keyboard; they are not what is wanted here, because the folder somebody is working in is not the folder being sent.";
   arguments_assert(arguments, 0);
-  let name = fn_name("app_code");
-  let name_replace = fn_name("app_replace");
   let fns = [
     {
-      app_name: app_shared_name_prefix_without(name),
+      app_name: app_shared_name_prefix_without(fn_name("app_code")),
       happy_f_name: fn_name("app_code_tests_run_e2e_happy"),
     },
     {
-      app_name: app_shared_name_prefix_without(name_replace),
+      app_name: app_shared_name_prefix_without(fn_name("app_replace")),
       happy_f_name: fn_name("app_replace_tests_run_e2e_stage"),
     },
   ];
