@@ -22,12 +22,11 @@ export function bible_glyph_chapters_book_codes_unknown_gate_run() {
   });
   let unknown = bible_glyph_chapters_book_codes_unknown();
   let none = list_empty_is(unknown);
-  let f_name = fn_name("ebible_books_engbsb");
   assert_json(none, {
     unknown,
     hint: text_combine_multiple([
       "these chapters name a book that is not in the canon, so the index cannot place them and quietly leaves them out. Each entry gives the chapter code as written and the book code taken off the front of it. Check that front against ",
-      f_name,
+      fn_name("ebible_books_engbsb"),
       " - it is almost always one letter or one digit of padding",
     ]),
   });
