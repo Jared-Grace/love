@@ -20,8 +20,12 @@ export async function qa_snapshot_shard_told(folder, index, count) {
   "Whether the run reached its own ending is read off the printing and carried out too, because naming somebody was never enough. A share can name somebody and then stop partway: the complaining gates are printed one at a time, and a process that dies in the middle of that leaves a list which is real, shorter than the truth, and identical to a whole one in every other respect. The closing summary is written once after the last name, so its absence is what says the list is short";
   let index_word = text_combine("", index);
   let count_word = text_combine("", count);
-  let f_name = fn_name("qa_gate_tree_shard_run");
-  let words = ["scripts/ai.mjs", f_name, index_word, count_word];
+  let words = [
+    "scripts/ai.mjs",
+    fn_name("qa_gate_tree_shard_run"),
+    index_word,
+    count_word,
+  ];
   let began = date_now_milliseconds();
   try {
     let said = await node_run_lines_whole(folder, words);
