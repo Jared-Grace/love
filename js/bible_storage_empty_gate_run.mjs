@@ -28,14 +28,12 @@ export async function bible_storage_empty_gate_run() {
   let unmeasured = property_get(record, "unmeasured");
   let departed = property_get(record, "departed");
   let empty = list_filter(bibles, bible_storage_books_entry_empty_is);
-  let f_name3 = fn_name("ebible_chapters_upload");
-  let f_name4 = fn_name("ebible_languages");
   list_empty_is_assert_json(empty, {
     hint: text_combine_multiple([
       "storage holds nothing at all for this bible, so a reader who picked its language would get a line saying so in place of every verse of every book - either the upload never ran, and ",
-      f_name3,
+      fn_name("ebible_chapters_upload"),
       " named with this folder is what runs it, or the folder is spelled here differently from how it was spelled there, which is a line of ",
-      f_name4,
+      fn_name("ebible_languages"),
       " to correct. Before doing either, look at when this was measured: a record taken before the upload ran says exactly this and is simply out of date, and running ",
       f_name,
       " again is what settles which of the three it is",
