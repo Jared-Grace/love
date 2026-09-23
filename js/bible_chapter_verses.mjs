@@ -24,8 +24,9 @@ export async function bible_chapter_verses(bible_folder, chapter_code) {
   let door = door43_version_fetchable_or_null(bible_folder);
   let fetchable = null_not_is(door);
   if (fetchable) {
-    let f_name = fn_name("door43_version_chapter_verses_downloaded");
-    let fn = await function_import_relative(f_name);
+    let fn = await function_import_relative(
+      fn_name("door43_version_chapter_verses_downloaded"),
+    );
     let carried = await fn(door, chapter_code);
     return carried;
   }
