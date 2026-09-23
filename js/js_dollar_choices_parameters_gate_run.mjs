@@ -15,11 +15,10 @@ export async function js_dollar_choices_parameters_gate_run() {
   let unknown = await js_dollar_choices_parameters_unknown();
   let walked = property_get(unknown, "read");
   let rows = property_get(unknown, "rows");
-  let f_name = fn_name("js_dollar");
   list_empty_is_assert_json(rows, {
     hint: text_combine_multiple([
       "these dollar-macros unpack a name the expander does not put in the record it hands them, so each one receives nothing under that name and fails on the line that uses it - either add the name to the record ",
-      f_name,
+      fn_name("js_dollar"),
       " builds, or unpack the name that is really there and bind it to whatever the body already calls it",
     ]),
     rows,
