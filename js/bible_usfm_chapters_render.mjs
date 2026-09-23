@@ -22,9 +22,11 @@ export async function bible_usfm_chapters_render(
   ("The line names the book rather than saying only that something is loading, so pressing the chapter button and pressing the book button do not read the same.");
   let book_name = ebible_book_code_label(book_code);
   let said = text_loading_said("the chapters of " + book_name);
-  let f_name = fn_name("bible_usfm_version_book_chapter_codes");
   async function chapter_codes_ask() {
-    let asked = await app_shared_api_named(f_name, [version, book_code]);
+    let asked = await app_shared_api_named(
+      fn_name("bible_usfm_version_book_chapter_codes"),
+      [version, book_code],
+    );
     return asked;
   }
   let chapter_codes = await html_parent_waiting_run(
