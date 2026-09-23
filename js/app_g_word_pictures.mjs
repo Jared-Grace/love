@@ -30,12 +30,15 @@ export async function app_g_word_pictures() {
   let sheet = html_div(column);
   async function render() {
     "the three tables are asked for before anything is cleared, so a seam that is down leaves the sheet standing as it was instead of blanking the page.";
-    let f_name = fn_name("word_pictures_drawn_known");
-    let known = await app_shared_api_named(f_name, []);
-    let f_name3 = fn_name("word_picture_chosen");
-    let chosen = await app_shared_api_named(f_name3, []);
-    let f_name4 = fn_name("word_picture_wordings");
-    let wordings = await app_shared_api_named(f_name4, []);
+    let known = await app_shared_api_named(
+      fn_name("word_pictures_drawn_known"),
+      [],
+    );
+    let chosen = await app_shared_api_named(fn_name("word_picture_chosen"), []);
+    let wordings = await app_shared_api_named(
+      fn_name("word_picture_wordings"),
+      [],
+    );
     html_clear(sheet);
     let words = object_property_names(known);
     function word_block(word) {
