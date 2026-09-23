@@ -24,7 +24,6 @@ export async function functions_operators_raw_gate_run() {
   ("has to stop the number growing.");
   let offenders = await functions_operators_raw_names();
   let path = functions_operators_raw_baseline_path();
-  let name_write = fn_name("functions_operators_raw_baseline_write");
   let r = await baseline_names_gate_generic(
     offenders,
     path,
@@ -33,7 +32,7 @@ export async function functions_operators_raw_gate_run() {
       fn_name("function_auto_checked"),
       " over each one",
     ]),
-    name_write,
+    fn_name("functions_operators_raw_baseline_write"),
   );
   return r;
 }
