@@ -14,8 +14,7 @@ export function app_g_arcs_note_row(parent, bench, nickname, number, names) {
   arguments_assert(arguments, 5);
   let chapter_code = property_get(bench, "chapter_code");
   async function filed(field, typed) {
-    let f_name = fn_name("g_arc_feedback_add");
-    await app_shared_api_named(f_name, [
+    await app_shared_api_named(fn_name("g_arc_feedback_add"), [
       chapter_code,
       nickname,
       number,
