@@ -42,18 +42,16 @@ export async function function_new_sweep(f_name_single, f_name_new) {
   ]);
   async function lambda(ast) {
     let block = js_find_body_block(ast);
-    let f_name = fn_name("text_split_comma_dot_trim");
     let code = text_combine_multiple([
       "let names = ",
-      f_name,
+      fn_name("text_split_comma_dot_trim"),
       "(names_comma);",
     ]);
     js_block_body_add_code(ast, [block], code);
     js_block_body_add_code(ast, [block], one_text);
-    let f_name2 = fn_name("list_map_async_record_try");
     let code2 = text_combine_multiple([
       "let found = ",
-      f_name2,
+      fn_name("list_map_async_record_try"),
       "(names, answer_one);",
     ]);
     js_block_body_add_code(ast, [block], code2);
