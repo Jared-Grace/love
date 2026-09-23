@@ -12,20 +12,17 @@ export async function bible_glyph_chapters_prose_gate_run() {
   "The list is asked for here a second time rather than handed back by the sweep, because what the sweep owes its caller is the offenders and nothing else, and the list is a written-down thing that costs no reading to ask for.";
   let offenders = await bible_glyph_chapters_prose_missing();
   let path = bible_glyph_chapters_prose_baseline_path();
-  let name_write = fn_name("bible_glyph_chapters_prose_baseline_write");
-  let f_name = fn_name("bible_glyph_chapters");
-  let f_name2 = fn_name("bible_glyph_chapters_prose_baseline_write");
   let hint = text_combine_multiple([
     "a picture Bible chapter is on the list with no paragraph about it: write one into ",
-    f_name,
+    fn_name("bible_glyph_chapters"),
     " opening with THE and the chapter place in the list, saying what measurement chose it and what reading overruled the measurement, then run ",
-    f_name2,
+    fn_name("bible_glyph_chapters_prose_baseline_write"),
   ]);
   let verdict = await baseline_names_gate_generic(
     offenders,
     path,
     hint,
-    name_write,
+    fn_name("bible_glyph_chapters_prose_baseline_write"),
   );
   let chapters = bible_glyph_chapters();
   let walked = list_size(chapters);
