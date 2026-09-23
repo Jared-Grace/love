@@ -1,5 +1,6 @@
+import { emoji_information } from "./emoji_information.mjs";
+import { app_index_label_generic } from "./app_index_label_generic.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_shared_about_text } from "./app_shared_about_text.mjs";
 export function app_index_main_fns(about_opened) {
   "The apps the front page offers, each with the sentence shown under it.";
   "What the about card opens is handed in, because it is drawn over the front page and comes back by drawing the front page again, which only the front page knows how to do.";
@@ -21,6 +22,7 @@ export function app_index_main_fns(about_opened) {
   let worship = "Worship";
   let programming = "Learn computer programming";
   let more = "More";
+  let emoji = emoji_information();
   let r = [
     {
       app_fn: fn_name("app_bible"),
@@ -142,7 +144,7 @@ export function app_index_main_fns(about_opened) {
       category: more,
     },
     {
-      label: app_shared_about_text(),
+      label: app_index_label_generic(emoji, "About"),
       text: "Why everything here is free, and what happens with a gift",
       opened: about_opened,
       category: more,
