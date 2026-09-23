@@ -38,8 +38,10 @@ export async function app_g_arcs() {
   };
   async function render() {
     "the store is asked before anything is cleared, so a seam that is down leaves the page standing as it was rather than blanking it.";
-    let f_name = fn_name("g_arc_written_chapter_codes");
-    let codes = await app_shared_api_named(f_name, []);
+    let codes = await app_shared_api_named(
+      fn_name("g_arc_written_chapter_codes"),
+      [],
+    );
     let none = list_empty_is(codes);
     if (none) {
       each([chooser, people_chooser, sheet], html_clear);
@@ -47,8 +49,10 @@ export async function app_g_arcs() {
       return;
     }
     let chapter_code = app_g_arcs_chapter_code(chosen, codes);
-    let f_name2 = fn_name("g_arc_review_chapter_cards");
-    let read = await app_shared_api_named(f_name2, [chapter_code]);
+    let read = await app_shared_api_named(
+      fn_name("g_arc_review_chapter_cards"),
+      [chapter_code],
+    );
     let people = property_get(read, "people");
     each([chooser, people_chooser, sheet], html_clear);
     app_g_arcs_chapter_buttons(chooser, codes, chosen, status_working, render);
