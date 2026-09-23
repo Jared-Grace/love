@@ -12,12 +12,11 @@ export async function bible_glyph_chapter_fetch(chapter_code) {
   let r = await bible_glyph_chapter_fetch_found(chapter_code);
   let found = property_get(r, "found");
   let stored = property_get(r, "stored");
-  let f_name = fn_name("bible_glyph_chapter_references");
   assert_json(found, {
     chapter_code,
     hint: text_combine_multiple([
       "no picture Bible chapter answers to that code here - either it has not been written, or it has been written and nobody added it to this list of addresses. Ask ",
-      f_name,
+      fn_name("bible_glyph_chapter_references"),
       " for the chapters that exist, and if the code is in there then the address is what is missing",
     ]),
   });
