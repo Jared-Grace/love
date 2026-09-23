@@ -13,8 +13,10 @@ export async function app_g_arc_approve_worded(
   let working = text_combine_multiple(["approving ", nickname, " as worded"]);
   status_working(working);
   try {
-    let f_name = fn_name("g_arc_approved_write");
-    await app_shared_api_named(f_name, [chapter_code, nickname]);
+    await app_shared_api_named(fn_name("g_arc_approved_write"), [
+      chapter_code,
+      nickname,
+    ]);
     let done = text_combine_multiple([nickname, " is approved as worded now"]);
     status_set(done);
     await render();
