@@ -17,13 +17,11 @@ export async function app_ceb_bible_gloss_published_unfinished_gate_run() {
     app_ceb_bible_gloss_passages,
     gloss_upload_namespace_ceb_bible,
   );
-  let f_name = fn_name("app_ceb_bible_gloss_write_coverage");
-  let f_name2 = fn_name("app_ceb_bible_gloss_chapter_upload_stored");
   let fault = text_combine_multiple([
     "are published with passages nobody has explained yet - read the verses each one is missing with ",
-    f_name,
+    fn_name("app_ceb_bible_gloss_write_coverage"),
     ", write them, then carry the chapter up again with ",
-    f_name2,
+    fn_name("app_ceb_bible_gloss_chapter_upload_stored"),
   ]);
   let r = gloss_chapters_offenders_assert(walked, "ceb_bible", fault);
   return r;
