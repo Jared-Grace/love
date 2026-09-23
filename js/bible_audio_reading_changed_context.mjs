@@ -21,7 +21,9 @@ export async function bible_audio_reading_changed_context(
   let args = await bible_audio_reading_changed_args(bible_folder, chapters);
   let followed = text_split_comma_or_empty(words);
   property_set(args, "words", followed);
-  let script_name = fn_name("bible_audio_reading_changed_context");
-  let reported = await py_script_speech_json_report(script_name, args);
+  let reported = await py_script_speech_json_report(
+    fn_name("bible_audio_reading_changed_context"),
+    args,
+  );
   return reported;
 }
