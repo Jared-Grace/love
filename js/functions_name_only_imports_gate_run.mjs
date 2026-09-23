@@ -11,10 +11,9 @@ export async function functions_name_only_imports_gate_run() {
   "What it says is thrown as a record rather than printed and summed up in a sentence, because whoever reads a failure next reads it for names and cannot tell a name being accused from a name being mentioned. The files at fault are the record; the command that repairs them, and the names each one imported without calling, are advice - and those imported names are exactly the innocent ones, since the whole fault is that nothing calls them.";
   let offenders = await functions_name_only_imports();
   let names = list_map_property(offenders, "f_name");
-  let f_name = fn_name("functions_name_only_imports_spell");
   let advice = text_combine_multiple([
     "these import a name only to spell it - run ",
-    f_name,
+    fn_name("functions_name_only_imports_spell"),
   ]);
   let hint = {
     advice,
