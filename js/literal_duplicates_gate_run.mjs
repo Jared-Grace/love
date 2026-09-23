@@ -18,7 +18,6 @@ export async function literal_duplicates_gate_run() {
   "The per-family detail still travels and still lets a reader check the narrowing was right before letting anything run - it is carried inside what the gate throws instead of printed beside it, which loses a reader nothing and is the whole difference between a reader and a reading. Whatever is printed or thrown outside the hint is read back as an accusation by whoever asks which app a red gate holds, and every line here named two innocents: the getter, which is the name to route TO, and the routing command itself.";
   "The files spelling the value out are the record, because they are the only thing here at fault.";
   let offenders = await literal_duplicates_unambiguous();
-  let repair = fn_name("literal_duplicates_repair");
   let spelling = [];
   for (let offender of offenders) {
     let files = property_get(offender, "files");
@@ -26,7 +25,7 @@ export async function literal_duplicates_gate_run() {
   }
   let advice = text_combine_multiple([
     "these spell out a value a getter in their own family already holds - ",
-    repair,
+    fn_name("literal_duplicates_repair"),
     " routes every one of them and commits each under its own name, and the families below say which file each one touches",
   ]);
   let hint = {
