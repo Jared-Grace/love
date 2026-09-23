@@ -39,11 +39,10 @@ export async function git_hook_commit_msg_gate_run() {
   }
   let checked = await list_map_unordered_async(folders, each_folder);
   let stale = list_filter_null_not_is(checked);
-  let f_name = fn_name("git_hook_commit_msg_write");
   list_empty_is_assert_json(stale, {
     hint: text_combine(
       "the commit message hook is missing or has drifted from what the code writes, at the places listed - install every copy again with ",
-      f_name,
+      fn_name("git_hook_commit_msg_write"),
     ),
   });
   async function each_case(c) {
