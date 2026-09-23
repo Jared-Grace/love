@@ -15,8 +15,7 @@ export function qa_gate_runs_in_flight_rows_sort(running, shards, runs) {
   arguments_assert(arguments, 3);
   for (let row of running) {
     let words = property_text_split_space(row, "line");
-    let shard_name = fn_name("qa_gate_tree_shard_run");
-    let shard_is = list_includes(words, shard_name);
+    let shard_is = list_includes(words, fn_name("qa_gate_tree_shard_run"));
     if (shard_is) {
       list_add(shards, row);
       let pid = property_get(row, "pid");
@@ -31,10 +30,8 @@ export function qa_gate_runs_in_flight_rows_sort(running, shards, runs) {
       list_add(runs, parent);
       continue;
     }
-    let gates_name = fn_name("qa_gate_run");
-    let gates_is = list_includes(words, gates_name);
-    let judging_name = fn_name("qa_commit_named_at");
-    let judging_is = list_includes(words, judging_name);
+    let gates_is = list_includes(words, fn_name("qa_gate_run"));
+    let judging_is = list_includes(words, fn_name("qa_commit_named_at"));
     let counts = or(gates_is, judging_is);
     if (counts) {
       let pid = property_get(row, "pid");
