@@ -99,6 +99,8 @@ The repeat entry can be shorter than the first. It cannot be empty. This is the 
 
 **And the `gloss` is never a marker.** `gloss_placeholder_glosses()` names three — `. . .`, `vvv`, and a bare `-` — and `app_original_bible_gloss_placeholders_gate_run` rejects all three wherever they stand, whether the payload handed them to you or you wrote one yourself. There is no carve-out for a word English folds away: an article before a proper name still gets `the`, an untranslated `οὖν` still gets `so`, an `ἐάν` folded into *anyone* still gets `if`. The reader is looking at the Greek word; telling them it means a dash tells them nothing, and the explain underneath is already where the folding gets explained. Believing otherwise costs a whole chapter at once — the gate runs per chapter, so a wrong assumption is not caught until twenty-two passages later, and `app_original_bible_gloss_placeholders_chapter_entries <CHAPTER>` is then what lists them by index for the mend loop.
 
+The Hebrew direct object marker `אֶת` is the word this bites on most often, because every payload hands it over as a bare `-` and English really has nothing to put there. **The corpus already answers it: the gloss is `object marker`**, and the explain says which word the marking falls on ("The pointing word, marking who is to be let go."). Copy that rather than inventing a second wording — it is the one place a whole class of words would otherwise each get a different English word for the same job.
+
 ## What an explain contains
 
 In this order, skipping what does not apply:
