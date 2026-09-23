@@ -45,11 +45,10 @@ export async function functions_shadowing_operator_gate_run() {
   }
   let size = list_size(offenders);
   console.log("\nhiding an operator " + size);
-  let f_name2 = fn_name("functions_shadowing_rename_all");
   let joined2 = list_join(pairs, "; ");
   let hint = text_combine_multiple([
     "these functions hide a name the auto pass writes into code, so the next operator written in one of them becomes a call to the local - rename the local with ",
-    f_name2,
+    fn_name("functions_shadowing_rename_all"),
     ". What each of them hides is ",
     joined2,
   ]);
