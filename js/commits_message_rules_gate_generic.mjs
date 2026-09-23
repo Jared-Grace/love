@@ -20,13 +20,12 @@ export async function commits_message_rules_gate_generic(
   let walked = property_get(told, "walked");
   let offenders = property_get(told, "offenders");
   let since = commits_message_rules_since();
-  let f_name = fn_name("commits_message_rules_since");
   let hint = text_combine_multiple([
     hint_opening,
     "Nothing before ",
     since,
     " is read, and moving that place forward in ",
-    f_name,
+    fn_name("commits_message_rules_since"),
     " is not the repair",
   ]);
   let r = await baseline_names_gate_walked_generic(
