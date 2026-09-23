@@ -18,10 +18,9 @@ export async function file_overwrite_json_node(file_path, object) {
   "★ A WRITE THAT LANDED IS NOTED FOR COMMITTING, THE SAME AS A TEXT WRITE. A command's commit takes exactly the files its writes noted, so a record written here without a note was left out of the commit that named its command and picked up later by somebody's sweep under a bare word - an applied change to the reply rules was committed while its record of being applied was not.";
   arguments_assert(arguments, 2);
   await file_parent_exists_ensure(file_path);
-  let f_name = fn_name("json_to");
   text_combine_multiple([
     "Using ",
-    f_name,
+    fn_name("json_to"),
     " did not work on sufficiently large object, whereas the following did:",
   ]);
   let fs = await import("fs");
