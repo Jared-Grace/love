@@ -18,10 +18,9 @@ export async function functions_parameters_unread_computed_gate_run() {
   "What it says is thrown as a record rather than printed and then summed up in a sentence, because whoever reads a failure next reads it for names and cannot tell a name being accused from a name being mentioned. The functions at fault are the record; the repair command and the words the caller built the argument out of are advice, and they sit under the hint the reader drops before it looks.";
   let findings = await functions_parameters_unread_computed();
   let names = list_map_property(findings, "name");
-  let f_name = fn_name("function_parameter_unread_remove");
   let advice = text_combine_multiple([
     "each of these is handed an argument its caller went to the trouble of building and never reads it - read the parameter, which is usually the fix, or take it off with ",
-    f_name,
+    fn_name("function_parameter_unread_remove"),
   ]);
   let hint = {
     advice,
