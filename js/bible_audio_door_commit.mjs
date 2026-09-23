@@ -9,8 +9,11 @@ export async function bible_audio_door_commit(said) {
   "★ THE COMMIT IS LOOKED FOR BY WHAT IT DID RATHER THAN BY ITS NAME. This history is rewritten on purpose to keep the pack small, and a rewrite gives every commit it touches a new name while carrying the change through unaltered. A door written out as a commit name is therefore only as old as the last rewrite, and one written the day before has stopped naming anything at all.";
   "The file is spelled from the reading's own function name rather than written out, so that renaming the reading moves every door with it.";
   arguments_assert(arguments, 1);
-  let f_name = fn_name("text_to_speech");
-  let path_file = text_combine_multiple(["scripts/py/", f_name, ".py"]);
+  let path_file = text_combine_multiple([
+    "scripts/py/",
+    fn_name("text_to_speech"),
+    ".py",
+  ]);
   let commit = await git_file_text_arrived_commit(path_file, said);
   return commit;
 }
