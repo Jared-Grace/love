@@ -14,8 +14,11 @@ export async function app_code_lessons_review_since(commit) {
   ("A lesson counts as edited when a lesson-named function that only it reaches was edited - its own writing, whatever file that writing sits in, rather than only the file bearing its name. A screen is built from a family of functions and a lesson's family is spread across all of them.");
   ("What a lesson shares with a neighbour is reported apart from that, as the changed helper and the count of lessons standing on it. The cost of drawing the line there is that a helper two lessons share is named in the shared list and neither lesson is put on the review list for it - so read the shared list from its smallest counts upward, where the numbers are small enough to name what they touch.");
   let folder = folder_repo_love();
-  let f_name = fn_name("app_code_lessons_fns");
-  let list_path = text_combine_multiple(["js/", f_name, ".mjs"]);
+  let list_path = text_combine_multiple([
+    "js/",
+    fn_name("app_code_lessons_fns"),
+    ".mjs",
+  ]);
   let r2 = await app_code_lessons_review_since_names_after(
     commit,
     list_path,
