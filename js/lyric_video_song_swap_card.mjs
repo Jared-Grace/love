@@ -65,8 +65,11 @@ export function lyric_video_song_swap_card(parent, document, swap, name) {
   function offer(label, path) {
     let column = lyric_video_song_swap_column(row, label, path);
     async function press() {
-      let f_toggle = fn_name("lyric_video_song_swap_toggle");
-      let chosen = await api_read(f_toggle, [name, before, path]);
+      let chosen = await api_read(fn_name("lyric_video_song_swap_toggle"), [
+        name,
+        before,
+        path,
+      ]);
       marks(chosen);
     }
     html_on_click(column, press);
