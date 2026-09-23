@@ -19,9 +19,8 @@ export async function bible_glyph_chapter_references_write() {
     ordered,
     bible_glyph_chapter_reference_entry_text,
   );
-  let f_name = fn_name("bible_glyph_chapter_references");
   let written = await bible_glyph_chapter_chain_spliced(
-    f_name,
+    fn_name("bible_glyph_chapter_references"),
     "  let references = [\n",
     "  ];\n  return references;",
     entries,
