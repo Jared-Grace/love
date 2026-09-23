@@ -40,7 +40,6 @@ export async function qa_gate_said_plain_leaked(f_name) {
   list_add_multiple(hints, accused_nodes);
   let hinted = await qa_gate_names_hinted(f_name, remembered, depth);
   let accused = await qa_gate_names_accused(f_name);
-  let spelling = fn_name("fn_name");
   let calls = await function_ast_list_type_nodes(f_name, "CallExpression");
   let declarators = await function_ast_list_type_nodes(
     f_name,
@@ -49,7 +48,7 @@ export async function qa_gate_said_plain_leaked(f_name) {
   for (let call of calls) {
     let callee = property_get(call, "callee");
     let called = js_identifier_name_try(callee);
-    if (not_equal(called, spelling)) {
+    if (not_equal(called, fn_name("fn_name"))) {
       continue;
     }
     let inside_is = js_node_inside_any_is(call, hints);
