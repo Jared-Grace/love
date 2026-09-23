@@ -10,7 +10,11 @@ export async function pages_published_gate_run() {
   let path = pages_published_baseline_path();
   let hint =
     "these addresses are being served and the record does not hold them - if they are meant to be public, record them";
-  let name_write = fn_name("pages_published_baseline_write");
-  let r = await baseline_names_gate_generic(names, path, hint, name_write);
+  let r = await baseline_names_gate_generic(
+    names,
+    path,
+    hint,
+    fn_name("pages_published_baseline_write"),
+  );
   return r;
 }
