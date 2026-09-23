@@ -13,10 +13,9 @@ export async function bible_glyph_apps_aggregate_reaching_gate_run() {
   let found = await bible_glyph_apps_aggregate_reaching();
   let walked = property_get(found, "walked");
   let offenders = property_get(found, "offenders");
-  let f_name = fn_name("bible_glyph_chapter_fetched");
   let hint = text_combine_multiple([
     "this app can reach a function holding every picture chapter at once, so the page carries the whole book to draw one chapter of it - send for the one chapter instead, with ",
-    f_name,
+    fn_name("bible_glyph_chapter_fetched"),
     " or the fetching neighbour named after whichever aggregate was reached",
   ]);
   let r = list_empty_is_assert_walked_generic(walked, offenders, hint);
