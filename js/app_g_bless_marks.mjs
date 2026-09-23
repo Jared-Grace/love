@@ -1,10 +1,9 @@
-import { bless_view_aimed } from "./bless_view_aimed.mjs";
-import { app_g_bless_lit_except } from "./app_g_bless_lit_except.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_view_blessed } from "./bless_view_blessed.mjs";
+import { app_g_bless_lit_except } from "./app_g_bless_lit_except.mjs";
 import { app_g_bless_glows } from "./app_g_bless_glows.mjs";
 import { app_g_bless_homes } from "./app_g_bless_homes.mjs";
-import { bless_view_family_started } from "./bless_view_family_started.mjs";
+import { bless_view_aimed } from "./bless_view_aimed.mjs";
 import { app_g_bless_rings } from "./app_g_bless_rings.mjs";
 import { app_g_bless_pointers } from "./app_g_bless_pointers.mjs";
 export function app_g_bless_marks({
@@ -19,8 +18,8 @@ export function app_g_bless_marks({
 }) {
   arguments_assert(arguments, 1);
   ("Draws everything the record has to say about the street: the lights on the people who");
-  ("have been prayed for, the houses filled in behind them, and the rings on the people left");
-  ("in a house the player has started.");
+  ("have been prayed for, the houses filled in behind them, and the ring and arrow on whoever");
+  ("the prayer for discernment named.");
   ("The three are said together because they are one answer read three ways, and they are");
   ("all read from the same record on the same step. A prayer that finished a household");
   ("lights the last face, fills the last third of the house and takes the last ring off at");
@@ -57,18 +56,11 @@ export function app_g_bless_marks({
   if (ground) {
     app_g_bless_homes(homes, blessed, blocks);
   }
-  ("The ring is worked out last because it is the only one of the three that can be wrong");
-  ("about somebody already handled: it asks who is left, and who is left is decided by the");
-  ("same record the light was just read from.");
-  let remaining = bless_view_family_started(blessed, everyone);
-  app_g_bless_rings(glows, everyone, remaining);
-  ("Ringed and POINTED AT are no longer the same people, and that is the whole difference");
-  ("between the two marks. A ring says the player has prayed in this house before and has");
-  ("not finished it - a fact, true of every house they have opened, and it stays up. An");
-  ("arrow says go here next, and an arrow over ten heads at once has not said anything.");
-  ("So nothing is pointed at on its own: the arrow is kept for whoever the prayer for");
-  ("discernment named, and a player who has not asked is shown only the rings.");
-  ("Both are still drawn onto the same layer. A ring is on the ground and an arrow is over a");
+  ("Ringed and POINTED AT are the same people: whoever the prayer for discernment named,");
+  ("and nobody else. Nothing on the street says who to pray for next until the player has");
+  ("asked. A ring used to stay up on everybody left in a house the player had opened, and");
+  ("after one prayer that was already an answer to who next - given before the question.");
+  ("Both are drawn onto the same layer. A ring is on the ground and an arrow is over a");
   ("head, so a crowd that hides one of them cannot hide the other - and which of the two a");
   ("player notices first is a question about where they happen to be standing, not one this");
   ("has to answer.");
@@ -78,6 +70,7 @@ export function app_g_bless_marks({
   ("discerned person aimed at from a second place would be a third arrow disagreeing with");
   ("the other two.");
   let next = bless_view_aimed(blessed, discerned);
+  app_g_bless_rings(glows, everyone, next);
   app_g_bless_pointers(glows, everyone, next);
   ("The NARROWED list is handed back, because one more thing is aimed at it and it is not on");
   ("the map: the arrow at the edge of the screen, which hangs on the frame and stays put");
