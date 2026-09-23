@@ -15,17 +15,14 @@ export async function html_regenerate_stable_gate_run() {
     hint: "no page settled, which is not a pass - it is a sweep that found nothing to look at. Either the folders it reads have moved, or every page is now refused before it is checked",
   });
   let offenders = property_get(report, "offenders");
-  let f_name = fn_name("html_code");
-  let f_name2 = fn_name("html_code_body_own");
-  let f_name3 = fn_name("html_code_app_name");
   list_empty_is_assert_json(offenders, {
     hint: text_combine_multiple([
       "regenerating one of these pages would change it, and regenerating the result would change it again - so the page never settles and each pass drifts further from what the app wrote. Look at what ",
-      f_name,
+      fn_name("html_code"),
       " puts around a body that ",
-      f_name2,
+      fn_name("html_code_body_own"),
       " does not take back off, or at a title that ",
-      f_name3,
+      fn_name("html_code_app_name"),
       " does not turn back into a name",
     ]),
     offenders,
