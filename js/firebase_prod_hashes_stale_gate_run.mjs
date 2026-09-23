@@ -17,8 +17,7 @@ export async function firebase_prod_hashes_stale_gate_run() {
   let offenders = property_get(found, "offenders");
   let said =
     "this app reads as one that would change on the next sending, but what it is serving right now is not what the note beside it says - so the note is what is wrong, not the app. Read what every app is serving off the wire again, a few minutes for all of them at once, with ";
-  let right = fn_name("firebase_prod_hashes_write_all");
-  let hint = text_combine(said, right);
+  let hint = text_combine(said, fn_name("firebase_prod_hashes_write_all"));
   let r = list_empty_is_assert_walked_generic(walked, offenders, hint);
   return r;
 }
