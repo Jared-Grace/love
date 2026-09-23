@@ -1,3 +1,4 @@
+import { html_focus } from "./html_focus.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -31,6 +32,7 @@ export function app_receipts_main(context) {
   if (not(b)) {
     html_value_set(code_input, saved);
   }
+  html_focus(code_input);
   html_on_enter(code_input, on_next);
   app_shared_button_wide_next(root, on_next);
   let warning = html_div(root);
