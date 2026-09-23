@@ -12,13 +12,11 @@ export function qa_gates_read() {
     return gates;
   } catch (caught) {
     let cause = property_get(caught, "message");
-    let f_name = fn_name("file_imports_repair");
-    let f_name2 = fn_name("qa_gates");
     let combined2 = text_combine_multiple([
       " - repair it with ",
-      f_name,
+      fn_name("file_imports_repair"),
       " on js/",
-      f_name2,
+      fn_name("qa_gates"),
       ".mjs, then run the gate again",
     ]);
     let combined = text_combine_multiple([
