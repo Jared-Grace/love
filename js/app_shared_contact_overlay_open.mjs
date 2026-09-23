@@ -9,7 +9,6 @@ export async function app_shared_contact_overlay_open() {
   "The button keeps its own plain handler and calls this, so the press stays the ordinary thing a button does and the fetching lives here under a name that says it.";
   arguments_assert(arguments, 0);
   let module = await import("./app_shared_contact_overlay.mjs");
-  let f_name = fn_name("app_shared_contact_overlay");
-  let fn = property_get(module, f_name);
+  let fn = property_get(module, fn_name("app_shared_contact_overlay"));
   await fn();
 }
