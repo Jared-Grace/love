@@ -16,10 +16,9 @@ export async function bundle_size_step_gate_run() {
   let read = await bundle_sizes_steps_measured();
   let names = property_get(read, "names");
   let steps = property_get(read, "steps");
-  let accept = fn_name("bundle_sizes_baseline_write");
   let hint = text_combine_multiple([
     "these bundles grew by more than a bundle grows in one step - read what arrived in them, and if it belongs there run ",
-    accept,
+    fn_name("bundle_sizes_baseline_write"),
     " to grow from here instead",
   ]);
   list_empty_is_assert_json(names, {
