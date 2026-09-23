@@ -48,7 +48,8 @@ export async function file_overwrite_uncached(file_path, contents) {
     return;
   }
   ("★ THE DISK HALF IS ASKED FOR BY NAME AND NOT IMPORTED, and that is about weight rather than about tidiness. The check above decides which machine RUNS it and settles nothing about which machine DOWNLOADS it - a bundler follows a plain import whether the branch is walked or not, so every page that saved anything at all carried the whole of a build machine's file writing in order never to run a line of it. A name joined into a path at the moment it is wanted is something a bundler cannot see through.");
-  let f_name = fn_name("file_overwrite_uncached_node");
-  let fn = await function_import_relative(f_name);
+  let fn = await function_import_relative(
+    fn_name("file_overwrite_uncached_node"),
+  );
   await fn(file_path, contents);
 }
