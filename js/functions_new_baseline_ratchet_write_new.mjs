@@ -19,10 +19,9 @@ export async function functions_new_baseline_ratchet_write_new(
   let abc = text_combine_3("let known = await ", lister, "();");
   let abc4 = text_combine_3("await ", name_growth, "(known);");
   let abc5 = text_combine_3("let path = ", name_path, "();");
-  let f_name = fn_name("baseline_known_write");
   let combined9 = text_combine_multiple([
     "let r = await ",
-    f_name,
+    fn_name("baseline_known_write"),
     "(known, path);",
   ]);
   await function_new_code(name_write, [], true, [
