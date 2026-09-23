@@ -19,14 +19,12 @@ export async function permission_grants_gate_run() {
   let worsened = property_get(change, "worsened");
   ("each of the three faults is thrown as a record rather than as a sentence with the names read into it, because whoever reads a failure next reads it for names and cannot tell a grant being accused from a command being recommended. the commands named here are among the most reachable in the repo, and naming them beside the offenders held every app that ships them.");
   let list = list_map_property(added, "name");
-  let remove = fn_name("permission_grant_remove");
-  let dead_remove = fn_name("permission_grants_dead_remove");
   let bless = fn_name("permission_grants_baseline_bless");
   let hint_added = text_combine_multiple([
     "these standing grants fail the safety check and were not recorded as known - take the rule out with ",
-    remove,
+    fn_name("permission_grant_remove"),
     ", or, where the function has been deleted and the rule is left naming nothing, take back every such rule at once with ",
-    dead_remove,
+    fn_name("permission_grants_dead_remove"),
     ", or narrow the function, or, if the grant was meant, name it to ",
     bless,
     " one at a time",
@@ -43,10 +41,9 @@ export async function permission_grants_gate_run() {
     hint: hint_worsened,
   });
   let list3 = list_map_property(stale, "name");
-  let baseline_write = fn_name("permission_grants_baseline_write");
   let hint_stale = text_combine_multiple([
     "these baseline entries pass the check now - rerun ",
-    baseline_write,
+    fn_name("permission_grants_baseline_write"),
     " to shrink the baseline",
   ]);
   list_empty_is_assert_json(list3, {
