@@ -22,7 +22,6 @@ export async function functions_statements_after_return_gate_run() {
   let walked = property_get(swept, "walked");
   let offenders = property_get(swept, "offenders");
   let path = functions_statements_after_return_baseline_path();
-  let name_write = fn_name("functions_statements_after_return_baseline_write");
   let hint =
     "these functions carry statements below a return - delete the dead lines, or move them above the return if they were meant to run";
   let r = await baseline_names_gate_walked_generic(
@@ -30,7 +29,7 @@ export async function functions_statements_after_return_gate_run() {
     offenders,
     path,
     hint,
-    name_write,
+    fn_name("functions_statements_after_return_baseline_write"),
   );
   return r;
 }
