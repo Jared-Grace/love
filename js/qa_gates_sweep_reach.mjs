@@ -16,14 +16,10 @@ export async function qa_gates_sweep_reach() {
   let gates = qa_gates();
   async function gate_reach(gate) {
     let reachable = await function_reachable_names(gate.name);
-    let item = fn_name("folder_read_files");
-    let folder_listed = list_includes(reachable, item);
-    let item2 = fn_name("js_files_texts");
-    let texts_read = list_includes(reachable, item2);
-    let item3 = fn_name("function_parse");
-    let parsed = list_includes(reachable, item3);
-    let item4 = fn_name("functions_names");
-    let every_function = list_includes(reachable, item4);
+    let folder_listed = list_includes(reachable, fn_name("folder_read_files"));
+    let texts_read = list_includes(reachable, fn_name("js_files_texts"));
+    let parsed = list_includes(reachable, fn_name("function_parse"));
+    let every_function = list_includes(reachable, fn_name("functions_names"));
     let record = {
       name: gate.name,
       folder_listed,
