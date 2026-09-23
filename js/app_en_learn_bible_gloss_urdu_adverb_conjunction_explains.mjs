@@ -2,7 +2,14 @@ import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_map } from "./list_map.mjs";
+import { app_en_learn_bible_gloss_urdu_word_explains } from "./app_en_learn_bible_gloss_urdu_word_explains.mjs";
 export function app_en_learn_bible_gloss_urdu_adverb_conjunction_explains() {
+  "The small English words that are not a kind of word so much as a leftover: the ones that shade a sentence, the ones that place it in time or space, the ones that count roughly, and the ones that join one clause to the next.";
+  "Urdu grammar would split these into ظرف and حرفِ ربط and would be right to. They are in one table because the reason for every entry in it is the same: a reader meets the word in the first chapter, keeps meeting it, and cannot work it out from a root or a suffix. The reader either is told or is stuck. Splitting them four ways would have given four tables of a dozen words each with no separate reason standing behind any of them.";
+  "The sentences are short on purpose, and shorter than the ones in the verb table next door. A verb needs its three forms explained because English will not give them up; ‘here’ needs the word یہاں and then nothing. Saying more would not be teaching, it would be filling.";
+  "Where a word honestly does two jobs the entry says both, in the order a reader meets them, and says nothing about which job it is doing in this particular verse. That restraint is the whole reason these entries can stand where a shared label stood: a wording that picked one job would be a job-in-this-verse claim, which is the thing refused all the way down the shared-label note. ‘just’, ‘so’, ‘since’, ‘how’, ‘still’, ‘while’, ‘where’, ‘when’ and ‘as’ are the nine that needed it.";
+  "Several entries name their Urdu grammar class - وقت کا ظرف for the time words, حرفِ ربط for the joining ones - and then say in plain words what the class means. That is not decoration. The shared labels these entries replace are written in exactly those terms, and a settled wording may only stand where a label stood if it says everything the label said. Naming the class and glossing it says the label's whole content and then says more.";
+  "The capitals are written out rather than derived, the same way the verb table writes its two. A word standing at the start of a verse gets one extra sentence about why its first letter is big, and that sentence is copied word for word from the verb table rather than composed again, because two true sentences saying one thing in different words is exactly what the store is trying to stop doing. ‘After’ is the odd one: its lowercase lives in the closed-class table rather than here, so its capital is built by reading that table instead of this one. The alternative was writing a second wording for ‘after’, which is the failure just named.";
   let r = {
     even: "یہ لفظ بات پر زور دیتا ہے: اُردُو میں 'تک' یا 'بھی'۔ جَیسے 'even the wind' یعنی 'ہَوا تک'۔",
     just: "یہ لفظ دو کام کرتا ہے: 'صِرف' یعنی اَور کُچھ نہیں، اَور 'ابھی' یعنی اِسی وقت۔",
@@ -13,15 +20,15 @@ export function app_en_learn_bible_gloss_urdu_adverb_conjunction_explains() {
     quite: "یہ لفظ بتاتا ہے کہ بات پُوری طرح اَیسی ہے: 'بالکُل'۔",
     yes: "یہ لفظ جواب میں 'ہاں' کہتا ہے۔",
     how: "یہ لفظ دو کام کرتا ہے: پُوچھتا ہے کہ کام کِس طرح ہُوا ('کَیسے')، اَور زور بھی دیتا ہے ('کِتنا')۔",
-    so: "یہ لفظ دو کام کرتا ہے: کِسی صِفت کو بڑھاتا ہے ('اِتنا')، اَور نتیجہ بھی بتاتا ہے ('اِس لیٔے')۔",
+    so: "یہ لفظ دو کام کرتا ہے: کِسی صِفت کو بڑھاتا ہے ('اِتنا')، اَور حرفِ ربط بن کر، یعنی دو باتوں کو جوڑ کر، نتِیجہ بتاتا ہے ('اِس لیٔے')۔",
     therefore:
       "یہ لفظ بتاتا ہے کہ پہلی بات کی وجہ سے اگلی بات ہویٔی: 'اِس لیٔے'۔",
-    then: "یہ لفظ وقت بتاتا ہے: 'پِھر'، یعنی اُس کے بعد۔",
-    now: "یہ لفظ وقت بتاتا ہے: 'اب'، یعنی اِسی وقت۔",
-    today: "یہ لفظ وقت بتاتا ہے: 'آج'۔",
-    soon: "یہ لفظ وقت بتاتا ہے: 'جلد'، یعنی تھوڑی دیر میں۔",
+    then: "یہ لفظ وقت کا ظرف ہے، یعنی وقت بتاتا ہے: 'پِھر'، یعنی اُس کے بعد۔",
+    now: "یہ لفظ وقت کا ظرف ہے، یعنی وقت بتاتا ہے: 'اب'، یعنی اِسی وقت۔",
+    today: "یہ لفظ وقت کا ظرف ہے، یعنی وقت بتاتا ہے: 'آج'۔",
+    soon: "یہ لفظ وقت کا ظرف ہے، یعنی وقت بتاتا ہے: 'جلد'، یعنی تھوڑی دیر میں۔",
     again: "یہ لفظ بتاتا ہے کہ کام دوبارہ ہُوا: 'پِھر سے'۔",
-    always: "یہ لفظ وقت بتاتا ہے: 'ہمیشہ'، یعنی ہر وقت۔",
+    always: "یہ لفظ وقت کا ظرف ہے، یعنی وقت بتاتا ہے: 'ہمیشہ'، یعنی ہر وقت۔",
     still:
       "یہ لفظ دو کام کرتا ہے: بتاتا ہے کہ بات اب تک وَیسی ہی ہے ('اب بھی')، اَور خاموش ہونے کو بھی کہتا ہے ('چُپ')۔",
     already: "یہ لفظ بتاتا ہے کہ کام پہلے ہی ہو چُکا: 'پہلے ہی'۔",
@@ -35,15 +42,17 @@ export function app_en_learn_bible_gloss_urdu_adverb_conjunction_explains() {
       "یہ لفظ گِنتی بتاتا ہے: 'کیٔی'، یعنی ایک دو سے زیادہ مگر بہت سے نہیں۔",
     many: "یہ لفظ گِنتی بتاتا ہے: 'بہت سے'۔ یہ اُن چیزوں کے لیٔے آتا ہے جو گِنی جا سکتی ہیں۔",
     much: "یہ لفظ مِقدار بتاتا ہے: 'بہت'۔ یہ اُس چیز کے لیٔے آتا ہے جو گِنی نہیں جاتی، جَیسے پانی۔",
-    more: "یہ لفظ بتاتا ہے کہ پہلے سے زیادہ ہے: 'زیادہ'۔",
-    most: "یہ لفظ بتاتا ہے کہ سب سے زیادہ ہے: 'سب سے زیادہ'۔",
+    more: "یہ لفظ مِقدار بتاتا ہے: 'زیادہ'۔ یہ وہ شکل ہے جو دو کا مُقابلہ کر کے بتاتی ہے کہ ایک دُوسرے سے بڑھ کر ہے۔",
+    most: "یہ لفظ مِقدار بتاتا ہے: 'سب سے زیادہ'۔ یہ وہ شکل ہے جو سب کا مُقابلہ کر کے بتاتی ہے کہ ایک سب سے بڑھ کر ہے۔",
     any: "یہ لفظ مِقدار بتاتا ہے: 'کویٔی بھی'، 'ذرا بھی'۔ یہ زیادہ تر سوال میں یا اِنکار کے ساتھ آتا ہے۔",
     each: "یہ لفظ ایک ایک کر کے بتاتا ہے: 'ہر ایک'۔",
     both: "یہ لفظ دونوں کی بات کرتا ہے: 'دونوں'۔",
-    when: "یہ لفظ دو کام کرتا ہے: دو باتوں کو جوڑ کر وقت بتاتا ہے ('جب')، اَور وقت کے بارے میں پُوچھتا بھی ہے ('کب')۔",
+    when: "یہ لفظ دو کام کرتا ہے: وقت کا حرفِ ربط بن کر، یعنی دو باتوں کو جوڑ کر، وقت بتاتا ہے ('جب')، اَور وقت کے بارے میں پُوچھتا بھی ہے ('کب')۔",
     while:
-      "یہ لفظ دو باتوں کو جوڑتا ہے اَور بتاتا ہے کہ دونوں کام ایک ہی وقت میں ہو رہے ہیں: 'جِس وقت'۔",
-    until: "یہ لفظ بتاتا ہے کہ بات کہاں تک چلتی رہی: 'جب تک'۔",
+      "یہ لفظ وقت کا حرفِ ربط ہے: دو باتوں کو جوڑتا ہے اَور بتاتا ہے کہ دونوں کام ایک ہی وقت میں ہو رہے ہیں ('جِس وقت')۔",
+    until:
+      "یہ لفظ وقت کا حرفِ ربط ہے، یعنی دو باتوں کو جوڑ کر وقت بتاتا ہے: 'جب تک'، یعنی بات وہاں تک چلتی رہی۔",
+    as: "یہ لفظ کیٔی کام کرتا ہے۔ کبھی یہ وقت کا حرفِ ربط ہوتا ہے، یعنی دو باتوں کو جوڑ کر وقت بتاتا ہے ('جِس وقت')؛ کبھی مُقابلہ کراتا ہے ('جَیسا')؛ اَور کبھی بتاتا ہے کہ کویٔی کِس حَیثیت سے ہے ('کے طور پر')۔",
     because: "یہ لفظ وجہ بتاتا ہے: 'کیونکہ'۔",
     since:
       "یہ لفظ دو کام کرتا ہے: وقت بتاتا ہے ('جب سے')، اَور وجہ بھی بتاتا ہے ('چُونکہ')۔",
@@ -64,18 +73,19 @@ export function app_en_learn_bible_gloss_urdu_adverb_conjunction_explains() {
     How: "how",
     Where: "where",
     Some: "some",
+    As: "as",
     If: "if",
   };
+  let capital_tail = " بڑا حرف اِس لیٔے ہے کہ لفظ جُملے کے شُروع میں کھڑا ہے۔";
   function capital_write(word) {
     let lower = property_get(capitals, word);
     let said = property_get(r, lower);
-    property_set(
-      r,
-      word,
-      said + " بڑا حرف اِس لیٔے ہے کہ لفظ جُملے کے شُروع میں کھڑا ہے۔",
-    );
+    property_set(r, word, said + capital_tail);
   }
   let capital_words = object_property_names(capitals);
   list_map(capital_words, capital_write);
+  let elsewhere = app_en_learn_bible_gloss_urdu_word_explains();
+  let after_said = property_get(elsewhere, "after");
+  property_set(r, "After", after_said + capital_tail);
   return r;
 }
