@@ -1,5 +1,5 @@
+import { firebase_upload_blob_browser_quiet } from "./firebase_upload_blob_browser_quiet.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { firebase_app_initialize } from "./firebase_app_initialize.mjs";
 import { html_loading } from "./html_loading.mjs";
 export async function firebase_upload_blob_browser(destination, blob) {
   arguments_assert(arguments, 2);
