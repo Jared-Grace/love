@@ -1,36 +1,44 @@
-import { language_code_key } from "./language_code_key.mjs";
-import { app_reply_buttons_languages_on_toggle } from "./app_reply_buttons_languages_on_toggle.mjs";
-import { app_reply_buttons_languages_reorder } from "./app_reply_buttons_languages_reorder.mjs";
-import { app_shared_language_sort_button } from "./app_shared_language_sort_button.mjs";
-import { ebible_languages_sort_mode } from "./ebible_languages_sort_mode.mjs";
-import { property_get } from "./property_get.mjs";
-import { property_set } from "./property_set.mjs";
-import { each_index } from "./each_index.mjs";
 import { html_div } from "./html_div.mjs";
-import { noop } from "./noop.mjs";
+import { language_code_key } from "./language_code_key.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { ebible_language_en_code } from "./ebible_language_en_code.mjs";
+import { list_find_property } from "./list_find_property.mjs";
+import { list_add } from "./list_add.mjs";
+import { html_clear } from "./html_clear.mjs";
+import { app_shared_languages_prompt_text } from "./app_shared_languages_prompt_text.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { app_shared_bible_subset_sorted_choose } from "./app_shared_bible_subset_sorted_choose.mjs";
 export function app_reply_buttons_languages(languages_chosen, root, languages) {
-  ebible_languages_sort_mode(languages);
-  let toggle_row = html_div(root);
-  let buttons_row = html_div(root);
-  let on_toggle = noop;
-  let buttons = app_reply_buttons_languages_on_toggle(
-    languages_chosen,
-    on_toggle,
-    buttons_row,
-    languages,
-  );
-  let by_code = {};
-  function pair(language, index) {
-    let property_name = language_code_key();
-    let code = property_get(language, property_name);
-    let button = property_get(buttons, index);
-    property_set(by_code, code, button);
+  "the same scrolled, searchable list the bible reader and the search app choose languages from, rather than a button for every one of the hundreds of languages laid out on the page";
+  let holder = html_div(root);
+  let key_property = language_code_key();
+  function on_change() {
+    "a reply needs a language to quote the verses in, so emptying the list falls back to english, as the bible reader does";
+    let empty = list_empty_is(languages_chosen);
+    if (empty) {
+      let code = ebible_language_en_code();
+      let en = list_find_property(languages, key_property, code);
+      list_add(languages_chosen, en);
+    }
   }
-  each_index(languages, pair);
-  function on_sort_change() {
-    ebible_languages_sort_mode(languages);
-    app_reply_buttons_languages_reorder(buttons_row, languages, by_code);
+  function update() {
+    html_clear(holder);
+    let prompt = app_shared_languages_prompt_text();
+    let choices_label = text_combine("1. ", prompt);
+    app_shared_bible_subset_sorted_choose({
+      container: holder,
+      options: languages,
+      chosen: languages_chosen,
+      name_property: "name",
+      key_property,
+      on_change,
+      choices_label,
+      on_sort_change: update,
+    });
   }
-  app_shared_language_sort_button(toggle_row, on_sort_change);
-  return buttons;
+  update();
+  let r = {
+    update,
+  };
+  return r;
 }

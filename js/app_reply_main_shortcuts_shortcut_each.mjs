@@ -1,7 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_reply_languages_chosen_reset } from "./app_reply_languages_chosen_reset.mjs";
-import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
 import { list_find_property } from "./list_find_property.mjs";
 import { property_get_invoke } from "./property_get_invoke.mjs";
 import { each } from "./each.mjs";
@@ -25,7 +24,7 @@ export function app_reply_main_shortcuts_shortcut_each(
   async function lambda5() {
     app_reply_languages_chosen_reset(languages_chosen, languages2, languages);
     await update(count);
-    list_map_property_invoke(buttons_languages, "update");
+    property_get_invoke(buttons_languages, "update");
     function lambda7(r) {
       let b = list_find_property(buttons_responses, "text", r);
       property_get_invoke(b, "click");
