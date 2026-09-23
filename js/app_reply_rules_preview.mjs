@@ -37,15 +37,15 @@ export async function app_reply_rules_preview() {
   let chooser = html_div(root);
   let listed = html_div(root);
   ("Every change whose files are all approved is put into the code before anything is read, so a change finished on a visit that was cut off goes in now and is not offered again.");
-  let f_apply = fn_name("reply_proposals_approved_apply");
-  await app_shared_api_named(f_apply, []);
-  let f = fn_name("app_message_reply_proposals_shown");
-  let shown = await app_shared_api_named(f, []);
+  await app_shared_api_named(fn_name("reply_proposals_approved_apply"), []);
+  let shown = await app_shared_api_named(
+    fn_name("app_message_reply_proposals_shown"),
+    [],
+  );
   let proposals = property_get(shown, "proposals");
   let cases = property_get(shown, "cases");
   ("The verdicts already left are fetched once beside the changes and handed down, rather than each file asking after its own. A file's own asking would be a round trip for a few lines of text, repeated as many times as there are files, and every one of them would land after the page had already drawn.");
-  let f_approved = fn_name("reply_approved_all");
-  let approvals = await app_shared_api_named(f_approved, []);
+  let approvals = await app_shared_api_named(fn_name("reply_approved_all"), []);
   let count_proposals = list_size(proposals);
   let count_cases = list_size(cases);
   let names_ok = ["ok"];
