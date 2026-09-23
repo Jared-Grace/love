@@ -31,10 +31,13 @@ export async function functions_gate_run_unwired_wire() {
       list_add(refused, row);
       continue;
     }
-    let f_name2 = fn_name("qa_gates");
-    let f_name3 = fn_name("js_find_declaration_named");
-    let f_name4 = fn_name("js_array_identifier_add");
-    let args = [f_name2, f_name3, "gates", f_name4, f_name];
+    let args = [
+      fn_name("qa_gates"),
+      fn_name("js_find_declaration_named"),
+      "gates",
+      fn_name("js_array_identifier_add"),
+      f_name,
+    ];
     await function_call_commit(function_select_apply_args_auto, args);
     list_add(wired, f_name);
   }
