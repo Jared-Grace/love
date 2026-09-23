@@ -33,11 +33,10 @@ export function js_elements_calls_only_assert(elements, declared) {
     let results_only = list_all_is(elements, element_result_is);
     if (results_only) {
       let size = list_size(elements);
-      let f_name = fn_name("function_list_call_add");
       error_json({
         hint: text_combine_multiple([
           "this list holds what its functions handed back rather than the functions themselves, so joining it means adding a call and not a name - ",
-          f_name,
+          fn_name("function_list_call_add"),
           " is the half that does that",
         ]),
         size,
