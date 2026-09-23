@@ -28,8 +28,9 @@ export async function lyric_video_song_review_preview() {
   let cards = html_div(root);
   async function song_show(name) {
     html_clear(cards);
-    let f_read = fn_name("lyric_video_song_document_read");
-    let document = await api_read(f_read, [name]);
+    let document = await api_read(fn_name("lyric_video_song_document_read"), [
+      name,
+    ]);
     let none = null_is(document);
     if (none) {
       app_shared_text_quiet(cards, "this song has no document yet");
