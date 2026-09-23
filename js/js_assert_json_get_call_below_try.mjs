@@ -40,8 +40,7 @@ export function js_assert_json_get_call_below_try(
     }
     let callee = property_get(call, "callee");
     let callee_name = js_identifier_name_try(callee);
-    let right = fn_name("assert_json_get");
-    let asked = equal(callee_name, right);
+    let asked = equal(callee_name, fn_name("assert_json_get"));
     if (not(asked)) {
       return;
     }
