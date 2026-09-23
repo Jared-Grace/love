@@ -8,8 +8,7 @@ export async function qa_snapshot_timed_solo_told() {
   "The run is asked for as a list of words rather than as a line of text, so nothing carried in a word can turn into a second word - and because the program is spelled inside the runner rather than passed to it, asking this by name cannot become a way to run something else.";
   "Nothing is caught here. A gate that complains is caught by the timing itself and written down as a gate that took that long and said that - so anything that reaches this far is the run failing rather than a gate failing, and it should be seen.";
   let folder = await qa_tree_ensure();
-  let f_name = fn_name("qa_gate_tree_timed_solo");
-  let words = ["scripts/ai.mjs", f_name];
+  let words = ["scripts/ai.mjs", fn_name("qa_gate_tree_timed_solo")];
   let said = await node_run_lines_whole(folder, words);
   console.log(said);
   let r = {
