@@ -15,6 +15,5 @@ export function js_property_path_get_2_step_replace(call, name) {
   js_node_identifier_replace(target, name);
   list_remove_at(args, 1);
   let callee = property_get(call, "callee");
-  let f_name = fn_name("property_get");
-  js_node_identifier_replace(callee, f_name);
+  js_node_identifier_replace(callee, fn_name("property_get"));
 }
