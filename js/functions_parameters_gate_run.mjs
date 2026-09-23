@@ -17,16 +17,13 @@ export async function functions_parameters_gate_run() {
   let named = property_get(measured, "over");
   let path = functions_parameters_baseline_path();
   let name_write = fn_name("functions_parameters_baseline_write");
-  let name_add = fn_name("functions_parameters_baseline_add");
-  let name_record = fn_name("function_parameters_record");
-  let name_named = fn_name("function_parameters_record_named");
   let hint = text_combine_multiple([
     "these functions now ask a caller to line up more things than one may - gather the whole row into a single record with ",
-    name_record,
+    fn_name("function_parameters_record"),
     ", which rewrites every caller with it, or gather only the ones that belong together with ",
-    name_named,
+    fn_name("function_parameters_record_named"),
     " and leave the rest as they are. If the row is really the shape of what the function does, record it by name with ",
-    name_add,
+    fn_name("functions_parameters_baseline_add"),
     " - which grows the record by exactly the names given, so they stand in the commit for somebody to disagree with, and leaves every other name here still failing. ",
     name_write,
     " is the one to run after a collapse - it shrinks the record and refuses to grow it",
