@@ -263,6 +263,25 @@ export function usfm_chapters_verses_cases() {
       why: "a pair of brackets is how a translation writes a verse it has no words for. A reader shown a numbered blank would take it for a fault in the app rather than a fact about the translation",
     },
     {
+      usfm: "\\c 1\n\\v 1 Here.\n\\v 2 .\n\\v 3 ‑\n\\v 4 (-)\n\\v 5 There.\n",
+      chapters: [
+        {
+          chapter_number: "1",
+          verses: [
+            {
+              verse_number: "1",
+              text: "Here.",
+            },
+            {
+              verse_number: "5",
+              text: "There.",
+            },
+          ],
+        },
+      ],
+      why: "★ THE BRACKETS ARE NOT THE ONLY WAY A TRANSLATION WRITES AN EMPTY VERSE. Walking every downloaded bible turned up seventeen marks doing that one job, and these three are the ones that show why no list of them can be right: a bare full stop, which a reader hears as a verse that is simply blank; a bracket with a dash inside it; and the dash in the middle, which is not the ordinary dash at all but the one a printer uses to keep a word from breaking across a line - it looks the same on the page and matches nothing written against the ordinary one. So the question asked of a verse is whether a letter or a digit is in it anywhere, which is finite, rather than whether it is one of the marks anybody has happened to see",
+    },
+    {
       usfm: '\\c 1\n\\v 1 \\zaln-s |x-strong="H3068" x-content="יְהוָה"\\*\\w Yahweh|x-occurrence="1"\\w*\\zaln-e\\*\\zaln-s |x-strong="H0559"\\*\\w said|x-occurrence="1"\\w*\\zaln-e\\*,\n',
       chapters: [
         {
