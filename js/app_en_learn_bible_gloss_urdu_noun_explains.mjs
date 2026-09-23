@@ -3,7 +3,9 @@ export function app_en_learn_bible_gloss_urdu_noun_explains() {
   "These are words whose meaning does not move from one verse to the next. A hand is a hand in every chapter it appears in, so one wording written once is truer than a sentence guessed afresh at each place, and a reader meeting the word again meets the same sentence and knows it.";
   "Each wording says what kind of word it is and then hands over the Urdu word for the thing, because the reader already has Urdu and is being handed English. That is the whole of what a beginner needs from an ordinary noun, and it is exactly what the bare label reading ‘noun’ withholds.";
   "A second sentence is added only where a beginner would go wrong without it: a plural that does not take an s, a word English uses for two things Urdu keeps apart, a word that looks like another word already met. Where there is nothing of that kind to say, one sentence is the whole entry, because a sentence written to fill a space teaches nothing and costs the reader the same attention as one that does.";
-  "Words carrying a capital in the passages are deliberately absent. The lookup that uses this folds a capital away so that one entry answers for a word at the head of a sentence, and that folding cannot tell ‘Father’ from ‘father’ or ‘Spirit’ from ‘spirit’. Those pairs mean different things in these passages, so one wording cannot serve both and they wait for a sentence written where they stand.";
+  "A handful of words are written down twice, once in small letters and once with a capital, because in these passages the two spellings mean different things. The lookup asks for the word exactly as it stands before it folds a capital away, so the two entries do not collide and each spelling gets its own sentence. That was read out of the lookup rather than assumed: the first draft of this left every capitalised word out, on the belief that the folding would hand ‘Father’ the sentence written for ‘father’, and it would not have.";
+  "What a capitalised entry may say is narrower than what its small-letter twin may say, and the reason is that a capital has two causes. It falls on a word standing for God, and it falls on any word at all standing at the head of its sentence - and a man addressing his own father as ‘Father, I have sinned’ carries one while meaning the other. So a capitalised entry names both causes and leaves the reader to see which is in front of them, rather than announcing an answer that would be wrong wherever the second cause is the true one.";
+  "‘Spirit’ is still absent, and so is every other pair where nobody has written the second sentence yet. Being able to write two spellings apart is not the same as having written them, and a word with only its small-letter entry has its capitalised places left exactly as they are.";
   let r = {
     man: "اِسم ہے: آدمی، مرد۔ اِس کی جمع بےقاعدہ ہے: 'man' سے 'men' بنتا ہے، 's' لگا کر نہیں۔",
     woman:
@@ -13,6 +15,16 @@ export function app_en_learn_bible_gloss_urdu_noun_explains() {
     boy: "اِسم ہے: لڑکا۔",
     girl: "اِسم ہے: لڑکی۔",
     mother: "اِسم ہے: ماں۔",
+    father: "اِسم ہے: باپ۔",
+    Father:
+      "اِسم ہے: باپ۔ انگریزی میں یہ لفظ بڑے حرف سے دو وجہ سے لکھا جاتا ہے: یا تو یہ خُدا کے لیٔے آیا ہے، یا یہ جُملے کے شُروع میں کھڑا ہے۔ دیکھیٔے کہ اِس سے پہلے کویٔی لفظ ہے یا نہیں۔",
+    son: "اِسم ہے: بیٹا۔",
+    Son: "اِسم ہے: بیٹا۔ بڑا حرف یا تو خُدا کے بیٹے کے لیٔے آتا ہے، یا اِس لیٔے کہ لفظ جُملے کے شُروع میں کھڑا ہے۔",
+    king: "اِسم ہے: بادشاہ۔",
+    King: "اِسم ہے: بادشاہ۔ بڑا حرف یا تو اِس لیٔے ہے کہ یہ کِسی کے نام کے ساتھ لگا ہے، جیسے 'King Herod'، یا اِس لیٔے کہ لفظ جُملے کے شُروع میں کھڑا ہے۔",
+    God: "اِسم ہے: خُدا۔ انگریزی میں جب یہ ایک ہی سچّے خُدا کے لیٔے آتا ہے تو ہمیشہ بڑے حرف سے لکھا جاتا ہے۔",
+    Sabbath:
+      "اِسم ہے: سبت، یعنی آرام کا دِن۔ یہ ہمیشہ بڑے حرف سے لکھا جاتا ہے، کیونکہ یہ ایک خاص دِن کا نام ہے۔",
     brother:
       "اِسم ہے: بھایٔی۔ انگریزی میں بڑے اَور چھوٹے بھایٔی کے لیٔے ایک ہی لفظ آتا ہے۔",
     sister: "اِسم ہے: بہن۔",
