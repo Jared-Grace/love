@@ -10,10 +10,9 @@ export async function functions_unreachable_check_gate_run() {
   "The functions at fault are thrown as a record rather than printed and then named again inside a sentence, because whoever reads a failure next reads it for names and cannot tell a name being accused from a name being named as the cure. The cure and the checker each site asks are advice, and the checker is the plainest innocent of all - it is doing exactly what it says it does.";
   let sites = await functions_unreachable_check_sites();
   let names = list_map_property(sites, "f_name");
-  let f_name = fn_name("list_matching_single");
   let advice = text_combine_multiple([
     "these checks can never be true - hand the sentence to ",
-    f_name,
+    fn_name("list_matching_single"),
     " instead",
   ]);
   let hint = {
