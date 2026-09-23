@@ -34,8 +34,7 @@ export function js_html_style_helper_try(declaration) {
     return null;
   }
   let call = property_get(statement, "expression");
-  let name2 = fn_name("html_style_set");
-  let sets = js_call_callee_name_equal(call, name2);
+  let sets = js_call_callee_name_equal(call, fn_name("html_style_set"));
   if (not(sets)) {
     return null;
   }
