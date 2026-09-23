@@ -10,8 +10,13 @@ export function app_reply_rules_file_notes(card, name) {
     fn_name("notes_read"),
     " with this name and the file's name.");
   ("THERE IS ONE PART, THE CODE. Parts earn a press by being a different place to look for the fault, and a file of code has one; a second press would be a choice every note has to make for nothing.");
-  let store = fn_name("app_reply_rules_file_notes");
   let names = ["code"];
-  let holder = app_shared_notes_review(card, store, name, name, names);
+  let holder = app_shared_notes_review(
+    card,
+    fn_name("app_reply_rules_file_notes"),
+    name,
+    name,
+    names,
+  );
   return holder;
 }
