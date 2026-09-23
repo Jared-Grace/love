@@ -16,13 +16,11 @@ export async function function_nested_rename(f_name, nested_name, name_after) {
     hint: "a repo function already answers to this name, so a piece named that way inside a body would hide it from every line below - pick a name of its own",
     name_after,
   });
-  let select_fn_name = fn_name("js_function_nested_find_named");
-  let apply_fn_name = fn_name("js_selects_function_rename");
   let output = await function_select_apply_args_auto(
     f_name,
-    select_fn_name,
+    fn_name("js_function_nested_find_named"),
     nested_name,
-    apply_fn_name,
+    fn_name("js_selects_function_rename"),
     name_after,
   );
   return output;
