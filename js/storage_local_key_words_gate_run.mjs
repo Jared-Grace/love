@@ -25,20 +25,18 @@ export async function storage_local_key_words_gate_run() {
     return n2;
   }
   let fresh = list_filter(found, recorded_not_is);
-  let f_name = fn_name("storage_local_key_words_write");
   list_empty_is_assert_json(gone, {
     hint: text_combine_multiple([
       "a word written into keys in people's browsers is no longer written anywhere here - every setting saved under it is now unreachable. Put the old word back, or, if losing that data was meant, say so with ",
-      f_name,
+      fn_name("storage_local_key_words_write"),
       " so the shrunken record stands in the commit",
     ]),
     gone,
   });
-  let f_name2 = fn_name("storage_local_key_words_record_new");
   list_empty_is_assert_json(fresh, {
     hint: text_combine_multiple([
       "a word has newly reached a browser storage key and the record has never held it - nothing is lost, so record it with ",
-      f_name2,
+      fn_name("storage_local_key_words_record_new"),
       " which only ever adds and cannot clear a word that has gone",
     ]),
     fresh,
