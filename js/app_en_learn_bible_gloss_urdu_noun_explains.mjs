@@ -5,7 +5,7 @@ export function app_en_learn_bible_gloss_urdu_noun_explains() {
   "A second sentence is added only where a beginner would go wrong without it: a plural that does not take an s, a word English uses for two things Urdu keeps apart, a word that looks like another word already met. Where there is nothing of that kind to say, one sentence is the whole entry, because a sentence written to fill a space teaches nothing and costs the reader the same attention as one that does.";
   "A handful of words are written down twice, once in small letters and once with a capital, because in these passages the two spellings mean different things. The lookup asks for the word exactly as it stands before it folds a capital away, so the two entries do not collide and each spelling gets its own sentence. That was read out of the lookup rather than assumed: the first draft of this left every capitalised word out, on the belief that the folding would hand ‘Father’ the sentence written for ‘father’, and it would not have.";
   "What a capitalised entry may say is narrower than what its small-letter twin may say, and the reason is that a capital has two causes. It falls on a word standing for God, and it falls on any word at all standing at the head of its sentence - and a man addressing his own father as ‘Father, I have sinned’ carries one while meaning the other. So a capitalised entry names both causes and leaves the reader to see which is in front of them, rather than announcing an answer that would be wrong wherever the second cause is the true one.";
-  "‘Spirit’ is still absent, and so is every other pair where nobody has written the second sentence yet. Being able to write two spellings apart is not the same as having written them, and a word with only its small-letter entry has its capitalised places left exactly as they are.";
+  "Every other pair where nobody has written the second sentence yet is still absent. Being able to write two spellings apart is not the same as having written them, and a word with only its small-letter entry has its capitalised places left exactly as they are.";
   let r = {
     man: "اِسم ہے: آدمی، مرد۔ اِس کی جمع بےقاعدہ ہے: 'man' سے 'men' بنتا ہے، 's' لگا کر نہیں۔",
     woman:
@@ -106,6 +106,10 @@ export function app_en_learn_bible_gloss_urdu_noun_explains() {
     mind: "اِسم ہے: ذہن، سوچنے کی جگہ۔",
     heart: "اِسم ہے: دِل۔",
     soul: "اِسم ہے: جان، یعنی اِنسان کے اَندر کی زِندگی۔",
+    spirit:
+      "اِسم ہے: رُوح۔ یہ لفظ اِنسان کے اَندر کی اُس جان کے لیٔے بھی آتا ہے جو آنکھ سے دِکھایٔی نہیں دیتی، اَور کِسی اَن دیکھی ہستی کے لیٔے بھی۔",
+    Spirit:
+      "اِسم ہے: رُوح۔ بڑا حرف یا تو خُدا کے رُوحُ القُدس کے لیٔے آتا ہے، یا اِس لیٔے کہ لفظ جُملے کے شُروع میں کھڑا ہے۔",
     life: "اِسم ہے: زِندگی۔ اِس کی جمع 'lives' ہے، 'f' بدل کر 'v' ہو جاتا ہے۔",
     death: "اِسم ہے: موت۔",
     sin: "اِسم ہے: گُناہ۔",
