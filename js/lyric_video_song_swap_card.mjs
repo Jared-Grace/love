@@ -1,5 +1,5 @@
+import { lyric_video_song_swap_picture_or_null } from "./lyric_video_song_swap_picture_or_null.mjs";
 import { lyric_video_review_notes } from "./lyric_video_review_notes.mjs";
-import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_shared_text_quiet } from "./app_shared_text_quiet.mjs";
@@ -40,7 +40,7 @@ export function lyric_video_song_swap_card(parent, document, swap, name) {
   });
   let before = property_get(swap, "before");
   let pictures = property_get(document, "pictures");
-  let picture = list_find_property_or_null(pictures, "path", before);
+  let picture = lyric_video_song_swap_picture_or_null(pictures, before);
   let gone = null_is(picture);
   if (gone) {
     let said = text_combine_multiple([
