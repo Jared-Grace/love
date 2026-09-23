@@ -23,10 +23,9 @@ export async function apps_import_relative_unguarded() {
   list_empty_not_is_assert_json(reachable, {
     hint: "no app main reached anything at all, so nothing was actually examined - the entry point list is the thing to look at, not the empty answer",
   });
-  let by_name = fn_name("function_import_relative");
   async function offender_or_null(f_name) {
     let imports = await function_imports(f_name);
-    let asks = list_includes(imports, by_name);
+    let asks = list_includes(imports, fn_name("function_import_relative"));
     if (not(asks)) {
       return null;
     }
