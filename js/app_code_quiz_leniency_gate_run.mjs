@@ -15,13 +15,12 @@ export async function app_code_quiz_leniency_gate_run() {
   let walked = property_get(told, "walked");
   let offenders = property_get(told, "offenders");
   let path = app_code_quiz_leniency_baseline_path();
-  let name_write = fn_name("app_code_quiz_leniency_baseline_write");
   let r = await baseline_names_gate_walked_generic(
     walked,
     offenders,
     path,
     "this lesson can be passed by reading the right answer off the code and could not before - give its quiz a wrong answer that is tempting for this question, the way the lessons around it do",
-    name_write,
+    fn_name("app_code_quiz_leniency_baseline_write"),
   );
   return r;
 }
