@@ -24,11 +24,10 @@ export async function examples_orphan_gate_run() {
     return n;
   }
   let orphans = list_filter(mjs, is_orphan);
-  let f_name = fn_name("examples_order");
   list_empty_is_assert_json(orphans, {
     hint: text_combine_multiple([
       "every data/examples file must be listed in the curriculum groups so it has a deliberate tier - add these to the group in ",
-      f_name,
+      fn_name("examples_order"),
       " that fits their complexity, since they currently only show in the Other bucket",
     ]),
   });
