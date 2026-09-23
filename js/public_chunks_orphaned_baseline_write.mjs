@@ -11,10 +11,9 @@ export async function public_chunks_orphaned_baseline_write() {
   arguments_assert(arguments, 0);
   let known = await public_chunks_orphaned_names();
   let path = public_chunks_orphaned_baseline_path();
-  let f_name = fn_name("folder_chunks_orphaned_delete");
   let hint = text_combine_multiple([
     "a folder is carrying a script nothing sends for that it was not carrying before - clear it with ",
-    f_name,
+    fn_name("folder_chunks_orphaned_delete"),
     " rather than recording it here",
   ]);
   await baseline_known_growth_assert(known, path, hint);
