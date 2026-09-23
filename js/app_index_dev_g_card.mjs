@@ -15,9 +15,8 @@ export function app_index_dev_g_card(root) {
   if (not(shown)) {
     return;
   }
-  let a_name = fn_name("app_g");
   let hash_name = app_shared_g_dev_index_hash_name();
-  let url = window_app_hash_name_url(a_name, hash_name);
+  let url = window_app_hash_name_url(fn_name("app_g"), hash_name);
   ("the picture is a gear rather than the game's own cross, which is the one card on this page where the app's picture would say the wrong thing. This does not lead to the game; it leads through the game to the screens the game is BUILT with, and a cross in front of it would offer a reader the thing they already have a card for two rows up.");
   let emoji = emoji_gear();
   let label = app_index_label_generic(emoji, "g dev tools");
