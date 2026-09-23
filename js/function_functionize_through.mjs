@@ -23,14 +23,12 @@ export async function function_functionize_through(
     hint: "a function already answers to this name, so the run would be extracted under a name that is already spoken for - pick another, or fold onto the one that is there if it is really the same work",
     f_name_new,
   });
-  let select_fn_name = fn_name("js_statement_find_name_holder");
-  let apply_fn_name = fn_name("js_selects_functionize_through");
   let apply_args_comma = list_join_comma([name_to, f_name_new]);
   let output = await function_select_apply_args(
     f_name,
-    select_fn_name,
+    fn_name("js_statement_find_name_holder"),
     name_from,
-    apply_fn_name,
+    fn_name("js_selects_functionize_through"),
     apply_args_comma,
   );
   let names_comma = list_join_comma([f_name, f_name_new]);
