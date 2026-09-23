@@ -10,13 +10,11 @@ export async function functions_identifiers_renamed_without_naming_check_gate_ru
   "What it says is thrown as a record rather than printed and summed up in a sentence, because whoever reads a failure next reads it for names and cannot tell a name being accused from a name being named as the cure. The functions at fault are the record; the two commands that repair them, and the words each one walked, are advice and sit under the hint the reader drops before it looks.";
   let offenders = await functions_identifiers_renamed_without_naming_check();
   let names = list_map_property(offenders, "f_name");
-  let f_name = fn_name("js_identifiers_referenced_nodes");
-  let f_name3 = fn_name("js_shorthand_properties_expand");
   let advice = text_combine_multiple([
     "these write over words they never asked about - ",
-    f_name,
+    fn_name("js_identifiers_referenced_nodes"),
     " hands back the words that read a value and leaves out the ones that only name something, and ",
-    f_name3,
+    fn_name("js_shorthand_properties_expand"),
     " writes a short entry out in full first so its key stops being its value too",
   ]);
   let hint = {
