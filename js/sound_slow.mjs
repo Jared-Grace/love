@@ -19,8 +19,7 @@ export async function sound_slow(args) {
   async function lambda(temp_path) {
     let contents = json_to(args);
     await file_write(temp_path, contents);
-    let script_name = fn_name("sound_slow");
-    let v = py_script_run_speech_cmd(script_name);
+    let v = py_script_run_speech_cmd(fn_name("sound_slow"));
     let c = text_combine_multiple([v, " ", temp_path]);
     let ran = await command_line(c);
     let printed = property_get(ran, "stdout");
