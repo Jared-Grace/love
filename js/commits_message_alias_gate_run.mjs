@@ -9,22 +9,19 @@ export async function commits_message_alias_gate_run() {
   "Throws so the dispatcher seam exits nonzero.";
   arguments_assert(arguments, 0);
   let told = await commits_message_alias_named();
-  let f_name = fn_name("ai_git_command_args");
-  let f_name2 = fn_name("ai_git");
   let opening = text_combine_multiple([
     "these commits are named after an alias key rather than after a command, so the log records a change as having been made by whatever that key points at today - commit through ",
-    f_name,
+    fn_name("ai_git_command_args"),
     " with the full function name, or take the honest fallback ",
-    f_name2,
+    fn_name("ai_git"),
     " where no named command made the change. ",
   ]);
   let path = commits_message_alias_baseline_path();
-  let name_write = fn_name("commits_message_alias_baseline_write");
   let r = await commits_message_rules_gate_generic(
     told,
     opening,
     path,
-    name_write,
+    fn_name("commits_message_alias_baseline_write"),
   );
   return r;
 }
