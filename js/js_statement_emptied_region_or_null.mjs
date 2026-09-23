@@ -23,8 +23,7 @@ export function js_statement_emptied_region_or_null(statement, emptier_names) {
     return null;
   }
   ("setting a word is only an emptying when the word is nothing");
-  let right = fn_name("html_text_set");
-  let text_set_is = equal(call.callee.name, right);
+  let text_set_is = equal(call.callee.name, fn_name("html_text_set"));
   if (text_set_is) {
     let second = call.arguments[1];
     let literal_is = second && equal(second.type, "Literal");
