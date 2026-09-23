@@ -17,8 +17,10 @@ export async function git_history_folder_bytes_report(folder) {
   let ranked = await git_history_folder_bytes(folder);
   let folders = list_size(ranked);
   let v = findings_folder();
-  let f_name = fn_name("git_history_folder_bytes");
-  let combined = text_combine_multiple([f_name, json_extension()]);
+  let combined = text_combine_multiple([
+    fn_name("git_history_folder_bytes"),
+    json_extension(),
+  ]);
   let file_path = path_join([v, combined]);
   await file_overwrite_json(file_path, ranked);
   let heaviest = list_take(ranked, 30);
