@@ -56,15 +56,13 @@ export async function watch() {
       property_set(in_progress, path, true);
       async function lambda3() {
         try {
-          let f_name = fn_name("function_auto_path");
-          await command_line_node_g(f_name, [path]);
+          await command_line_node_g(fn_name("function_auto_path"), [path]);
         } finally {
           property_set(in_progress, path, false);
           if (0) {
             try {
               let args = [path];
-              let f_name2 = fn_name("data_file_update");
-              await command_line_node_g(f_name2, args);
+              await command_line_node_g(fn_name("data_file_update"), args);
             } finally {
               property_set(in_progress, path, false);
             }
