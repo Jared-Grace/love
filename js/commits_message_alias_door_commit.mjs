@@ -12,8 +12,11 @@ export async function commits_message_alias_door_commit() {
   ("★ SO THE COMMIT IS NOT NAMED HERE ANY MORE, IT IS LOOKED FOR BY WHAT IT DID, by the same looking its sister door does - one reading of the history, asked for by name from both. The line looked for is the one the wording place says about itself, because prose stating what a thing is for is the most settled text in that file.");
   ("THIS IS NOT THE FORWARD MOVE THE PARAGRAPH ABOVE REFUSES, and it is not a date either. It asks the history which commit made the change, exactly as before - only by a question the history can still answer. A date was the other way to go and it is wrong here for the reason the sorting beside this one gives: two commits made in the same minute can sit on either side of a door, so a date cannot say which side either of them is on.");
   arguments_assert(arguments, 0);
-  let f_name = fn_name("git_call_message");
-  let path_file = text_combine_multiple(["js/", f_name, ".mjs"]);
+  let path_file = text_combine_multiple([
+    "js/",
+    fn_name("git_call_message"),
+    ".mjs",
+  ]);
   let said = "IS SPELLED OUT HERE";
   let commit = await git_file_text_arrived_commit(path_file, said);
   return commit;
