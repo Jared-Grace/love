@@ -15,8 +15,7 @@ export function js_fn_name_literals(ast, f_name) {
       let value = property_get(first, "value");
       la(value);
     }
-    let f_name2 = fn_name("fn_name");
-    js_visit_calls_named(ast, f_name2, on_call);
+    js_visit_calls_named(ast, fn_name("fn_name"), on_call);
   }
   let names = list_adder(collect);
   return names;
