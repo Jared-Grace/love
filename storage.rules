@@ -37,7 +37,8 @@ service firebase.storage {
     }
     // receipts: the folder code is the password - whoever knows it may read and add to that folder, and nobody may list the codes themselves
     match /receipts/{code}/{allPaths=**} {
-      allow get, list, write;
+      allow get, create, update;
+      allow list: if code.size() > 0;
     }
   }
 }
