@@ -23,11 +23,10 @@ export async function permission_grants_departed_restore() {
     };
     return r;
   }
-  let f_name = fn_name("permission_settings_allow_write");
   list_empty_is_assert_json(arrived, {
     hint: text_combine_multiple([
       "a name arrived while another departed, which reads as a rename rather than a lost write - run ",
-      f_name,
+      fn_name("permission_settings_allow_write"),
       " to make the file follow the list, instead of putting the old name back",
     ]),
     arrived,
