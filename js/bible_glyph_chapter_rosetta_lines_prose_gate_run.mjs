@@ -30,13 +30,11 @@ export async function bible_glyph_chapter_rosetta_lines_prose_gate_run() {
   let files = await bible_glyph_chapter_rosetta_lines_files_found();
   let present = property_get(files, "present");
   let absent = property_get(files, "absent");
-  let writer = fn_name("bible_glyph_chapter_rosetta_lines_file_source");
-  let f_name = fn_name("bible_glyph_chapter_rosetta_lines_name");
   let hint_none = text_combine_multiple([
     "not one chapter has a band file, so this gate read nothing and would have passed for that reason - either the picture Bible has no chapters listed at all, or the naming of a band file no longer matches what is on disk. The naming is ",
-    f_name,
+    fn_name("bible_glyph_chapter_rosetta_lines_name"),
     " and the text is built by ",
-    writer,
+    fn_name("bible_glyph_chapter_rosetta_lines_file_source"),
   ]);
   list_empty_not_is_assert_json(present, {
     hint: hint_none,
@@ -70,13 +68,11 @@ export async function bible_glyph_chapter_rosetta_lines_prose_gate_run() {
       });
     }
   }
-  let rewrite = fn_name("bible_glyph_chapter_rosetta_lines_rewrite");
-  let source = fn_name("bible_glyph_chapter_rosetta_lines_prose_lines");
   let hint_wrong = text_combine_multiple([
     "these band files open with paragraphs their writer no longer writes, and the last paragraph is what says whose scripture they hold and on what terms - so a file that has drifted is a file making a licence claim nobody is standing behind. The paragraphs are spelled once, in ",
-    source,
+    fn_name("bible_glyph_chapter_rosetta_lines_prose_lines"),
     ", and the repair is to lay each named chapter's bands down again over the old ones with ",
-    rewrite,
+    fn_name("bible_glyph_chapter_rosetta_lines_rewrite"),
     ". Read what each file actually says first: if the writer's wording was improved this is only stale text, but if a file says something the writer never said then it was edited by hand and the words in it are the ones to look at; a chapter carrying an unread word instead of what was found is one whose file would not open at all, and the words it refused with stand beside it",
   ]);
   list_empty_is_assert_json(wrong, {
