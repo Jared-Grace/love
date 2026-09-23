@@ -17,10 +17,9 @@ export async function firebase_folder_seams() {
   "That is asked again of whatever it finds, because the wrappers are stacked. Two of them pass their parameter into a third, which passes its own into the builder, so a reading that stopped after one step would have found the middle one and left the outer two unwatched - which was true of the list this replaces, and it was written by somebody who had just finished saying a list like it would go stale.";
   "Which argument the folder is differs from one to the next - one of them takes the file first and the folder second - so the position is carried rather than assumed to be the first. That is exactly the difference a reading keyed on the first argument gets silently wrong.";
   "Only a bare parameter counts as passing the folder on. A wrapper that works the word out, or fetches it from somewhere, is not handing its caller's word through - it is the place the word is written, which is the thing being looked for rather than another place to look.";
-  let root = fn_name("firebase_deploy_function_destination");
   let identifiers = await data_identifiers_get();
   let first = {
-    builder: root,
+    builder: fn_name("firebase_deploy_function_destination"),
     index: 0,
   };
   let seams = [first];
