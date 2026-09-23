@@ -18,8 +18,7 @@ export async function bible_glyph_chapters_prose_missing() {
   ("A CHAPTER IS SPOKEN FOR WHEN A PARAGRAPH OPENS WITH ITS PLACE IN THE LIST, which is the shape the paragraphs already have - the fourth, the fifth, and the sixteenth each begin their own. An opening is asked for rather than a mention anywhere in the line, because the eighth chapter's paragraph calls it the first from the other testament, and a line that merely holds the word first would let that sentence stand in for a paragraph about the first chapter that was never written.");
   ("Words are lowered before they are compared, because a sentence begins with a capital and a spelled number does not.");
   ("A paragraph is allowed to open with and, because several of them are second halves that carry on from the paragraph above.");
-  let f_name = fn_name("bible_glyph_chapters");
-  let code = await function_read(f_name);
+  let code = await function_read(fn_name("bible_glyph_chapters"));
   let lines = function_prose_lines(code);
   let lowered = [];
   for (let line of lines) {
