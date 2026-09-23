@@ -51,11 +51,10 @@ export async function g_npc_nicknames_gate_run() {
   list_empty_is_assert_json(repeated, {
     hint: "two people of the pool are called the same name, so an arc addressed to that name reaches whichever of them is found first; the step of sixty-one must share no factor with the length of either name list, so check what was added to one of them",
   });
-  let f_name = fn_name("g_npc_nickname_lists");
   list_empty_is_assert_json(unfilable, {
     hint: text_combine_multiple([
       "a name holds something other than letters, and a person's file is named after them under a path builder that allows letters and digits only; the name lists are cleaned in ",
-      f_name,
+      fn_name("g_npc_nickname_lists"),
       " and something got past it",
     ]),
   });
