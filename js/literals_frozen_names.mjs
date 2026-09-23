@@ -91,6 +91,7 @@ export function literals_frozen_names() {
   let spelled48 = fn_name(
     "app_en_learn_bible_gloss_urdu_words_sound_slow_upload_namespace",
   );
+  ("The two words standing before the rule set and the goal in a replace app link. They escaped the moment the first link to an exercise was saved or sent: the page reads them back to decide which rule set and which goal to open, so retyping either would leave every saved exercise link opening on the home screen - quietly, since a link that names nothing the page looks for is not an error, just a front door.");
   let spelled49 = fn_name("app_replace_rule_set_hash_key");
   let spelled50 = fn_name("app_replace_goal_hash_key");
   let names = [
