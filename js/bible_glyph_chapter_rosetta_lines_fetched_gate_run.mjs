@@ -38,14 +38,13 @@ export async function bible_glyph_chapter_rosetta_lines_fetched_gate_run() {
     defect_of,
   );
   let clean = list_empty_is(wrong);
-  let f_name2 = fn_name("bible_glyph_chapters_rosetta_lines_write");
   assert_json(clean, {
     list: wrong,
     hint: text_combine_multiple([
       "a chapter's Rosetta bands would not come back as that chapter's from ",
       f_name,
       ". A line with a refused on it did not come at all, and the words there are the fetching's own reason - usually bands nobody has written yet, which ",
-      f_name2,
+      fn_name("bible_glyph_chapters_rosetta_lines_write"),
       " writes. A line with a came_back on it arrived calling itself another chapter, so that code is wired to the wrong bands",
     ]),
   });
