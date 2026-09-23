@@ -57,8 +57,7 @@ export function js_name_only_imports_spell(ast) {
       return;
     }
     let quoted = text_pad_space_quote_double(mentioned);
-    let spelled_f_name = fn_name("fn_name");
-    let call = js_call_args_from_code(spelled_f_name, [quoted]);
+    let call = js_call_args_from_code(fn_name("fn_name"), [quoted]);
     object_replace(node, call);
   }
   js_visit_types(ast, ["MemberExpression"], each_item);
