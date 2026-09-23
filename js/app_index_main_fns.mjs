@@ -1,6 +1,6 @@
 import { emoji_information } from "./emoji_information.mjs";
-import { app_index_label_generic } from "./app_index_label_generic.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { app_index_label_generic } from "./app_index_label_generic.mjs";
 export function app_index_main_fns(about_opened) {
   "The apps the front page offers, each with the sentence shown under it.";
   "What the about card opens is handed in, because it is drawn over the front page and comes back by drawing the front page again, which only the front page knows how to do.";
@@ -15,13 +15,13 @@ export function app_index_main_fns(about_opened) {
   "★ A CARD SAYS WHAT AN APP IS FOR AND NEVER HOW MUCH OF IT IS DONE, because how much is done is a number that changes without this file being told. Both language cards below once carried a chapter list. One said John 1 and 1 Peter 4 on a day the store held fifty-six chapters, the other said Song of Solomon, James and John 1 on a day it held four hundred and forty-eight - each written once, right for about a week, and thereafter understating the fullest thing on the site to exactly the visitor who has never seen it. The counts are now fetched from the same store a reader fetches chapters from and joined onto these cards elsewhere, so a chapter going up needs nothing edited here.";
   "The Greek card says Greek and Hebrew because the store says so. Fifty-four of its chapters are Greek and two are Genesis, and the card had claimed Greek alone since before either of those existed. A sentence naming a language while a count beside it counts another one is worse than either half was on its own, so the moment the count became real the language had to become real too.";
   "★ EVERY APP NAMES THE GROUP IT IS FOUND UNDER, and the groups are drawn in the order they are first named here. The group is written on the app rather than in a list of groups beside this one, so an app can never be offered without a group or appear under two: adding a line here is the whole of adding an app, and it lands in a group because it cannot be written without one. The group names are what a visitor is looking FOR - reading, learning, sharing - not what the apps are made of.";
-  let reading = "Read the Bible";
-  let languages = "Learn a language through the Bible";
-  let sharing = "Share encouragement";
-  let games = "Games";
-  let worship = "Worship";
-  let programming = "Learn computer programming";
-  let more = "More";
+  let reading = "📖 Read the Bible";
+  let languages = "🌍 Learn a language through the Bible";
+  let sharing = "💌 Share encouragement";
+  let games = "🎮 Games";
+  let worship = "🙌 Worship";
+  let programming = "💻 Learn computer programming";
+  let more = "➕ More";
   let emoji = emoji_information();
   let r = [
     {
@@ -71,12 +71,12 @@ export function app_index_main_fns(about_opened) {
     },
     {
       app_fn: fn_name("app_g"),
-      text: "Gospel sharing game",
+      text: "(In progress) Gospel sharing game",
       category: games,
     },
     {
       app_fn: fn_name("app_g_bless"),
-      text: "Praying game: walk down a street, see who is there, and pray for them",
+      text: "(In progress) Praying game: walk down a street, see who is there, and pray for them",
       category: games,
     },
     {
@@ -136,11 +136,6 @@ export function app_index_main_fns(about_opened) {
     {
       app_fn: fn_name("app_designs_universal"),
       text: "Displays different possible designs",
-      category: more,
-    },
-    {
-      app_fn: fn_name("app_g_bible"),
-      text: "App for me",
       category: more,
     },
     {
