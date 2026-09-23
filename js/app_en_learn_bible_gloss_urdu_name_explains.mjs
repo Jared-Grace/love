@@ -314,6 +314,8 @@ export function app_en_learn_bible_gloss_urdu_name_explains() {
     Apollonia: road_stop,
     Amphipolis: road_stop,
     Antipatris: road_stop,
+    Egypt:
+      "ایک مُلک کا خاص نام ہے، جہاں اِسرائیل کے لوگ بہت عرصہ غُلام رہے اَور جہاں سے خُدا اُنہیں نِکال لایا۔",
     Judea: "اُس عِلاقے کا خاص نام ہے جہاں یَہُودی لوگ رہتے تھے۔",
     Samaria: "ایک عِلاقے کا خاص نام ہے، جِس کے لوگ یَہُودیوں سے الگ رہتے تھے۔",
     Galilee:
