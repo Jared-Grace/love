@@ -20,8 +20,11 @@ export async function bible_audio_speech_locked_run(asked) {
     };
     return box;
   }
-  let who = fn_name("bible_audio_speech_locked_run");
-  let ran = await lock_try(lock_name, lambda, who);
+  let ran = await lock_try(
+    lock_name,
+    lambda,
+    fn_name("bible_audio_speech_locked_run"),
+  );
   if (ran) {
     let spoken = property_get(ran, "spoken");
     return spoken;
