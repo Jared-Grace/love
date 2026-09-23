@@ -31,29 +31,26 @@ export function literals_frozen_gate_run_r(
     });
   }
   ("All three still fail, because a record out of step with the code cannot catch the next value that moves - a gate that passed here would be trading a loud complaint for a silent blind spot. What differs is the repair each one names, and only the first of them is a decision.");
-  let f_name2 = fn_name("literals_frozen_write");
   list_empty_is_assert_json(moved, {
     hint: text_combine_multiple([
       "a frozen value is not what the record says - if the change was meant, write the record again with ",
-      f_name2,
+      fn_name("literals_frozen_write"),
       " so it stands in the commit; if it was not, put the old value back",
     ]),
     moved,
   });
-  let f_name3 = fn_name("literals_frozen_record_new");
   list_empty_is_assert_json(fresh, {
     hint: text_combine_multiple([
       "a frozen constant the record has never held - nothing has moved, so record it with ",
-      f_name3,
+      fn_name("literals_frozen_record_new"),
       " which only ever adds a name the record is missing and cannot touch a value it already holds",
     ]),
     fresh,
   });
-  let f_name4 = fn_name("literals_frozen_record_new");
   list_empty_is_assert_json(gone, {
     hint: text_combine_multiple([
       "a frozen constant the code no longer has, whose value arrived under another name in the same breath - a rename, so nothing published has changed. Clear the old name with ",
-      f_name4,
+      fn_name("literals_frozen_record_new"),
       " which drops it only because that value is being recorded under its new name",
     ]),
     gone,
