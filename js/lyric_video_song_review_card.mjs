@@ -1,3 +1,4 @@
+import { lyric_video_picture_light_show } from "./lyric_video_picture_light_show.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -9,7 +10,7 @@ import { lyric_video_picture_url } from "./lyric_video_picture_url.mjs";
 import { html_img } from "./html_img.mjs";
 import { app_shared_text_quiet } from "./app_shared_text_quiet.mjs";
 import { lyric_video_review_notes } from "./lyric_video_review_notes.mjs";
-export function lyric_video_song_review_card(parent, lines, picture) {
+export async function lyric_video_song_review_card(parent, lines, picture) {
   "$plain parent";
   "$plain lines";
   "$plain picture";
@@ -31,6 +32,7 @@ export function lyric_video_song_review_card(parent, lines, picture) {
   lyric_video_review_lines(card, over);
   let url = lyric_video_picture_url(picture);
   let drawing = html_img(card, url);
+  await lyric_video_picture_light_show(drawing, picture);
   html_style_assign(drawing, {
     width: "100%",
     "max-height": "60vh",

@@ -37,8 +37,8 @@ export async function lyric_video_song_review_preview() {
     }
     let pictures = property_get(document, "pictures");
     let lines = property_get(document, "lines");
-    function card(picture) {
-      lyric_video_song_review_card(cards, lines, picture);
+    async function card(picture) {
+      await lyric_video_song_review_card(cards, lines, picture);
     }
     each(pictures, card);
   }

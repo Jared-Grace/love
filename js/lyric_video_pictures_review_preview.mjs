@@ -44,8 +44,8 @@ export async function lyric_video_pictures_review_preview() {
     let counted = text_from_number(count);
     let said = text_combine_multiple([counted, " pictures in ", name]);
     html_text_set(told, said);
-    function card(picture) {
-      lyric_video_song_review_card(cards, lines, picture);
+    async function card(picture) {
+      await lyric_video_song_review_card(cards, lines, picture);
     }
     each(pictures, card);
   }
