@@ -23,8 +23,7 @@ export async function qa_gates_tree_git_reaching() {
     return elsewhere;
   }
   let tree = list_filter(all, tree_is);
-  let runner = fn_name("git_folder_run");
-  let seams = [runner];
+  let seams = [fn_name("git_folder_run")];
   let remembered = {};
   let reaching = [];
   for (let name of tree) {
