@@ -1,5 +1,5 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { text_word_start_regex } from "./text_word_start_regex.mjs";
@@ -15,6 +15,8 @@ export async function git_history_paths_absent_words_named(folder, words) {
   ("A word claims a name by the same rule it is taken out of file contents by, and that sameness is the point rather than a convenience. The rule is ",
     fn_name("text_word_start_regex"),
     " and is spelled nowhere else. Read by two rules, this would hand back a file whose contents a purge is going to rewrite but whose name it is going to leave, or a name it drops while the contents were allowed to stay - and neither mistake says anything when it happens.");
+  ("★ A CAPITAL LETTER IS THE SAME LETTER HERE TOO, AND A FILE NAME IS WHERE THAT MATTERS MOST. Names of files are written however whoever made them felt like writing them, and a picture or a note named after a person or a town carries that name capitalised far more often than not. The sameness claimed in the paragraph above is a sameness with how the word is taken out of contents, and that reading sets the letter aside - so leaving it counted here would hand back a shorter list than the contents rewrite is working from, which is exactly the split this function was written to close.");
+  ("The letter is set aside by the flag this language offers rather than by anything written into the pattern, and that is forced: an instruction written into a pattern is refused outright here, so the shared rule could not carry one even if the other two readers wanted it to.");
   ("Only paths the present no longer tracks, because that is all the reading underneath returns, and it is the right restriction rather than an inherited one: dropping the path of a file that is still live destroys live code. So a word that also names something in use cannot reach it through here at all, whatever else it matches.");
   ("Naming no words is refused rather than answered with everything or with nothing. Either answer would be a guess about which was meant, and the cost of guessing wrong here is paid against a history rewrite.");
   ("It reads and changes nothing, so it is safe to ask at any moment, including while a rehearsal of the purge itself is running on a copy somewhere else. Which of these should actually go stays a judgment for the human - a name can look like abandoned work and be the thing it was abandoned in favour of.");
@@ -31,7 +33,7 @@ export async function git_history_paths_absent_words_named(folder, words) {
   let rows = await git_history_paths_absent_at_head(folder);
   function git_history_paths_absent_words_named_row(row) {
     function git_history_paths_absent_words_named_hit(pattern) {
-      let matcher = new RegExp(pattern);
+      let matcher = new RegExp(pattern, "i");
       let hit = matcher.test(row.path);
       return hit;
     }
