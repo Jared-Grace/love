@@ -16,8 +16,9 @@ export async function ebible_chapter_codes(bible_folder) {
   let door = door43_version_fetchable_or_null(bible_folder);
   let fetchable = null_not_is(door);
   if (fetchable) {
-    let f_name = fn_name("door43_version_chapter_codes");
-    let fn = await function_import_relative(f_name);
+    let fn = await function_import_relative(
+      fn_name("door43_version_chapter_codes"),
+    );
     let carried = await fn(bible_folder);
     return carried;
   }
