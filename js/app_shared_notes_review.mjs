@@ -24,13 +24,11 @@ export function app_shared_notes_review(parent, store, key, subject, names) {
   let pills = html_div(holder);
   let status = app_shared_text_quiet(holder, "");
   async function answer(words) {
-    let f_done = fn_name("notes_done");
-    await api_read(f_done, [store, key, words]);
+    await api_read(fn_name("notes_done"), [store, key, words]);
     await render();
   }
   async function render() {
-    let f_read = fn_name("notes_read");
-    let notes = await api_read(f_read, [store, key]);
+    let notes = await api_read(fn_name("notes_read"), [store, key]);
     html_clear(pills);
     app_shared_note_pills_answerable(pills, notes, answer);
   }
@@ -38,12 +36,11 @@ export function app_shared_notes_review(parent, store, key, subject, names) {
     html_text_set(status, said);
   }
   async function filed(field, typed) {
-    let f_add = fn_name("notes_add");
     let entry = {
       field,
       note: typed,
     };
-    await api_read(f_add, [store, key, entry]);
+    await api_read(fn_name("notes_add"), [store, key, entry]);
   }
   let bench = {
     status_set,
