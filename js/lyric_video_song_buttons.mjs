@@ -13,8 +13,7 @@ export async function lyric_video_song_buttons(parent, song_show) {
   "CHOOSING A SONG WRITES IT INTO THE ADDRESS, so the address in the bar can be copied and sent as it stands.";
   "A NAME AFTER THE SLASH THAT IS NO SONG OPENS NOTHING, and the buttons stay to choose from.";
   arguments_assert(arguments, 2);
-  let f_names = fn_name("lyric_video_song_names");
-  let names = await api_read(f_names, []);
+  let names = await api_read(fn_name("lyric_video_song_names"), []);
   function name_text(name) {
     return name;
   }
