@@ -7,8 +7,7 @@ export async function song_image_kept_set(key, attempt) {
   async function lambda(ast) {
     song_image_kept_ast_set(ast, key, attempt);
   }
-  let f_name = fn_name("song_image_couplet_glosses");
-  await function_transform(f_name, lambda);
+  await function_transform(fn_name("song_image_couplet_glosses"), lambda);
   let r = {
     key,
     kept: attempt,
