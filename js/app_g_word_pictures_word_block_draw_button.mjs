@@ -33,8 +33,7 @@ export function app_g_word_pictures_word_block_draw_button(
     ]);
     status_working(combined);
     try {
-      let f_name = fn_name("word_picture_draw");
-      await app_shared_api_named(f_name, [word]);
+      await app_shared_api_named(fn_name("word_picture_draw"), [word]);
       let combined5 = text_combine_multiple([
         "drew another attempt for ",
         word,
