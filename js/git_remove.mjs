@@ -17,8 +17,7 @@ export async function git_remove(f_path) {
   await git_ignore_add(f_path);
   let added = git_ignore_name();
   await git_add([added]);
-  let called = fn_name("git_remove");
-  let message = await git_call_message(called, [f_path]);
+  let message = await git_call_message(fn_name("git_remove"), [f_path]);
   await git_commit(message);
   await git_push();
   await repos_gitignore_overwrite_all();
