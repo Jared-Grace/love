@@ -20,17 +20,13 @@ export async function bible_versions_english_choices_psalms_agreement_gate_run()
   let references = property_get(measured, "references");
   let apart = property_get(measured, "apart");
   let unmeasured = property_get(measured, "unmeasured");
-  let f_name = fn_name(
-    "bible_versions_english_choices_psalms_agreement_gate_run",
-  );
-  let f_name2 = fn_name("bible_versions_english_choices_withheld");
   list_empty_is_assert_json(unmeasured, {
     references,
     hint: text_combine_multiple([
       "each of these translations may be shipped and was never read at these psalms, so nothing here has looked at them - a fetch that failed leaves a translation out silently, and this check cannot fail a translation it never saw; run ",
-      f_name,
+      fn_name("bible_versions_english_choices_psalms_agreement_gate_run"),
       " again, and if the same one is missing twice it cannot be read at all and belongs in ",
-      f_name2,
+      fn_name("bible_versions_english_choices_withheld"),
       " rather than on the shelf",
     ]),
   });
