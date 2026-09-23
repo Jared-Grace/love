@@ -55,7 +55,7 @@ export function app_search_results_chapter_card(
   html_style_margin_x(div_chapter, value);
   let value5 = app_shared_spaced_frame_gap();
   html_style_margin_y(div_chapter, value5);
-  html_text_align_left(div_chapter);
+  html_centered(div_chapter);
   let chapter_header_text = text_combine_multiple([
     "Chapter ",
     chapter_name,

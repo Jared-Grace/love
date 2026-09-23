@@ -14,4 +14,5 @@ export function app_search_results_verse_card(div_verse) {
   html_style_background_color_set(div_verse, background);
   let gap = app_shared_spaced_small_gap();
   html_style_margin_y(div_verse, gap);
+  html_text_align_left(div_verse);
 }
