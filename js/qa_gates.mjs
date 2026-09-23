@@ -1,3 +1,4 @@
+import { app_replace_hash_ids_gate_run } from "./app_replace_hash_ids_gate_run.mjs";
 import { app_original_bible_gloss_published_unfinished_gate_run } from "./app_original_bible_gloss_published_unfinished_gate_run.mjs";
 import { app_ceb_bible_gloss_published_unfinished_gate_run } from "./app_ceb_bible_gloss_published_unfinished_gate_run.mjs";
 import { purge_words_live_gate_run } from "./purge_words_live_gate_run.mjs";
@@ -953,6 +954,7 @@ export function qa_gates() {
     app_replace_abbreviations_unspelled_gate_run,
     app_replace_rules_used_gate_run,
     app_replace_rule_sets_unlisted_gate_run,
+    app_replace_hash_ids_gate_run,
     app_shared_card_gate_run,
     app_shared_description_gate_run,
     git_push_urls_gate_run,

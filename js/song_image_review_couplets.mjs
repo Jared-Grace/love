@@ -25,7 +25,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 32,
-      note: "You are on 28. It has about six trees each side and the river is cut into curved panes like a current. Still wrong: the field is pale blue, not violet, and it is drawn in depth rather than flat. 29 kept the violet but grouped the trees in threes; 26 is the fallback.",
+      note: "You are on 31. Six trees each side, the river cut into curved panes like a current, and the violet field is back. Still wrong: the field's lead lines run across the river. 28 is the one with a pale blue field; 26 is the fallback.",
     },
     {
       n: 33,
@@ -33,7 +33,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 26,
-      note: "You are on 110. The wording now asks for eight rays and it drew eight, in the right colours. Still wrong: two lead lines run straight across the rays, and the glass has a painted texture. 104 is the fallback.",
+      note: "You are on 111. The wording now asks for more rays and it drew about ten, with no lead lines across them. Still wrong: the rays are bold rather than light, and the glass has a painted texture. 113 is lighter and cleaner but has six rays; 104 is the fallback.",
     },
     {
       n: 9,
