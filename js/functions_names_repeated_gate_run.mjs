@@ -11,14 +11,17 @@ export async function functions_names_repeated_gate_run() {
   "Throws so the dispatcher seam exits nonzero.";
   let offenders = await functions_names_repeated();
   let path = functions_names_repeated_baseline_path();
-  let name_write = fn_name("functions_names_repeated_baseline_write");
-  let f_name = fn_name("function_rename");
   let hint = text_combine_multiple([
     "this name says the same run of words twice running, which is what comes out when a command joins a holder's name to a piece already spelled with that holder's name in it - rename it with ",
-    f_name,
+    fn_name("function_rename"),
     ", which moves the definition and every caller together",
   ]);
-  let r = await baseline_names_gate_generic(offenders, path, hint, name_write);
+  let r = await baseline_names_gate_generic(
+    offenders,
+    path,
+    hint,
+    fn_name("functions_names_repeated_baseline_write"),
+  );
   ("How many names were read comes back beside the ratchet's verdict. The ratchet answers in what newly offends and what no longer does, and both of those are nothing on every run that passes - so a sweep pointed at a roster that had moved would answer clean forever and say the same word as a sweep that read every name there is.");
   let f_names = await functions_names();
   let walked = {
