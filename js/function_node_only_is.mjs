@@ -16,8 +16,7 @@ export async function function_node_only_is(f_path) {
   arguments_assert(arguments, 1);
   let parsed = await file_js_parse(f_path);
   let code = property_get(parsed, "code");
-  let guard = fn_name("browser_is");
-  let guarded = text_includes(code, guard);
+  let guarded = text_includes(code, fn_name("browser_is"));
   if (guarded) {
     return false;
   }
