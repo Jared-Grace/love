@@ -46,8 +46,10 @@ export async function js_dollar(ast) {
       let remaining = list_skip(split, 2);
       let lower = text_lower_to(second);
       if (equal(lower, choice_name)) {
-        let right = fn_name("js_dollar_choice_argument");
-        text_combine("This variable name is used by ", right);
+        text_combine(
+          "This variable name is used by ",
+          fn_name("js_dollar_choice_argument"),
+        );
         let js_dollar_argument = {
           remaining,
           node,
