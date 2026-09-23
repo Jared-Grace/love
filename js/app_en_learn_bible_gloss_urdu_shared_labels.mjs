@@ -1,30 +1,60 @@
 export function app_en_learn_bible_gloss_urdu_shared_labels() {
   "The wordings the store that explains English words to an Urdu reader hands to whole classes of words at once, saying what kind of word it is and nothing about the word in front of the reader.";
-  "These are the sentences to write over. Each one is true of the word it stands under and would be just as true of a hundred others, so a reader meeting it learns that ‘but’ is a joining word and is left to guess what it joins. Measured across the store, twenty six wordings like these carried thousands of entries between them.";
+  "These are the sentences to write over. Each one is true of the word it stands under and would be just as true of a hundred others, so a reader meeting it learns that ‘but’ is a joining word and is left to guess what it joins. Measured across the store, fifty one wordings like these carry thousands of entries between them.";
   "The pointers are here for the same reason and not a different one. A wording reading ‘the same word again’ never says the thing, it sends the reader back up the passage to look for it, and where the earlier entry was itself a pointer there is nothing at the end of the trail. The method note names this the single worst failure in gloss content.";
   "Being on this list is a licence to write over, never an instruction to. A wording is only replaced where a sentence has actually been written for the word standing under it, so a label covering a word nobody has written for is left exactly as it is and stays counted as work still owed.";
   "A wording that says something a shared sentence could not is deliberately absent. ‘Object pronoun; capital letter for Jesus’ stands over ‘Him’, ‘You’ and ‘Me’, and the capital really is telling the reader something. One wording per word cannot reproduce it, because the same capital falls on any word opening a sentence, so the label stays until somebody writes those three properly.";
+  "The test a wording has to pass to be added is that everything it says is said again by the settled wording of every word carrying it. That is checkable rather than a matter of taste, and it is what the warning above is really asking for: where the two say the same thing, nothing can be lost by writing one over the other, and where the label says one thing more, that one thing is exactly what would go.";
+  "Measured 2026-09-23 over the whole store, ninety five wordings shorter than a line carried more than forty entries each. Twenty five of them pass that test and are added here; the rest are refused, and the refusals fall into three kinds worth naming, because each kind will be met again.";
+  "A wording that settles which of a word's jobs is being done in this verse is refused. ‘A marker standing before a verb’ over ‘to’, and ‘a word that points’ over ‘that’, each pick one job out of the two or three the settled wording lists. Writing the settled wording over them hands the reader back a choice somebody had already made for them, which is a loss even though every sentence involved is true.";
+  "A wording naming what this verse's Urdu does is refused. ‘Preposition. Urdu has not written it here.’ is about the line it stands in and could not be written from the word alone.";
+  "A wording carrying case where the settled wording carries none is refused. ‘Object pronoun, inanimate’ over ‘it’ says the word stands where the action lands, and the settled wording for ‘it’ says which things it stands for without saying where it stands. The same wording over ‘him’ is admitted, because there the settled wording does say it.";
   let labels = [
     "معرفہ حرفِ تعریف۔",
     "نکرہ حرفِ تعریف۔",
     "وُہی حرفِ تعریف ہے۔",
+    "معرفہ ہے۔",
+    "وُہی معرفہ ہے۔",
+    "وُہی لفظ خاص چیز کے لیٔے۔",
     "حرفِ عطف۔",
+    "حرفِ عطف ہے۔",
     "وُہی حرفِ عطف ہے۔",
+    "جوڑنے والا لفظ ہے۔",
+    "حرفِ عطف ہے اَور دو باتوں کا فرق بتاتا ہے۔",
+    "حرفِ عطف برائے تضاد۔",
     "حرفِ جار۔",
+    "حرفِ جار ہے۔",
     "حرفِ جار: تعلُّق۔",
     "حرفِ جار: کی طرف۔",
     "حرفِ جار ہے اَور یہاں یہ جگہ بتاتا ہے۔",
+    "وُہی حرفِ جار ہے۔",
+    "وُہی حرفِ جار ہے جو اُوپر آیا۔",
+    "وُہی حرفِ جار ہے، اَور یہاں یہ جگہ بتاتا ہے۔",
+    "وُہی چھوٹا لفظ ہے جو رشتہ بتاتا ہے۔",
+    "ضمیر۔",
+    "ضمیر ہے۔",
     "ضمیرِ فاعل۔",
     "ضمیرِ فاعل، جمع۔",
+    "ضمیرِ فاعل، مذکر۔",
+    "ضمیرِ فاعل، واحد مُذکّر۔",
+    "ضمیرِ فاعل، واحد مُتکلِّم۔",
+    "ضمیرِ مُخاطب۔",
     "ضمیرِ مفعُول۔",
     "ضمیرِ مفعُول، جمع۔",
+    "ضمیرِ مفعُول، مذکر۔",
+    "ضمیرِ مفعُول، واحد مُذکّر۔",
     "ضمیرِ ملکیت۔",
+    "ضمیرِ ملکیت، مذکر۔",
     "ضمیر ہے اَور ایک سے زیادہ کے لیٔے آیا ہے۔",
     "ضمیر ہے اَور کِسی مرد کے لیٔے آتا ہے۔",
+    "ضمیر ہے اَور ایک مرد کے لیٔے آیا ہے۔",
     "وُہی ضمیر ہے جو اُوپر آیا۔",
+    "وُہی ضمیر ہے جو بولنے والے کے لیٔے آتا ہے۔",
     "حرفِ نفی۔",
     "یہ لفظ اِنکار کرتا ہے۔",
+    "اِنکار کا لفظ ہے۔",
     "یہ لفظ مِلکیّت بتاتا ہے۔",
+    "ملکیت بتانے والا لفظ ہے۔",
     "یہ لفظ گِنتی بتاتا ہے۔",
     "یہ لفظ مِقدار بتاتا ہے اَور پُورے کے لیٔے آتا ہے۔",
     "یہ لفظ اگلی بات کو پہلی سے جوڑتا ہے اَور کِسی شخص کے لیٔے آتا ہے۔",
