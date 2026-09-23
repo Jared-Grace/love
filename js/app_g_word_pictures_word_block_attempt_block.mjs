@@ -60,8 +60,10 @@ export function app_g_word_pictures_word_block_attempt_block({
     let combined7 = text_combine_multiple(["keeping ", word, " ", text]);
     status_working(combined7);
     try {
-      let f_name = fn_name("word_picture_chosen_set");
-      await app_shared_api_named(f_name, [word, attempt]);
+      await app_shared_api_named(fn_name("word_picture_chosen_set"), [
+        word,
+        attempt,
+      ]);
       let combined = text_combine_multiple(["kept ", word, " ", text]);
       status_set(combined);
       await render();
