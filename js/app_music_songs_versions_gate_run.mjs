@@ -73,11 +73,10 @@ export async function app_music_songs_versions_gate_run() {
     }
     await app_music_song_versions_faults_add(song, wrong);
   }
-  let f_name = fn_name("bible_versions_english_choices_usable");
   list_empty_is_assert_json(wrong, {
     hint: text_combine_multiple([
       "each of these choices fails in the way its own fault line says - unshippable bible, a name it does not answer to, a passage its own song rests on nowhere, or a bible with no words there - and every one of them reaches a reader as an ordinary looking page; the folders and the names both come from ",
-      f_name,
+      fn_name("bible_versions_english_choices_usable"),
       ", so copy them from there rather than typing them",
     ]),
   });
