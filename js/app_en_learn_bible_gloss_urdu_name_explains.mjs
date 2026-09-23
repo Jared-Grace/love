@@ -11,7 +11,8 @@ export function app_en_learn_bible_gloss_urdu_name_explains() {
   "Places are written down here beside people, because a place name is a proper name and fails the reader the same way. What the wording owes a place is smaller: that it is a town, and now and then one thing about it a passage keeps assuming, such as its standing on the sea.";
   "The wordings that sent the reader back up the passage - ‘the same man's name as came above’, ‘the same town's name as came above’ - are what this table was enlarged to replace. A pointer is the worst of the shared wordings, because the entry it points at is often another pointer, and a name is the place they gather: a name stands in a passage over and over, and every place after the first was handed one.";
   "The closing sentence about capital letters is written once here and joined onto every wording, because it is the same sentence in all of them and a reader meets only one of them at a time.";
-  "Three of the wordings are written once and given to a whole group of names, and each of the three is the honest thing to say rather than a saving of effort. The longest list of names in these passages is the one that counts Jesus' forefathers, and it is a list: the passage says nothing about those men except that each stood between the one before him and the one after. A wording claiming more would be invented. The same holds for the men who travelled with those who carried the good news, and for the two names that stand both in that list of forefathers and on an old prophet's book.";
+  "Five of the wordings are written once and given to a whole group of names, and each of the five is the honest thing to say rather than a saving of effort. The longest list of names in these passages is the one that counts Jesus' forefathers, and it is a list: the passage says nothing about those men except that each stood between the one before him and the one after. A wording claiming more would be invented. The same holds for the men who travelled with those who carried the good news, for the two names that stand both in that list of forefathers and on an old prophet's book, and for the towns a sea voyage or a road passed through, where all the passage says is that the journey went by.";
+  "A wording is not allowed to go looking outside these passages for something interesting to say about a name. Several of the towns here are famous elsewhere, and a sentence about what happened in one of them a century later would read as though the reader had missed it in the verse. What a name is owed is what its own passages assume about it: that it stood on the sea, that it was where somebody was born, that a journey stopped there.";
   let tail = " انگریزی میں ہر خاص نام کا پہلا حرف بڑا لکھا جاتا ہے۔";
   let forefather =
     "ایک آدمی کا خاص نام ہے، جو اُس فہرست میں آتا ہے جو یِسُوع کے باپ دادا گِنواتی ہے۔";
@@ -19,6 +20,10 @@ export function app_en_learn_bible_gloss_urdu_name_explains() {
     "ایک آدمی کا خاص نام ہے۔ یہ نام اُس فہرست میں بھی آتا ہے جو یِسُوع کے باپ دادا گِنواتی ہے، اَور ایک پُرانے نبی کا نام بھی یِہی ہے۔";
   let traveller =
     "ایک آدمی کا خاص نام ہے، جو خُوشخبری سُنانے والوں کے ساتھ سفر کرتا تھا۔";
+  let port =
+    "ایک شہر کا خاص نام ہے، جو سمُندر کے کنارے تھا اَور جہاز وہاں سے گُزرتے یا ٹھہرتے تھے۔";
+  let road_stop =
+    "ایک شہر کا خاص نام ہے، جو اُس راستے پر تھا جہاں سے یہ سفر گُزرا۔";
   let who = {
     Jesus: "اُن ہی کا خاص نام ہے جِن کی خُوشخبری یہ کِتاب سُناتی ہے۔",
     JESUS:
@@ -265,6 +270,48 @@ export function app_en_learn_bible_gloss_urdu_name_explains() {
     Melchi: forefather,
     Matthat: forefather,
     Heli: forefather,
+    Joppa: "ایک شہر کا خاص نام ہے، جو سمُندر کے کنارے تھا۔",
+    Azotus: "ایک شہر کا خاص نام ہے، جو سمُندر کے کنارے تھا۔",
+    Tarsus:
+      "ایک شہر کا خاص نام ہے، جہاں خُوشخبری دُور دُور لے جانے والا آدمی پَیدا ہُوا تھا۔",
+    Nazareth: "اُس چھوٹے شہر کا خاص نام ہے جہاں یِسُوع پلے بڑھے۔",
+    Rome: "اُس بڑے شہر کا خاص نام ہے جہاں سے اُس وقت کی سَب سے بڑی سلطنت چلتی تھی۔",
+    Jericho: "ایک پُرانے شہر کا خاص نام ہے۔",
+    Haran: "ایک پُرانے شہر کا خاص نام ہے۔",
+    Shechem: "ایک پُرانے شہر کا خاص نام ہے۔",
+    Lydda: "ایک چھوٹے شہر کا خاص نام ہے، جو سمُندر کے قرِیب میدان میں تھا۔",
+    Cyrene: "ایک شہر کا خاص نام ہے، جو سمُندر پار اَفریقہ کی طرف تھا۔",
+    Bethsaida: "ایک چھوٹے شہر کا خاص نام ہے، جو جھِیل کے کنارے تھا۔",
+    Chorazin: "ایک چھوٹے شہر کا خاص نام ہے، جو جھِیل کے قرِیب تھا۔",
+    Capernaum:
+      "اُس شہر کا خاص نام ہے جو جھِیل کے کنارے تھا اَور جہاں یِسُوع اکثر ٹھہرے۔",
+    Nain: "ایک چھوٹے شہر کا خاص نام ہے، جہاں یِسُوع نے ایک بیوہ کے بیٹے کو زِندہ کِیا۔",
+    Philippi: "ایک شہر کا خاص نام ہے، جو رُومی سلطنت کا خاص شہر تھا۔",
+    Paphos: "ایک شہر کا خاص نام ہے، جو ایک جزِیرے پر تھا۔",
+    Salamis: "ایک شہر کا خاص نام ہے، جو ایک جزِیرے پر تھا۔",
+    Nineveh:
+      "ایک بڑے پُرانے شہر کا خاص نام ہے، جِس کے لوگوں نے ایک نبی کی بات سُن کر تَوبہ کی۔",
+    Babylon:
+      "ایک بڑے پُرانے شہر کا خاص نام ہے، جہاں اِسرائیل کے لوگ قَید کر کے لے جائے گیٔے تھے۔",
+    Alexandria:
+      "ایک بڑے شہر کا خاص نام ہے، جو سمُندر کے کنارے تھا اَور اپنی تعلِیم کے لیٔے جانا جاتا تھا۔",
+    Thyatira: "ایک شہر کا خاص نام ہے، جہاں سے ارغوانی کپڑا آتا تھا۔",
+    Gaza: "ایک شہر کا خاص نام ہے، جِس کی طرف جانے والا راستہ صحرا سے گُزرتا تھا۔",
+    Rhegium: port,
+    Syracuse: port,
+    Cnidus: port,
+    Lasea: port,
+    Ptolemais: port,
+    Patara: port,
+    Mitylene: port,
+    Cenchrea: port,
+    Neapolis: port,
+    Attalia: port,
+    Seleucia: port,
+    Perga: road_stop,
+    Apollonia: road_stop,
+    Amphipolis: road_stop,
+    Antipatris: road_stop,
   };
   let r = {};
   let names = object_property_names(who);
