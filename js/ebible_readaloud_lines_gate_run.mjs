@@ -75,13 +75,10 @@ export async function ebible_readaloud_lines_gate_run() {
   let as_published = await ebible_readaloud_lines_differ_as_published_names();
   let differ_now = await ebible_readaloud_lines_differ_names();
   let mended = list_difference(as_published, differ_now);
-  let f_name_prove = fn_name(
-    "ebible_readaloud_lines_differ_as_published_record",
-  );
   list_empty_is_assert_json(mended, {
     hint: text_combine_multiple([
       "this chapter is recorded as being read aloud in a different number of lines from the verses its page marks, and it no longer is - so either its publishers have put it right or the record was wrong about it. It must not stay recorded either way, because a name in there excuses that chapter from the list somebody works through. Fetch that bible again and record it afresh with ",
-      f_name_prove,
+      fn_name("ebible_readaloud_lines_differ_as_published_record"),
       ", which writes that bible's names from what it finds rather than adding to them, and then measure the lot again with ",
       f_name,
     ]),
