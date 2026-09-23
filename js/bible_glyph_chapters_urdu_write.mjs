@@ -6,11 +6,10 @@ export async function bible_glyph_chapters_urdu_write() {
   "AND THE MISSING COMMAND WAS FOUND BY A GATE AND NOT BY A READER. Two picture chapters were written, the reveal gate reported both languages short of the same three codes, and only one of the two could be repaired by running something. A language that can be fetched and cannot be re-fetched goes stale silently, because a band that is absent looks exactly like a chapter nobody translated.";
   "THE CODE IS TWO LETTERS HERE AND THREE FOR TAGALOG, which is the whole reason the code is a choice made in a named place rather than derived from the language's name. Urdu has a two-letter code and Tagalog does not, and the folder each resolves to on somebody's server is not a fact either of these functions should know.";
   let language_code = "ur";
-  let written_name = fn_name("bible_glyph_chapters_urdu");
   let language_word = "Urdu";
   let report = await bible_glyph_chapters_language_write(
     language_code,
-    written_name,
+    fn_name("bible_glyph_chapters_urdu"),
     language_word,
   );
   return report;
