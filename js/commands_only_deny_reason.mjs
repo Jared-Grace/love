@@ -12,46 +12,39 @@ export function commands_only_deny_reason(level) {
     level,
     '", so this repo is changed by named commands rather than by the editing tools.',
   ]);
-  let f_name = fn_name("functions_search_all");
   let combined2 = text_combine_multiple([
     "  node scripts/ai.mjs ",
-    f_name,
+    fn_name("functions_search_all"),
     " js_,<verb>",
   ]);
-  let f_name2 = fn_name("functions_prose_search");
   let combined3 = text_combine_multiple([
     "  node scripts/ai.mjs ",
-    f_name2,
+    fn_name("functions_prose_search"),
     " <words>",
   ]);
-  let f_name3 = fn_name("functions_name_vocabulary");
   let combined4 = text_combine_multiple([
     "  node scripts/ai.mjs ",
-    f_name3,
+    fn_name("functions_name_vocabulary"),
     " 200",
   ]);
-  let f_name4 = fn_name("function_select_apply_args_auto");
   let combined5 = text_combine_multiple([
     "  node scripts/ai.mjs ",
-    f_name4,
+    fn_name("function_select_apply_args_auto"),
     " <fn> <selector> <selector_args> <transform> <transform_args>",
   ]);
-  let f_name6 = fn_name("repo_lines_search");
   let combined7 = text_combine_multiple([
     "  node scripts/ai.mjs ",
-    f_name6,
+    fn_name("repo_lines_search"),
     " <word>",
   ]);
-  let f_name7 = fn_name("file_text_replace_once");
   let combined8 = text_combine_multiple([
     "  node scripts/ai.mjs ",
-    f_name7,
+    fn_name("file_text_replace_once"),
     " <f_path> <from> <to>",
   ]);
-  let f_name5 = fn_name("function_new_from_temp");
   let combined6 = text_combine_multiple([
     "  2. node scripts/ai.mjs ",
-    f_name5,
+    fn_name("function_new_from_temp"),
     " <name>",
   ]);
   let lines = [
