@@ -42,8 +42,7 @@ export async function functions_new_baseline_ratchet(lister, slug, hint) {
     name_gate,
   );
   await function_run_args_none(name_write);
-  let f_name = fn_name("qa_gates");
-  await function_list_name_add(f_name, name_gate);
+  await function_list_name_add(fn_name("qa_gates"), name_gate);
   let r = {
     lister,
     path: name_path,
