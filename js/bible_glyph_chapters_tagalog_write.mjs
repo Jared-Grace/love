@@ -12,11 +12,10 @@ export async function bible_glyph_chapters_tagalog_write() {
   "AN EMPTY CHAPTER IS REPORTED AND NEVER SILENTLY KEPT. A bible that does not hold a chapter answers with no verses and so does a fetch that never arrived, and both would write a chapter with nothing in it - which reads on the page as a reveal panel that simply has no Tagalog, indistinguishable from one nobody asked for. The names come back so a caller can see which.";
   "ALL OF THE DOING MOVED NEXT DOOR AND ONLY THE THREE CHOICES STAYED HERE. This was written for one language with the code, the file name and the wording fixed inside it, which is right for one language and a rewrite for the second - and a stranger test is worth as much as the number of strangers it can be run on. What is left here is the answer to which language, and it is kept as a name of its own rather than folded away so that the Tagalog reveal has one place to be asked about and one command to rebuild it.";
   let language_code = "tgl";
-  let written_name = fn_name("bible_glyph_chapters_tagalog");
   let language_word = "Tagalog";
   let report = await bible_glyph_chapters_language_write(
     language_code,
-    written_name,
+    fn_name("bible_glyph_chapters_tagalog"),
     language_word,
   );
   return report;
