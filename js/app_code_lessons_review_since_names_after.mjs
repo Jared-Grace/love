@@ -21,8 +21,11 @@ export async function app_code_lessons_review_since_names_after(
     lesson_prefix,
   );
   ("What was released at the commit is read from the released list as it stood then, so a lesson is reported hidden only when it really was on a learner's screen. A commit from before that list existed has no such file and this throws - there is no release list to measure against there.");
-  let released_f_name = fn_name("app_code_lessons_released_fns");
-  let released_path = text_combine_multiple(["js/", released_f_name, ".mjs"]);
+  let released_path = text_combine_multiple([
+    "js/",
+    fn_name("app_code_lessons_released_fns"),
+    ".mjs",
+  ]);
   let released_shown = text_combine_multiple([commit, ":", released_path]);
   let released_text = await git_folder_run(folder, ["show", released_shown]);
   let released_before = app_code_lessons_review_since_lesson_names_of_text(
