@@ -48,12 +48,11 @@ export async function bible_usfm_version_lines_dropped_gate_run() {
         " lines were thrown away, and there are over six thousand - did the shelf move?",
     );
   }
-  let f_name = fn_name("bible_usfm_markers_dropped_lines_allowed");
   list_empty_is_assert_json(unnamed, {
     unnamed,
     hint: text_combine_multiple([
       "the reading now throws away lines under these marks and nobody has read them - the lines are printed above, so open them, decide whether they are words anybody said, and either mend the mark or write down beside it in ",
-      f_name,
+      fn_name("bible_usfm_markers_dropped_lines_allowed"),
       " what they are",
     ]),
   });
@@ -65,12 +64,11 @@ export async function bible_usfm_version_lines_dropped_gate_run() {
       list_add(gone, allowed_name);
     }
   }
-  let f_name2 = fn_name("bible_usfm_markers_dropped_lines_allowed");
   list_empty_is_assert_json(gone, {
     gone,
     hint: text_combine_multiple([
       "nothing on the shelf wears these marks any more, so the sentence written beside each is describing nothing - either the shelf moved or those lines are now being read as scripture, and the line should be taken out of ",
-      f_name2,
+      fn_name("bible_usfm_markers_dropped_lines_allowed"),
       " by whoever checked which",
     ]),
   });
