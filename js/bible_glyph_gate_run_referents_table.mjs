@@ -19,7 +19,6 @@ export function bible_glyph_gate_run_referents_table(roots, known) {
     for (let word of root.words) {
       for (let name of bible_glyph_group_names(word.glyph)) {
         let drawn = property_exists(known, name);
-        let f_name = fn_name("bible_glyph_characters");
         assert_json(drawn, {
           root: root.root,
           strong: word.strong,
@@ -27,7 +26,7 @@ export function bible_glyph_gate_run_referents_table(roots, known) {
           name,
           hint: text_combine_multiple([
             "a root names a glyph the vocabulary does not carry - add it to ",
-            f_name,
+            fn_name("bible_glyph_characters"),
             " or fix the spelling",
           ]),
         });
