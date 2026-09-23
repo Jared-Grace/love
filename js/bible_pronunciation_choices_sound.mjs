@@ -12,12 +12,14 @@ export async function bible_pronunciation_choices_sound() {
   let dev = folder_web_dev();
   let folder = path_join([dev, "sound_test"]);
   let choices = bible_pronunciation_choices();
-  let script_name = fn_name("bible_pronunciation_choices_sound");
   let args = {
     folder,
     threads: 4,
     choices,
   };
-  let reported = await py_script_speech_json_report(script_name, args);
+  let reported = await py_script_speech_json_report(
+    fn_name("bible_pronunciation_choices_sound"),
+    args,
+  );
   return reported;
 }
