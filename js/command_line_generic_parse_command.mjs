@@ -11,10 +11,9 @@ export function command_line_generic_parse_command(command_text) {
     throw new TypeError("command must be a string");
   }
   if (/[|&;`$()]/.test(command_text)) {
-    let f_name = fn_name("command_line_generic");
     let combined = text_combine_multiple([
       "Shell operators are not allowed in ",
-      f_name,
+      fn_name("command_line_generic"),
     ]);
     throw new Error(combined);
   }
