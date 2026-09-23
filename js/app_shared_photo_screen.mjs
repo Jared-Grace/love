@@ -2,8 +2,8 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_style_position_fixed } from "./html_style_position_fixed.mjs";
 import { html_style_set } from "./html_style_set.mjs";
-import { html_component_element_get } from "./html_component_element_get.mjs";
-import { html_document_body } from "./html_document_body.mjs";
+import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
+import { app_shared_color_page_background } from "./app_shared_color_page_background.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { app_shared_button_back } from "./app_shared_button_back.mjs";
 import { html_element } from "./html_element.mjs";
@@ -21,16 +21,9 @@ export function app_shared_photo_screen(picture_set) {
   html_style_set(screen, "flex-direction", "column");
   html_style_set(screen, "padding", "0.5em");
   html_style_set(screen, "box-sizing", "border-box");
-  let component = html_document_body();
-  let body = html_component_element_get(component);
-  let background = getComputedStyle(body).backgroundColor;
-  html_style_set(screen, "background-color", background);
-  let closed = false;
+  let background = app_shared_color_page_background();
+  html_style_background_color_set(screen, background);
   function close() {
-    if (closed) {
-      return;
-    }
-    closed = true;
     html_remove(screen);
   }
   function on_back() {
