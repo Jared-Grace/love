@@ -15,10 +15,9 @@ export function app_code_lesson_titles_capital_gate_run() {
   let fns = app_code_lessons_fns();
   let walked = list_size(fns);
   let offenders = app_code_lesson_titles_lower();
-  let f_name = fn_name("app_code_lesson_titles_capital_repair");
   let hint = text_combine_multiple([
     "these lesson titles open with a small letter where a capital belongs - repair every one of them with ",
-    f_name,
+    fn_name("app_code_lesson_titles_capital_repair"),
   ]);
   let result = list_empty_is_assert_walked_generic(walked, offenders, hint);
   return result;
