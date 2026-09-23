@@ -12,12 +12,14 @@ export async function app_code_lesson_family_roots(names) {
   ("Recognised by what a lesson does rather than by what it is called. Every one of them asks the lesson maker to build it and nothing else in the repo does, so the test is the test a reader would apply.");
   ("Taking nothing is the second half of the test and it is not a formality. Several makers here ask the lesson maker to build something too, and are handed the operator and the words to say by whoever calls them; a maker has no telling of its own, so holding one against a bank accuses it of never showing a symbol that its callers show for it. That is exactly what happened before this line existed, to the one maker whose name does not end in the word generic.");
   let found = [];
-  let maker = fn_name("app_code_lesson_expression_generic");
   for (let name of names) {
     let lesson_named = text_starts_with(name, "app_code_lesson_");
     if (lesson_named) {
       let source = await repo_love_function_read(name);
-      let call = text_combine(maker, "({");
+      let call = text_combine(
+        fn_name("app_code_lesson_expression_generic"),
+        "({",
+      );
       let builds = text_includes(source, call);
       let empty_handed = text_combine(name, "() {");
       let takes_nothing = text_includes(source, empty_handed);
