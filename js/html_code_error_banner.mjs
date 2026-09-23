@@ -26,7 +26,6 @@ export function html_code_error_banner() {
   let copied_text = html_error_banner_copied_text();
   let manual_text = html_error_banner_copy_manual_text();
   let api_url = server_url_api();
-  let add_name = fn_name("dev_error_log_add");
   let code = text_combine_multiple([
     "if (location.pathname.indexOf('/dev/') !== -1) { ",
     "var dev_error_words = null; var dev_error_button = null; ",
@@ -69,7 +68,7 @@ export function html_code_error_banner() {
     "var dev_error_nothing = function () {}; ",
     "var dev_error_send = function (kind, message) { ",
     "var body = JSON.stringify({ f_name: '",
-    add_name,
+    fn_name("dev_error_log_add"),
     "', args: [kind, String(message), location.href] }); ",
     "var asked = fetch('",
     api_url,
