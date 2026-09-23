@@ -47,10 +47,8 @@ export function app_replace_hash_restore(context) {
   if (null_is(screen_name)) {
     return;
   }
-  let right = fn_name("app_replace_goals");
-  let on_goals = equal(screen_name, right);
-  let right2 = fn_name("app_replace_rule_set");
-  let on_rule_set = equal(screen_name, right2);
+  let on_goals = equal(screen_name, fn_name("app_replace_goals"));
+  let on_rule_set = equal(screen_name, fn_name("app_replace_rule_set"));
   if (on_goals && not(rule_set_said)) {
     return;
   }
