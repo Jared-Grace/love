@@ -91,6 +91,8 @@ export function literals_frozen_names() {
   let spelled48 = fn_name(
     "app_en_learn_bible_gloss_urdu_words_sound_slow_upload_namespace",
   );
+  let spelled49 = fn_name("app_replace_rule_set_hash_key");
+  let spelled50 = fn_name("app_replace_goal_hash_key");
   let names = [
     spelled,
     spelled2,
@@ -140,6 +142,8 @@ export function literals_frozen_names() {
     spelled46,
     spelled47,
     spelled48,
+    spelled49,
+    spelled50,
   ];
   return names;
 }
