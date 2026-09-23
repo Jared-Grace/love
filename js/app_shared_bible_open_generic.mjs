@@ -25,6 +25,5 @@ export function app_shared_bible_open_generic(
   };
   let property_name2 = app_shared_bible_mode_hash_key();
   property_set(hash, property_name2, mode);
-  let f_name = fn_name("app_bible");
-  open_fn(f_name, hash);
+  open_fn(fn_name("app_bible"), hash);
 }
