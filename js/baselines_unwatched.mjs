@@ -16,8 +16,7 @@ export async function baselines_unwatched() {
   ("whether the record gets opened at all, not which gate opens it. A ratchet");
   ("watched from inside another gate's sweep is watched.");
   let path_names = await baseline_paths_names();
-  let f_name = fn_name("qa_gate_run");
-  let reachable = await function_reachable_names(f_name);
+  let reachable = await function_reachable_names(fn_name("qa_gate_run"));
   let unwatched = list_without_multiple(path_names, reachable);
   return unwatched;
 }
