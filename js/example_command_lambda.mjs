@@ -43,33 +43,27 @@ export async function example_command_lambda(f_name, args, e) {
     );
     return lambda_named;
   }
-  let right = fn_name("function_arguments_assert_each_add");
-  if (equal(f_name, right)) {
+  if (equal(f_name, fn_name("function_arguments_assert_each_add"))) {
     let lambda = function_arguments_assert_each_add_lambda(args[1]);
     return lambda;
   }
-  let right2 = fn_name("js_node_type_is_new");
-  if (equal(f_name, right2)) {
+  if (equal(f_name, fn_name("js_node_type_is_new"))) {
     let lambda2 = js_node_type_is_new_lambda(args[0], args[1]);
     return lambda2;
   }
-  let right3 = fn_name("function_identifier_replace_current");
-  if (equal(f_name, right3)) {
+  if (equal(f_name, fn_name("function_identifier_replace_current"))) {
     let lambda22 = function_identifier_replace_lambda(args[0], args[1]);
     return lambda22;
   }
-  let right5 = fn_name("file_imports_repair");
-  if (equal(f_name, right5)) {
+  if (equal(f_name, fn_name("file_imports_repair"))) {
     let lambda3 = example_imports_lambda();
     return lambda3;
   }
-  let right6 = fn_name("js_imports_auto_relative");
-  if (equal(f_name, right6)) {
+  if (equal(f_name, fn_name("js_imports_auto_relative"))) {
     let lambda4 = example_auto_lambda();
     return lambda4;
   }
-  let right11 = fn_name("js_statement_if_test_set");
-  if (equal(f_name, right11)) {
+  if (equal(f_name, fn_name("js_statement_if_test_set"))) {
     let lambda5 = example_slot_expression_set_lambda(
       "IfStatement",
       js_statement_if_test_set,
@@ -77,8 +71,7 @@ export async function example_command_lambda(f_name, args, e) {
     );
     return lambda5;
   }
-  let right12 = fn_name("js_return_argument_set");
-  if (equal(f_name, right12)) {
+  if (equal(f_name, fn_name("js_return_argument_set"))) {
     let lambda6 = example_slot_expression_set_lambda(
       "ReturnStatement",
       js_return_argument_set,
@@ -86,18 +79,15 @@ export async function example_command_lambda(f_name, args, e) {
     );
     return lambda6;
   }
-  let right7 = fn_name("js_fold");
-  if (equal(f_name, right7)) {
+  if (equal(f_name, fn_name("js_fold"))) {
     let lambda7 = example_fold_lambda(args[0]);
     return lambda7;
   }
-  let right8 = fn_name("js_fold_all");
-  if (equal(f_name, right8)) {
+  if (equal(f_name, fn_name("js_fold_all"))) {
     let lambda8 = example_fold_lambda(args[0]);
     return lambda8;
   }
-  let right9 = fn_name("js_fold_auto");
-  if (equal(f_name, right9)) {
+  if (equal(f_name, fn_name("js_fold_auto"))) {
     let lambda9 = example_fold_auto_lambda(args);
     return lambda9;
   }
@@ -109,8 +99,7 @@ export async function example_command_lambda(f_name, args, e) {
   ("arguments the example already lists, so the name and those arguments are the");
   ("whole specification. That is what a branch fixing a verb to its two names only");
   ("ever restated, which is why the shadowing rename no longer has one.");
-  let right13 = fn_name("js_block_body_add_code");
-  if (equal(f_name, right13)) {
+  if (equal(f_name, fn_name("js_block_body_add_code"))) {
     let lambda11 = example_block_body_add_lambda(
       args[0],
       args[1],
@@ -119,8 +108,7 @@ export async function example_command_lambda(f_name, args, e) {
     );
     return lambda11;
   }
-  let right14 = fn_name("js_block_body_add_code_first");
-  if (equal(f_name, right14)) {
+  if (equal(f_name, fn_name("js_block_body_add_code_first"))) {
     let lambda12 = example_block_body_add_lambda(
       args[0],
       args[1],
@@ -129,8 +117,7 @@ export async function example_command_lambda(f_name, args, e) {
     );
     return lambda12;
   }
-  let right10 = fn_name("js_fn_name_references_to_calls");
-  if (equal(f_name, right10)) {
+  if (equal(f_name, fn_name("js_fn_name_references_to_calls"))) {
     let lambda13 = example_fn_name_references_lambda();
     return lambda13;
   }
