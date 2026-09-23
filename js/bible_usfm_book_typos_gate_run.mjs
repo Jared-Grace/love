@@ -56,11 +56,10 @@ export async function bible_usfm_book_typos_gate_run() {
   );
   let clean = equal(fault_count, 0);
   if (not(clean)) {
-    let f_name = fn_name("bible_usfm_book_typos");
     error_json({
       hint: text_combine_multiple([
         "a mend in ",
-        f_name,
+        fn_name("bible_usfm_book_typos"),
         " names a run of the publisher's file that is not there exactly once. None means the publisher has put it right and the entry should be deleted; more than one means the run must be spelled out longer to name the single place",
       ]),
       faults,
