@@ -11,10 +11,11 @@ export async function bible_glyph_apps_aggregate_reaching() {
   ("What an offender should do instead is send for the one chapter it wants. There is a fetching neighbour for each of the three, named after it, and each takes a chapter code and hands back that chapter alone.");
   ("Imports and not calls, so an app is named whether or not the branch reaching the aggregate is one that ever runs. That is the right way round for a rule about weight: a bundler follows an import whether the branch runs or not, so a line nobody expects to reach is carried exactly like a line that always is.");
   let names = await apps_names_prefixed();
-  let chapters = fn_name("bible_glyph_chapters");
-  let rosetta = fn_name("bible_glyph_chapters_rosetta_lines");
-  let tagalog = fn_name("bible_glyph_chapters_tagalog");
-  let targets = [chapters, rosetta, tagalog];
+  let targets = [
+    fn_name("bible_glyph_chapters"),
+    fn_name("bible_glyph_chapters_rosetta_lines"),
+    fn_name("bible_glyph_chapters_tagalog"),
+  ];
   let offenders = await function_names_reaching_any(names, targets);
   let walked = names.length;
   let r = {
