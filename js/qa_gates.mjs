@@ -1157,6 +1157,7 @@ export function qa_gates() {
     git_history_purge_case_blind_gate_run,
     app_en_learn_bible_gloss_urdu_published_unfinished_gate_run,
     purge_words_live_gate_run,
+    app_ceb_bible_gloss_published_unfinished_gate_run,
   ];
   return gates;
 }
