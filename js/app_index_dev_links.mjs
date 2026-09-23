@@ -30,12 +30,6 @@ export function app_index_dev_links() {
       text: "A large town of people walking about. One of them may turn to evil and hunt the others. The hero waits for the cars before crossing, and grows a little taller each time evil is overpowered",
     },
     {
-      app_fn: fn_name("app_en_learn_bible"),
-      hash_name: "",
-      label: "English from the Bible, in Urdu",
-      text: "The Bible in English with every English word explained in Urdu. The page turns to read right to left when the reader's language does, and the buttons say their piece in Urdu rather than in the language being learned",
-    },
-    {
       app_fn: fn_name("app_ceb_bible"),
       hash_name: hash_pairs_text({
         c: "PRO31",
@@ -44,15 +38,10 @@ export function app_index_dev_links() {
       text: "The first Cebuano chapter with word explanations written by hand rather than generated",
     },
     {
-      app_fn: fn_name("app_bible"),
-      hash_name: hash_pairs_text({
-        c: "1JN03",
-        v: "17",
-        l: "ur+swh+lug+en",
-        mode: "chapter",
-      }),
-      label: "Saving the Bible on the phone",
-      text: "Four languages open at once. Press Settings, then the offline downloads, to see whether each language reads as its own group now and whether one press really does fetch all of them side by side",
+      app_fn: fn_name("app_g_bible"),
+      hash_name: "",
+      label: "g_bible",
+      text: "App for me",
     },
   ];
   return r;
