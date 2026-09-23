@@ -51,16 +51,17 @@ export async function finding_from_data_move(name, path_fn_name) {
     leaf,
   });
   let whole = text_includes(text, from_spelled);
-  let part = fn_name("data_folder");
-  let asked = text_includes(text, part);
+  let asked = text_includes(text, fn_name("data_folder"));
   let written = text;
   if (whole) {
     written = text_replace(text, from_spelled, to_spelled);
   }
   if (asked) {
-    let from2 = fn_name("data_folder");
-    let to2 = fn_name("findings_folder");
-    written = text_replace(written, from2, to2);
+    written = text_replace(
+      written,
+      fn_name("data_folder"),
+      fn_name("findings_folder"),
+    );
   }
   let moved_spelling = equal_not(written, text);
   assert_json(moved_spelling, {
