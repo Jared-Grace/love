@@ -28,8 +28,7 @@ export function js_marker_name_get(v) {
   }
   let node = property_get(v, "node");
   let name = js_call_callee_name_try(node);
-  let right = fn_name("marker");
-  if (not_equal(name, right)) {
+  if (not_equal(name, fn_name("marker"))) {
     return null;
   }
   let arguments2 = js_call_arguments_get(node);
