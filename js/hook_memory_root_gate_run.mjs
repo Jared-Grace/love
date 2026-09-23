@@ -13,11 +13,10 @@ export async function hook_memory_root_gate_run() {
   let expected = hook_memory_root_code();
   let actual = await file_read_try(p);
   let fresh = equal(actual, expected);
-  let f_name = fn_name("hook_memory_root_write");
   assert_json(fresh, {
     hint: text_combine_multiple([
       "the memory folder the hook names is no longer the one the repo names — write it again with ",
-      f_name,
+      fn_name("hook_memory_root_write"),
     ]),
     path: p,
   });
