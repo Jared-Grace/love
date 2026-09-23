@@ -1,3 +1,7 @@
+import { math_max } from "./math_max.mjs";
+import { equal } from "./equal.mjs";
+import { subtract } from "./subtract.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { html_scroll_body_attribute_name } from "./html_scroll_body_attribute_name.mjs";
@@ -14,19 +18,22 @@ export function html_bottom_when_short(component) {
   let element = html_component_element_get(component);
   let selector = "[" + html_scroll_body_attribute_name() + "]";
   let removes = [];
-  removes.push(html_on_resize(update));
+  let remove2 = html_on_resize(update);
+  removes.push(remove2);
   let page = html_component_wrap(document.documentElement);
-  removes.push(html_on_size_change(page, update));
+  let remove3 = html_on_size_change(page, update);
+  removes.push(remove3);
   let parent = element.parentElement;
   for (let sibling of parent.children) {
-    if (sibling === element) {
+    if (equal(sibling, element)) {
       continue;
     }
     let wrapped = html_component_wrap(sibling);
-    removes.push(html_on_size_change(wrapped, update));
+    let remove4 = html_on_size_change(wrapped, update);
+    removes.push(remove4);
   }
   function update() {
-    if (!element.isConnected) {
+    if (not(element.isConnected)) {
       for (let remove of removes) {
         remove();
       }
@@ -34,19 +41,20 @@ export function html_bottom_when_short(component) {
     }
     element.style.paddingTop = "0px";
     let box = element.closest(selector);
-    let missing;
-    if (box === null) {
+    let missing = null;
+    if (equal(box, null)) {
       let root = document.documentElement;
       let height = root.getBoundingClientRect().height;
-      missing = window.innerHeight - height;
+      missing = subtract(window.innerHeight, height);
     } else {
       let box_rect = box.getBoundingClientRect();
       let rect = element.getBoundingClientRect();
-      let bottom = rect.bottom - box_rect.top + box.scrollTop;
+      let bottom = subtract(rect.bottom, box_rect.top) + box.scrollTop;
       let padding = parseFloat(getComputedStyle(box).paddingBottom);
-      missing = box.clientHeight - bottom - padding;
+      let left = subtract(box.clientHeight, bottom);
+      missing = subtract(left, padding);
     }
-    let push = Math.max(0, missing);
+    let push = math_max(0, missing);
     element.style.paddingTop = push + "px";
   }
 }
