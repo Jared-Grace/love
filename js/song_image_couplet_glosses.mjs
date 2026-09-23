@@ -73,7 +73,7 @@ export function song_image_couplet_glosses() {
         "Described. The bond nailed to the cross is the image Colossians 2:14 uses. Blotted out is drawn as a parchment with nothing on it, which is the same fact and keeps lettering out of a picture that forbids it.",
     },
     9: {
-      kept: 22,
+      kept: 24,
       lyric_ref: "Colossians 2:14, Isaiah 53:5, Hebrews 2:10",
       lyric_explain:
         "The same two lines as couplet 8, sung a second time to a different melody, and resting on the same passages because they are the same words. What is different here is the emblem beside them, and the passages that emblem rests on are given under the symbol rather than under the lyric.",
@@ -257,7 +257,7 @@ export function song_image_couplet_glosses() {
         "Described. The fig branch in leaf is the sign CHRIST HIMSELF gives for knowing the time is near, and the leaves are the whole of the sign, so the picture draws the branch and nothing around it.",
     },
     32: {
-      kept: 31,
+      kept: 37,
       lyric_ref: "Revelation 21:4, Revelation 22:1-2",
       lyric_explain:
         "There shall be no more death, neither sorrow, nor crying, neither shall there be any more pain. The leaves of the tree were for the healing of the nations.",
@@ -265,7 +265,7 @@ export function song_image_couplet_glosses() {
         "Described. A pure river of water of life, and on either side of the river was there the tree of life. The trees stand on both banks because the verse puts them on both, which is the detail most pictures of it drop.",
     },
     33: {
-      kept: 21,
+      kept: 26,
       lyric_ref: "Revelation 21:4, Isaiah 25:8, Revelation 7:17",
       lyric_explain:
         "GOD shall wipe away all tears from their eyes. Isaiah had said the same, that the Lord GOD will wipe away tears from off all faces, and Revelation says it twice over.",
