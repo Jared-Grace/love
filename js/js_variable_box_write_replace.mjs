@@ -17,9 +17,8 @@ export function js_variable_box_write_replace(node, name_held, name) {
   ("IT IS ONLY EVER ASKED OF A WRITING THAT STANDS ON A LINE OF ITS OWN AND REPLACES RATHER THAN ADDS, because a call hands back nothing to pass on and reads nothing of what was there. The reading in front of this one is what refuses every other shape.");
   ("WHICH RECORD AND WHICH ENTRY IS ASKED FOR BY NAME, the same name the reading side asks, so the two cannot come to fill those two places differently. What is left here is the third place, which is the whole of what a writing has and a reading has not.");
   let right = property_get(node, "right");
-  let f_name = fn_name("property_set");
   let code_expression = text_combine_multiple([
-    f_name,
+    fn_name("property_set"),
     '(holder, "field", value)',
   ]);
   let written = js_parse_expression(code_expression);
