@@ -10,8 +10,7 @@ export function app_index_built_card(root) {
   "Shown only while the page being read is a dev build, which is the only place the offer means anything.";
   arguments_assert(arguments, 1);
   ("the address is built from this app's own name, so it follows a rename instead of having to be noticed and typed again");
-  let name2 = fn_name("app_index");
-  let name = app_shared_name_prefix_without(name2);
+  let name = app_shared_name_prefix_without(fn_name("app_index"));
   let path = file_name_html(name);
   let shown = app_shared_page_dev_build_is();
   let label = "prod index";
