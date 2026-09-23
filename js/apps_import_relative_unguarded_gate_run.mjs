@@ -14,10 +14,9 @@ export async function apps_import_relative_unguarded_gate_run() {
   let found = await apps_import_relative_unguarded();
   let walked = property_get(found, "walked");
   let offenders = property_get(found, "offenders");
-  let f_name = fn_name("browser_is");
   let hint = text_combine_multiple([
     "a page can reach this function, and it asks for a file by joining a name into a path without ever asking where it is running - in a browser nothing was written to that address, so the fetch throws and the page stops. Either ask ",
-    f_name,
+    fn_name("browser_is"),
     " first, if the branch is only ever the build machine's, or write the address out in full as an awaited import of the file itself, which keeps the weight out of the page and still lands somewhere the fetch can find",
   ]);
   let r = list_empty_is_assert_walked_generic(walked, offenders, hint);
