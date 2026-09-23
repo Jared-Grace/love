@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_foot_held_attribute_name } from "./html_foot_held_attribute_name.mjs";
+import { html_foot_tail_attribute_name } from "./html_foot_tail_attribute_name.mjs";
 import { html_marked_or_null } from "./html_marked_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { html_scroll_body_or_null } from "./html_scroll_body_or_null.mjs";
@@ -11,7 +11,7 @@ export function app_shared_footer_parent(root) {
   "ON A PAGE THAT SCROLLS ITSELF the foot is added to the page, and it holds itself at the bottom of the screen for as long as the page reaches past it. On a page held to exactly one window, with the reading scrolling inside a box, the foot goes inside the box, so what it holds itself against is the bottom of that box - which is the bottom of the screen.";
   "WHICH KIND OF PAGE IT IS, IS ASKED OF THE PAGE. The frame marks the foot it holds and the box it scrolls as it builds them, so the answer is made and unmade with the screen it describes and no screen has to remember to say which kind it is.";
   arguments_assert(arguments, 1);
-  let name = html_foot_held_attribute_name();
+  let name = html_foot_tail_attribute_name();
   let held = html_marked_or_null(root, name);
   let holds_foot = null_not_is(held);
   if (holds_foot) {

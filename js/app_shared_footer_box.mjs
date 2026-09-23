@@ -4,7 +4,7 @@ import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { app_shared_footer_row_attribute_name } from "./app_shared_footer_row_attribute_name.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_style_padding_bottom } from "./html_style_padding_bottom.mjs";
-import { html_foot_held_attribute_name } from "./html_foot_held_attribute_name.mjs";
+import { html_foot_tail_attribute_name } from "./html_foot_tail_attribute_name.mjs";
 import { html_attribute_get } from "./html_attribute_get.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_shared_color_page_background } from "./app_shared_color_page_background.mjs";
@@ -24,7 +24,7 @@ export function app_shared_footer_box(parent) {
   let name = app_shared_footer_row_attribute_name();
   html_attribute_set(row, name, "");
   html_style_padding_bottom(row, gap);
-  let held_name = html_foot_held_attribute_name();
+  let held_name = html_foot_tail_attribute_name();
   let held = html_attribute_get(parent, held_name);
   if (null_not_is(held)) {
     return footer;
