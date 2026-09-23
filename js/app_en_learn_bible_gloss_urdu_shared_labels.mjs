@@ -32,6 +32,9 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
   "The bare ‘verb’ next to it was licensed long before any of this and had been sitting there doing nothing, which is worth one line because it is the shape the list takes on purpose. A licence is not an instruction, so a label over words nobody has written for changes nothing until somebody writes them. Those words are written now, and the entries fall without the list being touched.";
   "Two more verb wordings joined once the irregular forms had entries of their own, and they are worth naming together because one of them looks like a refusal and is not. ‘A verb, past tense, and it tells of saying’ stands over ‘said’, ‘spoke’ and ‘told’, and reads at first like the job-in-this-verse claims refused all the way down this note. It is not one: those three words are past forms of speaking verbs wherever they stand, so every part of the label can be read off the word alone. The settled wordings say the verb, say the time, and hand over the Urdu for the saying, which is the label and four things more.";
   "The other is ‘a verb, irregular: come → came → come’, and it is the only label on this list that already did the job a settled wording does. It names the verb, it gives the three forms, and a reader is genuinely better off for it. It is written over anyway, because the settled wording says all of that and then says what the word MEANS, which is the one thing the label never got to. A label being good is not a reason to keep it; being as good as the wording that would replace it would be, and it is not.";
+  "Eleven more joined at once, all of them small words - the ones that shade a sentence, count roughly, place it in time, or join one clause to the next - and they are worth one entry between them because the same two things decided all eleven. The first is that a label written in Urdu grammar terms is not harder to pass than a plain one, only more exact about what has to be said. ‘An adverb of time’ says the word is an adverb and that it tells time, so a settled wording that only said ‘this word tells time’ would have dropped half of it and been refused. Five wordings were rewritten to name their class and then gloss it - وقت کا ظرف, یعنی وقت بتاتا ہے - which says the label's whole content and then says more, and a beginner who meets the term with its meaning attached is better off than one who meets it bare.";
+  "The second is the exception this note has now written four times, and the fourth case is the clearest of the four. ‘This word tells that because of the first thing the next thing is’ stands over ‘Therefore’, ‘So’ and ‘Then’. The first two settled wordings say exactly that. ‘Then’ does not, and the reason is that ‘Then’ usually is not doing that at all - ‘Then Herod called the wise men’ is telling time, not giving a reason. So the label's extra claim is FALSE for the word it is worst for, and admitting it replaces a wrong sentence with a right one rather than a full sentence with a thin one. The same reading admits ‘this word gives emphasis’, which stands over eleven words including ‘all’, ‘any’, ‘how’ and ‘yes’, none of which is giving emphasis to anything.";
+  "One entry in this batch is built rather than written, and it is worth a line because it is the first of its kind here. ‘After’ needed a capital entry, and ‘after’ lives in the closed-class table rather than in the new one, so the capital is made by reading that table and appending the same capital sentence the verb table uses. The alternative was writing a second wording for ‘after’ in a second place, which is the exact failure the paragraph above is trying to stop, so the cross-table read is the cheaper of the two by a long way.";
   let labels = [
     "معرفہ حرفِ تعریف۔",
     "نکرہ حرفِ تعریف۔",
@@ -188,6 +191,17 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
     "فعل، بےقاعدہ۔",
     "فعل ہے اَور گُزرے ہوئے زمانے کا ہے، اَور کہنے کو بتاتا ہے۔",
     "فعل، بےقاعدہ: come → came → come۔",
+    "یہ لفظ بات پر زور دیتا ہے۔",
+    "یہ لفظ مِقدار بتاتا ہے اَور چند کے لیٔے آتا ہے۔",
+    "یہ لفظ مِقدار بتاتا ہے اَور بہت سے کے لیٔے آتا ہے۔",
+    "یہ لفظ مِقدار بتاتا ہے، اَور یہ وہ شکل ہے جو دو میں سے بڑھ کر ہونے کو بتاتی ہے۔",
+    "گِنتی کا لفظ ہے۔",
+    "وقت کا ظرف۔",
+    "وقت کا حرفِ ربط۔",
+    "حرفِ ربط برائے وقت۔",
+    "حرفِ ربط: نتِیجہ۔",
+    "حرفِ ربط: اِس لِیے۔",
+    "یہ لفظ بتاتا ہے کہ پہلی بات کی وجہ سے اگلی بات ہے۔ پہلا حرف بڑا ہے کیونکہ یہاں سے آیت شروع ہو رہی ہے۔",
   ];
   return labels;
 }
