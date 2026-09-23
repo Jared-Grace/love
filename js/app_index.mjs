@@ -1,3 +1,4 @@
+import { app_index_categories_show } from "./app_index_categories_show.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_index_dev_build_card } from "./app_index_dev_build_card.mjs";
@@ -5,7 +6,6 @@ import { app_index_built_card } from "./app_index_built_card.mjs";
 import { app_index_dev_links_show } from "./app_index_dev_links_show.mjs";
 import { app_index_dev_about_card } from "./app_index_dev_about_card.mjs";
 import { app_index_main_fns } from "./app_index_main_fns.mjs";
-import { app_index_generic } from "./app_index_generic.mjs";
 import { app_index_dev_g_card } from "./app_index_dev_g_card.mjs";
 import { app_index_gloss_coverage_show } from "./app_index_gloss_coverage_show.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -22,7 +22,7 @@ export async function app_index(context) {
   ("about sits up here with the working links rather than down among the apps, because it is the same kind of thing they are: a way in for whoever is working, shown only on this network, and worth one tap instead of the four it takes to reach the same paragraph through an app's settings.");
   app_index_dev_about_card(root, lambda_about);
   let entries = app_index_main_fns();
-  let cards = app_index_generic(context, entries);
+  let cards = app_index_categories_show(context, entries);
   ("the dev tools card comes after the apps, not among them: it is not an app somebody came here to use, it is the way in to the game's test screens from a phone, which has no localhost to reach them from");
   app_index_dev_g_card(root);
   ("★ HOW FAR THE TWO LANGUAGE APPS HAVE GOT IS ASKED LAST, WITH EVERY CARD ALREADY ON THE SCREEN, which is the opposite of the line above about the working links, and the two differ in what waiting costs. Those are drawn only on this network and only above the apps, so waiting for them holds up a part of the page nobody outside this house ever sees. This is a store somewhere else, asked by everybody who opens the site, and the browser half of fetching gives up after eight seconds and tries twice more - so drawing anything behind it risks a blank front page for half a minute in order to put a number in a sentence.");
