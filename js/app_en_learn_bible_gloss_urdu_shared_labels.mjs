@@ -9,6 +9,7 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
   "A wording that settles which of a word's jobs is being done in this verse is refused. ‘A marker standing before a verb’ over ‘to’, and ‘a word that points’ over ‘that’, each pick one job out of the two or three the settled wording lists. Writing the settled wording over them hands the reader back a choice somebody had already made for them, which is a loss even though every sentence involved is true.";
   "A wording naming what this verse's Urdu does is refused. ‘Preposition. Urdu has not written it here.’ is about the line it stands in and could not be written from the word alone.";
   "The test is about what a wording tells the reader and not about the words it spells that in. ‘Preposition: alongside’ over ‘with’ hands over a word the settled wording does not use, and the settled wording hands over a commoner one meaning the same thing, so the reader loses nothing by the trade. Read the test the other way and a whole family of short labels naming the Urdu equivalent would have been refused over a synonym, which is a rule about spelling pretending to be a rule about meaning.";
+  "The labels standing over ordinary nouns joined the list once there were settled wordings for those nouns to be written. A bare ‘noun’ is the same failure as a bare ‘conjunction’ and a worse one, because the reader of a conjunction at least learns it joins, and the reader of a noun learns nothing at all about what the thing is. Two of these say more than the bare label - that the word names a place lived in, that its plural is irregular - and each was checked against the settled wording of every word carrying it before being added, the same way as the rest.";
   "A wording carrying case where the settled wording carries none is refused. ‘Object pronoun, inanimate’ over ‘it’ says the word stands where the action lands, and the settled wording for ‘it’ says which things it stands for without saying where it stands. The same wording over ‘him’ is admitted, because there the settled wording does say it.";
   let labels = [
     "معرفہ حرفِ تعریف۔",
@@ -85,6 +86,11 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
     "ضمیرِ فاعل، واحد مُتکلِّم؛ ہمیشہ بڑا حرف۔",
     "یہ لفظ اِنکار بتاتا ہے: نہیں۔",
     "اِنکار کا لفظ ہے: نہیں۔",
+    "اِسم۔",
+    "اِسم ہے۔",
+    "نام کا لفظ ہے۔",
+    "نام کا لفظ ہے اَور رہنے کی جگہ کو بتاتا ہے۔",
+    "اِسم؛ جمع بےقاعدہ: man → men۔",
   ];
   return labels;
 }
