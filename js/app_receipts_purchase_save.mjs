@@ -12,9 +12,10 @@ import { app_receipts_unsent_add_custom } from "./app_receipts_unsent_add_custom
 export async function app_receipts_purchase_save(purchase) {
   "$plain purchase";
   "Keep a purchase on this phone as it now stands, and put its details in line to be sent - so a date changed with no internet is kept here at once and reaches storage later.";
-  "The price is a whole number of pesos written as digits, or empty text while none has been given; a purchase kept before prices were asked for has none.";
-  "The description is what the person wrote about it, empty when nothing is written.";
-  "What is sent is the date, the time, the price, the description, and the names of its photos, written over the same address each time, so the last change is the one storage holds.";
+  "The price is an amount of pesos written as digits, with at most two after a point, or empty text while none has been given; a purchase kept before prices were asked for has none.";
+  "The description is what the person wrote about it, and the notes are what the person reviewing it wrote; each is empty when nothing is written.";
+  "The colour is the key of the colour it is marked with, blue until another is chosen.";
+  "What is sent is the date, the time, the price, the description, the notes, the colour, and the names of its photos, written over the same address each time, so the last change is the one storage holds.";
   "The date and time also go beside the file as words storage keeps about it, because every phone may ask about a file while some may not read one.";
   arguments_assert(arguments, 1);
   let store = app_receipts_purchases_store();
@@ -30,11 +31,15 @@ export async function app_receipts_purchase_save(purchase) {
   let time = property_get(purchase, "time");
   let price = property_get_or(purchase, "price", "");
   let description = property_get_or(purchase, "description", "");
+  let notes = property_get_or(purchase, "notes", "");
+  let color = property_get_or(purchase, "color", "blue");
   let details = {
     date,
     time,
     price,
     description,
+    notes,
+    color,
     photos: list_map_property(photos, "name"),
   };
   let json = json_to(details);
@@ -46,6 +51,8 @@ export async function app_receipts_purchase_save(purchase) {
     time,
     price,
     description,
+    notes,
+    color,
   };
   let folder_code = property_get(purchase, "folder_code");
   let details_name = app_receipts_purchase_details_name();
