@@ -1,3 +1,18 @@
 {
- "known": []
+ "known": [
+  "08d43c9e555534a2b96c7692001e1086604e119f /home/j/***REMOVED***/repos/***REMOVED***/js/***REMOVED***.mjs",
+  "2d27936beb527b4a768e3e5ef0409729c4cb248a /home/j/a/repos/love/js/list_set_intersect.mjs",
+  "e7f47f977eb7190def71d341b38166c29d3f5fb3 /home/j/a/repos/love/js/list_set_intersect.mjs",
+  "d26a915efc52415e8675f0dbd29a1ce3301f22e9 /home/j/a/repos/love/js/import_from_dir_root.mjs",
+  "0da18fddcf1c233ed84a52be3a69faec2fb04450 /home/j/a/repos/love/js/import_from_dir_path.mjs",
+  "53929b39192505fe264edacf093098a546932797 /home/j/a/repos/love/js/import_from_dir_path.mjs",
+  "d15a0fd26872c34076f14826ec87adaff6c86a8d /home/j/a/repos/love/js/import_from_dir_root.mjs",
+  "10a1d7c790aa33d40140b6462ab67458a421bef2 /home/j/a/repos/love/js/list_map_then_squash.mjs",
+  "3e3a8619e24a5bc1f57523e065f25af36032907a /home/j/a/repos/love/js/list_cartesian_product_self.mjs",
+  "013f81088827f652bec758e08f7454c58d945730 /home/j/a/repos/love/js/each_range.mjs",
+  "9512bd3f768676b448c22aff23b3e1b08a81f7c8 /home/j/a/repos/love/js/range.mjs",
+  "54316044d91448f3c491ea78debbe4aa58fe0e97 /home/j/a/repos/love/js/each_range.mjs",
+  "832e29efc515d4cacbe2a1f2f4e53c1cc9af047c /home/j/a/repos/love/js/repo_functions_move_if_starts_with.mjs",
+  "f75c00aca0642f55f8f094de1da3c573202dcf22 /home/j/a/repos/love/js/***REMOVED***.mjs"
+ ]
 }

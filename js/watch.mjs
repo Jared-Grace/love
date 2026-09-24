@@ -1,3 +1,4 @@
+import { function_path_to_name } from "./function_path_to_name.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { claude_edit_claim_fresh_is } from "./claude_edit_claim_fresh_is.mjs";
 import { log } from "./log.mjs";
@@ -56,7 +57,8 @@ export async function watch() {
       property_set(in_progress, path, true);
       async function lambda3() {
         try {
-          await command_line_node_g(fn_name("function_auto_path"), [path]);
+          let f_name = function_path_to_name(path);
+          await command_line_node_g(fn_name("function_auto"), [f_name]);
         } finally {
           property_set(in_progress, path, false);
           if (0) {
