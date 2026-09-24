@@ -1,3 +1,4 @@
+import { app_code_js_written_that_text } from "./app_code_js_written_that_text.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
@@ -64,7 +65,8 @@ export function app_code_lesson_statement_name_copy_code_box(
   let words4 = list_join_empty(["We write out what is inside ", copy_named]);
   let note_logged = js_code_comment_line(words4);
   let blank = text_empty();
-  html_div_cycle_code(box_code, ["In JS we write the same thing like this:"]);
+  let text = app_code_js_written_that_text();
+  html_div_cycle_code(box_code, [text]);
   let lines = [
     note_cups,
     held_first,
