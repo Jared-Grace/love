@@ -1,3 +1,4 @@
+import { picture_swaps_undecided_each } from "./picture_swaps_undecided_each.mjs";
 import { html_hash_name_third_or_empty } from "./html_hash_name_third_or_empty.mjs";
 import { lyric_video_song_swaps_narrow } from "./lyric_video_song_swaps_narrow.mjs";
 import { lyric_video_song_buttons } from "./lyric_video_song_buttons.mjs";
@@ -12,7 +13,6 @@ import { api_read } from "./api_read.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { lyric_video_song_swap_card } from "./lyric_video_song_swap_card.mjs";
-import { each } from "./each.mjs";
 export async function lyric_video_song_swaps_preview() {
   "The screen for choosing between a song's current background pictures and the pictures offered to replace them, on the sandbox app at hash lyric_video_song_swaps.";
   "BEFORE AND AFTER SIT SIDE BY SIDE, because a replacement is judged against what it replaces; seen alone, a candidate is judged against nothing.";
@@ -21,7 +21,7 @@ export async function lyric_video_song_swaps_preview() {
   arguments_assert(arguments, 0);
   let root = html_body_div();
   let asked =
-    "Choose a song. Each picture that has candidates is shown first, then the candidates beside it, under the words sung over it. Press Approve under a picture to use it in the video: it gets a green frame and is saved at once. Press again to take the approval back.";
+    "Choose a song. Each picture that has candidates is shown first, then the candidates beside it, under the words sung over it. Press Approve under a picture to use it in the video: it gets a green frame and is saved at once. Press again to take the approval back. An approved picture is left off the next time the page opens.";
   html_p_text(root, asked);
   let chosen = html_div(root);
   let told = app_shared_text_quiet(root, "");
@@ -43,7 +43,8 @@ export async function lyric_video_song_swaps_preview() {
     function card(swap) {
       lyric_video_song_swap_card(cards, document, swap, name);
     }
-    each(listed, card);
+    let hidden = picture_swaps_undecided_each(listed, card);
+    app_shared_text_quiet(cards, hidden + " already approved, not shown");
   }
   await lyric_video_song_buttons(chosen, song_show);
   return told;
