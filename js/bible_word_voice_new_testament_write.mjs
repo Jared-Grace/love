@@ -15,8 +15,8 @@ export async function bible_word_voice_new_testament_write(voice_name) {
     let forms = await bible_word_voice_chapter_asked(chapter_code);
     for (let form of forms) {
       async function asked() {
-        let made = await bible_word_voice_record_local(voice_name, form);
-        return made;
+        let r2 = await bible_word_voice_record_local(voice_name, form);
+        return r2;
       }
       let made = await retry_standard(asked);
       if (made) {
