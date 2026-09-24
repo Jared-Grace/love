@@ -1,6 +1,8 @@
+import { app_code_lesson_current_last_is } from "./app_code_lesson_current_last_is.mjs";
+import { and } from "./and.mjs";
+import { not } from "./not.mjs";
 import { app_code_lesson_current_number } from "./app_code_lesson_current_number.mjs";
 import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
-import { app_code_lesson_next_none_is } from "./app_code_lesson_next_none_is.mjs";
 import { app_code_quiz_index_reset } from "./app_code_quiz_index_reset.mjs";
 import { app_code_after_lesson } from "./app_code_after_lesson.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -10,13 +12,14 @@ import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs
 import { app_shared_button_wide_spaced } from "./app_shared_button_wide_spaced.mjs";
 import { app_code_button_skip_lesson_past_review } from "./app_code_button_skip_lesson_past_review.mjs";
 export function app_code_button_skip_lesson(context, parent) {
-  "a 'Skip to the next lesson' button that jumps straight to the next lesson the learner has not finished (or the review, at a checkpoint), the same as finishing this lesson - shared by the examples screen and the quiz screen so either offers the escape. Renders nothing (returns null) only where there is nowhere at all to go";
+  "a 'Skip to the next lesson' button that jumps straight to the next lesson the learner has not finished (or the review, at a checkpoint), the same as finishing this lesson - shared by the examples screen and the quiz screen so either offers the escape. Renders nothing (returns null) on the last lesson when no review follows it";
   let number = app_code_lesson_current_number(context);
   let has_review = app_code_review_due_is(number);
   ("HIDDEN ON THE LAST LESSON UNLESS A REVIEW COMES AFTER IT. There the only way on is round the top of the list to an early lesson left unfinished, and a button saying next that carries a learner back to lesson 1 says the opposite of where it goes. Unfinished work elsewhere is offered on a button of its own that says what it is, so nothing is lost by hiding this one. It used to ask whether there was anywhere at all to go, which counted that wrap-round as somewhere.");
   ("It still never stands beside the note saying the course is done: that note is shown only where there is no review and no lesson after this one, and both of those hide this button too.");
   let last = app_code_lesson_current_last_is(context);
-  let no_next = and(not(has_review), last);
+  let left2 = not(has_review);
+  let no_next = and(left2, last);
   if (no_next) {
     return null;
   }
