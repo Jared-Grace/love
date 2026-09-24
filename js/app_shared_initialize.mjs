@@ -11,4 +11,5 @@ export function app_shared_initialize(context, app_fn, screens) {
     screens,
   });
   app_shared_mobile_default_font_size(context);
+  app_shared_history_listen(context);
 }
