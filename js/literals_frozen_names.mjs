@@ -92,6 +92,7 @@ export function literals_frozen_names() {
     fn_name("app_receipts_database_name"),
     fn_name("app_receipts_store"),
     fn_name("app_receipts_purchases_database_name"),
+    fn_name("app_receipts_purchases_store"),
   ];
   return names;
 }
