@@ -1,5 +1,5 @@
+import { app_shared_screen_set_write } from "./app_shared_screen_set_write.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { app_shared_bible_verses } from "./app_shared_bible_verses.mjs";
 import { app_shared_bible_chapter_set } from "./app_shared_bible_chapter_set.mjs";
 export async function app_shared_bible_chapter_open(context, chapter_code) {
