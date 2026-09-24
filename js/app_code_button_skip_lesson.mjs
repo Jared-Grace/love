@@ -15,7 +15,7 @@ export function app_code_button_skip_lesson(context, parent) {
   "a 'Skip to the next lesson' button that jumps straight to the next lesson the learner has not finished (or the review, at a checkpoint), the same as finishing this lesson - shared by the examples screen and the quiz screen so either offers the escape. Renders nothing (returns null) on the last lesson when no review follows it";
   let number = app_code_lesson_current_number(context);
   let has_review = app_code_review_due_is(number);
-  ("HIDDEN ON THE LAST LESSON UNLESS A REVIEW COMES AFTER IT. There the only way on is round the top of the list to an early lesson left unfinished, and a button saying next that carries a learner back to lesson 1 says the opposite of where it goes. Unfinished work elsewhere is offered on a button of its own that says what it is, so nothing is lost by hiding this one. It used to ask whether there was anywhere at all to go, which counted that wrap-round as somewhere.");
+  ("HIDDEN ON THE LAST LESSON UNLESS A REVIEW COMES AFTER IT. There is no lesson further on, and the way on never goes round the top of the list, so a button saying next would have nowhere to go. It used to carry a learner back to lesson 1 from here, back when the way on wrapped round.");
   ("It still never stands beside the note saying the course is done: that note is shown only where there is no review and no lesson after this one, and both of those hide this button too.");
   let last = app_code_lesson_current_last_is(context);
   let left2 = not(has_review);
