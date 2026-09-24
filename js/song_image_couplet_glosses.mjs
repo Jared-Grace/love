@@ -97,7 +97,7 @@ export function song_image_couplet_glosses() {
         "Described. Genesis 22:13 has the ram caught in a thicket by his horns, offered up in the stead of the son. The picture is that verse and no more; the thicket is thinned to a few boughs for the leading.",
     },
     12: {
-      kept: 6,
+      kept: 10,
       lyric_ref: "Galatians 3:13, Deuteronomy 21:23, Matthew 26:39",
       lyric_explain:
         "Cursed is every one that hangeth on a tree, quoted by Paul to say that HE was made a curse for us. The cup is HIS own word in Gethsemane, let this cup pass from me.",
