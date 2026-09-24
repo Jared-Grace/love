@@ -54,7 +54,7 @@ export function app_reply_cards_handlers_draw(
     visible_count: property_get(r3, "visible_count"),
   };
   let card2 = property_get(r3, "card2");
-  let buttons_languages = property_get(r3, "buttons_languages");
+  let languages_chooser = property_get(r3, "languages_chooser");
   async function update(verse_count) {
     let r4 = await app_reply_verses_refresh({
       verse_count,
@@ -83,7 +83,7 @@ export function app_reply_cards_handlers_draw(
     languages_chosen_held,
     languages,
     update,
-    buttons_languages,
+    buttons_languages: languages_chooser,
     buttons_responses,
     responses,
     responses_buttons,

@@ -19,7 +19,7 @@ export function app_reply_visible_count(
 ) {
   arguments_assert(arguments, 6);
   app_shared_button(card, "❤️", love);
-  let buttons_languages = app_reply_languages_chooser(
+  let languages_chooser = app_reply_languages_chooser(
     languages_chosen,
     card,
     languages,
@@ -47,7 +47,7 @@ export function app_reply_visible_count(
   each(choices_verse_count, lambda2);
   let visible_count = null;
   let r = {
-    buttons_languages,
+    buttons_languages: languages_chooser,
     card2,
     visible_count,
   };

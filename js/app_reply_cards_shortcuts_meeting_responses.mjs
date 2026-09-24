@@ -12,7 +12,7 @@ export function app_reply_cards_shortcuts_meeting_responses({
   languages_chosen_held,
   languages,
   update,
-  buttons_languages,
+  buttons_languages: languages_chooser,
   buttons_responses,
   responses,
   responses_buttons,
@@ -33,7 +33,7 @@ export function app_reply_cards_shortcuts_meeting_responses({
     languages_chosen,
     languages,
     update,
-    buttons_languages,
+    languages_chooser,
     buttons_responses,
   );
   let card4 = app_shared_container_blue(root);
