@@ -1,11 +1,11 @@
-import { not } from "./not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_en_learn_bible_gloss_urdu_third_form_jobs } from "./app_en_learn_bible_gloss_urdu_third_form_jobs.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { equal } from "./equal.mjs";
 import { property_set } from "./property_set.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_map } from "./list_map.mjs";
@@ -264,6 +264,32 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
   };
   let also = " یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے:";
   let jobs = " " + app_en_learn_bible_gloss_urdu_third_form_jobs();
+  let learn = " اَیسے فعل یاد کرنے پڑتے ہیں۔";
+  let changes = "، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: '";
+  function changes_read(spelled, form) {
+    "Which clause follows 'English usually adds -ed'. Three things can be true of a form and the sentence has to say the one that is: the word changed, or it did not change and only the sound did, or nothing changed at all and this form is simply regular.";
+    let regular = spelled_regularly_is(spelled, form);
+    if (regular) {
+      let same = "، اَور اِس فعل میں بھی یِہی ہُوا ہے: '";
+      return same;
+    }
+    let sound_only = sound_only_is(spelled, form);
+    if (sound_only) {
+      let sound =
+        "۔ لِکھنے میں صِرف 'd' لگا ہے، مگر بولنے میں آواز بدل جاتی ہے، اِس لیٔے یہ فعل بےقاعدہ گِنا جاتا ہے: '";
+      return sound;
+    }
+    return changes;
+  }
+  function learn_read(spelled, form) {
+    "The line about having to memorise these verbs, which belongs only where there is something to memorise. A form spelled the ordinary way is the rule rather than an exception to it, so telling the reader to learn it by heart teaches them to distrust the rule they were just given.";
+    let regular = spelled_regularly_is(spelled, form);
+    if (regular) {
+      let none = "";
+      return none;
+    }
+    return learn;
+  }
   let r = {};
   function base_read(word) {
     let urdu = property_get(meaning, word);
@@ -472,32 +498,6 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
     let done = parts[1];
     let urdu = property_get(meaning, word);
     let head = "فعل '" + word + "' یعنی '" + urdu + "' کی ";
-    let learn = " اَیسے فعل یاد کرنے پڑتے ہیں۔";
-    let changes = "، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: '";
-    function changes_read(word, form) {
-      "Which clause follows 'English usually adds -ed'. Three things can be true of a form and the sentence has to say the one that is: the word changed, or it did not change and only the sound did, or nothing changed at all and this form is simply regular.";
-      let regular = spelled_regularly_is(word, form);
-      if (regular) {
-        let same = "، اَور اِس فعل میں بھی یِہی ہُوا ہے: '";
-        return same;
-      }
-      let sound_only = sound_only_is(word, form);
-      if (sound_only) {
-        let sound =
-          "۔ لِکھنے میں صِرف 'd' لگا ہے، مگر بولنے میں آواز بدل جاتی ہے، اِس لیٔے یہ فعل بےقاعدہ گِنا جاتا ہے: '";
-        return sound;
-      }
-      return changes;
-    }
-    function learn_read(word, form) {
-      "The line about having to memorise these verbs, which belongs only where there is something to memorise. A form spelled the ordinary way is the rule rather than an exception to it, so telling the reader to learn it by heart teaches them to distrust the rule they were just given.";
-      let regular = spelled_regularly_is(word, form);
-      if (regular) {
-        let none = "";
-        return none;
-      }
-      return learn;
-    }
     let unchanged = equal(past, word);
     if (unchanged) {
       return;
