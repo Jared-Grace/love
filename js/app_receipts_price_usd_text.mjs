@@ -1,6 +1,6 @@
-import { equal } from "./equal.mjs";
-import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { equal } from "./equal.mjs";
+import { app_receipts_price_usd } from "./app_receipts_price_usd.mjs";
 export function app_receipts_price_usd_text(price, php_per_usd) {
   "$plain price";
   "$plain php_per_usd";
@@ -10,12 +10,7 @@ export function app_receipts_price_usd_text(price, php_per_usd) {
     let r = "";
     return r;
   }
-  let top = Number(price);
-  let usd = divide(top, php_per_usd);
-  let dollars = usd.toLocaleString("en-US", {
-    style: "currency",
-    currency: "USD",
-  });
+  let dollars = app_receipts_price_usd(price, php_per_usd);
   let r2 =
     "≈ " +
     dollars +

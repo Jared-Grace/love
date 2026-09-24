@@ -13,7 +13,8 @@ export async function app_receipts_purchase_save(purchase) {
   "$plain purchase";
   "Keep a purchase on this phone as it now stands, and put its details in line to be sent - so a date changed with no internet is kept here at once and reaches storage later.";
   "The price is a whole number of pesos written as digits, or empty text while none has been given; a purchase kept before prices were asked for has none.";
-  "What is sent is the date, the time, the price, and the names of its photos, written over the same address each time, so the last change is the one storage holds.";
+  "The description is what the person wrote about it, empty when nothing is written.";
+  "What is sent is the date, the time, the price, the description, and the names of its photos, written over the same address each time, so the last change is the one storage holds.";
   "The date and time also go beside the file as words storage keeps about it, because every phone may ask about a file while some may not read one.";
   arguments_assert(arguments, 1);
   let store = app_receipts_purchases_store();
@@ -28,10 +29,12 @@ export async function app_receipts_purchase_save(purchase) {
   let date = property_get(purchase, "date");
   let time = property_get(purchase, "time");
   let price = property_get_or(purchase, "price", "");
+  let description = property_get_or(purchase, "description", "");
   let details = {
     date,
     time,
     price,
+    description,
     photos: list_map_property(photos, "name"),
   };
   let json = json_to(details);
@@ -42,6 +45,7 @@ export async function app_receipts_purchase_save(purchase) {
     date,
     time,
     price,
+    description,
   };
   let folder_code = property_get(purchase, "folder_code");
   let details_name = app_receipts_purchase_details_name();

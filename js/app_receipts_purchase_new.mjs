@@ -15,6 +15,7 @@ export async function app_receipts_purchase_new(folder_code) {
     date: date_local_iso(now),
     time: date_local_hours_minutes(now),
     price: "",
+    description: "",
     photos: [],
   };
   await app_receipts_purchase_save(purchase);
