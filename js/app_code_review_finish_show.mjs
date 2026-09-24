@@ -7,6 +7,7 @@ import { app_code_review_complete_record } from "./app_code_review_complete_reco
 import { app_code_review_celebration } from "./app_code_review_celebration.mjs";
 import { app_code_review_render_continue } from "./app_code_review_render_continue.mjs";
 import { app_code_advance_or_no_more } from "./app_code_advance_or_no_more.mjs";
+import { app_code_review_button_unfinished } from "./app_code_review_button_unfinished.mjs";
 export function app_code_review_finish_show({
   success_container,
   back_button,
@@ -18,7 +19,7 @@ export function app_code_review_finish_show({
   c,
   go_next,
 }) {
-  "What the learner sees the moment the last exercise of a review is answered: every control the review needed taken away, the finish written down, the celebration drawn, and the way on to the next lesson offered.";
+  "What the learner sees the moment the last exercise of a review is answered: every control the review needed taken away, the finish written down, the celebration drawn, and the way on to the next lesson offered, with the next unfinished lesson beside it when that is a different one.";
   "THE HALF-ANSWERED STATE IS THROWN AWAY AND THE FACT THAT THE WHOLE THING WAS FINISHED IS WRITTEN DOWN IN ITS PLACE. Without the second half, finishing a review left no trace anywhere: the only sign of it was the screen the learner was about to walk away from, and the button they had just earned went back to looking exactly like one they had never pressed.";
   "The skip button is only taken away when there was a next lesson to skip to, because when there was not, it was never drawn.";
   arguments_assert(arguments, 1);
@@ -35,4 +36,6 @@ export function app_code_review_finish_show({
     return r;
   }
   app_code_advance_or_no_more(c, has_next, render_continue);
+  ("the next unfinished lesson is offered beside the way on, where it is somewhere else than the lesson straight after this review");
+  app_code_review_button_unfinished(context, c, number);
 }

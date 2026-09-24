@@ -1,7 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_lesson_incomplete_next } from "./app_code_lesson_incomplete_next.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_code_lesson_go } from "./app_code_lesson_go.mjs";
 import { app_code_review_persist } from "./app_code_review_persist.mjs";
@@ -23,19 +22,7 @@ export function app_code_review_back(r2, context) {
   if (has_next) {
     next_lesson = list_get(lessons, next_index);
   }
-  ("the way on from a review is the next lesson the learner has NOT finished - a blue row on the home list rather than a green one - looked for from the lesson this review stands in front of and never going round the top of the list, so a way on never leads backwards. A review sat between lessons a learner had already been through would otherwise walk them forward into work they had finished, one green lesson at a time, while the lesson they still owed sat somewhere they were never offered");
-  ("no lesson is named as the one being left, because a review is not a lesson - the learner arrived here from the list or from the lesson before it, and every lesson in the course is a fair place to send them on to");
-  let lesson_none = null;
-  let unfinished = app_code_lesson_incomplete_next(
-    context,
-    next_index,
-    lesson_none,
-  );
-  let found = null_not_is(unfinished);
-  if (found) {
-    next_lesson = unfinished;
-  }
-  ("so the button is there whenever there is anywhere at all to go: an unfinished lesson anywhere in the list, or the lesson straight after this review. That is wider than the lesson after this review alone - the last review in the course used to end in nothing, even with blue rows still above it");
+  ("the way on from a review is the lesson straight after it, because the button says continue to the next lesson and goes where its word promises. It used to go to the next lesson the learner had NOT finished instead, so a learner could be carried past lessons with nothing on the page saying so; the unfinished one is now offered on a button of its own that says what it is, drawn where the review is finished");
   has_next = null_not_is(next_lesson);
   async function go_next() {
     await app_code_lesson_go(next_lesson, context);
