@@ -74,18 +74,20 @@ export function app_receipts_purchase_card(
   }
   html_on(price_input, "change", on_price);
   html_on(price_input, "input", usd_show);
-  ("The description is kept when the person leaves the box, not at every key, so a sentence is sent once rather than once a letter. It is held to 2000 letters because it travels as words storage keeps beside the file, and storage refuses more than a few thousand of those.");
+  ("The description saves itself: every key is kept on this phone at once, so nothing typed is lost even if the app is closed mid-word, and it is sent once the typing has paused for a second, so a sentence is sent once rather than once a letter. It is held to 2000 letters because it travels as words storage keeps beside the file, and storage refuses more than a few thousand of those.");
   let description_input = app_shared_textarea_label(card, "Description");
   html_attribute_set(description_input, "maxlength", "2000");
   let value3 = property_get_or(purchase, "description", "");
   html_value_set(description_input, value3);
+  let send_timer = null;
   async function on_description() {
     let value4 = html_value_get(description_input);
     property_set(purchase, "description", value4);
     await app_receipts_purchase_save(purchase);
-    on_saved();
+    clearTimeout(send_timer);
+    send_timer = setTimeout(on_saved, 1000);
   }
-  html_on(description_input, "change", on_description);
+  html_on(description_input, "input", on_description);
   ("Photos are small squares side by side, cropped to fill the square; pressing one opens it whole on a screen of its own.");
   let pictures = html_div(card);
   html_style_set(pictures, "display", "flex");
