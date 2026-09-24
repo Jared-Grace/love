@@ -26,7 +26,9 @@ export async function git_history_purge_paths(words_text) {
   }
   let named = list_map(rows, git_history_purge_paths_path);
   let baseline_path = git_history_heavy_absent_baseline_path();
-  let heavy = await baseline_known_read(baseline_path);
+  let queued = await baseline_known_read(baseline_path);
+  let moved = await git_history_paths_moved_alive(folder, queued);
+  let heavy = list_without_multiple(queued, moved);
   let gathered = [];
   list_add_multiple(gathered, named);
   list_add_multiple(gathered, heavy);

@@ -1,5 +1,6 @@
-import { bless_prayer_discern } from "./bless_prayer_discern.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { app_g_bless_prayer_skipped_is } from "./app_g_bless_prayer_skipped_is.mjs";
+import { bless_prayer_discern } from "./bless_prayer_discern.mjs";
 import { app_g_bless_pray_words } from "./app_g_bless_pray_words.mjs";
 import { app_g_bless_discern_button } from "./app_g_bless_discern_button.mjs";
 export function app_g_bless_discern(container_map, bar, on_amen) {
@@ -24,7 +25,15 @@ export function app_g_bless_discern(container_map, bar, on_amen) {
   ("The bare prayer is also what is printed. The pictures that stand around the prayer over");
   ("a person are there because that prayer never changes a word; this one changes its own");
   ("words, so it does not need them.");
+  ("An opening that leaves the panel out of the prayer over a person leaves it out of this");
+  ("one too, and for the same reason: the builder is checking what the answer does, and the");
+  ("words in front of it are one more tap between them and it every time.");
   function ask() {
+    let skipped = app_g_bless_prayer_skipped_is();
+    if (skipped) {
+      on_amen();
+      return;
+    }
     let prayer = bless_prayer_discern();
     app_g_bless_pray_words(container_map, prayer, prayer, on_amen);
   }
