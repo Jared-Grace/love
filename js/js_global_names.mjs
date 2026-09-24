@@ -72,6 +72,7 @@ export function js_global_names() {
     "Image",
     "IntersectionObserver",
     "MutationObserver",
+    "ResizeObserver",
     "Notification",
     "PointerEvent",
     "Request",
