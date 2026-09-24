@@ -1,11 +1,11 @@
+import { fn_name } from "./fn_name.mjs";
+import { list_add_unique } from "./list_add_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { commits_message_rules_since } from "./commits_message_rules_since.mjs";
 import { git_commits_subjects_since } from "./git_commits_subjects_since.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_split } from "./text_split.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_add } from "./list_add.mjs";
 export async function commits_message_path_named() {
   "Every commit made since the rule came in whose message carries a path reaching out of this repo into the machine it was written on.";
   "A COMMIT MESSAGE IS PUBLISHED AND NOBODY READS IT FIRST. This repo is public and its log is pushed as it is written, so a word put in a message is a word published unreviewed - and the arguments a command was run with go in there verbatim, whatever they happen to be. A path beginning at the root of the machine says who the account is called and how their folders are laid out, to anybody who ever clones this.";
@@ -23,9 +23,11 @@ export async function commits_message_path_named() {
       for (let start of outward) {
         let reaching = text_starts_with(word, start);
         if (reaching) {
+          ("ONLY THE COMMIT IS WRITTEN DOWN, NEVER THE WORD THAT OFFENDED. The word is a path, and a path ends in a file named after a function - so the sorting that decides a deployment read the function out of it and held out every app shipping that function, over a message no app ships. Measured 2026-09-24: range and ",
+            fn_name("each_range"),
+            " were read out of these that way. Writing the path down also published it a second time, in the record this is measured against. The commit is enough to find the message by.");
           let id = property_get(commit, "commit");
-          let said = text_combine_multiple([id, " ", word]);
-          list_add(offenders, said);
+          list_add_unique(offenders, id);
         }
       }
     }
