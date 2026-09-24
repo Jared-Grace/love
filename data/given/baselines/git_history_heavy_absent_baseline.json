@@ -1,21 +1,7 @@
 {
  "known": [
-  ".claude/hooks/__pycache__/bash-command-guard.cpython-313.pyc",
-  "data.json",
-  "data/backups/data.2025-09-28T17-50-05-876.json",
-  "data/data.json",
-  "data/prompts.json",
-  "data/propmts.json",
-  "output.png",
-  "web/public/283.a.js",
-  "web/public/514.next.js",
-  "web/public/514.reply_local.js",
-  "web/public/745.a.js",
-  "web/public/src/app_g_main.mjs",
-  "web/public/src/app_replace_rule_set.mjs",
-  "web/public/src/app_replace_rule_sets_fns_rules_used.mjs",
-  "web/public/src/app_reply_main.mjs",
-  "web/public/src/kjv.mjs",
-  "web/public/src/sandbox.mjs"
+  "js/kjv.mjs",
+  "backups/data.2025-09-28T17-50-05-876.json",
+  "data/qa_gate_names.json"
  ]
 }
