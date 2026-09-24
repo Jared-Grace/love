@@ -1,3 +1,5 @@
+import { html_text_set } from "./html_text_set.mjs";
+import { html_button } from "./html_button.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_div } from "./html_div.mjs";
@@ -7,7 +9,6 @@ import { lyric_video_song_swap_column_mark } from "./lyric_video_song_swap_colum
 import { lyric_video_song_swap_column } from "./lyric_video_song_swap_column.mjs";
 import { api_read } from "./api_read.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { html_on_click } from "./html_on_click.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { not } from "./not.mjs";
