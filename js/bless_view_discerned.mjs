@@ -5,7 +5,7 @@ import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { bless_view_of_people } from "./bless_view_of_people.mjs";
-import { bless_view_family_first } from "./bless_view_family_first.mjs";
+import { bless_view_family_started_ordered } from "./bless_view_family_started_ordered.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { bless_person_place } from "./bless_person_place.mjs";
@@ -77,7 +77,7 @@ export function bless_view_discerned(blessed, everyone) {
     let empty = bless_view_of_people(left);
     return empty;
   }
-  let house = bless_view_family_first(blessed, everyone);
+  let house = bless_view_family_started_ordered(blessed, everyone);
   let house_people = bless_view_people(house);
   let house_any = list_empty_not_is(house_people);
   if (house_any) {

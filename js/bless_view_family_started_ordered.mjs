@@ -13,7 +13,7 @@ import { set_includes } from "./set_includes.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { equal } from "./equal.mjs";
 import { bless_view_of_people } from "./bless_view_of_people.mjs";
-export function bless_view_family_first(blessed, view) {
+export function bless_view_family_started_ordered(blessed, view) {
   arguments_assert(arguments, 2);
   ("Of everybody left in a house the player has started, just the ones in the house they");
   ("started FIRST - so the prayers after the first one lead back to the first family until");
