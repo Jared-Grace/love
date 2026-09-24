@@ -1,3 +1,4 @@
+import { firebase_sending_tests_none_gate_run } from "./firebase_sending_tests_none_gate_run.mjs";
 import { app_replace_hash_ids_gate_run } from "./app_replace_hash_ids_gate_run.mjs";
 import { app_original_bible_gloss_published_unfinished_gate_run } from "./app_original_bible_gloss_published_unfinished_gate_run.mjs";
 import { app_ceb_bible_gloss_published_unfinished_gate_run } from "./app_ceb_bible_gloss_published_unfinished_gate_run.mjs";
