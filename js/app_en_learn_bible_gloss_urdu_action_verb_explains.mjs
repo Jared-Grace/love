@@ -15,6 +15,8 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
   "The past and the third form are written as their own keys off the same map that names them, which is the whole reason that map holds the forms rather than a bare flag saying ‘irregular’. A reader meeting ‘told’ is not meeting ‘tell’ - the store hands them the spelling in front of them and nothing else - and a beginner has no way to walk backwards from ‘told’ to ‘tell’, which is exactly what makes the verb irregular in the first place. So every irregular form gets an entry saying which verb it belongs to, which time it stands for, and the three forms again.";
   "Where the past and the third form are the same word one entry is written and it says both jobs, and where the third form is the base word again - ‘come’ makes ‘came’ and then ‘come’ - no third entry is written at all, because it would overwrite the base entry with a narrower one. Both cases are read off the map rather than listed by hand, so a verb added later cannot be added wrongly.";
   "A capitalised verb is written only where the store actually holds one. For a verb the capital has a single cause - the word stands at the head of what is being said - and that is what its entry says. A name is the harder case and is handled in the name table, because there a capital has two causes and naming only one of them would mislead.";
+  "Thirty six verbs were added to the table in one go on 2026-09-24, and where the list came from is the part worth keeping. It was not thought up: it was read off the store, by asking which words are carrying a shared label right now and being held back from the sweep only because nothing here answers to them. Every one of those words is already in front of a reader with a sentence that tells them nothing. So the table grows where the store says it is thin rather than where a list of common English verbs would have said it should be, and the same reading can be taken again after this to find the next thirty six.";
+  "Two of the added meanings are worth a line because the obvious Urdu was already taken. ‘build’ is not given ‘بنانا’, which the table already gives to ‘make’, because a reader meeting the same Urdu under two different English words learns that the two are the same word, which they are not. ‘lay’ and ‘put’ have the same trouble and are separated the same way. Where two English verbs genuinely do mean the same thing - ‘minister’ and ‘serve’ - the same Urdu is given to both on purpose, and that is not the same case.";
   let meaning = {
     say: "کہنا",
     tell: "بتانا",
@@ -63,6 +65,42 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
     serve: "خِدمت کرنا",
     report: "خبر دینا",
     make: "بنانا",
+    do: "کرنا",
+    teach: "سِکھانا",
+    weep: "رونا",
+    shout: "چِلّانا",
+    pass: "گُزرنا",
+    talk: "بات کرنا",
+    expect: "اُمّید رکھنا",
+    happen: "پیش آنا",
+    preach: "منادی کرنا",
+    try: "کوشِش کرنا",
+    call: "بُلانا",
+    follow: "پِیچھے چلنا",
+    think: "سوچنا",
+    proclaim: "اعلان کرنا",
+    wait: "اِنتظار کرنا",
+    sleep: "سونا",
+    watch: "نِگاہ رکھنا",
+    build: "تعمِیر کرنا",
+    want: "چاہنا",
+    carry: "لے جانا",
+    run: "دَوڑنا",
+    wear: "پہننا",
+    put: "رکھنا",
+    dine: "کھانا کھانا",
+    lay: "رکھ دینا",
+    gather: "اِکٹّھا کرنا",
+    wash: "دھونا",
+    sow: "بونا",
+    wonder: "حَیران ہونا",
+    sway: "ہِلنا",
+    minister: "خِدمت کرنا",
+    kiss: "چُومنا",
+    touch: "چھُونا",
+    drive: "نِکالنا",
+    find: "ڈھُونڈ نِکالنا",
+    write: "لِکھنا",
   };
   let irregular = {
     say: ["said", "said"],
@@ -91,6 +129,20 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
     lend: ["lent", "lent"],
     cut: ["cut", "cut"],
     make: ["made", "made"],
+    do: ["did", "done"],
+    teach: ["taught", "taught"],
+    weep: ["wept", "wept"],
+    think: ["thought", "thought"],
+    sleep: ["slept", "slept"],
+    build: ["built", "built"],
+    run: ["ran", "run"],
+    wear: ["wore", "worn"],
+    put: ["put", "put"],
+    lay: ["laid", "laid"],
+    sow: ["sowed", "sown"],
+    drive: ["drove", "driven"],
+    find: ["found", "found"],
+    write: ["wrote", "written"],
   };
   let more = {
     listen:
