@@ -1,3 +1,6 @@
+import { memory_index_name } from "./memory_index_name.mjs";
+import { list_add } from "./list_add.mjs";
+import { assert_json } from "./assert_json.mjs";
 import { memory_index_text } from "./memory_index_text.mjs";
 import { text_bytes_size } from "./text_bytes_size.mjs";
 import { memory_index_size_ceiling } from "./memory_index_size_ceiling.mjs";
@@ -22,14 +25,26 @@ export async function memory_index_size_gate_run() {
     return fine;
   }
   let waiting = await memory_index_lines_longest();
-  let v = waiting.join(", ");
-  let message = text_combine_multiple([
+  ("The heaviest lines are written down as a record, each marked with the note it sits in, rather than read out in a sentence. A sentence quoting them had function names scraped out of it by the sorting that decides a deployment, which held out every app shipping those functions over a fault in a file no app ships.");
+  let at_fault = memory_index_name();
+  let list = [];
+  for (let line of waiting) {
+    list_add(list, {
+      line,
+      at_fault,
+    });
+  }
+  let hint = text_combine_multiple([
     "memory index size gate: the index is ",
     size,
     " bytes and may be ",
     ceiling,
-    " - shorten these, the entries carrying the most weight, whose hooks the notes they link to already carry: ",
-    v,
+    " - shorten these, the entries carrying the most weight, whose hooks the notes they link to already carry",
   ]);
-  throw new Error(message);
+  assert_json(false, {
+    list,
+    json: {
+      hint,
+    },
+  });
 }

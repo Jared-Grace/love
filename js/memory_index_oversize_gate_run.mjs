@@ -1,3 +1,5 @@
+import { memory_index_name } from "./memory_index_name.mjs";
+import { property_set } from "./property_set.mjs";
 import { memory_index_lines_oversize } from "./memory_index_lines_oversize.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
@@ -10,6 +12,11 @@ export async function memory_index_oversize_gate_run() {
   let oversize = property_get(measured, "oversize");
   let ceiling = property_get(measured, "ceiling");
   let lines = property_get(measured, "lines");
+  ("Each line is marked with the note it sits in, so the sorting that decides a deployment reads that and nothing else. Without it the line itself was all there was to read, and a line naming a function would hold out every app shipping that function over a fault in a file no app ships.");
+  let at_fault = memory_index_name();
+  for (let entry of oversize) {
+    property_set(entry, "at_fault", at_fault);
+  }
   list_empty_is_assert_json(oversize, {
     hint: "these memory index lines spend more than the ceiling allows the entries on them - move what the note already says out of the hook and leave a pointer, and check the line is not two entries welded together before shortening either of them",
     oversize,

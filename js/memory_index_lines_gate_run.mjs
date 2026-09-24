@@ -1,3 +1,5 @@
+import { memory_index_name } from "./memory_index_name.mjs";
+import { assert_json } from "./assert_json.mjs";
 import { list_last_is } from "./list_last_is.mjs";
 import { memory_index_lines } from "./memory_index_lines.mjs";
 import { list_remove_last } from "./list_remove_last.mjs";
@@ -27,12 +29,25 @@ export async function memory_index_lines_gate_run() {
     };
     return fine;
   }
-  let message = text_combine_multiple([
+  ("Written down as a record naming the note at fault rather than as a sentence, so the sorting that decides a deployment reads that note and finds no app carrying it. A sentence names nobody it can read, and a gate naming nobody holds every app out.");
+  let at_fault = memory_index_name();
+  let hint = text_combine_multiple([
     "memory index lines gate: the index is ",
     count,
     " lines and may be ",
     ceiling,
     " - move a group of entries under a Children heading in a note the index already names, which is what turns several lines into one",
   ]);
-  throw new Error(message);
+  assert_json(false, {
+    list: [
+      {
+        at_fault,
+        count,
+        ceiling,
+      },
+    ],
+    json: {
+      hint,
+    },
+  });
 }
