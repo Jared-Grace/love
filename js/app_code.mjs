@@ -1,3 +1,4 @@
+import { app_shared_history_restore_listen } from "./app_shared_history_restore_listen.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { app_code_hash_unknown_page_shown_is } from "./app_code_hash_unknown_page_shown_is.mjs";
 import { app_code_screens } from "./app_code_screens.mjs";
@@ -20,7 +21,7 @@ export async function app_code(context) {
   let screens = app_code_screens();
   app_shared_initialize(context, app_fn, screens);
   app_code_buttons_cap_style();
-  app_code_hash_restore(context);
+  app_shared_history_restore_listen(context, app_code_hash_restore);
   object_merge(context, {
     after_refresh: app_code_after_refresh,
   });
