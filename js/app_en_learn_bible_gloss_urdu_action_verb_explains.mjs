@@ -28,6 +28,8 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
   "Four of them are written here while their plain spelling belongs to the noun table: 'name', 'promise', 'hand' and 'end' are nouns first in this store and are left there, so only the 'ed' spelling is written here and the Urdu for the verb is kept beside it. That is not a workaround. English really does use those words both ways, and the reader meeting 'handed' needs the verb, not the part of the body.";
   "The irregular past and third forms were rewritten on 2026-09-24 to the sentence the store had already been writing for them, and the number is what asked for it. Two hundred and four of the words this table answers to are in front of a reader somewhere, and while a thousand and twenty of those sightings carried what was written here, nine thousand six hundred and three carried something else. That is not a table the store disagrees with; it is a table the store has been quietly working around. The old sentence said the form is a past form and then that the verb is irregular, and it left the reader with the one question a beginner actually has - why does this word not end in 'ed' - answered by the word 'irregular' and nothing more. The store's own sentence answers it: most English verbs add '-ed', a few old ones change the word itself, this is one of them, and these have to be learned. Same facts, and the second one can be used.";
   "One phrase is used for every irregular verb and that is a decision rather than laziness. The store had three: the word changes itself, the letter inside it changes, and a special sentence for 'go' making 'went'. All three are true of some verbs and only the first is true of all of them, so picking between them here would mean classifying two hundred verbs by how their spelling moves - a judgment nobody has made and one the map holding the forms cannot make. A classification that is right most of the time is worse here than a plainer sentence that is always right, because the reader has no way to tell which kind of sentence they are holding. The other two wordings are kept as shared labels instead, where they stand over the entries that actually carry them.";
+  "The middle clause was then measured rather than chosen, and the first attempt lost. Two ways of saying that English usually adds '-ed' were already in the store, and by entry count they were level - two hundred and nine against two hundred and nineteen - which says nothing. By how many different words carry them they are not level at all: thirty seven words against two. Two hundred and nineteen sightings spread over two words is one batch of writing, not a convention; two hundred and nine over thirty seven words is what the store actually says. The longer of the two had been written here first, from memory of having seen it, and it was the batch. So the shorter one was taken, and the reward is immediate: for a word like 'saw' or 'told' the sentence this table now returns is character for character the one the store was already showing, so sixty two entries stopped being wrong without anything being written over them.";
+  "The sentence for the third form was made to match the past one word for word, rather than left as the differently-shaped sentence it started as. A reader meets both forms of the same verb within a few verses of each other, and two sentences that say the same thing in two shapes make them look like two different rules. The shared clause is now one string used twice, which is also the only way the two stay parallel through the next edit.";
   "The fifty sentences this replaced were written down before the change rather than worked out after it, and that order is the point. The retired list has to hold what was actually in front of readers, and a generator asked after the fact tells you what it would write now - which, having just been changed, is the new sentence. So the old strings were read out of the live table first and pasted into the retired list as literal text. A retired list that is itself generated cannot retire the thing it was written to retire.";
   let meaning = {
     say: "کہنا",
@@ -420,13 +422,15 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
     let urdu = property_get(meaning, word);
     let head = "فعل '" + word + "' یعنی '" + urdu + "' کی ";
     let learn = " اَیسے فعل یاد کرنے پڑتے ہیں۔";
+    let changes = "، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: '";
     let unchanged = equal(past, word);
     if (unchanged) {
       return;
     }
     let past_said =
       head +
-      "ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً فعل کے آخر میں '-ed' لگا کر ماضی بنایا جاتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: '" +
+      "ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے" +
+      changes +
       word +
       "' سے '" +
       past +
@@ -445,7 +449,8 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
     }
     let third =
       head +
-      "وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ انگریزی میں عموماً یہ شکل بھی فعل کے آخر میں '-ed' لگا کر بنتی ہے، مگر یہ فعل بےقاعدہ ہے: '" +
+      "وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ انگریزی میں عموماً یہاں بھی آخر میں '-ed' لگتا ہے" +
+      changes +
       word +
       "' سے '" +
       done +
