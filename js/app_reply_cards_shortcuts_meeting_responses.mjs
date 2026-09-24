@@ -12,7 +12,7 @@ export function app_reply_cards_shortcuts_meeting_responses({
   languages_chosen_held,
   languages,
   update,
-  buttons_languages: languages_chooser,
+  languages_chooser,
   buttons_responses,
   responses,
   responses_buttons,
