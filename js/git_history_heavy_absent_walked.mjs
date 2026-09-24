@@ -12,12 +12,15 @@ export async function git_history_heavy_absent_walked() {
   "The names alone, without their weights, because this is what a ratchet compares and a ratchet compares things that either match or do not. A weight moves on its own as the packing changes, so a list carrying weights would differ from the last one without anything having happened.";
   "Reads the checkout that holds the history rather than the copy the gates run against, since the copy has no past to read.";
   "A few of these are carried on purpose and are named next door. They come out here rather than at the gate, so that a caller asking what the offenders are and a gate asking the same question cannot disagree about the answer.";
+  "A file moved to a name the present still tracks is not forgotten either - its past is the early history of a live file - so those come out here too, read off the history rather than listed.";
   arguments_assert(arguments, 0);
   let folder = await git_folder_love();
   let rows = await git_history_paths_absent_at_head(folder);
   let heavy = list_filter_map_property(rows, git_history_heavy_row_is, "path");
   let kept = git_history_heavy_absent_kept();
-  let paths = list_without_multiple(heavy, kept);
+  let unkept = list_without_multiple(heavy, kept);
+  let moved = await git_history_paths_moved_alive(folder, unkept);
+  let paths = list_without_multiple(unkept, moved);
   let walked = list_size(rows);
   let r = {
     walked,

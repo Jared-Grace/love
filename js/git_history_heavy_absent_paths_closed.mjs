@@ -36,7 +36,9 @@ export async function git_history_heavy_absent_paths_closed() {
       git_history_heavy_row_is,
       "path",
     );
-    let named = list_without_multiple(heavy, kept);
+    let unkept = list_without_multiple(heavy, kept);
+    let moved = await git_history_paths_moved_alive(asked, unkept);
+    let named = list_without_multiple(unkept, moved);
     let fresh = list_without_multiple(named, paths);
     rounds.push({
       round: round_index,
