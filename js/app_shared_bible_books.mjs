@@ -31,8 +31,10 @@ export async function app_shared_bible_books(context) {
     let book_code = property_get(book, "book_code");
     let chapter_codes = ebible_index_flat_book_chapter_codes(list, book_code);
     let chapter_code = list_first(chapter_codes);
-    app_shared_bible_chapter_set(chapter_code);
-    await app_shared_screen_set(context, app_shared_bible_chapters);
+    function write() {
+      app_shared_bible_chapter_set(chapter_code);
+    }
+    await app_shared_screen_set_write(context, app_shared_bible_chapters, write);
   }
   app_shared_bible_books_search_render(
     content,

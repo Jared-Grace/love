@@ -65,6 +65,13 @@ export function app_en_learn_bible_gloss_urdu_adverb_conjunction_explains() {
     since:
       "یہ لفظ دو باتوں کو جوڑتا ہے اَور دو کام کرتا ہے: وقت بتاتا ہے ('جب سے')، اَور وجہ بھی بتاتا ہے ('چُونکہ')۔",
     if: "یہ لفظ شرط بتاتا ہے: 'اگر'، یعنی بات تبھی ہو گی جب پہلی بات ہو۔",
+    yet: "یہ لفظ دو کام کرتا ہے: دو باتوں کو جوڑ کر اُن کا فرق بتاتا ہے ('پِھر بھی')، اَور وقت کے بارے میں یہ بھی بتاتا ہے کہ بات اب تک نہیں ہویٔی ('ابھی تک')۔",
+    though:
+      "یہ لفظ دو باتوں کو جوڑتا ہے اَور بتاتا ہے کہ پہلی بات کے باوجُود دُوسری ہو گیٔی: 'اگرچہ'۔ اُردُو میں دُوسری بات کے ساتھ اکثر 'پِھر بھی' یا 'مگر' بھی آ جاتا ہے۔",
+    truly:
+      "یہ لفظ بات کو پکّا کرتا ہے: 'سچ مُچ'، یعنی جو کہا جا رہا ہے وہ واقعی اَیسا ہی ہے۔",
+    later:
+      "یہ لفظ وقت کا ظرف ہے، یعنی وقت بتاتا ہے: 'بعد میں'، یعنی اِس کے کُچھ دیر بعد۔",
   };
   let capitals = {
     Then: "then",
@@ -83,6 +90,10 @@ export function app_en_learn_bible_gloss_urdu_adverb_conjunction_explains() {
     Some: "some",
     As: "as",
     If: "if",
+    Yet: "yet",
+    Though: "though",
+    Truly: "truly",
+    Later: "later",
   };
   let capital_tail = app_en_learn_bible_gloss_urdu_capital_tail();
   function capital_write(word) {

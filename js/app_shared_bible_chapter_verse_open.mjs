@@ -5,6 +5,9 @@ export async function app_shared_bible_chapter_verse_open(
   chapter,
   verse_number,
 ) {
-  app_shared_bible_chapter_set(chapter);
-  await app_shared_bible_verse_open(context, verse_number);
+  function write() {
+    app_shared_bible_chapter_set(chapter);
+    app_shared_bible_verse_set(verse_number);
+  }
+  await app_shared_bible_screen_home_set_write(context, write);
 }
