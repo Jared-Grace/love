@@ -1,7 +1,7 @@
+import { app_en_learn_bible_gloss_urdu_spelling_claims_wrong } from "./app_en_learn_bible_gloss_urdu_spelling_claims_wrong.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { app_en_learn_bible_gloss_urdu_spelling_claims_wrong } from "./app_en_learn_bible_gloss_urdu_spelling_claims_wrong.mjs";
 export function app_en_learn_bible_gloss_urdu_spelling_claim_gate_run() {
   "Gate: no gloss sentence may tell a reader that a word is spelled a way it is not spelled. Throws so the dispatcher seam exits nonzero.";
   "These sentences come from a template written over a list of words, which is what makes them worth gating rather than reading. A template is authored once, against whichever members its author had in mind, and it is then printed for every member - so it goes wrong quietly, on the words nobody was thinking about, and stays wrong until somebody reads one of them by hand. That is how six sentences came to say that 'hear' changes into 'heard' when the spelling only adds a 'd'.";
@@ -11,6 +11,7 @@ export function app_en_learn_bible_gloss_urdu_spelling_claim_gate_run() {
     s_form: 3,
     ed_form: 15,
     changed: 48,
+    no_ed: 58,
     sound: 1,
     regular: 1,
     plural_plain: 63,
@@ -21,11 +22,11 @@ export function app_en_learn_bible_gloss_urdu_spelling_claim_gate_run() {
   }
   let thin = [];
   for (let name of object_property_names(floors)) {
-    let floor = floors[name];
+    let least = floors[name];
     let now = found.counts[name];
-    let short = less_than(now, floor);
+    let short = less_than(now, least);
     if (short) {
-      console.log("claim  " + name + "  found " + now + "  floor " + floor);
+      console.log("claim  " + name + "  found " + now + "  floor " + least);
       thin.push(name);
     }
   }

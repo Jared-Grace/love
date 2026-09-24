@@ -21,7 +21,7 @@ export function app_en_learn_bible_gloss_urdu_spelling_claims_wrong() {
   let plural_plain = "اَور جمع اُس کے آخِر میں 's' لگا کر بنتی ہے۔";
   let no_ed = "، 'ed' لگا کر نہیں۔";
   let three_head = " یہ فعل بےقاعدہ ہے: '";
-  let and = "' اَور '";
+  let and_word = "' اَور '";
   let head = "فعل '";
   let joiner = "' سے '";
   let singular_head = "واحد '";
@@ -35,15 +35,15 @@ export function app_en_learn_bible_gloss_urdu_spelling_claims_wrong() {
     regular: 0,
     plural_plain: 0,
   };
-  function quoted_after(said, marker) {
-    "The word inside the next pair of single quotes after a marker, or an empty string where the sentence does not run that way. An empty answer never matches a spelling arithmetic, so a sentence this cannot read is reported rather than passed.";
-    let at = said.indexOf(marker);
+  function quoted_after(said, needle) {
+    "The word inside the next pair of single quotes after a needle, or an empty string where the sentence does not run that way. An empty answer never matches a spelling arithmetic, so a sentence this cannot read is reported rather than passed.";
+    let at = said.indexOf(needle);
     let absent = less_than(at, 0);
     if (absent) {
       let none = "";
       return none;
     }
-    let from = at + marker.length;
+    let from = at + needle.length;
     let end = said.indexOf("'", from);
     let unclosed = less_than(end, 0);
     if (unclosed) {
@@ -69,10 +69,10 @@ export function app_en_learn_bible_gloss_urdu_spelling_claims_wrong() {
     let yes = e_and_d || plain;
     return yes;
   }
-  function pair_read(said, marker) {
-    "The base and the form a clause names, as one object. Both clauses that name a pair write it the same way - the marker, the base, the word for 'from', the form - so one reader serves them both.";
-    let base = quoted_after(said, marker);
-    let form = quoted_after(said, marker + base + joiner);
+  function pair_read(said, needle) {
+    "The base and the form a clause names, as one object. Both clauses that name a pair write it the same way - the needle, the base, the word for 'from', the form - so one reader serves them both.";
+    let base = quoted_after(said, needle);
+    let form = quoted_after(said, needle + base + joiner);
     let r2 = {
       base: base,
       form: form,
@@ -116,7 +116,10 @@ export function app_en_learn_bible_gloss_urdu_spelling_claims_wrong() {
       counts.no_ed = counts.no_ed + 1;
       let base3 = quoted_after(said, three_head);
       let past = quoted_after(said, three_head + base3 + joiner);
-      let done = quoted_after(said, three_head + base3 + joiner + past + and);
+      let done = quoted_after(
+        said,
+        three_head + base3 + joiner + past + and_word,
+      );
       let past_regular = regular_spelling_is(base3, past);
       let done_regular = regular_spelling_is(base3, done);
       let past_d = equal(past, base3 + "d");

@@ -1,12 +1,3 @@
-import { firebase_sending_tests_none_gate_run } from "./firebase_sending_tests_none_gate_run.mjs";
-import { app_replace_hash_ids_gate_run } from "./app_replace_hash_ids_gate_run.mjs";
-import { app_original_bible_gloss_published_unfinished_gate_run } from "./app_original_bible_gloss_published_unfinished_gate_run.mjs";
-import { app_ceb_bible_gloss_published_unfinished_gate_run } from "./app_ceb_bible_gloss_published_unfinished_gate_run.mjs";
-import { purge_words_live_gate_run } from "./purge_words_live_gate_run.mjs";
-import { app_en_learn_bible_gloss_urdu_published_unfinished_gate_run } from "./app_en_learn_bible_gloss_urdu_published_unfinished_gate_run.mjs";
-import { git_history_purge_case_blind_gate_run } from "./git_history_purge_case_blind_gate_run.mjs";
-import { app_code_color_tone_gate_run } from "./app_code_color_tone_gate_run.mjs";
-import { app_code_highlight_color_gate_run } from "./app_code_highlight_color_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { stop_next_steps_hook_gate_run } from "./stop_next_steps_hook_gate_run.mjs";
@@ -379,6 +370,7 @@ import { app_replace_abbreviations_gate_run } from "./app_replace_abbreviations_
 import { app_replace_abbreviations_unspelled_gate_run } from "./app_replace_abbreviations_unspelled_gate_run.mjs";
 import { app_replace_rules_used_gate_run } from "./app_replace_rules_used_gate_run.mjs";
 import { app_replace_rule_sets_unlisted_gate_run } from "./app_replace_rule_sets_unlisted_gate_run.mjs";
+import { app_replace_hash_ids_gate_run } from "./app_replace_hash_ids_gate_run.mjs";
 import { app_shared_card_gate_run } from "./app_shared_card_gate_run.mjs";
 import { app_shared_description_gate_run } from "./app_shared_description_gate_run.mjs";
 import { git_push_urls_gate_run } from "./git_push_urls_gate_run.mjs";
@@ -525,6 +517,7 @@ import { gloss_root_named_reversed_gate_run } from "./gloss_root_named_reversed_
 import { gloss_classes_backing_elsewhere_gate_run } from "./gloss_classes_backing_elsewhere_gate_run.mjs";
 import { binisaya_words_known_get_folded_gate_run } from "./binisaya_words_known_get_folded_gate_run.mjs";
 import { app_en_learn_bible_gloss_urdu_glosses_empty_gate_run } from "./app_en_learn_bible_gloss_urdu_glosses_empty_gate_run.mjs";
+import { app_en_learn_bible_gloss_urdu_spelling_claim_gate_run } from "./app_en_learn_bible_gloss_urdu_spelling_claim_gate_run.mjs";
 import { gloss_root_unwalked_cause_gate_run } from "./gloss_root_unwalked_cause_gate_run.mjs";
 import { gloss_classes_word_claims_apart_gate_run } from "./gloss_classes_word_claims_apart_gate_run.mjs";
 import { gloss_classes_claimed_unvouched_gate_run } from "./gloss_classes_claimed_unvouched_gate_run.mjs";
@@ -580,6 +573,14 @@ import { messages_real_quoted_gate_run } from "./messages_real_quoted_gate_run.m
 import { reply_parser_gate_run } from "./reply_parser_gate_run.mjs";
 import { app_code_note_name_contrast_gate_run } from "./app_code_note_name_contrast_gate_run.mjs";
 import { functions_calls_walk_unwaited_gate_run } from "./functions_calls_walk_unwaited_gate_run.mjs";
+import { app_code_highlight_color_gate_run } from "./app_code_highlight_color_gate_run.mjs";
+import { app_code_color_tone_gate_run } from "./app_code_color_tone_gate_run.mjs";
+import { git_history_purge_case_blind_gate_run } from "./git_history_purge_case_blind_gate_run.mjs";
+import { app_en_learn_bible_gloss_urdu_published_unfinished_gate_run } from "./app_en_learn_bible_gloss_urdu_published_unfinished_gate_run.mjs";
+import { purge_words_live_gate_run } from "./purge_words_live_gate_run.mjs";
+import { app_ceb_bible_gloss_published_unfinished_gate_run } from "./app_ceb_bible_gloss_published_unfinished_gate_run.mjs";
+import { app_original_bible_gloss_published_unfinished_gate_run } from "./app_original_bible_gloss_published_unfinished_gate_run.mjs";
+import { firebase_sending_tests_none_gate_run } from "./firebase_sending_tests_none_gate_run.mjs";
 export function qa_gates() {
   "Every gate the repo-wide check runs, gathered in one list, so adding a function here is the whole of wiring a new gate in.";
   let gates = [
@@ -1102,6 +1103,7 @@ export function qa_gates() {
     gloss_classes_backing_elsewhere_gate_run,
     binisaya_words_known_get_folded_gate_run,
     app_en_learn_bible_gloss_urdu_glosses_empty_gate_run,
+    app_en_learn_bible_gloss_urdu_spelling_claim_gate_run,
     gloss_root_unwalked_cause_gate_run,
     gloss_classes_word_claims_apart_gate_run,
     gloss_classes_claimed_unvouched_gate_run,
