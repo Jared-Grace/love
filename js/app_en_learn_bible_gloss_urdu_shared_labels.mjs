@@ -56,6 +56,10 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
   "One of the twenty one carries a plainly wrong sentence in a single place, and it is kept for that one place rather than in spite of it. 'This small word shows a relation: whose' stands over 'of' forty eight times and over 'to' once, and 'to' does not mean whose. A label reaching one entry is not worth listing on its own; this one is listed because it reaches forty nine, and the forty ninth is a repair.";
   "Refused this round, and all of them for reasons already written above: 'it is the same article as came above', two hundred and sixty nine entries and the largest single candidate in the store, refused because a sentence pointing up the page cannot be moved; the whole family ending 'Urdu has not written it here', in every spelling it wears; 'a verb of past time, and with the next word it tells of an ongoing action' over 'was' and 'were', which is a claim about what follows it in the line; and every label giving a capital's reason as the Lord, which stays refused for the eleven words named far above and will stay refused.";
   "Twelve of the eleven hundred and thirty four entries under these twenty one are not reached, and they are named here so the gap is not mistaken for a mend. 'mine', 'what' and 'Later' carry three of these labels and have no settled wording of their own, so nothing is written over them. That is the ordinary shape of this list - a licence over a word nobody has written for changes nothing - and those three words are work owed rather than work done.";
+  "Thirty two more came from the band just below, where a sentence carries thirty entries rather than a hundred, and the interesting thing about them is how ordinary they are. Every one is either a grammar term standing alone - 'first person pronoun', 'possessive pronoun, singular masculine', 'plural of a naming word' - or a one-line gloss of the same kind. Not one needed an argument the note had not already made, and eleven hundred and ninety three entries fall to them. The band is worth naming because it is where the work now is: the sentences carrying a thousand entries are gone, and what is left is a long flat tail of thirty-entry sentences that pays exactly as well per label as the head did, and only costs more to read.";
+  "Four of the thirty two are admitted by the false-claim exception and none of them needs its own paragraph. 'Possessive pronoun' over 'his' and over 'their' calls a word a pronoun that stands in front of a name rather than in place of one, which this note has refused to let a reader keep twice already. 'Subject pronoun, inanimate' and 'object pronoun, non-human' both stand over 'it', which is neither only a subject nor only an object. And 'a pronoun, and it is the form that comes after a preposition', over 'me' and 'them', is the same positional claim admitted a batch ago in its after-a-verb spelling: both halves of the pair are wrong half the time, and the settled wordings say the thing by role instead.";
+  "One of the thirty two is the old article wording wearing a capital sentence nobody had listed. 'The first letter is capital because the spoken words start here' is not the sentence the table derives - that one says the word stands at the start of its sentence - so retiring the article wording did not reach it and the superseded list could not have. It is here as a label instead, which is the cheaper of the two repairs and the only one that works for a capital clause the table never wrote.";
+  "'Jesus' is refused this round and the refusal is the fifth of its kind, so it is written down rather than rediscovered. 'It is a name: Jesus. The first letter is capital because names are written with a capital' says the name in Urdu, and the settled wording for 'Jesus' does not - it says whose good news this book tells and leaves the name itself unspelled. Four hundred and eleven further entries carry a longer sentence that opens with the name and then says exactly what the settled wording says, which is the shape of a settled wording that was narrowed rather than of a label that was thin. The table is the thing to look at, not the list.";
   let labels = [
     "معرفہ حرفِ تعریف۔",
     "نکرہ حرفِ تعریف۔",
@@ -280,6 +284,38 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
     "یہ لفظ بتاتا ہے کہ بات اِس کے بعد والی ہے۔ پہلا حرف بڑا ہے کیونکہ یہاں سے آیت شروع ہو رہی ہے۔",
     "ضمیر ہے اَور ایک سے زیادہ کے لیٔے آیا ہے۔ پہلا حرف بڑا ہے کیونکہ یہاں سے آیت شروع ہو رہی ہے۔",
     "یہ چھوٹا لفظ بتاتا ہے کہ بات کِس کی طرف ہے: کی طرف۔",
+    "یہ بولنے والے کی جگہ آنے والا لفظ ہے: مَیں۔ انگریزی میں یہ ہمیشہ بڑے حرف سے لِکھا جاتا ہے۔",
+    "ضمیر ہے: 'مَیں'۔ انگریزی میں 'I' ہمیشہ بڑا لِکھا جاتا ہے۔",
+    "ضمیرِ مُتکلّم۔",
+    "یہ بولنے والے کی جگہ آنے والا لفظ ہے: مَیں۔ انگریزی میں یہ ہمیشہ بڑے حرف سے لِکھا جاتا ہے، چاہے جُملہ کے بیچ میں ہو۔",
+    "یہ چھوٹا لفظ ساتھ ہونا بتاتا ہے: کے ساتھ۔",
+    "حرفِ جار ہے اَور ساتھ ہونے کو بتاتا ہے۔",
+    "فعل ہے۔ مطلب ہے ہونا۔",
+    "ضمیرِ فاعل، جمع مُتکلِّم۔",
+    "ضمیر ہے: 'ہم'۔",
+    "ضمیرِ ملکیت، واحد مُذکّر۔",
+    "یہ لفظ مِلکیّت بتاتا ہے اَور کِسی مرد کی ہے۔",
+    "ضمیرِ مفعُول، جمع مُتکلِّم۔",
+    "ضمیر ہے۔ 'we' کی مفعولی صُورت۔",
+    "فعل، بےقاعدہ: go → went → gone۔",
+    "فعل، بےقاعدہ: say → said → said۔",
+    "ضمیر ہے۔ 'I' کی مفعولی صُورت۔",
+    "ضمیر ہے اَور بولنے والے کے لیٔے آتا ہے، اَور یہ وہ شکل ہے جو حرفِ جار کے بعد آتی ہے۔",
+    "حرفِ جار ہے اَور کِسی جگہ کے اَندر جانے کو بتاتا ہے۔",
+    "اِسم کی جمع۔",
+    "thing کی جمع۔",
+    "ضمیرِ فاعل برائے جمع۔",
+    "حرفِ جار: کہاں سے۔",
+    "یہ چھوٹا لفظ شروع کی جگہ بتاتا ہے: کہاں سے۔",
+    "حرفِ جار ہے اَور مُخالفت کو بتاتا ہے، یعنی کِسی کے خِلاف ہونا۔",
+    "ضمیرِ فاعل، غَیر جاندار۔",
+    "ضمیرِ مفعُول، غیر اِنسان۔",
+    "ضمیرِ ملکیت، جمع۔ there (وہاں) سے ہم آواز مگر مُختلِف۔",
+    "go کی گُزری صُورت، بےقاعدہ: go → went → gone۔",
+    "حرفِ تعریف ہے، یعنی وہ چھوٹا لفظ جو نام سے پہلے آ کر بتاتا ہے کہ کویٔی معلوم اَور خاص چیز مُراد ہے۔ پہلا حرف بڑا ہے کیونکہ یہاں سے کہی ہویٔی بات شروع ہو رہی ہے۔",
+    "یہ لفظ بتاتا ہے کہ بات اِس کے بعد والے کی ہے۔ پہلا حرف بڑا ہے کیونکہ یہاں سے آیت شروع ہو رہی ہے۔",
+    "جوڑنے والا لفظ ہے۔ شرط بتاتا ہے۔",
+    "ضمیر ہے اَور یہ وہ شکل ہے جو حرفِ جار کے بعد آتی ہے، اَور ایک سے زیادہ کے لیٔے آیا ہے۔",
   ];
   return labels;
 }
