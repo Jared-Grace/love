@@ -1,3 +1,4 @@
+import { picture_swap_offered } from "./picture_swap_offered.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_button } from "./html_button.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -11,8 +12,6 @@ import { api_read } from "./api_read.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get_or } from "./property_get_or.mjs";
-import { not } from "./not.mjs";
-import { each } from "./each.mjs";
 export function picture_swap_row(parent, swap, name) {
   "$plain parent";
   "$plain swap";
@@ -50,17 +49,9 @@ export function picture_swap_row(parent, swap, name) {
       button,
     });
   }
-  let b = property_get_or(swap, "original_hide", false);
-  if (not(b)) {
-    offer("now", before);
+  for (let offered of picture_swap_offered(swap)) {
+    offer(offered.label, offered.path);
   }
-  let after = property_get(swap, "after");
-  function candidate(offered) {
-    let label = property_get(offered, "label");
-    let path = property_get(offered, "path");
-    offer(label, path);
-  }
-  each(after, candidate);
   let chosen_before = property_get_or(swap, "chosen", []);
   marks(chosen_before);
   return row;
