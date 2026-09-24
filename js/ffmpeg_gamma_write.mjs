@@ -1,6 +1,5 @@
+import { ffmpeg_image_filter_write } from "./ffmpeg_image_filter_write.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { ffmpeg_words_run } from "./ffmpeg_words_run.mjs";
-import { image_content_credentials_copy } from "./image_content_credentials_copy.mjs";
 export async function ffmpeg_gamma_write(path_from, gamma, path_to) {
   "$plain path_from";
   "$plain gamma";
@@ -20,22 +19,6 @@ export async function ffmpeg_gamma_write(path_from, gamma, path_to) {
     ":b=",
     curve,
   ]);
-  let command_words = [
-    "-hide_banner",
-    "-loglevel",
-    "error",
-    "-y",
-    "-i",
-    path_from,
-    "-vf",
-    filters,
-    "-frames:v",
-    "1",
-    "-update",
-    "1",
-    path_to,
-  ];
-  let ran = await ffmpeg_words_run(command_words);
-  await image_content_credentials_copy(path_from, path_to);
+  let ran = await ffmpeg_image_filter_write(path_from, filters, path_to);
   return ran;
 }
