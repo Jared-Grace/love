@@ -1,6 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bless_hash_map } from "./bless_hash_map.mjs";
-import { bless_dev_opening_is } from "./bless_dev_opening_is.mjs";
+import { bless_map_shown_is } from "./bless_map_shown_is.mjs";
 import { bless_tile_size_map } from "./bless_tile_size_map.mjs";
 import { bless_tile_size_playing } from "./bless_tile_size_playing.mjs";
 export function bless_tile_size() {
@@ -22,8 +21,7 @@ export function bless_tile_size() {
   ("Nothing about the game changes apart from the distance. The player still stands where");
   ("they stand and still walks, prays and is answered; the street is simply drawn small");
   ("enough to be seen whole, which is what a flat map calls being far off.");
-  let word = bless_hash_map();
-  let overview = bless_dev_opening_is([word]);
+  let overview = bless_map_shown_is();
   if (overview) {
     let far = bless_tile_size_map();
     return far;
