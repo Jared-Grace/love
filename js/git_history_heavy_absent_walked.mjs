@@ -1,3 +1,4 @@
+import { git_history_paths_moved_alive } from "./git_history_paths_moved_alive.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { git_folder_love } from "./git_folder_love.mjs";
 import { git_history_paths_absent_at_head } from "./git_history_paths_absent_at_head.mjs";
