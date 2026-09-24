@@ -1,3 +1,6 @@
+import { qa_snapshot_owner } from "./qa_snapshot_owner.mjs";
+import { lock_wait } from "./lock_wait.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { qa_commit_entry_beside_moved } from "./qa_commit_entry_beside_moved.mjs";
 import { qa_commit_kept_file } from "./qa_commit_kept_file.mjs";
 import { qa_commit_beside_heads } from "./qa_commit_beside_heads.mjs";
@@ -41,7 +44,13 @@ export async function qa_commit_at_generic(commit, known, path, judge) {
     return r;
   }
   let folder = await qa_snapshot_ensure(named);
-  let told = await qa_snapshot_gate_told(folder);
+  ("★ ONE JUDGING ON THIS MACHINE AT A TIME, IN THE SAME LINE AS THE WHOLE-REPO RUN. Measured 2026-09-24: three judgings ran at once, swap was full, each could afford only one share, and one deploy waited fifty three minutes for work that takes sixteen alone and about two and a half split across the machine. Taking turns lets each one take the shares the machine can give it. The line is the whole-repo run's own, because that run judges a commit too and fights for the same memory; nothing that run calls comes back through here, so sharing it cannot deadlock.");
+  async function judging() {
+    let asked = await qa_snapshot_gate_told(folder);
+    return asked;
+  }
+  let who = qa_snapshot_owner();
+  let told = await lock_wait(fn_name("qa_gate_run_unlocked"), judging, who);
   let kept = await judge(told);
   ("A run in which a share of the gates stopped without ever complaining about a gate is handed back and not written down. The share stopped for a reason no gate mentioned - a neighbour part way through saving a file, a module that will not load, a machine with no room left - so most of the questions it was given were never asked, and what the other shares found is a report on part of the repo wearing the name of the whole of it.");
   ("Kept, it would look judged, and a commit that looks judged is never judged again. Whoever asked for this is still handed everything it found, so nothing is hidden from the person at the keyboard; what does not happen is it being left behind for everybody else as though the questions had all been put.");

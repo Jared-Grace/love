@@ -1,3 +1,6 @@
+import { list_filter } from "./list_filter.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_image_brighter_swaps_name } from "./song_image_brighter_swaps_name.mjs";
 import { song_image_brighter_gamma } from "./song_image_brighter_gamma.mjs";
@@ -58,15 +61,25 @@ export async function song_image_brighter_write(numbers_comma) {
     let chosen = null_is(swap_before)
       ? []
       : property_get_or(swap_before, "chosen", []);
+    let after_before = null_is(swap_before)
+      ? []
+      : property_get(swap_before, "after");
+    function extra_is(offered) {
+      let neq = not_equal(offered.label, "brighter");
+      return neq;
+    }
+    let extras = list_filter(after_before, extra_is);
+    let after = [
+      {
+        label: "brighter",
+        path: after_path,
+      },
+    ];
+    list_add_multiple(after, extras);
     list_add(swaps, {
       n,
       before,
-      after: [
-        {
-          label: "brighter",
-          path: after_path,
-        },
-      ],
+      after,
       chosen,
     });
   }
