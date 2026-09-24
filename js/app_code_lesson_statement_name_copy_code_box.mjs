@@ -11,6 +11,8 @@ import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { list_join_newline } from "./list_join_newline.mjs";
+import { app_code_note_names_marked } from "./app_code_note_names_marked.mjs";
 import { app_code_lesson_name_no_quotes_box } from "./app_code_lesson_name_no_quotes_box.mjs";
 export function app_code_lesson_statement_name_copy_code_box(
   root,
@@ -76,6 +78,14 @@ export function app_code_lesson_statement_name_copy_code_box(
     logged,
   ];
   app_code_code_lines_writes_out(box_code, lines, word_first);
-  app_code_lesson_name_no_quotes_box(root, name_first, name_copy, word_first);
+  let code = list_join_newline(lines);
+  let names = app_code_note_names_marked(code);
+  app_code_lesson_name_no_quotes_box(
+    root,
+    name_first,
+    name_copy,
+    word_first,
+    names,
+  );
   return box_code;
 }
