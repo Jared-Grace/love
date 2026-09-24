@@ -6,6 +6,7 @@ import { html_div } from "./html_div.mjs";
 import { app_shared_footer } from "./app_shared_footer.mjs";
 import { app_receipts_purchases_pull } from "./app_receipts_purchases_pull.mjs";
 import { app_receipts_purchases_of } from "./app_receipts_purchases_of.mjs";
+import { app_receipts_php_per_usd } from "./app_receipts_php_per_usd.mjs";
 import { app_receipts_purchase_card } from "./app_receipts_purchase_card.mjs";
 import { app_receipts_purchase_new } from "./app_receipts_purchase_new.mjs";
 import { app_receipts_unsent_all } from "./app_receipts_unsent_all.mjs";
@@ -41,9 +42,10 @@ export function app_receipts_purchases_screen(root, folder_code, on_change) {
   }
   async function list_show() {
     let purchases = await app_receipts_purchases_of(folder_code);
+    let php_per_usd = await app_receipts_php_per_usd();
     html_clear(list);
     for (let purchase of purchases) {
-      app_receipts_purchase_card(list, purchase, sync_now);
+      app_receipts_purchase_card(list, purchase, sync_now, php_per_usd);
     }
   }
   async function on_add() {
