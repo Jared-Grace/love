@@ -37,6 +37,21 @@ export function qa_gate_said_accused_or_null_cases() {
       accused: null,
       why: "a blank where the app goes says the gate did not know either, and an empty word matches every app and none",
     },
+    {
+      said: '{"list":[{"line":"a line about a_thing","at_fault":"NOTE_THING.md"}]}',
+      accused: ["NOTE_THING.md"],
+      why: "a fault in something no app ships is written under at_fault, and only that word is read - the function the line happens to mention is what the fault was found in, not who can repair it",
+    },
+    {
+      said: '{"list":[{"app":"app_a_thing"},{"at_fault":"NOTE_THING.md"}]}',
+      accused: ["app_a_thing", "NOTE_THING.md"],
+      why: "each offender names where its own fault is, under either word, so a list holding both kinds is still a list where every offender said",
+    },
+    {
+      said: '{"list":[{"at_fault":"NOTE_THING.md"},{"name":"b_thing"}]}',
+      accused: null,
+      why: "the second word is held to the same rule as the first: one offender that said nothing makes this abstain",
+    },
   ];
   return cases;
 }

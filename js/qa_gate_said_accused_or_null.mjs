@@ -33,7 +33,11 @@ export function qa_gate_said_accused_or_null(said) {
     if (not(carried)) {
       return null;
     }
+    ("A fault in something no app ships - a memory note, a commit already in the history - is written under at_fault instead, and read the same way: the gate names where the fault is, and the sorting finds no app carrying it. Before this, such a gate either named nobody and held every app out, or had words scraped out of its sentence and held out whichever apps shipped them.");
     let held = property_get_or_null(entry, "app");
+    if (null_is(held)) {
+      held = property_get_or_null(entry, "at_fault");
+    }
     let word = text_is_if_or_null(held);
     if (null_is(word)) {
       return null;

@@ -1,5 +1,6 @@
 import { gloss_store_pointer_is_or_null } from "./gloss_store_pointer_is_or_null.mjs";
 import { null_is } from "./null_is.mjs";
+import { gloss_store_word_key_read } from "./gloss_store_word_key_read.mjs";
 import { gloss_chapters_pointers_dangling } from "./gloss_chapters_pointers_dangling.mjs";
 import { gloss_stores_offenders_generic } from "./gloss_stores_offenders_generic.mjs";
 import { property_get } from "./property_get.mjs";
@@ -11,6 +12,7 @@ export async function gloss_pointers_dangling_measure() {
   "How often each gloss store sends the reader back to a word met earlier and finds nothing there, given as a count out of every thousand times it sent them, beside the plain counts it was worked out from and the stores that could not be read at all.";
   "A store that is not on the disk is reported as missing rather than counted as clean. These stores live on a drive that is sometimes not mounted, and a sweep that answered nothing found there would hand back a zero - which reads exactly like a store somebody has finished repairing. Not looked at and nothing wrong are different answers and must not share one.";
   "A store with no reader for its language is left out of the answer altogether rather than reported as nought, because nought would say it had been looked at.";
+  "Two readers are fetched per store and only one of them can be absent. Whether a sentence points back has to be recognised in the language it is written in and nobody may guess at it, so a store without that reader is skipped; what counts as the same word always has an answer, because folding capitals away is one, so that reader is asked for rather than tested.";
   "A share of the pointers rather than a count of them, because these stores are still being written and every new chapter adds pointers. The share asks the question a reader would ask: of the times I was sent to look further up, how often was nothing up there.";
   async function store_ask(fn) {
     let pointer_is = gloss_store_pointer_is_or_null(fn);
@@ -18,7 +20,12 @@ export async function gloss_pointers_dangling_measure() {
     if (unread) {
       return null;
     }
-    let found = await gloss_chapters_pointers_dangling(fn, pointer_is);
+    let word_key_read = gloss_store_word_key_read(fn);
+    let found = await gloss_chapters_pointers_dangling(
+      fn,
+      pointer_is,
+      word_key_read,
+    );
     return found;
   }
   let asked = await gloss_stores_offenders_generic(store_ask);

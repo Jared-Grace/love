@@ -1,11 +1,15 @@
-import { gloss_dangling_count } from "./gloss_dangling_count.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { gloss_chapter_pointers_dangling } from "./gloss_chapter_pointers_dangling.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
-export async function gloss_chapters_pointers_dangling(fn, lambda$pointer_is) {
+import { gloss_dangling_count } from "./gloss_dangling_count.mjs";
+export async function gloss_chapters_pointers_dangling(
+  fn,
+  lambda$pointer_is,
+  lambda$word_key_read,
+) {
   "How many explanations in a whole gloss store point the reader back at a word met earlier, how many of those point at nothing, and how many chapters were read to find out.";
   "How many were read travels out beside what was found, because the two together are what tells a clean store apart from a sweep that has stopped reaching one. Both answer with nothing wrong, and the number of chapters read is the only part of the answer that falls when the store moves or the drive is not mounted.";
   "The store is read rather than a list of chapters being handed in, so a chapter authored later is looked at from the moment it is written and nobody has to remember to name it anywhere.";
@@ -16,6 +20,7 @@ export async function gloss_chapters_pointers_dangling(fn, lambda$pointer_is) {
       chapter_code,
       fn,
       lambda$pointer_is,
+      lambda$word_key_read,
     );
     return found;
   }
