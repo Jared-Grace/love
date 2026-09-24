@@ -1,3 +1,5 @@
+import { memory_index_name } from "./memory_index_name.mjs";
+import { list_add } from "./list_add.mjs";
 import { memory_index_lines_welded } from "./memory_index_lines_welded.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
@@ -8,7 +10,16 @@ export async function memory_index_welded_gate_run() {
   let found = await memory_index_lines_welded();
   let welded = property_get(found, "welded");
   let lines = property_get(found, "lines");
-  list_empty_is_assert_json(welded, {
+  ("Each line is written down with the note it sits in, so the sorting that decides a deployment reads that and nothing else. A bare line was all there was to read before, and a line naming a function would hold out every app shipping that function over a fault in a file no app ships.");
+  let at_fault = memory_index_name();
+  let marked = [];
+  for (let line of welded) {
+    list_add(marked, {
+      line,
+      at_fault,
+    });
+  }
+  list_empty_is_assert_json(marked, {
     hint: "these memory index lines hold two entries each - put the newline back in front of the second opener, and read the whole line first, because the hook that ends where the weld begins may have lost words as well as the line break",
     welded,
   });
