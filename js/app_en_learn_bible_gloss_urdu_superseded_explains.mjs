@@ -19,8 +19,9 @@ export function app_en_learn_bible_gloss_urdu_superseded_explains() {
   "THE FIFTY IRREGULAR PAST FORMS WERE COPIED OUT BEFORE THE GENERATOR THAT WROTE THEM WAS CHANGED, AND THAT ORDER IS THE RULE RATHER THAN THE HABIT. They were never typed anywhere: a loop over the map of irregular verbs built each one by joining a head to a tail, so the only place the old sentence ever existed as a string was in the answer that loop returned. Change the loop first and the old string is gone from the running repo entirely, and a list built afterwards by asking the same loop hands back the new sentence under fifty keys, which retires nothing and quietly tells the sweep that the new wording is stale. So the old answer was read out of the live table and pasted here as plain text, and only then was the generator touched.";
   "A WORD ALREADY WRITTEN IN CAPITALS IS NAMED HERE IN CAPITALS AND GETS NOTHING DERIVED, WHICH IS WHY THE LIST ASKS THE WORD RATHER THAN THE WORDING. 'IS' is the first such word on the list. Its retired wording is the retired wording for 'is' with one more sentence joined on, about the word being written in capitals throughout - so the two strings are nearly the same and only the word beside them says which is which. Read from the wording alone there would be no way to know that one of them must not be capitalised again.";
   "That is why everything on this list is a literal string even where a generator could produce it. This list is a record of what was in front of readers, and a record that recomputes itself is not a record. The capital forms are the single exception and they are safe for the opposite reason: they are derived from a literal already on the list, by the same rule the settled table uses, so they follow the retired wording rather than the current one.";
-  "THE SAME FIFTY KEYS ARE NOW ON THIS LIST TWICE, IN TWO DIFFERENT WORDINGS, AND THAT IS THE LIST WORKING RATHER THAN THE LIST ROTTING. Both retirements happened on the same day: the terse sentence was replaced by a long one, and then measuring which of two near-identical long sentences the store already used showed the wrong one had been picked, so it was replaced again. A list of what readers were shown has to hold every wording that reached them, not the last one, because a chapter written between the two changes carries the middle version and nothing else would ever rewrite it. Retiring only the most recent would leave those entries frozen with no name to catch them.";
-  "So the list is not the history of a decision and it is not sorted, and nothing about it should be read as a sequence. It is a set of strings nobody should still be reading, and being on it twice for one word costs nothing at all - the sweep asks each entry only whether its wording is in the set.";
+  "SOME KEYS ARE NOW ON THIS LIST TWICE AND SOME THREE TIMES, IN AS MANY DIFFERENT WORDINGS, AND THAT IS THE LIST WORKING RATHER THAN THE LIST ROTTING. All of it happened on one day, in three rounds: the terse sentence was replaced by a long one; then measuring which of two near-identical long sentences the store already used showed the wrong one had been picked, so it was replaced again; then the clause naming the third form was made to say what that form is for rather than only where it appears, which moved a further forty nine. A list of what readers were shown has to hold every wording that reached them, not the last one, because a chapter written between two of those changes carries the middle version and nothing else would ever rewrite it. Retiring only the most recent would leave those entries frozen with no name to catch them.";
+  "So the list is not the history of a decision and it is not sorted, and nothing about it should be read as a sequence. It is a set of strings nobody should still be reading, and being on it twice or three times for one word costs nothing at all - the sweep asks each entry only whether its wording is in the set.";
+  "The third round is also why the newest block is not the same fifty words as the block above it. What moved was every entry carrying the clause about 'have' and 'be', and that clause sits on regular verbs like 'named' and 'filled' as well as on irregular ones, while a past form that is only a past form - 'wore', 'ran', 'went' - never carried it at all. The two blocks overlap and neither contains the other. That is the ordinary case: a round retires whatever its own change displaced, which is a set defined by the clause being replaced and never by a word list somebody keeps in step by hand.";
   let retired = [
     [
       "be",
@@ -451,6 +452,202 @@ export function app_en_learn_bible_gloss_urdu_superseded_explains() {
     [
       "wrote",
       "فعل 'write' یعنی 'لِکھنا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً فعل کے آخر میں '-ed' لگا کر ماضی بنایا جاتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'write' سے 'wrote'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
+    ],
+    [
+      "astonished",
+      "فعل 'astonish' یعنی 'حَیران کرنا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل باقاعدہ ہے، یعنی اِس کے آخِر میں 'ed' لگتا ہے۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "baptized",
+      "فعل 'baptize' یعنی 'بپتِسمہ دینا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل باقاعدہ ہے، یعنی اِس کے آخِر میں 'ed' لگتا ہے۔ اِس کی بُنیادی شکل 'baptize' کے آخِر میں پہلے ہی 'e' ہے، اِس لیٔے صِرف 'd' لگا ہے۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "brought",
+      "فعل 'bring' یعنی 'لانا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'bring' سے 'brought'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "built",
+      "فعل 'build' یعنی 'تعمِیر کرنا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'build' سے 'built'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "driven",
+      "فعل 'drive' یعنی 'نِکالنا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ انگریزی میں عموماً یہاں بھی آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'drive' سے 'driven'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
+    ],
+    [
+      "drunk",
+      "فعل 'drink' یعنی 'پِینا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ انگریزی میں عموماً یہاں بھی آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'drink' سے 'drunk'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
+    ],
+    [
+      "eaten",
+      "فعل 'eat' یعنی 'کھانا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ انگریزی میں عموماً یہاں بھی آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'eat' سے 'eaten'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
+    ],
+    [
+      "ended",
+      "فعل 'end' یعنی 'ختم ہونا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل باقاعدہ ہے، یعنی اِس کے آخِر میں 'ed' لگتا ہے۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "fallen",
+      "فعل 'fall' یعنی 'گِرنا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ انگریزی میں عموماً یہاں بھی آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'fall' سے 'fallen'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
+    ],
+    [
+      "filled",
+      "فعل 'fill' یعنی 'بھر دینا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل باقاعدہ ہے، یعنی اِس کے آخِر میں 'ed' لگتا ہے۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "finished",
+      "فعل 'finish' یعنی 'ختم کرنا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل باقاعدہ ہے، یعنی اِس کے آخِر میں 'ed' لگتا ہے۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "found",
+      "فعل 'find' یعنی 'ڈھُونڈ نِکالنا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'find' سے 'found'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "given",
+      "فعل 'give' یعنی 'دینا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ انگریزی میں عموماً یہاں بھی آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'give' سے 'given'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
+    ],
+    [
+      "gone",
+      "فعل 'go' یعنی 'جانا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ انگریزی میں عموماً یہاں بھی آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'go' سے 'gone'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
+    ],
+    [
+      "got",
+      "فعل 'get' یعنی 'حاصِل کرنا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'get' سے 'got'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "handed",
+      "فعل 'hand' یعنی 'سَونپنا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل باقاعدہ ہے، یعنی اِس کے آخِر میں 'ed' لگتا ہے۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "happened",
+      "فعل 'happen' یعنی 'پیش آنا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل باقاعدہ ہے، یعنی اِس کے آخِر میں 'ed' لگتا ہے۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "heard",
+      "فعل 'hear' یعنی 'سُننا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'hear' سے 'heard'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "known",
+      "فعل 'know' یعنی 'جاننا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ انگریزی میں عموماً یہاں بھی آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'know' سے 'known'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
+    ],
+    [
+      "laid",
+      "فعل 'lay' یعنی 'رکھ دینا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'lay' سے 'laid'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "left",
+      "فعل 'leave' یعنی 'چھوڑنا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'leave' سے 'left'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "lent",
+      "فعل 'lend' یعنی 'اُدھار دینا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'lend' سے 'lent'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "made",
+      "فعل 'make' یعنی 'بنانا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'make' سے 'made'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "married",
+      "فعل 'marry' یعنی 'شادی کرنا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل باقاعدہ ہے، یعنی اِس کے آخِر میں 'ed' لگتا ہے۔ لِکھتے وقت 'marry' کا آخِری 'y' بدل کر 'i' ہو گیا ہے۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "named",
+      "فعل 'name' یعنی 'نام رکھنا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل باقاعدہ ہے، یعنی اِس کے آخِر میں 'ed' لگتا ہے۔ اِس کی بُنیادی شکل 'name' کے آخِر میں پہلے ہی 'e' ہے، اِس لیٔے صِرف 'd' لگا ہے۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "opened",
+      "فعل 'open' یعنی 'کھولنا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل باقاعدہ ہے، یعنی اِس کے آخِر میں 'ed' لگتا ہے۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "paid",
+      "فعل 'pay' یعنی 'ادا کرنا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'pay' سے 'paid'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "prepared",
+      "فعل 'prepare' یعنی 'تیّار کرنا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل باقاعدہ ہے، یعنی اِس کے آخِر میں 'ed' لگتا ہے۔ اِس کی بُنیادی شکل 'prepare' کے آخِر میں پہلے ہی 'e' ہے، اِس لیٔے صِرف 'd' لگا ہے۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "promised",
+      "فعل 'promise' یعنی 'وعدہ کرنا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل باقاعدہ ہے، یعنی اِس کے آخِر میں 'ed' لگتا ہے۔ اِس کی بُنیادی شکل 'promise' کے آخِر میں پہلے ہی 'e' ہے، اِس لیٔے صِرف 'd' لگا ہے۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "received",
+      "فعل 'receive' یعنی 'پانا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل باقاعدہ ہے، یعنی اِس کے آخِر میں 'ed' لگتا ہے۔ اِس کی بُنیادی شکل 'receive' کے آخِر میں پہلے ہی 'e' ہے، اِس لیٔے صِرف 'd' لگا ہے۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "said",
+      "فعل 'say' یعنی 'کہنا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'say' سے 'said'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "sat",
+      "فعل 'sit' یعنی 'بیٹھنا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'sit' سے 'sat'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "seen",
+      "فعل 'see' یعنی 'دیکھنا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ انگریزی میں عموماً یہاں بھی آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'see' سے 'seen'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
+    ],
+    [
+      "sent",
+      "فعل 'send' یعنی 'بھیجنا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'send' سے 'sent'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "slept",
+      "فعل 'sleep' یعنی 'سونا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'sleep' سے 'slept'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "sown",
+      "فعل 'sow' یعنی 'بونا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ انگریزی میں عموماً یہاں بھی آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'sow' سے 'sown'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
+    ],
+    [
+      "spoken",
+      "فعل 'speak' یعنی 'بولنا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ انگریزی میں عموماً یہاں بھی آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'speak' سے 'spoken'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
+    ],
+    [
+      "stayed",
+      "فعل 'stay' یعنی 'ٹھہرنا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل باقاعدہ ہے، یعنی اِس کے آخِر میں 'ed' لگتا ہے۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "stood",
+      "فعل 'stand' یعنی 'کھڑا ہونا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'stand' سے 'stood'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "taken",
+      "فعل 'take' یعنی 'لینا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ انگریزی میں عموماً یہاں بھی آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'take' سے 'taken'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
+    ],
+    [
+      "taught",
+      "فعل 'teach' یعنی 'سِکھانا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'teach' سے 'taught'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "thought",
+      "فعل 'think' یعنی 'سوچنا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'think' سے 'thought'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "thrown",
+      "فعل 'throw' یعنی 'پھینکنا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ انگریزی میں عموماً یہاں بھی آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'throw' سے 'thrown'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
+    ],
+    [
+      "told",
+      "فعل 'tell' یعنی 'بتانا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'tell' سے 'told'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "understood",
+      "فعل 'understand' یعنی 'سمجھنا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'understand' سے 'understood'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "wept",
+      "فعل 'weep' یعنی 'رونا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'weep' سے 'wept'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "worked",
+      "فعل 'work' یعنی 'کام کرنا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل باقاعدہ ہے، یعنی اِس کے آخِر میں 'ed' لگتا ہے۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔",
+    ],
+    [
+      "worn",
+      "فعل 'wear' یعنی 'پہننا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ انگریزی میں عموماً یہاں بھی آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'wear' سے 'worn'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
+    ],
+    [
+      "written",
+      "فعل 'write' یعنی 'لِکھنا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ انگریزی میں عموماً یہاں بھی آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'write' سے 'written'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
     ],
     [
       "this",

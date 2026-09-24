@@ -30,6 +30,10 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
   "One phrase is used for every irregular verb and that is a decision rather than laziness. The store had three: the word changes itself, the letter inside it changes, and a special sentence for 'go' making 'went'. All three are true of some verbs and only the first is true of all of them, so picking between them here would mean classifying two hundred verbs by how their spelling moves - a judgment nobody has made and one the map holding the forms cannot make. A classification that is right most of the time is worse here than a plainer sentence that is always right, because the reader has no way to tell which kind of sentence they are holding. The other two wordings are kept as shared labels instead, where they stand over the entries that actually carry them.";
   "The middle clause was then measured rather than chosen, and the first attempt lost. Two ways of saying that English usually adds '-ed' were already in the store, and by entry count they were level - two hundred and nine against two hundred and nineteen - which says nothing. By how many different words carry them they are not level at all: thirty seven words against two. Two hundred and nineteen sightings spread over two words is one batch of writing, not a convention; two hundred and nine over thirty seven words is what the store actually says. The longer of the two had been written here first, from memory of having seen it, and it was the batch. So the shorter one was taken, and the reward is immediate: for a word like 'saw' or 'told' the sentence this table now returns is character for character the one the store was already showing, so sixty two entries stopped being wrong without anything being written over them.";
   "The sentence for the third form was made to match the past one word for word, rather than left as the differently-shaped sentence it started as. A reader meets both forms of the same verb within a few verses of each other, and two sentences that say the same thing in two shapes make them look like two different rules. The shared clause is now one string used twice, which is also the only way the two stay parallel through the next edit.";
+  "The third form was then told to say what it is for, because saying only where it appears leaves the reader exactly where they started. It came with 'have' and 'be' - that was the whole sentence - and a beginner who already knows the word sits next to 'have' has been told nothing by being told it again. The two helpers do two different jobs and a reader cannot guess which: after 'have' the form says the action is finished, and after 'be' it says the action was done to the thing. That second one is the passive, and it is the harder half, because English marks it with nothing but the helper.";
+  "The words for both jobs were taken from the store rather than composed, and the breadth test is what says they are the store's words and not one writer's. Saying the action was done to it appears five hundred and thirty nine times across a hundred and seventy nine different words; saying a thing has come to be finished appears over a hundred and forty; and the phrase for one word arriving alongside another appears across three hundred and twenty. Three separate phrases, each carried by enough different words to be a convention rather than a batch. So the sentence is assembled out of what the store already says, and a reader who has met any of these elsewhere meets them here in the same shape.";
+  "One clause is now a single string used in three places - the irregular past that doubles as the third form, the separate third form, and the regular 'ed' form - because all three are the same English form doing the same two jobs. They were three sentences before and had already started to differ. A reader meeting 'said' and then 'named' should not be able to tell that two different pieces of code wrote their help.";
+  "The grammar disagrees with the store's own habit in one place and the disagreement is deliberate. The store nearly always writes the verb of 'this tells you that' in its masculine form, because it nearly always has the word itself as the subject, and a word is masculine here. This sentence's subject is the form, which is feminine, so the verb is written feminine to match. Being correct beats matching a count in an app whose whole purpose is teaching a language.";
   "The fifty sentences this replaced were written down before the change rather than worked out after it, and that order is the point. The retired list has to hold what was actually in front of readers, and a generator asked after the fact tells you what it would write now - which, having just been changed, is the new sentence. So the old strings were read out of the live table first and pasted into the retired list as literal text. A retired list that is itself generated cannot retire the thing it was written to retire.";
   let meaning = {
     say: "کہنا",
@@ -252,6 +256,9 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
     Take: "take",
     Bring: "bring",
   };
+  let also = " یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے:";
+  let jobs =
+    " 'have' کے ساتھ آ کر یہ بتاتی ہے کہ کام ہو چُکا ہے، اَور 'be' کے ساتھ آ کر یہ بتاتی ہے کہ کام اُس پر کیا گیا۔";
   let r = {};
   function base_read(word) {
     let urdu = property_get(meaning, word);
@@ -402,7 +409,8 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
       urdu +
       "' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل باقاعدہ ہے، یعنی اِس کے آخِر میں 'ed' لگتا ہے۔" +
       ed_spelling_read(spelled, word) +
-      " یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔";
+      also +
+      jobs;
     property_set(r, spelled, whole);
   }
   let ed_spellings = object_property_names(ed_forms);
@@ -438,7 +446,7 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
       learn;
     let both = equal(past, done);
     if (both) {
-      let one = past_said + " یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔";
+      let one = past_said + also + jobs;
       property_set(r, past, one);
       return;
     }
@@ -449,7 +457,9 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
     }
     let third =
       head +
-      "وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ انگریزی میں عموماً یہاں بھی آخر میں '-ed' لگتا ہے" +
+      "وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے:" +
+      jobs +
+      " انگریزی میں عموماً یہاں بھی آخر میں '-ed' لگتا ہے" +
       changes +
       word +
       "' سے '" +
