@@ -18,11 +18,6 @@ export function song_image_review_couplets() {
   "A CLAUSE CAN PULL A COLOUR THAT IT NEVER NAMES. Couplet 26 was given a gradient clause saying its rays were palest and brightest under the cloud, and the next drawing came back with every ray gold - a colour the clause never mentions and the palette forbids. Words like brightest and palest are read as a colour and not only as a value, so a clause about lightness is also a clause about hue whether it means to be or not.";
   "THE SERVICE SOMETIMES HANDS BACK A PICTURE THAT IS NOT THIS COUPLET AT ALL, and a note filed on one of those is judging somebody else's window. Couplet 26 got a red chalice, a lamb with a crown and a cross in gold rays across three attempts; couplet 24 got a plain cross; couplet 15 got a lampstand. The wording sent was right every time, so nothing in the couplet needs changing when this happens - it needs drawing again. Check the picture is the symbol before reading anything else off it.";
   "NOTES LEFT OPEN ON A COUPLET THAT HAS COME OFF THE BENCH ARE NOW REPORTED RATHER THAN LOST. Closing a round hands back the strays alongside what it closed, and it does not close them - marking them answered would clear the count and destroy the only record that nobody ever replied. Twenty-one across couplets 9, 14, 25, 32 and 33 were found that way. Answer them and put those couplets back here.";
-  let couplets = [
-    {
-      n: 12,
-      note: "Yes. You are on 10, a fresh drawing: the field is now blue, green and violet, so the red is only in the cup. Still different: the cup is half full, not full to the brim. 9 is full to the brim and also red only in the cup, with an extra lead line down the field. 12 put red back into the field.",
-    },
-  ];
+  let couplets = [];
   return couplets;
 }
