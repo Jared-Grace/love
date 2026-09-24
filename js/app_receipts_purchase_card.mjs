@@ -5,10 +5,13 @@ import { app_receipts_purchase_save } from "./app_receipts_purchase_save.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_date_time_edit } from "./app_shared_date_time_edit.mjs";
 import { app_shared_input_whole_number } from "./app_shared_input_whole_number.mjs";
-import { html_value_set } from "./html_value_set.mjs";
 import { property_get_or } from "./property_get_or.mjs";
+import { html_value_set } from "./html_value_set.mjs";
+import { html_div_text } from "./html_div_text.mjs";
 import { text_whole_number_or_empty } from "./text_whole_number_or_empty.mjs";
 import { html_value_get } from "./html_value_get.mjs";
+import { html_text_set } from "./html_text_set.mjs";
+import { app_receipts_price_usd_text } from "./app_receipts_price_usd_text.mjs";
 import { html_on } from "./html_on.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -21,13 +24,20 @@ import { property_exists } from "./property_exists.mjs";
 import { app_receipts_purchase_photo_add } from "./app_receipts_purchase_photo_add.mjs";
 import { app_shared_button_wide_camera } from "./app_shared_button_wide_camera.mjs";
 import { emoji_camera } from "./emoji_camera.mjs";
-export function app_receipts_purchase_card(parent, purchase, on_saved) {
+export function app_receipts_purchase_card(
+  parent,
+  purchase,
+  on_saved,
+  php_per_usd,
+) {
   "$plain parent";
   "$plain purchase";
   "$plain on_saved";
+  "$plain php_per_usd";
+  "php_per_usd is how many pesos a dollar bought, or null when no rate is known, and then no dollars are shown.";
   "One purchase in a box: its date, time and price, which can be changed, its photos, and a button to add another photo. Every change is kept at once and then on_saved is told, so whatever sends can send it.";
   "A photo taken on this phone is shown from the picture kept here; one taken on another phone is shown from where it is stored, so it needs the internet the first time.";
-  arguments_assert(arguments, 3);
+  arguments_assert(arguments, 4);
   let card = app_shared_container(parent);
   async function on_when(date, time) {
     property_set(purchase, "date", date);
@@ -42,15 +52,26 @@ export function app_receipts_purchase_card(parent, purchase, on_saved) {
   let price_input = app_shared_input_whole_number(card, "Price (₱ PHP)");
   let value2 = property_get_or(purchase, "price", "");
   html_value_set(price_input, value2);
+  ("Under the price, what it comes to in US dollars, redrawn with every key pressed so it follows the typing.");
+  let usd_line = html_div_text(card, "");
+  function usd_show() {
+    let text2 = html_value_get(price_input);
+    let typed = text_whole_number_or_empty(text2);
+    let text3 = app_receipts_price_usd_text(typed, php_per_usd);
+    html_text_set(usd_line, text3);
+  }
+  usd_show();
   async function on_price() {
     let text = html_value_get(price_input);
     let price = text_whole_number_or_empty(text);
     html_value_set(price_input, price);
+    usd_show();
     property_set(purchase, "price", price);
     await app_receipts_purchase_save(purchase);
     on_saved();
   }
   html_on(price_input, "change", on_price);
+  html_on(price_input, "input", usd_show);
   ("Photos are small squares side by side, cropped to fill the square; pressing one opens it whole on a screen of its own.");
   let pictures = html_div(card);
   html_style_set(pictures, "display", "flex");
