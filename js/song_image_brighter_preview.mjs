@@ -1,4 +1,4 @@
-import { property_list_empty_is } from "./property_list_empty_is.mjs";
+import { picture_swaps_undecided_each } from "./picture_swaps_undecided_each.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_image_page_shell } from "./song_image_page_shell.mjs";
 import { song_image_brighter_swaps_name } from "./song_image_brighter_swaps_name.mjs";
@@ -29,14 +29,10 @@ export async function song_image_brighter_preview() {
     return root;
   }
   let listed = property_get(swaps, "swaps");
-  let hidden = 0;
-  for (let swap of listed) {
-    if (property_list_empty_is(swap, "chosen")) {
-      song_image_brighter_card(root, swap, name);
-    } else {
-      hidden = hidden + 1;
-    }
+  function card(swap) {
+    song_image_brighter_card(root, swap, name);
   }
+  let hidden = picture_swaps_undecided_each(listed, card);
   let count = song_image_text_quiet_line(root);
   html_text_set(count, hidden + " already approved, not shown");
   return root;
