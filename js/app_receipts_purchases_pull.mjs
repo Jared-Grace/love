@@ -28,7 +28,7 @@ export async function app_receipts_purchases_pull(folder_code) {
   "Bring down every purchase in the folder that another phone sent, and keep it here beside this phone's own, so the list shows the whole folder and stays there with no internet.";
   "A purchase whose details on this phone are still waiting to be sent is left as it is here: the change on this phone is the newer one, and it will reach storage on the next send.";
   "Photos from elsewhere are kept as addresses rather than pictures, so bringing a folder down costs a list and one small question per purchase, never every picture in it. A photo taken on this phone keeps its picture, so it still shows with no internet.";
-  "The date, time and price are read from what storage says about the details file, not from inside it: a page opened at an address the store does not know may ask about a file but not read it, and a phone reaching this machine by its number is exactly such a page.";
+  "The date, time, price and description are read from what storage says about the details file, not from inside it: a page opened at an address the store does not know may ask about a file but not read it, and a phone reaching this machine by its number is exactly such a page.";
   arguments_assert(arguments, 1);
   let online = browser_online_is();
   if (not(online)) {
@@ -111,6 +111,7 @@ export async function app_receipts_purchases_pull(folder_code) {
       date: property_get_or(custom, "date", ""),
       time: property_get_or(custom, "time", ""),
       price: property_get_or(custom, "price", ""),
+      description: property_get_or(custom, "description", ""),
       photos,
     };
     await indexeddb_put_backend(
