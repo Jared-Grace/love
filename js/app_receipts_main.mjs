@@ -1,3 +1,5 @@
+import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
+import { app_shared_mobile_default_font_size } from "./app_shared_mobile_default_font_size.mjs";
 import { property_get } from "./property_get.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_frozen } from "./text_frozen.mjs";
@@ -15,6 +17,9 @@ export function app_receipts_main(context) {
   "A code in the link wins over the one kept here, because a link sent for one folder must send into that folder; it is then kept, so the next opening needs no link.";
   "Pressing the folder's name on the camera screen goes back to the code box, filled with the current code.";
   "Whenever the internet comes back, whatever is waiting on this phone is sent - through the camera screen when it is showing, so its line about what is waiting is redrawn too.";
+  "It starts the page the way the other apps do - the same letters without serifs, and the text size this reader chose - so it reads as one of them.";
+  app_shared_app_fn_set(context, app_receipts_main);
+  app_shared_mobile_default_font_size(context);
   let root = property_get(context, "root");
   let app_name = fn_name("app_receipts");
   let key = text_frozen("folder_code");
