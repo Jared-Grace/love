@@ -40,10 +40,11 @@ export function picture_swap_row(parent, swap, name) {
       ]);
       marks(chosen);
     }
-    html_on_click(column, press);
+    let button = html_button(column, "Approve", press);
     list_add(columns, {
       column,
       path,
+      button,
     });
   }
   let b = property_get_or(swap, "original_hide", false);
