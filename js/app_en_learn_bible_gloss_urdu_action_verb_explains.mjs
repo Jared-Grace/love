@@ -26,6 +26,9 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
   "Where the spelling changed on the way from the verb, the change is named, because that is the thing a reader cannot see. 'come' loses its 'e' to make 'coming' and 'sit' doubles its last letter to make 'sitting', and a beginner looking for 'sitt' in a dictionary will not find it. Which of the two happened is worked out from the pair itself rather than listed by hand, so a form added later cannot be given the wrong reason.";
   "The regular 'ed' forms are written out for the same reason the irregular pasts are, and the store's own labels are what asked for it. Two different labels were sitting on these words - one calling the word a past form and one calling it the form that comes after 'have' - and for a regular verb those are the same spelling, so a reader met the same word twice and was told two half things about it. One sentence says both jobs and names the verb, which neither label did.";
   "Four of them are written here while their plain spelling belongs to the noun table: 'name', 'promise', 'hand' and 'end' are nouns first in this store and are left there, so only the 'ed' spelling is written here and the Urdu for the verb is kept beside it. That is not a workaround. English really does use those words both ways, and the reader meeting 'handed' needs the verb, not the part of the body.";
+  "The irregular past and third forms were rewritten on 2026-09-24 to the sentence the store had already been writing for them, and the number is what asked for it. Two hundred and four of the words this table answers to are in front of a reader somewhere, and while a thousand and twenty of those sightings carried what was written here, nine thousand six hundred and three carried something else. That is not a table the store disagrees with; it is a table the store has been quietly working around. The old sentence said the form is a past form and then that the verb is irregular, and it left the reader with the one question a beginner actually has - why does this word not end in 'ed' - answered by the word 'irregular' and nothing more. The store's own sentence answers it: most English verbs add '-ed', a few old ones change the word itself, this is one of them, and these have to be learned. Same facts, and the second one can be used.";
+  "One phrase is used for every irregular verb and that is a decision rather than laziness. The store had three: the word changes itself, the letter inside it changes, and a special sentence for 'go' making 'went'. All three are true of some verbs and only the first is true of all of them, so picking between them here would mean classifying two hundred verbs by how their spelling moves - a judgment nobody has made and one the map holding the forms cannot make. A classification that is right most of the time is worse here than a plainer sentence that is always right, because the reader has no way to tell which kind of sentence they are holding. The other two wordings are kept as shared labels instead, where they stand over the entries that actually carry them.";
+  "The fifty sentences this replaced were written down before the change rather than worked out after it, and that order is the point. The retired list has to hold what was actually in front of readers, and a generator asked after the fact tells you what it would write now - which, having just been changed, is the new sentence. So the old strings were read out of the live table first and pasted into the retired list as literal text. A retired list that is itself generated cannot retire the thing it was written to retire.";
   let meaning = {
     say: "کہنا",
     tell: "بتانا",
@@ -416,29 +419,38 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
     let done = parts[1];
     let urdu = property_get(meaning, word);
     let head = "فعل '" + word + "' یعنی '" + urdu + "' کی ";
+    let learn = " اَیسے فعل یاد کرنے پڑتے ہیں۔";
     let unchanged = equal(past, word);
     if (unchanged) {
       return;
     }
+    let past_said =
+      head +
+      "ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً فعل کے آخر میں '-ed' لگا کر ماضی بنایا جاتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: '" +
+      word +
+      "' سے '" +
+      past +
+      "'۔" +
+      learn;
     let both = equal(past, done);
     if (both) {
-      let one =
-        head +
-        "گُزرے ہوئے زمانے کی شکل ہے، اَور یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔" +
-        irregular_read(word);
+      let one = past_said + " یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔";
       property_set(r, past, one);
       return;
     }
-    let told = head + "گُزرے ہوئے زمانے کی شکل ہے۔" + irregular_read(word);
-    property_set(r, past, told);
+    property_set(r, past, past_said);
     let same_as_base = equal(done, word);
     if (same_as_base) {
       return;
     }
     let third =
       head +
-      "وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔" +
-      irregular_read(word);
+      "وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ انگریزی میں عموماً یہ شکل بھی فعل کے آخر میں '-ed' لگا کر بنتی ہے، مگر یہ فعل بےقاعدہ ہے: '" +
+      word +
+      "' سے '" +
+      done +
+      "'۔" +
+      learn;
     property_set(r, done, third);
   }
   let irregular_words = object_property_names(irregular);
