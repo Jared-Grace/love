@@ -1163,6 +1163,7 @@ export function qa_gates() {
     purge_words_live_gate_run,
     app_ceb_bible_gloss_published_unfinished_gate_run,
     app_original_bible_gloss_published_unfinished_gate_run,
+    firebase_sending_tests_none_gate_run,
   ];
   return gates;
 }
