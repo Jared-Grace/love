@@ -16,6 +16,8 @@ export function app_en_learn_bible_gloss_urdu_superseded_explains() {
   "THE TWO NAME WORDINGS WERE FOUND BY LOOKING FOR THE FAULT RATHER THAN BY REMEMBERING IT. A wording for a name is built by the name table and ends in the one sentence that table joins onto every one of its wordings, and nothing else in the store writes that sentence. So every place holding a wording that ends in it and is not the wording the table says today is a wording that was replaced without being written down here, and the store can simply be asked for them. Asked once, it answered with exactly two shapes over four hundred and twelve places, both of them the same word's, both retired on one day when the table was told to stop spelling the name inside the wording.";
   "The rule that retired them is worth keeping beside them, because a reader meeting the old wording will think it the better one. It says the name, and the new one does not. The name table's own reason is that our spelling of the name is already standing beside the wording in the short Urdu written for the word, so a wording that spelled it again would put the same name twice on one line and give two spellings the chance to drift apart when somebody rules on how the name should be written. The new wording is shorter because the line as a whole already says the thing.";
   "Word for word, and never trimmed. A wording here costs one string and one comparison; a wording left out costs entries nobody will ever find again.";
+  "THE FIFTY IRREGULAR PAST FORMS WERE COPIED OUT BEFORE THE GENERATOR THAT WROTE THEM WAS CHANGED, AND THAT ORDER IS THE RULE RATHER THAN THE HABIT. They were never typed anywhere: a loop over the map of irregular verbs built each one by joining a head to a tail, so the only place the old sentence ever existed as a string was in the answer that loop returned. Change the loop first and the old string is gone from the running repo entirely, and a list built afterwards by asking the same loop hands back the new sentence under fifty keys, which retires nothing and quietly tells the sweep that the new wording is stale. So the old answer was read out of the live table and pasted here as plain text, and only then was the generator touched.";
+  "That is why everything on this list is a literal string even where a generator could produce it. This list is a record of what was in front of readers, and a record that recomputes itself is not a record. The capital forms are the single exception and they are safe for the opposite reason: they are derived from a literal already on the list, by the same rule the settled table uses, so they follow the retired wording rather than the current one.";
   let retired = [
     [
       "be",
@@ -42,6 +44,206 @@ export function app_en_learn_bible_gloss_urdu_superseded_explains() {
     [
       "are",
       "فعل 'be' یعنی 'ہونا' کی حال کی شکل ہے — حال یعنی وہ وقت جو گُزرا نہیں۔ یہ شکل تب آتی ہے جب بات ایک سے زیادہ کی ہو، یا جب 'you' کے ساتھ آٔے — چاہے 'you' ایک ہی شخص ہو۔ 'be' اِکلوتا انگریزی فعل ہے جس کی حال میں تین شکلیں ہیں: 'am'، 'is' اَور 'are'۔",
+    ],
+    [
+      "ate",
+      "فعل 'eat' یعنی 'کھانا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل بےقاعدہ ہے: 'eat' سے 'ate' اَور 'eaten' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "brought",
+      "فعل 'bring' یعنی 'لانا' کی گُزرے ہوئے زمانے کی شکل ہے، اَور یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔ یہ فعل بےقاعدہ ہے: 'bring' سے 'brought' اَور 'brought' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "built",
+      "فعل 'build' یعنی 'تعمِیر کرنا' کی گُزرے ہوئے زمانے کی شکل ہے، اَور یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔ یہ فعل بےقاعدہ ہے: 'build' سے 'built' اَور 'built' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "came",
+      "فعل 'come' یعنی 'آنا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل بےقاعدہ ہے: 'come' سے 'came' اَور 'come' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "drank",
+      "فعل 'drink' یعنی 'پِینا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل بےقاعدہ ہے: 'drink' سے 'drank' اَور 'drunk' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "driven",
+      "فعل 'drive' یعنی 'نِکالنا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ یہ فعل بےقاعدہ ہے: 'drive' سے 'drove' اَور 'driven' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "drove",
+      "فعل 'drive' یعنی 'نِکالنا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل بےقاعدہ ہے: 'drive' سے 'drove' اَور 'driven' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "drunk",
+      "فعل 'drink' یعنی 'پِینا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ یہ فعل بےقاعدہ ہے: 'drink' سے 'drank' اَور 'drunk' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "eaten",
+      "فعل 'eat' یعنی 'کھانا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ یہ فعل بےقاعدہ ہے: 'eat' سے 'ate' اَور 'eaten' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "fallen",
+      "فعل 'fall' یعنی 'گِرنا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ یہ فعل بےقاعدہ ہے: 'fall' سے 'fell' اَور 'fallen' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "fell",
+      "فعل 'fall' یعنی 'گِرنا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل بےقاعدہ ہے: 'fall' سے 'fell' اَور 'fallen' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "found",
+      "فعل 'find' یعنی 'ڈھُونڈ نِکالنا' کی گُزرے ہوئے زمانے کی شکل ہے، اَور یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔ یہ فعل بےقاعدہ ہے: 'find' سے 'found' اَور 'found' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "gave",
+      "فعل 'give' یعنی 'دینا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل بےقاعدہ ہے: 'give' سے 'gave' اَور 'given' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "given",
+      "فعل 'give' یعنی 'دینا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ یہ فعل بےقاعدہ ہے: 'give' سے 'gave' اَور 'given' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "gone",
+      "فعل 'go' یعنی 'جانا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ یہ فعل بےقاعدہ ہے: 'go' سے 'went' اَور 'gone' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "got",
+      "فعل 'get' یعنی 'حاصِل کرنا' کی گُزرے ہوئے زمانے کی شکل ہے، اَور یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔ یہ فعل بےقاعدہ ہے: 'get' سے 'got' اَور 'got' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "heard",
+      "فعل 'hear' یعنی 'سُننا' کی گُزرے ہوئے زمانے کی شکل ہے، اَور یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔ یہ فعل بےقاعدہ ہے: 'hear' سے 'heard' اَور 'heard' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "knew",
+      "فعل 'know' یعنی 'جاننا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل بےقاعدہ ہے: 'know' سے 'knew' اَور 'known' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "known",
+      "فعل 'know' یعنی 'جاننا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ یہ فعل بےقاعدہ ہے: 'know' سے 'knew' اَور 'known' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "laid",
+      "فعل 'lay' یعنی 'رکھ دینا' کی گُزرے ہوئے زمانے کی شکل ہے، اَور یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔ یہ فعل بےقاعدہ ہے: 'lay' سے 'laid' اَور 'laid' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "left",
+      "فعل 'leave' یعنی 'چھوڑنا' کی گُزرے ہوئے زمانے کی شکل ہے، اَور یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔ یہ فعل بےقاعدہ ہے: 'leave' سے 'left' اَور 'left' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "lent",
+      "فعل 'lend' یعنی 'اُدھار دینا' کی گُزرے ہوئے زمانے کی شکل ہے، اَور یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔ یہ فعل بےقاعدہ ہے: 'lend' سے 'lent' اَور 'lent' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "made",
+      "فعل 'make' یعنی 'بنانا' کی گُزرے ہوئے زمانے کی شکل ہے، اَور یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔ یہ فعل بےقاعدہ ہے: 'make' سے 'made' اَور 'made' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "paid",
+      "فعل 'pay' یعنی 'ادا کرنا' کی گُزرے ہوئے زمانے کی شکل ہے، اَور یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔ یہ فعل بےقاعدہ ہے: 'pay' سے 'paid' اَور 'paid' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "ran",
+      "فعل 'run' یعنی 'دَوڑنا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل بےقاعدہ ہے: 'run' سے 'ran' اَور 'run' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "said",
+      "فعل 'say' یعنی 'کہنا' کی گُزرے ہوئے زمانے کی شکل ہے، اَور یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔ یہ فعل بےقاعدہ ہے: 'say' سے 'said' اَور 'said' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "sat",
+      "فعل 'sit' یعنی 'بیٹھنا' کی گُزرے ہوئے زمانے کی شکل ہے، اَور یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔ یہ فعل بےقاعدہ ہے: 'sit' سے 'sat' اَور 'sat' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "saw",
+      "فعل 'see' یعنی 'دیکھنا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل بےقاعدہ ہے: 'see' سے 'saw' اَور 'seen' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "seen",
+      "فعل 'see' یعنی 'دیکھنا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ یہ فعل بےقاعدہ ہے: 'see' سے 'saw' اَور 'seen' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "sent",
+      "فعل 'send' یعنی 'بھیجنا' کی گُزرے ہوئے زمانے کی شکل ہے، اَور یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔ یہ فعل بےقاعدہ ہے: 'send' سے 'sent' اَور 'sent' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "slept",
+      "فعل 'sleep' یعنی 'سونا' کی گُزرے ہوئے زمانے کی شکل ہے، اَور یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔ یہ فعل بےقاعدہ ہے: 'sleep' سے 'slept' اَور 'slept' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "sowed",
+      "فعل 'sow' یعنی 'بونا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل بےقاعدہ ہے: 'sow' سے 'sowed' اَور 'sown' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "sown",
+      "فعل 'sow' یعنی 'بونا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ یہ فعل بےقاعدہ ہے: 'sow' سے 'sowed' اَور 'sown' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "spoke",
+      "فعل 'speak' یعنی 'بولنا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل بےقاعدہ ہے: 'speak' سے 'spoke' اَور 'spoken' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "spoken",
+      "فعل 'speak' یعنی 'بولنا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ یہ فعل بےقاعدہ ہے: 'speak' سے 'spoke' اَور 'spoken' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "stood",
+      "فعل 'stand' یعنی 'کھڑا ہونا' کی گُزرے ہوئے زمانے کی شکل ہے، اَور یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔ یہ فعل بےقاعدہ ہے: 'stand' سے 'stood' اَور 'stood' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "taken",
+      "فعل 'take' یعنی 'لینا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ یہ فعل بےقاعدہ ہے: 'take' سے 'took' اَور 'taken' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "taught",
+      "فعل 'teach' یعنی 'سِکھانا' کی گُزرے ہوئے زمانے کی شکل ہے، اَور یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔ یہ فعل بےقاعدہ ہے: 'teach' سے 'taught' اَور 'taught' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "thought",
+      "فعل 'think' یعنی 'سوچنا' کی گُزرے ہوئے زمانے کی شکل ہے، اَور یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔ یہ فعل بےقاعدہ ہے: 'think' سے 'thought' اَور 'thought' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "threw",
+      "فعل 'throw' یعنی 'پھینکنا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل بےقاعدہ ہے: 'throw' سے 'threw' اَور 'thrown' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "thrown",
+      "فعل 'throw' یعنی 'پھینکنا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ یہ فعل بےقاعدہ ہے: 'throw' سے 'threw' اَور 'thrown' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "told",
+      "فعل 'tell' یعنی 'بتانا' کی گُزرے ہوئے زمانے کی شکل ہے، اَور یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔ یہ فعل بےقاعدہ ہے: 'tell' سے 'told' اَور 'told' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "took",
+      "فعل 'take' یعنی 'لینا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل بےقاعدہ ہے: 'take' سے 'took' اَور 'taken' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "understood",
+      "فعل 'understand' یعنی 'سمجھنا' کی گُزرے ہوئے زمانے کی شکل ہے، اَور یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔ یہ فعل بےقاعدہ ہے: 'understand' سے 'understood' اَور 'understood' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "went",
+      "فعل 'go' یعنی 'جانا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل بےقاعدہ ہے: 'go' سے 'went' اَور 'gone' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "wept",
+      "فعل 'weep' یعنی 'رونا' کی گُزرے ہوئے زمانے کی شکل ہے، اَور یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔ یہ فعل بےقاعدہ ہے: 'weep' سے 'wept' اَور 'wept' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "wore",
+      "فعل 'wear' یعنی 'پہننا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل بےقاعدہ ہے: 'wear' سے 'wore' اَور 'worn' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "worn",
+      "فعل 'wear' یعنی 'پہننا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ یہ فعل بےقاعدہ ہے: 'wear' سے 'wore' اَور 'worn' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "written",
+      "فعل 'write' یعنی 'لِکھنا' کی وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے۔ یہ فعل بےقاعدہ ہے: 'write' سے 'wrote' اَور 'written' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "wrote",
+      "فعل 'write' یعنی 'لِکھنا' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل بےقاعدہ ہے: 'write' سے 'wrote' اَور 'written' بنتا ہے، 'ed' لگا کر نہیں۔",
     ],
     [
       "this",
