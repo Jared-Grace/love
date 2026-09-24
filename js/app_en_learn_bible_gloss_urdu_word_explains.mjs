@@ -6,6 +6,7 @@ export function app_en_learn_bible_gloss_urdu_word_explains() {
   "Written in small letters throughout. A word opening a sentence carries a capital, and that is where it fell rather than a different word, so the lookup beside this folds the capital away and one entry answers for both.";
   "Two of the words of belonging carry a warning about a word they are mistaken for, because the mistake is a spelling mistake and not a reading one, and the reader will make it when they come to write. ‘their’ sounds exactly like ‘there’, which is now said on both sides; ‘its’ is one letter away from ‘it’s’, which is not a word of belonging at all but ‘it is’ shortened. Both warnings were already being taught here and there in the store by whoever glossed a verse where the trap was in sight - twenty-eight places for the first and three for the second - so the settled wordings are catching up with what the store had already worked out, not inventing a rule.";
   "The wordings these replace are written down in the superseded list in the same commit, which is the only thing that lets the repair sweep find the entries still carrying them.";
+  "‘to’ was widened afterwards for a reason the labels list found rather than this one. Two hundred and eight places in the store told the reader that ‘to’ in front of a verb makes the Urdu that ends in ‘نا’, and the wording here named the base form without naming the Urdu - so the sentence a reader would rather have was the one about to be written over. It is the third time a refused label has turned out to be a complaint about the wording here and not about itself. The example is given because an infinitive is the one thing in this list an Urdu reader already owns outright and only has to be shown where it went.";
   let a = "حرفِ تعریف ہے، مگر وہ والا جو کِسی ایک اَن جانی چیز کے لیٔے آتا ہے۔";
   let r = {
     the: "حرفِ تعریف ہے، یعنی وہ چھوٹا لفظ جو نام سے پہلے آ کر بتاتا ہے کہ کویٔی معلوم اَور خاص چیز مُراد ہے۔",
@@ -14,7 +15,7 @@ export function app_en_learn_bible_gloss_urdu_word_explains() {
     and: "حرفِ عطف ہے۔ یہ دو چیزوں یا دو باتوں کو ایک ساتھ جوڑتا ہے، جیسے اُردُو میں ’اَور‘۔",
     but: "حرفِ عطف ہے، مگر یہ جوڑتا نہیں بلکہ مُقابلہ کراتا ہے: جو بات اِس کے بعد آتی ہے وہ پہلی بات کے خِلاف جاتی ہے، جیسے اُردُو میں ’لیکن‘۔",
     or: "حرفِ عطف ہے، مگر یہ دو چیزوں میں سے ایک کو چُننے کے لیٔے آتا ہے، جیسے اُردُو میں ’یا‘۔",
-    to: "یہ چھوٹا لفظ دو کام کرتا ہے۔ حرفِ جار کے طور پر یہ بتاتا ہے کہ کام کِس طرف یا کِس تک جا رہا ہے، جیسے اُردُو میں ’کی طرف‘ یا ’کو‘۔ اَور کِسی فعل سے پہلے آ کر یہ اُس کی بُنیادی شکل بناتا ہے، اَور تب یہ خُود کویٔی معنی نہیں رکھتا۔",
+    to: "یہ چھوٹا لفظ دو کام کرتا ہے۔ حرفِ جار کے طور پر یہ بتاتا ہے کہ کام کِس طرف یا کِس تک جا رہا ہے، جیسے اُردُو میں ’کی طرف‘ یا ’کو‘۔ اَور کِسی فعل سے پہلے آ کر یہ اُس کا مصدر بناتا ہے — یعنی وہ شکل جو اُردُو میں آخِر کے ’نا‘ سے بنتی ہے، جَیسے 'to read' کا ’پڑھنا‘ — اَور تب یہ خُود کویٔی معنی نہیں رکھتا۔",
     of: "حرفِ جار ہے۔ یہ تعلُّق یا مِلکیّت بتاتا ہے: جو لفظ اِس کے بعد آتا ہے وہ مالِک ہے یا وہ اصل ہے جِس کا حِصّہ پہلا لفظ ہے، جیسے اُردُو میں ’کا‘، ’کی‘، ’کے‘۔",
     in: "حرفِ جار ہے۔ یہ بتاتا ہے کہ چیز کِسی کے اَندر ہے، جیسے اُردُو میں ’میں‘۔",
     on: "حرفِ جار ہے۔ یہ بتاتا ہے کہ چیز کِسی کے اُوپر اَور اُس سے لگی ہویٔی ہے، جیسے اُردُو میں ’پر‘۔",

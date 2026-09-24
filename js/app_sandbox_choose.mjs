@@ -15,6 +15,7 @@ export async function app_sandbox_choose(name) {
     let load = property_get(previews, first);
     let preview = await load();
     preview();
+    app_sandbox_root_link();
     return;
   }
   let m = await import("./app_sandbox_previews_list.mjs");
