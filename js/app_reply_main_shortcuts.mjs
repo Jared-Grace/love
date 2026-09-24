@@ -17,7 +17,7 @@ export function app_reply_main_shortcuts(
   languages_chosen,
   languages,
   update,
-  buttons_languages,
+  languages_chooser,
   buttons_responses,
 ) {
   "Lays out the shortcut buttons of the reply screen. A shortcut is a saved choice of which languages to reply in and how many verses to send, kept under a short name, so a reply that gets written over and over is one press instead of the same set of choices made again every time.";
@@ -93,7 +93,7 @@ export function app_reply_main_shortcuts(
       languages_chosen,
       languages,
       update,
-      buttons_languages,
+      buttons_languages: languages_chooser,
       buttons_responses,
       root,
     });

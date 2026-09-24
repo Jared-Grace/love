@@ -11,7 +11,7 @@ export function app_reply_main_shortcuts_shortcut_each(
     languages_chosen,
     languages,
     update,
-    buttons_languages,
+    buttons_languages: languages_chooser,
     buttons_responses,
     root,
   },
@@ -24,7 +24,7 @@ export function app_reply_main_shortcuts_shortcut_each(
   async function lambda5() {
     app_reply_languages_chosen_reset(languages_chosen, languages2, languages);
     await update(count);
-    property_get_invoke(buttons_languages, "update");
+    property_get_invoke(languages_chooser, "update");
     function lambda7(r) {
       let b = list_find_property(buttons_responses, "text", r);
       property_get_invoke(b, "click");
