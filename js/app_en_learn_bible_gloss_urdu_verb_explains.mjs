@@ -4,6 +4,7 @@ export function app_en_learn_bible_gloss_urdu_verb_explains() {
   "So each wording says which verb the form belongs to, which time it stands for, and who it goes with - one, or more than one. That is the whole of what tells the forms apart, and it is what a reader needs in order to recognise the next one they meet rather than looking it up again.";
   "Measured over the store before these were written, one word had eight different sentences written for it in different places, all saying the same thing in different words, and ‘will’ had thirteen. Nothing was wrong with any of them; what was wrong was that a reader meeting the word twice met two strangers. A settled wording is worth more here than anywhere else in the store, because these are the words met most often.";
   "A wording says only what is true of the word everywhere it stands. It does not say whether this occurrence is helping another verb or standing on its own as the whole of the verb, because ‘is’ does both and nothing about the word decides which. A sentence that settled that would be right in most places and quietly wrong in the rest.";
+  "Five of these wordings were mended after the store was read back by word rather than by wording. ‘have’ said that it also helps other verbs and never said what the help does; ‘has’, ‘had’, ‘does’ and ‘did’ did not mention the helping at all, which left the commonest use of the commonest verbs in English out of the settled wording entirely. The store had already worked it out: four hundred and three entries across the three forms of ‘have’ say, in their own words, that the form does not tell the action by itself and joined to the next verb says the work is already done, against thirty-four, twenty-three and five entries carrying what the table said. Fifty-eight more do the same for ‘does’ and ‘did’ against one and none. The rule in the paragraph above is what the mend obeys: the wording says the form can help another verb and refuses to say whether it is helping here.";
   "A form written with a capital letter is written down beside its small-letter twin where the store holds one, and the two say the same thing. A capital on a verb has only one cause - the word opens its sentence - so unlike a name or a noun there is nothing extra for the capitalised entry to tell the reader.";
   let r = {
     be: "فعل ہے: ہونا۔ یہ 'be' کی بُنیادی شکل ہے، اَور اِس کی باقی شکلیں بےقاعدہ ہیں: be → was → been۔",
@@ -27,14 +28,14 @@ export function app_en_learn_bible_gloss_urdu_verb_explains() {
       "مدد کرنے والا فعل ہے، جو 'will' کی طرح آنے والے وقت کو بتاتا ہے، مگر کم اِستعمال ہوتا ہے۔",
     would:
       "مدد کرنے والا فعل ہے۔ یہ 'will' کی گُزرے ہوئے وقت والی شکل ہے، اَور اُس بات کے لیٔے بھی آتا ہے جو ہو سکتی تھی۔",
-    have: "فعل ہے: رکھنا، پاس ہونا۔ یہ دُوسرے فعلوں کی مدد بھی کرتا ہے۔",
-    has: "فعل 'have' کی وہ شکل ہے جو اِس وقت کے لیٔے، ایک کے ساتھ آتی ہے۔",
-    had: "فعل 'have' کی وہ شکل ہے جو گُزرے ہوئے وقت کے لیٔے آتی ہے۔ یہ بےقاعدہ ہے: have → had → had۔",
+    have: "فعل ہے: رکھنا، پاس ہونا۔ یہ دُوسرے فعلوں کی مدد بھی کرتا ہے: اگلے فعل کے ساتھ مِل کر بتاتا ہے کہ کام پہلے ہی ہو چُکا ہے۔",
+    has: "فعل 'have' کی وہ شکل ہے جو اِس وقت کے لیٔے، ایک کے ساتھ آتی ہے۔ یہ دُوسرے فعلوں کی مدد بھی کرتی ہے: اگلے فعل کے ساتھ مِل کر بتاتی ہے کہ کام پہلے ہی ہو چُکا ہے۔",
+    had: "فعل 'have' کی وہ شکل ہے جو گُزرے ہوئے وقت کے لیٔے آتی ہے۔ یہ بےقاعدہ ہے: have → had → had۔ یہ دُوسرے فعلوں کی مدد بھی کرتی ہے: اگلے فعل کے ساتھ مِل کر بتاتی ہے کہ کام پہلے ہی ہو چُکا تھا۔",
     having: "فعل 'have' کی وہ شکل ہے جو چلتے ہوئے کام کے لیٔے آتی ہے۔",
     do: "فعل ہے: کرنا۔ یہ سوال بنانے اَور اِنکار کرنے میں دُوسرے فعلوں کی مدد بھی کرتا ہے۔",
     Do: "فعل ہے: کرنا۔ یہ سوال بنانے اَور اِنکار کرنے میں دُوسرے فعلوں کی مدد بھی کرتا ہے۔",
-    does: "فعل 'do' کی وہ شکل ہے جو اِس وقت کے لیٔے، ایک کے ساتھ آتی ہے۔",
-    did: "فعل 'do' کی وہ شکل ہے جو گُزرے ہوئے وقت کے لیٔے آتی ہے۔ یہ بےقاعدہ ہے: do → did → done۔",
+    does: "فعل 'do' کی وہ شکل ہے جو اِس وقت کے لیٔے، ایک کے ساتھ آتی ہے۔ یہ سوال بنانے اَور اِنکار کرنے میں دُوسرے فعلوں کی مدد بھی کرتی ہے۔",
+    did: "فعل 'do' کی وہ شکل ہے جو گُزرے ہوئے وقت کے لیٔے آتی ہے۔ یہ بےقاعدہ ہے: do → did → done۔ یہ سوال بنانے اَور اِنکار کرنے میں دُوسرے فعلوں کی مدد بھی کرتی ہے۔",
     done: "فعل 'do' کی وہ شکل ہے جو 'have'، 'has' یا 'had' کے پِیچھے آتی ہے۔",
     can: "مدد کرنے والا فعل ہے۔ یہ بتاتا ہے کہ کویٔی کام ہو سکتا ہے: سکتا ہے۔",
     could:
