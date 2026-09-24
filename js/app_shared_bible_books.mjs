@@ -1,3 +1,4 @@
+import { app_shared_screen_set_write } from "./app_shared_screen_set_write.mjs";
 import { app_shared_bible_index_flat_offered } from "./app_shared_bible_index_flat_offered.mjs";
 import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
 import { ebible_languages_to_bible_folders } from "./ebible_languages_to_bible_folders.mjs";
@@ -9,7 +10,6 @@ import { app_shared_bible_screen_content } from "./app_shared_bible_screen_conte
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { app_shared_bible_chapter_set } from "./app_shared_bible_chapter_set.mjs";
 import { app_shared_bible_chapters } from "./app_shared_bible_chapters.mjs";
-import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_bible_books_search_render } from "./app_shared_bible_books_search_render.mjs";
 export async function app_shared_bible_books(context) {
@@ -34,7 +34,11 @@ export async function app_shared_bible_books(context) {
     function write() {
       app_shared_bible_chapter_set(chapter_code);
     }
-    await app_shared_screen_set_write(context, app_shared_bible_chapters, write);
+    await app_shared_screen_set_write(
+      context,
+      app_shared_bible_chapters,
+      write,
+    );
   }
   app_shared_bible_books_search_render(
     content,
