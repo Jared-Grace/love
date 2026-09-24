@@ -24,6 +24,8 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
   "The 'ing' forms are written under their own keys for the same reason the 's' forms are, and they were the largest single block the store was holding: fifty spellings carrying one shared label between them, a label which said only that the word is a verb and that this is the going-on form. That is true and it is not enough, because it never says which verb, and a reader who cannot walk back from 'ministering' to 'minister' is left exactly where they started.";
   "The sentence deliberately does not say that an 'ing' form never stands on its own. In ordinary English it usually leans on 'is' or 'was', but the Bible is full of bare clauses - '…saying, Peace be to you' - and a reader told the form always needs a helper would meet that on the very next line and be wrong. So the sentence says what the form is for and stops there.";
   "Where the spelling changed on the way from the verb, the change is named, because that is the thing a reader cannot see. 'come' loses its 'e' to make 'coming' and 'sit' doubles its last letter to make 'sitting', and a beginner looking for 'sitt' in a dictionary will not find it. Which of the two happened is worked out from the pair itself rather than listed by hand, so a form added later cannot be given the wrong reason.";
+  "The regular 'ed' forms are written out for the same reason the irregular pasts are, and the store's own labels are what asked for it. Two different labels were sitting on these words - one calling the word a past form and one calling it the form that comes after 'have' - and for a regular verb those are the same spelling, so a reader met the same word twice and was told two half things about it. One sentence says both jobs and names the verb, which neither label did.";
+  "Four of them are written here while their plain spelling belongs to the noun table: 'name', 'promise', 'hand' and 'end' are nouns first in this store and are left there, so only the 'ed' spelling is written here and the Urdu for the verb is kept beside it. That is not a workaround. English really does use those words both ways, and the reader meeting 'handed' needs the verb, not the part of the body.";
   let meaning = {
     say: "کہنا",
     tell: "بتانا",
@@ -106,6 +108,36 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
     drive: "نِکالنا",
     find: "ڈھُونڈ نِکالنا",
     write: "لِکھنا",
+    baptize: "بپتِسمہ دینا",
+    fill: "بھر دینا",
+    prepare: "تیّار کرنا",
+    marry: "شادی کرنا",
+    astonish: "حَیران کرنا",
+    finish: "ختم کرنا",
+    work: "کام کرنا",
+  };
+  let ed_only_meaning = {
+    name: "نام رکھنا",
+    promise: "وعدہ کرنا",
+    hand: "سَونپنا",
+    end: "ختم ہونا",
+  };
+  let ed_forms = {
+    baptized: "baptize",
+    filled: "fill",
+    happened: "happen",
+    received: "receive",
+    named: "name",
+    opened: "open",
+    prepared: "prepare",
+    promised: "promise",
+    stayed: "stay",
+    handed: "hand",
+    married: "marry",
+    astonished: "astonish",
+    finished: "finish",
+    worked: "work",
+    ended: "end",
   };
   let irregular = {
     say: ["said", "said"],
@@ -320,6 +352,56 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
   }
   let ing_spellings = object_property_names(ing_forms);
   list_map(ing_spellings, ing_form_write);
+  function ed_meaning_read(word) {
+    let urdu = property_get_or_null(meaning, word);
+    let missing = null_is(urdu);
+    if (missing) {
+      let other = property_get(ed_only_meaning, word);
+      return other;
+    }
+    return urdu;
+  }
+  function ed_spelling_read(spelled, word) {
+    let ends_e = text_ends_with(word, "e");
+    if (ends_e) {
+      let short = word + "d";
+      let only_d = equal(spelled, short);
+      if (only_d) {
+        let said =
+          " اِس کی بُنیادی شکل '" +
+          word +
+          "' کے آخِر میں پہلے ہی 'e' ہے، اِس لیٔے صِرف 'd' لگا ہے۔";
+        return said;
+      }
+    }
+    let ends_y = text_ends_with(word, "y");
+    if (ends_y) {
+      let changed = text_suffix_without_try(word, "y") + "ied";
+      let y_gone = equal(spelled, changed);
+      if (y_gone) {
+        let said =
+          " لِکھتے وقت '" + word + "' کا آخِری 'y' بدل کر 'i' ہو گیا ہے۔";
+        return said;
+      }
+    }
+    let plain = "";
+    return plain;
+  }
+  function ed_form_write(spelled) {
+    let word = property_get(ed_forms, spelled);
+    let urdu = ed_meaning_read(word);
+    let whole =
+      "فعل '" +
+      word +
+      "' یعنی '" +
+      urdu +
+      "' کی گُزرے ہوئے زمانے کی شکل ہے۔ یہ فعل باقاعدہ ہے، یعنی اِس کے آخِر میں 'ed' لگتا ہے۔" +
+      ed_spelling_read(spelled, word) +
+      " یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے۔";
+    property_set(r, spelled, whole);
+  }
+  let ed_spellings = object_property_names(ed_forms);
+  list_map(ed_spellings, ed_form_write);
   function capital_write(spelled) {
     let word = property_get(capitals, spelled);
     let said = property_get(r, word);
