@@ -51,6 +51,11 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
   "Two more are refused and stay refused, both for reasons already written above rather than new ones. ‘The same small word that makes the next verb's base form’ opens with ‘the same’, which points at an earlier place in the verse and means nothing where it would be moved to. ‘...here it gives the purpose’ ends with ‘here’, which is a claim about the verse and not about the word. A sentence that cannot be moved is not a label whatever else it is, and that test has now rejected more candidates than the word-for-word one.";
   "Three more, and the third of them was the fourth refusal to turn out to be a complaint about the table. ‘It is a pronoun and comes for the speaker and their companions’ over ‘we’ and ‘us’, and ‘it shows possession and belongs to whoever is being spoken to’ over ‘your’, went straight in: both say a strict part of what their settled wordings say and neither says where in the sentence the word stands, which is the half the settled wordings add. The third named something no settled wording had ever said - that Urdu writes no separate word for ‘the’ - and that is the single most useful sentence about an English article an Urdu reader can be handed. It went into the table rather than being lost, and all three articles were widened in the same commit.";
   "Reading the candidates this way round is what found all four. The earlier batches were read label first: here is a sentence, may it be replaced. This one was read word first - take the words that have a settled wording, count the sentences the store hands them instead, and look at the largest. Same admission test, same answers where they overlap, but the ordering puts the thing worth a thousand entries at the top of the page instead of somewhere in a list of a hundred and eighty-six.";
+  "Twenty one more came from the same word-first reading run again, and they are worth eleven hundred and twenty two entries between them - the largest batch this list has taken. Nothing about the method changed. What changed is that the articles, 'to' and the retired wordings had all been mended in between, so the reading came back with a different page of candidates rather than the same one.";
+  "Seven of the twenty one are admitted by the exception this note keeps meeting, and they are collected here rather than argued one at a time, because it is the same argument seven times. 'A pronoun, and it is the form that comes after a verb' stands over 'him' and 'them', and both of those come after a preposition as readily as after a verb, so the label's one extra claim is wrong wherever it is; the settled wordings say the same thing by role instead of by position and say it truly. 'Object pronoun, inanimate' over 'it' names a case the word does not keep - 'it' is a subject as often as an object. 'It shows possession and belongs to those being spoken to' over 'your' says more than one where the word is usually one. 'This word comes for one person' over 'one' says person where the settled wording says number, and the store counts things with it. 'Relative' over 'that' is the fifth label that word has blocked and the first it has not - 'that' does three jobs, so calling every one of them relative is false for two of them. And 'the first letter is capital because the verse starts here', over 'Then' and 'They', gives the reason as the verse where the settled wording gives it as the sentence, which is the true and portable form of the same fact.";
+  "One of the twenty one carries a plainly wrong sentence in a single place, and it is kept for that one place rather than in spite of it. 'This small word shows a relation: whose' stands over 'of' forty eight times and over 'to' once, and 'to' does not mean whose. A label reaching one entry is not worth listing on its own; this one is listed because it reaches forty nine, and the forty ninth is a repair.";
+  "Refused this round, and all of them for reasons already written above: 'it is the same article as came above', two hundred and sixty nine entries and the largest single candidate in the store, refused because a sentence pointing up the page cannot be moved; the whole family ending 'Urdu has not written it here', in every spelling it wears; 'a verb of past time, and with the next word it tells of an ongoing action' over 'was' and 'were', which is a claim about what follows it in the line; and every label giving a capital's reason as the Lord, which stays refused for the eleven words named far above and will stay refused.";
+  "Twelve of the eleven hundred and thirty four entries under these twenty one are not reached, and they are named here so the gap is not mistaken for a mend. 'mine', 'what' and 'Later' carry three of these labels and have no settled wording of their own, so nothing is written over them. That is the ordinary shape of this list - a licence over a word nobody has written for changes nothing - and those three words are work owed rather than work done.";
   let labels = [
     "معرفہ حرفِ تعریف۔",
     "نکرہ حرفِ تعریف۔",
@@ -254,6 +259,27 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
     "ضمیر ہے اَور بولنے والے اَور اُس کے ساتھیوں کے لیٔے آتا ہے۔",
     "یہ لفظ مِلکیّت بتاتا ہے اَور جِس سے بات ہو رہی ہو، اُس کی ہے۔",
     "یہ اِسم سے پہلے آتا ہے — اِسم یعنی کِسی چیز، شخص یا جگہ کا نام — اَور بتاتا ہے کہ بات کِسی معلوم چیز کی ہو رہی ہے۔ اُردو ترجمہ میں اِس کے لیٔے الگ لفظ نہیں لِکھا جاتا۔",
+    "یہ اِسم سے پہلے آتا ہے اَور بتاتا ہے کہ بات کِسی معلوم چیز کی ہو رہی ہے۔ اُردو ترجمہ میں اِس کے لیٔے الگ لفظ نہیں لِکھا جاتا۔",
+    "حرفِ تعریف ہے۔ اُردُو نے اِسے الگ سے نہیں لِکھا۔",
+    "ضمیر ہے اَور کِسی مرد کے لیٔے آتا ہے، اَور یہ وہ شکل ہے جو فعل کے بعد آتی ہے۔",
+    "یہ لفظ مِلکیّت بتاتا ہے اَور بولنے والے کی ہے۔",
+    "ضمیر ہے اَور یہ وہ شکل ہے جو فعل کے بعد آتی ہے، اَور ایک سے زیادہ کے لیٔے آیا ہے۔",
+    "یہ لفظ مِلکیّت بتاتا ہے اَور جِن سے بات ہو رہی ہو، اُن کی ہے۔",
+    "ضمیرِ مفعُول، غَیر جاندار۔",
+    "یہ چھوٹا لفظ تعلُّق بتاتا ہے: کِس کا۔",
+    "موصُول۔",
+    "یہ لفظ کِسی ایک شخص کے لیٔے آتا ہے۔",
+    "حرفِ شرط۔",
+    "یہ چھوٹا لفظ دو باتوں کو جوڑتا ہے اَور شرط بتاتا ہے۔",
+    "یہ لفظ اُس جگہ کو بتاتا ہے۔",
+    "یہ لفظ اگلی بات کو پہلی سے جوڑتا ہے اَور جگہ بتاتا ہے۔",
+    "نام کا لفظ ہے اَور ایک سے زیادہ کے لیٔے آیا ہے، اَور مردوں کو بتاتا ہے۔",
+    "نام کا لفظ ہے اَور ایک سے زیادہ کے لیٔے آیا ہے، اَور لوگوں کو بتاتا ہے۔",
+    "فعل ہے اَور گُزرے ہوئے زمانے کا ہے، اَور جانے کو بتاتا ہے۔",
+    "فعل ہے اَور گُزرے ہوئے زمانے کا ہے، اَور آنے کو بتاتا ہے۔",
+    "یہ لفظ بتاتا ہے کہ بات اِس کے بعد والی ہے۔ پہلا حرف بڑا ہے کیونکہ یہاں سے آیت شروع ہو رہی ہے۔",
+    "ضمیر ہے اَور ایک سے زیادہ کے لیٔے آیا ہے۔ پہلا حرف بڑا ہے کیونکہ یہاں سے آیت شروع ہو رہی ہے۔",
+    "یہ چھوٹا لفظ بتاتا ہے کہ بات کِس کی طرف ہے: کی طرف۔",
   ];
   return labels;
 }
