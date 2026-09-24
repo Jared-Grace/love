@@ -39,6 +39,9 @@ export function app_en_learn_bible_gloss_urdu_superseded_explains() {
   "THE THIRD CANDIDATE COULD NOT BE CORRECTED AT ALL, AND WHY NOT IS WORTH MORE THAN THE CORRECTION WOULD HAVE BEEN. 'priests' was carrying a true fact the table drops - that 'ie' here is said as a long 'ee' - the same family as the silent 'w' of 'who' that was kept a round earlier. But the plural noun table does not write its sentences; it builds each one from the Urdu word and the singular by a template with three endings and no room for anything else, and the singular 'priest' has no entry anywhere. So the fact has no home without giving that template a fourth kind of thing to say, which is a change to a settled design rather than a wording. It was left alone and written down here instead, because a candidate refused for a reason is a finding and a candidate silently dropped is a hole.";
   "THAT ROUND THEN HAD TO BE RUN A SECOND TIME, BECAUSE THE LIST IT RETIRED FROM WAS NOT THE STORE. The census it read ranks wordings that occur more than once, so a wording sitting in one chapter is invisible to it, and three of the 'than' sentences it did name were spelled a shade differently from anything the store actually holds. The sweep rewrote eighty seven entries and left thirty two behind - two of the commonest spellings among them, at seven sightings each - and nothing said so, because a sweep that finds nothing and a sweep that finds everything report the same way. Reading the store itself for the word 'than' listed all twenty wordings in one line of output, exact and complete.";
   "So a retirement is written from the store, and the census is only for deciding which word to spend the round on. The wordings below that end in a comparison term rather than in the ordinary word for it - 'تُقابل' where another says 'سے' - are the same sentence in a different hand, and the reason there are so many of them is that each chapter was written on its own day.";
+  "THE ROUND AFTER THAT WAS 'that', AND IT WAS THE FIRST ONE WRITTEN FROM A READING BUILT FOR THE PURPOSE. Asking the store what it has written under that one word answers nineteen hundred and thirty seven entries over nine hundred and fifty eight distinct sentences, where the census had said twelve hundred and sixty seven over a hundred and forty four. The settled wording accounts for three hundred and ninety six of them. Seven hundred and seventy four of the sentences are written exactly once, which is four fifths of them and two fifths of the entries, and no ranking keyed by wording will ever show one of those at all. Thirteen sentences carry five hundred and eighty six entries between them, so the round is decided in a head small enough to read and the tail is left where it is.";
+  "Forty five of them were retired, three hundred and twenty three entries, and every one says one of the three jobs the settled wording already gives: it points at a far thing, it joins the next statement to the first, it ties a whole statement to the verb. Some say it in grammarians' words - 'اِسمِ اِشارہ برائے بعید', 'موصُول: جو' - and some say it in a whole plain sentence, and the reason there are forty five of them rather than three is that each chapter was written on its own day and nobody was copying yesterday's page.";
+  "WHAT WAS REFUSED MATTERS MORE HERE THAN WHAT WAS TAKEN, BECAUSE THE BIGGEST REFUSAL WAS ARGUABLE. About sixty five entries teach 'so that' - that the two words together mean 'تاکہ' and give a purpose - and the table says nothing of it. The round before this one would have corrected the table and then retired them, and that was weighed and turned down: the table entry is for the word 'that' on its own, and 'so that' is a different unit of meaning that happens to end in it, so writing it into this word's sentence would teach a beginner that one word carries a meaning it only has in company. If it deserves a settled wording it deserves its own. Kept for the same reason, each saying something the table does not: that the plural of this word is 'those' and the pair is irregular; that 'th' here is one sound rather than two, the same lookalike family the last two rounds kept; that the word can give a result or a purpose rather than only join; that it is singular. And kept for the older reason, that they are about the verse and not about the word: every sentence saying what Urdu wrote in this place or did not write at all, and every one pointing back at the same word in a numbered verse above.";
   let retired = [
     [
       "be",
@@ -971,6 +974,69 @@ export function app_en_learn_bible_gloss_urdu_superseded_explains() {
     ],
     ["me", "ضمیرِ مفعُول، واحد مُتکلِّم۔"],
     ["me", "یہ 'I' کی مفعولی صُورت ہے۔"],
+    ["that", "یہ چھوٹا لفظ دو باتوں کو جوڑتا ہے۔"],
+    ["that", "یہ لفظ اِشارہ کرتا ہے اَور دُور کی چیز کو بتاتا ہے۔"],
+    [
+      "that",
+      "یہ چھوٹا لفظ دو حِصّوں کو جوڑتا ہے اَور بتاتا ہے کہ آگے کیا کہا جا رہا ہے۔",
+    ],
+    ["that", "اِشارہ: دُور کی چِیز۔"],
+    ["that", "حرفِ ربط: جُملہ جوڑتا ہے۔"],
+    ["that", "یہ لفظ اِشارہ کرتا ہے اَور دُور کی چیز کے لیٔے آتا ہے۔"],
+    ["that", "حرفِ ربط: کہ۔"],
+    [
+      "that",
+      "یہ چھوٹا لفظ دو باتوں کو جوڑتا ہے اَور اگلی بات کو پہلی کے ساتھ لگاتا ہے۔",
+    ],
+    ["that", "حرفِ ربط: یہ کہ۔"],
+    ["that", "موصُول: جو۔"],
+    ["that", "اِشارہ: دُور کی چِیز کے لیے۔"],
+    ["that", "یہ لفظ اگلی بات کو پِچھلی بات کے ساتھ جوڑتا ہے: کہ۔"],
+    ["that", "یہ لفظ پیچھے کِسی چیز کی طرف اشارہ کرتا ہے: جو۔"],
+    ["that", "یہ چھوٹا لفظ اگلی پُوری بات کو پہلی سے جوڑتا ہے۔"],
+    ["that", "حرفِ ربط: جوڑنے والا لفظ۔"],
+    ["that", "جُملہ جوڑنے والا that۔"],
+    [
+      "that",
+      "جوڑنے والا لفظ ہے اَور ایسا حِصّہ کھولتا ہے جو پچھلے نام کے بارے میں مزید بتاتا ہے۔",
+    ],
+    ["that", "اِشارہ دُور کے لیٔے۔"],
+    ["that", "یہ لفظ کِسی دُور کی چیز کی طرف اشارہ کرتا ہے: وہ۔"],
+    [
+      "that",
+      "یہ چھوٹا لفظ اِسم کے بعد آ کر اُس کے بارے میں مزید بتاتا ہے: جو۔",
+    ],
+    ["that", "وُہی چھوٹا لفظ ہے جو دو باتوں کو جوڑتا ہے۔"],
+    ["that", "ضمیر ہے۔ مطلب ہے جو۔"],
+    ["that", "یہ لفظ اُس بات کی طرف اِشارہ کرتا ہے جو اَبھی کہی گیٔی۔"],
+    ["that", "یہ لفظ ایک حِصّہ کھولتا ہے جو اُس چیز کے بارے میں بتاتا ہے۔"],
+    ["that", "اِسمِ اِشارہ برائے بعید۔"],
+    [
+      "that",
+      "یہ چھوٹا لفظ دو باتوں کو جوڑتا ہے اَور اگلی بات کو پہلی کے ساتھ لاتا ہے۔",
+    ],
+    ["that", "یہ لفظ اِشارہ کرتا ہے کِسی دُور والی چیز کی طرف۔"],
+    ["that", "یہ لفظ اگلی بات کو جوڑتا ہے: کہ۔"],
+    ["that", "یہ لفظ ایک حِصّہ کھولتا ہے جو پچھلے اِسم کے بارے میں بتاتا ہے۔"],
+    ["that", "حرفِ ربط: بات جوڑتا ہے۔"],
+    ["that", "یہ لفظ اِشارہ کرتا ہے اَور دُور والی بات کے لیٔے آتا ہے۔"],
+    ["that", "یہ لفظ اِشارہ کرتا ہے اَور دُور والے کے لیٔے آتا ہے۔"],
+    ["that", "یہ لفظ اِشارہ کرتا ہے اَور دُور والی چیز کے لیٔے آتا ہے۔"],
+    ["that", "یہ لفظ اِشارہ کرتا ہے کِسی چیز کی طرف۔"],
+    ["that", "یہ لفظ اِشارہ کرتا ہے اَور ایک کے لیٔے آیا ہے۔"],
+    ["that", "جوڑنے والا لفظ ہے اَور اگلی بات کو پچھلی سے جوڑتا ہے۔"],
+    [
+      "that",
+      "یہ چھوٹا لفظ دو باتوں کو جوڑتا ہے اَور بتاتا ہے کہ آگے کیا جانا ہے۔",
+    ],
+    ["that", "ضمیر ہے۔ یہاں 'جو' کا کام کرتا ہے۔"],
+    ["that", "جوڑنے والا لفظ ہے۔ اگلی بات کو جوڑتا ہے۔"],
+    ["that", "یہ لفظ ایک حِصّہ کھولتا ہے جو کِسی چیز کے بارے میں بتاتا ہے۔"],
+    ["that", "جوڑنے والا لفظ ہے اَور اُس بات کو کھولتا ہے جو کہی جا رہی ہے۔"],
+    ["that", "حرفِ ربط: یہ بات کہ۔"],
+    ["that", "حرفِ ربط: جُملہ جوڑنے والا۔"],
+    ["that", "موصُول: جِس کو۔"],
+    ["that", "اِشارہ: وہ۔"],
   ];
   let reverent = app_en_learn_bible_gloss_urdu_reverent_words();
   let tail = app_en_learn_bible_gloss_urdu_capital_tail();
