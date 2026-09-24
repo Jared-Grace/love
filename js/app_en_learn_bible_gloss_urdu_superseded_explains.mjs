@@ -30,6 +30,9 @@ export function app_en_learn_bible_gloss_urdu_superseded_explains() {
   "THE TWENTY ENTRIES AFTER THAT WERE JUDGED, NOT FOUND, AND THE DIFFERENCE MATTERS MORE THAN THE COUNT. Once the prefix test reported nothing, what was left for the four commonest forms of 'be' was 'is' carrying eight hundred and seventeen different wordings, 'are' five hundred and fifty three, 'was' five hundred and forty eight, 'were' three hundred and nine. No test decides those. A wording that is merely shorter can be a good gloss of this verse, so each one had to be read against the sentence its table writes today and asked one question: does it say anything that sentence does not?";
   "Twenty said nothing extra and are here. They are restatements of the form - 'be کا حال، واحد غائب۔', 'be کی جمع صُورت۔', 'فعلِ اِمدادی be کی واحد صُورت۔' - which name the tense and the number in grammarians' words and stop. The settled sentence names the tense and the number too, in ordinary words, and then says why the form exists and what Urdu puts there. Nothing is lost by the swap and a reader who does not know 'واحد غائب' gains everything.";
   "What was kept is the better half of the record. Three kinds of wording stayed where they were. One says the word is working with the next word to mark a continuing action, which is true of that verse and is not in the table's sentence. One says the same about the passive - that the action was done to somebody - and the table for 'was' and 'were' does not mention the passive at all. One glosses the word 'فعل' itself, in the middle of the sentence, for a reader who does not yet know what a verb is; that family was refused once before, deliberately, and is refused again here. For 'was', five of the eight wordings read were kept and three retired. A round that retires everything it looks at was not reading.";
+  "THE ROUND AFTER THAT BEGAN BY FINDING THE TABLE WRONG, WHICH EVERY ROUND BEFORE IT HAD ASSUMED COULD NOT HAPPEN. Retiring a wording is only safe if the sentence replacing it says everything the old one said, so each round had read the store against the table and asked what the store added. Reading 'heard' the other way round - what does the table say that the store does not - showed the table saying something false. It said English usually adds '-ed' but that in a few old verbs the word itself changes, 'hear' to 'heard'. Nothing changed. The spelling adds a plain 'd'; it is the sound that moves, and a store wording nobody had touched said exactly that, better than the sentence that had replaced it.";
+  "One template wrote it for every irregular verb alike, so the fault was wherever a verb is irregular and one of its forms is still spelled the ordinary way. There are two: 'hear' makes 'heard' with a bare 'd', and 'sow' makes 'sowed' with a plain '-ed' before going on to 'sown'. Six live sentences said something untrue about them, including one that told a reader no '-ed' had been added while printing a word with '-ed' on the end of it. The table now asks which of the three things is true of the form in front of it - the word changed, or only the sound changed, or nothing changed and this form is regular - and the line about having to memorise the verb is written only where there is something to memorise.";
+  "Four wordings are retired here for that reason rather than for being thin, and they are the first in this list that the prefix test could never have found. A corrected sentence is not the old one with a clause appended; it is the old one with a clause replaced, so the two diverge in the middle and neither begins the other. They had to be asked for by word, by searching the store for the two sentences the table has stopped writing. That is the shape of every repair after a table is corrected, and it is worth knowing that the cheap test does not cover it.";
   let retired = [
     [
       "be",
@@ -460,6 +463,46 @@ export function app_en_learn_bible_gloss_urdu_superseded_explains() {
     [
       "wrote",
       "فعل 'write' یعنی 'لِکھنا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً فعل کے آخر میں '-ed' لگا کر ماضی بنایا جاتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'write' سے 'wrote'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
+    ],
+    [
+      "hear",
+      "فعل 'hear' یعنی 'سُننا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔ یہ فعل بےقاعدہ ہے: 'hear' سے 'heard' اَور 'heard' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "heard",
+      "فعل 'hear' یعنی 'سُننا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'hear' سے 'heard'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔ یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے: 'have' کے ساتھ آ کر یہ بتاتی ہے کہ کام ہو چُکا ہے، اَور 'be' کے ساتھ آ کر یہ بتاتی ہے کہ کام اُس پر کیا گیا۔",
+    ],
+    [
+      "hearing",
+      "فعل 'hear' یعنی 'سُننا' کی وہ شکل ہے جو کام کے چلتے رہنے کو بتاتی ہے: آخِر میں 'ing' لگا ہے۔ یہ فعل بےقاعدہ ہے: 'hear' سے 'heard' اَور 'heard' بنتا ہے، 'ed' لگا کر نہیں۔",
+    ],
+    [
+      "heard",
+      "فعل 'hear' یعنی 'سُننا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ لِکھنے میں یہ '-d' لگا ہُوا لگتا ہے، مگر بولنے میں 'hear' اَور 'heard' کی آواز بدل جاتی ہے، اِس لیٔے یہ بے قاعدہ فعلوں میں گِنا جاتا ہے۔",
+    ],
+    [
+      "there",
+      "یہ لفظ اگلے فعل کے ساتھ مِل کر بتاتا ہے کہ کویٔی چیز ہے یا نہیں۔",
+    ],
+    ["there", "ظرفِ مکان۔ their (اُن کا) سے ہم آواز مگر مُختلِف۔"],
+    [
+      "there",
+      "یہ لفظ اگلے فعل کے ساتھ مِل کر بتاتا ہے کہ کویٔی چیز مَوجُود ہے۔",
+    ],
+    ["there", "یہ لفظ جگہ بتاتا ہے۔"],
+    ["there", "یہ لفظ جگہ بتاتا ہے: وہاں۔"],
+    ["there", "ظرفِ مکان۔"],
+    ["who", "ضمیر ہے: 'جو'۔"],
+    ["who", "یہ لفظ ایک حِصّہ کھولتا ہے جو کِسی شخص کے بارے میں بتاتا ہے۔"],
+    ["who", "یہ لفظ کِسی شخص کے بارے میں مزید بات جوڑتا ہے: جو۔"],
+    [
+      "heard",
+      "فعل ہے اَور گُزرے ہوئے زمانے کا ہے، اَور کان سے سُننے کو بتاتا ہے۔",
+    ],
+    ["heard", "فعل ہے اَور گُزرے ہوئے زمانے کا ہے، اَور سُننے کو بتاتا ہے۔"],
+    [
+      "heard",
+      "یہ فعل 'hear' یعنی 'سُننا' کی ماضی کی صُورت ہے، اَور یہ بے قاعدہ ہے۔",
     ],
     ["is", "مدد کرنے والا فعل ہے: 'ہے'۔"],
     ["is", "be کا حال، واحد غائب۔"],
