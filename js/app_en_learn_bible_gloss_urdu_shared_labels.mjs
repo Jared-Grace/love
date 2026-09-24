@@ -60,6 +60,13 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
   "Four of the thirty two are admitted by the false-claim exception and none of them needs its own paragraph. 'Possessive pronoun' over 'his' and over 'their' calls a word a pronoun that stands in front of a name rather than in place of one, which this note has refused to let a reader keep twice already. 'Subject pronoun, inanimate' and 'object pronoun, non-human' both stand over 'it', which is neither only a subject nor only an object. And 'a pronoun, and it is the form that comes after a preposition', over 'me' and 'them', is the same positional claim admitted a batch ago in its after-a-verb spelling: both halves of the pair are wrong half the time, and the settled wordings say the thing by role instead.";
   "One of the thirty two is the old article wording wearing a capital sentence nobody had listed. 'The first letter is capital because the spoken words start here' is not the sentence the table derives - that one says the word stands at the start of its sentence - so retiring the article wording did not reach it and the superseded list could not have. It is here as a label instead, which is the cheaper of the two repairs and the only one that works for a capital clause the table never wrote.";
   "'Jesus' is refused this round and the refusal is the fifth of its kind, so it is written down rather than rediscovered. 'It is a name: Jesus. The first letter is capital because names are written with a capital' says the name in Urdu, and the settled wording for 'Jesus' does not - it says whose good news this book tells and leaves the name itself unspelled. Four hundred and eleven further entries carry a longer sentence that opens with the name and then says exactly what the settled wording says, which is the shape of a settled wording that was narrowed rather than of a label that was thin. The table is the thing to look at, not the list.";
+  "THE 'JESUS' REFUSAL ABOVE WAS RIGHT ABOUT WHERE TO LOOK AND WRONG ABOUT WHAT WAS THERE, AND BOTH HALVES ARE WORTH KEEPING. It said the four hundred and eleven entries had the shape of a settled wording that was narrowed, and they had: the name table was told on one day to stop spelling the name inside the wording, and the wording it replaced was never written into the retired list, so four hundred and twelve entries were left holding a sentence nothing could reach. They were mended by the retired list, not by this one. What it got wrong was the thirty one: it read the settled wording's silence about the name as thinness, and the table says in its own prose that the silence is deliberate, because our spelling of the name is already standing beside the wording in the short Urdu written for the word. So the label saying the name says nothing the line does not already say, and it is admitted here.";
+  "That fault is the one this note is most likely to repeat, so it gets its own name: a settled wording can be silent about something on purpose, and silence reads exactly like thinness. The only way to tell them apart is to open the table and read what its author wrote about it, which costs one read and was skipped. A written refusal has now been a finder five times; this is the first time the thing it found was an argument against itself.";
+  "A POINTER IS ADMITTED FROM THIS ROUND ON, WHICH OVERTURNS THE REFUSAL WRITTEN TWO PARAGRAPHS ABOVE. 'It is the same article as came above', two hundred and sixty nine entries, was refused for being a sentence that points up the page and so cannot be moved. Moving it was never what admitting does: admitting writes the settled wording over it, and the question is only whether anything is lost. What is lost is the back-pointer, and the name table has already ruled on what a back-pointer is worth - it calls it the worst of the shared wordings, because the entry it points at is often another pointer, and that table was enlarged for the sole purpose of replacing them. A reader who meets the pointer has to go hunting up the passage to learn what the word does; a reader who meets the settled wording is told what it does, there, every time.";
+  "Five pointers come in on that reasoning and they are worth naming because they show how the shape spreads. Two say 'the same one that came above'. One says 'the same one that came in verse one', which is worse, because the verse number is true only where it stands. One says 'the same one, and this is the second time', which is a count. And one, over 'of', says 'the same preposition that came above, and Urdu has not written it separately' - which is false as well as a pointer, because Urdu writes that word as 'ka' and the settled wording spells it out.";
+  "The rest of the thirty five are ordinary and the band is the one the note named last round: a sentence carrying between thirty and ninety entries, saying in a shorter way what the settled wording says at length. Four verb wordings say 'the second form, irregular' where the settled wording says 'the past form' and then gives the same three parts. Four naming words say 'a naming word, and it tells of a day, of a time, of a man' where the settled wording gives the Urdu word itself. Two base forms are the settled wording with its last sentence cut off. And 'the definite article, that is, the word that tells you a particular owner is meant' is simply wrong about what the article does, which admits it under the exception rather than under the rule.";
+  "Refused again this round, each for a reason already written: every label giving a capital's reason as the Lord; the whole 'Urdu has not written it here' family, which says something true about the line in front of the reader that the settled wording cannot say; 'here it shows accompaniment' over 'with', because the settled wording names two senses and the label names the one in play; 'here it tells who did the work' over 'by' and 'here it tells the time' over 'on' and 'at', which are the same shape; and 'it is the proper name of the Lord' over 'Jesus', which is a claim about who He is and so is not a wording the note may quietly delete.";
+  "One refusal is new and is really a job written down in the wrong place. 'It is the past form of the verb say, and it is irregular - a verb being the word that tells an action or a state' reaches forty one entries and is refused because it defines the word 'verb' and the settled wording for 'said' does not. The settled table does define its terms inline elsewhere - its wording for 'the' stops to say what a naming word is - so the repair is to widen the settled wording for 'said' rather than to admit a label that teaches more than the table does. That is a change to the table, with a retired wording to write down, and it is not this commit.";
   let labels = [
     "معرفہ حرفِ تعریف۔",
     "نکرہ حرفِ تعریف۔",
@@ -316,6 +323,41 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
     "یہ لفظ بتاتا ہے کہ بات اِس کے بعد والے کی ہے۔ پہلا حرف بڑا ہے کیونکہ یہاں سے آیت شروع ہو رہی ہے۔",
     "جوڑنے والا لفظ ہے۔ شرط بتاتا ہے۔",
     "ضمیر ہے اَور یہ وہ شکل ہے جو حرفِ جار کے بعد آتی ہے، اَور ایک سے زیادہ کے لیٔے آیا ہے۔",
+    "وُہی حرفِ تعریف ہے جو اُوپر آیا۔ اُردُو نے اِسے الگ سے نہیں لِکھا۔",
+    "ضمیر ہے اَور ایک سے زیادہ کے لیٔے آیا ہے، اَور یہ وہ شکل ہے جو فعل کے بعد آتی ہے۔",
+    "ضمیر ہے اَور ایک سے زیادہ کے لیٔے آیا ہے، اَور یہ وہ شکل ہے جو حرفِ جار کے بعد آتی ہے۔",
+    "وُہی چھوٹا لفظ ہے جو اگلے فعل کی بُنیادی شکل بناتا ہے۔",
+    "یہ چھوٹا لفظ دو باتوں کو جوڑتا ہے اَور اگلی بات کو پہلی سے مِلاتا ہے۔",
+    "say کی دُوسری صُورت، بےقاعدہ: say → said → said۔",
+    "یہ فعل 'say' یعنی 'کہنا' کی ماضی کی صُورت ہے، اَور یہ بے قاعدہ ہے۔",
+    "نام کا لفظ ہے اَور کِسی مرد کو بتاتا ہے۔",
+    "حرفِ عطف ہے اَور دو باتوں میں سے ایک کو بتاتا ہے۔",
+    "یہ لفظ اگلی بات کو پہلی سے جوڑتا ہے اَور کِسی چیز کے لیٔے آتا ہے۔",
+    "go کی دُوسری صُورت، بےقاعدہ: go → went → gone۔",
+    "نام کا لفظ ہے اَور وقت کو بتاتا ہے۔",
+    "ضمیر ہے اَور یہ وہ شکل ہے جو فعل کے بعد آتی ہے، اَور ایک مرد کے لیٔے آیا ہے۔",
+    "say کی دُوسری صُورت، بےقاعدہ۔",
+    "حرفِ ربط۔",
+    "come کی دُوسری صُورت، بےقاعدہ: come → came → come۔",
+    "نام کا لفظ ہے اَور ایک مرد کو بتاتا ہے۔",
+    "نام کا لفظ ہے اَور دِن کو بتاتا ہے۔",
+    "فعل، بےقاعدہ: tell → told → told۔",
+    "حرفِ تعریف ہے، یعنی وہ لفظ جو بتاتا ہے کہ ایک خاص مالِک کی بات ہو رہی ہے۔",
+    "ضمیر ہے اَور کِسی مرد کے لیٔے آتا ہے، اَور یہ وہ شکل ہے جو حرفِ جار کے بعد آتی ہے۔",
+    "فعل 'come' یعنی 'آنا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
+    "نام کا لفظ ہے اَور ایک سے زیادہ کے لیٔے آیا ہے، اَور دِنوں کو بتاتا ہے۔",
+    "فعل 'see' یعنی 'دیکھنا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
+    "حرفِ عطف ہے اَور دو باتوں کا فرق بتاتا ہے۔ پہلا حرف بڑا ہے کیونکہ یہاں سے نیا جُملہ شروع ہو رہا ہے۔",
+    "فعل 'have' کی وہ شکل ہے جو گُزرے ہوئے وقت کے لیٔے آتی ہے۔ یہ بےقاعدہ ہے: have → had → had۔",
+    "ضمیر ہے اَور بولنے والے کے لیٔے آتا ہے، اَور یہ وہ شکل ہے جو فعل کے بعد آتی ہے۔",
+    "وُہی حرفِ تعریف ہے جو آیت ۱ میں آیا۔ اُردُو نے اِسے الگ سے نہیں لِکھا۔",
+    "اِنکار کا لفظ ہے: 'نہ'۔",
+    "یہ لفظ ایک حِصّہ کھولتا ہے جو اُن لوگوں کے بارے میں بتاتا ہے۔",
+    "وُہی حرفِ تعریف ہے، اَور یہ دُوسری بار ہے۔ اُردُو نے اِسے الگ سے نہیں لِکھا۔",
+    "وُہی حرفِ جار ہے جو اُوپر آیا: کا، کی۔ اُردُو نے اِسے الگ سے نہیں لِکھا۔",
+    "وُہی حرفِ تعریف ہے جو اُوپر آیا: ایک۔ اُردُو نے اِسے الگ سے نہیں لِکھا۔",
+    "یہ نام ہے: یِسوعؔ۔ پہلا حرف بڑا ہے کیونکہ ناموں کا پہلا حرف بڑا لِکھا جاتا ہے۔",
+    "یہ چھوٹا لفظ دو حِصّوں کو جوڑتا ہے: یہ کہ۔",
   ];
   return labels;
 }
