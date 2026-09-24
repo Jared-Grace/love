@@ -37,6 +37,8 @@ export function app_en_learn_bible_gloss_urdu_superseded_explains() {
   "'kingdom' was the plainer of the two and the store was emphatic about it. The table gave the meaning and never said the word is 'king' with '-dom' on the end, while the store said so more than forty times over half a dozen wordings, some of them nothing but 'king + -dom۔'. The noun table's own rule already licensed the sentence - it allows a second one for a word that looks like another word already met, and 'king' sits four lines away in the same table. So this was not a judgement about what a beginner needs; it was a rule the table states about itself, unapplied.";
   "What was kept under those two words is again the better half of the record. One 'kingdom' wording carries 'free' to 'freedom' as a second example of the same ending, which teaches the suffix rather than this word and is not in the table. Two are about the verse rather than the word - one saying the word has come round a second time in the same verse, one about what the Lord is and is not conceding by using it. And the sense of 'then' that means 'in that case' was deliberately left, because the table now refuses that sense on purpose and a wording carrying it therefore still says something the table does not.";
   "THE THIRD CANDIDATE COULD NOT BE CORRECTED AT ALL, AND WHY NOT IS WORTH MORE THAN THE CORRECTION WOULD HAVE BEEN. 'priests' was carrying a true fact the table drops - that 'ie' here is said as a long 'ee' - the same family as the silent 'w' of 'who' that was kept a round earlier. But the plural noun table does not write its sentences; it builds each one from the Urdu word and the singular by a template with three endings and no room for anything else, and the singular 'priest' has no entry anywhere. So the fact has no home without giving that template a fourth kind of thing to say, which is a change to a settled design rather than a wording. It was left alone and written down here instead, because a candidate refused for a reason is a finding and a candidate silently dropped is a hole.";
+  "THAT ROUND THEN HAD TO BE RUN A SECOND TIME, BECAUSE THE LIST IT RETIRED FROM WAS NOT THE STORE. The census it read ranks wordings that occur more than once, so a wording sitting in one chapter is invisible to it, and three of the 'than' sentences it did name were spelled a shade differently from anything the store actually holds. The sweep rewrote eighty seven entries and left thirty two behind - two of the commonest spellings among them, at seven sightings each - and nothing said so, because a sweep that finds nothing and a sweep that finds everything report the same way. Reading the store itself for the word 'than' listed all twenty wordings in one line of output, exact and complete.";
+  "So a retirement is written from the store, and the census is only for deciding which word to spend the round on. The wordings below that end in a comparison term rather than in the ordinary word for it - 'تُقابل' where another says 'سے' - are the same sentence in a different hand, and the reason there are so many of them is that each chapter was written on its own day.";
   let retired = [
     [
       "be",
@@ -898,6 +900,31 @@ export function app_en_learn_bible_gloss_urdu_superseded_explains() {
     ["then", "ظرفِ زمان۔ than (سے) سے مُختلِف۔"],
     ["then", "ظرفِ زمان: اُس وقت۔ than (سے) سے مِلتا جُلتا مگر مُختلِف۔"],
     ["then", "ظرفِ زمان: اُس کے بعد۔ than (سے) سے ہم آواز مگر مُختلِف۔"],
+    ["then", "ظرفِ زمان: اُس وقت۔ than (تُقابل) سے مُختلِف۔"],
+    ["then", "ظرفِ زمان: اُس کے بعد۔ than (سے) سے مُختلِف۔"],
+    ["then", "وقت کا ظرف۔ than (تُقابل) سے فرق رکھو۔"],
+    ["then", "ظرفِ زمان: اُس کے بعد۔ than (سے) سے مِلتا جُلتا مگر مُختلِف۔"],
+    ["then", "ظرفِ زمان: اُس کے بعد۔ than (تُقابل) سے اَلگ۔"],
+    ["then", "ظرفِ زمان۔ اِسے than (’سے‘، مُقابلے میں) کے ساتھ نہ ملائیں۔"],
+    [
+      "then",
+      "ظرفِ زمان: اُس وقت۔ than (سے) سے مُختلِف: then وقت، than موازنہ۔",
+    ],
+    ["then", "ظرفِ زمان: اُس گھڑی۔ than (تُقابل) سے مُختلِف۔"],
+    ["then", "ظرفِ زمان: اُس کے بعد؛ than (سے) سے ہم آواز۔"],
+    ["then", "ظرفِ زمان — اُس کے بعد۔ than (سے) سے ہجّے میں فرق کریں۔"],
+    [
+      "then",
+      "ظرفِ زمان: اُس کے بعد۔ than (سے) سے مُختلِف: then وقت، than موازنہ۔",
+    ],
+    ["then", "ظرفِ زمان: اُس کے بعد۔ than (تُقابل) سے مُختلِف۔"],
+    ["then", "ظرفِ زمان؛ than (سے) سے ہم آواز۔"],
+    ["then", "ظرف — اُس وقت۔ than (تُقابل کا) اِسی سے مِلتا ہے مگر معنی جُدا۔"],
+    ["then", "ظرف: اُس کے بعد۔ than (سے) سے قرِیب مگر مُختلِف۔"],
+    [
+      "then",
+      "ظرف — اُس کے بعد۔ than (سے، تُقابل کا) اِسی سے مِلتا ہے مگر معنی جُدا۔",
+    ],
     ["kingdom", "king + -dom۔"],
     ["kingdom", "king (بادشاہ) + -dom (حُکُومت کا عِلاقہ)۔"],
     ["kingdom", "king (بادشاہ) + -dom (حُکومت، عِلاقہ)۔"],
