@@ -22,6 +22,9 @@ export function app_en_learn_bible_gloss_urdu_superseded_explains() {
   "SOME KEYS ARE NOW ON THIS LIST TWICE AND SOME THREE TIMES, IN AS MANY DIFFERENT WORDINGS, AND THAT IS THE LIST WORKING RATHER THAN THE LIST ROTTING. All of it happened on one day, in three rounds: the terse sentence was replaced by a long one; then measuring which of two near-identical long sentences the store already used showed the wrong one had been picked, so it was replaced again; then the clause naming the third form was made to say what that form is for rather than only where it appears, which moved a further forty nine. A list of what readers were shown has to hold every wording that reached them, not the last one, because a chapter written between two of those changes carries the middle version and nothing else would ever rewrite it. Retiring only the most recent would leave those entries frozen with no name to catch them.";
   "So the list is not the history of a decision and it is not sorted, and nothing about it should be read as a sequence. It is a set of strings nobody should still be reading, and being on it twice or three times for one word costs nothing at all - the sweep asks each entry only whether its wording is in the set.";
   "The third round is also why the newest block is not the same fifty words as the block above it. What moved was every entry carrying the clause about 'have' and 'be', and that clause sits on regular verbs like 'named' and 'filled' as well as on irregular ones, while a past form that is only a past form - 'wore', 'ran', 'went' - never carried it at all. The two blocks overlap and neither contains the other. That is the ordinary case: a round retires whatever its own change displaced, which is a set defined by the clause being replaced and never by a word list somebody keeps in step by hand.";
+  "THE TWENTY FIVE WORDS ADDED AFTER THAT WERE NOT FOUND BY REMEMBERING A ROUND - THEY WERE FOUND BY A TEST, AND THE TEST IS THE PART WORTH KEEPING. A store wording that is a strict prefix of what the table says for that same word today is an older build of that one sentence: somebody appended a clause and never retired what stood before it. That is decidable from the two strings alone. It needs no record of who changed what, which is exactly the record that had gone missing, and it does not have to be trusted the way a memory of a round does.";
+  "That distinction is why the test was worth writing rather than a tally. Counting entries that carry something other than the table's wording gives nine and a half thousand, and almost all of that is a per-verse gloss doing its job - a number that looks like a catastrophe and names no fault at all. The prefix test asks instead which of them are provably the same sentence one clause short, and answers twenty five wordings over two hundred and five entries. One of those numbers is a gap; the other is a defect list you can act on without reading a single verse.";
+  "Two clause lengths did all of it. Twenty of the twenty five are base forms - 'say', 'go', 'know', 'take' - missing the sentence about irregular verbs, some seventy five characters. The other five are 'told', 'sent', 'left', 'brought' and 'taught': past forms whose spelling is also the third form, missing the hundred and fifty five character clause that says so and names the two jobs. That second clause is what the third round was about, caught here on five words that round's own word list had not reached. That the two families fall out of one string test, with nobody deciding in advance which words to look at, is the argument for the test over the list.";
   let retired = [
     [
       "be",
@@ -452,6 +455,106 @@ export function app_en_learn_bible_gloss_urdu_superseded_explains() {
     [
       "wrote",
       "فعل 'write' یعنی 'لِکھنا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً فعل کے آخر میں '-ed' لگا کر ماضی بنایا جاتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'write' سے 'wrote'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
+    ],
+    [
+      "bring",
+      "فعل 'bring' یعنی 'لانا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
+    ],
+    [
+      "brought",
+      "فعل 'bring' یعنی 'لانا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'bring' سے 'brought'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
+    ],
+    [
+      "eat",
+      "فعل 'eat' یعنی 'کھانا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
+    ],
+    [
+      "fall",
+      "فعل 'fall' یعنی 'گِرنا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
+    ],
+    [
+      "give",
+      "فعل 'give' یعنی 'دینا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
+    ],
+    [
+      "go",
+      "فعل 'go' یعنی 'جانا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
+    ],
+    [
+      "hear",
+      "فعل 'hear' یعنی 'سُننا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
+    ],
+    [
+      "know",
+      "فعل 'know' یعنی 'جاننا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
+    ],
+    [
+      "left",
+      "فعل 'leave' یعنی 'چھوڑنا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'leave' سے 'left'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
+    ],
+    [
+      "make",
+      "فعل 'make' یعنی 'بنانا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
+    ],
+    [
+      "say",
+      "فعل 'say' یعنی 'کہنا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
+    ],
+    [
+      "send",
+      "فعل 'send' یعنی 'بھیجنا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
+    ],
+    [
+      "sent",
+      "فعل 'send' یعنی 'بھیجنا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'send' سے 'sent'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
+    ],
+    [
+      "sit",
+      "فعل 'sit' یعنی 'بیٹھنا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
+    ],
+    [
+      "speak",
+      "فعل 'speak' یعنی 'بولنا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
+    ],
+    [
+      "stand",
+      "فعل 'stand' یعنی 'کھڑا ہونا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
+    ],
+    [
+      "take",
+      "فعل 'take' یعنی 'لینا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
+    ],
+    [
+      "taught",
+      "فعل 'teach' یعنی 'سِکھانا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'teach' سے 'taught'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
+    ],
+    [
+      "teach",
+      "فعل 'teach' یعنی 'سِکھانا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
+    ],
+    [
+      "tell",
+      "فعل 'tell' یعنی 'بتانا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
+    ],
+    [
+      "think",
+      "فعل 'think' یعنی 'سوچنا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
+    ],
+    [
+      "throw",
+      "فعل 'throw' یعنی 'پھینکنا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
+    ],
+    [
+      "told",
+      "فعل 'tell' یعنی 'بتانا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'tell' سے 'told'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
+    ],
+    [
+      "wear",
+      "فعل 'wear' یعنی 'پہننا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
+    ],
+    [
+      "weep",
+      "فعل 'weep' یعنی 'رونا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
     ],
     [
       "been",
