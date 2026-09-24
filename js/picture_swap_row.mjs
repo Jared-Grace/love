@@ -16,7 +16,7 @@ export function picture_swap_row(parent, swap, name) {
   "$plain parent";
   "$plain swap";
   "$plain name";
-  "A row of pictures to choose among - the picture now in place first, then each one offered for its place - where a press on any of them chooses it and a second press unchooses it, the choice kept in the offer file called name.";
+  "A row of pictures to choose among - the picture now in place first, then each one offered for its place - where the Approve button under any of them chooses it and a second press unchooses it, the choice kept in the offer file called name.";
   "IT IS ITS OWN UNIT SO THAT EVERY PAGE COMPARING A PICTURE WITH ITS REPLACEMENTS CHOOSES THE SAME WAY. A song's backgrounds and a hymn's brightened drawings are both a before beside some afters, and a green frame that meant chosen on one page and something else on the other would have to be learnt twice.";
   "THE FRAMES ARE DRAWN FROM WHAT THE DISK ANSWERS, never from what the press assumed, so a frame on screen is a choice that was really kept.";
   arguments_assert(arguments, 3);
@@ -28,6 +28,8 @@ export function picture_swap_row(parent, swap, name) {
     for (let entry of columns) {
       let chosen_is = list_includes(chosen, entry.path);
       lyric_video_song_swap_column_mark(entry.column, chosen_is);
+      let said = chosen_is ? "Approved ✓ (tap to undo)" : "Approve";
+      html_text_set(entry.button, said);
     }
   }
   function offer(label, path) {

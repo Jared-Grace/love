@@ -21,7 +21,7 @@ export async function lyric_video_song_swaps_preview() {
   arguments_assert(arguments, 0);
   let root = html_body_div();
   let asked =
-    "Choose a song. Each picture that has candidates is shown first, then the candidates beside it, under the words sung over it. Tap a picture to approve it for the video: a green frame means approved, and it is saved at once. Tap again to take the approval back.";
+    "Choose a song. Each picture that has candidates is shown first, then the candidates beside it, under the words sung over it. Press Approve under a picture to use it in the video: it gets a green frame and is saved at once. Press again to take the approval back.";
   html_p_text(root, asked);
   let chosen = html_div(root);
   let told = app_shared_text_quiet(root, "");
