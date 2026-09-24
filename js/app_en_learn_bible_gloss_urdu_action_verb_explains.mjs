@@ -5,6 +5,9 @@ import { equal } from "./equal.mjs";
 import { property_set } from "./property_set.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_map } from "./list_map.mjs";
+import { text_ends_with } from "./text_ends_with.mjs";
+import { text_suffix_without_try } from "./text_suffix_without_try.mjs";
+import { text_last } from "./text_last.mjs";
 import { app_en_learn_bible_gloss_urdu_capital_tail } from "./app_en_learn_bible_gloss_urdu_capital_tail.mjs";
 export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
   "The wording every explanation of an ordinary English verb is given in the store that teaches English to an Urdu reader - the words for doing and saying and going, as against the handful of helping verbs written next door.";
@@ -18,6 +21,9 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
   "Thirty six verbs were added to the table in one go on 2026-09-24, and where the list came from is the part worth keeping. It was not thought up: it was read off the store, by asking which words are carrying a shared label right now and being held back from the sweep only because nothing here answers to them. Every one of those words is already in front of a reader with a sentence that tells them nothing. So the table grows where the store says it is thin rather than where a list of common English verbs would have said it should be, and the same reading can be taken again after this to find the next thirty six.";
   "Two of the added meanings are worth a line because the obvious Urdu was already taken. ‘build’ is not given ‘بنانا’, which the table already gives to ‘make’, because a reader meeting the same Urdu under two different English words learns that the two are the same word, which they are not. ‘lay’ and ‘put’ have the same trouble and are separated the same way. Where two English verbs genuinely do mean the same thing - ‘minister’ and ‘serve’ - the same Urdu is given to both on purpose, and that is not the same case.";
   "Two words the store is holding entries on were left out, and the reason is the merge above this one rather than any doubt about the words. ‘do’ belongs to the helping-verb table next door, and ‘kiss’ is written as a naming word in the noun table, so adding either here would have made a word that belongs to two kinds - which the strict merge refuses, correctly. The entries on ‘doing’ and ‘kissing’ stay held until somebody decides which table owns the verb, and that is a decision about the tables rather than about the store.";
+  "The 'ing' forms are written under their own keys for the same reason the 's' forms are, and they were the largest single block the store was holding: fifty spellings carrying one shared label between them, a label which said only that the word is a verb and that this is the going-on form. That is true and it is not enough, because it never says which verb, and a reader who cannot walk back from 'ministering' to 'minister' is left exactly where they started.";
+  "The sentence deliberately does not say that an 'ing' form never stands on its own. In ordinary English it usually leans on 'is' or 'was', but the Bible is full of bare clauses - '…saying, Peace be to you' - and a reader told the form always needs a helper would meet that on the very next line and be wrong. So the sentence says what the form is for and stops there.";
+  "Where the spelling changed on the way from the verb, the change is named, because that is the thing a reader cannot see. 'come' loses its 'e' to make 'coming' and 'sit' doubles its last letter to make 'sitting', and a beginner looking for 'sitt' in a dictionary will not find it. Which of the two happened is worked out from the pair itself rather than listed by hand, so a form added later cannot be given the wrong reason.";
   let meaning = {
     say: "کہنا",
     tell: "بتانا",
@@ -153,6 +159,58 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
     comes: "come",
     receives: "receive",
   };
+  let ing_forms = {
+    saying: "say",
+    coming: "come",
+    eating: "eat",
+    going: "go",
+    sitting: "sit",
+    drinking: "drink",
+    standing: "stand",
+    speaking: "speak",
+    looking: "look",
+    driving: "drive",
+    teaching: "teach",
+    weeping: "weep",
+    shouting: "shout",
+    praying: "pray",
+    seeing: "see",
+    sending: "send",
+    passing: "pass",
+    talking: "talk",
+    expecting: "expect",
+    happening: "happen",
+    hearing: "hear",
+    walking: "walk",
+    preaching: "preach",
+    trying: "try",
+    calling: "call",
+    following: "follow",
+    thinking: "think",
+    proclaiming: "proclaim",
+    waiting: "wait",
+    sleeping: "sleep",
+    watching: "watch",
+    healing: "heal",
+    building: "build",
+    wanting: "want",
+    turning: "turn",
+    taking: "take",
+    carrying: "carry",
+    running: "run",
+    listening: "listen",
+    wearing: "wear",
+    putting: "put",
+    dining: "dine",
+    laying: "lay",
+    gathering: "gather",
+    washing: "wash",
+    sowing: "sow",
+    wondering: "wonder",
+    swaying: "sway",
+    ministering: "minister",
+    touching: "touch",
+  };
   let capitals = {
     Take: "take",
     Bring: "bring",
@@ -228,6 +286,40 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
   }
   let spellings = object_property_names(s_forms);
   list_map(spellings, s_form_write);
+  function ing_spelling_read(spelled, word) {
+    let ends_e = text_ends_with(word, "e");
+    if (ends_e) {
+      let dropped = text_suffix_without_try(word, "e") + "ing";
+      let e_gone = equal(spelled, dropped);
+      if (e_gone) {
+        let said = " لِکھتے وقت '" + word + "' کے آخِر کا 'e' ہٹ گیا ہے۔";
+        return said;
+      }
+    }
+    let doubled = word + text_last(word) + "ing";
+    let letter_doubled = equal(spelled, doubled);
+    if (letter_doubled) {
+      let said = " لِکھتے وقت '" + word + "' کا آخِری حرف دوہرا ہو گیا ہے۔";
+      return said;
+    }
+    let plain = "";
+    return plain;
+  }
+  function ing_form_write(spelled) {
+    let word = property_get(ing_forms, spelled);
+    let urdu = property_get(meaning, word);
+    let whole =
+      "فعل '" +
+      word +
+      "' یعنی '" +
+      urdu +
+      "' کی وہ شکل ہے جو کام کے چلتے رہنے کو بتاتی ہے: آخِر میں 'ing' لگا ہے۔" +
+      ing_spelling_read(spelled, word) +
+      irregular_read(word);
+    property_set(r, spelled, whole);
+  }
+  let ing_spellings = object_property_names(ing_forms);
+  list_map(ing_spellings, ing_form_write);
   function capital_write(spelled) {
     let word = property_get(capitals, spelled);
     let said = property_get(r, word);
