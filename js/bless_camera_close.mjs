@@ -1,9 +1,11 @@
-import { html_element_width_layout } from "./html_element_width_layout.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { multiply } from "./multiply.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { bless_camera_map_get } from "./bless_camera_map_get.mjs";
+import { bless_map_shown_is } from "./bless_map_shown_is.mjs";
+import { bless_tile_size_playing } from "./bless_tile_size_playing.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { bless_camera_glide } from "./bless_camera_glide.mjs";
+import { html_element_width_layout } from "./html_element_width_layout.mjs";
+import { multiply } from "./multiply.mjs";
 export async function bless_camera_close(div_map, player_img_c, focus, factor) {
   arguments_assert(arguments, 4);
   ("Brings the camera in close on one square and stays there, so that something small enough");
@@ -33,9 +35,31 @@ export async function bless_camera_close(div_map, player_img_c, focus, factor) {
   ("The way back out is a separate call on purpose, because how long to stay is the caller's");
   ("question and never this one's. A wait at a kerb lasts as long as the traffic does.");
   ("The size is read from how the player is LAID OUT rather than from how she is drawn, because she carries a permanent scale that grows with every victory. Measured as drawn, each close-up would be taken through the last one and the camera would end up nearer on a tenth victory than on a first, for no reason anybody chose.");
+  let container_map = bless_camera_map_get(div_map);
+  ("The whole-world map is the one place this leans in from the playing size instead. A map is");
+  ("drawn so small that nearly twice its size is still a map, and the head turns this is for");
+  ("stay invisible - so there the close-up goes all the way in, as it does in the game.");
+  let map_shown = bless_map_shown_is();
+  if (map_shown) {
+    let playing = bless_tile_size_playing();
+    let size_map = text_combine_multiple([
+      "calc(",
+      playing,
+      " * ",
+      factor,
+      ")",
+    ]);
+    await bless_camera_glide(
+      container_map,
+      div_map,
+      player_img_c,
+      size_map,
+      focus,
+    );
+    return;
+  }
   let tile_now = html_element_width_layout(player_img_c);
   let near = multiply(tile_now, factor);
   let size = text_combine_multiple([near, "px"]);
-  let container_map = bless_camera_map_get(div_map);
   await bless_camera_glide(container_map, div_map, player_img_c, size, focus);
 }
