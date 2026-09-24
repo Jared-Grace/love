@@ -13,6 +13,7 @@ import { property_get } from "./property_get.mjs";
 import { app_receipts_purchase_card } from "./app_receipts_purchase_card.mjs";
 import { list_size } from "./list_size.mjs";
 import { date_year_month_day } from "./date_year_month_day.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { app_receipts_purchase_row } from "./app_receipts_purchase_row.mjs";
 import { app_receipts_purchase_new } from "./app_receipts_purchase_new.mjs";
 import { app_receipts_unsent_all } from "./app_receipts_unsent_all.mjs";
@@ -73,7 +74,8 @@ export function app_receipts_purchases_screen(root, folder_code, on_change) {
       let day = property_get(purchase, "date");
       if (not_equal(day, day_before)) {
         let text = date_year_month_day(day);
-        html_p_text(list, text);
+        let heading = html_p_text(list, text);
+        html_style_set(heading, "font-weight", "bold");
         day_before = day;
       }
       app_receipts_purchase_row(list, purchase, php_per_usd, on_open);
