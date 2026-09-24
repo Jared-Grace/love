@@ -1,9 +1,9 @@
-import { object_property_names } from "./object_property_names.mjs";
-import { less_than } from "./less_than.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { app_en_learn_bible_gloss_urdu_action_verb_explains } from "./app_en_learn_bible_gloss_urdu_action_verb_explains.mjs";
 import { app_en_learn_bible_gloss_urdu_plural_noun_explains } from "./app_en_learn_bible_gloss_urdu_plural_noun_explains.mjs";
+import { less_than } from "./less_than.mjs";
+import { equal } from "./equal.mjs";
+import { object_property_names } from "./object_property_names.mjs";
+import { not } from "./not.mjs";
 export function app_en_learn_bible_gloss_urdu_spelling_claims_wrong() {
   "Every sentence in the gloss tables that tells a reader how a word is spelled, checked against the word it was written for. These sentences are generated from a template over a list, so one of them is written for every member alike, and it is false for whichever members are exceptions to the exception it describes.";
   "That is not a guess about what could go wrong. It went wrong: the past form sentence said that in a few old verbs the word itself changes, 'hear' to 'heard', when nothing changes - the spelling adds a plain 'd' and it is the sound that moves. Another told a reader that no '-ed' had been added while printing a word with '-ed' on the end of it. Six live sentences were wrong about two verbs, and they were found by reading one word by hand.";
@@ -19,6 +19,9 @@ export function app_en_learn_bible_gloss_urdu_spelling_claims_wrong() {
     "لِکھنے میں صِرف 'd' لگا ہے، مگر بولنے میں آواز بدل جاتی ہے، اِس لیٔے یہ فعل بےقاعدہ گِنا جاتا ہے: '";
   let regular = "، اَور اِس فعل میں بھی یِہی ہُوا ہے: '";
   let plural_plain = "اَور جمع اُس کے آخِر میں 's' لگا کر بنتی ہے۔";
+  let no_ed = "، 'ed' لگا کر نہیں۔";
+  let three_head = " یہ فعل بےقاعدہ ہے: '";
+  let and = "' اَور '";
   let head = "فعل '";
   let joiner = "' سے '";
   let singular_head = "واحد '";
@@ -27,6 +30,7 @@ export function app_en_learn_bible_gloss_urdu_spelling_claims_wrong() {
     s_form: 0,
     ed_form: 0,
     changed: 0,
+    no_ed: 0,
     sound: 0,
     regular: 0,
     plural_plain: 0,
@@ -105,6 +109,21 @@ export function app_en_learn_bible_gloss_urdu_spelling_claims_wrong() {
       let still_regular = regular_spelling_is(pair.base, pair.form) || bare_d;
       if (still_regular) {
         fault_add(spelled, "changed", said);
+      }
+    }
+    let claims_no_ed = said.includes(no_ed);
+    if (claims_no_ed) {
+      counts.no_ed = counts.no_ed + 1;
+      let base3 = quoted_after(said, three_head);
+      let past = quoted_after(said, three_head + base3 + joiner);
+      let done = quoted_after(said, three_head + base3 + joiner + past + and);
+      let past_regular = regular_spelling_is(base3, past);
+      let done_regular = regular_spelling_is(base3, done);
+      let past_d = equal(past, base3 + "d");
+      let done_d = equal(done, base3 + "d");
+      let some_ed = past_regular || done_regular || past_d || done_d;
+      if (some_ed) {
+        fault_add(spelled, "no_ed", said);
       }
     }
     let claims_sound = said.includes(sound);
