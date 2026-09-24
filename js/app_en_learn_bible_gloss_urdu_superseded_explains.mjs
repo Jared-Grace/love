@@ -6,6 +6,7 @@ export function app_en_learn_bible_gloss_urdu_superseded_explains() {
   let r = [
     "فعل ہے: ہونا۔ یہ 'be' کی بُنیادی شکل ہے، اَور اِس کی باقی شکلیں بےقاعدہ ہیں: be → was → been۔",
     "فعل 'be' کی وہ شکل ہے جو اِس وقت کے لیٔے، ایک سے زیادہ کے ساتھ اَور 'you' کے ساتھ آتی ہے: ہیں۔",
+    "یہ لفظ وجہ بتاتا ہے: 'کیونکہ'۔",
   ];
   return r;
 }
