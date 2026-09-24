@@ -53,6 +53,7 @@ export function app_receipts_purchase_row(
   let text = parts.join(" - ");
   let button = app_shared_button_wide(parent, text, on_press);
   let marked = app_receipts_color_get(purchase);
-  html_style_background_color_set(button, property_get(marked, "color"));
+  let background = property_get(marked, "color");
+  html_style_background_color_set(button, background);
   return button;
 }
