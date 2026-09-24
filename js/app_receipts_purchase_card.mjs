@@ -40,9 +40,11 @@ export function app_receipts_purchase_card(parent, purchase, on_saved) {
   app_shared_date_time_edit(card, date, time, on_when);
   ("The price is whole pesos. What is typed is kept as a whole number or as nothing, and the box is set back to what was kept, so it never shows a price other than the one saved.");
   let price_input = app_shared_input_whole_number(card, "Price (₱ PHP)");
-  html_value_set(price_input, property_get_or(purchase, "price", ""));
+  let value2 = property_get_or(purchase, "price", "");
+  html_value_set(price_input, value2);
   async function on_price() {
-    let price = text_whole_number_or_empty(html_value_get(price_input));
+    let text = html_value_get(price_input);
+    let price = text_whole_number_or_empty(text);
     html_value_set(price_input, price);
     property_set(purchase, "price", price);
     await app_receipts_purchase_save(purchase);

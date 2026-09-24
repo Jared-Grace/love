@@ -1,3 +1,5 @@
+import { git_history_paths_moved_alive } from "./git_history_paths_moved_alive.mjs";
+import { list_without_multiple } from "./list_without_multiple.mjs";
 import { git_folder_love } from "./git_folder_love.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
