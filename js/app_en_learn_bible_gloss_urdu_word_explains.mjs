@@ -4,6 +4,8 @@ export function app_en_learn_bible_gloss_urdu_word_explains() {
   "Each wording says what the word does and then names the Urdu that does the same work, because the reader already has Urdu and is being handed English. That is the one thing a shared label could never do: ‘conjunction’ is true of ‘and’, ‘but’ and ‘or’ together, and which Urdu word to reach for is exactly what separates them.";
   "A word that does more than one job is given all of its jobs in one wording rather than one of them. ‘to’ marks a direction and also stands in front of a verb meaning nothing at all; ‘that’ points, joins, and binds. A wording naming only the commonest job would be written over hundreds of places where it is false, and nothing afterwards could tell which those were.";
   "Written in small letters throughout. A word opening a sentence carries a capital, and that is where it fell rather than a different word, so the lookup beside this folds the capital away and one entry answers for both.";
+  "Two of the words of belonging carry a warning about a word they are mistaken for, because the mistake is a spelling mistake and not a reading one, and the reader will make it when they come to write. ‘their’ sounds exactly like ‘there’, which is now said on both sides; ‘its’ is one letter away from ‘it’s’, which is not a word of belonging at all but ‘it is’ shortened. Both warnings were already being taught here and there in the store by whoever glossed a verse where the trap was in sight - twenty-eight places for the first and three for the second - so the settled wordings are catching up with what the store had already worked out, not inventing a rule.";
+  "The wordings these replace are written down in the superseded list in the same commit, which is the only thing that lets the repair sweep find the entries still carrying them.";
   let a = "حرفِ تعریف ہے، مگر وہ والا جو کِسی ایک اَن جانی چیز کے لیٔے آتا ہے۔";
   let r = {
     the: "حرفِ تعریف ہے، یعنی وہ چھوٹا لفظ جو نام سے پہلے آ کر بتاتا ہے کہ کویٔی معلوم اَور خاص چیز مُراد ہے۔",
@@ -63,8 +65,8 @@ export function app_en_learn_bible_gloss_urdu_word_explains() {
     your: "یہ لفظ مِلکیّت بتاتا ہے: جو چیز اِس کے بعد آتی ہے وہ اُس کی ہے جِس سے بات ہو رہی ہے، جیسے اُردُو میں ’تیرا‘ یا ’تُمہارا‘۔",
     his: "یہ لفظ مِلکیّت بتاتا ہے: جو چیز اِس کے بعد آتی ہے وہ کِسی ایک مرد کی ہے، جیسے اُردُو میں ’اُس کا‘۔",
     their:
-      "یہ لفظ مِلکیّت بتاتا ہے: جو چیز اِس کے بعد آتی ہے وہ ایک سے زیادہ لوگوں کی ہے، جیسے اُردُو میں ’اُن کا‘۔",
-    its: "یہ لفظ مِلکیّت بتاتا ہے: جو چیز اِس کے بعد آتی ہے وہ کِسی چیز یا جانور کی ہے، جیسے اُردُو میں ’اُس کا‘۔",
+      "یہ لفظ مِلکیّت بتاتا ہے: جو چیز اِس کے بعد آتی ہے وہ ایک سے زیادہ لوگوں کی ہے، جیسے اُردُو میں ’اُن کا‘۔ بولنے میں یہ 'there' (وہاں) جَیسا لگتا ہے، مگر دونوں الگ الفاظ ہیں۔",
+    its: "یہ لفظ مِلکیّت بتاتا ہے: جو چیز اِس کے بعد آتی ہے وہ کِسی چیز یا جانور کی ہے، جیسے اُردُو میں ’اُس کا‘۔ اِس میں apostrophe نہیں آتا: 'it’s' ایک الگ لفظ ہے جِس کا مطلب 'یہ ہے' ہے۔",
     not: "یہ لفظ اِنکار کرتا ہے: جو بات اِس کے ساتھ آتی ہے وہ ہویٔی نہیں، جیسے اُردُو میں ’نہیں‘۔ انگریزی میں یہ فعل کے بعد آتا ہے۔",
     no: "یہ لفظ بھی اِنکار کرتا ہے، مگر ’not‘ سے فرق یہ ہے کہ یہ نام سے پہلے آ کر کہتا ہے کہ وہ چیز ایک بھی نہیں، جیسے اُردُو میں ’کویٔی نہیں‘۔",
     never:
