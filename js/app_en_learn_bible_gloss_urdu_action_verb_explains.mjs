@@ -1,13 +1,14 @@
+import { not } from "./not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_en_learn_bible_gloss_urdu_third_form_jobs } from "./app_en_learn_bible_gloss_urdu_third_form_jobs.mjs";
 import { property_get } from "./property_get.mjs";
+import { text_ends_with } from "./text_ends_with.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
 import { property_set } from "./property_set.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_map } from "./list_map.mjs";
-import { text_ends_with } from "./text_ends_with.mjs";
 import { text_suffix_without_try } from "./text_suffix_without_try.mjs";
 import { text_last } from "./text_last.mjs";
 import { app_en_learn_bible_gloss_urdu_capital_tail } from "./app_en_learn_bible_gloss_urdu_capital_tail.mjs";
@@ -274,6 +275,43 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
       "' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔";
     return whole;
   }
+  function spelled_regularly_is(word, form) {
+    "Whether this form is the base with an ordinary '-ed' on the end: either the plain '-ed', or just the 'd' where the base already ends in 'e'. A verb can be irregular and still have one form spelled the regular way - 'sow' makes 'sowed' and then 'sown' - and a sentence that says the word changed is simply wrong about that form.";
+    let ends_e = text_ends_with(word, "e");
+    let d = word + "d";
+    let ed = word + "ed";
+    let e_and_d = ends_e && equal(form, d);
+    let plain_ed = equal(form, ed);
+    let regular = e_and_d || plain_ed;
+    return regular;
+  }
+  function sound_only_is(word, form) {
+    "Whether the spelling is almost the regular one - a bare 'd' on a base that does not end in 'e' - which is what 'hear' and 'heard' do. Nothing visible changed, so the reason this verb is counted irregular is the sound, and that is what the reader has to be told. Saying the word itself changed sends them looking for a change that is not on the page.";
+    let ends_e = text_ends_with(word, "e");
+    let d = word + "d";
+    let only_d = equal(form, d) && not(ends_e);
+    return only_d;
+  }
+  function ed_claim_read(word, past, done) {
+    "How to finish the sentence that lists a verb's three forms. It used to end 'and not by adding ed', which is the ordinary case and was written for every irregular verb alike. It is false whenever one of the two forms is spelled the regular way, and there are two of those here: 'sow' makes 'sowed' with a plain '-ed', and 'hear' makes 'heard' with a plain 'd'. A learner who is told no '-ed' was added, beside a word with '-ed' on the end of it, learns to distrust the sentence.";
+    let past_sound = sound_only_is(word, past);
+    let done_sound = sound_only_is(word, done);
+    let sounded = past_sound || done_sound;
+    if (sounded) {
+      let heard =
+        "۔ لِکھنے میں 'd' لگا ہُوا لگتا ہے، مگر بولنے میں آواز بدل جاتی ہے، اِس لیٔے یہ بےقاعدہ گِنا جاتا ہے۔";
+      return heard;
+    }
+    let past_regular = spelled_regularly_is(word, past);
+    let done_regular = spelled_regularly_is(word, done);
+    let neither = not(past_regular) && not(done_regular);
+    if (neither) {
+      let claim = "، 'ed' لگا کر نہیں۔";
+      return claim;
+    }
+    let stop = "۔";
+    return stop;
+  }
   function irregular_read(word) {
     let parts = property_get_or_null(irregular, word);
     let missing = null_is(parts);
@@ -302,7 +340,8 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
       past +
       "' اَور '" +
       done +
-      "' بنتا ہے، 'ed' لگا کر نہیں۔";
+      "' بنتا ہے" +
+      ed_claim_read(word, past, done);
     return told;
   }
   function more_read(word) {
@@ -435,6 +474,30 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
     let head = "فعل '" + word + "' یعنی '" + urdu + "' کی ";
     let learn = " اَیسے فعل یاد کرنے پڑتے ہیں۔";
     let changes = "، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: '";
+    function changes_read(word, form) {
+      "Which clause follows 'English usually adds -ed'. Three things can be true of a form and the sentence has to say the one that is: the word changed, or it did not change and only the sound did, or nothing changed at all and this form is simply regular.";
+      let regular = spelled_regularly_is(word, form);
+      if (regular) {
+        let same = "، اَور اِس فعل میں بھی یِہی ہُوا ہے: '";
+        return same;
+      }
+      let sound_only = sound_only_is(word, form);
+      if (sound_only) {
+        let sound =
+          "۔ لِکھنے میں صِرف 'd' لگا ہے، مگر بولنے میں آواز بدل جاتی ہے، اِس لیٔے یہ فعل بےقاعدہ گِنا جاتا ہے: '";
+        return sound;
+      }
+      return changes;
+    }
+    function learn_read(word, form) {
+      "The line about having to memorise these verbs, which belongs only where there is something to memorise. A form spelled the ordinary way is the rule rather than an exception to it, so telling the reader to learn it by heart teaches them to distrust the rule they were just given.";
+      let regular = spelled_regularly_is(word, form);
+      if (regular) {
+        let none = "";
+        return none;
+      }
+      return learn;
+    }
     let unchanged = equal(past, word);
     if (unchanged) {
       return;
@@ -442,12 +505,12 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
     let past_said =
       head +
       "ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً آخر میں '-ed' لگتا ہے" +
-      changes +
+      changes_read(word, past) +
       word +
       "' سے '" +
       past +
       "'۔" +
-      learn;
+      learn_read(word, past);
     let both = equal(past, done);
     if (both) {
       let one = past_said + also + jobs;
@@ -464,12 +527,12 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
       "وہ تِیسری شکل ہے جو 'have' اَور 'be' کے ساتھ آتی ہے:" +
       jobs +
       " انگریزی میں عموماً یہاں بھی آخر میں '-ed' لگتا ہے" +
-      changes +
+      changes_read(word, done) +
       word +
       "' سے '" +
       done +
       "'۔" +
-      learn;
+      learn_read(word, done);
     property_set(r, done, third);
   }
   let irregular_words = object_property_names(irregular);
