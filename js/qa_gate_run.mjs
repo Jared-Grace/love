@@ -9,9 +9,19 @@ export async function qa_gate_run() {
   "Who is holding it is printed once by the waiting itself, so a wait never reads as a hang. Nothing else here prints, since everything the run says it says under the lock";
   "A run that dies without giving the lock back does not keep the next one out forever - the lock is watched for its owner going quiet and is taken from a process that is no longer there";
   let who = qa_snapshot_owner();
+  ("Which commit the caller stands on is read before joining the line, because that is the work they are asking about. By the time the turn comes a run ahead in the line has often judged a later commit that already holds it, and then that answer is the answer.");
+  let mine = await git_head_commit();
   async function lambda() {
-    let asked = await qa_gate_run_unlocked();
-    return asked;
+    let beside = await qa_commit_beside_heads();
+    let before = property_get(beside, "heads");
+    let covering = await qa_gate_kept_covering(mine, before);
+    let fresh = null_is(covering);
+    if (fresh) {
+      let asked = await qa_gate_run_unlocked();
+      return asked;
+    }
+    let covered = await qa_gate_run_covered(covering);
+    return covered;
   }
   let r = await lock_wait(qa_gate_run_unlocked.name, lambda, who);
   return r;
