@@ -9,7 +9,7 @@ import { html_clear } from "./html_clear.mjs";
 import { app_shared_languages_prompt_text } from "./app_shared_languages_prompt_text.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_shared_bible_subset_sorted_choose } from "./app_shared_bible_subset_sorted_choose.mjs";
-export function app_reply_buttons_languages(languages_chosen, root, languages) {
+export function app_reply_languages_chooser(languages_chosen, root, languages) {
   "the same scrolled, searchable list the bible reader and the search app choose languages from, rather than a button for every one of the hundreds of languages laid out on the page";
   let holder = html_div(root);
   let key_property = language_code_key();

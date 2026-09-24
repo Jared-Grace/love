@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-import { app_reply_buttons_languages } from "./app_reply_buttons_languages.mjs";
+import { app_reply_languages_chooser } from "./app_reply_languages_chooser.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { list_add } from "./list_add.mjs";
@@ -19,7 +19,7 @@ export function app_reply_visible_count(
 ) {
   arguments_assert(arguments, 6);
   app_shared_button(card, "❤️", love);
-  let buttons_languages = app_reply_buttons_languages(
+  let buttons_languages = app_reply_languages_chooser(
     languages_chosen,
     card,
     languages,
