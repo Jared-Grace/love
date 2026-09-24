@@ -1,7 +1,9 @@
+import { app_en_learn_bible_gloss_urdu_capital_tail } from "./app_en_learn_bible_gloss_urdu_capital_tail.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_map } from "./list_map.mjs";
+import { app_en_learn_bible_gloss_urdu_reverent_words } from "./app_en_learn_bible_gloss_urdu_reverent_words.mjs";
 import { app_en_learn_bible_gloss_urdu_word_explains } from "./app_en_learn_bible_gloss_urdu_word_explains.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
@@ -82,7 +84,7 @@ export function app_en_learn_bible_gloss_urdu_adverb_conjunction_explains() {
     As: "as",
     If: "if",
   };
-  let capital_tail = " بڑا حرف اِس لیٔے ہے کہ لفظ جُملے کے شُروع میں کھڑا ہے۔";
+  let capital_tail = app_en_learn_bible_gloss_urdu_capital_tail();
   function capital_write(word) {
     let lower = property_get(capitals, word);
     let said = property_get(r, lower);
@@ -90,19 +92,7 @@ export function app_en_learn_bible_gloss_urdu_adverb_conjunction_explains() {
   }
   let capital_words = object_property_names(capitals);
   list_map(capital_words, capital_write);
-  let reverent = [
-    "i",
-    "I",
-    "me",
-    "you",
-    "he",
-    "him",
-    "his",
-    "my",
-    "your",
-    "who",
-    "whom",
-  ];
+  let reverent = app_en_learn_bible_gloss_urdu_reverent_words();
   let elsewhere = app_en_learn_bible_gloss_urdu_word_explains();
   let elsewhere_words = object_property_names(elsewhere);
   function elsewhere_capital_write(word) {

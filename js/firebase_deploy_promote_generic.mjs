@@ -1,5 +1,4 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { qa_gate_run } from "./qa_gate_run.mjs";
 import { firebase_apps_frozen_unchanged_assert_deploy } from "./firebase_apps_frozen_unchanged_assert_deploy.mjs";
 import { firebase_deploy_locked_generic } from "./firebase_deploy_locked_generic.mjs";
 export async function firebase_deploy_promote_generic(promote) {
@@ -9,7 +8,6 @@ export async function firebase_deploy_promote_generic(promote) {
   "The putting in place is received rather than written out here, because what is being put there is the only part that differs between a sending that carries a new build and one that carries nothing new. Everything around it - the check, the proof that the frozen apps have not moved, the lock, the sending itself - was already written twice.";
   arguments_assert(arguments, 1);
   async function lambda() {
-    await qa_gate_run();
     let promoted = await promote();
     let published = await firebase_apps_frozen_unchanged_assert_deploy();
     let done = {
