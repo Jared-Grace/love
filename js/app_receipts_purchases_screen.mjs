@@ -87,12 +87,13 @@ export function app_receipts_purchases_screen(root, folder_code, on_change) {
         day_card = app_receipts_day_card(list, text);
         day_before = day;
       }
+      let time_text = property_get(when, "time_text");
       app_receipts_purchase_row(
         day_card,
         purchase,
         php_per_usd,
         on_open,
-        property_get(when, "time_text"),
+        time_text,
       );
     }
   }
