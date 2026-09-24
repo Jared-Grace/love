@@ -1,3 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
+import { app_en_learn_bible_gloss_urdu_third_form_jobs } from "./app_en_learn_bible_gloss_urdu_third_form_jobs.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
 import { property_set } from "./property_set.mjs";
@@ -15,6 +17,12 @@ export function app_en_learn_bible_gloss_urdu_verb_explains() {
   "THE CAPITALS ARE NOW COPIED FROM THEIR SMALL-LETTER TWINS RATHER THAN TYPED OUT AGAIN, AND THE REASON IS THAT THE TYPED ONES HAD ALREADY DRIFTED. The rule directly above says the two say the same thing, and it was true when it was written. Then the wordings for 'is', 'are', 'was' and 'were' were made longer, one at a time, and every time only the small-letter line was changed - so four readers meeting a capitalised be-form at the head of a verse were handed the short old sentence while the reader meeting the same word mid-verse was handed the long new one. Nothing failed, because there is nothing here that could fail: two lines of an object literal agreeing is not a thing a run can check. Copying makes the rule true by construction instead of by attention, which is the only way a rule of this shape survives being edited.";
   "It was not found by rereading the table either. It surfaced when the four old wordings were written into the retired list and a check asked whether any retired wording is still somebody's settled one - and four were, all of them capitals. Worth keeping because it names what that check is actually for. It reads like bookkeeping about a list, and it is really the one question nobody thinks to ask: does this table still agree with itself.";
   "The all-capital spelling is built from the same place with its own sentence added, because there the capital does mean something extra and a reader needs telling. The name table writes a sentence for that case too, in slightly different words, and the two should probably become one - left alone here on purpose, because that is a change to two tables and this one is about the be-forms.";
+  "FOUR WORDINGS SAID ONLY WHERE THE FORM SITS, WHICH IS THE ONE THING THE READER COULD ALREADY SEE. 'been' said it comes after 'have', 'has' or 'had'; 'done' said the same; 'being' and 'having' said they are for an action in progress and that such forms end in 'ing'. Every word of that is true and none of it is the question. A reader looking at 'has been' can see 'been' sitting after 'has' - what they cannot see is what the pair is telling them. These four were the last stubs in a table whose other twenty entries say which verb, which time, and who it goes with.";
+  ("So each now says what its form is for. 'been' and 'done' are third forms, so they say what a third form does: after 'have' the action is finished, after 'be' the action was done to the thing. 'done' takes that sentence from the shared `",
+    fn_name("app_en_learn_bible_gloss_urdu_third_form_jobs"),
+    "` rather than spelling it, because the action verb table says it of every verb it knows, and a reader meets 'written' and 'done' in the same chapter. 'being' and 'having' say what the 'ing' form does when a third form follows it - 'being' marks the passive as it happens, 'having' marks the earlier of two actions.");
+  ("The phrases were checked against the store before they were written, not after. Saying the action was done to it is carried by a hundred and seventy nine different words in the store; the phrase for an action in progress by two hundred and seventy; 'ہستی' by a hundred and thirteen; 'ہو چُکا تھا' by thirty six. Two phrases that had seemed natural were dropped for failing the same test - 'پہلے سے چلی آ رہی' is carried by two words and 'جِیتی جاگتی' by two, which is one writer's habit rather than the store's language. What replaced them is what the sibling entries for 'have', 'has' and 'had' already say.");
+  ("'being' is told to name both of its jobs because the table cannot tell them apart. The word is a verb form in most verses and a noun in some - a living thing, somebody who exists - and a table keyed on spelling sees one word. Naming only the verb would be right most of the time and silently wrong the rest, which the rule five paragraphs up forbids. So the wording says the verb job, and then says the same spelling can be a noun and what it means there. That is the same answer the third form got: where the word has two jobs and the verse decides which, say both and let the reader do the deciding they are in the verse to do.");
   let r = {
     be: "'be' یعنی 'ہونا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ 'be' انگریزی کا سَب سے بے قاعدہ فعل ہے: حال میں یہ 'am'، 'is' اَور 'are' بن جاتا ہے اَور ماضی میں 'was' اَور 'were' — اِن میں سے کویٔی بھی 'be' جَیسا نہیں لگتا۔ یہ بُنیادی شکل 'to' کے بعد آتی ہے، اَور 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی۔",
     am: "فعل 'be' یعنی 'ہونا' کی حال کی شکل ہے — حال یعنی وہ وقت جو گُزرا نہیں۔ یہ صرف 'I' یعنی 'مَیں' کے ساتھ آتی ہے اَور کسی اَور کے ساتھ نہیں، اِس لیٔے 'am' دیکھتے ہی معلوم ہو جاتا ہے کہ کہنے والا اَپنی بات کر رہا ہے۔ اُردُو میں اِس کے لیٔے 'ہُوں' آتا ہے۔",
@@ -22,9 +30,9 @@ export function app_en_learn_bible_gloss_urdu_verb_explains() {
     are: "فعل 'be' یعنی 'ہونا' کی حال کی شکل ہے — حال یعنی وہ وقت جو گُزرا نہیں۔ یہ شکل تب آتی ہے جب بات ایک سے زیادہ کی ہو، یا جب 'you' کے ساتھ آٔے — چاہے 'you' ایک ہی شخص ہو۔ 'be' اِکلوتا انگریزی فعل ہے جس کی حال میں تین شکلیں ہیں: 'am'، 'is' اَور 'are'۔ اُردُو میں اِس کے لیٔے 'ہیں' آتا ہے۔",
     was: "فعل 'be' یعنی 'ہونا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ یہ شکل تب آتی ہے جب بات ایک ہی شخص یا چیز کی ہو۔ 'be' انگریزی کا سَب سے بے قاعدہ فعل ہے: ماضی میں یہ 'was' اَور 'were' بن جاتا ہے، اَور اِس میں '-ed' کہیں نہیں آتا۔ اُردُو میں اِس کے لیٔے 'تھا' یا 'تھی' آتا ہے۔",
     were: "فعل 'be' یعنی 'ہونا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ یہ شکل تب آتی ہے جب بات ایک سے زیادہ کی ہو، یا جب 'you' کے ساتھ آٔے۔ 'be' انگریزی کا سَب سے بے قاعدہ فعل ہے: ماضی میں یہ 'was' اَور 'were' بن جاتا ہے۔ اُردُو میں اِس کے لیٔے 'تھے' یا 'تھیں' آتا ہے۔",
-    been: "فعل 'be' کی وہ شکل ہے جو ہمیشہ 'have'، 'has' یا 'had' کے پِیچھے آتی ہے، اکیلی نہیں۔",
+    been: "فعل 'be' یعنی 'ہونا' کی وہ تِیسری شکل ہے جو ہمیشہ 'have'، 'has' یا 'had' کے پِیچھے آتی ہے، اکیلی نہیں۔ اُن کے ساتھ مِل کر یہ بتاتی ہے کہ حالت پہلے ہی ہو چُکی ہے۔ اَور اگر اِس کے بعد کِسی اَور فعل کی تِیسری شکل آٔے تو یہ بتاتی ہے کہ کام اُس پر کیا گیا۔ 'be' انگریزی کا سَب سے بے قاعدہ فعل ہے: اِس کی تِیسری شکل 'been' ہے، جو 'be' جَیسی بالکُل نہیں لگتی۔",
     being:
-      "فعل 'be' کی وہ شکل ہے جو چلتے ہوئے کام کے لیٔے آتی ہے۔ ہر ایسی شکل کے آخِر میں ing لگتا ہے۔",
+      "فعل 'be' یعنی 'ہونا' کی وہ شکل ہے جو چلتے ہوئے کام کے لیٔے آتی ہے۔ ہر اَیسی شکل کے آخِر میں 'ing' لگتا ہے۔ اگر اِس کے بعد کِسی اَور فعل کی تِیسری شکل آٔے تو یہ بتاتی ہے کہ کام اُسی وقت اُس پر کیا جا رہا تھا۔ یِہی لفظ اِسم بھی ہو سکتا ہے، اَور تب اِس کا مطلب ہے کویٔی ہستی، یعنی وُجُود رکھنے والا کویٔی۔",
     will: "مدد کرنے والا فعل ہے۔ یہ اپنے بعد والے فعل کو آنے والے وقت کا بنا دیتا ہے: ہوگا، کرے گا۔ لِکھتے وقت اِس کے آخِر میں l دو ہیں۔",
     shall:
       "مدد کرنے والا فعل ہے، جو 'will' کی طرح آنے والے وقت کو بتاتا ہے، مگر کم اِستعمال ہوتا ہے۔",
@@ -33,11 +41,15 @@ export function app_en_learn_bible_gloss_urdu_verb_explains() {
     have: "فعل ہے: رکھنا، پاس ہونا۔ یہ دُوسرے فعلوں کی مدد بھی کرتا ہے: اگلے فعل کے ساتھ مِل کر بتاتا ہے کہ کام پہلے ہی ہو چُکا ہے۔",
     has: "فعل 'have' کی وہ شکل ہے جو اِس وقت کے لیٔے، ایک کے ساتھ آتی ہے۔ یہ دُوسرے فعلوں کی مدد بھی کرتی ہے: اگلے فعل کے ساتھ مِل کر بتاتی ہے کہ کام پہلے ہی ہو چُکا ہے۔",
     had: "فعل 'have' کی وہ شکل ہے جو گُزرے ہوئے وقت کے لیٔے آتی ہے۔ یہ بےقاعدہ ہے: have → had → had۔ یہ دُوسرے فعلوں کی مدد بھی کرتی ہے: اگلے فعل کے ساتھ مِل کر بتاتی ہے کہ کام پہلے ہی ہو چُکا تھا۔",
-    having: "فعل 'have' کی وہ شکل ہے جو چلتے ہوئے کام کے لیٔے آتی ہے۔",
+    having:
+      "فعل 'have' یعنی 'رکھنا، پاس ہونا' کی وہ شکل ہے جو چلتے ہوئے کام کے لیٔے آتی ہے۔ ہر اَیسی شکل کے آخِر میں 'ing' لگتا ہے۔ کِسی اَور فعل کی تِیسری شکل سے پہلے آ کر یہ بتاتی ہے کہ وہ کام پہلے ہو چُکا تھا، اَور پِھر اگلی بات ہویٔی۔",
     do: "فعل ہے: کرنا۔ یہ سوال بنانے اَور اِنکار کرنے میں دُوسرے فعلوں کی مدد بھی کرتا ہے۔",
     does: "فعل 'do' کی وہ شکل ہے جو اِس وقت کے لیٔے، ایک کے ساتھ آتی ہے۔ یہ سوال بنانے اَور اِنکار کرنے میں دُوسرے فعلوں کی مدد بھی کرتی ہے۔",
     did: "فعل 'do' کی وہ شکل ہے جو گُزرے ہوئے وقت کے لیٔے آتی ہے۔ یہ بےقاعدہ ہے: do → did → done۔ یہ سوال بنانے اَور اِنکار کرنے میں دُوسرے فعلوں کی مدد بھی کرتی ہے۔",
-    done: "فعل 'do' کی وہ شکل ہے جو 'have'، 'has' یا 'had' کے پِیچھے آتی ہے۔",
+    done:
+      "فعل 'do' یعنی 'کرنا' کی وہ تِیسری شکل ہے جو 'have'، 'has' یا 'had' کے پِیچھے آتی ہے۔ " +
+      app_en_learn_bible_gloss_urdu_third_form_jobs() +
+      " یہ فعل بےقاعدہ ہے: do → did → done۔",
     can: "مدد کرنے والا فعل ہے۔ یہ بتاتا ہے کہ کویٔی کام ہو سکتا ہے: سکتا ہے۔",
     could:
       "مدد کرنے والا فعل ہے۔ یہ 'can' کی گُزرے ہوئے وقت والی شکل ہے: سکتا تھا۔",
