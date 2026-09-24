@@ -252,7 +252,7 @@ export function song_image_couplets() {
       first: "cursed on a cross",
       second: "HE drank the cup",
       symbol:
-        "One plain cup of white glass standing alone and upright, a deep round bowl on a short stem with a round foot under it, filled to the brim with deep crimson, drawn very large with the bowl reaching almost to the white border on both sides and the foot standing near the bottom of it",
+        "One plain cup of white glass standing alone and upright, a deep round bowl on a short stem with a round foot under it, filled to the brim with deep crimson, drawn very large with the bowl reaching almost to the white border on both sides and the foot standing near the bottom of it, the crimson inside the cup being the only red or crimson anywhere in the window, the field behind it cobalt blue above, emerald green between the lines and violet below",
       symbol_ref: "Matthew 26:39, John 18:11",
       same_as: 0,
     },
