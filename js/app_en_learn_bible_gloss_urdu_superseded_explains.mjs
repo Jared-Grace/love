@@ -13,6 +13,8 @@ export function app_en_learn_bible_gloss_urdu_superseded_explains() {
   "THE WORD IS NAMED BESIDE EACH WORDING AND THE CAPITAL FORM IS BUILT RATHER THAN TYPED. The settled table does not hold a capitalised entry, it derives one by adding a sentence about the capital to the small-letter wording; so retiring a wording strands its capital form too, and that form was never written anywhere to be copied from. Measured at the moment this was found: one hundred and eighty-nine places carrying the retired wording for 'The' alone, invisible to a sweep that knew only the nine small-letter strings.";
   "A WORD THAT IS ALREADY WRITTEN WITH A CAPITAL GETS NO DERIVED FORM EITHER. The capital pass builds a capitalised entry by taking a small-letter wording and adding a sentence about the sentence start, so it only ever runs on a word that is written in small letters. A word that carries its capital always, a name, is spelled with the capital in the table itself and the table adds a different sentence about the capital to it, one about names rather than about sentence starts. Building the sentence-start form for such a word here would name a sentence nothing in the table ever wrote, which is the same fault this list exists to avoid. Every word on the list today is written in small letters, so asking costs nothing now and holds the moment a name is retired.";
   "The word is what the list needs beyond the string, because the capital form exists only for words the capital pass would capitalise. The words whose capital has two possible reasons get no capitalised entry at all, so building one for them here would name a sentence the table never wrote and hand the sweep permission to overwrite something a person authored. Asking the same list the capital pass asks is what makes the two agree by construction rather than by luck.";
+  "THE TWO NAME WORDINGS WERE FOUND BY LOOKING FOR THE FAULT RATHER THAN BY REMEMBERING IT. A wording for a name is built by the name table and ends in the one sentence that table joins onto every one of its wordings, and nothing else in the store writes that sentence. So every place holding a wording that ends in it and is not the wording the table says today is a wording that was replaced without being written down here, and the store can simply be asked for them. Asked once, it answered with exactly two shapes over four hundred and twelve places, both of them the same word's, both retired on one day when the table was told to stop spelling the name inside the wording.";
+  "The rule that retired them is worth keeping beside them, because a reader meeting the old wording will think it the better one. It says the name, and the new one does not. The name table's own reason is that our spelling of the name is already standing beside the wording in the short Urdu written for the word, so a wording that spelled it again would put the same name twice on one line and give two spellings the chance to drift apart when somebody rules on how the name should be written. The new wording is shorter because the line as a whole already says the thing.";
   "Word for word, and never trimmed. A wording here costs one string and one comparison; a wording left out costs entries nobody will ever find again.";
   let retired = [
     [
@@ -47,6 +49,14 @@ export function app_en_learn_bible_gloss_urdu_superseded_explains() {
     [
       "an",
       "حرفِ تعریف ہے، مگر وہ والا جو کِسی ایک اَن جانی چیز کے لیٔے آتا ہے۔ ’a‘ کی جگہ ’an‘ تب آتا ہے جب اگلا لفظ حرفِ عِلّت کی آواز سے شُروع ہو۔",
+    ],
+    [
+      "Jesus",
+      "یِسُوع کا خاص نام ہے، یعنی اُن ہی کا جِن کی خُوشخبری یہ کِتاب سُناتی ہے۔ انگریزی میں ہر خاص نام کا پہلا حرف بڑا لکھا جاتا ہے۔",
+    ],
+    [
+      "JESUS",
+      "یِسُوع کا خاص نام ہے۔ یہاں یہ پُورا کا پُورا بڑے حرفوں میں لِکھا گیا ہے، کیونکہ یہ ایک تختی پر لِکھی ہویٔی بات ہے۔ انگریزی میں ہر خاص نام کا پہلا حرف بڑا لکھا جاتا ہے۔",
     ],
   ];
   let reverent = app_en_learn_bible_gloss_urdu_reverent_words();
