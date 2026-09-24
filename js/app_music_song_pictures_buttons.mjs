@@ -1,3 +1,6 @@
+import { html_hash_name_second_or_empty } from "./html_hash_name_second_or_empty.mjs";
+import { app_music_hash_pictures } from "./app_music_hash_pictures.mjs";
+import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_images_kept_urls } from "./song_images_kept_urls.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -24,6 +27,7 @@ export function app_music_song_pictures_buttons(parent, pictures) {
   "IT SAYS THE PICTURES WERE DRAWN BY A MACHINE, and that is a promise kept rather than a note added. The terms these were drawn under forbid holding a machine-made picture out as a person's work, and a picture on a page with nothing said about it is held out as a person's work by default - a reader has no other thing to assume. So the sentence is owed, and it is owed whether or not anybody would have asked.";
   "IT IS SAID ONCE, HERE, RATHER THAN UNDER EVERY DRAWING. Thirty-six copies of one sentence is thirty-six times the reading for the same fact, and a reader who has been told once does not need telling again on the same page. This is where a reader meets the whole set and decides whether to fetch it, which is the moment the fact is worth having.";
   "IT SITS ABOVE THE COUNT AND NOT BELOW IT, because the count changes while a fetch is running and anything under it would move as it did. What is permanent goes first and what is still happening goes last.";
+  "AN ADDRESS ENDING IN /pictures PRESSES SHOW ITSELF, as in #the_FATHERs_SON/pictures, because a link sent to somebody to look at the drawings should land on the drawings and not on a button they then have to find. It asks exactly what the press asks - a person who follows that link has already said yes to the download.";
   arguments_assert(arguments, 2);
   let urls = song_images_kept_urls();
   let none = list_empty_is(urls);
@@ -63,5 +67,11 @@ export function app_music_song_pictures_buttons(parent, pictures) {
     app_music_song_pictures_buttons_refresh(buttons);
   }
   app_music_song_pictures_buttons_refresh(buttons);
+  let asked = html_hash_name_second_or_empty();
+  let right = app_music_hash_pictures();
+  let pictures_asked = equal(asked, right);
+  if (pictures_asked) {
+    on_show();
+  }
   return buttons;
 }

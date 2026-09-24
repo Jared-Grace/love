@@ -1,7 +1,7 @@
+import { html_hash_name_first } from "./html_hash_name_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_reload_on_hash_change } from "./html_reload_on_hash_change.mjs";
 import { app_shared_reading_column } from "./app_shared_reading_column.mjs";
-import { html_hash_name_get } from "./html_hash_name_get.mjs";
 import { app_music_song_named } from "./app_music_song_named.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_music_songs_show } from "./app_music_songs_show.mjs";
@@ -16,7 +16,7 @@ export async function app_music(context) {
   arguments_assert(arguments, 1);
   html_reload_on_hash_change();
   let content = app_shared_reading_column(context);
-  let name = html_hash_name_get();
+  let name = html_hash_name_first();
   let song = app_music_song_named(name);
   let unnamed = null_is(song);
   if (unnamed) {
