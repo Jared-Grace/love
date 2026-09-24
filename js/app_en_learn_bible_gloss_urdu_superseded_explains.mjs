@@ -17,6 +17,7 @@ export function app_en_learn_bible_gloss_urdu_superseded_explains() {
   "The rule that retired them is worth keeping beside them, because a reader meeting the old wording will think it the better one. It says the name, and the new one does not. The name table's own reason is that our spelling of the name is already standing beside the wording in the short Urdu written for the word, so a wording that spelled it again would put the same name twice on one line and give two spellings the chance to drift apart when somebody rules on how the name should be written. The new wording is shorter because the line as a whole already says the thing.";
   "Word for word, and never trimmed. A wording here costs one string and one comparison; a wording left out costs entries nobody will ever find again.";
   "THE FIFTY IRREGULAR PAST FORMS WERE COPIED OUT BEFORE THE GENERATOR THAT WROTE THEM WAS CHANGED, AND THAT ORDER IS THE RULE RATHER THAN THE HABIT. They were never typed anywhere: a loop over the map of irregular verbs built each one by joining a head to a tail, so the only place the old sentence ever existed as a string was in the answer that loop returned. Change the loop first and the old string is gone from the running repo entirely, and a list built afterwards by asking the same loop hands back the new sentence under fifty keys, which retires nothing and quietly tells the sweep that the new wording is stale. So the old answer was read out of the live table and pasted here as plain text, and only then was the generator touched.";
+  "A WORD ALREADY WRITTEN IN CAPITALS IS NAMED HERE IN CAPITALS AND GETS NOTHING DERIVED, WHICH IS WHY THE LIST ASKS THE WORD RATHER THAN THE WORDING. 'IS' is the first such word on the list. Its retired wording is the retired wording for 'is' with one more sentence joined on, about the word being written in capitals throughout - so the two strings are nearly the same and only the word beside them says which is which. Read from the wording alone there would be no way to know that one of them must not be capitalised again.";
   "That is why everything on this list is a literal string even where a generator could produce it. This list is a record of what was in front of readers, and a record that recomputes itself is not a record. The capital forms are the single exception and they are safe for the opposite reason: they are derived from a literal already on the list, by the same rule the settled table uses, so they follow the retired wording rather than the current one.";
   let retired = [
     [
@@ -29,6 +30,10 @@ export function app_en_learn_bible_gloss_urdu_superseded_explains() {
     ],
     ["because", "یہ لفظ وجہ بتاتا ہے: 'کیونکہ'۔"],
     ["is", "فعل 'be' کی وہ شکل ہے جو اِس وقت کے لیٔے، ایک کے ساتھ آتی ہے: ہے۔"],
+    [
+      "IS",
+      "فعل 'be' کی وہ شکل ہے جو اِس وقت کے لیٔے، ایک کے ساتھ آتی ہے: ہے۔ یہاں یہ پُورا بڑے حرفوں میں لِکھا گیا ہے۔",
+    ],
     [
       "am",
       "فعل 'be' کی وہ شکل ہے جو اِس وقت کے لیٔے، صِرف 'I' کے ساتھ آتی ہے: ہُوں۔",
