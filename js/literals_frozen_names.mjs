@@ -89,6 +89,7 @@ export function literals_frozen_names() {
     fn_name("app_en_learn_bible_gloss_urdu_words_sound_slow_upload_namespace"),
     fn_name("app_replace_rule_set_hash_key"),
     fn_name("app_replace_goal_hash_key"),
+    fn_name("app_receipts_database_name"),
   ];
   return names;
 }
