@@ -21,9 +21,7 @@ export function app_code_hash_write(context) {
   let v = app_code_lesson_hash_key();
   add_part(v, value2);
   app_shared_hash_screen_add(context, hash);
-  let value4 = storage_session_get_context(context, "quiz_index");
-  let v3 = app_code_quiz_hash_key();
-  add_part(v3, value4);
+  app_code_hash_quiz_add(context, hash);
   app_code_hash_review_add(context, hash);
   html_hash_set_object(hash);
 }

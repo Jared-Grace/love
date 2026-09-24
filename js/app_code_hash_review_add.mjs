@@ -13,12 +13,7 @@ export function app_code_hash_review_add(context, hash) {
   "Left in, it is not merely noise. The address is read back on the way in, so a link copied from a lesson would quietly point whoever opened it at the copier's review rather than the one their own progress stands at - a wrong answer given silently, to somebody who never mentioned a review.";
   "Leaving the review does not forget which one it was: the number stays in this tab, and the review's own half-finished queue is kept on the device under that number. So the word comes back into the address the moment the review is opened again, and a refresh in this same tab never needed it at all.";
   let key = app_code_review_number_key();
-  let number = storage_session_get_context(context, key);
-  let present = null_not_is(number);
-  let screen = app_shared_screen_stored_get(context);
-  let on_review = equal(screen, fn_name("app_code_review"));
-  if (present && on_review) {
-    let word = app_code_review_hash_key();
-    property_set(hash, word, number);
-  }
+  let screen_name = fn_name("app_code_review");
+  let word = app_code_review_hash_key();
+  app_shared_hash_add_on_screen(context, hash, screen_name, key, word);
 }
