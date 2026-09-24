@@ -1,3 +1,6 @@
+import { text_includes } from "./text_includes.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { git_head_commit } from "./git_head_commit.mjs";
 import { qa_app_commit_shipped_names } from "./qa_app_commit_shipped_names.mjs";
@@ -21,7 +24,14 @@ export async function qa_app_commit_gate_run_reuse(search) {
   arguments_assert(arguments, 1);
   let head = await git_head_commit();
   let reach = await qa_app_commit_shipped_names(search, head);
-  let paths = list_map(reach, function_name_to_path_relative);
+  ("The shipped list also holds the app's own name, its page and the Bible folders it can show. The page is made from the functions, so the functions answer for it; a name with no file of its own simply matches nothing in the comparison. A dotted name is left out because it cannot be a function's name.");
+  function undotted_is(name) {
+    let dotted = text_includes(name, ".");
+    let b = not(dotted);
+    return b;
+  }
+  let named = list_filter(reach, undotted_is);
+  let paths = list_map(named, function_name_to_path_relative);
   let folder = folder_current_absolute();
   let report = await qa_commit_named_report();
   let newest = qa_commit_named_report_newest(report);

@@ -19,6 +19,7 @@ export async function app_shared_refresh(context) {
   if (has_after) {
     after_refresh(context);
   }
+  app_shared_history_screen_stamp(context);
   let scroll_handled = property_get_or_null(context, "scroll_handled");
   property_set(context, "scroll_handled", null);
   let handled = null_not_is(scroll_handled);

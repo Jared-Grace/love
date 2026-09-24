@@ -6,9 +6,9 @@ import { equal } from "./equal.mjs";
 import { html_history_push } from "./html_history_push.mjs";
 export function app_shared_history_push_if(context, screen_name) {
   arguments_assert(arguments, 2);
-  ("moving to another screen is a page the reader can go back from, so it adds a step to the back button. Only an app that can read its screen back out of the address gets one - a step it could not draw again would leave the back button changing the address and nothing else");
+  ("moving to another screen is a page the reader can go back from, so it adds a step to the back button. The step is only added once something is listening to draw it again - a step nothing draws would leave the back button changing the address and nothing else");
   ("drawing the screen already showing again is not moving anywhere, and a step for it would make the back button seem to do nothing");
-  let joined = property_exists(context, "hash_restore");
+  let joined = property_exists(context, "history_listening");
   if (not(joined)) {
     return;
   }
