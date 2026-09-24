@@ -33,6 +33,10 @@ export function app_en_learn_bible_gloss_urdu_superseded_explains() {
   "THE ROUND AFTER THAT BEGAN BY FINDING THE TABLE WRONG, WHICH EVERY ROUND BEFORE IT HAD ASSUMED COULD NOT HAPPEN. Retiring a wording is only safe if the sentence replacing it says everything the old one said, so each round had read the store against the table and asked what the store added. Reading 'heard' the other way round - what does the table say that the store does not - showed the table saying something false. It said English usually adds '-ed' but that in a few old verbs the word itself changes, 'hear' to 'heard'. Nothing changed. The spelling adds a plain 'd'; it is the sound that moves, and a store wording nobody had touched said exactly that, better than the sentence that had replaced it.";
   "One template wrote it for every irregular verb alike, so the fault was wherever a verb is irregular and one of its forms is still spelled the ordinary way. There are two: 'hear' makes 'heard' with a bare 'd', and 'sow' makes 'sowed' with a plain '-ed' before going on to 'sown'. Six live sentences said something untrue about them, including one that told a reader no '-ed' had been added while printing a word with '-ed' on the end of it. The table now asks which of the three things is true of the form in front of it - the word changed, or only the sound changed, or nothing changed and this form is regular - and the line about having to memorise the verb is written only where there is something to memorise.";
   "Four wordings are retired here for that reason rather than for being thin, and they are the first in this list that the prefix test could never have found. A corrected sentence is not the old one with a clause appended; it is the old one with a clause replaced, so the two diverge in the middle and neither begins the other. They had to be asked for by word, by searching the store for the two sentences the table has stopped writing. That is the shape of every repair after a table is corrected, and it is worth knowing that the cheap test does not cover it.";
+  "THE ROUND AFTER THAT CORRECTED TWO TABLES BEFORE IT RETIRED ANYTHING, AND ONE OF THE CORRECTIONS IS WHAT MADE THE RETIREMENTS LEGAL. Reading the store the other way round for 'then' found twenty five sightings teaching that the word sounds like 'than' and is a different word, which the table had never said - the same lookalike fact, found the same way, that 'there' and 'their' had turned up a round earlier. Until that sentence was added, every stored wording carrying the 'than' warning said something the table did not, so none of them could be written over. Adding one clause to the table turned twenty five entries from untouchable into stale. A correction is not a detour on the way to a retirement; it is often the thing that permits it.";
+  "'kingdom' was the plainer of the two and the store was emphatic about it. The table gave the meaning and never said the word is 'king' with '-dom' on the end, while the store said so more than forty times over half a dozen wordings, some of them nothing but 'king + -dom۔'. The noun table's own rule already licensed the sentence - it allows a second one for a word that looks like another word already met, and 'king' sits four lines away in the same table. So this was not a judgement about what a beginner needs; it was a rule the table states about itself, unapplied.";
+  "What was kept under those two words is again the better half of the record. One 'kingdom' wording carries 'free' to 'freedom' as a second example of the same ending, which teaches the suffix rather than this word and is not in the table. Two are about the verse rather than the word - one saying the word has come round a second time in the same verse, one about what the Lord is and is not conceding by using it. And the sense of 'then' that means 'in that case' was deliberately left, because the table now refuses that sense on purpose and a wording carrying it therefore still says something the table does not.";
+  "THE THIRD CANDIDATE COULD NOT BE CORRECTED AT ALL, AND WHY NOT IS WORTH MORE THAN THE CORRECTION WOULD HAVE BEEN. 'priests' was carrying a true fact the table drops - that 'ie' here is said as a long 'ee' - the same family as the silent 'w' of 'who' that was kept a round earlier. But the plural noun table does not write its sentences; it builds each one from the Urdu word and the singular by a template with three endings and no room for anything else, and the singular 'priest' has no entry anywhere. So the fact has no home without giving that template a fourth kind of thing to say, which is a change to a settled design rather than a wording. It was left alone and written down here instead, because a candidate refused for a reason is a finding and a candidate silently dropped is a hole.";
   let retired = [
     [
       "be",
@@ -887,6 +891,59 @@ export function app_en_learn_bible_gloss_urdu_superseded_explains() {
       "JESUS",
       "یِسُوع کا خاص نام ہے۔ یہاں یہ پُورا کا پُورا بڑے حرفوں میں لِکھا گیا ہے، کیونکہ یہ ایک تختی پر لِکھی ہویٔی بات ہے۔ انگریزی میں ہر خاص نام کا پہلا حرف بڑا لکھا جاتا ہے۔",
     ],
+    ["then", "ظرفِ زمان: اُس کے بعد۔"],
+    ["then", "ظرفِ زمان: اُس وقت۔"],
+    ["then", "ظرفِ زمان۔"],
+    ["then", "ترتیب کا ظرف۔"],
+    ["then", "ظرفِ زمان۔ than (سے) سے مُختلِف۔"],
+    ["then", "ظرفِ زمان: اُس وقت۔ than (سے) سے مِلتا جُلتا مگر مُختلِف۔"],
+    ["then", "ظرفِ زمان: اُس کے بعد۔ than (سے) سے ہم آواز مگر مُختلِف۔"],
+    ["kingdom", "king + -dom۔"],
+    ["kingdom", "king (بادشاہ) + -dom (حُکُومت کا عِلاقہ)۔"],
+    ["kingdom", "king (بادشاہ) + -dom (حُکومت، عِلاقہ)۔"],
+    ["kingdom", "king (بادشاہ) + -dom: حُکومت کا عِلاقہ یا حالت۔"],
+    ["kingdom", "king + -dom: عملداری کا لاحقہ۔"],
+    ["kingdom", "king + -dom = ’بادشاہ کا عِلاقہ‘۔"],
+    [
+      "kingdom",
+      "نام کا لفظ ہے اَور اُس مُلک کو بتاتا ہے جہاں بادشاہ کا حُکم چلتا ہے۔",
+    ],
+    [
+      "kingdom",
+      "نام کا لفظ ہے اَور اُس مُلک کو بتاتا ہے جہاں بادشاہ حُکومت کرتا ہے۔",
+    ],
+    [
+      "kingdom",
+      "نام کا لفظ ہے اَور اُس مُلک کو بتاتا ہے جِس پر کویٔی بادشاہ حُکومت کرے۔",
+    ],
+    [
+      "kingdom",
+      "نام کا لفظ ہے اَور اُس مُلک کو بتاتا ہے جِس پر کویٔی بادشاہ حُکومت کرتا ہے۔",
+    ],
+    [
+      "kingdom",
+      "نام کا لفظ ہے اَور اُس مُلک کے لیٔے آتا ہے جِس پر بادشاہ حُکومت کرتا ہے۔",
+    ],
+    [
+      "kingdom",
+      "نام کا لفظ ہے اَور اُس جگہ کے لیٔے آتا ہے جہاں بادشاہ کا حُکم چلتا ہے۔",
+    ],
+    [
+      "kingdom",
+      "نام کا لفظ ہے اَور اُس جگہ اَور لوگوں کو بتاتا ہے جِن پر بادشاہ کی حُکومت ہو۔",
+    ],
+    ["kingdom", "نام کا لفظ ہے اَور بادشاہ کی حُکومت کو بتاتا ہے۔"],
+    ["kingdom", "نام کا لفظ ہے اَور بادشاہ کے راج کے لیٔے آتا ہے۔"],
+    [
+      "kingdom",
+      "نام کا لفظ ہے اَور بادشاہ کی حکومت اَور اُس کے مُلک کو بتاتا ہے۔",
+    ],
+    [
+      "kingdom",
+      "یہ اِسم ہے اَور 'king' یعنی 'بادشاہ' سے بنا ہے۔ آخر کا حصّہ 'dom' حکومت اَور عملداری کے معنی دیتا ہے، اِس لیٔے پُورے لفظ کا مطلب ہے وہ سب کچھ جِس پر بادشاہ کا حُکم چلتا ہے۔",
+    ],
+    ["me", "ضمیرِ مفعُول، واحد مُتکلِّم۔"],
+    ["me", "یہ 'I' کی مفعولی صُورت ہے۔"],
   ];
   let reverent = app_en_learn_bible_gloss_urdu_reverent_words();
   let tail = app_en_learn_bible_gloss_urdu_capital_tail();
