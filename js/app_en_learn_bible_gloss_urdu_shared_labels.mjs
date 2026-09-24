@@ -46,6 +46,9 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
   "The possessive refusal was undone by argument rather than by work, which is the rarer case and needs saying plainly so nobody re-argues it. ‘It shows possession and it belongs to more than one’ was refused because ‘your’ can be one person. It is admitted now on the exception written four paragraphs up: what the label says about ‘your’ is not merely missing from that settled wording, it is wrong, and a beginner told that ‘your’ means more than one will have to unlearn it in the next verse. The refusal was written before that exception had been stated, and it is left standing above rather than edited away, because a refusal that later dissolved is worth more as a record of both readings than as a tidy list.";
   "One in the batch is refused and the reason is the ordinary one. ‘It is a helping verb: with not it makes the negative’ stands over ‘do’ and ‘does’, and it names ‘not’ where both settled wordings say only that the word helps in making questions and negatives. That one word is something the reader would keep, so the label stays. It sits beside two admitted labels that look almost identical, which is the point: the test is read word by word, and a label is not admitted by resembling one that was.";
   "The last of the ten needed a line in the table next door before it could go in, and the shape is worth naming because it will recur. ‘This small word joins two statements and gives the reason’ stands over ‘because’, ‘for’, ‘since’, ‘that’ and ‘For’. Four of the five said both halves; ‘because’ said only the reason, so a hundred and thirty-two entries were held by one short entry in the small-words table. It was widened and the label went in - the same story as ‘after’ several paragraphs above, and the second time a refusal has worked as a finder for the thinnest wording in a settled table.";
+  "Seven more went in together and all seven stand over one word, ‘to’, which no label had reached until now. Nine hundred and seventy-four entries were carrying a sentence about ‘to’ that named only the job it was doing in that verse: ‘a mark that comes before a verb’, ‘the infinitive's to’, ‘preposition: toward’. Every one of those is true and every one is half the word. ‘to’ is the clearest case in the store of the rule written at the top of the small-words table - a word with two jobs is given both, or the reader meets the other job later with nothing to hang it on - and it took a count of the store rather than a reading of the table to notice that nearly a thousand places were teaching one job at a time.";
+  "Two of the seven were refused first and then admitted, and it is the same shape as ‘because’ one paragraph up. They said that ‘to’ before a verb makes the Urdu that ends in ‘نا’, and the settled wording said the base form without naming the Urdu - so those two hundred and eight entries were being held by a sentence that was genuinely poorer than what they already had. The settled wording was widened to name it, with ‘to read’ and ‘پڑھنا’ written out, and the two went in. Three times now the list has been right and the table has been thin.";
+  "Two more are refused and stay refused, both for reasons already written above rather than new ones. ‘The same small word that makes the next verb's base form’ opens with ‘the same’, which points at an earlier place in the verse and means nothing where it would be moved to. ‘...here it gives the purpose’ ends with ‘here’, which is a claim about the verse and not about the word. A sentence that cannot be moved is not a label whatever else it is, and that test has now rejected more candidates than the word-for-word one.";
   let labels = [
     "معرفہ حرفِ تعریف۔",
     "نکرہ حرفِ تعریف۔",
@@ -239,6 +242,13 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
     "یہ لفظ مِلکیّت بتاتا ہے اَور بولنے والے اَور اُس کے ساتھیوں کی ہے۔",
     "ضمیر ہے۔ 'we' کی مِلکیت والی صُورت۔",
     "یہ چھوٹا لفظ دو باتوں کو جوڑتا ہے اَور وجہ بتاتا ہے۔",
+    "یہ چھوٹا لفظ اگلے فعل سے پہلے آ کر اُس کی بُنیادی شکل بناتا ہے۔",
+    "فعل سے پہلے آنے والا نِشان۔",
+    "یہ 'to' اگلے فعل کے ساتھ آ کر اُس کا مصدر بناتا ہے، جیسے اُردُو میں آخر کا 'نا'۔",
+    "حرفِ جار ہے۔ یہ 'to' اگلے فعل کے ساتھ آ کر اُس کا مصدر بناتا ہے، جیسے اُردُو میں آخر کا 'نا'۔",
+    "مصدر کا to۔",
+    "حرفِ جار: طرف۔",
+    "یہ چھوٹا لفظ رُخ بتاتا ہے: کِس کی طرف۔",
   ];
   return labels;
 }
