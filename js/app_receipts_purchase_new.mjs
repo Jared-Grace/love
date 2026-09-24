@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { date_zone_date_time } from "./date_zone_date_time.mjs";
-import { property_get } from "./property_get.mjs";
 import { country_philippines } from "./country_philippines.mjs";
+import { property_get } from "./property_get.mjs";
+import { date_zone_date_time } from "./date_zone_date_time.mjs";
 import { uuid_browser } from "./uuid_browser.mjs";
 import { app_receipts_purchase_save } from "./app_receipts_purchase_save.mjs";
 export async function app_receipts_purchase_new(folder_code) {
@@ -20,6 +20,8 @@ export async function app_receipts_purchase_new(folder_code) {
     time: property_get(wall, "time"),
     price: "",
     description: "",
+    notes: "",
+    color: "blue",
     photos: [],
   };
   await app_receipts_purchase_save(purchase);
