@@ -12,9 +12,13 @@ import { not_equal } from "./not_equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_receipts_purchase_card } from "./app_receipts_purchase_card.mjs";
 import { list_size } from "./list_size.mjs";
+import { app_receipts_zone_get } from "./app_receipts_zone_get.mjs";
+import { app_receipts_zone_choose } from "./app_receipts_zone_choose.mjs";
+import { app_receipts_purchase_when } from "./app_receipts_purchase_when.mjs";
 import { date_year_month_day } from "./date_year_month_day.mjs";
-import { app_shared_container_blue_medium_titled } from "./app_shared_container_blue_medium_titled.mjs";
+import { app_receipts_day_card } from "./app_receipts_day_card.mjs";
 import { app_receipts_purchase_row } from "./app_receipts_purchase_row.mjs";
+import { app_receipts_zone_set } from "./app_receipts_zone_set.mjs";
 import { app_receipts_purchase_new } from "./app_receipts_purchase_new.mjs";
 import { app_receipts_unsent_all } from "./app_receipts_unsent_all.mjs";
 import { html_text_set } from "./html_text_set.mjs";
@@ -68,18 +72,33 @@ export function app_receipts_purchases_screen(root, folder_code, on_change) {
     if (equal(left2, 0)) {
       html_p_text(list, "No purchases yet - press ➕ Add a purchase");
     }
-    ("The list is newest first, so each day's purchases sit together; each day is a card titled with the day, the same titled card other apps group their lists in.");
+    ("Above the list the person picks whose clock it is read in, Philippine or eastern US; the days and times below follow it, and the choice is kept on this phone for next time.");
+    let country = app_receipts_zone_get();
+    let zone = property_get(country, "zone");
+    app_receipts_zone_choose(list, zone, on_zone);
+    ("The list is newest first, so each day's purchases sit together; each day is a card titled with the day on the chosen clock. Moving every purchase by the same hours keeps them in order, so a day's purchases still sit together.");
     let day_before = null;
     let day_card = null;
     for (let purchase of purchases) {
-      let day = property_get(purchase, "date");
+      let when = app_receipts_purchase_when(purchase, zone);
+      let day = property_get(when, "date");
       if (not_equal(day, day_before)) {
         let text = date_year_month_day(day);
-        day_card = app_shared_container_blue_medium_titled(list, text);
+        day_card = app_receipts_day_card(list, text);
         day_before = day;
       }
-      app_receipts_purchase_row(day_card, purchase, php_per_usd, on_open);
+      app_receipts_purchase_row(
+        day_card,
+        purchase,
+        php_per_usd,
+        on_open,
+        property_get(when, "time_text"),
+      );
     }
+  }
+  async function on_zone(zone) {
+    app_receipts_zone_set(zone);
+    await list_show();
   }
   async function on_open(purchase) {
     open_key = property_get(purchase, "key");
