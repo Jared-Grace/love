@@ -33,12 +33,12 @@ export async function qa_app_commit_gate_run_reuse(search) {
     let changed = text_trim(out);
     let same = text_empty_is(changed);
     if (same) {
-      let judged = await qa_app_commit_gate_run_at_reach(search, commit, reach);
-      object_merge(judged, {
+      let earlier = await qa_app_commit_gate_run_at_reach(search, commit, reach);
+      object_merge(earlier, {
         head,
         reused: true,
       });
-      return judged;
+      return earlier;
     }
   }
   let judged = await qa_app_commit_gate_run_at_reach(search, head, reach);
