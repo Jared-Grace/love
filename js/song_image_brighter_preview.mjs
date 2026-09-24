@@ -1,3 +1,4 @@
+import { property_list_empty_is } from "./property_list_empty_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_image_page_shell } from "./song_image_page_shell.mjs";
 import { song_image_brighter_swaps_name } from "./song_image_brighter_swaps_name.mjs";
@@ -13,10 +14,11 @@ export async function song_image_brighter_preview() {
   "BEFORE AND AFTER SIT SIDE BY SIDE, because brighter is only ever brighter than something; seen alone, the copy is judged against a memory of the original.";
   "WHICH COUPLETS ARE HERE IS WHATEVER THE LIST NAMES, and the list is written by the command that draws the copies, so a fresh round is one command and this file never changes.";
   "WITH NO LIST WRITTEN IT SAYS SO rather than coming up blank, because a blank page reads as one that failed to load.";
+  "AN APPROVED PICTURE IS LEFT OFF, because the page is a list of what still needs a decision; it is left off only when the page opens and never the moment it is approved, so a press made by mistake can still be taken back, and a line says how many were left off so an empty page is not read as a broken one.";
   arguments_assert(arguments, 0);
   let said =
-    "each picture as published, beside a brighter copy - tap a picture to accept it " +
-    "(a green frame means accepted, and it is saved at once; tap again to take it back), " +
+    "each picture as published, beside a brighter copy - press Approve under one to accept it " +
+    "(it is saved at once; press again to take it back, and once approved it is left off this page the next time it opens), " +
     "and use the box under it to say what is still wrong";
   let root = song_image_page_shell(said);
   let name = song_image_brighter_swaps_name();
@@ -27,8 +29,15 @@ export async function song_image_brighter_preview() {
     return root;
   }
   let listed = property_get(swaps, "swaps");
+  let hidden = 0;
   for (let swap of listed) {
-    song_image_brighter_card(root, swap, name);
+    if (property_list_empty_is(swap, "chosen")) {
+      song_image_brighter_card(root, swap, name);
+    } else {
+      hidden = hidden + 1;
+    }
   }
+  let count = song_image_text_quiet_line(root);
+  html_text_set(count, hidden + " already approved, not shown");
   return root;
 }
