@@ -17,6 +17,7 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
   "A capitalised verb is written only where the store actually holds one. For a verb the capital has a single cause - the word stands at the head of what is being said - and that is what its entry says. A name is the harder case and is handled in the name table, because there a capital has two causes and naming only one of them would mislead.";
   "Thirty six verbs were added to the table in one go on 2026-09-24, and where the list came from is the part worth keeping. It was not thought up: it was read off the store, by asking which words are carrying a shared label right now and being held back from the sweep only because nothing here answers to them. Every one of those words is already in front of a reader with a sentence that tells them nothing. So the table grows where the store says it is thin rather than where a list of common English verbs would have said it should be, and the same reading can be taken again after this to find the next thirty six.";
   "Two of the added meanings are worth a line because the obvious Urdu was already taken. ‘build’ is not given ‘بنانا’, which the table already gives to ‘make’, because a reader meeting the same Urdu under two different English words learns that the two are the same word, which they are not. ‘lay’ and ‘put’ have the same trouble and are separated the same way. Where two English verbs genuinely do mean the same thing - ‘minister’ and ‘serve’ - the same Urdu is given to both on purpose, and that is not the same case.";
+  "Two words the store is holding entries on were left out, and the reason is the merge above this one rather than any doubt about the words. ‘do’ belongs to the helping-verb table next door, and ‘kiss’ is written as a naming word in the noun table, so adding either here would have made a word that belongs to two kinds - which the strict merge refuses, correctly. The entries on ‘doing’ and ‘kissing’ stay held until somebody decides which table owns the verb, and that is a decision about the tables rather than about the store.";
   let meaning = {
     say: "کہنا",
     tell: "بتانا",
@@ -65,7 +66,6 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
     serve: "خِدمت کرنا",
     report: "خبر دینا",
     make: "بنانا",
-    do: "کرنا",
     teach: "سِکھانا",
     weep: "رونا",
     shout: "چِلّانا",
@@ -96,7 +96,6 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
     wonder: "حَیران ہونا",
     sway: "ہِلنا",
     minister: "خِدمت کرنا",
-    kiss: "چُومنا",
     touch: "چھُونا",
     drive: "نِکالنا",
     find: "ڈھُونڈ نِکالنا",
@@ -129,7 +128,6 @@ export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
     lend: ["lent", "lent"],
     cut: ["cut", "cut"],
     make: ["made", "made"],
-    do: ["did", "done"],
     teach: ["taught", "taught"],
     weep: ["wept", "wept"],
     think: ["thought", "thought"],
