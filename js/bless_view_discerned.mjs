@@ -6,6 +6,7 @@ import { list_filter } from "./list_filter.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { bless_view_of_people } from "./bless_view_of_people.mjs";
 import { bless_view_family_started_ordered } from "./bless_view_family_started_ordered.mjs";
+import { bless_view_finish_first } from "./bless_view_finish_first.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { bless_person_place } from "./bless_person_place.mjs";
@@ -36,7 +37,7 @@ export function bless_view_discerned(blessed, everyone) {
   ("families finished is one household from earning a rung and a fresh one is three, so being");
   ("sent to the near one is strictly the shorter way to the same place.");
   ("A HOUSE ALREADY STARTED COMES FIRST. While any family the player has prayed into still");
-  ("has somebody left, the answer is one of them - from the house started FIRST - so the");
+  ("has somebody left, the answer is one of them - from the house fewest prayers from done, the one begun first on a tie - so the");
   ("prayers after the first one lead up to the first family being finished, and the first");
   ("rung is earned by asking rather than stumbled on. The street no longer points at the rest");
   ("of a house by itself, so this prayer is now the only thing that does.");
@@ -77,7 +78,8 @@ export function bless_view_discerned(blessed, everyone) {
     let empty = bless_view_of_people(left);
     return empty;
   }
-  let house = bless_view_family_started_ordered(blessed, everyone);
+  let started = bless_view_family_started_ordered(blessed, everyone);
+  let house = bless_view_finish_first(blessed, started);
   let house_people = bless_view_people(house);
   let house_any = list_empty_not_is(house_people);
   if (house_any) {

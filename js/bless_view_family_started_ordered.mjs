@@ -11,22 +11,22 @@ import { list_min } from "./list_min.mjs";
 import { bless_blessed_key } from "./bless_blessed_key.mjs";
 import { set_includes } from "./set_includes.mjs";
 import { list_index_of } from "./list_index_of.mjs";
-import { equal } from "./equal.mjs";
+import { list_copy } from "./list_copy.mjs";
+import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { bless_view_of_people } from "./bless_view_of_people.mjs";
 export function bless_view_family_started_ordered(blessed, view) {
   arguments_assert(arguments, 2);
-  ("Of everybody left in a house the player has started, just the ones in the house they");
-  ("started FIRST - so the prayers after the first one lead back to the first family until");
-  ("it is finished.");
-  ("First by the ORDER OF THE RECORD, which remembers prayers in the order they were said.");
-  ("Nearest finishing was tried first and it drifts: a tap that lands on a passer-by beside");
-  ("the one being aimed at starts a second house, and when that house happens to be smaller");
-  ("the aim jumps to it. Asked by order, a stray prayer changes nothing - the first house");
-  ("stays first until it is done.");
+  ("Everybody left in a house the player has started, the house started FIRST at the front.");
+  ("It is the TIE-BREAK for choosing which house to finish, and never the choice itself. The");
+  ("house with the fewest people left is always the fewest prayers to the next rung, so that");
+  ("question is asked first; between houses equally near done, the one the player began");
+  ("first is the one they are sent back to. Handed on in this order, a sort that keeps ties");
+  ("where it found them breaks them this way without being told to.");
+  ("Ordered by the RECORD, which remembers prayers in the order they were said.");
   ("A house is as early as its earliest prayer. Only prayers over single people are asked");
   ("about, because a prayer over the house or anything larger finishes it, and a finished");
   ("house has nobody left to be handed back.");
-  ("An empty answer is handed straight back: with nothing started there is no first house.");
+  ("An empty answer is handed straight back: with nothing started there is nothing to order.");
   let remaining = bless_view_family_started(blessed, view);
   let people = bless_view_people(remaining);
   let none = list_empty_is(people);
@@ -59,14 +59,8 @@ export function bless_view_family_started_ordered(blessed, view) {
     let position = list_index_of(order, key);
     return position;
   }
-  let starts = list_map(people, person_started_when);
-  let first = list_min(starts);
-  function person_first_is(person) {
-    let when = person_started_when(person);
-    let is = equal(when, first);
-    return is;
-  }
-  let chosen = list_filter(people, person_first_is);
-  let view_chosen = bless_view_of_people(chosen);
-  return view_chosen;
+  let order_people = list_copy(people);
+  list_sort_number_mapper(order_people, person_started_when);
+  let view_ordered = bless_view_of_people(order_people);
+  return view_ordered;
 }
