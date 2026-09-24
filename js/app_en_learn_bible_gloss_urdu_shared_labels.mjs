@@ -49,6 +49,8 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
   "Seven more went in together and all seven stand over one word, ‘to’, which no label had reached until now. Nine hundred and seventy-four entries were carrying a sentence about ‘to’ that named only the job it was doing in that verse: ‘a mark that comes before a verb’, ‘the infinitive's to’, ‘preposition: toward’. Every one of those is true and every one is half the word. ‘to’ is the clearest case in the store of the rule written at the top of the small-words table - a word with two jobs is given both, or the reader meets the other job later with nothing to hang it on - and it took a count of the store rather than a reading of the table to notice that nearly a thousand places were teaching one job at a time.";
   "Two of the seven were refused first and then admitted, and it is the same shape as ‘because’ one paragraph up. They said that ‘to’ before a verb makes the Urdu that ends in ‘نا’, and the settled wording said the base form without naming the Urdu - so those two hundred and eight entries were being held by a sentence that was genuinely poorer than what they already had. The settled wording was widened to name it, with ‘to read’ and ‘پڑھنا’ written out, and the two went in. Three times now the list has been right and the table has been thin.";
   "Two more are refused and stay refused, both for reasons already written above rather than new ones. ‘The same small word that makes the next verb's base form’ opens with ‘the same’, which points at an earlier place in the verse and means nothing where it would be moved to. ‘...here it gives the purpose’ ends with ‘here’, which is a claim about the verse and not about the word. A sentence that cannot be moved is not a label whatever else it is, and that test has now rejected more candidates than the word-for-word one.";
+  "Three more, and the third of them was the fourth refusal to turn out to be a complaint about the table. ‘It is a pronoun and comes for the speaker and their companions’ over ‘we’ and ‘us’, and ‘it shows possession and belongs to whoever is being spoken to’ over ‘your’, went straight in: both say a strict part of what their settled wordings say and neither says where in the sentence the word stands, which is the half the settled wordings add. The third named something no settled wording had ever said - that Urdu writes no separate word for ‘the’ - and that is the single most useful sentence about an English article an Urdu reader can be handed. It went into the table rather than being lost, and all three articles were widened in the same commit.";
+  "Reading the candidates this way round is what found all four. The earlier batches were read label first: here is a sentence, may it be replaced. This one was read word first - take the words that have a settled wording, count the sentences the store hands them instead, and look at the largest. Same admission test, same answers where they overlap, but the ordering puts the thing worth a thousand entries at the top of the page instead of somewhere in a list of a hundred and eighty-six.";
   let labels = [
     "معرفہ حرفِ تعریف۔",
     "نکرہ حرفِ تعریف۔",
@@ -249,6 +251,9 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
     "مصدر کا to۔",
     "حرفِ جار: طرف۔",
     "یہ چھوٹا لفظ رُخ بتاتا ہے: کِس کی طرف۔",
+    "ضمیر ہے اَور بولنے والے اَور اُس کے ساتھیوں کے لیٔے آتا ہے۔",
+    "یہ لفظ مِلکیّت بتاتا ہے اَور جِس سے بات ہو رہی ہو، اُس کی ہے۔",
+    "یہ اِسم سے پہلے آتا ہے — اِسم یعنی کِسی چیز، شخص یا جگہ کا نام — اَور بتاتا ہے کہ بات کِسی معلوم چیز کی ہو رہی ہے۔ اُردو ترجمہ میں اِس کے لیٔے الگ لفظ نہیں لِکھا جاتا۔",
   ];
   return labels;
 }
