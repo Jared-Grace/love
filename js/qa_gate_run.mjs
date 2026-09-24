@@ -1,3 +1,9 @@
+import { git_head_commit } from "./git_head_commit.mjs";
+import { qa_commit_beside_heads } from "./qa_commit_beside_heads.mjs";
+import { property_get } from "./property_get.mjs";
+import { qa_gate_kept_covering } from "./qa_gate_kept_covering.mjs";
+import { null_is } from "./null_is.mjs";
+import { qa_gate_run_covered } from "./qa_gate_run_covered.mjs";
 import { lock_wait } from "./lock_wait.mjs";
 import { qa_gate_run_unlocked } from "./qa_gate_run_unlocked.mjs";
 import { qa_snapshot_owner } from "./qa_snapshot_owner.mjs";
