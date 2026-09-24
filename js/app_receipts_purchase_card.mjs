@@ -1,17 +1,20 @@
+import { not_equal } from "./not_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_container } from "./app_shared_container.mjs";
+import { country_philippines } from "./country_philippines.mjs";
+import { html_div_text } from "./html_div_text.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_receipts_purchase_usa_text } from "./app_receipts_purchase_usa_text.mjs";
+import { html_text_set } from "./html_text_set.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_receipts_purchase_save } from "./app_receipts_purchase_save.mjs";
-import { property_get } from "./property_get.mjs";
 import { app_shared_date_time_edit } from "./app_shared_date_time_edit.mjs";
 import { app_shared_input_whole_number } from "./app_shared_input_whole_number.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { html_value_set } from "./html_value_set.mjs";
-import { html_div_text } from "./html_div_text.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { text_whole_number_or_empty } from "./text_whole_number_or_empty.mjs";
 import { app_receipts_price_usd_text } from "./app_receipts_price_usd_text.mjs";
-import { html_text_set } from "./html_text_set.mjs";
 import { html_on } from "./html_on.mjs";
 import { app_shared_textarea_label } from "./app_shared_textarea_label.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
@@ -41,7 +44,25 @@ export function app_receipts_purchase_card(
   "A photo taken on this phone is shown from the picture kept here; one taken on another phone is shown from where it is stored, so it needs the internet the first time.";
   arguments_assert(arguments, 4);
   let card = app_shared_container(parent);
+  ("The date and time are Philippine time, where the purchases are made, and are said to be so above the boxes. Under them the same moment is shown in eastern US time, where the receipts are reviewed, redrawn whenever either box changes.");
+  let philippines = country_philippines();
+  html_div_text(
+    card,
+    property_get(philippines, "flag") +
+      " " +
+      property_get(philippines, "name") +
+      " time",
+  );
+  let usa_line = null;
+  function usa_show(date, time) {
+    let text = "";
+    if (not_equal(date, "") && not_equal(time, "")) {
+      text = app_receipts_purchase_usa_text(date, time);
+    }
+    html_text_set(usa_line, text);
+  }
   async function on_when(date, time) {
+    usa_show(date, time);
     property_set(purchase, "date", date);
     property_set(purchase, "time", time);
     await app_receipts_purchase_save(purchase);
@@ -50,6 +71,8 @@ export function app_receipts_purchase_card(
   let date = property_get(purchase, "date");
   let time = property_get(purchase, "time");
   app_shared_date_time_edit(card, date, time, on_when);
+  usa_line = html_div_text(card, "");
+  usa_show(date, time);
   ("The price is whole pesos. What is typed is kept as a whole number or as nothing, and the box is set back to what was kept, so it never shows a price other than the one saved.");
   let price_input = app_shared_input_whole_number(card, "Price (₱ PHP)");
   let value2 = property_get_or(purchase, "price", "");
