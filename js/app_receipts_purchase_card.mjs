@@ -8,11 +8,13 @@ import { app_shared_input_whole_number } from "./app_shared_input_whole_number.m
 import { property_get_or } from "./property_get_or.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { text_whole_number_or_empty } from "./text_whole_number_or_empty.mjs";
 import { html_value_get } from "./html_value_get.mjs";
-import { html_text_set } from "./html_text_set.mjs";
+import { text_whole_number_or_empty } from "./text_whole_number_or_empty.mjs";
 import { app_receipts_price_usd_text } from "./app_receipts_price_usd_text.mjs";
+import { html_text_set } from "./html_text_set.mjs";
 import { html_on } from "./html_on.mjs";
+import { app_shared_textarea_label } from "./app_shared_textarea_label.mjs";
+import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_element } from "./html_element.mjs";
@@ -35,7 +37,7 @@ export function app_receipts_purchase_card(
   "$plain on_saved";
   "$plain php_per_usd";
   "php_per_usd is how many pesos a dollar bought, or null when no rate is known, and then no dollars are shown.";
-  "One purchase in a box: its date, time and price, which can be changed, its photos, and a button to add another photo. Every change is kept at once and then on_saved is told, so whatever sends can send it.";
+  "One purchase in a box: its date, time, price and description, which can be changed, its photos, and a button to add another photo. Every change is kept at once and then on_saved is told, so whatever sends can send it.";
   "A photo taken on this phone is shown from the picture kept here; one taken on another phone is shown from where it is stored, so it needs the internet the first time.";
   arguments_assert(arguments, 4);
   let card = app_shared_container(parent);
@@ -72,6 +74,18 @@ export function app_receipts_purchase_card(
   }
   html_on(price_input, "change", on_price);
   html_on(price_input, "input", usd_show);
+  ("The description is kept when the person leaves the box, not at every key, so a sentence is sent once rather than once a letter. It is held to 2000 letters because it travels as words storage keeps beside the file, and storage refuses more than a few thousand of those.");
+  let description_input = app_shared_textarea_label(card, "Description");
+  html_attribute_set(description_input, "maxlength", "2000");
+  let value3 = property_get_or(purchase, "description", "");
+  html_value_set(description_input, value3);
+  async function on_description() {
+    let value4 = html_value_get(description_input);
+    property_set(purchase, "description", value4);
+    await app_receipts_purchase_save(purchase);
+    on_saved();
+  }
+  html_on(description_input, "change", on_description);
   ("Photos are small squares side by side, cropped to fill the square; pressing one opens it whole on a screen of its own.");
   let pictures = html_div(card);
   html_style_set(pictures, "display", "flex");
