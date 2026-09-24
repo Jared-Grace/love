@@ -1,3 +1,4 @@
+import { app_sandbox_previews_song_image_brighter_load } from "./app_sandbox_previews_song_image_brighter_load.mjs";
 import { app_sandbox_previews_code_review_load } from "./app_sandbox_previews_code_review_load.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_sandbox_previews_lyric_timing_load } from "./app_sandbox_previews_lyric_timing_load.mjs";
