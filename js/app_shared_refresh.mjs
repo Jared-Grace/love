@@ -1,3 +1,4 @@
+import { app_shared_history_screen_stamp } from "./app_shared_history_screen_stamp.mjs";
 import { app_shared_screen_stored_or_home } from "./app_shared_screen_stored_or_home.mjs";
 import { property_set } from "./property_set.mjs";
 import { html_scroll_top_window } from "./html_scroll_top_window.mjs";
