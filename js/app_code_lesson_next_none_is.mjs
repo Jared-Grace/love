@@ -9,7 +9,7 @@ import { null_is } from "./null_is.mjs";
 export function app_code_lesson_next_none_is(context) {
   "Whether there is nowhere at all to go on to from the lesson the learner is reading: no review after it, no lesson after it, and no unfinished lesson anywhere else in the course.";
   "TWO SCREENS ASK IT - the skip button at the foot of a lesson, and the end of the last quiz in one - and they must agree, because one of them draws the way forward and the other draws the note saying there is none. Answered twice, the two could drift into showing a dead button beside that note, or the note beside a course the learner has not finished.";
-  "AN UNFINISHED LESSON ANYWHERE COUNTS AS SOMEWHERE TO GO, not only one further down. A learner who skipped ahead sits on the last lesson with blue rows still above it, and being told there is no more to do is untrue - the way on carries round the top of the list, so the answer here has to as well.";
+  "ONLY AN UNFINISHED LESSON FURTHER ON COUNTS AS SOMEWHERE TO GO, because the way on never goes round the top of the list. A learner who skipped ahead and sits on the last lesson is told there are no more lessons here; early lessons left open are still reached from the home screen. It used to count blue rows above as somewhere to go, back when the way on wrapped round to them.";
   arguments_assert(arguments, 1);
   let number = app_code_lesson_current_number(context);
   let has_review = app_code_review_due_is(number);
