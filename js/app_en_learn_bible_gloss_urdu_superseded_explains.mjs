@@ -25,6 +25,8 @@ export function app_en_learn_bible_gloss_urdu_superseded_explains() {
   "THE TWENTY FIVE WORDS ADDED AFTER THAT WERE NOT FOUND BY REMEMBERING A ROUND - THEY WERE FOUND BY A TEST, AND THE TEST IS THE PART WORTH KEEPING. A store wording that is a strict prefix of what the table says for that same word today is an older build of that one sentence: somebody appended a clause and never retired what stood before it. That is decidable from the two strings alone. It needs no record of who changed what, which is exactly the record that had gone missing, and it does not have to be trusted the way a memory of a round does.";
   "That distinction is why the test was worth writing rather than a tally. Counting entries that carry something other than the table's wording gives nine and a half thousand, and almost all of that is a per-verse gloss doing its job - a number that looks like a catastrophe and names no fault at all. The prefix test asks instead which of them are provably the same sentence one clause short, and answers twenty five wordings over two hundred and five entries. One of those numbers is a gap; the other is a defect list you can act on without reading a single verse.";
   "Two clause lengths did all of it. Twenty of the twenty five are base forms - 'say', 'go', 'know', 'take' - missing the sentence about irregular verbs, some seventy five characters. The other five are 'told', 'sent', 'left', 'brought' and 'taught': past forms whose spelling is also the third form, missing the hundred and fifty five character clause that says so and names the two jobs. That second clause is what the third round was about, caught here on five words that round's own word list had not reached. That the two families fall out of one string test, with nobody deciding in advance which words to look at, is the argument for the test over the list.";
+  "Running the same test over all eight settled tables instead of the action verb one alone added fourteen more, sixty six entries, and they are a different kind of thing entirely. These are the first generation glosses - 'اِسم ہے: بھایٔی۔', 'صِفت ہے: نیا۔', 'فعل ہے: کرنا۔' - a part of speech and a translation and nothing else, each one a strict prefix of the fuller sentence its table writes today. Nobody would have gone looking for 'new' or 'wife' or 'brother' while thinking about verb forms. The test found them because it asks about strings and not about topics, and that is the whole reason for widening it: the words a person would think to check are the words a person has already checked.";
+  "Three of those fourteen carry one identical string. 'will', 'would' and 'should' were all once 'مدد کرنے والا فعل ہے۔', which is true of each of them and distinguishes none of them, and is a prefix of all three of the sentences that replaced it. So it is written down once, under 'will', and that one entry covers all three. Nothing about the sweep needs the other two: the list is a set of strings and its only question is whether a string should still be on a page, after which the word is looked up in the tables and given back its own current wording. The word beside a retired string is there so a reader can see where it came from, not to decide what it matches.";
   let retired = [
     [
       "be",
@@ -456,6 +458,18 @@ export function app_en_learn_bible_gloss_urdu_superseded_explains() {
       "wrote",
       "فعل 'write' یعنی 'لِکھنا' کی ماضی کی شکل ہے — ماضی یعنی گُزرا ہُوا وقت۔ انگریزی میں عموماً فعل کے آخر میں '-ed' لگا کر ماضی بنایا جاتا ہے، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: 'write' سے 'wrote'۔ اَیسے فعل یاد کرنے پڑتے ہیں۔",
     ],
+    ["brother", "اِسم ہے: بھایٔی۔"],
+    ["do", "فعل ہے: کرنا۔"],
+    ["does", "فعل 'do' کی وہ شکل ہے جو اِس وقت کے لیٔے، ایک کے ساتھ آتی ہے۔"],
+    ["evil", "صِفت ہے: بُرا۔"],
+    ["has", "فعل 'have' کی وہ شکل ہے جو اِس وقت کے لیٔے، ایک کے ساتھ آتی ہے۔"],
+    ["have", "فعل ہے: رکھنا، پاس ہونا۔"],
+    ["little", "صِفت ہے: تھوڑا، چھوٹا۔"],
+    ["new", "صِفت ہے: نیا۔"],
+    ["old", "صِفت ہے: پُرانا۔"],
+    ["wife", "اِسم ہے: بیوی۔"],
+    ["will", "مدد کرنے والا فعل ہے۔"],
+    ["woman", "اِسم ہے: عورت۔"],
     [
       "bring",
       "فعل 'bring' یعنی 'لانا' کی بُنیادی شکل ہے — یعنی وہ شکل جو لُغت میں مِلتی ہے اَور جِس پر وقت کا کویٔی نشان نہیں۔ انگریزی میں یہی شکل 'to' کے بعد آتی ہے، 'will'، 'can' اَور 'must' جَیسے الفاظ کے بعد بھی، اَور حُکم دیتے وقت بھی۔",
