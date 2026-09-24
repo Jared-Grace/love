@@ -67,6 +67,9 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
   "The rest of the thirty five are ordinary and the band is the one the note named last round: a sentence carrying between thirty and ninety entries, saying in a shorter way what the settled wording says at length. Four verb wordings say 'the second form, irregular' where the settled wording says 'the past form' and then gives the same three parts. Four naming words say 'a naming word, and it tells of a day, of a time, of a man' where the settled wording gives the Urdu word itself. Two base forms are the settled wording with its last sentence cut off. And 'the definite article, that is, the word that tells you a particular owner is meant' is simply wrong about what the article does, which admits it under the exception rather than under the rule.";
   "Refused again this round, each for a reason already written: every label giving a capital's reason as the Lord; the whole 'Urdu has not written it here' family, which says something true about the line in front of the reader that the settled wording cannot say; 'here it shows accompaniment' over 'with', because the settled wording names two senses and the label names the one in play; 'here it tells who did the work' over 'by' and 'here it tells the time' over 'on' and 'at', which are the same shape; and 'it is the proper name of the Lord' over 'Jesus', which is a claim about who He is and so is not a wording the note may quietly delete.";
   "One refusal is new and is really a job written down in the wrong place. 'It is the past form of the verb say, and it is irregular - a verb being the word that tells an action or a state' reaches forty one entries and is refused because it defines the word 'verb' and the settled wording for 'said' does not. The settled table does define its terms inline elsewhere - its wording for 'the' stops to say what a naming word is - so the repair is to widen the settled wording for 'said' rather than to admit a label that teaches more than the table does. That is a change to the table, with a retired wording to write down, and it is not this commit.";
+  "Fourteen more joined off a reading taken after the store had been mended, and where they sit on the ranking is the finding rather than the labels themselves. Every one of them carries between twenty six and thirty entries. Above them the ranking is now solid refusals - the reverent capitals, the sentences about what this translation did with this verse, the senses picked out of a word that does two jobs - so the admissible tail of this list is close to spent, and the next agent reading the ranking should expect the top of it to be unusable rather than assume they are looking at it wrongly.";
+  "Four small refusals this round, each worth a line so that the search is not spent again. ‘Urdu did not write it separately’ is admitted under ‘the’ and refused under ‘and’, ‘you’ and ‘to’, and the difference is not a matter of degree: the settled wording for ‘the’ says in its own words that Urdu writes no separate word for it, while the settled wordings for the other three hand the reader ‘اَور’, ‘تُم’ and ‘کی طرف’, so the label would be contradicting the wording that replaced it rather than saying less than it. ‘be's present, third person singular’ over ‘is’ is refused because the settled wording says the form comes with one thing and does not say it excludes ‘I’ and ‘you’. ‘A pronoun: جو’ over ‘who’ is refused because the settled wording never calls it a pronoun. ‘A verb, past, and it tells of seeing with the eye’ over ‘saw’ is refused because the settled wording hands over ‘دیکھنا’ and says nothing about eyes.";
+  "The much larger finding is at the very top of the ranking and points the other way, which is why it is written here rather than acted on. The biggest wordings left in the store are not thin at all - they are BETTER than the settled wordings that would replace them. ‘is’ carries two hundred and seventy three entries of a sentence that glosses the tense word itself, ‘حال یعنی وہ وقت جو گُزرا نہیں’, before using it; ‘said’ carries a hundred and sixty seven of a sentence that first gives the general rule, that English usually makes a past by adding ‘-ed’, and only then says this verb breaks it and must be learned by heart. The generated verb table says neither thing: it uses ‘گُزرے ہوئے زمانے’ without ever saying what it means, and it says a verb is irregular without saying what regular would have looked like. So these are refused, and the job they name is to widen the template every verb wording is built from, not to write over them. Doing that is a change to a generator, so every wording it has already produced would have to be written into the retired list in the same breath; that is why it is a separate piece of work and not this one.";
   let labels = [
     "معرفہ حرفِ تعریف۔",
     "نکرہ حرفِ تعریف۔",
@@ -358,6 +361,20 @@ export function app_en_learn_bible_gloss_urdu_shared_labels() {
     "وُہی حرفِ تعریف ہے جو اُوپر آیا: ایک۔ اُردُو نے اِسے الگ سے نہیں لِکھا۔",
     "یہ نام ہے: یِسوعؔ۔ پہلا حرف بڑا ہے کیونکہ ناموں کا پہلا حرف بڑا لِکھا جاتا ہے۔",
     "یہ چھوٹا لفظ دو حِصّوں کو جوڑتا ہے: یہ کہ۔",
+    "وُہی حرفِ عطف ہے۔ پہلا حرف بڑا ہے کیونکہ یہاں سے نیا جُملہ شروع ہو رہا ہے۔",
+    "یہ لفظ اگلی بات کو پچھلی سے جوڑتا ہے: کہ۔",
+    "یہ چھوٹا لفظ اَندر ہونا بتاتا ہے: میں۔",
+    "یہ بولنے والے کی جگہ آنے والا لفظ ہے: مَیں۔ انگریزی میں اِس کا حرف ہمیشہ بڑا لِکھا جاتا ہے۔",
+    "نفی۔",
+    "حرفِ جار: ساتھ۔",
+    "say کی گُزری صُورت، بےقاعدہ: say → said → said۔",
+    "فعل ہے، مگر یہ اکیلا کام نہیں بتاتا: اگلے فعل کے ساتھ مِل کر گُزرے ہوئے زمانے میں آنے والی بات کو بتاتا ہے۔",
+    "وُہی حرفِ تعریف ہے اَور اگلے نام کو خاص کرتا ہے۔",
+    "حرفِ تعریف ہے۔ بتاتا ہے کہ کویٔی خاص اَور پہچانی ہویٔی چیز مُراد ہے۔ اُردُو میں اِس کے لیٔے الگ لفظ نہیں ہوتا۔ اُردُو نے اِسے الگ سے نہیں لِکھا۔",
+    "یہ چھوٹا لفظ رُخ بتاتا ہے: کِس طرف۔",
+    "وُہی چھوٹا لفظ ہے جو اگلے فعل سے پہلے آ کر اُس کی بُنیادی شکل بناتا ہے۔",
+    "یہ چھوٹا لفظ اگلی بات کو پہلی سے جوڑتا ہے۔",
+    "یہ لفظ اگلی بات کو پہلی سے جوڑتا ہے۔",
   ];
   return labels;
 }
