@@ -48,11 +48,16 @@ export async function qa_app_commit_gate_run_reuse(search) {
         commit,
         reach,
       );
-      object_merge(earlier, {
-        head,
-        reused: true,
-      });
-      return earlier;
+      ("ONLY A YES IS REUSED. A no may be about something outside the shipped functions that has been mended since - measured 2026-09-24, a deploy was refused on an asset stamp that had been set right a few minutes earlier, because the older verdict still said no. So a no is asked again at the commit we stand on, and an older yes further back is not looked for either, since it may come from before whatever broke.");
+      let passed = property_get(earlier, "deployable");
+      if (passed) {
+        object_merge(earlier, {
+          head,
+          reused: true,
+        });
+        return earlier;
+      }
+      break;
     }
   }
   let judged = await qa_app_commit_gate_run_at_reach(search, head, reach);
