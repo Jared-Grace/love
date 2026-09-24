@@ -1,15 +1,16 @@
-import { property_greater_than } from "./property_greater_than.mjs";
-import { gloss_dangling_count } from "./gloss_dangling_count.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { gloss_chapter_pointers_dangling } from "./gloss_chapter_pointers_dangling.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map_async } from "./list_map_async.mjs";
+import { property_greater_than } from "./property_greater_than.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
+import { gloss_dangling_count } from "./gloss_dangling_count.mjs";
 import { list_size } from "./list_size.mjs";
 export async function gloss_chapters_pointers_dangling_ranked(
   fn,
   lambda$pointer_is,
+  lambda$word_key_read,
 ) {
   "The chapters of a gloss store that send the reader back to a word met earlier and leave nothing there, heaviest first, each with the words it happened to.";
   "The count of how many is a different question with its own reader, and this is the one that says where to go and what to write. A chapter carrying forty of them and a chapter carrying one are the same number to a total and are not the same afternoon's work.";
@@ -20,6 +21,7 @@ export async function gloss_chapters_pointers_dangling_ranked(
       chapter_code,
       fn,
       lambda$pointer_is,
+      lambda$word_key_read,
     );
     let pointing = property_get(found, "pointing");
     let dangling = property_get(found, "dangling");
