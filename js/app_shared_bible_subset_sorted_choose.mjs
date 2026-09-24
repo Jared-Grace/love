@@ -14,6 +14,7 @@ export function app_shared_bible_subset_sorted_choose({
   on_change,
   choices_label,
   on_sort_change,
+  card,
 }) {
   "choosing some of the bible's languages, or some of its versions, is the same act on the same shape of list - every entry carries a name and a language code - so both are drawn here: put the list in whichever order the reader last asked for, offer the button that changes that order, then offer the list itself.";
   "the order matters and is the reason this is one function rather than three calls each caller repeats: sorting has to happen before the list is drawn, and the button that re-sorts has to sit above what it re-sorts.";
@@ -36,6 +37,7 @@ export function app_shared_bible_subset_sorted_choose({
       key_property,
       on_change,
       choices_label,
+      card,
     });
   }
   let search_text = app_shared_search_by_name_text();

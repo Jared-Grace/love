@@ -1,3 +1,4 @@
+import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_bible_languages_hash_value } from "./app_shared_bible_languages_hash_value.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { language_code_key } from "./language_code_key.mjs";
@@ -56,5 +57,6 @@ export function app_shared_bible_languages_choose(
     on_change,
     choices_label,
     on_sort_change,
+    card: app_shared_container_blue,
   });
 }

@@ -1,3 +1,4 @@
+import { app_shared_container_blue_medium } from "./app_shared_container_blue_medium.mjs";
 import { html_div } from "./html_div.mjs";
 import { language_code_key } from "./language_code_key.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -34,6 +35,7 @@ export function app_reply_buttons_languages(languages_chosen, root, languages) {
       on_change,
       choices_label,
       on_sort_change: update,
+      card: app_shared_container_blue_medium,
     });
   }
   update();

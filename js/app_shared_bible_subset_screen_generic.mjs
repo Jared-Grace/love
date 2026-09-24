@@ -1,3 +1,4 @@
+import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_bible_screen_open } from "./app_shared_bible_screen_open.mjs";
 import { app_shared_bible_subset_sorted_choose } from "./app_shared_bible_subset_sorted_choose.mjs";
 export function app_shared_bible_subset_screen_generic({
@@ -33,5 +34,6 @@ export function app_shared_bible_subset_screen_generic({
     on_change,
     choices_label,
     on_sort_change,
+    card: app_shared_container_blue,
   });
 }
