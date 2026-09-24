@@ -1,11 +1,12 @@
-import { not_equal } from "./not_equal.mjs";
-import { equal } from "./equal.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
+import { time_12_label } from "./time_12_label.mjs";
 import { property_get_or } from "./property_get_or.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { app_receipts_price_usd } from "./app_receipts_price_usd.mjs";
+import { equal } from "./equal.mjs";
 import { list_size } from "./list_size.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { emoji_camera } from "./emoji_camera.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 export function app_receipts_purchase_row(
@@ -18,11 +19,11 @@ export function app_receipts_purchase_row(
   "$plain purchase";
   "$plain php_per_usd";
   "$plain on_open";
-  "One purchase in the list of them all, as a button saying enough to tell it from the others - when, how much, how many photos, and how its description begins. Pressing it hands on_open the purchase.";
+  "One purchase in the list of them all, as a button saying enough to tell it from the others - what time, how much, how many photos, and how its description begins. The date is not on it, because the list puts each day's purchases under a heading naming the day. Pressing it hands on_open the purchase.";
   arguments_assert(arguments, 4);
-  let parts = [
-    property_get(purchase, "date") + " " + property_get(purchase, "time"),
-  ];
+  let time = property_get(purchase, "time");
+  let label = time_12_label(time);
+  let parts = [label];
   let price = property_get_or(purchase, "price", "");
   if (not_equal(price, "")) {
     let usd = app_receipts_price_usd(price, php_per_usd);
@@ -44,7 +45,7 @@ export function app_receipts_purchase_row(
   function on_press() {
     on_open(purchase);
   }
-  let text = parts.join(" · ");
+  let text = parts.join(" - ");
   let button = app_shared_button_wide(parent, text, on_press);
   return button;
 }
