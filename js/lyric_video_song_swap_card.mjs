@@ -1,4 +1,4 @@
-import { not } from "./not.mjs";
+import { picture_swap_row } from "./picture_swap_row.mjs";
 import { lyric_video_song_swap_picture_or_null } from "./lyric_video_song_swap_picture_or_null.mjs";
 import { lyric_video_review_notes } from "./lyric_video_review_notes.mjs";
 import { null_is } from "./null_is.mjs";
@@ -10,16 +10,6 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { property_get } from "./property_get.mjs";
 import { lyric_video_picture_lines } from "./lyric_video_picture_lines.mjs";
 import { lyric_video_review_lines } from "./lyric_video_review_lines.mjs";
-import { html_flex_row_gap } from "./html_flex_row_gap.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { lyric_video_song_swap_column_mark } from "./lyric_video_song_swap_column_mark.mjs";
-import { lyric_video_song_swap_column } from "./lyric_video_song_swap_column.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { api_read } from "./api_read.mjs";
-import { html_on_click } from "./html_on_click.mjs";
-import { list_add } from "./list_add.mjs";
-import { each } from "./each.mjs";
-import { property_get_or } from "./property_get_or.mjs";
 export function lyric_video_song_swap_card(parent, document, swap, name) {
   "$plain parent";
   "$plain document";
@@ -54,44 +44,7 @@ export function lyric_video_song_swap_card(parent, document, swap, name) {
   let lines = property_get(document, "lines");
   let over = lyric_video_picture_lines(lines, picture);
   lyric_video_review_lines(card, over);
-  let row = html_div(card);
-  html_flex_row_gap(row, "8px");
-  let columns = [];
-  function marks(chosen) {
-    for (let entry of columns) {
-      let chosen_is = list_includes(chosen, entry.path);
-      lyric_video_song_swap_column_mark(entry.column, chosen_is);
-    }
-  }
-  function offer(label, path) {
-    let column = lyric_video_song_swap_column(row, label, path);
-    async function press() {
-      let chosen = await api_read(fn_name("lyric_video_song_swap_toggle"), [
-        name,
-        before,
-        path,
-      ]);
-      marks(chosen);
-    }
-    html_on_click(column, press);
-    list_add(columns, {
-      column,
-      path,
-    });
-  }
-  let b = property_get_or(swap, "original_hide", false);
-  if (not(b)) {
-    offer("now", before);
-  }
-  let after = property_get(swap, "after");
-  function candidate(offered) {
-    let label = property_get(offered, "label");
-    let path = property_get(offered, "path");
-    offer(label, path);
-  }
-  each(after, candidate);
-  let chosen_before = property_get_or(swap, "chosen", []);
-  marks(chosen_before);
+  picture_swap_row(card, swap, name);
   lyric_video_review_notes(card, picture);
   return card;
 }
