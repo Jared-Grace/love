@@ -47,7 +47,7 @@ export function app_reply_visible_count(
   each(choices_verse_count, lambda2);
   let visible_count = null;
   let r = {
-    buttons_languages: languages_chooser,
+    languages_chooser,
     card2,
     visible_count,
   };

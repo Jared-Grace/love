@@ -11,7 +11,7 @@ export function app_reply_main_shortcuts_shortcut_each(
     languages_chosen,
     languages,
     update,
-    buttons_languages: languages_chooser,
+    languages_chooser,
     buttons_responses,
     root,
   },

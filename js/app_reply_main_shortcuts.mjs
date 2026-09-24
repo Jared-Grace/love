@@ -93,7 +93,7 @@ export function app_reply_main_shortcuts(
       languages_chosen,
       languages,
       update,
-      buttons_languages: languages_chooser,
+      languages_chooser,
       buttons_responses,
       root,
     });
