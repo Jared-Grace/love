@@ -5,6 +5,7 @@ export function gloss_explain_verse_numbers_cases() {
   "★ THE OTHER HALF OF THE SAME BLINDNESS IS A READING THAT FINDS SOMETHING NOBODY SAID. A sentence that ended at a full stop and began again with a number was read as one sentence naming a verse, and a case list holding no punctuation at all could never have caught it. Measured on 2026-09-25 that was most of what the original-language store was being accused of, so the marks are now written into the cases as carefully as the words are.";
   "★ THE WORD FOR AND IS THE OTHER WAY A SENTENCE IS MADE TO SAY SOMETHING IT DID NOT. It carries a list on past itself, so verses thirteen and sixteen names two; but before the first number there is no list, and it is said twice in this one verse and three more times names none. Every case here that turns on the joining word says on which side of it the number stood, because that is the only thing separating the two.";
   "★ THE THIRD WAY IS A SENTENCE TALKING ABOUT THE VERSE IT IS ALREADY IN RATHER THAN NAMING ANOTHER, AND WHAT TELLS THEM APART STANDS IN FRONT OF THE WORD FOR VERSE. The verse three times and in verse three are the same two words with one word put on the front, and only that front word says which was meant. The cases here come in pairs on purpose - a shutting word and a naming word with the same number behind the marker - because a reading that only ever saw one of the pair would look right either way. The two pairs deliberately left unread are written down here too: that verse one told us is a real claim wearing a pointing word, and both verses eight and eleven is a real claim wearing a count word. Both are read as claims, and these cases are what keeps either word from quietly being added to the shutting list.";
+  "★ THE FOURTH WAY IS A WRITER LEAVING OUT THE DASH. Verse twenty four and verse twenty-four are the same claim, and the reading that knew only the spelled shape answered the first with two verses, twenty and four, neither of them meant. The pair is written here both ways round, and so is the chapter that really does have a twentieth and a fourth verse and no twenty-fourth, where the same words rightly name two.";
   "The chapter's verses are spelled out on each case rather than a chapter being named. What decides the answer is which verses the chapter has - the same words name one verse in a chapter of a hundred and two and two verses in a chapter of a hundred - so the thing that decides has to stand where a reader can see it.";
   "What is expected is written as one line with commas rather than as a list, so a case that fails says what it got and what it wanted in words rather than in two shapes to be lined up by eye.";
   arguments_assert(arguments, 0);
@@ -26,6 +27,25 @@ export function gloss_explain_verse_numbers_cases() {
       verses: ["98", "99"],
       names: "99",
       why: "the last verse English writes in a single word, and the dash inside it has to survive the cutting",
+    },
+    {
+      explain:
+        "she drinks here in verse twenty four, and then in verse twenty six she drinks again",
+      verses: ["4", "6", "20", "24", "26"],
+      names: "24,26",
+      why: "★ the writer left the dash out twice - read by the spelled shape alone this named twenty and four and six, three verses nobody meant",
+    },
+    {
+      explain: "it comes again in verse twenty-four",
+      verses: ["4", "20", "24"],
+      names: "24",
+      why: "the same claim with the dash in, which has to keep answering as it always did",
+    },
+    {
+      explain: "she drinks here in verse twenty four",
+      verses: ["4", "20"],
+      names: "20,4",
+      why: "the chapter with no twenty-fourth verse - here the same two words really do name two, and the second shape simply is not there to be found",
     },
     {
       explain: "in verse in a manner of speaking",
