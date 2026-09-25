@@ -1,3 +1,4 @@
+import { app_shared_note_reply_draw } from "./app_shared_note_reply_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_or_null } from "./property_or_null.mjs";
@@ -41,5 +42,6 @@ export function app_shared_note_pill(parent, one) {
       opacity: "0.55",
     });
   }
+  app_shared_note_reply_draw(line, one);
   return line;
 }
