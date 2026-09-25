@@ -1,3 +1,4 @@
+import { gloss_stores_verse_order_gate_run } from "./gloss_stores_verse_order_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { stop_next_steps_hook_gate_run } from "./stop_next_steps_hook_gate_run.mjs";
@@ -1167,6 +1168,7 @@ export function qa_gates() {
     app_ceb_bible_gloss_published_unfinished_gate_run,
     app_original_bible_gloss_published_unfinished_gate_run,
     firebase_sending_tests_none_gate_run,
+    gloss_stores_verse_order_gate_run,
   ];
   return gates;
 }
