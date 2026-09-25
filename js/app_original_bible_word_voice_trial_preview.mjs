@@ -1,34 +1,35 @@
-import { html_hash_name_get } from "./html_hash_name_get.mjs";
-import { html_hash_name_second_set } from "./html_hash_name_second_set.mjs";
-import { html_hash_name_second_or_empty } from "./html_hash_name_second_or_empty.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
-import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { app_shared_color_page_dark } from "./app_shared_color_page_dark.mjs";
-import { app_shared_color_white } from "./app_shared_color_white.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { equal } from "./equal.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_div } from "./html_div.mjs";
+import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
 import { api_read } from "./api_read.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { html_text_set } from "./html_text_set.mjs";
+import { html_hash_name_get } from "./html_hash_name_get.mjs";
+import { equal } from "./equal.mjs";
 import { html_clear } from "./html_clear.mjs";
+import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
+import { text_combine } from "./text_combine.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
-import { html_button } from "./html_button.mjs";
 import { html_sound_url_play } from "./html_sound_url_play.mjs";
+import { html_button } from "./html_button.mjs";
+import { app_shared_color_page_dark } from "./app_shared_color_page_dark.mjs";
+import { app_shared_color_white } from "./app_shared_color_white.mjs";
 import { html_textarea } from "./html_textarea.mjs";
 import { html_value_set } from "./html_value_set.mjs";
-import { html_on_input } from "./html_on_input.mjs";
 import { html_value_get } from "./html_value_get.mjs";
+import { html_on_input } from "./html_on_input.mjs";
+import { html_hash_name_second_set } from "./html_hash_name_second_set.mjs";
+import { html_hash_name_second_or_empty } from "./html_hash_name_second_or_empty.mjs";
 export async function app_original_bible_word_voice_trial_preview() {
   "The screen for judging which Google voice says a single Hebrew or Greek Bible word better, on the sandbox app at hash bible_word_voice_trial: play both recordings of a word, pick the better one or call them the same, and write what was heard.";
   "A THIRD PART OF THE HASH NAMES WHICH WORDS TO SHOW, as their numbers joined by commas - #bible_word_voice_trial/gem/6,8,11 - so a request to listen to a few words hands over a link that opens on exactly those; choosing a tab drops it and shows the whole set again.";
   "PICKS AND COMMENTS ARE KEPT ON THIS MACHINE THROUGH THE API, so whoever reads the review back reads the file rather than asking for it to be copied out of a phone.";
+  "★ MORE THAN ONE VOICE CAN BE MARKED BEST, because with four voices two often tie; the pick is kept as their keys joined by commas, so a word judged before this still reads as one pick. Same stands alone: choosing it clears the others, and choosing a voice clears it.";
   "A COMMENT IS SENT A MOMENT AFTER TYPING STOPS AND NOT ON EVERY KEY, and it is sent together with the pick, because the stored record for a word is always the whole of what its row shows.";
   let root = html_body_div();
   html_style_assign(root, {
@@ -39,7 +40,7 @@ export async function app_original_bible_word_voice_trial_preview() {
   });
   html_p_text(
     root,
-    "Play both voices for a word, pick the better one, and write what you hear - a wrong stress, a clipped ending, a vowel that isn't there. Everything saves by itself.",
+    "Play the voices for a word, mark the best - more than one if they tie - and write what you hear - a wrong stress, a clipped ending, a vowel that isn't there. Everything saves by itself.",
   );
   let tabs = html_div(root);
   html_style_assign(tabs, {
@@ -78,7 +79,7 @@ export async function app_original_bible_word_voice_trial_preview() {
       let picks = s.rows.map(lambda).filter(lambda2);
       let count = function lambda4(k) {
         function lambda3(p) {
-          let eq = equal(p, k);
+          let eq = p.split(",").includes(k);
           return eq;
         }
         let r4 = picks.filter(lambda3).length;
@@ -188,9 +189,9 @@ export async function app_original_bible_word_voice_trial_preview() {
       let picks = judged ? [...row.voices.map(lambda11), ["same", "Same"]] : [];
       let pick_buttons = [];
       function picks_render() {
-        let current = review_of(row.id).pick;
+        let current = review_of(row.id).pick.split(",");
         for (let [k, b] of pick_buttons) {
-          let on = equal(current, k);
+          let on = current.includes(k);
           html_style_assign(b, {
             background: on ? app_shared_color_page_dark() : "",
             color: on ? app_shared_color_white() : "",
@@ -200,7 +201,20 @@ export async function app_original_bible_word_voice_trial_preview() {
       for (let [k, label] of picks) {
         function lambda7() {
           let r = review_of(row.id);
-          r.pick = equal(r.pick, k) ? "" : k;
+          function lambda15(p) {
+            let kept = not_equal(p, "") && not_equal(p, "same");
+            return kept;
+          }
+          let before = r.pick.split(",").filter(lambda15);
+          let was = before.includes(k);
+          function lambda16(p) {
+            let other = not_equal(p, k);
+            return other;
+          }
+          let after = was ? before.filter(lambda16) : [...before, k];
+          let same_was = equal(r.pick, "same");
+          let same = equal(k, "same") ? (same_was ? [] : ["same"]) : after;
+          r.pick = same.join(",");
           reviews[row.id] = r;
           picks_render();
           tally_render();
