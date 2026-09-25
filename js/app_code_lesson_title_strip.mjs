@@ -25,6 +25,9 @@ import { add_1_period } from "./add_1_period.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_space } from "./html_span_space.mjs";
 import { emoji_check } from "./emoji_check.mjs";
+import { html_bold } from "./html_bold.mjs";
+import { app_shared_color_green_deep } from "./app_shared_color_green_deep.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_shared_button_arrow_next_notext } from "./app_shared_button_arrow_next_notext.mjs";
 export function app_code_lesson_title_strip(root, context, lesson) {
@@ -94,6 +97,13 @@ export function app_code_lesson_title_strip(root, context, lesson) {
     let check = emoji_check();
     html_span_text(title, check);
     html_span_space(title);
+    ("on the green bar the title is not muted: the fade that keeps it quiet on the plain bar washes it into the green, so it is written full strength, bold, in a deep green that reads against the light one, at the human's request");
+    html_style_assign(title, {
+      opacity: "1",
+    });
+    html_bold(title);
+    let ink = app_shared_color_green_deep();
+    html_font_color_set(title, ink);
   }
   app_code_lesson_title_render(title, lesson);
   ("the arrow on is held in a track of its own pushed to the far end, so it sits against the right edge the way home sits against the left. Placed loose in the track it would hug the title instead, and the two arrows would then sit one on each side of the words with nothing marking where the strip ends");
