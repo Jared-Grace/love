@@ -1,3 +1,5 @@
+import { app_code_lesson_statement_name_true_false } from "./app_code_lesson_statement_name_true_false.mjs";
+import { app_code_lesson_statement_name_minus_one } from "./app_code_lesson_statement_name_minus_one.mjs";
 import { app_code_lesson_comment_after_code } from "./app_code_lesson_comment_after_code.mjs";
 import { app_code_lesson_expression_choose_order_parentheses_minus_divide } from "./app_code_lesson_expression_choose_order_parentheses_minus_divide.mjs";
 import { app_code_lesson_expression_choose_order_arithmetic_less_than } from "./app_code_lesson_expression_choose_order_arithmetic_less_than.mjs";
@@ -319,6 +321,8 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_one_more,
     app_code_lesson_statement_name_count,
     app_code_lesson_statement_name_compare,
+    app_code_lesson_statement_name_true_false,
+    app_code_lesson_statement_name_minus_one,
   ];
   return fns;
 }
