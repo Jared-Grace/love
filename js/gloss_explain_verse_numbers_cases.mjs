@@ -123,6 +123,24 @@ export function gloss_explain_verse_numbers_cases() {
       why: "a dash standing on its own between two words ends the run, though a dash inside a word does not",
     },
     {
+      explain: "it stood twice in the verse two back, once elided and once whole",
+      verses: ["2", "9"],
+      names: "",
+      why: "★ a number saying how far back is not a number saying which - the same five words in the same order as a sentence that names verse two",
+    },
+    {
+      explain: "the same two words opened the verse three ago",
+      verses: ["3"],
+      names: "",
+      why: "the other word English uses for counting backwards from here",
+    },
+    {
+      explain: "it stands again in verse two, back where the list began",
+      verses: ["2"],
+      names: "2",
+      why: "the word of distance has to answer the number directly - a mark between them means it is answering something else",
+    },
+    {
       explain: "یہ لفظ آیت ۲۱ میں بھی ہے",
       verses: ["20", "21"],
       names: "21",
