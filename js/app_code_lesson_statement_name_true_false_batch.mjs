@@ -9,13 +9,14 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { list_map } from "./list_map.mjs";
 export function app_code_lesson_statement_name_true_false_batch() {
   arguments_assert(arguments, 0);
-  ("the four programs a screen of this lesson asks about: each gives true or false a name and then writes that name out");
+  ("the two programs this lesson has: one gives true a name and writes that name out, the other does the same with false");
   ("The lesson that first gave a value a name gave it a word. This one gives it true or false and changes nothing else, so the only thing a learner is asked to accept is that a name holds these two values the way it holds a word.");
-  ("Two of the four hold true and two hold false, and which two is drawn rather than fixed. Only two answers exist here, so a batch that let the draw fall where it liked could hand a learner four programs that all answer the same way.");
+  ("Two programs and no more, because there are only two: the name is fixed, so the value is the one thing that can differ, and it can be only true or false. So the examples screen shows both and is complete. Four programs were tried first, two of each; a question then offered the same program twice as two answers.");
+  ("Shuffled, because the quizzes ask about the batch in its order, and a fixed order would always ask about true first.");
   let name = app_code_lesson_statement_name_value_name();
   let t = js_keyword_true();
   let f = js_keyword_false();
-  let values = list_shuffle_take([t, t, f, f], 4);
+  let values = list_shuffle_take([t, f], 2);
   function program_of(value) {
     "the two lines that give true or false a name and write that name out";
     let held = js_code_let_statement(name, value);
