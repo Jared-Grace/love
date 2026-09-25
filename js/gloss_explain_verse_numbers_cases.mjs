@@ -4,6 +4,7 @@ export function gloss_explain_verse_numbers_cases() {
   "★ THE WHOLE POINT OF THIS CORPUS IS THAT A READING WHICH FINDS NOTHING SAYS NOTHING. Every case here is checked by what comes back, and the answer for a sentence naming no verse is the same empty answer a reading blind to the language gives for every sentence in the store. So an English-only reading passed this corpus for years by never being shown an Urdu sentence, and a reading that steps one word at a time passed it by never being shown a verse past ninety-nine. Both of those were real and both are written down here now.";
   "★ THE OTHER HALF OF THE SAME BLINDNESS IS A READING THAT FINDS SOMETHING NOBODY SAID. A sentence that ended at a full stop and began again with a number was read as one sentence naming a verse, and a case list holding no punctuation at all could never have caught it. Measured on 2026-09-25 that was most of what the original-language store was being accused of, so the marks are now written into the cases as carefully as the words are.";
   "★ THE WORD FOR AND IS THE OTHER WAY A SENTENCE IS MADE TO SAY SOMETHING IT DID NOT. It carries a list on past itself, so verses thirteen and sixteen names two; but before the first number there is no list, and it is said twice in this one verse and three more times names none. Every case here that turns on the joining word says on which side of it the number stood, because that is the only thing separating the two.";
+  "★ THE THIRD WAY IS A SENTENCE COUNTING VERSES RATHER THAN NAMING ONE, AND WHAT TELLS THEM APART STANDS IN FRONT OF THE WORD FOR VERSE. Within a few verses two hands take hold of him and in verses two the word stands again are the same three words in the same order with one word put on the front, and only that word says which was meant. The cases here come in pairs on purpose - a count and a naming with the same words behind the marker - because a reading that only ever saw one of the pair would look right either way. The pair that is deliberately left unread is written down here too: both verses eight and eleven is a real claim and a count word, and it is read as a claim.";
   "The chapter's verses are spelled out on each case rather than a chapter being named. What decides the answer is which verses the chapter has - the same words name one verse in a chapter of a hundred and two and two verses in a chapter of a hundred - so the thing that decides has to stand where a reader can see it.";
   "What is expected is written as one line with commas rather than as a list, so a case that fails says what it got and what it wanted in words rather than in two shapes to be lined up by eye.";
   arguments_assert(arguments, 0);
@@ -129,6 +130,37 @@ export function gloss_explain_verse_numbers_cases() {
       verses: ["13"],
       names: "",
       why: "the joining word before any number names nothing in the other language either",
+    },
+    {
+      explain: "within a few verses two hands will take hold of this man",
+      verses: ["2", "5"],
+      names: "",
+      why: "★ a word of count in front of the word for verse - the sentence is counting verses and then starting a fresh phrase",
+    },
+    {
+      explain: "in verses six the word stands again",
+      verses: ["5", "6"],
+      names: "6",
+      why: "the other half of that pair: the same words behind the marker, a word of place in front of it instead of a count",
+    },
+    {
+      explain: "these two verses one after the other say it",
+      verses: ["1", "2"],
+      names: "1",
+      why: "★ a count that is left unread on purpose - the two verses three and four is sayable, so reading a definite count as a count would drop real claims in silence",
+    },
+    {
+      explain:
+        "the opposite of the making-holy word of both verses eight and eleven",
+      verses: ["8", "11"],
+      names: "8,11",
+      why: "the claim that forbids listing both - a real reference this store makes, standing in exactly the place a count word would stand",
+    },
+    {
+      explain: "کچھ آیتوں ۲ کے بعد",
+      verses: ["2"],
+      names: "2",
+      why: "the other language lists no words of count, so a sentence shaped like one is still read as a naming there",
     },
     {
       explain: "the word in verse three; verse four has it too",
