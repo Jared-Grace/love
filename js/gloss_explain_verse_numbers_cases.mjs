@@ -4,7 +4,7 @@ export function gloss_explain_verse_numbers_cases() {
   "★ THE WHOLE POINT OF THIS CORPUS IS THAT A READING WHICH FINDS NOTHING SAYS NOTHING. Every case here is checked by what comes back, and the answer for a sentence naming no verse is the same empty answer a reading blind to the language gives for every sentence in the store. So an English-only reading passed this corpus for years by never being shown an Urdu sentence, and a reading that steps one word at a time passed it by never being shown a verse past ninety-nine. Both of those were real and both are written down here now.";
   "★ THE OTHER HALF OF THE SAME BLINDNESS IS A READING THAT FINDS SOMETHING NOBODY SAID. A sentence that ended at a full stop and began again with a number was read as one sentence naming a verse, and a case list holding no punctuation at all could never have caught it. Measured on 2026-09-25 that was most of what the original-language store was being accused of, so the marks are now written into the cases as carefully as the words are.";
   "★ THE WORD FOR AND IS THE OTHER WAY A SENTENCE IS MADE TO SAY SOMETHING IT DID NOT. It carries a list on past itself, so verses thirteen and sixteen names two; but before the first number there is no list, and it is said twice in this one verse and three more times names none. Every case here that turns on the joining word says on which side of it the number stood, because that is the only thing separating the two.";
-  "★ THE THIRD WAY IS A SENTENCE COUNTING VERSES RATHER THAN NAMING ONE, AND WHAT TELLS THEM APART STANDS IN FRONT OF THE WORD FOR VERSE. Within a few verses two hands take hold of him and in verses two the word stands again are the same three words in the same order with one word put on the front, and only that word says which was meant. The cases here come in pairs on purpose - a count and a naming with the same words behind the marker - because a reading that only ever saw one of the pair would look right either way. The pair that is deliberately left unread is written down here too: both verses eight and eleven is a real claim and a count word, and it is read as a claim.";
+  "★ THE THIRD WAY IS A SENTENCE TALKING ABOUT THE VERSE IT IS ALREADY IN RATHER THAN NAMING ANOTHER, AND WHAT TELLS THEM APART STANDS IN FRONT OF THE WORD FOR VERSE. The verse three times and in verse three are the same two words with one word put on the front, and only that front word says which was meant. The cases here come in pairs on purpose - a shutting word and a naming word with the same number behind the marker - because a reading that only ever saw one of the pair would look right either way. The two pairs deliberately left unread are written down here too: that verse one told us is a real claim wearing a pointing word, and both verses eight and eleven is a real claim wearing a count word. Both are read as claims, and these cases are what keeps either word from quietly being added to the shutting list.";
   "The chapter's verses are spelled out on each case rather than a chapter being named. What decides the answer is which verses the chapter has - the same words name one verse in a chapter of a hundred and two and two verses in a chapter of a hundred - so the thing that decides has to stand where a reader can see it.";
   "What is expected is written as one line with commas rather than as a list, so a case that fails says what it got and what it wanted in words rather than in two shapes to be lined up by eye.";
   arguments_assert(arguments, 0);
@@ -132,6 +132,36 @@ export function gloss_explain_verse_numbers_cases() {
       why: "the joining word before any number names nothing in the other language either",
     },
     {
+      explain: "the same word runs through the verse three times",
+      verses: ["3"],
+      names: "",
+      why: "★ the definite article in front of the marker - the sentence is counting how often, inside the verse being explained",
+    },
+    {
+      explain: "the word runs through verse three and comes back",
+      verses: ["3"],
+      names: "3",
+      why: "the other half of that pair: the same number behind the marker, a word of place in front of it instead of the article",
+    },
+    {
+      explain: "that softer one has already been in this verse three times",
+      verses: ["3"],
+      names: "",
+      why: "the pointing word does the same work as the article, and this was one of the rows the store stood accused of",
+    },
+    {
+      explain: "it opened the verse two sentences ago too",
+      verses: ["2"],
+      names: "",
+      why: "the article reaches this one before the word of distance can, because the distance word is two words behind the number rather than one",
+    },
+    {
+      explain: "the land that verse one told us the famine lay heavy on",
+      verses: ["1"],
+      names: "1",
+      why: "★ the pointing word that is NOT shut - all five of these in the store were real claims, and this case is what keeps it off the list",
+    },
+    {
       explain: "within a few verses two hands will take hold of this man",
       verses: ["2", "5"],
       names: "",
@@ -147,7 +177,7 @@ export function gloss_explain_verse_numbers_cases() {
       explain: "these two verses one after the other say it",
       verses: ["1", "2"],
       names: "1",
-      why: "★ a count that is left unread on purpose - the two verses three and four is sayable, so reading a definite count as a count would drop real claims in silence",
+      why: "★ a stated count left unread on purpose - the two verses three and four is sayable, so shutting on it would drop real claims in silence",
     },
     {
       explain:
@@ -157,10 +187,16 @@ export function gloss_explain_verse_numbers_cases() {
       why: "the claim that forbids listing both - a real reference this store makes, standing in exactly the place a count word would stand",
     },
     {
+      explain: "that verb is the one that ended the tenth verse two lines back",
+      verses: ["2", "10"],
+      names: "2",
+      why: "★ the shape left uncovered - the article is there but an ordinal stands between it and the marker, and only one word back is looked at",
+    },
+    {
       explain: "کچھ آیتوں ۲ کے بعد",
       verses: ["2"],
       names: "2",
-      why: "the other language lists no words of count, so a sentence shaped like one is still read as a naming there",
+      why: "the other language shuts on nothing, so a sentence shaped like a count is still read as a naming there",
     },
     {
       explain: "the word in verse three; verse four has it too",
@@ -175,17 +211,17 @@ export function gloss_explain_verse_numbers_cases() {
       why: "a dash standing on its own between two words ends the run, though a dash inside a word does not",
     },
     {
+      explain: "quoting verse two back at him, word for word",
+      verses: ["2", "9"],
+      names: "",
+      why: "★ a number saying how far back is not a number saying which, and here nothing shuts the marker so the distance word is what decides",
+    },
+    {
       explain:
         "it stood twice in the verse two back, once elided and once whole",
       verses: ["2", "9"],
       names: "",
-      why: "★ a number saying how far back is not a number saying which - the same five words in the same order as a sentence that names verse two",
-    },
-    {
-      explain: "the same two words opened the verse three ago",
-      verses: ["3"],
-      names: "",
-      why: "the other word English uses for counting backwards from here",
+      why: "the wording the store actually uses, where the article and the word of distance both say nothing was named",
     },
     {
       explain: "it stands again in verse two, back where the list began",
