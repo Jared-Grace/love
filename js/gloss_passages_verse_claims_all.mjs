@@ -8,6 +8,7 @@ import { null_is } from "./null_is.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { gloss_passages_entries_collect_generic } from "./gloss_passages_entries_collect_generic.mjs";
@@ -25,9 +26,11 @@ export function gloss_passages_verse_claims_all(
   "Nothing is written. The passages are read as they were handed over.";
   "★ WHICH WORD THE CLAIM IS ABOUT IS ASKED BEFORE ANY VERSE IS ASKED ANYTHING, BECAUSE THE VERSE IS ONLY EVER ASKED ABOUT ONE WORD AND IT WAS THE WRONG ONE. An explanation names a verse for three different reasons and only one of them is a claim about the word being explained. In verse one came 'no' is a claim about a different word, quoted right there. The start 'under-' stood alone in verse nineteen is a claim about a piece of a word, which no whole-word check can be asked. And in verse thirty-nine people came having heard her is a claim about what happened, not about any word at all. Measured on 2026-09-25 over the Urdu store, of seven hundred and two rows standing accused, a hundred and thirty-three named another word and seventy-six could not be told apart - two hundred and nine accusations, every one of them made against a sentence that had said something else.";
   "A CLAIM THE READING CANNOT PIN TO A WORD IS DROPPED RATHER THAN CHECKED AGAINST A GUESS, and that is the one place this loses power on purpose. A thought quoting two words says something about each and the number belongs to one of them; picking the nearer would be right about half the time and would never say which half. So the number leaves without a row, and nobody is accused over a sentence nobody has read.";
+  "★ A QUOTED WORD THAT STANDS NOWHERE IN THE WHOLE CHAPTER WAS NEVER A POINTER AT THE TEXT, SO IT IS DROPPED RATHER THAN REPORTED. The explanations are written in the reader's own language and quote words in it constantly - an Urdu rendering, an English gloss beside a Greek word. Those quotes wear exactly the same apostrophes as a real pointer, and nothing in their shape tells them apart. What does tell them apart is that a pointer names a word the chapter actually contains. Measured over the Urdu store, reading every quote as a pointer manufactured a hundred and twenty-six accusations, and the first one read was against a sentence that was simply correct.";
+  "THE PRICE OF THAT IS A FAULT THIS CAN NO LONGER SEE: a sentence claiming some word stood in verse four when that word is absent from the chapter altogether is wrong, and goes unreported. It is the same trade as the one above and made for the same reason - a check that cannot tell a gloss from a pointer reports mostly noise, and a queue of mostly noise is not read at all.";
   "★ WHERE THE WORD ACTUALLY STANDS TRAVELS WITH EVERY ROW, BECAUSE A WRONG CLAIM IS ONLY HALF A FINDING WITHOUT IT. Told that verse five does not hold the word, a person mending has learnt nothing about what to write instead, and has to open the chapter and read all of it. Told as well that the word stands in verse six and nowhere else, the mend is the one thing it can be. Measured on 2026-09-25 over the Urdu store: eleven thousand eight hundred verse claims, seven hundred and two of them wrong - a queue that is unreadable one file at a time and short enough to settle in an afternoon with the answer beside the question.";
   "WHERE THE WORD STANDS IS NOW WORKED OUT PER CLAIM RATHER THAN ONCE PER EXPLANATION, WHICH IS WHAT THE CLAIMED WORD COSTS. A sentence explaining one word and claiming another needs the other word's verses beside it, or the mend it suggests is the mend for a word nobody is arguing about. The key each claim is checked with is read off the claimed word the same way the entry's own key was read off the entry's own word, so a claim about the word being explained comes out exactly where it always did.";
-  "An empty list of holding verses is the loudest row of the lot: the explanation named a verse for a word the chapter never uses anywhere, so no number would have been right and the sentence itself is what is wrong.";
+  "The list of holding verses is never empty on a row that comes back, because an empty one is now what makes the claim leave. It used to be the loudest row of the lot - the explanation naming a verse for a word the chapter never uses - and it stopped being readable the moment claims could be about a word other than the one being explained, since a quoted gloss in the reader's own language is absent from the chapter for an innocent reason and a wrong word is absent for a guilty one, and the list alone cannot say which.";
   "The verses come back as numbers in counting order rather than in the order the record happened to fill, because a reader is going to say the word moved one verse along, and that is a thing you can only see when they are counted.";
   arguments_assert(arguments, 3);
   function entry_read(context) {
@@ -58,6 +61,10 @@ export function gloss_passages_verse_claims_all(
         return holds;
       }
       let verses_held = list_filter(chapter_verses, verse_holds_is);
+      let nowhere = list_empty_is(verses_held);
+      if (nowhere) {
+        return;
+      }
       let keys = property_get_or_null(verse_keys, verse_named);
       let held = list_includes(keys, claimed_key);
       let claim = {
