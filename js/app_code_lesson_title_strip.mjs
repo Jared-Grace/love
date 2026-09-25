@@ -19,6 +19,9 @@ import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { add_1_period } from "./add_1_period.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_space } from "./html_span_space.mjs";
+import { app_code_progress_read } from "./app_code_progress_read.mjs";
+import { app_code_lesson_complete_is } from "./app_code_lesson_complete_is.mjs";
+import { emoji_check } from "./emoji_check.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_shared_button_arrow_next_notext } from "./app_shared_button_arrow_next_notext.mjs";
 export function app_code_lesson_title_strip(root, context, lesson) {
@@ -74,6 +77,14 @@ export function app_code_lesson_title_strip(root, context, lesson) {
   let number_text = add_1_period(lesson_index);
   html_span_text(title, number_text);
   html_span_space(title);
+  ("a finished lesson wears the check the home list gives its row, in the same place - after the number, before the title - so a learner who opens a lesson can see they already finished it without going back to the list, at the human's request");
+  let progress = app_code_progress_read(context);
+  let complete = app_code_lesson_complete_is(progress, lesson_id);
+  if (complete) {
+    let check = emoji_check();
+    html_span_text(title, check);
+    html_span_space(title);
+  }
   app_code_lesson_title_render(title, lesson);
   ("the arrow on is held in a track of its own pushed to the far end, so it sits against the right edge the way home sits against the left. Placed loose in the track it would hug the title instead, and the two arrows would then sit one on each side of the words with nothing marking where the strip ends");
   let trailing = html_div(strip);
