@@ -26,14 +26,11 @@ export async function app_en_learn_bible_gloss_urdu_verse_claims_wrong_gate_run(
   let offenders =
     await app_en_learn_bible_gloss_urdu_verse_claims_wrong_names();
   let path = app_en_learn_bible_gloss_urdu_verse_claims_wrong_baseline_path();
-  let name_write = fn_name(
-    "app_en_learn_bible_gloss_urdu_verse_claims_wrong_baseline_write",
-  );
   let told = await baseline_names_gate_generic(
     offenders,
     path,
     "these explanations name a verse of their own chapter that holds no word built on the same English root - open the chapter at that word and read the sentence: mend it if it claims the word stands in the verse it names, and bank it deliberately if it only points at another word there or says the word was absent",
-    name_write,
+    fn_name("app_en_learn_bible_gloss_urdu_verse_claims_wrong_baseline_write"),
   );
   let r = await gloss_gate_told_chapters(fn, told);
   return r;
