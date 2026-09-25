@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 export function gloss_explain_verse_numbers_cases() {
   "One word explanation, the verse numbers the chapter it sits in actually has, and which of those the sentence names - written in both the languages the stores are authored in.";
   "★ THE WHOLE POINT OF THIS CORPUS IS THAT A READING WHICH FINDS NOTHING SAYS NOTHING. Every case here is checked by what comes back, and the answer for a sentence naming no verse is the same empty answer a reading blind to the language gives for every sentence in the store. So an English-only reading passed this corpus for years by never being shown an Urdu sentence, and a reading that steps one word at a time passed it by never being shown a verse past ninety-nine. Both of those were real and both are written down here now.";
+  "★ THE OTHER HALF OF THE SAME BLINDNESS IS A READING THAT FINDS SOMETHING NOBODY SAID. A sentence that ended at a full stop and began again with a number was read as one sentence naming a verse, and a case list holding no punctuation at all could never have caught it. Measured on 2026-09-25 that was most of what the original-language store was being accused of, so the marks are now written into the cases as carefully as the words are.";
   "The chapter's verses are spelled out on each case rather than a chapter being named. What decides the answer is which verses the chapter has - the same words name one verse in a chapter of a hundred and two and two verses in a chapter of a hundred - so the thing that decides has to stand where a reader can see it.";
   "What is expected is written as one line with commas rather than as a list, so a case that fails says what it got and what it wanted in words rather than in two shapes to be lined up by eye.";
   arguments_assert(arguments, 0);
@@ -91,6 +92,37 @@ export function gloss_explain_verse_numbers_cases() {
       why: "neither the long writing nor the short one is a verse of this chapter",
     },
     {
+      explain:
+        "it is the only one in the whole verse. two doing words are tied by it",
+      verses: ["1", "2"],
+      names: "",
+      why: "★ the sentence ended and another began - this one wording, met three hundred times over, was most of what one store was accused of",
+    },
+    {
+      explain: "two verses, two pairs of describing words",
+      verses: ["2"],
+      names: "",
+      why: "a comma straight after the word for verse is a sentence carrying on, not a list beginning",
+    },
+    {
+      explain: "in verse three, and then again",
+      verses: ["3"],
+      names: "3",
+      why: "the same comma once a verse has been named is a list, and the difference is only which side of it the number stands",
+    },
+    {
+      explain: "the word in verse three; verse four has it too",
+      verses: ["3", "4"],
+      names: "3,4",
+      why: "every mark but a comma ends the run, and the word for verse then opens a fresh one",
+    },
+    {
+      explain: "verse three - four men stood there",
+      verses: ["3", "4"],
+      names: "3",
+      why: "a dash standing on its own between two words ends the run, though a dash inside a word does not",
+    },
+    {
       explain: "یہ لفظ آیت ۲۱ میں بھی ہے",
       verses: ["20", "21"],
       names: "21",
@@ -101,6 +133,12 @@ export function gloss_explain_verse_numbers_cases() {
       verses: ["13", "16", "19"],
       names: "13,16,19",
       why: "the joining word is spelled with the mark above it, as this store spells it",
+    },
+    {
+      explain: "آیت ۱۳، ۱۶ میں",
+      verses: ["13", "16"],
+      names: "13,16",
+      why: "Arabic script writes its comma the other way up, and a list written with it has to carry on exactly as the English one does",
     },
     {
       explain: "آیت ۱۰۷ میں",
