@@ -1,3 +1,4 @@
+import { app_original_bible_gloss_verse_claims_wrong_gate_run } from "./app_original_bible_gloss_verse_claims_wrong_gate_run.mjs";
 import { gloss_explain_verse_numbers_cases_gate_run } from "./gloss_explain_verse_numbers_cases_gate_run.mjs";
 import { app_en_learn_bible_gloss_urdu_verse_claims_wrong_gate_run } from "./app_en_learn_bible_gloss_urdu_verse_claims_wrong_gate_run.mjs";
 import { gloss_stores_verse_order_gate_run } from "./gloss_stores_verse_order_gate_run.mjs";
@@ -1173,6 +1174,7 @@ export function qa_gates() {
     gloss_stores_verse_order_gate_run,
     app_en_learn_bible_gloss_urdu_verse_claims_wrong_gate_run,
     gloss_explain_verse_numbers_cases_gate_run,
+    app_original_bible_gloss_verse_claims_wrong_gate_run,
   ];
   return gates;
 }
