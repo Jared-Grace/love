@@ -1,14 +1,15 @@
-import { bible_word_voice_slow_trial_rows } from "./bible_word_voice_slow_trial_rows.mjs";
-import { bible_word_voice_compare_rows } from "./bible_word_voice_compare_rows.mjs";
-import { bible_word_voice_dash_rows } from "./bible_word_voice_dash_rows.mjs";
-import { bible_word_voice_chapter_rows } from "./bible_word_voice_chapter_rows.mjs";
-import { bible_word_voice_trial_phoneme_rows } from "./bible_word_voice_trial_phoneme_rows.mjs";
-import { bible_word_voice_trial_short_rows } from "./bible_word_voice_trial_short_rows.mjs";
 import { bible_interlinear_chapter_word_forms_first } from "./bible_interlinear_chapter_word_forms_first.mjs";
+import { bible_word_voice_chapter_rows } from "./bible_word_voice_chapter_rows.mjs";
+import { bible_word_voice_dash_rows } from "./bible_word_voice_dash_rows.mjs";
+import { bible_word_voice_compare_rows } from "./bible_word_voice_compare_rows.mjs";
+import { bible_word_voice_trial_short_rows } from "./bible_word_voice_trial_short_rows.mjs";
+import { bible_word_voice_slow_trial_rows } from "./bible_word_voice_slow_trial_rows.mjs";
+import { bible_word_voice_trial_phoneme_rows } from "./bible_word_voice_trial_phoneme_rows.mjs";
 export async function bible_word_voice_trial_rows() {
   "Every word of the Google voice trial, grouped by language, each with the address of its recording in each voice.";
   "The recordings sit under gitignore on this machine, which the local server hands out under /love/, so they are heard on a phone without being sent anywhere or kept in git.";
   "The words are asked for again in the same way the trial asked for them, so a row's number is the number in the recording's file name.";
+  "★ THE SET CHOSEN BY DESCRIPTION takes four Gemini voices not heard before, whose one-word description in Google's list reads most like someone reading scripture aloud, as Vindemiatrix had been chosen for gentle. The ones passed over: Algieba and Despina (smooth), Rasalgethi (informative), Achernar (soft), Alnilam (firm); the rest read as bright, upbeat, lively, casual or excitable.";
   let sets = [
     {
       key: "heb",
@@ -67,6 +68,18 @@ export async function bible_word_voice_trial_rows() {
         ["Achird_careful", "Achird asked", "achird_careful"],
         ["Vindemiatrix_plain", "Vindemiatrix plain", "vindemiatrix_plain"],
         ["Vindemiatrix_careful", "Vindemiatrix asked", "vindemiatrix_careful"],
+      ],
+      rtl: true,
+    },
+    {
+      key: "gem_described",
+      label: "Hebrew · voices chosen by description",
+      chapter_code: "GEN01",
+      voices: [
+        ["Sadaltager", "Sadaltager · knowledgeable (male)", "sadaltager"],
+        ["Schedar", "Schedar · even (male)", "schedar"],
+        ["Sulafat", "Sulafat · warm (female)", "sulafat"],
+        ["Gacrux", "Gacrux · mature (female)", "gacrux"],
       ],
       rtl: true,
     },
