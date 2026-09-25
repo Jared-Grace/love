@@ -33,6 +33,7 @@ import { html_style_variable_set } from "./html_style_variable_set.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_shared_button_arrow_next_notext } from "./app_shared_button_arrow_next_notext.mjs";
 import { app_shared_color_green_tint } from "./app_shared_color_green_tint.mjs";
+import { app_shared_color_green } from "./app_shared_color_green.mjs";
 import { app_shared_button_border_width } from "./app_shared_button_border_width.mjs";
 import { html_border } from "./html_border.mjs";
 export function app_code_lesson_title_strip(root, context, lesson) {
@@ -130,9 +131,9 @@ export function app_code_lesson_title_strip(root, context, lesson) {
     app_shared_button_arrow_next_notext,
   );
   if (complete) {
-    ("the three buttons on the green bar are painted in green, so the bar reads as one finished piece rather than a green strip with grey tiles sitting on it - but a PALER green than the bar, edged in the deep green of the title, because painted the bar's own green they sank into it and stopped reading as things to press, at the human's request");
+    ("the three buttons on the green bar are painted in green, so the bar reads as one finished piece rather than a green strip with grey tiles sitting on it - but a PALER green than the bar, edged in a plain green between the bar's and the title's, because painted the bar's own green they sank into it and stopped reading as things to press, at the human's request. The edge was the title's deep green first, and read as too heavy against the bar, so it was brought closer to the bar's colour, again at the human's request");
     let fill = app_shared_color_green_tint();
-    let edge = app_shared_color_green_deep();
+    let edge = app_shared_color_green();
     let border_width = app_shared_button_border_width();
     function paint(button) {
       html_style_background_color_set(button, fill);
