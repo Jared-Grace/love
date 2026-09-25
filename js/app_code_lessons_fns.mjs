@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_number } from "./app_code_lesson_statement_name_number.mjs";
 import { app_code_lesson_statement_name_true_false } from "./app_code_lesson_statement_name_true_false.mjs";
 import { app_code_lesson_statement_name_minus_one } from "./app_code_lesson_statement_name_minus_one.mjs";
 import { app_code_lesson_comment_after_code } from "./app_code_lesson_comment_after_code.mjs";
@@ -310,6 +311,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_comment_skip_line,
     app_code_lesson_comment_after_code,
     app_code_lesson_statement_name_value,
+    app_code_lesson_statement_name_number,
     app_code_lesson_statement_name_true_false,
     app_code_lesson_statement_name_identifier,
     app_code_lesson_statement_name_two,
