@@ -45,7 +45,7 @@ export async function song_image_brighter_add(n, gamma, saturation, label) {
   await ffmpeg_gamma_saturation_write(path_from, gamma, saturation, path_to);
   let path = lyric_video_song_swaps_path(name);
   let after = null;
-  function add(data) {
+  function song_image_brighter_add_offer(data) {
     let swaps = property_get(data, "swaps");
     let swap = list_find_property(swaps, "before", before);
     after = property_get(swap, "after");
@@ -59,6 +59,6 @@ export async function song_image_brighter_add(n, gamma, saturation, label) {
     }
     same.path = after_path;
   }
-  await file_json_transform(path, add);
+  await file_json_transform(path, song_image_brighter_add_offer);
   return after;
 }
