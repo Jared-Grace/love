@@ -1,3 +1,5 @@
+import { app_shared_glow_look_here_if } from "./app_shared_glow_look_here_if.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -21,6 +23,6 @@ export function app_replace_rule_set_labels_set(
     label_symbols,
   );
   let success = property_get(success_held, "success");
-  app_shared_glow_look_here_if(!has_selection && !success, label_rules);
-  app_shared_glow_look_here_if(has_selection && !success, label_symbols);
+  app_shared_glow_look_here_if(not(has_selection) && not(success), label_rules);
+  app_shared_glow_look_here_if(has_selection && not(success), label_symbols);
 }
