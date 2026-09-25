@@ -7,6 +7,8 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_code_lesson_link } from "./app_code_lesson_link.mjs";
+import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 export function app_code_lesson_statement_name_true_false_above(root, context) {
@@ -22,6 +24,9 @@ export function app_code_lesson_statement_name_true_false_above(root, context) {
   html_div_cycle_code(box_word, ["A variable can hold a word:"]);
   let held_word = js_code_let_statement(name, quoted);
   app_code_code_lines_writes_out(box_word, [held_word, logged], word);
+  ("the box shows a program an earlier lesson taught, so it links to that lesson, for a learner who wants to see it again");
+  html_div_cycle_code(box_word, ["From this lesson:"]);
+  app_code_lesson_link(box_word, context, app_code_lesson_statement_name_value);
   let t = js_keyword_true();
   let f = js_keyword_false();
   let box_true = app_code_container_light_blue(root);
