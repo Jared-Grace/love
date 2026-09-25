@@ -85,7 +85,7 @@ export function gloss_explain_verse_numbers_generic(
       inside = false;
       return;
     }
-    let verse_number = property_get(run, "verse_number");
+    let verse_number = property_get(run, "number");
     let size = property_get(run, "size");
     list_add(named, verse_number);
     eaten = add(index, size);
