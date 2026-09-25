@@ -1,3 +1,4 @@
+import { app_code_hash_complete_restore } from "./app_code_hash_complete_restore.mjs";
 import { app_shared_hash_screen_get } from "./app_shared_hash_screen_get.mjs";
 import { app_code_hash_review_restore } from "./app_code_hash_review_restore.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
@@ -30,4 +31,5 @@ export function app_code_hash_restore(context) {
     storage_session_set_context(context, "quiz_index", counted);
   }
   app_code_hash_review_restore(context, hash);
+  app_code_hash_complete_restore(context, hash);
 }

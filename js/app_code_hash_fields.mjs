@@ -1,3 +1,4 @@
+import { app_code_hash_field_complete } from "./app_code_hash_field_complete.mjs";
 import { app_code_hash_field_review } from "./app_code_hash_field_review.mjs";
 import { app_code_hash_field_lesson } from "./app_code_hash_field_lesson.mjs";
 import { app_code_hash_field_screen } from "./app_code_hash_field_screen.mjs";
@@ -9,6 +10,7 @@ export function app_code_hash_fields() {
   let screen = app_code_hash_field_screen();
   let quiz = app_code_hash_field_quiz();
   let review = app_code_hash_field_review();
-  let fields = [lesson, screen, quiz, review];
+  let complete = app_code_hash_field_complete();
+  let fields = [lesson, screen, quiz, review, complete];
   return fields;
 }
