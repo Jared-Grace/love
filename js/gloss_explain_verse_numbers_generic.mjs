@@ -29,7 +29,7 @@ export function gloss_explain_verse_numbers_generic(
   verse_numbers,
   markers,
   joiner,
-  distances,
+  cancellers,
   lambda_spell,
   shutters,
 ) {
@@ -127,8 +127,8 @@ export function gloss_explain_verse_numbers_generic(
     let size = property_get(run, "size");
     let after = add(index, size);
     let answering = list_get_or_null(tokens, after);
-    let distance_is = list_includes(distances, answering);
-    if (distance_is) {
+    let cancelled_is = list_includes(cancellers, answering);
+    if (cancelled_is) {
       inside = false;
       eaten = after;
       return;

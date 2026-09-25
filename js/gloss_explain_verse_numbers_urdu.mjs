@@ -11,14 +11,14 @@ export function gloss_explain_verse_numbers_urdu(explain, verse_numbers) {
   arguments_assert(arguments, 2);
   let markers = ["آیت", "آیَت", "آیتیں", "آیتوں"];
   let joiner = "اَور";
-  let distances = [];
+  let cancellers = [];
   let shutters = [];
   let r = gloss_explain_verse_numbers_generic(
     explain,
     verse_numbers,
     markers,
     joiner,
-    distances,
+    cancellers,
     text_digits_urdu,
     shutters,
   );
