@@ -25,7 +25,6 @@ import { add_1_period } from "./add_1_period.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_space } from "./html_span_space.mjs";
 import { emoji_check } from "./emoji_check.mjs";
-import { html_bold } from "./html_bold.mjs";
 import { app_shared_color_green_deep } from "./app_shared_color_green_deep.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { add_1 } from "./add_1.mjs";
@@ -97,11 +96,11 @@ export function app_code_lesson_title_strip(root, context, lesson) {
     let check = emoji_check();
     html_span_text(title, check);
     html_span_space(title);
-    ("on the green bar the title is not muted: the fade that keeps it quiet on the plain bar washes it into the green, so it is written full strength, bold, in a deep green that reads against the light one, at the human's request");
+    ("on the green bar the title is not muted: the fade that keeps it quiet on the plain bar washes it into the green, so it is written full strength in a deep green that reads against the light one, at the human's request");
+    ("NOT BOLD: the bar and the ink already say 'finished', and weight would be a third mark of the same one fact - one the plain bar lacks, so the same title would change its shape, and bold letters are wider, so a long title could wrap on one bar and not the other. Bolding every title to match was the other choice, and it undoes the quiet the plain bar keeps on purpose");
     html_style_assign(title, {
       opacity: "1",
     });
-    html_bold(title);
     let ink = app_shared_color_green_deep();
     html_font_color_set(title, ink);
   }
