@@ -11,7 +11,7 @@ import { text_lower_to } from "./text_lower_to.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
-import { gloss_explain_verse_number_run_or_null } from "./gloss_explain_verse_number_run_or_null.mjs";
+import { text_tokens_number_run_or_null } from "./text_tokens_number_run_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
@@ -71,7 +71,7 @@ export function gloss_explain_verse_numbers_generic(
     if (not(inside)) {
       return;
     }
-    let run = gloss_explain_verse_number_run_or_null(
+    let run = text_tokens_number_run_or_null(
       tokens,
       index,
       longest,

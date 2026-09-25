@@ -86,6 +86,7 @@ export function lyric_video_picture_motion_text(
   let a2 = subtract(frames, 1);
   let last = math_max(a2, 1);
   let frame = width + ":" + height;
+  let canvas = multiply(width, 2) + ":" + multiply(height, 2);
   let t = "(in/" + last + ")";
   let box_size = "(" + size_from + "*pow(" + ratio + "," + t + "))";
   let box_left = "W*(" + x_from + "+" + x_change + "*" + t + ")";

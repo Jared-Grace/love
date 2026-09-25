@@ -7,7 +7,7 @@ import { list_join } from "./list_join.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { each_range_from } from "./each_range_from.mjs";
-export function gloss_explain_verse_number_run_or_null(
+export function text_tokens_number_run_or_null(
   tokens,
   index,
   longest,
