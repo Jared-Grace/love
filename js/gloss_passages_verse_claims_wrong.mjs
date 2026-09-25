@@ -18,6 +18,7 @@ export function gloss_passages_verse_claims_wrong(
   "Every claim the chapter makes is gathered by the reading beside this one and the ones that held are dropped here. Deciding whether a verse holds a related word was written out twice before, once for the wrong claims and once for all of them, and two spellings of one test do not break when they part company - they simply start answering about different sets while both stay green.";
   "The flag saying the claim did not hold is taken off again on the way out, because every row that reaches a caller here failed by construction and a field that is false in every row tells a reader nothing.";
   "★ WHERE THE WORD DOES STAND IS KEPT FOR THE OPPOSITE REASON, BECAUSE IT DIFFERS ON EVERY ROW AND IT IS THE HALF THAT SAYS WHAT TO WRITE INSTEAD. One verse beside the row and the mend is settled; several and a person picks between them; none at all and the sentence is wrong about more than a number, since the chapter never uses that word anywhere.";
+  "★ THE WORD THE CLAIM WAS ABOUT IS KEPT TOO, BECAUSE IT IS OFTEN NOT THE WORD THE ENTRY IS EXPLAINING AND A READER CANNOT TELL FROM ANYTHING ELSE ON THE ROW. The entry explains Jesus and the sentence claims Christ stood in verse two; both words are on the row, and without the second one the verses beside it look like an answer to a question nobody asked. Where the claim is about the entry's own word the two are the same word, said twice, which is the cheap half of telling a reader something they might otherwise have to go and find.";
   arguments_assert(arguments, 3);
   let all = gloss_passages_verse_claims_all(
     passages,
@@ -32,12 +33,14 @@ export function gloss_passages_verse_claims_wrong(
   function finding_of(claim) {
     let verses_key = property_get(claim, "verses_key");
     let word = property_get(claim, "word");
+    let claimed_word = property_get(claim, "claimed_word");
     let verse_named = property_get(claim, "verse_named");
     let verses_held = property_get(claim, "verses_held");
     let explain = property_get(claim, "explain");
     let finding = {
       verses_key,
       word,
+      claimed_word,
       verse_named,
       verses_held,
       explain,
