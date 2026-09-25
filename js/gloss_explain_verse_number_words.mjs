@@ -12,8 +12,8 @@ import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { equal } from "./equal.mjs";
 import { list_size } from "./list_size.mjs";
+import { equal } from "./equal.mjs";
 import { list_first } from "./list_first.mjs";
 export function gloss_explain_verse_number_words(explain, verse_numbers) {
   "Every verse of its own chapter that one word explanation names, beside the word that explanation is claiming stands there: the empty text where the claim is about the word being explained, and nothing at all where the reading cannot tell.";
@@ -50,7 +50,7 @@ export function gloss_explain_verse_number_words(explain, verse_numbers) {
   }
   each(clauses, clause_read);
   let about = {};
-  let numbers = object_property_names(answers);
+  let settled = object_property_names(answers);
   function number_settle(number) {
     let given = property_get_or_null(answers, number);
     let once = list_unique(given);
@@ -63,6 +63,6 @@ export function gloss_explain_verse_number_words(explain, verse_numbers) {
     }
     property_set(about, number, null);
   }
-  each(numbers, number_settle);
+  each(settled, number_settle);
   return about;
 }
