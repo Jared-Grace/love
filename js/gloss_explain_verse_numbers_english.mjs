@@ -10,14 +10,14 @@ export function gloss_explain_verse_numbers_english(explain, verse_numbers) {
   arguments_assert(arguments, 2);
   let markers = ["verse", "verses"];
   let joiner = "and";
-  let distances = ["back", "ago", "earlier", "later"];
+  let cancellers = ["back", "ago", "earlier", "later"];
   let shutters = ["the", "this", "few", "several", "many", "some"];
   let r = gloss_explain_verse_numbers_generic(
     explain,
     verse_numbers,
     markers,
     joiner,
-    distances,
+    cancellers,
     text_number_to_words,
     shutters,
   );
