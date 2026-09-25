@@ -6,6 +6,7 @@ export function gloss_explain_verse_numbers_cases() {
   "★ THE WORD FOR AND IS THE OTHER WAY A SENTENCE IS MADE TO SAY SOMETHING IT DID NOT. It carries a list on past itself, so verses thirteen and sixteen names two; but before the first number there is no list, and it is said twice in this one verse and three more times names none. Every case here that turns on the joining word says on which side of it the number stood, because that is the only thing separating the two.";
   "★ THE THIRD WAY IS A SENTENCE TALKING ABOUT THE VERSE IT IS ALREADY IN RATHER THAN NAMING ANOTHER, AND WHAT TELLS THEM APART STANDS IN FRONT OF THE WORD FOR VERSE. The verse three times and in verse three are the same two words with one word put on the front, and only that front word says which was meant. The cases here come in pairs on purpose - a shutting word and a naming word with the same number behind the marker - because a reading that only ever saw one of the pair would look right either way. The two pairs deliberately left unread are written down here too: that verse one told us is a real claim wearing a pointing word, and both verses eight and eleven is a real claim wearing a count word. Both are read as claims, and these cases are what keeps either word from quietly being added to the shutting list.";
   "★ THE FOURTH WAY IS A WRITER LEAVING OUT THE DASH. Verse twenty four and verse twenty-four are the same claim, and the reading that knew only the spelled shape answered the first with two verses, twenty and four, neither of them meant. The pair is written here both ways round, and so is the chapter that really does have a twentieth and a fourth verse and no twenty-fourth, where the same words rightly name two.";
+  "★ THE FIFTH WAY IS A VERSE THAT OWNS A WORD RATHER THAN HOLDING THIS ONE, AND ONLY THE OTHER LANGUAGE WRITES IT. Urdu says verse two of This, with its little word for of behind the number, and then names some other word - usually quoting it in English letters. Four rows in five of the longest queue in the repo were that one shape. The cases come in pairs here too, of against in, because the two sentences are the same until that one word; and the pair that matters most is the last one, where the word for in is followed by a quoted English word anyway - that is one of the three claims already known to be wrong in this store, so a reading that cancelled on the quote rather than on the owning word would have hidden a real fault.";
   "The chapter's verses are spelled out on each case rather than a chapter being named. What decides the answer is which verses the chapter has - the same words name one verse in a chapter of a hundred and two and two verses in a chapter of a hundred - so the thing that decides has to stand where a reader can see it.";
   "What is expected is written as one line with commas rather than as a list, so a case that fails says what it got and what it wanted in words rather than in two shapes to be lined up by eye.";
   arguments_assert(arguments, 0);
@@ -215,8 +216,8 @@ export function gloss_explain_verse_numbers_cases() {
     {
       explain: "کچھ آیتوں ۲ کے بعد",
       verses: ["2"],
-      names: "2",
-      why: "the other language shuts on nothing, so a sentence shaped like a count is still read as a naming there",
+      names: "",
+      why: "the other language shuts on nothing in front of the marker, but its little word for of behind the number cancels - after two verses is not a claim that anything stands in verse two",
     },
     {
       explain: "the word in verse three; verse four has it too",
@@ -284,6 +285,36 @@ export function gloss_explain_verse_numbers_cases() {
       verses: ["21"],
       names: "",
       why: "a number standing before the word rather than after it names nothing",
+    },
+    {
+      explain: "آیت ۲ کے 'This' یعنی یہ کا دُور والا جوڑا ہے",
+      verses: ["2", "5"],
+      names: "",
+      why: "★ Urdu's little word for of behind the number - verse two owns the word This, and This is not the word being explained",
+    },
+    {
+      explain: "وُہی لفظ ہے جو آیت ۲ میں آیا",
+      verses: ["2", "5"],
+      names: "2",
+      why: "the other half of that pair: the same marker and the same number, with the word for in behind it instead of the word for of",
+    },
+    {
+      explain: "آیت ۴ کا 'truth' اِسی سے بنا ہے",
+      verses: ["4"],
+      names: "",
+      why: "the second of the three shapes the word for of takes, and the one a masculine owner wears",
+    },
+    {
+      explain: "آیت ۸ کی آگ کا ذِکر یہاں پھر آتا ہے",
+      verses: ["8"],
+      names: "",
+      why: "the third shape, and the case where what the verse owns is named in Urdu rather than quoted in English - it cancels just the same",
+    },
+    {
+      explain: "آیت ۲۱ میں آیا: 'be' کا اَب کے وقت والا رُوپ",
+      verses: ["21"],
+      names: "21",
+      why: "★ one of the three claims already known to be wrong in this store - the quoted English word comes after the word for in, so nothing cancels and the claim is still read",
     },
   ];
   return cases;
