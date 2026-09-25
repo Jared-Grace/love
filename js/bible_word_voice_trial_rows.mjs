@@ -1,3 +1,4 @@
+import { bible_word_voice_slow_trial_rows } from "./bible_word_voice_slow_trial_rows.mjs";
 import { bible_word_voice_compare_rows } from "./bible_word_voice_compare_rows.mjs";
 import { bible_word_voice_dash_rows } from "./bible_word_voice_dash_rows.mjs";
 import { bible_word_voice_chapter_rows } from "./bible_word_voice_chapter_rows.mjs";
@@ -151,6 +152,12 @@ export async function bible_word_voice_trial_rows() {
     label: "Short-word tests",
     rtl: false,
     rows: bible_word_voice_trial_short_rows(),
+  });
+  result.push({
+    key: "grc_slow",
+    label: "Greek · slow",
+    rtl: false,
+    rows: bible_word_voice_slow_trial_rows(),
   });
   result.push({
     key: "phoneme",
