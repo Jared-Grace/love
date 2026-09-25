@@ -1,3 +1,4 @@
+import { app_replace_rule_set_labels_set } from "./app_replace_rule_set_labels_set.mjs";
 import { property_equals_json } from "./property_equals_json.mjs";
 import { app_replace_rule_set_dead_end_show } from "./app_replace_rule_set_dead_end_show.mjs";
 import { app_replace_rule_set_rules_draw } from "./app_replace_rule_set_rules_draw.mjs";
@@ -16,8 +17,6 @@ import { list_map_index } from "./list_map_index.mjs";
 import { html_div } from "./html_div.mjs";
 import { not } from "./not.mjs";
 import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
-import { null_not_is } from "./null_not_is.mjs";
-import { html_text_set_if } from "./html_text_set_if.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { app_replace_rule_set_verify_from_try } from "./app_replace_rule_set_verify_from_try.mjs";
 import { app_shared_button_restart_text } from "./app_shared_button_restart_text.mjs";
@@ -162,13 +161,9 @@ export async function app_replace_rule_set(context) {
           div_proof,
         });
       }
-      let value2 = property_get(index_selected_held, "index_selected");
-      let has_selection = null_not_is(value2);
-      html_text_set_if(has_selection, "Rules:", "Choose a rule:", label_rules);
-      html_text_set_if(
-        has_selection,
-        "Choose a symbol:",
-        "Symbols:",
+      app_replace_rule_set_labels_set(
+        index_selected_held,
+        label_rules,
         label_symbols,
       );
     }
@@ -221,6 +216,11 @@ export async function app_replace_rule_set(context) {
       "index_selected",
     );
     property_set(index_selected_held, "index_selected", value3);
+    app_replace_rule_set_labels_set(
+      index_selected_held,
+      label_rules,
+      label_symbols,
+    );
     ("the rows of buttons are redrawn HERE, after the chosen rule has been stored, and not by the function that worked out which rule that is. Every one of these buttons redraws itself by reading this same variable, so redrawing before the answer had been stored painted every symbol as one no rule could touch - and a symbol no rule can touch cannot be pressed, which left the game unplayable");
     let list7 = property_get(symbol_buttons_held, "symbol_buttons");
     list_map_property_invoke(list7, "refresh_sb");
