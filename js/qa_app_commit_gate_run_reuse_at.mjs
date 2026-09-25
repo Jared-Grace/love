@@ -1,3 +1,4 @@
+import { git_commit_exists_is } from "./git_commit_exists_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { qa_app_commit_shipped_names } from "./qa_app_commit_shipped_names.mjs";
 import { text_includes } from "./text_includes.mjs";
@@ -37,6 +38,11 @@ export async function qa_app_commit_gate_run_reuse_at(search, head) {
   let placed = property_get(newest, "placed");
   for (let one of placed) {
     let commit = property_get(one, "commit");
+    let present = await git_commit_exists_is(commit);
+    if (not(present)) {
+      ("A judged commit whose name no longer names anything is passed over rather than compared. History here has been rewritten, and every commit named in the record before that is gone - asked to compare against one, git refuses and the whole sending stops, where the honest answer is only that this verdict cannot be reused.");
+      continue;
+    }
     let words = ["diff", "--name-only", commit, head, "--"].concat(paths);
     let out = await git_folder_run(folder, words);
     let changed = text_trim(out);
