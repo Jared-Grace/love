@@ -5,6 +5,7 @@ import { list_join } from "./list_join.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_add } from "./list_add.mjs";
+import { text_replace_to_space } from "./text_replace_to_space.mjs";
 import { each } from "./each.mjs";
 import { list_max } from "./list_max.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
@@ -39,6 +40,7 @@ export function gloss_explain_verse_numbers_generic(
   "the markers are the words the explanation's own language uses for verse, the joiner is its word for and, the distances are its words for counting backwards from here, and the shutters are the words that, standing in front of the word for verse, mean no verse is about to be named. All of them are words from a language and none names anything that runs.";
   "AN EXPLANATION THAT SAYS WHERE ELSE IN THE CHAPTER A WORD STANDS IS MAKING A CLAIM ANYONE CAN CHECK, and it makes that claim the same way in every language: it says the word for verse, and then it says which. What changes from one store to the next is only the word and the shapes the number is written with, so those are handed in and the reading itself is written once.";
   "The chapter's own verse numbers are handed in and written out here rather than the writing being read back into numbers. Writing forward needs only the one speller the language already has; reading backward would want a second table saying the same thing, which would then be free to come to disagree with the first. It also means a verse the chapter does not have is never named, however the sentence spells it.";
+  "EACH NUMBER IS WRITTEN DOWN TWICE, ONCE WITH ITS DASH AND ONCE WITH A SPACE WHERE THE DASH WAS, BECAUSE A WRITER PUTS THE DASH IN ONLY WHEN THEY REMEMBER. The speller says twenty-four and the store says verse twenty four, and a reading that knew only the spelled shape read that as verse twenty and then verse four - two verses named, both of them wrong, and neither of them the one the sentence meant. Met three times in the original-language store on 2026-09-25, and worth three rows of that store's list. Writing the second shape down can only ever join two readings into one, never split one into two, and where the chapter has no such verse nothing changes at all.";
   "A number counts only where it follows the word for verse, because ordinary prose is full of small numbers that are not verses at all. A list carries on past its joining word, so verses thirteen, sixteen, nineteen and twenty names four of them, and the run ends at the first word that is not one.";
   "PUNCTUATION IS READ RATHER THAN THROWN AWAY, BECAUSE A SENTENCE THAT ENDED IS NOT A SENTENCE THAT CARRIED ON. It is the only one in the whole verse. Two doing words are tied by it says nothing about verse two, and a reading that had already lost the full stop could not tell it from one that did. Measured on 2026-09-25 that one confusion was most of what the original-language store was being accused of.";
   "A MARK OR A JOINING WORD CARRIES THE READING ON ONLY ONCE SOMETHING HAS ALREADY BEEN NAMED, and that one question is asked of both of them together. Verses thirteen, sixteen is a list of two and two verses, two pairs is a sentence about pairs, and the difference between them is whether a number came before the comma or after it. A joining word joins one thing to another, so before the first number there is nothing there for it to join: it is said twice in this one verse and three more times names no verse at all, and neither does there are two reasons, one in this verse and one in the next. The comma had always asked this and the joining word never had, which was the whole of that fault - three of the hundred and fifty-two rows the original-language store stood accused of on 2026-09-25, each of them a sentence that named nothing. Every other mark ends the run wherever it stands.";
@@ -59,13 +61,18 @@ export function gloss_explain_verse_numbers_generic(
   }
   let written_numbers = {};
   let written_sizes = [];
-  function verse_number_read(verse_number) {
-    let written = lambda_spell(verse_number);
+  function verse_number_written(written, verse_number) {
     let words = text_punctuation_dash_kept_split(written);
     let key = list_join(words, " ");
     property_set(written_numbers, key, verse_number);
     let size = list_size(words);
     list_add(written_sizes, size);
+  }
+  function verse_number_read(verse_number) {
+    let written = lambda_spell(verse_number);
+    verse_number_written(written, verse_number);
+    let spaced = text_replace_to_space(written, "-");
+    verse_number_written(spaced, verse_number);
   }
   each(verse_numbers, verse_number_read);
   let longest = list_max(written_sizes);
