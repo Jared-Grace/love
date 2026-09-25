@@ -163,6 +163,7 @@ export async function app_replace_rule_set(context) {
       }
       app_replace_rule_set_labels_set(
         index_selected_held,
+        success_held,
         label_rules,
         label_symbols,
       );
@@ -218,6 +219,7 @@ export async function app_replace_rule_set(context) {
     property_set(index_selected_held, "index_selected", value3);
     app_replace_rule_set_labels_set(
       index_selected_held,
+      success_held,
       label_rules,
       label_symbols,
     );
