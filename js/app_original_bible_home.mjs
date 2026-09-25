@@ -1,3 +1,4 @@
+import { bible_word_sound_slow_url } from "./bible_word_sound_slow_url.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { bible_word_sound_url } from "./bible_word_sound_url.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -9,11 +10,11 @@ export async function app_original_bible_home(context) {
   ("★ A WORD THAT WAS NEVER RECORDED MAKES A GOOD-LOOKING ADDRESS AND FETCHES NOTHING, and the playing swallows that silently, so a tap on it does nothing at all and the reader is told nothing. ",
     fn_name("bible_word_voice_chapter_missing"),
     " is what says, before a reader finds out, which words of a chapter would be silent.");
-  ("No slower readings yet. Slowing is done to a recording, so the recordings had to come first; the turtle arrives for this page the day they do.");
+  ("The turtle beside each word says it again at half speed, made from the same recording, so it is the voice the reader just heard, stretched.");
   arguments_assert(arguments, 1);
   let download = app_original_bible_gloss_generate_download;
   let sound_url_get = bible_word_sound_url;
-  let slow_url_get = null;
+  let slow_url_get = bible_word_sound_slow_url;
   await app_shared_gloss_bible_home_generic(
     context,
     download,

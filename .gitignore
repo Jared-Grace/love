@@ -152,3 +152,6 @@ __pycache__/
 # that nobody will read. Dropping that costs a whole rewrite window, which is not
 # worth paying for 3.5 MB.
 /web/assets/bible_word_voice/
+# The slow sayings are made from the clips above, on this machine, so they are
+# ignored for the same reason.
+/web/assets/bible_word_voice_slow_*/
