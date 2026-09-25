@@ -3,6 +3,7 @@ export function gloss_explain_verse_numbers_cases() {
   "One word explanation, the verse numbers the chapter it sits in actually has, and which of those the sentence names - written in both the languages the stores are authored in.";
   "★ THE WHOLE POINT OF THIS CORPUS IS THAT A READING WHICH FINDS NOTHING SAYS NOTHING. Every case here is checked by what comes back, and the answer for a sentence naming no verse is the same empty answer a reading blind to the language gives for every sentence in the store. So an English-only reading passed this corpus for years by never being shown an Urdu sentence, and a reading that steps one word at a time passed it by never being shown a verse past ninety-nine. Both of those were real and both are written down here now.";
   "★ THE OTHER HALF OF THE SAME BLINDNESS IS A READING THAT FINDS SOMETHING NOBODY SAID. A sentence that ended at a full stop and began again with a number was read as one sentence naming a verse, and a case list holding no punctuation at all could never have caught it. Measured on 2026-09-25 that was most of what the original-language store was being accused of, so the marks are now written into the cases as carefully as the words are.";
+  "★ THE WORD FOR AND IS THE OTHER WAY A SENTENCE IS MADE TO SAY SOMETHING IT DID NOT. It carries a list on past itself, so verses thirteen and sixteen names two; but before the first number there is no list, and it is said twice in this one verse and three more times names none. Every case here that turns on the joining word says on which side of it the number stood, because that is the only thing separating the two.";
   "The chapter's verses are spelled out on each case rather than a chapter being named. What decides the answer is which verses the chapter has - the same words name one verse in a chapter of a hundred and two and two verses in a chapter of a hundred - so the thing that decides has to stand where a reader can see it.";
   "What is expected is written as one line with commas rather than as a list, so a case that fails says what it got and what it wanted in words rather than in two shapes to be lined up by eye.";
   arguments_assert(arguments, 0);
@@ -111,6 +112,25 @@ export function gloss_explain_verse_numbers_cases() {
       why: "the same comma once a verse has been named is a list, and the difference is only which side of it the number stands",
     },
     {
+      explain:
+        "it is said twice in this one verse and three more times before the sun is up",
+      verses: ["1", "3"],
+      names: "",
+      why: "★ the joining word straight after the word for verse - it joins one thing to another and there is no first thing yet for it to join",
+    },
+    {
+      explain: "there are two reasons, one in this verse and one in the next",
+      verses: ["1", "2"],
+      names: "",
+      why: "the same fault worded the other way round, and the shape three real explanations took",
+    },
+    {
+      explain: "آیت اَور ۱۳ میں",
+      verses: ["13"],
+      names: "",
+      why: "the joining word before any number names nothing in the other language either",
+    },
+    {
       explain: "the word in verse three; verse four has it too",
       verses: ["3", "4"],
       names: "3,4",
@@ -123,7 +143,8 @@ export function gloss_explain_verse_numbers_cases() {
       why: "a dash standing on its own between two words ends the run, though a dash inside a word does not",
     },
     {
-      explain: "it stood twice in the verse two back, once elided and once whole",
+      explain:
+        "it stood twice in the verse two back, once elided and once whole",
       verses: ["2", "9"],
       names: "",
       why: "★ a number saying how far back is not a number saying which - the same five words in the same order as a sentence that names verse two",
