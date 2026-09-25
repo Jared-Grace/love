@@ -97,9 +97,9 @@ export function lyric_video_picture_motion_text(
     "H*(" + y_from + "+" + y_change + "*" + t + "+" + box_size + ")";
   let text =
     ",scale=" +
-    frame +
+    canvas +
     ":force_original_aspect_ratio=decrease:flags=lanczos,format=yuva420p,pad=" +
-    frame +
+    canvas +
     ":(ow-iw)/2:(oh-ih)/2:color=black@0,loop=loop=" +
     subtract(frames, 1) +
     ":size=1,perspective=x0='" +
@@ -119,5 +119,6 @@ export function lyric_video_picture_motion_text(
     "':y3='" +
     box_bottom +
     "':interpolation=cubic:eval=frame";
+  text = text + ",scale=" + frame + ":flags=lanczos";
   return text;
 }
