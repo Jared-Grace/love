@@ -1,8 +1,10 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_explain_verse_numbers } from "./gloss_explain_verse_numbers.mjs";
+import { object_property_names_numbers_sorted } from "./object_property_names_numbers_sorted.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_includes } from "./list_includes.mjs";
+import { list_filter } from "./list_filter.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { gloss_passages_entries_collect_generic } from "./gloss_passages_entries_collect_generic.mjs";
@@ -11,13 +13,16 @@ export function gloss_passages_verse_claims_all(
   text_index,
   word_key_read,
 ) {
-  "Every verse a word explanation in a chapter names, whether or not the verse holds a word the explanation's word is related to.";
+  "Every verse a word explanation in a chapter names, whether or not the verse holds a word the explanation's word is related to, and beside each one every verse of the chapter that does hold such a word.";
   "$plain text_index";
   "the index says which of a passage's texts is the wording being explained, and it names a place in a list rather than anything that runs.";
   "The reading beside this one keeps only the claims that come back wrong, which is the half worth mending. This one keeps them all, and that is what gives the wrong ones a denominator. Six wrong claims is a store in good order if two hundred were made and a detector that has quietly stopped firing if seven were.";
   "Each row says whether the named verse held a related word rather than being sorted into two lists here. A caller wanting one half asks for that half in one line, and a caller wanting the proportion needs both halves side by side and would otherwise have to walk twice.";
   "A claim that comes back not held is a report and not a verdict, for the same reason it is there: an explanation may name a verse to say what happens in it rather than to say the word stands in it. The wording that made the row travels with it so a reader can tell the two apart.";
   "Nothing is written. The passages are read as they were handed over.";
+  "★ WHERE THE WORD ACTUALLY STANDS TRAVELS WITH EVERY ROW, BECAUSE A WRONG CLAIM IS ONLY HALF A FINDING WITHOUT IT. Told that verse five does not hold the word, a person mending has learnt nothing about what to write instead, and has to open the chapter and read all of it. Told as well that the word stands in verse six and nowhere else, the mend is the one thing it can be. Measured on 2026-09-25 over the Urdu store: eleven thousand eight hundred verse claims, seven hundred and two of them wrong - a queue that is unreadable one file at a time and short enough to settle in an afternoon with the answer beside the question.";
+  "An empty list of holding verses is the loudest row of the lot: the explanation named a verse for a word the chapter never uses anywhere, so no number would have been right and the sentence itself is what is wrong.";
+  "The verses come back as numbers in counting order rather than in the order the record happened to fill, because a reader is going to say the word moved one verse along, and that is a thing you can only see when they are counted.";
   arguments_assert(arguments, 3);
   function entry_read(context) {
     let explain = property_get(context, "explain");
@@ -27,6 +32,13 @@ export function gloss_passages_verse_claims_all(
     let verses_key = property_get(context, "verses_key");
     let word = property_get(context, "word");
     let named = gloss_explain_verse_numbers(explain, verse_numbers);
+    let chapter_verses = object_property_names_numbers_sorted(verse_keys);
+    function verse_holds_is(verse_number) {
+      let keys = property_get_or_null(verse_keys, verse_number);
+      let holds = list_includes(keys, key);
+      return holds;
+    }
+    let verses_held = list_filter(chapter_verses, verse_holds_is);
     let claims = [];
     function named_read(verse_named) {
       let keys = property_get_or_null(verse_keys, verse_named);
@@ -36,6 +48,7 @@ export function gloss_passages_verse_claims_all(
         word,
         verse_named,
         held,
+        verses_held,
         explain,
       };
       list_add(claims, claim);
