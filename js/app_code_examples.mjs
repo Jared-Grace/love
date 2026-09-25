@@ -1,3 +1,4 @@
+import { app_code_button_skip_lesson_unfinished } from "./app_code_button_skip_lesson_unfinished.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_examples_on_more } from "./app_code_examples_on_more.mjs";
 import { app_code_examples_lambda } from "./app_code_examples_lambda.mjs";
@@ -64,6 +65,7 @@ export function app_code_examples(context) {
   }
   let g = app_code_container_padded_x(root);
   app_code_button_skip_lesson(context, g);
+  app_code_button_skip_lesson_unfinished(context, g);
   let text = app_shared_button_home_text();
   let b = app_shared_button_screen_wide(context, app_code_home, g, text);
   let value = app_shared_spaced_gap();
