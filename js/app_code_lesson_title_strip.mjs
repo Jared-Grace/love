@@ -32,6 +32,9 @@ import { app_shared_color_green_dark } from "./app_shared_color_green_dark.mjs";
 import { html_style_variable_set } from "./html_style_variable_set.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_shared_button_arrow_next_notext } from "./app_shared_button_arrow_next_notext.mjs";
+import { app_shared_color_green_tint } from "./app_shared_color_green_tint.mjs";
+import { app_shared_button_border_width } from "./app_shared_button_border_width.mjs";
+import { html_border } from "./html_border.mjs";
 export function app_code_lesson_title_strip(root, context, lesson) {
   ("a quiet top bar on every lesson screen - a small home button (just the house) sitting right beside the lesson title, the pair centered together, so home is one tap away without scrolling to the bottom and reads as part of the header rather than floating alone in a corner; the title reuses the lesson's own home title (",
     app_code_lesson_title_render.name,
@@ -127,11 +130,17 @@ export function app_code_lesson_title_strip(root, context, lesson) {
     app_shared_button_arrow_next_notext,
   );
   if (complete) {
-    ("the three buttons on the green bar are painted the same green, so the bar reads as one finished piece rather than a green strip with grey tiles sitting on it, at the human's request. Their edges stay, which is what still marks each one as something to press");
-    let done = app_shared_color_progress_complete();
-    html_style_background_color_set(home, done);
-    html_style_background_color_set(previous, done);
-    html_style_background_color_set(next, done);
+    ("the three buttons on the green bar are painted in green, so the bar reads as one finished piece rather than a green strip with grey tiles sitting on it - but a PALER green than the bar, edged in the deep green of the title, because painted the bar's own green they sank into it and stopped reading as things to press, at the human's request");
+    let fill = app_shared_color_green_tint();
+    let edge = app_shared_color_green_deep();
+    let border_width = app_shared_button_border_width();
+    function paint(button) {
+      html_style_background_color_set(button, fill);
+      html_border(button, border_width, edge);
+    }
+    paint(home);
+    paint(previous);
+    paint(next);
   }
   return strip;
 }
