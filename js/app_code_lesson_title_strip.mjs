@@ -74,10 +74,10 @@ export function app_code_lesson_title_strip(root, context, lesson) {
     "column-gap": column_gap,
   });
   let text = emoji_home();
-  app_shared_button(leading, text, go_home);
+  let home = app_shared_button(leading, text, go_home);
   ("the two arrows step by one lesson in the list and no further - never to the next UNFINISHED lesson, which is what the skip button at the foot of the lesson already does. These are for reading back over what came before and looking ahead, so they must land where a reader counting lesson numbers expects to land");
   let index_previous = subtract_1(lesson_index);
-  app_code_lesson_title_strip_arrow(
+  let previous = app_code_lesson_title_strip_arrow(
     leading,
     context,
     index_previous,
@@ -120,11 +120,18 @@ export function app_code_lesson_title_strip(root, context, lesson) {
     "justify-self": "end",
   });
   let index_next = add_1(lesson_index);
-  app_code_lesson_title_strip_arrow(
+  let next = app_code_lesson_title_strip_arrow(
     trailing,
     context,
     index_next,
     app_shared_button_arrow_next_notext,
   );
+  if (complete) {
+    ("the three buttons on the green bar are painted the same green, so the bar reads as one finished piece rather than a green strip with grey tiles sitting on it, at the human's request. Their edges stay, which is what still marks each one as something to press");
+    let done = app_shared_color_progress_complete();
+    html_style_background_color_set(home, done);
+    html_style_background_color_set(previous, done);
+    html_style_background_color_set(next, done);
+  }
   return strip;
 }
