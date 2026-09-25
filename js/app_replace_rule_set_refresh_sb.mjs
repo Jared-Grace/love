@@ -1,3 +1,5 @@
+import { app_shared_glow_look_here_if } from "./app_shared_glow_look_here_if.mjs";
+import { not } from "./not.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -9,4 +11,5 @@ export function app_replace_rule_set_refresh_sb(symbol_button, index, state) {
   let includes = list_includes(start_indices, index);
   let valid = not_equal(index_selected, null) && includes;
   app_replace_symbol_tile_valid_if(symbol_button, valid, success);
+  app_shared_glow_look_here_if(valid && not(success), symbol_button);
 }

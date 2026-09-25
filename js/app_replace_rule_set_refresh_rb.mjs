@@ -1,3 +1,4 @@
+import { app_shared_glow_look_here_if } from "./app_shared_glow_look_here_if.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_enable_if } from "./html_enable_if.mjs";
@@ -25,4 +26,6 @@ export function app_replace_rule_set_refresh_rb(
   html_style_background_color_set(rule_button, c);
   let arrow = property_get(rule_button, "arrow");
   html_font_color_set_if(selected && not(success), arrow, "white", "black");
+  let none_chosen = equal(index_selected, null);
+  app_shared_glow_look_here_if(none_chosen && not(success), rule_button);
 }
