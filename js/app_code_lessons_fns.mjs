@@ -320,6 +320,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_copy_kept,
     app_code_lesson_statement_name_sum,
     app_code_lesson_statement_name_total,
+    app_code_lesson_statement_name_plus_one,
     app_code_lesson_statement_name_minus_one,
     app_code_lesson_statement_name_itself_sum,
     app_code_lesson_statement_name_one_more,
