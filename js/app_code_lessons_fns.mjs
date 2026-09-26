@@ -1,3 +1,6 @@
+import { app_code_lesson_statement_name_multiply } from "./app_code_lesson_statement_name_multiply.mjs";
+import { app_code_lesson_statement_name_divide } from "./app_code_lesson_statement_name_divide.mjs";
+import { app_code_lesson_statement_name_remainder } from "./app_code_lesson_statement_name_remainder.mjs";
 import { app_code_lesson_statement_name_subtract } from "./app_code_lesson_statement_name_subtract.mjs";
 import { app_code_lesson_symbols_digits_numbered } from "./app_code_lesson_symbols_digits_numbered.mjs";
 import { app_code_lesson_symbols_digit_number } from "./app_code_lesson_symbols_digit_number.mjs";
@@ -332,6 +335,9 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_itself_sum,
     app_code_lesson_statement_name_count,
     app_code_lesson_statement_name_subtract,
+    app_code_lesson_statement_name_multiply,
+    app_code_lesson_statement_name_divide,
+    app_code_lesson_statement_name_remainder,
     app_code_lesson_statement_name_compare,
   ];
   return fns;
