@@ -1,3 +1,4 @@
+import { app_code_lessons_any_complete } from "./app_code_lessons_any_complete.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bar_content_root_sticky } from "./app_shared_bar_content_root_sticky.mjs";
 import { property_get } from "./property_get.mjs";
@@ -12,7 +13,11 @@ export function app_code_home_bar_content(root, context) {
   let bar = property_get(frame, "bar");
   html_centered(bar);
   ("the way on comes before the gear, so the bar reads left to right as the thing to do next and then the thing to change");
-  app_code_home_next_lesson_button(bar, context);
+  let started = app_code_lessons_any_complete(context);
+  if (started) {
+    app_code_home_next_lesson_button(bar, context);
+  }
+  ("before anything is finished the way in is drawn big above the list instead, and a second copy up here would be two buttons saying the same thing");
   app_code_home_settings_gear(bar, context);
   let content = property_get(frame, "content");
   ("the frame pads the body away from the window edges already, so the list needs no container of its own");
