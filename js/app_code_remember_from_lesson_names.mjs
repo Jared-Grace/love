@@ -1,10 +1,10 @@
+import { app_shared_screen_go_tab_step } from "./app_shared_screen_go_tab_step.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_shared_screen_go_tab } from "./app_shared_screen_go_tab.mjs";
 import { app_code_examples } from "./app_code_examples.mjs";
 import { app_code_lesson_current_id } from "./app_code_lesson_current_id.mjs";
 import { app_code_lesson_index_by_id } from "./app_code_lesson_index_by_id.mjs";
@@ -35,7 +35,7 @@ export function app_code_remember_from_lesson_names(
   let ids = app_code_lesson_ids_short();
   let lesson_id = property_get(ids, lesson_fn.name);
   async function on_click() {
-    await app_shared_screen_go_tab(
+    await app_shared_screen_go_tab_step(
       context,
       "lesson_id",
       lesson_id,

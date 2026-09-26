@@ -21,7 +21,8 @@ export function app_shared_history_listen(context) {
   property_set(context, "history_listening", true);
   async function on_pop() {
     "a step with no screen filed on it is not one of ours - a photo opened full screen adds one, and its closing is its own business";
-    "and a step naming the screen already drawn needs nothing: that is the photo closing onto the page under it, which is still there";
+    "and a step naming the screen and the address already drawn needs nothing: that is the photo closing onto the page under it, which is still there";
+    "The address is compared as well as the screen, because a reminder link goes from one lesson's examples to another's - the same screen - and coming back from it has to draw the lesson the reader left.";
     let state = html_history_state_get();
     if (null_is(state)) {
       return;
@@ -31,7 +32,11 @@ export function app_shared_history_listen(context) {
       return;
     }
     let current = app_shared_screen_stored_get(context);
-    if (equal(current, screen)) {
+    let address = property_get_or_null(state, "address");
+    let drawn = property_get_or_null(context, "history_address_drawn");
+    let screen_same = equal(current, screen);
+    let address_same = equal(address, drawn);
+    if (screen_same && address_same) {
       return;
     }
     app_shared_screen_stored_set_context(context, screen);
