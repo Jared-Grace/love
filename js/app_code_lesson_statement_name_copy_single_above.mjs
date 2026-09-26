@@ -18,6 +18,9 @@ import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_two } from "./app_code_lesson_statement_name_two.mjs";
+import { html_div } from "./html_div.mjs";
+import { app_code_note_cycle_code } from "./app_code_note_cycle_code.mjs";
+import { app_code_span_code_dark_names } from "./app_code_span_code_dark_names.mjs";
 import { app_code_lesson_name_no_quotes_box } from "./app_code_lesson_name_no_quotes_box.mjs";
 export function app_code_lesson_statement_name_copy_single_above(
   root,
@@ -179,12 +182,15 @@ export function app_code_lesson_statement_name_copy_single_above(
     ],
     names,
   );
-  html_div_cycle_code(box_two, [
-    "In other words, ",
-    held_last,
-    " was changed to: ",
-    copied,
-  ]);
+  ("the line it was changed to is coloured, names inside it and all, because it is this lesson's line and its names are this lesson's cups; the line it was changed from stays plain with the rest of the lesson before, at the human's request");
+  let changed = html_div(box_two);
+  let uncolored = [];
+  app_code_note_cycle_code(
+    changed,
+    ["In other words, ", held_last, " was changed to: "],
+    uncolored,
+  );
+  app_code_span_code_dark_names(changed, copied, names);
   app_code_lesson_name_no_quotes_box(
     root,
     name_first,
