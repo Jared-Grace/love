@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_not } from "./app_code_lesson_statement_name_not.mjs";
 import { app_code_lesson_statement_name_and } from "./app_code_lesson_statement_name_and.mjs";
 import { app_code_lesson_statement_name_or } from "./app_code_lesson_statement_name_or.mjs";
 import { app_code_lesson_statement_name_greater } from "./app_code_lesson_statement_name_greater.mjs";
@@ -353,6 +354,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_not_equal,
     app_code_lesson_statement_name_and,
     app_code_lesson_statement_name_or,
+    app_code_lesson_statement_name_not,
   ];
   return fns;
 }
