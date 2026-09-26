@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { gloss_explain_verse_numbers } from "./gloss_explain_verse_numbers.mjs";
 import { gloss_explain_verse_number_words } from "./gloss_explain_verse_number_words.mjs";
+import { object_property_names } from "./object_property_names.mjs";
 import { object_property_names_numbers_sorted } from "./object_property_names_numbers_sorted.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
@@ -32,6 +32,7 @@ export function gloss_passages_verse_claims_all(
   "WHERE THE WORD STANDS IS NOW WORKED OUT PER CLAIM RATHER THAN ONCE PER EXPLANATION, WHICH IS WHAT THE CLAIMED WORD COSTS. A sentence explaining one word and claiming another needs the other word's verses beside it, or the mend it suggests is the mend for a word nobody is arguing about. The key each claim is checked with is read off the claimed word the same way the entry's own key was read off the entry's own word, so a claim about the word being explained comes out exactly where it always did.";
   "The list of holding verses is never empty on a row that comes back, because an empty one is now what makes the claim leave. It used to be the loudest row of the lot - the explanation naming a verse for a word the chapter never uses - and it stopped being readable the moment claims could be about a word other than the one being explained, since a quoted gloss in the reader's own language is absent from the chapter for an innocent reason and a wrong word is absent for a guilty one, and the list alone cannot say which.";
   "The verses come back as numbers in counting order rather than in the order the record happened to fill, because a reader is going to say the word moved one verse along, and that is a thing you can only see when they are counted.";
+  "★ THE VERSES NAMED ARE THE ONES THE WORD READING ITSELF FOUND, RATHER THAN A SECOND READING OF THE SAME SENTENCE. Both answers are the same set - the word reading cuts the explanation at its punctuation and every mark it cuts on already ended a number's run in the reading underneath, so cutting cannot join two numbers or split one. Being the same set is exactly why only one of them should be asked. Two spellings of one question do not break when they part company; they disagree quietly, and the loop then walks a number the word reading never pinned or skips one it did.";
   arguments_assert(arguments, 3);
   function entry_read(context) {
     let explain = property_get(context, "explain");
@@ -39,8 +40,8 @@ export function gloss_passages_verse_claims_all(
     let verse_keys = property_get(context, "verse_keys");
     let verses_key = property_get(context, "verses_key");
     let word = property_get(context, "word");
-    let named = gloss_explain_verse_numbers(explain, verse_numbers);
     let about = gloss_explain_verse_number_words(explain, verse_numbers);
+    let named = object_property_names(about);
     let chapter_verses = object_property_names_numbers_sorted(verse_keys);
     let claims = [];
     function named_read(verse_named) {

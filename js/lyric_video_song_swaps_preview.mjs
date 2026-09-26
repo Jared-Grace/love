@@ -1,22 +1,25 @@
-import { picture_swaps_undecided_each } from "./picture_swaps_undecided_each.mjs";
-import { html_hash_name_third_or_empty } from "./html_hash_name_third_or_empty.mjs";
-import { lyric_video_song_swaps_narrow } from "./lyric_video_song_swaps_narrow.mjs";
-import { lyric_video_song_buttons } from "./lyric_video_song_buttons.mjs";
+import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_shared_text_quiet } from "./app_shared_text_quiet.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { api_read } from "./api_read.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
+import { html_hash_name_third_or_empty } from "./html_hash_name_third_or_empty.mjs";
+import { lyric_video_song_swaps_narrow } from "./lyric_video_song_swaps_narrow.mjs";
 import { lyric_video_song_swap_card } from "./lyric_video_song_swap_card.mjs";
+import { html_hash_name_part_or_empty } from "./html_hash_name_part_or_empty.mjs";
+import { picture_swaps_undecided_each } from "./picture_swaps_undecided_each.mjs";
+import { lyric_video_song_buttons } from "./lyric_video_song_buttons.mjs";
 export async function lyric_video_song_swaps_preview() {
   "The screen for choosing between a song's current background pictures and the pictures offered to replace them, on the sandbox app at hash lyric_video_song_swaps.";
   "BEFORE AND AFTER SIT SIDE BY SIDE, because a replacement is judged against what it replaces; seen alone, a candidate is judged against nothing.";
   "A THIRD PART IN THE ADDRESS KEEPS ONLY THE PLACES OFFERING A PICTURE FROM THAT FOLDER, as mixed in #lyric_video_song_swaps/agape/mixed. Asking someone to look at seven rows out of twenty-four, and leaving them to find which seven, spends their attention on the finding rather than on the looking.";
+  "A FOURTH PART, all, AS IN #lyric_video_song_swaps/agape/video_now,jewish/all, SHOWS APPROVED PLACES TOO. By default an approved place is left off, because the page is a list of what still needs a decision; but a new round of pictures for places already approved can only be compared on a page that shows them, and there the approval can be taken back.";
   "NOTHING IS CHANGED FROM HERE. Choosing is said to whoever is at the keyboard, who points the song's document at the picture and renders again.";
   arguments_assert(arguments, 0);
   let root = html_body_div();
@@ -42,6 +45,15 @@ export async function lyric_video_song_swaps_preview() {
     let listed = lyric_video_song_swaps_narrow(listed2, folder_name);
     function card(swap) {
       lyric_video_song_swap_card(cards, document, swap, name);
+    }
+    let left = html_hash_name_part_or_empty(3);
+    let every = equal(left, "all");
+    if (every) {
+      for (let swap of listed) {
+        card(swap);
+      }
+      app_shared_text_quiet(cards, "approved places shown too");
+      return;
     }
     let hidden = picture_swaps_undecided_each(listed, card);
     app_shared_text_quiet(cards, hidden + " already approved, not shown");
