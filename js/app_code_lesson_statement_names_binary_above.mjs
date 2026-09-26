@@ -1,3 +1,4 @@
+import { text_is } from "./text_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
@@ -40,6 +41,9 @@ export function app_code_lesson_statement_names_binary_above({
   let values_word = "numbers";
   if (boolean_is(number_first)) {
     values_word = "true or false values";
+  }
+  if (text_is(number_first)) {
+    values_word = "pieces of text";
   }
   let to_two = list_join_empty([") to two ", values_word, " ("]);
   let with_values = list_join_empty([" between two ", values_word, " (like "]);

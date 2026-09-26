@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_join } from "./app_code_lesson_statement_name_join.mjs";
 import { app_code_lesson_statement_name_watch } from "./app_code_lesson_statement_name_watch.mjs";
 import { app_code_lesson_statement_name_not } from "./app_code_lesson_statement_name_not.mjs";
 import { app_code_lesson_statement_name_and } from "./app_code_lesson_statement_name_and.mjs";
@@ -342,6 +343,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_one_less,
     app_code_lesson_statement_name_sum,
     app_code_lesson_statement_name_total,
+    app_code_lesson_statement_name_join,
     app_code_lesson_statement_name_itself_sum,
     app_code_lesson_statement_name_count,
     app_code_lesson_statement_name_subtract,
