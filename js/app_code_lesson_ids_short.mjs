@@ -207,18 +207,18 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_join: text_frozen("name_join"),
     app_code_lesson_statement_name_itself_sum: text_frozen("name_add_self"),
     app_code_lesson_statement_name_one_more: text_frozen("name_one_more"),
-    app_code_lesson_statement_name_watch: text_frozen("name_watch"),
+    app_code_lesson_statement_name_again_last: text_frozen("name_watch"),
     app_code_lesson_statement_name_one_less: text_frozen("name_one_less"),
     app_code_lesson_statement_name_count: text_frozen("name_count"),
-    app_code_lesson_statement_name_count_watched:
+    app_code_lesson_statement_name_count_last:
       text_frozen("name_count_watched"),
-    app_code_lesson_statement_name_one_more_watched: text_frozen(
+    app_code_lesson_statement_name_one_more_last: text_frozen(
       "name_one_more_watched",
     ),
-    app_code_lesson_statement_name_one_less_watched: text_frozen(
+    app_code_lesson_statement_name_one_less_last: text_frozen(
       "name_one_less_watched",
     ),
-    app_code_lesson_statement_name_itself_sum_watched: text_frozen(
+    app_code_lesson_statement_name_itself_sum_last: text_frozen(
       "name_add_self_watched",
     ),
     app_code_lesson_statement_name_copy_kept: text_frozen("name_copy_kept"),
