@@ -16,19 +16,15 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
-import { app_code_remember_from_lesson_names } from "./app_code_remember_from_lesson_names.mjs";
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_two } from "./app_code_lesson_statement_name_two.mjs";
-import { html_div } from "./html_div.mjs";
-import { app_code_note_cycle_code } from "./app_code_note_cycle_code.mjs";
-import { app_code_span_code_dark_names } from "./app_code_span_code_dark_names.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_name_no_quotes_box } from "./app_code_lesson_name_no_quotes_box.mjs";
 export function app_code_lesson_statement_name_copy_single_above(
   root,
   context,
 ) {
   arguments_assert(arguments, 2);
-  ("the boxes read before the first question: the cups, then the cup story written as a program, then the two-names program, then the one change this lesson makes to the line learnt before, then what the missing quote marks do");
+  ("the boxes read before the first question: the cups, then the cup story written as a program, then the two-names program with the one change this lesson makes to it, then what the missing quote marks do");
   ("The reminder is the two-names lesson because this line is that one with a single change - the second name is given the first name instead of a word. Both programs are three lines, so nothing is added but the one change.");
   let name_first = app_code_lesson_statement_name_value_name();
   let name_last = app_code_lesson_statement_name_two_name();
@@ -141,9 +137,9 @@ export function app_code_lesson_statement_name_copy_single_above(
     word_first,
   );
   ("THE SCREEN OPENS WITH THE CUPS, AND THE REMINDER OF THE LESSON BEFORE COMES AFTER THE PROGRAM THAT TELLS THEM, directly above the sentence comparing the two programs - so the two programs being compared stand one under the other, and nothing the cups never hold is read before the cups, at the human's request");
-  ("the reminder names the two names and the two words they held, rather than one line of the program, and colours the names the way the cups above colour them, at the human's request");
+  ("the reminder names the two names and the two words they held, rather than one line of the program, and leaves the names uncoloured - the colours belong to the cups of this lesson, and the reminder is about the lesson before, at the human's request");
   let box_two = app_code_container_light_blue(root);
-  app_code_remember_from_lesson_names(
+  app_code_remember_from_lesson(
     box_two,
     context,
     app_code_lesson_statement_name_two,
@@ -158,32 +154,37 @@ export function app_code_lesson_statement_name_copy_single_above(
       quoted_last,
       "):",
     ],
-    names,
   );
   app_code_code_lines_writes_out(
     box_two,
     [held_first, held_last, logged],
     word_last,
   );
-  ("THE COMPARISON WITH THE LINE LEARNT BEFORE COMES AFTER THE CUPS AND THEIR PROGRAM, NEVER BEFORE THEM. The screen opens with the picture, and the rule in words is said once the reader has watched it happen, at the human's request. Said first, it put a word the cups never hold between the picture and its code");
-  ("the two lines of code in the sentence are painted with the names inside them coloured too, the way the box about quote marks below paints its lines, because a line of code is not itself a name and so the writer that colours a name would leave it all white, at the human's request");
-  let box_said = app_code_container_light_blue(root);
-  let said = html_div(box_said);
-  app_code_note_cycle_code(
-    said,
+  ("THE COMPARISON WITH THE LESSON BEFORE IS SAID IN THE REMINDER'S OWN BOX, under the program it compares against, and after the cups and their program, never before them: the screen opens with the picture, and the change is said once the reader has watched it happen. Three lines - what that lesson did, what this one does, and the one line of code that changed - and only the line about this lesson is coloured, because only it speaks of this lesson's cups, at the human's request");
+  html_div_cycle_code(box_two, [
+    "In that lesson, a name (",
+    name_last,
+    ") holds a word (",
+    quoted_last,
+    ")",
+  ]);
+  app_code_note_div_cycle_code(
+    box_two,
     [
-      "A name (",
+      "In this lesson, a name (",
       name_last,
-      ") can also hold what another name (",
+      ") holds what another name (",
       name_first,
-      ") holds (",
+      ") holds",
     ],
     names,
   );
-  app_code_span_code_dark_names(said, copied, names);
-  html_span_text(said, " instead of ");
-  app_code_span_code_dark_names(said, held_last, names);
-  html_span_text(said, ")");
+  html_div_cycle_code(box_two, [
+    "In other words, ",
+    held_last,
+    " was changed to: ",
+    copied,
+  ]);
   app_code_lesson_name_no_quotes_box(
     root,
     name_first,
