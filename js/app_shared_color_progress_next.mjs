@@ -1,5 +1,5 @@
 export function app_shared_color_progress_next() {
-  ("deep violet rather than a deep blue: the review rows between lessons are deep blue, and the row to do next was measured a hairsbreadth from them - the human asked for the two to differ. Dark enough that the white title, the pale category word and the grey number all still read on it");
-  let c = "#4c1d95";
+  "a bright royal blue, between the deep navy of the review rows and the pale blue of a row not reached yet, so the whole list reads as one family of blues - the human found an earlier violet did not belong among them. Lighter than the review rows, so the two differ as the human asked; dark enough that the white title reads at about seven to one and the pale category word and grey number at about four to one";
+  let c = "#1d4ed8";
   return c;
 }
