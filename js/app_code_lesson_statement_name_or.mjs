@@ -5,7 +5,8 @@ import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statem
 import { app_code_lesson_expression_or } from "./app_code_lesson_expression_or.mjs";
 export function app_code_lesson_statement_name_or() {
   arguments_assert(arguments, 0);
-  ("two names joined with or: let a = true; let b = false; let at_least_1_true = a || b; console.log(at_least_1_true); writes out true");
+  ("two names joined with or: let a = true; let b = false; let a_or_b = a || b; console.log(a_or_b); writes out true");
+  ("The answer is named a_or_b and not at_least_1_true. A learner asked what at_least_1_true meant and needed it explained, and a name that needs explaining is a second thing to learn on a screen about the symbol; a_or_b reads back as the line it came from.");
   ("The same screen as the lesson that joins two names with and, with the symbol changed. Every screen asks all four pairs of true and false, and only one of the four comes out false, which is the thing this symbol is: false only when both sides are.");
   let symbol = js_operator_or_symbol();
   function pairs_get() {
@@ -30,7 +31,7 @@ export function app_code_lesson_statement_name_or() {
       symbol,
       "):",
     ],
-    answer_name: "at_least_1_true",
+    answer_name: "a_or_b",
     answer_count: 2,
   });
   return lesson;
