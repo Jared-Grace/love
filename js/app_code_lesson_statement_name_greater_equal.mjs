@@ -5,7 +5,7 @@ import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statem
 import { app_code_lesson_expression_greater_than_equal } from "./app_code_lesson_expression_greater_than_equal.mjs";
 export function app_code_lesson_statement_name_greater_equal() {
   arguments_assert(arguments, 0);
-  ("two names compared with larger or equal: let a = 5; let b = 5; console.log(a >= b); writes out true");
+  ("two names compared with larger or equal: let a = 5; let b = 5; let bigger_or_equal = a >= b; console.log(bigger_or_equal); writes out true");
   ("The same screen as the lesson that compares two names, with the symbol changed. Two of the candidate pairs hold the same number twice, because equal numbers are the whole difference between this symbol and the greater than symbol.");
   let symbol = js_operator_greater_than_equal_symbol();
   function pairs_get() {
@@ -37,6 +37,7 @@ export function app_code_lesson_statement_name_greater_equal() {
       symbol,
       ") another:",
     ],
+    answer_name: "bigger_or_equal",
     answer_count: 2,
   });
   return lesson;

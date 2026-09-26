@@ -5,7 +5,7 @@ import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statem
 import { app_code_lesson_expression_greater_than } from "./app_code_lesson_expression_greater_than.mjs";
 export function app_code_lesson_statement_name_greater() {
   arguments_assert(arguments, 0);
-  ("two names compared the other way: let a = 9; let b = 2; console.log(a > b); writes out true");
+  ("two names compared the other way: let a = 9; let b = 2; let bigger = a > b; console.log(bigger); writes out true");
   ("The same screen as the lesson that compares two names with the less than symbol, with the symbol turned round. Only two answers exist, so a question offers two buttons, and each screen draws two programs that come out true and two that come out false.");
   let symbol = js_operator_greater_than_symbol();
   function pairs_get() {
@@ -37,6 +37,7 @@ export function app_code_lesson_statement_name_greater() {
       symbol,
       ") than another:",
     ],
+    answer_name: "bigger",
     answer_count: 2,
   });
   return lesson;
