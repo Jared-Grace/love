@@ -214,6 +214,13 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_multiply: text_frozen("name_multiply"),
     app_code_lesson_statement_name_divide: text_frozen("name_divide"),
     app_code_lesson_statement_name_remainder: text_frozen("name_remainder"),
+    app_code_lesson_statement_name_greater: text_frozen("name_greater"),
+    app_code_lesson_statement_name_smaller_equal:
+      text_frozen("name_smaller_equal"),
+    app_code_lesson_statement_name_greater_equal:
+      text_frozen("name_greater_equal"),
+    app_code_lesson_statement_name_equal: text_frozen("name_equal"),
+    app_code_lesson_statement_name_not_equal: text_frozen("name_not_equal"),
     app_code_lesson_comment_note: text_frozen("comment"),
     app_code_lesson_log_twice: text_frozen("log_twice"),
     app_code_lesson_comment_skip_line: text_frozen("comment_skip"),
