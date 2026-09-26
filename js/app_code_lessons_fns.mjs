@@ -1,28 +1,3 @@
-import { app_code_lesson_statement_name_copy_single } from "./app_code_lesson_statement_name_copy_single.mjs";
-import { app_code_lesson_statement_name_one_less } from "./app_code_lesson_statement_name_one_less.mjs";
-import { app_code_lesson_statement_name_plus_one } from "./app_code_lesson_statement_name_plus_one.mjs";
-import { app_code_lesson_statement_name_number } from "./app_code_lesson_statement_name_number.mjs";
-import { app_code_lesson_statement_name_true_false } from "./app_code_lesson_statement_name_true_false.mjs";
-import { app_code_lesson_statement_name_minus_one } from "./app_code_lesson_statement_name_minus_one.mjs";
-import { app_code_lesson_comment_after_code } from "./app_code_lesson_comment_after_code.mjs";
-import { app_code_lesson_expression_choose_order_parentheses_minus_divide } from "./app_code_lesson_expression_choose_order_parentheses_minus_divide.mjs";
-import { app_code_lesson_expression_choose_order_arithmetic_less_than } from "./app_code_lesson_expression_choose_order_arithmetic_less_than.mjs";
-import { app_code_lesson_expression_choose_order_swapping_add } from "./app_code_lesson_expression_choose_order_swapping_add.mjs";
-import { app_code_lesson_expression_choose_order_swapping_divide } from "./app_code_lesson_expression_choose_order_swapping_divide.mjs";
-import { app_code_lesson_expression_choose_order_in_between } from "./app_code_lesson_expression_choose_order_in_between.mjs";
-import { app_code_lesson_expression_choose_order_plus_times } from "./app_code_lesson_expression_choose_order_plus_times.mjs";
-import { app_code_lesson_expression_choose_order_plus_divide } from "./app_code_lesson_expression_choose_order_plus_divide.mjs";
-import { app_code_lesson_expression_choose_order_minus_times } from "./app_code_lesson_expression_choose_order_minus_times.mjs";
-import { app_code_lesson_expression_choose_order_minus_divide } from "./app_code_lesson_expression_choose_order_minus_divide.mjs";
-import { app_code_lesson_expression_choose_order_nested_add } from "./app_code_lesson_expression_choose_order_nested_add.mjs";
-import { app_code_lesson_expression_choose_order_nested_subtract } from "./app_code_lesson_expression_choose_order_nested_subtract.mjs";
-import { app_code_lesson_expression_choose_order_nested_multiply } from "./app_code_lesson_expression_choose_order_nested_multiply.mjs";
-import { app_code_lesson_expression_choose_order_nested_divide } from "./app_code_lesson_expression_choose_order_nested_divide.mjs";
-import { app_code_lesson_expression_choose_order_plus_minus } from "./app_code_lesson_expression_choose_order_plus_minus.mjs";
-import { app_code_lesson_expression_choose_order_times_divide } from "./app_code_lesson_expression_choose_order_times_divide.mjs";
-import { app_code_lesson_expression_three_steps_left_to_right } from "./app_code_lesson_expression_three_steps_left_to_right.mjs";
-import { app_code_lesson_expression_three_steps_strong_first } from "./app_code_lesson_expression_three_steps_strong_first.mjs";
-import { app_code_lesson_expression_both_sides_any_comparison } from "./app_code_lesson_expression_both_sides_any_comparison.mjs";
 import { app_code_lesson_symbols_digits_numbered } from "./app_code_lesson_symbols_digits_numbered.mjs";
 import { app_code_lesson_symbols_digit_number } from "./app_code_lesson_symbols_digit_number.mjs";
 import { app_code_lesson_symbols_digits } from "./app_code_lesson_symbols_digits.mjs";
@@ -57,30 +32,44 @@ import { app_code_lesson_expression_string_order } from "./app_code_lesson_expre
 import { app_code_lesson_expression_string_trichotomy } from "./app_code_lesson_expression_string_trichotomy.mjs";
 import { app_code_lesson_expression_string_order_equal } from "./app_code_lesson_expression_string_order_equal.mjs";
 import { app_code_lesson_expression_true_false } from "./app_code_lesson_expression_true_false.mjs";
+import { app_code_lesson_expression_equal_true_false } from "./app_code_lesson_expression_equal_true_false.mjs";
+import { app_code_lesson_expression_not_equal_true_false } from "./app_code_lesson_expression_not_equal_true_false.mjs";
 import { app_code_lesson_expression_not } from "./app_code_lesson_expression_not.mjs";
 import { app_code_lesson_expression_or } from "./app_code_lesson_expression_or.mjs";
 import { app_code_lesson_expression_and } from "./app_code_lesson_expression_and.mjs";
-import { app_code_lesson_expression_nested_add } from "./app_code_lesson_expression_nested_add.mjs";
-import { app_code_lesson_expression_nested_subtract } from "./app_code_lesson_expression_nested_subtract.mjs";
-import { app_code_lesson_expression_multiply } from "./app_code_lesson_expression_multiply.mjs";
-import { app_code_lesson_expression_nested_multiply } from "./app_code_lesson_expression_nested_multiply.mjs";
-import { app_code_lesson_expression_nested_divide } from "./app_code_lesson_expression_nested_divide.mjs";
-import { app_code_lesson_expression_plus_minus } from "./app_code_lesson_expression_plus_minus.mjs";
-import { app_code_lesson_expression_times_divide } from "./app_code_lesson_expression_times_divide.mjs";
 import { app_code_lesson_expression_choose_order } from "./app_code_lesson_expression_choose_order.mjs";
 import { app_code_lesson_expression_choose_order_solve } from "./app_code_lesson_expression_choose_order_solve.mjs";
+import { app_code_lesson_expression_choose_order_nested_add } from "./app_code_lesson_expression_choose_order_nested_add.mjs";
+import { app_code_lesson_expression_nested_add } from "./app_code_lesson_expression_nested_add.mjs";
+import { app_code_lesson_expression_choose_order_nested_subtract } from "./app_code_lesson_expression_choose_order_nested_subtract.mjs";
+import { app_code_lesson_expression_nested_subtract } from "./app_code_lesson_expression_nested_subtract.mjs";
+import { app_code_lesson_expression_multiply } from "./app_code_lesson_expression_multiply.mjs";
+import { app_code_lesson_expression_choose_order_nested_multiply } from "./app_code_lesson_expression_choose_order_nested_multiply.mjs";
+import { app_code_lesson_expression_nested_multiply } from "./app_code_lesson_expression_nested_multiply.mjs";
+import { app_code_lesson_expression_choose_order_nested_divide } from "./app_code_lesson_expression_choose_order_nested_divide.mjs";
+import { app_code_lesson_expression_nested_divide } from "./app_code_lesson_expression_nested_divide.mjs";
+import { app_code_lesson_expression_choose_order_plus_minus } from "./app_code_lesson_expression_choose_order_plus_minus.mjs";
+import { app_code_lesson_expression_plus_minus } from "./app_code_lesson_expression_plus_minus.mjs";
+import { app_code_lesson_expression_choose_order_times_divide } from "./app_code_lesson_expression_choose_order_times_divide.mjs";
+import { app_code_lesson_expression_times_divide } from "./app_code_lesson_expression_times_divide.mjs";
 import { app_code_lesson_expression_choose_order_operators } from "./app_code_lesson_expression_choose_order_operators.mjs";
 import { app_code_lesson_expression_choose_order_same_strength_pair } from "./app_code_lesson_expression_choose_order_same_strength_pair.mjs";
+import { app_code_lesson_expression_choose_order_plus_times } from "./app_code_lesson_expression_choose_order_plus_times.mjs";
 import { app_code_lesson_expression_plus_times } from "./app_code_lesson_expression_plus_times.mjs";
+import { app_code_lesson_expression_choose_order_plus_divide } from "./app_code_lesson_expression_choose_order_plus_divide.mjs";
 import { app_code_lesson_expression_plus_divide } from "./app_code_lesson_expression_plus_divide.mjs";
+import { app_code_lesson_expression_choose_order_minus_times } from "./app_code_lesson_expression_choose_order_minus_times.mjs";
 import { app_code_lesson_expression_minus_times } from "./app_code_lesson_expression_minus_times.mjs";
+import { app_code_lesson_expression_choose_order_minus_divide } from "./app_code_lesson_expression_choose_order_minus_divide.mjs";
 import { app_code_lesson_expression_minus_divide } from "./app_code_lesson_expression_minus_divide.mjs";
 import { app_code_lesson_expression_which_part_first } from "./app_code_lesson_expression_which_part_first.mjs";
 import { app_code_lesson_expression_exponent } from "./app_code_lesson_expression_exponent.mjs";
 import { app_code_lesson_expression_choose_order_arithmetic_parentheses } from "./app_code_lesson_expression_choose_order_arithmetic_parentheses.mjs";
 import { app_code_lesson_expression_parentheses_arithmetic } from "./app_code_lesson_expression_parentheses_arithmetic.mjs";
+import { app_code_lesson_expression_choose_order_parentheses_minus_divide } from "./app_code_lesson_expression_choose_order_parentheses_minus_divide.mjs";
 import { app_code_lesson_expression_parentheses_minus_divide } from "./app_code_lesson_expression_parentheses_minus_divide.mjs";
 import { app_code_lesson_expression_parentheses_moved } from "./app_code_lesson_expression_parentheses_moved.mjs";
+import { app_code_lesson_expression_choose_order_arithmetic_less_than } from "./app_code_lesson_expression_choose_order_arithmetic_less_than.mjs";
 import { app_code_lesson_expression_arithmetic_less_than } from "./app_code_lesson_expression_arithmetic_less_than.mjs";
 import { app_code_lesson_functions_arithmetic } from "./app_code_lesson_functions_arithmetic.mjs";
 import { app_code_lesson_functions_invalid } from "./app_code_lesson_functions_invalid.mjs";
@@ -93,8 +82,8 @@ import { app_code_lesson_expression_remainder_3 } from "./app_code_lesson_expres
 import { app_code_lesson_expression_remainder_4 } from "./app_code_lesson_expression_remainder_4.mjs";
 import { app_code_lesson_expression_remainder_subtract } from "./app_code_lesson_expression_remainder_subtract.mjs";
 import { app_code_lesson_expression_round_down } from "./app_code_lesson_expression_round_down.mjs";
-import { app_code_lesson_expression_integer_division } from "./app_code_lesson_expression_integer_division.mjs";
 import { app_code_lesson_expression_choose_order_integer_division } from "./app_code_lesson_expression_choose_order_integer_division.mjs";
+import { app_code_lesson_expression_integer_division } from "./app_code_lesson_expression_integer_division.mjs";
 import { app_code_lesson_expression_dividend } from "./app_code_lesson_expression_dividend.mjs";
 import { app_code_lesson_expression_divisor } from "./app_code_lesson_expression_divisor.mjs";
 import { app_code_lesson_expression_quotient } from "./app_code_lesson_expression_quotient.mjs";
@@ -113,28 +102,10 @@ import { app_code_lesson_expression_absolute_value } from "./app_code_lesson_exp
 import { app_code_lesson_expression_smaller } from "./app_code_lesson_expression_smaller.mjs";
 import { app_code_lesson_expression_larger } from "./app_code_lesson_expression_larger.mjs";
 import { app_code_lesson_expression_min_max_of_three } from "./app_code_lesson_expression_min_max_of_three.mjs";
-import { app_code_lesson_expression_equal_true_false } from "./app_code_lesson_expression_equal_true_false.mjs";
-import { app_code_lesson_expression_not_equal_true_false } from "./app_code_lesson_expression_not_equal_true_false.mjs";
 import { app_code_lesson_expression_equal_number_string_true_false } from "./app_code_lesson_expression_equal_number_string_true_false.mjs";
 import { app_code_lesson_expression_choose_order_compare } from "./app_code_lesson_expression_choose_order_compare.mjs";
 import { app_code_lesson_expression_comparing_a_comparison } from "./app_code_lesson_expression_comparing_a_comparison.mjs";
 import { app_code_lesson_expression_parentheses_one_side } from "./app_code_lesson_expression_parentheses_one_side.mjs";
-import { app_code_lesson_expression_choose_order_same_strength } from "./app_code_lesson_expression_choose_order_same_strength.mjs";
-import { app_code_lesson_expression_choose_order_three } from "./app_code_lesson_expression_choose_order_three.mjs";
-import { app_code_lesson_expression_choose_order_both_sides } from "./app_code_lesson_expression_choose_order_both_sides.mjs";
-import { app_code_lesson_expression_choose_order_both_sides_any_comparison } from "./app_code_lesson_expression_choose_order_both_sides_any_comparison.mjs";
-import { app_code_lesson_expression_arithmetic_equality } from "./app_code_lesson_expression_arithmetic_equality.mjs";
-import { app_code_lesson_expression_swapping_add } from "./app_code_lesson_expression_swapping_add.mjs";
-import { app_code_lesson_expression_swapping_divide } from "./app_code_lesson_expression_swapping_divide.mjs";
-import { app_code_lesson_expression_swapping_order } from "./app_code_lesson_expression_swapping_order.mjs";
-import { app_code_lesson_expression_choose_order_pair } from "./app_code_lesson_expression_choose_order_pair.mjs";
-import { app_code_lesson_expression_parentheses_both_sides } from "./app_code_lesson_expression_parentheses_both_sides.mjs";
-import { app_code_lesson_expression_swapping_equal } from "./app_code_lesson_expression_swapping_equal.mjs";
-import { app_code_lesson_expression_choose_order_and } from "./app_code_lesson_expression_choose_order_and.mjs";
-import { app_code_lesson_expression_comparison_and } from "./app_code_lesson_expression_comparison_and.mjs";
-import { app_code_lesson_expression_in_between } from "./app_code_lesson_expression_in_between.mjs";
-import { app_code_lesson_expression_choose_order_or } from "./app_code_lesson_expression_choose_order_or.mjs";
-import { app_code_lesson_expression_comparison_or } from "./app_code_lesson_expression_comparison_or.mjs";
 import { app_code_lesson_expression_choose_order_and_before_or } from "./app_code_lesson_expression_choose_order_and_before_or.mjs";
 import { app_code_lesson_expression_and_before_or } from "./app_code_lesson_expression_and_before_or.mjs";
 import { app_code_lesson_expression_choose_order_parentheses } from "./app_code_lesson_expression_choose_order_parentheses.mjs";
@@ -148,21 +119,50 @@ import { app_code_lesson_expression_not_comparison } from "./app_code_lesson_exp
 import { app_code_lesson_expression_not_equal_same } from "./app_code_lesson_expression_not_equal_same.mjs";
 import { app_code_lesson_expression_choose_order_not_pair } from "./app_code_lesson_expression_choose_order_not_pair.mjs";
 import { app_code_lesson_expression_not_pair } from "./app_code_lesson_expression_not_pair.mjs";
-import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
-import { app_code_lesson_statement_name_identifier } from "./app_code_lesson_statement_name_identifier.mjs";
-import { app_code_lesson_statement_name_two } from "./app_code_lesson_statement_name_two.mjs";
-import { app_code_lesson_statement_name_again } from "./app_code_lesson_statement_name_again.mjs";
-import { app_code_lesson_statement_name_copy } from "./app_code_lesson_statement_name_copy.mjs";
-import { app_code_lesson_statement_name_sum } from "./app_code_lesson_statement_name_sum.mjs";
-import { app_code_lesson_statement_name_total } from "./app_code_lesson_statement_name_total.mjs";
-import { app_code_lesson_statement_name_itself_sum } from "./app_code_lesson_statement_name_itself_sum.mjs";
-import { app_code_lesson_statement_name_one_more } from "./app_code_lesson_statement_name_one_more.mjs";
-import { app_code_lesson_statement_name_count } from "./app_code_lesson_statement_name_count.mjs";
-import { app_code_lesson_statement_name_copy_kept } from "./app_code_lesson_statement_name_copy_kept.mjs";
-import { app_code_lesson_statement_name_compare } from "./app_code_lesson_statement_name_compare.mjs";
+import { app_code_lesson_expression_choose_order_both_sides } from "./app_code_lesson_expression_choose_order_both_sides.mjs";
+import { app_code_lesson_expression_arithmetic_equality } from "./app_code_lesson_expression_arithmetic_equality.mjs";
+import { app_code_lesson_expression_choose_order_both_sides_any_comparison } from "./app_code_lesson_expression_choose_order_both_sides_any_comparison.mjs";
+import { app_code_lesson_expression_both_sides_any_comparison } from "./app_code_lesson_expression_both_sides_any_comparison.mjs";
+import { app_code_lesson_expression_choose_order_swapping_add } from "./app_code_lesson_expression_choose_order_swapping_add.mjs";
+import { app_code_lesson_expression_swapping_add } from "./app_code_lesson_expression_swapping_add.mjs";
+import { app_code_lesson_expression_choose_order_swapping_divide } from "./app_code_lesson_expression_choose_order_swapping_divide.mjs";
+import { app_code_lesson_expression_swapping_divide } from "./app_code_lesson_expression_swapping_divide.mjs";
+import { app_code_lesson_expression_swapping_order } from "./app_code_lesson_expression_swapping_order.mjs";
+import { app_code_lesson_expression_choose_order_pair } from "./app_code_lesson_expression_choose_order_pair.mjs";
+import { app_code_lesson_expression_parentheses_both_sides } from "./app_code_lesson_expression_parentheses_both_sides.mjs";
+import { app_code_lesson_expression_swapping_equal } from "./app_code_lesson_expression_swapping_equal.mjs";
+import { app_code_lesson_expression_choose_order_and } from "./app_code_lesson_expression_choose_order_and.mjs";
+import { app_code_lesson_expression_comparison_and } from "./app_code_lesson_expression_comparison_and.mjs";
+import { app_code_lesson_expression_choose_order_in_between } from "./app_code_lesson_expression_choose_order_in_between.mjs";
+import { app_code_lesson_expression_in_between } from "./app_code_lesson_expression_in_between.mjs";
+import { app_code_lesson_expression_choose_order_or } from "./app_code_lesson_expression_choose_order_or.mjs";
+import { app_code_lesson_expression_comparison_or } from "./app_code_lesson_expression_comparison_or.mjs";
+import { app_code_lesson_expression_choose_order_same_strength } from "./app_code_lesson_expression_choose_order_same_strength.mjs";
+import { app_code_lesson_expression_three_steps_left_to_right } from "./app_code_lesson_expression_three_steps_left_to_right.mjs";
+import { app_code_lesson_expression_choose_order_three } from "./app_code_lesson_expression_choose_order_three.mjs";
+import { app_code_lesson_expression_three_steps_strong_first } from "./app_code_lesson_expression_three_steps_strong_first.mjs";
 import { app_code_lesson_comment_note } from "./app_code_lesson_comment_note.mjs";
 import { app_code_lesson_log_twice } from "./app_code_lesson_log_twice.mjs";
 import { app_code_lesson_comment_skip_line } from "./app_code_lesson_comment_skip_line.mjs";
+import { app_code_lesson_comment_after_code } from "./app_code_lesson_comment_after_code.mjs";
+import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
+import { app_code_lesson_statement_name_number } from "./app_code_lesson_statement_name_number.mjs";
+import { app_code_lesson_statement_name_true_false } from "./app_code_lesson_statement_name_true_false.mjs";
+import { app_code_lesson_statement_name_identifier } from "./app_code_lesson_statement_name_identifier.mjs";
+import { app_code_lesson_statement_name_two } from "./app_code_lesson_statement_name_two.mjs";
+import { app_code_lesson_statement_name_copy_single } from "./app_code_lesson_statement_name_copy_single.mjs";
+import { app_code_lesson_statement_name_again } from "./app_code_lesson_statement_name_again.mjs";
+import { app_code_lesson_statement_name_copy } from "./app_code_lesson_statement_name_copy.mjs";
+import { app_code_lesson_statement_name_copy_kept } from "./app_code_lesson_statement_name_copy_kept.mjs";
+import { app_code_lesson_statement_name_plus_one } from "./app_code_lesson_statement_name_plus_one.mjs";
+import { app_code_lesson_statement_name_minus_one } from "./app_code_lesson_statement_name_minus_one.mjs";
+import { app_code_lesson_statement_name_one_more } from "./app_code_lesson_statement_name_one_more.mjs";
+import { app_code_lesson_statement_name_one_less } from "./app_code_lesson_statement_name_one_less.mjs";
+import { app_code_lesson_statement_name_sum } from "./app_code_lesson_statement_name_sum.mjs";
+import { app_code_lesson_statement_name_total } from "./app_code_lesson_statement_name_total.mjs";
+import { app_code_lesson_statement_name_itself_sum } from "./app_code_lesson_statement_name_itself_sum.mjs";
+import { app_code_lesson_statement_name_count } from "./app_code_lesson_statement_name_count.mjs";
+import { app_code_lesson_statement_name_compare } from "./app_code_lesson_statement_name_compare.mjs";
 export function app_code_lessons_fns() {
   "Every lesson of the code app, as the functions that build them, in the order a learner meets them.";
   let fns = [
@@ -200,6 +200,8 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_string_trichotomy,
     app_code_lesson_expression_string_order_equal,
     app_code_lesson_expression_true_false,
+    app_code_lesson_expression_equal_true_false,
+    app_code_lesson_expression_not_equal_true_false,
     app_code_lesson_expression_not,
     app_code_lesson_expression_or,
     app_code_lesson_expression_and,
@@ -268,8 +270,6 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_smaller,
     app_code_lesson_expression_larger,
     app_code_lesson_expression_min_max_of_three,
-    app_code_lesson_expression_equal_true_false,
-    app_code_lesson_expression_not_equal_true_false,
     app_code_lesson_expression_equal_number_string_true_false,
     app_code_lesson_expression_choose_order_compare,
     app_code_lesson_expression_comparing_a_comparison,
