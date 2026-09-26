@@ -14,6 +14,10 @@ import { text_empty } from "./text_empty.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_code_note_div_cycle_code } from "./app_code_note_div_cycle_code.mjs";
 import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
+import { html_div } from "./html_div.mjs";
+import { app_code_note_cycle_code } from "./app_code_note_cycle_code.mjs";
+import { app_code_span_code_dark_names } from "./app_code_span_code_dark_names.mjs";
+import { html_span_text } from "./html_span_text.mjs";
 import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { app_code_lesson_name_no_quotes_box } from "./app_code_lesson_name_no_quotes_box.mjs";
@@ -106,21 +110,23 @@ export function app_code_lesson_statement_name_copy_single_above(
   );
   let box_copy = app_code_container_light_blue(root);
   ("the names in this box wear the colours the cups above and the box below give them, at the human's request - the sentence through the writer that colours a name, and the program through notes that mark each name, the way the lesson that copies into a third cup writes its program, because the notes are what the code box reads its colours from");
-  app_code_note_div_cycle_code(
-    box_copy,
+  ("the two lines of code in the sentence are painted with the names inside them coloured too, the way the box about quote marks below paints its lines, because a line of code is not itself a name and so the writer that colours a name would leave it all white, at the human's request");
+  let said = html_div(box_copy);
+  app_code_note_cycle_code(
+    said,
     [
       "A name (",
       name_last,
       ") can also hold what another name (",
       name_first,
       ") holds (",
-      copied,
-      " instead of ",
-      held_last,
-      "):",
     ],
     names,
   );
+  app_code_span_code_dark_names(said, copied, names);
+  html_span_text(said, " instead of ");
+  app_code_span_code_dark_names(said, held_last, names);
+  html_span_text(said, "):");
   let first_named = app_code_note_name_mark(name_first);
   let last_named = app_code_note_name_mark(name_last);
   let words_made = list_join_empty(["We make cup ", first_named]);
