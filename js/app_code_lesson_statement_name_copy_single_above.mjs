@@ -7,13 +7,9 @@ import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_remember_from_lesson_names } from "./app_code_remember_from_lesson_names.mjs";
 import { app_code_lesson_statement_name_two } from "./app_code_lesson_statement_name_two.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
-import { html_div } from "./html_div.mjs";
-import { app_code_note_cycle_code } from "./app_code_note_cycle_code.mjs";
-import { app_code_span_code_dark_names } from "./app_code_span_code_dark_names.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_code_note_div_cycle_code } from "./app_code_note_div_cycle_code.mjs";
@@ -22,13 +18,17 @@ import { app_code_js_written_that_text } from "./app_code_js_written_that_text.m
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
+import { html_div } from "./html_div.mjs";
+import { app_code_note_cycle_code } from "./app_code_note_cycle_code.mjs";
+import { app_code_span_code_dark_names } from "./app_code_span_code_dark_names.mjs";
+import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_name_no_quotes_box } from "./app_code_lesson_name_no_quotes_box.mjs";
 export function app_code_lesson_statement_name_copy_single_above(
   root,
   context,
 ) {
   arguments_assert(arguments, 2);
-  ("the boxes read before the first question: the two-names program and the one change this lesson makes to it, then the cups, then the cup story written as a program, then what the missing quote marks do");
+  ("the boxes read before the first question: the two-names program, then the cups, then the cup story written as a program, then the one change this lesson makes to the line learnt before, then what the missing quote marks do");
   ("The reminder is the two-names lesson because this line is that one with a single change - the second name is given the first name instead of a word. Both programs are three lines, so nothing is added but the one change.");
   let name_first = app_code_lesson_statement_name_value_name();
   let name_last = app_code_lesson_statement_name_two_name();
@@ -40,37 +40,31 @@ export function app_code_lesson_statement_name_copy_single_above(
   let held_last = js_code_let_statement(name_last, quoted_last);
   let copied = js_code_let_statement(name_last, name_first);
   let logged = js_code_console_log_statement(name_last);
+  let names = [name_first, name_last];
+  ("the reminder names the two names and the two words they held, rather than one line of the program, and colours the names the way the cups below colour them, at the human's request");
   let box_two = app_code_container_light_blue(root);
-  app_code_remember_from_lesson(
+  app_code_remember_from_lesson_names(
     box_two,
     context,
     app_code_lesson_statement_name_two,
-    ["two names can hold two words (", held_last, "):"],
+    [
+      "two names (",
+      name_first,
+      ", ",
+      name_last,
+      ") can hold two words (",
+      quoted_first,
+      ", ",
+      quoted_last,
+      "):",
+    ],
+    names,
   );
   app_code_code_lines_writes_out(
     box_two,
     [held_first, held_last, logged],
     word_last,
   );
-  let names = [name_first, name_last];
-  ("THE COMPARISON WITH THE LINE LEARNT BEFORE STANDS IN THE REMINDER'S OWN BOX, under the program it compares against. Standing between the cups and the program that tells them, it put a word the cups never hold in front of the code, and the reader had to step over it to join the picture to its code, at the human's request");
-  ("the two lines of code in the sentence are painted with the names inside them coloured too, the way the box about quote marks below paints its lines, because a line of code is not itself a name and so the writer that colours a name would leave it all white, at the human's request");
-  let said = html_div(box_two);
-  app_code_note_cycle_code(
-    said,
-    [
-      "A name (",
-      name_last,
-      ") can also hold what another name (",
-      name_first,
-      ") holds (",
-    ],
-    names,
-  );
-  app_code_span_code_dark_names(said, copied, names);
-  html_span_text(said, " instead of ");
-  app_code_span_code_dark_names(said, held_last, names);
-  html_span_text(said, ")");
   ("the cup story comes before the code, the way the lesson that copies into a third cup tells it, because this is the first lesson where one name is given another name - so it is where a learner first wonders whether the first name loses its word. The story never pours: someone looks inside one cup and fetches more of the same, which is what the code does, at the human's request");
   let nothing = text_empty();
   let cup_first = [word_first, name_first];
@@ -170,6 +164,25 @@ export function app_code_lesson_statement_name_copy_single_above(
     ],
     word_first,
   );
+  ("THE COMPARISON WITH THE LINE LEARNT BEFORE COMES AFTER THE CUPS AND THEIR PROGRAM, NEVER BEFORE THEM. The screen opens with the picture, and the rule in words is said once the reader has watched it happen, at the human's request. Said first, it put a word the cups never hold between the picture and its code");
+  ("the two lines of code in the sentence are painted with the names inside them coloured too, the way the box about quote marks below paints its lines, because a line of code is not itself a name and so the writer that colours a name would leave it all white, at the human's request");
+  let box_said = app_code_container_light_blue(root);
+  let said = html_div(box_said);
+  app_code_note_cycle_code(
+    said,
+    [
+      "A name (",
+      name_last,
+      ") can also hold what another name (",
+      name_first,
+      ") holds (",
+    ],
+    names,
+  );
+  app_code_span_code_dark_names(said, copied, names);
+  html_span_text(said, " instead of ");
+  app_code_span_code_dark_names(said, held_last, names);
+  html_span_text(said, ")");
   app_code_lesson_name_no_quotes_box(
     root,
     name_first,
