@@ -1,10 +1,10 @@
-import { boolean_is } from "./boolean_is.mjs";
-import { list_join_empty } from "./list_join_empty.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
+import { boolean_is } from "./boolean_is.mjs";
+import { list_join_empty } from "./list_join_empty.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
@@ -15,6 +15,8 @@ import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { html_div_code_lines } from "./html_div_code_lines.mjs";
+import { app_code_lesson_statement_names_binary_answer_lines } from "./app_code_lesson_statement_names_binary_answer_lines.mjs";
+import { list_concat } from "./list_concat.mjs";
 export function app_code_lesson_statement_names_binary_above({
   root,
   context,
@@ -22,11 +24,13 @@ export function app_code_lesson_statement_names_binary_above({
   pair,
   remember_lesson,
   remember_parts,
+  answer_name,
 }) {
   arguments_assert(arguments, 1);
   ("the boxes read before the first question of a lesson about one symbol between two names: the symbol written with two numbers the way the learner already knows it, and then the same two numbers given names and the symbol written with the names instead");
   ("Both boxes use the same two numbers, so both write out the same answer. The answer the learner already knows sits one box above the answer they are being shown, which is what lets them check the new form against the old one rather than be told it works.");
   ("The answer is worked out by running the line rather than written in, so it cannot disagree with the program drawn above it whatever symbol and numbers a lesson hands in.");
+  ("The second box ends the way the questions do - with the answer given the lesson's name for it and the name written out, when the lesson hands one in - so the program a learner reads first is the shape they are then asked about.");
   let name_first = app_code_lesson_statement_name_value_name();
   let name_last = app_code_lesson_statement_name_two_name();
   let number_first = list_first(pair);
@@ -87,7 +91,10 @@ export function app_code_lesson_statement_names_binary_above({
     names_asked,
     "):",
   ]);
-  let logged_names = js_code_console_log_statement(names_asked);
-  let lines_names = [held_first, held_last, logged_names];
+  let answer_lines = app_code_lesson_statement_names_binary_answer_lines(
+    names_asked,
+    answer_name,
+  );
+  let lines_names = list_concat([held_first, held_last], answer_lines);
   app_code_code_lines_writes_out(box_names, lines_names, written);
 }

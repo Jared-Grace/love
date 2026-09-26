@@ -19,6 +19,7 @@ export function app_code_lesson_statement_name_sum() {
     example_pair: [2, 3],
     remember_lesson: app_code_lesson_functions_console_log_arithmetic,
     remember_parts: ["we can add (", plus, ") two numbers together:"],
+    answer_name: null,
     answer_count: null,
   });
   return lesson;

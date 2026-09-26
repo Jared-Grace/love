@@ -5,7 +5,7 @@ import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statem
 import { app_code_lesson_operators_asterisk } from "./app_code_lesson_operators_asterisk.mjs";
 export function app_code_lesson_statement_name_multiply() {
   arguments_assert(arguments, 0);
-  ("two names multiplied: let a = 3; let b = 4; console.log(a * b); writes out 12");
+  ("two names multiplied: let a = 3; let b = 4; let product = a * b; console.log(product); writes out 12");
   ("The same screen as the lessons that add and subtract two names, with the symbol changed. The names stand in the same two places; only what is done with them is new, and multiplying two numbers is a thing the learner has done since the Operators lessons.");
   ("Every written number is five or less and every answer is six or more, and the five answers differ from one another. So no answer can be spotted written somewhere on the screen, and no two programs share an answer.");
   let asterisk = js_operator_asterisk_symbol();
@@ -28,6 +28,7 @@ export function app_code_lesson_statement_name_multiply() {
     example_pair: [2, 4],
     remember_lesson: app_code_lesson_operators_asterisk,
     remember_parts: ["we can multiply (", asterisk, ") two numbers:"],
+    answer_name: "product",
     answer_count: null,
   });
   return lesson;

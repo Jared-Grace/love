@@ -5,7 +5,7 @@ import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statem
 import { app_code_lesson_expression_less_than } from "./app_code_lesson_expression_less_than.mjs";
 export function app_code_lesson_statement_name_compare() {
   arguments_assert(arguments, 0);
-  ("two names compared: let a = 3; let b = 5; console.log(a < b); writes out true");
+  ("two names compared: let a = 3; let b = 5; let smaller = a < b; console.log(smaller); writes out true");
   ("The lesson that adds two names put them in the two places a sum takes its numbers from. This one leaves the names exactly where they were and changes the symbol between them, so the only thing a learner is asked to accept is that the rule they were given there was about the places rather than about the plus.");
   ("A comparison rather than any of the other things that fit between two names, because it is the one a learner has already spent a whole category of lessons on. What comes out of it - true or false - was settled in the Operators lessons, so nothing about the answer is new here either.");
   ("Only two answers exist, so a question that shows the program and asks for the value offers two buttons rather than four, and each screen draws two programs that come out true and two that come out false.");
@@ -43,6 +43,7 @@ export function app_code_lesson_statement_name_compare() {
       symbol,
       ") than another:",
     ],
+    answer_name: "smaller",
     answer_count: 2,
   });
   return lesson;

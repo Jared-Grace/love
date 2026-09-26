@@ -5,7 +5,7 @@ import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statem
 import { app_code_lesson_expression_equals } from "./app_code_lesson_expression_equals.mjs";
 export function app_code_lesson_statement_name_equal() {
   arguments_assert(arguments, 0);
-  ("two names asked whether they hold the same number: let a = 7; let b = 7; console.log(a === b); writes out true");
+  ("two names asked whether they hold the same number: let a = 7; let b = 7; let equal = a === b; console.log(equal); writes out true");
   ("The same screen as the lesson that compares two names, with the symbol changed. Half the candidate pairs hold the same number twice and half do not, so each screen can draw two of each.");
   let symbol = js_operator_triple_equal_symbol();
   function pairs_get() {
@@ -37,6 +37,7 @@ export function app_code_lesson_statement_name_equal() {
       symbol,
       "):",
     ],
+    answer_name: "equal",
     answer_count: 2,
   });
   return lesson;

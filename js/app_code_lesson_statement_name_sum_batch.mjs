@@ -8,6 +8,10 @@ export function app_code_lesson_statement_name_sum_batch() {
   ("Written by the same builder every lesson that puts one symbol between two names uses, so it cannot draw a program differently from the lesson it names. Kept as a name of its own because a permission is granted to it.");
   let plus = js_operator_plus_symbol();
   let pairs = app_code_lesson_statement_name_sum_number_pairs();
-  let codes = app_code_lesson_statement_names_binary_programs(plus, pairs);
+  let codes = app_code_lesson_statement_names_binary_programs(
+    plus,
+    pairs,
+    null,
+  );
   return codes;
 }

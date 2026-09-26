@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_double_equal_symbol } from "./js_operator_bang_double_equal_symbol.mjs";
 import { app_code_lesson_statement_names_binary_pairs_balanced } from "./app_code_lesson_statement_names_binary_pairs_balanced.mjs";
@@ -5,7 +6,11 @@ import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statem
 import { app_code_lesson_expression_not_equal } from "./app_code_lesson_expression_not_equal.mjs";
 export function app_code_lesson_statement_name_not_equal() {
   arguments_assert(arguments, 0);
-  ("two names asked whether they hold different numbers: let a = 7; let b = 4; console.log(a !== b); writes out true");
+  ("two names asked whether they hold different numbers: let a = 7; let b = 4; let ",
+    fn_name("not_equal"),
+    " = a !== b; console.log(",
+    fn_name("not_equal"),
+    "); writes out true");
   ("The same screen as the lesson that asks whether two names are equal, with the symbol changed, so the same pairs now answer the other way.");
   let symbol = js_operator_bang_double_equal_symbol();
   function pairs_get() {
@@ -37,6 +42,7 @@ export function app_code_lesson_statement_name_not_equal() {
       symbol,
       "):",
     ],
+    answer_name: fn_name("not_equal"),
     answer_count: 2,
   });
   return lesson;
