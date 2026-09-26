@@ -59,6 +59,7 @@ export function app_shared_container_blue_collapsible(
   }
   ("the setter comes back beside the body because a card is also shut and opened from outside itself - a page-wide open-everything button that could not reach in here would leave a folded card looking broken");
   let r = {
+    card,
     body,
     collapsed_set,
   };
