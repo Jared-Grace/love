@@ -1,14 +1,36 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_plus_one_box } from "./app_code_lesson_statement_name_plus_one_box.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
+import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
+import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
+import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
+import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { app_code_span_code_dark_names } from "./app_code_span_code_dark_names.mjs";
+import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 export function app_code_lesson_statement_name_minus_one_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: one more than a name, the program the lesson on one more than a name was about, then one line saying a new name can hold a name with one taken away");
   ("The twin already seen comes first and the new one is met against it: the same lines, with a minus where the plus was. The second box is the sentence alone, because the example right below it is the program it talks about.");
   app_code_lesson_statement_name_plus_one_box(root, context);
   let box = app_code_container_light_blue(root);
-  html_div_cycle_code(box, [
-    "A new name can also hold a name with one taken away",
-  ]);
+  ("The sentence names the two lines it is comparing, the new one first and in the colours the names wear in the program below, the old one after it in plain code - asked for by the human.");
+  let name_first = app_code_lesson_statement_name_value_name();
+  let name_last = app_code_lesson_statement_name_two_name();
+  let names = [name_first, name_last];
+  let plus = js_operator_plus_symbol();
+  let minus = js_operator_minus_symbol();
+  let more = js_code_binary_spaced_nb(name_first, plus, 1);
+  let less = js_code_binary_spaced_nb(name_first, minus, 1);
+  let held_more = js_code_let_statement(name_last, more);
+  let held_less = js_code_let_statement(name_last, less);
+  let line = html_div(box);
+  html_span_text(line, "A new name can also hold a name with one taken away (");
+  app_code_span_code_dark_names(line, held_less, names);
+  html_span_text(line, " instead of ");
+  html_span_text_code_dark(line, held_more);
+  html_span_text(line, ")");
 }
