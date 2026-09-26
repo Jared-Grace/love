@@ -6,8 +6,8 @@ import { html_span_text } from "./html_span_text.mjs";
 import { html_span_space } from "./html_span_space.mjs";
 import { html_cycle_code } from "./html_cycle_code.mjs";
 import { app_code_lessons_range_text } from "./app_code_lessons_range_text.mjs";
+import { text_combine } from "./text_combine.mjs";
 import { text_wrap_parenthesis } from "./text_wrap_parenthesis.mjs";
-import { html_style_font_size } from "./html_style_font_size.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 export function app_code_home_group_title_render(entry) {
@@ -27,11 +27,11 @@ export function app_code_home_group_title_render(entry) {
   let first = property_get(entry, "first");
   let last = property_get(entry, "last");
   let range = app_code_lessons_range_text(first, last);
-  let range_wrapped = text_wrap_parenthesis(range);
+  let range_named = text_combine("Lessons ", range);
+  let range_wrapped = text_wrap_parenthesis(range_named);
   html_span_space(title_mark);
   let range_mark = html_span_text(title_mark, range_wrapped);
-  ("the range is quieter than the name - smaller, lighter, not bold - at the human's request, so the name reads first");
-  html_style_font_size(range_mark, "0.8em");
+  ("the range is quieter than the name - lighter and not bold, but the same size, so it stays easy to read - at the human's request, so the name reads first");
   html_style_opacity(range_mark, "0.6");
   html_style_set(range_mark, "font-weight", "normal");
 }
