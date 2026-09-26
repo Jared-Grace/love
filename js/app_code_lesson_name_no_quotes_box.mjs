@@ -35,6 +35,9 @@ export function app_code_lesson_name_no_quotes_box(
   ("The box opens by naming the line the learner may have expected to see, so the first line below is read as a correction of it rather than as a new fact. Asked for by the human in these words.");
   let quoted_name = app_code_string_code(name_source);
   let line_quoted = js_code_let_statement(name_copy, quoted_name);
+  let line_says = html_div(box);
+  html_span_text(line_says, "The code says: ");
+  app_code_span_code_dark_names(line_says, line_plain, names);
   let line_not = html_div(box);
   html_span_text(line_not, "The code does not say: ");
   app_code_span_code_dark_names(line_not, line_quoted, names);
