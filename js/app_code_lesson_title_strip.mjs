@@ -93,7 +93,9 @@ export function app_code_lesson_title_strip(root, context, lesson) {
     "text-align": "center",
     "font-size": font_size,
     opacity: "0.6",
+    "line-height": "1.5",
   });
+  ("the lines of the title are spaced the way the home list spaces the same title, because a title that wraps carries its code tile onto the second line, and the tile's dark ground is taller than tightly packed lines - so at the plain spacing it covered the bottom of the line above, at the human's request");
   ("the lesson's own number leads the title, the same 1-based number and same trailing period the home list shows in its gutter, so a learner reading a lesson can say which one they are on without going back - and so can anyone they are asking about it. It sits INSIDE the muted title rather than beside the home button, because it is part of naming where you are rather than a second control");
   let number_text = add_1_period(lesson_index);
   html_span_text(title, number_text);
