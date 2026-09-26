@@ -1,16 +1,17 @@
-import { app_code_js_written_that_text } from "./app_code_js_written_that_text.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { text_empty } from "./text_empty.mjs";
+import { app_code_js_written_that_text } from "./app_code_js_written_that_text.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_lesson_name_copy_lines } from "./app_code_lesson_name_copy_lines.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_code_note_names_marked } from "./app_code_note_names_marked.mjs";
@@ -35,8 +36,6 @@ export function app_code_lesson_statement_name_copy_code_box(
   let held_first = js_code_let_statement(name_first, quoted_first);
   let quoted_last = app_code_string_code(word_last);
   let held_last = js_code_let_statement(name_last, quoted_last);
-  let copied = js_code_let_statement(name_copy, name_first);
-  let logged = js_code_console_log_statement(name_copy);
   ("A BOX THAT SHOWS WHAT A PROGRAM WRITES OUT SHOWS THE WHOLE PROGRAM. The word written out underneath is a claim, and a claim about what a program writes out is only checkable against a program that runs on its own - and this screen's whole point is which cup the copied word came from, which only the copying line says.");
   ("THE EXPLANATION IS WRITTEN AS NOTES INSIDE THE PROGRAM. Each line of English stands directly above the line it is about, so nothing has to be matched up by eye, and no line is drawn twice. Said as writing outside the box, each line had to be shown twice over - once where it was being explained and once inside the program - and the three lines of this screen came out six.");
   ("Notes rather than writing, because a note may be as long as it needs to be and costs nothing: the machine does not read it, the painter of this chip draws every note dimmer than the code around it, and this course taught notes four lessons before this one. Two slashes only - the other kind of note is not taught anywhere in this course, and a screen is not the place to introduce one.");
@@ -45,7 +44,6 @@ export function app_code_lesson_statement_name_copy_code_box(
   ("What the mark is made of is not spelled here and is not this screen's to choose. Marking a name is asked for by name, and the same asking is what the painter looks for again when it comes to fade the mark and colour what it holds - so the two cannot fall out of step, and the day the course wants a different mark it is changed once for every lesson at once.");
   let first_named = app_code_note_name_mark(name_first);
   let last_named = app_code_note_name_mark(name_last);
-  let copy_named = app_code_note_name_mark(name_copy);
   let words = list_join_empty([
     "We make cups ",
     first_named,
@@ -53,32 +51,14 @@ export function app_code_lesson_statement_name_copy_code_box(
     last_named,
   ]);
   let note_cups = js_code_comment_line(words);
-  let words2 = list_join_empty([
-    "We make ",
-    copy_named,
-    " and fill it with whatever is in ",
-    first_named,
-  ]);
-  let note_copy = js_code_comment_line(words2);
-  let words3 = list_join_empty(["This does not remove it from ", first_named]);
-  let note_kept = js_code_comment_line(words3);
-  let words4 = list_join_empty(["We write out what is inside ", copy_named]);
-  let note_logged = js_code_comment_line(words4);
   let blank = text_empty();
   let text = app_code_js_written_that_text();
   html_div_cycle_code(box_code, [text]);
-  let lines = [
-    note_cups,
-    held_first,
-    held_last,
-    blank,
-    note_copy,
-    note_kept,
-    copied,
-    blank,
-    note_logged,
-    logged,
-  ];
+  let copy_lines = app_code_lesson_name_copy_lines(name_first, name_copy);
+  let lines = list_concat(
+    [note_cups, held_first, held_last, blank],
+    copy_lines,
+  );
   app_code_code_lines_writes_out(box_code, lines, word_first);
   let code = list_join_newline(lines);
   let names = app_code_note_names_marked(code);
