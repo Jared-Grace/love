@@ -1,3 +1,4 @@
+import { app_code_code_lines_writes_out_watched } from "./app_code_code_lines_writes_out_watched.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
@@ -9,7 +10,6 @@ import { app_code_lesson_statement_name_plus_one_box } from "./app_code_lesson_s
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 export function app_code_lesson_statement_name_one_more_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: one more than a name kept under a new name, the program the lesson on one more than a name taught, then the same program with the new name changed to the name itself");
@@ -36,5 +36,5 @@ export function app_code_lesson_statement_name_one_more_above(root, context) {
   ]);
   let held = js_code_let_statement(name, 13);
   let logged = js_code_console_log_statement(name);
-  app_code_code_lines_writes_out(box, [held, code, logged], "14");
+  app_code_code_lines_writes_out_watched(box, [held, code, logged]);
 }

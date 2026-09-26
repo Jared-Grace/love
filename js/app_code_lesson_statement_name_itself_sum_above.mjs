@@ -1,3 +1,4 @@
+import { app_code_code_lines_writes_out_watched } from "./app_code_code_lines_writes_out_watched.mjs";
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
@@ -110,11 +111,12 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   ]);
   let logged_total = js_code_console_log_statement(name_first);
   ("EACH BOX HOLDS A WHOLE PROGRAM AND WHAT IT WRITES OUT, rather than the one line the box's point turns on. Shown as a part, the log line rested on three lines a learner had to carry down from the boxes above, and what it wrote out could not be checked against anything on the screen. Shown whole, the box stands on its own and the number under it is the claim, drawn.");
-  app_code_code_lines_writes_out(
-    box_itself,
-    [held_first, held_last, given_sum, logged_total],
-    total,
-  );
+  app_code_code_lines_writes_out_watched(box_itself, [
+    held_first,
+    held_last,
+    given_sum,
+    logged_total,
+  ]);
   ("the total is a code chip like the sum beside it. A number written in a program is code, and every other number on this screen is drawn as code, so a total set in plain writing would be the one number here dressed as prose.");
   ("The lesson before this one says at length why a sum may be swapped for its value, with the two lines set side by side and the reason underneath. Here it is three short ones and no side-by-side pair, because a learner has just read that and this screen is about a different thing - that the name being filled may be one the sum was read from.");
   ("Three short lines rather than one long one, because they are three steps and a learner is being walked down them: the sum has a value, so the sum did not have to be written, so the value could have been written in its place. Said in one line the middle step is missing and the last line arrives as a claim; said in three, each line is the reason for the one under it.");
@@ -130,9 +132,10 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
     given_total,
     ":",
   ]);
-  app_code_code_lines_writes_out(
-    box_value,
-    [held_first, held_last, given_total, logged_total],
-    total,
-  );
+  app_code_code_lines_writes_out_watched(box_value, [
+    held_first,
+    held_last,
+    given_total,
+    logged_total,
+  ]);
 }
