@@ -1,15 +1,13 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_home_group_title_render } from "./app_code_home_group_title_render.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_color_green_tint } from "./app_shared_color_green_tint.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_shared_spaced_frame_gap } from "./app_shared_spaced_frame_gap.mjs";
 import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs";
 import { html_border } from "./html_border.mjs";
-import { app_shared_color_green_dark } from "./app_shared_color_green_dark.mjs";
+import { app_shared_color_green_deep } from "./app_shared_color_green_deep.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-import { emoji_check } from "./emoji_check.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { html_text_set } from "./html_text_set.mjs";
 import { each } from "./each.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
@@ -21,6 +19,7 @@ export function app_code_home_groups_finish(cards, opened) {
   ("once every lesson is drawn: a group whose lessons are all finished turns green, and one group is left open - the one handed in, or else the first group not yet finished, or else the last");
   ("The open one is chosen after drawing because only then is it known which group the learner just left and which are finished. Opening it shuts every other, so this one call leaves exactly one open.");
   function green(entry) {
+    app_code_home_group_title_render(entry);
     let complete = property_get(entry, "complete");
     if (complete) {
       let card = property_get(entry, "card");
@@ -29,15 +28,10 @@ export function app_code_home_groups_finish(cards, opened) {
       let border_width = app_shared_spaced_frame_gap();
       let border_color = app_shared_color_green_light();
       html_border(card, border_width, border_color);
-      ("the arrow turns the dark green twin of its dark blue, the same green a finished lesson's category word wears, and the title is led by the check a finished lesson's row wears - so a finished group says so the way a finished lesson does, at the human's request");
+      ("the arrow turns green, a lighter green than the category word's near-black one, so it still reads as green at the size of one small arrow - at the human's request. The title's check is written by the title itself");
       let caret_mark = property_get(entry, "caret_mark");
-      let caret_color = app_shared_color_green_dark();
+      let caret_color = app_shared_color_green_deep();
       html_font_color_set(caret_mark, caret_color);
-      let title_mark = property_get(entry, "title_mark");
-      let title = property_get(entry, "title");
-      let check = emoji_check();
-      let title_checked = text_combine_multiple([check, " ", title]);
-      html_text_set(title_mark, title_checked);
     }
   }
   each(cards, green);

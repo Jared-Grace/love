@@ -1,5 +1,4 @@
 import { app_shared_page_stage_prod_is } from "./app_shared_page_stage_prod_is.mjs";
-import { app_shared_page_stage_latest_is } from "./app_shared_page_stage_latest_is.mjs";
 import { not } from "./not.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
 import { app_code_lessons_released_fns } from "./app_code_lessons_released_fns.mjs";
@@ -11,8 +10,8 @@ export function app_code_lessons_fns_shown() {
   "The working copy shows everything, so the person reading through has the whole run in front of them at the address they already use, with nothing to turn on and nothing to remember to turn off again.";
   "LATEST IS CUT TOO, and it is the reason the second question is asked. Latest is not a working copy - it is where the learner is sent whenever the built site cannot be released - so a run cut on the built site and whole on latest is a cut that stops working on exactly the days it is needed. Measured 2026-08-23: thirty-two lessons nobody had read through were reachable there while the cut was believed to be holding.";
   let prod = app_shared_page_stage_prod_is();
-  let latest = app_shared_page_stage_latest_is();
-  let handed_to_a_learner = prod || latest;
+  ("latest shows every lesson, the same as a working copy - at the human's request, 2026-09-26, so the whole course can be tried there. Only the public site still shows just the released run");
+  let handed_to_a_learner = prod;
   let whole = not(handed_to_a_learner);
   let fns = app_code_lessons_fns();
   if (whole) {

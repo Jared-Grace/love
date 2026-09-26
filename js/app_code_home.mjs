@@ -55,10 +55,10 @@ export async function app_code_home(context) {
     let lesson_number = add_1(index);
     let starting = list_find_property_or_null(groups, "first", lesson_number);
     if (null_not_is(starting)) {
-      let title = property_get(starting, "title");
-      group = app_code_home_group_card(cards, g, title);
+      group = app_code_home_group_card(cards, g, starting);
     }
     let body = property_get(group, "body");
+    group.last = lesson_number;
     let open = complete_all_previous;
     let complete = app_code_lesson_complete_is(progress, id);
     if (not(complete)) {

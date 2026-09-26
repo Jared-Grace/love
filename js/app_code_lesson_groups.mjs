@@ -3,37 +3,38 @@ export function app_code_lesson_groups() {
   arguments_assert(arguments, 0);
   ("the groups the home list folds its lessons into, each named and starting at the lesson number given, and running until the next one starts - the last runs to the end of the list");
   ("Numbers rather than lesson names, because the human gave the groups as ranges of the numbers a learner sees. A lesson moved across a boundary changes the group it shows in, which is what the ranges mean.");
+  ("Each name is its parts in turn, words then code then words, the way a lesson title with code in it is written - so console.log is shown as code, at the human's request.");
   let groups = [
     {
-      title: "Identifiers",
+      parts: ["Identifiers"],
       first: 1,
     },
     {
-      title: "Operators",
+      parts: ["Operators"],
       first: 11,
     },
     {
-      title: "Nested Expressions",
+      parts: ["Nested Expressions"],
       first: 40,
     },
     {
-      title: "Writing output: console.log",
+      parts: ["Writing output: ", "console.log"],
       first: 73,
     },
     {
-      title: "Remainder",
+      parts: ["Remainder"],
       first: 80,
     },
     {
-      title: "Math functions",
+      parts: ["Math functions"],
       first: 99,
     },
     {
-      title: "More Expressions",
+      parts: ["More Expressions"],
       first: 105,
     },
     {
-      title: "Statements",
+      parts: ["Statements"],
       first: 144,
     },
   ];
