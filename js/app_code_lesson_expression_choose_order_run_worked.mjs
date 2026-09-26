@@ -13,7 +13,7 @@ import { app_code_expression_step_reason_of } from "./app_code_expression_step_r
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_expression_replace_swap_say } from "./app_code_expression_replace_swap_say.mjs";
-export function app_code_lesson_expression_choose_order_compare_run(
+export function app_code_lesson_expression_choose_order_run_worked(
   root,
   tree,
   lead,

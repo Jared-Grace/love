@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_recall } from "./app_code_lesson_expression_comparing_a_comparison_recall.mjs";
 import { app_code_lesson_expression_choose_order_compare_line_apart } from "./app_code_lesson_expression_choose_order_compare_line_apart.mjs";
-import { app_code_lesson_expression_choose_order_compare_run } from "./app_code_lesson_expression_choose_order_compare_run.mjs";
+import { app_code_lesson_expression_choose_order_run_worked } from "./app_code_lesson_expression_choose_order_run_worked.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_expression_choose_order_compare_intro } from "./app_code_lesson_expression_choose_order_compare_intro.mjs";
 export function app_code_lesson_expression_choose_order_compare_above(
@@ -24,20 +24,12 @@ export function app_code_lesson_expression_choose_order_compare_above(
     true,
     false,
   );
-  app_code_lesson_expression_choose_order_compare_run(
-    root,
-    gathered,
-    "Suppose",
-  );
+  app_code_lesson_expression_choose_order_run_worked(root, gathered, "Suppose");
   let flat = app_code_lesson_expression_choose_order_compare_line_apart(
     false,
     true,
   );
-  app_code_lesson_expression_choose_order_compare_run(
-    root,
-    flat,
-    "Now suppose",
-  );
+  app_code_lesson_expression_choose_order_run_worked(root, flat, "Now suppose");
   let change_card = app_code_container_light_blue(root);
   app_code_lesson_expression_choose_order_compare_intro(change_card);
 }
