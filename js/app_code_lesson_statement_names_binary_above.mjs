@@ -32,7 +32,7 @@ export function app_code_lesson_statement_names_binary_above({
   let number_first = list_first(pair);
   let number_last = list_last(pair);
   ("The values are called what they are: numbers, or true or false values once a lesson hands in a pair of those. Read off the pair rather than handed in, so no lesson can name its values one thing and draw another.");
-  ("Said as BETWEEN TWO numbers and BETWEEN TWO names, never as only with numbers: the lessons that take one from a name or add one to it put a name on one side of a minus or a plus already, so a sentence saying the symbol had only ever met numbers was false on the subtracting screen. Two names on both sides is the part no earlier lesson showed, for every symbol this screen is handed.");
+  ("Said as BETWEEN TWO numbers and BETWEEN TWO names, never as only with numbers: the lessons that take one from a name or add one to it put a name on one side of a minus or a plus already, so a sentence saying the symbol had only ever met numbers was false on the subtracting screen. Said as what we CAN do rather than what we have done so far, at the human's wording, so the line makes no claim about earlier lessons at all. Two names on both sides is the part no earlier lesson showed, for every symbol this screen is handed.");
   let values_word = "numbers";
   if (boolean_is(number_first)) {
     values_word = "true or false values";
@@ -74,7 +74,7 @@ export function app_code_lesson_statement_names_binary_above({
   let held_last = js_code_let_statement(name_last, number_last);
   html_div_code_lines(box_names, [held_first, held_last]);
   html_div_cycle_code(box_names, [
-    "So far we have used ",
+    "We can use ",
     symbol,
     with_values,
     numbers_asked,
