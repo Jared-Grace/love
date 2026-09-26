@@ -352,9 +352,9 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_greater_equal,
     app_code_lesson_statement_name_equal,
     app_code_lesson_statement_name_not_equal,
+    app_code_lesson_statement_name_not,
     app_code_lesson_statement_name_and,
     app_code_lesson_statement_name_or,
-    app_code_lesson_statement_name_not,
   ];
   return fns;
 }
