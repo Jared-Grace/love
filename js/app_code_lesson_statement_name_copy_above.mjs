@@ -9,6 +9,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_note_div_cycle_code } from "./app_code_note_div_cycle_code.mjs";
 import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
+import { app_code_lesson_cups_copy_story } from "./app_code_lesson_cups_copy_story.mjs";
 import { app_code_lesson_statement_name_copy_code_box } from "./app_code_lesson_statement_name_copy_code_box.mjs";
 export function app_code_lesson_statement_name_copy_above(root, context) {
   arguments_assert(arguments, 2);
@@ -68,53 +69,12 @@ export function app_code_lesson_statement_name_copy_above(root, context) {
     [cup_first, cup_last, [nothing, name_copy]],
     names,
   );
-  app_code_note_div_cycle_code(
+  let cups_kept = [cup_first, cup_last];
+  app_code_lesson_cups_copy_story(
     box_new,
-    [
-      "Suppose you asked someone to look inside cup ",
-      name_first,
-      ", and whatever was in cup ",
-      name_first,
-      ", also put some in cup ",
-      name_copy,
-    ],
-    names,
-  );
-  let found = list_join_empty([
-    " has ",
-    word_first,
-    ", so suppose they found some more ",
-    word_first,
-    " and put those ",
-    word_first,
-    " in cup ",
-  ]);
-  app_code_note_div_cycle_code(
-    box_new,
-    ["Cup ", name_first, found, name_copy],
-    names,
-  );
-  app_code_lesson_cups_row_holding(
-    box_new,
-    [cup_first, cup_last, [word_first, name_copy]],
-    names,
-  );
-  let both = list_join_empty([" both have ", word_first, " in them"]);
-  app_code_note_div_cycle_code(
-    box_new,
-    ["So now cups ", name_first, " and ", name_copy, both],
-    names,
-  );
-  let removed = list_join_empty(["No ", word_first, " were removed from cup "]);
-  ("A colon and THE PERSON, not a comma and THEY. The half before the colon says what did not happen and the half after says what did, and a comma joins them as though the second were more of the first - the colon marks it as the correction it is. THEY, this far down the box, has the two cups and the person all behind it to point at; the person is the one who did the fetching, and saying so costs two words and leaves nothing to work out.");
-  let other = list_join_empty([
-    ": the person found some other ",
-    word_first,
-    " to put in cup ",
-  ]);
-  app_code_note_div_cycle_code(
-    box_new,
-    [removed, name_first, other, name_copy],
+    cups_kept,
+    cup_first,
+    name_copy,
     names,
   );
   app_code_lesson_statement_name_copy_code_box(

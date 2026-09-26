@@ -11,10 +11,13 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_code_note_div_cycle_code } from "./app_code_note_div_cycle_code.mjs";
 import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
+import { app_code_lesson_cups_copy_story } from "./app_code_lesson_cups_copy_story.mjs";
 import { app_code_js_written_that_text } from "./app_code_js_written_that_text.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
+import { app_code_lesson_name_copy_lines } from "./app_code_lesson_name_copy_lines.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_two } from "./app_code_lesson_statement_name_two.mjs";
@@ -55,46 +58,13 @@ export function app_code_lesson_statement_name_copy_single_above(
     [cup_first, [nothing, name_last]],
     names,
   );
-  app_code_note_div_cycle_code(
+  ("the rest of the story is the one the lesson that copies into a third cup tells, told by the same function, at the human's request that the two lessons be as DRY as they can be");
+  let cups_kept = [cup_first];
+  app_code_lesson_cups_copy_story(
     box_cups,
-    [
-      "Suppose you asked someone to look inside cup ",
-      name_first,
-      ", and whatever was in cup ",
-      name_first,
-      ", also put some in cup ",
-      name_last,
-    ],
-    names,
-  );
-  let found = list_join_empty([
-    " has ",
-    word_first,
-    ", so suppose they found some more ",
-    word_first,
-    " and put those ",
-    word_first,
-    " in cup ",
-  ]);
-  app_code_note_div_cycle_code(
-    box_cups,
-    ["Cup ", name_first, found, name_last],
-    names,
-  );
-  app_code_lesson_cups_row_holding(
-    box_cups,
-    [cup_first, [word_first, name_last]],
-    names,
-  );
-  let removed = list_join_empty(["No ", word_first, " were removed from cup "]);
-  let other = list_join_empty([
-    ": the person found some other ",
-    word_first,
-    " to put in cup ",
-  ]);
-  app_code_note_div_cycle_code(
-    box_cups,
-    [removed, name_first, other, name_last],
+    cups_kept,
+    cup_first,
+    name_last,
     names,
   );
   let box_copy = app_code_container_light_blue(root);
@@ -103,42 +73,11 @@ export function app_code_lesson_statement_name_copy_single_above(
   let written = app_code_js_written_that_text();
   html_div_cycle_code(box_copy, [written]);
   let first_named = app_code_note_name_mark(name_first);
-  let last_named = app_code_note_name_mark(name_last);
   let words_made = list_join_empty(["We make cup ", first_named]);
   let note_made = js_code_comment_line(words_made);
-  let words_copy = list_join_empty([
-    "We make ",
-    last_named,
-    " and fill it with whatever is in ",
-    first_named,
-  ]);
-  let note_copy = js_code_comment_line(words_copy);
-  let words_kept = list_join_empty([
-    "This does not remove it from ",
-    first_named,
-  ]);
-  let note_kept = js_code_comment_line(words_kept);
-  let words_logged = list_join_empty([
-    "We write out what is inside ",
-    last_named,
-  ]);
-  let note_logged = js_code_comment_line(words_logged);
-  let blank = text_empty();
-  app_code_code_lines_writes_out(
-    box_copy,
-    [
-      note_made,
-      held_first,
-      blank,
-      note_copy,
-      note_kept,
-      copied,
-      blank,
-      note_logged,
-      logged,
-    ],
-    word_first,
-  );
+  let copy_lines = app_code_lesson_name_copy_lines(name_first, name_last);
+  let lines = list_concat([note_made, held_first, nothing], copy_lines);
+  app_code_code_lines_writes_out(box_copy, lines, word_first);
   ("THE SCREEN OPENS WITH THE CUPS, AND THE REMINDER OF THE LESSON BEFORE COMES AFTER THE PROGRAM THAT TELLS THEM, directly above the sentence comparing the two programs - so the two programs being compared stand one under the other, and nothing the cups never hold is read before the cups, at the human's request");
   ("the reminder names the two names and the two words they held, rather than one line of the program, and leaves the names uncoloured - the colours belong to the cups of this lesson, and the reminder is about the lesson before, at the human's request");
   let box_two = app_code_container_light_blue(root);
