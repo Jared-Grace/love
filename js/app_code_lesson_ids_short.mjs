@@ -221,6 +221,8 @@ export function app_code_lesson_ids_short() {
       text_frozen("name_greater_equal"),
     app_code_lesson_statement_name_equal: text_frozen("name_equal"),
     app_code_lesson_statement_name_not_equal: text_frozen("name_not_equal"),
+    app_code_lesson_statement_name_and: text_frozen("name_and"),
+    app_code_lesson_statement_name_or: text_frozen("name_or"),
     app_code_lesson_comment_note: text_frozen("comment"),
     app_code_lesson_log_twice: text_frozen("log_twice"),
     app_code_lesson_comment_skip_line: text_frozen("comment_skip"),
