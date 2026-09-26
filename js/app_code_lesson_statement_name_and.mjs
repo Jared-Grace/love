@@ -6,7 +6,7 @@ import { app_code_lesson_expression_and } from "./app_code_lesson_expression_and
 export function app_code_lesson_statement_name_and() {
   arguments_assert(arguments, 0);
   ("two names joined with and: let a = true; let b = false; let a_and_b = a && b; console.log(a_and_b); writes out false");
-  ("The answer is named a_and_b to match a_or_b in the lesson on or, which a learner meets straight after this one: two names made by the same rule read as a pair, and each reads back as the line it came from.");
+  ("The answer is named a_and_b to match a_or_b in the lesson on or, which a learner meets just before this one: two names made by the same rule read as a pair, and each reads back as the line it came from.");
   ("The same screen as the lessons that put a symbol between two names, with names holding true or false instead of numbers - a name holding true or false was met in the Statements lessons already.");
   ("Two true or false values can be paired only four ways, so every screen asks all four in a fresh order. Only one of the four comes out true, which is the thing this symbol is: true only when both sides are.");
   let symbol = js_operator_and_symbol();
