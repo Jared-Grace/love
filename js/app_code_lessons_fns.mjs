@@ -1,3 +1,8 @@
+import { app_code_lesson_statement_name_greater } from "./app_code_lesson_statement_name_greater.mjs";
+import { app_code_lesson_statement_name_smaller_equal } from "./app_code_lesson_statement_name_smaller_equal.mjs";
+import { app_code_lesson_statement_name_greater_equal } from "./app_code_lesson_statement_name_greater_equal.mjs";
+import { app_code_lesson_statement_name_equal } from "./app_code_lesson_statement_name_equal.mjs";
+import { app_code_lesson_statement_name_not_equal } from "./app_code_lesson_statement_name_not_equal.mjs";
 import { app_code_lesson_statement_name_multiply } from "./app_code_lesson_statement_name_multiply.mjs";
 import { app_code_lesson_statement_name_divide } from "./app_code_lesson_statement_name_divide.mjs";
 import { app_code_lesson_statement_name_remainder } from "./app_code_lesson_statement_name_remainder.mjs";
@@ -339,6 +344,11 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_divide,
     app_code_lesson_statement_name_remainder,
     app_code_lesson_statement_name_compare,
+    app_code_lesson_statement_name_greater,
+    app_code_lesson_statement_name_smaller_equal,
+    app_code_lesson_statement_name_greater_equal,
+    app_code_lesson_statement_name_equal,
+    app_code_lesson_statement_name_not_equal,
   ];
   return fns;
 }
