@@ -6,6 +6,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { emoji_point_right } from "./emoji_point_right.mjs";
 import { app_shared_color_progress_complete } from "./app_shared_color_progress_complete.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
+import { app_shared_text_category_complete_set } from "./app_shared_text_category_complete_set.mjs";
 import { app_shared_color_progress_next } from "./app_shared_color_progress_next.mjs";
 import { app_shared_button_font_color } from "./app_shared_button_font_color.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
@@ -39,6 +40,7 @@ export function app_shared_button_numbered_progress(
   if (completed) {
     let done = app_shared_color_progress_complete();
     html_style_background_color_set(button, done);
+    app_shared_text_category_complete_set(button);
   } else {
     if (choose_this_next) {
       let blue_strong = app_shared_color_progress_next();

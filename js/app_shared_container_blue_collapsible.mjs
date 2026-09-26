@@ -1,20 +1,20 @@
+import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
+import { app_shared_container_trim_frame } from "./app_shared_container_trim_frame.mjs";
+import { app_shared_caret_open } from "./app_shared_caret_open.mjs";
+import { html_button_bare } from "./html_button_bare.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_span_space } from "./html_span_space.mjs";
-import { html_button_bare } from "./html_button_bare.mjs";
 import { html_bold_mild } from "./html_bold_mild.mjs";
-import { html_width_full } from "./html_width_full.mjs";
-import { html_aria_expanded_set } from "./html_aria_expanded_set.mjs";
-import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
-import { app_shared_container_trim_frame } from "./app_shared_container_trim_frame.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
+import { html_width_full } from "./html_width_full.mjs";
+import { html_aria_expanded_set } from "./html_aria_expanded_set.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
-import { html_text_set } from "./html_text_set.mjs";
-import { app_shared_caret_open } from "./app_shared_caret_open.mjs";
 import { app_shared_caret_closed } from "./app_shared_caret_closed.mjs";
+import { html_text_set } from "./html_text_set.mjs";
 import { not } from "./not.mjs";
 export function app_shared_container_blue_collapsible(
   parent,
@@ -35,7 +35,7 @@ export function app_shared_container_blue_collapsible(
   let caret_color = app_shared_color_blue_dark();
   html_font_color_set(caret_mark, caret_color);
   html_span_space(title_button);
-  html_span_text(title_button, title_text);
+  let title_mark = html_span_text(title_button, title_text);
   html_bold_mild(title_button);
   html_centered(title_button);
   html_cursor_pointer(title_button);
@@ -58,10 +58,13 @@ export function app_shared_container_blue_collapsible(
     collapsed_set(next);
   }
   ("the setter comes back beside the body because a card is also shut and opened from outside itself - a page-wide open-everything button that could not reach in here would leave a folded card looking broken");
+  ("the arrow and the title come back too, because a card can be dressed after it is drawn - a group of lessons turns green once every lesson in it is known to be finished, and its arrow and title have to turn with it");
   let r = {
     card,
     body,
     collapsed_set,
+    caret_mark,
+    title_mark,
   };
   return r;
 }

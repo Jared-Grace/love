@@ -1,5 +1,5 @@
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { equal } from "./equal.mjs";
 import { each } from "./each.mjs";
 import { app_shared_container_blue_collapsible } from "./app_shared_container_blue_collapsible.mjs";
 import { property_get } from "./property_get.mjs";
@@ -12,6 +12,9 @@ export function app_code_home_group_card(cards, parent, title) {
     card: null,
     body: null,
     collapsed_set: null,
+    caret_mark: null,
+    title_mark: null,
+    title,
     complete: true,
   };
   function others_shut(other) {
@@ -31,6 +34,8 @@ export function app_code_home_group_card(cards, parent, title) {
   entry.card = property_get(folded, "card");
   entry.body = property_get(folded, "body");
   entry.collapsed_set = property_get(folded, "collapsed_set");
+  entry.caret_mark = property_get(folded, "caret_mark");
+  entry.title_mark = property_get(folded, "title_mark");
   list_add(cards, entry);
   return entry;
 }

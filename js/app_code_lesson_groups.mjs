@@ -14,23 +14,23 @@ export function app_code_lesson_groups() {
     },
     {
       title: "Nested Expressions",
-      first: 38,
+      first: 40,
     },
     {
       title: "Writing output: console.log",
-      first: 71,
+      first: 73,
     },
     {
       title: "Remainder",
-      first: 78,
+      first: 80,
     },
     {
       title: "Math functions",
-      first: 97,
+      first: 99,
     },
     {
       title: "More Expressions",
-      first: 103,
+      first: 105,
     },
     {
       title: "Statements",
