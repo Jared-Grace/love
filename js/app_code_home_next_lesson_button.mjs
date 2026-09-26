@@ -1,3 +1,4 @@
+import { app_code_lessons_any_complete } from "./app_code_lessons_any_complete.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_incomplete_next } from "./app_code_lesson_incomplete_next.mjs";
 import { null_is } from "./null_is.mjs";
@@ -25,7 +26,8 @@ export function app_code_home_next_lesson_button(parent, context) {
     await app_shared_screen_go_tab(context, "lesson_id", id, app_code_examples);
   }
   ("the same way in as the row itself uses, so the lesson opens remembering which lesson this tab picked");
-  let text = app_code_home_next_lesson_text();
+  let started = app_code_lessons_any_complete(context);
+  let text = app_code_home_next_lesson_text(started);
   let button = app_shared_button(parent, text, on_click);
   return button;
 }
