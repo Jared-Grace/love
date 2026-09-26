@@ -1,3 +1,5 @@
+import { boolean_is } from "./boolean_is.mjs";
+import { list_join_empty } from "./list_join_empty.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
@@ -29,6 +31,13 @@ export function app_code_lesson_statement_names_binary_above({
   let name_last = app_code_lesson_statement_name_two_name();
   let number_first = list_first(pair);
   let number_last = list_last(pair);
+  ("The values are called what they are: numbers, or true or false values once a lesson hands in a pair of those. Read off the pair rather than handed in, so no lesson can name its values one thing and draw another.");
+  let values_word = "numbers";
+  if (boolean_is(number_first)) {
+    values_word = "true or false values";
+  }
+  let to_two = list_join_empty([") to two ", values_word, " ("]);
+  let with_values = list_join_empty([" with ", values_word, " (like "]);
   let numbers_asked = js_code_binary_spaced_nb(
     number_first,
     symbol,
@@ -54,7 +63,7 @@ export function app_code_lesson_statement_names_binary_above({
     name_first,
     ", ",
     name_last,
-    ") to two numbers (",
+    to_two,
     number_first,
     ", ",
     number_last,
@@ -66,7 +75,7 @@ export function app_code_lesson_statement_names_binary_above({
   html_div_cycle_code(box_names, [
     "So far we have only used ",
     symbol,
-    " with numbers (like ",
+    with_values,
     numbers_asked,
     ")",
   ]);
