@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_copy_single } from "./app_code_lesson_statement_name_copy_single.mjs";
 import { app_code_lesson_statement_name_one_less } from "./app_code_lesson_statement_name_one_less.mjs";
 import { app_code_lesson_statement_name_plus_one } from "./app_code_lesson_statement_name_plus_one.mjs";
 import { app_code_lesson_statement_name_number } from "./app_code_lesson_statement_name_number.mjs";
@@ -317,6 +318,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_true_false,
     app_code_lesson_statement_name_identifier,
     app_code_lesson_statement_name_two,
+    app_code_lesson_statement_name_copy_single,
     app_code_lesson_statement_name_again,
     app_code_lesson_statement_name_copy,
     app_code_lesson_statement_name_copy_kept,

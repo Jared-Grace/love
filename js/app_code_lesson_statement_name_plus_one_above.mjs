@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_copy_single } from "./app_code_lesson_statement_name_copy_single.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
@@ -6,7 +7,6 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_statement_name_copy } from "./app_code_lesson_statement_name_copy.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
@@ -26,7 +26,7 @@ export function app_code_lesson_statement_name_plus_one_above(root, context) {
   app_code_remember_from_lesson(
     box_copy,
     context,
-    app_code_lesson_statement_name_copy,
+    app_code_lesson_statement_name_copy_single,
     ["a new name can hold what another name holds (", copied, "):"],
   );
   app_code_code_lines_writes_out(box_copy, [held, copied, logged], "14");

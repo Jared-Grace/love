@@ -201,6 +201,7 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_two: text_frozen("name_two"),
     app_code_lesson_statement_name_again: text_frozen("name_again"),
     app_code_lesson_statement_name_copy: text_frozen("name_copy"),
+    app_code_lesson_statement_name_copy_single: text_frozen("name_copy_single"),
     app_code_lesson_statement_name_sum: text_frozen("name_sum"),
     app_code_lesson_statement_name_total: text_frozen("name_total"),
     app_code_lesson_statement_name_itself_sum: text_frozen("name_add_self"),
