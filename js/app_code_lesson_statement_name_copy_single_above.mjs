@@ -14,7 +14,8 @@ import { text_empty } from "./text_empty.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_code_note_div_cycle_code } from "./app_code_note_div_cycle_code.mjs";
 import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
+import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { app_code_lesson_name_no_quotes_box } from "./app_code_lesson_name_no_quotes_box.mjs";
 export function app_code_lesson_statement_name_copy_single_above(
   root,
@@ -104,20 +105,57 @@ export function app_code_lesson_statement_name_copy_single_above(
     names,
   );
   let box_copy = app_code_container_light_blue(root);
-  html_div_cycle_code(box_copy, [
-    "A name (",
-    name_last,
-    ") can also hold what another name (",
-    name_first,
-    ") holds (",
-    copied,
-    " instead of ",
-    held_last,
-    "):",
+  ("the names in this box wear the colours the cups above and the box below give them, at the human's request - the sentence through the writer that colours a name, and the program through notes that mark each name, the way the lesson that copies into a third cup writes its program, because the notes are what the code box reads its colours from");
+  app_code_note_div_cycle_code(
+    box_copy,
+    [
+      "A name (",
+      name_last,
+      ") can also hold what another name (",
+      name_first,
+      ") holds (",
+      copied,
+      " instead of ",
+      held_last,
+      "):",
+    ],
+    names,
+  );
+  let first_named = app_code_note_name_mark(name_first);
+  let last_named = app_code_note_name_mark(name_last);
+  let words_made = list_join_empty(["We make cup ", first_named]);
+  let note_made = js_code_comment_line(words_made);
+  let words_copy = list_join_empty([
+    "We make ",
+    last_named,
+    " and fill it with whatever is in ",
+    first_named,
   ]);
+  let note_copy = js_code_comment_line(words_copy);
+  let words_kept = list_join_empty([
+    "This does not remove it from ",
+    first_named,
+  ]);
+  let note_kept = js_code_comment_line(words_kept);
+  let words_logged = list_join_empty([
+    "We write out what is inside ",
+    last_named,
+  ]);
+  let note_logged = js_code_comment_line(words_logged);
+  let blank = text_empty();
   app_code_code_lines_writes_out(
     box_copy,
-    [held_first, copied, logged],
+    [
+      note_made,
+      held_first,
+      blank,
+      note_copy,
+      note_kept,
+      copied,
+      blank,
+      note_logged,
+      logged,
+    ],
     word_first,
   );
   app_code_lesson_name_no_quotes_box(
