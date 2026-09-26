@@ -9,11 +9,12 @@ import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.m
 import { app_code_lesson_statement_name_watch_decoys } from "./app_code_lesson_statement_name_watch_decoys.mjs";
 export function app_code_lesson_statement_name_watch() {
   arguments_assert(arguments, 0);
-  ("a name written out before and after it changes: let a = 7; console.log(a); a = a + 1; console.log(a); writes out 7 and then 8");
-  ("It sits right after the lesson on adding one to a name, because that is the change it watches, and long after the lesson on writing out twice, because both of its writing-outs are that.");
-  ("The new fact is that the same line, written twice, can write two different things: a name is read when its line runs, so it gives what it holds at that moment. It is taught early because writing a name out at each step is how a learner will find their own mistakes in every program after this one.");
+  ('a name written out before and after it changes: let a = "grapes"; console.log(a); a = "olives"; console.log(a); writes out grapes and then olives');
+  ("It sits right after the lesson that first gives a name another value, because that is the first change there is to watch, and after the lesson on writing out twice, because both of its writing-outs are that.");
+  ("As early as it can be, at the human's asking on 2026-09-26. Every lesson after this one - copying a name and changing it, adding one to a name - asks a learner to follow a name through a change, and writing the name out at each step is how they can see it rather than hold it in their head. Before the lesson on giving a name another value, a name holds one thing for the whole program, so a second writing-out would only repeat the first.");
+  ("The new fact is that the same line, written twice, can write two different things: a name is read when its line runs, so it gives what it holds at that moment.");
   ("The program is not unscrambled, for the reason the lesson on writing out twice gives: the tokens carry no line breaks. It does take the two quizzes about lines, because here the order of the lines decides both answers.");
-  ("Reading forwards, the wrong answers are tailored: the name read as holding one number throughout, either one, and the answer the other way round. Reading backwards the other programs are the wrong answers, as in the lesson before.");
+  ("Reading forwards, the wrong answers are tailored: the name read as holding one word throughout, either one, and the answer the other way round. Reading backwards the other programs are the wrong answers, as in the lesson before.");
   let name_id = app_code_lesson_statement_name_watch_title_name_id();
   let batch = app_code_batch_question_answer_fns(
     app_code_lesson_statement_name_watch_batch,
