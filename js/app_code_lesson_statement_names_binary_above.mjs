@@ -58,6 +58,10 @@ export function app_code_lesson_statement_names_binary_above({
   let logged_args = list_first(logs);
   let value = list_first(logged_args);
   let written = json_to(value);
+  ("Text is written out as it is, with no quotes around it: the quotes are how a piece of text is written in code, not part of what it holds. Spelled as data, it would show the learner quotes the program never wrote.");
+  if (text_is(value)) {
+    written = value;
+  }
   let box_remember = app_code_container_light_blue(root);
   app_code_remember_from_lesson(
     box_remember,
