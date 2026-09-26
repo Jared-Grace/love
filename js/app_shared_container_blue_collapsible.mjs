@@ -1,3 +1,4 @@
+import { html_button_widen } from "./html_button_widen.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_container_trim_frame } from "./app_shared_container_trim_frame.mjs";
 import { app_shared_caret_open } from "./app_shared_caret_open.mjs";
@@ -9,7 +10,6 @@ import { html_span_space } from "./html_span_space.mjs";
 import { html_bold_mild } from "./html_bold_mild.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
-import { html_width_full } from "./html_width_full.mjs";
 import { html_aria_expanded_set } from "./html_aria_expanded_set.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
@@ -39,7 +39,8 @@ export function app_shared_container_blue_collapsible(
   html_bold_mild(title_button);
   html_centered(title_button);
   html_cursor_pointer(title_button);
-  html_width_full(title_button);
+  ("widened the way every wide button is - a block, not just full width - because a page that caps its wide buttons to a column centres them with side margins, and an inline button ignores those and sat off to the left of the column's middle");
+  html_button_widen(title_button);
   html_aria_expanded_set(title_button, true);
   let body = html_div(card);
   let collapsed = false;
