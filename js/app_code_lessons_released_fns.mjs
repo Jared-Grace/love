@@ -1,3 +1,6 @@
+import { app_code_lesson_statement_name_number } from "./app_code_lesson_statement_name_number.mjs";
+import { app_code_lesson_statement_name_true_false } from "./app_code_lesson_statement_name_true_false.mjs";
+import { app_code_lesson_statement_name_copy_single } from "./app_code_lesson_statement_name_copy_single.mjs";
 import { app_code_lesson_symbols_digits_numbered } from "./app_code_lesson_symbols_digits_numbered.mjs";
 import { app_code_lesson_symbols_digit_number } from "./app_code_lesson_symbols_digit_number.mjs";
 import { app_code_lesson_symbols_digits } from "./app_code_lesson_symbols_digits.mjs";
@@ -285,8 +288,11 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_expression_choose_order_same_strength,
     app_code_lesson_expression_choose_order_three,
     app_code_lesson_statement_name_value,
+    app_code_lesson_statement_name_number,
+    app_code_lesson_statement_name_true_false,
     app_code_lesson_statement_name_identifier,
     app_code_lesson_statement_name_two,
+    app_code_lesson_statement_name_copy_single,
     app_code_lesson_statement_name_again,
     app_code_lesson_statement_name_copy,
     app_code_lesson_expression_choose_order_nested_add,
