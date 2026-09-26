@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_watch } from "./app_code_lesson_statement_name_watch.mjs";
 import { app_code_lesson_statement_name_not } from "./app_code_lesson_statement_name_not.mjs";
 import { app_code_lesson_statement_name_and } from "./app_code_lesson_statement_name_and.mjs";
 import { app_code_lesson_statement_name_or } from "./app_code_lesson_statement_name_or.mjs";
@@ -337,6 +338,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_plus_one,
     app_code_lesson_statement_name_minus_one,
     app_code_lesson_statement_name_one_more,
+    app_code_lesson_statement_name_watch,
     app_code_lesson_statement_name_one_less,
     app_code_lesson_statement_name_sum,
     app_code_lesson_statement_name_total,
