@@ -1,5 +1,5 @@
 import { app_code_lesson_statement_name_count_last } from "./app_code_lesson_statement_name_count_last.mjs";
-import { app_code_lesson_statement_name_itself_sum_watched } from "./app_code_lesson_statement_name_itself_sum_watched.mjs";
+import { app_code_lesson_statement_name_itself_sum_last } from "./app_code_lesson_statement_name_itself_sum_last.mjs";
 import { app_code_lesson_statement_name_one_less_watched } from "./app_code_lesson_statement_name_one_less_watched.mjs";
 import { app_code_lesson_statement_name_one_more_watched } from "./app_code_lesson_statement_name_one_more_watched.mjs";
 import { app_code_lesson_statement_name_join } from "./app_code_lesson_statement_name_join.mjs";
@@ -351,7 +351,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_total,
     app_code_lesson_statement_name_join,
     app_code_lesson_statement_name_itself_sum,
-    app_code_lesson_statement_name_itself_sum_watched,
+    app_code_lesson_statement_name_itself_sum_last,
     app_code_lesson_statement_name_count,
     app_code_lesson_statement_name_count_last,
     app_code_lesson_statement_name_subtract,
