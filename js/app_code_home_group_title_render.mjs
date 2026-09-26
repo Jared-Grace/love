@@ -7,6 +7,9 @@ import { html_span_space } from "./html_span_space.mjs";
 import { html_cycle_code } from "./html_cycle_code.mjs";
 import { app_code_lessons_range_text } from "./app_code_lessons_range_text.mjs";
 import { text_wrap_parenthesis } from "./text_wrap_parenthesis.mjs";
+import { html_style_font_size } from "./html_style_font_size.mjs";
+import { html_style_opacity } from "./html_style_opacity.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 export function app_code_home_group_title_render(entry) {
   arguments_assert(arguments, 1);
   ("a group's title on the home list, written into the title its folding card made: the check a finished lesson's row wears when every lesson in the group is finished, the group's name with any code in it written as code, and the run of lesson numbers it holds in parentheses - at the human's request");
@@ -26,5 +29,9 @@ export function app_code_home_group_title_render(entry) {
   let range = app_code_lessons_range_text(first, last);
   let range_wrapped = text_wrap_parenthesis(range);
   html_span_space(title_mark);
-  html_span_text(title_mark, range_wrapped);
+  let range_mark = html_span_text(title_mark, range_wrapped);
+  ("the range is quieter than the name - smaller, lighter, not bold - at the human's request, so the name reads first");
+  html_style_font_size(range_mark, "0.8em");
+  html_style_opacity(range_mark, "0.6");
+  html_style_set(range_mark, "font-weight", "normal");
 }

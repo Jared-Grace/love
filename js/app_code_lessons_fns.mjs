@@ -34,6 +34,7 @@ import { app_code_lesson_expression_string_order_equal } from "./app_code_lesson
 import { app_code_lesson_expression_true_false } from "./app_code_lesson_expression_true_false.mjs";
 import { app_code_lesson_expression_equal_true_false } from "./app_code_lesson_expression_equal_true_false.mjs";
 import { app_code_lesson_expression_not_equal_true_false } from "./app_code_lesson_expression_not_equal_true_false.mjs";
+import { app_code_lesson_expression_equal_number_string_true_false } from "./app_code_lesson_expression_equal_number_string_true_false.mjs";
 import { app_code_lesson_expression_not } from "./app_code_lesson_expression_not.mjs";
 import { app_code_lesson_expression_or } from "./app_code_lesson_expression_or.mjs";
 import { app_code_lesson_expression_and } from "./app_code_lesson_expression_and.mjs";
@@ -102,7 +103,6 @@ import { app_code_lesson_expression_absolute_value } from "./app_code_lesson_exp
 import { app_code_lesson_expression_smaller } from "./app_code_lesson_expression_smaller.mjs";
 import { app_code_lesson_expression_larger } from "./app_code_lesson_expression_larger.mjs";
 import { app_code_lesson_expression_min_max_of_three } from "./app_code_lesson_expression_min_max_of_three.mjs";
-import { app_code_lesson_expression_equal_number_string_true_false } from "./app_code_lesson_expression_equal_number_string_true_false.mjs";
 import { app_code_lesson_expression_choose_order_compare } from "./app_code_lesson_expression_choose_order_compare.mjs";
 import { app_code_lesson_expression_comparing_a_comparison } from "./app_code_lesson_expression_comparing_a_comparison.mjs";
 import { app_code_lesson_expression_parentheses_one_side } from "./app_code_lesson_expression_parentheses_one_side.mjs";
@@ -202,6 +202,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_true_false,
     app_code_lesson_expression_equal_true_false,
     app_code_lesson_expression_not_equal_true_false,
+    app_code_lesson_expression_equal_number_string_true_false,
     app_code_lesson_expression_not,
     app_code_lesson_expression_or,
     app_code_lesson_expression_and,
@@ -270,7 +271,6 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_smaller,
     app_code_lesson_expression_larger,
     app_code_lesson_expression_min_max_of_three,
-    app_code_lesson_expression_equal_number_string_true_false,
     app_code_lesson_expression_choose_order_compare,
     app_code_lesson_expression_comparing_a_comparison,
     app_code_lesson_expression_parentheses_one_side,
