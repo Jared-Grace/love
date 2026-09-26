@@ -13,7 +13,7 @@ import { app_code_batch_question_answer_fns } from "./app_code_batch_question_an
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_statement_name_watched(
+export function app_code_lesson_statement_name_last(
   lesson_first,
   batch_original,
   words,
