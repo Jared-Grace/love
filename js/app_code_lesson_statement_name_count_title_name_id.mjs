@@ -1,7 +1,7 @@
+import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-import { js_code_binary } from "./js_code_binary.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
@@ -13,7 +13,7 @@ export function app_code_lesson_statement_name_count_title_name_id() {
   let words = "Counting with a name";
   let name = app_code_lesson_statement_name_value_name();
   let plus = js_operator_plus_symbol();
-  let more = js_code_binary(name, plus, 1);
+  let more = js_code_binary_spaced_nb(name, plus, 1);
   let grown = js_code_assign_statement(name, more);
   let code = list_join_newline([grown, grown]);
   let built = app_code_lesson_statement_title_name_id(words, code);
