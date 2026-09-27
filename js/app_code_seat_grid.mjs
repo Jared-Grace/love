@@ -1,3 +1,8 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { floor } from "./floor.mjs";
+import { divide } from "./divide.mjs";
+import { multiply } from "./multiply.mjs";
+import { modulo } from "./modulo.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -17,16 +22,14 @@ export function app_code_seat_grid(parent, count, width, marked) {
   ("$plain marked");
   ("a picture of seats numbered from 0 in rows of width: row numbers down the left, column numbers across the top, every seat in a whole row before the marked seat's row filled blue and the marked seat filled green, so a reader can count the seats that come before it");
   ("count is how many seats are drawn; the last row may be short, as a real list's is");
-  let rows_before = Math.floor(marked / width);
-  let start = rows_before * width;
+  let p = divide(marked, width);
+  let rows_before = floor(p);
+  let start = multiply(rows_before, width);
   let grid = html_div(parent);
+  let t = text_to(width + 1);
   html_style_assign(grid, {
     display: "grid",
-    "grid-template-columns": text_combine(
-      "repeat(",
-      text_to(width + 1),
-      ", 2.2em)",
-    ),
+    "grid-template-columns": text_combine_multiple(["repeat(", t, ", 2.2em)"]),
     gap: "0.25em",
     "justify-content": "center",
     margin: "0.5em 0",
@@ -45,15 +48,20 @@ export function app_code_seat_grid(parent, count, width, marked) {
   }
   heading_draw("");
   function column_heading_draw(column) {
-    heading_draw(text_to(column));
+    let t2 = text_to(column);
+    heading_draw(t2);
   }
-  each(range(width), column_heading_draw);
+  let list = range(width);
+  each(list, column_heading_draw);
   function seat_draw(index) {
-    let column = index % width;
+    let column = modulo(index, width);
     if (equal(column, 0)) {
-      heading_draw(text_to(index / width));
+      let input = divide(index, width);
+      let t3 = text_to(input);
+      heading_draw(t3);
     }
-    let seat = html_div_text(grid, text_to(index));
+    let text2 = text_to(index);
+    let seat = html_div_text(grid, text2);
     html_style_assign(seat, {
       "text-align": "center",
       padding: "0.3em 0",
@@ -67,6 +75,7 @@ export function app_code_seat_grid(parent, count, width, marked) {
       html_style_background_color_set(seat, marked_color);
     }
   }
-  each(range(count), seat_draw);
+  let list2 = range(count);
+  each(list2, seat_draw);
   return grid;
 }
