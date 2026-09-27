@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_grid_row } from "./app_code_lesson_statement_name_grid_row.mjs";
 import { app_code_lesson_statement_name_digit_split } from "./app_code_lesson_statement_name_digit_split.mjs";
 import { app_code_lesson_statement_name_grid_position } from "./app_code_lesson_statement_name_grid_position.mjs";
 import { app_code_lesson_statement_name_grid_index } from "./app_code_lesson_statement_name_grid_index.mjs";
@@ -397,6 +398,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_average_two,
     app_code_lesson_statement_name_average_three,
     app_code_lesson_statement_name_middle,
+    app_code_lesson_statement_name_grid_row,
     app_code_lesson_statement_name_grid_position,
     app_code_lesson_statement_name_grid_index,
     app_code_lesson_statement_name_sum_to,

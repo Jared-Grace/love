@@ -239,6 +239,7 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_average_two: text_frozen("name_average_two"),
     app_code_lesson_statement_name_average_three: text_frozen("name_average_three"),
     app_code_lesson_statement_name_middle: text_frozen("name_middle"),
+    app_code_lesson_statement_name_grid_row: text_frozen("name_grid_row"),
     app_code_lesson_statement_name_grid_position: text_frozen("name_grid_position"),
     app_code_lesson_statement_name_grid_index: text_frozen("name_grid_index"),
     app_code_lesson_statement_name_sum_to: text_frozen("name_sum_to"),
