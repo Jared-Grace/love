@@ -1,3 +1,4 @@
+import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
 import { list_first } from "./list_first.mjs";
@@ -95,8 +96,9 @@ export function app_code_lesson_statement_name_average_two() {
       ["To find it, add the two numbers, then divide by ", "2", ":"],
       v5,
       v6,
+      app_code_explain_container_next,
       ["In code, first we add them: ", line_sum],
-      ["Then we divide the sum by 2: ", line_average],
+      ["Then we divide the sum by ", "2", ": ", line_average],
       ["Two short lines, each doing one thing:"],
     ],
     decoys: null,

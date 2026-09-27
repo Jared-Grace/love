@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_grid_position_step } from "./app_code_lesson_statement_name_grid_position_step.mjs";
 import { property_get } from "./property_get.mjs";
@@ -25,18 +26,20 @@ import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_f
 import { app_code_lesson_statement_name_remainder } from "./app_code_lesson_statement_name_remainder.mjs";
 export function app_code_lesson_statement_name_grid_position() {
   arguments_assert(arguments, 0);
-  ("the row and column of a numbered chair in rows of equal width: let row = Math.floor(index / width); let column = index % width;");
+  ("the row and column of a numbered chair in rows of chairs: let row = Math.floor(chair / columns); let column = chair % columns;");
   ("Chairs are numbered from 0, as positions in code are, so chair 0 is row 0 column 0. The writing says it with chairs rather than lists, which are not taught yet.");
-  ("No two programs share an answer, and neither line of an answer is the width it divides by.");
+  ("No two programs share an answer, and neither line of an answer is the number of columns it divides by.");
   ("The writing follows the human's outline, 2026-09-27, one light blue container per group of its lines: the chairs, how they are numbered with the grid, the row, the column by taking away the rows before, and the column by the remainder, so % arrives as a shortcut for a subtraction the reader has just done.");
-  ("Every pointed thing wears the grid's colour for it: chair 7 the green, the blue chairs the blue, a row number the row headings' colour and a column number the column headings'. A number that only counts, such as the 2 in 2 whole rows or the 3 columns, stays plain writing, so a colour always means a place on the grid. Asked by the human, 2026-09-27; not picked: tinting the chairs by row or column, which would bury the blue and green the explanation leans on.");
-  ("Picked: the code keeps the names index and width. Not picked: the outline's chair_number and column_count, because the title line let column = chair_number % column_count; is past the 30-character title limit, the row line wraps on a phone, and the next lesson, which goes the other way, names them index and width. The writing says what each name means where the formula first appears.");
-  let names = ["index", "width"];
+  ("Every pointed thing wears the grid's colour for it: chair 7 the green, the blue chairs and the first and last of them the blue, a row number the row headings' colour and a column number the column headings'. A number that only counts, such as the 2 in 2 whole rows or the 3 columns, stays plain writing, so a colour always means a place on the grid. Asked by the human, 2026-09-27; not picked: tinting the chairs by row or column, which would bury the blue and green the explanation leans on.");
+  ("The names are chair and columns, the human's choice, 2026-09-27, so the formula reads as the sentence it is; the reasons and the names not picked are with the lines, in ",
+    fn_name("app_code_lesson_statement_name_grid_position_step"),
+    ".");
+  let names = ["chair", "columns"];
   let step = app_code_lesson_statement_name_grid_position_step();
   let middle = property_get(step, "middle");
   let line_column = list_second(middle);
-  let index = list_first(names);
-  let width = list_second(names);
+  let chair = list_first(names);
+  let columns = list_second(names);
   let percent = js_operator_percent_symbol();
   let slash = js_operator_division_symbol();
   let minus = js_operator_minus_symbol();
@@ -76,25 +79,29 @@ export function app_code_lesson_statement_name_grid_position() {
   let color_chair = app_code_highlight_color_second();
   let color_row = app_code_highlight_color_third();
   let color_column = app_code_highlight_color_fourth();
-  function pointed(parts, rows, columns) {
+  function pointed(parts, row_numbers, column_numbers) {
     "a line wearing the grid's colours: the blue chairs blue, chair 7 green, and the row and column numbers it names in the headings' colours";
     let draw = app_code_line_pointed_draw(parts, [
       [[blue], color_before],
       [["7"], color_chair],
-      [rows, color_row],
-      [columns, color_column],
+      [row_numbers, color_row],
+      [column_numbers, color_column],
     ]);
     return draw;
   }
   let next = app_code_explain_container_next;
-  let combined = js_code_binary_spaced_nb(index, slash, width);
+  let combined = js_code_binary_spaced_nb(chair, slash, columns);
   let row_formula = js_code_call_args(name, [combined]);
   let divided = js_code_binary_spaced_nb("7", slash, "3");
   let floored = js_code_call_args(name, [divided]);
   let row_found = js_code_binary_spaced_nb(floored, same, "2");
   let code = js_code_binary_result_nb("7", minus, "6", "1");
-  let column_formula = js_code_binary_spaced_nb(index, percent, width);
+  let column_formula = js_code_binary_spaced_nb(chair, percent, columns);
   let code2 = js_code_binary_result_nb("7", percent, "3", "1");
+  let held = app_code_line_pointed_draw(
+    ["Those 2 rows hold 6 chairs (", "0", " to ", "5", ")"],
+    [[["0", "5"], color_before]],
+  );
   let v = pointed(
     ["So the three columns are: ", "0", ", ", "1", " and ", "2"],
     [],
@@ -191,19 +198,13 @@ export function app_code_lesson_statement_name_grid_position() {
       v5,
       v6,
       v7,
-      [
-        "We can use this formula, where ",
-        index,
-        " is the chair's number and ",
-        width,
-        " is how many columns:",
-      ],
+      ["We can use this formula:"],
       ["", row_formula],
       v8,
       next,
       v9,
       v10,
-      ["Those 2 rows hold 6 chairs (0 to 5)"],
+      held,
       v11,
       v12,
       next,

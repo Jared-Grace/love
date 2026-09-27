@@ -7,19 +7,20 @@ import { js_code_call_args } from "./js_code_call_args.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 export function app_code_lesson_statement_name_grid_position_step() {
   arguments_assert(arguments, 0);
-  ("the lines of the grid-position lesson: let row = Math.floor(index / width); let column = index % width; - and row and column are written out");
+  ("the lines of the grid-position lesson: let row = Math.floor(chair / columns); let column = chair % columns; - and row and column are written out");
   ("A grid kept as one long numbered line is found this way in many algorithms, so it is one of the formulas chosen by later use, at the human's request, 2026-09-27.");
-  let index = "index";
-  let width = "width";
+  ("Named chair and columns, the human's words, 2026-09-27, so a first-time reader reads the line as the sentence it is. Not picked: index and width, the names later lessons on lists will use, which a reader meeting rows and columns of chairs has no reason to think of; position, which says less than chair; and column_count, which puts the title line past its 30 characters.");
+  let chair = "chair";
+  let columns = "columns";
   let row = "row";
   let column = "column";
   let slash = js_operator_division_symbol();
   let percent = js_operator_percent_symbol();
-  let divided = js_code_binary_spaced_nb(index, slash, width);
+  let divided = js_code_binary_spaced_nb(chair, slash, columns);
   let floor_name = js_code_math_floor_name();
   let rounded = js_code_call_args(floor_name, [divided]);
   let line_row = js_code_let_statement(row, rounded);
-  let left = js_code_binary_spaced_nb(index, percent, width);
+  let left = js_code_binary_spaced_nb(chair, percent, columns);
   let line_column = js_code_let_statement(column, left);
   let step = {
     middle: [line_row, line_column],
