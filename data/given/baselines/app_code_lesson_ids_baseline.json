@@ -173,6 +173,16 @@
   "name_subtract",
   "name_multiply",
   "name_divide",
+  "name_plus_assign",
+  "name_minus_assign",
+  "name_times_assign",
+  "name_divide_assign",
+  "name_increment",
+  "name_decrement",
+  "name_fill_from",
+  "name_swap_try",
+  "name_temp_keep",
+  "name_swap",
   "name_compare",
   "name_greater",
   "name_smaller_equal",
@@ -182,6 +192,13 @@
   "name_not",
   "name_or",
   "name_and",
-  "name_remainder"
+  "name_remainder",
+  "name_average_two",
+  "name_average_three",
+  "name_middle",
+  "name_grid_position",
+  "name_grid_index",
+  "name_sum_to",
+  "name_digit_split"
  ]
 }
