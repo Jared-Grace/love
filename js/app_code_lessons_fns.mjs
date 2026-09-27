@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_digit_rest } from "./app_code_lesson_statement_name_digit_rest.mjs";
 import { app_code_lesson_statement_name_grid_row } from "./app_code_lesson_statement_name_grid_row.mjs";
 import { app_code_lesson_statement_name_digit_split } from "./app_code_lesson_statement_name_digit_split.mjs";
 import { app_code_lesson_statement_name_grid_position } from "./app_code_lesson_statement_name_grid_position.mjs";
@@ -403,6 +404,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_grid_index,
     app_code_lesson_statement_name_sum_to,
     app_code_lesson_statement_name_digit_split,
+    app_code_lesson_statement_name_digit_rest,
   ];
   return fns;
 }
