@@ -19,7 +19,7 @@ export function app_code_celebration(parent, message) {
   "$plain message";
   "the large celebration drawn when a learner finishes something: an enlarged green success message, then the line handed in, centered and wrapped on each side with one celebration emoji chosen at random, with generous vertical spacing (more under the line than the green message)";
   "ONE CELEBRATION, whatever was finished - the end of a review and the end of everything available were drawn the same way on purpose, so a learner reads the second as the same kind of moment as the first, only bigger in what it says";
-  "SMALLER THAN IT WAS: the line saying everything is done is a whole sentence, and at the first size it filled the screen on a phone - so the whole celebration was brought down, at the human's request, 2026-09-27";
+  "SMALLER THAN IT WAS: the whole celebration was brought down a size, on the home screen and at the end of a review alike, at the human's request, 2026-09-27";
   arguments_assert(arguments, 2);
   let celebration = html_div(parent);
   let celebration_size = "clamp(1.1rem, 4vw, 1.3rem)";
