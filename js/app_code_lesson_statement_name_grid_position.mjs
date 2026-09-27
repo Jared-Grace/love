@@ -13,7 +13,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { js_code_math_floor_name } from "./js_code_math_floor_name.mjs";
-import { app_code_seat_grid } from "./app_code_seat_grid.mjs";
+import { app_code_chair_grid } from "./app_code_chair_grid.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
@@ -72,7 +72,7 @@ export function app_code_lesson_statement_name_grid_position() {
   let name = js_code_math_floor_name();
   function grid_draw(box) {
     "chair 7 among 9 chairs in rows of 3";
-    app_code_seat_grid(box, 9, 3, 7);
+    app_code_chair_grid(box, 9, 3, 7);
   }
   let blue = "blue chairs";
   let color_before = app_code_highlight_color();

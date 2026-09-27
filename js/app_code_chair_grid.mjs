@@ -20,7 +20,7 @@ import { range } from "./range.mjs";
 import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-export function app_code_seat_grid(parent, count, width, marked) {
+export function app_code_chair_grid(parent, count, width, marked) {
   arguments_assert(arguments, 4);
   ("$plain marked");
   ("a picture of seats numbered from 0 in rows of width: row numbers down the left in the third pointing colour, column numbers across the top in the fourth, each a code chip as numbers in the writing are, every seat in a whole row before the marked seat's row filled blue and the marked seat filled green, so a reader can count the seats that come before it");
