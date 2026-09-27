@@ -1,26 +1,14 @@
-import { app_code_lesson_statement_name_again_title_code } from "./app_code_lesson_statement_name_again_title_code.mjs";
-import { app_code_lesson_statement_name_last_title_name_id } from "./app_code_lesson_statement_name_last_title_name_id.mjs";
-import { app_code_lesson_statement_title_name_id_dots } from "./app_code_lesson_statement_title_name_id_dots.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_last } from "./app_code_lesson_statement_name_last.mjs";
+import { app_code_lesson_statement_name_again_pair } from "./app_code_lesson_statement_name_again_pair.mjs";
+import { app_code_lesson_statement_name_pair_last } from "./app_code_lesson_statement_name_pair_last.mjs";
 import { app_code_lesson_statement_name_again } from "./app_code_lesson_statement_name_again.mjs";
-import { app_code_lesson_statement_name_again_batch } from "./app_code_lesson_statement_name_again_batch.mjs";
-import { app_code_lesson_decoy_code_words } from "./app_code_lesson_decoy_code_words.mjs";
 export function app_code_lesson_statement_name_again_last() {
   arguments_assert(arguments, 0);
   ('a name given another word, written out only at the end: let a = "grapes"; a = "olives"; console.log(a); writes out olives');
-  ("The wrong answers are the words the program holds, so the word that was replaced is always among them.");
-  let code_change = app_code_lesson_statement_name_again_title_code();
-  let name_id = app_code_lesson_statement_name_last_title_name_id(
-    app_code_lesson_statement_title_name_id_dots,
-    "Another value, last value only",
-    code_change,
-  );
-  let lesson = app_code_lesson_statement_name_last(
+  let pair = app_code_lesson_statement_name_again_pair();
+  let lesson = app_code_lesson_statement_name_pair_last(
     app_code_lesson_statement_name_again,
-    app_code_lesson_statement_name_again_batch,
-    name_id,
-    app_code_lesson_decoy_code_words,
+    pair,
   );
   return lesson;
 }
