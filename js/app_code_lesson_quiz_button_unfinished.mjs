@@ -5,8 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_quiz_index_set } from "./app_code_quiz_index_set.mjs";
 import { app_code_hash_write } from "./app_code_hash_write.mjs";
-import { app_code_quiz_index_reset } from "./app_code_quiz_index_reset.mjs";
-import { app_code_lesson_go } from "./app_code_lesson_go.mjs";
+import { app_code_course_unfinished_go } from "./app_code_course_unfinished_go.mjs";
 import { app_code_button_unfinished_text } from "./app_code_button_unfinished_text.mjs";
 import { app_shared_button_wide_spaced } from "./app_shared_button_wide_spaced.mjs";
 export function app_code_lesson_quiz_button_unfinished(
@@ -19,8 +18,8 @@ export function app_code_lesson_quiz_button_unfinished(
 ) {
   "$plain quiz_index";
   "$plain qli";
-  "The button at the foot of a quiz offering the work this learner has left unfinished, drawn only where that is somewhere other than where the plain way on already leads, and saying which of the two it goes to. Renders nothing (returns null) where there is no such place.";
-  "A quiz of this lesson is gone to by moving the quiz position and redrawing the quiz area, the same move the Next button makes; a lesson is gone to by starting that lesson at its first quiz, the same move finishing a lesson makes. Both are borrowed rather than written again here, so a change to how this app walks from one place to another reaches this button too.";
+  "The button at the foot of a quiz offering the work this learner has left unfinished, drawn only where that is somewhere other than where the plain way on already leads, and saying which kind it goes to. Renders nothing (returns null) where there is no such place.";
+  "A quiz of this lesson is gone to by moving the quiz position and redrawing the quiz area, the same move the Next button makes; a lesson or a review is gone to the way every button offering unfinished work goes there. Both are borrowed rather than written again here, so a change to how this app walks from one place to another reaches this button too.";
   arguments_assert(arguments, 6);
   let way = app_code_lesson_quiz_way_on_unfinished_try(
     context,
@@ -33,19 +32,17 @@ export function app_code_lesson_quiz_button_unfinished(
     return null;
   }
   let kind = property_get(way, "kind");
-  let index = property_get(way, "index");
-  let lesson = property_get(way, "lesson");
   async function go() {
     let to_quiz = equal(kind, "quiz");
     if (to_quiz) {
+      let index = property_get(way, "index");
       app_code_quiz_index_set(context, index);
       refresh();
       ("redrawing the quiz area on its own does not run the app-level after_refresh, so the new quiz position is written into the url from here - the same reason the Next button beside this one writes it");
       app_code_hash_write(context);
       return;
     }
-    app_code_quiz_index_reset(context);
-    await app_code_lesson_go(lesson, context);
+    await app_code_course_unfinished_go(context, way);
   }
   let text = app_code_button_unfinished_text(kind);
   let button = app_shared_button_wide_spaced(parent, text, go);
