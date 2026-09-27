@@ -1,3 +1,5 @@
+import { html_span } from "./html_span.mjs";
+import { html_style_white_space } from "./html_style_white_space.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_title_code_paint_get } from "./app_code_lesson_statement_title_code_paint_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -12,8 +14,10 @@ export function app_code_lesson_statement_title_code_times_paint_get(
   let tile_paint = app_code_lesson_statement_title_code_paint_get(code);
   let count = text_combine_multiple([" (x", times, ")"]);
   function paint_code(parent) {
-    tile_paint(parent);
-    html_span_text(parent, count);
+    let row = html_span(parent);
+    html_style_white_space(row, "nowrap");
+    tile_paint(row);
+    html_span_text(row, count);
   }
   return paint_code;
 }
