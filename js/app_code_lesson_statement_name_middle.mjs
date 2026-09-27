@@ -1,3 +1,4 @@
+import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
 import { app_code_lesson_bold_term } from "./app_code_lesson_bold_term.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { html_div } from "./html_div.mjs";
@@ -27,6 +28,7 @@ export function app_code_lesson_statement_name_middle() {
   ("Most sums are odd, so the rounding changes the answer, and no middle is one of the numbers on its own screen or the 2 it is divided by. The five middles differ.");
   ("The writing follows the human's outline, 2026-09-27, from its second half: the average-of-two lesson already shows the middle on a number line, so this one opens by naming that and teaches only what is new, an odd sum whose middle is .5 and the choice to always round down. The outline wrote Math.floor(2 + 7 / 2), which divides only the 7; the lesson adds first in a line of its own, so the order cannot go wrong.");
   ("The opening is the human's second outline, 2026-09-27: even and odd are defined, each in bold where it is first used, and each shown on a division of its own, 8 / 2 and 7 / 2, so the .5 is seen on a number that is not in the example; then the average is reminded with a button to its lesson, and only then is the sum said to be odd. Even is defined by dividing by 2 rather than by the remainder, because dividing is the step this lesson takes. Not picked: defining even by what % 2 gives, which the remainder lessons would allow, but which is not the operation on this screen.");
+  ("Later the same day the human split the writing into three boxes: even and odd, then the middle, then the code under Here's the code:; and said the two distances from 4.5 one to a line, and how close both roundings are, 0.5.");
   ("The reminder quotes lesson 87 in its own shape, Math.floor(14 / 4) is Math.floor(3.5) and Math.floor(3.5) is 3, so the decimal and the rounding down are both on the screen before the writing uses them. Picked over the human's other thought, 2026-09-27, of two reminders, one for dividing and one for Math.floor: lesson 87's first line already shows the division ending in a decimal, so a second box would repeat it.");
   ("Numbers in the writing are code chips wearing the number line's pointing colours: 2 and 7 the ends', 4.5 and then 4 the middle's. The line 9 / 2 === 4.5 points at its middle only, because its 2 is the one divided by, not the end.");
   let step = app_code_lesson_statement_name_middle_step();
@@ -73,21 +75,16 @@ export function app_code_lesson_statement_name_middle() {
   let draw3 = app_code_line_ends_middle_draw(["", code2], [], ["4.5"]);
   let draw4 = app_code_number_line_draw(2, 7, 0.5, [2, 7], 4.5);
   let draw5 = app_code_line_ends_middle_draw(
-    [
-      "",
-      "4.5",
-      " is ",
-      "0.5",
-      " away from ",
-      "4",
-      ", and ",
-      "0.5",
-      " away from ",
-      "5",
-    ],
+    ["", "4.5", " is ", "0.5", " away from ", "4"],
     [],
     ["4.5"],
   );
+  let draw5_after = app_code_line_ends_middle_draw(
+    ["And ", "4.5", " is ", "0.5", " away from ", "5"],
+    [],
+    ["4.5"],
+  );
+  let next = app_code_explain_container_next;
   let draw6 = app_code_number_line_draw(2, 7, 0.5, [2, 7], 4);
   let code_even = js_code_binary_result_nb("8", slash, "2", "4");
   let code_odd = js_code_binary_result_nb("7", slash, "2", "3.5");
@@ -139,12 +136,15 @@ export function app_code_lesson_statement_name_middle() {
       ],
       odd_draw,
       ["If you divide an odd number by 2, the answer ends in .5: ", code_odd],
+      next,
       average_remember_draw,
       [
         "So to find the number in the middle of two numbers, we first add the two numbers together",
       ],
       [
-        "If that sum is odd, then when we divide it by 2, the middle ends in .5",
+        "If that sum is odd, then when we divide it by ",
+        "2",
+        ", the middle ends in .5",
       ],
       draw,
       draw2,
@@ -152,9 +152,12 @@ export function app_code_lesson_statement_name_middle() {
       draw4,
       ["What if we want a whole number?"],
       draw5,
-      ["So rounding up and rounding down are just as close"],
+      draw5_after,
+      ["So rounding up and rounding down are just as close (", "0.5", ")"],
       ["So we choose one and always use it: we round down"],
       draw6,
+      next,
+      ["Here's the code:"],
       ["So we add first: ", line_sum],
       ["Then we divide by ", "2", " and round down with ", floor_name],
       [
