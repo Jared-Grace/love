@@ -1,3 +1,4 @@
+import { text_space_nb_joined } from "./text_space_nb_joined.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_code_dark } from "./html_span_code_dark.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
@@ -11,7 +12,8 @@ export function app_code_lesson_statement_title_code_paint_get(code) {
     let tile = html_span_code_dark(parent);
     html_display_inline_block(tile);
     html_style_white_space(tile, "pre-line");
-    html_span_text_content(tile, code);
+    let shown = text_space_nb_joined(code);
+    html_span_text_content(tile, shown);
   }
   return paint_code;
 }
