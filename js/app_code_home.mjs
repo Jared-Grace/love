@@ -32,6 +32,7 @@ export async function app_code_home(context) {
   let value = property_get(r, "value");
   let div = property_get(r, "div");
   let g = property_get(r, "g");
+  let bar = property_get(r, "bar");
   html_style_margin_y(div, value);
   let lessons = app_code_lessons();
   let current_id = storage_session_get_context(context, "lesson_id");
@@ -114,6 +115,6 @@ export async function app_code_home(context) {
   each_index(lessons, lambda);
   ("the group is opened before scrolling, because a row inside a shut group has no place on the screen to scroll to");
   app_code_home_groups_finish(cards, opened);
-  app_code_home_all_complete(g, context);
+  app_code_home_all_complete(g, bar, context);
   await app_code_home_just_left_center(just_left, context);
 }
