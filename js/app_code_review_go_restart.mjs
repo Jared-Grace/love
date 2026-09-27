@@ -1,3 +1,4 @@
+import { app_code_review_cursor_key } from "./app_code_review_cursor_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { storage_local_remove_context } from "./storage_local_remove_context.mjs";
@@ -18,6 +19,8 @@ export function app_code_review_go_restart(r3, context) {
   let skip_button = property_get(r3, "skip_button");
   async function go_restart() {
     storage_local_remove_context(context, key);
+    let cursor_key = app_code_review_cursor_key(key);
+    storage_local_remove_context(context, cursor_key);
     await app_shared_screen_set(context, app_code_review);
   }
   let r = {
