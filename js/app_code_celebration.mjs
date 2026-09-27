@@ -20,9 +20,10 @@ export function app_code_celebration(parent, message) {
   "the large celebration drawn when a learner finishes something: an enlarged green success message, then the line handed in, centered and wrapped on each side with one celebration emoji chosen at random, with generous vertical spacing (more under the line than the green message)";
   "ONE CELEBRATION, whatever was finished - the end of a review and the end of everything available were drawn the same way on purpose, so a learner reads the second as the same kind of moment as the first, only bigger in what it says";
   "SMALLER THAN IT WAS: the whole celebration was brought down a size, on the home screen and at the end of a review alike, at the human's request, 2026-09-27";
+  "SIZED IN em, NOT rem OR vw: the text-size setting sets its size on the app's own root element, not on the page, so a rem or vw size ignored it and the message stayed small when the reader had zoomed the text in, reported by the human 2026-09-27. 1.1em is the size the old clamp gave on a phone at the default setting";
   arguments_assert(arguments, 2);
   let celebration = html_div(parent);
-  let celebration_size = "clamp(1.1rem, 4vw, 1.3rem)";
+  let celebration_size = "1.1em";
   html_style_font_size(celebration, celebration_size);
   let green = app_shared_success_message(celebration);
   let value = app_shared_spaced_gap();

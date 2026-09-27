@@ -1,3 +1,4 @@
+import { app_code_chair_emoji } from "./app_code_chair_emoji.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { divide } from "./divide.mjs";
 import { floor } from "./floor.mjs";
@@ -25,6 +26,7 @@ export function app_code_chair_grid(parent, count, width, marked) {
   ("$plain marked");
   ("a picture of chairs numbered from 0 in rows of width: row numbers down the left in the third pointing colour, column numbers across the top in the fourth, each a code chip as numbers in the writing are, every chair in a whole row before the marked chair's row filled blue and the marked chair filled green, so a reader can count the chairs that come before it");
   ("count is how many chairs are drawn; the last row may be short, as a real list's is");
+  ("Each chair shows the chair emoji above its number, asked by the human 2026-09-27, so the numbered grid is seen to be the same chairs as the plain picture of chairs drawn before it.");
   let p = divide(marked, width);
   let rows_before = floor(p);
   let start = multiply(rows_before, width);
@@ -75,7 +77,14 @@ export function app_code_chair_grid(parent, count, width, marked) {
       heading_chip_draw(t3, row_color);
     }
     let text2 = text_to(index);
-    let chair = html_div_text(grid, text2);
+    let chair = html_div(grid);
+    let text3 = app_code_chair_emoji();
+    let picture = html_div_text(chair, text3);
+    html_style_assign(picture, {
+      "font-size": "0.8em",
+      "line-height": "1.1",
+    });
+    html_div_text(chair, text2);
     html_style_assign(chair, {
       "text-align": "center",
       padding: "0.3em 0",

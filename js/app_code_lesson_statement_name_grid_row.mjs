@@ -1,3 +1,4 @@
+import { app_code_chair_emoji_grid } from "./app_code_chair_emoji_grid.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
@@ -62,6 +63,10 @@ export function app_code_lesson_statement_name_grid_row() {
     ];
     let taken = list_shuffle_take(candidates, 4);
     return taken;
+  }
+  function chairs_draw(box) {
+    "the chairs alone, 3 rows of 3, before any is numbered";
+    app_code_chair_emoji_grid(box, 3, 3);
   }
   function grid_draw(box) {
     "chair 7 among 9 chairs in rows of 3";
@@ -147,6 +152,7 @@ export function app_code_lesson_statement_name_grid_row() {
     explain: [
       ["Suppose there are chairs"],
       ["The chairs are in rows and columns"],
+      chairs_draw,
       ["So the chairs make a rectangle"],
       next,
       numbered,

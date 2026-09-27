@@ -1,3 +1,10 @@
+import { html_div } from "./html_div.mjs";
+import { list_join_newline } from "./list_join_newline.mjs";
+import { html_span } from "./html_span.mjs";
+import { app_code_code_dark_lines_comments } from "./app_code_code_dark_lines_comments.mjs";
+import { html_style_assign } from "./html_style_assign.mjs";
+import { app_code_line_dots_draw } from "./app_code_line_dots_draw.mjs";
+import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -16,7 +23,7 @@ export function app_code_lesson_statement_name_sum_to() {
   ("the sum 1 + 2 + ... + n in three short lines: let next = n + 1; let product = n * next; let sum = product / 2;");
   ("Chosen for later use: finding the one number missing from 1 to n compares a list's sum with this one, and it is the first formula whose line count stays the same however big n is.");
   ("n * (n + 1) is always even, so every sum is whole, and the five sums differ.");
-  ("The writing is the human's, 2026-09-27: why a formula is wanted - 1 + 2 + 3 + 4 is 3 additions, the first 100 numbers would be 99 - then the formula as one expression, then the same answer in three short lines. Each sum and expression the writing names is a code chip, and each + it counts is shown as the + it means, so sums is read as additions and not as answers. Not picked: saying additions instead of sums, which drops the human's word; and the earlier opening, add one number at a time, which gave no reason to want anything else.");
+  ("The writing is the human's, 2026-09-27: why a formula is wanted - 1 + 2 + 3 + 4 is 3 additions, the first 100 numbers would be 99 - then the formula as one expression, then the same answer in three short lines. Each sum and expression the writing names is a code chip, and each + it counts is shown as the + it means, so sums is read as additions and not as answers. Not picked: saying additions instead of sums, which drops the human's word; and the earlier opening, add one number at a time, which gave no reason to want anything else. Later the same day the human asked for solve rather than do, the dots in the grey the home titles give them, and the three lines as one wide piece of code in a box of their own with the check against 4 that follows them.");
   let names = ["n"];
   let n = list_first(names);
   let next = "next";
@@ -66,6 +73,26 @@ export function app_code_lesson_statement_name_sum_to() {
   let after = chip([n, plus, "1"]);
   let halve = chip([slash, "2"]);
   let worked = chip(["4", times, "5", slash, "2"]);
+  function lines_draw(box) {
+    "the three lines as one wide piece of code, as a program is shown, rather than three chips - they are read top to bottom as one calculation";
+    let line = html_div(box);
+    let code = list_join_newline(middle_lines);
+    let chip = html_span(line);
+    app_code_code_dark_lines_comments(chip, code);
+    html_style_assign(chip, {
+      display: "block",
+    });
+  }
+  let middle_lines = [line_next, line_product, line_sum];
+  let draw = app_code_line_dots_draw([
+    "But what if we wanted to add the first 100 numbers? ",
+    hundred,
+    " ?",
+  ]);
+  let draw2 = app_code_line_dots_draw([
+    "Instead, there's a formula to add the numbers ",
+    up_to,
+  ]);
   let lesson = app_code_lesson_statement_formula({
     words: "Adding 1 up to n",
     title_code: line_sum,
@@ -78,10 +105,10 @@ export function app_code_lesson_statement_name_sum_to() {
     remember_lines,
     explain: [
       ["", four, " has 4 numbers and 3 sums (", plus, ")"],
-      ["We could do all 3 sums (", plus, ")"],
-      ["But what if we wanted to add the first 100 numbers? ", hundred, " ?"],
+      ["We could solve all 3 sums (", plus, ")"],
+      draw,
       ["Then there would be 99 sums (", plus, ") to add together"],
-      ["Instead, there's a formula to add the numbers ", up_to],
+      draw2,
       ["Here's the formula in one expression: ", expression],
       [
         "In other words, multiply ",
@@ -92,12 +119,11 @@ export function app_code_lesson_statement_name_sum_to() {
         halve,
         ")",
       ],
+      app_code_explain_container_next,
       [
         "Here's the code to step by step calculate the same answer as that expression:",
       ],
-      ["", line_next],
-      ["", line_product],
-      ["", line_sum],
+      lines_draw,
       ["For 4 that is ", worked, ", which is 10, the same as ", four, ":"],
     ],
     decoys: null,

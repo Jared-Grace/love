@@ -110,7 +110,7 @@ export function app_code_lesson_statement_name_grid_position() {
     [],
   );
   let v = pointed(
-    ["So the ", "3", " columns are: ", "0", ", ", "1", " and ", "2"],
+    ["There are ", "3", " columns: ", "0", ", ", "1", " and ", "2"],
     [],
     ["0", "1", "2"],
   );
