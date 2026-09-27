@@ -45,7 +45,7 @@ export function app_code_lesson_title_strip(root, context, lesson) {
   let progress = app_code_progress_read(context);
   let complete = app_code_lesson_complete_is(progress, lesson_id);
   ("noted for the page as a whole, which is painted after every screen draws - a finished lesson stands on the same pale green as a finished group on the home list, at the human's request");
-  property_set(context, "lesson_complete_shown", complete);
+  property_set(context, "page_complete_shown", complete);
   if (complete) {
     ("the whole bar is dressed the way the finished lesson's row on the home list is dressed - the button face, painted the finished colour - so the lesson a learner opens looks like the row they pressed to open it, at the human's request");
     ("DRESSED BEFORE IT IS LAID OUT, because the face is made for a tile: it makes the thing inline and gives it a margin all round, which undoes the grid and the auto side margins that centre the bar over the column. Laid out after, the bar's own layout wins and only the look is kept - the other order left the bar hugging the left edge");
