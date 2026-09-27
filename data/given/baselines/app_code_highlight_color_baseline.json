@@ -9,6 +9,9 @@
   "oklch(0.55 0.2 15) as the ground under the white lettering of a pointing tile: 5.4, clears 4.5",
   "oklch(0.55 0.2 15) as a pointing tile standing on the pale card: 4.7, clears 3",
   "oklch(0.55 0.2 15) as a pointing tile standing on the black code line: 3.8, clears 3",
+  "oklch(0.55 0.2 315) as the ground under the white lettering of a pointing tile: 5.3, clears 4.5",
+  "oklch(0.55 0.2 315) as a pointing tile standing on the pale card: 4.6, clears 3",
+  "oklch(0.55 0.2 315) as a pointing tile standing on the black code line: 3.8, clears 3",
   "rgb(37, 99, 235) and oklch(0.55 0.15 150), with ordinary sight: 0.30",
   "rgb(37, 99, 235) and oklch(0.55 0.15 150), to a reader with no red cone: 0.36",
   "rgb(37, 99, 235) and oklch(0.55 0.15 150), to a reader with no green cone: 0.37",
@@ -17,9 +20,21 @@
   "rgb(37, 99, 235) and oklch(0.55 0.2 15), to a reader with no red cone: 0.39",
   "rgb(37, 99, 235) and oklch(0.55 0.2 15), to a reader with no green cone: 0.35",
   "rgb(37, 99, 235) and oklch(0.55 0.2 15), to a reader with no blue cone: 0.28",
+  "rgb(37, 99, 235) and oklch(0.55 0.2 315), with ordinary sight: 0.18",
+  "rgb(37, 99, 235) and oklch(0.55 0.2 315), to a reader with no red cone: 0.05",
+  "rgb(37, 99, 235) and oklch(0.55 0.2 315), to a reader with no green cone: 0.05",
+  "rgb(37, 99, 235) and oklch(0.55 0.2 315), to a reader with no blue cone: 0.15",
   "oklch(0.55 0.15 150) and oklch(0.55 0.2 15), with ordinary sight: 0.32",
   "oklch(0.55 0.15 150) and oklch(0.55 0.2 15), to a reader with no red cone: 0.14",
   "oklch(0.55 0.15 150) and oklch(0.55 0.2 15), to a reader with no green cone: 0.05",
-  "oklch(0.55 0.15 150) and oklch(0.55 0.2 15), to a reader with no blue cone: 0.28"
+  "oklch(0.55 0.15 150) and oklch(0.55 0.2 15), to a reader with no blue cone: 0.28",
+  "oklch(0.55 0.15 150) and oklch(0.55 0.2 315), with ordinary sight: 0.34",
+  "oklch(0.55 0.15 150) and oklch(0.55 0.2 315), to a reader with no red cone: 0.35",
+  "oklch(0.55 0.15 150) and oklch(0.55 0.2 315), to a reader with no green cone: 0.36",
+  "oklch(0.55 0.15 150) and oklch(0.55 0.2 315), to a reader with no blue cone: 0.15",
+  "oklch(0.55 0.2 15) and oklch(0.55 0.2 315), with ordinary sight: 0.19",
+  "oklch(0.55 0.2 15) and oklch(0.55 0.2 315), to a reader with no red cone: 0.38",
+  "oklch(0.55 0.2 15) and oklch(0.55 0.2 315), to a reader with no green cone: 0.35",
+  "oklch(0.55 0.2 15) and oklch(0.55 0.2 315), to a reader with no blue cone: 0.13"
  ]
 }
