@@ -1,3 +1,11 @@
+import { app_code_lesson_statement_name_plus_assign } from "./app_code_lesson_statement_name_plus_assign.mjs";
+import { app_code_lesson_statement_name_plus_assign_last } from "./app_code_lesson_statement_name_plus_assign_last.mjs";
+import { app_code_lesson_statement_name_minus_assign } from "./app_code_lesson_statement_name_minus_assign.mjs";
+import { app_code_lesson_statement_name_minus_assign_last } from "./app_code_lesson_statement_name_minus_assign_last.mjs";
+import { app_code_lesson_statement_name_increment } from "./app_code_lesson_statement_name_increment.mjs";
+import { app_code_lesson_statement_name_increment_last } from "./app_code_lesson_statement_name_increment_last.mjs";
+import { app_code_lesson_statement_name_decrement } from "./app_code_lesson_statement_name_decrement.mjs";
+import { app_code_lesson_statement_name_decrement_last } from "./app_code_lesson_statement_name_decrement_last.mjs";
 import { app_code_lesson_statement_name_count_last } from "./app_code_lesson_statement_name_count_last.mjs";
 import { app_code_lesson_statement_name_itself_sum_last } from "./app_code_lesson_statement_name_itself_sum_last.mjs";
 import { app_code_lesson_statement_name_one_less_last } from "./app_code_lesson_statement_name_one_less_last.mjs";
@@ -357,6 +365,14 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_subtract,
     app_code_lesson_statement_name_multiply,
     app_code_lesson_statement_name_divide,
+    app_code_lesson_statement_name_plus_assign,
+    app_code_lesson_statement_name_plus_assign_last,
+    app_code_lesson_statement_name_minus_assign,
+    app_code_lesson_statement_name_minus_assign_last,
+    app_code_lesson_statement_name_increment,
+    app_code_lesson_statement_name_increment_last,
+    app_code_lesson_statement_name_decrement,
+    app_code_lesson_statement_name_decrement_last,
     app_code_lesson_statement_name_compare,
     app_code_lesson_statement_name_greater,
     app_code_lesson_statement_name_smaller_equal,
