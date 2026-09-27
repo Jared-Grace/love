@@ -1,3 +1,8 @@
+import { app_code_lesson_bold_term } from "./app_code_lesson_bold_term.mjs";
+import { html_span_text_content } from "./html_span_text_content.mjs";
+import { html_div } from "./html_div.mjs";
+import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
+import { app_code_lesson_statement_name_average_two } from "./app_code_lesson_statement_name_average_two.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_middle_step } from "./app_code_lesson_statement_name_middle_step.mjs";
@@ -21,6 +26,7 @@ export function app_code_lesson_statement_name_middle() {
   ("The average of two with the halving rounded down, so the answer is always a whole number. It is taught because a search through a sorted list looks here on every step; the writing says so without naming lists, which are not taught yet.");
   ("Most sums are odd, so the rounding changes the answer, and no middle is one of the numbers on its own screen or the 2 it is divided by. The five middles differ.");
   ("The writing follows the human's outline, 2026-09-27, from its second half: the average-of-two lesson already shows the middle on a number line, so this one opens by naming that and teaches only what is new, an odd sum whose middle is .5 and the choice to always round down. The outline wrote Math.floor(2 + 7 / 2), which divides only the 7; the lesson adds first in a line of its own, so the order cannot go wrong.");
+  ("The opening is the human's second outline, 2026-09-27: even and odd are defined, each in bold where it is first used, and each shown on a division of its own, 8 / 2 and 7 / 2, so the .5 is seen on a number that is not in the example; then the average is reminded with a button to its lesson, and only then is the sum said to be odd. Even is defined by dividing by 2 rather than by the remainder, because dividing is the step this lesson takes. Not picked: defining even by what % 2 gives, which the remainder lessons would allow, but which is not the operation on this screen.");
   ("The reminder quotes lesson 87 in its own shape, Math.floor(14 / 4) is Math.floor(3.5) and Math.floor(3.5) is 3, so the decimal and the rounding down are both on the screen before the writing uses them. Picked over the human's other thought, 2026-09-27, of two reminders, one for dividing and one for Math.floor: lesson 87's first line already shows the division ending in a decimal, so a second box would repeat it.");
   ("Numbers in the writing are code chips wearing the number line's pointing colours: 2 and 7 the ends', 4.5 and then 4 the middle's. The line 9 / 2 === 4.5 points at its middle only, because its 2 is the one divided by, not the end.");
   let step = app_code_lesson_statement_name_middle_step();
@@ -83,6 +89,38 @@ export function app_code_lesson_statement_name_middle() {
     ["4.5"],
   );
   let draw6 = app_code_number_line_draw(2, 7, 0.5, [2, 7], 4);
+  let code_even = js_code_binary_result_nb("8", slash, "2", "4");
+  let code_odd = js_code_binary_result_nb("7", slash, "2", "3.5");
+  function even_draw(box) {
+    "the word even, defined in bold where it is first used";
+    let line = app_code_lesson_bold_term(box, "A number is ", "even");
+    html_span_text_content(
+      line,
+      " when you divide it by 2 and get a whole number",
+    );
+  }
+  function odd_draw(box) {
+    "the word odd, defined in bold where it is first used";
+    app_code_lesson_bold_term(
+      box,
+      "A whole number that is not even is ",
+      "odd",
+    );
+  }
+  function average_remember_draw(box, context) {
+    "the average, reminded with a button to the lesson that taught it, so a learner who has forgotten can go and look";
+    let line = html_div(box);
+    html_span_text_content(line, "Remember, from ");
+    app_code_lesson_reference_draw(
+      line,
+      context,
+      app_code_lesson_statement_name_average_two,
+    );
+    html_span_text_content(
+      line,
+      ", the average of two numbers is the number in the middle",
+    );
+  }
   let lesson = app_code_lesson_statement_formula({
     words: "Middle of two names",
     title_code: js_code_call_args(floor_name, [combined]),
@@ -94,8 +132,20 @@ export function app_code_lesson_statement_name_middle() {
     remember_parts: ["we divide, and then round down to get a whole number:"],
     remember_lines,
     explain: [
-      ["The average of two numbers is the number in the middle"],
-      ["If their sum is odd, the middle ends in .5"],
+      even_draw,
+      ["For example: ", code_even],
+      [
+        "Even numbers can be evenly divided by 2 - that's why they're called even",
+      ],
+      odd_draw,
+      ["If you divide an odd number by 2, the answer ends in .5: ", code_odd],
+      average_remember_draw,
+      [
+        "So to find the number in the middle of two numbers, we first add the two numbers together",
+      ],
+      [
+        "If that sum is odd, then when we divide it by 2, the middle ends in .5",
+      ],
       draw,
       draw2,
       draw3,
