@@ -1,9 +1,9 @@
+import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
+import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
-import { app_shared_color_blue_light } from "./app_shared_color_blue_light.mjs";
-import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_div_text } from "./html_div_text.mjs";
@@ -24,8 +24,8 @@ export function app_code_number_line(parent, values, ends, middle) {
     margin: "0.5em 0",
   });
   let line_color = app_shared_color_blue_dark();
-  let end_color = app_shared_color_blue_light();
-  let middle_color = app_shared_color_green_light();
+  let end_color = app_code_highlight_color();
+  let middle_color = app_code_highlight_color_second();
   function cell_draw(value) {
     let text = text_to(value);
     let cell = html_div(row);
@@ -42,10 +42,16 @@ export function app_code_number_line(parent, values, ends, middle) {
     });
     let is_end = list_includes(ends, value);
     if (is_end) {
+      html_style_assign(label, {
+        color: "white",
+      });
       html_style_background_color_set(label, end_color);
     }
     let is_middle = equal(value, middle);
     if (is_middle) {
+      html_style_assign(label, {
+        color: "white",
+      });
       html_style_background_color_set(label, middle_color);
     }
   }

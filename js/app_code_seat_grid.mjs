@@ -1,3 +1,5 @@
+import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
+import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { floor } from "./floor.mjs";
 import { divide } from "./divide.mjs";
@@ -8,8 +10,6 @@ import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_to } from "./text_to.mjs";
-import { app_shared_color_blue_light } from "./app_shared_color_blue_light.mjs";
-import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { each } from "./each.mjs";
@@ -34,8 +34,8 @@ export function app_code_seat_grid(parent, count, width, marked) {
     "justify-content": "center",
     margin: "0.5em 0",
   });
-  let before_color = app_shared_color_blue_light();
-  let marked_color = app_shared_color_green_light();
+  let before_color = app_code_highlight_color();
+  let marked_color = app_code_highlight_color_second();
   let border_color = app_shared_color_blue_dark();
   function heading_draw(text) {
     let heading = html_div_text(grid, text);
@@ -69,9 +69,15 @@ export function app_code_seat_grid(parent, count, width, marked) {
       "border-radius": "0.3em",
     });
     if (less_than(index, start)) {
+      html_style_assign(seat, {
+        color: "white",
+      });
       html_style_background_color_set(seat, before_color);
     }
     if (equal(index, marked)) {
+      html_style_assign(seat, {
+        color: "white",
+      });
       html_style_background_color_set(seat, marked_color);
     }
   }

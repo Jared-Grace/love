@@ -12,6 +12,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_expression_integer_division } from "./app_code_lesson_expression_integer_division.mjs";
+import { app_code_line_ends_middle_draw } from "./app_code_line_ends_middle_draw.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_code_number_line_draw } from "./app_code_number_line_draw.mjs";
 export function app_code_lesson_statement_name_middle() {
@@ -21,6 +22,7 @@ export function app_code_lesson_statement_name_middle() {
   ("Most sums are odd, so the rounding changes the answer, and no middle is one of the numbers on its own screen or the 2 it is divided by. The five middles differ.");
   ("The writing follows the human's outline, 2026-09-27, from its second half: the average-of-two lesson already shows the middle on a number line, so this one opens by naming that and teaches only what is new, an odd sum whose middle is .5 and the choice to always round down. The outline wrote Math.floor(2 + 7 / 2), which divides only the 7; the lesson adds first in a line of its own, so the order cannot go wrong.");
   ("The reminder shows 9 / 2 beside Math.floor(9 / 2), so the .5 an odd number halves to is on the screen before the writing says so, rather than a lesson of its own.");
+  ("Numbers in the writing are code chips wearing the number line's pointing colours: 2 and 7 the ends', 4.5 and then 4 the middle's. The line 9 / 2 === 4.5 points at its middle only, because its 2 is the one divided by, not the end.");
   let step = app_code_lesson_statement_name_middle_step();
   let middle = property_get(step, "middle");
   let line_sum = list_first(middle);
@@ -47,11 +49,35 @@ export function app_code_lesson_statement_name_middle() {
     let taken = list_shuffle_take(candidates, 4);
     return taken;
   }
+  let ends = ["2", "7"];
   let combined = js_code_binary_spaced_nb("sum", slash, "2");
+  let draw = app_code_line_ends_middle_draw(
+    ["For example, suppose we have ", "2", " and ", "7", ":"],
+    ends,
+    [],
+  );
   let code = js_code_binary_result_nb("2", plus, "7", "9");
+  let draw2 = app_code_line_ends_middle_draw(["", code], ends, []);
   let code2 = js_code_binary_result_nb("9", slash, "2", "4.5");
-  let draw = app_code_number_line_draw([2, 3, 4, 4.5, 5, 6, 7], [2, 7], 4.5);
-  let draw2 = app_code_number_line_draw([2, 3, 4, 5, 6, 7], [2, 7], 4);
+  let draw3 = app_code_line_ends_middle_draw(["", code2], [], ["4.5"]);
+  let draw4 = app_code_number_line_draw([2, 3, 4, 4.5, 5, 6, 7], [2, 7], 4.5);
+  let draw5 = app_code_line_ends_middle_draw(
+    [
+      "",
+      "4.5",
+      " is ",
+      "0.5",
+      " away from ",
+      "4",
+      ", and ",
+      "0.5",
+      " away from ",
+      "5",
+    ],
+    [],
+    ["4.5"],
+  );
+  let draw6 = app_code_number_line_draw([2, 3, 4, 5, 6, 7], [2, 7], 4);
   let lesson = app_code_lesson_statement_formula({
     words: "Middle of two names",
     title_code: js_code_call_args(floor_name, [combined]),
@@ -69,17 +95,17 @@ export function app_code_lesson_statement_name_middle() {
     explain: [
       ["The average of two numbers is the number in the middle"],
       ["If their sum is odd, the middle ends in .5"],
-      ["For example, suppose we have 2 and 7:"],
-      ["", code],
-      ["", code2],
       draw,
+      draw2,
+      draw3,
+      draw4,
       ["What if we want a whole number?"],
-      ["4.5 is 0.5 away from 4, and 0.5 away from 5"],
+      draw5,
       ["So rounding up and rounding down are just as close"],
       ["So we choose one and always use it: we round down"],
-      draw2,
+      draw6,
       ["So we add first: ", line_sum],
-      ["Then we divide by 2 and round down with ", floor_name],
+      ["Then we divide by ", "2", " and round down with ", floor_name],
       [
         "Programs that search quickly do this again and again, with ",
         low,
