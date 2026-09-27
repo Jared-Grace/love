@@ -1,3 +1,6 @@
+import { app_code_lesson_statement_name_average_two } from "./app_code_lesson_statement_name_average_two.mjs";
+import { app_code_lesson_statement_name_average_three } from "./app_code_lesson_statement_name_average_three.mjs";
+import { app_code_lesson_statement_name_middle } from "./app_code_lesson_statement_name_middle.mjs";
 import { app_code_lesson_statement_name_fill_from } from "./app_code_lesson_statement_name_fill_from.mjs";
 import { app_code_lesson_statement_name_swap_try } from "./app_code_lesson_statement_name_swap_try.mjs";
 import { app_code_lesson_statement_name_temp_keep } from "./app_code_lesson_statement_name_temp_keep.mjs";
@@ -387,6 +390,9 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_or,
     app_code_lesson_statement_name_and,
     app_code_lesson_statement_name_remainder,
+    app_code_lesson_statement_name_average_two,
+    app_code_lesson_statement_name_average_three,
+    app_code_lesson_statement_name_middle,
   ];
   return fns;
 }
