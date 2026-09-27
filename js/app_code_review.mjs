@@ -1,3 +1,4 @@
+import { app_code_review_title_strip } from "./app_code_review_title_strip.mjs";
 import { app_code_review_present } from "./app_code_review_present.mjs";
 import { app_code_review_home_button } from "./app_code_review_home_button.mjs";
 import { app_code_review_go_home } from "./app_code_review_go_home.mjs";
@@ -11,6 +12,7 @@ import { html_clear_context } from "./html_clear_context.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_review(context) {
   let root = html_clear_context(context);
+  app_code_review_title_strip(root, context);
   let r = app_code_review_passed(context, root);
   let r4 = app_code_review_key(r);
   let r5 = app_code_review_g(r4);
