@@ -232,6 +232,10 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_divide_assign: text_frozen("name_divide_assign"),
     app_code_lesson_statement_name_increment: text_frozen("name_increment"),
     app_code_lesson_statement_name_decrement: text_frozen("name_decrement"),
+    app_code_lesson_statement_name_fill_from: text_frozen("name_fill_from"),
+    app_code_lesson_statement_name_swap_try: text_frozen("name_swap_try"),
+    app_code_lesson_statement_name_temp_keep: text_frozen("name_temp_keep"),
+    app_code_lesson_statement_name_swap: text_frozen("name_swap"),
     app_code_lesson_statement_name_remainder: text_frozen("name_remainder"),
     app_code_lesson_statement_name_greater: text_frozen("name_greater"),
     app_code_lesson_statement_name_smaller_equal:
