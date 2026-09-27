@@ -27,7 +27,7 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
   ("a picture of a number line from low to high, a tick every step: the two ends a question is about filled blue and the middle filled green, so a reader can see the middle sit the same distance from both ends");
   ("Every number is a code chip, as numbers are in the writing beside it. A step of 0.5 draws every half as well as every whole, so the line keeps its proportions; a half gets a shorter tick and a smaller, fainter chip, unless it is one the question is about.");
   ("EQUAL SPACING AND CENTRING HOLD BY CONSTRUCTION, not by the widths of the labels. Every number owns one equal column of a grid, its tick stands at the column's centre, and its chip is placed with its own centre on that same point, so a wide 4.5 grows out both sides of its tick instead of pushing its neighbours along.");
-  ("EACH NUMBER SITS ON THE LINE, its centre on the line's centre, the way its tick is: the line, every tick and every chip are all placed at half the column's height, and a height given in percent is the same point whatever size a chip's own writing is. The ticks are taller than the chips so they still show above and below them. Asked by the human, 2026-09-27; not picked: numbers hanging below the line, on one row for wholes and a lower one for halves, which is what this drew before.");
+  ("EACH NUMBER HANGS UNDER ITS TICK, all on one row: every chip is placed by its own centre at one height, so a small half and a whole beside it line up through their middles whatever size their writing is. The line and ticks keep to the top of the picture with nothing drawn over them. Asked by the human, 2026-09-27. Not picked: the numbers sitting on the line, centre on centre, which this drew before and which hid the line under them; numbers above the line, which read as a heading over it rather than labels of its ticks; and one row for wholes with a lower one for halves, drawn before that.");
   let top2 = subtract(high, low);
   let count = divide(top2, step) + 1;
   let indexes = range(count);
@@ -41,8 +41,9 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
     let whole = equal(left2, value);
     return whole;
   }
-  let cell_height = "2.2em";
-  let center = "50%";
+  let cell_height = "3.2em";
+  let center = "0.9em";
+  let chip_center = "2.2em";
   let line_color = app_shared_color_blue_dark();
   let end_color = app_code_highlight_color();
   let middle_color = app_code_highlight_color_second();
@@ -80,9 +81,9 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
       height: cell_height,
     });
     let tick = html_div(cell);
-    let tick_height = "1.4em";
+    let tick_height = "0.7em";
     if (whole) {
-      tick_height = "2em";
+      tick_height = "1.1em";
     }
     html_style_assign(tick, {
       position: "absolute",
@@ -106,7 +107,7 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
     html_style_assign(chip, {
       position: "absolute",
       left: "50%",
-      top: center,
+      top: chip_center,
       transform: "translate(-50%, -50%)",
       "white-space": "nowrap",
     });
