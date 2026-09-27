@@ -1,3 +1,8 @@
+import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
+import { html_span_text_content } from "./html_span_text_content.mjs";
+import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
+import { each_index } from "./each_index.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { app_code_chair_line_pointed } from "./app_code_chair_line_pointed.mjs";
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -25,6 +30,7 @@ export function app_code_lesson_statement_name_grid_index() {
   ("The example is the grid-position lesson's example turned back, row 2 column 1 in rows of 3 being chair 7, so the two lessons read as one fact seen from both ends, over the same picture. It shares that lesson's names and colours: the blue chairs blue, chair 7 and the green chair green, a row number the row headings' colour and a column number the column headings', and the 3 chairs in a row the fifth colour, as in that lesson.");
   ("No two programs share an answer, and no answer is one of the numbers on its own screen.");
   ("The reminder names both lessons, 2026-09-27: the lesson before this one finds the column only and the one before that the row, so the reminder shows both lines and says which lesson found which. Its lines are drawn by the chair lessons' one pointed line, so the words row and column wear the headings' colours here as they do there.");
+  ("Wording from the human, 2026-09-27: the sum 2 * 3 === 6 is followed by the chairs it counts, 0 to 5 in blue, and the step to the chair says why it adds 1 - because the chair is in column 1 - rather than counting along the row. The list is drawn beside the chip rather than through the pointed line, because that line colours every 1 the column colour and every 2 the row colour, and these 1 and 2 are chairs.");
   let names = ["row", "column", "columns"];
   let row = list_first(names);
   let column = list_second(names);
@@ -96,8 +102,23 @@ export function app_code_lesson_statement_name_grid_index() {
   let v2 = pointed(["The ", "", blue, "", " are the 2 whole rows before it"]);
   let v_held = pointed(["2 rows of ", "3", " chairs hold 6 chairs:"]);
   let v3 = pointed(["", code]);
+  let color_before = app_code_highlight_color();
+  function held_draw(box) {
+    "the sum 2 * 3 === 6, then the 6 chairs it counts listed out, 0 to 5, each in the blue the grid fills them with, as the column lesson lists them";
+    let line = v3(box);
+    html_span_text_content(line, " (");
+    let listed = ["0", "1", "2", "3", "4", "5"];
+    function listed_draw(text, index) {
+      if (greater_than(index, 0)) {
+        html_span_text_content(line, " ");
+      }
+      app_code_span_text_highlight_color(line, text, color_before);
+    }
+    each_index(listed, listed_draw);
+    html_span_text_content(line, ")");
+  }
   let v4 = pointed(["So row ", "2", " starts at chair 6: ", line_start]);
-  let v5 = pointed(["Then we count 1 along the row, for column ", "1", ":"]);
+  let v5 = pointed(["Then we add 1 because the chair is in column ", "1", ":"]);
   let v6 = pointed(["", code2]);
   let v7 = pointed(["So the chair is number ", "7", ": ", line_chair]);
   let v8 = pointed([
@@ -137,7 +158,7 @@ export function app_code_lesson_statement_name_grid_index() {
       ["Which number is it?"],
       v2,
       v_held,
-      v3,
+      held_draw,
       v4,
       v5,
       v6,
