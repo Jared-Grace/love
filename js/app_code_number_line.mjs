@@ -28,7 +28,7 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
   ("$plain middle");
   ("a picture of a number line from low to high, a tick every step: the two ends a question is about filled blue and the middle filled green, so a reader can see the middle sit the same distance from both ends");
   ("Every number is a code chip, as numbers are in the writing beside it. A step of 0.5 draws every half as well as every whole, so the line keeps its proportions; a half gets a shorter tick and a smaller, fainter chip, unless it is one the question is about.");
-  ("EQUAL SPACING AND CENTRING HOLD BY CONSTRUCTION, not by the widths of the labels. Every number owns one equal column of a grid, its tick stands at the column's centre, and its chip is placed with its own centre on that same point, so a wide 4.5 grows out both sides of its tick instead of pushing its neighbours along. Halves are written on a lower row than wholes, so a wide chip cannot run into the one beside it.");
+  ("EQUAL SPACING AND CENTRING HOLD BY CONSTRUCTION, not by the widths of the labels. Every number owns one equal column of a grid, its tick stands at the column's centre, and its chip is placed with its own centre on that same point, so a wide 4.5 grows out both sides of its tick instead of pushing its neighbours along. Halves are written on a lower row than wholes, so a wide chip cannot run into the one beside it. A faint half is placed at 3.07 of its own smaller em, which is 2.3 of the line's, the same row a pointed half stands on.");
   let top2 = subtract(high, low);
   let count = divide(top2, step) + 1;
   let indexes = range(count);
@@ -132,6 +132,7 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
       html_style_assign(chip, {
         "font-size": "0.75em",
         opacity: "0.55",
+        top: "3.07em",
       });
     }
   }
