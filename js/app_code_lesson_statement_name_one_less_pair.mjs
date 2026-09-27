@@ -6,7 +6,7 @@ import { app_code_lesson_statement_name_one_less_batch } from "./app_code_lesson
 import { app_code_lesson_statement_name_itself_step_title_code } from "./app_code_lesson_statement_name_itself_step_title_code.mjs";
 export function app_code_lesson_statement_name_one_less_pair() {
   arguments_assert(arguments, 0);
-  ("the pair on taking one from a name: its programs, its title line, and what each of its two lessons is called");
+  ("the pair on taking one from a name: its programs, its title line, and the words both its lessons are called by");
   let minus = js_operator_minus_symbol();
   let code = app_code_lesson_statement_name_itself_step_title_code(minus);
   let pair = {
@@ -14,7 +14,6 @@ export function app_code_lesson_statement_name_one_less_pair() {
     batch: app_code_lesson_statement_name_one_less_batch,
     fragment: app_code_lesson_statement_title_code_paint_get(code),
     words: "Taking one from a name",
-    words_last: "Taking one away, last value only",
     decoys_last: null,
   };
   return pair;

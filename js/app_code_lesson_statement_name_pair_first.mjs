@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_title_code_note_paint_get } from "./app_code_lesson_statement_title_code_note_paint_get.mjs";
 import { app_code_lesson_statement_title_name_id_paint } from "./app_code_lesson_statement_title_name_id_paint.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -12,7 +13,11 @@ export function app_code_lesson_statement_name_pair_first(pair) {
   ("Every value written out comes first, and the lesson after asks the same programs with only the last writing-out: seen first, each value is on the screen, and only then is a learner asked to carry the changes in their head (the human's order, 2026-09-27).");
   let words = property_get(pair, "words");
   let fragment = property_get(pair, "fragment");
-  let name_id = app_code_lesson_statement_title_name_id_paint(words, fragment);
+  let noted = app_code_lesson_statement_title_code_note_paint_get(
+    fragment,
+    "each logged",
+  );
+  let name_id = app_code_lesson_statement_title_name_id_paint(words, noted);
   let batch_original = property_get(pair, "batch");
   let batch = app_code_batch_name_watched(batch_original);
   let lesson = app_code_lesson_code_logged({
