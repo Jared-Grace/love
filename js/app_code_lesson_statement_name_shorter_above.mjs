@@ -35,12 +35,13 @@ export function app_code_lesson_statement_name_shorter_above(
     ".",
   ]);
   html_div_cycle_code(box_short, [
+    "",
     long,
     " and ",
     short,
     " do exactly the same thing.",
   ]);
-  html_div_cycle_code(box_short, [short, " is shorter and easier to type:"]);
+  html_div_cycle_code(box_short, ["", short, " is shorter and easier to type:"]);
   function line_shortened(line) {
     "the line itself, or the short way of writing it where it is the long one";
     let is_long = equal(line, long);
