@@ -1,3 +1,4 @@
+import { js_console_log_name } from "./js_console_log_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { list_first } from "./list_first.mjs";
@@ -34,10 +35,23 @@ export function app_code_lesson_statement_name_last(
     ]);
     app_code_code_lines_writes_out_watched(box_one, [code]);
     let box_two = app_code_container_light_blue(root);
+    let log = js_console_log_name();
     html_div_cycle_code(box_two, [
-      "Written out only at the end, just the last value of ",
+      "In the previous lesson, there were multiple ",
+      log,
+      "s.",
+    ]);
+    html_div_cycle_code(box_two, [
+      "In this lesson there is only one ",
+      log,
+      " - at the end.",
+    ]);
+    html_div_cycle_code(box_two, [
+      "This last ",
+      log,
+      " writes out the very last value of ",
       name,
-      " is written out:",
+      ":",
     ]);
     let value = eval_console_log_lines(code);
     app_code_code_lines_writes_out(box_two, [code], value);
