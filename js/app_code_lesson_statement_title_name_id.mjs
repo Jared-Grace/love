@@ -1,7 +1,4 @@
-import { html_style_white_space } from "./html_style_white_space.mjs";
-import { html_span_code_dark } from "./html_span_code_dark.mjs";
-import { html_display_inline_block } from "./html_display_inline_block.mjs";
-import { html_span_text_content } from "./html_span_text_content.mjs";
+import { app_code_lesson_statement_title_code_paint_get } from "./app_code_lesson_statement_title_code_paint_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_title_name_id_paint } from "./app_code_lesson_statement_title_name_id_paint.mjs";
 export function app_code_lesson_statement_title_name_id(words, code) {
@@ -12,12 +9,7 @@ export function app_code_lesson_statement_title_name_id(words, code) {
   ("Only what is painted goes through here. The id a learner's finished lessons are stored under is built from the words, so a line may be shown, reworded or taken away without any learner losing their place.");
   ("The line a caller hands in is spelled the way the lesson below it spells it - a + b, never a+b. It was once spelled compactly to save width on a long list, and the human asked for it to be formatted as code instead: a title is where a learner looks a line up again, and a line spelled differently there from the lesson it names is a second spelling to recognise. The spaces around the symbol are ones that do not break, so a part like a <= b never splits. The tile is one block that may wrap inside itself at the other spaces: a line naming its answer - let smaller_or_equal = a <= b; - is wider than a phone, and a tile that never wraps ran under the buttons beside the title and hid them. A line break handed in is kept, so a title showing two lines - a line said twice, a change and then the writing-out - puts each on its own row rather than wrapping one into the next.");
   ("The line is one colour all the way across, which is what a line handed over as a string can be. A title whose line has a gap painted into it asks for the painting one instead, and this is written on top of that so the two cannot come out looking different.");
-  function paint_code(parent) {
-    let tile = html_span_code_dark(parent);
-    html_display_inline_block(tile);
-    html_style_white_space(tile, "pre-line");
-    html_span_text_content(tile, code);
-  }
+  let paint_code = app_code_lesson_statement_title_code_paint_get(code);
   let built = app_code_lesson_statement_title_name_id_paint(words, paint_code);
   return built;
 }
