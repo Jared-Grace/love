@@ -242,6 +242,7 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_grid_position: text_frozen("name_grid_position"),
     app_code_lesson_statement_name_grid_index: text_frozen("name_grid_index"),
     app_code_lesson_statement_name_sum_to: text_frozen("name_sum_to"),
+    app_code_lesson_statement_name_digit_split: text_frozen("name_digit_split"),
     app_code_lesson_statement_name_remainder: text_frozen("name_remainder"),
     app_code_lesson_statement_name_greater: text_frozen("name_greater"),
     app_code_lesson_statement_name_smaller_equal:
