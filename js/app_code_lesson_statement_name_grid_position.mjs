@@ -1,7 +1,7 @@
+import { js_code_math_floor_name } from "./js_code_math_floor_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_grid_position_step } from "./app_code_lesson_statement_name_grid_position_step.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
 import { js_operator_percent_symbol } from "./js_operator_percent_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -18,9 +18,7 @@ export function app_code_lesson_statement_name_grid_position() {
   let names = ["index", "width"];
   let step = app_code_lesson_statement_name_grid_position_step();
   let middle = property_get(step, "middle");
-  let line_row = list_first(middle);
   let line_column = list_second(middle);
-  let index = list_first(names);
   let width = list_second(names);
   let percent = js_operator_percent_symbol();
   let name_a = "a";
@@ -48,6 +46,7 @@ export function app_code_lesson_statement_name_grid_position() {
     let taken = list_shuffle_take(candidates, 4);
     return taken;
   }
+  let name = js_code_math_floor_name();
   let lesson = app_code_lesson_statement_formula({
     words: "Row and column of a seat",
     names,
@@ -59,7 +58,10 @@ export function app_code_lesson_statement_name_grid_position() {
     remember_lines,
     explain: [
       ["Seats are numbered 0, 1, 2, and so on, in rows of ", width, " seats"],
-      ["The row is how many whole rows come before the seat: ", line_row],
+      [
+        "The row is how many whole rows fit before the seat, rounded down with ",
+        name,
+      ],
       ["The column is what is left over: ", line_column],
       ["Seat 7 in rows of 3 is in row 2, column 1, counting from 0:"],
     ],
