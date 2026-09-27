@@ -90,11 +90,11 @@ export function app_code_lesson_statement_formula({
     }
     let box_now = app_code_container_light_blue(root);
     for (let parts of explain) {
-      ("an entry is either a line of writing, as a list, or a picture, as a function that draws into the box");
+      ("an entry is either a line of writing, as a list, or a picture, as a function that draws into the box. The drawing is handed the screen's context too, so a sentence in it can hold a button, such as the one to an earlier lesson it leans on; a drawing that has no button ignores it");
       if (equal(parts, app_code_explain_container_next)) {
         box_now = app_code_container_light_blue(root);
       } else if (function_is(parts)) {
-        parts(box_now);
+        parts(box_now, context);
       } else {
         html_div_cycle_code(box_now, parts);
       }

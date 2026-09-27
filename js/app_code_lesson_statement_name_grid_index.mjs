@@ -1,3 +1,4 @@
+import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
@@ -22,7 +23,7 @@ import { app_code_lesson_statement_name_grid_position } from "./app_code_lesson_
 export function app_code_lesson_statement_name_grid_index() {
   arguments_assert(arguments, 0);
   ("the number of a chair from its row and column: let start = row * columns; let chair = start + column; - the grid-position lesson turned around");
-  ("The example is the grid-position lesson's example turned back, row 2 column 1 in rows of 3 being chair 7, so the two lessons read as one fact seen from both ends, over the same picture. It shares that lesson's names and colours: the blue chairs blue, chair 7 and the green chair green, a row number the row headings' colour and a column number the column headings'.");
+  ("The example is the grid-position lesson's example turned back, row 2 column 1 in rows of 3 being chair 7, so the two lessons read as one fact seen from both ends, over the same picture. It shares that lesson's names and colours: the blue chairs blue, chair 7 and the green chair green, a row number the row headings' colour and a column number the column headings', and the 3 chairs in a row the fifth colour, as in that lesson.");
   ("No two programs share an answer, and no answer is one of the numbers on its own screen.");
   let names = ["row", "column", "columns"];
   let row = list_first(names);
@@ -73,20 +74,24 @@ export function app_code_lesson_statement_name_grid_index() {
   let color_chair = app_code_highlight_color_second();
   let color_row = app_code_highlight_color_third();
   let color_column = app_code_highlight_color_fourth();
+  let color_count = app_code_highlight_color_fifth();
   function pointed(parts) {
-    "a line wearing the grid's colours: the blue chairs blue, chair 7 green, row 2 and column 1 in the headings' colours";
+    "a line wearing the grid's colours: the blue chairs blue, chair 7 green, row 2 and column 1 in the headings' colours, and the 3 chairs in a row in the fifth colour";
     let draw = app_code_line_pointed_draw(parts, [
       [[blue], color_before],
       [[green, "7"], color_chair],
       [["2"], color_row],
       [["1"], color_column],
+      [["3"], color_count],
     ]);
     return draw;
   }
   let code = js_code_binary_result_nb("2", times, "3", "6");
   let code2 = js_code_binary_result_nb("6", plus, "1", "7");
   let v = pointed([
-    "Here there are 3 columns, and the ",
+    "Here there are ",
+    "3",
+    " columns, and the ",
     "",
     green,
     "",
@@ -96,6 +101,7 @@ export function app_code_lesson_statement_name_grid_index() {
     "1",
   ]);
   let v2 = pointed(["The ", "", blue, "", " are the 2 whole rows before it"]);
+  let v_held = pointed(["2 rows of ", "3", " chairs hold 6 chairs:"]);
   let v3 = pointed(["", code]);
   let v4 = pointed(["So row ", "2", " starts at chair 6: ", line_start]);
   let v5 = pointed(["Then we count 1 along the row, for column ", "1", ":"]);
@@ -106,7 +112,9 @@ export function app_code_lesson_statement_name_grid_index() {
     "2",
     ", column ",
     "1",
-    " in rows of 3 is chair ",
+    " in rows of ",
+    "3",
+    " is chair ",
     "7",
     ":",
   ]);
@@ -126,7 +134,7 @@ export function app_code_lesson_statement_name_grid_index() {
       v,
       ["Which number is it?"],
       v2,
-      ["2 rows of 3 chairs hold 6 chairs:"],
+      v_held,
       v3,
       v4,
       v5,

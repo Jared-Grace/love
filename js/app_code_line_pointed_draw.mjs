@@ -71,6 +71,8 @@ export function app_code_line_pointed_draw(parts, pointers) {
       }
     }
     each_index(parts, part_draw);
+    ("the line is handed back so a caller can go on writing into it, such as a button to an earlier lesson at the end of a sentence");
+    return line;
   }
   return draw;
 }
