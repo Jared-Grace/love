@@ -43,7 +43,8 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
   }
   let cell_height = "3.2em";
   let center = "0.9em";
-  let chip_center = "2.2em";
+  ("the chips' height is a percent of the column, never an em: an em is the chip's own writing size, so a smaller half chip placed at the same number of em sat higher than the wholes beside it");
+  let chip_center = "70%";
   let line_color = app_shared_color_blue_dark();
   let end_color = app_code_highlight_color();
   let middle_color = app_code_highlight_color_second();
