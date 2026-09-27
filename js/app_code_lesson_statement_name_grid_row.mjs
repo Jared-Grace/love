@@ -1,3 +1,6 @@
+import { app_code_chair_emoji } from "./app_code_chair_emoji.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_chair_emoji_grid } from "./app_code_chair_emoji_grid.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
@@ -27,6 +30,7 @@ export function app_code_lesson_statement_name_grid_row() {
   ("the row of a numbered chair in rows of chairs: let row = Math.floor(chair / columns); - the first half of the row-and-column lesson, split out so each lesson teaches one line");
   ("Split from the row-and-column lesson at the human's word, 2026-09-27, so a learner meets the row alone and then the column with the row already known. Its line is the row-and-column lesson's first line, asked of that lesson's own lines rather than written again, so the two cannot drift. Not picked: splitting the other way round, column first, which would teach % before the picture of whole rows that makes it make sense.");
   ("Chairs are numbered from 0, as positions in code are, so chair 0 is row 0 column 0. The writing says it with chairs rather than lists, which are not taught yet. It reminds the lesson before it, the middle, whose Math.floor of a division is the tool this line uses.");
+  ("Wording from the human, 2026-09-27: the chair emoji beside the word chairs where they are first met and first numbered, the rectangle said to be a 3 by 3 square here, both 3s in the count's colour, and row 2 said as the third row, which is called 2, so counting from 0 is said once more where it matters.");
   ("No two programs share an answer, and no answer is the number of columns it divides by or the chair it starts from.");
   ("The title shows the right side of the line alone, Math.floor(chair / columns), because the whole line runs past the 30 characters a title holds.");
   let names = ["chair", "columns"];
@@ -81,8 +85,15 @@ export function app_code_lesson_statement_name_grid_row() {
     ]);
     return draw;
   }
+  let emoji = app_code_chair_emoji();
+  let suppose = text_combine("Suppose there are chairs ", emoji);
+  let numbered_words = text_combine_multiple([
+    "The chairs ",
+    emoji,
+    " are numbered: ",
+  ]);
   let numbered = chairs_pointed([
-    "The chairs are numbered: ",
+    numbered_words,
     "0",
     ", ",
     "1",
@@ -112,6 +123,17 @@ export function app_code_lesson_statement_name_grid_row() {
     [],
     ["0", "1", "2"],
   );
+  let rectangle = pointed(
+    [
+      "So the chairs make a rectangle (in this case a ",
+      "3",
+      " by ",
+      "3",
+      " square)",
+    ],
+    [],
+    [],
+  );
   let v2 = pointed(
     ["The rows are also counted starting with ", "0"],
     ["0"],
@@ -126,7 +148,12 @@ export function app_code_lesson_statement_name_grid_row() {
     [],
   );
   let v7 = pointed(
-    ["2 whole rows fit, so chair ", "7", " is in row ", "2"],
+    [
+      "2 whole rows fit, so chair ",
+      "7",
+      " is in the third row, which is called ",
+      "2",
+    ],
     ["2"],
     [],
   );
@@ -150,10 +177,10 @@ export function app_code_lesson_statement_name_grid_row() {
     remember_parts: ["we can divide and round down:"],
     remember_lines,
     explain: [
-      ["Suppose there are chairs"],
+      [suppose],
       ["The chairs are in rows and columns"],
       chairs_draw,
-      ["So the chairs make a rectangle"],
+      rectangle,
       next,
       numbered,
       first_chair,

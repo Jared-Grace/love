@@ -22,27 +22,32 @@ import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_f
 import { app_code_lesson_statement_name_grid_row } from "./app_code_lesson_statement_name_grid_row.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
-import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
 export function app_code_lesson_statement_name_grid_position() {
   arguments_assert(arguments, 0);
   ("the row and column of a numbered chair in rows of chairs: let row = Math.floor(chair / columns); let column = chair % columns;");
   ("The row is taught by the lesson before this one, ",
     fn_name("app_code_lesson_statement_name_grid_row"),
-    ", split out at the human's word, 2026-09-27; this lesson reminds it and teaches only the column, so its explanation opens on the grid the reader has just seen rather than on chairs from the start. The program still writes out both, so the two lessons end as one fact.");
-  ("No two programs share an answer, and neither line of an answer is the number of columns it divides by.");
+    ", split out at the human's word, 2026-09-27; this lesson reminds it and teaches only the column, so its explanation opens on the grid the reader has just seen rather than on chairs from the start.");
+  ("No two programs share an answer, and no answer is the number of columns it divides by.");
+  ("THE PROGRAM FINDS THE COLUMN ONLY, at the human's question, 2026-09-27: why work out the row here, when the lesson before teaches it? It had written out both so the two lessons ended as one fact; now each lesson's program is its own formula, and the row is only reminded and read off the grid. The shared step still holds both lines, for the lesson after this one, which turns both around.");
   ("The writing follows the human's outline, 2026-09-27, one light blue container per group of its lines: the grid again, the column by taking away the rows before, and the column by the remainder, so % arrives as a shortcut for a subtraction the reader has just done.");
   ("Every pointed thing wears the grid's colour for it, as the row lesson's does, drawn by the one line both use. A number that only counts, such as the 2 in 2 whole rows, stays plain writing, so a colour always means a place on the grid. The one exception is the 3 chairs in a row, which wears the fifth colour everywhere it is said or divided by, so the 3 in 7 / 3 and 7 % 3 is seen to be the row's width, asked by the human 2026-09-27. The 6 chairs in the rows before are listed out, 0 to 5, each in the blue the grid fills them with, so the 6 is seen to be those chairs rather than said.");
   ("The names are chair and columns, the human's choice, 2026-09-27, so the formula reads as the sentence it is; the reasons and the names not picked are with the lines, in ",
     fn_name("app_code_lesson_statement_name_grid_position_step"),
     ".");
   let names = ["chair", "columns"];
-  let step = app_code_lesson_statement_name_grid_position_step();
-  let middle = property_get(step, "middle");
-  let logged = property_get(step, "logged");
+  let both = app_code_lesson_statement_name_grid_position_step();
+  let middle = property_get(both, "middle");
+  let logged = property_get(both, "logged");
   let line_row = list_first(middle);
   let line_column = list_second(middle);
   let row = list_first(logged);
+  let column = list_second(logged);
+  let step = {
+    middle: [line_column],
+    logged: [column],
+  };
   let chair = list_first(names);
   let columns = list_second(names);
   let percent = js_operator_percent_symbol();
@@ -59,10 +64,10 @@ export function app_code_lesson_statement_name_grid_position() {
     "four of the five pairs, in a fresh order each screen";
     let candidates = [
       [10, 4],
-      [9, 2],
       [14, 5],
       [11, 4],
-      [13, 4],
+      [17, 6],
+      [13, 7],
     ];
     let taken = list_shuffle_take(candidates, 4);
     return taken;
@@ -159,26 +164,15 @@ export function app_code_lesson_statement_name_grid_position() {
   }
   let v15 = pointed(["", code2], [], ["1"]);
   let v16 = pointed(
-    [
-      "Chair ",
-      "7",
-      " in rows of ",
-      "3",
-      " is in row ",
-      "2",
-      ", column ",
-      "1",
-      ":",
-    ],
-    ["2"],
+    ["Chair ", "7", " in rows of ", "3", " is in column ", "1", ":"],
+    [],
     ["1"],
   );
   let color = app_code_highlight_color_second();
   let color2 = app_code_highlight_color_fifth();
-  let color3 = app_code_highlight_color_third();
   let color4 = app_code_highlight_color_fourth();
   let lesson = app_code_lesson_statement_formula({
-    words: "Row and column of a chair",
+    words: "Column of a chair",
     title_code: line_column,
     names,
     values_get,
@@ -208,7 +202,6 @@ export function app_code_lesson_statement_name_grid_position() {
     example_pointers: [
       [["7"], color],
       [["3"], color2],
-      [["2"], color3],
       [["1"], color4],
     ],
   });

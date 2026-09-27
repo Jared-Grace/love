@@ -69,6 +69,19 @@ export function app_code_chair_grid(parent, count, width, marked) {
   }
   let list = range(width);
   each(list, column_heading_draw);
+  function circle_set(picture) {
+    "a white circle behind the emoji of a filled chair, so the brown chair still shows against the blue or green, asked by the human 2026-09-27";
+    html_style_assign(picture, {
+      display: "flex",
+      "align-items": "center",
+      "justify-content": "center",
+      width: "1.5em",
+      height: "1.5em",
+      margin: "0 auto 0.15em",
+      "border-radius": "50%",
+      background: "white",
+    });
+  }
   function chair_draw(index) {
     let column = modulo(index, width);
     if (equal(column, 0)) {
@@ -96,12 +109,14 @@ export function app_code_chair_grid(parent, count, width, marked) {
         color: "white",
       });
       html_style_background_color_set(chair, before_color);
+      circle_set(picture);
     }
     if (equal(index, marked)) {
       html_style_assign(chair, {
         color: "white",
       });
       html_style_background_color_set(chair, marked_color);
+      circle_set(picture);
     }
   }
   let list2 = range(count);

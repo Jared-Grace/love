@@ -125,7 +125,7 @@ export function app_code_lesson_statement_name_sum_to() {
         "Here's the code to step by step calculate the same answer as that expression:",
       ],
       lines_draw,
-      ["For ", "4", " that is ", worked, ", which is 10, the same as ", four, ":"],
+      ["For ", "4", " that is ", worked, ", which is ", "10", ", the same as ", four, ":"],
     ],
     decoys: null,
     example_pointers: null,

@@ -42,8 +42,8 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
     return whole;
   }
   ("SHORT TICKS, WITH A GAP UNDER THEM: a tick is a short mark on the line and each number is drawn clear below it, so a tick is never seen running into its number, asked by the human 2026-09-27");
-  let cell_height = "2.8em";
-  let center = "0.6em";
+  let cell_height = "3em";
+  let center = "0.7em";
   ("the chips' height is a percent of the column, never an em: an em is the chip's own writing size, so a smaller half chip placed at the same number of em sat higher than the wholes beside it");
   let chip_center = "70%";
   let line_color = app_shared_color_blue_dark();
@@ -83,19 +83,18 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
       height: cell_height,
     });
     let tick = html_div(cell);
-    let tick_height = "0.35em";
+    let tick_height = "0.5em";
     if (whole) {
-      tick_height = "0.6em";
+      tick_height = "0.8em";
     }
     html_style_assign(tick, {
       position: "absolute",
       left: "50%",
       top: center,
-      width: "2px",
+      width: "3px",
       height: tick_height,
       transform: "translate(-50%, -50%)",
     });
-    html_style_background_color_set(tick, line_color);
     let color = plain;
     if (list_includes(ends, value)) {
       color = end_color;
@@ -103,6 +102,8 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
     if (equal(value, middle)) {
       color = middle_color;
     }
+    ("EACH TICK WEARS ITS NUMBER'S COLOUR and is drawn over the line, so the blue ends and the green middle are marked on the line itself and not only under it, asked by the human 2026-09-27; a tick is drawn after the line, so it paints over it. Not picked: ticks standing only above the line, which would leave the line looking unbroken at the numbers it is about");
+    html_style_background_color_set(tick, color);
     let text = text_to(value);
     let chip = html_span_code_dark_colored(cell, [text], [color]);
     html_style_background_color_set(chip, color);
@@ -120,6 +121,9 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
     if (and(left4, right2)) {
       html_style_assign(chip, {
         "font-size": "0.75em",
+        opacity: "0.55",
+      });
+      html_style_assign(tick, {
         opacity: "0.55",
       });
     }
