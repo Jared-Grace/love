@@ -1,30 +1,30 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { divide } from "./divide.mjs";
+import { floor } from "./floor.mjs";
+import { multiply } from "./multiply.mjs";
+import { html_div } from "./html_div.mjs";
+import { text_to } from "./text_to.mjs";
+import { html_style_assign } from "./html_style_assign.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
+import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
+import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
+import { html_div_text } from "./html_div_text.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
 import { html_span_code_dark_colored } from "./html_span_code_dark_colored.mjs";
-import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
-import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { floor } from "./floor.mjs";
-import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
-import { modulo } from "./modulo.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
-import { html_div } from "./html_div.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { text_to } from "./text_to.mjs";
-import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
-import { html_div_text } from "./html_div_text.mjs";
-import { each } from "./each.mjs";
-import { range } from "./range.mjs";
-import { equal } from "./equal.mjs";
-import { less_than } from "./less_than.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
+import { range } from "./range.mjs";
+import { each } from "./each.mjs";
+import { modulo } from "./modulo.mjs";
+import { equal } from "./equal.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { less_than } from "./less_than.mjs";
 export function app_code_chair_grid(parent, count, width, marked) {
   arguments_assert(arguments, 4);
   ("$plain marked");
-  ("a picture of seats numbered from 0 in rows of width: row numbers down the left in the third pointing colour, column numbers across the top in the fourth, each a code chip as numbers in the writing are, every seat in a whole row before the marked seat's row filled blue and the marked seat filled green, so a reader can count the seats that come before it");
-  ("count is how many seats are drawn; the last row may be short, as a real list's is");
+  ("a picture of chairs numbered from 0 in rows of width: row numbers down the left in the third pointing colour, column numbers across the top in the fourth, each a code chip as numbers in the writing are, every chair in a whole row before the marked chair's row filled blue and the marked chair filled green, so a reader can count the chairs that come before it");
+  ("count is how many chairs are drawn; the last row may be short, as a real list's is");
   let p = divide(marked, width);
   let rows_before = floor(p);
   let start = multiply(rows_before, width);
@@ -67,7 +67,7 @@ export function app_code_chair_grid(parent, count, width, marked) {
   }
   let list = range(width);
   each(list, column_heading_draw);
-  function seat_draw(index) {
+  function chair_draw(index) {
     let column = modulo(index, width);
     if (equal(column, 0)) {
       let input = divide(index, width);
@@ -75,27 +75,27 @@ export function app_code_chair_grid(parent, count, width, marked) {
       heading_chip_draw(t3, row_color);
     }
     let text2 = text_to(index);
-    let seat = html_div_text(grid, text2);
-    html_style_assign(seat, {
+    let chair = html_div_text(grid, text2);
+    html_style_assign(chair, {
       "text-align": "center",
       padding: "0.3em 0",
       border: text_combine("1px solid ", border_color),
       "border-radius": "0.3em",
     });
     if (less_than(index, start)) {
-      html_style_assign(seat, {
+      html_style_assign(chair, {
         color: "white",
       });
-      html_style_background_color_set(seat, before_color);
+      html_style_background_color_set(chair, before_color);
     }
     if (equal(index, marked)) {
-      html_style_assign(seat, {
+      html_style_assign(chair, {
         color: "white",
       });
-      html_style_background_color_set(seat, marked_color);
+      html_style_background_color_set(chair, marked_color);
     }
   }
   let list2 = range(count);
-  each(list2, seat_draw);
+  each(list2, chair_draw);
   return grid;
 }

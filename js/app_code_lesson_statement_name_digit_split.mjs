@@ -16,7 +16,7 @@ export function app_code_lesson_statement_name_digit_split() {
   arguments_assert(arguments, 0);
   ("a number's last digit and the number left in front of it: let digit = n % 10; let rest = Math.floor(n / 10);");
   ("Chosen for later use: adding up a number's digits, reversing a number, and checking one reads the same both ways all take one digit off at a time with these two lines, once loops are taught.");
-  ("It is the seat lesson with rows of 10, so that lesson is the one remembered: a seat's column is its last digit and its row is the rest.");
+  ("It is the chair lesson with rows of 10, so that lesson is the one remembered: a chair's column is its last digit and its row is the rest.");
   ("No answer's two lines are the same, no digit is 0, and the five answers differ.");
   let names = ["n"];
   let n = list_first(names);
@@ -40,8 +40,8 @@ export function app_code_lesson_statement_name_digit_split() {
   let logged_before = property_get(before, "logged");
   let remember_lines = app_code_lesson_statement_name_swap_program(
     [
-      ["index", 23],
-      ["width", 10],
+      ["chair", 23],
+      ["columns", 10],
     ],
     middle_before,
     logged_before,
@@ -60,11 +60,11 @@ export function app_code_lesson_statement_name_digit_split() {
     example_values: [35],
     step,
     remember_lesson: app_code_lesson_statement_name_grid_position,
-    remember_parts: ["we can find the row and column of a seat:"],
+    remember_parts: ["we can find the row and column of a chair:"],
     remember_lines,
     explain: [
       [
-        "With rows of 10 seats, the column is the last digit and the row is the rest",
+        "With rows of 10 chairs, the column is the last digit and the row is the rest",
       ],
       ["So ", percent, " 10 takes off the last digit:"],
       ["", line_digit],
