@@ -67,6 +67,7 @@ export function app_code_lesson_statement_name_average_three() {
       ["Then we divide by 3, because there are three numbers: ", line_average],
     ],
     decoys: null,
+    example_pointers: null,
   });
   return lesson;
 }

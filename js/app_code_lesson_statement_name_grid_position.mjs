@@ -120,8 +120,27 @@ export function app_code_lesson_statement_name_grid_position() {
     ],
     [[["0", "1", "2", "3", "4", "5"], color_before]],
   );
+  function chairs_pointed(parts) {
+    "a line about the first chairs, whose numbers wear the blue those chairs are filled with in the grid";
+    let draw = app_code_line_pointed_draw(parts, [
+      [["0", "1", "2"], color_before],
+    ]);
+    return draw;
+  }
+  let numbered = chairs_pointed([
+    "The chairs are numbered: ",
+    "0",
+    ", ",
+    "1",
+    ", ",
+    "2",
+    ", ...",
+  ]);
+  let first_chair = chairs_pointed(["So the first chair is ", "0"]);
+  let second_chair = chairs_pointed(["The second chair is ", "1"]);
+  let third_chair = chairs_pointed(["The third chair is ", "2"]);
   let v = pointed(
-    ["So the three columns are: ", "0", ", ", "1", " and ", "2"],
+    ["So the ", "3", " columns are: ", "0", ", ", "1", " and ", "2"],
     [],
     ["0", "1", "2"],
   );
@@ -223,10 +242,10 @@ export function app_code_lesson_statement_name_grid_position() {
       ["The chairs are in rows and columns"],
       ["So the chairs make a rectangle"],
       next,
-      ["The chairs are numbered: 0, 1, 2, ..."],
-      ["So the first chair is 0"],
-      ["The second chair is 1"],
-      ["The third chair is 2"],
+      numbered,
+      first_chair,
+      second_chair,
+      third_chair,
       ["And so on"],
       ["The chairs in the first row are numbered, first"],
       [
@@ -261,6 +280,12 @@ export function app_code_lesson_statement_name_grid_position() {
       v16,
     ],
     decoys: null,
+    example_pointers: [
+      [["7"], color_chair],
+      [["3"], color_count],
+      [["2"], color_row],
+      [["1"], color_column],
+    ],
   });
   return lesson;
 }

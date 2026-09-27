@@ -116,6 +116,7 @@ export function app_code_lesson_statement_name_middle() {
       ],
     ],
     decoys: null,
+    example_pointers: null,
   });
   return lesson;
 }

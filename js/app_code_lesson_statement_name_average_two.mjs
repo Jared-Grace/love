@@ -111,6 +111,7 @@ export function app_code_lesson_statement_name_average_two() {
       ["Two short lines, each doing one thing:"],
     ],
     decoys: null,
+    example_pointers: null,
   });
   return lesson;
 }

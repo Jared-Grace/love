@@ -1,3 +1,7 @@
+import { null_is } from "./null_is.mjs";
+import { app_code_code_dark_lines_pointed } from "./app_code_code_dark_lines_pointed.mjs";
+import { app_code_output_pointed } from "./app_code_output_pointed.mjs";
+import { app_code_code_lines_writes_out_on } from "./app_code_code_lines_writes_out_on.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
 import { equal } from "./equal.mjs";
@@ -32,6 +36,7 @@ export function app_code_lesson_statement_formula({
   remember_lines,
   explain,
   decoys,
+  example_pointers,
 }) {
   arguments_assert(arguments, 1);
   ("a lesson whose programs start some names with numbers, run a few short lines, and write out the names the lesson asks about: its title, the boxes read before the questions, and the questions");
@@ -39,7 +44,7 @@ export function app_code_lesson_statement_formula({
   ("title_code is the one short piece of code the home title shows - the key line, not all of them, so a title can be skimmed. names are the names the program starts, in order; values_get hands back one list of numbers per question, each as long as names; example_values is the one list the boxes read before the questions use.");
   ("step holds the lines the lesson is about (middle) and the names it writes out (logged). The reminder shows the earlier lesson's program whole, as remember_lines, and explain is the lines of writing that lead to this lesson's program - each a list alternating plain writing and code, or a function drawing a picture into the box, or the marker ",
     fn_name("app_code_explain_container_next"),
-    " starting a new box. remember_lines may instead be a function drawing the reminder, for an earlier lesson that is not a program. decoys is the wrong-answer maker, or null to use the other questions' answers.");
+    " starting a new box. remember_lines may instead be a function drawing the reminder, for an earlier lesson that is not a program. decoys is the wrong-answer maker, or null to use the other questions' answers. example_pointers is null, or a list of pairs of texts and a colour, as a pointed line takes, colouring those numbers in the last example's code and output the way the writing above colours them.");
   let middle = property_get(step, "middle");
   let logged = property_get(step, "logged");
   let paint = app_code_lesson_statement_title_code_paint_get(title_code);
@@ -102,7 +107,19 @@ export function app_code_lesson_statement_formula({
     let example = program_of(example_values);
     let lines_now = text_split_newline(example);
     let output_now = eval_console_log_lines(example);
-    app_code_code_lines_writes_out(box_now, lines_now, output_now);
+    if (null_is(example_pointers)) {
+      app_code_code_lines_writes_out(box_now, lines_now, output_now);
+    } else {
+      let on_code = app_code_code_dark_lines_pointed(example_pointers);
+      let on_output = app_code_output_pointed(example_pointers);
+      app_code_code_lines_writes_out_on(
+        box_now,
+        lines_now,
+        output_now,
+        on_code,
+        on_output,
+      );
+    }
   }
   let lesson = app_code_lesson_code_logged({
     above,

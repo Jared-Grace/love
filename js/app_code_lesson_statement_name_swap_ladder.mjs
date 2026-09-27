@@ -32,6 +32,7 @@ export function app_code_lesson_statement_name_swap_ladder({
     remember_lines,
     explain,
     decoys: app_code_lesson_decoy_lines_starting_values,
+    example_pointers: null,
   });
   return lesson;
 }

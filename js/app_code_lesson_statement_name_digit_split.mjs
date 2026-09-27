@@ -76,6 +76,7 @@ export function app_code_lesson_statement_name_digit_split() {
       ["For 35 the digit is 5 and the rest is 3:"],
     ],
     decoys: null,
+    example_pointers: null,
   });
   return lesson;
 }

@@ -143,6 +143,12 @@ export function app_code_lesson_statement_name_grid_index() {
       v8,
     ],
     decoys: null,
+    example_pointers: [
+      [["7"], color_chair],
+      [["3"], color_count],
+      [["2"], color_row],
+      [["1"], color_column],
+    ],
   });
   return lesson;
 }
