@@ -1,3 +1,6 @@
+import { app_code_column_cap_width } from "./app_code_column_cap_width.mjs";
+import { html_style_max_width } from "./html_style_max_width.mjs";
+import { html_style_margin_x } from "./html_style_margin_x.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
@@ -37,6 +40,10 @@ export function app_code_home_group_card(cards, parent, group) {
   }
   let folded = app_shared_container_blue_collapsible(parent, "", changed);
   entry.card = property_get(folded, "card");
+  ("the card is as wide as the lesson buttons it holds, not the whole page, and sits centred over them like a light blue paragraph, asked by the human 2026-09-27. The cap is the one every wide button wears, laid on the card's inside, so the buttons keep the width they always had and the card's padding and border sit just outside them; on a phone the page is narrower than the cap and nothing changes");
+  let width = app_code_column_cap_width();
+  html_style_max_width(entry.card, width);
+  html_style_margin_x(entry.card, "auto");
   entry.body = property_get(folded, "body");
   entry.collapsed_set = property_get(folded, "collapsed_set");
   entry.caret_mark = property_get(folded, "caret_mark");
