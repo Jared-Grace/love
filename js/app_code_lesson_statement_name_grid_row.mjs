@@ -30,7 +30,7 @@ export function app_code_lesson_statement_name_grid_row() {
   ("the row of a numbered chair in rows of chairs: let row = Math.floor(chair / columns); - the first half of the row-and-column lesson, split out so each lesson teaches one line");
   ("Split from the row-and-column lesson at the human's word, 2026-09-27, so a learner meets the row alone and then the column with the row already known. Its line is the row-and-column lesson's first line, asked of that lesson's own lines rather than written again, so the two cannot drift. Not picked: splitting the other way round, column first, which would teach % before the picture of whole rows that makes it make sense.");
   ("Chairs are numbered from 0, as positions in code are, so chair 0 is row 0 column 0. The writing says it with chairs rather than lists, which are not taught yet. It reminds the lesson before it, the middle, whose Math.floor of a division is the tool this line uses.");
-  ("Wording from the human, 2026-09-27: the chair emoji beside the word chairs where they are first met and first numbered, the rectangle said to be a 3 by 3 square here, both 3s in the count's colour, and row 2 said as the third row, which is called 2, so counting from 0 is said once more where it matters.");
+  ("Wording from the human, 2026-09-27: the chair emoji beside the word chairs where they are first met and first numbered, the rectangle said to be a 3 by 3 square here, both 3s in the count's colour, and row 2 said as the third row, which is called 2, so counting from 0 is said once more where it matters. Then the columns are named before the count of chairs in a row is drawn from them: There are 3 columns: 0, 1 and 2, then Because there are 3 columns, each row has 3 chairs.");
   ("No two programs share an answer, and no answer is the number of columns it divides by or the chair it starts from.");
   ("The title shows the right side of the line alone, Math.floor(chair / columns), because the whole line runs past the 30 characters a title holds.");
   let names = ["chair", "columns"];
@@ -113,15 +113,20 @@ export function app_code_lesson_statement_name_grid_row() {
   let divided = js_code_binary_spaced_nb("7", slash, "3");
   let floored = js_code_call_args(name, [divided]);
   let row_found = js_code_binary_spaced_nb(floored, same, "2");
-  let count_line = pointed(
-    ["Here, there are ", "3", " columns: each row has ", "3", " chairs"],
-    [],
-    [],
-  );
+  function worded(parts) {
+    "a line that points at no number, so only its words row and column and its 3s wear their colours";
+    let draw = pointed(parts, [], []);
+    return draw;
+  }
   let v = pointed(
-    ["So the ", "3", " columns are: ", "0", ", ", "1", " and ", "2"],
+    ["There are ", "3", " columns: ", "0", ", ", "1", " and ", "2"],
     [],
     ["0", "1", "2"],
+  );
+  let count_line = pointed(
+    ["Because there are ", "3", " columns, each row has ", "3", " chairs"],
+    [],
+    [],
   );
   let rectangle = pointed(
     [
@@ -166,6 +171,15 @@ export function app_code_lesson_statement_name_grid_row() {
   let color = app_code_highlight_color_second();
   let color2 = app_code_highlight_color_fifth();
   let color3 = app_code_highlight_color_third();
+  let v10 = worded(["The chairs are in rows and columns"]);
+  let v11 = worded(["The chairs in the first row are numbered, first"]);
+  let v12 = worded([
+    "Once all the chairs in the first row are numbered, then the chairs in the second row are numbered",
+  ]);
+  let v13 = worded([
+    "This continues with the third and fourth rows, and so on",
+  ]);
+  let v14 = worded(["", row_formula]);
   let lesson = app_code_lesson_statement_formula({
     words: "Row of a chair",
     title_code: row_formula,
@@ -178,7 +192,7 @@ export function app_code_lesson_statement_name_grid_row() {
     remember_lines,
     explain: [
       [suppose],
-      ["The chairs are in rows and columns"],
+      v10,
       chairs_draw,
       rectangle,
       next,
@@ -187,14 +201,12 @@ export function app_code_lesson_statement_name_grid_row() {
       second_chair,
       third_chair,
       ["And so on"],
-      ["The chairs in the first row are numbered, first"],
-      [
-        "Once all the chairs in the first row are numbered, then the chairs in the second row are numbered",
-      ],
-      ["This continues with the third and fourth rows, and so on"],
+      v11,
+      v12,
+      v13,
       grid_draw,
-      count_line,
       v,
+      count_line,
       v2,
       v3,
       v4,
@@ -204,7 +216,7 @@ export function app_code_lesson_statement_name_grid_row() {
       v6,
       v7,
       ["We can use this formula:"],
-      ["", row_formula],
+      v14,
       v8,
       v9,
     ],

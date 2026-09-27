@@ -171,6 +171,7 @@ export function app_code_lesson_statement_name_grid_position() {
   let color = app_code_highlight_color_second();
   let color2 = app_code_highlight_color_fifth();
   let color4 = app_code_highlight_color_fourth();
+  let v2 = pointed(["", column_formula], [], []);
   let lesson = app_code_lesson_statement_formula({
     words: "Column of a chair",
     title_code: line_column,
@@ -194,7 +195,7 @@ export function app_code_lesson_statement_name_grid_position() {
       next,
       v13,
       remainder_draw,
-      ["", column_formula],
+      v2,
       v15,
       v16,
     ],

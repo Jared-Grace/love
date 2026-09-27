@@ -1,3 +1,4 @@
+import { app_code_chair_circle } from "./app_code_chair_circle.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { text_to } from "./text_to.mjs";
@@ -24,10 +25,10 @@ export function app_code_chair_emoji_grid(parent, rows, columns) {
   let count = multiply(rows, columns);
   function chair_draw() {
     let text = app_code_chair_emoji();
-    let chair = html_div_text(grid, text);
-    html_style_assign(chair, {
-      "text-align": "center",
-    });
+    let chair = html_div(grid);
+    ("each chair stands in a white circle, as the chairs of the numbered picture do, asked by the human 2026-09-27");
+    let circle = html_div_text(chair, text);
+    app_code_chair_circle(circle);
   }
   let list = range(count);
   each(list, chair_draw);

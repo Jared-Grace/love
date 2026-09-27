@@ -1,3 +1,4 @@
+import { app_code_chair_line_pointed } from "./app_code_chair_line_pointed.mjs";
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
@@ -12,11 +13,9 @@ import { property_get } from "./property_get.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_code_chair_grid } from "./app_code_chair_grid.mjs";
-import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
-import { app_code_line_pointed_draw } from "./app_code_line_pointed_draw.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_grid_position } from "./app_code_lesson_statement_name_grid_position.mjs";
@@ -25,6 +24,7 @@ export function app_code_lesson_statement_name_grid_index() {
   ("the number of a chair from its row and column: let start = row * columns; let chair = start + column; - the grid-position lesson turned around");
   ("The example is the grid-position lesson's example turned back, row 2 column 1 in rows of 3 being chair 7, so the two lessons read as one fact seen from both ends, over the same picture. It shares that lesson's names and colours: the blue chairs blue, chair 7 and the green chair green, a row number the row headings' colour and a column number the column headings', and the 3 chairs in a row the fifth colour, as in that lesson.");
   ("No two programs share an answer, and no answer is one of the numbers on its own screen.");
+  ("The reminder names both lessons, 2026-09-27: the lesson before this one finds the column only and the one before that the row, so the reminder shows both lines and says which lesson found which. Its lines are drawn by the chair lessons' one pointed line, so the words row and column wear the headings' colours here as they do there.");
   let names = ["row", "column", "columns"];
   let row = list_first(names);
   let column = list_second(names);
@@ -70,20 +70,13 @@ export function app_code_lesson_statement_name_grid_index() {
   }
   let blue = "blue chairs";
   let green = "green chair";
-  let color_before = app_code_highlight_color();
   let color_chair = app_code_highlight_color_second();
   let color_row = app_code_highlight_color_third();
   let color_column = app_code_highlight_color_fourth();
   let color_count = app_code_highlight_color_fifth();
   function pointed(parts) {
     "a line wearing the grid's colours: the blue chairs blue, chair 7 green, row 2 and column 1 in the headings' colours, and the 3 chairs in a row in the fifth colour";
-    let draw = app_code_line_pointed_draw(parts, [
-      [[blue], color_before],
-      [[green, "7"], color_chair],
-      [["2"], color_row],
-      [["1"], color_column],
-      [["3"], color_count],
-    ]);
+    let draw = app_code_chair_line_pointed(parts, ["2"], ["1"]);
     return draw;
   }
   let code = js_code_binary_result_nb("2", times, "3", "6");
@@ -118,6 +111,9 @@ export function app_code_lesson_statement_name_grid_index() {
     "7",
     ":",
   ]);
+  let v9 = pointed([
+    "Now we go the other way: from a row and column to the chair number",
+  ]);
   let lesson = app_code_lesson_statement_formula({
     words: "Chair number from row and column",
     title_code: line_start,
@@ -126,10 +122,16 @@ export function app_code_lesson_statement_name_grid_index() {
     example_values: [2, 1, 3],
     step,
     remember_lesson: app_code_lesson_statement_name_grid_position,
-    remember_parts: ["we found the ", row, " and ", column, " of chair 7:"],
+    remember_parts: [
+      "we found the ",
+      column,
+      " of chair 7, after the lesson before it found its ",
+      row,
+      ":",
+    ],
     remember_lines,
     explain: [
-      ["Now we go the other way: from a row and column to the chair number"],
+      v9,
       grid_draw,
       v,
       ["Which number is it?"],
