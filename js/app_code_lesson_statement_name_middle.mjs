@@ -19,7 +19,6 @@ export function app_code_lesson_statement_name_middle() {
   let step = app_code_lesson_statement_name_middle_step();
   let middle = property_get(step, "middle");
   let line_sum = list_first(middle);
-  let line_middle = list_second(middle);
   let names = ["low", "high"];
   let low = list_first(names);
   let high = list_second(names);
@@ -59,7 +58,7 @@ export function app_code_lesson_statement_name_middle() {
         "Halfway between two whole numbers is not always whole: halfway between 2 and 7 is 4.5",
       ],
       ["So we add the two: ", line_sum],
-      ["Then we halve the sum and round it down: ", line_middle],
+      ["Then we halve the sum and round it down with ", floor_name, ":"],
       [
         "Programs that search quickly do this again and again, with ",
         low,
