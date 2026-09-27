@@ -1,3 +1,4 @@
+import { app_code_lesson_bold_term } from "./app_code_lesson_bold_term.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
@@ -73,6 +74,14 @@ export function app_code_lesson_statement_name_average_two() {
   let v5 = pointed(["", code3]);
   let code4 = js_code_binary_result_nb("10", slash, "2", "5");
   let v6 = pointed(["", code4]);
+  function average_term_draw(box) {
+    "the word the lesson teaches, in bold on its first mention";
+    app_code_lesson_bold_term(
+      box,
+      "The number in the middle is called the ",
+      "average",
+    );
+  }
   let lesson = app_code_lesson_statement_formula({
     words: "Average of two names",
     title_code: line_average,
@@ -92,7 +101,7 @@ export function app_code_lesson_statement_name_average_two() {
       v2,
       v3,
       v4,
-      ["The number in the middle is called the average"],
+      average_term_draw,
       ["To find it, add the two numbers, then divide by ", "2", ":"],
       v5,
       v6,

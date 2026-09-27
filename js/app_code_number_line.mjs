@@ -1,14 +1,11 @@
-import { floor } from "./floor.mjs";
-import { divide } from "./divide.mjs";
-import { subtract } from "./subtract.mjs";
-import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { subtract } from "./subtract.mjs";
+import { divide } from "./divide.mjs";
 import { range } from "./range.mjs";
+import { multiply } from "./multiply.mjs";
 import { list_map } from "./list_map.mjs";
+import { floor } from "./floor.mjs";
 import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
@@ -21,6 +18,7 @@ import { text_combine } from "./text_combine.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { html_span_code_dark_colored } from "./html_span_code_dark_colored.mjs";
+import { not } from "./not.mjs";
 import { and } from "./and.mjs";
 import { each } from "./each.mjs";
 export function app_code_number_line(parent, low, high, step, ends, middle) {
@@ -28,7 +26,8 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
   ("$plain middle");
   ("a picture of a number line from low to high, a tick every step: the two ends a question is about filled blue and the middle filled green, so a reader can see the middle sit the same distance from both ends");
   ("Every number is a code chip, as numbers are in the writing beside it. A step of 0.5 draws every half as well as every whole, so the line keeps its proportions; a half gets a shorter tick and a smaller, fainter chip, unless it is one the question is about.");
-  ("EQUAL SPACING AND CENTRING HOLD BY CONSTRUCTION, not by the widths of the labels. Every number owns one equal column of a grid, its tick stands at the column's centre, and its chip is placed with its own centre on that same point, so a wide 4.5 grows out both sides of its tick instead of pushing its neighbours along. Halves are written on a lower row than wholes, so a wide chip cannot run into the one beside it. A faint half is placed at 3.07 of its own smaller em, which is 2.3 of the line's, the same row a pointed half stands on.");
+  ("EQUAL SPACING AND CENTRING HOLD BY CONSTRUCTION, not by the widths of the labels. Every number owns one equal column of a grid, its tick stands at the column's centre, and its chip is placed with its own centre on that same point, so a wide 4.5 grows out both sides of its tick instead of pushing its neighbours along.");
+  ("EACH NUMBER SITS ON THE LINE, its centre on the line's centre, the way its tick is: the line, every tick and every chip are all placed at half the column's height, and a height given in percent is the same point whatever size a chip's own writing is. The ticks are taller than the chips so they still show above and below them. Asked by the human, 2026-09-27; not picked: numbers hanging below the line, on one row for wholes and a lower one for halves, which is what this drew before.");
   let top2 = subtract(high, low);
   let count = divide(top2, step) + 1;
   let indexes = range(count);
@@ -42,17 +41,8 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
     let whole = equal(left2, value);
     return whole;
   }
-  function not_whole_is(value) {
-    let whole = whole_is(value);
-    let n = not(whole);
-    return n;
-  }
-  let halves = list_filter(values, not_whole_is);
-  let halves_any = list_empty_not_is(halves);
-  let cell_height = "2.4em";
-  if (halves_any) {
-    cell_height = "3.6em";
-  }
+  let cell_height = "2.2em";
+  let center = "50%";
   let line_color = app_shared_color_blue_dark();
   let end_color = app_code_highlight_color();
   let middle_color = app_code_highlight_color_second();
@@ -75,7 +65,7 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
   let line = html_div(row);
   html_style_assign(line, {
     position: "absolute",
-    top: "0.6em",
+    top: center,
     height: "3px",
     "margin-top": "-1.5px",
     left: edge,
@@ -90,14 +80,14 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
       height: cell_height,
     });
     let tick = html_div(cell);
-    let tick_height = "0.4em";
+    let tick_height = "1.4em";
     if (whole) {
-      tick_height = "0.8em";
+      tick_height = "2em";
     }
     html_style_assign(tick, {
       position: "absolute",
       left: "50%",
-      top: "0.6em",
+      top: center,
       width: "2px",
       height: tick_height,
       transform: "translate(-50%, -50%)",
@@ -113,15 +103,11 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
     let text = text_to(value);
     let chip = html_span_code_dark_colored(cell, [text], [color]);
     html_style_background_color_set(chip, color);
-    let label_top = "1.2em";
-    if (not(whole)) {
-      label_top = "2.3em";
-    }
     html_style_assign(chip, {
       position: "absolute",
       left: "50%",
-      top: label_top,
-      transform: "translateX(-50%)",
+      top: center,
+      transform: "translate(-50%, -50%)",
       "white-space": "nowrap",
     });
     let b = equal(color, plain);
@@ -132,7 +118,6 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
       html_style_assign(chip, {
         "font-size": "0.75em",
         opacity: "0.55",
-        top: "3.07em",
       });
     }
   }
