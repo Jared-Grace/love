@@ -1,3 +1,6 @@
+import { fn_name } from "./fn_name.mjs";
+import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { equal } from "./equal.mjs";
 import { function_is } from "./function_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -34,7 +37,9 @@ export function app_code_lesson_statement_formula({
   ("a lesson whose programs start some names with numbers, run a few short lines, and write out the names the lesson asks about: its title, the boxes read before the questions, and the questions");
   ("It is the shape of the swapping ladder and of the formulas split into short lines: both are a program the learner already knows with its middle lines changed, so each lesson hands in only its starting names, how a screen's numbers are drawn, the numbers its boxes show, the lines, and the writing around them.");
   ("title_code is the one short piece of code the home title shows - the key line, not all of them, so a title can be skimmed. names are the names the program starts, in order; values_get hands back one list of numbers per question, each as long as names; example_values is the one list the boxes read before the questions use.");
-  ("step holds the lines the lesson is about (middle) and the names it writes out (logged). The reminder shows the earlier lesson's program whole, as remember_lines, and explain is the lines of writing that lead to this lesson's program - each a list alternating plain writing and code, or a function drawing a picture into the box. decoys is the wrong-answer maker, or null to use the other questions' answers.");
+  ("step holds the lines the lesson is about (middle) and the names it writes out (logged). The reminder shows the earlier lesson's program whole, as remember_lines, and explain is the lines of writing that lead to this lesson's program - each a list alternating plain writing and code, or a function drawing a picture into the box, or the marker ",
+    fn_name("app_code_explain_container_next"),
+    " starting a new box. remember_lines may instead be a function drawing the reminder, for an earlier lesson that is not a program. decoys is the wrong-answer maker, or null to use the other questions' answers.");
   let middle = property_get(step, "middle");
   let logged = property_get(step, "logged");
   let paint = app_code_lesson_statement_title_code_paint_get(title_code);
@@ -75,13 +80,20 @@ export function app_code_lesson_statement_formula({
       remember_lesson,
       remember_parts,
     );
-    let code_before = list_join_newline(remember_lines);
-    let output_before = eval_console_log_lines(code_before);
-    app_code_code_lines_writes_out(box_before, remember_lines, output_before);
+    if (function_is(remember_lines)) {
+      ("a reminder of a lesson whose shape is not a program, such as an expression beside its value, is drawn by a function so it can be quoted in that lesson's own shape");
+      remember_lines(box_before);
+    } else {
+      let code_before = list_join_newline(remember_lines);
+      let output_before = eval_console_log_lines(code_before);
+      app_code_code_lines_writes_out(box_before, remember_lines, output_before);
+    }
     let box_now = app_code_container_light_blue(root);
     for (let parts of explain) {
       ("an entry is either a line of writing, as a list, or a picture, as a function that draws into the box");
-      if (function_is(parts)) {
+      if (equal(parts, app_code_explain_container_next)) {
+        box_now = app_code_container_light_blue(root);
+      } else if (function_is(parts)) {
         parts(box_now);
       } else {
         html_div_cycle_code(box_now, parts);
