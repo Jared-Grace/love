@@ -32,14 +32,13 @@ export function app_code_lesson_statement_name_shorter_above(
     long,
     " is ",
     short,
-    ".",
   ]);
   html_div_cycle_code(box_short, [
     "",
     long,
     " and ",
     short,
-    " do exactly the same thing.",
+    " do exactly the same thing",
   ]);
   html_div_cycle_code(box_short, ["", short, " is shorter and easier to type:"]);
   function line_shortened(line) {
