@@ -23,7 +23,7 @@ export function app_code_lesson_statement_name_sum_to() {
   ("the sum 1 + 2 + ... + n in three short lines: let next = n + 1; let product = n * next; let sum = product / 2;");
   ("Chosen for later use: finding the one number missing from 1 to n compares a list's sum with this one, and it is the first formula whose line count stays the same however big n is.");
   ("n * (n + 1) is always even, so every sum is whole, and the five sums differ.");
-  ("The writing is the human's, 2026-09-27: why a formula is wanted - 1 + 2 + 3 + 4 is 3 additions, the first 100 numbers would be 99 - then the formula as one expression, then the same answer in three short lines. Each sum and expression the writing names is a code chip, and each + it counts is shown as the + it means, so sums is read as additions and not as answers. Not picked: saying additions instead of sums, which drops the human's word; and the earlier opening, add one number at a time, which gave no reason to want anything else. Later the same day the human asked for solve rather than do, the dots in the grey the home titles give them, and the three lines as one wide piece of code in a box of their own with the check against 4 that follows them.");
+  ("The writing is the human's, 2026-09-27: why a formula is wanted - 1 + 2 + 3 + 4 is 3 additions, the first 100 numbers would be 99 - then the formula as one expression, then the same answer in three short lines. Each sum and expression the writing names is a code chip, and each + it counts is shown as the + it means, so sums is read as additions and not as answers. Not picked: saying additions instead of sums, which drops the human's word; and the earlier opening, add one number at a time, which gave no reason to want anything else. Later the same day the human asked for solve rather than do, the dots in the grey the home titles give them, and the three lines as one wide piece of code in a box of their own with the check against 4 that follows them. Then: add together, the numbers ... together, and the 4 as code.");
   let names = ["n"];
   let n = list_first(names);
   let next = "next";
@@ -85,13 +85,14 @@ export function app_code_lesson_statement_name_sum_to() {
   }
   let middle_lines = [line_next, line_product, line_sum];
   let draw = app_code_line_dots_draw([
-    "But what if we wanted to add the first 100 numbers? ",
+    "But what if we wanted to add together the first 100 numbers? ",
     hundred,
     " ?",
   ]);
   let draw2 = app_code_line_dots_draw([
     "Instead, there's a formula to add the numbers ",
     up_to,
+    " together",
   ]);
   let lesson = app_code_lesson_statement_formula({
     words: "Adding 1 up to n",
@@ -124,7 +125,7 @@ export function app_code_lesson_statement_name_sum_to() {
         "Here's the code to step by step calculate the same answer as that expression:",
       ],
       lines_draw,
-      ["For 4 that is ", worked, ", which is 10, the same as ", four, ":"],
+      ["For ", "4", " that is ", worked, ", which is 10, the same as ", four, ":"],
     ],
     decoys: null,
     example_pointers: null,

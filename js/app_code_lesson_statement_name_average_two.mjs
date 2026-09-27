@@ -25,6 +25,7 @@ export function app_code_lesson_statement_name_average_two() {
   ("Every sum is even, so every average is whole, and no average is one of the numbers on its own screen or the 2 it is divided by. The five averages differ, so no two programs share an answer.");
   ("The writing follows the first half of the human's outline, 2026-09-27, moved here from the middle lesson: a number line shows 5 in the middle of 3 and 7, the same distance from both, so 'halfway' is seen before it is computed. The pair has an even sum, as every pair here does, so no .5 appears before the middle lesson teaches it.");
   ("Every number in the writing is a code chip, and 3, 7 and 5 wear the pointing colours they wear on the number line, so the sentences and the picture are seen to be about the same three numbers. The 2 they are apart by and the 2 the sum is divided by stay plain: they are not on the line.");
+  ("The human's wording, 2026-09-27: the average of two numbers is named where it is found, and the code adds the two numbers rather than them, so neither sentence leans on the one before it.");
   let names = app_code_lesson_statement_name_value_names();
   let name_a = list_first(names);
   let name_b = list_second(names);
@@ -102,11 +103,11 @@ export function app_code_lesson_statement_name_average_two() {
       v3,
       v4,
       average_term_draw,
-      ["To find it, add the two numbers, then divide by ", "2", ":"],
+      ["To find the average of two numbers, add the two numbers, then divide by ", "2", ":"],
       v5,
       v6,
       app_code_explain_container_next,
-      ["In code, first we add them: ", line_sum],
+      ["In code, first we add the two numbers: ", line_sum],
       ["Then we divide the sum by ", "2", ": ", line_average],
       ["Two short lines, each doing one thing:"],
     ],

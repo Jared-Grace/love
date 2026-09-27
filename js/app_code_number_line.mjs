@@ -41,8 +41,9 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
     let whole = equal(left2, value);
     return whole;
   }
-  let cell_height = "3.2em";
-  let center = "0.9em";
+  ("SHORT TICKS, WITH A GAP UNDER THEM: a tick is a short mark on the line and each number is drawn clear below it, so a tick is never seen running into its number, asked by the human 2026-09-27");
+  let cell_height = "2.8em";
+  let center = "0.6em";
   ("the chips' height is a percent of the column, never an em: an em is the chip's own writing size, so a smaller half chip placed at the same number of em sat higher than the wholes beside it");
   let chip_center = "70%";
   let line_color = app_shared_color_blue_dark();
@@ -82,9 +83,9 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
       height: cell_height,
     });
     let tick = html_div(cell);
-    let tick_height = "0.7em";
+    let tick_height = "0.35em";
     if (whole) {
-      tick_height = "1.1em";
+      tick_height = "0.6em";
     }
     html_style_assign(tick, {
       position: "absolute",
