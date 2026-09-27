@@ -1,3 +1,6 @@
+import { app_code_lesson_statement_name_grid_position } from "./app_code_lesson_statement_name_grid_position.mjs";
+import { app_code_lesson_statement_name_grid_index } from "./app_code_lesson_statement_name_grid_index.mjs";
+import { app_code_lesson_statement_name_sum_to } from "./app_code_lesson_statement_name_sum_to.mjs";
 import { app_code_lesson_statement_name_average_two } from "./app_code_lesson_statement_name_average_two.mjs";
 import { app_code_lesson_statement_name_average_three } from "./app_code_lesson_statement_name_average_three.mjs";
 import { app_code_lesson_statement_name_middle } from "./app_code_lesson_statement_name_middle.mjs";
@@ -393,6 +396,9 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_average_two,
     app_code_lesson_statement_name_average_three,
     app_code_lesson_statement_name_middle,
+    app_code_lesson_statement_name_grid_position,
+    app_code_lesson_statement_name_grid_index,
+    app_code_lesson_statement_name_sum_to,
   ];
   return fns;
 }
