@@ -1,7 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
-import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { list_first } from "./list_first.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
@@ -16,7 +14,7 @@ import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.m
 export function app_code_lesson_statement_name_last(
   lesson_first,
   batch_original,
-  words,
+  name_id,
   decoys,
 ) {
   arguments_assert(arguments, 4);
@@ -24,8 +22,6 @@ export function app_code_lesson_statement_name_last(
   ("The human's order, 2026-09-27: a lesson where a name takes a new value first writes the name out after every change, and this one follows it. Seen first, every value is on the screen; here a learner carries the changes in their head and answers with where they end, with the lesson before as the help.");
   ("The programs are the lesson before's own without the writing-outs it adds, so the two lessons cannot drift apart. The wrong answers are what that lesson's programs were asked with before the order changed: the other programs' answers, or the words handed in.");
   let name = app_code_lesson_statement_name_value_name();
-  let logged = js_code_console_log_statement(name);
-  let name_id = app_code_lesson_statement_title_name_id(words, logged);
   function above(root, context) {
     "one of the lesson before's programs writing the name out after every change, then the same program writing it out only at the end";
     let list = batch_original();

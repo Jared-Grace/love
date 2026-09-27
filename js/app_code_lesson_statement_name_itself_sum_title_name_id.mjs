@@ -1,9 +1,5 @@
-import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
+import { app_code_lesson_statement_name_itself_sum_title_code } from "./app_code_lesson_statement_name_itself_sum_title_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
-import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
-import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 export function app_code_lesson_statement_name_itself_sum_title_name_id() {
   arguments_assert(arguments, 0);
@@ -12,11 +8,7 @@ export function app_code_lesson_statement_name_itself_sum_title_name_id() {
   ("No let, because the name already exists - the line before it is what made it. That is the line of the lesson that gives a name a new value, met again with a sum on the right of it.");
   ("Only what is painted changes; the id is built from the words below.");
   let words = "Adding to what a name holds";
-  let name_first = app_code_lesson_statement_name_value_name();
-  let name_last = app_code_lesson_statement_name_two_name();
-  let plus = js_operator_plus_symbol();
-  let sum = js_code_binary_spaced_nb(name_first, plus, name_last);
-  let code = js_code_assign_statement(name_first, sum);
+  let code = app_code_lesson_statement_name_itself_sum_title_code();
   let built = app_code_lesson_statement_title_name_id(words, code);
   return built;
 }
