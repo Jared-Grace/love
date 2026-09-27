@@ -1,3 +1,6 @@
+import { list_size_1 } from "./list_size_1.mjs";
+import { list_first } from "./list_first.mjs";
+import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { modulo } from "./modulo.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -49,6 +52,12 @@ export function app_code_line_ends_middle_draw(parts, ends, middles) {
       html_style_assign(chip, {
         "white-space": "nowrap",
       });
+      ("a chip that is only one number takes its colour edge to edge, so a pointed 3 reads as one blue chip rather than blue inside black");
+      let single = list_size_1(pieces);
+      if (single) {
+        let only = list_first(colors);
+        html_style_background_color_set(chip, only);
+      }
     }
     each_index(parts, part_draw);
   }
