@@ -62,7 +62,7 @@ export function app_code_lesson_statement_name_average_two() {
     return line;
   }
   let v = pointed(["Suppose we have two numbers: ", "3", " and ", "7"]);
-  let draw = app_code_number_line_draw([2, 3, 4, 5, 6, 7, 8], [3, 7], 5);
+  let draw = app_code_number_line_draw(2, 8, 1, [3, 7], 5);
   let v2 = pointed(["", "5", " is in the middle"]);
   let code = js_code_binary_result_nb("3", plus, "2", "5");
   let v3 = pointed(["", "5", " is ", "2", " away from ", "3", ": ", code]);

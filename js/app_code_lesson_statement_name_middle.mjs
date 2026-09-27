@@ -65,7 +65,7 @@ export function app_code_lesson_statement_name_middle() {
   let draw2 = app_code_line_ends_middle_draw(["", code], ends, []);
   let code2 = js_code_binary_result_nb("9", slash, "2", "4.5");
   let draw3 = app_code_line_ends_middle_draw(["", code2], [], ["4.5"]);
-  let draw4 = app_code_number_line_draw([2, 3, 4, 4.5, 5, 6, 7], [2, 7], 4.5);
+  let draw4 = app_code_number_line_draw(2, 7, 0.5, [2, 7], 4.5);
   let draw5 = app_code_line_ends_middle_draw(
     [
       "",
@@ -82,7 +82,7 @@ export function app_code_lesson_statement_name_middle() {
     [],
     ["4.5"],
   );
-  let draw6 = app_code_number_line_draw([2, 3, 4, 5, 6, 7], [2, 7], 4);
+  let draw6 = app_code_number_line_draw(2, 7, 0.5, [2, 7], 4);
   let lesson = app_code_lesson_statement_formula({
     words: "Middle of two names",
     title_code: js_code_call_args(floor_name, [combined]),

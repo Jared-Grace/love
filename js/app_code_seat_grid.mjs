@@ -1,3 +1,6 @@
+import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
+import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
+import { html_span_code_dark_colored } from "./html_span_code_dark_colored.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -20,7 +23,7 @@ import { html_style_background_color_set } from "./html_style_background_color_s
 export function app_code_seat_grid(parent, count, width, marked) {
   arguments_assert(arguments, 4);
   ("$plain marked");
-  ("a picture of seats numbered from 0 in rows of width: row numbers down the left, column numbers across the top, every seat in a whole row before the marked seat's row filled blue and the marked seat filled green, so a reader can count the seats that come before it");
+  ("a picture of seats numbered from 0 in rows of width: row numbers down the left in the third pointing colour, column numbers across the top in the fourth, each a code chip as numbers in the writing are, every seat in a whole row before the marked seat's row filled blue and the marked seat filled green, so a reader can count the seats that come before it");
   ("count is how many seats are drawn; the last row may be short, as a real list's is");
   let p = divide(marked, width);
   let rows_before = floor(p);
@@ -47,9 +50,20 @@ export function app_code_seat_grid(parent, count, width, marked) {
     });
   }
   heading_draw("");
+  let row_color = app_code_highlight_color_third();
+  let column_color = app_code_highlight_color_fourth();
+  function heading_chip_draw(text, color) {
+    let cell = html_div(grid);
+    html_style_assign(cell, {
+      "text-align": "center",
+      "align-self": "center",
+    });
+    let chip = html_span_code_dark_colored(cell, [text], [color]);
+    html_style_background_color_set(chip, color);
+  }
   function column_heading_draw(column) {
     let t2 = text_to(column);
-    heading_draw(t2);
+    heading_chip_draw(t2, column_color);
   }
   let list = range(width);
   each(list, column_heading_draw);
@@ -58,7 +72,7 @@ export function app_code_seat_grid(parent, count, width, marked) {
     if (equal(column, 0)) {
       let input = divide(index, width);
       let t3 = text_to(input);
-      heading_draw(t3);
+      heading_chip_draw(t3, row_color);
     }
     let text2 = text_to(index);
     let seat = html_div_text(grid, text2);

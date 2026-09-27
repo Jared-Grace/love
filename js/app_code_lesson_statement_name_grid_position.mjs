@@ -13,7 +13,11 @@ import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_s
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { js_code_math_floor_name } from "./js_code_math_floor_name.mjs";
 import { app_code_seat_grid } from "./app_code_seat_grid.mjs";
-import { app_code_line_ends_middle_draw } from "./app_code_line_ends_middle_draw.mjs";
+import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
+import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
+import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
+import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
+import { app_code_line_pointed_draw } from "./app_code_line_pointed_draw.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
@@ -24,7 +28,8 @@ export function app_code_lesson_statement_name_grid_position() {
   ("the row and column of a numbered chair in rows of equal width: let row = Math.floor(index / width); let column = index % width;");
   ("Chairs are numbered from 0, as positions in code are, so chair 0 is row 0 column 0. The writing says it with chairs rather than lists, which are not taught yet.");
   ("No two programs share an answer, and neither line of an answer is the width it divides by.");
-  ("The writing follows the human's outline, 2026-09-27, one light blue container per group of its lines: the chairs, how they are numbered with the grid, the row, the column by taking away the rows before, and the column by the remainder, so % arrives as a shortcut for a subtraction the reader has just done. Chair 7 wears the grid's green and the blue chairs the grid's blue.");
+  ("The writing follows the human's outline, 2026-09-27, one light blue container per group of its lines: the chairs, how they are numbered with the grid, the row, the column by taking away the rows before, and the column by the remainder, so % arrives as a shortcut for a subtraction the reader has just done.");
+  ("Every pointed thing wears the grid's colour for it: chair 7 the green, the blue chairs the blue, a row number the row headings' colour and a column number the column headings'. A number that only counts, such as the 2 in 2 whole rows or the 3 columns, stays plain writing, so a colour always means a place on the grid. Asked by the human, 2026-09-27; not picked: tinting the chairs by row or column, which would bury the blue and green the explanation leans on.");
   ("Picked: the code keeps the names index and width. Not picked: the outline's chair_number and column_count, because the title line let column = chair_number % column_count; is past the 30-character title limit, the row line wraps on a phone, and the next lesson, which goes the other way, names them index and width. The writing says what each name means where the formula first appears.");
   let names = ["index", "width"];
   let step = app_code_lesson_statement_name_grid_position_step();
@@ -67,9 +72,18 @@ export function app_code_lesson_statement_name_grid_position() {
     app_code_seat_grid(box, 9, 3, 7);
   }
   let blue = "blue chairs";
-  function pointed(parts) {
-    "a line whose 7 wears the grid's green and whose blue chairs wear its blue";
-    let draw = app_code_line_ends_middle_draw(parts, [blue], ["7"]);
+  let color_before = app_code_highlight_color();
+  let color_chair = app_code_highlight_color_second();
+  let color_row = app_code_highlight_color_third();
+  let color_column = app_code_highlight_color_fourth();
+  function pointed(parts, rows, columns) {
+    "a line wearing the grid's colours: the blue chairs blue, chair 7 green, and the row and column numbers it names in the headings' colours";
+    let draw = app_code_line_pointed_draw(parts, [
+      [[blue], color_before],
+      [["7"], color_chair],
+      [rows, color_row],
+      [columns, color_column],
+    ]);
     return draw;
   }
   let next = app_code_explain_container_next;
@@ -81,25 +95,66 @@ export function app_code_lesson_statement_name_grid_position() {
   let code = js_code_binary_result_nb("7", minus, "6", "1");
   let column_formula = js_code_binary_spaced_nb(index, percent, width);
   let code2 = js_code_binary_result_nb("7", percent, "3", "1");
-  let v = pointed(["How do we calculate the row of chair ", "7", "?"]);
-  let v2 = pointed([
-    "The ",
-    "",
-    blue,
-    "",
-    " are the whole rows before chair 7",
-  ]);
-  let v3 = pointed(["How do we calculate the column of chair ", "7", "?"]);
-  let v4 = pointed([
-    "Here's one way to calculate the column of chair ",
-    "7",
-    ":",
-  ]);
-  let v5 = pointed([
-    "Here's another way to calculate the column of chair ",
-    "7",
-    ":",
-  ]);
+  let v = pointed(
+    ["So the three columns are: ", "0", ", ", "1", " and ", "2"],
+    [],
+    ["0", "1", "2"],
+  );
+  let v2 = pointed(
+    ["The rows are also counted starting with ", "0"],
+    ["0"],
+    [],
+  );
+  let v3 = pointed(["So the first row is row ", "0"], ["0"], []);
+  let v4 = pointed(["The second row is row ", "1"], ["1"], []);
+  let v5 = pointed(["How do we calculate the row of chair ", "7", "?"], [], []);
+  let v6 = pointed(
+    ["The ", "", blue, "", " are the whole rows before chair ", "7"],
+    [],
+    [],
+  );
+  let v7 = pointed(
+    ["2 whole rows fit, so chair ", "7", " is in row ", "2"],
+    ["2"],
+    [],
+  );
+  let v8 = pointed(["", row_found], ["2"], []);
+  let v9 = pointed(
+    ["How do we calculate the column of chair ", "7", "?"],
+    [],
+    [],
+  );
+  let v10 = pointed(
+    ["Here's one way to calculate the column of chair ", "7", ":"],
+    [],
+    [],
+  );
+  let v11 = pointed(
+    ["Chair ", "7", " is 1 past them, so it is in column ", "1", ":"],
+    [],
+    ["1"],
+  );
+  let v12 = pointed(["", code], [], ["1"]);
+  let v13 = pointed(
+    ["Here's another way to calculate the column of chair ", "7", ":"],
+    [],
+    [],
+  );
+  let v14 = pointed(
+    [
+      "",
+      "1",
+      " is what is left over, which you already know is the remainder:",
+    ],
+    [],
+    ["1"],
+  );
+  let v15 = pointed(["", code2], [], ["1"]);
+  let v16 = pointed(
+    ["Chair ", "7", " in rows of 3 is in row ", "2", ", column ", "1", ":"],
+    ["2"],
+    ["1"],
+  );
   let lesson = app_code_lesson_statement_formula({
     words: "Row and column of a chair",
     title_code: line_column,
@@ -127,15 +182,15 @@ export function app_code_lesson_statement_name_grid_position() {
       ["This continues with the third and fourth rows, and so on"],
       grid_draw,
       ["Here, there are 3 columns: each row has 3 chairs"],
-      ["So the three columns are: 0, 1 and 2"],
-      ["The rows are also counted starting with 0"],
-      ["So the first row is row 0"],
-      ["The second row is row 1"],
-      ["And so on"],
-      next,
       v,
       v2,
-      ["2 whole rows fit, so chair 7 is in row 2"],
+      v3,
+      v4,
+      ["And so on"],
+      next,
+      v5,
+      v6,
+      v7,
       [
         "We can use this formula, where ",
         index,
@@ -144,19 +199,19 @@ export function app_code_lesson_statement_name_grid_position() {
         " is how many columns:",
       ],
       ["", row_formula],
-      ["", row_found],
+      v8,
       next,
-      v3,
-      v4,
+      v9,
+      v10,
       ["Those 2 rows hold 6 chairs (0 to 5)"],
-      ["Chair 7 is 1 past them, so it is in column 1:"],
-      ["", code],
+      v11,
+      v12,
       next,
-      v5,
-      ["1 is what is left over, which you already know is the remainder:"],
+      v13,
+      v14,
       ["", column_formula],
-      ["", code2],
-      ["Chair 7 in rows of 3 is in row 2, column 1:"],
+      v15,
+      v16,
     ],
     decoys: null,
   });
