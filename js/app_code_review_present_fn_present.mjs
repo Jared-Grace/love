@@ -1,23 +1,27 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_button_gap_above } from "./app_shared_button_gap_above.mjs";
-import { each } from "./each.mjs";
 import { html_clear } from "./html_clear.mjs";
+import { html_progress_bar } from "./html_progress_bar.mjs";
+import { app_code_review_quiz_jump_choose } from "./app_code_review_quiz_jump_choose.mjs";
+import { html_on_click } from "./html_on_click.mjs";
+import { subtract } from "./subtract.mjs";
+import { add_1 } from "./add_1.mjs";
+import { list_remove_first_multiple } from "./list_remove_first_multiple.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { app_code_review_persist } from "./app_code_review_persist.mjs";
+import { each } from "./each.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { app_code_review_finish_show } from "./app_code_review_finish_show.mjs";
 import { list_size } from "./list_size.mjs";
 import { add } from "./add.mjs";
-import { html_progress_bar } from "./html_progress_bar.mjs";
 import { list_first } from "./list_first.mjs";
 import { app_code_review_seed_to_exercise } from "./app_code_review_seed_to_exercise.mjs";
 import { app_code_review_show_success } from "./app_code_review_show_success.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 import { list_remove_at } from "./list_remove_at.mjs";
-import { add_1 } from "./add_1.mjs";
 import { not } from "./not.mjs";
 import { app_code_review_seed_fresh } from "./app_code_review_seed_fresh.mjs";
-import { list_add_multiple } from "./list_add_multiple.mjs";
-import { app_code_review_persist } from "./app_code_review_persist.mjs";
 import { app_code_review_hide_success } from "./app_code_review_hide_success.mjs";
 import { app_code_review_exercise } from "./app_code_review_exercise.mjs";
 export function app_code_review_present_fn_present(
@@ -42,6 +46,29 @@ export function app_code_review_present_fn_present(
   arguments_assert(arguments, 2);
   let passed = property_get(r, "passed");
   app_shared_button_gap_above(home_button);
+  function progress_draw(total) {
+    "the bar, which opens the chooser when tapped; Cancel draws the bar again and leaves the quiz below as it was, half-built answer and all";
+    html_clear(progress);
+    let bar = html_progress_bar(progress, passed, total, "quiz");
+    let container = property_get(bar, "container");
+    function cancel() {
+      progress_draw(total);
+    }
+    function choose() {
+      html_clear(progress);
+      app_code_review_quiz_jump_choose(progress, passed, total, jump, cancel);
+    }
+    html_on_click(container, choose);
+  }
+  function jump(number) {
+    "the quizzes before the chosen one go to the end of the queue in their order, so jumping skips them without losing any. Picked over swapping the two, which would move the one being worked on to wherever the chosen one was, a place the learner never asked for. So the numbers count the order the quizzes will come in, as the bar does, and the one jumped to becomes the next number: jumping to 57 of 100 with none done shows it as quiz 1. Not picked, 2026-09-27: keeping a place in the queue so it would still read 57, which changes what is saved on the device for one number on a screen.";
+    let right = add_1(passed);
+    let skipped_count = subtract(number, right);
+    let skipped = list_remove_first_multiple(queue, skipped_count);
+    list_add_multiple(queue, skipped);
+    app_code_review_persist(context, key, passed, queue);
+    present();
+  }
   function present() {
     each([progress, c], html_clear);
     let done = list_empty_is(queue);
@@ -61,7 +88,7 @@ export function app_code_review_present_fn_present(
     }
     let remaining = list_size(queue);
     let total = add(passed, remaining);
-    html_progress_bar(progress, passed, total, "quiz");
+    progress_draw(total);
     let seed = list_first(queue);
     let exercise = app_code_review_seed_to_exercise(seed);
     async function on_correct(clean) {
