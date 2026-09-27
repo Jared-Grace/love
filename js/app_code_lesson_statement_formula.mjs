@@ -1,3 +1,4 @@
+import { function_is } from "./function_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_statement_title_code_paint_get } from "./app_code_lesson_statement_title_code_paint_get.mjs";
@@ -33,7 +34,7 @@ export function app_code_lesson_statement_formula({
   ("a lesson whose programs start some names with numbers, run a few short lines, and write out the names the lesson asks about: its title, the boxes read before the questions, and the questions");
   ("It is the shape of the swapping ladder and of the formulas split into short lines: both are a program the learner already knows with its middle lines changed, so each lesson hands in only its starting names, how a screen's numbers are drawn, the numbers its boxes show, the lines, and the writing around them.");
   ("title_code is the one short piece of code the home title shows - the key line, not all of them, so a title can be skimmed. names are the names the program starts, in order; values_get hands back one list of numbers per question, each as long as names; example_values is the one list the boxes read before the questions use.");
-  ("step holds the lines the lesson is about (middle) and the names it writes out (logged). The reminder shows the earlier lesson's program whole, as remember_lines, and explain is the lines of writing that lead to this lesson's program - each a list alternating plain writing and code. decoys is the wrong-answer maker, or null to use the other questions' answers.");
+  ("step holds the lines the lesson is about (middle) and the names it writes out (logged). The reminder shows the earlier lesson's program whole, as remember_lines, and explain is the lines of writing that lead to this lesson's program - each a list alternating plain writing and code, or a function drawing a picture into the box. decoys is the wrong-answer maker, or null to use the other questions' answers.");
   let middle = property_get(step, "middle");
   let logged = property_get(step, "logged");
   let paint = app_code_lesson_statement_title_code_paint_get(title_code);
@@ -79,7 +80,12 @@ export function app_code_lesson_statement_formula({
     app_code_code_lines_writes_out(box_before, remember_lines, output_before);
     let box_now = app_code_container_light_blue(root);
     for (let parts of explain) {
-      html_div_cycle_code(box_now, parts);
+      ("an entry is either a line of writing, as a list, or a picture, as a function that draws into the box");
+      if (function_is(parts)) {
+        parts(box_now);
+      } else {
+        html_div_cycle_code(box_now, parts);
+      }
     }
     let example = program_of(example_values);
     let lines_now = text_split_newline(example);
