@@ -58,6 +58,7 @@ export function app_code_lesson_statement_name_grid_index() {
   }
   let lesson = app_code_lesson_statement_formula({
     words: "Seat number from row and column",
+    title_code: line_start,
     names,
     values_get,
     example_values: [2, 1, 3],

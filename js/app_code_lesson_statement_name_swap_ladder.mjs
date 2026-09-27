@@ -1,3 +1,5 @@
+import { property_get } from "./property_get.mjs";
+import { list_join_space } from "./list_join_space.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
@@ -17,8 +19,10 @@ export function app_code_lesson_statement_name_swap_ladder({
   ("step holds the lines the lesson is about (middle) and the names it writes out (logged). The reminder shows the lesson before it whole, as remember_lines, and explain is the lines of writing that lead to this lesson's program - each a list alternating plain writing and code.");
   ("The wrong answers are every way of writing the starting numbers on the answer's lines, because each mistake about swapping is one of those - see the decoy function's own note.");
   let names = app_code_lesson_statement_name_value_names();
+  let list = property_get(step, "middle");
   let lesson = app_code_lesson_statement_formula({
     words,
+    title_code: list_join_space(list),
     names,
     values_get: app_code_lesson_statement_name_swap_number_pairs,
     example_values: [3, 8],

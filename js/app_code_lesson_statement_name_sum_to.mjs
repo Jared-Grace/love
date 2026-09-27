@@ -52,6 +52,7 @@ export function app_code_lesson_statement_name_sum_to() {
   }
   let lesson = app_code_lesson_statement_formula({
     words: "Adding 1 up to n",
+    title_code: line_sum,
     names,
     values_get,
     example_values: [4],

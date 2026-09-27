@@ -49,6 +49,7 @@ export function app_code_lesson_statement_name_average_two() {
   }
   let lesson = app_code_lesson_statement_formula({
     words: "Average of two names",
+    title_code: line_average,
     names,
     values_get,
     example_values: [2, 6],

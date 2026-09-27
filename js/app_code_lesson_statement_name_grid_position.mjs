@@ -49,6 +49,7 @@ export function app_code_lesson_statement_name_grid_position() {
   let name = js_code_math_floor_name();
   let lesson = app_code_lesson_statement_formula({
     words: "Row and column of a seat",
+    title_code: line_column,
     names,
     values_get,
     example_values: [7, 3],

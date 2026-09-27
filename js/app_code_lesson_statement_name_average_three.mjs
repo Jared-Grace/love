@@ -50,6 +50,7 @@ export function app_code_lesson_statement_name_average_three() {
   }
   let lesson = app_code_lesson_statement_formula({
     words: "Average of three names",
+    title_code: line_average,
     names,
     values_get,
     example_values: [4, 6, 8],

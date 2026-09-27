@@ -1,6 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_join_space } from "./list_join_space.mjs";
 import { app_code_lesson_statement_title_code_paint_get } from "./app_code_lesson_statement_title_code_paint_get.mjs";
 import { app_code_lesson_statement_title_name_id_paint } from "./app_code_lesson_statement_title_name_id_paint.mjs";
 import { list_get } from "./list_get.mjs";
@@ -19,6 +18,7 @@ import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_statement_formula({
   words,
+  title_code,
   names,
   values_get,
   example_values,
@@ -32,11 +32,10 @@ export function app_code_lesson_statement_formula({
   arguments_assert(arguments, 1);
   ("a lesson whose programs start some names with numbers, run a few short lines, and write out the names the lesson asks about: its title, the boxes read before the questions, and the questions");
   ("It is the shape of the swapping ladder and of the formulas split into short lines: both are a program the learner already knows with its middle lines changed, so each lesson hands in only its starting names, how a screen's numbers are drawn, the numbers its boxes show, the lines, and the writing around them.");
-  ("names are the names the program starts, in order; values_get hands back one list of numbers per question, each as long as names; example_values is the one list the boxes read before the questions use.");
+  ("title_code is the one short piece of code the home title shows - the key line, not all of them, so a title can be skimmed. names are the names the program starts, in order; values_get hands back one list of numbers per question, each as long as names; example_values is the one list the boxes read before the questions use.");
   ("step holds the lines the lesson is about (middle) and the names it writes out (logged). The reminder shows the earlier lesson's program whole, as remember_lines, and explain is the lines of writing that lead to this lesson's program - each a list alternating plain writing and code. decoys is the wrong-answer maker, or null to use the other questions' answers.");
   let middle = property_get(step, "middle");
   let logged = property_get(step, "logged");
-  let title_code = list_join_space(middle);
   let paint = app_code_lesson_statement_title_code_paint_get(title_code);
   let name_id = app_code_lesson_statement_title_name_id_paint(words, paint);
   function program_of(values) {

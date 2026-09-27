@@ -40,8 +40,10 @@ export function app_code_lesson_statement_name_middle() {
     let taken = list_shuffle_take(candidates, 4);
     return taken;
   }
+  let combined = js_code_binary_spaced_nb("sum", slash, "2");
   let lesson = app_code_lesson_statement_formula({
     words: "Middle of two names",
+    title_code: js_code_call_args(floor_name, [combined]),
     names,
     values_get,
     example_values: [2, 7],
