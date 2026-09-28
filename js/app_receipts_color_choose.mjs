@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { html_display_flex } from "./html_display_flex.mjs";
 import { html_style_gap } from "./html_style_gap.mjs";
 import { html_border_radius } from "./html_border_radius.mjs";
@@ -7,7 +8,6 @@ import { app_shared_field_title } from "./app_shared_field_title.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { app_shared_color_ink } from "./app_shared_color_ink.mjs";
-import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_receipts_colors } from "./app_receipts_colors.mjs";
 import { html_element } from "./html_element.mjs";
@@ -29,8 +29,7 @@ export function app_receipts_color_choose(parent, key, on_choose) {
   let buttons = [];
   function rings_show(chosen) {
     for (let b of buttons) {
-      let left = property_get(b, "key");
-      let on = equal(left, chosen);
+      let on = property_equals(b, "key", chosen);
       let b2 = property_get(b, "button");
       html_style_set(
         b2,
