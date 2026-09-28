@@ -101,6 +101,7 @@ export function html_viewport_readout_when_asked(bar) {
       }
     }
     let v = bars.join("\n");
+    let n2 = performance.now();
     let lines = [
       "innerHeight " + window.innerHeight,
       "clientHeight " + document.documentElement.clientHeight,
@@ -111,6 +112,8 @@ export function html_viewport_readout_when_asked(bar) {
       "vv offsetTop " + (viewport ? round(viewport.offsetTop) : "none"),
       "vv scale " + (viewport ? round(viewport.scale) : "none"),
       "scrollY " + round(window.scrollY),
+      "page height " + round(document.documentElement.scrollHeight),
+      "page time " + round(n2),
       v,
       "dpr " + round(window.devicePixelRatio),
       "innerWidth " + window.innerWidth,
