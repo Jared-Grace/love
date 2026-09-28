@@ -1,7 +1,6 @@
-import { equal } from "./equal.mjs";
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_identifier_segments } from "./text_identifier_segments.mjs";
-import { list_size } from "./list_size.mjs";
 import { property_get } from "./property_get.mjs";
 export function text_identifier_whole_is(text) {
   arguments_assert(arguments, 1);
@@ -11,8 +10,7 @@ export function text_identifier_whole_is(text) {
   ("Empty text is not a name. Nothing cuts into no runs at all, so the count settles that on its own without a line saying so.");
   ("A run of digits is a name by this test, because a digit is a character a name may be made of. This answers about the characters, not about what the machine would accept as a name at the front of a program - a reader that needs the stricter question asks the parser, which is the only thing that truly knows.");
   let segments = text_identifier_segments(text);
-  let count = list_size(segments);
-  let one = equal(count, 1);
+  let one = list_size_equal(segments, 1);
   if (one) {
     let first = segments[0];
     let identifier = property_get(first, "identifier");
