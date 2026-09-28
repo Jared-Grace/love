@@ -1,3 +1,4 @@
+import { html_public_from_latest_check } from "./html_public_from_latest_check.mjs";
 import { app_shared_latest_build } from "./app_shared_latest_build.mjs";
 import { html_public_from_latest } from "./html_public_from_latest.mjs";
 export async function html_latest_build_promote(search) {
@@ -7,5 +8,6 @@ export async function html_latest_build_promote(search) {
   "Inside a copy made to build one commit there is nowhere for it to drift to. The copy is put back to its commit before the next build and nothing is ever served out of it, so the local bundle it makes is written, hashed by nobody, read by nobody, and thrown away. Measured on the code app: the bundle that ships took thirty seconds and the one nobody reads took fifty-two, so the copy spent nearly two thirds of its building on a file whose only future was being deleted.";
   "So this is not a faster version of its pair and must not replace it. The two differ in what they leave behind, which is the whole of what the pair is for, and the choice between them is a question about the folder being built in rather than about speed.";
   await app_shared_latest_build(search);
+  await html_public_from_latest_check(search);
   await html_public_from_latest(search);
 }
