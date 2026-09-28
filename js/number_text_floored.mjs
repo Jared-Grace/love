@@ -1,6 +1,5 @@
-import { floor } from "./floor.mjs";
+import { multiply_floor } from "./multiply_floor.mjs";
 import { exponent } from "./exponent.mjs";
-import { multiply } from "./multiply.mjs";
 import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function number_text_floored(value, decimals) {
@@ -10,8 +9,7 @@ export function number_text_floored(value, decimals) {
   ("CUT DOWNWARDS AND NOT TO NEAREST, BECAUSE THE NAMES SAY WHETHER SOMETHING CLEARED A FLOOR. Rounded to nearest, a reading of four and forty-nine hundredths against a floor of four and a half is written four and a half, and the record then states as cleared the one thing it was keeping watch on. Cut downwards the written figure can only understate, so a name can call something short that is barely past, and never call something past that is short.");
   ("The places are the width of the band a reading may drift inside without the ratchet saying anything, so they are chosen by how finely the thing being measured matters rather than by how precisely it can be worked out. Too many and every rebuild is a change; too few and a real slide reads as no change at all.");
   let scale = exponent(10, decimals);
-  let lifted = multiply(value, scale);
-  let cut = floor(lifted);
+  let cut = multiply_floor(value, scale);
   let dropped = divide(cut, scale);
   let text = dropped.toFixed(decimals);
   return text;
