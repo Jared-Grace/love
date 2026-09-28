@@ -1,7 +1,7 @@
+import { property_list_map_property } from "./property_list_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_reply_matchers_open_callers_walked } from "./functions_reply_matchers_open_callers_walked.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { reply_matchers_open } from "./reply_matchers_open.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -15,8 +15,7 @@ export async function reply_matchers_open_gate_run() {
   ("The names it is watching are printed on a clean run. A list read from somewhere else is the one thing that could make this pass while checking nothing, so seeing the set is how a reader tells a clean answer apart from an empty question - and only a clean answer raises it, since one naming offenders has already shown it looked.");
   let told = await functions_reply_matchers_open_callers_walked();
   let walked = property_get(told, "walked");
-  let offenders = property_get(told, "offenders");
-  let names = list_map_property(offenders, "f_name");
+  let names = property_list_map_property(told, "offenders", "f_name");
   let open = reply_matchers_open();
   let joined = list_join_comma(open);
   let hint = text_combine_multiple([
