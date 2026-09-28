@@ -1,3 +1,4 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -5,7 +6,6 @@ import { app_receipts_price_usd } from "./app_receipts_price_usd.mjs";
 import { app_receipts_price_php_text } from "./app_receipts_price_php_text.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_size } from "./list_size.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { emoji_camera } from "./emoji_camera.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
@@ -34,8 +34,7 @@ export function app_receipts_purchase_row(
       app_receipts_price_php_text(price) + (equal(usd, "") ? "" : " ≈ " + usd),
     );
   }
-  let list = property_get(purchase, "photos");
-  let photos = list_size(list);
+  let photos = property_list_size(purchase, "photos");
   if (greater_than(photos, 0)) {
     parts.push(emoji_camera() + " " + photos);
   }
