@@ -1,7 +1,7 @@
+import { multiply_divide } from "./multiply_divide.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { math_min } from "./math_min.mjs";
 import { round } from "./round.mjs";
-import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -36,11 +36,9 @@ export async function picture_frame_write(
   let across = Number(fraction_across);
   let down = Number(fraction_down);
   let size = await picture_size(path_from);
-  let top = multiply(size.height, want_across);
-  let b = divide(top, want_down);
+  let b = multiply_divide(size.height, want_across, want_down);
   let fit_across = math_min(size.width, b);
-  let top2 = multiply(size.width, want_down);
-  let b2 = divide(top2, want_across);
+  let b2 = multiply_divide(size.width, want_down, want_across);
   let fit_down = math_min(size.height, b2);
   let left = divide_floor(fit_across, 2);
   let kept_across = multiply(left, 2);
