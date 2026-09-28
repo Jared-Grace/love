@@ -1,3 +1,4 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_list_type } from "./js_list_type.mjs";
 import { property_get } from "./property_get.mjs";
@@ -37,8 +38,7 @@ export function js_calls_walk_unwaited(walkers, ast) {
     if (not(callee_is)) {
       continue;
     }
-    let callee_name = property_get(callee, "name");
-    let walker_is = list_includes(walkers, callee_name);
+    let walker_is = property_in_list(callee, "name", walkers);
     if (not(walker_is)) {
       continue;
     }
