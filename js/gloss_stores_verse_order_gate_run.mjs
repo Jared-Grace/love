@@ -26,13 +26,13 @@ export async function gloss_stores_verse_order_gate_run() {
     let store = property_get(count, "store");
     let offenders = property_path_get_2(count, "found", "offenders");
     function offender_named(offender) {
-      let named = {
+      let named_inner = {
         store,
         chapter_code: property_get(offender, "chapter_code"),
         holds: property_get(offender, "holds"),
         should_hold: property_get(offender, "should_hold"),
       };
-      return named;
+      return named_inner;
     }
     let named = list_map(offenders, offender_named);
     list_add_multiple(out_of_order, named);
