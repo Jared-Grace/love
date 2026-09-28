@@ -1,9 +1,8 @@
+import { js_identifier_named_try } from "./js_identifier_named_try.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_statement_call_any_get } from "./js_statement_call_any_get.mjs";
 import { null_is } from "./null_is.mjs";
-import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
-import { equal } from "./equal.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { not } from "./not.mjs";
 import { list_second } from "./list_second.mjs";
@@ -26,8 +25,10 @@ export function js_function_arguments_assert_each_size_or_null(declaration) {
       return;
     }
     let callee = property_get(call, "callee");
-    let name = js_identifier_name_try(callee);
-    let each_is = equal(name, fn_name("arguments_assert_each"));
+    let each_is = js_identifier_named_try(
+      callee,
+      fn_name("arguments_assert_each"),
+    );
     if (not(each_is)) {
       return;
     }
