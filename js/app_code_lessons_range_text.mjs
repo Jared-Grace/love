@@ -6,6 +6,6 @@ export function app_code_lessons_range_text(start, end) {
   ("a run of lesson numbers written the one way the home list writes them, like 6 - 10 - so a review's range and a group's range read alike");
   let start_text = text_to(start);
   let end_text = text_to(end);
-  let range = text_combine_multiple([start_text, " - ", end_text]);
-  return range;
+  let range_span = text_combine_multiple([start_text, " - ", end_text]);
+  return range_span;
 }
