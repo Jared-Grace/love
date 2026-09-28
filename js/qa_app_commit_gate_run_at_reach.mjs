@@ -13,7 +13,16 @@ export async function qa_app_commit_gate_run_at_reach(search, commit, reach) {
   ("Whether the judging was written down is carried through rather than dropped here, because being sound and being on record are two different things and only one of them is asked about below. Sending reads the record, not this answer, so a caller handed soundness alone can build out of a commit and put the pieces where the sending reads from, and the sending will then refuse pieces this very run found sound - and refuse every other app's with them, because they all go out in one act.");
   ("The reading and the sorting are shared with the report that asks the same question with no app in hand, so they are named once and called from both. The sorting underneath is pure and lives on its own, where it can be asked a question without a commit being judged first. Every fault found in it so far was found by hand on a real afternoon, because reaching it meant spending fourteen minutes here.");
   let sorted = qa_commit_judged_gates_sorted(judged, reach);
-  let blocking = property_get(sorted, "blocking");
+  let judged_blocking = property_get(sorted, "blocking");
+  ("A red gate that only judges how the code is written is carried out beside the others rather than holding the app back: what decides is what a person using the app meets, and the list of those gates, with the ones refused a place on it, lives in its own function.");
+  let code_only_names = qa_gates_code_only();
+  function code_only_is(entry) {
+    let gate = property_get(entry, "gate");
+    let b = list_includes(code_only_names, gate);
+    return b;
+  }
+  let code_only = list_filter(judged_blocking, code_only_is);
+  let blocking = list_filter_not(judged_blocking, code_only_is);
   let elsewhere = property_get(sorted, "elsewhere");
   let clear = list_empty_is(blocking);
   let r = {
