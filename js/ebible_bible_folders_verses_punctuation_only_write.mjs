@@ -1,3 +1,4 @@
+import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_versions_downloaded } from "./ebible_versions_downloaded.mjs";
 import { ebible_bible_folders_verses_punctuation_only_path } from "./ebible_bible_folders_verses_punctuation_only_path.mjs";
@@ -9,7 +10,6 @@ import { ebible_bible_folder_verses_punctuation_only } from "./ebible_bible_fold
 import { catch_null_async } from "./catch_null_async.mjs";
 import { list_add } from "./list_add.mjs";
 import { null_is } from "./null_is.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { each_async } from "./each_async.mjs";
 export async function ebible_bible_folders_verses_punctuation_only_write() {
   "Every translation on this disk asked which of its verses carry punctuation and nothing else, written down where the answer can be read back without measuring again.";
@@ -58,8 +58,7 @@ export async function ebible_bible_folders_verses_punctuation_only_write() {
       await written();
       return;
     }
-    let verses = property_get(found, "found");
-    let any = list_empty_not_is(verses);
+    let any = property_list_empty_not_is(found, "found");
     if (any) {
       list_add(measured, found);
       await written();
