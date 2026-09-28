@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
@@ -22,8 +23,6 @@ import { path_join } from "./path_join.mjs";
 import { git_filter_repo_asked_start } from "./git_filter_repo_asked_start.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
 import { properties_get } from "./properties_get.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { equal_assert_json } from "./equal_assert_json.mjs";
 import { list_unique } from "./list_unique.mjs";
@@ -132,8 +131,7 @@ export async function git_history_paths_texts_blobs_kept_replace_rehearse(
   function git_history_paths_texts_blobs_kept_replace_rehearse_moved(path) {
     let before = blobs_before[path];
     let after = blobs_after[path];
-    let same = equal(before, after);
-    let moved = not(same);
+    let moved = equal_not(before, after);
     return moved;
   }
   let changed = list_filter(
