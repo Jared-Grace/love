@@ -1,10 +1,10 @@
+import { property_get_or_null_equal } from "./property_get_or_null_equal.mjs";
 import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_dot_name_object_name_try } from "./js_dot_name_object_name_try.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
@@ -52,8 +52,11 @@ export async function functions_name_references_mixed() {
     }
     function each_call(v) {
       let callee = property_path_get_2(v, "node", "callee");
-      let callee_name = property_get_or_null(callee, "name");
-      let is_marker = equal(callee_name, fn_name("fn_name"));
+      let is_marker = property_get_or_null_equal(
+        callee,
+        "name",
+        fn_name("fn_name"),
+      );
       if (not(is_marker)) {
         return;
       }
