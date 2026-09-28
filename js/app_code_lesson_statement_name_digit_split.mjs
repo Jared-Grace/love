@@ -23,6 +23,7 @@ export function app_code_lesson_statement_name_digit_split() {
   ("Chosen for later use: adding up a number's digits, reversing a number, and checking one reads the same both ways all take one digit off at a time with this line and the next lesson's, once loops are taught.");
   ("The remainder lesson is the one remembered, on its own example 14 and 4, since % 10 is a remainder and the writing no longer speaks of chairs, 2026-09-28. Not picked: the column lesson, remembered while the chairs in rows of 10 explained the digit. The worked program is 123, the writing's first number, so the explained sum is the one run.");
   ("No digit is 0, and the five answers differ.");
+  ("The why box says we, not you, the human's word 2026-09-28: we write numbers with 10 digits and we % by that count, said of all of us together.");
   ("Later wording from the human, 2026-09-28: the last digit of each number said before it is worked out, the 3 blue and the 7 green, asked as a question and taken as yes; and a box asking why 10 and not 9 or 11, answered by the count of digits. That box stands last, just above the worked program, because the program closes the explanation's last box. Not picked: one colour for both last digits, which would not tell the two numbers apart; and the why box after the program, which has no place to stand.");
   ("The opening is the human's, 2026-09-27, sent without a lesson named: two whole numbers, the question of the last digit, and % 10 answering it on both. Picked this lesson because it is the only one that teaches % 10. Not picked: the column lesson, which uses % on chairs rather than digits.");
   let names = ["n"];
@@ -128,7 +129,7 @@ export function app_code_lesson_statement_name_digit_split() {
         " for some other number?",
       ],
       [
-        "There are ",
+        "We write numbers with ",
         "10",
         " different digits: ",
         "1",
@@ -153,7 +154,7 @@ export function app_code_lesson_statement_name_digit_split() {
       ],
       ["Therefore ", by_ten, " gives you the last digit of a number"],
       [
-        "The number of different digits is the number you ",
+        "The number of different digits we write with is the number we ",
         percent,
         " by to get the last digit of a number",
       ],
