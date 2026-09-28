@@ -13,8 +13,8 @@ export async function gloss_same_as_gate_run() {
   "A store that is not on the disk is passed over and said so, rather than counted as clean. These stores live on a drive that is not always mounted, and every Claude in the repo runs this gate.";
   async function store_ask(fn) {
     let found = await gloss_chapters_same_as_faults(fn);
-    let offenders = property_get(found, "offenders");
-    return offenders;
+    let offenders_inner = property_get(found, "offenders");
+    return offenders_inner;
   }
   let asked = await gloss_stores_offenders_generic(store_ask);
   let counts = property_get(asked, "counts");
