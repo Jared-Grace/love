@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_code_code_dark_lines_pointed } from "./app_code_code_dark_lines_pointed.mjs";
 import { app_code_output_pointed } from "./app_code_output_pointed.mjs";
@@ -8,8 +9,6 @@ import { equal } from "./equal.mjs";
 import { function_is } from "./function_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_statement_title_code_paint_get } from "./app_code_lesson_statement_title_code_paint_get.mjs";
-import { app_code_lesson_statement_title_name_id_paint } from "./app_code_lesson_statement_title_name_id_paint.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
@@ -47,8 +46,7 @@ export function app_code_lesson_statement_formula({
     " starting a new box. remember_lines may instead be a function drawing the reminder, for an earlier lesson that is not a program. decoys is the wrong-answer maker, or null to use the other questions' answers. example_pointers is null, or a list of pairs of texts and a colour, as a pointed line takes, colouring those numbers in the last example's code and output the way the writing above colours them; or a function (box, lines, output) that draws that last example itself, for a lesson whose writing colours part of a number, as the last-digit lessons do.");
   let middle = property_get(step, "middle");
   let logged = property_get(step, "logged");
-  let paint = app_code_lesson_statement_title_code_paint_get(title_code);
-  let name_id = app_code_lesson_statement_title_name_id_paint(words, paint);
+  let name_id = app_code_lesson_statement_title_name_id(words, title_code);
   function program_of(values) {
     "one question's program, from the numbers its names start with";
     function let_pair(name, index) {
