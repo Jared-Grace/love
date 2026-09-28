@@ -1,7 +1,7 @@
+import { multiply_round } from "./multiply_round.mjs";
 import { multiply_divide } from "./multiply_divide.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { math_min } from "./math_min.mjs";
-import { round } from "./round.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -45,11 +45,9 @@ export async function picture_frame_write(
   let left2 = divide_floor(fit_down, 2);
   let kept_down = multiply(left2, 2);
   let left3 = subtract(size.width, kept_across);
-  let n = multiply(left3, across);
-  let at_across = round(n);
+  let at_across = multiply_round(left3, across);
   let left4 = subtract(size.height, kept_down);
-  let n2 = multiply(left4, down);
-  let at_down = round(n2);
+  let at_down = multiply_round(left4, down);
   let v = String(kept_across);
   let v2 = String(kept_down);
   let v3 = String(at_across);
