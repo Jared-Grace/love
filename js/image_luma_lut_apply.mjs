@@ -1,3 +1,4 @@
+import { multiply_divide } from "./multiply_divide.mjs";
 import { round } from "./round.mjs";
 import { less_than } from "./less_than.mjs";
 import { divide } from "./divide.mjs";
@@ -26,8 +27,7 @@ export function image_luma_lut_apply(pixels, lut) {
         ),
     );
     let left = subtract(lut[level], level);
-    let top = multiply(left, 255);
-    let change = divide(top, 219);
+    let change = multiply_divide(left, 255, 219);
     pixels[i] = red + change;
     pixels[i + 1] = green + change;
     pixels[i + 2] = blue + change;
