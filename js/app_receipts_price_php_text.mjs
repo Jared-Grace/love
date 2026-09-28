@@ -7,11 +7,11 @@ export function app_receipts_price_php_text(price) {
   let n = Number(price);
   let whole = Number.isInteger(n);
   let places = whole ? 0 : 2;
-  let digits = n.toLocaleString("en-US", {
+  let digits_seen = n.toLocaleString("en-US", {
     minimumFractionDigits: places,
     maximumFractionDigits: 2,
   });
-  let r = "₱" + digits;
+  let r = "₱" + digits_seen;
   if (equal(price, "")) {
     r = "";
   }
