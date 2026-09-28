@@ -201,6 +201,7 @@
   "name_grid_index",
   "name_sum_to",
   "name_digit_split",
-  "name_digit_rest"
+  "name_digit_rest",
+  "name_digit_back"
  ]
 }

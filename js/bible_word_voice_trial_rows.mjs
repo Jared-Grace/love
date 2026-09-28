@@ -101,6 +101,22 @@ export async function bible_word_voice_trial_rows() {
       rtl: true,
     },
     {
+      key: "gem_final",
+      label: "Hebrew · final eight",
+      chapter_code: "GEN01",
+      voices: [
+        ["Sadaltager", "Sadaltager (male)", "sadaltager"],
+        ["Sulafat", "Sulafat (female)", "sulafat"],
+        ["Charon", "Charon (male)", "charon"],
+        ["Kore", "Kore (female)", "kore"],
+        ["Schedar", "Schedar (male)", "schedar"],
+        ["Gacrux", "Gacrux (female)", "gacrux"],
+        ["Puck", "Puck (male)", "puck"],
+        ["Aoede", "Aoede (female)", "aoede"],
+      ],
+      rtl: true,
+    },
+    {
       key: "grc",
       label: "Greek · John 1",
       chapter_code: "JHN01",
