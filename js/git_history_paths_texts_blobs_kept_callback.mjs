@@ -28,8 +28,8 @@ export function git_history_paths_texts_blobs_kept_callback(paths, blobs_kept) {
       hint: "this is not a plain path of letters, digits and the marks a path is spelled with, and this name is written into the body of instructions the rewriting tool is handed - would you like to name the file itself?",
       path,
     });
-    let quoted = 'b"' + path + '"';
-    return quoted;
+    let quoted_path = 'b"' + path + '"';
+    return quoted_path;
   }
   function git_history_paths_texts_blobs_kept_callback_named(blob) {
     let plain = /^[0-9a-f]{40}$/.test(blob);
@@ -37,8 +37,8 @@ export function git_history_paths_texts_blobs_kept_callback(paths, blobs_kept) {
       hint: "this is not one of git's own names for the contents of a file, which is forty letters of its alphabet, and a name that matches nothing here keeps nothing - it erases the version it was written to protect",
       blob,
     });
-    let quoted = '"' + blob + '"';
-    return quoted;
+    let quoted_blob = '"' + blob + '"';
+    return quoted_blob;
   }
   let quoted = list_map(
     paths,

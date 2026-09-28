@@ -67,17 +67,17 @@ export function app_receipts_purchase_card(
       " time",
   );
   let usa_line = null;
-  function usa_show(date, time) {
+  function usa_show(date_shown, time_shown) {
     let text = "";
-    if (not_equal(date, "") && not_equal(time, "")) {
-      text = app_receipts_purchase_usa_text(date, time);
+    if (not_equal(date_shown, "") && not_equal(time_shown, "")) {
+      text = app_receipts_purchase_usa_text(date_shown, time_shown);
     }
     html_text_set(usa_line, text);
   }
-  async function on_when(date, time) {
-    usa_show(date, time);
-    property_set(purchase, "date", date);
-    property_set(purchase, "time", time);
+  async function on_when(date_entered, time_entered) {
+    usa_show(date_entered, time_entered);
+    property_set(purchase, "date", date_entered);
+    property_set(purchase, "time", time_entered);
     await app_receipts_purchase_save(purchase);
     on_saved();
   }
