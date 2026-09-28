@@ -32,8 +32,8 @@ export async function lyric_video_song_pictures_lines_write(
       return r2;
     }
     let value = subtract(lines[index].start, lead);
-    let r = number_round_places(value, 3);
-    return r;
+    let r_inner = number_round_places(value, 3);
+    return r_inner;
   }
   let pictures = [];
   for (let index = 0; less_than(index, count); index++) {
