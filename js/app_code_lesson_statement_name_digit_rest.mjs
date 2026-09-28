@@ -1,3 +1,6 @@
+import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
+import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
+import { app_code_line_last_digit_pointed_draw } from "./app_code_line_last_digit_pointed_draw.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
@@ -55,6 +58,39 @@ export function app_code_lesson_statement_name_digit_rest() {
   let divided3 = js_code_binary_spaced_nb("4567", slash, ten);
   let floored2 = js_code_call_args(floor_name, [divided3]);
   let whole2 = js_code_binary_spaced_nb(floored2, same, "456");
+  let color = app_code_highlight_color();
+  let color2 = app_code_highlight_color_second();
+  let pointers = [
+    [["3"], color],
+    [["7"], color2],
+  ];
+  function pointed(parts) {
+    "a line whose last digits wear the colours the last-digit lesson gives them, the 3 of 123 blue and the 7 of 4567 green, so the digit removed here is seen to be the one found there, asked by the human 2026-09-28";
+    let draw = app_code_line_last_digit_pointed_draw(parts, pointers);
+    return draw;
+  }
+  let v = pointed([
+    "Suppose we have a whole number like ",
+    "123",
+    " or ",
+    "4567",
+  ]);
+  let v2 = pointed([
+    "For ",
+    "123",
+    " we remove the ",
+    "3",
+    " and keep the ",
+    "12",
+  ]);
+  let v3 = pointed([
+    "For ",
+    "4567",
+    " we remove the ",
+    "7",
+    " and keep the ",
+    "456",
+  ]);
   let lesson = app_code_lesson_statement_formula({
     words: "All but the last digit",
     title_code: line_rest,
@@ -66,10 +102,10 @@ export function app_code_lesson_statement_name_digit_rest() {
     remember_parts: ["we can get the last digit:"],
     remember_lines,
     explain: [
-      ["Suppose we have a whole number like ", "123", " or ", "4567"],
+      v,
       ["Suppose we want to remove the last digit, and keep everything else"],
-      ["For ", "123", " we remove the ", "3", " and keep the ", "12"],
-      ["For ", "4567", " we remove the ", "7", " and keep the ", "456"],
+      v2,
+      v3,
       app_code_explain_container_next,
       ["How do we get all but the last digit?"],
       ["In code, first we divide by ", "10"],

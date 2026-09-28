@@ -84,6 +84,25 @@ export function app_code_lesson_statement_name_middle() {
     [],
     ["4.5"],
   );
+  ("the line under the number line, the human's, 2026-09-28: the sum is odd and so the middle is 4.5, with the word middle in the middle's colour, as the average lesson colours it");
+  let odd_middle = app_code_line_ends_middle_draw(
+    [
+      "",
+      "9",
+      " is odd and ",
+      "4.5",
+      " is the ",
+      "",
+      "middle",
+      "",
+      " number between ",
+      "2",
+      " and ",
+      "7",
+    ],
+    ends,
+    ["4.5", "middle"],
+  );
   let next = app_code_explain_container_next;
   let draw6 = app_code_number_line_draw(2, 7, 0.5, [2, 7], 4);
   let code_even = js_code_binary_result_nb("8", slash, "2", "4");
@@ -150,7 +169,8 @@ export function app_code_lesson_statement_name_middle() {
       draw2,
       draw3,
       draw4,
-      ["What if we want a whole number?"],
+      odd_middle,
+      ["What if we want the middle number to be a whole number?"],
       draw5,
       draw5_after,
       ["So rounding up and rounding down are just as close (", "0.5", ")"],
