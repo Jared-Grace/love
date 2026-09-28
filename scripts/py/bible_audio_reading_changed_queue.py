@@ -216,6 +216,64 @@ def chapter_dropped_any(was):
     return False
 
 
+def sound_first_second(folder):
+    """The second the first numbered piece of this chapter was written, or None."""
+    seconds = [
+        os.path.getmtime(os.path.join(folder, name))
+        for name in os.listdir(folder)
+        if name.endswith(".mp3") and name[: -len(".mp3")].isdigit()
+    ]
+    return min(seconds) if seconds else None
+
+
+def git_out(args):
+    """What git prints for these arguments, asked of this repo."""
+    return subprocess.run(
+        ["git", *args], cwd=REPO, capture_output=True, text=True, check=True
+    ).stdout
+
+
+def reading_commit_at(second):
+    """The newest commit touching the reading's files at that second, or None."""
+    out = git_out(["rev-list", "-1", f"--before={int(second)}", "HEAD", "--", *READING_FILES])
+    return out.strip() or None
+
+
+def reading_texts_at(commit):
+    """The reading's two files as that commit held them."""
+    return tuple(git_out(["show", f"{commit}:{path}"]) for path in READING_FILES)
+
+
+def reading_texts_now():
+    """The reading's two files as they stand on disk."""
+    texts = []
+    for path in READING_FILES:
+        with open(os.path.join(REPO, path), encoding="utf-8") as fh:
+            texts.append(fh.read())
+    return tuple(texts)
+
+
+def words_said_differently(then, now):
+    """Every word the two readings' dictionaries hold differently, as one pattern.
+
+    Only a word whose entry differs can be said differently, so a chapter
+    holding none of them needs no reading at all - which is what keeps asking
+    this every hour of the night cheap.  The pattern ignores case because the
+    reader looks a word up under more than one casing; a chapter it lets
+    through wrongly is only read, never queued, unless its sound really differs.
+    """
+    golds_then, golds_now = then.lexicon.golds, now.lexicon.golds
+    words = [
+        w
+        for w in set(golds_then) | set(golds_now)
+        if golds_then.get(w) != golds_now.get(w) and w.strip()
+    ]
+    if not words:
+        return None
+    alternation = "|".join(sorted((re.escape(w) for w in words), key=len, reverse=True))
+    return re.compile(rf"(?<!\w)(?:{alternation})(?!\w)", re.IGNORECASE)
+
+
 def main(args_path):
     with open(args_path, encoding="utf-8") as fh:
         args = json.load(fh)
@@ -261,6 +319,51 @@ def main(args_path):
         else:
             queue_changed_only.append(name)
 
+    # Chapters recorded after every door were spoken by the dictionary step,
+    # but with its two files as they stood that day.  A pronunciation mended
+    # since then is in no door, so those files are fetched from the history.
+    texts_now = reading_texts_now()
+    readings_then = {}
+    after_door_changed = []
+    old_sound_set = set(old_sound)
+    for name in names:
+        if name in old_sound_set:
+            continue
+        folder = os.path.join(root, name)
+        second = sound_first_second(folder)
+        if second is None:
+            continue
+        commit = reading_commit_at(second)
+        if commit is None:
+            continue
+        if commit not in readings_then:
+            texts_then = reading_texts_at(commit)
+            if texts_then == texts_now:
+                readings_then[commit] = None
+            else:
+                g2p_then = g2p_with(*texts_then)
+                g2p_now = sound_step_of(built, "dictionary")
+                readings_then[commit] = (g2p_then, words_said_differently(g2p_then, g2p_now))
+        reading = readings_then[commit]
+        if reading is None or reading[1] is None:
+            continue
+        g2p_then, pattern = reading
+        texts = chapter_texts(folder)
+        if not any(pattern.search(t) for t in texts):
+            continue
+        spoken_by["straight dictionary " + commit[:10]] += 1
+        was = sounds_of(g2p_then, TEXT_STEPS["straight"], texts)
+        now = sounds_of(sound_step_of(built, "dictionary"), TEXT_STEPS["straight"], texts)
+        counts = chapter_changed(was, now, said, changed_words)
+        totals.update(counts)
+        if not counts["pieces_changed"]:
+            same.append(name)
+        elif chapter_dropped_any(was):
+            queue_dropped.append(name)
+        else:
+            queue_changed_only.append(name)
+            after_door_changed.append(name)
+
     print(
         json.dumps(
             {
@@ -274,6 +377,7 @@ def main(args_path):
                 "chapters_said_the_same": len(same),
                 "chapters_dropped_a_word": len(queue_dropped),
                 "chapters_changed_only": len(queue_changed_only),
+                "chapters_after_door_changed": len(after_door_changed),
                 "queue_dropped": queue_dropped,
                 "pieces_changed": totals["pieces_changed"],
                 "pieces_unlined": totals["pieces_unlined"],

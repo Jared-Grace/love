@@ -9,8 +9,8 @@ export function gloss_verse_keys_verse_numbers(verse_keys, keys) {
   "A word is asked about by all of its keys at once, and a verse answers if it shares any one of them. Reducing either side to a single key first would be choosing, for the other side, which of the things a shape could be it is - and the shape is exactly what cannot say.";
   let numbers = object_property_names(verse_keys);
   function holds(verse_number) {
-    let standing = property_get(verse_keys, verse_number);
-    let held = list_intersect_empty_not_is(standing, keys);
+    let verse_held_keys = property_get(verse_keys, verse_number);
+    let held = list_intersect_empty_not_is(verse_held_keys, keys);
     return held;
   }
   let standing = list_filter(numbers, holds);
