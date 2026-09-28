@@ -158,7 +158,7 @@ export function app_code_lesson_statement_name_middle() {
       draw6,
       next,
       ["Here's the code:"],
-      ["So we add first: ", line_sum],
+      ["First we add the two numbers together: ", line_sum],
       ["Then we divide by ", "2", " and round down with ", floor_name],
       [
         "Programs that search quickly do this again and again, with ",

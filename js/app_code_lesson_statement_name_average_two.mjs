@@ -25,7 +25,7 @@ export function app_code_lesson_statement_name_average_two() {
   ("Every sum is even, so every average is whole, and no average is one of the numbers on its own screen or the 2 it is divided by. The five averages differ, so no two programs share an answer.");
   ("The writing follows the first half of the human's outline, 2026-09-27, moved here from the middle lesson: a number line shows 5 in the middle of 3 and 7, the same distance from both, so 'halfway' is seen before it is computed. The pair has an even sum, as every pair here does, so no .5 appears before the middle lesson teaches it.");
   ("Every number in the writing is a code chip, and 3, 7 and 5 wear the pointing colours they wear on the number line, so the sentences and the picture are seen to be about the same three numbers. The 2 they are apart by and the 2 the sum is divided by stay plain: they are not on the line.");
-  ("The worked program uses 3 and 7, the explanation's own numbers, so it is seen to be the same sum, asked by the human 2026-09-27.");
+  ("The worked program uses 1 and 7, asked by the human 2026-09-28, after a day of 3 and 7, the explanation's own numbers: a new pair shows the lines work on more than the one pair explained, and its average, 4, is none of the five questions' answers.");
   ("The human's wording, 2026-09-27: the average of two numbers is named where it is found, and the code adds the two numbers rather than them, so neither sentence leans on the one before it.");
   let names = app_code_lesson_statement_name_value_names();
   let name_a = list_first(names);
@@ -67,7 +67,7 @@ export function app_code_lesson_statement_name_average_two() {
   }
   let v = pointed(["Suppose we have two numbers: ", "3", " and ", "7"]);
   let draw = app_code_number_line_draw(2, 8, 1, [3, 7], 5);
-  let v2 = pointed(["", "5", " is in the middle"]);
+  let v2 = pointed(["", "5", " is in the middle of ", "3", " and ", "7"]);
   let code = js_code_binary_result_nb("3", plus, "2", "5");
   let v3 = pointed(["", "5", " is ", "2", " away from ", "3", ": ", code]);
   let code2 = js_code_binary_result_nb("7", minus, "2", "5");
@@ -89,7 +89,7 @@ export function app_code_lesson_statement_name_average_two() {
     title_code: line_average,
     names,
     values_get,
-    example_values: [3, 7],
+    example_values: [1, 7],
     step,
     remember_lesson: app_code_lesson_statement_name_divide,
     remember_parts: [

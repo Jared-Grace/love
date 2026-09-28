@@ -1,3 +1,4 @@
+import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { js_operator_percent_symbol } from "./js_operator_percent_symbol.mjs";
@@ -15,6 +16,7 @@ import { app_code_lesson_statement_name_digit_split } from "./app_code_lesson_st
 export function app_code_lesson_statement_name_digit_rest() {
   arguments_assert(arguments, 0);
   ("the number left in front of a number's last digit: let rest = Math.floor(n / 10); - split from the last-digit lesson at the human's word, 2026-09-27, so each lesson teaches one line");
+  ("The writing is the human's, 2026-09-28, in three boxes: what is wanted, shown on both numbers; how the code gets it, on 123; and the same on 4567, then the line. Numbers in the writing are code, as the last-digit lesson writes them.");
   ("It follows the last-digit lesson and reminds it, since the two lines together take a number apart. The writing starts from that lesson's own numbers, 123 and 4567, so the reader sees the same numbers cut the other way. Not picked: explaining it by chairs in rows of 10, whose row is the rest, which the last-digit lesson had before it lost its chairs; and saying the division shifts the digits, which names a picture the reader has not been shown.");
   ("No answer is 0, and the five answers differ.");
   let names = ["n"];
@@ -64,12 +66,19 @@ export function app_code_lesson_statement_name_digit_rest() {
     remember_parts: ["we can get the last digit:"],
     remember_lines,
     explain: [
-      ["Now suppose we want all but the last digit of 123, which is 12"],
-      ["Dividing by 10 puts the last digit after the dot:"],
+      ["Suppose we have a whole number like ", "123", " or ", "4567"],
+      ["Suppose we want to remove the last digit, and keep everything else"],
+      ["For ", "123", " we remove the ", "3", " and keep the ", "12"],
+      ["For ", "4567", " we remove the ", "7", " and keep the ", "456"],
+      app_code_explain_container_next,
+      ["How do we get all but the last digit?"],
+      ["In code, first we divide by ", "10"],
+      ["This puts the last digit after the dot:"],
       ["", point],
-      ["Then ", floor_name, " rounds down, which drops the .3:"],
+      ["Then ", floor_name, " rounds down, which removes the .3:"],
       ["", whole],
-      ["The same works for 4567:"],
+      app_code_explain_container_next,
+      ["The same process works for ", "4567", ":"],
       ["", whole2],
       [
         "So dividing by 10 and rounding down always leaves all but the last digit",
