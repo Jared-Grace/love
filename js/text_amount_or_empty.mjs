@@ -1,5 +1,4 @@
-import { round } from "./round.mjs";
-import { multiply } from "./multiply.mjs";
+import { multiply_round } from "./multiply_round.mjs";
 import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
@@ -20,8 +19,7 @@ export function text_amount_or_empty(text) {
     let r2 = "";
     return r2;
   }
-  let n = multiply(p, 100);
-  let hundredths = round(n);
+  let hundredths = multiply_round(p, 100);
   let divided = divide(hundredths, 100);
   let r3 = String(divided);
   return r3;
