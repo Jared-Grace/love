@@ -1,10 +1,12 @@
+import { html_span } from "./html_span.mjs";
+import { app_code_code_dark_lines_comments } from "./app_code_code_dark_lines_comments.mjs";
+import { html_style_assign } from "./html_style_assign.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
 import { app_code_lesson_statement_name_grid_row } from "./app_code_lesson_statement_name_grid_row.mjs";
-import { app_code_line_pointed_draw } from "./app_code_line_pointed_draw.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
@@ -83,8 +85,13 @@ export function app_code_lesson_statement_name_grid_index() {
     html_span_text_content(line, ", found its ");
     app_code_span_text_highlight_color(line, row, color_row);
     html_span_text_content(line, ":");
-    let draw = app_code_line_pointed_draw(["", line_row], []);
-    draw(box);
+    ("the row line as a block of code, which wraps, since a chip is kept on one line and this one runs past a phone's width");
+    let parent = html_div(box);
+    let chip = html_span(parent);
+    app_code_code_dark_lines_comments(chip, line_row);
+    html_style_assign(chip, {
+      display: "block",
+    });
   }
   function values_get() {
     "four of the five lists, in a fresh order each screen";
