@@ -118,6 +118,18 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
     let pointed = not(b);
     let left4 = not(whole);
     let right2 = not(pointed);
+    if (pointed) {
+      ("THE NUMBERS A QUESTION IS ABOUT GLOW, asked by the human 2026-09-28: the two ends and the middle each get a soft halo in their own colour round the chip, and a taller, thicker tick with the same halo, so they stand out from the plain numbers at a glance. Not picked: a bigger chip, which would push into its neighbours on a line of halves; and an animated pulse, which pulls the eye away from the writing beside it");
+      let glow = text_combine("0 0 0.45em 0.15em ", color);
+      html_style_assign(chip, {
+        "box-shadow": glow,
+      });
+      html_style_assign(tick, {
+        height: "1.2em",
+        width: "5px",
+        "box-shadow": glow,
+      });
+    }
     if (and(left4, right2)) {
       html_style_assign(chip, {
         "font-size": "0.75em",
