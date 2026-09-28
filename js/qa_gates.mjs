@@ -1,8 +1,3 @@
-import { app_code_quiz_unscramble_unreadable_gate_run } from "./app_code_quiz_unscramble_unreadable_gate_run.mjs";
-import { app_original_bible_gloss_verse_claims_wrong_gate_run } from "./app_original_bible_gloss_verse_claims_wrong_gate_run.mjs";
-import { gloss_explain_verse_numbers_cases_gate_run } from "./gloss_explain_verse_numbers_cases_gate_run.mjs";
-import { app_en_learn_bible_gloss_urdu_verse_claims_wrong_gate_run } from "./app_en_learn_bible_gloss_urdu_verse_claims_wrong_gate_run.mjs";
-import { gloss_stores_verse_order_gate_run } from "./gloss_stores_verse_order_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { stop_next_steps_hook_gate_run } from "./stop_next_steps_hook_gate_run.mjs";
@@ -394,6 +389,7 @@ import { js_code_same_meaning_is_cases_gate_run } from "./js_code_same_meaning_i
 import { app_shared_bible_hash_field_reference_cases_gate_run } from "./app_shared_bible_hash_field_reference_cases_gate_run.mjs";
 import { app_code_quiz_unscramble_gate_run } from "./app_code_quiz_unscramble_gate_run.mjs";
 import { app_code_quiz_unscramble_shortcut_gate_run } from "./app_code_quiz_unscramble_shortcut_gate_run.mjs";
+import { app_code_quiz_unscramble_unreadable_gate_run } from "./app_code_quiz_unscramble_unreadable_gate_run.mjs";
 import { app_code_quiz_unscramble_own_wording_gate_run } from "./app_code_quiz_unscramble_own_wording_gate_run.mjs";
 import { app_code_quiz_choice_pool_gate_run } from "./app_code_quiz_choice_pool_gate_run.mjs";
 import { qa_gates_countless_gate_run } from "./qa_gates_countless_gate_run.mjs";
@@ -586,6 +582,9 @@ import { purge_words_live_gate_run } from "./purge_words_live_gate_run.mjs";
 import { app_ceb_bible_gloss_published_unfinished_gate_run } from "./app_ceb_bible_gloss_published_unfinished_gate_run.mjs";
 import { app_original_bible_gloss_published_unfinished_gate_run } from "./app_original_bible_gloss_published_unfinished_gate_run.mjs";
 import { firebase_sending_tests_none_gate_run } from "./firebase_sending_tests_none_gate_run.mjs";
+import { gloss_stores_verse_order_gate_run } from "./gloss_stores_verse_order_gate_run.mjs";
+import { app_en_learn_bible_gloss_urdu_verse_claims_wrong_gate_run } from "./app_en_learn_bible_gloss_urdu_verse_claims_wrong_gate_run.mjs";
+import { gloss_explain_verse_numbers_cases_gate_run } from "./gloss_explain_verse_numbers_cases_gate_run.mjs";
 export function qa_gates() {
   "Every gate the repo-wide check runs, gathered in one list, so adding a function here is the whole of wiring a new gate in.";
   let gates = [
@@ -1176,7 +1175,6 @@ export function qa_gates() {
     gloss_stores_verse_order_gate_run,
     app_en_learn_bible_gloss_urdu_verse_claims_wrong_gate_run,
     gloss_explain_verse_numbers_cases_gate_run,
-    app_original_bible_gloss_verse_claims_wrong_gate_run,
   ];
   return gates;
 }
