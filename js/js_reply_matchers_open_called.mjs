@@ -1,8 +1,8 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { reply_matchers_open } from "./reply_matchers_open.mjs";
 import { js_list_types_nodes } from "./js_list_types_nodes.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
@@ -18,8 +18,7 @@ export function js_reply_matchers_open_called(ast) {
   let calls = js_list_types_nodes(ast, ["CallExpression"]);
   function each_call(call) {
     let callee = property_get(call, "callee");
-    let kind = property_get(callee, "type");
-    let named = equal(kind, "Identifier");
+    let named = property_equals(callee, "type", "Identifier");
     if (not(named)) {
       return;
     }
