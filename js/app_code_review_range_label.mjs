@@ -7,7 +7,7 @@ export function app_code_review_range_label(lesson_number, scope) {
   let end = lesson_number;
   let left = subtract(lesson_number, scope);
   let start = add(left, 1);
-  let range = app_code_lessons_range_text(start, end);
-  let label = text_combine_multiple(["lessons ", range]);
+  let range_span = app_code_lessons_range_text(start, end);
+  let label = text_combine_multiple(["lessons ", range_span]);
   return label;
 }
