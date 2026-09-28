@@ -1,3 +1,4 @@
+import { multiply_round } from "./multiply_round.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -6,7 +7,6 @@ import { multiply } from "./multiply.mjs";
 import { exponent } from "./exponent.mjs";
 import { divide } from "./divide.mjs";
 import { subtract } from "./subtract.mjs";
-import { round } from "./round.mjs";
 import { math_number_clamp } from "./math_number_clamp.mjs";
 export function color_channel_from_light(light) {
   arguments_assert(arguments, 1);
@@ -28,8 +28,7 @@ export function color_channel_from_light(light) {
     let scaled = multiply(1.055, lifted);
     bent = subtract(scaled, 0.055);
   }
-  let full = multiply(bent, 255);
-  let whole = round(full);
+  let whole = multiply_round(bent, 255);
   let digit = math_number_clamp(whole, 0, 255);
   return digit;
 }
