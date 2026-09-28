@@ -1,10 +1,9 @@
+import { change_if_equal } from "./change_if_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_code_lines_writes_out_watched } from "./app_code_code_lines_writes_out_watched.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { equal } from "./equal.mjs";
-import { ternary } from "./ternary.mjs";
 import { list_map } from "./list_map.mjs";
 export function app_code_lesson_statement_name_shorter_above(
   root,
@@ -40,11 +39,14 @@ export function app_code_lesson_statement_name_shorter_above(
     short,
     " do exactly the same thing",
   ]);
-  html_div_cycle_code(box_short, ["", short, " is shorter and easier to type:"]);
+  html_div_cycle_code(box_short, [
+    "",
+    short,
+    " is shorter and easier to type:",
+  ]);
   function line_shortened(line) {
     "the line itself, or the short way of writing it where it is the long one";
-    let is_long = equal(line, long);
-    let shortened = ternary(is_long, short, line);
+    let shortened = change_if_equal(line, long, short);
     return shortened;
   }
   let lines_short = list_map(lines_long, line_shortened);
