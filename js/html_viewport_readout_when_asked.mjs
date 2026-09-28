@@ -77,6 +77,27 @@ export function html_viewport_readout_when_asked(bar) {
             " style top " +
             element.style.top,
         );
+        ("each button in the bar is listed with where it sits and whether it is shown at all, because the bar measured still at the top on a phone while the human saw its first button gone, 2026-09-28 - so the next question is which of the bar's own things moved or went");
+        for (let button of element.querySelectorAll("button")) {
+          let box_button = button.getBoundingClientRect();
+          let style = getComputedStyle(button);
+          bars.push(
+            "  button " +
+              button.textContent.slice(0, 24) +
+              " top " +
+              round(box_button.top) +
+              " bottom " +
+              round(box_button.bottom) +
+              " left " +
+              round(box_button.left) +
+              " right " +
+              round(box_button.right) +
+              " " +
+              style.display +
+              " " +
+              style.visibility,
+          );
+        }
       }
     }
     let v = bars.join("\n");
