@@ -38,11 +38,11 @@ export function color_oklch_channels(lightness, chroma, hue) {
     let digit = color_channel_from_light(light);
     return digit;
   }
-  let digits = linear.map(each_light);
+  let digits_seen = linear.map(each_light);
   let channels = {
-    red: digits[0],
-    green: digits[1],
-    blue: digits[2],
+    red: digits_seen[0],
+    green: digits_seen[1],
+    blue: digits_seen[2],
   };
   return channels;
 }
