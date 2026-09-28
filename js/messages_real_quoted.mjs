@@ -1,3 +1,4 @@
+import { list_map_property_unique } from "./list_map_property_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_repo_love } from "./folder_repo_love.mjs";
 import { git_files_tracked_folder } from "./git_files_tracked_folder.mjs";
@@ -30,8 +31,7 @@ export async function messages_real_quoted() {
     list_add(kept, f_path);
   }
   let records = await app_message_private_records();
-  let list = list_map_property(records, "message");
-  let texts = list_unique(list);
+  let texts = list_map_property_unique(records, "message");
   list_empty_not_is_assert_json(texts, {
     fault:
       "no messages have been brought down to this machine, so nothing could be checked",
