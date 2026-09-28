@@ -12,12 +12,12 @@ export async function gloss_chapters_pointers_verdicts_generic(
   "It reads every chapter the store holds and writes nothing back. The tally is what turns a bare count of what is left into an account of whether any of it can still be won without a person.";
   let chapter_codes = await gloss_chapters_stored(fn);
   async function chapter_read(chapter_code) {
-    let verdicts = await gloss_chapter_pointers_verdicts_generic(
+    let verdicts_inner = await gloss_chapter_pointers_verdicts_generic(
       chapter_code,
       fn,
       lambda$pointer_is,
     );
-    return verdicts;
+    return verdicts_inner;
   }
   let nested = await list_map_async(chapter_codes, chapter_read);
   let verdicts = list_flat(nested);
