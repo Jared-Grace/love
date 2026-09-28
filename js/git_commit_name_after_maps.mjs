@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { git_commit_map_name_after } from "./git_commit_map_name_after.mjs";
@@ -5,7 +6,6 @@ import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 export function git_commit_name_after_maps(reads, commit) {
   "$plain commit";
   "What a commit name written down before some rewrites is called now, walked through the given records in order, with the renamings it went through named one by one.";
@@ -33,8 +33,7 @@ export function git_commit_name_after_maps(reads, commit) {
       now = after;
     }
   }
-  let b3 = list_empty_is(steps);
-  let renamed = not(b3);
+  let renamed = list_empty_not_is(steps);
   let r = {
     commit,
     renamed,
