@@ -1,9 +1,9 @@
+import { text_lower_is } from "./text_lower_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { text_letters_only } from "./text_letters_only.mjs";
 import { equal } from "./equal.mjs";
 import { text_upper_to } from "./text_upper_to.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { less_than } from "./less_than.mjs";
@@ -25,8 +25,7 @@ export function bible_glyph_name_letters_or_null(text) {
     let first = letters.slice(0, 1);
     let right = text_upper_to(first);
     let upper = equal(first, right);
-    let right2 = text_lower_to(first);
-    let lower = equal(first, right2);
+    let lower = text_lower_is(first);
     let capital = upper && not(lower);
     if (capital) {
       list_add(found, letters);
