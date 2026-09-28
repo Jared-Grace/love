@@ -1,5 +1,5 @@
+import { divide_floor } from "./divide_floor.mjs";
 import { math_min } from "./math_min.mjs";
-import { floor } from "./floor.mjs";
 import { round } from "./round.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
@@ -42,11 +42,9 @@ export async function picture_frame_write(
   let top2 = multiply(size.width, want_down);
   let b2 = divide(top2, want_across);
   let fit_down = math_min(size.height, b2);
-  let p = divide(fit_across, 2);
-  let left = floor(p);
+  let left = divide_floor(fit_across, 2);
   let kept_across = multiply(left, 2);
-  let p2 = divide(fit_down, 2);
-  let left2 = floor(p2);
+  let left2 = divide_floor(fit_down, 2);
   let kept_down = multiply(left2, 2);
   let left3 = subtract(size.width, kept_across);
   let n = multiply(left3, across);
