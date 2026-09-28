@@ -1,3 +1,4 @@
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { child_output_wait_code } from "./child_output_wait_code.mjs";
@@ -62,8 +63,7 @@ export async function git_folder_grep_case_blind_paths(folder, pattern) {
   }
   let lines = text_split_newline(text);
   function lambda(line) {
-    let nothing = text_empty_is(line);
-    let kept = not(nothing);
+    let kept = text_empty_not_is(line);
     return kept;
   }
   let named = list_filter(lines, lambda);
