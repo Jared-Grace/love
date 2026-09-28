@@ -35,6 +35,17 @@ whatever happened to the tokens inside it, so that is what decides.  The words
 are lined up as well where the two agree about how many there are, and where they
 do not the piece is counted as unlined rather than guessed at.
 
+A PRONUNCIATION MENDED AFTER THE LAST DOOR IS IN NO DOOR, SO THE HISTORY IS
+ASKED INSTEAD.  The doors mark changes to the code; a name added to the hand
+list or the lexicon is a change to data, made any day.  Before this was asked,
+every chapter recorded after the newest door counted as current, and 17 WEB
+chapters saying Cush, Matthew and four other names the old way were reported as
+nothing to do.  So for those chapters the two files are fetched from git as they
+stood when the chapter's first piece was written, and a chapter is read only
+when it holds a word the two dictionaries disagree about.  The reading is loaded
+once per recording process, so a file changed mid-run is missed for the rest of
+that run; the chapter's own time is the nearest thing on disk to that moment.
+
 The halves are reported apart, and both are named rather than merely counted.
 They cost different amounts and are worth doing in different orders - a chapter
 with a word missing outright is worse than one saying a name wrongly, so the
