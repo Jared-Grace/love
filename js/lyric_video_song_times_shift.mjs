@@ -1,8 +1,7 @@
+import { multiply_round } from "./multiply_round.mjs";
 import { add } from "./add.mjs";
-import { round } from "./round.mjs";
 import { equal } from "./equal.mjs";
 import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
 import { lyric_video_songs_folder } from "./lyric_video_songs_folder.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { path_join } from "./path_join.mjs";
@@ -28,8 +27,7 @@ export async function lyric_video_song_times_shift(name, seconds) {
       return r3;
     }
     let moved_to = add(seconds_before, seconds_number);
-    let n = multiply(moved_to, 100000);
-    let top = round(n);
+    let top = multiply_round(moved_to, 100000);
     let r = divide(top, 100000);
     return r;
   }
