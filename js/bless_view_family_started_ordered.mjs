@@ -1,3 +1,4 @@
+import { list_map_filter } from "./list_map_filter.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_view_family_started } from "./bless_view_family_started.mjs";
 import { bless_view_people } from "./bless_view_people.mjs";
@@ -6,7 +7,6 @@ import { set_to_list } from "./set_to_list.mjs";
 import { bless_person_place } from "./bless_person_place.mjs";
 import { bless_place_members } from "./bless_place_members.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_min } from "./list_min.mjs";
 import { bless_blessed_key } from "./bless_blessed_key.mjs";
 import { set_includes } from "./set_includes.mjs";
@@ -41,8 +41,7 @@ export function bless_view_family_started_ordered(blessed, view) {
   function person_started_when(person) {
     let household = person_household(person);
     let members = bless_place_members("family", household);
-    let keys = list_map(members, member_key);
-    let said = list_filter(keys, key_said_is);
+    let said = list_map_filter(members, member_key, key_said_is);
     let positions = list_map(said, key_position);
     let earliest = list_min(positions);
     return earliest;
