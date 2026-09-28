@@ -18,8 +18,8 @@ export function app_code_kinds_introduced_report() {
     "this lesson, if some of its lines do not carry what it brings in";
     let carrying = property_get(entry, "carrying");
     let lines = property_get(entry, "lines");
-    let partly = equal_not(carrying, lines);
-    return partly;
+    let partly_inner = equal_not(carrying, lines);
+    return partly_inner;
   }
   let partly = list_filter(introduced, partly_is);
   let whole = list_size(introduced);
