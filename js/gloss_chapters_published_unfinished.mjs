@@ -1,8 +1,7 @@
+import { property_list_map_property } from "./property_list_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { gloss_chapters_write_coverage_generic } from "./gloss_chapters_write_coverage_generic.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { firebase_function_chapters_uploaded } from "./firebase_function_chapters_uploaded.mjs";
 import { list_intersection } from "./list_intersection.mjs";
 import { list_size } from "./list_size.mjs";
@@ -23,8 +22,11 @@ export async function gloss_chapters_published_unfinished(
   arguments_assert(arguments, 3);
   let chapter_codes = await gloss_chapters_stored(fn);
   let coverage = await gloss_chapters_write_coverage_generic(fn, passages_read);
-  let waiting = property_get(coverage, "waiting");
-  let waiting_codes = list_map_property(waiting, "chapter_code");
+  let waiting_codes = property_list_map_property(
+    coverage,
+    "waiting",
+    "chapter_code",
+  );
   let f_name = namespace_read();
   let published = await firebase_function_chapters_uploaded(f_name);
   let offenders = list_intersection(waiting_codes, published);
