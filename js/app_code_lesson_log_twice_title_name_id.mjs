@@ -1,14 +1,12 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { app_code_lesson_statement_title_code_dots_paint_get } from "./app_code_lesson_statement_title_code_dots_paint_get.mjs";
+import { app_code_lesson_statement_title_paint_times_get } from "./app_code_lesson_statement_title_paint_times_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_console_log_name } from "./js_console_log_name.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_code_statement } from "./js_code_statement.mjs";
-import { html_span_text } from "./html_span_text.mjs";
-import { app_code_placeholder_dots } from "./app_code_placeholder_dots.mjs";
-import { html_span } from "./html_span.mjs";
-import { html_style_white_space } from "./html_style_white_space.mjs";
-import { app_code_code_tile } from "./app_code_code_tile.mjs";
 import { app_code_lesson_statement_title_name_id_paint } from "./app_code_lesson_statement_title_name_id_paint.mjs";
 export function app_code_lesson_log_twice_title_name_id() {
   arguments_assert(arguments, 0);
@@ -26,20 +24,14 @@ export function app_code_lesson_log_twice_title_name_id() {
   let opening = text_combine(left, right);
   let code = js_code_parenthesis_right();
   let closing = js_code_statement(code);
-  function fill(host) {
-    "the line with its gap: console.log( then the grey dots then );";
-    html_span_text(host, opening);
-    app_code_placeholder_dots(host);
-    html_span_text(host, closing);
-  }
-  function paint_code(parent) {
-    "the line drawn as one code tile, and then the count outside it";
-    "The count is not code, so it stands outside the tile in plain text. Drawn inside the tile, it read as five more characters the line has. The tile and the count share one span that refuses to wrap, so the count never lands alone on a row of its own.";
-    let row = html_span(parent);
-    html_style_white_space(row, "nowrap");
-    app_code_code_tile(row, fill);
-    html_span_text(row, " (x2)");
-  }
+  ("the line with its gap, the grey dots inside the parentheses, in the title tile, then the count outside it. The count is not code, so it stands outside the tile in plain text: drawn inside the tile, it read as five more characters the line has");
+  ("The tile is the one every other title piece is drawn in, which breaks between tokens, rather than the code tile of the lessons themselves, which never breaks: held to one row with the count glued after it, the line ran fifteen pixels past a phone screen with the text size turned up, and the whole page slid, 2026-09-28");
+  let line = text_combine_multiple([opening, "...", closing]);
+  let tile_paint = app_code_lesson_statement_title_code_dots_paint_get(line);
+  let paint_code = app_code_lesson_statement_title_paint_times_get(
+    tile_paint,
+    2,
+  );
   let built = app_code_lesson_statement_title_name_id_paint(words, paint_code);
   return built;
 }

@@ -1,4 +1,4 @@
-import { greater_than } from "./greater_than.mjs";
+import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { property_get } from "./property_get.mjs";
@@ -9,7 +9,7 @@ export function lyric_video_song_swaps_narrow(listed, folder_name) {
   "$plain folder_name";
   "Keeps only the places whose candidates include a picture from the named folders, and only those candidates; keeps every place and every candidate when no folder is named.";
   "NAMING NO FOLDER KEEPS EVERYTHING rather than keeping nothing, because the address that names none is the plain address, and a plain address showing an empty screen would read as a broken page.";
-  "SEVERAL FOLDERS ARE NAMED WITH COMMAS BETWEEN THEM, and naming folders asks to compare exactly those: the other candidates and the original are left off, so a place shows the named pictures side by side and nothing else.";
+  "SEVERAL FOLDERS ARE NAMED WITH COMMAS BETWEEN THEM, and naming folders asks to compare exactly those: the other candidates and the original are left off, so a place shows the named pictures side by side and nothing else. A PLACE IS KEPT ONLY WHEN EVERY NAMED FOLDER OFFERS A PICTURE THERE, because a place holding a picture from only one of them has nothing to be compared with, and a single picture among pairs reads as a pair that failed to load.";
   "THE FOLDER IS MATCHED WITH ITS SEPARATORS AROUND IT, so a folder named range does not also catch the folder named range_open, which holds it as the front of its own name.";
   "IT ANSWERS WITH A NEW LIST AND CHANGES NOTHING, because what is shown is a question about the moment and what is recorded is a decision; narrowing the second to match the first would throw away choices nobody asked to lose.";
   arguments_assert(arguments, 2);
@@ -32,8 +32,8 @@ export function lyric_video_song_swaps_narrow(listed, folder_name) {
         }
       }
     }
-    let any = greater_than(offered_kept.length, 0);
-    if (any) {
+    let every = equal(offered_kept.length, names.length);
+    if (every) {
       list_add(kept, {
         ...swap,
         after: offered_kept,
