@@ -1,3 +1,4 @@
+import { js_identifier_named_try } from "./js_identifier_named_try.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { js_literal_is } from "./js_literal_is.mjs";
@@ -5,9 +6,7 @@ import { js_literal_value_get } from "./js_literal_value_get.mjs";
 import { text_is } from "./text_is.mjs";
 import { js_call_is } from "./js_call_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { equal } from "./equal.mjs";
 export function js_prose_part_is(node) {
   arguments_assert(arguments, 1);
   ("Whether this piece of a paragraph is only a name being spelled out, rather than something that does anything.");
@@ -30,8 +29,7 @@ export function js_prose_part_is(node) {
   let call_is = js_call_is(node);
   if (call_is) {
     let callee = property_get(node, "callee");
-    let called = js_identifier_name_try(callee);
-    let naming_is = equal(called, fn_name("fn_name"));
+    let naming_is = js_identifier_named_try(callee, fn_name("fn_name"));
     return naming_is;
   }
   return false;
