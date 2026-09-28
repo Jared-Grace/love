@@ -1,8 +1,8 @@
+import { divide_floor } from "./divide_floor.mjs";
 import { app_code_chair_circle } from "./app_code_chair_circle.mjs";
 import { app_code_chair_emoji } from "./app_code_chair_emoji.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { divide } from "./divide.mjs";
-import { floor } from "./floor.mjs";
 import { multiply } from "./multiply.mjs";
 import { html_div } from "./html_div.mjs";
 import { text_to } from "./text_to.mjs";
@@ -28,8 +28,7 @@ export function app_code_chair_grid(parent, count, width, marked) {
   ("a picture of chairs numbered from 0 in rows of width: row numbers down the left in the third pointing colour, column numbers across the top in the fourth, each a code chip as numbers in the writing are, every chair in a whole row before the marked chair's row filled blue and the marked chair filled green, so a reader can count the chairs that come before it");
   ("count is how many chairs are drawn; the last row may be short, as a real list's is");
   ("Each chair shows the chair emoji above its number, asked by the human 2026-09-27, so the numbered grid is seen to be the same chairs as the plain picture of chairs drawn before it.");
-  let p = divide(marked, width);
-  let rows_before = floor(p);
+  let rows_before = divide_floor(marked, width);
   let start = multiply(rows_before, width);
   let grid = html_div(parent);
   let t = text_to(width + 1);
