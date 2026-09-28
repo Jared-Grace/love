@@ -16,9 +16,9 @@ export function app_shared_date_time_edit(parent, date, time, on_change) {
   html_value_set(date_input, date);
   html_value_set(time_input, time);
   function changed() {
-    let date_now = html_value_get(date_input);
+    let date_now_value = html_value_get(date_input);
     let time_now = html_value_get(time_input);
-    on_change(date_now, time_now);
+    on_change(date_now_value, time_now);
   }
   html_on(date_input, "change", changed);
   html_on(time_input, "change", changed);
