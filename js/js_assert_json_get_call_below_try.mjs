@@ -4,9 +4,7 @@ import { js_node_type_is } from "./js_node_type_is.mjs";
 import { not } from "./not.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { property_get } from "./property_get.mjs";
-import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { equal } from "./equal.mjs";
 import { list_size_2 } from "./list_size_2.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_identifier_named_try } from "./js_identifier_named_try.mjs";
@@ -39,8 +37,7 @@ export function js_assert_json_get_call_below_try(
       return;
     }
     let callee = property_get(call, "callee");
-    let callee_name = js_identifier_name_try(callee);
-    let asked = equal(callee_name, fn_name("assert_json_get"));
+    let asked = js_identifier_named_try(callee, fn_name("assert_json_get"));
     if (not(asked)) {
       return;
     }
