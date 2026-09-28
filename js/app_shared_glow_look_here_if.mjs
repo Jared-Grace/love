@@ -3,7 +3,6 @@ import { app_shared_glow_look_here } from "./app_shared_glow_look_here.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 export function app_shared_glow_look_here_if(condition, element) {
   "Lights the look-here pulse round an element while it is what the player is being asked to press next, and stops it once it is not.";
-  "Stopped by taking the animation away and nothing else, unlike a glow being cleared for good. A tile can wear a steady shadow of its own, set before this is asked, and that shadow is what it goes back to showing once the pulse stops - clearing the shadow as well would take the tile's own light with it.";
   "The light is a layer behind the element that the stylesheet fades, so switching it is a mark put on and taken off - never the shadow of the element itself, which a tile already wears for a meaning of its own.";
   "Rounded from the shared radius first, because the layer takes the corners of the element and a plain holder such as a label has none.";
   arguments_assert(arguments, 2);
