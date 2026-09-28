@@ -53,7 +53,7 @@ export function app_code_title_strip(
   ("THREE tracks: home and the arrow back start the first, the title takes the middle, and the arrow on start the third, which is the same width as the first so the middle track sits in the middle of the strip. It reads centered only while the title is short - on a long lesson name the row is wider than the column, so the ends run off the edges, and that is what a reader sees on the longest lessons. The middle track is sized to its content and so shrinks and wraps when it has to, rather than pushing the controls out of the strip");
   html_style_assign(strip, {
     display: "grid",
-    "grid-template-columns": "1fr auto 1fr",
+    "grid-template-columns": "1fr minmax(0, auto) 1fr",
     "justify-items": "start",
     "align-items": "center",
     "column-gap": column_gap,
@@ -88,7 +88,11 @@ export function app_code_title_strip(
     "font-size": font_size,
     opacity: "0.6",
     "line-height": "1.5",
+    "overflow-wrap": "anywhere",
+    "min-width": "0",
+    "justify-self": "stretch",
   });
+  ("a line of code in the title may break when it is wider than the whole title: code has few spaces, so on a phone with the text size turned up a line like let rest = Math.floor(n / 10); was wider than the screen and ran off the right edge, at the human's request, 2026-09-28. The middle track is floored at nothing (minmax(0, auto)), and so is the title in it (min-width 0 - a grid item otherwise refuses to be narrower than its longest unbroken piece), and the title is stretched to the track (the strip starts its items, which sizes each to its own content and let the title spill over the arrow on). anywhere, not the break-word the home list rows use: the code tile sizes itself to its own content, and only anywhere lets that content get narrower - break-word left the tile running off the edge. Where the title is too narrow for a whole word, anywhere and break-word both split it, so nothing is lost by choosing anywhere");
   ("the lines of the title are spaced the way the home list spaces the same title, because a title that wraps carries its code tile onto the second line, and the tile's dark ground is taller than tightly packed lines - so at the plain spacing it covered the bottom of the line above, at the human's request");
   if (complete) {
     ("on the green bar the title is not muted: the fade that keeps it quiet on the plain bar washes it into the green, so it is written full strength in a deep green that reads against the light one, at the human's request");

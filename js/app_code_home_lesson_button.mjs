@@ -1,3 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
+import { html_style_overflow_wrap } from "./html_style_overflow_wrap.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_screen_go_tab } from "./app_shared_screen_go_tab.mjs";
@@ -38,6 +40,11 @@ export function app_code_home_lesson_button(
   let gap = app_shared_spaced_gap();
   html_style_margin_top(button, gap);
   let title = property_get(r, "title");
+  ("the title may break a line of its code when that line is wider than the whole title, like the title at the top of the lesson - code has few spaces, so with the text size turned up on a phone it ran off the right edge, at the human's request, 2026-09-28");
+  ("anywhere, not break-word: the code tile sizes itself to its own content, and only anywhere lets that content get narrower. The title is already as wide as its column, which the row lets shrink to fit (",
+    fn_name("app_shared_button_numbered"),
+    ")");
+  html_style_overflow_wrap(title, "anywhere");
   app_code_lesson_title_render(title, item);
   let complete_all_previous_next = property_get(
     r,
