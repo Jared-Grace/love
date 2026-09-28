@@ -11,9 +11,9 @@ export function audio_master_compressor_ratio(decibels_peak, decibels_gain) {
   "★ THE ROOM BELOW THE CEILING IS EXACTLY THE RANGE, WHICH IS WHY THE SUM IS THIS SHORT. The threshold is placed the range below the finished ceiling, so the space the squeezed sound has to land in is that same range and nothing else. Dividing the distance up to the peak by that room gives the ratio directly, with no reference to the gain, because the gain has already been taken out of the threshold.";
   "A recording whose loudest instant already sits under the ceiling gets a ratio of one, which is to say no squeezing at all. Nothing needs holding down, and a ratio below one would turn the quiet parts up rather than the loud parts down, which is the opposite of what was asked for.";
   let threshold = audio_master_compressor_threshold_decibels(decibels_gain);
-  let range = audio_master_compressor_range_decibels();
+  let range_span = audio_master_compressor_range_decibels();
   let above_threshold = subtract(decibels_peak, threshold);
-  let wanted = divide(above_threshold, range);
+  let wanted = divide(above_threshold, range_span);
   if (greater_than(1, wanted)) {
     let r2 = 1;
     return r2;
