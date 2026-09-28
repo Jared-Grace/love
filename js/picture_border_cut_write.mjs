@@ -1,5 +1,5 @@
+import { multiply_round } from "./multiply_round.mjs";
 import { divide_floor } from "./divide_floor.mjs";
-import { round } from "./round.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -24,10 +24,8 @@ export async function picture_border_cut_write(
   arguments_assert(arguments, 3);
   let fraction = Number(fraction_edge);
   let size = await picture_size(path_from);
-  let n = multiply(size.width, fraction);
-  let at_across = round(n);
-  let n2 = multiply(size.height, fraction);
-  let at_down = round(n2);
+  let at_across = multiply_round(size.width, fraction);
+  let at_down = multiply_round(size.height, fraction);
   let right = multiply(at_across, 2);
   let top = subtract(size.width, right);
   let left = divide_floor(top, 2);
