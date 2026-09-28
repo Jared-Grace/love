@@ -204,6 +204,10 @@ export async function app_replace_rule_set(context) {
     );
   }
   function button_rule_on_click_inner(index) {
+    "a finished lesson has no rule left to choose, so a press changes nothing";
+    if (property_get(success_held, "success")) {
+      return;
+    }
     let index_selected4 = property_get(index_selected_held, "index_selected");
     let app_replace_rule_set_button_rule_on_click_inner_answer =
       app_replace_rule_set_button_rule_on_click_inner(index, index_selected4);

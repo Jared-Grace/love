@@ -15,7 +15,7 @@ export function app_replace_rule_set_refresh_rb(
   let index_selected = property_get(state, "index_selected");
   let success = property_get(state, "success");
   let selected = equal(rule_index, index_selected);
-  let enabled = true;
+  let enabled = not(success);
   html_enable_if(rule_button, enabled);
   app_replace_lefts_rights_style(rule_button, selected || success, success);
   let c = app_replace_rule_set_rule_background_color(
