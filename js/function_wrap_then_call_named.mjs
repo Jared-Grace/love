@@ -19,7 +19,11 @@ import { js_find_return } from "./js_find_return.mjs";
 import { property_set } from "./property_set.mjs";
 import { js_returns_empty_last_remove } from "./js_returns_empty_last_remove.mjs";
 import { js_declaration_unused_to_expression } from "./js_declaration_unused_to_expression.mjs";
-export async function function_wrap_then_call(f_name, then_fn, f_name_wrapper) {
+export async function function_wrap_then_call_named(
+  f_name,
+  then_fn,
+  f_name_wrapper,
+) {
   arguments_assert(arguments, 3);
   ("Writes a new function that calls the first, then calls then_fn, and returns nothing. When then_fn takes one parameter it is handed the first function's answer; when it takes none it is called with nothing, and the answer is dropped. Either name may be an alias; asked by the human 2026-09-28.");
   ("A then_fn of two or more parameters is refused rather than guessed at: only one of them could be the answer, and a generated call carries the other parameters' own names, which name nothing where the call lands. Not picked: handing the answer to the first of several, which writes a call that throws when run.");
