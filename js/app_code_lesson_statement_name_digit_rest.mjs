@@ -61,11 +61,11 @@ export function app_code_lesson_statement_name_digit_rest() {
   let color = app_code_highlight_color();
   let color2 = app_code_highlight_color_second();
   let pointers = [
-    [["3"], color],
-    [["7"], color2],
+    [["12"], color],
+    [["456"], color2],
   ];
   function pointed(parts) {
-    "a line whose last digits wear the colours the last-digit lesson gives them, the 3 of 123 blue and the 7 of 4567 green, so the digit removed here is seen to be the one found there, asked by the human 2026-09-28";
+    "a line whose kept digits wear the colours, the 12 of 123 blue and the 456 of 4567 green, wherever they are said or worked out, so what this line keeps is seen through every step; the last digit stays plain, since it is what is taken away. Asked by the human 2026-09-28, in place of the last digits coloured as the last-digit lesson colours them";
     let draw = app_code_line_last_digit_pointed_draw(parts, pointers);
     return draw;
   }
@@ -91,6 +91,10 @@ export function app_code_lesson_statement_name_digit_rest() {
     " and keep the ",
     "456",
   ]);
+  let v4 = pointed(["", point]);
+  let v5 = pointed(["", whole]);
+  let v6 = pointed(["The same process works for ", "4567", ":"]);
+  let v7 = pointed(["", whole2]);
   let lesson = app_code_lesson_statement_formula({
     words: "All but the last digit",
     title_code: line_rest,
@@ -110,12 +114,12 @@ export function app_code_lesson_statement_name_digit_rest() {
       ["How do we get all but the last digit?"],
       ["In code, first we divide by ", "10"],
       ["This puts the last digit after the dot:"],
-      ["", point],
+      v4,
       ["Then ", floor_name, " rounds down, which removes the .3:"],
-      ["", whole],
+      v5,
       app_code_explain_container_next,
-      ["The same process works for ", "4567", ":"],
-      ["", whole2],
+      v6,
+      v7,
       [
         "So dividing by 10 and rounding down always leaves all but the last digit",
       ],
