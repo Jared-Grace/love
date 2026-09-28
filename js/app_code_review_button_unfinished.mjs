@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_course_unfinished_next } from "./app_code_course_unfinished_next.mjs";
 import { null_is } from "./null_is.mjs";
@@ -26,8 +27,7 @@ export function app_code_review_button_unfinished(context, parent, number) {
     let lessons = app_code_lessons();
     let in_order = list_get_or_null(lessons, number);
     let id_in_order = property_get(in_order, "id");
-    let unfinished = property_get(way, "lesson");
-    let id_unfinished = property_get(unfinished, "id");
+    let id_unfinished = property_path_get_2(way, "lesson", "id");
     let same = equal(id_in_order, id_unfinished);
     if (same) {
       return null;
