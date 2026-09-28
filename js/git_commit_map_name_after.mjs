@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { git_commit_map_names_matching } from "./git_commit_map_names_matching.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -20,7 +21,6 @@ export function git_commit_map_name_after(read, commit) {
       name +
       ", so there is no one commit it was renamed to - write the name out further and ask again",
   );
-  let old_to_new = property_get(read, "old_to_new");
-  let after = property_get(old_to_new, only);
+  let after = property_path_get_2(read, "old_to_new", only);
   return after;
 }
