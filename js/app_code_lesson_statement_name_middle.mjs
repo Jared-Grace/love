@@ -108,8 +108,8 @@ export function app_code_lesson_statement_name_middle() {
   );
   function middle_worded(parts) {
     "a line whose word middle wears the middle colour, as the number line and the average lesson colour it, asked by the human 2026-09-28";
-    let draw = app_code_line_ends_middle_draw(parts, [], ["middle"]);
-    return draw;
+    let draw_inner = app_code_line_ends_middle_draw(parts, [], ["middle"]);
+    return draw_inner;
   }
   let middle_sum = middle_worded([
     "So to find the number in the ",
