@@ -6,6 +6,7 @@ import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
+import { list_is_assert_json } from "./list_is_assert_json.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { each_index } from "./each_index.mjs";
 import { each } from "./each.mjs";
@@ -22,6 +23,7 @@ export function gloss_passages_entries_collect_generic(
   "The chapter is laid out whole before any single explanation is looked at, because an explanation in the first passage may well be talking about the last verse in the chapter, and a reading that had only got as far as its own passage could not answer it.";
   "Each explanation arrives as one thing rather than as five arguments, so a reading that wants three of them names three and a reading that wants one names one. What it gives back is a list, since one explanation can make more than one claim and can make none.";
   "Where the explanation stands among its own passage's words comes with it, and so do those words in order, because an explanation that says which word comes just before it cannot be settled by the chapter's verses at all - only by the line it is standing in.";
+  "★ THE READER IS MADE TO PROVE IT ANSWERS WITH A LIST, BECAUSE A READER THAT ANSWERS WITH ONE WORD INSTEAD FAILS IN SILENCE AND LOOKS EXACTLY LIKE WORKING. A word walked as a list gives up its letters one at a time, so a verse would be keyed by letters and two words would count as the same word for sharing a letter - every claim settled, every answer wrong, nothing thrown. This is the one place every store's reader is asked its first question, so one check here covers all of them. Met on 2026-09-28: the sweep over every chapter was moved to the list reader and the single-chapter reading beside it was not, and only the sweep has a gate.";
   let word_key = app_shared_gloss_bible_generate_generic_word();
   let explain_key = gloss_entry_explain_key();
   let verse_numbers = gloss_passages_verse_numbers(passages);
@@ -43,6 +45,10 @@ export function gloss_passages_entries_collect_generic(
       let word = property_get(entry, word_key);
       let explain = property_get(entry, explain_key);
       let keys = word_keys_read(word);
+      list_is_assert_json(keys, {
+        word,
+        keys,
+      });
       let context = {
         verses_key,
         word,
