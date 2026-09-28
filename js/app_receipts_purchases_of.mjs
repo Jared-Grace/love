@@ -1,4 +1,4 @@
-import { equal } from "./equal.mjs";
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_receipts_purchases_store } from "./app_receipts_purchases_store.mjs";
 import { indexeddb_get_all_backend } from "./indexeddb_get_all_backend.mjs";
@@ -17,8 +17,7 @@ export async function app_receipts_purchases_of(folder_code) {
     store,
   );
   function of_folder(purchase) {
-    let left = property_get(purchase, "folder_code");
-    let r = equal(left, folder_code);
+    let r = property_equals(purchase, "folder_code", folder_code);
     return r;
   }
   let mine = list_filter(all, of_folder);
