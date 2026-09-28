@@ -98,8 +98,8 @@ export async function lyric_video_song_lines_moved_write(
     function placed(seconds) {
       let left2 = subtract(seconds, first);
       let top = multiply_round(start + multiply(left2, scale), 1000);
-      let r = divide(top, 1000);
-      return r;
+      let placed_seconds = divide(top, 1000);
+      return placed_seconds;
     }
     for (let word of words) {
       word.start = placed(word.start);
