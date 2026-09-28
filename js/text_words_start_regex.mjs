@@ -1,9 +1,8 @@
+import { list_map_join_separator } from "./list_map_join_separator.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { text_word_regex_plain_assert } from "./text_word_regex_plain_assert.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_join } from "./list_join.mjs";
 export function text_words_start_regex(words) {
   arguments_assert(arguments, 1);
   ("Several words at once, written as the single pattern that finds any one of them where it begins a word and lets it run on to whatever ending follows.");
@@ -19,8 +18,7 @@ export function text_words_start_regex(words) {
     text_word_regex_plain_assert(word);
     return word;
   }
-  let checked = list_map(words, lambda);
-  let joined = list_join(checked, "|");
+  let joined = list_map_join_separator(words, lambda, "|");
   let pattern = "\\b(" + joined + ")\\w*";
   return pattern;
 }
