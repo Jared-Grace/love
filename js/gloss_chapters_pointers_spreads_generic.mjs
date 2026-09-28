@@ -16,8 +16,11 @@ export async function gloss_chapters_pointers_spreads_generic(
   async function chapter_read(chapter_code) {
     let read = await gloss_chapter_passages_collect_all(chapter_code, fn);
     let passages = property_get(read, "collected");
-    let spreads = gloss_passages_pointers_spreads(passages, lambda$pointer_is);
-    return spreads;
+    let spreads_inner = gloss_passages_pointers_spreads(
+      passages,
+      lambda$pointer_is,
+    );
+    return spreads_inner;
   }
   let nested = await list_map_async(chapter_codes, chapter_read);
   let spreads = list_flat(nested);
