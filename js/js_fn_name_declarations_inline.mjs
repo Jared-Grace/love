@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_declarations_single_rows } from "./js_declarations_single_rows.mjs";
 import { js_rebound_names } from "./js_rebound_names.mjs";
@@ -10,7 +11,6 @@ import { not } from "./not.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { js_name_single_binding_is } from "./js_name_single_binding_is.mjs";
 import { js_identifiers_referenced_named_nodes } from "./js_identifiers_referenced_named_nodes.mjs";
-import { equal } from "./equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { list_first } from "./list_first.mjs";
@@ -66,8 +66,7 @@ export function js_fn_name_declarations_inline(ast) {
     let id = property_get(row, "id");
     let mentions = js_identifiers_referenced_named_nodes(ast, name);
     function other_is(node) {
-      let b = equal(node, id);
-      let is = not(b);
+      let is = equal_not(node, id);
       return is;
     }
     let reads = list_filter(mentions, other_is);
