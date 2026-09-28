@@ -1,3 +1,4 @@
+import { text_size_1 } from "./text_size_1.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
@@ -5,7 +6,6 @@ import { not } from "./not.mjs";
 import { list_first } from "./list_first.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
-import { text_size } from "./text_size.mjs";
 import { or } from "./or.mjs";
 export function gloss_explain_clause_claim_word_or_null(quoted) {
   "Which word one thought inside an explanation is making its claim about: the empty text when it is the word being explained, the quoted word when it is some other word, and nothing at all when it cannot be told.";
@@ -31,8 +31,7 @@ export function gloss_explain_clause_claim_word_or_null(quoted) {
   let only = list_first(quoted);
   let opens = text_starts_with(only, "-");
   let closes = text_ends_with(only, "-");
-  let letters = text_size(only);
-  let lone = equal(letters, 1);
+  let lone = text_size_1(only);
   let piece = or(opens, closes);
   let part = or(piece, lone);
   if (part) {
