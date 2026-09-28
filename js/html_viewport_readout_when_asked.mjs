@@ -27,12 +27,12 @@ export function html_viewport_readout_when_asked(bar) {
   let box = document.createElement("pre");
   Object.assign(box.style, {
     position: "fixed",
-    left: "0",
+    right: "0",
     bottom: "0",
     margin: "0",
-    padding: "4px",
-    background: "black",
-    color: "white",
+    padding: "2px",
+    background: "transparent",
+    color: "red",
     "font-size": "11px",
     "line-height": "1.2",
     "z-index": "100000",
@@ -113,13 +113,13 @@ export function html_viewport_readout_when_asked(bar) {
       "vv scale " + (viewport ? round(viewport.scale) : "none"),
       "scrollY " + round(window.scrollY),
       "page height " + round(document.documentElement.scrollHeight),
-      "page time " + round(n2),
       v,
       "dpr " + round(window.devicePixelRatio),
       "innerWidth " + window.innerWidth,
     ];
     let text = lines.join("\n");
-    box.textContent = text;
+    ("the numbers are no longer written on the screen: the box covered the last group on the lesson list and the human could not press it, 2026-09-28, and the readings reach the developer by themselves anyway (below). A small dot in the corner is left to say the readings are being sent");
+    box.textContent = "•";
     ("each reading that differs from the last is also sent to the dev server, which files it (",
       fn_name("viewport_readout_record"),
       "), so the numbers reach the developer without a picture of them. A failed send is dropped: this page only exists to be read, and it keeps showing the numbers either way");
@@ -127,7 +127,11 @@ export function html_viewport_readout_when_asked(bar) {
       return;
     }
     state.sent = text;
-    let v2 = lines.concat(["agent " + navigator.userAgent]);
+    ("the time is added only to what is sent, never to what is compared, because it differs every tick - compared, it sent a reading four times a second and the page never went quiet");
+    let v2 = lines.concat([
+      "page time " + round(n2),
+      "agent " + navigator.userAgent,
+    ]);
     let body = json_to({
       f_name: fn_name("viewport_readout_record"),
       args: [v2],
