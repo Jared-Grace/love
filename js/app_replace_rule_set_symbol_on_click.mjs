@@ -1,3 +1,6 @@
+import { html_raised_flying } from "./html_raised_flying.mjs";
+import { html_raised_clear } from "./html_raised_clear.mjs";
+import { html_parent_get } from "./html_parent_get.mjs";
 import { app_replace_animation_duration_max } from "./app_replace_animation_duration_max.mjs";
 import { log } from "./log.mjs";
 import { property_set } from "./property_set.mjs";
@@ -66,21 +69,22 @@ export async function app_replace_rule_set_symbol_on_click(
     let rights_cloned = list_map(rights, html_clone);
     function lambda8(item, index5) {
       html_visibility_hidden(item);
-      html_insert(div_symbols, item, text_combine(index, index5));
+      let index2 = text_combine(index, index5);
+      html_insert(div_symbols, item, index2);
     }
     each_index(rights_cloned, lambda8);
     let rects_after = list_map(skipped, html_bounding_client_rect);
     async function lambda9(a) {
       let [el, rect_before, rect_after] = a;
-      let r3 = await html_move_animate_rect(el, rect_before, rect_after, 0);
-      let distance = property_get(r3, "distance");
+      let r = await html_move_animate_rect(el, rect_before, rect_after, 0);
+      let distance = property_get(r, "distance");
       el.offsetWidth;
       await html_request_animation_frame();
       ("here the duration depends on the distance so that smaller distances take less time");
-      let time = divide(
-        multiply(multiply(distance, 4), duration),
-        app_replace_animation_duration_max(),
-      );
+      let left = multiply(distance, 4);
+      let top = multiply(left, duration);
+      let bottom = app_replace_animation_duration_max();
+      let time = divide(top, bottom);
       await html_move_animate_translate(el, 0, 0, time);
       await sleep(time);
       html_translation_transition_clear(el);
