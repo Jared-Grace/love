@@ -25,10 +25,10 @@ export function app_code_line_swap_mirrored_is(code) {
   if (unread) {
     return false;
   }
-  function written(node) {
+  function written(node_inner) {
     "the letters of the line that this piece of it was read from";
-    let from = property_get(node, "start");
-    let to = property_get(node, "end");
+    let from = property_get(node_inner, "start");
+    let to = property_get(node_inner, "end");
     let text = text_slice(code, from, to);
     return text;
   }
