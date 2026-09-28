@@ -1,6 +1,7 @@
+import { app_shared_color_brand_blue } from "./app_shared_color_brand_blue.mjs";
+import { app_shared_glow_shadow } from "./app_shared_glow_shadow.mjs";
 import { app_shared_glow_look_here_layer_keyframe } from "./app_shared_glow_look_here_layer_keyframe.mjs";
 import { app_shared_glow_look_here_layer_animation_name } from "./app_shared_glow_look_here_layer_animation_name.mjs";
-import { app_shared_glow_shadow_peak } from "./app_shared_glow_shadow_peak.mjs";
 import { app_shared_glow_look_here_class } from "./app_shared_glow_look_here_class.mjs";
 import { app_shared_glow_look_here_class_on } from "./app_shared_glow_look_here_class_on.mjs";
 export function app_shared_glow_look_here_sheet() {
@@ -13,7 +14,8 @@ export function app_shared_glow_look_here_sheet() {
   let name_on = app_shared_glow_look_here_class_on();
   let keyframe = app_shared_glow_look_here_layer_keyframe();
   let name_animation = app_shared_glow_look_here_layer_animation_name();
-  let peak = app_shared_glow_shadow_peak();
-  let sheet = `${keyframe} :has(> .${name_class}) { isolation: isolate; } .${name_class} { position: relative; } .${name_class}::before { content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: -1; pointer-events: none; opacity: 0; box-shadow: ${peak}; transition: opacity 0.4s ease-in-out; } .${name_on}::before { animation: ${name_animation} 1s ease-in-out 0.4s infinite alternate backwards; }`;
+  let color = app_shared_color_brand_blue();
+  let rest = app_shared_glow_shadow(color);
+  let sheet = `${keyframe} :has(> .${name_class}) { isolation: isolate; } .${name_class} { position: relative; } .${name_class}::before { content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: -1; pointer-events: none; opacity: 0; box-shadow: ${rest}; transition: opacity 0.4s ease-in-out; } .${name_on}::before { animation: ${name_animation} 1s ease-in-out 0.4s infinite alternate backwards; }`;
   return sheet;
 }
