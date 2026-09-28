@@ -405,6 +405,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_sum_to,
     app_code_lesson_statement_name_digit_split,
     app_code_lesson_statement_name_digit_rest,
+    app_code_lesson_statement_name_digit_append,
   ];
   return fns;
 }
