@@ -1,3 +1,4 @@
+import { html_viewport_readout_when_asked } from "./html_viewport_readout_when_asked.mjs";
 import { html_sticky_top_visual_follow } from "./html_sticky_top_visual_follow.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -22,6 +23,7 @@ export function html_bar_content_sticky(root) {
   let bar = html_div(shell);
   html_sticky_top(bar);
   html_sticky_top_visual_follow(bar);
+  html_viewport_readout_when_asked(bar);
   let content = html_div(shell);
   html_style_flex(content, "1 0 auto");
   ("Between the body and the foot is a place kept for the two ways out of an app, marked on the page so they can find it - they are added once a screen has drawn, by something handed the page and nothing else. It is not held: the ways out are met at the end of the reading, not carried the whole way down it. Coming after the body that grows to fill the screen, it sits at the bottom of the screen on a short page, just above the foot.");
