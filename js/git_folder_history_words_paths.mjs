@@ -1,3 +1,4 @@
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { text_words_start_regex } from "./text_words_start_regex.mjs";
@@ -5,7 +6,6 @@ import { git_folder_run } from "./git_folder_run.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_unique_sorted } from "./list_unique_sorted.mjs";
 export async function git_folder_history_words_paths(folder, words_text) {
@@ -37,8 +37,7 @@ export async function git_folder_history_words_paths(folder, words_text) {
   }
   let lines = text_split_newline(text);
   function lambda(line) {
-    let blank = text_empty_is(line);
-    let kept = not(blank);
+    let kept = text_empty_not_is(line);
     return kept;
   }
   let named = list_filter(lines, lambda);
