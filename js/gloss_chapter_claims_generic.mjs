@@ -5,7 +5,7 @@ export async function gloss_chapter_claims_generic(
   chapter_code,
   fn,
   text_index,
-  word_key_read,
+  word_keys_read,
   lambda_claims,
 ) {
   "Every explanation in one gloss chapter that the caller's question finds something in, asked against the whole chapter's words rather than against one passage.";
@@ -19,6 +19,6 @@ export async function gloss_chapter_claims_generic(
     return none;
   }
   let passages = property_get(chapter, "passages");
-  let found = lambda_claims(passages, text_index, word_key_read);
+  let found = lambda_claims(passages, text_index, word_keys_read);
   return found;
 }
