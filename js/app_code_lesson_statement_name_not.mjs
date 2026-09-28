@@ -1,3 +1,4 @@
+import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
@@ -8,8 +9,6 @@ import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_state
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { list_map } from "./list_map.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
@@ -50,8 +49,7 @@ export function app_code_lesson_statement_name_not() {
   }
   function programs_get() {
     "both programs, in a fresh order each screen";
-    let values = list_shuffle_take([true, false], 2);
-    let codes = list_map(values, program_of);
+    let codes = list_shuffle_take_map([true, false], 2, program_of);
     return codes;
   }
   let batch = app_code_batch_question_answer_fns(
