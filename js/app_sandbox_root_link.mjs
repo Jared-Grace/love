@@ -1,3 +1,7 @@
+import { html_style_padding } from "./html_style_padding.mjs";
+import { html_style_background } from "./html_style_background.mjs";
+import { html_border_radius } from "./html_border_radius.mjs";
+import { html_style_font_size } from "./html_style_font_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_document_body } from "./html_document_body.mjs";
 import { html_a_hash_name_reload } from "./html_a_hash_name_reload.mjs";

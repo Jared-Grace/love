@@ -1,3 +1,7 @@
+import { html_display_flex } from "./html_display_flex.mjs";
+import { html_style_padding } from "./html_style_padding.mjs";
+import { html_style_flex } from "./html_style_flex.mjs";
+import { html_width_full } from "./html_width_full.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_style_position_fixed } from "./html_style_position_fixed.mjs";
@@ -17,9 +21,9 @@ export function app_shared_photo_screen(picture_set) {
   html_style_position_fixed(screen);
   html_style_set(screen, "inset", "0");
   html_style_set(screen, "z-index", "1000");
-  html_style_set(screen, "display", "flex");
+  html_display_flex(screen);
   html_style_set(screen, "flex-direction", "column");
-  html_style_set(screen, "padding", "0.5em");
+  html_style_padding(screen, "0.5em");
   html_style_set(screen, "box-sizing", "border-box");
   let background = app_shared_color_page_background();
   html_style_background_color_set(screen, background);
@@ -31,9 +35,9 @@ export function app_shared_photo_screen(picture_set) {
   }
   app_shared_button_back(screen, on_back);
   let picture = html_element(screen, "img");
-  html_style_set(picture, "flex", "1");
+  html_style_flex(picture, "1");
   html_style_set(picture, "min-height", "0");
-  html_style_set(picture, "width", "100%");
+  html_width_full(picture);
   html_style_set(picture, "object-fit", "contain");
   picture_set(picture);
   history.pushState(null, "");

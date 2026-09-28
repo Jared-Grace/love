@@ -36,7 +36,7 @@ export function app_shared_scroll_top_button(parent) {
     let root = document.documentElement;
     let scrollable = greater_than(root.scrollHeight, window.innerHeight);
     let display = scrollable ? "" : "none";
-    html_style_set(button, "display", display);
+    html_display_set(button, display);
     let top = less_than_equal(window.scrollY, 0);
     app_shared_button_disabled_set(button, top);
   }
