@@ -1,3 +1,4 @@
+import { list_first_property } from "./list_first_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_names_to_paths } from "./functions_names_to_paths.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -12,7 +13,6 @@ import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
-import { list_first } from "./list_first.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
@@ -88,8 +88,7 @@ export async function functions_code_offenders_walked_generic(
   let faulted = list_size(faults);
   let any_faulted = greater_than(faulted, 0);
   if (any_faulted) {
-    let first = list_first(faults);
-    let said = property_get(first, "message");
+    let said = list_first_property(faults, "message");
     let named = list_map_property(faults, "f_name");
     let joined_faults = list_join_comma(named);
     let hint = text_combine_multiple([
