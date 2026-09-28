@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { assert_json } from "./assert_json.mjs";
@@ -16,8 +17,6 @@ import { properties_get } from "./properties_get.mjs";
 import { list_unique_set } from "./list_unique_set.mjs";
 import { list_set_difference } from "./list_set_difference.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { git_folder_head_tree } from "./git_folder_head_tree.mjs";
 import { equal_assert_json } from "./equal_assert_json.mjs";
@@ -81,8 +80,7 @@ export async function git_history_replacements_rehearse(
   function moved_is(path) {
     let before = blobs_before[path];
     let after = blobs_after[path];
-    let same = equal(before, after);
-    let n = not(same);
+    let n = equal_not(before, after);
     return n;
   }
   let changed = list_filter(paths_before, moved_is);
