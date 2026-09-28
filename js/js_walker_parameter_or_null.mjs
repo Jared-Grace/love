@@ -21,8 +21,8 @@ export function js_walker_parameter_or_null(ast) {
     if (not(declaration)) {
       continue;
     }
-    let function_is = js_node_type_is(declaration, "FunctionDeclaration");
-    if (not(function_is)) {
+    let function_seen_is = js_node_type_is(declaration, "FunctionDeclaration");
+    if (not(function_seen_is)) {
       continue;
     }
     let async_is = property_get(declaration, "async");
