@@ -35,20 +35,20 @@ export function app_code_lesson_statement_name_last(
     ]);
     app_code_code_lines_writes_out_watched(box_one, [code]);
     let box_two = app_code_container_light_blue(root);
-    let log = js_console_log_name();
+    let log_text = js_console_log_name();
     html_div_cycle_code(box_two, [
       "In the previous lesson, there were multiple ",
-      log,
+      log_text,
       "s.",
     ]);
     html_div_cycle_code(box_two, [
       "In this lesson there is only one ",
-      log,
+      log_text,
       " - at the end.",
     ]);
     html_div_cycle_code(box_two, [
       "This last ",
-      log,
+      log_text,
       " writes out the very last value of ",
       name,
       ":",
