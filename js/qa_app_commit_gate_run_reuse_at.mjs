@@ -1,7 +1,7 @@
+import { text_includes_not } from "./text_includes_not.mjs";
 import { git_commit_exists_is } from "./git_commit_exists_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { qa_app_commit_shipped_names } from "./qa_app_commit_shipped_names.mjs";
-import { text_includes } from "./text_includes.mjs";
 import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map } from "./list_map.mjs";
@@ -26,8 +26,7 @@ export async function qa_app_commit_gate_run_reuse_at(search, head) {
   let reach = await qa_app_commit_shipped_names(search, head);
   ("The shipped list also holds the app's own name, its page and the Bible folders it can show. The page is made from the functions, so the functions answer for it; a name with no file of its own simply matches nothing in the comparison. A dotted name is left out because it cannot be a function's name.");
   function undotted_is(name) {
-    let dotted = text_includes(name, ".");
-    let b = not(dotted);
+    let b = text_includes_not(name, ".");
     return b;
   }
   let named = list_filter(reach, undotted_is);
