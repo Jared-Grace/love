@@ -1,4 +1,4 @@
-import { app_code_lesson_bold_term } from "./app_code_lesson_bold_term.mjs";
+import { app_code_definition_term } from "./app_code_definition_term.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
@@ -61,13 +61,28 @@ export function app_code_lesson_statement_name_average_two() {
     return taken;
   }
   function pointed(parts) {
-    "a line whose 3 and 7 wear the ends' colour and whose 5 wears the middle's";
-    let line = app_code_line_ends_middle_draw(parts, ["3", "7"], ["5"]);
+    "a line whose 3 and 7 wear the ends' colour and whose 5 wears the middle's, as does the word middle, asked by the human 2026-09-28";
+    let line = app_code_line_ends_middle_draw(
+      parts,
+      ["3", "7"],
+      ["5", "middle"],
+    );
     return line;
   }
   let v = pointed(["Suppose we have two numbers: ", "3", " and ", "7"]);
   let draw = app_code_number_line_draw(2, 8, 1, [3, 7], 5);
-  let v2 = pointed(["", "5", " is in the middle of ", "3", " and ", "7"]);
+  let v2 = pointed([
+    "",
+    "5",
+    " is in the ",
+    "",
+    "middle",
+    "",
+    " of ",
+    "3",
+    " and ",
+    "7",
+  ]);
   let code = js_code_binary_result_nb("3", plus, "2", "5");
   let v3 = pointed(["", "5", " is ", "2", " away from ", "3", ": ", code]);
   let code2 = js_code_binary_result_nb("7", minus, "2", "5");
@@ -78,12 +93,17 @@ export function app_code_lesson_statement_name_average_two() {
   let v6 = pointed(["", code4]);
   function average_term_draw(box) {
     "the word the lesson teaches, in bold on its first mention";
-    app_code_lesson_bold_term(
-      box,
-      "The number in the middle is called the ",
-      "average",
-    );
+    let draw_term = pointed([
+      "The number in the ",
+      "",
+      "middle",
+      "",
+      " is called the ",
+    ]);
+    let line = draw_term(box);
+    app_code_definition_term(line, "average");
   }
+  let v7 = pointed(["Which number is in the ", "", "middle", "", "?"]);
   let lesson = app_code_lesson_statement_formula({
     words: "Average of two names",
     title_code: line_average,
@@ -98,13 +118,17 @@ export function app_code_lesson_statement_name_average_two() {
     remember_lines,
     explain: [
       v,
-      ["Which number is in the middle?"],
+      v7,
       draw,
       v2,
       v3,
       v4,
       average_term_draw,
-      ["To find the average of two numbers, add the two numbers, then divide by ", "2", ":"],
+      [
+        "To find the average of two numbers, first add the two numbers, and then divide by ",
+        "2",
+        ":",
+      ],
       v5,
       v6,
       app_code_explain_container_next,
