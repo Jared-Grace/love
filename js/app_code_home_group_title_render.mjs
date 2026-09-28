@@ -26,8 +26,8 @@ export function app_code_home_group_title_render(entry) {
   html_cycle_code(title_mark, parts);
   let first = property_get(entry, "first");
   let last = property_get(entry, "last");
-  let range = app_code_lessons_range_text(first, last);
-  let range_named = text_combine("Lessons ", range);
+  let range_span = app_code_lessons_range_text(first, last);
+  let range_named = text_combine("Lessons ", range_span);
   let range_wrapped = text_wrap_parenthesis(range_named);
   html_span_space(title_mark);
   let range_mark = html_span_text(title_mark, range_wrapped);
