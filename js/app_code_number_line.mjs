@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { app_shared_glow_shadow } from "./app_shared_glow_shadow.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { subtract } from "./subtract.mjs";
@@ -115,8 +116,7 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
       transform: "translate(-50%, -50%)",
       "white-space": "nowrap",
     });
-    let b = equal(color, plain);
-    let pointed = not(b);
+    let pointed = equal_not(color, plain);
     let left4 = not(whole);
     let right2 = not(pointed);
     if (pointed) {
