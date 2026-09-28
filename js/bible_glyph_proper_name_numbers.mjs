@@ -1,3 +1,4 @@
+import { text_lower_is } from "./text_lower_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
 import { bible_interlinear_chapters_words_cache } from "./bible_interlinear_chapters_words_cache.mjs";
@@ -78,8 +79,7 @@ export async function bible_glyph_proper_name_numbers(testament_name) {
         }
         let right = text_upper_to(letter);
         let upper = equal(letter, right);
-        let right2 = text_lower_to(letter);
-        let lower = equal(letter, right2);
+        let lower = text_lower_is(letter);
         let capital = upper && not(lower);
         found.asked = add(found.asked, 1);
         if (capital) {
