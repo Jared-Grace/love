@@ -7,6 +7,7 @@ export function gloss_explain_verse_numbers_cases() {
   "★ THE THIRD WAY IS A SENTENCE TALKING ABOUT THE VERSE IT IS ALREADY IN RATHER THAN NAMING ANOTHER, AND WHAT TELLS THEM APART STANDS IN FRONT OF THE WORD FOR VERSE. The verse three times and in verse three are the same two words with one word put on the front, and only that front word says which was meant. The cases here come in pairs on purpose - a shutting word and a naming word with the same number behind the marker - because a reading that only ever saw one of the pair would look right either way. The two pairs deliberately left unread are written down here too: that verse one told us is a real claim wearing a pointing word, and both verses eight and eleven is a real claim wearing a count word. Both are read as claims, and these cases are what keeps either word from quietly being added to the shutting list.";
   "★ THE FOURTH WAY IS A WRITER LEAVING OUT THE DASH. Verse twenty four and verse twenty-four are the same claim, and the reading that knew only the spelled shape answered the first with two verses, twenty and four, neither of them meant. The pair is written here both ways round, and so is the chapter that really does have a twentieth and a fourth verse and no twenty-fourth, where the same words rightly name two.";
   "★ THE FIFTH WAY IS A VERSE THAT OWNS A WORD RATHER THAN HOLDING THIS ONE, AND ONLY THE OTHER LANGUAGE WRITES IT. Urdu says verse two of This, with its little word for of behind the number, and then names some other word - usually quoting it in English letters. Four rows in five of the longest queue in the repo were that one shape. The cases come in pairs here too, of against in, because the two sentences are the same until that one word; and the pair that matters most is the last one, where the word for in is followed by a quoted English word anyway - that is one of the three claims already known to be wrong in this store, so a reading that cancelled on the quote rather than on the owning word would have hidden a real fault.";
+  "★ THE SIXTH WAY IS A CANCELLING WORD BEHIND A LIST RATHER THAN BEHIND A SINGLE NUMBER. Verse one, two and three of us cancels all three, because the three of them together own the one word; a reading that wrote each number down the moment it met it had already named the first two by the time the cancelling word arrived. The three cases here are a set: the list that cancels, the same list with the word for in behind it where all three are claims, and a sentence with two runs in it where only the second cancels - that last one is what keeps the fix from throwing away a verse named earlier in the same sentence.";
   "The chapter's verses are spelled out on each case rather than a chapter being named. What decides the answer is which verses the chapter has - the same words name one verse in a chapter of a hundred and two and two verses in a chapter of a hundred - so the thing that decides has to stand where a reader can see it.";
   "What is expected is written as one line with commas rather than as a list, so a case that fails says what it got and what it wanted in words rather than in two shapes to be lined up by eye.";
   arguments_assert(arguments, 0);
@@ -309,6 +310,24 @@ export function gloss_explain_verse_numbers_cases() {
       verses: ["8"],
       names: "",
       why: "the third shape, and the case where what the verse owns is named in Urdu rather than quoted in English - it cancels just the same",
+    },
+    {
+      explain: "آیت ۱، ۲، ۳ کا 'us' اِسی سے بنا ہے",
+      verses: ["1", "2", "3"],
+      names: "",
+      why: "★ the cancelling word stands behind a list of three, and it owns all three - reading a number as soon as it was met named the first two and cancelled only the last",
+    },
+    {
+      explain: "آیت ۱، ۲، ۳ میں یہ لفظ آیا",
+      verses: ["1", "2", "3"],
+      names: "1,2,3",
+      why: "the other half of that pair: the same list of three with the word for in behind it instead of the word for of, and all three are claims",
+    },
+    {
+      explain: "آیت ۱ میں اَور آیت ۳ کا 'us'",
+      verses: ["1", "2", "3"],
+      names: "1",
+      why: "the cancelling word reaches only the list it stands behind - the first run was already closed by the word for in and keeps its verse",
     },
     {
       explain: "آیت ۲۱ میں آیا: 'be' کا اَب کے وقت والا رُوپ",

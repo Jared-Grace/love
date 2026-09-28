@@ -11,6 +11,8 @@ import { list_max } from "./list_max.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { text_words_punctuation_split } from "./text_words_punctuation_split.mjs";
 import { text_comma_marks } from "./text_comma_marks.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { list_clear } from "./list_clear.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { subtract } from "./subtract.mjs";
@@ -20,6 +22,7 @@ import { text_tokens_number_run_or_null } from "./text_tokens_number_run_or_null
 import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
 import { or } from "./or.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
 import { each_index } from "./each_index.mjs";
@@ -54,6 +57,9 @@ export function gloss_explain_verse_numbers_generic(
   "A chapter with no verse numbers at all is answered straight away. Nothing could be named from an empty list, and asking how long the longest of no writings is has no answer to give.";
   "Everything is folded to one case before it is read. That is what the English reading needs and it costs the others nothing, because a script with no capitals is handed back exactly as it came.";
   "A NUMBER THAT OWNS THE NEXT WORD IS NOT A NUMBER SAYING WHERE THIS WORD STANDS, AND THAT IS THE SAME QUESTION ASKED IN A LANGUAGE THAT ANSWERS IT DIFFERENTLY. English cancels with a word of distance behind the number; Urdu cancels with its little word for of, which turns the number into an owner - verse two of, and then the thing verse two owns, which is some other word. Measured on 2026-09-25 over the two thousand eight hundred and ninety-two standing rows of the Urdu store, two thousand two hundred and eighty-one of them put that little word straight behind the number, and two thousand four hundred and eighty-four of those runs went on to quote an English word in its own letters - verse two of this, verse one of soon - naming a different word every time. So four rows in five of the longest queue in the repo were never claims about the word being explained at all.";
+  "★ A CANCELLING WORD CANCELS THE WHOLE LIST IT STANDS BEHIND, NOT ONLY THE LAST NUMBER OF IT, SO A RUN IS HELD BACK UNTIL IT CLOSES RATHER THAN WRITTEN DOWN A NUMBER AT A TIME. Verse one, two and three of us is one phrase with one owner: the three numbers together own the word us, and not one of them is a claim that the word being explained stands there. Writing each number down as it was met named the first two and cancelled only the third, because the word that cancels comes after the last number and the earlier ones were already gone. The numbers of one run now wait together and are handed over only when the run ends some other way, which is the one place that knows whether anything cancelled it.";
+  "The reading turned down was to keep writing each number down and take the earlier ones back when the cancelling word arrived. It answers the same on every sentence, and it says the run is a thing by undoing it, which is the harder way to say the run is a thing. Holding the run says it once, and the count of how many numbers are standing in it - which the reading already needed, to tell a list carrying on past a comma from a sentence that merely has one - stops being a second thing to keep in step with the first.";
+  "A run closes where a marker opens the next one, where anything that is not a number and not a carrying mark ends it, and where the sentence runs out. All three hand their numbers over; only the cancelling word throws them away.";
   "WHAT CANCELLING COSTS IS NAMED HERE RATHER THAN LEFT SILENT. Verse two of soon is a claim - it says the word soon stands in verse two - and it is a claim anybody could check, with the very machinery this reading feeds. Cancelling drops it instead, because what comes back from here is a list of numbers and a number cannot carry a different word with it. The fix is to hand back the quoted word beside the number and check that word where there is one, and until that is built these are unchecked rather than checked and passed. A claim silently dropped is the dearer half of this, so it is written down.";
   arguments_assert(arguments, 7);
   let none = list_empty_is(verse_numbers);
@@ -82,9 +88,13 @@ export function gloss_explain_verse_numbers_generic(
   let tokens = text_words_punctuation_split(lower);
   let commas = text_comma_marks();
   let named = [];
+  let run_named = [];
   let inside = false;
-  let since = 0;
   let eaten = 0;
+  function run_named_close() {
+    list_add_multiple(named, run_named);
+    list_clear(run_named);
+  }
   function token_read(token, index) {
     let swallowed = less_than(index, eaten);
     if (swallowed) {
@@ -92,6 +102,7 @@ export function gloss_explain_verse_numbers_generic(
     }
     let marker_is = list_includes(markers, token);
     if (marker_is) {
+      run_named_close();
       let back = subtract(index, 1);
       let before = list_get_or_null(tokens, back);
       let shut = list_includes(shutters, before);
@@ -100,7 +111,6 @@ export function gloss_explain_verse_numbers_generic(
         return;
       }
       inside = true;
-      since = 0;
       return;
     }
     if (not(inside)) {
@@ -117,12 +127,13 @@ export function gloss_explain_verse_numbers_generic(
       let joining = equal(token, joiner);
       let carrying = or(comma_is, joining);
       if (carrying) {
-        let listing = less_than(0, since);
+        let listing = list_empty_not_is(run_named);
         if (listing) {
           return;
         }
       }
       inside = false;
+      run_named_close();
       return;
     }
     let number = property_get(run, "number");
@@ -133,13 +144,14 @@ export function gloss_explain_verse_numbers_generic(
     if (cancelled_is) {
       inside = false;
       eaten = after;
+      list_clear(run_named);
       return;
     }
-    list_add(named, number);
-    since = add(since, 1);
+    list_add(run_named, number);
     eaten = after;
   }
   each_index(tokens, token_read);
+  run_named_close();
   let once = list_unique(named);
   return once;
 }
