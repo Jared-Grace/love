@@ -29,7 +29,8 @@ export function git_commit_names_renamed(reads, text) {
       git_commit_names_renamed_walked(box, reads, name);
     }
     let trouble = catch_error_text_or_null(git_commit_names_renamed_try);
-    let troubled = not(null_is(trouble));
+    let b = null_is(trouble);
+    let troubled = not(b);
     if (troubled) {
       let unanswerable = {
         name,
