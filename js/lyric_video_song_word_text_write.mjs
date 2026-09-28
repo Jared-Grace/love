@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { lyric_video_songs_folder } from "./lyric_video_songs_folder.mjs";
@@ -5,8 +6,6 @@ import { text_combine } from "./text_combine.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { text_punctuation_apostrophe_kept_removed } from "./text_punctuation_apostrophe_kept_removed.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function lyric_video_song_word_text_write(
   name,
@@ -33,8 +32,7 @@ export async function lyric_video_song_word_text_write(
   let letters_before = text_lower_to(trimmed);
   let trimmed2 = text_punctuation_apostrophe_kept_removed(text);
   let letters_after = text_lower_to(trimmed2);
-  let letters_same = equal(letters_before, letters_after);
-  let letters_changed = not(letters_same);
+  let letters_changed = equal_not(letters_before, letters_after);
   word.text = text;
   await file_overwrite_json(path_document, document);
   let r = {
