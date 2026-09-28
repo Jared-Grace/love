@@ -114,8 +114,8 @@ export function html_viewport_readout_when_asked(bar) {
         });
       }
     }
-    function lambda2(a_inner, b) {
-      let difference = subtract(b.right, a_inner.right);
+    function lambda2(a_inner, b_inner) {
+      let difference = subtract(b_inner.right, a_inner.right);
       return difference;
     }
     reaching.sort(lambda2);
