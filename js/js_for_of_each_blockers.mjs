@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_list_types_nodes } from "./js_list_types_nodes.mjs";
@@ -39,8 +40,7 @@ export function js_for_of_each_blockers(loop) {
   let called = equal(kind, "CallExpression");
   if (called) {
     let callee = property_get(right, "callee");
-    let callee_kind = property_get(callee, "type");
-    let reached_through = equal(callee_kind, "MemberExpression");
+    let reached_through = property_equals(callee, "type", "MemberExpression");
     if (reached_through) {
       list_add(blockers, "walks what a method answered");
     }
