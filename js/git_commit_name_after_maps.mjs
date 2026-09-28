@@ -1,8 +1,8 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { git_commit_map_name_after } from "./git_commit_map_name_after.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
-import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -20,8 +20,7 @@ export function git_commit_name_after_maps(reads, commit) {
     let b = null_is(after);
     let mentioned = not(b);
     if (mentioned) {
-      let b2 = equal(after, now);
-      let changed = not(b2);
+      let changed = equal_not(after, now);
       if (changed) {
         let name = property_get(read, "name");
         let step = {
