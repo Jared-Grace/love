@@ -1,3 +1,4 @@
+import { property_text_includes } from "./property_text_includes.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_js_parse } from "./file_js_parse.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -6,7 +7,6 @@ import { list_any } from "./list_any.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { node_only_module_names } from "./node_only_module_names.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_includes } from "./text_includes.mjs";
 import { text_split_first } from "./text_split_first.mjs";
 export async function function_node_only_is(f_path) {
   "$plain f_path";
@@ -15,8 +15,7 @@ export async function function_node_only_is(f_path) {
   "A name spelt with a folder after it is answered for by the part in front of it as well, so a library that only works on a machine is caught however deep into it the file reaches.";
   arguments_assert(arguments, 1);
   let parsed = await file_js_parse(f_path);
-  let code = property_get(parsed, "code");
-  let guarded = text_includes(code, fn_name("browser_is"));
+  let guarded = property_text_includes(parsed, "code", fn_name("browser_is"));
   if (guarded) {
     return false;
   }
