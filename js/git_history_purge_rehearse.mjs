@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
@@ -24,8 +25,6 @@ import { git_folder_run } from "./git_folder_run.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { list_unique_set } from "./list_unique_set.mjs";
 import { list_set_difference } from "./list_set_difference.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { git_folder_history_paths_commits_count } from "./git_folder_history_paths_commits_count.mjs";
 import { equal_assert_json } from "./equal_assert_json.mjs";
 import { git_folder_head_tree } from "./git_folder_head_tree.mjs";
@@ -130,8 +129,7 @@ export async function git_history_purge_rehearse(
   function moved_is(path) {
     let before = blobs_before[path];
     let after = blobs_after[path];
-    let same = equal(before, after);
-    let n = not(same);
+    let n = equal_not(before, after);
     return n;
   }
   let changed = list_filter(paths_before, moved_is);
