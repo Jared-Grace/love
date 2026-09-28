@@ -25,7 +25,7 @@ export function app_code_lesson_statement_name_digit_rest() {
   let names = ["n"];
   let n = list_first(names);
   let ten = "10";
-  let digit = "digit";
+  let digit = "last_digit";
   let rest = "rest";
   let percent = js_operator_percent_symbol();
   let slash = js_operator_division_symbol();
