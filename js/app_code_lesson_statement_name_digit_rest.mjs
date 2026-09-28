@@ -1,6 +1,6 @@
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
-import { app_code_line_last_digit_pointed_draw } from "./app_code_line_last_digit_pointed_draw.mjs";
+import { app_code_line_number_part_pointed_draw } from "./app_code_line_number_part_pointed_draw.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
@@ -66,7 +66,7 @@ export function app_code_lesson_statement_name_digit_rest() {
   ];
   function pointed(parts) {
     "a line whose kept digits wear the colours, the 12 of 123 blue and the 456 of 4567 green, wherever they are said or worked out, so what this line keeps is seen through every step; the last digit stays plain, since it is what is taken away. Asked by the human 2026-09-28, in place of the last digits coloured as the last-digit lesson colours them";
-    let draw = app_code_line_last_digit_pointed_draw(parts, pointers);
+    let draw = app_code_line_number_part_pointed_draw(parts, pointers);
     return draw;
   }
   let v = pointed([

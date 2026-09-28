@@ -1,4 +1,4 @@
-import { app_code_line_last_digit_pointed_draw } from "./app_code_line_last_digit_pointed_draw.mjs";
+import { app_code_line_number_part_pointed_draw } from "./app_code_line_number_part_pointed_draw.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
@@ -71,7 +71,7 @@ export function app_code_lesson_statement_name_digit_split() {
   ];
   function pointed(parts) {
     "a line whose last digits wear their colours: the 3 of 123 blue and the 7 of 4567 green, wherever they are said or worked out, and at the end of 123 and 4567 themselves, asked by the human 2026-09-28";
-    let draw = app_code_line_last_digit_pointed_draw(parts, pointers);
+    let draw = app_code_line_number_part_pointed_draw(parts, pointers);
     return draw;
   }
   let three = js_code_binary_result_nb("123", percent, ten, "3");

@@ -18,7 +18,7 @@ import { list_size_1 } from "./list_size_1.mjs";
 import { list_first } from "./list_first.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { each_index } from "./each_index.mjs";
-export function app_code_line_last_digit_pointed_draw(parts, pointers) {
+export function app_code_line_number_part_pointed_draw(parts, pointers) {
   arguments_assert(arguments, 2);
   ("THE OTHER HALF TOO, asked by the human 2026-09-28 for the all-but-the-last-digit lesson: a pointer may name the digits before the last instead, so the 12 in 123, in 12.3 and in Math.floor(123 / 10) wears the colour the kept 12 wears, and the last digit stays plain. A number whose parts no pointer names is left whole, as before.");
   ("a line of writing, text and code taking turns, where a number in the code whose last digit a pointer names wears that colour on the last digit alone - so the 3 in 123 is seen to be the same 3 as the last digit found from it, asked by the human 2026-09-28 for the last-digit lesson");
