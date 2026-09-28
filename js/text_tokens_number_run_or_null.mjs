@@ -1,7 +1,6 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_slice_count } from "./list_slice_count.mjs";
-import { list_size } from "./list_size.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { list_join } from "./list_join.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -25,8 +24,7 @@ export function text_tokens_number_run_or_null(
   let found = null;
   function size_try(size) {
     let run = list_slice_count(tokens, index, size);
-    let run_size = list_size(run);
-    let whole = equal(run_size, size);
+    let whole = list_size_equal(run, size);
     if (not(whole)) {
       return;
     }
