@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -50,8 +51,7 @@ export function js_walker_parameter_or_null(ast) {
       let loop = property_get(visited, "node");
       let calls = js_list_type(loop, "CallExpression");
       for (let call_visited of calls) {
-        let call = property_get(call_visited, "node");
-        let callee = property_get(call, "callee");
+        let callee = property_path_get_2(call_visited, "node", "callee");
         let callee_is = js_node_type_is(callee, "Identifier");
         if (not(callee_is)) {
           continue;
