@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { git_commit_names_renamed } from "./git_commit_names_renamed.mjs";
 import { property_get } from "./property_get.mjs";
@@ -8,7 +9,6 @@ import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
-import { equal } from "./equal.mjs";
 export function git_commit_names_text_after(reads, text) {
   "$plain text";
   "A text with every commit name in it that some rewrite has renamed written as that commit is called now, together with the pairs that were applied and the shortened names too short to answer for, which are left exactly as they were.";
@@ -44,8 +44,7 @@ export function git_commit_names_text_after(reads, text) {
     name_is = not(name_is);
   }
   let after = list_join_empty(rebuilt);
-  let same = equal(after, text);
-  let changed = not(same);
+  let changed = equal_not(after, text);
   let r = {
     after,
     changed,
