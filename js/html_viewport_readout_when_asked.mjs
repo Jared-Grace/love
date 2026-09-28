@@ -105,12 +105,12 @@ export function html_viewport_readout_when_asked(bar) {
     ("the five things reaching furthest right, when any reaches past the screen, are listed too, because opening the last lesson group on a phone made the page 429 wide on a 414 screen, 2026-09-28 - the browser then widened its frame to fit, the frame grew taller than the screen, and the bar held to the frame top slid above what is seen. Which thing sticks out is only known on the phone, where the text is drawn larger");
     let screen_width = window.screen.width;
     let reaching = [];
-    for (let each of document.body.querySelectorAll("*")) {
-      let right = each.getBoundingClientRect().right;
+    for (let each_one of document.body.querySelectorAll("*")) {
+      let right = each_one.getBoundingClientRect().right;
       if (greater_than(right, screen_width)) {
         reaching.push({
           right,
-          each,
+          each: each_one,
         });
       }
     }
@@ -123,13 +123,13 @@ export function html_viewport_readout_when_asked(bar) {
     for (let item of reaching.slice(0, 5)) {
       bars.push(
         "  wide " +
-          item.each.tagName +
+          item.each_one.tagName +
           " right " +
           round_to(item.right) +
           " width " +
-          round_to(item.each.getBoundingClientRect().width) +
+          round_to(item.each_one.getBoundingClientRect().width) +
           " " +
-          item.each.textContent.slice(0, 40),
+          item.each_one.textContent.slice(0, 40),
       );
     }
     let v = bars.join("\n");
