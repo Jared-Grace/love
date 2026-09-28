@@ -58,7 +58,10 @@ export async function app_replace_rule_set_symbol_on_click(
     let sum = text_combine(index, size);
     let skipped = list_skip(sbs, sum);
     let rects_before = list_map(skipped, html_bounding_client_rect);
+    ("each row is a layer of its own for the glow behind its tiles, and nothing inside a layer can pass in front of the next one - so the whole row a piece leaves is lifted while it travels, the symbol row here and the rule row below");
+    html_raised_flying(div_symbols);
     await html_move_animate_multiple_parent_remove(sliced, lefts, duration);
+    html_raised_clear(div_symbols);
     await html_request_animation_frame();
     let rights_cloned = list_map(rights, html_clone);
     function lambda8(item, index5) {
@@ -84,7 +87,10 @@ export async function app_replace_rule_set_symbol_on_click(
     }
     let mapped = lists_map([skipped, rects_after, rects_before], lambda9);
     await list_wait(mapped);
+    let rules_row = html_parent_get(rb);
+    html_raised_flying(rules_row);
     await html_move_animate_multiple(rights, rights_cloned, duration);
+    html_raised_clear(rules_row);
   } else {
     property_set(symbols_invalid_chosen, index, true);
   }
