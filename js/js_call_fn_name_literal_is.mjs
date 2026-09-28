@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -19,8 +20,7 @@ export function js_call_fn_name_literal_is(node) {
   if (not(named_is)) {
     return false;
   }
-  let callee_name = property_get(callee, "name");
-  let marker_is = equal(callee_name, fn_name("fn_name"));
+  let marker_is = property_equals(callee, "name", fn_name("fn_name"));
   if (not(marker_is)) {
     return false;
   }
