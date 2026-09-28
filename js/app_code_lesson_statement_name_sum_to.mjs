@@ -77,9 +77,9 @@ export function app_code_lesson_statement_name_sum_to() {
     "the three lines as one wide piece of code, as a program is shown, rather than three chips - they are read top to bottom as one calculation";
     let line = html_div(box);
     let code = list_join_newline(middle_lines);
-    let chip = html_span(line);
-    app_code_code_dark_lines_comments(chip, code);
-    html_style_assign(chip, {
+    let chip_inner = html_span(line);
+    app_code_code_dark_lines_comments(chip_inner, code);
+    html_style_assign(chip_inner, {
       display: "block",
     });
   }
@@ -125,7 +125,17 @@ export function app_code_lesson_statement_name_sum_to() {
         "Here's the code to step by step calculate the same answer as that expression:",
       ],
       lines_draw,
-      ["For ", "4", " that is ", worked, ", which is ", "10", ", the same as ", four, ":"],
+      [
+        "For ",
+        "4",
+        " that is ",
+        worked,
+        ", which is ",
+        "10",
+        ", the same as ",
+        four,
+        ":",
+      ],
     ],
     decoys: null,
     example_pointers: null,
