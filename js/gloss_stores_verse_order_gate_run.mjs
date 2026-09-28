@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { gloss_stores_offenders_generic } from "./gloss_stores_offenders_generic.mjs";
 import { gloss_store_verse_order_offenders } from "./gloss_store_verse_order_offenders.mjs";
 import { property_get } from "./property_get.mjs";
@@ -23,8 +24,7 @@ export async function gloss_stores_verse_order_gate_run() {
   let out_of_order = [];
   function store_gather(count) {
     let store = property_get(count, "store");
-    let found = property_get(count, "found");
-    let offenders = property_get(found, "offenders");
+    let offenders = property_path_get_2(count, "found", "offenders");
     function offender_named(offender) {
       let named = {
         store,
@@ -47,8 +47,7 @@ export async function gloss_stores_verse_order_gate_run() {
     out_of_order,
   });
   function store_chapters(count) {
-    let found = property_get(count, "found");
-    let chapters = property_get(found, "chapters");
+    let chapters = property_path_get_2(count, "found", "chapters");
     return chapters;
   }
   let r = {
