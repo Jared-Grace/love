@@ -11,8 +11,11 @@ export async function gloss_store_verse_order_offenders(fn) {
   "It names the chapters rather than counting them, because a count tells whoever reads a red gate that something is wrong and nothing about where. The two verse orders come with each name for the same reason: a chapter said to be out of order, with no sight of what order it is in, is a chapter somebody has to go and open.";
   let chapter_codes = await gloss_chapters_stored(fn);
   async function chapter_check(chapter_code) {
-    let checked = await chapter_passages_verse_order_check(chapter_code, fn);
-    return checked;
+    let checked_inner = await chapter_passages_verse_order_check(
+      chapter_code,
+      fn,
+    );
+    return checked_inner;
   }
   let checked = await list_map_async(chapter_codes, chapter_check);
   let held_is = false;
