@@ -1,5 +1,4 @@
 import { html_viewport_readout_when_asked } from "./html_viewport_readout_when_asked.mjs";
-import { html_sticky_top_visual_follow } from "./html_sticky_top_visual_follow.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_viewport_height_visible } from "./html_viewport_height_visible.mjs";
@@ -22,7 +21,6 @@ export function html_bar_content_sticky(root) {
   });
   let bar = html_div(shell);
   html_sticky_top(bar);
-  html_sticky_top_visual_follow(bar);
   html_viewport_readout_when_asked(bar);
   let content = html_div(shell);
   html_style_flex(content, "1 0 auto");
