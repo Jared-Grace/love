@@ -1,9 +1,10 @@
+import { app_code_code_dark_lines_pointed } from "./app_code_code_dark_lines_pointed.mjs";
+import { app_code_output_pointed } from "./app_code_output_pointed.mjs";
+import { app_code_code_lines_writes_out_on } from "./app_code_code_lines_writes_out_on.mjs";
 import { html_span } from "./html_span.mjs";
-import { app_code_code_dark_lines_comments } from "./app_code_code_dark_lines_comments.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
 import { app_code_lesson_statement_name_grid_row } from "./app_code_lesson_statement_name_grid_row.mjs";
@@ -74,7 +75,20 @@ export function app_code_lesson_statement_name_grid_index() {
     "the column lesson's own program, then one line saying the lesson before it found the row, with a button to it and the row's line";
     let code_before = list_join_newline(remember_program);
     let output_before = eval_console_log_lines(code_before);
-    app_code_code_lines_writes_out(box, remember_program, output_before);
+    ("the names row and column wear their colours here too, as in the program further down");
+    let names_pointed = [
+      [["row"], color_row],
+      [["column", "columns"], color_column],
+    ];
+    let paint = app_code_code_dark_lines_pointed(names_pointed);
+    let on_output = app_code_output_pointed(names_pointed);
+    app_code_code_lines_writes_out_on(
+      box,
+      remember_program,
+      output_before,
+      paint,
+      on_output,
+    );
     let line = html_div(box);
     html_span_text_content(line, "And the lesson before it, ");
     app_code_lesson_reference_draw(
@@ -88,7 +102,7 @@ export function app_code_lesson_statement_name_grid_index() {
     ("the row line as a block of code, which wraps, since a chip is kept on one line and this one runs past a phone's width");
     let parent = html_div(box);
     let chip = html_span(parent);
-    app_code_code_dark_lines_comments(chip, line_row);
+    paint(chip, line_row);
     html_style_assign(chip, {
       display: "block",
     });
@@ -200,6 +214,8 @@ export function app_code_lesson_statement_name_grid_index() {
       [["3"], color_count],
       [["2"], color_row],
       [["1"], color_column],
+      [["row"], color_row],
+      [["column", "columns"], color_column],
     ],
   });
   return lesson;

@@ -204,6 +204,7 @@ export function app_code_lesson_statement_name_grid_position() {
       [["7"], color],
       [["3"], color2],
       [["1"], color4],
+      [["column", "columns"], color4],
     ],
   });
   return lesson;

@@ -14,7 +14,7 @@ import { html_style_background_color_set } from "./html_style_background_color_s
 export function app_code_code_dark_lines_pointed(pointers) {
   arguments_assert(arguments, 1);
   ("a painter for a program on more than one line, drawing it as the note-dimming writer does and then giving each whole number a pointer names that pointer's colour behind it - so the 7 in let chair = 7; wears the green the 7 wears in the writing and the picture above it");
-  ("Only whole numbers standing on their own are coloured: a digit inside a name, such as the 2 in a2, is part of the name and is left as it is.");
+  ("Only whole numbers and whole names standing on their own are coloured: a digit inside a name, such as the 2 in a2, is part of the name and is left as it is, and a name is coloured only when a pointer lists it, so row is coloured and rows_before is not. Names were added at the human's word, 2026-09-28, so the names row and column wear the colours those words wear in the writing.");
   ("It is drawn over the note-dimming writer's own runs rather than beside them, so the names keep the colours that writer gives them and a note stays dim.");
   function paint(component, code) {
     app_code_code_dark_lines_comments(component, code);
@@ -22,7 +22,7 @@ export function app_code_code_dark_lines_pointed(pointers) {
     html_text_set(component, nothing);
     let runs = app_code_note_runs(code);
     for (let run of runs) {
-      let pieces = text_split(run[0], /\b(\d+)\b/);
+      let pieces = text_split(run[0], /\b(\d+|[A-Za-z_]\w*)\b/);
       for (let piece of pieces) {
         if (text_empty_is(piece)) {
           continue;

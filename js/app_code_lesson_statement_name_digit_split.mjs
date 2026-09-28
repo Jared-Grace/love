@@ -1,3 +1,6 @@
+import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
+import { list_second } from "./list_second.mjs";
+import { app_code_lesson_statement_name_remainder } from "./app_code_lesson_statement_name_remainder.mjs";
 import { list_between_space_nb } from "./list_between_space_nb.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
@@ -6,17 +9,14 @@ import { list_first } from "./list_first.mjs";
 import { js_operator_percent_symbol } from "./js_operator_percent_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { app_code_lesson_statement_name_grid_position_step } from "./app_code_lesson_statement_name_grid_position_step.mjs";
-import { property_get } from "./property_get.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
-import { app_code_lesson_statement_name_grid_position } from "./app_code_lesson_statement_name_grid_position.mjs";
 export function app_code_lesson_statement_name_digit_split() {
   arguments_assert(arguments, 0);
   ("a number's last digit: let digit = n % 10; - the number left in front of it is the next lesson's, split out at the human's word, 2026-09-27, so each lesson teaches one line. The explanation is the human's words and ends on the line itself; the chairs in rows of 10 that it used to explain by were cut with the rest. Not picked: keeping both lines here, which asked a learner to take in % and Math.floor at once.");
   ("Chosen for later use: adding up a number's digits, reversing a number, and checking one reads the same both ways all take one digit off at a time with this line and the next lesson's, once loops are taught.");
-  ("It is the column lesson with rows of 10, so that lesson is the one remembered: a chair's column is its last digit.");
+  ("The remainder lesson is the one remembered, on its own example 14 and 4, since % 10 is a remainder and the writing no longer speaks of chairs, 2026-09-28. Not picked: the column lesson, remembered while the chairs in rows of 10 explained the digit. The worked program is 123, the writing's first number, so the explained sum is the one run.");
   ("No digit is 0, and the five answers differ.");
   ("The opening is the human's, 2026-09-27, sent without a lesson named: two whole numbers, the question of the last digit, and % 10 answering it on both. Picked this lesson because it is the only one that teaches % 10. Not picked: the column lesson, which uses % on chairs rather than digits.");
   let names = ["n"];
@@ -30,20 +30,23 @@ export function app_code_lesson_statement_name_digit_split() {
     middle: [line_digit],
     logged: [digit],
   };
-  let before = app_code_lesson_statement_name_grid_position_step();
-  let middle_before = property_get(before, "middle");
-  let logged_before = property_get(before, "logged");
+  let value_names = app_code_lesson_statement_name_value_names();
+  let name_a = list_first(value_names);
+  let name_b = list_second(value_names);
+  let remainder = "remainder";
+  let divided = js_code_binary_spaced_nb(name_a, percent, name_b);
+  let line_remainder = js_code_let_statement(remainder, divided);
   let remember_lines = app_code_lesson_statement_name_swap_program(
     [
-      ["chair", 23],
-      ["columns", 10],
+      [name_a, 14],
+      [name_b, 4],
     ],
-    middle_before,
-    logged_before,
+    [line_remainder],
+    [remainder],
   );
   function values_get() {
     "four of the five, in a fresh order each screen";
-    let candidates = [[47], [93], [258], [61], [734]];
+    let candidates = [[47], [95], [258], [61], [734]];
     let taken = list_shuffle_take(candidates, 4);
     return taken;
   }
@@ -56,10 +59,14 @@ export function app_code_lesson_statement_name_digit_split() {
     title_code: line_digit,
     names,
     values_get,
-    example_values: [35],
+    example_values: [123],
     step,
-    remember_lesson: app_code_lesson_statement_name_grid_position,
-    remember_parts: ["we can find the row and column of a chair:"],
+    remember_lesson: app_code_lesson_statement_name_remainder,
+    remember_parts: [
+      "we can find the remainder (",
+      percent,
+      ") of dividing one number by another:",
+    ],
     remember_lines,
     explain: [
       ["Let's suppose we have a whole number, like ", "123", " or ", "4567"],
