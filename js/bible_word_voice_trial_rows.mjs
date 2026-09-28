@@ -10,6 +10,7 @@ export async function bible_word_voice_trial_rows() {
   "The recordings sit under gitignore on this machine, which the local server hands out under /love/, so they are heard on a phone without being sent anywhere or kept in git.";
   "The words are asked for again in the same way the trial asked for them, so a row's number is the number in the recording's file name.";
   "★ THE SET CHOSEN BY DESCRIPTION takes four Gemini voices not heard before, whose one-word description in Google's list reads most like someone reading scripture aloud, as Vindemiatrix had been chosen for gentle. The ones passed over: Algieba and Despina (smooth), Rasalgethi (informative), Achernar (soft), Alnilam (firm); the rest read as bright, upbeat, lively, casual or excitable.";
+  "★ THE TWO-MODEL SET HIDES WHICH MODEL IS WHICH behind A and B, and A is Flash for two voices and Pro for the other two, so a listener who has learnt that the dearer model ought to be better cannot hear that instead of the sound. The pick keeps the model's name, so the tally reads it back. Only rows 1, 2, 14, 15 and 21 are recorded - open it as #bible_word_voice_trial/gem_pro/1,2,14,15,21.";
   let sets = [
     {
       key: "heb",
@@ -80,6 +81,22 @@ export async function bible_word_voice_trial_rows() {
         ["Schedar", "Schedar · even (male)", "schedar"],
         ["Sulafat", "Sulafat · warm (female)", "sulafat"],
         ["Gacrux", "Gacrux · mature (female)", "gacrux"],
+      ],
+      rtl: true,
+    },
+    {
+      key: "gem_pro",
+      label: "Hebrew · two models",
+      chapter_code: "GEN01",
+      voices: [
+        ["Sadaltager_flash", "Sadaltager A", "sadaltager_flash"],
+        ["Sadaltager_pro", "Sadaltager B", "sadaltager_pro"],
+        ["Schedar_pro", "Schedar A", "schedar_pro"],
+        ["Schedar_flash", "Schedar B", "schedar_flash"],
+        ["Sulafat_flash", "Sulafat A", "sulafat_flash"],
+        ["Sulafat_pro", "Sulafat B", "sulafat_pro"],
+        ["Gacrux_pro", "Gacrux A", "gacrux_pro"],
+        ["Gacrux_flash", "Gacrux B", "gacrux_flash"],
       ],
       rtl: true,
     },
