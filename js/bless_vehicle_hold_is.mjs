@@ -76,8 +76,8 @@ export function bless_vehicle_hold_is(vehicle, world) {
     let at_found = property_get(other, "x");
     let same_lane = property_equals(other, "y", y);
     let same_square = equal(at_found, landing);
-    let both = and(same_lane, same_square);
-    return both;
+    let both_inner = and(same_lane, same_square);
+    return both_inner;
   }
   let queued = list_any(vehicles, in_landing_is);
   if (queued) {
