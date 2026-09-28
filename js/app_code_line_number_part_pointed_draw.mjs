@@ -1,3 +1,4 @@
+import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
 import { app_code_number_pointed_parts } from "./app_code_number_pointed_parts.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -35,6 +36,15 @@ export function app_code_line_number_part_pointed_draw(parts, pointers) {
   }
   function draw(box) {
     let line = html_div(box);
+    function text_draw(part) {
+      "a writing part that is itself a pointed text, such as the words last digit, drawn as a tile in its colour, as a pointed line draws one, asked by the human 2026-09-28";
+      let color = color_get(part);
+      if (equal(color, plain)) {
+        html_span_text(line, part);
+        return;
+      }
+      app_code_span_text_highlight_color(line, part, color);
+    }
     function part_draw(part, index) {
       if (text_empty_is(part)) {
         return;
@@ -42,7 +52,7 @@ export function app_code_line_number_part_pointed_draw(parts, pointers) {
       let left = modulo(index, 2);
       let is_code = equal(left, 1);
       if (not(is_code)) {
-        html_span_text(line, part);
+        text_draw(part);
         return;
       }
       let cut = text_split(part, /( )/);

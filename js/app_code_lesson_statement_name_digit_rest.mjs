@@ -78,6 +78,17 @@ export function app_code_lesson_statement_name_digit_rest() {
     let draw = app_code_line_number_part_pointed_draw(parts, pointers);
     return draw;
   }
+  let pointers_moved = [
+    [["12"], color],
+    [["456"], color2],
+    [["."], color3],
+    [["3", ".3", "last digit"], color4],
+  ];
+  function moved(parts) {
+    "a line where the last digit is followed as it moves: the words last digit, the 3 of 123 and the 3 after the dot all wear the fourth colour, asked by the human 2026-09-28 for the lines from dividing to rounding down. Not picked: the 3 of 123 coloured on every line, which would colour the 3 said to be removed before the division is taught, where only the kept 12 is the point";
+    let draw = app_code_line_number_part_pointed_draw(parts, pointers_moved);
+    return draw;
+  }
   let v = pointed([
     "Suppose we have a whole number like ",
     "123",
@@ -100,8 +111,8 @@ export function app_code_lesson_statement_name_digit_rest() {
     " and keep the ",
     "456",
   ]);
-  let v4 = pointed(["", point]);
-  let v5 = pointed(["", whole]);
+  let v4 = moved(["", point]);
+  let v5 = moved(["", whole]);
   let v6 = pointed(["The same process works for ", "4567", ":"]);
   let v7 = pointed(["", whole2]);
   let v8 = pointed([
@@ -113,7 +124,17 @@ export function app_code_lesson_statement_name_digit_rest() {
     "12.3",
     ":",
   ]);
-  let v9 = pointed(["This puts the last digit after the ", ".", ":"]);
+  let v9 = moved([
+    "This puts the ",
+    "",
+    "last digit",
+    "",
+    " (",
+    "3",
+    ") after the ",
+    ".",
+    ":",
+  ]);
   let lesson = app_code_lesson_statement_formula({
     words: "All but the last digit",
     title_code: line_rest,
