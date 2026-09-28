@@ -1,3 +1,7 @@
+import { fn_name } from "./fn_name.mjs";
+import { server_url_api } from "./server_url_api.mjs";
+import { json_to } from "./json_to.mjs";
+import { equal } from "./equal.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
@@ -90,7 +94,31 @@ export function html_viewport_readout_when_asked(bar) {
       "dpr " + round(window.devicePixelRatio),
       "innerWidth " + window.innerWidth,
     ];
-    box.textContent = lines.join("\n");
+    let text = lines.join("\n");
+    box.textContent = text;
+    ("each reading that differs from the last is also sent to the dev server, which files it (",
+      fn_name("viewport_readout_record"),
+      "), so the numbers reach the developer without a picture of them. A failed send is dropped: this page only exists to be read, and it keeps showing the numbers either way");
+    if (equal(text, state.sent)) {
+      return;
+    }
+    state.sent = text;
+    let v2 = lines.concat(["agent " + navigator.userAgent]);
+    let body = json_to({
+      f_name: fn_name("viewport_readout_record"),
+      args: [v2],
+    });
+    function lambda() {
+      return null;
+    }
+    let a = server_url_api();
+    fetch(a, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body,
+    }).catch(lambda);
   }
   state = {
     bars: [bar],
