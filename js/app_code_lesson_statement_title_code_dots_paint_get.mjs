@@ -1,3 +1,4 @@
+import { html_text_code_breakable_add } from "./html_text_code_breakable_add.mjs";
 import { app_code_lesson_title_code_breakable } from "./app_code_lesson_title_code_breakable.mjs";
 import { app_code_lesson_title_code_tile } from "./app_code_lesson_title_code_tile.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -16,9 +17,9 @@ export function app_code_lesson_statement_title_code_dots_paint_get(code) {
   let before = list_first(pieces);
   let after = list_last(pieces);
   function fill(host) {
-    html_span_text(host, before);
+    html_text_code_breakable_add(host, before, html_span_text);
     app_code_placeholder_dots(host);
-    html_span_text(host, after);
+    html_text_code_breakable_add(host, after, html_span_text);
   }
   function paint_code(parent) {
     "the same tile and the same places to break as a title piece with no dots, so a long piece wraps between its tokens rather than running off the right edge - it was held to one line before, and on a phone with the text size turned up let c = a; a = \"...\"; ran past the screen, at the human's request, 2026-09-28";

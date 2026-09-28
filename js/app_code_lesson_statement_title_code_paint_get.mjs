@@ -1,3 +1,4 @@
+import { html_text_code_breakable_add } from "./html_text_code_breakable_add.mjs";
 import { app_code_lesson_title_code_tile } from "./app_code_lesson_title_code_tile.mjs";
 import { app_code_lesson_title_code_breakable } from "./app_code_lesson_title_code_breakable.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -21,7 +22,7 @@ export function app_code_lesson_statement_title_code_paint_get(code) {
   function paint_code(parent) {
     let tile = app_code_lesson_title_code_tile(parent);
     let shown = app_code_lesson_title_code_breakable(code);
-    html_span_text_content(tile, shown);
+    html_text_code_breakable_add(tile, shown, html_span_text_content);
   }
   return paint_code;
 }
