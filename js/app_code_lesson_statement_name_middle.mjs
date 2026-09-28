@@ -1,3 +1,4 @@
+import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
@@ -30,9 +31,10 @@ export function app_code_lesson_statement_name_middle() {
   ("Most sums are odd, so the rounding changes the answer, and no middle is one of the numbers on its own screen or the 2 it is divided by. The five middles differ.");
   ("The writing follows the human's outline, 2026-09-27, from its second half: the average-of-two lesson already shows the middle on a number line, so this one opens by naming that and teaches only what is new, an odd sum whose middle is .5 and the choice to always round down. The outline wrote Math.floor(2 + 7 / 2), which divides only the 7; the lesson adds first in a line of its own, so the order cannot go wrong.");
   ("The opening is the human's second outline, 2026-09-27: even and odd are defined, each in bold where it is first used, and each shown on a division of its own, 8 / 2 and 7 / 2, so the .5 is seen on a number that is not in the example; then the average is reminded with a button to its lesson, and only then is the sum said to be odd. Even is defined by dividing by 2 rather than by the remainder, because dividing is the step this lesson takes. Not picked: defining even by what % 2 gives, which the remainder lessons would allow, but which is not the operation on this screen.");
-  ("Later the same day the human split the writing into three boxes: even and odd, then the middle, then the code under Here's the code:; and said the two distances from 4.5 one to a line, and how close both roundings are, 0.5.");
+  ("Later the same day the human split the writing into three boxes: even and odd, then the middle, then the code under Here's the code:; and said the two distances from the middle one to a line, and how close both roundings are, 0.5.");
   ("The reminder quotes lesson 87 in its own shape, Math.floor(14 / 4) is Math.floor(3.5) and Math.floor(3.5) is 3, so the decimal and the rounding down are both on the screen before the writing uses them. Picked over the human's other thought, 2026-09-27, of two reminders, one for dividing and one for Math.floor: lesson 87's first line already shows the division ending in a decimal, so a second box would repeat it.");
-  ("Numbers in the writing are code chips wearing the number line's pointing colours: 2 and 7 the ends', 4.5 and then 4 the middle's. The line 9 / 2 === 4.5 points at its middle only, because its 2 is the one divided by, not the end.");
+  ("Numbers in the writing are code chips wearing the number line's pointing colours: 4 and 9 the ends', 6.5 and then 6 the middle's, and the last program's code and output wear them too. The line 13 / 2 === 6.5 points at its middle only, because its 2 is the one divided by, not an end.");
+  ("The example is 4 and 9, asked by the human 2026-09-28, so 2 is only ever the number divided by and never an end as well. Its sum 13 is odd, and none of 4, 9, 13, 6.5 or 6 is the 8 / 2 === 4 or 7 / 2 === 3.5 worked beside even and odd, save the 4 those two give. Not picked: 3 and 8, whose 8 is the even example's; 5 and 10, whose middle 7 is the odd example's; 5 and 6, whose middle 5 is an end; 3 and 10, a longer number line for nothing more.");
   let step = app_code_lesson_statement_name_middle_step();
   let middle = property_get(step, "middle");
   let line_sum = list_first(middle);
@@ -64,46 +66,46 @@ export function app_code_lesson_statement_name_middle() {
     let taken = list_shuffle_take(candidates, 4);
     return taken;
   }
-  let ends = ["2", "7"];
+  let ends = ["4", "9"];
   let combined = js_code_binary_spaced_nb("sum", slash, "2");
   let draw = app_code_line_ends_middle_draw(
-    ["For example, suppose we have ", "2", " and ", "7", ":"],
+    ["For example, suppose we have ", "4", " and ", "9", ":"],
     ends,
     [],
   );
-  let code = js_code_binary_result_nb("2", plus, "7", "9");
+  let code = js_code_binary_result_nb("4", plus, "9", "13");
   let draw2 = app_code_line_ends_middle_draw(["", code], ends, []);
-  let code2 = js_code_binary_result_nb("9", slash, "2", "4.5");
-  let draw3 = app_code_line_ends_middle_draw(["", code2], [], ["4.5"]);
-  let draw4 = app_code_number_line_draw(2, 7, 0.5, [2, 7], 4.5);
+  let code2 = js_code_binary_result_nb("13", slash, "2", "6.5");
+  let draw3 = app_code_line_ends_middle_draw(["", code2], [], ["6.5"]);
+  let draw4 = app_code_number_line_draw(4, 9, 0.5, [4, 9], 6.5);
   let draw5 = app_code_line_ends_middle_draw(
-    ["", "4.5", " is ", "0.5", " away from ", "4"],
+    ["", "6.5", " is ", "0.5", " away from ", "6"],
     [],
-    ["4.5"],
+    ["6.5"],
   );
   let draw5_after = app_code_line_ends_middle_draw(
-    ["And ", "4.5", " is ", "0.5", " away from ", "5"],
+    ["And ", "6.5", " is ", "0.5", " away from ", "7"],
     [],
-    ["4.5"],
+    ["6.5"],
   );
-  ("the line under the number line, the human's, 2026-09-28: the sum is odd and so the middle is 4.5, with the word middle in the middle's colour, as the average lesson colours it");
+  ("the line under the number line, the human's, 2026-09-28: the sum is odd and so the middle is 6.5, with the word middle in the middle's colour, as the average lesson colours it");
   let odd_middle = app_code_line_ends_middle_draw(
     [
       "",
-      "9",
+      "13",
       " is odd and ",
-      "4.5",
+      "6.5",
       " is the ",
       "",
       "middle",
       "",
       " number between ",
-      "2",
+      "4",
       " and ",
-      "7",
+      "9",
     ],
     ends,
-    ["4.5", "middle"],
+    ["6.5", "middle"],
   );
   function middle_worded(parts) {
     "a line whose word middle wears the middle colour, as the number line and the average lesson colour it, asked by the human 2026-09-28";
@@ -134,7 +136,7 @@ export function app_code_lesson_statement_name_middle() {
     " number to be a whole number?",
   ]);
   let next = app_code_explain_container_next;
-  let draw6 = app_code_number_line_draw(2, 7, 0.5, [2, 7], 4);
+  let draw6 = app_code_number_line_draw(4, 9, 0.5, [4, 9], 6);
   let code_even = js_code_binary_result_nb("8", slash, "2", "4");
   let code_odd = js_code_binary_result_nb("7", slash, "2", "3.5");
   function even_draw(box) {
@@ -169,12 +171,14 @@ export function app_code_lesson_statement_name_middle() {
     let color_middle = app_code_highlight_color_second();
     app_code_span_text_highlight_color(line, "middle", color_middle);
   }
+  let color = app_code_highlight_color();
+  let color2 = app_code_highlight_color_second();
   let lesson = app_code_lesson_statement_formula({
     words: "Middle of two names",
     title_code: js_code_call_args(floor_name, [combined]),
     names,
     values_get,
-    example_values: [2, 7],
+    example_values: [4, 9],
     step,
     remember_lesson: app_code_lesson_expression_integer_division,
     remember_parts: ["we divide, and then round down to get a whole number:"],
@@ -215,7 +219,10 @@ export function app_code_lesson_statement_name_middle() {
       ],
     ],
     decoys: null,
-    example_pointers: null,
+    example_pointers: [
+      [ends, color],
+      [["6"], color2],
+    ],
   });
   return lesson;
 }
