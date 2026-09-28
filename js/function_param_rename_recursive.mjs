@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { property_list_get } from "./property_list_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { data_identifiers_search_names } from "./data_identifiers_search_names.mjs";
@@ -71,8 +72,7 @@ export async function function_param_rename_recursive(
         continue;
       }
       let parsed = await function_parse_declaration(caller);
-      let declaration = property_get(parsed, "declaration");
-      let params = property_get(declaration, "params");
+      let params = property_path_get_2(parsed, "declaration", "params");
       let param = list_find_property_or_null(params, "name", name);
       if (param) {
         list_add(pending, caller);
