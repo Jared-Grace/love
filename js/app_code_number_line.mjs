@@ -1,3 +1,4 @@
+import { app_shared_glow_shadow } from "./app_shared_glow_shadow.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
@@ -119,8 +120,8 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
     let left4 = not(whole);
     let right2 = not(pointed);
     if (pointed) {
-      ("THE NUMBERS A QUESTION IS ABOUT GLOW, asked by the human 2026-09-28: the two ends and the middle each get a soft halo in their own colour round the chip, and a taller, thicker tick with the same halo, so they stand out from the plain numbers at a glance. Not picked: a bigger chip, which would push into its neighbours on a line of halves; and an animated pulse, which pulls the eye away from the writing beside it");
-      let glow = text_combine("0 0 0.45em 0.15em ", color);
+      ("THE NUMBERS A QUESTION IS ABOUT GLOW, asked by the human 2026-09-28: the two ends and the middle each get the one glow every app shows round what it wants seen, in their own colour, round the chip, and a taller, thicker tick with the same halo, so they stand out from the plain numbers at a glance. Not picked: a bigger chip, which would push into its neighbours on a line of halves; and an animated pulse, which pulls the eye away from the writing beside it");
+      let glow = app_shared_glow_shadow(color);
       html_style_assign(chip, {
         "box-shadow": glow,
       });

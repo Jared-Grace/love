@@ -1,3 +1,5 @@
+import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
+import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
 import { app_code_lesson_bold_term } from "./app_code_lesson_bold_term.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
@@ -103,6 +105,34 @@ export function app_code_lesson_statement_name_middle() {
     ends,
     ["4.5", "middle"],
   );
+  function middle_worded(parts) {
+    "a line whose word middle wears the middle colour, as the number line and the average lesson colour it, asked by the human 2026-09-28";
+    let draw = app_code_line_ends_middle_draw(parts, [], ["middle"]);
+    return draw;
+  }
+  let middle_sum = middle_worded([
+    "So to find the number in the ",
+    "",
+    "middle",
+    "",
+    " of two numbers, we first add the two numbers together",
+  ]);
+  let middle_odd = middle_worded([
+    "If that sum is odd, then when we divide it by ",
+    "2",
+    ", the ",
+    "",
+    "middle",
+    "",
+    " ends in .5",
+  ]);
+  let middle_whole = middle_worded([
+    "What if we want the ",
+    "",
+    "middle",
+    "",
+    " number to be a whole number?",
+  ]);
   let next = app_code_explain_container_next;
   let draw6 = app_code_number_line_draw(2, 7, 0.5, [2, 7], 4);
   let code_even = js_code_binary_result_nb("8", slash, "2", "4");
@@ -134,8 +164,10 @@ export function app_code_lesson_statement_name_middle() {
     );
     html_span_text_content(
       line,
-      ", the average of two numbers is the number in the middle",
+      ", the average of two numbers is the number in the ",
     );
+    let color_middle = app_code_highlight_color_second();
+    app_code_span_text_highlight_color(line, "middle", color_middle);
   }
   let lesson = app_code_lesson_statement_formula({
     words: "Middle of two names",
@@ -157,20 +189,14 @@ export function app_code_lesson_statement_name_middle() {
       ["If you divide an odd number by 2, the answer ends in .5: ", code_odd],
       next,
       average_remember_draw,
-      [
-        "So to find the number in the middle of two numbers, we first add the two numbers together",
-      ],
-      [
-        "If that sum is odd, then when we divide it by ",
-        "2",
-        ", the middle ends in .5",
-      ],
+      middle_sum,
+      middle_odd,
       draw,
       draw2,
       draw3,
       draw4,
       odd_middle,
-      ["What if we want the middle number to be a whole number?"],
+      middle_whole,
       draw5,
       draw5_after,
       ["So rounding up and rounding down are just as close (", "0.5", ")"],
