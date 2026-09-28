@@ -191,9 +191,22 @@ def misaki_of(syllables):
     return "".join(out)
 
 
-def lexicon_entries():
-    """Every entry the given lexicon holds: its written word, its tag, its syllables."""
-    text = LEXICON_PATH.read_text(encoding="utf-8")
+def lexicon_text_now():
+    """The given lexicon as it stands on disk."""
+    return LEXICON_PATH.read_text(encoding="utf-8")
+
+
+def said_text_now():
+    """The hand-written pronunciations as they stand on disk."""
+    return SAID_PATH.read_text(encoding="utf-8")
+
+
+def lexicon_entries(text):
+    """Every entry this lexicon text holds: its written word, its tag, its syllables.
+
+    The text is handed in rather than read here so that the lexicon as it was
+    on an earlier day can be asked the same questions as the one on disk.
+    """
     entries = []
     for word, tag, body in ENTRY.findall(text):
         syllables = [
@@ -204,10 +217,10 @@ def lexicon_entries():
     return entries
 
 
-def lexicon_named():
+def lexicon_named(text):
     """Every proper noun the given lexicon holds, said in the reader's notation."""
     named = {}
-    for word, tag, syllables in lexicon_entries():
+    for word, tag, syllables in lexicon_entries(text):
         if tag not in NAMED_TAGS:
             continue
         sounds = misaki_of(syllables)
@@ -216,7 +229,7 @@ def lexicon_named():
     return named
 
 
-def lexicon_ordinary():
+def lexicon_ordinary(text):
     """The lexicon's ordinary words, for the ones the reader has no answer for.
 
     ★ THE HOMOGRAPH REASON FOR LEAVING THESE OUT DOES NOT REACH A WORD THE
@@ -239,7 +252,7 @@ def lexicon_ordinary():
     because the reader had no word there to take.
     """
     ordinary = {}
-    for word, tag, syllables in lexicon_entries():
+    for word, tag, syllables in lexicon_entries(text):
         if tag in NAMED_TAGS or "-" in word or "_" in word:
             continue
         sounds = misaki_of(syllables)
@@ -249,7 +262,7 @@ def lexicon_ordinary():
     return ordinary
 
 
-def lexicon_parted():
+def lexicon_parted(text):
     """The halves of the lexicon's joined names, for a Bible that writes them apart.
 
     The lexicon writes Kibroth-hattaavah and Kadesh_Barnea joined; this Bible
@@ -304,7 +317,7 @@ def lexicon_parted():
     and sabach-thani - so the homograph reason for keeping to proper nouns
     does not reach them, and the tag is not consulted.
     """
-    entries = lexicon_entries()
+    entries = lexicon_entries(text)
     counts = {}
     for word, _, syllables in entries:
         if "-" not in word and "_" not in word:
@@ -356,7 +369,7 @@ def lexicon_parted_cut(counts, head, tail, total):
     return cut
 
 
-def pronunciations():
+def pronunciations(lexicon_text, said_text):
     """How this repo wants every word said, the hand-written answers winning.
 
     A name is filed under the spelling the Bible writes it with and under no
@@ -377,6 +390,6 @@ def pronunciations():
     readings, so a name installed over an ordinary word shows up there as an
     ordinary word whose sound changed.  Run it after touching the lexicon.
     """
-    said = lexicon_named()
-    said.update(json.loads(SAID_PATH.read_text(encoding="utf-8")))
+    said = lexicon_named(lexicon_text)
+    said.update(json.loads(said_text))
     return said

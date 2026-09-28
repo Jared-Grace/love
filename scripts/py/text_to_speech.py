@@ -348,14 +348,27 @@ def g2p_ready():
     quietly restate common words the reader already says correctly - Havens,
     Hill, Sea and Ghost all fall out of joined names.
     """
+    from bible_pronunciations import lexicon_text_now, said_text_now
+
+    return g2p_with(lexicon_text_now(), said_text_now())
+
+
+def g2p_with(lexicon_text, said_text):
+    """The reading's letters-to-sound step, built from these two files' contents.
+
+    g2p_ready hands it the files on disk.  Handed the files as they were on an
+    earlier day, it builds the reading a recording made that day was spoken
+    with, which is how a pronunciation mended since is found in the sound.
+    """
     g2p = g2p_plain()
     from bible_pronunciations import lexicon_ordinary, lexicon_parted, pronunciations
 
     known = set(g2p.lexicon.golds) | set(getattr(g2p.lexicon, "silvers", {}))
-    for word, sounds in {**lexicon_ordinary(), **lexicon_parted()}.items():
+    filled = {**lexicon_ordinary(lexicon_text), **lexicon_parted(lexicon_text)}
+    for word, sounds in filled.items():
         if word not in known:
             g2p.lexicon.golds[word] = sounds
-    for word, sounds in pronunciations().items():
+    for word, sounds in pronunciations(lexicon_text, said_text).items():
         g2p.lexicon.golds[word] = sounds
     return g2p
 
