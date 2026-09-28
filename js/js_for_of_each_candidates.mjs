@@ -1,10 +1,10 @@
+import { property_equals } from "./property_equals.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_list_types_nodes } from "./js_list_types_nodes.mjs";
 import { js_for_of_each_blockers } from "./js_for_of_each_blockers.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
@@ -22,15 +22,13 @@ export function js_for_of_each_candidates(ast) {
       return;
     }
     let left = property_get(loop, "left");
-    let kind = property_get(left, "type");
-    let declared = equal(kind, "VariableDeclaration");
+    let declared = property_equals(left, "type", "VariableDeclaration");
     if (not(declared)) {
       return;
     }
     let declarations = property_get(left, "declarations");
     let id = list_first_property(declarations, "id");
-    let left2 = property_get(id, "type");
-    let named = equal(left2, "Identifier");
+    let named = property_equals(id, "type", "Identifier");
     if (not(named)) {
       return;
     }
