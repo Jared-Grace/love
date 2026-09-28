@@ -1,4 +1,5 @@
-import { not_equal } from "./not_equal.mjs";
+import { app_code_number_pointed_parts } from "./app_code_number_pointed_parts.mjs";
+import { null_not_is } from "./null_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_pointer_color_or_null } from "./app_code_pointer_color_or_null.mjs";
@@ -49,28 +50,16 @@ export function app_code_line_number_part_pointed_draw(parts, pointers) {
       let pieces = [];
       let colors = [];
       for (let piece of whole) {
-        ("a piece ending in a number is cut into what comes before the number, the number but its last digit, that last digit - or the .3 after a dot - and what follows; so 123 is 12 and 3, 12.3 is 12 and .3, and Math.floor(123 is Math.floor( then 12 and 3");
-        let found = piece.match(/^(\D*)(\d*)(\.?\d)(\D*)$/);
-        let body = "";
-        let tail = "";
-        if (found) {
-          body = found[2];
-          tail = found[3];
-        }
-        let color_body = color_get(body);
-        let color_tail = color_get(tail);
-        let body_pointed = not_equal(color_body, plain);
-        let tail_pointed = not_equal(color_tail, plain);
-        if (text_empty_not_is(body) && (body_pointed || tail_pointed)) {
-          let parts_found = [found[1], body, tail, found[4]];
-          let colors_found = [plain, color_body, color_tail, plain];
-          function found_add(text, index) {
-            if (text_empty_not_is(text)) {
-              pieces.push(text);
-              colors.push(colors_found[index]);
+        let found = app_code_number_pointed_parts(pointers, piece);
+        if (null_not_is(found)) {
+          for (let pair of found) {
+            pieces.push(pair[0]);
+            let color_part = pair[1];
+            if (null_is(color_part)) {
+              color_part = plain;
             }
+            colors.push(color_part);
           }
-          each_index(parts_found, found_add);
         } else {
           pieces.push(piece);
           let v = color_get(piece);

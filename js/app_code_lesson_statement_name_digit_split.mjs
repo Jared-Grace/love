@@ -1,3 +1,4 @@
+import { app_code_example_number_part_pointed_draw } from "./app_code_example_number_part_pointed_draw.mjs";
 import { app_code_line_number_part_pointed_draw } from "./app_code_line_number_part_pointed_draw.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
@@ -115,7 +116,17 @@ export function app_code_lesson_statement_name_digit_split() {
       ["", by_ten, " always returns the last digit"],
       ["", line_digit],
       app_code_explain_container_next,
-      ["Why is it ", by_ten, " and not ", v5, " or ", v6, "?"],
+      [
+        "Why is it ",
+        by_ten,
+        " and not ",
+        v5,
+        " or ",
+        v6,
+        " or ",
+        percent,
+        " for some other number?",
+      ],
       [
         "There are ",
         "10",
@@ -140,15 +151,17 @@ export function app_code_lesson_statement_name_digit_split() {
         " ",
         "0",
       ],
-      ["Therefore ", by_ten, " gives you the last digit"],
+      ["Therefore ", by_ten, " gives you the last digit of a number"],
       [
         "The number of different digits is the number you ",
         percent,
-        " by to get the last digit",
+        " by to get the last digit of a number",
       ],
     ],
     decoys: null,
-    example_pointers: [[["3"], color3]],
+    example_pointers: app_code_example_number_part_pointed_draw([
+      [["3"], color3],
+    ]),
   });
   return lesson;
 }

@@ -1,3 +1,4 @@
+import { app_code_example_number_part_pointed_draw } from "./app_code_example_number_part_pointed_draw.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_code_line_number_part_pointed_draw } from "./app_code_line_number_part_pointed_draw.mjs";
@@ -22,6 +23,7 @@ export function app_code_lesson_statement_name_digit_rest() {
   ("The writing is the human's, 2026-09-28, in three boxes: what is wanted, shown on both numbers; how the code gets it, on 123; and the same on 4567, then the line. Numbers in the writing are code, as the last-digit lesson writes them.");
   ("It follows the last-digit lesson and reminds it, since the two lines together take a number apart. The writing starts from that lesson's own numbers, 123 and 4567, so the reader sees the same numbers cut the other way. Not picked: explaining it by chairs in rows of 10, whose row is the rest, which the last-digit lesson had before it lost its chairs; and saying the division shifts the digits, which names a picture the reader has not been shown.");
   ("No answer is 0, and the five answers differ.");
+  ("The last program is coloured as the writing is, the kept 12 of 123 blue in its code and its output, asked by the human 2026-09-28; the reminder of the last-digit lesson is left plain, because there the 3 is what is coloured, and here blue already means the 12.");
   let names = ["n"];
   let n = list_first(names);
   let ten = "10";
@@ -95,6 +97,13 @@ export function app_code_lesson_statement_name_digit_rest() {
   let v5 = pointed(["", whole]);
   let v6 = pointed(["The same process works for ", "4567", ":"]);
   let v7 = pointed(["", whole2]);
+  let v8 = pointed([
+    "Then ",
+    floor_name,
+    " rounds down, which removes the .3 from ",
+    "12.3",
+    ":",
+  ]);
   let lesson = app_code_lesson_statement_formula({
     words: "All but the last digit",
     title_code: line_rest,
@@ -113,9 +122,9 @@ export function app_code_lesson_statement_name_digit_rest() {
       app_code_explain_container_next,
       ["How do we get all but the last digit?"],
       ["In code, first we divide by ", "10"],
-      ["This puts the last digit after the dot:"],
+      ["This puts the last digit after the ", ".", ":"],
       v4,
-      ["Then ", floor_name, " rounds down, which removes the .3:"],
+      v8,
       v5,
       app_code_explain_container_next,
       v6,
@@ -126,7 +135,9 @@ export function app_code_lesson_statement_name_digit_rest() {
       ["", line_rest],
     ],
     decoys: null,
-    example_pointers: null,
+    example_pointers: app_code_example_number_part_pointed_draw([
+      [["12"], color],
+    ]),
   });
   return lesson;
 }
