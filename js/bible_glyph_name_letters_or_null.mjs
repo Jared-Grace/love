@@ -17,18 +17,18 @@ export function bible_glyph_name_letters_or_null(text) {
   arguments_assert(arguments, 1);
   let found = [];
   for (let part of text_split_space(text)) {
-    let letters = text_letters_only(part);
-    let blank = equal(letters, "");
+    let letters_inner = text_letters_only(part);
+    let blank = equal(letters_inner, "");
     if (blank) {
       continue;
     }
-    let first = letters.slice(0, 1);
+    let first = letters_inner.slice(0, 1);
     let right = text_upper_to(first);
     let upper = equal(first, right);
     let lower = text_lower_is(first);
     let capital = upper && not(lower);
     if (capital) {
-      list_add(found, letters);
+      list_add(found, letters_inner);
     }
   }
   let one = equal(found.length, 1);
