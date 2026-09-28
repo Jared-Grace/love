@@ -1,8 +1,8 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_versions_downloaded } from "./ebible_versions_downloaded.mjs";
 import { ebible_bible_folders_verses_punctuation_only_path } from "./ebible_bible_folders_verses_punctuation_only_path.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
@@ -25,8 +25,7 @@ export async function ebible_bible_folders_verses_punctuation_only_write() {
   let walked = [];
   let path = ebible_bible_folders_verses_punctuation_only_path();
   function verses_size(found) {
-    let verses = property_get(found, "found");
-    let size = list_size(verses);
+    let size = property_list_size(found, "found");
     return size;
   }
   async function written() {
