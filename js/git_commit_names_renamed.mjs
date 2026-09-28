@@ -22,8 +22,8 @@ export function git_commit_names_renamed(reads, text) {
       walked: null,
     };
     function git_commit_names_renamed_walked(box2, reads2, name2) {
-      let walked = git_commit_name_after_maps(reads2, name2);
-      property_set(box2, "walked", walked);
+      let walked_found = git_commit_name_after_maps(reads2, name2);
+      property_set(box2, "walked", walked_found);
     }
     function git_commit_names_renamed_try() {
       git_commit_names_renamed_walked(box, reads, name);
