@@ -11,4 +11,5 @@ export function app_code_home_start_button(parent, context) {
   app_shared_button_wide_shape(button);
   html_bold(button);
   html_style_font_size(button, "1.5em");
+  return button;
 }

@@ -1,3 +1,4 @@
+import { html_shown_when_under_bar } from "./html_shown_when_under_bar.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_home_bar_content } from "./app_code_home_bar_content.mjs";
 import { property_get } from "./property_get.mjs";
@@ -13,7 +14,9 @@ export function app_code_home_value(root, context) {
   let g = property_get(frame, "content");
   let started = app_code_lessons_any_complete(context);
   if (not(started)) {
-    app_code_home_start_button(g, context);
+    let big = app_code_home_start_button(g, context);
+    let next = property_get(frame, "next");
+    html_shown_when_under_bar(next, big, bar);
   }
   let div = html_div_text_centered(g, "Lessons:");
   let value = app_shared_spaced_gap();
