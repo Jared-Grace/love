@@ -58,6 +58,8 @@ anyway, so the length costs nothing and the missing words cost a second run.
 import collections
 import json
 import os
+import re
+import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -72,9 +74,14 @@ from bible_audio_words_dropped import (  # noqa: E402
 from text_to_speech import (  # noqa: E402
     g2p_plain,
     g2p_ready,
+    g2p_with,
     said_text,
     said_text_dashes_opened,
 )
+
+REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+READING_FILES = ("data/given/biblevox_lexicon.scm", "data/given/speech_pronunciations.json")
 
 SOUND_STEPS = {
     "silent": g2p_as_it_was,
