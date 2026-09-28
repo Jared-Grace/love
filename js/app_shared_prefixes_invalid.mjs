@@ -1,3 +1,4 @@
+import { app_shared_screen_name_prefix } from "./app_shared_screen_name_prefix.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { apps_names } from "./apps_names.mjs";
 import { functions_names } from "./functions_names.mjs";
@@ -14,8 +15,6 @@ import { list_map } from "./list_map.mjs";
 import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { function_name_separator } from "./function_name_separator.mjs";
 export async function app_shared_prefixes_invalid() {
   "audit: every app_<part>_ function whose <part> is neither a real app nor reserved — grouped by part, so each group is a squatter to migrate";
   "shared is the one sanctioned bucket, so it counts as owned even though it is not an app";
@@ -34,8 +33,7 @@ export async function app_shared_prefixes_invalid() {
   function owned_is(f_name) {
     let rest = app_shared_name_prefix_without(f_name);
     function matches(a) {
-      let separator = function_name_separator();
-      let boundary = text_combine(a, separator);
+      let boundary = app_shared_screen_name_prefix(a);
       let m = equal(rest, a) || text_starts_with(rest, boundary);
       return m;
     }
