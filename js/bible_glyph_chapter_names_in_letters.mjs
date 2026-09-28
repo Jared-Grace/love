@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
 import { bible_glyph_proper_name_numbers_cache } from "./bible_glyph_proper_name_numbers_cache.mjs";
@@ -62,8 +63,7 @@ export async function bible_glyph_chapter_names_in_letters(chapter_code) {
       if (bible_glyph_gloss_placeholder_is(word.gloss)) {
         continue;
       }
-      let b = equal(word.glyph, "");
-      let drawn = not(b);
+      let drawn = equal_not(word.glyph, "");
       if (drawn) {
         continue;
       }
