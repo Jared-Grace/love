@@ -1,3 +1,4 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
@@ -25,7 +26,6 @@ import { git_folder_run } from "./git_folder_run.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { equal_assert_json } from "./equal_assert_json.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { git_folder_head_paths_holding } from "./git_folder_head_paths_holding.mjs";
 export async function git_history_paths_texts_blobs_kept_replace_rehearse(
   folder,
@@ -162,11 +162,10 @@ export async function git_history_paths_texts_blobs_kept_replace_rehearse(
     paths,
     words,
   );
-  let blobs_holding_after = list_map(
+  let after_names = list_map_unique(
     holding_after,
     git_history_paths_texts_blobs_kept_replace_rehearse_blob,
   );
-  let after_names = list_unique(blobs_holding_after);
   let allowed = list_unique_set(kept);
   let survived = list_set_difference(after_names, allowed);
   list_empty_is_assert_json(survived, {
