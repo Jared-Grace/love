@@ -1,3 +1,4 @@
+import { list_map_filter } from "./list_map_filter.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_version_downloaded_page_stems } from "./ebible_version_downloaded_page_stems.mjs";
 import { text_size } from "./text_size.mjs";
@@ -89,8 +90,11 @@ export async function ebible_bible_folder_verses_punctuation_only(
     let unreadable = property_get(measured, "unreadable");
     return unreadable;
   }
-  let unreadable_each = list_map(scanned, unreadable_get);
-  let chapters_unreadable = list_filter(unreadable_each, null_not_is);
+  let chapters_unreadable = list_map_filter(
+    scanned,
+    unreadable_get,
+    null_not_is,
+  );
   list_sort_text(chapters_unreadable);
   let r = {
     bible_folder,
