@@ -1,6 +1,6 @@
+import { multiply_round } from "./multiply_round.mjs";
 import { math_max } from "./math_max.mjs";
 import { math_min } from "./math_min.mjs";
-import { round } from "./round.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
@@ -94,8 +94,7 @@ export async function lyric_video_song_lines_moved_write(
     let scale = greater_than(before, 0) ? divide(after, before) : 1;
     function placed(seconds) {
       let left2 = subtract(seconds, first);
-      let n = multiply(start + multiply(left2, scale), 1000);
-      let top = round(n);
+      let top = multiply_round(start + multiply(left2, scale), 1000);
       let r = divide(top, 1000);
       return r;
     }
