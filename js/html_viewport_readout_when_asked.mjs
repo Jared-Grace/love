@@ -58,9 +58,9 @@ export function html_viewport_readout_when_asked(bar) {
     page.appendChild(probe);
     probes[unit] = probe;
   }
-  function round(n) {
+  function round_to(n) {
     let p = multiply(n, 10);
-    let top2 = Math.round(p);
+    let top2 = Math.round_to(p);
     let divided = divide(top2, 10);
     return divided;
   }
@@ -73,9 +73,9 @@ export function html_viewport_readout_when_asked(bar) {
         let rect = element.getBoundingClientRect();
         bars.push(
           "bar top " +
-            round(rect.top) +
+            round_to(rect.top) +
             " bottom " +
-            round(rect.bottom) +
+            round_to(rect.bottom) +
             " style top " +
             element.style.top,
         );
@@ -87,13 +87,13 @@ export function html_viewport_readout_when_asked(bar) {
             "  button " +
               button.textContent.slice(0, 24) +
               " top " +
-              round(box_button.top) +
+              round_to(box_button.top) +
               " bottom " +
-              round(box_button.bottom) +
+              round_to(box_button.bottom) +
               " left " +
-              round(box_button.left) +
+              round_to(box_button.left) +
               " right " +
-              round(box_button.right) +
+              round_to(box_button.right) +
               " " +
               style.display +
               " " +
@@ -125,9 +125,9 @@ export function html_viewport_readout_when_asked(bar) {
         "  wide " +
           item.each.tagName +
           " right " +
-          round(item.right) +
+          round_to(item.right) +
           " width " +
-          round(item.each.getBoundingClientRect().width) +
+          round_to(item.each.getBoundingClientRect().width) +
           " " +
           item.each.textContent.slice(0, 40),
       );
@@ -137,16 +137,16 @@ export function html_viewport_readout_when_asked(bar) {
     let lines = [
       "innerHeight " + window.innerHeight,
       "clientHeight " + document.documentElement.clientHeight,
-      "dvh " + round(probes.dvh.getBoundingClientRect().height),
-      "svh " + round(probes.svh.getBoundingClientRect().height),
-      "lvh " + round(probes.lvh.getBoundingClientRect().height),
-      "vv height " + (viewport ? round(viewport.height) : "none"),
-      "vv offsetTop " + (viewport ? round(viewport.offsetTop) : "none"),
-      "vv scale " + (viewport ? round(viewport.scale) : "none"),
-      "scrollY " + round(window.scrollY),
-      "page height " + round(document.documentElement.scrollHeight),
+      "dvh " + round_to(probes.dvh.getBoundingClientRect().height),
+      "svh " + round_to(probes.svh.getBoundingClientRect().height),
+      "lvh " + round_to(probes.lvh.getBoundingClientRect().height),
+      "vv height " + (viewport ? round_to(viewport.height) : "none"),
+      "vv offsetTop " + (viewport ? round_to(viewport.offsetTop) : "none"),
+      "vv scale " + (viewport ? round_to(viewport.scale) : "none"),
+      "scrollY " + round_to(window.scrollY),
+      "page height " + round_to(document.documentElement.scrollHeight),
       v,
-      "dpr " + round(window.devicePixelRatio),
+      "dpr " + round_to(window.devicePixelRatio),
       "innerWidth " + window.innerWidth,
     ];
     let text = lines.join("\n");
@@ -161,7 +161,7 @@ export function html_viewport_readout_when_asked(bar) {
     state.sent = text;
     ("the time is added only to what is sent, never to what is compared, because it differs every tick - compared, it sent a reading four times a second and the page never went quiet");
     let v2 = lines.concat([
-      "page time " + round(n2),
+      "page time " + round_to(n2),
       "agent " + navigator.userAgent,
     ]);
     let body = json_to({
