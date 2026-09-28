@@ -15,8 +15,8 @@ export function date_zone_moment(date, time, zone) {
   let [hour, minute] = time.split(":").map(Number);
   let difference = subtract(month, 1);
   let wanted = Date.UTC(year, difference, day, hour, minute);
-  function wall_ms(moment) {
-    let wall = date_zone_date_time(new Date(moment), zone);
+  function wall_ms(moment_inner) {
+    let wall = date_zone_date_time(new Date(moment_inner), zone);
     let [y, mo, dd] = wall.date.split("-").map(Number);
     let [h, mi] = wall.time.split(":").map(Number);
     let difference2 = subtract(mo, 1);
