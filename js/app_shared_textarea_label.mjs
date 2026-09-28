@@ -1,3 +1,4 @@
+import { html_width_full } from "./html_width_full.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_field_title } from "./app_shared_field_title.mjs";
 import { app_shared_textarea_reader_direction } from "./app_shared_textarea_reader_direction.mjs";
@@ -13,7 +14,7 @@ export function app_shared_textarea_label(parent, label) {
   let textarea = app_shared_textarea_reader_direction(parent);
   app_shared_input_style(textarea);
   html_attribute_set(textarea, "rows", "4");
-  html_style_set(textarea, "width", "100%");
+  html_width_full(textarea);
   html_style_set(textarea, "box-sizing", "border-box");
   html_style_set(textarea, "resize", "vertical");
   return textarea;

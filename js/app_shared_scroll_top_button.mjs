@@ -1,3 +1,4 @@
+import { html_display_set } from "./html_display_set.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { not } from "./not.mjs";
@@ -10,7 +11,6 @@ import { html_on_scroll } from "./html_on_scroll.mjs";
 import { html_on_resize } from "./html_on_resize.mjs";
 import { html_on_size_change } from "./html_on_size_change.mjs";
 import { html_connected_is } from "./html_connected_is.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { app_shared_button_disabled_set } from "./app_shared_button_disabled_set.mjs";
 export function app_shared_scroll_top_button(parent) {
   "a small button that takes the page back to its beginning - there only while the page is long enough to scroll, and switched off while the page is already at its beginning.";
