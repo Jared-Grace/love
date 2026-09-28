@@ -21,12 +21,12 @@ export async function gloss_store_verse_order_offenders(fn) {
   let held_is = false;
   let wrong = list_filter_property(checked, "held", held_is);
   function offender_of(one) {
-    let r = {
+    let r_inner = {
       chapter_code: property_get(one, "chapter_code"),
       holds: property_get(one, "before"),
       should_hold: property_get(one, "after"),
     };
-    return r;
+    return r_inner;
   }
   let offenders = list_map(wrong, offender_of);
   let r = {
