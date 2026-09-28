@@ -1,3 +1,4 @@
+import { list_last_property } from "./list_last_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { property_get } from "./property_get.mjs";
@@ -34,8 +35,7 @@ export function color_places_cut_at_gap(placed, gap) {
   }
   let several = greater_than(runs.length, 1);
   let lowest = placed[0];
-  let highest = list_last(placed);
-  let right = property_get(highest, "hue");
+  let right = list_last_property(placed, "hue");
   let over_the_top = subtract(360, right);
   let around = less_than_equal(over_the_top + property_get(lowest, "hue"), gap);
   let wrapped = several && around;
