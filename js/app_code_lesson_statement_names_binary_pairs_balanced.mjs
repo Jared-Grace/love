@@ -33,14 +33,14 @@ export function app_code_lesson_statement_names_binary_pairs_balanced(
     let r = equal(value, true);
     return r;
   }
-  function false_is(pair) {
+  function false_is_name(pair) {
     "whether this pair comes out false";
     let value = answer_of(pair);
     let r = equal(value, false);
     return r;
   }
   let trues = list_filter(candidates, true_is_name);
-  let falses = list_filter(candidates, false_is);
+  let falses = list_filter(candidates, false_is_name);
   let trues_taken = list_shuffle_take(trues, 2);
   let falses_taken = list_shuffle_take(falses, 2);
   let both = list_concat(trues_taken, falses_taken);
