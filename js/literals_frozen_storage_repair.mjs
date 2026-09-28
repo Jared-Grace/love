@@ -1,11 +1,10 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { literals_frozen_storage_walked } from "./literals_frozen_storage_walked.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_split } from "./text_split.mjs";
 import { list_last } from "./list_last.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
 import { literals_frozen_name_add } from "./literals_frozen_name_add.mjs";
 export async function literals_frozen_storage_repair() {
@@ -20,8 +19,7 @@ export async function literals_frozen_storage_repair() {
     let imported = list_last(parts);
     return imported;
   }
-  let imported_all = list_map(offenders, imported_get);
-  let names = list_unique(imported_all);
+  let names = list_map_unique(offenders, imported_get);
   for (let name of names) {
     await function_call_commit(literals_frozen_name_add, [name]);
   }
