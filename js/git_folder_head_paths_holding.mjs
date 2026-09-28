@@ -1,3 +1,4 @@
+import { text_prefix_without_inner } from "./text_prefix_without_inner.mjs";
 import { list_is_assert_json } from "./list_is_assert_json.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
@@ -7,8 +8,6 @@ import { catch_null_async } from "./catch_null_async.mjs";
 import { null_is } from "./null_is.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
-import { text_skip } from "./text_skip.mjs";
-import { text_size } from "./text_size.mjs";
 export async function git_folder_head_paths_holding(folder, words) {
   "$plain folder";
   arguments_assert(arguments, 2);
@@ -42,8 +41,7 @@ export async function git_folder_head_paths_holding(folder, words) {
     if (blank) {
       continue;
     }
-    let skip_count = text_size(mark);
-    let path = text_skip(line, skip_count);
+    let path = text_prefix_without_inner(line, mark);
     list_add(paths, path);
   }
   return paths;
