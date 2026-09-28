@@ -1,3 +1,4 @@
+import { text_skip } from "./text_skip.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_code_dark } from "./html_span_code_dark.mjs";
 import { app_code_note_name_spans } from "./app_code_note_name_spans.mjs";
@@ -6,7 +7,6 @@ import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-import { text_size } from "./text_size.mjs";
 export function app_code_span_code_dark_names(parent, code, names) {
   arguments_assert(arguments, 3);
   ("one dark code chip set inside a sentence, with every cup name in it written in the colour that cup wears in the program above, so the name the sentence talks about and the name in the code can be seen to be the same cup");
@@ -28,8 +28,7 @@ export function app_code_span_code_dark_names(parent, code, names) {
     html_font_color_set(piece, span[2]);
     at = span[1];
   }
-  let size = text_size(code);
-  let rest = text_slice(code, at, size);
+  let rest = text_skip(code, at);
   html_span_text(chip, rest);
   return chip;
 }
