@@ -1,3 +1,5 @@
+import { html_style_max_height_scroll } from "./html_style_max_height_scroll.mjs";
+import { html_scroll_bottom_set } from "./html_scroll_bottom_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
@@ -22,6 +24,7 @@ export function app_shared_notes_review(parent, store, key, subject, names) {
   let holder = html_div(parent);
   html_style_margin_top(holder, "12px");
   let pills = html_div(holder);
+  html_style_max_height_scroll(pills, "40vh");
   let status = app_shared_text_quiet(holder, "");
   async function answer(words) {
     await api_read(fn_name("notes_done"), [store, key, words]);
@@ -31,6 +34,7 @@ export function app_shared_notes_review(parent, store, key, subject, names) {
     let notes = await api_read(fn_name("notes_read"), [store, key]);
     html_clear(pills);
     app_shared_note_pills_answerable(pills, notes, answer);
+    html_scroll_bottom_set(pills);
   }
   function status_set(said) {
     html_text_set(status, said);
