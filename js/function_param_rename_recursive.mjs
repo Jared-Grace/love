@@ -1,3 +1,4 @@
+import { property_list_get } from "./property_list_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { data_identifiers_search_names } from "./data_identifiers_search_names.mjs";
 import { equal } from "./equal.mjs";
@@ -13,7 +14,6 @@ import { js_identifier_is } from "./js_identifier_is.mjs";
 import { js_visit_calls_named } from "./js_visit_calls_named.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_not_is_while_async } from "./list_empty_not_is_while_async.mjs";
-import { list_get } from "./list_get.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_pop } from "./list_pop.mjs";
 import { not } from "./not.mjs";
@@ -57,8 +57,7 @@ export async function function_param_rename_recursive(
       let caller_ast = await function_ast(caller);
       let passes = false;
       function lambda(frame) {
-        let args = property_get(frame, "args");
-        let arg = list_get(args, index);
+        let arg = property_list_get(frame, "args", index);
         let arg_is_word = js_identifier_is(arg);
         if (arg_is_word) {
           let word = property_get_name(arg);
