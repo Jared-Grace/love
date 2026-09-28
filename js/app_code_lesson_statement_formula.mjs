@@ -87,7 +87,8 @@ export function app_code_lesson_statement_formula({
     );
     if (function_is(remember_lines)) {
       ("a reminder of a lesson whose shape is not a program, such as an expression beside its value, is drawn by a function so it can be quoted in that lesson's own shape");
-      remember_lines(box_before);
+      ("It is handed the screen's context as an explain drawing is, so a reminder can hold a button to a second lesson it leans on");
+      remember_lines(box_before, context);
     } else {
       let code_before = list_join_newline(remember_lines);
       let output_before = eval_console_log_lines(code_before);

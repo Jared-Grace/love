@@ -1,3 +1,10 @@
+import { list_join_newline } from "./list_join_newline.mjs";
+import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
+import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { html_div } from "./html_div.mjs";
+import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
+import { app_code_lesson_statement_name_grid_row } from "./app_code_lesson_statement_name_grid_row.mjs";
+import { app_code_line_pointed_draw } from "./app_code_line_pointed_draw.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
@@ -29,7 +36,7 @@ export function app_code_lesson_statement_name_grid_index() {
   ("the number of a chair from its row and column: let start = row * columns; let chair = start + column; - the grid-position lesson turned around");
   ("The example is the grid-position lesson's example turned back, row 2 column 1 in rows of 3 being chair 7, so the two lessons read as one fact seen from both ends, over the same picture. It shares that lesson's names and colours: the blue chairs blue, chair 7 and the green chair green, a row number the row headings' colour and a column number the column headings', and the 3 chairs in a row the fifth colour, as in that lesson.");
   ("No two programs share an answer, and no answer is one of the numbers on its own screen.");
-  ("The reminder names both lessons, 2026-09-27: the lesson before this one finds the column only and the one before that the row, so the reminder shows both lines and says which lesson found which. Its lines are drawn by the chair lessons' one pointed line, so the words row and column wear the headings' colours here as they do there.");
+  ("The reminder shows only the column lesson's program, the lesson it names, then says the lesson before that found the row, with a button to it and the row line, 2026-09-28. The human asked whether it should show just one of the two and wrote row; read as the previous lesson's own line, which is the column, since the row is its own lesson one further back. Not picked: the row program alone, which is not what the previous lesson taught; and both lines in one program, as before, which showed two lessons as one. Its lines are drawn by the chair lessons' one pointed line, so the words row and column wear the headings' colours here as they do there.");
   ("Wording from the human, 2026-09-27: the sum 2 * 3 === 6 is followed by the chairs it counts, 0 to 5 in blue, and the step to the chair says why it adds 1 - because the chair is in column 1 - rather than counting along the row. The list is drawn beside the chip rather than through the pointed line, because that line colours every 1 the column colour and every 2 the row colour, and these 1 and 2 are chairs.");
   let names = ["row", "column", "columns"];
   let row = list_first(names);
@@ -50,14 +57,35 @@ export function app_code_lesson_statement_name_grid_index() {
   let before = app_code_lesson_statement_name_grid_position_step();
   let middle2 = property_get(before, "middle");
   let logged2 = property_get(before, "logged");
-  let remember_lines = app_code_lesson_statement_name_swap_program(
+  let line_row = list_first(middle2);
+  let second = list_second(middle2);
+  let second2 = list_second(logged2);
+  let remember_program = app_code_lesson_statement_name_swap_program(
     [
       [chair, 7],
       [columns, 3],
     ],
-    middle2,
-    logged2,
+    [second],
+    [second2],
   );
+  function remember_lines(box, context) {
+    "the column lesson's own program, then one line saying the lesson before it found the row, with a button to it and the row's line";
+    let code_before = list_join_newline(remember_program);
+    let output_before = eval_console_log_lines(code_before);
+    app_code_code_lines_writes_out(box, remember_program, output_before);
+    let line = html_div(box);
+    html_span_text_content(line, "And the lesson before it, ");
+    app_code_lesson_reference_draw(
+      line,
+      context,
+      app_code_lesson_statement_name_grid_row,
+    );
+    html_span_text_content(line, ", found its ");
+    app_code_span_text_highlight_color(line, row, color_row);
+    html_span_text_content(line, ":");
+    let draw = app_code_line_pointed_draw(["", line_row], []);
+    draw(box);
+  }
   function values_get() {
     "four of the five lists, in a fresh order each screen";
     let candidates = [
@@ -143,13 +171,7 @@ export function app_code_lesson_statement_name_grid_index() {
     example_values: [2, 1, 3],
     step,
     remember_lesson: app_code_lesson_statement_name_grid_position,
-    remember_parts: [
-      "we found the ",
-      column,
-      " of chair 7, after the lesson before it found its ",
-      row,
-      ":",
-    ],
+    remember_parts: ["we found the ", column, " of chair 7:"],
     remember_lines,
     explain: [
       v9,

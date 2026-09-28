@@ -62,7 +62,7 @@ export function app_code_lesson_statement_name_digit_split() {
     remember_parts: ["we can find the row and column of a chair:"],
     remember_lines,
     explain: [
-      ["Let's suppose we have a whole number, like 123 or 4567"],
+      ["Let's suppose we have a whole number, like ", "123", " or ", "4567"],
       ["How can we get the last digit?"],
       ["Using ", by_ten, ":"],
       ["", three],
