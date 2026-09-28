@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_declarations_single_rows } from "./js_declarations_single_rows.mjs";
@@ -33,8 +34,7 @@ export function js_fn_name_declarations_inline(ast) {
     let node = property_get(v, "node");
     let shorthand = property_get(node, "shorthand");
     if (shorthand) {
-      let key = property_get(node, "key");
-      let item = property_get(key, "name");
+      let item = property_path_get_2(node, "key", "name");
       list_add(short, item);
     }
   }
