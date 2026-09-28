@@ -65,8 +65,8 @@ export function gloss_passages_verse_claims_all(
         return;
       }
       function verse_holds_is(verse_number) {
-        let keys = property_get_or_null(verse_keys, verse_number);
-        let holds = list_includes(keys, claimed_key);
+        let keys_inner = property_get_or_null(verse_keys, verse_number);
+        let holds = list_includes(keys_inner, claimed_key);
         return holds;
       }
       let verses_held = list_filter(chapter_verses, verse_holds_is);
