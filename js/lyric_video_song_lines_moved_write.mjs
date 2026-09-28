@@ -58,8 +58,11 @@ export async function lyric_video_song_lines_moved_write(
   }
   function span(line) {
     let words = line.words;
-    let r = subtract(words[subtract(words.length, 1)].end, words[0].start);
-    return r;
+    let span_seconds = subtract(
+      words[subtract(words.length, 1)].end,
+      words[0].start,
+    );
+    return span_seconds;
   }
   let longest = 0;
   for (let index = 0; less_than(index, lines.length); index++) {
