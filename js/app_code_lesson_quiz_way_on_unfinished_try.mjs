@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_quiz_unanswered_index_try } from "./app_code_lesson_quiz_unanswered_index_try.mjs";
@@ -82,8 +83,7 @@ export function app_code_lesson_quiz_way_on_unfinished_try(
       let to_lesson = equal(kind, "lesson");
       if (to_lesson) {
         let id_in_order = property_get(in_order, "id");
-        let unfinished = property_get(way, "lesson");
-        let id_unfinished = property_get(unfinished, "id");
+        let id_unfinished = property_path_get_2(way, "lesson", "id");
         let same = equal(id_in_order, id_unfinished);
         if (same) {
           return null;
