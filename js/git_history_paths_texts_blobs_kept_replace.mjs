@@ -22,13 +22,13 @@ export async function git_history_paths_texts_blobs_kept_replace(
   ("Naming no versions to keep is spelled as an empty word, and means every version holding a word loses it. That is the ordinary case and it is written rather than left out, because a missing answer and the answer none look the same and only one of them is safe.");
   ("Nothing is decided here. The rehearsal refuses on anything it cannot prove and the accepting step refuses if the present moved under it, so this is only the two of them named together, in the order that makes the second one safe.");
   async function rehearse() {
-    let r = await git_history_paths_texts_blobs_kept_replace_rehearse(
+    let r_inner = await git_history_paths_texts_blobs_kept_replace_rehearse(
       folder,
       paths_text,
       words_text,
       blobs_text,
     );
-    return r;
+    return r_inner;
   }
   let rehearsed = await git_history_rehearse_quietly(rehearse);
   let accepted = await git_history_rewrite_accept(
