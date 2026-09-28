@@ -1,3 +1,4 @@
+import { property_list_first } from "./property_list_first.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
@@ -10,7 +11,6 @@ import { app_code_lesson_statement_name_average_two } from "./app_code_lesson_st
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_middle_step } from "./app_code_lesson_statement_name_middle_step.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
 import { js_code_math_floor_name } from "./js_code_math_floor_name.mjs";
@@ -36,8 +36,7 @@ export function app_code_lesson_statement_name_middle() {
   ("Numbers in the writing are code chips wearing the number line's pointing colours: 4 and 9 the ends', 6.5 and then 6 the middle's, and the last program's code and output wear them too. The line 13 / 2 === 6.5 points at its middle only, because its 2 is the one divided by, not an end.");
   ("The example is 4 and 9, asked by the human 2026-09-28, so 2 is only ever the number divided by and never an end as well. Its sum 13 is odd, and none of 4, 9, 13, 6.5 or 6 is the 8 / 2 === 4 or 7 / 2 === 3.5 worked beside even and odd, save the 4 those two give. Not picked: 3 and 8, whose 8 is the even example's; 5 and 10, whose middle 7 is the odd example's; 5 and 6, whose middle 5 is an end; 3 and 10, a longer number line for nothing more.");
   let step = app_code_lesson_statement_name_middle_step();
-  let middle = property_get(step, "middle");
-  let line_sum = list_first(middle);
+  let line_sum = property_list_first(step, "middle");
   let names = ["low", "high"];
   let low = list_first(names);
   let high = list_second(names);
