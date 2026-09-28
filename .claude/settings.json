@@ -2668,6 +2668,8 @@
       "Bash(node scripts/ai.mjs git_objects_unreachable_forget_love:*)",
       "Bash(node scripts/ai.mjs app_shared_taglines:*)",
       "Bash(node scripts/ai.mjs git_history_purge_rehearse:*)",
+      "Bash(node scripts/ai.mjs function_wrap_then_call:*)",
+      "Bash(node scripts/ai.mjs function_wrap_then_call_named:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -5227,6 +5229,8 @@
       "Bash(node scripts/ai.mjs ai_git_command_args git_objects_unreachable_forget_love:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args app_shared_taglines:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args git_history_purge_rehearse:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args function_wrap_then_call:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args function_wrap_then_call_named:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -7785,6 +7789,8 @@
       "Bash(node scripts/aig.mjs git_objects_unreachable_forget_love:*)",
       "Bash(node scripts/aig.mjs app_shared_taglines:*)",
       "Bash(node scripts/aig.mjs git_history_purge_rehearse:*)",
+      "Bash(node scripts/aig.mjs function_wrap_then_call:*)",
+      "Bash(node scripts/aig.mjs function_wrap_then_call_named:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -10343,7 +10349,9 @@
       "Bash(node scripts/aig.mjs ai_git_command_args function_temp_write:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args git_objects_unreachable_forget_love:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args app_shared_taglines:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args git_history_purge_rehearse:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args git_history_purge_rehearse:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args function_wrap_then_call:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args function_wrap_then_call_named:*)"
     ],
     "defaultMode": "acceptEdits"
   },
