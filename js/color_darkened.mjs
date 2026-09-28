@@ -1,9 +1,8 @@
+import { multiply_round } from "./multiply_round.mjs";
 import { equal } from "./equal.mjs";
-import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { color_parse } from "./color_parse.mjs";
 import { property_get } from "./property_get.mjs";
-import { round } from "./round.mjs";
 import { color_rgb } from "./color_rgb.mjs";
 export function color_darkened(written, factor) {
   arguments_assert(arguments, 2);
@@ -19,14 +18,11 @@ export function color_darkened(written, factor) {
     return null;
   }
   let value = property_get(parsed, "red");
-  let value2 = multiply(value, factor);
-  let red = round(value2);
+  let red = multiply_round(value, factor);
   let value3 = property_get(parsed, "green");
-  let value4 = multiply(value3, factor);
-  let green = round(value4);
+  let green = multiply_round(value3, factor);
   let value5 = property_get(parsed, "blue");
-  let value6 = multiply(value5, factor);
-  let blue = round(value6);
+  let blue = multiply_round(value5, factor);
   let parts = [red, green, blue];
   let darker = color_rgb(parts);
   return darker;
