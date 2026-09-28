@@ -1,18 +1,18 @@
-import { list_map } from "./list_map.mjs";
-import { each_index } from "./each_index.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
-import { each } from "./each.mjs";
-import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
-import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
 import { gloss_passages_verse_numbers } from "./gloss_passages_verse_numbers.mjs";
 import { gloss_passages_verse_word_keys } from "./gloss_passages_verse_word_keys.mjs";
-import { list_add_multiple } from "./list_add_multiple.mjs";
+import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
+import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
 import { property_get } from "./property_get.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { each_index } from "./each_index.mjs";
+import { each } from "./each.mjs";
 export function gloss_passages_entries_collect_generic(
   passages,
   text_index,
-  word_key_read,
+  word_keys_read,
   lambda_entry,
 ) {
   "Every word explanation in a chapter handed to the caller one at a time, each with the chapter already laid out around it, and everything the caller gives back gathered into a single flat list.";
@@ -28,7 +28,7 @@ export function gloss_passages_entries_collect_generic(
   let verse_keys = gloss_passages_verse_word_keys(
     passages,
     text_index,
-    word_key_read,
+    word_keys_read,
   );
   let found = [];
   function passage_read(passage) {
@@ -42,12 +42,12 @@ export function gloss_passages_entries_collect_generic(
     function entry_read(entry, at) {
       let word = property_get(entry, word_key);
       let explain = property_get(entry, explain_key);
-      let key = word_key_read(word);
+      let keys = word_keys_read(word);
       let context = {
         verses_key,
         word,
         explain,
-        key,
+        keys,
         verse_numbers,
         verse_keys,
         at,

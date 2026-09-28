@@ -1,17 +1,17 @@
-import { gloss_position_claim_joining_markers } from "./gloss_position_claim_joining_markers.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { subtract } from "./subtract.mjs";
-import { gloss_passages_entries_collect_generic } from "./gloss_passages_entries_collect_generic.mjs";
 import { gloss_position_claim_markers } from "./gloss_position_claim_markers.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { list_get_or } from "./list_get_or.mjs";
-import { list_size } from "./list_size.mjs";
+import { gloss_position_claim_joining_markers } from "./gloss_position_claim_joining_markers.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_markers_found } from "./text_markers_found.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { list_size } from "./list_size.mjs";
+import { subtract } from "./subtract.mjs";
+import { list_get_or } from "./list_get_or.mjs";
+import { gloss_passages_entries_collect_generic } from "./gloss_passages_entries_collect_generic.mjs";
 export function gloss_passages_verse_position_claims(
   passages,
   text_index,
-  word_key_read,
+  word_keys_read,
 ) {
   "Every word explanation in a chapter that says where its word stands among the words beside it, laid beside the words that actually stand there.";
   "$plain text_index";
@@ -42,7 +42,8 @@ export function gloss_passages_verse_position_claims(
     let before = list_get_or(words, index, "");
     let after = list_get_or(words, at + 1, "");
     let first = list_get_or(words, 0, "");
-    let last = list_get_or(words, subtract(of, 1), "");
+    let index2 = subtract(of, 1);
+    let last = list_get_or(words, index2, "");
     let finding = {
       verses_key,
       word,
@@ -61,7 +62,7 @@ export function gloss_passages_verse_position_claims(
   let found = gloss_passages_entries_collect_generic(
     passages,
     text_index,
-    word_key_read,
+    word_keys_read,
     entry_read,
   );
   return found;

@@ -3,7 +3,7 @@ import { gloss_chapters_offenders_generic } from "./gloss_chapters_offenders_gen
 export async function gloss_chapters_claims_generic(
   fn,
   text_index,
-  word_key_read,
+  word_keys_read,
   lambda_claims,
 ) {
   "Every chapter of one gloss store holding an explanation the caller's question finds something in, each named beside what was found in it.";
@@ -13,7 +13,7 @@ export async function gloss_chapters_claims_generic(
       chapter_code,
       fn,
       text_index,
-      word_key_read,
+      word_keys_read,
       lambda_claims,
     );
     return found;

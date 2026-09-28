@@ -1,14 +1,14 @@
-import { gloss_passages_entries_collect_generic } from "./gloss_passages_entries_collect_generic.mjs";
 import { gloss_recurrence_claim_markers } from "./gloss_recurrence_claim_markers.mjs";
-import { gloss_verse_keys_verse_numbers } from "./gloss_verse_keys_verse_numbers.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { list_size } from "./list_size.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_markers_found } from "./text_markers_found.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { gloss_verse_keys_verse_numbers } from "./gloss_verse_keys_verse_numbers.mjs";
+import { list_size } from "./list_size.mjs";
+import { gloss_passages_entries_collect_generic } from "./gloss_passages_entries_collect_generic.mjs";
 export function gloss_passages_verse_recurrence_claims(
   passages,
   text_index,
-  word_key_read,
+  word_keys_read,
 ) {
   "Every word explanation in a chapter that says how often its word stands there, laid beside the verses the word actually stands in.";
   "$plain text_index";
@@ -18,7 +18,7 @@ export function gloss_passages_verse_recurrence_claims(
   let markers = gloss_recurrence_claim_markers();
   function entry_read(context) {
     let explain = property_get(context, "explain");
-    let key = property_get(context, "key");
+    let keys = property_get(context, "keys");
     let verse_keys = property_get(context, "verse_keys");
     let verses_key = property_get(context, "verses_key");
     let word = property_get(context, "word");
@@ -28,7 +28,7 @@ export function gloss_passages_verse_recurrence_claims(
       let quiet = [];
       return quiet;
     }
-    let verses_standing = gloss_verse_keys_verse_numbers(verse_keys, key);
+    let verses_standing = gloss_verse_keys_verse_numbers(verse_keys, keys);
     let times = list_size(verses_standing);
     let finding = {
       verses_key,
@@ -44,7 +44,7 @@ export function gloss_passages_verse_recurrence_claims(
   let found = gloss_passages_entries_collect_generic(
     passages,
     text_index,
-    word_key_read,
+    word_keys_read,
     entry_read,
   );
   return found;

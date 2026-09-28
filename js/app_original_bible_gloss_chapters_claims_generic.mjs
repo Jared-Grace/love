@@ -16,7 +16,7 @@ export async function app_original_bible_gloss_chapters_claims_generic(
   arguments_assert(arguments, 1);
   let fn = app_original_bible_gloss_generate;
   let strongs = await bible_interlinear_original_strongs();
-  let word_key_read = gloss_original_word_key_read(strongs);
+  let word_keys_read = gloss_original_word_key_read(strongs);
   let text_index = app_original_bible_gloss_text_index();
   function claims_read(passages, index, key_read) {
     let texted = app_original_bible_gloss_passages_texted(passages);
@@ -26,7 +26,7 @@ export async function app_original_bible_gloss_chapters_claims_generic(
   let r = await gloss_chapters_claims_generic(
     fn,
     text_index,
-    word_key_read,
+    word_keys_read,
     claims_read,
   );
   return r;

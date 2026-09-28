@@ -6,16 +6,16 @@ import { object_property_names_numbers_sorted } from "./object_property_names_nu
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
+import { list_intersect_empty_not_is } from "./list_intersect_empty_not_is.mjs";
+import { list_filter } from "./list_filter.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { gloss_passages_entries_collect_generic } from "./gloss_passages_entries_collect_generic.mjs";
 export function gloss_passages_verse_claims_all(
   passages,
   text_index,
-  word_key_read,
+  word_keys_read,
 ) {
   "Every verse a word explanation in a chapter names, the word that explanation says stands there, whether or not the verse holds it, and beside each one every verse of the chapter that does.";
   "$plain text_index";
@@ -37,6 +37,7 @@ export function gloss_passages_verse_claims_all(
   "The list of holding verses is never empty on a row that comes back, because an empty one is now what makes the claim leave. It used to be the loudest row of the lot - the explanation naming a verse for a word the chapter never uses - and it stopped being readable the moment claims could be about a word other than the one being explained, since a quoted gloss in the reader's own language is absent from the chapter for an innocent reason and a wrong word is absent for a guilty one, and the list alone cannot say which.";
   "The verses come back as numbers in counting order rather than in the order the record happened to fill, because a reader is going to say the word moved one verse along, and that is a thing you can only see when they are counted.";
   "★ THE VERSES NAMED ARE THE ONES THE WORD READING ITSELF FOUND, RATHER THAN A SECOND READING OF THE SAME SENTENCE. Both answers are the same set - the word reading cuts the explanation at its punctuation and every mark it cuts on already ended a number's run in the reading underneath, so cutting cannot join two numbers or split one. Being the same set is exactly why only one of them should be asked. Two spellings of one question do not break when they part company; they disagree quietly, and the loop then walks a number the word reading never pinned or skips one it did.";
+  "★ A WORD AND A VERSE MEET WHEN THEY SHARE ANY KEY AT ALL, BECAUSE ONE SHAPE CAN HONESTLY BELONG TO TWO DICTIONARY ENTRIES AND THE SHAPE CANNOT SAY WHICH. Both sides come with every key they could answer to, and the question is whether the two sets touch. Asking it the other way - pick one key for the word, pick one for each verse word, compare - is choosing for each side which of the things it could be it is, and measured on 2026-09-28 that choice was wrong on one Hebrew and Greek occurrence in every hundred across the whole Bible. Joshua eleven was the case that showed it: the valley of Mizpeh in verse eight and in the valley in verse seventeen are one word, were keyed apart, and this reading called a true sentence false.";
   arguments_assert(arguments, 3);
   function entry_read(context) {
     let explain = property_get(context, "explain");
@@ -59,14 +60,14 @@ export function gloss_passages_verse_claims_all(
       if (own) {
         claimed_word = word;
       }
-      let claimed_key = word_key_read(claimed_word);
-      let wordless = text_empty_is(claimed_key);
+      let claimed_keys = word_keys_read(claimed_word);
+      let wordless = list_empty_is(claimed_keys);
       if (wordless) {
         return;
       }
       function verse_holds_is(verse_number) {
-        let keys_inner = property_get_or_null(verse_keys, verse_number);
-        let holds = list_includes(keys_inner, claimed_key);
+        let keys_inner = property_get(verse_keys, verse_number);
+        let holds = list_intersect_empty_not_is(keys_inner, claimed_keys);
         return holds;
       }
       let verses_held = list_filter(chapter_verses, verse_holds_is);
@@ -74,8 +75,8 @@ export function gloss_passages_verse_claims_all(
       if (nowhere) {
         return;
       }
-      let keys = property_get_or_null(verse_keys, verse_named);
-      let held = list_includes(keys, claimed_key);
+      let keys = property_get(verse_keys, verse_named);
+      let held = list_intersect_empty_not_is(keys, claimed_keys);
       let claim = {
         verses_key,
         word,
@@ -94,7 +95,7 @@ export function gloss_passages_verse_claims_all(
   let found = gloss_passages_entries_collect_generic(
     passages,
     text_index,
-    word_key_read,
+    word_keys_read,
     entry_read,
   );
   return found;
