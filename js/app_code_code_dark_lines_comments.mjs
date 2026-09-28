@@ -1,3 +1,5 @@
+import { html_span } from "./html_span.mjs";
+import { html_text_code_breakable_add } from "./html_text_code_breakable_add.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_text_align_left } from "./html_text_align_left.mjs";
@@ -17,6 +19,7 @@ export function app_code_code_dark_lines_comments(component, code) {
   "Only the note is dimmed, not the line it stands on. A note may start after code on the same line - console.log(1); // a note - and there the code before the slashes still runs, so drawing the whole line dim would say it did not.";
   "Nothing here decides what anything looks like. What colour each character is drawn in, and where one piece of the program stops looking like the next, is asked next door and answered as a plain list; all that is left here is putting that list into the page. So the rule about the notes and the names can be read, and argued with, without a browser anywhere near it.";
   "The lines are pulled to the left edge, for the reason the plain multi-line writer beside this one gives: a button centres what is written on it, and two lines of code centred are two lines starting in different places, which is part of how code is read.";
+  "A line too wide for its room breaks between its tokens where it can - after a space, a bracket, or a dot before a name - rather than running past the right edge, at the human's request, 2026-09-28";
   html_style_code_dark(component);
   html_style_white_space(component, "pre-wrap");
   html_text_align_left(component);
@@ -24,7 +27,8 @@ export function app_code_code_dark_lines_comments(component, code) {
   html_text_set(component, nothing);
   let runs = app_code_note_runs(code);
   for (let run of runs) {
-    let span = html_span_text(component, run[0]);
+    let span = html_span(component);
+    html_text_code_breakable_add(span, run[0], html_span_text);
     html_font_color_set(span, run[1]);
     html_style_opacity(span, run[2]);
   }

@@ -1,3 +1,4 @@
+import { html_text_code_breakable_add } from "./html_text_code_breakable_add.mjs";
 import { app_code_code_dark_lines_comments } from "./app_code_code_dark_lines_comments.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { html_text_set } from "./html_text_set.mjs";
@@ -19,23 +20,27 @@ export function app_code_code_dark_lines_pointed_cut(cut) {
     html_text_set(component, nothing);
     let runs = app_code_note_runs(code);
     for (let run of runs) {
-      let pieces = text_split(run[0], /\b(\d+|[A-Za-z_]\w*)\b/);
-      for (let piece of pieces) {
-        if (text_empty_is(piece)) {
-          continue;
-        }
-        let drawn = cut(piece);
-        for (let pair of drawn) {
-          let span = html_span_text(component, pair[0]);
-          html_font_color_set(span, run[1]);
-          html_style_opacity(span, run[2]);
-          let color = pair[1];
-          if (null_not_is(color)) {
-            html_style_background_color_set(span, color);
-            html_font_color_set(span, "white");
+      function write(parent, text) {
+        let pieces = text_split(text, /\b(\d+|[A-Za-z_]\w*)\b/);
+        for (let piece of pieces) {
+          if (text_empty_is(piece)) {
+            continue;
+          }
+          let drawn = cut(piece);
+          for (let pair of drawn) {
+            let span = html_span_text(parent, pair[0]);
+            html_font_color_set(span, run[1]);
+            html_style_opacity(span, run[2]);
+            let color = pair[1];
+            if (null_not_is(color)) {
+              html_style_background_color_set(span, color);
+              html_font_color_set(span, "white");
+            }
           }
         }
       }
+      ("the run is written in the pieces a line of code may break between, so a line too wide for its room wraps between its tokens - a place to break never falls inside a whole number or a whole name, so each still reaches cut whole");
+      html_text_code_breakable_add(component, run[0], write);
     }
   }
   return paint;
