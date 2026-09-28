@@ -1,3 +1,4 @@
+import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -7,8 +8,6 @@ import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { gloss_entries_count } from "./gloss_entries_count.mjs";
 import { list_filter_property_not } from "./list_filter_property_not.mjs";
 import { list_first_try } from "./list_first_try.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { list_size } from "./list_size.mjs";
 export function gloss_words_settled_outvoted(ranked, settled) {
@@ -58,8 +57,7 @@ export function gloss_words_settled_outvoted(ranked, settled) {
     let count = property_get(row, "off_entries");
     return count;
   }
-  let mapped = list_map(ranked, word_outvoted_or_null);
-  let found = list_filter_null_not_is(mapped);
+  let found = list_map_filter_null_not_is(ranked, word_outvoted_or_null);
   let rows = list_sort_number_mapper_reverse(found, off_entries_read);
   let r2 = {
     words: list_size(ranked),
