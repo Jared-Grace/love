@@ -1,7 +1,6 @@
+import { divide_floor } from "./divide_floor.mjs";
 import { round } from "./round.mjs";
-import { floor } from "./floor.mjs";
 import { multiply } from "./multiply.mjs";
-import { divide } from "./divide.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { picture_size } from "./picture_size.mjs";
@@ -31,13 +30,11 @@ export async function picture_border_cut_write(
   let at_down = round(n2);
   let right = multiply(at_across, 2);
   let top = subtract(size.width, right);
-  let p = divide(top, 2);
-  let left = floor(p);
+  let left = divide_floor(top, 2);
   let kept_across = multiply(left, 2);
   let right2 = multiply(at_down, 2);
   let top2 = subtract(size.height, right2);
-  let p2 = divide(top2, 2);
-  let left2 = floor(p2);
+  let left2 = divide_floor(top2, 2);
   let kept_down = multiply(left2, 2);
   let v = String(kept_across);
   let v2 = String(kept_down);
