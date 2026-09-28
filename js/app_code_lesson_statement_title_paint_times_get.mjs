@@ -1,3 +1,4 @@
+import { html_style_max_width } from "./html_style_max_width.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_space_nb } from "./text_space_nb.mjs";
@@ -20,7 +21,7 @@ export function app_code_lesson_statement_title_paint_times_get(
     let row = html_span(parent);
     html_display_set(row, "inline-flex");
     html_style_set(row, "align-items", "baseline");
-    html_style_set(row, "max-width", "100%");
+    html_style_max_width(row, "100%");
     tile_paint(row);
     let shown = html_span_text(row, count);
     html_flex_shrink_0(shown);

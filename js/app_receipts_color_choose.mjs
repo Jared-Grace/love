@@ -1,3 +1,7 @@
+import { html_display_flex } from "./html_display_flex.mjs";
+import { html_style_gap } from "./html_style_gap.mjs";
+import { html_border_radius } from "./html_border_radius.mjs";
+import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_field_title } from "./app_shared_field_title.mjs";
 import { html_div } from "./html_div.mjs";
@@ -18,9 +22,9 @@ export function app_receipts_color_choose(parent, key, on_choose) {
   arguments_assert(arguments, 3);
   app_shared_field_title(parent, "Color");
   let row = html_div(parent);
-  html_style_set(row, "display", "flex");
+  html_display_flex(row);
   html_style_set(row, "flex-wrap", "wrap");
-  html_style_set(row, "gap", "0.6em");
+  html_style_gap(row, "0.6em");
   let ink = app_shared_color_ink();
   let buttons = [];
   function rings_show(chosen) {
@@ -47,8 +51,8 @@ export function app_receipts_color_choose(parent, key, on_choose) {
     html_style_background_color_set(button, background);
     html_style_set(button, "width", "2.5em");
     html_style_set(button, "height", "2.5em");
-    html_style_set(button, "border-radius", "50%");
-    html_style_set(button, "cursor", "pointer");
+    html_border_radius(button, "50%");
+    html_cursor_pointer(button);
     function on_press() {
       rings_show(c_key);
       on_choose(c_key);

@@ -1,3 +1,6 @@
+import { html_display_flex } from "./html_display_flex.mjs";
+import { html_style_gap } from "./html_style_gap.mjs";
+import { html_border_radius } from "./html_border_radius.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_container_blue_medium } from "./app_shared_container_blue_medium.mjs";
 import { app_receipts_color_get } from "./app_receipts_color_get.mjs";
@@ -126,15 +129,15 @@ export function app_receipts_purchase_card(
   writing_box("Description", "description");
   ("Photos are small squares side by side, cropped to fill the square; pressing one opens it whole on a screen of its own.");
   let pictures = html_div(card);
-  html_style_set(pictures, "display", "flex");
+  html_display_flex(pictures);
   html_style_set(pictures, "flex-wrap", "wrap");
-  html_style_set(pictures, "gap", "0.5em");
+  html_style_gap(pictures, "0.5em");
   function thumbnail_add(picture_set) {
     let picture = html_element(pictures, "img");
     html_style_set(picture, "width", "6em");
     html_style_set(picture, "height", "6em");
     html_style_set(picture, "object-fit", "cover");
-    html_style_set(picture, "border-radius", "0.3em");
+    html_border_radius(picture, "0.3em");
     picture_set(picture);
     function on_open() {
       app_shared_photo_screen(picture_set);

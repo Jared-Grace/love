@@ -14,11 +14,11 @@ export function app_sandbox_root_link() {
   html_style_set(link, "top", "0.5em");
   html_style_set(link, "right", "0.5em");
   html_style_set(link, "z-index", "2000");
-  html_style_set(link, "padding", "0.25em 0.6em");
-  html_style_set(link, "background", "rgba(255,255,255,0.9)");
+  html_style_padding(link, "0.25em 0.6em");
+  html_style_background(link, "rgba(255,255,255,0.9)");
   html_style_set(link, "color", "#222");
-  html_style_set(link, "border-radius", "0.4em");
-  html_style_set(link, "font-size", "0.9em");
+  html_border_radius(link, "0.4em");
+  html_style_font_size(link, "0.9em");
   html_style_set(link, "text-decoration", "none");
   return link;
 }

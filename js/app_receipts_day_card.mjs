@@ -1,3 +1,6 @@
+import { html_display_flex } from "./html_display_flex.mjs";
+import { html_style_gap } from "./html_style_gap.mjs";
+import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_container_base } from "./app_shared_container_base.mjs";
 import { app_shared_container_blue_background_color } from "./app_shared_container_blue_background_color.mjs";
@@ -28,9 +31,9 @@ export function app_receipts_day_card(parent, title) {
   html_font_color_set(header, color);
   html_bold(header);
   let body = html_div(card);
-  html_style_set(body, "display", "flex");
+  html_display_flex(body);
   html_style_set(body, "flex-direction", "column");
-  html_style_set(body, "gap", "0.6em");
-  html_style_set(body, "margin-top", "0.4em");
+  html_style_gap(body, "0.6em");
+  html_style_margin_top(body, "0.4em");
   return body;
 }
