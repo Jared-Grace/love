@@ -152,7 +152,7 @@ export function app_code_lesson_statement_name_digit_split() {
         " ",
         "0",
       ],
-      ["Therefore ", by_ten, " gives you the last digit of a number"],
+      ["Therefore ", by_ten, " gives us the last digit of a number"],
       [
         "The number of different digits we write with is the number we ",
         percent,
