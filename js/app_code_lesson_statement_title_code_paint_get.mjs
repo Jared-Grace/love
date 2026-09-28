@@ -1,3 +1,5 @@
+import { text_space_zero_width } from "./text_space_zero_width.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_space_nb } from "./text_space_nb.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -27,7 +29,11 @@ export function app_code_lesson_statement_title_code_paint_get(code) {
     html_style_white_space(tile, "pre-line");
     ("the spaces in the code are made ordinary ones, so a piece wider than a whole row breaks between its tokens - let rest = / Math.floor(n / 10); - rather than inside one, at the human's request, 2026-09-28. The tile is an inline block, so a piece that fits on a row still moves to the next row whole, as above; the spaces only come into play once the piece is wider than the row. Before, every space was one that does not break, and the title's break-anywhere rule, the last resort for a line that fits nowhere, cut through the middle of a token - the 10 was split into 1 and 0)");
     let nb = text_space_nb();
-    let shown = text_replace(code, nb, " ");
+    let spaced = text_replace(code, nb, " ");
+    ("a place to break is also left just after every opening bracket, because a call and its first argument are written with no space between them - Math.floor(chair / columns) has none before chair, so the break-anywhere rule cut Math.floor itself in two. Just after the bracket keeps the name whole and the bracket with it, at the human's request, 2026-09-28. After a dot was the other choice, and was left out: it would split a number like 3.14 as readily as a name");
+    let zero = text_space_zero_width();
+    let opened = text_combine_multiple(["(", zero]);
+    let shown = text_replace(spaced, "(", opened);
     html_span_text_content(tile, shown);
   }
   return paint_code;
