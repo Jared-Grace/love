@@ -1,10 +1,9 @@
+import { js_function_declaration_property_params_names } from "./js_function_declaration_property_params_names.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_name_unalias_only } from "./function_name_unalias_only.mjs";
 import { function_parse_declaration_unaliased } from "./function_parse_declaration_unaliased.mjs";
-import { property_get } from "./property_get.mjs";
-import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { list_size } from "./list_size.mjs";
 import { error } from "./error.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -32,8 +31,7 @@ export async function function_wrap_then_call_named(
     "'s is, so the arguments, the awaiting and the naming stay decided in one place. Canonicalised before it is handed back, because the added call is the wrapper's only mention of then_fn and a written call brings no import with it.");
   let then_unaliased = await function_name_unalias_only(then_fn);
   let r = await function_parse_declaration_unaliased(then_unaliased);
-  let declaration = property_get(r, "declaration");
-  let params = js_function_declaration_params_names(declaration);
+  let params = js_function_declaration_property_params_names(r, "declaration");
   let count = list_size(params);
   if (greater_than(count, 1)) {
     let message = text_combine_multiple([
