@@ -7,7 +7,7 @@ import { list_map } from "./list_map.mjs";
 export function gloss_passages_verse_claims_wrong(
   passages,
   text_index,
-  word_key_read,
+  word_keys_read,
 ) {
   "Every word explanation in a chapter that names a verse holding nothing the word is related to, each one carrying the verses of that chapter where the word does stand.";
   "$plain text_index";
@@ -24,7 +24,7 @@ export function gloss_passages_verse_claims_wrong(
   let all = gloss_passages_verse_claims_all(
     passages,
     text_index,
-    word_key_read,
+    word_keys_read,
   );
   function held_not_is(claim) {
     let wrong = property_not(claim, "held");
