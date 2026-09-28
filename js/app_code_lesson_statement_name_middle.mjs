@@ -144,7 +144,7 @@ export function app_code_lesson_statement_name_middle() {
     let line = app_code_lesson_bold_term(box, "A number is ", "even");
     html_span_text_content(
       line,
-      " when you divide it by 2 and get a whole number",
+      " when we divide it by 2 and get a whole number",
     );
   }
   function odd_draw(box) {
@@ -190,7 +190,7 @@ export function app_code_lesson_statement_name_middle() {
         "Even numbers can be evenly divided by 2 - that's why they're called even",
       ],
       odd_draw,
-      ["If you divide an odd number by 2, the answer ends in .5: ", code_odd],
+      ["If we divide an odd number by 2, the answer ends in .5: ", code_odd],
       next,
       average_remember_draw,
       middle_sum,
