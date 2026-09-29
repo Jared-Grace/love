@@ -1,15 +1,16 @@
-import { property_list_size } from "./property_list_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { app_receipts_payment_emoji } from "./app_receipts_payment_emoji.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { app_receipts_price_usd } from "./app_receipts_price_usd.mjs";
 import { app_receipts_price_php_text } from "./app_receipts_price_php_text.mjs";
 import { equal } from "./equal.mjs";
-import { property_get } from "./property_get.mjs";
+import { property_list_size } from "./property_list_size.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { emoji_camera } from "./emoji_camera.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { app_receipts_color_get } from "./app_receipts_color_get.mjs";
+import { property_get } from "./property_get.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 export function app_receipts_purchase_row(
   parent,
@@ -24,9 +25,10 @@ export function app_receipts_purchase_row(
   "$plain on_open";
   "$plain time_text";
   "time_text is the time it was made as the list is being read, such as '9:30 AM', or '8:30 PM EST' when the list is read on another clock than the purchase is kept in.";
-  "One purchase in the list of them all, as a button saying enough to tell it from the others - what time, how much, how many photos, and how its description begins. The date is not on it, because the list puts each day's purchases under a heading naming the day. It is filled with the colour the purchase is marked with, so what has been looked at shows in the list. Pressing it hands on_open the purchase.";
+  "One purchase in the list of them all, as a button saying enough to tell it from the others - how it was paid for, what time, how much, how many photos, and how its description begins. The date is not on it, because the list puts each day's purchases under a heading naming the day. It is filled with the colour the purchase is marked with, so what has been looked at shows in the list. Pressing it hands on_open the purchase.";
   arguments_assert(arguments, 5);
-  let parts = [time_text];
+  ("It begins with a card or a bank note, so how each purchase was paid for shows down the list without opening any.");
+  let parts = [app_receipts_payment_emoji(purchase) + " " + time_text];
   let price = property_get_or(purchase, "price", "");
   if (not_equal(price, "")) {
     let usd = app_receipts_price_usd(price, php_per_usd);
