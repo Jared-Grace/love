@@ -2,10 +2,12 @@ import { assert_json_get } from "./assert_json_get.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 export function greater_than_equal_assert(left, right) {
   let l = greater_than_equal(left, right);
-  let r = {
-    left,
-    right,
-  };
-  function lambda() {}
+  function lambda() {
+    let lr = {
+      left,
+      right,
+    };
+    return lr;
+  }
   assert_json_get(l, lambda);
 }
