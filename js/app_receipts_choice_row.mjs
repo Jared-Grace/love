@@ -8,6 +8,7 @@ import { equal } from "./equal.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { html_style_flex } from "./html_style_flex.mjs";
 import { html_bold } from "./html_bold.mjs";
+import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
 export function app_receipts_choice_row(
   parent,
   title,
@@ -20,7 +21,7 @@ export function app_receipts_choice_row(
   "$plain choices";
   "$plain chosen";
   "$plain on_choose";
-  "Buttons side by side under a title, one for each choice, each an object with a key and the text it is named by. The one whose key is chosen is ticked and bold; pressing any hands on_choose its key.";
+  "Buttons side by side under a title, one for each choice, each an object with a key and the text it is named by. The one whose key is chosen is ticked, bold and green, so which one is in use shows at a glance; pressing any hands on_choose its key.";
   arguments_assert(arguments, 5);
   app_shared_field_title(parent, title);
   let row = html_div(parent);
@@ -37,6 +38,7 @@ export function app_receipts_choice_row(
     html_style_flex(button, "1");
     if (on) {
       html_bold(button);
+      app_shared_button_screen_green_style_assign(button);
     }
   }
 }
