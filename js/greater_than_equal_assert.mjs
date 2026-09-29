@@ -2,5 +2,5 @@ import { assert_left_right } from "../../***REMOVED***/js/assert_left_right.mjs"
 import { greater_than_equal } from "./greater_than_equal.mjs";
 export function greater_than_equal_assert(left, right) {
   let l = greater_than_equal(left, right);
-  assert_left_right(left, right, l);
+  assert_left_right(l, left, right);
 }
