@@ -1,3 +1,4 @@
+import { text_words_start_removed_unless_binary } from "./text_words_start_removed_unless_binary.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
@@ -111,7 +112,7 @@ export async function git_history_rewrite_accept_catching_up(
     let worded = [];
     for (let path of paths) {
       let content = await git_folder_run(folder, ["show", c + ":" + path]);
-      let cleaned = text_words_start_removed(content, words);
+      let cleaned = text_words_start_removed_unless_binary(content, words);
       let b = equal(cleaned, content);
       if (not(b)) {
         worded.push(path);
