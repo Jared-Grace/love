@@ -22,6 +22,7 @@ export async function app_receipts_purchase_new(folder_code) {
     description: "",
     notes: "",
     color: "blue",
+    payment: "credit",
     photos: [],
   };
   await app_receipts_purchase_save(purchase);

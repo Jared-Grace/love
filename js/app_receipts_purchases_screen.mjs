@@ -4,6 +4,7 @@ import { emoji_sync } from "./emoji_sync.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_shared_footer } from "./app_shared_footer.mjs";
+import { html_loading } from "./html_loading.mjs";
 import { app_receipts_purchases_pull } from "./app_receipts_purchases_pull.mjs";
 import { equal } from "./equal.mjs";
 import { app_receipts_purchases_of } from "./app_receipts_purchases_of.mjs";
@@ -23,7 +24,11 @@ import { app_receipts_purchase_new } from "./app_receipts_purchase_new.mjs";
 import { app_receipts_unsent_all } from "./app_receipts_unsent_all.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { app_receipts_sync } from "./app_receipts_sync.mjs";
-export function app_receipts_purchases_screen(root, folder_code, on_change) {
+export async function app_receipts_purchases_screen(
+  root,
+  folder_code,
+  on_change,
+) {
   "$plain root";
   "$plain folder_code";
   "The screen for one folder's purchases: add an empty one, dated now, which opens at once, then give it photos and a price and a description, and correct its date and time; or open any one from the list. Everything is kept on this phone first and then sent, so what is added with no internet is not lost and goes up once there is.";
@@ -43,8 +48,12 @@ export function app_receipts_purchases_screen(root, folder_code, on_change) {
   app_shared_footer(root);
   ("Under the buttons is either the list of every purchase, one line each, or the one purchase opened from it with a way back to the list above it. open_key names the opened one, or is null while the list shows.");
   let open_key = null;
-  list_show();
-  refresh();
+  ("On opening, a loading screen covers everything until it has all arrived: what this phone keeps is drawn first, then what is waiting is sent and what other phones sent is brought down and drawn, and only then is the screen uncovered, so the person never presses a list that is about to change. With no internet the sending and bringing down end at once, so the cover lifts as soon as this phone's own purchases are drawn.");
+  async function first_load() {
+    await list_show();
+    await refresh();
+  }
+  await html_loading(first_load);
   ("Sending and bringing down are separate: a change on a purchase only sends, so the purchase being worked on is not redrawn under the person's finger. Opening, Sync, and the internet coming back also bring down what other phones sent, then redraw the list - but never an opened purchase, which shows what arrived once the person goes back to the list.");
   async function refresh() {
     await sync_now();

@@ -1,11 +1,8 @@
-import { html_display_flex } from "./html_display_flex.mjs";
-import { html_style_gap } from "./html_style_gap.mjs";
-import { html_border_radius } from "./html_border_radius.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_container_blue_medium } from "./app_shared_container_blue_medium.mjs";
 import { app_receipts_color_get } from "./app_receipts_color_get.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { property_get } from "./property_get.mjs";
+import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { country_philippines } from "./country_philippines.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -24,8 +21,14 @@ import { html_on } from "./html_on.mjs";
 import { app_shared_textarea_label } from "./app_shared_textarea_label.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_div } from "./html_div.mjs";
+import { html_clear } from "./html_clear.mjs";
+import { app_receipts_payment_get } from "./app_receipts_payment_get.mjs";
+import { app_receipts_choice_row } from "./app_receipts_choice_row.mjs";
+import { html_display_flex } from "./html_display_flex.mjs";
 import { html_style_set } from "./html_style_set.mjs";
+import { html_style_gap } from "./html_style_gap.mjs";
 import { html_element } from "./html_element.mjs";
+import { html_border_radius } from "./html_border_radius.mjs";
 import { app_shared_photo_screen } from "./app_shared_photo_screen.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { html_media_source_file_set } from "./html_media_source_file_set.mjs";
@@ -126,6 +129,36 @@ export function app_receipts_purchase_card(
     }
     html_on(input, "input", on_writing);
   }
+  ("Under the price, whether it was paid in cash or by credit, credit until cash is chosen. Pressing either keeps it at once and redraws the two buttons with the new one ticked.");
+  let payment_row = html_div(card);
+  function payment_show() {
+    html_clear(payment_row);
+    let payment = app_receipts_payment_get(purchase);
+    let choices = [
+      {
+        key: "cash",
+        text: "💵 Cash",
+      },
+      {
+        key: "credit",
+        text: "💳 Credit",
+      },
+    ];
+    app_receipts_choice_row(
+      payment_row,
+      "Paid with",
+      choices,
+      payment,
+      on_payment,
+    );
+  }
+  async function on_payment(key) {
+    property_set(purchase, "payment", key);
+    payment_show();
+    await app_receipts_purchase_save(purchase);
+    on_saved();
+  }
+  payment_show();
   writing_box("Description", "description");
   ("Photos are small squares side by side, cropped to fill the square; pressing one opens it whole on a screen of its own.");
   let pictures = html_div(card);

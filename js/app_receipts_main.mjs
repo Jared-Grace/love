@@ -52,10 +52,14 @@ export function app_receipts_main(context) {
   } else {
     app_receipts_code_screen(root, known, on_code);
   }
-  function on_code(folder_code) {
+  async function on_code(folder_code) {
     storage_local_name_set(app_name, key, folder_code);
     html_hash_property_set(key2, folder_code);
-    sync_shown = app_receipts_purchases_screen(root, folder_code, on_change);
+    sync_shown = await app_receipts_purchases_screen(
+      root,
+      folder_code,
+      on_change,
+    );
   }
   function on_change(folder_code) {
     sync_shown = app_receipts_sync;

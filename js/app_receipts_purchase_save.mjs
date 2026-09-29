@@ -4,6 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { indexeddb_put_backend } from "./indexeddb_put_backend.mjs";
 import { app_receipts_purchases_database } from "./app_receipts_purchases_database.mjs";
 import { property_get_or } from "./property_get_or.mjs";
+import { app_receipts_payment_get } from "./app_receipts_payment_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { json_to } from "./json_to.mjs";
 import { app_receipts_purchase_details_name } from "./app_receipts_purchase_details_name.mjs";
@@ -15,7 +16,8 @@ export async function app_receipts_purchase_save(purchase) {
   "The price is an amount of pesos written as digits, with at most two after a point, or empty text while none has been given; a purchase kept before prices were asked for has none.";
   "The description is what the person wrote about it, and the notes are what the person reviewing it wrote; each is empty when nothing is written.";
   "The colour is the key of the colour it is marked with, blue until another is chosen.";
-  "What is sent is the date, the time, the price, the description, the notes, the colour, and the names of its photos, written over the same address each time, so the last change is the one storage holds.";
+  "The payment is 'credit' or 'cash', credit until cash is chosen.";
+  "What is sent is the date, the time, the price, the description, the notes, the colour, the payment, and the names of its photos, written over the same address each time, so the last change is the one storage holds.";
   "The date and time also go beside the file as words storage keeps about it, because every phone may ask about a file while some may not read one.";
   arguments_assert(arguments, 1);
   let store = app_receipts_purchases_store();
@@ -33,6 +35,7 @@ export async function app_receipts_purchase_save(purchase) {
   let description = property_get_or(purchase, "description", "");
   let notes = property_get_or(purchase, "notes", "");
   let color = property_get_or(purchase, "color", "blue");
+  let payment = app_receipts_payment_get(purchase);
   let details = {
     date,
     time,
@@ -40,6 +43,7 @@ export async function app_receipts_purchase_save(purchase) {
     description,
     notes,
     color,
+    payment,
     photos: list_map_property(photos, "name"),
   };
   let json = json_to(details);
@@ -53,6 +57,7 @@ export async function app_receipts_purchase_save(purchase) {
     description,
     notes,
     color,
+    payment,
   };
   let folder_code = property_get(purchase, "folder_code");
   let details_name = app_receipts_purchase_details_name();
