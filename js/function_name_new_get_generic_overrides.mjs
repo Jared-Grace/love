@@ -15,7 +15,7 @@ export function function_name_new_get_generic_overrides() {
   let r = {
     a: text_combine,
     c: function_name_combine,
-    cs: function_name_combine_swapped,
+    b: function_name_combine_swapped,
     d: function_name_parts_delete_comma,
     i: function_name_part_insert,
     l: function_name_part_last_delete,
