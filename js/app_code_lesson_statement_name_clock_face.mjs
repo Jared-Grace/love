@@ -77,7 +77,7 @@ export function app_code_lesson_statement_name_clock_face() {
       ["", code],
       app_code_explain_container_next,
       ["What is one hour after 12?"],
-      ["Not 13. The clock goes back to 1"],
+      ["Not 13. After 12 the clock goes back to 1"],
       ["First, how many hours past 12 is it?"],
       ["At 5 o'clock, 5 hours past 12:"],
       ["", code2],
