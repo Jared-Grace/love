@@ -1,3 +1,4 @@
+import { retry_standard } from "./retry_standard.mjs";
 import { text_prefix_without_inner } from "./text_prefix_without_inner.mjs";
 import { html_hash_symbol } from "./html_hash_symbol.mjs";
 import { text_split_first } from "./text_split_first.mjs";
@@ -28,6 +29,10 @@ export async function app_replace_tests_refresh(page) {
   each(keys, lambda);
   let url_hash = hash_to_url(hash);
   let url_new = text_combine(before, url_hash);
-  await page.goto(url_new);
-  await playwright_refresh(page);
+  ("Loading is asked again when it fails, because all this step does is open the page - it judges nothing about the app, so a retry here cannot hide a wrong answer. A deployed page drops the connection under many browsers reloading at once: a whole walk against the site died twice on a single dropped reload, after every goal it reached had passed, while the same files walked on this machine passed all of them.");
+  async function load() {
+    await page.goto(url_new);
+    await playwright_refresh(page);
+  }
+  await retry_standard(load);
 }
