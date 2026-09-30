@@ -51,6 +51,10 @@ export function app_code_lesson_statement_name_clock_next() {
     let shuffled = list_shuffle(all);
     return shuffled;
   }
+  let code = js_code_binary_result_nb("9", plus, "1", "10");
+  let code2 = js_code_binary_result_nb("23", plus, "1", "24");
+  let code3 = js_code_binary_result_nb("24", percent, day, "0");
+  let code4 = js_code_binary_result_nb("10", percent, day, "10");
   let lesson = app_code_lesson_statement_formula({
     words: "Next hour on a clock",
     title_code: line_next,
@@ -68,15 +72,15 @@ export function app_code_lesson_statement_name_clock_next() {
     explain: [
       ["A day has 24 hours, numbered 0 to 23"],
       ["One hour after 9 is 10:"],
-      ["", js_code_binary_result_nb("9", plus, "1", "10")],
+      ["", code],
       app_code_explain_container_next,
       ["What is one hour after 23?"],
-      ["", js_code_binary_result_nb("23", plus, "1", "24")],
+      ["", code2],
       ["But there is no hour 24. The clock starts again at 0"],
       ["The remainder (", percent, ") of dividing by 24 does that:"],
-      ["", js_code_binary_result_nb("24", percent, day, "0")],
+      ["", code3],
       ["And it leaves every other hour as it was:"],
-      ["", js_code_binary_result_nb("10", percent, day, "10")],
+      ["", code4],
       ["", line_later],
       ["", line_next],
     ],

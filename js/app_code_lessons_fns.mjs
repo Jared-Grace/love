@@ -407,6 +407,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_digit_split,
     app_code_lesson_statement_name_digit_rest,
     app_code_lesson_statement_name_digit_append,
+    app_code_lesson_statement_name_clock_next,
   ];
   return fns;
 }
