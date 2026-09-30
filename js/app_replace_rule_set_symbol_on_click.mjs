@@ -1,3 +1,4 @@
+import { app_shared_glow_look_here_clear_now } from "./app_shared_glow_look_here_clear_now.mjs";
 import { html_raised_flying } from "./html_raised_flying.mjs";
 import { html_raised_clear } from "./html_raised_clear.mjs";
 import { html_parent_get } from "./html_parent_get.mjs";
@@ -46,6 +47,8 @@ export async function app_replace_rule_set_symbol_on_click(
   let rule = list_get(rules_parsed, index_selected);
   let eq = app_replace_rule_valid(rule, index, start);
   if (eq) {
+    ("the row stops glowing the moment the chosen symbol starts to move - a glow asks for a press, and nothing here can be pressed until the pieces have landed and the row is drawn again");
+    app_shared_glow_look_here_clear_now(div_symbols);
     symbols_invalid_chosen = {};
     app_replace_symbol_tile_valid_if_multiple(sbs, true, false);
     start = app_replace_rule_apply(rule, index, start);
