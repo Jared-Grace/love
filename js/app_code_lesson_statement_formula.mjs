@@ -121,6 +121,8 @@ export function app_code_lesson_statement_formula({
         on_output,
       );
     }
+    ("the program just worked is handed back, so the example underneath is drawn with other numbers rather than showing the same program a second time, asked by the human 2026-09-30");
+    return example;
   }
   let lesson = app_code_lesson_code_logged({
     above,

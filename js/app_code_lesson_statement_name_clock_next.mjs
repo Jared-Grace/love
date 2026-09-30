@@ -1,4 +1,3 @@
-import { app_code_example_last_drawn_none } from "./app_code_example_last_drawn_none.mjs";
 import { app_code_lesson_statement_name_clock_face } from "./app_code_lesson_statement_name_clock_face.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -71,9 +70,9 @@ export function app_code_lesson_statement_name_clock_next() {
       ["1 AM - 11 AM is 1 - 11"],
       ["12 PM noon is 12"],
       ["1 PM - 11 PM is 13 - 23"],
+      app_code_explain_container_next,
       ["One hour after 9 is 10:"],
       ["", code],
-      app_code_explain_container_next,
       ["What is one hour after 23?"],
       ["", code2],
       ["24 would be 12 AM midnight"],
@@ -88,7 +87,6 @@ export function app_code_lesson_statement_name_clock_next() {
       ],
       ["", code3],
       ["In general, ", "% 24", " keeps the hours between 0 and 23:"],
-      ["And ", "% 24", " leaves every other hour (hours 0 - 23) the same"],
       ["For example:"],
       ["", code4],
       [
@@ -96,7 +94,7 @@ export function app_code_lesson_statement_name_clock_next() {
       ],
     ],
     decoys: null,
-    example_pointers: app_code_example_last_drawn_none,
+    example_pointers: null,
   });
   return lesson;
 }

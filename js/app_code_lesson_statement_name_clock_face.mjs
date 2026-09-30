@@ -1,4 +1,3 @@
-import { app_code_example_last_drawn_none } from "./app_code_example_last_drawn_none.mjs";
 import { clock_face_live_draw } from "./clock_face_live_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -123,7 +122,7 @@ export function app_code_lesson_statement_name_clock_face() {
       ],
     ],
     decoys: null,
-    example_pointers: app_code_example_last_drawn_none,
+    example_pointers: null,
   });
   return lesson;
 }
