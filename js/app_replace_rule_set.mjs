@@ -1,3 +1,4 @@
+import { app_shared_glow_look_here_clear_now } from "./app_shared_glow_look_here_clear_now.mjs";
 import { app_replace_rule_set_labels_set } from "./app_replace_rule_set_labels_set.mjs";
 import { property_equals_json } from "./property_equals_json.mjs";
 import { app_replace_rule_set_dead_end_show } from "./app_replace_rule_set_dead_end_show.mjs";
@@ -145,6 +146,8 @@ export async function app_replace_rule_set(context) {
       let eq = property_equals_json(start_held, "start", end);
       if (eq) {
         property_set(success_held, "success", true);
+        ("every light is put out before the win is shown, not after - the labels and buttons are only told the goal is reached once the showing has finished, which left them pulsing over it and then fading out late");
+        app_shared_glow_look_here_clear_now(root);
         await app_replace_rule_set_solved_show({
           rule_buttons_held,
           resumed,
