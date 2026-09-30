@@ -2,7 +2,7 @@ import { html_public_latest_folder } from "./html_public_latest_folder.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { folder_app_replace_all } from "./folder_app_replace_all.mjs";
-export async function html_public_unlisted_from_latest(search) {
+export async function html_public_latest_from_latest(search) {
   "$plain search";
   "Puts one app's checked build at an unlinked address on the live site, so one person can be handed it without it going to everybody.";
   "The sibling beside this one moves the same build into the folder people are served from. This moves it one level down instead, into a folder nothing links to - so the same bytes can be tried by somebody in front of the real site, at the address their own work is already kept under, while what everybody else sees stays exactly where it was.";
