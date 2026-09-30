@@ -1,4 +1,4 @@
-import { app_code_explain_program_draw } from "./app_code_explain_program_draw.mjs";
+import { app_code_example_last_drawn_none } from "./app_code_example_last_drawn_none.mjs";
 import { clock_face_live_draw } from "./clock_face_live_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -56,12 +56,6 @@ export function app_code_lesson_statement_name_clock_face() {
   let code = js_code_binary_result_nb("5", plus, "1", "6");
   let code2 = js_code_binary_result_nb("5", percent, twelve, "5");
   let code3 = js_code_binary_result_nb(twelve, percent, twelve, "0");
-  let program = app_code_lesson_statement_name_swap_program(
-    [[hour, 12]],
-    [line_past, line_next],
-    [next],
-  );
-  let program_draw = app_code_explain_program_draw(program);
   let lesson = app_code_lesson_statement_formula({
     words: "Next hour on a clock",
     title_code: line_next,
@@ -127,10 +121,9 @@ export function app_code_lesson_statement_name_clock_face() {
       [
         "So here is the code that answers the question: What is one hour more than the current hour?",
       ],
-      program_draw,
     ],
     decoys: null,
-    example_pointers: null,
+    example_pointers: app_code_example_last_drawn_none,
   });
   return lesson;
 }

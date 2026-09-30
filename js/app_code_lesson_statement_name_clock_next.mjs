@@ -1,4 +1,4 @@
-import { app_code_explain_program_draw } from "./app_code_explain_program_draw.mjs";
+import { app_code_example_last_drawn_none } from "./app_code_example_last_drawn_none.mjs";
 import { app_code_lesson_statement_name_clock_face } from "./app_code_lesson_statement_name_clock_face.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -55,12 +55,6 @@ export function app_code_lesson_statement_name_clock_next() {
   let code2 = js_code_binary_result_nb("23", plus, "1", "24");
   let code3 = js_code_binary_result_nb("24", percent, day, "0");
   let code4 = js_code_binary_result_nb("10", percent, day, "10");
-  let program = app_code_lesson_statement_name_swap_program(
-    [[hour, 23]],
-    [line_later, line_next],
-    [next],
-  );
-  let program_draw = app_code_explain_program_draw(program);
   let lesson = app_code_lesson_statement_formula({
     words: "Next hour on a 24-hour clock",
     title_code: line_next,
@@ -100,10 +94,9 @@ export function app_code_lesson_statement_name_clock_next() {
       [
         "Here's code that solves the next hour and makes sure the next hour is between 0 and 23:",
       ],
-      program_draw,
     ],
     decoys: null,
-    example_pointers: null,
+    example_pointers: app_code_example_last_drawn_none,
   });
   return lesson;
 }
