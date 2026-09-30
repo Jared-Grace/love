@@ -108,6 +108,7 @@ export function app_code_lesson_statement_name_handshakes() {
         less,
         ")",
       ],
+      ["So we multiply ", people, " and ", less, " together"],
       ["Then we halve, because each handshake was counted twice"],
       ["Here is code that finds how many handshakes there are:"],
     ],
