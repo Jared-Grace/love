@@ -1,3 +1,4 @@
+import { clock_face_live_draw } from "./clock_face_live_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_percent_symbol } from "./js_operator_percent_symbol.mjs";
@@ -71,6 +72,7 @@ export function app_code_lesson_statement_name_clock_face() {
     remember_lines,
     explain: [
       ["A clock shows the hours 1 to 12"],
+      clock_face_live_draw,
       ["One hour after 5 is 6:"],
       ["", code],
       app_code_explain_container_next,
