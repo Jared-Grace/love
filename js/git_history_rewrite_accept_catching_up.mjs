@@ -1,7 +1,3 @@
-import { text_words_start_removed_unless_binary } from "./text_words_start_removed_unless_binary.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { git_history_folder_strip_texts } from "./git_history_folder_strip_texts.mjs";
@@ -11,15 +7,20 @@ import { text_split_newline } from "./text_split_newline.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { equal_assert_json } from "./equal_assert_json.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { git_history_bundle_write } from "./git_history_bundle_write.mjs";
 import { text_words_start_removed } from "./text_words_start_removed.mjs";
 import { equal } from "./equal.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
+import { text_words_start_removed_unless_binary } from "./text_words_start_removed_unless_binary.mjs";
 import { not } from "./not.mjs";
 import { git_folder_run_input } from "./git_folder_run_input.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
 import { catch_error_text_or_null_async } from "./catch_error_text_or_null_async.mjs";
+import { git_commit_map_save } from "./git_commit_map_save.mjs";
 import { git_history_push_forced } from "./git_history_push_forced.mjs";
 export async function git_history_rewrite_accept_catching_up(
   folder,
@@ -190,6 +191,8 @@ export async function git_history_rewrite_accept_catching_up(
     moved = equal(refused, null);
     from = head;
   }
+  ("The record of what every commit became is kept the moment the branch has moved and before anything else can stop - a stop after the move without it would leave every commit name written down anywhere with no way across.");
+  let map_saved = await git_commit_map_save(rehearsed.clone_folder, mapped);
   let tree_before = await line(["rev-parse", head + "^{tree}"]);
   let tree_after = await line(["rev-parse", "refs/heads/main^{tree}"]);
   equal_assert_json(tree_after, tree_before, {
@@ -208,6 +211,7 @@ export async function git_history_rewrite_accept_catching_up(
     head_before: head,
     head_after: mapped[head],
     laid,
+    map_saved,
     tries,
     sent,
     trouble,
