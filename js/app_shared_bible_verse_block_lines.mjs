@@ -1,6 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
-import { list_copy } from "./list_copy.mjs";
+import { list_map } from "./list_map.mjs";
+import { app_shared_bible_verse_text_shown } from "./app_shared_bible_verse_text_shown.mjs";
 import { list_add_first } from "./list_add_first.mjs";
 export function app_shared_bible_verse_block_lines(
   chapter_code,
@@ -17,7 +18,8 @@ export function app_shared_bible_verse_block_lines(
   let reference = ebible_parts_chapter_code_to_reference(chapter_code, books, [
     verse_number,
   ]);
-  let lines = list_copy(texts);
+  ("A bible that printed no words for this verse hands its text over as the mark standing in for them, and the mark is not words. The screen has always asked about it and this road never did, so a verse copied where one bible had nothing pasted the token itself into somebody's message. The same reading the screen uses answers here, so what is copied and what is read are the one sentence.");
+  let lines = list_map(texts, app_shared_bible_verse_text_shown);
   list_add_first(lines, reference);
   return lines;
 }

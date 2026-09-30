@@ -1,5 +1,5 @@
 import { bible_verse_words_none_token_is } from "./bible_verse_words_none_token_is.mjs";
-import { app_shared_bible_verse_words_none_text } from "./app_shared_bible_verse_words_none_text.mjs";
+import { app_shared_bible_verse_text_shown } from "./app_shared_bible_verse_text_shown.mjs";
 import { html_div } from "./html_div.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { html_font_color_set_or_remove } from "./html_font_color_set_or_remove.mjs";
@@ -15,7 +15,7 @@ import { app_shared_bible_on_click_google_define } from "./app_shared_bible_on_c
 export function app_shared_bible_verse_line(parent, name, text, color) {
   "a verse the translation printed no words for arrives here carrying the token that says so, and the token is not words: the sentence that says so takes its place before anything measures or draws it, the reading direction included, which would otherwise be worked out from a mark belonging to no language at all";
   let words_none = bible_verse_words_none_token_is(text);
-  let shown = words_none ? app_shared_bible_verse_words_none_text() : text;
+  let shown = app_shared_bible_verse_text_shown(text);
   let line = html_div(parent);
   ("a null colour means read in the page's default text colour, so leave the property alone rather than writing one in");
   let colored = null_not_is(color);
