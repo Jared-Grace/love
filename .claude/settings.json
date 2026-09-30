@@ -2681,6 +2681,7 @@
       "Bash(node scripts/ai.mjs playwright_url_screenshot:*)",
       "Bash(node scripts/ai.mjs qa_promoted_commits_named:*)",
       "Bash(node scripts/ai.mjs lyric_video_song_pictures_lines_write:*)",
+      "Bash(node scripts/ai.mjs gloss_chapter_explains_text_replace:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -5253,6 +5254,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args playwright_url_screenshot:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args qa_promoted_commits_named:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args lyric_video_song_pictures_lines_write:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args gloss_chapter_explains_text_replace:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -7824,6 +7826,7 @@
       "Bash(node scripts/aig.mjs playwright_url_screenshot:*)",
       "Bash(node scripts/aig.mjs qa_promoted_commits_named:*)",
       "Bash(node scripts/aig.mjs lyric_video_song_pictures_lines_write:*)",
+      "Bash(node scripts/aig.mjs gloss_chapter_explains_text_replace:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -10395,7 +10398,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args bible_words_names_apart:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args playwright_url_screenshot:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args qa_promoted_commits_named:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args lyric_video_song_pictures_lines_write:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args lyric_video_song_pictures_lines_write:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args gloss_chapter_explains_text_replace:*)"
     ],
     "defaultMode": "acceptEdits"
   },
