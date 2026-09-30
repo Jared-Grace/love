@@ -97,7 +97,8 @@ export function app_code_lesson_statement_name_egg_boxes() {
       ["Then we round up:"],
       ["", up],
       [
-        "When the eggs fill the boxes exactly, then we'll have a whole number like 2",
+        "When the eggs fill the boxes exactly, then we'll have a whole number like ",
+        "2",
       ],
       ["Rounding up a whole number changes nothing:"],
       ["", kept],
