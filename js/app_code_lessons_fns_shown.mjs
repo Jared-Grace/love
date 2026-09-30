@@ -1,3 +1,6 @@
+import { app_shared_page_stage_latest_is } from "./app_shared_page_stage_latest_is.mjs";
+import { app_code_lessons_latest_held_fns } from "./app_code_lessons_latest_held_fns.mjs";
+import { list_without_multiple } from "./list_without_multiple.mjs";
 import { app_shared_page_stage_prod_is } from "./app_shared_page_stage_prod_is.mjs";
 import { not } from "./not.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
@@ -15,6 +18,13 @@ export function app_code_lessons_fns_shown() {
   let whole = not(handed_to_a_learner);
   let fns = app_code_lessons_fns();
   if (whole) {
+    let latest = app_shared_page_stage_latest_is();
+    if (latest) {
+      ("latest leaves out only the lessons held back from it, so one not ready yet can be kept off while the rest are tried there");
+      let held = app_code_lessons_latest_held_fns();
+      let kept = list_without_multiple(fns, held);
+      return kept;
+    }
     return fns;
   }
   ("filtered by a list of released lessons rather than cut at the last one released, because lessons get put in between released ones - a cut hands every one of those over, a list hands over none of them");
