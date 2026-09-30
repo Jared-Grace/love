@@ -1,3 +1,6 @@
+import { list_join_newline } from "./list_join_newline.mjs";
+import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
+import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_name_clock_face } from "./app_code_lesson_statement_name_clock_face.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -54,6 +57,17 @@ export function app_code_lesson_statement_name_clock_next() {
   let code2 = js_code_binary_result_nb("23", plus, "1", "24");
   let code3 = js_code_binary_result_nb("24", percent, day, "0");
   let code4 = js_code_binary_result_nb("10", percent, day, "10");
+  let program = app_code_lesson_statement_name_swap_program(
+    [[hour, 23]],
+    [line_later, line_next],
+    [next],
+  );
+  function program_draw(box) {
+    "the whole program for an hour of 23 and what it writes out, asked by the human 2026-09-30 to close the explanation, so the 0 that comes out is seen and not only said";
+    let code5 = list_join_newline(program);
+    let output = eval_console_log_lines(code5);
+    app_code_code_lines_writes_out(box, program, output);
+  }
   let lesson = app_code_lesson_statement_formula({
     words: "Next hour on a 24-hour clock",
     title_code: line_next,
@@ -66,18 +80,34 @@ export function app_code_lesson_statement_name_clock_next() {
     remember_lines,
     explain: [
       ["Some clocks count 24 hours, 0 to 23, instead of 1 to 12"],
+      ["12 AM midnight is 0"],
+      ["1 AM - 11 AM is 1 - 11"],
+      ["12 PM noon is 12"],
+      ["1 PM - 11 PM is 13 - 23"],
       ["One hour after 9 is 10:"],
       ["", code],
       app_code_explain_container_next,
       ["What is one hour after 23?"],
       ["", code2],
-      ["But there is no hour 24. The clock starts again at 0"],
-      ["The remainder (", percent, ") of dividing by 24 does that:"],
+      ["24 would be 12 AM midnight"],
+      [
+        "But remember 12 AM midnight is 0 not 24 (there is no hour 24; there are only hours 0 - 23)",
+      ],
+      ["So the 24 should be a 0, not a 24"],
+      [
+        "And the remainder (",
+        percent,
+        ") of dividing by 24 makes 24 become 0:",
+      ],
       ["", code3],
-      ["And it leaves every other hour as it was:"],
+      ["In general, ", "% 24", " keeps the hours between 0 and 23:"],
+      ["And ", "% 24", " leaves every other hour (hours 0 - 23) the same"],
+      ["For example:"],
       ["", code4],
-      ["", line_later],
-      ["", line_next],
+      [
+        "Here's code that solves the next hour and makes sure the next hour is between 0 and 23:",
+      ],
+      program_draw,
     ],
     decoys: null,
     example_pointers: null,
