@@ -1,3 +1,4 @@
+import { app_code_hash_complete_latest_restore } from "./app_code_hash_complete_latest_restore.mjs";
 import { app_shared_hash_restore_set } from "./app_shared_hash_restore_set.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { app_code_hash_unknown_page_shown_is } from "./app_code_hash_unknown_page_shown_is.mjs";
@@ -25,5 +26,6 @@ export async function app_code(context) {
   object_merge(context, {
     after_refresh: app_code_after_refresh,
   });
+  await app_code_hash_complete_latest_restore(context, hash);
   await app_shared_refresh(context);
 }

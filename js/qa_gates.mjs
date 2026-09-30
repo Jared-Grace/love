@@ -585,6 +585,7 @@ import { firebase_sending_tests_none_gate_run } from "./firebase_sending_tests_n
 import { gloss_stores_verse_order_gate_run } from "./gloss_stores_verse_order_gate_run.mjs";
 import { app_en_learn_bible_gloss_urdu_verse_claims_wrong_gate_run } from "./app_en_learn_bible_gloss_urdu_verse_claims_wrong_gate_run.mjs";
 import { gloss_explain_verse_numbers_cases_gate_run } from "./gloss_explain_verse_numbers_cases_gate_run.mjs";
+import { gloss_explain_verse_number_words_cases_gate_run } from "./gloss_explain_verse_number_words_cases_gate_run.mjs";
 export function qa_gates() {
   "Every gate the repo-wide check runs, gathered in one list, so adding a function here is the whole of wiring a new gate in.";
   let gates = [
@@ -1175,6 +1176,7 @@ export function qa_gates() {
     gloss_stores_verse_order_gate_run,
     app_en_learn_bible_gloss_urdu_verse_claims_wrong_gate_run,
     gloss_explain_verse_numbers_cases_gate_run,
+    gloss_explain_verse_number_words_cases_gate_run,
   ];
   return gates;
 }
