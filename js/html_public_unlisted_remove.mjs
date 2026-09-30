@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_public_unlisted_folder } from "./html_public_unlisted_folder.mjs";
+import { html_public_latest_folder } from "./html_public_latest_folder.mjs";
 import { property_get } from "./property_get.mjs";
 import { folder_app_file_names } from "./folder_app_file_names.mjs";
 import { path_join } from "./path_join.mjs";
@@ -11,7 +11,7 @@ export async function html_public_unlisted_remove(search) {
   "That address is for handing one person a build without it going to everybody, so an app stands there only while somebody is holding its link; this is how one nobody holds is taken back.";
   "The pieces are asked of the folder rather than named, for the reason written where that is asked: a build names its extra pieces with numbers of its own choosing, and one left behind is served long after the page it belonged to is gone.";
   arguments_assert(arguments, 1);
-  let folder = await html_public_unlisted_folder(search);
+  let folder = await html_public_latest_folder(search);
   let a_name = property_get(folder, "a_name");
   let to_folder = property_get(folder, "to_folder");
   let present = await folder_app_file_names(to_folder, a_name);

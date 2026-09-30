@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { folder_public_unlisted } from "./folder_public_unlisted.mjs";
 import { path_join } from "./path_join.mjs";
 import { repo_path_combine } from "./repo_path_combine.mjs";
-export async function html_public_unlisted_folder(search) {
+export async function html_public_latest_folder(search) {
   "$plain search";
   "For one app named however anybody names it: its own name, the folder its checked build sits in, and the unlinked folder on the live site it is put in for one person to try. Reads folders and writes nothing.";
   "Named so that putting an app at the unlinked address and taking it away again ask the same lookup, and so cannot disagree about which folder that is.";
