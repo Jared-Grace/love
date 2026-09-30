@@ -48,8 +48,8 @@ export function app_code_lesson_statement_name_clock_next() {
     "23 every time, and three of four ordinary hours, in a fresh order each screen";
     let ordinary = list_shuffle_take([[8], [14], [20], [5]], 3);
     let all = list_concat([[23]], ordinary);
-    let shuffled = list_shuffle(all);
-    return shuffled;
+    list_shuffle(all);
+    return all;
   }
   let code = js_code_binary_result_nb("9", plus, "1", "10");
   let code2 = js_code_binary_result_nb("23", plus, "1", "24");
