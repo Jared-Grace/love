@@ -85,7 +85,11 @@ export function app_code_lesson_statement_name_clock_face() {
       ["", code2],
       ["And at 12 o'clock, it is 0 hours past 12:"],
       ["", code3],
-      ["So ", "hour % 12", " answers the question: How many hours past 12 is it?"],
+      [
+        "So ",
+        "hour % 12",
+        " answers the question: How many hours past 12 is it?",
+      ],
       ["Then the next hour is one more:"],
       ["", code4],
       ["", line_past],
