@@ -5,7 +5,7 @@ import { folder_app_file_names } from "./folder_app_file_names.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_delete } from "./file_delete.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-export async function html_public_unlisted_remove(search) {
+export async function html_public_latest_remove(search) {
   "$plain search";
   "Takes one app away from the unlinked address on the live site - its page, its script, and every numbered piece a build cut out of it - answering with what it took. The next sending then stops serving it there.";
   "That address is for handing one person a build without it going to everybody, so an app stands there only while somebody is holding its link; this is how one nobody holds is taken back.";
