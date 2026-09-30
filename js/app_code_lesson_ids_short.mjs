@@ -227,9 +227,12 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_multiply: text_frozen("name_multiply"),
     app_code_lesson_statement_name_divide: text_frozen("name_divide"),
     app_code_lesson_statement_name_plus_assign: text_frozen("name_plus_assign"),
-    app_code_lesson_statement_name_minus_assign: text_frozen("name_minus_assign"),
-    app_code_lesson_statement_name_times_assign: text_frozen("name_times_assign"),
-    app_code_lesson_statement_name_divide_assign: text_frozen("name_divide_assign"),
+    app_code_lesson_statement_name_minus_assign:
+      text_frozen("name_minus_assign"),
+    app_code_lesson_statement_name_times_assign:
+      text_frozen("name_times_assign"),
+    app_code_lesson_statement_name_divide_assign:
+      text_frozen("name_divide_assign"),
     app_code_lesson_statement_name_increment: text_frozen("name_increment"),
     app_code_lesson_statement_name_decrement: text_frozen("name_decrement"),
     app_code_lesson_statement_name_fill_from: text_frozen("name_fill_from"),
@@ -237,10 +240,12 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_temp_keep: text_frozen("name_temp_keep"),
     app_code_lesson_statement_name_swap: text_frozen("name_swap"),
     app_code_lesson_statement_name_average_two: text_frozen("name_average_two"),
-    app_code_lesson_statement_name_average_three: text_frozen("name_average_three"),
+    app_code_lesson_statement_name_average_three:
+      text_frozen("name_average_three"),
     app_code_lesson_statement_name_middle: text_frozen("name_middle"),
     app_code_lesson_statement_name_grid_row: text_frozen("name_grid_row"),
-    app_code_lesson_statement_name_grid_position: text_frozen("name_grid_position"),
+    app_code_lesson_statement_name_grid_position:
+      text_frozen("name_grid_position"),
     app_code_lesson_statement_name_grid_index: text_frozen("name_grid_index"),
     app_code_lesson_statement_name_sum_to: text_frozen("name_sum_to"),
     app_code_lesson_statement_name_digit_split: text_frozen("name_digit_split"),
@@ -248,6 +253,7 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_digit_append: text_frozen("name_digit_back"),
     app_code_lesson_statement_name_clock_face: text_frozen("name_clock_12"),
     app_code_lesson_statement_name_clock_next: text_frozen("name_clock_next"),
+    app_code_lesson_statement_name_egg_boxes: text_frozen("name_egg_boxes"),
     app_code_lesson_statement_name_remainder: text_frozen("name_remainder"),
     app_code_lesson_statement_name_greater: text_frozen("name_greater"),
     app_code_lesson_statement_name_smaller_equal:
