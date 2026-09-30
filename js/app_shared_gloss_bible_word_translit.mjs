@@ -1,3 +1,4 @@
+import { app_shared_color_translit } from "./app_shared_color_translit.mjs";
 import { hebrew_translit_voice_spelling } from "./hebrew_translit_voice_spelling.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_entry_translit_key } from "./gloss_entry_translit_key.mjs";
@@ -28,6 +29,7 @@ export function app_shared_gloss_bible_word_translit(e, div, play) {
   let said = hebrew_translit_voice_spelling(translit);
   let span = html_span_text(div, said);
   html_attribute_set(span, "dir", "ltr");
-  html_font_color_set(span, "#0f766eff");
+  let teal = app_shared_color_translit();
+  html_font_color_set(span, teal);
   html_on_click_when(span, play);
 }

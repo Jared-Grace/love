@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_clock_next } from "./app_code_lesson_statement_name_clock_next.mjs";
 import { app_code_lesson_statement_name_digit_append } from "./app_code_lesson_statement_name_digit_append.mjs";
 import { app_code_lesson_statement_name_digit_rest } from "./app_code_lesson_statement_name_digit_rest.mjs";
 import { app_code_lesson_statement_name_grid_row } from "./app_code_lesson_statement_name_grid_row.mjs";
