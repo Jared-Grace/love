@@ -39,5 +39,5 @@ export function app_replace_rule_set_verify_nearley() {
   let input = '"_"';
   input = "001";
   parser.feed(input);
-  log_json("", parser.results);
+  log_json(app_replace_rule_set_verify_nearley.name, parser.results);
 }

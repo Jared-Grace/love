@@ -8,6 +8,7 @@ import { property_get } from "./property_get.mjs";
 import { log_keep } from "./log_keep.mjs";
 import { js_visit_calls_named } from "./js_visit_calls_named.mjs";
 import { log_unparse } from "./log_unparse.mjs";
+import { log_json } from "./log_json.mjs";
 export function js_log_f_name_add(ast) {
   let log_fns = [log_keep, log, log_unparse, log_json];
   let f_name = js_flo_name(ast);
