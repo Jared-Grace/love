@@ -1,5 +1,5 @@
+import { app_shared_bible_page_start_hash } from "./app_shared_bible_page_start_hash.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { app_shared_bible_font_size } from "./app_shared_bible_font_size.mjs";
 import { app_shared_mobile_default_font_size_generic } from "./app_shared_mobile_default_font_size_generic.mjs";
@@ -40,7 +40,11 @@ export async function app_emoji_bible(context) {
   ("The reader's choices about a chapter sit in the bar of the chapter they are reading and nowhere on the list, because none of them changes anything a list shows. THE KEY AND THE ENGLISH ARE TWO CONTROLS AND NOT ONE: a reader who only wants to know what a verse says is not the reader who is learning what the pictures mean, and charging the first one three lines under every verse to answer a question they did not ask is how a page becomes unreadable. Asking for the English alone puts one line under each verse, and it is the same line the key would have shown, drawn by the same call - so the two views cannot drift apart. A control that does nothing where it is drawn teaches the reader it does nothing anywhere. The three of them are put up by ",
     fn_name("app_emoji_bible_view_buttons"),
     " in one call, because they are one row and were three copies of one habit, and what they say comes back for the chapter under them to be drawn from.");
-  app_shared_app_fn_set(context, app_emoji_bible);
+  let hash = app_shared_bible_page_start_hash(context, app_emoji_bible);
+  let corrected = null_is(hash);
+  if (corrected) {
+    return;
+  }
   html_clear_context(context);
   let value_default = app_shared_bible_font_size();
   let root = app_shared_mobile_default_font_size_generic(
