@@ -1,3 +1,4 @@
+import { js_text_replace_literal_nodes } from "./js_text_replace_literal_nodes.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { property_get } from "./property_get.mjs";
@@ -24,6 +25,7 @@ export async function app_shared_text_reader_words_own(f_name) {
   let prose = js_prose_literal_nodes(declaration);
   let bracketed = js_prose_sequence_literal_nodes(declaration);
   let settings = js_locale_settings_literal_nodes(declaration);
+  let edits = js_text_replace_literal_nodes(declaration);
   let literals = js_list_type_nodes(declaration, "Literal");
   let words = [];
   for (let node of literals) {
@@ -33,6 +35,10 @@ export async function app_shared_text_reader_words_own(f_name) {
     }
     let aside = list_includes(bracketed, node);
     if (aside) {
+      continue;
+    }
+    let edit = list_includes(edits, node);
+    if (edit) {
       continue;
     }
     let setting = list_includes(settings, node);
