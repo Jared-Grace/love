@@ -18,7 +18,7 @@ export function app_code_lesson_statement_name_egg_boxes() {
   ("Two short lines rather than one: let boxes = Math.ceil(eggs / 12); is 33 characters, past the 30 a code line may be, and it asks for the dividing and the rounding at once. Not picked: the whole-number trick Math.floor((eggs + 11) / 12), which is right but asks the learner to take a trick on trust.");
   ("The name exact says what the division gives: the boxes needed if a box could be cut, 2.5 for 30 eggs. Not picked: share, which reads as dividing between people.");
   ("Every screen asks about 24, the one count that fills its boxes exactly, where rounding up changes nothing; the other three are from four counts that leave a box part full. The answers all differ, so the quiz choices do too.");
-  ("The writing is a first draft, not yet the human's, 2026-09-30.");
+  ("The second and third boxes are the human's wording, 2026-09-30; the first box is still a draft.");
   let names = ["eggs"];
   let eggs = "eggs";
   let exact = "exact";
@@ -73,10 +73,27 @@ export function app_code_lesson_statement_name_egg_boxes() {
       ["How many boxes do 30 eggs need?"],
       ["", part],
       ["But we cannot use half a box"],
-      ["2 boxes hold only 24 eggs, so 6 eggs would be left over"],
-      ["So we need 3 boxes, and one of them is not full"],
+      [
+        "If we tried to put 30 eggs into 2 boxes, then the 2 boxes could only hold 24 eggs, so ",
+        "30 - 24 === 6",
+        " eggs would be left over",
+      ],
+      ["So we need 3 boxes to hold 30 eggs"],
+      [
+        "We could put 24 eggs to fill up 2 boxes, and then we could put the remaining 6 eggs to partially fill the third box",
+      ],
+      [
+        "The third box would only have 6 out of 12 eggs, so the third box would not be full",
+      ],
       app_code_explain_container_next,
-      ["We round the boxes up:"],
+      ["How do we calculate the number of boxes we need?"],
+      [
+        "First we calculate the number of boxes by dividing by the size of each box (",
+        "/ 12",
+        "):",
+      ],
+      ["", part],
+      ["Then we round up:"],
       ["", up],
       ["When the eggs fill the boxes exactly, rounding up changes nothing:"],
       ["", kept],
