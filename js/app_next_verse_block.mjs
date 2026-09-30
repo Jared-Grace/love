@@ -1,15 +1,15 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { ebible_language_to_bible_folder } from "./ebible_language_to_bible_folder.mjs";
+import { ebible_verse_browser_try } from "./ebible_verse_browser_try.mjs";
+import { null_is } from "./null_is.mjs";
+import { bible_verse_words_none_token } from "./bible_verse_words_none_token.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
+import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
 import { list_map } from "./list_map.mjs";
 import { ebible_language_to_name } from "./ebible_language_to_name.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
-import { app_shared_bible_verse_block_lines } from "./app_shared_bible_verse_block_lines.mjs";
 import { app_shared_bible_entries_names_texts } from "./app_shared_bible_entries_names_texts.mjs";
-import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
-import { ebible_verse_browser_try } from "./ebible_verse_browser_try.mjs";
-import { ebible_language_to_bible_folder } from "./ebible_language_to_bible_folder.mjs";
-import { app_next_verse_missing_line } from "./app_next_verse_missing_line.mjs";
-import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { null_is } from "./null_is.mjs";
-import { property_get } from "./property_get.mjs";
+import { app_shared_bible_verse_block_lines } from "./app_shared_bible_verse_block_lines.mjs";
 export async function app_next_verse_block(
   chapter_code,
   verse_number,
@@ -31,7 +31,9 @@ export async function app_next_verse_block(
       verse_number,
     );
     if (null_is(d)) {
-      let missing = app_next_verse_missing_line(language);
+      ("A bible with no verse at this number hands back the same mark a bible that printed no words hands back, and every page already knows that mark: it is drawn in its own grey with a sentence of its own, it is left untappable because no word of scripture is in it, it turns into the longer note when no bible on the page has anything, and it never reaches a clipboard as itself. This used to be a sentence written out here instead, which is the one shape none of that reaches - what arrived at the screen was ordinary text, so it was drawn as scripture and copied as scripture.");
+      ("The mark says there are no words and never says why, which is exactly as much as is known here. A number missing from a file is not proof the bible lacks the verse - Amharic joins verses into ranges and carries the words under a number of its own - so a mark of its own saying the verse is absent would be naming a reason it cannot stand behind.");
+      let missing = bible_verse_words_none_token();
       return missing;
     }
     let text = property_get(d, "text");
