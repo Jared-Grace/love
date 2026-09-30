@@ -18,7 +18,7 @@ export function app_code_lesson_statement_name_handshakes() {
   ("Three short lines rather than one: let shakes = people * (people - 1) / 2; is past the 30 characters a code line may be. The reminder is Adding 1 up to n, the same shape of formula - multiply by a neighbouring number, then halve. Not picked: counting the handshakes as 1 + 2 + ... + (people - 1), which is right but leans on that lesson's formula instead of a reason the learner can see at a party.");
   ("The name twice says what the product is: each handshake counted once for each of its two people. Not picked: product, which says how it was made and not what it counts.");
   ("Four of five counts each screen; the answers 1, 10, 15, 21 and 45 all differ, so the quiz choices do too. The explanation works 3 people and the example below 4, so neither repeats a question.");
-  ("The writing is a first draft, not yet the human's, 2026-09-30.");
+  ("The first box, the question opening the second, and the naming of people are the human's wording, 2026-09-30; the rest is still a draft. The handshake numbers (1), (2), (3) are code, as every number in this writing is, asked by the human for the egg boxes the same day.");
   let names = ["people"];
   let people = list_first(names);
   let others = "others";
@@ -74,14 +74,22 @@ export function app_code_lesson_statement_name_handshakes() {
     ],
     remember_lines,
     explain: [
-      ["At a party, each person shakes hands once with each other person"],
+      ["Suppose there is a party 🎉"],
+      [
+        "Suppose at the party each person shakes hands once with each other person 🤝",
+      ],
       ["How many handshakes are there with ", "3", " people?"],
-      ["Call the people A, B and C"],
-      ["The handshakes are A with B, A with C, and B with C"],
-      ["That is ", "3", " handshakes"],
+      ["Let's call the people A, B and C"],
+      ["Then (", "1", ") A shakes hands with B"],
+      ["(", "2", ") A also shakes hands with C"],
+      ["And finally (", "3", ") B shakes hands with C"],
+      ["So that is ", "3", " handshakes"],
       app_code_explain_container_next,
       [
-        "Each of the ",
+        "How can we calculate the number of handshakes needed for everyone to shake hands with everyone else?",
+      ],
+      [
+        "At this party, each of the ",
         "3",
         " people shakes hands with the ",
         "2",
@@ -94,7 +102,12 @@ export function app_code_lesson_statement_name_handshakes() {
       ["So we halve it (", "/ 2", "):"],
       ["", halve],
       app_code_explain_container_next,
-      ["Each person shakes hands with everyone except themselves (", less, ")"],
+      ["Suppose the number of people at a party is called ", people],
+      [
+        "Then each person shakes hands with everyone except themselves (",
+        less,
+        ")",
+      ],
       ["Then we halve, because each handshake was counted twice"],
       ["Here is code that finds how many handshakes there are:"],
     ],

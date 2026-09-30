@@ -6,7 +6,7 @@ import { text_split_slash_forward } from "./text_split_slash_forward.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_add } from "./list_add.mjs";
 export async function app_shared_open_entries() {
-  "every open the apps have sent, one entry per device per app per day: its date as 'YYYY-MM-DD', the app, and the device";
+  "every open the apps have sent, one entry per device per app per day: its date as 'YYYY-MM-DD', the app, the device, and the whole name the file is kept under";
   "Read off the address of each empty file, because the address is all the file holds. Listed through the signed-in handle, because nothing under this folder is readable to the public.";
   let bucket = await firebase_bucket();
   let prefix = app_shared_open_prefix();
@@ -23,6 +23,7 @@ export async function app_shared_open_entries() {
       date,
       app,
       user_id,
+      name,
     });
   }
   return entries;
