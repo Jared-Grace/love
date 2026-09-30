@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_handshakes } from "./app_code_lesson_statement_name_handshakes.mjs";
 import { app_code_lesson_statement_name_egg_boxes } from "./app_code_lesson_statement_name_egg_boxes.mjs";
 import { app_code_lesson_statement_name_clock_face } from "./app_code_lesson_statement_name_clock_face.mjs";
 import { app_code_lesson_statement_name_clock_next } from "./app_code_lesson_statement_name_clock_next.mjs";
@@ -413,6 +414,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_clock_face,
     app_code_lesson_statement_name_clock_next,
     app_code_lesson_statement_name_egg_boxes,
+    app_code_lesson_statement_name_handshakes,
   ];
   return fns;
 }

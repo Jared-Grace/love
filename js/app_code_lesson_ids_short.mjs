@@ -254,6 +254,7 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_clock_face: text_frozen("name_clock_12"),
     app_code_lesson_statement_name_clock_next: text_frozen("name_clock_next"),
     app_code_lesson_statement_name_egg_boxes: text_frozen("name_egg_boxes"),
+    app_code_lesson_statement_name_handshakes: text_frozen("name_handshakes"),
     app_code_lesson_statement_name_remainder: text_frozen("name_remainder"),
     app_code_lesson_statement_name_greater: text_frozen("name_greater"),
     app_code_lesson_statement_name_smaller_equal:
