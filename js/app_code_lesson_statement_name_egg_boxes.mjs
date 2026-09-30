@@ -24,18 +24,18 @@ export function app_code_lesson_statement_name_egg_boxes() {
   let exact = "exact";
   let boxes = "boxes";
   let twelve = "12";
-  let ceil = "Math.ceil";
+  let ceil_name = "Math.ceil";
   let slash = js_operator_division_symbol();
   let same = js_operator_triple_equal_symbol();
   let divided = js_code_binary_spaced_nb(eggs, slash, twelve);
   let line_exact = js_code_let_statement(exact, divided);
-  let rounded = js_code_call_args(ceil, [exact]);
+  let rounded = js_code_call_args(ceil_name, [exact]);
   let line_boxes = js_code_let_statement(boxes, rounded);
   let step = {
     middle: [line_exact, line_boxes],
     logged: [boxes],
   };
-  let remember_call = js_code_call_args(ceil, ["3.2"]);
+  let remember_call = js_code_call_args(ceil_name, ["3.2"]);
   let statement = js_code_console_log_statement(remember_call);
   let remember_lines = [statement];
   function values_get() {
@@ -47,9 +47,9 @@ export function app_code_lesson_statement_name_egg_boxes() {
   }
   let full = js_code_binary_result_nb("24", slash, twelve, "2");
   let part = js_code_binary_result_nb("30", slash, twelve, "2.5");
-  let left = js_code_call_args(ceil, ["2.5"]);
+  let left = js_code_call_args(ceil_name, ["2.5"]);
   let up = js_code_binary_spaced_nb(left, same, "3");
-  let left2 = js_code_call_args(ceil, ["2"]);
+  let left2 = js_code_call_args(ceil_name, ["2"]);
   let kept = js_code_binary_spaced_nb(left2, same, "2");
   let lesson = app_code_lesson_statement_formula({
     words: "Boxes for eggs",
@@ -61,7 +61,7 @@ export function app_code_lesson_statement_name_egg_boxes() {
     remember_lesson: app_code_lesson_expression_round_up,
     remember_parts: [
       "we can round a number up to a whole number with ",
-      ceil,
+      ceil_name,
       ":",
     ],
     remember_lines,
