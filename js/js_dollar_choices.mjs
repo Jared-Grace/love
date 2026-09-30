@@ -82,6 +82,10 @@ export function js_dollar_choices() {
       fn: js_dollar_l,
     },
     {
+      name: "lj",
+      fn: js_dollar_lj,
+    },
+    {
       name: "ib",
       fn: js_dollar_ib,
     },

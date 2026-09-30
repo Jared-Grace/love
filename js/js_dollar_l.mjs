@@ -14,10 +14,5 @@ export function js_dollar_l({
   ast,
   afters,
 }) {
-  let result = list_join_comma(remaining);
-  let n = js_keyword_null();
-  let v = js_code_wrap_braces(result);
-  let parsed = js_call_args_from_code(fn_name("log"), [n, v]);
-  js_unparse(node);
-  object_replace(node, parsed);
+  js_dollar_log(remaining, node, fn_name("log"));
 }
