@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_clock_face } from "./app_code_lesson_statement_name_clock_face.mjs";
 import { app_code_lesson_statement_name_clock_next } from "./app_code_lesson_statement_name_clock_next.mjs";
 import { app_code_lesson_statement_name_digit_append } from "./app_code_lesson_statement_name_digit_append.mjs";
 import { app_code_lesson_statement_name_digit_rest } from "./app_code_lesson_statement_name_digit_rest.mjs";
@@ -408,6 +409,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_digit_split,
     app_code_lesson_statement_name_digit_rest,
     app_code_lesson_statement_name_digit_append,
+    app_code_lesson_statement_name_clock_face,
     app_code_lesson_statement_name_clock_next,
   ];
   return fns;
