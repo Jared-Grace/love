@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_build } from "./app_shared_build.mjs";
 import { html_public_latest_from_latest } from "./html_public_latest_from_latest.mjs";
 import { text_split_comma_map_async } from "./text_split_comma_map_async.mjs";
-export async function html_public_unlisted_refresh_multiple(searches_comma) {
+export async function html_public_latest_refresh_multiple(searches_comma) {
   "$plain searches_comma";
   "Builds each app named, from the source as it stands, and puts it at the unlinked address on the live site - the two steps one app already went through by hand, done for a list. Sending is left out, because one sending carries the whole folder, so a list sent once costs one upload rather than one each.";
   "Taking the list rather than finding it is on purpose: which apps are brought up to date is a choice somebody makes, and the apps already standing at that address are only where the choice usually starts.";
