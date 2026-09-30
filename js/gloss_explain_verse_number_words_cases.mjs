@@ -5,6 +5,7 @@ export function gloss_explain_verse_number_words_cases() {
   "The answer is written as one word per verse so a case can be read at a glance: own where the claim is about the word being explained, none where the reading cannot tell and the number is dropped, and otherwise the word the sentence quoted.";
   "★ NONE IS AN ANSWER AND NOT A SILENCE, AND THAT IS THE DISTINCTION THE CASES EXIST TO HOLD. A number answered none is dropped before any verse is asked anything, so nobody is accused over it; a number answered own is checked against the word being explained. Both look like a quiet queue from outside, and a reading that answered none to everything would empty the queue and be called a success. The cases that must come back with a word are therefore as load-bearing as the cases that must come back with none.";
   "Every sentence here is one a writer actually wrote or could write in the store it belongs to, and the Urdu ones are written in the script, because a reading blind to a script passes every English case there is.";
+  "★ FOUR OF THESE ELEVEN CAME BACK RED THE FIRST TIME AND ALL FOUR OF THEM WERE MINE, WHICH IS THE CORPUS DOING ITS WORK IN THE OTHER DIRECTION. Two of the Urdu sentences I invented said of rather than in - and the word for of cancels the verse it stands behind, so the sentence named no verse at all and the reading was right to answer nothing. A third followed from the first. The fourth wrote its English verse as a numeral, and English explanations write their verse numbers out in words; a digit there names nothing, and nothing is the correct answer. Not one of the four was a fault in the reading, and had I pasted back what came out, three real rules would have been recorded as whatever the code happened to do.";
   "$plain explain";
   "$plain verses";
   "$plain about";
@@ -26,7 +27,7 @@ export function gloss_explain_verse_number_words_cases() {
       why: "the other half of that pair: the same sentence with nothing turning it back, and then the quote really is what the claim is about",
     },
     {
-      explain: "اُردُو نے یہاں آیت ۴ کا 'love' لِکھا۔",
+      explain: "اُردُو نے یہاں آیت ۴ میں 'love' لِکھا۔",
       verses: ["1", "2", "3", "4"],
       about: "4:love",
       why: "the word for here standing before the number instead of after it must not cost the claim its quote - the cut falls in front of both and leaves them together",
@@ -38,7 +39,7 @@ export function gloss_explain_verse_number_words_cases() {
       why: "the colon hands over from a claim to the gloss of a claim, and a gloss is exactly where a different word gets quoted",
     },
     {
-      explain: "آیت ۳ کا 'in' اَور 'out' مِل کر بنے ہیں۔",
+      explain: "آیت ۳ میں 'in' اَور 'out' مِل کر آیے ہیں۔",
       verses: ["1", "2", "3"],
       about: "3:none",
       why: "two quoted words in one thought say something about each, and picking the nearer would be right about half the time without ever saying which half",
@@ -56,7 +57,7 @@ export function gloss_explain_verse_number_words_cases() {
       why: "a single quoted letter is a piece of a word too, written without the dash that marks the others",
     },
     {
-      explain: "آیت ۵ کا 'love' ہے۔ آیت ۵ میں آیا۔",
+      explain: "آیت ۵ میں 'love' آیا۔ آیت ۵ میں آیا۔",
       verses: ["4", "5"],
       about: "5:none",
       why: "the same verse named twice by two thoughts that disagree is answered with nothing, rather than with whichever thought came last",
@@ -68,7 +69,7 @@ export function gloss_explain_verse_number_words_cases() {
       why: "the same verse named twice by two thoughts that agree keeps what they agree on",
     },
     {
-      explain: "The same root as the one in verse 8.",
+      explain: "The same root as the one in verse eight.",
       verses: ["7", "8", "9"],
       about: "8:own",
       why: "English prose explaining Hebrew quotes nothing and claims the word it is explaining, which is most of the original-language store",
