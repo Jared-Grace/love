@@ -1,6 +1,4 @@
-import { list_join_newline } from "./list_join_newline.mjs";
-import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_code_explain_program_draw } from "./app_code_explain_program_draw.mjs";
 import { clock_face_live_draw } from "./clock_face_live_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -63,12 +61,7 @@ export function app_code_lesson_statement_name_clock_face() {
     [line_past, line_next],
     [next],
   );
-  function program_draw(box) {
-    "the whole program for an hour of 12 and what it writes out, asked by the human 2026-09-30 to close the explanation, so the 1 that comes out is seen and not only said";
-    let code4 = list_join_newline(program);
-    let output = eval_console_log_lines(code4);
-    app_code_code_lines_writes_out(box, program, output);
-  }
+  let program_draw = app_code_explain_program_draw(program);
   let lesson = app_code_lesson_statement_formula({
     words: "Next hour on a clock",
     title_code: line_next,
