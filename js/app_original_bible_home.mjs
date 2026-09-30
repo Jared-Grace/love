@@ -14,7 +14,7 @@ export async function app_original_bible_home(context) {
   ("★ A WORD THAT WAS NEVER RECORDED MAKES A GOOD-LOOKING ADDRESS AND FETCHES NOTHING, and the playing swallows that silently, so a tap on it does nothing at all and the reader is told nothing. ",
     fn_name("bible_word_voice_chapter_missing"),
     " is what says, before a reader finds out, which words of a chapter would be silent.");
-  ("The turtle beside each word says it again at half speed, made from the same recording, so it is the voice the reader just heard, stretched.");
+  ("The turtle beside each word says it again at half speed, stretched from the next voice's own recording, so the men and women keep alternating whichever speed is pressed.");
   ("★ EACH TAP GOES ROUND THE WORD'S CAST OF VOICES, as the English words' taps do and for the same reason; Hebrew has four people and Greek one, and the cast is asked of the word because one screen can hold both.");
   ("The first tap's place is drawn from twelve, because twelve divides evenly by every cast size up to four, so whichever language a reader starts in every person of its cast is as likely to be heard first.");
   arguments_assert(arguments, 1);
