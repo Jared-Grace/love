@@ -29,14 +29,14 @@ export function app_code_lesson_statement_name_grid_steps() {
   let rows = "rows";
   let cols = "cols";
   let steps = "steps";
-  let abs = "Math.abs";
+  let math_abs = "Math.abs";
   let minus = js_operator_minus_symbol();
   let plus = js_operator_plus_symbol();
   let same = js_operator_triple_equal_symbol();
   function apart_line(name, a, b) {
     "let name = Math.abs(b - a);";
     let less = js_code_binary_spaced_nb(b, minus, a);
-    let apart = js_code_call_args(abs, [less]);
+    let apart = js_code_call_args(math_abs, [less]);
     let line = js_code_let_statement(name, apart);
     return line;
   }
@@ -71,7 +71,7 @@ export function app_code_lesson_statement_name_grid_steps() {
   function apart_worked(b, a, answer) {
     "Math.abs(b - a) === answer, with numbers";
     let less = js_code_binary_spaced_nb(b, minus, a);
-    let call = js_code_call_args(abs, [less]);
+    let call = js_code_call_args(math_abs, [less]);
     let line = js_code_binary_spaced_nb(call, same, answer);
     return line;
   }
