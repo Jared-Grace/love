@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_row_inside } from "./app_code_lesson_statement_name_row_inside.mjs";
 import { app_code_lesson_statement_name_pages_read } from "./app_code_lesson_statement_name_pages_read.mjs";
 import { app_code_lesson_statement_name_last_seat } from "./app_code_lesson_statement_name_last_seat.mjs";
 import { app_code_lesson_statement_name_rows_down } from "./app_code_lesson_statement_name_rows_down.mjs";

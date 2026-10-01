@@ -211,6 +211,7 @@
   "name_rows_apart",
   "name_grid_steps",
   "name_pages_read",
-  "name_last_seat"
+  "name_last_seat",
+  "name_row_inside"
  ]
 }
