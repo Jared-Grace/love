@@ -1,4 +1,5 @@
-import { app_code_lesson_statement_name_row_inside } from "./app_code_lesson_statement_name_row_inside.mjs";
+import { app_code_lesson_statement_name_seat_one } from "./app_code_lesson_statement_name_seat_one.mjs";
+import { app_code_lesson_statement_name_seat_zero } from "./app_code_lesson_statement_name_seat_zero.mjs";
 import { app_code_lesson_statement_name_pages_read } from "./app_code_lesson_statement_name_pages_read.mjs";
 import { app_code_lesson_statement_name_last_seat } from "./app_code_lesson_statement_name_last_seat.mjs";
 import { app_code_lesson_statement_name_rows_down } from "./app_code_lesson_statement_name_rows_down.mjs";
@@ -426,7 +427,8 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_grid_steps,
     app_code_lesson_statement_name_pages_read,
     app_code_lesson_statement_name_last_seat,
-    app_code_lesson_statement_name_row_inside,
+    app_code_lesson_statement_name_seat_one,
+    app_code_lesson_statement_name_seat_zero,
   ];
   return fns;
 }

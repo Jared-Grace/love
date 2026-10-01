@@ -260,7 +260,8 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_grid_steps: text_frozen("name_grid_steps"),
     app_code_lesson_statement_name_pages_read: text_frozen("name_pages_read"),
     app_code_lesson_statement_name_last_seat: text_frozen("name_last_seat"),
-    app_code_lesson_statement_name_row_inside: text_frozen("name_row_inside"),
+    app_code_lesson_statement_name_seat_one: text_frozen("name_seat_one"),
+    app_code_lesson_statement_name_seat_zero: text_frozen("name_seat_zero"),
     app_code_lesson_statement_name_remainder: text_frozen("name_remainder"),
     app_code_lesson_statement_name_greater: text_frozen("name_greater"),
     app_code_lesson_statement_name_smaller_equal:

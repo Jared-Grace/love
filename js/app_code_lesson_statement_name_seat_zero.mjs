@@ -73,6 +73,8 @@ export function app_code_lesson_statement_name_seat_zero() {
     return taken;
   }
   let five_less = js_code_binary_spaced_nb("5", minus, "1");
+  let v = between("0", "4", "4");
+  let v2 = between("0", "5", "4");
   let lesson = app_code_lesson_statement_formula_answer_count({
     words: "Seat in the row from 0",
     title_code: line_ok,
@@ -108,9 +110,9 @@ export function app_code_lesson_statement_name_seat_zero() {
         "4",
         ":",
       ],
-      ["", between("0", "4", "4"), " is ", "true"],
+      ["", v, " is ", "true"],
       ["But seat ", "5", " is not in the row:"],
-      ["", between("0", "5", "4"), " is ", "false"],
+      ["", v2, " is ", "false"],
       app_code_explain_container_next,
       [
         "Suppose the seat is called ",
