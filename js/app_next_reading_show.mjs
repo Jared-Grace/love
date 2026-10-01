@@ -1,13 +1,17 @@
-import { app_next_count_choose } from "./app_next_count_choose.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_spaced_small } from "./app_shared_spaced_small.mjs";
+import { list_size } from "./list_size.mjs";
+import { word_count_pluralize } from "./word_count_pluralize.mjs";
+import { app_shared_text_body } from "./app_shared_text_body.mjs";
+import { html_centered } from "./html_centered.mjs";
+import { app_next_copy_button } from "./app_next_copy_button.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_bible_verse_block } from "./app_shared_bible_verse_block.mjs";
 import { each } from "./each.mjs";
-import { app_next_copy_button } from "./app_next_copy_button.mjs";
 import { app_next_url_onward_link } from "./app_next_url_onward_link.mjs";
 import { app_next_ways_onward } from "./app_next_ways_onward.mjs";
+import { app_next_count_choose } from "./app_next_count_choose.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 export function app_next_reading_show({
   context,
@@ -28,6 +32,11 @@ export function app_next_reading_show({
   arguments_assert(arguments, 1);
   let card = app_shared_container_blue(content);
   app_shared_spaced_small(card);
+  ("How many verses are here is said at the top, because the number a reader chose is the most a message holds rather than the exact amount - a passage stops where a sentence ends - so what they are about to copy is worth saying before they copy it. It stands above the copy button, outside what the copying takes, because it is about the message rather than part of it.");
+  let size = list_size(run);
+  let said = word_count_pluralize(size, "verse");
+  let label = app_shared_text_body(card, said);
+  html_centered(label);
   ("The same copying stands first inside the card as well, so somebody who opens the page reaches it without scrolling past a long passage to find it. The two buttons bracket the card: what either one copies is everything between them.");
   app_next_copy_button(card, reading_text);
   function block_show(block) {

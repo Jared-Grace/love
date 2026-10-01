@@ -1,15 +1,5 @@
 {
  "known": [
-  "backups/data.2025-09-28T17-50-05-876.json",
-  "data/aliases.2025-09-28T18-07-14-327.json",
-  "data/qa_gate_names.json",
-  "js/kjv.mjs",
-  "web/public/latest/36745.emoji_bible.js",
-  "web/public/latest/bible.js",
-  "web/public/latest/ceb_bible.js",
-  "web/public/latest/emoji_bible.js",
-  "web/public/latest/en_learn_bible.js",
-  "web/public/latest/g_bless.js",
-  "web/public/latest/original_bible.js"
+  "data/aliases.2025-09-28T18-07-14-327.json"
  ]
 }

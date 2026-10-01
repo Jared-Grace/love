@@ -1,35 +1,37 @@
-import { app_shared_bible_hash_to_verses_shown } from "./app_shared_bible_hash_to_verses_shown.mjs";
-import { null_is } from "./null_is.mjs";
-import { app_shared_bible_passage_kept_set } from "./app_shared_bible_passage_kept_set.mjs";
-import { app_shared_hash_fields_unknown_shown_is } from "./app_shared_hash_fields_unknown_shown_is.mjs";
-import { ebible_index_flat_chapter_verse_numbers } from "./ebible_index_flat_chapter_verse_numbers.mjs";
-import { app_shared_bible_hash_field_verse } from "./app_shared_bible_hash_field_verse.mjs";
-import { list_add } from "./list_add.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
-import { app_next_reading_show } from "./app_next_reading_show.mjs";
-import { app_next_verse_block } from "./app_next_verse_block.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { app_shared_reading_column } from "./app_shared_reading_column.mjs";
-import { app_next_url_onward } from "./app_next_url_onward.mjs";
-import { ebible_index_flat_chosen } from "./ebible_index_flat_chosen.mjs";
-import { ebible_languages_to_bible_folders } from "./ebible_languages_to_bible_folders.mjs";
-import { app_shared_bible_passage_reach_maximum } from "./app_shared_bible_passage_reach_maximum.mjs";
-import { ebible_index_flat_passage_run } from "./ebible_index_flat_passage_run.mjs";
-import { app_shared_bible_hash_to_verses_count } from "./app_shared_bible_hash_to_verses_count.mjs";
-import { ebible_index_flat_verses_run } from "./ebible_index_flat_verses_run.mjs";
-import { lists_combine } from "./lists_combine.mjs";
-import { list_join_newline_2 } from "./list_join_newline_2.mjs";
-import { clipboard_copy_try } from "./clipboard_copy_try.mjs";
 import { app_shared_bible_chapter_hash_get_or_default } from "./app_shared_bible_chapter_hash_get_or_default.mjs";
+import { app_shared_bible_verse_hash_key } from "./app_shared_bible_verse_hash_key.mjs";
 import { app_shared_bible_verse_number_default } from "./app_shared_bible_verse_number_default.mjs";
 import { property_get_or } from "./property_get_or.mjs";
-import { verse_number_key } from "./verse_number_key.mjs";
-import { app_shared_bible_verse_hash_key } from "./app_shared_bible_verse_hash_key.mjs";
+import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
+import { app_shared_bible_hash_to_verses_count } from "./app_shared_bible_hash_to_verses_count.mjs";
+import { app_shared_bible_hash_to_verses_shown } from "./app_shared_bible_hash_to_verses_shown.mjs";
+import { null_is } from "./null_is.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
-import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
-import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
+import { ebible_languages_to_bible_folders } from "./ebible_languages_to_bible_folders.mjs";
+import { ebible_index_flat_chosen } from "./ebible_index_flat_chosen.mjs";
+import { ebible_index_flat_chapter_verse_numbers } from "./ebible_index_flat_chapter_verse_numbers.mjs";
+import { app_shared_bible_hash_field_verse } from "./app_shared_bible_hash_field_verse.mjs";
+import { app_shared_hash_fields_unknown_shown_is } from "./app_shared_hash_fields_unknown_shown_is.mjs";
+import { app_shared_bible_passage_kept_set } from "./app_shared_bible_passage_kept_set.mjs";
+import { ebible_index_flat_verses_run } from "./ebible_index_flat_verses_run.mjs";
+import { app_shared_bible_passage_reach_maximum } from "./app_shared_bible_passage_reach_maximum.mjs";
+import { list_first } from "./list_first.mjs";
+import { ebible_index_flat_passage_run_most } from "./ebible_index_flat_passage_run_most.mjs";
+import { ebible_index_flat_passage_run } from "./ebible_index_flat_passage_run.mjs";
 import { property_get } from "./property_get.mjs";
+import { verse_number_key } from "./verse_number_key.mjs";
+import { app_next_verse_block } from "./app_next_verse_block.mjs";
+import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { lists_combine } from "./lists_combine.mjs";
+import { app_next_url_onward } from "./app_next_url_onward.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_join_newline_2 } from "./list_join_newline_2.mjs";
+import { app_next_reading_show } from "./app_next_reading_show.mjs";
+import { clipboard_copy_try } from "./clipboard_copy_try.mjs";
 export async function app_next_home(context) {
   "The passage this page was opened for: fetched, drawn, and put on the clipboard ready to be sent.";
   "It is the screen this page comes back to. Everything else here - the book list, the chapters, the verses - is the reader's own picker borrowed whole, and each of those ends by writing a verse into the link and asking to come home, which is this.";
@@ -73,15 +75,20 @@ export async function app_next_home(context) {
     verse_number,
     verses_wanted,
   );
-  ("A count of verses is a count of the places a bible was divided, and a bible was not divided where its sentences end - so a run cut to a length lands mid-thought about half the time, and somebody copying it out gets half a sentence with nothing saying the rest exists. So what was asked for is carried on to the end of the sentence it stops in, and the number in the link is a floor rather than an exact amount.");
-  ("Every language the link asked for has to have finished, not only the first, because a reader who chose three is reading three.");
+  ("A count of verses is a count of the places a bible was divided, and a bible was not divided where its sentences end - so a run cut to a length lands mid-thought about half the time, and somebody copying it out gets half a sentence with nothing saying the rest exists. So the reader's number is the most a message holds: the run is cut back to the last sentence that ends inside it, and carried past the number only when one sentence is longer than the whole count.");
+  ("Pressing for more is different - it asks for one verse past what is on the screen, so that run is carried on to the end of the sentence that verse starts rather than cut back to where it already stood.");
+  ("Only the first language's sentences are asked. Waiting on every language a reader chose carried a passage far past the number they pressed, because the languages disagree about where a sentence ends a third of the time; the first one is the one they read first.");
   let reach = app_shared_bible_passage_reach_maximum();
-  let run = await ebible_index_flat_passage_run(
-    list,
-    asked,
-    bible_folders,
-    reach,
-  );
+  let first = list_first(bible_folders);
+  let folders_first = [first];
+  let run = extended_none
+    ? await ebible_index_flat_passage_run_most(
+        list,
+        asked,
+        folders_first,
+        reach,
+      )
+    : await ebible_index_flat_passage_run(list, asked, folders_first, reach);
   async function lambda(verse) {
     let chapter_code3 = property_get(verse, "chapter_code");
     let property_name5 = verse_number_key();
