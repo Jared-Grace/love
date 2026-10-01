@@ -1,9 +1,9 @@
+import { js_code_between_symbols } from "./js_code_between_symbols.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_operator_less_than_equal_symbol } from "./js_operator_less_than_equal_symbol.mjs";
-import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
@@ -28,12 +28,9 @@ export function app_code_lesson_statement_name_seat_zero() {
   let ok = "ok";
   let minus = js_operator_minus_symbol();
   let at_most = js_operator_less_than_equal_symbol();
-  let and_symbol = js_operator_and_symbol();
   function between(low, middle, high) {
     "low <= middle && middle <= high, as the previous lesson checks it";
-    let left = js_code_binary_spaced_nb(low, at_most, middle);
-    let right = js_code_binary_spaced_nb(middle, at_most, high);
-    let both = js_code_binary_spaced_nb(left, and_symbol, right);
+    let both = js_code_between_symbols(low, at_most, middle, at_most, high);
     return both;
   }
   let max_less = js_code_binary_spaced_nb(max, minus, "1");

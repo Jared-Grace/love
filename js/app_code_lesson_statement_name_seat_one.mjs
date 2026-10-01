@@ -1,3 +1,4 @@
+import { js_code_between_symbols } from "./js_code_between_symbols.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
@@ -30,9 +31,7 @@ export function app_code_lesson_statement_name_seat_one() {
   let and_symbol = js_operator_and_symbol();
   function between(low, middle, high) {
     "low <= middle && middle <= high, the check this lesson is about";
-    let left = js_code_binary_spaced_nb(low, at_most, middle);
-    let right = js_code_binary_spaced_nb(middle, at_most, high);
-    let both = js_code_binary_spaced_nb(left, and_symbol, right);
+    let both = js_code_between_symbols(low, at_most, middle, at_most, high);
     return both;
   }
   let check = between("1", n, max);
