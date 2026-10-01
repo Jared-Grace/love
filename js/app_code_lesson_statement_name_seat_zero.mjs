@@ -87,23 +87,8 @@ export function app_code_lesson_statement_name_seat_zero() {
     remember_lines,
     explain: [
       ["Now suppose the seats are numbered starting with ", "0"],
-      [
-        "With ",
-        "5",
-        " seats, the seats are:",
-      ],
-      [
-        "",
-        "0",
-        " ",
-        "1",
-        " ",
-        "2",
-        " ",
-        "3",
-        " ",
-        "4",
-      ],
+      ["With ", "5", " seats, the seats are:"],
+      ["", "0", " ", "1", " ", "2", " ", "3", " ", "4"],
       ["The last seat is ", "4", ", which is ", five_less],
       app_code_explain_container_next,
       [
