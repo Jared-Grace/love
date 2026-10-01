@@ -1,3 +1,6 @@
+import { html_cycle_code } from "./html_cycle_code.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_arrow_inline } from "./app_code_arrow_inline.mjs";
@@ -113,6 +116,15 @@ export function app_code_lesson_statement_name_grid_steps() {
     html_span_text(line, " or right ");
     app_code_arrow_inline(line, 0);
   }
+  function travel_said(box) {
+    "the count of the filled squares, with the words blue squares coloured as the squares are filled, asked by the human 2026-10-01, so the sentence points at the picture above it; bold, because coloured thin letters read faintly";
+    let line = html_div(box);
+    html_cycle_code(line, ["And we travel ", "5", " "]);
+    let blue = html_span_text(line, "blue squares");
+    html_font_color_set(blue, end_color);
+    html_style_set(blue, "font-weight", "bold");
+    html_span_text(line, " total");
+  }
   function squares_draw(box) {
     "the two squares of the question, row 1 column 1 and row 4 column 3, with the rows and columns numbered, and a path between them filled in: down the rows first, then right along the columns, asked by the human 2026-10-01";
     app_code_square_grid(box, 5, 4, true, [
@@ -161,7 +173,7 @@ export function app_code_lesson_statement_name_grid_steps() {
         "2",
         " squares to the right, then we will travel to the second position",
       ],
-      ["And we travel ", "5", " blue squares total"],
+      travel_said,
       app_code_explain_container_next,
       [
         "But how can we calculate the ",
