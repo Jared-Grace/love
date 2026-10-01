@@ -213,6 +213,7 @@
   "name_pages_read",
   "name_last_seat",
   "name_seat_one",
-  "name_seat_zero"
+  "name_seat_zero",
+  "name_seat_less"
  ]
 }
