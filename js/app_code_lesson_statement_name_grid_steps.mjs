@@ -1,6 +1,5 @@
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
-import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
 import { html_span_code_dark_colored } from "./html_span_code_dark_colored.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { function_is } from "./function_is.mjs";
@@ -91,9 +90,11 @@ export function app_code_lesson_statement_name_grid_steps() {
   let row_color = app_code_highlight_color_third();
   let column_color = app_code_highlight_color_fourth();
   function word(text, color) {
-    "a word of the writing in a colour of the grid's headings, as a tile in the reading font, because it is English and not code";
+    "a word of the writing in a colour of the picture: the letters coloured and bold, with no background, asked by the human 2026-10-01 - a background is kept for code, such as the row and column numbers, so a filled tile always means code and coloured letters mean English. Bold, because thin coloured letters read faintly. Not picked: a filled tile in the reading font, which looked like code";
     function draw(line) {
-      app_code_span_text_highlight_color(line, text, color);
+      let span = html_span_text(line, text);
+      html_font_color_set(span, color);
+      html_style_set(span, "font-weight", "bold");
     }
     return draw;
   }
@@ -214,9 +215,8 @@ export function app_code_lesson_statement_name_grid_steps() {
     "the count of the filled squares, with the words blue squares coloured as the squares are filled, asked by the human 2026-10-01, so the sentence points at the picture above it; bold, because coloured thin letters read faintly";
     let line = html_div(box);
     html_cycle_code(line, ["And we travel ", "5", " "]);
-    let blue = html_span_text(line, "blue squares");
-    html_font_color_set(blue, end_color);
-    html_style_set(blue, "font-weight", "bold");
+    let blue = word("blue squares", end_color);
+    blue(line);
     html_span_text(line, " total");
   }
   function squares_draw(box) {
