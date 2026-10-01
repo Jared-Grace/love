@@ -72,7 +72,6 @@ export function app_code_lesson_statement_name_seat_zero() {
     list_shuffle(taken);
     return taken;
   }
-  let five_less = js_code_binary_spaced_nb("5", minus, "1");
   let v = between("0", "4", "4");
   let v2 = between("0", "5", "4");
   let lesson = app_code_lesson_statement_formula_answer_count({
@@ -89,7 +88,21 @@ export function app_code_lesson_statement_name_seat_zero() {
       ["Now suppose the seats are numbered starting with ", "0"],
       ["With ", "5", " seats, the seats are:"],
       ["", "0", " ", "1", " ", "2", " ", "3", " ", "4"],
-      ["The last seat is ", "4", ", which is ", five_less],
+      [
+        "So if a row has ",
+        max,
+        " seats, when it's numbered starting at ",
+        "0",
+        ", then the last seat will have the number ",
+        max_less,
+      ],
+      [
+        "(If the seats had been numbered starting at ",
+        "1",
+        ", then the last seat would have the number ",
+        max,
+        ")",
+      ],
       app_code_explain_container_next,
       [
         "So a seat is in the row when it is between ",
