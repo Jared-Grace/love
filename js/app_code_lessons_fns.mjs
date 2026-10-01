@@ -429,6 +429,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_last_seat,
     app_code_lesson_statement_name_seat_one,
     app_code_lesson_statement_name_seat_zero,
+    app_code_lesson_statement_name_seat_less,
   ];
   return fns;
 }
