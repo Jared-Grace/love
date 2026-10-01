@@ -17,7 +17,7 @@ export function app_code_lesson_statement_name_rows_down() {
   ("how many rows down from one row to a later one: let rows = r2 - r1; - the first of three lessons toward the steps between two squares of a grid, then Math.abs for either direction, then rows and columns added. The split was chosen by the human 2026-10-01, so each lesson asks one new thing. Not picked: a lesson for rows and another for columns, which would teach the same line twice under other names.");
   ("The names r1 and r2 rather than row1 and row2 because the lesson after this one wraps the same subtraction in Math.abs, and Math.abs(row2 - row1) is past the 30 characters a code line may be. Every question has r2 past r1, so the answer is never negative - the negative is the next lesson's question.");
   ("The rows of chairs are the ones the row-and-column lessons met, numbered from 0. The answers 4, 5, 1, 7 and 3 all differ, and the example below is rows 2 and 5, which the writing works, so no question repeats it.");
-  ("The writing is a first draft, not yet the human's, 2026-10-01.");
+  ("The writing is a first draft with the human's edits, 2026-10-01: an earlier row and a later row, counting starting from row 2, and the subtraction said to be for rows 2 and 5.");
   let names = ["r1", "r2"];
   let r = list_first(names);
   let r2 = list_second(names);
@@ -70,10 +70,17 @@ export function app_code_lesson_statement_name_rows_down() {
     explain: [
       [combined],
       ["The rows are numbered starting with ", "0"],
-      ["You sit in row ", "2", " and your friend sits in row ", "5"],
+      [
+        "You sit in an earlier row ",
+        "2",
+        " and your friend sits in a later row ",
+        "5",
+      ],
       ["How many rows down from you is your friend?"],
       [
-        "Row ",
+        "Starting from row ",
+        "2",
+        ", row ",
         "3",
         " is ",
         "1",
@@ -87,13 +94,21 @@ export function app_code_lesson_statement_name_rows_down() {
         "3",
         " rows down",
       ],
-      ["We can find the ", "3", " by subtracting:"],
+      [
+        "For rows ",
+        "2",
+        " and ",
+        "5",
+        ", we can find the ",
+        "3",
+        " by subtracting:",
+      ],
       ["", worked],
       app_code_explain_container_next,
       [
-        "Suppose your row is called ",
+        "Suppose your earlier row is called ",
         r,
-        " and your friend's row is called ",
+        " and your friend's later row is called ",
         r2,
       ],
       ["Then ", less, " is how many rows down from you your friend is"],
