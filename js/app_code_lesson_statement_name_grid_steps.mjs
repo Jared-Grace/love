@@ -158,6 +158,7 @@ export function app_code_lesson_statement_name_grid_steps() {
         "2",
         " squares to the right, then we will travel to the second position",
       ],
+      ["And we travel ", "5", " blue squares total"],
       app_code_explain_container_next,
       [
         "But how can we calculate the ",
