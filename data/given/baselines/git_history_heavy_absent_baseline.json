@@ -1,5 +1,6 @@
 {
  "known": [
-  "data/aliases.2025-09-28T18-07-14-327.json"
+  "data/aliases.2025-09-28T18-07-14-327.json",
+  "web/public/latest/replace.js"
  ]
 }
