@@ -22,17 +22,17 @@ export function app_code_lesson_statement_name_rows_apart() {
   let r = list_first(names);
   let r2 = list_second(names);
   let rows = "rows";
-  let abs = "Math.abs";
+  let math_abs = "Math.abs";
   let minus = js_operator_minus_symbol();
   let same = js_operator_triple_equal_symbol();
   let less = js_code_binary_spaced_nb(r2, minus, r);
-  let apart = js_code_call_args(abs, [less]);
+  let apart = js_code_call_args(math_abs, [less]);
   let line_rows = js_code_let_statement(rows, apart);
   let step = {
     middle: [line_rows],
     logged: [rows],
   };
-  let remember_call = js_code_call_args(abs, ["-4"]);
+  let remember_call = js_code_call_args(math_abs, ["-4"]);
   let statement = js_code_console_log_statement(remember_call);
   let remember_lines = [statement];
   function values_get() {
@@ -48,9 +48,9 @@ export function app_code_lesson_statement_name_rows_apart() {
     return taken;
   }
   let backwards = js_code_binary_result_nb("2", minus, "5", "-3");
-  let left = js_code_call_args(abs, ["-3"]);
+  let left = js_code_call_args(math_abs, ["-3"]);
   let removed = js_code_binary_spaced_nb(left, same, "3");
-  let left2 = js_code_call_args(abs, ["3"]);
+  let left2 = js_code_call_args(math_abs, ["3"]);
   let kept = js_code_binary_spaced_nb(left2, same, "3");
   let lesson = app_code_lesson_statement_formula({
     words: "Rows apart",
@@ -60,7 +60,7 @@ export function app_code_lesson_statement_name_rows_apart() {
     example_values: [5, 2],
     step,
     remember_lesson: app_code_lesson_expression_absolute_value,
-    remember_parts: ["", abs, " gives how far a number is from zero:"],
+    remember_parts: ["", math_abs, " gives how far a number is from zero:"],
     remember_lines,
     explain: [
       [
@@ -77,9 +77,9 @@ export function app_code_lesson_statement_name_rows_apart() {
       ["We just want the number without the minus sign"],
       ["We just want the number of rows: ", "3"],
       app_code_explain_container_next,
-      ["", abs, " removes the minus sign:"],
+      ["", math_abs, " removes the minus sign:"],
       ["", removed],
-      ["And ", abs, " leaves a number without a minus sign the same:"],
+      ["And ", math_abs, " leaves a number without a minus sign the same:"],
       ["", kept],
       ["So ", apart, " is how many rows apart, whichever row is earlier"],
       ["Here is code that finds how many rows apart:"],
