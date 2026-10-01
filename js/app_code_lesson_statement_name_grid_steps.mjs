@@ -143,7 +143,7 @@ export function app_code_lesson_statement_name_grid_steps() {
         "0",
       ],
       [
-        "How many steps from row ",
+        "How many steps are there from row ",
         "1",
         ", column ",
         "1",

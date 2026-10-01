@@ -1,10 +1,10 @@
+import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
-import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
@@ -35,9 +35,15 @@ export function app_code_lesson_statement_name_egg_boxes() {
     middle: [line_exact, line_boxes],
     logged: [boxes],
   };
+  ("The reminder keeps the call out of console.log: let whole = Math.ceil(3.2); then console.log(whole);. The rounding lesson tested Math.ceil on its own and never inside console.log, and a learner was puzzled by the same nesting with Math.abs, reported by the human 2026-10-01. Not picked: the call inside console.log, which is two calls nested where the lesson taught one.");
+  let whole = "whole";
   let remember_call = js_code_call_args(ceil_name, ["3.2"]);
-  let statement = js_code_console_log_statement(remember_call);
-  let remember_lines = [statement];
+  let remember_line = js_code_let_statement(whole, remember_call);
+  let remember_lines = app_code_lesson_statement_name_swap_program(
+    [],
+    [remember_line],
+    [whole],
+  );
   function values_get() {
     "24 every time, and three of four counts that leave a box part full, in a fresh order each screen";
     let ordinary = list_shuffle_take([[30], [40], [50], [70]], 3);

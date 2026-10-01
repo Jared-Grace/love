@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
@@ -6,7 +7,6 @@ import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symb
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
@@ -32,9 +32,15 @@ export function app_code_lesson_statement_name_rows_apart() {
     middle: [line_rows],
     logged: [rows],
   };
+  ("The reminder keeps the call out of console.log: let distance = Math.abs(-4); then console.log(distance);. Lesson 102 tested Math.abs on its own and never inside console.log, and a learner was puzzled by console.log(Math.abs(-4)), reported by the human 2026-10-01. Not picked: the call inside console.log, which is two calls nested where the lesson taught one.");
+  let distance = "distance";
   let remember_call = js_code_call_args(math_abs, ["-4"]);
-  let statement = js_code_console_log_statement(remember_call);
-  let remember_lines = [statement];
+  let remember_line = js_code_let_statement(distance, remember_call);
+  let remember_lines = app_code_lesson_statement_name_swap_program(
+    [],
+    [remember_line],
+    [distance],
+  );
   function values_get() {
     "four of the five pairs, in a fresh order each screen; two go down and three go up, so every screen has both";
     let candidates = [
