@@ -22,7 +22,10 @@ export async function app_shared_open_app_dates_delete(app, dates) {
       continue;
     }
     let name = property_get(entry, "name");
-    await bucket.file(name).delete();
+    async function remove() {
+      await bucket.file(name).delete();
+    }
+    await retry_standard(remove);
     removed = removed + 1;
   }
   let r = {
