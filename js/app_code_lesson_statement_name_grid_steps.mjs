@@ -1,3 +1,6 @@
+import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
+import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
+import { app_code_square_grid } from "./app_code_square_grid.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -71,6 +74,25 @@ export function app_code_lesson_statement_name_grid_steps() {
   let rows_worked = apart_worked("4", "1", "3");
   let cols_worked = apart_worked("3", "1", "2");
   let total = js_code_binary_result_nb("3", plus, "2", "5");
+  let start_color = app_code_highlight_color_second();
+  let end_color = app_code_highlight_color();
+  function moves_draw(box) {
+    "you in the middle square, an arrow in each square one step away, asked by the human 2026-10-01";
+    app_code_square_grid(box, 3, 3, false, [
+      [1, 1, "🙂", start_color],
+      [0, 1, "↑", null],
+      [2, 1, "↓", null],
+      [1, 0, "←", null],
+      [1, 2, "→", null],
+    ]);
+  }
+  function squares_draw(box) {
+    "the two squares of the question, row 1 column 1 and row 4 column 3, with the rows and columns numbered, asked by the human 2026-10-01";
+    app_code_square_grid(box, 5, 4, true, [
+      [1, 1, "🙂", start_color],
+      [4, 3, "🏁", end_color],
+    ]);
+  }
   let lesson = app_code_lesson_statement_formula({
     words: "Steps on a grid",
     title_code: line_steps,
@@ -85,6 +107,7 @@ export function app_code_lesson_statement_name_grid_steps() {
       ["Suppose there is a grid of squares"],
       ["Its rows and its columns are both numbered starting with ", "0"],
       ["You can move one square at a time: up, down, left or right"],
+      moves_draw,
       [
         "How many steps from row ",
         "1",
@@ -96,6 +119,7 @@ export function app_code_lesson_statement_name_grid_steps() {
         "3",
         "?",
       ],
+      squares_draw,
       app_code_explain_container_next,
       ["First the rows: from row ", "1", " to row ", "4", " is"],
       ["", rows_worked],
