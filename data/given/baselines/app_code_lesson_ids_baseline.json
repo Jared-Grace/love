@@ -212,6 +212,7 @@
   "name_grid_steps",
   "name_pages_read",
   "name_last_seat",
-  "name_row_inside"
+  "name_seat_one",
+  "name_seat_zero"
  ]
 }

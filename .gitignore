@@ -122,10 +122,26 @@ Thumbs.db
 # kept as written because that is where the files used to be, and a rule naming a
 # folder that no longer exists costs nothing while it stops an old checkout of
 # this file from recording them again.
+#
+# THAT LAST SENTENCE WAS WRONG, AND IT COST EIGHT BLOBS. A retired rule does not
+# cost nothing: it costs whatever a later reader believes it covers. The DAY AFTER
+# these four lines were written, folder_public_unlisted was added - a third stage,
+# this one INSIDE the served folder, reusing the frozen word "latest" on purpose
+# because an address had already been handed out under it. Its real path is
+# folder_public() joined to that word, so web/public/latest/ - and anybody
+# checking this file saw /public/latest/ and read it as cover. It is not: a path
+# rule is matched literally, /public/latest/ names a folder that no longer exists,
+# and web/public/latest/ was tracked from that day on. Every rebuild left another
+# abandoned chunk behind, which is why web/public/latest/replace.js arrived one day
+# after a rewrite had just taken seven of its siblings out - the same "this had to
+# be done twice" written twenty lines above, happening a third time for a reason
+# the file itself had set up. A dead rule that still reads as live is a decoy, so
+# the live one is written out in full below it rather than left to be inferred.
 /public/dev/
 /public/latest/
 /web/dev/
 /web/latest/
+/web/public/latest/
 
 # Python's compiled bytecode for the bash guard. It is generated from the .py
 # files beside it and rewritten whenever python decides the cache is stale, so
