@@ -35,8 +35,8 @@ export function app_code_lesson_statement_name_rows_apart() {
   ("The reminder quotes lesson 102 in its own shape, each expression beside what it is: Math.abs(-4) is 4, and Math.abs(4) is 4 - the negative made positive, then the positive kept, as that lesson's examples go. A learner was puzzled by console.log(Math.abs(-4)), because lesson 102 never put Math.abs inside console.log; the human's rule, 2026-10-01, is that a reminder quotes only the exact code the lesson taught. Not picked: console.log(Math.abs(-4)), two calls nested where the lesson taught one; nor let distance = Math.abs(-4); then console.log(distance);, which drops the nesting but is still not the lesson's code.");
   function remember_lines(box) {
     "lesson 102 in its own shape, each expression beside what it is";
-    let negative = js_code_call_args(math_abs, ["-4"]);
-    html_div_cycle_code(box, ["", negative, " is ", "4"]);
+    let below = js_code_call_args(math_abs, ["-4"]);
+    html_div_cycle_code(box, ["", below, " is ", "4"]);
     let positive = js_code_call_args(math_abs, ["4"]);
     html_div_cycle_code(box, ["", positive, " is ", "4"]);
   }
