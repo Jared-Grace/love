@@ -1,3 +1,4 @@
+import { lyric_video_subtitles_card_event } from "./lyric_video_subtitles_card_event.mjs";
 import { lyric_video_screen_room } from "./lyric_video_screen_room.mjs";
 import { lyric_video_subtitles_styles } from "./lyric_video_subtitles_styles.mjs";
 import { lyric_video_screen_characters_max } from "./lyric_video_screen_characters_max.mjs";
@@ -98,7 +99,13 @@ export function lyric_video_subtitles_text(document) {
     return event;
   }
   let lines_heard = document.lines.filter(line_timed_is);
-  let events = lines_heard.map(line_event);
+  let cards = document.cards || [];
+  function lambda(card) {
+    let event2 = lyric_video_subtitles_card_event(card, middle_x);
+    return event2;
+  }
+  let v = cards.map(lambda);
+  let events = lines_heard.map(line_event).concat(v);
   let written = head.concat(events).join("\n") + "\n";
   return written;
 }
