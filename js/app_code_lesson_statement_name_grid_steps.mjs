@@ -1,3 +1,9 @@
+import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
+import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
+import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
+import { html_span_code_dark_colored } from "./html_span_code_dark_colored.mjs";
+import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
+import { function_is } from "./function_is.mjs";
 import { html_cycle_code } from "./html_cycle_code.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -82,6 +88,94 @@ export function app_code_lesson_statement_name_grid_steps() {
   let cols_worked = apart_worked("3", "1", "2");
   let total = js_code_binary_result_nb("3", plus, "2", "5");
   let start_color = app_code_highlight_color_second();
+  let row_color = app_code_highlight_color_third();
+  let column_color = app_code_highlight_color_fourth();
+  function word(text, color) {
+    "a word of the writing in a colour of the grid's headings, as a tile in the reading font, because it is English and not code";
+    function draw(line) {
+      app_code_span_text_highlight_color(line, text, color);
+    }
+    return draw;
+  }
+  function number(text, color) {
+    "a row or column number of the writing as the grid draws its headings: a code chip filled with that heading's colour";
+    function draw(line) {
+      let chip = html_span_code_dark_colored(line, [text], [color]);
+      html_style_background_color_set(chip, color);
+    }
+    return draw;
+  }
+  function said(pieces) {
+    "a line of writing whose row and column words and numbers wear the colours of the grid's headings, asked by the human 2026-10-01, so the sentence and the picture can be read against each other. Each piece is plain writing, or a function drawing a coloured word or number";
+    function draw(box) {
+      let line = html_div(box);
+      for (let piece of pieces) {
+        if (function_is(piece)) {
+          piece(line);
+        } else {
+          html_span_text(line, piece);
+        }
+      }
+    }
+    return draw;
+  }
+  let row_word = word("row", row_color);
+  let column_word = word("column", column_color);
+  let v5 = number("1", row_color);
+  let v6 = number("1", column_color);
+  let v7 = number("4", row_color);
+  let v8 = number("3", column_color);
+  let question_said = said([
+    "How many steps are there from ",
+    row_word,
+    " ",
+    v5,
+    ", ",
+    column_word,
+    " ",
+    v6,
+    " to ",
+    row_word,
+    " ",
+    v7,
+    ", ",
+    column_word,
+    " ",
+    v8,
+    "?",
+  ]);
+  let v9 = word("rows", row_color);
+  let v10 = number("1", row_color);
+  let v11 = number("4", row_color);
+  let rows_said = said([
+    "First the ",
+    v9,
+    ": from ",
+    row_word,
+    " ",
+    v10,
+    " to ",
+    row_word,
+    " ",
+    v11,
+    " is",
+  ]);
+  let v12 = word("columns", column_color);
+  let v13 = number("1", column_color);
+  let v14 = number("3", column_color);
+  let columns_said = said([
+    "Then the ",
+    v12,
+    ": from ",
+    column_word,
+    " ",
+    v13,
+    " to ",
+    column_word,
+    " ",
+    v14,
+    " is",
+  ]);
   let end_color = app_code_highlight_color();
   function arrow(degrees) {
     "a drawing of the code app's arrow turned degrees clockwise from rightwards, for one square";
@@ -154,17 +248,7 @@ export function app_code_lesson_statement_name_grid_steps() {
         "For the grid of squares, its rows and its columns are both numbered starting with ",
         "0",
       ],
-      [
-        "How many steps are there from row ",
-        "1",
-        ", column ",
-        "1",
-        " to row ",
-        "4",
-        ", column ",
-        "3",
-        "?",
-      ],
+      question_said,
       squares_draw,
       [
         "If we travel ",
@@ -182,9 +266,9 @@ export function app_code_lesson_statement_name_grid_steps() {
         "2",
         " squares to the right from just the positions?",
       ],
-      ["First the rows: from row ", "1", " to row ", "4", " is"],
+      rows_said,
       ["", rows_worked],
-      ["Then the columns: from column ", "1", " to column ", "3", " is"],
+      columns_said,
       ["", cols_worked],
       ["Each step moves one row or one column, so we add them together:"],
       ["", total],
