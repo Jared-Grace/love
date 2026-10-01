@@ -1,3 +1,4 @@
+import { app_code_arrow_turned } from "./app_code_arrow_turned.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_square_grid } from "./app_code_square_grid.mjs";
@@ -76,20 +77,35 @@ export function app_code_lesson_statement_name_grid_steps() {
   let total = js_code_binary_result_nb("3", plus, "2", "5");
   let start_color = app_code_highlight_color_second();
   let end_color = app_code_highlight_color();
+  function arrow(degrees) {
+    "a drawing of the code app's arrow turned degrees clockwise from rightwards, for one square";
+    function draw(square) {
+      app_code_arrow_turned(square, degrees);
+    }
+    return draw;
+  }
   function moves_draw(box) {
-    "you in the middle square, an arrow in each square one step away, asked by the human 2026-10-01";
+    "you in the middle square, an arrow in each square one step away, asked by the human 2026-10-01; the arrows are the drawn ones the code app uses elsewhere, which centre exactly where a typed arrow sits low";
+    let v = arrow(270);
+    let v2 = arrow(90);
+    let v3 = arrow(180);
+    let v4 = arrow(0);
     app_code_square_grid(box, 3, 3, false, [
       [1, 1, "🙂", start_color],
-      [0, 1, "↑", null],
-      [2, 1, "↓", null],
-      [1, 0, "←", null],
-      [1, 2, "→", null],
+      [0, 1, v, null],
+      [2, 1, v2, null],
+      [1, 0, v3, null],
+      [1, 2, v4, null],
     ]);
   }
   function squares_draw(box) {
-    "the two squares of the question, row 1 column 1 and row 4 column 3, with the rows and columns numbered, asked by the human 2026-10-01";
+    "the two squares of the question, row 1 column 1 and row 4 column 3, with the rows and columns numbered, and a path between them filled in: down the rows first, then right along the columns, asked by the human 2026-10-01";
     app_code_square_grid(box, 5, 4, true, [
       [1, 1, "🙂", start_color],
+      [2, 1, "", end_color],
+      [3, 1, "", end_color],
+      [4, 1, "", end_color],
+      [4, 2, "", end_color],
       [4, 3, "🏁", end_color],
     ]);
   }
@@ -105,9 +121,9 @@ export function app_code_lesson_statement_name_grid_steps() {
     remember_lines,
     explain: [
       ["Suppose there is a grid of squares"],
-      ["Its rows and its columns are both numbered starting with ", "0"],
       ["You can move one square at a time: up, down, left or right"],
       moves_draw,
+      ["Its rows and its columns are both numbered starting with ", "0"],
       [
         "How many steps from row ",
         "1",
@@ -120,12 +136,26 @@ export function app_code_lesson_statement_name_grid_steps() {
         "?",
       ],
       squares_draw,
+      [
+        "If we travel ",
+        "3",
+        " squares down and ",
+        "2",
+        " squares to the right, then we will travel to the second position",
+      ],
       app_code_explain_container_next,
+      [
+        "But how can we calculate the ",
+        "3",
+        " squares down and ",
+        "2",
+        " squares to the right from just the positions?",
+      ],
       ["First the rows: from row ", "1", " to row ", "4", " is"],
       ["", rows_worked],
       ["Then the columns: from column ", "1", " to column ", "3", " is"],
       ["", cols_worked],
-      ["Each step moves one row or one column, so we add them:"],
+      ["Each step moves one row or one column, so we add them together:"],
       ["", total],
       app_code_explain_container_next,
       ["Suppose the first square is at row ", r, ", column ", c],

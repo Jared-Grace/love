@@ -1,3 +1,4 @@
+import { function_is } from "./function_is.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -20,7 +21,7 @@ export function app_code_square_grid(parent, rows, columns, headings, marks) {
   arguments_assert(arguments, 5);
   ("a picture of empty squares in rows and columns, as the chair pictures draw chairs: when headings is true the row numbers go down the left in the third pointing colour and the column numbers across the top in the fourth, each a code chip, as ",
     fn_name("app_code_chair_grid"),
-    " draws them. marks is a list of [row, column, text, color]: that square shows the text, and is filled with the color unless the color is null");
+    " draws them. marks is a list of [row, column, text, color]: that square shows the text - or, when text is a function, the function draws into the square, as an arrow is drawn - and is filled with the color unless the color is null");
   let extra = headings ? 1 : 0;
   let grid = html_div(parent);
   let t = text_to(columns + extra);
@@ -75,7 +76,11 @@ export function app_code_square_grid(parent, rows, columns, headings, marks) {
       });
       if (not_equal(mark, null)) {
         let [, , text, color] = mark;
-        html_div_text(square, text);
+        if (function_is(text)) {
+          text(square);
+        } else {
+          html_div_text(square, text);
+        }
         if (not_equal(color, null)) {
           html_style_assign(square, {
             color: "white",
