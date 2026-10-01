@@ -8,6 +8,11 @@ export async function functions_work_size_gate_run() {
   "The three gates over shared runs ask whether one idea has been written twice. This asks the question those cannot: a function can hold no run that any other function holds and still be too big to read, because size is what a single reader pays and duplication is what the repo pays.";
   "The two answer each other, and that is the reason this comes last of the four. A function over the ceiling is where a shared run is most likely to be hiding, because a long body is the only place a run can sit touching neither end - so the way down is nearly always to name what is inside it, and the duplication gates are what say which part to name.";
   "Measured against what was already here. A long function is sometimes a list of names or a screen laid out once, and that is a judgment written into the record rather than argued again every run. The record grows only when somebody says so in a commit, and never as a side effect of a cut.";
+  ("This has never been green in the whole of the judged record, so finding it red says nothing about anything anybody did lately and is not a signal to act on. Measured 2026-10-01: a hundred and twenty seven functions stood above the ceiling while the record acknowledged three, and the gate had been red for all one hundred and sixty six judged commits in ",
+    fn_name("qa_commit_named_red_report"),
+    "'s record - that is one thousand nine hundred and fifty one commits of continuous red. Ask ",
+    fn_name("qa_commit_named_red_since"),
+    " before spending anything on a red gate: it sorts every red gate by how many judgings it has been red for, so the few at the top of its list are the fresh regressions somebody can still find the cause of, and the ones at the bottom are standing policy questions that no cut changes the colour of.");
   let named = await functions_work_oversize_names();
   let path = functions_work_size_baseline_path();
   let name_write = fn_name("functions_work_size_baseline_write");
