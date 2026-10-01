@@ -138,7 +138,10 @@ export function app_code_lesson_statement_name_grid_steps() {
       ["Suppose there is a grid of squares"],
       moves_said,
       moves_draw,
-      ["Its rows and its columns are both numbered starting with ", "0"],
+      [
+        "For the grid of squares, its rows and its columns are both numbered starting with ",
+        "0",
+      ],
       [
         "How many steps from row ",
         "1",
