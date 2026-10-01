@@ -1,4 +1,4 @@
-import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
@@ -32,15 +32,14 @@ export function app_code_lesson_statement_name_rows_apart() {
     middle: [line_rows],
     logged: [rows],
   };
-  ("The reminder keeps the call out of console.log: let distance = Math.abs(-4); then console.log(distance);. Lesson 102 tested Math.abs on its own and never inside console.log, and a learner was puzzled by console.log(Math.abs(-4)), reported by the human 2026-10-01. Not picked: the call inside console.log, which is two calls nested where the lesson taught one.");
-  let distance = "distance";
-  let remember_call = js_code_call_args(math_abs, ["-4"]);
-  let remember_line = js_code_let_statement(distance, remember_call);
-  let remember_lines = app_code_lesson_statement_name_swap_program(
-    [],
-    [remember_line],
-    [distance],
-  );
+  ("The reminder quotes lesson 102 in its own shape, each expression beside what it is: Math.abs(-4) is 4, and Math.abs(4) is 4 - the negative made positive, then the positive kept, as that lesson's examples go. A learner was puzzled by console.log(Math.abs(-4)), because lesson 102 never put Math.abs inside console.log; the human's rule, 2026-10-01, is that a reminder quotes only the exact code the lesson taught. Not picked: console.log(Math.abs(-4)), two calls nested where the lesson taught one; nor let distance = Math.abs(-4); then console.log(distance);, which drops the nesting but is still not the lesson's code.");
+  function remember_lines(box) {
+    "lesson 102 in its own shape, each expression beside what it is";
+    let negative = js_code_call_args(math_abs, ["-4"]);
+    html_div_cycle_code(box, ["", negative, " is ", "4"]);
+    let positive = js_code_call_args(math_abs, ["4"]);
+    html_div_cycle_code(box, ["", positive, " is ", "4"]);
+  }
   function values_get() {
     "four of the five pairs, in a fresh order each screen; two go down and three go up, so every screen has both";
     let candidates = [

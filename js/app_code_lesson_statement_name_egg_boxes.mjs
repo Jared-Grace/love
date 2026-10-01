@@ -1,4 +1,4 @@
-import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
@@ -35,15 +35,12 @@ export function app_code_lesson_statement_name_egg_boxes() {
     middle: [line_exact, line_boxes],
     logged: [boxes],
   };
-  ("The reminder keeps the call out of console.log: let whole = Math.ceil(3.2); then console.log(whole);. The rounding lesson tested Math.ceil on its own and never inside console.log, and a learner was puzzled by the same nesting with Math.abs, reported by the human 2026-10-01. Not picked: the call inside console.log, which is two calls nested where the lesson taught one.");
-  let whole = "whole";
-  let remember_call = js_code_call_args(ceil_name, ["3.2"]);
-  let remember_line = js_code_let_statement(whole, remember_call);
-  let remember_lines = app_code_lesson_statement_name_swap_program(
-    [],
-    [remember_line],
-    [whole],
-  );
+  ("The reminder quotes the rounding-up lesson in its own shape, the expression beside what it is: Math.ceil(3.2) is 4. A learner was puzzled by console.log(Math.abs(-4)) in a reminder, because that lesson never put the call inside console.log, and this reminder had the same shape; the human's rule, 2026-10-01, is that a reminder quotes only the exact code the lesson taught. Not picked: console.log(Math.ceil(3.2)), two calls nested where the lesson taught one; nor let whole = Math.ceil(3.2); then console.log(whole);, which drops the nesting but is still not the lesson's code.");
+  function remember_lines(box) {
+    "the rounding-up lesson in its own shape, the expression beside what it is";
+    let call = js_code_call_args(ceil_name, ["3.2"]);
+    html_div_cycle_code(box, ["", call, " is ", "4"]);
+  }
   function values_get() {
     "24 every time, and three of four counts that leave a box part full, in a fresh order each screen";
     let ordinary = list_shuffle_take([[30], [40], [50], [70]], 3);
