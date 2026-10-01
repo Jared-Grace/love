@@ -11,6 +11,7 @@ import { html_style_opacity } from "./html_style_opacity.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
+import { html_style_italic } from "./html_style_italic.mjs";
 import { app_shared_bible_on_click_google_define } from "./app_shared_bible_on_click_google_define.mjs";
 export function app_shared_bible_verse_line(parent, name, text, color) {
   "a verse the translation printed no words for arrives here carrying the token that says so, and the token is not words: the sentence that says so takes its place before anything measures or draws it, the reading direction included, which would otherwise be worked out from a mark belonging to no language at all";
@@ -37,6 +38,8 @@ export function app_shared_bible_verse_line(parent, name, text, color) {
     ("a sentence about the verse is not the verse, so it steps back into the same grey every note on these pages steps back into - and it is left untappable on purpose, because there is no word of scripture in it for a dictionary to be asked about");
     html_span_text(text_holder, shown);
     app_shared_text_deemphasized(text_holder);
+    ("and leant over on top of the grey, because a bible leans a word it has supplied rather than translated - so the one lean carries the one meaning here that it carries there: these are not the words of the text");
+    html_style_italic(text_holder);
     return line;
   }
   app_shared_bible_on_click_google_define(text_holder, shown);
