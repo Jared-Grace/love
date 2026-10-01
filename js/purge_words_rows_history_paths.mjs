@@ -19,6 +19,9 @@ export async function purge_words_rows_history_paths(folder, rows_text) {
     " is the one to reach for when what is wanted is the rewrite rather than the count.");
   ("★ WHAT COMES BACK IS WHERE TO LOOK, NEVER WHAT TO TAKE OUT - the reader underneath says so at length, and the same warning binds here. A word that identifies somebody in the short list it sat alone in is an ordinary word of the world in the long list beside it, and this cannot tell the two apart.");
   ("The reading is the word-start one the reader underneath offers. An occurrence with a letter welded to its front is not reached by it, so a count of zero from this is not on its own the end of the question.");
+  ("The reading that does tell those two apart is ",
+    fn_name("purge_words_rows_paths_versions_sizes"),
+    ", which says how many lines and how many letters the file held in each version named here - a question about size rather than about presence, and therefore one whose answer may be said out loud.");
   arguments_assert(arguments, 2);
   let rows = text_split_comma(rows_text);
   let words = await purge_words_rows_words(rows_text);
