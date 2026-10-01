@@ -1,0 +1,115 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
+import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
+import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
+import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
+import { js_code_call_args } from "./js_code_call_args.mjs";
+import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
+import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_code_lesson_statement_name_rows_apart } from "./app_code_lesson_statement_name_rows_apart.mjs";
+import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+export function app_code_lesson_statement_name_grid_steps() {
+  arguments_assert(arguments, 0);
+  ("how many steps between two squares of a grid, moving up, down, left or right: let rows = Math.abs(r2 - r1); let cols = Math.abs(c2 - c1); let steps = rows + cols; - the last of three lessons, after Rows down and Rows apart. In DSA it is the distance between two cells of a grid when moves go along rows and columns, often called the Manhattan distance.");
+  ("Columns first appear here, as the same line as the rows with c for r, so the lesson asks one new thing: that the two counts add. Not picked: a lesson of its own for columns, which would teach the rows line again under other names.");
+  ("The answers 5, 4, 6, 2 and 7 all differ, and one pair has no rows to move, so a 0 is added once. The writing works row 1 column 1 to row 4 column 3, which no question repeats, and the example below is another square pair.");
+  ("The writing is a first draft, not yet the human's, 2026-10-01.");
+  let names = ["r1", "c1", "r2", "c2"];
+  let [r, c, r2, c2] = names;
+  let rows = "rows";
+  let cols = "cols";
+  let steps = "steps";
+  let abs = "Math.abs";
+  let minus = js_operator_minus_symbol();
+  let plus = js_operator_plus_symbol();
+  let same = js_operator_triple_equal_symbol();
+  function apart_line(name, a, b) {
+    "let name = Math.abs(b - a);";
+    let less = js_code_binary_spaced_nb(b, minus, a);
+    let apart = js_code_call_args(abs, [less]);
+    let line = js_code_let_statement(name, apart);
+    return line;
+  }
+  let line_rows = apart_line(rows, r, r2);
+  let line_cols = apart_line(cols, c, c2);
+  let added = js_code_binary_spaced_nb(rows, plus, cols);
+  let line_steps = js_code_let_statement(steps, added);
+  let step = {
+    middle: [line_rows, line_cols, line_steps],
+    logged: [steps],
+  };
+  let remember_lines = app_code_lesson_statement_name_swap_program(
+    [
+      [r, 5],
+      [r2, 2],
+    ],
+    [line_rows],
+    [rows],
+  );
+  function values_get() {
+    "four of the five square pairs, in a fresh order each screen";
+    let candidates = [
+      [0, 0, 2, 3],
+      [4, 1, 1, 2],
+      [2, 5, 3, 0],
+      [1, 2, 1, 4],
+      [5, 4, 2, 0],
+    ];
+    let taken = list_shuffle_take(candidates, 4);
+    return taken;
+  }
+  function apart_worked(b, a, answer) {
+    "Math.abs(b - a) === answer, with numbers";
+    let less = js_code_binary_spaced_nb(b, minus, a);
+    let call = js_code_call_args(abs, [less]);
+    let line = js_code_binary_spaced_nb(call, same, answer);
+    return line;
+  }
+  let rows_worked = apart_worked("4", "1", "3");
+  let cols_worked = apart_worked("3", "1", "2");
+  let total = js_code_binary_result_nb("3", plus, "2", "5");
+  let lesson = app_code_lesson_statement_formula({
+    words: "Steps on a grid",
+    title_code: line_steps,
+    names,
+    values_get,
+    example_values: [2, 0, 0, 4],
+    step,
+    remember_lesson: app_code_lesson_statement_name_rows_apart,
+    remember_parts: ["we can find how many rows apart two rows are:"],
+    remember_lines,
+    explain: [
+      ["Suppose there is a grid of squares"],
+      ["Its rows and its columns are both numbered starting with ", "0"],
+      ["You can move one square at a time: up, down, left or right"],
+      [
+        "How many steps from row ",
+        "1",
+        ", column ",
+        "1",
+        " to row ",
+        "4",
+        ", column ",
+        "3",
+        "?",
+      ],
+      app_code_explain_container_next,
+      ["First the rows: from row ", "1", " to row ", "4", " is"],
+      ["", rows_worked],
+      ["Then the columns: from column ", "1", " to column ", "3", " is"],
+      ["", cols_worked],
+      ["Each step moves one row or one column, so we add them:"],
+      ["", total],
+      app_code_explain_container_next,
+      ["Suppose the first square is at row ", r, ", column ", c],
+      ["And the second square is at row ", r2, ", column ", c2],
+      ["Here is code that finds how many steps between the two squares:"],
+    ],
+    decoys: null,
+    example_pointers: null,
+  });
+  return lesson;
+}
