@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
@@ -20,6 +21,9 @@ export function qa_shares_taken_text(
   ("The load is read before and after rather than once, because the question it answers is what the machine was doing throughout, and one reading taken at either end is a reading of a moment that may be the quietest or the busiest of the run.");
   ("What each share held at its highest is said beside how long it took, because that pair is what decides the next run. How many shares to take is the room on this machine divided by what one share holds, and until now the second half of that division was a figure measured by hand on one afternoon and left standing. A share that says its own size every time turns the divisor into a reading, and a divisor that is too large by half is a run taking half the shares it could.");
   ("A share that never said is passed over in silence rather than shown as nothing. The number is missing when the machine will not say, which is a fact about the machine and not about the share, and a nought printed there would be read as the share having held nothing at all.");
+  ("This says what one run cost and nothing at all about whether that was unusual, because a cost that moves twenty fold with the load cannot be judged from a single reading. The same four readings are filed as they are taken, and ",
+    fn_name("qa_shares_taken_log_report"),
+    " reads the whole history back newest first with the load beside each run, which is where a comparison can actually be made.");
   let ordered = [...results];
   function taken_of(one) {
     let ms = property_get(one, "milliseconds");
