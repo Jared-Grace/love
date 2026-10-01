@@ -105,7 +105,7 @@ export function lyric_video_subtitles_text(document) {
     return event2;
   }
   let v = cards.map(lambda);
-  let events = lines_heard.map(line_event).concat(v);
+  let events = v.concat(lines_heard.map(line_event));
   let written = head.concat(events).join("\n") + "\n";
   return written;
 }
