@@ -90,7 +90,10 @@ export function app_code_lesson_statement_name_seat_zero() {
       [
         "With ",
         "5",
-        " seats, the seats are: ",
+        " seats, the seats are:",
+      ],
+      [
+        "",
         "0",
         " ",
         "1",
