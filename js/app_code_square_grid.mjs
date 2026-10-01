@@ -60,8 +60,8 @@ export function app_code_square_grid(parent, rows, columns, headings, marks) {
       heading_chip_draw(t3, row_color);
     }
     function square_draw(column) {
-      function at(mark) {
-        let [mark_row, mark_column] = mark;
+      function at(mark2) {
+        let [mark_row, mark_column] = mark2;
         let r = equal(mark_row, row) && equal(mark_column, column);
         return r;
       }
