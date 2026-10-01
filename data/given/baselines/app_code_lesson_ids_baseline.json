@@ -206,6 +206,9 @@
   "name_clock_12",
   "name_clock_next",
   "name_egg_boxes",
-  "name_handshakes"
+  "name_handshakes",
+  "name_rows_down",
+  "name_rows_apart",
+  "name_grid_steps"
  ]
 }
