@@ -425,6 +425,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_grid_steps,
     app_code_lesson_statement_name_pages_read,
     app_code_lesson_statement_name_last_seat,
+    app_code_lesson_statement_name_row_inside,
   ];
   return fns;
 }
