@@ -1,3 +1,4 @@
+import { path_outward_cases_gate_run } from "./path_outward_cases_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { stop_next_steps_hook_gate_run } from "./stop_next_steps_hook_gate_run.mjs";
@@ -1177,6 +1178,7 @@ export function qa_gates() {
     app_en_learn_bible_gloss_urdu_verse_claims_wrong_gate_run,
     gloss_explain_verse_numbers_cases_gate_run,
     gloss_explain_verse_number_words_cases_gate_run,
+    path_outward_cases_gate_run,
   ];
   return gates;
 }
