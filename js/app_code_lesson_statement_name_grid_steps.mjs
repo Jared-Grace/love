@@ -1,3 +1,6 @@
+import { html_div } from "./html_div.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { app_code_arrow_inline } from "./app_code_arrow_inline.mjs";
 import { app_code_arrow_turned } from "./app_code_arrow_turned.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
@@ -98,6 +101,18 @@ export function app_code_lesson_statement_name_grid_steps() {
       [1, 2, v4, null],
     ]);
   }
+  function moves_said(box) {
+    "the sentence naming the four moves, each direction word with its arrow next to it, asked by the human 2026-10-01; the same drawn arrows as the picture below it, so the words and the picture match";
+    let line = html_div(box);
+    html_span_text(line, "You can move one square at a time: up ");
+    app_code_arrow_inline(line, 270);
+    html_span_text(line, ", down ");
+    app_code_arrow_inline(line, 90);
+    html_span_text(line, ", left ");
+    app_code_arrow_inline(line, 180);
+    html_span_text(line, " or right ");
+    app_code_arrow_inline(line, 0);
+  }
   function squares_draw(box) {
     "the two squares of the question, row 1 column 1 and row 4 column 3, with the rows and columns numbered, and a path between them filled in: down the rows first, then right along the columns, asked by the human 2026-10-01";
     app_code_square_grid(box, 5, 4, true, [
@@ -121,7 +136,7 @@ export function app_code_lesson_statement_name_grid_steps() {
     remember_lines,
     explain: [
       ["Suppose there is a grid of squares"],
-      ["You can move one square at a time: up, down, left or right"],
+      moves_said,
       moves_draw,
       ["Its rows and its columns are both numbered starting with ", "0"],
       [
