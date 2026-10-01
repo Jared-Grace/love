@@ -1,11 +1,10 @@
+import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
 import { html_span_code_dark_colored } from "./html_span_code_dark_colored.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { function_is } from "./function_is.mjs";
 import { html_cycle_code } from "./html_cycle_code.mjs";
-import { html_font_color_set } from "./html_font_color_set.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_arrow_inline } from "./app_code_arrow_inline.mjs";
@@ -92,9 +91,7 @@ export function app_code_lesson_statement_name_grid_steps() {
   function word(text, color) {
     "a word of the writing in a colour of the picture: the letters coloured and bold, with no background, asked by the human 2026-10-01 - a background is kept for code, such as the row and column numbers, so a filled tile always means code and coloured letters mean English. Bold, because thin coloured letters read faintly. Not picked: a filled tile in the reading font, which looked like code";
     function draw(line) {
-      let span = html_span_text(line, text);
-      html_font_color_set(span, color);
-      html_style_set(span, "font-weight", "bold");
+      app_code_span_text_highlight_color(line, text, color);
     }
     return draw;
   }
