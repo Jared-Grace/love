@@ -121,7 +121,6 @@ export function app_code_lesson_statement_name_seat_zero() {
         " and the number of seats is called ",
         max,
       ],
-      ["Then the last seat is ", max_less],
       ["Here is code that checks whether seat ", n, " is in the row:"],
     ],
     decoys: null,
