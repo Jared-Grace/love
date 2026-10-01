@@ -209,6 +209,8 @@
   "name_handshakes",
   "name_rows_down",
   "name_rows_apart",
-  "name_grid_steps"
+  "name_grid_steps",
+  "name_pages_read",
+  "name_last_seat"
  ]
 }

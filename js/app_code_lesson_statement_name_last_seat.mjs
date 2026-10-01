@@ -52,7 +52,7 @@ export function app_code_lesson_statement_name_last_seat() {
   }
   let emoji = app_code_chair_emoji();
   let worked = js_code_binary_result_nb("5", minus, "1", "4");
-  let combined = text_combine("Suppose there is a row of 5 seats ", emoji);
+  let combined = text_combine(" seats ", emoji);
   let lesson = app_code_lesson_statement_formula({
     words: "Last seat",
     title_code: line_last,
@@ -66,7 +66,7 @@ export function app_code_lesson_statement_name_last_seat() {
     ],
     remember_lines,
     explain: [
-      [combined],
+      ["Suppose there is a row of ", "5", combined],
       ["The seats are numbered starting with ", "0"],
       ["So the seats are ", "0", ", ", "1", ", ", "2", ", ", "3", " and ", "4"],
       ["What number is the last seat?"],
