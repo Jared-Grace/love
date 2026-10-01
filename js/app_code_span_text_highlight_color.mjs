@@ -1,5 +1,5 @@
+import { html_bold } from "./html_bold.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span } from "./html_span.mjs";
@@ -16,6 +16,6 @@ export function app_code_span_text_highlight_color(parent, text, background) {
   let span = html_span(parent);
   html_text_set(span, text);
   html_font_color_set(span, background);
-  html_style_set(span, "font-weight", "bold");
+  html_bold(span);
   return span;
 }
