@@ -1,4 +1,3 @@
-import { app_code_code_lines_writes_out_watched } from "./app_code_code_lines_writes_out_watched.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -10,6 +9,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_one_more } from "./app_code_lesson_statement_name_one_more.mjs";
+import { app_code_code_lines_writes_out_watched } from "./app_code_code_lines_writes_out_watched.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_statement_name_count_above(root, context) {
   arguments_assert(arguments, 2);
@@ -23,8 +23,6 @@ export function app_code_lesson_statement_name_count_above(root, context) {
   ("the number the line adds is named once and every other number on the screen is worked out from it, because the sentence below says both how far the name moves and how far one copy of the line would have moved it. Typed into the sentence instead, a reworded line and the program under it could say different numbers.");
   let number_more = 1;
   let more = js_code_binary_spaced_nb(name, plus, number_more);
-  let once = add(start, number_more);
-  let twice = add(once, number_more);
   let number_twice = add(number_more, number_more);
   let held = js_code_let_statement(name, start);
   let grown = js_code_assign_statement(name, more);

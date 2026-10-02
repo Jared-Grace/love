@@ -1,10 +1,3 @@
-import { app_code_explain_emoji_square } from "./app_code_explain_emoji_square.mjs";
-import { app_code_square_edged } from "./app_code_square_edged.mjs";
-import { app_code_explain_code_colored } from "./app_code_explain_code_colored.mjs";
-import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth.mjs";
-import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
-import { app_code_explain_abs_apart_colored } from "./app_code_explain_abs_apart_colored.mjs";
-import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -14,17 +7,25 @@ import { js_code_call_args } from "./js_code_call_args.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
+import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
+import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
+import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
-import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_code_explain_abs_apart_colored } from "./app_code_explain_abs_apart_colored.mjs";
+import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
-import { app_code_square_grid } from "./app_code_square_grid.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { app_code_explain_code_colored } from "./app_code_explain_code_colored.mjs";
+import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
+import { app_code_explain_emoji_square } from "./app_code_explain_emoji_square.mjs";
+import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_arrow_turned_draw } from "./app_code_arrow_turned_draw.mjs";
+import { app_code_square_grid } from "./app_code_square_grid.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
+import { app_code_square_edged } from "./app_code_square_edged.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_grid_steps } from "./app_code_lesson_statement_name_grid_steps.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
@@ -113,8 +114,10 @@ export function app_code_lesson_statement_name_king_steps() {
   let plain = app_shared_color_code_background();
   let count_two = app_code_explain_number_colored("2", plain);
   ("Math.max(3, 2) === 3 as one code chip, the count of rows and the count of columns in the colours the lines above give them, asked by the human 2026-10-02; the answer is the steps, so it wears the blue of the squares it counts");
+  ("the equals sign comes from the one place that says what it looks like rather than being typed into the chip, which is why it was named a few lines up. Typed here it was a second spelling of the same thing, and the name holding the first spelling was read by nothing - a line that looked like the chip was built from it and was not.");
+  let equals = text_combine_multiple([") ", same, " "]);
   let max_worked = app_code_explain_code_colored(
-    [max_name, "(", "3", ", ", "2", ") === ", "3"],
+    [max_name, "(", "3", ", ", "2", equals, "3"],
     [
       plain,
       plain,
