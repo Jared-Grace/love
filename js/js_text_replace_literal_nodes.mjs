@@ -1,9 +1,9 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { not } from "./not.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 export function js_text_replace_literal_nodes(ast) {
   arguments_assert(arguments, 1);
@@ -23,8 +23,7 @@ export function js_text_replace_literal_nodes(ast) {
     if (not(plain_is)) {
       continue;
     }
-    let name = property_get(named, "name");
-    let replace_is = list_includes(["replace", "replaceAll"], name);
+    let replace_is = property_in_list(named, "name", ["replace", "replaceAll"]);
     if (not(replace_is)) {
       continue;
     }
