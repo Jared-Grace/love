@@ -8,6 +8,7 @@ export function gloss_explain_verse_numbers_cases() {
   "★ THE FOURTH WAY IS A WRITER LEAVING OUT THE DASH. Verse twenty four and verse twenty-four are the same claim, and the reading that knew only the spelled shape answered the first with two verses, twenty and four, neither of them meant. The pair is written here both ways round, and so is the chapter that really does have a twentieth and a fourth verse and no twenty-fourth, where the same words rightly name two.";
   "★ THE FIFTH WAY IS A VERSE THAT OWNS A WORD RATHER THAN HOLDING THIS ONE, AND ONLY THE OTHER LANGUAGE WRITES IT. Urdu says verse two of This, with its little word for of behind the number, and then names some other word - usually quoting it in English letters. Four rows in five of the longest queue in the repo were that one shape. The cases come in pairs here too, of against in, because the two sentences are the same until that one word; and the pair that matters most is the last one, where the word for in is followed by a quoted English word anyway - that is one of the three claims already known to be wrong in this store, so a reading that cancelled on the quote rather than on the owning word would have hidden a real fault.";
   "★ THE SIXTH WAY IS A CANCELLING WORD BEHIND A LIST RATHER THAN BEHIND A SINGLE NUMBER. Verse one, two and three of us cancels all three, because the three of them together own the one word; a reading that wrote each number down the moment it met it had already named the first two by the time the cancelling word arrived. The three cases here are a set: the list that cancels, the same list with the word for in behind it where all three are claims, and a sentence with two runs in it where only the second cancels - that last one is what keeps the fix from throwing away a verse named earlier in the same sentence.";
+  "★ THE SEVENTH WAY IS A SENTENCE NAMING A VERSE OF A DIFFERENT CHAPTER ALTOGETHER, AND IT IS THE ONLY ONE OF THE SEVEN WHERE THE WORD THAT DECIDES STANDS SEVERAL WORDS AWAY. Chapter seven, verse eight is a claim about chapter seven, and the reading that saw only verse eight charged the chapter it was checking with it. The cases come in a pair like the others - the citation and the bare claim with the same number - and then in four more that hold the edges, because this is armed by a number rather than by a word: the ordinary noun with no number behind it, the chapter named past the end of this chapter's verses, the arm spent on one marker and not the next, and the plural. Two of them record what this costs rather than what it buys, and both are deliberate: a writer citing the chapter they are standing in, and a citation that ends at a full stop instead of a comma.";
   "The chapter's verses are spelled out on each case rather than a chapter being named. What decides the answer is which verses the chapter has - the same words name one verse in a chapter of a hundred and two and two verses in a chapter of a hundred - so the thing that decides has to stand where a reader can see it.";
   "What is expected is written as one line with commas rather than as a list, so a case that fails says what it got and what it wanted in words rather than in two shapes to be lined up by eye.";
   arguments_assert(arguments, 0);
@@ -334,6 +335,68 @@ export function gloss_explain_verse_numbers_cases() {
       verses: ["21"],
       names: "21",
       why: "★ one of the three claims already known to be wrong in this store - the quoted English word comes after the word for in, so nothing cancels and the claim is still read",
+    },
+    {
+      explain:
+        "chapter seven, verse eight: he took firm hold of three hundred men",
+      verses: ["7", "8"],
+      names: "",
+      why: "★ the citation: this says where a word stands in chapter seven, and the chapter being checked is not chapter seven - read as a bare verse eight it charged this chapter with a claim nobody made",
+    },
+    {
+      explain: "verse eight: he took firm hold of three hundred men",
+      verses: ["7", "8"],
+      names: "8",
+      why: "the other half of that pair: the same words with the citation taken off the front, and now it is a claim about this chapter",
+    },
+    {
+      explain: "there is nothing in the chapter since verse ten",
+      verses: ["10"],
+      names: "10",
+      why: "chapter is an ordinary noun too, so a number behind it is what says an address was begun - about ten places in the store say chapter and then no number, and every one of them names a verse of this chapter",
+    },
+    {
+      explain: "chapter twenty, verse three says it another way",
+      verses: ["1", "2", "3"],
+      names: "3",
+      why: "the limit, written down: the chapter number is read with this chapter's own verse spellings and this chapter has no twentieth verse, so nothing arms and the citation stands as a claim",
+    },
+    {
+      explain:
+        "chapter seven, verse eight, and here in verse twelve it returns",
+      verses: ["7", "8", "12"],
+      names: "12",
+      why: "★ one chapter word shuts one marker and no more - an arm that outlived its marker would swallow every true claim after it in a long explanation",
+    },
+    {
+      explain: "chapters seven and eight, verse two carries it",
+      verses: ["2", "7", "8"],
+      names: "",
+      why: "the plural is on the list for the same reason the plural of verse is, and the arm survives the words between it and the marker",
+    },
+    {
+      explain: "chapter eight, verse three says it too",
+      verses: ["3", "8"],
+      names: "",
+      why: "★ what this costs: the writer is citing the chapter they are standing in, so verse three really is a claim about this chapter and it is dropped - telling that apart needs this chapter's own number threaded through four readings, and a self-citation is only ever accused when the writer got their own verse wrong",
+    },
+    {
+      explain: "that is the word of chapter seven. verse eleven is the promise",
+      verses: ["7", "11"],
+      names: "",
+      why: "the other cost: the citation ended at a full stop rather than a comma, and the arm does not read sentence ends - met once in the store, and left as it stands rather than paid for with a second vocabulary of marks",
+    },
+    {
+      explain: "باب ۱۰ آیت ۳ میں آیا",
+      verses: ["3", "10"],
+      names: "",
+      why: "the same reading in the other language: the word for chapter with a number in Urdu's own digit shapes behind it, and the marker is shut",
+    },
+    {
+      explain: "باب بارہ کی آیت ۳ میں آیا",
+      verses: ["3", "12"],
+      names: "3",
+      why: "★ the limit that matters most in this store: it spells a verse in digits and a chapter in words, so the digit table cannot read twelve and about forty-five citations of this shape stand as claims - the case is here so that building a second table of written numbers turns this answer over by itself",
     },
   ];
   return cases;
