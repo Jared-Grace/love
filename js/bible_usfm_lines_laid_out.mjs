@@ -1,10 +1,10 @@
+import { bible_usfm_line_notes_removed } from "./bible_usfm_line_notes_removed.mjs";
 import { bible_usfm_lines_laid_out_blank_line_add } from "./bible_usfm_lines_laid_out_blank_line_add.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { list_add } from "./list_add.mjs";
-import { usfm_spans_removed } from "./usfm_spans_removed.mjs";
 import { bible_usfm_marker_rest } from "./bible_usfm_marker_rest.mjs";
 import { property_get } from "./property_get.mjs";
 import { bible_usfm_marker_layout } from "./bible_usfm_marker_layout.mjs";
@@ -27,8 +27,7 @@ export function bible_usfm_lines_laid_out(usfm_lines, verse_numbers_shown) {
   ("A line whose words all turn out to be a footnote leaves nothing behind rather than an empty line. That happens wherever the printing hangs a note on a line of its own, and a reader would see a hole in the poem and take it for a fault.");
   let out = [];
   for (let usfm_line of usfm_lines) {
-    let unfootnoted = usfm_spans_removed(usfm_line, "f");
-    let unreferenced = usfm_spans_removed(unfootnoted, "x");
+    let unreferenced = bible_usfm_line_notes_removed(usfm_line);
     let split = bible_usfm_marker_rest(unreferenced);
     let marker_text = property_get(split, "marker");
     let rest = property_get(split, "rest");
