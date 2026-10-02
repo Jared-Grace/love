@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_clamp } from "./app_code_lesson_statement_name_clamp.mjs";
 import { app_code_lesson_statement_name_page_start } from "./app_code_lesson_statement_name_page_start.mjs";
 import { app_code_lesson_statement_name_even } from "./app_code_lesson_statement_name_even.mjs";
 import { app_code_lesson_statement_name_clock_back } from "./app_code_lesson_statement_name_clock_back.mjs";
@@ -441,6 +442,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_clock_back,
     app_code_lesson_statement_name_even,
     app_code_lesson_statement_name_page_start,
+    app_code_lesson_statement_name_clamp,
   ];
   return fns;
 }
