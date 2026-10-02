@@ -1,13 +1,13 @@
-import { not_equal } from "./not_equal.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { lyric_video_songs_folder } from "./lyric_video_songs_folder.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { file_read_lines } from "./file_read_lines.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { text_punctuation_apostrophe_kept_removed } from "./text_punctuation_apostrophe_kept_removed.mjs";
+import { text_lower_to } from "./text_lower_to.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function lyric_video_song_words_text_write(name, path_text) {
   "$plain name";
@@ -17,6 +17,8 @@ export async function lyric_video_song_words_text_write(name, path_text) {
   "★ IT WRITES NOTHING AT ALL unless every line count and every word count already matches, because a miscount slides every later word onto the wrong note and the film still renders.";
   "★ IT REPORTS THE WORDS WHOSE LETTERS MOVED, ignoring case and punctuation, so a capitalisation pass can be proved to have swapped no actual word.";
   "★ THE TEXT OF THE LINE IS REWRITTEN ALONGSIDE ITS WORDS, BECAUSE A DOCUMENT HOLDS THE SAME LINE TWICE AND ONLY ONE OF THE TWO WAS BEING WRITTEN. The aligner rebuilds every line from the text of the line and never from its words, so a capitalisation pass that moved only the words left the aligner holding the spelling from before the pass, and the next hearing of the song would have quietly put all of it back. Twenty eight lines of one song sat in exactly that state.";
+  "★ ALL THREE WAYS OUT SAY THE SAME WORDS, so a reader can ask any one of them anything and get an emptiness rather than a hole. The refusal over line counts said two numbers, the refusal over word counts said a list, and the write said a count under a third name, lines, which was the count of lines again - three answers that had to be told apart before they could be read, from a function whose whole point is that it refuses more often than it writes.";
+  "The count of lines is spelt one way, count_lines, and the name lines is left to the list of lines it was always about. A key called lines holding a number read as the lines themselves, and the one answer carrying it was the one nobody checks, because it is the answer that means it worked.";
   arguments_assert(arguments, 2);
   let folder = lyric_video_songs_folder();
   let file_name = text_combine(name, ".json");
@@ -43,6 +45,8 @@ export async function lyric_video_song_words_text_write(name, path_text) {
       reason: "line count",
       count_lines,
       count_lines_text,
+      mismatched: [],
+      letters_moved: [],
     };
     return r2;
   }
@@ -65,7 +69,10 @@ export async function lyric_video_song_words_text_write(name, path_text) {
     let r3 = {
       ok: false,
       reason: "word count",
+      count_lines,
+      count_lines_text,
       mismatched,
+      letters_moved: [],
     };
     return r3;
   }
@@ -96,7 +103,10 @@ export async function lyric_video_song_words_text_write(name, path_text) {
   await file_overwrite_json(path_document, document);
   let r4 = {
     ok: true,
-    lines: count_lines,
+    reason: null,
+    count_lines,
+    count_lines_text,
+    mismatched: [],
     letters_moved,
   };
   return r4;
