@@ -1,7 +1,6 @@
+import { multiply_divide } from "./multiply_divide.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
-import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
 import { number_round_places } from "./number_round_places.mjs";
 export function lyric_video_picture_motion_shake(shake, t, width, height) {
   "$plain shake";
@@ -33,8 +32,7 @@ export function lyric_video_picture_motion_shake(shake, t, width, height) {
     shake.to +
     ")";
   let x = "+" + shake.amount + "*" + grow + "*sin(in*2.3)*cos(in*0.61)";
-  let top = multiply(shake.amount, width);
-  let value2 = divide(top, height);
+  let value2 = multiply_divide(shake.amount, width, height);
   let y = "+" + number_round_places(value2, 5) + "*" + grow + "*sin(in*1.9+1)";
   let r2 = {
     x,
