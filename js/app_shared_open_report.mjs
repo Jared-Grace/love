@@ -1,3 +1,4 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
 import { date_today_iso } from "./date_today_iso.mjs";
@@ -7,7 +8,6 @@ import { property_get } from "./property_get.mjs";
 import { property_initialize } from "./property_initialize.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { property_count_add } from "./property_count_add.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 export async function app_shared_open_report(days) {
@@ -38,8 +38,7 @@ export async function app_shared_open_report(days) {
   let apps = [];
   for (let app in by_app) {
     let found = property_get(by_app, app);
-    let list2 = property_get(found, "devices");
-    let devices = list_size(list2);
+    let devices = property_list_size(found, "devices");
     let device_days = property_get(found, "device_days");
     list_add(apps, {
       app,
