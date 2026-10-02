@@ -1,3 +1,4 @@
+import { app_code_square_ringed } from "./app_code_square_ringed.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_explain_code_colored } from "./app_code_explain_code_colored.mjs";
 import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth.mjs";
@@ -201,13 +202,19 @@ export function app_code_lesson_statement_name_grid_steps() {
   }
   function squares_draw(box) {
     "the two squares of the question, row 1 column 1 and row 4 column 3, with the rows and columns numbered, and a path between them filled in: down the rows first, then right along the columns, asked by the human 2026-10-01";
+    "each path square has a thick blue ring for the path, and is filled green when it is one of the 3 squares down and orange when it is one of the 2 squares right, the colours of the rows count and the columns count, asked by the human 2026-10-02. Not picked: solid blue, which said the path but not which count each square is part of";
+    let draw7 = app_code_square_ringed("", end_color);
+    let draw8 = app_code_square_ringed("", end_color);
+    let draw9 = app_code_square_ringed("", end_color);
+    let draw10 = app_code_square_ringed("", end_color);
+    let draw11 = app_code_square_ringed("🏁", end_color);
     app_code_square_grid(box, 5, 4, true, [
       [1, 1, "🙂", start_color],
-      [2, 1, "", end_color],
-      [3, 1, "", end_color],
-      [4, 1, "", end_color],
-      [4, 2, "", end_color],
-      [4, 3, "🏁", end_color],
+      [2, 1, draw7, rows_count_color],
+      [3, 1, draw8, rows_count_color],
+      [4, 1, draw9, rows_count_color],
+      [4, 2, draw10, columns_count_color],
+      [4, 3, draw11, columns_count_color],
     ]);
   }
   let draw = app_code_explain_number_colored(r, row_color);
@@ -234,6 +241,24 @@ export function app_code_lesson_statement_name_grid_steps() {
     " ",
     draw5,
   ]);
+  let draw12 = app_code_explain_number_colored("3", rows_count_color);
+  let draw13 = app_code_explain_number_colored("2", columns_count_color);
+  let draw14 = app_code_explain_said([
+    "If we travel ",
+    draw12,
+    " squares down and ",
+    draw13,
+    " squares to the right, then we will travel to the second position",
+  ]);
+  let draw15 = app_code_explain_number_colored("3", rows_count_color);
+  let draw16 = app_code_explain_number_colored("2", columns_count_color);
+  let draw17 = app_code_explain_said([
+    "But how can we calculate the ",
+    draw15,
+    " squares down and ",
+    draw16,
+    " squares to the right from just the positions?",
+  ]);
   let lesson = app_code_lesson_statement_formula({
     words: "Steps on a grid",
     title_code: line_steps,
@@ -254,22 +279,10 @@ export function app_code_lesson_statement_name_grid_steps() {
       ],
       question_said,
       squares_draw,
-      [
-        "If we travel ",
-        "3",
-        " squares down and ",
-        "2",
-        " squares to the right, then we will travel to the second position",
-      ],
+      draw14,
       travel_said,
       app_code_explain_container_next,
-      [
-        "But how can we calculate the ",
-        "3",
-        " squares down and ",
-        "2",
-        " squares to the right from just the positions?",
-      ],
+      draw17,
       rows_said,
       rows_worked,
       columns_said,
