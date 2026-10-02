@@ -1,5 +1,5 @@
 import { fn_name } from "./fn_name.mjs";
-import { app_en_learn_bible_gloss_urdu_generate_upload_namespace } from "./app_en_learn_bible_gloss_urdu_generate_upload_namespace.mjs";
+import { gloss_upload_namespace_en_learn_bible_urdu } from "./gloss_upload_namespace_en_learn_bible_urdu.mjs";
 import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
 import { app_en_learn_bible_gloss_urdu_passages } from "./app_en_learn_bible_gloss_urdu_passages.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -15,7 +15,7 @@ export async function app_en_learn_bible_gloss_urdu_unpublished_gate_run() {
   let walked = await gloss_chapters_finished_unpublished(
     app_en_learn_bible_gloss_urdu_generate,
     app_en_learn_bible_gloss_urdu_passages,
-    app_en_learn_bible_gloss_urdu_generate_upload_namespace,
+    gloss_upload_namespace_en_learn_bible_urdu,
   );
   let fault = text_combine_multiple([
     "are explained all the way through and still unpublished - carry each one up with ",

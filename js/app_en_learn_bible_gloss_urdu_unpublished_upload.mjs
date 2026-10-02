@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_unpublished_upload_generic } from "./gloss_chapters_unpublished_upload_generic.mjs";
 import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
 import { app_en_learn_bible_gloss_urdu_passages } from "./app_en_learn_bible_gloss_urdu_passages.mjs";
-import { app_en_learn_bible_gloss_urdu_generate_upload_namespace } from "./app_en_learn_bible_gloss_urdu_generate_upload_namespace.mjs";
+import { gloss_upload_namespace_en_learn_bible_urdu } from "./gloss_upload_namespace_en_learn_bible_urdu.mjs";
 import { app_en_learn_bible_gloss_urdu_chapter_upload_stored } from "./app_en_learn_bible_gloss_urdu_chapter_upload_stored.mjs";
 export async function app_en_learn_bible_gloss_urdu_unpublished_upload() {
   "Publish every chapter of English words explained in Urdu that is finished and has not been carried up yet, and hand back what went and what is left.";
@@ -11,7 +11,7 @@ export async function app_en_learn_bible_gloss_urdu_unpublished_upload() {
   let r = await gloss_chapters_unpublished_upload_generic(
     app_en_learn_bible_gloss_urdu_generate,
     app_en_learn_bible_gloss_urdu_passages,
-    app_en_learn_bible_gloss_urdu_generate_upload_namespace,
+    gloss_upload_namespace_en_learn_bible_urdu,
     app_en_learn_bible_gloss_urdu_chapter_upload_stored,
   );
   return r;

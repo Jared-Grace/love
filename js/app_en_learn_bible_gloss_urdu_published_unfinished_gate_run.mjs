@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_published_unfinished } from "./gloss_chapters_published_unfinished.mjs";
 import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
 import { app_en_learn_bible_gloss_urdu_passages } from "./app_en_learn_bible_gloss_urdu_passages.mjs";
-import { app_en_learn_bible_gloss_urdu_generate_upload_namespace } from "./app_en_learn_bible_gloss_urdu_generate_upload_namespace.mjs";
+import { gloss_upload_namespace_en_learn_bible_urdu } from "./gloss_upload_namespace_en_learn_bible_urdu.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { gloss_chapters_offenders_assert } from "./gloss_chapters_offenders_assert.mjs";
@@ -17,7 +17,7 @@ export async function app_en_learn_bible_gloss_urdu_published_unfinished_gate_ru
   let walked = await gloss_chapters_published_unfinished(
     app_en_learn_bible_gloss_urdu_generate,
     app_en_learn_bible_gloss_urdu_passages,
-    app_en_learn_bible_gloss_urdu_generate_upload_namespace,
+    gloss_upload_namespace_en_learn_bible_urdu,
   );
   let fault = text_combine_multiple([
     "are published with passages nobody has explained yet - read the verses each one is missing with ",

@@ -80,7 +80,7 @@ export function literals_frozen_names() {
     fn_name("app_shared_bible_verses_count_hash_key"),
     fn_name("app_code_progress_storage_key"),
     fn_name("app_shared_bible_verses_shown_hash_key"),
-    fn_name("app_en_learn_bible_gloss_urdu_generate_upload_namespace"),
+    fn_name("gloss_upload_namespace_en_learn_bible_urdu"),
     fn_name("g_arc_write_upload_namespace"),
     fn_name("app_shared_bible_history_key"),
     fn_name("app_shared_bible_session_id_key"),

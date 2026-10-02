@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_en_learn_bible_gloss_urdu_generate_upload_namespace } from "./app_en_learn_bible_gloss_urdu_generate_upload_namespace.mjs";
+import { gloss_upload_namespace_en_learn_bible_urdu } from "./gloss_upload_namespace_en_learn_bible_urdu.mjs";
 import { app_shared_gloss_chapters_uploaded_generic } from "./app_shared_gloss_chapters_uploaded_generic.mjs";
 export async function app_en_learn_bible_gloss_urdu_chapters_uploaded() {
   "Every chapter this app can actually explain a word of, which is every chapter of English words explained in Urdu that has been published.";
@@ -7,7 +7,7 @@ export async function app_en_learn_bible_gloss_urdu_chapters_uploaded() {
   "Read rather than listed is what makes it need no attention. Publishing a chapter is what puts it in front of a reader, in the same breath and with nothing else to remember, and there is no day on which a list here has to be brought back into line with what is up there.";
   arguments_assert(arguments, 0);
   let cache_fn = app_en_learn_bible_gloss_urdu_chapters_uploaded;
-  let namespace_fn = app_en_learn_bible_gloss_urdu_generate_upload_namespace;
+  let namespace_fn = gloss_upload_namespace_en_learn_bible_urdu;
   let value = await app_shared_gloss_chapters_uploaded_generic(
     cache_fn,
     namespace_fn,
