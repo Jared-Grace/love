@@ -10,12 +10,17 @@ export async function chapter_passages_verse_order_repair(chapter_code, fn) {
   "THE FILE IS LEFT ALONE WHEN IT IS ALREADY IN ORDER, AND THAT IS WHAT MAKES THIS SAFE TO RUN OVER A WHOLE STORE AT ANY TIME. Every passage is carried across untouched - nothing is added, dropped or reworded - so the only thing that can change is which passage is read first, and where that is already right nothing is written at all.";
   "The verse numbers before and after come back together, because an answer that only said a chapter was reordered leaves nobody able to see what it was reordered out of.";
   "THE QUESTION IS ASKED SOMEWHERE ELSE AND ONLY THE WRITING IS DONE HERE, so the gate over this and this repair cannot disagree about which chapters are out of order. Two copies of the comparison would be two chances to sort by a slightly different rule, and the one that ran second would silently be the one believed.";
+  "Both ways out say the same words, and the chapter that was already in order says its verse numbers too rather than leaving the two keys off. A caller reading the order back had to know which answer it was holding before it dared ask for the numbers, and the one shape it could not see coming was the quiet one, where nothing was written and the keys went missing. Left off, the numbers were also the only proof that the chapter really was read in order rather than skipped.";
   let checked = await chapter_passages_verse_order_check(chapter_code, fn);
+  let before = property_get(checked, "before");
+  let after = property_get(checked, "after");
   let held = property_get(checked, "held");
   if (held) {
     let same = {
       chapter_code,
       reordered: false,
+      before,
+      after,
     };
     return same;
   }
@@ -29,8 +34,8 @@ export async function chapter_passages_verse_order_repair(chapter_code, fn) {
   let r = {
     chapter_code,
     reordered: true,
-    before: property_get(checked, "before"),
-    after: property_get(checked, "after"),
+    before,
+    after,
   };
   return r;
 }

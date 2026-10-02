@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_operator_less_than_equal_symbol } from "./js_operator_less_than_equal_symbol.mjs";
@@ -9,19 +10,19 @@ import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_s
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
-import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth.mjs";
+import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
-import { app_code_explain_emoji_square } from "./app_code_explain_emoji_square.mjs";
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
 import { app_code_explain_code_colored_inline } from "./app_code_explain_code_colored_inline.mjs";
-import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { range } from "./range.mjs";
+import { equal } from "./equal.mjs";
 import { app_code_square_grid } from "./app_code_square_grid.mjs";
-import { app_code_square_grid_past_right } from "./app_code_square_grid_past_right.mjs";
+import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_seat_less } from "./app_code_lesson_statement_name_seat_less.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
@@ -32,7 +33,8 @@ export function app_code_lesson_statement_name_grid_inside() {
   ("0 <= r rather than r >= 0, asked about by the human 2026-10-02: the seat lessons already put the 0 on the left, so the check reads in number-line order, r between its two bounds, as 0 <= r < rows does in maths. r >= 0 says the same and would be one more form to learn here for nothing.");
   ("Three lines, because one line holding all four comparisons is longer than 30 characters. Not picked: let ok = in_r && in_c; folded into the logged line, which would log a whole expression rather than a name.");
   ("The answers are only true or false, so a question offers two buttons, two squares inside the grid and two outside it each screen; the squares outside are one past an edge, some by their row and some by their column, so neither check alone is enough.");
-  ("The pictures and colours are Grid steps' own, asked for by the human 2026-10-02: the same grid with its row numbers red and its column numbers purple, the count of rows green and the count of columns orange, and the square asked about a face on teal. The square outside the grid is drawn just past its right edge with a dashed edge, because there is no such square.");
+  ("The pictures and colours are Grid steps' own, asked for by the human 2026-10-02: the same grid with its row numbers red and its column numbers purple, and the count of rows green and the count of columns orange.");
+  ("The grid is blue, its word and its squares, and one more row and one more column are drawn around it without blue, asked by the human 2026-10-02, so a square outside the grid is a square the learner can see that is not blue. The face has no square of colour behind it, because teal is the start of a path in Grid steps and King steps, and there is no path here. Not picked: the earlier picture of the face on a lone dashed square past the grid's right edge, which showed a square that is not there rather than one that is not blue.");
   ("The grid is 3 rows by 5 columns and the square asked about is row 2, column 4, so no number is both a row and a column or a row and a count, because a pointer colours a number by its text. Not picked: the earlier 3 by 4 grid with row 2, column 3, whose 3 was both a column and the count of rows.");
   ("The writing is a first draft, not yet the human's, 2026-10-02.");
   let names = ["r", "c", "rows", "cols"];
@@ -88,22 +90,23 @@ export function app_code_lesson_statement_name_grid_inside() {
     list_shuffle(taken);
     return taken;
   }
-  let start_color = app_code_highlight_color_sixth();
+  let grid_color = app_code_highlight_color();
   let row_color = app_code_highlight_color_third();
   let column_color = app_code_highlight_color_fourth();
   let rows_count_color = app_code_highlight_color_second();
   let columns_count_color = app_code_highlight_color_fifth();
   let plain = app_shared_color_code_background();
+  let grid_word = app_code_explain_word_colored("grid", grid_color);
+  let blue_word = app_code_explain_word_colored("blue", grid_color);
   let row_word = app_code_explain_word_colored("row", row_color);
   let column_word = app_code_explain_word_colored("column", column_color);
-  let face = app_code_explain_emoji_square("🙂", start_color);
   let is_true = app_code_explain_number_colored("true", plain);
   let is_false = app_code_explain_number_colored("false", plain);
   let spaced_at_most = js_code_binary_spaced_nb("", at_most, "");
   let spaced_less = js_code_binary_spaced_nb("", less, "");
   let spaced_and = js_code_binary_spaced_nb("", and_op, "");
   function between_worked(middle, high, middle_color, high_color) {
-    "0 <= middle && middle < high as one code chip with is and its answer after it, the middle and the high in the colours the picture gives them";
+    "0 <= middle && middle < high as one code chip, the middle and the high in the colours the picture gives them";
     let chip = app_code_explain_code_colored_inline(
       ["0", spaced_at_most, middle, spaced_and, middle, spaced_less, high],
       [plain, plain, middle_color, plain, middle_color, plain, high_color],
@@ -118,6 +121,25 @@ export function app_code_lesson_statement_name_grid_inside() {
     );
     return chip;
   }
+  function grid_draw_face(face_row, face_column) {
+    "the 3 by 5 grid in blue with one more row and one more column drawn around it without blue, and the face on the square given, or on no square when the row is -1";
+    function draw(box) {
+      let marks = [];
+      for (let row of range(4)) {
+        for (let column of range(6)) {
+          let inside = less_than(row, 3) && less_than(column, 5);
+          let face = equal(row, face_row) && equal(column, face_column);
+          let text = face ? "🙂" : "";
+          let color = inside ? grid_color : null;
+          if (inside || face) {
+            marks.push([row, column, text, color]);
+          }
+        }
+      }
+      app_code_square_grid(box, 4, 6, true, marks);
+    }
+    return draw;
+  }
   let row_two = between_worked("2", "3", row_color, rows_count_color);
   let column_four = between_worked("4", "5", column_color, columns_count_color);
   let column_five = between_worked("5", "5", column_color, columns_count_color);
@@ -127,27 +149,47 @@ export function app_code_lesson_statement_name_grid_inside() {
   let four_column = app_code_explain_number_colored("4", column_color);
   let five_column = app_code_explain_number_colored("5", column_color);
   let grid_said = app_code_explain_said([
-    "Suppose a grid has ",
+    "Suppose a ",
+    grid_word,
+    " has ",
     three,
     " rows and ",
     five,
     " columns",
   ]);
-  function grid_draw(box) {
-    "the grid alone, its rows and columns numbered as Grid steps numbers them";
-    app_code_square_grid(box, 3, 5, true, []);
-  }
+  let draw2 = app_code_explain_number_colored("0", plain);
+  let numbered_said = app_code_explain_said([
+    "The ",
+    grid_word,
+    "'s rows and columns are both numbered starting with ",
+    draw2,
+  ]);
+  let blue_said = app_code_explain_said([
+    "The squares that are ",
+    blue_word,
+    " are part of the ",
+    grid_word,
+  ]);
+  let not_blue_said = app_code_explain_said([
+    "The squares that are not ",
+    blue_word,
+    " are not part of the ",
+    grid_word,
+  ]);
   let both_said = app_code_explain_said([
-    "A square is inside the grid when its ",
+    "A square is inside the ",
+    grid_word,
+    " when its ",
     row_word,
-    " is inside the grid and its ",
+    " is inside the ",
+    grid_word,
+    " and its ",
     column_word,
-    " is inside the grid",
+    " is inside the ",
+    grid_word,
   ]);
   let inside_said = app_code_explain_said([
-    "",
-    face,
-    " ",
+    "🙂 ",
     row_word,
     " ",
     two_row,
@@ -155,12 +197,10 @@ export function app_code_lesson_statement_name_grid_inside() {
     column_word,
     " ",
     four_column,
-    " is inside the grid:",
+    " is inside the ",
+    grid_word,
+    ":",
   ]);
-  function inside_draw(box) {
-    "the face on row 2, column 4, inside the grid";
-    app_code_square_grid(box, 3, 5, true, [[2, 4, "🙂", start_color]]);
-  }
   let row_two_said = app_code_explain_said(["", row_two, " is ", is_true]);
   let column_four_said = app_code_explain_said([
     "",
@@ -171,9 +211,7 @@ export function app_code_lesson_statement_name_grid_inside() {
   let v = both_worked("true");
   let true_true_said = app_code_explain_said(["", v, " is ", is_true]);
   let outside_said = app_code_explain_said([
-    "",
-    face,
-    " ",
+    "🙂 ",
     row_word,
     " ",
     two_row,
@@ -181,15 +219,14 @@ export function app_code_lesson_statement_name_grid_inside() {
     column_word,
     " ",
     five_column,
-    " is not inside the grid:",
+    " is not inside the ",
+    grid_word,
+    ":",
   ]);
-  function outside_draw(box) {
-    "the face on row 2, column 5, just past the grid's right edge";
-    let grid = app_code_square_grid(box, 3, 5, true, []);
-    app_code_square_grid_past_right(grid, true, 2, 5, "🙂", start_color);
-  }
   let no_column_said = app_code_explain_said([
-    "But there is no ",
+    "But the ",
+    grid_word,
+    " has no ",
     column_word,
     " ",
     five_column,
@@ -232,8 +269,13 @@ export function app_code_lesson_statement_name_grid_inside() {
     column_word,
     " ",
     c_chip,
-    " is inside the grid:",
+    " is inside the ",
+    grid_word,
+    ":",
   ]);
+  let v3 = grid_draw_face(-1, -1);
+  let v4 = grid_draw_face(2, 4);
+  let v5 = grid_draw_face(2, 5);
   let lesson = app_code_lesson_statement_formula_answer_count({
     words: "Square inside the grid",
     title_code: line_ok,
@@ -250,18 +292,20 @@ export function app_code_lesson_statement_name_grid_inside() {
     remember_lines,
     explain: [
       grid_said,
-      ["Its rows and its columns are both numbered starting with ", "0"],
-      grid_draw,
+      numbered_said,
+      v3,
+      blue_said,
+      not_blue_said,
       both_said,
       app_code_explain_container_next,
       inside_said,
-      inside_draw,
+      v4,
       row_two_said,
       column_four_said,
       true_true_said,
       app_code_explain_container_next,
       outside_said,
-      outside_draw,
+      v5,
       row_two_said,
       no_column_said,
       column_five_said,
