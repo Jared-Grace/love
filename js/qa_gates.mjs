@@ -1,3 +1,4 @@
+import { psalms_song_letter_part_gate_run } from "./psalms_song_letter_part_gate_run.mjs";
 import { lyric_video_document_times_stepped_is_cases_gate_run } from "./lyric_video_document_times_stepped_is_cases_gate_run.mjs";
 import { lyric_video_flags_ranked_cases_gate_run } from "./lyric_video_flags_ranked_cases_gate_run.mjs";
 import { js_bundle_chunk_ids_cases_gate_run } from "./js_bundle_chunk_ids_cases_gate_run.mjs";
@@ -1125,6 +1126,7 @@ export function qa_gates() {
     bible_words_slips_all_gate_run,
     bible_verses_hyphen_words_measured_gate_run,
     bible_verses_hyphen_pieces_unwritten_gate_run,
+    psalms_song_letter_part_gate_run,
     app_message_reply_cases_gate_run,
     reply_proposals_stale_gate_run,
     reply_matchers_open_gate_run,

@@ -129,6 +129,8 @@ export function permission_rules_other() {
     "WebFetch(domain:jared-grace.web.app)",
     "WebFetch(domain:docs.claude.com)",
     "WebFetch(domain:huggingface.co)",
+    "WebFetch(domain:en.wiktionary.org)",
+    "WebFetch(domain:www.merriam-webster.com)",
     "WebSearch",
     "Edit(/tmp/claude-1000/-home-j-a-repos-love/**)",
     "Read(/tmp/claude-1000/-home-j-a-repos-love/**)",
