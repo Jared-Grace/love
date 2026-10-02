@@ -1,3 +1,4 @@
+import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
 import { app_code_chair_circle } from "./app_code_chair_circle.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
@@ -17,7 +18,7 @@ export function app_code_chair_emoji_grid(parent, rows, columns) {
   html_style_assign(grid, {
     display: "grid",
     "grid-template-columns": text_combine_multiple(["repeat(", t, ", 2.2em)"]),
-    gap: "0.25em",
+    gap: app_shared_spaced_tiny_gap(),
     "justify-content": "center",
     margin: "0.5em 0",
     "font-size": "1.4em",
