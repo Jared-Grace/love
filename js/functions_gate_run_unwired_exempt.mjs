@@ -3,7 +3,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function functions_gate_run_unwired_exempt() {
   "The gates the whole-repo gate is not expected to list, each named with the reason it is not one of its members.";
   "Named one at a time rather than spotted by shape, because a rule guessing which gate is allowed to sit outside the list would go wrong in the one direction that matters - quietly excusing the next gate somebody wrote and forgot to wire in.";
-  let f_name5 = fn_name("qa_stage_pieces_assert");
+  let f_name = fn_name("qa_stage_pieces_assert");
   let exempt = [
     {
       name: fn_name("qa_gate_run"),
@@ -37,7 +37,7 @@ export function functions_gate_run_unwired_exempt() {
       name: fn_name("bundles_names_missing_gate_run"),
       why: text_combine_multiple([
         "it reads built files for calls to names of this repo's own that the file does not carry, and a built file is made by a build rather than by anybody - so nothing a commit tracks is one. a gate is judged in a copy of what a commit tracks, and from the day the working folder moved out of the served one this threw there on a folder that was not there, having measured nothing since. the question it asks is now asked by ",
-        f_name5,
+        f_name,
         " on the way up, of the very pieces one build has just made, which is the only place a build is certain to exist. it is kept alive and grantable because asked by hand of the folder people work in, where that folder really is there, it still answers - it is the subject that could not survive a frozen copy, not the check",
       ]),
     },
@@ -45,7 +45,7 @@ export function functions_gate_run_unwired_exempt() {
       name: fn_name("html_regenerate_stable_gate_run"),
       why: text_combine_multiple([
         "it asks whether writing a generated page out again would change it, and the pages it reads are written by a build into a folder nothing tracks - so in the copy a commit is judged in there is no page there to ask about, and it threw rather than answering from the day that folder moved. the same question is now asked by ",
-        f_name5,
+        f_name,
         " of the pages one build has just put where the sending reads from. asked by hand of the working folder it still answers, so it is kept rather than removed",
       ]),
     },
@@ -55,6 +55,14 @@ export function functions_gate_run_unwired_exempt() {
         "it walks the whole code course as somebody who gets every question right, and the course is served out of a stage folder that a copy of what a commit tracks does not carry - so it refused itself in seconds rather than walking anything, and a refusal that fast reads like a pass. the walk is run instead by ",
         fn_name("qa_app_e2e_happy_run"),
         " on the way up, against the very pieces about to go out, which is both the only place the course exists to be walked and the only place walking it is worth the half hour",
+      ]),
+    },
+    {
+      name: fn_name("app_original_bible_gloss_verse_claims_wrong_gate_run"),
+      why: text_combine_multiple([
+        "the human took it out of the list on 2026-09-28, and its own prose says so and says why: it cannot tell a sentence that made no claim from one that made a wrong claim. this store writes essays that name a neighbouring verse for literary reasons and quote no word at all, so the reading falls back to whatever word the entry is about and asks a question the sentence never raised - three hundred and fifty-five rows standing, and of three hundred and eighty-one read by hand two were real. it is kept and stays runnable by name as a report to be asked for. its twin ",
+        fn_name("app_ceb_bible_gloss_verse_claims_wrong_gate_run"),
+        " is in the list and belongs there, because cross-referencing is rare in that store and fifty of its fifty-six claims hold. putting this one back means first finding a way to see the silence - a sentence that named a verse without claiming the word stands in it",
       ]),
     },
   ];
