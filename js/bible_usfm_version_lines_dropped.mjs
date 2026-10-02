@@ -1,3 +1,4 @@
+import { bible_usfm_line_notes_removed } from "./bible_usfm_line_notes_removed.mjs";
 import { property_list_size } from "./property_list_size.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -5,7 +6,6 @@ import { bible_usfm_version_books } from "./bible_usfm_version_books.mjs";
 import { property_get } from "./property_get.mjs";
 import { bible_usfm_version_book_text } from "./bible_usfm_version_book_text.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
-import { usfm_spans_removed } from "./usfm_spans_removed.mjs";
 import { bible_usfm_marker_rest } from "./bible_usfm_marker_rest.mjs";
 import { bible_usfm_marker_layout } from "./bible_usfm_marker_layout.mjs";
 import { not } from "./not.mjs";
@@ -30,8 +30,7 @@ export async function bible_usfm_version_lines_dropped(version) {
     let usfm = await bible_usfm_version_book_text(version, book_code);
     let usfm_lines = text_split_newline(usfm);
     for (let usfm_line of usfm_lines) {
-      let unfootnoted = usfm_spans_removed(usfm_line, "f");
-      let unreferenced = usfm_spans_removed(unfootnoted, "x");
+      let unreferenced = bible_usfm_line_notes_removed(usfm_line);
       let split = bible_usfm_marker_rest(unreferenced);
       let marker_text = property_get(split, "marker");
       let rest = property_get(split, "rest");
