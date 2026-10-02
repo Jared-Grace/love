@@ -1,5 +1,9 @@
 import { fn_name } from "./fn_name.mjs";
 export function apps_all_main_fns() {
+  "Every app in the repo, named by the function that is its own front door, written out by hand.";
+  ("It is written rather than derived because an app is a decision and not a spelling: plenty of functions begin app_ without being a front door, and the page that gathers the apps up wants them in an order somebody chose. There is a derived answer, and it is used to judge this one rather than to replace it - ",
+    fn_name("apps_all_main_fns_stale"),
+    " asks both directions, because an app missing from here is invisible while a leftover name announces itself the moment anybody follows it.");
   let r = [
     fn_name("app_a"),
     fn_name("app_apps_all"),
