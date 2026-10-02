@@ -1,4 +1,4 @@
-import { not_equal } from "./not_equal.mjs";
+import { lyric_video_picture_motion_shake } from "./lyric_video_picture_motion_shake.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { random_seed_generator_from_text } from "./random_seed_generator_from_text.mjs";
 import { multiply } from "./multiply.mjs";
@@ -30,7 +30,6 @@ export function lyric_video_picture_motion_text(
   ("A BOX IS BETWEEN HALF AND SEVENTEEN TWENTIETHS OF THE PICTURE ACROSS, so the closest view is at most twice as near as the whole and a picture is never zoomed until it turns to mush. The whole picture is never a box: the human watched boxes reaching all the way out and asked for more zoom overall.");
   ("★ THE BOX IS CUT BETWEEN PIXELS, NEVER ON THEM, AND THAT IS WHY THIS DOES NOT USE THE TOOL MADE FOR ZOOMING. That tool rounds the box's corner and its size to whole pixels separately, so a slow move becomes a run of small jumps and every few frames the two roundings disagree and the picture jerks back the other way. The human watched it and saw pulses that were not all the same direction. Measured on a black bar moving across 600 frames, 352 of the steps went backwards even with the picture enlarged twice first; cut between pixels, none did and every step was the same size to within a tenth of a pixel.");
   ("★ A PICTURE MAY NAME ITS OWN TWO BOXES, AND THEN THOSE ARE USED INSTEAD OF THE RANDOM ONES. Some pictures carry a motion of their own meaning: the human asked for the torn temple curtain to travel from top to bottom, the way the curtain was torn. The document holds it as motion with a from box and a to box, each a size, an x and a y given as parts of the picture, exactly the shape the random boxes have. The random boxes are still drawn first, so choosing a motion for one picture leaves every other picture's draws where they were.");
-  ('★ A NAMED MOTION MAY ALSO SHAKE, FOR A MOMENT THAT IS AN EARTHQUAKE. The human asked for the stone rolled away on "raised to life" to look like the ground shaking. The shake is named by how far it throws the box, as a share of the picture across, and by where in the shown span it starts and stops, as shares of that span, so it needs no clock of its own. It grows from nothing to its full throw over that window and then stops at once, because it is meant to end on a flash that covers the stop. Up and down it throws the same distance on the screen as side to side, which is why the height share is worked out from the frame shape rather than asked for. A picture naming no shake moves exactly as before.');
   ("THE PICTURE IS NOT ENLARGED BEFORE IT IS MOVED. Enlarging was only ever a way to make the whole-pixel steps smaller, and cutting between pixels makes them vanish instead; measured, the enlarged and the plain version moved equally smoothly and the plain one took a quarter of the time. The pictures are drawn at the size of the frame, so enlarging added no detail either.");
   ("★ BUT THE BOXES ARE CUT FROM A PICTURE TWICE THE SIZE OF THE FRAME, AND ONLY THEN BROUGHT DOWN TO IT. A box is as little as half the picture, so the nearest view shows half as many pixels across as the frame has; fitted to the frame first, a picture that carried more detail than that had it thrown away before the zoom began, and the zoom enlarged what was left. The human asked for pictures sharpened to twice the frame so the zoom would have that detail to use, and it can only use it if the picture reaches the zoom at that size. A picture drawn at the frame size is enlarged to reach it and comes out as it did before; one carrying more keeps it.");
   ("It is fitted and padded with nothing into the frame first, exactly as a still picture is fitted, so a picture of another shape keeps a see-through margin rather than being stretched. It is then repeated once for every frame it is shown, because the tool that cuts between pixels moves frames that already exist rather than making them.");
@@ -91,30 +90,14 @@ export function lyric_video_picture_motion_text(
   let frame = width + ":" + height;
   let canvas = multiply(width, 2) + ":" + multiply(height, 2);
   let t = "(in/" + last + ")";
-  let shake_x = "";
-  let shake_y = "";
-  let shake = b2 ? undefined : authored.shake;
-  if (not_equal(shake, undefined)) {
-    let grow =
-      "clip((" +
-      t +
-      "-" +
-      shake.from +
-      ")/" +
-      number_round_places(subtract(shake.to, shake.from), 4) +
-      ",0,1)*between(" +
-      t +
-      "," +
-      shake.from +
-      "," +
-      shake.to +
-      ")";
-    shake_x = "+" + shake.amount + "*" + grow + "*sin(in*2.3)*cos(in*0.61)";
-    let top = multiply(shake.amount, width);
-    let value2 = divide(top, height);
-    shake_y =
-      "+" + number_round_places(value2, 5) + "*" + grow + "*sin(in*1.9+1)";
-  }
+  let shaken = lyric_video_picture_motion_shake(
+    b2 ? undefined : authored.shake,
+    t,
+    width,
+    height,
+  );
+  let shake_x = shaken.x;
+  let shake_y = shaken.y;
   let box_size = "(" + size_from + "*pow(" + ratio + "," + t + "))";
   let box_left = "W*(" + x_from + "+" + x_change + "*" + t + shake_x + ")";
   let box_right =
