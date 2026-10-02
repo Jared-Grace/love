@@ -11,14 +11,14 @@ import { equal } from "./equal.mjs";
 import { or } from "./or.mjs";
 import { not } from "./not.mjs";
 import { add } from "./add.mjs";
-import { bible_usfm_line_sentence_end_is } from "./bible_usfm_line_sentence_end_is.mjs";
+import { bible_usfm_line_piece_end_is } from "./bible_usfm_line_piece_end_is.mjs";
 import { list_add } from "./list_add.mjs";
 export function bible_usfm_lines_verse_pieces(usfm_lines) {
   arguments_assert(arguments, 1);
   ("$plain usfm_lines");
   ("Which verse each line of a chapter of usfm belongs to, and which piece of that verse it belongs to - one answer for every line handed in, in the same order.");
-  ("★ A PIECE IS A SENTENCE, WHICH IS WHAT THE PERSON NAMING THE SINGINGS MEANS BY THE LETTER. A verse is piece a up to the end of the first sentence that finishes inside it, piece b through the second, and so on. That was said plainly and it settles the question: the letter on a file name is an address a human wrote, so the only reading of it that can be right is theirs.");
-  ("It counts the sentences a printing writes rather than the couplets it steps, and those are two different counts. Counting the poetry steps agreed on Psalm 145 verse 13 and disagreed four verses earlier, where one couplet holds two whole sentences and one sentence runs across two couplets - and it could answer nothing at all for a verse printed as prose, which has no steps to count.");
+  ("★ WHAT ENDS A PIECE IS ASKED ELSEWHERE AND NOT DECIDED HERE, BECAUSE WHAT THE PERSON NAMING THE SINGINGS MEANS BY THE LETTER IS A READING OF THEIR OWN WORK RATHER THAN A RULE OF USFM. A verse is piece a up to the end of the first piece that finishes inside it, piece b through the second, and so on. The letter on a file name is an address a human wrote, so the only reading of it that can be right is theirs - and theirs is recorded in the singings themselves, which is what settled it.");
+  ("It counts where a printing comes to a stop rather than the couplets it steps, and those are two different counts. Counting the poetry steps agreed on Psalm 145 verse 13 and disagreed four verses earlier, where one couplet holds two whole sentences and one sentence runs across two couplets - and it could answer nothing at all for a verse printed as prose, which has no steps to count.");
   ("The cut can only fall where a line ends, because a line is the smallest thing a lyric video shows. Where a printing puts two sentences on one line they stay together in one piece, which is the same answer as showing half a line on a screen by itself and a better one.");
   ("Only the lines a person said are counted. A section title the translators wrote, a break between stanzas, an acrostic letter standing over a stanza of Psalm 119: none of those is the psalm, and a full stop in one of them would move the cut. The psalm's own ascription is counted, because it is scripture and a hundred and seventeen psalms number it as a verse.");
   ("A line that is not said keeps the piece of the last line that was, rather than a piece of its own. Such a line stands between two verses as often as inside one, and giving it a piece past the end of the verse would say that verse has one more piece than the printing wrote - so a letter naming that piece would be answered with the apparatus instead of refused.");
@@ -56,7 +56,7 @@ export function bible_usfm_lines_verse_pieces(usfm_lines) {
       if (opening) {
         piece = 1;
       }
-      ending = bible_usfm_line_sentence_end_is(usfm_line);
+      ending = bible_usfm_line_piece_end_is(usfm_line);
     }
     let mark = {
       verse: verse,
