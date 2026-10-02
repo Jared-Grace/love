@@ -1,3 +1,4 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
@@ -6,8 +7,6 @@ import { text_suffix_change } from "./text_suffix_change.mjs";
 import { text_size } from "./text_size.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { text_skip } from "./text_skip.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { not } from "./not.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 export async function baselines_prefix_split() {
   "Every ratchet whose record and whose rewriter are filed under different names, listed by the record.";
@@ -37,8 +36,7 @@ export async function baselines_prefix_split() {
     let family = list_filter(names, family_is);
     function rewriter_is(other) {
       let tail = text_skip(other, start_size);
-      let reader = list_includes(readers, tail);
-      let rewriter = not(reader);
+      let rewriter = list_includes_not(readers, tail);
       return rewriter;
     }
     let rewriters = list_filter(family, rewriter_is);
