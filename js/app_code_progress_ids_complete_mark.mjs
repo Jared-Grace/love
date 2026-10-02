@@ -1,8 +1,7 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_progress_lessons_complete_mark } from "./app_code_progress_lessons_complete_mark.mjs";
 import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { app_code_lessons_fns_shown } from "./app_code_lessons_fns_shown.mjs";
 import { app_code_review_numbers } from "./app_code_review_numbers.mjs";
 import { list_take } from "./list_take.mjs";
@@ -15,8 +14,7 @@ export function app_code_progress_ids_complete_mark(context, lesson_ids) {
   app_code_progress_lessons_complete_mark(context, lesson_ids);
   let ids_short = app_code_lesson_ids_short();
   function marked_is(fn) {
-    let id = property_get(ids_short, fn.name);
-    let included = list_includes(lesson_ids, id);
+    let included = property_in_list(ids_short, fn.name, lesson_ids);
     return included;
   }
   let fns = app_code_lessons_fns_shown();
