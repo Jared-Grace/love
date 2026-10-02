@@ -210,42 +210,33 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_again_last: text_frozen("name_watch"),
     app_code_lesson_statement_name_one_less: text_frozen("name_one_less"),
     app_code_lesson_statement_name_count: text_frozen("name_count"),
-    app_code_lesson_statement_name_count_last:
-      text_frozen("name_count_watched"),
-    app_code_lesson_statement_name_one_more_last: text_frozen(
-      "name_one_more_watched",
-    ),
-    app_code_lesson_statement_name_one_less_last: text_frozen(
-      "name_one_less_watched",
-    ),
-    app_code_lesson_statement_name_itself_sum_last: text_frozen(
-      "name_add_self_watched",
-    ),
+    app_code_lesson_statement_name_count_last: text_frozen("name_count_watch"),
+    app_code_lesson_statement_name_one_more_last:
+      text_frozen("name_more_watch"),
+    app_code_lesson_statement_name_one_less_last:
+      text_frozen("name_less_watch"),
+    app_code_lesson_statement_name_itself_sum_last:
+      text_frozen("name_self_watch"),
     app_code_lesson_statement_name_copy_kept: text_frozen("name_copy_kept"),
     app_code_lesson_statement_name_compare: text_frozen("name_compare"),
     app_code_lesson_statement_name_subtract: text_frozen("name_subtract"),
     app_code_lesson_statement_name_multiply: text_frozen("name_multiply"),
     app_code_lesson_statement_name_divide: text_frozen("name_divide"),
-    app_code_lesson_statement_name_plus_assign: text_frozen("name_plus_assign"),
-    app_code_lesson_statement_name_minus_assign:
-      text_frozen("name_minus_assign"),
-    app_code_lesson_statement_name_times_assign:
-      text_frozen("name_times_assign"),
-    app_code_lesson_statement_name_divide_assign:
-      text_frozen("name_divide_assign"),
+    app_code_lesson_statement_name_plus_assign: text_frozen("name_plus_eq"),
+    app_code_lesson_statement_name_minus_assign: text_frozen("name_minus_eq"),
+    app_code_lesson_statement_name_times_assign: text_frozen("name_times_eq"),
+    app_code_lesson_statement_name_divide_assign: text_frozen("name_divide_eq"),
     app_code_lesson_statement_name_increment: text_frozen("name_increment"),
     app_code_lesson_statement_name_decrement: text_frozen("name_decrement"),
     app_code_lesson_statement_name_fill_from: text_frozen("name_fill_from"),
     app_code_lesson_statement_name_swap_try: text_frozen("name_swap_try"),
     app_code_lesson_statement_name_temp_keep: text_frozen("name_temp_keep"),
     app_code_lesson_statement_name_swap: text_frozen("name_swap"),
-    app_code_lesson_statement_name_average_two: text_frozen("name_average_two"),
-    app_code_lesson_statement_name_average_three:
-      text_frozen("name_average_three"),
+    app_code_lesson_statement_name_average_two: text_frozen("name_avg_two"),
+    app_code_lesson_statement_name_average_three: text_frozen("name_avg_three"),
     app_code_lesson_statement_name_middle: text_frozen("name_middle"),
     app_code_lesson_statement_name_grid_row: text_frozen("name_grid_row"),
-    app_code_lesson_statement_name_grid_position:
-      text_frozen("name_grid_position"),
+    app_code_lesson_statement_name_grid_position: text_frozen("name_grid_col"),
     app_code_lesson_statement_name_grid_index: text_frozen("name_grid_index"),
     app_code_lesson_statement_name_sum_to: text_frozen("name_sum_to"),
     app_code_lesson_statement_name_digit_split: text_frozen("name_digit_split"),
@@ -267,9 +258,9 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_remainder: text_frozen("name_remainder"),
     app_code_lesson_statement_name_greater: text_frozen("name_greater"),
     app_code_lesson_statement_name_smaller_equal:
-      text_frozen("name_smaller_equal"),
+      text_frozen("name_smaller_eq"),
     app_code_lesson_statement_name_greater_equal:
-      text_frozen("name_greater_equal"),
+      text_frozen("name_greater_eq"),
     app_code_lesson_statement_name_equal: text_frozen("name_equal"),
     app_code_lesson_statement_name_not_equal: text_frozen("name_not_equal"),
     app_code_lesson_statement_name_and: text_frozen("name_and"),
