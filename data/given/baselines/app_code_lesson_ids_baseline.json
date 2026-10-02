@@ -216,6 +216,7 @@
   "name_seat_zero",
   "name_seat_less",
   "name_king_steps",
-  "name_grid_inside"
+  "name_grid_inside",
+  "name_clock_back"
  ]
 }
