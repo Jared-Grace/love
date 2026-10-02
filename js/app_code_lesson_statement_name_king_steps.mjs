@@ -86,10 +86,10 @@ export function app_code_lesson_statement_name_king_steps() {
     let taken = list_shuffle_take(candidates, 4);
     return taken;
   }
-  let start_color = app_code_highlight_color_second();
+  let start_color = app_code_highlight_color_sixth();
   let row_color = app_code_highlight_color_third();
   let column_color = app_code_highlight_color_fourth();
-  let rows_count_color = app_code_highlight_color_sixth();
+  let rows_count_color = app_code_highlight_color_second();
   let columns_count_color = app_code_highlight_color_fifth();
   function max_worked(box) {
     "Math.max(3, 2) === 3 as one code chip, the count of rows and the count of columns in the colours the lines above give them, asked by the human 2026-10-02; the answer is the steps, a count of neither, so it keeps the code background";

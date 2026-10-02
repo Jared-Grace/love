@@ -3,7 +3,7 @@ import { app_shared_color_teal_pointer } from "./app_shared_color_teal_pointer.m
 export function app_code_highlight_color_sixth() {
   arguments_assert(arguments, 0);
   ("the sixth pointing colour, for a screen pointing at six different things at once, such as a grid's start and path, its row and column numbers, and how many rows and how many columns lie between two squares");
-  ("Added 2026-10-02 when the human asked for the counts of rows and columns to wear colours of their own: the fifth counts the columns, as it does in the chair lessons, and this counts the rows.");
+  ("Added 2026-10-02 when the human asked for the counts of rows and columns to wear colours of their own: the fifth counts the columns, as it does in the chair lessons, and this counted the rows at first. Then the human swapped it with the second, the same day: in Grid steps and King steps the start square wears this teal and the rows count wears the familiar green, because a count is the idea the lesson links and the start square is the less important one to link. Not picked: green for the rows count while green stays the start, which would give green two meanings in one lesson.");
   let color = app_shared_color_teal_pointer();
   return color;
 }

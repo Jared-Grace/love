@@ -78,10 +78,10 @@ export function app_code_lesson_statement_name_grid_steps() {
     return taken;
   }
   let total = js_code_binary_result_nb("3", plus, "2", "5");
-  let start_color = app_code_highlight_color_second();
+  let start_color = app_code_highlight_color_sixth();
   let row_color = app_code_highlight_color_third();
   let column_color = app_code_highlight_color_fourth();
-  let rows_count_color = app_code_highlight_color_sixth();
+  let rows_count_color = app_code_highlight_color_second();
   let columns_count_color = app_code_highlight_color_fifth();
   let rows_worked = app_code_explain_abs_apart_colored(
     "4",
