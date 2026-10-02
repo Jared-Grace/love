@@ -1,7 +1,6 @@
+import { property_list_map_property } from "./property_list_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_words_roots_named_apart } from "./app_ceb_bible_gloss_words_roots_named_apart.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { list_unique_sorted } from "./list_unique_sorted.mjs";
 export async function app_ceb_bible_gloss_words_explained_apart_names() {
   "Every Cebuano word the app explains one way in one chapter and another way in another, spelled once each and sorted, so a record can be kept of which ones are already known about.";
@@ -10,8 +9,7 @@ export async function app_ceb_bible_gloss_words_explained_apart_names() {
   "★ THE WORD IS ITS OWN NAME HERE. A row is one word with two or more roots claimed for it, and the word is what a person opens the passages under, so nothing else is put beside it. The count of sightings the reading ranks by is deliberately left out: it moves whenever a chapter is glossed again, and a record that changes on its own is a record that goes red for nothing.";
   arguments_assert(arguments, 0);
   let read = await app_ceb_bible_gloss_words_roots_named_apart();
-  let apart = property_get(read, "apart");
-  let spelled_all = list_map_property(apart, "word");
+  let spelled_all = property_list_map_property(read, "apart", "word");
   let sorted = list_unique_sorted(spelled_all);
   return sorted;
 }
