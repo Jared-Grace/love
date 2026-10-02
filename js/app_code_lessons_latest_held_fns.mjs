@@ -2,7 +2,6 @@ import { app_code_lesson_statement_name_clamp } from "./app_code_lesson_statemen
 import { app_code_lesson_statement_name_page_start } from "./app_code_lesson_statement_name_page_start.mjs";
 import { app_code_lesson_statement_name_even } from "./app_code_lesson_statement_name_even.mjs";
 import { app_code_lesson_statement_name_clock_back } from "./app_code_lesson_statement_name_clock_back.mjs";
-import { app_code_lesson_statement_name_grid_inside } from "./app_code_lesson_statement_name_grid_inside.mjs";
 export function app_code_lessons_latest_held_fns() {
   "the lessons kept off latest while every other lesson is shown there, asked for by the human 2026-09-30: deploy through lesson 204 and skip 205, the 24-hour clock, which is not ready to hand over yet";
   "A list of lessons rather than a cut at a number, for the same reason the released list is one: a lesson put in above would move a number, and a list names the lesson itself. Empty it to show every lesson on latest again. The working copy shows these lessons whatever this holds.";
@@ -13,8 +12,8 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-02: hold 216, King steps, until the human has read its first draft";
   "then deploy through 216, 2026-10-02: nothing held";
   "2026-10-02: hold 217 onward, the five lessons picked after King steps, until the human has read their first drafts";
+  "then deploy through 217, 2026-10-02: hold 218 onward";
   let fns = [
-    app_code_lesson_statement_name_grid_inside,
     app_code_lesson_statement_name_clock_back,
     app_code_lesson_statement_name_even,
     app_code_lesson_statement_name_page_start,
