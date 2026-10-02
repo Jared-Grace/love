@@ -1,5 +1,4 @@
 import { app_code_code_lines_writes_out_watched } from "./app_code_code_lines_writes_out_watched.mjs";
-import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
@@ -17,7 +16,6 @@ import { app_code_lesson_statement_name_again } from "./app_code_lesson_statemen
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div_code } from "./html_div_code.mjs";
 export function app_code_lesson_statement_name_itself_sum_above(root, context) {
-  function_duplicate_kind_parallel();
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: the line the screen before this one ended on, a name being given a new value, and then that same line with the new name taken out of it");
   ("This line is the line before it with one thing changed, so that is how it is shown - the earlier line, and then the change. The two lessons it could instead be assembled from are further back and neither of them is shaped like it, so assembling asks a learner to hold two things when the whole line is already in hand a screen ago.");
