@@ -1,13 +1,15 @@
+import { fn_name } from "./fn_name.mjs";
 import { reply_last } from "./reply_last.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 import { reply_optional } from "./reply_optional.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { reply_once_or_more } from "./reply_once_or_more.mjs";
 import { property_get } from "./property_get.mjs";
 import { reply_messages_inner } from "./reply_messages_inner.mjs";
-import { json_equal_assert_json } from "./json_equal_assert_json.mjs";
+import { json_equal } from "./json_equal.mjs";
+import { list_add } from "./list_add.mjs";
 import { each_async } from "./each_async.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { list_size } from "./list_size.mjs";
 export async function reply_parser_gate_run() {
   "Checks the reply parser against written-down messages and the tokens each one should come apart into - a sequence a choice an optional and a once-or-more each read both where they match and where they must not";
@@ -15,6 +17,8 @@ export async function reply_parser_gate_run() {
   ("★ THE EXPECTED RESULT IS THE WHOLE RECORD, SPELLED IN THE ORDER THE READER BUILDS IT. The comparison goes through ",
     fn_name("json_to"),
     ", so a field left out and a field in the wrong place both read as a difference - which is deliberate: a new field appearing in the parse result should break this and be looked at, not slip past. cost and codes appeared on 2026-09-07 and sat unnoticed here until the walk above was fixed.");
+  ("★ THE MESSAGES THAT CAME APART WRONGLY ARE THROWN AS A LIST, AND EVERYTHING ELSE SITS UNDER THE HINT. Every expected record spells the name of the reader that closes a parse, because that name is the namespace the closing token carries - so a failure that handed the two records over side by side spelled that name out loud. A red gate is read back afterwards for function names, and the apps whose bundles carry one of them are held out of their deployment; that reader is in nearly every one, and it has never been what was wrong. What is thrown now is the messages alone, and the records, the advice, and the one name they all spell are under the hint, which is dropped before the names are read.");
+  ("It now looks at every case before saying anything, where the first difference used to throw and the rest went unasked. That is the same work for a better answer: a parser fault usually shows in several cases at once, and which ones is how a wrong token is told from a wrong index.");
   let last = reply_last();
   let choice_a_k = reply_choice(["a", "k"]);
   let item = "a";
@@ -255,17 +259,34 @@ export async function reply_parser_gate_run() {
       },
     },
   ];
+  let apart = [];
+  let failed = [];
   async function lambda(case_item) {
     let message = property_get(case_item, "message");
     let start = property_get(case_item, "start");
     let expected = property_get(case_item, "expected");
     let actual = await reply_messages_inner(message, start);
-    json_equal_assert_json(actual, expected, {
-      hint: "the reply parse should match the expected tokens for this message",
+    let same = json_equal(actual, expected);
+    if (same) {
+      return;
+    }
+    list_add(failed, message);
+    list_add(apart, {
       message,
+      expected,
+      actual,
     });
   }
   await each_async(cases, lambda);
+  let hint = {
+    advice:
+      "each message named should come apart into the tokens written down beside it",
+    bystander: name_last,
+    apart,
+  };
+  list_empty_is_assert_json(failed, {
+    hint,
+  });
   let checked = list_size(cases);
   let r = {
     checked,
