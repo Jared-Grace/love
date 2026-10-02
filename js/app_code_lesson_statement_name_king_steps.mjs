@@ -133,7 +133,7 @@ export function app_code_lesson_statement_name_king_steps() {
   let draw3 = app_code_explain_number_colored("4", row_color);
   let draw4 = app_code_explain_number_colored("3", column_color);
   let question_said = app_code_explain_said([
-    "How many steps are there from ",
+    "How many steps are there from 🫅 ",
     row_word,
     " ",
     draw,
@@ -141,7 +141,7 @@ export function app_code_lesson_statement_name_king_steps() {
     column_word,
     " ",
     draw2,
-    " to ",
+    " to 🏁 ",
     row_word,
     " ",
     draw3,
@@ -275,7 +275,7 @@ export function app_code_lesson_statement_name_king_steps() {
   let draw8 = app_code_explain_said([
     "But how can we calculate the ",
     draw5,
-    " steps from just the positions?",
+    " steps from just the two positions?",
   ]);
   let draw24 = app_code_explain_number_colored(r1, row_color);
   let draw25 = app_code_explain_number_colored(c1, column_color);
@@ -322,7 +322,7 @@ export function app_code_lesson_statement_name_king_steps() {
         "2",
         " squares diagonally and then ",
         "1",
-        " square down, then we will travel to the second position",
+        " square down, then we will travel to the second position 🏁",
       ],
       travel_said,
       app_code_explain_container_next,

@@ -112,7 +112,7 @@ export function app_code_lesson_statement_name_grid_steps() {
   let v7 = app_code_explain_number_colored("4", row_color);
   let v8 = app_code_explain_number_colored("3", column_color);
   let question_said = app_code_explain_said([
-    "How many steps are there from ",
+    "How many steps are there from 🙂 ",
     row_word,
     " ",
     v5,
@@ -120,7 +120,7 @@ export function app_code_lesson_statement_name_grid_steps() {
     column_word,
     " ",
     v6,
-    " to ",
+    " to 🏁 ",
     row_word,
     " ",
     v7,
@@ -248,7 +248,7 @@ export function app_code_lesson_statement_name_grid_steps() {
     draw12,
     " squares down and ",
     draw13,
-    " squares to the right, then we will travel to the second position",
+    " squares to the right, then we will travel to the second position 🏁",
   ]);
   let draw15 = app_code_explain_number_colored("3", rows_count_color);
   let draw16 = app_code_explain_number_colored("2", columns_count_color);
@@ -257,7 +257,7 @@ export function app_code_lesson_statement_name_grid_steps() {
     draw15,
     " squares down and ",
     draw16,
-    " squares to the right from just the positions?",
+    " squares to the right from just the two positions?",
   ]);
   let lesson = app_code_lesson_statement_formula({
     words: "Steps on a grid",
