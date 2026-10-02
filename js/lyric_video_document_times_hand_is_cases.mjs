@@ -4,6 +4,7 @@ export function lyric_video_document_times_hand_is_cases() {
   "★ THE PAIR THAT CARRIES THE WHOLE POINT IS THE THIRD AND THE FOURTH, WHICH ARE THE SAME TIMES AND OPPOSITE ANSWERS. Both hold lines a twentieth of a second short of the one below, because a machine writes its times through the very function the tapping desk writes through; nothing in the numbers tells them apart and nothing ever will. Only the word one of them carries about itself separates them, which is the reason the word was added.";
   "The unmarked document answering yes is the case that keeps the guess pointing the safe way. Every document that existed before the mark did carries no mark, and some of those were tapped by hand, so silence has to read as a person's.";
   "★ THE LAST CASE IS THE ONE THIS LIST CLAIMED TO HOLD AND DID NOT, AND IT IS THE ONLY ONE HERE THAT HAS EVER DISAGREED WITH THE CODE. The first line above has said since it was written that these are the states a document is actually found in. A document holding lines and no moments anywhere is such a state, and on 2026-10-02 sixteen of them were found at once - Psalm 90 through 104 and 136 - each answering that a person had timed it, so the one command able to listen to them refused every one. Six written cases agreeing is not cover for a seventh nobody wrote: the fault sat in a neighbouring gate about keeping copies, which could only report that sixteen protected documents had no copy kept, never that there was nothing in them worth protecting.";
+  "★ AND THEN IT HAPPENED AGAIN, WHICH IS WHAT THE EIGHTH CASE IS. Every drafted document written down above ends each line on the very moment the next begins, because that is how the drafting divides a song up and it is what the first reading of a draft looks for. A step that does not land on a whole hundredth of a second does not come out that way: the starts round one way and the ends the other, a few pairs fail to meet, and the document reads as a person's. Two were sitting like that - bsb_PSA_106_1-12_take1 and bsb_PSA_131_take1 - and the eighth case is their shape. The lesson is the one above repeated: a corpus of states is only as complete as somebody's imagination of what a draft can look like, and the draft had a second shape nobody had drawn.";
   arguments_assert(arguments, 0);
   let cases = [
     {
@@ -159,6 +160,34 @@ export function lyric_video_document_times_hand_is_cases() {
           },
           {
             text: "three",
+          },
+        ],
+      },
+      hand: false,
+    },
+    {
+      name: "a draft whose step does not land on a whole hundredth of a second, so a few of its lines end a hundredth away from the next start and the flush reading alone calls it somebody's work",
+      document: {
+        lines: [
+          {
+            start: 2,
+            end: 6.36,
+            text: "one",
+          },
+          {
+            start: 6.36,
+            end: 10.72,
+            text: "two",
+          },
+          {
+            start: 10.73,
+            end: 15.09,
+            text: "three",
+          },
+          {
+            start: 15.09,
+            end: 19.45,
+            text: "four",
           },
         ],
       },
