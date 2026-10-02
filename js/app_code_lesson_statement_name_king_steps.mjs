@@ -32,7 +32,7 @@ export function app_code_lesson_statement_name_king_steps() {
   ("The names r and c rather than Grid steps' rows and cols, because let steps = Math.max(rows, cols); is past the 30 characters a code line may be. Not picked: keeping rows and cols and calling the answer n, k or s, the only names short enough, which say nothing of what is counted; r and c say rows and columns in the letters r1, r2, c1 and c2 already use.");
   ("The answers 3, 4, 5, 2 and 6 all differ: two pairs have more rows than columns, two more columns than rows, and one the same of each, which is all diagonal. Adding the two counts, the mistake Grid steps would lead to, gives a different answer for every pair. The writing works the same squares as Grid steps, row 1 column 1 to row 4 column 3, so the two answers, 5 and 3, can be read against each other.");
   ("The reminder and the example both use row 3, column 1 to row 0, column 5, so Grid steps gives 7 and King steps 4 for the same squares. The example is coloured as Grid steps colours its own, with r and c in the colours of the counts.");
-  ("The start square shows a black chess king, ♚, rather than the smiling face Grid steps uses, asked by the human 2026-10-02, so the picture says it is a king that moves. The path stays solid blue: Grid steps fills its path green and orange for its steps down and right, but a diagonal step is both at once, so no one count colour fits it.");
+  ("The start square shows 🫅, a person with a crown, in place of the 🙂 Grid steps uses, asked by the human 2026-10-02: it is still you, now moving as a king, so the two pictures stay alike. The chess king ♚ stays in the writing, where it names the piece. Not picked: ♚ in the picture, a text character that a filled square draws in white, so it reads as the white piece; and 🤴, which shows on older phones but says prince. 🫅 came in 2021, so a phone older than that shows an empty box. The path stays solid blue: Grid steps fills its path green and orange for its steps down and right, but a diagonal step is both at once, so no one count colour fits it.");
   ("The writing is a first draft, not yet the human's, 2026-10-02.");
   let names = ["r1", "c1", "r2", "c2"];
   let [r1, c1, r2, c2] = names;
@@ -191,7 +191,7 @@ export function app_code_lesson_statement_name_king_steps() {
     let draw17 = app_code_arrow_turned_draw(135);
     let draw18 = app_code_arrow_turned_draw(45);
     app_code_square_grid(box, 3, 3, false, [
-      [1, 1, "♚", start_color],
+      [1, 1, "🫅", start_color],
       [0, 1, draw11, null],
       [2, 1, draw12, null],
       [1, 0, draw13, null],
@@ -217,7 +217,7 @@ export function app_code_lesson_statement_name_king_steps() {
   function squares_draw(box) {
     "the same two squares as Grid steps, row 1 column 1 and row 4 column 3, and a path between them filled in: diagonally down and right twice, then down once";
     app_code_square_grid(box, 5, 4, true, [
-      [1, 1, "♚", start_color],
+      [1, 1, "🫅", start_color],
       [2, 2, "", end_color],
       [3, 3, "", end_color],
       [4, 3, "🏁", end_color],
