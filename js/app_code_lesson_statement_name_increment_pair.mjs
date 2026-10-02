@@ -22,15 +22,21 @@ export function app_code_lesson_statement_name_increment_pair() {
     let code = js_code_let_statement(name, 13);
     let statement = js_code_console_log_statement(name);
     let lines_long = [code, long, statement];
-    app_code_lesson_statement_name_shorter_above(
+    app_code_lesson_statement_name_shorter_above({
       root,
       context,
-      app_code_lesson_statement_name_one_more,
-      ["we can give a name (", name, ") one more than it holds (", long, "):"],
+      lesson_from: app_code_lesson_statement_name_one_more,
+      remembered: [
+        "we can give a name (",
+        name,
+        ") one more than it holds (",
+        long,
+        "):",
+      ],
       lines_long,
       long,
       short,
-    );
+    });
   }
   function batch() {
     "the long lesson's starting numbers, with the short line";

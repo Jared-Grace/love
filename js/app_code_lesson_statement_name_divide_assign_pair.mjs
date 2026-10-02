@@ -31,11 +31,11 @@ export function app_code_lesson_statement_name_divide_assign_pair() {
     let code2 = js_code_let_statement(name_last, 8);
     let statement = js_code_console_log_statement(name_first);
     let lines_long = [code, code2, long, statement];
-    app_code_lesson_statement_name_shorter_above(
+    app_code_lesson_statement_name_shorter_above({
       root,
       context,
-      app_code_lesson_statement_name_itself_sum,
-      [
+      lesson_from: app_code_lesson_statement_name_itself_sum,
+      remembered: [
         "we can add to what a name (",
         name_first,
         ") holds (",
@@ -47,7 +47,7 @@ export function app_code_lesson_statement_name_divide_assign_pair() {
       lines_long,
       long,
       short,
-    );
+    });
   }
   function batch() {
     "pairs that divide with nothing left over, with the short line";

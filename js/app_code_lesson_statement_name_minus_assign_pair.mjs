@@ -31,11 +31,11 @@ export function app_code_lesson_statement_name_minus_assign_pair() {
     let code2 = js_code_let_statement(name_last, 2);
     let statement = js_code_console_log_statement(name_first);
     let lines_long = [code, code2, long, statement];
-    app_code_lesson_statement_name_shorter_above(
+    app_code_lesson_statement_name_shorter_above({
       root,
       context,
-      app_code_lesson_statement_name_itself_sum,
-      [
+      lesson_from: app_code_lesson_statement_name_itself_sum,
+      remembered: [
         "we can add to what a name (",
         name_first,
         ") holds (",
@@ -47,7 +47,7 @@ export function app_code_lesson_statement_name_minus_assign_pair() {
       lines_long,
       long,
       short,
-    );
+    });
   }
   function batch() {
     "pairs whose first number is the larger, so nothing drops below zero, with the short line";

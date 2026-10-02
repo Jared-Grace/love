@@ -5,7 +5,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_code_lines_writes_out_watched } from "./app_code_code_lines_writes_out_watched.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_code_lesson_statement_name_shorter_above(
+export function app_code_lesson_statement_name_shorter_above({
   root,
   context,
   lesson_from,
@@ -13,11 +13,11 @@ export function app_code_lesson_statement_name_shorter_above(
   lines_long,
   long,
   short,
-) {
+}) {
   "$plain remembered";
   "$plain long";
   "$plain short";
-  arguments_assert(arguments, 7);
+  arguments_assert(arguments, 1);
   ("the boxes read before the first question of a lesson on a shorter way to write a line: the line as an earlier lesson taught it, in a whole program beside what it writes out, and then the same program with that line written the short way, writing out the same");
   ("THE SAME PROGRAM TWICE, with one line changed, so the same output under both is the claim that the two lines do the same thing. Said in words alone, a learner would have to take it on trust; drawn, they can check it.");
   ("The short line is never called a new thing, only a shorter way to write one they already know, because that is all it is - and a learner told so has one fact to learn rather than a new kind of line.");

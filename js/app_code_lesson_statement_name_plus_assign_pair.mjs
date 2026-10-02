@@ -27,15 +27,21 @@ export function app_code_lesson_statement_name_plus_assign_pair() {
     let code2 = js_code_let_statement(name_last, 3);
     let statement = js_code_console_log_statement(name_first);
     let lines_long = [code, code2, long, statement];
-    app_code_lesson_statement_name_shorter_above(
+    app_code_lesson_statement_name_shorter_above({
       root,
       context,
-      app_code_lesson_statement_name_itself_sum,
-      ["we can add to what a name (", name_first, ") holds (", long, "):"],
+      lesson_from: app_code_lesson_statement_name_itself_sum,
+      remembered: [
+        "we can add to what a name (",
+        name_first,
+        ") holds (",
+        long,
+        "):",
+      ],
       lines_long,
       long,
       short,
-    );
+    });
   }
   function batch() {
     "the long lesson's pairs of numbers, with the short line";
