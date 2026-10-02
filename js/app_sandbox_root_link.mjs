@@ -1,3 +1,4 @@
+import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
 import { html_style_padding } from "./html_style_padding.mjs";
 import { html_style_background } from "./html_style_background.mjs";
 import { html_border_radius } from "./html_border_radius.mjs";
@@ -21,7 +22,7 @@ export function app_sandbox_root_link() {
   html_style_padding(link, "0.25em 0.6em");
   html_style_background(link, "rgba(255,255,255,0.9)");
   html_style_set(link, "color", "#222");
-  html_border_radius(link, "0.4em");
+  html_border_radius(link, app_shared_content_edge_gap());
   html_style_font_size(link, "0.9em");
   html_style_set(link, "text-decoration", "none");
   return link;
