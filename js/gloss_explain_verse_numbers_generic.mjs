@@ -30,12 +30,7 @@ import { list_unique } from "./list_unique.mjs";
 export function gloss_explain_verse_numbers_generic(
   explain,
   verse_numbers,
-  markers,
-  joiner,
-  cancellers,
-  lambda_spell,
-  shutters,
-  chapter_markers,
+  { markers, joiner, cancellers, lambda_spell, shutters, chapter_markers },
 ) {
   "The verses of its own chapter that one word explanation names, read in whatever language the explanation was written in, as a list with nothing said twice.";
   "$plain markers";
@@ -71,7 +66,7 @@ export function gloss_explain_verse_numbers_generic(
   "The number is read with the chapter's own verse spellings, which is the only table here, and that is a real limit written down rather than hidden: a chapter named past the end of this chapter's verses cannot be read, so chapter one hundred and nineteen inside a chapter of twelve verses arms nothing and its citation stands accused as before. It also means Urdu arms almost never, because that store spells a verse in its ten digit shapes and a chapter in words - chapter twelve's verse, forty-five times - and the digit table cannot read a word. A second table of written numbers would answer both, and it is the same second table this reading has turned down twice already, for the same reason: two tables saying the same thing are free to come to disagree.";
   "ONE CHAPTER WORD SHUTS ONE MARKER AND NOTHING MORE. A citation names one address, and the sentence after it is about this chapter again, so an arm that outlived its marker would go on swallowing true claims for the rest of a long explanation. It is spent whether it shut anything or not.";
   "The two other readings were written out and turned down. Telling this chapter's own number from any other would keep the handful of citations a writer makes to the chapter they are standing in - eight of them across Judges seven, eight and nine on 2026-10-02 - and it needs the chapter's number threaded through four readings that each take an exact count of arguments, and through both of the Cebuano callers; the reading next door turned the same threading down for the same cost, and what it buys here is smaller than it looks, because a self-citation is only ever accused when the writer got their own verse wrong. The other was to leave this alone and mend the sentences, which would ask an author to stop writing the comparison the explanation is for.";
-  arguments_assert(arguments, 8);
+  arguments_assert(arguments, 3);
   let none = list_empty_is(verse_numbers);
   if (none) {
     let nothing = [];

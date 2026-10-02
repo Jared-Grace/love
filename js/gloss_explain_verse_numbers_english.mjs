@@ -14,15 +14,13 @@ export function gloss_explain_verse_numbers_english(explain, verse_numbers) {
   let cancellers = ["back", "ago", "earlier", "later"];
   let shutters = ["the", "this", "few", "several", "many", "some"];
   let chapter_markers = ["chapter", "chapters"];
-  let r = gloss_explain_verse_numbers_generic(
-    explain,
-    verse_numbers,
+  let r = gloss_explain_verse_numbers_generic(explain, verse_numbers, {
     markers,
     joiner,
     cancellers,
-    text_number_to_words,
+    lambda_spell: text_number_to_words,
     shutters,
     chapter_markers,
-  );
+  });
   return r;
 }

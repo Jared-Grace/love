@@ -18,15 +18,13 @@ export function gloss_explain_verse_numbers_urdu(explain, verse_numbers) {
   let cancellers = ["کے", "کا", "کی"];
   let shutters = [];
   let chapter_markers = ["باب"];
-  let r = gloss_explain_verse_numbers_generic(
-    explain,
-    verse_numbers,
+  let r = gloss_explain_verse_numbers_generic(explain, verse_numbers, {
     markers,
     joiner,
     cancellers,
-    text_digits_urdu,
+    lambda_spell: text_digits_urdu,
     shutters,
     chapter_markers,
-  );
+  });
   return r;
 }
