@@ -1,11 +1,11 @@
-import { html_body_div_page_dark } from "./html_body_div_page_dark.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { html_body_div_page_dark } from "./html_body_div_page_dark.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_shared_text_quiet } from "./app_shared_text_quiet.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { api_read } from "./api_read.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
@@ -13,7 +13,7 @@ import { text_from_number } from "./text_from_number.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { lyric_video_song_review_card } from "./lyric_video_song_review_card.mjs";
-import { each } from "./each.mjs";
+import { each_async } from "./each_async.mjs";
 import { html_button_list } from "./html_button_list.mjs";
 export async function lyric_video_pictures_review_preview() {
   "The screen for going through one psalm's background pictures one after another, on the sandbox app at hash lyric_video_pictures_review.";
@@ -45,10 +45,11 @@ export async function lyric_video_pictures_review_preview() {
     let counted = text_from_number(count);
     let said = text_combine_multiple([counted, " pictures in ", name]);
     html_text_set(told, said);
+    ("THE CARDS ARE DRAWN ONE AT A TIME AND WAITED FOR, BECAUSE EACH ONE FETCHES ITS OWN DRAWING. Started all at once and waited for by nobody, they finished in whatever order the network handed them back, so the pictures landed on the page out of the order the chapter shows them in - and the one thing this screen is for is reading them in that order. A card that failed to fetch also went off outside every catch and the screen said nothing about it.");
     async function card(picture) {
       await lyric_video_song_review_card(cards, lines, picture);
     }
-    each(pictures, card);
+    await each_async(pictures, card);
   }
   function name_text(name) {
     return name;

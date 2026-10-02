@@ -1,16 +1,16 @@
-import { lyric_video_song_buttons } from "./lyric_video_song_buttons.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_shared_text_quiet } from "./app_shared_text_quiet.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { api_read } from "./api_read.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { lyric_video_song_review_card } from "./lyric_video_song_review_card.mjs";
-import { each } from "./each.mjs";
+import { each_async } from "./each_async.mjs";
+import { lyric_video_song_buttons } from "./lyric_video_song_buttons.mjs";
 export async function lyric_video_song_review_preview() {
   "The screen for going through a song's background pictures one after another, on the sandbox app at hash lyric_video_song_review.";
   "EVERY PICTURE IS ON THE PAGE AT ONCE, WHICH IS WHAT SEPARATES THIS FROM WATCHING THE FILM. Judging a drawing against the words sung over it is the film's question, and the film answers it in the order and at the speed it was rendered at; going back to the one that looked wrong means finding that second again. Here the pictures are a list that can be scrolled up as easily as down, and two drawings meant to sit next to each other can be looked at next to each other.";
@@ -38,10 +38,11 @@ export async function lyric_video_song_review_preview() {
     }
     let pictures = property_get(document, "pictures");
     let lines = property_get(document, "lines");
+    ("THE CARDS ARE DRAWN ONE AT A TIME AND WAITED FOR, BECAUSE EACH ONE FETCHES ITS OWN DRAWING. Started all at once and waited for by nobody, they finished in whatever order the network handed them back, so the pictures landed on the page out of the order the song shows them in - and the one thing this screen is for is reading them in that order. A card that failed to fetch also went off outside every catch and the screen said nothing about it.");
     async function card(picture) {
       await lyric_video_song_review_card(cards, lines, picture);
     }
-    each(pictures, card);
+    await each_async(pictures, card);
   }
   await lyric_video_song_buttons(chosen, song_show);
   return told;
