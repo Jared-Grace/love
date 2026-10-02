@@ -16,6 +16,7 @@ export function app_ceb_bible_gloss_roots_store_outvoted_chapters_word_read(
   chapters_touched,
   rows,
 ) {
+  "Hands back the reader for one Cebuano word: where the chapters gave that word more than one root, and the dictionary names a root that at least one chapter agrees with, it records every place that said a different root - the chapter, both roots, and how the two are related - so a word nobody agreed about at all is left out rather than counted as a disagreement with the dictionary.";
   arguments_assert(arguments, 4);
   function word_read(word) {
     let places = property_get(said, word);

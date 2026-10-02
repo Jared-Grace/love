@@ -10,6 +10,7 @@ import { each } from "./each.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_add } from "./list_add.mjs";
 export function app_ceb_bible_gloss_roots_store_outvoted_claims_key_read(rows) {
+  "Gathers the disagreeing places into one claim for each word and pair of roots, holding the chapters that claim was seen in, and hands back the keys, the claims themselves, and the reader that writes each claim's chapter count onto it - so the same disagreement repeated across a book is read as one thing said many times rather than as many things.";
   arguments_assert(arguments, 1);
   let claims = {};
   function row_read(row) {

@@ -20,6 +20,7 @@ export function app_ceb_bible_gloss_roots_claimed_vouching_corroborated_root_rea
   once_books,
   once_listed,
 }) {
+  "Hands back the reader for one stated-root row: it sorts the root into unvouched, vouched by one dictionary word, or vouched by more than one, counts each class, counts the chapters the claim was seen in separately for the poetry books and for the rest, and lists in full the roots exactly one word vouches for, because those are the ones a person has to look at.";
   arguments_assert(arguments, 1);
   function claim_note(class_name, chapter_codes) {
     function chapter_note(code) {
