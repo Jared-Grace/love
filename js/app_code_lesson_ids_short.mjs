@@ -256,6 +256,7 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_seat_less: text_frozen("name_seat_less"),
     app_code_lesson_statement_name_king_steps: text_frozen("name_king_steps"),
     app_code_lesson_statement_name_grid_inside: text_frozen("name_grid_inside"),
+    app_code_lesson_statement_name_clock_back: text_frozen("name_clock_back"),
     app_code_lesson_statement_name_remainder: text_frozen("name_remainder"),
     app_code_lesson_statement_name_greater: text_frozen("name_greater"),
     app_code_lesson_statement_name_smaller_equal:

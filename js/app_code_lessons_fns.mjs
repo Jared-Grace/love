@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_clock_back } from "./app_code_lesson_statement_name_clock_back.mjs";
 import { app_code_lesson_statement_name_grid_inside } from "./app_code_lesson_statement_name_grid_inside.mjs";
 import { app_code_lesson_statement_name_king_steps } from "./app_code_lesson_statement_name_king_steps.mjs";
 import { app_code_lesson_statement_name_seat_less } from "./app_code_lesson_statement_name_seat_less.mjs";
@@ -435,6 +436,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_seat_less,
     app_code_lesson_statement_name_king_steps,
     app_code_lesson_statement_name_grid_inside,
+    app_code_lesson_statement_name_clock_back,
   ];
   return fns;
 }
