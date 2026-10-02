@@ -8,6 +8,7 @@ import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { tally_number_add } from "./tally_number_add.mjs";
 import { each } from "./each.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_stopped_short_books_tally() {
+  "Reads the dictionary once and hands back the empty tallies a walk over the claimed roots fills, together with the test that says whether a spelling is vouched for and the counter that adds a claim onto the book each of its chapters belongs to - the walk itself is somebody else's, and what is handed over is the room it writes into.";
   arguments_assert(arguments, 0);
   let known = await binisaya_words_known();
   let vouched = binisaya_words_known_roots_named(known);
