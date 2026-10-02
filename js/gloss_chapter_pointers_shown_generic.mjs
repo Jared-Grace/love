@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { less_than } from "./less_than.mjs";
 import { gloss_chapter_passages_collect_all } from "./gloss_chapter_passages_collect_all.mjs";
 import { property_get } from "./property_get.mjs";
@@ -8,8 +9,6 @@ import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
 import { gloss_passage_entries_pointers_filled } from "./gloss_passage_entries_pointers_filled.mjs";
 import { list_size } from "./list_size.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { not } from "./not.mjs";
-import { equal } from "./equal.mjs";
 import { gloss_entry_word_read } from "./gloss_entry_word_read.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_get } from "./list_get.mjs";
@@ -38,8 +37,7 @@ export async function gloss_chapter_pointers_shown_generic(chapter_code, fn) {
       let row = list_get(filled, place);
       let before = property_get_or_null(entry, key);
       let after = property_get_or_null(row, key);
-      let b = equal(before, after);
-      let changed = not(b);
+      let changed = equal_not(before, after);
       if (changed) {
         let word = gloss_entry_word_read(entry);
         let r = {
