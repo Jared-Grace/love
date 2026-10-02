@@ -22,7 +22,6 @@ import { app_code_explain_number_colored } from "./app_code_explain_number_color
 import { app_code_square_grid } from "./app_code_square_grid.mjs";
 import { app_code_arrow_turned_draw } from "./app_code_arrow_turned_draw.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_grid_steps } from "./app_code_lesson_statement_name_grid_steps.mjs";
@@ -92,6 +91,7 @@ export function app_code_lesson_statement_name_king_steps() {
   let column_color = app_code_highlight_color_fourth();
   let rows_count_color = app_code_highlight_color_second();
   let columns_count_color = app_code_highlight_color_fifth();
+  let end_color = app_code_highlight_color();
   let rows_worked = app_code_explain_abs_apart_colored(
     "4",
     "1",
@@ -109,14 +109,21 @@ export function app_code_lesson_statement_name_king_steps() {
   ("a count such as the 2 diagonal steps is not a position, so it is a code chip with no colour of its own, as the counts are in Grid steps");
   let plain = app_shared_color_code_background();
   let count_two = app_code_explain_number_colored("2", plain);
-  ("Math.max(3, 2) === 3 as one code chip, the count of rows and the count of columns in the colours the lines above give them, asked by the human 2026-10-02; the answer is the steps, a count of neither, so it keeps the code background");
+  ("Math.max(3, 2) === 3 as one code chip, the count of rows and the count of columns in the colours the lines above give them, asked by the human 2026-10-02; the answer is the steps, so it wears the blue of the squares it counts");
   let max_worked = app_code_explain_code_colored(
     [max_name, "(", "3", ", ", "2", ") === ", "3"],
-    [plain, plain, rows_count_color, plain, columns_count_color, plain, plain],
+    [
+      plain,
+      plain,
+      rows_count_color,
+      plain,
+      columns_count_color,
+      plain,
+      end_color,
+    ],
   );
   let rows_word = app_code_explain_word_colored("rows", row_color);
   let columns_word = app_code_explain_word_colored("columns", column_color);
-  let end_color = app_code_highlight_color();
   let row_word = app_code_explain_word_colored("row", row_color);
   let column_word = app_code_explain_word_colored("column", column_color);
   let draw = app_code_explain_number_colored("1", row_color);
@@ -197,7 +204,11 @@ export function app_code_lesson_statement_name_king_steps() {
   function travel_said(box) {
     "the count of the filled squares, with the words blue squares coloured as the squares are filled, as Grid steps says it";
     let line = html_div(box);
-    html_cycle_code(line, ["And we travel ", "3", " "]);
+    ("the count wears the blue of the squares it counts, asked by the human 2026-10-02: the steps are the blue squares, so the steps wear blue wherever they appear, in the writing, the worked line and the program");
+    html_span_text(line, "And we travel ");
+    let count = app_code_explain_number_colored("3", end_color);
+    count(line);
+    html_span_text(line, " ");
     let blue = app_code_explain_word_colored("blue squares", end_color);
     blue(line);
     html_span_text(line, " total");
@@ -246,6 +257,36 @@ export function app_code_lesson_statement_name_king_steps() {
     columns_word,
     ":",
   ]);
+  let draw5 = app_code_explain_number_colored("3", end_color);
+  let draw8 = app_code_explain_said([
+    "But how can we calculate the ",
+    draw5,
+    " steps from just the positions?",
+  ]);
+  let draw24 = app_code_explain_number_colored(r1, row_color);
+  let draw25 = app_code_explain_number_colored(c1, column_color);
+  let draw26 = app_code_explain_said([
+    "Suppose the first square is at ",
+    row_word,
+    " ",
+    draw24,
+    ", ",
+    column_word,
+    " ",
+    draw25,
+  ]);
+  let draw27 = app_code_explain_number_colored(r2, row_color);
+  let draw28 = app_code_explain_number_colored(c2, column_color);
+  let draw29 = app_code_explain_said([
+    "And the second square is at ",
+    row_word,
+    " ",
+    draw27,
+    ", ",
+    column_word,
+    " ",
+    draw28,
+  ]);
   let lesson = app_code_lesson_statement_formula({
     words: "King steps on a grid",
     title_code: line_steps,
@@ -257,7 +298,7 @@ export function app_code_lesson_statement_name_king_steps() {
     remember_parts: ["we can find how many steps between two squares:"],
     remember_lines,
     explain: [
-      ["Now suppose we can also move diagonally, as a king moves in chess"],
+      ["Now suppose we can also move diagonally, as a king ♚ moves in chess"],
       ["You can move one square at a time in any direction:"],
       moves_draw,
       question_said,
@@ -271,7 +312,7 @@ export function app_code_lesson_statement_name_king_steps() {
       ],
       travel_said,
       app_code_explain_container_next,
-      ["But how can we calculate the ", "3", " steps from just the positions?"],
+      draw8,
       rows_said,
       rows_worked,
       columns_said,
@@ -282,16 +323,19 @@ export function app_code_lesson_statement_name_king_steps() {
       draw23,
       max_worked,
       app_code_explain_container_next,
-      ["Suppose the first square is at row ", r1, ", column ", c1],
-      ["And the second square is at row ", r2, ", column ", c2],
+      draw26,
+      draw29,
       [
-        "Here is code that finds how many steps a king takes between the two squares:",
+        "Here is code that finds how many steps a king ♚ takes between the two squares:",
       ],
     ],
     decoys: null,
     example_pointers: [
       [["3", "0"], row_color],
       [["1", "5"], column_color],
+      [[r1, r2], row_color],
+      [[c1, c2], column_color],
+      [[steps, "4"], end_color],
       [[r], rows_count_color],
       [[c], columns_count_color],
     ],

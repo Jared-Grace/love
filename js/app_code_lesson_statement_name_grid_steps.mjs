@@ -9,7 +9,6 @@ import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_arrow_turned_draw } from "./app_code_arrow_turned_draw.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_arrow_inline } from "./app_code_arrow_inline.mjs";
@@ -84,6 +83,7 @@ export function app_code_lesson_statement_name_grid_steps() {
   let column_color = app_code_highlight_color_fourth();
   let rows_count_color = app_code_highlight_color_second();
   let columns_count_color = app_code_highlight_color_fifth();
+  let end_color = app_code_highlight_color();
   let rows_worked = app_code_explain_abs_apart_colored(
     "4",
     "1",
@@ -99,10 +99,10 @@ export function app_code_lesson_statement_name_grid_steps() {
     columns_count_color,
   );
   let plain = app_shared_color_code_background();
-  ("3 + 2 === 5 as one code chip, the count of rows and the count of columns in the colours the lines above give them, asked by the human 2026-10-02; the answer is the steps, a count of neither, so it keeps the code background, as in King steps");
+  ("3 + 2 === 5 as one code chip, the count of rows and the count of columns in the colours the lines above give them, asked by the human 2026-10-02; the answer is the steps, so it wears the blue of the squares it counts, as in King steps");
   let total_worked = app_code_explain_code_colored(
     ["3", " " + plus + " ", "2", " " + same + " ", "5"],
-    [rows_count_color, plain, columns_count_color, plain, plain],
+    [rows_count_color, plain, columns_count_color, plain, end_color],
   );
   let row_word = app_code_explain_word_colored("row", row_color);
   let column_word = app_code_explain_word_colored("column", column_color);
@@ -161,7 +161,6 @@ export function app_code_lesson_statement_name_grid_steps() {
     v14,
     " is",
   ]);
-  let end_color = app_code_highlight_color();
   function moves_draw(box) {
     "you in the middle square, an arrow in each square one step away, asked by the human 2026-10-01; the arrows are the drawn ones the code app uses elsewhere, which centre exactly where a typed arrow sits low";
     let v = app_code_arrow_turned_draw(270);
@@ -191,7 +190,11 @@ export function app_code_lesson_statement_name_grid_steps() {
   function travel_said(box) {
     "the count of the filled squares, with the words blue squares coloured as the squares are filled, asked by the human 2026-10-01, so the sentence points at the picture above it; bold, because coloured thin letters read faintly";
     let line = html_div(box);
-    html_cycle_code(line, ["And we travel ", "5", " "]);
+    ("the count wears the blue of the squares it counts, asked by the human 2026-10-02: the steps are the blue squares, so the steps wear blue wherever they appear, in the writing, the worked line and the program");
+    html_span_text(line, "And we travel ");
+    let count = app_code_explain_number_colored("5", end_color);
+    count(line);
+    html_span_text(line, " ");
     let blue = app_code_explain_word_colored("blue squares", end_color);
     blue(line);
     html_span_text(line, " total");
@@ -207,6 +210,30 @@ export function app_code_lesson_statement_name_grid_steps() {
       [4, 3, "🏁", end_color],
     ]);
   }
+  let draw = app_code_explain_number_colored(r, row_color);
+  let draw2 = app_code_explain_number_colored(c, column_color);
+  let draw3 = app_code_explain_said([
+    "Suppose the first square is at ",
+    row_word,
+    " ",
+    draw,
+    ", ",
+    column_word,
+    " ",
+    draw2,
+  ]);
+  let draw4 = app_code_explain_number_colored(r2, row_color);
+  let draw5 = app_code_explain_number_colored(c2, column_color);
+  let draw6 = app_code_explain_said([
+    "And the second square is at ",
+    row_word,
+    " ",
+    draw4,
+    ", ",
+    column_word,
+    " ",
+    draw5,
+  ]);
   let lesson = app_code_lesson_statement_formula({
     words: "Steps on a grid",
     title_code: line_steps,
@@ -250,14 +277,17 @@ export function app_code_lesson_statement_name_grid_steps() {
       ["Each step moves one row or one column, so we add them together:"],
       total_worked,
       app_code_explain_container_next,
-      ["Suppose the first square is at row ", r, ", column ", c],
-      ["And the second square is at row ", r2, ", column ", c2],
+      draw3,
+      draw6,
       ["Here is code that finds how many steps between the two squares:"],
     ],
     decoys: null,
     example_pointers: [
       [["3", "0"], row_color],
       [["1", "5"], column_color],
+      [[r, r2], row_color],
+      [[c, c2], column_color],
+      [[steps, "7"], end_color],
       [[rows], rows_count_color],
       [[cols], columns_count_color],
     ],
