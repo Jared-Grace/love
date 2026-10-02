@@ -1,9 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { g_generate_upload_drifted } from "./g_generate_upload_drifted.mjs";
+import { gloss_chapters_republish_wanted_generic } from "./gloss_chapters_republish_wanted_generic.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_concat } from "./list_concat.mjs";
-import { list_includes_curried } from "./list_includes_curried.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { list_size } from "./list_size.mjs";
 export async function gloss_chapters_republish_generic(
@@ -15,26 +12,20 @@ export async function gloss_chapters_republish_generic(
   "Publishing a chapter that has never been published is a different question and is asked elsewhere. This one exists because the command that finds its own set asks which chapters are missing from the bucket, and a chapter that is up there but out of date is not missing - so a repair made in the store after publishing reaches nobody, and nothing anywhere says so.";
   "★ A STORE THAT IS PUT RIGHT AFTER PUBLISHING IS A SILENT DIVERGENCE, AND EVERY CHECK OVER IT READS GREEN. The gates that ask whether a chapter is sound read the store under the human's own folder, and the gate that asks whether anything is waiting to go up reads which chapters are missing from the bucket. A chapter that is in both places, sound in one and stale in the other, satisfies all of them. So nothing anywhere complains, and the reader keeps the old wording for as long as nobody thinks of it.";
   "★ THE SHARED BODY IS WHAT MAKES THE SECOND AND THIRD STORE GET THIS AT ALL. Measured 2026-10-01: one of three explained Bibles had a command to do this, and the other two did not, which is the ordinary way a fix lands - it is written where the fault was noticed. The fault is in the shape of publishing, not in any one alphabet, so writing it once and handing in the two halves is what stops the next two stores being found the same way.";
-  "The set starts from the published chapters rather than from every chapter in the store, which is what keeps this from being a way of publishing something by accident. Every chapter it touches is one somebody already decided a reader should have; all that changes is which version of it they get.";
-  "★ AND IT IS NARROWED TO THE CHAPTERS THAT ACTUALLY CHANGED, WHICH IS SAFE ONLY BECAUSE NOT KNOWING COUNTS AS CHANGED. A chapter the record cannot account for is sent, exactly as a chapter known to differ is. So before any records exist every published chapter is unaccounted-for and the set is the whole of what it used to be - the narrowing can make this do less work and can never make it do less than it promises.";
-  "★ IT NOW ANSWERS HONESTLY WHEN THE REPAIR WAS FORGOTTEN, WHICH IT USED TO HIDE. Run before the repair that was meant to come first, the old body sent every chapter and reported every chapter republished, which reads as the fault having been carried up when it was the fault that was carried up. This one finds nothing changed and says `republished: 0`, which is the truth and is a question rather than a reassurance.";
-  "A chapter that is published and no longer in the store is sent by neither reading, because both readings are built from the store's own files. That is right - there is nothing to send - but it means this is not a way of noticing that a store file has gone missing.";
+  "★ THE DECIDING IS NOT DONE HERE, AND THAT IS WHAT MAKES IT CHECKABLE. The sending half cannot be tried out - a chapter cannot be sent a little - so the choosing stands under its own name and can be asked on its own, in under a second, without anything leaving the machine. This is the half that does the irreversible thing and it holds no judgment of its own.";
+  "★ THE NARROWING IS SAFE ONLY BECAUSE NOT KNOWING COUNTS AS CHANGED. A chapter the record cannot account for is sent, exactly as a chapter known to differ is. So before any records exist every published chapter is unaccounted for and the set is the whole of what it used to be - the narrowing can make this do less work and can never make it do less than it promises.";
+  "★ IT NOW ANSWERS HONESTLY WHEN THE REPAIR WAS FORGOTTEN, WHICH IT USED TO HIDE. Run before the repair that was meant to come first, the old body sent every chapter and reported every chapter republished, which reads as the fault having been carried up when it was the fault that was carried up. This one finds nothing changed and says nothing republished, which is the truth and is a question rather than a reassurance.";
   "They go one at a time rather than together, so a chapter that fails to arrive is one chapter and the rest still go.";
   "WHAT GOES UP IS THE STORE AS IT STANDS, SO THIS CARRIES NO REPAIR OF ITS OWN. Whatever command puts the store right has to be run first, and which command that is depends on the store, so each caller says it rather than this.";
   arguments_assert(arguments, 3);
-  let chapter_codes = await chapters_uploaded();
-  let drift = await g_generate_upload_drifted(fn);
-  let drifted = property_get(drift, "drifted");
-  let unrecorded = property_get(drift, "unrecorded");
-  let stale = list_concat(drifted, unrecorded);
-  let stale_is = list_includes_curried(stale);
-  let wanted = list_filter(chapter_codes, stale_is);
+  let r2 = await gloss_chapters_republish_wanted_generic(fn, chapters_uploaded);
+  let wanted = property_get(r2, "wanted");
   await list_map_async(wanted, chapter_upload_stored);
   let r = {
     republished: list_size(wanted),
-    published: list_size(chapter_codes),
-    drifted: list_size(drifted),
-    unaccounted: list_size(unrecorded),
+    published: property_get(r2, "published"),
+    drifted: property_get(r2, "drifted"),
+    unaccounted: property_get(r2, "unaccounted"),
     chapter_codes: wanted,
   };
   return r;

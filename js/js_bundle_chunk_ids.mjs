@@ -1,13 +1,18 @@
 import { js_bundle_chunk_ids_regex } from "./js_bundle_chunk_ids_regex.mjs";
-import { list_unique } from "./list_unique.mjs";
-import { null_is } from "./null_is.mjs";
 import { text_regex_match } from "./text_regex_match.mjs";
+import { null_is } from "./null_is.mjs";
+import { number_from_text } from "./number_from_text.mjs";
+import { text_from_number } from "./text_from_number.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_unique } from "./list_unique.mjs";
 export function js_bundle_chunk_ids(text) {
   "$plain text";
   "Every extra script a built app will send for while it is running, named by the number the build gave it.";
   "A build is free to cut part of an app out into a script of its own, left behind rather than carried, and to fetch it only when it is first wanted. The built app then carries the number of that script written into it, and this reads those numbers back out.";
   "Asking the built app is the only way to know. The number is the build's own choice and is not written down anywhere else, so two builds of one unchanged app can name the same piece differently and both be right.";
   "The same script is often sent for from more than one place, so each number is answered once.";
+  "★ EVERY NUMBER IS PUT BACK INTO ITS PLAIN FORM BEFORE IT IS ANSWERED, because the shortener is free to write a round one in whatever way is shortest and the file it names is still called by its digits. Answering 1e3 would name a file called 1e3 and that file is not there, so the piece would look missing and dead at once. The shortening is undone here rather than where the shape is spelled, because the shape can only say what a number may look like and this is the only place that knows the answer has to be a name.";
+  "Putting them in their plain form first is also what lets the same piece written two ways be answered once.";
   let regex = js_bundle_chunk_ids_regex();
   let found = text_regex_match(text, regex);
   let none = null_is(found);
@@ -15,6 +20,12 @@ export function js_bundle_chunk_ids(text) {
     let r = [];
     return r;
   }
-  let ids = list_unique(found);
+  function id_plain(written) {
+    let number = number_from_text(written);
+    let decimal = text_from_number(number);
+    return decimal;
+  }
+  let plain = list_map(found, id_plain);
+  let ids = list_unique(plain);
   return ids;
 }

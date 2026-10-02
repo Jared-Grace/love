@@ -1,6 +1,8 @@
 export function js_bundle_chunk_ids_regex() {
   "The shape of a built app sending for one of its own extra scripts, written so that reading it back gives the number and nothing around it.";
   "What sits either side is asked for but not kept, which is what the two bracketed question marks do. Kept, every answer would have to be trimmed of the same wrapping again, and the trimming is the part that goes wrong.";
-  let regex = /(?<=__webpack_require__\.e\()\d+(?=\))/g;
+  "★ WHAT THE SENDING IS CALLED IS NOT SPELLED THE SAME EVERYWHERE IN ONE BUILD. The outermost script keeps the long name the compiler writes by hand, and every piece cut out of the app gets the same thing handed to it as an argument, which the shortener then renames to a single letter. So only the dot and the letter after it can be insisted on; insisting on the long name reads the outermost script and then reads nothing at all in any of the pieces, and every script sent for only from inside another piece looks like one nothing sends for. Measured on the 2nd of October on one app's four hundred and forty five pieces: forty were named in the outermost script and the remaining four hundred and five each named from inside a piece, so the whole four hundred and five were being called dead while the app was using every one of them.";
+  "★ A NUMBER IS NOT ALWAYS WRITTEN IN DIGITS. The shortener writes a round number the shortest way it can, so a thousand comes out as 1e3, and the file it names is still called 1000. Hence the optional tail: the number is read in whatever way it was written, and whoever reads it back is the one who has to put it in its plain form.";
+  let regex = /(?<=\.e\()\d+(?:e\d+)?(?=\))/g;
   return regex;
 }
