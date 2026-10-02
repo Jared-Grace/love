@@ -1,8 +1,8 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { qa_commit_named_at } from "./qa_commit_named_at.mjs";
 import { property_get } from "./property_get.mjs";
 import { qa_commit_judged_gates_sorted } from "./qa_commit_judged_gates_sorted.mjs";
 import { qa_gates_code_only } from "./qa_gates_code_only.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_filter_not } from "./list_filter_not.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -22,8 +22,7 @@ export async function qa_app_commit_gate_run_at_reach(search, commit, reach) {
   ("Those gates are named in the answer rather than only counted out of it. Setting one aside is a decision somebody may want to argue with, and an answer saying only that the app may ship gives them nothing to argue against; it was gathered and then dropped on the floor here until 2026-10-02, which read as the sorting being done and told nobody what it had decided.");
   let code_only_names = qa_gates_code_only();
   function code_only_is(entry) {
-    let gate = property_get(entry, "gate");
-    let b = list_includes(code_only_names, gate);
+    let b = property_in_list(entry, "gate", code_only_names);
     return b;
   }
   let code_only = list_filter(judged_blocking, code_only_is);
