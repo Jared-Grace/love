@@ -1,3 +1,4 @@
+import { multiply_divide } from "./multiply_divide.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
@@ -10,8 +11,7 @@ export function clock_face_svg(hour, minute, second) {
   let numbers = "";
   for (let n = 1; less_than_equal(n, 12); n++) {
     let left = multiply(n, 30);
-    let top = multiply(left, Math.PI);
-    let turn = divide(top, 180);
+    let turn = multiply_divide(left, Math.PI, 180);
     let right = Math.sin(turn);
     let x = multiply(38, right).toFixed(2);
     let right2 = Math.cos(turn);
