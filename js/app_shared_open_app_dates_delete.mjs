@@ -1,8 +1,8 @@
+import { property_equals } from "./property_equals.mjs";
 import { retry_standard } from "./retry_standard.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { firebase_bucket } from "./firebase_bucket.mjs";
 import { app_shared_open_entries } from "./app_shared_open_entries.mjs";
-import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
@@ -15,8 +15,7 @@ export async function app_shared_open_app_dates_delete(app, dates) {
   let entries = await app_shared_open_entries();
   let removed = 0;
   for (let entry of entries) {
-    let left = property_get(entry, "app");
-    let same_app = equal(left, app);
+    let same_app = property_equals(entry, "app", app);
     let item = property_get(entry, "date");
     let named_day = list_includes(days, item);
     if (not(same_app && named_day)) {
