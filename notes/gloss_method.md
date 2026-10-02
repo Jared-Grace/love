@@ -68,6 +68,7 @@ That single fact governs everything:
 
 - **Define a grammar term the first time it appears in the passage**, in the same sentence that uses it. Not "it is in the dative case" but "it is in the dative case, which is the form Greek uses to mark where or when something happens."
 - After it is defined once in this passage, you may use it bare. The passage is the scope, because the passage is one screen.
+- **A verse number you name means the whole passage that verse belongs to** — again because the passage is one screen. A passage may cover two or three verses, and the reader sent to verse five sees every word of the screen verse five sits on. So "it came in verse five" is true when the word stands anywhere on that screen, and the checker reads it that way (`gloss_passages_verse_claims_all`). Measured 2026-10-02: ninety-five of the Urdu store's two hundred and thirty-nine accused sentences were only this disagreement, every one of them on a multi-verse passage.
 - Never use a term you did not define and would not define. If a distinction cannot be explained in one clause, it is not carrying its weight — cut it.
 - Say what the grammar **is doing here**, not what it can do in general. "Imperfect tense" is a label. "The imperfect tense shows continuous action in the past — it was going on, not finished" is an explanation.
 

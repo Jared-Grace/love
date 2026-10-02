@@ -1,5 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
+import { property_set } from "./property_set.mjs";
+import { each } from "./each.mjs";
 import { gloss_explain_verse_number_words } from "./gloss_explain_verse_number_words.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { object_property_names_numbers_sorted } from "./object_property_names_numbers_sorted.mjs";
@@ -9,15 +11,15 @@ import { text_empty_is } from "./text_empty_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_intersect_empty_not_is } from "./list_intersect_empty_not_is.mjs";
 import { list_filter } from "./list_filter.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_add } from "./list_add.mjs";
-import { each } from "./each.mjs";
 import { gloss_passages_entries_collect_generic } from "./gloss_passages_entries_collect_generic.mjs";
 export function gloss_passages_verse_claims_all(
   passages,
   text_index,
   word_keys_read,
 ) {
-  "Every verse a word explanation in a chapter names, the word that explanation says stands there, whether or not the verse holds it, and beside each one every verse of the chapter that does.";
+  "Every verse a word explanation in a chapter names, the word that explanation says stands there, whether or not the passage that verse belongs to holds it, and beside each one every verse of the chapter that does.";
   "$plain text_index";
   "the index says which of a passage's texts is the wording being explained, and it names a place in a list rather than anything that runs.";
   "The reading beside this one keeps only the claims that come back wrong, which is the half worth mending. This one keeps them all, and that is what gives the wrong ones a denominator. Six wrong claims is a store in good order if two hundred were made and a detector that has quietly stopped firing if seven were.";
@@ -38,7 +40,19 @@ export function gloss_passages_verse_claims_all(
   "The verses come back as numbers in counting order rather than in the order the record happened to fill, because a reader is going to say the word moved one verse along, and that is a thing you can only see when they are counted.";
   "★ THE VERSES NAMED ARE THE ONES THE WORD READING ITSELF FOUND, RATHER THAN A SECOND READING OF THE SAME SENTENCE. Both answers are the same set - the word reading cuts the explanation at its punctuation and every mark it cuts on already ended a number's run in the reading underneath, so cutting cannot join two numbers or split one. Being the same set is exactly why only one of them should be asked. Two spellings of one question do not break when they part company; they disagree quietly, and the loop then walks a number the word reading never pinned or skips one it did.";
   "★ A WORD AND A VERSE MEET WHEN THEY SHARE ANY KEY AT ALL, BECAUSE ONE SHAPE CAN HONESTLY BELONG TO TWO DICTIONARY ENTRIES AND THE SHAPE CANNOT SAY WHICH. Both sides come with every key they could answer to, and the question is whether the two sets touch. Asking it the other way - pick one key for the word, pick one for each verse word, compare - is choosing for each side which of the things it could be it is, and measured on 2026-09-28 that choice was wrong on one Hebrew and Greek occurrence in every hundred across the whole Bible. Joshua eleven was the case that showed it: the valley of Mizpeh in verse eight and in the valley in verse seventeen are one word, were keyed apart, and this reading called a true sentence false.";
+  "★ A VERSE NUMBER IS ANSWERED FOR BY THE WHOLE PASSAGE IT BELONGS TO, BECAUSE A PASSAGE MAY COVER SEVERAL VERSES AND IS ONE SCREEN TO THE READER IT WAS WRITTEN FOR. Where a passage runs from five to six, the words of both verses stand together under one heading, so a sentence saying the word came in verse five sends a reader to a screen that does hold it. Asking verse five alone calls that sentence false and gives a mender nothing to do, since the word is already where the reader will look. Measured on 2026-10-02 over the Urdu store's two hundred and thirty-nine recorded claims, ninety-five were exactly this - every one of them on a passage covering more than one verse, and not one on a single-verse passage, which is what says the pattern is the passage and not a coincidence.";
+  "THE OTHER TWO READINGS WERE WRITTEN OUT AND TURNED DOWN. Keeping the question at one verse is what the record held before, and its cost is ninety-five true sentences standing accused for as long as the store exists - and a queue that is two-fifths innocent is a queue a reader learns to distrust. Folding the passage's verses together inside the keys themselves would have answered this question and broken the one beside it: the list of verses that really do hold the word is what a mender reads to decide what to write, and it would then name verses where the word does not stand at all. So the widening is spent only on the verse that was named, and the list of holding verses keeps saying exactly what it always said.";
+  "A VERSE THE PASSAGES NEVER MENTION FALLS BACK TO ITSELF, so a number from outside the chapter is asked about the one verse it names and nothing is invented for it. That cannot happen while the numbers come from the chapter being read, and it is written down rather than relied on, because the reading above it may one day be handed a number from anywhere.";
   arguments_assert(arguments, 3);
+  let spans = {};
+  function passage_span_note(passage) {
+    let numbers = property_get(passage, "verse_numbers");
+    function number_note(number) {
+      property_set(spans, number, numbers);
+    }
+    each(numbers, number_note);
+  }
+  each(passages, passage_span_note);
   function entry_read(context) {
     let explain = property_get(context, "explain");
     let verse_numbers = property_get(context, "verse_numbers");
@@ -75,8 +89,14 @@ export function gloss_passages_verse_claims_all(
       if (nowhere) {
         return;
       }
-      let keys = property_get(verse_keys, verse_named);
-      let held = list_intersect_empty_not_is(keys, claimed_keys);
+      let span = property_get_or_null(spans, verse_named);
+      let unplaced = null_is(span);
+      let screen = span;
+      if (unplaced) {
+        screen = [verse_named];
+      }
+      let screen_held = list_filter(screen, verse_holds_is);
+      let held = list_empty_not_is(screen_held);
       let claim = {
         verses_key,
         word,
