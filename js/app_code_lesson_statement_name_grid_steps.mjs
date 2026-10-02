@@ -1,3 +1,4 @@
+import { app_code_explain_emoji_square } from "./app_code_explain_emoji_square.mjs";
 import { app_code_square_ringed } from "./app_code_square_ringed.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_explain_code_colored } from "./app_code_explain_code_colored.mjs";
@@ -111,9 +112,11 @@ export function app_code_lesson_statement_name_grid_steps() {
   let v6 = app_code_explain_number_colored("1", column_color);
   let v7 = app_code_explain_number_colored("4", row_color);
   let v8 = app_code_explain_number_colored("3", column_color);
+  let draw18 = app_code_explain_emoji_square("🙂", start_color);
+  let draw19 = app_code_explain_emoji_square("🏁", end_color);
   let question_said = app_code_explain_said([
     "How many steps are there from ",
-    app_code_explain_emoji_square("🙂", start_color),
+    draw18,
     " ",
     row_word,
     " ",
@@ -123,7 +126,7 @@ export function app_code_lesson_statement_name_grid_steps() {
     " ",
     v6,
     " to ",
-    app_code_explain_emoji_square("🏁", end_color),
+    draw19,
     " ",
     row_word,
     " ",
@@ -247,13 +250,14 @@ export function app_code_lesson_statement_name_grid_steps() {
   ]);
   let draw12 = app_code_explain_number_colored("3", rows_count_color);
   let draw13 = app_code_explain_number_colored("2", columns_count_color);
+  let draw20 = app_code_explain_emoji_square("🏁", end_color);
   let draw14 = app_code_explain_said([
     "If we travel ",
     draw12,
     " squares down and ",
     draw13,
     " squares to the right, then we will travel to the second position ",
-    app_code_explain_emoji_square("🏁", end_color),
+    draw20,
   ]);
   let draw15 = app_code_explain_number_colored("3", rows_count_color);
   let draw16 = app_code_explain_number_colored("2", columns_count_color);

@@ -17,14 +17,14 @@ import { less_than } from "./less_than.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
-import { not } from "./not.mjs";
+import { or } from "./or.mjs";
+import { add } from "./add.mjs";
 import { text_tokens_number_run_or_null } from "./text_tokens_number_run_or_null.mjs";
 import { null_is } from "./null_is.mjs";
+import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
-import { or } from "./or.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { add } from "./add.mjs";
 import { each_index } from "./each_index.mjs";
 import { list_unique } from "./list_unique.mjs";
 export function gloss_explain_verse_numbers_generic(
@@ -35,12 +35,14 @@ export function gloss_explain_verse_numbers_generic(
   cancellers,
   lambda_spell,
   shutters,
+  chapter_markers,
 ) {
   "The verses of its own chapter that one word explanation names, read in whatever language the explanation was written in, as a list with nothing said twice.";
   "$plain markers";
   "$plain cancellers";
   "$plain shutters";
-  "the markers are the words the explanation's own language uses for verse, the joiner is its word for and, the cancellers are its words that, standing right after the number, say the number was not an address - English counting backwards from here, Urdu owning something in the verse, and the shutters are the words that, standing in front of the word for verse, mean no verse is about to be named. All of them are words from a language and none names anything that runs.";
+  "$plain chapter_markers";
+  "the markers are the words the explanation's own language uses for verse, the joiner is its word for and, the cancellers are its words that, standing right after the number, say the number was not an address - English counting backwards from here, Urdu owning something in the verse, and the shutters are the words that, standing in front of the word for verse, mean no verse is about to be named, and the chapter markers are its words for chapter, which say the address that follows belongs to some other chapter than this one. All of them are words from a language and none names anything that runs.";
   "AN EXPLANATION THAT SAYS WHERE ELSE IN THE CHAPTER A WORD STANDS IS MAKING A CLAIM ANYONE CAN CHECK, and it makes that claim the same way in every language: it says the word for verse, and then it says which. What changes from one store to the next is only the word and the shapes the number is written with, so those are handed in and the reading itself is written once.";
   "The chapter's own verse numbers are handed in and written out here rather than the writing being read back into numbers. Writing forward needs only the one speller the language already has; reading backward would want a second table saying the same thing, which would then be free to come to disagree with the first. It also means a verse the chapter does not have is never named, however the sentence spells it.";
   "EACH NUMBER IS WRITTEN DOWN TWICE, ONCE WITH ITS DASH AND ONCE WITH A SPACE WHERE THE DASH WAS, BECAUSE A WRITER PUTS THE DASH IN ONLY WHEN THEY REMEMBER. The speller says twenty-four and the store says verse twenty four, and a reading that knew only the spelled shape read that as verse twenty and then verse four - two verses named, both of them wrong, and neither of them the one the sentence meant. Met three times in the original-language store on 2026-09-25, and worth three rows of that store's list. Writing the second shape down can only ever join two readings into one, never split one into two, and where the chapter has no such verse nothing changes at all.";
@@ -61,7 +63,13 @@ export function gloss_explain_verse_numbers_generic(
   "The reading turned down was to keep writing each number down and take the earlier ones back when the cancelling word arrived. It answers the same on every sentence, and it says the run is a thing by undoing it, which is the harder way to say the run is a thing. Holding the run says it once, and the count of how many numbers are standing in it - which the reading already needed, to tell a list carrying on past a comma from a sentence that merely has one - stops being a second thing to keep in step with the first.";
   "A run closes where a marker opens the next one, where anything that is not a number and not a carrying mark ends it, and where the sentence runs out. All three hand their numbers over; only the cancelling word throws them away.";
   "WHAT CANCELLING COSTS IS NAMED HERE RATHER THAN LEFT SILENT. Verse two of soon is a claim - it says the word soon stands in verse two - and it is a claim anybody could check, with the very machinery this reading feeds. Cancelling drops it instead, because what comes back from here is a list of numbers and a number cannot carry a different word with it. The fix is to hand back the quoted word beside the number and check that word where there is one, and until that is built these are unchecked rather than checked and passed. A claim silently dropped is the dearer half of this, so it is written down.";
-  arguments_assert(arguments, 7);
+  "★ A VERSE NAMED BEHIND THE WORD FOR CHAPTER BELONGS TO THAT CHAPTER AND NOT TO THIS ONE, SO THE MARKER IS SHUT BEFORE IT OPENS. Chapter seven, verse eight says where a word stands in chapter seven, and a reading that saw only verse eight read it as a claim about the chapter it was checking - a claim the word was never making, about a verse it may well not stand in. Measured on 2026-10-02 over the original-language store, six hundred and four of its nine hundred and seventy-three accused rows were in Judges, six hundred and one of those in four chapters, and Judges seven, eight and nine carry a hundred and fifty-nine of these citations between them. One word alone - the strength word in Judges eight, verse one - walks its whole thread through chapter seven and so stood accused of seven verses it never named.";
+  "The arming word is looked for ahead rather than behind, which is why this is not simply another shutter. A shutter is the one word in front of the marker, and in chapter seven, verse eight the word in front of the marker is a comma. What is actually in front is a whole phrase of unfixed length, so the chapter word is met on its own terms, on the way past, and what it leaves behind is that the next marker is shut.";
+  "IT ARMS ONLY WHERE A NUMBER THIS CHAPTER CAN SPELL STANDS RIGHT BEHIND IT, BECAUSE CHAPTER IS ALSO AN ORDINARY NOUN. Read off the store on 2026-10-02: this chapter already. Verse eight, the word of chapter seven. Verse eleven, nothing in the chapter since verse ten - about ten places in those same three chapters where the word for chapter is followed by no number at all, and every one of them went on to name a verse of the chapter being explained. So the number is what says an address was begun, and the bare noun is left alone.";
+  "The number is read with the chapter's own verse spellings, which is the only table here, and that is a real limit written down rather than hidden: a chapter named past the end of this chapter's verses cannot be read, so chapter one hundred and nineteen inside a chapter of twelve verses arms nothing and its citation stands accused as before. It also means Urdu arms almost never, because that store spells a verse in its ten digit shapes and a chapter in words - chapter twelve's verse, forty-five times - and the digit table cannot read a word. A second table of written numbers would answer both, and it is the same second table this reading has turned down twice already, for the same reason: two tables saying the same thing are free to come to disagree.";
+  "ONE CHAPTER WORD SHUTS ONE MARKER AND NOTHING MORE. A citation names one address, and the sentence after it is about this chapter again, so an arm that outlived its marker would go on swallowing true claims for the rest of a long explanation. It is spent whether it shut anything or not.";
+  "The two other readings were written out and turned down. Telling this chapter's own number from any other would keep the handful of citations a writer makes to the chapter they are standing in - eight of them across Judges seven, eight and nine on 2026-10-02 - and it needs the chapter's number threaded through four readings that each take an exact count of arguments, and through both of the Cebuano callers; the reading next door turned the same threading down for the same cost, and what it buys here is smaller than it looks, because a self-citation is only ever accused when the writer got their own verse wrong. The other was to leave this alone and mend the sentences, which would ask an author to stop writing the comparison the explanation is for.";
+  arguments_assert(arguments, 8);
   let none = list_empty_is(verse_numbers);
   if (none) {
     let nothing = [];
@@ -90,6 +98,7 @@ export function gloss_explain_verse_numbers_generic(
   let named = [];
   let run_named = [];
   let inside = false;
+  let chapter_other = false;
   let eaten = 0;
   function run_named_close() {
     list_add_multiple(named, run_named);
@@ -105,12 +114,29 @@ export function gloss_explain_verse_numbers_generic(
       run_named_close();
       let back = subtract(index, 1);
       let before = list_get_or_null(tokens, back);
-      let shut = list_includes(shutters, before);
+      let shut_word = list_includes(shutters, before);
+      let shut = or(shut_word, chapter_other);
+      chapter_other = false;
       if (shut) {
         inside = false;
         return;
       }
       inside = true;
+      return;
+    }
+    let chapter_is = list_includes(chapter_markers, token);
+    if (chapter_is) {
+      inside = false;
+      run_named_close();
+      let ahead = add(index, 1);
+      let numbered = text_tokens_number_run_or_null(
+        tokens,
+        ahead,
+        longest,
+        written_numbers,
+      );
+      let unnumbered = null_is(numbered);
+      chapter_other = not(unnumbered);
       return;
     }
     if (not(inside)) {

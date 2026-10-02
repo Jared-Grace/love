@@ -1,3 +1,4 @@
+import { app_code_explain_emoji_square } from "./app_code_explain_emoji_square.mjs";
 import { app_code_square_edged } from "./app_code_square_edged.mjs";
 import { app_code_explain_code_colored } from "./app_code_explain_code_colored.mjs";
 import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth.mjs";
@@ -132,9 +133,11 @@ export function app_code_lesson_statement_name_king_steps() {
   let draw2 = app_code_explain_number_colored("1", column_color);
   let draw3 = app_code_explain_number_colored("4", row_color);
   let draw4 = app_code_explain_number_colored("3", column_color);
+  let draw33 = app_code_explain_emoji_square("🫅", start_color);
+  let draw34 = app_code_explain_emoji_square("🏁", end_color);
   let question_said = app_code_explain_said([
     "How many steps are there from ",
-    app_code_explain_emoji_square("🫅", start_color),
+    draw33,
     " ",
     row_word,
     " ",
@@ -144,7 +147,7 @@ export function app_code_lesson_statement_name_king_steps() {
     " ",
     draw2,
     " to ",
-    app_code_explain_emoji_square("🏁", end_color),
+    draw34,
     " ",
     row_word,
     " ",
@@ -305,6 +308,17 @@ export function app_code_lesson_statement_name_king_steps() {
     " ",
     draw28,
   ]);
+  let draw35 = app_code_explain_number_colored("2", plain);
+  let draw36 = app_code_explain_number_colored("1", plain);
+  let draw37 = app_code_explain_emoji_square("🏁", end_color);
+  let draw38 = app_code_explain_said([
+    "If we travel ",
+    draw35,
+    " squares diagonally and then ",
+    draw36,
+    " square down, then we will travel to the second position ",
+    draw37,
+  ]);
   let lesson = app_code_lesson_statement_formula({
     words: "King steps on a grid",
     title_code: line_steps,
@@ -321,14 +335,7 @@ export function app_code_lesson_statement_name_king_steps() {
       moves_draw,
       question_said,
       squares_draw,
-      app_code_explain_said([
-        "If we travel ",
-        app_code_explain_number_colored("2", plain),
-        " squares diagonally and then ",
-        app_code_explain_number_colored("1", plain),
-        " square down, then we will travel to the second position ",
-        app_code_explain_emoji_square("🏁", end_color),
-      ]),
+      draw38,
       travel_said,
       app_code_explain_container_next,
       draw8,
