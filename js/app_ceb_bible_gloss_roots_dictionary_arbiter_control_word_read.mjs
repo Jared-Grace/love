@@ -16,6 +16,7 @@ export function app_ceb_bible_gloss_roots_dictionary_arbiter_control_word_read(
   unanimous,
   arguing,
 ) {
+  "Hands back the reader for one word the dictionary names a root for: it counts the word on the side that agrees with itself or the side that argues, works out how each root the chapters claimed is related to the dictionary's own, and keeps the word only where every claimed root is a different word from the dictionary's - a word where one root agrees is not a disagreement to settle.";
   arguments_assert(arguments, 4);
   function word_read(word) {
     let roots = property_get(said, word);

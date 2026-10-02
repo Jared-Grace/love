@@ -14,6 +14,7 @@ export function app_ceb_bible_gloss_words_roots_apart_arbitrated_row_arbitrated(
   folded_index,
   root_folded,
 ) {
+  "Hands back the reader for one word the chapters gave two different roots: it looks each of the two roots up in the dictionary, takes the root the dictionary names for it, and asks the dictionary to settle whether the two are the same word at different depths, a shared form, or a real contradiction - a root the dictionary does not analyse or names no root for arrives as nothing, which the verdict is told about rather than guessing.";
   arguments_assert(arguments, 3);
   function dictionary_root_folded(root) {
     let held = binisaya_words_known_get_folded(known, folded_index, root);

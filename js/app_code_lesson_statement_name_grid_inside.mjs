@@ -141,20 +141,20 @@ export function app_code_lesson_statement_name_grid_inside() {
     return draw;
   }
   let row_two = between_worked("2", "3", row_color, rows_count_color);
-  let column_four = between_worked("4", "5", column_color, columns_count_color);
-  let column_five = between_worked("5", "5", column_color, columns_count_color);
-  let three = app_code_explain_number_colored("3", rows_count_color);
-  let five = app_code_explain_number_colored("5", columns_count_color);
+  let column_one = between_worked("4", "5", column_color, columns_count_color);
+  let column_three = between_worked("5", "5", column_color, columns_count_color);
+  let rows_number = app_code_explain_number_colored("3", rows_count_color);
+  let columns_number = app_code_explain_number_colored("5", columns_count_color);
   let two_row = app_code_explain_number_colored("2", row_color);
-  let four_column = app_code_explain_number_colored("4", column_color);
-  let five_column = app_code_explain_number_colored("5", column_color);
+  let one_column = app_code_explain_number_colored("4", column_color);
+  let three_column = app_code_explain_number_colored("5", column_color);
   let grid_said = app_code_explain_said([
     "Suppose a ",
     grid_word,
     " has ",
-    three,
+    rows_number,
     " rows and ",
-    five,
+    columns_number,
     " columns",
   ]);
   let draw2 = app_code_explain_number_colored("0", plain);
@@ -196,15 +196,15 @@ export function app_code_lesson_statement_name_grid_inside() {
     ", ",
     column_word,
     " ",
-    four_column,
+    one_column,
     " is inside the ",
     grid_word,
     ":",
   ]);
   let row_two_said = app_code_explain_said(["", row_two, " is ", is_true]);
-  let column_four_said = app_code_explain_said([
+  let column_one_said = app_code_explain_said([
     "",
-    column_four,
+    column_one,
     " is ",
     is_true,
   ]);
@@ -218,7 +218,7 @@ export function app_code_lesson_statement_name_grid_inside() {
     ", ",
     column_word,
     " ",
-    five_column,
+    three_column,
     " is not inside the ",
     grid_word,
     ":",
@@ -229,12 +229,12 @@ export function app_code_lesson_statement_name_grid_inside() {
     " has no ",
     column_word,
     " ",
-    five_column,
+    three_column,
     ":",
   ]);
-  let column_five_said = app_code_explain_said([
+  let column_three_said = app_code_explain_said([
     "",
-    column_five,
+    column_three,
     " is ",
     is_false,
   ]);
@@ -301,14 +301,14 @@ export function app_code_lesson_statement_name_grid_inside() {
       inside_said,
       v4,
       row_two_said,
-      column_four_said,
+      column_one_said,
       true_true_said,
       app_code_explain_container_next,
       outside_said,
       v5,
       row_two_said,
       no_column_said,
-      column_five_said,
+      column_three_said,
       true_false_said,
       app_code_explain_container_next,
       names_said,

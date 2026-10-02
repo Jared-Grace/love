@@ -13,6 +13,7 @@ import { list_get } from "./list_get.mjs";
 import { gloss_chapters_roots_named_entries_generic } from "./gloss_chapters_roots_named_entries_generic.mjs";
 import { subtract } from "./subtract.mjs";
 export async function app_ceb_bible_gloss_root_omitted_elsewhere_named_unexplained() {
+  "Walks every glossed entry in the Cebuano Bible and gathers, for each word as it is spelt in lower case, how many times a root was named for it and how many times none was, which roots were named, and the chapters where the root was left out - and says how many entries carried no explanation at all, which the walk itself never reaches.";
   arguments_assert(arguments, 0);
   let fn = app_ceb_bible_gloss_generate;
   let word_key = app_shared_gloss_bible_generate_generic_word();

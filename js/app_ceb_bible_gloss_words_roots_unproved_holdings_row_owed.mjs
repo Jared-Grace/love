@@ -8,6 +8,7 @@ export function app_ceb_bible_gloss_words_roots_unproved_holdings_row_owed(
   known,
   folded_index,
 ) {
+  "Hands back the reader that says who owes the next move on one unsettled word: the same root spelt with and without accents owes nothing but the accents, a root the dictionary has never heard of can still be fetched, and a word where both roots are already in the dictionary and still disagree is owed to a person.";
   arguments_assert(arguments, 3);
   function row_owed(row) {
     let roots = property_get(row, "roots");

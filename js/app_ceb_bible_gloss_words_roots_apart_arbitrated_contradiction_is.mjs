@@ -9,6 +9,7 @@ import { property_equals } from "./property_equals.mjs";
 export async function app_ceb_bible_gloss_words_roots_apart_arbitrated_contradiction_is(
   apart,
 ) {
+  "Reads the dictionary once and settles every word the chapters gave two roots, then hands back the settled rows together with the three tests that pick out the ones held apart by depth, by a shared form, and by a real contradiction - the tests travel with the rows so a caller cannot sort them by a word spelt differently from the one the verdict was written under.";
   arguments_assert(arguments, 1);
   let known = await binisaya_words_known();
   let folded_index = binisaya_words_known_folded_index(known);
