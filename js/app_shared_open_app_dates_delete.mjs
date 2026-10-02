@@ -1,10 +1,10 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { retry_standard } from "./retry_standard.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { firebase_bucket } from "./firebase_bucket.mjs";
 import { app_shared_open_entries } from "./app_shared_open_entries.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 export async function app_shared_open_app_dates_delete(app, dates) {
   "remove every open one app recorded on the days named - for opens that were never a person, such as a test run that opened the app in a thousand fresh browsers";
@@ -16,8 +16,7 @@ export async function app_shared_open_app_dates_delete(app, dates) {
   let removed = 0;
   for (let entry of entries) {
     let same_app = property_equals(entry, "app", app);
-    let item = property_get(entry, "date");
-    let named_day = list_includes(days, item);
+    let named_day = property_in_list(entry, "date", days);
     if (not(same_app && named_day)) {
       continue;
     }
