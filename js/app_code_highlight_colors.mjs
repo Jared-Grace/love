@@ -1,3 +1,4 @@
+import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth.mjs";
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -15,6 +16,7 @@ export function app_code_highlight_colors() {
   let third = app_code_highlight_color_third();
   let fourth = app_code_highlight_color_fourth();
   let fifth = app_code_highlight_color_fifth();
-  let colors = [first, second, third, fourth, fifth];
+  let sixth = app_code_highlight_color_sixth();
+  let colors = [first, second, third, fourth, fifth, sixth];
   return colors;
 }

@@ -1,3 +1,5 @@
+import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth.mjs";
+import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
 import { app_code_explain_abs_apart_colored } from "./app_code_explain_abs_apart_colored.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
@@ -79,17 +81,21 @@ export function app_code_lesson_statement_name_grid_steps() {
   let start_color = app_code_highlight_color_second();
   let row_color = app_code_highlight_color_third();
   let column_color = app_code_highlight_color_fourth();
+  let rows_count_color = app_code_highlight_color_sixth();
+  let columns_count_color = app_code_highlight_color_fifth();
   let rows_worked = app_code_explain_abs_apart_colored(
     "4",
     "1",
     "3",
     row_color,
+    rows_count_color,
   );
   let cols_worked = app_code_explain_abs_apart_colored(
     "3",
     "1",
     "2",
     column_color,
+    columns_count_color,
   );
   let row_word = app_code_explain_word_colored("row", row_color);
   let column_word = app_code_explain_word_colored("column", column_color);

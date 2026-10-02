@@ -1,3 +1,6 @@
+import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth.mjs";
+import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
+import { html_span_code_dark_colored } from "./html_span_code_dark_colored.mjs";
 import { app_code_explain_abs_apart_colored } from "./app_code_explain_abs_apart_colored.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -83,22 +86,41 @@ export function app_code_lesson_statement_name_king_steps() {
     let taken = list_shuffle_take(candidates, 4);
     return taken;
   }
-  let max_call = js_code_call_args(max_name, ["3", "2"]);
-  let max_worked = js_code_binary_spaced_nb(max_call, same, "3");
   let start_color = app_code_highlight_color_second();
   let row_color = app_code_highlight_color_third();
   let column_color = app_code_highlight_color_fourth();
+  let rows_count_color = app_code_highlight_color_sixth();
+  let columns_count_color = app_code_highlight_color_fifth();
+  function max_worked(box) {
+    "Math.max(3, 2) === 3 as one code chip, the count of rows and the count of columns in the colours the lines above give them, asked by the human 2026-10-02; the answer is the steps, a count of neither, so it keeps the code background";
+    let line = html_div(box);
+    html_span_code_dark_colored(
+      line,
+      [max_name, "(", "3", ", ", "2", ") === ", "3"],
+      [
+        plain,
+        plain,
+        rows_count_color,
+        plain,
+        columns_count_color,
+        plain,
+        plain,
+      ],
+    );
+  }
   let rows_worked = app_code_explain_abs_apart_colored(
     "4",
     "1",
     "3",
     row_color,
+    rows_count_color,
   );
   let cols_worked = app_code_explain_abs_apart_colored(
     "3",
     "1",
     "2",
     column_color,
+    columns_count_color,
   );
   ("a count such as the 2 diagonal steps is not a position, so it is a code chip with no colour of its own, as the counts are in Grid steps");
   let plain = app_shared_color_code_background();
@@ -269,7 +291,7 @@ export function app_code_lesson_statement_name_king_steps() {
       draw20,
       draw22,
       draw23,
-      ["", max_worked],
+      max_worked,
       app_code_explain_container_next,
       ["Suppose the first square is at row ", r1, ", column ", c1],
       ["And the second square is at row ", r2, ", column ", c2],
