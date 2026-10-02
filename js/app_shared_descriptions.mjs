@@ -22,6 +22,8 @@ export function app_shared_descriptions() {
       "A game where you walk a busy street as a young woman while one person at a time turns evil and hunts the others. Find them and tap them to burn them up with fire.",
     music:
       "The words of the sung songs, line by line, with what each line means and the passages of Scripture it rests on written out underneath.",
+    receipts:
+      "Keep a record of what was bought, with a photo of the receipt and the price in both pesos and dollars. Every phone that types the same folder code shares one list, and a phone with no internet keeps what you add until there is some.",
     privacy_policy:
       "What these apps do with anything you give them. There is nothing to sign up for and nothing is tracked, and what an app remembers is kept on your own device.",
   };
