@@ -12,7 +12,7 @@ export function app_code_lesson_console_log_remainder_generic_above_alternates({
   context,
 }) {
   arguments_assert(arguments, 1);
-  let closing = app_code_lesson_console_log_remainder_generic_above_closing(
+  let closing = app_code_lesson_console_log_remainder_generic_above_closing({
     root,
     divisor,
     divisor_text,
@@ -20,7 +20,7 @@ export function app_code_lesson_console_log_remainder_generic_above_alternates({
     modulo_fn,
     insight,
     context,
-  );
+  });
   let closing_line = html_div(closing);
   let alternates = equal(divisor, 2);
   let r = {

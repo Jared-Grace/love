@@ -3,7 +3,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_lesson_console_log_remainder_generic_above_has_insight } from "./app_code_lesson_console_log_remainder_generic_above_has_insight.mjs";
 import { app_code_lesson_console_log_remainder_generic_above_insight_line } from "./app_code_lesson_console_log_remainder_generic_above_insight_line.mjs";
 import { each } from "./each.mjs";
-export function app_code_lesson_console_log_remainder_generic_above_closing(
+export function app_code_lesson_console_log_remainder_generic_above_closing({
   root,
   divisor,
   divisor_text,
@@ -11,8 +11,8 @@ export function app_code_lesson_console_log_remainder_generic_above_closing(
   modulo_fn,
   insight,
   context,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   let intro = app_code_container_light_blue(root);
   let has_insight =
     app_code_lesson_console_log_remainder_generic_above_has_insight({
