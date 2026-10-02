@@ -19,6 +19,7 @@ export function app_ceb_bible_gloss_roots_claimed_unvouched_split_root_read(
   known,
   vocabulary,
 ) {
+  "Hands back the reader that sorts each root no dictionary word vouches for into the pile that says why: never asked of the dictionary at all, held there with nothing written under it, or held and full and still naming no root - the three are owed different work, and a single count of unvouched roots hid which.";
   arguments_assert(arguments, 5);
   function pile_add(name, row) {
     property_initialize_list(piles, name);

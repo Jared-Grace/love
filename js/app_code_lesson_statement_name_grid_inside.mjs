@@ -35,7 +35,7 @@ export function app_code_lesson_statement_name_grid_inside() {
   ("The answers are only true or false, so a question offers two buttons, two squares inside the grid and two outside it each screen; the squares outside are one past an edge, some by their row and some by their column, so neither check alone is enough.");
   ("The pictures and colours are Grid steps' own, asked for by the human 2026-10-02: the same grid with its row numbers red and its column numbers purple, and the count of rows green and the count of columns orange.");
   ("The grid is blue, its word and its squares, and one more row and one more column are drawn around it without blue, asked by the human 2026-10-02, so a square outside the grid is a square the learner can see that is not blue. The face has no square of colour behind it, because teal is the start of a path in Grid steps and King steps, and there is no path here. Not picked: the earlier picture of the face on a lone dashed square past the grid's right edge, which showed a square that is not there rather than one that is not blue.");
-  ("The grid is 3 rows by 5 columns and the square asked about is row 2, column 4, so no number is both a row and a column or a row and a count, because a pointer colours a number by its text. Not picked: the earlier 3 by 4 grid with row 2, column 3, whose 3 was both a column and the count of rows.");
+  ("The grid is 4 rows by 3 columns and the square asked about is row 2, column 1, so no number is both a row and a column or a row and a count, because a pointer colours a number by its text. Not picked: the earlier 3 by 4 grid with row 2, column 3, whose 3 was both a column and the count of rows; and the 3 by 5 grid with row 2, column 4, whose picture, 6 columns with the one more drawn around it, was too wide on a phone with a large font, asked by the human 2026-10-02 to have at most 4 columns.");
   ("The writing is a first draft, not yet the human's, 2026-10-02.");
   let names = ["r", "c", "rows", "cols"];
   let r = "r";
@@ -122,12 +122,12 @@ export function app_code_lesson_statement_name_grid_inside() {
     return chip;
   }
   function grid_draw_face(face_row, face_column) {
-    "the 3 by 5 grid in blue with one more row and one more column drawn around it without blue, and the face on the square given, or on no square when the row is -1";
+    "the 4 by 3 grid in blue with one more row and one more column drawn around it without blue, and the face on the square given, or on no square when the row is -1";
     function draw(box) {
       let marks = [];
-      for (let row of range(4)) {
-        for (let column of range(6)) {
-          let inside = less_than(row, 3) && less_than(column, 5);
+      for (let row of range(5)) {
+        for (let column of range(4)) {
+          let inside = less_than(row, 4) && less_than(column, 3);
           let face = equal(row, face_row) && equal(column, face_column);
           let text = face ? "🙂" : "";
           let color = inside ? grid_color : null;
@@ -136,18 +136,26 @@ export function app_code_lesson_statement_name_grid_inside() {
           }
         }
       }
-      app_code_square_grid(box, 4, 6, true, marks);
+      app_code_square_grid(box, 5, 4, true, marks);
     }
     return draw;
   }
-  let row_two = between_worked("2", "3", row_color, rows_count_color);
-  let column_one = between_worked("4", "5", column_color, columns_count_color);
-  let column_three = between_worked("5", "5", column_color, columns_count_color);
-  let rows_number = app_code_explain_number_colored("3", rows_count_color);
-  let columns_number = app_code_explain_number_colored("5", columns_count_color);
+  let row_two = between_worked("2", "4", row_color, rows_count_color);
+  let column_one = between_worked("1", "3", column_color, columns_count_color);
+  let column_three = between_worked(
+    "3",
+    "3",
+    column_color,
+    columns_count_color,
+  );
+  let rows_number = app_code_explain_number_colored("4", rows_count_color);
+  let columns_number = app_code_explain_number_colored(
+    "3",
+    columns_count_color,
+  );
   let two_row = app_code_explain_number_colored("2", row_color);
-  let one_column = app_code_explain_number_colored("4", column_color);
-  let three_column = app_code_explain_number_colored("5", column_color);
+  let one_column = app_code_explain_number_colored("1", column_color);
+  let three_column = app_code_explain_number_colored("3", column_color);
   let grid_said = app_code_explain_said([
     "Suppose a ",
     grid_word,
@@ -274,14 +282,14 @@ export function app_code_lesson_statement_name_grid_inside() {
     ":",
   ]);
   let v3 = grid_draw_face(-1, -1);
-  let v4 = grid_draw_face(2, 4);
-  let v5 = grid_draw_face(2, 5);
+  let v4 = grid_draw_face(2, 1);
+  let v5 = grid_draw_face(2, 3);
   let lesson = app_code_lesson_statement_formula_answer_count({
     words: "Square inside the grid",
     title_code: line_ok,
     names,
     values_get,
-    example_values: [2, 4, 3, 5],
+    example_values: [2, 1, 4, 3],
     step,
     remember_lesson: app_code_lesson_statement_name_seat_less,
     remember_parts: [
@@ -318,9 +326,9 @@ export function app_code_lesson_statement_name_grid_inside() {
     decoys: null,
     example_pointers: [
       [["2", r, in_r], row_color],
-      [["4", c, in_c], column_color],
-      [["3", rows], rows_count_color],
-      [["5", cols], columns_count_color],
+      [["1", c, in_c], column_color],
+      [["4", rows], rows_count_color],
+      [["3", cols], columns_count_color],
     ],
     answer_count: 2,
   });

@@ -20,6 +20,7 @@ export async function app_ceb_bible_gloss_roots_claimed_letters_rare_letter_read
   letter_words,
   by_letter,
 ) {
+  "Gathers every claimed root and files it under the rarest letter it is spelt with, counted by how many Bible words hold that letter, then hands back the letters used, a row for each letter with its roots sorted by how often they were seen, and the reader that fills one of those rows - a rare letter is the cheapest way to reach a small set of roots that share something real.";
   arguments_assert(arguments, 2);
   function root_file(row) {
     let name = property_get(row, "stated_root");

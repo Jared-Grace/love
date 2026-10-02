@@ -10,6 +10,7 @@ import { property_equals } from "./property_equals.mjs";
 export async function app_ceb_bible_gloss_words_roots_unproved_holdings_person_is(
   arbitrated,
 ) {
+  "Reads the dictionary once and says of every unsettled word who owes the next move, then hands back those rows together with the three tests that pick out the ones owed only their accents, the ones still fetchable, and the ones now waiting on a person - so the pile that cannot be worked through by a machine is named rather than left mixed in with the pile that can.";
   arguments_assert(arguments, 1);
   let unproved = property_get(arbitrated, "unproved");
   let known = await binisaya_words_known();

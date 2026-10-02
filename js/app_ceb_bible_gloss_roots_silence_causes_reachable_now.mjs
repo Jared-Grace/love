@@ -18,6 +18,7 @@ export function app_ceb_bible_gloss_roots_silence_causes_reachable_now(
   by_cause,
   silent,
 ) {
+  "Asks of every root nothing explains why it went unwalked, files it under that cause, and counts both the roots and the sightings each cause holds - then names, biggest first, the ones held only by a spelling the dictionary writes differently, because those are the ones reachable now without anybody being asked anything.";
   arguments_assert(arguments, 4);
   let sightings = {};
   function cause_add(one_class) {

@@ -20,6 +20,7 @@ export function app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_
   claim_chapter,
   rows,
 ) {
+  "Hands back the reader for one word the chapters rooted more than one way: it says how the first two roots are related, how often the word was seen, which chapters claimed it, and whether any single chapter disagreed with itself - a word rooted one way in one chapter and another way in another is a different fault from a chapter that said both.";
   arguments_assert(arguments, 4);
   let comparable = 0;
   function word_read(word) {

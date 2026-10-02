@@ -16,6 +16,7 @@ export function app_ceb_bible_gloss_explains_depth_by_book_chapter_read_lambda(
   entries_pass,
   explain_key,
 ) {
+  "Hands back the reader for one chapter: it finds the book that chapter belongs to and adds onto that book's row how many chapters were read, how many entries, how many carried an explanation at all, how many letters those explanations run to, and how many roots and affixes they claim - counted both as claims and as entries making at least one, because one entry naming four roots and four entries naming one each are the same number and not the same depth.";
   arguments_assert(arguments, 4);
   async function chapter_read(chapter_code) {
     let book = ebible_chapter_code_to_book(chapter_code);

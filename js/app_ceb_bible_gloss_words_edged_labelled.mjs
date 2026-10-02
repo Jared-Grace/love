@@ -10,6 +10,7 @@ export async function app_ceb_bible_gloss_words_edged_labelled(
   offenders,
   carried,
 ) {
+  "Takes the words a gate complained about for carrying an edge on them and says, for each one, what the dictionary has to show for the bare spelling underneath: never asked, taken apart already, or held and refused - the three are the same complaint to the gate and three different next moves to a person.";
   arguments_assert(arguments, 2);
   let rows = gloss_offenders_findings_by_word(
     offenders,
