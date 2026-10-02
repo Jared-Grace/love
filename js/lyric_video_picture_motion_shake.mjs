@@ -9,7 +9,7 @@ export function lyric_video_picture_motion_shake(shake, t, width, height) {
   "$plain width";
   "$plain height";
   "What a picture's named shake adds to where its moving box stands across and down, as two pieces of a frame expression: nothing at all for a picture that names no shake.";
-  '★ A NAMED MOTION MAY ALSO SHAKE, FOR A MOMENT THAT IS AN EARTHQUAKE. The human asked for the stone rolled away on "raised to life" to look like the ground shaking. The shake is named by how far it throws the box at its strongest, as a share of the picture across, and by its bursts, each a start and a stop given as shares of the shown span, so it needs no clock of its own. The human asked for it to come in grouped bursts spread unevenly, rising in a crescendo, so the gaps are authored rather than drawn at random, each burst swells and fades on its own, and the whole grows from a fifth of its throw at the first burst to all of it at the last. Up and down it throws the same distance on the screen as side to side, which is why the height share is worked out from the frame shape rather than asked for. A picture naming no shake moves exactly as before.';
+  '★ A NAMED MOTION MAY ALSO SHAKE, FOR A MOMENT THAT IS AN EARTHQUAKE. The human asked for the stone rolled away on "raised to life" to look like the ground shaking. The shake is named by how far it throws the box at its strongest, as a share of the picture across, and by where in the shown span it starts and stops, as shares of that span, so it needs no clock of its own. It grows as the square of how far through that window it is, so it starts as a tremor and is mostly felt at the end; a straight rise was watched and read as too even, and grouped bursts spread unevenly were tried and liked less than one continuous shake. It stops at once at the end of the window, because it is meant to end on a flash that covers the stop. Up and down it throws the same distance on the screen as side to side, which is why the height share is worked out from the frame shape rather than asked for. A picture naming no shake moves exactly as before.';
   if (equal(shake, undefined)) {
     let r = {
       x: "",
@@ -17,38 +17,21 @@ export function lyric_video_picture_motion_shake(shake, t, width, height) {
     };
     return r;
   }
-  let bursts = shake.bursts;
-  let first = bursts[0][0];
-  let last = bursts[subtract(bursts.length, 1)][1];
-  let value = subtract(last, first);
-  let level =
-    "(0.2+0.8*clip((" +
+  let value = subtract(shake.to, shake.from);
+  let grow =
+    "pow(clip((" +
     t +
     "-" +
-    first +
+    shake.from +
     ")/" +
     number_round_places(value, 4) +
-    ",0,1))";
-  function lambda(burst) {
-    let value3 = subtract(burst[1], burst[0]);
-    let r3 =
-      "between(" +
-      t +
-      "," +
-      burst[0] +
-      "," +
-      burst[1] +
-      ")*sin(PI*(" +
-      t +
-      "-" +
-      burst[0] +
-      ")/" +
-      number_round_places(value3, 4) +
-      ")";
-    return r3;
-  }
-  let swells = bursts.map(lambda);
-  let grow = level + "*(" + swells.join("+") + ")";
+    ",0,1),2)*between(" +
+    t +
+    "," +
+    shake.from +
+    "," +
+    shake.to +
+    ")";
   let x = "+" + shake.amount + "*" + grow + "*sin(in*2.3)*cos(in*0.61)";
   let top = multiply(shake.amount, width);
   let value2 = divide(top, height);
