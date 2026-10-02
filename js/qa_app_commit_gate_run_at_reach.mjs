@@ -1,10 +1,10 @@
+import { qa_commit_named_at } from "./qa_commit_named_at.mjs";
+import { property_get } from "./property_get.mjs";
+import { qa_commit_judged_gates_sorted } from "./qa_commit_judged_gates_sorted.mjs";
 import { qa_gates_code_only } from "./qa_gates_code_only.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_filter_not } from "./list_filter_not.mjs";
-import { qa_commit_judged_gates_sorted } from "./qa_commit_judged_gates_sorted.mjs";
-import { qa_commit_named_at } from "./qa_commit_named_at.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 export async function qa_app_commit_gate_run_at_reach(search, commit, reach) {
   "Whether one app is sound at one commit, for a caller who already knows what that app ships: every gate that was red there, sorted into the ones that reach it and the ones that cannot";
@@ -19,6 +19,7 @@ export async function qa_app_commit_gate_run_at_reach(search, commit, reach) {
   let sorted = qa_commit_judged_gates_sorted(judged, reach);
   let judged_blocking = property_get(sorted, "blocking");
   ("A red gate that only judges how the code is written is carried out beside the others rather than holding the app back: what decides is what a person using the app meets, and the list of those gates, with the ones refused a place on it, lives in its own function.");
+  ("Those gates are named in the answer rather than only counted out of it. Setting one aside is a decision somebody may want to argue with, and an answer saying only that the app may ship gives them nothing to argue against; it was gathered and then dropped on the floor here until 2026-10-02, which read as the sorting being done and told nobody what it had decided.");
   let code_only_names = qa_gates_code_only();
   function code_only_is(entry) {
     let gate = property_get(entry, "gate");
@@ -38,6 +39,7 @@ export async function qa_app_commit_gate_run_at_reach(search, commit, reach) {
     reach: reach.length,
     deployable: clear,
     blocking,
+    code_only,
     elsewhere,
   };
   return r;
