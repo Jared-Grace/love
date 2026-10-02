@@ -1,9 +1,9 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_stored_not_is } from "./app_ceb_bible_gloss_stored_not_is.mjs";
 import { app_ceb_bible_gloss_words_edged_names } from "./app_ceb_bible_gloss_words_edged_names.mjs";
 import { app_ceb_bible_gloss_words_edged_baseline_path } from "./app_ceb_bible_gloss_words_edged_baseline_path.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { app_ceb_bible_gloss_gate_told_chapters } from "./app_ceb_bible_gloss_gate_told_chapters.mjs";
 export async function app_ceb_bible_gloss_words_edged_gate_run() {
   "Gate: no Cebuano gloss chapter authored from here on may explain a word that still carries a mark from the sentence around it. Throws so the dispatcher seam exits nonzero.";
@@ -13,6 +13,7 @@ export async function app_ceb_bible_gloss_words_edged_gate_run() {
   ("All of them have gone. On the second of October the sweep found none, where the record still held a hundred and two - every quotation mark, comma, semicolon and full stop among them, down to the Hebrew letter names that head the parts of Psalm one hundred and nineteen. Nine hundred and sixty seven of the store's nine hundred and seventy nine chapters had been rewritten in one minute that morning, so this was a pass over the store and not a hundred and two readings of a hundred and two sentences. The record was emptied on purpose with ",
     fn_name("baseline_known_clear"),
     " naming the file, which leaves the gate ratcheting against nothing - the stricter setting, since a word arriving with a mark on it is now refused where a hundred and two of them were allowed through by name.");
+  ("It refused six of them the same afternoon, which is the gate working rather than the clearing being wrong. All six wear a straight single quote or a trailing stop - 'Kanus-a, 'Kini, 'Mao, didto.', kaniya; and kaniya. - and all six stand in Isaiah twenty nine to forty, the twelve chapters written after the pass and the only ones in the store not rewritten by it. They are not added to the record. A word that reached the store this afternoon is the one case this gate was built to refuse, and the chapters it stands in are being authored as this is read, so the mark comes off where the authoring is rather than from outside it.");
   ("A store that is not on the disk is passed over and said so, rather than counted as clean. The store lives on a drive that is not always mounted, and every Claude in the repo runs this gate - a sweep that read nothing and called it nought would turn one unmounted drive into a record wiped for everybody.");
   ("How many chapters were walked travels out beside the verdict, because finding none and reaching none are the same word otherwise.");
   arguments_assert(arguments, 0);
