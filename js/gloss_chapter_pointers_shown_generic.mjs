@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { gloss_chapter_passages_collect_all } from "./gloss_chapter_passages_collect_all.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
@@ -23,7 +24,8 @@ export async function gloss_chapter_pointers_shown_generic(chapter_code, fn) {
   let shown = [];
   for (let passage of passages) {
     let verse_numbers = property_get(passage, "verse_numbers");
-    let verse = list_join(verse_numbers, app_shared_bible_verses_separator());
+    let separator = app_shared_bible_verses_separator();
+    let verse = list_join(verse_numbers, separator);
     let entries = gloss_passage_entries(passage);
     let filled = gloss_passage_entries_pointers_filled(
       entries,
@@ -31,12 +33,13 @@ export async function gloss_chapter_pointers_shown_generic(chapter_code, fn) {
       passage,
     );
     let size = list_size(entries);
-    for (let place = 0; place < size; place++) {
+    for (let place = 0; less_than(place, size); place++) {
       let entry = list_get(entries, place);
       let row = list_get(filled, place);
       let before = property_get_or_null(entry, key);
       let after = property_get_or_null(row, key);
-      let changed = not(equal(before, after));
+      let b = equal(before, after);
+      let changed = not(b);
       if (changed) {
         let word = gloss_entry_word_read(entry);
         let r = {
