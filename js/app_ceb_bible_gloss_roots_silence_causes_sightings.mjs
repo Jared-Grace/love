@@ -12,6 +12,7 @@ export function app_ceb_bible_gloss_roots_silence_causes_sightings(
   known,
   folded_index,
 ) {
+  "Marks every class of root by what the dictionary has behind it, keeps the silent ones, adds up how many sightings that silence covers, and asks the reading beside it to file each one under why it went unwalked - so the size of the silence is said in sightings and not only in classes, because a silent class seen four hundred times and one seen twice are not the same hole.";
   arguments_assert(arguments, 3);
   let marked = gloss_classes_backing_mark(classes, known);
   function silent_is(one_class) {
