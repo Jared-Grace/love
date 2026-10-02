@@ -6,6 +6,7 @@ import { numbers_apart } from "./numbers_apart.mjs";
 import { number_round_places } from "./number_round_places.mjs";
 import { subtract } from "./subtract.mjs";
 import { greater_than } from "./greater_than.mjs";
+import { lyric_video_flags_ranked } from "./lyric_video_flags_ranked.mjs";
 export function lyric_video_document_lines_disagreed(
   document,
   starts,
@@ -15,10 +16,12 @@ export function lyric_video_document_lines_disagreed(
   ("$plain document");
   ("$plain starts");
   ("$plain starts_heard");
-  ("The lines of a song that two readings of its recording do not place at the same moment, each with how far apart the two put it, which way round they are, and the words of the line so a person can go and listen.");
+  ("The lines of a song that two readings of its recording do not place at the same moment, worst first, each with how far apart the two put it, which way round they are, and the words of the line so a person can go and listen.");
   ("★ HOW FAR APART THE TWO READINGS ARE DOES NOT SAY HOW MUCH HARM IS DONE, AND WHICH WAY ROUND THEY ARE DOES. A line the aligner puts early shows its words before they are sung and holds them until the next line begins, so nobody watching sees anything wrong at all; a line it puts late shows them after they have been sung, which is the one thing a person can actually catch. Both were being reported by their distance alone, and across twenty six songs that pile held 168 harmless ones beside 156 real ones. The worst early miss measured five seconds and spoils nothing; the worst late one measured thirty, on a psalm whose closing lines arrive half a minute after they are heard.");
-  ("The lines handed back are the ones where the two readings are further apart than a third of a second, together with any line neither reading could place. That threshold was chosen to accuse rather than to excuse: a line flagged wrongly costs one glance, and a line cleared wrongly ships a video whose words arrive at the wrong moment with nobody left to notice.");
+  ("★ THAT PARAGRAPH IS KEPT BECAUSE IT IS WHAT WAS BELIEVED, AND MEASUREMENT AGAINST A PERSON'S OWN TIMES SAYS IT IS HALF WRONG. Its two counts were both taken from these two readings and never from anybody's ear, which is the whole of how it went wrong: it is a tally of what the blind reading thinks, and the blind reading is the thing under suspicion. Checked on 2026-10-02 against the five documents somebody timed by ear - the only lines here whose right answers are known - a positive distance is never once wrong about direction, but it catches only 20 of the 38 lines the aligner genuinely put late. Nine of the rest sit behind an early flag this paragraph calls harmless, and the worst of those is 26 seconds out, not five. Across the psalter the sign splits 1035 to 1045, a coin toss, while against the person the aligner runs late 38 times to 10 - so the sign is largely the blind reading's own scatter. The ordering that follows is therefore by distance, and the reasoning for that lives with the thing that does it.");
+  ("The lines handed back are the ones where the two readings are further apart than a third of a second, together with any line neither reading could place. That threshold was chosen to accuse rather than to excuse: a line flagged wrongly costs one glance, and a line cleared wrongly ships a video whose words arrive at the wrong moment with nobody left to notice. Measured on the same five documents, accusing is the right side to err on and the third of a second is the best catch on offer: half a second cuts the flags by a third and loses half the real misses with them.");
   ("A line neither reading placed is flagged without a distance rather than with one, because there is no distance to be had and a zero there would read as perfect agreement - the one answer the whole measurement exists to tell apart from silence.");
+  ("They are gathered in the order the song sings them and handed back in the order a person should look at them, which are two different orders and only one of them is any use to a reader with two thousand of these to get through.");
   let apart_least = lyric_video_disagree_seconds();
   let flagged = [];
   for (let number = 0; less_than(number, document.lines.length); number++) {
@@ -42,5 +45,6 @@ export function lyric_video_document_lines_disagreed(
       flagged.push(flag);
     }
   }
-  return flagged;
+  let ranked = lyric_video_flags_ranked(flagged);
+  return ranked;
 }
