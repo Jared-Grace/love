@@ -1,3 +1,4 @@
+import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
 import { html_div } from "./html_div.mjs";
@@ -30,7 +31,7 @@ export function app_code_review_quiz_jump_choose(
     display: "flex",
     "flex-wrap": "wrap",
     "justify-content": "center",
-    gap: "0.4em",
+    gap: app_shared_content_edge_gap(),
     margin: "0.5em 0",
   });
   function number_draw(index) {
