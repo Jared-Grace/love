@@ -1,11 +1,10 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_list_type } from "./js_list_type.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { js_types_function_node } from "./js_types_function_node.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 export function js_list_type_own(node, node_type) {
   arguments_assert(arguments, 2);
@@ -31,8 +30,7 @@ export function js_list_type_own(node, node_type) {
   each(types, type_read);
   function own_is(visited) {
     let n = property_get(visited, "node");
-    let held = list_includes(inner, n);
-    let own = not(held);
+    let own = list_includes_not(inner, n);
     return own;
   }
   let all = js_list_type(node, node_type);
