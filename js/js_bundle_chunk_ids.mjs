@@ -1,10 +1,9 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { js_bundle_chunk_ids_regex } from "./js_bundle_chunk_ids_regex.mjs";
 import { text_regex_match } from "./text_regex_match.mjs";
 import { null_is } from "./null_is.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { text_from_number } from "./text_from_number.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_unique } from "./list_unique.mjs";
 export function js_bundle_chunk_ids(text) {
   "$plain text";
   "Every extra script a built app will send for while it is running, named by the number the build gave it.";
@@ -25,7 +24,6 @@ export function js_bundle_chunk_ids(text) {
     let decimal = text_from_number(number);
     return decimal;
   }
-  let plain = list_map(found, id_plain);
-  let ids = list_unique(plain);
+  let ids = list_map_unique(found, id_plain);
   return ids;
 }
