@@ -18,7 +18,7 @@ export function app_code_lesson_statement_name_seat_less() {
   arguments_assert(arguments, 0);
   ("whether a seat is in a row numbered from 0, written the shorter way: let ok = 0 <= n && n < max; - picked by the human 2026-10-02, after the same check written with the last seat, n <= max - 1. In DSA it is how a bounds check is usually written, index < length, so a learner reading other code meets this form most.");
   ("The reminder is the previous lesson, Seat in the row from 0, quoted as its own program with that lesson's example numbers, 4 and 5, so the two checks can be read side by side.");
-  ("The writing shows why the two checks agree on whole numbers: every seat up to the last, max - 1, is less than max, and the seat max is not. It does not say they agree for numbers with a fractional part, where they do not; the seats are whole numbers.");
+  ("The writing shows why the two checks agree on whole numbers: every seat up to the last, max - 1, is less than max, and the seat max is not. It does not say they agree for numbers with a fractional part, where they do not; the seats are whole numbers. It goes step by step, as the human asked 2026-10-02: both checks on the last seat, both on the first seat past the row, the seats beyond each, then that no whole number lies between 4 and 5.");
   ("The answers are only true or false, so a question offers two buttons, two seats in the row and two outside it each screen, the seats outside mostly one past an edge, as in the previous lesson.");
   ("The writing is a first draft, not yet the human's, 2026-10-02.");
   let names = ["n", "max"];
@@ -69,6 +69,8 @@ export function app_code_lesson_statement_name_seat_less() {
   }
   let four_under = js_code_binary_spaced_nb("4", less, "5");
   let five_under = js_code_binary_spaced_nb("5", less, "5");
+  let four_at_most = js_code_binary_spaced_nb("4", at_most, "4");
+  let five_at_most = js_code_binary_spaced_nb("5", at_most, "4");
   let n_at_most = js_code_binary_spaced_nb(n, at_most, "4");
   let n_under = js_code_binary_spaced_nb(n, less, "5");
   let n_at_most_last = js_code_binary_spaced_nb(n, at_most, max_less);
@@ -92,16 +94,21 @@ export function app_code_lesson_statement_name_seat_less() {
       ["", "0", " ", "1", " ", "2", " ", "3", " ", "4"],
       ["The last seat is ", "4"],
       app_code_explain_container_next,
-      ["Every seat in the row is less than ", "5", ", even the last seat:"],
+      ["Let's check ", n_at_most, " and ", n_under, " seat by seat"],
+      ["The last seat in the row is ", "4", ":"],
+      ["", four_at_most, " is ", "true"],
       ["", four_under, " is ", "true"],
-      [
-        "But seat ",
-        "5",
-        " is not in the row, and it is not less than ",
-        "5",
-        ":",
-      ],
+      ["Seat ", "5", " is the first seat past the row:"],
+      ["", five_at_most, " is ", "false"],
       ["", five_under, " is ", "false"],
+      [
+        "Seats before ",
+        "4",
+        " pass both checks too, and seats after ",
+        "5",
+        " fail both",
+      ],
+      ["Seats are whole numbers, so no seat comes between ", "4", " and ", "5"],
       ["So ", n_at_most, " and ", n_under, " check the same thing"],
       app_code_explain_container_next,
       [
