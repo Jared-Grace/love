@@ -3,7 +3,7 @@ import { apps_page_dark_is } from "./apps_page_dark_is.mjs";
 import { not } from "./not.mjs";
 import { app_shared_color_page_dark } from "./app_shared_color_page_dark.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function html_code_page_background_or_null(name) {
+export function html_code_page_background(name) {
   "$plain name";
   arguments_assert(arguments, 1);
   ("The colour to paint an app's page before any of it has arrived, written as a style for");
