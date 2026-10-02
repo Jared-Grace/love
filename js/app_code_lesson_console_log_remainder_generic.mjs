@@ -54,7 +54,7 @@ export function app_code_lesson_console_log_remainder_generic(
   let lesson = app_code_lesson_expression_generic(params);
   return lesson;
   function above(root, context) {
-    let r2 = app_code_lesson_console_log_remainder_generic_above(
+    let r2 = app_code_lesson_console_log_remainder_generic_above({
       root,
       divisor,
       divisor_text,
@@ -62,7 +62,7 @@ export function app_code_lesson_console_log_remainder_generic(
       modulo_fn,
       insight,
       context,
-    );
+    });
     return r2;
   }
 }
