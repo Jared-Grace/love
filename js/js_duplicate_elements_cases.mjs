@@ -42,6 +42,20 @@ export function js_duplicate_elements_cases() {
       names: [],
       why: "every name in the list is set a line or two above it, so it holds values made here rather than units registered from elsewhere - the characters of a line of code, and the colours matching them, want the same thing at more than one place",
     },
+    {
+      code: text_frozen(
+        "function f(color, answer_color) {\n  let plain = g();\n  let r = [plain, color, plain, color, plain, answer_color];\n}\n",
+      ),
+      names: [],
+      why: "two of the names are the line's own parameters, which the sentence above counts as names this file sets itself and the reading did not - this is the colour-per-piece list that was reported for it, one colour for each piece of Math.abs(b - a) === answer",
+    },
+    {
+      code: text_frozen(
+        "function one() {}\nfunction two() {}\nlet a = f();\nlet b = g();\nlet r = [one, a, b, two, a, one, b];\n",
+      ),
+      names: [],
+      why: "two of the names are functions declared here rather than variables set here, and they are the same kind of thing - this is the list of drawing steps of a lesson that was reported for it, two of whose steps are written out just above",
+    },
   ];
   return cases;
 }
