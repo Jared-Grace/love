@@ -1,8 +1,7 @@
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { list_intersect_empty_not_is } from "./list_intersect_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_intersect } from "./list_intersect.mjs";
 export function bible_usfm_verse_holder_shares_is(holders, version, content) {
   "Whether one bible says any meaning-carrying word of this verse the way some other bible holding the same verse says it.";
   "Sharing not one word, at a verse the others agree about, is the line the whole reading rests on - it is a statement about which passage a bible is printing rather than about how freely it translates. Translations disagree about wording constantly and still land on some content word together; landing on none of them is not a looser rendering, it is a different verse.";
@@ -15,8 +14,7 @@ export function bible_usfm_verse_holder_shares_is(holders, version, content) {
       continue;
     }
     let other_content = property_get(against, "content");
-    let common = list_intersect(content, other_content);
-    let shared_is = list_empty_not_is(common);
+    let shared_is = list_intersect_empty_not_is(content, other_content);
     if (shared_is) {
       return true;
     }
