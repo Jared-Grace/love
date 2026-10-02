@@ -1,3 +1,4 @@
+import { app_shared_spaced_neighbor_gap } from "./app_shared_spaced_neighbor_gap.mjs";
 import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { app_code_chair_circle } from "./app_code_chair_circle.mjs";
@@ -74,7 +75,7 @@ export function app_code_chair_grid(parent, count, width, marked) {
     "a white circle behind the emoji of every chair, so the brown chair shows against the blue or green of a filled chair, and every chair looks alike on the light blue too, asked by the human 2026-09-27";
     app_code_chair_circle(picture);
     html_style_assign(picture, {
-      "margin-bottom": "0.15em",
+      "margin-bottom": app_shared_spaced_neighbor_gap(),
     });
   }
   function chair_draw(index) {
