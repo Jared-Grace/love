@@ -1,10 +1,10 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { lyric_video_hearings_mispaired_and_misheard } from "./lyric_video_hearings_mispaired_and_misheard.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { lyric_video_hearings_misheard_baseline_path } from "./lyric_video_hearings_misheard_baseline_path.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 export async function lyric_video_hearings_match_rate_gate_run() {
   arguments_assert(arguments, 0);
@@ -13,6 +13,7 @@ export async function lyric_video_hearings_match_rate_gate_run() {
   ("★ SO THE SHARE OF THE WORDS HEARD DECIDES WHICH FAULT IT IS. A low match rate asks the question; `$fn ",
     fn_name("lyric_video_hearing_psalm_share"),
     "` answers it, because a recording of a different psalm cannot hold this psalm's words however clearly it was sung. Below the share floor is a mispairing and fails against zero, with no record that can bless it. At or above it the recording is the right psalm badly heard, which fails only when it is new, against a shrink-only record.");
+  ("How many songs were listened to travels out beside the verdict, because a gate that heard none and a gate that heard four hundred and found nothing wrong say the same word otherwise. The listenings are read out of one file, so a file that moves or is written a new way would leave this green and watching nothing.");
   ("THE TWO ARE REFUSED SEPARATELY AND THE MISPAIRING IS REFUSED FIRST, because a wrongly paired recording renders a whole video whose words never once match the singing and no amount of it is acceptable, while a badly heard one renders correctly and only has times worth less than usual.");
   ("Three other readings were weighed and rejected. Lowering the match rate floor to let the one correct recording through hides every real mispairing between the old floor and the new one, and the floor exists for nothing else. Leaving the gate red for a person to judge spends the one scarce thing in this repo on a question the numbers already answer. Returning the badly heard ones in the answer rather than refusing on them is silent, because what is recorded per commit is a gate's verdict and not what it handed back, so a second one arriving would never be seen.");
   let found = await lyric_video_hearings_mispaired_and_misheard();
@@ -30,11 +31,19 @@ export async function lyric_video_hearings_match_rate_gate_run() {
     fn_name("lyric_video_hearings_misheard_baseline_add"),
     "; the line times in such a recording are the aligner's guess and are the one set here not to trust",
   ]);
-  let r = await baseline_names_gate_generic(
+  let told = await baseline_names_gate_generic(
     misheard,
     path,
     hint,
     fn_name("lyric_video_hearings_misheard_baseline_shrink_write"),
   );
+  let heard = property_get(found, "heard");
+  let added = property_get(told, "added");
+  let stale = property_get(told, "stale");
+  let r = {
+    heard,
+    added,
+    stale,
+  };
   return r;
 }
