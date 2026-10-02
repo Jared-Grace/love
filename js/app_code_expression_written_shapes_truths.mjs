@@ -1,6 +1,5 @@
-import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
-import { app_code_operators_comparing } from "./app_code_operators_comparing.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_operators_comparing } from "./app_code_operators_comparing.mjs";
 import { app_code_operators_weaker } from "./app_code_operators_weaker.mjs";
 import { app_code_operators_weakest } from "./app_code_operators_weakest.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -11,8 +10,10 @@ import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symb
 import { js_operator_bang_double_equal_symbol } from "./js_operator_bang_double_equal_symbol.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_operator_greater_than_symbol } from "./js_operator_greater_than_symbol.mjs";
-import { list_add } from "./list_add.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
+import { list_add } from "./list_add.mjs";
+import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
+import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
 import { each } from "./each.mjs";
 import { app_code_expression_node_before } from "./app_code_expression_node_before.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
@@ -41,6 +42,7 @@ export function app_code_expression_written_shapes_truths() {
   let shapes = [];
   function comparison(symbol) {
     "the comparison over two numbers, then with arithmetic on the left and on the right";
+    "Both lopsided shapes are asked of the pair of builders that exist for them, one for each side, rather than the right-hand one being written out here out of the plain builder twice. Written out, the two sides of the same idea stopped looking like each other, and the shape the builder settles - which of the two operators gathers first - was being settled again here, where nothing says that is what it is doing.";
     let item = app_code_expression_node(14, symbol, 4);
     list_add(shapes, item);
     let arithmetic_left = app_code_expression_node_left_operator_first(
@@ -51,8 +53,13 @@ export function app_code_expression_written_shapes_truths() {
       2,
     );
     list_add(shapes, arithmetic_left);
-    let right = app_code_expression_node(4, minus, 1);
-    let arithmetic_right = app_code_expression_node(3, symbol, right);
+    let arithmetic_right = app_code_expression_node_right_operator_first(
+      3,
+      symbol,
+      4,
+      minus,
+      1,
+    );
     list_add(shapes, arithmetic_right);
   }
   each(comparisons, comparison);
@@ -78,12 +85,12 @@ export function app_code_expression_written_shapes_truths() {
   list_add(shapes, or_inside_and);
   let item4 = app_code_expression_node_before(bang, below_is);
   list_add(shapes, item4);
-  let right2 = app_code_expression_node_before(bang, true);
-  let denied_twice = app_code_expression_node_before(bang, right2);
+  let right = app_code_expression_node_before(bang, true);
+  let denied_twice = app_code_expression_node_before(bang, right);
   list_add(shapes, denied_twice);
-  let left2 = app_code_expression_node_parenthesis_wrapped(3, not_equals, 5);
+  let left = app_code_expression_node_parenthesis_wrapped(3, not_equals, 5);
   let right3 = app_code_expression_node(2, equals, 2);
-  let written_pair = app_code_expression_node(left2, not_equals, right3);
+  let written_pair = app_code_expression_node(left, not_equals, right3);
   list_add(shapes, written_pair);
   return shapes;
 }
