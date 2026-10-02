@@ -1,14 +1,13 @@
-import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
+import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
+import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
+import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_code_arrow_turned_draw } from "./app_code_arrow_turned_draw.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
-import { html_span_code_dark_colored } from "./html_span_code_dark_colored.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-import { function_is } from "./function_is.mjs";
 import { html_cycle_code } from "./html_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_arrow_inline } from "./app_code_arrow_inline.mjs";
-import { app_code_arrow_turned } from "./app_code_arrow_turned.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_square_grid } from "./app_code_square_grid.mjs";
@@ -88,42 +87,13 @@ export function app_code_lesson_statement_name_grid_steps() {
   let start_color = app_code_highlight_color_second();
   let row_color = app_code_highlight_color_third();
   let column_color = app_code_highlight_color_fourth();
-  function word(text, color) {
-    "a word of the writing in a colour of the picture: the letters coloured and bold, with no background, asked by the human 2026-10-01 - a background is kept for code, such as the row and column numbers, so a filled tile always means code and coloured letters mean English. Bold, because thin coloured letters read faintly. Not picked: a filled tile in the reading font, which looked like code";
-    function draw(line) {
-      app_code_span_text_highlight_color(line, text, color);
-    }
-    return draw;
-  }
-  function number(text, color) {
-    "a row or column number of the writing as the grid draws its headings: a code chip filled with that heading's colour";
-    function draw(line) {
-      let chip = html_span_code_dark_colored(line, [text], [color]);
-      html_style_background_color_set(chip, color);
-    }
-    return draw;
-  }
-  function said(pieces) {
-    "a line of writing whose row and column words and numbers wear the colours of the grid's headings, asked by the human 2026-10-01, so the sentence and the picture can be read against each other. Each piece is plain writing, or a function drawing a coloured word or number";
-    function draw(box) {
-      let line = html_div(box);
-      for (let piece of pieces) {
-        if (function_is(piece)) {
-          piece(line);
-        } else {
-          html_span_text(line, piece);
-        }
-      }
-    }
-    return draw;
-  }
-  let row_word = word("row", row_color);
-  let column_word = word("column", column_color);
-  let v5 = number("1", row_color);
-  let v6 = number("1", column_color);
-  let v7 = number("4", row_color);
-  let v8 = number("3", column_color);
-  let question_said = said([
+  let row_word = app_code_explain_word_colored("row", row_color);
+  let column_word = app_code_explain_word_colored("column", column_color);
+  let v5 = app_code_explain_number_colored("1", row_color);
+  let v6 = app_code_explain_number_colored("1", column_color);
+  let v7 = app_code_explain_number_colored("4", row_color);
+  let v8 = app_code_explain_number_colored("3", column_color);
+  let question_said = app_code_explain_said([
     "How many steps are there from ",
     row_word,
     " ",
@@ -142,10 +112,10 @@ export function app_code_lesson_statement_name_grid_steps() {
     v8,
     "?",
   ]);
-  let v9 = word("rows", row_color);
-  let v10 = number("1", row_color);
-  let v11 = number("4", row_color);
-  let rows_said = said([
+  let v9 = app_code_explain_word_colored("rows", row_color);
+  let v10 = app_code_explain_number_colored("1", row_color);
+  let v11 = app_code_explain_number_colored("4", row_color);
+  let rows_said = app_code_explain_said([
     "First the ",
     v9,
     ": from ",
@@ -158,10 +128,10 @@ export function app_code_lesson_statement_name_grid_steps() {
     v11,
     " is",
   ]);
-  let v12 = word("columns", column_color);
-  let v13 = number("1", column_color);
-  let v14 = number("3", column_color);
-  let columns_said = said([
+  let v12 = app_code_explain_word_colored("columns", column_color);
+  let v13 = app_code_explain_number_colored("1", column_color);
+  let v14 = app_code_explain_number_colored("3", column_color);
+  let columns_said = app_code_explain_said([
     "Then the ",
     v12,
     ": from ",
@@ -175,19 +145,12 @@ export function app_code_lesson_statement_name_grid_steps() {
     " is",
   ]);
   let end_color = app_code_highlight_color();
-  function arrow(degrees) {
-    "a drawing of the code app's arrow turned degrees clockwise from rightwards, for one square";
-    function draw(square) {
-      app_code_arrow_turned(square, degrees);
-    }
-    return draw;
-  }
   function moves_draw(box) {
     "you in the middle square, an arrow in each square one step away, asked by the human 2026-10-01; the arrows are the drawn ones the code app uses elsewhere, which centre exactly where a typed arrow sits low";
-    let v = arrow(270);
-    let v2 = arrow(90);
-    let v3 = arrow(180);
-    let v4 = arrow(0);
+    let v = app_code_arrow_turned_draw(270);
+    let v2 = app_code_arrow_turned_draw(90);
+    let v3 = app_code_arrow_turned_draw(180);
+    let v4 = app_code_arrow_turned_draw(0);
     app_code_square_grid(box, 3, 3, false, [
       [1, 1, "🙂", start_color],
       [0, 1, v, null],
@@ -212,7 +175,7 @@ export function app_code_lesson_statement_name_grid_steps() {
     "the count of the filled squares, with the words blue squares coloured as the squares are filled, asked by the human 2026-10-01, so the sentence points at the picture above it; bold, because coloured thin letters read faintly";
     let line = html_div(box);
     html_cycle_code(line, ["And we travel ", "5", " "]);
-    let blue = word("blue squares", end_color);
+    let blue = app_code_explain_word_colored("blue squares", end_color);
     blue(line);
     html_span_text(line, " total");
   }
