@@ -133,7 +133,9 @@ export function app_code_lesson_statement_name_king_steps() {
   let draw3 = app_code_explain_number_colored("4", row_color);
   let draw4 = app_code_explain_number_colored("3", column_color);
   let question_said = app_code_explain_said([
-    "How many steps are there from 🫅 ",
+    "How many steps are there from ",
+    app_code_explain_emoji_square("🫅", start_color),
+    " ",
     row_word,
     " ",
     draw,
@@ -141,7 +143,9 @@ export function app_code_lesson_statement_name_king_steps() {
     column_word,
     " ",
     draw2,
-    " to 🏁 ",
+    " to ",
+    app_code_explain_emoji_square("🏁", end_color),
+    " ",
     row_word,
     " ",
     draw3,
@@ -317,13 +321,14 @@ export function app_code_lesson_statement_name_king_steps() {
       moves_draw,
       question_said,
       squares_draw,
-      [
+      app_code_explain_said([
         "If we travel ",
-        "2",
+        app_code_explain_number_colored("2", plain),
         " squares diagonally and then ",
-        "1",
-        " square down, then we will travel to the second position 🏁",
-      ],
+        app_code_explain_number_colored("1", plain),
+        " square down, then we will travel to the second position ",
+        app_code_explain_emoji_square("🏁", end_color),
+      ]),
       travel_said,
       app_code_explain_container_next,
       draw8,
