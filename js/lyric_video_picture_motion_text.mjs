@@ -101,7 +101,7 @@ export function lyric_video_picture_motion_text(
       "-" +
       shake.from +
       ")/" +
-      subtract(shake.to, shake.from) +
+      number_round_places(subtract(shake.to, shake.from), 4) +
       ",0,1)*between(" +
       t +
       "," +
