@@ -1,3 +1,4 @@
+import { list_any } from "./list_any.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
@@ -11,7 +12,6 @@ import { text_empty_is } from "./text_empty_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_intersect_empty_not_is } from "./list_intersect_empty_not_is.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { gloss_passages_entries_collect_generic } from "./gloss_passages_entries_collect_generic.mjs";
 export function gloss_passages_verse_claims_all(
@@ -95,8 +95,7 @@ export function gloss_passages_verse_claims_all(
       if (unplaced) {
         screen = [verse_named];
       }
-      let screen_held = list_filter(screen, verse_holds_is);
-      let held = list_empty_not_is(screen_held);
+      let held = list_any(screen, verse_holds_is);
       let claim = {
         verses_key,
         word,
