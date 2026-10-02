@@ -1,9 +1,9 @@
+import { song_image_couplet_sung } from "./song_image_couplet_sung.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_image_couplets_verse } from "./song_image_couplets_verse.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { song_image_couplet_gloss } from "./song_image_couplet_gloss.mjs";
-import { list_join_space } from "./list_join_space.mjs";
 import { equal } from "./equal.mjs";
 export function song_image_couplets_glossed(verse_number) {
   "$plain verse_number";
@@ -30,8 +30,7 @@ export function song_image_couplets_glossed(verse_number) {
     if (bare) {
       continue;
     }
-    let halves = [couplet.first, couplet.second];
-    let words = list_join_space(halves);
+    let words = song_image_couplet_sung(couplet.n);
     list_add(glossed, {
       words: words,
       references: references,

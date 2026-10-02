@@ -1,10 +1,10 @@
+import { song_image_couplet_sung } from "./song_image_couplet_sung.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_image_couplets } from "./song_image_couplets.mjs";
 import { list_map_property_unique } from "./list_map_property_unique.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_join_newline_2 } from "./list_join_newline_2.mjs";
 import { song_image_couplets_verse } from "./song_image_couplets_verse.mjs";
-import { list_join_space } from "./list_join_space.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { equal } from "./equal.mjs";
 export function song_image_couplets_lyrics(verse_number) {
@@ -28,8 +28,7 @@ export function song_image_couplets_lyrics(verse_number) {
   }
   let couplets = song_image_couplets_verse(verse);
   function lambda$line(couplet) {
-    let halves = [couplet.first, couplet.second];
-    let line = list_join_space(halves);
+    let line = song_image_couplet_sung(couplet.n);
     return line;
   }
   let lines = list_map(couplets, lambda$line);
