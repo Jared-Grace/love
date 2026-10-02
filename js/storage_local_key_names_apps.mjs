@@ -1,3 +1,4 @@
+import { list_intersect_empty_not_is } from "./list_intersect_empty_not_is.mjs";
 import { app_shared_name_prefix_without } from "./app_shared_name_prefix_without.mjs";
 import { app_shared_name_main } from "./app_shared_name_main.mjs";
 import { webpack_build_generic_source_fn_names } from "./webpack_build_generic_source_fn_names.mjs";
@@ -6,8 +7,6 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { apps_all_main_fns } from "./apps_all_main_fns.mjs";
 import { storage_local_key_owner_forwarders } from "./storage_local_key_owner_forwarders.mjs";
 import { function_reachable_names } from "./function_reachable_names.mjs";
-import { list_intersect } from "./list_intersect.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_add } from "./list_add.mjs";
 export async function storage_local_key_names_apps() {
   "Every app whose own name reaches a browser storage key, because the storing it reaches is written to serve whoever calls it. Read-only.";
@@ -28,8 +27,7 @@ export async function storage_local_key_names_apps() {
       let reached = await function_reachable_names(root);
       list_add_multiple(reachable, reached);
     }
-    let met = list_intersect(reachable, forwarders);
-    let publishes = list_empty_not_is(met);
+    let publishes = list_intersect_empty_not_is(reachable, forwarders);
     if (publishes) {
       list_add(names, app);
     }
