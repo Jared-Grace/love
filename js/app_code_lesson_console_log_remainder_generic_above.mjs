@@ -13,7 +13,7 @@ export function app_code_lesson_console_log_remainder_generic_above({
   context,
 }) {
   arguments_assert(arguments, 1);
-  let r = app_code_lesson_console_log_remainder_generic_above_alternates(
+  let r = app_code_lesson_console_log_remainder_generic_above_alternates({
     root,
     divisor,
     divisor_text,
@@ -21,7 +21,7 @@ export function app_code_lesson_console_log_remainder_generic_above({
     modulo_fn,
     insight,
     context,
-  );
+  });
   let alternates = property_get(r, "alternates");
   let closing_line = property_get(r, "closing_line");
   if (alternates) {
