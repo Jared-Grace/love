@@ -1,0 +1,241 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
+import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
+import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
+import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
+import { js_code_call_args } from "./js_code_call_args.mjs";
+import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
+import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
+import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
+import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
+import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
+import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
+import { app_code_square_grid } from "./app_code_square_grid.mjs";
+import { app_code_arrow_turned_draw } from "./app_code_arrow_turned_draw.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_cycle_code } from "./html_cycle_code.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_code_lesson_statement_name_grid_steps } from "./app_code_lesson_statement_name_grid_steps.mjs";
+import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+export function app_code_lesson_statement_name_king_steps() {
+  arguments_assert(arguments, 0);
+  ("how many steps between two squares of a grid when a step may also go diagonally, as a chess king moves: let r = Math.abs(r2 - r1); let c = Math.abs(c2 - c1); let steps = Math.max(r, c); - picked 2026-10-02 as the lesson after Grid steps, the same question with one change, so the one new thing is that the larger count is the answer rather than the two added. In DSA it is the distance between two cells of a grid when diagonal moves are allowed, often called the Chebyshev distance. Math.max was taught on its own in Larger.");
+  ("The names r and c rather than Grid steps' rows and cols, because let steps = Math.max(rows, cols); is past the 30 characters a code line may be. Not picked: keeping rows and cols and calling the answer n, k or s, the only names short enough, which say nothing of what is counted; r and c say rows and columns in the letters r1, r2, c1 and c2 already use.");
+  ("The answers 3, 4, 5, 2 and 6 all differ: two pairs have more rows than columns, two more columns than rows, and one the same of each, which is all diagonal. Adding the two counts, the mistake Grid steps would lead to, gives a different answer for every pair. The writing works the same squares as Grid steps, row 1 column 1 to row 4 column 3, so the two answers, 5 and 3, can be read against each other.");
+  ("The writing is a first draft, not yet the human's, 2026-10-02.");
+  let names = ["r1", "c1", "r2", "c2"];
+  let [r1, c1, r2, c2] = names;
+  let minus = js_operator_minus_symbol();
+  let plus = js_operator_plus_symbol();
+  let same = js_operator_triple_equal_symbol();
+  let abs_name = "Math.abs";
+  let max_name = "Math.max";
+  function apart_line(name, a, b) {
+    "let name = Math.abs(b - a);";
+    let less = js_code_binary_spaced_nb(b, minus, a);
+    let apart = js_code_call_args(abs_name, [less]);
+    let line = js_code_let_statement(name, apart);
+    return line;
+  }
+  let r = "r";
+  let c = "c";
+  let steps = "steps";
+  let line_r = apart_line(r, r1, r2);
+  let line_c = apart_line(c, c1, c2);
+  let larger = js_code_call_args(max_name, [r, c]);
+  let line_steps = js_code_let_statement(steps, larger);
+  let step = {
+    middle: [line_r, line_c, line_steps],
+    logged: [steps],
+  };
+  let rows = "rows";
+  let cols = "cols";
+  let grid_rows = apart_line(rows, r1, r2);
+  let grid_cols = apart_line(cols, c1, c2);
+  let grid_added = js_code_binary_spaced_nb(rows, plus, cols);
+  let grid_steps = js_code_let_statement(steps, grid_added);
+  let remember_lines = app_code_lesson_statement_name_swap_program(
+    [
+      [r1, 2],
+      [c1, 0],
+      [r2, 0],
+      [c2, 4],
+    ],
+    [grid_rows, grid_cols, grid_steps],
+    [steps],
+  );
+  function values_get() {
+    "four of the five square pairs, in a fresh order each screen";
+    let candidates = [
+      [0, 0, 2, 3],
+      [4, 1, 0, 2],
+      [2, 5, 3, 0],
+      [1, 2, 3, 4],
+      [6, 4, 0, 1],
+    ];
+    let taken = list_shuffle_take(candidates, 4);
+    return taken;
+  }
+  function apart_worked(b, a, answer) {
+    "Math.abs(b - a) === answer, with numbers";
+    let less = js_code_binary_spaced_nb(b, minus, a);
+    let call = js_code_call_args(abs_name, [less]);
+    let line = js_code_binary_spaced_nb(call, same, answer);
+    return line;
+  }
+  let rows_worked = apart_worked("4", "1", "3");
+  let cols_worked = apart_worked("3", "1", "2");
+  let max_call = js_code_call_args(max_name, ["3", "2"]);
+  let max_worked = js_code_binary_spaced_nb(max_call, same, "3");
+  let start_color = app_code_highlight_color_second();
+  let row_color = app_code_highlight_color_third();
+  let column_color = app_code_highlight_color_fourth();
+  let end_color = app_code_highlight_color();
+  let row_word = app_code_explain_word_colored("row", row_color);
+  let column_word = app_code_explain_word_colored("column", column_color);
+  let draw = app_code_explain_number_colored("1", row_color);
+  let draw2 = app_code_explain_number_colored("1", column_color);
+  let draw3 = app_code_explain_number_colored("4", row_color);
+  let draw4 = app_code_explain_number_colored("3", column_color);
+  let question_said = app_code_explain_said([
+    "How many steps are there from ",
+    row_word,
+    " ",
+    draw,
+    ", ",
+    column_word,
+    " ",
+    draw2,
+    " to ",
+    row_word,
+    " ",
+    draw3,
+    ", ",
+    column_word,
+    " ",
+    draw4,
+    "?",
+  ]);
+  let draw5 = app_code_explain_word_colored("rows", row_color);
+  let draw6 = app_code_explain_number_colored("1", row_color);
+  let draw7 = app_code_explain_number_colored("4", row_color);
+  let rows_said = app_code_explain_said([
+    "The ",
+    draw5,
+    ": from ",
+    row_word,
+    " ",
+    draw6,
+    " to ",
+    row_word,
+    " ",
+    draw7,
+    " is",
+  ]);
+  let draw8 = app_code_explain_word_colored("columns", column_color);
+  let draw9 = app_code_explain_number_colored("1", column_color);
+  let draw10 = app_code_explain_number_colored("3", column_color);
+  let columns_said = app_code_explain_said([
+    "The ",
+    draw8,
+    ": from ",
+    column_word,
+    " ",
+    draw9,
+    " to ",
+    column_word,
+    " ",
+    draw10,
+    " is",
+  ]);
+  function moves_draw(box) {
+    "you in the middle square and an arrow in each of the eight squares around, the four of Grid steps and the four diagonals";
+    let draw11 = app_code_arrow_turned_draw(270);
+    let draw12 = app_code_arrow_turned_draw(90);
+    let draw13 = app_code_arrow_turned_draw(180);
+    let draw14 = app_code_arrow_turned_draw(0);
+    let draw15 = app_code_arrow_turned_draw(225);
+    let draw16 = app_code_arrow_turned_draw(315);
+    let draw17 = app_code_arrow_turned_draw(135);
+    let draw18 = app_code_arrow_turned_draw(45);
+    app_code_square_grid(box, 3, 3, false, [
+      [1, 1, "🙂", start_color],
+      [0, 1, draw11, null],
+      [2, 1, draw12, null],
+      [1, 0, draw13, null],
+      [1, 2, draw14, null],
+      [0, 0, draw15, null],
+      [0, 2, draw16, null],
+      [2, 0, draw17, null],
+      [2, 2, draw18, null],
+    ]);
+  }
+  function travel_said(box) {
+    "the count of the filled squares, with the words blue squares coloured as the squares are filled, as Grid steps says it";
+    let line = html_div(box);
+    html_cycle_code(line, ["And we travel ", "3", " "]);
+    let blue = app_code_explain_word_colored("blue squares", end_color);
+    blue(line);
+    html_span_text(line, " total");
+  }
+  function squares_draw(box) {
+    "the same two squares as Grid steps, row 1 column 1 and row 4 column 3, and a path between them filled in: diagonally down and right twice, then down once";
+    app_code_square_grid(box, 5, 4, true, [
+      [1, 1, "🙂", start_color],
+      [2, 2, "", end_color],
+      [3, 3, "", end_color],
+      [4, 3, "🏁", end_color],
+    ]);
+  }
+  let lesson = app_code_lesson_statement_formula({
+    words: "King steps on a grid",
+    title_code: line_steps,
+    names,
+    values_get,
+    example_values: [2, 0, 0, 4],
+    step,
+    remember_lesson: app_code_lesson_statement_name_grid_steps,
+    remember_parts: ["we can find how many steps between two squares:"],
+    remember_lines,
+    explain: [
+      ["Now suppose we can also move diagonally, as a king moves in chess"],
+      ["You can move one square at a time in any direction:"],
+      moves_draw,
+      question_said,
+      squares_draw,
+      [
+        "If we travel ",
+        "2",
+        " squares diagonally and then ",
+        "1",
+        " square down, then we will travel to the second position",
+      ],
+      travel_said,
+      app_code_explain_container_next,
+      ["But how can we calculate the ", "3", " steps from just the positions?"],
+      rows_said,
+      ["", rows_worked],
+      columns_said,
+      ["", cols_worked],
+      ["A diagonal step moves one row and one column at the same time"],
+      ["So ", "2", " diagonal steps move ", "2", " rows and ", "2", " columns"],
+      ["That finishes the columns, and ", "1", " more step finishes the rows"],
+      ["So the steps are the larger of the rows and the columns:"],
+      ["", max_worked],
+      app_code_explain_container_next,
+      ["Suppose the first square is at row ", r1, ", column ", c1],
+      ["And the second square is at row ", r2, ", column ", c2],
+      [
+        "Here is code that finds how many steps a king takes between the two squares:",
+      ],
+    ],
+    decoys: null,
+    example_pointers: null,
+  });
+  return lesson;
+}
