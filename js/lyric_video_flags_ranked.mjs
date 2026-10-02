@@ -1,6 +1,6 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -18,8 +18,7 @@ export function lyric_video_flags_ranked(flagged) {
     return nothing;
   }
   function flag_placed_is(flag) {
-    let nothing = equal(flag.apart, null);
-    let somewhere = not(nothing);
+    let somewhere = equal_not(flag.apart, null);
     return somewhere;
   }
   function flag_apart_of(flag) {
