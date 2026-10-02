@@ -1,3 +1,4 @@
+import { bible_word_voice_folder_name } from "./bible_word_voice_folder_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_interlinear_chapter_word_forms_first } from "./bible_interlinear_chapter_word_forms_first.mjs";
 export async function bible_word_voice_compare_rows(chapter_code, count) {
@@ -14,7 +15,7 @@ export async function bible_word_voice_compare_rows(chapter_code, count) {
     {
       pick: "google_man",
       label: "Google man",
-      folder: "bible_word_voice",
+      folder: bible_word_voice_folder_name(),
       voice: "Achird",
     },
     {
@@ -26,7 +27,7 @@ export async function bible_word_voice_compare_rows(chapter_code, count) {
     {
       pick: "google_woman",
       label: "Google woman",
-      folder: "bible_word_voice",
+      folder: bible_word_voice_folder_name(),
       voice: "Vindemiatrix",
     },
     {
