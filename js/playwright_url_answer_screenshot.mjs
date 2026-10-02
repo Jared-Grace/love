@@ -19,6 +19,7 @@ export async function playwright_url_answer_screenshot(
   "Opens a quiz page at a window of the size asked for, answers its question right by pressing the controls the page marks as right, and saves a picture of the screen the moment the answer is taken - the success showing - along with how wide the page became.";
   "It exists for faults that only appear after answering. A picture of a page as it opens never shows them, because nothing on that screen has been pressed yet.";
   "The width travels out as numbers as well as a picture: a page wider than its window scrolls sideways, and the widest thing sticking out is named, and so is every element that sticks out of a parent that does not - the place the overflow starts - so the fault can be found without reading the picture.";
+  "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   let presses_max = 40;
   let wait_ms = 2000;
   let result = null;
