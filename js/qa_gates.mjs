@@ -1,3 +1,4 @@
+import { js_bundle_chunk_ids_cases_gate_run } from "./js_bundle_chunk_ids_cases_gate_run.mjs";
 import { path_outward_cases_gate_run } from "./path_outward_cases_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
@@ -1179,6 +1180,7 @@ export function qa_gates() {
     gloss_explain_verse_numbers_cases_gate_run,
     gloss_explain_verse_number_words_cases_gate_run,
     path_outward_cases_gate_run,
+    js_bundle_chunk_ids_cases_gate_run,
   ];
   return gates;
 }
