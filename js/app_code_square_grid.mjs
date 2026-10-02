@@ -1,3 +1,4 @@
+import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
 import { function_is } from "./function_is.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
@@ -29,7 +30,7 @@ export function app_code_square_grid(parent, rows, columns, headings, marks) {
     display: "grid",
     "grid-template-columns": text_combine_multiple(["repeat(", t, ", 2.2em)"]),
     "grid-auto-rows": "2.2em",
-    gap: "0.25em",
+    gap: app_shared_spaced_tiny_gap(),
     "justify-content": "center",
     margin: "0.5em 0",
   });
