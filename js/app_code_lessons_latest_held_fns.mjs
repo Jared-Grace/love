@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_even } from "./app_code_lesson_statement_name_even.mjs";
 import { app_code_lesson_statement_name_clock_back } from "./app_code_lesson_statement_name_clock_back.mjs";
 import { app_code_lesson_statement_name_grid_inside } from "./app_code_lesson_statement_name_grid_inside.mjs";
 export function app_code_lessons_latest_held_fns() {
@@ -13,6 +14,7 @@ export function app_code_lessons_latest_held_fns() {
   let fns = [
     app_code_lesson_statement_name_grid_inside,
     app_code_lesson_statement_name_clock_back,
+    app_code_lesson_statement_name_even,
   ];
   return fns;
 }
