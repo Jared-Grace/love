@@ -1,11 +1,8 @@
-import { assert_json_get } from "./assert_json_get.mjs";
+import { assert_json } from "./assert_json.mjs";
 export function assert_left_right(b, left, right) {
-  function lambda() {
-    let lr = {
-      left,
-      right,
-    };
-    return lr;
-  }
-  assert_json_get(b, lambda);
+  let lr = {
+    left,
+    right,
+  };
+  assert_json(b, lr);
 }
