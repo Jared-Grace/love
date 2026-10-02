@@ -7,11 +7,13 @@ export function gloss_explain_verse_numbers_english(explain, verse_numbers) {
   "The words of distance are the ones English puts after a number to mean how far back rather than which one. The verse two back and verse two are the same three words with a fourth added, and only that fourth word says which of the two was meant.";
   "The shutters are the words English puts in front of the word for verse when what follows is not a label. The is the whole of the pointing half: measured across the original-language store on 2026-09-25, all nineteen places reading the verse and then a number named nothing - the verse two back, the verse three times, the verse one saying rather than two - while all five places reading that and then a number were real claims, so that is left out and a case holds it there. This is on the list for the same reason and the same evidence.";
   "The rest are words of unstated count - a few, several, many, some - because none of those can have a verse label behind it: nobody writes a few verses three and four. A stated count can: both verses eight and eleven is a real claim this store makes, so both, all, two and last are left out on purpose. Leaving a count unread costs one row in a list a person reads; reading a real claim as a count would drop it in silence, which is the dearer of the two mistakes.";
+  "The chapter words are chapter and its plural, because an English citation to somewhere else says chapter seven, verse eight and a verse of the chapter being explained is simply verse eight. The plural is on the list for the same reason the plural of verse is: chapters seven and eight, verse two is sayable, and a reading that knew only the singular would take that verse two for this chapter's.";
   arguments_assert(arguments, 2);
   let markers = ["verse", "verses"];
   let joiner = "and";
   let cancellers = ["back", "ago", "earlier", "later"];
   let shutters = ["the", "this", "few", "several", "many", "some"];
+  let chapter_markers = ["chapter", "chapters"];
   let r = gloss_explain_verse_numbers_generic(
     explain,
     verse_numbers,
@@ -20,6 +22,7 @@ export function gloss_explain_verse_numbers_english(explain, verse_numbers) {
     cancellers,
     text_number_to_words,
     shutters,
+    chapter_markers,
   );
   return r;
 }

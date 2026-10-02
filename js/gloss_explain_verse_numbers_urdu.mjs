@@ -10,11 +10,14 @@ export function gloss_explain_verse_numbers_urdu(explain, verse_numbers) {
   "THE SHAPE OF A REAL CLAIM IN THIS STORE IS THE OTHER ONE: آیت ۲۱ میں آیا, came in verse twenty-one, with میں rather than a word of owning. All three claims already known to be wrong here are written that way - وُہی جوڑنے والا لفظ ہے جو آیت ۱۵ میں آیا for and, and the same shape for is and for the. So the two shapes are told apart by the one word behind the number, and none of the three known faults is hidden by this.";
   "WHAT THIS IS WORTH WAS MEASURED BEFORE IT WAS WRITTEN. Of the two thousand eight hundred and ninety-two rows this store stood accused of on 2026-09-25, two thousand two hundred and eighty-one put a word of owning straight behind the number. Reading the queue is what found it: the same handful of sentence shapes came back page after page, and every one of them named a verse in order to name a different word in it.";
   "English's words of distance are not looked for and neither are shutters, for the same reason in both cases: Urdu counts backwards before the number rather than after it, and Urdu has no word for the at all. A word belongs on either list when a reading of this store shows one, not before.";
+  "THE WORD FOR CHAPTER IS ON THE LIST BECAUSE THIS STORE WRITES IT, BUT IT WILL ALMOST NEVER ARM, AND THAT IS WORTH SAYING RATHER THAN LEAVING TO BE DISCOVERED. باب stands eleven hundred and fifteen times across the two hundred and sixty chapters, and about forty-five of those go on to name a verse - باب بارہ کی آیت, chapter twelve's verse, and the same shape for eleven, thirteen, fourteen and fifteen. Every one of those spells the chapter in words while this store spells a verse in its ten digit shapes, so the table that reads numbers here cannot read any of them. Only the three written باب ۱۰ آیت arm at all. Measured 2026-10-02.";
+  "Naming it anyway rather than leaving it out is the same choice the one door next to this makes about a language nothing reads yet: a list that is there and empty-handed says what it would catch, and a list that is absent says nothing and looks like nothing to catch. When a second table of written numbers is built, this line starts working without anybody having to remember it.";
   arguments_assert(arguments, 2);
   let markers = ["آیت", "آیَت", "آیتیں", "آیتوں"];
   let joiner = "اَور";
   let cancellers = ["کے", "کا", "کی"];
   let shutters = [];
+  let chapter_markers = ["باب"];
   let r = gloss_explain_verse_numbers_generic(
     explain,
     verse_numbers,
@@ -23,6 +26,7 @@ export function gloss_explain_verse_numbers_urdu(explain, verse_numbers) {
     cancellers,
     text_digits_urdu,
     shutters,
+    chapter_markers,
   );
   return r;
 }
