@@ -1,3 +1,4 @@
+import { app_code_explain_abs_apart_colored } from "./app_code_explain_abs_apart_colored.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
@@ -74,19 +75,22 @@ export function app_code_lesson_statement_name_grid_steps() {
     let taken = list_shuffle_take(candidates, 4);
     return taken;
   }
-  function apart_worked(b, a, answer) {
-    "Math.abs(b - a) === answer, with numbers";
-    let less = js_code_binary_spaced_nb(b, minus, a);
-    let call = js_code_call_args(math_abs, [less]);
-    let line = js_code_binary_spaced_nb(call, same, answer);
-    return line;
-  }
-  let rows_worked = apart_worked("4", "1", "3");
-  let cols_worked = apart_worked("3", "1", "2");
   let total = js_code_binary_result_nb("3", plus, "2", "5");
   let start_color = app_code_highlight_color_second();
   let row_color = app_code_highlight_color_third();
   let column_color = app_code_highlight_color_fourth();
+  let rows_worked = app_code_explain_abs_apart_colored(
+    "4",
+    "1",
+    "3",
+    row_color,
+  );
+  let cols_worked = app_code_explain_abs_apart_colored(
+    "3",
+    "1",
+    "2",
+    column_color,
+  );
   let row_word = app_code_explain_word_colored("row", row_color);
   let column_word = app_code_explain_word_colored("column", column_color);
   let v5 = app_code_explain_number_colored("1", row_color);
@@ -227,9 +231,9 @@ export function app_code_lesson_statement_name_grid_steps() {
         " squares to the right from just the positions?",
       ],
       rows_said,
-      ["", rows_worked],
+      rows_worked,
       columns_said,
-      ["", cols_worked],
+      cols_worked,
       ["Each step moves one row or one column, so we add them together:"],
       ["", total],
       app_code_explain_container_next,

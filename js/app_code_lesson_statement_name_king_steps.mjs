@@ -1,3 +1,5 @@
+import { app_code_explain_abs_apart_colored } from "./app_code_explain_abs_apart_colored.mjs";
+import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -81,20 +83,28 @@ export function app_code_lesson_statement_name_king_steps() {
     let taken = list_shuffle_take(candidates, 4);
     return taken;
   }
-  function apart_worked(b, a, answer) {
-    "Math.abs(b - a) === answer, with numbers";
-    let less = js_code_binary_spaced_nb(b, minus, a);
-    let call = js_code_call_args(abs_name, [less]);
-    let line = js_code_binary_spaced_nb(call, same, answer);
-    return line;
-  }
-  let rows_worked = apart_worked("4", "1", "3");
-  let cols_worked = apart_worked("3", "1", "2");
   let max_call = js_code_call_args(max_name, ["3", "2"]);
   let max_worked = js_code_binary_spaced_nb(max_call, same, "3");
   let start_color = app_code_highlight_color_second();
   let row_color = app_code_highlight_color_third();
   let column_color = app_code_highlight_color_fourth();
+  let rows_worked = app_code_explain_abs_apart_colored(
+    "4",
+    "1",
+    "3",
+    row_color,
+  );
+  let cols_worked = app_code_explain_abs_apart_colored(
+    "3",
+    "1",
+    "2",
+    column_color,
+  );
+  ("a count such as the 2 diagonal steps is not a position, so it is a code chip with no colour of its own, as the counts are in Grid steps");
+  let plain = app_shared_color_code_background();
+  let count_two = app_code_explain_number_colored("2", plain);
+  let rows_word = app_code_explain_word_colored("rows", row_color);
+  let columns_word = app_code_explain_word_colored("columns", column_color);
   let end_color = app_code_highlight_color();
   let row_word = app_code_explain_word_colored("row", row_color);
   let column_word = app_code_explain_word_colored("column", column_color);
@@ -121,12 +131,11 @@ export function app_code_lesson_statement_name_king_steps() {
     draw4,
     "?",
   ]);
-  let draw5 = app_code_explain_word_colored("rows", row_color);
   let draw6 = app_code_explain_number_colored("1", row_color);
   let draw7 = app_code_explain_number_colored("4", row_color);
   let rows_said = app_code_explain_said([
     "The ",
-    draw5,
+    rows_word,
     ": from ",
     row_word,
     " ",
@@ -137,12 +146,11 @@ export function app_code_lesson_statement_name_king_steps() {
     draw7,
     " is",
   ]);
-  let draw8 = app_code_explain_word_colored("columns", column_color);
   let draw9 = app_code_explain_number_colored("1", column_color);
   let draw10 = app_code_explain_number_colored("3", column_color);
   let columns_said = app_code_explain_said([
     "The ",
-    draw8,
+    columns_word,
     ": from ",
     column_word,
     " ",
@@ -192,6 +200,41 @@ export function app_code_lesson_statement_name_king_steps() {
       [4, 3, "🏁", end_color],
     ]);
   }
+  let draw19 = app_code_explain_said([
+    "A diagonal step moves one ",
+    row_word,
+    " and one ",
+    column_word,
+    " at the same time",
+  ]);
+  let draw20 = app_code_explain_said([
+    "So ",
+    count_two,
+    " diagonal steps move ",
+    count_two,
+    " ",
+    rows_word,
+    " and ",
+    count_two,
+    " ",
+    columns_word,
+  ]);
+  let draw21 = app_code_explain_number_colored("1", plain);
+  let draw22 = app_code_explain_said([
+    "That finishes the ",
+    columns_word,
+    ", and ",
+    draw21,
+    " more step finishes the ",
+    rows_word,
+  ]);
+  let draw23 = app_code_explain_said([
+    "So the steps are the larger of the ",
+    rows_word,
+    " and the ",
+    columns_word,
+    ":",
+  ]);
   let lesson = app_code_lesson_statement_formula({
     words: "King steps on a grid",
     title_code: line_steps,
@@ -219,13 +262,13 @@ export function app_code_lesson_statement_name_king_steps() {
       app_code_explain_container_next,
       ["But how can we calculate the ", "3", " steps from just the positions?"],
       rows_said,
-      ["", rows_worked],
+      rows_worked,
       columns_said,
-      ["", cols_worked],
-      ["A diagonal step moves one row and one column at the same time"],
-      ["So ", "2", " diagonal steps move ", "2", " rows and ", "2", " columns"],
-      ["That finishes the columns, and ", "1", " more step finishes the rows"],
-      ["So the steps are the larger of the rows and the columns:"],
+      cols_worked,
+      draw19,
+      draw20,
+      draw22,
+      draw23,
       ["", max_worked],
       app_code_explain_container_next,
       ["Suppose the first square is at row ", r1, ", column ", c1],
