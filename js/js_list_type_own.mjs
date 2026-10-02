@@ -1,4 +1,4 @@
-import { list_includes_not } from "./list_includes_not.mjs";
+import { property_in_list_not } from "./property_in_list_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_list_type } from "./js_list_type.mjs";
@@ -29,8 +29,7 @@ export function js_list_type_own(node, node_type) {
   }
   each(types, type_read);
   function own_is(visited) {
-    let n = property_get(visited, "node");
-    let own = list_includes_not(inner, n);
+    let own = property_in_list_not(visited, "node", inner);
     return own;
   }
   let all = js_list_type(node, node_type);
