@@ -3,6 +3,7 @@ export function lyric_video_document_times_hand_is_cases() {
   "Timing documents in each of the states one is actually found in, with whether the moments in it are a person's and so must not be written over.";
   "★ THE PAIR THAT CARRIES THE WHOLE POINT IS THE THIRD AND THE FOURTH, WHICH ARE THE SAME TIMES AND OPPOSITE ANSWERS. Both hold lines a twentieth of a second short of the one below, because a machine writes its times through the very function the tapping desk writes through; nothing in the numbers tells them apart and nothing ever will. Only the word one of them carries about itself separates them, which is the reason the word was added.";
   "The unmarked document answering yes is the case that keeps the guess pointing the safe way. Every document that existed before the mark did carries no mark, and some of those were tapped by hand, so silence has to read as a person's.";
+  "★ THE LAST CASE IS THE ONE THIS LIST CLAIMED TO HOLD AND DID NOT, AND IT IS THE ONLY ONE HERE THAT HAS EVER DISAGREED WITH THE CODE. The first line above has said since it was written that these are the states a document is actually found in. A document holding lines and no moments anywhere is such a state, and on 2026-10-02 sixteen of them were found at once - Psalm 90 through 104 and 136 - each answering that a person had timed it, so the one command able to listen to them refused every one. Six written cases agreeing is not cover for a seventh nobody wrote: the fault sat in a neighbouring gate about keeping copies, which could only report that sixteen protected documents had no copy kept, never that there was nothing in them worth protecting.";
   arguments_assert(arguments, 0);
   let cases = [
     {
@@ -145,6 +146,23 @@ export function lyric_video_document_times_hand_is_cases() {
         ],
       },
       hand: true,
+    },
+    {
+      name: "a document whose lines are words and nothing else, which has never been near the tapping desk and so holds nobody's work to lose",
+      document: {
+        lines: [
+          {
+            text: "one",
+          },
+          {
+            text: "two",
+          },
+          {
+            text: "three",
+          },
+        ],
+      },
+      hand: false,
     },
   ];
   return cases;
