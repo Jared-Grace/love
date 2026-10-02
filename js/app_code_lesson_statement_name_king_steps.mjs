@@ -1,3 +1,4 @@
+import { app_code_square_edged } from "./app_code_square_edged.mjs";
 import { app_code_explain_code_colored } from "./app_code_explain_code_colored.mjs";
 import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth.mjs";
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
@@ -216,11 +217,23 @@ export function app_code_lesson_statement_name_king_steps() {
   }
   function squares_draw(box) {
     "the same two squares as Grid steps, row 1 column 1 and row 4 column 3, and a path between them filled in: diagonally down and right twice, then down once";
+    "each path square keeps its blue fill and shows how the step into it moved: a green bar down its left edge for a row, the colour of the rows count, and an orange bar along its top for a column, the colour of the columns count, asked by the human 2026-10-02. The two diagonal steps show both and the last step down shows only the left, so the picture holds 3 left bars and 2 top bars, the 3 rows and 2 columns of the worked lines below";
+    let draw30 = app_code_square_edged(
+      "",
+      rows_count_color,
+      columns_count_color,
+    );
+    let draw31 = app_code_square_edged(
+      "",
+      rows_count_color,
+      columns_count_color,
+    );
+    let draw32 = app_code_square_edged("🏁", rows_count_color, null);
     app_code_square_grid(box, 5, 4, true, [
       [1, 1, "🫅", start_color],
-      [2, 2, "", end_color],
-      [3, 3, "", end_color],
-      [4, 3, "🏁", end_color],
+      [2, 2, draw30, end_color],
+      [3, 3, draw31, end_color],
+      [4, 3, draw32, end_color],
     ]);
   }
   let draw19 = app_code_explain_said([
