@@ -1,6 +1,6 @@
+import { app_code_explain_code_colored } from "./app_code_explain_code_colored.mjs";
 import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth.mjs";
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
-import { html_span_code_dark_colored } from "./html_span_code_dark_colored.mjs";
 import { app_code_explain_abs_apart_colored } from "./app_code_explain_abs_apart_colored.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -32,6 +32,7 @@ export function app_code_lesson_statement_name_king_steps() {
   ("how many steps between two squares of a grid when a step may also go diagonally, as a chess king moves: let r = Math.abs(r2 - r1); let c = Math.abs(c2 - c1); let steps = Math.max(r, c); - picked 2026-10-02 as the lesson after Grid steps, the same question with one change, so the one new thing is that the larger count is the answer rather than the two added. In DSA it is the distance between two cells of a grid when diagonal moves are allowed, often called the Chebyshev distance. Math.max was taught on its own in Larger.");
   ("The names r and c rather than Grid steps' rows and cols, because let steps = Math.max(rows, cols); is past the 30 characters a code line may be. Not picked: keeping rows and cols and calling the answer n, k or s, the only names short enough, which say nothing of what is counted; r and c say rows and columns in the letters r1, r2, c1 and c2 already use.");
   ("The answers 3, 4, 5, 2 and 6 all differ: two pairs have more rows than columns, two more columns than rows, and one the same of each, which is all diagonal. Adding the two counts, the mistake Grid steps would lead to, gives a different answer for every pair. The writing works the same squares as Grid steps, row 1 column 1 to row 4 column 3, so the two answers, 5 and 3, can be read against each other.");
+  ("The reminder and the example both use row 3, column 1 to row 0, column 5, so Grid steps gives 7 and King steps 4 for the same squares. The example is coloured as Grid steps colours its own, with r and c in the colours of the counts.");
   ("The writing is a first draft, not yet the human's, 2026-10-02.");
   let names = ["r1", "c1", "r2", "c2"];
   let [r1, c1, r2, c2] = names;
@@ -66,10 +67,10 @@ export function app_code_lesson_statement_name_king_steps() {
   let grid_steps = js_code_let_statement(steps, grid_added);
   let remember_lines = app_code_lesson_statement_name_swap_program(
     [
-      [r1, 2],
-      [c1, 0],
+      [r1, 3],
+      [c1, 1],
       [r2, 0],
-      [c2, 4],
+      [c2, 5],
     ],
     [grid_rows, grid_cols, grid_steps],
     [steps],
@@ -91,23 +92,6 @@ export function app_code_lesson_statement_name_king_steps() {
   let column_color = app_code_highlight_color_fourth();
   let rows_count_color = app_code_highlight_color_second();
   let columns_count_color = app_code_highlight_color_fifth();
-  function max_worked(box) {
-    "Math.max(3, 2) === 3 as one code chip, the count of rows and the count of columns in the colours the lines above give them, asked by the human 2026-10-02; the answer is the steps, a count of neither, so it keeps the code background";
-    let line = html_div(box);
-    html_span_code_dark_colored(
-      line,
-      [max_name, "(", "3", ", ", "2", ") === ", "3"],
-      [
-        plain,
-        plain,
-        rows_count_color,
-        plain,
-        columns_count_color,
-        plain,
-        plain,
-      ],
-    );
-  }
   let rows_worked = app_code_explain_abs_apart_colored(
     "4",
     "1",
@@ -125,6 +109,11 @@ export function app_code_lesson_statement_name_king_steps() {
   ("a count such as the 2 diagonal steps is not a position, so it is a code chip with no colour of its own, as the counts are in Grid steps");
   let plain = app_shared_color_code_background();
   let count_two = app_code_explain_number_colored("2", plain);
+  ("Math.max(3, 2) === 3 as one code chip, the count of rows and the count of columns in the colours the lines above give them, asked by the human 2026-10-02; the answer is the steps, a count of neither, so it keeps the code background");
+  let max_worked = app_code_explain_code_colored(
+    [max_name, "(", "3", ", ", "2", ") === ", "3"],
+    [plain, plain, rows_count_color, plain, columns_count_color, plain, plain],
+  );
   let rows_word = app_code_explain_word_colored("rows", row_color);
   let columns_word = app_code_explain_word_colored("columns", column_color);
   let end_color = app_code_highlight_color();
@@ -262,7 +251,7 @@ export function app_code_lesson_statement_name_king_steps() {
     title_code: line_steps,
     names,
     values_get,
-    example_values: [2, 0, 0, 4],
+    example_values: [3, 1, 0, 5],
     step,
     remember_lesson: app_code_lesson_statement_name_grid_steps,
     remember_parts: ["we can find how many steps between two squares:"],
@@ -300,7 +289,12 @@ export function app_code_lesson_statement_name_king_steps() {
       ],
     ],
     decoys: null,
-    example_pointers: null,
+    example_pointers: [
+      [["3", "0"], row_color],
+      [["1", "5"], column_color],
+      [[r], rows_count_color],
+      [[c], columns_count_color],
+    ],
   });
   return lesson;
 }

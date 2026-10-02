@@ -1,6 +1,5 @@
-import { html_div } from "./html_div.mjs";
+import { app_code_explain_code_colored } from "./app_code_explain_code_colored.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
-import { html_span_code_dark_colored } from "./html_span_code_dark_colored.mjs";
 export function app_code_explain_abs_apart_colored(
   b,
   a,
@@ -9,14 +8,10 @@ export function app_code_explain_abs_apart_colored(
   answer_color,
 ) {
   "a line of the writing showing Math.abs(b - a) === answer as one code chip, the two positions b and a filled with the colour the grid gives their row or column, asked by the human 2026-10-02, so the numbers in the code can be read against the headings of the picture. The answer is a count of rows or columns rather than a position, so it wears a colour of its own, answer_color, asked by the human the same day: a count is a different thing from the positions it is counted between";
-  function draw(box) {
-    let line = html_div(box);
-    let plain = app_shared_color_code_background();
-    html_span_code_dark_colored(
-      line,
-      ["Math.abs(", b, " - ", a, ") === ", answer],
-      [plain, color, plain, color, plain, answer_color],
-    );
-  }
+  let plain = app_shared_color_code_background();
+  let draw = app_code_explain_code_colored(
+    ["Math.abs(", b, " - ", a, ") === ", answer],
+    [plain, color, plain, color, plain, answer_color],
+  );
   return draw;
 }

@@ -1,3 +1,5 @@
+import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
+import { app_code_explain_code_colored } from "./app_code_explain_code_colored.mjs";
 import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth.mjs";
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
 import { app_code_explain_abs_apart_colored } from "./app_code_explain_abs_apart_colored.mjs";
@@ -23,7 +25,6 @@ import { js_code_call_args } from "./js_code_call_args.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_rows_apart } from "./app_code_lesson_statement_name_rows_apart.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
@@ -32,6 +33,7 @@ export function app_code_lesson_statement_name_grid_steps() {
   ("how many steps between two squares of a grid, moving up, down, left or right: let rows = Math.abs(r2 - r1); let cols = Math.abs(c2 - c1); let steps = rows + cols; - the last of three lessons, after Rows down and Rows apart. In DSA it is the distance between two cells of a grid when moves go along rows and columns, often called the Manhattan distance.");
   ("Columns first appear here, as the same line as the rows with c for r, so the lesson asks one new thing: that the two counts add. Not picked: a lesson of its own for columns, which would teach the rows line again under other names.");
   ("The answers 5, 4, 6, 2 and 7 all differ, and one pair has no rows to move, so a 0 is added once. The writing works row 1 column 1 to row 4 column 3, which no question repeats, and the example below is another square pair.");
+  ("The example program starts at row 3, column 1 and ends at row 0, column 5, and its numbers are coloured as the writing colours them: the rows red, the columns purple, and the names rows and cols in the colours of their counts, asked by the human 2026-10-02. No number is both a row and a column, because a pointer colours a number by its text, so a 0 in both would have to wear one colour. Not picked: the earlier 2, 0, 0, 4, whose 0 was both.");
   ("The writing is a first draft, not yet the human's, 2026-10-01.");
   let names = ["r1", "c1", "r2", "c2"];
   let [r, c, r2, c2] = names;
@@ -77,7 +79,6 @@ export function app_code_lesson_statement_name_grid_steps() {
     let taken = list_shuffle_take(candidates, 4);
     return taken;
   }
-  let total = js_code_binary_result_nb("3", plus, "2", "5");
   let start_color = app_code_highlight_color_sixth();
   let row_color = app_code_highlight_color_third();
   let column_color = app_code_highlight_color_fourth();
@@ -96,6 +97,12 @@ export function app_code_lesson_statement_name_grid_steps() {
     "2",
     column_color,
     columns_count_color,
+  );
+  let plain = app_shared_color_code_background();
+  ("3 + 2 === 5 as one code chip, the count of rows and the count of columns in the colours the lines above give them, asked by the human 2026-10-02; the answer is the steps, a count of neither, so it keeps the code background, as in King steps");
+  let total_worked = app_code_explain_code_colored(
+    ["3", " " + plus + " ", "2", " " + same + " ", "5"],
+    [rows_count_color, plain, columns_count_color, plain, plain],
   );
   let row_word = app_code_explain_word_colored("row", row_color);
   let column_word = app_code_explain_word_colored("column", column_color);
@@ -205,7 +212,7 @@ export function app_code_lesson_statement_name_grid_steps() {
     title_code: line_steps,
     names,
     values_get,
-    example_values: [2, 0, 0, 4],
+    example_values: [3, 1, 0, 5],
     step,
     remember_lesson: app_code_lesson_statement_name_rows_apart,
     remember_parts: ["we can find how many rows apart two rows are:"],
@@ -241,14 +248,19 @@ export function app_code_lesson_statement_name_grid_steps() {
       columns_said,
       cols_worked,
       ["Each step moves one row or one column, so we add them together:"],
-      ["", total],
+      total_worked,
       app_code_explain_container_next,
       ["Suppose the first square is at row ", r, ", column ", c],
       ["And the second square is at row ", r2, ", column ", c2],
       ["Here is code that finds how many steps between the two squares:"],
     ],
     decoys: null,
-    example_pointers: null,
+    example_pointers: [
+      [["3", "0"], row_color],
+      [["1", "5"], column_color],
+      [[rows], rows_count_color],
+      [[cols], columns_count_color],
+    ],
   });
   return lesson;
 }
