@@ -1,12 +1,13 @@
+import { js_list_type } from "./js_list_type.mjs";
+import { js_binding_names } from "./js_binding_names.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { property_path_get_2 } from "./property_path_get_2.mjs";
+import { less_than } from "./less_than.mjs";
+import { list_all } from "./list_all.mjs";
+import { js_identifier_is } from "./js_identifier_is.mjs";
+import { not } from "./not.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { property_path_get_2 } from "./property_path_get_2.mjs";
-import { list_all } from "./list_all.mjs";
-import { not } from "./not.mjs";
-import { less_than } from "./less_than.mjs";
-import { js_list_type } from "./js_list_type.mjs";
-import { js_identifier_is } from "./js_identifier_is.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { list_add } from "./list_add.mjs";
 export function js_duplicate_elements(ast, size) {
@@ -16,14 +17,7 @@ export function js_duplicate_elements(ast, size) {
   "Only names are compared, never written words or numbers - a register of names stands for things that get run or read, so holding one twice is always a mistake, while a list of words or numbers may perfectly well say the same thing twice and mean it.";
   let duplicates = [];
   let vs = js_list_type(ast, "ArrayExpression");
-  let locals = [];
-  let declarators = js_list_type(ast, "VariableDeclarator");
-  for (let d of declarators) {
-    let id = property_path_get_2(d, "node", "id");
-    if (js_identifier_is(id)) {
-      list_add(locals, id.name);
-    }
-  }
+  let locals = js_binding_names(ast);
   function local_is(name) {
     let r = list_includes(locals, name);
     return r;
@@ -47,6 +41,8 @@ export function js_duplicate_elements(ast, size) {
       continue;
     }
     ("A list made only of names this file sets itself is passed over too, and that is what tells a register apart from a line spelled out a piece at a time. A register names units that live somewhere else and get run or read from there; a name set a few lines up holds a value made here - a character, a colour - and a line of code such as ! ( ! ( true ) ) wants the same character at two places of it, with a matching list of colours wanting the same colour at two places too. Measured 2026-09-15: those two lists were the whole of what this check found.");
+    ("★ A NAME THIS FILE SETS ITSELF IS EVERY NAME THIS FILE BINDS, WHICH IS WHAT THE SENTENCE ABOVE ALWAYS SAID AND NOT WHAT WAS ASKED FOR. The reading was built from variable declarations alone, so a function declared a few lines up and a parameter named at the top of the line both read as units living elsewhere, and two lists went down as offenders for holding a name twice on purpose: a run of colours, one per piece of a line of code, whose repeated places are a parameter; and a list of drawing steps, one per screen of a lesson, two of whose places ask for the same break between groups and two of whose steps are declared functions. Both are the shape this exemption was written for, and both escaped it by a hand-rolled gathering being narrower than the sentence over it.");
+    ("The asymmetry is worth saying out loud, because it runs the other way here from everywhere else this reading is used. A caller asking which names are the file's own in order to leave them alone is in danger from a name MISSING - what is left looks like the repo's, and gets treated as the repo's. This caller subtracts in order to EXEMPT, so a name wrongly present costs a fault not found. Widening it is therefore the lenient direction, and it is right only because the reason given above does not distinguish the kinds: a value made here is made here whether a let, a parameter or a declared function holds it. What founded this check is untouched - a register of imported repo functions, which this reading excludes by design.");
     let all_local = list_all(names, local_is);
     if (all_local) {
       continue;
