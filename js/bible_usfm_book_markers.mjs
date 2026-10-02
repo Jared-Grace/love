@@ -1,8 +1,8 @@
+import { bible_usfm_line_notes_removed } from "./bible_usfm_line_notes_removed.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { usfm_continuation_lines_joined } from "./usfm_continuation_lines_joined.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { bible_usfm_lines_lone_markers_joined } from "./bible_usfm_lines_lone_markers_joined.mjs";
-import { usfm_spans_removed } from "./usfm_spans_removed.mjs";
 import { bible_usfm_marker_rest } from "./bible_usfm_marker_rest.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
@@ -18,8 +18,7 @@ export function bible_usfm_book_markers(usfm) {
   let usfm_lines = bible_usfm_lines_lone_markers_joined(lines);
   let markers = [];
   for (let usfm_line of usfm_lines) {
-    let unfootnoted = usfm_spans_removed(usfm_line, "f");
-    let unreferenced = usfm_spans_removed(unfootnoted, "x");
+    let unreferenced = bible_usfm_line_notes_removed(usfm_line);
     let split = bible_usfm_marker_rest(unreferenced);
     let marker_text = property_get(split, "marker");
     list_add(markers, marker_text);
