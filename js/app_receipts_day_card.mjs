@@ -1,3 +1,4 @@
+import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
 import { html_display_flex } from "./html_display_flex.mjs";
 import { html_style_gap } from "./html_style_gap.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
@@ -34,6 +35,6 @@ export function app_receipts_day_card(parent, title) {
   html_display_flex(body);
   html_style_set(body, "flex-direction", "column");
   html_style_gap(body, "0.6em");
-  html_style_margin_top(body, "0.4em");
+  html_style_margin_top(body, app_shared_content_edge_gap());
   return body;
 }
