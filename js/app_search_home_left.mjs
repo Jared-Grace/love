@@ -1,13 +1,13 @@
-import { app_shared_bible_offline_gear } from "./app_shared_bible_offline_gear.mjs";
-import { app_shared_bar_center_content_pad } from "./app_shared_bar_center_content_pad.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_shared_bar_content_root_sticky } from "./app_shared_bar_content_root_sticky.mjs";
+import { app_shared_bar_center_content_pad } from "./app_shared_bar_center_content_pad.mjs";
 import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
 import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_shared_bible_languages_gear } from "./app_shared_bible_languages_gear.mjs";
+import { app_shared_bible_offline_gear } from "./app_shared_bible_offline_gear.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
@@ -26,8 +26,9 @@ export function app_search_home_left(context, hash, search) {
   property_set(context, "languages_chosen", languages_chosen);
   app_shared_bible_languages_gear(bar, content, language_codes);
   app_shared_bible_offline_gear(bar, content, languages_chosen);
+  ("THE SEARCH LOOKS IN ENGLISH BIBLES ONLY, so the instruction says so. It used to say a verse matches if any Bible version holds the word, which was wrong twice over: the index is built from the English bibles alone, and the word cutter keeps Latin letters only, so a reader typing their own script hands over a sentence and it comes back as no words at all. The verses themselves are still shown in whichever languages are chosen, which is what made the false half invisible.");
   let search_instructions =
-    "What words would you like to search for? Separate by spaces. A verse will match if any Bible version contains the word. Spelling matters.";
+    "What words would you like to search for? Separate by spaces. The search looks in English Bibles only, and a verse will match if one of them holds the word. Spelling matters.";
   app_shared_text_body(content, search_instructions);
   let input = html_input_text(content, search_instructions);
   app_shared_input_style(input);
