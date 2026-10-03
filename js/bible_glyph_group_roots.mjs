@@ -1,8 +1,8 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_book_testaments } from "./ebible_book_testaments.mjs";
 import { property_get } from "./property_get.mjs";
 import { bible_glyph_roots_testament_table } from "./bible_glyph_roots_testament_table.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 export function bible_glyph_group_roots(group) {
@@ -23,8 +23,7 @@ export function bible_glyph_group_roots(group) {
       let gloss = property_get(root, "gloss");
       let words = property_get(root, "words");
       for (let word of words) {
-        let glyph = property_get(word, "glyph");
-        let here = equal(glyph, group);
+        let here = property_equals(word, "glyph", group);
         if (not(here)) {
           continue;
         }
