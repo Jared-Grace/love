@@ -100,6 +100,7 @@ export function bible_glyph_roots_hebrew() {
   "BUILDING IS A BRICK AND WAR IS THE CROSSED SWORDS. Banah raises walls, houses, altars and cities, and a brick is the thing every one of those is built from without being any of them. The single sword already belongs to chereb, so a battle takes two swords crossed, which reads as a fight between sides rather than as a weapon.";
   "SEVEN NUMBERS WERE SEATED ON 2026-10-03 FROM THE TOP OF THE COMMONEST-UNDRAWN LIST, and only where the seat collides with nothing. Four reuse a picture this Bible already teaches: yare takes the fear the Greek phobos wears, pethach takes the Greek door, and the work maaseh and the Aramaic king join the rows of asah and melek, because each is the same root as the word already seated there. The judging verb shaphat was the eighth and was left where the wanted list keeps it, because that list already refused it with a reason of its own. Yarad, going down, is the walking figure with the hand pointing down, because alah is the same figure pointing up and the two read as a pair. Chodesh is a month and literally a new moon, so it takes the new moon, since the crescent is already yareach's.";
   "ETH, TIME, TAKES THE GREEK HOUR'S CLOCK (2026-10-03). Its sense is the time when a thing happens, which is what a clock face says. Moed, the appointed time, is another root and was left without it, so the one picture does not stand for two roots.";
+  "KATHAB AND BAQASH TAKE THE GREEK WRITING HAND AND MAGNIFYING GLASS (2026-10-03). Write and seek are one sense each, and the Greek grapho and zeteo were given those pictures on the same day, so a reader meets one picture for one act in both testaments. Matsa, to find, was left undrawn for the reason the Greek table gives.";
   "THREE OBVIOUS SEATS WERE REFUSED THE SAME HOUR BECAUSE THE PICTURE IS SPENT INSIDE THIS TABLE. Kaph is a palm and yad already holds the hand; the mouth is seated on the speaking verb, so peh would make every mouth read as speaking; and esh, fire, stays undrawn because the flame is God here. Each needs a picture of its own rather than a borrowed one.";
   let roots = [
     {
@@ -2786,6 +2787,26 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "6256",
           glyph: "clock",
+        },
+      ],
+    },
+    {
+      root: "kathab",
+      gloss: "write",
+      words: [
+        {
+          strong: "3789",
+          glyph: "writing_hand",
+        },
+      ],
+    },
+    {
+      root: "baqash",
+      gloss: "seek",
+      words: [
+        {
+          strong: "1245",
+          glyph: "magnifying_glass",
         },
       ],
     },

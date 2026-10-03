@@ -776,6 +776,18 @@ export function bible_glyph_artwork_names() {
       glyph: "away",
       asset: "Left arrow",
     },
+    {
+      glyph: "writing_hand",
+      asset: "Writing hand",
+    },
+    {
+      glyph: "teacher",
+      asset: "Teacher",
+    },
+    {
+      glyph: "magnifying_glass",
+      asset: "Magnifying glass tilted left",
+    },
   ];
   return names;
 }

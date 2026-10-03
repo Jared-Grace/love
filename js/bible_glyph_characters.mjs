@@ -1091,6 +1091,18 @@ export function bible_glyph_characters() {
       name: "away",
       character: "⬅️",
     },
+    {
+      name: "writing_hand",
+      character: "✍️",
+    },
+    {
+      name: "teacher",
+      character: "🧑‍🏫",
+    },
+    {
+      name: "magnifying_glass",
+      character: "🔍",
+    },
   ];
   return characters;
 }
