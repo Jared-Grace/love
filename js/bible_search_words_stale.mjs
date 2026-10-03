@@ -1,3 +1,5 @@
+import { list_filter_starts_with_not } from "./list_filter_starts_with_not.mjs";
+import { bible_search_languages_prefix } from "./bible_search_languages_prefix.mjs";
 import { bible_search_built_path } from "./bible_search_built_path.mjs";
 import { list_add } from "./list_add.mjs";
 import { ebible_versions_english_downloadable_words_lookup_cache } from "./ebible_versions_english_downloadable_words_lookup_cache.mjs";
@@ -23,7 +25,10 @@ export async function bible_search_words_stale() {
   ("storage is asked for a prefix and not for a folder, so the slash has to be spelled out here - without it the bucket answers four hundred rather than listing anything");
   let slash = text_slash_forward();
   let prefix = list_join_empty([folder, slash]);
-  let held = await firebase_storage_list_jg(prefix);
+  let listed = await firebase_storage_list_jg(prefix);
+  ("the other languages keep their words in a folder inside this one, and this sweep knows only the English words - so it leaves that folder alone, or every English rebuild would take every other language down");
+  let languages = bible_search_languages_prefix();
+  let held = list_filter_starts_with_not(listed, languages);
   let stale = list_difference(held, wanted);
   let r = {
     held: list_size(held),
