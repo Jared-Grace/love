@@ -1,3 +1,4 @@
+import { app_shared_color_white_veil } from "./app_shared_color_white_veil.mjs";
 import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
 import { html_style_padding } from "./html_style_padding.mjs";
 import { html_style_background } from "./html_style_background.mjs";
@@ -20,7 +21,7 @@ export function app_sandbox_root_link() {
   html_style_set(link, "right", "0.5em");
   html_style_set(link, "z-index", "2000");
   html_style_padding(link, "0.25em 0.6em");
-  html_style_background(link, "rgba(255,255,255,0.9)");
+  html_style_background(link, app_shared_color_white_veil());
   html_style_set(link, "color", "#222");
   html_border_radius(link, app_shared_content_edge_gap());
   html_style_font_size(link, "0.9em");
