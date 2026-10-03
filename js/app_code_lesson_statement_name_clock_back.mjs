@@ -80,7 +80,7 @@ export function app_code_lesson_statement_name_clock_back() {
       [
         "So going back ",
         "1",
-        " hour is the same as going forward ",
+        " hour will give you the same hour as going forward ",
         "23",
         " hours",
       ],
