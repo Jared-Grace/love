@@ -21,7 +21,18 @@ export async function app_search_languages_matching(languages_chosen, query) {
   "A word is reported missing only when every language that was asked for it lacked it. A language that read no words in the query at all - English handed Chinese characters - was never asked, so its silence counts for nothing.";
   arguments_assert(arguments, 2);
   let property_name = language_code_key();
-  let codes = list_map_property(languages_chosen, property_name);
+  ("a language storage holds no index for is set aside before anything is asked of it, and named, so the page can say it was not searched rather than report every word as nowhere in the Bible");
+  let codes = [];
+  let languages_unsearchable = [];
+  for (let language of languages_chosen) {
+    let code = property_get(language, property_name);
+    let searchable = await app_search_language_searchable(code);
+    if (searchable) {
+      list_add(codes, code);
+    } else {
+      list_add(languages_unsearchable, language);
+    }
+  }
   async function language_matching(language_code) {
     let words = app_search_language_words(language_code, query);
     let none = list_empty_is(words);
