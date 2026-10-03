@@ -1224,6 +1224,10 @@ export function bible_glyph_characters() {
       name: "clapping_hands",
       character: "👏",
     },
+    {
+      name: "wrestling",
+      character: "🤼",
+    },
   ];
   return characters;
 }

@@ -138,6 +138,16 @@ export function bible_glyph_roots() {
   ("IDOU IS THE EXCLAMATION MARK AND THE HIGH PRIEST IS THE PRIEST, BOTH SEATED 2026-10-03 FOR FREQUENCY. Idou and ide are a word that says look and means nothing else - pay attention to what comes next - and the mark that says the same in pictures is the exclamation. The eyes were refused because they already draw blepo, seeing, and behold is not a report that anyone saw; a pointing hand was refused because it already draws hoti, that. Archiereus is chief and priest in one word, and it takes the priest alone, because the Hebrew says the same office in two words, kohen gadol, and only the kohen is drawn there; priest beside a crown was refused because the crown is lord, and a high priest is not a lord.");
   let roots = [
     {
+      root: "israel",
+      gloss: "Israel",
+      words: [
+        {
+          strong: "2474",
+          glyph: "wrestling+heart_on_fire",
+        },
+      ],
+    },
+    {
       root: "pino",
       gloss: "to drink",
       words: [

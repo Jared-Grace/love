@@ -908,6 +908,10 @@ export function bible_glyph_artwork_names() {
       glyph: "clapping_hands",
       asset: "Clapping hands",
     },
+    {
+      glyph: "wrestling",
+      asset: "Person wrestling",
+    },
   ];
   return names;
 }
