@@ -1,3 +1,4 @@
+import { app_shared_color_red_lit } from "./app_shared_color_red_lit.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_body_div } from "./html_body_div.mjs";
@@ -87,7 +88,7 @@ export async function lyric_video_song_words_timing_preview() {
     let lit = equal(desk.lit, entry);
     let picked = equal(desk.picked, entry);
     html_style_assign(entry.button, {
-      background: lit ? "#c00" : "",
+      background: lit ? app_shared_color_red_lit() : "",
       color: lit ? "white" : "",
       outline: picked ? "3px solid #08f" : "",
     });
