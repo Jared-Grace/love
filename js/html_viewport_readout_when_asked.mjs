@@ -1,14 +1,8 @@
+import { html_viewport_readout_update } from "./html_viewport_readout_update.mjs";
 import { round } from "./round.mjs";
 import { not } from "./not.mjs";
 import { multiply } from "./multiply.mjs";
 import { divide } from "./divide.mjs";
-import { html_component_element_get } from "./html_component_element_get.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { subtract } from "./subtract.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { equal } from "./equal.mjs";
-import { json_to } from "./json_to.mjs";
-import { server_url_api } from "./server_url_api.mjs";
 export function html_viewport_readout_when_asked(bar) {
   "when the page's address ends in ?viewport, a small box of numbers in the corner of the screen saying how tall the window is by every measure the browser keeps, and where the bar held against the top really is - read live, so a person on a phone can screenshot it with the browser's own bar showing and again with it slid away, and the two pictures say which height went stale";
   "made for the home bar losing its top row on a phone with the text size turned up, once the browser's bar slid away, 2026-09-28. On a desktop there is no bar that slides, so it cannot be seen here, and measuring on the phone is the only way to know";
@@ -67,120 +61,8 @@ export function html_viewport_readout_when_asked(bar) {
     return divided;
   }
   function update() {
-    let viewport = window.visualViewport;
-    let bars = [];
-    for (let each_bar of state.bars) {
-      let element = html_component_element_get(each_bar);
-      if (element.isConnected) {
-        let rect = element.getBoundingClientRect();
-        bars.push(
-          "bar top " +
-            round_to(rect.top) +
-            " bottom " +
-            round_to(rect.bottom) +
-            " style top " +
-            element.style.top,
-        );
-        ("each button in the bar is listed with where it sits and whether it is shown at all, because the bar measured still at the top on a phone while the human saw its first button gone, 2026-09-28 - so the next question is which of the bar's own things moved or went");
-        for (let button of element.querySelectorAll("button")) {
-          let box_button = button.getBoundingClientRect();
-          let style = getComputedStyle(button);
-          bars.push(
-            "  button " +
-              button.textContent.slice(0, 24) +
-              " top " +
-              round_to(box_button.top) +
-              " bottom " +
-              round_to(box_button.bottom) +
-              " left " +
-              round_to(box_button.left) +
-              " right " +
-              round_to(box_button.right) +
-              " " +
-              style.display +
-              " " +
-              style.visibility,
-          );
-        }
-      }
-    }
-    ("the five things reaching furthest right, when any reaches past the screen, are listed too, because opening the last lesson group on a phone made the page 429 wide on a 414 screen, 2026-09-28 - the browser then widened its frame to fit, the frame grew taller than the screen, and the bar held to the frame top slid above what is seen. Which thing sticks out is only known on the phone, where the text is drawn larger");
-    let screen_width = window.screen.width;
-    let reaching = [];
-    for (let each_one of document.body.querySelectorAll("*")) {
-      let right = each_one.getBoundingClientRect().right;
-      if (greater_than(right, screen_width)) {
-        reaching.push({
-          right,
-          each_one,
-        });
-      }
-    }
-    function lambda2(a_inner, b_inner) {
-      let difference = subtract(b_inner.right, a_inner.right);
-      return difference;
-    }
-    reaching.sort(lambda2);
-    bars.push("screen width " + screen_width);
-    for (let item of reaching.slice(0, 5)) {
-      bars.push(
-        "  wide " +
-          item.each_one.tagName +
-          " right " +
-          round_to(item.right) +
-          " width " +
-          round_to(item.each_one.getBoundingClientRect().width) +
-          " " +
-          item.each_one.textContent.slice(0, 40),
-      );
-    }
-    let v = bars.join("\n");
-    let n2 = performance.now();
-    let lines = [
-      "innerHeight " + window.innerHeight,
-      "clientHeight " + document.documentElement.clientHeight,
-      "dvh " + round_to(probes.dvh.getBoundingClientRect().height),
-      "svh " + round_to(probes.svh.getBoundingClientRect().height),
-      "lvh " + round_to(probes.lvh.getBoundingClientRect().height),
-      "vv height " + (viewport ? round_to(viewport.height) : "none"),
-      "vv offsetTop " + (viewport ? round_to(viewport.offsetTop) : "none"),
-      "vv scale " + (viewport ? round_to(viewport.scale) : "none"),
-      "scrollY " + round_to(window.scrollY),
-      "page height " + round_to(document.documentElement.scrollHeight),
-      v,
-      "dpr " + round_to(window.devicePixelRatio),
-      "innerWidth " + window.innerWidth,
-    ];
-    let text = lines.join("\n");
-    ("the numbers are no longer written on the screen: the box covered the last group on the lesson list and the human could not press it, 2026-09-28, and the readings reach the developer by themselves anyway (below). A small dot in the corner is left to say the readings are being sent");
-    box.textContent = "•";
-    ("each reading that differs from the last is also sent to the dev server, which files it (",
-      fn_name("viewport_readout_record"),
-      "), so the numbers reach the developer without a picture of them. A failed send is dropped: this page only exists to be read, and it keeps showing the numbers either way");
-    if (equal(text, state.sent)) {
-      return;
-    }
-    state.sent = text;
-    ("the time is added only to what is sent, never to what is compared, because it differs every tick - compared, it sent a reading four times a second and the page never went quiet");
-    let v2 = lines.concat([
-      "page time " + round_to(n2),
-      "agent " + navigator.userAgent,
-    ]);
-    let body = json_to({
-      f_name: fn_name("viewport_readout_record"),
-      args: [v2],
-    });
-    function lambda() {
-      return null;
-    }
-    let a = server_url_api();
-    fetch(a, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body,
-    }).catch(lambda);
+    let r = html_viewport_readout_update(state, round_to, probes, box);
+    return r;
   }
   state = {
     bars: [bar],
