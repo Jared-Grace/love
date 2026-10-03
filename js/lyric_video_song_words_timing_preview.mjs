@@ -1,4 +1,3 @@
-import { app_shared_color_red_lit } from "./app_shared_color_red_lit.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_body_div } from "./html_body_div.mjs";
@@ -12,6 +11,9 @@ import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
 import { html_media_time_set } from "./html_media_time_set.mjs";
 import { html_media_play } from "./html_media_play.mjs";
+import { app_shared_color_blue_picked } from "./app_shared_color_blue_picked.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { app_shared_color_red_lit } from "./app_shared_color_red_lit.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { api_read } from "./api_read.mjs";
@@ -22,7 +24,6 @@ import { lyric_video_word_done } from "./lyric_video_word_done.mjs";
 import { not } from "./not.mjs";
 import { html_request_animation_frame } from "./html_request_animation_frame.mjs";
 import { html_media_time } from "./html_media_time.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { text_loading_said } from "./text_loading_said.mjs";
 import { html_parent_waiting_run } from "./html_parent_waiting_run.mjs";
 import { null_is } from "./null_is.mjs";
@@ -87,10 +88,12 @@ export async function lyric_video_song_words_timing_preview() {
   function word_style(entry) {
     let lit = equal(desk.lit, entry);
     let picked = equal(desk.picked, entry);
+    let blue = app_shared_color_blue_picked();
+    let frame = text_combine("3px solid ", blue);
     html_style_assign(entry.button, {
       background: lit ? app_shared_color_red_lit() : "",
       color: lit ? "white" : "",
-      outline: picked ? "3px solid #08f" : "",
+      outline: picked ? frame : "",
     });
   }
   function word_pick(entry) {
