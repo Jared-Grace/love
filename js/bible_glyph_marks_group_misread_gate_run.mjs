@@ -1,7 +1,8 @@
-import { assert_json } from "./assert_json.mjs";
 import { bible_glyph_chapters_marks_group_misread } from "./bible_glyph_chapters_marks_group_misread.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { property_get } from "./property_get.mjs";
+import { assert_json } from "./assert_json.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { fn_name } from "./fn_name.mjs";
 export function bible_glyph_marks_group_misread_gate_run() {
   "Checks that no two neighbouring words in the written picture Bible put a group's opening picture and its closing picture either side of the gap between them.";
   "IT SHUTS A DOOR RATHER THAN WORKING A QUEUE. Every written chapter was clean the day this was written, so it passes at nought and always should; there is no baseline to ratchet and none is wanted. A gate that starts at nought is the only kind that can honestly refuse the first offender, and the first offender here is a verse that says something the text does not say.";
@@ -18,7 +19,10 @@ export function bible_glyph_marks_group_misread_gate_run() {
   let none = list_empty_is(misread);
   assert_json(none, {
     misread,
-    hint: "the last picture of one word and the first of the next spell a group the tables give a meaning to, so a reader who reads the gap between them as narrow reads a word nobody wrote - either reword one of the two words, or seat that group on a different pair of pictures",
+    hint:
+      "the last picture of one word and the first of the next spell a group the tables give a meaning to, so a reader who reads the gap between them as narrow reads a word nobody wrote - either reword one of the two words, or seat that group on a different pair of pictures. Read the verses first with " +
+      fn_name("bible_glyph_chapters_marks_group_misread_lines") +
+      ", which draws each one whole, draws the two words either side of the gap joined up the way a reader would mistake them, and says which root the join spells - the choice cannot be made from a chapter code and two picture names, and some of these joins mean exactly what the verse means",
   });
   let r = {
     touching: touching_count,
