@@ -796,6 +796,10 @@ export function bible_glyph_artwork_names() {
       glyph: "exclamation",
       asset: "Red exclamation mark",
     },
+    {
+      glyph: "waving_hand",
+      asset: "Waving hand",
+    },
   ];
   return names;
 }
