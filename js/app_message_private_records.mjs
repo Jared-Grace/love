@@ -1,3 +1,5 @@
+import { list_filter } from "./list_filter.mjs";
+import { app_message_private_relative_is } from "./app_message_private_relative_is.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { messages_firebase_path } from "./messages_firebase_path.mjs";
@@ -28,7 +30,8 @@ export async function app_message_private_records() {
     let none = [];
     return none;
   }
-  let relatives = await folder_read_recursive_async(root);
+  let everything = await folder_read_recursive_async(root);
+  let relatives = list_filter(everything, app_message_private_relative_is);
   async function lambda(relative) {
     let f_path = path_join([root, relative]);
     let record = await file_read_json(f_path);

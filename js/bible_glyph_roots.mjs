@@ -129,6 +129,7 @@ export function bible_glyph_roots() {
   ("WRITING, TEACHING AND SEEKING TOOK NEW PICTURES ON 2026-10-03, the writing hand, the teacher and the magnifying glass, each one for a whole root. Graphe, the Scripture, wears the writing hand with grapho because the word is the writing, and drawing it so shows a reader that it is written and Scripture are one word. It was not given the scroll, which is already the law. The teacher stands on the verb to teach and on the noun teacher, the same way love stands on its noun and verb. Find was left undrawn: it has no picture that says finding and not seeing or knowing, which are already the eye and the lightbulb.");
   ("GOD IS THE BURNING HEART SINCE 2026-10-03, AND FIRE IS THE FIRE. The human chose it, in these words: God is love, God is consuming fire. Both are said of God in so many words - God is love in the fourth of first John, our God is a consuming fire in the twelfth of Hebrews - so the mark is two sentences of Scripture joined into one picture, the heart that burns. The plain flame was freed by the change and pur, fire, took it. Jealousy gave the burning heart up and took the face with steam from its nose, the human's choice the same day. A word whose English says god or gods in small letters is drawn as the carved stone figure instead, because the translators' capital is the only place the text tells the LORD from an idol.");
   ("TWELVE GREEK NUMBERS AND FOURTEEN HEBREW ONES WERE SEATED IN ONE PASS ON 2026-10-03, each a picture that says the word and was free. Falling is the person and the hand pointing down, the mirror of rising. Keeping is the guard, because tereo and shamar are to watch over before they are to obey. Anger is the angry face. The elder is the old man, which is what presbuteros says. A sign is the placard, a thing held up to be read. Opening is the open lock; the key was refused because it is exousia, authority. Erotao, to ask a question, is the question mark; aiteo, to ask for something, was left undrawn because a request is not a question. Four, five and ten are their keycaps, as one, two, three and seven already were. Parakaleo joins its own noun parakletos at the embrace, and grammateus, the scribe, joins grapho at the writing hand. The demon was refused the horned face because it would sit beside the angry face and read as anger.");
+  ("NAMES ARE DRAWN AS THEIR MEANING WHERE SCRIPTURE GIVES IT, chosen by the human on 2026-10-03, and the Hebrew table holds the reasons for each. A name keeps the same picture in both testaments, so David, Moses, Jerusalem, Jacob, Abraham, Babylon and Israel read the same in Matthew as in Genesis. Peter is the only name here whose meaning the New Testament gives: you are Peter, and on this rock, and John's Cephas, which means Peter. So Petros and petra, the rock, share the rock picture, which was free on this side. Left undrawn because no meaning is given: Paul, John, Simon, Mary, Pilate, Galilee and the Pharisees. Judas is the same Greek word as Judah and was left undrawn, because the raised hands are not seated in this table and a betrayer drawn as praise needs its own decision.");
   ("EIGHT GREEK NUMBERS AND EIGHT HEBREW ONES WERE SEATED ON 2026-10-03 FROM THE TOP OF WHAT WAS LEFT. To drink is the cup with a straw, pino and shathah; the cup alone is poterion and kos, the vessel, and the wine is oinos and yayin, the thing drunk. To sit is the seat, because the throne already holds the chair and kathemai is the sitting rather than the seat of a king. Six is its keycap. The temple courts, hieron, are the classical building, a columned house of worship; naos the sanctuary is a second word and is left for a picture of its own, and Hebrew heykal stays refused because it is the palace as well. The synagogue is the synagogue. To proclaim as a herald, kerusso, is the loudspeaker on a pole, which is a public announcing and nothing else; the megaphone was not free because it is the prophet. Polemeo, to fight, joins polemos, the war it is named from, at the crossed swords, and aionios, eternal, joins aion at the hourglass. Left undrawn: to kill, because every candidate is a knife or a skull, both nouns; the body, because the person and the meat are both spent; to throw, because the one emoji of throwing is a sport; forgive, because aphiemi is to leave as often as to forgive.");
   ("THREE SYNONYMS GOT PICTURES OF THEIR OWN ON 2026-10-03, under the human's rule that two words in the original are two pictures. Anistemi, to stand up, is the person and the up arrow, beside egeiro's person and pointing finger; both are rising, and they are two words, so they are two marks. Holos, whole, is the unbroken circle, because pas already holds the hundred for all, and a whole is a thing with no piece missing. Akoloutheo, to follow, is walking joined to the footprints, a walker going where someone has already walked; the footprints alone are coming and the walker alone is going. Pempo, to send, was left undrawn: the sending hand is apostello's, the out tray is ek, and the envelope draws a letter, which epistole will want.");
   ("THE EYE AND THE EAR WERE GIVEN BACK THE SAME DAY, which finishes the body parts paragraph above. The organ takes the plain picture and the verb takes a doing-mark. The eye is the single eye, for ophthalmos and Hebrew ayin, which had been wearing the pair. To see, horao and raah, is the pair of eyes, because two eyes are a person looking and one eye is the thing itself. Blepo, to look at, is the pair of eyes joined to the target that draws toward, so seeing and looking at stay two pictures as they are two words; the pointing hand was the other choice and was refused because it is hoti, so the join would read as see that. The ear is the ear, for ous and Hebrew ozen. To hear, akouo and shama, is the ear joined to the loudspeaker, a sound arriving at an ear; the ear alone was what hearing had worn, and the loudspeaker only became free for this when voice moved onto it.");
@@ -137,6 +138,84 @@ export function bible_glyph_roots() {
   ("RISING, COMMANDING AND ANSWERING ARE BUILT FROM MARKS ALREADY BOUGHT, AND CALLING IS THE WAVING HAND, ALL 2026-10-03. Egeiro is a person and the hand pointing up - the one who was down is now up - which reads beside the walking figure pointing up for going up, so a reader who knows either learns the other; the plain arrow up was refused because the pointing hand already says up. Entellomai is the speech and the scroll, to say a law, since entole the commandment is the scroll alone. Anistemi, to rise, and keleuo, to order, were left undrawn, because the collision walk holds each picture to one root and those two would have worn egeiro's and entellomai's. Apokrinomai is the speech and the turning arrow, a word sent back. Kaleo is the hand waved to bring someone over; the voice was refused because phone is a sound and not a summons, the megaphone because it is the prophet, and a telephone because it is not in the world of the text. Stand, head, body, great, many and find were looked at the same hour and left undrawn: the standing figure is already the person, and the others had no picture that says the word and is still free.");
   ("IDOU IS THE EXCLAMATION MARK AND THE HIGH PRIEST IS THE PRIEST, BOTH SEATED 2026-10-03 FOR FREQUENCY. Idou and ide are a word that says look and means nothing else - pay attention to what comes next - and the mark that says the same in pictures is the exclamation. The eyes were refused because they already draw blepo, seeing, and behold is not a report that anyone saw; a pointing hand was refused because it already draws hoti, that. Archiereus is chief and priest in one word, and it takes the priest alone, because the Hebrew says the same office in two words, kohen gadol, and only the kohen is drawn there; priest beside a crown was refused because the crown is lord, and a high priest is not a lord.");
   let roots = [
+    {
+      root: "dauid",
+      gloss: "David",
+      words: [
+        {
+          strong: "1138",
+          glyph: "two_hearts",
+        },
+      ],
+    },
+    {
+      root: "mouses",
+      gloss: "Moses",
+      words: [
+        {
+          strong: "3475",
+          glyph: "fishing_pole",
+        },
+      ],
+    },
+    {
+      root: "ierousalem",
+      gloss: "Jerusalem, in both its Greek spellings",
+      words: [
+        {
+          strong: "2419",
+          glyph: "city+peace",
+        },
+        {
+          strong: "2414",
+          glyph: "city+peace",
+        },
+      ],
+    },
+    {
+      root: "iakob",
+      gloss: "Jacob",
+      words: [
+        {
+          strong: "2384",
+          glyph: "hand+foot",
+        },
+      ],
+    },
+    {
+      root: "abraam",
+      gloss: "Abraham",
+      words: [
+        {
+          strong: "11",
+          glyph: "father+map",
+        },
+      ],
+    },
+    {
+      root: "babulon",
+      gloss: "Babylon",
+      words: [
+        {
+          strong: "897",
+          glyph: "face_spiral",
+        },
+      ],
+    },
+    {
+      root: "petros",
+      gloss: "Peter, and petra the rock he is named for",
+      words: [
+        {
+          strong: "4074",
+          glyph: "rock",
+        },
+        {
+          strong: "4073",
+          glyph: "rock",
+        },
+      ],
+    },
     {
       root: "israel",
       gloss: "Israel",

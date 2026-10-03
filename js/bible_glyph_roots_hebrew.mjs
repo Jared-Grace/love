@@ -103,6 +103,7 @@ export function bible_glyph_roots_hebrew() {
   "KATHAB AND BAQASH TAKE THE GREEK WRITING HAND AND MAGNIFYING GLASS (2026-10-03). Write and seek are one sense each, and the Greek grapho and zeteo were given those pictures on the same day, so a reader meets one picture for one act in both testaments. Matsa, to find, was left undrawn for the reason the Greek table gives.";
   "ELOHIM AND EL ARE THE BURNING HEART SINCE 2026-10-03, QANNA IS THE STEAMING FACE, AND ESH IS THE FIRE. The reasons are written once, on the Greek table, because it was one decision across both. Older paragraphs here that say the fire is God, or that refuse the altar as meat beside fire, were written while the flame alone meant God, and that is no longer so. Hebrew has one word for God and for the false gods, so the seat cannot tell them apart; the English can, because its translators wrote God with a capital and gods without one, and the page draws a word whose English says god or gods in small letters as the carved stone figure that gillulim, idols, already wears.";
   "NAPHAL, SHAMAR, ZAQEN, OTH, PATHACH, SHAAL AND THE NUMBERS FOUR, FIVE AND TEN WERE SEATED 2026-10-03 beside their Greek partners, whose reasons the Greek table holds. Four more are Hebrew only. Karath is the scissors, because it is to cut, and to make a covenant is in Hebrew to cut one. Tsaba is the military helmet, so the LORD of hosts reads as the LORD of armies, which is what the word says. Yasha and yeshuah take the lifebuoy that soter already wears in Greek. Shakab, to lie down, joins mishkab, the bed it is named from. Aph was seated on the angry face and taken off within the hour, because the undrawn list already refuses it for being the nose as often as one word in five; Greek orge has no such second sense and keeps the face.";
+  "THE OTHER NAMES FOLLOW ISRAEL'S RULE, chosen by the human on 2026-10-03: a name is drawn as its meaning when scripture gives the meaning or the Hebrew spelling shows it, and otherwise it stays undrawn. David is spelled with the letters of dod, beloved, so the two share the two hearts; the red heart alone was refused because it is ahab, to love, and the human's love and king was refused because the name says no king and David is a shepherd for chapters first. Judah joins yadah at the raised hands, because Leah says this time I will praise the LORD and calls him Judah. Moses is the fishing pole, because Pharaoh's daughter says I drew him out of the water, and mashah, to draw out, shares it. Jerusalem is the city joined to peace; scripture explains only its second half, Salem, which Hebrews says means peace, so it is the weakest of these. Jacob is the hand joined to the foot, because he came out with his hand holding Esau's heel. Solomon joins shalom at peace, because the LORD says his name shall be Solomon and I will give peace. Levi and the Levites are the handshake, because Leah says now my husband will be joined to me. Babel is the spiral eyed face, because there the LORD confused the language. Joshua is the I AM joined to the lifebuoy, the LORD saves, and Joseph is the I AM joined to the plus, may the LORD add to me another son. Abraham is the father joined to the map of nations, because I have made you the father of many nations. Left undrawn because no meaning is given: Egypt, Aaron, Pharaoh, the Philistines, Moab, the Jordan. Saul was left undrawn although his name is spelled as asked for: the question mark draws asking a question, not asking for a thing, the same reason it was refused to aiteo. Ephraim, God has made me fruitful, was left for a later pass.";
   "ISRAEL IS DRAWN AS WHAT THE NAME SAYS, WRESTLING AND GOD, chosen by the human on 2026-10-03. Genesis gives the reason itself: your name shall be Israel, for you have striven with God. The human first proposed God joined to people, or God, chosen and people, and those were set aside for three reasons. People is am, so God and people would sit one reordering away from the people of God, a phrase this text really says. Israel is often the one man Jacob, as in Israel said to Joseph, and a nation drawn there is wrong. And chosen people is something said about Israel, not what the word says. The wrestling and the fire draw the name, so they are right on the man, the nation and the land alike.";
   "SHATHAH, SHESH AND LACHAM TAKE WHAT THEIR GREEK PARTNERS TOOK ON 2026-10-03, for the reasons the Greek table gives: the cup with a straw, the keycap six, and the crossed swords that milchamah, the war lacham is named from, already holds. Five more are Hebrew only. Zakar, to remember, is the reminder ribbon, the one picture whose whole meaning is keeping a thing in mind; the brain was the other choice and went to bin instead, to understand and discern, which is the thinking rather than the keeping. Behemah, beast and livestock, is the paw prints, an animal without saying which; the bull and the ox are already their own words. Halal, to praise, the word inside hallelujah, is the clapping hands; the raised hands were not free, because they are yadah, to give thanks. Darash, to inquire, is the magnifying glass joined to the question mark, because baqash already holds the glass alone for seeking, and darash is the seeking that asks. Judge and book stay refused for the reasons written on the undrawn list.";
   "THE EYE AND THE EAR WENT TO THE ORGANS ON 2026-10-03, for the reasons the Greek table gives: ayin is the single eye, raah to see is the pair of eyes, ozen is the ear, and shama to hear is the ear joined to the loudspeaker. Ayin is also a spring of water, which the single eye does not draw; that is the smaller part of its uses.";
@@ -111,6 +112,108 @@ export function bible_glyph_roots_hebrew() {
   "HINNEH IS THE EXCLAMATION MARK AND ENOSH IS THE BEARDED MAN, BOTH SEATED 2026-10-03 FOR FREQUENCY. Hinneh says look and asks the reader to attend; the Greek table holds the reasons, since idou takes the same mark for the same word. Enosh is the man and the men, and Strong's gives ish as its contraction, so it joins ish's row and its picture rather than buying a second one; adam, the human, keeps its own.";
   "THREE OBVIOUS SEATS WERE REFUSED THE SAME HOUR BECAUSE THE PICTURE IS SPENT INSIDE THIS TABLE. Kaph is a palm and yad already holds the hand; the mouth is seated on the speaking verb, so peh would make every mouth read as speaking. Each needs a picture of its own rather than a borrowed one.";
   let roots = [
+    {
+      root: "dod",
+      gloss: "beloved; David, spelled with the same letters",
+      words: [
+        {
+          strong: "1730",
+          glyph: "two_hearts",
+        },
+        {
+          strong: "1732",
+          glyph: "two_hearts",
+        },
+      ],
+    },
+    {
+      root: "mosheh",
+      gloss: "Moses, drawn out; to draw out",
+      words: [
+        {
+          strong: "4872",
+          glyph: "fishing_pole",
+        },
+        {
+          strong: "4871",
+          glyph: "fishing_pole",
+        },
+      ],
+    },
+    {
+      root: "yerushalaim",
+      gloss: "Jerusalem",
+      words: [
+        {
+          strong: "3389",
+          glyph: "city+peace",
+        },
+      ],
+    },
+    {
+      root: "yaaqob",
+      gloss: "Jacob, he takes by the heel",
+      words: [
+        {
+          strong: "3290",
+          glyph: "hand+foot",
+        },
+      ],
+    },
+    {
+      root: "levi",
+      gloss: "Levi, joined; a Levite",
+      words: [
+        {
+          strong: "3878",
+          glyph: "handshake",
+        },
+        {
+          strong: "3881",
+          glyph: "handshake",
+        },
+      ],
+    },
+    {
+      root: "babel",
+      gloss: "Babel, Babylon",
+      words: [
+        {
+          strong: "894",
+          glyph: "face_spiral",
+        },
+      ],
+    },
+    {
+      root: "yehoshua",
+      gloss: "Joshua, the LORD saves",
+      words: [
+        {
+          strong: "3091",
+          glyph: "i_am+rescue",
+        },
+      ],
+    },
+    {
+      root: "yoseph",
+      gloss: "Joseph, may the LORD add",
+      words: [
+        {
+          strong: "3130",
+          glyph: "i_am+plus",
+        },
+      ],
+    },
+    {
+      root: "abraham",
+      gloss: "Abraham, father of many nations",
+      words: [
+        {
+          strong: "85",
+          glyph: "father+map",
+        },
+      ],
+    },
     {
       root: "yisrael",
       gloss: "Israel, he strives with God",
@@ -1163,6 +1266,10 @@ export function bible_glyph_roots_hebrew() {
           strong: "3034",
           glyph: "hands_raised",
         },
+        {
+          strong: "3063",
+          glyph: "hands_raised",
+        },
       ],
     },
     {
@@ -1843,6 +1950,10 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "7965",
+          glyph: "peace",
+        },
+        {
+          strong: "8010",
           glyph: "peace",
         },
       ],
