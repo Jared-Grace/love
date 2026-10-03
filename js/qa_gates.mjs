@@ -1,3 +1,4 @@
+import { bible_glyph_names_unique_gate_run } from "./bible_glyph_names_unique_gate_run.mjs";
 import { psalms_song_letter_part_gate_run } from "./psalms_song_letter_part_gate_run.mjs";
 import { lyric_video_document_times_stepped_is_cases_gate_run } from "./lyric_video_document_times_stepped_is_cases_gate_run.mjs";
 import { lyric_video_flags_ranked_cases_gate_run } from "./lyric_video_flags_ranked_cases_gate_run.mjs";
@@ -773,6 +774,7 @@ export function qa_gates() {
     bible_glyph_gate_run,
     bible_glyph_artwork_gate_run,
     bible_glyph_roots_characters_gate_run,
+    bible_glyph_names_unique_gate_run,
     bible_glyph_undrawn_lists_gate_run,
     bible_glyph_gloss_notation_gate_run,
     bible_glyph_chapters_rosetta_lines_gate_run,
