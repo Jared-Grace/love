@@ -1,3 +1,4 @@
+import { text_suffix_without_try } from "./text_suffix_without_try.mjs";
 import { firebase_bucket } from "./firebase_bucket.mjs";
 import { app_shared_open_prefix } from "./app_shared_open_prefix.mjs";
 import { property_get } from "./property_get.mjs";
@@ -17,7 +18,9 @@ export async function app_shared_open_entries() {
   for (let item of files) {
     let name = property_get(item, "name");
     let rest = text_prefix_without(name, prefix);
-    let [year, month, day, app, user_id] = text_split_slash_forward(rest);
+    let [year, month, day, stored, user_id] = text_split_slash_forward(rest);
+    ("An app that boots through its way-in function - replace, receipts - sent that function's name, so its opens were kept under replace_main. Read back without the ending, so a report names every app the same way and old opens join new ones. REJECTED: changing what the apps send - every app would need sending again, and the opens already kept would still carry the old name.");
+    let app = text_suffix_without_try(stored, "_main");
     let date = text_combine_multiple([year, "-", month, "-", day]);
     list_add(entries, {
       date,
