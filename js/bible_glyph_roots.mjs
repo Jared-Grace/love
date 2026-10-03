@@ -125,6 +125,7 @@ export function bible_glyph_roots() {
   ("THEN THE DRAW MEASURED THE ARGUMENT AND THE ARGUMENT LOST (2026-09-19, hours after the paragraph above). Drawing all four new marks reached eight hundred and fifty places and marked eighty two. Apo marked forty five of sixty seven and forty of those landed on the single word from, which is the clean majority the wordings promised. Kata marked twenty five of seven hundred and seventy two, and six hundred and two of its refusals gave one reason: the shared word is a little word the root itself does not mean, so the interlinear has lined the gloss up with the wrong English. So kata's scatter is not merely the translation's - it is scatter the drawer cannot see through, which is a different and worse thing. The row stays because a seated root costs nothing where it cannot draw, but ANYONE WANTING THE DOWNWARD HAND BACK FOR ANOTHER GREEK WORD SHOULD TAKE IT: this is the measurement that says kata is not paying for it, and the pair with epi was the whole of the case.");
   ("WHAT THAT MEASUREMENT DOES NOT TOUCH IS WHETHER A PREPOSITION BELONGS IN A PICTURE BIBLE AT ALL. Apo drew cleanly, so the question is live rather than settled: a reader meeting an arrow forty five times learns a real Greek word, and a reader meeting an arrow forty five times may also simply be reading arrows. The alternative nobody has tried is to seat prepositions and draw them ONLY inside compounds, where the arrow modifies a picture next to it and never stands alone. That would keep aperchomai and apodidomi and drop the forty standalone froms. It is not what this table does today, and it is the second thing to overturn after kata.");
   ("ONE, TWO AND WAR WERE SEATED ON 2026-10-03 WITH THE HEBREW, and their reasons are written once, on the Hebrew table, because the decision was one decision. The hour is the mantel clock because the hourglass is already aion, the age, and an hour is a point on the clock face rather than time running out. It is the hour of John - the hour has come - and a clock says when, which is what that sentence is about.");
+  ("SEVEN, THREE, GOING UP AND GOING DOWN JOINED THE HEBREW ON 2026-10-03. Hepta and treis take the digits sheba and shalosh wear. Anabaino and katabaino take the walking figure pointing up and down that alah and yarad wear, and they share one row because both are baino with a prefix. Kathemai, sitting, was not given yashab's person and house: that picture says dwelling, and the Greek word for dwelling, meno, would then have no picture of its own to take.");
   let roots = [
     {
       root: "agape",
@@ -1973,6 +1974,40 @@ export function bible_glyph_roots() {
         {
           strong: "5610",
           glyph: "clock",
+        },
+      ],
+    },
+    {
+      root: "hepta",
+      gloss: "seven",
+      words: [
+        {
+          strong: "2033",
+          glyph: "seven",
+        },
+      ],
+    },
+    {
+      root: "treis",
+      gloss: "three",
+      words: [
+        {
+          strong: "5140",
+          glyph: "three",
+        },
+      ],
+    },
+    {
+      root: "baino",
+      gloss: "go up, go down",
+      words: [
+        {
+          strong: "305",
+          glyph: "walking+pointing_up",
+        },
+        {
+          strong: "2597",
+          glyph: "walking+pointing_down",
         },
       ],
     },
