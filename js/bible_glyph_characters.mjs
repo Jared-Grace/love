@@ -1112,6 +1112,10 @@ export function bible_glyph_characters() {
       name: "exclamation",
       character: "❗",
     },
+    {
+      name: "waving_hand",
+      character: "👋",
+    },
   ];
   return characters;
 }
