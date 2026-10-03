@@ -95,6 +95,7 @@ export function bible_glyph_roots_hebrew() {
   "CROSSING OVER WAS REFUSED TWICE, AND THE SECOND REFUSAL IS THE ONE WORTH KEEPING. The first was the plain right arrow, which says direction and not passage, and would read beside the target as a second preposition. The second was the cross, which is unspent on this side of the Bible and fits the English word exactly - and that is the trap. Abar has nothing to do with the crucifixion; the two words only meet in English, and a picture that means Calvary standing on Israel walking through the Jordan would teach a reader a connection the Hebrew does not make. A pun in the translation is never a reason to spend a mark.";
   "STANDING WAS REFUSED BECAUSE THE STANDING FIGURE IS ALREADY THE HUMAN. Amad would want a person on their feet, and a person on their feet is what this table has been drawing for adam since the beginning. Seating amad there would make every human in the Bible read as the verb to stand, which is the loudest kind of damage a shared mark can do.";
   "COMMANDING WAS REFUSED BECAUSE EVERY CANDIDATE IS SOMETHING ELSE ALREADY. A mouth, a voice and a speech bubble are speaking; the megaphone is the prophet; a pointing hand is hoti on the Greek side. Tsavah is a word of authority rather than of sound, and the set has no picture of authority that is not a crown or a king, both of which are nouns this Bible already spends elsewhere.";
+  "KI WAS TAKEN ON 2026-10-03, AND THE MARK FOR IT WAS FOUND ON THE GREEK SIDE RATHER THAN INVENTED HERE. The two notes above say ki has no picture and invite whoever finds one to take it. The Greek table had already found it: hoti is that and because exactly as ki is, and it wears the pointing hand, with its own reason written there for keeping one mark across both glosses. Seating ki on the same hand is the bread and the sword again - a reader who learned the hand in John meets it in Genesis on the same word. Both notes were written before the human ruled that every word in the original gets a picture, and their claim that grammar of this kind is a limit rather than a queue is the reading that ruling overturned.";
   "SEVEN NUMBERS WERE SEATED ON 2026-10-03 FROM THE TOP OF THE COMMONEST-UNDRAWN LIST, and only where the seat collides with nothing. Four reuse a picture this Bible already teaches: yare takes the fear the Greek phobos wears, pethach takes the Greek door, and the work maaseh and the Aramaic king join the rows of asah and melek, because each is the same root as the word already seated there. The judging verb shaphat was the eighth and was left where the wanted list keeps it, because that list already refused it with a reason of its own. Yarad, going down, is the walking figure with the hand pointing down, because alah is the same figure pointing up and the two read as a pair. Chodesh is a month and literally a new moon, so it takes the new moon, since the crescent is already yareach's.";
   "THREE OBVIOUS SEATS WERE REFUSED THE SAME HOUR BECAUSE THE PICTURE IS SPENT INSIDE THIS TABLE. Kaph is a palm and yad already holds the hand; the mouth is seated on the speaking verb, so peh would make every mouth read as speaking; and esh, fire, stays undrawn because the flame is God here. Each needs a picture of its own rather than a borrowed one.";
   let roots = [
@@ -2702,6 +2703,16 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "2320",
           glyph: "new_moon",
+        },
+      ],
+    },
+    {
+      root: "ki",
+      gloss: "that, because, for",
+      words: [
+        {
+          strong: "3588",
+          glyph: "pointing",
         },
       ],
     },
