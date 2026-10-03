@@ -961,7 +961,7 @@ export function bible_glyph_artwork_names() {
       asset: "Top arrow",
     },
     {
-      glyph: "pin",
+      glyph: "round_pushpin",
       asset: "Round pushpin",
     },
     {

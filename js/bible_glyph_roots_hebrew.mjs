@@ -169,7 +169,7 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "5975",
-          glyph: "person+pin",
+          glyph: "person+round_pushpin",
         },
       ],
     },

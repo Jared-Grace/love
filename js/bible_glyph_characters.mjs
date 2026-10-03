@@ -1277,7 +1277,7 @@ export function bible_glyph_characters() {
       character: "🔝",
     },
     {
-      name: "pin",
+      name: "round_pushpin",
       character: "📍",
     },
     {
