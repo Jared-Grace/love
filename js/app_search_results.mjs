@@ -1,6 +1,5 @@
+import { app_search_results_books } from "./app_search_results_books.mjs";
 import { property_get } from "./property_get.mjs";
-import { ebible_folder_english } from "./ebible_folder_english.mjs";
-import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { bible_search_words } from "./bible_search_words.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -20,8 +19,7 @@ import { list_single_property } from "./list_single_property.mjs";
 import { app_shared_folds_refresh } from "./app_shared_folds_refresh.mjs";
 export async function app_search_results(context, div_results) {
   let languages_chosen = property_get(context, "languages_chosen");
-  let en = ebible_folder_english();
-  let books = await ebible_version_books_browser(en);
+  let books = await app_search_results_books();
   let query = property_get(context, "query");
   let words = bible_search_words(query);
   let no_words = list_empty_is(words);
