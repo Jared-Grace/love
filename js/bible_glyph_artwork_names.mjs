@@ -956,6 +956,10 @@ export function bible_glyph_artwork_names() {
       glyph: "magnet",
       asset: "Magnet",
     },
+    {
+      glyph: "top",
+      asset: "Top arrow",
+    },
   ];
   return names;
 }

@@ -260,6 +260,9 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_even: text_frozen("name_even"),
     app_code_lesson_statement_name_page_start: text_frozen("name_page_start"),
     app_code_lesson_statement_name_clamp: text_frozen("name_clamp"),
+    app_code_lesson_statement_name_meetings_overlap: text_frozen(
+      "name_meetings_overlap",
+    ),
     app_code_lesson_statement_name_remainder: text_frozen("name_remainder"),
     app_code_lesson_statement_name_greater: text_frozen("name_greater"),
     app_code_lesson_statement_name_smaller_equal:

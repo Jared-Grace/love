@@ -1272,6 +1272,10 @@ export function bible_glyph_characters() {
       name: "magnet",
       character: "🧲",
     },
+    {
+      name: "top",
+      character: "🔝",
+    },
   ];
   return characters;
 }
