@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_characters_lookup } from "./bible_glyph_characters_lookup.mjs";
 import { bible_glyph_chapters_marks_group_misread } from "./bible_glyph_chapters_marks_group_misread.mjs";
@@ -55,8 +56,7 @@ export function bible_glyph_chapters_marks_group_misread_lines() {
     let chapter = bible_glyph_chapter(chapter_code);
     let verses = property_get(chapter, "verses");
     for (let verse of verses) {
-      let left = property_get(verse, "verse_number");
-      let here = equal(left, verse_number);
+      let here = property_equals(verse, "verse_number", verse_number);
       if (not(here)) {
         continue;
       }
