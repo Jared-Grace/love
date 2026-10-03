@@ -31,6 +31,12 @@ export async function lyric_video_document_line_start_set(
     let nothing = {
       wrote: false,
       why: "no timing document answers to that name",
+      lines: null,
+      out_of_order: null,
+      now: null,
+      text: null,
+      was: null,
+      written: null,
     };
     return nothing;
   }
@@ -42,6 +48,11 @@ export async function lyric_video_document_line_start_set(
       wrote: false,
       why: "that document has no line at that number",
       lines: lines.length,
+      out_of_order: null,
+      now: null,
+      text: null,
+      was: null,
+      written: null,
     };
     return missing;
   }
@@ -68,6 +79,11 @@ export async function lyric_video_document_line_start_set(
       wrote: false,
       why: "that moment would put the lines of the passage out of order",
       out_of_order,
+      lines: null,
+      now: null,
+      text: null,
+      was: null,
+      written: null,
     };
     return refused;
   }
@@ -83,6 +99,8 @@ export async function lyric_video_document_line_start_set(
     text: texts[index],
     was: line.start,
     now: start,
+    lines: null,
+    out_of_order: null,
   };
   return r;
 }
