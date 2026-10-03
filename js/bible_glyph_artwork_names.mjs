@@ -453,6 +453,10 @@ export function bible_glyph_artwork_names() {
       asset: "Crescent moon",
     },
     {
+      glyph: "new_moon",
+      asset: "New moon",
+    },
+    {
       glyph: "fish",
       asset: "Fish",
     },

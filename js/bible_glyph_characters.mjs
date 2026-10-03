@@ -536,6 +536,10 @@ export function bible_glyph_characters() {
       character: "🌙",
     },
     {
+      name: "new_moon",
+      character: "🌑",
+    },
+    {
       name: "fish",
       character: "🐟",
     },

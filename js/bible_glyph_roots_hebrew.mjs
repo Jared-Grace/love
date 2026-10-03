@@ -95,6 +95,8 @@ export function bible_glyph_roots_hebrew() {
   "CROSSING OVER WAS REFUSED TWICE, AND THE SECOND REFUSAL IS THE ONE WORTH KEEPING. The first was the plain right arrow, which says direction and not passage, and would read beside the target as a second preposition. The second was the cross, which is unspent on this side of the Bible and fits the English word exactly - and that is the trap. Abar has nothing to do with the crucifixion; the two words only meet in English, and a picture that means Calvary standing on Israel walking through the Jordan would teach a reader a connection the Hebrew does not make. A pun in the translation is never a reason to spend a mark.";
   "STANDING WAS REFUSED BECAUSE THE STANDING FIGURE IS ALREADY THE HUMAN. Amad would want a person on their feet, and a person on their feet is what this table has been drawing for adam since the beginning. Seating amad there would make every human in the Bible read as the verb to stand, which is the loudest kind of damage a shared mark can do.";
   "COMMANDING WAS REFUSED BECAUSE EVERY CANDIDATE IS SOMETHING ELSE ALREADY. A mouth, a voice and a speech bubble are speaking; the megaphone is the prophet; a pointing hand is hoti on the Greek side. Tsavah is a word of authority rather than of sound, and the set has no picture of authority that is not a crown or a king, both of which are nouns this Bible already spends elsewhere.";
+  "SEVEN NUMBERS WERE SEATED ON 2026-10-03 FROM THE TOP OF THE COMMONEST-UNDRAWN LIST, and only where the seat collides with nothing. Four reuse a picture this Bible already teaches: yare takes the fear the Greek phobos wears, pethach takes the Greek door, and the work maaseh and the Aramaic king join the rows of asah and melek, because each is the same root as the word already seated there. The judging verb shaphat was the eighth and was left where the wanted list keeps it, because that list already refused it with a reason of its own. Yarad, going down, is the walking figure with the hand pointing down, because alah is the same figure pointing up and the two read as a pair. Chodesh is a month and literally a new moon, so it takes the new moon, since the crescent is already yareach's.";
+  "THREE OBVIOUS SEATS WERE REFUSED THE SAME HOUR BECAUSE THE PICTURE IS SPENT INSIDE THIS TABLE. Kaph is a palm and yad already holds the hand; the mouth is seated on the speaking verb, so peh would make every mouth read as speaking; and esh, fire, stays undrawn because the flame is God here. Each needs a picture of its own rather than a borrowed one.";
   let roots = [
     {
       root: "yhwh",
@@ -242,6 +244,10 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "4428",
+          glyph: "king",
+        },
+        {
+          strong: "4430",
           glyph: "king",
         },
         {
@@ -558,6 +564,10 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "6213",
+          glyph: "hammer",
+        },
+        {
+          strong: "4639",
           glyph: "hammer",
         },
       ],
@@ -2644,6 +2654,54 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "7706",
           glyph: "might",
+        },
+      ],
+    },
+    {
+      root: "yare",
+      gloss: "fear, be afraid, revere",
+      words: [
+        {
+          strong: "3372",
+          glyph: "fear",
+        },
+        {
+          strong: "3373",
+          glyph: "fear",
+        },
+        {
+          strong: "3374",
+          glyph: "fear",
+        },
+      ],
+    },
+    {
+      root: "pethach",
+      gloss: "entrance, doorway",
+      words: [
+        {
+          strong: "6607",
+          glyph: "door",
+        },
+      ],
+    },
+    {
+      root: "yarad",
+      gloss: "go down, come down, bring down",
+      words: [
+        {
+          strong: "3381",
+          glyph: "walking+pointing_down",
+        },
+      ],
+    },
+    {
+      root: "chodesh",
+      gloss: "new moon, month",
+      words: [
+        {
+          strong: "2320",
+          glyph: "new_moon",
         },
       ],
     },
