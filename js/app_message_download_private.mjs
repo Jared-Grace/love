@@ -1,4 +1,4 @@
-import { app_message_download_private_file } from "./app_message_download_private_file.mjs";
+import { storage_file_download_private } from "./storage_file_download_private.mjs";
 import { app_message_files } from "./app_message_files.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 export async function app_message_download_private() {
@@ -11,7 +11,7 @@ export async function app_message_download_private() {
   let files = await app_message_files();
   let written = await list_map_unordered_async(
     files,
-    app_message_download_private_file,
+    storage_file_download_private,
   );
   return written;
 }

@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { storage_file_private_path } from "./storage_file_private_path.mjs";
 import { file_overwrite_buffer } from "./file_overwrite_buffer.mjs";
-export async function app_message_download_private_file(item) {
+export async function storage_file_download_private(item) {
   "$plain item";
   "Brings one message file down out of the bucket and keeps it on this machine, written under the private folder's mirror of the bucket at the same address it has there. Answers with the address written.";
   "One file rather than all of them, because two callers take a file down for different reasons - one takes every message, the other takes only what is not here yet - and what they share is exactly this: the address, the read, and the write. Held apart, either of them could learn to write somewhere else without the other following.";

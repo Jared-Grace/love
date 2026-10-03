@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { storage_file_private_path } from "./storage_file_private_path.mjs";
 import { file_exists } from "./file_exists.mjs";
-import { app_message_download_private_file } from "./app_message_download_private_file.mjs";
+import { storage_file_download_private } from "./storage_file_download_private.mjs";
 import { list_map_unordered_async_filter_null_not_is } from "./list_map_unordered_async_filter_null_not_is.mjs";
 export async function storage_files_download_private_missing(files) {
   "$plain files";
@@ -14,7 +14,7 @@ export async function storage_files_download_private_missing(files) {
     if (present) {
       return null;
     }
-    let written_one = await app_message_download_private_file(item);
+    let written_one = await storage_file_download_private(item);
     return written_one;
   }
   let written = await list_map_unordered_async_filter_null_not_is(
