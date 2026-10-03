@@ -126,7 +126,8 @@ export function bible_glyph_roots() {
   ("WHAT THAT MEASUREMENT DOES NOT TOUCH IS WHETHER A PREPOSITION BELONGS IN A PICTURE BIBLE AT ALL. Apo drew cleanly, so the question is live rather than settled: a reader meeting an arrow forty five times learns a real Greek word, and a reader meeting an arrow forty five times may also simply be reading arrows. The alternative nobody has tried is to seat prepositions and draw them ONLY inside compounds, where the arrow modifies a picture next to it and never stands alone. That would keep aperchomai and apodidomi and drop the forty standalone froms. It is not what this table does today, and it is the second thing to overturn after kata.");
   ("ONE, TWO AND WAR WERE SEATED ON 2026-10-03 WITH THE HEBREW, and their reasons are written once, on the Hebrew table, because the decision was one decision. The hour is the mantel clock because the hourglass is already aion, the age, and an hour is a point on the clock face rather than time running out. It is the hour of John - the hour has come - and a clock says when, which is what that sentence is about.");
   ("SEVEN, THREE, GOING UP AND GOING DOWN JOINED THE HEBREW ON 2026-10-03. Hepta and treis take the digits sheba and shalosh wear. Anabaino and katabaino take the walking figure pointing up and down that alah and yarad wear, and they share one row because both are baino with a prefix. Kathemai, sitting, was not given yashab's person and house: that picture says dwelling, and the Greek word for dwelling, meno, would then have no picture of its own to take.");
-  ("WRITING, TEACHING AND SEEKING TOOK NEW PICTURES ON 2026-10-03, the writing hand, the teacher and the magnifying glass, each one for a whole root. Graphe, the Scripture, wears the writing hand with grapho because the word is the writing, and drawing it so shows a reader that it is written and Scripture are one word. It was not given the scroll, which is already the law. The teacher stands on the verb to teach and on the noun teacher, the same way love stands on its noun and verb. Find was left undrawn: it has no picture that says finding and not seeing or knowing, which are already the eye and the lightbulb. Fire was left undrawn as well, because the fire is already God, and a second fire picture is a choice about how God is drawn.");
+  ("WRITING, TEACHING AND SEEKING TOOK NEW PICTURES ON 2026-10-03, the writing hand, the teacher and the magnifying glass, each one for a whole root. Graphe, the Scripture, wears the writing hand with grapho because the word is the writing, and drawing it so shows a reader that it is written and Scripture are one word. It was not given the scroll, which is already the law. The teacher stands on the verb to teach and on the noun teacher, the same way love stands on its noun and verb. Find was left undrawn: it has no picture that says finding and not seeing or knowing, which are already the eye and the lightbulb.");
+  ("GOD IS THE FIRE AND THE HEART SINCE 2026-10-03, AND FIRE IS THE FIRE. The human chose it, in these words: God is love, God is consuming fire. Both are said of God in so many words - God is love in the fourth of first John, our God is a consuming fire in the twelfth of Hebrews - so the mark is two sentences of Scripture standing side by side, and its halves are the pictures fire and love already wear. The plain flame was freed by the change and pur, fire, took it. Jealousy keeps the joined burning heart; the two differ in order, flame first for God, and in being one joined character rather than two.");
   let roots = [
     {
       root: "agape",
@@ -184,7 +185,7 @@ export function bible_glyph_roots() {
       words: [
         {
           strong: "2316",
-          glyph: "fire",
+          glyph: "fire+heart_red",
         },
       ],
     },
@@ -2047,6 +2048,16 @@ export function bible_glyph_roots() {
         {
           strong: "2212",
           glyph: "magnifying_glass",
+        },
+      ],
+    },
+    {
+      root: "pur",
+      gloss: "fire",
+      words: [
+        {
+          strong: "4442",
+          glyph: "fire",
         },
       ],
     },

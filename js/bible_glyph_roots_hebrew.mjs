@@ -101,7 +101,8 @@ export function bible_glyph_roots_hebrew() {
   "SEVEN NUMBERS WERE SEATED ON 2026-10-03 FROM THE TOP OF THE COMMONEST-UNDRAWN LIST, and only where the seat collides with nothing. Four reuse a picture this Bible already teaches: yare takes the fear the Greek phobos wears, pethach takes the Greek door, and the work maaseh and the Aramaic king join the rows of asah and melek, because each is the same root as the word already seated there. The judging verb shaphat was the eighth and was left where the wanted list keeps it, because that list already refused it with a reason of its own. Yarad, going down, is the walking figure with the hand pointing down, because alah is the same figure pointing up and the two read as a pair. Chodesh is a month and literally a new moon, so it takes the new moon, since the crescent is already yareach's.";
   "ETH, TIME, TAKES THE GREEK HOUR'S CLOCK (2026-10-03). Its sense is the time when a thing happens, which is what a clock face says. Moed, the appointed time, is another root and was left without it, so the one picture does not stand for two roots.";
   "KATHAB AND BAQASH TAKE THE GREEK WRITING HAND AND MAGNIFYING GLASS (2026-10-03). Write and seek are one sense each, and the Greek grapho and zeteo were given those pictures on the same day, so a reader meets one picture for one act in both testaments. Matsa, to find, was left undrawn for the reason the Greek table gives.";
-  "THREE OBVIOUS SEATS WERE REFUSED THE SAME HOUR BECAUSE THE PICTURE IS SPENT INSIDE THIS TABLE. Kaph is a palm and yad already holds the hand; the mouth is seated on the speaking verb, so peh would make every mouth read as speaking; and esh, fire, stays undrawn because the flame is God here. Each needs a picture of its own rather than a borrowed one.";
+  "ELOHIM AND EL ARE THE FIRE AND THE HEART SINCE 2026-10-03, AND ESH IS THE FIRE. The reasons are written once, on the Greek table, because it was one decision across both. Older paragraphs here that say the fire is God, or that refuse the altar as meat beside fire, were written while the flame alone meant God, and that is no longer so. The false gods of Exodus twenty still wear the same mark as the LORD, as they did when it was the flame alone, because Hebrew has one word for both.";
+  "THREE OBVIOUS SEATS WERE REFUSED THE SAME HOUR BECAUSE THE PICTURE IS SPENT INSIDE THIS TABLE. Kaph is a palm and yad already holds the hand; the mouth is seated on the speaking verb, so peh would make every mouth read as speaking. Each needs a picture of its own rather than a borrowed one.";
   let roots = [
     {
       root: "yhwh",
@@ -127,11 +128,11 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "430",
-          glyph: "fire",
+          glyph: "fire+heart_red",
         },
         {
           strong: "410",
-          glyph: "fire",
+          glyph: "fire+heart_red",
         },
       ],
     },
@@ -2807,6 +2808,16 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "1245",
           glyph: "magnifying_glass",
+        },
+      ],
+    },
+    {
+      root: "esh",
+      gloss: "fire",
+      words: [
+        {
+          strong: "784",
+          glyph: "fire",
         },
       ],
     },
