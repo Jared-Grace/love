@@ -1,3 +1,6 @@
+import { subtract } from "./subtract.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_code_dark_lines_pointed_cut } from "./app_code_code_dark_lines_pointed_cut.mjs";
 export function app_code_code_dark_lines_part_pointed(part, color) {
@@ -11,19 +14,20 @@ export function app_code_code_dark_lines_part_pointed(part, color) {
     let before = code.slice(0, at).match(words) || [];
     let inside_part = part.match(words) || [];
     let first = before.length;
-    let last = first + inside_part.length - 1;
+    let last = subtract(first + inside_part.length, 1);
     let count = 0;
     let on = false;
     function cut(piece) {
-      if (!word.test(piece)) {
+      let b = word.test(piece);
+      if (not(b)) {
         let drawn = [[piece, on ? color : null]];
         return drawn;
       }
-      if (count === first) {
+      if (equal(count, first)) {
         on = true;
       }
       let drawn = [[piece, on ? color : null]];
-      if (count === last) {
+      if (equal(count, last)) {
         on = false;
       }
       count = count + 1;

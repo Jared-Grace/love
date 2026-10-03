@@ -1,3 +1,4 @@
+import { app_code_code_dark_lines_part_pointed } from "./app_code_code_dark_lines_part_pointed.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_code_code_dark_lines_pointed } from "./app_code_code_dark_lines_pointed.mjs";
@@ -136,6 +137,15 @@ export function app_code_lesson_statement_name_even() {
   let eight_check_said = app_code_explain_said(["", v3, " is ", is_true]);
   let v4 = check_worked("1");
   let seven_check_said = app_code_explain_said(["", v4, " is ", is_false]);
+  function example_draw(box, lines, output) {
+    "the last example's program with its remainder, n % 2, in the remainder's colour, as in the writing above it; what it writes out is true or false, not a remainder, so it stays plain";
+    let paint = app_code_code_dark_lines_part_pointed(
+      remainder,
+      remainder_color,
+    );
+    let on_output = app_code_output_pointed([]);
+    app_code_code_lines_writes_out_on(box, lines, output, paint, on_output);
+  }
   let lesson = app_code_lesson_statement_formula_answer_count({
     words: "Is a number even",
     title_code: line_even,
@@ -172,7 +182,7 @@ export function app_code_lesson_statement_name_even() {
       ["Here is code that checks whether ", n, " is even:"],
     ],
     decoys: null,
-    example_pointers: null,
+    example_pointers: example_draw,
     answer_count: 2,
   });
   return lesson;
