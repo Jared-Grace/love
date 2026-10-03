@@ -26,6 +26,8 @@ export async function song_image_kept_publish() {
   let published = [];
   let unchosen = [];
   let sources = await song_image_glass_credentials_sources();
+  let song_name = song_image_couplets_hash_name();
+  let document = await lyric_video_song_document_read(song_name);
   for (let couplet of couplets) {
     let n = couplet.n;
     let kept = song_image_couplet_kept(n);
@@ -38,7 +40,7 @@ export async function song_image_kept_publish() {
     let glass = song_image_glass_path(key, "chosen_2x");
     let asset_path = song_image_kept_asset_path(n);
     let destination = web_assets_folder_join(asset_path);
-    let filters = song_image_glass_filters();
+    let filters = song_image_glass_light_filters(document, key);
     await ffmpeg_image_filter_write(glass, filters, destination);
     let property_name = String(key);
     let source = property_get(sources, property_name);
