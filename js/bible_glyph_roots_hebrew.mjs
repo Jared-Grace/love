@@ -117,6 +117,26 @@ export function bible_glyph_roots_hebrew() {
   "THREE OBVIOUS SEATS WERE REFUSED THE SAME HOUR BECAUSE THE PICTURE IS SPENT INSIDE THIS TABLE. Kaph is a palm and yad already holds the hand; the mouth is seated on the speaking verb, so peh would make every mouth read as speaking. Each needs a picture of its own rather than a borrowed one.";
   let roots = [
     {
+      root: "meah",
+      gloss: "hundred",
+      words: [
+        {
+          strong: "3967",
+          glyph: "input_numbers+all",
+        },
+      ],
+    },
+    {
+      root: "eleph",
+      gloss: "thousand",
+      words: [
+        {
+          strong: "505",
+          glyph: "ten+all",
+        },
+      ],
+    },
+    {
       root: "amad",
       gloss: "stand, stand still, remain, endure",
       words: [

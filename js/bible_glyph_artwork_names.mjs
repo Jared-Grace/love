@@ -964,6 +964,10 @@ export function bible_glyph_artwork_names() {
       glyph: "pin",
       asset: "Round pushpin",
     },
+    {
+      glyph: "input_numbers",
+      asset: "Input numbers",
+    },
   ];
   return names;
 }

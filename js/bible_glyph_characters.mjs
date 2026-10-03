@@ -1280,6 +1280,10 @@ export function bible_glyph_characters() {
       name: "pin",
       character: "📍",
     },
+    {
+      name: "input_numbers",
+      character: "🔢",
+    },
   ];
   return characters;
 }
