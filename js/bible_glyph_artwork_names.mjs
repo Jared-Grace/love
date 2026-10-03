@@ -940,6 +940,22 @@ export function bible_glyph_artwork_names() {
       glyph: "throwing",
       asset: "Person playing handball",
     },
+    {
+      glyph: "multiply",
+      asset: "Multiply",
+    },
+    {
+      glyph: "newspaper",
+      asset: "Rolled-up newspaper",
+    },
+    {
+      glyph: "around",
+      asset: "Counterclockwise arrows button",
+    },
+    {
+      glyph: "magnet",
+      asset: "Magnet",
+    },
   ];
   return names;
 }

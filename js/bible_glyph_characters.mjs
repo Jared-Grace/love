@@ -1256,6 +1256,22 @@ export function bible_glyph_characters() {
       name: "throwing",
       character: "🤾",
     },
+    {
+      name: "multiply",
+      character: "✖️",
+    },
+    {
+      name: "newspaper",
+      character: "🗞️",
+    },
+    {
+      name: "around",
+      character: "🔄",
+    },
+    {
+      name: "magnet",
+      character: "🧲",
+    },
   ];
   return characters;
 }
