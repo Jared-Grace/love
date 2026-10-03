@@ -912,6 +912,18 @@ export function bible_glyph_artwork_names() {
       glyph: "wrestling",
       asset: "Person wrestling",
     },
+    {
+      glyph: "two_hearts",
+      asset: "Two hearts",
+    },
+    {
+      glyph: "fishing_pole",
+      asset: "Fishing pole",
+    },
+    {
+      glyph: "face_spiral",
+      asset: "Face with spiral eyes",
+    },
   ];
   return names;
 }

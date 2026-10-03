@@ -1228,6 +1228,18 @@ export function bible_glyph_characters() {
       name: "wrestling",
       character: "🤼",
     },
+    {
+      name: "two_hearts",
+      character: "💕",
+    },
+    {
+      name: "fishing_pole",
+      character: "🎣",
+    },
+    {
+      name: "face_spiral",
+      character: "😵‍💫",
+    },
   ];
   return characters;
 }
