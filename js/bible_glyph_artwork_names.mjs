@@ -924,6 +924,26 @@ export function bible_glyph_artwork_names() {
       glyph: "face_spiral",
       asset: "Face with spiral eyes",
     },
+    {
+      glyph: "zero",
+      asset: "Keycap 0",
+    },
+    {
+      glyph: "military_medal",
+      asset: "Military medal",
+    },
+    {
+      glyph: "houses",
+      asset: "Houses",
+    },
+    {
+      glyph: "toolbox",
+      asset: "Toolbox",
+    },
+    {
+      glyph: "throwing",
+      asset: "Person playing handball",
+    },
   ];
   return names;
 }

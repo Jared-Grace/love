@@ -1240,6 +1240,26 @@ export function bible_glyph_characters() {
       name: "face_spiral",
       character: "😵‍💫",
     },
+    {
+      name: "zero",
+      character: "0️⃣",
+    },
+    {
+      name: "military_medal",
+      character: "🎖️",
+    },
+    {
+      name: "houses",
+      character: "🏘️",
+    },
+    {
+      name: "toolbox",
+      character: "🧰",
+    },
+    {
+      name: "throwing",
+      character: "🤾",
+    },
   ];
   return characters;
 }
