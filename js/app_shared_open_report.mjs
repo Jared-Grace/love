@@ -1,3 +1,4 @@
+import { apps_published_names } from "./apps_published_names.mjs";
 import { property_list_size } from "./property_list_size.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
@@ -19,6 +20,14 @@ export async function app_shared_open_report(days) {
   let from = date_add_days(today, back);
   let entries = await app_shared_open_entries();
   let by_app = {};
+  ("Every app on the public site is listed, even one nobody opened - so an unused app reads as 0 rather than being missing, which looks the same as an app that records nothing at all.");
+  let published = await apps_published_names();
+  for (let app of published) {
+    property_initialize(by_app, app, {
+      devices: [],
+      device_days: 0,
+    });
+  }
   for (let entry of entries) {
     let date = property_get(entry, "date");
     let early = less_than(date, from);
