@@ -457,6 +457,34 @@ export function bible_glyph_artwork_names() {
       asset: "New moon",
     },
     {
+      glyph: "one",
+      asset: "Keycap 1",
+    },
+    {
+      glyph: "two",
+      asset: "Keycap 2",
+    },
+    {
+      glyph: "three",
+      asset: "Keycap 3",
+    },
+    {
+      glyph: "seven",
+      asset: "Keycap 7",
+    },
+    {
+      glyph: "brick",
+      asset: "Brick",
+    },
+    {
+      glyph: "crossed_swords",
+      asset: "Crossed swords",
+    },
+    {
+      glyph: "clock",
+      asset: "Mantelpiece clock",
+    },
+    {
       glyph: "fish",
       asset: "Fish",
     },

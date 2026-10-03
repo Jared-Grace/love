@@ -96,6 +96,8 @@ export function bible_glyph_roots_hebrew() {
   "STANDING WAS REFUSED BECAUSE THE STANDING FIGURE IS ALREADY THE HUMAN. Amad would want a person on their feet, and a person on their feet is what this table has been drawing for adam since the beginning. Seating amad there would make every human in the Bible read as the verb to stand, which is the loudest kind of damage a shared mark can do.";
   "COMMANDING WAS REFUSED BECAUSE EVERY CANDIDATE IS SOMETHING ELSE ALREADY. A mouth, a voice and a speech bubble are speaking; the megaphone is the prophet; a pointing hand is hoti on the Greek side. Tsavah is a word of authority rather than of sound, and the set has no picture of authority that is not a crown or a king, both of which are nouns this Bible already spends elsewhere.";
   "KI WAS TAKEN ON 2026-10-03, AND THE MARK FOR IT WAS FOUND ON THE GREEK SIDE RATHER THAN INVENTED HERE. The two notes above say ki has no picture and invite whoever finds one to take it. The Greek table had already found it: hoti is that and because exactly as ki is, and it wears the pointing hand, with its own reason written there for keeping one mark across both glosses. Seating ki on the same hand is the bread and the sword again - a reader who learned the hand in John meets it in Genesis on the same word. Both notes were written before the human ruled that every word in the original gets a picture, and their claim that grammar of this kind is a limit rather than a queue is the reading that ruling overturned.";
+  "THE NUMBERS ARE DRAWN AS DIGITS, ONE, TWO, THREE AND SEVEN FIRST BECAUSE THEY ARE THE COMMONEST (2026-10-03). A digit is the one written sign nearly every reader on earth already reads whatever their language, so it is the rare mark that teaches nothing and still stands for the word exactly. The losers are worth naming: a row of dots has to be counted and stops being readable past three, and a hand of fingers is counted differently in different countries. A digit is closer to letters than anything else here, which is the objection the hundred already answered for kol. Where Hebrew builds a bigger number out of these - twelve is two and ten - each word gets its own digit, which is literal and is what the Hebrew reader met.";
+  "BUILDING IS A BRICK AND WAR IS THE CROSSED SWORDS. Banah raises walls, houses, altars and cities, and a brick is the thing every one of those is built from without being any of them. The single sword already belongs to chereb, so a battle takes two swords crossed, which reads as a fight between sides rather than as a weapon.";
   "SEVEN NUMBERS WERE SEATED ON 2026-10-03 FROM THE TOP OF THE COMMONEST-UNDRAWN LIST, and only where the seat collides with nothing. Four reuse a picture this Bible already teaches: yare takes the fear the Greek phobos wears, pethach takes the Greek door, and the work maaseh and the Aramaic king join the rows of asah and melek, because each is the same root as the word already seated there. The judging verb shaphat was the eighth and was left where the wanted list keeps it, because that list already refused it with a reason of its own. Yarad, going down, is the walking figure with the hand pointing down, because alah is the same figure pointing up and the two read as a pair. Chodesh is a month and literally a new moon, so it takes the new moon, since the crescent is already yareach's.";
   "THREE OBVIOUS SEATS WERE REFUSED THE SAME HOUR BECAUSE THE PICTURE IS SPENT INSIDE THIS TABLE. Kaph is a palm and yad already holds the hand; the mouth is seated on the speaking verb, so peh would make every mouth read as speaking; and esh, fire, stays undrawn because the flame is God here. Each needs a picture of its own rather than a borrowed one.";
   let roots = [
@@ -2713,6 +2715,66 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "3588",
           glyph: "pointing",
+        },
+      ],
+    },
+    {
+      root: "echad",
+      gloss: "one",
+      words: [
+        {
+          strong: "259",
+          glyph: "one",
+        },
+      ],
+    },
+    {
+      root: "shenayim",
+      gloss: "two",
+      words: [
+        {
+          strong: "8147",
+          glyph: "two",
+        },
+      ],
+    },
+    {
+      root: "shalosh",
+      gloss: "three",
+      words: [
+        {
+          strong: "7969",
+          glyph: "three",
+        },
+      ],
+    },
+    {
+      root: "sheba",
+      gloss: "seven",
+      words: [
+        {
+          strong: "7651",
+          glyph: "seven",
+        },
+      ],
+    },
+    {
+      root: "banah",
+      gloss: "build",
+      words: [
+        {
+          strong: "1129",
+          glyph: "brick",
+        },
+      ],
+    },
+    {
+      root: "milchamah",
+      gloss: "war, battle",
+      words: [
+        {
+          strong: "4421",
+          glyph: "crossed_swords",
         },
       ],
     },

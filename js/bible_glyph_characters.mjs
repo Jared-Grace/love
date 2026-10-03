@@ -540,6 +540,34 @@ export function bible_glyph_characters() {
       character: "🌑",
     },
     {
+      name: "one",
+      character: "1️⃣",
+    },
+    {
+      name: "two",
+      character: "2️⃣",
+    },
+    {
+      name: "three",
+      character: "3️⃣",
+    },
+    {
+      name: "seven",
+      character: "7️⃣",
+    },
+    {
+      name: "brick",
+      character: "🧱",
+    },
+    {
+      name: "crossed_swords",
+      character: "⚔️",
+    },
+    {
+      name: "clock",
+      character: "🕰️",
+    },
+    {
       name: "fish",
       character: "🐟",
     },
