@@ -1,4 +1,4 @@
-import { app_code_lesson_complete_show } from "./app_code_lesson_complete_show.mjs";
+import { app_code_lesson_progress_render } from "./app_code_lesson_progress_render.mjs";
 import { html_data_test_quiz_correct_bump } from "./html_data_test_quiz_correct_bump.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_answer_label_set } from "./app_code_lesson_quiz_answer_label_set.mjs";
@@ -91,7 +91,7 @@ export function app_code_lesson_quiz({
     let quizzes_total = list_size(quizzes);
     app_code_progress_quiz_correct_record(context, quiz_index, quizzes_total);
     ("the progress just changed, so the screen draws what shows it again, and the answer that finishes the lesson turns the screen green as it is given rather than only once the learner leaves and comes back, at the human's request, 2026-10-03. Redrawing the whole screen was the other choice, and it would throw away the question the learner is on");
-    app_code_lesson_complete_show(context);
+    app_code_lesson_progress_render(context);
     html_data_test_quiz_correct_bump();
     html_clear(container_success_message);
     app_shared_success_message(container_success_message);
