@@ -1,3 +1,4 @@
+import { bible_search_language_built_upload } from "./bible_search_language_built_upload.mjs";
 import { ebible_language_bible_folders_commercial } from "./ebible_language_bible_folders_commercial.mjs";
 import { date_time_zone_now_iso } from "./date_time_zone_now_iso.mjs";
 import { bible_search_built_upload } from "./bible_search_built_upload.mjs";
@@ -35,6 +36,7 @@ export async function bible_search_language_upload(language_code) {
   ("the build is marked last, the same mark the English words are dated by, because a saved copy of any word under the index folder is thrown away when that mark moves - so one mark keeps every language's saved copies honest");
   let built = date_time_zone_now_iso();
   await bible_search_built_upload(built);
+  await bible_search_language_built_upload(language_code, built);
   let words = list_size(entries);
   let r = {
     language_code,
