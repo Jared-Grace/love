@@ -9,7 +9,7 @@ export function app_shared_descriptions() {
     bible:
       "Read the Bible in any of dozens of languages, and read two of them together, verse by verse. It can keep a copy on your own device so it opens without a connection.",
     search:
-      "Search the whole Bible for any words you like, in your own language, and see every verse that holds them. A search can be sent as a link, so whoever opens it sees the same verses you did.",
+      "Search the whole Bible in English for any words you like, and read every verse that holds them in whichever languages you choose. A search can be sent as a link, so whoever opens it sees the same verses you did.",
     next: "Shows the Bible passage somebody sent you a link to, with a way to keep reading on from there. Open it with no link and it still gives you somewhere to start.",
     verses:
       "Choose a language and how many encouraging Bible verses you would like, and it gathers them ready to copy and send to someone.",
