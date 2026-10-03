@@ -29,8 +29,8 @@ export function js_list_type_own(node, node_type) {
   }
   each(types, type_read);
   function own_is(visited) {
-    let own = property_in_list_not(visited, "node", inner);
-    return own;
+    let outside = property_in_list_not(visited, "node", inner);
+    return outside;
   }
   let all = js_list_type(node, node_type);
   let own = list_filter(all, own_is);
