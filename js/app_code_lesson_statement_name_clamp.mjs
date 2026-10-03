@@ -17,7 +17,7 @@ export function app_code_lesson_statement_name_clamp() {
   ("Math.max for the low edge and Math.min for the high edge is the part a learner gets backwards, since max sounds like the top. So the writing works each call on a temperature outside its edge and one inside, and says which edge each one guards.");
   ("The reminder quotes Larger and the lesson before it in their own shape, the call beside what it is, as the human's rule of 2026-10-01 asks: a reminder quotes only the exact code a lesson taught.");
   ("Every screen asks one temperature below the range, one above it, and two in it, so the answers 10, 30 and two others all differ.");
-  ("The writing is a first draft, not yet the human's, 2026-10-03.");
+  ("The writing was read by the human and deployed, 2026-10-03; the first sentence, the two that work 45 and 5, and the one before the code are worded by them.");
   let names = ["t"];
   let t = "t";
   let low_ok = "low_ok";
