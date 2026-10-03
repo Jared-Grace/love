@@ -1,3 +1,4 @@
+import { song_image_couplet_sung } from "./song_image_couplet_sung.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_music_song_verses_start } from "./app_music_song_verses_start.mjs";
 import { song_image_couplets } from "./song_image_couplets.mjs";
@@ -7,7 +8,6 @@ import { app_music_song_pictures_buttons } from "./app_music_song_pictures_butto
 import { not_equal } from "./not_equal.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_p_text_centered } from "./html_p_text_centered.mjs";
-import { list_join_space } from "./list_join_space.mjs";
 import { song_image_couplet_references } from "./song_image_couplet_references.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { html_div_text_bold } from "./html_div_text_bold.mjs";
@@ -55,8 +55,7 @@ export async function app_music_song_image_couplets_show(parent, song) {
       let heading = text_combine("verse ", verse_shown);
       html_p_text_centered(parent, heading);
     }
-    let halves = [couplet.first, couplet.second];
-    let words = list_join_space(halves);
+    let words = song_image_couplet_sung(couplet.n);
     let references = song_image_couplet_references(couplet.n);
     let unreferenced = list_empty_is(references);
     if (unreferenced) {
