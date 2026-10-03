@@ -158,7 +158,11 @@ export function app_code_lesson_statement_name_overlap_hours() {
     " hours",
   ]);
   let v15 = lasting("0");
-  let draw8 = app_code_explain_said(["We want the overlap to be ", v15]);
+  let draw8 = app_code_explain_said([
+    "We want the overlap to be ",
+    v15,
+    " hours",
+  ]);
   let v16 = lasting("0");
   let draw9 = app_code_explain_said([
     "So we want: if the overlap is negative, then make the overlap ",
