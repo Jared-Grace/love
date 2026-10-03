@@ -1,15 +1,14 @@
-import { picture_swap_row } from "./picture_swap_row.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
+import { app_shared_card_ruled } from "./app_shared_card_ruled.mjs";
+import { property_get } from "./property_get.mjs";
 import { lyric_video_song_swap_picture_or_null } from "./lyric_video_song_swap_picture_or_null.mjs";
-import { lyric_video_review_notes } from "./lyric_video_review_notes.mjs";
 import { null_is } from "./null_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_shared_text_quiet } from "./app_shared_text_quiet.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
-import { html_div } from "./html_div.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
-import { property_get } from "./property_get.mjs";
 import { lyric_video_picture_lines } from "./lyric_video_picture_lines.mjs";
 import { lyric_video_review_lines } from "./lyric_video_review_lines.mjs";
+import { picture_swap_row } from "./picture_swap_row.mjs";
+import { lyric_video_review_notes } from "./lyric_video_review_notes.mjs";
 export function lyric_video_song_swap_card(parent, document, swap, name) {
   "$plain parent";
   "$plain document";
@@ -23,12 +22,7 @@ export function lyric_video_song_swap_card(parent, document, swap, name) {
   "THE FRAMES ARE DRAWN FROM WHAT THE DISK ANSWERS, never from what the press assumed, so a frame on screen is a choice that was really kept.";
   "A PICTURE THE SONG NO LONGER HAS SAYS SO, AND THE CARDS AFTER IT STILL DRAW. A swap list outlives the document it was written against: choose a candidate, point the document at that picture, and the path this card names is gone. Insisting on it threw, and one throw inside the loop took every later card with it, so the whole screen went blank rather than showing the cards that were still good.";
   arguments_assert(arguments, 4);
-  let card = html_div(parent);
-  html_style_assign(card, {
-    "margin-top": "24px",
-    "padding-top": "12px",
-    "border-top": "1px solid #8888",
-  });
+  let card = app_shared_card_ruled(parent);
   let before = property_get(swap, "before");
   let pictures = property_get(document, "pictures");
   let picture = lyric_video_song_swap_picture_or_null(pictures, before);
