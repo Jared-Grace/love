@@ -102,6 +102,7 @@ export function bible_glyph_roots_hebrew() {
   "ETH, TIME, TAKES THE GREEK HOUR'S CLOCK (2026-10-03). Its sense is the time when a thing happens, which is what a clock face says. Moed, the appointed time, is another root and was left without it, so the one picture does not stand for two roots.";
   "KATHAB AND BAQASH TAKE THE GREEK WRITING HAND AND MAGNIFYING GLASS (2026-10-03). Write and seek are one sense each, and the Greek grapho and zeteo were given those pictures on the same day, so a reader meets one picture for one act in both testaments. Matsa, to find, was left undrawn for the reason the Greek table gives.";
   "ELOHIM AND EL ARE THE BURNING HEART SINCE 2026-10-03, QANNA IS THE STEAMING FACE, AND ESH IS THE FIRE. The reasons are written once, on the Greek table, because it was one decision across both. Older paragraphs here that say the fire is God, or that refuse the altar as meat beside fire, were written while the flame alone meant God, and that is no longer so. Hebrew has one word for God and for the false gods, so the seat cannot tell them apart; the English can, because its translators wrote God with a capital and gods without one, and the page draws a word whose English says god or gods in small letters as the carved stone figure that gillulim, idols, already wears.";
+  "NAPHAL, SHAMAR, APH, ZAQEN, OTH, PATHACH, SHAAL AND THE NUMBERS FOUR, FIVE AND TEN WERE SEATED 2026-10-03 beside their Greek partners, whose reasons the Greek table holds. Four more are Hebrew only. Karath is the scissors, because it is to cut, and to make a covenant is in Hebrew to cut one. Tsaba is the military helmet, so the LORD of hosts reads as the LORD of armies, which is what the word says. Yasha and yeshuah take the lifebuoy that soter already wears in Greek. Shakab, to lie down, joins mishkab, the bed it is named from. Aph is first the nostril and then the anger that flares it; the angry face draws the second sense, which is most of its uses.";
   "QUM, TSAVAH AND ANAH ARE BUILT FROM MARKS ALREADY BOUGHT, AND QARA IS THE WAVING HAND, ALL 2026-10-03, the same choices as egeiro, entellomai, apokrinomai and kaleo, whose reasons the Greek table holds. Qum is the person and the hand up; tsavah is the speech and the scroll, which is mitsvah, the commandment it gives; anah is the speech and the turning arrow; qara is the hand waved to summon. Qara also means to read aloud and to name, and those senses keep the same mark, because the waving hand is the nearest picture of a voice aimed at someone.";
   "HINNEH IS THE EXCLAMATION MARK AND ENOSH IS THE BEARDED MAN, BOTH SEATED 2026-10-03 FOR FREQUENCY. Hinneh says look and asks the reader to attend; the Greek table holds the reasons, since idou takes the same mark for the same word. Enosh is the man and the men, and Strong's gives ish as its contraction, so it joins ish's row and its picture rather than buying a second one; adam, the human, keeps its own.";
   "THREE OBVIOUS SEATS WERE REFUSED THE SAME HOUR BECAUSE THE PICTURE IS SPENT INSIDE THIS TABLE. Kaph is a palm and yad already holds the hand; the mouth is seated on the speaking verb, so peh would make every mouth read as speaking. Each needs a picture of its own rather than a borrowed one.";
@@ -1682,6 +1683,10 @@ export function bible_glyph_roots_hebrew() {
           strong: "4296",
           glyph: "bed",
         },
+        {
+          strong: "7901",
+          glyph: "bed",
+        },
       ],
     },
     {
@@ -2874,6 +2879,140 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "6030",
           glyph: "speech+turn_back",
+        },
+      ],
+    },
+    {
+      root: "naphal",
+      gloss: "fall",
+      words: [
+        {
+          strong: "5307",
+          glyph: "person+pointing_down",
+        },
+      ],
+    },
+    {
+      root: "shamar",
+      gloss: "keep, guard, watch",
+      words: [
+        {
+          strong: "8104",
+          glyph: "guard",
+        },
+      ],
+    },
+    {
+      root: "aph",
+      gloss: "anger, nostril",
+      words: [
+        {
+          strong: "639",
+          glyph: "angry_face",
+        },
+      ],
+    },
+    {
+      root: "zaqen",
+      gloss: "elder, old",
+      words: [
+        {
+          strong: "2205",
+          glyph: "old_man",
+        },
+      ],
+    },
+    {
+      root: "oth",
+      gloss: "sign",
+      words: [
+        {
+          strong: "226",
+          glyph: "placard",
+        },
+      ],
+    },
+    {
+      root: "pathach",
+      gloss: "open",
+      words: [
+        {
+          strong: "6605",
+          glyph: "unlocked",
+        },
+      ],
+    },
+    {
+      root: "shaal",
+      gloss: "ask",
+      words: [
+        {
+          strong: "7592",
+          glyph: "question",
+        },
+      ],
+    },
+    {
+      root: "chamesh",
+      gloss: "five",
+      words: [
+        {
+          strong: "2568",
+          glyph: "five",
+        },
+      ],
+    },
+    {
+      root: "arba",
+      gloss: "four",
+      words: [
+        {
+          strong: "702",
+          glyph: "four",
+        },
+      ],
+    },
+    {
+      root: "eser",
+      gloss: "ten",
+      words: [
+        {
+          strong: "6235",
+          glyph: "ten",
+        },
+      ],
+    },
+    {
+      root: "karath",
+      gloss: "cut, cut off",
+      words: [
+        {
+          strong: "3772",
+          glyph: "scissors",
+        },
+      ],
+    },
+    {
+      root: "tsaba",
+      gloss: "army, host",
+      words: [
+        {
+          strong: "6635",
+          glyph: "military_helmet",
+        },
+      ],
+    },
+    {
+      root: "yasha",
+      gloss: "save",
+      words: [
+        {
+          strong: "3467",
+          glyph: "rescue",
+        },
+        {
+          strong: "3444",
+          glyph: "rescue",
         },
       ],
     },

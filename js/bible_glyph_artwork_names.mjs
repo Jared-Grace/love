@@ -800,6 +800,50 @@ export function bible_glyph_artwork_names() {
       glyph: "waving_hand",
       asset: "Waving hand",
     },
+    {
+      glyph: "guard",
+      asset: "Guard",
+    },
+    {
+      glyph: "angry_face",
+      asset: "Angry face",
+    },
+    {
+      glyph: "old_man",
+      asset: "Old man",
+    },
+    {
+      glyph: "placard",
+      asset: "Placard",
+    },
+    {
+      glyph: "unlocked",
+      asset: "Unlocked",
+    },
+    {
+      glyph: "question",
+      asset: "Red question mark",
+    },
+    {
+      glyph: "five",
+      asset: "Keycap 5",
+    },
+    {
+      glyph: "four",
+      asset: "Keycap 4",
+    },
+    {
+      glyph: "ten",
+      asset: "Keycap 10",
+    },
+    {
+      glyph: "scissors",
+      asset: "Scissors",
+    },
+    {
+      glyph: "military_helmet",
+      asset: "Military helmet",
+    },
   ];
   return names;
 }

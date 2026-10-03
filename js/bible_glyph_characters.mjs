@@ -1116,6 +1116,50 @@ export function bible_glyph_characters() {
       name: "waving_hand",
       character: "👋",
     },
+    {
+      name: "guard",
+      character: "💂",
+    },
+    {
+      name: "angry_face",
+      character: "😠",
+    },
+    {
+      name: "old_man",
+      character: "👴",
+    },
+    {
+      name: "placard",
+      character: "🪧",
+    },
+    {
+      name: "unlocked",
+      character: "🔓",
+    },
+    {
+      name: "question",
+      character: "❓",
+    },
+    {
+      name: "five",
+      character: "5️⃣",
+    },
+    {
+      name: "four",
+      character: "4️⃣",
+    },
+    {
+      name: "ten",
+      character: "🔟",
+    },
+    {
+      name: "scissors",
+      character: "✂️",
+    },
+    {
+      name: "military_helmet",
+      character: "🪖",
+    },
   ];
   return characters;
 }
