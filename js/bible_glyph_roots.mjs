@@ -363,20 +363,6 @@ export function bible_glyph_roots() {
       ],
     },
     {
-      root: "ierousalem",
-      gloss: "Jerusalem, in both its Greek spellings",
-      words: [
-        {
-          strong: "2419",
-          glyph: "city+peace",
-        },
-        {
-          strong: "2414",
-          glyph: "city+peace",
-        },
-      ],
-    },
-    {
       root: "iakob",
       gloss: "Jacob",
       words: [
