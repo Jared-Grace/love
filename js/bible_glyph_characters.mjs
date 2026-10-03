@@ -1184,6 +1184,46 @@ export function bible_glyph_characters() {
       name: "hollow_circle",
       character: "⭕",
     },
+    {
+      name: "cup_with_straw",
+      character: "🥤",
+    },
+    {
+      name: "seat",
+      character: "💺",
+    },
+    {
+      name: "six",
+      character: "6️⃣",
+    },
+    {
+      name: "classical_building",
+      character: "🏛️",
+    },
+    {
+      name: "synagogue",
+      character: "🕍",
+    },
+    {
+      name: "public_address",
+      character: "📢",
+    },
+    {
+      name: "reminder_ribbon",
+      character: "🎗️",
+    },
+    {
+      name: "paw_prints",
+      character: "🐾",
+    },
+    {
+      name: "brain",
+      character: "🧠",
+    },
+    {
+      name: "clapping_hands",
+      character: "👏",
+    },
   ];
   return characters;
 }

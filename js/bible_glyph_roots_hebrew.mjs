@@ -103,12 +103,83 @@ export function bible_glyph_roots_hebrew() {
   "KATHAB AND BAQASH TAKE THE GREEK WRITING HAND AND MAGNIFYING GLASS (2026-10-03). Write and seek are one sense each, and the Greek grapho and zeteo were given those pictures on the same day, so a reader meets one picture for one act in both testaments. Matsa, to find, was left undrawn for the reason the Greek table gives.";
   "ELOHIM AND EL ARE THE BURNING HEART SINCE 2026-10-03, QANNA IS THE STEAMING FACE, AND ESH IS THE FIRE. The reasons are written once, on the Greek table, because it was one decision across both. Older paragraphs here that say the fire is God, or that refuse the altar as meat beside fire, were written while the flame alone meant God, and that is no longer so. Hebrew has one word for God and for the false gods, so the seat cannot tell them apart; the English can, because its translators wrote God with a capital and gods without one, and the page draws a word whose English says god or gods in small letters as the carved stone figure that gillulim, idols, already wears.";
   "NAPHAL, SHAMAR, ZAQEN, OTH, PATHACH, SHAAL AND THE NUMBERS FOUR, FIVE AND TEN WERE SEATED 2026-10-03 beside their Greek partners, whose reasons the Greek table holds. Four more are Hebrew only. Karath is the scissors, because it is to cut, and to make a covenant is in Hebrew to cut one. Tsaba is the military helmet, so the LORD of hosts reads as the LORD of armies, which is what the word says. Yasha and yeshuah take the lifebuoy that soter already wears in Greek. Shakab, to lie down, joins mishkab, the bed it is named from. Aph was seated on the angry face and taken off within the hour, because the undrawn list already refuses it for being the nose as often as one word in five; Greek orge has no such second sense and keeps the face.";
+  "SHATHAH, SHESH AND LACHAM TAKE WHAT THEIR GREEK PARTNERS TOOK ON 2026-10-03, for the reasons the Greek table gives: the cup with a straw, the keycap six, and the crossed swords that milchamah, the war lacham is named from, already holds. Five more are Hebrew only. Zakar, to remember, is the reminder ribbon, the one picture whose whole meaning is keeping a thing in mind; the brain was the other choice and went to bin instead, to understand and discern, which is the thinking rather than the keeping. Behemah, beast and livestock, is the paw prints, an animal without saying which; the bull and the ox are already their own words. Halal, to praise, the word inside hallelujah, is the clapping hands; the raised hands were not free, because they are yadah, to give thanks. Darash, to inquire, is the magnifying glass joined to the question mark, because baqash already holds the glass alone for seeking, and darash is the seeking that asks. Judge and book stay refused for the reasons written on the undrawn list.";
   "THE EYE AND THE EAR WENT TO THE ORGANS ON 2026-10-03, for the reasons the Greek table gives: ayin is the single eye, raah to see is the pair of eyes, ozen is the ear, and shama to hear is the ear joined to the loudspeaker. Ayin is also a spring of water, which the single eye does not draw; that is the smaller part of its uses.";
   "MATSA, SUM AND RISHON TAKE THE PICTURES HEURISKO, TITHEMI AND PROTOS TOOK ON 2026-10-03, for the reasons the Greek table gives, where amad, gadol and rab are also said to be left undrawn. Abar is Hebrew only: to cross over is the bridge, which is the crossing itself. Its sense of passing by fits the bridge as well; its sense of transgressing does not, and that is the smaller part of its uses.";
   "QUM, TSAVAH AND ANAH ARE BUILT FROM MARKS ALREADY BOUGHT, AND QARA IS THE WAVING HAND, ALL 2026-10-03, the same choices as egeiro, entellomai, apokrinomai and kaleo, whose reasons the Greek table holds. Qum is the person and the hand up; tsavah is the speech and the scroll, which is mitsvah, the commandment it gives; anah is the speech and the turning arrow; qara is the hand waved to summon. Qara also means to read aloud and to name, and those senses keep the same mark, because the waving hand is the nearest picture of a voice aimed at someone.";
   "HINNEH IS THE EXCLAMATION MARK AND ENOSH IS THE BEARDED MAN, BOTH SEATED 2026-10-03 FOR FREQUENCY. Hinneh says look and asks the reader to attend; the Greek table holds the reasons, since idou takes the same mark for the same word. Enosh is the man and the men, and Strong's gives ish as its contraction, so it joins ish's row and its picture rather than buying a second one; adam, the human, keeps its own.";
   "THREE OBVIOUS SEATS WERE REFUSED THE SAME HOUR BECAUSE THE PICTURE IS SPENT INSIDE THIS TABLE. Kaph is a palm and yad already holds the hand; the mouth is seated on the speaking verb, so peh would make every mouth read as speaking. Each needs a picture of its own rather than a borrowed one.";
   let roots = [
+    {
+      root: "shathah",
+      gloss: "to drink",
+      words: [
+        {
+          strong: "8354",
+          glyph: "cup_with_straw",
+        },
+      ],
+    },
+    {
+      root: "zakar",
+      gloss: "to remember",
+      words: [
+        {
+          strong: "2142",
+          glyph: "reminder_ribbon",
+        },
+      ],
+    },
+    {
+      root: "behemah",
+      gloss: "beast, livestock",
+      words: [
+        {
+          strong: "929",
+          glyph: "paw_prints",
+        },
+      ],
+    },
+    {
+      root: "shesh",
+      gloss: "six",
+      words: [
+        {
+          strong: "8337",
+          glyph: "six",
+        },
+      ],
+    },
+    {
+      root: "bin",
+      gloss: "to understand, to discern",
+      words: [
+        {
+          strong: "995",
+          glyph: "brain",
+        },
+      ],
+    },
+    {
+      root: "halal",
+      gloss: "to praise",
+      words: [
+        {
+          strong: "1984",
+          glyph: "clapping_hands",
+        },
+      ],
+    },
+    {
+      root: "darash",
+      gloss: "to inquire, to seek",
+      words: [
+        {
+          strong: "1875",
+          glyph: "magnifying_glass+question",
+        },
+      ],
+    },
     {
       root: "ozen",
       gloss: "ear",
@@ -2840,6 +2911,10 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "4421",
+          glyph: "crossed_swords",
+        },
+        {
+          strong: "3898",
           glyph: "crossed_swords",
         },
       ],

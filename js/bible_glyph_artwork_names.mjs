@@ -868,6 +868,46 @@ export function bible_glyph_artwork_names() {
       glyph: "hollow_circle",
       asset: "Hollow red circle",
     },
+    {
+      glyph: "cup_with_straw",
+      asset: "Cup with straw",
+    },
+    {
+      glyph: "seat",
+      asset: "Seat",
+    },
+    {
+      glyph: "six",
+      asset: "Keycap 6",
+    },
+    {
+      glyph: "classical_building",
+      asset: "Classical building",
+    },
+    {
+      glyph: "synagogue",
+      asset: "Synagogue",
+    },
+    {
+      glyph: "public_address",
+      asset: "Loudspeaker",
+    },
+    {
+      glyph: "reminder_ribbon",
+      asset: "Reminder ribbon",
+    },
+    {
+      glyph: "paw_prints",
+      asset: "Paw prints",
+    },
+    {
+      glyph: "brain",
+      asset: "Brain",
+    },
+    {
+      glyph: "clapping_hands",
+      asset: "Clapping hands",
+    },
   ];
   return names;
 }
