@@ -34,20 +34,24 @@ import { html_style_margin_top } from "./html_style_margin_top.mjs";
 export function app_code_quiz(context) {
   let root = html_clear_context(context);
   let lesson = app_code_lesson_current(context);
-  ("the bar is drawn inside a holder of its own, so the answer that finishes the lesson can draw it again in the same place, green, without redrawing the question under it");
+  ("the bar is drawn inside a holder of its own, so it can be drawn again in the same place without redrawing the question under it");
   let holder = html_div(root);
-  app_code_lesson_title_strip(holder, context, lesson);
-  function complete_show() {
+  function render() {
+    "the bar reads whether the lesson is finished every time it is drawn and dresses itself to match, so whatever changes that answer only has to draw it again - the shape the human gave, 2026-10-03. The first version compared finished before and after each answer and drew only on a change, which was a second place deciding what the bar already decides";
+    html_clear(holder);
+    app_code_lesson_title_strip(holder, context, lesson);
+  }
+  render();
+  function render_again() {
     "a holder no longer on the page belongs to a screen the learner has left, so it is not drawn into, and the page is not painted for it";
     let attached = html_attached_is(holder);
     if (not(attached)) {
       return;
     }
-    html_clear(holder);
-    app_code_lesson_title_strip(holder, context, lesson);
+    render();
     app_code_page_complete_paint(context);
   }
-  property_set(context, "lesson_complete_show", complete_show);
+  property_set(context, "lesson_progress_render", render_again);
   let on_batch = app_code_batch_on_refill(list_shuffle);
   ("the first question is drawn by the getter itself, as it is made, so it is not drawn again here - a second draw threw the first away and spent a question and a missing line the learner never saw");
   app_code_batch_item_get(root, lesson, on_batch_item, on_batch, true, null);

@@ -1,6 +1,4 @@
-import { app_code_lesson_current_complete_is } from "./app_code_lesson_current_complete_is.mjs";
 import { app_code_lesson_complete_show } from "./app_code_lesson_complete_show.mjs";
-import { not } from "./not.mjs";
 import { html_data_test_quiz_correct_bump } from "./html_data_test_quiz_correct_bump.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_answer_label_set } from "./app_code_lesson_quiz_answer_label_set.mjs";
@@ -91,14 +89,9 @@ export function app_code_lesson_quiz({
     "on any correct answer, flash success then auto-advance to the NEXT QUESTION of the SAME kind (the player loops through as many questions as they want; Next changes the kind, Skip leaves)";
     "the correct answer is written down here, at the one place that knows both which quiz of the lesson this is and how many the lesson has - the list screen shows a lesson as finished once every one of them has been answered right at least once";
     let quizzes_total = list_size(quizzes);
-    let complete_before = app_code_lesson_current_complete_is(context);
     app_code_progress_quiz_correct_record(context, quiz_index, quizzes_total);
-    ("the answer that finishes the lesson turns the screen green as it is given, rather than only once the learner leaves and comes back, at the human's request, 2026-10-03. Redrawing the whole screen was the other choice, and it would throw away the question the learner is on");
-    let complete_after = app_code_lesson_current_complete_is(context);
-    let finished_now = not(complete_before) && complete_after;
-    if (finished_now) {
-      app_code_lesson_complete_show(context);
-    }
+    ("the progress just changed, so the screen draws what shows it again, and the answer that finishes the lesson turns the screen green as it is given rather than only once the learner leaves and comes back, at the human's request, 2026-10-03. Redrawing the whole screen was the other choice, and it would throw away the question the learner is on");
+    app_code_lesson_complete_show(context);
     html_data_test_quiz_correct_bump();
     html_clear(container_success_message);
     app_shared_success_message(container_success_message);
