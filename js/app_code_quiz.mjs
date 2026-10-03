@@ -1,3 +1,8 @@
+import { html_div } from "./html_div.mjs";
+import { html_attached_is } from "./html_attached_is.mjs";
+import { html_clear } from "./html_clear.mjs";
+import { app_code_page_complete_paint } from "./app_code_page_complete_paint.mjs";
+import { property_set } from "./property_set.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { app_code_lesson_current } from "./app_code_lesson_current.mjs";
 import { app_code_lesson_title_strip } from "./app_code_lesson_title_strip.mjs";
@@ -29,7 +34,20 @@ import { html_style_margin_top } from "./html_style_margin_top.mjs";
 export function app_code_quiz(context) {
   let root = html_clear_context(context);
   let lesson = app_code_lesson_current(context);
-  app_code_lesson_title_strip(root, context, lesson);
+  ("the bar is drawn inside a holder of its own, so the answer that finishes the lesson can draw it again in the same place, green, without redrawing the question under it");
+  let holder = html_div(root);
+  app_code_lesson_title_strip(holder, context, lesson);
+  function complete_show() {
+    "a holder no longer on the page belongs to a screen the learner has left, so it is not drawn into, and the page is not painted for it";
+    let attached = html_attached_is(holder);
+    if (not(attached)) {
+      return;
+    }
+    html_clear(holder);
+    app_code_lesson_title_strip(holder, context, lesson);
+    app_code_page_complete_paint(context);
+  }
+  property_set(context, "lesson_complete_show", complete_show);
   let on_batch = app_code_batch_on_refill(list_shuffle);
   ("the first question is drawn by the getter itself, as it is made, so it is not drawn again here - a second draw threw the first away and spent a question and a missing line the learner never saw");
   app_code_batch_item_get(root, lesson, on_batch_item, on_batch, true, null);
