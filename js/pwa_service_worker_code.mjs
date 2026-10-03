@@ -1,6 +1,6 @@
+import { apps_service_worker } from "./apps_service_worker.mjs";
 import { firebase_storage_host } from "./firebase_storage_host.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { apps_pwa } from "./apps_pwa.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -14,7 +14,7 @@ export function pwa_service_worker_code() {
     r2,
     "') {",
   ]);
-  let apps = apps_pwa();
+  let apps = apps_service_worker();
   function lambda(app) {
     let quoted = text_combine_multiple(["'", app, "'"]);
     return quoted;
