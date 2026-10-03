@@ -1,3 +1,4 @@
+import { app_shared_color_black } from "./app_shared_color_black.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 export function color_named_or_null(written) {
@@ -7,7 +8,7 @@ export function color_named_or_null(written) {
   ("A SURVEY LIKE THAT GOES STALE, SO THE COST OF IT GOING STALE IS WHAT MATTERS. Nothing here guesses at a name it does not know - it says nothing, and every reader of this is checking a colour it must be able to read. So a third name arriving one day is a loud fault in whatever asked, naming the word it could not read, rather than a colour quietly skipped. That is the only shape a surveyed list is safe in.");
   ("Names rather than the colours themselves, because the digits are what every rule about light and readability is worked out from, and a word carries none.");
   let names = {
-    black: "#000000",
+    black: app_shared_color_black(),
     white: "#ffffff",
   };
   let hex = property_get_or_null(names, written);
