@@ -33,6 +33,10 @@ export function bible_glyph_artwork_names() {
       asset: "Moai",
     },
     {
+      glyph: "face_steam",
+      asset: "Face with steam from nose",
+    },
+    {
       glyph: "heart_orange",
       asset: "Orange heart",
     },
