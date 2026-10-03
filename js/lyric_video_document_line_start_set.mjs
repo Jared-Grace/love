@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { less_than } from "./less_than.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -6,7 +7,6 @@ import { number_from_text } from "./number_from_text.mjs";
 import { lyric_video_document_name_found } from "./lyric_video_document_name_found.mjs";
 import { equal } from "./equal.mjs";
 import { list_map_property } from "./list_map_property.mjs";
-import { not } from "./not.mjs";
 import { lyric_video_document_lines_relaid_write } from "./lyric_video_document_lines_relaid_write.mjs";
 export async function lyric_video_document_line_start_set(
   name,
@@ -50,11 +50,9 @@ export async function lyric_video_document_line_start_set(
   let last = null;
   for (let i = 0; less_than(i, starts.length); i++) {
     let one = starts[i];
-    let b = equal(one, null);
-    let timed = not(b);
+    let timed = equal_not(one, null);
     if (timed) {
-      let b2 = equal(last, null);
-      let known = not(b2);
+      let known = equal_not(last, null);
       let backwards = known && less_than_equal(one, last);
       if (backwards) {
         out_of_order.push(texts[i] + " would begin " + one + " after " + last);
