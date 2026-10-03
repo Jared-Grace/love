@@ -1,5 +1,5 @@
+import { bible_glyph_chapters_collision_marks_ruled } from "./bible_glyph_chapters_collision_marks_ruled.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bible_glyph_chapters_collision_marks_walked } from "./bible_glyph_chapters_collision_marks_walked.mjs";
 import { bible_glyph_collision_marks_row } from "./bible_glyph_collision_marks_row.mjs";
 import { list_first } from "./list_first.mjs";
 import { property_count_add } from "./property_count_add.mjs";
@@ -12,7 +12,7 @@ export async function bible_glyph_chapters_collision_marks_report() {
   "A PAIRED MARK IS COUNTED ONCE PER WORD AND NEVER ONCE PER VERSE. Where the counts agree the verse hands over as many marks as it has words, and each one goes to the root of the word in its place, so a verse drawing three marks moves three into the tally and can move them to different roots. That is the whole difference between pairing and presence: presence has one answer for the verse, pairing has one answer for each mark in it.";
   "A PICTURE WITH NOTHING UNDECIDED UNDER IT IS A PICTURE THAT CAN BE SPLIT TODAY, and that is the sentence this exists to be able to say. Which of the pair keeps the picture is still a person's call, but nothing about the chapters already written stands in the way.";
   arguments_assert(arguments, 0);
-  let walk = await bible_glyph_chapters_collision_marks_walked();
+  let walk = await bible_glyph_chapters_collision_marks_ruled();
   let rows = {};
   for (let entry of walk.decided) {
     let row = bible_glyph_collision_marks_row(rows, entry);
