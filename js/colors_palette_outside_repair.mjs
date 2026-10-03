@@ -18,6 +18,8 @@ import { list_first } from "./list_first.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
 import { function_literal_route } from "./function_literal_route.mjs";
+import { catch_null_async } from "./catch_null_async.mjs";
+import { null_is } from "./null_is.mjs";
 import { each_async } from "./each_async.mjs";
 export async function colors_palette_outside_repair() {
   "Every file that newly breaks the palette rule pointed at the palette function that already holds the colour it spells, one commit per file and colour, answered for by what was routed, what had nobody to route it to, and what the gate still complains about afterwards.";
@@ -27,6 +29,7 @@ export async function colors_palette_outside_repair() {
   "A colour two palette functions both spell is reported too, and for the same reason: picking which of the two a file meant is reading the file, not reading the colour.";
   "Each file and colour is committed as its own route the moment it lands, because this rewrites many files and a run that commits at the end loses its name to whichever peer sweeps the folder first.";
   "The gate's readings are asked again at the end rather than trusted, so what comes back says whether the repair actually worked instead of saying what it attempted.";
+  "A file where the route refuses is reported and the walk carries on, because the commonest refusal is a colour written inside a longer piece of style text - four words with the colour as one of them - and no single value there can be pointed at anything. Pulling that apart is a hand edit, and one of them stopping the walk would leave every file after it red for a reason that has nothing to do with it.";
   arguments_assert(arguments, 0);
   let path = color_palette_outside_baseline_path();
   let files = await colors_palette_outside_files();
@@ -84,13 +87,23 @@ export async function colors_palette_outside_repair() {
   each(spellings, spelling_read);
   await ai_git_noted();
   let routed = [];
+  let refused = [];
   async function job_run(job) {
     let f_name = property_get(job, "f_name");
     let getter_f_name = property_get(job, "getter_f_name");
-    let done = await function_call_commit(function_literal_route, [
-      f_name,
-      getter_f_name,
-    ]);
+    async function route_run() {
+      let routed_one = await function_call_commit(function_literal_route, [
+        f_name,
+        getter_f_name,
+      ]);
+      return routed_one;
+    }
+    let done = await catch_null_async(route_run);
+    let no = null_is(done);
+    if (no) {
+      list_add(refused, job);
+      return;
+    }
     list_add(routed, done);
   }
   await each_async(jobs, job_run);
@@ -99,6 +112,7 @@ export async function colors_palette_outside_repair() {
   let left = property_get(change_after, "added");
   let r = {
     routed,
+    refused,
     unowned,
     shared,
     left,
