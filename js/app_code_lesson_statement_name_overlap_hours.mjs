@@ -11,6 +11,7 @@ import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
+import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
 import { app_code_explain_code_colored_inline } from "./app_code_explain_code_colored_inline.mjs";
@@ -23,9 +24,9 @@ export function app_code_lesson_statement_name_overlap_hours() {
   ("how many hours two meetings overlap: let gap = end - start; let hours = Math.max(gap, 0); - chosen by Claude 2026-10-03, when the human asked for another lesson without naming one. In DSA it is the length of the overlap of two ranges, used to total shared time and to measure how much two boxes cover each other; the Math.max with 0 is the step that is forgotten, and a negative length is the bug it leaves.");
   ("It starts from the overlap's start and end rather than from the two meetings, because Do two meetings overlap already finds those, so that lesson is the reminder and the new idea is only the length and the 0 floor. Not picked: the middle of a range, which Middle already teaches, and the four meeting times as names, which would put five lines in every program.");
   ("Two lines, because let hours = Math.max(end - start, 0); is longer than 30 characters. The name gap is short enough to keep the second line inside 30, and it reads true either way: the room between the start and the end, which is less than 0 when the end comes first. Not picked: length and diff, which put the second line past 30 characters.");
-  ("Start hours are blue and end hours green, as in Do two meetings overlap, so end - start can be read as a later number less an earlier one.");
+  ("Start hours are blue and end hours green, as in Do two meetings overlap, so end - start can be read as a later number less an earlier one. The overlap wears a third colour, asked by the human 2026-10-04: every length, the -1 that is too small, the 0 it becomes and the 0 it is held at, and in the last example's program the names gap and hours and the number written out.");
   ("Each screen asks three overlaps of different lengths and one pair that does not overlap, so the four answers differ and exactly one is the 0 the Math.max makes.");
-  ("The writing is a first draft, not yet the human's, 2026-10-03.");
+  ("The writing is the human's, 2026-10-04, apart from the reminder and the last two lines, which are a first draft. The colon after So the overlap is 2 hours long was dropped, because nothing follows it on that screen.");
   let names = ["start", "end"];
   let start = list_first(names);
   let end = list_second(names);
@@ -82,6 +83,7 @@ export function app_code_lesson_statement_name_overlap_hours() {
   }
   let start_color = app_code_highlight_color();
   let end_color = app_code_highlight_color_second();
+  let overlap_color = app_code_highlight_color_third();
   let plain = app_shared_color_code_background();
   function from(text) {
     "a start hour, or the name holding it, as a chip in the start colour";
@@ -93,9 +95,9 @@ export function app_code_lesson_statement_name_overlap_hours() {
     let chip = app_code_explain_number_colored(text, end_color);
     return chip;
   }
-  function plain_chip(text) {
-    "a number that is neither a start nor an end, as a plain chip";
-    let chip = app_code_explain_number_colored(text, plain);
+  function lasting(text) {
+    "how long the overlap is, as a chip in the overlap colour";
+    let chip = app_code_explain_number_colored(text, overlap_color);
     return chip;
   }
   let spaced_minus = js_code_binary_spaced_nb("", minus, "");
@@ -107,7 +109,10 @@ export function app_code_lesson_statement_name_overlap_hours() {
     );
     return chip;
   }
-  let max_floor = js_code_call_args("Math.max", ["-1", "0"]);
+  let max_floor = app_code_explain_code_colored_inline(
+    ["Math.max(", "-1", ", ", "0", ")"],
+    [plain, overlap_color, plain, overlap_color, plain],
+  );
   let v = from("10");
   let v2 = till("12");
   let draw = app_code_explain_said([
@@ -116,11 +121,11 @@ export function app_code_lesson_statement_name_overlap_hours() {
     " to ",
     v2,
   ]);
-  let v3 = plain_chip("2");
-  let draw2 = app_code_explain_said(["The overlap is ", v3, " hours long:"]);
-  let v4 = gap_worked("12", "10");
-  let v5 = plain_chip("2");
-  let draw3 = app_code_explain_said(["", v4, " is ", v5]);
+  let v3 = gap_worked("12", "10");
+  let v4 = lasting("2");
+  let draw2 = app_code_explain_said(["", v3, " is ", v4]);
+  let v5 = lasting("2");
+  let draw3 = app_code_explain_said(["So the overlap is ", v5, " hours long"]);
   let v6 = from("9");
   let v7 = till("10");
   let v8 = from("11");
@@ -144,23 +149,27 @@ export function app_code_lesson_statement_name_overlap_hours() {
     v11,
   ]);
   let v12 = gap_worked("10", "11");
-  let v13 = plain_chip("-1");
+  let v13 = lasting("-1");
   let draw6 = app_code_explain_said(["", v12, " is ", v13]);
-  let v14 = plain_chip("-1");
-  let v15 = plain_chip("0");
+  let v14 = lasting("-1");
   let draw7 = app_code_explain_said([
-    "Meetings cannot overlap for ",
+    "But meetings cannot overlap for ",
     v14,
-    " hours, so the overlap is ",
-    v15,
-    " hours:",
+    " hours",
   ]);
-  let v16 = plain_chip(max_floor);
-  let v17 = plain_chip("0");
-  let draw8 = app_code_explain_said(["", v16, " is ", v17]);
+  let v15 = lasting("0");
+  let draw8 = app_code_explain_said(["We want the overlap to be ", v15]);
+  let v16 = lasting("0");
+  let draw9 = app_code_explain_said([
+    "So we want: if the overlap is negative, then make the overlap ",
+    v16,
+    " instead of negative",
+  ]);
+  let v17 = lasting("0");
+  let draw10 = app_code_explain_said(["", max_floor, ", which is ", v17]);
   let v18 = from(start);
   let v19 = till(end);
-  let draw9 = app_code_explain_said([
+  let draw11 = app_code_explain_said([
     "Suppose the overlap starts at ",
     v18,
     " and ends at ",
@@ -188,14 +197,18 @@ export function app_code_lesson_statement_name_overlap_hours() {
       draw6,
       draw7,
       draw8,
-      app_code_explain_container_next,
       draw9,
+      ["Here's the code for that:"],
+      draw10,
+      app_code_explain_container_next,
+      draw11,
       ["Here is code that finds how many hours the meetings overlap:"],
     ],
     decoys: null,
     example_pointers: [
       [[start, "11"], start_color],
       [[end, "10"], end_color],
+      [[gap, hours, "0"], overlap_color],
     ],
   });
   return lesson;
