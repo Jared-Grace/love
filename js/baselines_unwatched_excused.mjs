@@ -15,8 +15,12 @@ export async function baselines_unwatched_excused() {
   let exempt = functions_gate_run_unwired_exempt();
   let gates = list_map_property(exempt, "name");
   let unwatched = await baselines_unwatched();
-  function excused_is(path_name) {
-    let gate = text_suffix_change(path_name, "_baseline_path", "_gate_run");
+  function excused_is(baseline_path_fn) {
+    let gate = text_suffix_change(
+      baseline_path_fn,
+      "_baseline_path",
+      "_gate_run",
+    );
     let let_off = list_includes(gates, gate);
     return let_off;
   }
