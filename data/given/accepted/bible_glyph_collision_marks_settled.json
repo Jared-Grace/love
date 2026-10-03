@@ -1,0 +1,14 @@
+{
+  "ZEC04 v:6 speech amar+dabar": {
+    "roots": ["amar", "dabar", "amar"],
+    "reason": "The interlinear prints So he said to me under way·ya·‘an 6030 and leaves the cell under way·yō·mer 559 blank, because one English phrase covers two Hebrew words. So the first speech mark is amar with its English printed one cell to the left, and the reading that sets aside the words English gives nothing cannot see it. The three marks on the page are said, word, says."
+  },
+  "1SA02 v:3 no_entry al+lo": {
+    "roots": ["al"],
+    "reason": "Ketiv and Qere. The consonants are wə·lō 3808, and the translation follows the Qere לוֹ and prints and by Him, so the English carries one negation where the Hebrew carries two. The single mark is the al 408 of Do not boast."
+  },
+  "EXO10 v:28 no_entry al+lo": {
+    "roots": ["al"],
+    "reason": "The interlinear tags אֶל as el 413, toward, where the translation reads the negative אַל, al 408, and prints never. So the verse seats neither member of the pair by number while the mark on the page is correct. The single mark is al."
+  }
+}
