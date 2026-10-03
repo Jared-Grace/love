@@ -1,4 +1,3 @@
-import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_operator_less_than_equal_symbol } from "./js_operator_less_than_equal_symbol.mjs";
@@ -20,12 +19,13 @@ import { app_code_explain_word_colored } from "./app_code_explain_word_colored.m
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
 import { app_code_explain_code_colored_inline } from "./app_code_explain_code_colored_inline.mjs";
 import { range } from "./range.mjs";
+import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_square_grid } from "./app_code_square_grid.mjs";
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_seat_less } from "./app_code_lesson_statement_name_seat_less.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_code_explain_containers } from "./app_code_explain_containers.mjs";
 export function app_code_lesson_statement_name_grid_inside() {
   arguments_assert(arguments, 0);
   ("whether a square is inside a grid whose rows and columns are numbered from 0: let in_r = 0 <= r && r < rows; let in_c = 0 <= c && c < cols; let ok = in_r && in_c; - picked by the human 2026-10-02 from a list of next lessons. In DSA it is the check made before stepping to a neighbouring square of a grid, so a search never reads past an edge.");
@@ -298,31 +298,19 @@ export function app_code_lesson_statement_name_grid_inside() {
       ":",
     ],
     remember_lines,
-    explain: [
-      grid_said,
-      numbered_said,
-      v3,
-      blue_said,
-      not_blue_said,
-      both_said,
-      app_code_explain_container_next,
-      inside_said,
-      v4,
-      row_two_said,
-      column_one_said,
-      true_true_said,
-      app_code_explain_container_next,
-      outside_said,
-      v5,
-      row_two_said,
-      no_column_said,
-      column_three_said,
-      true_false_said,
-      app_code_explain_container_next,
-      names_said,
-      counts_said,
-      code_said,
-    ],
+    explain: app_code_explain_containers([
+      [grid_said, numbered_said, v3, blue_said, not_blue_said, both_said],
+      [inside_said, v4, row_two_said, column_one_said, true_true_said],
+      [
+        outside_said,
+        v5,
+        row_two_said,
+        no_column_said,
+        column_three_said,
+        true_false_said,
+      ],
+      [names_said, counts_said, code_said],
+    ]),
     decoys: null,
     example_pointers: [
       [["2", r, in_r], row_color],
