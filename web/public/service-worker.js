@@ -1,6 +1,6 @@
 var CACHE_NAME = 'love-cache-v4';
 var SHELL_TIMEOUT_MS = 4000;
-var PWA_APPS = ['verses'];
+var PWA_APPS = ['verses','search','bible'];
 self.addEventListener('install', function () {
   self.skipWaiting();
 });
