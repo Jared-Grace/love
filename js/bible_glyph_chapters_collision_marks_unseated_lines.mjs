@@ -1,7 +1,7 @@
+import { bible_glyph_chapters_collision_marks_ruled } from "./bible_glyph_chapters_collision_marks_ruled.mjs";
 import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bible_glyph_chapters_collision_marks_walked } from "./bible_glyph_chapters_collision_marks_walked.mjs";
 import { bible_glyph_characters_lookup } from "./bible_glyph_characters_lookup.mjs";
 import { not } from "./not.mjs";
 import { list_join_colon } from "./list_join_colon.mjs";
@@ -19,7 +19,7 @@ export async function bible_glyph_chapters_collision_marks_unseated_lines() {
   "THE PICTURE EACH WORD ALREADY CARRIES IS PRINTED BESIDE IT. A word with no picture is a candidate for the seat; a word that already has a different one is not, and telling the two apart by eye is the whole of the work.";
   "IT DECIDES NOTHING AND WRITES NOTHING. A seat is a claim about what a word means, so it stays a person's to make.";
   arguments_assert(arguments, 0);
-  let walk = await bible_glyph_chapters_collision_marks_walked();
+  let walk = await bible_glyph_chapters_collision_marks_ruled();
   let lookup = bible_glyph_characters_lookup([]);
   let lines = [];
   for (let entry of walk.unseated) {
