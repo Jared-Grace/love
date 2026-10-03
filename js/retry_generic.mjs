@@ -1,3 +1,5 @@
+import { equal } from "./equal.mjs";
+import { subtract } from "./subtract.mjs";
 import { error_readable } from "./error_readable.mjs";
 import { error_json } from "./error_json.mjs";
 import { not } from "./not.mjs";
@@ -9,7 +11,7 @@ export async function retry_generic(lambda, wait, wait_get, count) {
   "What each attempt said is kept as words rather than as the error itself. An error written down as json is an empty pair of brackets, so the complaint this raises after the last attempt used to be a row of empty brackets - the exact shape of a retrier that had nothing to report, arriving at the one moment when why it failed is the only thing worth knowing";
   let result = null;
   let success = false;
-  "There is no wait after the last attempt, because nothing follows it to wait for - it only held the complaint back. Measured on a missing file asked three times: four of its nine seconds were that wait.";
+  ("There is no wait after the last attempt, because nothing follows it to wait for - it only held the complaint back. Measured on a missing file asked three times: four of its nine seconds were that wait.");
   async function lambda3(la) {
     async function lambda2(index) {
       try {
@@ -19,7 +21,8 @@ export async function retry_generic(lambda, wait, wait_get, count) {
       } catch (e) {
         let words = error_readable(e);
         la(words);
-        let last = index === count - 1;
+        let right = subtract(count, 1);
+        let last = equal(index, right);
         if (last) {
           return;
         }
