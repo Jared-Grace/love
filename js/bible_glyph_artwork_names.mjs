@@ -996,6 +996,10 @@ export function bible_glyph_artwork_names() {
       glyph: "right_arrow",
       asset: "Right arrow",
     },
+    {
+      glyph: "flashlight",
+      asset: "Flashlight",
+    },
   ];
   return names;
 }

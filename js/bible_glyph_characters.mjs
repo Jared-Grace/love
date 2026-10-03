@@ -1312,6 +1312,10 @@ export function bible_glyph_characters() {
       name: "right_arrow",
       character: "➡️",
     },
+    {
+      name: "flashlight",
+      character: "🔦",
+    },
   ];
   return characters;
 }
