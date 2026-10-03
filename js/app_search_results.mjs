@@ -1,7 +1,7 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_search_languages_unsearchable_show } from "./app_search_languages_unsearchable_show.mjs";
 import { app_search_languages_matching } from "./app_search_languages_matching.mjs";
-import { app_search_results_missing } from "./app_search_results_missing.mjs";
-import { app_search_results_books } from "./app_search_results_books.mjs";
+import { app_shared_bible_read_books_en } from "./app_shared_bible_read_books_en.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -19,7 +19,7 @@ import { list_single_property } from "./list_single_property.mjs";
 import { app_shared_folds_refresh } from "./app_shared_folds_refresh.mjs";
 export async function app_search_results(context, div_results) {
   let languages_chosen = property_get(context, "languages_chosen");
-  let books = await app_search_results_books();
+  let books = await app_shared_bible_read_books_en();
   let query = property_get(context, "query");
   let matching = await app_search_languages_matching(languages_chosen, query);
   ("every word is fetched by now, so the page is cleared once here and everything below only adds to it - a second clear further down would wipe the note naming the languages that were not searched");
@@ -39,10 +39,9 @@ export async function app_search_results(context, div_results) {
     app_search_no_words_show(div_results, query, languages_chosen);
     return;
   }
-  let r = await app_search_results_missing(matching, div_results);
-  let missing = property_get(r, "missing");
-  let words_missing = property_get(r, "words_missing");
-  let dictionary = property_get(r, "dictionary");
+  let dictionary = property_get(matching, "dictionary");
+  let words_missing = property_get(matching, "words_missing");
+  let missing = list_empty_not_is(words_missing);
   if (missing) {
     let missing_text = app_search_words_missing_text(words_missing);
     app_shared_text_body(div_results, missing_text);
@@ -56,18 +55,18 @@ export async function app_search_results(context, div_results) {
     app_shared_text_body(div_results, none_text);
     return;
   }
-  let r3 = app_search_results_render(
+  let r = app_search_results_render(
     div_results,
     books,
     results,
     languages_chosen,
   );
   let book_chapter_single_expanders = property_get(
-    r3,
+    r,
     "book_chapter_single_expanders",
   );
-  let book_folds = property_get(r3, "book_folds");
-  let button_list = property_get(r3, "button_list");
+  let book_folds = property_get(r, "book_folds");
+  let button_list = property_get(r, "button_list");
   let one_book = list_size_1(book_folds.members);
   if (one_book) {
     ("a search landing inside a single book leaves no book to choose between, so it opens rather than waiting for a click that could only go one way, however long the page is. opening it here, with its chapters already in place, is also what lets a lone chapter open along with it");
