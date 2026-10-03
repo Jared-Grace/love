@@ -1,3 +1,5 @@
+import { function_is } from "./function_is.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_style_code_dark_nowrap } from "./html_style_code_dark_nowrap.mjs";
@@ -10,7 +12,13 @@ export function app_code_note_cycle_code(parent, parts, names) {
   ("The plain slot comes first and the code slot second, and they take turns from there. Anything meant to stay plain goes in a plain slot, so a sentence is one list and nothing in it has to be marked up.");
   ("A code piece that is not one of the names keeps the ordinary code colour. Most are not - a word, a quoted thing, a whole small program - and colouring one of those would say it was a name being followed.");
   let plain = true;
+  ("A part may instead be a function that draws itself into the line, such as a word or a number on a chip of colour, asked for by the human 2026-10-03 so a reminder can colour a remainder as the writing below it does. It is drawn as it is and still takes its turn, so the plain and code slots around it keep alternating.");
   for (let part of parts) {
+    if (function_is(part)) {
+      part(parent);
+      plain = not(plain);
+      continue;
+    }
     let span = html_span_text(parent, part);
     if (plain) {
       plain = false;
