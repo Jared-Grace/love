@@ -1,9 +1,10 @@
-import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { bible_glyph_drawn_for_english } from "./bible_glyph_drawn_for_english.mjs";
 import { list_size } from "./list_size.mjs";
-import { bible_glyph_keys_spelled } from "./bible_glyph_keys_spelled.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { list_get } from "./list_get.mjs";
+import { bible_glyph_keys_spelled } from "./bible_glyph_keys_spelled.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
@@ -22,6 +23,9 @@ export function bible_glyph_chapter_built_parsed(built, drawn) {
   ("A word kept with the keys of its parts is spelled by ",
     fn_name("bible_glyph_keys_spelled"),
     ", the same rule the original-order line uses; a word kept as only its number and English, from a chapter stored before parts were kept, is spelled from its number alone.");
+  ("Each word is drawn from ",
+    fn_name("bible_glyph_drawn_for_english"),
+    "'s table, so a word whose English says god or gods in small letters is drawn as an idol and not as God.");
   ("A word with no picture and no English of its own is left out: its English was pulled into a neighbour, which already says it.");
   let verses = [];
   for (let verse of built.verses) {
@@ -30,12 +34,13 @@ export function bible_glyph_chapter_built_parsed(built, drawn) {
       let strong = pair[0];
       let english = pair[1];
       let spelled = null;
+      let drawn_word = bible_glyph_drawn_for_english(drawn, english);
       let a = list_size(pair);
       if (greater_than(a, 2)) {
         let keys = list_get(pair, 2);
-        spelled = bible_glyph_keys_spelled(keys, english, drawn);
+        spelled = bible_glyph_keys_spelled(keys, english, drawn_word);
       } else {
-        let glyph = property_get_or_null(drawn, strong);
+        let glyph = property_get_or_null(drawn_word, strong);
         let undrawn = null_is(glyph) || equal(glyph, "");
         spelled = undrawn ? english : text_combine("$", glyph);
       }
