@@ -1108,6 +1108,10 @@ export function bible_glyph_characters() {
       name: "magnifying_glass",
       character: "🔍",
     },
+    {
+      name: "exclamation",
+      character: "❗",
+    },
   ];
   return characters;
 }

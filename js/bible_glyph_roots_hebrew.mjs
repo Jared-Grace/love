@@ -102,6 +102,7 @@ export function bible_glyph_roots_hebrew() {
   "ETH, TIME, TAKES THE GREEK HOUR'S CLOCK (2026-10-03). Its sense is the time when a thing happens, which is what a clock face says. Moed, the appointed time, is another root and was left without it, so the one picture does not stand for two roots.";
   "KATHAB AND BAQASH TAKE THE GREEK WRITING HAND AND MAGNIFYING GLASS (2026-10-03). Write and seek are one sense each, and the Greek grapho and zeteo were given those pictures on the same day, so a reader meets one picture for one act in both testaments. Matsa, to find, was left undrawn for the reason the Greek table gives.";
   "ELOHIM AND EL ARE THE BURNING HEART SINCE 2026-10-03, QANNA IS THE STEAMING FACE, AND ESH IS THE FIRE. The reasons are written once, on the Greek table, because it was one decision across both. Older paragraphs here that say the fire is God, or that refuse the altar as meat beside fire, were written while the flame alone meant God, and that is no longer so. Hebrew has one word for God and for the false gods, so the seat cannot tell them apart; the English can, because its translators wrote God with a capital and gods without one, and the page draws a word whose English says god or gods in small letters as the carved stone figure that gillulim, idols, already wears.";
+  "HINNEH IS THE EXCLAMATION MARK AND ENOSH IS THE BEARDED MAN, BOTH SEATED 2026-10-03 FOR FREQUENCY. Hinneh says look and asks the reader to attend; the Greek table holds the reasons, since idou takes the same mark for the same word. Enosh is the man and the men, and Strong's gives ish as its contraction, so it joins ish's row and its picture rather than buying a second one; adam, the human, keeps its own.";
   "THREE OBVIOUS SEATS WERE REFUSED THE SAME HOUR BECAUSE THE PICTURE IS SPENT INSIDE THIS TABLE. Kaph is a palm and yad already holds the hand; the mouth is seated on the speaking verb, so peh would make every mouth read as speaking. Each needs a picture of its own rather than a borrowed one.";
   let roots = [
     {
@@ -200,6 +201,10 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "376",
+          glyph: "man_beard",
+        },
+        {
+          strong: "582",
           glyph: "man_beard",
         },
       ],
@@ -2818,6 +2823,16 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "784",
           glyph: "fire",
+        },
+      ],
+    },
+    {
+      root: "hinneh",
+      gloss: "behold, look",
+      words: [
+        {
+          strong: "2009",
+          glyph: "exclamation",
         },
       ],
     },

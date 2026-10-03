@@ -792,6 +792,10 @@ export function bible_glyph_artwork_names() {
       glyph: "magnifying_glass",
       asset: "Magnifying glass tilted left",
     },
+    {
+      glyph: "exclamation",
+      asset: "Red exclamation mark",
+    },
   ];
   return names;
 }

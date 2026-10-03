@@ -128,6 +128,7 @@ export function bible_glyph_roots() {
   ("SEVEN, THREE, GOING UP AND GOING DOWN JOINED THE HEBREW ON 2026-10-03. Hepta and treis take the digits sheba and shalosh wear. Anabaino and katabaino take the walking figure pointing up and down that alah and yarad wear, and they share one row because both are baino with a prefix. Kathemai, sitting, was not given yashab's person and house: that picture says dwelling, and the Greek word for dwelling, meno, would then have no picture of its own to take.");
   ("WRITING, TEACHING AND SEEKING TOOK NEW PICTURES ON 2026-10-03, the writing hand, the teacher and the magnifying glass, each one for a whole root. Graphe, the Scripture, wears the writing hand with grapho because the word is the writing, and drawing it so shows a reader that it is written and Scripture are one word. It was not given the scroll, which is already the law. The teacher stands on the verb to teach and on the noun teacher, the same way love stands on its noun and verb. Find was left undrawn: it has no picture that says finding and not seeing or knowing, which are already the eye and the lightbulb.");
   ("GOD IS THE BURNING HEART SINCE 2026-10-03, AND FIRE IS THE FIRE. The human chose it, in these words: God is love, God is consuming fire. Both are said of God in so many words - God is love in the fourth of first John, our God is a consuming fire in the twelfth of Hebrews - so the mark is two sentences of Scripture joined into one picture, the heart that burns. The plain flame was freed by the change and pur, fire, took it. Jealousy gave the burning heart up and took the face with steam from its nose, the human's choice the same day. A word whose English says god or gods in small letters is drawn as the carved stone figure instead, because the translators' capital is the only place the text tells the LORD from an idol.");
+  ("IDOU IS THE EXCLAMATION MARK AND THE HIGH PRIEST IS THE PRIEST, BOTH SEATED 2026-10-03 FOR FREQUENCY. Idou and ide are a word that says look and means nothing else - pay attention to what comes next - and the mark that says the same in pictures is the exclamation. The eyes were refused because they already draw blepo, seeing, and behold is not a report that anyone saw; a pointing hand was refused because it already draws hoti, that. Archiereus is chief and priest in one word, and it takes the priest alone, because the Hebrew says the same office in two words, kohen gadol, and only the kohen is drawn there; priest beside a crown was refused because the crown is lord, and a high priest is not a lord.");
   let roots = [
     {
       root: "agape",
@@ -2058,6 +2059,34 @@ export function bible_glyph_roots() {
         {
           strong: "4442",
           glyph: "fire",
+        },
+      ],
+    },
+    {
+      root: "idou",
+      gloss: "behold, look",
+      words: [
+        {
+          strong: "2400",
+          glyph: "exclamation",
+        },
+        {
+          strong: "2396",
+          glyph: "exclamation",
+        },
+      ],
+    },
+    {
+      root: "hiereus",
+      gloss: "priest",
+      words: [
+        {
+          strong: "2409",
+          glyph: "priest",
+        },
+        {
+          strong: "749",
+          glyph: "priest",
         },
       ],
     },
