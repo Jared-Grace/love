@@ -1284,6 +1284,10 @@ export function bible_glyph_characters() {
       name: "input_numbers",
       character: "🔢",
     },
+    {
+      name: "crossed_fingers",
+      character: "🤞",
+    },
   ];
   return characters;
 }

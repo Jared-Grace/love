@@ -26,9 +26,9 @@ export function app_search_home_left(context, hash, search) {
   property_set(context, "languages_chosen", languages_chosen);
   app_shared_bible_languages_gear(bar, content, language_codes);
   app_shared_bible_offline_gear(bar, content, languages_chosen);
-  ("THE SEARCH LOOKS IN ENGLISH BIBLES ONLY, so the instruction says so. It used to say a verse matches if any Bible version holds the word, which was wrong twice over: the index is built from the English bibles alone, and the word cutter keeps Latin letters only, so a reader typing their own script hands over a sentence and it comes back as no words at all. The verses themselves are still shown in whichever languages are chosen, which is what made the false half invisible.");
+  ("The search looks in each chosen language that has an index, every word inside one language, and joins what the languages found. It once looked in English alone while saying any version would do; a language with no index yet still finds nothing, and says which words it could not find.");
   let search_instructions =
-    "What words would you like to search for? Separate by spaces. The search looks in English Bibles only, and a verse will match if one of them holds the word. Spelling matters.";
+    "What words would you like to search for? Separate by spaces. The search looks in the Bibles of the languages you chose. A verse matches if one Bible in a language holds every word. Accents don't matter, except in English. Spelling matters.";
   app_shared_text_body(content, search_instructions);
   let input = html_input_text(content, search_instructions);
   app_shared_input_style(input);

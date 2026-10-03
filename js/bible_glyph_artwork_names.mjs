@@ -968,6 +968,10 @@ export function bible_glyph_artwork_names() {
       glyph: "input_numbers",
       asset: "Input numbers",
     },
+    {
+      glyph: "crossed_fingers",
+      asset: "Crossed fingers",
+    },
   ];
   return names;
 }

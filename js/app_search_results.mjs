@@ -1,7 +1,7 @@
+import { app_search_languages_matching } from "./app_search_languages_matching.mjs";
 import { app_search_results_missing } from "./app_search_results_missing.mjs";
 import { app_search_results_books } from "./app_search_results_books.mjs";
 import { property_get } from "./property_get.mjs";
-import { bible_search_words } from "./bible_search_words.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_search_no_words_show } from "./app_search_no_words_show.mjs";
@@ -20,7 +20,8 @@ export async function app_search_results(context, div_results) {
   let languages_chosen = property_get(context, "languages_chosen");
   let books = await app_search_results_books();
   let query = property_get(context, "query");
-  let words = bible_search_words(query);
+  let matching = await app_search_languages_matching(languages_chosen, query);
+  let words = property_get(matching, "words");
   let no_words = list_empty_is(words);
   if (no_words) {
     ("the words are what the index is asked for, so with none of them there is nothing to ask - and the intersection of no answers is undefined, so asking anyway threw. it threw here, above the clear, which is why a reader typing a script this search cannot cut saw the page not change at all rather than being told anything");
@@ -28,7 +29,7 @@ export async function app_search_results(context, div_results) {
     app_search_no_words_show(div_results, query, languages_chosen);
     return;
   }
-  let r = await app_search_results_missing(words, div_results);
+  let r = await app_search_results_missing(matching, div_results);
   let missing = property_get(r, "missing");
   let words_missing = property_get(r, "words_missing");
   let dictionary = property_get(r, "dictionary");
