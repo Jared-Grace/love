@@ -1,9 +1,9 @@
+import { bible_glyph_chapters_collision_marks_ruled } from "./bible_glyph_chapters_collision_marks_ruled.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bible_glyph_chapters_collision_marks_walked } from "./bible_glyph_chapters_collision_marks_walked.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
@@ -27,7 +27,7 @@ export async function bible_glyph_chapters_collision_marks_root_redraw(
   "THE ORDER IT REDRAWS IN IS THE ORDER THE WALK DECIDED IN, and that is the one assumption worth naming. Where a verse names only one of the two roots every mark in that verse is that root and order does not arise. Where a verse names both, the walk pairs marks to words by position and only when the counts agree exactly, and this takes that pairing as given rather than re-deriving it - so whatever the walk can defend, this writes, and whatever it cannot, this refuses.";
   "IT CHECKS EACH VERSE'S MARKS AGAINST WHAT THE WALK COUNTED BEFORE CHANGING A CHARACTER. The walk reads a parsed chapter and this reads the file's text, which are two readings of one thing and could drift. A verse whose text holds a different number of marks than the walk counted is a disagreement about the page itself, so it stops rather than redrawing by a count it cannot trust.";
   arguments_assert(arguments, 3);
-  let walk = await bible_glyph_chapters_collision_marks_walked();
+  let walk = await bible_glyph_chapters_collision_marks_ruled();
   let undecided = [];
   for (let entry of walk.ambiguous) {
     if (equal(entry.glyph, glyph)) {
