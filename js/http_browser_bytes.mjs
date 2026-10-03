@@ -1,3 +1,5 @@
+import { equal } from "./equal.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { error_json } from "./error_json.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { object_assign } from "./object_assign.mjs";
@@ -38,6 +40,16 @@ export async function http_browser_bytes(method, options, body, url) {
     try {
       let response = await fetch(url, r);
       ("WHAT WAS ASKED FOR AND WHAT CAME BACK ARE BOTH IN THE COMPLAINT. A refusal used to be reported as four words naming no address and no status, which is a true sentence about nothing anybody can act on - three of them arrived from a phone in a row and there was no telling a file that is not there from a file that is there and will not be handed over without signing in. The retrier writes down what each attempt said, so saying it here is what carries it the whole way out.");
+      ("NOT FOUND IS AN ANSWER, NOT A STALL, so it is not asked again. A fresh connection fixes a connection; it does not put a file there. Asking three times cost a missing file seven seconds before anyone was told.");
+      if (equal(response.status, 404)) {
+        absent = {
+          hint: "the address answered that nothing is there",
+          url,
+          status: response.status,
+          status_text: response.statusText,
+        };
+        return null;
+      }
       if (not(response.ok)) {
         error_json({
           hint: "the address answered and the answer was a refusal - is the file there, and is it readable without signing in?",
@@ -52,6 +64,10 @@ export async function http_browser_bytes(method, options, body, url) {
       clearTimeout(timer);
     }
   }
+  let absent = null;
   let attempted = await retry(tries, attempt);
+  if (not_equal(absent, null)) {
+    error_json(absent);
+  }
   return attempted;
 }
