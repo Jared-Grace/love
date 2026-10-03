@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_message_private_path } from "./app_message_private_path.mjs";
+import { storage_file_private_path } from "./storage_file_private_path.mjs";
 import { file_overwrite_buffer } from "./file_overwrite_buffer.mjs";
 export async function app_message_download_private_file(item) {
   "$plain item";
@@ -8,7 +8,7 @@ export async function app_message_download_private_file(item) {
   "The bytes are written exactly as they arrived rather than read and written back out, so what is kept is the file rather than this repo's understanding of the file: a record whose shape changes later still reads back as what was actually uploaded, and a copy put back where it came from goes back byte for byte.";
   "Read through the same signed-in handle that listed it rather than through its public address, because nothing under this opening is meant to be readable to the public - a reader using the public address would list every file and then be refused every one of them.";
   arguments_assert(arguments, 1);
-  let f_path = app_message_private_path(item);
+  let f_path = storage_file_private_path(item);
   let [buffer] = await item.download();
   await file_overwrite_buffer(f_path, buffer);
   return f_path;
