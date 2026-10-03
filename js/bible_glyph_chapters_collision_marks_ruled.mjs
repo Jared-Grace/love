@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters_collision_marks_walked } from "./bible_glyph_chapters_collision_marks_walked.mjs";
 import { bible_glyph_collision_marks_settled } from "./bible_glyph_collision_marks_settled.mjs";
@@ -7,8 +8,6 @@ import { bible_glyph_collision_mark_name } from "./bible_glyph_collision_mark_na
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_set } from "./property_set.mjs";
-import { equal } from "./equal.mjs";
-import { list_size } from "./list_size.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_unique_sorted } from "./list_unique_sorted.mjs";
@@ -45,8 +44,7 @@ export async function bible_glyph_chapters_collision_marks_ruled() {
       property_set(used, name, true);
       let roots = property_get(ruling, "roots");
       let drew = property_get(entry, "drew");
-      let left = list_size(roots);
-      let counted = equal(left, drew);
+      let counted = list_size_equal(roots, drew);
       assert_json(counted, {
         name,
         roots,
