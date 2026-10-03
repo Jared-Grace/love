@@ -17,7 +17,7 @@ export function app_code_lesson_statement_name_page_start() {
   ("Photos from 0 and pages from 1, because that is how each is met: a position in code counts from 0, and a page a person turns to counts from 1. Taking one off the page turns the one count into the other, so the line is Last seat's own line with its names changed, and that lesson is the reminder.");
   ("Two short lines, as the formula lessons split into short statements are. Not picked: let first = (page - 1) * size; which the bracket lessons would allow but which asks for the minus and the times at once. The name before says what the first line counts: the pages before this one.");
   ("Every screen asks about page 1, because that is where the minus matters most: its first photo is 0, and page * size would wrongly give the first photo of page 2. The other three are from four ordinary pages. The five answers differ.");
-  ("The writing is a first draft, not yet the human's, 2026-10-02.");
+  ("The writing was read by the human and deployed, 2026-10-03; they added that the seats are counted starting at 0 to the reminder.");
   let names = ["page", "size"];
   let page = "page";
   let size = "size";
@@ -67,7 +67,11 @@ export function app_code_lesson_statement_name_page_start() {
     example_values: [3, 10],
     step,
     remember_lesson: app_code_lesson_statement_name_last_seat,
-    remember_parts: ["we can find the number of the last seat:"],
+    remember_parts: [
+      "we can find the number of the last seat, when we count starting at ",
+      "0",
+      ":",
+    ],
     remember_lines,
     explain: [
       ["Suppose photos are numbered starting with ", "0"],
