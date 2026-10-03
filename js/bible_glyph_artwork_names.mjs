@@ -860,6 +860,14 @@ export function bible_glyph_artwork_names() {
       glyph: "loudspeaker",
       asset: "Speaker high volume",
     },
+    {
+      glyph: "up_arrow",
+      asset: "Up arrow",
+    },
+    {
+      glyph: "hollow_circle",
+      asset: "Hollow red circle",
+    },
   ];
   return names;
 }

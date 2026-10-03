@@ -1176,6 +1176,14 @@ export function bible_glyph_characters() {
       name: "loudspeaker",
       character: "🔊",
     },
+    {
+      name: "up_arrow",
+      character: "⬆️",
+    },
+    {
+      name: "hollow_circle",
+      character: "⭕",
+    },
   ];
   return characters;
 }
