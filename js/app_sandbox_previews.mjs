@@ -1,3 +1,4 @@
+import { app_sandbox_previews_phone_photos_load } from "./app_sandbox_previews_phone_photos_load.mjs";
 import { app_sandbox_previews_song_image_brighter_load } from "./app_sandbox_previews_song_image_brighter_load.mjs";
 import { app_sandbox_previews_code_review_load } from "./app_sandbox_previews_code_review_load.mjs";
 import { property_get } from "./property_get.mjs";
@@ -81,6 +82,7 @@ export function app_sandbox_previews() {
     reply_rules: reply_rules_load,
     bible_word_voice_trial: bible_word_voice_trial_load,
     glyph_built: app_sandbox_previews_glyph_built_load,
+    phone_photos: app_sandbox_previews_phone_photos_load,
   };
   return previews;
 }

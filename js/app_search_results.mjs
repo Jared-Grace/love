@@ -4,11 +4,11 @@ import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs
 import { bible_search_words } from "./bible_search_words.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { app_search_no_words_text } from "./app_search_no_words_text.mjs";
-import { app_shared_text_body } from "./app_shared_text_body.mjs";
+import { app_search_no_words_show } from "./app_search_no_words_show.mjs";
 import { app_search_chapter_verses_matching } from "./app_search_chapter_verses_matching.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_search_words_missing_text } from "./app_search_words_missing_text.mjs";
+import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { app_search_results_with_verses_and_books } from "./app_search_results_with_verses_and_books.mjs";
 import { app_search_none_found_text } from "./app_search_none_found_text.mjs";
 import { app_search_results_render } from "./app_search_results_render.mjs";
@@ -28,8 +28,7 @@ export async function app_search_results(context, div_results) {
   if (no_words) {
     ("the words are what the index is asked for, so with none of them there is nothing to ask - and the intersection of no answers is undefined, so asking anyway threw. it threw here, above the clear, which is why a reader typing a script this search cannot cut saw the page not change at all rather than being told anything");
     html_clear(div_results);
-    let no_words_text = app_search_no_words_text(query);
-    app_shared_text_body(div_results, no_words_text);
+    app_search_no_words_show(div_results, query, languages_chosen);
     return;
   }
   let r = await app_search_chapter_verses_matching(words);
