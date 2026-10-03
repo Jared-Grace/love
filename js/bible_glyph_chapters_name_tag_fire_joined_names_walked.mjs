@@ -25,7 +25,7 @@ export function bible_glyph_chapters_name_tag_fire_joined_names_walked() {
       for (let at = 1; less_than(at, words.length); at = add(at, 1)) {
         let before = words[subtract(at, 1)];
         let word = words[at].replace(/[.,;:?!]+$/, "");
-        if (equal(before, "$name_tag") && equal(word, "$fire")) {
+        if (equal(before, "$i_am") && equal(word, "$fire")) {
           joined = add(joined, 1);
         }
       }
