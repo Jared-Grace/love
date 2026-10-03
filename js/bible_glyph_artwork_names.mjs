@@ -925,10 +925,6 @@ export function bible_glyph_artwork_names() {
       asset: "Face with spiral eyes",
     },
     {
-      glyph: "zero",
-      asset: "Keycap 0",
-    },
-    {
       glyph: "military_medal",
       asset: "Military medal",
     },

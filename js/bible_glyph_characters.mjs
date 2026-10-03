@@ -1241,10 +1241,6 @@ export function bible_glyph_characters() {
       character: "😵‍💫",
     },
     {
-      name: "zero",
-      character: "0️⃣",
-    },
-    {
       name: "military_medal",
       character: "🎖️",
     },
