@@ -1,6 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { uuid_browser } from "./uuid_browser.mjs";
+import { file_name_random_browser } from "./file_name_random_browser.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_receipts_purchase_path } from "./app_receipts_purchase_path.mjs";
@@ -12,9 +11,7 @@ export async function app_receipts_purchase_photo_add(purchase, file) {
   "Add one photo to a purchase - a receipt or anything else about it - keep it on this phone, and put it in line to be sent beside the purchase's details.";
   "Each photo gets a random name of its own so two taken in one moment cannot land on one address.";
   arguments_assert(arguments, 2);
-  let extension = file.name.split(".").pop();
-  let built = uuid_browser();
-  let name = text_combine_multiple([built, ".", extension]);
+  let name = file_name_random_browser(file);
   let photos = property_get(purchase, "photos");
   list_add(photos, {
     name,
