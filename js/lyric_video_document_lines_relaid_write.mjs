@@ -53,6 +53,9 @@ export async function lyric_video_document_lines_relaid_write(
       wrote: false,
       why: "this document's endings are not what the line builder lays out from its own beginnings, so laying it out again would rub out whatever decided them",
       decided,
+      lines: null,
+      nudged: null,
+      path: null,
     };
     return refused;
   }
@@ -64,6 +67,8 @@ export async function lyric_video_document_lines_relaid_write(
     path: found.path,
     lines: lines.length,
     nudged,
+    decided: null,
+    why: null,
   };
   return written;
 }
