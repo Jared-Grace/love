@@ -88,6 +88,7 @@ export async function app_search_languages_matching(languages_chosen, query) {
     words,
     words_missing,
     dictionary,
+    languages_unsearchable,
   };
   return r;
 }
