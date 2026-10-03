@@ -1,3 +1,4 @@
+import { app_shared_color_white } from "./app_shared_color_white.mjs";
 import { app_shared_color_black } from "./app_shared_color_black.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -9,7 +10,7 @@ export function color_named_or_null(written) {
   ("Names rather than the colours themselves, because the digits are what every rule about light and readability is worked out from, and a word carries none.");
   let names = {
     black: app_shared_color_black(),
-    white: "#ffffff",
+    white: app_shared_color_white(),
   };
   let hex = property_get_or_null(names, written);
   return hex;
