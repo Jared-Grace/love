@@ -1288,6 +1288,30 @@ export function bible_glyph_characters() {
       name: "crossed_fingers",
       character: "🤞",
     },
+    {
+      name: "next_track",
+      character: "⏭️",
+    },
+    {
+      name: "watch",
+      character: "⌚",
+    },
+    {
+      name: "repeat",
+      character: "🔁",
+    },
+    {
+      name: "shuffle",
+      character: "🔀",
+    },
+    {
+      name: "dotted_line_face",
+      character: "🫥",
+    },
+    {
+      name: "right_arrow",
+      character: "➡️",
+    },
   ];
   return characters;
 }

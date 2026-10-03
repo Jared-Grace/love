@@ -129,6 +129,7 @@ export function bible_glyph_roots() {
   ("WRITING, TEACHING AND SEEKING TOOK NEW PICTURES ON 2026-10-03, the writing hand, the teacher and the magnifying glass, each one for a whole root. Graphe, the Scripture, wears the writing hand with grapho because the word is the writing, and drawing it so shows a reader that it is written and Scripture are one word. It was not given the scroll, which is already the law. The teacher stands on the verb to teach and on the noun teacher, the same way love stands on its noun and verb. Find was left undrawn: it has no picture that says finding and not seeing or knowing, which are already the eye and the lightbulb.");
   ("GOD IS THE BURNING HEART SINCE 2026-10-03, AND FIRE IS THE FIRE. The human chose it, in these words: God is love, God is consuming fire. Both are said of God in so many words - God is love in the fourth of first John, our God is a consuming fire in the twelfth of Hebrews - so the mark is two sentences of Scripture joined into one picture, the heart that burns. The plain flame was freed by the change and pur, fire, took it. Jealousy gave the burning heart up and took the face with steam from its nose, the human's choice the same day. A word whose English says god or gods in small letters is drawn as the carved stone figure instead, because the translators' capital is the only place the text tells the LORD from an idol.");
   ("TWELVE GREEK NUMBERS AND FOURTEEN HEBREW ONES WERE SEATED IN ONE PASS ON 2026-10-03, each a picture that says the word and was free. Falling is the person and the hand pointing down, the mirror of rising. Keeping is the guard, because tereo and shamar are to watch over before they are to obey. Anger is the angry face. The elder is the old man, which is what presbuteros says. A sign is the placard, a thing held up to be read. Opening is the open lock; the key was refused because it is exousia, authority. Erotao, to ask a question, is the question mark; aiteo, to ask for something, was left undrawn because a request is not a question. Four, five and ten are their keycaps, as one, two, three and seven already were. Parakaleo joins its own noun parakletos at the embrace, and grammateus, the scribe, joins grapho at the writing hand. The demon was refused the horned face because it would sit beside the angry face and read as anger.");
+  ("NOW, AGAIN, OR AND THEREFORE TAKE THE HEBREW'S PICTURES (2026-10-03), and the Hebrew table holds the reasons. Nun and nuni are the wristwatch, palin the repeat button, e the shuffle button and oun the right arrow. Meta and sun, with, are left undrawn: the artwork set has no picture of two people side by side, and the people hugging was refused because with claims company and not affection - the disciples are with Jesus, and so are the soldiers who arrest him. Houtos, this, and the relative hos are left undrawn too: the pointing hands are all spent, on that, he, down and on.");
   ("HOPE IS THE CROSSED FINGERS, and want is left undrawn, both chosen by the human on 2026-10-03. The crossed fingers were first proposed for thelo, to want, and refused, because a reader reads them as hope, and elpis, hope, is its own word with no picture - so they went to elpis and elpizo. Their worst reading is luck, which the New Testament never means by hope; that is the price. Thelo, to want or to will, stays undrawn because nothing fits: the giving hands were offered by the human and refused because they are didomi, so I want mercy would read I give mercy; the giving hands joined to the question mark read as ask, which the question mark already is; the drooling face reads as hunger; the open palm, the raised hand and the thought bubble belong to other words.");
   ("HUNDRED AND THOUSAND TAKE THE HEBREW'S PICTURES (2026-10-03), chosen by the human, and the Hebrew table holds the reasons. Chilias, a band of a thousand, sits with chilioi, a thousand, because it is that number made a noun.");
   ("HISTEMI, TO STAND, IS THE PERSON JOINED TO THE MAP PIN (2026-10-03), chosen by the human, and the Hebrew table holds the reasons. Anistemi, to stand up, keeps its own person and up arrow, because it is a different word built on this one; histemi's other sense, to set a thing in place, reads as the pin.");
@@ -144,6 +145,50 @@ export function bible_glyph_roots() {
   ("RISING, COMMANDING AND ANSWERING ARE BUILT FROM MARKS ALREADY BOUGHT, AND CALLING IS THE WAVING HAND, ALL 2026-10-03. Egeiro is a person and the hand pointing up - the one who was down is now up - which reads beside the walking figure pointing up for going up, so a reader who knows either learns the other; the plain arrow up was refused because the pointing hand already says up. Entellomai is the speech and the scroll, to say a law, since entole the commandment is the scroll alone. Anistemi, to rise, and keleuo, to order, were left undrawn, because the collision walk holds each picture to one root and those two would have worn egeiro's and entellomai's. Apokrinomai is the speech and the turning arrow, a word sent back. Kaleo is the hand waved to bring someone over; the voice was refused because phone is a sound and not a summons, the megaphone because it is the prophet, and a telephone because it is not in the world of the text. Stand, head, body, great, many and find were looked at the same hour and left undrawn: the standing figure is already the person, and the others had no picture that says the word and is still free.");
   ("IDOU IS THE EXCLAMATION MARK AND THE HIGH PRIEST IS THE PRIEST, BOTH SEATED 2026-10-03 FOR FREQUENCY. Idou and ide are a word that says look and means nothing else - pay attention to what comes next - and the mark that says the same in pictures is the exclamation. The eyes were refused because they already draw blepo, seeing, and behold is not a report that anyone saw; a pointing hand was refused because it already draws hoti, that. Archiereus is chief and priest in one word, and it takes the priest alone, because the Hebrew says the same office in two words, kohen gadol, and only the kohen is drawn there; priest beside a crown was refused because the crown is lord, and a high priest is not a lord.");
   let roots = [
+    {
+      root: "nun",
+      gloss: "now",
+      words: [
+        {
+          strong: "3568",
+          glyph: "watch",
+        },
+        {
+          strong: "3570",
+          glyph: "watch",
+        },
+      ],
+    },
+    {
+      root: "palin",
+      gloss: "again; back",
+      words: [
+        {
+          strong: "3825",
+          glyph: "repeat",
+        },
+      ],
+    },
+    {
+      root: "e",
+      gloss: "or; than",
+      words: [
+        {
+          strong: "2228",
+          glyph: "shuffle",
+        },
+      ],
+    },
+    {
+      root: "oun",
+      gloss: "therefore; so then",
+      words: [
+        {
+          strong: "3767",
+          glyph: "right_arrow",
+        },
+      ],
+    },
     {
       root: "elpis",
       gloss: "hope; to hope",

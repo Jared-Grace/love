@@ -972,6 +972,30 @@ export function bible_glyph_artwork_names() {
       glyph: "crossed_fingers",
       asset: "Crossed fingers",
     },
+    {
+      glyph: "next_track",
+      asset: "Next track button",
+    },
+    {
+      glyph: "watch",
+      asset: "Watch",
+    },
+    {
+      glyph: "repeat",
+      asset: "Repeat button",
+    },
+    {
+      glyph: "shuffle",
+      asset: "Shuffle tracks button",
+    },
+    {
+      glyph: "dotted_line_face",
+      asset: "Dotted line face",
+    },
+    {
+      glyph: "right_arrow",
+      asset: "Right arrow",
+    },
   ];
   return names;
 }
