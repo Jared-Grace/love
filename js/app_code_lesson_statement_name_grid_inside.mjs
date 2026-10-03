@@ -36,7 +36,7 @@ export function app_code_lesson_statement_name_grid_inside() {
   ("The pictures and colours are Grid steps' own, asked for by the human 2026-10-02: the same grid with its row numbers red and its column numbers purple, and the count of rows green and the count of columns orange.");
   ("The grid is blue, its word and its squares, and one more row and one more column are drawn around it without blue, asked by the human 2026-10-02, so a square outside the grid is a square the learner can see that is not blue. The face has no square of colour behind it, because teal is the start of a path in Grid steps and King steps, and there is no path here. Not picked: the earlier picture of the face on a lone dashed square past the grid's right edge, which showed a square that is not there rather than one that is not blue.");
   ("The grid is 4 rows by 3 columns and the square asked about is row 2, column 1, so no number is both a row and a column or a row and a count, because a pointer colours a number by its text. Not picked: the earlier 3 by 4 grid with row 2, column 3, whose 3 was both a column and the count of rows; and the 3 by 5 grid with row 2, column 4, whose picture, 6 columns with the one more drawn around it, was too wide on a phone with a large font, asked by the human 2026-10-02 to have at most 4 columns.");
-  ("The writing is a first draft, not yet the human's, 2026-10-02.");
+  ("The writing was a first draft 2026-10-02, then read and worded by the human through its pictures, and called good on a phone 2026-10-03.");
   let names = ["r", "c", "rows", "cols"];
   let r = "r";
   let c = "c";
