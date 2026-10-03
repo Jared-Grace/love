@@ -1,3 +1,4 @@
+import { app_search_languages_unsearchable_show } from "./app_search_languages_unsearchable_show.mjs";
 import { app_search_languages_matching } from "./app_search_languages_matching.mjs";
 import { app_search_results_missing } from "./app_search_results_missing.mjs";
 import { app_search_results_books } from "./app_search_results_books.mjs";
@@ -21,11 +22,20 @@ export async function app_search_results(context, div_results) {
   let books = await app_search_results_books();
   let query = property_get(context, "query");
   let matching = await app_search_languages_matching(languages_chosen, query);
+  ("every word is fetched by now, so the page is cleared once here and everything below only adds to it - a second clear further down would wipe the note naming the languages that were not searched");
+  html_clear(div_results);
+  let unsearchable = app_search_languages_unsearchable_show(
+    div_results,
+    matching,
+  );
   let words = property_get(matching, "words");
   let no_words = list_empty_is(words);
   if (no_words) {
     ("the words are what the index is asked for, so with none of them there is nothing to ask - and the intersection of no answers is undefined, so asking anyway threw. it threw here, above the clear, which is why a reader typing a script this search cannot cut saw the page not change at all rather than being told anything");
-    html_clear(div_results);
+    if (unsearchable) {
+      ("the note above already says why nothing was looked for; telling the reader no words were found as well would point them at their typing instead");
+      return;
+    }
     app_search_no_words_show(div_results, query, languages_chosen);
     return;
   }
