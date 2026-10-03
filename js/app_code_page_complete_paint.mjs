@@ -1,3 +1,6 @@
+import { fn_name } from "./fn_name.mjs";
+import { app_shared_color_page_background } from "./app_shared_color_page_background.mjs";
+import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_document_root } from "./html_document_root.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -16,6 +19,13 @@ export function app_code_page_complete_paint(context) {
   let color = app_shared_color_page_complete();
   html_style_background_color_set_or_remove(green, body, color);
   ("the outermost layer of the page is painted too, because the first thing on a screen has a margin above it that pushes the body down, and the gap it leaves shows the outermost layer's own pale colour - a white bar across the top of a finished lesson, seen by the human 2026-10-03. Taking away that margin was the other choice, and it would move every screen's top bar");
+  ("a page not finished is handed back the off-white it was written with (",
+    fn_name("html_code_page_background"),
+    ") rather than having its colour taken away, because taken away it goes see-through");
   let page = html_document_root();
-  html_style_background_color_set_or_remove(green, page, color);
+  let page_color = app_shared_color_page_background();
+  if (green) {
+    page_color = color;
+  }
+  html_style_background_color_set(page, page_color);
 }
