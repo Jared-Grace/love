@@ -844,6 +844,18 @@ export function bible_glyph_artwork_names() {
       glyph: "military_helmet",
       asset: "Military helmet",
     },
+    {
+      glyph: "palm_down",
+      asset: "Palm down hand",
+    },
+    {
+      glyph: "bridge",
+      asset: "Bridge at night",
+    },
+    {
+      glyph: "first_place",
+      asset: "1st place medal",
+    },
   ];
   return names;
 }

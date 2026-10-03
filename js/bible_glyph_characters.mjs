@@ -1160,6 +1160,18 @@ export function bible_glyph_characters() {
       name: "military_helmet",
       character: "🪖",
     },
+    {
+      name: "palm_down",
+      character: "🫳",
+    },
+    {
+      name: "bridge",
+      character: "🌉",
+    },
+    {
+      name: "first_place",
+      character: "🥇",
+    },
   ];
   return characters;
 }

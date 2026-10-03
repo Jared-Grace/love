@@ -1,3 +1,7 @@
+import { song_image_kept_large_url } from "./song_image_kept_large_url.mjs";
+import { html_a } from "./html_a.mjs";
+import { html_width_full } from "./html_width_full.mjs";
+import { html_display_block } from "./html_display_block.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_image_kept_url } from "./song_image_kept_url.mjs";
 import { equal } from "./equal.mjs";
@@ -32,6 +36,7 @@ export function app_music_song_emblem_show(
   "$plain n";
   "$plain caption";
   "The picture drawn for one line of this hymn, with the passages that picture rests on folded beside it.";
+  "TAPPING THE PICTURE OPENS A LARGE COPY OF IT IN A TAB OF ITS OWN, because the human asked to see them full size. The page keeps fetching only the small copy, so a reader scrolling the hymn pays nothing for the large one; a reader who taps pays for that one picture alone, and closing the tab leaves them where they were in the song.";
   "THE PICTURE ANSWERS TO SCRIPTURE IN ITS OWN RIGHT, which is why it carries its own passages rather than borrowing the ones under the words. A reader who wonders why a broken fetter is standing beside this line can be told, in the words of the passage it was drawn from, without leaving the page.";
   "WHEN THE PICTURE IS FETCHED IS ASKED FOR RATHER THAN SETTLED HERE, BUT HOW LARGE IT IS DRAWN IS SETTLED HERE, because the two pages that show these drawings want different sizes and a single answer would be wrong on one of them. The page that lays them out for checking wants each one as wide as its column, since there the drawing is the thing being looked at. Here the drawing sits inside a hymn, and the hymn is the thing being read, so it is held to a size that leaves the page to the words.";
   "A BLACK EDGE IS DRAWN ROUND IT. These are pale shapes on a pale page, and at full width the edge of the column answered the question of where the drawing stopped; held small, nothing does, and a picture whose boundary a reader cannot find reads as a smudge on the page rather than as a thing that was drawn.";
@@ -59,14 +64,21 @@ export function app_music_song_emblem_show(
   html_flex_row_gap(row, "12px");
   html_align_items_start(row);
   html_style_margin_top(row, "12px");
-  let picture = html_img(row, url);
+  let large_url = song_image_kept_large_url(n);
+  let link = html_a(row);
+  html_attribute_set(link, "href", large_url);
+  html_attribute_set(link, "target", "_blank");
+  html_attribute_set(link, "rel", "noopener noreferrer");
+  html_width_full(link);
+  html_display_block(link);
+  let width = app_music_song_emblem_width();
+  html_style_max_width(link, width);
+  html_flex_shrink_0(link);
+  let picture = html_img(link, url);
   html_attribute_set(picture, "alt", couplet.symbol);
   html_img_lazy_full_block(picture);
-  let width = app_music_song_emblem_width();
-  html_style_max_width(picture, width);
   let border_width = app_music_song_emblem_border_width();
   html_border(picture, border_width, "black");
-  html_flex_shrink_0(picture);
   if (not(unreferenced)) {
     let beside = html_div(row);
     html_flex_grow_1(beside);

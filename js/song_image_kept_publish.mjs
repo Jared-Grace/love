@@ -1,3 +1,8 @@
+import { path_dirname } from "./path_dirname.mjs";
+import { folder_exists_ensure } from "./folder_exists_ensure.mjs";
+import { song_image_glass_width } from "./song_image_glass_width.mjs";
+import { song_image_kept_large_asset_path } from "./song_image_kept_large_asset_path.mjs";
+import { song_image_glass_width_large } from "./song_image_glass_width_large.mjs";
 import { song_image_couplets_hash_name } from "./song_image_couplets_hash_name.mjs";
 import { lyric_video_song_document_read } from "./lyric_video_song_document_read.mjs";
 import { song_image_glass_light_filters } from "./song_image_glass_light_filters.mjs";
@@ -42,13 +47,27 @@ export async function song_image_kept_publish() {
     let glass = song_image_glass_path(key, "chosen_2x");
     let asset_path = song_image_kept_asset_path(n);
     let destination = web_assets_folder_join(asset_path);
-    let filters = song_image_glass_light_filters(document, key);
-    await ffmpeg_image_filter_write(glass, filters, destination);
     let property_name = String(key);
     let source = property_get(sources, property_name);
     let original = song_image_glass_path(key, source);
+    let width = song_image_glass_width();
+    let filters = song_image_glass_light_filters(document, key, width);
+    await ffmpeg_image_filter_write(glass, filters, destination);
     await image_content_credentials_copy(original, destination);
     list_add(published, asset_path);
+    let large_path = song_image_kept_large_asset_path(n);
+    let large_destination = web_assets_folder_join(large_path);
+    let large_folder = await path_dirname(large_destination);
+    await folder_exists_ensure(large_folder);
+    let large_width = song_image_glass_width_large();
+    let large_filters = song_image_glass_light_filters(
+      document,
+      key,
+      large_width,
+    );
+    await ffmpeg_image_filter_write(glass, large_filters, large_destination);
+    await image_content_credentials_copy(original, large_destination);
+    list_add(published, large_path);
   }
   let result = {
     published,
