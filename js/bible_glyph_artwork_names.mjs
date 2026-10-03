@@ -856,6 +856,10 @@ export function bible_glyph_artwork_names() {
       glyph: "first_place",
       asset: "1st place medal",
     },
+    {
+      glyph: "loudspeaker",
+      asset: "Speaker high volume",
+    },
   ];
   return names;
 }

@@ -528,7 +528,7 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "1696",
-          glyph: "mouth",
+          glyph: "voice",
         },
       ],
     },
@@ -538,7 +538,7 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "6963",
-          glyph: "voice",
+          glyph: "loudspeaker",
         },
       ],
     },

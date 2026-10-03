@@ -1172,6 +1172,10 @@ export function bible_glyph_characters() {
       name: "first_place",
       character: "🥇",
     },
+    {
+      name: "loudspeaker",
+      character: "🔊",
+    },
   ];
   return characters;
 }

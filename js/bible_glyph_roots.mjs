@@ -129,10 +129,21 @@ export function bible_glyph_roots() {
   ("WRITING, TEACHING AND SEEKING TOOK NEW PICTURES ON 2026-10-03, the writing hand, the teacher and the magnifying glass, each one for a whole root. Graphe, the Scripture, wears the writing hand with grapho because the word is the writing, and drawing it so shows a reader that it is written and Scripture are one word. It was not given the scroll, which is already the law. The teacher stands on the verb to teach and on the noun teacher, the same way love stands on its noun and verb. Find was left undrawn: it has no picture that says finding and not seeing or knowing, which are already the eye and the lightbulb.");
   ("GOD IS THE BURNING HEART SINCE 2026-10-03, AND FIRE IS THE FIRE. The human chose it, in these words: God is love, God is consuming fire. Both are said of God in so many words - God is love in the fourth of first John, our God is a consuming fire in the twelfth of Hebrews - so the mark is two sentences of Scripture joined into one picture, the heart that burns. The plain flame was freed by the change and pur, fire, took it. Jealousy gave the burning heart up and took the face with steam from its nose, the human's choice the same day. A word whose English says god or gods in small letters is drawn as the carved stone figure instead, because the translators' capital is the only place the text tells the LORD from an idol.");
   ("TWELVE GREEK NUMBERS AND FOURTEEN HEBREW ONES WERE SEATED IN ONE PASS ON 2026-10-03, each a picture that says the word and was free. Falling is the person and the hand pointing down, the mirror of rising. Keeping is the guard, because tereo and shamar are to watch over before they are to obey. Anger is the angry face. The elder is the old man, which is what presbuteros says. A sign is the placard, a thing held up to be read. Opening is the open lock; the key was refused because it is exousia, authority. Erotao, to ask a question, is the question mark; aiteo, to ask for something, was left undrawn because a request is not a question. Four, five and ten are their keycaps, as one, two, three and seven already were. Parakaleo joins its own noun parakletos at the embrace, and grammateus, the scribe, joins grapho at the writing hand. The demon was refused the horned face because it would sit beside the angry face and read as anger.");
+  ("THE MOUTH WAS GIVEN BACK TO THE MOUTH ON 2026-10-03, as the body parts paragraph above asked. The human proposed the speaking head or the speech bubble for speak. The speech bubble was refused because lego and amar, to say, already hold it, and to say and to speak are two words in both languages, so they keep two pictures. So laleo and dabar the verb took the speaking head, voice moved from it to the loudspeaker, which draws a sound and not a person, and stoma took the mouth. Hebrew peh stays undrawn, because its own refusal on the undrawn list never rested only on the picture being taken; peh is as often a command or the edge of a sword as it is a mouth. The eye and the ear are still held by their verbs.");
   ("FINDING, PUTTING AND FIRST WERE SEATED LATER ON 2026-10-03. To find is the magnifying glass that already draws seeking, joined to the exclamation mark that draws behold: the search, and then the thing seen. The check mark was the other choice and was refused because it already says truth and amen, so a found thing would read as a true one. To put or lay down is the hand turned palm down, which is the motion of setting a thing in its place. First is the gold medal. Three words just as common were left undrawn on purpose. Standing, because the person already draws a human being, and every way of adding to it tried, the foot or the anchor, read as something else. Great and many, because a picture of size draws one big thing, an elephant or a mountain, and the reader would read that thing; the crowd was free in Hebrew for many and was refused because rab is as often great or chief as it is many.");
   ("RISING, COMMANDING AND ANSWERING ARE BUILT FROM MARKS ALREADY BOUGHT, AND CALLING IS THE WAVING HAND, ALL 2026-10-03. Egeiro is a person and the hand pointing up - the one who was down is now up - which reads beside the walking figure pointing up for going up, so a reader who knows either learns the other; the plain arrow up was refused because the pointing hand already says up. Entellomai is the speech and the scroll, to say a law, since entole the commandment is the scroll alone. Anistemi, to rise, and keleuo, to order, were left undrawn, because the collision walk holds each picture to one root and those two would have worn egeiro's and entellomai's. Apokrinomai is the speech and the turning arrow, a word sent back. Kaleo is the hand waved to bring someone over; the voice was refused because phone is a sound and not a summons, the megaphone because it is the prophet, and a telephone because it is not in the world of the text. Stand, head, body, great, many and find were looked at the same hour and left undrawn: the standing figure is already the person, and the others had no picture that says the word and is still free.");
   ("IDOU IS THE EXCLAMATION MARK AND THE HIGH PRIEST IS THE PRIEST, BOTH SEATED 2026-10-03 FOR FREQUENCY. Idou and ide are a word that says look and means nothing else - pay attention to what comes next - and the mark that says the same in pictures is the exclamation. The eyes were refused because they already draw blepo, seeing, and behold is not a report that anyone saw; a pointing hand was refused because it already draws hoti, that. Archiereus is chief and priest in one word, and it takes the priest alone, because the Hebrew says the same office in two words, kohen gadol, and only the kohen is drawn there; priest beside a crown was refused because the crown is lord, and a high priest is not a lord.");
   let roots = [
+    {
+      root: "stoma",
+      gloss: "mouth",
+      words: [
+        {
+          strong: "4750",
+          glyph: "mouth",
+        },
+      ],
+    },
     {
       root: "heurisko",
       gloss: "to find",
@@ -619,7 +630,7 @@ export function bible_glyph_roots() {
       words: [
         {
           strong: "2980",
-          glyph: "mouth",
+          glyph: "voice",
         },
       ],
     },
@@ -897,7 +908,7 @@ export function bible_glyph_roots() {
       words: [
         {
           strong: "5456",
-          glyph: "voice",
+          glyph: "loudspeaker",
         },
       ],
     },
