@@ -1,7 +1,6 @@
 import { app_code_code_dark_lines_part_pointed } from "./app_code_code_dark_lines_part_pointed.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
-import { app_code_code_dark_lines_pointed } from "./app_code_code_dark_lines_pointed.mjs";
 import { app_code_output_pointed } from "./app_code_output_pointed.mjs";
 import { app_code_code_lines_writes_out_on } from "./app_code_code_lines_writes_out_on.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
@@ -28,7 +27,7 @@ export function app_code_lesson_statement_name_even() {
   ("The remainder by 2 lesson already says even numbers leave 0 and odd numbers leave 1, so that lesson is the reminder, and the new idea is only writing that sentence as a check that gives true or false.");
   ("One line: it is 23 characters, and the % is worked before the === as the lessons on arithmetic beside a comparison taught. Not picked: n % 2 === 1 for odd, which fails for a negative odd number in JavaScript, where -3 % 2 is -1; checking for 0 is right for every whole number, so even is the one taught.");
   ("The answers are only true or false, so a question offers two buttons, two even numbers and two odd numbers each screen. 0 is among the even numbers, because it is the one a learner is least sure of.");
-  ("Every remainder is blue, its value and the word, asked by the human 2026-10-03, so the 0 or 1 that dividing leaves can be followed from the working into the check. The 0 the remainder is checked against stays plain, because it is the number asked for, not a remainder. The reminder is coloured too, asked by the human 2026-10-03: its sentence by handing the shared reminder writer the same coloured word and chips, and its program by pointers on left and the 1 it writes out.");
+  ("Every remainder is blue, its value, the name that holds it, the code that works it out, and the word, the last three asked by the human 2026-10-03 in answer to whether n % 2 should be coloured in both programs, asked by the human 2026-10-03, so the 0 or 1 that dividing leaves can be followed from the working into the check. The 0 the remainder is checked against stays plain, because it is the number asked for, not a remainder. The reminder is coloured too, asked by the human 2026-10-03: its sentence by handing the shared reminder writer the same coloured word and chips, and its program by pointers on left and the 1 it writes out.");
   ("The writing is a first draft, not yet the human's, 2026-10-02.");
   let names = ["n"];
   let n = "n";
@@ -54,7 +53,11 @@ export function app_code_lesson_statement_name_even() {
     let code_before = list_join_newline(remember_program);
     let output_before = eval_console_log_lines(code_before);
     let pointers = [[[left, "1"], remainder_color]];
-    let paint = app_code_code_dark_lines_pointed(pointers);
+    let paint = app_code_code_dark_lines_part_pointed(
+      pointers,
+      remainder,
+      remainder_color,
+    );
     let on_output = app_code_output_pointed(pointers);
     app_code_code_lines_writes_out_on(
       box,
@@ -79,10 +82,16 @@ export function app_code_lesson_statement_name_even() {
   let spaced_percent = js_code_binary_spaced_nb("", percent, "");
   let spaced_same = js_code_binary_spaced_nb("", same, "");
   function remainder_worked(number, left_over) {
-    "number % 2 === left_over as one code chip, the remainder coloured as every remainder on this screen is";
+    "number % 2 === left_over as one code chip, both sides coloured, because both are the remainder: the working of it and its value";
     let chip = app_code_explain_code_colored_inline(
       [number, spaced_percent, "2", spaced_same, left_over],
-      [plain, plain, plain, plain, remainder_color],
+      [
+        remainder_color,
+        remainder_color,
+        remainder_color,
+        plain,
+        remainder_color,
+      ],
     );
     return chip;
   }
@@ -140,6 +149,7 @@ export function app_code_lesson_statement_name_even() {
   function example_draw(box, lines, output) {
     "the last example's program with its remainder, n % 2, in the remainder's colour, as in the writing above it; what it writes out is true or false, not a remainder, so it stays plain";
     let paint = app_code_code_dark_lines_part_pointed(
+      [],
       remainder,
       remainder_color,
     );
