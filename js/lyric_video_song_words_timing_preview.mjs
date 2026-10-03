@@ -1,5 +1,5 @@
-import { lyric_video_song_buttons } from "./lyric_video_song_buttons.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_div } from "./html_div.mjs";
@@ -13,7 +13,6 @@ import { html_media_time_set } from "./html_media_time_set.mjs";
 import { html_media_play } from "./html_media_play.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { html_text_set } from "./html_text_set.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { api_read } from "./api_read.mjs";
 import { html_button_list } from "./html_button_list.mjs";
 import { html_button } from "./html_button.mjs";
@@ -22,10 +21,13 @@ import { lyric_video_word_done } from "./lyric_video_word_done.mjs";
 import { not } from "./not.mjs";
 import { html_request_animation_frame } from "./html_request_animation_frame.mjs";
 import { html_media_time } from "./html_media_time.mjs";
-import { html_clear } from "./html_clear.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { text_loading_said } from "./text_loading_said.mjs";
+import { html_parent_waiting_run } from "./html_parent_waiting_run.mjs";
 import { null_is } from "./null_is.mjs";
 import { lyric_video_song_audio_url } from "./lyric_video_song_audio_url.mjs";
 import { html_src_set } from "./html_src_set.mjs";
+import { lyric_video_song_buttons } from "./lyric_video_song_buttons.mjs";
 export async function lyric_video_song_words_timing_preview() {
   arguments_assert(arguments, 0);
   ("The screen for correcting when each word of a song turns red, on the sandbox app at hash lyric_video_song_words_timing: every word is a button, the song plays with the word being sung lit, and a picked word is moved earlier or later by a quarter, an eighth or a sixteenth note.");
@@ -196,10 +198,17 @@ export async function lyric_video_song_words_timing_preview() {
     }
   }
   async function song_show(name_song) {
-    html_clear(box);
-    let song = await api_read(fn_name("lyric_video_song_document_read"), [
-      name_song,
-    ]);
+    "THE WAIT FOR THE SONG IS SAID IN THE PLACE THE WORDS GO. Emptying that place and then asking the server left it blank for the whole of the fetch, and a part of the screen that goes empty and stays empty is what a button that did nothing also looks like - so the one move left to a person is to press it again, which is the wrong move against a press that was merely slow. The line names the song, so pressing one song's button and pressing another's do not read the same.";
+    let what = text_combine("the words of ", name_song);
+    let waiting_said = text_loading_said(what);
+    async function song_ask() {
+      let fetched_song = await api_read(
+        fn_name("lyric_video_song_document_read"),
+        [name_song],
+      );
+      return fetched_song;
+    }
+    let song = await html_parent_waiting_run(box, waiting_said, song_ask);
     if (null_is(song)) {
       html_div_text(box, "this song has no document yet");
       return;

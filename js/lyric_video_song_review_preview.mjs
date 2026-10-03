@@ -3,9 +3,11 @@ import { html_body_div } from "./html_body_div.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_shared_text_quiet } from "./app_shared_text_quiet.mjs";
-import { html_clear } from "./html_clear.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { text_loading_said } from "./text_loading_said.mjs";
 import { api_read } from "./api_read.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { html_parent_waiting_run } from "./html_parent_waiting_run.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { lyric_video_song_review_card } from "./lyric_video_song_review_card.mjs";
@@ -27,10 +29,21 @@ export async function lyric_video_song_review_preview() {
   let told = app_shared_text_quiet(root, "");
   let cards = html_div(root);
   async function song_show(name) {
-    html_clear(cards);
-    let document = await api_read(fn_name("lyric_video_song_document_read"), [
-      name,
-    ]);
+    "THE WAIT FOR THE DOCUMENT IS SAID IN THE PLACE THE PICTURES GO. Emptying that place and then asking the server left it blank for the whole of the fetch, and a part of the screen that goes empty and stays empty is what a button that did nothing also looks like - so the one move left to a person is to press it again, which is the wrong move against a press that was merely slow. The line names the song, so pressing one song's button and pressing another's do not read the same.";
+    let what = text_combine("the pictures of ", name);
+    let waiting_said = text_loading_said(what);
+    async function document_ask() {
+      let fetched_document = await api_read(
+        fn_name("lyric_video_song_document_read"),
+        [name],
+      );
+      return fetched_document;
+    }
+    let document = await html_parent_waiting_run(
+      cards,
+      waiting_said,
+      document_ask,
+    );
     let none = null_is(document);
     if (none) {
       app_shared_text_quiet(cards, "this song has no document yet");
