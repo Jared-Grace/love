@@ -960,6 +960,10 @@ export function bible_glyph_artwork_names() {
       glyph: "top",
       asset: "Top arrow",
     },
+    {
+      glyph: "pin",
+      asset: "Round pushpin",
+    },
   ];
   return names;
 }
