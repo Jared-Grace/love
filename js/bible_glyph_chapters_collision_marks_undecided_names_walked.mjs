@@ -1,5 +1,5 @@
+import { bible_glyph_chapters_collision_marks_ruled } from "./bible_glyph_chapters_collision_marks_ruled.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bible_glyph_chapters_collision_marks_walked } from "./bible_glyph_chapters_collision_marks_walked.mjs";
 import { bible_glyph_collision_mark_name } from "./bible_glyph_collision_mark_name.mjs";
 import { list_add } from "./list_add.mjs";
 export async function bible_glyph_chapters_collision_marks_undecided_names_walked() {
@@ -8,7 +8,7 @@ export async function bible_glyph_chapters_collision_marks_undecided_names_walke
   "The count of how much was reached is carried through rather than worked out here. Nothing on this side of the walk knows how many marks were compared, and the two numbers reachable from here - the length of this list, the size of the record it is measured against - both stay exactly the same on the run where the walk went blind, which is the run they would be wanted for.";
   "The gate and the writer are both handed exactly this list, and neither derives it, because a ratchet whose two halves disagree about what they are counting refuses the wrong things.";
   arguments_assert(arguments, 0);
-  let walk = await bible_glyph_chapters_collision_marks_walked();
+  let walk = await bible_glyph_chapters_collision_marks_ruled();
   let names = [];
   for (let entry of walk.ambiguous) {
     let name = bible_glyph_collision_mark_name(entry);
