@@ -1,11 +1,10 @@
+import { app_search_results_missing } from "./app_search_results_missing.mjs";
 import { app_search_results_books } from "./app_search_results_books.mjs";
 import { property_get } from "./property_get.mjs";
 import { bible_search_words } from "./bible_search_words.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_search_no_words_show } from "./app_search_no_words_show.mjs";
-import { app_search_chapter_verses_matching } from "./app_search_chapter_verses_matching.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_search_words_missing_text } from "./app_search_words_missing_text.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { app_search_results_with_verses_and_books } from "./app_search_results_with_verses_and_books.mjs";
@@ -29,11 +28,10 @@ export async function app_search_results(context, div_results) {
     app_search_no_words_show(div_results, query, languages_chosen);
     return;
   }
-  let r = await app_search_chapter_verses_matching(words);
-  let dictionary = property_get(r, "dictionary");
+  let r = await app_search_results_missing(words, div_results);
+  let missing = property_get(r, "missing");
   let words_missing = property_get(r, "words_missing");
-  html_clear(div_results);
-  let missing = list_empty_not_is(words_missing);
+  let dictionary = property_get(r, "dictionary");
   if (missing) {
     let missing_text = app_search_words_missing_text(words_missing);
     app_shared_text_body(div_results, missing_text);
