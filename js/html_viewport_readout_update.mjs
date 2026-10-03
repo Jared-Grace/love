@@ -1,11 +1,10 @@
+import { html_viewport_readout_update_fetch } from "./html_viewport_readout_update_fetch.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_viewport_readout_update_box } from "./html_viewport_readout_update_box.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
-import { json_to } from "./json_to.mjs";
-import { server_url_api } from "./server_url_api.mjs";
 export function html_viewport_readout_update(state, round_to, probes, box) {
   arguments_assert(arguments, 4);
   let viewport = window.visualViewport;
@@ -64,23 +63,5 @@ export function html_viewport_readout_update(state, round_to, probes, box) {
   }
   state.sent = text;
   ("the time is added only to what is sent, never to what is compared, because it differs every tick - compared, it sent a reading four times a second and the page never went quiet");
-  let v = lines.concat([
-    "page time " + round_to(n),
-    "agent " + navigator.userAgent,
-  ]);
-  let body = json_to({
-    f_name: fn_name("viewport_readout_record"),
-    args: [v],
-  });
-  function lambda() {
-    return null;
-  }
-  let a = server_url_api();
-  fetch(a, {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-    },
-    body,
-  }).catch(lambda);
+  html_viewport_readout_update_fetch(lines, round_to, n);
 }
