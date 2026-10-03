@@ -29,6 +29,10 @@ export async function lyric_video_document_line_repeat_add(
     let nothing = {
       wrote: false,
       why: "no timing document answers to that name",
+      lines: null,
+      at: null,
+      text: null,
+      written: null,
     };
     return nothing;
   }
@@ -40,6 +44,9 @@ export async function lyric_video_document_line_repeat_add(
       wrote: false,
       why: "that document has no line at that number",
       lines: lines.length,
+      at: null,
+      text: null,
+      written: null,
     };
     return missing;
   }
@@ -76,6 +83,7 @@ export async function lyric_video_document_line_repeat_add(
     written,
     text,
     at: place,
+    lines: null,
   };
   return r;
 }
