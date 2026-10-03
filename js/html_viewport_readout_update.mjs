@@ -1,7 +1,7 @@
+import { property_get } from "./property_get.mjs";
+import { html_viewport_readout_update_box } from "./html_viewport_readout_update_box.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { subtract } from "./subtract.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
 import { json_to } from "./json_to.mjs";
@@ -46,55 +46,16 @@ export function html_viewport_readout_update(state, round_to, probes, box) {
     }
   }
   ("the five things reaching furthest right, when any reaches past the screen, are listed too, because opening the last lesson group on a phone made the page 429 wide on a 414 screen, 2026-09-28 - the browser then widened its frame to fit, the frame grew taller than the screen, and the bar held to the frame top slid above what is seen. Which thing sticks out is only known on the phone, where the text is drawn larger");
-  let screen_width = window.screen.width;
-  let reaching = [];
-  for (let each_one of document.body.querySelectorAll("*")) {
-    let right = each_one.getBoundingClientRect().right;
-    if (greater_than(right, screen_width)) {
-      reaching.push({
-        right,
-        each_one,
-      });
-    }
-  }
-  function lambda2(a_inner, b_inner) {
-    let difference = subtract(b_inner.right, a_inner.right);
-    return difference;
-  }
-  reaching.sort(lambda2);
-  bars.push("screen width " + screen_width);
-  for (let item of reaching.slice(0, 5)) {
-    bars.push(
-      "  wide " +
-        item.each_one.tagName +
-        " right " +
-        round_to(item.right) +
-        " width " +
-        round_to(item.each_one.getBoundingClientRect().width) +
-        " " +
-        item.each_one.textContent.slice(0, 40),
-    );
-  }
-  let v = bars.join("\n");
-  let n = performance.now();
-  let lines = [
-    "innerHeight " + window.innerHeight,
-    "clientHeight " + document.documentElement.clientHeight,
-    "dvh " + round_to(probes.dvh.getBoundingClientRect().height),
-    "svh " + round_to(probes.svh.getBoundingClientRect().height),
-    "lvh " + round_to(probes.lvh.getBoundingClientRect().height),
-    "vv height " + (viewport ? round_to(viewport.height) : "none"),
-    "vv offsetTop " + (viewport ? round_to(viewport.offsetTop) : "none"),
-    "vv scale " + (viewport ? round_to(viewport.scale) : "none"),
-    "scrollY " + round_to(window.scrollY),
-    "page height " + round_to(document.documentElement.scrollHeight),
-    v,
-    "dpr " + round_to(window.devicePixelRatio),
-    "innerWidth " + window.innerWidth,
-  ];
-  let text = lines.join("\n");
-  ("the numbers are no longer written on the screen: the box covered the last group on the lesson list and the human could not press it, 2026-09-28, and the readings reach the developer by themselves anyway (below). A small dot in the corner is left to say the readings are being sent");
-  box.textContent = "•";
+  let r = html_viewport_readout_update_box(
+    bars,
+    round_to,
+    probes,
+    viewport,
+    box,
+  );
+  let text = property_get(r, "text");
+  let lines = property_get(r, "lines");
+  let n = property_get(r, "n");
   ("each reading that differs from the last is also sent to the dev server, which files it (",
     fn_name("viewport_readout_record"),
     "), so the numbers reach the developer without a picture of them. A failed send is dropped: this page only exists to be read, and it keeps showing the numbers either way");
@@ -103,13 +64,13 @@ export function html_viewport_readout_update(state, round_to, probes, box) {
   }
   state.sent = text;
   ("the time is added only to what is sent, never to what is compared, because it differs every tick - compared, it sent a reading four times a second and the page never went quiet");
-  let v2 = lines.concat([
+  let v = lines.concat([
     "page time " + round_to(n),
     "agent " + navigator.userAgent,
   ]);
   let body = json_to({
     f_name: fn_name("viewport_readout_record"),
-    args: [v2],
+    args: [v],
   });
   function lambda() {
     return null;
