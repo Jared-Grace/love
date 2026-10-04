@@ -447,6 +447,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_clamp,
     app_code_lesson_statement_name_meetings_overlap,
     app_code_lesson_statement_name_overlap_hours,
+    app_code_lesson_statement_name_meetings_join,
   ];
   return fns;
 }

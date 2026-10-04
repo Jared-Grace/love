@@ -1,3 +1,4 @@
+import { html_viewport_readout_when_asked } from "./html_viewport_readout_when_asked.mjs";
 import { html_scroll_body_mark } from "./html_scroll_body_mark.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_viewport_height_visible } from "./html_viewport_height_visible.mjs";
@@ -24,6 +25,7 @@ export function html_bar_content(root) {
   });
   let bar = html_div(shell);
   html_style_flex(bar, "0 0 auto");
+  html_viewport_readout_when_asked(bar);
   let content = html_div(shell);
   html_style_assign(content, {
     flex: "1 1 auto",
