@@ -1,3 +1,5 @@
+import { list_second } from "./list_second.mjs";
+import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_operator_less_than_equal_symbol } from "./js_operator_less_than_equal_symbol.mjs";
@@ -159,15 +161,35 @@ export function app_code_lesson_statement_name_rectangle_inside() {
   let second_rectangle = two("second rectangle");
   function rectangles_draw(second) {
     "the first rectangle, 1 to 4 across and 1 to 6 down, taller than wide so the picture can be larger on a phone, asked by the human 2026-10-04, with the second over it in its own colour, or [0, 0, 0, 0] for none";
+    let first_edges = [1, 4, 1, 6];
+    let left2 = list_second(second);
+    let none = equal(left2, 0);
+    function spans(start_index, end_index) {
+      "the first rectangle's span on one axis, then the second's when there is one, so both rectangles' numbers wear the start and end colours as the words do";
+      let item = list_get(first_edges, start_index);
+      let item2 = list_get(first_edges, end_index);
+      let first_span = [item, item2];
+      if (none) {
+        let r3 = [first_span];
+        return r3;
+      }
+      let item3 = list_get(second, start_index);
+      let item4 = list_get(second, end_index);
+      let second_span = [item3, item4];
+      let r4 = [first_span, second_span];
+      return r4;
+    }
     function draw(box) {
+      let across2 = spans(0, 1);
+      let down2 = spans(2, 3);
       app_code_rectangles_edges_colored_draw(
         box,
         5,
         7,
-        [1, 4, 1, 6],
+        first_edges,
         second,
-        [1, 4],
-        [1, 6],
+        across2,
+        down2,
         null,
         second_color,
         null,

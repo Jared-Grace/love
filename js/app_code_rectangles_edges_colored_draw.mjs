@@ -38,7 +38,7 @@ export function app_code_rectangles_edges_colored_draw(
   ("corner is [x, y], the line on the left of a square and the line above it, drawn and numbered in the overlap colour, or null for none - asked by the human 2026-10-04 to show red lines at 2 and 2 under the square that starts there");
   ("overlap_color fills the squares both rectangles cover and the marked ones: the overlap colour when two rectangles cross, or the second rectangle's own colour when it sits inside the first, asked by the human 2026-10-04 for a rectangle inside a rectangle");
   ("a picture of two rectangles of squares, with the lines between squares numbered as a ruler is, so a rectangle's edges can be read off it: the numbers across the top count the lines from the left, the numbers down the left count them from the top. first and second are each [left, right, top, bottom] in those numbers, and the squares both cover are filled with the overlap colour");
-  ("across and down are each [start, end] of the shared part, whose numbers wear the start and end colours of the meetings lessons, or null to leave every number plain");
+  ("across and down are each a list of [start, end] spans, whose numbers wear the start and end colours of the meetings lessons, or null to leave every number plain: one span for the shared part of two rectangles, or one for each rectangle when both edges of each are compared, asked by the human 2026-10-04 for a rectangle inside a rectangle, whose second rectangle's numbers were plain in the picture while its words coloured them. An edge that starts one span and ends another wears the start colour");
   ("marked is [left, right, top, bottom] of squares filled with the overlap colour whether or not both rectangles cover them, or null for none - asked by the human 2026-10-04 to show the square a wrong answer counts, between two rectangles that share none");
   ("The numbers sit on the lines and not on the squares, unlike the grid lessons' headings, because a meeting from 9 to 11 is two hours: the numbers are the edges, and left < right reads true exactly when a rectangle has a square between them.");
   let start_color = app_code_highlight_color();
@@ -77,13 +77,17 @@ export function app_code_rectangles_edges_colored_draw(
     if (null_is(shared)) {
       return plain;
     }
-    let right2 = list_first(shared);
-    if (equal(edge, right2)) {
-      return start_color;
+    for (let span of shared) {
+      let right2 = list_first(span);
+      if (equal(edge, right2)) {
+        return start_color;
+      }
     }
-    let right3 = list_second(shared);
-    if (equal(edge, right3)) {
-      return end_color;
+    for (let span of shared) {
+      let right3 = list_second(span);
+      if (equal(edge, right3)) {
+        return end_color;
+      }
     }
     return plain;
   }
