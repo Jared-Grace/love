@@ -1396,6 +1396,26 @@ export function bible_glyph_characters() {
       name: "hatching_chick",
       character: "🐣",
     },
+    {
+      name: "alarm_clock",
+      character: "⏰",
+    },
+    {
+      name: "clapper_board",
+      character: "🎬",
+    },
+    {
+      name: "diving_mask",
+      character: "🤿",
+    },
+    {
+      name: "triangular_ruler",
+      character: "📐",
+    },
+    {
+      name: "double_exclamation",
+      character: "‼️",
+    },
   ];
   return characters;
 }

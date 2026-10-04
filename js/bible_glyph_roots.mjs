@@ -129,6 +129,7 @@ export function bible_glyph_roots() {
   ("WRITING, TEACHING AND SEEKING TOOK NEW PICTURES ON 2026-10-03, the writing hand, the teacher and the magnifying glass, each one for a whole root. Graphe, the Scripture, wears the writing hand with grapho because the word is the writing, and drawing it so shows a reader that it is written and Scripture are one word. It was not given the scroll, which is already the law. The teacher stands on the verb to teach and on the noun teacher, the same way love stands on its noun and verb. Find was left undrawn: it has no picture that says finding and not seeing or knowing, which are already the eye and the lightbulb.");
   ("GOD IS THE BURNING HEART SINCE 2026-10-03, AND FIRE IS THE FIRE. The human chose it, in these words: God is love, God is consuming fire. Both are said of God in so many words - God is love in the fourth of first John, our God is a consuming fire in the twelfth of Hebrews - so the mark is two sentences of Scripture joined into one picture, the heart that burns. The plain flame was freed by the change and pur, fire, took it. Jealousy gave the burning heart up and took the face with steam from its nose, the human's choice the same day. A word whose English says god or gods in small letters is drawn as the carved stone figure instead, because the translators' capital is the only place the text tells the LORD from an idol.");
   ("TWELVE GREEK NUMBERS AND FOURTEEN HEBREW ONES WERE SEATED IN ONE PASS ON 2026-10-03, each a picture that says the word and was free. Falling is the person and the hand pointing down, the mirror of rising. Keeping is the guard, because tereo and shamar are to watch over before they are to obey. Anger is the angry face. The elder is the old man, which is what presbuteros says. A sign is the placard, a thing held up to be read. Opening is the open lock; the key was refused because it is exousia, authority. Erotao, to ask a question, is the question mark; aiteo, to ask for something, was left undrawn because a request is not a question. Four, five and ten are their keycaps, as one, two, three and seven already were. Parakaleo joins its own noun parakletos at the embrace, and grammateus, the scribe, joins grapho at the writing hand. The demon was refused the horned face because it would sit beside the angry face and read as anger.");
+  ("A THIRD BATCH, 2026-10-04, UNDER THE SAME STANDING WORD. DODEKA, TWELVE, IS THE KEYCAPS ONE AND TWO, the way the Hebrew esrim is two and zero: two digits read as one number and nothing else. KAIROS, THE SEASON OR THE APPOINTED TIME, IS THE ALARM CLOCK: a time set beforehand, which is what kairos adds to the plain hour. The plain clock is hora, so the two words stay apart; the Hebrew moed shares the alarm clock across the tables. ARCHOMAI, BEGIN, IS THE CLAPPER BOARD: the snap that starts the take. Rejected: the chequered flag, which is finish, the opposite. BAPTIZO, DIP, IS THE DIVING MASK: going under the water, which is what the word says; baptisma and the baptizer share it as one family. Rejected: the water droplets, which read sweat; the wave, which is the sea; the bubbles, which read soap. HOTE AND HOTAN, WHEN, ARE THE BACK ARROW JOINED TO THE CLOCK: the time which, built the way hos is the back arrow joined to the flashlight, the one which. Hotan is hote fused with an, so the two share it as one family. Not seated, and why: pempo, send, would collide with apostello's sending hand in this table; dei, must, has no sign that does not read danger or shouting.");
   ("A SECOND BATCH, 2026-10-04, UNDER THE SAME STANDING WORD. PLEROO, FILL OR FULFILL, IS THE FULL BATTERY: filled to the top, which is what a fulfilled word is; the Hebrew male takes it too. Rejected: the pouring jug, which pour will want. GENNAO, BEGET, IS THE HATCHING CHICK: a life coming out into the world, which reads for begat and for was born alike. Rejected: the baby, which paidion, child, already holds in this table, so the two words would come out looking the same; the pregnant woman, which reads conceive, and that is sullambano. MELLO, BE ABOUT TO, IS THE SOON ARROW: refused for hina because it spells soon, which hina does not mean, and given here because about to is exactly what it spells. POS, HOW?, IS THE GEAR JOINED TO THE QUESTION MARK: how does it work? - the same shape as tis, the flashlight joined to the question mark. EKBALLO, THROW OUT, IS EK JOINED TO BALLO, the out-tray and the thrower, because the word is those two words fused. Not seated, and why: kairos, season, would want the calendar, which is year; apollumi, destroy or lose, has no picture that holds both, since an explosion reads wrong for a lost sheep.");
   ("A BATCH SEATED ON 2026-10-04 UNDER THE HUMAN'S STANDING WORD TO KEEP PICKING. EKEINOS, THAT ONE, AND EKEI, THERE, ARE ONE FAMILY AND TAKE THE TELESCOPE: the far thing, as the flashlight is houtos, the near thing; the Hebrew sham, there, takes it too. Rejected for them: the left hand pointing, which is autos; the pin, which is half of stand. GINOMAI, BECOME, IS THE BUTTERFLY: a thing turning into what it was not. It is a different word from eimi, be, which is the link, so it could not share. Rejected: the sprout, which is taken; an arrow, which every grammar word wants. APHIEMI, LET GO, IS THE BALLOON: a hand opening and the thing going away, which covers leave and forgive alike, since forgiving in this word is letting a debt go. Rejected: the dove, which a literal noun wants; the open hand, which is taken. SUN, WITH, IS THE SAFETY PIN: another fastener, since meta holds the linked paperclips and two words need two pictures; it shares the pin with the Hebrew et across the tables, which the collision gate allows. OUDE, NOT EVEN OR NOR, JOINS THE NEGATION ROW: it is ou with de fused on, the same family as oudeis and ouchi, which already share the no-entry sign. Not seated, and why: tis, someone, has no picture yet (the bust is me, and dice would be wanted by lots); tote, then, would want the hourglass, which is aion; peri, about, has no picture that does not read as a thing.");
   ("DIA, THROUGH, IS THE METRO (2026-10-04), chosen under the human's standing word to pick: a train going into a tunnel and out the other side, through. It is a modern thing no Bible word names, so no noun will want it back. With the accusative dia means because of, and the picture stays, since case is grammar. Rejected: the fast-forward sign, which reads fast; the right arrow, which is oun, therefore; a door or a gate, which are literal nouns (thura, pule); and a hole, which a literal word for pit or hole would want.");
@@ -158,6 +159,68 @@ export function bible_glyph_roots() {
   ("RISING, COMMANDING AND ANSWERING ARE BUILT FROM MARKS ALREADY BOUGHT, AND CALLING IS THE WAVING HAND, ALL 2026-10-03. Egeiro is a person and the hand pointing up - the one who was down is now up - which reads beside the walking figure pointing up for going up, so a reader who knows either learns the other; the plain arrow up was refused because the pointing hand already says up. Entellomai is the speech and the scroll, to say a law, since entole the commandment is the scroll alone. Anistemi, to rise, and keleuo, to order, were left undrawn, because the collision walk holds each picture to one root and those two would have worn egeiro's and entellomai's. Apokrinomai is the speech and the turning arrow, a word sent back. Kaleo is the hand waved to bring someone over; the voice was refused because phone is a sound and not a summons, the megaphone because it is the prophet, and a telephone because it is not in the world of the text. Stand, head, body, great, many and find were looked at the same hour and left undrawn: the standing figure is already the person, and the others had no picture that says the word and is still free.");
   ("IDOU IS THE EXCLAMATION MARK AND THE HIGH PRIEST IS THE PRIEST, BOTH SEATED 2026-10-03 FOR FREQUENCY. Idou and ide are a word that says look and means nothing else - pay attention to what comes next - and the mark that says the same in pictures is the exclamation. The eyes were refused because they already draw blepo, seeing, and behold is not a report that anyone saw; a pointing hand was refused because it already draws hoti, that. Archiereus is chief and priest in one word, and it takes the priest alone, because the Hebrew says the same office in two words, kohen gadol, and only the kohen is drawn there; priest beside a crown was refused because the crown is lord, and a high priest is not a lord.");
   let roots = [
+    {
+      root: "dodeka",
+      gloss: "twelve",
+      words: [
+        {
+          strong: "1427",
+          glyph: "one+two",
+        },
+      ],
+    },
+    {
+      root: "kairos",
+      gloss: "season; appointed time",
+      words: [
+        {
+          strong: "2540",
+          glyph: "alarm_clock",
+        },
+      ],
+    },
+    {
+      root: "archomai",
+      gloss: "begin",
+      words: [
+        {
+          strong: "756",
+          glyph: "clapper_board",
+        },
+      ],
+    },
+    {
+      root: "baptizo",
+      gloss: "dip; immerse; baptize",
+      words: [
+        {
+          strong: "907",
+          glyph: "diving_mask",
+        },
+        {
+          strong: "908",
+          glyph: "diving_mask",
+        },
+        {
+          strong: "910",
+          glyph: "diving_mask",
+        },
+      ],
+    },
+    {
+      root: "hote",
+      gloss: "when (the time which)",
+      words: [
+        {
+          strong: "3753",
+          glyph: "back+clock",
+        },
+        {
+          strong: "3752",
+          glyph: "back+clock",
+        },
+      ],
+    },
     {
       root: "pleroo",
       gloss: "fill; fulfill; complete",

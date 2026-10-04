@@ -1080,6 +1080,26 @@ export function bible_glyph_artwork_names() {
       glyph: "hatching_chick",
       asset: "Hatching chick",
     },
+    {
+      glyph: "alarm_clock",
+      asset: "Alarm clock",
+    },
+    {
+      glyph: "clapper_board",
+      asset: "Clapper board",
+    },
+    {
+      glyph: "diving_mask",
+      asset: "Diving mask",
+    },
+    {
+      glyph: "triangular_ruler",
+      asset: "Triangular ruler",
+    },
+    {
+      glyph: "double_exclamation",
+      asset: "Double exclamation mark",
+    },
   ];
   return names;
 }
