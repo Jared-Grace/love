@@ -1,10 +1,10 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_search_language_searchable } from "./app_search_language_searchable.mjs";
 import { list_add } from "./list_add.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { subtract } from "./subtract.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { language_code_key } from "./language_code_key.mjs";
 import { app_search_language_words } from "./app_search_language_words.mjs";
@@ -61,8 +61,7 @@ export async function app_search_languages_matching(languages_chosen, query) {
   }
   function missing_everywhere(word) {
     function lacks(a) {
-      let b2 = list_includes(a.words, word);
-      let not_asked = not(b2);
+      let not_asked = list_includes_not(a.words, word);
       let missing = not_asked || list_includes(a.words_missing, word);
       return missing;
     }
