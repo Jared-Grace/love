@@ -1340,6 +1340,10 @@ export function bible_glyph_characters() {
       name: "traffic_light",
       character: "🚦",
     },
+    {
+      name: "linked_paperclips",
+      character: "🖇️",
+    },
   ];
   return characters;
 }

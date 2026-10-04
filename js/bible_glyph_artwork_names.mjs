@@ -1024,6 +1024,10 @@ export function bible_glyph_artwork_names() {
       glyph: "traffic_light",
       asset: "Vertical traffic light",
     },
+    {
+      glyph: "linked_paperclips",
+      asset: "Linked paperclips",
+    },
   ];
   return names;
 }
