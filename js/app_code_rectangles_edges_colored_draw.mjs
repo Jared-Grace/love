@@ -163,7 +163,7 @@ export function app_code_rectangles_edges_colored_draw(
     }
   }
   function line_draw(edge, shared, count, vertical, corner_edge) {
-    "a coloured edge's line drawn on through the squares, so it reads as x = 2 or y = 1 on a graph, asked by the human 2026-10-04; a plain edge draws none";
+    "a coloured edge's line drawn on through the squares, so it reads as x = 2 or y = 1 on a graph, asked by the human 2026-10-04; a plain edge draws none. A corner line lies above the rectangle's lines where they cross, asked by the human the same day, since otherwise the later-drawn lines cover it";
     let color = edge_color(edge, shared, corner_edge);
     if (equal(color, plain)) {
       return;
@@ -193,10 +193,12 @@ export function app_code_rectangles_edges_colored_draw(
           "border-top": border,
           transform: text_combine_multiple(["translateY(", shift, ")"]),
         };
+    let on_corner = equal(edge, corner_edge);
+    let layer = on_corner ? "2" : "1";
     html_style_assign(line, {
       ...style,
       "pointer-events": "none",
-      "z-index": "1",
+      "z-index": layer,
     });
   }
   for (let edge of range(columns + 1)) {
