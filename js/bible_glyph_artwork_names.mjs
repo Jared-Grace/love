@@ -1017,7 +1017,7 @@ export function bible_glyph_artwork_names() {
       asset: "Right arrow curving up",
     },
     {
-      glyph: "fist",
+      glyph: "raised_fist",
       asset: "Raised fist",
     },
   ];
