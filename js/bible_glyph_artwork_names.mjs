@@ -1188,6 +1188,18 @@ export function bible_glyph_artwork_names() {
       glyph: "vomiting",
       asset: "Face vomiting",
     },
+    {
+      glyph: "peacock",
+      asset: "Peacock",
+    },
+    {
+      glyph: "gesturing_no",
+      asset: "Person gesturing no",
+    },
+    {
+      glyph: "test_tube",
+      asset: "Test tube",
+    },
   ];
   return names;
 }

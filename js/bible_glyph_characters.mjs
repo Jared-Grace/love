@@ -1504,6 +1504,18 @@ export function bible_glyph_characters() {
       name: "vomiting",
       character: "🤮",
     },
+    {
+      name: "peacock",
+      character: "🦚",
+    },
+    {
+      name: "gesturing_no",
+      character: "🙅",
+    },
+    {
+      name: "test_tube",
+      character: "🧪",
+    },
   ];
   return characters;
 }

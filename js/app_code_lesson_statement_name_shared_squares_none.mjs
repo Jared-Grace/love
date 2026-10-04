@@ -1,3 +1,4 @@
+import { app_code_rectangles_edges_marked_draw } from "./app_code_rectangles_edges_marked_draw.mjs";
 import { app_code_highlight_color_sixth } from "./app_code_highlight_color_sixth.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
@@ -37,6 +38,7 @@ export function app_code_lesson_statement_name_shared_squares_none() {
   ("The example is two rectangles apart corner to corner, because there the width and the height are both -1, and -1 * -1 is 1: the floor is needed even though the answer without it is not negative.");
   ("Edges that start wear the start colour and edges that end the end colour, as in Do two rectangles overlap.");
   ("The writing is the human's, 2026-10-04, reworded from a first draft by Claude. The question How can we make the solved overlap be 0 instead of 1 opens the second screen, so it sits with its answer.");
+  ("The square between the two rectangles is drawn in the overlap colour after the wrong answer, asked by the human 2026-10-04, so the 1 can be seen to count a square the rectangles do not share. The words width and height wear the length colour too.");
   ("Lengths before the floor, which may be negative, wear a colour of their own: width, height and the -1 they hold. What the floor makes wears the overlap colour: w, h, area and 0. Asked by the human 2026-10-04, when every name in the program wore the overlap colour. Not picked: width and w in one colour and height and h in another, which would show which line feeds which but leaves no colour that says a length may be negative; and the rectangles' purple and orange, which the picture already gives to the two rectangles.");
   let names = ["width", "height"];
   let width = list_first(names);
@@ -188,15 +190,21 @@ export function app_code_lesson_statement_name_shared_squares_none() {
     v4,
   ]);
   let v5 = raw("-1");
+  let width_word = app_code_explain_word_colored(width, length_color);
+  let height_word = app_code_explain_word_colored(height, length_color);
   let draw4 = app_code_explain_said([
-    "So the width is ",
+    "So the ",
+    width_word,
+    " is ",
     length_worked,
     ", which is ",
     v5,
   ]);
   let v6 = raw("-1");
   let draw5 = app_code_explain_said([
-    "And the height is ",
+    "And the ",
+    height_word,
+    " is ",
     length_worked,
     ", which is ",
     v6,
@@ -207,7 +215,7 @@ export function app_code_lesson_statement_name_shared_squares_none() {
   let v9 = size("0");
   let v10 = size("1");
   let draw7 = app_code_explain_said([
-    "But they ",
+    "However the two rectangles ",
     share_word,
     " ",
     v9,
@@ -228,7 +236,7 @@ export function app_code_lesson_statement_name_shared_squares_none() {
     html_cycle_code(line, [
       ", we used ",
       max_name,
-      " to make a negative length ",
+      " to change all negative lengths to ",
       "0",
     ]);
   }
@@ -245,7 +253,7 @@ export function app_code_lesson_statement_name_shared_squares_none() {
     v13,
     ", so when we use ",
     max_chip,
-    " they ",
+    " the two rectangles ",
     share_word,
     " ",
     v14,
@@ -269,6 +277,26 @@ export function app_code_lesson_statement_name_shared_squares_none() {
     overlap_word,
     ":",
   ]);
+  let same_said = app_code_explain_said([
+    "We can do the same for the ",
+    width_word,
+    " and for the ",
+    height_word,
+    " here:",
+  ]);
+  function solved_draw(box) {
+    "the same two rectangles, with the square a wrong answer counts between them filled in the overlap colour, asked by the human 2026-10-04";
+    app_code_rectangles_edges_marked_draw(
+      box,
+      5,
+      5,
+      [0, 2, 0, 2],
+      [3, 5, 3, 5],
+      [3, 2],
+      [3, 2],
+      [2, 3, 2, 3],
+    );
+  }
   let try_said = app_code_explain_said([
     "But what happens if we try to solve the ",
     overlap_word,
@@ -322,12 +350,14 @@ export function app_code_lesson_statement_name_shared_squares_none() {
       draw5,
       draw6,
       solved_said,
+      ["Here is the square it solved:"],
+      solved_draw,
       draw7,
       should_said,
       app_code_explain_container_next,
       how_said,
       floor_recalled_draw,
-      ["We can do the same for the width and for the height here:"],
+      same_said,
       draw8,
       draw9,
       app_code_explain_container_next,
