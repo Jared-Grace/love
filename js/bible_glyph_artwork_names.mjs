@@ -1028,6 +1028,14 @@ export function bible_glyph_artwork_names() {
       glyph: "linked_paperclips",
       asset: "Linked paperclips",
     },
+    {
+      glyph: "metro",
+      asset: "Metro",
+    },
+    {
+      glyph: "safety_pin",
+      asset: "Safety pin",
+    },
   ];
   return names;
 }

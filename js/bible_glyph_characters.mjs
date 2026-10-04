@@ -1344,6 +1344,14 @@ export function bible_glyph_characters() {
       name: "linked_paperclips",
       character: "🖇️",
     },
+    {
+      name: "metro",
+      character: "🚇",
+    },
+    {
+      name: "safety_pin",
+      character: "🧷",
+    },
   ];
   return characters;
 }
