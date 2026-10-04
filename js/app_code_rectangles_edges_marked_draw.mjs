@@ -27,6 +27,7 @@ export function app_code_rectangles_edges_marked_draw(
     down,
     marked,
     overlap_color,
+    null,
   );
   return grid;
 }

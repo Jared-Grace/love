@@ -31,8 +31,10 @@ export function app_code_rectangles_edges_colored_draw(
   down,
   marked,
   overlap_color,
+  corner,
 ) {
-  arguments_assert(arguments, 9);
+  arguments_assert(arguments, 10);
+  ("corner is [x, y], the line on the left of a square and the line above it, drawn and numbered in the overlap colour, or null for none - asked by the human 2026-10-04 to show red lines at 2 and 2 under the square that starts there");
   ("overlap_color fills the squares both rectangles cover and the marked ones: the overlap colour when two rectangles cross, or the second rectangle's own colour when it sits inside the first, asked by the human 2026-10-04 for a rectangle inside a rectangle");
   ("a picture of two rectangles of squares, with the lines between squares numbered as a ruler is, so a rectangle's edges can be read off it: the numbers across the top count the lines from the left, the numbers down the left count them from the top. first and second are each [left, right, top, bottom] in those numbers, and the squares both cover are filled with the overlap colour");
   ("across and down are each [start, end] of the shared part, whose numbers wear the start and end colours of the meetings lessons, or null to leave every number plain");
@@ -64,7 +66,13 @@ export function app_code_rectangles_edges_colored_draw(
     "justify-content": "center",
     margin: "0.5em 0",
   });
-  function edge_color(edge, shared) {
+  let no_corner = null_is(corner);
+  let corner_x = no_corner ? null : list_first(corner);
+  let corner_y = no_corner ? null : list_second(corner);
+  function edge_color(edge, shared, corner_edge) {
+    if (equal(edge, corner_edge)) {
+      return overlap_color;
+    }
     if (null_is(shared)) {
       return plain;
     }
@@ -78,7 +86,7 @@ export function app_code_rectangles_edges_colored_draw(
     }
     return plain;
   }
-  function label_draw(edge, shared, row_line, column_line, style) {
+  function label_draw(edge, shared, row_line, column_line, style, corner_edge) {
     "one line's number, placed in a grid cell and pushed onto the line beside it";
     let cell = html_div(grid);
     html_style_assign(cell, {
@@ -86,7 +94,7 @@ export function app_code_rectangles_edges_colored_draw(
       "grid-column": text_to(column_line),
       ...style,
     });
-    let color = edge_color(edge, shared);
+    let color = edge_color(edge, shared, corner_edge);
     let t3 = text_to(edge);
     let chip = app_code_explain_number_colored(t3, color);
     chip(cell);
@@ -105,7 +113,7 @@ export function app_code_rectangles_edges_colored_draw(
           "align-self": "center",
           transform: "translateX(-50%)",
         };
-    label_draw(edge, across, 1, column_line, style);
+    label_draw(edge, across, 1, column_line, style, corner_x);
   }
   for (let edge of range(rows + 1)) {
     let last = equal(edge, rows);
@@ -121,7 +129,7 @@ export function app_code_rectangles_edges_colored_draw(
           "justify-self": "center",
           transform: "translateY(-50%)",
         };
-    label_draw(edge, down, row_line, 1, style);
+    label_draw(edge, down, row_line, 1, style, corner_y);
   }
   function inside(rectangle, row, column) {
     let [left, right, top, bottom] = rectangle;
@@ -154,9 +162,9 @@ export function app_code_rectangles_edges_colored_draw(
       }
     }
   }
-  function line_draw(edge, shared, count, vertical) {
+  function line_draw(edge, shared, count, vertical, corner_edge) {
     "a coloured edge's line drawn on through the squares, so it reads as x = 2 or y = 1 on a graph, asked by the human 2026-10-04; a plain edge draws none";
-    let color = edge_color(edge, shared);
+    let color = edge_color(edge, shared, corner_edge);
     if (equal(color, plain)) {
       return;
     }
@@ -166,7 +174,8 @@ export function app_code_rectangles_edges_colored_draw(
     let side = last ? "end" : "start";
     let line = html_div(grid);
     let border = text_combine("3px solid ", color);
-    let span = text_combine("2 / span ", text_to(vertical ? rows : columns));
+    let right4 = text_to(vertical ? rows : columns);
+    let span = text_combine("2 / span ", right4);
     let style = vertical
       ? {
           "grid-column": text_to(index),
@@ -191,10 +200,10 @@ export function app_code_rectangles_edges_colored_draw(
     });
   }
   for (let edge of range(columns + 1)) {
-    line_draw(edge, across, columns, true);
+    line_draw(edge, across, columns, true, corner_x);
   }
   for (let edge of range(rows + 1)) {
-    line_draw(edge, down, rows, false);
+    line_draw(edge, down, rows, false, corner_y);
   }
   return grid;
 }

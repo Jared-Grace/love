@@ -1,3 +1,4 @@
+import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
@@ -17,7 +18,6 @@ import { app_code_highlight_color_third } from "./app_code_highlight_color_third
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
 import { app_code_explain_code_colored_inline } from "./app_code_explain_code_colored_inline.mjs";
-import { app_code_rectangles_edges_marked_draw } from "./app_code_rectangles_edges_marked_draw.mjs";
 import { app_code_arrow_inline_draw } from "./app_code_arrow_inline_draw.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
@@ -32,6 +32,7 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   ("x and y, asked by the human 2026-10-04 after a student asked about the rows and columns: the first draft said the square was in column c and row r, the grid lessons' seats, while every number in the picture is a line, so one number was read two ways. Now only lines are spoken of, and the square is where its top left corner is. Not picked: keeping c and r and explaining that column c sits between line c and line c + 1, which is the two readings again; and numbering the squares rather than the lines, which would break left < right from Do two rectangles overlap.");
   ("The answers are only true or false, so a question offers two buttons. Each screen asks two squares inside and two outside; the squares outside are next to an edge, some across and some down, and some on the right or bottom edge itself, so x <= right would be caught.");
   ("Left and top are starts and wear the start colour, right and bottom are ends and wear the end colour, as in the rectangle lessons. The square and its x and y wear the overlap colour, the colour the picture fills it with.");
+  ("The rectangle is shown alone first and the square added after, with red lines at its left and top, reworded so by the human 2026-10-04; their first line still read Here is a rectangle, and a 1 by 1 square, over a picture with no square, so the square was left out of it, as the second line brings it in.");
   ("The writing was a first draft by Claude 2026-10-04, then reworded by the human the same day, who asked for the rectangle to be coloured: the word wears the colour the picture fills the rectangle with, the first rectangle's colour from Do two rectangles overlap.");
   let names = ["left", "right", "top", "bottom", "x", "y"];
   let left = list_get(names, 0);
@@ -141,10 +142,10 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
     );
     return chip;
   }
-  function square_draw(across, down) {
-    "the rectangle from 1 to 4 across and 1 to 3 down, with one square filled in the square's colour";
+  function rectangle_draw(marked, corner) {
+    "the rectangle from 1 to 4 across and 1 to 3 down, with the marked squares filled in the square's colour and the corner's lines drawn in it, either null for none";
     function draw(box) {
-      app_code_rectangles_edges_marked_draw(
+      app_code_rectangles_edges_colored_draw(
         box,
         5,
         4,
@@ -152,9 +153,16 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
         [0, 0, 0, 0],
         [1, 4],
         [1, 3],
-        [across, across + 1, down, down + 1],
+        marked,
+        square_color,
+        corner,
       );
     }
+    return draw;
+  }
+  function square_draw(across, down) {
+    "the rectangle with one square filled, its lines left plain";
+    let draw = rectangle_draw([across, across + 1, down, down + 1], null);
     return draw;
   }
   let right_arrow = app_code_arrow_inline_draw(0);
@@ -168,16 +176,16 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   let one = app_code_explain_number_colored("1", plain);
   let is_true = app_code_explain_number_colored("true", plain);
   let is_false = app_code_explain_number_colored("false", plain);
-  let draw = app_code_explain_said([
-    "Here is a ",
+  let draw = app_code_explain_said(["Here is a ", rectangle_word, ":"]);
+  let same_said = app_code_explain_said([
+    "Here is the same ",
     rectangle_word,
-    ", and a ",
+    ", but also a ",
     one,
     " by ",
     one,
     " ",
     square_word,
-    ":",
   ]);
   let v = from("1");
   let v2 = till("4");
@@ -332,7 +340,8 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
     " or another point of the ",
     square_word,
   ]);
-  let v18 = square_draw(2, 2);
+  let rectangle_alone = rectangle_draw(null, null);
+  let v18 = rectangle_draw([2, 3, 2, 3], [2, 2]);
   let v19 = square_draw(4, 2);
   let lesson = app_code_lesson_statement_formula_answer_count({
     words: "Is a square inside a rectangle",
@@ -346,10 +355,12 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
     remember_lines,
     explain: [
       draw,
-      v18,
       draw2,
+      rectangle_alone,
+      same_said,
       draw3,
       top_said,
+      v18,
       seen_said,
       numbers_said,
       app_code_explain_container_next,
