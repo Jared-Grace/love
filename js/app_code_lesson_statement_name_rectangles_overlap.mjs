@@ -1,5 +1,5 @@
+import { app_code_arrow_inline_draw } from "./app_code_arrow_inline_draw.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
-import { app_code_arrow_inline } from "./app_code_arrow_inline.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
