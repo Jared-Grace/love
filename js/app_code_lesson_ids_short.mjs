@@ -279,6 +279,9 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_square_in_rectangle: text_frozen(
       "name_square_in_rectangle",
     ),
+    app_code_lesson_statement_name_meeting_inside: text_frozen(
+      "name_meeting_inside",
+    ),
     app_code_lesson_statement_name_remainder: text_frozen("name_remainder"),
     app_code_lesson_statement_name_greater: text_frozen("name_greater"),
     app_code_lesson_statement_name_smaller_equal:
