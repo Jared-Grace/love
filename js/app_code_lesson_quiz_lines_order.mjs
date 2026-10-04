@@ -1,3 +1,7 @@
+import { fn_name } from "./fn_name.mjs";
+import { app_code_lines_held_count } from "./app_code_lines_held_count.mjs";
+import { list_skip } from "./list_skip.mjs";
+import { list_take } from "./list_take.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { html_div_code_dark } from "./html_div_code_dark.mjs";
@@ -28,9 +32,14 @@ export function app_code_lesson_quiz_lines_order(
   let answer_div = html_div_code_dark(parent);
   let note_div = html_div_text(parent, "");
   let variations = app_code_lines_orders(code);
-  let tokens_unique = list_unique(lines);
+  ("A LONG PROGRAM STARTS WITH ITS FIRST LINES ALREADY PUT IN, as many as ",
+    fn_name("app_code_lines_held_count"),
+    " says, because the orders are all tried and a twelve-line program was too many for a phone; those lines are not in the row.");
+  let held_count = app_code_lines_held_count(lines);
+  let rest = list_skip(lines, held_count);
+  let tokens_unique = list_unique(rest);
   list_sort_text(tokens_unique);
-  let chosen = [];
+  let chosen = list_take(lines, held_count);
   app_code_lesson_quiz_lines_show(answer_div, chosen, lines);
   let pieces = {
     variations,
