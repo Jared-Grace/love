@@ -49,8 +49,9 @@ export async function app_verses_group(
     reroll,
     copy,
     verse_groups,
-    draw_restore,
   });
+  ("the saved verses are brought back only now, with the card they draw into already in hand; set off any earlier and the drawing reaches for a name whose own line has not finished");
+  await draw_restore();
   async function draw_restore() {
     await app_verses_group_draw_restore(
       verse_count_held,
