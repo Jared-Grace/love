@@ -1,3 +1,5 @@
+import { app_code_grid_edge_line_draw } from "./app_code_grid_edge_line_draw.mjs";
+import { not } from "./not.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
@@ -33,6 +35,7 @@ export function app_code_meetings_hours_draw(
   arguments_assert(arguments, 4);
   ("a picture of meetings as bars of hours, one row each, under a ruler of the hours from first_hour to last_hour; meetings is a list of [start, end], the first filled with the first rectangle's colour and the second with the second's, as the rectangle pictures colour two shapes");
   ("The hours sit on the lines between squares and not on the squares, as the rectangle pictures number their edges, because a meeting from 9 to 11 is two squares: the hours are where it starts and ends. An hour a meeting starts at wears the start colour and an hour one ends at the end colour, as in the meetings lessons; an hour that is both stays plain.");
+  ("Each hour has a line drawn down through the bars in its own colour, asked by the human 2026-10-04 after a student read the hours as columns rather than as the lines between them; a coloured line lies above a plain one.");
   let start_color = app_code_highlight_color();
   let end_color = app_code_highlight_color_second();
   let plain = app_shared_color_code_background();
@@ -99,6 +102,18 @@ export function app_code_meetings_hours_draw(
     let t3 = text_to(hour);
     let chip = app_code_explain_number_colored(t3, color);
     chip(cell);
+    let b = equal(color, plain);
+    let colored = not(b);
+    let layer = colored ? "2" : "1";
+    app_code_grid_edge_line_draw(
+      grid,
+      color,
+      column_line,
+      last,
+      rows,
+      true,
+      layer,
+    );
   }
   for (let row of range(rows)) {
     let [start, end] = list_get(meetings, row);
