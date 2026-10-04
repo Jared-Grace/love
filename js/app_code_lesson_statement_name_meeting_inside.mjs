@@ -1,3 +1,4 @@
+import { app_code_meetings_hours_draw } from "./app_code_meetings_hours_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
@@ -29,7 +30,7 @@ export function app_code_lesson_statement_name_meeting_inside() {
   ("<= and not <, the other way from Do two meetings overlap: a meeting that starts when the other starts is still inside it, and the writing shows that case. Every screen asks a pair that shares a start or an end, because it is the case a < would get wrong.");
   ("The answers are only true or false, so a question offers two buttons. Each screen asks two pairs where the second is inside and two where it is not: one of those crosses an end of the first, and the other is the first inside the second, or two meetings apart.");
   ("Start hours wear the start colour and end hours the end colour, as in Do two meetings overlap, which is the reminder.");
-  ("The writing is a first draft by Claude, 2026-10-04, not yet the human's.");
+  ("The writing was a first draft by Claude 2026-10-04; the first two screens were then worded by the human the same day, who asked for a picture of the two meetings. Two slips in that wording were mended rather than copied, and reported back: the ends were written as 10 and 11 where the example ends at 11 and 12, and the first check was written as the second meeting having begun by the time the first starts, which is the wrong way round for s1 <= s2.");
   let names = ["s1", "e1", "s2", "e2"];
   let s = list_first(names);
   let e = list_second(names);
@@ -148,10 +149,37 @@ export function app_code_lesson_statement_name_meeting_inside() {
     " to ",
     v4,
   ]);
+  let v_s = from("9");
+  let v_s1 = from("8");
   let draw2 = app_code_explain_said([
-    "The second meeting starts after the first one starts",
+    "The second meeting starts (",
+    v_s,
+    ") after the first one starts (",
+    v_s1,
+    ")",
   ]);
-  let draw3 = app_code_explain_said(["And it ends before the first one ends"]);
+  let v_e = till("11");
+  let v_e1 = till("12");
+  let draw3 = app_code_explain_said([
+    "And it ends before (",
+    v_e,
+    ") the first one ends (",
+    v_e1,
+    ")",
+  ]);
+  function meetings_draw(box) {
+    "the first meeting, 8 to 12, above the second, 9 to 11, on a ruler of the hours";
+    app_code_meetings_hours_draw(box, 8, 12, [
+      [8, 12],
+      [9, 11],
+    ]);
+  }
+  let first_said = app_code_explain_said([
+    "First we check that the first meeting has begun by the time the second meeting starts:",
+  ]);
+  let then_said = app_code_explain_said([
+    "Then we check that the second meeting has ended by the time the first meeting ends:",
+  ]);
   let draw4 = app_code_explain_said([
     "So the second meeting is inside the first",
   ]);
@@ -236,9 +264,14 @@ export function app_code_lesson_statement_name_meeting_inside() {
       draw2,
       draw3,
       draw4,
+      meetings_draw,
       app_code_explain_container_next,
-      ["How can we tell using numbers?"],
+      [
+        "How can we tell the second meeting is inside the first meeting using numbers?",
+      ],
+      first_said,
       draw5,
+      then_said,
       draw6,
       draw7,
       app_code_explain_container_next,
