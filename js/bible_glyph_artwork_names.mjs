@@ -1100,6 +1100,14 @@ export function bible_glyph_artwork_names() {
       glyph: "double_exclamation",
       asset: "Double exclamation mark",
     },
+    {
+      glyph: "raised_back_of_hand",
+      asset: "Raised back of hand",
+    },
+    {
+      glyph: "end_arrow",
+      asset: "End arrow",
+    },
   ];
   return names;
 }

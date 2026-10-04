@@ -1416,6 +1416,14 @@ export function bible_glyph_characters() {
       name: "double_exclamation",
       character: "‼️",
     },
+    {
+      name: "raised_back_of_hand",
+      character: "🤚",
+    },
+    {
+      name: "end_arrow",
+      character: "🔚",
+    },
   ];
   return characters;
 }
