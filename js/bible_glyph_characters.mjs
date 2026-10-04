@@ -1424,6 +1424,42 @@ export function bible_glyph_characters() {
       name: "end_arrow",
       character: "🔚",
     },
+    {
+      name: "second_place",
+      character: "🥈",
+    },
+    {
+      name: "third_place",
+      character: "🥉",
+    },
+    {
+      name: "sunset",
+      character: "🌇",
+    },
+    {
+      name: "cow_face",
+      character: "🐮",
+    },
+    {
+      name: "national_park",
+      character: "🏞️",
+    },
+    {
+      name: "tongue",
+      character: "👅",
+    },
+    {
+      name: "pinching_hand",
+      character: "🤏",
+    },
+    {
+      name: "white_cane",
+      character: "🦯",
+    },
+    {
+      name: "astonished",
+      character: "😲",
+    },
   ];
   return characters;
 }

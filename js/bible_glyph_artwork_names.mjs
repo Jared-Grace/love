@@ -1108,6 +1108,42 @@ export function bible_glyph_artwork_names() {
       glyph: "end_arrow",
       asset: "End arrow",
     },
+    {
+      glyph: "second_place",
+      asset: "2nd place medal",
+    },
+    {
+      glyph: "third_place",
+      asset: "3rd place medal",
+    },
+    {
+      glyph: "sunset",
+      asset: "Sunset",
+    },
+    {
+      glyph: "cow_face",
+      asset: "Cow face",
+    },
+    {
+      glyph: "national_park",
+      asset: "National park",
+    },
+    {
+      glyph: "tongue",
+      asset: "Tongue",
+    },
+    {
+      glyph: "pinching_hand",
+      asset: "Pinching hand",
+    },
+    {
+      glyph: "white_cane",
+      asset: "White cane",
+    },
+    {
+      glyph: "astonished",
+      asset: "Astonished face",
+    },
   ];
   return names;
 }
