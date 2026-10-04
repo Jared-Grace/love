@@ -173,7 +173,7 @@ export function app_code_lesson_statement_name_meetings_join() {
         " for the end",
       ],
       [
-        "Here we use the earlier start and the later end, so it uses ",
+        "Here we use the earlier start and the later end, so we use ",
         min_name,
         " for the start and ",
         max_name,
