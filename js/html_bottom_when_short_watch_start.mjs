@@ -3,7 +3,7 @@ import { html_on_resize } from "./html_on_resize.mjs";
 import { html_component_wrap } from "./html_component_wrap.mjs";
 import { html_on_size_change } from "./html_on_size_change.mjs";
 import { equal } from "./equal.mjs";
-export function html_bottom_when_short_observer_stop(update, removes, element) {
+export function html_bottom_when_short_watch_start(update, removes, element) {
   arguments_assert(arguments, 3);
   let remove = html_on_resize(update);
   removes.push(remove);

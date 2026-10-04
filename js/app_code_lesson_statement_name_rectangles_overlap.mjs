@@ -162,15 +162,8 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
     null,
   );
   let and_chip = app_code_explain_number_colored(and_op, plain);
-  function arrow_drawn(degrees) {
-    "the drawn arrow inside a line of writing, beside the word for its direction, asked by the human 2026-10-04";
-    function draw(line) {
-      app_code_arrow_inline(line, degrees);
-    }
-    return draw;
-  }
-  let right_arrow = arrow_drawn(0);
-  let down_arrow = arrow_drawn(90);
+  let right_arrow = app_code_arrow_inline_draw(0);
+  let down_arrow = app_code_arrow_inline_draw(90);
   let color2 = app_code_highlight_color_fourth();
   let purple = app_code_explain_word_colored("purple", color2);
   let color3 = app_code_highlight_color_fifth();

@@ -1,4 +1,4 @@
-import { html_bottom_when_short_observer_stop } from "./html_bottom_when_short_observer_stop.mjs";
+import { html_bottom_when_short_watch_start } from "./html_bottom_when_short_watch_start.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { html_scroll_body_attribute_name } from "./html_scroll_body_attribute_name.mjs";
@@ -17,7 +17,7 @@ export function html_bottom_when_short(component) {
   let selector = "[" + html_scroll_body_attribute_name() + "]";
   let removes = [];
   let connected_was = false;
-  let observer_stop = html_bottom_when_short_observer_stop(
+  let observer_stop = html_bottom_when_short_watch_start(
     update,
     removes,
     element,

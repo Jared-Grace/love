@@ -1020,6 +1020,10 @@ export function bible_glyph_artwork_names() {
       glyph: "raised_fist",
       asset: "Raised fist",
     },
+    {
+      glyph: "traffic_light",
+      asset: "Vertical traffic light",
+    },
   ];
   return names;
 }

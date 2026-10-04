@@ -1336,6 +1336,10 @@ export function bible_glyph_characters() {
       name: "raised_fist",
       character: "✊",
     },
+    {
+      name: "traffic_light",
+      character: "🚦",
+    },
   ];
   return characters;
 }
