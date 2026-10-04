@@ -305,7 +305,7 @@ export function app_code_lesson_statement_name_meeting_before() {
     " starts:",
   ]);
   let lesson = app_code_lesson_statement_formula_answer_count({
-    words: "Has one meeting ended when another starts",
+    words: "Has one meeting ended by the time another starts",
     title_code: line_before,
     names,
     values_get,

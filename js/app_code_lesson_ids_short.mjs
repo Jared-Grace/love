@@ -286,7 +286,7 @@ export function app_code_lesson_ids_short() {
       "name_rectangle_inside",
     ),
     app_code_lesson_statement_name_meeting_before: text_frozen(
-      "name_meeting_before",
+      "name_meeting_ended",
     ),
     app_code_lesson_statement_name_remainder: text_frozen("name_remainder"),
     app_code_lesson_statement_name_greater: text_frozen("name_greater"),
