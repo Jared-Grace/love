@@ -1000,6 +1000,10 @@ export function bible_glyph_artwork_names() {
       glyph: "flashlight",
       asset: "Flashlight",
     },
+    {
+      glyph: "back",
+      asset: "Back arrow",
+    },
   ];
   return names;
 }

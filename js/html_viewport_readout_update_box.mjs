@@ -1,3 +1,4 @@
+import { html_viewport_readout_scroll_box } from "./html_viewport_readout_scroll_box.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { subtract } from "./subtract.mjs";
@@ -40,6 +41,7 @@ export function html_viewport_readout_update_box(
   }
   let v = bars.join("\n");
   let n = performance.now();
+  let r2 = html_viewport_readout_scroll_box(round_to);
   let lines = [
     "innerHeight " + window.innerHeight,
     "clientHeight " + document.documentElement.clientHeight,
@@ -51,6 +53,7 @@ export function html_viewport_readout_update_box(
     "vv scale " + (viewport ? round_to(viewport.scale) : "none"),
     "scrollY " + round_to(window.scrollY),
     "page height " + round_to(document.documentElement.scrollHeight),
+    r2,
     v,
     "dpr " + round_to(window.devicePixelRatio),
     "innerWidth " + window.innerWidth,
