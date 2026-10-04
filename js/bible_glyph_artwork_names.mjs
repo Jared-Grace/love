@@ -1144,6 +1144,26 @@ export function bible_glyph_artwork_names() {
       glyph: "astonished",
       asset: "Astonished face",
     },
+    {
+      glyph: "running",
+      asset: "Person running",
+    },
+    {
+      glyph: "loudly_crying",
+      asset: "Loudly crying face",
+    },
+    {
+      glyph: "new_button",
+      asset: "New button",
+    },
+    {
+      glyph: "thermometer_face",
+      asset: "Face with thermometer",
+    },
+    {
+      glyph: "open_book",
+      asset: "Open book",
+    },
   ];
   return names;
 }

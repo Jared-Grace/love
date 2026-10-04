@@ -34,8 +34,9 @@ export function app_code_lesson_statement_name_shared_squares_none() {
   ("It starts from the width and the height of the shared part, which How many squares two rectangles share finds, so that lesson is the reminder and the new idea is only the floor at 0, done twice, which How long two meetings overlap taught once; the writing points back to that lesson. Not picked: starting again from the four edges, which would put five lines in every program.");
   ("Each screen asks three pairs that overlap, of three different sizes, and one pair that does not, so the four answers differ and exactly one is the 0 the Math.max makes. The pairs that do not overlap are both negative, or one negative and one not, so either way a learner who forgets the floor gets a wrong answer.");
   ("The example is two rectangles apart corner to corner, because there the width and the height are both -1, and -1 * -1 is 1: the floor is needed even though the answer without it is not negative.");
-  ("Edges that start wear the start colour and edges that end the end colour, as in Do two rectangles overlap. Sizes of the shared part wear the overlap colour: width, height, w, h, area and the numbers they hold.");
-  ("The writing is a first draft by Claude, 2026-10-04, not yet the human's.");
+  ("Edges that start wear the start colour and edges that end the end colour, as in Do two rectangles overlap.");
+  ("The writing is the human's, 2026-10-04, reworded from a first draft by Claude. The question How can we make the solved overlap be 0 instead of 1 opens the second screen, so it sits with its answer.");
+  ("Lengths before the floor, which may be negative, wear a colour of their own: width, height and the -1 they hold. What the floor makes wears the overlap colour: w, h, area and 0. Asked by the human 2026-10-04, when every name in the program wore the overlap colour. Not picked: width and w in one colour and height and h in another, which would show which line feeds which but leaves no colour that says a length may be negative; and the rectangles' purple and orange, which the picture already gives to the two rectangles.");
   let names = ["width", "height"];
   let width = list_first(names);
   let height = list_second(names);
@@ -103,6 +104,7 @@ export function app_code_lesson_statement_name_shared_squares_none() {
   let start_color = app_code_highlight_color();
   let end_color = app_code_highlight_color_second();
   let overlap_color = app_code_highlight_color_third();
+  let length_color = app_code_highlight_color_sixth();
   let plain = app_shared_color_code_background();
   function from(text) {
     "a starting edge as a chip in the start colour";
@@ -119,23 +121,28 @@ export function app_code_lesson_statement_name_shared_squares_none() {
     let chip = app_code_explain_number_colored(text, overlap_color);
     return chip;
   }
+  function raw(text) {
+    "a length before the floor, or a name holding one, which may be negative, as a chip in the length colour";
+    let chip = app_code_explain_number_colored(text, length_color);
+    return chip;
+  }
   let spaced_minus = js_code_binary_spaced_nb("", minus, "");
   let length_worked = app_code_explain_code_colored_inline(
     ["2", spaced_minus, "3"],
     [end_color, plain, start_color],
   );
   let spaced_times = js_code_binary_spaced_nb("", times, "");
-  function product_worked(first, second) {
-    "first * second as one code chip, both sizes in the overlap colour";
+  function product_worked(first, second, color) {
+    "first * second as one code chip, both sizes in the given colour";
     let chip = app_code_explain_code_colored_inline(
       [first, spaced_times, second],
-      [overlap_color, plain, overlap_color],
+      [color, plain, color],
     );
     return chip;
   }
   let floor_worked = app_code_explain_code_colored_inline(
     [max_name + "(", "-1", ", ", "0", ")"],
-    [plain, overlap_color, plain, overlap_color, plain],
+    [plain, length_color, plain, overlap_color, plain],
   );
   function apart_draw(box) {
     "two rectangles apart corner to corner, so they share no square";
@@ -179,21 +186,21 @@ export function app_code_lesson_statement_name_shared_squares_none() {
     " and the earlier end is ",
     v4,
   ]);
-  let v5 = size("-1");
+  let v5 = raw("-1");
   let draw4 = app_code_explain_said([
     "So the width is ",
     length_worked,
     ", which is ",
     v5,
   ]);
-  let v6 = size("-1");
+  let v6 = raw("-1");
   let draw5 = app_code_explain_said([
     "And the height is ",
     length_worked,
     ", which is ",
     v6,
   ]);
-  let v7 = product_worked("-1", "-1");
+  let v7 = product_worked("-1", "-1", length_color);
   let v8 = size("1");
   let draw6 = app_code_explain_said(["", v7, " is ", v8]);
   let v9 = size("0");
@@ -226,7 +233,7 @@ export function app_code_lesson_statement_name_shared_squares_none() {
   }
   let v11 = size("0");
   let draw8 = app_code_explain_said(["", floor_worked, " is ", v11]);
-  let v12 = product_worked("0", "0");
+  let v12 = product_worked("0", "0", overlap_color);
   let v13 = size("0");
   let v14 = size("0");
   let draw9 = app_code_explain_said([
@@ -240,8 +247,8 @@ export function app_code_lesson_statement_name_shared_squares_none() {
     v14,
     " squares",
   ]);
-  let v15 = size(width);
-  let v16 = size(height);
+  let v15 = raw(width);
+  let v16 = raw(height);
   let draw10 = app_code_explain_said([
     "Suppose the ",
     shared_word,
@@ -258,6 +265,39 @@ export function app_code_lesson_statement_name_shared_squares_none() {
     overlap_word,
     ":",
   ]);
+  let try_said = app_code_explain_said([
+    "But what happens if we try to solve the ",
+    overlap_word,
+    "?",
+  ]);
+  let v17 = size("1");
+  let solved_said = app_code_explain_said([
+    "So when we solve the ",
+    overlap_word,
+    ", we get ",
+    v17,
+  ]);
+  let v18 = size("0");
+  let v19 = size("1");
+  let should_said = app_code_explain_said([
+    "So the solved ",
+    overlap_word,
+    " should be ",
+    v18,
+    ", not ",
+    v19,
+  ]);
+  let v20 = size("0");
+  let v21 = size("1");
+  let how_said = app_code_explain_said([
+    "How can we make the solved ",
+    overlap_word,
+    " be ",
+    v20,
+    " instead of ",
+    v21,
+    "?",
+  ]);
   let lesson = app_code_lesson_statement_formula({
     words: "Squares shared when rectangles may not overlap",
     title_code: line_area,
@@ -271,15 +311,19 @@ export function app_code_lesson_statement_name_shared_squares_none() {
     explain: [
       draw,
       apart_draw,
+      try_said,
       draw2,
       draw3,
       draw4,
       draw5,
       draw6,
+      solved_said,
       draw7,
+      should_said,
       app_code_explain_container_next,
+      how_said,
       floor_recalled_draw,
-      ["We can do the same for the width and for the height:"],
+      ["We can do the same for the width and for the height here:"],
       draw8,
       draw9,
       app_code_explain_container_next,
@@ -287,7 +331,10 @@ export function app_code_lesson_statement_name_shared_squares_none() {
       draw11,
     ],
     decoys: null,
-    example_pointers: [[[width, height, w, h, area, "-1", "0"], overlap_color]],
+    example_pointers: [
+      [[width, height, "-1"], length_color],
+      [[w, h, area, "0"], overlap_color],
+    ],
   });
   return lesson;
 }

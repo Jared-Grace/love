@@ -1460,6 +1460,26 @@ export function bible_glyph_characters() {
       name: "astonished",
       character: "😲",
     },
+    {
+      name: "running",
+      character: "🏃",
+    },
+    {
+      name: "loudly_crying",
+      character: "😭",
+    },
+    {
+      name: "new_button",
+      character: "🆕",
+    },
+    {
+      name: "thermometer_face",
+      character: "🤒",
+    },
+    {
+      name: "open_book",
+      character: "📖",
+    },
   ];
   return characters;
 }
