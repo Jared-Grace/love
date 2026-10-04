@@ -1,3 +1,4 @@
+import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
@@ -30,7 +31,7 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   ("Across first and then down, as Do two rectangles overlap does, so in_c comes before in_r. The first two lines are longer than 30 characters; only the title line has to fit, and let inside = in_c && in_r; does. Not picked: the names x and y, which no lesson uses yet, where c and r are the grid lessons' own.");
   ("The answers are only true or false, so a question offers two buttons. Each screen asks two squares inside and two outside; the squares outside are next to an edge, some by their column and some by their row, and some on the right or bottom edge itself, so c <= right would be caught.");
   ("Left and top are starts and wear the start colour, right and bottom are ends and wear the end colour, as in the rectangle lessons. The square and its column and row wear the overlap colour, the colour the picture fills it with.");
-  ("The writing is a first draft by Claude, 2026-10-04, not yet the human's.");
+  ("The writing was a first draft by Claude 2026-10-04, then reworded by the human the same day, who asked for the rectangle to be coloured: the word wears the colour the picture fills the rectangle with, the first rectangle's colour from Do two rectangles overlap.");
   let names = ["left", "right", "top", "bottom", "c", "r"];
   let left = list_get(names, 0);
   let right = list_get(names, 1);
@@ -154,10 +155,22 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   let right_arrow = app_code_arrow_inline_draw(0);
   let down_arrow = app_code_arrow_inline_draw(90);
   let square_word = app_code_explain_word_colored("square", square_color);
+  let rectangle_color = app_code_highlight_color_fourth();
+  let rectangle_word = app_code_explain_word_colored(
+    "rectangle",
+    rectangle_color,
+  );
+  let one = app_code_explain_number_colored("1", plain);
   let is_true = app_code_explain_number_colored("true", plain);
   let is_false = app_code_explain_number_colored("false", plain);
   let draw = app_code_explain_said([
-    "Here is a rectangle, and a ",
+    "Here is a ",
+    rectangle_word,
+    ", and a ",
+    one,
+    " x ",
+    one,
+    " ",
     square_word,
     ":",
   ]);
@@ -166,7 +179,9 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   let v3 = from("1");
   let v4 = till("3");
   let draw2 = app_code_explain_said([
-    "The rectangle goes across ",
+    "The ",
+    rectangle_word,
+    " goes across ",
     right_arrow,
     " from ",
     v,
@@ -216,7 +231,8 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
     is_true,
     ", so the ",
     square_word,
-    " is inside the rectangle",
+    " is inside the ",
+    rectangle_word,
   ]);
   let v9 = at("4");
   let draw7 = app_code_explain_said([
@@ -228,9 +244,12 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   ]);
   let v10 = till("4");
   let draw8 = app_code_explain_said([
-    "It starts on the right edge, ",
+    "The ",
+    square_word,
+    " starts on the right edge, ",
     v10,
-    ", so it is outside",
+    ", so it is outside of the ",
+    rectangle_word,
   ]);
   let v11 = less_worked("4", "4");
   let less_chip = app_code_explain_number_colored(less, plain);
@@ -252,7 +271,9 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   let v16 = at(c);
   let v17 = at(r);
   let draw10 = app_code_explain_said([
-    "Suppose the rectangle goes across from ",
+    "Suppose the ",
+    rectangle_word,
+    " goes across from ",
     v12,
     " to ",
     v13,
@@ -270,7 +291,23 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   let draw11 = app_code_explain_said([
     "Here is code that checks whether the ",
     square_word,
-    " is inside the rectangle:",
+    " is inside the ",
+    rectangle_word,
+    ":",
+  ]);
+  let draw_size = app_code_explain_said([
+    "Because the ",
+    square_word,
+    " is ",
+    one,
+    " x ",
+    one,
+    " we only need the location of the ",
+    square_word,
+    ", not the size of the ",
+    square_word,
+    " or another point of the ",
+    square_word,
   ]);
   let v18 = square_draw(2, 2);
   let v19 = square_draw(4, 2);
@@ -300,6 +337,7 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
       draw9,
       app_code_explain_container_next,
       draw10,
+      draw_size,
       draw11,
     ],
     decoys: null,

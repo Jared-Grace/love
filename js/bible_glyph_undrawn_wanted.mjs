@@ -35,14 +35,6 @@ export function bible_glyph_undrawn_wanted() {
         "the Hebrew word is the bone and it is also the selfsame thing. On that very day is this word, and so is the same. A bone drawn in those places puts a skeleton in a sentence about a date. Ninety wantings out of a hundred and fifteen is a large majority and it is still the wrong shape, because the quarter that is left is not a rarer sense but a different one.",
     },
     {
-      gloss: "judge",
-      strong: "8199",
-      wordings_for: 119,
-      wordings_total: 199,
-      because:
-        "the Hebrew word is as much the act of governing as the person who does it, and sixty in every hundred of its wordings are the verb. The balance picture is already seated on the Hebrew word for a judgment, so a judge picture here would put two marks from the same family on two different parts of speech and leave a reader to work out which is which.",
-    },
-    {
       gloss: "anger",
       root: "aph",
       strong: "639",
@@ -86,15 +78,6 @@ export function bible_glyph_undrawn_wanted() {
       wordings_total: 96,
       because:
         "the wing of a bird, the edge of a garment, the corner of the land and the skirt a man spreads over a woman are one word. A wing picture on the corner of a field is a bird where the text has a boundary.",
-    },
-    {
-      gloss: "joy",
-      root: "samach",
-      strong: "8055",
-      wordings_for: 148,
-      wordings_total: 243,
-      because:
-        "this number is the verb, not the feeling. Its wordings are rejoice and be glad and made glad, and a picture of joy sitting where the sentence has a thing being done would read as a noun and stop the line from working.",
     },
     {
       gloss: "salt",

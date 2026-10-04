@@ -104,6 +104,7 @@ export function bible_glyph_roots_hebrew() {
   "ELOHIM AND EL ARE THE BURNING HEART SINCE 2026-10-03, QANNA IS THE STEAMING FACE, AND ESH IS THE FIRE. The reasons are written once, on the Greek table, because it was one decision across both. Older paragraphs here that say the fire is God, or that refuse the altar as meat beside fire, were written while the flame alone meant God, and that is no longer so. Hebrew has one word for God and for the false gods, so the seat cannot tell them apart; the English can, because its translators wrote God with a capital and gods without one, and the page draws a word whose English says god or gods in small letters as the carved stone figure that gillulim, idols, already wears.";
   "NAPHAL, SHAMAR, ZAQEN, OTH, PATHACH, SHAAL AND THE NUMBERS FOUR, FIVE AND TEN WERE SEATED 2026-10-03 beside their Greek partners, whose reasons the Greek table holds. Four more are Hebrew only. Karath is the scissors, because it is to cut, and to make a covenant is in Hebrew to cut one. Tsaba is the military helmet, so the LORD of hosts reads as the LORD of armies, which is what the word says. Yasha and yeshuah take the lifebuoy that soter already wears in Greek. Shakab, to lie down, joins mishkab, the bed it is named from. Aph was seated on the angry face and taken off within the hour, because the undrawn list already refuses it for being the nose as often as one word in five; Greek orge has no such second sense and keeps the face.";
   "JERUSALEM WAS TAKEN BACK TO UNDRAWN AND WITH WAS NOT SEATED, BOTH 2026-10-03, each because a gate refused the picture. Jerusalem was the city joined to peace, but peace has no picture: it is spelled in letters on purpose, since the peace symbol was refused as a movement's badge. So the pair drew half a picture and half a word, and the gate that keeps a group's halves both drawn went red. It was already the weakest of the names. Im and meta, with, were offered as two persons side by side, chosen by the human, and refused by the gate that forbids one picture twice in a group: with no change of shape at the join, the reader has to count, and two persons would also read as people.";
+  "ONE ROOT, ONE PICTURE, WHATEVER THE PART OF SPEECH - the human's rule, given 2026-10-04 with loved, love, beloved and loving as the example. The verb, the noun, the person who does it and the word that describes it are one root and wear one root picture, because grammar is never drawn and the part of speech is grammar. Two written refusals fell to it the same day, both of which had argued that a verb and its noun must not share: samach, rejoice, now joins simchah, joy, on the beaming face, and shaphat, judge and to judge, now joins mishpat, judgment, on the scales - the refusal had itself named the scales as the same family. The refusals that argue one word carries several MEANINGS - nose and anger, head and chief, book and letter - are a different argument and still stand.";
   "A NINTH BATCH, 2026-10-04, WITH NEW PICTURES. SAPHAR, COUNT, IS THE ABACUS, and the one who counts, the scribe, is the same number in Strong's, so he wears it too. SIMCHAH, JOY, IS THE BEAMING FACE. Rejected: the smile, which ashre, blessed, holds in this table. Samach, the verb rejoice, stays out under its written refusal in the wanted list: a feeling's face where the sentence has a thing being done reads as a noun. Sepher, book, was drawn as a closed book and withdrawn under its own written refusal: the word is also the letter and the deed, and a bound volume misdraws both. SHACHAT, RUIN OR CORRUPT, IS THE COLLISION: a thing smashed. It is not abad, perish, which still waits for a picture of its own. SABAB, TURN AROUND OR SURROUND, JOINS SABIB, AROUND, which grows from it. Not seated, and why: naar, boy or young man, would want the boy, which ben, son, holds; tsaphon, north, has no picture that is north rather than up; matteh and shebet, staff and tribe, are two words and want two pictures, and neither has an honest one yet.";
   "AN EIGHTH BATCH, 2026-10-04. CHEMAH, WRATH, IS THE ANGRY FACE the Greek orge holds: the word is heat, and its wordings are wrath and rage. Aph stays held back because it is the nose as well as the anger; chemah is never a face part, so the refusal written for aph does not reach it. NASAH, TEST, IS THE TEST TUBE, shared with the Greek peirazo: God tested Abraham, and Israel tested God at Massah, and the picture says only that a thing was put to the proof.";
   "A SEVENTH BATCH, 2026-10-04. NABA, PROPHESY, JOINS NABI, THE PROPHET, ON THE MEGAPHONE; KABAD, BE HEAVY OR HONOR, JOINS KABOD, GLORY, ON THE STAR - glory is the weight of a thing, the same root; YATAB, BE GOOD, JOINS TOB, GOOD, ON THE THUMB UP; CHANAH, CAMP, JOINS MACHANEH, THE CAMP. Each is one family. SHEQER, THE LIE, IS THE LYING FACE, shared with the Greek pseudos. TOEBAH, THE ABOMINATION, IS THE VOMITING FACE: a thing that turns the stomach, which is what the word says. Rejected: the pig, which is one unclean animal and not the word. BOSH, BE ASHAMED, IS THE FLUSHED FACE, shared with the Greek aischuno. RAPHA, HEAL, IS THE BANDAGE, shared with the Greek therapeuo. ASAR, BIND, IS THE KNOT, shared with the Greek deo. BEKOR, FIRSTBORN, IS THE GOLD MEDAL JOINED TO THE BABY: first and child, both already bought. Not seated, and why: yamin, right hand, would want the pointing hand, which ki holds.";
@@ -150,8 +151,12 @@ export function bible_glyph_roots_hebrew() {
     },
     {
       root: "simchah",
-      gloss: "joy",
+      gloss: "joy; rejoice",
       words: [
+        {
+          strong: "8055",
+          glyph: "beaming",
+        },
         {
           strong: "8057",
           glyph: "beaming",
@@ -1878,6 +1883,10 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "4941",
+          glyph: "scales",
+        },
+        {
+          strong: "8199",
           glyph: "scales",
         },
       ],
