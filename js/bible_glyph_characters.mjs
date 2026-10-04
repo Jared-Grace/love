@@ -1332,6 +1332,10 @@ export function bible_glyph_characters() {
       name: "curving_up",
       character: "⤴️",
     },
+    {
+      name: "fist",
+      character: "✊",
+    },
   ];
   return characters;
 }
