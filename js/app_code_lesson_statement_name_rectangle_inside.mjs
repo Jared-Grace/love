@@ -292,18 +292,14 @@ export function app_code_lesson_statement_name_rectangle_inside() {
   let out_draw = rectangles_draw([2, 5, 2, 4]);
   let v9 = within_worked("1", "2", "5", "4");
   let out_said = app_code_explain_said([
-    "It sticks out on the right: ",
+    "Visually, it sticks out on the right, so across is: ",
     v9,
-    " is ",
+    " which is ",
     is_false,
   ]);
   let not_said = app_code_explain_said([
-    "Down is still ",
+    "Down has the same numbers as before, so it is still ",
     is_true,
-    ", but the ",
-    second_rectangle,
-    " is not inside the ",
-    first,
   ]);
   let need_said = app_code_explain_said([
     "So we need both: across ",
