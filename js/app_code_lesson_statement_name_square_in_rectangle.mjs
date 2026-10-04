@@ -199,25 +199,21 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
     " to ",
     v4,
   ]);
-  let x_chip = at(x);
-  let y_chip = at(y);
   let v5 = at("2");
   let v6 = at("2");
   let draw3 = app_code_explain_said([
-    "The ",
+    "The left of the ",
     square_word,
-    " starts at line ",
-    v5,
-    " across and line ",
-    v6,
-    " down, so ",
-    x_chip,
     " is ",
     v5,
-    " and ",
-    y_chip,
+    " across",
+  ]);
+  let top_said = app_code_explain_said([
+    "The top of the ",
+    square_word,
     " is ",
     v6,
+    " down",
   ]);
   let seen_said = app_code_explain_said([
     "We can see that the ",
@@ -353,6 +349,7 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
       v18,
       draw2,
       draw3,
+      top_said,
       seen_said,
       numbers_said,
       app_code_explain_container_next,
