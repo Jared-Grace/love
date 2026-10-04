@@ -1004,6 +1004,10 @@ export function bible_glyph_artwork_names() {
       glyph: "back",
       asset: "Back arrow",
     },
+    {
+      glyph: "curving_right",
+      asset: "Left arrow curving right",
+    },
   ];
   return names;
 }
