@@ -1220,6 +1220,34 @@ export function bible_glyph_artwork_names() {
       glyph: "collision",
       asset: "Collision",
     },
+    {
+      glyph: "doing",
+      asset: "Play button",
+    },
+    {
+      glyph: "doer",
+      asset: "Construction worker",
+    },
+    {
+      glyph: "thing",
+      asset: "Small blue diamond",
+    },
+    {
+      glyph: "describing",
+      asset: "Small orange diamond",
+    },
+    {
+      glyph: "manner",
+      asset: "Wavy dash",
+    },
+    {
+      glyph: "more",
+      asset: "Upwards button",
+    },
+    {
+      glyph: "most",
+      asset: "Fast up button",
+    },
   ];
   return names;
 }

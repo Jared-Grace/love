@@ -930,7 +930,7 @@ export function bible_glyph_chapter_mrk05() {
         "“$no_entry",
         "$fear,",
         "only",
-        "$anchor.”",
+        "$anchor+doing.”",
       ],
     },
     {

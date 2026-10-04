@@ -998,7 +998,7 @@ export function bible_glyph_chapter_mrk08() {
           "this",
           "adulterous",
           "$plus",
-          "$bow",
+          "$bow+doer",
           "generation,",
           "$plus",
           "the",

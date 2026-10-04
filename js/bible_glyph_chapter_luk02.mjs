@@ -273,7 +273,7 @@ export function bible_glyph_chapter_luk02() {
         "$pointing",
         "today",
         "a",
-        "$rescue",
+        "$rescue+doer",
         "has",
         "been",
         "born",

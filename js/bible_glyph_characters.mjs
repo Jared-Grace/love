@@ -83,6 +83,9 @@ export function bible_glyph_characters() {
   "IT IS NOT PAIRED WITH A RIGHTWARD ARROW, AND LEAVING THAT PAIR UNBUILT WAS THE DECISION. Every preposition here wants an arrow, so the first one taken would have dragged the rest in after it, and a page where five different relations are five arrows of five angles is a page a reader cannot learn. A near-miss pair is worse than two unrelated marks, and from-and-through would have been exactly that: the eye reads leftward and rightward as from and to, which is not what through says. The rightward arrow is therefore kept free rather than spent, so that whatever genuinely opposes apo can have it later.";
   "WHAT WAS REFUSED IN THE SAME PASS, WITH THE MEASUREMENT THAT REFUSED IT. Dia stands six hundred and sixty six times and its best wording covers a hundred and eighty five, kata four hundred and seventy two with its best covering sixty one, para a hundred and ninety two with its best covering fifty seven - and para's best wording is from, the same English apo already takes, so the two would have taught a reader that one word is another. Sun was refused for being small rather than split. A count alone says a word is worth drawing; only the wordings say a word CAN be drawn, and these three were common enough to look ready and spread thin enough not to be.";
   "KATA WAS SEATED ANYWAY AND THAT IS AN EXCEPTION WITH A REASON, not the rule above being ignored. Its spread is English's and not Greek's: down, against and according to are one word in the original doing one thing, and the aim of this Bible is the original's word rather than the translation's three. It takes the downward hand, which the Hebrew et already carries and which is therefore free here, and it makes a true mirror of the upward hand epi already wears - upon and down, one hand, two directions, the pair teaching itself the way the in-tray and the out-tray do. If any sentence in this paragraph is wrong it is that one, and it is the one to overturn.";
+  "SEVEN MARKS SAY WHICH FORM OF A ROOT A WORD IS, AND NONE OF THEM IS EVER DRAWN ALONE (2026-10-04). The person reading this Bible asked for one picture per original word, so that loved and beloved differ the way agapao and agapetos differ, and said a mark like -ing was fine. So a root keeps its one picture and its other words add a second: doing for the verb, doer for the one who does it, thing for the abstract noun, describing for the adjective, manner for the adverb, more and most for the comparative and the superlative. Each stands only as the second half of a group and never first and never alone, which is what keeps it from being read as a word of its own.";
+  "THE DOER IS A WORKER AND NOT THE PLAIN BUST, because the bust was already me. Abstract shapes were tried for it and refused: a blue or orange diamond or a triangle sits beside the thing and describing marks and is told apart from them by size or colour alone, which a reader on a phone does not do. A worker is what the Greek ending says - the one who does it - and scripture itself speaks of workers of lawlessness, so a sinner drawn as missing the mark and a worker is not a stretch.";
+  "THE OTHER SIX ARE SHAPES AND BUTTONS ON PURPOSE. A form mark must not look like a thing, or the reader would take a second noun into the sentence; a play button, two diamonds, a wavy dash and two upward buttons are what a phone already shows for an action, a quality, a way of doing and going higher, and none of them is a thing in the world.";
   let characters = [
     {
       name: "cross",
@@ -1535,6 +1538,34 @@ export function bible_glyph_characters() {
     {
       name: "collision",
       character: "💥",
+    },
+    {
+      name: "doing",
+      character: "▶️",
+    },
+    {
+      name: "doer",
+      character: "👷",
+    },
+    {
+      name: "thing",
+      character: "🔹",
+    },
+    {
+      name: "describing",
+      character: "🔸",
+    },
+    {
+      name: "manner",
+      character: "〰️",
+    },
+    {
+      name: "more",
+      character: "🔼",
+    },
+    {
+      name: "most",
+      character: "⏫",
     },
   ];
   return characters;
