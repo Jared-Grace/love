@@ -18,6 +18,7 @@ export function html_bottom_when_short(component) {
   let element = html_component_element_get(component);
   let selector = "[" + html_scroll_body_attribute_name() + "]";
   let removes = [];
+  let connected_was = false;
   let remove2 = html_on_resize(update);
   removes.push(remove2);
   let page = html_component_wrap(document.documentElement);
@@ -56,11 +57,15 @@ export function html_bottom_when_short(component) {
   removes.push(observer_stop);
   function update() {
     if (not(element.isConnected)) {
-      for (let remove of removes) {
-        remove();
+      ("Off the page is two different things, and only one of them is an ending. A screen is often built before it is put on the page, so the first look can come while it is not there YET - stopping then left it never pushed at all on a desktop, and never told of the verses on a phone. So it stops only once it has been on the page and is not any more.");
+      if (connected_was) {
+        for (let remove of removes) {
+          remove();
+        }
       }
       return;
     }
+    connected_was = true;
     element.style.paddingTop = "0px";
     let box = element.closest(selector);
     let missing = null;
