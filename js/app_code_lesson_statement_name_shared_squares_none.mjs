@@ -234,6 +234,7 @@ export function app_code_lesson_statement_name_shared_squares_none() {
   }
   let v11 = size("0");
   let draw8 = app_code_explain_said(["", floor_worked, " is ", v11]);
+  let max_chip = app_code_explain_number_colored(max_name, plain);
   let v12 = product_worked("0", "0", overlap_color);
   let v13 = size("0");
   let v14 = size("0");
@@ -242,7 +243,9 @@ export function app_code_lesson_statement_name_shared_squares_none() {
     v12,
     " is ",
     v13,
-    ", so they ",
+    ", so when we use ",
+    max_chip,
+    " they ",
     share_word,
     " ",
     v14,
@@ -273,7 +276,7 @@ export function app_code_lesson_statement_name_shared_squares_none() {
   ]);
   let v17 = size("1");
   let solved_said = app_code_explain_said([
-    "So when we solve the ",
+    "So when we try to solve the ",
     overlap_word,
     ", we get ",
     v17,
