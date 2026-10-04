@@ -21,7 +21,6 @@ export async function app_verses_draw_restore({
   reroll,
   copy,
   verse_groups,
-  draw_restore,
 }) {
   arguments_assert(arguments, 1);
   each(counts, count_each);
@@ -60,6 +59,6 @@ export async function app_verses_draw_restore({
   let card4 = app_shared_container_blue(content);
   app_verses_card4_refresh(verse_groups, card4);
   app_shared_footer(content);
-  await draw_restore();
+  ("bringing the saved verses back belongs to the caller, not to here, because drawing them needs the card returned just below and the caller has nowhere to have put it until this returns; a restore set off from in here read that name while the line giving it a value had not finished, and the page died before it drew anything");
   return card4;
 }

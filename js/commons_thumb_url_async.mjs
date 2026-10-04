@@ -1,3 +1,4 @@
+import { commons_user_agent } from "./commons_user_agent.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 export async function commons_thumb_url_async(title, width) {
@@ -13,7 +14,11 @@ export async function commons_thumb_url_async(title, width) {
       titles: "File:" + title,
     });
     let address = "https://commons.wikimedia.org/w/api.php?" + query;
-    let response = await fetch(address);
+    let response = await fetch(address, {
+      headers: {
+        "User-Agent": commons_user_agent(),
+      },
+    });
     let body = await response.json();
     let pages = body.query.pages;
     let keys = object_property_names(pages);
