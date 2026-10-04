@@ -1,4 +1,3 @@
-import { html_viewport_readout_when_asked } from "./html_viewport_readout_when_asked.mjs";
 import { html_scroll_body_mark } from "./html_scroll_body_mark.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_viewport_height_visible } from "./html_viewport_height_visible.mjs";
