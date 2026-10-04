@@ -1352,6 +1352,26 @@ export function bible_glyph_characters() {
       name: "safety_pin",
       character: "🧷",
     },
+    {
+      name: "telescope",
+      character: "🔭",
+    },
+    {
+      name: "butterfly",
+      character: "🦋",
+    },
+    {
+      name: "balloon",
+      character: "🎈",
+    },
+    {
+      name: "pleading",
+      character: "🥺",
+    },
+    {
+      name: "microphone",
+      character: "🎙️",
+    },
   ];
   return characters;
 }
