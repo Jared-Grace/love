@@ -1328,6 +1328,10 @@ export function bible_glyph_characters() {
       name: "information",
       character: "ℹ️",
     },
+    {
+      name: "curving_up",
+      character: "⤴️",
+    },
   ];
   return characters;
 }
