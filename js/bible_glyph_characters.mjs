@@ -1392,6 +1392,10 @@ export function bible_glyph_characters() {
       name: "zero",
       character: "0️⃣",
     },
+    {
+      name: "hatching_chick",
+      character: "🐣",
+    },
   ];
   return characters;
 }

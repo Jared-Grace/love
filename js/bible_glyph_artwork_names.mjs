@@ -1076,6 +1076,10 @@ export function bible_glyph_artwork_names() {
       glyph: "zero",
       asset: "Keycap 0",
     },
+    {
+      glyph: "hatching_chick",
+      asset: "Hatching chick",
+    },
   ];
   return names;
 }
