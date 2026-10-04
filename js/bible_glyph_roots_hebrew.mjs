@@ -104,6 +104,7 @@ export function bible_glyph_roots_hebrew() {
   "ELOHIM AND EL ARE THE BURNING HEART SINCE 2026-10-03, QANNA IS THE STEAMING FACE, AND ESH IS THE FIRE. The reasons are written once, on the Greek table, because it was one decision across both. Older paragraphs here that say the fire is God, or that refuse the altar as meat beside fire, were written while the flame alone meant God, and that is no longer so. Hebrew has one word for God and for the false gods, so the seat cannot tell them apart; the English can, because its translators wrote God with a capital and gods without one, and the page draws a word whose English says god or gods in small letters as the carved stone figure that gillulim, idols, already wears.";
   "NAPHAL, SHAMAR, ZAQEN, OTH, PATHACH, SHAAL AND THE NUMBERS FOUR, FIVE AND TEN WERE SEATED 2026-10-03 beside their Greek partners, whose reasons the Greek table holds. Four more are Hebrew only. Karath is the scissors, because it is to cut, and to make a covenant is in Hebrew to cut one. Tsaba is the military helmet, so the LORD of hosts reads as the LORD of armies, which is what the word says. Yasha and yeshuah take the lifebuoy that soter already wears in Greek. Shakab, to lie down, joins mishkab, the bed it is named from. Aph was seated on the angry face and taken off within the hour, because the undrawn list already refuses it for being the nose as often as one word in five; Greek orge has no such second sense and keeps the face.";
   "JERUSALEM WAS TAKEN BACK TO UNDRAWN AND WITH WAS NOT SEATED, BOTH 2026-10-03, each because a gate refused the picture. Jerusalem was the city joined to peace, but peace has no picture: it is spelled in letters on purpose, since the peace symbol was refused as a movement's badge. So the pair drew half a picture and half a word, and the gate that keeps a group's halves both drawn went red. It was already the weakest of the names. Im and meta, with, were offered as two persons side by side, chosen by the human, and refused by the gate that forbids one picture twice in a group: with no change of shape at the join, the reader has to count, and two persons would also read as people.";
+  "A SECOND BATCH, 2026-10-04, UNDER THE SAME STANDING WORD. MALE, FILL, IS THE FULL BATTERY, shared with the Greek pleroo: filled to the top. Rejected: the pouring jug, which shaphak, pour, will want. ESRIM, TWENTY, IS THE KEYCAPS TWO AND ZERO: a two-digit join reads twenty and nothing else, while two tens side by side would read ten ten. It is a different word from shenayim, two, so it does not borrow two's keycap alone. GEBUL, BORDER, IS PASSPORT CONTROL: the line where one land stops and the next begins; a modern thing no Bible word names. Rejected: the construction barrier, which reads blocked; the map, which is half of Abraham.";
   "A BATCH SEATED ON 2026-10-04 UNDER THE HUMAN'S STANDING WORD TO KEEP PICKING. SHAM, THERE, IS THE TELESCOPE: the far place, as the flashlight is zeh, the near thing; the Greek ekei and ekeinos take it too. NA, PLEASE, IS THE PLEADING FACE: the asking look that softens a request; the praying hands were not taken because they are already prayer. NEUM, DECLARATION, as in declares the LORD, IS THE STUDIO MICROPHONE: a statement put on the record. Rejected: the speech bubble, which is amar, say; the speaking head, which is dabar; the loudspeaker, which is proclaim. HEN, BEHOLD OR LO (2005), JOINS HINNEH'S ROW with the exclamation mark: hinneh is hen lengthened, one family. Not seated, and why: gam, also, has no sign yet that is not the plus sign of the and-word; koh, thus, waits on the equals sign, held back on purpose; tachat, under, and tavek, among, are next.";
   "ET, WITH (854), IS THE SAFETY PIN (2026-10-04), chosen under the human's standing word to pick: another fastener, because it is another word for with, and two words need two pictures. Its row is named et_with because et (853), the sign of the object, is a different word drawn as the down hand. Rejected: the single paperclip, which looks too much like im's linked paperclips to tell apart at reading size; the link, which is hayah, be; the magnet, which is qarab, draw near; and the handshake, which is Levi.";
   "IM, WITH, IS THE LINKED PAPERCLIPS (2026-10-04), the same picture as the Greek meta: two things fastened together. It is the commonest undrawn Hebrew word left, about nine hundred and forty uses. Its row is named im_with to keep it apart from im_if. The other Hebrew with, et (854), is a different word and needs a different picture, so it was not given this one. Rejected: a person joined to the sending hand, which reads send a person; two people, which reads people; the hug, which claims affection; and the handshake, which is Levi.";
@@ -130,6 +131,36 @@ export function bible_glyph_roots_hebrew() {
   "HINNEH IS THE EXCLAMATION MARK AND ENOSH IS THE BEARDED MAN, BOTH SEATED 2026-10-03 FOR FREQUENCY. Hinneh says look and asks the reader to attend; the Greek table holds the reasons, since idou takes the same mark for the same word. Enosh is the man and the men, and Strong's gives ish as its contraction, so it joins ish's row and its picture rather than buying a second one; adam, the human, keeps its own.";
   "THREE OBVIOUS SEATS WERE REFUSED THE SAME HOUR BECAUSE THE PICTURE IS SPENT INSIDE THIS TABLE. Kaph is a palm and yad already holds the hand; the mouth is seated on the speaking verb, so peh would make every mouth read as speaking. Each needs a picture of its own rather than a borrowed one.";
   let roots = [
+    {
+      root: "male",
+      gloss: "fill; be full",
+      words: [
+        {
+          strong: "4390",
+          glyph: "battery",
+        },
+      ],
+    },
+    {
+      root: "esrim",
+      gloss: "twenty",
+      words: [
+        {
+          strong: "6242",
+          glyph: "two+zero",
+        },
+      ],
+    },
+    {
+      root: "gebul",
+      gloss: "border; territory",
+      words: [
+        {
+          strong: "1366",
+          glyph: "passport_control",
+        },
+      ],
+    },
     {
       root: "sham",
       gloss: "there",
