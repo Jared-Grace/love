@@ -64,6 +64,7 @@ export function js_global_names() {
     "CustomEvent",
     "DOMParser",
     "DOMPoint",
+    "Element",
     "Event",
     "File",
     "FileReader",
