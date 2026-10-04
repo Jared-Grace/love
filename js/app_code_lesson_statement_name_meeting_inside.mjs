@@ -191,7 +191,9 @@ export function app_code_lesson_statement_name_meeting_inside() {
   let v_e = till("11");
   let v_e1 = till("12");
   let draw3 = app_code_explain_said([
-    "And it ends before (",
+    "And the ",
+    second_meeting,
+    " ends before (",
     v_e,
     ") the ",
     first_one,
