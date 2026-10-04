@@ -25,7 +25,6 @@ export function html_bar_content(root) {
   });
   let bar = html_div(shell);
   html_style_flex(bar, "0 0 auto");
-  html_viewport_readout_when_asked(bar);
   let content = html_div(shell);
   html_style_assign(content, {
     flex: "1 1 auto",
