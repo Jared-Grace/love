@@ -1,3 +1,6 @@
+import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
+import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
+import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
 import { app_code_meetings_hours_draw } from "./app_code_meetings_hours_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
@@ -29,7 +32,7 @@ export function app_code_lesson_statement_name_meeting_inside() {
   ("Three lines, because let inside = s1 <= s2 && e2 <= e1; is longer than the 30 characters a title line may have. after and before are said of the second meeting: it starts at or after the first starts, and ends at or before the first ends. The check is one way round, the second inside the first; the writing says so, and a question with the first inside the second answers false.");
   ("<= and not <, the other way from Do two meetings overlap: a meeting that starts when the other starts is still inside it, and the writing shows that case. Every screen asks a pair that shares a start or an end, because it is the case a < would get wrong.");
   ("The answers are only true or false, so a question offers two buttons. Each screen asks two pairs where the second is inside and two where it is not: one of those crosses an end of the first, and the other is the first inside the second, or two meetings apart.");
-  ("Start hours wear the start colour and end hours the end colour, as in Do two meetings overlap, which is the reminder.");
+  ("Start hours wear the start colour and end hours the end colour, as in Do two meetings overlap, which is the reminder. Words naming a meeting wear the colour the picture fills that meeting with, the first purple and the second orange, asked by the human 2026-10-04; it, standing for a meeting, stays plain.");
   ("The writing was a first draft by Claude 2026-10-04; the first two screens were then worded by the human the same day, who asked for a picture of the two meetings. Two slips in that wording were mended rather than copied, and reported back: the ends were written as 10 and 11 where the example ends at 11 and 12, and the first check was written as the second meeting having begun by the time the first starts, which is the wrong way round for s1 <= s2.");
   let names = ["s1", "e1", "s2", "e2"];
   let s = list_first(names);
@@ -135,16 +138,39 @@ export function app_code_lesson_statement_name_meeting_inside() {
   let is_false = app_code_explain_number_colored("false", plain);
   let at_most_chip = app_code_explain_number_colored(at_most, plain);
   let less_chip = app_code_explain_number_colored(less, plain);
+  let first_color = app_code_highlight_color_fourth();
+  let second_color = app_code_highlight_color_fifth();
+  function one(text) {
+    "words naming the first meeting, in the colour the picture fills it with";
+    let word = app_code_explain_word_colored(text, first_color);
+    return word;
+  }
+  function two(text) {
+    "words naming the second meeting, in the colour the picture fills it with";
+    let word = app_code_explain_word_colored(text, second_color);
+    return word;
+  }
+  let first_meeting = one("first meeting");
+  let first_one = one("first one");
+  let first = one("first");
+  let second_meeting = two("second meeting");
+  let second = two("second");
   let v = from("8");
   let v2 = till("12");
   let v3 = from("9");
   let v4 = till("11");
+  let v18 = one("one meeting");
+  let v19 = two("another");
   let draw = app_code_explain_said([
-    "Suppose one meeting is from ",
+    "Suppose ",
+    v18,
+    " is from ",
     v,
     " to ",
     v2,
-    " o'clock, and another is from ",
+    " o'clock, and ",
+    v19,
+    " is from ",
     v3,
     " to ",
     v4,
@@ -152,9 +178,13 @@ export function app_code_lesson_statement_name_meeting_inside() {
   let v_s = from("9");
   let v_s1 = from("8");
   let draw2 = app_code_explain_said([
-    "The second meeting starts (",
+    "The ",
+    second_meeting,
+    " starts (",
     v_s,
-    ") after the first one starts (",
+    ") after the ",
+    first_one,
+    " starts (",
     v_s1,
     ")",
   ]);
@@ -163,7 +193,9 @@ export function app_code_lesson_statement_name_meeting_inside() {
   let draw3 = app_code_explain_said([
     "And it ends before (",
     v_e,
-    ") the first one ends (",
+    ") the ",
+    first_one,
+    " ends (",
     v_e1,
     ")",
   ]);
@@ -174,14 +206,32 @@ export function app_code_lesson_statement_name_meeting_inside() {
       [9, 11],
     ]);
   }
+  let how_said = app_code_explain_said([
+    "How can we tell the ",
+    second_meeting,
+    " is inside the ",
+    first_meeting,
+    " using numbers?",
+  ]);
   let first_said = app_code_explain_said([
-    "First we check that the first meeting has begun by the time the second meeting starts:",
+    "First we check that the ",
+    first_meeting,
+    " has begun by the time the ",
+    second_meeting,
+    " starts:",
   ]);
   let then_said = app_code_explain_said([
-    "Then we check that the second meeting has ended by the time the first meeting ends:",
+    "Then we check that the ",
+    second_meeting,
+    " has ended by the time the ",
+    first_meeting,
+    " ends:",
   ]);
   let draw4 = app_code_explain_said([
-    "So the second meeting is inside the first",
+    "So the ",
+    second_meeting,
+    " is inside the ",
+    first,
   ]);
   let v5 = check_worked("8", "9", start_color);
   let draw5 = app_code_explain_said(["", v5, " is ", is_true]);
@@ -190,21 +240,29 @@ export function app_code_lesson_statement_name_meeting_inside() {
   let draw7 = app_code_explain_said([
     "Both are ",
     is_true,
-    ", so the second meeting is inside the first",
+    ", so the ",
+    second_meeting,
+    " is inside the ",
+    first,
   ]);
   let v7 = from("8");
   let v8 = till("10");
   let draw8 = app_code_explain_said([
-    "But suppose the second meeting is from ",
+    "But suppose the ",
+    second_meeting,
+    " is from ",
     v7,
     " to ",
     v8,
   ]);
   let v9 = from("8");
   let draw9 = app_code_explain_said([
-    "It starts when the first one starts, at ",
+    "It starts when the ",
+    first_one,
+    " starts, at ",
     v9,
-    ", and it is still inside the first",
+    ", and it is still inside the ",
+    first,
   ]);
   let v10 = check_worked("8", "8", start_color);
   let draw10 = app_code_explain_said([
@@ -220,34 +278,52 @@ export function app_code_lesson_statement_name_meeting_inside() {
   let v11 = from("11");
   let v12 = till("13");
   let draw11 = app_code_explain_said([
-    "And suppose the second meeting is from ",
+    "And suppose the ",
+    second_meeting,
+    " is from ",
     v11,
     " to ",
     v12,
   ]);
   let v13 = check_worked("13", "12", end_color);
   let draw12 = app_code_explain_said([
-    "It ends after the first one ends: ",
+    "It ends after the ",
+    first_one,
+    " ends: ",
     v13,
     " is ",
     is_false,
   ]);
   let draw13 = app_code_explain_said([
-    "So the second meeting is not inside the first",
+    "So the ",
+    second_meeting,
+    " is not inside the ",
+    first,
   ]);
   let v14 = from(s);
   let v15 = till(e);
   let v16 = from(s2);
   let v17 = till(e2);
   let draw14 = app_code_explain_said([
-    "Suppose the first meeting is from ",
+    "Suppose the ",
+    first_meeting,
+    " is from ",
     v14,
     " to ",
     v15,
-    ", and the second is from ",
+    ", and the ",
+    second,
+    " is from ",
     v16,
     " to ",
     v17,
+  ]);
+  let code_said = app_code_explain_said([
+    "Here is code that checks whether the ",
+    second_meeting,
+    " is inside the ",
+    first,
+    ":",
   ]);
   let lesson = app_code_lesson_statement_formula_answer_count({
     words: "Is one meeting inside another",
@@ -266,9 +342,7 @@ export function app_code_lesson_statement_name_meeting_inside() {
       draw4,
       meetings_draw,
       app_code_explain_container_next,
-      [
-        "How can we tell the second meeting is inside the first meeting using numbers?",
-      ],
+      how_said,
       first_said,
       draw5,
       then_said,
@@ -284,9 +358,7 @@ export function app_code_lesson_statement_name_meeting_inside() {
       draw13,
       app_code_explain_container_next,
       draw14,
-      [
-        "Here is code that checks whether the second meeting is inside the first:",
-      ],
+      code_said,
     ],
     decoys: null,
     example_pointers: [
