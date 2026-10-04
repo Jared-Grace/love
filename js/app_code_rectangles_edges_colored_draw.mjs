@@ -154,5 +154,47 @@ export function app_code_rectangles_edges_colored_draw(
       }
     }
   }
+  function line_draw(edge, shared, count, vertical) {
+    "a coloured edge's line drawn on through the squares, so it reads as x = 2 or y = 1 on a graph, asked by the human 2026-10-04; a plain edge draws none";
+    let color = edge_color(edge, shared);
+    if (equal(color, plain)) {
+      return;
+    }
+    let last = equal(edge, count);
+    let index = last ? count + 1 : edge + 2;
+    let shift = last ? "calc(0.125em + 1.5px)" : "calc(-0.125em - 1.5px)";
+    let side = last ? "end" : "start";
+    let line = html_div(grid);
+    let border = text_combine("3px solid ", color);
+    let span = text_combine("2 / span ", text_to(vertical ? rows : columns));
+    let style = vertical
+      ? {
+          "grid-column": text_to(index),
+          "grid-row": span,
+          "justify-self": side,
+          width: "0",
+          "border-left": border,
+          transform: text_combine_multiple(["translateX(", shift, ")"]),
+        }
+      : {
+          "grid-row": text_to(index),
+          "grid-column": span,
+          "align-self": side,
+          height: "0",
+          "border-top": border,
+          transform: text_combine_multiple(["translateY(", shift, ")"]),
+        };
+    html_style_assign(line, {
+      ...style,
+      "pointer-events": "none",
+      "z-index": "1",
+    });
+  }
+  for (let edge of range(columns + 1)) {
+    line_draw(edge, across, columns, true);
+  }
+  for (let edge of range(rows + 1)) {
+    line_draw(edge, down, rows, false);
+  }
   return grid;
 }
