@@ -208,6 +208,19 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
     " and row ",
     v6,
   ]);
+  let seen_said = app_code_explain_said([
+    "We can see that the ",
+    square_word,
+    " is inside the ",
+    rectangle_word,
+  ]);
+  let numbers_said = app_code_explain_said([
+    "How can we tell that the ",
+    square_word,
+    " is inside the ",
+    rectangle_word,
+    " using numbers?",
+  ]);
   let v7 = between_worked("1", "2", "4");
   let draw4 = app_code_explain_said([
     "Across ",
@@ -246,7 +259,9 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   let draw8 = app_code_explain_said([
     "The ",
     square_word,
-    " starts on the right edge, ",
+    " starts on the right edge of the ",
+    rectangle_word,
+    ", ",
     v10,
     ", so it is outside of the ",
     rectangle_word,
@@ -326,6 +341,8 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
       v18,
       draw2,
       draw3,
+      seen_said,
+      numbers_said,
       app_code_explain_container_next,
       draw4,
       draw5,
