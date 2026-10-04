@@ -24,7 +24,7 @@ import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_lesson_statement_name_meetings_overlap.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
-export function app_code_lesson_statement_name_meeting_before() {
+export function app_code_lesson_statement_name_meeting_ended() {
   arguments_assert(arguments, 0);
   ("whether one meeting has ended by the time another starts: let ended = e1 <= s2; - picked by Claude 2026-10-04 when the human asked for the next lesson, because every formula the roadmap names for DSA was already a lesson. In DSA it is the check that a person can go to every meeting, Meeting Rooms, made between each meeting and the next once they are sorted by start.");
   ("Not picked: the gap between two meetings, s2 - e1, which needs this check first to mean anything; the number of meetings going on at once, which needs a loop; and a rectangle left of another, which is this check across and can follow it.");

@@ -1,4 +1,4 @@
-import { app_code_lesson_statement_name_meeting_before } from "./app_code_lesson_statement_name_meeting_before.mjs";
+import { app_code_lesson_statement_name_meeting_ended } from "./app_code_lesson_statement_name_meeting_ended.mjs";
 import { app_code_lesson_statement_name_rectangle_inside } from "./app_code_lesson_statement_name_rectangle_inside.mjs";
 import { app_code_lesson_statement_name_meeting_inside } from "./app_code_lesson_statement_name_meeting_inside.mjs";
 import { app_code_lesson_statement_name_square_in_rectangle } from "./app_code_lesson_statement_name_square_in_rectangle.mjs";
@@ -462,7 +462,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_square_in_rectangle,
     app_code_lesson_statement_name_meeting_inside,
     app_code_lesson_statement_name_rectangle_inside,
-    app_code_lesson_statement_name_meeting_before,
+    app_code_lesson_statement_name_meeting_ended,
   ];
   return fns;
 }
