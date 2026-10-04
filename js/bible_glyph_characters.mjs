@@ -1516,6 +1516,26 @@ export function bible_glyph_characters() {
       name: "test_tube",
       character: "🧪",
     },
+    {
+      name: "imp",
+      character: "👿",
+    },
+    {
+      name: "timer_clock",
+      character: "⏲️",
+    },
+    {
+      name: "abacus",
+      character: "🧮",
+    },
+    {
+      name: "beaming",
+      character: "😁",
+    },
+    {
+      name: "collision",
+      character: "💥",
+    },
   ];
   return characters;
 }

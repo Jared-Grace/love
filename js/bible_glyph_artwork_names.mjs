@@ -1200,6 +1200,26 @@ export function bible_glyph_artwork_names() {
       glyph: "test_tube",
       asset: "Test tube",
     },
+    {
+      glyph: "imp",
+      asset: "Angry face with horns",
+    },
+    {
+      glyph: "timer_clock",
+      asset: "Timer clock",
+    },
+    {
+      glyph: "abacus",
+      asset: "Abacus",
+    },
+    {
+      glyph: "beaming",
+      asset: "Beaming face with smiling eyes",
+    },
+    {
+      glyph: "collision",
+      asset: "Collision",
+    },
   ];
   return names;
 }

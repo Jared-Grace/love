@@ -129,6 +129,7 @@ export function bible_glyph_roots() {
   ("WRITING, TEACHING AND SEEKING TOOK NEW PICTURES ON 2026-10-03, the writing hand, the teacher and the magnifying glass, each one for a whole root. Graphe, the Scripture, wears the writing hand with grapho because the word is the writing, and drawing it so shows a reader that it is written and Scripture are one word. It was not given the scroll, which is already the law. The teacher stands on the verb to teach and on the noun teacher, the same way love stands on its noun and verb. Find was left undrawn: it has no picture that says finding and not seeing or knowing, which are already the eye and the lightbulb.");
   ("GOD IS THE BURNING HEART SINCE 2026-10-03, AND FIRE IS THE FIRE. The human chose it, in these words: God is love, God is consuming fire. Both are said of God in so many words - God is love in the fourth of first John, our God is a consuming fire in the twelfth of Hebrews - so the mark is two sentences of Scripture joined into one picture, the heart that burns. The plain flame was freed by the change and pur, fire, took it. Jealousy gave the burning heart up and took the face with steam from its nose, the human's choice the same day. A word whose English says god or gods in small letters is drawn as the carved stone figure instead, because the translators' capital is the only place the text tells the LORD from an idol.");
   ("TWELVE GREEK NUMBERS AND FOURTEEN HEBREW ONES WERE SEATED IN ONE PASS ON 2026-10-03, each a picture that says the word and was free. Falling is the person and the hand pointing down, the mirror of rising. Keeping is the guard, because tereo and shamar are to watch over before they are to obey. Anger is the angry face. The elder is the old man, which is what presbuteros says. A sign is the placard, a thing held up to be read. Opening is the open lock; the key was refused because it is exousia, authority. Erotao, to ask a question, is the question mark; aiteo, to ask for something, was left undrawn because a request is not a question. Four, five and ten are their keycaps, as one, two, three and seven already were. Parakaleo joins its own noun parakletos at the embrace, and grammateus, the scribe, joins grapho at the writing hand. The demon was refused the horned face because it would sit beside the angry face and read as anger.");
+  ("AN ELEVENTH BATCH, 2026-10-04, WITH NEW PICTURES. DAIMONION, DEMON, IS THE ANGRY FACE WITH HORNS, with daimonizomai, to be demonized, and daimon as one family. Rejected: the ogre, a monster from folk tales, and the skull, which is death. CHRONOS, TIME, IS THE TIMER CLOCK: a span that runs, set beside kairos's alarm clock, the moment that rings, and hora's clock face, the hour. Rejected: the hourglass, which aion, the age, holds. Not seated, and why: biblos and biblion, book, were drawn as the closed book and withdrawn the same hour, for the reason the Hebrew table already gives sepher in writing - the word is the scroll, the letter and the certificate of divorce, and a bound volume misdraws all three;meno, remain, still waits, because the anchor is faith; krazo, cry out, would want the loudspeaker, which phone holds; stauroo, crucify, would want the cross, which is Jesus.");
   ("A TENTH BATCH, 2026-10-04, THE SAME JOIN CARRIED TO THE END OF THE SURVEY LIST. Gnosis, knowledge, joins ginosko, know, on the lightbulb; paraklesis, comfort, joins parakaleo on the hug. Epikaleomai, call upon, is upon joined to call; sunerchomai, come together, is with joined to come; proskaleomai, call to oneself, is toward joined to call. Not seated, and why: pantote, always, is all and when and would need three parts; plen, except, comes from more by a turn the picture cannot show; epitimao, rebuke, and parangello, command, wait for their second halves.");
   ("A NINTH BATCH, 2026-10-04, FOUND BY JOINING THE UNSEATED LIST TO STRONG'S OWN DERIVATIONS: every word below is built, by Strong's account, from words this table already draws, so nothing new was drawn. INSIDE EXISTING ROWS, AS FAMILY: houto, thus, joins houtos on the flashlight; kalos the adverb, well, joins kalos, good; arche, beginning, joins archomai, begin; didache, teaching, joins didasko; phoneo, call aloud, joins phone, voice; pleion, more, joins polus, much, because more is grammar on much; dei, it must, joins deo, bind, on the knot, because Strong's makes it the binding verb itself - rejected: leaving it held, which is what the earlier batches did while no picture said must; exo, outside, joins ek, out of; mede and mete, nor, join me as oude and oute already joined ou; ouketi, no longer, joins ou the same way, its eti not yet drawn. AS TWO-PART JOINS: semeron, today, is the pin joined to the sun - this day, which is what the word is made of; eperotao, question, is upon joined to ask; epitithemi, lay on, is upon joined to put; emprosthen, in front of, is in joined to toward; exesti, it is lawful, is out joined to be, the two halves Strong's gives; dierchomai, go through, is through joined to come; katoikeo, dwell, is down joined to the house - rejected: the house alone, which oikos holds. Not seated, and why: Philippos, Iakobos and Ioudaia stay spelled out, as names do for now; tote, then, hopos and dio would need three parts; paradidomi, paralambano and the other para words wait for para; logizomai, reckon, comes from logos but speech would misread it; metanoeo, repent, waits for a picture of the mind.");
   ("AN EIGHTH BATCH, 2026-10-04. KAUCHAOMAI, BOAST, IS THE PEACOCK, with the boast and the boasting as one family: the bird that spreads itself to be seen. Rejected: the snorting face, which is jealousy. ARNEOMAI, DENY, IS THE PERSON GESTURING NO: Peter's I do not know him. Rejected: the no-entry sign, which is the plain not. PEIRAZO, TEST OR TEMPT, IS THE TEST TUBE, with peirasmos, the testing, as one family, shared with the Hebrew nasah: a thing put to the proof. The word does not decide whether the tester means well, and neither does the picture.");
@@ -166,6 +167,34 @@ export function bible_glyph_roots() {
   ("RISING, COMMANDING AND ANSWERING ARE BUILT FROM MARKS ALREADY BOUGHT, AND CALLING IS THE WAVING HAND, ALL 2026-10-03. Egeiro is a person and the hand pointing up - the one who was down is now up - which reads beside the walking figure pointing up for going up, so a reader who knows either learns the other; the plain arrow up was refused because the pointing hand already says up. Entellomai is the speech and the scroll, to say a law, since entole the commandment is the scroll alone. Anistemi, to rise, and keleuo, to order, were left undrawn, because the collision walk holds each picture to one root and those two would have worn egeiro's and entellomai's. Apokrinomai is the speech and the turning arrow, a word sent back. Kaleo is the hand waved to bring someone over; the voice was refused because phone is a sound and not a summons, the megaphone because it is the prophet, and a telephone because it is not in the world of the text. Stand, head, body, great, many and find were looked at the same hour and left undrawn: the standing figure is already the person, and the others had no picture that says the word and is still free.");
   ("IDOU IS THE EXCLAMATION MARK AND THE HIGH PRIEST IS THE PRIEST, BOTH SEATED 2026-10-03 FOR FREQUENCY. Idou and ide are a word that says look and means nothing else - pay attention to what comes next - and the mark that says the same in pictures is the exclamation. The eyes were refused because they already draw blepo, seeing, and behold is not a report that anyone saw; a pointing hand was refused because it already draws hoti, that. Archiereus is chief and priest in one word, and it takes the priest alone, because the Hebrew says the same office in two words, kohen gadol, and only the kohen is drawn there; priest beside a crown was refused because the crown is lord, and a high priest is not a lord.");
   let roots = [
+    {
+      root: "daimonion",
+      gloss: "demon; be demon-possessed",
+      words: [
+        {
+          strong: "1140",
+          glyph: "imp",
+        },
+        {
+          strong: "1139",
+          glyph: "imp",
+        },
+        {
+          strong: "1142",
+          glyph: "imp",
+        },
+      ],
+    },
+    {
+      root: "chronos",
+      gloss: "time, a span of time",
+      words: [
+        {
+          strong: "5550",
+          glyph: "timer_clock",
+        },
+      ],
+    },
     {
       root: "epikaleomai",
       gloss: "call upon",
