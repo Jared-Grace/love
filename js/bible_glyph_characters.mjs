@@ -1480,6 +1480,30 @@ export function bible_glyph_characters() {
       name: "open_book",
       character: "📖",
     },
+    {
+      name: "thinking",
+      character: "🤔",
+    },
+    {
+      name: "lying_face",
+      character: "🤥",
+    },
+    {
+      name: "flushed",
+      character: "😳",
+    },
+    {
+      name: "bandage",
+      character: "🩹",
+    },
+    {
+      name: "knot",
+      character: "🪢",
+    },
+    {
+      name: "vomiting",
+      character: "🤮",
+    },
   ];
   return characters;
 }

@@ -104,6 +104,7 @@ export function bible_glyph_roots_hebrew() {
   "ELOHIM AND EL ARE THE BURNING HEART SINCE 2026-10-03, QANNA IS THE STEAMING FACE, AND ESH IS THE FIRE. The reasons are written once, on the Greek table, because it was one decision across both. Older paragraphs here that say the fire is God, or that refuse the altar as meat beside fire, were written while the flame alone meant God, and that is no longer so. Hebrew has one word for God and for the false gods, so the seat cannot tell them apart; the English can, because its translators wrote God with a capital and gods without one, and the page draws a word whose English says god or gods in small letters as the carved stone figure that gillulim, idols, already wears.";
   "NAPHAL, SHAMAR, ZAQEN, OTH, PATHACH, SHAAL AND THE NUMBERS FOUR, FIVE AND TEN WERE SEATED 2026-10-03 beside their Greek partners, whose reasons the Greek table holds. Four more are Hebrew only. Karath is the scissors, because it is to cut, and to make a covenant is in Hebrew to cut one. Tsaba is the military helmet, so the LORD of hosts reads as the LORD of armies, which is what the word says. Yasha and yeshuah take the lifebuoy that soter already wears in Greek. Shakab, to lie down, joins mishkab, the bed it is named from. Aph was seated on the angry face and taken off within the hour, because the undrawn list already refuses it for being the nose as often as one word in five; Greek orge has no such second sense and keeps the face.";
   "JERUSALEM WAS TAKEN BACK TO UNDRAWN AND WITH WAS NOT SEATED, BOTH 2026-10-03, each because a gate refused the picture. Jerusalem was the city joined to peace, but peace has no picture: it is spelled in letters on purpose, since the peace symbol was refused as a movement's badge. So the pair drew half a picture and half a word, and the gate that keeps a group's halves both drawn went red. It was already the weakest of the names. Im and meta, with, were offered as two persons side by side, chosen by the human, and refused by the gate that forbids one picture twice in a group: with no change of shape at the join, the reader has to count, and two persons would also read as people.";
+  "A SEVENTH BATCH, 2026-10-04. NABA, PROPHESY, JOINS NABI, THE PROPHET, ON THE MEGAPHONE; KABAD, BE HEAVY OR HONOR, JOINS KABOD, GLORY, ON THE STAR - glory is the weight of a thing, the same root; YATAB, BE GOOD, JOINS TOB, GOOD, ON THE THUMB UP; CHANAH, CAMP, JOINS MACHANEH, THE CAMP. Each is one family. SHEQER, THE LIE, IS THE LYING FACE, shared with the Greek pseudos. TOEBAH, THE ABOMINATION, IS THE VOMITING FACE: a thing that turns the stomach, which is what the word says. Rejected: the pig, which is one unclean animal and not the word. BOSH, BE ASHAMED, IS THE FLUSHED FACE, shared with the Greek aischuno. RAPHA, HEAL, IS THE BANDAGE, shared with the Greek therapeuo. ASAR, BIND, IS THE KNOT, shared with the Greek deo. BEKOR, FIRSTBORN, IS THE GOLD MEDAL JOINED TO THE BABY: first and child, both already bought. Not seated, and why: yamin, right hand, would want the pointing hand, which ki holds.";
   "A SIXTH BATCH, 2026-10-04. CHAMISHIM AND ARBAIM, FIFTY AND FORTY, ARE FIVE AND ZERO AND FOUR AND ZERO, the tens built the way twenty and thirty are. RUTS, RUN, IS THE RUNNER; its runners are the king's guards who ran before him, so the same picture holds. BAKAH, WEEP, IS THE LOUDLY CRYING FACE, shared with the Greek klaio. CHADASH, NEW, IS THE NEW BUTTON, shared with the Greek kainos. Not seated, and why: shemesh, sun, would collide with the sun that yom, day, already holds; labash, clothe, is a different root from beged, so it cannot take the garment; shaphak, pour, would take the pouring jar that the anointing holds; bone, wing, river and pillar stay on the held-back list for the reasons written there.";
   "A FIFTH BATCH, 2026-10-04, AFTER THE HUMAN SAID KEEP GOING, AND NAMES STAY IN LETTERS FOR NOW. ZABACH, TO SACRIFICE, JOINS ZEBACH, THE SACRIFICE; QABAR, TO BURY, JOINS QEBER, THE TOMB; CHAKAM, WISE, JOINS CHOKMAH, WISDOM: each is the verb or the adjective of a noun already drawn, one root, so it takes the family's picture. SHLOSHIM, THIRTY, IS THREE AND ZERO, the way twenty is two and zero. SHENI AND SHELISHI, SECOND AND THIRD, ARE THE SILVER AND BRONZE MEDALS beside rishon's gold: the order word, not the count, which the keycaps keep. EREB, EVENING, IS THE SUNSET. Rejected: the moon, which is a noun of its own. BAQAR, THE HERD, IS THE COW'S FACE; the ox is shor and the bull is par, so the three cattle words stay three pictures. NACHAL, THE WADI, IS THE NATIONAL PARK: a valley with water running through it. Rejected: the wave, which is the sea. LASHON, TONGUE, IS THE TONGUE, shared with the Greek glossa; it is both the body part and a language, as the picture's speaking reads. QATAN, SMALL, IS THE PINCHING HAND, shared with the Greek mikros. Not seated, and why: saphah, lip, wants a lip picture, and the kiss mark reads kiss; nus, flee, would take the runner that ruts, run, will want; sane, hate, and naga, touch, have no free picture that does not belong to anger or to pointing.";
   "A FOURTH BATCH, 2026-10-04, UNDER THE SAME STANDING WORD. SHABA, SWEAR, IS THE RAISED HAND: Abram says I have raised my hand to the LORD, and the oath was sworn with the hand lifted; shebuah, the oath, shares it as one family. The open palm is hand, yad, so the back of the hand keeps the two apart. KALAH, FINISH, IS THE END ARROW: done, used up, at an end. Rejected: the chequered flag, which ad, until, already holds in this table. Not seated, and why: rea, neighbor, wants the two people holding hands, and the artwork set has no drawing of it; tachat, under, is also instead of, which no arrow says.";
@@ -135,6 +136,66 @@ export function bible_glyph_roots_hebrew() {
   "HINNEH IS THE EXCLAMATION MARK AND ENOSH IS THE BEARDED MAN, BOTH SEATED 2026-10-03 FOR FREQUENCY. Hinneh says look and asks the reader to attend; the Greek table holds the reasons, since idou takes the same mark for the same word. Enosh is the man and the men, and Strong's gives ish as its contraction, so it joins ish's row and its picture rather than buying a second one; adam, the human, keeps its own.";
   "THREE OBVIOUS SEATS WERE REFUSED THE SAME HOUR BECAUSE THE PICTURE IS SPENT INSIDE THIS TABLE. Kaph is a palm and yad already holds the hand; the mouth is seated on the speaking verb, so peh would make every mouth read as speaking. Each needs a picture of its own rather than a borrowed one.";
   let roots = [
+    {
+      root: "sheqer",
+      gloss: "lie; falsehood",
+      words: [
+        {
+          strong: "8267",
+          glyph: "lying_face",
+        },
+      ],
+    },
+    {
+      root: "toebah",
+      gloss: "abomination; detestable thing",
+      words: [
+        {
+          strong: "8441",
+          glyph: "vomiting",
+        },
+      ],
+    },
+    {
+      root: "bosh",
+      gloss: "be ashamed",
+      words: [
+        {
+          strong: "954",
+          glyph: "flushed",
+        },
+      ],
+    },
+    {
+      root: "rapha",
+      gloss: "heal",
+      words: [
+        {
+          strong: "7495",
+          glyph: "bandage",
+        },
+      ],
+    },
+    {
+      root: "asar",
+      gloss: "bind; tie",
+      words: [
+        {
+          strong: "631",
+          glyph: "knot",
+        },
+      ],
+    },
+    {
+      root: "bekor",
+      gloss: "firstborn",
+      words: [
+        {
+          strong: "1060",
+          glyph: "first_place+baby",
+        },
+      ],
+    },
     {
       root: "chamishim",
       gloss: "fifty",
@@ -1621,6 +1682,10 @@ export function bible_glyph_roots_hebrew() {
           strong: "3519",
           glyph: "star",
         },
+        {
+          strong: "3513",
+          glyph: "star",
+        },
       ],
     },
     {
@@ -1651,6 +1716,10 @@ export function bible_glyph_roots_hebrew() {
           strong: "5030",
           glyph: "megaphone",
         },
+        {
+          strong: "5012",
+          glyph: "megaphone",
+        },
       ],
     },
     {
@@ -1679,6 +1748,10 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "2896",
+          glyph: "thumbs_up",
+        },
+        {
+          strong: "3190",
           glyph: "thumbs_up",
         },
       ],
@@ -2309,6 +2382,10 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "4264",
+          glyph: "camp",
+        },
+        {
+          strong: "2583",
           glyph: "camp",
         },
       ],

@@ -1164,6 +1164,30 @@ export function bible_glyph_artwork_names() {
       glyph: "open_book",
       asset: "Open book",
     },
+    {
+      glyph: "thinking",
+      asset: "Thinking face",
+    },
+    {
+      glyph: "lying_face",
+      asset: "Lying face",
+    },
+    {
+      glyph: "flushed",
+      asset: "Flushed face",
+    },
+    {
+      glyph: "bandage",
+      asset: "Adhesive bandage",
+    },
+    {
+      glyph: "knot",
+      asset: "Knot",
+    },
+    {
+      glyph: "vomiting",
+      asset: "Face vomiting",
+    },
   ];
   return names;
 }
