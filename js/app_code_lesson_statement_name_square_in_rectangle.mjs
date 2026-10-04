@@ -26,38 +26,43 @@ import { app_code_lesson_statement_name_grid_inside } from "./app_code_lesson_st
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
 export function app_code_lesson_statement_name_square_in_rectangle() {
   arguments_assert(arguments, 0);
-  ("whether a square is inside a rectangle: let in_c = left <= c && c < right; let in_r = top <= r && r < bottom; let inside = in_c && in_r; - picked by the human 2026-10-04 from a list of next lessons. In DSA it is the check of whether a point lies in a box, used to find which box on a screen a tap landed in, and it is Inside the grid with the 0 replaced by the box's left and top edges.");
-  ("Inside the grid is the reminder, so the new idea is only that the low bound is an edge rather than 0. The rectangle's edges are numbered as the lines between squares, as in Do two rectangles overlap, and a square is numbered by the line on its left and the line above it, so square c covers c to c + 1: it is inside when left <= c and c + 1 <= right, which is c < right. The writing shows the square on the right edge, where c <= right would be wrong.");
-  ("Across first and then down, as Do two rectangles overlap does, so in_c comes before in_r. The first two lines are longer than 30 characters; only the title line has to fit, and let inside = in_c && in_r; does. Not picked: the names x and y, which no lesson uses yet, where c and r are the grid lessons' own.");
-  ("The answers are only true or false, so a question offers two buttons. Each screen asks two squares inside and two outside; the squares outside are next to an edge, some by their column and some by their row, and some on the right or bottom edge itself, so c <= right would be caught.");
-  ("Left and top are starts and wear the start colour, right and bottom are ends and wear the end colour, as in the rectangle lessons. The square and its column and row wear the overlap colour, the colour the picture fills it with.");
+  ("whether a square is inside a rectangle: let in_x = left <= x && x < right; let in_y = top <= y && y < bottom; let inside = in_x && in_y; - picked by the human 2026-10-04 from a list of next lessons. In DSA it is the check of whether a point lies in a box, used to find which box on a screen a tap landed in, and it is Inside the grid with the 0 replaced by the box's left and top edges.");
+  ("Inside the grid is the reminder, so the new idea is only that the low bound is an edge rather than 0. The rectangle's edges are numbered as the lines between squares, as in Do two rectangles overlap, and a square is named by the line on its left, x, and the line above it, y, so it covers x to x + 1: it is inside when left <= x and x + 1 <= right, which is x < right. The writing shows the square on the right edge, where x <= right would be wrong.");
+  ("Across first and then down, as Do two rectangles overlap does, so in_x comes before in_y. The first two lines are longer than 30 characters; only the title line has to fit, and let inside = in_x && in_y; does.");
+  ("x and y, asked by the human 2026-10-04 after a student asked about the rows and columns: the first draft said the square was in column c and row r, the grid lessons' seats, while every number in the picture is a line, so one number was read two ways. Now only lines are spoken of, and the square is where its top left corner is. Not picked: keeping c and r and explaining that column c sits between line c and line c + 1, which is the two readings again; and numbering the squares rather than the lines, which would break left < right from Do two rectangles overlap.");
+  ("The answers are only true or false, so a question offers two buttons. Each screen asks two squares inside and two outside; the squares outside are next to an edge, some across and some down, and some on the right or bottom edge itself, so x <= right would be caught.");
+  ("Left and top are starts and wear the start colour, right and bottom are ends and wear the end colour, as in the rectangle lessons. The square and its x and y wear the overlap colour, the colour the picture fills it with.");
   ("The writing was a first draft by Claude 2026-10-04, then reworded by the human the same day, who asked for the rectangle to be coloured: the word wears the colour the picture fills the rectangle with, the first rectangle's colour from Do two rectangles overlap.");
-  let names = ["left", "right", "top", "bottom", "c", "r"];
+  let names = ["left", "right", "top", "bottom", "x", "y"];
   let left = list_get(names, 0);
   let right = list_get(names, 1);
   let top = list_get(names, 2);
   let bottom = list_get(names, 3);
-  let c = list_get(names, 4);
-  let r = list_get(names, 5);
-  let in_c = "in_c";
-  let in_r = "in_r";
+  let x = list_get(names, 4);
+  let y = list_get(names, 5);
+  let in_x = "in_x";
+  let in_y = "in_y";
   let inside = "inside";
   let less = js_operator_less_than_symbol();
   let at_most = js_operator_less_than_equal_symbol();
   let and_op = js_operator_and_symbol();
-  let check_c = js_code_between_symbols(left, at_most, c, less, right);
-  let line_c = js_code_let_statement(in_c, check_c);
-  let check_r = js_code_between_symbols(top, at_most, r, less, bottom);
-  let line_r = js_code_let_statement(in_r, check_r);
-  let both = js_code_binary_spaced_nb(in_c, and_op, in_r);
+  let check_x = js_code_between_symbols(left, at_most, x, less, right);
+  let line_x = js_code_let_statement(in_x, check_x);
+  let check_y = js_code_between_symbols(top, at_most, y, less, bottom);
+  let line_y = js_code_let_statement(in_y, check_y);
+  let both = js_code_binary_spaced_nb(in_x, and_op, in_y);
   let line_inside = js_code_let_statement(inside, both);
   let step = {
-    middle: [line_c, line_r, line_inside],
+    middle: [line_x, line_y, line_inside],
     logged: [inside],
   };
   let rows = "rows";
   let cols = "cols";
   let ok = "ok";
+  let r = "r";
+  let c = "c";
+  let in_r = "in_r";
+  let in_c = "in_c";
   let grid_r = js_code_between_symbols("0", at_most, r, less, rows);
   let grid_line_r = js_code_let_statement(in_r, grid_r);
   let grid_c = js_code_between_symbols("0", at_most, c, less, cols);
@@ -113,7 +118,7 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
     return chip;
   }
   function at(text) {
-    "the square's column or row, or a name holding one, as a chip in the square's colour";
+    "the line the square starts on, across or down, or a name holding one, as a chip in the square's colour";
     let chip = app_code_explain_number_colored(text, square_color);
     return chip;
   }
@@ -129,14 +134,14 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
     return chip;
   }
   function less_worked(low, high) {
-    "low < high as one code chip, the square's column in its colour and the edge in the end colour";
+    "low < high as one code chip, the square's x in its colour and the edge in the end colour";
     let chip = app_code_explain_code_colored_inline(
       [low, spaced_less, high],
       [square_color, plain, end_color],
     );
     return chip;
   }
-  function square_draw(column, row) {
+  function square_draw(across, down) {
     "the rectangle from 1 to 4 across and 1 to 3 down, with one square filled in the square's colour";
     function draw(box) {
       app_code_rectangles_edges_marked_draw(
@@ -147,7 +152,7 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
         [0, 0, 0, 0],
         [1, 4],
         [1, 3],
-        [column, column + 1, row, row + 1],
+        [across, across + 1, down, down + 1],
       );
     }
     return draw;
@@ -194,6 +199,8 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
     " to ",
     v4,
   ]);
+  let x_chip = at(x);
+  let y_chip = at(y);
   let v5 = at("2");
   let v6 = at("2");
   let draw3 = app_code_explain_said([
@@ -203,9 +210,13 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
     v5,
     " across and line ",
     v6,
-    " down, so it is in column ",
+    " down, so ",
+    x_chip,
+    " is ",
     v5,
-    " and row ",
+    " and ",
+    y_chip,
+    " is ",
     v6,
   ]);
   let seen_said = app_code_explain_said([
@@ -251,9 +262,9 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   let draw7 = app_code_explain_said([
     "But suppose the ",
     square_word,
-    " is in column ",
+    " starts at line ",
     v9,
-    ":",
+    " across:",
   ]);
   let v10 = till("4");
   let draw8 = app_code_explain_said([
@@ -283,8 +294,8 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   let v13 = till(right);
   let v14 = from(top);
   let v15 = till(bottom);
-  let v16 = at(c);
-  let v17 = at(r);
+  let v16 = at(x);
+  let v17 = at(y);
   let draw10 = app_code_explain_said([
     "Suppose the ",
     rectangle_word,
@@ -298,10 +309,11 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
     v15,
     ", and the ",
     square_word,
-    " is in column ",
+    " starts at line ",
     v16,
-    " and row ",
+    " across and line ",
     v17,
+    " down",
   ]);
   let draw11 = app_code_explain_said([
     "Here is code that checks whether the ",
@@ -361,7 +373,7 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
     example_pointers: [
       [[left, top, "1"], start_color],
       [[right, bottom, "4", "3"], end_color],
-      [[c, r, "2"], square_color],
+      [[x, y, "2"], square_color],
     ],
     answer_count: 2,
   });
