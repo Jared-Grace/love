@@ -157,8 +157,9 @@ export function app_code_lesson_statement_name_meetings_join() {
         " on the start times to find the smaller/earlier start time:",
       ],
       draw3,
+      ["When does the last meeting end?"],
       [
-        "And we can use ",
+        "We can use ",
         max_name,
         " on the end times to find the larger/later end time:",
       ],
