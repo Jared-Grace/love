@@ -1333,7 +1333,7 @@ export function bible_glyph_characters() {
       character: "⤴️",
     },
     {
-      name: "fist",
+      name: "raised_fist",
       character: "✊",
     },
   ];
