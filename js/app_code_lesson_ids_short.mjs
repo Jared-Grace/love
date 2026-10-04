@@ -270,6 +270,9 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_rectangles_overlap: text_frozen(
       "name_rectangles_overlap",
     ),
+    app_code_lesson_statement_name_shared_squares: text_frozen(
+      "name_shared_squares",
+    ),
     app_code_lesson_statement_name_remainder: text_frozen("name_remainder"),
     app_code_lesson_statement_name_greater: text_frozen("name_greater"),
     app_code_lesson_statement_name_smaller_equal:
