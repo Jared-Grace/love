@@ -1036,6 +1036,26 @@ export function bible_glyph_artwork_names() {
       glyph: "safety_pin",
       asset: "Safety pin",
     },
+    {
+      glyph: "telescope",
+      asset: "Telescope",
+    },
+    {
+      glyph: "butterfly",
+      asset: "Butterfly",
+    },
+    {
+      glyph: "balloon",
+      asset: "Balloon",
+    },
+    {
+      glyph: "pleading",
+      asset: "Pleading face",
+    },
+    {
+      glyph: "microphone",
+      asset: "Studio microphone",
+    },
   ];
   return names;
 }
