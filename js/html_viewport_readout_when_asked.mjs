@@ -1,7 +1,6 @@
+import { multiply_round } from "./multiply_round.mjs";
 import { html_viewport_readout_update } from "./html_viewport_readout_update.mjs";
-import { round } from "./round.mjs";
 import { not } from "./not.mjs";
-import { multiply } from "./multiply.mjs";
 import { divide } from "./divide.mjs";
 export function html_viewport_readout_when_asked(bar) {
   "when the page's address ends in ?viewport, a small box of numbers in the corner of the screen saying how tall the window is by every measure the browser keeps, and where the bar held against the top really is - read live, so a person on a phone can screenshot it with the browser's own bar showing and again with it slid away, and the two pictures say which height went stale";
@@ -55,8 +54,7 @@ export function html_viewport_readout_when_asked(bar) {
   }
   ("A RENAME BROKE BOTH OF THE PLACES A NUMBER IS ROUNDED HERE, and nothing said so, because this only runs when the address asks for it. One left Math.round_to, which is nothing, so the first reading threw before the box was ever written; the other renamed every read of a record's field to each_one while leaving the field itself called each, so the widest things on the page came out undefined. Found 2026-10-03 by reading the body rather than by running it - a readout nobody can see failing is the one place a crash waits longest.");
   function round_to(n) {
-    let p = multiply(n, 10);
-    let top2 = round(p);
+    let top2 = multiply_round(n, 10);
     let divided = divide(top2, 10);
     return divided;
   }
