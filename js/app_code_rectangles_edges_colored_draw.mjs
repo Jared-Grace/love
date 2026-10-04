@@ -164,15 +164,16 @@ export function app_code_rectangles_edges_colored_draw(
     }
   }
   function line_draw(edge, shared, count, vertical, corner_edge) {
-    "every number's line drawn on through the squares in the number's colour, so it reads as x = 2 or y = 1 on a graph: asked by the human 2026-10-04 for the coloured numbers, then for every number after a student read them as columns. A coloured line lies above a plain one where they cross, and a corner line above both, asked by the human the same day, since otherwise the later-drawn lines cover it";
+    "a coloured number's line drawn on through the squares in its colour, so it reads as x = 2 or y = 1 on a graph, asked by the human 2026-10-04. A plain number draws none: lines for every number were tried the same day, after a student read the hours of the meetings picture as columns, and the human found the black ones not needed here, where the squares already show the lines between them. A corner line lies above the others where they cross, asked by the human the same day, since otherwise the later-drawn lines cover it";
     let color = edge_color(edge, shared, corner_edge);
+    if (equal(color, plain)) {
+      return;
+    }
     let last = equal(edge, count);
     let index = last ? count + 1 : edge + 2;
     let span = vertical ? rows : columns;
     let on_corner = equal(edge, corner_edge);
-    let b2 = equal(color, plain);
-    let colored = not(b2);
-    let layer = on_corner ? "3" : colored ? "2" : "1";
+    let layer = on_corner ? "2" : "1";
     app_code_grid_edge_line_draw(
       grid,
       color,

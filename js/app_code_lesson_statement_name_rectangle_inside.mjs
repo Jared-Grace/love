@@ -158,16 +158,16 @@ export function app_code_lesson_statement_name_rectangle_inside() {
   let first = one("first");
   let second_rectangle = two("second rectangle");
   function rectangles_draw(second) {
-    "the first rectangle, 1 to 5 across and 1 to 4 down, with the second over it in its own colour, or [0, 0, 0, 0] for none";
+    "the first rectangle, 1 to 4 across and 1 to 6 down, taller than wide so the picture can be larger on a phone, asked by the human 2026-10-04, with the second over it in its own colour, or [0, 0, 0, 0] for none";
     function draw(box) {
       app_code_rectangles_edges_colored_draw(
         box,
-        7,
         5,
-        [1, 5, 1, 4],
+        7,
+        [1, 4, 1, 6],
         second,
-        [1, 5],
         [1, 4],
+        [1, 6],
         null,
         second_color,
         null,
@@ -205,7 +205,7 @@ export function app_code_lesson_statement_name_rectangle_inside() {
     return said;
   }
   let here_said = app_code_explain_said(["Here is the ", first_rectangle, ":"]);
-  let first_goes = goes_said(first_rectangle, "1", "5", "1", "4");
+  let first_goes = goes_said(first_rectangle, "1", "4", "1", "6");
   let first_alone = rectangles_draw([0, 0, 0, 0]);
   let second_here = app_code_explain_said([
     "Here is the same ",
@@ -214,8 +214,8 @@ export function app_code_lesson_statement_name_rectangle_inside() {
     second_rectangle,
     " on top of it",
   ]);
-  let second_goes = goes_said(second_rectangle, "2", "4", "2", "3");
-  let both_draw = rectangles_draw([2, 4, 2, 3]);
+  let second_goes = goes_said(second_rectangle, "2", "3", "2", "4");
+  let both_draw = rectangles_draw([2, 3, 2, 4]);
   let seen_said = app_code_explain_said([
     "We can see that the ",
     second_rectangle,
@@ -230,7 +230,7 @@ export function app_code_lesson_statement_name_rectangle_inside() {
     " using numbers?",
   ]);
   let like_said = ['Across and down, it is like one "meeting" inside another'];
-  let v5 = within_worked("1", "2", "4", "5");
+  let v5 = within_worked("1", "2", "3", "4");
   let across_said = app_code_explain_said([
     "Across ",
     right_arrow,
@@ -239,7 +239,7 @@ export function app_code_lesson_statement_name_rectangle_inside() {
     " is ",
     is_true,
   ]);
-  let v6 = within_worked("1", "2", "3", "4");
+  let v6 = within_worked("1", "2", "4", "6");
   let down_said = app_code_explain_said([
     "Down ",
     down_arrow,
@@ -256,8 +256,8 @@ export function app_code_lesson_statement_name_rectangle_inside() {
     " is inside the ",
     first,
   ]);
-  let v7 = from("3");
-  let v8 = till("6");
+  let v7 = from("2");
+  let v8 = till("5");
   let suppose_said = app_code_explain_said([
     "But suppose the ",
     second_rectangle,
@@ -267,8 +267,8 @@ export function app_code_lesson_statement_name_rectangle_inside() {
     v8,
     ":",
   ]);
-  let out_draw = rectangles_draw([3, 6, 2, 3]);
-  let v9 = within_worked("1", "3", "6", "5");
+  let out_draw = rectangles_draw([2, 5, 2, 4]);
+  let v9 = within_worked("1", "2", "5", "4");
   let out_said = app_code_explain_said([
     "It sticks out on the right: ",
     v9,
@@ -335,7 +335,7 @@ export function app_code_lesson_statement_name_rectangle_inside() {
     title_code: line_inside,
     names,
     values_get,
-    example_values: [1, 5, 1, 4, 2, 4, 2, 3],
+    example_values: [1, 4, 1, 6, 2, 3, 2, 4],
     step,
     remember_lesson: app_code_lesson_statement_name_meeting_inside,
     remember_parts: ["we can check whether one meeting is inside another:"],
@@ -368,7 +368,7 @@ export function app_code_lesson_statement_name_rectangle_inside() {
     decoys: null,
     example_pointers: [
       [[l, t, l2, t2, "1", "2"], start_color],
-      [[r, b, r2, b2, "5", "4", "3"], end_color],
+      [[r, b, r2, b2, "4", "6", "3"], end_color],
     ],
     answer_count: 2,
   });
