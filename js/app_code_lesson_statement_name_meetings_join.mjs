@@ -23,7 +23,7 @@ export function app_code_lesson_statement_name_meetings_join() {
   ("It is Do two meetings overlap turned around: the overlap takes the later start and the earlier end, and joining takes the earlier start and the later end. So that lesson is the reminder, and the writing sets the two side by side. Not picked: the length of the joined time, which would put a third line on every program and repeat How long two meetings overlap.");
   ("Every pair asked overlaps or touches, because two meetings with time between them do not make one block, and checking that first is the previous lesson's job. One pair is always a meeting inside the other, where the joined time is just the longer meeting. The answers of a screen all differ.");
   ("Start hours are blue and end hours green, as in the other meetings lessons, in the writing and in the last example's program.");
-  ("The writing is a first draft, not yet the human's, 2026-10-04.");
+  ("The writing is the human's, 2026-10-04.");
   let names = ["s1", "e1", "s2", "e2"];
   let s = list_first(names);
   let e = list_second(names);
@@ -98,11 +98,11 @@ export function app_code_lesson_statement_name_meetings_join() {
   let v3 = from("10");
   let v4 = till("12");
   let draw = app_code_explain_said([
-    "Suppose one meeting is from ",
+    "For example, suppose one meeting is from ",
     v,
     " to ",
     v2,
-    ", and another is from ",
+    ", and the other is from ",
     v3,
     " to ",
     v4,
@@ -146,23 +146,33 @@ export function app_code_lesson_statement_name_meetings_join() {
     ],
     remember_lines,
     explain: [
+      ["Suppose we have two meetings that overlap"],
       draw,
       draw2,
       app_code_explain_container_next,
-      ["That time starts at the earlier start:"],
+      ["When does the first meeting start?"],
+      [
+        "We can use ",
+        min_name,
+        " on the start times to find the smaller/earlier start time:",
+      ],
       draw3,
-      ["And it ends at the later end:"],
+      [
+        "And we can use ",
+        max_name,
+        " on the end times to find the larger/later end time:",
+      ],
       draw4,
       app_code_explain_container_next,
       [
-        "The overlap used the later start and the earlier end, so it used ",
+        "When we solved the overlap, we used the later start and the earlier end, so we used ",
         max_name,
         " for the start and ",
         min_name,
         " for the end",
       ],
       [
-        "Joining uses the earlier start and the later end, so it uses ",
+        "Here we use the earlier start and the later end, so it uses ",
         min_name,
         " for the start and ",
         max_name,
