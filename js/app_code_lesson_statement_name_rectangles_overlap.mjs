@@ -1,3 +1,4 @@
+import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_code_arrow_inline } from "./app_code_arrow_inline.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
 import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
@@ -231,7 +232,7 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
     let draw9 = app_code_explain_said([
       "",
       v13,
-      ', so the ' + word + ' "meetings" ',
+      ", so the " + word + ' "meetings" ',
       overlap_word,
     ]);
     let draw10 = app_code_explain_said([
