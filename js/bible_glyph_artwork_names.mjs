@@ -1056,6 +1056,26 @@ export function bible_glyph_artwork_names() {
       glyph: "microphone",
       asset: "Studio microphone",
     },
+    {
+      glyph: "battery",
+      asset: "Battery",
+    },
+    {
+      glyph: "passport_control",
+      asset: "Passport control",
+    },
+    {
+      glyph: "gear",
+      asset: "Gear",
+    },
+    {
+      glyph: "soon",
+      asset: "Soon arrow",
+    },
+    {
+      glyph: "zero",
+      asset: "Keycap 0",
+    },
   ];
   return names;
 }

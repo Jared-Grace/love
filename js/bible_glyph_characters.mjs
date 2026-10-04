@@ -1372,6 +1372,26 @@ export function bible_glyph_characters() {
       name: "microphone",
       character: "🎙️",
     },
+    {
+      name: "battery",
+      character: "🔋",
+    },
+    {
+      name: "passport_control",
+      character: "🛂",
+    },
+    {
+      name: "gear",
+      character: "⚙️",
+    },
+    {
+      name: "soon",
+      character: "🔜",
+    },
+    {
+      name: "zero",
+      character: "0️⃣",
+    },
   ];
   return characters;
 }
