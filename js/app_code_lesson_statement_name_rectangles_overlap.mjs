@@ -1,3 +1,10 @@
+import { app_code_arrow_inline } from "./app_code_arrow_inline.mjs";
+import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
+import { app_code_explain_word_colored } from "./app_code_explain_word_colored.mjs";
+import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
+import { list_max } from "./list_max.mjs";
+import { list_min } from "./list_min.mjs";
+import { text_to } from "./text_to.mjs";
 import { app_code_rectangles_edges_draw } from "./app_code_rectangles_edges_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
@@ -28,7 +35,7 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
   ("Down counts from the top, as the rows of the grid lessons do, so top < bottom reads the same way as left < right.");
   ("The answers are only true or false, so a question offers two buttons. Each screen asks two pairs that overlap, one that overlaps down but not across and one that overlaps across but not down, so neither check alone is enough; one of the two that do not overlap only touches, its edges equal.");
   ("Left and top are starts and wear the start colour, right and bottom are ends and wear the end colour, as in the meetings lessons. The pictures draw the two rectangles in two more colours and the part they share in the overlap colour of How long two meetings overlap.");
-  ("The writing is a first draft by Claude, 2026-10-04, not yet the human's. The first picture and the numbers under it are one example, asked by the human 2026-10-04: the picture numbers the lines between squares, so the shared part read off it is the 2 to 3 and 1 to 3 the writing works with.");
+  ("The writing of the first two screens is the human's, 2026-10-04, apart from the lines under For the row meeting and For the column meeting after where each rectangle goes, and the last line of that screen, which are a first draft. Each meeting is worked as Do two meetings overlap works one, so a learner sees where the shared part's edges come from. Arrows after across and down were asked for by the human; they are put after every across and down of the first screen. The rest is a first draft by Claude, 2026-10-04, not yet the human's. The first picture and the numbers under it are one example, asked by the human 2026-10-04: the picture numbers the lines between squares, so the shared part read off it is the 2 to 3 and 1 to 3 the writing works with.");
   let names = ["left", "right", "top", "bottom"];
   let left = list_first(names);
   let right = list_second(names);
@@ -154,21 +161,113 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
     null,
   );
   let and_chip = app_code_explain_number_colored(and_op, plain);
-  let v = from("2");
-  let v2 = till("3");
-  let draw = app_code_explain_said([
-    "Suppose the shared part goes across from ",
-    v,
-    " to ",
-    v2,
+  function arrow_drawn(degrees) {
+    "the drawn arrow inside a line of writing, beside the word for its direction, asked by the human 2026-10-04";
+    function draw(line) {
+      app_code_arrow_inline(line, degrees);
+    }
+    return draw;
+  }
+  let right_arrow = arrow_drawn(0);
+  let down_arrow = arrow_drawn(90);
+  let color2 = app_code_highlight_color_fourth();
+  let purple = app_code_explain_word_colored("purple", color2);
+  let color3 = app_code_highlight_color_fifth();
+  let orange = app_code_explain_word_colored("orange", color3);
+  function call_worked(name, first, second, color) {
+    "name(first, second) as one code chip, both edges in the colour of the part they play";
+    let chip = app_code_explain_code_colored_inline(
+      [name + "(", first, ", ", second, ")"],
+      [plain, color, plain, color, plain],
+    );
+    return chip;
+  }
+  function meeting_draws(word, first_from, first_to, second_from, second_to) {
+    "the lines treating one direction of the two rectangles as two meetings: where each goes, where the shared part starts and ends, and the check";
+    let later = list_max([first_from, second_from]);
+    let earlier = list_min([first_to, second_to]);
+    let t_first_from = text_to(first_from);
+    let t_first_to = text_to(first_to);
+    let t_second_from = text_to(second_from);
+    let t_second_to = text_to(second_to);
+    let t_later = text_to(later);
+    let t_earlier = text_to(earlier);
+    let v = from(t_first_from);
+    let v2 = till(t_first_to);
+    let draw3 = app_code_explain_said([
+      "The ",
+      purple,
+      " rectangle goes from " + word + "s ",
+      v,
+      " to ",
+      v2,
+    ]);
+    let v3 = from(t_second_from);
+    let v4 = till(t_second_to);
+    let draw4 = app_code_explain_said([
+      "The ",
+      orange,
+      " rectangle goes from " + word + "s ",
+      v3,
+      " to ",
+      v4,
+    ]);
+    let v5 = call_worked("Math.max", t_first_from, t_second_from, start_color);
+    let v6 = from(t_later);
+    let draw7 = app_code_explain_said(["", v5, " is ", v6]);
+    let v11 = call_worked("Math.min", t_first_to, t_second_to, end_color);
+    let v12 = till(t_earlier);
+    let draw8 = app_code_explain_said(["", v11, " is ", v12]);
+    let v13 = check_worked(t_later, t_earlier);
+    let draw9 = app_code_explain_said([
+      "",
+      v13,
+      ", so the " + word + " meetings overlap",
+    ]);
+    let draws = [
+      ["For the " + word + " meeting:"],
+      draw3,
+      draw4,
+      ["The overlap starts at the later start:"],
+      draw7,
+      ["And it ends at the earlier end:"],
+      draw8,
+      draw9,
+    ];
+    return draws;
+  }
+  let across_said = app_code_explain_said([
+    "Across ",
+    right_arrow,
+    ", they overlap like two meetings",
   ]);
-  let v3 = from("1");
-  let v4 = till("3");
-  let draw2 = app_code_explain_said(["And it goes down from ", v3, " to ", v4]);
-  let v5 = check_worked("2", "3");
-  let draw3 = app_code_explain_said(["", v5, ", so they overlap across"]);
-  let v6 = check_worked("1", "3");
-  let draw4 = app_code_explain_said(["", v6, ", so they overlap down"]);
+  let down_said = app_code_explain_said([
+    "Down ",
+    down_arrow,
+    ", they also overlap like two meetings",
+  ]);
+  let v14 = from("2");
+  let v15 = till("3");
+  let draw = app_code_explain_said([
+    "Suppose the shared part goes across ",
+    right_arrow,
+    " from ",
+    v14,
+    " to ",
+    v15,
+  ]);
+  let v16 = from("1");
+  let v17 = till("3");
+  let draw2 = app_code_explain_said([
+    "And the shared part goes down ",
+    down_arrow,
+    " from ",
+    v16,
+    " to ",
+    v17,
+  ]);
+  let row_draws = meeting_draws("row", 0, 3, 1, 4);
+  let column_draws = meeting_draws("column", 0, 3, 2, 4);
   let draw5 = app_code_explain_said([
     "So we need both: across ",
     and_chip,
@@ -201,14 +300,24 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
     explain: [
       ["Two rectangles can overlap too:"],
       crossing_draw,
-      ["Across, they overlap like two meetings"],
-      ["Down, they also overlap like two meetings"],
+      across_said,
+      down_said,
       ["The part they share is a rectangle too"],
       draw,
       draw2,
-      draw3,
-      draw4,
-      ["So the rectangles overlap"],
+      app_code_explain_container_next,
+      ["We can see from looking at the image that the rectangles overlap"],
+      [
+        "But how could we solve whether or not the rectangles overlap through numbers?",
+      ],
+      [
+        "We can treat the rectangles like two meetings: a pair of row meetings and a pair of column meetings",
+      ],
+      app_code_explain_container_next,
+      ...row_draws,
+      app_code_explain_container_next,
+      ...column_draws,
+      ["Both meetings overlap, so the rectangles overlap"],
       app_code_explain_container_next,
       ["But these rectangles overlap across, and not down:"],
       stacked_draw,
