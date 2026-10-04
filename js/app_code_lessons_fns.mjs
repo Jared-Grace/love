@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_meetings_join } from "./app_code_lesson_statement_name_meetings_join.mjs";
 import { app_code_lesson_statement_name_overlap_hours } from "./app_code_lesson_statement_name_overlap_hours.mjs";
 import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_lesson_statement_name_meetings_overlap.mjs";
 import { app_code_lesson_statement_name_clamp } from "./app_code_lesson_statement_name_clamp.mjs";

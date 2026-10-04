@@ -265,7 +265,8 @@ export function app_code_lesson_ids_short() {
     ),
     app_code_lesson_statement_name_overlap_hours:
       text_frozen("name_overlap_hours"),
-    app_code_lesson_statement_name_meetings_join: text_frozen("name_meetings_join"),
+    app_code_lesson_statement_name_meetings_join:
+      text_frozen("name_meetings_join"),
     app_code_lesson_statement_name_remainder: text_frozen("name_remainder"),
     app_code_lesson_statement_name_greater: text_frozen("name_greater"),
     app_code_lesson_statement_name_smaller_equal:
