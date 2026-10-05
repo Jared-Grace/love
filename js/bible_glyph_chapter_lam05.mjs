@@ -198,7 +198,7 @@ export function bible_glyph_chapter_lam05() {
           "the",
           "$city",
           "of",
-          "$proper_name$Judah.",
+          "$hands_raised+proper_name.",
         ],
       },
       {
