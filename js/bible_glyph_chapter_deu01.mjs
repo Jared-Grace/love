@@ -1369,7 +1369,7 @@ export function bible_glyph_chapter_deu01() {
           "the",
           "$i_am,",
           "but",
-          "He",
+          "$i_am",
           "would",
           "$no_entry",
           "$ear",
