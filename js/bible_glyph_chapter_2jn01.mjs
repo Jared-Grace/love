@@ -97,7 +97,7 @@ export function bible_glyph_chapter_2jn01() {
         verse_number: 4,
         words: [
           "I",
-          "$smile",
+          "$smile+doing",
           "greatly",
           "$pointing",
           "I",
@@ -295,7 +295,7 @@ export function bible_glyph_chapter_2jn01() {
           "$plus",
           "$no_entry",
           "$speech",
-          "$smile",
+          "$smile+doing",
           "to",
           "$pointing_back.",
         ],
@@ -305,7 +305,7 @@ export function bible_glyph_chapter_2jn01() {
         words: [
           "Whoever",
           "$speech",
-          "$smile",
+          "$smile+doing",
           "to",
           "$pointing_back",
           "shares",

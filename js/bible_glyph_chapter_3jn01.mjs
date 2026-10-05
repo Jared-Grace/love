@@ -58,7 +58,7 @@ export function bible_glyph_chapter_3jn01() {
         words: [
           "For",
           "I",
-          "$smile",
+          "$smile+doing",
           "greatly",
           "when",
           "the",

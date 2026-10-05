@@ -121,7 +121,7 @@ export function bible_glyph_chapter_luk24() {
           "look",
           "for",
           "the",
-          "$sprout",
+          "$sprout+doing",
           "among",
           "the",
           "$skull?",
@@ -236,7 +236,7 @@ export function bible_glyph_chapter_luk24() {
           "this",
           "to",
           "the",
-          "$hand_sending.",
+          "$hand_sending+doer.",
         ],
       },
       {
@@ -566,7 +566,7 @@ export function bible_glyph_chapter_luk24() {
           "$speech",
           "$pointing_back",
           "is",
-          "$sprout.",
+          "$sprout+doing.",
         ],
       },
       {

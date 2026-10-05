@@ -221,7 +221,7 @@ export function bible_glyph_chapter_mat05() {
       {
         verse_number: 12,
         words: [
-          "$smile",
+          "$smile+doing",
           "$plus",
           "be",
           "glad,",
@@ -364,7 +364,7 @@ export function bible_glyph_chapter_mat05() {
           "$thumbs_up",
           "$tools",
           "$plus",
-          "$star",
+          "$star+doing",
           "your",
           "$father",
           "$tray_in",
@@ -529,7 +529,7 @@ export function bible_glyph_chapter_mat05() {
           "be",
           "subject",
           "to",
-          "$scales.",
+          "$scales+thing.",
         ],
       },
       {
@@ -551,7 +551,7 @@ export function bible_glyph_chapter_mat05() {
           "be",
           "subject",
           "to",
-          "$scales.",
+          "$scales+thing.",
           "Again,",
           "anyone",
           "who",

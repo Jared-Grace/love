@@ -138,7 +138,7 @@ export function bible_glyph_chapter_2th01() {
           "of",
           "the",
           "$ruler",
-          "$scales",
+          "$scales+thing",
           "of",
           "$fire,",
           "And",

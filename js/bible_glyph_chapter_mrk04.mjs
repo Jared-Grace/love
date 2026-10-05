@@ -1071,7 +1071,7 @@ export function bible_glyph_chapter_mrk04() {
           "$plus",
           "they",
           "were",
-          "$fear",
+          "$fear+doing",
           "with",
           "great",
           "$fear",

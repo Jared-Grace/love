@@ -60,7 +60,7 @@ export function bible_glyph_chapter_1th01() {
           "you",
           "in",
           "our",
-          "$hands_praying.",
+          "$hands_praying+thing.",
         ],
       },
       {
@@ -266,7 +266,7 @@ export function bible_glyph_chapter_1th01() {
           "to",
           "serve",
           "the",
-          "$sprout",
+          "$sprout+doing",
           "$plus",
           "true",
           "$fire.",

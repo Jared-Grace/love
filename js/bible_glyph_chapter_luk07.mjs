@@ -456,7 +456,7 @@ export function bible_glyph_chapter_luk07() {
         "$plus",
         "they",
         "gave",
-        "$star",
+        "$star+doing",
         "to",
         "$fire,",
         "in",

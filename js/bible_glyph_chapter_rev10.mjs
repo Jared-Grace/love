@@ -189,7 +189,7 @@ export function bible_glyph_chapter_rev10() {
           "$tray_in",
           "Him",
           "who",
-          "$sprout",
+          "$sprout+doing",
           "$hourglass",
           "and",
           "$hourglass,",
