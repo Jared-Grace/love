@@ -13,7 +13,7 @@ export function bible_glyph_chapter_lev06() {
     verses: [
       {
         verse_number: 1,
-        words: ["And", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
+        words: ["And", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 2,
@@ -194,7 +194,7 @@ export function bible_glyph_chapter_lev06() {
       },
       {
         verse_number: 8,
-        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 9,
@@ -514,7 +514,7 @@ export function bible_glyph_chapter_lev06() {
       },
       {
         verse_number: 19,
-        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 20,
@@ -628,7 +628,7 @@ export function bible_glyph_chapter_lev06() {
       },
       {
         verse_number: 24,
-        words: ["And", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
+        words: ["And", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 25,
