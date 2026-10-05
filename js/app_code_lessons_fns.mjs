@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_rectangles_columns_between } from "./app_code_lesson_statement_name_rectangles_columns_between.mjs";
 import { app_code_lesson_statement_name_rectangles_rows_between } from "./app_code_lesson_statement_name_rectangles_rows_between.mjs";
 import { app_code_lesson_statement_name_rectangle_above } from "./app_code_lesson_statement_name_rectangle_above.mjs";
 import { app_code_lesson_statement_name_meetings_free } from "./app_code_lesson_statement_name_meetings_free.mjs";
@@ -469,6 +470,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_meetings_free,
     app_code_lesson_statement_name_rectangle_above,
     app_code_lesson_statement_name_rectangles_rows_between,
+    app_code_lesson_statement_name_rectangles_columns_between,
   ];
   return fns;
 }

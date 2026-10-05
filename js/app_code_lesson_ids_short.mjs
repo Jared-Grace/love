@@ -292,6 +292,9 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_rectangle_above: text_frozen(
       "name_rectangle_above",
     ),
+    app_code_lesson_statement_name_rectangles_columns_between: text_frozen(
+      "name_rectangles_columns_between",
+    ),
     app_code_lesson_statement_name_rectangles_rows_between: text_frozen(
       "name_rectangles_rows_between",
     ),
