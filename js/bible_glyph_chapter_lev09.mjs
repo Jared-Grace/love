@@ -18,7 +18,7 @@ export function bible_glyph_chapter_lev09() {
           "the",
           "eighth",
           "$sun",
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "summoned",
           "$proper_name$Aaron",
           "and",
@@ -27,7 +27,7 @@ export function bible_glyph_chapter_lev09() {
           "the",
           "elders",
           "of",
-          "$proper_name$Israel.",
+          "$wrestling+heart_on_fire.",
         ],
       },
       {
@@ -123,7 +123,7 @@ export function bible_glyph_chapter_lev09() {
           "they",
           "$hand_receiving",
           "what",
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "had",
           "commanded",
           "to",
@@ -277,7 +277,7 @@ export function bible_glyph_chapter_lev09() {
           "$i_am",
           "had",
           "commanded",
-          "$proper_name$Moses.",
+          "$fishing_pole+proper_name.",
         ],
       },
       {
@@ -518,7 +518,7 @@ export function bible_glyph_chapter_lev09() {
           "before",
           "$i_am,",
           "as",
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "had",
           "commanded.",
         ],
@@ -550,7 +550,7 @@ export function bible_glyph_chapter_lev09() {
       {
         verse_number: 23,
         words: [
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "and",
           "$proper_name$Aaron",
           "$footprints",
