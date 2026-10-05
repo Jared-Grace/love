@@ -49,7 +49,7 @@ export function bible_glyph_chapter_zep01() {
           "$proper_name$Amon,",
           "$king",
           "of",
-          "$proper_name$Judah:",
+          "$hands_raised+proper_name:",
         ],
       },
       {
@@ -130,7 +130,7 @@ export function bible_glyph_chapter_zep01() {
           "My",
           "$hand",
           "against",
-          "$proper_name$Judah",
+          "$hands_raised+proper_name",
           "and",
           "against",
           "all",
