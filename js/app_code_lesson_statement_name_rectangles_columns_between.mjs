@@ -133,8 +133,8 @@ export function app_code_lesson_statement_name_rectangles_columns_between() {
     return word;
   }
   function rectangles_draw(left, right2) {
-    "the first rectangle, 1 to 3 across and 1 to 3 down, and the second from left2 to right2 across and 2 to 4 down, on a grid ending one column right of the second - How many rows are between two rectangles turned on its side";
-    let columns = right2 + 1;
+    "the first rectangle, 1 to 3 across and 1 to 3 down, and the second from left2 to right2 across and 2 to 4 down, on a grid ending at the second's right edge - How many rows are between two rectangles turned on its side, less its spare line. Measured 2026-10-05 on a 360px screen at the usual text size, one column past the second made the picture 10px wider than its box, the last number cut off at the edge though the box now scrolls; a reader at the usual size should never need to";
+    let columns = right2;
     let first_edges = [1, 3, 1, 3];
     let second_edges = [left, right2, 2, 4];
     function draw(box) {
