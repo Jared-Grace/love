@@ -407,7 +407,7 @@ export function bible_glyph_chapter_2ki10() {
           "of",
           "His",
           "$kneeling",
-          "$proper_name$Elijah.",
+          "$heart_on_fire+i_am.",
         ],
       },
       {
@@ -674,7 +674,7 @@ export function bible_glyph_chapter_2ki10() {
           "had",
           "$mouth",
           "to",
-          "$proper_name$Elijah.",
+          "$heart_on_fire+i_am.",
         ],
       },
       {
@@ -1218,7 +1218,7 @@ export function bible_glyph_chapter_2ki10() {
           "east",
           "of",
           "the",
-          "$proper_name$Jordan,",
+          "$pointing_down+proper_name,",
           "through",
           "all",
           "the",
