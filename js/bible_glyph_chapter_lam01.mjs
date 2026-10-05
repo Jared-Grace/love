@@ -86,7 +86,7 @@ export function bible_glyph_chapter_lam01() {
       {
         verse_number: 3,
         words: [
-          "$proper_name$Judah",
+          "$hands_raised+proper_name",
           "has",
           "gone",
           "into",
@@ -574,7 +574,7 @@ export function bible_glyph_chapter_lam01() {
           "Virgin",
           "$woman",
           "of",
-          "$proper_name$Judah.",
+          "$hands_raised+proper_name.",
         ],
       },
       {
@@ -637,7 +637,7 @@ export function bible_glyph_chapter_lam01() {
           "has",
           "decreed",
           "against",
-          "$proper_name$Jacob",
+          "$hand+foot",
           "that",
           "his",
           "neighbors",
