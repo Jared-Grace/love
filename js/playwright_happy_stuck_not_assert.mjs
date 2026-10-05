@@ -1,6 +1,9 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { playwright_locator_wait } from "./playwright_locator_wait.mjs";
+import { playwright_by_attribute_named_all_now } from "./playwright_by_attribute_named_all_now.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { qa_attribute_test_happy } from "./qa_attribute_test_happy.mjs";
-import { playwright_by_attribute_named_all } from "./playwright_by_attribute_named_all.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -19,8 +22,12 @@ export async function playwright_happy_stuck_not_assert(
   "It asks about ALL of the marked controls and not the kind the caller is after, because having none of the kind asked for is an ordinary screen and not being stuck. A screen holding a question and no way out is a screen the caller answers; a screen holding neither is a screen nobody can leave.";
   arguments_assert(arguments, 4);
   let key = qa_attribute_test_happy();
+  ("THE WAIT IS FOR EITHER MARK, the way on or the end. The end is looked for once before this, at the moment the screen is reached, and a screen that draws the end a moment later - the last review of the course, whose note comes after its celebration - was reported stuck while the end stood on it: the whole-course walk of 2026-10-05 failed that way at review 230, with no Continue and the controls of a finished review.");
+  let either = text_combine_multiple(["[", key, "],[", end_key, "]"]);
   async function ways_wait() {
-    let marked = await playwright_by_attribute_named_all(page, key);
+    let locator = page.locator(either);
+    await playwright_locator_wait(locator);
+    let marked = await playwright_by_attribute_named_all_now(page, key);
     return marked;
   }
   ("a wait that runs out is the same news as nothing being there, and it is caught here rather than let through, because what the waiting throws is a complaint about a selector - it names the attribute nobody wrote and not the screen that failed to write it, which is the only part anybody can go and fix");
@@ -29,6 +36,12 @@ export async function playwright_happy_stuck_not_assert(
   let found = null_not_is(waited);
   if (found) {
     ways = waited;
+  }
+  let ends = await playwright_by_attribute_named_all_now(page, end_key);
+  let ended = list_empty_not_is(ends);
+  if (ended) {
+    ("the end arrived while waiting: the step reached nothing to press, and the walk asks the screen again and finds the end");
+    return;
   }
   let stuck = list_empty_is(ways);
   let controls = [];
