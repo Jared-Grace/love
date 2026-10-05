@@ -481,7 +481,7 @@ export function bible_glyph_chapter_1ki17() {
           "every",
           "$sun",
           "for",
-          "$proper_name$Elijah",
+          "$heart_on_fire+i_am",
           "and",
           "for",
           "the",
