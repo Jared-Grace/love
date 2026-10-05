@@ -753,7 +753,7 @@ export function bible_glyph_chapter_jhn09() {
           "are",
           "$learner",
           "of",
-          "$proper_name$Moses.",
+          "$fishing_pole+proper_name.",
         ],
       },
       {
@@ -765,7 +765,7 @@ export function bible_glyph_chapter_jhn09() {
           "$fire",
           "$mouth",
           "to",
-          "$proper_name$Moses,",
+          "$fishing_pole+proper_name,",
           "but",
           "we",
           "do",
