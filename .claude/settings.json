@@ -2702,6 +2702,8 @@
       "Bash(node scripts/ai.mjs qa_commit_named_auto_seconds:*)",
       "Bash(node scripts/ai.mjs app_ceb_bible_gloss_explains_repair_drafted:*)",
       "Bash(node scripts/ai.mjs song_image_couplets_description_brief:*)",
+      "Bash(node scripts/ai.mjs bible_glyph_chapters_seat_split_redraw:*)",
+      "Bash(node scripts/ai.mjs bible_glyph_chapters_seat_split_planned:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -5293,6 +5295,8 @@
       "Bash(node scripts/ai.mjs ai_git_command_args qa_commit_named_auto_seconds:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args app_ceb_bible_gloss_explains_repair_drafted:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args song_image_couplets_description_brief:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args bible_glyph_chapters_seat_split_redraw:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args bible_glyph_chapters_seat_split_planned:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -7883,6 +7887,8 @@
       "Bash(node scripts/aig.mjs qa_commit_named_auto_seconds:*)",
       "Bash(node scripts/aig.mjs app_ceb_bible_gloss_explains_repair_drafted:*)",
       "Bash(node scripts/aig.mjs song_image_couplets_description_brief:*)",
+      "Bash(node scripts/aig.mjs bible_glyph_chapters_seat_split_redraw:*)",
+      "Bash(node scripts/aig.mjs bible_glyph_chapters_seat_split_planned:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -10473,7 +10479,9 @@
       "Bash(node scripts/aig.mjs ai_git_command_args qa_commit_named_gates_apps_blocked_report:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args qa_commit_named_auto_seconds:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args app_ceb_bible_gloss_explains_repair_drafted:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args song_image_couplets_description_brief:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args song_image_couplets_description_brief:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args bible_glyph_chapters_seat_split_redraw:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args bible_glyph_chapters_seat_split_planned:*)"
     ],
     "defaultMode": "acceptEdits"
   },
