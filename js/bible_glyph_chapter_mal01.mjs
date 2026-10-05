@@ -49,7 +49,7 @@ export function bible_glyph_chapter_mal01() {
           "us?",
           "Was",
           "$no_entry",
-          "$proper_name$Esau",
+          "$hair+proper_name",
           "Jacob",
           "$brother?",
           "declares",
@@ -66,7 +66,7 @@ export function bible_glyph_chapter_mal01() {
         verse_number: 3,
         words: [
           "but",
-          "$proper_name$Esau",
+          "$hair+proper_name",
           "I",
           "have",
           "hated,",
