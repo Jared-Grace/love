@@ -1,18 +1,14 @@
+import { app_search_languages_answers_joined } from "./app_search_languages_answers_joined.mjs";
 import { app_search_language_matching_or_null } from "./app_search_language_matching_or_null.mjs";
-import { list_includes_not } from "./list_includes_not.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_search_language_searchable } from "./app_search_language_searchable.mjs";
 import { list_add } from "./list_add.mjs";
-import { object_property_names } from "./object_property_names.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { language_code_key } from "./language_code_key.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_concat_unique } from "./list_concat_unique.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { list_all } from "./list_all.mjs";
 export async function app_search_languages_matching(languages_chosen, query) {
   "$plain languages_chosen";
   "$plain query";
@@ -34,7 +30,7 @@ export async function app_search_languages_matching(languages_chosen, query) {
     }
   }
   async function language_matching(language_code) {
-    let r2 = app_search_language_matching_or_null(language_code, query);
+    let r2 = await app_search_language_matching_or_null(language_code, query);
     return r2;
   }
   let answers = await list_map_unordered_async(codes, language_matching);
@@ -47,37 +43,10 @@ export async function app_search_languages_matching(languages_chosen, query) {
   for (let a of asked) {
     words = list_concat_unique(words, a.words);
   }
-  function missing_everywhere(word) {
-    function lacks(a) {
-      let not_asked = list_includes_not(a.words, word);
-      let missing = not_asked || list_includes(a.words_missing, word);
-      return missing;
-    }
-    let all = list_all(asked, lacks);
-    return all;
-  }
-  let words_missing = list_filter(words, missing_everywhere);
-  let dictionary = {};
-  for (let a of asked) {
-    for (let [chapter_code, verses] of Object.entries(a.dictionary)) {
-      let held = dictionary[chapter_code] || [];
-      dictionary[chapter_code] = list_concat_unique(held, verses);
-    }
-  }
-  for (let chapter_code of object_property_names(dictionary)) {
-    function lambda2(a, b) {
-      let left = Number(a);
-      let right = Number(b);
-      let difference = subtract(left, right);
-      return difference;
-    }
-    dictionary[chapter_code].sort(lambda2);
-  }
-  let r = {
+  let r = app_search_languages_answers_joined(
+    asked,
     words,
-    words_missing,
-    dictionary,
     languages_unsearchable,
-  };
+  );
   return r;
 }
