@@ -26,11 +26,11 @@ export async function bible_search_language_upload(language_code) {
       return numbers;
     }
     let value = object_values_map(chapters, verse_numbers);
-    let r = {
+    let file = {
       destination,
       value,
     };
-    return r;
+    return file;
   }
   await firebase_upload_object_compressed_chunked(entries, word_file);
   ("the build is marked last, the same mark the English words are dated by, because a saved copy of any word under the index folder is thrown away when that mark moves - so one mark keeps every language's saved copies honest");
