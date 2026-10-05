@@ -359,7 +359,7 @@ export function bible_glyph_chapter_2ki03() {
           "of",
           "$wrestling+heart_on_fire",
           "$speech,",
-          "$proper_name$Elisha",
+          "$heart_on_fire+rescue",
           "$son",
           "of",
           "$proper_name$Shaphat",
@@ -374,7 +374,7 @@ export function bible_glyph_chapter_2ki03() {
           "the",
           "$hand",
           "of",
-          "$proper_name$Elijah.",
+          "$heart_on_fire+i_am.",
         ],
       },
       {
@@ -410,7 +410,7 @@ export function bible_glyph_chapter_2ki03() {
       {
         verse_number: 13,
         words: [
-          "$proper_name$Elisha",
+          "$heart_on_fire+rescue",
           "$speech",
           "to",
           "the",
