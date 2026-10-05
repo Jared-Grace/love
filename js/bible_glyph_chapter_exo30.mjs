@@ -295,7 +295,7 @@ export function bible_glyph_chapter_exo30() {
       },
       {
         verse_number: 11,
-        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech,"],
+        words: ["Then", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech,"],
       },
       {
         verse_number: 12,
@@ -476,7 +476,7 @@ export function bible_glyph_chapter_exo30() {
       },
       {
         verse_number: 17,
-        words: ["And", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech,"],
+        words: ["And", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech,"],
       },
       {
         verse_number: 18,
@@ -604,7 +604,7 @@ export function bible_glyph_chapter_exo30() {
       },
       {
         verse_number: 22,
-        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech,"],
+        words: ["Then", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech,"],
       },
       {
         verse_number: 23,
@@ -889,7 +889,7 @@ export function bible_glyph_chapter_exo30() {
           "also",
           "$speech",
           "to",
-          "$proper_name$Moses,",
+          "$fishing_pole+proper_name,",
           "$hand_receiving",
           "fragrant",
           "spices:",
