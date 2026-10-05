@@ -122,7 +122,7 @@ export function bible_glyph_chapter_deu10() {
         verse_number: 4,
         words: [
           "And",
-          "He",
+          "$i_am",
           "wrote",
           "on",
           "the",
