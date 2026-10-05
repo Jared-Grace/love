@@ -169,7 +169,7 @@ export function bible_glyph_chapter_gen42() {
           "of",
           "the",
           "$earth.",
-          "So",
+          "$i_am+plus",
           "when",
           "his",
           "$brother",
