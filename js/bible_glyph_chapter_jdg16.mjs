@@ -1223,7 +1223,7 @@ export function bible_glyph_chapter_jdg16() {
           "he",
           "had",
           "judged",
-          "$proper_name$Israel",
+          "$wrestling+heart_on_fire",
           "twenty",
           "$year.",
         ],
