@@ -154,7 +154,7 @@ export function bible_glyph_chapter_psa097() {
           "the",
           "$woman",
           "of",
-          "$proper_name$Judah",
+          "$hands_raised+proper_name",
           "exult,",
           "because",
           "of",
