@@ -1336,7 +1336,7 @@ export function bible_glyph_chapter_deu32() {
           "are",
           "crossing",
           "the",
-          "$proper_name$Jordan",
+          "$pointing_down+proper_name",
           "to",
           "possess.",
         ],
