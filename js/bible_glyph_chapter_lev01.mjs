@@ -18,7 +18,7 @@ export function bible_glyph_chapter_lev01() {
           "$i_am",
           "called",
           "to",
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "and",
           "$mouth",
           "to",
