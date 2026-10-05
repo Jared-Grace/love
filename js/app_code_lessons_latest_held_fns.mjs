@@ -40,6 +40,7 @@ export function app_code_lessons_latest_held_fns() {
   "then deploy through 234, 2026-10-05: nothing held";
   "2026-10-05: hold 235 until the human has read its first draft";
   "then deploy through 235, 2026-10-05: nothing held";
-  let fns = [];
+  "2026-10-05: hold 236 until the human has read its first draft";
+  let fns = [app_code_lesson_statement_name_rectangles_join_down];
   return fns;
 }
