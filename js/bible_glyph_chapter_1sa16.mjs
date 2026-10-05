@@ -248,7 +248,7 @@ export function bible_glyph_chapter_1sa16() {
           "rejected",
           "him.",
           "The",
-          "LORD",
+          "$i_am",
           "does",
           "$no_entry",
           "see",
