@@ -33,7 +33,7 @@ export function bible_glyph_chapter_num22() {
           "$proper_name$Moab",
           "across",
           "the",
-          "$proper_name$Jordan",
+          "$pointing_down+proper_name",
           "near",
           "$proper_name$Jericho.",
         ],
