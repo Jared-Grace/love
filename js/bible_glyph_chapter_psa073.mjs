@@ -23,7 +23,7 @@ export function bible_glyph_chapter_psa073() {
           "is",
           "$thumbs_up",
           "to",
-          "$proper_name$Israel,",
+          "$wrestling+heart_on_fire,",
           "to",
           "those",
           "who",
