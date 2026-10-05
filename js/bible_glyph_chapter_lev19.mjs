@@ -12,7 +12,7 @@ export function bible_glyph_chapter_lev19() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "the", "$i_am", "$mouth", "to", "$proper_name$Moses,"],
+        words: ["Then", "the", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,"],
       },
       {
         verse_number: 2,
@@ -23,7 +23,7 @@ export function bible_glyph_chapter_lev19() {
           "whole",
           "congregation",
           "of",
-          "$proper_name$Israel",
+          "$wrestling+heart_on_fire",
           "and",
           "$speech",
           "them,",
