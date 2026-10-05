@@ -13,7 +13,7 @@ export function bible_glyph_chapter_num10() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 2,
@@ -83,7 +83,7 @@ export function bible_glyph_chapter_num10() {
           "the",
           "clans",
           "of",
-          "$proper_name$Israel,",
+          "$wrestling+heart_on_fire,",
           "are",
           "to",
           "gather",
@@ -361,7 +361,7 @@ export function bible_glyph_chapter_num10() {
           "the",
           "$hand",
           "of",
-          "$proper_name$Moses.",
+          "$fishing_pole+proper_name.",
         ],
       },
       {
@@ -709,7 +709,7 @@ export function bible_glyph_chapter_num10() {
         verse_number: 29,
         words: [
           "Then",
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "$speech",
           "to",
           "$proper_name$Hobab",
@@ -724,7 +724,7 @@ export function bible_glyph_chapter_num10() {
           "in",
           "law",
           "of",
-          "$proper_name$Moses:",
+          "$fishing_pole+proper_name:",
           "We",
           "are",
           "setting",
@@ -756,7 +756,7 @@ export function bible_glyph_chapter_num10() {
           "$thumbs_up",
           "things",
           "to",
-          "$proper_name$Israel.",
+          "$wrestling+heart_on_fire.",
         ],
       },
       {
@@ -907,7 +907,7 @@ export function bible_glyph_chapter_num10() {
           "$ark",
           "set",
           "out,",
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "would",
           "$speech,",
           "Rise",
@@ -948,7 +948,7 @@ export function bible_glyph_chapter_num10() {
           "countless",
           "thousands",
           "of",
-          "$proper_name$Israel.",
+          "$wrestling+heart_on_fire.",
         ],
       },
     ],
