@@ -69,7 +69,7 @@ export function bible_glyph_chapter_mic06() {
           "argue",
           "it",
           "against",
-          "$proper_name$Israel.",
+          "$wrestling+heart_on_fire.",
         ],
       },
       {
@@ -116,7 +116,7 @@ export function bible_glyph_chapter_mic06() {
           "$kneeling.",
           "I",
           "sent",
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "before",
           "you,",
           "as",
