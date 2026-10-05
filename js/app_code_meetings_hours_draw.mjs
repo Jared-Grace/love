@@ -38,7 +38,7 @@ export function app_code_meetings_hours_draw(
 ) {
   arguments_assert(arguments, 4);
   ("a picture of meetings as bars of hours, one row each, under a ruler of the hours from first_hour to last_hour; meetings is a list of [start, end], the first filled with the first rectangle's colour and the second with the second's, as the rectangle pictures colour two shapes");
-  ("The hours sit on the lines between squares and not on the squares, as the rectangle pictures number their edges, because a meeting from 9 to 11 is two squares: the hours are where it starts and ends. An hour a meeting starts at wears the start colour and an hour one ends at the end colour, as in the meetings lessons; an hour that is both wears both, the end colour on its left half and the start colour on its right, and its line is striped in the two - asked by the human 2026-10-05 for two meetings that touch, where the plain hour was the one number in the picture that did not say what it was. Not picked: one of the two colours, which would say the hour is only an end or only a start.");
+  ("The hours sit on the lines between squares and not on the squares, as the rectangle pictures number their edges, because a meeting from 9 to 11 is two squares: the hours are where it starts and ends. An hour a meeting starts at wears the start colour and an hour one ends at the end colour, as in the meetings lessons; an hour that is both wears both, the end colour on its left half and the start colour on its right, and its line is the two side by side, the end colour on the left and the start colour on the right - asked by the human 2026-10-05 for two meetings that touch, where the plain hour was the one number in the picture that did not say what it was. Not picked: one of the two colours, which would say the hour is only an end or only a start. The line was first striped, the end colour dashed over the start colour; the human found the dashes showed the two colours unequally, and two lines side by side also say which comes first, as the rectangle pictures draw a shared edge.");
   ("Each hour has a line drawn down through the bars in its own colour, asked by the human 2026-10-04 after a student read the hours as columns rather than as the lines between them; a coloured line lies above a plain one.");
   let start_color = app_code_highlight_color();
   let end_color = app_code_highlight_color_second();
@@ -125,7 +125,7 @@ export function app_code_meetings_hours_draw(
     let colored = not(b);
     let layer = colored ? "2" : "1";
     if (both) {
-      app_code_grid_edge_line_draw(
+      let pair = app_code_grid_edge_line_draw(
         grid,
         start_color,
         column_line,
@@ -134,17 +134,10 @@ export function app_code_meetings_hours_draw(
         true,
         "2",
       );
-      let stripes = app_code_grid_edge_line_draw(
-        grid,
-        end_color,
-        column_line,
-        last,
-        rows,
-        true,
-        "3",
-      );
-      let dashed = text_combine("3px dashed ", end_color);
-      html_style_set(stripes, "border-left", dashed);
+      html_style_assign(pair, {
+        "border-left": text_combine("2px solid ", end_color),
+        "border-right": text_combine("2px solid ", start_color),
+      });
     } else {
       app_code_grid_edge_line_draw(
         grid,
