@@ -184,7 +184,7 @@ export function bible_glyph_chapter_lev10() {
           "$skull+doing",
           "and",
           "the",
-          "LORD",
+          "$i_am",
           "will",
           "be",
           "angry",
