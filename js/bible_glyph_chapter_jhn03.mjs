@@ -346,7 +346,7 @@ export function bible_glyph_chapter_jhn03() {
         words: [
           "Just",
           "as",
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "lifted",
           "up",
           "the",
