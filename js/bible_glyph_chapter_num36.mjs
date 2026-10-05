@@ -498,7 +498,7 @@ export function bible_glyph_chapter_num36() {
           "$proper_name$Moab",
           "by",
           "the",
-          "$proper_name$Jordan",
+          "$pointing_down+proper_name",
           "across",
           "from",
           "$proper_name$Jericho.",
