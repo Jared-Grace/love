@@ -6,6 +6,7 @@ export async function app_search_language_matching_or_null(
   language_code,
   query,
 ) {
+  "Every chapter and verse in one language holding all the words of a query, or nothing at all where that language read none of the query's words.";
   arguments_assert(arguments, 2);
   let words = app_search_language_words(language_code, query);
   let none = list_empty_is(words);

@@ -11,6 +11,7 @@ export function app_search_languages_answers_joined(
   words,
   languages_unsearchable,
 ) {
+  "One answer out of every language's answer: the chapters and verses all joined and put back in verse order, and the words that were missing from all of them.";
   arguments_assert(arguments, 3);
   function missing_everywhere(word) {
     function lacks(a) {
