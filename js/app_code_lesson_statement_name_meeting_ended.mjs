@@ -28,7 +28,7 @@ export function app_code_lesson_statement_name_meeting_ended() {
   arguments_assert(arguments, 0);
   ("whether one meeting has ended by the time another starts: let ended = e1 <= s2; - picked by Claude 2026-10-04 when the human asked for the next lesson, because every formula the roadmap names for DSA was already a lesson. In DSA it is the check that a person can go to every meeting, Meeting Rooms, made between each meeting and the next once they are sorted by start.");
   ("Not picked: the gap between two meetings, s2 - e1, which needs this check first to mean anything; the number of meetings going on at once, which needs a loop; and a rectangle left of another, which is this check across and can follow it.");
-  ("One line, and only e1 and s2 in it: s1 and e2 stay in the program, so the reader sees that the other two hours do not decide it. The check is one way round, the first meeting before the second; a second meeting wholly before the first answers false, and the writing says the first ends before the second starts, never that the meetings are apart.");
+  ("One line, and only e1 and s2 in it: s1 and e2 stay in the program, so the reader sees that the other two hours do not decide it. All four wear their colours in the code all the same, asked by the human 2026-10-05, as the line above the code colours all four; the words say which two decide it. The check is one way round, the first meeting before the second; a second meeting wholly before the first answers false, and the writing says the first ends before the second starts, never that the meetings are apart.");
   ("Named ended and not before, and worded has ended by the time rather than ends before, because the human asked 2026-10-04 why before is <= when before reads as <: a meeting that ends the hour the other starts is counted, so before would be wrong at exactly the case the lesson teaches. Not picked: free, which says what it is for and not what it checks; apart, which touching meetings are not; and changing the check to <, which would call touching meetings overlapping.");
   ("<= and not <, as in Is one meeting inside another: a meeting that starts the hour the other ends does not overlap it, and the writing shows that case. Every screen asks such a pair, because it is the case a < would get wrong.");
   ("The answers are only true or false, so a question offers two buttons. Each screen asks two pairs that are true, one touching and one apart, and two that are false, one overlapping and one with the second meeting wholly first.");
@@ -334,8 +334,10 @@ export function app_code_lesson_statement_name_meeting_ended() {
     ],
     decoys: null,
     example_pointers: [
+      [[s, "8"], start_color],
       [[e, "10"], end_color],
       [[s2, "11"], start_color],
+      [[e2, "12"], end_color],
     ],
     answer_count: 2,
   });

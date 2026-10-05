@@ -1,3 +1,7 @@
+import { html_span } from "./html_span.mjs";
+import { html_style_code_dark } from "./html_style_code_dark.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { app_code_grid_edge_line_draw } from "./app_code_grid_edge_line_draw.mjs";
 import { not } from "./not.mjs";
 import { subtract } from "./subtract.mjs";
@@ -34,7 +38,7 @@ export function app_code_meetings_hours_draw(
 ) {
   arguments_assert(arguments, 4);
   ("a picture of meetings as bars of hours, one row each, under a ruler of the hours from first_hour to last_hour; meetings is a list of [start, end], the first filled with the first rectangle's colour and the second with the second's, as the rectangle pictures colour two shapes");
-  ("The hours sit on the lines between squares and not on the squares, as the rectangle pictures number their edges, because a meeting from 9 to 11 is two squares: the hours are where it starts and ends. An hour a meeting starts at wears the start colour and an hour one ends at the end colour, as in the meetings lessons; an hour that is both stays plain.");
+  ("The hours sit on the lines between squares and not on the squares, as the rectangle pictures number their edges, because a meeting from 9 to 11 is two squares: the hours are where it starts and ends. An hour a meeting starts at wears the start colour and an hour one ends at the end colour, as in the meetings lessons; an hour that is both wears both, the end colour on its left half and the start colour on its right, and its line is striped in the two - asked by the human 2026-10-05 for two meetings that touch, where the plain hour was the one number in the picture that did not say what it was. Not picked: one of the two colours, which would say the hour is only an end or only a start.");
   ("Each hour has a line drawn down through the bars in its own colour, asked by the human 2026-10-04 after a student read the hours as columns rather than as the lines between them; a coloured line lies above a plain one.");
   let start_color = app_code_highlight_color();
   let end_color = app_code_highlight_color_second();
@@ -100,20 +104,58 @@ export function app_code_meetings_hours_draw(
     });
     let color = hour_color(hour);
     let t3 = text_to(hour);
-    let chip = app_code_explain_number_colored(t3, color);
-    chip(cell);
+    let both = list_includes(starts, hour) && list_includes(ends, hour);
+    let halves = text_combine_multiple([
+      "linear-gradient(to right, ",
+      end_color,
+      " 50%, ",
+      start_color,
+      " 50%)",
+    ]);
+    if (both) {
+      let chip_both = html_span(cell);
+      html_style_code_dark(chip_both);
+      html_span_text(chip_both, t3);
+      html_style_set(chip_both, "background", halves);
+    } else {
+      let chip = app_code_explain_number_colored(t3, color);
+      chip(cell);
+    }
     let b = equal(color, plain);
     let colored = not(b);
     let layer = colored ? "2" : "1";
-    app_code_grid_edge_line_draw(
-      grid,
-      color,
-      column_line,
-      last,
-      rows,
-      true,
-      layer,
-    );
+    if (both) {
+      app_code_grid_edge_line_draw(
+        grid,
+        start_color,
+        column_line,
+        last,
+        rows,
+        true,
+        "2",
+      );
+      let stripes = app_code_grid_edge_line_draw(
+        grid,
+        end_color,
+        column_line,
+        last,
+        rows,
+        true,
+        "3",
+      );
+      let dashed = text_combine("3px dashed ", end_color);
+      html_style_set(stripes, "border-left", dashed);
+    } else {
+      app_code_grid_edge_line_draw(
+        grid,
+        color,
+        column_line,
+        last,
+        rows,
+        true,
+        layer,
+      );
+    }
   }
   for (let row of range(rows)) {
     let [start, end] = list_get(meetings, row);
