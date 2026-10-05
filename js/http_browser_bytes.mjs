@@ -1,13 +1,13 @@
-import { equal } from "./equal.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { error_json } from "./error_json.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { json_to } from "./json_to.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { property_set } from "./property_set.mjs";
+import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
+import { error_json } from "./error_json.mjs";
 import { retry } from "./retry.mjs";
+import { not_equal } from "./not_equal.mjs";
 export async function http_browser_bytes(method, options, body, url) {
   "The browser's way of fetching an address, answering the raw bytes, giving up after a ceiling and asking again on a fresh connection when it does.";
   "THE CEILING AND THE NUMBER OF TRIES COME OFF THE OPTIONS, and the numbers written here are only what a caller gets for saying nothing. Eight seconds and three tries are right for the ordinary case, which is a page asking a local server a question it answers in milliseconds; they are wrong for the rare caller asking for something that genuinely takes minutes, and that caller was not failing slowly, it was failing every time. A caller who knows how long its own work takes is the only one who can say.";
@@ -41,11 +41,18 @@ export async function http_browser_bytes(method, options, body, url) {
       let response = await fetch(url, r);
       ("WHAT WAS ASKED FOR AND WHAT CAME BACK ARE BOTH IN THE COMPLAINT. A refusal used to be reported as four words naming no address and no status, which is a true sentence about nothing anybody can act on - three of them arrived from a phone in a row and there was no telling a file that is not there from a file that is there and will not be handed over without signing in. The retrier writes down what each attempt said, so saying it here is what carries it the whole way out.");
       ("NOT FOUND IS AN ANSWER, NOT A STALL, so it is not asked again. A fresh connection fixes a connection; it does not put a file there. Asking three times cost a missing file seven seconds before anyone was told.");
+      ("THE STATUS IS WRITTEN DOWN UNDER THE ONE SPELLING ANYTHING READS IT BACK BY. ",
+        fn_name("http_error_message_status_or_null"),
+        " is the only reading that recovers a status out of a complaint once the complaint has become words, and it looks for statusCode, which is also what ",
+        fn_name("http_node_request"),
+        " writes. Spelling it status here put the number somewhere nothing asks, so ",
+        fn_name("http_error_message_absent_is"),
+        " answered no to every not-found a person ever met in a page - and by its own rule a quiet answer grants nothing, so a word that is in no verse and a connection that dropped came out as the same sentence. The two halves of one fetch must agree on the word, not merely both carry the number.");
       if (equal(response.status, 404)) {
         absent = {
           hint: "the address answered that nothing is there",
           url,
-          status: response.status,
+          statusCode: response.status,
           status_text: response.statusText,
         };
         return null;
@@ -54,7 +61,7 @@ export async function http_browser_bytes(method, options, body, url) {
         error_json({
           hint: "the address answered and the answer was a refusal - is the file there, and is it readable without signing in?",
           url,
-          status: response.status,
+          statusCode: response.status,
           status_text: response.statusText,
         });
       }
