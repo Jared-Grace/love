@@ -1,3 +1,5 @@
+import { math_min } from "./math_min.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
 import { lyric_video_picture_motion_shake } from "./lyric_video_picture_motion_shake.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { random_seed_generator_from_text } from "./random_seed_generator_from_text.mjs";
@@ -27,7 +29,8 @@ export function lyric_video_picture_motion_text(
   ("★ THE BOX IN BETWEEN STAYS INSIDE THE PICTURE TOO. Its corner moves in a straight line and its size changes by the same ratio every frame, so zooming looks steady instead of rushing at one end. A size changing by ratio is never larger than one changing by equal steps between the same two sizes, and a box with equal steps stays inside because both ends do - so the box actually used, being no larger, stays inside as well.");
   ("★ THE RANDOM CHOICES ARE KEYED TO THE PICTURE'S PATH, SO RENDERING THE SAME VIDEO AGAIN MOVES EVERY PICTURE THE SAME WAY. A picture whose motion somebody dislikes can then be named and dealt with, instead of changing every time it is looked at.");
   ("★ A SECOND BOX TOO CLOSE TO THE FIRST IS DRAWN AGAIN. Two boxes chosen at random can land almost on top of each other, and the picture would then sit still, which is the one thing this is for preventing. Some corner has to move by at least a tenth of the picture; the draws stay keyed to the path, so the redraw is as repeatable as the first.");
-  ("A BOX IS BETWEEN HALF AND SEVENTEEN TWENTIETHS OF THE PICTURE ACROSS, so the closest view is at most twice as near as the whole and a picture is never zoomed until it turns to mush. The whole picture is never a box: the human watched boxes reaching all the way out and asked for more zoom overall.");
+  ("★ INSIDE THE PICTURE MEANS INSIDE THE PAINTED PART, NOT INSIDE THE FRAME IT IS FITTED INTO. A picture of another shape than the frame is fitted with a see-through margin, and the black ground shows through that margin. The boxes used to be chosen anywhere in the frame, so a picture shorter than the frame drifted its margin into view: the human saw a white painting move with a black band along its edge. So the boxes are now chosen inside the fitted picture, which is why the size of the picture itself is handed in, and the painted part is taken four pixels smaller on each cut side so a rounded edge can never show a line of black either. A picture exactly the shape of the frame has no margin, and its boxes come out exactly as they did before.");
+  ("A BOX IS BETWEEN HALF AND SEVENTEEN TWENTIETHS OF THE LARGEST FRAME-SHAPED BOX THE PICTURE HOLDS, so the closest view is at most twice as near as the whole and a picture is never zoomed until it turns to mush. The whole picture is never a box: the human watched boxes reaching all the way out and asked for more zoom overall.");
   ("★ THE BOX IS CUT BETWEEN PIXELS, NEVER ON THEM, AND THAT IS WHY THIS DOES NOT USE THE TOOL MADE FOR ZOOMING. That tool rounds the box's corner and its size to whole pixels separately, so a slow move becomes a run of small jumps and every few frames the two roundings disagree and the picture jerks back the other way. The human watched it and saw pulses that were not all the same direction. Measured on a black bar moving across 600 frames, 352 of the steps went backwards even with the picture enlarged twice first; cut between pixels, none did and every step was the same size to within a tenth of a pixel.");
   ("★ A PICTURE MAY NAME ITS OWN TWO BOXES, AND THEN THOSE ARE USED INSTEAD OF THE RANDOM ONES. Some pictures carry a motion of their own meaning: the human asked for the torn temple curtain to travel from top to bottom, the way the curtain was torn. The document holds it as motion with a from box and a to box, each a size, an x and a y given as parts of the picture, exactly the shape the random boxes have. The random boxes are still drawn first, so choosing a motion for one picture leaves every other picture's draws where they were.");
   ("THE PICTURE IS NOT ENLARGED BEFORE IT IS MOVED. Enlarging was only ever a way to make the whole-pixel steps smaller, and cutting between pixels makes them vanish instead; measured, the enlarged and the plain version moved equally smoothly and the plain one took a quarter of the time. The pictures are drawn at the size of the frame, so enlarging added no detail either.");
@@ -36,15 +39,37 @@ export function lyric_video_picture_motion_text(
   let next = random_seed_generator_from_text(picture.path);
   next();
   next();
+  let canvas_width = multiply(width, 2);
+  let canvas_height = multiply(height, 2);
+  let a3 = divide(canvas_width, picture.size.width);
+  let b3 = divide(canvas_height, picture.size.height);
+  let fit = math_min(a3, b3);
+  let fitted_width = multiply(picture.size.width, fit);
+  let fitted_height = multiply(picture.size.height, fit);
+  let top = subtract(fitted_width, 8);
+  let across = greater_than_equal(fitted_width, canvas_width)
+    ? 1
+    : divide(top, canvas_width);
+  let top2 = subtract(fitted_height, 8);
+  let down = greater_than_equal(fitted_height, canvas_height)
+    ? 1
+    : divide(top2, canvas_height);
+  let top3 = subtract(1, across);
+  let left_edge = divide(top3, 2);
+  let top4 = subtract(1, down);
+  let top_edge = divide(top4, 2);
+  let largest_box = math_min(across, down);
   function box() {
     let left = next();
     let right = multiply(left, 0.35);
-    let size = add(0.5, right);
-    let room = subtract(1, size);
+    let share = add(0.5, right);
+    let size = multiply(largest_box, share);
+    let room = subtract(across, size);
     let left2 = next();
-    let x = multiply(left2, room);
+    let x = left_edge + multiply(left2, room);
+    let room2 = subtract(down, size);
     let left3 = next();
-    let y = multiply(left3, room);
+    let y = top_edge + multiply(left3, room2);
     let b = {
       size,
       x,

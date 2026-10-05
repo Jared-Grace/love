@@ -1,3 +1,4 @@
+import { lyric_video_pictures_sized } from "./lyric_video_pictures_sized.mjs";
 import { lyric_video_frames_per_second } from "./lyric_video_frames_per_second.mjs";
 import { audio_file_duration } from "./audio_file_duration.mjs";
 import { lyric_video_filter_text } from "./lyric_video_filter_text.mjs";
@@ -29,7 +30,8 @@ export async function lyric_video_write(
   let size = width + "x" + height;
   let color =
     "color=c=black:s=" + size + ":r=" + lyric_video_frames_per_second();
-  let filter = lyric_video_filter_text(pictures, width, height, path_subtitles);
+  let sized = await lyric_video_pictures_sized(pictures);
+  let filter = lyric_video_filter_text(sized, width, height, path_subtitles);
   let opened = lyric_video_pictures_words(pictures);
   let fade = lyric_video_audio_fade_seconds();
   let rise = "afade=t=in:st=0:d=" + fade;
