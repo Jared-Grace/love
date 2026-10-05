@@ -596,7 +596,7 @@ export function bible_glyph_chapter_lev07() {
       },
       {
         verse_number: 22,
-        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 23,
@@ -718,7 +718,7 @@ export function bible_glyph_chapter_lev07() {
       },
       {
         verse_number: 28,
-        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 29,
@@ -857,7 +857,7 @@ export function bible_glyph_chapter_lev07() {
           "contribution",
           "$son",
           "of",
-          "$proper_name$Israel",
+          "$wrestling+heart_on_fire",
           "$sacrifice",
           "of",
           "their",
@@ -876,7 +876,7 @@ export function bible_glyph_chapter_lev07() {
           "from",
           "$son",
           "of",
-          "$proper_name$Israel.",
+          "$wrestling+heart_on_fire.",
         ],
       },
       {
@@ -922,7 +922,7 @@ export function bible_glyph_chapter_lev07() {
           "by",
           "$son",
           "of",
-          "$proper_name$Israel.",
+          "$wrestling+heart_on_fire.",
           "It",
           "is",
           "$hourglass",
@@ -964,7 +964,7 @@ export function bible_glyph_chapter_lev07() {
           "which",
           "$i_am",
           "gave",
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "$mountain",
           "$proper_name$Sinai",
           "$sun",
