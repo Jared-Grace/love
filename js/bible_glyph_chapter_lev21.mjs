@@ -17,7 +17,7 @@ export function bible_glyph_chapter_lev21() {
           "$i_am",
           "$speech",
           "to",
-          "$proper_name$Moses:",
+          "$fishing_pole+proper_name:",
           "$speech",
           "to",
           "the",
@@ -448,7 +448,7 @@ export function bible_glyph_chapter_lev21() {
       },
       {
         verse_number: 16,
-        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 17,
@@ -659,7 +659,7 @@ export function bible_glyph_chapter_lev21() {
         verse_number: 24,
         words: [
           "So",
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "$mouth",
           "this",
           "to",
