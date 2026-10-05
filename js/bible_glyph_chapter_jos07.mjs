@@ -287,7 +287,7 @@ export function bible_glyph_chapter_jos07() {
           "$family",
           "across",
           "the",
-          "$proper_name$Jordan,",
+          "$pointing_down+proper_name,",
           "to",
           "$hands_giving",
           "us",
@@ -314,7 +314,7 @@ export function bible_glyph_chapter_jos07() {
           "side",
           "of",
           "the",
-          "$proper_name$Jordan.",
+          "$pointing_down+proper_name.",
         ],
       },
       {
