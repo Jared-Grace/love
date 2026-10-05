@@ -427,7 +427,7 @@ export function bible_glyph_chapter_jdg11() {
           "way",
           "to",
           "the",
-          "$proper_name$Jordan.",
+          "$pointing_down+proper_name.",
           "Now,",
           "therefore,",
           "$turn_back",
@@ -735,7 +735,7 @@ export function bible_glyph_chapter_jdg11() {
           "$wilderness",
           "to",
           "the",
-          "$proper_name$Jordan.",
+          "$pointing_down+proper_name.",
         ],
       },
       {
