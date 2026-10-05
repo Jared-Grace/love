@@ -13,7 +13,7 @@ export function bible_glyph_chapter_lev27() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 2,
@@ -1058,7 +1058,7 @@ export function bible_glyph_chapter_lev27() {
           "$i_am",
           "gave",
           "to",
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "for",
           "the",
           "$son",
