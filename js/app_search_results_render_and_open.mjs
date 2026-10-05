@@ -13,6 +13,7 @@ export async function app_search_results_render_and_open(
   results,
   languages_chosen,
 ) {
+  "Drawing the found verses onto the page, and then opening whatever the search left no choice about.";
   arguments_assert(arguments, 4);
   let r = app_search_results_render(
     div_results,
