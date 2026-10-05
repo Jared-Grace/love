@@ -339,7 +339,7 @@ export function bible_glyph_chapter_1sa03() {
           "$hammer+doing",
           "$speech",
           "in",
-          "$proper_name$Israel",
+          "$wrestling+heart_on_fire",
           "at",
           "which",
           "the",
@@ -590,7 +590,7 @@ export function bible_glyph_chapter_1sa03() {
         words: [
           "So",
           "all",
-          "$proper_name$Israel,",
+          "$wrestling+heart_on_fire,",
           "from",
           "$proper_name$Dan",
           "to",
