@@ -854,7 +854,7 @@ export function bible_glyph_chapter_jol02() {
           "am",
           "present",
           "in",
-          "$proper_name$Israel,",
+          "$wrestling+heart_on_fire,",
           "and",
           "that",
           "I",
