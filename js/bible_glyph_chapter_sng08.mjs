@@ -325,7 +325,7 @@ export function bible_glyph_chapter_sng08() {
       {
         verse_number: 11,
         words: [
-          "$proper_name$Solomon",
+          "$peace",
           "had",
           "a",
           "vineyard",
