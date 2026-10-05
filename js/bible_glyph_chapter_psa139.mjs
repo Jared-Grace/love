@@ -19,7 +19,7 @@ export function bible_glyph_chapter_psa139() {
           "A",
           "Psalm",
           "of",
-          "$proper_name$David.",
+          "$two_hearts+proper_name.",
           "O",
           "$i_am,",
           "You",
