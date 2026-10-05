@@ -724,7 +724,7 @@ export function bible_glyph_chapter_mrk08() {
           "$diving_mask+doer,",
           "$plus",
           "others",
-          "$proper_name$Elijah,",
+          "$heart_on_fire+i_am,",
           "$pointing",
           "still",
           "others",
