@@ -297,7 +297,7 @@ export function bible_glyph_chapter_isa56() {
           "the",
           "dispersed",
           "of",
-          "$proper_name$Israel,",
+          "$wrestling+heart_on_fire,",
           "I",
           "will",
           "gather",
