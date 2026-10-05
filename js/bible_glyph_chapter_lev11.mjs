@@ -18,7 +18,7 @@ export function bible_glyph_chapter_lev11() {
           "$mouth",
           "again",
           "to",
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "and",
           "$proper_name$Aaron,",
           "$speech",
