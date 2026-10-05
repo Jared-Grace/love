@@ -139,7 +139,7 @@ export function bible_glyph_chapter_mal04() {
           "of",
           "My",
           "$kneeling",
-          "$proper_name$Moses,",
+          "$fishing_pole+proper_name,",
           "the",
           "statutes",
           "and",
@@ -151,7 +151,7 @@ export function bible_glyph_chapter_mal04() {
           "$proper_name$Horeb",
           "for",
           "all",
-          "$proper_name$Israel.",
+          "$wrestling+heart_on_fire.",
         ],
       },
       {
