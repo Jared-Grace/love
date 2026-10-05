@@ -669,7 +669,7 @@ export function bible_glyph_chapter_jhn03() {
           "you",
           "beyond",
           "the",
-          "$proper_name$Jordan,",
+          "$pointing_down+proper_name,",
           "the",
           "One",
           "you",
