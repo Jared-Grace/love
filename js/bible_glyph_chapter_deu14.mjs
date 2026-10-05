@@ -33,7 +33,7 @@ export function bible_glyph_chapter_deu14() {
           "behalf",
           "of",
           "the",
-          "$skull,",
+          "$skull+doing,",
         ],
       },
       {

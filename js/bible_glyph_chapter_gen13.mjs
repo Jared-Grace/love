@@ -97,7 +97,7 @@ export function bible_glyph_chapter_gen13() {
           "$altar",
           "he",
           "had",
-          "$hammer",
+          "$hammer+doing",
           "there",
           "at",
           "the",

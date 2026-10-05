@@ -335,8 +335,8 @@ export function bible_glyph_chapter_jhn14() {
       {
         verse_number: 12,
         words: [
-          "$check,",
-          "$check,",
+          "$check+manner,",
+          "$check+manner,",
           "I",
           "$speech",
           "you,",

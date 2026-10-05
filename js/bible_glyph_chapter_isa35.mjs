@@ -227,7 +227,7 @@ export function bible_glyph_chapter_isa35() {
           "the",
           "$road",
           "of",
-          "$sparkle.",
+          "$sparkle+thing.",
           "The",
           "unclean",
           "will",

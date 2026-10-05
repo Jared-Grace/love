@@ -543,7 +543,7 @@ export function bible_glyph_chapter_ezk34() {
           "$person+sheep",
           "them",
           "with",
-          "$scales.",
+          "$scales+thing.",
         ],
       },
       {
@@ -901,7 +901,7 @@ export function bible_glyph_chapter_ezk34() {
           "of",
           "those",
           "who",
-          "$kneeling",
+          "$kneeling+doing",
           "them.",
         ],
       },

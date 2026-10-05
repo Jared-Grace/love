@@ -14,7 +14,7 @@ export function bible_glyph_chapter_psa116() {
         verse_number: 1,
         words: [
           "I",
-          "$heart_red",
+          "$heart_red+doing",
           "the",
           "$i_am,",
           "for",

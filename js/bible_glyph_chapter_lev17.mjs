@@ -302,7 +302,7 @@ export function bible_glyph_chapter_lev17() {
           "of",
           "Meeting",
           "to",
-          "$hammer",
+          "$hammer+doing",
           "it",
           "to",
           "$i_am,",

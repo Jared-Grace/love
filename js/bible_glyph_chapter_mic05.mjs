@@ -462,7 +462,7 @@ export function bible_glyph_chapter_mic05() {
         words: [
           "I",
           "will",
-          "$hammer",
+          "$hammer+doing",
           "vengeance",
           "in",
           "anger",

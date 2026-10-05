@@ -101,7 +101,7 @@ export function bible_glyph_chapter_psa001() {
           "in",
           "whatever",
           "he",
-          "$hammer.",
+          "$hammer+doing.",
         ],
       },
       {
@@ -134,7 +134,7 @@ export function bible_glyph_chapter_psa001() {
           "stand",
           "in",
           "the",
-          "$scales,",
+          "$scales+thing,",
           "nor",
           "sinners",
           "in",

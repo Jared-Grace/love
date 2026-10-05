@@ -241,7 +241,7 @@ export function bible_glyph_chapter_psa042() {
           "with",
           "me,",
           "a",
-          "$hands_praying",
+          "$hands_praying+thing",
           "to",
           "the",
           "$fire",

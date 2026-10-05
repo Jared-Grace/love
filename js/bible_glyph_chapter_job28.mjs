@@ -474,7 +474,7 @@ export function bible_glyph_chapter_job28() {
         words: [
           "When",
           "God",
-          "$hammer",
+          "$hammer+doing",
           "the",
           "weight",
           "of",
@@ -492,7 +492,7 @@ export function bible_glyph_chapter_job28() {
         words: [
           "when",
           "He",
-          "$hammer",
+          "$hammer+doing",
           "a",
           "limit",
           "for",

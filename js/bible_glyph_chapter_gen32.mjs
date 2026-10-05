@@ -282,7 +282,7 @@ export function bible_glyph_chapter_gen32() {
           "$check",
           "You",
           "have",
-          "$hammer",
+          "$hammer+doing",
           "for",
           "Your",
           "$kneeling.",

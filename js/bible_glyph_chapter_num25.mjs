@@ -277,7 +277,7 @@ export function bible_glyph_chapter_num25() {
           "but",
           "those",
           "who",
-          "$skull",
+          "$skull+doing",
           "in",
           "the",
           "plague",

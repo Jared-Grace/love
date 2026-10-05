@@ -243,7 +243,7 @@ export function bible_glyph_chapter_pro03() {
           "the",
           "one",
           "He",
-          "$heart_red,",
+          "$heart_red+doing,",
           "as",
           "a",
           "$father",
@@ -542,7 +542,7 @@ export function bible_glyph_chapter_pro03() {
           "your",
           "$hand",
           "to",
-          "$hammer.",
+          "$hammer+doing.",
         ],
       },
       {

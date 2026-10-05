@@ -35,7 +35,7 @@ export function bible_glyph_chapter_psa100() {
       {
         verse_number: 2,
         words: [
-          "$kneeling",
+          "$kneeling+doing",
           "the",
           "$i_am",
           "with",
@@ -63,7 +63,7 @@ export function bible_glyph_chapter_psa100() {
           "is",
           "He",
           "who",
-          "$hammer",
+          "$hammer+doing",
           "us,",
           "and",
           "we",

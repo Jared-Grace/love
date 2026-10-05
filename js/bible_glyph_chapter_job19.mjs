@@ -123,7 +123,7 @@ export function bible_glyph_chapter_job19() {
           "there",
           "is",
           "no",
-          "$scales.",
+          "$scales+thing.",
         ],
       },
       {
@@ -351,7 +351,7 @@ export function bible_glyph_chapter_job19() {
           "and",
           "those",
           "I",
-          "$heart_red",
+          "$heart_red+doing",
           "have",
           "turned",
           "against",

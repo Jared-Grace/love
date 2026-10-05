@@ -409,7 +409,7 @@ export function bible_glyph_chapter_jol01() {
       {
         verse_number: 14,
         words: [
-          "$sparkle",
+          "$sparkle+doing",
           "a",
           "fast;",
           "proclaim",

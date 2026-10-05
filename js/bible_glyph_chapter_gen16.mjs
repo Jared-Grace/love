@@ -197,7 +197,7 @@ export function bible_glyph_chapter_gen16() {
           "in",
           "your",
           "$hand.",
-          "$hammer",
+          "$hammer+doing",
           "to",
           "her",
           "whatever",

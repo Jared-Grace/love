@@ -29,7 +29,7 @@ export function bible_glyph_chapter_mic02() {
           "morning's",
           "$light",
           "they",
-          "$hammer",
+          "$hammer+doing",
           "it",
           "because",
           "the",

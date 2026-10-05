@@ -18,7 +18,7 @@ export function bible_glyph_chapter_exo13() {
       {
         verse_number: 2,
         words: [
-          "$sparkle",
+          "$sparkle+doing",
           "to",
           "Me",
           "every",
@@ -144,7 +144,7 @@ export function bible_glyph_chapter_exo13() {
           "$honey,",
           "you",
           "shall",
-          "$kneeling",
+          "$kneeling+doing",
           "this",
           "service",
           "in",
@@ -230,7 +230,7 @@ export function bible_glyph_chapter_exo13() {
           "of",
           "what",
           "$i_am",
-          "$hammer",
+          "$hammer+doing",
           "for",
           "me",
           "when",

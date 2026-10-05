@@ -415,7 +415,7 @@ export function bible_glyph_chapter_dan01() {
           "what",
           "you",
           "$eye,",
-          "$hammer",
+          "$hammer+doing",
           "with",
           "your",
           "$kneeling.",

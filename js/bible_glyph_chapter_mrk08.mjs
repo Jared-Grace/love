@@ -308,7 +308,7 @@ export function bible_glyph_chapter_mrk08() {
           "demand",
           "a",
           "sign?",
-          "$check,",
+          "$check+manner,",
           "I",
           "$speech",
           "you,",

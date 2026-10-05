@@ -250,7 +250,7 @@ export function bible_glyph_chapter_sng08() {
           "What",
           "shall",
           "we",
-          "$hammer",
+          "$hammer+doing",
           "for",
           "our",
           "sister",

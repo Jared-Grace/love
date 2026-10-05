@@ -179,7 +179,7 @@ export function bible_glyph_chapter_zec03() {
           "of",
           "the",
           "$i_am",
-          "$witness",
+          "$witness+doing",
           "$proper_name$Joshua:",
         ],
       },

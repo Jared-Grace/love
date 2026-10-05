@@ -724,7 +724,7 @@ export function bible_glyph_chapter_jud01() {
           "for",
           "all",
           "$hourglass.",
-          "$check.",
+          "$check+manner.",
         ],
       },
     ],

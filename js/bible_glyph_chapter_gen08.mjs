@@ -167,7 +167,7 @@ export function bible_glyph_chapter_gen08() {
           "window",
           "he",
           "had",
-          "$hammer",
+          "$hammer+doing",
           "in",
           "the",
           "ark",
@@ -619,7 +619,7 @@ export function bible_glyph_chapter_gen08() {
           "as",
           "I",
           "have",
-          "$hammer.",
+          "$hammer+doing.",
         ],
       },
       {

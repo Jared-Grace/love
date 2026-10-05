@@ -67,7 +67,7 @@ export function bible_glyph_chapter_psa136() {
         words: [
           "He",
           "alone",
-          "$hammer",
+          "$hammer+doing",
           "great",
           "wonders.",
           "His",
@@ -83,7 +83,7 @@ export function bible_glyph_chapter_psa136() {
           "His",
           "insight",
           "He",
-          "$hammer",
+          "$hammer+doing",
           "the",
           "$sky.",
           "His",
@@ -113,7 +113,7 @@ export function bible_glyph_chapter_psa136() {
         verse_number: 7,
         words: [
           "He",
-          "$hammer",
+          "$hammer+doing",
           "the",
           "great",
           "$light.",

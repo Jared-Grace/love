@@ -279,7 +279,7 @@ export function bible_glyph_chapter_mic04() {
           "the",
           "$i_am",
           "will",
-          "$castle",
+          "$castle+doing",
           "over",
           "them",
           "in",

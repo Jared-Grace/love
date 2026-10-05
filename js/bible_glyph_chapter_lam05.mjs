@@ -113,7 +113,7 @@ export function bible_glyph_chapter_lam05() {
         words: [
           "Our",
           "$father",
-          "$bow",
+          "$bow+doing",
           "and",
           "are",
           "no",
@@ -285,7 +285,7 @@ export function bible_glyph_chapter_lam05() {
           "for",
           "we",
           "have",
-          "$bow!",
+          "$bow+doing!",
         ],
       },
       {

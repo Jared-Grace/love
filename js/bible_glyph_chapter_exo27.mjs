@@ -14,7 +14,7 @@ export function bible_glyph_chapter_exo27() {
       {
         verse_number: 1,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "an",
           "$altar",
           "of",
@@ -41,7 +41,7 @@ export function bible_glyph_chapter_exo27() {
       {
         verse_number: 2,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "a",
           "$horn",
           "on",
@@ -67,7 +67,7 @@ export function bible_glyph_chapter_exo27() {
       {
         verse_number: 3,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "its",
           "pots",
           "for",
@@ -84,7 +84,7 @@ export function bible_glyph_chapter_exo27() {
           "and",
           "its",
           "firepans;",
-          "$hammer",
+          "$hammer+doing",
           "all",
           "its",
           "utensils",
@@ -95,7 +95,7 @@ export function bible_glyph_chapter_exo27() {
       {
         verse_number: 4,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "for",
           "it",
           "a",
@@ -104,7 +104,7 @@ export function bible_glyph_chapter_exo27() {
           "$bronze",
           "$net,",
           "and",
-          "$hammer",
+          "$hammer+doing",
           "on",
           "the",
           "$net",
@@ -146,7 +146,7 @@ export function bible_glyph_chapter_exo27() {
         verse_number: 6,
         words: [
           "Additionally,",
-          "$hammer",
+          "$hammer+doing",
           "poles",
           "for",
           "the",
@@ -193,7 +193,7 @@ export function bible_glyph_chapter_exo27() {
       {
         verse_number: 8,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "the",
           "altar",
           "hollow,",
@@ -210,14 +210,14 @@ export function bible_glyph_chapter_exo27() {
           "so",
           "shall",
           "they",
-          "$hammer",
+          "$hammer+doing",
           "it.",
         ],
       },
       {
         verse_number: 9,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "a",
           "courtyard",
           "for",
@@ -552,7 +552,7 @@ export function bible_glyph_chapter_exo27() {
           "front",
           "of",
           "the",
-          "$witness,",
+          "$witness+thing,",
           "$proper_name$Aaron",
           "and",
           "his",

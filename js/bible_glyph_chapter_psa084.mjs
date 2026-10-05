@@ -194,7 +194,7 @@ export function bible_glyph_chapter_psa084() {
           "Hosts,",
           "$ear",
           "my",
-          "$hands_praying;",
+          "$hands_praying+thing;",
           "give",
           "ear,",
           "O",

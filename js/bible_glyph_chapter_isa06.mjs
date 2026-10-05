@@ -407,7 +407,7 @@ export function bible_glyph_chapter_isa06() {
           "felled,",
           "so",
           "the",
-          "$sparkle",
+          "$sparkle+thing",
           "$seed",
           "will",
           "be",

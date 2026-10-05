@@ -81,8 +81,8 @@ export function bible_glyph_chapter_jhn03() {
         words: [
           "$cross",
           "replied,",
-          "“$check,",
-          "$check,",
+          "“$check+manner,",
+          "$check+manner,",
           "I",
           "$speech",
           "to",
@@ -136,8 +136,8 @@ export function bible_glyph_chapter_jhn03() {
         words: [
           "$cross",
           "answered,",
-          "“$check,",
-          "$check,",
+          "“$check+manner,",
+          "$check+manner,",
           "I",
           "$speech",
           "to",
@@ -258,8 +258,8 @@ export function bible_glyph_chapter_jhn03() {
       {
         verse_number: 11,
         words: [
-          "$check,",
-          "$check,",
+          "$check+manner,",
+          "$check+manner,",
           "I",
           "$speech",
           "to",

@@ -1171,7 +1171,7 @@ export function bible_glyph_chapter_mrk12() {
         "$speech",
         "to",
         "$pointing_back,",
-        "$check",
+        "$check+manner",
         "I",
         "$speech",
         "you",

@@ -1663,7 +1663,7 @@ export function bible_glyph_chapter_lev13() {
           "how",
           "it",
           "is",
-          "$hammer",
+          "$hammer+doing",
           "for",
           "$tools,",
           "it",

@@ -18,11 +18,11 @@ export function bible_glyph_chapter_num10() {
       {
         verse_number: 2,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "two",
           "trumpets",
           "of",
-          "$hammer",
+          "$hammer+doing",
           "$silver,",
           "to",
           "be",
@@ -308,7 +308,7 @@ export function bible_glyph_chapter_num10() {
           "tabernacle",
           "of",
           "the",
-          "$witness.",
+          "$witness+thing.",
         ],
       },
       {

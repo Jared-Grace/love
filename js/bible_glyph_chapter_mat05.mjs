@@ -399,7 +399,7 @@ export function bible_glyph_chapter_mat05() {
       {
         verse_number: 18,
         words: [
-          "$check",
+          "$check+manner",
           "For",
           "I",
           "$speech",
@@ -676,7 +676,7 @@ export function bible_glyph_chapter_mat05() {
       {
         verse_number: 26,
         words: [
-          "$check",
+          "$check+manner",
           "I",
           "$speech",
           "you,",

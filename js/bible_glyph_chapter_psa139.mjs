@@ -319,7 +319,7 @@ export function bible_glyph_chapter_psa139() {
           "when",
           "I",
           "was",
-          "$hammer",
+          "$hammer+doing",
           "in",
           "secret,",
           "when",

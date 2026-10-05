@@ -324,7 +324,7 @@ export function bible_glyph_chapter_mrk10() {
     {
       verse_number: 15,
       words: [
-        "$check",
+        "$check+manner",
         "I",
         "am",
         "in",
@@ -700,7 +700,7 @@ export function bible_glyph_chapter_mrk10() {
       words: [
         "$cross",
         "replied,",
-        "“$check",
+        "“$check+manner",
         "I",
         "am",
         "in",

@@ -14,7 +14,7 @@ export function bible_glyph_chapter_psa090() {
         verse_number: 1,
         words: [
           "A",
-          "$hands_praying",
+          "$hands_praying+thing",
           "of",
           "$proper_name$Moses",
           "the",

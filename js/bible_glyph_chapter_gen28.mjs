@@ -485,7 +485,7 @@ export function bible_glyph_chapter_gen28() {
           "until",
           "I",
           "have",
-          "$hammer",
+          "$hammer+doing",
           "what",
           "I",
           "have",

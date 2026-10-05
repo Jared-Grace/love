@@ -55,7 +55,7 @@ export function bible_glyph_chapter_psa029() {
           "splendor",
           "of",
           "His",
-          "$sparkle.",
+          "$sparkle+thing.",
         ],
       },
       {

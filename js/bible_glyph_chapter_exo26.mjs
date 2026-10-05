@@ -14,7 +14,7 @@ export function bible_glyph_chapter_exo26() {
       {
         verse_number: 1,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "the",
           "tabernacle",
           "with",
@@ -88,7 +88,7 @@ export function bible_glyph_chapter_exo26() {
       {
         verse_number: 4,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "loops",
           "of",
           "blue",
@@ -105,7 +105,7 @@ export function bible_glyph_chapter_exo26() {
           "first",
           "set,",
           "and",
-          "$hammer",
+          "$hammer+doing",
           "the",
           "same",
           "for",
@@ -121,14 +121,14 @@ export function bible_glyph_chapter_exo26() {
       {
         verse_number: 5,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "fifty",
           "loops",
           "on",
           "one",
           "curtain,",
           "and",
-          "$hammer",
+          "$hammer+doing",
           "fifty",
           "loops",
           "on",
@@ -153,7 +153,7 @@ export function bible_glyph_chapter_exo26() {
       {
         verse_number: 6,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "fifty",
           "clasps",
           "of",
@@ -180,7 +180,7 @@ export function bible_glyph_chapter_exo26() {
       {
         verse_number: 7,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "curtains",
           "of",
           "$goat",
@@ -195,7 +195,7 @@ export function bible_glyph_chapter_exo26() {
           "curtains",
           "shall",
           "you",
-          "$hammer.",
+          "$hammer+doing.",
         ],
       },
       {
@@ -255,7 +255,7 @@ export function bible_glyph_chapter_exo26() {
       {
         verse_number: 10,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "fifty",
           "loops",
           "along",
@@ -288,7 +288,7 @@ export function bible_glyph_chapter_exo26() {
       {
         verse_number: 11,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "fifty",
           "clasps",
           "of",
@@ -378,7 +378,7 @@ export function bible_glyph_chapter_exo26() {
         verse_number: 14,
         words: [
           "Also",
-          "$hammer",
+          "$hammer+doing",
           "a",
           "covering",
           "for",
@@ -403,7 +403,7 @@ export function bible_glyph_chapter_exo26() {
       {
         verse_number: 15,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "the",
           "frames",
           "for",
@@ -454,7 +454,7 @@ export function bible_glyph_chapter_exo26() {
           "in",
           "this",
           "way",
-          "$hammer",
+          "$hammer+doing",
           "all",
           "the",
           "frames",
@@ -466,7 +466,7 @@ export function bible_glyph_chapter_exo26() {
       {
         verse_number: 18,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "twenty",
           "frames",
           "of",
@@ -481,7 +481,7 @@ export function bible_glyph_chapter_exo26() {
       {
         verse_number: 19,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "forty",
           "$silver",
           "bases",
@@ -540,7 +540,7 @@ export function bible_glyph_chapter_exo26() {
       {
         verse_number: 22,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "six",
           "frames",
           "for",
@@ -557,7 +557,7 @@ export function bible_glyph_chapter_exo26() {
       {
         verse_number: 23,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "two",
           "frames",
           "for",
@@ -626,7 +626,7 @@ export function bible_glyph_chapter_exo26() {
       {
         verse_number: 26,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "crossbars",
           "of",
           "acacia",
@@ -700,7 +700,7 @@ export function bible_glyph_chapter_exo26() {
           "with",
           "$gold",
           "and",
-          "$hammer",
+          "$hammer+doing",
           "$gold",
           "$ring",
           "to",
@@ -729,7 +729,7 @@ export function bible_glyph_chapter_exo26() {
           "according",
           "to",
           "the",
-          "$scales",
+          "$scales+thing",
           "that",
           "was",
           "$eye",
@@ -802,7 +802,7 @@ export function bible_glyph_chapter_exo26() {
           "$ark",
           "of",
           "the",
-          "$witness",
+          "$witness+thing",
           "$house",
           "the",
           "$veil,",
@@ -812,12 +812,12 @@ export function bible_glyph_chapter_exo26() {
           "will",
           "separate",
           "the",
-          "$sparkle",
+          "$sparkle+thing",
           "from",
           "the",
-          "$sparkle",
+          "$sparkle+thing",
           "of",
-          "$sparkle.",
+          "$sparkle+thing.",
         ],
       },
       {
@@ -832,12 +832,12 @@ export function bible_glyph_chapter_exo26() {
           "$ark",
           "of",
           "the",
-          "$witness",
+          "$witness+thing",
           "in",
           "the",
-          "$sparkle",
+          "$sparkle+thing",
           "of",
-          "$sparkle.",
+          "$sparkle+thing.",
         ],
       },
       {
@@ -901,7 +901,7 @@ export function bible_glyph_chapter_exo26() {
       {
         verse_number: 37,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "five",
           "posts",
           "of",

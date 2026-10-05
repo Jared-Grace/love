@@ -22,8 +22,8 @@ export function bible_glyph_chapter_jhn10() {
       {
         verse_number: 1,
         words: [
-          "$check,",
-          "$check,",
+          "$check+manner,",
+          "$check+manner,",
           "I",
           "$speech",
           "you,",
@@ -185,8 +185,8 @@ export function bible_glyph_chapter_jhn10() {
           "$cross",
           "$speech",
           "again,",
-          "$check,",
-          "$check,",
+          "$check+manner,",
+          "$check+manner,",
           "I",
           "$speech",
           "you,",

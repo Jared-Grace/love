@@ -235,7 +235,7 @@ export function bible_glyph_chapter_job03() {
           "did",
           "I",
           "$no_entry",
-          "$skull",
+          "$skull+doing",
           "at",
           "birth,",
           "why",

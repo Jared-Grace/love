@@ -87,7 +87,7 @@ export function bible_glyph_chapter_pro04() {
           "and",
           "you",
           "will",
-          "$sprout.",
+          "$sprout+doing.",
         ],
       },
       {
@@ -118,7 +118,7 @@ export function bible_glyph_chapter_pro04() {
           "will",
           "preserve",
           "you;",
-          "$heart_red",
+          "$heart_red+doing",
           "her,",
           "and",
           "she",

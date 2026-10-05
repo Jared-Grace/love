@@ -65,7 +65,7 @@ export function bible_glyph_chapter_psa063() {
           "You",
           "in",
           "the",
-          "$sparkle",
+          "$sparkle+thing",
           "place,",
           "beholding",
           "Your",

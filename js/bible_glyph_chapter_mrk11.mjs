@@ -612,7 +612,7 @@ export function bible_glyph_chapter_mrk11() {
     {
       verse_number: 23,
       words: [
-        "$check",
+        "$check+manner",
         "I",
         "am",
         "in",

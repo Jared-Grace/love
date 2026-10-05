@@ -43,7 +43,7 @@ export function bible_glyph_chapter_psa121() {
           "the",
           "$i_am,",
           "the",
-          "$hammer",
+          "$hammer+doing",
           "of",
           "$sky",
           "and",

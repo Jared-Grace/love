@@ -71,7 +71,7 @@ export function bible_glyph_chapter_num30() {
           "$speech;",
           "he",
           "must",
-          "$hammer",
+          "$hammer+doing",
           "everything",
           "he",
           "has",

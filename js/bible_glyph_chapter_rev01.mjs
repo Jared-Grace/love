@@ -206,7 +206,7 @@ export function bible_glyph_chapter_rev01() {
           "$hourglass",
           "and",
           "$hourglass!",
-          "$check.",
+          "$check+manner.",
         ],
       },
       {
@@ -246,7 +246,7 @@ export function bible_glyph_chapter_rev01() {
           "shall",
           "it",
           "be!",
-          "$check.",
+          "$check+manner.",
         ],
       },
       {

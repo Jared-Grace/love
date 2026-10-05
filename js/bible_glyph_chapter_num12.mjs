@@ -301,7 +301,7 @@ export function bible_glyph_chapter_num12() {
           "have",
           "so",
           "foolishly",
-          "$bow.",
+          "$bow+doing.",
         ],
       },
       {
@@ -314,7 +314,7 @@ export function bible_glyph_chapter_num12() {
           "be",
           "like",
           "a",
-          "$skull",
+          "$skull+doing",
           "whose",
           "$meat",
           "is",

@@ -363,7 +363,7 @@ export function bible_glyph_chapter_gen33() {
           "the",
           "$sheep",
           "will",
-          "$skull.",
+          "$skull+doing.",
         ],
       },
       {
@@ -467,7 +467,7 @@ export function bible_glyph_chapter_gen33() {
           "$proper_name$Succoth,",
           "where",
           "he",
-          "$hammer",
+          "$hammer+doing",
           "a",
           "$house",
           "for",

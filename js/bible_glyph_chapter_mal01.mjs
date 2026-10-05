@@ -34,7 +34,7 @@ export function bible_glyph_chapter_mal01() {
         words: [
           "I",
           "have",
-          "$heart_red",
+          "$heart_red+doing",
           "you,",
           "$speech",
           "the",
@@ -45,7 +45,7 @@ export function bible_glyph_chapter_mal01() {
           "How",
           "have",
           "You",
-          "$heart_red",
+          "$heart_red+doing",
           "us?",
           "Was",
           "$no_entry",
@@ -59,7 +59,7 @@ export function bible_glyph_chapter_mal01() {
           "Jacob",
           "I",
           "have",
-          "$heart_red,",
+          "$heart_red+doing,",
         ],
       },
       {

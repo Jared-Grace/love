@@ -400,7 +400,7 @@ export function bible_glyph_chapter_gen49() {
           "labor",
           "as",
           "a",
-          "$kneeling.",
+          "$kneeling+doing.",
         ],
       },
       {

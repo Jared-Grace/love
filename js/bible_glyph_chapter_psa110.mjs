@@ -75,7 +75,7 @@ export function bible_glyph_chapter_psa110() {
           "battle.",
           "Arrayed",
           "in",
-          "$sparkle",
+          "$sparkle+thing",
           "splendor,",
           "from",
           "the",

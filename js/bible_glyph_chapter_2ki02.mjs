@@ -352,7 +352,7 @@ export function bible_glyph_chapter_2ki02() {
           "what",
           "I",
           "can",
-          "$hammer",
+          "$hammer+doing",
           "for",
           "you",
           "before",

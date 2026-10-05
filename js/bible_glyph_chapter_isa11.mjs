@@ -114,7 +114,7 @@ export function bible_glyph_chapter_isa11() {
         words: [
           "but",
           "with",
-          "$ruler",
+          "$ruler+thing",
           "He",
           "will",
           "judge",
@@ -152,7 +152,7 @@ export function bible_glyph_chapter_isa11() {
           "lips",
           "He",
           "will",
-          "$skull",
+          "$skull+doing",
           "the",
           "$thumbs_down.",
         ],
@@ -160,7 +160,7 @@ export function bible_glyph_chapter_isa11() {
       {
         verse_number: 5,
         words: [
-          "$ruler",
+          "$ruler+thing",
           "will",
           "be",
           "the",
@@ -282,7 +282,7 @@ export function bible_glyph_chapter_isa11() {
           "on",
           "all",
           "My",
-          "$sparkle",
+          "$sparkle+thing",
           "$mountain,",
           "for",
           "the",

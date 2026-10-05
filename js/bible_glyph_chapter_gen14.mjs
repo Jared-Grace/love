@@ -39,7 +39,7 @@ export function bible_glyph_chapter_gen14() {
       {
         verse_number: 2,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "war",
           "against",
           "$proper_name$Bera",
@@ -95,7 +95,7 @@ export function bible_glyph_chapter_gen14() {
           "years",
           "they",
           "had",
-          "$kneeling",
+          "$kneeling+doing",
           "$proper_name$Chedorlaomer,",
           "but",
           "in",

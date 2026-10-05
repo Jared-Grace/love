@@ -136,7 +136,7 @@ export function bible_glyph_chapter_isa12() {
           "for",
           "He",
           "has",
-          "$hammer",
+          "$hammer+doing",
           "glorious",
           "things.",
           "Let",

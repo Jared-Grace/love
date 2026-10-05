@@ -221,7 +221,7 @@ export function bible_glyph_chapter_2sa06() {
           "irreverence,",
           "and",
           "he",
-          "$skull",
+          "$skull+doing",
           "there",
           "beside",
           "the",

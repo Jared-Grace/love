@@ -61,7 +61,7 @@ export function bible_glyph_chapter_2ki06() {
           "so",
           "we",
           "can",
-          "$hammer",
+          "$hammer+doing",
           "ourselves",
           "a",
           "$place",
@@ -483,7 +483,7 @@ export function bible_glyph_chapter_2ki06() {
           "are",
           "we",
           "to",
-          "$hammer?",
+          "$hammer+doing?",
         ],
       },
       {

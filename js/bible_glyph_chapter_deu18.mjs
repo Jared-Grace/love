@@ -78,7 +78,7 @@ export function bible_glyph_chapter_deu18() {
           "shall",
           "be",
           "the",
-          "$scales",
+          "$scales+thing",
           "of",
           "the",
           "$priest",
@@ -274,7 +274,7 @@ export function bible_glyph_chapter_deu18() {
           "$no_entry",
           "learn",
           "to",
-          "$hammer",
+          "$hammer+doing",
           "the",
           "detestable",
           "ways",
@@ -331,7 +331,7 @@ export function bible_glyph_chapter_deu18() {
           "inquires",
           "of",
           "the",
-          "$skull.",
+          "$skull+doing.",
         ],
       },
       {
@@ -339,7 +339,7 @@ export function bible_glyph_chapter_deu18() {
         words: [
           "For",
           "whoever",
-          "$hammer",
+          "$hammer+doing",
           "these",
           "things",
           "is",
@@ -483,7 +483,7 @@ export function bible_glyph_chapter_deu18() {
           "we",
           "will",
           "$no_entry",
-          "$skull.",
+          "$skull+doing.",
         ],
       },
       {
@@ -601,7 +601,7 @@ export function bible_glyph_chapter_deu18() {
           "be",
           "put",
           "to",
-          "$skull.",
+          "$skull+doing.",
         ],
       },
       {

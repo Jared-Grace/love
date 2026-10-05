@@ -105,7 +105,7 @@ export function bible_glyph_chapter_psa095() {
           "His,",
           "for",
           "He",
-          "$hammer",
+          "$hammer+doing",
           "it,",
           "and",
           "His",
@@ -134,7 +134,7 @@ export function bible_glyph_chapter_psa095() {
           "the",
           "$i_am",
           "our",
-          "$hammer.",
+          "$hammer+doing.",
         ],
       },
       {

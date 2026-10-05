@@ -96,7 +96,7 @@ export function bible_glyph_chapter_gen07() {
           "and",
           "female,",
           "to",
-          "$sprout",
+          "$sprout+doing",
           "their",
           "offspring",
           "on",
@@ -144,7 +144,7 @@ export function bible_glyph_chapter_gen07() {
           "thing",
           "I",
           "have",
-          "$hammer.",
+          "$hammer+doing.",
         ],
       },
       {
@@ -152,7 +152,7 @@ export function bible_glyph_chapter_gen07() {
         words: [
           "And",
           "Noah",
-          "$hammer",
+          "$hammer+doing",
           "all",
           "that",
           "the",
@@ -591,7 +591,7 @@ export function bible_glyph_chapter_gen07() {
           "in",
           "its",
           "nostrils",
-          "$skull.",
+          "$skull+doing.",
         ],
       },
       {

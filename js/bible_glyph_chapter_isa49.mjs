@@ -119,7 +119,7 @@ export function bible_glyph_chapter_isa49() {
           "vanity;",
           "yet",
           "My",
-          "$scales",
+          "$scales+thing",
           "is",
           "with",
           "the",

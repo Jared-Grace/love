@@ -158,7 +158,7 @@ export function bible_glyph_chapter_gen01() {
         words: [
           "And",
           "$fire",
-          "$hammer",
+          "$hammer+doing",
           "the",
           "expanse,",
           "and",
@@ -423,7 +423,7 @@ export function bible_glyph_chapter_gen01() {
         words: [
           "And",
           "$fire",
-          "$hammer",
+          "$hammer+doing",
           "the",
           "two",
           "great",
@@ -671,7 +671,7 @@ export function bible_glyph_chapter_gen01() {
         words: [
           "And",
           "$fire",
-          "$hammer",
+          "$hammer+doing",
           "the",
           "$sprout",
           "of",
@@ -932,7 +932,7 @@ export function bible_glyph_chapter_gen01() {
           "that",
           "He",
           "had",
-          "$hammer,",
+          "$hammer+doing,",
           "and",
           "behold,",
           "it",

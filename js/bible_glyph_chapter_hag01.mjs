@@ -471,7 +471,7 @@ export function bible_glyph_chapter_hag01() {
           "they",
           "$footprints",
           "and",
-          "$hammer",
+          "$hammer+doing",
           "the",
           "$tools",
           "on",
