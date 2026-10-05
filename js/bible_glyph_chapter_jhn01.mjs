@@ -367,7 +367,7 @@ export function bible_glyph_chapter_jhn01() {
           "was",
           "$hands_giving$n",
           "through",
-          "$proper_name$Moses;",
+          "$fishing_pole+proper_name;",
           "$gift",
           "$plus",
           "$check",
@@ -709,7 +709,7 @@ export function bible_glyph_chapter_jhn01() {
           "be",
           "revealed",
           "to",
-          "$proper_name$Israel.”",
+          "$wrestling+heart_on_fire.”",
         ],
       },
       {
@@ -984,7 +984,7 @@ export function bible_glyph_chapter_jhn01() {
           "(which",
           "is",
           "translated",
-          "$proper_name$Peter).",
+          "$rock+proper_name).",
         ],
       },
       {
@@ -1025,7 +1025,7 @@ export function bible_glyph_chapter_jhn01() {
           "of",
           "$proper_name$Andrew",
           "$plus",
-          "$proper_name$Peter.",
+          "$rock+proper_name.",
         ],
       },
       {
@@ -1043,7 +1043,7 @@ export function bible_glyph_chapter_jhn01() {
           "found",
           "the",
           "One",
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "wrote",
           "about",
           "$tray_in",
@@ -1153,7 +1153,7 @@ export function bible_glyph_chapter_jhn01() {
           "the",
           "$king",
           "of",
-          "$proper_name$Israel!”",
+          "$wrestling+heart_on_fire!”",
         ],
       },
       {
