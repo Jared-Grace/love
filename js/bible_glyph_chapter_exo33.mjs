@@ -380,7 +380,7 @@ export function bible_glyph_chapter_exo33() {
           "his",
           "friend.",
           "Then",
-          "$fishing_pole+proper_name",
+          "$proper_name$Moses",
           "would",
           "$turn_back",
           "to",

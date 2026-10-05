@@ -1455,7 +1455,7 @@ export function bible_glyph_chapter_1sa20() {
           "mine,",
           "$hourglass.",
           "Then",
-          "$two_hearts+proper_name",
+          "$proper_name$David",
           "got",
           "up",
           "and",

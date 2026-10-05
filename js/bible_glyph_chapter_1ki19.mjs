@@ -676,7 +676,7 @@ export function bible_glyph_chapter_1ki19() {
         verse_number: 19,
         words: [
           "So",
-          "$heart_on_fire+i_am",
+          "$proper_name$Elijah",
           "departed",
           "$walking",
           "and",
@@ -743,7 +743,7 @@ export function bible_glyph_chapter_1ki19() {
           "$walking",
           "on",
           "$turn_back,",
-          "$heart_on_fire+i_am",
+          "$proper_name$Elijah",
           "replied,",
           "for",
           "what",
