@@ -1,6 +1,5 @@
+import { list_get } from "./list_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_first } from "./list_first.mjs";
-import { list_second } from "./list_second.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -27,13 +26,15 @@ export function app_code_lesson_statement_name_meetings_free() {
   arguments_assert(arguments, 0);
   ("how many hours are free between two meetings, once the first has ended by the time the second starts: let free = s2 - e1; - picked by Claude 2026-10-05 when the human asked for the next lesson, named in Has one meeting ended by the time another starts as the step that needs that check first. In DSA it is the gap between two intervals sorted by start, the free time found between each meeting and the next.");
   ("Not picked: a rectangle left of another, which is the ended check across and can follow this; the number of meetings going on at once, which needs a loop; and holding a negative gap at 0 with Math.max, which How long two meetings overlap already teaches. Every pair asked here has the first meeting ended by the time the second starts, so the answer is never negative and the lesson stays one subtraction.");
-  ("Only e1 and s2 are names, unlike Has one meeting ended by the time another starts, which kept s1 and e2 to show they do not decide it: here that is already known, so the program is the two hours that matter and the line. Named free and not gap, because How long two meetings overlap already calls end - start gap, the other way round; break is a word JavaScript keeps for itself.");
+  ("All four hours are names, s1, e1, s2 and e2, though only e1 and s2 are subtracted, as in Has one meeting ended by the time another starts, whose program the reminder just above shows with all four: a program here with two read as a different pair of meetings. Asked by the human 2026-10-05 after the same was found in How many rows are between two rectangles. Not picked: only e1 and s2, the first draft, on the ground that the reminder had already shown s1 and e2 do not affect it. Named free and not gap, because How long two meetings overlap already calls end - start gap, the other way round; break is a word JavaScript keeps for itself.");
   ("End hours wear the end colour and start hours the start colour, as in the meetings lessons, so s2 - e1 reads as a start less an end. The free hours wear a third colour, as the hours of an overlap do in How long two meetings overlap.");
   ("Each screen asks free times of 0, 1, 2 and 3 hours, so the four answers differ and one is the 0 of two meetings that touch.");
   ("The writing is a first draft by Claude 2026-10-05.");
-  let names = ["e1", "s2"];
-  let e = list_first(names);
-  let s2 = list_second(names);
+  let names = ["s1", "e1", "s2", "e2"];
+  let s = list_get(names, 0);
+  let e = list_get(names, 1);
+  let s2 = list_get(names, 2);
+  let e2 = list_get(names, 3);
   let free = "free";
   let minus = js_operator_minus_symbol();
   let difference = js_code_binary_spaced_nb(s2, minus, e);
@@ -42,8 +43,6 @@ export function app_code_lesson_statement_name_meetings_free() {
     middle: [line_free],
     logged: [free],
   };
-  let s = "s1";
-  let e2 = "e2";
   let ended = "ended";
   let at_most = js_operator_less_than_equal_symbol();
   let check_before = js_code_binary_spaced_nb(e, at_most, s2);
@@ -59,32 +58,32 @@ export function app_code_lesson_statement_name_meetings_free() {
     [ended],
   );
   function values_get() {
-    "an end and a later start with 0, 1, 2 and 3 hours between them, in a fresh order each screen";
+    "two meetings, as start, end, start2, end2, with 0, 1, 2 and 3 hours free between them, in a fresh order each screen";
     let none = list_shuffle_take(
       [
-        [10, 10],
-        [12, 12],
+        [8, 10, 10, 12],
+        [9, 12, 12, 13],
       ],
       1,
     );
     let one_hour = list_shuffle_take(
       [
-        [10, 11],
-        [13, 14],
+        [8, 10, 11, 12],
+        [11, 13, 14, 15],
       ],
       1,
     );
     let two_hours = list_shuffle_take(
       [
-        [9, 11],
-        [12, 14],
+        [7, 9, 11, 12],
+        [10, 12, 14, 16],
       ],
       1,
     );
     let three_hours = list_shuffle_take(
       [
-        [8, 11],
-        [11, 14],
+        [7, 8, 11, 12],
+        [9, 11, 14, 15],
       ],
       1,
     );
@@ -188,6 +187,14 @@ export function app_code_lesson_statement_name_meetings_free() {
   let apart_worked = app_code_explain_said(["", v7, " is ", v8]);
   let v9 = lasting("1");
   let apart_so = app_code_explain_said(["So ", v9, " hour is free"]);
+  let first = one("first");
+  let only_said = app_code_explain_said([
+    "The start of the ",
+    first,
+    " and the end of the ",
+    second,
+    " do not affect the answer",
+  ]);
   let v10 = from("10");
   let v11 = till("12");
   let touching_suppose = app_code_explain_said([
@@ -214,17 +221,23 @@ export function app_code_lesson_statement_name_meetings_free() {
     " ends, at ",
     v15,
   ]);
-  let v16 = till(e);
-  let v17 = from(s2);
+  let v16 = from(s);
+  let v17 = till(e);
+  let v18 = from(s2);
+  let v19 = till(e2);
   let names_said = app_code_explain_said([
     "Suppose the ",
     first_meeting,
-    " ends at ",
+    " is from ",
     v16,
+    " to ",
+    v17,
     ", and the ",
     second,
-    " starts at ",
-    v17,
+    " is from ",
+    v18,
+    " to ",
+    v19,
   ]);
   let code_said = app_code_explain_said([
     "Here is code that finds how many hours are free between the meetings:",
@@ -234,7 +247,7 @@ export function app_code_lesson_statement_name_meetings_free() {
     title_code: line_free,
     names,
     values_get,
-    example_values: [10, 11],
+    example_values: [8, 10, 11, 12],
     step,
     remember_lesson: app_code_lesson_statement_name_meeting_ended,
     remember_parts: [
@@ -249,6 +262,7 @@ export function app_code_lesson_statement_name_meetings_free() {
       compare_said,
       apart_worked,
       apart_so,
+      only_said,
       app_code_explain_container_next,
       touching_suppose,
       touching_draw,
@@ -260,8 +274,10 @@ export function app_code_lesson_statement_name_meetings_free() {
     ],
     decoys: null,
     example_pointers: [
+      [[s, "8"], start_color],
       [[e, "10"], end_color],
       [[s2, "11"], start_color],
+      [[e2, "12"], end_color],
       [[free, "1"], free_color],
     ],
   });
