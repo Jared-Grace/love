@@ -465,7 +465,7 @@ export function bible_glyph_chapter_2ki02() {
           "the",
           "chariots",
           "of",
-          "$proper_name$Israel",
+          "$wrestling+heart_on_fire",
           "and",
           "their",
           "horsemen!",
