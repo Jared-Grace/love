@@ -79,7 +79,7 @@ export function bible_glyph_chapter_gen44() {
           "he",
           "$hammer+doing",
           "as",
-          "$proper_name$Joseph",
+          "$i_am+plus",
           "had",
           "$mouth.",
         ],
@@ -113,7 +113,7 @@ export function bible_glyph_chapter_gen44() {
           "the",
           "$city",
           "when",
-          "$proper_name$Joseph",
+          "$i_am+plus",
           "$speech",
           "to",
           "his",
@@ -378,7 +378,7 @@ export function bible_glyph_chapter_gen44() {
           "his",
           "$brother",
           "$footprints",
-          "$proper_name$Josephs",
+          "$i_am+plus",
           "$house,",
           "he",
           "was",
@@ -397,7 +397,7 @@ export function bible_glyph_chapter_gen44() {
       {
         verse_number: 15,
         words: [
-          "$proper_name$Joseph",
+          "$i_am+plus",
           "$speech,",
           "What",
           "deed",
@@ -425,7 +425,7 @@ export function bible_glyph_chapter_gen44() {
       {
         verse_number: 16,
         words: [
-          "$proper_name$Judah",
+          "$hands_raised+proper_name",
           "$speech,",
           "What",
           "can",
