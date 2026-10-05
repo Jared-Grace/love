@@ -406,7 +406,7 @@ export function bible_glyph_chapter_gen22() {
           "by",
           "its",
           "horns.",
-          "So",
+          "$father+map",
           "he",
           "$walking",
           "and",
