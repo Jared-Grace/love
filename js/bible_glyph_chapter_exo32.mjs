@@ -1001,7 +1001,7 @@ export function bible_glyph_chapter_exo32() {
           "$brother,",
           "so",
           "the",
-          "LORD",
+          "$i_am",
           "has",
           "$hands_giving",
           "you",
