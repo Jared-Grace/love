@@ -177,7 +177,7 @@ export function bible_glyph_chapter_deu11() {
           "of",
           "all",
           "the",
-          "$proper_name$Israelites",
+          "$wrestling+heart_on_fire",
           "to",
           "$proper_name$Dathan",
           "and",
