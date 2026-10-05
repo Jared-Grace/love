@@ -241,7 +241,7 @@ export function bible_glyph_chapter_ecc03() {
         words: [
           "He",
           "has",
-          "$hammer",
+          "$hammer+doing",
           "everything",
           "beautiful",
           "in",
@@ -266,7 +266,7 @@ export function bible_glyph_chapter_ecc03() {
           "that",
           "$fire",
           "has",
-          "$hammer",
+          "$hammer+doing",
           "from",
           "beginning",
           "to",

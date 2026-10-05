@@ -742,7 +742,7 @@ export function bible_glyph_chapter_exo26() {
       {
         verse_number: 31,
         words: [
-          "$hammer",
+          "$hammer+doing",
           "a",
           "$veil",
           "of",
