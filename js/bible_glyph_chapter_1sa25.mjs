@@ -297,7 +297,7 @@ export function bible_glyph_chapter_1sa25() {
         verse_number: 9,
         words: [
           "When",
-          "David's",
+          "$two_hearts+proper_name's",
           "young",
           "men",
           "$footprints,",
@@ -325,7 +325,7 @@ export function bible_glyph_chapter_1sa25() {
           "Nabal",
           "$speech",
           "to",
-          "David's",
+          "$two_hearts+proper_name's",
           "$kneeling,",
           "Who",
           "is",
@@ -1414,7 +1414,7 @@ export function bible_glyph_chapter_1sa25() {
       {
         verse_number: 40,
         words: [
-          "When",
+          "$two_hearts+proper_name",
           "his",
           "$kneeling",
           "$footprints",
