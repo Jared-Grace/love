@@ -1,6 +1,5 @@
+import { list_get } from "./list_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_first } from "./list_first.mjs";
-import { list_second } from "./list_second.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -29,13 +28,15 @@ export function app_code_lesson_statement_name_rectangles_rows_between() {
   ("how many rows are between two rectangles, once the first is above the second: let between = t2 - b1; - picked by Claude 2026-10-05 when the human asked to continue on the code app, as Is one rectangle above another done the way How many hours are free between two meetings follows Has one meeting ended by the time another starts. In DSA it is the gap between two boxes one above the other, the distance a layout keeps between them.");
   ("Not picked: the gap across, let between = l2 - r1; which needs a grid wide enough for both side by side, the reason Is one rectangle above another went down and not across; and how far apart two rectangles are either way, which needs the larger of two gaps. Every pair asked here has the first rectangle above the second, so the answer is never negative and the lesson stays one subtraction.");
   ("Rows and not squares, because the gap is counted down only: one row between two rectangles can hold several squares across. Named between, the word the question asks with; gap would read as the across gap as much as the down one.");
-  ("Only b1 and t2 are names, as How many hours are free between two meetings kept only e1 and s2: Is one rectangle above another already showed the other edges do not affect it.");
+  ("All four down edges are names, t1, b1, t2 and b2, though only b1 and t2 are subtracted, asked by the human 2026-10-05 after reading this beside Is one rectangle above another, whose program has all four and checks two: the reminder just above shows four, so a program here with two read as a different set of rectangles. Not picked: only b1 and t2, as How many hours are free between two meetings keeps only e1 and s2, which was the first draft.");
   ("Top edges wear the start colour and bottom edges the end colour, as in Is one rectangle above another, so t2 - b1 reads as a start less an end; the number of rows wears a third colour, as the free hours do in How many hours are free between two meetings. Words naming a rectangle wear the colour the picture fills it with.");
   ("Each screen asks 0, 1, 2 and 3 rows, so the four answers differ and one is the 0 of two rectangles that touch.");
   ("The writing is a first draft by Claude 2026-10-05.");
-  let names = ["b1", "t2"];
-  let b = list_first(names);
-  let t2 = list_second(names);
+  let names = ["t1", "b1", "t2", "b2"];
+  let t = list_get(names, 0);
+  let b = list_get(names, 1);
+  let t2 = list_get(names, 2);
+  let b2 = list_get(names, 3);
   let between = "between";
   let minus = js_operator_minus_symbol();
   let difference = js_code_binary_spaced_nb(t2, minus, b);
@@ -44,8 +45,6 @@ export function app_code_lesson_statement_name_rectangles_rows_between() {
     middle: [line_between],
     logged: [between],
   };
-  let t = "t1";
-  let b2 = "b2";
   let above = "above";
   let at_most = js_operator_less_than_equal_symbol();
   let check_above = js_code_binary_spaced_nb(b, at_most, t2);
@@ -61,32 +60,32 @@ export function app_code_lesson_statement_name_rectangles_rows_between() {
     [above],
   );
   function values_get() {
-    "a bottom edge and a lower top edge with 0, 1, 2 and 3 rows between them, in a fresh order each screen";
+    "two rectangles one above the other, as top, bottom, top2, bottom2, with 0, 1, 2 and 3 rows between them, in a fresh order each screen";
     let none = list_shuffle_take(
       [
-        [3, 3],
-        [2, 2],
+        [1, 3, 3, 5],
+        [0, 2, 2, 4],
       ],
       1,
     );
     let one_row = list_shuffle_take(
       [
-        [3, 4],
-        [2, 3],
+        [1, 3, 4, 6],
+        [0, 2, 3, 5],
       ],
       1,
     );
     let two_rows = list_shuffle_take(
       [
-        [2, 4],
-        [3, 5],
+        [0, 2, 4, 6],
+        [1, 3, 5, 7],
       ],
       1,
     );
     let three_rows = list_shuffle_take(
       [
-        [1, 4],
-        [2, 5],
+        [0, 1, 4, 6],
+        [1, 2, 5, 7],
       ],
       1,
     );
@@ -206,6 +205,14 @@ export function app_code_lesson_statement_name_rectangles_rows_between() {
   let apart_worked = app_code_explain_said(["", v5, " is ", v6]);
   let v7 = counted("1");
   let apart_so = app_code_explain_said(["So ", v7, " row is between them"]);
+  let first = one("first");
+  let only_said = app_code_explain_said([
+    "The top of the ",
+    first,
+    ", the bottom of the ",
+    second,
+    ", and where they go across do not affect the answer",
+  ]);
   let v8 = from("3");
   let v9 = till("5");
   let touching_suppose = app_code_explain_said([
@@ -232,17 +239,23 @@ export function app_code_lesson_statement_name_rectangles_rows_between() {
     " ends, at ",
     v13,
   ]);
-  let v14 = till(b);
-  let v15 = from(t2);
+  let v14 = from(t);
+  let v15 = till(b);
+  let v16 = from(t2);
+  let v17 = till(b2);
   let names_said = app_code_explain_said([
-    "Suppose the bottom of the ",
+    "Suppose the ",
     first_rectangle,
-    " is ",
+    " goes down from ",
     v14,
-    ", and the top of the ",
-    second,
-    " is ",
+    " to ",
     v15,
+    ", and the ",
+    second,
+    " goes down from ",
+    v16,
+    " to ",
+    v17,
   ]);
   let code_said = app_code_explain_said([
     "Here is code that finds how many rows are between the rectangles:",
@@ -252,7 +265,7 @@ export function app_code_lesson_statement_name_rectangles_rows_between() {
     title_code: line_between,
     names,
     values_get,
-    example_values: [3, 4],
+    example_values: [1, 3, 4, 6],
     step,
     remember_lesson: app_code_lesson_statement_name_rectangle_above,
     remember_parts: ["we can check whether one rectangle is above another:"],
@@ -266,6 +279,7 @@ export function app_code_lesson_statement_name_rectangles_rows_between() {
       compare_said,
       apart_worked,
       apart_so,
+      only_said,
       app_code_explain_container_next,
       touching_suppose,
       touching_draw,
@@ -277,8 +291,10 @@ export function app_code_lesson_statement_name_rectangles_rows_between() {
     ],
     decoys: null,
     example_pointers: [
+      [[t, "1"], start_color],
       [[b, "3"], end_color],
       [[t2, "4"], start_color],
+      [[b2, "6"], end_color],
       [[between, "1"], rows_color],
     ],
   });
