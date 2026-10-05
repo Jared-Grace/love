@@ -67,7 +67,7 @@ export function bible_glyph_chapter_num11() {
           "to",
           "$fishing_pole+proper_name,",
           "and",
-          "he",
+          "$fishing_pole+proper_name",
           "$hands_praying",
           "to",
           "the",

@@ -241,7 +241,7 @@ export function bible_glyph_chapter_jdg02() {
           "many",
           "$sun",
           "after",
-          "him,",
+          "$i_am+rescue,",
           "who",
           "had",
           "$eye",

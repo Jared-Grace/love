@@ -635,7 +635,7 @@ export function bible_glyph_chapter_2sa12() {
         verse_number: 19,
         words: [
           "When",
-          "David",
+          "$two_hearts+proper_name",
           "$eye",
           "that",
           "his",
@@ -645,7 +645,7 @@ export function bible_glyph_chapter_2sa12() {
           "to",
           "one",
           "another,",
-          "he",
+          "$two_hearts+proper_name",
           "perceived",
           "that",
           "the",

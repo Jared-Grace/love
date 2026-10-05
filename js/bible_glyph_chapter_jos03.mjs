@@ -415,7 +415,7 @@ export function bible_glyph_chapter_jos03() {
           "of",
           "the",
           "$pointing_down+proper_name,",
-          "its",
+          "$pointing_down+proper_name's",
           "$water",
           "will",
           "be",

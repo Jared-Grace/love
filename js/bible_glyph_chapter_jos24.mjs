@@ -1027,7 +1027,7 @@ export function bible_glyph_chapter_jos24() {
           "elders",
           "who",
           "outlived",
-          "him",
+          "$i_am+rescue",
           "and",
           "who",
           "had",

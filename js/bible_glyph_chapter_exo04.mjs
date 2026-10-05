@@ -629,7 +629,7 @@ export function bible_glyph_chapter_exo04() {
         verse_number: 20,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$hand_receiving",
           "his",
           "$woman",

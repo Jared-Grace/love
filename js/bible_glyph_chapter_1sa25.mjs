@@ -770,7 +770,7 @@ export function bible_glyph_chapter_1sa25() {
           "fell",
           "facedown",
           "before",
-          "him,",
+          "$two_hearts+proper_name,",
           "and",
           "$bowing",
           "to",

@@ -304,7 +304,7 @@ export function bible_glyph_chapter_2sa06() {
           "of",
           "$two_hearts+proper_name.",
           "Instead,",
-          "he",
+          "$two_hearts+proper_name",
           "took",
           "it",
           "aside",
