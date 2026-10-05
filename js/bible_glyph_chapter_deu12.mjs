@@ -295,7 +295,7 @@ export function bible_glyph_chapter_deu12() {
           "you",
           "cross",
           "the",
-          "$proper_name$Jordan",
+          "$pointing_down+proper_name",
           "and",
           "live",
           "in",
