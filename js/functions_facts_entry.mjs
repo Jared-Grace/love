@@ -55,7 +55,7 @@ export async function functions_facts_entry(f_path, stamps, remembered) {
     let stamp_again = property_get_or_null(stamps_again, f_path);
     if (null_not_is(stamp_again)) {
       let value = property_get(attempt, "message");
-      throw new Error(value);
+      throw new Error(`${f_path}: ${value}`);
     }
     let entry_taken = {
       f_path,
