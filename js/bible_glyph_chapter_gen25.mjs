@@ -87,7 +87,7 @@ export function bible_glyph_chapter_gen25() {
       {
         verse_number: 5,
         words: [
-          "$proper_name$Abraham",
+          "$father+map",
           "$hands_giving",
           "everything",
           "he",
@@ -105,7 +105,7 @@ export function bible_glyph_chapter_gen25() {
           "was",
           "still",
           "$sprout,",
-          "$proper_name$Abraham",
+          "$father+map",
           "$hands_giving",
           "gifts",
           "to",
@@ -133,7 +133,7 @@ export function bible_glyph_chapter_gen25() {
       {
         verse_number: 7,
         words: [
-          "$proper_name$Abraham",
+          "$father+map",
           "$sprout",
           "a",
           "hundred",
@@ -205,7 +205,7 @@ export function bible_glyph_chapter_gen25() {
         words: [
           "the",
           "$field",
-          "$proper_name$Abraham",
+          "$father+map",
           "had",
           "bought",
           "from",
@@ -214,7 +214,7 @@ export function bible_glyph_chapter_gen25() {
           "of",
           "Heth.",
           "There",
-          "$proper_name$Abraham",
+          "$father+map",
           "was",
           "buried",
           "with",
@@ -257,7 +257,7 @@ export function bible_glyph_chapter_gen25() {
           "the",
           "$son",
           "of",
-          "$proper_name$Abraham,",
+          "$father+map,",
           "whom",
           "$proper_name$Hagar",
           "the",
@@ -268,7 +268,7 @@ export function bible_glyph_chapter_gen25() {
           "Sarah,",
           "$baby",
           "to",
-          "$proper_name$Abraham.",
+          "$father+map.",
         ],
       },
       {
@@ -401,8 +401,8 @@ export function bible_glyph_chapter_gen25() {
           "the",
           "$son",
           "of",
-          "$proper_name$Abraham.",
-          "$proper_name$Abraham",
+          "$father+map.",
+          "$father+map",
           "was",
           "the",
           "father",
@@ -593,7 +593,7 @@ export function bible_glyph_chapter_gen25() {
           "he",
           "was",
           "$name_tag",
-          "$proper_name$Jacob.",
+          "$hand+foot.",
           "Isaac",
           "was",
           "sixty",
@@ -623,7 +623,7 @@ export function bible_glyph_chapter_gen25() {
           "the",
           "$field,",
           "while",
-          "$proper_name$Jacob",
+          "$hand+foot",
           "was",
           "a",
           "quiet",
@@ -651,7 +651,7 @@ export function bible_glyph_chapter_gen25() {
           "but",
           "$proper_name$Rebekah",
           "$heart_red+doing",
-          "$proper_name$Jacob.",
+          "$hand+foot.",
         ],
       },
       {
@@ -684,7 +684,7 @@ export function bible_glyph_chapter_gen25() {
           "He",
           "$speech",
           "to",
-          "$proper_name$Jacob,",
+          "$hand+foot,",
           "Let",
           "me",
           "gulp",
@@ -711,7 +711,7 @@ export function bible_glyph_chapter_gen25() {
       {
         verse_number: 31,
         words: [
-          "$proper_name$Jacob",
+          "$hand+foot",
           "$speech,",
           "Sell",
           "me",
@@ -743,7 +743,7 @@ export function bible_glyph_chapter_gen25() {
       {
         verse_number: 33,
         words: [
-          "$proper_name$Jacob",
+          "$hand+foot",
           "$speech,",
           "Swear",
           "to",
@@ -759,7 +759,7 @@ export function bible_glyph_chapter_gen25() {
           "his",
           "birthright",
           "to",
-          "$proper_name$Jacob.",
+          "$hand+foot.",
         ],
       },
       {
