@@ -632,7 +632,7 @@ export function bible_glyph_chapter_ezk47() {
           "$wrestling+heart_on_fire,",
           "along",
           "the",
-          "$proper_name$Jordan",
+          "$pointing_down+proper_name",
           "to",
           "the",
           "Eastern",
