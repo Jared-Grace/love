@@ -12,7 +12,7 @@ export function bible_glyph_chapter_lev23() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 2,
@@ -217,7 +217,7 @@ export function bible_glyph_chapter_lev23() {
       },
       {
         verse_number: 9,
-        words: ["And", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
+        words: ["And", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 10,
@@ -708,7 +708,7 @@ export function bible_glyph_chapter_lev23() {
       },
       {
         verse_number: 23,
-        words: ["$i_am", "also", "$mouth", "to", "$proper_name$Moses,", "$speech"],
+        words: ["$i_am", "also", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 24,
@@ -769,7 +769,7 @@ export function bible_glyph_chapter_lev23() {
       },
       {
         verse_number: 26,
-        words: ["Again", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
+        words: ["Again", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 27,
@@ -952,7 +952,7 @@ export function bible_glyph_chapter_lev23() {
       },
       {
         verse_number: 33,
-        words: ["And", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
+        words: ["And", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 34,
@@ -1287,7 +1287,7 @@ export function bible_glyph_chapter_lev23() {
           "native",
           "born",
           "of",
-          "$proper_name$Israel",
+          "$wrestling+heart_on_fire",
           "must",
           "$person+house",
           "in",
