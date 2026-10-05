@@ -13,7 +13,7 @@ export function bible_glyph_chapter_num15() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 2,
@@ -469,7 +469,7 @@ export function bible_glyph_chapter_num15() {
       },
       {
         verse_number: 17,
-        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 18,
@@ -591,7 +591,7 @@ export function bible_glyph_chapter_num15() {
           "has",
           "$mouth",
           "to",
-          "$proper_name$Moses,",
+          "$fishing_pole+proper_name,",
         ],
       },
       {
@@ -607,7 +607,7 @@ export function bible_glyph_chapter_num15() {
           "the",
           "$hand",
           "of",
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "$tray_out",
           "the",
           "$sun",
@@ -692,7 +692,7 @@ export function bible_glyph_chapter_num15() {
           "the",
           "$son",
           "of",
-          "$proper_name$Israel,",
+          "$wrestling+heart_on_fire,",
           "so",
           "that",
           "they",
@@ -734,7 +734,7 @@ export function bible_glyph_chapter_num15() {
           "the",
           "$son",
           "of",
-          "$proper_name$Israel",
+          "$wrestling+heart_on_fire",
           "and",
           "the",
           "$foreigner",
@@ -947,7 +947,7 @@ export function bible_glyph_chapter_num15() {
           "brought",
           "him",
           "to",
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "and",
           "$proper_name$Aaron",
           "and",
@@ -986,7 +986,7 @@ export function bible_glyph_chapter_num15() {
           "$i_am",
           "$speech",
           "to",
-          "$proper_name$Moses,",
+          "$fishing_pole+proper_name,",
           "The",
           "$man_beard",
           "must",
@@ -1026,12 +1026,12 @@ export function bible_glyph_chapter_num15() {
           "$i_am",
           "had",
           "commanded",
-          "$proper_name$Moses.",
+          "$fishing_pole+proper_name.",
         ],
       },
       {
         verse_number: 37,
-        words: ["And", "$i_am", "$speech", "to", "$proper_name$Moses,", "$speech"],
+        words: ["And", "$i_am", "$speech", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 38,
