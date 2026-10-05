@@ -596,7 +596,7 @@ export function bible_glyph_chapter_2ki01() {
           "of",
           "him.",
           "So",
-          "$proper_name$Elijah",
+          "$heart_on_fire+i_am",
           "got",
           "up",
           "and",
