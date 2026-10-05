@@ -200,7 +200,7 @@ export function bible_glyph_chapter_psa084() {
           "O",
           "$fire",
           "of",
-          "$proper_name$Jacob.",
+          "$hand+foot.",
           "Selah",
         ],
       },
