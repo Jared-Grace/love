@@ -135,13 +135,15 @@ export function app_code_lesson_statement_name_rectangle_above() {
   }
   function rectangles_draw(top, bottom2) {
     "the first rectangle, 1 to 3 across and 1 to 3 down, and the second 2 to 4 across and from top2 to bottom2 down, so their lefts and rights differ; only the down numbers wear colours, since only they decide it";
+    "The grid ends one row below the second rectangle, asked by the human 2026-10-05 after the pictures with the second ending at 5 kept an empty row 6 they did not need: every picture then has the same one empty row under the lowest rectangle. Not picked: the first picture ending at 6 too, which would have the second rectangle touch the bottom edge in one picture and not the others.";
+    let rows = bottom2 + 1;
     let first_edges = [1, 3, 1, 3];
     let second_edges = [2, 4, top, bottom2];
     function draw(box) {
       app_code_rectangles_edges_colored_draw(
         box,
         5,
-        7,
+        rows,
         first_edges,
         second_edges,
         null,
