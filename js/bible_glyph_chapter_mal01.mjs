@@ -24,7 +24,7 @@ export function bible_glyph_chapter_mal01() {
           "the",
           "$i_am",
           "to",
-          "$proper_name$Israel",
+          "$wrestling+heart_on_fire",
           "$hand",
           "$proper_name$Malachi:",
         ],
@@ -166,7 +166,7 @@ export function bible_glyph_chapter_mal01() {
           "the",
           "borders",
           "of",
-          "$proper_name$Israel.",
+          "$wrestling+heart_on_fire.",
         ],
       },
       {
