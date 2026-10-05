@@ -16,7 +16,7 @@ export function bible_glyph_chapter_exo24() {
         words: [
           "Then",
           "the",
-          "LORD",
+          "$i_am",
           "$speech",
           "to",
           "$fishing_pole+proper_name,",
@@ -495,7 +495,7 @@ export function bible_glyph_chapter_exo24() {
           "seventh",
           "$sun",
           "the",
-          "LORD",
+          "$i_am",
           "called",
           "to",
           "$fishing_pole+proper_name",
