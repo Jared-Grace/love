@@ -106,7 +106,7 @@ export function bible_glyph_chapter_deu11() {
         verse_number: 4,
         words: [
           "what",
-          "He",
+          "$i_am",
           "$hammer+doing",
           "to",
           "the",
@@ -119,7 +119,7 @@ export function bible_glyph_chapter_deu11() {
           "their",
           "$chariot,",
           "when",
-          "He",
+          "$i_am",
           "made",
           "the",
           "$water",
