@@ -163,7 +163,7 @@ export function bible_glyph_chapter_gen28() {
           "of",
           "$hand+foot",
           "and",
-          "$proper_name$Esau.",
+          "$hair+proper_name.",
         ],
       },
       {
@@ -241,7 +241,7 @@ export function bible_glyph_chapter_gen28() {
         verse_number: 9,
         words: [
           "So",
-          "$proper_name$Esau",
+          "$hair+proper_name",
           "$walking",
           "to",
           "$proper_name$Ishmael",
