@@ -1,15 +1,16 @@
-import { app_bible_pictures_chapter_button } from "./app_bible_pictures_chapter_button.mjs";
 import { app_shared_bible_page_start_hash } from "./app_shared_bible_page_start_hash.mjs";
 import { null_is } from "./null_is.mjs";
-import { app_shared_bible_read } from "./app_shared_bible_read.mjs";
-import { app_shared_bible_initialize } from "./app_shared_bible_initialize.mjs";
-import { app_bible_screens } from "./app_bible_screens.mjs";
-import { app_bible_home } from "./app_bible_home.mjs";
 import { app_shared_bible_mode_get } from "./app_shared_bible_mode_get.mjs";
 import { app_shared_bible_mode_set } from "./app_shared_bible_mode_set.mjs";
 import { app_shared_bible_mode_verse } from "./app_shared_bible_mode_verse.mjs";
-import { app_bible_verse_switch_button } from "./app_bible_verse_switch_button.mjs";
 import { equal } from "./equal.mjs";
+import { object_merge_match } from "./object_merge_match.mjs";
+import { app_bible_screens } from "./app_bible_screens.mjs";
+import { app_shared_bible_initialize } from "./app_shared_bible_initialize.mjs";
+import { app_bible_home } from "./app_bible_home.mjs";
+import { app_shared_bible_read } from "./app_shared_bible_read.mjs";
+import { app_bible_verse_switch_button } from "./app_bible_verse_switch_button.mjs";
+import { app_bible_pictures_chapter_button } from "./app_bible_pictures_chapter_button.mjs";
 export async function app_bible(context) {
   "The link is read back to the reader here, before the mode is touched, and not only in the two readers underneath. The next line writes the mode back into the address, so a word naming neither reader was rubbed out before either reader ever saw the link - the guard downstream then found a perfectly good link and said nothing, and the reader silently got the other reader.";
   let hash = app_shared_bible_page_start_hash(context, app_bible);
@@ -23,6 +24,10 @@ export async function app_bible(context) {
   let right = app_shared_bible_mode_verse();
   let verse = equal(mode, right);
   if (verse) {
+    ("this is the one bible app with a whole-chapter reader, and the verse picker is shared by all four, so it is said here on the context: the picker reads it to offer skipping straight to the whole chapter instead of picking a verse");
+    object_merge_match(context, {
+      chapter_reader_is: true,
+    });
     let screens = app_bible_screens();
     await app_shared_bible_initialize(
       context,

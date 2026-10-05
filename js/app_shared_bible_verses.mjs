@@ -1,23 +1,25 @@
-import { app_shared_bible_chapters } from "./app_shared_bible_chapters.mjs";
-import { app_shared_screen_set_button_back_to } from "./app_shared_screen_set_button_back_to.mjs";
-import { app_shared_bible_picker_card } from "./app_shared_bible_picker_card.mjs";
-import { app_shared_bible_picker_buttons_equal_width } from "./app_shared_bible_picker_buttons_equal_width.mjs";
-import { verse_number_key } from "./verse_number_key.mjs";
-import { app_shared_buttons_mark_current } from "./app_shared_buttons_mark_current.mjs";
-import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
-import { html_font_color_set } from "./html_font_color_set.mjs";
-import { app_shared_bible_picker_buttons_enlarge } from "./app_shared_bible_picker_buttons_enlarge.mjs";
 import { app_shared_bible_chapter_set_default } from "./app_shared_bible_chapter_set_default.mjs";
+import { app_shared_bible_chapters_before } from "./app_shared_bible_chapters_before.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_shared_bible_picker_card } from "./app_shared_bible_picker_card.mjs";
 import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
-import { identity } from "./identity.mjs";
+import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
+import { property_exists } from "./property_exists.mjs";
+import { app_shared_bible_home_chapter_button } from "./app_shared_bible_home_chapter_button.mjs";
+import { ebible_folder_english } from "./ebible_folder_english.mjs";
+import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
+import { verse_number_key } from "./verse_number_key.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { app_shared_bible_verse_open_curried } from "./app_shared_bible_verse_open_curried.mjs";
-import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
-import { ebible_folder_english } from "./ebible_folder_english.mjs";
-import { property_get } from "./property_get.mjs";
-import { app_shared_bible_chapters_before } from "./app_shared_bible_chapters_before.mjs";
 import { app_shared_button_list_centered } from "./app_shared_button_list_centered.mjs";
+import { identity } from "./identity.mjs";
+import { app_shared_bible_picker_buttons_enlarge } from "./app_shared_bible_picker_buttons_enlarge.mjs";
+import { app_shared_bible_picker_buttons_equal_width } from "./app_shared_bible_picker_buttons_equal_width.mjs";
+import { app_shared_buttons_mark_current } from "./app_shared_buttons_mark_current.mjs";
+import { app_shared_screen_set_button_back_to } from "./app_shared_screen_set_button_back_to.mjs";
+import { app_shared_bible_chapters } from "./app_shared_bible_chapters.mjs";
 export async function app_shared_bible_verses(context) {
   let n = await app_shared_bible_chapter_set_default(context);
   if (n) {
@@ -33,6 +35,15 @@ export async function app_shared_bible_verses(context) {
   let chapter_div = html_div_text_centered(card, chapter_name);
   let color = app_shared_color_blue_dark();
   html_font_color_set(chapter_div, color);
+  ("the way into the whole chapter goes above the verse numbers rather than below them, so a long chapter does not bury it - it is for the reader who wants to skip picking a verse at all. only an app with a whole-chapter reader says so on the context, and the button itself draws nothing for the others");
+  let chapter_reader_is = property_exists(context, "chapter_reader_is");
+  let app_fn = property_get(context, "app_fn");
+  app_shared_bible_home_chapter_button(
+    context,
+    app_fn,
+    chapter_reader_is,
+    card,
+  );
   let e = ebible_folder_english();
   let verses = await ebible_verses_browser(e, chapter_code);
   let property_name = verse_number_key();

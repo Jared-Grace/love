@@ -104,6 +104,8 @@ export function bible_glyph_roots_hebrew() {
   "ELOHIM AND EL ARE THE BURNING HEART SINCE 2026-10-03, QANNA IS THE STEAMING FACE, AND ESH IS THE FIRE. The reasons are written once, on the Greek table, because it was one decision across both. Older paragraphs here that say the fire is God, or that refuse the altar as meat beside fire, were written while the flame alone meant God, and that is no longer so. Hebrew has one word for God and for the false gods, so the seat cannot tell them apart; the English can, because its translators wrote God with a capital and gods without one, and the page draws a word whose English says god or gods in small letters as the carved stone figure that gillulim, idols, already wears.";
   "NAPHAL, SHAMAR, ZAQEN, OTH, PATHACH, SHAAL AND THE NUMBERS FOUR, FIVE AND TEN WERE SEATED 2026-10-03 beside their Greek partners, whose reasons the Greek table holds. Four more are Hebrew only. Karath is the scissors, because it is to cut, and to make a covenant is in Hebrew to cut one. Tsaba is the military helmet, so the LORD of hosts reads as the LORD of armies, which is what the word says. Yasha and yeshuah take the lifebuoy that soter already wears in Greek. Shakab, to lie down, joins mishkab, the bed it is named from. Aph was seated on the angry face and taken off within the hour, because the undrawn list already refuses it for being the nose as often as one word in five; Greek orge has no such second sense and keeps the face.";
   "JERUSALEM WAS TAKEN BACK TO UNDRAWN AND WITH WAS NOT SEATED, BOTH 2026-10-03, each because a gate refused the picture. Jerusalem was the city joined to peace, but peace has no picture: it is spelled in letters on purpose, since the peace symbol was refused as a movement's badge. So the pair drew half a picture and half a word, and the gate that keeps a group's halves both drawn went red. It was already the weakest of the names. Im and meta, with, were offered as two persons side by side, chosen by the human, and refused by the gate that forbids one picture twice in a group: with no change of shape at the join, the reader has to count, and two persons would also read as people.";
+  "ONE WORD, ONE MARK, THE HEBREW PASS, 2026-10-05. The rule below says one root keeps one picture, and the later rule says each word of that root may still carry its own second picture, so that a reader can tell the words apart. The Greek table was split first, and this pass copies its choices so that the two testaments draw the same idea the same way. The bare picture goes to the same kind of word it went to in Greek: the noun where the Greek noun is bare (glory, prophet, death, life, jealousy, war, fear, salvation, holy), and the verb where the Greek verb is bare (pray, judge). So kabod glory is the star and kabad to honour is the star with the doing mark; maveth death is the skull and muth to die is the skull with the doing mark; tsaddiq righteous is the ruler, tsedeq and tsedaqah righteousness both take the ruler with the thing mark, and tsadaq to justify takes the doing mark. The same reasoning splits gadal, rabab, qarab, qana, malak, abad, asah, ahab, chata, qadash, chayah, naba, yatab, ed, yasha, yare, shaba, samach, sabab, qabar, zabach, shakab, mashach, lacham, chakam, chanah, parah and shaphat. Amen is the check with the manner mark, because the interlinear reads it truly, and the bare check stays with emeth, truth. The Greek amen takes the same mark so that the two testaments agree. A choice that was weighed and rejected: giving the bare picture to whichever word is commonest. Asah to do is far commoner than maaseh work, but the hammer draws the work, and a rule based on frequency would flip whenever a count changed.";
+  "KEPT SHARED AFTER THE HEBREW PASS. Spelling, gender and language variants keep one picture: zeh and zoth this, melek in Hebrew and in Aramaic, chalom and chelem dream, leb and lebab heart, the three spellings of the divine name, elohim and el, adon and adonai, yeled and yaldah, rekeb and merkabah, the bronze, iron, dew, garden, lion and mule pairs, and hinneh and hen. These are one word written in different ways, not different words. Different roots that share a picture are a separate question and were not touched here: bath and ishshah, ish and enosh, amar and dabar, torah and mitsvah, ra and rasha, arar and qalal, lo and al, the bed mittah, the cloud ab, the valley gay, the wall qir and the new wine tirosh. A share that is also a name waits for the human, because names are spelled out for now: dod and David, yadah and Judah, mashah and Moses, lavah and Levi, shalom and Solomon, peri and Ephraim. The two part groups, chazaq and barak, keep one picture because a group may hold only two parts.";
   "ONE ROOT, ONE PICTURE, WHATEVER THE PART OF SPEECH - the human's rule, given 2026-10-04 with loved, love, beloved and loving as the example. The verb, the noun, the person who does it and the word that describes it are one root and wear one root picture, because grammar is never drawn and the part of speech is grammar. Two written refusals fell to it the same day, both of which had argued that a verb and its noun must not share: samach, rejoice, now joins simchah, joy, on the beaming face, and shaphat, judge and to judge, now joins mishpat, judgment, on the scales - the refusal had itself named the scales as the same family. The refusals that argue one word carries several MEANINGS - nose and anger, head and chief, book and letter - are a different argument and still stand.";
   "A NINTH BATCH, 2026-10-04, WITH NEW PICTURES. SAPHAR, COUNT, IS THE ABACUS, and the one who counts, the scribe, is the same number in Strong's, so he wears it too. SIMCHAH, JOY, IS THE BEAMING FACE. Rejected: the smile, which ashre, blessed, holds in this table. Samach, the verb rejoice, stays out under its written refusal in the wanted list: a feeling's face where the sentence has a thing being done reads as a noun. Sepher, book, was drawn as a closed book and withdrawn under its own written refusal: the word is also the letter and the deed, and a bound volume misdraws both. SHACHAT, RUIN OR CORRUPT, IS THE COLLISION: a thing smashed. It is not abad, perish, which still waits for a picture of its own. SABAB, TURN AROUND OR SURROUND, JOINS SABIB, AROUND, which grows from it. Not seated, and why: naar, boy or young man, would want the boy, which ben, son, holds; tsaphon, north, has no picture that is north rather than up; matteh and shebet, staff and tribe, are two words and want two pictures, and neither has an honest one yet.";
   "AN EIGHTH BATCH, 2026-10-04. CHEMAH, WRATH, IS THE ANGRY FACE the Greek orge holds: the word is heat, and its wordings are wrath and rage. Aph stays held back because it is the nose as well as the anger; chemah is never a face part, so the refusal written for aph does not reach it. NASAH, TEST, IS THE TEST TUBE, shared with the Greek peirazo: God tested Abraham, and Israel tested God at Massah, and the picture says only that a thing was put to the proof.";
@@ -155,7 +157,7 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "8055",
-          glyph: "beaming",
+          glyph: "beaming+doing",
         },
         {
           strong: "8057",
@@ -389,7 +391,7 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "7650",
-          glyph: "raised_back_of_hand",
+          glyph: "raised_back_of_hand+doing",
         },
         {
           strong: "7621",
@@ -715,11 +717,11 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "1431",
-          glyph: "top",
+          glyph: "top+doing",
         },
         {
           strong: "1420",
-          glyph: "top",
+          glyph: "top+thing",
         },
       ],
     },
@@ -733,11 +735,11 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "7235",
-          glyph: "multiply",
+          glyph: "multiply+doing",
         },
         {
           strong: "7230",
-          glyph: "multiply",
+          glyph: "multiply+thing",
         },
       ],
     },
@@ -761,7 +763,7 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "5437",
-          glyph: "around",
+          glyph: "around+doing",
         },
       ],
     },
@@ -771,7 +773,7 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "7126",
-          glyph: "magnet",
+          glyph: "magnet+doing",
         },
         {
           strong: "7138",
@@ -1079,11 +1081,11 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "7067",
-          glyph: "face_steam",
+          glyph: "face_steam+describing",
         },
         {
           strong: "7065",
-          glyph: "face_steam",
+          glyph: "face_steam+doing",
         },
         {
           strong: "7068",
@@ -1199,7 +1201,7 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "4427",
-          glyph: "castle",
+          glyph: "castle+doing",
         },
         {
           strong: "4467",
@@ -1217,7 +1219,7 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "5647",
-          glyph: "kneeling",
+          glyph: "kneeling+doing",
         },
       ],
     },
@@ -1511,7 +1513,7 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "6213",
-          glyph: "hammer",
+          glyph: "hammer+doing",
         },
         {
           strong: "4639",
@@ -1549,7 +1551,7 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "157",
-          glyph: "heart_red",
+          glyph: "heart_red+doing",
         },
         {
           strong: "160",
@@ -1587,7 +1589,7 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "543",
-          glyph: "check",
+          glyph: "check+manner",
         },
       ],
     },
@@ -1601,7 +1603,7 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "8605",
-          glyph: "hands_praying",
+          glyph: "hands_praying+thing",
         },
       ],
     },
@@ -1611,7 +1613,7 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "2398",
-          glyph: "bow",
+          glyph: "bow+doing",
         },
         {
           strong: "2403",
@@ -1635,7 +1637,7 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "6944",
-          glyph: "sparkle",
+          glyph: "sparkle+thing",
         },
         {
           strong: "6918",
@@ -1643,7 +1645,7 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "6942",
-          glyph: "sparkle",
+          glyph: "sparkle+doing",
         },
       ],
     },
@@ -1677,7 +1679,7 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "2421",
-          glyph: "sprout",
+          glyph: "sprout+doing",
         },
       ],
     },
@@ -1687,7 +1689,7 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "4191",
-          glyph: "skull",
+          glyph: "skull+doing",
         },
         {
           strong: "4194",
@@ -1745,7 +1747,7 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "3513",
-          glyph: "star",
+          glyph: "star+doing",
         },
       ],
     },
@@ -1779,7 +1781,7 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "5012",
-          glyph: "megaphone",
+          glyph: "megaphone+doing",
         },
       ],
     },
@@ -1813,7 +1815,7 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "3190",
-          glyph: "thumbs_up",
+          glyph: "thumbs_up+doing",
         },
       ],
     },
@@ -1883,7 +1885,7 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "4941",
-          glyph: "scales",
+          glyph: "scales+thing",
         },
         {
           strong: "8199",
@@ -1897,11 +1899,11 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "6664",
-          glyph: "ruler",
+          glyph: "ruler+thing",
         },
         {
           strong: "6666",
-          glyph: "ruler",
+          glyph: "ruler+thing",
         },
         {
           strong: "6662",
@@ -1909,7 +1911,7 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "6663",
-          glyph: "ruler",
+          glyph: "ruler+doing",
         },
       ],
     },
@@ -2085,15 +2087,15 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "5713",
-          glyph: "witness",
+          glyph: "witness+thing",
         },
         {
           strong: "5715",
-          glyph: "witness",
+          glyph: "witness+thing",
         },
         {
           strong: "5749",
-          glyph: "witness",
+          glyph: "witness+doing",
         },
       ],
     },
@@ -2299,7 +2301,7 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "4886",
-          glyph: "oil",
+          glyph: "oil+doing",
         },
       ],
     },
@@ -2451,7 +2453,7 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "2583",
-          glyph: "camp",
+          glyph: "camp+doing",
         },
       ],
     },
@@ -2519,7 +2521,7 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "2450",
-          glyph: "wisdom",
+          glyph: "wisdom+describing",
         },
       ],
     },
@@ -2647,7 +2649,7 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "7901",
-          glyph: "bed",
+          glyph: "bed+doing",
         },
       ],
     },
@@ -2839,7 +2841,7 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "6912",
-          glyph: "tomb",
+          glyph: "tomb+doing",
         },
       ],
     },
@@ -3307,7 +3309,7 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "2076",
-          glyph: "sacrifice",
+          glyph: "sacrifice+doing",
         },
       ],
     },
@@ -3597,7 +3599,7 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "6509",
-          glyph: "fruit",
+          glyph: "fruit+doing",
         },
         {
           strong: "669",
@@ -3662,11 +3664,11 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "3372",
-          glyph: "fear",
+          glyph: "fear+doing",
         },
         {
           strong: "3373",
-          glyph: "fear",
+          glyph: "fear+describing",
         },
         {
           strong: "3374",
@@ -3774,7 +3776,7 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "3898",
-          glyph: "crossed_swords",
+          glyph: "crossed_swords+doing",
         },
       ],
     },
@@ -3992,7 +3994,7 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "3444",
-          glyph: "rescue",
+          glyph: "rescue+thing",
         },
       ],
     },
