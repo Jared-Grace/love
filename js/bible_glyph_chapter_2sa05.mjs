@@ -303,7 +303,7 @@ export function bible_glyph_chapter_2sa05() {
           "$city",
           "of",
           "$two_hearts+proper_name.",
-          "He",
+          "$two_hearts+proper_name",
           "built",
           "it",
           "up",
