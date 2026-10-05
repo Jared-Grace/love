@@ -22,6 +22,7 @@ export async function bible_glyph_chapters_seat_split_planned(glyphs) {
   "IT IS TOLD WHICH PICTURES WERE SPLIT RATHER THAN FINDING THEM, AND THAT WAS MEASURED (2026-10-04). Asked of every picture, the same question finds five hundred and sixty nine verses to redraw and almost seven thousand it cannot settle, all on fourteen pictures drawn unevenly long before any split - the proper name, fire, eye, mouth, ear and voice among them. Those are older shapes with their own gates and reasons, and a command that sets out to split a seat must not quietly rewrite them, so only the named pictures are asked about.";
   "THE CANDIDATES ARE THE BARE PICTURE AND EVERY GROUP STARTING WITH IT THAT THE VERSE HAS NOT FULLY DRAWN YET. A group the verse already draws as often as it is seated was drawn as a group by its author and is no candidate for a bare mark; a group drawn less often than seated is the one a bare mark can have been, because before the move it was the bare picture.";
   "THREE ANSWERS, ASKED IN ORDER. If every candidate is the same mark, every bare mark becomes it and order never arises. If the candidates number exactly the bare marks drawn, they pair off by position, assuming the author drew in the original's order - the same assumption the collision walk makes and defends. If not, the words English gives nothing are set aside and the two questions are asked again. Anything left is handed back as undecided rather than guessed.";
+  "A VERSE WITH NO CANDIDATE AT ALL IS LEFT ALONE, AND THAT WAS MEASURED TOO (2026-10-05). A split moves words onto groups starting with the bare picture, so every verse a split touched still has candidates. A verse drawing the picture where the table seats no word of that family at all drew it before any split - the prophet's mark in the first verse of First John four, the outward tray in John seventeen and Exodus ten - and that is the overdrawn gate's old business, not this one's. Calling those undecided refused a whole pass over three lines it had no say in.";
   arguments_assert(arguments, 1);
   list_is_assert(glyphs);
   let decided = [];
@@ -81,6 +82,9 @@ export async function bible_glyph_chapters_seat_split_planned(glyphs) {
           return r3;
         }
         let spoken = words.filter(candidate_is).filter(lambda2).map(lambda3);
+        if (all.length === 0) {
+          continue;
+        }
         let order = null;
         for (let family of [all, spoken]) {
           let distinct = [...new Set(family)];

@@ -129,6 +129,8 @@ export function bible_glyph_roots() {
   ("WRITING, TEACHING AND SEEKING TOOK NEW PICTURES ON 2026-10-03, the writing hand, the teacher and the magnifying glass, each one for a whole root. Graphe, the Scripture, wears the writing hand with grapho because the word is the writing, and drawing it so shows a reader that it is written and Scripture are one word. It was not given the scroll, which is already the law. The teacher stands on the verb to teach and on the noun teacher, the same way love stands on its noun and verb. Find was left undrawn: it has no picture that says finding and not seeing or knowing, which are already the eye and the lightbulb.");
   ("GOD IS THE BURNING HEART SINCE 2026-10-03, AND FIRE IS THE FIRE. The human chose it, in these words: God is love, God is consuming fire. Both are said of God in so many words - God is love in the fourth of first John, our God is a consuming fire in the twelfth of Hebrews - so the mark is two sentences of Scripture joined into one picture, the heart that burns. The plain flame was freed by the change and pur, fire, took it. Jealousy gave the burning heart up and took the face with steam from its nose, the human's choice the same day. A word whose English says god or gods in small letters is drawn as the carved stone figure instead, because the translators' capital is the only place the text tells the LORD from an idol.");
   ("TWELVE GREEK NUMBERS AND FOURTEEN HEBREW ONES WERE SEATED IN ONE PASS ON 2026-10-03, each a picture that says the word and was free. Falling is the person and the hand pointing down, the mirror of rising. Keeping is the guard, because tereo and shamar are to watch over before they are to obey. Anger is the angry face. The elder is the old man, which is what presbuteros says. A sign is the placard, a thing held up to be read. Opening is the open lock; the key was refused because it is exousia, authority. Erotao, to ask a question, is the question mark; aiteo, to ask for something, was left undrawn because a request is not a question. Four, five and ten are their keycaps, as one, two, three and seven already were. Parakaleo joins its own noun parakletos at the embrace, and grammateus, the scribe, joins grapho at the writing hand. The demon was refused the horned face because it would sit beside the angry face and read as anger.");
+  ("ONE WORD, ONE MARK, A SECOND PASS OF THIRTY SIX ROOTS, 2026-10-05. Same rule as the first: the word the picture draws stays bare, the others add a form mark. Megas keeps the top, meizon takes more, megistos most, megaluno doing. Polus keeps multiply, pleion takes more and plethuno doing. Doxa keeps the star and doxazo takes doing; chara the smile and chairo doing; zoe the sprout and zao doing; basileia the castle and basileuo doing; ergon the tools and ergazomai doing; elpis the crossed fingers and elpizo doing; phobos fear and phobeo doing; zelos the steaming face and zeloo doing; eggus the magnet and eggizo doing; prophetes the megaphone and propheteuo doing; phone the loudspeaker and phoneo doing; pseudos the lying face and pseudomai doing; polemos the crossed swords and polemeo doing; daimonion the imp and daimonizomai doing. Aion keeps the hourglass and aionios takes describing; ego keeps me and emos takes describing. Peirazo keeps the test tube and peirasmos takes thing; baptizo keeps the diving mask, baptisma takes thing and baptistes doer; proseuchomai keeps the praying hands and proseuche takes thing; krino keeps the scales and krisis takes thing; archomai keeps the clapper board and arche takes thing; ginosko keeps the lightbulb and gnosis takes thing; apostello keeps the sending hand and apostolos takes doer. Protos keeps first place and proton takes manner; ekeinos the telescope and ekei manner; houtos the flashlight and houto manner; ek the outward tray and exo manner; kalos the thumb up and its adverb manner.");
+  ("TWO CHOICES IN THIS PASS ARE NOT FORM MARKS, AND ONE PAIR STAYS SHARED. Archiereus is drawn priest and first place, not priest and more: a chief priest is the first of the priests, which first place already says, and more would read as more priestly. Kauchema and kauchesis both take peacock and thing, so those two still share a mark - kauchesis is the act of boasting and kauchema the thing boasted of, and drawing the act as doing was refused because doing belongs to the verb kauchaomai, which keeps the peacock bare. Deo and dei stay shared for now: dei, it is necessary, comes from binding but no form mark says must, and a must picture of its own is a later question.");
   ("ONE WORD, ONE MARK: THE FIRST TWELVE ROOTS SPLIT BY FORM, 2026-10-04. The person reading this Bible said that loved and beloved may differ just as agapao and agapetos differ, that one-to-one with the original words is preferred, and that a mark like -ing is fine. So a root keeps its one picture, the word that picture depicts keeps it bare, and every other word of the root adds a form mark as a second half. Agape keeps the red heart, agapao takes heart and doing, agapetos heart and describing. Pistis keeps the anchor, pisteuo and pistos take doing and describing. Dunamis keeps the lightning, dunamai and dunatos take doing and describing. Dikaios keeps the ruler, dikaiosune takes thing and dikaioo doing. Hagios keeps the sparkle, hagiazo takes doing and hagiasmos thing. Hamartia keeps the bow, hamartano takes doing and hamartolos doer. Didaskalos keeps the teacher, didasko takes doing and didache thing. Parakaleo keeps the hug, parakletos takes doer and paraklesis thing. Martus keeps the witness, martureo takes doing and marturia thing. Sozo keeps the rescue, soter takes doer and soteria thing. Grapho keeps the writing hand, graphe takes thing and grammateus doer. Philos keeps the orange heart, phileo takes doing and philia thing.");
   ("THE BARE PICTURE GOES TO THE WORD IT DRAWS, NOT TO THE COMMONEST WORD. Didasko, to teach, stands about half as often again as didaskalos, and the teacher still stays bare on didaskalos, because the picture is a person and not an act; giving it bare to the verb would draw every teaching as a man and every teacher as the man plus something. Where the picture is an act, the verb keeps it bare - the hug is parakaleo, and the comforter and the comfort are what add a mark. Ranking by frequency was the rejected reading.");
   ("WHAT WAS KEPT SHARED, AND WHY. Tense forms supplied by another stem stay one picture, since they are grammar and grammar is never drawn: lego with eipon and ereo, esthio with phago, horao with eido, idou with ide. Spelling variants of one word stay one picture: skotia with skotos, nun with nuni, oikos with oikia. A root already drawn as a group of two cannot take a form mark, since a group has two halves and no more. And a picture two different roots share is a later question with its own command, not this one.");
@@ -180,7 +182,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "1139",
-          glyph: "imp",
+          glyph: "imp+doing",
         },
         {
           strong: "1142",
@@ -308,11 +310,11 @@ export function bible_glyph_roots() {
         },
         {
           strong: "2745",
-          glyph: "peacock",
+          glyph: "peacock+thing",
         },
         {
           strong: "2746",
-          glyph: "peacock",
+          glyph: "peacock+thing",
         },
       ],
     },
@@ -336,7 +338,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "3986",
-          glyph: "test_tube",
+          glyph: "test_tube+thing",
         },
       ],
     },
@@ -376,7 +378,7 @@ export function bible_glyph_roots() {
       words: [
         {
           strong: "5574",
-          glyph: "lying_face",
+          glyph: "lying_face+doing",
         },
         {
           strong: "5579",
@@ -558,7 +560,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "746",
-          glyph: "clapper_board",
+          glyph: "clapper_board+thing",
         },
       ],
     },
@@ -572,11 +574,11 @@ export function bible_glyph_roots() {
         },
         {
           strong: "908",
-          glyph: "diving_mask",
+          glyph: "diving_mask+thing",
         },
         {
           strong: "910",
-          glyph: "diving_mask",
+          glyph: "diving_mask+doer",
         },
       ],
     },
@@ -654,7 +656,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "1563",
-          glyph: "telescope",
+          glyph: "telescope+manner",
         },
       ],
     },
@@ -806,7 +808,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "3779",
-          glyph: "flashlight",
+          glyph: "flashlight+manner",
         },
       ],
     },
@@ -864,7 +866,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "1679",
-          glyph: "crossed_fingers",
+          glyph: "crossed_fingers+doing",
         },
       ],
     },
@@ -912,15 +914,15 @@ export function bible_glyph_roots() {
         },
         {
           strong: "3187",
-          glyph: "top",
+          glyph: "top+more",
         },
         {
           strong: "3176",
-          glyph: "top",
+          glyph: "top+most",
         },
         {
           strong: "3170",
-          glyph: "top",
+          glyph: "top+doing",
         },
       ],
     },
@@ -934,11 +936,11 @@ export function bible_glyph_roots() {
         },
         {
           strong: "4119",
-          glyph: "multiply",
+          glyph: "multiply+more",
         },
         {
           strong: "4129",
-          glyph: "multiply",
+          glyph: "multiply+doing",
         },
       ],
     },
@@ -976,7 +978,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "1448",
-          glyph: "magnet",
+          glyph: "magnet+doing",
         },
       ],
     },
@@ -1232,7 +1234,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "4412",
-          glyph: "first_place",
+          glyph: "first_place+manner",
         },
       ],
     },
@@ -1282,7 +1284,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "5399",
-          glyph: "fear",
+          glyph: "fear+doing",
         },
       ],
     },
@@ -1306,7 +1308,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "2206",
-          glyph: "face_steam",
+          glyph: "face_steam+doing",
         },
       ],
     },
@@ -1564,7 +1566,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "1108",
-          glyph: "lightbulb",
+          glyph: "lightbulb+thing",
         },
       ],
     },
@@ -1808,7 +1810,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "2038",
-          glyph: "tools",
+          glyph: "tools+doing",
         },
       ],
     },
@@ -1818,7 +1820,7 @@ export function bible_glyph_roots() {
       words: [
         {
           strong: "1392",
-          glyph: "star",
+          glyph: "star+doing",
         },
         {
           strong: "1391",
@@ -1850,7 +1852,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "936",
-          glyph: "castle",
+          glyph: "castle+doing",
         },
       ],
     },
@@ -1888,7 +1890,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "5463",
-          glyph: "smile",
+          glyph: "smile+doing",
         },
       ],
     },
@@ -1912,7 +1914,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "4395",
-          glyph: "megaphone",
+          glyph: "megaphone+doing",
         },
       ],
     },
@@ -1986,7 +1988,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "5455",
-          glyph: "loudspeaker",
+          glyph: "loudspeaker+doing",
         },
       ],
     },
@@ -2000,7 +2002,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "2198",
-          glyph: "sprout",
+          glyph: "sprout+doing",
         },
       ],
     },
@@ -2058,7 +2060,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "166",
-          glyph: "hourglass",
+          glyph: "hourglass+describing",
         },
       ],
     },
@@ -2240,7 +2242,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "2573",
-          glyph: "thumbs_up",
+          glyph: "thumbs_up+manner",
         },
       ],
     },
@@ -2294,7 +2296,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "4335",
-          glyph: "hands_praying",
+          glyph: "hands_praying+thing",
         },
       ],
     },
@@ -2392,7 +2394,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "1854",
-          glyph: "tray_out",
+          glyph: "tray_out+manner",
         },
       ],
     },
@@ -2488,7 +2490,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "652",
-          glyph: "hand_sending",
+          glyph: "hand_sending+doer",
         },
       ],
     },
@@ -2532,7 +2534,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "1699",
-          glyph: "me",
+          glyph: "me+describing",
         },
       ],
     },
@@ -2804,7 +2806,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "2920",
-          glyph: "scales",
+          glyph: "scales+thing",
         },
       ],
     },
@@ -3132,7 +3134,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "4170",
-          glyph: "crossed_swords",
+          glyph: "crossed_swords+doing",
         },
       ],
     },
@@ -3260,7 +3262,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "749",
-          glyph: "priest",
+          glyph: "priest+first_place",
         },
       ],
     },

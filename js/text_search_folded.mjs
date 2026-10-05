@@ -11,6 +11,8 @@ export function text_search_folded(text) {
     fn_name("text_accent_marks_removed"),
     " does. Searching both sides the same way would still find every verse, but in Hindi a search for one word would bring back verses holding a dozen others.");
   ("The compatibility split comes first, so a ligature such as fi written as one character, or a letter typed at full width, comes apart into the ordinary letters. A few letters carry their accent inside themselves rather than as a mark, and those are spelled out by hand.");
+  ("Turkish writes i and ı as two letters, and capital I is the capital of ı. A plain lowercasing turns TANRI into tanri, which no Turkish verse holds, so ı is filed under i: a reader typing capitals, or a keyboard without ı, still finds the word. This costs Turkish the few word pairs told apart by the dot alone.");
+  ("REJECTED: lowercasing by the Turkish rule when Turkish is chosen. That needs the language handed to both sides, and an English reader typing I into a Turkish search would get ı.");
   arguments_assert(arguments, 1);
   let small = text_lower_to(text);
   let apart = small.normalize("NFKD");
@@ -26,6 +28,7 @@ export function text_search_folded(text) {
     ø: "o",
     ß: "ss",
     ł: "l",
+    ı: "i",
     đ: "d",
     ٱ: "ا",
     ـ: "",
