@@ -1056,7 +1056,7 @@ export function bible_glyph_chapter_jer23() {
           "and",
           "proclaim,",
           "The",
-          "LORD",
+          "$i_am",
           "declares",
           "it.",
         ],
