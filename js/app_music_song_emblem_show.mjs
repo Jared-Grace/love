@@ -50,6 +50,7 @@ export function app_music_song_emblem_show(
   "THE PICTURE KEEPS ITS WIDTH WHEN THE ROW IS TOO NARROW FOR BOTH, and the words give way instead, because words reflow and a drawing squeezed to a third of its size stops being legible at all.";
   "IT IS THE ROW AND NOT THE PICTURE THAT THE HIDE BUTTON IS GIVEN, so that the card goes with the picture it belongs to. The card is captioned as the picture's - this picture, the first picture - and left on the page alone it offers to open onto the scripture behind something the reader can no longer see.";
   arguments_assert(arguments, 6);
+  ("★ A PICTURE MAY NAME THE COLOUR OF ITS OWN FRAME, AND EVERY OTHER PICTURE KEEPS THE BLACK ONE. Almost every window here is drawn on black, so a black frame reads as part of the glass; a window drawn on a white wall sat inside a black box instead, and the human asked for those to be framed in white. The couplet holds it as border, beside the rest of what is true of that one picture; a couplet naming none is framed in black as before.");
   let url = song_image_kept_url(n);
   let unchosen = equal(url, "");
   if (unchosen) {
@@ -78,7 +79,9 @@ export function app_music_song_emblem_show(
   html_attribute_set(picture, "alt", couplet.symbol);
   html_img_lazy_full_block(picture);
   let border_width = app_music_song_emblem_border_width();
-  html_border(picture, border_width, "black");
+  let named = couplet.border;
+  let border_colour = equal(named, undefined) ? "black" : named;
+  html_border(picture, border_width, border_colour);
   if (not(unreferenced)) {
     let beside = html_div(row);
     html_flex_grow_1(beside);

@@ -229,6 +229,7 @@ export function song_image_couplets() {
     {
       n: 10,
       verse: 2,
+      border: "white",
       first: "forsaken by",
       second: "almighty GOD",
       symbol:
@@ -385,6 +386,7 @@ export function song_image_couplets() {
     {
       n: 25,
       verse: 3,
+      border: "white",
       first: "WHO conquered death",
       second: "now glorified",
       symbol:
