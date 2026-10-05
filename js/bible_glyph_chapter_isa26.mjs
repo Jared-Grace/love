@@ -26,7 +26,7 @@ export function bible_glyph_chapter_isa26() {
           "the",
           "$earth",
           "of",
-          "$proper_name$Judah:",
+          "$hands_raised+proper_name:",
           "We",
           "have",
           "a",
