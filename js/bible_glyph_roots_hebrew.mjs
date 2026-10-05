@@ -106,6 +106,7 @@ export function bible_glyph_roots_hebrew() {
   "JERUSALEM WAS TAKEN BACK TO UNDRAWN AND WITH WAS NOT SEATED, BOTH 2026-10-03, each because a gate refused the picture. Jerusalem was the city joined to peace, but peace has no picture: it is spelled in letters on purpose, since the peace symbol was refused as a movement's badge. So the pair drew half a picture and half a word, and the gate that keeps a group's halves both drawn went red. It was already the weakest of the names. Im and meta, with, were offered as two persons side by side, chosen by the human, and refused by the gate that forbids one picture twice in a group: with no change of shape at the join, the reader has to count, and two persons would also read as people.";
   "ONE WORD, ONE MARK, THE HEBREW PASS, 2026-10-05. The rule below says one root keeps one picture, and the later rule says each word of that root may still carry its own second picture, so that a reader can tell the words apart. The Greek table was split first, and this pass copies its choices so that the two testaments draw the same idea the same way. The bare picture goes to the same kind of word it went to in Greek: the noun where the Greek noun is bare (glory, prophet, death, life, jealousy, war, fear, salvation, holy), and the verb where the Greek verb is bare (pray, judge). So kabod glory is the star and kabad to honour is the star with the doing mark; maveth death is the skull and muth to die is the skull with the doing mark; tsaddiq righteous is the ruler, tsedeq and tsedaqah righteousness both take the ruler with the thing mark, and tsadaq to justify takes the doing mark. The same reasoning splits gadal, rabab, qarab, qana, malak, abad, asah, ahab, chata, qadash, chayah, naba, yatab, ed, yasha, yare, shaba, samach, sabab, qabar, shakab, mashach, lacham, chanah and shaphat. Amen is the check with the manner mark, because the interlinear reads it truly, and the bare check stays with emeth, truth. The Greek amen takes the same mark so that the two testaments agree. A choice that was weighed and rejected: giving the bare picture to whichever word is commonest. Asah to do is far commoner than maaseh work, but the hammer draws the work, and a rule based on frequency would flip whenever a count changed.";
   "KEPT SHARED AFTER THE HEBREW PASS. Spelling, gender and language variants keep one picture: zeh and zoth this, melek in Hebrew and in Aramaic, chalom and chelem dream, leb and lebab heart, the three spellings of the divine name, elohim and el, adon and adonai, yeled and yaldah, rekeb and merkabah, the bronze, iron, dew, garden, lion and mule pairs, and hinneh and hen. These are one word written in different ways, not different words. Different roots that share a picture are a separate question and were not touched here: bath and ishshah, ish and enosh, amar and dabar, torah and mitsvah, ra and rasha, arar and qalal, lo and al, the bed mittah, the cloud ab, the valley gay, the wall qir and the new wine tirosh. A share that is also a name waits for the human, because names are spelled out for now: dod and David, yadah and Judah, mashah and Moses, lavah and Levi, shalom and Solomon, peri and Ephraim. The two part groups, chazaq and barak, keep one picture because a group may hold only two parts. Three splits wait for a picture: chakam wise, zabach to sacrifice and parah to bear fruit stay with chokmah, zebach and peri. Wisdom, sacrifice and fruit are still written as words rather than drawn, and a word cannot carry a mark that the artwork has to draw next to it.";
+  "A COMMON NAME IS DRAWN AS ITS ROOT PICTURE WITH THE NAME TAG BEHIND IT, 2026-10-05, on the human's word that common names may have their own sequence. David is the two hearts and the tag, Moses the fishing pole and the tag, Levi the handshake and the tag, Judah the raised hands and the tag. The root picture stays because the name IS that root - David is beloved, Judah is praise - and the human's rule is one root, one root picture. The tag is the form mark of a name, the way doing is the form mark of a verb, so beloved and David are now two marks, one word each, as the one-to-one rule wants. Rejected: a fresh picture per name with no root in it, which would draw David as a crown or a harp and throw away what the name means; leaving the names on the bare root picture, which drew David and beloved as the same word; and the tag in front, which would read as a name tag followed by a word rather than one name. Levite keeps the bare handshake, which is now its own mark, because a Levite is one of Levi and not the name. Names already drawn as two pictures - Jacob, Abraham, Israel, Joshua, Joseph - are already one word each and a group holds only two parts, so they take no tag. Solomon and Ephraim wait: their roots, peace and fruit, are still spelled in letters, and a group whose first half is a word stops reading as one word.";
   "ONE ROOT, ONE PICTURE, WHATEVER THE PART OF SPEECH - the human's rule, given 2026-10-04 with loved, love, beloved and loving as the example. The verb, the noun, the person who does it and the word that describes it are one root and wear one root picture, because grammar is never drawn and the part of speech is grammar. Two written refusals fell to it the same day, both of which had argued that a verb and its noun must not share: samach, rejoice, now joins simchah, joy, on the beaming face, and shaphat, judge and to judge, now joins mishpat, judgment, on the scales - the refusal had itself named the scales as the same family. The refusals that argue one word carries several MEANINGS - nose and anger, head and chief, book and letter - are a different argument and still stand.";
   "A NINTH BATCH, 2026-10-04, WITH NEW PICTURES. SAPHAR, COUNT, IS THE ABACUS, and the one who counts, the scribe, is the same number in Strong's, so he wears it too. SIMCHAH, JOY, IS THE BEAMING FACE. Rejected: the smile, which ashre, blessed, holds in this table. Samach, the verb rejoice, stays out under its written refusal in the wanted list: a feeling's face where the sentence has a thing being done reads as a noun. Sepher, book, was drawn as a closed book and withdrawn under its own written refusal: the word is also the letter and the deed, and a bound volume misdraws both. SHACHAT, RUIN OR CORRUPT, IS THE COLLISION: a thing smashed. It is not abad, perish, which still waits for a picture of its own. SABAB, TURN AROUND OR SURROUND, JOINS SABIB, AROUND, which grows from it. Not seated, and why: naar, boy or young man, would want the boy, which ben, son, holds; tsaphon, north, has no picture that is north rather than up; matteh and shebet, staff and tribe, are two words and want two pictures, and neither has an honest one yet.";
   "AN EIGHTH BATCH, 2026-10-04. CHEMAH, WRATH, IS THE ANGRY FACE the Greek orge holds: the word is heat, and its wordings are wrath and rage. Aph stays held back because it is the nose as well as the anger; chemah is never a face part, so the refusal written for aph does not reach it. NASAH, TEST, IS THE TEST TUBE, shared with the Greek peirazo: God tested Abraham, and Israel tested God at Massah, and the picture says only that a thing was put to the proof.";
@@ -831,7 +832,7 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "1732",
-          glyph: "two_hearts",
+          glyph: "two_hearts+proper_name",
         },
       ],
     },
@@ -841,7 +842,7 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "4872",
-          glyph: "fishing_pole",
+          glyph: "fishing_pole+proper_name",
         },
         {
           strong: "4871",
@@ -865,7 +866,7 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "3878",
-          glyph: "handshake",
+          glyph: "handshake+proper_name",
         },
         {
           strong: "3881",
@@ -1983,7 +1984,7 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "3063",
-          glyph: "hands_raised",
+          glyph: "hands_raised+proper_name",
         },
       ],
     },

@@ -1,3 +1,4 @@
+import { html_scroll_across_faded } from "./html_scroll_across_faded.mjs";
 import { app_code_grid_edge_line_pair_draw } from "./app_code_grid_edge_line_pair_draw.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
@@ -51,7 +52,9 @@ export function app_code_meetings_hours_draw(
   let gap = app_shared_spaced_tiny_gap();
   let columns = subtract(last_hour, first_hour);
   let rows = list_size(meetings);
-  let grid = html_div(parent);
+  ("The picture sits in a box that scrolls sideways, as the rectangle pictures do, asked by the human 2026-10-05 for a student who reads with this app's larger text, which widens a picture counted in em past a phone's screen. The grid is as wide as its squares and centred by its margins, so a picture wider than the box starts at its left edge; and it keeps 1em clear on each side, because the first hour sits half to the left of the squares, and a box that scrolls can never be scrolled to anything left of where it starts.");
+  let box = html_scroll_across_faded(parent);
+  let grid = html_div(box);
   let t = text_to(columns);
   let t2 = text_to(rows);
   html_style_assign(grid, {
@@ -63,8 +66,9 @@ export function app_code_meetings_hours_draw(
       ", 2.2em)",
     ]),
     gap,
-    "justify-content": "center",
-    margin: "0.5em 0",
+    width: "max-content",
+    margin: "0.5em auto",
+    padding: "0 1em",
   });
   let starts = list_map(meetings, list_first);
   let ends = list_map(meetings, list_second);
