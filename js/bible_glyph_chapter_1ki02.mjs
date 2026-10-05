@@ -333,7 +333,7 @@ export function bible_glyph_chapter_1ki02() {
           "me",
           "at",
           "the",
-          "$proper_name$Jordan,",
+          "$pointing_down+proper_name,",
           "I",
           "swore",
           "to",
