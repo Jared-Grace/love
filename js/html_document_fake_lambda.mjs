@@ -30,10 +30,22 @@ export function html_document_fake_lambda(lambda) {
     addEventListener: function listener_add() {},
     removeEventListener: function listener_remove() {},
   };
+  ("A watcher of element sizes is stood in for as well, one that never reports, because nothing here is ever laid out and so nothing ever changes size. Added 2026-10-05 when the code app's pictures were put in a box that scrolls sideways and watches its own size: every lesson with a picture stopped drawing here on the browser's absence, and drew perfectly on a phone.");
+  let observer_before = globalThis.ResizeObserver;
+  function observer_fake() {
+    let observer = {
+      observe: function size_watch() {},
+      unobserve: function size_unwatch() {},
+      disconnect: function size_stop() {},
+    };
+    return observer;
+  }
   globalThis.document = fake;
+  globalThis.ResizeObserver = observer_fake;
   try {
     lambda();
   } finally {
     globalThis.document = before;
+    globalThis.ResizeObserver = observer_before;
   }
 }
