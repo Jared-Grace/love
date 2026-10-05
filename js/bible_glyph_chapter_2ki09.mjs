@@ -1292,7 +1292,7 @@ export function bible_glyph_chapter_2ki09() {
           "of",
           "His",
           "$kneeling",
-          "$proper_name$Elijah",
+          "$heart_on_fire+i_am",
           "the",
           "$proper_name$Tishbite,",
           "$speech,",
