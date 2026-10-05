@@ -295,7 +295,7 @@ export function bible_glyph_chapter_jud01() {
           "the",
           "body",
           "of",
-          "$proper_name$Moses,",
+          "$fishing_pole+proper_name,",
           "did",
           "$no_entry",
           "presume",
