@@ -49,7 +49,7 @@ export function bible_glyph_chapter_num22() {
           "$eye",
           "all",
           "that",
-          "$proper_name$Israel",
+          "$wrestling+heart_on_fire",
           "had",
           "$hammer+doing",
           "to",
