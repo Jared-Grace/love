@@ -19,7 +19,7 @@ export function bible_glyph_chapter_psa051() {
           "A",
           "Psalm",
           "of",
-          "$proper_name$David,",
+          "$two_hearts+proper_name,",
           "when",
           "Nathan",
           "the",
