@@ -661,7 +661,7 @@ export function bible_glyph_chapter_deu14() {
           "$no_entry",
           "neglect",
           "the",
-          "$proper_name$Levite",
+          "$handshake",
           "within",
           "your",
           "$gate$s,",
