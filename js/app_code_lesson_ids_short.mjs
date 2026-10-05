@@ -289,8 +289,8 @@ export function app_code_lesson_ids_short() {
       text_frozen("name_meeting_ended"),
     app_code_lesson_statement_name_meetings_free:
       text_frozen("name_meetings_free"),
-    app_code_lesson_statement_name_rectangle_left: text_frozen(
-      "name_rectangle_left",
+    app_code_lesson_statement_name_rectangle_above: text_frozen(
+      "name_rectangle_above",
     ),
     app_code_lesson_statement_name_remainder: text_frozen("name_remainder"),
     app_code_lesson_statement_name_greater: text_frozen("name_greater"),

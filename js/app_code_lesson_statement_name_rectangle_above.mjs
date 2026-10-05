@@ -24,25 +24,26 @@ import { app_code_lesson_statement_name_meeting_ended } from "./app_code_lesson_
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
 export function app_code_lesson_statement_name_rectangle_above() {
   arguments_assert(arguments, 0);
-  ("whether one rectangle is left of another: let left = r1 <= l2; - picked by Claude 2026-10-05 when the human asked for the next lesson, named in Has one meeting ended by the time another starts as that check done across, which can follow it. In DSA it is one of the four checks that two boxes cannot overlap, the one Rectangle Overlap tests on each side.");
-  ("Has one meeting ended by the time another starts is the reminder, so the new idea is only that across a rectangle is a meeting: its right edge is where it ends and its left edge where it starts. Only l1, r1, l2 and r2 are names: the tops and bottoms do not decide it, and the picture shows them differing so the reader sees that, as 231 kept s1 and e2 in its program for the same reason; the four across edges already make the program as long as 231's.");
-  ("Named left, and not left_of, which would put the first underscore of the course in a name; worded is left of rather than is to the left of, the shortest that reads right. The check is one way round: a second rectangle wholly to the left answers false, and the writing says only that the first is left of the second.");
-  ("<= and not <, as in Has one meeting ended by the time another starts: a rectangle whose right edge is the line the other's left edge is on shares no square with it, and the writing shows that case.");
-  ("The answers are only true or false, so a question offers two buttons. Each screen asks two pairs that are true, one touching and one apart, and two that are false, one overlapping across and one with the second wholly on the left.");
-  ("Left edges are starts and wear the start colour, right edges are ends and wear the end colour, as in the rectangle lessons; words naming a rectangle wear the colour the picture fills it with, the first purple and the second orange. Squares both rectangles cover wear the overlap colour, as in Do two rectangles overlap.");
+  ("whether one rectangle is above another: let above = b1 <= t2; - picked by Claude 2026-10-05 when the human asked for the next lesson, named in Has one meeting ended by the time another starts as that check done down, which can follow it. In DSA it is one of the four checks that two boxes cannot overlap, the one Rectangle Overlap tests on each side.");
+  ("Above and not left of, asked by the human 2026-10-05 so the picture can be narrower: two rectangles one above the other stack down the screen, where two side by side need a grid wide enough for both, and a phone is narrow. The first draft was left of, let left = r1 <= l2; with a grid seven squares across; this one is five across. Not picked: below, let below = b2 <= t1; which is the same check with the rectangles swapped, and reads backwards beside the meetings lesson, where the first meeting is the one that ends first.");
+  ("Has one meeting ended by the time another starts is the reminder, so the new idea is only that down a rectangle is a meeting: its bottom edge is where it ends and its top edge where it starts. Only t1, b1, t2 and b2 are names: the lefts and rights do not decide it, and the picture shows them differing so the reader sees that, as 231 kept s1 and e2 in its program for the same reason; the four down edges already make the program as long as 231's.");
+  ("Named above, the one word for it; the check is one way round: a second rectangle wholly above answers false, and the writing says only that the first is above the second.");
+  ("<= and not <, as in Has one meeting ended by the time another starts: a rectangle whose bottom edge is the line the other's top edge is on shares no square with it, and the writing shows that case.");
+  ("The answers are only true or false, so a question offers two buttons. Each screen asks two pairs that are true, one touching and one apart, and two that are false, one overlapping down and one with the second wholly above.");
+  ("Top edges are starts and wear the start colour, bottom edges are ends and wear the end colour, as in the rectangle lessons; words naming a rectangle wear the colour the picture fills it with, the first purple and the second orange. Squares both rectangles cover wear the overlap colour, as in Do two rectangles overlap.");
   ("The writing is a first draft by Claude 2026-10-05.");
-  let names = ["l1", "r1", "l2", "r2"];
-  let l = list_get(names, 0);
-  let r = list_get(names, 1);
-  let l2 = list_get(names, 2);
-  let r2 = list_get(names, 3);
-  let left = "left";
+  let names = ["t1", "b1", "t2", "b2"];
+  let t = list_get(names, 0);
+  let b = list_get(names, 1);
+  let t2 = list_get(names, 2);
+  let b2 = list_get(names, 3);
+  let above = "above";
   let at_most = js_operator_less_than_equal_symbol();
-  let check_left = js_code_binary_spaced_nb(r, at_most, l2);
-  let line_left = js_code_let_statement(left, check_left);
+  let check_above = js_code_binary_spaced_nb(b, at_most, t2);
+  let line_above = js_code_let_statement(above, check_above);
   let step = {
-    middle: [line_left],
-    logged: [left],
+    middle: [line_above],
+    logged: [above],
   };
   let s = "s1";
   let e = "e1";
@@ -62,7 +63,7 @@ export function app_code_lesson_statement_name_rectangle_above() {
     [ended],
   );
   function values_get() {
-    "two pairs where the first rectangle is left of the second, one touching and one apart, and two where it is not, one overlapping across and one with the second wholly on the left, in a fresh order each screen";
+    "two pairs where the first rectangle is above the second, one touching and one apart, and two where it is not, one overlapping down and one with the second wholly above, in a fresh order each screen";
     let touching = list_shuffle_take(
       [
         [1, 3, 3, 5],
@@ -84,7 +85,7 @@ export function app_code_lesson_statement_name_rectangle_above() {
       ],
       1,
     );
-    let second_left = list_shuffle_take(
+    let second_above = list_shuffle_take(
       [
         [3, 5, 0, 2],
         [4, 6, 1, 3],
@@ -92,7 +93,7 @@ export function app_code_lesson_statement_name_rectangle_above() {
       1,
     );
     let trues = list_concat(touching, apart);
-    let falses = list_concat(overlapping, second_left);
+    let falses = list_concat(overlapping, second_above);
     let all = list_concat(trues, falses);
     list_shuffle(all);
     return all;
@@ -104,20 +105,20 @@ export function app_code_lesson_statement_name_rectangle_above() {
   let second_color = app_code_highlight_color_fifth();
   let plain = app_shared_color_code_background();
   function from(text) {
-    "a left edge, or a name holding one, as a chip in the start colour";
+    "a top edge, or a name holding one, as a chip in the start colour";
     let chip = app_code_explain_number_colored(text, start_color);
     return chip;
   }
   function till(text) {
-    "a right edge, or a name holding one, as a chip in the end colour";
+    "a bottom edge, or a name holding one, as a chip in the end colour";
     let chip = app_code_explain_number_colored(text, end_color);
     return chip;
   }
   let spaced_at_most = js_code_binary_spaced_nb("", at_most, "");
-  function check_worked(right, left2) {
-    "right <= left2 as one code chip, the first rectangle's right edge in the end colour and the second's left edge in the start colour";
+  function check_worked(bottom, top) {
+    "bottom <= top2 as one code chip, the first rectangle's bottom edge in the end colour and the second's top edge in the start colour";
     let chip = app_code_explain_code_colored_inline(
-      [right, spaced_at_most, left2],
+      [bottom, spaced_at_most, top],
       [end_color, plain, start_color],
     );
     return chip;
@@ -132,22 +133,22 @@ export function app_code_lesson_statement_name_rectangle_above() {
     let word = app_code_explain_word_colored(text, second_color);
     return word;
   }
-  function rectangles_draw(left2, right2) {
-    "the first rectangle, 1 to 3 across and 1 to 4 down, and the second from left2 to right2 across and 2 to 5 down, so their tops and bottoms differ; only the across numbers wear colours, since only they decide it";
-    let first_edges = [1, 3, 1, 4];
-    let second_edges = [left2, right2, 2, 5];
+  function rectangles_draw(top, bottom2) {
+    "the first rectangle, 1 to 3 across and 1 to 3 down, and the second 2 to 4 across and from top2 to bottom2 down, so their lefts and rights differ; only the down numbers wear colours, since only they decide it";
+    let first_edges = [1, 3, 1, 3];
+    let second_edges = [2, 4, top, bottom2];
     function draw(box) {
       app_code_rectangles_edges_colored_draw(
         box,
+        5,
         7,
-        6,
         first_edges,
         second_edges,
+        null,
         [
           [1, 3],
-          [left2, right2],
+          [top, bottom2],
         ],
-        null,
         null,
         overlap_color,
         null,
@@ -155,7 +156,7 @@ export function app_code_lesson_statement_name_rectangle_above() {
     }
     return draw;
   }
-  let right_arrow = app_code_arrow_inline_draw(0);
+  let down_arrow = app_code_arrow_inline_draw(90);
   let is_true = app_code_explain_number_colored("true", plain);
   let is_false = app_code_explain_number_colored("false", plain);
   let first_rectangle = one("first rectangle");
@@ -170,15 +171,15 @@ export function app_code_lesson_statement_name_rectangle_above() {
   let suppose_said = app_code_explain_said([
     "Suppose the ",
     first_rectangle,
-    " goes across ",
-    right_arrow,
+    " goes down ",
+    down_arrow,
     " from ",
     v,
     " to ",
     v2,
     ", and the ",
     second,
-    " goes across from ",
+    " goes down from ",
     v3,
     " to ",
     v4,
@@ -187,41 +188,41 @@ export function app_code_lesson_statement_name_rectangle_above() {
   let seen_said = app_code_explain_said([
     "We can see that the ",
     first_rectangle,
-    " is left of the ",
+    " is above the ",
     second,
   ]);
   let how_said = app_code_explain_said([
     "How can we tell the ",
     first_rectangle,
-    " is left of the ",
+    " is above the ",
     second,
     " using numbers?",
   ]);
   let like_said = [
-    'Across, it is like one "meeting" that has ended by the time another starts',
+    'Down, it is like one "meeting" that has ended by the time another starts',
   ];
   let compare_said = app_code_explain_said([
-    "We compare the right of the ",
+    "We compare the bottom of the ",
     first_rectangle,
-    " to the left of the ",
+    " to the top of the ",
     second,
     ":",
   ]);
   let v5 = check_worked("3", "4");
   let apart_worked = app_code_explain_said(["", v5, " which is ", is_true]);
   let only_said = app_code_explain_said([
-    "The left of the ",
+    "The top of the ",
     first,
-    ", the right of the ",
+    ", the bottom of the ",
     second,
-    ", and where they go down do not matter",
+    ", and where they go across do not matter",
   ]);
   let v6 = from("3");
   let v7 = till("5");
   let touching_suppose = app_code_explain_said([
     "But suppose the ",
     second_rectangle,
-    " goes across from ",
+    " goes down from ",
     v6,
     " to ",
     v7,
@@ -242,7 +243,7 @@ export function app_code_lesson_statement_name_rectangle_above() {
   let overlap_suppose = app_code_explain_said([
     "And suppose the ",
     second_rectangle,
-    " goes across from ",
+    " goes down from ",
     v10,
     " to ",
     v11,
@@ -260,23 +261,23 @@ export function app_code_lesson_statement_name_rectangle_above() {
   let overlap_so = app_code_explain_said([
     "So the ",
     first_rectangle,
-    " is not left of the ",
+    " is not above the ",
     second,
   ]);
-  let v13 = from(l);
-  let v14 = till(r);
-  let v15 = from(l2);
-  let v16 = till(r2);
+  let v13 = from(t);
+  let v14 = till(b);
+  let v15 = from(t2);
+  let v16 = till(b2);
   let names_said = app_code_explain_said([
     "Suppose the ",
     first_rectangle,
-    " goes across from ",
+    " goes down from ",
     v13,
     " to ",
     v14,
     ", and the ",
     second,
-    " goes across from ",
+    " goes down from ",
     v15,
     " to ",
     v16,
@@ -284,13 +285,13 @@ export function app_code_lesson_statement_name_rectangle_above() {
   let code_said = app_code_explain_said([
     "Here is code that checks whether the ",
     first_rectangle,
-    " is left of the ",
+    " is above the ",
     second,
     ":",
   ]);
   let lesson = app_code_lesson_statement_formula_answer_count({
-    words: "Is one rectangle left of another",
-    title_code: line_left,
+    words: "Is one rectangle above another",
+    title_code: line_above,
     names,
     values_get,
     example_values: [1, 3, 4, 6],
@@ -326,10 +327,10 @@ export function app_code_lesson_statement_name_rectangle_above() {
     ],
     decoys: null,
     example_pointers: [
-      [[l, "1"], start_color],
-      [[r, "3"], end_color],
-      [[l2, "4"], start_color],
-      [[r2, "6"], end_color],
+      [[t, "1"], start_color],
+      [[b, "3"], end_color],
+      [[t2, "4"], start_color],
+      [[b2, "6"], end_color],
     ],
     answer_count: 2,
   });
