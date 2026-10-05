@@ -99,7 +99,7 @@ export function bible_glyph_chapter_psa146() {
           "the",
           "$fire",
           "of",
-          "$proper_name$Jacob,",
+          "$hand+foot,",
           "whose",
           "hope",
           "is",
