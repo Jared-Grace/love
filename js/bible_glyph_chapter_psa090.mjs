@@ -16,7 +16,7 @@ export function bible_glyph_chapter_psa090() {
           "A",
           "$hands_praying+thing",
           "of",
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "the",
           "$man_beard",
           "of",
