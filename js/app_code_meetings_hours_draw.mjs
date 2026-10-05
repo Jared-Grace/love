@@ -1,3 +1,4 @@
+import { app_code_grid_edge_line_pair_draw } from "./app_code_grid_edge_line_pair_draw.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -125,8 +126,9 @@ export function app_code_meetings_hours_draw(
     let colored = not(b);
     let layer = colored ? "2" : "1";
     if (both) {
-      let pair = app_code_grid_edge_line_draw(
+      app_code_grid_edge_line_pair_draw(
         grid,
+        end_color,
         start_color,
         column_line,
         last,
@@ -134,10 +136,6 @@ export function app_code_meetings_hours_draw(
         true,
         "2",
       );
-      html_style_assign(pair, {
-        "border-left": text_combine("2px solid ", end_color),
-        "border-right": text_combine("2px solid ", start_color),
-      });
     } else {
       app_code_grid_edge_line_draw(
         grid,

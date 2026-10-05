@@ -1,3 +1,4 @@
+import { app_code_grid_edge_line_pair_draw } from "./app_code_grid_edge_line_pair_draw.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { html_span } from "./html_span.mjs";
@@ -219,7 +220,21 @@ export function app_code_rectangles_edges_colored_draw(
     let span = vertical ? rows : columns;
     let on_corner = equal(edge, corner_edge);
     let layer = on_corner ? "2" : "1";
-    let line = app_code_grid_edge_line_draw(
+    let both = edge_both(edge, shared, corner_edge);
+    if (both) {
+      app_code_grid_edge_line_pair_draw(
+        grid,
+        end_color,
+        start_color,
+        index,
+        last,
+        span,
+        vertical,
+        layer,
+      );
+      return;
+    }
+    app_code_grid_edge_line_draw(
       grid,
       color,
       index,
@@ -228,21 +243,6 @@ export function app_code_rectangles_edges_colored_draw(
       vertical,
       layer,
     );
-    let both = edge_both(edge, shared, corner_edge);
-    if (both) {
-      let before = text_combine("2px solid ", end_color);
-      let after = text_combine("2px solid ", start_color);
-      let sides = vertical
-        ? {
-            "border-left": before,
-            "border-right": after,
-          }
-        : {
-            "border-top": before,
-            "border-bottom": after,
-          };
-      html_style_assign(line, sides);
-    }
   }
   for (let edge of range(columns + 1)) {
     line_draw(edge, across, columns, true, corner_x);
