@@ -65,7 +65,7 @@ export function bible_glyph_chapter_deu31() {
           "$no_entry",
           "cross",
           "this",
-          "$proper_name$Jordan.",
+          "$pointing_down+proper_name.",
         ],
       },
       {
@@ -458,7 +458,7 @@ export function bible_glyph_chapter_deu31() {
           "are",
           "crossing",
           "the",
-          "$proper_name$Jordan",
+          "$pointing_down+proper_name",
           "to",
           "possess.",
         ],
