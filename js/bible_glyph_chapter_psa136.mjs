@@ -176,7 +176,7 @@ export function bible_glyph_chapter_psa136() {
         words: [
           "and",
           "brought",
-          "$proper_name$Israel",
+          "$wrestling+heart_on_fire",
           "$walking+tray_out",
           "from",
           "among",
@@ -225,7 +225,7 @@ export function bible_glyph_chapter_psa136() {
         words: [
           "and",
           "led",
-          "$proper_name$Israel",
+          "$wrestling+heart_on_fire",
           "through",
           "the",
           "midst.",
@@ -350,7 +350,7 @@ export function bible_glyph_chapter_psa136() {
           "to",
           "His",
           "$kneeling",
-          "$proper_name$Israel.",
+          "$wrestling+heart_on_fire.",
           "His",
           "$gift",
           "endures",
