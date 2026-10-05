@@ -143,7 +143,7 @@ export function bible_glyph_chapter_deu18() {
         words: [
           "For",
           "the",
-          "LORD",
+          "$i_am",
           "your",
           "$fire",
           "has",
@@ -159,7 +159,7 @@ export function bible_glyph_chapter_deu18() {
           "and",
           "minister",
           "in",
-          "His",
+          "$i_am",
           "$name_tag",
           "for",
           "all",
