@@ -13,7 +13,7 @@ export function bible_glyph_chapter_lev08() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 2,
@@ -328,7 +328,7 @@ export function bible_glyph_chapter_lev08() {
       {
         verse_number: 15,
         words: [
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "slaughtered",
           "it,",
           "$hand_receiving",
@@ -369,7 +369,7 @@ export function bible_glyph_chapter_lev08() {
       {
         verse_number: 16,
         words: [
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "also",
           "$hand_receiving",
           "all",
@@ -444,7 +444,7 @@ export function bible_glyph_chapter_lev08() {
       {
         verse_number: 19,
         words: [
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "slaughtered",
           "it",
           "and",
@@ -505,7 +505,7 @@ export function bible_glyph_chapter_lev08() {
           "$i_am",
           "had",
           "commanded",
-          "$proper_name$Moses.",
+          "$fishing_pole+proper_name.",
         ],
       },
       {
@@ -537,7 +537,7 @@ export function bible_glyph_chapter_lev08() {
       {
         verse_number: 23,
         words: [
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "slaughtered",
           "it,",
           "$hand_receiving",
@@ -572,7 +572,7 @@ export function bible_glyph_chapter_lev08() {
       {
         verse_number: 24,
         words: [
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "also",
           "presented",
           "$son",
@@ -774,7 +774,7 @@ export function bible_glyph_chapter_lev08() {
           "the",
           "portion",
           "of",
-          "$proper_name$Moses,",
+          "$fishing_pole+proper_name,",
           "as",
           "$i_am",
           "had",
@@ -985,7 +985,7 @@ export function bible_glyph_chapter_lev08() {
           "had",
           "commanded",
           "$hand",
-          "$proper_name$Moses.",
+          "$fishing_pole+proper_name.",
         ],
       },
     ],
