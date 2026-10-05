@@ -190,7 +190,7 @@ export function bible_glyph_chapter_zec14() {
           "$proper_name$Uzziah",
           "$king",
           "of",
-          "$proper_name$Judah.",
+          "$hands_raised+proper_name.",
           "Then",
           "$i_am",
           "my",
@@ -475,7 +475,7 @@ export function bible_glyph_chapter_zec14() {
       {
         verse_number: 14,
         words: [
-          "$proper_name$Judah",
+          "$hands_raised+proper_name",
           "will",
           "also",
           "fight",
@@ -720,7 +720,7 @@ export function bible_glyph_chapter_zec14() {
           "in",
           "$proper_name$Jerusalem",
           "and",
-          "$proper_name$Judah",
+          "$hands_raised+proper_name",
           "will",
           "be",
           "$sparkle+thing",
