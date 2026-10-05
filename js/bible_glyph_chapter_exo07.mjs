@@ -16,7 +16,7 @@ export function bible_glyph_chapter_exo07() {
           "$i_am",
           "$speech",
           "to",
-          "$proper_name$Moses,",
+          "$fishing_pole+proper_name,",
           "$eye,",
           "I",
           "have",
@@ -192,7 +192,7 @@ export function bible_glyph_chapter_exo07() {
       {
         verse_number: 7,
         words: [
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "was",
           "a",
           "$son",
@@ -219,7 +219,7 @@ export function bible_glyph_chapter_exo07() {
           "$i_am",
           "$speech",
           "to",
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "and",
           "$proper_name$Aaron,",
           "$speech:",
@@ -373,7 +373,7 @@ export function bible_glyph_chapter_exo07() {
           "$i_am",
           "$speech",
           "to",
-          "$proper_name$Moses,",
+          "$fishing_pole+proper_name,",
           "The",
           "$heart_organ",
           "of",
@@ -547,7 +547,7 @@ export function bible_glyph_chapter_exo07() {
           "$i_am",
           "$speech",
           "to",
-          "$proper_name$Moses,",
+          "$fishing_pole+proper_name,",
           "$speech",
           "to",
           "$proper_name$Aaron,",
@@ -604,7 +604,7 @@ export function bible_glyph_chapter_exo07() {
       {
         verse_number: 20,
         words: [
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "and",
           "$proper_name$Aaron",
           "$hammer+doing",
