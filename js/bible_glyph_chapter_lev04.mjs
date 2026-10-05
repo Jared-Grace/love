@@ -13,7 +13,7 @@ export function bible_glyph_chapter_lev04() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 2,
@@ -349,7 +349,7 @@ export function bible_glyph_chapter_lev04() {
           "whole",
           "congregation",
           "of",
-          "$proper_name$Israel",
+          "$wrestling+heart_on_fire",
           "strays",
           "unintentionally",
           "and",
