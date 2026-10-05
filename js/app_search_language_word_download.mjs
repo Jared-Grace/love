@@ -11,8 +11,8 @@ export async function app_search_language_word_download(language_code, word) {
   let right = ebible_language_en_code();
   let english = equal(language_code, right);
   if (english) {
-    let value = await bible_search_word_download(word);
-    return value;
+    let value_english = await bible_search_word_download(word);
+    return value_english;
   }
   let value = await bible_search_language_word_download(language_code, word);
   return value;
