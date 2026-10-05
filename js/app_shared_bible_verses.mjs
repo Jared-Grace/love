@@ -7,6 +7,7 @@ import { html_div_text_centered } from "./html_div_text_centered.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { property_exists } from "./property_exists.mjs";
+import { html_div_centered } from "./html_div_centered.mjs";
 import { app_shared_bible_home_chapter_button } from "./app_shared_bible_home_chapter_button.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
@@ -38,11 +39,12 @@ export async function app_shared_bible_verses(context) {
   ("the way into the whole chapter goes above the verse numbers rather than below them, so a long chapter does not bury it - it is for the reader who wants to skip picking a verse at all. only an app with a whole-chapter reader says so on the context, and the button itself draws nothing for the others");
   let chapter_reader_is = property_exists(context, "chapter_reader_is");
   let app_fn = property_get(context, "app_fn");
+  let chapter_row = html_div_centered(card);
   app_shared_bible_home_chapter_button(
     context,
     app_fn,
     chapter_reader_is,
-    card,
+    chapter_row,
   );
   let e = ebible_folder_english();
   let verses = await ebible_verses_browser(e, chapter_code);

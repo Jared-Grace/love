@@ -1,3 +1,4 @@
+import { html_scroll_across_faded } from "./html_scroll_across_faded.mjs";
 import { app_code_grid_edge_line_pair_draw } from "./app_code_grid_edge_line_pair_draw.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -55,7 +56,9 @@ export function app_code_rectangles_edges_colored_draw(
   let plain = app_shared_color_code_background();
   let border_color = app_shared_color_blue_dark();
   let gap = app_shared_spaced_tiny_gap();
-  let grid = html_div(parent);
+  ("The picture sits in a box that scrolls sideways, asked by the human 2026-10-05 for a student who reads with this app's larger text: every size here is in em, so that text widens the picture past a phone's screen. The grid is as wide as its squares, and centred by its margins, so a picture wider than the box starts at its left edge rather than spilling past both sides, where the left part could never be scrolled to.");
+  let box = html_scroll_across_faded(parent);
+  let grid = html_div(box);
   let t = text_to(columns);
   let t2 = text_to(rows);
   html_style_assign(grid, {
@@ -71,8 +74,8 @@ export function app_code_rectangles_edges_colored_draw(
       ", 2.2em)",
     ]),
     gap,
-    "justify-content": "center",
-    margin: "0.5em 0",
+    width: "max-content",
+    margin: "0.5em auto",
   });
   let no_corner = null_is(corner);
   let corner_x = no_corner ? null : list_first(corner);
