@@ -270,7 +270,7 @@ export function bible_glyph_chapter_deu07() {
           "kept",
           "the",
           "oath",
-          "He",
+          "$i_am",
           "swore",
           "to",
           "your",
