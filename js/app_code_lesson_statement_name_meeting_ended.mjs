@@ -203,13 +203,7 @@ export function app_code_lesson_statement_name_meeting_ended() {
     second_meeting,
     " starts using numbers?",
   ]);
-  let check_said = app_code_explain_said([
-    "We check that the ",
-    first_meeting,
-    " has ended by the time the ",
-    second_meeting,
-    " starts",
-  ]);
+  ('A line "We check that the first meeting has ended by the time the second meeting starts" stood between the question and the comparison until the human asked 2026-10-05 whether it should go: it only said the question again, and the one comparison after it already says what is checked.');
   let compare_said = app_code_explain_said([
     "We compare the end of the ",
     first_meeting,
@@ -321,7 +315,6 @@ export function app_code_lesson_statement_name_meeting_ended() {
       both_said,
       app_code_explain_container_next,
       how_said,
-      check_said,
       compare_said,
       apart_worked,
       only_said,
