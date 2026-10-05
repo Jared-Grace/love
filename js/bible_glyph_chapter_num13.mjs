@@ -687,7 +687,7 @@ export function bible_glyph_chapter_num13() {
           "and",
           "along",
           "the",
-          "$proper_name$Jordan.",
+          "$pointing_down+proper_name.",
         ],
       },
       {
