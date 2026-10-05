@@ -1,4 +1,3 @@
-import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
 import { bible_glyph_proper_name_numbers_cache } from "./bible_glyph_proper_name_numbers_cache.mjs";
@@ -9,13 +8,14 @@ import { list_add } from "./list_add.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { bible_glyph_gloss_placeholder_is } from "./bible_glyph_gloss_placeholder_is.mjs";
-import { not } from "./not.mjs";
+import { equal_not } from "./equal_not.mjs";
 import { bible_glyph_name_letters_or_null } from "./bible_glyph_name_letters_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_set } from "./property_set.mjs";
 import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
 import { add } from "./add.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
+import { not } from "./not.mjs";
 import { english_joining_words } from "./english_joining_words.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { bible_glyph_divine_letters } from "./bible_glyph_divine_letters.mjs";
@@ -24,6 +24,7 @@ export async function bible_glyph_chapter_names_in_letters(chapter_code) {
   "$plain chapter_code";
   "the code is a written chapter's own, spelled as the chapter list spells it. It names a chapter to read and nothing that runs.";
   "A NAME IS THE ONE WORD THIS BIBLE WILL NEVER DRAW, and until the name badge was bought a reader had no way of being told so. Undrawn English on the page means a word waiting for a picture, so Abraham in letters reads as somebody not having got round to him. Nobody ever will - drawing a name would be translating it - and the badge is how the page says the letters ARE the answer rather than a gap in it.";
+  "THE HUMAN NARROWED THAT ON 2026-10-05: COMMON NAMES MAY HAVE THEIR OWN SEQUENCE. So never now means never for the rare names only. A common name is seated in the table as its root picture with the name tag behind it - David the two hearts and the tag - and once it is seated this reading passes it by, because the third guard below skips any number with a picture. The badges written before a name was seated are drawn by the seated twin next door, which is the other half of this rule.";
   "IT MATCHES ON THE ENGLISH AND THAT IS WHY THE GUARDS ARE WHERE THEY ARE. The interlinear says which numbers are names and the authored verse is readable English, and nothing lines one up against the other word for word. So the join is made on the spelling: the name the interlinear's gloss carries has to stand in the authored verse, in letters, spelled the same. Four guards keep that honest, and the fourth was bought by a verse the first three all passed.";
   "THE FIRST GUARD IS THE CAPITAL, and it is doing almost all the work. Several Hebrew names are ordinary English words - On is a city in Genesis, No is a city in the prophets, Dan and Gad are sons - and matching on the letters alone would put a badge on every preposition that happened to share a name's spelling. An English Bible capitalises a name wherever it stands and an ordinary word only at the start of a sentence, so requiring the capital in the authored verse costs nothing real and removes that whole class.";
   "THE SECOND GUARD IS THE LITTLE-WORD LIST, kept because the capital does not reach the start of a sentence. A verse opening with On the third day would otherwise hand its first word a badge, and the name it was matched against would be a city nobody mentioned. The list is the same one the other drawing pass guards itself with, and it is the only place either of them looks.";
