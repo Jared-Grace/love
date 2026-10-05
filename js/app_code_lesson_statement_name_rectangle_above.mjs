@@ -32,6 +32,7 @@ export function app_code_lesson_statement_name_rectangle_above() {
   ("The answers are only true or false, so a question offers two buttons. Each screen asks two pairs that are true, one touching and one apart, and two that are false, one overlapping down and one with the second wholly above.");
   ("Top edges are starts and wear the start colour, bottom edges are ends and wear the end colour, as in the rectangle lessons; words naming a rectangle wear the colour the picture fills it with, the first purple and the second orange. Squares both rectangles cover wear the overlap colour, as in Do two rectangles overlap.");
   ("The writing is a first draft by Claude 2026-10-05.");
+  ("Edges that do not decide it are said not to affect the answer, worded by the human 2026-10-05, and not said not to matter: do not matter can be read as some things having no worth, and the same technical truth can be said without it.");
   let names = ["t1", "b1", "t2", "b2"];
   let t = list_get(names, 0);
   let b = list_get(names, 1);
@@ -217,7 +218,7 @@ export function app_code_lesson_statement_name_rectangle_above() {
     first,
     ", the bottom of the ",
     second,
-    ", and where they go across do not matter",
+    ", and where they go across do not affect the answer",
   ]);
   let v6 = from("3");
   let v7 = till("5");

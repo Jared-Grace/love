@@ -34,6 +34,7 @@ export function app_code_lesson_statement_name_meeting_ended() {
   ("The answers are only true or false, so a question offers two buttons. Each screen asks two pairs that are true, one touching and one apart, and two that are false, one overlapping and one with the second meeting wholly first.");
   ("Start hours wear the start colour and end hours the end colour, and words naming a meeting wear the colour the picture fills it with, the first purple and the second orange, as in Is one meeting inside another. Do two meetings overlap is the reminder, since this is the case where they do not.");
   ("The writing is a first draft by Claude 2026-10-04; the second screen was then worded by the human the same day.");
+  ("The times that do not decide it are said not to affect the answer, worded by the human 2026-10-05, and not said not to matter: do not matter can be read as some things having no worth, and the same technical truth can be said without it.");
   let names = ["s1", "e1", "s2", "e2"];
   let e = list_second(names);
   let s2 = list_get(names, 2);
@@ -218,7 +219,7 @@ export function app_code_lesson_statement_name_meeting_ended() {
     first,
     " and the end of the ",
     second,
-    " do not matter",
+    " do not affect the answer",
   ]);
   let v10 = from("10");
   let v11 = till("12");
