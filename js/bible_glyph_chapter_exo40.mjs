@@ -14,7 +14,7 @@ export function bible_glyph_chapter_exo40() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "the", "$i_am", "$mouth", "to", "$proper_name$Moses,"],
+        words: ["Then", "the", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,"],
       },
       {
         verse_number: 2,
@@ -353,7 +353,7 @@ export function bible_glyph_chapter_exo40() {
         verse_number: 16,
         words: [
           "So",
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "$hammer+doing",
           "everything",
           "just",
@@ -722,7 +722,7 @@ export function bible_glyph_chapter_exo40() {
           "and",
           "$tray_out",
           "it",
-          "$proper_name$Moses,",
+          "$fishing_pole+proper_name,",
           "$proper_name$Aaron,",
           "and",
           "his",
@@ -756,7 +756,7 @@ export function bible_glyph_chapter_exo40() {
           "$i_am",
           "had",
           "commanded",
-          "$proper_name$Moses.",
+          "$fishing_pole+proper_name.",
         ],
       },
       {
@@ -817,7 +817,7 @@ export function bible_glyph_chapter_exo40() {
       {
         verse_number: 35,
         words: [
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "was",
           "$no_entry",
           "able",
@@ -927,7 +927,7 @@ export function bible_glyph_chapter_exo40() {
           "the",
           "$house",
           "of",
-          "$proper_name$Israel",
+          "$wrestling+heart_on_fire",
           "through",
           "all",
           "their",
