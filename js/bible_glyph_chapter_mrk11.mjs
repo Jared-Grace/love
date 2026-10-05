@@ -260,7 +260,7 @@ export function bible_glyph_chapter_mrk11() {
         "of",
         "our",
         "$father",
-        "$proper_name$David!",
+        "$two_hearts+proper_name!",
         "$proper_name$Hosanna",
         "$tray_in",
         "the",
@@ -575,7 +575,7 @@ export function bible_glyph_chapter_mrk11() {
       verse_number: 21,
       words: [
         "$plus",
-        "$proper_name$Peter",
+        "$rock+proper_name",
         "remembered",
         "it,",
         "in",
