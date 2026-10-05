@@ -75,7 +75,7 @@ export function bible_glyph_chapter_psa121() {
           "the",
           "Protector",
           "of",
-          "$proper_name$Israel",
+          "$wrestling+heart_on_fire",
           "will",
           "$no_entry",
           "slumber",
