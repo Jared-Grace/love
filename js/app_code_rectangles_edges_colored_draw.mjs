@@ -1,3 +1,9 @@
+import { list_map } from "./list_map.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { html_span } from "./html_span.mjs";
+import { html_style_code_dark } from "./html_style_code_dark.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { app_code_grid_edge_line_draw } from "./app_code_grid_edge_line_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
@@ -38,7 +44,7 @@ export function app_code_rectangles_edges_colored_draw(
   ("corner is [x, y], the line on the left of a square and the line above it, drawn and numbered in the overlap colour, or null for none - asked by the human 2026-10-04 to show red lines at 2 and 2 under the square that starts there");
   ("overlap_color fills the squares both rectangles cover and the marked ones: the overlap colour when two rectangles cross, or the second rectangle's own colour when it sits inside the first, asked by the human 2026-10-04 for a rectangle inside a rectangle");
   ("a picture of two rectangles of squares, with the lines between squares numbered as a ruler is, so a rectangle's edges can be read off it: the numbers across the top count the lines from the left, the numbers down the left count them from the top. first and second are each [left, right, top, bottom] in those numbers, and the squares both cover are filled with the overlap colour");
-  ("across and down are each a list of [start, end] spans, whose numbers wear the start and end colours of the meetings lessons, or null to leave every number plain: one span for the shared part of two rectangles, or one for each rectangle when both edges of each are compared, asked by the human 2026-10-04 for a rectangle inside a rectangle, whose second rectangle's numbers were plain in the picture while its words coloured them. An edge that starts one span and ends another wears the start colour");
+  ("across and down are each a list of [start, end] spans, whose numbers wear the start and end colours of the meetings lessons, or null to leave every number plain: one span for the shared part of two rectangles, or one for each rectangle when both edges of each are compared, asked by the human 2026-10-04 for a rectangle inside a rectangle, whose second rectangle's numbers were plain in the picture while its words coloured them. An edge that ends one span and starts another, as two rectangles that touch share, wears both: its number is half the end colour and half the start colour, and its line is the two side by side, the end colour first, in the order a reader meets them - the first rectangle ends there before the second starts. Asked by the human 2026-10-05 for two rectangles that touch, where the edge wore only the start colour; the meetings picture stripes such a line instead, but stripes have no order, and the human asked for the order");
   ("marked is [left, right, top, bottom] of squares filled with the overlap colour whether or not both rectangles cover them, or null for none - asked by the human 2026-10-04 to show the square a wrong answer counts, between two rectangles that share none");
   ("The numbers sit on the lines and not on the squares, unlike the grid lessons' headings, because a meeting from 9 to 11 is two hours: the numbers are the edges, and left < right reads true exactly when a rectangle has a square between them.");
   let start_color = app_code_highlight_color();
@@ -91,7 +97,25 @@ export function app_code_rectangles_edges_colored_draw(
     }
     return plain;
   }
-  function label_draw(edge, shared, row_line, column_line, style, corner_edge) {
+  function edge_both(edge, shared, corner_edge) {
+    "whether an edge ends one span and starts another, and is not the corner, which wears the overlap colour alone";
+    if (equal(edge, corner_edge) || null_is(shared)) {
+      return false;
+    }
+    let starts = list_map(shared, list_first);
+    let ends = list_map(shared, list_second);
+    let both = list_includes(starts, edge) && list_includes(ends, edge);
+    return both;
+  }
+  function label_draw(
+    edge,
+    shared,
+    row_line,
+    column_line,
+    style,
+    corner_edge,
+    toward,
+  ) {
     "one line's number, placed in a grid cell and pushed onto the line beside it";
     let cell = html_div(grid);
     html_style_assign(cell, {
@@ -101,6 +125,23 @@ export function app_code_rectangles_edges_colored_draw(
     });
     let color = edge_color(edge, shared, corner_edge);
     let t3 = text_to(edge);
+    let both = edge_both(edge, shared, corner_edge);
+    if (both) {
+      let chip_both = html_span(cell);
+      html_style_code_dark(chip_both);
+      html_span_text(chip_both, t3);
+      let halves = text_combine_multiple([
+        "linear-gradient(to ",
+        toward,
+        ", ",
+        end_color,
+        " 50%, ",
+        start_color,
+        " 50%)",
+      ]);
+      html_style_set(chip_both, "background", halves);
+      return;
+    }
     let chip = app_code_explain_number_colored(t3, color);
     chip(cell);
   }
@@ -118,7 +159,7 @@ export function app_code_rectangles_edges_colored_draw(
           "align-self": "center",
           transform: "translateX(-50%)",
         };
-    label_draw(edge, across, 1, column_line, style, corner_x);
+    label_draw(edge, across, 1, column_line, style, corner_x, "right");
   }
   for (let edge of range(rows + 1)) {
     let last = equal(edge, rows);
@@ -134,7 +175,7 @@ export function app_code_rectangles_edges_colored_draw(
           "justify-self": "center",
           transform: "translateY(-50%)",
         };
-    label_draw(edge, down, row_line, 1, style, corner_y);
+    label_draw(edge, down, row_line, 1, style, corner_y, "bottom");
   }
   function inside(rectangle, row, column) {
     let [left, right, top, bottom] = rectangle;
@@ -178,7 +219,7 @@ export function app_code_rectangles_edges_colored_draw(
     let span = vertical ? rows : columns;
     let on_corner = equal(edge, corner_edge);
     let layer = on_corner ? "2" : "1";
-    app_code_grid_edge_line_draw(
+    let line = app_code_grid_edge_line_draw(
       grid,
       color,
       index,
@@ -187,6 +228,21 @@ export function app_code_rectangles_edges_colored_draw(
       vertical,
       layer,
     );
+    let both = edge_both(edge, shared, corner_edge);
+    if (both) {
+      let before = text_combine("2px solid ", end_color);
+      let after = text_combine("2px solid ", start_color);
+      let sides = vertical
+        ? {
+            "border-left": before,
+            "border-right": after,
+          }
+        : {
+            "border-top": before,
+            "border-bottom": after,
+          };
+      html_style_assign(line, sides);
+    }
   }
   for (let edge of range(columns + 1)) {
     line_draw(edge, across, columns, true, corner_x);
