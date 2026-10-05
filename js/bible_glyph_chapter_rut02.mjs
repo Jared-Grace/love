@@ -419,7 +419,7 @@ export function bible_glyph_chapter_rut02() {
           "the",
           "$fire",
           "of",
-          "$proper_name$Israel,",
+          "$wrestling+heart_on_fire,",
           "under",
           "whose",
           "wings",
