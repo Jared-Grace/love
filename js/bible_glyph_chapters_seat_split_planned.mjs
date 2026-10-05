@@ -82,7 +82,7 @@ export async function bible_glyph_chapters_seat_split_planned(glyphs) {
           return r3;
         }
         let spoken = words.filter(candidate_is).filter(lambda2).map(lambda3);
-        if (all.length === 0) {
+        if (equal(all.length, 0)) {
           continue;
         }
         let order = null;
