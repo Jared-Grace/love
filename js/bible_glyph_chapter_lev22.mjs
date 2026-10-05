@@ -12,7 +12,7 @@ export function bible_glyph_chapter_lev22() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 2,
@@ -504,7 +504,7 @@ export function bible_glyph_chapter_lev22() {
       },
       {
         verse_number: 17,
-        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 18,
@@ -520,7 +520,7 @@ export function bible_glyph_chapter_lev22() {
           "the",
           "$son",
           "of",
-          "$proper_name$Israel,",
+          "$wrestling+heart_on_fire,",
           "and",
           "$speech",
           "them:",
@@ -530,7 +530,7 @@ export function bible_glyph_chapter_lev22() {
           "the",
           "$house",
           "of",
-          "$proper_name$Israel,",
+          "$wrestling+heart_on_fire,",
           "or",
           "any",
           "$foreigner",
@@ -804,7 +804,7 @@ export function bible_glyph_chapter_lev22() {
       },
       {
         verse_number: 26,
-        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech"],
+        words: ["Then", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 27,
