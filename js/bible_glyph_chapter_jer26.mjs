@@ -486,7 +486,7 @@ export function bible_glyph_chapter_jer26() {
           "of",
           "the",
           "$thumbs_down",
-          "He",
+          "$i_am",
           "has",
           "$mouth",
           "against",
