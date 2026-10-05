@@ -22,7 +22,7 @@ import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_meeting_ended } from "./app_code_lesson_statement_name_meeting_ended.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
-export function app_code_lesson_statement_name_rectangle_left() {
+export function app_code_lesson_statement_name_rectangle_above() {
   arguments_assert(arguments, 0);
   ("whether one rectangle is left of another: let left = r1 <= l2; - picked by Claude 2026-10-05 when the human asked for the next lesson, named in Has one meeting ended by the time another starts as that check done across, which can follow it. In DSA it is one of the four checks that two boxes cannot overlap, the one Rectangle Overlap tests on each side.");
   ("Has one meeting ended by the time another starts is the reminder, so the new idea is only that across a rectangle is a meeting: its right edge is where it ends and its left edge where it starts. Only l1, r1, l2 and r2 are names: the tops and bottoms do not decide it, and the picture shows them differing so the reader sees that, as 231 kept s1 and e2 in its program for the same reason; the four across edges already make the program as long as 231's.");
