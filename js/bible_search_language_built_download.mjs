@@ -12,12 +12,12 @@ export async function bible_search_language_built_download(language_code) {
   let fn = bible_search_language_built_download;
   let path = bible_search_language_built_path(language_code);
   async function get() {
-    let built = await firebase_storage_download_json_decompress_project_jg(
+    let built_read = await firebase_storage_download_json_decompress_project_jg(
       fn,
       identity,
       path,
     );
-    return built;
+    return built_read;
   }
   let built = await catch_null_async(get);
   return built;
