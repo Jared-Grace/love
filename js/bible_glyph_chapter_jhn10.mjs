@@ -992,7 +992,7 @@ export function bible_glyph_chapter_jhn10() {
           "back",
           "across",
           "the",
-          "$proper_name$Jordan",
+          "$pointing_down+proper_name",
           "to",
           "the",
           "$place",
