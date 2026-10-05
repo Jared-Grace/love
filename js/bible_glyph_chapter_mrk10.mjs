@@ -26,7 +26,7 @@ export function bible_glyph_chapter_mrk10() {
         "$plus",
         "beyond",
         "the",
-        "$proper_name$Jordan.",
+        "$pointing_down+proper_name.",
         "Again",
         "a",
         "$crowd",
