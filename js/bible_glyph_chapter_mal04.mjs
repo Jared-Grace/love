@@ -162,7 +162,7 @@ export function bible_glyph_chapter_mal04() {
           "will",
           "$hand_sending",
           "you",
-          "$proper_name$Elijah",
+          "$heart_on_fire+i_am",
           "the",
           "$megaphone",
           "before",
