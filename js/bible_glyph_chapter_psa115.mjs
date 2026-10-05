@@ -240,7 +240,7 @@ export function bible_glyph_chapter_psa115() {
           "the",
           "$house",
           "of",
-          "$proper_name$Israel;",
+          "$wrestling+heart_on_fire;",
           "He",
           "will",
           "$speech+thumbs_up",
