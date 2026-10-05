@@ -12,8 +12,8 @@ export function app_search_language_words(language_code, query) {
   let right = ebible_language_en_code();
   let english = equal(language_code, right);
   if (english) {
-    let words = bible_search_words(query);
-    return words;
+    let words_english = bible_search_words(query);
+    return words_english;
   }
   let words = text_search_words(query);
   return words;
