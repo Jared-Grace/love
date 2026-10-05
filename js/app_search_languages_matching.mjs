@@ -1,3 +1,4 @@
+import { app_search_language_matching_or_null } from "./app_search_language_matching_or_null.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_search_language_searchable } from "./app_search_language_searchable.mjs";
@@ -7,9 +8,6 @@ import { not_equal } from "./not_equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { language_code_key } from "./language_code_key.mjs";
-import { app_search_language_words } from "./app_search_language_words.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { app_search_chapter_verses_matching } from "./app_search_chapter_verses_matching.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_concat_unique } from "./list_concat_unique.mjs";
@@ -36,18 +34,8 @@ export async function app_search_languages_matching(languages_chosen, query) {
     }
   }
   async function language_matching(language_code) {
-    let words = app_search_language_words(language_code, query);
-    let none = list_empty_is(words);
-    if (none) {
-      return null;
-    }
-    let r = await app_search_chapter_verses_matching(language_code, words);
-    let o = {
-      words,
-      words_missing: r.words_missing,
-      dictionary: r.dictionary,
-    };
-    return o;
+    let r2 = app_search_language_matching_or_null(language_code, query);
+    return r2;
   }
   let answers = await list_map_unordered_async(codes, language_matching);
   function lambda(a) {
