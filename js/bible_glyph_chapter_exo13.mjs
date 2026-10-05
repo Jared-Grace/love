@@ -13,7 +13,7 @@ export function bible_glyph_chapter_exo13() {
     verses: [
       {
         verse_number: 1,
-        words: ["$i_am", "$mouth", "to", "$proper_name$Moses,"],
+        words: ["$i_am", "$mouth", "to", "$fishing_pole+proper_name,"],
       },
       {
         verse_number: 2,
@@ -599,22 +599,22 @@ export function bible_glyph_chapter_exo13() {
       {
         verse_number: 19,
         words: [
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "$hand_receiving",
           "the",
           "bones",
           "of",
-          "$proper_name$Joseph",
+          "$i_am+plus",
           "with",
           "him,",
           "because",
-          "$proper_name$Joseph",
+          "$i_am+plus",
           "had",
           "made",
           "the",
           "$son",
           "of",
-          "$proper_name$Israel",
+          "$wrestling+heart_on_fire",
           "swear",
           "a",
           "solemn",
