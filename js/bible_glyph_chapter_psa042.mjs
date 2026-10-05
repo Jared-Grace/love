@@ -187,7 +187,7 @@ export function bible_glyph_chapter_psa042() {
           "$earth",
           "of",
           "the",
-          "$proper_name$Jordan,",
+          "$pointing_down+proper_name,",
           "and",
           "the",
           "peaks",
