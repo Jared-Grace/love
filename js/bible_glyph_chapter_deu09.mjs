@@ -25,7 +25,7 @@ export function bible_glyph_chapter_deu09() {
           "to",
           "cross",
           "the",
-          "$proper_name$Jordan",
+          "$pointing_down+proper_name",
           "to",
           "$footprints",
           "and",
