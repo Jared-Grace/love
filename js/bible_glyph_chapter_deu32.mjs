@@ -246,7 +246,7 @@ export function bible_glyph_chapter_deu32() {
           "is",
           "His",
           "$family,",
-          "$proper_name$Jacob",
+          "$hand+foot",
           "His",
           "allotted",
           "inheritance.",
@@ -1263,7 +1263,7 @@ export function bible_glyph_chapter_deu32() {
           "$speech",
           "to",
           "all",
-          "$proper_name$Israel,",
+          "$wrestling+heart_on_fire,",
         ],
       },
       {
@@ -1352,7 +1352,7 @@ export function bible_glyph_chapter_deu32() {
           "$i_am",
           "$mouth",
           "to",
-          "$proper_name$Moses,",
+          "$fishing_pole+proper_name,",
         ],
       },
       {
