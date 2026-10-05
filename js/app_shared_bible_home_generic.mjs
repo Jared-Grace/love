@@ -2,6 +2,7 @@ import { app_shared_bible_home_frame } from "./app_shared_bible_home_frame.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_bible_home_reference_shown_is } from "./app_shared_bible_home_reference_shown_is.mjs";
 import { app_shared_bible_chapter_set_default } from "./app_shared_bible_chapter_set_default.mjs";
+import { app_shared_bible_verse_set_default } from "./app_shared_bible_verse_set_default.mjs";
 import { app_shared_bible_home_generic_unknown_shown } from "./app_shared_bible_home_generic_unknown_shown.mjs";
 import { app_shared_bible_home_generic_bottom } from "./app_shared_bible_home_generic_bottom.mjs";
 import { app_shared_bible_home_generic_lambda$a } from "./app_shared_bible_home_generic_lambda$a.mjs";
@@ -24,6 +25,9 @@ export async function app_shared_bible_home_generic(
     return null;
   }
   if (await app_shared_bible_chapter_set_default(context)) {
+    return null;
+  }
+  if (await app_shared_bible_verse_set_default(context)) {
     return null;
   }
   let r3 = app_shared_bible_home_generic_unknown_shown(content);
