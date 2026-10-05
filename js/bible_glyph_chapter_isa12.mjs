@@ -60,7 +60,7 @@ export function bible_glyph_chapter_isa12() {
           "afraid.",
           "For",
           "the",
-          "LORD",
+          "$i_am",
           "$i_am",
           "is",
           "my",
