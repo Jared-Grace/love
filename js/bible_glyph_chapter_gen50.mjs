@@ -419,7 +419,7 @@ export function bible_glyph_chapter_gen50() {
         verse_number: 15,
         words: [
           "When",
-          "Joseph's",
+          "$i_am+plus's",
           "$brother",
           "$eye",
           "that",
@@ -655,7 +655,7 @@ export function bible_glyph_chapter_gen50() {
       {
         verse_number: 23,
         words: [
-          "He",
+          "$i_am+plus",
           "$eye",
           "$proper_name$Ephraim's",
           "$son",
