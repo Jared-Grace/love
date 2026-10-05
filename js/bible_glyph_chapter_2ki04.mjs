@@ -28,7 +28,7 @@ export function bible_glyph_chapter_2ki04() {
           "cried",
           "out",
           "to",
-          "$proper_name$Elisha,",
+          "$heart_on_fire+rescue,",
           "Your",
           "$kneeling",
           "my",
@@ -63,7 +63,7 @@ export function bible_glyph_chapter_2ki04() {
       {
         verse_number: 2,
         words: [
-          "$proper_name$Elisha",
+          "$heart_on_fire+rescue",
           "$speech,",
           "How",
           "can",
@@ -245,7 +245,7 @@ export function bible_glyph_chapter_2ki04() {
         words: [
           "One",
           "$sun",
-          "$proper_name$Elisha",
+          "$heart_on_fire+rescue",
           "went",
           "to",
           "$proper_name$Shunem,",
@@ -547,7 +547,7 @@ export function bible_glyph_chapter_2ki04() {
           "$son,",
           "just",
           "as",
-          "$proper_name$Elisha",
+          "$heart_on_fire+rescue",
           "had",
           "$mouth",
           "her.",
