@@ -497,7 +497,7 @@ export function bible_glyph_chapter_mrk12() {
       verse_number: 19,
       words: [
         "Teacher,",
-        "$proper_name$Moses",
+        "$fishing_pole+proper_name",
         "wrote",
         "for",
         "us",
@@ -688,7 +688,7 @@ export function bible_glyph_chapter_mrk12() {
         "the",
         "Book",
         "of",
-        "$proper_name$Moses,",
+        "$fishing_pole+proper_name,",
         "at",
         "the",
         "burning",
@@ -703,7 +703,7 @@ export function bible_glyph_chapter_mrk12() {
         "the",
         "$fire",
         "of",
-        "$proper_name$Abraham,",
+        "$father+map,",
         "$plus",
         "the",
         "$fire",
@@ -713,7 +713,7 @@ export function bible_glyph_chapter_mrk12() {
         "the",
         "$fire",
         "of",
-        "$proper_name$Jacob?",
+        "$hand+foot?",
       ],
     },
     {
@@ -974,13 +974,13 @@ export function bible_glyph_chapter_mrk12() {
         "the",
         "$son",
         "of",
-        "$proper_name$David?",
+        "$two_hearts+proper_name?",
       ],
     },
     {
       verse_number: 36,
       words: [
-        "$proper_name$David",
+        "$two_hearts+proper_name",
         "$pointing_back,",
         "$tray_in",
         "the",
@@ -1011,7 +1011,7 @@ export function bible_glyph_chapter_mrk12() {
     {
       verse_number: 37,
       words: [
-        "$proper_name$David",
+        "$two_hearts+proper_name",
         "$pointing_back",
         "$speech",
         "$pointing_back",
