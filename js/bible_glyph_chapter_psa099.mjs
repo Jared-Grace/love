@@ -86,7 +86,7 @@ export function bible_glyph_chapter_psa099() {
           "and",
           "$ruler+thing",
           "in",
-          "$proper_name$Jacob.",
+          "$hand+foot.",
         ],
       },
       {
@@ -110,7 +110,7 @@ export function bible_glyph_chapter_psa099() {
       {
         verse_number: 6,
         words: [
-          "$proper_name$Moses",
+          "$fishing_pole+proper_name",
           "and",
           "$proper_name$Aaron",
           "were",
