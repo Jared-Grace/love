@@ -20,7 +20,7 @@ export function bible_glyph_chapter_gen33() {
           "$eyes",
           "and",
           "$eye",
-          "$hair+proper_name",
+          "$proper_name$Esau",
           "$footprints",
           "with",
           "four",
@@ -97,7 +97,7 @@ export function bible_glyph_chapter_gen33() {
         verse_number: 4,
         words: [
           "But",
-          "$hair+proper_name",
+          "$proper_name$Esau",
           "ran",
           "to",
           "meet",
@@ -224,7 +224,7 @@ export function bible_glyph_chapter_gen33() {
       {
         verse_number: 9,
         words: [
-          "$hair+proper_name",
+          "$proper_name$Esau",
           "$speech,",
           "I",
           "have",
@@ -412,7 +412,7 @@ export function bible_glyph_chapter_gen33() {
       {
         verse_number: 15,
         words: [
-          "$hair+proper_name",
+          "$proper_name$Esau",
           "$speech,",
           "Then",
           "let",
@@ -447,7 +447,7 @@ export function bible_glyph_chapter_gen33() {
           "So",
           "that",
           "$sun",
-          "$hair+proper_name",
+          "$proper_name$Esau",
           "$turn_back",
           "on",
           "his",

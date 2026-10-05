@@ -1340,7 +1340,7 @@ export function bible_glyph_chapter_1ki01() {
           "was",
           "$mouth,",
           "suddenly",
-          "$i_am+hands_giving",
+          "$proper_name$Jonathan",
           "the",
           "$son",
           "of",
@@ -1370,7 +1370,7 @@ export function bible_glyph_chapter_1ki01() {
       {
         verse_number: 43,
         words: [
-          "$i_am+hands_giving",
+          "$proper_name$Jonathan",
           "$speech,",
           "Not",
           "at",

@@ -569,7 +569,7 @@ export function bible_glyph_chapter_gen25() {
           "they",
           "$name_tag",
           "him",
-          "$hair+proper_name.",
+          "$proper_name$Esau.",
         ],
       },
       {
@@ -612,7 +612,7 @@ export function bible_glyph_chapter_gen25() {
           "boys",
           "grew",
           "up.",
-          "$hair+proper_name",
+          "$proper_name$Esau",
           "became",
           "a",
           "$lightbulb",
@@ -640,7 +640,7 @@ export function bible_glyph_chapter_gen25() {
         words: [
           "$proper_name$Isaac",
           "$heart_red+doing",
-          "$hair+proper_name,",
+          "$proper_name$Esau,",
           "because",
           "the",
           "game",
@@ -664,7 +664,7 @@ export function bible_glyph_chapter_gen25() {
           "was",
           "cooking",
           "stew,",
-          "$hair+proper_name",
+          "$proper_name$Esau",
           "$footprints",
           "in",
           "$tray_out",
@@ -723,7 +723,7 @@ export function bible_glyph_chapter_gen25() {
       {
         verse_number: 32,
         words: [
-          "$hair+proper_name",
+          "$proper_name$Esau",
           "$speech,",
           "Look,",
           "I",
@@ -768,7 +768,7 @@ export function bible_glyph_chapter_gen25() {
           "Then",
           "Jacob",
           "$hands_giving",
-          "$hair+proper_name",
+          "$proper_name$Esau",
           "$bread",
           "and",
           "lentil",
