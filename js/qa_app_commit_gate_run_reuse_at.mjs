@@ -19,14 +19,14 @@ export async function qa_app_commit_gate_run_reuse_at(search, head) {
   if (found) {
     return found;
   }
-  ("★ ASKED AGAIN AT THE FRONT OF THE LINE. Judging waits its turn behind every other judging on the machine, and the one it waits behind has usually just judged a later commit - which very often answers this app too. Asked only before joining, that answer arrived and went unread, and a second quarter of an hour was spent judging what was already known: measured 2026-10-05, a deploy of one app sat thirty minutes behind a run and timed out still waiting. So the line is waited out first and the record read again at its front, the way the whole-repo run already does.");
-  ("The lock is held only for the reading, which is a few seconds of git. Judging takes the same lock further down and the lock is not taken twice by one holder, so a miss gives it back and joins the line again; that costs a place only when the run ahead did not answer this app, which is when judging was needed anyway.");
+  ("★ ASKED AGAIN AT THE FRONT OF THE LINE. Judging waits its turn behind every other judging on the machine, and the one it waits behind has usually just judged a later commit - which very often answers this app too. Asked only before joining, that answer arrived and went unread, and a second quarter of an hour was spent judging what was already known: measured 2026-10-05, a deploy of one app sat thirty minutes behind a run and timed out still waiting. So the line is waited out first and the record read again once through it, the way the whole-repo run already does.");
+  ("The line is only waited out here - the lock is given straight back and the record read outside it. Reading the record can itself judge a commit, and judging takes this same lock, which one holder cannot take twice; read while holding it, that one case would wait on itself for ever. A miss then joins the line again to judge, which costs a place only when the run ahead did not answer this app, and that is when judging was needed anyway.");
   async function lambda() {
-    let again = await qa_app_commit_gate_run_reuse_find(search, head, reach);
-    return again;
+    return null;
   }
   let who = qa_snapshot_owner();
-  let after = await lock_wait(fn_name("qa_gate_run_unlocked"), lambda, who);
+  await lock_wait(fn_name("qa_gate_run_unlocked"), lambda, who);
+  let after = await qa_app_commit_gate_run_reuse_find(search, head, reach);
   if (after) {
     return after;
   }
