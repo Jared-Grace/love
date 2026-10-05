@@ -823,7 +823,7 @@ export function bible_glyph_chapter_deu04() {
           "your",
           "$fire",
           "that",
-          "He",
+          "$i_am",
           "made",
           "with",
           "you,",
