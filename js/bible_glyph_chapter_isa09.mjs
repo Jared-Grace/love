@@ -52,7 +52,7 @@ export function bible_glyph_chapter_isa09() {
           "$sea,",
           "beyond",
           "the",
-          "$proper_name$Jordan,",
+          "$pointing_down+proper_name,",
           "$proper_name$Galilee",
           "of",
           "the",
