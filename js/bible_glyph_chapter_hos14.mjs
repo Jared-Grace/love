@@ -134,7 +134,7 @@ export function bible_glyph_chapter_hos14() {
           "the",
           "dew",
           "to",
-          "$proper_name$Israel;",
+          "$wrestling+heart_on_fire;",
           "he",
           "will",
           "blossom",
