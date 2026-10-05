@@ -78,7 +78,7 @@ export function bible_glyph_chapter_psa022() {
           "the",
           "praises",
           "of",
-          "$proper_name$Israel.",
+          "$wrestling+heart_on_fire.",
         ],
       },
       {
@@ -491,7 +491,7 @@ export function bible_glyph_chapter_psa022() {
           "All",
           "descendants",
           "of",
-          "$proper_name$Jacob,",
+          "$hand+foot,",
           "honor",
           "Him!",
           "Revere",
@@ -499,7 +499,7 @@ export function bible_glyph_chapter_psa022() {
           "all",
           "offspring",
           "of",
-          "$proper_name$Israel!",
+          "$wrestling+heart_on_fire!",
         ],
       },
       {
