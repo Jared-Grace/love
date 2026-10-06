@@ -549,7 +549,7 @@ export function bible_glyph_chapter_isa07() {
           "streams",
           "of",
           "the",
-          "$proper_name$Nile,",
+          "$clamp+proper_name,",
           "and",
           "to",
           "the",
