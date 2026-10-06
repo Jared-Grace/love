@@ -25,7 +25,7 @@ export function bible_glyph_chapter_1ki03() {
           "$house+proper_name",
           "$king",
           "of",
-          "$proper_name$Egypt",
+          "$clamp+proper_name",
           "by",
           "$hand_receiving",
           "his",
