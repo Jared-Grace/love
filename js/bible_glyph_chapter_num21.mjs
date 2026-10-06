@@ -50,7 +50,7 @@ export function bible_glyph_chapter_num21() {
         verse_number: 2,
         words: [
           "So",
-          "Israel",
+          "$wrestling+heart_on_fire",
           "made",
           "a",
           "vow",
@@ -284,7 +284,7 @@ export function bible_glyph_chapter_num21() {
         verse_number: 9,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$hammer+doing",
           "a",
           "bronze",
@@ -582,7 +582,7 @@ export function bible_glyph_chapter_num21() {
         verse_number: 21,
         words: [
           "Then",
-          "Israel",
+          "$wrestling+heart_on_fire",
           "$hand_sending",
           "$angel",
           "to",
@@ -683,7 +683,7 @@ export function bible_glyph_chapter_num21() {
         verse_number: 24,
         words: [
           "And",
-          "Israel",
+          "$wrestling+heart_on_fire",
           "put",
           "him",
           "to",
@@ -897,7 +897,7 @@ export function bible_glyph_chapter_num21() {
         verse_number: 31,
         words: [
           "So",
-          "Israel",
+          "$wrestling+heart_on_fire",
           "$person+house",
           "in",
           "the",
@@ -911,7 +911,7 @@ export function bible_glyph_chapter_num21() {
         verse_number: 32,
         words: [
           "After",
-          "Moses",
+          "$fishing_pole+proper_name",
           "had",
           "sent",
           "spies",
