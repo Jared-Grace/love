@@ -58,7 +58,7 @@ export function bible_glyph_chapter_lev08() {
         verse_number: 4,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$hammer+doing",
           "as",
           "$i_am",
@@ -81,7 +81,7 @@ export function bible_glyph_chapter_lev08() {
         verse_number: 5,
         words: [
           "And",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech",
           "to",
           "them,",
@@ -99,7 +99,7 @@ export function bible_glyph_chapter_lev08() {
         verse_number: 6,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "presented",
           "$proper_name$Aaron",
           "and",
@@ -204,7 +204,7 @@ export function bible_glyph_chapter_lev08() {
         verse_number: 10,
         words: [
           "Next,",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$hand_receiving",
           "the",
           "anointing",
@@ -276,7 +276,7 @@ export function bible_glyph_chapter_lev08() {
         verse_number: 13,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "presented",
           "$son",
           "of",
@@ -722,7 +722,7 @@ export function bible_glyph_chapter_lev08() {
         verse_number: 28,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$hand_receiving",
           "them",
           "from",
@@ -786,7 +786,7 @@ export function bible_glyph_chapter_lev08() {
         verse_number: 30,
         words: [
           "Next,",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$hand_receiving",
           "$tray_out",
           "the",
@@ -830,7 +830,7 @@ export function bible_glyph_chapter_lev08() {
         verse_number: 31,
         words: [
           "And",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech",
           "to",
           "$proper_name$Aaron",
