@@ -288,7 +288,7 @@ export function bible_glyph_chapter_2sa06() {
         verse_number: 10,
         words: [
           "So",
-          "he",
+          "$two_hearts+proper_name",
           "was",
           "unwilling",
           "to",

@@ -677,7 +677,7 @@ export function bible_glyph_chapter_gen50() {
           "brought",
           "up",
           "on",
-          "$proper_name$Joseph's",
+          "$i_am+plus's",
           "knees.",
         ],
       },

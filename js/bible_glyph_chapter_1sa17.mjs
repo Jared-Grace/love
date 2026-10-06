@@ -824,7 +824,7 @@ export function bible_glyph_chapter_1sa17() {
         words: [
           "Now",
           "when",
-          "$two_hearts+proper_name's",
+          "David's",
           "oldest",
           "$brother",
           "$proper_name$Eliab",

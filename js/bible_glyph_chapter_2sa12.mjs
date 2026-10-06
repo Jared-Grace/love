@@ -653,7 +653,7 @@ export function bible_glyph_chapter_2sa12() {
           "was",
           "$skull+doing.",
           "So",
-          "he",
+          "$two_hearts+proper_name",
           "$speech",
           "his",
           "$kneeling,",

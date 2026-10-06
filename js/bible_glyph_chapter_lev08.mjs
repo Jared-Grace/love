@@ -751,7 +751,7 @@ export function bible_glyph_chapter_lev08() {
       {
         verse_number: 29,
         words: [
-          "He",
+          "$fishing_pole+proper_name",
           "also",
           "$hand_receiving",
           "the",

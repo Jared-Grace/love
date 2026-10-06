@@ -646,7 +646,7 @@ export function bible_glyph_chapter_exo04() {
           "to",
           "$proper_name$Egypt.",
           "And",
-          "he",
+          "$fishing_pole+proper_name",
           "$hand_receiving",
           "the",
           "staff",
