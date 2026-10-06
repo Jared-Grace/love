@@ -728,7 +728,7 @@ export function bible_glyph_chapter_deu30() {
           "-",
           "to",
           "$father+map,",
-          "$proper_name$Isaac,",
+          "$laughing+proper_name,",
           "and",
           "$hand+foot.",
         ],
