@@ -1334,7 +1334,7 @@ export function bible_glyph_chapter_lev23() {
         verse_number: 44,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$mouth",
           "the",
           "appointed",
