@@ -148,7 +148,7 @@ export function bible_glyph_chapter_jos03() {
         verse_number: 5,
         words: [
           "Then",
-          "Joshua",
+          "$i_am+rescue",
           "$speech",
           "to",
           "the",
@@ -278,7 +278,7 @@ export function bible_glyph_chapter_jos03() {
         verse_number: 9,
         words: [
           "So",
-          "Joshua",
+          "$i_am+rescue",
           "$speech",
           "to",
           "the",
