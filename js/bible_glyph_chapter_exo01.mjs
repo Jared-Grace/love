@@ -217,7 +217,7 @@ export function bible_glyph_chapter_exo01() {
           "store",
           "$city",
           "for",
-          "$proper_name$Pharaoh.",
+          "$house+proper_name.",
         ],
       },
       {
@@ -397,7 +397,7 @@ export function bible_glyph_chapter_exo01() {
           "The",
           "midwives",
           "$speech",
-          "$proper_name$Pharaoh,",
+          "$house+proper_name,",
           "The",
           "Hebrew",
           "women",
