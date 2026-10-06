@@ -297,7 +297,7 @@ export function bible_glyph_chapter_num13() {
         verse_number: 17,
         words: [
           "When",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$hand_sending",
           "them",
           "to",
