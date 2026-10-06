@@ -114,7 +114,7 @@ export function bible_glyph_chapter_jos24() {
           "I",
           "$hands_giving",
           "him",
-          "$proper_name$Isaac,",
+          "$laughing+proper_name,",
         ],
       },
       {
@@ -122,7 +122,7 @@ export function bible_glyph_chapter_jos24() {
         words: [
           "and",
           "to",
-          "$proper_name$Isaac",
+          "$laughing+proper_name",
           "I",
           "$hands_giving",
           "$hand+foot",
