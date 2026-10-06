@@ -372,7 +372,7 @@ export function bible_glyph_chapter_deu33() {
         verse_number: 13,
         words: [
           "Concerning",
-          "Joseph",
+          "$i_am+plus",
           "he",
           "$speech,",
           "May",
@@ -824,7 +824,7 @@ export function bible_glyph_chapter_deu33() {
         verse_number: 28,
         words: [
           "So",
-          "Israel",
+          "$wrestling+heart_on_fire",
           "dwells",
           "securely.",
           "The",
@@ -857,7 +857,7 @@ export function bible_glyph_chapter_deu33() {
           "are",
           "you,",
           "O",
-          "Israel.",
+          "$wrestling+heart_on_fire.",
           "Who",
           "is",
           "like",
