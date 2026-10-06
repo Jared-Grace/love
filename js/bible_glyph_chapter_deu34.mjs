@@ -16,7 +16,7 @@ export function bible_glyph_chapter_deu34() {
         verse_number: 1,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "went",
           "up",
           "from",
@@ -154,7 +154,7 @@ export function bible_glyph_chapter_deu34() {
         verse_number: 5,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "the",
           "$kneeling",
           "of",
