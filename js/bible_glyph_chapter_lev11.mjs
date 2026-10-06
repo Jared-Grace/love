@@ -1119,7 +1119,7 @@ export function bible_glyph_chapter_lev11() {
           "the",
           "$earth",
           "of",
-          "$proper_name$Egypt",
+          "$clamp+proper_name",
           "so",
           "that",
           "I",
