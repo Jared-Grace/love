@@ -224,7 +224,7 @@ export function bible_glyph_chapter_1sa08() {
           "up",
           "out",
           "of",
-          "$proper_name$Egypt",
+          "$clamp+proper_name",
           "until",
           "this",
           "$sun,",
