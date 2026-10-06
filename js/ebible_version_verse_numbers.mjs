@@ -1,7 +1,7 @@
+import { bible_chapters_each_verses } from "./bible_chapters_each_verses.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { property_set } from "./property_set.mjs";
-import { ebible_chapters_each_verses_check_with } from "./ebible_chapters_each_verses_check_with.mjs";
 export async function ebible_version_verse_numbers(bible_folder) {
   "$plain bible_folder";
   "Every verse number one bible carries, kept under the chapter it belongs to.";
@@ -12,6 +12,6 @@ export async function ebible_version_verse_numbers(bible_folder) {
     let numbers = list_map_property(verses, property_name);
     property_set(dictionary, chapter_code, numbers);
   }
-  await ebible_chapters_each_verses_check_with(bible_folder, lambda);
+  await bible_chapters_each_verses(bible_folder, lambda);
   return dictionary;
 }

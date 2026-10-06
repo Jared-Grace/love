@@ -22,6 +22,7 @@ import { app_shared_buttons_mark_current } from "./app_shared_buttons_mark_curre
 import { app_shared_screen_set_button_back_to } from "./app_shared_screen_set_button_back_to.mjs";
 import { app_shared_bible_chapters } from "./app_shared_bible_chapters.mjs";
 export async function app_shared_bible_verses(context) {
+  "Draws the verse picker for a chapter the reader has already chosen: the chapter's name above, a way into the whole chapter for the apps that have a chapter reader, a button for every verse number in that chapter with the current one marked, and a back button to the book's chapter list.";
   let n = await app_shared_bible_chapter_set_default(context);
   if (n) {
     return;
