@@ -139,7 +139,7 @@ export function bible_glyph_chapter_psa130() {
         verse_number: 7,
         words: [
           "O",
-          "Israel,",
+          "$wrestling+heart_on_fire,",
           "put",
           "your",
           "hope",
