@@ -147,7 +147,7 @@ export function bible_glyph_chapter_num17() {
         verse_number: 6,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$mouth",
           "to",
           "the",
@@ -188,7 +188,7 @@ export function bible_glyph_chapter_num17() {
         verse_number: 7,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "placed",
           "the",
           "staffs",
@@ -246,7 +246,7 @@ export function bible_glyph_chapter_num17() {
         verse_number: 9,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "brought",
           "out",
           "all",
@@ -325,7 +325,7 @@ export function bible_glyph_chapter_num17() {
         verse_number: 11,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$hammer+doing",
           "as",
           "$i_am",
