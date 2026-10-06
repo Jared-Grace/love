@@ -138,7 +138,7 @@ export function bible_glyph_chapter_num14() {
         verse_number: 5,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "and",
           "$proper_name$Aaron",
           "fell",
@@ -395,7 +395,7 @@ export function bible_glyph_chapter_num14() {
         verse_number: 13,
         words: [
           "But",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech",
           "to",
           "the",
@@ -1205,7 +1205,7 @@ export function bible_glyph_chapter_num14() {
         words: [
           "And",
           "when",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$mouth",
           "these",
           "$speech",
@@ -1263,7 +1263,7 @@ export function bible_glyph_chapter_num14() {
         verse_number: 41,
         words: [
           "But",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech,",
           "Why",
           "are",
