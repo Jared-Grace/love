@@ -755,7 +755,7 @@ export function bible_glyph_chapter_exo15() {
           "brought",
           "on",
           "the",
-          "$proper_name$Egyptians.",
+          "$clamp+proper_name.",
           "For",
           "I",
           "am",
