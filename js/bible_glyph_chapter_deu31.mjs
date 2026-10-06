@@ -14,7 +14,7 @@ export function bible_glyph_chapter_deu31() {
         verse_number: 1,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$walking",
           "and",
           "$mouth",
@@ -204,7 +204,7 @@ export function bible_glyph_chapter_deu31() {
         verse_number: 7,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "called",
           "$i_am+rescue",
           "and",
@@ -286,7 +286,7 @@ export function bible_glyph_chapter_deu31() {
         verse_number: 9,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "wrote",
           "down",
           "this",
@@ -323,7 +323,7 @@ export function bible_glyph_chapter_deu31() {
         verse_number: 10,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "commanded",
           "them",
           "and",
@@ -894,7 +894,7 @@ export function bible_glyph_chapter_deu31() {
         verse_number: 24,
         words: [
           "When",
-          "Moses",
+          "$fishing_pole+proper_name",
           "had",
           "finished",
           "writing",
@@ -1108,7 +1108,7 @@ export function bible_glyph_chapter_deu31() {
         verse_number: 30,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$mouth",
           "in",
           "the",
