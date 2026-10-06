@@ -14,7 +14,7 @@ export function bible_glyph_chapter_gen25() {
       {
         verse_number: 1,
         words: [
-          "Abraham",
+          "$father+map",
           "$hand_receiving",
           "another",
           "$woman,",
@@ -230,7 +230,7 @@ export function bible_glyph_chapter_gen25() {
           "the",
           "$skull",
           "of",
-          "Abraham,",
+          "$father+map,",
           "$fire",
           "$speech+thumbs_up",
           "$proper_name$Isaac",
@@ -445,7 +445,7 @@ export function bible_glyph_chapter_gen25() {
       {
         verse_number: 21,
         words: [
-          "Isaac",
+          "$laughing+proper_name",
           "prayed",
           "to",
           "$i_am",
@@ -594,7 +594,7 @@ export function bible_glyph_chapter_gen25() {
           "was",
           "$name_tag",
           "$hand+foot.",
-          "Isaac",
+          "$laughing+proper_name",
           "was",
           "sixty",
           "$son",
@@ -660,7 +660,7 @@ export function bible_glyph_chapter_gen25() {
           "One",
           "day",
           "while",
-          "Jacob",
+          "$hand+foot",
           "was",
           "cooking",
           "stew,",
@@ -766,7 +766,7 @@ export function bible_glyph_chapter_gen25() {
         verse_number: 34,
         words: [
           "Then",
-          "Jacob",
+          "$hand+foot",
           "$hands_giving",
           "$proper_name$Esau",
           "$bread",
