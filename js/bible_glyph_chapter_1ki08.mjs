@@ -703,7 +703,7 @@ export function bible_glyph_chapter_1ki08() {
         verse_number: 22,
         words: [
           "Then",
-          "Solomon",
+          "$peace",
           "stood",
           "before",
           "the",
@@ -2165,7 +2165,7 @@ export function bible_glyph_chapter_1ki08() {
         verse_number: 63,
         words: [
           "And",
-          "Solomon",
+          "$peace",
           "offered",
           "as",
           "peace",
