@@ -100,7 +100,7 @@ export function bible_glyph_chapter_num09() {
         verse_number: 4,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$mouth",
           "to",
           "the",
