@@ -131,7 +131,7 @@ export function bible_glyph_chapter_num16() {
       },
       {
         verse_number: 4,
-        words: ["When", "Moses", "$ear", "this,", "he", "fell", "facedown."],
+        words: ["When", "$fishing_pole+proper_name", "$ear", "this,", "he", "fell", "facedown."],
       },
       {
         verse_number: 5,
@@ -368,7 +368,7 @@ export function bible_glyph_chapter_num16() {
         verse_number: 12,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$hand_sending",
           "$proper_name$Dathan",
           "and",
@@ -471,7 +471,7 @@ export function bible_glyph_chapter_num16() {
         verse_number: 15,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "became",
           "very",
           "angry",
@@ -509,7 +509,7 @@ export function bible_glyph_chapter_num16() {
         verse_number: 16,
         words: [
           "And",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech",
           "to",
           "$proper_name$Korah,",
@@ -737,7 +737,7 @@ export function bible_glyph_chapter_num16() {
         verse_number: 25,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "got",
           "up",
           "and",
@@ -840,7 +840,7 @@ export function bible_glyph_chapter_num16() {
         verse_number: 28,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech,",
           "This",
           "is",
@@ -1322,7 +1322,7 @@ export function bible_glyph_chapter_num16() {
         verse_number: 43,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "and",
           "$proper_name$Aaron",
           "$footprints",
