@@ -14,7 +14,7 @@ export function bible_glyph_chapter_gen33() {
       {
         verse_number: 1,
         words: [
-          "Jacob",
+          "$hand+foot",
           "lifted",
           "his",
           "$eyes",
@@ -240,7 +240,7 @@ export function bible_glyph_chapter_gen33() {
       {
         verse_number: 10,
         words: [
-          "Jacob",
+          "$hand+foot",
           "$speech,",
           "$no_entry,",
           "please.",
@@ -490,7 +490,7 @@ export function bible_glyph_chapter_gen33() {
       {
         verse_number: 18,
         words: [
-          "Jacob",
+          "$hand+foot",
           "$footprints",
           "safely",
           "to",
