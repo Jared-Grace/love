@@ -112,7 +112,7 @@ export function bible_glyph_chapter_exo34() {
         verse_number: 4,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "chiseled",
           "out",
           "two",
@@ -1054,7 +1054,7 @@ export function bible_glyph_chapter_exo34() {
         verse_number: 33,
         words: [
           "When",
-          "Moses",
+          "$fishing_pole+proper_name",
           "had",
           "finished",
           "$mouth",
@@ -1074,7 +1074,7 @@ export function bible_glyph_chapter_exo34() {
         words: [
           "But",
           "whenever",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$footprints",
           "before",
           "the",
