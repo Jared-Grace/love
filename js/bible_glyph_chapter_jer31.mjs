@@ -1064,7 +1064,7 @@ export function bible_glyph_chapter_jer31() {
           "the",
           "$earth",
           "of",
-          "$proper_name$Egypt",
+          "$clamp+proper_name",
           "-",
           "a",
           "$covenant",
