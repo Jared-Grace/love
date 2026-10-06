@@ -69,7 +69,7 @@ export function bible_glyph_chapter_lev10() {
         verse_number: 3,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech",
           "to",
           "$proper_name$Aaron,",
@@ -162,7 +162,7 @@ export function bible_glyph_chapter_lev10() {
         verse_number: 6,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech",
           "to",
           "$proper_name$Aaron",
@@ -317,7 +317,7 @@ export function bible_glyph_chapter_lev10() {
         verse_number: 12,
         words: [
           "And",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$mouth",
           "to",
           "$proper_name$Aaron",
@@ -611,7 +611,7 @@ export function bible_glyph_chapter_lev10() {
         words: [
           "And",
           "when",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$ear",
           "this,",
           "he",
