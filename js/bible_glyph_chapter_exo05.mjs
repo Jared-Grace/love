@@ -55,7 +55,7 @@ export function bible_glyph_chapter_exo05() {
         verse_number: 2,
         words: [
           "But",
-          "Pharaoh",
+          "$house+proper_name",
           "$speech,",
           "Who",
           "is",
@@ -417,7 +417,7 @@ export function bible_glyph_chapter_exo05() {
           "the",
           "taskmasters",
           "of",
-          "Pharaoh",
+          "$house+proper_name",
           "had",
           "set",
           "over",
@@ -662,7 +662,7 @@ export function bible_glyph_chapter_exo05() {
         verse_number: 22,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$turn_back",
           "to",
           "$i_am",
