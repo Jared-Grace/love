@@ -294,7 +294,7 @@ export function bible_glyph_chapter_num11() {
         verse_number: 11,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech",
           "to",
           "the",
@@ -677,7 +677,7 @@ export function bible_glyph_chapter_num11() {
         verse_number: 21,
         words: [
           "But",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech,",
           "Here",
           "I",
@@ -771,7 +771,7 @@ export function bible_glyph_chapter_num11() {
         verse_number: 24,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "went",
           "out",
           "and",
@@ -947,7 +947,7 @@ export function bible_glyph_chapter_num11() {
         verse_number: 29,
         words: [
           "But",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech,",
           "Are",
           "you",
@@ -980,7 +980,7 @@ export function bible_glyph_chapter_num11() {
         verse_number: 30,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "returned",
           "to",
           "the",
