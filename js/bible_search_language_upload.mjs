@@ -1,3 +1,8 @@
+import { ebible_language_arabic } from "./ebible_language_arabic.mjs";
+import { property_get } from "./property_get.mjs";
+import { bible_search_words_lookup_forms_add } from "./bible_search_words_lookup_forms_add.mjs";
+import { text_arabic_prefixes_stripped } from "./text_arabic_prefixes_stripped.mjs";
+import { equal } from "./equal.mjs";
 import { bible_search_language_built_upload } from "./bible_search_language_built_upload.mjs";
 import { ebible_language_bible_folders_commercial } from "./ebible_language_bible_folders_commercial.mjs";
 import { date_time_zone_now_iso } from "./date_time_zone_now_iso.mjs";
@@ -18,6 +23,12 @@ export async function bible_search_language_upload(language_code) {
   let bible_folders =
     await ebible_language_bible_folders_commercial(language_code);
   let lookup = await bible_search_words_lookup(bible_folders);
+  ("Arabic writes and, so, by, for and the onto the front of the word they belong to, so a reader asking for a word must also find it with those attached - the way a search for God should find the God.");
+  let arabic = ebible_language_arabic();
+  let arabic_code = property_get(arabic, "language_code");
+  if (equal(language_code, arabic_code)) {
+    bible_search_words_lookup_forms_add(lookup, text_arabic_prefixes_stripped);
+  }
   let entries = object_to_list(lookup);
   function word_file({ key, value: chapters }) {
     let destination = bible_search_language_word_path(language_code, key);
