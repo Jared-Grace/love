@@ -22,7 +22,7 @@ export function bible_glyph_chapter_gen39() {
           "taken",
           "down",
           "to",
-          "$proper_name$Egypt,",
+          "$clamp+proper_name,",
           "where",
           "an",
           "$proper_name$Egyptian",
