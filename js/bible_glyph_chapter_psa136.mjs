@@ -240,7 +240,7 @@ export function bible_glyph_chapter_psa136() {
         words: [
           "but",
           "swept",
-          "$proper_name$Pharaoh",
+          "$house+proper_name",
           "and",
           "his",
           "army",
