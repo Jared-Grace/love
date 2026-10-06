@@ -21,7 +21,7 @@ export function bible_glyph_chapter_exo10() {
           "$fishing_pole+proper_name,",
           "$footprints",
           "to",
-          "$proper_name$Pharaoh,",
+          "$house+proper_name,",
           "for",
           "I",
           "have",
@@ -103,7 +103,7 @@ export function bible_glyph_chapter_exo10() {
           "$proper_name$Aaron",
           "$footprints",
           "to",
-          "$proper_name$Pharaoh",
+          "$house+proper_name",
           "and",
           "$speech",
           "to",
@@ -307,7 +307,7 @@ export function bible_glyph_chapter_exo10() {
           "were",
           "$turn_back",
           "to",
-          "$proper_name$Pharaoh,",
+          "$house+proper_name,",
           "and",
           "he",
           "$speech,",
@@ -595,7 +595,7 @@ export function bible_glyph_chapter_exo10() {
       {
         verse_number: 16,
         words: [
-          "$proper_name$Pharaoh",
+          "$house+proper_name",
           "quickly",
           "summoned",
           "$fishing_pole+proper_name",
@@ -930,7 +930,7 @@ export function bible_glyph_chapter_exo10() {
       {
         verse_number: 28,
         words: [
-          "$proper_name$Pharaoh",
+          "$house+proper_name",
           "$speech",
           "to",
           "him,",
