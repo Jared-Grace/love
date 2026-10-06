@@ -148,7 +148,7 @@ export function bible_glyph_chapter_exo32() {
           "your",
           "gods,",
           "O",
-          "Israel,",
+          "$wrestling+heart_on_fire,",
           "who",
           "brought",
           "you",
@@ -293,7 +293,7 @@ export function bible_glyph_chapter_exo32() {
           "your",
           "gods,",
           "O",
-          "Israel,",
+          "$wrestling+heart_on_fire,",
           "who",
           "brought",
           "you",
@@ -362,7 +362,7 @@ export function bible_glyph_chapter_exo32() {
         verse_number: 11,
         words: [
           "But",
-          "Moses",
+          "$fishing_pole+proper_name",
           "sought",
           "the",
           "favor",
@@ -526,7 +526,7 @@ export function bible_glyph_chapter_exo32() {
         verse_number: 15,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "turned",
           "and",
           "went",
@@ -869,7 +869,7 @@ export function bible_glyph_chapter_exo32() {
         verse_number: 26,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "stood",
           "at",
           "the",
@@ -977,7 +977,7 @@ export function bible_glyph_chapter_exo32() {
         verse_number: 29,
         words: [
           "Afterward",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech,",
           "$sun",
           "you",
@@ -1050,7 +1050,7 @@ export function bible_glyph_chapter_exo32() {
         verse_number: 31,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$turn_back",
           "to",
           "the",
