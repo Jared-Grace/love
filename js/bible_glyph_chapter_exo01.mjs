@@ -72,7 +72,7 @@ export function bible_glyph_chapter_exo01() {
         verse_number: 6,
         words: [
           "Now",
-          "Joseph",
+          "$i_am+plus",
           "and",
           "all",
           "his",
@@ -462,7 +462,7 @@ export function bible_glyph_chapter_exo01() {
         verse_number: 22,
         words: [
           "Then",
-          "Pharaoh",
+          "$house+proper_name",
           "commanded",
           "all",
           "his",
