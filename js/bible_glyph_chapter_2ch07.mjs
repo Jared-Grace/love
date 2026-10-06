@@ -17,7 +17,7 @@ export function bible_glyph_chapter_2ch07() {
         verse_number: 1,
         words: [
           "When",
-          "Solomon",
+          "$peace",
           "had",
           "finished",
           "$hands_praying,",
@@ -221,7 +221,7 @@ export function bible_glyph_chapter_2ch07() {
         verse_number: 7,
         words: [
           "Then",
-          "Solomon",
+          "$peace",
           "$sparkle+doing",
           "the",
           "middle",
@@ -374,7 +374,7 @@ export function bible_glyph_chapter_2ch07() {
         verse_number: 11,
         words: [
           "When",
-          "Solomon",
+          "$peace",
           "had",
           "finished",
           "the",
