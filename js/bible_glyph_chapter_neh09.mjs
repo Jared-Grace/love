@@ -346,7 +346,7 @@ export function bible_glyph_chapter_neh09() {
           "and",
           "wonders",
           "against",
-          "$proper_name$Pharaoh,",
+          "$house+proper_name,",
           "all",
           "his",
           "$kneeling,",
