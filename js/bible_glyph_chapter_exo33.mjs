@@ -221,7 +221,7 @@ export function bible_glyph_chapter_exo33() {
         verse_number: 7,
         words: [
           "Now",
-          "Moses",
+          "$fishing_pole+proper_name",
           "used",
           "to",
           "$hand_receiving",
@@ -405,7 +405,7 @@ export function bible_glyph_chapter_exo33() {
         verse_number: 12,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech",
           "to",
           "the",
