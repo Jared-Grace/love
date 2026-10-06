@@ -17,7 +17,7 @@ export function bible_glyph_chapter_gen50() {
         verse_number: 1,
         words: [
           "Then",
-          "Joseph",
+          "$i_am+plus",
           "fell",
           "upon",
           "his",
@@ -35,7 +35,7 @@ export function bible_glyph_chapter_gen50() {
         verse_number: 2,
         words: [
           "And",
-          "Joseph",
+          "$i_am+plus",
           "directed",
           "the",
           "physicians",
@@ -180,7 +180,7 @@ export function bible_glyph_chapter_gen50() {
         verse_number: 7,
         words: [
           "Then",
-          "Joseph",
+          "$i_am+plus",
           "went",
           "to",
           "bury",
@@ -217,7 +217,7 @@ export function bible_glyph_chapter_gen50() {
           "with",
           "all",
           "of",
-          "$proper_name$Joseph's",
+          "$i_am+plus's",
           "$house,",
           "his",
           "$brother,",
@@ -552,7 +552,7 @@ export function bible_glyph_chapter_gen50() {
         verse_number: 19,
         words: [
           "But",
-          "Joseph",
+          "$i_am+plus",
           "$speech,",
           "Do",
           "$no_entry",
@@ -657,7 +657,7 @@ export function bible_glyph_chapter_gen50() {
         words: [
           "$i_am+plus",
           "$eye",
-          "$proper_name$Ephraim's",
+          "$fruit's",
           "$son",
           "to",
           "the",
@@ -685,7 +685,7 @@ export function bible_glyph_chapter_gen50() {
         verse_number: 24,
         words: [
           "Then",
-          "Joseph",
+          "$i_am+plus",
           "$speech",
           "to",
           "his",
@@ -726,7 +726,7 @@ export function bible_glyph_chapter_gen50() {
         verse_number: 25,
         words: [
           "And",
-          "Joseph",
+          "$i_am+plus",
           "made",
           "the",
           "$son",
@@ -760,7 +760,7 @@ export function bible_glyph_chapter_gen50() {
         verse_number: 26,
         words: [
           "So",
-          "Joseph",
+          "$i_am+plus",
           "$skull+doing,",
           "a",
           "$son",
