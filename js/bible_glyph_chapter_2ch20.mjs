@@ -340,7 +340,7 @@ export function bible_glyph_chapter_2ch20() {
           "the",
           "$earth",
           "of",
-          "$proper_name$Egypt.",
+          "$clamp+proper_name.",
           "So",
           "$wrestling+heart_on_fire",
           "turned",
