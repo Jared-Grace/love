@@ -104,7 +104,7 @@ export function bible_glyph_chapter_exo15() {
       {
         verse_number: 4,
         words: [
-          "Pharaoh",
+          "$house+proper_name",
           "chariots",
           "and",
           "army",
@@ -489,7 +489,7 @@ export function bible_glyph_chapter_exo15() {
         words: [
           "For",
           "when",
-          "Pharaoh",
+          "$house+proper_name",
           "horses",
           "and",
           "chariots",
@@ -584,7 +584,7 @@ export function bible_glyph_chapter_exo15() {
         verse_number: 22,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "led",
           "$wrestling+heart_on_fire",
           "from",
