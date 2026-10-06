@@ -1152,7 +1152,7 @@ export function bible_glyph_chapter_num15() {
           "the",
           "$earth",
           "of",
-          "$proper_name$Egypt",
+          "$clamp+proper_name",
           "to",
           "be",
           "your",
