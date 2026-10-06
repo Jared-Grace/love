@@ -18,7 +18,7 @@ export function bible_glyph_chapter_num30() {
         verse_number: 1,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$mouth",
           "to",
           "the",
