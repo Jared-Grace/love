@@ -3,13 +3,14 @@ export function app_shared_descriptions() {
   "Written for a person who has only been handed a link and has not opened the page yet, so each says what the thing is and what it is for rather than what it is called.";
   "An app absent from here is not guessed at. Nothing is said rather than something vague, so a card is never built out of an assumption about an app nobody described.";
   "A page a person would never be sent is left out on purpose rather than overlooked - a dev sandbox, an error page, the developer's own inbox, a board of personal replies written in the first person. A card is for a link worth handing to somebody, so a page with nobody to hand it to wants none.";
+  "EVERY SENTENCE HERE IS A CLAIM THAT GOES STALE WITHOUT SAYING SO, AND IT GOES STALE IN BOTH DIRECTIONS. These are read by strangers who have opened nothing, so each one promises on behalf of code that keeps being built underneath it. The search card has now been wrong twice: first it claimed a reader's own language when only English was indexed, and then, once two dozen languages had been indexed and shipped, it still said English - promising less than the app gave, which is the direction nobody ever reports. So before changing a sentence here, read the layer that would have to support it and read what actually shipped, because neither half settles it alone: a capability can sit finished in the source and be missing from the built page, and a thing the source no longer does can still be live in the page a reader has.";
   let r = {
     index:
       "A set of free apps for reading the Bible in your own language, sharing verses with someone, and learning to program. There is nothing to sign up for.",
     bible:
       "Read the Bible in any of dozens of languages, and read two of them together, verse by verse. It can keep a copy on your own device so it opens without a connection.",
     search:
-      "Search the whole Bible in English for any words you like, and read every verse that holds them in whichever languages you choose. A search can be sent as a link, so whoever opens it sees the same verses you did.",
+      "Search the whole Bible for any words you like, in any of dozens of languages, and read every verse that holds them. A search can be sent as a link, so whoever opens it sees the same verses you did.",
     next: "Shows the Bible passage somebody sent you a link to, with a way to keep reading on from there. Open it with no link and it still gives you somewhere to start.",
     verses:
       "Choose a language and how many encouraging Bible verses you would like, and it gathers them ready to copy and send to someone.",
