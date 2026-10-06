@@ -233,7 +233,7 @@ export function bible_glyph_chapter_deu32() {
           "the",
           "$son",
           "of",
-          "God.",
+          "$wrestling+heart_on_fire.",
         ],
       },
       {
