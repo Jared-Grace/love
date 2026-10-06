@@ -76,7 +76,7 @@ export function bible_glyph_chapter_gen22() {
         verse_number: 3,
         words: [
           "So",
-          "Abraham",
+          "$father+map",
           "got",
           "up",
           "early",
@@ -306,7 +306,7 @@ export function bible_glyph_chapter_gen22() {
         verse_number: 10,
         words: [
           "Then",
-          "Abraham",
+          "$father+map",
           "reached",
           "out",
           "his",
@@ -431,7 +431,7 @@ export function bible_glyph_chapter_gen22() {
         verse_number: 14,
         words: [
           "And",
-          "Abraham",
+          "$father+map",
           "called",
           "that",
           "$place",
@@ -650,7 +650,7 @@ export function bible_glyph_chapter_gen22() {
           "the",
           "$brother",
           "of",
-          "Abraham,",
+          "$father+map,",
           "$proper_name$Nahor.",
         ],
       },
