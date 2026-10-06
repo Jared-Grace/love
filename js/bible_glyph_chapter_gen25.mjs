@@ -93,7 +93,7 @@ export function bible_glyph_chapter_gen25() {
           "he",
           "owned",
           "to",
-          "$proper_name$Isaac.",
+          "$laughing+proper_name.",
         ],
       },
       {
@@ -119,7 +119,7 @@ export function bible_glyph_chapter_gen25() {
           "them",
           "$hand_sending",
           "from",
-          "$proper_name$Isaac",
+          "$laughing+proper_name",
           "his",
           "$son,",
           "to",
@@ -175,7 +175,7 @@ export function bible_glyph_chapter_gen25() {
         words: [
           "His",
           "$son",
-          "$proper_name$Isaac",
+          "$laughing+proper_name",
           "and",
           "$proper_name$Ishmael",
           "buried",
@@ -397,7 +397,7 @@ export function bible_glyph_chapter_gen25() {
           "the",
           "account",
           "of",
-          "$proper_name$Isaac",
+          "$laughing+proper_name",
           "the",
           "$son",
           "of",
@@ -407,13 +407,13 @@ export function bible_glyph_chapter_gen25() {
           "the",
           "father",
           "of",
-          "$proper_name$Isaac.",
+          "$laughing+proper_name.",
         ],
       },
       {
         verse_number: 20,
         words: [
-          "$proper_name$Isaac",
+          "$laughing+proper_name",
           "was",
           "forty",
           "$son",
@@ -638,7 +638,7 @@ export function bible_glyph_chapter_gen25() {
       {
         verse_number: 28,
         words: [
-          "$proper_name$Isaac",
+          "$laughing+proper_name",
           "$heart_red+doing",
           "$proper_name$Esau,",
           "because",
