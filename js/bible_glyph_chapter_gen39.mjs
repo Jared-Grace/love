@@ -31,7 +31,7 @@ export function bible_glyph_chapter_gen39() {
           "an",
           "officer",
           "of",
-          "$proper_name$Pharaoh",
+          "$house+proper_name",
           "and",
           "captain",
           "of",
