@@ -322,7 +322,7 @@ export function bible_glyph_chapter_2sa05() {
         verse_number: 10,
         words: [
           "And",
-          "David",
+          "$two_hearts+proper_name",
           "$walking",
           "on,",
           "$walking",
@@ -379,7 +379,7 @@ export function bible_glyph_chapter_2sa05() {
         verse_number: 12,
         words: [
           "And",
-          "David",
+          "$two_hearts+proper_name",
           "$lightbulb",
           "that",
           "the",
@@ -519,7 +519,7 @@ export function bible_glyph_chapter_2sa05() {
         verse_number: 19,
         words: [
           "So",
-          "David",
+          "$two_hearts+proper_name",
           "inquired",
           "of",
           "the",
@@ -560,7 +560,7 @@ export function bible_glyph_chapter_2sa05() {
         verse_number: 20,
         words: [
           "So",
-          "David",
+          "$two_hearts+proper_name",
           "$footprints",
           "to",
           "Baal-perazim,",
@@ -638,7 +638,7 @@ export function bible_glyph_chapter_2sa05() {
         verse_number: 23,
         words: [
           "So",
-          "David",
+          "$two_hearts+proper_name",
           "inquired",
           "of",
           "the",
@@ -713,7 +713,7 @@ export function bible_glyph_chapter_2sa05() {
         verse_number: 25,
         words: [
           "So",
-          "David",
+          "$two_hearts+proper_name",
           "$hammer+doing",
           "as",
           "the",
