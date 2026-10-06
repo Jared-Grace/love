@@ -15,7 +15,7 @@ export function bible_glyph_chapter_gen42() {
         verse_number: 1,
         words: [
           "When",
-          "Jacob",
+          "$hand+foot",
           "$eye",
           "that",
           "there",
@@ -90,7 +90,7 @@ export function bible_glyph_chapter_gen42() {
         verse_number: 4,
         words: [
           "But",
-          "Jacob",
+          "$hand+foot",
           "did",
           "$no_entry",
           "$hand_sending",
@@ -191,7 +191,7 @@ export function bible_glyph_chapter_gen42() {
         words: [
           "And",
           "when",
-          "Joseph",
+          "$i_am+plus",
           "$eye",
           "his",
           "$brother,",
@@ -232,7 +232,7 @@ export function bible_glyph_chapter_gen42() {
         verse_number: 8,
         words: [
           "Although",
-          "Joseph",
+          "$i_am+plus",
           "recognized",
           "his",
           "$brother,",
@@ -368,7 +368,7 @@ export function bible_glyph_chapter_gen42() {
         verse_number: 14,
         words: [
           "Then",
-          "Joseph",
+          "$i_am+plus",
           "$speech",
           "to",
           "them,",
@@ -396,7 +396,7 @@ export function bible_glyph_chapter_gen42() {
           "As",
           "surely",
           "as",
-          "Pharaoh",
+          "$house+proper_name",
           "$sprout,",
           "you",
           "shall",
@@ -691,7 +691,7 @@ export function bible_glyph_chapter_gen42() {
         verse_number: 25,
         words: [
           "Then",
-          "Joseph",
+          "$i_am+plus",
           "gave",
           "orders",
           "to",
