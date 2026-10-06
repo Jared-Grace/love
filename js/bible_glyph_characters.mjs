@@ -1540,6 +1540,10 @@ export function bible_glyph_characters() {
       character: "😂",
     },
     {
+      name: "clamp",
+      character: "🗜️",
+    },
+    {
       name: "collision",
       character: "💥",
     },
