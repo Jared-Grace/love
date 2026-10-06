@@ -1322,7 +1322,7 @@ export function bible_glyph_chapter_lev23() {
           "the",
           "$earth",
           "of",
-          "$proper_name$Egypt.",
+          "$clamp+proper_name.",
           "I",
           "am",
           "$i_am",
