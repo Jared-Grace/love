@@ -438,7 +438,7 @@ export function bible_glyph_chapter_2sa12() {
         verse_number: 13,
         words: [
           "Then",
-          "David",
+          "$two_hearts+proper_name",
           "$speech",
           "to",
           "$proper_name$Nathan,",
@@ -583,7 +583,7 @@ export function bible_glyph_chapter_2sa12() {
           "$child",
           "$skull+doing.",
           "But",
-          "David's",
+          "$two_hearts+proper_name's",
           "$kneeling",
           "were",
           "afraid",
@@ -672,7 +672,7 @@ export function bible_glyph_chapter_2sa12() {
         verse_number: 20,
         words: [
           "Then",
-          "David",
+          "$two_hearts+proper_name",
           "got",
           "up",
           "from",
@@ -812,7 +812,7 @@ export function bible_glyph_chapter_2sa12() {
         verse_number: 24,
         words: [
           "Then",
-          "David",
+          "$two_hearts+proper_name",
           "comforted",
           "his",
           "$woman",
