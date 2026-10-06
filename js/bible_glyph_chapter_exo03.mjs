@@ -14,7 +14,7 @@ export function bible_glyph_chapter_exo03() {
         verse_number: 1,
         words: [
           "Now",
-          "Moses",
+          "$fishing_pole+proper_name",
           "was",
           "$person+sheep",
           "the",
@@ -87,7 +87,7 @@ export function bible_glyph_chapter_exo03() {
         verse_number: 3,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech,",
           "I",
           "must",
@@ -192,7 +192,7 @@ export function bible_glyph_chapter_exo03() {
           "$hand+foot.",
           "At",
           "this,",
-          "Moses",
+          "$fishing_pole+proper_name",
           "hid",
           "his",
           "face,",
@@ -347,7 +347,7 @@ export function bible_glyph_chapter_exo03() {
         verse_number: 11,
         words: [
           "But",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech",
           "$fire,",
           "Who",
@@ -418,7 +418,7 @@ export function bible_glyph_chapter_exo03() {
         verse_number: 13,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech",
           "$fire,",
           "Suppose",
