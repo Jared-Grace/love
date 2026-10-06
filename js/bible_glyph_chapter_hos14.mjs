@@ -15,7 +15,7 @@ export function bible_glyph_chapter_hos14() {
         words: [
           "$turn_back,",
           "O",
-          "Israel,",
+          "$wrestling+heart_on_fire,",
           "to",
           "the",
           "$i_am",
