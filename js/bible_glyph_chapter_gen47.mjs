@@ -15,7 +15,7 @@ export function bible_glyph_chapter_gen47() {
         verse_number: 1,
         words: [
           "So",
-          "Joseph",
+          "$i_am+plus",
           "$footprints",
           "and",
           "told",
@@ -226,7 +226,7 @@ export function bible_glyph_chapter_gen47() {
         verse_number: 7,
         words: [
           "Then",
-          "Joseph",
+          "$i_am+plus",
           "$footprints",
           "$hand+foot",
           "his",
@@ -322,7 +322,7 @@ export function bible_glyph_chapter_gen47() {
         verse_number: 10,
         words: [
           "Then",
-          "Jacob",
+          "$hand+foot",
           "$speech+thumbs_up",
           "$house+proper_name",
           "and",
@@ -336,7 +336,7 @@ export function bible_glyph_chapter_gen47() {
         verse_number: 11,
         words: [
           "So",
-          "Joseph",
+          "$i_am+plus",
           "$person+house",
           "his",
           "$father",
@@ -688,7 +688,7 @@ export function bible_glyph_chapter_gen47() {
         verse_number: 20,
         words: [
           "So",
-          "Joseph",
+          "$i_am+plus",
           "acquired",
           "all",
           "the",
@@ -786,7 +786,7 @@ export function bible_glyph_chapter_gen47() {
         verse_number: 23,
         words: [
           "Then",
-          "Joseph",
+          "$i_am+plus",
           "$speech",
           "to",
           "the",
@@ -888,7 +888,7 @@ export function bible_glyph_chapter_gen47() {
         verse_number: 26,
         words: [
           "So",
-          "Joseph",
+          "$i_am+plus",
           "established",
           "a",
           "law",
@@ -956,7 +956,7 @@ export function bible_glyph_chapter_gen47() {
         verse_number: 28,
         words: [
           "And",
-          "Jacob",
+          "$hand+foot",
           "$sprout+doing",
           "in",
           "the",
