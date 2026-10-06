@@ -368,7 +368,7 @@ export function bible_glyph_chapter_sng08() {
           "for",
           "you,",
           "O",
-          "Solomon,",
+          "$peace,",
           "and",
           "two",
           "hundred",
