@@ -450,7 +450,7 @@ export function bible_glyph_chapter_exo32() {
         words: [
           "Remember",
           "$father+map,",
-          "$proper_name$Isaac,",
+          "$laughing+proper_name,",
           "and",
           "$wrestling+heart_on_fire,",
           "Your",
