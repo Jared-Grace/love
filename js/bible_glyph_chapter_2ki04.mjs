@@ -1036,7 +1036,7 @@ export function bible_glyph_chapter_2ki04() {
         verse_number: 32,
         words: [
           "When",
-          "Elisha",
+          "$heart_on_fire+rescue",
           "$footprints",
           "the",
           "$house,",
@@ -1206,7 +1206,7 @@ export function bible_glyph_chapter_2ki04() {
         verse_number: 38,
         words: [
           "When",
-          "Elisha",
+          "$heart_on_fire+rescue",
           "$turn_back",
           "to",
           "$proper_name$Gilgal,",
