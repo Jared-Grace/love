@@ -17,6 +17,7 @@ export async function app_search_language_matching_or_null(
   let o = {
     words,
     words_missing: r.words_missing,
+    words_unreachable: r.words_unreachable,
     dictionary: r.dictionary,
   };
   return o;

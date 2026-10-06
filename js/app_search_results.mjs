@@ -1,16 +1,16 @@
-import { app_search_results_render_and_open } from "./app_search_results_render_and_open.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { app_search_languages_unsearchable_show } from "./app_search_languages_unsearchable_show.mjs";
-import { app_search_languages_matching } from "./app_search_languages_matching.mjs";
-import { app_shared_bible_read_books_en } from "./app_shared_bible_read_books_en.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
+import { app_shared_bible_read_books_en } from "./app_shared_bible_read_books_en.mjs";
+import { app_search_languages_matching } from "./app_search_languages_matching.mjs";
 import { html_clear } from "./html_clear.mjs";
+import { app_search_languages_unsearchable_show } from "./app_search_languages_unsearchable_show.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
 import { app_search_no_words_show } from "./app_search_no_words_show.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_search_words_missing_text } from "./app_search_words_missing_text.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { app_search_results_with_verses_and_books } from "./app_search_results_with_verses_and_books.mjs";
 import { app_search_none_found_text } from "./app_search_none_found_text.mjs";
+import { app_search_results_render_and_open } from "./app_search_results_render_and_open.mjs";
 export async function app_search_results(context, div_results) {
   let languages_chosen = property_get(context, "languages_chosen");
   let books = await app_shared_bible_read_books_en();
@@ -35,9 +35,13 @@ export async function app_search_results(context, div_results) {
   }
   let dictionary = property_get(matching, "dictionary");
   let words_missing = property_get(matching, "words_missing");
+  let words_unreachable = property_get(matching, "words_unreachable");
   let missing = list_empty_not_is(words_missing);
   if (missing) {
-    let missing_text = app_search_words_missing_text(words_missing);
+    let missing_text = app_search_words_missing_text(
+      words_missing,
+      words_unreachable,
+    );
     app_shared_text_body(div_results, missing_text);
     return;
   }

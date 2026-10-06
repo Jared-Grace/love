@@ -1,26 +1,31 @@
-import { list_map } from "./list_map.mjs";
-import { text_pad_space_quote_double } from "./text_pad_space_quote_double.mjs";
-import { list_join_comma_space } from "./list_join_comma_space.mjs";
-import { list_multiple_is } from "./list_multiple_is.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_search_words_missing_text(words_missing) {
-  "a lookup comes back with nothing either when the word appears nowhere in the Bible or when the connection dropped, so name the words and ask about both, rather than asserting the one that happens to be wrong";
-  "BOTH CAUSES ARE NOW SAID RATHER THAN LEFT INSIDE THE WORD LOOKUP. The reader has no idea what a lookup is, and the question on its own - is the spelling right, or would trying again help - reads as a connection that may come good, so a word that is simply in no verse sends them back to try again forever. Naming the likelier cause first costs nothing and still asserts neither.";
-  let quoted = list_map(words_missing, text_pad_space_quote_double);
-  let joined = list_join_comma_space(quoted);
-  let several = list_multiple_is(words_missing);
-  if (several) {
-    let many = text_combine_multiple([
-      "Nothing came back for ",
-      joined,
-      ". Either no verse holds those words, or the connection dropped. Are the spellings right, or would trying again help?",
-    ]);
-    return many;
+import { arguments_assert } from "./arguments_assert.mjs";
+import { list_without_multiple } from "./list_without_multiple.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { app_search_words_unreachable_text } from "./app_search_words_unreachable_text.mjs";
+import { list_add } from "./list_add.mjs";
+import { app_search_words_absent_text } from "./app_search_words_absent_text.mjs";
+import { list_join_space } from "./list_join_space.mjs";
+export function app_search_words_missing_text(
+  words_missing,
+  words_unreachable,
+) {
+  "What a reader is told when some of their words came back with nothing: the real reason for each one, rather than both guesses offered at once.";
+  "THE TWO CAUSES ARE NOW TOLD APART INSTEAD OF BEING OFFERED TOGETHER. This used to say either no verse holds the word or the connection dropped, and ask about both, because at this point nothing knew which - the catch underneath answered nothing at all, so a word that is in no verse and a word whose lookup never arrived arrived here identical. A reader met one sentence covering both and took the half that promised a retry, which sent them trying again forever over a spelling no retry can fix.";
+  "Each cause gets its own sentence over its own words, rather than one sentence bending to cover a mixture. A query can easily hold one word of each kind, and a single sentence covering both would have to name no words at all to stay true - which is how the old one came to say nothing useful about either.";
+  "The unreachable words are said first because theirs is the sentence with something to do in it. Trying again is an action; checking a spelling is an action too, but a reader whose connection is dropping cannot tell whether the second one worked.";
+  arguments_assert(arguments, 2);
+  let words_absent = list_without_multiple(words_missing, words_unreachable);
+  let sentences = [];
+  let unreachable = list_empty_not_is(words_unreachable);
+  if (unreachable) {
+    let said = app_search_words_unreachable_text(words_unreachable);
+    list_add(sentences, said);
   }
-  let text = text_combine_multiple([
-    "Nothing came back for ",
-    joined,
-    ". Either no verse holds that word, or the connection dropped. Is the spelling right, or would trying again help?",
-  ]);
-  return text;
+  let absent = list_empty_not_is(words_absent);
+  if (absent) {
+    let said = app_search_words_absent_text(words_absent);
+    list_add(sentences, said);
+  }
+  let joined = list_join_space(sentences);
+  return joined;
 }
