@@ -55,7 +55,7 @@ export function bible_glyph_chapter_1ki18() {
         verse_number: 2,
         words: [
           "So",
-          "Elijah",
+          "$heart_on_fire+i_am",
           "$walking",
           "to",
           "$eye",
@@ -458,7 +458,7 @@ export function bible_glyph_chapter_1ki18() {
         verse_number: 15,
         words: [
           "Then",
-          "Elijah",
+          "$heart_on_fire+i_am",
           "$speech,",
           "As",
           "surely",
@@ -615,7 +615,7 @@ export function bible_glyph_chapter_1ki18() {
         verse_number: 21,
         words: [
           "Then",
-          "Elijah",
+          "$heart_on_fire+i_am",
           "approached",
           "all",
           "the",
@@ -658,7 +658,7 @@ export function bible_glyph_chapter_1ki18() {
         verse_number: 22,
         words: [
           "Then",
-          "Elijah",
+          "$heart_on_fire+i_am",
           "$speech",
           "to",
           "the",
@@ -780,7 +780,7 @@ export function bible_glyph_chapter_1ki18() {
         verse_number: 25,
         words: [
           "Then",
-          "Elijah",
+          "$heart_on_fire+i_am",
           "$speech",
           "to",
           "the",
@@ -968,7 +968,7 @@ export function bible_glyph_chapter_1ki18() {
         verse_number: 30,
         words: [
           "Then",
-          "Elijah",
+          "$heart_on_fire+i_am",
           "$speech",
           "to",
           "all",
@@ -1003,7 +1003,7 @@ export function bible_glyph_chapter_1ki18() {
         verse_number: 31,
         words: [
           "And",
-          "Elijah",
+          "$heart_on_fire+i_am",
           "$hand_receiving",
           "twelve",
           "$stone,",
@@ -1344,7 +1344,7 @@ export function bible_glyph_chapter_1ki18() {
         verse_number: 41,
         words: [
           "And",
-          "Elijah",
+          "$heart_on_fire+i_am",
           "$speech",
           "to",
           "$proper_name$Ahab,",
@@ -1376,7 +1376,7 @@ export function bible_glyph_chapter_1ki18() {
           "and",
           "drink.",
           "But",
-          "Elijah",
+          "$heart_on_fire+i_am",
           "climbed",
           "to",
           "the",
