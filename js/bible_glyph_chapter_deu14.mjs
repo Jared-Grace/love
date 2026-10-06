@@ -710,7 +710,7 @@ export function bible_glyph_chapter_deu14() {
         words: [
           "Then",
           "the",
-          "Levite",
+          "$handshake",
           "-",
           "because",
           "he",
