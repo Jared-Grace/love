@@ -532,7 +532,7 @@ export function bible_glyph_chapter_gen27() {
         verse_number: 20,
         words: [
           "But",
-          "Isaac",
+          "$laughing+proper_name",
           "$speech",
           "his",
           "$son,",
@@ -563,7 +563,7 @@ export function bible_glyph_chapter_gen27() {
         verse_number: 21,
         words: [
           "Then",
-          "Isaac",
+          "$laughing+proper_name",
           "$speech",
           "to",
           "$hand+foot,",
@@ -1064,7 +1064,7 @@ export function bible_glyph_chapter_gen27() {
         verse_number: 37,
         words: [
           "But",
-          "Isaac",
+          "$laughing+proper_name",
           "$speech",
           "$proper_name$Esau,",
           '"Look,',
