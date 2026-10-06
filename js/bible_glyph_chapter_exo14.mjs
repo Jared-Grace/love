@@ -48,7 +48,7 @@ export function bible_glyph_chapter_exo14() {
         verse_number: 3,
         words: [
           "For",
-          "Pharaoh",
+          "$house+proper_name",
           "will",
           "$speech",
           "of",
@@ -230,7 +230,7 @@ export function bible_glyph_chapter_exo14() {
           "Egyptians",
           "-",
           "all",
-          "$proper_name$Pharaoh's",
+          "$house+proper_name's",
           "horses",
           "and",
           "chariots,",
@@ -260,7 +260,7 @@ export function bible_glyph_chapter_exo14() {
         verse_number: 10,
         words: [
           "As",
-          "Pharaoh",
+          "$house+proper_name",
           "approached,",
           "the",
           "$son",
@@ -369,7 +369,7 @@ export function bible_glyph_chapter_exo14() {
         verse_number: 13,
         words: [
           "But",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech",
           "the",
           "$family,",
@@ -624,7 +624,7 @@ export function bible_glyph_chapter_exo14() {
         verse_number: 21,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "stretched",
           "out",
           "his",
@@ -696,7 +696,7 @@ export function bible_glyph_chapter_exo14() {
           "them",
           "-",
           "all",
-          "$proper_name$Pharaoh's",
+          "$house+proper_name's",
           "horses",
           "and",
           "chariots",
@@ -816,7 +816,7 @@ export function bible_glyph_chapter_exo14() {
         verse_number: 27,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "stretched",
           "out",
           "his",
@@ -936,7 +936,7 @@ export function bible_glyph_chapter_exo14() {
         verse_number: 31,
         words: [
           "When",
-          "Israel",
+          "$wrestling+heart_on_fire",
           "$eye",
           "the",
           "great",
