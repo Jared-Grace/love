@@ -72,7 +72,7 @@ export function bible_glyph_chapter_gen23() {
         verse_number: 3,
         words: [
           "Then",
-          "Abraham",
+          "$father+map",
           "got",
           "up",
           "from",
@@ -184,7 +184,7 @@ export function bible_glyph_chapter_gen23() {
         verse_number: 7,
         words: [
           "Then",
-          "Abraham",
+          "$father+map",
           "rose",
           "and",
           "$bowing",
@@ -370,7 +370,7 @@ export function bible_glyph_chapter_gen23() {
         verse_number: 12,
         words: [
           "Then",
-          "Abraham",
+          "$father+map",
           "$bowing",
           "again",
           "before",
@@ -541,7 +541,7 @@ export function bible_glyph_chapter_gen23() {
         verse_number: 18,
         words: [
           "to",
-          "Abraham",
+          "$father+map",
           "as",
           "a",
           "purchase,",
