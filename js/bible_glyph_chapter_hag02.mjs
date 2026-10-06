@@ -165,7 +165,7 @@ export function bible_glyph_chapter_hag02() {
           "came",
           "out",
           "of",
-          "$proper_name$Egypt.",
+          "$clamp+proper_name.",
           "And",
           "My",
           "$wind",
