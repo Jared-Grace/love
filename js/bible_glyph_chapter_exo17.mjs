@@ -121,7 +121,7 @@ export function bible_glyph_chapter_exo17() {
         verse_number: 4,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "cried",
           "out",
           "to",
@@ -216,7 +216,7 @@ export function bible_glyph_chapter_exo17() {
           "to",
           "drink.",
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$hammer+doing",
           "this",
           "in",
@@ -281,7 +281,7 @@ export function bible_glyph_chapter_exo17() {
         verse_number: 9,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech",
           "to",
           "$i_am+rescue,",
@@ -374,7 +374,7 @@ export function bible_glyph_chapter_exo17() {
           "the",
           "$hand",
           "of",
-          "Moses",
+          "$fishing_pole+proper_name",
           "grew",
           "heavy,",
           "they",
@@ -420,7 +420,7 @@ export function bible_glyph_chapter_exo17() {
         verse_number: 13,
         words: [
           "So",
-          "Joshua",
+          "$i_am+rescue",
           "overwhelmed",
           "$proper_name$Amalek",
           "and",
@@ -472,7 +472,7 @@ export function bible_glyph_chapter_exo17() {
         verse_number: 15,
         words: [
           "And",
-          "Moses",
+          "$fishing_pole+proper_name",
           "built",
           "an",
           "$altar",
