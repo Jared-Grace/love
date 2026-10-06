@@ -1,3 +1,4 @@
+import { bible_chapters_each_verses } from "./bible_chapters_each_verses.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_version_chapters_numbering_matching } from "./ebible_version_chapters_numbering_matching.mjs";
@@ -10,7 +11,6 @@ import { property_initialize_empty } from "./property_initialize_empty.mjs";
 import { property_initialize_list } from "./property_initialize_list.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { each } from "./each.mjs";
-import { ebible_chapters_each_verses_check_with } from "./ebible_chapters_each_verses_check_with.mjs";
 import { each_async } from "./each_async.mjs";
 export async function bible_search_words_lookup(bible_folders) {
   ("Every word of the given bibles, in any script, under the chapter and verse it stands in and the bibles that hold it there - cut and folded by ",
@@ -44,7 +44,7 @@ export async function bible_search_words_lookup(bible_folders) {
       }
       each(verses, verse_add);
     }
-    await ebible_chapters_each_verses_check_with(bible_folder, chapter_add);
+    await bible_chapters_each_verses(bible_folder, chapter_add);
   }
   await each_async(bible_folders, version_add);
   return result;

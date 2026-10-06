@@ -1,3 +1,5 @@
+import { assert_json } from "./assert_json.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { ebible_language_arabic } from "./ebible_language_arabic.mjs";
 import { property_get } from "./property_get.mjs";
 import { bible_search_words_lookup_forms_add } from "./bible_search_words_lookup_forms_add.mjs";
@@ -30,6 +32,14 @@ export async function bible_search_language_upload(language_code) {
     bible_search_words_lookup_forms_add(lookup, text_arabic_prefixes_stripped);
   }
   let entries = object_to_list(lookup);
+  ("An index of no words is refused before anything is put up, because the mark put up last tells every reader the language can be searched. Amharic was once built that way: its bible came from a place the reader did not know, no verse was read, and the build said it had worked.");
+  let count = list_size(entries);
+  let b = greater_than(count, 0);
+  assert_json(b, {
+    hint: "no word was read out of these bibles, so the language is not marked searchable",
+    language_code,
+    bible_folders,
+  });
   function word_file({ key, value: chapters }) {
     let destination = bible_search_language_word_path(language_code, key);
     function verse_numbers(verses) {
@@ -48,7 +58,7 @@ export async function bible_search_language_upload(language_code) {
   let built = date_time_zone_now_iso();
   await bible_search_built_upload(built);
   await bible_search_language_built_upload(language_code, built);
-  let words = list_size(entries);
+  let words = count;
   let r = {
     language_code,
     bible_folders,
