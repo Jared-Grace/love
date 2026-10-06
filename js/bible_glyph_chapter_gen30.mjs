@@ -390,7 +390,7 @@ export function bible_glyph_chapter_gen30() {
         verse_number: 16,
         words: [
           "When",
-          "Jacob",
+          "$hand+foot",
           "$footprints",
           "$tray_out",
           "the",
