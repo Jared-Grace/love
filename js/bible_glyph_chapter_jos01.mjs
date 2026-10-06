@@ -320,7 +320,7 @@ export function bible_glyph_chapter_jos01() {
         verse_number: 10,
         words: [
           "Then",
-          "Joshua",
+          "$i_am+rescue",
           "commanded",
           "the",
           "officers",
