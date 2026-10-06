@@ -674,7 +674,7 @@ export function bible_glyph_chapter_exo12() {
         verse_number: 21,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "summoned",
           "all",
           "the",
