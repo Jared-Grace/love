@@ -1096,7 +1096,7 @@ export function bible_glyph_chapter_exo39() {
         verse_number: 43,
         words: [
           "And",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$eye",
           "all",
           "$tools",
@@ -1116,7 +1116,7 @@ export function bible_glyph_chapter_exo39() {
           "$hammer+doing",
           "it,",
           "and",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech+thumbs_up",
           "them.",
         ],
