@@ -113,7 +113,7 @@ export function bible_glyph_chapter_neh09() {
         verse_number: 4,
         words: [
           "The",
-          "Levites",
+          "$handshake",
           "$proper_name$Jeshua,",
           "$proper_name$Bani,",
           "$proper_name$Kadmiel,",
@@ -147,7 +147,7 @@ export function bible_glyph_chapter_neh09() {
         words: [
           "Then",
           "the",
-          "Levites",
+          "$handshake",
           "$proper_name$Jeshua,",
           "$proper_name$Kadmiel,",
           "$proper_name$Bani,",
