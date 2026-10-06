@@ -558,7 +558,7 @@ export function bible_glyph_chapter_jol03() {
       {
         verse_number: 19,
         words: [
-          "$proper_name$Egypt",
+          "$clamp+proper_name",
           "will",
           "become",
           "desolate,",
