@@ -11,5 +11,5 @@ export function set_add(set, item) {
     return r;
   }
   assert_json_get(n, lambda2);
-  set_add_try(item);
+  set_add_try(set, item);
 }
