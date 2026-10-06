@@ -503,7 +503,7 @@ export function bible_glyph_chapter_gen17() {
         verse_number: 18,
         words: [
           "And",
-          "Abraham",
+          "$father+map",
           "$speech",
           "to",
           "$fire,",
@@ -693,7 +693,7 @@ export function bible_glyph_chapter_gen17() {
         verse_number: 24,
         words: [
           "So",
-          "Abraham",
+          "$father+map",
           "was",
           "ninety-nine",
           "years",
