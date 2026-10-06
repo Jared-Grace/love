@@ -250,7 +250,7 @@ export function bible_glyph_chapter_neh08() {
         verse_number: 7,
         words: [
           "The",
-          "Levites",
+          "$handshake",
           "-",
           "$proper_name$Jeshua,",
           "$proper_name$Bani,",
@@ -419,7 +419,7 @@ export function bible_glyph_chapter_neh08() {
         words: [
           "And",
           "the",
-          "Levites",
+          "$handshake",
           "calmed",
           "all",
           "the",
