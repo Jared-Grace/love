@@ -91,7 +91,7 @@ export function bible_glyph_chapter_deu11() {
           "in",
           "$proper_name$Egypt,",
           "to",
-          "$proper_name$Pharaoh",
+          "$house+proper_name",
           "$king",
           "of",
           "$proper_name$Egypt",
