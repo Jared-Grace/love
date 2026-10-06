@@ -1,4 +1,3 @@
-import { app_code_lesson_statement_name_rectangles_cover_together } from "./app_code_lesson_statement_name_rectangles_cover_together.mjs";
 export function app_code_lessons_latest_held_fns() {
   "the lessons kept off latest while every other lesson is shown there, asked for by the human 2026-09-30: deploy through lesson 204 and skip 205, the 24-hour clock, which is not ready to hand over yet";
   "A list of lessons rather than a cut at a number, for the same reason the released list is one: a lesson put in above would move a number, and a list names the lesson itself. Empty it to show every lesson on latest again. The working copy shows these lessons whatever this holds.";
@@ -48,6 +47,7 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-06: hold 238 until the human has read its first draft";
   "2026-10-06: hold 239 until the human has read its first draft";
   "2026-10-06: 239 taken out of the lessons until functions are taught";
-  let fns = [app_code_lesson_statement_name_rectangles_cover_together];
+  "then deploy through 238, 2026-10-06: nothing held";
+  let fns = [];
   return fns;
 }
