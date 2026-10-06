@@ -102,7 +102,7 @@ export function bible_glyph_chapter_jhn04() {
         verse_number: 6,
         words: [
           "Now",
-          "$proper_name$Jacob’s",
+          "$hand+foot’s",
           "well",
           "was",
           "there.",
