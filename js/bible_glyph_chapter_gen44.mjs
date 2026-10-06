@@ -373,7 +373,7 @@ export function bible_glyph_chapter_gen44() {
         verse_number: 14,
         words: [
           "When",
-          "Judah",
+          "$hands_raised+proper_name",
           "and",
           "his",
           "$brother",
@@ -515,7 +515,7 @@ export function bible_glyph_chapter_gen44() {
         verse_number: 18,
         words: [
           "Then",
-          "Judah",
+          "$hands_raised+proper_name",
           "approached",
           "him",
           "and",
