@@ -794,7 +794,7 @@ export function bible_glyph_chapter_gen49() {
           "are",
           "buried.",
           "There",
-          "$proper_name$Isaac",
+          "$laughing+proper_name",
           "and",
           "his",
           "$woman",
