@@ -1291,7 +1291,7 @@ export function bible_glyph_chapter_lev26() {
           "My",
           "$covenant",
           "with",
-          "$proper_name$Isaac",
+          "$laughing+proper_name",
           "and",
           "My",
           "$covenant",
