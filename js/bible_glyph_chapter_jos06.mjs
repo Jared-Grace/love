@@ -172,7 +172,7 @@ export function bible_glyph_chapter_jos06() {
         verse_number: 6,
         words: [
           "So",
-          "Joshua",
+          "$i_am+rescue",
           "$son",
           "of",
           "$proper_name$Nun",
@@ -238,7 +238,7 @@ export function bible_glyph_chapter_jos06() {
         verse_number: 8,
         words: [
           "After",
-          "Joshua",
+          "$i_am+rescue",
           "had",
           "$speech",
           "to",
@@ -305,7 +305,7 @@ export function bible_glyph_chapter_jos06() {
         verse_number: 10,
         words: [
           "But",
-          "Joshua",
+          "$i_am+rescue",
           "had",
           "commanded",
           "the",
@@ -737,7 +737,7 @@ export function bible_glyph_chapter_jos06() {
         verse_number: 22,
         words: [
           "Meanwhile",
-          "Joshua",
+          "$i_am+rescue",
           "$speech",
           "the",
           "two",
