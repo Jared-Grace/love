@@ -518,7 +518,7 @@ export function bible_glyph_chapter_dan09() {
           "the",
           "$earth",
           "of",
-          "$proper_name$Egypt",
+          "$clamp+proper_name",
           "with",
           "a",
           "mighty",
