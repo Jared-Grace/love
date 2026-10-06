@@ -36,7 +36,7 @@ export function bible_glyph_chapter_exo24() {
           "the",
           "elders",
           "of",
-          "Israel,",
+          "$wrestling+heart_on_fire,",
           "and",
           "you",
           "are",
@@ -77,7 +77,7 @@ export function bible_glyph_chapter_exo24() {
         verse_number: 3,
         words: [
           "When",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$footprints",
           "and",
           "told",
@@ -115,7 +115,7 @@ export function bible_glyph_chapter_exo24() {
         verse_number: 4,
         words: [
           "And",
-          "Moses",
+          "$fishing_pole+proper_name",
           "wrote",
           "down",
           "all",
@@ -243,7 +243,7 @@ export function bible_glyph_chapter_exo24() {
         verse_number: 8,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$hand_receiving",
           "the",
           "$blood",
@@ -280,7 +280,7 @@ export function bible_glyph_chapter_exo24() {
         verse_number: 9,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "went",
           "up",
           "with",
@@ -401,7 +401,7 @@ export function bible_glyph_chapter_exo24() {
         verse_number: 13,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "set",
           "out",
           "with",
@@ -457,7 +457,7 @@ export function bible_glyph_chapter_exo24() {
         verse_number: 15,
         words: [
           "When",
-          "Moses",
+          "$fishing_pole+proper_name",
           "went",
           "up",
           "on",
