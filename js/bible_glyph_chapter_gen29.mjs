@@ -319,7 +319,7 @@ export function bible_glyph_chapter_gen29() {
       },
       {
         verse_number: 11,
-        words: ["Then", "Jacob", "kissed", "$proper_name$Rachel", "and", "wept", "$lifting."],
+        words: ["Then", "$hand+foot", "kissed", "$proper_name$Rachel", "and", "wept", "$lifting."],
       },
       {
         verse_number: 12,
@@ -480,7 +480,7 @@ export function bible_glyph_chapter_gen29() {
         verse_number: 18,
         words: [
           "Since",
-          "Jacob",
+          "$hand+foot",
           "$heart_red+doing",
           "$proper_name$Rachel,",
           "he",
@@ -524,7 +524,7 @@ export function bible_glyph_chapter_gen29() {
         verse_number: 20,
         words: [
           "So",
-          "Jacob",
+          "$hand+foot",
           "$kneeling+doing",
           "seven",
           "$year",
@@ -551,7 +551,7 @@ export function bible_glyph_chapter_gen29() {
         verse_number: 21,
         words: [
           "Finally",
-          "Jacob",
+          "$hand+foot",
           "$speech",
           "to",
           "$proper_name$Laban,",
@@ -720,7 +720,7 @@ export function bible_glyph_chapter_gen29() {
         verse_number: 28,
         words: [
           "And",
-          "Jacob",
+          "$hand+foot",
           "$hammer+doing",
           "just",
           "that.",
