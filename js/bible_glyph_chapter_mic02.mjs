@@ -361,7 +361,7 @@ export function bible_glyph_chapter_mic02() {
           "of",
           "you,",
           "O",
-          "Jacob;",
+          "$hand+foot;",
           "I",
           "will",
           "collect",
