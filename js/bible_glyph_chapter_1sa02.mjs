@@ -877,7 +877,7 @@ export function bible_glyph_chapter_1sa02() {
           "in",
           "$proper_name$Egypt",
           "under",
-          "Pharaoh",
+          "$house+proper_name",
           "$house?",
         ],
       },
