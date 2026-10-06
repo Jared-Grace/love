@@ -99,7 +99,7 @@ export function bible_glyph_chapter_lam05() {
           "We",
           "$hands_giving",
           "to",
-          "$proper_name$Egypt",
+          "$clamp+proper_name",
           "and",
           "$proper_name$Assyria",
           "to",
