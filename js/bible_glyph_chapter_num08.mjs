@@ -327,7 +327,7 @@ export function bible_glyph_chapter_num08() {
           "to",
           "have",
           "the",
-          "Levites",
+          "$handshake",
           "stand",
           "before",
           "$proper_name$Aaron",
@@ -600,7 +600,7 @@ export function bible_glyph_chapter_num08() {
         verse_number: 21,
         words: [
           "The",
-          "Levites",
+          "$handshake",
           "$bow+doing",
           "themselves",
           "and",
