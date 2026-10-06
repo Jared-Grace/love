@@ -1178,7 +1178,7 @@ export function bible_glyph_chapter_1ki18() {
           "$fire",
           "of",
           "$father+map,",
-          "$proper_name$Isaac,",
+          "$laughing+proper_name,",
           "and",
           "$wrestling+heart_on_fire,",
           "let",
