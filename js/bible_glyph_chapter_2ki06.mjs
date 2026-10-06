@@ -594,7 +594,7 @@ export function bible_glyph_chapter_2ki06() {
         verse_number: 19,
         words: [
           "And",
-          "Elisha",
+          "$heart_on_fire+rescue",
           "$speech",
           "them,",
           "This",
