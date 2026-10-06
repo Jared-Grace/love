@@ -77,7 +77,7 @@ export function bible_glyph_chapter_1sa15() {
           "$road",
           "$walking+pointing_up",
           "from",
-          "$proper_name$Egypt.",
+          "$clamp+proper_name.",
         ],
       },
       {
@@ -207,7 +207,7 @@ export function bible_glyph_chapter_1sa15() {
           "up",
           "out",
           "of",
-          "$proper_name$Egypt.",
+          "$clamp+proper_name.",
           "So",
           "the",
           "$proper_name$Kenites",
@@ -238,7 +238,7 @@ export function bible_glyph_chapter_1sa15() {
           "is",
           "east",
           "of",
-          "$proper_name$Egypt.",
+          "$clamp+proper_name.",
         ],
       },
       {
