@@ -30,6 +30,7 @@ export function app_code_lesson_statement_name_rectangles_cover_edges() {
   ("Each screen asks one pair that is apart, one rectangle inside the other, and two that cross, so the four answers differ. The apart pairs make the floor matter: corner to corner both lengths are -1, whose product 1 is wrong; side by side one is -1, whose product is negative.");
   ("Left and top edges wear the start colour, right and bottom edges the end colour, as in Do two rectangles overlap.");
   ("The writing is a first draft by Claude 2026-10-06.");
+  ("Taken out of the lessons 2026-10-06 by the human after reading it: twenty-six lines worked out four times is too large a computation. The plan is to split a large computation into small functions, teach functions one at a time, and then ask only a small piece of code at once, so this waits until functions are taught and is then rewritten as calls to functions for each rectangle's area and the shared squares. Its id stays frozen so the lesson can come back under the same address.");
   let names = ["l1", "r1", "t1", "b1", "l2", "r2", "t2", "b2"];
   let l = list_get(names, 0);
   let r = list_get(names, 1);
