@@ -242,7 +242,7 @@ export function bible_glyph_chapter_2sa11() {
       {
         verse_number: 8,
         words: [
-          "Then",
+          "$two_hearts+proper_name",
           "David",
           "$speech",
           "to",
