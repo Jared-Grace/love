@@ -15,7 +15,7 @@ export function bible_glyph_chapter_exo35() {
         verse_number: 1,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "assembled",
           "the",
           "whole",
@@ -752,7 +752,7 @@ export function bible_glyph_chapter_exo35() {
         verse_number: 30,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech",
           "to",
           "the",
