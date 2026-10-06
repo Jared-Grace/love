@@ -710,7 +710,7 @@ export function bible_glyph_chapter_1sa16() {
           "$proper_name$Jesse,",
           "$speech,",
           "Let",
-          "David",
+          "$two_hearts+proper_name",
           "remain",
           "in",
           "my",
