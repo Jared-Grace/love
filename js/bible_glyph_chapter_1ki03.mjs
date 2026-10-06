@@ -22,7 +22,7 @@ export function bible_glyph_chapter_1ki03() {
           "an",
           "alliance",
           "with",
-          "$proper_name$Pharaoh",
+          "$house+proper_name",
           "$king",
           "of",
           "$proper_name$Egypt",
