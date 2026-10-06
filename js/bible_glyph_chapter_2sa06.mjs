@@ -234,7 +234,7 @@ export function bible_glyph_chapter_2sa06() {
         verse_number: 8,
         words: [
           "Then",
-          "David",
+          "$two_hearts+proper_name",
           "became",
           "angry",
           "because",
@@ -564,7 +564,7 @@ export function bible_glyph_chapter_2sa06() {
         verse_number: 18,
         words: [
           "When",
-          "David",
+          "$two_hearts+proper_name",
           "had",
           "finished",
           "$walking+pointing_up",
@@ -631,7 +631,7 @@ export function bible_glyph_chapter_2sa06() {
         verse_number: 20,
         words: [
           "When",
-          "David",
+          "$two_hearts+proper_name",
           "$turn_back",
           "home",
           "to",
@@ -685,7 +685,7 @@ export function bible_glyph_chapter_2sa06() {
         verse_number: 21,
         words: [
           "But",
-          "David",
+          "$two_hearts+proper_name",
           "$speech",
           "to",
           "$proper_name$Michal,",
