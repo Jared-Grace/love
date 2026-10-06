@@ -156,7 +156,7 @@ export function bible_glyph_chapter_2ki01() {
           "surely",
           "$skull+doing.",
           "So",
-          "Elijah",
+          "$heart_on_fire+i_am",
           "$walking",
           "away.",
         ],
@@ -439,7 +439,7 @@ export function bible_glyph_chapter_2ki01() {
         verse_number: 12,
         words: [
           "Again",
-          "Elijah",
+          "$heart_on_fire+i_am",
           "$mouth,",
           "If",
           "I",
