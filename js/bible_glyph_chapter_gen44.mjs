@@ -544,7 +544,7 @@ export function bible_glyph_chapter_gen44() {
           "are",
           "equal",
           "to",
-          "$proper_name$Pharaoh",
+          "$house+proper_name",
           "himself.",
         ],
       },
