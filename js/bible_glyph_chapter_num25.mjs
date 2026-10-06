@@ -16,7 +16,7 @@ export function bible_glyph_chapter_num25() {
         verse_number: 1,
         words: [
           "While",
-          "Israel",
+          "$wrestling+heart_on_fire",
           "was",
           "staying",
           "in",
@@ -63,7 +63,7 @@ export function bible_glyph_chapter_num25() {
         verse_number: 3,
         words: [
           "So",
-          "Israel",
+          "$wrestling+heart_on_fire",
           "joined",
           "in",
           "worshiping",
@@ -120,7 +120,7 @@ export function bible_glyph_chapter_num25() {
         verse_number: 5,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech",
           "the",
           "judges",
