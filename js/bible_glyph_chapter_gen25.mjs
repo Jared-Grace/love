@@ -373,7 +373,7 @@ export function bible_glyph_chapter_gen25() {
           "the",
           "border",
           "of",
-          "$proper_name$Egypt,",
+          "$clamp+proper_name,",
           "as",
           "you",
           "$footprints",
