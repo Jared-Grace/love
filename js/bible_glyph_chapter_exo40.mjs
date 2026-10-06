@@ -392,7 +392,7 @@ export function bible_glyph_chapter_exo40() {
         verse_number: 18,
         words: [
           "When",
-          "Moses",
+          "$fishing_pole+proper_name",
           "set",
           "up",
           "the",
