@@ -64,7 +64,7 @@ export function bible_glyph_chapter_num12() {
         verse_number: 3,
         words: [
           "Now",
-          "Moses",
+          "$fishing_pole+proper_name",
           "was",
           "a",
           "very",
@@ -336,7 +336,7 @@ export function bible_glyph_chapter_num12() {
         verse_number: 13,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "cried",
           "out",
           "to",
