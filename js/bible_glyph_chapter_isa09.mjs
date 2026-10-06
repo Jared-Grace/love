@@ -432,7 +432,7 @@ export function bible_glyph_chapter_isa09() {
           "will",
           "cut",
           "off",
-          "$proper_name$Israel's",
+          "$wrestling+heart_on_fire's",
           "head",
           "and",
           "tail,",
