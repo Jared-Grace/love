@@ -105,7 +105,7 @@ export function bible_glyph_chapter_2sa11() {
         verse_number: 3,
         words: [
           "So",
-          "David",
+          "$two_hearts+proper_name",
           "$hand_sending",
           "and",
           "inquired",
@@ -137,7 +137,7 @@ export function bible_glyph_chapter_2sa11() {
         verse_number: 4,
         words: [
           "Then",
-          "David",
+          "$two_hearts+proper_name",
           "$hand_sending",
           "$angel",
           "to",
@@ -447,7 +447,7 @@ export function bible_glyph_chapter_2sa11() {
         verse_number: 13,
         words: [
           "Then",
-          "David",
+          "$two_hearts+proper_name",
           "invited",
           "Uriah",
           "to",
@@ -592,7 +592,7 @@ export function bible_glyph_chapter_2sa11() {
           "the",
           "$kneeling",
           "of",
-          "David,",
+          "$two_hearts+proper_name,",
           "fell,",
           "and",
           "$proper_name$Uriah",
@@ -827,7 +827,7 @@ export function bible_glyph_chapter_2sa11() {
         verse_number: 25,
         words: [
           "Then",
-          "David",
+          "$two_hearts+proper_name",
           "$speech",
           "the",
           "$angel,",
