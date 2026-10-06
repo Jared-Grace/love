@@ -191,7 +191,7 @@ export function bible_glyph_chapter_exo18() {
         verse_number: 7,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "went",
           "out",
           "to",
@@ -223,7 +223,7 @@ export function bible_glyph_chapter_exo18() {
         verse_number: 8,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "recounted",
           "to",
           "his",
@@ -242,7 +242,7 @@ export function bible_glyph_chapter_exo18() {
           "the",
           "$proper_name$Egyptians",
           "for",
-          "Israel",
+          "$wrestling+heart_on_fire",
           "sake,",
           "all",
           "the",
@@ -528,7 +528,7 @@ export function bible_glyph_chapter_exo18() {
         verse_number: 17,
         words: [
           "But",
-          "Moses",
+          "$fishing_pole+proper_name",
           "father",
           "in",
           "law",
@@ -764,7 +764,7 @@ export function bible_glyph_chapter_exo18() {
         verse_number: 25,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "chose",
           "capable",
           "men",
@@ -825,7 +825,7 @@ export function bible_glyph_chapter_exo18() {
         verse_number: 27,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$hand_sending",
           "his",
           "father",
