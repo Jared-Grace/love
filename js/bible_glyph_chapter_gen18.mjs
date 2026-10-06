@@ -172,7 +172,7 @@ export function bible_glyph_chapter_gen18() {
         verse_number: 6,
         words: [
           "So",
-          "Abraham",
+          "$father+map",
           "hurried",
           "into",
           "the",
@@ -200,7 +200,7 @@ export function bible_glyph_chapter_gen18() {
         verse_number: 7,
         words: [
           "Meanwhile,",
-          "Abraham",
+          "$father+map",
           "ran",
           "to",
           "the",
@@ -327,7 +327,7 @@ export function bible_glyph_chapter_gen18() {
         verse_number: 11,
         words: [
           "And",
-          "Abraham",
+          "$father+map",
           "and",
           "$proper_name$Sarah",
           "were",
@@ -790,7 +790,7 @@ export function bible_glyph_chapter_gen18() {
         verse_number: 27,
         words: [
           "Then",
-          "Abraham",
+          "$father+map",
           "answered,",
           "Now",
           "that",
