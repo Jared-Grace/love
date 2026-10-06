@@ -330,7 +330,7 @@ export function bible_glyph_chapter_1sa17() {
         verse_number: 12,
         words: [
           "Now",
-          "David",
+          "$two_hearts+proper_name",
           "was",
           "the",
           "$son",
@@ -398,7 +398,7 @@ export function bible_glyph_chapter_1sa17() {
         verse_number: 14,
         words: [
           "And",
-          "David",
+          "$two_hearts+proper_name",
           "was",
           "the",
           "youngest.",
@@ -542,7 +542,7 @@ export function bible_glyph_chapter_1sa17() {
         verse_number: 20,
         words: [
           "So",
-          "David",
+          "$two_hearts+proper_name",
           "got",
           "up",
           "early",
@@ -589,7 +589,7 @@ export function bible_glyph_chapter_1sa17() {
         verse_number: 21,
         words: [
           "And",
-          "Israel",
+          "$wrestling+heart_on_fire",
           "and",
           "the",
           "$proper_name$Philistines",
@@ -605,7 +605,7 @@ export function bible_glyph_chapter_1sa17() {
         verse_number: 22,
         words: [
           "Then",
-          "David",
+          "$two_hearts+proper_name",
           "left",
           "his",
           "supplies",
@@ -929,7 +929,7 @@ export function bible_glyph_chapter_1sa17() {
         verse_number: 31,
         words: [
           "Now",
-          "David's",
+          "$two_hearts+proper_name's",
           "$mouth",
           "were",
           "$ear",
@@ -946,7 +946,7 @@ export function bible_glyph_chapter_1sa17() {
         verse_number: 32,
         words: [
           "And",
-          "David",
+          "$two_hearts+proper_name",
           "$speech",
           "to",
           "$proper_name$Saul,",
@@ -1355,7 +1355,7 @@ export function bible_glyph_chapter_1sa17() {
         verse_number: 45,
         words: [
           "But",
-          "David",
+          "$two_hearts+proper_name",
           "$speech",
           "to",
           "the",
@@ -1525,7 +1525,7 @@ export function bible_glyph_chapter_1sa17() {
         verse_number: 49,
         words: [
           "Then",
-          "David",
+          "$two_hearts+proper_name",
           "$hand_sending",
           "into",
           "his",
@@ -1562,7 +1562,7 @@ export function bible_glyph_chapter_1sa17() {
         verse_number: 50,
         words: [
           "Thus",
-          "David",
+          "$two_hearts+proper_name",
           "prevailed",
           "$tray_out",
           "the",
@@ -1797,7 +1797,7 @@ export function bible_glyph_chapter_1sa17() {
         words: [
           "So",
           "when",
-          "David",
+          "$two_hearts+proper_name",
           "$turn_back",
           "from",
           "killing",
