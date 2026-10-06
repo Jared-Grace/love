@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_rectangles_join_across } from "./app_code_lesson_statement_name_rectangles_join_across.mjs";
 import { app_code_lesson_statement_name_rectangles_join_down } from "./app_code_lesson_statement_name_rectangles_join_down.mjs";
 import { app_code_lesson_statement_name_rectangles_columns_between } from "./app_code_lesson_statement_name_rectangles_columns_between.mjs";
 import { app_code_lesson_statement_name_rectangles_rows_between } from "./app_code_lesson_statement_name_rectangles_rows_between.mjs";
@@ -473,6 +474,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_rectangles_rows_between,
     app_code_lesson_statement_name_rectangles_columns_between,
     app_code_lesson_statement_name_rectangles_join_down,
+    app_code_lesson_statement_name_rectangles_join_across,
   ];
   return fns;
 }
