@@ -17,7 +17,7 @@ export function bible_glyph_chapter_1ki03() {
         verse_number: 1,
         words: [
           "Now",
-          "Solomon",
+          "$peace",
           "formed",
           "an",
           "alliance",
@@ -93,7 +93,7 @@ export function bible_glyph_chapter_1ki03() {
         verse_number: 3,
         words: [
           "And",
-          "Solomon",
+          "$peace",
           "$heart_red+doing",
           "the",
           "$i_am,",
@@ -248,7 +248,7 @@ export function bible_glyph_chapter_1ki03() {
           "of",
           "my",
           "$father",
-          "David.",
+          "$two_hearts+proper_name.",
           "But",
           "I",
           "am",
@@ -521,7 +521,7 @@ export function bible_glyph_chapter_1ki03() {
         verse_number: 15,
         words: [
           "Then",
-          "Solomon",
+          "$peace",
           "awoke,",
           "and",
           "indeed",
