@@ -298,7 +298,7 @@ export function bible_glyph_chapter_deu07() {
           "$house+proper_name",
           "$king",
           "of",
-          "$proper_name$Egypt.",
+          "$clamp+proper_name.",
         ],
       },
       {
@@ -532,7 +532,7 @@ export function bible_glyph_chapter_deu07() {
           "$thumbs_down",
           "diseases",
           "of",
-          "$proper_name$Egypt",
+          "$clamp+proper_name",
           "that",
           "you",
           "$lightbulb,",
@@ -635,7 +635,7 @@ export function bible_glyph_chapter_deu07() {
           "$house+proper_name",
           "and",
           "all",
-          "$proper_name$Egypt:",
+          "$clamp+proper_name:",
         ],
       },
       {
