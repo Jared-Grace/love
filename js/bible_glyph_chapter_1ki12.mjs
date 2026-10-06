@@ -968,7 +968,7 @@ export function bible_glyph_chapter_1ki12() {
           "your",
           "gods,",
           "O",
-          "Israel,",
+          "$wrestling+heart_on_fire,",
           "who",
           "brought",
           "you",
