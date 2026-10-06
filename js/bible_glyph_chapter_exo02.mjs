@@ -668,7 +668,7 @@ export function bible_glyph_chapter_exo02() {
           "the",
           "$king",
           "of",
-          "$proper_name$Egypt",
+          "$clamp+proper_name",
           "$skull+doing.",
           "The",
           "Israelites",
