@@ -30,7 +30,7 @@ export function bible_glyph_chapter_2sa06() {
       {
         verse_number: 2,
         words: [
-          "$two_hearts+proper_name",
+          "And",
           "he",
           "$walking",
           "with",
@@ -287,7 +287,7 @@ export function bible_glyph_chapter_2sa06() {
       {
         verse_number: 10,
         words: [
-          "$two_hearts+proper_name",
+          "So",
           "he",
           "was",
           "unwilling",

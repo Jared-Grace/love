@@ -689,7 +689,7 @@ export function bible_glyph_chapter_exo15() {
           "sweetened.",
           "There",
           "the",
-          "$i_am",
+          "LORD",
           "made",
           "for",
           "them",

@@ -1414,7 +1414,7 @@ export function bible_glyph_chapter_1sa25() {
       {
         verse_number: 40,
         words: [
-          "$two_hearts+proper_name",
+          "When",
           "his",
           "$kneeling",
           "$footprints",

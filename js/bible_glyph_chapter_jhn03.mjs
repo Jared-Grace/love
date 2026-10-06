@@ -865,7 +865,7 @@ export function bible_glyph_chapter_jhn03() {
           "of",
           "$fire,",
           "for",
-          "$heart_on_fire",
+          "God",
           "$hands_giving$s",
           "the",
           "$wind",

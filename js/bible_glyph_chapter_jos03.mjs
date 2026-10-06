@@ -169,7 +169,7 @@ export function bible_glyph_chapter_jos03() {
       {
         verse_number: 6,
         words: [
-          "$i_am+rescue",
+          "And",
           "he",
           "$speech",
           "to",
@@ -301,7 +301,7 @@ export function bible_glyph_chapter_jos03() {
       {
         verse_number: 10,
         words: [
-          "$i_am+rescue",
+          "He",
           "$speech,",
           "This",
           "is",
@@ -318,7 +318,7 @@ export function bible_glyph_chapter_jos03() {
           "you",
           "and",
           "that",
-          "$i_am+rescue",
+          "He",
           "will",
           "surely",
           "drive",

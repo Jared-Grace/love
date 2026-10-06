@@ -324,7 +324,7 @@ export function bible_glyph_chapter_gen29() {
       {
         verse_number: 12,
         words: [
-          "$hand+foot",
+          "He",
           "told",
           "$proper_name$Rachel",
           "that",

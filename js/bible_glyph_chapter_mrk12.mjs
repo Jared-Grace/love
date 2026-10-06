@@ -960,7 +960,7 @@ export function bible_glyph_chapter_mrk12() {
         "the",
         "temple",
         "courts,",
-        "$cross",
+        "He",
         "$speech,",
         "How",
         "can",

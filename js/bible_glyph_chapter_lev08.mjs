@@ -460,7 +460,7 @@ export function bible_glyph_chapter_lev08() {
       {
         verse_number: 20,
         words: [
-          "$fishing_pole+proper_name",
+          "He",
           "cut",
           "$ram",
           "into",
@@ -602,7 +602,7 @@ export function bible_glyph_chapter_lev08() {
           "their",
           "right",
           "$foot.",
-          "$fishing_pole+proper_name",
+          "Then",
           "he",
           "splattered",
           "$blood",
@@ -751,7 +751,7 @@ export function bible_glyph_chapter_lev08() {
       {
         verse_number: 29,
         words: [
-          "$fishing_pole+proper_name",
+          "He",
           "also",
           "$hand_receiving",
           "the",

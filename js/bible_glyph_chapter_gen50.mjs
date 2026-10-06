@@ -655,7 +655,7 @@ export function bible_glyph_chapter_gen50() {
       {
         verse_number: 23,
         words: [
-          "$i_am+plus",
+          "He",
           "$eye",
           "$proper_name$Ephraim's",
           "$son",

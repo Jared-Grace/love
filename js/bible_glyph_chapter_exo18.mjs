@@ -426,7 +426,7 @@ export function bible_glyph_chapter_exo18() {
       {
         verse_number: 14,
         words: [
-          "$fishing_pole+proper_name",
+          "When",
           "his",
           "father",
           "in",
