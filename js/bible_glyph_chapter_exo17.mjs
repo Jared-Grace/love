@@ -103,7 +103,7 @@ export function bible_glyph_chapter_exo17() {
           "us",
           "out",
           "of",
-          "$proper_name$Egypt",
+          "$clamp+proper_name",
           "to",
           "$skull+doing",
           "of",
