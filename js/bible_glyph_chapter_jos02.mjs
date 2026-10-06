@@ -16,7 +16,7 @@ export function bible_glyph_chapter_jos02() {
         verse_number: 1,
         words: [
           "Then",
-          "Joshua",
+          "$i_am+rescue",
           "$son",
           "of",
           "$proper_name$Nun",
