@@ -1227,7 +1227,7 @@ export function bible_glyph_chapter_deu32() {
         verse_number: 44,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$footprints",
           "with",
           "$proper_name$Joshua",
@@ -1254,7 +1254,7 @@ export function bible_glyph_chapter_deu32() {
         verse_number: 45,
         words: [
           "When",
-          "Moses",
+          "$fishing_pole+proper_name",
           "had",
           "finished",
           "$mouth",
