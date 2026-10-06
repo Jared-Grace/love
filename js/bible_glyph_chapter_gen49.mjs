@@ -15,7 +15,7 @@ export function bible_glyph_chapter_gen49() {
         verse_number: 1,
         words: [
           "Then",
-          "Jacob",
+          "$hand+foot",
           "called",
           "for",
           "his",
@@ -831,7 +831,7 @@ export function bible_glyph_chapter_gen49() {
         verse_number: 33,
         words: [
           "When",
-          "Jacob",
+          "$hand+foot",
           "had",
           "finished",
           "instructing",
