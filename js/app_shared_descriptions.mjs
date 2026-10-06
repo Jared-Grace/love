@@ -9,7 +9,7 @@ export function app_shared_descriptions() {
     index:
       "A set of free apps for reading the Bible in your own language, sharing verses with someone, and learning to program. There is nothing to sign up for.",
     bible:
-      "Read the Bible in any of dozens of languages, and read two of them together, verse by verse. It can keep a copy on your own device so it opens without a connection.",
+      "Read the Bible in any of hundreds of languages, and read two of them together, verse by verse. It can keep a copy on your own device so it opens without a connection.",
     search:
       "Search the whole Bible for any words you like, in any of dozens of languages, and read every verse that holds them. A search can be sent as a link, so whoever opens it sees the same verses you did.",
     next: "Shows the Bible passage somebody sent you a link to, with a way to keep reading on from there. Open it with no link and it still gives you somewhere to start.",
