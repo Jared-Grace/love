@@ -14,7 +14,7 @@ export function bible_glyph_chapter_1ki17() {
         verse_number: 1,
         words: [
           "Now",
-          "Elijah",
+          "$heart_on_fire+i_am",
           "the",
           "$proper_name$Tishbite,",
           "who",
