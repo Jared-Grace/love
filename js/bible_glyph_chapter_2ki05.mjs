@@ -344,7 +344,7 @@ export function bible_glyph_chapter_2ki05() {
           "the",
           "door",
           "of",
-          "Elisha",
+          "$heart_on_fire+rescue",
           "$house.",
         ],
       },
@@ -352,7 +352,7 @@ export function bible_glyph_chapter_2ki05() {
         verse_number: 10,
         words: [
           "Then",
-          "Elisha",
+          "$heart_on_fire+rescue",
           "$hand_sending",
           "him",
           "an",
