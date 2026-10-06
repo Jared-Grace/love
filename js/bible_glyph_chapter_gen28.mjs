@@ -14,7 +14,7 @@ export function bible_glyph_chapter_gen28() {
         verse_number: 1,
         words: [
           "So",
-          "Isaac",
+          "$laughing+proper_name",
           "called",
           "for",
           "$hand+foot",
@@ -141,7 +141,7 @@ export function bible_glyph_chapter_gen28() {
         verse_number: 5,
         words: [
           "So",
-          "Isaac",
+          "$laughing+proper_name",
           "$hand_sending",
           "$hand+foot",
           "$walking",
@@ -255,7 +255,7 @@ export function bible_glyph_chapter_gen28() {
           "$proper_name$Ishmael",
           "$son",
           "of",
-          "Abraham",
+          "$father+map",
           "and",
           "the",
           "sister",
@@ -275,7 +275,7 @@ export function bible_glyph_chapter_gen28() {
         verse_number: 10,
         words: [
           "Meanwhile",
-          "Jacob",
+          "$hand+foot",
           "$walking+tray_out",
           "Beersheba",
           "and",
@@ -497,7 +497,7 @@ export function bible_glyph_chapter_gen28() {
         verse_number: 16,
         words: [
           "When",
-          "Jacob",
+          "$hand+foot",
           "woke",
           "up,",
           "he",
@@ -604,7 +604,7 @@ export function bible_glyph_chapter_gen28() {
         verse_number: 20,
         words: [
           "Then",
-          "Jacob",
+          "$hand+foot",
           "made",
           "a",
           "vow,",
