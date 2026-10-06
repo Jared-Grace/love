@@ -438,7 +438,7 @@ export function bible_glyph_chapter_exo13() {
         words: [
           "And",
           "when",
-          "$proper_name$Pharaoh",
+          "$house+proper_name",
           "stubbornly",
           "refused",
           "to",
