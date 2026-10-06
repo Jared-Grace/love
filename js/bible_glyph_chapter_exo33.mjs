@@ -45,7 +45,7 @@ export function bible_glyph_chapter_exo33() {
           "promised",
           "to",
           "$father+map,",
-          "$proper_name$Isaac,",
+          "$laughing+proper_name,",
           "and",
           "$hand+foot",
           "when",
