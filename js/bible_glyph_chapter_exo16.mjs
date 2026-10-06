@@ -50,7 +50,7 @@ export function bible_glyph_chapter_exo16() {
           "the",
           "$earth",
           "of",
-          "$proper_name$Egypt.",
+          "$clamp+proper_name.",
         ],
       },
       {
@@ -91,7 +91,7 @@ export function bible_glyph_chapter_exo16() {
           "the",
           "$earth",
           "of",
-          "$proper_name$Egypt!",
+          "$clamp+proper_name!",
           "There",
           "we",
           "sat",
@@ -235,7 +235,7 @@ export function bible_glyph_chapter_exo16() {
           "the",
           "$earth",
           "of",
-          "$proper_name$Egypt,",
+          "$clamp+proper_name,",
         ],
       },
       {
@@ -1035,7 +1035,7 @@ export function bible_glyph_chapter_exo16() {
           "the",
           "$earth",
           "of",
-          "$proper_name$Egypt.",
+          "$clamp+proper_name.",
         ],
       },
       {
