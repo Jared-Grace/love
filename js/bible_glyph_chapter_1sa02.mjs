@@ -875,7 +875,7 @@ export function bible_glyph_chapter_1sa02() {
           "they",
           "were",
           "in",
-          "$proper_name$Egypt",
+          "$clamp+proper_name",
           "under",
           "$house+proper_name",
           "$house?",
