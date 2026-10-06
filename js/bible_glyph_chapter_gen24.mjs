@@ -18,7 +18,7 @@ export function bible_glyph_chapter_gen24() {
         words: [
           "By",
           "now",
-          "Abraham",
+          "$father+map",
           "was",
           "old",
           "and",
@@ -40,7 +40,7 @@ export function bible_glyph_chapter_gen24() {
         verse_number: 2,
         words: [
           "So",
-          "Abraham",
+          "$father+map",
           "$speech",
           "the",
           "chief",
@@ -510,7 +510,7 @@ export function bible_glyph_chapter_gen24() {
           "the",
           "$woman",
           "of",
-          "$proper_name$Abraham's",
+          "$father+map's",
           "$brother",
           "$proper_name$Nahor.",
         ],
@@ -1029,7 +1029,7 @@ export function bible_glyph_chapter_gen24() {
       },
       {
         verse_number: 34,
-        words: ["I", "am", "$proper_name$Abraham's", "$kneeling,", "he", "$speech."],
+        words: ["I", "am", "$father+map's", "$kneeling,", "he", "$speech."],
       },
       {
         verse_number: 35,
@@ -1586,7 +1586,7 @@ export function bible_glyph_chapter_gen24() {
         verse_number: 52,
         words: [
           "When",
-          "$proper_name$Abraham's",
+          "$father+map's",
           "$kneeling",
           "$ear",
           "their",
@@ -1789,7 +1789,7 @@ export function bible_glyph_chapter_gen24() {
           "nurse,",
           "along",
           "with",
-          "$proper_name$Abraham's",
+          "$father+map's",
           "$kneeling",
           "and",
           "his",
@@ -1860,7 +1860,7 @@ export function bible_glyph_chapter_gen24() {
         verse_number: 62,
         words: [
           "Now",
-          "Isaac",
+          "$laughing+proper_name",
           "had",
           "just",
           "$footprints",
@@ -1973,7 +1973,7 @@ export function bible_glyph_chapter_gen24() {
         verse_number: 67,
         words: [
           "And",
-          "Isaac",
+          "$laughing+proper_name",
           "$footprints",
           "her",
           "into",
@@ -1990,7 +1990,7 @@ export function bible_glyph_chapter_gen24() {
           "his",
           "$woman.",
           "And",
-          "Isaac",
+          "$laughing+proper_name",
           "$heart_red+doing",
           "her",
           "and",
