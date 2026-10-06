@@ -155,7 +155,7 @@ export function bible_glyph_chapter_num20() {
         verse_number: 6,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "and",
           "$proper_name$Aaron",
           "$footprints",
@@ -245,7 +245,7 @@ export function bible_glyph_chapter_num20() {
         verse_number: 9,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$hand_receiving",
           "the",
           "staff",
@@ -302,7 +302,7 @@ export function bible_glyph_chapter_num20() {
         verse_number: 11,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "raised",
           "his",
           "$hand",
@@ -810,7 +810,7 @@ export function bible_glyph_chapter_num20() {
         verse_number: 27,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$hammer+doing",
           "as",
           "the",
@@ -835,7 +835,7 @@ export function bible_glyph_chapter_num20() {
         verse_number: 28,
         words: [
           "After",
-          "Moses",
+          "$fishing_pole+proper_name",
           "had",
           "removed",
           "the",
@@ -858,7 +858,7 @@ export function bible_glyph_chapter_num20() {
           "the",
           "$mountain.",
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "and",
           "$proper_name$Eleazar",
           "came",
