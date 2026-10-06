@@ -65,7 +65,7 @@ export function bible_glyph_chapter_gen21() {
         verse_number: 3,
         words: [
           "And",
-          "Abraham",
+          "$father+map",
           "gave",
           "the",
           "$name_tag",
@@ -656,14 +656,14 @@ export function bible_glyph_chapter_gen21() {
       },
       {
         verse_number: 24,
-        words: ["And", "Abraham", "$speech,", "I", "swear", "it."],
+        words: ["And", "$father+map", "$speech,", "I", "swear", "it."],
       },
       {
         verse_number: 25,
         words: [
           "But",
           "when",
-          "Abraham",
+          "$father+map",
           "complained",
           "to",
           "$proper_name$Abimelech",
@@ -712,7 +712,7 @@ export function bible_glyph_chapter_gen21() {
         verse_number: 27,
         words: [
           "So",
-          "Abraham",
+          "$father+map",
           "$hand_receiving",
           "$sheep",
           "and",
@@ -872,7 +872,7 @@ export function bible_glyph_chapter_gen21() {
         verse_number: 34,
         words: [
           "And",
-          "Abraham",
+          "$father+map",
           "resided",
           "in",
           "the",
