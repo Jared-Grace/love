@@ -307,6 +307,9 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_rectangles_cover_edges: text_frozen(
       "name_rectangles_cover_edges",
     ),
+    app_code_lesson_statement_name_rectangle_wide_as_tall: text_frozen(
+      "name_rectangle_wide_as_tall",
+    ),
     app_code_lesson_statement_name_rectangles_rows_between: text_frozen(
       "name_rectangles_rows_between",
     ),
