@@ -469,7 +469,7 @@ export function bible_glyph_chapter_2ki03() {
         verse_number: 14,
         words: [
           "Then",
-          "Elisha",
+          "$heart_on_fire+rescue",
           "$speech,",
           "As",
           "surely",
