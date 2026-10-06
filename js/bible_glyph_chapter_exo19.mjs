@@ -73,7 +73,7 @@ export function bible_glyph_chapter_exo19() {
         verse_number: 3,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "went",
           "up",
           "to",
@@ -207,7 +207,7 @@ export function bible_glyph_chapter_exo19() {
         verse_number: 7,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$footprints",
           "and",
           "summoned",
@@ -249,7 +249,7 @@ export function bible_glyph_chapter_exo19() {
           "will",
           "$hammer+doing.",
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$turn_back",
           "$family",
           "$speech",
@@ -457,7 +457,7 @@ export function bible_glyph_chapter_exo19() {
         verse_number: 14,
         words: [
           "When",
-          "Moses",
+          "$fishing_pole+proper_name",
           "came",
           "down",
           "$tray_out",
@@ -548,7 +548,7 @@ export function bible_glyph_chapter_exo19() {
         verse_number: 17,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$walking+tray_out",
           "the",
           "$family",
@@ -714,7 +714,7 @@ export function bible_glyph_chapter_exo19() {
         verse_number: 23,
         words: [
           "But",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech",
           "to",
           "the",
@@ -788,7 +788,7 @@ export function bible_glyph_chapter_exo19() {
         verse_number: 25,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "went",
           "down",
           "to",
