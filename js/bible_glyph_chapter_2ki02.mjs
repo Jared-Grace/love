@@ -128,7 +128,7 @@ export function bible_glyph_chapter_2ki02() {
         verse_number: 4,
         words: [
           "And",
-          "Elijah",
+          "$heart_on_fire+i_am",
           "$speech",
           "to",
           "him,",
@@ -218,7 +218,7 @@ export function bible_glyph_chapter_2ki02() {
         verse_number: 6,
         words: [
           "And",
-          "Elijah",
+          "$heart_on_fire+i_am",
           "$speech",
           "to",
           "him,",
@@ -302,7 +302,7 @@ export function bible_glyph_chapter_2ki02() {
         verse_number: 8,
         words: [
           "And",
-          "Elijah",
+          "$heart_on_fire+i_am",
           "$hand_receiving",
           "his",
           "cloak,",
@@ -452,7 +452,7 @@ export function bible_glyph_chapter_2ki02() {
         verse_number: 12,
         words: [
           "As",
-          "Elisha",
+          "$heart_on_fire+rescue",
           "$eye",
           "it,",
           "he",
