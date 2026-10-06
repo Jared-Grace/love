@@ -80,7 +80,7 @@ export function bible_glyph_chapter_zec03() {
         verse_number: 3,
         words: [
           "Now",
-          "Joshua",
+          "$i_am+rescue",
           "was",
           "dressed",
           "in",
