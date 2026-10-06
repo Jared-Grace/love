@@ -15,7 +15,7 @@ export function bible_glyph_chapter_gen20() {
         verse_number: 1,
         words: [
           "And",
-          "Abraham",
+          "$father+map",
           "moved",
           "from",
           "there",
@@ -553,7 +553,7 @@ export function bible_glyph_chapter_gen20() {
         verse_number: 17,
         words: [
           "And",
-          "Abraham",
+          "$father+map",
           "$hands_praying",
           "to",
           "$fire,",
@@ -599,7 +599,7 @@ export function bible_glyph_chapter_gen20() {
           "the",
           "$woman",
           "of",
-          "Abraham.",
+          "$father+map.",
         ],
       },
     ],
