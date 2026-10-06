@@ -49,7 +49,7 @@ export function bible_glyph_chapter_exo13() {
         verse_number: 3,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech",
           "to",
           "the",
@@ -519,7 +519,7 @@ export function bible_glyph_chapter_exo13() {
         verse_number: 17,
         words: [
           "When",
-          "Pharaoh",
+          "$house+proper_name",
           "let",
           "the",
           "$family",
