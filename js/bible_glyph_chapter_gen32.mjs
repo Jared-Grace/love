@@ -232,7 +232,7 @@ export function bible_glyph_chapter_gen32() {
         verse_number: 9,
         words: [
           "Then",
-          "Jacob",
+          "$hand+foot",
           "$speech,",
           "O",
           "$fire",
@@ -686,7 +686,7 @@ export function bible_glyph_chapter_gen32() {
         verse_number: 24,
         words: [
           "So",
-          "Jacob",
+          "$hand+foot",
           "was",
           "left",
           "all",
@@ -840,7 +840,7 @@ export function bible_glyph_chapter_gen32() {
         verse_number: 30,
         words: [
           "So",
-          "Jacob",
+          "$hand+foot",
           "called",
           "the",
           "$place",
@@ -912,7 +912,7 @@ export function bible_glyph_chapter_gen32() {
           "the",
           "socket",
           "of",
-          "Jacob",
+          "$hand+foot",
           "hip",
           "was",
           "struck",
