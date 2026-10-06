@@ -71,7 +71,7 @@ export function bible_glyph_chapter_jos07() {
         verse_number: 2,
         words: [
           "Meanwhile",
-          "Joshua",
+          "$i_am+rescue",
           "$hand_sending",
           "men",
           "from",
@@ -236,7 +236,7 @@ export function bible_glyph_chapter_jos07() {
         verse_number: 6,
         words: [
           "Then",
-          "Joshua",
+          "$i_am+rescue",
           "tore",
           "his",
           "clothes",
@@ -643,7 +643,7 @@ export function bible_glyph_chapter_jos07() {
         verse_number: 16,
         words: [
           "So",
-          "Joshua",
+          "$i_am+rescue",
           "arose",
           "early",
           "the",
@@ -744,7 +744,7 @@ export function bible_glyph_chapter_jos07() {
         verse_number: 19,
         words: [
           "So",
-          "Joshua",
+          "$i_am+rescue",
           "$speech",
           "to",
           "$proper_name$Achan,",
@@ -861,7 +861,7 @@ export function bible_glyph_chapter_jos07() {
         verse_number: 22,
         words: [
           "So",
-          "Joshua",
+          "$i_am+rescue",
           "$hand_sending",
           "$angel,",
           "who",
@@ -919,7 +919,7 @@ export function bible_glyph_chapter_jos07() {
         verse_number: 24,
         words: [
           "Then",
-          "Joshua,",
+          "$i_am+rescue,",
           "together",
           "with",
           "all",
