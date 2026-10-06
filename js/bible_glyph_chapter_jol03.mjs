@@ -590,7 +590,7 @@ export function bible_glyph_chapter_jol03() {
         verse_number: 20,
         words: [
           "But",
-          "Judah",
+          "$hands_raised+proper_name",
           "will",
           "be",
           "inhabited",
