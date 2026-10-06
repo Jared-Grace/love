@@ -916,7 +916,7 @@ export function bible_glyph_chapter_jhn01() {
         words: [
           "$proper_name$Andrew,",
           "$proper_name$Simon",
-          "$proper_name$Peter’s",
+          "$rock+proper_name’s",
           "$brother,",
           "was",
           "one",
