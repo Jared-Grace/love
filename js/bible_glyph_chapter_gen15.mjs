@@ -499,7 +499,7 @@ export function bible_glyph_chapter_gen15() {
           "the",
           "river",
           "of",
-          "$proper_name$Egypt",
+          "$clamp+proper_name",
           "to",
           "the",
           "great",
