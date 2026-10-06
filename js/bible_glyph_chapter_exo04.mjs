@@ -17,7 +17,7 @@ export function bible_glyph_chapter_exo04() {
         verse_number: 1,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "answered,",
           '"What',
           "if",
@@ -562,7 +562,7 @@ export function bible_glyph_chapter_exo04() {
         verse_number: 18,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$walking",
           "$turn_back",
           "to",
@@ -874,7 +874,7 @@ export function bible_glyph_chapter_exo04() {
         verse_number: 28,
         words: [
           "And",
-          "Moses",
+          "$fishing_pole+proper_name",
           "told",
           "$proper_name$Aaron",
           "everything",
@@ -901,7 +901,7 @@ export function bible_glyph_chapter_exo04() {
         verse_number: 29,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "and",
           "$proper_name$Aaron",
           "$walking",
