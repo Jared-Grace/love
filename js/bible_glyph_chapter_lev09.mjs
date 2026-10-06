@@ -148,7 +148,7 @@ export function bible_glyph_chapter_lev09() {
         verse_number: 6,
         words: [
           "And",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech,",
           "$speech",
           "This",
@@ -172,7 +172,7 @@ export function bible_glyph_chapter_lev09() {
         verse_number: 7,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech",
           "to",
           "$proper_name$Aaron,",
