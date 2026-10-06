@@ -66,7 +66,6 @@
   "functions_fold_sites_file_load",
   "functions_facts_remembered_write",
   "command_line_generic_parse_command",
-  "app_shared_bible_verses",
   "app_shared_bible_ref_chapter_codes",
   "app_replace_rule_set_function_declarations",
   "app_g_bless_overlay_cone_get",
