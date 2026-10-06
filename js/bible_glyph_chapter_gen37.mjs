@@ -745,7 +745,7 @@ export function bible_glyph_chapter_gen37() {
           "$walking",
           "down",
           "to",
-          "$proper_name$Egypt.",
+          "$clamp+proper_name.",
         ],
       },
       {
@@ -838,7 +838,7 @@ export function bible_glyph_chapter_gen37() {
           "$footprints",
           "him",
           "to",
-          "$proper_name$Egypt.",
+          "$clamp+proper_name.",
         ],
       },
       {
@@ -1036,7 +1036,7 @@ export function bible_glyph_chapter_gen37() {
           "sold",
           "$pointing_down",
           "in",
-          "$proper_name$Egypt",
+          "$clamp+proper_name",
           "to",
           "$proper_name$Potiphar,",
           "an",
