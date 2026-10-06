@@ -142,11 +142,11 @@ export function bible_glyph_chapter_num24() {
           "your",
           "$tent,",
           "O",
-          "Jacob,",
+          "$hand+foot,",
           "your",
           "dwellings,",
           "O",
-          "Israel.",
+          "$wrestling+heart_on_fire.",
         ],
       },
       {
