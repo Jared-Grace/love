@@ -117,7 +117,7 @@ export function bible_glyph_chapter_hag02() {
           "Be",
           "strong,",
           "O",
-          "Joshua",
+          "$i_am+rescue",
           "$son",
           "of",
           "$proper_name$Jehozadak,",
