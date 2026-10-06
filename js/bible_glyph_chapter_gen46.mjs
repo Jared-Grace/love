@@ -15,7 +15,7 @@ export function bible_glyph_chapter_gen46() {
         verse_number: 1,
         words: [
           "So",
-          "Israel",
+          "$wrestling+heart_on_fire",
           "set",
           "out",
           "with",
@@ -647,7 +647,7 @@ export function bible_glyph_chapter_gen46() {
           "the",
           "$house",
           "of",
-          "Jacob",
+          "$hand+foot",
           "who",
           "$footprints",
           "to",
@@ -724,7 +724,7 @@ export function bible_glyph_chapter_gen46() {
         verse_number: 30,
         words: [
           "Then",
-          "Israel",
+          "$wrestling+heart_on_fire",
           "$speech",
           "to",
           "$i_am+plus,",
