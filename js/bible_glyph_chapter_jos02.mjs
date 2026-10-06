@@ -337,7 +337,7 @@ export function bible_glyph_chapter_jos02() {
           "came",
           "out",
           "of",
-          "$proper_name$Egypt,",
+          "$clamp+proper_name,",
           "and",
           "what",
           "you",
