@@ -244,7 +244,7 @@ export function bible_glyph_chapter_gen32() {
           "of",
           "my",
           "$father",
-          "$proper_name$Isaac,",
+          "$laughing+proper_name,",
           "the",
           "$i_am",
           "who",
