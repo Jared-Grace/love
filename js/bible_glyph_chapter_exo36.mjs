@@ -59,7 +59,7 @@ export function bible_glyph_chapter_exo36() {
         verse_number: 2,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "summoned",
           "$proper_name$Bezalel",
           "and",
@@ -195,7 +195,7 @@ export function bible_glyph_chapter_exo36() {
         verse_number: 6,
         words: [
           "After",
-          "Moses",
+          "$fishing_pole+proper_name",
           "gave",
           "the",
           "order,",
