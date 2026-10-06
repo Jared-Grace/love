@@ -275,7 +275,7 @@ export function bible_glyph_chapter_psa118() {
         verse_number: 14,
         words: [
           "The",
-          "LORD",
+          "$i_am",
           "is",
           "my",
           "strength",
@@ -362,7 +362,7 @@ export function bible_glyph_chapter_psa118() {
         verse_number: 18,
         words: [
           "The",
-          "LORD",
+          "$i_am",
           "disciplined",
           "me",
           "severely,",
