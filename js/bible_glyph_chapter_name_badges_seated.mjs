@@ -1,5 +1,3 @@
-import { greater_than } from "./greater_than.mjs";
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
 import { bible_glyph_proper_name_numbers_cache } from "./bible_glyph_proper_name_numbers_cache.mjs";
@@ -10,6 +8,8 @@ import { bible_glyph_name_badge_entry } from "./bible_glyph_name_badge_entry.mjs
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { text_letters_only } from "./text_letters_only.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { subtract } from "./subtract.mjs";
 export async function bible_glyph_chapter_name_badges_seated(chapter_code) {
   "Every name badge in ONE written picture Bible chapter that stands for a name the table now draws, said one verse at a time with the entry that draws it.";
   "$plain chapter_code";
@@ -18,6 +18,7 @@ export async function bible_glyph_chapter_name_badges_seated(chapter_code) {
   "IT MATCHES THE LETTERS BEHIND THE BADGE AGAINST THE NAMES THE VERSE'S ORIGINAL CARRIES, the same join the badge was made with, so it can only undo a badge that join once wrote. A possessive keeps its ending - David's becomes the picture with the apostrophe and s behind it - and any other ending is refused, so Levi cannot claim the badge on Levites.";
   "IT ALSO TAKES A SEATED NAME STILL STANDING IN BARE LETTERS, and the first run left those out. The badge drawer never matched a possessive - David's has the letters Davids, which is no name - so the possessives stayed bare, and once David had a picture the verse drew one David and left the other in letters, which the underdrawn gate named. The same match draws both, with the same refusal of any other ending.";
   "IT DRAWS NO MORE OF A NAME THAN THE VERSE'S ORIGINAL HOLDS, AND WHEN THE WORDS IT COULD DRAW OUTNUMBER THE ONES STILL MISSING IT DRAWS NONE. Matching bare letters made two faults the badge-only match never had. A name the interlinear glosses as He or And matched every He and And in the verse, so Joshua was drawn over a He that meant God. And a badge kept by hand, because the English says Moses twice where the original says it once, was drawn again on the next run. Counting both sides stops both: a verse already drawn in full is left alone, and where there are more candidates than gaps, which one the original means is a reading this cannot make, so the words stay as they are for a person to choose. Rejected: matching only names whose gloss is the table's own spelling, which would also refuse the pronouns the original really does name.";
+  "A GLOSS WITH A BRACKET NEVER MATCHES BARE LETTERS. The interlinear writes a name the English turned into a pronoun as So [he] or When [his], and the one capital word in that is the joining word, not the name - so the count-limited run still drew So and When as David and Moses and left the he standing. The name is on the bracketed pronoun, and which he in the verse it is cannot be read off the spelling, so those wait for a person. Rejected: matching the bracketed word instead, which would claim every he in the verse.";
   "IT REPORTS AND DOES NOT DRAW, so the count of badges waiting can be had before a single one is touched.";
   arguments_assert(arguments, 1);
   let both = await bible_glyph_chapter_rows_filed(chapter_code);
@@ -40,6 +41,7 @@ export async function bible_glyph_chapter_name_badges_seated(chapter_code) {
       }
       names.push({
         letters,
+        bracketed: word.gloss.includes("["),
         glyph: word.glyph,
         strong: item,
       });
@@ -66,6 +68,9 @@ export async function bible_glyph_chapter_name_badges_seated(chapter_code) {
       }
       let rest = badged ? word.slice(prefix.length) : word;
       for (let name of names) {
+        if (not(badged) && name.bracketed) {
+          continue;
+        }
         let b2 = rest.startsWith(name.letters);
         if (not(b2)) {
           continue;
