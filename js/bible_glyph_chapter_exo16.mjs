@@ -207,7 +207,7 @@ export function bible_glyph_chapter_exo16() {
         verse_number: 6,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "and",
           "$proper_name$Aaron",
           "$speech",
@@ -278,7 +278,7 @@ export function bible_glyph_chapter_exo16() {
         verse_number: 8,
         words: [
           "And",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech,",
           "The",
           "$i_am",
@@ -326,7 +326,7 @@ export function bible_glyph_chapter_exo16() {
         verse_number: 9,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech",
           "to",
           "$proper_name$Aaron,",
@@ -509,7 +509,7 @@ export function bible_glyph_chapter_exo16() {
           "it",
           "was.",
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech",
           "them,",
           "It",
@@ -622,7 +622,7 @@ export function bible_glyph_chapter_exo16() {
         verse_number: 19,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech",
           "to",
           "them,",
@@ -1042,7 +1042,7 @@ export function bible_glyph_chapter_exo16() {
         verse_number: 33,
         words: [
           "So",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$speech",
           "$proper_name$Aaron,",
           "$hand_receiving",
