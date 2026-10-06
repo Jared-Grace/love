@@ -477,6 +477,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_rectangles_join_down,
     app_code_lesson_statement_name_rectangles_join_across,
     app_code_lesson_statement_name_rectangles_cover_together,
+    app_code_lesson_statement_name_rectangles_cover_edges,
   ];
   return fns;
 }
