@@ -1536,6 +1536,10 @@ export function bible_glyph_characters() {
       character: "😁",
     },
     {
+      name: "laughing",
+      character: "😂",
+    },
+    {
       name: "collision",
       character: "💥",
     },
