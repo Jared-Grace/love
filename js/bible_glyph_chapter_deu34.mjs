@@ -352,7 +352,7 @@ export function bible_glyph_chapter_deu34() {
           "the",
           "$earth",
           "of",
-          "$proper_name$Egypt,",
+          "$clamp+proper_name,",
           "to",
           "$house+proper_name",
           "and",
