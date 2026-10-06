@@ -60,7 +60,7 @@ export function bible_glyph_chapter_gen26() {
           "go",
           "down",
           "to",
-          "$proper_name$Egypt.",
+          "$clamp+proper_name.",
           "Settle",
           "in",
           "the",
