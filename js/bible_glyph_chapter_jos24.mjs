@@ -14,7 +14,7 @@ export function bible_glyph_chapter_jos24() {
         verse_number: 1,
         words: [
           "Then",
-          "Joshua",
+          "$i_am+rescue",
           "assembled",
           "all",
           "the",
@@ -45,7 +45,7 @@ export function bible_glyph_chapter_jos24() {
         verse_number: 2,
         words: [
           "And",
-          "Joshua",
+          "$i_am+rescue",
           "$speech",
           "to",
           "all",
@@ -667,7 +667,7 @@ export function bible_glyph_chapter_jos24() {
         verse_number: 19,
         words: [
           "But",
-          "Joshua",
+          "$i_am+rescue",
           "$speech",
           "to",
           "the",
@@ -753,7 +753,7 @@ export function bible_glyph_chapter_jos24() {
         verse_number: 22,
         words: [
           "Then",
-          "Joshua",
+          "$i_am+rescue",
           "$speech",
           "them,",
           "You",
@@ -896,7 +896,7 @@ export function bible_glyph_chapter_jos24() {
         verse_number: 27,
         words: [
           "And",
-          "Joshua",
+          "$i_am+rescue",
           "$speech",
           "to",
           "all",
@@ -946,7 +946,7 @@ export function bible_glyph_chapter_jos24() {
         verse_number: 28,
         words: [
           "Then",
-          "Joshua",
+          "$i_am+rescue",
           "sent",
           "the",
           "$family",
