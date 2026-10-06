@@ -1,11 +1,7 @@
-import { text_lower_is } from "./text_lower_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { text_split_space } from "./text_split_space.mjs";
-import { text_letters_only } from "./text_letters_only.mjs";
+import { bible_glyph_text_capital_words } from "./bible_glyph_text_capital_words.mjs";
 import { equal } from "./equal.mjs";
-import { text_upper_to } from "./text_upper_to.mjs";
 import { not } from "./not.mjs";
-import { list_add } from "./list_add.mjs";
 import { less_than } from "./less_than.mjs";
 export function bible_glyph_name_letters_or_null(text) {
   "$plain text";
@@ -15,22 +11,7 @@ export function bible_glyph_name_letters_or_null(text) {
   "EXACTLY ONE IS REQUIRED AND TWO ARE REFUSED. A gloss naming two capitalised words has not said which of them the number is for, and a match made on either would be a guess. Refusing is free: the word stays in letters, which is what it does today, so the cost of refusing wrongly is nothing at all and the cost of guessing wrongly is a badge on the wrong word.";
   "PUNCTUATION IS DROPPED AND NOTHING ELSE IS, so David and David, and David. all read as the same name. That is what lets an authored word carry the comma it needs and still be found.";
   arguments_assert(arguments, 1);
-  let found = [];
-  for (let part of text_split_space(text)) {
-    let letters_inner = text_letters_only(part);
-    let blank = equal(letters_inner, "");
-    if (blank) {
-      continue;
-    }
-    let first = letters_inner.slice(0, 1);
-    let right = text_upper_to(first);
-    let upper = equal(first, right);
-    let lower = text_lower_is(first);
-    let capital = upper && not(lower);
-    if (capital) {
-      list_add(found, letters_inner);
-    }
-  }
+  let found = bible_glyph_text_capital_words(text);
   let one = equal(found.length, 1);
   if (not(one)) {
     return null;
