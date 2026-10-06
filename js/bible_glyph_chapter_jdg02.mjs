@@ -189,7 +189,7 @@ export function bible_glyph_chapter_jdg02() {
         verse_number: 6,
         words: [
           "After",
-          "Joshua",
+          "$i_am+rescue",
           "had",
           "dismissed",
           "the",
@@ -261,7 +261,7 @@ export function bible_glyph_chapter_jdg02() {
         verse_number: 8,
         words: [
           "And",
-          "Joshua",
+          "$i_am+rescue",
           "$son",
           "of",
           "$proper_name$Nun,",
