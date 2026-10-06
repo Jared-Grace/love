@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_rectangles_cover_edges } from "./app_code_lesson_statement_name_rectangles_cover_edges.mjs";
 import { app_code_lesson_statement_name_rectangles_cover_together } from "./app_code_lesson_statement_name_rectangles_cover_together.mjs";
 import { app_code_lesson_statement_name_rectangles_join_across } from "./app_code_lesson_statement_name_rectangles_join_across.mjs";
 import { app_code_lesson_statement_name_rectangles_join_down } from "./app_code_lesson_statement_name_rectangles_join_down.mjs";
