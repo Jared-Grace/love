@@ -156,7 +156,7 @@ export function bible_glyph_chapter_exo04() {
           "the",
           "$fire",
           "of",
-          "$proper_name$Isaac,",
+          "$laughing+proper_name,",
           "and",
           "the",
           "$fire",
@@ -706,7 +706,7 @@ export function bible_glyph_chapter_exo04() {
         words: [
           "Then",
           "$speech",
-          "$proper_name$Pharaoh",
+          "$house+proper_name",
           "that",
           "this",
           "is",
