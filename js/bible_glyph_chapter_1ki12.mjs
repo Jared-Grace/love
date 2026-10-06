@@ -49,7 +49,7 @@ export function bible_glyph_chapter_1ki12() {
           "was",
           "still",
           "in",
-          "$proper_name$Egypt,",
+          "$clamp+proper_name,",
           "where",
           "he",
           "had",
@@ -978,7 +978,7 @@ export function bible_glyph_chapter_1ki12() {
           "the",
           "$earth",
           "of",
-          "$proper_name$Egypt.",
+          "$clamp+proper_name.",
         ],
       },
       {
