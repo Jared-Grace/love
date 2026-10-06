@@ -485,7 +485,7 @@ export function bible_glyph_chapter_mic07() {
           "came",
           "out",
           "of",
-          "$proper_name$Egypt,",
+          "$clamp+proper_name,",
           "I",
           "will",
           "$eye",
