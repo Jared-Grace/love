@@ -4,6 +4,7 @@ export function app_shared_descriptions() {
   "An app absent from here is not guessed at. Nothing is said rather than something vague, so a card is never built out of an assumption about an app nobody described.";
   "A page a person would never be sent is left out on purpose rather than overlooked - a dev sandbox, an error page, the developer's own inbox, a board of personal replies written in the first person. A card is for a link worth handing to somebody, so a page with nobody to hand it to wants none.";
   "EVERY SENTENCE HERE IS A CLAIM THAT GOES STALE WITHOUT SAYING SO, AND IT GOES STALE IN BOTH DIRECTIONS. These are read by strangers who have opened nothing, so each one promises on behalf of code that keeps being built underneath it. The search card has now been wrong twice: first it claimed a reader's own language when only English was indexed, and then, once two dozen languages had been indexed and shipped, it still said English - promising less than the app gave, which is the direction nobody ever reports. So before changing a sentence here, read the layer that would have to support it and read what actually shipped, because neither half settles it alone: a capability can sit finished in the source and be missing from the built page, and a thing the source no longer does can still be live in the page a reader has.";
+  "THE SCOPE OF A READING APP IS WHAT ITS PICKER OFFERS, WHICH IS NOT THE SAME AS WHAT ITS STORE WAS AUTHORED FROM. Three of these cards said \"the Bible\" when the app offered only chapters that had been uploaded - the New Testament, in two cases - and one looked as though it did and does not: the picture Bible's hand-written table holds a few hundred chapters, but its chapters are now built from the interlinear, so every chapter of the Bible opens and the card was right all along. So the figure to ask for is the one the picker reads, and nothing else. A seed table, a list of what has been authored by hand, a count of what some sweep last touched: each of those is a real number that answers a question nobody opening the app is asking, and each of them is wrong in whichever direction happens to flatter or shame the app.";
   let r = {
     index:
       "A set of free apps for reading the Bible in your own language, sharing verses with someone, and learning to program. There is nothing to sign up for.",
@@ -18,11 +19,11 @@ export function app_shared_descriptions() {
     replace:
       "A puzzle where you rewrite a row of symbols one rule at a time, from a single letter up to a working function. The same moves a compiler makes.",
     en_learn_bible:
-      "Read a verse of the Bible in your own language and then in English, with every English word explained in your language. The Bible teaches you English as you read it.",
+      "Read a verse of the New Testament in Urdu and then in English, with every English word explained in Urdu. The Bible teaches you English as you read it.",
     ceb_bible:
-      "Read the Bible in Cebuano with every word explained: what it means, and the root word it comes from. For reading Cebuano Scripture closely, whether it is your own language or one you are learning.",
+      "Read the New Testament in Cebuano with every word explained: what it means, and the root word it comes from. For reading Cebuano Scripture closely, whether it is your own language or one you are learning.",
     original_bible:
-      "Read the Bible in the Greek and Hebrew it was written in, with every word explained in English: what it means, how it is being used in that sentence, and the number you can look it up by.",
+      "Read the New Testament in the Greek it was written in, and the Old Testament's first seven books in Hebrew, with every word explained in English: what it means, how it is being used in that sentence, and the number you can look it up by.",
     emoji_bible:
       "The Bible written with pictures in place of its words, so a verse can be met without first knowing the language it was written in. A key under each verse shows the original words and the English beside them, and leaves the pictures for you to work out.",
     g: "A game where you walk a street and talk with the people you meet about Jesus. They ask hard questions and say what they do not believe, and you answer them from the Bible, matching each verse to the words that belong with it.",
