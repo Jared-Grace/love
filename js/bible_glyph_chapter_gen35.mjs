@@ -52,7 +52,7 @@ export function bible_glyph_chapter_gen35() {
         verse_number: 2,
         words: [
           "So",
-          "Jacob",
+          "$hand+foot",
           "$speech",
           "to",
           "his",
@@ -179,14 +179,14 @@ export function bible_glyph_chapter_gen35() {
           "the",
           "$son",
           "of",
-          "Jacob.",
+          "$hand+foot.",
         ],
       },
       {
         verse_number: 6,
         words: [
           "So",
-          "Jacob",
+          "$hand+foot",
           "$footprints",
           "to",
           "$proper_name$Luz",
@@ -404,7 +404,7 @@ export function bible_glyph_chapter_gen35() {
         verse_number: 14,
         words: [
           "So",
-          "Jacob",
+          "$hand+foot",
           "set",
           "up",
           "a",
@@ -717,7 +717,7 @@ export function bible_glyph_chapter_gen35() {
       },
       {
         verse_number: 28,
-        words: ["Isaac", "lived", "a", "hundred", "and", "eighty", "$sun."],
+        words: ["$laughing+proper_name", "lived", "a", "hundred", "and", "eighty", "$sun."],
       },
       {
         verse_number: 29,
