@@ -44,7 +44,7 @@ export function bible_glyph_chapter_gen31() {
         verse_number: 2,
         words: [
           "And",
-          "Jacob",
+          "$hand+foot",
           "$eye",
           "the",
           "face",
@@ -90,7 +90,7 @@ export function bible_glyph_chapter_gen31() {
         verse_number: 4,
         words: [
           "So",
-          "Jacob",
+          "$hand+foot",
           "sent",
           "and",
           "called",
@@ -439,7 +439,7 @@ export function bible_glyph_chapter_gen31() {
         verse_number: 17,
         words: [
           "Then",
-          "Jacob",
+          "$hand+foot",
           "got",
           "up",
           "and",
@@ -508,7 +508,7 @@ export function bible_glyph_chapter_gen31() {
         verse_number: 20,
         words: [
           "And",
-          "Jacob",
+          "$hand+foot",
           "stole",
           "the",
           "$heart_organ",
@@ -865,7 +865,7 @@ export function bible_glyph_chapter_gen31() {
           "$hand_receiving",
           "it.",
           "For",
-          "Jacob",
+          "$hand+foot",
           "$no_entry",
           "$lightbulb",
           "that",
@@ -1312,7 +1312,7 @@ export function bible_glyph_chapter_gen31() {
         verse_number: 45,
         words: [
           "So",
-          "Jacob",
+          "$hand+foot",
           "$hand_receiving",
           "a",
           "$stone",
@@ -1541,7 +1541,7 @@ export function bible_glyph_chapter_gen31() {
           "between",
           "us.",
           "And",
-          "Jacob",
+          "$hand+foot",
           "swore",
           "by",
           "the",
@@ -1556,7 +1556,7 @@ export function bible_glyph_chapter_gen31() {
         verse_number: 54,
         words: [
           "And",
-          "Jacob",
+          "$hand+foot",
           "offered",
           "a",
           "$sacrifice",
