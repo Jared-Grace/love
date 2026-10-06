@@ -169,7 +169,7 @@ export function bible_glyph_chapter_jos03() {
       {
         verse_number: 6,
         words: [
-          "And",
+          "$i_am+rescue",
           "he",
           "$speech",
           "to",
