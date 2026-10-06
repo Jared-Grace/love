@@ -244,7 +244,7 @@ export function bible_glyph_chapter_2ki17() {
           "the",
           "$hand",
           "of",
-          "$proper_name$Pharaoh",
+          "$house+proper_name",
           "$king",
           "of",
           "$proper_name$Egypt.",
