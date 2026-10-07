@@ -31,8 +31,8 @@ export function app_code_code_dark_lines_pointed_cut(cut) {
     if (colored) {
       return drawn;
     }
-    let digits = piece.slice(1);
-    let rest = cut(digits);
+    let verse_digits = piece.slice(1);
+    let rest = cut(verse_digits);
     let all = [["-", null], ...rest];
     return all;
   }
