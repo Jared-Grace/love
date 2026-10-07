@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
@@ -45,6 +46,7 @@ export function app_code_lesson_if_less_than() {
   ("Less than and not another comparison, because it is the first comparison the course taught and so the one read most often since.");
   ("Each screen asks two programs whose comparison is true and two whose comparison is false, and in each pair the if is first in one and last in the other. Every comparison is of two different numbers far enough apart to read at a glance, and no number is a word written out, so nothing can be found by spotting it.");
   ("Reading forwards, the wrong answers offered are the other two of the three things such a program could write out: both words, the word after the if alone, and the word inside the braces alone. Reading backwards, the wrong program offered is the same program with the two numbers swapped, which writes out the other answer, so it can only be turned down by working the comparison out.");
+  ("Two examples, one whose comparison is true and one whose comparison is false, asked by the human 2026-10-07 after reading the first draft, which showed one: one alone shows only one of the two ways an if can go. The examples are drawn two at a time from the front of a screen of programs, so each screen is put in an order whose every two in a row hold one of each. Not picked: drawing the two examples apart from the screen, which would need its own hook in the lesson base.");
   ("The writing is a first draft by Claude 2026-10-07.");
   let less = js_operator_less_than_symbol();
   let fruits = fruits_of_the_spirit();
@@ -70,7 +72,7 @@ export function app_code_lesson_if_less_than() {
     return last;
   }
   function batch_get() {
-    "four programs: true first, true last, false first, false last, eight different words";
+    "four programs: true first, true last, false first, false last, eight different words; ordered in two halves, each one true and one false and one if first and one if last, so the two examples drawn together show both ways";
     let words = list_shuffle_take(fruits, 8);
     let trues = list_shuffle_take(
       [
@@ -105,8 +107,19 @@ export function app_code_lesson_if_less_than() {
       return code;
     }
     let codes = list_map_index(pairs, program_of);
-    list_shuffle(codes);
-    return codes;
+    let item = list_get(codes, 0);
+    let item2 = list_get(codes, 3);
+    let one_half = [item, item2];
+    let item3 = list_get(codes, 1);
+    let item4 = list_get(codes, 2);
+    let other_half = [item3, item4];
+    each([one_half, other_half], list_shuffle);
+    let halves = [one_half, other_half];
+    list_shuffle(halves);
+    let a = list_first(halves);
+    let b = list_last(halves);
+    let ordered = list_concat(a, b);
+    return ordered;
   }
   let batch = app_code_batch_question_answer_fns(
     batch_get,
@@ -229,7 +242,7 @@ export function app_code_lesson_if_less_than() {
     above,
     name_id,
     batch_get: batch,
-    example_count: 1,
+    example_count: 2,
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     decoys,
