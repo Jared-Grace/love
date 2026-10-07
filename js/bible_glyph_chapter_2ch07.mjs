@@ -17,7 +17,7 @@ export function bible_glyph_chapter_2ch07() {
         verse_number: 1,
         words: [
           "When",
-          "$peace",
+          "$peace+proper_name",
           "had",
           "finished",
           "$hands_praying,",
@@ -144,7 +144,7 @@ export function bible_glyph_chapter_2ch07() {
         words: [
           "And",
           "$king",
-          "$peace",
+          "$peace+proper_name",
           "offered",
           "a",
           "sacrifice",
@@ -221,7 +221,7 @@ export function bible_glyph_chapter_2ch07() {
         verse_number: 7,
         words: [
           "Then",
-          "$peace",
+          "$peace+proper_name",
           "$sparkle+doing",
           "the",
           "middle",
@@ -272,7 +272,7 @@ export function bible_glyph_chapter_2ch07() {
           "at",
           "that",
           "time",
-          "$peace",
+          "$peace+proper_name",
           "$hammer+doing",
           "the",
           "feast",
@@ -374,7 +374,7 @@ export function bible_glyph_chapter_2ch07() {
         verse_number: 11,
         words: [
           "When",
-          "$peace",
+          "$peace+proper_name",
           "had",
           "finished",
           "the",
