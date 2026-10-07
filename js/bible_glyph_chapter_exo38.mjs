@@ -601,7 +601,7 @@ export function bible_glyph_chapter_exo38() {
           "With",
           "him",
           "was",
-          "$proper_name$Oholiab",
+          "$tent+father",
           "$son",
           "of",
           "$proper_name$Ahisamach,",
