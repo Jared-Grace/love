@@ -405,7 +405,7 @@ export function bible_glyph_chapter_exo01() {
           "$no_entry",
           "like",
           "the",
-          "$proper_name$Egyptian",
+          "$clamp+person",
           "$woman;",
           "they",
           "are",
