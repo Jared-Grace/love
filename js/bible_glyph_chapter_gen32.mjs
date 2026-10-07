@@ -48,7 +48,7 @@ export function bible_glyph_chapter_gen32() {
           "called",
           "that",
           "$place",
-          "$proper_name$Mahanaim.",
+          "$camp+proper_name.",
         ],
       },
       {
