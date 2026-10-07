@@ -167,7 +167,7 @@ export function bible_glyph_chapter_exo09() {
           "livestock",
           "of",
           "the",
-          "$proper_name$Egyptians",
+          "$clamp+person",
           "$skull+doing,",
           "but",
           "$no_entry",
@@ -331,7 +331,7 @@ export function bible_glyph_chapter_exo09() {
           "on",
           "all",
           "the",
-          "$proper_name$Egyptians.",
+          "$clamp+person.",
         ],
       },
       {
