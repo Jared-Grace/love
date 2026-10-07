@@ -16,7 +16,7 @@ export function bible_glyph_chapter_exo36() {
         words: [
           "So",
           "Bezalel,",
-          "$proper_name$Oholiab",
+          "$tent+father",
           "and",
           "every",
           "skilled",
@@ -63,7 +63,7 @@ export function bible_glyph_chapter_exo36() {
           "summoned",
           "$proper_name$Bezalel",
           "and",
-          "$proper_name$Oholiab",
+          "$tent+father",
           "and",
           "every",
           "skilled",
