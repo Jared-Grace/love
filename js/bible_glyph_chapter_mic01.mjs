@@ -43,7 +43,7 @@ export function bible_glyph_chapter_mic01() {
           "concerning",
           "$proper_name$Samaria",
           "and",
-          "$proper_name$Jerusalem.",
+          "$city+peace.",
         ],
       },
       {
@@ -174,7 +174,7 @@ export function bible_glyph_chapter_mic01() {
           "Is",
           "it",
           "$no_entry",
-          "$proper_name$Jerusalem?",
+          "$city+peace?",
         ],
       },
       {
@@ -313,7 +313,7 @@ export function bible_glyph_chapter_mic01() {
           "as",
           "far",
           "as",
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "itself.",
         ],
       },
@@ -393,7 +393,7 @@ export function bible_glyph_chapter_mic01() {
           "the",
           "gate",
           "of",
-          "$proper_name$Jerusalem.",
+          "$city+peace.",
         ],
       },
       {
