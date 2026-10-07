@@ -1,3 +1,4 @@
+import { app_supper_passages_count_gate_run } from "./app_supper_passages_count_gate_run.mjs";
 import { bible_glyph_names_unique_gate_run } from "./bible_glyph_names_unique_gate_run.mjs";
 import { psalms_song_letter_part_gate_run } from "./psalms_song_letter_part_gate_run.mjs";
 import { lyric_video_document_times_stepped_is_cases_gate_run } from "./lyric_video_document_times_stepped_is_cases_gate_run.mjs";
@@ -1187,6 +1188,7 @@ export function qa_gates() {
     js_bundle_chunk_ids_cases_gate_run,
     lyric_video_flags_ranked_cases_gate_run,
     lyric_video_document_times_stepped_is_cases_gate_run,
+    app_supper_passages_count_gate_run,
   ];
   return gates;
 }
