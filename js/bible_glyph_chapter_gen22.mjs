@@ -620,7 +620,7 @@ export function bible_glyph_chapter_gen22() {
           "his",
           "$brother",
           "$proper_name$Buz,",
-          "$proper_name$Kemuel",
+          "$pointing_up+heart_on_fire",
           "the",
           "$father",
           "of",
