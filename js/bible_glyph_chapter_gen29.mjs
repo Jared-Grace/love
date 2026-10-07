@@ -824,7 +824,7 @@ export function bible_glyph_chapter_gen29() {
           "she",
           "named",
           "him",
-          "$proper_name$Reuben,",
+          "$eyes+son,",
           "for",
           "she",
           "$speech,",
