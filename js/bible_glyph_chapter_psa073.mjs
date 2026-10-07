@@ -17,7 +17,7 @@ export function bible_glyph_chapter_psa073() {
           "A",
           "Psalm",
           "of",
-          "$proper_name$Asaph.",
+          "$crowd+proper_name.",
           "Surely",
           "$fire",
           "is",
