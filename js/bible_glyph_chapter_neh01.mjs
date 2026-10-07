@@ -74,7 +74,7 @@ export function bible_glyph_chapter_neh01() {
           "and",
           "also",
           "about",
-          "$proper_name$Jerusalem.",
+          "$city+peace.",
         ],
       },
       {
@@ -103,7 +103,7 @@ export function bible_glyph_chapter_neh01() {
           "The",
           "wall",
           "of",
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "is",
           "broken",
           "down,",
