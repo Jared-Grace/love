@@ -1416,6 +1416,42 @@ export function bible_glyph_artwork_names() {
       glyph: "leg",
       asset: "Leg",
     },
+    {
+      glyph: "broken_chain",
+      asset: "Broken chain",
+    },
+    {
+      glyph: "kitchen_knife",
+      asset: "Kitchen knife",
+    },
+    {
+      glyph: "ring_buoy",
+      asset: "Ring buoy",
+    },
+    {
+      glyph: "gem_stone",
+      asset: "Gem stone",
+    },
+    {
+      glyph: "fog",
+      asset: "Fog",
+    },
+    {
+      glyph: "nose",
+      asset: "Nose",
+    },
+    {
+      glyph: "flexed_biceps",
+      asset: "Flexed biceps",
+    },
+    {
+      glyph: "palm_up_hand",
+      asset: "Palm up hand",
+    },
+    {
+      glyph: "infinity",
+      asset: "Infinity",
+    },
   ];
   return names;
 }

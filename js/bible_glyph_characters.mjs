@@ -1731,6 +1731,42 @@ export function bible_glyph_characters() {
       name: "leg",
       character: "🦵",
     },
+    {
+      name: "broken_chain",
+      character: "⛓️‍💥",
+    },
+    {
+      name: "kitchen_knife",
+      character: "🔪",
+    },
+    {
+      name: "ring_buoy",
+      character: "🛟",
+    },
+    {
+      name: "gem_stone",
+      character: "💎",
+    },
+    {
+      name: "fog",
+      character: "🌫️",
+    },
+    {
+      name: "nose",
+      character: "👃",
+    },
+    {
+      name: "flexed_biceps",
+      character: "💪",
+    },
+    {
+      name: "palm_up_hand",
+      character: "🫴",
+    },
+    {
+      name: "infinity",
+      character: "♾️",
+    },
   ];
   return characters;
 }
