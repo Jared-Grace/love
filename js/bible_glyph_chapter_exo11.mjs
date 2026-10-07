@@ -93,7 +93,7 @@ export function bible_glyph_chapter_exo11() {
           "$eyes",
           "of",
           "the",
-          "$proper_name$Egyptians.",
+          "$clamp+person.",
           "Moreover",
           "the",
           "$man_beard",
