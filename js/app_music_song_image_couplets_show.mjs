@@ -70,8 +70,8 @@ export async function app_music_song_image_couplets_show(parent, song) {
       html_p_text_centered(parent, heading);
       let video_id = videos.verses[subtract(verse_shown, 1)];
       let left = text_combine("Watch verse ", verse_shown);
-      let watch = text_combine(left, " on YouTube");
-      app_music_youtube_link(parent, video_id, watch);
+      let watch_link = text_combine(left, " on YouTube");
+      app_music_youtube_link(parent, video_id, watch_link);
     }
     let words = song_image_couplet_sung(couplet.n);
     let references = song_image_couplet_references(couplet.n);
