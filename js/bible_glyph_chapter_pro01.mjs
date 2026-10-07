@@ -16,7 +16,7 @@ export function bible_glyph_chapter_pro01() {
           "The",
           "proverbs",
           "of",
-          "$peace",
+          "$peace+proper_name",
           "$son",
           "of",
           "$two_hearts+proper_name,",
