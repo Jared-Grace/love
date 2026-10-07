@@ -32,7 +32,7 @@ export function bible_glyph_chapter_rut02() {
           "the",
           "clan",
           "of",
-          "$proper_name$Elimelech,",
+          "$heart_on_fire+king,",
           "whose",
           "$name_tag",
           "was",
@@ -113,7 +113,7 @@ export function bible_glyph_chapter_rut02() {
           "the",
           "clan",
           "of",
-          "$proper_name$Elimelech.",
+          "$heart_on_fire+king.",
         ],
       },
       {
@@ -179,7 +179,7 @@ export function bible_glyph_chapter_rut02() {
           "the",
           "land",
           "of",
-          "$proper_name$Moab.",
+          "$father+proper_name.",
         ],
       },
       {
