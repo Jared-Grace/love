@@ -106,7 +106,7 @@ export function bible_glyph_chapter_sng08() {
           "O",
           "$woman",
           "of",
-          "$proper_name$Jerusalem,",
+          "$city+peace,",
           "do",
           "not",
           "arouse",
