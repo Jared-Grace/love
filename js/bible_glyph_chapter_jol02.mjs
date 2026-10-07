@@ -1008,7 +1008,7 @@ export function bible_glyph_chapter_jol02() {
           "$proper_name$Zion",
           "and",
           "in",
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "there",
           "will",
           "be",
