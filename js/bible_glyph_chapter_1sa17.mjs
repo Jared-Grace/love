@@ -1719,7 +1719,7 @@ export function bible_glyph_chapter_1sa17() {
           "$footprints",
           "it",
           "to",
-          "$proper_name$Jerusalem,",
+          "$city+peace,",
           "and",
           "he",
           "put",
