@@ -772,7 +772,7 @@ export function bible_glyph_chapter_ezk33() {
           "a",
           "fugitive",
           "from",
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "$footprints",
           "to",
           "me",
