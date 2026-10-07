@@ -219,7 +219,7 @@ export function bible_glyph_chapter_hos11() {
           "$hands_giving",
           "you",
           "like",
-          "$proper_name$Admah?",
+          "$brown_square+proper_name?",
           "How",
           "could",
           "I",
