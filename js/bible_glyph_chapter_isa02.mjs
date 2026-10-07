@@ -26,7 +26,7 @@ export function bible_glyph_chapter_isa02() {
           "concerning",
           "$hands_raised+proper_name",
           "and",
-          "$proper_name$Jerusalem.",
+          "$city+peace.",
         ],
       },
       {
@@ -124,7 +124,7 @@ export function bible_glyph_chapter_isa02() {
           "the",
           "$i_am",
           "from",
-          "$proper_name$Jerusalem.",
+          "$city+peace.",
         ],
       },
       {
