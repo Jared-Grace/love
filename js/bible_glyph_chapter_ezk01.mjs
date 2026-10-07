@@ -80,7 +80,7 @@ export function bible_glyph_chapter_ezk01() {
           "came",
           "directly",
           "to",
-          "$proper_name$Ezekiel",
+          "$might+heart_on_fire",
           "the",
           "$son",
           "of",
