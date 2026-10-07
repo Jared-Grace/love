@@ -1,8 +1,3 @@
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { less_than } from "./less_than.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_supper_references } from "./app_supper_references.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
@@ -10,19 +5,23 @@ import { list_size } from "./list_size.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { text_split_colon } from "./text_split_colon.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
+import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
 import { text_split_dash } from "./text_split_dash.mjs";
 import { number_from_text } from "./number_from_text.mjs";
-import { property_set } from "./property_set.mjs";
+import { less_than } from "./less_than.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
 import { text_from_number } from "./text_from_number.mjs";
+import { property_set } from "./property_set.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { app_supper_passages_get } from "./app_supper_passages_get.mjs";
 import { equal_assert_json } from "./equal_assert_json.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { json_equal_assert } from "./json_equal_assert.mjs";
-import { number_word_english_or_null } from "./number_word_english_or_null.mjs";
-import { null_is } from "./null_is.mjs";
+import { text_number_spelled } from "./text_number_spelled.mjs";
 import { app_shared_descriptions } from "./app_shared_descriptions.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_includes } from "./text_includes.mjs";
@@ -88,18 +87,8 @@ export function app_supper_passages_count_gate_run() {
     }
   }
   json_equal_assert(flat, verses);
-  let word = number_word_english_or_null(authored);
-  let unspellable = null_is(word);
-  if (unspellable) {
-    list_add(malformed, authored);
-  }
-  list_empty_is_assert_json(malformed, {
-    hint: text_combine_multiple([
-      "the supper page's reference list has grown past the numbers this gate can spell as a word, so the card sentence can no longer be checked against it - widen ",
-      fn_name("number_word_english_or_null"),
-      " or write the card with digits",
-    ]),
-  });
+  ("The count is turned into the word a sentence would have used by the one function in the repo that crosses that gap, rather than by a list of words kept here. A second list of the same words was written for this gate before the first one was found, which is the ordinary way a near-duplicate arrives: the words to search for were the words the new one would be called by rather than the words the old one already was.");
+  let word = text_number_spelled(authored);
   let descriptions = app_shared_descriptions();
   let cards = ["supper", "supper_tl"];
   let wrong = [];
