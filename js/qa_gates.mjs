@@ -1,3 +1,5 @@
+import { app_original_bible_gloss_genesis_onwards_gate_run } from "./app_original_bible_gloss_genesis_onwards_gate_run.mjs";
+import { gloss_chapters_run_offenders_gate_run } from "./gloss_chapters_run_offenders_gate_run.mjs";
 import { app_supper_passages_count_gate_run } from "./app_supper_passages_count_gate_run.mjs";
 import { bible_glyph_names_unique_gate_run } from "./bible_glyph_names_unique_gate_run.mjs";
 import { psalms_song_letter_part_gate_run } from "./psalms_song_letter_part_gate_run.mjs";
@@ -1189,6 +1191,8 @@ export function qa_gates() {
     lyric_video_flags_ranked_cases_gate_run,
     lyric_video_document_times_stepped_is_cases_gate_run,
     app_supper_passages_count_gate_run,
+    gloss_chapters_run_offenders_gate_run,
+    app_original_bible_gloss_genesis_onwards_gate_run,
   ];
   return gates;
 }
