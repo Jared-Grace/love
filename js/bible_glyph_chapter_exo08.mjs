@@ -680,7 +680,7 @@ export function bible_glyph_chapter_exo08() {
           "$house",
           "of",
           "the",
-          "$proper_name$Egyptians",
+          "$clamp+person",
           "will",
           "be",
           "full",
