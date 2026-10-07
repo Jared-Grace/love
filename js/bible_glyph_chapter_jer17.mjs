@@ -871,7 +871,7 @@ export function bible_glyph_chapter_jer17() {
           "the",
           "$earth",
           "of",
-          "$proper_name$Benjamin,",
+          "$son+right_arrow,",
           "$tray_out",
           "the",
           "foothills,",
