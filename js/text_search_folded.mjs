@@ -13,6 +13,8 @@ export function text_search_folded(text) {
   ("The compatibility split comes first, so a ligature such as fi written as one character, or a letter typed at full width, comes apart into the ordinary letters. A few letters carry their accent inside themselves rather than as a mark, and those are spelled out by hand.");
   ("Turkish writes i and ı as two letters, and capital I is the capital of ı. A plain lowercasing turns TANRI into tanri, which no Turkish verse holds, so ı is filed under i: a reader typing capitals, or a keyboard without ı, still finds the word. This costs Turkish the few word pairs told apart by the dot alone.");
   ("Hausa writes ƙ, ɗ, ɓ and ƴ as letters of their own, with a hook rather than a mark, so the split above leaves them whole. Most keyboards lack them, and a reader typing kaunaci found nothing where the Bible writes ƙaunaci; each is filed under its plain letter, at the cost of the few words told apart by the hook alone.");
+  ("Twi writes ɛ and ɔ as letters of their own, and they are filed under e and o for the same reason as the Hausa hooks.");
+  ("Igbo, Oromo and Twi write ʼ inside a word, a letter no keyboard has; a reader types ' there, and the search already cuts a word at '. So ʼ is turned into a space and cut the same way, and both halves are asked for. REJECTED: taking ʼ out, which leaves a typed ' still cutting - the two sides never meet. REJECTED: taking every apostrophe out, which would turn English God's into gods, the plural, and change every index already built.");
   ("REJECTED: lowercasing by the Turkish rule when Turkish is chosen. That needs the language handed to both sides, and an English reader typing I into a Turkish search would get ı.");
   arguments_assert(arguments, 1);
   let small = text_lower_to(text);
@@ -36,6 +38,9 @@ export function text_search_folded(text) {
     ƴ: "y",
     đ: "d",
     ٱ: "ا",
+    ɛ: "e",
+    ɔ: "o",
+    ʼ: " ",
     ـ: "",
   };
   let r = text_transform_lookup(joined, plain);
