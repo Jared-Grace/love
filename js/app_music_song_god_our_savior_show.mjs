@@ -1,3 +1,5 @@
+import { song_god_our_savior_youtube } from "./song_god_our_savior_youtube.mjs";
+import { app_music_youtube_link } from "./app_music_youtube_link.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_music_song_verses_start } from "./app_music_song_verses_start.mjs";
 import { song_god_our_savior_sections } from "./song_god_our_savior_sections.mjs";
@@ -35,6 +37,8 @@ export async function app_music_song_god_our_savior_show(parent, song) {
   let sections = song_god_our_savior_sections();
   let versions = song.versions();
   let folds = app_music_song_folds_show(parent);
+  let video_id = song_god_our_savior_youtube();
+  app_music_youtube_link(parent, video_id, "Watch the whole song on YouTube");
   let sung = [];
   let asked_all = [];
   let headed = false;
