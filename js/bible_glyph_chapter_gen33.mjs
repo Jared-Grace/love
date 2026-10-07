@@ -540,7 +540,7 @@ export function bible_glyph_chapter_gen33() {
           "the",
           "$son",
           "of",
-          "$proper_name$Hamor,",
+          "$donkey+proper_name,",
           "the",
           "$father",
           "of",
