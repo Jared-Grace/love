@@ -340,7 +340,7 @@ export function bible_glyph_chapter_num32() {
           "Not",
           "one",
           "except",
-          "$proper_name$Caleb",
+          "$dog+proper_name",
           "$son",
           "of",
           "$proper_name$Jephunneh",
