@@ -861,7 +861,7 @@ export function bible_glyph_chapter_exo35() {
           "both",
           "him",
           "and",
-          "$proper_name$Oholiab,",
+          "$tent+father,",
           "$son",
           "of",
           "$proper_name$Ahisamach,",
