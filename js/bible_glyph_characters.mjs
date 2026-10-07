@@ -1827,6 +1827,26 @@ export function bible_glyph_characters() {
       name: "umbrella",
       character: "☂️",
     },
+    {
+      name: "lemon",
+      character: "🍋",
+    },
+    {
+      name: "woozy_face",
+      character: "🥴",
+    },
+    {
+      name: "red_circle",
+      character: "🔴",
+    },
+    {
+      name: "old_key",
+      character: "🗝️",
+    },
+    {
+      name: "wood",
+      character: "🪵",
+    },
   ];
   return characters;
 }
