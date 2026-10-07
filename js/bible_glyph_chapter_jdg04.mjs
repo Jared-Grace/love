@@ -156,7 +156,7 @@ export function bible_glyph_chapter_jdg04() {
           "of",
           "$proper_name$Abinoam",
           "from",
-          "$proper_name$Kedesh",
+          "$sparkle+proper_name",
           "in",
           "$proper_name$Naphtali",
           "and",
@@ -298,7 +298,7 @@ export function bible_glyph_chapter_jdg04() {
           "with",
           "$proper_name$Barak",
           "to",
-          "$proper_name$Kedesh,",
+          "$sparkle+proper_name,",
         ],
       },
       {
@@ -358,7 +358,7 @@ export function bible_glyph_chapter_jdg04() {
           "which",
           "was",
           "near",
-          "$proper_name$Kedesh.",
+          "$sparkle+proper_name.",
         ],
       },
       {
