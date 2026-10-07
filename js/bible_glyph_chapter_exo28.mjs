@@ -36,7 +36,7 @@ export function bible_glyph_chapter_exo28() {
           "as",
           "priests,",
           "$proper_name$Nadab,",
-          "$proper_name$Abihu,",
+          "$father+pointing_back,",
           "$proper_name$Eleazar",
           "and",
           "$proper_name$Ithamar,",
