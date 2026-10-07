@@ -62,11 +62,11 @@ export function app_code_lesson_if_names_less_than() {
       context,
       app_code_lesson_if_less_than,
       [
-        "because ",
+        "",
         small_first,
         " is ",
         "true",
-        ", the lines inside ",
+        ", so the lines inside ",
         brace_left,
         " and ",
         brace_right,
