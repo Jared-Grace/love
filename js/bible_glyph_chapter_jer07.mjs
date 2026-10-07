@@ -511,7 +511,7 @@ export function bible_glyph_chapter_jer07() {
           "the",
           "streets",
           "of",
-          "$proper_name$Jerusalem?",
+          "$city+peace?",
         ],
       },
       {
@@ -1102,7 +1102,7 @@ export function bible_glyph_chapter_jer07() {
           "the",
           "streets",
           "of",
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "the",
           "$voice",
           "of",
