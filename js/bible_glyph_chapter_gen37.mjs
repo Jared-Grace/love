@@ -590,7 +590,7 @@ export function bible_glyph_chapter_gen37() {
         verse_number: 21,
         words: [
           "When",
-          "Reuben",
+          "$eyes+son",
           "$ear",
           "this,",
           "he",
@@ -635,7 +635,7 @@ export function bible_glyph_chapter_gen37() {
           "$hand",
           "on",
           "him.",
-          "$proper_name$Reuben",
+          "$eyes+son",
           "$speech",
           "this",
           "so",
@@ -845,7 +845,7 @@ export function bible_glyph_chapter_gen37() {
         verse_number: 29,
         words: [
           "When",
-          "Reuben",
+          "$eyes+son",
           "$turn_back",
           "to",
           "the",
