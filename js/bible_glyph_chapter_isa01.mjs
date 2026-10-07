@@ -19,7 +19,7 @@ export function bible_glyph_chapter_isa01() {
           "concerning",
           "$hands_raised+proper_name",
           "and",
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "that",
           "$proper_name$Isaiah",
           "$son",
