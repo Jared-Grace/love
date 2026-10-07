@@ -305,7 +305,7 @@ export function bible_glyph_chapter_isa09() {
           "the",
           "dwellers",
           "of",
-          "$proper_name$Samaria.",
+          "$guard+proper_name.",
           "With",
           "pride",
           "and",
