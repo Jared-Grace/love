@@ -137,7 +137,7 @@ export function bible_glyph_chapter_mic06() {
           "$proper_name$Balak",
           "$king",
           "of",
-          "$proper_name$Moab",
+          "$father+proper_name",
           "counseled",
           "and",
           "what",
