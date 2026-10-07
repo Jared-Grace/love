@@ -143,7 +143,7 @@ export function bible_glyph_chapter_mal03() {
           "of",
           "$hands_raised+proper_name",
           "and",
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "will",
           "please",
           "the",
