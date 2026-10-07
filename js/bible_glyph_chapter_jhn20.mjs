@@ -58,7 +58,7 @@ export function bible_glyph_chapter_jhn20() {
           "$plus",
           "$footprints",
           "to",
-          "$proper_name$Simon",
+          "$ear+proper_name",
           "$rock+proper_name",
           "$plus",
           "to",
@@ -157,7 +157,7 @@ export function bible_glyph_chapter_jhn20() {
         verse_number: 6,
         words: [
           "Then",
-          "$proper_name$Simon",
+          "$ear+proper_name",
           "$rock+proper_name",
           "$footprints",
           "following",
