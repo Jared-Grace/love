@@ -38,13 +38,13 @@ export async function app_music_song_god_our_savior_show(parent, song) {
   let versions = song.versions();
   let folds = app_music_song_folds_show(parent);
   let video_id = song_god_our_savior_youtube();
-  let watch = app_music_youtube_link(
+  let watch_link = app_music_youtube_link(
     parent,
     video_id,
     "Watch the whole song on YouTube",
   );
   let value = app_shared_spaced_large_gap();
-  html_style_margin_bottom(watch, value);
+  html_style_margin_bottom(watch_link, value);
   let sung = [];
   let asked_all = [];
   let headed = false;
