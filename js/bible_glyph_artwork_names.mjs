@@ -1340,6 +1340,82 @@ export function bible_glyph_artwork_names() {
       glyph: "nine",
       asset: "Keycap 9",
     },
+    {
+      glyph: "pig",
+      asset: "Pig",
+    },
+    {
+      glyph: "tooth",
+      asset: "Tooth",
+    },
+    {
+      glyph: "worm",
+      asset: "Worm",
+    },
+    {
+      glyph: "horse_racing",
+      asset: "Horse racing",
+    },
+    {
+      glyph: "flatbread",
+      asset: "Flatbread",
+    },
+    {
+      glyph: "pregnant_woman",
+      asset: "Pregnant woman",
+    },
+    {
+      glyph: "money_bag",
+      asset: "Money bag",
+    },
+    {
+      glyph: "party_popper",
+      asset: "Party popper",
+    },
+    {
+      glyph: "evergreen_tree",
+      asset: "Evergreen tree",
+    },
+    {
+      glyph: "pouring_liquid",
+      asset: "Pouring liquid",
+    },
+    {
+      glyph: "bathtub",
+      asset: "Bathtub",
+    },
+    {
+      glyph: "blossom",
+      asset: "Blossom",
+    },
+    {
+      glyph: "divide",
+      asset: "Divide",
+    },
+    {
+      glyph: "trophy",
+      asset: "Trophy",
+    },
+    {
+      glyph: "salt",
+      asset: "Salt",
+    },
+    {
+      glyph: "tornado",
+      asset: "Tornado",
+    },
+    {
+      glyph: "herb",
+      asset: "Herb",
+    },
+    {
+      glyph: "milky_way",
+      asset: "Milky way",
+    },
+    {
+      glyph: "leg",
+      asset: "Leg",
+    },
   ];
   return names;
 }

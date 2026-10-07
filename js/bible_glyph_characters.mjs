@@ -1655,6 +1655,82 @@ export function bible_glyph_characters() {
       name: "nine",
       character: "9️⃣",
     },
+    {
+      name: "pig",
+      character: "🐖",
+    },
+    {
+      name: "tooth",
+      character: "🦷",
+    },
+    {
+      name: "worm",
+      character: "🪱",
+    },
+    {
+      name: "horse_racing",
+      character: "🏇",
+    },
+    {
+      name: "flatbread",
+      character: "🫓",
+    },
+    {
+      name: "pregnant_woman",
+      character: "🤰",
+    },
+    {
+      name: "money_bag",
+      character: "💰",
+    },
+    {
+      name: "party_popper",
+      character: "🎉",
+    },
+    {
+      name: "evergreen_tree",
+      character: "🌲",
+    },
+    {
+      name: "pouring_liquid",
+      character: "🫗",
+    },
+    {
+      name: "bathtub",
+      character: "🛁",
+    },
+    {
+      name: "blossom",
+      character: "🌼",
+    },
+    {
+      name: "divide",
+      character: "➗",
+    },
+    {
+      name: "trophy",
+      character: "🏆",
+    },
+    {
+      name: "salt",
+      character: "🧂",
+    },
+    {
+      name: "tornado",
+      character: "🌪️",
+    },
+    {
+      name: "herb",
+      character: "🌿",
+    },
+    {
+      name: "milky_way",
+      character: "🌌",
+    },
+    {
+      name: "leg",
+      character: "🦵",
+    },
   ];
   return characters;
 }
