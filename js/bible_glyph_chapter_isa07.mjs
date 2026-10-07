@@ -47,7 +47,7 @@ export function bible_glyph_chapter_isa07() {
           "marched",
           "up",
           "to",
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "to",
           "wage",
           "war",
