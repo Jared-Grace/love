@@ -68,7 +68,7 @@ export function bible_glyph_chapter_jhn04() {
           "to",
           "pass",
           "through",
-          "$proper_name$Samaria.",
+          "$guard+proper_name.",
         ],
       },
       {
@@ -81,7 +81,7 @@ export function bible_glyph_chapter_jhn04() {
           "a",
           "$city",
           "of",
-          "$proper_name$Samaria",
+          "$guard+proper_name",
           "$speech",
           "$proper_name$Sychar,",
           "near",
@@ -95,7 +95,7 @@ export function bible_glyph_chapter_jhn04() {
           "to",
           "$pointing_back",
           "$son",
-          "$proper_name$Joseph.",
+          "$i_am+plus.",
         ],
       },
       {
