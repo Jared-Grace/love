@@ -344,7 +344,7 @@ export function bible_glyph_chapter_jhn02() {
           "went",
           "up",
           "to",
-          "$proper_name$Jerusalem.",
+          "$city+peace.",
         ],
       },
       {
@@ -586,7 +586,7 @@ export function bible_glyph_chapter_jhn02() {
           "He",
           "was",
           "$tray_in",
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "$tray_in",
           "the",
           "Passover,",
