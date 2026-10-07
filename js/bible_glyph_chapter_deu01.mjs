@@ -148,7 +148,7 @@ export function bible_glyph_chapter_deu01() {
           "the",
           "$earth",
           "of",
-          "$proper_name$Moab,",
+          "$father+proper_name,",
           "$fishing_pole+proper_name",
           "began",
           "to",
@@ -1063,7 +1063,7 @@ export function bible_glyph_chapter_deu01() {
         verse_number: 36,
         words: [
           "except",
-          "$proper_name$Caleb",
+          "$dog+proper_name",
           "$son",
           "of",
           "$proper_name$Jephunneh.",
