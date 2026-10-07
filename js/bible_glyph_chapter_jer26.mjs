@@ -669,7 +669,7 @@ export function bible_glyph_chapter_jer26() {
           "like",
           "a",
           "$field,",
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "will",
           "become",
           "a",
