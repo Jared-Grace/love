@@ -57,7 +57,7 @@ export function bible_glyph_chapter_1ki03() {
           "the",
           "wall",
           "around",
-          "$proper_name$Jerusalem.",
+          "$city+peace.",
         ],
       },
       {
@@ -534,7 +534,7 @@ export function bible_glyph_chapter_1ki03() {
           "he",
           "$footprints",
           "to",
-          "$proper_name$Jerusalem,",
+          "$city+peace,",
           "and",
           "stood",
           "before",
