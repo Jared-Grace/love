@@ -56,7 +56,7 @@ export function bible_glyph_chapter_zec09() {
           "and",
           "also",
           "against",
-          "$proper_name$Hamath,",
+          "$wall+proper_name,",
           "which",
           "borders",
           "it,",
