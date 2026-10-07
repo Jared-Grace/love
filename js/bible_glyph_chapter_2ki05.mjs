@@ -113,7 +113,7 @@ export function bible_glyph_chapter_2ki05() {
           "who",
           "is",
           "in",
-          "$proper_name$Samaria,",
+          "$guard+proper_name,",
           "he",
           "would",
           "cure",
