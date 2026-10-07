@@ -287,7 +287,7 @@ export function bible_glyph_chapter_jer18() {
           "the",
           "residents",
           "of",
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "that",
           "this",
           "is",
