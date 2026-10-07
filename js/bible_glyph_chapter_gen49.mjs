@@ -62,7 +62,7 @@ export function bible_glyph_chapter_gen49() {
       {
         verse_number: 3,
         words: [
-          "$proper_name$Reuben,",
+          "$eyes+son,",
           "you",
           "are",
           "my",
@@ -110,7 +110,7 @@ export function bible_glyph_chapter_gen49() {
       {
         verse_number: 5,
         words: [
-          "$proper_name$Simeon",
+          "$ear+proper_name",
           "and",
           "$handshake+proper_name",
           "are",
@@ -664,7 +664,7 @@ export function bible_glyph_chapter_gen49() {
       {
         verse_number: 27,
         words: [
-          "$proper_name$Benjamin",
+          "$son+right_arrow",
           "is",
           "a",
           "ravenous",
