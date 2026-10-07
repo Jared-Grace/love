@@ -444,7 +444,7 @@ export function bible_glyph_chapter_jud01() {
           "the",
           "seventh",
           "$away",
-          "$proper_name$Adam,",
+          "$person+proper_name,",
           "$plus",
           "prophesied",
           "about",
