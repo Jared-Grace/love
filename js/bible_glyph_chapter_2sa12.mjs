@@ -837,7 +837,7 @@ export function bible_glyph_chapter_2sa12() {
           "they",
           "named",
           "him",
-          "$peace.",
+          "$peace+proper_name.",
           "Now",
           "the",
           "$i_am",
