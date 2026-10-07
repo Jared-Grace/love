@@ -516,7 +516,7 @@ export function bible_glyph_chapter_2ki22() {
           "$proper_name$Shallum",
           "$son",
           "of",
-          "$proper_name$Tikvah,",
+          "$crossed_fingers+proper_name,",
           "the",
           "$son",
           "of",
