@@ -1,3 +1,5 @@
+import { js_code_expression_try } from "./js_code_expression_try.mjs";
+import { not } from "./not.mjs";
 import { app_code_lesson_quiz_token_select_variations_alone_not } from "./app_code_lesson_quiz_token_select_variations_alone_not.mjs";
 import { js_parse_try } from "./js_parse_try.mjs";
 import { null_is } from "./null_is.mjs";
@@ -59,8 +61,12 @@ export function app_code_lesson_quiz_token_select_variations(code) {
     let said_alike = js_code_same_meaning_is(code, candidate);
     return said_alike;
   }
+  ('A statement holding one value, console.log(n + " is even");, is asked too, of the value it holds: the reading below reads a line like that as its value, so a swap inside the call is judged like a swap anywhere else. Until 2026-10-08 only a bare value was asked, and that line accepted console.log(" is even" + n);, which writes out something else; the human asked for it to be fixed. A line holding no one value - let n = 5; or a whole program - is still not asked, as said above.');
+  let value_read = js_code_expression_try(code);
+  let b = null_is(value_read);
+  let value_held = not(b);
   let said = codes;
-  if (expression_is) {
+  if (value_held) {
     said = list_filter(codes, said_alike_is);
   }
   ("The value dealings come in AFTER that reading and not before it, because the reading is the very thing they are exempt from. They are the arrangements a learner cannot tell apart from the one the question wanted - the question's own shape with its own values handed round - and they carry their own judgment with them, made against the value the learner was shown rather than against the sentence they were not.");
