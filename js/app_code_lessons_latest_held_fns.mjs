@@ -1,3 +1,6 @@
+import { app_code_lesson_if_steps } from "./app_code_lesson_if_steps.mjs";
+import { app_code_lesson_number_text_join } from "./app_code_lesson_number_text_join.mjs";
+import { app_code_lesson_if_even } from "./app_code_lesson_if_even.mjs";
 import { app_code_lesson_if_name } from "./app_code_lesson_if_name.mjs";
 import { app_code_lesson_if_names_less_than } from "./app_code_lesson_if_names_less_than.mjs";
 import { app_code_lesson_if_not } from "./app_code_lesson_if_not.mjs";
@@ -59,10 +62,14 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-07: hold 242, If less than, until the human has read its first draft";
   "then deploy through 242, 2026-10-07: nothing held";
   "2026-10-07: hold 243 If a name, 244 If names compared and 245 If not, until the human has read their first drafts";
+  "2026-10-07: hold 246 Practice: steps, then if, 247 A number joined to a string and 248 If even, until the human has read their first drafts";
   let fns = [
     app_code_lesson_if_name,
     app_code_lesson_if_names_less_than,
     app_code_lesson_if_not,
+    app_code_lesson_if_steps,
+    app_code_lesson_number_text_join,
+    app_code_lesson_if_even,
   ];
   return fns;
 }

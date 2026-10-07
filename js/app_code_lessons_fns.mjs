@@ -1,3 +1,6 @@
+import { app_code_lesson_if_steps } from "./app_code_lesson_if_steps.mjs";
+import { app_code_lesson_number_text_join } from "./app_code_lesson_number_text_join.mjs";
+import { app_code_lesson_if_even } from "./app_code_lesson_if_even.mjs";
 import { app_code_lesson_if_name } from "./app_code_lesson_if_name.mjs";
 import { app_code_lesson_if_names_less_than } from "./app_code_lesson_if_names_less_than.mjs";
 import { app_code_lesson_if_not } from "./app_code_lesson_if_not.mjs";
@@ -491,6 +494,9 @@ export function app_code_lessons_fns() {
     app_code_lesson_if_name,
     app_code_lesson_if_names_less_than,
     app_code_lesson_if_not,
+    app_code_lesson_if_steps,
+    app_code_lesson_number_text_join,
+    app_code_lesson_if_even,
   ];
   return fns;
 }
