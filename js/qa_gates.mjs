@@ -1,3 +1,4 @@
+import { gloss_term_written_is_cases_gate_run } from "./gloss_term_written_is_cases_gate_run.mjs";
 import { apps_prod_descriptions_differences_gate_run } from "./apps_prod_descriptions_differences_gate_run.mjs";
 import { app_original_bible_gloss_genesis_onwards_gate_run } from "./app_original_bible_gloss_genesis_onwards_gate_run.mjs";
 import { gloss_chapters_run_offenders_gate_run } from "./gloss_chapters_run_offenders_gate_run.mjs";
