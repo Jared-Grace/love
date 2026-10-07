@@ -1,3 +1,4 @@
+import { app_code_lesson_number_text_plus } from "./app_code_lesson_number_text_plus.mjs";
 import { app_code_lesson_if_steps } from "./app_code_lesson_if_steps.mjs";
 import { app_code_lesson_number_text_join } from "./app_code_lesson_number_text_join.mjs";
 import { app_code_lesson_if_even } from "./app_code_lesson_if_even.mjs";
@@ -495,6 +496,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_if_names_less_than,
     app_code_lesson_if_not,
     app_code_lesson_if_steps,
+    app_code_lesson_number_text_plus,
     app_code_lesson_number_text_join,
     app_code_lesson_if_even,
   ];

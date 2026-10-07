@@ -1,3 +1,4 @@
+import { app_code_lesson_number_text_plus } from "./app_code_lesson_number_text_plus.mjs";
 import { text_size } from "./text_size.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -24,7 +25,6 @@ import { text_replace } from "./text_replace.mjs";
 import { list_first } from "./list_first.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_expression_string_concat } from "./app_code_lesson_expression_string_concat.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -33,6 +33,7 @@ export function app_code_lesson_number_text_join() {
   arguments_assert(arguments, 0);
   ('a number joined to a string: let n = 5; console.log(n + " is a number"); writes out 5 is a number');
   ('Asked for by the human 2026-10-07, who wanted console.log(n + " is a number") beside an if that writes out n + " is even"; that program needs a plus between a number and a string, which no lesson had shown, so it gets a lesson of its own first.');
+  ("Since 2026-10-07, asked for by the human, a number plus a string with no name is a lesson of its own just before this one, so the one new thing here is the name standing for the number it holds.");
   ("The wrong answers offered reading forwards are the name written out in place of what it holds, n is a number, and the two run together with no space, 5is a number: the last string lesson said a plus adds no space, and the space here is the one at the start of the string. Reading backwards, the wrong program puts the name in quotes, which writes out the name rather than the number.");
   ("The strings are three short endings, so the number is the part to watch.");
   ("The writing is a first draft by Claude 2026-10-07.");
@@ -96,34 +97,19 @@ export function app_code_lesson_number_text_join() {
     return found;
   }
   function above(root, context) {
-    "a plus joining two strings remembered, then a number and a string, then a name holding the number";
-    let box_one = app_code_container_light_blue(root);
-    app_code_remember_from_lesson(
-      box_one,
-      context,
-      app_code_lesson_expression_string_concat,
-      ["a ", plus, " between two strings joins them:"],
-    );
-    let left2 = app_code_string_code("love");
-    let right4 = app_code_string_code("joy");
-    let two_strings = js_code_binary_spaced_nb(left2, plus, right4);
-    let statement2 = js_code_console_log_statement(two_strings);
-    app_code_code_lines_writes_out(box_one, [statement2], "lovejoy");
+    "a number joined to a string remembered, then a name holding the number";
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, [
-      "A ",
-      plus,
-      " can join a number and a string too:",
-    ]);
+    app_code_remember_from_lesson(
+      box_two,
+      context,
+      app_code_lesson_number_text_plus,
+      ["a ", plus, " can join a number and a string:"],
+    );
     let ending = list_first(endings);
     let code4 = joined(5, ending);
     let statement3 = js_code_console_log_statement(code4);
     let value = text_combine("5", ending);
     app_code_code_lines_writes_out(box_two, [statement3], value);
-    html_div_cycle_code(box_two, [
-      "The string starts with a space, so a space comes after ",
-      "5",
-    ]);
     let box_three = app_code_container_light_blue(root);
     html_div_cycle_code(box_three, [
       "A name holding a number joins the same way:",
