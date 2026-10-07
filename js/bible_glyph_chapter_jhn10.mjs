@@ -583,7 +583,7 @@ export function bible_glyph_chapter_jhn10() {
           "took",
           "place",
           "$tray_in",
-          "$proper_name$Jerusalem.",
+          "$city+peace.",
           "It",
           "was",
           "winter,",
