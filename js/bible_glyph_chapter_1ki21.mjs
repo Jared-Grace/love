@@ -38,7 +38,7 @@ export function bible_glyph_chapter_1ki21() {
           "$proper_name$Ahab",
           "$king",
           "of",
-          "$proper_name$Samaria.",
+          "$guard+proper_name.",
         ],
       },
       {
@@ -608,7 +608,7 @@ export function bible_glyph_chapter_1ki21() {
           "who",
           "is",
           "in",
-          "$proper_name$Samaria.",
+          "$guard+proper_name.",
           "See,",
           "he",
           "is",
