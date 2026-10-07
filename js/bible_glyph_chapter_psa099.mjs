@@ -117,7 +117,7 @@ export function bible_glyph_chapter_psa099() {
           "among",
           "His",
           "$priest,",
-          "$proper_name$Samuel",
+          "$ear+heart_on_fire",
           "was",
           "among",
           "those",
