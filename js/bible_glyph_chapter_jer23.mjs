@@ -572,7 +572,7 @@ export function bible_glyph_chapter_jer23() {
           "the",
           "$megaphone",
           "of",
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "ungodliness",
           "has",
           "spread",
