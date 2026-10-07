@@ -1,3 +1,4 @@
+import { app_verses_choices_gate_run } from "./app_verses_choices_gate_run.mjs";
 import { app_next_bare_start_gate_run } from "./app_next_bare_start_gate_run.mjs";
 import { gloss_term_written_is_cases_gate_run } from "./gloss_term_written_is_cases_gate_run.mjs";
 import { apps_prod_descriptions_differences_gate_run } from "./apps_prod_descriptions_differences_gate_run.mjs";
@@ -1199,6 +1200,7 @@ export function qa_gates() {
     apps_prod_descriptions_differences_gate_run,
     gloss_term_written_is_cases_gate_run,
     app_next_bare_start_gate_run,
+    app_verses_choices_gate_run,
   ];
   return gates;
 }
