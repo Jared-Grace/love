@@ -65,7 +65,7 @@ export function bible_glyph_chapter_dan09() {
           "the",
           "$i_am",
           "to",
-          "$proper_name$Jeremiah",
+          "$up_arrow+i_am",
           "the",
           "$megaphone,",
           "that",
