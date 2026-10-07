@@ -1,37 +1,21 @@
+import { ebible_version_chapters_cache } from "./ebible_version_chapters_cache.mjs";
+import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bible_folder_source } from "./bible_folder_source.mjs";
-import { equal } from "./equal.mjs";
-import { door43_version_chapter_codes } from "./door43_version_chapter_codes.mjs";
-import { door43_version_chapter_verses } from "./door43_version_chapter_verses.mjs";
-import { null_is } from "./null_is.mjs";
 import { each_async } from "./each_async.mjs";
-import { ebible_chapters_each_verses_check_with } from "./ebible_chapters_each_verses_check_with.mjs";
 export async function bible_chapters_each_verses(
   bible_folder,
   lambda$chapter_code$verses,
 ) {
   "$plain bible_folder";
-  "Every chapter of a bible with its verses, whichever place the bible came from: a Door43 text is read off its own book files, and anything else the way an eBible text is read, checked first.";
+  "Every chapter of a bible with its verses, whichever place the bible came from, read off the one list of chapters the reading and the uploading already take - so a search finds the printing a reader is shown, Door43, Sword and the Berean publisher's copy alike.";
+  "REJECTED: a branch here for each place. It knew Door43 and read everything else the eBible way, so a Sword text would have built an empty index and the Berean Standard Bible would have been searched in the archive's older printing while being shown in the publisher's.";
   "The search index once read every bible the eBible way, and the Amharic bible is a Door43 text, so it found no chapter pages and built an index of no words at all while saying it had worked.";
   arguments_assert(arguments, 2);
-  let source = bible_folder_source(bible_folder);
-  if (equal(source, "door43")) {
-    let chapter_codes = await door43_version_chapter_codes(bible_folder);
-    async function chapter_each(chapter_code) {
-      let verses = await door43_version_chapter_verses(
-        bible_folder,
-        chapter_code,
-      );
-      if (null_is(verses)) {
-        return;
-      }
-      await lambda$chapter_code$verses(chapter_code, verses);
-    }
-    await each_async(chapter_codes, chapter_each);
-    return;
+  let chapters = await ebible_version_chapters_cache(bible_folder);
+  async function chapter_each(chapter) {
+    let chapter_code = property_get(chapter, "chapter_code");
+    let verses = property_get(chapter, "verses");
+    await lambda$chapter_code$verses(chapter_code, verses);
   }
-  await ebible_chapters_each_verses_check_with(
-    bible_folder,
-    lambda$chapter_code$verses,
-  );
+  await each_async(chapters, chapter_each);
 }
