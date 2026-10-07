@@ -190,7 +190,7 @@ export function bible_glyph_chapter_jos24() {
           "$sea,",
           "and",
           "the",
-          "$proper_name$Egyptians",
+          "$clamp+person",
           "pursued",
           "$father",
           "with",
