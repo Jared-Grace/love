@@ -743,7 +743,7 @@ export function bible_glyph_chapter_gen04() {
           "he",
           "called",
           "him",
-          "$proper_name$Enosh.",
+          "$man_beard+proper_name.",
           "At",
           "that",
           "time",
