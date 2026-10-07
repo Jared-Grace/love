@@ -29,7 +29,7 @@ export function app_code_lesson_if_true() {
   ("The first lesson of the if stage, in the roadmap the human gave on 2026-10-07: expressions, statements, if then else, looping, functions, each as easy as it can be made. The human's plan is three lessons - if (true) writes out, if (false) writes out nothing, then if with a name that may hold either - and this is the first. Between the second and the name, a comparison inside the parentheses, if (2 < 3), was added on the human's word, because it is one line and the learner has already worked 2 < 3 out inside console.log.");
   ("The only new thing is the if around a line. The line inside is console.log of a string, which the learner already has, and true is a value they have already written by hand. So the whole screen is the shape if (...) { ... } and the fact that, given true, the line inside runs.");
   ("A string is written out rather than a number. Strings and writing them out are both already taught, and a written-out word cannot be mistaken for the answer to a sum. The words are the fruits of the Spirit, the source the strings lessons drew from.");
-  ("The program is not unscrambled, for the reason the two-line lessons give: the tokens a program is taken apart into carry no line breaks, so a program on three lines would be built back as one.");
+  ("The program is not unscrambled whole, for the reason the two-line lessons give: the tokens a program is taken apart into carry no line breaks, so a program on three lines would be built back as one. It is built a line at a time instead, as those lessons do: the lines put in order, and the missing line built. The first draft left both off, copying only half of that rule; a learner asked to code it, 2026-10-07.");
   ("Filed under Statements, because in JavaScript an if is a statement. Not picked: a category of its own named for branching, a word the learner has not met; a category can be added when there is more than one kind of if to file.");
   ("The writing is a first draft by Claude 2026-10-07.");
   let fruits = fruits_of_the_spirit();
@@ -111,6 +111,7 @@ export function app_code_lesson_if_true() {
     example_count: 1,
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
+    lines: true,
     decoys: null,
     backwards_decoys: null,
     quiz_backwards_answer_count_override: null,
