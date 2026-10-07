@@ -38,11 +38,11 @@ export function bible_glyph_chapter_exo01() {
       },
       {
         verse_number: 2,
-        words: ["$proper_name$Reuben,", "$proper_name$Simeon,", "$handshake+proper_name,", "and", "$hands_raised+proper_name;"],
+        words: ["$eyes+son,", "$ear+proper_name,", "$handshake+proper_name,", "and", "$hands_raised+proper_name;"],
       },
       {
         verse_number: 3,
-        words: ["$proper_name$Issachar,", "$proper_name$Zebulun,", "and", "$proper_name$Benjamin;"],
+        words: ["$proper_name$Issachar,", "$proper_name$Zebulun,", "and", "$son+right_arrow;"],
       },
       {
         verse_number: 4,
