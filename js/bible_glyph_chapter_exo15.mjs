@@ -383,7 +383,7 @@ export function bible_glyph_chapter_exo15() {
           "the",
           "leaders",
           "of",
-          "$proper_name$Moab;",
+          "$father+proper_name;",
           "those",
           "who",
           "$person+house",
