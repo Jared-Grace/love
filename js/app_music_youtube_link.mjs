@@ -9,6 +9,6 @@ export function app_music_youtube_link(parent, video_id, text) {
   arguments_assert(arguments, 3);
   let div = html_div_centered(parent);
   let address = youtube_video_address(video_id);
-  let a = html_a_href_text_new_tab(div, address, text);
-  return a;
+  html_a_href_text_new_tab(div, address, text);
+  return div;
 }

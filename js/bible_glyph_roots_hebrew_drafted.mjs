@@ -7,7 +7,7 @@ export function bible_glyph_roots_hebrew_drafted() {
   "EACH ROW IS WRITTEN AS FOUR WORDS IN A LIST, number, root, picture, gloss, because thousands of rows spelled as objects would bury the decisions in their own punctuation.";
   "A TWO-PART PICTURE KEEPS THE PART THAT SAYS THE NAME. Benjamin, son of the right hand, is the son and the right arrow, because the hand alone loses which hand and son, hand and arrow is three parts; Hezekiah keeps the flexed arm without the up arrow. Where both parts carry the meaning, as in blessing, which is speech and a thumbs up, the name waits.";
   "A NAME ALSO WAITS WHEN ONE OF ITS PICTURES WOULD ARRIVE AS LETTERS OR IN THE READER'S OWN FONT. The artwork set has no brother and no family, so Ahab, Ahijah, Ammon and Amram wait, and sabbath, calf, sacrifice, iron and fruit are still English words, so Shabbethai, Eglon, Zebah, Barzillai and Ephrath wait with them; half a name drawn and half spelled stops reading as one name.";
-  "A NAME WAITS WHEN ITS TWO PICTURES ARE A COMMON PHRASE ON THEIR OWN. The last picture of one word and the first of the next can be read as one name, so Adonijah, the crown and I AM, would be read wherever the Lord GOD is said, eighty four times, against twenty six real ones; Hor is every mount before a name, and Shem every name before one. Where the false readings rival the real ones the name waits; Jonathan stays, read falsely twenty five times against eighty two, because the false reading is I AM giving, which is what those verses say.";
+  "A NAME WAITS WHEN ITS TWO PICTURES ARE A COMMON PHRASE ON THEIR OWN. The last picture of one word and the first of the next can be read as one name, so Adonijah, the crown and I AM, would be read wherever the Lord GOD is said, eighty four times, against twenty six real ones; Hor is every mount before a name, Shem every name before one, and Nathan every gift handed to someone named. Where the false reading is not what the verse says and is common, the name waits. Jonathan stays, read falsely twenty five times against eighty two, because the false reading is I AM giving, which is what those verses say; a name built as a sentence about God is misread only as that sentence.";
   let rows = [
     ["4124", "ab", "father+proper_name", "Moab, from father"],
     ["1144", "ben", "son+right_arrow", "Benjamin, son of the right hand"],
@@ -29,7 +29,6 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["623", "asaph", "crowd+proper_name", "Asaph, collector"],
     ["8095", "shama", "ear+proper_name", "Simeon, hearing"],
     ["2148", "zakar", "reminder_ribbon+i_am", "Zechariah, Jah has remembered"],
-    ["5416", "nathan", "hands_giving+proper_name", "Nathan, given"],
     ["1141", "banah", "brick+i_am", "Benaiah, Jah has built"],
     ["8098", "shama", "ear+i_am", "Shemaiah, Jah has heard"],
     ["3470", "yasha", "rescue+i_am", "Isaiah, Jah has saved"],
@@ -72,7 +71,6 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["2147", "zakar", "reminder_ribbon+proper_name", "Zichri, memorable"],
     ["471", "qum", "heart_on_fire+pointing_up", "Eliakim, God of raising"],
     ["30", "hu", "father+pointing_back", "Abihu, father of Him"],
-    ["4435", "malkah", "queen+proper_name", "Milcah, queen"],
     ["3048", "yada", "lightbulb+i_am", "Jedaiah, Jah has known"],
     ["1283", "ra", "thumbs_down+proper_name", "Beriah, in trouble"],
     ["453", "hu", "heart_on_fire+pointing_back", "Elihu, God of him"],
