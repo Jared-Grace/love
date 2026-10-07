@@ -25,7 +25,7 @@ export function bible_glyph_chapter_ecc01() {
           "$two_hearts+proper_name,",
           "$king",
           "in",
-          "$proper_name$Jerusalem.",
+          "$city+peace.",
         ],
       },
       {
@@ -272,7 +272,7 @@ export function bible_glyph_chapter_ecc01() {
           "over",
           "$wrestling+heart_on_fire",
           "in",
-          "$proper_name$Jerusalem.",
+          "$city+peace.",
         ],
       },
       {
@@ -383,7 +383,7 @@ export function bible_glyph_chapter_ecc01() {
           "before",
           "me",
           "over",
-          "$proper_name$Jerusalem,",
+          "$city+peace,",
           "and",
           "my",
           "$heart_organ",
