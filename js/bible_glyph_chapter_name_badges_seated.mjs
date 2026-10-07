@@ -21,14 +21,18 @@ export async function bible_glyph_chapter_name_badges_seated(chapter_code) {
   "IT DRAWS NO MORE OF A NAME THAN THE VERSE'S ORIGINAL HOLDS, AND WHEN THE WORDS IT COULD DRAW OUTNUMBER THE ONES STILL MISSING IT DRAWS NONE. Matching bare letters made two faults the badge-only match never had. A name the interlinear glosses as He or And matched every He and And in the verse, so Joshua was drawn over a He that meant God. And a badge kept by hand, because the English says Moses twice where the original says it once, was drawn again on the next run. Counting both sides stops both: a verse already drawn in full is left alone, and where there are more candidates than gaps, which one the original means is a reading this cannot make, so the words stay as they are for a person to choose. Rejected: matching only names whose gloss is the table's own spelling, which would also refuse the pronouns the original really does name.";
   "A GLOSS WITH A BRACKET NEVER MATCHES BARE LETTERS. The interlinear writes a name the English turned into a pronoun as So [he] or When [his], and the one capital word in that is the joining word, not the name - so the count-limited run still drew So and When as David and Moses and left the he standing. The name is on the bracketed pronoun, and which he in the verse it is cannot be read off the spelling, so those wait for a person. Rejected: matching the bracketed word instead, which would claim every he in the verse.";
   "A POSSESSIVE GLOSS READS AS ITS NAME, AND A GLOSS WITH TWO CAPITALS TAKES THE ONE THE CHAPTER ALREADY SPELLS THE NAME WITH, 2026-10-06. The gloss Pharaoh’s read as the letters Pharaohs, which is no name, so an authored Pharaoh's never matched and a badge spelled Pharaohs was drawn with its ending lost. And But Pharaoh, which the interlinear writes when a joining word opens the verse, has two capitals and was refused, so about a hundred Pharaohs stayed in letters. The spelling comes from the chapter's own glosses for the same number that hold one capital and no bracket, so the joining word is never one of them. Rejected: a list of joining words to skip, which is a guess about English that the chapter's own glosses already answer; and taking the last capital, which would draw the second of two names.";
+  "A ROOT PICTURE STANDING ALONE WHERE THE NAME NOW WEARS A TAG IS REDRAWN WITH THE TAG, 2026-10-07. Solomon was once seated as the peace picture with no tag, so his verses were drawn with peace alone, and when he took the tag those stayed behind reading peace. It is redrawn only where the verse's original holds no other word drawn with that same picture, because there the lone picture can only be the name; where shalom and Solomon share a verse, which one a lone peace is cannot be read off, so it waits for a person. The same count limit then holds. Rejected: redrawing every lone peace in a verse naming Solomon, which would tag the word peace itself.";
   "IT REPORTS AND DOES NOT DRAW, so the count of badges waiting can be had before a single one is touched.";
   arguments_assert(arguments, 1);
   let both = await bible_glyph_chapter_rows_filed(chapter_code);
   let told = await bible_glyph_proper_name_numbers_cache(both.testament_name);
   let glossed = [];
   let spellings = {};
+  let glyphs_by_verse = {};
   for (let row of both.rows) {
     for (let word of row.words) {
+      glyphs_by_verse[row.verse_number] ??= [];
+      glyphs_by_verse[row.verse_number].push(word.glyph);
       let item = String(word.strong);
       let b = told.numbers.includes(item);
       if (not(b)) {
@@ -94,6 +98,35 @@ export async function bible_glyph_chapter_name_badges_seated(chapter_code) {
       }
       let badged = word.startsWith(prefix);
       if (not(badged) && word.startsWith("$")) {
+        let glyphs = glyphs_by_verse[verse.verse_number] ?? [];
+        for (let name of names) {
+          let halves = name.glyph.split("+");
+          let tagged =
+            equal(halves.length, 2) && equal(halves[1], "proper_name");
+          if (not(tagged)) {
+            continue;
+          }
+          let alone = "$" + halves[0];
+          let b3 = word.startsWith(alone);
+          if (not(b3)) {
+            continue;
+          }
+          let suffix = word.slice(alone.length);
+          if (/^[+\w]/.test(suffix)) {
+            continue;
+          }
+          let shared = glyphs.includes(halves[0]);
+          if (shared) {
+            continue;
+          }
+          found.push({
+            verse_number: verse.verse_number,
+            word,
+            entry: "$" + name.glyph + suffix,
+            strong: name.strong,
+          });
+          break;
+        }
         continue;
       }
       let rest = badged ? word.slice(prefix.length) : word;
