@@ -557,7 +557,7 @@ export function bible_glyph_chapter_neh08() {
           "$city",
           "and",
           "in",
-          "$proper_name$Jerusalem,",
+          "$city+peace,",
           "$speech,",
           "$walking+tray_out",
           "out",
