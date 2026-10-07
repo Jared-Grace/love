@@ -242,7 +242,7 @@ export function bible_glyph_chapter_lam01() {
           "affliction",
           "and",
           "wandering,",
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "remembers",
           "all",
           "the",
@@ -278,7 +278,7 @@ export function bible_glyph_chapter_lam01() {
       {
         verse_number: 8,
         words: [
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "has",
           "sinned",
           "greatly;",
@@ -644,7 +644,7 @@ export function bible_glyph_chapter_lam01() {
           "become",
           "his",
           "foes;",
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "has",
           "become",
           "an",
