@@ -37,9 +37,8 @@ export function app_code_lesson_if_cases_generic(
   ("an if lesson whose programs are an if around a line writing out one word, beside a line writing out another, after some setup lines: parts_get(seed, runs) hands back [setup lines, condition] for a program whose if runs when runs is true, and does not when it is false");
   ("Each screen asks four programs: two whose if runs and two whose if does not, and in each of those the if is first in one and last in the other, with eight different words. The four are put in two halves, each one that runs and one that does not and one with the if first and one with it last, so the two examples drawn together show both ways, as the human asked of If less than 2026-10-07.");
   ("Reading forwards, the wrong answers offered are the other two of the three things such a program could write out: both words, the word after the if alone, and the word inside the braces alone. They are found by running the same program with true and then false inside the parentheses, so they are right whatever the condition is.");
-  ("Reading backwards, the wrong program offered is the same seed and the same words with runs turned the other way, so it writes out the other answer and can only be turned down by working the condition out. Each program is kept beside that opposite as it is made, because the opposite is a choice of the lesson rather than something read back out of the text.");
+  ("Reading backwards, the wrong program offered is the same seed and the same words with runs turned the other way, so it writes out the other answer and can only be turned down by working the condition out. The program is read back - its two words, by running it with true and then false inside the parentheses, and which seed, way and order made it, by making every one and keeping the one that matches - and then made again turned the other way. Not picked: keeping each program beside its opposite as it was made, the first draft, which failed because the review screen builds the lesson afresh and so asked about programs the fresh lesson had never made.");
   let fruits = fruits_of_the_spirit();
-  let opposites = [];
   function program_get(seed, runs, inside_word, plain_word, if_first) {
     let parts = parts_get(seed, runs);
     let setup = list_first(parts);
@@ -77,9 +76,6 @@ export function app_code_lesson_if_cases_generic(
       let inside_word = list_get(words_taken, index2);
       let plain_word = list_get(words_taken, index2 + 1);
       let code = program_get(seed, runs, inside_word, plain_word, if_first);
-      let n = not(runs);
-      let opposite = program_get(seed, n, inside_word, plain_word, if_first);
-      list_add(opposites, [code, opposite]);
       return code;
     }
     let codes = list_map_index(chosen, program_of);
@@ -121,11 +117,11 @@ export function app_code_lesson_if_cases_generic(
     let joined = list_join_newline(mapped);
     return joined;
   }
-  function decoys(question, answer) {
-    "of the three things such a program could write out - both words, the word after the if, the word inside - the two that are not the answer";
-    let code2 = condition_set(question, "true");
+  function outputs_get(code) {
+    "the three things the program could write out: [both words, the word after the if, the word inside], read by running it with true and then false inside the parentheses";
+    let code2 = condition_set(code, "true");
     let both = eval_console_log_lines(code2);
-    let code3 = condition_set(question, "false");
+    let code3 = condition_set(code, "false");
     let plain = eval_console_log_lines(code3);
     let both_lines = text_split_newline(both);
     function inside_is(line) {
@@ -133,7 +129,12 @@ export function app_code_lesson_if_cases_generic(
       return i;
     }
     let inside = list_find(both_lines, inside_is);
-    let all = [both, plain, inside];
+    let outputs = [both, plain, inside];
+    return outputs;
+  }
+  function decoys(question, answer) {
+    "of the three things such a program could write out - both words, the word after the if, the word inside - the two that are not the answer";
+    let all = outputs_get(question);
     function wrong(one) {
       let w = not_equal(one, answer);
       return w;
@@ -142,15 +143,34 @@ export function app_code_lesson_if_cases_generic(
     return found;
   }
   function backwards_decoys(question, answer) {
-    "the program made beside this one with runs turned the other way";
-    function made(pair) {
-      let left = list_first(pair);
+    "the same program with runs turned the other way";
+    let outputs = outputs_get(answer);
+    let plain = list_get(outputs, 1);
+    let inside = list_get(outputs, 2);
+    let ways = [];
+    function seed_each(seed) {
+      function runs_each(runs) {
+        function first_each(if_first) {
+          let code = program_get(seed, runs, inside, plain, if_first);
+          list_add(ways, [code, seed, runs, if_first]);
+        }
+        each([true, false], first_each);
+      }
+      each([true, false], runs_each);
+    }
+    each(seeds, seed_each);
+    function made(way) {
+      let left = list_first(way);
       let m = equal(left, answer);
       return m;
     }
-    let pair = list_find(opposites, made);
-    let last3 = list_last(pair);
-    let found = [last3];
+    let way = list_find(ways, made);
+    let item5 = list_get(way, 1);
+    let b2 = list_get(way, 2);
+    let n = not(b2);
+    let item6 = list_get(way, 3);
+    let opposite = program_get(item5, n, inside, plain, item6);
+    let found = [opposite];
     return found;
   }
   let name_id = app_code_lesson_statement_title_name_id_dots(words, title_code);
