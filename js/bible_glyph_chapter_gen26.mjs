@@ -37,7 +37,7 @@ export function bible_glyph_chapter_gen26() {
           "$laughing+proper_name",
           "$walking",
           "to",
-          "$proper_name$Abimelech",
+          "$father+king",
           "$king",
           "of",
           "the",
@@ -243,7 +243,7 @@ export function bible_glyph_chapter_gen26() {
           "a",
           "long",
           "$sun,",
-          "$proper_name$Abimelech",
+          "$father+king",
           "$king",
           "of",
           "the",
@@ -267,7 +267,7 @@ export function bible_glyph_chapter_gen26() {
         verse_number: 9,
         words: [
           "So",
-          "$proper_name$Abimelech",
+          "$father+king",
           "called",
           "$laughing+proper_name",
           "and",
@@ -306,7 +306,7 @@ export function bible_glyph_chapter_gen26() {
         verse_number: 10,
         words: [
           "And",
-          "$proper_name$Abimelech",
+          "$father+king",
           "$speech,",
           "What",
           "is",
@@ -341,7 +341,7 @@ export function bible_glyph_chapter_gen26() {
         verse_number: 11,
         words: [
           "So",
-          "Abimelech",
+          "$father+king",
           "$speech",
           "to",
           "all",
@@ -457,7 +457,7 @@ export function bible_glyph_chapter_gen26() {
         verse_number: 16,
         words: [
           "And",
-          "Abimelech",
+          "$father+king",
           "$speech",
           "to",
           "$laughing+proper_name,",
@@ -753,7 +753,7 @@ export function bible_glyph_chapter_gen26() {
         verse_number: 26,
         words: [
           "Then",
-          "Abimelech",
+          "$father+king",
           "$walking",
           "to",
           "him",
