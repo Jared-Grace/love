@@ -1452,6 +1452,18 @@ export function bible_glyph_artwork_names() {
       glyph: "infinity",
       asset: "Infinity",
     },
+    {
+      glyph: "sleeping_face",
+      asset: "Sleeping face",
+    },
+    {
+      glyph: "grimacing_face",
+      asset: "Grimacing face",
+    },
+    {
+      glyph: "leaf",
+      asset: "Leaf fluttering in wind",
+    },
   ];
   return names;
 }

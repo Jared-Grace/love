@@ -1,3 +1,4 @@
+import { app_code_lesson_quiz_token_select_variations_alone_not } from "./app_code_lesson_quiz_token_select_variations_alone_not.mjs";
 import { js_parse_try } from "./js_parse_try.mjs";
 import { null_is } from "./null_is.mjs";
 import { js_expression_is } from "./js_expression_is.mjs";
@@ -24,8 +25,7 @@ export function app_code_lesson_quiz_token_select_variations(code) {
   "A LINE THAT CANNOT STAND ALONE HAS ONE ORDERING: its own. The line asked for out of a longer program can be half a block, if (true) { or }, which does not read in by itself, so there is no tree to swap the sides of; its tiles are taken in the order it was written. Not picked: closing the block off to read it in, which would offer swaps inside the condition at the price of a second way of reading a line that only this case needs.";
   let tree_alone = js_parse_try(code);
   if (null_is(tree_alone)) {
-    let tokens = app_code_quiz_tokens(code);
-    let r2 = [tokens];
+    let r2 = app_code_lesson_quiz_token_select_variations_alone_not(code);
     return r2;
   }
   let expression_is = js_expression_is(code);

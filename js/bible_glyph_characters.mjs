@@ -1767,6 +1767,18 @@ export function bible_glyph_characters() {
       name: "infinity",
       character: "♾️",
     },
+    {
+      name: "sleeping_face",
+      character: "😴",
+    },
+    {
+      name: "grimacing_face",
+      character: "😬",
+    },
+    {
+      name: "leaf",
+      character: "🍃",
+    },
   ];
   return characters;
 }
