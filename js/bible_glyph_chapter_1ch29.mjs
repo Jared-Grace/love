@@ -977,7 +977,7 @@ export function bible_glyph_chapter_1ch29() {
           "he",
           "$castle+doing",
           "in",
-          "$proper_name$Jerusalem.",
+          "$city+peace.",
         ],
       },
       {
