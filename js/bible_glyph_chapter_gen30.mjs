@@ -308,7 +308,7 @@ export function bible_glyph_chapter_gen30() {
           "the",
           "$wheat",
           "$harvest",
-          "$proper_name$Reuben",
+          "$eyes+son",
           "$walking",
           "and",
           "found",
