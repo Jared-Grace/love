@@ -19,7 +19,7 @@ export function bible_glyph_chapter_isa02() {
           "was",
           "revealed",
           "to",
-          "$proper_name$Isaiah",
+          "$rescue+i_am",
           "$son",
           "of",
           "$proper_name$Amoz",
