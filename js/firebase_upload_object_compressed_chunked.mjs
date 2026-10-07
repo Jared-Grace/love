@@ -7,7 +7,7 @@ export async function firebase_upload_object_compressed_chunked(
   list,
   lambda$item,
 ) {
-  let cs = list_chunk(list, 20);
+  let cs = list_chunk(list, 100);
   async function lambda2(c) {
     async function lambda4(item) {
       let v = lambda$item(item);
