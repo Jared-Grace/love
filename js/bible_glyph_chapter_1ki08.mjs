@@ -42,7 +42,7 @@ export function bible_glyph_chapter_1ki08() {
           "before",
           "him",
           "in",
-          "$proper_name$Jerusalem,",
+          "$city+peace,",
           "to",
           "$walking+pointing_up",
           "up",
