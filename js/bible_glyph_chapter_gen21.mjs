@@ -205,7 +205,7 @@ export function bible_glyph_chapter_gen21() {
           "$son",
           "$proper_name$Hagar",
           "the",
-          "$proper_name$Egyptian",
+          "$clamp+person",
           "had",
           "borne",
           "to",
