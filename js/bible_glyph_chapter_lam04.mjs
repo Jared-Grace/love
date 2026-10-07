@@ -358,7 +358,7 @@ export function bible_glyph_chapter_lam04() {
           "the",
           "gates",
           "of",
-          "$proper_name$Jerusalem.",
+          "$city+peace.",
         ],
       },
       {
