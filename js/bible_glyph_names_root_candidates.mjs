@@ -1,5 +1,3 @@
-import { not_equal } from "./not_equal.mjs";
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_proper_name_numbers_cache } from "./bible_glyph_proper_name_numbers_cache.mjs";
 import { bible_glyph_roots_testament_table } from "./bible_glyph_roots_testament_table.mjs";
@@ -7,6 +5,7 @@ import { bible_glyph_roots_drawn_lookup } from "./bible_glyph_roots_drawn_lookup
 import { bible_strong_chapter_tallies_cache } from "./bible_strong_chapter_tallies_cache.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { property_set } from "./property_set.mjs";
@@ -14,8 +13,9 @@ import { bible_glyph_roots_hebrew } from "./bible_glyph_roots_hebrew.mjs";
 import { bible_glyph_roots } from "./bible_glyph_roots.mjs";
 import { bible_glyph_roots_root_lookup } from "./bible_glyph_roots_root_lookup.mjs";
 import { ebible_testament_old_name } from "./ebible_testament_old_name.mjs";
+import { equal } from "./equal.mjs";
+import { strongs_hebrew_dictionary } from "./strongs_hebrew_dictionary.mjs";
 import { property_exists } from "./property_exists.mjs";
-import { strongs_hebrew_definition } from "./strongs_hebrew_definition.mjs";
 import { strongs_greek_definition } from "./strongs_greek_definition.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
@@ -56,6 +56,7 @@ export async function bible_glyph_names_root_candidates(testament_name) {
   };
   let right = ebible_testament_old_name();
   let older = equal(testament_name, right);
+  let hebrew_dictionary = older ? await strongs_hebrew_dictionary() : null;
   let candidates = [];
   for (let strong of told.numbers) {
     if (property_exists(drawn, strong)) {
@@ -63,7 +64,7 @@ export async function bible_glyph_names_root_candidates(testament_name) {
     }
     let count = property_get_or_null(totals, strong) ?? 0;
     let entry = older
-      ? await strongs_hebrew_definition(strong)
+      ? property_get_or_null(hebrew_dictionary, "H" + strong)
       : await strongs_greek_definition(strong);
     let derivation = entry?.derivation ?? "";
     let definition = entry?.strongs_def ?? "";
