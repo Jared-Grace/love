@@ -1,3 +1,5 @@
+import { text_size } from "./text_size.mjs";
+import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -25,7 +27,6 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_expression_string_concat } from "./app_code_lesson_expression_string_concat.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { app_code_lesson_statement_title_name_id_dots } from "./app_code_lesson_statement_title_name_id_dots.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_number_text_join() {
@@ -73,7 +74,7 @@ export function app_code_lesson_number_text_join() {
   function decoys(question, answer) {
     "the name written out in place of the number, and the two run together with no space";
     let number = text_between(question, "= ", ";");
-    let skip_count = text_length(number);
+    let skip_count = text_size(number);
     let ending = text_skip(answer, skip_count);
     let named = text_combine(name, ending);
     let right3 = text_trim(ending);
@@ -142,7 +143,7 @@ export function app_code_lesson_number_text_join() {
       name,
     ]);
   }
-  let name_id = app_code_lesson_statement_title_name_id_dots(
+  let name_id = app_code_lesson_statement_title_name_id(
     "A number joined to a string",
     'n + " is a number"',
   );
