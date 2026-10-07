@@ -110,6 +110,7 @@ export function bible_glyph_roots_hebrew() {
   "PEACE IS THE RELIEVED FACE, AND SOLOMON IS THAT FACE AND THE TAG, 2026-10-07, on the human's word. Shalom is peace, wholeness and being well - is it well with him, go in peace, peace after war - and a calm, untroubled face holds all three. Peace was seated earlier as a glyph whose character was the English word, so the plain text printed peace, and Solomon wore that glyph with no tag, so his name read as the word peace. Rejected: the dove, which is yonah itself; the peace symbol, refused before as a movement's badge; the handshake, which is Levi; the white flag, which is surrender. Jerusalem still waits: the city and the face fill both places a name has, leaving no room for the tag.";
   "JERUSALEM IS THE CITY AND THE RELIEVED FACE, WITH NO TAG, 2026-10-07, chosen by the AI on the human's word that the AI decides and readers change it later. The name is Yeru and shalem in that order, and Hebrews gives Salem as peace, so the city comes first and peace second, the way Joshua is drawn in the name's own order. The city already tells the reader this is a place, which is the job the tag does for a person, so the tag is left off rather than made a third part. Rejected: the city and the tag, which drops the half of the name scripture explains and would fit every city; peace and the tag, which is Solomon's; the city, peace and the tag, which is three parts where a name has two; and peace before the city, which reverses the name.";
   "AN EGYPTIAN IS THE CLAMP AND THE PERSON, 2026-10-07, chosen by the AI. Mitsri is Egypt's own word with the ending that makes it one of its people, so it keeps Egypt's picture first and puts a person where Egypt has the tag. Rejected: the clamp and the tag, which is Egypt itself, and two words must read as two; the person before the clamp, which the table already uses for one who does a thing, so it would read as a person clamped; and the doer mark, which is for one who does the root's action, and an Egyptian does no clamping.";
+  "SIX MORE WERE SEATED THE SAME DAY BY THE AI, the commonest words still undrawn whose meaning one picture holds. Gam, also and even and too, takes the plus, because the Greek kai is drawn as the plus and carries the same also and even; the Hebrew and has no number of its own, so the plus was free here. Koh, thus, takes the flashlight and the manner mark, which is how the Greek houtos is drawn when it means thus, so the two testaments say this is what the LORD says alike; it no longer waits on the equals sign. Rejected for koh: the equals sign, still held back, and the right arrow, which is ken. Tsaphon, north, is the compass and the up arrow, the way a map puts north, so south can later be the compass and a down arrow. Rejected: the compass alone, which is any direction. Abad, perish, is the wilted flower, because what perishes withers and is lost. Rejected: the skull, which is muth, to die, and the explosion, which is shachat. Nus, flee, is the runner and the dash, running away; the runner alone is ruts, to run. Rejected: the runner and the back arrow, which reads as run back, a return. Gibbor, mighty man, is might and the person, the strong one, since might alone is Shaddai. Rejected: the superhero, which brings in a costume and a story the word never had. Left undrawn from the same list, with the reason: naar, boy or young man, because the boy is ben, son, and the child is yeled; hate, because the angry face is anger and the thumbs down is evil; and between, because the two-way arrow is the Greek one another.";
   "EGYPT IS THE CLAMP AND THE TAG, AND TSARAH, DISTRESS, IS THE CLAMP, 2026-10-06, on the human's word. Mitsrayim is heard in Hebrew as metsarim, the narrow places, and the tradition reads the exodus as coming up out of the narrows; tsarah is the same narrowness felt, a pressing in. The clamp is a thing pressed narrow. What Mitsrayim first meant is argued, and this draws the Hebrew hearing of it, which is the one the text's own readers made. Rejected: the pinching hand, which is small, qatan and mikros; a pyramid, which has no character; the desert, because Egypt is the Nile and not the sand. Not seated with it: tsar (6862), which is distress and also the adversary, a second root spelled alike, so one picture would draw the foe as a squeeze; and Mitsri, the Egyptian, which waits until a people-of-a-name shape is chosen, so the clamp alone stays distress.";
   "ISAAC AND PHARAOH WERE SEATED 2026-10-06 ON THE HUMAN'S WORD. TSACHAQ, LAUGH, IS THE FACE WITH TEARS OF JOY, and Isaac, he laughs, is that face and the tag, in both spellings, so Sarah's laugh and her son's name wear one picture. Rejected for the laugh: the smile, which is the Greek joy and ashre here; the beaming face, which is simchah; the face rolling on the floor, which reads as wild or mocking laughter where most of these laughs are not. PHARAOH IS THE HOUSE AND THE TAG: the title is the Egyptian great house, the palace that came to name the king. Rejected: the crown, which is a king and would read as king name; the house with the top arrow, great house, which is three marks where a name may hold two. Egypt and Aaron still wait, because what their names mean is argued.";
   "THE NEXT NAMES, THE SAME DAY, WERE CHOSEN BY HOW OFTEN THEY STAND AND WHETHER THE NAME SAYS SOMETHING A PICTURE CAN. A name built from God's name and a word is drawn as those two, in the name's own order, the way Joshua already was: Elijah is the fire and the I AM, my God is the LORD; Elisha the fire and the rescue, God saves. A name built from one word takes that word's picture and the tag: Jordan is the arrow down, from going down. Rejected for Jordan: water and the arrow down, which draws a river the name never says. Two were seated and drawn and then taken back the same day, because the gates said no. Jonathan, the LORD gave, was the I AM and the giving hands - but that is also how the page writes the LORD gave as two words, and twenty five verses then read as Jonathan; a name whose meaning is a whole short sentence collides with that sentence, so it waits for a shape the sentence never makes. Esau, hairy, was the hair and the tag - but the hair has no artwork, so half the name came from the reader's font; the goat was weighed, because the Hebrew he-goat is the hairy one, and refused, because the goat is the picture of a different root. Waiting, with the reason: Isaac, he laughs, has no laughing picture - the smile is the Greek joy and the beaming face is rejoicing; Egypt, Pharaoh, Aaron, Zion and Canaan have meanings that are argued over or not Hebrew at all, and a picture would draw one side of the argument; Jerusalem and Solomon wait on a peace picture; Samuel, which the book itself explains by asking rather than hearing, and Daniel, whose judging root is not seated, wait for those roots.";
@@ -1363,6 +1364,66 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "5892",
           glyph: "city",
+        },
+      ],
+    },
+    {
+      root: "gam",
+      gloss: "also, even, too",
+      words: [
+        {
+          strong: "1571",
+          glyph: "plus",
+        },
+      ],
+    },
+    {
+      root: "koh",
+      gloss: "thus, so, this is what",
+      words: [
+        {
+          strong: "3541",
+          glyph: "flashlight+manner",
+        },
+      ],
+    },
+    {
+      root: "tsaphon",
+      gloss: "north",
+      words: [
+        {
+          strong: "6828",
+          glyph: "compass+up_arrow",
+        },
+      ],
+    },
+    {
+      root: "abad",
+      gloss: "perish, be lost, destroy",
+      words: [
+        {
+          strong: "6",
+          glyph: "wilted_flower",
+        },
+      ],
+    },
+    {
+      root: "nus",
+      gloss: "flee, escape",
+      words: [
+        {
+          strong: "5127",
+          glyph: "running+dashing_away",
+        },
+      ],
+    },
+    {
+      root: "gibbor",
+      gloss: "mighty man, warrior, mighty",
+      words: [
+        {
+          strong: "1368",
+          glyph: "might+person",
         },
       ],
     },

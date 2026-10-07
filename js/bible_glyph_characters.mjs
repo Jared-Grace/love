@@ -1544,6 +1544,18 @@ export function bible_glyph_characters() {
       character: "🗜️",
     },
     {
+      name: "compass",
+      character: "🧭",
+    },
+    {
+      name: "wilted_flower",
+      character: "🥀",
+    },
+    {
+      name: "dashing_away",
+      character: "💨",
+    },
+    {
       name: "collision",
       character: "💥",
     },

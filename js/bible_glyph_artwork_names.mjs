@@ -1145,6 +1145,18 @@ export function bible_glyph_artwork_names() {
       asset: "Clamp",
     },
     {
+      glyph: "compass",
+      asset: "Compass",
+    },
+    {
+      glyph: "wilted_flower",
+      asset: "Wilted flower",
+    },
+    {
+      glyph: "dashing_away",
+      asset: "Dashing away",
+    },
+    {
       glyph: "peace",
       asset: "Relieved face",
     },
