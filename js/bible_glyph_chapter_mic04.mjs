@@ -108,7 +108,7 @@ export function bible_glyph_chapter_mic04() {
           "the",
           "$i_am",
           "from",
-          "$proper_name$Jerusalem.",
+          "$city+peace.",
         ],
       },
       {
@@ -324,7 +324,7 @@ export function bible_glyph_chapter_mic04() {
           "the",
           "$woman",
           "of",
-          "$proper_name$Jerusalem.",
+          "$city+peace.",
         ],
       },
       {
