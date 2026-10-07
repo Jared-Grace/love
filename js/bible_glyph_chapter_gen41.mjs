@@ -1548,7 +1548,7 @@ export function bible_glyph_chapter_gen41() {
           "$speech",
           "all",
           "the",
-          "$proper_name$Egyptians,",
+          "$clamp+person,",
           '"$walking',
           "to",
           "$i_am+plus,",
