@@ -708,7 +708,7 @@ export function bible_glyph_chapter_mrk12() {
         "the",
         "$fire",
         "of",
-        "$proper_name$Isaac,",
+        "$laughing+proper_name,",
         "$plus",
         "the",
         "$fire",
