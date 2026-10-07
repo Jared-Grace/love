@@ -31,7 +31,7 @@ export function bible_glyph_chapter_dan01() {
           "$face_spiral",
           "$footprints",
           "to",
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "and",
           "besieged",
           "it.",
