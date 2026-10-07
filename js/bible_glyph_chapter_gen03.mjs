@@ -539,7 +539,7 @@ export function bible_glyph_chapter_gen03() {
         words: [
           "And",
           "to",
-          "Adam",
+          "$person+proper_name",
           "He",
           "$speech:",
           "Because",
@@ -685,7 +685,7 @@ export function bible_glyph_chapter_gen03() {
           "of",
           "skin",
           "for",
-          "$proper_name$Adam",
+          "$person+proper_name",
           "and",
           "his",
           "$woman,",
