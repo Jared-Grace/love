@@ -23,7 +23,7 @@ export function bible_glyph_chapter_jol01() {
           "that",
           "came",
           "to",
-          "$proper_name$Joel",
+          "$i_am+heart_on_fire",
           "$son",
           "of",
           "$proper_name$Pethuel:",
