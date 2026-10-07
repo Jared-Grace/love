@@ -17,7 +17,7 @@ export function bible_glyph_chapter_1ki03() {
         verse_number: 1,
         words: [
           "Now",
-          "$peace",
+          "$peace+proper_name",
           "formed",
           "an",
           "alliance",
@@ -93,7 +93,7 @@ export function bible_glyph_chapter_1ki03() {
         verse_number: 3,
         words: [
           "And",
-          "$peace",
+          "$peace+proper_name",
           "$heart_red+doing",
           "the",
           "$i_am,",
@@ -137,7 +137,7 @@ export function bible_glyph_chapter_1ki03() {
           "high",
           "place,",
           "and",
-          "$peace",
+          "$peace+proper_name",
           "$walking+pointing_up",
           "a",
           "thousand",
@@ -159,7 +159,7 @@ export function bible_glyph_chapter_1ki03() {
           "$i_am",
           "$eye",
           "to",
-          "$peace",
+          "$peace+proper_name",
           "in",
           "a",
           "dream,",
@@ -179,7 +179,7 @@ export function bible_glyph_chapter_1ki03() {
       {
         verse_number: 6,
         words: [
-          "$peace",
+          "$peace+proper_name",
           "$speech:",
           "You",
           "have",
@@ -351,7 +351,7 @@ export function bible_glyph_chapter_1ki03() {
           "the",
           "$crown,",
           "that",
-          "$peace",
+          "$peace+proper_name",
           "had",
           "asked",
           "for",
@@ -521,7 +521,7 @@ export function bible_glyph_chapter_1ki03() {
         verse_number: 15,
         words: [
           "Then",
-          "$peace",
+          "$peace+proper_name",
           "awoke,",
           "and",
           "indeed",
