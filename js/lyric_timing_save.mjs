@@ -1,3 +1,4 @@
+import { lyric_video_document_pictures_times_derive } from "./lyric_video_document_pictures_times_derive.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { lyric_video_passage_recording_document_path } from "./lyric_video_passage_recording_document_path.mjs";
 import { file_exists } from "./file_exists.mjs";
@@ -62,6 +63,7 @@ export async function lyric_timing_save(
     song,
   };
   object_merge_replace(document_timed, heard);
+  lyric_video_document_pictures_times_derive(document_timed, 0);
   await file_overwrite_json(path_document, document_timed);
   let r = {
     path_document,

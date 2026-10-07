@@ -1,3 +1,4 @@
+import { lyric_video_document_pictures_times_derive } from "./lyric_video_document_pictures_times_derive.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { not } from "./not.mjs";
@@ -106,6 +107,7 @@ export async function lyric_video_document_times_heard_write(
   );
   document.lines = lines;
   document.times_from = lyric_video_times_machine_word();
+  lyric_video_document_pictures_times_derive(document, 0);
   await file_overwrite_json(path_document, document);
   let written = {
     chapter,
