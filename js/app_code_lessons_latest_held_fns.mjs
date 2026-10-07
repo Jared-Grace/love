@@ -1,3 +1,4 @@
+import { app_code_lesson_if_false } from "./app_code_lesson_if_false.mjs";
 import { app_code_lesson_if_true } from "./app_code_lesson_if_true.mjs";
 export function app_code_lessons_latest_held_fns() {
   "the lessons kept off latest while every other lesson is shown there, asked for by the human 2026-09-30: deploy through lesson 204 and skip 205, the 24-hour clock, which is not ready to hand over yet";
@@ -52,6 +53,7 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-06: hold 239, Is a rectangle as wide as it is tall, until the human has read its first draft";
   "then deploy through 239, 2026-10-07: nothing held";
   "2026-10-07: hold 240, If true, the first if, until the human has read its first draft";
-  let fns = [app_code_lesson_if_true];
+  "2026-10-07: hold 241, If false, beside 240, until the human has read its first draft";
+  let fns = [app_code_lesson_if_true, app_code_lesson_if_false];
   return fns;
 }

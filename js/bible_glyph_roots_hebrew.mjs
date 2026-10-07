@@ -1489,6 +1489,20 @@ export function bible_glyph_roots_hebrew() {
       ],
     },
     {
+      root: "hoy",
+      gloss: "woe, alas, ah",
+      words: [
+        {
+          strong: "1945",
+          glyph: "weary_face",
+        },
+        {
+          strong: "188",
+          glyph: "weary_face",
+        },
+      ],
+    },
+    {
       root: "derek",
       gloss: "way, road",
       words: [

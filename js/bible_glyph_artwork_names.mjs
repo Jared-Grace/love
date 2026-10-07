@@ -1169,6 +1169,22 @@ export function bible_glyph_artwork_names() {
       asset: "Radio button",
     },
     {
+      glyph: "joker",
+      asset: "Joker",
+    },
+    {
+      glyph: "fast_forward",
+      asset: "Fast-forward button",
+    },
+    {
+      glyph: "saluting_face",
+      asset: "Saluting face",
+    },
+    {
+      glyph: "weary_face",
+      asset: "Weary face",
+    },
+    {
       glyph: "peace",
       asset: "Relieved face",
     },

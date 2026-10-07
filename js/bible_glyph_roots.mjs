@@ -166,6 +166,7 @@ export function bible_glyph_roots() {
   ("MANY, REPORT, AROUND AND NEAR TAKE THE HEBREW'S PICTURES (2026-10-03), and the Hebrew table holds the reasons. Polus is the multiplication sign with plethuno, to multiply, because the Greek, like the Hebrew, says many and much and multiplied with one stem; polus as great, a great crowd, is a crowd multiplied, and so reads truly. Apaggello and anaggello, to report and to announce, are the rolled newspaper; they are aggello built on, and euaggelion keeps its own picture because the good news is a different word. Proserchomai, to come to, was left undrawn rather than given the magnet, because it is a different word from eggizo, to draw near, and two words may not share a picture.");
   ("VESSEL AND THROW TAKE THE HEBREW'S PICTURES (2026-10-03), and the Hebrew table holds the reasons, including why hundred and thousand stay undrawn. Ballo is the person throwing, though it is often only put, as new wine is put into new skins; the hand placing down was refused because it is tithemi. Meno, to remain, was left undrawn, because the anchor is faith; Judas stays undrawn by the human's choice, for now.");
   ("NAMES ARE DRAWN AS THEIR MEANING WHERE SCRIPTURE GIVES IT, chosen by the human on 2026-10-03, and the Hebrew table holds the reasons for each. A name keeps the same picture in both testaments, so David, Moses, Jerusalem, Jacob, Abraham, Babylon and Israel read the same in Matthew as in Genesis. Peter is the only name here whose meaning the New Testament gives: you are Peter, and on this rock, and John's Cephas, which means Peter. So Petros and petra, the rock, share the rock picture, which was free on this side. Left undrawn because no meaning is given: Paul, John, Simon, Mary, Pilate, Galilee and the Pharisees. Judas is the same Greek word as Judah and was left undrawn, because the raised hands are not seated in this table and a betrayer drawn as praise needs its own decision.");
+  ("TEN GREEK NUMBERS WERE SEATED ON 2026-10-07 BY THE AI, on the human's word that the AI decides and readers change it later. Four borrow a picture the Hebrew table already bought for the same meaning: apollumi, perish and lose, is abad's wilted flower; thlipsis, affliction, and thlibo, to press hard, are tsar's clamp, since both words are pressure in a narrow place; and therion, a wild beast, is behemah's paw prints. Krateo, to seize and hold fast, is the fist with the doing mark, because the fist alone is echo, to have. Tis without the accent, someone or anything, is the joker, the card that stands for any card; the asking tis keeps the flashlight and the question. Rejected for it: the die, which casting lots will want; and the person, which says a human where tis can be a thing. Tote, then, is the telescope and the clock, that time, the way hote is the back arrow and the clock. Hopou, where, is the back arrow and the pin, the place which, and pou, where?, is the pin and the question, both built like the words for when and what. Eutheos, immediately, is the fast-forward button. Rejected: the lightning, which is a split root's, and the dash, which is fleeing in the Hebrew. Aspazomai, to greet, is the saluting face. Rejected: the waving hand, which is calling, and the hug, which is affection. Ouai, woe, is the weary face, and the Hebrew hoy and oy take it too. Eschatos, last, is the end arrow with the describing mark, the end-ish one, because the end arrow alone is telos. Rejected: the chequered flag, which reads as winning. Left undrawn: stauroo, to crucify, because the cross is Jesus's own picture and a verb on it would read as doing Jesus.");
   ("EIGHT GREEK NUMBERS AND EIGHT HEBREW ONES WERE SEATED ON 2026-10-03 FROM THE TOP OF WHAT WAS LEFT. To drink is the cup with a straw, pino and shathah; the cup alone is poterion and kos, the vessel, and the wine is oinos and yayin, the thing drunk. To sit is the seat, because the throne already holds the chair and kathemai is the sitting rather than the seat of a king. Six is its keycap. The temple courts, hieron, are the classical building, a columned house of worship; naos the sanctuary is a second word and is left for a picture of its own, and Hebrew heykal stays refused because it is the palace as well. The synagogue is the synagogue. To proclaim as a herald, kerusso, is the loudspeaker on a pole, which is a public announcing and nothing else; the megaphone was not free because it is the prophet. Polemeo, to fight, joins polemos, the war it is named from, at the crossed swords, and aionios, eternal, joins aion at the hourglass. Left undrawn: to kill, because every candidate is a knife or a skull, both nouns; the body, because the person and the meat are both spent; to throw, because the one emoji of throwing is a sport; forgive, because aphiemi is to leave as often as to forgive.");
   ("THREE SYNONYMS GOT PICTURES OF THEIR OWN ON 2026-10-03, under the human's rule that two words in the original are two pictures. Anistemi, to stand up, is the person and the up arrow, beside egeiro's person and pointing finger; both are rising, and they are two words, so they are two marks. Holos, whole, is the unbroken circle, because pas already holds the hundred for all, and a whole is a thing with no piece missing. Akoloutheo, to follow, is walking joined to the footprints, a walker going where someone has already walked; the footprints alone are coming and the walker alone is going. Pempo, to send, was left undrawn: the sending hand is apostello's, the out tray is ek, and the envelope draws a letter, which epistole will want.");
   ("THE EYE AND THE EAR WERE GIVEN BACK THE SAME DAY, which finishes the body parts paragraph above. The organ takes the plain picture and the verb takes a doing-mark. The eye is the single eye, for ophthalmos and Hebrew ayin, which had been wearing the pair. To see, horao and raah, is the pair of eyes, because two eyes are a person looking and one eye is the thing itself. Blepo, to look at, is the pair of eyes joined to the target that draws toward, so seeing and looking at stay two pictures as they are two words; the pointing hand was the other choice and was refused because it is hoti, so the join would read as see that. The ear is the ear, for ous and Hebrew ozen. To hear, akouo and shama, is the ear joined to the loudspeaker, a sound arriving at an ear; the ear alone was what hearing had worn, and the loudspeaker only became free for this when voice moved onto it.");
@@ -753,6 +754,124 @@ export function bible_glyph_roots() {
         {
           strong: "2192",
           glyph: "raised_fist",
+        },
+      ],
+    },
+    {
+      root: "krateo",
+      gloss: "seize; hold fast",
+      words: [
+        {
+          strong: "2902",
+          glyph: "raised_fist+doing",
+        },
+      ],
+    },
+    {
+      root: "apollumi",
+      gloss: "perish; destroy; lose",
+      words: [
+        {
+          strong: "622",
+          glyph: "wilted_flower",
+        },
+      ],
+    },
+    {
+      root: "thlibo",
+      gloss: "press hard; affliction",
+      words: [
+        {
+          strong: "2347",
+          glyph: "clamp",
+        },
+        {
+          strong: "2346",
+          glyph: "clamp+doing",
+        },
+      ],
+    },
+    {
+      root: "therion",
+      gloss: "wild beast",
+      words: [
+        {
+          strong: "2342",
+          glyph: "paw_prints",
+        },
+      ],
+    },
+    {
+      root: "tis_any",
+      gloss: "someone; anything (not asking)",
+      words: [
+        {
+          strong: "5100",
+          glyph: "joker",
+        },
+      ],
+    },
+    {
+      root: "tote",
+      gloss: "then; at that time",
+      words: [
+        {
+          strong: "5119",
+          glyph: "telescope+clock",
+        },
+      ],
+    },
+    {
+      root: "pou",
+      gloss: "where (the place which); where?",
+      words: [
+        {
+          strong: "3699",
+          glyph: "back+round_pushpin",
+        },
+        {
+          strong: "4226",
+          glyph: "round_pushpin+question",
+        },
+      ],
+    },
+    {
+      root: "eutheos",
+      gloss: "immediately; at once",
+      words: [
+        {
+          strong: "2112",
+          glyph: "fast_forward",
+        },
+      ],
+    },
+    {
+      root: "aspazomai",
+      gloss: "greet",
+      words: [
+        {
+          strong: "782",
+          glyph: "saluting_face",
+        },
+      ],
+    },
+    {
+      root: "ouai",
+      gloss: "woe",
+      words: [
+        {
+          strong: "3759",
+          glyph: "weary_face",
+        },
+      ],
+    },
+    {
+      root: "eschatos",
+      gloss: "last",
+      words: [
+        {
+          strong: "2078",
+          glyph: "end_arrow+describing",
         },
       ],
     },

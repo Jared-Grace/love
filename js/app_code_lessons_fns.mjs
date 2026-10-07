@@ -1,3 +1,4 @@
+import { app_code_lesson_if_false } from "./app_code_lesson_if_false.mjs";
 import { app_code_lesson_if_true } from "./app_code_lesson_if_true.mjs";
 import { app_code_lesson_statement_name_rectangle_wide_as_tall } from "./app_code_lesson_statement_name_rectangle_wide_as_tall.mjs";
 import { app_code_lesson_statement_name_rectangles_cover_together } from "./app_code_lesson_statement_name_rectangles_cover_together.mjs";
@@ -481,6 +482,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_rectangles_cover_together,
     app_code_lesson_statement_name_rectangle_wide_as_tall,
     app_code_lesson_if_true,
+    app_code_lesson_if_false,
   ];
   return fns;
 }

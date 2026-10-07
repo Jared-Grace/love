@@ -1568,6 +1568,22 @@ export function bible_glyph_characters() {
       character: "🔘",
     },
     {
+      name: "joker",
+      character: "🃏",
+    },
+    {
+      name: "fast_forward",
+      character: "⏩",
+    },
+    {
+      name: "saluting_face",
+      character: "🫡",
+    },
+    {
+      name: "weary_face",
+      character: "😩",
+    },
+    {
       name: "collision",
       character: "💥",
     },
