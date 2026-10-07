@@ -21,6 +21,12 @@ export function js_tokens_spaced_is(before, previous, token) {
     return false;
   }
   let previous_value = js_token_value_is(previous);
+  ("a ( after a keyword that opens a block, if (true) {, is spaced, since such a word is never a function being called; written against it, a line built from tiles read if(true) {, unlike the program it came from");
+  let keywords = ["if", "for", "while", "switch", "catch"];
+  let keyword_is = list_includes(keywords, previous);
+  if (keyword_is) {
+    return true;
+  }
   ("a ( after a value is a call and a [ after one is a lookup, so both are written against it; after anything else the bracket groups, and grouping is spaced like the operator it follows");
   let attaching = ["(", "[", "--", "++"];
   let attaches = list_includes(attaching, token);

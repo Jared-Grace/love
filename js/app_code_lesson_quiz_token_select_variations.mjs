@@ -1,3 +1,5 @@
+import { js_parse_try } from "./js_parse_try.mjs";
+import { null_is } from "./null_is.mjs";
 import { js_expression_is } from "./js_expression_is.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { app_code_lesson_quiz_token_select_variations_collect } from "./app_code_lesson_quiz_token_select_variations_collect.mjs";
@@ -19,6 +21,13 @@ export function app_code_lesson_quiz_token_select_variations(code) {
   "every accepted token ordering for the unscramble. A commutative operator (+ * === !== || &&) can keep or swap its two sides; a commutative call (Math.min / Math.max) can take its arguments in ANY order - all permutations. The accepted orderings are the cartesian product of every such node's orderings; enumerate them, restoring each node to its original after its own loop so the tree is left unchanged.";
   "IT WIDENS AND THEN NARROWS, AND THE NARROWING IS NEXT DOOR. What is left here is the widening - every road to another ordering of the same line - plus the one reading that asks whether an ordering still says what the question says. The checks that ask whether it still says it the way the question wrote it are all the same kind of check and live under one name, because a reader who wants to know what the pool holds should not have to read three filters to find out where it came from.";
   "TWO ROADS ARRIVE BY DIFFERENT RIGHTS, AND ONLY ONE OF THEM IS ASKED WHAT IT MEANS. An ordering free to move a sign has to go on saying what the question said, because a moved sign can land on the right value while writing something else entirely. An ordering that moved only its values, into value places, keeping every sign and every parenthesis where the question put them, is judged instead by what the learner was actually shown - and it has to be, because the backwards unscramble shows a value and nothing more. Told the answer is true and handed the tiles of (2 > 9) === (5 === 4), a learner has nothing on the screen that picks that line out from (2 > 4) === (5 === 9); asking whether the two MEAN the same thing answers no, and marked them wrong for an answer the screen gave them no way to avoid.";
+  "A LINE THAT CANNOT STAND ALONE HAS ONE ORDERING: its own. The line asked for out of a longer program can be half a block, if (true) { or }, which does not read in by itself, so there is no tree to swap the sides of; its tiles are taken in the order it was written. Not picked: closing the block off to read it in, which would offer swaps inside the condition at the price of a second way of reading a line that only this case needs.";
+  let tree_alone = js_parse_try(code);
+  if (null_is(tree_alone)) {
+    let tokens = app_code_quiz_tokens(code);
+    let r2 = [tokens];
+    return r2;
+  }
   let expression_is = js_expression_is(code);
   let tree = js_parse(code);
   function collect(la) {
