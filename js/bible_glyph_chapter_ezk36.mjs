@@ -1294,7 +1294,7 @@ export function bible_glyph_chapter_ezk36() {
           "for",
           "$sparkle+thing",
           "at",
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "during",
           "her",
           "appointed",
