@@ -451,7 +451,7 @@ export function bible_glyph_chapter_2sa05() {
           "$proper_name$Shammua,",
           "$proper_name$Shobab,",
           "$proper_name$Nathan,",
-          "$peace,",
+          "$peace+proper_name,",
         ],
       },
       {
