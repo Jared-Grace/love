@@ -1137,6 +1137,18 @@ export function bible_glyph_artwork_names() {
       asset: "Pinching hand",
     },
     {
+      glyph: "laughing",
+      asset: "Face with tears of joy",
+    },
+    {
+      glyph: "clamp",
+      asset: "Clamp",
+    },
+    {
+      glyph: "peace",
+      asset: "Relieved face",
+    },
+    {
       glyph: "white_cane",
       asset: "White cane",
     },

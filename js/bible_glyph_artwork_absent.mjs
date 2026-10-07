@@ -107,12 +107,6 @@ export function bible_glyph_artwork_absent() {
         "the set's names hold nothing carrying the word mule, and the Horse and the Donkey are both spent.",
     },
     {
-      glyph: "peace",
-      wanted: "Peace",
-      because:
-        "the set's Peace symbol is the sign of a twentieth century disarmament movement, not shalom.",
-    },
-    {
       glyph: "well",
       wanted: "Well",
       because:

@@ -709,7 +709,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "peace",
-      character: "peace",
+      character: "😌",
     },
     {
       name: "well",
