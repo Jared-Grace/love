@@ -866,7 +866,7 @@ export function bible_glyph_chapter_gen46() {
           "detestable",
           "to",
           "the",
-          "$proper_name$Egyptians.",
+          "$clamp+person.",
         ],
       },
     ],
