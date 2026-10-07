@@ -937,7 +937,7 @@ export function bible_glyph_chapter_mat05() {
           "footstool;",
           "or",
           "by",
-          "$proper_name$Jerusalem,",
+          "$city+peace,",
           "$pointing",
           "it",
           "is",
