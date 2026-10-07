@@ -406,7 +406,7 @@ export function bible_glyph_chapter_psa051() {
           "the",
           "walls",
           "of",
-          "$proper_name$Jerusalem.",
+          "$city+peace.",
         ],
       },
       {
