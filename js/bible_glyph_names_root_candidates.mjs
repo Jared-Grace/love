@@ -26,6 +26,7 @@ export async function bible_glyph_names_root_candidates(testament_name) {
   ("Every proper name one testament uses that no glyph seats yet, commonest first, each with what Strong's says it comes from and, for every number that derivation names, the picture that number is already drawn by.");
   ("IT PROPOSES NOTHING. A name is drawn as its root picture and the name tag, and which part of a root's picture carries the name, or whether a derivation names the root at all rather than a guess, is a reading, so this hands back the evidence and leaves the seat to whoever writes the table.");
   ("A REFERENCE IS LOOKED UP IN ITS OWN LANGUAGE'S TABLE. A Greek name of Hebrew origin points at a Hebrew number, and that number means a Hebrew word, so it is asked of the Hebrew table; that is also what keeps a name's picture the same in both testaments.");
+  ("THE GREEK DICTIONARY PADS A HEBREW NUMBER WITH ZEROS, writing Isaiah's origin as H03470, while every table here spells it 3470; the zeros are dropped as it is read, or no Greek name would ever find its Hebrew picture.");
   let told = await bible_glyph_proper_name_numbers_cache(testament_name);
   let roots = bible_glyph_roots_testament_table(testament_name);
   let drawn = bible_glyph_roots_drawn_lookup(roots);
@@ -70,7 +71,7 @@ export async function bible_glyph_names_root_candidates(testament_name) {
     let definition = entry?.strongs_def ?? "";
     let references = [];
     for (let found of (derivation + " " + definition).matchAll(
-      /([HG])(\d+)/g,
+      /([HG])0*(\d+)/g,
     )) {
       let language = found[1];
       let number = found[2];
