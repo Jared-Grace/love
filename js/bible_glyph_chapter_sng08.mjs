@@ -325,7 +325,7 @@ export function bible_glyph_chapter_sng08() {
       {
         verse_number: 11,
         words: [
-          "$peace",
+          "$peace+proper_name",
           "had",
           "a",
           "vineyard",
@@ -368,7 +368,7 @@ export function bible_glyph_chapter_sng08() {
           "for",
           "you,",
           "O",
-          "$peace,",
+          "$peace+proper_name,",
           "and",
           "two",
           "hundred",
