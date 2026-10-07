@@ -899,7 +899,7 @@ export function bible_glyph_chapter_jdg16() {
           "great",
           "sacrifice",
           "to",
-          "$proper_name$Dagon",
+          "$fish+proper_name",
           "their",
           "god.",
           "They",
