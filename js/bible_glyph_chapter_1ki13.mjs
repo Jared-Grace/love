@@ -1168,7 +1168,7 @@ export function bible_glyph_chapter_1ki13() {
           "the",
           "$city",
           "of",
-          "$proper_name$Samaria,",
+          "$guard+proper_name,",
           "will",
           "surely",
           "come",
