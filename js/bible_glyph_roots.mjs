@@ -1,4 +1,6 @@
 import { fn_name } from "./fn_name.mjs";
+import { bible_glyph_roots_greek_drafted } from "./bible_glyph_roots_greek_drafted.mjs";
+import { bible_glyph_roots_drafted_merge } from "./bible_glyph_roots_drafted_merge.mjs";
 export function bible_glyph_roots() {
   "The seed table this picture Bible is written from: each Greek root, the words that grow out of it, and the glyph each of those words is drawn by.";
   "The table is keyed by ROOT and not by Strong's number, because a number-keyed table hides the very kinship the picture Bible exists to show. Love the noun, love the verb and beloved the adjective carry three different numbers and are one root, and a reader who sees one glyph across all three has been told something true that no English translation can tell them without a footnote.";
@@ -3646,5 +3648,8 @@ export function bible_glyph_roots() {
       ],
     },
   ];
-  return roots;
+  ("THE BULK-SEATED WORDS ARE MERGED IN HERE, at the one place every reader asks, so no reader can see the hand-written rows without the drafted ones or the other way round.");
+  let drafted = bible_glyph_roots_greek_drafted();
+  let merged = bible_glyph_roots_drafted_merge(roots, drafted);
+  return merged;
 }
