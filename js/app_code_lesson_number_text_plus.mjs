@@ -32,6 +32,7 @@ export function app_code_lesson_number_text_plus() {
   ("Split from the lesson that joins a name holding a number, by the human's word 2026-10-07: that lesson asked two things at once, that a plus between a number and a string joins them, and that a name stands for the number it holds. Only the first was new, so it comes first and alone, as if (2 < 3) came before if (a < b).");
   ("Reading forwards, the wrong answers offered are the two run together with no space, 5is a number, since the last string lesson said a plus adds no space and the space here is the one at the start of the string; and the plus written out, 5 + is a number, as though the line were written out as it reads. Reading backwards, the wrong program is the same line with no space at the start of the string, which writes out 5is a number.");
   ("The strings are three short endings, so the number and the space are the parts to watch.");
+  ('The sentence about the space shows the string and how it starts as code, asked for by the human 2026-10-07: the start is written " ..." as the human wrote it. Not picked: a string holding only the space, " ", which reads as a second string rather than the start of this one.');
   ("The writing is a first draft by Claude 2026-10-07.");
   let plus = js_operator_plus_symbol();
   let endings = [" is a number", " is my number", " is the answer"];
@@ -113,8 +114,14 @@ export function app_code_lesson_number_text_plus() {
     let v = program_get(5, ending);
     let value = text_combine("5", ending);
     app_code_code_lines_writes_out(box_two, [v], value);
+    let combined = app_code_string_code(ending);
+    let combined2 = app_code_string_code(" ...");
     html_div_cycle_code(box_two, [
-      "The string starts with a space, so a space comes after ",
+      "The string ",
+      combined,
+      " starts with a space ",
+      combined2,
+      ", so a space comes after ",
       "5",
     ]);
   }
