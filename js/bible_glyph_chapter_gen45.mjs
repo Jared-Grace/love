@@ -58,7 +58,7 @@ export function bible_glyph_chapter_gen45() {
           "$hands_giving",
           "that",
           "the",
-          "$proper_name$Egyptians",
+          "$clamp+person",
           "$ear",
           "him,",
           "and",
