@@ -536,7 +536,7 @@ export function bible_glyph_chapter_num24() {
           "the",
           "skulls",
           "of",
-          "$proper_name$Moab",
+          "$father+proper_name",
           "and",
           "strike",
           "down",
