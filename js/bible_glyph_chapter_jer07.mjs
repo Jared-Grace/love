@@ -20,7 +20,7 @@ export function bible_glyph_chapter_jer07() {
           "that",
           "came",
           "to",
-          "$proper_name$Jeremiah",
+          "$up_arrow+i_am",
           "from",
           "$i_am,",
           "$speech,",
