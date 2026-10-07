@@ -25,7 +25,7 @@ export function song_agape_glosses() {
     "sinners were ransomed through our GOD crucified": {
       lyric_ref: "Mark 10:45, Acts 20:28, 1 Corinthians 2:8",
       lyric_explain:
-        "A ransom is the price paid to set a captive free. Jesus said He came to give His life as a ransom for many. The line calls the one on the cross God, and Scripture does too: Paul speaks of the church of God, which He bought with His own blood, and says they crucified the Lord of glory.",
+        "A ransom is the price paid to set a captive free. Jesus said He came to give His life as a ransom for many. The line calls the one on the cross God, and Scripture does too: Paul speaks of the church of God, which He purchased with His own blood, and says they crucified the Lord of glory.",
     },
     "KING, yet was mocked with a crown made of thorns": {
       lyric_ref: "Matthew 27:29, John 19:2-3",
@@ -35,12 +35,12 @@ export function song_agape_glosses() {
     "scoffers reviled HIM, condemning their LORD": {
       lyric_ref: "Matthew 27:39-40, Mark 14:64, 1 Peter 2:23",
       lyric_explain:
-        "People passing the cross shook their heads and insulted Him. The night before, the council had all condemned Him as deserving death - the leaders of His own people, judging the One they were meant to serve. Peter remembers that when He was insulted, He did not insult back.",
+        "They that passed by reviled Him, wagging their heads. To revile is to insult with scorn. The night before, the council had all condemned Him as deserving of death - the leaders of His own people, judging the One they were meant to serve. Peter remembers that when He was reviled, He reviled not again.",
     },
     "scourges left stripes as HIS wounds freely bled": {
       lyric_ref: "John 19:1, Isaiah 53:5",
       lyric_explain:
-        "To scourge is to whip, and Pilate had Jesus whipped. Isaiah wrote of it hundreds of years before: He was pierced for our transgressions, and by His stripes we are healed. The stripes are the marks the whip left.",
+        "To scourge is to whip: Pilate took Jesus, and scourged Him. Isaiah wrote of it hundreds of years before: He was pierced for our transgressions, and by His stripes we are healed. The stripes are the marks the whip left.",
     },
     "but with great kindness and mercy, HE blessed": {
       lyric_ref: "Luke 23:34, Luke 23:43, 1 Peter 3:9",
@@ -55,7 +55,7 @@ export function song_agape_glosses() {
     "sinners, unworthy, were each one of us": {
       lyric_ref: "Romans 3:23, Isaiah 53:6, Romans 5:8",
       lyric_explain:
-        "All have sinned and fall short of the glory of God. Isaiah says it the same way: we all like sheep have gone astray, each one to his own way. That is the each one of the line, and Romans says Christ died for us while we were still like that.",
+        "All have sinned and fall short of the glory of God. Isaiah says it the same way: we all like sheep have gone astray, each one has turned to his own way. That is the each one of the line, and Romans says Christ died for us while we were still like that.",
     },
     "sacrificed LAMB, yet great high PRIEST on the cross": {
       lyric_ref: "1 Corinthians 5:7, Hebrews 4:14, Hebrews 7:27",
@@ -80,7 +80,7 @@ export function song_agape_glosses() {
     "drinking the cup of GOD's wrath to its dregs": {
       lyric_ref: "Matthew 26:39, John 18:11, Isaiah 51:17",
       lyric_explain:
-        "In the garden He prayed, My Father, if it is possible, let this cup pass from Me, and then shall I not drink the cup the Father has given Me? Isaiah had already named the cup: the cup of the LORD's fury, drained to the dregs. The dregs are the last bitter bit at the bottom.",
+        "In the garden He prayed, My Father, if it is possible, let this cup pass from Me. Later He said, Shall I not drink the cup the Father has given Me? Isaiah had already named the cup: the cup of His fury, drained to the dregs. The dregs are the last bitter bit at the bottom.",
     },
     "suff'ring hell and torture to forgive us our sins": {
       lyric_ref: "Matthew 27:46, Isaiah 53:10-11, Acts 13:38",
@@ -105,7 +105,7 @@ export function song_agape_glosses() {
     "laid in a tomb while HIS followers wept": {
       lyric_ref: "Luke 23:53, Mark 16:10, John 16:20",
       lyric_explain:
-        "Joseph took the body down, wrapped it in linen and laid it in a tomb cut into the rock. Mark says His followers were mourning and weeping. Jesus had told them before: you will weep, but your grief will turn to joy.",
+        "Joseph took the body down, wrapped it in a linen cloth, and placed it in a tomb cut into the rock. Mark says His followers were mourning and weeping. Jesus had told them before: you will weep, but your grief will turn to joy.",
     },
     "early the third day, near sunday's sunrise": {
       lyric_ref: "Mark 16:2, 1 Corinthians 15:4",
@@ -115,22 +115,22 @@ export function song_agape_glosses() {
     "breath entered JESUS, clothed in radiant light": {
       lyric_ref: "Romans 8:11, Ezekiel 37:10, Revelation 1:16",
       lyric_explain:
-        "No one saw the moment He rose, and the line pictures it. Paul says it was the Spirit who raised Jesus from the dead. Ezekiel saw dry bones live again when breath entered them. John saw the risen Jesus with a face like the sun shining in all its brightness.",
+        "No one saw the moment He rose, and the line pictures it. Paul says it was the Spirit who raised Jesus from the dead. Ezekiel saw dry bones live again when breath entered them. John saw the risen Jesus and His face was like the sun shining at its brightest.",
     },
     "risen forever, O KING, lifted high": {
       lyric_ref: "Romans 6:9, Acts 2:32-33, Philippians 2:9",
       lyric_explain:
-        "Christ was raised from the dead and cannot die again; death no longer has power over Him. Peter says God raised Him and lifted Him to His right hand. Paul says God exalted Him to the highest place and gave Him the name above every name.",
+        "Since Christ was raised from the dead, He cannot die again; death no longer has dominion over Him. Peter says God raised Him, and He was exalted to the right hand of God. Paul says God exalted Him to the highest place and gave Him the name above all names.",
     },
     "one with GOD almighty, one day too shall we arise": {
       lyric_ref: "John 10:30, 1 Thessalonians 4:16, 1 Corinthians 15:52",
       lyric_explain:
-        "Jesus said, I and the Father are one. And He will come back: the Lord Himself will come down from heaven, and the dead in Christ will rise first. Paul says it will happen in a moment, at the last trumpet, and the dead will be raised never to die.",
+        "Jesus said, I and the Father are one. And He will come back: the Lord Himself will descend from heaven, and the dead in Christ will be the first to rise. Paul says it will happen in an instant, at the last trumpet, and the dead will be raised imperishable - never to die again.",
     },
     "taking our crosses, we suffer with CHRIST": {
       lyric_ref: "Luke 9:23, Romans 8:17",
       lyric_explain:
-        "Jesus said, if anyone wants to come after Me, he must deny himself, take up his cross daily, and follow Me. Paul says we are God's children and heirs with Christ, if indeed we suffer with Him, so that we may also share His glory.",
+        "Jesus said, if anyone wants to come after Me, he must deny himself and take up his cross daily and follow Me. Paul says God's children are co-heirs with Christ - if indeed we suffer with Him, so that we may also be glorified with Him.",
     },
     "coming in glory, HE will marry HIS bride": {
       lyric_ref: "Matthew 25:31, Revelation 19:7",
@@ -140,7 +140,7 @@ export function song_agape_glosses() {
     "risen with scars on HIS hands and HIS feet": {
       lyric_ref: "Luke 24:39-40, John 20:27",
       lyric_explain:
-        "The risen Jesus said, look at My hands and My feet, it is I Myself, and He showed them. To Thomas He said, put your finger here and see My hands. He rose with the marks of the nails still on Him.",
+        "The risen Jesus said, look at My hands and My feet, it is I Myself, and He showed them. To Thomas He said, put your finger here and look at My hands. He rose with the marks of the nails still on Him.",
     },
     "until HE returns, we will follow our KING": {
       lyric_ref: "1 Corinthians 11:26, John 10:27, John 21:22",

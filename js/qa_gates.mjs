@@ -1,3 +1,4 @@
+import { song_agape_glosses_gate_run } from "./song_agape_glosses_gate_run.mjs";
 import { app_verses_choices_gate_run } from "./app_verses_choices_gate_run.mjs";
 import { app_next_bare_start_gate_run } from "./app_next_bare_start_gate_run.mjs";
 import { gloss_term_written_is_cases_gate_run } from "./gloss_term_written_is_cases_gate_run.mjs";
@@ -1012,6 +1013,7 @@ export function qa_gates() {
     app_shared_text_reader_untranslated_gate_run,
     js_dollar_choices_parameters_gate_run,
     song_god_our_savior_glosses_gate_run,
+    song_agape_glosses_gate_run,
     app_music_song_references_shape_gate_run,
     app_music_songs_versions_gate_run,
     bible_versions_english_choices_sources_gate_run,

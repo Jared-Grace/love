@@ -1,3 +1,7 @@
+import { song_agape_title } from "./song_agape_title.mjs";
+import { app_music_song_agape_show } from "./app_music_song_agape_show.mjs";
+import { song_agape_references } from "./song_agape_references.mjs";
+import { song_agape_versions } from "./song_agape_versions.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_image_couplets_title } from "./song_image_couplets_title.mjs";
 import { song_title_hash_name } from "./song_title_hash_name.mjs";
@@ -39,6 +43,16 @@ export function app_music_songs() {
     versions: song_god_our_savior_versions,
   };
   list_add(songs, savior);
+  let agape_title = song_agape_title();
+  let agape_hash_name = song_title_hash_name(agape_title);
+  let agape = {
+    title: agape_title,
+    hash_name: agape_hash_name,
+    show: app_music_song_agape_show,
+    references: song_agape_references,
+    versions: song_agape_versions,
+  };
+  list_add(songs, agape);
   list_sort_text_property(songs, "title");
   return songs;
 }
