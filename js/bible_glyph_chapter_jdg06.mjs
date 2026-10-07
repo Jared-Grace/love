@@ -253,7 +253,7 @@ export function bible_glyph_chapter_jdg06() {
           "the",
           "$hand",
           "of",
-          "$proper_name$Egypt",
+          "$clamp+person",
           "and",
           "out",
           "of",
