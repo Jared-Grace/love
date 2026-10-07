@@ -456,11 +456,11 @@ export function bible_glyph_chapter_2sa05() {
       },
       {
         verse_number: 15,
-        words: ["$proper_name$Ibhar,", "$proper_name$Elishua,", "$proper_name$Nepheg,", "$proper_name$Japhia,"],
+        words: ["$check_box+proper_name,", "$proper_name$Elishua,", "$proper_name$Nepheg,", "$proper_name$Japhia,"],
       },
       {
         verse_number: 16,
-        words: ["$proper_name$Elishama,", "$proper_name$Eliada,", "and", "$proper_name$Eliphelet."],
+        words: ["$heart_on_fire+ear,", "$proper_name$Eliada,", "and", "$proper_name$Eliphelet."],
       },
       {
         verse_number: 17,
