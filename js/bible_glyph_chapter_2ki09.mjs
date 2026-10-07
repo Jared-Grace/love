@@ -1058,7 +1058,7 @@ export function bible_glyph_chapter_2ki09() {
           "by",
           "chariot",
           "to",
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "and",
           "buried",
           "him",
