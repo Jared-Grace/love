@@ -1,3 +1,5 @@
+import { bible_glyph_roots_hebrew_drafted } from "./bible_glyph_roots_hebrew_drafted.mjs";
+import { bible_glyph_roots_drafted_merge } from "./bible_glyph_roots_drafted_merge.mjs";
 export function bible_glyph_roots_hebrew() {
   "The seed table the Old Testament is drawn from: each Hebrew root, the words that grow out of it, and the glyph each of those words is drawn by.";
   "It is a SEPARATE table from the Greek one and not an extension of it, because a Strong's number belongs to a testament. Hebrew 3068 is the LORD's own name and Greek 3068 is a word for washing, and nothing about the number says which is meant - so a single table would silently draw one testament with the other's pictures.";
@@ -4362,5 +4364,8 @@ export function bible_glyph_roots_hebrew() {
       ],
     },
   ];
-  return roots;
+  ("THE BULK-SEATED WORDS ARE MERGED IN HERE, at the one place every reader asks, so no reader can see the hand-written rows without the drafted ones or the other way round.");
+  let drafted = bible_glyph_roots_hebrew_drafted();
+  let merged = bible_glyph_roots_drafted_merge(roots, drafted);
+  return merged;
 }
