@@ -937,7 +937,7 @@ export function bible_glyph_chapter_2ki02() {
           "he",
           "$turn_back",
           "to",
-          "$proper_name$Samaria.",
+          "$guard+proper_name.",
         ],
       },
     ],
