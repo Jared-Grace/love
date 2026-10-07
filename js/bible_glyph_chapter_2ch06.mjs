@@ -14,7 +14,7 @@ export function bible_glyph_chapter_2ch06() {
         verse_number: 1,
         words: [
           "Then",
-          "$peace",
+          "$peace+proper_name",
           "$speech,",
           "The",
           "$i_am",
@@ -392,7 +392,7 @@ export function bible_glyph_chapter_2ch06() {
         verse_number: 13,
         words: [
           "For",
-          "$peace",
+          "$peace+proper_name",
           "had",
           "$hammer+doing",
           "a",
