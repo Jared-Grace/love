@@ -593,7 +593,7 @@ export function bible_glyph_chapter_1ki19() {
           "also",
           "to",
           "$oil+doing",
-          "$proper_name$Jehu",
+          "$i_am+pointing_back",
           "$son",
           "of",
           "$proper_name$Nimshi",
@@ -619,7 +619,7 @@ export function bible_glyph_chapter_1ki19() {
         verse_number: 17,
         words: [
           "Then",
-          "$proper_name$Jehu",
+          "$i_am+pointing_back",
           "will",
           "put",
           "to",
@@ -641,7 +641,7 @@ export function bible_glyph_chapter_1ki19() {
           "the",
           "$sword",
           "of",
-          "$proper_name$Jehu.",
+          "$i_am+pointing_back.",
         ],
       },
       {
