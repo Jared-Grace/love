@@ -18,7 +18,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 1,
         words: [
           "Then",
-          "Samuel",
+          "$ear+heart_on_fire",
           "$speech",
           "to",
           "$proper_name$Saul,",
@@ -329,7 +329,7 @@ export function bible_glyph_chapter_1sa15() {
           "$i_am",
           "came",
           "to",
-          "$proper_name$Samuel,",
+          "$ear+heart_on_fire,",
           "$speech,",
         ],
       },
@@ -360,7 +360,7 @@ export function bible_glyph_chapter_1sa15() {
           "My",
           "$speech.",
           "And",
-          "Samuel",
+          "$ear+heart_on_fire",
           "was",
           "distressed,",
           "and",
@@ -382,7 +382,7 @@ export function bible_glyph_chapter_1sa15() {
           "in",
           "the",
           "morning",
-          "$proper_name$Samuel",
+          "$ear+heart_on_fire",
           "got",
           "up",
           "to",
@@ -422,7 +422,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 13,
         words: [
           "When",
-          "Samuel",
+          "$ear+heart_on_fire",
           "$footprints",
           "to",
           "him,",
@@ -450,7 +450,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 14,
         words: [
           "But",
-          "Samuel",
+          "$ear+heart_on_fire",
           "$speech,",
           "Then",
           "what",
@@ -512,7 +512,7 @@ export function bible_glyph_chapter_1sa15() {
       {
         verse_number: 16,
         words: [
-          "$proper_name$Samuel",
+          "$ear+heart_on_fire",
           "$speech,",
           "Stop.",
           "Let",
@@ -538,7 +538,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 17,
         words: [
           "And",
-          "Samuel",
+          "$ear+heart_on_fire",
           "$speech,",
           "Although",
           "you",
@@ -714,7 +714,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 22,
         words: [
           "But",
-          "Samuel",
+          "$ear+heart_on_fire",
           "$speech,",
           "Does",
           "the",
@@ -796,7 +796,7 @@ export function bible_glyph_chapter_1sa15() {
           "Saul",
           "$speech",
           "to",
-          "$proper_name$Samuel,",
+          "$ear+heart_on_fire,",
           "I",
           "have",
           "$bow+doing.",
@@ -848,7 +848,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 26,
         words: [
           "But",
-          "$proper_name$Samuel",
+          "$ear+heart_on_fire",
           "$speech,",
           "I",
           "will",
@@ -881,7 +881,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 27,
         words: [
           "As",
-          "Samuel",
+          "$ear+heart_on_fire",
           "turned",
           "to",
           "$walking,",
@@ -901,7 +901,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 28,
         words: [
           "So",
-          "Samuel",
+          "$ear+heart_on_fire",
           "$speech",
           "to",
           "him,",
@@ -1000,7 +1000,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 31,
         words: [
           "So",
-          "Samuel",
+          "$ear+heart_on_fire",
           "$turn_back",
           "with",
           "$proper_name$Saul,",
@@ -1015,7 +1015,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 32,
         words: [
           "Then",
-          "Samuel",
+          "$ear+heart_on_fire",
           "$speech,",
           "Bring",
           "me",
@@ -1045,7 +1045,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 33,
         words: [
           "But",
-          "Samuel",
+          "$ear+heart_on_fire",
           "$speech,",
           "As",
           "your",
@@ -1063,7 +1063,7 @@ export function bible_glyph_chapter_1sa15() {
           "among",
           "$woman.",
           "And",
-          "Samuel",
+          "$ear+heart_on_fire",
           "hacked",
           "$proper_name$Agag",
           "to",
@@ -1079,7 +1079,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 34,
         words: [
           "Then",
-          "Samuel",
+          "$ear+heart_on_fire",
           "$walking",
           "to",
           "$proper_name$Ramah,",
@@ -1099,7 +1099,7 @@ export function bible_glyph_chapter_1sa15() {
       {
         verse_number: 35,
         words: [
-          "$proper_name$Samuel",
+          "$ear+heart_on_fire",
           "did",
           "$no_entry",
           "$eye",
@@ -1112,7 +1112,7 @@ export function bible_glyph_chapter_1sa15() {
           "his",
           "$skull,",
           "but",
-          "$proper_name$Samuel",
+          "$ear+heart_on_fire",
           "mourned",
           "for",
           "$proper_name$Saul.",
