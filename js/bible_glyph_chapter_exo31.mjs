@@ -108,7 +108,7 @@ export function bible_glyph_chapter_exo31() {
           "I",
           "have",
           "$hands_giving",
-          "$proper_name$Oholiab,",
+          "$tent+father,",
           "$son",
           "of",
           "$proper_name$Ahisamach,",
