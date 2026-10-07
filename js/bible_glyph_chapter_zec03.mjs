@@ -61,7 +61,7 @@ export function bible_glyph_chapter_zec03() {
           "who",
           "has",
           "chosen",
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "rebukes",
           "you!",
           "Is",
