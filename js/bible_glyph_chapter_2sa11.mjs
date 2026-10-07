@@ -55,7 +55,7 @@ export function bible_glyph_chapter_2sa11() {
           "$two_hearts+proper_name",
           "$person+house",
           "in",
-          "$proper_name$Jerusalem.",
+          "$city+peace.",
         ],
       },
       {
@@ -435,7 +435,7 @@ export function bible_glyph_chapter_2sa11() {
           "$proper_name$Uriah",
           "stayed",
           "in",
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "that",
           "$sun",
           "and",
