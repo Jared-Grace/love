@@ -33,7 +33,7 @@ export function bible_glyph_chapter_num25() {
           "the",
           "$woman",
           "of",
-          "$proper_name$Moab,",
+          "$father+proper_name,",
         ],
       },
       {
@@ -446,7 +446,7 @@ export function bible_glyph_chapter_num25() {
           "the",
           "$woman",
           "of",
-          "$proper_name$Zur,",
+          "$rock+proper_name,",
           "a",
           "tribal",
           "chief",
