@@ -1244,7 +1244,7 @@ export function bible_glyph_chapter_luk07() {
     {
       verse_number: 43,
       words: [
-        "$proper_name$Simon",
+        "$ear+proper_name",
         "replied",
         "in",
         "$speech,",
@@ -1280,7 +1280,7 @@ export function bible_glyph_chapter_luk07() {
         "He",
         "said",
         "to",
-        "$proper_name$Simon,",
+        "$ear+proper_name,",
         "“$eyes",
         "this",
         "$woman.",
