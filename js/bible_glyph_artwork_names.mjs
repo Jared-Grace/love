@@ -1512,6 +1512,26 @@ export function bible_glyph_artwork_names() {
       glyph: "umbrella",
       asset: "Umbrella",
     },
+    {
+      glyph: "lemon",
+      asset: "Lemon",
+    },
+    {
+      glyph: "woozy_face",
+      asset: "Woozy face",
+    },
+    {
+      glyph: "red_circle",
+      asset: "Red circle",
+    },
+    {
+      glyph: "old_key",
+      asset: "Old key",
+    },
+    {
+      glyph: "wood",
+      asset: "Wood",
+    },
   ];
   return names;
 }
