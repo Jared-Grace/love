@@ -469,7 +469,7 @@ export function bible_glyph_chapter_ezk11() {
           "the",
           "people",
           "of",
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "have",
           "$speech,",
           "They",
