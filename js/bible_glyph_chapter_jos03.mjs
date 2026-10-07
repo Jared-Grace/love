@@ -513,7 +513,7 @@ export function bible_glyph_chapter_jos03() {
           "far",
           "upstream",
           "as",
-          "$proper_name$Adam,",
+          "$person+proper_name,",
           "a",
           "$city",
           "in",
