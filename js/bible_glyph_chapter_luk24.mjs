@@ -847,7 +847,7 @@ export function bible_glyph_chapter_luk24() {
           "has",
           "$eye",
           "to",
-          "$proper_name$Simon!",
+          "$ear+proper_name!",
         ],
       },
       {
