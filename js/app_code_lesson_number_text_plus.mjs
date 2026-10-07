@@ -34,6 +34,7 @@ export function app_code_lesson_number_text_plus() {
   ("The strings are three short endings, so the number and the space are the parts to watch.");
   ('The sentence about the space shows the string and how it starts as code, asked for by the human 2026-10-07: the start is written " ..." as the human wrote it. Not picked: a string holding only the space, " ", which reads as a second string rather than the start of this one.');
   ("The writing is a first draft by Claude 2026-10-07.");
+  ("Not built a line at a time, as the if lessons around it are since 2026-10-08: the program is one line, so putting its lines in order asks nothing, and building its one missing line is unscrambling the whole program.");
   let plus = js_operator_plus_symbol();
   let endings = [" is a number", " is my number", " is the answer"];
   function program_get(number, ending) {

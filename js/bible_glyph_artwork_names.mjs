@@ -1464,6 +1464,54 @@ export function bible_glyph_artwork_names() {
       glyph: "leaf",
       asset: "Leaf fluttering in wind",
     },
+    {
+      glyph: "ice",
+      asset: "Ice",
+    },
+    {
+      glyph: "white_circle",
+      asset: "White circle",
+    },
+    {
+      glyph: "coat",
+      asset: "Coat",
+    },
+    {
+      glyph: "dragon",
+      asset: "Dragon",
+    },
+    {
+      glyph: "pot_of_food",
+      asset: "Pot of food",
+    },
+    {
+      glyph: "wheel",
+      asset: "Wheel",
+    },
+    {
+      glyph: "mouse_trap",
+      asset: "Mouse trap",
+    },
+    {
+      glyph: "motorway",
+      asset: "Motorway",
+    },
+    {
+      glyph: "fearful_face",
+      asset: "Fearful face",
+    },
+    {
+      glyph: "clown_face",
+      asset: "Clown face",
+    },
+    {
+      glyph: "pick",
+      asset: "Pick",
+    },
+    {
+      glyph: "umbrella",
+      asset: "Umbrella",
+    },
   ];
   return names;
 }

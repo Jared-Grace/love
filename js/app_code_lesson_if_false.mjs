@@ -181,6 +181,7 @@ export function app_code_lesson_if_false() {
     example_count: 1,
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
+    lines: true,
     decoys,
     backwards_decoys,
     quiz_backwards_answer_count_override: null,
