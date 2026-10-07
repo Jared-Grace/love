@@ -2884,6 +2884,14 @@ export function bible_glyph_roots() {
           strong: "1515",
           glyph: "peace",
         },
+        {
+          strong: "2414",
+          glyph: "city+peace",
+        },
+        {
+          strong: "2419",
+          glyph: "city+peace",
+        },
       ],
     },
     {
