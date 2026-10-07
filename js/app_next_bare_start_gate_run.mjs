@@ -53,15 +53,15 @@ export async function app_next_bare_start_gate_run() {
     });
   }
   let verse = app_shared_bible_verse_number_default();
-  let digits = text_digits_is(verse);
-  if (not(digits)) {
+  let verse_digits = text_digits_is(verse);
+  if (not(verse_digits)) {
     list_add(wrong, {
       fault:
         "the verse this page opens on from nothing is not a number written out, so there is no verse to scroll to",
       verse,
     });
   }
-  if (digits) {
+  if (verse_digits) {
     let n = number_from_text(verse);
     let before_the_first = less_than(n, 1);
     if (before_the_first) {
