@@ -174,7 +174,7 @@ export function bible_glyph_chapter_2ch06() {
           "I",
           "have",
           "chosen",
-          "$proper_name$Jerusalem,",
+          "$city+peace,",
           "that",
           "My",
           "$name_tag",
