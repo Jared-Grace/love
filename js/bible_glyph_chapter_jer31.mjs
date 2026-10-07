@@ -139,7 +139,7 @@ export function bible_glyph_chapter_jer31() {
           "the",
           "$mountain",
           "of",
-          "$proper_name$Samaria;",
+          "$guard+proper_name;",
           "the",
           "farmers",
           "will",
