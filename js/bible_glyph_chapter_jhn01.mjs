@@ -414,7 +414,7 @@ export function bible_glyph_chapter_jhn01() {
           "the",
           "$menorah",
           "$tray_out",
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "$hand_sending",
           "priests",
           "$plus",
