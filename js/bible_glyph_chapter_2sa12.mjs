@@ -1062,7 +1062,7 @@ export function bible_glyph_chapter_2sa12() {
           "$family",
           "$turn_back",
           "to",
-          "$proper_name$Jerusalem.",
+          "$city+peace.",
         ],
       },
     ],
