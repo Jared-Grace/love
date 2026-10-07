@@ -20,7 +20,7 @@ export function bible_glyph_chapter_lev10() {
           "Aaron,",
           "$proper_name$Nadab",
           "and",
-          "$proper_name$Abihu,",
+          "$father+pointing_back,",
           "$man_beard",
           "$hand_receiving",
           "their",
