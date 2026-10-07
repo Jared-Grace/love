@@ -1556,6 +1556,18 @@ export function bible_glyph_characters() {
       character: "💨",
     },
     {
+      name: "triangular_flag",
+      character: "🚩",
+    },
+    {
+      name: "brown_square",
+      character: "🟫",
+    },
+    {
+      name: "radio_button",
+      character: "🔘",
+    },
+    {
       name: "collision",
       character: "💥",
     },

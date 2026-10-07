@@ -1,3 +1,6 @@
+import { song_image_couplets_youtube } from "./song_image_couplets_youtube.mjs";
+import { app_music_youtube_link } from "./app_music_youtube_link.mjs";
+import { subtract } from "./subtract.mjs";
 import { song_image_couplet_sung } from "./song_image_couplet_sung.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_music_song_verses_start } from "./app_music_song_verses_start.mjs";
@@ -42,6 +45,17 @@ export async function app_music_song_image_couplets_show(parent, song) {
   let folds = app_music_song_folds_show(parent);
   let pictures = app_music_song_pictures_new();
   app_music_song_pictures_buttons(parent, pictures);
+  let videos = song_image_couplets_youtube();
+  app_music_youtube_link(
+    parent,
+    videos.whole,
+    "Watch the whole song on YouTube",
+  );
+  app_music_youtube_link(
+    parent,
+    videos.verses_1_3,
+    "Watch verses 1 to 3 on YouTube",
+  );
   let verse_shown = 0;
   let asked_all = [];
   for (let couplet of couplets) {
@@ -54,6 +68,10 @@ export async function app_music_song_image_couplets_show(parent, song) {
       verse_shown = couplet.verse;
       let heading = text_combine("verse ", verse_shown);
       html_p_text_centered(parent, heading);
+      let video_id = videos.verses[subtract(verse_shown, 1)];
+      let left = text_combine("Watch verse ", verse_shown);
+      let watch = text_combine(left, " on YouTube");
+      app_music_youtube_link(parent, video_id, watch);
     }
     let words = song_image_couplet_sung(couplet.n);
     let references = song_image_couplet_references(couplet.n);

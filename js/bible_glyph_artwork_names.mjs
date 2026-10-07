@@ -1157,6 +1157,18 @@ export function bible_glyph_artwork_names() {
       asset: "Dashing away",
     },
     {
+      glyph: "triangular_flag",
+      asset: "Triangular flag",
+    },
+    {
+      glyph: "brown_square",
+      asset: "Brown square",
+    },
+    {
+      glyph: "radio_button",
+      asset: "Radio button",
+    },
+    {
       glyph: "peace",
       asset: "Relieved face",
     },
