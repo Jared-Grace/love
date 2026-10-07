@@ -1,3 +1,4 @@
+import { lyric_video_pictures_toned } from "./lyric_video_pictures_toned.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { lyric_video_document_faults_write } from "./lyric_video_document_faults_write.mjs";
 import { lyric_video_subtitles_text } from "./lyric_video_subtitles_text.mjs";
@@ -26,6 +27,7 @@ export async function lyric_video_document_write(
   await file_overwrite(path_subtitles, subtitles);
   let asked = lyric_video_document_pictures(document);
   let drawn = await lyric_video_pictures_present(asked);
+  drawn.present = await lyric_video_pictures_toned(drawn.present);
   let ran = await lyric_video_write(
     path_audio,
     path_subtitles,
