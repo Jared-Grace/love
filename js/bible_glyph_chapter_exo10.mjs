@@ -222,7 +222,7 @@ export function bible_glyph_chapter_exo10() {
           "$house",
           "of",
           "every",
-          "$proper_name$Egyptian,",
+          "$clamp+person,",
           "something",
           "$no_entry",
           "your",
