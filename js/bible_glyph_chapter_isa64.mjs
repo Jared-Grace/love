@@ -306,7 +306,7 @@ export function bible_glyph_chapter_isa64() {
           "become",
           "a",
           "wasteland,",
-          "$proper_name$Jerusalem",
+          "$city+peace",
           "a",
           "desolation.",
         ],
