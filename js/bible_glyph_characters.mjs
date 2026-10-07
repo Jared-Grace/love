@@ -1584,6 +1584,14 @@ export function bible_glyph_characters() {
       character: "😩",
     },
     {
+      name: "check_box",
+      character: "☑️",
+    },
+    {
+      name: "down_arrow",
+      character: "⬇️",
+    },
+    {
       name: "collision",
       character: "💥",
     },

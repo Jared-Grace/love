@@ -54,6 +54,7 @@ export function app_code_lessons_latest_held_fns() {
   "then deploy through 239, 2026-10-07: nothing held";
   "2026-10-07: hold 240, If true, the first if, until the human has read its first draft";
   "2026-10-07: hold 241, If false, beside 240, until the human has read its first draft";
-  let fns = [app_code_lesson_if_true, app_code_lesson_if_false];
+  "then deploy through 241, 2026-10-07: nothing held";
+  let fns = [];
   return fns;
 }
