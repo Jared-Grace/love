@@ -364,7 +364,7 @@ export function bible_glyph_chapter_mal02() {
           "$wrestling+heart_on_fire",
           "and",
           "in",
-          "$proper_name$Jerusalem.",
+          "$city+peace.",
           "For",
           "$hands_raised+proper_name",
           "has",
