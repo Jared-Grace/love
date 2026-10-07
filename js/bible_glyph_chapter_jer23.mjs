@@ -470,7 +470,7 @@ export function bible_glyph_chapter_jer23() {
           "the",
           "$megaphone",
           "of",
-          "$proper_name$Samaria",
+          "$guard+proper_name",
           "I",
           "$eye",
           "an",
