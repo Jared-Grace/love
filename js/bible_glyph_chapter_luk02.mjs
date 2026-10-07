@@ -71,7 +71,7 @@ export function bible_glyph_chapter_luk02() {
       verse_number: 4,
       words: [
         "So",
-        "$proper_name$Joseph",
+        "$i_am+plus",
         "$plus",
         "went",
         "up",
@@ -415,7 +415,7 @@ export function bible_glyph_chapter_luk02() {
         "found",
         "$proper_name$Mary",
         "$plus",
-        "$proper_name$Joseph,",
+        "$i_am+plus,",
         "$plus",
         "the",
         "Baby",
