@@ -22,7 +22,7 @@ export function bible_glyph_chapter_num35() {
           "the",
           "plains",
           "of",
-          "$proper_name$Moab",
+          "$father+proper_name",
           "by",
           "the",
           "$pointing_down+proper_name",
