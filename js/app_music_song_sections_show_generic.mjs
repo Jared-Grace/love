@@ -42,13 +42,13 @@ export async function app_music_song_sections_show_generic(
   let texts_asked = app_music_song_verses_start(song);
   let versions = song.versions();
   let folds = app_music_song_folds_show(parent);
-  let watch = app_music_youtube_link(
+  let watch_link = app_music_youtube_link(
     parent,
     video_id,
     "Watch the whole song on YouTube",
   );
   let value = app_shared_spaced_large_gap();
-  html_style_margin_bottom(watch, value);
+  html_style_margin_bottom(watch_link, value);
   let sung = [];
   let asked_all = [];
   let headed = false;
