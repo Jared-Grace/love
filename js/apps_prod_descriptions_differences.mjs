@@ -1,3 +1,5 @@
+import { not_equal } from "./not_equal.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { object_to_list } from "./object_to_list.mjs";
 import { property_get } from "./property_get.mjs";
@@ -33,7 +35,7 @@ export function apps_prod_descriptions_differences(shipped, described) {
     let live_bare = text_empty_is(live);
     let says_bare = text_empty_is(says);
     if (live_bare) {
-      if (!says_bare) {
+      if (not(says_bare)) {
         list_add(silent, app_name);
       }
       continue;
@@ -42,7 +44,7 @@ export function apps_prod_descriptions_differences(shipped, described) {
       list_add(unsaid, app_name);
       continue;
     }
-    if (live !== says) {
+    if (not_equal(live, says)) {
       list_add(stale, app_name);
     }
   }
