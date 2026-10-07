@@ -47,6 +47,7 @@ export function app_code_lesson_if_less_than() {
   ("Each screen asks two programs whose comparison is true and two whose comparison is false, and in each pair the if is first in one and last in the other. Every comparison is of two different numbers far enough apart to read at a glance, and no number is a word written out, so nothing can be found by spotting it.");
   ("Reading forwards, the wrong answers offered are the other two of the three things such a program could write out: both words, the word after the if alone, and the word inside the braces alone. Reading backwards, the wrong program offered is the same program with the two numbers swapped, which writes out the other answer, so it can only be turned down by working the comparison out.");
   ("Two examples, one whose comparison is true and one whose comparison is false, asked by the human 2026-10-07 after reading the first draft, which showed one: one alone shows only one of the two ways an if can go. The examples are drawn two at a time from the front of a screen of programs, so each screen is put in an order whose every two in a row hold one of each. Not picked: drawing the two examples apart from the screen, which would need its own hook in the lesson base.");
+  ("Titled with numbers, if (2 < 3), rather than if (a < b), since 2026-10-07: If names compared, which follows, is the one whose comparison is of names, and both titles reading if (a < b) would not tell the two apart.");
   ("The writing is a first draft by Claude 2026-10-07.");
   let less = js_operator_less_than_symbol();
   let fruits = fruits_of_the_spirit();
@@ -236,7 +237,7 @@ export function app_code_lesson_if_less_than() {
   }
   let name_id = app_code_lesson_statement_title_name_id_dots(
     "If less than",
-    "if (a < b) { ... }",
+    "if (2 < 3) { ... }",
   );
   let lesson = app_code_lesson_code_logged({
     above,

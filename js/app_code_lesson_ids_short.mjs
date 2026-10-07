@@ -313,6 +313,9 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_if_true: text_frozen("if_true"),
     app_code_lesson_if_false: text_frozen("if_false"),
     app_code_lesson_if_less_than: text_frozen("if_less_than"),
+    app_code_lesson_if_name: text_frozen("if_name"),
+    app_code_lesson_if_names_less_than: text_frozen("if_names_less_than"),
+    app_code_lesson_if_not: text_frozen("if_not"),
     app_code_lesson_statement_name_rectangles_rows_between: text_frozen(
       "name_rectangles_rows_between",
     ),

@@ -1,3 +1,6 @@
+import { app_code_lesson_if_name } from "./app_code_lesson_if_name.mjs";
+import { app_code_lesson_if_names_less_than } from "./app_code_lesson_if_names_less_than.mjs";
+import { app_code_lesson_if_not } from "./app_code_lesson_if_not.mjs";
 import { app_code_lesson_if_less_than } from "./app_code_lesson_if_less_than.mjs";
 import { app_code_lesson_if_false } from "./app_code_lesson_if_false.mjs";
 import { app_code_lesson_if_true } from "./app_code_lesson_if_true.mjs";
@@ -485,6 +488,9 @@ export function app_code_lessons_fns() {
     app_code_lesson_if_true,
     app_code_lesson_if_false,
     app_code_lesson_if_less_than,
+    app_code_lesson_if_name,
+    app_code_lesson_if_names_less_than,
+    app_code_lesson_if_not,
   ];
   return fns;
 }
