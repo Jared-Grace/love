@@ -1195,6 +1195,7 @@ export function qa_gates() {
     gloss_chapters_run_offenders_gate_run,
     app_original_bible_gloss_genesis_onwards_gate_run,
     apps_prod_descriptions_differences_gate_run,
+    gloss_term_written_is_cases_gate_run,
   ];
   return gates;
 }
