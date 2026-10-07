@@ -1623,6 +1623,38 @@ export function bible_glyph_characters() {
       name: "most",
       character: "⏫",
     },
+    {
+      name: "sun_with_face",
+      character: "🌞",
+    },
+    {
+      name: "wing",
+      character: "🪽",
+    },
+    {
+      name: "up_down_arrow",
+      character: "↕️",
+    },
+    {
+      name: "soap",
+      character: "🧼",
+    },
+    {
+      name: "locked",
+      character: "🔒",
+    },
+    {
+      name: "coin",
+      character: "🪙",
+    },
+    {
+      name: "eight",
+      character: "8️⃣",
+    },
+    {
+      name: "nine",
+      character: "9️⃣",
+    },
   ];
   return characters;
 }

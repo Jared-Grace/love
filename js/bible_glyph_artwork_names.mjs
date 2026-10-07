@@ -1308,6 +1308,38 @@ export function bible_glyph_artwork_names() {
       glyph: "most",
       asset: "Fast up button",
     },
+    {
+      glyph: "sun_with_face",
+      asset: "Sun with face",
+    },
+    {
+      glyph: "wing",
+      asset: "Wing",
+    },
+    {
+      glyph: "up_down_arrow",
+      asset: "Up-down arrow",
+    },
+    {
+      glyph: "soap",
+      asset: "Soap",
+    },
+    {
+      glyph: "locked",
+      asset: "Locked",
+    },
+    {
+      glyph: "coin",
+      asset: "Coin",
+    },
+    {
+      glyph: "eight",
+      asset: "Keycap 8",
+    },
+    {
+      glyph: "nine",
+      asset: "Keycap 9",
+    },
   ];
   return names;
 }
