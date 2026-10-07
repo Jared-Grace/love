@@ -207,7 +207,7 @@ export function bible_glyph_chapter_hos06() {
           "But",
           "they,",
           "like",
-          "$proper_name$Adam,",
+          "$person+proper_name,",
           "have",
           "transgressed",
           "the",
