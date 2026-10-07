@@ -1185,6 +1185,14 @@ export function bible_glyph_artwork_names() {
       asset: "Weary face",
     },
     {
+      glyph: "check_box",
+      asset: "Check box with check",
+    },
+    {
+      glyph: "down_arrow",
+      asset: "Down arrow",
+    },
+    {
       glyph: "peace",
       asset: "Relieved face",
     },

@@ -113,6 +113,7 @@ export function bible_glyph_roots_hebrew() {
   "SIX MORE WERE SEATED THE SAME DAY BY THE AI, the commonest words still undrawn whose meaning one picture holds. Gam, also and even and too, takes the plus, because the Greek kai is drawn as the plus and carries the same also and even; the Hebrew and has no number of its own, so the plus was free here. Koh, thus, takes the flashlight and the manner mark, which is how the Greek houtos is drawn when it means thus, so the two testaments say this is what the LORD says alike; it no longer waits on the equals sign. Rejected for koh: the equals sign, still held back, and the right arrow, which is ken. Tsaphon, north, is the compass and the up arrow, the way a map puts north, so south can later be the compass and a down arrow. Rejected: the compass alone, which is any direction. Abad, perish, is the wilted flower, because what perishes withers and is lost. Rejected: the skull, which is muth, to die, and the explosion, which is shachat. Nus, flee, is the runner and the dash, running away; the runner alone is ruts, to run. Rejected: the runner and the back arrow, which reads as run back, a return. Gibbor, mighty man, is might and the person, the strong one, since might alone is Shaddai. Rejected: the superhero, which brings in a costume and a story the word never had. Left undrawn from the same list, with the reason: naar, boy or young man, because the boy is ben, son, and the child is yeled; hate, because the angry face is anger and the thumbs down is evil; and between, because the two-way arrow is the Greek one another.";
   "THE NEXT SIX, THE SAME DAY, BY THE AI. Yarash, take possession and inherit and drive out, is the planted flag: the one act all three senses share is claiming the land. Rejected: the receiving hand, which is laqach, to take; and the inheritance picture, which is nachalah, a different root. Adamah, the ground, is the brown square, soil. It shares letters with adam, but the sense has travelled from a man to the dirt he came from, so the person picture would mislead; and the globe is erets, the earth. Tavek, the midst, is the radio button, a dot in the middle of a ring. Rejected: the bullseye, which already marks purpose and looking at. Yasaph, to add or do again, is the plus with the doing mark, because Joseph is named from it, may the LORD add, and Joseph already carries the plus; the bare plus is gam, also. Rejected: the repeat arrows, which are od, again. Rum, to be high or lift up, is the up arrow alone; going up is alah, the walker and the finger up, and great is the top sign. Joab is the I AM and the father, the LORD is father, a name built from God's name and a word, drawn in its own order like Joshua. Left undrawn: avon, iniquity, which has a written refusal; asaph, to gather, because the basket is sal; and Manasseh, because forgetting has no picture yet.";
   "THREE MORE THE SAME DAY BY THE AI. Asaph, to gather and assemble, is the crowd with the doing mark, making a crowd, which the Greek synago wears too for the same act. Rejected: the basket, which is sal; and the magnet, which is qarab, to come near. Natsal, to deliver and snatch away, is the hand and the lifebuoy, the rescue taken by the hand, because the lifebuoy alone is yasha, to save, and natsal is the pulling out. Acher, other and another, is the plus and the one, one more, the same as the Greek allos. Rejected: the person in the other colour, which is nephesh; and the shuffle, which is or. Hoy and oy, woe and alas, are the weary face, the same as the Greek ouai.";
+  "NINE MORE THE SAME DAY BY THE AI, each a picture already bought with the mark that says what kind of word it is. Bachar, to choose, is the ticked box, a new picture, because choosing is marking one out of many; the Greek eklegomai shares it. Rejected: the pointing finger, which is ki, because; and the check mark, which is emeth, truth. Saraph, to burn, is the fire with the doing mark; labash, to put on clothes, is the garment with the doing mark. Batach, to trust, is the anchor with the doing mark, because the anchor alone is aman, to believe. Radaph, to pursue, is the runner and the toward mark, running after. Mispar, number, is the number keys alone, which until now only stood inside hundred. Negeb, the south and the dry land in the south, is the compass and the down arrow, the partner of tsaphon, the north; the down arrow is new, because the pointing-down hand is down as a direction of travel. Yamin, the right hand, is the hand and the right arrow. Shakan, to dwell, is the tent with the doing mark, because the word is living in a tent, and mishkan, the tabernacle, is the tent and the house, the tent lived in; the tent alone is ohel. Rejected: the tent and the place, because the place has no artwork and the pair would arrive half in letters.Yachad, together, is the linked paperclips with the manner mark, because the clips alone are im, with. Left undrawn: shemesh, the sun, because the sun picture is yom, the day, and a second sun would read as the same word; etsem, bone, which has a written refusal; qatar, to burn incense, because the incense has no artwork and the pair would arrive half in letters.";
   "EGYPT IS THE CLAMP AND THE TAG, AND TSARAH, DISTRESS, IS THE CLAMP, 2026-10-06, on the human's word. Mitsrayim is heard in Hebrew as metsarim, the narrow places, and the tradition reads the exodus as coming up out of the narrows; tsarah is the same narrowness felt, a pressing in. The clamp is a thing pressed narrow. What Mitsrayim first meant is argued, and this draws the Hebrew hearing of it, which is the one the text's own readers made. Rejected: the pinching hand, which is small, qatan and mikros; a pyramid, which has no character; the desert, because Egypt is the Nile and not the sand. Not seated with it: tsar (6862), which is distress and also the adversary, a second root spelled alike, so one picture would draw the foe as a squeeze; and Mitsri, the Egyptian, which waits until a people-of-a-name shape is chosen, so the clamp alone stays distress.";
   "ISAAC AND PHARAOH WERE SEATED 2026-10-06 ON THE HUMAN'S WORD. TSACHAQ, LAUGH, IS THE FACE WITH TEARS OF JOY, and Isaac, he laughs, is that face and the tag, in both spellings, so Sarah's laugh and her son's name wear one picture. Rejected for the laugh: the smile, which is the Greek joy and ashre here; the beaming face, which is simchah; the face rolling on the floor, which reads as wild or mocking laughter where most of these laughs are not. PHARAOH IS THE HOUSE AND THE TAG: the title is the Egyptian great house, the palace that came to name the king. Rejected: the crown, which is a king and would read as king name; the house with the top arrow, great house, which is three marks where a name may hold two. Egypt and Aaron still wait, because what their names mean is argued.";
   "THE NEXT NAMES, THE SAME DAY, WERE CHOSEN BY HOW OFTEN THEY STAND AND WHETHER THE NAME SAYS SOMETHING A PICTURE CAN. A name built from God's name and a word is drawn as those two, in the name's own order, the way Joshua already was: Elijah is the fire and the I AM, my God is the LORD; Elisha the fire and the rescue, God saves. A name built from one word takes that word's picture and the tag: Jordan is the arrow down, from going down. Rejected for Jordan: water and the arrow down, which draws a river the name never says. Two were seated and drawn and then taken back the same day, because the gates said no. Jonathan, the LORD gave, was the I AM and the giving hands - but that is also how the page writes the LORD gave as two words, and twenty five verses then read as Jonathan; a name whose meaning is a whole short sentence collides with that sentence, so it waits for a shape the sentence never makes. Esau, hairy, was the hair and the tag - but the hair has no artwork, so half the name came from the reader's font; the goat was weighed, because the Hebrew he-goat is the hairy one, and refused, because the goat is the picture of a different root. Waiting, with the reason: Isaac, he laughs, has no laughing picture - the smile is the Greek joy and the beaming face is rejoicing; Egypt, Pharaoh, Aaron, Zion and Canaan have meanings that are argued over or not Hebrew at all, and a picture would draw one side of the argument; Jerusalem and Solomon wait on a peace picture; Samuel, which the book itself explains by asking rather than hearing, and Daniel, whose judging root is not seated, wait for those roots.";
@@ -1486,6 +1487,110 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "3097",
           glyph: "i_am+father",
+        },
+      ],
+    },
+    {
+      root: "bachar",
+      gloss: "choose",
+      words: [
+        {
+          strong: "977",
+          glyph: "check_box",
+        },
+      ],
+    },
+    {
+      root: "saraph",
+      gloss: "burn",
+      words: [
+        {
+          strong: "8313",
+          glyph: "fire+doing",
+        },
+      ],
+    },
+    {
+      root: "labash",
+      gloss: "put on, clothe, wear",
+      words: [
+        {
+          strong: "3847",
+          glyph: "garment+doing",
+        },
+      ],
+    },
+    {
+      root: "batach",
+      gloss: "trust",
+      words: [
+        {
+          strong: "982",
+          glyph: "anchor+doing",
+        },
+      ],
+    },
+    {
+      root: "radaph",
+      gloss: "pursue",
+      words: [
+        {
+          strong: "7291",
+          glyph: "running+toward",
+        },
+      ],
+    },
+    {
+      root: "saphar",
+      gloss: "number, count",
+      words: [
+        {
+          strong: "4557",
+          glyph: "input_numbers",
+        },
+      ],
+    },
+    {
+      root: "negeb",
+      gloss: "south, the Negev",
+      words: [
+        {
+          strong: "5045",
+          glyph: "compass+down_arrow",
+        },
+      ],
+    },
+    {
+      root: "yamin",
+      gloss: "right hand, right side",
+      words: [
+        {
+          strong: "3225",
+          glyph: "hand+right_arrow",
+        },
+      ],
+    },
+    {
+      root: "shakan",
+      gloss: "dwell; tabernacle",
+      words: [
+        {
+          strong: "7931",
+          glyph: "tent+doing",
+        },
+        {
+          strong: "4908",
+          glyph: "tent+house",
+        },
+      ],
+    },
+    {
+      root: "yachad",
+      gloss: "together",
+      words: [
+        {
+          strong: "3162",
+          glyph: "linked_paperclips+manner",
         },
       ],
     },
