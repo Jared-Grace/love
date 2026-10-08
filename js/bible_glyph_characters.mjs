@@ -2647,6 +2647,42 @@ export function bible_glyph_characters() {
       name: "camera",
       character: "📷",
     },
+    {
+      name: "anger_symbol",
+      character: "💢",
+    },
+    {
+      name: "receipt",
+      character: "🧾",
+    },
+    {
+      name: "head_shaking_vertically",
+      character: "🙂‍↕️",
+    },
+    {
+      name: "hand_with_fingers_splayed",
+      character: "🖐️",
+    },
+    {
+      name: "beginner",
+      character: "🔰",
+    },
+    {
+      name: "worried_face",
+      character: "😟",
+    },
+    {
+      name: "older_person",
+      character: "🧓",
+    },
+    {
+      name: "identification_card",
+      character: "🪪",
+    },
+    {
+      name: "dizzy",
+      character: "💫",
+    },
   ];
   return characters;
 }
