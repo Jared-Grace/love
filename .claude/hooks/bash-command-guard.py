@@ -4067,6 +4067,8 @@ def untrusted_piece_hint(words, safe_verbs):
         plain = plain[1:]
     if not plain:
         return ""
+    if plain[0] == "xargs" and len(plain) >= 2 and not plain[1].startswith("-"):
+        plain = plain[1:]
     if plain[0] in COMMAND_BUILDING_VERBS:
         return (
             f"`{plain[0]}` runs a command it puts together at run time, so no "
