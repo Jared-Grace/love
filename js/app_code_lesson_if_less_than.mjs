@@ -185,8 +185,7 @@ export function app_code_lesson_if_less_than() {
     "a < b worked out, then that comparison inside an if, true and then false";
     let brace_left = js_code_brace_left();
     let brace_right = js_code_brace_right();
-    let left = js_code_parenthesis_left();
-    let right = js_code_parenthesis_right();
+    ("The check goes in an if, worded so since 2026-10-08 at the human's word. Not picked: inside ( and ), the first wording, since a ( and a ) also group a value, so the sentence did not say it was the if that held the check.");
     let small_first = compared(2, 3);
     let big_first = compared(3, 2);
     let box_one = app_code_container_light_blue(root);
@@ -200,10 +199,8 @@ export function app_code_lesson_if_less_than() {
     html_div_cycle_code(box_two, [
       "We can put ",
       small_first,
-      " inside ",
-      left,
-      " and ",
-      right,
+      " in an ",
+      "if",
       ":",
     ]);
     let true_lines = program_lines(

@@ -137,7 +137,7 @@ export function app_code_lesson_number_text_join() {
     above,
     name_id,
     batch_get: batch,
-    example_count: 2,
+    example_count: 1,
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,

@@ -1532,6 +1532,58 @@ export function bible_glyph_artwork_names() {
       glyph: "wood",
       asset: "Wood",
     },
+    {
+      glyph: "heart_eyes",
+      asset: "Smiling face with heart-eyes",
+    },
+    {
+      glyph: "thread",
+      asset: "Thread",
+    },
+    {
+      glyph: "grinning_face",
+      asset: "Grinning face",
+    },
+    {
+      glyph: "winking_face",
+      asset: "Winking face",
+    },
+    {
+      glyph: "coffin",
+      asset: "Coffin",
+    },
+    {
+      glyph: "female_sign",
+      asset: "Female sign",
+    },
+    {
+      glyph: "pouting_face",
+      asset: "Pouting face",
+    },
+    {
+      glyph: "melting_face",
+      asset: "Melting face",
+    },
+    {
+      glyph: "baby_bottle",
+      asset: "Baby bottle",
+    },
+    {
+      glyph: "man_in_tuxedo",
+      asset: "Man in tuxedo",
+    },
+    {
+      glyph: "palm_tree",
+      asset: "Palm tree",
+    },
+    {
+      glyph: "bucket",
+      asset: "Bucket",
+    },
+    {
+      glyph: "cloud_with_lightning",
+      asset: "Cloud with lightning",
+    },
   ];
   return names;
 }

@@ -131,10 +131,8 @@ export function app_code_lesson_if_even() {
     );
     let box_two = app_code_container_light_blue(root);
     html_div_cycle_code(box_two, [
-      "We can put that check inside ",
-      left,
-      " and ",
-      right,
+      "We can put that check in an ",
+      "if",
       ":",
     ]);
     let even_code = program_get(4);
