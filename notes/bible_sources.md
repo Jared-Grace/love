@@ -387,8 +387,21 @@ guards the door the list leaves through, and
 `ebible_versions_english_choices_commercial_gate_run` (in `q`) proves both halves: the
 check refuses a refused text and keeps `engbsb`, and the door still reaches the check.
 
-**The verses of those five are still in storage.** Removing them is a separate,
-outward-facing job and has not been done.
+**The verses of those five were in storage, and are not any more — re-measured
+2026-10-08.** `ebible_versions_published_commercial_not()` answers `[]`. That is a
+real zero rather than a broken join: 1,527 copyright pages are read and 515 are
+shippable, so **1,012 refused translations were each asked of storage** and none is
+published; and the check can say yes, which is what makes its no worth anything —
+`ebible_version_uploaded_is engbsb` is `true` while `engnet` and `enggw` are `false`.
+Ask the function before believing either this paragraph or the one it replaced.
+
+The removal tooling stays sharp whether or not it is needed again:
+`ebible_versions_published_commercial_not_storage_delete` finds its own set at the
+moment of removing rather than taking a list, and every folder goes through
+`ebible_version_storage_delete`, which asserts the text is one the repo is **not**
+free to ship before touching a file. So the sweep cannot remove a permitted
+translation even if handed one, and a text uploaded since the last look cannot
+survive a sweep that reported success.
 
 **The general shape, worth carrying to the next check:** a question asked *per language*
 is blind to the language offered as *many*. Anywhere a list is narrowed to one entry per
