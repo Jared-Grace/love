@@ -69,8 +69,8 @@ export function app_code_lesson_if_halve_even() {
     "the other way the if could go, and n doubled";
     let numbers = text_integers(question);
     let start3 = list_first(numbers);
-    let half = divide(start3, 2);
-    let other = half;
+    let halved = divide(start3, 2);
+    let other = halved;
     let start_text = json_to(start3);
     let ran = not_equal(answer, start_text);
     if (ran) {
