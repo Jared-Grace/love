@@ -2184,7 +2184,7 @@ export function bible_glyph_characters() {
       character: "🥡",
     },
     {
-      name: "star",
+      name: "star_plain",
       character: "⭐",
     },
     {

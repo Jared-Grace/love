@@ -4355,7 +4355,7 @@ def git_commit_write_deny_reason(subcommand):
         "function, never raw git - it does add+commit as one atomic step with "
         "the fixed 'ai' message. Use `node scripts/ai.mjs ai_git` for the love "
         "repo (whole tree, message 'ai'), or `node scripts/ai.mjs "
-        "git_ac_call_folder_try <folder> ai` for another repo like the memory "
+        "git_ac_call_folder_try <folder> ai \"\"` for another repo like the memory "
         "dir. See CLAUDE.md - 'Editing protocol (optimistic concurrency)'."
     )
 
