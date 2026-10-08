@@ -589,11 +589,11 @@ export function bible_glyph_characters() {
     },
     {
       name: "altar",
-      character: "altar",
+      character: "🛐",
     },
     {
       name: "priest",
-      character: "priest",
+      character: "📿",
     },
     {
       name: "covenant",
@@ -621,7 +621,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "silver",
-      character: "silver",
+      character: "🥄",
     },
     {
       name: "wine",
@@ -657,7 +657,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "valley",
-      character: "valley",
+      character: "🚞",
     },
     {
       name: "wisdom",
@@ -665,7 +665,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "chariot",
-      character: "chariot",
+      character: "🏎️",
     },
     {
       name: "horse",
@@ -697,7 +697,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "sackcloth",
-      character: "sackcloth",
+      character: "👝",
     },
     {
       name: "bed",
@@ -713,7 +713,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "well",
-      character: "well",
+      character: "🚰",
     },
     {
       name: "rain",
@@ -733,7 +733,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "foreigner",
-      character: "foreigner",
+      character: "🛃",
     },
     {
       name: "camel",
@@ -753,7 +753,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "vineyard",
-      character: "vineyard",
+      character: "🥬",
     },
     {
       name: "basket",
@@ -761,7 +761,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "poor",
-      character: "poor",
+      character: "💸",
     },
     {
       name: "bull",
@@ -769,7 +769,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "lamb",
-      character: "lamb",
+      character: "🦙",
     },
     {
       name: "tomb",
@@ -817,7 +817,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "calf",
-      character: "calf",
+      character: "🦬",
     },
     {
       name: "grapes",
@@ -857,11 +857,11 @@ export function bible_glyph_characters() {
     },
     {
       name: "widow",
-      character: "widow",
+      character: "👵",
     },
     {
       name: "arrow",
-      character: "arrow",
+      character: "↘️",
     },
     {
       name: "dawn",
@@ -893,7 +893,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "vine",
-      character: "vine",
+      character: "🫛",
     },
     {
       name: "ring",
@@ -905,7 +905,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "cherub",
-      character: "cherub",
+      character: "😇",
     },
     {
       name: "furnace",
@@ -925,7 +925,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "beard",
-      character: "beard",
+      character: "🥸",
     },
     {
       name: "tambourine",
@@ -945,27 +945,27 @@ export function bible_glyph_characters() {
     },
     {
       name: "enemy",
-      character: "enemy",
+      character: "👹",
     },
     {
       name: "sacrifice",
-      character: "sacrifice",
+      character: "🥘",
     },
     {
       name: "inheritance",
-      character: "inheritance",
+      character: "🧧",
     },
     {
       name: "burnt_offering",
-      character: "burnt offering",
+      character: "🎆",
     },
     {
       name: "grain_offering",
-      character: "grain offering",
+      character: "🥞",
     },
     {
       name: "east",
-      character: "east",
+      character: "🌏",
     },
     {
       name: "ashes",
@@ -981,7 +981,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "yoke",
-      character: "yoke",
+      character: "🪜",
     },
     {
       name: "sandal",
@@ -997,7 +997,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "bronze",
-      character: "bronze",
+      character: "🟤",
     },
     {
       name: "iron",
@@ -1009,7 +1009,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "fig",
-      character: "fig",
+      character: "🍐",
     },
     {
       name: "wheat",
@@ -1017,11 +1017,11 @@ export function bible_glyph_characters() {
     },
     {
       name: "barley",
-      character: "barley",
+      character: "🍚",
     },
     {
       name: "flour",
-      character: "flour",
+      character: "🥣",
     },
     {
       name: "garden",
@@ -1049,7 +1049,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "place",
-      character: "place",
+      character: "⛳",
     },
     {
       name: "field",
@@ -1061,7 +1061,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "dust",
-      character: "dust",
+      character: "🌁",
     },
     {
       name: "seed",
@@ -1073,7 +1073,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "statute",
-      character: "statute",
+      character: "📄",
     },
     {
       name: "year",

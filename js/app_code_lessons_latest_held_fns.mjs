@@ -1,8 +1,3 @@
-import { app_code_lesson_if_and_if_not } from "./app_code_lesson_if_and_if_not.mjs";
-import { app_code_lesson_if_else } from "./app_code_lesson_if_else.mjs";
-import { app_code_lesson_if_halve_even } from "./app_code_lesson_if_halve_even.mjs";
-import { app_code_lesson_if_else_change } from "./app_code_lesson_if_else_change.mjs";
-import { app_code_lesson_if_halve_or_triple } from "./app_code_lesson_if_halve_or_triple.mjs";
 export function app_code_lessons_latest_held_fns() {
   "the lessons kept off latest while every other lesson is shown there, asked for by the human 2026-09-30: deploy through lesson 204 and skip 205, the 24-hour clock, which is not ready to hand over yet";
   "A list of lessons rather than a cut at a number, for the same reason the released list is one: a lesson put in above would move a number, and a list names the lesson itself. Empty it to show every lesson on latest again. The working copy shows these lessons whatever this holds.";
@@ -68,12 +63,7 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-08: hold A change in an if too, put before Two lines in an if by the human, until the human has read its first draft";
   "2026-10-08: released by the human, release all: nothing held";
   "then deploy through 255, 2026-10-08: hold 256 If and if not, 257 Else, 258 Halve if even, 259 Else with changes and 260 Halve, or times 3 plus 1, until the human has read their first drafts";
-  let fns = [
-    app_code_lesson_if_and_if_not,
-    app_code_lesson_if_else,
-    app_code_lesson_if_halve_even,
-    app_code_lesson_if_else_change,
-    app_code_lesson_if_halve_or_triple,
-  ];
+  "2026-10-08: released by the human, release all: nothing held";
+  let fns = [];
   return fns;
 }
