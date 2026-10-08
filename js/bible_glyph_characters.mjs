@@ -1991,6 +1991,58 @@ export function bible_glyph_characters() {
       name: "cold_face",
       character: "🥶",
     },
+    {
+      name: "person_wearing_turban",
+      character: "👳",
+    },
+    {
+      name: "meat_on_bone",
+      character: "🍖",
+    },
+    {
+      name: "bear",
+      character: "🐻",
+    },
+    {
+      name: "chains",
+      character: "⛓️",
+    },
+    {
+      name: "face_savoring_food",
+      character: "😋",
+    },
+    {
+      name: "deer",
+      character: "🦌",
+    },
+    {
+      name: "candy",
+      character: "🍬",
+    },
+    {
+      name: "couch_and_lamp",
+      character: "🛋️",
+    },
+    {
+      name: "envelope",
+      character: "✉️",
+    },
+    {
+      name: "water_buffalo",
+      character: "🐃",
+    },
+    {
+      name: "fly",
+      character: "🪰",
+    },
+    {
+      name: "deaf_person",
+      character: "🧏",
+    },
+    {
+      name: "axe",
+      character: "🪓",
+    },
   ];
   return characters;
 }

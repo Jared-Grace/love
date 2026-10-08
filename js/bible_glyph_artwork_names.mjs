@@ -1676,6 +1676,58 @@ export function bible_glyph_artwork_names() {
       glyph: "cold_face",
       asset: "Cold face",
     },
+    {
+      glyph: "person_wearing_turban",
+      asset: "Person wearing turban",
+    },
+    {
+      glyph: "meat_on_bone",
+      asset: "Meat on bone",
+    },
+    {
+      glyph: "bear",
+      asset: "Bear",
+    },
+    {
+      glyph: "chains",
+      asset: "Chains",
+    },
+    {
+      glyph: "face_savoring_food",
+      asset: "Face savoring food",
+    },
+    {
+      glyph: "deer",
+      asset: "Deer",
+    },
+    {
+      glyph: "candy",
+      asset: "Candy",
+    },
+    {
+      glyph: "couch_and_lamp",
+      asset: "Couch and lamp",
+    },
+    {
+      glyph: "envelope",
+      asset: "Envelope",
+    },
+    {
+      glyph: "water_buffalo",
+      asset: "Water buffalo",
+    },
+    {
+      glyph: "fly",
+      asset: "Fly",
+    },
+    {
+      glyph: "deaf_person",
+      asset: "Person deaf",
+    },
+    {
+      glyph: "axe",
+      asset: "Axe",
+    },
   ];
   return names;
 }
