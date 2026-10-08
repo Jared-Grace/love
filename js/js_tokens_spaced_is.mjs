@@ -27,6 +27,11 @@ export function js_tokens_spaced_is(before, previous, token) {
   if (keyword_is) {
     return true;
   }
+  ("whatever follows a } on its line is spaced from it, } else {, } catch, } = an object taken apart; what is written against a } was let off above - a ), a comma, a semicolon. Written against it, a line built from tiles read }else {");
+  let closed = equal(previous, "}");
+  if (closed) {
+    return true;
+  }
   ("a ( after a value is a call and a [ after one is a lookup, so both are written against it; after anything else the bracket groups, and grouping is spaced like the operator it follows");
   let attaching = ["(", "[", "--", "++"];
   let attaches = list_includes(attaching, token);
