@@ -14,7 +14,7 @@ import { function_imports } from "./function_imports.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_autopray_prayer_gate_run() {
+export async function prayer_lead_all_creation_gate_run() {
   "The autopray card promises a page that prays over every verse of the Bible in turn, asking that all creation would hear, believe, obey, enjoy and proclaim the word of God. The five are spelled out twice over - once in the prayer the page shows and once in the sentence a stranger reads before opening it - so either could be reworded and leave the other saying something the app no longer does. This asks both the same way, against the one named list of the five, and then reads what the page really imports, because a prayer that is worded correctly promises nothing if the page has stopped showing it. It needs no Bible and no network, which is the whole reason it can be a gate.";
   arguments_assert(arguments, 0);
   let app_name = "autopray";
