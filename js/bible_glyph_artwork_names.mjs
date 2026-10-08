@@ -2048,6 +2048,46 @@ export function bible_glyph_artwork_names() {
       glyph: "harvest",
       asset: "Ear of corn",
     },
+    {
+      glyph: "puzzle_piece",
+      asset: "Puzzle piece",
+    },
+    {
+      glyph: "locked_with_pen",
+      asset: "Locked with pen",
+    },
+    {
+      glyph: "joystick",
+      asset: "Joystick",
+    },
+    {
+      glyph: "folding_hand_fan",
+      asset: "Folding hand fan",
+    },
+    {
+      glyph: "confetti_ball",
+      asset: "Confetti ball",
+    },
+    {
+      glyph: "person_shrugging",
+      asset: "Person shrugging",
+    },
+    {
+      glyph: "pizza",
+      asset: "Pizza",
+    },
+    {
+      glyph: "chart_increasing",
+      asset: "Chart increasing",
+    },
+    {
+      glyph: "musical_score",
+      asset: "Musical score",
+    },
+    {
+      glyph: "crocodile",
+      asset: "Crocodile",
+    },
   ];
   return names;
 }

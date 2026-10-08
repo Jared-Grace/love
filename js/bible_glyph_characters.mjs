@@ -2263,6 +2263,46 @@ export function bible_glyph_characters() {
       name: "persevering_face",
       character: "😣",
     },
+    {
+      name: "puzzle_piece",
+      character: "🧩",
+    },
+    {
+      name: "locked_with_pen",
+      character: "🔏",
+    },
+    {
+      name: "joystick",
+      character: "🕹️",
+    },
+    {
+      name: "folding_hand_fan",
+      character: "🪭",
+    },
+    {
+      name: "confetti_ball",
+      character: "🎊",
+    },
+    {
+      name: "person_shrugging",
+      character: "🤷",
+    },
+    {
+      name: "pizza",
+      character: "🍕",
+    },
+    {
+      name: "chart_increasing",
+      character: "📈",
+    },
+    {
+      name: "musical_score",
+      character: "🎼",
+    },
+    {
+      name: "crocodile",
+      character: "🐊",
+    },
   ];
   return characters;
 }
