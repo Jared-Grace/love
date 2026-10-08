@@ -1,0 +1,13 @@
+{
+ "known": [
+  "qa_app_commit_gate_run_at",
+  "qa_commit_named_at",
+  "qa_app_commit_deployable_generic",
+  "functions_new_baseline_ratchet",
+  "qa_commit_named_at_when_wanted",
+  "qa_app_commit_deployable_remembered",
+  "qa_app_commit_deployable",
+  "literals_frozen_name_add",
+  "qa_app_shipped_names"
+ ]
+}

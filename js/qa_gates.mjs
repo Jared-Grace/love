@@ -1,3 +1,4 @@
+import { permission_grants_dispatch_unfenced_gate_run } from "./permission_grants_dispatch_unfenced_gate_run.mjs";
 import { app_code_above_vague_gate_run } from "./app_code_above_vague_gate_run.mjs";
 import { app_bible_card_claims_gate_run } from "./app_bible_card_claims_gate_run.mjs";
 import { prayer_lead_all_creation_gate_run } from "./prayer_lead_all_creation_gate_run.mjs";
@@ -1213,6 +1214,7 @@ export function qa_gates() {
     app_supper_tl_languages_gate_run,
     prayer_lead_all_creation_gate_run,
     app_bible_card_claims_gate_run,
+    permission_grants_dispatch_unfenced_gate_run,
   ];
   return gates;
 }
