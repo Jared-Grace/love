@@ -1,3 +1,4 @@
+import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { js_code_else_dots } from "./js_code_else_dots.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
@@ -167,9 +168,19 @@ export function app_code_lesson_if_halve_or_triple() {
       " is halved",
     ]);
     let box_four = app_code_container_light_blue(root);
+    let even_check = js_code_remainder_two_is(name, "0");
+    let if_dots = js_code_if_dots(even_check);
+    let if_else = if_dots + " " + else_dots;
     html_div_cycle_code(box_four, [
-      "Take this step again and again, and every number tried so far reaches ",
+      "At the time of writing, apply ",
+      if_else,
+      " again and again, and every number 1, 2, 3, ... anyone has ever tried so far reaches ",
       "1",
+    ]);
+    html_div_cycle_code(box_four, [
+      "But we do not know if all numbers 1, 2, 3, ... always reach ",
+      "1",
+      " or not",
     ]);
   }
   let name_id = app_code_lesson_statement_title_name_id(
