@@ -1920,6 +1920,34 @@ export function bible_glyph_artwork_names() {
       glyph: "pause_button",
       asset: "Pause button",
     },
+    {
+      glyph: "currency_exchange",
+      asset: "Currency exchange",
+    },
+    {
+      glyph: "snow_capped_mountain",
+      asset: "Snow-capped mountain",
+    },
+    {
+      glyph: "parachute",
+      asset: "Parachute",
+    },
+    {
+      glyph: "bomb",
+      asset: "Bomb",
+    },
+    {
+      glyph: "owl",
+      asset: "Owl",
+    },
+    {
+      glyph: "smiling_face_with_hearts",
+      asset: "Smiling face with hearts",
+    },
+    {
+      glyph: "persevering_face",
+      asset: "Persevering face",
+    },
   ];
   return names;
 }
