@@ -1584,6 +1584,26 @@ export function bible_glyph_artwork_names() {
       glyph: "cloud_with_lightning",
       asset: "Cloud with lightning",
     },
+    {
+      glyph: "white_flower",
+      asset: "White flower",
+    },
+    {
+      glyph: "lizard",
+      asset: "Lizard",
+    },
+    {
+      glyph: "amphora",
+      asset: "Amphora",
+    },
+    {
+      glyph: "yarn",
+      asset: "Yarn",
+    },
+    {
+      glyph: "ninja",
+      asset: "Ninja",
+    },
   ];
   return names;
 }
