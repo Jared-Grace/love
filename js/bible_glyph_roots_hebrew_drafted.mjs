@@ -9,6 +9,15 @@ export function bible_glyph_roots_hebrew_drafted() {
   "A NAME ALSO WAITS WHEN ONE OF ITS PICTURES WOULD ARRIVE AS LETTERS OR IN THE READER'S OWN FONT. The artwork set has no brother and no family, so Ahab, Ahijah, Ammon and Amram wait, and sabbath, calf, sacrifice, iron and fruit are still English words, so Shabbethai, Eglon, Zebah, Barzillai and Ephrath wait with them; half a name drawn and half spelled stops reading as one name.";
   "A NAME WAITS WHEN ITS TWO PICTURES ARE A COMMON PHRASE ON THEIR OWN. The last picture of one word and the first of the next can be read as one name, so Adonijah, the crown and I AM, would be read wherever the Lord GOD is said, eighty four times, against twenty six real ones; Hor is every mount before a name, Shem every name before one, and Nathan every gift handed to someone named. Where the false reading is not what the verse says and is common, the name waits. Jonathan stays, read falsely twenty five times against eighty two, because the false reading is I AM giving, which is what those verses say; a name built as a sentence about God is misread only as that sentence.";
   let rows = [
+    ["1350", "gaal", "currency_exchange", "redeem"],
+    ["1116", "bamah", "snow_capped_mountain", "high place"],
+    ["4422", "malat", "parachute", "escape"],
+    ["8045", "shamad", "bomb", "destroy"],
+    ["6098", "etsah", "owl", "counsel"],
+    ["3289", "yaats", "owl+doing", "advise"],
+    ["2654", "chaphets", "smiling_face_with_hearts+doing", "delight"],
+    ["6031", "aniy", "persevering_face+doing", "afflict"],
+    ["6041", "aniy", "persevering_face+describing", "afflicted, poor"],
     ["5800", "azab", "derelict_house+doing", "forsake"],
     ["2691", "chatser", "house_with_garden", "court"],
     ["1755", "dor", "dna", "generation"],
