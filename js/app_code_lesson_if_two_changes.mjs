@@ -1,3 +1,5 @@
+import { multiply } from "./multiply.mjs";
+import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -84,13 +86,11 @@ export function app_code_lesson_if_two_changes() {
     );
     let quads = list_concat(trues, falses);
     function program_of(quad) {
-      let code2 = program_get(
-        list_get(quad, 0),
-        list_get(quad, 1),
-        list_get(quad, 2),
-        list_get(quad, 3),
-        true,
-      );
+      let item = list_get(quad, 0);
+      let item2 = list_get(quad, 1);
+      let item3 = list_get(quad, 2);
+      let item4 = list_get(quad, 3);
+      let code2 = program_get(item, item2, item3, item4, true);
       return code2;
     }
     let codes = list_map(quads, program_of);
@@ -108,12 +108,12 @@ export function app_code_lesson_if_two_changes() {
     let start2 = list_get(quad2, 0);
     let multiplier2 = list_get(quad2, 2);
     let added2 = list_get(quad2, 3);
-    let first_only = start2 * multiplier2;
+    let first_only = multiply(start2, multiplier2);
     let start_text = json_to(start2);
     let runs = not_equal(answer, start_text);
     let other = first_only + added2;
     if (runs) {
-      other = (start2 + added2) * multiplier2;
+      other = multiply(start2 + added2, multiplier2);
     }
     let found = list_map([other, first_only], json_to);
     return found;
@@ -125,7 +125,7 @@ export function app_code_lesson_if_two_changes() {
     let bound3 = list_get(quad3, 1);
     let multiplier3 = list_get(quad3, 2);
     let added3 = list_get(quad3, 3);
-    let ran = start3 < bound3;
+    let ran = less_than(start3, bound3);
     let code3 = program_get(start3, bound3, multiplier3, added3, false);
     if (not(ran)) {
       code3 = program_get(start3, start3 + 1, multiplier3, added3, true);
