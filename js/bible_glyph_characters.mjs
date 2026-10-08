@@ -2303,6 +2303,66 @@ export function bible_glyph_characters() {
       name: "crocodile",
       character: "🐊",
     },
+    {
+      name: "sewing_needle",
+      character: "🪡",
+    },
+    {
+      name: "sun_behind_small_cloud",
+      character: "🌤️",
+    },
+    {
+      name: "mechanical_arm",
+      character: "🦾",
+    },
+    {
+      name: "full_moon",
+      character: "🌕",
+    },
+    {
+      name: "satellite",
+      character: "🛰️",
+    },
+    {
+      name: "card_index_dividers",
+      character: "🗂️",
+    },
+    {
+      name: "face_with_rolling_eyes",
+      character: "🙄",
+    },
+    {
+      name: "shushing_face",
+      character: "🤫",
+    },
+    {
+      name: "star_struck",
+      character: "🤩",
+    },
+    {
+      name: "zany_face",
+      character: "🤪",
+    },
+    {
+      name: "face_with_monocle",
+      character: "🧐",
+    },
+    {
+      name: "flying_disc",
+      character: "🥏",
+    },
+    {
+      name: "nerd_face",
+      character: "🤓",
+    },
+    {
+      name: "hiking_boot",
+      character: "🥾",
+    },
+    {
+      name: "fallen_leaf",
+      character: "🍂",
+    },
   ];
   return characters;
 }

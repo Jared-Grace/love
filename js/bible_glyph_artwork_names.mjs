@@ -2088,6 +2088,66 @@ export function bible_glyph_artwork_names() {
       glyph: "crocodile",
       asset: "Crocodile",
     },
+    {
+      glyph: "sewing_needle",
+      asset: "Sewing needle",
+    },
+    {
+      glyph: "sun_behind_small_cloud",
+      asset: "Sun behind small cloud",
+    },
+    {
+      glyph: "mechanical_arm",
+      asset: "Mechanical arm",
+    },
+    {
+      glyph: "full_moon",
+      asset: "Full moon",
+    },
+    {
+      glyph: "satellite",
+      asset: "Satellite",
+    },
+    {
+      glyph: "card_index_dividers",
+      asset: "Card index dividers",
+    },
+    {
+      glyph: "face_with_rolling_eyes",
+      asset: "Face with rolling eyes",
+    },
+    {
+      glyph: "shushing_face",
+      asset: "Shushing face",
+    },
+    {
+      glyph: "star_struck",
+      asset: "Star-struck",
+    },
+    {
+      glyph: "zany_face",
+      asset: "Zany face",
+    },
+    {
+      glyph: "face_with_monocle",
+      asset: "Face with monocle",
+    },
+    {
+      glyph: "flying_disc",
+      asset: "Flying disc",
+    },
+    {
+      glyph: "nerd_face",
+      asset: "Nerd face",
+    },
+    {
+      glyph: "hiking_boot",
+      asset: "Hiking boot",
+    },
+    {
+      glyph: "fallen_leaf",
+      asset: "Fallen leaf",
+    },
   ];
   return names;
 }
