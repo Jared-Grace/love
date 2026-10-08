@@ -1,3 +1,4 @@
+import { app_code_above_vague_gate_run } from "./app_code_above_vague_gate_run.mjs";
 import { app_bible_card_claims_gate_run } from "./app_bible_card_claims_gate_run.mjs";
 import { prayer_lead_all_creation_gate_run } from "./prayer_lead_all_creation_gate_run.mjs";
 import { app_supper_tl_languages_gate_run } from "./app_supper_tl_languages_gate_run.mjs";
@@ -1173,6 +1174,7 @@ export function qa_gates() {
     bible_usfm_markers_named_gate_run,
     ebible_version_words_spelled_gate_run,
     app_code_lessons_above_broken_gate_run,
+    app_code_above_vague_gate_run,
     bible_glyph_chapters_unlisted_gate_run,
     gloss_same_as_gate_run,
     bible_glyph_chapters_name_tag_fire_joined_gate_run,

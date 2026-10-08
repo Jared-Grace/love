@@ -1,0 +1,10 @@
+{
+ "known": [
+  "app_code_lesson_comment_note | When a computer sees //, then the computer skips the rest of that line",
+  "app_code_lesson_comment_skip_line | That line is a comment now, so it is skipped",
+  "app_code_lesson_comment_after_code | 146, two slashes in front of a line skip that line:",
+  "app_code_lesson_comment_after_code | The rest of that line is skipped",
+  "app_code_lesson_statement_name_copy_kept | Cup c was filled once, and that line changed cup a only",
+  "app_code_lesson_statement_name_count | Write that line (a = a + 1;) twice and the value of the name goes up by 2 instead of 1:"
+ ]
+}
