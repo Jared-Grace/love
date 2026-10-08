@@ -1899,6 +1899,26 @@ export function bible_glyph_characters() {
       name: "cloud_with_lightning",
       character: "🌩️",
     },
+    {
+      name: "white_flower",
+      character: "💮",
+    },
+    {
+      name: "lizard",
+      character: "🦎",
+    },
+    {
+      name: "amphora",
+      character: "🏺",
+    },
+    {
+      name: "yarn",
+      character: "🧶",
+    },
+    {
+      name: "ninja",
+      character: "🥷",
+    },
   ];
   return characters;
 }
