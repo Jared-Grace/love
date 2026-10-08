@@ -1,4 +1,4 @@
-import {Agent, setGlobalDispatcher} from "undici";
+import { Agent, setGlobalDispatcher } from "undici";
 import { math_min } from "./math_min.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
@@ -75,7 +75,7 @@ export async function youtube_video_upload_bytes_pieces(session_url, bytes) {
       continue;
     }
     let retried = equal(status, 0) || greater_than_equal(status, 500);
-    let buffer2 = property_get(answer, "bytes");
+    let buffer2 = equal(answer, null) ? null : property_get(answer, "bytes");
     let said = equal(answer, null)
       ? "connection failed"
       : buffer_text_to(buffer2);

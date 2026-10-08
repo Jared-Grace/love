@@ -1,10 +1,10 @@
+import { youtube_video_upload_bytes_pieces } from "./youtube_video_upload_bytes_pieces.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_read_buffer } from "./file_read_buffer.mjs";
 import { property_get } from "./property_get.mjs";
 import { youtube_video_upload_record } from "./youtube_video_upload_record.mjs";
 import { youtube_video_upload_begin } from "./youtube_video_upload_begin.mjs";
-import { youtube_video_upload_bytes } from "./youtube_video_upload_bytes.mjs";
 import { youtube_video_address } from "./youtube_video_address.mjs";
 export async function youtube_video_upload(
   file_path,
@@ -25,7 +25,7 @@ export async function youtube_video_upload(
   let byte_count = property_get(bytes, "length");
   let record = youtube_video_upload_record(title, description, privacy);
   let session_url = await youtube_video_upload_begin(record, byte_count);
-  let video = await youtube_video_upload_bytes(session_url, bytes);
+  let video = await youtube_video_upload_bytes_pieces(session_url, bytes);
   let video_id = property_get(video, "id");
   let address = youtube_video_address(video_id);
   let title_after = property_path_get_2(video, "snippet", "title");
