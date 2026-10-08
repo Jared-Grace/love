@@ -175,7 +175,7 @@ export function app_code_lesson_if_else_change() {
   }
   let name_id = app_code_lesson_statement_title_name_id(
     "Else with changes",
-    "if (n < 5) { n += 3; } else { n *= 2; }",
+    "else { n *= 2; }",
   );
   let lesson = app_code_lesson_code_logged({
     above,

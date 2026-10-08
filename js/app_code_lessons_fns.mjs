@@ -1,3 +1,6 @@
+import { app_code_lesson_if_halve_even } from "./app_code_lesson_if_halve_even.mjs";
+import { app_code_lesson_if_else_change } from "./app_code_lesson_if_else_change.mjs";
+import { app_code_lesson_if_halve_or_triple } from "./app_code_lesson_if_halve_or_triple.mjs";
 import { app_code_lesson_if_two_bounds } from "./app_code_lesson_if_two_bounds.mjs";
 import { app_code_lesson_if_else } from "./app_code_lesson_if_else.mjs";
 import { app_code_lesson_if_and_if_not } from "./app_code_lesson_if_and_if_not.mjs";

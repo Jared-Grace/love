@@ -168,7 +168,7 @@ export function app_code_lesson_if_halve_or_triple() {
   }
   let name_id = app_code_lesson_statement_title_name_id(
     "Halve, or times 3 plus 1",
-    "if (n % 2 === 0) { n /= 2; } else { n *= 3; n += 1; }",
+    "else { n *= 3; n += 1; }",
   );
   let lesson = app_code_lesson_code_logged({
     above,
