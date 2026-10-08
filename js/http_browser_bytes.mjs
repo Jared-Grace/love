@@ -1,3 +1,4 @@
+import { browser_online_is } from "./browser_online_is.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { json_to } from "./json_to.mjs";
@@ -14,6 +15,11 @@ export async function http_browser_bytes(method, options, body, url) {
   "ASKING AGAIN IS ALSO SOMETHING TO BE ABLE TO TURN OFF. A retry is free when the work is a lookup and costs three times the work when it is a render, so a long job says one try and means it - three renders of the same video is the worst outcome of the three, worse than the failure it was trying to avoid.";
   let ceiling = options.milliseconds_ceiling || 8000;
   let tries = options.tries || 3;
+  ("A DEVICE THAT KNOWS IT HAS NO NETWORK IS ASKED ONCE. Asking again helps a stalled connection, and there is no connection here to stall: each refused file held the loading screen up for the three seconds of waiting between tries, on every tap, so a reader with no internet and a language not kept on the device met the loading screen at every step - measured headless, offline, with one chosen language not saved.");
+  let online = browser_online_is();
+  if (not(online)) {
+    tries = 1;
+  }
   let r = {
     method,
   };

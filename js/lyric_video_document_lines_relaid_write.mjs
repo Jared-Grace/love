@@ -61,6 +61,7 @@ export async function lyric_video_document_lines_relaid_write(
   }
   let lines = lyric_timing_lines_timed(starts, texts, document.duration);
   document.lines = lines;
+  lyric_video_document_pictures_times_derive(document, 0);
   await file_overwrite_json(found.path, document);
   let written = {
     wrote: true,
