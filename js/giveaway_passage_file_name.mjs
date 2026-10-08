@@ -4,7 +4,7 @@ import { list_includes_assert } from "./list_includes_assert.mjs";
 import { text_empty_not_is_assert } from "./text_empty_not_is_assert.mjs";
 import { list_join_underscore } from "./list_join_underscore.mjs";
 import { text_combine } from "./text_combine.mjs";
-export function giveaway_chapter_file_name(
+export function giveaway_passage_file_name(
   chapter_code,
   bible_folder,
   kind,
