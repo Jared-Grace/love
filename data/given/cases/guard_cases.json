@@ -503,6 +503,7 @@
     { "command": "diff <(ls a) <(ls b)", "decision": "ask", "reason_includes": "Write each side to a file in the scratchpad", "why": "process substitution was most of the unparsed asks in the log; the hint names the rewording that needs no prompt" },
     { "command": "cd /tmp/x/scratchpad && printf a >> used.txt && wc -l used.txt", "decision": "ask", "reason_includes": "it never follows `cd`. Write the whole path", "why": "a bare file name after cd into the scratchpad was told to write to the scratchpad, which it already did; the hint names the real fix" },
     { "command": "ls; bash data/given/cases/guard_script_fixture.sh", "decision": "ask", "reason_includes": "line 4 (awk)", "why": "a prompt for bash FILE showed two words; the human approved a script that ran awk unseen" },
-    { "command": "ls; bash data/given/cases/guard_script_fixture.sh", "decision": "ask", "reason_includes": "line 6 (awk)", "why": "an awk program spanning lines leaves an unclosed quote on its first line; the word match still flags it" }
+    { "command": "ls; bash data/given/cases/guard_script_fixture.sh", "decision": "ask", "reason_includes": "line 6 (awk)", "why": "an awk program spanning lines leaves an unclosed quote on its first line; the word match still flags it" },
+    { "command": "bash data/given/cases/guard_script_fixture.sh", "decision": "ask", "reason_includes": "line 4 (awk)", "why": "a lone bash FILE was silent, so the native prompt gave no reason; it now asks with what the file holds" }
   ]
 }

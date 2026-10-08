@@ -5339,6 +5339,12 @@ def main():
     if pattern is not None:
         return decide("ask", pkill_advice_ask_reason(pattern))
 
+    # A script file run whole: nothing here reads it, so the prompt would
+    # otherwise show two words and no reason. See script_file_note.
+    note = script_file_note(command.split(), command)
+    if note:
+        return decide("ask", "This runs a script file." + note)
+
 
 if __name__ == "__main__":
     main()
