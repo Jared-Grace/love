@@ -2867,6 +2867,22 @@ export function bible_glyph_characters() {
       name: "unamused_face",
       character: "😒",
     },
+    {
+      name: "pirate_flag",
+      character: "🏴‍☠️",
+    },
+    {
+      name: "disguised_face",
+      character: "🥸",
+    },
+    {
+      name: "red_circle",
+      character: "🔴",
+    },
+    {
+      name: "desert",
+      character: "🏜️",
+    },
   ];
   return characters;
 }
