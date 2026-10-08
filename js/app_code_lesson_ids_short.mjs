@@ -328,6 +328,9 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_if_and_if_not: text_frozen("if_and_if_not"),
     app_code_lesson_if_two_bounds: text_frozen("if_two_bounds"),
     app_code_lesson_if_else: text_frozen("if_else"),
+    app_code_lesson_if_halve_even: text_frozen("if_halve_even"),
+    app_code_lesson_if_else_change: text_frozen("if_else_change"),
+    app_code_lesson_if_halve_or_triple: text_frozen("if_halve_or_triple"),
     app_code_lesson_statement_name_rectangles_rows_between: text_frozen(
       "name_rectangles_rows_between",
     ),

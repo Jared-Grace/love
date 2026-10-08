@@ -1,3 +1,4 @@
+import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -100,11 +101,11 @@ export function app_code_lesson_if_else_change() {
     let added3 = list_get(numbers, 2);
     let multiplier3 = list_get(numbers, 3);
     let other = start3 + added3;
-    let both = start3 * multiplier3 + added3;
+    let both = multiply(start3, multiplier3) + added3;
     let ran = less_than(start3, bound3);
     if (ran) {
-      other = start3 * multiplier3;
-      both = (start3 + added3) * multiplier3;
+      other = multiply(start3, multiplier3);
+      both = multiply(start3 + added3, multiplier3);
     }
     let found = list_map([other, both], json_to);
     return found;

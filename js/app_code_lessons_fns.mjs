@@ -515,6 +515,9 @@ export function app_code_lessons_fns() {
     app_code_lesson_if_two_ifs,
     app_code_lesson_if_and_if_not,
     app_code_lesson_if_else,
+    app_code_lesson_if_halve_even,
+    app_code_lesson_if_else_change,
+    app_code_lesson_if_halve_or_triple,
   ];
   return fns;
 }
