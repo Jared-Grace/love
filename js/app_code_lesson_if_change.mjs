@@ -1,3 +1,4 @@
+import { text_integers } from "./text_integers.mjs";
 import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
@@ -15,8 +16,6 @@ import { list_map } from "./list_map.mjs";
 import { app_code_if_codes_halves } from "./app_code_if_codes_halves.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
-import { text_between } from "./text_between.mjs";
-import { json_from } from "./json_from.mjs";
 import { json_to } from "./json_to.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
@@ -93,11 +92,9 @@ export function app_code_lesson_if_change() {
     eval_console_log_lines,
   );
   function numbers_of(code3) {
-    "[start, bound, added] read back from a program";
-    let start3 = text_between(code3, "= ", ";");
-    let bound3 = text_between(code3, "< ", ")");
-    let added3 = text_between(code3, "+= ", ";");
-    let triple2 = list_map([start3, bound3, added3], json_from);
+    "[start, bound, added] read back from a program: they are its only numbers, in that order";
+    "Not picked: finding each number by the text around it, such as < and a space, since the spaces the program is written with are ones that do not break and so match no space typed here.";
+    let triple2 = text_integers(code3);
     return triple2;
   }
   function decoys(question, answer) {
