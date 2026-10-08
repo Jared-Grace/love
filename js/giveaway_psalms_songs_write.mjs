@@ -1,14 +1,17 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { path_basename } from "./path_basename.mjs";
-import { giveaway_song_take } from "./giveaway_song_take.mjs";
 import { giveaway_song_mark } from "./giveaway_song_mark.mjs";
 import { giveaway_passage_file_name } from "./giveaway_passage_file_name.mjs";
 import { ebible_chapter_code_pad } from "./ebible_chapter_code_pad.mjs";
 import { giveaway_passage_code } from "./giveaway_passage_code.mjs";
+import { list_map_index_async } from "./list_map_index_async.mjs";
 import { psalms_songs_folder_chapters } from "./psalms_songs_folder_chapters.mjs";
 import { psalms_songs_folder_parts } from "./psalms_songs_folder_parts.mjs";
-import { list_map_async } from "./list_map_async.mjs";
+import { list_map } from "./list_map.mjs";
 import { list_concat } from "./list_concat.mjs";
+import { list_group_by_property } from "./list_group_by_property.mjs";
+import { list_map_async } from "./list_map_async.mjs";
+import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_sort_text_property } from "./list_sort_text_property.mjs";
 import { list_duplicates_by_property } from "./list_duplicates_by_property.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
@@ -23,14 +26,15 @@ export async function giveaway_psalms_songs_write(folder_audio) {
   ("★ THE TRANSLATION IS NOT ASKED FOR, BECAUSE THE REPO ALREADY KNOWS IT. Every one of the three hundred and eighty-four lyric video documents on this disk names its text as bsb, which is the Berean Standard Bible, and the folder that bible is kept in is spelled engbsb. The folder spelling is what goes in the name rather than the shorter bsb, so that the word in a song's name and the name of the box holding that bible's words are the same word, and somebody joining the singing to the text has nothing to look up. Taking the translation as an argument would make a wrong answer possible where there is only one right one.");
   ("Both walks are made because a psalm is sung whole and also sung in parts, and each walk refuses the other's names. The rows are sorted by the given-away name rather than left in the order the folder was read, because the order a folder is read in is not promised and a record that reshuffles between writings reads as a change when nothing changed.");
   ("The disk name is kept without its folder. The folder is what was handed in, so storing it again would write this machine's own layout into a record about which songs exist, and the record would go stale the day the folder moved rather than the day the songs changed.");
+  ("★ WHICH SONG OF A PASSAGE A FILE IS COMES FROM WHERE IT STANDS IN ITS PASSAGE'S OWN LIST, NOT FROM THE NUMBER ON ITS NAME, AND THAT IS WHY THE SONGS ARE GATHERED BY PASSAGE BEFORE ANYTHING IS NAMED. Two files in the downloads folder are `Psalm 150.wav` and `Psalm_150.wav` - one space apart - and both read as take nought, so a name built from the take number would have published two different singings of Psalm 150 under one name. The gathering keeps each passage's songs in the order the folder walk put them, which is take order, so the places run with the singing rather than against it. Nothing is sorted before the gathering, so the places do not depend on a sort holding equal items in the order it found them.");
   ("Only the two names are kept. The passage, the verse range and the take number are all readable out of the given-away name, and a record that also stated them would be a second place for them to disagree with the name itself.");
   let bible_folder = "engbsb";
   let kind = "song";
   let ending = ".wav";
-  async function row_build(passage_code, path_audio) {
-    let file_name = await path_basename(path_audio);
-    let take = await giveaway_song_take(path_audio);
-    let mark = giveaway_song_mark(take);
+  async function row_build(found, place) {
+    let passage_code = found.passage_code;
+    let file_name = await path_basename(found.path_audio);
+    let mark = giveaway_song_mark(place);
     let name_published = giveaway_passage_file_name(
       passage_code,
       bible_folder,
@@ -44,26 +48,39 @@ export async function giveaway_psalms_songs_write(folder_audio) {
     };
     return row;
   }
-  async function whole_row(song) {
+  function whole_found(song) {
     let chapter_code = ebible_chapter_code_pad("PSA", song.chapter);
-    let row = await row_build(chapter_code, song.path_audio);
-    return row;
+    let found = {
+      passage_code: chapter_code,
+      path_audio: song.path_audio,
+    };
+    return found;
   }
-  async function part_row(song) {
+  function part_found(song) {
     let chapter_code = ebible_chapter_code_pad("PSA", song.chapter);
     let passage_code = giveaway_passage_code(
       chapter_code,
       song.verse_first,
       song.verse_last,
     );
-    let row = await row_build(passage_code, song.path_audio);
-    return row;
+    let found = {
+      passage_code: passage_code,
+      path_audio: song.path_audio,
+    };
+    return found;
+  }
+  async function passage_rows(group) {
+    let rows_of_passage = await list_map_index_async(group.items, row_build);
+    return rows_of_passage;
   }
   let wholes = await psalms_songs_folder_chapters(folder_audio);
   let parts = await psalms_songs_folder_parts(folder_audio);
-  let whole_rows = await list_map_async(wholes, whole_row);
-  let part_rows = await list_map_async(parts, part_row);
-  let rows = list_concat(whole_rows, part_rows);
+  let whole_founds = list_map(wholes, whole_found);
+  let part_founds = list_map(parts, part_found);
+  let founds = list_concat(whole_founds, part_founds);
+  let groups = list_group_by_property(founds, "passage_code");
+  let grouped_rows = await list_map_async(groups, passage_rows);
+  let rows = list_concat_multiple(grouped_rows);
   list_sort_text_property(rows, "name_published");
   let clashes = list_duplicates_by_property(rows, "name_published");
   list_empty_is_assert_json(clashes, {

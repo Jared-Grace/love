@@ -1,15 +1,17 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { number_pad_2 } from "./number_pad_2.mjs";
 import { text_combine } from "./text_combine.mjs";
-export function giveaway_song_mark(take) {
+export function giveaway_song_mark(place) {
   arguments_assert(arguments, 1);
-  ("$plain take");
+  ("$plain place");
   ("Which of a passage's songs this one is, said the way it is written into the file name somebody downloads.");
   ("★ EVERY SONG OF A PASSAGE IS MARKED, INCLUDING THE FIRST, BECAUSE THEY ARE ALL SONGS AND NOT ONE SONG WITH SPARES. A passage sung several times is several songs on purpose. On this disk the first one is deliberately left unmarked, and that rule has a reason that does not travel - it is there so the documents whose times were corrected by hand keep the address they already have. A box nobody has uploaded yet holds no corrected document and no address worth keeping, so the reason is absent and only its cost is left: an unmarked file reads as the real one and marked files read as leftovers, which is the opposite of what is being given away.");
   ("★ THE NUMBER IS PADDED BECAUSE A BARE LISTING IS SORTED AS WORDS AND NEVER AS NUMBERS. Unpadded, a tenth song sorts between the first and the second, and the places this name is read - a download page, an unzipped folder, the screen of a music player - all sort as words and none of them can be told otherwise afterwards.");
-  ("★ THE NUMBER IS THE ONE THE RECORDINGS ALREADY CARRY, SO THE FIRST SONG IS TAKE ZERO AND NOT TAKE ONE. Counting from one would read better to a person and would be wrong in the way that is hardest to see: the published name would no longer be the number the timing documents and the marks on this disk are keyed by, so anybody joining a downloaded song back to the repo that made it would be one out, quietly, on every row. A name that reads slightly oddly is cheaper than an off-by-one nobody can see from either end. Do not shift this to count from one.");
+  ("★ THE NUMBER IS WHERE THE SONG STANDS AMONG ITS PASSAGE'S SONGS, NOT THE TAKE NUMBER OFF ITS FILE NAME, AND THAT WAS A CORRECTION. This function was first written to take the number in round brackets that the recordings carry, so that a downloaded song could be joined back to the repo that made it by its number alone. That reason was wrong, because the number is not unique: `Psalm 150.wav` and `Psalm_150.wav` both sit in the downloads folder, differing by one space, and both read as take nought. Two songs would have been published under one name, and an upload does not refuse a repeated name - it replaces the file and leaves the record looking complete. Where the join back to the repo now lives is the written-down record pairing each disk name with its given-away name, which is a better answer than a number that happened to line up.");
+  ("The two readings this rejected are worth keeping, because both look right. The take number off the file name is not unique, as above. The repo's own mark is unique - it breaks a tie between two same-take files by their format - but it is sometimes a format word rather than a number, so one of these very songs would have been published as its format, and the marks do not sort, because they are not padded. A place among the songs is unique by construction and sorts, and it does not move when a further singing is added, because a new take is added at the end.");
+  ("Counting starts at nought rather than one. Nothing outside depends on that any more, so it is only a convention - but it is the convention every other count in this repo follows, and changing it would mean every name already written down has to be written again.");
   ("Two digits rather than three. The most any one passage has been sung is a handful, so three digits would be two wasted characters in a name a player has to fit on one line; and a passage that passes ninety-nine songs is a change here, not a silent fault, because the hundredth would sort among the tens where a reader can see it.");
-  let padded = number_pad_2(take);
+  let padded = number_pad_2(place);
   let mark = text_combine("take", padded);
   return mark;
 }

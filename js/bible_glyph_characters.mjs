@@ -2823,6 +2823,30 @@ export function bible_glyph_characters() {
       name: "fork_and_knife_with_plate",
       character: "🍽️",
     },
+    {
+      name: "person_with_veil",
+      character: "👰",
+    },
+    {
+      name: "world_map",
+      character: "🗺️",
+    },
+    {
+      name: "oncoming_fist",
+      character: "👊",
+    },
+    {
+      name: "smiling_face_with_smiling_eyes",
+      character: "😊",
+    },
+    {
+      name: "person_raising_hand",
+      character: "🙋",
+    },
+    {
+      name: "seedling",
+      character: "🌱",
+    },
   ];
   return characters;
 }

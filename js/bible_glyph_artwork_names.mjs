@@ -2732,6 +2732,30 @@ export function bible_glyph_artwork_names() {
       glyph: "fork_and_knife_with_plate",
       asset: "Fork and knife with plate",
     },
+    {
+      glyph: "person_with_veil",
+      asset: "Person with veil",
+    },
+    {
+      glyph: "world_map",
+      asset: "World map",
+    },
+    {
+      glyph: "oncoming_fist",
+      asset: "Oncoming fist",
+    },
+    {
+      glyph: "smiling_face_with_smiling_eyes",
+      asset: "Smiling face with smiling eyes",
+    },
+    {
+      glyph: "person_raising_hand",
+      asset: "Person raising hand",
+    },
+    {
+      glyph: "seedling",
+      asset: "Seedling",
+    },
   ];
   return names;
 }
