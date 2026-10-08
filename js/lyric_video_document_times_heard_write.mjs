@@ -1,3 +1,4 @@
+import { lyric_video_starts_earlier } from "./lyric_video_starts_earlier.mjs";
 import { lyric_video_document_pictures_times_derive } from "./lyric_video_document_pictures_times_derive.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_exists } from "./file_exists.mjs";
@@ -32,7 +33,7 @@ export async function lyric_video_document_times_heard_write(
   "★ IT LISTENS AND KEEPS THE HEARING WHETHER OR NOT IT IS ALLOWED TO WRITE, AND THAT ORDER IS THE WHOLE POINT. Refusing to write was welded to refusing to listen at first, so the passages somebody had already timed by hand - the only passages whose right answers are known - were exactly the ones no reading was ever recorded for, and they are the ones any question about how well the machine hears has to be settled against. Listening is also what costs the minute; declining to write it down afterwards saves nothing and throws away the minute.";
   "★ WHERE EVERY LINE WAS PLACED IS KEPT AND NOT ONLY THE LINES THAT DISAGREED, because the disagreeing lines are a biased sample of exactly the wrong kind. How far one reading runs ahead of the other across a whole song can only be read off all of them; read off the flagged ones it is guaranteed to look large, since largeness is the reason they were flagged.";
   "★ AND THE TRANSCRIBER'S WORDS ARE KEPT BESIDE THAT, BECAUSE THE SUMMARY'S WORST ANSWER IS THE ONE IT CANNOT EXPLAIN. Where a line's words went unheard the summary holds no time for it, and no time is the shape a person can do nothing with: they are told a line is unplaced and given nothing to look at. The words say what was heard there instead, they cost nothing to store, and getting them back any other way means hearing the whole recording again for twenty minutes.";
-  "★ WHAT IS WRITTEN IS THE ALIGNER'S TIMES AND NEVER THE HEARING'S. The aligner is handed the words and can only decide where they fall; the blind hearing stayed about a quarter of a second out even after its constant lead was taken off. The hearing is here to disagree, not to place, so the lines it disagrees on are handed back rather than acted on - deciding between two readings of a sung line is listening, and nothing here can listen.";
+  "★ WHAT IS WRITTEN IS THE EARLIER OF THE TWO READINGS AT EVERY LINE. The aligner was written alone at first, because against a person's taps it placed 27 of 32 lines inside a tenth of a second. But it can be pulled several seconds late - by a backing voice singing the words early, measured 2026-10-08 on Psalm 150 - and a late line is the fault a viewer sees, while an early one is merely read ahead. Why the earlier one, and the readings rejected, live with the rule itself. The lines the two disagree on are still handed back, because only listening says which reading was right.";
   "★ AND THE LINES ARE HANDED BACK WHOLE, WORST FIRST, BECAUSE THE ONE THING A PERSON READING THIS CAN DO WITH THEM IS GO AND LISTEN TO ONE. For a long time only their numbers came back. Everything that makes a number worth looking at - how far the two readings are apart, which way round they are, and the words sung there - was measured, filed in the record kept of the hearing, and then dropped one call before the person who needed it, so a psalm came back as eleven bare numbers out of fifteen with nothing to choose between them. Measured 2026-10-02, the distance is a real signal and the one worth sorting by; the reasoning for that, and for why the direction does not get to sort them, lives with the thing that does the sorting.";
   "★ HOW LONG THE SONG IS GETS READ OFF THE RECORDING WHERE THE DOCUMENT DOES NOT ALREADY CARRY IT, BECAUSE THE CLOSING LINE HAS NOTHING ELSE TO END ON. A line ends where the next one begins and the last line ends where the singing stops, so the length is the one number the final line depends on and the only one not derivable from the moments themselves. It used to be taken from the document and nowhere else. That was invisible for a long time because the drafting walk writes the length as it drafts, so every document that had ever been listened to carried one - 178 of the 179 when this was found. The one that did not was the first document reached here that had never been drafted at all, and its closing line came out holding a beginning and no end, which is exactly the shape the line builder says in its own words a person can do nothing with. Measured 2026-10-02 on Psalm 93, and nothing anywhere went red: the write reported success, fifteen lines, and a last line going nowhere.";
   "The length is written onto the document rather than used and dropped, because every other document here carries one and whatever reads these next has no way of telling a document that never had a length from one whose song is a different length than it says. A recording the prober cannot measure leaves the document exactly as it was, so a broken install subtracts a number rather than writing a wrong one.";
@@ -100,11 +101,11 @@ export async function lyric_video_document_times_heard_write(
       document.duration = seconds;
     }
   }
-  let lines = lyric_timing_lines_timed(
+  let starts2 = lyric_video_starts_earlier(
     measured.starts,
-    texts,
-    document.duration,
+    measured.starts_heard,
   );
+  let lines = lyric_timing_lines_timed(starts2, texts, document.duration);
   document.lines = lines;
   document.times_from = lyric_video_times_machine_word();
   lyric_video_document_pictures_times_derive(document, 0);
