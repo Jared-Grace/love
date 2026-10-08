@@ -2847,6 +2847,26 @@ export function bible_glyph_characters() {
       name: "seedling",
       character: "🌱",
     },
+    {
+      name: "face_screaming_in_fear",
+      character: "😱",
+    },
+    {
+      name: "pleading_face",
+      character: "🥺",
+    },
+    {
+      name: "person_gesturing_no",
+      character: "🙅",
+    },
+    {
+      name: "smiling_face_with_halo",
+      character: "😇",
+    },
+    {
+      name: "unamused_face",
+      character: "😒",
+    },
   ];
   return characters;
 }

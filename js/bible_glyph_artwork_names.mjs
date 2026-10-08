@@ -2756,6 +2756,26 @@ export function bible_glyph_artwork_names() {
       glyph: "seedling",
       asset: "Seedling",
     },
+    {
+      glyph: "face_screaming_in_fear",
+      asset: "Face screaming in fear",
+    },
+    {
+      glyph: "pleading_face",
+      asset: "Pleading face",
+    },
+    {
+      glyph: "person_gesturing_no",
+      asset: "Person gesturing no",
+    },
+    {
+      glyph: "smiling_face_with_halo",
+      asset: "Smiling face with halo",
+    },
+    {
+      glyph: "unamused_face",
+      asset: "Unamused face",
+    },
   ];
   return names;
 }
