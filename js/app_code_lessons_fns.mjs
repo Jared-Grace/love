@@ -1,3 +1,4 @@
+import { app_code_lesson_if_and_if_not } from "./app_code_lesson_if_and_if_not.mjs";
 import { app_code_lesson_if_two_ifs } from "./app_code_lesson_if_two_ifs.mjs";
 import { app_code_lesson_if_twice } from "./app_code_lesson_if_twice.mjs";
 import { app_code_lesson_if_two_changes } from "./app_code_lesson_if_two_changes.mjs";
@@ -509,6 +510,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_if_two_changes,
     app_code_lesson_if_twice,
     app_code_lesson_if_two_ifs,
+    app_code_lesson_if_and_if_not,
   ];
   return fns;
 }
