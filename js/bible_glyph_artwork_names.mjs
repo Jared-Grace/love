@@ -2556,6 +2556,42 @@ export function bible_glyph_artwork_names() {
       glyph: "statute",
       asset: "Page facing up",
     },
+    {
+      glyph: "anger_symbol",
+      asset: "Anger symbol",
+    },
+    {
+      glyph: "receipt",
+      asset: "Receipt",
+    },
+    {
+      glyph: "head_shaking_vertically",
+      asset: "Head shaking vertically",
+    },
+    {
+      glyph: "hand_with_fingers_splayed",
+      asset: "Hand with fingers splayed",
+    },
+    {
+      glyph: "beginner",
+      asset: "Japanese symbol for beginner",
+    },
+    {
+      glyph: "worried_face",
+      asset: "Worried face",
+    },
+    {
+      glyph: "older_person",
+      asset: "Older person",
+    },
+    {
+      glyph: "identification_card",
+      asset: "Identification card",
+    },
+    {
+      glyph: "dizzy",
+      asset: "Dizzy",
+    },
   ];
   return names;
 }
