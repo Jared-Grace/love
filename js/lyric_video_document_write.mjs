@@ -1,3 +1,5 @@
+import { lyric_video_audio_cut } from "./lyric_video_audio_cut.mjs";
+import { lyric_video_document_cut } from "./lyric_video_document_cut.mjs";
 import { lyric_video_pictures_toned } from "./lyric_video_pictures_toned.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { lyric_video_document_faults_write } from "./lyric_video_document_faults_write.mjs";
@@ -23,13 +25,17 @@ export async function lyric_video_document_write(
   "★ A PICTURE THE DOCUMENT ASKS FOR THAT NOBODY HAS DRAWN YET IS LEFT OUT AND NAMED, RATHER THAN ENDING THE RENDER. Scenes are written down long before they are drawn, so the ordinary state of a timed psalm is a document naming pictures that are not on the disk. Opening one of those as an input ends the run complaining about a file, and the psalm gets no video at all - when the words over black, which is what this made for months before there were pictures, is a finished thing. Which ones were left out comes back with the answer, so whatever asked for the video can say it is a words-on-black one and which drawings it is still waiting for.";
   let document = await file_read_json(path_document);
   await lyric_video_document_faults_write(document, path_output);
+  let seconds_cut = document.audio_from || 0;
+  let path_audio_cut = path_subtitles + ".wav";
+  await lyric_video_audio_cut(path_audio, seconds_cut, path_audio_cut);
+  document = lyric_video_document_cut(document, seconds_cut);
   let subtitles = lyric_video_subtitles_text(document);
   await file_overwrite(path_subtitles, subtitles);
   let asked = lyric_video_document_pictures(document);
   let drawn = await lyric_video_pictures_present(asked);
   drawn.present = await lyric_video_pictures_toned(drawn.present);
   let ran = await lyric_video_write(
-    path_audio,
+    path_audio_cut,
     path_subtitles,
     path_output,
     document.width,
