@@ -2683,6 +2683,10 @@ export function bible_glyph_characters() {
       name: "dizzy",
       character: "💫",
     },
+    {
+      name: "people_with_bunny_ears",
+      character: "👯",
+    },
   ];
   return characters;
 }

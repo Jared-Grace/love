@@ -2592,6 +2592,10 @@ export function bible_glyph_artwork_names() {
       glyph: "dizzy",
       asset: "Dizzy",
     },
+    {
+      glyph: "people_with_bunny_ears",
+      asset: "Person with bunny ears",
+    },
   ];
   return names;
 }
