@@ -2148,6 +2148,86 @@ export function bible_glyph_artwork_names() {
       glyph: "fallen_leaf",
       asset: "Fallen leaf",
     },
+    {
+      glyph: "hot_face",
+      asset: "Hot face",
+    },
+    {
+      glyph: "partying_face",
+      asset: "Partying face",
+    },
+    {
+      glyph: "face_with_peeking_eye",
+      asset: "Face with peeking eye",
+    },
+    {
+      glyph: "leftwards_pushing_hand",
+      asset: "Leftwards pushing hand",
+    },
+    {
+      glyph: "bubbles",
+      asset: "Bubbles",
+    },
+    {
+      glyph: "anxious_face_with_sweat",
+      asset: "Anxious face with sweat",
+    },
+    {
+      glyph: "ribbon",
+      asset: "Ribbon",
+    },
+    {
+      glyph: "skateboard",
+      asset: "Skateboard",
+    },
+    {
+      glyph: "shaking_face",
+      asset: "Shaking face",
+    },
+    {
+      glyph: "blue_circle",
+      asset: "Blue circle",
+    },
+    {
+      glyph: "umbrella_on_ground",
+      asset: "Umbrella on ground",
+    },
+    {
+      glyph: "detective",
+      asset: "Detective",
+    },
+    {
+      glyph: "face_with_medical_mask",
+      asset: "Face with medical mask",
+    },
+    {
+      glyph: "whale",
+      asset: "Whale",
+    },
+    {
+      glyph: "performing_arts",
+      asset: "Performing arts",
+    },
+    {
+      glyph: "safety_vest",
+      asset: "Safety vest",
+    },
+    {
+      glyph: "crutch",
+      asset: "Crutch",
+    },
+    {
+      glyph: "hugging_face",
+      asset: "Hugging face",
+    },
+    {
+      glyph: "ear_with_hearing_aid",
+      asset: "Ear with hearing aid",
+    },
+    {
+      glyph: "woman_dancing",
+      asset: "Woman dancing",
+    },
   ];
   return names;
 }

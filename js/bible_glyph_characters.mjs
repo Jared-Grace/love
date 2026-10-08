@@ -2363,6 +2363,86 @@ export function bible_glyph_characters() {
       name: "fallen_leaf",
       character: "🍂",
     },
+    {
+      name: "hot_face",
+      character: "🥵",
+    },
+    {
+      name: "partying_face",
+      character: "🥳",
+    },
+    {
+      name: "face_with_peeking_eye",
+      character: "🫣",
+    },
+    {
+      name: "leftwards_pushing_hand",
+      character: "🫷",
+    },
+    {
+      name: "bubbles",
+      character: "🫧",
+    },
+    {
+      name: "anxious_face_with_sweat",
+      character: "😰",
+    },
+    {
+      name: "ribbon",
+      character: "🎀",
+    },
+    {
+      name: "skateboard",
+      character: "🛹",
+    },
+    {
+      name: "shaking_face",
+      character: "🫨",
+    },
+    {
+      name: "blue_circle",
+      character: "🔵",
+    },
+    {
+      name: "umbrella_on_ground",
+      character: "⛱️",
+    },
+    {
+      name: "detective",
+      character: "🕵️",
+    },
+    {
+      name: "face_with_medical_mask",
+      character: "😷",
+    },
+    {
+      name: "whale",
+      character: "🐋",
+    },
+    {
+      name: "performing_arts",
+      character: "🎭",
+    },
+    {
+      name: "safety_vest",
+      character: "🦺",
+    },
+    {
+      name: "crutch",
+      character: "🩼",
+    },
+    {
+      name: "hugging_face",
+      character: "🤗",
+    },
+    {
+      name: "ear_with_hearing_aid",
+      character: "🦻",
+    },
+    {
+      name: "woman_dancing",
+      character: "💃",
+    },
   ];
   return characters;
 }
