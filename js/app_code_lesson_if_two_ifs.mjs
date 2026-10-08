@@ -181,10 +181,14 @@ export function app_code_lesson_if_two_ifs() {
     ]);
     let box_three = app_code_container_light_blue(root);
     html_div_cycle_code(box_three, ["So two ", "if", "s can go four ways:"]);
-    html_div_cycle_code(box_three, ["both run"]);
-    html_div_cycle_code(box_three, ["only the first runs"]);
-    html_div_cycle_code(box_three, ["only the second runs"]);
-    html_div_cycle_code(box_three, ["neither runs"]);
+    let a_condition = js_code_binary_spaced_nb("a", less, 5);
+    let if_a = js_code_if_dots(a_condition);
+    let b_condition = js_code_binary_spaced_nb("b", less, 5);
+    let if_b = js_code_if_dots(b_condition);
+    html_div_cycle_code(box_three, ["", if_a, " and ", if_b, " both run"]);
+    html_div_cycle_code(box_three, ["only ", if_a, " runs"]);
+    html_div_cycle_code(box_three, ["only ", if_b, " runs"]);
+    html_div_cycle_code(box_three, ["neither ", if_a, " nor ", if_b, " runs"]);
   }
   let name_id = app_code_lesson_statement_title_name_id(
     "Two ifs",

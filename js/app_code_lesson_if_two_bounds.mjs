@@ -225,11 +225,17 @@ export function app_code_lesson_if_two_bounds() {
       "if",
       "s can go three ways:",
     ]);
-    html_div_cycle_code(box_four, ["both run"]);
-    html_div_cycle_code(box_four, ["only the first runs"]);
-    html_div_cycle_code(box_four, ["neither runs"]);
+    let low_condition = js_code_binary_spaced_nb(name, greater, 1);
+    let if_low = js_code_if_dots(low_condition);
+    let high_condition = js_code_binary_spaced_nb(name, greater, 3);
+    let if_high = js_code_if_dots(high_condition);
+    html_div_cycle_code(box_four, ["", if_low, " and ", if_high, " both run"]);
+    html_div_cycle_code(box_four, ["only ", if_low, " runs"]);
+    html_div_cycle_code(box_four, ["neither ", if_low, " nor ", if_high, " runs"]);
     html_div_cycle_code(box_four, [
-      "The second never runs alone: a number more than ",
+      "",
+      if_high,
+      " never runs alone: a number more than ",
       "3",
       " is more than ",
       "1",

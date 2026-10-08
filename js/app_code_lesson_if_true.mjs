@@ -76,7 +76,9 @@ export function app_code_lesson_if_true() {
     let box_two = app_code_container_light_blue(root);
     let keyword = js_keyword_if();
     html_div_cycle_code(box_two, [
-      "We can put that line inside an ",
+      "We can put ",
+      statement,
+      " inside an ",
       keyword,
       ":",
     ]);
