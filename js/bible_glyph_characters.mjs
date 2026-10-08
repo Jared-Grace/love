@@ -2743,6 +2743,14 @@ export function bible_glyph_characters() {
       name: "mechanical_leg",
       character: "🦿",
     },
+    {
+      name: "railway_track",
+      character: "🛤️",
+    },
+    {
+      name: "crab",
+      character: "🦀",
+    },
   ];
   return characters;
 }

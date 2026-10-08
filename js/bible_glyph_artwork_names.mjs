@@ -2652,6 +2652,14 @@ export function bible_glyph_artwork_names() {
       glyph: "mechanical_leg",
       asset: "Mechanical leg",
     },
+    {
+      glyph: "railway_track",
+      asset: "Railway track",
+    },
+    {
+      glyph: "crab",
+      asset: "Crab",
+    },
   ];
   return names;
 }
