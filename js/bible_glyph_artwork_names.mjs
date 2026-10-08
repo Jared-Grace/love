@@ -2596,6 +2596,30 @@ export function bible_glyph_artwork_names() {
       glyph: "people_with_bunny_ears",
       asset: "Person with bunny ears",
     },
+    {
+      glyph: "heavy_dollar_sign",
+      asset: "Heavy dollar sign",
+    },
+    {
+      glyph: "face_exhaling",
+      asset: "Face exhaling",
+    },
+    {
+      glyph: "cinema",
+      asset: "Cinema",
+    },
+    {
+      glyph: "person_rowing_boat",
+      asset: "Person rowing boat",
+    },
+    {
+      glyph: "chart_increasing_with_yen",
+      asset: "Chart increasing with yen",
+    },
+    {
+      glyph: "turtle",
+      asset: "Turtle",
+    },
   ];
   return names;
 }

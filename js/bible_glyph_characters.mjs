@@ -2687,6 +2687,30 @@ export function bible_glyph_characters() {
       name: "people_with_bunny_ears",
       character: "👯",
     },
+    {
+      name: "heavy_dollar_sign",
+      character: "💲",
+    },
+    {
+      name: "face_exhaling",
+      character: "😮‍💨",
+    },
+    {
+      name: "cinema",
+      character: "🎦",
+    },
+    {
+      name: "person_rowing_boat",
+      character: "🚣",
+    },
+    {
+      name: "chart_increasing_with_yen",
+      character: "💹",
+    },
+    {
+      name: "turtle",
+      character: "🐢",
+    },
   ];
   return characters;
 }
