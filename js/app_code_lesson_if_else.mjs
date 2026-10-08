@@ -36,6 +36,7 @@ export function app_code_lesson_if_else() {
   ("Reading backwards, the wrong program is the same program with the name holding the opposite, which writes out the other word.");
   ("Every program names its value a or b, as in If and if not. Not picked: a condition such as n < 5, since a name holding true or false keeps the one new fact, else, the only thing to read.");
   ("The writing is a first draft by Claude 2026-10-08.");
+  ("The second box says else says the same as if (a) beside if (!a) as long as nothing changes a in between, at the human's word 2026-10-08, matching the last box of If and if not. Without it the claim is false: if something changes a between the two ifs, both can run, while else asks once and never runs both. Not picked: showing that difference here, a second new fact, left for a lesson after this one.");
   let bang = js_operator_bang_symbol();
   let fruits = fruits_of_the_spirit();
   function logged(word) {
@@ -124,7 +125,9 @@ export function app_code_lesson_if_else() {
     html_div_cycle_code(box_two, [
       "",
       "else",
-      " says the same in fewer words:",
+      " says the same in fewer words, as long as nothing changes ",
+      name2,
+      " in between:",
     ]);
     let true_lines = program_lines(name2, true, words3);
     app_code_code_lines_writes_out(box_two, true_lines, love);
