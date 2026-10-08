@@ -65,14 +65,7 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-07: hold 243 If a name, 244 If names compared and 245 If not, until the human has read their first drafts";
   "2026-10-07: hold 246 Practice: steps, then if, 247 A number joined to a string and 248 If even, until the human has read their first drafts";
   "2026-10-07: hold A number plus a string, split out before A number joined to a string, until the human has read its first draft";
-  let fns = [
-    app_code_lesson_if_name,
-    app_code_lesson_if_names_less_than,
-    app_code_lesson_if_not,
-    app_code_lesson_if_steps,
-    app_code_lesson_number_text_plus,
-    app_code_lesson_number_text_join,
-    app_code_lesson_if_even,
-  ];
+  "then deploy through 249, 2026-10-08: nothing held";
+  let fns = [];
   return fns;
 }
