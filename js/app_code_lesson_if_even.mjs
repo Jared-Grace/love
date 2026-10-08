@@ -4,8 +4,6 @@ import { js_operator_percent_symbol } from "./js_operator_percent_symbol.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
-import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
-import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
@@ -47,8 +45,7 @@ export function app_code_lesson_if_even() {
   let same = js_operator_triple_equal_symbol();
   let brace_left = js_code_brace_left();
   let brace_right = js_code_brace_right();
-  let left = js_code_parenthesis_left();
-  let right = js_code_parenthesis_right();
+  ("The check goes in an if, worded so since 2026-10-08 at the human's word. Not picked: inside ( and ), the first wording, since a ( and a ) also group a value, so the sentence did not say it was the if that held the check.");
   let remainder = js_code_binary_spaced_nb(name, percent, "2");
   function check(left_over) {
     "n % 2 === left_over";
@@ -58,8 +55,8 @@ export function app_code_lesson_if_even() {
   let even_check = check("0");
   function logged(ending) {
     'console.log(n + " ending");';
-    let right2 = app_code_string_code(ending);
-    let joined = js_code_binary_spaced_nb(name, plus, right2);
+    let right = app_code_string_code(ending);
+    let joined = js_code_binary_spaced_nb(name, plus, right);
     let s = js_code_console_log_statement(joined);
     return s;
   }
@@ -130,19 +127,15 @@ export function app_code_lesson_if_even() {
       ["", even_check, " is ", "true", " when ", name, " is even"],
     );
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, [
-      "We can put that check in an ",
-      "if",
-      ":",
-    ]);
+    html_div_cycle_code(box_two, ["We can put that check in an ", "if", ":"]);
     let even_code = program_get(4);
     let lines2 = program_lines(4);
     let value = eval_console_log_lines(even_code);
     app_code_code_lines_writes_out(box_two, lines2, value);
     let combined = js_code_binary_spaced_nb(4, percent, 2);
     html_div_cycle_code(box_two, ["", combined, " is ", "0"]);
-    let left2 = js_code_binary_spaced_nb(4, percent, 2);
-    let combined2 = js_code_binary_spaced_nb(left2, same, 0);
+    let left = js_code_binary_spaced_nb(4, percent, 2);
+    let combined2 = js_code_binary_spaced_nb(left, same, 0);
     html_div_cycle_code(box_two, ["So ", combined2, " is ", "true"]);
     html_div_cycle_code(box_two, [
       "So the lines inside ",
