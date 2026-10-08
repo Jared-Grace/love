@@ -5,6 +5,23 @@ export function bible_glyph_roots_greek_drafted() {
     ".");
   ("A GREEK NAME OF HEBREW ORIGIN WEARS ITS HEBREW NAME'S PICTURE, copied rather than chosen again, and is filed under the same root word, so Isaiah, Samuel and Jonah are drawn alike in both testaments and a reader meets one picture for one person. Judas waits by the human's choice, and with him the patriarch Judah and Jude, since Greek gives all three one number.");
   let rows = [
+    ["3933", "parthenos", "veil", "virgin"],
+    ["3583", "xeraino", "fallen_leaf+doing", "wither"],
+    ["3431", "moicheuo", "broken_heart+doing", "commit_adultery"],
+    ["3027", "lestes", "ninja", "robber"],
+    ["2359", "thrix", "hair", "hair"],
+    ["3581", "xenos", "foreigner", "stranger"],
+    ["3464", "muron", "lotion_bottle", "perfume"],
+    ["816", "atenizo", "face_with_monocle+doing", "gaze"],
+    ["2219", "zume", "bubbles", "leaven"],
+    ["5407", "phoneuo", "kitchen_knife+doing", "murder"],
+    ["3725", "horion", "construction", "region"],
+    ["2380", "thusia", "sacrifice+doing", "sacrifice"],
+    ["5310", "hupsoo", "giraffe+describing", "most_high"],
+    ["1654", "eleos", "heart_hands+thing", "alms"],
+    ["3862", "paradidomi", "children_crossing+hands_giving+thing", "tradition"],
+    ["1261", "dialegomai", "metro+speech+thing", "reasoning"],
+    ["2618", "katakaio", "pointing_down+fire", "burn_up"],
     ["2718", "katerchomai", "pointing_down+footprints", "come_down"],
     ["2638", "katalambano", "pointing_down+hand_receiving", "overtake"],
     ["1861", "epangelia", "pointing_up+angel+doing", "promise"],
