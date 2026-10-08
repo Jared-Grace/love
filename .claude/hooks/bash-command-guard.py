@@ -4107,6 +4107,9 @@ def untrusted_piece_hint(words, safe_verbs):
     )
 
 
+RELATIVE_REDIRECT_RE = re.compile(r"(?<![0-9&>])>>?\s*(?![/&~$])[A-Za-z0-9_.]")
+
+
 def unread_hint(why, command):
     """How to reword a command the tokenizer could not read, chosen by the
     construct it stopped on; "" when there is nothing specific to say."""
@@ -4119,6 +4122,13 @@ def unread_hint(why, command):
         return (
             "A heredoc hides what it feeds in. Create the file with the "
             "Write tool, then pass its path."
+        )
+    if "'>'" in why and RELATIVE_REDIRECT_RE.search(command):
+        return (
+            "The output goes to a bare file name, and this hook checks the "
+            "path as written - it never follows `cd`. Write the whole "
+            "path (the session scratchpad or scripts/temp/), with no `cd` "
+            "in front."
         )
     if "'>'" in why:
         return (
