@@ -1784,6 +1784,22 @@ export function bible_glyph_artwork_names() {
       glyph: "snowman",
       asset: "Snowman",
     },
+    {
+      glyph: "kiss_mark",
+      asset: "Kiss mark",
+    },
+    {
+      glyph: "clipboard",
+      asset: "Clipboard",
+    },
+    {
+      glyph: "bacon",
+      asset: "Bacon",
+    },
+    {
+      glyph: "see_no_evil_monkey",
+      asset: "See-no-evil monkey",
+    },
   ];
   return names;
 }

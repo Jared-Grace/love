@@ -2099,6 +2099,22 @@ export function bible_glyph_characters() {
       name: "snowman",
       character: "☃️",
     },
+    {
+      name: "kiss_mark",
+      character: "💋",
+    },
+    {
+      name: "clipboard",
+      character: "📋",
+    },
+    {
+      name: "bacon",
+      character: "🥓",
+    },
+    {
+      name: "see_no_evil_monkey",
+      character: "🙈",
+    },
   ];
   return characters;
 }
