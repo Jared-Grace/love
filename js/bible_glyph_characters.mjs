@@ -1847,6 +1847,58 @@ export function bible_glyph_characters() {
       name: "wood",
       character: "🪵",
     },
+    {
+      name: "heart_eyes",
+      character: "😍",
+    },
+    {
+      name: "thread",
+      character: "🧵",
+    },
+    {
+      name: "grinning_face",
+      character: "😀",
+    },
+    {
+      name: "winking_face",
+      character: "😉",
+    },
+    {
+      name: "coffin",
+      character: "⚰️",
+    },
+    {
+      name: "female_sign",
+      character: "♀️",
+    },
+    {
+      name: "pouting_face",
+      character: "😡",
+    },
+    {
+      name: "melting_face",
+      character: "🫠",
+    },
+    {
+      name: "baby_bottle",
+      character: "🍼",
+    },
+    {
+      name: "man_in_tuxedo",
+      character: "🤵",
+    },
+    {
+      name: "palm_tree",
+      character: "🌴",
+    },
+    {
+      name: "bucket",
+      character: "🪣",
+    },
+    {
+      name: "cloud_with_lightning",
+      character: "🌩️",
+    },
   ];
   return characters;
 }
