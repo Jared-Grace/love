@@ -2711,6 +2711,38 @@ export function bible_glyph_characters() {
       name: "turtle",
       character: "🐢",
     },
+    {
+      name: "leftwards_hand",
+      character: "🫲",
+    },
+    {
+      name: "vs_button",
+      character: "🆚",
+    },
+    {
+      name: "bus_stop",
+      character: "🚏",
+    },
+    {
+      name: "free_button",
+      character: "🆓",
+    },
+    {
+      name: "dim_button",
+      character: "🔅",
+    },
+    {
+      name: "repeat_single_button",
+      character: "🔂",
+    },
+    {
+      name: "stopwatch",
+      character: "⏱️",
+    },
+    {
+      name: "mechanical_leg",
+      character: "🦿",
+    },
   ];
   return characters;
 }

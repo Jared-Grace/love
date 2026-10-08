@@ -2620,6 +2620,38 @@ export function bible_glyph_artwork_names() {
       glyph: "turtle",
       asset: "Turtle",
     },
+    {
+      glyph: "leftwards_hand",
+      asset: "Leftwards hand",
+    },
+    {
+      glyph: "vs_button",
+      asset: "Vs button",
+    },
+    {
+      glyph: "bus_stop",
+      asset: "Bus stop",
+    },
+    {
+      glyph: "free_button",
+      asset: "Free button",
+    },
+    {
+      glyph: "dim_button",
+      asset: "Dim button",
+    },
+    {
+      glyph: "repeat_single_button",
+      asset: "Repeat single button",
+    },
+    {
+      glyph: "stopwatch",
+      asset: "Stopwatch",
+    },
+    {
+      glyph: "mechanical_leg",
+      asset: "Mechanical leg",
+    },
   ];
   return names;
 }

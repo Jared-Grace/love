@@ -5,6 +5,22 @@ export function bible_glyph_roots_greek_drafted() {
     ".");
   ("A GREEK NAME OF HEBREW ORIGIN WEARS ITS HEBREW NAME'S PICTURE, copied rather than chosen again, and is filed under the same root word, so Isaiah, Samuel and Jonah are drawn alike in both testaments and a reader meets one picture for one person. Judas waits by the human's choice, and with him the patriarch Judah and Jude, since Greek gives all three one number.");
   let rows = [
+    ["3303", "men", "leftwards_hand", "indeed"],
+    ["302", "an", "lots", "would"],
+    ["2087", "heteros", "vs_button", "other"],
+    ["891", "achri", "bus_stop", "until"],
+    ["3089", "luo", "free_button", "loose"],
+    ["630", "apoluo", "away+free_button", "release"],
+    ["2647", "kataluo", "pointing_down+free_button", "destroy"],
+    ["3485", "naos", "hut", "temple"],
+    ["3641", "oligos", "dim_button", "few"],
+    ["2089", "eti", "repeat_single_button", "still"],
+    ["5620", "hoste", "likeness+plus+plus", "so_that"],
+    ["3704", "hopos", "back+flashlight+gear+question", "so_that"],
+    ["5443", "phule", "camp", "tribe"],
+    ["737", "arti", "stopwatch", "now"],
+    ["3196", "melos", "mechanical_leg", "member"],
+    ["758", "archomai", "clapper_board+doer", "ruler"],
     ["5499", "cheiropoietos", "hand+hammer+describing", "handmade"],
     ["4820", "sumballo", "safety_pin+throwing", "meet"],
     ["4814", "sullaleo", "safety_pin+voice", "talk_with"],
