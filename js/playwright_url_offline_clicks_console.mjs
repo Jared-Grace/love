@@ -12,10 +12,15 @@ export async function playwright_url_offline_clicks_console(
   "$plain texts_online";
   "$plain text_wait";
   "$plain texts_offline";
-  "Opens a page, presses each of texts_online in turn, waits until text_wait shows, opens the page again, cuts the network, presses each of texts_offline, and hands back every error, console line and request that failed, and the text the page ended up showing. Each list is one comma-joined word.";
+  "Opens a page, presses each of texts_online in turn, waits until text_wait shows, cuts the network, presses each of texts_offline, and hands back every error, console line and request that failed, with the text the page showed after each press made offline. Each list is one comma-joined word.";
   "It exists to read what a page still reaches for once it has been told it may work without the internet: whatever fails after the cut is a thing the offline copy does not hold.";
+  "A press that finds nothing to press is written down and the walk stops there, rather than throwing, because how far the walk got is itself the answer.";
   let lines = [];
-  let shown = "";
+  async function shown_add(page) {
+    let shown = await page.innerText("body");
+    let line = text_combine_multiple(["shown  ", shown]);
+    list_add(lines, line);
+  }
   async function on_page(page) {
     function error_each(err) {
       let line = text_combine_multiple(["uncaught  ", err.message]);
@@ -44,21 +49,30 @@ export async function playwright_url_offline_clicks_console(
     await page.getByText(text_wait).first().waitFor({
       timeout: 120000,
     });
-    await page.goto(url);
-    await page.waitForLoadState("networkidle");
+    await shown_add(page);
     list_add(lines, "offline");
     await page.context().setOffline(true);
     for (let text of text_split_comma(texts_offline)) {
-      await page.getByText(text).first().click();
+      let item = text_combine_multiple(["press  ", text]);
+      list_add(lines, item);
+      try {
+        await page.getByText(text).first().click({
+          timeout: 10000,
+        });
+      } catch (err) {
+        let item2 = text_combine_multiple(["not found  ", text]);
+        list_add(lines, item2);
+        await shown_add(page);
+        return;
+      }
       await page.waitForTimeout(3000);
+      await shown_add(page);
     }
-    shown = await page.innerText("body");
   }
   await playwright_test_blank(on_page);
   let told = {
     url,
     lines,
-    shown,
   };
   return told;
 }
