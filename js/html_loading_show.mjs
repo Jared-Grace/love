@@ -12,6 +12,7 @@ export function html_loading_show() {
     state.timer = null;
   }
   state.count = state.count + 1;
+  dev_trace_add("loading_show", state.count);
   let overlay = state.overlay;
   if (equal(overlay, null)) {
     state.overlay = html_loading_overlay();

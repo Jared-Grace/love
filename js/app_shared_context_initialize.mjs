@@ -12,6 +12,7 @@ export async function app_shared_context_initialize(fn) {
     fn_name("html_mobile_default"),
     " which several apps (message, autopray, next, examples, designs_universal, calendar_paste) never call");
   html_text_size_adjust_lock();
+  dev_trace_watch();
   let root = html_document_body();
   let attempted = false;
   let render = async function app_boot_render() {

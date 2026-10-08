@@ -9,6 +9,7 @@ export function html_loading_hide() {
   "Lets the overlay go, fading it out first, once the last piece of work that asked for it has finished.";
   "The fade is why the count is looked at twice. Between the moment the last run of work finishes and the moment the overlay has finished fading, a new run can start and ask for it again - and it would then be handed an overlay already on its way out. So each step of the fade asks again whether anybody has started waiting since, and gives up quietly if they have.";
   let last = html_loading_count_down_last_is();
+  dev_trace_add("loading_hide", html_loading_state().count);
   if (not(last)) {
     return;
   }

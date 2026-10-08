@@ -18,5 +18,6 @@ export async function ebible_offline_get(bible_folder, name) {
     return value_stored;
   }
   let value = await catch_null_async(get);
+  dev_trace_add("offline_get", { bible_folder, name, hit: value !== null });
   return value;
 }

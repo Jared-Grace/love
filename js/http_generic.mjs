@@ -14,8 +14,16 @@ export async function http_generic(url, options) {
   let b = browser_is();
   if (b) {
     async function lambda3() {
-      let r = await http_browser_bytes(method, options, body, url);
-      return r;
+      let started = Date.now();
+      dev_trace_add("fetch", url);
+      try {
+        let r = await http_browser_bytes(method, options, body, url);
+        dev_trace_add("fetch_ok", { url, ms: Date.now() - started });
+        return r;
+      } catch (caught) {
+        dev_trace_add("fetch_fail", { url, ms: Date.now() - started, message: String(caught && caught.message) });
+        throw caught;
+      }
     }
     let v = await html_loading(lambda3);
     return v;
