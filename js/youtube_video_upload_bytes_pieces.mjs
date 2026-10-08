@@ -1,3 +1,4 @@
+import { property_get_or_null } from "./property_get_or_null.mjs";
 import { Agent, setGlobalDispatcher } from "undici";
 import { math_min } from "./math_min.mjs";
 import { equal } from "./equal.mjs";
@@ -31,6 +32,7 @@ export async function youtube_video_upload_bytes_pieces(session_url, bytes) {
   let offset = 0;
   let failures = 0;
   let failures_most = 10;
+  let error_last = null;
   while (true) {
     let options = null;
     if (equal(failures, 0)) {
@@ -61,6 +63,7 @@ export async function youtube_video_upload_bytes_pieces(session_url, bytes) {
     try {
       answer = await http_answer(session_url, options);
     } catch (e) {
+      error_last = String(property_get_or_null(e, "cause") || e);
       answer = null;
     }
     let status = equal(answer, null) ? 0 : property_get(answer, "status");
@@ -78,7 +81,14 @@ export async function youtube_video_upload_bytes_pieces(session_url, bytes) {
     let buffer2 = equal(answer, null) ? null : property_get(answer, "bytes");
     let said = equal(answer, null)
       ? "connection failed"
-      : buffer_text_to(buffer2);
+      : buffer_text_to(buffer2) +
+        " (after: " +
+        error_last +
+        ", at byte " +
+        offset +
+        " of " +
+        total +
+        ")";
     assert_json(retried, {
       status,
       said,
