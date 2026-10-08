@@ -1,4 +1,4 @@
-import { lyric_video_starts_earlier } from "./lyric_video_starts_earlier.mjs";
+import { lyric_video_starts_heard_first } from "./lyric_video_starts_heard_first.mjs";
 import { lyric_video_document_pictures_times_derive } from "./lyric_video_document_pictures_times_derive.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_exists } from "./file_exists.mjs";

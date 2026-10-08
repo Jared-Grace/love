@@ -1,9 +1,9 @@
+import { lyric_video_starts_heard_first } from "./lyric_video_starts_heard_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { lyric_video_document_times_hand_is } from "./lyric_video_document_times_hand_is.mjs";
 import { lyric_video_hearings_path } from "./lyric_video_hearings_path.mjs";
 import { property_get } from "./property_get.mjs";
-import { lyric_video_starts_earlier } from "./lyric_video_starts_earlier.mjs";
 import { lyric_timing_lines_timed } from "./lyric_timing_lines_timed.mjs";
 import { lyric_video_times_machine_word } from "./lyric_video_times_machine_word.mjs";
 import { lyric_video_document_pictures_times_derive } from "./lyric_video_document_pictures_times_derive.mjs";
@@ -30,7 +30,10 @@ export async function lyric_video_document_times_earlier_write(
   let file_path = lyric_video_hearings_path();
   let hearings = await file_read_json(file_path);
   let hearing = property_get(hearings, name_document);
-  let starts = lyric_video_starts_heard_first(hearing.starts, hearing.starts_heard);
+  let starts = lyric_video_starts_heard_first(
+    hearing.starts,
+    hearing.starts_heard,
+  );
   function lambda(line) {
     let r2 = line.text;
     return r2;
