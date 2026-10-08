@@ -8,8 +8,6 @@ import { not } from "./not.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
-import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
-import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_not } from "./app_code_lesson_statement_name_not.mjs";
@@ -30,8 +28,8 @@ export function app_code_lesson_if_not() {
   let after_shown = list_get(fruits, 1);
   function setup_get(name, value) {
     "let name = value;";
-    let right2 = json_to(value);
-    let line = js_code_let_statement(name, right2);
+    let right = json_to(value);
+    let line = js_code_let_statement(name, right);
     let setup = [line];
     return setup;
   }

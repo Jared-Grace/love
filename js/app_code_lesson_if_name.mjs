@@ -5,8 +5,6 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
-import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
-import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_true_false } from "./app_code_lesson_statement_name_true_false.mjs";
@@ -28,8 +26,8 @@ export function app_code_lesson_if_name() {
   let after_shown = list_get(fruits, 1);
   function setup_get(name, value) {
     "let name = value;";
-    let right2 = json_to(value);
-    let line = js_code_let_statement(name, right2);
+    let right = json_to(value);
+    let line = js_code_let_statement(name, right);
     let setup = [line];
     return setup;
   }
@@ -57,11 +55,7 @@ export function app_code_lesson_if_name() {
     let remember_lines = list_concat(a, [logged]);
     app_code_code_lines_writes_out(box_one, remember_lines, "true");
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, [
-      "We can put the name in an ",
-      "if",
-      ":",
-    ]);
+    html_div_cycle_code(box_two, ["We can put the name in an ", "if", ":"]);
     let setup2 = setup_get(name, true);
     let true_lines = app_code_if_program_lines(
       setup2,
