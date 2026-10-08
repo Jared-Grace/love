@@ -9,6 +9,23 @@ export function bible_glyph_roots_hebrew_drafted() {
   "A NAME ALSO WAITS WHEN ONE OF ITS PICTURES WOULD ARRIVE AS LETTERS OR IN THE READER'S OWN FONT. The artwork set has no brother and no family, so Ahab, Ahijah, Ammon and Amram wait, and sabbath, calf, sacrifice, iron and fruit are still English words, so Shabbethai, Eglon, Zebah, Barzillai and Ephrath wait with them; half a name drawn and half spelled stops reading as one name.";
   "A NAME WAITS WHEN ITS TWO PICTURES ARE A COMMON PHRASE ON THEIR OWN. The last picture of one word and the first of the next can be read as one name, so Adonijah, the crown and I AM, would be read wherever the Lord GOD is said, eighty four times, against twenty six real ones; Hor is every mount before a name, Shem every name before one, and Nathan every gift handed to someone named. Where the false reading is not what the verse says and is common, the name waits. Jonathan stays, read falsely twenty five times against eighty two, because the false reading is I AM giving, which is what those verses say; a name built as a sentence about God is misread only as that sentence.";
   let rows = [
+    ["5895", "ayir", "donkey+child", "young donkey"],
+    ["5613", "sopher", "abacus+doer", "scribe"],
+    ["4246", "mecholah", "man_dancing", "dance"],
+    ["4207", "mazleg", "fork_and_knife", "fork"],
+    ["6569", "peresh", "pile_of_poo", "dung"],
+    ["6472", "paamon", "bell", "bell"],
+    ["5849", "atar", "crown+doing", "crown"],
+    ["3654", "ken", "mosquito", "gnats"],
+    ["2779", "choreph", "snowman", "winter"],
+    ["1482", "gur", "lion+child", "cub"],
+    ["406", "ikkar", "farmer", "farmer"],
+    ["8598", "tappuach", "red_apple", "apple"],
+    ["7838", "shachor", "black_circle", "black"],
+    ["5909", "akbar", "mouse", "mouse"],
+    ["5246", "namer", "leopard", "leopard"],
+    ["2485", "chalil", "flute", "flute"],
+    ["1000", "beytsah", "egg", "egg"],
     ["4701", "mitsnepheth", "person_wearing_turban", "turban"],
     ["2873", "tabach", "meat_on_bone+doing", "slaughter"],
     ["2874", "tebach", "meat_on_bone", "slaughter"],

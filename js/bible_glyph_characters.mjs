@@ -2043,6 +2043,62 @@ export function bible_glyph_characters() {
       name: "axe",
       character: "🪓",
     },
+    {
+      name: "fork_and_knife",
+      character: "🍴",
+    },
+    {
+      name: "pile_of_poo",
+      character: "💩",
+    },
+    {
+      name: "bell",
+      character: "🔔",
+    },
+    {
+      name: "black_circle",
+      character: "⚫",
+    },
+    {
+      name: "flute",
+      character: "🪈",
+    },
+    {
+      name: "ghost",
+      character: "👻",
+    },
+    {
+      name: "carpentry_saw",
+      character: "🪚",
+    },
+    {
+      name: "mosquito",
+      character: "🦟",
+    },
+    {
+      name: "farmer",
+      character: "🧑‍🌾",
+    },
+    {
+      name: "red_apple",
+      character: "🍎",
+    },
+    {
+      name: "mouse",
+      character: "🐁",
+    },
+    {
+      name: "leopard",
+      character: "🐆",
+    },
+    {
+      name: "egg",
+      character: "🥚",
+    },
+    {
+      name: "snowman",
+      character: "☃️",
+    },
   ];
   return characters;
 }

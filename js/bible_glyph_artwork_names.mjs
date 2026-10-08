@@ -1728,6 +1728,62 @@ export function bible_glyph_artwork_names() {
       glyph: "axe",
       asset: "Axe",
     },
+    {
+      glyph: "fork_and_knife",
+      asset: "Fork and knife",
+    },
+    {
+      glyph: "pile_of_poo",
+      asset: "Pile of poo",
+    },
+    {
+      glyph: "bell",
+      asset: "Bell",
+    },
+    {
+      glyph: "black_circle",
+      asset: "Black circle",
+    },
+    {
+      glyph: "flute",
+      asset: "Flute",
+    },
+    {
+      glyph: "ghost",
+      asset: "Ghost",
+    },
+    {
+      glyph: "carpentry_saw",
+      asset: "Carpentry saw",
+    },
+    {
+      glyph: "mosquito",
+      asset: "Mosquito",
+    },
+    {
+      glyph: "farmer",
+      asset: "Farmer",
+    },
+    {
+      glyph: "red_apple",
+      asset: "Red apple",
+    },
+    {
+      glyph: "mouse",
+      asset: "Mouse",
+    },
+    {
+      glyph: "leopard",
+      asset: "Leopard",
+    },
+    {
+      glyph: "egg",
+      asset: "Egg",
+    },
+    {
+      glyph: "snowman",
+      asset: "Snowman",
+    },
   ];
   return names;
 }
