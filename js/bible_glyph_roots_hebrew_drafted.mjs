@@ -9,6 +9,19 @@ export function bible_glyph_roots_hebrew_drafted() {
   "A NAME ALSO WAITS WHEN ONE OF ITS PICTURES WOULD ARRIVE AS LETTERS OR IN THE READER'S OWN FONT. The artwork set has no brother and no family, so Ahab, Ahijah, Ammon and Amram wait, and sabbath, calf, sacrifice, iron and fruit are still English words, so Shabbethai, Eglon, Zebah, Barzillai and Ephrath wait with them; half a name drawn and half spelled stops reading as one name.";
   "A NAME WAITS WHEN ITS TWO PICTURES ARE A COMMON PHRASE ON THEIR OWN. The last picture of one word and the first of the next can be read as one name, so Adonijah, the crown and I AM, would be read wherever the Lord GOD is said, eighty four times, against twenty six real ones; Hor is every mount before a name, Shem every name before one, and Nathan every gift handed to someone named. Where the false reading is not what the verse says and is common, the name waits. Jonathan stays, read falsely twenty five times against eighty two, because the false reading is I AM giving, which is what those verses say; a name built as a sentence about God is misread only as that sentence.";
   let rows = [
+    ["6016", "omer", "sheaf_of_rice", "sheaf"],
+    ["3833", "labi", "lion+female_sign", "lioness"],
+    ["2471", "challah", "bagel", "cake"],
+    ["1714", "degel", "crossed_flags", "banner"],
+    ["232", "ezor", "briefs", "loincloth"],
+    ["8593", "taar", "razor", "razor"],
+    ["7910", "shikkor", "woozy_face+doer", "drunkard"],
+    ["7064", "qen", "nest_with_eggs", "nest"],
+    ["3924", "lulaah", "curly_loop", "loop"],
+    ["2263", "chabaq", "people_hugging", "embrace"],
+    ["2053", "vav", "hook", "hook"],
+    ["7203", "roeh", "eyes+doer", "seer"],
+    ["7273", "ragli", "foot+doer", "foot soldier"],
     ["7799", "shushan", "white_flower", "lily"],
     ["7431", "remes", "lizard", "creeping thing"],
     ["7430", "ramas", "lizard+doing", "creep"],
