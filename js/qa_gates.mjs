@@ -1,3 +1,4 @@
+import { app_autopray_prayer_gate_run } from "./app_autopray_prayer_gate_run.mjs";
 import { app_supper_tl_languages_gate_run } from "./app_supper_tl_languages_gate_run.mjs";
 import { app_search_query_link_cases_gate_run } from "./app_search_query_link_cases_gate_run.mjs";
 import { song_agape_glosses_gate_run } from "./song_agape_glosses_gate_run.mjs";
@@ -1207,6 +1208,7 @@ export function qa_gates() {
     app_verses_choices_gate_run,
     app_search_query_link_cases_gate_run,
     app_supper_tl_languages_gate_run,
+    app_autopray_prayer_gate_run,
   ];
   return gates;
 }

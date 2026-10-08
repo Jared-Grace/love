@@ -1937,8 +1937,8 @@ export function bible_glyph_artwork_names() {
       asset: "Bomb",
     },
     {
-      glyph: "owl",
-      asset: "Owl",
+      glyph: "person_tipping_hand",
+      asset: "Person tipping hand",
     },
     {
       glyph: "smiling_face_with_hearts",
@@ -2035,6 +2035,18 @@ export function bible_glyph_artwork_names() {
     {
       glyph: "mule",
       asset: "Horse face",
+    },
+    {
+      glyph: "wisdom",
+      asset: "Owl",
+    },
+    {
+      glyph: "furnace",
+      asset: "Volcano",
+    },
+    {
+      glyph: "harvest",
+      asset: "Ear of corn",
     },
   ];
   return names;

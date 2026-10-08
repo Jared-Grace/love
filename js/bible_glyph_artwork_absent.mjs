@@ -47,11 +47,6 @@ export function bible_glyph_artwork_absent() {
       because: "the set's names hold nothing carrying the word valley.",
     },
     {
-      glyph: "wisdom",
-      wanted: "Wisdom",
-      because: "the set's names hold nothing carrying the word wisdom.",
-    },
-    {
       glyph: "chariot",
       wanted: "Chariot",
       because:
@@ -119,11 +114,6 @@ export function bible_glyph_artwork_absent() {
       wanted: "Cherub",
       because:
         "the Baby angel is already spent, and it draws a winged infant, which is not the cherub of the ark or of Eden.",
-    },
-    {
-      glyph: "furnace",
-      wanted: "Furnace",
-      because: "the set's names hold nothing carrying the word furnace.",
     },
     {
       glyph: "beard",
@@ -197,11 +187,6 @@ export function bible_glyph_artwork_absent() {
       glyph: "dust",
       wanted: "Dust",
       because: "the set's names hold nothing carrying the word dust.",
-    },
-    {
-      glyph: "harvest",
-      wanted: "Harvest",
-      because: "the set's only sheaf is a Sheaf of rice, another grain.",
     },
     {
       glyph: "statute",

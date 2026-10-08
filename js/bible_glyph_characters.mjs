@@ -661,7 +661,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "wisdom",
-      character: "wisdom",
+      character: "🦉",
     },
     {
       name: "chariot",
@@ -909,7 +909,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "furnace",
-      character: "furnace",
+      character: "🌋",
     },
     {
       name: "snare",
@@ -1069,7 +1069,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "harvest",
-      character: "harvest",
+      character: "🌽",
     },
     {
       name: "statute",
@@ -2252,8 +2252,8 @@ export function bible_glyph_characters() {
       character: "💣",
     },
     {
-      name: "owl",
-      character: "🦉",
+      name: "person_tipping_hand",
+      character: "💁",
     },
     {
       name: "smiling_face_with_hearts",
