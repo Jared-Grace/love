@@ -1,3 +1,4 @@
+import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_greater_than_symbol } from "./js_operator_greater_than_symbol.mjs";
@@ -231,7 +232,13 @@ export function app_code_lesson_if_two_bounds() {
     let if_high = js_code_if_dots(high_condition);
     html_div_cycle_code(box_four, ["", if_low, " and ", if_high, " both run"]);
     html_div_cycle_code(box_four, ["only ", if_low, " runs"]);
-    html_div_cycle_code(box_four, ["neither ", if_low, " nor ", if_high, " runs"]);
+    html_div_cycle_code(box_four, [
+      "neither ",
+      if_low,
+      " nor ",
+      if_high,
+      " runs",
+    ]);
     html_div_cycle_code(box_four, [
       "",
       if_high,

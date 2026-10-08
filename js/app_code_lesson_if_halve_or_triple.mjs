@@ -1,3 +1,4 @@
+import { js_code_else_dots } from "./js_code_else_dots.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
 import { modulo } from "./modulo.mjs";
@@ -152,7 +153,8 @@ export function app_code_lesson_if_halve_or_triple() {
     let even_lines = program_lines(8);
     app_code_code_lines_writes_out(box_three, even_lines, "4");
     let eight_check = js_code_remainder_two_is(8, "0");
-    let halve = js_code_assign_operator_statement(name, text_slash_forward(), 2);
+    let operator = text_slash_forward();
+    let halve = js_code_assign_operator_statement(name, operator, 2);
     html_div_cycle_code(box_three, [
       "",
       eight_check,

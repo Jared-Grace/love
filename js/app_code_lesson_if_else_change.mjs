@@ -1,3 +1,5 @@
+import { js_code_else_dots } from "./js_code_else_dots.mjs";
+import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
@@ -129,20 +131,24 @@ export function app_code_lesson_if_else_change() {
   function above(root, context) {
     "else remembered, then a change on each side, with the if running and then the else";
     let box_one = app_code_container_light_blue(root);
+    let code3 = js_code_else_dots();
+    let code4 = js_code_if_dots("a");
     app_code_remember_from_lesson(box_one, context, app_code_lesson_if_else, [
       "",
-      js_code_else_dots(),
+      code3,
       " runs when ",
-      js_code_if_dots("a"),
+      code4,
       " does not",
     ]);
     let box_two = app_code_container_light_blue(root);
-    let if_dots = js_code_if_dots(js_code_binary_spaced_nb(name, less, 5));
+    let condition2 = js_code_binary_spaced_nb(name, less, 5);
+    let if_dots = js_code_if_dots(condition2);
+    let code5 = js_code_else_dots();
     html_div_cycle_code(box_two, [
       "Both ",
       if_dots,
       " and ",
-      js_code_else_dots(),
+      code5,
       " can change a name:",
     ]);
     let true_lines = program_lines(4, 5, 3, 2);

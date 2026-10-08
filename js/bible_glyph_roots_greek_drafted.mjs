@@ -7,8 +7,8 @@ export function bible_glyph_roots_greek_drafted() {
   let rows = [
     ["2398", "idios", "identification_card", "own"],
     ["5438", "phulasso", "locked_with_key+thing", "prison"],
-    ["3664", "homoios", "equals", "like"],
-    ["3668", "homoios", "equals+manner", "likewise"],
+    ["3664", "homoios", "people_with_bunny_ears", "like"],
+    ["3668", "homoios", "people_with_bunny_ears+manner", "likewise"],
     ["514", "axios", "gold+describing", "worthy"],
     ["4105", "planao", "dizzy+doing", "deceive"],
     ["2372", "thumos", "anger_symbol", "wrath"],

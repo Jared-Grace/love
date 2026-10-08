@@ -141,7 +141,13 @@ export function app_code_lesson_if_change() {
     let statement2 = js_code_console_log_statement(name);
     app_code_code_lines_writes_out(box_one, [code5, change2, statement2], "7");
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, ["We can put ", change2, " in an ", "if", ":"]);
+    html_div_cycle_code(box_two, [
+      "We can put ",
+      change2,
+      " in an ",
+      "if",
+      ":",
+    ]);
     let true_lines = program_lines(4, 5, 3);
     app_code_code_lines_writes_out(box_two, true_lines, "7");
     let true_condition = js_code_binary_spaced_nb(4, less, 5);
