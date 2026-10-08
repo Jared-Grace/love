@@ -1808,6 +1808,10 @@ export function bible_glyph_artwork_names() {
       glyph: "luggage",
       asset: "Luggage",
     },
+    {
+      glyph: "person_standing",
+      asset: "Person standing",
+    },
   ];
   return names;
 }

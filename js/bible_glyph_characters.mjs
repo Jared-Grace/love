@@ -2123,6 +2123,10 @@ export function bible_glyph_characters() {
       name: "luggage",
       character: "🧳",
     },
+    {
+      name: "person_standing",
+      character: "🧍",
+    },
   ];
   return characters;
 }
