@@ -1880,6 +1880,46 @@ export function bible_glyph_artwork_names() {
       glyph: "page_with_curl",
       asset: "Page with curl",
     },
+    {
+      glyph: "derelict_house",
+      asset: "Derelict house",
+    },
+    {
+      glyph: "house_with_garden",
+      asset: "House with garden",
+    },
+    {
+      glyph: "dna",
+      asset: "Dna",
+    },
+    {
+      glyph: "drum",
+      asset: "Drum",
+    },
+    {
+      glyph: "bellhop_bell",
+      asset: "Bellhop bell",
+    },
+    {
+      glyph: "black_flag",
+      asset: "Black flag",
+    },
+    {
+      glyph: "rooster",
+      asset: "Rooster",
+    },
+    {
+      glyph: "face_with_head_bandage",
+      asset: "Face with head-bandage",
+    },
+    {
+      glyph: "alien",
+      asset: "Alien",
+    },
+    {
+      glyph: "pause_button",
+      asset: "Pause button",
+    },
   ];
   return names;
 }

@@ -2195,6 +2195,46 @@ export function bible_glyph_characters() {
       name: "page_with_curl",
       character: "📃",
     },
+    {
+      name: "derelict_house",
+      character: "🏚️",
+    },
+    {
+      name: "house_with_garden",
+      character: "🏡",
+    },
+    {
+      name: "dna",
+      character: "🧬",
+    },
+    {
+      name: "drum",
+      character: "🥁",
+    },
+    {
+      name: "bellhop_bell",
+      character: "🛎️",
+    },
+    {
+      name: "black_flag",
+      character: "🏴",
+    },
+    {
+      name: "rooster",
+      character: "🐓",
+    },
+    {
+      name: "face_with_head_bandage",
+      character: "🤕",
+    },
+    {
+      name: "alien",
+      character: "👽",
+    },
+    {
+      name: "pause_button",
+      character: "⏸️",
+    },
   ];
   return characters;
 }

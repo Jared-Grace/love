@@ -1,3 +1,4 @@
+import { app_search_query_link_cases_gate_run } from "./app_search_query_link_cases_gate_run.mjs";
 import { song_agape_glosses_gate_run } from "./song_agape_glosses_gate_run.mjs";
 import { app_verses_choices_gate_run } from "./app_verses_choices_gate_run.mjs";
 import { app_next_bare_start_gate_run } from "./app_next_bare_start_gate_run.mjs";
@@ -1203,6 +1204,7 @@ export function qa_gates() {
     gloss_term_written_is_cases_gate_run,
     app_next_bare_start_gate_run,
     app_verses_choices_gate_run,
+    app_search_query_link_cases_gate_run,
   ];
   return gates;
 }
