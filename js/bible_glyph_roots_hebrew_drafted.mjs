@@ -9,6 +9,23 @@ export function bible_glyph_roots_hebrew_drafted() {
   "A NAME ALSO WAITS WHEN ONE OF ITS PICTURES WOULD ARRIVE AS LETTERS OR IN THE READER'S OWN FONT. The artwork set has no brother and no family, so Ahab, Ahijah, Ammon and Amram wait, and sabbath, calf, sacrifice, iron and fruit are still English words, so Shabbethai, Eglon, Zebah, Barzillai and Ephrath wait with them; half a name drawn and half spelled stops reading as one name.";
   "A NAME WAITS WHEN ITS TWO PICTURES ARE A COMMON PHRASE ON THEIR OWN. The last picture of one word and the first of the next can be read as one name, so Adonijah, the crown and I AM, would be read wherever the Lord GOD is said, eighty four times, against twenty six real ones; Hor is every mount before a name, Shem every name before one, and Nathan every gift handed to someone named. Where the false reading is not what the verse says and is common, the name waits. Jonathan stays, read falsely twenty five times against eighty two, because the false reading is I AM giving, which is what those verses say; a name built as a sentence about God is misread only as that sentence.";
   let rows = [
+    ["5401", "nashaq", "face_blowing_a_kiss", "kiss"],
+    ["2236", "zaraq", "shower", "sprinkle"],
+    ["4219", "zaraq", "shower+thing", "bowl"],
+    ["3618", "kallah", "bouquet", "bride"],
+    ["3409", "yarek", "poultry_leg", "thigh"],
+    ["1361", "gaboah", "giraffe+doing", "high"],
+    ["8328", "sheresh", "ginger_root", "root"],
+    ["7440", "ranan", "partying_face+thing", "song"],
+    ["6884", "tsaraph", "alembic", "refine"],
+    ["2898", "tob", "thumbs_up+thing", "goodness"],
+    ["2876", "tabbach", "cook", "cook"],
+    ["2623", "chesed", "gift+describing", "godly"],
+    ["759", "armon", "japanese_castle", "citadel"],
+    ["6459", "pesel", "nesting_dolls", "idol"],
+    ["5087", "neder", "saluting_face+doing", "vow"],
+    ["8227", "shaphan", "badger", "badger"],
+    ["6099", "etsem", "bone+describing", "mighty"],
     ["914", "badal", "construction", "separate"],
     ["7264", "ragaz", "vibration_mode", "tremble"],
     ["6586", "pesha", "black_flag+doing", "rebel"],
