@@ -1828,6 +1828,58 @@ export function bible_glyph_artwork_names() {
       glyph: "children_crossing",
       asset: "Children crossing",
     },
+    {
+      glyph: "face_with_open_mouth",
+      asset: "Face with open mouth",
+    },
+    {
+      glyph: "cyclone",
+      asset: "Cyclone",
+    },
+    {
+      glyph: "cooking",
+      asset: "Cooking",
+    },
+    {
+      glyph: "package",
+      asset: "Package",
+    },
+    {
+      glyph: "closed_book",
+      asset: "Closed book",
+    },
+    {
+      glyph: "artist",
+      asset: "Artist",
+    },
+    {
+      glyph: "broken_heart",
+      asset: "Broken heart",
+    },
+    {
+      glyph: "microbe",
+      asset: "Microbe",
+    },
+    {
+      glyph: "candle",
+      asset: "Candle",
+    },
+    {
+      glyph: "takeout_box",
+      asset: "Takeout box",
+    },
+    {
+      glyph: "star",
+      asset: "Star",
+    },
+    {
+      glyph: "lotion_bottle",
+      asset: "Lotion bottle",
+    },
+    {
+      glyph: "page_with_curl",
+      asset: "Page with curl",
+    },
   ];
   return names;
 }
