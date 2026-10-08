@@ -1948,6 +1948,98 @@ export function bible_glyph_artwork_names() {
       glyph: "persevering_face",
       asset: "Persevering face",
     },
+    {
+      glyph: "covenant",
+      asset: "Rainbow",
+    },
+    {
+      glyph: "ark",
+      asset: "Card file box",
+    },
+    {
+      glyph: "gold",
+      asset: "Sports medal",
+    },
+    {
+      glyph: "stone",
+      asset: "Curling stone",
+    },
+    {
+      glyph: "gate",
+      asset: "Shinto shrine",
+    },
+    {
+      glyph: "incense",
+      asset: "Hot springs",
+    },
+    {
+      glyph: "sabbath",
+      asset: "Person in bed",
+    },
+    {
+      glyph: "horn",
+      asset: "Postal horn",
+    },
+    {
+      glyph: "spring",
+      asset: "Fountain",
+    },
+    {
+      glyph: "famine",
+      asset: "Empty nest",
+    },
+    {
+      glyph: "plunder",
+      asset: "Pirate flag",
+    },
+    {
+      glyph: "sister",
+      asset: "Women holding hands",
+    },
+    {
+      glyph: "hair",
+      asset: "Person getting haircut",
+    },
+    {
+      glyph: "veil",
+      asset: "Person with veil",
+    },
+    {
+      glyph: "ashes",
+      asset: "Funeral urn",
+    },
+    {
+      glyph: "spear",
+      asset: "Trident emblem",
+    },
+    {
+      glyph: "iron",
+      asset: "Nut and bolt",
+    },
+    {
+      glyph: "garden",
+      asset: "Potted plant",
+    },
+    {
+      glyph: "dew",
+      asset: "Sweat droplets",
+    },
+    {
+      glyph: "field",
+      asset: "Tractor",
+    },
+    {
+      glyph: "fruit",
+      asset: "Cherries",
+    },
+    {
+      glyph: "seed",
+      asset: "Beans",
+    },
+    {
+      glyph: "mule",
+      asset: "Horse face",
+    },
   ];
   return names;
 }
