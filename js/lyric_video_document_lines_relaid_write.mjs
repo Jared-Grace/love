@@ -1,3 +1,4 @@
+import { lyric_video_document_pictures_times_derive } from "./lyric_video_document_pictures_times_derive.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { lyric_timing_lines_timed } from "./lyric_timing_lines_timed.mjs";
