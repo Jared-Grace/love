@@ -8,7 +8,7 @@ import { list_last } from "./list_last.mjs";
 import { function_params_names } from "./function_params_names.mjs";
 import { subtract } from "./subtract.mjs";
 import { greater_than } from "./greater_than.mjs";
-export async function permission_grant_delete_paths_steerable(delete_paths) {
+export async function permission_grant_seam_paths_steerable(delete_paths) {
   arguments_assert(arguments, 1);
   ("Of the chains by which a function reaches something that erases, the ones an argument handed to it could actually steer.");
   ("The reason a reach to a deleter refuses a grant is that a rule covers every argument the function is ever handed, so a caller choosing what gets erased is a caller nobody vetted. That reasoning needs an argument to travel the whole way down, and the chain says where it stops: the function that calls the deleter is the one that names what is deleted, so when that function declares nothing at all, what it erases is whatever its own committed source says and no argument above it can change it.");
