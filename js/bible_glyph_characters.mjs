@@ -2815,6 +2815,14 @@ export function bible_glyph_characters() {
       name: "spoon",
       character: "🥄",
     },
+    {
+      name: "person_in_tuxedo",
+      character: "🤵",
+    },
+    {
+      name: "fork_and_knife_with_plate",
+      character: "🍽️",
+    },
   ];
   return characters;
 }

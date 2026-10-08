@@ -2724,6 +2724,14 @@ export function bible_glyph_artwork_names() {
       glyph: "spoon",
       asset: "Spoon",
     },
+    {
+      glyph: "person_in_tuxedo",
+      asset: "Person in tuxedo",
+    },
+    {
+      glyph: "fork_and_knife_with_plate",
+      asset: "Fork and knife with plate",
+    },
   ];
   return names;
 }
