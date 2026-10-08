@@ -15,7 +15,7 @@ import { function_imports } from "./function_imports.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_next_bare_start_gate_run() {
+export async function app_shared_bible_bare_start_gate_run() {
   "QA gate: the page a shared link opens still gives somebody a chapter to start reading when they arrive with no link at all, which is the second half of what its card promises a stranger.";
   "THE PAGE ONCE SAID NOTHING FOR EVER IN EXACTLY THIS CASE, and the page's own words still record it: it insisted on a chapter being named and stopped when none was, inside the opening, before a single line was drawn - so it kept the words it paints while it starts and sat on them. A hang says less than an error does, and this one said nothing at all. Nothing anywhere noticed, because there is no wrong thing on the screen to notice: the screen is the one it draws while it is still working.";
   "IT NEEDS NO BIBLE, WHICH IS WHAT LETS IT BE A GATE. Every question here is answered out of this repo's own words. Whether three letters and a number could be a chapter is settled by the shape of them and nothing else, and the one place that could really list every chapter of every book has to fetch a bible to do it - so a check standing on that would run only after the failure it exists to catch, which is to say never.";

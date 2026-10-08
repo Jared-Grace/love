@@ -14,7 +14,7 @@ import { property_get } from "./property_get.mjs";
 import { function_imports } from "./function_imports.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-export async function app_verses_choices_gate_run() {
+export async function app_shared_bible_verses_choices_gate_run() {
   "QA gate: the page that gathers encouraging verses really offers the two choices its card promises a stranger - which language, and how many - and really gives them a way to copy what it gathered.";
   "THE CARD IS A PROMISE MADE BEFORE ANYTHING IS OPENED, and it is the only thing most people will ever read, because a card is handed around where the page is not. It promises three things in one sentence: you choose a language, you choose how many, and what comes back is ready to copy and send to someone. Each of those is a control that could quietly stop being drawn, and nothing anywhere connects the drawing of it to the sentence.";
   "THE ONE CLAIM IN THAT SENTENCE THIS CANNOT PROVE IS WHICH VERSES THEY ARE. The list of references to draw from lives away from this repo as data, so that it can change without anything being rebuilt, and reading it means asking over the network. A check that has to fetch before it can answer is a check nobody can afford to run, so it is not a check. What is left is everything the page decides for itself, which is both of the choices and the copying.";

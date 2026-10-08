@@ -3,8 +3,8 @@ import { prayer_lead_all_creation_gate_run } from "./prayer_lead_all_creation_ga
 import { app_supper_tl_languages_gate_run } from "./app_supper_tl_languages_gate_run.mjs";
 import { app_search_query_link_cases_gate_run } from "./app_search_query_link_cases_gate_run.mjs";
 import { song_agape_glosses_gate_run } from "./song_agape_glosses_gate_run.mjs";
-import { app_verses_choices_gate_run } from "./app_verses_choices_gate_run.mjs";
-import { app_next_bare_start_gate_run } from "./app_next_bare_start_gate_run.mjs";
+import { app_shared_bible_verses_choices_gate_run } from "./app_shared_bible_verses_choices_gate_run.mjs";
+import { app_shared_bible_bare_start_gate_run } from "./app_shared_bible_bare_start_gate_run.mjs";
 import { gloss_term_written_is_cases_gate_run } from "./gloss_term_written_is_cases_gate_run.mjs";
 import { apps_prod_descriptions_differences_gate_run } from "./apps_prod_descriptions_differences_gate_run.mjs";
 import { app_original_bible_gloss_genesis_onwards_gate_run } from "./app_original_bible_gloss_genesis_onwards_gate_run.mjs";
@@ -1205,8 +1205,8 @@ export function qa_gates() {
     app_original_bible_gloss_genesis_onwards_gate_run,
     apps_prod_descriptions_differences_gate_run,
     gloss_term_written_is_cases_gate_run,
-    app_next_bare_start_gate_run,
-    app_verses_choices_gate_run,
+    app_shared_bible_bare_start_gate_run,
+    app_shared_bible_verses_choices_gate_run,
     app_search_query_link_cases_gate_run,
     app_supper_tl_languages_gate_run,
     prayer_lead_all_creation_gate_run,
