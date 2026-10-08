@@ -1,3 +1,6 @@
+import { dev_trace_add } from "./dev_trace_add.mjs";
+import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
+import { subtract } from "./subtract.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { function_import_relative } from "./function_import_relative.mjs";
 import { http_browser_bytes } from "./http_browser_bytes.mjs";
@@ -14,14 +17,23 @@ export async function http_generic(url, options) {
   let b = browser_is();
   if (b) {
     async function lambda3() {
-      let started = Date.now();
+      let started = date_now_milliseconds();
       dev_trace_add("fetch", url);
       try {
         let r = await http_browser_bytes(method, options, body, url);
-        dev_trace_add("fetch_ok", { url, ms: Date.now() - started });
+        let left = date_now_milliseconds();
+        dev_trace_add("fetch_ok", {
+          url,
+          ms: subtract(left, started),
+        });
         return r;
       } catch (caught) {
-        dev_trace_add("fetch_fail", { url, ms: Date.now() - started, message: String(caught && caught.message) });
+        let left2 = date_now_milliseconds();
+        dev_trace_add("fetch_fail", {
+          url,
+          ms: subtract(left2, started),
+          message: String(caught && caught.message),
+        });
         throw caught;
       }
     }

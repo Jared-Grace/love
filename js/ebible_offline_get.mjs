@@ -1,3 +1,5 @@
+import { dev_trace_add } from "./dev_trace_add.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { ebible_offline_database } from "./ebible_offline_database.mjs";
 import { ebible_offline_key } from "./ebible_offline_key.mjs";
@@ -18,6 +20,10 @@ export async function ebible_offline_get(bible_folder, name) {
     return value_stored;
   }
   let value = await catch_null_async(get);
-  dev_trace_add("offline_get", { bible_folder, name, hit: value !== null });
+  dev_trace_add("offline_get", {
+    bible_folder,
+    name,
+    hit: not_equal(value, null),
+  });
   return value;
 }
