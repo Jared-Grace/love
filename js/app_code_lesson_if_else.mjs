@@ -37,6 +37,7 @@ export function app_code_lesson_if_else() {
   ("Every program names its value a or b, as in If and if not. Not picked: a condition such as n < 5, since a name holding true or false keeps the one new fact, else, the only thing to read.");
   ("The writing is a first draft by Claude 2026-10-08.");
   ("The second box says else says the same as if (a) beside if (!a) as long as nothing changes a in between, at the human's word 2026-10-08, matching the last box of If and if not. Without it the claim is false: if something changes a between the two ifs, both can run, while else asks once and never runs both. Not picked: showing that difference here, a second new fact, left for a lesson after this one.");
+  ("The last box says exactly one of the two runs, every time, at the human's question 2026-10-08, with no condition attached, unlike If and if not: else asks once and the side chosen stays chosen. Weighed and found not to need a condition: an await inside a side, since a changing a then cannot reach the other side; a return, continue or break, which sit inside a side and so only stop it partway; an exception thrown inside a side, the same; and one thrown while checking a, which stops the whole program. Not picked: naming any of these here, none of them yet taught.");
   let bang = js_operator_bang_symbol();
   let fruits = fruits_of_the_spirit();
   function logged(word) {
@@ -165,7 +166,7 @@ export function app_code_lesson_if_else() {
       "else",
       " runs when the ",
       "if",
-      " does not",
+      " does not, so exactly one of the two runs, every time",
     ]);
   }
   let name_id = app_code_lesson_statement_title_name_id(
