@@ -1869,7 +1869,7 @@ export function bible_glyph_artwork_names() {
       asset: "Takeout box",
     },
     {
-      glyph: "star",
+      glyph: "star_plain",
       asset: "Star",
     },
     {
