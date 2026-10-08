@@ -1,3 +1,4 @@
+import { app_code_if_codes_halves } from "./app_code_if_codes_halves.mjs";
 import { each } from "./each.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
@@ -11,8 +12,6 @@ import { multiply } from "./multiply.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_map_index } from "./list_map_index.mjs";
-import { list_shuffle } from "./list_shuffle.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
@@ -154,11 +153,11 @@ export function app_code_lesson_if_cases_generic(
       return m;
     }
     let way = list_find(ways, made);
-    let item5 = list_get(way, 1);
-    let b2 = list_get(way, 2);
-    let n = not(b2);
+    let item = list_get(way, 1);
+    let b = list_get(way, 2);
+    let n = not(b);
     let item6 = list_get(way, 3);
-    let opposite = program_get(item5, n, inside, plain, item6);
+    let opposite = program_get(item, n, inside, plain, item6);
     let found = [opposite];
     return found;
   }
