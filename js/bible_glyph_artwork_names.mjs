@@ -2776,6 +2776,22 @@ export function bible_glyph_artwork_names() {
       glyph: "unamused_face",
       asset: "Unamused face",
     },
+    {
+      glyph: "pirate_flag",
+      asset: "Pirate flag",
+    },
+    {
+      glyph: "disguised_face",
+      asset: "Disguised face",
+    },
+    {
+      glyph: "red_circle",
+      asset: "Red circle",
+    },
+    {
+      glyph: "desert",
+      asset: "Desert",
+    },
   ];
   return names;
 }

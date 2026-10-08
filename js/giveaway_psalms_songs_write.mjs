@@ -27,7 +27,8 @@ export async function giveaway_psalms_songs_write(folder_audio) {
   ("Both walks are made because a psalm is sung whole and also sung in parts, and each walk refuses the other's names. The rows are sorted by the given-away name rather than left in the order the folder was read, because the order a folder is read in is not promised and a record that reshuffles between writings reads as a change when nothing changed.");
   ("The disk name is kept without its folder. The folder is what was handed in, so storing it again would write this machine's own layout into a record about which songs exist, and the record would go stale the day the folder moved rather than the day the songs changed.");
   ("★ WHICH SONG OF A PASSAGE A FILE IS COMES FROM WHERE IT STANDS IN ITS PASSAGE'S OWN LIST, NOT FROM THE NUMBER ON ITS NAME, AND THAT IS WHY THE SONGS ARE GATHERED BY PASSAGE BEFORE ANYTHING IS NAMED. Two files in the downloads folder are `Psalm 150.wav` and `Psalm_150.wav` - one space apart - and both read as take nought, so a name built from the take number would have published two different singings of Psalm 150 under one name. The gathering keeps each passage's songs in the order the folder walk put them, which is take order, so the places run with the singing rather than against it. Nothing is sorted before the gathering, so the places do not depend on a sort holding equal items in the order it found them.");
-  ("Only the two names are kept. The passage, the verse range and the take number are all readable out of the given-away name, and a record that also stated them would be a second place for them to disagree with the name itself.");
+  ("★ EVERY PIECE THE GIVEN-AWAY NAME IS BUILT FROM IS KEPT BESIDE IT, AND THE FIRST VERSION OF THIS KEPT ONLY THE TWO NAMES. The reason given then was that the pieces are all readable back out of the name, so storing them would only be a second place for them to disagree with it. That reason was wrong twice over. It is wrong as a fact: a name is cut into words at the underscores, and two of the fifteen hundred and twenty-eight translation folders on this disk have an underscore inside them - fra_fob and knv-fly_river - so the number of words does not say which word is which, and only today's single translation makes the name look readable. It is wrong as an argument: a second place to disagree is precisely what a gate needs, because with the name alone there is nothing to check it against. The pieces are what the naming function was called with, so the gate can call that function again and insist it still spells the same name - which is how a later change to the naming rule becomes a failure somebody reads instead of a silent rename of files that are already published.");
+  ("All five pieces are written on every row even though a song's translation, kind and ending are the same on all of them today. A header saying them once would make the gate hold its own copy of the writer's three constants, and that is a second place for them to disagree with no gate behind it. Rows that carry everything also stay right when this record grows to hold the lyric videos and the pictures, where the kind and the ending differ row by row.");
   let bible_folder = "engbsb";
   let kind = "song";
   let ending = ".wav";
@@ -44,6 +45,11 @@ export async function giveaway_psalms_songs_write(folder_audio) {
     );
     let row = {
       file_name: file_name,
+      passage_code: passage_code,
+      bible_folder: bible_folder,
+      kind: kind,
+      mark: mark,
+      ending: ending,
       name_published: name_published,
     };
     return row;
