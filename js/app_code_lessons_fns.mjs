@@ -1,3 +1,5 @@
+import { app_code_lesson_if_else_once } from "./app_code_lesson_if_else_once.mjs";
+import { app_code_lesson_if_nested } from "./app_code_lesson_if_nested.mjs";
 import { app_code_lesson_if_halve_even } from "./app_code_lesson_if_halve_even.mjs";
 import { app_code_lesson_if_else_change } from "./app_code_lesson_if_else_change.mjs";
 import { app_code_lesson_if_halve_or_triple } from "./app_code_lesson_if_halve_or_triple.mjs";
@@ -518,9 +520,11 @@ export function app_code_lessons_fns() {
     app_code_lesson_if_two_ifs,
     app_code_lesson_if_and_if_not,
     app_code_lesson_if_else,
+    app_code_lesson_if_else_once,
     app_code_lesson_if_halve_even,
     app_code_lesson_if_else_change,
     app_code_lesson_if_halve_or_triple,
+    app_code_lesson_if_nested,
   ];
   return fns;
 }
