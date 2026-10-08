@@ -2328,6 +2328,54 @@ export function bible_glyph_artwork_names() {
       glyph: "microscope",
       asset: "Microscope",
     },
+    {
+      glyph: "clockwise_arrows",
+      asset: "Clockwise vertical arrows",
+    },
+    {
+      glyph: "shooting_star",
+      asset: "Shooting star",
+    },
+    {
+      glyph: "incoming_envelope",
+      asset: "Incoming envelope",
+    },
+    {
+      glyph: "shopping_cart",
+      asset: "Shopping cart",
+    },
+    {
+      glyph: "left_speech_bubble",
+      asset: "Left speech bubble",
+    },
+    {
+      glyph: "hourglass_done",
+      asset: "Hourglass done",
+    },
+    {
+      glyph: "framed_picture",
+      asset: "Framed picture",
+    },
+    {
+      glyph: "sos_button",
+      asset: "Sos button",
+    },
+    {
+      glyph: "last_track",
+      asset: "Last track button",
+    },
+    {
+      glyph: "latin_cross",
+      asset: "Latin cross",
+    },
+    {
+      glyph: "confounded_face",
+      asset: "Confounded face",
+    },
+    {
+      glyph: "face_with_symbols_on_mouth",
+      asset: "Face with symbols on mouth",
+    },
   ];
   return names;
 }

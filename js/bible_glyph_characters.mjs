@@ -2543,6 +2543,54 @@ export function bible_glyph_characters() {
       name: "microscope",
       character: "🔬",
     },
+    {
+      name: "clockwise_arrows",
+      character: "🔃",
+    },
+    {
+      name: "shooting_star",
+      character: "🌠",
+    },
+    {
+      name: "incoming_envelope",
+      character: "📨",
+    },
+    {
+      name: "shopping_cart",
+      character: "🛒",
+    },
+    {
+      name: "left_speech_bubble",
+      character: "🗨️",
+    },
+    {
+      name: "hourglass_done",
+      character: "⌛",
+    },
+    {
+      name: "framed_picture",
+      character: "🖼️",
+    },
+    {
+      name: "sos_button",
+      character: "🆘",
+    },
+    {
+      name: "last_track",
+      character: "⏮️",
+    },
+    {
+      name: "latin_cross",
+      character: "✝️",
+    },
+    {
+      name: "confounded_face",
+      character: "😖",
+    },
+    {
+      name: "face_with_symbols_on_mouth",
+      character: "🤬",
+    },
   ];
   return characters;
 }
