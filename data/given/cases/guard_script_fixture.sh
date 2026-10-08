@@ -3,3 +3,5 @@
 ls
 awk '{print $1}' data/x.txt
 node scripts/ai.mjs function_auto_checked x
+awk -F'|' 'BEGIN{n=1}
+{ print n }' data/x.txt
