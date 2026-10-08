@@ -57,12 +57,12 @@ export function app_code_lesson_if_change() {
     return joined;
   }
   function batch_get() {
-    "four programs, two whose if runs and two whose if does not, each adding a number other than the one n starts at";
+    "four programs, two whose if runs and two whose if does not, each adding a number other than the one n starts at, and ending on a number other than the one n is compared against, so neither number in the program is the answer by chance";
     let trues = list_shuffle_take(
       [
-        [2, 5, 3],
+        [2, 5, 4],
         [3, 8, 4],
-        [1, 6, 5],
+        [1, 6, 3],
         [4, 9, 2],
       ],
       2,
