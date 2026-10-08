@@ -8,7 +8,7 @@ import { playwright_test_blank } from "./playwright_test_blank.mjs";
 export async function playwright_url_steps_console(url, steps) {
   "$plain url";
   "$plain steps";
-  "Opens a page and walks steps, one comma-joined word: a step reading offline cuts the network, a step beginning wait= waits up to two minutes for the rest of it to show, and any other step is text to press. Hands back every error, console line and failed request, with the text the page showed after each press.";
+  "Opens a page and walks steps, one comma-joined word: a step reading offline cuts the network, a step beginning wait= waits up to ten minutes for the rest of it to show, and any other step is text to press. Hands back every error, console line and failed request, with the text the page showed after each press.";
   "The walk with one wait before the network is cut could not say 'save, wait, free it, save again, wait' - and that is the order a person actually tried it in.";
   "A press or a wait that finds nothing is written down and the walk stops there, rather than throwing, because how far the walk got is itself the answer.";
   let lines = [];

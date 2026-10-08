@@ -501,6 +501,7 @@
     { "command": "ls; for g in zz_no_such_fn; do node scripts/ai.mjs $g; done", "decision": "ask", "reason_includes": "The part that is not allowed: node scripts/ai.mjs zz_no_such_fn", "why": "the search looks inside a loop and expands it as check_for_loop does - naming the loop keyword was the commonest useless answer in a week of logged prompts" },
     { "command": "ls; echo $(zz_tool x)", "decision": "ask", "reason_includes": "The part that is not allowed: zz_tool x", "why": "a failing $(...) is followed inside: the outer complaint 'command substitution' names nothing a caller can change" },
     { "command": "diff <(ls a) <(ls b)", "decision": "ask", "reason_includes": "Write each side to a file in the scratchpad", "why": "process substitution was most of the unparsed asks in the log; the hint names the rewording that needs no prompt" },
-    { "command": "cd /tmp/x/scratchpad && printf a >> used.txt && wc -l used.txt", "decision": "ask", "reason_includes": "it never follows `cd`. Write the whole path", "why": "a bare file name after cd into the scratchpad was told to write to the scratchpad, which it already did; the hint names the real fix" }
+    { "command": "cd /tmp/x/scratchpad && printf a >> used.txt && wc -l used.txt", "decision": "ask", "reason_includes": "it never follows `cd`. Write the whole path", "why": "a bare file name after cd into the scratchpad was told to write to the scratchpad, which it already did; the hint names the real fix" },
+    { "command": "ls; bash data/given/cases/guard_script_fixture.sh", "decision": "ask", "reason_includes": "line 4 (awk)", "why": "a prompt for bash FILE showed two words; the human approved a script that ran awk unseen" }
   ]
 }

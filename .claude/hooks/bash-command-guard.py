@@ -4147,6 +4147,98 @@ def unread_hint(why, command):
     return ""
 
 
+SCRIPT_FILE_FLOORS = (
+    ("awk", lambda line: find_awk_text_tool(line) is not None),
+    ("an in-place edit", lambda line: bool(find_in_place_edit(line))),
+    ("node -e", lambda line: bool(find_raw_node_eval(line))),
+    ("python -c", lambda line: bool(find_python_eval(line))),
+    ("a heredoc file write", lambda line: bool(find_heredoc_file_write(line))),
+    ("raw git add/commit", lambda line: find_git_commit_write(line) is not None),
+    ("a non-ai.mjs script", lambda line: bool(find_non_ai_scripts_invocation(line))),
+    ("a code-running function", lambda line: bool(find_denied_dispatcher_function(line))),
+)
+
+SCRIPT_FILE_BYTES_MAX = 200000
+
+SCRIPT_FILE_AI_FN_RE = re.compile(r"\bscripts/ai\.mjs\s+([a-z0-9_]+)")
+
+
+def script_file_path(words, command):
+    """The file a `bash FILE` / `sh FILE` piece runs, as a path to read, or
+    None when the piece is not that shape or names nothing readable. A
+    leading `$VAR` is resolved from the command's own literal assignments,
+    the same map the scratchpad redirect check uses."""
+    plain = list(words)
+    while plain and ASSIGN_RE.match(plain[0]):
+        plain = plain[1:]
+    if len(plain) < 2 or plain[0] not in ("bash", "sh") or plain[1].startswith("-"):
+        return None
+    path = plain[1]
+    m = VAR_PREFIX_RE.match(path)
+    if m:
+        value = _literal_var_map(command).get(m.group(1))
+        if value is None:
+            return None
+        path = value + m.group(2)
+    if not os.path.isabs(path):
+        path = os.path.join(os.getcwd(), path)
+    if not os.path.isfile(path):
+        return None
+    return path
+
+
+def script_file_note(words, command):
+    """What the script file a `bash FILE` piece runs holds, as sentences to
+    append to the ask, or "" when there is no file to read.
+
+    A prompt for `bash FILE` showed only those two words, so the human
+    approved contents they never saw - measured 2026-10-08, a scratchpad
+    script ran awk, which this hook denies outright when typed, and the
+    prompt said nothing of it. Advice only: the decision is unchanged, the
+    file is read and never run, and each line is checked alone, so a line
+    inside a loop is judged out of its loop."""
+    try:
+        path = script_file_path(words, command)
+        if path is None or os.path.getsize(path) > SCRIPT_FILE_BYTES_MAX:
+            return ""
+        with open(path, encoding="utf-8", errors="replace") as f:
+            lines = f.read().splitlines()
+    except Exception:
+        return ""
+    denied = []
+    for number, line in enumerate(lines, 1):
+        text = line.strip()
+        if not text or text.startswith("#"):
+            continue
+        for name, floor in SCRIPT_FILE_FLOORS:
+            try:
+                hit = floor(text)
+            except Exception:
+                hit = False
+            if hit:
+                denied.append(f"  line {number} ({name}): {text[:120]}")
+                break
+    functions = []
+    for m in SCRIPT_FILE_AI_FN_RE.finditer("\n".join(lines)):
+        if m.group(1) not in functions:
+            functions.append(m.group(1))
+    note = (
+        f"\nThis hook never reads a script file, so approving runs all "
+        f"{len(lines)} lines of {path} unseen."
+    )
+    if denied:
+        note += " Lines this hook would DENY if typed alone:\n" + "\n".join(denied[:5])
+        if len(denied) > 5:
+            note += f"\n  ... and {len(denied) - 5} more"
+    if functions:
+        note += "\nRepo functions it calls: " + ", ".join(functions[:15])
+    note += (
+        "\nRun its steps as separate calls instead, so each is checked; make "
+        "code edits with Edit or a named command."
+    )
+    return note
+
+
 def untrusted_piece_advice(command, safe_verbs, safe_exact_commands):
     """The sentences naming what in `command` needs a look and how it might
     be reworded, or "" when nothing can be singled out. Appended to an ask
@@ -4173,6 +4265,7 @@ def untrusted_piece_advice(command, safe_verbs, safe_exact_commands):
     hint = untrusted_piece_hint(words, safe_verbs)
     if hint:
         text += "\n" + hint
+    text += script_file_note(words, command)
     return text
 
 
