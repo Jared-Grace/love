@@ -1,3 +1,4 @@
+import { app_bible_card_claims_gate_run } from "./app_bible_card_claims_gate_run.mjs";
 import { app_autopray_prayer_gate_run } from "./app_autopray_prayer_gate_run.mjs";
 import { app_supper_tl_languages_gate_run } from "./app_supper_tl_languages_gate_run.mjs";
 import { app_search_query_link_cases_gate_run } from "./app_search_query_link_cases_gate_run.mjs";
@@ -1209,6 +1210,7 @@ export function qa_gates() {
     app_search_query_link_cases_gate_run,
     app_supper_tl_languages_gate_run,
     app_autopray_prayer_gate_run,
+    app_bible_card_claims_gate_run,
   ];
   return gates;
 }
