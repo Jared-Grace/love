@@ -1,17 +1,12 @@
+import { app_code_lesson_above_fake_draw } from "./app_code_lesson_above_fake_draw.mjs";
+import { app_code_lessons_fake_page_lambda } from "./app_code_lessons_fake_page_lambda.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_get } from "./list_get.mjs";
-import { property_get } from "./property_get.mjs";
-import { html_element_fake } from "./html_element_fake.mjs";
-import { html_component_wrap } from "./html_component_wrap.mjs";
-import { app_code } from "./app_code.mjs";
-import { app_code_above_draw } from "./app_code_above_draw.mjs";
 import { catch_error_text_or_null } from "./catch_error_text_or_null.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_add } from "./list_add.mjs";
-import { html_document_fake_lambda } from "./html_document_fake_lambda.mjs";
-import { storage_session_fake_lambda } from "./storage_session_fake_lambda.mjs";
 export function app_code_lessons_above_broken() {
   arguments_assert(arguments, 0);
   ("Every lesson whose telling - the part drawn above the examples - stops rather than draws, said as one line each: which lesson it was and what stopped it. An empty answer means all of them drew.");
@@ -28,14 +23,7 @@ export function app_code_lessons_above_broken() {
       let fn = list_get(fns, i);
       let number = i + 1;
       function one_draw() {
-        let lesson = fn();
-        let above = property_get(lesson, "above");
-        let element = html_element_fake();
-        let root = html_component_wrap(element);
-        let context = {
-          app_fn: app_code,
-        };
-        app_code_above_draw(root, above, context);
+        app_code_lesson_above_fake_draw(fn);
       }
       let went_wrong = catch_error_text_or_null(one_draw);
       if (went_wrong) {
@@ -50,9 +38,6 @@ export function app_code_lessons_above_broken() {
       }
     }
   }
-  function all_draw_on_page() {
-    html_document_fake_lambda(all_draw);
-  }
-  storage_session_fake_lambda(all_draw_on_page);
+  app_code_lessons_fake_page_lambda(all_draw);
   return broken;
 }
