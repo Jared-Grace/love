@@ -16,6 +16,7 @@ export function bible_glyph_undrawn_wanted() {
   "PANIM WAS TAKEN OFF THIS LIST ON 2026-09-18 AND SEATED ON A FACE, and the entry it had here is worth knowing about because the argument it made is a good one made from the wrong side. It counted the English the interlinear puts under the word - only fifteen in a hundred of those wordings say face, and the commonest is before - and concluded that a face would be drawn on the word for in front of five times out of six.";
   "WHAT DECIDED AGAINST IT IS THAT THE ENGLISH WORDING IS NOT THE ORIGINAL WORD. Panim is the face. Before is what a face does in this language, the way anger is what a nose does - and the nose entry still on this list refuses the anger picture for exactly that reason, keeping the body part and turning down the sense English reached for. Counting wordings measures which English the translators chose; the goal of this Bible is the word underneath them, and drawing the face is what lets a reader see that in front of and to the face of are one word rather than two.";
   "SO THE MEASURE STAYS USEFUL AND ITS CONCLUSION DOES NOT FOLLOW AUTOMATICALLY. A lopsided wording count is a reason to look hard at a seat, and it settles the question whenever the two senses are unrelated - the fear entry is decided that way. It does not settle it when the rarer wording is the word itself and the commoner one is built out of it.";
+  "ROSH WAS TAKEN OFF THIS LIST ON 2026-10-08 AND SEATED ON A HEAD, FOR THE REASON PANIM WAS. Its entry counted only fifty eight in a hundred wordings saying head, the rest chief, top and beginning. Those are what a head is in this language, so the head is the word and the rest is English reaching for it.";
   let wanted = [
     {
       gloss: "elders",
@@ -42,15 +43,6 @@ export function bible_glyph_undrawn_wanted() {
       wordings_total: 243,
       because:
         "the word is the nose. Anger is what the nose does in this language, and the wordings that are not anger are the literal nostrils of a person or an animal. Seventy nine in every hundred would take an anger picture and the rest would take a face part, and no one mark is honest about both.",
-    },
-    {
-      gloss: "head",
-      root: "rosh",
-      strong: "7218",
-      wordings_for: 332,
-      wordings_total: 571,
-      because:
-        "the head of a body, the chief of a people, the top of a hill and the beginning of a thing are all this one word, and only fifty eight in every hundred of its wordings are the head. A head picture would be read as a body part on the four lines in ten where the text means first or foremost.",
     },
     {
       gloss: "mouth",

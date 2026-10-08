@@ -3937,6 +3937,146 @@ def time_subshell_stripped(command, safe_verbs, safe_exact_commands):
     return stripped
 
 
+def tokens_text(tokens):
+    """`tokens` spelled back as a command a person can read: separators
+    become themselves again and a substitution reads as `$(...)`. For a
+    reason only - the original quoting is gone, so this is never run."""
+    words = []
+    for token in tokens:
+        if token in SEPARATORS:
+            words.append(token[len(_SEP):])
+        else:
+            words.append(token.replace(SUBSTITUTION_PLACEHOLDER, "$(...)"))
+    return " ".join(words)
+
+
+def untrusted_piece(command, safe_verbs, safe_exact_commands, outer_vars=None):
+    """The first part of `command` that is_safe refuses, as (words, why), or
+    None when no single part can be blamed.
+
+    Advice only: nothing here decides anything. It walks the same tokenizer and
+    the same per-statement check is_safe does, one statement at a time, so the
+    part it names is the part that actually failed - not a guess from the
+    text. `words` is None when the command did not parse at all, and `why` is
+    then the tokenizer's own complaint; `why` is None for a part that parsed
+    but carries a verb or shape nothing allows.
+
+    A `$(...)` that fails is followed inside, because the outer complaint -
+    "command substitution" - names nothing a caller can change, while the
+    inner command it ran is exactly the thing to reword."""
+    vars_here = dict(outer_vars or {})
+    vars_here.update(_literal_var_map(command))
+    failed_inner = []
+
+    def subst_validator(inner):
+        try:
+            ok = is_safe(inner, safe_verbs, safe_exact_commands, vars_here)
+        except Unsupported:
+            ok = False
+        if not ok and not failed_inner:
+            failed_inner.append(inner)
+        return ok
+
+    try:
+        tokens = tokenize(command, subst_validator, vars_here)
+        groups = split_blocks(tokens)
+    except Unsupported as e:
+        if failed_inner:
+            found = untrusted_piece(failed_inner[0], safe_verbs, safe_exact_commands, vars_here)
+            if found is not None:
+                return found
+        return (None, str(e))
+    for group in groups:
+        if not group:
+            continue
+        try:
+            ok = check_statements(group, safe_verbs, safe_exact_commands)
+            why = None
+        except Unsupported as e:
+            ok = False
+            why = str(e)
+        if not ok:
+            return (group, why)
+    return None
+
+
+COMMAND_BUILDING_VERBS = ("xargs", "sh", "bash", "eval", "env", "exec", "parallel")
+
+
+def untrusted_piece_hint(words, safe_verbs):
+    """One sentence on how to reword the refused part `words`, or "" when
+    there is nothing better to say than its name."""
+    plain = list(words)
+    while plain and ASSIGN_RE.match(plain[0]):
+        plain = plain[1:]
+    if not plain:
+        return ""
+    if plain[0] in COMMAND_BUILDING_VERBS:
+        return (
+            f"`{plain[0]}` runs a command it puts together at run time, so no "
+            "rule can vouch for what it runs. Spell the commands out, loop "
+            "over literal words with `for`, or write a scripts/temp script "
+            "and run it sandboxed."
+        )
+    if plain[0] == "sed":
+        return (
+            "A `sed` is allowed only as `sed [-n] [-e] SCRIPT FILE...`: no "
+            "-i, no second -e, '/' as the only delimiter, and SCRIPT either "
+            "s/// substitutions or address p/d commands, joined by ';' with "
+            "no space after it. Reshape it to that, or pipe two seds."
+        )
+    try:
+        verb = verb_of(plain)
+    except (IndexError, Unsupported):
+        return ""
+    if verb not in safe_verbs:
+        if len(plain) >= 3 and plain[0] == "node" and plain[1] in AI_DISPATCHER_SCRIPTS:
+            return (
+                f"`{plain[2]}` holds no grant. Run it as its own Bash call, "
+                "so the rest needs no human; if it should never prompt, "
+                "grant it by name (`node scripts/ai.mjs permission_grant_add "
+                f"{plain[2]}`)."
+            )
+        return (
+            f"`{verb}` has no allow rule. Run the other parts as their own "
+            "call; for this one, an already-allowed verb or a scripts/temp "
+            "script run sandboxed usually does the same job."
+        )
+    return (
+        f"`{verb}` is allowed, but not in this form (an option that writes a "
+        "file, runs a command, or deletes). Drop that option, or run this "
+        "part as its own call."
+    )
+
+
+def untrusted_piece_advice(command, safe_verbs, safe_exact_commands):
+    """The sentences naming what in `command` needs a look and how it might
+    be reworded, or "" when nothing can be singled out. Appended to an ask
+    reason; never changes a decision."""
+    try:
+        found = untrusted_piece(command, safe_verbs, safe_exact_commands)
+    except Exception:
+        return ""
+    if found is None:
+        return ""
+    words, why = found
+    if words is None:
+        return (
+            f"\nThe part this hook could not read: {why}. Reword that part, "
+            "or move the logic into a scripts/temp script run sandboxed."
+        )
+    piece = tokens_text(words)
+    if len(piece) > 200:
+        piece = piece[:200] + " ..."
+    text = f"\nThe part that is not allowed: {piece}"
+    if why is not None:
+        text += f"\n  (this hook could not read it: {why})"
+    hint = untrusted_piece_hint(words, safe_verbs)
+    if hint:
+        text += "\n" + hint
+    return text
+
+
 def splittable_statements(command, safe_verbs, safe_exact_commands):
     """If `command` is a chain that would be better run as separate Bash calls,
     return (trusted_pieces, the_one_blocked_piece); else None.
@@ -4986,6 +5126,7 @@ def main():
             "separate Bash calls with one already-allowed verb each "
             "(or chain only allow-listed verbs with '&&'/';'); "
             "otherwise it's fine to approve."
+            + untrusted_piece_advice(command, safe_verbs, safe_exact_commands)
         ))
 
     # Reached only when no allow rule matched at all - load_safe_verbs() reads
