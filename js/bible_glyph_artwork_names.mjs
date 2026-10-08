@@ -2660,6 +2660,30 @@ export function bible_glyph_artwork_names() {
       glyph: "crab",
       asset: "Crab",
     },
+    {
+      glyph: "bullseye",
+      asset: "Bullseye",
+    },
+    {
+      glyph: "paperclip",
+      asset: "Paperclip",
+    },
+    {
+      glyph: "index_pointing_at_the_viewer",
+      asset: "Index pointing at the viewer",
+    },
+    {
+      glyph: "stop_button",
+      asset: "Stop button",
+    },
+    {
+      glyph: "face_with_steam_from_nose",
+      asset: "Face with steam from nose",
+    },
+    {
+      glyph: "hole",
+      asset: "Hole",
+    },
   ];
   return names;
 }

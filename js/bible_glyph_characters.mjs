@@ -2751,6 +2751,30 @@ export function bible_glyph_characters() {
       name: "crab",
       character: "🦀",
     },
+    {
+      name: "bullseye",
+      character: "🎯",
+    },
+    {
+      name: "paperclip",
+      character: "📎",
+    },
+    {
+      name: "index_pointing_at_the_viewer",
+      character: "🫵",
+    },
+    {
+      name: "stop_button",
+      character: "⏹️",
+    },
+    {
+      name: "face_with_steam_from_nose",
+      character: "😤",
+    },
+    {
+      name: "hole",
+      character: "🕳️",
+    },
   ];
   return characters;
 }
