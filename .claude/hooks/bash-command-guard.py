@@ -4273,6 +4273,35 @@ def untrusted_piece_advice(command, safe_verbs, safe_exact_commands):
     return text
 
 
+def untrusted_piece_fix_known(command, safe_verbs, safe_exact_commands):
+    """True when the part of `command` that is refused has a rewording known
+    to run with no prompt, so the agent can be sent back to reword rather
+    than the human asked. False when the fix is a grant only the human can
+    give, or when nothing can be singled out."""
+    try:
+        found = untrusted_piece(command, safe_verbs, safe_exact_commands)
+    except Exception:
+        return False
+    if found is None:
+        return False
+    words, why = found
+    if words is None:
+        return "quote" not in why and unread_hint(why, command) != ""
+    plain = list(words)
+    while plain and ASSIGN_RE.match(plain[0]):
+        plain = plain[1:]
+    if not plain:
+        return False
+    return plain[0] == "sed" or script_file_note(words, command) != ""
+
+
+REWORD_DENY_LEAD = (
+    "Reword this and run it again - the part named below has a spelling "
+    "that runs with no prompt, so this comes back to you instead of going "
+    "to the human."
+)
+
+
 def splittable_statements(command, safe_verbs, safe_exact_commands):
     """If `command` is a chain that would be better run as separate Bash calls,
     return (trusted_pieces, the_one_blocked_piece); else None.
@@ -5312,6 +5341,12 @@ def main():
             + open_twin_advice(command)
         ))
 
+    if verb is not None and untrusted_piece_fix_known(command, safe_verbs, safe_exact_commands):
+        return decide("deny", (
+            REWORD_DENY_LEAD
+            + untrusted_piece_advice(command, safe_verbs, safe_exact_commands)
+        ))
+
     if verb is not None:
         return decide("ask", (
             f"This starts with the allowed verb {verb!r} but also "
@@ -5343,7 +5378,7 @@ def main():
     # otherwise show two words and no reason. See script_file_note.
     note = script_file_note(command.split(), command)
     if note:
-        return decide("ask", "This runs a script file." + note)
+        return decide("deny", REWORD_DENY_LEAD + note)
 
 
 if __name__ == "__main__":
