@@ -4147,8 +4147,12 @@ def unread_hint(why, command):
     return ""
 
 
+SCRIPT_FILE_AWK_WORD_RE = re.compile(r"(?:^|[|;&(]\s*)[gmn]?awk\b")
+
+
 SCRIPT_FILE_FLOORS = (
-    ("awk", lambda line: find_awk_text_tool(line) is not None),
+    ("awk", lambda line: find_awk_text_tool(line) is not None
+        or SCRIPT_FILE_AWK_WORD_RE.search(line) is not None),
     ("an in-place edit", lambda line: bool(find_in_place_edit(line))),
     ("node -e", lambda line: bool(find_raw_node_eval(line))),
     ("python -c", lambda line: bool(find_python_eval(line))),
