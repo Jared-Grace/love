@@ -67,7 +67,7 @@ export function app_code_lesson_if_twice() {
       [
         [3, 5, 4],
         [2, 4, 3],
-        [4, 6, 3],
+        [4, 6, 5],
       ],
       2,
     );
