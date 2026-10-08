@@ -155,8 +155,6 @@ export function app_code_lesson_if_halve_or_triple() {
     let even_lines = program_lines(8);
     app_code_code_lines_writes_out(box_three, even_lines, "4");
     let eight_check = js_code_remainder_two_is(8, "0");
-    let operator = text_slash_forward();
-    let halve = js_code_assign_operator_statement(name, operator, 2);
     html_div_cycle_code(box_three, [
       "",
       eight_check,
@@ -169,7 +167,6 @@ export function app_code_lesson_if_halve_or_triple() {
       " is halved",
     ]);
     let box_four = app_code_container_light_blue(root);
-    let even_check = js_code_remainder_two_is(name, "0");
     let if_dots = js_code_if_dots(even_check);
     let if_else = if_dots + " " + else_dots;
     html_div_cycle_code(box_four, [
