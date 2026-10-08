@@ -1,3 +1,4 @@
+import { app_code_lesson_if_change } from "./app_code_lesson_if_change.mjs";
 import { app_code_lesson_if_two_lines } from "./app_code_lesson_if_two_lines.mjs";
 export function app_code_lessons_latest_held_fns() {
   "the lessons kept off latest while every other lesson is shown there, asked for by the human 2026-09-30: deploy through lesson 204 and skip 205, the 24-hour clock, which is not ready to hand over yet";
@@ -61,7 +62,7 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-07: hold A number plus a string, split out before A number joined to a string, until the human has read its first draft";
   "then deploy through 249, 2026-10-08: nothing held";
   "2026-10-08: hold 250, Two lines in an if, until the human has read its first draft";
-  ("2026-10-08: hold A change in an if too, put before Two lines in an if by the human, until the human has read its first draft");
+  "2026-10-08: hold A change in an if too, put before Two lines in an if by the human, until the human has read its first draft";
   let fns = [app_code_lesson_if_change, app_code_lesson_if_two_lines];
   return fns;
 }
