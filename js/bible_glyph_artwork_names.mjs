@@ -2408,6 +2408,30 @@ export function bible_glyph_artwork_names() {
       glyph: "backpack",
       asset: "Backpack",
     },
+    {
+      glyph: "statue_of_liberty",
+      asset: "Statue of liberty",
+    },
+    {
+      glyph: "locked_with_key",
+      asset: "Locked with key",
+    },
+    {
+      glyph: "right_anger_bubble",
+      asset: "Right anger bubble",
+    },
+    {
+      glyph: "stop_sign",
+      asset: "Stop sign",
+    },
+    {
+      glyph: "television",
+      asset: "Television",
+    },
+    {
+      glyph: "camera",
+      asset: "Camera",
+    },
   ];
   return names;
 }
