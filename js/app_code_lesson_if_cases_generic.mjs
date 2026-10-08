@@ -79,18 +79,7 @@ export function app_code_lesson_if_cases_generic(
       return code;
     }
     let codes = list_map_index(chosen, program_of);
-    let item = list_get(codes, 0);
-    let item2 = list_get(codes, 3);
-    let one_half = [item, item2];
-    let item3 = list_get(codes, 1);
-    let item4 = list_get(codes, 2);
-    let other_half = [item3, item4];
-    each([one_half, other_half], list_shuffle);
-    let halves = [one_half, other_half];
-    list_shuffle(halves);
-    let a = list_first(halves);
-    let b = list_last(halves);
-    let ordered = list_concat(a, b);
+    let ordered = app_code_if_codes_halves(codes);
     return ordered;
   }
   let batch = app_code_batch_question_answer_fns(

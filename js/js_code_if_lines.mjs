@@ -10,12 +10,6 @@ export function js_code_if_lines(condition, statement) {
   ("an if around one line, as the three lines it is written on: if (condition) {, the line pushed in by two spaces, and the closing brace");
   ("Handed back as lines rather than one string, because the card that shows a program and what it writes out takes its program as lines; a caller wanting one string joins them with a newline.");
   ("Two spaces in, the indent this repo's own code is formatted with, so a learner who later reads real code meets the shape they were taught.");
-  let keyword = js_keyword_if();
-  let wrapped = js_code_wrap_parenthesis(condition);
-  let left = js_code_brace_left();
-  let opening = text_combine_multiple([keyword, " ", wrapped, " ", left]);
-  let inside = text_combine("  ", statement);
-  let closing = js_code_brace_right();
-  let lines = [opening, inside, closing];
+  let lines = js_code_if_lines_multiple(condition, [statement]);
   return lines;
 }

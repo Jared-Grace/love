@@ -1,4 +1,4 @@
-import { each } from "./each.mjs";
+import { app_code_if_codes_halves } from "./app_code_if_codes_halves.mjs";
 import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
@@ -12,7 +12,6 @@ import { list_concat } from "./list_concat.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_map_index } from "./list_map_index.mjs";
-import { list_shuffle } from "./list_shuffle.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
@@ -106,18 +105,7 @@ export function app_code_lesson_if_less_than() {
       return code;
     }
     let codes = list_map_index(pairs, program_of);
-    let item = list_get(codes, 0);
-    let item2 = list_get(codes, 3);
-    let one_half = [item, item2];
-    let item3 = list_get(codes, 1);
-    let item4 = list_get(codes, 2);
-    let other_half = [item3, item4];
-    each([one_half, other_half], list_shuffle);
-    let halves = [one_half, other_half];
-    list_shuffle(halves);
-    let a = list_first(halves);
-    let b = list_last(halves);
-    let ordered = list_concat(a, b);
+    let ordered = app_code_if_codes_halves(codes);
     return ordered;
   }
   let batch = app_code_batch_question_answer_fns(
