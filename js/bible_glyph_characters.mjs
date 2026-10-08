@@ -2479,6 +2479,46 @@ export function bible_glyph_characters() {
       name: "hut",
       character: "🛖",
     },
+    {
+      name: "face_blowing_a_kiss",
+      character: "😘",
+    },
+    {
+      name: "shower",
+      character: "🚿",
+    },
+    {
+      name: "bouquet",
+      character: "💐",
+    },
+    {
+      name: "poultry_leg",
+      character: "🍗",
+    },
+    {
+      name: "ginger_root",
+      character: "🫚",
+    },
+    {
+      name: "alembic",
+      character: "⚗️",
+    },
+    {
+      name: "cook",
+      character: "🧑‍🍳",
+    },
+    {
+      name: "japanese_castle",
+      character: "🏯",
+    },
+    {
+      name: "nesting_dolls",
+      character: "🪆",
+    },
+    {
+      name: "badger",
+      character: "🦡",
+    },
   ];
   return characters;
 }

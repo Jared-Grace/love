@@ -2264,6 +2264,46 @@ export function bible_glyph_artwork_names() {
       glyph: "hut",
       asset: "Hut",
     },
+    {
+      glyph: "face_blowing_a_kiss",
+      asset: "Face blowing a kiss",
+    },
+    {
+      glyph: "shower",
+      asset: "Shower",
+    },
+    {
+      glyph: "bouquet",
+      asset: "Bouquet",
+    },
+    {
+      glyph: "poultry_leg",
+      asset: "Poultry leg",
+    },
+    {
+      glyph: "ginger_root",
+      asset: "Ginger root",
+    },
+    {
+      glyph: "alembic",
+      asset: "Alembic",
+    },
+    {
+      glyph: "cook",
+      asset: "Cook",
+    },
+    {
+      glyph: "japanese_castle",
+      asset: "Japanese castle",
+    },
+    {
+      glyph: "nesting_dolls",
+      asset: "Nesting dolls",
+    },
+    {
+      glyph: "badger",
+      asset: "Badger",
+    },
   ];
   return names;
 }
