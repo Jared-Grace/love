@@ -216,9 +216,10 @@ export function app_code_lesson_if_else_once() {
       if_dots,
       " and ",
       else_dots,
-      " runs, whatever ",
+      " runs, even when a line inside ",
       if_dots,
-      " changes",
+      " changes ",
+      name4,
     ]);
   }
   let name_id = app_code_lesson_statement_title_name_id(

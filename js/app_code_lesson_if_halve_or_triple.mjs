@@ -1,3 +1,4 @@
+import { html_div_cycle_bold } from "./html_div_cycle_bold.mjs";
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { js_code_else_dots } from "./js_code_else_dots.mjs";
 import { divide } from "./divide.mjs";
@@ -181,6 +182,10 @@ export function app_code_lesson_if_halve_or_triple() {
       "But we do not know if all numbers 1, 2, 3, ... always reach ",
       "1",
       " or not",
+    ]);
+    html_div_cycle_bold(box_four, [
+      "This question is called the ",
+      "Collatz conjecture",
     ]);
   }
   let name_id = app_code_lesson_statement_title_name_id(
