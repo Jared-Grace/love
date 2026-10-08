@@ -320,6 +320,7 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_number_text_plus: text_frozen("number_text_plus"),
     app_code_lesson_number_text_join: text_frozen("number_text_join"),
     app_code_lesson_if_even: text_frozen("if_even"),
+    app_code_lesson_if_change: text_frozen("if_change"),
     app_code_lesson_if_two_lines: text_frozen("if_two_lines"),
     app_code_lesson_statement_name_rectangles_rows_between: text_frozen(
       "name_rectangles_rows_between",

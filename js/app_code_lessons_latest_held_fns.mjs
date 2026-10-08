@@ -61,6 +61,7 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-07: hold A number plus a string, split out before A number joined to a string, until the human has read its first draft";
   "then deploy through 249, 2026-10-08: nothing held";
   "2026-10-08: hold 250, Two lines in an if, until the human has read its first draft";
-  let fns = [app_code_lesson_if_two_lines];
+  ("2026-10-08: hold A change in an if too, put before Two lines in an if by the human, until the human has read its first draft");
+  let fns = [app_code_lesson_if_change, app_code_lesson_if_two_lines];
   return fns;
 }
