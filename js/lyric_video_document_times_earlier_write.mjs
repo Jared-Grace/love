@@ -20,26 +20,41 @@ export async function lyric_video_document_times_earlier_write(
   ("★ IT REFUSES A DOCUMENT A PERSON TIMED, for the same reason the listening does: a person's ear beats either reading everywhere.");
   let document = await file_read_json(path_document);
   if (lyric_video_document_times_hand_is(document)) {
-    return {
+    let r = {
       path_document,
       wrote: false,
       why: "a person timed this document",
     };
+    return r;
   }
-  let hearings = await file_read_json(lyric_video_hearings_path());
+  let file_path = lyric_video_hearings_path();
+  let hearings = await file_read_json(file_path);
   let hearing = property_get(hearings, name_document);
   let starts = lyric_video_starts_earlier(hearing.starts, hearing.starts_heard);
-  let texts = document.lines.map((line) => line.text);
-  let before = document.lines.map((line) => line.start);
+  function lambda(line) {
+    let r2 = line.text;
+    return r2;
+  }
+  let texts = document.lines.map(lambda);
+  function lambda2(line) {
+    let r3 = line.start;
+    return r3;
+  }
+  let before = document.lines.map(lambda2);
   document.lines = lyric_timing_lines_timed(starts, texts, document.duration);
   document.times_from = lyric_video_times_machine_word();
   lyric_video_document_pictures_times_derive(document, 0);
   await file_overwrite_json(path_document, document);
-  let after = document.lines.map((line) => line.start);
-  return {
+  function lambda3(line) {
+    let r4 = line.start;
+    return r4;
+  }
+  let after = document.lines.map(lambda3);
+  let r5 = {
     path_document,
     wrote: true,
     before,
     after,
   };
+  return r5;
 }
