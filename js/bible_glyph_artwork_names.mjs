@@ -1824,6 +1824,10 @@ export function bible_glyph_artwork_names() {
       glyph: "person_gesturing_ok",
       asset: "Person gesturing ok",
     },
+    {
+      glyph: "children_crossing",
+      asset: "Children crossing",
+    },
   ];
   return names;
 }

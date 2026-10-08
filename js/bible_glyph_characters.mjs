@@ -2139,6 +2139,10 @@ export function bible_glyph_characters() {
       name: "person_gesturing_ok",
       character: "🙆",
     },
+    {
+      name: "children_crossing",
+      character: "🚸",
+    },
   ];
   return characters;
 }
