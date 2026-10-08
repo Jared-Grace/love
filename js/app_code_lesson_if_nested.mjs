@@ -177,16 +177,39 @@ export function app_code_lesson_if_nested() {
     let all_lines = program_lines([true, true], words4);
     let all_written = list_join_newline(words4);
     app_code_code_lines_writes_out(box_two, all_lines, all_written);
+    let say_love = logged(love);
+    let say_joy = logged(joy);
+    let say_peace = logged(peace);
+    let if_a = js_code_if_dots("a");
+    let if_b = js_code_if_dots("b");
     html_div_cycle_code(box_two, [
       "",
       "a",
       " is ",
       "true",
-      ", so the outer part runs, and ",
+      ", so the lines inside ",
+      if_a,
+      " run",
+    ]);
+    html_div_cycle_code(box_two, [
+      "",
       "b",
       " is ",
       "true",
-      ", so the inner part runs too",
+      ", so ",
+      say_joy,
+      " inside ",
+      if_b,
+      " runs too",
+    ]);
+    html_div_cycle_code(box_two, [
+      "",
+      say_peace,
+      " is outside ",
+      if_a,
+      ", so ",
+      say_peace,
+      " always runs",
     ]);
     let box_three = app_code_container_light_blue(root);
     html_div_cycle_code(box_three, ["But suppose ", "b", " is ", "false", ":"]);
@@ -194,7 +217,22 @@ export function app_code_lesson_if_nested() {
     let outer_written = list_join_newline([love, peace]);
     app_code_code_lines_writes_out(box_three, outer_lines, outer_written);
     html_div_cycle_code(box_three, [
-      "The outer part runs, but not the inner part",
+      "",
+      "a",
+      " is ",
+      "true",
+      ", so ",
+      say_love,
+      " runs",
+    ]);
+    html_div_cycle_code(box_three, [
+      "",
+      "b",
+      " is ",
+      "false",
+      ", so ",
+      say_joy,
+      " does not run",
     ]);
     let box_four = app_code_container_light_blue(root);
     html_div_cycle_code(box_four, ["And suppose ", "a", " is ", "false", ":"]);
@@ -202,14 +240,30 @@ export function app_code_lesson_if_nested() {
     app_code_code_lines_writes_out(box_four, none_lines, peace);
     html_div_cycle_code(box_four, [
       "",
+      "a",
+      " is ",
+      "false",
+      ", so no line inside ",
+      if_a,
+      " runs",
+    ]);
+    html_div_cycle_code(box_four, [
+      "",
+      if_b,
+      " is inside ",
+      if_a,
+      ", so ",
+      if_b,
+      " is never reached, even though ",
       "b",
       " is ",
       "true",
-      ", but the inner part is never reached",
     ]);
     let box_five = app_code_container_light_blue(root);
     html_div_cycle_code(box_five, [
-      "So the inner part runs only when ",
+      "So ",
+      say_joy,
+      " runs only when ",
       "a && b",
       " is ",
       "true",

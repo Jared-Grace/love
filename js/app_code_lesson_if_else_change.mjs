@@ -131,13 +131,20 @@ export function app_code_lesson_if_else_change() {
     let box_one = app_code_container_light_blue(root);
     app_code_remember_from_lesson(box_one, context, app_code_lesson_if_else, [
       "",
-      "else",
-      " runs when the ",
-      "if",
+      js_code_else_dots(),
+      " runs when ",
+      js_code_if_dots("a"),
       " does not",
     ]);
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, ["Each side can change a name:"]);
+    let if_dots = js_code_if_dots(js_code_binary_spaced_nb(name, less, 5));
+    html_div_cycle_code(box_two, [
+      "Both ",
+      if_dots,
+      " and ",
+      js_code_else_dots(),
+      " can change a name:",
+    ]);
     let true_lines = program_lines(4, 5, 3, 2);
     app_code_code_lines_writes_out(box_two, true_lines, "7");
     let true_condition = js_code_binary_spaced_nb(4, less, 5);

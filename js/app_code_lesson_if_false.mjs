@@ -163,10 +163,16 @@ export function app_code_lesson_if_false() {
       " do not run:",
     ]);
     let false_lines = program_lines("false", inside_shown, after_shown, true);
+    let after_code = app_code_string_code(after_shown);
+    let after_line = js_code_console_log_statement(after_code);
     app_code_code_lines_writes_out(box_two, false_lines, after_shown);
     html_div_cycle_code(box_two, [
-      "The line after ",
+      "",
+      after_line,
+      " is after ",
       brace_right,
+      ", so ",
+      after_line,
       " still runs",
     ]);
   }

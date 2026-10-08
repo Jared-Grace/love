@@ -110,6 +110,9 @@ export function app_code_lesson_if_else() {
     let words3 = [love, joy];
     let statement4 = logged(love);
     let statement5 = logged(joy);
+    let if_dots = js_code_if_dots(name2);
+    let if_not_dots = js_code_if_dots(opposite);
+    let else_dots = js_code_else_dots();
     let box_one = app_code_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
@@ -125,8 +128,10 @@ export function app_code_lesson_if_else() {
     let box_two = app_code_container_light_blue(root);
     html_div_cycle_code(box_two, [
       "",
-      "else",
-      " says the same in fewer words, as long as nothing changes ",
+      else_dots,
+      " says the same as ",
+      if_not_dots,
+      " in fewer words, as long as nothing changes ",
       name2,
       " in between:",
     ]);
@@ -137,8 +142,10 @@ export function app_code_lesson_if_else() {
       name2,
       " is ",
       "true",
-      ", so the line before ",
-      "else",
+      ", so ",
+      statement4,
+      " inside ",
+      if_dots,
       " runs",
     ]);
     let box_three = app_code_container_light_blue(root);
@@ -156,17 +163,23 @@ export function app_code_lesson_if_else() {
       name2,
       " is ",
       "false",
-      ", so the line after ",
-      "else",
+      ", so ",
+      statement5,
+      " inside ",
+      else_dots,
       " runs",
     ]);
     let box_four = app_code_container_light_blue(root);
     html_div_cycle_code(box_four, [
       "So ",
-      "else",
-      " runs when the ",
-      "if",
-      " does not, so exactly one of the two runs, every time",
+      else_dots,
+      " runs when ",
+      if_dots,
+      " does not, so exactly one of ",
+      if_dots,
+      " and ",
+      else_dots,
+      " runs, every time",
     ]);
   }
   let name_id = app_code_lesson_statement_title_name_id(

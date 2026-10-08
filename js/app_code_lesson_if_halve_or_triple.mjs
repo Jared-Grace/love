@@ -119,13 +119,14 @@ export function app_code_lesson_if_halve_or_triple() {
     let odd_lines = program_lines(7);
     app_code_code_lines_writes_out(box_two, odd_lines, "22");
     let seven_check = js_code_remainder_two_is(7, "0");
+    let else_dots = js_code_else_dots();
     html_div_cycle_code(box_two, [
       "",
       seven_check,
       " is ",
       "false",
-      ", so the lines after ",
-      "else",
+      ", so the lines inside ",
+      else_dots,
       " run",
     ]);
     let seven_times = js_code_binary_spaced_nb(7, times, 3);
@@ -151,12 +152,15 @@ export function app_code_lesson_if_halve_or_triple() {
     let even_lines = program_lines(8);
     app_code_code_lines_writes_out(box_three, even_lines, "4");
     let eight_check = js_code_remainder_two_is(8, "0");
+    let halve = js_code_assign_operator_statement(name, text_slash_forward(), 2);
     html_div_cycle_code(box_three, [
       "",
       eight_check,
       " is ",
       "true",
       ", so ",
+      halve,
+      " runs, and ",
       name,
       " is halved",
     ]);

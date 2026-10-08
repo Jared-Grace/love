@@ -104,7 +104,15 @@ export function app_code_lesson_if_names_less_than() {
     ]);
     let box_three = app_code_container_light_blue(root);
     html_div_cycle_code(box_three, [
-      "But suppose the names hold them the other way:",
+      "But suppose ",
+      "a",
+      " holds ",
+      "3",
+      " and ",
+      "b",
+      " holds ",
+      "2",
+      ":",
     ]);
     let setup3 = setup_get(3, 2);
     let false_lines = app_code_if_program_lines(

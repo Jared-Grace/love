@@ -102,7 +102,9 @@ export function app_code_lesson_if_halve_even() {
     app_code_code_lines_writes_out(box_one, [setup2, change2, statement2], "4");
     let box_two = app_code_container_light_blue(root);
     html_div_cycle_code(box_two, [
-      "We can put that line in an ",
+      "We can put ",
+      change2,
+      " in an ",
       "if",
       " that checks for even:",
     ]);

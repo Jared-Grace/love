@@ -113,6 +113,9 @@ export function app_code_lesson_if_and_if_not() {
     ]);
     let setup2 = js_code_let_statement(name2, "false");
     let statement4 = logged(love);
+    let say_joy = logged(joy);
+    let if_dots = js_code_if_dots(name2);
+    let if_not_dots = js_code_if_dots(opposite2);
     let if_not_lines = js_code_if_lines(opposite2, statement4);
     let one = list_concat([setup2], if_not_lines);
     app_code_code_lines_writes_out(box_one, one, love);
@@ -131,14 +134,18 @@ export function app_code_lesson_if_and_if_not() {
       name2,
       " is ",
       "true",
-      ", so the first runs",
+      ", so ",
+      statement4,
+      " runs",
     ]);
     html_div_cycle_code(box_two, [
       "",
       opposite2,
       " is ",
       "false",
-      ", so the second does not",
+      ", so ",
+      say_joy,
+      " does not run",
     ]);
     let box_three = app_code_container_light_blue(root);
     html_div_cycle_code(box_three, [
@@ -155,18 +162,26 @@ export function app_code_lesson_if_and_if_not() {
       name2,
       " is ",
       "false",
-      ", so the first does not run",
+      ", so ",
+      statement4,
+      " does not run",
     ]);
     html_div_cycle_code(box_three, [
       "",
       opposite2,
       " is ",
       "true",
-      ", so the second runs",
+      ", so ",
+      say_joy,
+      " runs",
     ]);
     let box_four = app_code_container_light_blue(root);
     html_div_cycle_code(box_four, [
-      "So one of the two always runs, and never both, as long as nothing changes ",
+      "So exactly one of ",
+      if_dots,
+      " and ",
+      if_not_dots,
+      " runs, never both, as long as nothing changes ",
       name2,
       " in between",
     ]);

@@ -135,19 +135,26 @@ export function app_code_lesson_if_else_once() {
     let joy = list_get(fruits, 1);
     let words7 = [love, joy];
     let change2 = js_code_assign_statement(name4, "false");
+    let if_dots = js_code_if_dots(name4);
+    let if_not_dots = js_code_if_dots(opposite2);
+    let else_dots = js_code_else_dots();
+    let say_love = logged(love);
+    let say_joy = logged(joy);
     let box_one = app_code_container_light_blue(root);
     app_code_remember_from_lesson(box_one, context, app_code_lesson_if_else, [
       "",
-      "else",
+      else_dots,
       " says the same as ",
-      opposite2,
+      if_not_dots,
       ", as long as nothing changes ",
       name4,
       " in between",
     ]);
     let box_two = app_code_container_light_blue(root);
     html_div_cycle_code(box_two, [
-      "But suppose the first part changes ",
+      "But suppose ",
+      if_dots,
+      " changes ",
       name4,
       ":",
     ]);
@@ -159,16 +166,25 @@ export function app_code_lesson_if_else_once() {
       name4,
       " is ",
       "true",
-      ", so the first runs, and ",
+      ", so the lines inside ",
+      if_dots,
+      " run",
+    ]);
+    html_div_cycle_code(box_two, [
+      "",
       change2,
       " makes ",
       opposite2,
       " ",
       "true",
-      ", so the second runs too",
+      ", so ",
+      if_not_dots,
+      " runs too, and ",
+      say_joy,
+      " is written out",
     ]);
     let box_three = app_code_container_light_blue(root);
-    html_div_cycle_code(box_three, ["", "else", " asks only once:"]);
+    html_div_cycle_code(box_three, ["", else_dots, " asks only once:"]);
     let else_lines = program_lines(name4, words7, true);
     app_code_code_lines_writes_out(box_three, else_lines, love);
     html_div_cycle_code(box_three, [
@@ -176,15 +192,31 @@ export function app_code_lesson_if_else_once() {
       name4,
       " was ",
       "true",
-      " when asked, so the part after ",
-      "else",
-      " does not run",
+      " when ",
+      if_dots,
+      " asked, so ",
+      say_love,
+      " runs",
+    ]);
+    html_div_cycle_code(box_three, [
+      "",
+      else_dots,
+      " is not asked again, so ",
+      say_joy,
+      " does not run, even though ",
+      name4,
+      " is now ",
+      "false",
     ]);
     let box_four = app_code_container_light_blue(root);
     html_div_cycle_code(box_four, [
-      "So with ",
-      "else",
-      ", exactly one part runs, whatever the first part changes",
+      "So exactly one of ",
+      if_dots,
+      " and ",
+      else_dots,
+      " runs, whatever ",
+      if_dots,
+      " changes",
     ]);
   }
   let name_id = app_code_lesson_statement_title_name_id(
