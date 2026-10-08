@@ -2684,6 +2684,46 @@ export function bible_glyph_artwork_names() {
       glyph: "hole",
       asset: "Hole",
     },
+    {
+      glyph: "dagger",
+      asset: "Dagger",
+    },
+    {
+      glyph: "scarf",
+      asset: "Scarf",
+    },
+    {
+      glyph: "droplet",
+      asset: "Droplet",
+    },
+    {
+      glyph: "nut_and_bolt",
+      asset: "Nut and bolt",
+    },
+    {
+      glyph: "sparkles",
+      asset: "Sparkles",
+    },
+    {
+      glyph: "loudly_crying_face",
+      asset: "Loudly crying face",
+    },
+    {
+      glyph: "ear_of_corn",
+      asset: "Ear of corn",
+    },
+    {
+      glyph: "hourglass_not_done",
+      asset: "Hourglass not done",
+    },
+    {
+      glyph: "wind_face",
+      asset: "Wind face",
+    },
+    {
+      glyph: "spoon",
+      asset: "Spoon",
+    },
   ];
   return names;
 }

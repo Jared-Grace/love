@@ -2775,6 +2775,46 @@ export function bible_glyph_characters() {
       name: "hole",
       character: "🕳️",
     },
+    {
+      name: "dagger",
+      character: "🗡️",
+    },
+    {
+      name: "scarf",
+      character: "🧣",
+    },
+    {
+      name: "droplet",
+      character: "💧",
+    },
+    {
+      name: "nut_and_bolt",
+      character: "🔩",
+    },
+    {
+      name: "sparkles",
+      character: "✨",
+    },
+    {
+      name: "loudly_crying_face",
+      character: "😭",
+    },
+    {
+      name: "ear_of_corn",
+      character: "🌽",
+    },
+    {
+      name: "hourglass_not_done",
+      character: "⏳",
+    },
+    {
+      name: "wind_face",
+      character: "🌬️",
+    },
+    {
+      name: "spoon",
+      character: "🥄",
+    },
   ];
   return characters;
 }
