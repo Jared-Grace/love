@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_greater_than_symbol } from "./js_operator_greater_than_symbol.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
@@ -125,7 +126,8 @@ export function app_code_lesson_if_two_bounds() {
     let numbers = text_integers(code4);
     let low3 = list_get(numbers, 1);
     let high3 = list_get(numbers, 2);
-    let starts = [high3 + 1, low3 + 1, low3 - 1];
+    let difference = subtract(low3, 1);
+    let starts = [high3 + 1, low3 + 1, difference];
     return starts;
   }
   function decoys(question, answer) {
@@ -154,7 +156,7 @@ export function app_code_lesson_if_two_bounds() {
     let both_run = less_than(high4, start5);
     let first_runs = less_than(low4, start5);
     if (first_runs) {
-      start_after = low4 - 1;
+      start_after = subtract(low4, 1);
     }
     if (both_run) {
       start_after = low4 + 1;

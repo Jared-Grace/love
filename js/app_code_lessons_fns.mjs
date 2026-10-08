@@ -1,3 +1,4 @@
+import { app_code_lesson_if_two_bounds } from "./app_code_lesson_if_two_bounds.mjs";
 import { app_code_lesson_if_else } from "./app_code_lesson_if_else.mjs";
 import { app_code_lesson_if_and_if_not } from "./app_code_lesson_if_and_if_not.mjs";
 import { app_code_lesson_if_two_ifs } from "./app_code_lesson_if_two_ifs.mjs";
@@ -510,6 +511,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_if_two_lines,
     app_code_lesson_if_two_changes,
     app_code_lesson_if_twice,
+    app_code_lesson_if_two_bounds,
     app_code_lesson_if_two_ifs,
     app_code_lesson_if_and_if_not,
     app_code_lesson_if_else,
