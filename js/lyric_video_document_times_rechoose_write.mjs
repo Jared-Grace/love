@@ -8,7 +8,7 @@ import { lyric_timing_lines_timed } from "./lyric_timing_lines_timed.mjs";
 import { lyric_video_times_machine_word } from "./lyric_video_times_machine_word.mjs";
 import { lyric_video_document_pictures_times_derive } from "./lyric_video_document_pictures_times_derive.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
-export async function lyric_video_document_times_earlier_write(
+export async function lyric_video_document_times_rechoose_write(
   path_document,
   name_document,
 ) {
