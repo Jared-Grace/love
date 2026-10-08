@@ -1,4 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { git_commit_word_assert } from "./git_commit_word_assert.mjs";
 import { git_here_run_text } from "./git_here_run_text.mjs";
 import { git_here_run_lines } from "./git_here_run_lines.mjs";
 export async function git_commit_files(commit) {
@@ -7,6 +8,8 @@ export async function git_commit_files(commit) {
   "The paths come back as a list rather than as the printed table, because a caller wants to know whether a file is among them, and reading that off a table means splitting the table.";
   "Standing in the folder, running the line and taking git's own trailing newline off is the same on both askings and everywhere else in the repo, so it is asked for by name rather than written out here twice.";
   arguments_assert(arguments, 1);
+  ("The commit is checked before git sees it, because this holds a standing approval and a word starting with a dash would reach git as an option - given to show, one naming an output file writes that file.");
+  git_commit_word_assert(commit);
   let asked = ["show", "--no-patch", "--format=%s", commit];
   let message = await git_here_run_text(asked);
   let asked_files = ["show", "--name-only", "--format=", commit];

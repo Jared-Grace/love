@@ -1,3 +1,4 @@
+import { git_commit_word_assert } from "./git_commit_word_assert.mjs";
 import { qa_snapshot_repos_folder_named } from "./qa_snapshot_repos_folder_named.mjs";
 import { folder_exists_ensure } from "./folder_exists_ensure.mjs";
 import { qa_snapshot_siblings_freeze } from "./qa_snapshot_siblings_freeze.mjs";
@@ -21,6 +22,8 @@ export async function qa_snapshot_ensure_named(copy_name, commit) {
   "What that cost here is worse than a flap, because what is asked in here is written down and handed to everybody. An answer filed under a commit was reached while somebody was saving files in a neighbour, so it was never an answer about that commit at all - and the next of us to ask about the same commit is given it without the gates being run again";
   "The parts a repo deliberately never commits are linked in too - the installed packages and the settings meant for this machine only - because they are the surroundings, not the code under question";
   "Which copy is asked for is a word rather than there being only one, because a copy being asked questions and a copy being built inside want opposite things from the same folder";
+  "The commit is checked once here, before either road below hands it to git - moving the copy and laying one out both place it where git reads options, and this is reached from standing approvals that take the commit as typed.";
+  git_commit_word_assert(commit);
   let repos = qa_snapshot_repos_folder_named(copy_name);
   await folder_exists_ensure(repos);
   await qa_snapshot_siblings_freeze(repos);
