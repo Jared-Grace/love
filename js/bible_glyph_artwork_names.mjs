@@ -2432,6 +2432,130 @@ export function bible_glyph_artwork_names() {
       glyph: "camera",
       asset: "Camera",
     },
+    {
+      glyph: "altar",
+      asset: "Place of worship",
+    },
+    {
+      glyph: "priest",
+      asset: "Prayer beads",
+    },
+    {
+      glyph: "silver",
+      asset: "Spoon",
+    },
+    {
+      glyph: "valley",
+      asset: "Mountain railway",
+    },
+    {
+      glyph: "chariot",
+      asset: "Racing car",
+    },
+    {
+      glyph: "sackcloth",
+      asset: "Clutch bag",
+    },
+    {
+      glyph: "well",
+      asset: "Potable water",
+    },
+    {
+      glyph: "foreigner",
+      asset: "Customs",
+    },
+    {
+      glyph: "vineyard",
+      asset: "Leafy green",
+    },
+    {
+      glyph: "poor",
+      asset: "Money with wings",
+    },
+    {
+      glyph: "lamb",
+      asset: "Llama",
+    },
+    {
+      glyph: "calf",
+      asset: "Bison",
+    },
+    {
+      glyph: "widow",
+      asset: "Old woman",
+    },
+    {
+      glyph: "arrow",
+      asset: "Down-right arrow",
+    },
+    {
+      glyph: "vine",
+      asset: "Pea pod",
+    },
+    {
+      glyph: "cherub",
+      asset: "Smiling face with halo",
+    },
+    {
+      glyph: "beard",
+      asset: "Disguised face",
+    },
+    {
+      glyph: "enemy",
+      asset: "Ogre",
+    },
+    {
+      glyph: "sacrifice",
+      asset: "Shallow pan of food",
+    },
+    {
+      glyph: "inheritance",
+      asset: "Red envelope",
+    },
+    {
+      glyph: "burnt_offering",
+      asset: "Fireworks",
+    },
+    {
+      glyph: "grain_offering",
+      asset: "Pancakes",
+    },
+    {
+      glyph: "east",
+      asset: "Globe showing asia-australia",
+    },
+    {
+      glyph: "yoke",
+      asset: "Ladder",
+    },
+    {
+      glyph: "bronze",
+      asset: "Brown circle",
+    },
+    {
+      glyph: "fig",
+      asset: "Pear",
+    },
+    {
+      glyph: "barley",
+      asset: "Cooked rice",
+    },
+    {
+      glyph: "flour",
+      asset: "Bowl with spoon",
+    },
+    {
+      glyph: "place",
+      asset: "Flag in hole",
+    },
+    {
+      glyph: "dust",
+      asset: "Foggy",
+    },
+    {
+      glyph: "statute",
+      asset: "Page facing up",
+    },
   ];
   return names;
 }
