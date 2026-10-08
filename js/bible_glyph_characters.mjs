@@ -2127,6 +2127,14 @@ export function bible_glyph_characters() {
       name: "person_standing",
       character: "🧍",
     },
+    {
+      name: "person_with_white_cane",
+      character: "🧑‍🦯",
+    },
+    {
+      name: "tanabata_tree",
+      character: "🎋",
+    },
   ];
   return characters;
 }

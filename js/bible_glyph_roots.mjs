@@ -513,7 +513,7 @@ export function bible_glyph_roots() {
       words: [
         {
           strong: "5185",
-          glyph: "white_cane",
+          glyph: "person_with_white_cane",
         },
       ],
     },

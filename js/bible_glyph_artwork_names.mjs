@@ -1812,6 +1812,14 @@ export function bible_glyph_artwork_names() {
       glyph: "person_standing",
       asset: "Person standing",
     },
+    {
+      glyph: "person_with_white_cane",
+      asset: "Person with white cane",
+    },
+    {
+      glyph: "tanabata_tree",
+      asset: "Tanabata tree",
+    },
   ];
   return names;
 }
