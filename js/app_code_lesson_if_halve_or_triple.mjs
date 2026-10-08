@@ -85,12 +85,12 @@ export function app_code_lesson_if_halve_or_triple() {
     "the other side's change, and n kept when even or n times 3 without the 1 when odd";
     let numbers = text_integers(question);
     let start3 = list_first(numbers);
-    let half = divide(start3, 2);
+    let halved = divide(start3, 2);
     let tripled = multiply(start3, 3);
     let stepped = tripled + 1;
     let left = modulo(start3, 2);
     let even = equal(left, 0);
-    let found_numbers = [half, tripled];
+    let found_numbers = [halved, tripled];
     if (even) {
       found_numbers = [stepped, start3];
     }
