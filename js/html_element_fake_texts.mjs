@@ -9,13 +9,17 @@ export function html_element_fake_texts(element) {
   ("A list, not one joined text, so a finding can say which piece of the screen it is in. Joined, the pieces of one line run together with nothing between them, and a phrase could seem to cross from one piece into the next.");
   let r = [];
   function walk(e) {
-    let own = property_get(e, "innerHTML");
-    let written = text_empty_not_is(own);
-    if (written) {
-      list_add(r, own);
-    }
     let children = property_get(e, "children");
-    each(children, walk);
+    let nested = list_any(children, html_element_fake_children_any);
+    if (nested) {
+      each(children, walk);
+      return;
+    }
+    let line = html_element_fake_text(e);
+    let written = text_empty_not_is(line);
+    if (written) {
+      list_add(r, line);
+    }
   }
   walk(element);
   return r;
