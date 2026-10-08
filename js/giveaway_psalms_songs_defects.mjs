@@ -1,7 +1,10 @@
-import { equal } from "./equal.mjs";
 import { giveaway_psalms_songs_path } from "./giveaway_psalms_songs_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
+import { list_all_is } from "./list_all_is.mjs";
+import { text_is } from "./text_is.mjs";
+import { not } from "./not.mjs";
 import { giveaway_passage_file_name } from "./giveaway_passage_file_name.mjs";
+import { equal } from "./equal.mjs";
 import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { list_duplicates_by_property } from "./list_duplicates_by_property.mjs";
 import { list_map } from "./list_map.mjs";
@@ -13,10 +16,32 @@ export async function giveaway_psalms_songs_defects() {
   "Three faults are gathered into one list rather than returned apart, because each of them has the same consequence - a file would go up under a name nobody can justify - and a caller that had to ask three questions could be written to ask two.";
   "A repeated name is still asked about here even though the writer refuses to write one. The writer's refusal only fires when the record is written again, and the record is a file that outlives the run that made it; anything that edits it by hand, or any merge of two peers' writings, gets past that refusal and never meets it again.";
   "A repeated disk name is asked about as well as a repeated given-away name. Two rows naming one file on disk means one recording would be uploaded twice under two names, which wastes nothing but tells a listener there are two songs where there is one.";
+  "★ A ROW MISSING ONE OF THE PIECES IS A FAULT THIS REPORTS, NOT A CRASH IT DIES OF. The first version went straight to spelling the name again, and run against the record as it then stood - which held only the two names - it threw out of an assert four functions down, naming a check rather than a row. That is the wrong answer even though it is a loud one: a gate exists to say which rows are wrong, and a record written before the pieces were kept, or merged from a peer who had an older one, is exactly the case somebody needs told plainly. The pieces are tested for being spelled at all before anything is built out of them.";
   "The expected name is only filled in for the fault that has one. A repeat has no single right answer - which of the two rows is the wrong one is a judgment about the songs - so it is left empty rather than guessed at.";
   let path = giveaway_psalms_songs_path();
   let rows = await file_read_json(path);
+  function row_pieces(row) {
+    let pieces = [
+      row.passage_code,
+      row.bible_folder,
+      row.kind,
+      row.mark,
+      row.ending,
+    ];
+    return pieces;
+  }
   function rebuilt_defect_or_null(row) {
+    let pieces = row_pieces(row);
+    let all_spelled = list_all_is(pieces, text_is);
+    if (not(all_spelled)) {
+      let missing = {
+        fault: "pieces_missing",
+        file_name: row.file_name,
+        name_published: row.name_published,
+        expected: "",
+      };
+      return missing;
+    }
     let rebuilt = giveaway_passage_file_name(
       row.passage_code,
       row.bible_folder,

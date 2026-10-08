@@ -84,13 +84,6 @@ export function app_code_lesson_if_nested() {
     let values2 = [value_a2, value_b2];
     return values2;
   }
-  function words_of(code4) {
-    "the three words a program can write, read off what it writes with both names true";
-    let both_true = program_set(code4, [true, true]);
-    let written = eval_console_log_lines(both_true);
-    let words2 = text_split_newline(written);
-    return words2;
-  }
   function program_set(code5, values3) {
     "the same program with its first two lines setting these values";
     let lines4 = text_split_newline(code5);
@@ -133,8 +126,8 @@ export function app_code_lesson_if_nested() {
     ];
     function written_of(values4) {
       let code6 = program_set(question, values4);
-      let written2 = eval_console_log_lines(code6);
-      return written2;
+      let written = eval_console_log_lines(code6);
+      return written;
     }
     let all = list_map(ways, written_of);
     let found = list_without(all, answer);
