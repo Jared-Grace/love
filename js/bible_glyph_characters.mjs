@@ -2235,6 +2235,34 @@ export function bible_glyph_characters() {
       name: "pause_button",
       character: "⏸️",
     },
+    {
+      name: "currency_exchange",
+      character: "💱",
+    },
+    {
+      name: "snow_capped_mountain",
+      character: "🏔️",
+    },
+    {
+      name: "parachute",
+      character: "🪂",
+    },
+    {
+      name: "bomb",
+      character: "💣",
+    },
+    {
+      name: "owl",
+      character: "🦉",
+    },
+    {
+      name: "smiling_face_with_hearts",
+      character: "🥰",
+    },
+    {
+      name: "persevering_face",
+      character: "😣",
+    },
   ];
   return characters;
 }
