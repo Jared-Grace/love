@@ -1820,6 +1820,10 @@ export function bible_glyph_artwork_names() {
       glyph: "tanabata_tree",
       asset: "Tanabata tree",
     },
+    {
+      glyph: "person_gesturing_ok",
+      asset: "Person gesturing ok",
+    },
   ];
   return names;
 }

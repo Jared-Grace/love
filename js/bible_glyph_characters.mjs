@@ -2135,6 +2135,10 @@ export function bible_glyph_characters() {
       name: "tanabata_tree",
       character: "🎋",
     },
+    {
+      name: "person_gesturing_ok",
+      character: "🙆",
+    },
   ];
   return characters;
 }

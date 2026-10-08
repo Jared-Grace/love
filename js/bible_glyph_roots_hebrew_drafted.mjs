@@ -9,6 +9,9 @@ export function bible_glyph_roots_hebrew_drafted() {
   "A NAME ALSO WAITS WHEN ONE OF ITS PICTURES WOULD ARRIVE AS LETTERS OR IN THE READER'S OWN FONT. The artwork set has no brother and no family, so Ahab, Ahijah, Ammon and Amram wait, and sabbath, calf, sacrifice, iron and fruit are still English words, so Shabbethai, Eglon, Zebah, Barzillai and Ephrath wait with them; half a name drawn and half spelled stops reading as one name.";
   "A NAME WAITS WHEN ITS TWO PICTURES ARE A COMMON PHRASE ON THEIR OWN. The last picture of one word and the first of the next can be read as one name, so Adonijah, the crown and I AM, would be read wherever the Lord GOD is said, eighty four times, against twenty six real ones; Hor is every mount before a name, Shem every name before one, and Nathan every gift handed to someone named. Where the false reading is not what the verse says and is common, the name waits. Jonathan stays, read falsely twenty five times against eighty two, because the false reading is I AM giving, which is what those verses say; a name built as a sentence about God is misread only as that sentence.";
   let rows = [
+    ["3477", "yashar", "up_arrow+ruler", "straight"],
+    ["4294", "matteh", "white_cane", "staff"],
+    ["5186", "natah", "white_cane+doing", "stretch out"],
     ["7626", "shebet", "wood", "tribe"],
     ["1008", "beyth-el", "house+heart_on_fire", "Bethel"],
     ["1035", "beyth-lechem", "house+bread", "Bethlehem"],
@@ -151,7 +154,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["1389", "gibah", "mountain+pinching_hand", "hill"],
     ["270", "achaz", "hand+clamp", "seize"],
     ["8248", "shaqah", "cup+hands_giving", "give drink"],
-    ["7070", "qaneh", "sprout+white_cane", "reed"],
+    ["7070", "qaneh", "tanabata_tree", "reed"],
     ["6299", "padah", "coin+turn_back", "redeem"],
     ["7381", "reyach", "nose", "aroma"],
     ["3885", "lun", "night+doing", "spend the night"],
@@ -256,7 +259,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["3925", "lamad", "learner+doing", "learn, teach"],
     ["3988", "maas", "gesturing_no+doing", "reject"],
     ["2470", "chalah", "thermometer_face+doing", "be sick, weak"],
-    ["5787", "ivver", "white_cane+describing", "blind"],
+    ["5787", "ivver", "person_with_white_cane+describing", "blind"],
     ["8121", "shemesh", "sun_with_face", "sun"],
     ["7999", "shalom", "peace+doing", "be complete, repay"],
     ["8083", "shemoneh", "eight", "eight"],
