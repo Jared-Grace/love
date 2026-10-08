@@ -1,16 +1,18 @@
+import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
+import { ebible_chapter_codes_canonical_browser } from "./ebible_chapter_codes_canonical_browser.mjs";
 import { ebible_index_flat_try } from "./ebible_index_flat_try.mjs";
+import { ebible_offline_books_name } from "./ebible_offline_books_name.mjs";
+import { ebible_offline_chapter_codes_name } from "./ebible_offline_chapter_codes_name.mjs";
 import { ebible_offline_index_flat_name } from "./ebible_offline_index_flat_name.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_add } from "./list_add.mjs";
-import { ebible_offline_books_name } from "./ebible_offline_books_name.mjs";
-import { ebible_offline_chapter_codes_name } from "./ebible_offline_chapter_codes_name.mjs";
-import { ebible_chapter_codes_canonical_browser } from "./ebible_chapter_codes_canonical_browser.mjs";
-import { ebible_offline_download_chapters } from "./ebible_offline_download_chapters.mjs";
-import { ebible_offline_download_whole } from "./ebible_offline_download_whole.mjs";
-import { ebible_offline_folder_downloaded_add } from "./ebible_offline_folder_downloaded_add.mjs";
+import { ebible_folder_english } from "./ebible_folder_english.mjs";
+import { ebible_offline_index_flat_english_name } from "./ebible_offline_index_flat_english_name.mjs";
 import { ebible_offline_put_list } from "./ebible_offline_put_list.mjs";
-import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
+import { ebible_offline_download_whole } from "./ebible_offline_download_whole.mjs";
 import { not } from "./not.mjs";
+import { ebible_offline_download_chapters } from "./ebible_offline_download_chapters.mjs";
+import { ebible_offline_folder_downloaded_add } from "./ebible_offline_folder_downloaded_add.mjs";
 export async function ebible_offline_download(bible_folder, on_progress) {
   "keep one whole bible on this device: the book names first, then every chapter, and only then is it named as ready to read without internet";
   let books = await ebible_version_books_browser(bible_folder);
@@ -36,6 +38,17 @@ export async function ebible_offline_download(bible_folder, on_progress) {
     list_add(entries, {
       name: index_flat_name,
       value: index_flat,
+    });
+  }
+  ("English's index is kept with every bible, because every page asks English which chapters and verses there are whatever language is read. without it a reader who saved only their own language could not open the book list once the internet was gone.");
+  let english = ebible_folder_english();
+  let index_flat_english = await ebible_index_flat_try(english);
+  let english_found = null_not_is(index_flat_english);
+  if (english_found) {
+    let index_flat_english_name = ebible_offline_index_flat_english_name();
+    list_add(entries, {
+      name: index_flat_english_name,
+      value: index_flat_english,
     });
   }
   await ebible_offline_put_list(bible_folder, entries);
