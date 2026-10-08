@@ -1604,6 +1604,26 @@ export function bible_glyph_artwork_names() {
       glyph: "ninja",
       asset: "Ninja",
     },
+    {
+      glyph: "purple_circle",
+      asset: "Purple circle",
+    },
+    {
+      glyph: "bone",
+      asset: "Bone",
+    },
+    {
+      glyph: "man_dancing",
+      asset: "Man dancing",
+    },
+    {
+      glyph: "water_wave",
+      asset: "Water wave",
+    },
+    {
+      glyph: "boxing_glove",
+      asset: "Boxing glove",
+    },
   ];
   return names;
 }

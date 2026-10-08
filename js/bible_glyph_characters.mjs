@@ -1919,6 +1919,26 @@ export function bible_glyph_characters() {
       name: "ninja",
       character: "🥷",
     },
+    {
+      name: "purple_circle",
+      character: "🟣",
+    },
+    {
+      name: "bone",
+      character: "🦴",
+    },
+    {
+      name: "man_dancing",
+      character: "🕺",
+    },
+    {
+      name: "water_wave",
+      character: "🌊",
+    },
+    {
+      name: "boxing_glove",
+      character: "🥊",
+    },
   ];
   return characters;
 }
