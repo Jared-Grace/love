@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
@@ -56,11 +57,18 @@ export function app_code_lesson_if_two_ifs() {
   }
   function program_lines(values, words) {
     "let a = values[0]; let b = values[1]; an if about each writing out its word; then the third word";
-    let first = js_code_let_statement(list_get(names, 0), list_get(values, 0));
-    let second = js_code_let_statement(list_get(names, 1), list_get(values, 1));
-    let if_a = if_about(0, list_get(words, 0));
-    let if_b = if_about(1, list_get(words, 1));
-    let plain = logged(list_get(words, 2));
+    let left = list_get(names, 0);
+    let right = list_get(values, 0);
+    let first = js_code_let_statement(left, right);
+    let left2 = list_get(names, 1);
+    let right2 = list_get(values, 1);
+    let second = js_code_let_statement(left2, right2);
+    let item = list_get(words, 0);
+    let if_a = if_about(0, item);
+    let item2 = list_get(words, 1);
+    let if_b = if_about(1, item2);
+    let item3 = list_get(words, 2);
+    let plain = logged(item3);
     let whole = list_concat_multiple([[first, second], if_a, if_b, [plain]]);
     return whole;
   }
@@ -68,11 +76,19 @@ export function app_code_lesson_if_two_ifs() {
     "four programs: both ifs run, only the first, only the second, neither";
     let lows = list_shuffle_take([1, 2, 3, 4], 4);
     let highs = list_shuffle_take([6, 7, 8, 9], 4);
+    let item4 = list_get(lows, 0);
+    let item5 = list_get(lows, 1);
+    let item6 = list_get(lows, 2);
+    let item7 = list_get(highs, 0);
+    let item8 = list_get(highs, 1);
+    let item9 = list_get(highs, 2);
+    let item10 = list_get(highs, 3);
+    let item11 = list_get(lows, 3);
     let ways = [
-      [list_get(lows, 0), list_get(lows, 1)],
-      [list_get(lows, 2), list_get(highs, 0)],
-      [list_get(highs, 1), list_get(highs, 2)],
-      [list_get(highs, 3), list_get(lows, 3)],
+      [item4, item5],
+      [item6, item7],
+      [item8, item9],
+      [item10, item11],
     ];
     function program_of(values2) {
       let words2 = list_shuffle_take(fruits, 3);
@@ -94,7 +110,8 @@ export function app_code_lesson_if_two_ifs() {
     let numbers = text_integers(code3);
     let value = list_get(numbers, index);
     let name2 = list_get(names, index);
-    let line = js_code_let_statement(name2, 10 - value);
+    let right3 = subtract(10, value);
+    let line = js_code_let_statement(name2, right3);
     function line_at(l, i) {
       if (equal(i, index)) {
         return line;
@@ -102,8 +119,8 @@ export function app_code_lesson_if_two_ifs() {
       return l;
     }
     let changed = list_map_index(lines3, line_at);
-    let joined2 = list_join_newline(changed);
-    return joined2;
+    let joined = list_join_newline(changed);
+    return joined;
   }
   function decoys(question, answer) {
     "what is written out with the first if turned the other way, and with the second";
@@ -130,7 +147,8 @@ export function app_code_lesson_if_two_ifs() {
       " can ask about a name:",
     ]);
     let let_a = js_code_let_statement("a", 2);
-    let one_if = list_concat([let_a], if_about(0, love));
+    let b = if_about(0, love);
+    let one_if = list_concat([let_a], b);
     app_code_code_lines_writes_out(box_one, one_if, love);
     let box_two = app_code_container_light_blue(root);
     html_div_cycle_code(box_two, [

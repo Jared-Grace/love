@@ -507,6 +507,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_if_two_lines,
     app_code_lesson_if_two_changes,
     app_code_lesson_if_twice,
+    app_code_lesson_if_two_ifs,
   ];
   return fns;
 }
