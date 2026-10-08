@@ -54,11 +54,13 @@ export async function ebible_offline_download(bible_folder, on_progress) {
   await ebible_offline_put_list(bible_folder, entries);
   let whole = await ebible_offline_download_whole(bible_folder, on_progress);
   if (not(whole)) {
-    await ebible_offline_download_chapters(
+    ("a chapter that did not arrive is asked for once more before the bible is named as saved: a dropped fetch on a phone was skipped silently, so the bible read as saved and a book far into it - Colossians - would not open without internet.");
+    let missed = await ebible_offline_download_chapters(
       bible_folder,
       chapter_codes,
       on_progress,
     );
+    await ebible_offline_download_chapters(bible_folder, missed, on_progress);
   }
   ebible_offline_folder_downloaded_add(bible_folder);
 }

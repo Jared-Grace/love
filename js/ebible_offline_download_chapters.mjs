@@ -1,3 +1,4 @@
+import { list_add } from "./list_add.mjs";
 import { ebible_verses_storage_browser_fresh } from "./ebible_verses_storage_browser_fresh.mjs";
 import { add } from "./add.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
@@ -17,6 +18,8 @@ export async function ebible_offline_download_chapters(
   "chapter by chapter, a handful at a time, saving each handful before starting the next so progress survives a lost connection";
   let total = list_size(chapter_codes);
   let done = 0;
+  ("answers the chapters that did not arrive - a book the translation leaves out, or a fetch the connection dropped. this cannot tell the two apart, so the caller asks once more and the dropped ones nearly always arrive the second time.");
+  let missed = [];
   let size = ebible_offline_download_chunk_size();
   let chunks = list_chunk(chapter_codes, size);
   async function lambda_chunk(chunk) {
@@ -31,6 +34,7 @@ export async function ebible_offline_download_chapters(
       ("a translation that omits a book simply has no file for that chapter, so a miss is skipped rather than failing the whole download");
       let value = await catch_null_async(fetch);
       if (null_is(value)) {
+        list_add(missed, chapter_code);
         return null;
       }
       let entry = {
@@ -47,4 +51,5 @@ export async function ebible_offline_download_chapters(
     on_progress(done, total);
   }
   await each_async(chunks, lambda_chunk);
+  return missed;
 }
