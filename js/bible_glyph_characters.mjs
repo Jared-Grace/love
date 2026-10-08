@@ -2623,6 +2623,30 @@ export function bible_glyph_characters() {
       name: "backpack",
       character: "🎒",
     },
+    {
+      name: "statue_of_liberty",
+      character: "🗽",
+    },
+    {
+      name: "locked_with_key",
+      character: "🔐",
+    },
+    {
+      name: "right_anger_bubble",
+      character: "🗯️",
+    },
+    {
+      name: "stop_sign",
+      character: "🛑",
+    },
+    {
+      name: "television",
+      character: "📺",
+    },
+    {
+      name: "camera",
+      character: "📷",
+    },
   ];
   return characters;
 }
