@@ -1800,6 +1800,14 @@ export function bible_glyph_artwork_names() {
       glyph: "see_no_evil_monkey",
       asset: "See-no-evil monkey",
     },
+    {
+      glyph: "upside_down_face",
+      asset: "Upside-down face",
+    },
+    {
+      glyph: "luggage",
+      asset: "Luggage",
+    },
   ];
   return names;
 }

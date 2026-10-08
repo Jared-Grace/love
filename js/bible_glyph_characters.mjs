@@ -2115,6 +2115,14 @@ export function bible_glyph_characters() {
       name: "see_no_evil_monkey",
       character: "🙈",
     },
+    {
+      name: "upside_down_face",
+      character: "🙃",
+    },
+    {
+      name: "luggage",
+      character: "🧳",
+    },
   ];
   return characters;
 }
