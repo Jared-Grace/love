@@ -1,5 +1,3 @@
-import { app_code_lesson_if_change } from "./app_code_lesson_if_change.mjs";
-import { app_code_lesson_if_two_lines } from "./app_code_lesson_if_two_lines.mjs";
 export function app_code_lessons_latest_held_fns() {
   "the lessons kept off latest while every other lesson is shown there, asked for by the human 2026-09-30: deploy through lesson 204 and skip 205, the 24-hour clock, which is not ready to hand over yet";
   "A list of lessons rather than a cut at a number, for the same reason the released list is one: a lesson put in above would move a number, and a list names the lesson itself. Empty it to show every lesson on latest again. The working copy shows these lessons whatever this holds.";
@@ -63,6 +61,7 @@ export function app_code_lessons_latest_held_fns() {
   "then deploy through 249, 2026-10-08: nothing held";
   "2026-10-08: hold 250, Two lines in an if, until the human has read its first draft";
   "2026-10-08: hold A change in an if too, put before Two lines in an if by the human, until the human has read its first draft";
-  let fns = [app_code_lesson_if_change, app_code_lesson_if_two_lines];
+  "2026-10-08: released by the human, release all: nothing held";
+  let fns = [];
   return fns;
 }
