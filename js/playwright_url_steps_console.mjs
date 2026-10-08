@@ -48,7 +48,7 @@ export async function playwright_url_steps_console(url, steps) {
         let text = text_prefix_without(step, wait_prefix);
         try {
           await page.getByText(text).first().waitFor({
-            timeout: 120000,
+            timeout: 600000,
           });
         } catch (err) {
           let item2 = text_combine_multiple(["never shown  ", text]);
