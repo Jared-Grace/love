@@ -2591,6 +2591,38 @@ export function bible_glyph_characters() {
       name: "face_with_symbols_on_mouth",
       character: "🤬",
     },
+    {
+      name: "person_climbing",
+      character: "🧗",
+    },
+    {
+      name: "heart_hands",
+      character: "🫶",
+    },
+    {
+      name: "dollar_banknote",
+      character: "💵",
+    },
+    {
+      name: "crystal_ball",
+      character: "🔮",
+    },
+    {
+      name: "crying_face",
+      character: "😢",
+    },
+    {
+      name: "airplane_arrival",
+      character: "🛬",
+    },
+    {
+      name: "love_hotel",
+      character: "🏩",
+    },
+    {
+      name: "backpack",
+      character: "🎒",
+    },
   ];
   return characters;
 }

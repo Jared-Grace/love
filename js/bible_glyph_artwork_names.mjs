@@ -2376,6 +2376,38 @@ export function bible_glyph_artwork_names() {
       glyph: "face_with_symbols_on_mouth",
       asset: "Face with symbols on mouth",
     },
+    {
+      glyph: "person_climbing",
+      asset: "Person climbing",
+    },
+    {
+      glyph: "heart_hands",
+      asset: "Heart hands",
+    },
+    {
+      glyph: "dollar_banknote",
+      asset: "Dollar banknote",
+    },
+    {
+      glyph: "crystal_ball",
+      asset: "Crystal ball",
+    },
+    {
+      glyph: "crying_face",
+      asset: "Crying face",
+    },
+    {
+      glyph: "airplane_arrival",
+      asset: "Airplane arrival",
+    },
+    {
+      glyph: "love_hotel",
+      asset: "Love hotel",
+    },
+    {
+      glyph: "backpack",
+      asset: "Backpack",
+    },
   ];
   return names;
 }
