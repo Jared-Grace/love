@@ -47,8 +47,7 @@ export function app_code_lesson_if_not() {
     "! remembered, then !a inside an if, with a false and then true";
     let brace_left = js_code_brace_left();
     let brace_right = js_code_brace_right();
-    let left = js_code_parenthesis_left();
-    let right = js_code_parenthesis_right();
+    ("The name goes in an if, worded so since 2026-10-08, as in If less than at the human's word. Not picked: inside ( and ), the first wording, since a ( and a ) also group a value.");
     let name = "a";
     let opposite = text_combine(bang, name);
     let box_one = app_code_container_light_blue(root);
@@ -73,10 +72,8 @@ export function app_code_lesson_if_not() {
     html_div_cycle_code(box_two, [
       "We can put ",
       opposite,
-      " inside ",
-      left,
-      " and ",
-      right,
+      " in an ",
+      "if",
       ":",
     ]);
     let setup2 = setup_get(name, false);

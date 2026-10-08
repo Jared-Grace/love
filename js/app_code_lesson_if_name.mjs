@@ -43,8 +43,7 @@ export function app_code_lesson_if_name() {
     "a name holding true written out, then that name inside an if, holding true and then false";
     let brace_left = js_code_brace_left();
     let brace_right = js_code_brace_right();
-    let left = js_code_parenthesis_left();
-    let right = js_code_parenthesis_right();
+    ("The name goes in an if, worded so since 2026-10-08, as in If less than at the human's word. Not picked: inside ( and ), the first wording, since a ( and a ) also group a value.");
     let name = "a";
     let box_one = app_code_container_light_blue(root);
     app_code_remember_from_lesson(
@@ -59,10 +58,8 @@ export function app_code_lesson_if_name() {
     app_code_code_lines_writes_out(box_one, remember_lines, "true");
     let box_two = app_code_container_light_blue(root);
     html_div_cycle_code(box_two, [
-      "We can put the name inside ",
-      left,
-      " and ",
-      right,
+      "We can put the name in an ",
+      "if",
       ":",
     ]);
     let setup2 = setup_get(name, true);

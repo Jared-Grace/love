@@ -1624,6 +1624,58 @@ export function bible_glyph_artwork_names() {
       glyph: "boxing_glove",
       asset: "Boxing glove",
     },
+    {
+      glyph: "sheaf_of_rice",
+      asset: "Sheaf of rice",
+    },
+    {
+      glyph: "crossed_flags",
+      asset: "Crossed flags",
+    },
+    {
+      glyph: "briefs",
+      asset: "Briefs",
+    },
+    {
+      glyph: "razor",
+      asset: "Razor",
+    },
+    {
+      glyph: "nest_with_eggs",
+      asset: "Nest with eggs",
+    },
+    {
+      glyph: "curly_loop",
+      asset: "Curly loop",
+    },
+    {
+      glyph: "people_hugging",
+      asset: "People hugging",
+    },
+    {
+      glyph: "hook",
+      asset: "Hook",
+    },
+    {
+      glyph: "bagel",
+      asset: "Bagel",
+    },
+    {
+      glyph: "sponge",
+      asset: "Sponge",
+    },
+    {
+      glyph: "broom",
+      asset: "Broom",
+    },
+    {
+      glyph: "canoe",
+      asset: "Canoe",
+    },
+    {
+      glyph: "cold_face",
+      asset: "Cold face",
+    },
   ];
   return names;
 }
