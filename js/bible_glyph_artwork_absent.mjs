@@ -36,38 +36,10 @@ export function bible_glyph_artwork_absent() {
         "no artwork set holds one and no emoji exists for it. The set draws people in every combination of dress and role it has a name for, and none of those names is a priest of Israel; the nearest is a person in a headscarf, which says something else entirely about somebody who is not in this book.",
     },
     {
-      glyph: "covenant",
-      wanted: "Covenant",
-      because: "the set's names hold nothing carrying the word covenant.",
-    },
-    {
-      glyph: "ark",
-      wanted: "Ark",
-      because: "the set's names hold nothing carrying the word ark.",
-    },
-    {
-      glyph: "gold",
-      wanted: "Gold",
-      because:
-        "the set draws a coin and first place medals, which say money and a race, not the metal.",
-    },
-    {
       glyph: "silver",
       wanted: "Silver",
       because:
         "the set draws second place medals, which say a race, not the metal.",
-    },
-    {
-      glyph: "stone",
-      wanted: "Stone",
-      because:
-        "the Rock is spent on the rock, and the set's other stones are a curling stone, a gem and a headstone.",
-    },
-    {
-      glyph: "gate",
-      wanted: "Gate",
-      because:
-        "the set's names hold nothing carrying the word gate, and the Door is already spent.",
     },
     {
       glyph: "valley",
@@ -86,25 +58,9 @@ export function bible_glyph_artwork_absent() {
         "the set's names hold nothing carrying the word chariot, and its carts and carriages are modern.",
     },
     {
-      glyph: "incense",
-      wanted: "Incense",
-      because: "the set's names hold nothing carrying the word incense.",
-    },
-    {
-      glyph: "sabbath",
-      wanted: "Sabbath",
-      because: "the set's names hold nothing carrying the word sabbath.",
-    },
-    {
       glyph: "sackcloth",
       wanted: "Sackcloth",
       because: "the set's names hold nothing carrying the word sackcloth.",
-    },
-    {
-      glyph: "mule",
-      wanted: "Mule",
-      because:
-        "the set's names hold nothing carrying the word mule, and the Horse and the Donkey are both spent.",
     },
     {
       glyph: "well",
@@ -113,25 +69,9 @@ export function bible_glyph_artwork_absent() {
         "the set's names hold nothing carrying the word well, and its Fountain is an ornamental one.",
     },
     {
-      glyph: "horn",
-      wanted: "Horn",
-      because:
-        "the set's only horn is a Postal horn, and its other horns are on faces and hand signs.",
-    },
-    {
       glyph: "foreigner",
       wanted: "Foreigner",
       because: "the set's names hold nothing carrying the word foreigner.",
-    },
-    {
-      glyph: "famine",
-      wanted: "Famine",
-      because: "the set's names hold nothing carrying the word famine.",
-    },
-    {
-      glyph: "spring",
-      wanted: "Spring",
-      because: "the set's only spring is Hot springs, a sign for bathing.",
     },
     {
       glyph: "vineyard",
@@ -149,11 +89,6 @@ export function bible_glyph_artwork_absent() {
       because: "the set draws no lamb, and the Ewe is spent on the flock.",
     },
     {
-      glyph: "plunder",
-      wanted: "Plunder",
-      because: "the set's names hold nothing carrying the word plunder.",
-    },
-    {
       glyph: "calf",
       wanted: "Calf",
       because: "the set's names hold nothing carrying the word calf.",
@@ -162,18 +97,6 @@ export function bible_glyph_artwork_absent() {
       glyph: "sister",
       wanted: "Sister",
       because: "the set's names hold nothing carrying the word sister.",
-    },
-    {
-      glyph: "hair",
-      wanted: "Hair",
-      because:
-        "the set draws people with a kind of hair and a Hair pick, never hair itself.",
-    },
-    {
-      glyph: "veil",
-      wanted: "Veil",
-      because:
-        "the set's Person with veil draws a bride, a person rather than the veil.",
     },
     {
       glyph: "widow",
@@ -240,16 +163,6 @@ export function bible_glyph_artwork_absent() {
       because: "the set's Compass draws all four directions at once.",
     },
     {
-      glyph: "ashes",
-      wanted: "Ashes",
-      because: "the set's names hold nothing carrying the word ashes.",
-    },
-    {
-      glyph: "spear",
-      wanted: "Spear",
-      because: "the set's names hold nothing carrying the word spear.",
-    },
-    {
       glyph: "yoke",
       wanted: "Yoke",
       because: "the set's names hold nothing carrying the word yoke.",
@@ -259,11 +172,6 @@ export function bible_glyph_artwork_absent() {
       wanted: "Bronze",
       because:
         "the set draws third place medals, which say a race, not the metal.",
-    },
-    {
-      glyph: "iron",
-      wanted: "Iron",
-      because: "the set's names hold nothing carrying the word iron.",
     },
     {
       glyph: "fig",
@@ -281,42 +189,14 @@ export function bible_glyph_artwork_absent() {
       because: "the set's names hold nothing carrying the word flour.",
     },
     {
-      glyph: "garden",
-      wanted: "Garden",
-      because:
-        "the set's only garden is a House with garden, which draws the house.",
-    },
-    {
-      glyph: "dew",
-      wanted: "Dew",
-      because: "the Droplet is already spent on water.",
-    },
-    {
       glyph: "place",
       wanted: "Place",
       because: "the set's places are medals and a Place of worship sign.",
     },
     {
-      glyph: "field",
-      wanted: "Field",
-      because: "the set's only field is Field hockey.",
-    },
-    {
-      glyph: "fruit",
-      wanted: "Fruit",
-      because:
-        "the set draws named fruits one by one and nothing for fruit in general.",
-    },
-    {
       glyph: "dust",
       wanted: "Dust",
       because: "the set's names hold nothing carrying the word dust.",
-    },
-    {
-      glyph: "seed",
-      wanted: "Seed",
-      because:
-        "the Seedling is already spent, and a seedling is a plant rather than a seed.",
     },
     {
       glyph: "harvest",

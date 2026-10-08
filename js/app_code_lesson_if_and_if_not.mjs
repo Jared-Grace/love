@@ -35,6 +35,7 @@ export function app_code_lesson_if_and_if_not() {
   ("Reading backwards, the wrong program is the same program with the name holding the opposite, which writes out the other word.");
   ("Every program names its value a or b, as in If not.");
   ("The writing is a first draft by Claude 2026-10-08.");
+  ("The last box says one of the two always runs as long as the first if does not change a, at the human's word 2026-10-08: if it sets a = false, the second if runs too and both words are written out. Not picked: leaving the claim bare, since it is false then; nor showing such a program here, since that is a second new fact. It is also what else does not share: else asks once, so a change inside the first part cannot make both run - a point for a lesson after Else.");
   let bang = js_operator_bang_symbol();
   let fruits = fruits_of_the_spirit();
   function logged(word) {
@@ -165,7 +166,10 @@ export function app_code_lesson_if_and_if_not() {
     ]);
     let box_four = app_code_container_light_blue(root);
     html_div_cycle_code(box_four, [
-      "So one of the two always runs, and never both",
+      "So one of the two always runs, and never both, as long as the first ",
+      "if",
+      " does not change ",
+      name2,
     ]);
   }
   let name_id = app_code_lesson_statement_title_name_id(

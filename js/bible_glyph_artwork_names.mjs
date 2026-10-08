@@ -1993,10 +1993,6 @@ export function bible_glyph_artwork_names() {
       asset: "Pirate flag",
     },
     {
-      glyph: "sister",
-      asset: "Women holding hands",
-    },
-    {
       glyph: "hair",
       asset: "Person getting haircut",
     },
