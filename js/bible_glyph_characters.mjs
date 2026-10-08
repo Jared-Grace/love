@@ -2519,6 +2519,30 @@ export function bible_glyph_characters() {
       name: "badger",
       character: "🦡",
     },
+    {
+      name: "index_pointing_up",
+      character: "☝️",
+    },
+    {
+      name: "supervillain",
+      character: "🦹",
+    },
+    {
+      name: "dress",
+      character: "👗",
+    },
+    {
+      name: "squinting_face_with_tongue",
+      character: "😝",
+    },
+    {
+      name: "smiling_face_with_horns",
+      character: "😈",
+    },
+    {
+      name: "microscope",
+      character: "🔬",
+    },
   ];
   return characters;
 }

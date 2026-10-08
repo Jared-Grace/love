@@ -2304,6 +2304,30 @@ export function bible_glyph_artwork_names() {
       glyph: "badger",
       asset: "Badger",
     },
+    {
+      glyph: "index_pointing_up",
+      asset: "Index pointing up",
+    },
+    {
+      glyph: "supervillain",
+      asset: "Person supervillain",
+    },
+    {
+      glyph: "dress",
+      asset: "Dress",
+    },
+    {
+      glyph: "squinting_face_with_tongue",
+      asset: "Squinting face with tongue",
+    },
+    {
+      glyph: "smiling_face_with_horns",
+      asset: "Smiling face with horns",
+    },
+    {
+      glyph: "microscope",
+      asset: "Microscope",
+    },
   ];
   return names;
 }
