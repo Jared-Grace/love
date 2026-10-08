@@ -2228,6 +2228,42 @@ export function bible_glyph_artwork_names() {
       glyph: "woman_dancing",
       asset: "Woman dancing",
     },
+    {
+      glyph: "construction",
+      asset: "Construction",
+    },
+    {
+      glyph: "vibration_mode",
+      asset: "Vibration mode",
+    },
+    {
+      glyph: "giraffe",
+      asset: "Giraffe",
+    },
+    {
+      glyph: "superhero",
+      asset: "Person superhero",
+    },
+    {
+      glyph: "x_ray",
+      asset: "X-ray",
+    },
+    {
+      glyph: "guide_dog",
+      asset: "Guide dog",
+    },
+    {
+      glyph: "disappointed_face",
+      asset: "Disappointed face",
+    },
+    {
+      glyph: "cherry_blossom",
+      asset: "Cherry blossom",
+    },
+    {
+      glyph: "hut",
+      asset: "Hut",
+    },
   ];
   return names;
 }

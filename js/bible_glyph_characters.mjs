@@ -2443,6 +2443,42 @@ export function bible_glyph_characters() {
       name: "woman_dancing",
       character: "💃",
     },
+    {
+      name: "construction",
+      character: "🚧",
+    },
+    {
+      name: "vibration_mode",
+      character: "📳",
+    },
+    {
+      name: "giraffe",
+      character: "🦒",
+    },
+    {
+      name: "superhero",
+      character: "🦸",
+    },
+    {
+      name: "x_ray",
+      character: "🩻",
+    },
+    {
+      name: "guide_dog",
+      character: "🦮",
+    },
+    {
+      name: "disappointed_face",
+      character: "😞",
+    },
+    {
+      name: "cherry_blossom",
+      character: "🌸",
+    },
+    {
+      name: "hut",
+      character: "🛖",
+    },
   ];
   return characters;
 }
