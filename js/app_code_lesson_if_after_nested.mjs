@@ -253,7 +253,7 @@ export function app_code_lesson_if_after_nested() {
   }
   let name_id = app_code_lesson_statement_title_name_id(
     "An if after an if inside an if",
-    "if (a) { if (b) { ... } }\nif (b) { ... }",
+    "{ if (b) ... } if (b) ...",
   );
   let lesson = app_code_lesson_code_logged({
     above,
