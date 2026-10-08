@@ -15,7 +15,7 @@ export async function lyric_video_document_times_earlier_write(
   arguments_assert(arguments, 2);
   ("$plain path_document");
   ("$plain name_document");
-  ("Re-times a song's lines from the two readings already kept for it, taking the earlier of the two at every line, without listening to the recording again.");
+  ("Re-times a song's lines from the two readings already kept for it, taking the hearing at every line it heard and the aligner elsewhere, without listening to the recording again.");
   ("★ BOTH READINGS WERE KEPT FOR EXACTLY THIS. Listening costs minutes per song; the moments each reading chose are filed under the document's name, so a better rule for choosing between them is applied to every song already heard in no time at all.");
   ("★ IT REFUSES A DOCUMENT A PERSON TIMED, for the same reason the listening does: a person's ear beats either reading everywhere.");
   let document = await file_read_json(path_document);
@@ -30,7 +30,7 @@ export async function lyric_video_document_times_earlier_write(
   let file_path = lyric_video_hearings_path();
   let hearings = await file_read_json(file_path);
   let hearing = property_get(hearings, name_document);
-  let starts = lyric_video_starts_earlier(hearing.starts, hearing.starts_heard);
+  let starts = lyric_video_starts_heard_first(hearing.starts, hearing.starts_heard);
   function lambda(line) {
     let r2 = line.text;
     return r2;
