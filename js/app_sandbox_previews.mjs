@@ -1,3 +1,4 @@
+import { app_sandbox_previews_bible_offline_check_load } from "./app_sandbox_previews_bible_offline_check_load.mjs";
 import { app_sandbox_previews_phone_photos_load } from "./app_sandbox_previews_phone_photos_load.mjs";
 import { app_sandbox_previews_song_image_brighter_load } from "./app_sandbox_previews_song_image_brighter_load.mjs";
 import { app_sandbox_previews_code_review_load } from "./app_sandbox_previews_code_review_load.mjs";
@@ -83,6 +84,7 @@ export function app_sandbox_previews() {
     bible_word_voice_trial: bible_word_voice_trial_load,
     glyph_built: app_sandbox_previews_glyph_built_load,
     phone_photos: app_sandbox_previews_phone_photos_load,
+    bible_offline_check: app_sandbox_previews_bible_offline_check_load,
   };
   return previews;
 }
