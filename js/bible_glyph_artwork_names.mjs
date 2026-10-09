@@ -2785,10 +2785,6 @@ export function bible_glyph_artwork_names() {
       asset: "Disguised face",
     },
     {
-      glyph: "red_circle",
-      asset: "Red circle",
-    },
-    {
       glyph: "desert",
       asset: "Desert",
     },

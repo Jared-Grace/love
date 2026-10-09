@@ -2876,10 +2876,6 @@ export function bible_glyph_characters() {
       character: "🥸",
     },
     {
-      name: "red_circle",
-      character: "🔴",
-    },
-    {
       name: "desert",
       character: "🏜️",
     },
