@@ -35,7 +35,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["3554", "nosos", "microbe", "disease"],
     ["4077", "pege", "fountain", "spring"],
     ["5452", "phuteuo", "sprout+down_arrow+doing", "plant"],
-    ["2819", "kleros", "game_die", "lots"],
+    ["2819", "kleros", "lots+inheritance", "lots"],
     ["3354", "metreo", "triangular_ruler+doing", "measure"],
     ["1189", "deomai", "pleading_face+doing", "beg"],
     ["1162", "deomai", "pleading_face+thing", "petition"],
