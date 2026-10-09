@@ -57,7 +57,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["2812", "kleptes", "hand+lying_face+doer", "thief"],
     ["3566", "numphios", "person_in_tuxedo", "bridegroom"],
     ["1220", "denarion", "coin+ten", "denarius"],
-    ["1173", "deipnon", "fork_and_knife_with_plate", "supper"],
+    ["1173", "deipnon", "eating+sunset", "supper"],
     ["5160", "trophe", "bread+hands_giving+thing", "food"],
     ["1198", "desmios", "knot+describing", "prisoner"],
     ["2040", "ergates", "tools+doer", "worker"],
