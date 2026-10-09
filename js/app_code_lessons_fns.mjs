@@ -1,3 +1,4 @@
+import { app_code_lesson_if_else_in_if } from "./app_code_lesson_if_else_in_if.mjs";
 import { app_code_lesson_if_after_nested } from "./app_code_lesson_if_after_nested.mjs";
 import { app_code_lesson_if_else_once } from "./app_code_lesson_if_else_once.mjs";
 import { app_code_lesson_if_nested } from "./app_code_lesson_if_nested.mjs";
@@ -527,6 +528,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_if_halve_or_triple,
     app_code_lesson_if_nested,
     app_code_lesson_if_after_nested,
+    app_code_lesson_if_else_in_if,
   ];
   return fns;
 }

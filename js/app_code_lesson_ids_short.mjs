@@ -334,6 +334,7 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_if_halve_or_triple: text_frozen("if_halve_or_triple"),
     app_code_lesson_if_nested: text_frozen("if_nested"),
     app_code_lesson_if_after_nested: text_frozen("if_after_nested"),
+    app_code_lesson_if_else_in_if: text_frozen("if_else_in_if"),
     app_code_lesson_statement_name_rectangles_rows_between: text_frozen(
       "name_rectangles_rows_between",
     ),
