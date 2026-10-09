@@ -1,10 +1,10 @@
-import { equal } from "./equal.mjs";
-import { subtract } from "./subtract.mjs";
-import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { number_is } from "./number_is.mjs";
+import { equal } from "./equal.mjs";
+import { subtract } from "./subtract.mjs";
 import { not } from "./not.mjs";
 import { less_than } from "./less_than.mjs";
+import { divide } from "./divide.mjs";
 export function lyric_video_starts_heard_first(starts, starts_heard) {
   arguments_assert(arguments, 2);
   ("$plain starts");
@@ -15,7 +15,11 @@ export function lyric_video_starts_heard_first(starts, starts_heard) {
   ("A LINE THE HEARING DID NOT PLACE TAKES THE ALIGNER'S MOMENT, BUT ONLY IF THAT MOMENT FITS BETWEEN ITS NEIGHBOURS. Each reading moves forward through the song on its own, but taking a moment from one and its neighbour from the other can step backwards: measured over the 200-odd songs heard so far, four did, each where the aligner was filling in beside a heard line. A line that would come before the one above it or after the one below it is put halfway between them instead, since both neighbours are where the singing was heard. Where no later line was heard there is nothing to put it before, so it is left with no time, and the line above it runs on - the same thing an untapped line does.");
   let chosen = [];
   function heard_after(index) {
-    let found = starts_heard.slice(index + 1).find(number_is);
+    function lambda(value) {
+      let v = number_is(value);
+      return v;
+    }
+    let found = starts_heard.slice(index + 1).find(lambda);
     let r = number_is(found) ? found : null;
     return r;
   }
