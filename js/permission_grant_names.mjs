@@ -2608,6 +2608,7 @@ export function permission_grant_names() {
     fn_name("app_bible_card_claims_gate_run"),
     fn_name("commons_pictures_search"),
     fn_name("bible_glyph_chapters_name_badges_seated_draw"),
+    fn_name("function_new_from_temp_multiple"),
   ];
   return names;
 }
