@@ -31,7 +31,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["5561", "chora", "map+round_pushpin", "region"],
     ["4762", "strepho", "person+clockwise_arrows+doing", "turn"],
     ["4536", "salpizo", "trumpet", "trumpet"],
-    ["5509", "chiton", "t_shirt", "tunic"],
+    ["5509", "chiton", "dress", "tunic"],
     ["3554", "nosos", "microbe", "disease"],
     ["4077", "pege", "fountain", "spring"],
     ["5452", "phuteuo", "sprout+down_arrow+doing", "plant"],
