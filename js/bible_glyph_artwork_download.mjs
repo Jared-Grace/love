@@ -1,18 +1,21 @@
-import { bible_glyph_artwork_urls } from "./bible_glyph_artwork_urls.mjs";
-import { http_text_first_or_null } from "./http_text_first_or_null.mjs";
 import { bible_glyph_artwork_folder } from "./bible_glyph_artwork_folder.mjs";
 import { folder_exists_ensure } from "./folder_exists_ensure.mjs";
 import { bible_glyph_artwork_source } from "./bible_glyph_artwork_source.mjs";
 import { property_get } from "./property_get.mjs";
 import { http_text_or_null } from "./http_text_or_null.mjs";
 import { null_is } from "./null_is.mjs";
+import { not } from "./not.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 import { bible_glyph_artwork_names } from "./bible_glyph_artwork_names.mjs";
+import { bible_glyph_artwork_urls } from "./bible_glyph_artwork_urls.mjs";
+import { http_text_first_or_null } from "./http_text_first_or_null.mjs";
 import { list_add } from "./list_add.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { not } from "./not.mjs";
+import { bible_glyph_artwork_composed } from "./bible_glyph_artwork_composed.mjs";
+import { list_any } from "./list_any.mjs";
+import { svg_side_by_side } from "./svg_side_by_side.mjs";
 export async function bible_glyph_artwork_download() {
   "Fetch a drawn file for every glyph in the vocabulary and write it under this repo's own name for that glyph, reporting the ones the artwork set does not answer to.";
   "IT TAKES NO ARGUMENTS, AND THAT IS THE SAFETY. Every address it asks for is worked out from two committed tables - the glyph names and the artwork names - so there is no way to point it at an address of your choosing. A function that took a url would be a way to fetch anything at all wearing a helpful name, and this deliberately is not one.";
@@ -43,6 +46,25 @@ export async function bible_glyph_artwork_download() {
       list_add(missing, entry);
       continue;
     }
+    let file_name = text_combine(entry.glyph, ".svg");
+    let f_path = path_join([folder, file_name]);
+    await file_overwrite(f_path, svg);
+    list_add(written, entry.glyph);
+  }
+  let composed = bible_glyph_artwork_composed();
+  for (let entry of composed) {
+    let svgs = [];
+    for (let asset of entry.assets) {
+      let urls = bible_glyph_artwork_urls(asset);
+      let svg = await http_text_first_or_null(urls);
+      list_add(svgs, svg);
+    }
+    let absent = list_any(svgs, null_is);
+    if (absent) {
+      list_add(missing, entry);
+      continue;
+    }
+    let svg = svg_side_by_side(svgs);
     let file_name = text_combine(entry.glyph, ".svg");
     let f_path = path_join([folder, file_name]);
     await file_overwrite(f_path, svg);

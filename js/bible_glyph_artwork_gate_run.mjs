@@ -1,14 +1,15 @@
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { property_exists_not } from "./property_exists_not.mjs";
 import { bible_glyph_characters } from "./bible_glyph_characters.mjs";
 import { bible_glyph_artwork_names } from "./bible_glyph_artwork_names.mjs";
 import { bible_glyph_artwork_absent } from "./bible_glyph_artwork_absent.mjs";
 import { property_set } from "./property_set.mjs";
-import { property_exists } from "./property_exists.mjs";
+import { bible_glyph_artwork_composed } from "./bible_glyph_artwork_composed.mjs";
+import { property_exists_not } from "./property_exists_not.mjs";
 import { assert_json } from "./assert_json.mjs";
+import { property_exists } from "./property_exists.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 export function bible_glyph_artwork_gate_run() {
   "Checks that every glyph in the vocabulary has been decided about: either the artwork set has a name for it, or the set is recorded as having no picture for it.";
   "A GLYPH ADDED WITHOUT A DECISION IS INVISIBLE OTHERWISE. Adding one is a small edit to the vocabulary, and the fetching run simply never asks for it - so the new glyph reaches readers drawn by the font while every glyph around it is drawn by the artwork, and nothing anywhere says which of those was intended.";
@@ -20,6 +21,15 @@ export function bible_glyph_artwork_gate_run() {
   let decided = {};
   for (let entry of names) {
     property_set(decided, entry.glyph, "named");
+  }
+  let composed = bible_glyph_artwork_composed();
+  for (let entry of composed) {
+    let once = property_exists_not(decided, entry.glyph);
+    assert_json(once, {
+      glyph: entry.glyph,
+      hint: "this glyph is recorded both as having an artwork name and as being composed from several pictures - which of the two is true?",
+    });
+    property_set(decided, entry.glyph, "composed");
   }
   for (let entry of absent) {
     let once = property_exists_not(decided, entry.glyph);

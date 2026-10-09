@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 export function bible_glyph_artwork_absent() {
   "The glyphs the artwork set holds no drawing for at all, and what each one falls back to.";
   "A NAME THE SET DOES NOT ANSWER TO AND A PICTURE THE SET DOES NOT HAVE ARE OPPOSITE FACTS that both show up as one missing file. The first is a mistake in this repo and is corrected by spelling the name the set's way. The second is a fact about the set, and no spelling will fix it. Keeping the second here is what stops somebody spending an afternoon hunting for a name that was never going to be found.";
@@ -11,24 +12,9 @@ export function bible_glyph_artwork_absent() {
   "SO READ THE PARAGRAPH ABOVE THIS ONE AGAINST WHAT ACTUALLY HAPPENED. It says the rest were read from the set the same careful way, every glyph's own word searched against one listing. That was done, and it was still wrong, because searching the set for the Bible's word asks whether two vocabularies happen to spell one thing the same - and they mostly do not. Ask the set for the shape a reader would see and pick from what comes back.";
   "AND THE READING THAT OUTLIVES THE FIX: A REFUSAL WRITTEN DOWN AS PROSE IS A MEASUREMENT WITH A DATE ON IT, NOT A FACT. Every because line in this list was true of some listing on some day. Prose is never re-run, so a wrong one sits here looking as settled as a right one for as long as nobody doubts it. Treat any sentence here saying the set holds nothing as a lead to check rather than a question already closed.";
   "THIRTY ONE ENTRIES LEFT THIS LIST ON 2026-10-08 - the altar and the priest among them - under a rule the human gave: the goal is emoji; so an imperfect picture that exists beats an English word; provided no picture stands for two unrelated words. Each took one whole picture and not a composition; which is what the objection above was to. The altar is Place of worship; the priest is Prayer beads; the burnt offering is Fireworks. What is left are the three whose character is already an emoji and only the drawing is missing.";
-  let absent = [
-    {
-      glyph: "brother",
-      wanted: "Men holding hands",
-      because:
-        "the set holds no name carrying the words holding hands, so it draws no two people side by side at all. The nearest things it has are people hugging, which this Bible already uses for a different glyph, and a single man, which loses the whole point of the picture - that there are two of them and they belong to each other.",
-    },
-    {
-      glyph: "family",
-      wanted: "Family",
-      because:
-        "the set holds no name carrying the word family. It draws individual people in every combination of age and tone, and no group standing together as one household.",
-    },
-    {
-      glyph: "sister",
-      wanted: "Sister",
-      because: "the set's names hold nothing carrying the word sister.",
-    },
-  ];
+  ("THE LAST THREE LEFT ON 2026-10-09 - brother, sister and family - once the human said the emoji Bible and the picture Bible are separate products. The drawn text no longer has to wait for one picture of two people: it stands the set's own people side by side, in ",
+    fn_name("bible_glyph_artwork_composed"),
+    ". The list is empty and stays here for the next glyph the set truly cannot draw.");
+  let absent = [];
   return absent;
 }
