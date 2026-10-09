@@ -1,8 +1,8 @@
+import { retry } from "./retry.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_original_bible_gloss_chapters_uploaded } from "./app_original_bible_gloss_chapters_uploaded.mjs";
 import { bible_word_voice_chapter_asked } from "./bible_word_voice_chapter_asked.mjs";
-import { retry_standard } from "./retry_standard.mjs";
 import { bible_word_voices } from "./bible_word_voices.mjs";
 import { bible_word_voice_record_local } from "./bible_word_voice_record_local.mjs";
 import { google_text_to_speech_voice } from "./google_text_to_speech_voice.mjs";
@@ -14,7 +14,7 @@ export async function bible_word_voice_uploaded_write() {
   "IT SENDS NOTHING UP, so the whole batch goes to storage in one upload beside a new stamp rather than clip by clip ahead of it.";
   "★ EVERY VOICE OF A WORD IS RECORDED BEFORE THE NEXT WORD IS BEGUN, because the page goes round the voices tap by tap, and a word with only some of them would be silent on the taps that land on the missing ones.";
   "★ GENESIS COMES FIRST, because it is where a reader starts and where the listener checks the voices; the rest follow in the order published.";
-  "EACH CHAPTER IS ASKED FOR AGAIN ON A FAILURE, because a run of days is certain to meet a download that stalls, and one stall ending the run was seen.";
+  "EACH CHAPTER IS ASKED FOR AGAIN ON A FAILURE, because a run of days is certain to meet a download that stalls, and one stall ending the run was seen. ★ THE WAITS SUM TO ABOUT AN HOUR (thirteen tries, each wait doubling from a second), because the standard five summed to fifteen seconds, and on 2026-10-07 a dropped connection outlasted them and stopped the run for two days with nobody watching.";
   arguments_assert(arguments, 0);
   let uploaded = await app_original_bible_gloss_chapters_uploaded();
   function lambda(c) {
@@ -36,14 +36,14 @@ export async function bible_word_voice_uploaded_write() {
       let forms2 = await bible_word_voice_chapter_asked(chapter_code);
       return forms2;
     }
-    let forms = await retry_standard(chapter_asked);
+    let forms = await retry(13, chapter_asked);
     for (let form of forms) {
       for (let voice_name of bible_word_voices(form)) {
         async function asked() {
           let r2 = await bible_word_voice_record_local(voice_name, form);
           return r2;
         }
-        let made = await retry_standard(asked);
+        let made = await retry(13, asked);
         if (made) {
           recorded = recorded + 1;
           characters = characters + [...form].length;
