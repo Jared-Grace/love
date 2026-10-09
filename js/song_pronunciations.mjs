@@ -7,7 +7,7 @@ export function song_pronunciations() {
     choirmaster: "choir-master",
     ezrahite: "Ezra-height",
     rahab: "Ray-hab",
-    zion: "Zai-on",
+    zion: "Zai-on",zoan:'zo-awn'
   };
   return pronunciations;
 }
