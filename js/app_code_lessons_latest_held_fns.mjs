@@ -1,3 +1,5 @@
+import { app_code_lesson_else_if_twice } from "./app_code_lesson_else_if_twice.mjs";
+import { app_code_lesson_else_if_order } from "./app_code_lesson_else_if_order.mjs";
 import { app_code_lesson_else_if_else } from "./app_code_lesson_else_if_else.mjs";
 export function app_code_lessons_latest_held_fns() {
   "the lessons kept off latest while every other lesson is shown there, asked for by the human 2026-09-30: deploy through lesson 204 and skip 205, the 24-hour clock, which is not ready to hand over yet";
@@ -66,6 +68,11 @@ export function app_code_lessons_latest_held_fns() {
   "then deploy through 255, 2026-10-08: hold 256 If and if not, 257 Else, 258 Halve if even, 259 Else with changes and 260 Halve, or times 3 plus 1, until the human has read their first drafts";
   "2026-10-08: released by the human, release all: nothing held";
   "2026-10-09: hold 269, Else if and else, until the human has read its first draft; asked to update latest for the sideways-scroll fix alone";
-  let fns = [app_code_lesson_else_if_else];
+  "2026-10-09: hold 270, Two else ifs, and 271, Else if in order, until the human has read their first drafts";
+  let fns = [
+    app_code_lesson_else_if_else,
+    app_code_lesson_else_if_twice,
+    app_code_lesson_else_if_order,
+  ];
   return fns;
 }
