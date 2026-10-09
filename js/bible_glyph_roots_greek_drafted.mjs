@@ -446,7 +446,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["3908", "paratithemi", "children_crossing+palm_down", "set before"],
     ["3930", "parecho", "children_crossing+raised_fist", "provide"],
     ["2776", "kephale", "person_gesturing_ok", "head"],
-    ["4983", "soma", "person_standing", "body"],
+    ["4983", "soma", "x_ray", "body"],
     ["3189", "melas", "black_circle", "black"],
     ["3188", "melan", "black_circle+thing", "ink"],
     ["2978", "lailaps", "tornado", "windstorm"],
