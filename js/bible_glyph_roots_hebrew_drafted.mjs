@@ -76,7 +76,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["2100", "zub", "droplet", "flow"],
     ["1280", "beriach", "nut_and_bolt", "bar"],
     ["3303", "yapheh", "sparkles", "beautiful"],
-    ["56", "abal", "loudly_crying_face", "mourn"],
+    ["56", "abal", "loudly_crying+coffin", "mourn"],
     ["1715", "dagan", "ear_of_corn", "grain"],
     ["3176", "yachal", "hourglass_not_done", "wait_hope"],
     ["2219", "zarah", "wind_face", "scatter"],
