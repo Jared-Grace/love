@@ -529,6 +529,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_if_nested,
     app_code_lesson_if_after_nested,
     app_code_lesson_if_else_in_if,
+    app_code_lesson_if_else_in_if_else,
   ];
   return fns;
 }

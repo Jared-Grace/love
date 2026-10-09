@@ -2836,6 +2836,10 @@ export function bible_glyph_artwork_names() {
       glyph: "place_of_worship",
       asset: "Place of worship",
     },
+    {
+      glyph: "repeat_button",
+      asset: "Repeat button",
+    },
   ];
   return names;
 }

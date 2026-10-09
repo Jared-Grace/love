@@ -2927,6 +2927,10 @@ export function bible_glyph_characters() {
       name: "place_of_worship",
       character: "🛐",
     },
+    {
+      name: "repeat_button",
+      character: "🔁",
+    },
   ];
   return characters;
 }
