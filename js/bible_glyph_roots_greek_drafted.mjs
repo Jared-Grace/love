@@ -450,7 +450,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["3189", "melas", "black_circle", "black"],
     ["3188", "melan", "black_circle+thing", "ink"],
     ["2978", "lailaps", "tornado", "windstorm"],
-    ["1023", "brachion", "flexed_biceps", "arm"],
+    ["1023", "brachion", "mechanical_arm", "arm"],
     ["832", "auleo", "flute+doing", "play the flute"],
     ["258", "alopex", "fox", "fox"],
     ["5404", "phoinix", "palm_tree", "palm"],
