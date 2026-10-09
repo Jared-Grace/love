@@ -70,7 +70,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["6453", "pesach", "lamb+door", "passover"],
     ["7667", "sheber", "broken_chain+thing", "destruction"],
     ["6950", "qahal", "church+doing", "assemble"],
-    ["7523", "ratsach", "dagger", "murder"],
+    ["7523", "ratsach", "sword+skull", "murder"],
     ["4751", "mar", "lemon", "bitter"],
     ["6677", "tsavvar", "scarf", "neck"],
     ["2100", "zub", "water+right_arrow", "flow"],
