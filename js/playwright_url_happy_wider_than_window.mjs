@@ -15,6 +15,7 @@ export async function playwright_url_happy_wider_than_window(
   "Opens a page at the width asked for and walks it the way somebody getting everything right does, for at most the number of steps asked for, and after every step lists the parts reaching past the right edge of the window - so a screen that scrolls sideways only after some answers is found too.";
   "It walks with the very walk the course gate uses, stopped early rather than failed at the cap, so a short look and the gate cannot come to disagree about how a screen is answered or left. The opening screen is measured too, because the walk measures only after it presses.";
   "Only the screens where something sticks out are handed back, each with the address it was measured at.";
+  "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   let found = [];
   let walked = null;
   async function on_page(page) {
