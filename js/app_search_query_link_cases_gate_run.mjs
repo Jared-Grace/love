@@ -1,8 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
 import { app_shared_description } from "./app_shared_description.mjs";
-import { not } from "./not.mjs";
+import { text_lower_to } from "./text_lower_to.mjs";
 import { text_includes } from "./text_includes.mjs";
+import { not } from "./not.mjs";
 import { app_search_query_hash_key } from "./app_search_query_hash_key.mjs";
 import { app_search_query_link_cases } from "./app_search_query_link_cases.mjs";
 import { property_get } from "./property_get.mjs";
@@ -64,15 +64,15 @@ export async function app_search_query_link_cases_gate_run() {
   ("Addresses written the way this app used to write them, with the words they have always opened as. A plus is a gap and everything else is itself, which is exactly what the reading side still does with them.");
   let old_links = [
     {
-      url: "#q=faith",
+      url: "#" + key + "=faith",
       words: "faith",
     },
     {
-      url: "#q=faith+hope+love",
+      url: "#" + key + "=faith+hope+love",
       words: "faith hope love",
     },
     {
-      url: "#q=%D8%AE%D8%AF%D8%A7",
+      url: "#" + key + "=%D8%AE%D8%AF%D8%A7",
       words: "خدا",
     },
   ];
