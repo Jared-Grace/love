@@ -471,7 +471,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["3738", "orcheomai", "man_dancing", "dance"],
     ["3192", "meli", "honey", "honey"],
     ["2952", "kunarion", "dog+child", "puppy"],
-    ["2949", "kuma", "water_wave", "waves"],
+    ["2949", "kuma", "sea+wind", "waves"],
     ["2062", "herpeton", "lizard", "reptile"],
     ["1181", "dekate", "ten+describing", "tenth"],
     ["501", "antleo", "bucket+doing", "draw water"],
