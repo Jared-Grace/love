@@ -64,6 +64,7 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-08: released by the human, release all: nothing held";
   "then deploy through 255, 2026-10-08: hold 256 If and if not, 257 Else, 258 Halve if even, 259 Else with changes and 260 Halve, or times 3 plus 1, until the human has read their first drafts";
   "2026-10-08: released by the human, release all: nothing held";
-  let fns = [];
+  "2026-10-09: hold 269, Else if and else, until the human has read its first draft; asked to update latest for the sideways-scroll fix alone";
+  let fns = [app_code_lesson_else_if_else];
   return fns;
 }
