@@ -1,3 +1,4 @@
+import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
 import { app_code_lesson_while_down } from "./app_code_lesson_while_down.mjs";
 export function app_code_lessons_latest_held_fns() {
   "the lessons kept off latest while every other lesson is shown there, asked for by the human 2026-09-30: deploy through lesson 204 and skip 205, the 24-hour clock, which is not ready to hand over yet";
@@ -70,6 +71,7 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-09: hold 272, The same if three times, and 273, While, until the human has read their first drafts";
   "2026-10-09: released by the human, 269 to 273: nothing held";
   "2026-10-09: hold 274, While counting down, until the human has read its first draft";
-  let fns = [app_code_lesson_while_down];
+  "2026-10-09: hold 275, A running total, until the human has read its first draft";
+  let fns = [app_code_lesson_while_down, app_code_lesson_while_total];
   return fns;
 }
