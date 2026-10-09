@@ -1,6 +1,7 @@
 import { youtube_studio_chrome_path } from "./youtube_studio_chrome_path.mjs";
 import { youtube_studio_user_data_path } from "./youtube_studio_user_data_path.mjs";
 import { sleep } from "./sleep.mjs";
+import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
 export async function youtube_studio_upload_private(channel_id, file_path) {
   "$plain channel_id";
   "$plain file_path";
@@ -25,39 +26,49 @@ export async function youtube_studio_upload_private(channel_id, file_path) {
     },
     protocolTimeout: 600000,
   });
+  ("★ A STEP THAT STOPS SAYS WHICH ONE IT WAS, AND LEAVES A PICTURE OF THE PAGE. With no window there is nothing to look at afterwards, and a bare 'timed out after 120000ms' named none of the eight waits it could have come from - on 2026-10-09 the copy had landed fine both times, so the failure was somewhere after the film started going up, and nothing said where.");
+  let step = "launch";
+  let page = null;
   try {
     let pages = await browser.pages();
-    let page = pages[0];
+    page = pages[0];
     let agent = await browser.userAgent();
     let v = agent.replace("HeadlessChrome", "Chrome");
     await page.setUserAgent(v);
     page.setDefaultTimeout(120000);
+    step = "open the upload page";
     await page.goto(
       "https://studio.youtube.com/channel/" +
         channel_id +
         "/videos/upload?d=ud",
     );
+    step = "hand over the film";
     let input = await page.waitForSelector("input[type=file]");
     await input.uploadFile(file_path);
+    step = "not made for kids";
     let not_for_kids = await page.waitForSelector(
       'tp-yt-paper-radio-button[name="VIDEO_MADE_FOR_KIDS_NOT_MFK"]',
     );
     await not_for_kids.click();
+    step = "video link";
     let link = await page.waitForFunction(
       "(document.querySelector('ytcp-video-info a') || {}).href || false",
     );
     let href = await link.jsonValue();
     let video_id = href.split("/").pop();
     ("★ BETWEEN STEPS IT PAUSES, IT DOES NOT WAIT FOR A QUIET NETWORK. The film is still going up while the steps are clicked through, so on a big film the network is never quiet - an 88 MB film timed out there twice on 2026-10-09 and left a private copy behind, where a 34 MB one had already finished and passed.");
+    step = "next";
     await page.click("#next-button");
     await sleep(2000);
     await page.click("#next-button");
     await sleep(2000);
     await page.click("#next-button");
+    step = "private";
     let private_button = await page.waitForSelector(
       'tp-yt-paper-radio-button[name="PRIVATE"]',
     );
     await private_button.click();
+    step = "upload finished";
     await page.waitForFunction(
       "/upload complete|processing|checks complete|checking/i.test((document.querySelector('ytcp-video-upload-progress') || {}).innerText || '')",
       {
@@ -67,6 +78,7 @@ export async function youtube_studio_upload_private(channel_id, file_path) {
     let progress = await page.evaluate(
       "document.querySelector('ytcp-video-upload-progress').innerText",
     );
+    step = "save";
     await page.click("#done-button");
     await page.waitForNetworkIdle({
       idleTime: 3000,
@@ -77,6 +89,21 @@ export async function youtube_studio_upload_private(channel_id, file_path) {
       progress,
     };
     return r;
+  } catch (e) {
+    let picture = folder_gitignore_join("youtube_studio_upload_stopped.png");
+    if (page) {
+      await page.screenshot({
+        path: picture,
+      });
+    }
+    throw new Error(
+      "studio upload stopped at step '" +
+        step +
+        "', page picture at " +
+        picture +
+        ": " +
+        e.message,
+    );
   } finally {
     await browser.close();
   }
