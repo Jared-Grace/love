@@ -150,7 +150,7 @@ export function app_code_lesson_else_if_else() {
   }
   let name_id = app_code_lesson_statement_title_name_id(
     "Else if and else",
-    "else if (b) { ... } else { ... }",
+    "else if ... else ...",
   );
   let lesson = app_code_lesson_if_ab_logged(
     fruits,
