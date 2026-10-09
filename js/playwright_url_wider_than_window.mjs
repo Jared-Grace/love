@@ -5,6 +5,7 @@ export async function playwright_url_wider_than_window(url, width) {
   "$plain url";
   "$plain width";
   "Opens a page in a browser with no screen, at the width asked for, and lists the innermost parts that reach past the right edge of the window - the parts that make a reader scroll sideways.";
+  "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   let result = null;
   async function on_page(page) {
     let viewport = {
