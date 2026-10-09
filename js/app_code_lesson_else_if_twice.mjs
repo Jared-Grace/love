@@ -99,7 +99,7 @@ export function app_code_lesson_else_if_twice() {
       box_one,
       context,
       app_code_lesson_else_if_else,
-      ["An ", else_if_b, " can have an ", "else", " after it"],
+      ["an ", else_if_b, " can have an ", "else", " after it"],
     );
     let box_two = app_code_container_light_blue(root);
     html_div_cycle_code(box_two, [

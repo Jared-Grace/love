@@ -105,7 +105,7 @@ export function app_code_lesson_else_if_order() {
       box_one,
       context,
       app_code_lesson_else_if_else,
-      ["An ", else_if_b, " can have an ", "else", " after it"],
+      ["an ", else_if_b, " can have an ", "else", " after it"],
     );
     let box_two = app_code_container_light_blue(root);
     html_div_cycle_code(box_two, ["The checks can be comparisons:"]);
@@ -174,7 +174,7 @@ export function app_code_lesson_else_if_order() {
   }
   let name_id = app_code_lesson_statement_title_name_id(
     "Else if in order",
-    "if (n < 10) ... else if ...",
+    "else if (n < 100)",
   );
   let lesson = app_code_lesson_cases_logged(
     fruits,
