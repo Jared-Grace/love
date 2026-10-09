@@ -183,7 +183,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["8552", "tamam", "full_moon+doing", "complete"],
     ["7350", "rachoq", "satellite", "far"],
     ["6186", "arak", "card_index_dividers", "arrange"],
-    ["5324", "natsab", "person+round_pushpin", "stand"],
+    ["5324", "natsab", "person+up_arrow", "stand"],
     ["2781", "cherpah", "face_with_rolling_eyes", "reproach"],
     ["2790", "charash", "shushing_face", "silent"],
     ["6381", "pala", "star_struck", "wonder"],
