@@ -199,9 +199,13 @@ export function app_code_lesson_while() {
     ]);
     let never_lines = program_lines(12, 9, 3);
     app_code_code_lines_writes_out(box_three, never_lines, "12");
-    said(box_three, 12, 9, 12, false);
+    let never = js_code_binary_spaced_nb(12, less, 9);
     html_div_cycle_code(box_three, [
-      "So the lines inside the ",
+      "",
+      never,
+      " is ",
+      "false",
+      ", so the lines inside the ",
       "while",
       " never run",
     ]);
