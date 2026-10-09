@@ -41,7 +41,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["3243", "yanaq", "breast_feeding+doing", "nurse"],
     ["4159", "mopheth", "shooting_star", "wonder"],
     ["962", "bazaz", "pirate_flag+doing", "plunder"],
-    ["4820", "mirmah", "disguised_face", "deceit"],
+    ["4820", "mirmah", "lying_face+mouse_trap", "deceit"],
     ["8144", "shani", "red_circle", "scarlet"],
     ["8336", "shesh_linen", "thread+white_circle", "fine_linen"],
     ["5271", "naar", "child+flexed_biceps+thing", "youth"],
