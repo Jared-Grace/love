@@ -79,7 +79,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["56", "abal", "loudly_crying+coffin", "mourn"],
     ["1715", "dagan", "ear_of_corn", "grain"],
     ["3176", "yachal", "hourglass+crossed_fingers", "wait_hope"],
-    ["2219", "zarah", "wind_face", "scatter"],
+    ["2219", "zarah", "wind+confetti_ball", "scatter"],
     ["1101", "balal", "spoon", "mix"],
     ["3782", "kashal", "hiking_boot+rock", "stumble"],
     ["3384", "yarah", "bullseye", "shoot_teach"],
