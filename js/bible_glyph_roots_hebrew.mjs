@@ -2950,11 +2950,11 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "2346",
-          glyph: "wall",
+          glyph: "brick+shield",
         },
         {
           strong: "7023",
-          glyph: "wall",
+          glyph: "brick+shield",
         },
       ],
     },
