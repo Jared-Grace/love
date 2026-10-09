@@ -1,3 +1,4 @@
+import { youtube_studio_chrome_path } from "./youtube_studio_chrome_path.mjs";
 import { youtube_studio_user_data_path } from "./youtube_studio_user_data_path.mjs";
 export async function youtube_studio_upload_private(channel_id, file_path) {
   "$plain channel_id";
@@ -12,6 +13,8 @@ export async function youtube_studio_upload_private(channel_id, file_path) {
   let puppeteer = await import("puppeteer");
   let browser = await puppeteer.launch({
     headless: false,
+    executablePath: youtube_studio_chrome_path(),
+    ignoreDefaultArgs: ["--enable-automation"],
     userDataDir: youtube_studio_user_data_path(),
     defaultViewport: null,
     protocolTimeout: 600000,
