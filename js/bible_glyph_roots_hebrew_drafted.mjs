@@ -75,7 +75,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["6677", "tsavvar", "scarf", "neck"],
     ["2100", "zub", "water+right_arrow", "flow"],
     ["1280", "beriach", "door+locked", "bar"],
-    ["3303", "yapheh", "star_struck", "beautiful"],
+    ["3303", "yapheh", "smiling_face_with_hearts", "beautiful"],
     ["56", "abal", "loudly_crying+coffin", "mourn"],
     ["1715", "dagan", "wheat+barley", "grain"],
     ["3176", "yachal", "hourglass+crossed_fingers", "wait_hope"],
