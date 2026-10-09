@@ -1,3 +1,4 @@
+import { playwright_quiz_correct_count } from "./playwright_quiz_correct_count.mjs";
 import { playwright_happy_onward_selector } from "./playwright_happy_onward_selector.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { playwright_happy_answer_selector } from "./playwright_happy_answer_selector.mjs";
@@ -27,6 +28,7 @@ export async function playwright_url_happy_wider_than_window(
     let selector = playwright_happy_answer_selector();
     let onward = playwright_happy_onward_selector();
     let count = number_from_text(steps);
+    let right_before = await playwright_quiz_correct_count(page);
     for (let i = 0; i < count; i++) {
       let script = html_wider_than_window_script();
       let measured = await page.evaluate(script);
@@ -37,9 +39,16 @@ export async function playwright_url_happy_wider_than_window(
           measured,
         });
       }
-      let step = await playwright_happy_step(page, selector);
+      let right = await playwright_quiz_correct_count(page);
+      let wanted = selector;
+      if (right > right_before) {
+        wanted = onward;
+      }
+      right_before = right;
+      let step = await playwright_happy_step(page, wanted);
       if (step.none) {
-        step = await playwright_happy_step(page, onward);
+        let other = wanted === onward ? selector : onward;
+        step = await playwright_happy_step(page, other);
       }
       if (step.end || step.none) {
         break;
