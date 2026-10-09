@@ -378,7 +378,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["6342", "pachad", "fearful_face+doing", "tremble"],
     ["3341", "yatsath", "fire+hand", "kindle"],
     ["8003", "shalem", "peace+describing", "whole"],
-    ["5833", "ezrah", "ring_buoy+thing", "help"],
+    ["5833", "ezrah", "rescue+hand+thing", "help"],
     ["191", "evil", "clown_face", "fool"],
     ["200", "ivveleth", "clown_face+thing", "folly"],
     ["2672", "chatsab", "pick+doing", "hew"],
