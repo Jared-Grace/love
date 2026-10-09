@@ -130,7 +130,7 @@ export function app_code_lesson_while() {
     return found2;
   }
   function said(root, value, bound, value_after, runs) {
-    "value < bound is true, so n becomes value_after; or is false, so the while stops";
+    "value < bound is true, so n becomes value_after; or is false, so the { ... } is skipped and the code continues after it";
     let condition2 = js_code_binary_spaced_nb(value, less, bound);
     if (runs) {
       let after = json_to(value_after);
@@ -152,8 +152,8 @@ export function app_code_lesson_while() {
       " is ",
       "false",
       ", so the ",
-      "while",
-      " stops",
+      "{ ... }",
+      " is skipped, and the code continues after it",
     ]);
   }
   function above(root, context) {
@@ -205,9 +205,9 @@ export function app_code_lesson_while() {
       never,
       " is ",
       "false",
-      ", so the lines inside the ",
-      "while",
-      " never run",
+      ", so the ",
+      "{ ... }",
+      " is skipped, and the code continues after it",
     ]);
   }
   let name_id = app_code_lesson_statement_title_name_id(
