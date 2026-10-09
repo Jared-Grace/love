@@ -89,7 +89,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["3707", "kaas", "face_steam+right_anger_bubble", "provoke"],
     ["6466", "paal", "gear", "do"],
     ["1234", "baqa", "carpentry_saw", "split"],
-    ["205", "aven", "hole", "iniquity"],
+    ["205", "aven", "thumbs_down+hole", "iniquity"],
     ["1197", "baar", "fire+wood", "burn"],
     ["272", "achuzzah", "hand+clamp+thing", "possession"],
     ["7979", "shulchan", "hand_sending+thing", "table"],
