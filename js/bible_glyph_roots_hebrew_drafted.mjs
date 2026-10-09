@@ -673,7 +673,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["3470", "yasha", "rescue+i_am", "Isaiah, Jah has saved"],
     ["3079", "qum", "i_am+pointing_up", "Jehoiakim, Jehovah will raise"],
     ["3612", "keleb", "dog+proper_name", "Caleb"],
-    ["2574", "chomah", "wall+proper_name", "Hamath, walled"],
+    ["2574", "chomah", "brick+shield+proper_name", "Hamath, walled"],
     ["5941", "alah", "pointing_up+proper_name", "Eli, lofty"],
     ["1436", "gadal", "top+i_am", "Gedaliah, Jah has become great"],
     ["3316", "pathach", "unlocked+proper_name", "Jephthah, he will open"],
