@@ -581,7 +581,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["3135", "margarites", "hollow_circle+sparkle", "pearl"],
     ["1144", "dakru", "loudly_crying+water", "tear"],
     ["4439", "pule", "door+city", "gate"],
-    ["5038", "teichos", "wall", "wall"],
+    ["5038", "teichos", "brick+shield", "wall"],
     ["2925", "krouo", "door+fist", "knock"],
     ["4623", "siopao", "mouth+locked", "be silent"],
     ["3324", "mestos", "cup+top", "full"],
