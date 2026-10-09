@@ -1,3 +1,4 @@
+import { not_equal } from "./not_equal.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { json_from } from "./json_from.mjs";
 import { json_to } from "./json_to.mjs";
@@ -17,7 +18,8 @@ export async function dev_trace_send() {
     return r;
   }
   ("a latest page has no dev server behind it, so it sends to storage instead - fetched by name only then, so the firebase library never rides along in a dev page or an ordinary one");
-  let dev = not_equal(location.pathname.indexOf("/dev/"), -1);
+  let left = location.pathname.indexOf("/dev/");
+  let dev = not_equal(left, -1);
   if (not(dev)) {
     let m = await import("./dev_trace_send_storage.mjs");
     let sent = await m.dev_trace_send_storage();

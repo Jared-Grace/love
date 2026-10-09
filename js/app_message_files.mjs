@@ -1,3 +1,4 @@
+import { dev_trace_report_prefix } from "./dev_trace_report_prefix.mjs";
 import { firebase_bucket } from "./firebase_bucket.mjs";
 import { messages_firebase_path } from "./messages_firebase_path.mjs";
 import { app_shared_error_report_prefix } from "./app_shared_error_report_prefix.mjs";
@@ -22,8 +23,10 @@ export async function app_message_files() {
     let outside_errors = text_starts_with_not(name, error_prefix);
     let outside_opens = text_starts_with_not(name, open_prefix);
     let outside_photos = text_starts_with_not(name, photos_prefix);
-    let outside_traces = text_starts_with_not(name, dev_trace_report_prefix());
-    let outside = outside_errors && outside_opens && outside_photos && outside_traces;
+    let prefix2 = dev_trace_report_prefix();
+    let outside_traces = text_starts_with_not(name, prefix2);
+    let outside =
+      outside_errors && outside_opens && outside_photos && outside_traces;
     return outside;
   }
   let files = list_filter(all, written_by_a_person);
