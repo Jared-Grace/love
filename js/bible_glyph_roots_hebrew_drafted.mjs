@@ -508,7 +508,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["2803", "chashab", "thinking+doing", "think, devise"],
     ["8074", "shamem", "astonished+doing", "be appalled, lie desolate"],
     ["3925", "lamad", "learner+doing", "learn, teach"],
-    ["3988", "maas", "gesturing_no+doing", "reject"],
+    ["3988", "maas", "gesturing_no+throwing+doing", "reject"],
     ["2470", "chalah", "thermometer_face+doing", "be sick, weak"],
     ["5787", "ivver", "person_with_white_cane+describing", "blind"],
     ["8121", "shemesh", "sun_with_face", "sun"],
