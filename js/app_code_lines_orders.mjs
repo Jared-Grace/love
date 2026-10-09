@@ -1,3 +1,4 @@
+import { js_code_loops_guarded } from "./js_code_loops_guarded.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_lines_held_count } from "./app_code_lines_held_count.mjs";
 import { list_take } from "./list_take.mjs";
@@ -33,7 +34,8 @@ export function app_code_lines_orders(code) {
   function order_logs_same(order) {
     let joined = list_join_newline(order);
     function order_logs() {
-      let logs = eval_console_log_to_list(joined);
+      let guarded = js_code_loops_guarded(joined);
+      let logs = eval_console_log_to_list(guarded);
       return logs;
     }
     let got = catch_null(order_logs);
