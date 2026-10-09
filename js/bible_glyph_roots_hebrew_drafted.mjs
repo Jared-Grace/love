@@ -73,7 +73,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["7523", "ratsach", "dagger", "murder"],
     ["4751", "mar", "lemon", "bitter"],
     ["6677", "tsavvar", "scarf", "neck"],
-    ["2100", "zub", "droplet", "flow"],
+    ["2100", "zub", "water+right_arrow", "flow"],
     ["1280", "beriach", "nut_and_bolt", "bar"],
     ["3303", "yapheh", "heart_eyes", "beautiful"],
     ["56", "abal", "loudly_crying+coffin", "mourn"],
