@@ -82,7 +82,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["2219", "zarah", "wind+confetti_ball", "scatter"],
     ["1101", "balal", "spoon", "mix"],
     ["3782", "kashal", "hiking_boot+rock", "stumble"],
-    ["3384", "yarah", "bullseye", "shoot_teach"],
+    ["3384", "yarah", "bow+toward", "shoot_teach"],
     ["1692", "dabaq", "paperclip", "cling"],
     ["3198", "yakach", "you+exclamation", "rebuke"],
     ["2308", "chadal", "stop_button", "cease"],
