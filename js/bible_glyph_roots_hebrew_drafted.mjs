@@ -357,7 +357,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["7015", "qinah", "loudly_crying+song", "lament"],
     ["1259", "barad", "ice", "hail"],
     ["3836", "laban", "white_circle", "white"],
-    ["3801", "kethoneth", "coat", "robe, tunic"],
+    ["3801", "kethoneth", "dress", "robe, tunic"],
     ["2689", "chatsotserah", "trumpet+thing", "trumpet"],
     ["2492", "chalam", "dream+doing", "dream"],
     ["1314", "besem", "nose+herb", "spice"],
