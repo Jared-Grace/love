@@ -1221,6 +1221,7 @@ export function qa_gates() {
     app_bible_card_claims_gate_run,
     permission_grants_dispatch_unfenced_gate_run,
     giveaway_psalms_songs_rows_whole_chapter_parts_cases_gate_run,
+    giveaway_psalms_songs_whole_chapter_parts_gate_run,
   ];
   return gates;
 }
