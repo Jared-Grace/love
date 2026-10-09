@@ -5,6 +5,15 @@ export function bible_glyph_roots_greek_drafted() {
     ".");
   ("A GREEK NAME OF HEBREW ORIGIN WEARS ITS HEBREW NAME'S PICTURE, copied rather than chosen again, and is filed under the same root word, so Isaiah, Samuel and Jonah are drawn alike in both testaments and a reader meets one picture for one person. Judas waits by the human's choice, and with him the patriarch Judah and Jude, since Greek gives all three one number.");
   let rows = [
+    [
+      "987",
+      "blasphemeo",
+      "speech+face_with_symbols_on_mouth+doing",
+      "blaspheme",
+    ],
+    ["988", "blasphemeo", "speech+face_with_symbols_on_mouth", "blasphemy"],
+    ["3816", "paidion", "baby", "boy"],
+    ["1127", "egeiro", "person+pointing_up+eyes+doing", "keep_watch"],
     ["684", "apollumi", "wilted_flower+thing", "destruction"],
     ["5048", "telos", "end_arrow+doing", "perfect"],
     ["5318", "phos", "light+describing", "evident"],
