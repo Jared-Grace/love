@@ -84,7 +84,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["3782", "kashal", "hiking_boot+rock", "stumble"],
     ["3384", "yarah", "bullseye", "shoot_teach"],
     ["1692", "dabaq", "paperclip", "cling"],
-    ["3198", "yakach", "index_pointing_at_the_viewer", "rebuke"],
+    ["3198", "yakach", "you+exclamation", "rebuke"],
     ["2308", "chadal", "stop_button", "cease"],
     ["3707", "kaas", "face_steam+right_anger_bubble", "provoke"],
     ["6466", "paal", "gear", "do"],
