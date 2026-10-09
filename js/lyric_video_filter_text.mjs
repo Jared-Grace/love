@@ -63,6 +63,7 @@ export function lyric_video_filter_text(
       width,
       height,
       repeats,
+      path_subtitles,
     );
     let rising =
       moving +

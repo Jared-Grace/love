@@ -1,4 +1,3 @@
-import { lyric_video_picture_motion_shake } from "./lyric_video_picture_motion_shake.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { random_seed_generator_from_text } from "./random_seed_generator_from_text.mjs";
 import { multiply } from "./multiply.mjs";
@@ -6,26 +5,29 @@ import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_max } from "./list_max.mjs";
 import { less_than } from "./less_than.mjs";
-import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { number_round_places } from "./number_round_places.mjs";
 import { divide } from "./divide.mjs";
 import { math_max } from "./math_max.mjs";
+import { lyric_video_picture_motion_shake } from "./lyric_video_picture_motion_shake.mjs";
 export function lyric_video_picture_motion_text(
   picture,
   width,
   height,
   frames,
+  video_key,
 ) {
-  arguments_assert(arguments, 4);
+  arguments_assert(arguments, 5);
   ("$plain picture");
   ("$plain width");
   ("$plain height");
   ("$plain frames");
+  ("$plain video_key");
   ("The part of a render instruction that moves one picture of a lyric video for as many frames as it is shown: two boxes the shape of the frame are chosen at random inside the picture, and what is seen travels smoothly from the first box to the second, so no picture sits completely still.");
   ("★ THE TWO BOXES ARE THE WHOLE IDEA, AND THEY WERE THE HUMAN'S. Each has a random size and a random place, and each lies wholly inside the picture, so every zoom and every pan there is - in, out, sideways, diagonally, or both at once - is just some pair of boxes, and nothing outside the picture can ever come into view. What stood here before chose a zoom and a pan direction separately and had to reason about how far the pan could go; the boxes make that reasoning unnecessary.");
   ("★ THE BOX IN BETWEEN STAYS INSIDE THE PICTURE TOO. Its corner moves in a straight line and its size changes by the same ratio every frame, so zooming looks steady instead of rushing at one end. A size changing by ratio is never larger than one changing by equal steps between the same two sizes, and a box with equal steps stays inside because both ends do - so the box actually used, being no larger, stays inside as well.");
-  ("★ THE RANDOM CHOICES ARE KEYED TO THE PICTURE'S PATH, SO RENDERING THE SAME VIDEO AGAIN MOVES EVERY PICTURE THE SAME WAY. A picture whose motion somebody dislikes can then be named and dealt with, instead of changing every time it is looked at.");
+  ("★ THE RANDOM CHOICES ARE KEYED TO THE PICTURE'S PATH TOGETHER WITH THE VIDEO, SO RENDERING THE SAME VIDEO AGAIN MOVES EVERY PICTURE THE SAME WAY, WHILE ANOTHER VIDEO USING THE SAME PICTURE MOVES IT DIFFERENTLY. A picture whose motion somebody dislikes can then be named and dealt with, instead of changing every time it is looked at. Keyed to the path alone, every singing of one passage - and they share their pictures - moved each painting identically, and the human asked for the movement to differ from video to video.");
   ("★ A SECOND BOX TOO CLOSE TO THE FIRST IS DRAWN AGAIN. Two boxes chosen at random can land almost on top of each other, and the picture would then sit still, which is the one thing this is for preventing. Some corner has to move by at least a tenth of the picture; the draws stay keyed to the path, so the redraw is as repeatable as the first.");
   ("A BOX IS BETWEEN HALF AND SEVENTEEN TWENTIETHS OF THE PICTURE ACROSS, so the closest view is at most twice as near as the whole and a picture is never zoomed until it turns to mush. The whole picture is never a box: the human watched boxes reaching all the way out and asked for more zoom overall.");
   ("★ THE BOX IS CUT BETWEEN PIXELS, NEVER ON THEM, AND THAT IS WHY THIS DOES NOT USE THE TOOL MADE FOR ZOOMING. That tool rounds the box's corner and its size to whole pixels separately, so a slow move becomes a run of small jumps and every few frames the two roundings disagree and the picture jerks back the other way. The human watched it and saw pulses that were not all the same direction. Measured on a black bar moving across 600 frames, 352 of the steps went backwards even with the picture enlarged twice first; cut between pixels, none did and every step was the same size to within a tenth of a pixel.");
@@ -34,7 +36,7 @@ export function lyric_video_picture_motion_text(
   ("THE PICTURE IS NOT ENLARGED BEFORE IT IS MOVED. Enlarging was only ever a way to make the whole-pixel steps smaller, and cutting between pixels makes them vanish instead; measured, the enlarged and the plain version moved equally smoothly and the plain one took a quarter of the time. The pictures are drawn at the size of the frame, so enlarging added no detail either.");
   ("★ BUT THE BOXES ARE CUT FROM A PICTURE TWICE THE SIZE OF THE FRAME, AND ONLY THEN BROUGHT DOWN TO IT. A box is as little as half the picture, so the nearest view shows half as many pixels across as the frame has; fitted to the frame first, a picture that carried more detail than that had it thrown away before the zoom began, and the zoom enlarged what was left. The human asked for pictures sharpened to twice the frame so the zoom would have that detail to use, and it can only use it if the picture reaches the zoom at that size. A picture drawn at the frame size is enlarged to reach it and comes out as it did before; one carrying more keeps it.");
   ("It is fitted and padded with nothing into the frame first, exactly as a still picture is fitted, so a picture of another shape keeps a margin rather than being stretched. It is then repeated once for every frame it is shown, because the tool that cuts between pixels moves frames that already exist rather than making them.");
-  let next = random_seed_generator_from_text(picture.path);
+  let next = random_seed_generator_from_text(video_key + " " + picture.path);
   next();
   next();
   function box() {
