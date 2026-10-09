@@ -411,7 +411,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["3885", "lun", "night+doing", "spend the night"],
     ["2220", "zeroa", "flexed_biceps", "arm"],
     ["3709", "kaph", "palm_up_hand", "palm"],
-    ["8548", "tamid", "infinity", "continually"],
+    ["8548", "tamid", "clock+infinity", "continually"],
     ["3201", "yakol", "might+doing", "be able"],
     ["2930", "tame", "soap+no_entry", "be unclean"],
     ["2931", "tame", "soap+no_entry", "unclean"],
