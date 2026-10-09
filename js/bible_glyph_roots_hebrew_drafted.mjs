@@ -31,7 +31,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["7703", "shadad", "bomb+flexed_biceps+doing", "devastate"],
     ["693", "arab", "ninja+hourglass_not_done+doing", "ambush"],
     ["7194", "qashar", "knot+crowd+doing", "conspire"],
-    ["7198", "qesheth", "bow_and_arrow", "bow"],
+    ["7198", "qesheth", "bow+wood", "bow"],
     ["2280", "chabash", "adhesive_bandage+doing", "bind_up"],
     ["970", "bachar", "check_box+thing", "young_man"],
     ["1653", "geshem", "cloud_with_rain", "rain"],
