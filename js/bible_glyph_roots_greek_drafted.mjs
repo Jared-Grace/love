@@ -28,7 +28,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["5318", "phos", "light+describing", "evident"],
     ["2756", "kenos", "empty_nest+describing", "empty"],
     ["3000", "latreuo", "place_of_worship+doing", "serve"],
-    ["5561", "chora", "world_map", "region"],
+    ["5561", "chora", "map+round_pushpin", "region"],
     ["4762", "strepho", "person+clockwise_arrows+doing", "turn"],
     ["4536", "salpizo", "trumpet", "trumpet"],
     ["5509", "chiton", "t_shirt", "tunic"],
