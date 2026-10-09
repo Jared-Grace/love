@@ -1,5 +1,6 @@
 import { youtube_studio_chrome_path } from "./youtube_studio_chrome_path.mjs";
 import { youtube_studio_user_data_path } from "./youtube_studio_user_data_path.mjs";
+import { sleep } from "./sleep.mjs";
 export async function youtube_studio_upload_private(channel_id, file_path) {
   "$plain channel_id";
   "$plain file_path";
@@ -46,14 +47,11 @@ export async function youtube_studio_upload_private(channel_id, file_path) {
     );
     let href = await link.jsonValue();
     let video_id = href.split("/").pop();
+    ("★ BETWEEN STEPS IT PAUSES, IT DOES NOT WAIT FOR A QUIET NETWORK. The film is still going up while the steps are clicked through, so on a big film the network is never quiet - an 88 MB film timed out there twice on 2026-10-09 and left a private copy behind, where a 34 MB one had already finished and passed.");
     await page.click("#next-button");
-    await page.waitForNetworkIdle({
-      idleTime: 1000,
-    });
+    await sleep(2000);
     await page.click("#next-button");
-    await page.waitForNetworkIdle({
-      idleTime: 1000,
-    });
+    await sleep(2000);
     await page.click("#next-button");
     let private_button = await page.waitForSelector(
       'tp-yt-paper-radio-button[name="PRIVATE"]',
