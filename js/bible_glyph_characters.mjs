@@ -2879,6 +2879,38 @@ export function bible_glyph_characters() {
       name: "desert",
       character: "🏜️",
     },
+    {
+      name: "cloud_with_rain",
+      character: "🌧️",
+    },
+    {
+      name: "hammer_and_wrench",
+      character: "🛠️",
+    },
+    {
+      name: "breast_feeding",
+      character: "🤱",
+    },
+    {
+      name: "counterclockwise_arrows_button",
+      character: "🔄",
+    },
+    {
+      name: "t_shirt",
+      character: "👕",
+    },
+    {
+      name: "fountain",
+      character: "⛲",
+    },
+    {
+      name: "game_die",
+      character: "🎲",
+    },
+    {
+      name: "straight_ruler",
+      character: "📏",
+    },
   ];
   return characters;
 }

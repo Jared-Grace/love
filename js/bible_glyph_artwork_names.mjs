@@ -2788,6 +2788,38 @@ export function bible_glyph_artwork_names() {
       glyph: "desert",
       asset: "Desert",
     },
+    {
+      glyph: "cloud_with_rain",
+      asset: "Cloud with rain",
+    },
+    {
+      glyph: "hammer_and_wrench",
+      asset: "Hammer and wrench",
+    },
+    {
+      glyph: "breast_feeding",
+      asset: "Breast feeding",
+    },
+    {
+      glyph: "counterclockwise_arrows_button",
+      asset: "Counterclockwise arrows button",
+    },
+    {
+      glyph: "t_shirt",
+      asset: "T-shirt",
+    },
+    {
+      glyph: "fountain",
+      asset: "Fountain",
+    },
+    {
+      glyph: "game_die",
+      asset: "Game die",
+    },
+    {
+      glyph: "straight_ruler",
+      asset: "Straight ruler",
+    },
   ];
   return names;
 }
