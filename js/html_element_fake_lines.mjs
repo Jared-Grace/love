@@ -1,5 +1,5 @@
+import { html_element_fake_row_is } from "./html_element_fake_row_is.mjs";
 import { list_any } from "./list_any.mjs";
-import { html_element_fake_children_any } from "./html_element_fake_children_any.mjs";
 import { html_element_fake_text } from "./html_element_fake_text.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -13,7 +13,7 @@ export function html_element_fake_lines(element) {
   let r = [];
   function walk(e) {
     let children = property_get(e, "children");
-    let nested = list_any(children, html_element_fake_children_any);
+    let nested = list_any(children, html_element_fake_row_is);
     if (nested) {
       each(children, walk);
       return;

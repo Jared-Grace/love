@@ -1,3 +1,4 @@
+import { text_upper_to } from "./text_upper_to.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_element_fake } from "./html_element_fake.mjs";
 export function html_document_fake_lambda(lambda) {
@@ -7,7 +8,12 @@ export function html_document_fake_lambda(lambda) {
   ("The page it stands in for has a body, a head and a top element, all of them empty, because drawing code reaches for those to hang a style sheet or a listener on and a missing one stops the drawing on something nobody was asking about. Nothing is ever found on it: no element answers to a search and no element answers to a name.");
   let before = globalThis.document;
   let fake = {
-    createElement: html_element_fake,
+    createElement: function element_new(tag) {
+      "the tag is kept, so a reader can tell a span standing in a line from a row of its own";
+      let element = html_element_fake();
+      element.tagName = text_upper_to(tag);
+      return element;
+    },
     createTextNode: function text_node_new(words) {
       let node = {
         textContent: words,

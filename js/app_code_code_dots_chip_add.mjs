@@ -1,3 +1,6 @@
+import { text_is } from "./text_is.mjs";
+import { not } from "./not.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_style_code_dark_nowrap } from "./html_style_code_dark_nowrap.mjs";
@@ -11,9 +14,15 @@ export function app_code_code_dots_chip_add(parent, code) {
   ("Asked for by the human 2026-10-09: the dots in { ... } should look like every other set of dots in the course, which the home titles and the explain lines already draw grey.");
   let chip = html_span(parent);
   html_style_code_dark_nowrap(chip);
+  let b = text_is(code);
+  if (not(b)) {
+    ("a number handed in as code, as the arithmetic lessons do, has no dots in it");
+    html_span_text(chip, code);
+    return chip;
+  }
   let pieces = text_split(code, "...");
   function piece_add(piece, index) {
-    if (index > 0) {
+    if (greater_than(index, 0)) {
       app_code_placeholder_dots(chip);
     }
     html_span_text(chip, piece);
