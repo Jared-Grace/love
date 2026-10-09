@@ -11,17 +11,24 @@ export async function youtube_studio_upload_private(channel_id, file_path) {
   "The channel is named in the address rather than taken from whichever one the profile last had open, so a film can never land on a sibling channel the same person also owns.";
   "★ IT KEEPS THE WINDOW OPEN UNTIL STUDIO SAYS THE UPLOAD IS FINISHED. Studio lets a person press save while the film is still going up, and carries on in the background - but closing the browser stops it, and what is left is a video with no film in it.";
   let puppeteer = await import("puppeteer");
+  ("★ IT RUNS WITH NO WINDOW, AND SAYS IT IS ORDINARY CHROME. A window jumping over the person's screen for every song was asked away on 2026-10-09. Without a window chrome names itself 'HeadlessChrome' to every page it visits, which is the one word a site looks for to turn a driven browser away, so the page is told the name the same chrome gives when it has a window.");
   let browser = await puppeteer.launch({
-    headless: false,
+    headless: true,
     executablePath: youtube_studio_chrome_path(),
     ignoreDefaultArgs: ["--enable-automation"],
     userDataDir: youtube_studio_user_data_path(),
-    defaultViewport: null,
+    defaultViewport: {
+      width: 1400,
+      height: 1000,
+    },
     protocolTimeout: 600000,
   });
   try {
     let pages = await browser.pages();
     let page = pages[0];
+    let agent = await browser.userAgent();
+    let v = agent.replace("HeadlessChrome", "Chrome");
+    await page.setUserAgent(v);
     page.setDefaultTimeout(120000);
     await page.goto(
       "https://studio.youtube.com/channel/" +
