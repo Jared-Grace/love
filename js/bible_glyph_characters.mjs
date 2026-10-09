@@ -2911,6 +2911,22 @@ export function bible_glyph_characters() {
       name: "straight_ruler",
       character: "📏",
     },
+    {
+      name: "bow_and_arrow",
+      character: "🏹",
+    },
+    {
+      name: "adhesive_bandage",
+      character: "🩹",
+    },
+    {
+      name: "empty_nest",
+      character: "🪹",
+    },
+    {
+      name: "place_of_worship",
+      character: "🛐",
+    },
   ];
   return characters;
 }

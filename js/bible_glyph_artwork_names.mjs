@@ -2820,6 +2820,22 @@ export function bible_glyph_artwork_names() {
       glyph: "straight_ruler",
       asset: "Straight ruler",
     },
+    {
+      glyph: "bow_and_arrow",
+      asset: "Bow and arrow",
+    },
+    {
+      glyph: "adhesive_bandage",
+      asset: "Adhesive bandage",
+    },
+    {
+      glyph: "empty_nest",
+      asset: "Empty nest",
+    },
+    {
+      glyph: "place_of_worship",
+      asset: "Place of worship",
+    },
   ];
   return names;
 }
