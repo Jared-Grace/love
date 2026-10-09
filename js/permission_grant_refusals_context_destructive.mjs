@@ -1,11 +1,12 @@
-import { permission_grant_seam_paths_steerable } from "./permission_grant_seam_paths_steerable.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { permission_grant_refusals_context_escalates } from "./permission_grant_refusals_context_escalates.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
 import { functions_delete_seams } from "./functions_delete_seams.mjs";
-import { function_seams_reached_paths_memo } from "./function_seams_reached_paths_memo.mjs";
+import { function_seams_reached_paths_confined_memo } from "./function_seams_reached_paths_confined_memo.mjs";
+import { functions_delete_confined } from "./functions_delete_confined.mjs";
+import { permission_grant_seam_paths_steerable } from "./permission_grant_seam_paths_steerable.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { and } from "./and.mjs";
@@ -43,9 +44,12 @@ export async function permission_grant_refusals_context_destructive(
   ("The same argument condition as the two above, and for the same reason. What is dangerous here is that the caller chooses what gets deleted, and a rule covers every argument the function is ever handed; a function declaring none deletes whatever its committed source says and nothing a rule could change. That is what keeps the gates and the reports out of this.");
   ("Overwriting a file is deliberately not asked about here, and the division is the useful half. Every function that replaces a file's contents takes the path as a parameter, and a parameter spelled that way is already refused below by name - so that whole family is covered exactly, and this covers only what no name can reach.");
   let delete_seams = functions_delete_seams();
-  let delete_paths = await function_seams_reached_paths_memo(
+  ("A deleter that has fenced its own folder is a dead end for the walk, not a route: each name on the confined roster carries a proof that no argument can point it outside that folder. The walk stops there rather than dropping chains afterwards, because it keeps only the first chain to each deleter and dropping that one would hide any second route.");
+  let confined = functions_delete_confined();
+  let delete_paths = await function_seams_reached_paths_confined_memo(
     unaliased,
     delete_seams,
+    confined,
     remembered,
   );
   ("A reach whose last hop takes nothing is dropped before it is counted. The chain says where an argument stops being able to travel, and the function that calls the deleter is the one that names what is deleted - so when that one declares nothing, the near-end reading above has already answered the whole question and counting the reach again refuses on a ground that is not there.");
