@@ -1,0 +1,74 @@
+import { youtube_studio_user_data_path } from "./youtube_studio_user_data_path.mjs";
+export async function youtube_studio_upload_private(channel_id, file_path) {
+  "$plain channel_id";
+  "$plain file_path";
+  "Puts one film up as private through youtube studio's own upload page, in the browser profile a person has already signed in to, and answers the new video's id.";
+  "★ IT EXISTS BECAUSE THE API ALLOWS ABOUT SIX UPLOADS A DAY AND STUDIO DOES NOT COUNT AGAINST THAT. An upload through the API costs 1600 of 10000 daily units; the same film put up through studio's page costs none of them, so with dozens of songs waiting the API's limit, not the rendering, is what decides how fast they go up. Measured 2026-10-09.";
+  "★ THE BROWSER READS THE FILM OFF THE DISK ITSELF. The film is handed to the page's file box by its path, so nothing carries its bytes on the way in - which is what a tool that ferries files through messages could not do past ten megabytes.";
+  "★ IT DOES AS LITTLE IN THE PAGE AS IT CAN: the file, not made for children, private, save. Title and words are written afterwards through the API, which costs a few dozen units rather than sixteen hundred, because every field filled by clicking is a field that breaks silently the day studio moves a button.";
+  "★ WHAT RUNS INSIDE THE PAGE IS WRITTEN AS TEXT, NEVER AS A FUNCTION. Puppeteer sends a function to the page as its own source, and this repo's canonicalizer rewrites every comparison in a function into a call to a helper imported from a file - a helper the page has never heard of. As text, the canonicalizer leaves it alone and the page gets exactly what was written.";
+  "The channel is named in the address rather than taken from whichever one the profile last had open, so a film can never land on a sibling channel the same person also owns.";
+  "★ IT KEEPS THE WINDOW OPEN UNTIL STUDIO SAYS THE UPLOAD IS FINISHED. Studio lets a person press save while the film is still going up, and carries on in the background - but closing the browser stops it, and what is left is a video with no film in it.";
+  let puppeteer = await import("puppeteer");
+  let browser = await puppeteer.launch({
+    headless: false,
+    userDataDir: youtube_studio_user_data_path(),
+    defaultViewport: null,
+    protocolTimeout: 600000,
+  });
+  try {
+    let pages = await browser.pages();
+    let page = pages[0];
+    page.setDefaultTimeout(120000);
+    await page.goto(
+      "https://studio.youtube.com/channel/" +
+        channel_id +
+        "/videos/upload?d=ud",
+    );
+    let input = await page.waitForSelector("input[type=file]");
+    await input.uploadFile(file_path);
+    let not_for_kids = await page.waitForSelector(
+      'tp-yt-paper-radio-button[name="VIDEO_MADE_FOR_KIDS_NOT_MFK"]',
+    );
+    await not_for_kids.click();
+    let link = await page.waitForFunction(
+      "(document.querySelector('ytcp-video-info a') || {}).href || false",
+    );
+    let href = await link.jsonValue();
+    let video_id = href.split("/").pop();
+    await page.click("#next-button");
+    await page.waitForNetworkIdle({
+      idleTime: 1000,
+    });
+    await page.click("#next-button");
+    await page.waitForNetworkIdle({
+      idleTime: 1000,
+    });
+    await page.click("#next-button");
+    let private_button = await page.waitForSelector(
+      'tp-yt-paper-radio-button[name="PRIVATE"]',
+    );
+    await private_button.click();
+    await page.waitForFunction(
+      "/upload complete|processing|checks complete|checking/i.test((document.querySelector('ytcp-video-upload-progress') || {}).innerText || '')",
+      {
+        timeout: 1800000,
+      },
+    );
+    let progress = await page.evaluate(
+      "document.querySelector('ytcp-video-upload-progress').innerText",
+    );
+    await page.click("#done-button");
+    await page.waitForNetworkIdle({
+      idleTime: 3000,
+    });
+    let r = {
+      video_id,
+      address: href,
+      progress,
+    };
+    return r;
+  } finally {
+    await browser.close();
+  }
+}
