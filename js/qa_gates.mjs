@@ -1,3 +1,4 @@
+import { giveaway_psalms_songs_rows_whole_chapter_parts_cases_gate_run } from "./giveaway_psalms_songs_rows_whole_chapter_parts_cases_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { stop_next_steps_hook_gate_run } from "./stop_next_steps_hook_gate_run.mjs";
@@ -1219,6 +1220,7 @@ export function qa_gates() {
     prayer_lead_all_creation_gate_run,
     app_bible_card_claims_gate_run,
     permission_grants_dispatch_unfenced_gate_run,
+    giveaway_psalms_songs_rows_whole_chapter_parts_cases_gate_run,
   ];
   return gates;
 }
