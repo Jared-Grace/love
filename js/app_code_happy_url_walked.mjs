@@ -1,3 +1,5 @@
+import { phone_test_width } from "./phone_test_width.mjs";
+import { phone_test_height } from "./phone_test_height.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_tests_run_e2e_happy_steps_max } from "./app_code_tests_run_e2e_happy_steps_max.mjs";
 import { playwright_happy_walk } from "./playwright_happy_walk.mjs";
@@ -15,6 +17,12 @@ export async function app_code_happy_url_walked(url) {
   let steps_max = app_code_tests_run_e2e_happy_steps_max();
   let walked = null;
   async function on_page(page) {
+    "the walk is taken on a screen the size of a phone, because a phone is what the course is held on - and the walk measures every screen it reaches, so a part too wide for a phone is caught there rather than by a learner scrolling sideways";
+    let size = {
+      width: phone_test_width(),
+      height: phone_test_height(),
+    };
+    await page.setViewportSize(size);
     walked = await playwright_happy_walk(page, steps_max);
   }
   await playwright_test_url(url, on_page);

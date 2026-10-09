@@ -1,3 +1,4 @@
+import { html_wider_than_window_script } from "./html_wider_than_window_script.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
 import { playwright_happy_answer_selector } from "./playwright_happy_answer_selector.mjs";
@@ -98,6 +99,11 @@ export async function playwright_happy_walk(page, steps_max) {
       hint: "this screen keeps offering a control marked as the way on that cannot be pressed - it is there to be found and gone by the time it is pressed, so either it is being drawn again and again, or it is marked and then taken away without the mark going with it",
     });
     await page.waitForTimeout(settle);
+    ("the screen is measured once it has settled after every press, and anything reaching past the right edge of the window is kept on the step that drew it: a part wider than the phone makes the reader scroll sideways, and it often shows only after an answer, on a screen no address opens");
+    let script = html_wider_than_window_script();
+    let measured = await page.evaluate(script);
+    step.wide = measured.wide;
+    step.wide_url = page.url();
     if (leaving) {
       instances = 0;
       answers = 0;
