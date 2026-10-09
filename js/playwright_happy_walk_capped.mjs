@@ -21,6 +21,7 @@ export async function playwright_happy_walk_capped(page, steps_max) {
   "ANSWERING AND LEAVING ARE TWO DIFFERENT PRESSES and the whole of what this does is keep them apart. A quiz screen goes on asking for as long as somebody wants to practise: every right answer is followed by a fresh question of the same kind, and the way out sits below them all the while. So there is no moment at which the screen says it is finished - the walker decides that, by counting the answers it has got right here and pressing on once it has enough of them.";
   "Counting them is the app's to say and not the walker's to guess. A press that is half of an answer looks exactly like a press that was all of one, and between the two halves the question goes unmarked for as long as the line takes to tidy itself up - which is when a walker on a timer presses the way out and leaves the question standing. So it waits on the app's own count of right answers instead, and a wait that ends because the count moved is the only one that means the answer was taken.";
   "Every step is kept, not just the count, because the interesting question after a red walk is what the last few screens were.";
+  "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   arguments_assert(arguments, 2);
   let trail = [];
   let settle = page_capture_settle_ms();
