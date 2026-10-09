@@ -50,7 +50,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["3950", "laqat", "hand+sheaf_of_rice+doing", "glean"],
     ["7617", "shebi", "chains+person+doing", "take_captive"],
     ["5038", "nebelah", "skull+bone", "carcass"],
-    ["2729", "charad", "face_screaming_in_fear+doing", "tremble"],
+    ["2729", "charad", "fear+vibration_mode+doing", "tremble"],
     ["2550", "chamal", "pleading_face+doing", "pity"],
     ["3985", "maen", "person_gesturing_no+doing", "refuse"],
     ["5352", "naqah", "smiling_face_with_halo+doing", "acquit"],
