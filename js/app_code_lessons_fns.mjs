@@ -1,3 +1,4 @@
+import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
 import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
 import { app_code_lesson_while_down } from "./app_code_lesson_while_down.mjs";
 import { app_code_lesson_if_thrice } from "./app_code_lesson_if_thrice.mjs";
@@ -549,6 +550,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_else_if_order,
     app_code_lesson_if_thrice,
     app_code_lesson_while,
+    app_code_lesson_while_log,
     app_code_lesson_while_down,
     app_code_lesson_while_total,
   ];

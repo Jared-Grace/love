@@ -1,3 +1,4 @@
+import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
 import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
 import { app_code_lesson_while_down } from "./app_code_lesson_while_down.mjs";
 export function app_code_lessons_latest_held_fns() {
@@ -72,6 +73,11 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-09: released by the human, 269 to 273: nothing held";
   "2026-10-09: hold 274, While counting down, until the human has read its first draft";
   "2026-10-09: hold 275, A running total, until the human has read its first draft";
-  let fns = [app_code_lesson_while_down, app_code_lesson_while_total];
+  "2026-10-09: hold A log inside a while, put straight after 273 While so 274 and 275 move down one, until the human has read its first draft";
+  let fns = [
+    app_code_lesson_while_log,
+    app_code_lesson_while_down,
+    app_code_lesson_while_total,
+  ];
   return fns;
 }
