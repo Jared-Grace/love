@@ -201,13 +201,15 @@ export function app_code_lesson_while() {
     app_code_code_lines_writes_out(box_three, never_lines, "12");
     let never = js_code_binary_spaced_nb(12, less, 9);
     html_div_cycle_code(box_three, [
-      "",
+      "The very first time the ",
+      "while",
+      " asks, ",
       never,
       " is ",
       "false",
       ", so the ",
       "{ ... }",
-      " is skipped, and the code continues after it",
+      " never runs at all, and the code continues after it",
     ]);
   }
   let name_id = app_code_lesson_statement_title_name_id(
