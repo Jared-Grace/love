@@ -11,6 +11,7 @@ export async function youtube_studio_upload_private(channel_id, file_path) {
   "★ WHAT RUNS INSIDE THE PAGE IS WRITTEN AS TEXT, NEVER AS A FUNCTION. Puppeteer sends a function to the page as its own source, and this repo's canonicalizer rewrites every comparison in a function into a call to a helper imported from a file - a helper the page has never heard of. As text, the canonicalizer leaves it alone and the page gets exactly what was written.";
   "The channel is named in the address rather than taken from whichever one the profile last had open, so a film can never land on a sibling channel the same person also owns.";
   "★ IT KEEPS THE WINDOW OPEN UNTIL STUDIO SAYS THE UPLOAD IS FINISHED. Studio lets a person press save while the film is still going up, and carries on in the background - but closing the browser stops it, and what is left is a video with no film in it.";
+  "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   let puppeteer = await import("puppeteer");
   ("★ IT RUNS WITH NO WINDOW, AND SAYS IT IS ORDINARY CHROME. A window jumping over the person's screen for every song was asked away on 2026-10-09. Without a window chrome names itself 'HeadlessChrome' to every page it visits, which is the one word a site looks for to turn a driven browser away, so the page is told the name the same chrome gives when it has a window.");
   let browser = await puppeteer.launch({
