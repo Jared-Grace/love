@@ -1,4 +1,4 @@
-import { app_code_happy_trail_wide } from "./app_code_happy_trail_wide.mjs";
+import { playwright_happy_trail_wide } from "./playwright_happy_trail_wide.mjs";
 import { phone_test_width } from "./phone_test_width.mjs";
 import { phone_test_height } from "./phone_test_height.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -34,7 +34,7 @@ export async function app_code_happy_url_walked(url) {
   list_empty_is_assert_json(skipped, {
     hint: "the walk reached the end of the course without answering these questions - it pressed the way on while the question was still standing, so whatever these screens mark as the way on is being found before the answer they also mark. the walk is no longer testing them",
   });
-  let wide = app_code_happy_trail_wide(trail);
+  let wide = playwright_happy_trail_wide(trail);
   list_empty_is_assert_json(wide, {
     hint: "these screens drew something wider than a phone, so a learner has to scroll the whole page sideways to read them - each address is where it was measured and each part is the innermost one reaching past the edge. measured over the whole course on 2026-10-09 there were none, so this keeps a rule that holds rather than a hope",
   });
