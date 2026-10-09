@@ -56,8 +56,8 @@ export async function bible_glyph_artwork_download() {
     let svgs = [];
     for (let asset of entry.assets) {
       let urls = bible_glyph_artwork_urls(asset);
-      let svg = await http_text_first_or_null(urls);
-      list_add(svgs, svg);
+      let picture = await http_text_first_or_null(urls);
+      list_add(svgs, picture);
     }
     let absent = list_any(svgs, null_is);
     if (absent) {

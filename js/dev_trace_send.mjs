@@ -16,6 +16,13 @@ export async function dev_trace_send() {
     let r = 0;
     return r;
   }
+  ("a latest page has no dev server behind it, so it sends to storage instead - fetched by name only then, so the firebase library never rides along in a dev page or an ordinary one");
+  let dev = not_equal(location.pathname.indexOf("/dev/"), -1);
+  if (not(dev)) {
+    let m = await import("./dev_trace_send_storage.mjs");
+    let sent = await m.dev_trace_send_storage();
+    return sent;
+  }
   let key = dev_trace_storage_key();
   let held = localStorage.getItem(key);
   let list = held ? json_from(held) : [];

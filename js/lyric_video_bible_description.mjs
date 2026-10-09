@@ -6,12 +6,7 @@ import { lyric_video_bible_document_read } from "./lyric_video_bible_document_re
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { lyric_video_document_pictures } from "./lyric_video_document_pictures.mjs";
-import { lyric_video_picture_painting_is } from "./lyric_video_picture_painting_is.mjs";
-import { list_add } from "./list_add.mjs";
-import { list_unique } from "./list_unique.mjs";
-import { lyric_video_singing_credit_line } from "./lyric_video_singing_credit_line.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { lyric_video_pictures_credit_line } from "./lyric_video_pictures_credit_line.mjs";
+import { lyric_video_description_opening } from "./lyric_video_description_opening.mjs";
 import { youtube_description_verses } from "./youtube_description_verses.mjs";
 export async function lyric_video_bible_description(chapter_number) {
   "$plain chapter_number";
@@ -36,35 +31,7 @@ export async function lyric_video_bible_description(chapter_number) {
   if (not(missing)) {
     pictures = lyric_video_document_pictures(document);
   }
-  let paintings = [];
-  let drawn = [];
-  for (let picture of pictures) {
-    let painting_is = await lyric_video_picture_painting_is(picture);
-    if (painting_is) {
-      list_add(paintings, picture.scene);
-      continue;
-    }
-    list_add(drawn, picture.path);
-  }
-  let painters = list_unique(paintings);
-  let sung = lyric_video_singing_credit_line();
-  let opening = named;
-  let any = greater_than(pictures.length, 0);
-  if (any) {
-    let pictures_line = lyric_video_pictures_credit_line(
-      painters.length,
-      drawn.length,
-    );
-    opening = opening + "\n" + pictures_line;
-  }
-  opening = opening + "\n" + sung + "\n";
-  let some = greater_than(painters.length, 0);
-  if (some) {
-    let paintings_heading =
-      "The paintings in this video, in the order they come up:";
-    opening =
-      opening + "\n" + paintings_heading + "\n" + painters.join("\n") + "\n";
-  }
+  let opening = await lyric_video_description_opening(named, pictures);
   let closing =
     "Psalm " + chapter_number + " runs to verse " + verse_last + ".";
   let description = youtube_description_verses(opening, verses, closing);

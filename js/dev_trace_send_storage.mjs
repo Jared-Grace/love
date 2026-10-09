@@ -1,3 +1,6 @@
+import { json_from } from "./json_from.mjs";
+import { json_to } from "./json_to.mjs";
+import { equal } from "./equal.mjs";
 import { dev_trace_storage_key } from "./dev_trace_storage_key.mjs";
 import { app_shared_contact_user_id } from "./app_shared_contact_user_id.mjs";
 import { dev_trace_report_prefix } from "./dev_trace_report_prefix.mjs";
@@ -10,18 +13,22 @@ export async function dev_trace_send_storage() {
   "this is fetched only when it is needed, because sending to storage brings the firebase library with it and the page it serves should not pay for that on an ordinary visit";
   let key = dev_trace_storage_key();
   let held = localStorage.getItem(key);
-  let list = held ? JSON.parse(held) : [];
-  if (list.length === 0) {
-    return 0;
+  let list = held ? json_from(held) : [];
+  if (equal(list.length, 0)) {
+    let r = 0;
+    return r;
   }
   let user_id = await app_shared_contact_user_id();
   let prefix = dev_trace_report_prefix();
-  let path = file_name_json(text_combine(prefix, user_id));
+  let name = text_combine(prefix, user_id);
+  let path = file_name_json(name);
   let report = {
     where: location.href,
     when: new Date().toISOString(),
     steps: list,
   };
-  await firebase_upload_text_browser_quiet(path, JSON.stringify(report));
-  return list.length;
+  let content = json_to(report);
+  await firebase_upload_text_browser_quiet(path, content);
+  let r2 = list.length;
+  return r2;
 }
