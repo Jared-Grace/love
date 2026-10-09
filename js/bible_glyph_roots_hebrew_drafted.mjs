@@ -34,7 +34,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["7198", "qesheth", "bow+wood", "bow"],
     ["2280", "chabash", "adhesive_bandage+doing", "bind_up"],
     ["970", "bachar", "check_box+thing", "young_man"],
-    ["1653", "geshem", "cloud_with_rain", "rain"],
+    ["1653", "geshem", "rain+water_wave", "rain"],
     ["1993", "hamon", "crowd+loudspeaker+doing", "roar"],
     ["3213", "yalal", "crying_face+loudspeaker+doing", "wail"],
     ["2796", "charash", "hammer_and_wrench+doer", "craftsman"],
