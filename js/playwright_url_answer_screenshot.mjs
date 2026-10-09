@@ -23,6 +23,7 @@ export async function playwright_url_answer_screenshot(
   ("The width travels out as numbers as well as a picture, so the fault can be found without reading the picture: what the page measured is the one search every width check here asks, ",
     fn_name("html_wider_than_window_script"),
     ".");
+  ("BROWSER-SERIALIZED - do NOT auto-canonicalize");
   let presses_max = 40;
   let wait_ms = 2000;
   let result = null;
