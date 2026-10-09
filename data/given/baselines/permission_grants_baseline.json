@@ -57,10 +57,6 @@
    "refusals": 1
   },
   {
-   "name": "scripts_temp_delete",
-   "refusals": 1
-  },
-  {
    "name": "app_shared_dev_build_multiple",
    "refusals": 1
   },
@@ -125,10 +121,6 @@
    "refusals": 1
   },
   {
-   "name": "function_new_from_temp",
-   "refusals": 1
-  },
-  {
    "name": "qa_app_commit_deployable",
    "refusals": 1
   },
@@ -189,6 +181,10 @@
    "refusals": 1
   },
   {
+   "name": "lyric_timing_open",
+   "refusals": 1
+  },
+  {
    "name": "git_ac_call_folder_try",
    "refusals": 1
   },
@@ -203,10 +199,6 @@
   {
    "name": "g_sermon_pull",
    "refusals": 2
-  },
-  {
-   "name": "lyric_timing_open",
-   "refusals": 1
   }
  ]
 }
