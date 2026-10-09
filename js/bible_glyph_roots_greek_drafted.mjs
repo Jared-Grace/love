@@ -36,7 +36,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["4077", "pege", "fountain", "spring"],
     ["5452", "phuteuo", "seedling+doing", "plant"],
     ["2819", "kleros", "game_die", "lots"],
-    ["3354", "metreo", "straight_ruler+doing", "measure"],
+    ["3354", "metreo", "triangular_ruler+doing", "measure"],
     ["1189", "deomai", "pleading_face+doing", "beg"],
     ["1162", "deomai", "pleading_face+thing", "petition"],
     ["706", "arithmos", "input_numbers", "number"],
