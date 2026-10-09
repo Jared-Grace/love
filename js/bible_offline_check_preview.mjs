@@ -1,3 +1,4 @@
+import { html_style_set } from "./html_style_set.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
@@ -46,8 +47,8 @@ export async function bible_offline_check_preview() {
   );
   let status = html_p_text(root, "");
   let shown = html_element(root, "pre");
-  shown.style.whiteSpace = "pre-wrap";
-  shown.style.fontSize = "0.75em";
+  html_style_set(shown, "white-space", "pre-wrap");
+  html_style_set(shown, "font-size", "0.75em");
   let report = {};
   function show(step) {
     html_text_content_set(status, step);
