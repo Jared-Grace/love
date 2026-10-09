@@ -65,7 +65,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["7521", "ratsah", "smiling_face_with_smiling_eyes+doing", "accept"],
     ["7522", "ratsah", "smiling_face_with_smiling_eyes", "favor"],
     ["14", "abah", "person_raising_hand+doing", "willing"],
-    ["5193", "nata", "seedling+doing", "plant"],
+    ["5193", "nata", "sprout+down_arrow+doing", "plant"],
     ["7628", "shebi", "chains+person", "captivity"],
     ["6453", "pesach", "lamb+door", "passover"],
     ["7667", "sheber", "broken_chain+thing", "destruction"],
