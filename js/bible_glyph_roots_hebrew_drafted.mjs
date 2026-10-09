@@ -307,7 +307,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["2404", "chatab", "axe+doing", "cut wood"],
     ["3463", "yashen", "sleeping_face+describing", "sleepy"],
     ["3218", "yeleq", "locusts+child", "young locust"],
-    ["6016", "omer", "sheaf_of_rice", "sheaf"],
+    ["6016", "omer", "wheat+knot", "sheaf"],
     ["3833", "labi", "lion+female_sign", "lioness"],
     ["2471", "challah", "bagel", "cake"],
     ["1714", "degel", "crossed_flags", "banner"],
