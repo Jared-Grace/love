@@ -80,9 +80,8 @@ export async function youtube_studio_upload_private(channel_id, file_path) {
     );
     step = "save";
     await page.click("#done-button");
-    await page.waitForNetworkIdle({
-      idleTime: 3000,
-    });
+    ("★ AFTER SAVING IT PAUSES TOO. Studio keeps polling the film's processing, so the network never goes quiet here either: three uploads on 2026-10-09 timed out at this step, and every one of them had saved and processed fine.");
+    await sleep(5000);
     let r = {
       video_id,
       address: href,
