@@ -60,7 +60,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["1473", "galah", "luggage+chains", "exiles"],
     ["7114", "qatsar", "sheaf_of_rice+scissors+doing", "reap"],
     ["1330", "bethulah", "person_with_veil", "virgin"],
-    ["4082", "medinah", "world_map", "province"],
+    ["4082", "medinah", "map+crown", "province"],
     ["5062", "nagaph", "oncoming_fist", "strike"],
     ["7521", "ratsah", "smiling_face_with_smiling_eyes+doing", "accept"],
     ["7522", "ratsah", "smiling_face_with_smiling_eyes", "favor"],
