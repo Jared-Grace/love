@@ -4067,6 +4067,14 @@ def untrusted_piece_hint(words, safe_verbs):
         plain = plain[1:]
     if not plain:
         return ""
+    if plain[0].startswith("$"):
+        return (
+            f"`{plain[0]}` runs whatever that variable holds, and this hook "
+            "reads only the words as written, so it cannot vouch for it. "
+            "Write the command out in full where the variable stands - the "
+            "sandboxed `unshare ... node --permission ...` line, for one, is "
+            "approved as typed."
+        )
     if plain[0] == "xargs" and len(plain) >= 2 and not plain[1].startswith("-"):
         plain = plain[1:]
     if plain[0] in COMMAND_BUILDING_VERBS:
@@ -4292,6 +4300,8 @@ def untrusted_piece_fix_known(command, safe_verbs, safe_exact_commands):
         plain = plain[1:]
     if not plain:
         return False
+    if plain[0].startswith("$"):
+        return True
     return plain[0] == "sed" or script_file_note(words, command) != ""
 
 
@@ -5365,6 +5375,12 @@ def main():
     # granted this. That is what makes asking here safe rather than an ask
     # floor overriding somebody's grant: the alternative to this branch is the
     # native engine prompting with no message, not the command running.
+    if untrusted_piece_fix_known(command, safe_verbs, safe_exact_commands):
+        return decide("deny", (
+            REWORD_DENY_LEAD
+            + untrusted_piece_advice(command, safe_verbs, safe_exact_commands)
+        ))
+
     twin_call = path_taking_name_twin_call(command)
     if twin_call is not None:
         fn, twin, name = twin_call
