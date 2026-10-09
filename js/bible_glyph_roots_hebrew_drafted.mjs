@@ -374,7 +374,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["2856", "chatham", "ring+locked", "seal"],
     ["4541", "massekah", "pouring_liquid+moai", "cast image"],
     ["6341", "pach", "mouse_trap", "trap"],
-    ["4546", "mesillah", "motorway", "highway"],
+    ["4546", "mesillah", "road+up_arrow", "highway"],
     ["6342", "pachad", "fearful_face+doing", "tremble"],
     ["3341", "yatsath", "fire+hand", "kindle"],
     ["8003", "shalem", "peace+describing", "whole"],
