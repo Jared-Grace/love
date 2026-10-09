@@ -1,3 +1,5 @@
+import { app_code_lesson_if_thrice } from "./app_code_lesson_if_thrice.mjs";
+import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { app_code_lesson_else_if_twice } from "./app_code_lesson_else_if_twice.mjs";
 import { app_code_lesson_else_if_order } from "./app_code_lesson_else_if_order.mjs";
 import { app_code_lesson_else_if_else } from "./app_code_lesson_else_if_else.mjs";
@@ -69,10 +71,13 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-08: released by the human, release all: nothing held";
   "2026-10-09: hold 269, Else if and else, until the human has read its first draft; asked to update latest for the sideways-scroll fix alone";
   "2026-10-09: hold 270, Two else ifs, and 271, Else if in order, until the human has read their first drafts";
+  "2026-10-09: hold 272, The same if three times, and 273, While, until the human has read their first drafts";
   let fns = [
     app_code_lesson_else_if_else,
     app_code_lesson_else_if_twice,
     app_code_lesson_else_if_order,
+    app_code_lesson_if_thrice,
+    app_code_lesson_while,
   ];
   return fns;
 }

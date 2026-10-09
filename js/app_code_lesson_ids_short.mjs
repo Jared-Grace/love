@@ -342,6 +342,8 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_else_if_else: text_frozen("else_if_else"),
     app_code_lesson_else_if_twice: text_frozen("else_if_twice"),
     app_code_lesson_else_if_order: text_frozen("else_if_order"),
+    app_code_lesson_if_thrice: text_frozen("if_thrice"),
+    app_code_lesson_while: text_frozen("while"),
     app_code_lesson_statement_name_rectangles_rows_between: text_frozen(
       "name_rectangles_rows_between",
     ),

@@ -1,3 +1,5 @@
+import { app_code_lesson_if_thrice } from "./app_code_lesson_if_thrice.mjs";
+import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { app_code_lesson_else_if_twice } from "./app_code_lesson_else_if_twice.mjs";
 import { app_code_lesson_else_if_order } from "./app_code_lesson_else_if_order.mjs";
 import { app_code_lesson_else_if_else } from "./app_code_lesson_else_if_else.mjs";
@@ -543,6 +545,8 @@ export function app_code_lessons_fns() {
     app_code_lesson_else_if_else,
     app_code_lesson_else_if_twice,
     app_code_lesson_else_if_order,
+    app_code_lesson_if_thrice,
+    app_code_lesson_while,
   ];
   return fns;
 }
