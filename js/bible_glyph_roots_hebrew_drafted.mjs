@@ -410,7 +410,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["7381", "reyach", "nose", "aroma"],
     ["3885", "lun", "night+doing", "spend the night"],
     ["2220", "zeroa", "flexed_biceps", "arm"],
-    ["3709", "kaph", "palm_up_hand", "palm"],
+    ["3709", "kaph", "hand_with_fingers_splayed", "palm"],
     ["8548", "tamid", "clock+infinity", "continually"],
     ["3201", "yakol", "might+doing", "be able"],
     ["2930", "tame", "soap+no_entry", "be unclean"],
