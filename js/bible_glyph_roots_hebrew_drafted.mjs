@@ -430,7 +430,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["2282", "chagag", "party_popper", "feast"],
     ["2287", "chagag", "party_popper+doing", "keep a feast"],
     ["3293", "yaar", "evergreen_tree", "forest"],
-    ["8210", "shaphak", "pouring_liquid+doing", "pour out"],
+    ["8210", "shaphak", "jar+down_arrow+doing", "pour out"],
     ["3332", "yatsaq", "pouring_liquid+fire", "pour, cast"],
     ["5258", "nasak", "pouring_liquid+wine", "pour out a drink offering"],
     ["7364", "rachats", "bathtub+doing", "wash, bathe"],
