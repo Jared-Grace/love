@@ -477,7 +477,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["501", "antleo", "bucket+doing", "draw water"],
     ["3164", "machomai", "boxing_glove+doing", "quarrel"],
     ["3163", "mache", "boxing_glove", "quarrel"],
-    ["3803", "pagis", "mouse_trap", "snare"],
+    ["3803", "pagis", "snare+bird", "snare"],
     ["3688", "onos", "donkey", "donkey"],
     ["3590", "ogdoos", "eight+describing", "eighth"],
     ["3521", "nesteia", "eating+locked", "fasting"],
