@@ -1,0 +1,43 @@
+export function js_flow_globals_allowed() {
+  "The outside names a function may read and still be edited without asking: each one only works on values handed to it, and none reaches a file, a command, the network or the language's machinery.";
+  "This is a whitelist, so a name nobody thought about is refused rather than let through.";
+  let names = [
+    "console",
+    "Math",
+    "JSON",
+    "undefined",
+    "NaN",
+    "Infinity",
+    "parseInt",
+    "parseFloat",
+    "isNaN",
+    "isFinite",
+    "String",
+    "Number",
+    "Boolean",
+    "Array",
+    "Set",
+    "Map",
+    "WeakMap",
+    "WeakSet",
+    "Date",
+    "RegExp",
+    "Promise",
+    "Error",
+    "TypeError",
+    "RangeError",
+    "SyntaxError",
+    "Symbol",
+    "BigInt",
+    "encodeURIComponent",
+    "decodeURIComponent",
+    "encodeURI",
+    "decodeURI",
+    "arguments",
+    "structuredClone",
+    "TextEncoder",
+    "TextDecoder",
+    "Intl",
+  ];
+  return names;
+}
