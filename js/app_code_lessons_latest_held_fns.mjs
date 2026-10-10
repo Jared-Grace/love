@@ -82,8 +82,8 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-09: hold Which brace pairs with which, put straight after If after an if inside an if, until the human has read its first draft";
   "2026-10-10: hold The order of the braces, put straight after Which brace pairs with which, until the human has read its first draft";
   "2026-10-10: hold The order of two pairs of braces, put straight before The order of the braces, until the human has read its first draft";
-  "2026-10-10: hold The order of the tokens, put straight before The order of two pairs of braces, until the human has read its first draft";
-  "2026-10-10: hold The braces among the tokens, put straight after The order of the tokens, until the human has read its first draft";
+  "2026-10-10: hold The order of the tokens, put straight after Two changes in an if, before any lesson with more than one if, until the human has read its first draft";
+  "2026-10-10: hold The braces among the tokens, put straight after Which brace pairs with which, until the human has read its first draft";
   let fns = [
     app_code_lesson_brace_pair,
     app_code_lesson_token_order,
