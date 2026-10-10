@@ -44,7 +44,12 @@ export function app_code_lesson_quizzes_generic(params) {
   ("a lesson may drop the backwards direction entirely. Most lessons run both ways because the pair is one fact read from either end - this code has that value, that value comes from this code. It only holds while the answer names its question uniquely, and some lessons answer with a PART of the question: asked which part of 1 + 2 * 4 is solved first, the answer 2 * 4 belongs to every line that happens to contain it, so a backwards question built from it could have two right buttons and mark one of them wrong");
   ("the backwards unscramble goes with it rather than being switched off separately, because it is the same direction wearing different clothes - offered on its own it would ask the learner to build a question the lesson has just said it will not ask");
   let backwards_include = property_get_or(params, "backwards_include", true);
-  let infos = [forwards];
+  ("a lesson may drop the forwards choosing as well, when its answers can stand in so few ways that a choice of buttons is a guess; its building quiz, if it has one, still stands on the forwards record");
+  let forwards_include = property_get_or(params, "forwards_include", true);
+  let infos = [];
+  if (forwards_include) {
+    list_add(infos, forwards);
+  }
   let codes = [
     {
       include: forwards_code,

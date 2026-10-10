@@ -179,7 +179,7 @@ export function app_code_lesson_brace_pair() {
     let list4 = list_concat(nested3, if_c3);
     let paired_code = list_join_newline(list4);
     let paired_div = html_div(box_paired);
-    app_code_code_dark_lines_braces_paired(paired_div, paired_code);
+    app_code_code_dark_lines_braces_paired_random(paired_div, paired_code);
     html_div_cycle_code(box_paired, [
       "The ",
       left2,

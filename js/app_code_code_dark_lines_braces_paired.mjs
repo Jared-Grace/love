@@ -19,35 +19,6 @@ export function app_code_code_dark_lines_braces_paired(component, code) {
   "The colours are the pointing colours, taken in the order the pairs open, so the first pair to open is the blue a pointed-at piece of code wears and the next pair the next colour. They go round again after the last, which no program in this app comes near.";
   "The pairs are found by the same count a learner is taught, one brace at a time, so what the colours say and what the counting says cannot disagree.";
   "The chip is emptied first, because what goes in is a run of pieces, and a chip drawn twice would otherwise keep the first drawing underneath the second.";
-  html_style_code_dark(component);
-  html_style_white_space(component, "pre-wrap");
-  html_text_align_left(component);
-  let nothing = text_empty();
-  html_text_set(component, nothing);
   let colors = app_code_highlight_colors();
-  let left = js_code_brace_left();
-  let right = js_code_brace_right();
-  let plain = "";
-  for (let i = 0; less_than(i, code.length); i++) {
-    let c = code[i];
-    if (equal(c, left) || equal(c, right)) {
-      let opening = i;
-      if (equal(c, right)) {
-        opening = js_code_brace_partner_index(code, i);
-      }
-      let pair = 0;
-      for (let j = 0; less_than(j, opening); j++) {
-        if (equal(code[j], left)) {
-          pair += 1;
-        }
-      }
-      html_text_code_breakable_add(component, plain, html_span_text);
-      plain = "";
-      let color = colors[modulo(pair, colors.length)];
-      html_span_text_code_background(component, c, color);
-    } else {
-      plain += c;
-    }
-  }
-  html_text_code_breakable_add(component, plain, html_span_text);
+  app_code_code_dark_lines_braces_paired_colors(component, code, colors);
 }
