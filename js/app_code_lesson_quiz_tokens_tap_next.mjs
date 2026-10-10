@@ -1,3 +1,4 @@
+import { app_code_token_any } from "./app_code_token_any.mjs";
 import { app_code_lesson_quiz_tokens_tap } from "./app_code_lesson_quiz_tokens_tap.mjs";
 export function app_code_lesson_quiz_tokens_tap_next(
   answers_div,
@@ -16,5 +17,7 @@ export function app_code_lesson_quiz_tokens_tap_next(
     on_wrong,
     correction_code_set,
     false,
+    app_code_token_any,
+    "Tokens tapped:",
   );
 }

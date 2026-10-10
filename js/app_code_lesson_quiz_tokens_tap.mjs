@@ -1,3 +1,4 @@
+import { app_code_label_text } from "./app_code_label_text.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -35,9 +36,12 @@ export function app_code_lesson_quiz_tokens_tap(
   on_wrong,
   correction_code_set,
   guided,
+  kept,
+  kept_label,
 ) {
-  arguments_assert(arguments, 6);
+  arguments_assert(arguments, 8);
   ("a program drawn as it stands, where every token can be tapped, and the learner taps them in the order they are read, left to right and then top to bottom; under it the tokens tapped so far are written out in that order, so the order is seen growing. Asked for by the human 2026-10-10.");
+  ("Only the tokens kept says to keep are written out under the code, under kept_label, so a quiz may gather only one kind of token, such as the braces, into its order while every token is still tapped.");
   ("When guided, the token to tap next wears the blue every pointing in this app leads with, so the learner is first shown the order one token at a time, and only later asked for it with nothing to follow.");
   ("A token is only painted and greyed, never given a chip's padding, because a padded token would push the rest of its line along each time the blue moved. The place a finger may land is widened by padding taken straight back by a margin of the same size, so the code stands exactly where it would without it.");
   let code = property_get(qa, "question");
@@ -47,6 +51,7 @@ export function app_code_lesson_quiz_tokens_tap(
   html_style_code_dark(div);
   html_style_white_space(div, "pre-wrap");
   html_text_align_left(div);
+  app_code_label_text(parent, kept_label);
   let tapped_div = html_div(parent);
   html_style_code_dark(tapped_div);
   html_style_white_space(tapped_div, "pre-wrap");
@@ -89,9 +94,12 @@ export function app_code_lesson_quiz_tokens_tap(
       html_style_set(span, "backgroundColor", "");
       html_style_set(span, "color", "");
       html_style_opacity(span, 0.4);
-      list_add(tapped, text);
-      let line = list_join_space(tapped);
-      html_text_set(tapped_div, line);
+      let keep = kept(text);
+      if (keep) {
+        list_add(tapped, text);
+        let line = list_join_space(tapped);
+        html_text_set(tapped_div, line);
+      }
       let after = add(next, 1);
       property_set(state, "next", after);
       let count = list_size(spans);
