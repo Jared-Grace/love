@@ -20,6 +20,10 @@ consonant it holds - Ephraim as ee-fray-im sang right - so only a syllable that
 opens on the vowel and ends on it is written a, as in a-saf, which a generator
 reads long because nothing closes it.
 
+★ AN EYE AFTER A CONSONANT IS WRITTEN AI, NEVER Y.  Zion as zy-uhn can be read
+zee-uhn, since a y after a consonant is as often ee as eye; the hand-made song
+spelling had already settled on Zai-on, so ai is what this key writes too.
+
 ★ THE STRESS IS NOT WRITTEN.  The hand-made spellings beside it carry none, and
 capitals are the only mark a generator might honour and the one most likely to
 be read as letters spelled out.  The stress is still in the sound returned with
@@ -194,7 +198,7 @@ def syllable_spelled(onset, nucleus, coda):
     if head.endswith("g") and middle[0] in "eiy":
         head += "h"
     if nucleus == "I" and head:
-        middle = "y" if not coda else "igh"
+        middle = "ai" if not coda else "igh"
     if nucleus == "A" and not head and not coda:
         middle = "a"
     return head + middle + letters_of(coda)
