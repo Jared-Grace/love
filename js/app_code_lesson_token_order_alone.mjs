@@ -1,3 +1,4 @@
+import { app_code_tokens_order_div } from "./app_code_tokens_order_div.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { app_code_token_order_batch } from "./app_code_token_order_batch.mjs";
@@ -15,7 +16,6 @@ import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_gener
 import { app_code_lesson_quiz_tokens_tap_next } from "./app_code_lesson_quiz_tokens_tap_next.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_token_order_example_choose_next } from "./app_code_lesson_token_order_example_choose_next.mjs";
-import { app_code_tokens_chips } from "./app_code_tokens_chips.mjs";
 export function app_code_lesson_token_order_alone() {
   arguments_assert(arguments, 0);
   ("the order of the tokens with nothing to follow: the same choosing as The order of the tokens, except no token is shown in blue, so the learner finds the next token by reading alone");
