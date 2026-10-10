@@ -1,3 +1,6 @@
+import { app_code_braces_two_nested } from "./app_code_braces_two_nested.mjs";
+import { app_code_code_output } from "./app_code_code_output.mjs";
+import { app_code_tokens_chips } from "./app_code_tokens_chips.mjs";
 import { app_code_lesson_token_order_example_choose } from "./app_code_lesson_token_order_example_choose.mjs";
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
 import { app_code_tokens_explain } from "./app_code_tokens_explain.mjs";
@@ -20,7 +23,7 @@ export function app_code_lesson_token_order() {
   ("Asked for by the human 2026-10-10: tap the tokens of the code left to right, top to bottom; first told to tap the blue token over and over, then told to choose the next token with none coloured; and after it the braces { { } } explained as the order of the tokens, which the lesson after this one does.");
   ("Placed straight after Which brace pairs with which and straight before The order of two pairs of braces, so the order braces are written out in is already the order the tokens are read in.");
   ("A token is named as a piece the learner has unscrambled code out of, because those pieces are the one thing every earlier lesson has already put in their hands, and the tokens tapped here are cut the way JavaScript cuts them, so a string, quotes and all, is one token.");
-  ("The opening shows one example only, as the human asked 2026-10-10; a longer program to read the tokens of was dropped, because the examples after the opening already walk through longer programs one token at a time.");
+  ("The longer program in the opening has its tokens drawn each as a chip of its own, not as one block of code, as the human asked 2026-10-10.");
   ("The quiz does not show the program a second time above the one being tapped, so the label over it is left empty and its drawing draws nothing.");
   ("The writing is a first draft by Claude 2026-10-10.");
   let batch = app_code_batch_question_answer_fns(
@@ -40,6 +43,20 @@ export function app_code_lesson_token_order() {
       "When we unscramble code, we build it out of pieces",
     ]);
     app_code_tokens_explain(box_one);
+    let box_two = app_code_container_light_blue(root);
+    html_div_cycle_code(box_two, [
+      "Here is a longer program, and its tokens in the order we read them:",
+    ]);
+    let nested = app_code_braces_two_nested();
+    app_code_code_output({
+      parent: box_two,
+      code_label: "Code:",
+      code: nested,
+      on_code: html_text_set_code_dark_lines,
+      output_label: order_label,
+      output: nested,
+      on_output: app_code_tokens_chips,
+    });
   }
   let name_id = app_code_lesson_statement_title_name_id(
     "The order of the tokens",
