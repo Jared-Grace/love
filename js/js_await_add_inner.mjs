@@ -19,14 +19,14 @@ export async function js_await_add_inner(functions, ast, visited) {
   "The table is handed in rather than read here, so this can be run against a table of a few made-up entries. The list of names already seen is handed in for the same reason: making one function wait sends the step out to the files that call it, and a name on the list is one that walk has already been through.";
   async function call_await(v) {
     let node = property_get(v, "node");
-    async function called_await(name) {
+    async function called_await(called_name) {
       "A name the table says nothing about is a function this step knows nothing";
       "about, and a call it must leave exactly as it stands.";
-      let unknown_is = property_exists_not(functions, name);
+      let unknown_is = property_exists_not(functions, called_name);
       if (unknown_is) {
         return;
       }
-      let waits_is = property_path_get_2(functions, name, "async");
+      let waits_is = property_path_get_2(functions, called_name, "async");
       if (not(waits_is)) {
         return;
       }
@@ -40,7 +40,7 @@ export async function js_await_add_inner(functions, ast, visited) {
       ("An import is not such a binding, which is the one case where the name does");
       ("mean what the table was asked about.");
       let bound = js_scopes_enclosing_binding_names(stack, node);
-      let local_is = list_includes(bound, name);
+      let local_is = list_includes(bound, called_name);
       if (local_is) {
         return;
       }
