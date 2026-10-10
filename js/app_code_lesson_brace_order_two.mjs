@@ -1,3 +1,8 @@
+import { app_code_braces_colors_random } from "./app_code_braces_colors_random.mjs";
+import { app_code_braces_paired_with_order_colors } from "./app_code_braces_paired_with_order_colors.mjs";
+import { app_code_div_braces_painted } from "./app_code_div_braces_painted.mjs";
+import { app_code_braces_painter_shared } from "./app_code_braces_painter_shared.mjs";
+import { html_div } from "./html_div.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
@@ -22,7 +27,6 @@ import { app_code_code_dark_lines_braces_paired_random } from "./app_code_code_d
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
 import { app_code_lesson_quiz_braces_order } from "./app_code_lesson_quiz_braces_order.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
-import { app_code_braces_paired_div } from "./app_code_braces_paired_div.mjs";
 export function app_code_lesson_brace_order_two() {
   arguments_assert(arguments, 0);
   ("the order of two pairs of braces: only the braces of a program, written down in the order they stand. An if inside an if gives { { } }, and one if after another gives { } { }");
@@ -68,7 +72,7 @@ export function app_code_lesson_brace_order_two() {
     app_code_braces_sequence,
   );
   function above(root, context) {
-    "the pairing remembered, then the braces of an if inside an if and of two ifs one after the other written out in order";
+    "the pairing remembered, then the braces written out in order, easiest first as the human asked 2026-10-10: two ifs one after the other, an if and its else, and last an if inside an if, whose braces are named one by one in the colours they wear";
     let left = js_code_brace_left();
     let right = js_code_brace_right();
     let box_one = app_code_container_light_blue(root);
@@ -80,38 +84,30 @@ export function app_code_lesson_brace_order_two() {
     );
     let box_two = app_code_container_light_blue(root);
     html_div_cycle_code(box_two, [
-      "Here each ",
+      "Here one ",
+      "if",
+      " comes after the other. Each ",
       "{ }",
       " has a colour of its own. Under the code are only its braces, in the order they stand:",
     ]);
-    let n2 = nested();
-    app_code_braces_paired_with_order(box_two, n2);
-    html_div_cycle_code(box_two, [
-      "The second ",
-      left,
-      " comes before the first ",
-      right,
-      ", because the second ",
-      "if",
-      " is inside the first",
+    let colors_two = app_code_braces_colors_random();
+    let first_two = list_get(colors_two, 0);
+    let second_two = list_get(colors_two, 1);
+    let t2 = two_ifs();
+    app_code_braces_paired_with_order_colors(box_two, t2, colors_two);
+    app_code_div_braces_painted(box_two, [
+      ["The first ", "if", " ends with "],
+      {
+        brace: right,
+        color: first_two,
+      },
+      [" before the second ", "if", " begins with "],
+      {
+        brace: left,
+        color: second_two,
+      },
     ]);
     let box_three = app_code_container_light_blue(root);
-    html_div_cycle_code(box_three, [
-      "Here one ",
-      "if",
-      " comes after the other:",
-    ]);
-    let t2 = two_ifs();
-    app_code_braces_paired_with_order(box_three, t2);
-    html_div_cycle_code(box_three, [
-      "The first ",
-      right,
-      " comes before the second ",
-      left,
-      ", because the first ",
-      "if",
-      " ends before the second begins",
-    ]);
     html_div_cycle_code(box_three, [
       "An ",
       "if",
@@ -121,6 +117,81 @@ export function app_code_lesson_brace_order_two() {
     ]);
     let e2 = if_else();
     app_code_braces_paired_with_order(box_three, e2);
+    let box_four = app_code_container_light_blue(root);
+    html_div_cycle_code(box_four, ["Here one ", "if", " is inside the other:"]);
+    let colors = app_code_braces_colors_random();
+    let outer = list_get(colors, 0);
+    let inner = list_get(colors, 1);
+    let left_outer = {
+      brace: left,
+      color: outer,
+    };
+    let left_inner = {
+      brace: left,
+      color: inner,
+    };
+    let right_outer = {
+      brace: right,
+      color: outer,
+    };
+    let right_inner = {
+      brace: right,
+      color: inner,
+    };
+    let n2 = nested();
+    app_code_braces_paired_with_order_colors(box_four, n2, colors);
+    app_code_div_braces_painted(box_four, [
+      ["There are two ", left, ": "],
+      left_outer,
+      [" and "],
+      left_inner,
+    ]);
+    app_code_div_braces_painted(box_four, [
+      left_outer,
+      [" is the first ", left],
+    ]);
+    app_code_div_braces_painted(box_four, [
+      left_inner,
+      [" is the second ", left],
+    ]);
+    app_code_div_braces_painted(box_four, [
+      ["There are two ", right, ": "],
+      right_inner,
+      [" and "],
+      right_outer,
+    ]);
+    app_code_div_braces_painted(box_four, [
+      right_inner,
+      [" is the first ", right],
+    ]);
+    app_code_div_braces_painted(box_four, [
+      right_outer,
+      [" is the second ", right],
+    ]);
+    html_div_cycle_code(box_four, [
+      "There is an ",
+      "if",
+      " inside another ",
+      "if",
+    ]);
+    app_code_div_braces_painted(box_four, [
+      ["The outer ", "if", " is coloured with "],
+      left_outer,
+      [" "],
+      right_outer,
+    ]);
+    app_code_div_braces_painted(box_four, [
+      ["The inner ", "if", " is coloured with "],
+      left_inner,
+      [" "],
+      right_inner,
+    ]);
+    app_code_div_braces_painted(box_four, [
+      ["Because the inner ", "if", " is inside the outer ", "if", ", the "],
+      left_inner,
+      [" is before the "],
+      right_outer,
+    ]);
   }
   let name_id = app_code_lesson_statement_title_name_id(
     "The order of two pairs of braces",
@@ -146,16 +217,22 @@ export function app_code_lesson_brace_order_two() {
     unscramble_label: "Please write its braces in order:",
     unscramble_on_answer: app_code_lesson_quiz_braces_order,
   });
+  let painter = app_code_braces_painter_shared();
+  function braces_div(container, text) {
+    "the braces of a worked example, in the colours its code wears";
+    let div = html_div(container);
+    painter(div, text);
+  }
   let lesson = app_code_lesson_base(
     name_id,
     above,
     2,
     batch,
-    html_text_set_code_dark_lines,
+    painter,
     "Its braces:",
     quizzes_get,
     question_label,
-    app_code_braces_paired_div,
+    braces_div,
   );
   return lesson;
 }
