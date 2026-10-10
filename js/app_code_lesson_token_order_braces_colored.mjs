@@ -45,7 +45,9 @@ export function app_code_lesson_token_order_braces_colored() {
     );
     html_div_cycle_code(box, [
       "In this lesson, the braces ",
-      braces,
+      left,
+      " ",
+      right,
       " are colored",
     ]);
     html_div_cycle_code(box, [
@@ -53,7 +55,9 @@ export function app_code_lesson_token_order_braces_colored() {
     ]);
     html_div_cycle_code(box, [
       "In this lesson, only ",
-      braces,
+      left,
+      " ",
+      right,
       " will be shown below",
     ]);
   }
