@@ -26,6 +26,12 @@ export function app_code_lesson_quizzes_generic(params) {
     unscramble_label_override,
     "Please unscramble the code: ",
   );
+  ("a lesson whose answer is not one line of code may hand in its own quiz for building the answer out of pieces; every other lesson builds with the token quiz");
+  let unscramble_on_answer = property_get_or(
+    params,
+    "unscramble_on_answer",
+    app_code_lesson_quiz_token_select,
+  );
   let mc = app_code_lesson_quiz_multiple_choice;
   let backwards = object_copy_assign(backwards_record, {
     answer_property: "question",
@@ -58,7 +64,7 @@ export function app_code_lesson_quizzes_generic(params) {
     if (include) {
       let token_select = object_copy(base);
       object_assign(token_select, {
-        on_answer: app_code_lesson_quiz_token_select,
+        on_answer: unscramble_on_answer,
         answer_label: unscramble_label,
       });
       list_add(infos, token_select);
