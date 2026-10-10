@@ -1,3 +1,4 @@
+import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { app_code_expression_operator_chip } from "./app_code_expression_operator_chip.mjs";
 import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
 import { app_code_expression_refusals_clear } from "./app_code_expression_refusals_clear.mjs";
@@ -84,6 +85,8 @@ export function app_code_lesson_quiz_tokens_tap(
     let text = text_slice(code, start, end);
     let span = html_span_text(div, text);
     app_code_expression_operator_chip(span);
+    ("thinner at the sides than an operator's chip, because here every token of a line wears one, and the full room either side of each pushed a phone-wide line onto two");
+    html_style_padding_x(span, "1px");
     function on_tap() {
       let next = property_get(state, "next");
       let right = equal(index, next);
