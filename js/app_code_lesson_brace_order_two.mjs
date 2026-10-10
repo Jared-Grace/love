@@ -80,7 +80,9 @@ export function app_code_lesson_brace_order_two() {
     );
     let box_two = app_code_container_light_blue(root);
     html_div_cycle_code(box_two, [
-      "Here each pair of braces has a colour of its own. Under the code are only its braces, in the order they stand:",
+      "Here each ",
+      "{ }",
+      " has a colour of its own. Under the code are only its braces, in the order they stand:",
     ]);
     let n2 = nested();
     app_code_braces_paired_with_order(box_two, n2);

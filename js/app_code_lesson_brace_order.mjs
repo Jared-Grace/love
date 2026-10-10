@@ -121,7 +121,9 @@ export function app_code_lesson_brace_order() {
     );
     let box_two = app_code_container_light_blue(root);
     html_div_cycle_code(box_two, [
-      "With three pairs of braces there are more orders. Here is one, with only its braces under it:",
+      "With three ",
+      "{ }",
+      " there are more orders. Here is one, with only its braces under it:",
     ]);
     let code3 = after_nested();
     app_code_braces_paired_with_order(box_two, code3);
