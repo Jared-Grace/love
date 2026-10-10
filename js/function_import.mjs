@@ -1,10 +1,12 @@
-import { function_name_to_path_found } from "./function_name_to_path_found.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { path_resolve } from "./path_resolve.mjs";
+import { property_name_internal_not_assert } from "./property_name_internal_not_assert.mjs";
 import { text_combine } from "./text_combine.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { function_name_to_path_found } from "./function_name_to_path_found.mjs";
+import { path_resolve } from "./path_resolve.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function function_import(f_name) {
+  property_name_internal_not_assert(f_name);
   text_combine(
     "if you need to unalias use ",
     fn_name("function_import_unalias"),
