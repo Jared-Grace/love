@@ -1,5 +1,5 @@
+import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
 import { app_code_tokens_explain } from "./app_code_tokens_explain.mjs";
-import { app_code_lesson_quiz_question_tokens_explain } from "./app_code_lesson_quiz_question_tokens_explain.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { app_code_braces_two_batch } from "./app_code_braces_two_batch.mjs";
@@ -62,7 +62,7 @@ export function app_code_lesson_token_order() {
   );
   let forwards = {
     question_label: "",
-    on_question: app_code_lesson_quiz_question_tokens_explain,
+    on_question: app_code_lesson_quiz_question_none,
     answer_label: "Choose each token in order, the right choice is blue:",
     answer_on_button: html_text_set_code_dark_lines,
     answer_count_override: null,

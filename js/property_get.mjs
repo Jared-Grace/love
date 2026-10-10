@@ -1,7 +1,9 @@
+import { property_name_internal_not_assert_object } from "./property_name_internal_not_assert_object.mjs";
 import { not } from "./not.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { error_json_lamba } from "./error_json_lamba.mjs";
 export function property_get(object, property_name) {
+  property_name_internal_not_assert_object(object, property_name);
   if (not(property_name in object)) {
     function object_get() {
       let properties = properties_get(object);
