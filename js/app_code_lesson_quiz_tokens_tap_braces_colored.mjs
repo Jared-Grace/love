@@ -1,5 +1,5 @@
+import { app_code_tokens_rows_braces_all } from "./app_code_tokens_rows_braces_all.mjs";
 import { app_code_lesson_quiz_tokens_tap } from "./app_code_lesson_quiz_tokens_tap.mjs";
-import { js_code_brace_is } from "./js_code_brace_is.mjs";
 export function app_code_lesson_quiz_tokens_tap_braces_colored(
   answers_div,
   info,
@@ -9,7 +9,8 @@ export function app_code_lesson_quiz_tokens_tap_braces_colored(
   batch_get,
   correction_code_set,
 ) {
-  "tapping the tokens of a program in the order they are read, with nothing shown to follow, every pair of braces in a colour of its own, and only the braces tapped written down, in their colours; it stands where a quiz draws its answer, so it takes what every quiz there is handed";
+  "tapping the tokens of a program in the order they are read, with nothing shown to follow, every pair of braces in a colour of its own, and the braces tapped written down on a line of their own, in their colours, above every token tapped; it stands where a quiz draws its answer, so it takes what every quiz there is handed";
+  let rows = app_code_tokens_rows_braces_all();
   app_code_lesson_quiz_tokens_tap(
     answers_div,
     qa,
@@ -17,8 +18,7 @@ export function app_code_lesson_quiz_tokens_tap_braces_colored(
     on_wrong,
     correction_code_set,
     false,
-    js_code_brace_is,
-    "Braces chosen:",
+    rows,
     true,
   );
 }

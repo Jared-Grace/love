@@ -22,8 +22,8 @@ import { app_code_lesson_token_order_example_choose_braces } from "./app_code_le
 import { app_code_tokens_order_div } from "./app_code_tokens_order_div.mjs";
 export function app_code_lesson_token_order_braces_colored() {
   arguments_assert(arguments, 0);
-  ("the order of the tokens with the braces coloured: the same choosing as The order of the tokens, with no blue, except the braces of the code wear a colour, and only the braces chosen are written out under the code, in the colour they wear");
-  ("Asked for by the human 2026-10-10: a new lesson straight after The order of the tokens, with no blue, the same interaction except the braces are coloured and only a chosen brace is shown below, opening by saying how it differs from the lesson before, with a link to it.");
+  ("the order of the tokens with the braces coloured: the same choosing as The order of the tokens, with no blue, except the braces of the code wear a colour, and the braces chosen are written out under the code on a line of their own, in the colour they wear, above every token chosen");
+  ("Asked for by the human 2026-10-10: a new lesson straight after The order of the tokens, with no blue, the same interaction except the braces are coloured and only a chosen brace is shown below, opening by saying how it differs from the lesson before, with a link to it. Then asked 2026-10-10 for the braces chosen and, under that, every token chosen; so the opening line that said only the braces are shown below now says they are also shown on a line of their own..");
   ("Its programs are the ones the lesson before uses, each with one if, so it too comes before any lesson with more than one if.");
   ("The writing is a first draft by Claude 2026-10-10.");
   let batch = app_code_batch_question_answer_fns(
@@ -54,11 +54,11 @@ export function app_code_lesson_token_order_braces_colored() {
       "In the previous lesson, when a token was chosen, it was always shown below",
     ]);
     html_div_cycle_code(box, [
-      "In this lesson, only ",
+      "In this lesson, the ",
       left,
       " ",
       right,
-      " will be shown below",
+      " chosen are also shown on a line of their own",
     ]);
   }
   let name_id = app_code_lesson_statement_title_name_id(

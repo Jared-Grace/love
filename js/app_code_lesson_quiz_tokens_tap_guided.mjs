@@ -1,4 +1,4 @@
-import { app_code_token_any } from "./app_code_token_any.mjs";
+import { app_code_tokens_rows_all } from "./app_code_tokens_rows_all.mjs";
 import { app_code_lesson_quiz_tokens_tap } from "./app_code_lesson_quiz_tokens_tap.mjs";
 export function app_code_lesson_quiz_tokens_tap_guided(
   answers_div,
@@ -10,6 +10,7 @@ export function app_code_lesson_quiz_tokens_tap_guided(
   correction_code_set,
 ) {
   "tapping the tokens of a program in the order they are read, with the next one shown in blue each time; it stands where a quiz draws its answer, so it takes what every quiz there is handed";
+  let rows = app_code_tokens_rows_all();
   app_code_lesson_quiz_tokens_tap(
     answers_div,
     qa,
@@ -17,8 +18,7 @@ export function app_code_lesson_quiz_tokens_tap_guided(
     on_wrong,
     correction_code_set,
     true,
-    app_code_token_any,
-    "Tokens chosen:",
+    rows,
     false,
   );
 }
