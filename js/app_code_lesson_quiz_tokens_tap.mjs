@@ -1,3 +1,5 @@
+import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
+import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_div } from "./html_div.mjs";
@@ -73,6 +75,7 @@ export function app_code_lesson_quiz_tokens_tap(
     let span = html_span_text(div, text);
     html_style_set(span, "padding", "6px 3px");
     html_style_set(span, "margin", "-6px -3px");
+    html_style_set(span, "backgroundClip", "content-box");
     function on_tap() {
       let next = property_get(state, "next");
       let right = equal(index, next);
@@ -82,6 +85,7 @@ export function app_code_lesson_quiz_tokens_tap(
         return;
       }
       html_visibility_hidden(note_div);
+      html_data_set_test_happy_remove(span);
       html_style_set(span, "backgroundColor", "");
       html_style_set(span, "color", "");
       html_style_opacity(span, 0.4);
@@ -103,11 +107,13 @@ export function app_code_lesson_quiz_tokens_tap(
     cursor = end;
   }
   function highlight() {
+    "the token to tap next is always marked as the right answer for a walk that gets everything right, and only shown in blue when guided";
+    let next = property_get(state, "next");
+    let span = list_get(spans, next);
+    html_data_set_test_happy(span);
     if (not(guided)) {
       return;
     }
-    let next = property_get(state, "next");
-    let span = list_get(spans, next);
     html_style_set(span, "backgroundColor", blue);
     html_style_set(span, "color", "white");
   }
