@@ -1,24 +1,24 @@
-import { equal } from "./equal.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { subtract } from "./subtract.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
-import { not } from "./not.mjs";
 import { js_flow_globals_machine } from "./js_flow_globals_machine.mjs";
 import { js_flow_globals_reflect } from "./js_flow_globals_reflect.mjs";
 import { js_flow_globals_allowed } from "./js_flow_globals_allowed.mjs";
 import { js_flow_packages_pure } from "./js_flow_packages_pure.mjs";
 import { property_name_internal_names } from "./property_name_internal_names.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { js_identifiers_referenced_nodes } from "./js_identifiers_referenced_nodes.mjs";
 import { js_flow_object_methods_plain } from "./js_flow_object_methods_plain.mjs";
-import { js_visit } from "./js_visit.mjs";
 import { js_identifiers_referenced_names } from "./js_identifiers_referenced_names.mjs";
 import { js_node_is } from "./js_node_is.mjs";
+import { js_visit } from "./js_visit.mjs";
 import { js_names_unbound_mentioned_referenced } from "./js_names_unbound_mentioned_referenced.mjs";
 import { js_key_facts } from "./js_key_facts.mjs";
 import { js_flow_methods_plain } from "./js_flow_methods_plain.mjs";
 import { js_flow_key_power_name } from "./js_flow_key_power_name.mjs";
 import { js_key_safe_is } from "./js_key_safe_is.mjs";
 import { js_flow_control_tests } from "./js_flow_control_tests.mjs";
+import { subtract } from "./subtract.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
 export function js_function_flow_read(f_name, ast, known) {
   "Everything the flow check needs from one function's file, read once: which names each name is worked out from, which names each may be the same object as, which calls it makes and what goes into each argument, what it hands back, what it changes in place, which values it calls, and every way it reaches outside the repo. Known is the set of every function name, because a name the file reads without importing it is about to be imported by the canonicalizer.";
   "Names are followed by spelling, not by scope, so two different variables sharing a name are joined into one. That can only make the answer more cautious.";
@@ -91,7 +91,11 @@ export function js_function_flow_read(f_name, ast, known) {
         return r;
       }
       js_identifiers_referenced_names(x.id).forEach(lambda);
-      let declaration = v.stack.filter(js_node_is).at(-2);
+      function lambda9(n) {
+        let ni = js_node_is(n);
+        return ni;
+      }
+      let declaration = v.stack.filter(lambda9).at(-2);
       let fixed =
         not_equal(declaration, undefined) &&
         equal(declaration.kind, "const") &&
@@ -686,7 +690,7 @@ export function js_function_flow_read(f_name, ast, known) {
       referenced.has(x)
     ) {
       let parent = parent_node(stack);
-      let called =
+      let called_here =
         not_equal(parent, null) &&
         (equal(parent.type, "CallExpression") ||
           equal(parent.type, "NewExpression")) &&
@@ -694,7 +698,7 @@ export function js_function_flow_read(f_name, ast, known) {
       let binding =
         not_equal(parent, null) &&
         (parent.type.startsWith("Import") || equal(parent.id, x));
-      if (not(called) && not(binding)) {
+      if (not(called_here) && not(binding)) {
         handed.add(x.name);
       }
     }
