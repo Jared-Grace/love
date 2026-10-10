@@ -540,6 +540,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_if_halve_or_triple,
     app_code_lesson_if_nested,
     app_code_lesson_if_after_nested,
+    app_code_lesson_brace_pair,
     app_code_lesson_if_else_in_if,
     app_code_lesson_if_else_in_if_else,
     app_code_lesson_if_in_else,
