@@ -24,6 +24,7 @@ export function app_code_lesson_token_order_braces() {
   ("the braces among the tokens: the learner taps every token of a program in the order it is read, and each brace tapped is written down, so the braces gather into their order, { { } } or { } { }, one tap at a time");
   ("Asked for by the human 2026-10-10, as a step between The order of the tokens and The order of two pairs of braces: here the braces are gathered by tapping, and in the lesson after they are gathered by reading alone.");
   ("Placed straight after Which brace pairs with which and straight before The order of two pairs of braces. The order of the tokens, which it builds on, was moved 2026-10-10 to before any lesson with more than one if.");
+  ("Moved 2026-10-11 by the human to straight after Halve, or times 3 plus 1, and straight before If inside an if, so its program with one if inside another is met just before the lesson that teaches it.");
   ("The writing is a first draft by Claude 2026-10-10.");
   let left = js_code_brace_left();
   let right = js_code_brace_right();
