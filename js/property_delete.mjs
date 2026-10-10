@@ -1,7 +1,5 @@
-import { property_name_internal_not_assert } from "./property_name_internal_not_assert.mjs";
 import { property_exists_assert_json } from "./property_exists_assert_json.mjs";
 export function property_delete(object, property_name) {
-  property_name_internal_not_assert(property_name);
   property_exists_assert_json(object, property_name, {
     hint: "the property should exist before it can be deleted",
   });
