@@ -33,70 +33,9 @@ export function app_code_lesson_brace_order() {
   ("There are three quizzes: the code, choose its braces; the braces, choose their code; and the code, write its braces. The second is the one the human asked for first. The order of the quizzes is the order every lesson keeps, forwards, backwards and then the building, rather than the order they were asked for in.");
   ("The code in the quizzes is drawn without colours, because coloured code would let the colours be matched without the braces being read.");
   ("The writing is a first draft by Claude 2026-10-10.");
-  let fruits = fruits_of_the_spirit();
-  let love = list_get(fruits, 0);
-  let joy = list_get(fruits, 1);
-  let peace = list_get(fruits, 2);
-  let say_love = app_code_word_console_log_statement(love);
-  let say_joy = app_code_word_console_log_statement(joy);
-  let say_peace = app_code_word_console_log_statement(peace);
-  function if_a() {
-    let lines = js_code_if_lines_multiple("a", [say_love]);
-    return lines;
-  }
-  function if_b() {
-    let lines2 = js_code_if_lines_multiple("b", [say_joy]);
-    return lines2;
-  }
-  function if_c() {
-    let lines3 = js_code_if_lines_multiple("c", [say_peace]);
-    return lines3;
-  }
-  function three_ifs() {
-    let v = if_a();
-    let v2 = if_b();
-    let v3 = if_c();
-    let lines4 = list_concat_multiple([v, v2, v3]);
-    let code = list_join_newline(lines4);
-    return code;
-  }
-  function nested() {
-    let b = if_b();
-    let statements = list_concat([say_love], b);
-    let lines5 = js_code_if_lines_multiple("a", statements);
-    return lines5;
-  }
-  function after_nested() {
-    let a = nested();
-    let b2 = if_c();
-    let lines6 = list_concat(a, b2);
-    let code2 = list_join_newline(lines6);
-    return code2;
-  }
-  function shapes() {
-    "the five programs, each with exactly three pairs of braces and each with an order of braces of its own";
-    let a2 = if_c();
-    let b3 = nested();
-    let before_nested = list_concat(a2, b3);
-    let a3 = if_b();
-    let b4 = if_c();
-    let statements2 = list_concat(a3, b4);
-    let two_inside = js_code_if_lines_multiple("a", statements2);
-    let b5 = if_c();
-    let statements3 = list_concat([say_joy], b5);
-    let inner = js_code_if_lines_multiple("b", statements3);
-    let statements4 = list_concat([say_love], inner);
-    let three_deep = js_code_if_lines_multiple("a", statements4);
-    let lines_list = [before_nested, two_inside, three_deep];
-    let codes = list_map(lines_list, list_join_newline);
-    let v4 = three_ifs();
-    let v5 = after_nested();
-    let programs = list_concat([v4, v5], codes);
-    return programs;
-  }
   function batch_get() {
     "four of the five programs";
-    let list = shapes();
+    let list = app_code_braces_three_programs();
     let codes2 = list_shuffle_take(list, 4);
     return codes2;
   }
@@ -125,7 +64,8 @@ export function app_code_lesson_brace_order() {
       "{ }",
       " there are more orders. Here is one, with only its braces under it:",
     ]);
-    let code3 = after_nested();
+    let programs = app_code_braces_three_programs();
+    let code3 = list_get(programs, 1);
     app_code_braces_paired_with_order(box_two, code3);
     html_div_cycle_code(box_two, [
       "A second ",
@@ -138,7 +78,7 @@ export function app_code_lesson_brace_order() {
     ]);
     let box_three = app_code_container_light_blue(root);
     html_div_cycle_code(box_three, ["Here no ", "if", " is inside another:"]);
-    let code4 = three_ifs();
+    let code4 = list_get(programs, 0);
     app_code_braces_paired_with_order(box_three, code4);
     html_div_cycle_code(box_three, [
       "Every ",
