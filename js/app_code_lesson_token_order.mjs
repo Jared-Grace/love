@@ -1,3 +1,4 @@
+import { app_code_lesson_token_order_example_choose } from "./app_code_lesson_token_order_example_choose.mjs";
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
 import { app_code_tokens_explain } from "./app_code_tokens_explain.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -90,10 +91,10 @@ export function app_code_lesson_token_order() {
     above,
     2,
     batch,
-    html_text_set_code_dark_lines,
-    order_label,
+    app_code_lesson_token_order_example_choose,
+    null,
     quizzes_get,
-    "Code:",
+    "Choose each token in order, the right choice is blue:",
     tokens_div,
   );
   return lesson;
