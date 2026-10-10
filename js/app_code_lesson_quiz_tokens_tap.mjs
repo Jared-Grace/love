@@ -1,3 +1,10 @@
+import { app_code_expression_operator_chip } from "./app_code_expression_operator_chip.mjs";
+import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
+import { app_code_expression_refusals_clear } from "./app_code_expression_refusals_clear.mjs";
+import { list_clear } from "./list_clear.mjs";
+import { app_code_expression_operator_chip_uncolored } from "./app_code_expression_operator_chip_uncolored.mjs";
+import { app_code_expression_chosen_style_assign } from "./app_code_expression_chosen_style_assign.mjs";
+import { html_box_shadow_set } from "./html_box_shadow_set.mjs";
 import { app_code_label_text } from "./app_code_label_text.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
@@ -11,11 +18,9 @@ import { text_space_nb } from "./text_space_nb.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
-import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_quiz_tokens_places } from "./app_code_quiz_tokens_places.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
@@ -43,7 +48,7 @@ export function app_code_lesson_quiz_tokens_tap(
   ("a program drawn as it stands, where every token can be tapped, and the learner taps them in the order they are read, left to right and then top to bottom; under it the tokens tapped so far are written out in that order, so the order is seen growing. Asked for by the human 2026-10-10.");
   ("Only the tokens kept says to keep are written out under the code, under kept_label, so a quiz may gather only one kind of token, such as the braces, into its order while every token is still tapped.");
   ("When guided, the token to tap next wears the blue every pointing in this app leads with, so the learner is first shown the order one token at a time, and only later asked for it with nothing to follow.");
-  ("A token is only painted and greyed, never given a chip's padding, because a padded token would push the rest of its line along each time the blue moved. The place a finger may land is widened by padding taken straight back by a margin of the same size, so the code stands exactly where it would without it.");
+  ("Every token is a pale chip from the start, chosen the same way the operators of a line are chosen in the expression lessons, as the human asked 2026-10-10: a wrong choice is turned red until the right one is chosen, and a token already chosen goes plain and faint. Every token wears its chip the whole time, so nothing on the line moves as the choosing goes along.");
   let code = property_get(qa, "question");
   let answer = property_get(qa, "answer");
   correction_code_set(answer);
@@ -63,10 +68,10 @@ export function app_code_lesson_quiz_tokens_tap(
     "Which token comes next, reading left to right, then top to bottom?",
   );
   html_visibility_hidden(note_div);
-  let blue = app_code_highlight_color();
   let places = app_code_quiz_tokens_places(code);
   let spans = [];
   let tapped = [];
+  let refused = [];
   let state = {
     next: 0,
   };
@@ -78,21 +83,22 @@ export function app_code_lesson_quiz_tokens_tap(
     html_span_text(div, between);
     let text = text_slice(code, start, end);
     let span = html_span_text(div, text);
-    html_style_set(span, "padding", "6px 3px");
-    html_style_set(span, "margin", "-6px -3px");
-    html_style_set(span, "backgroundClip", "content-box");
+    app_code_expression_operator_chip(span);
     function on_tap() {
       let next = property_get(state, "next");
       let right = equal(index, next);
       if (not(right)) {
         html_visibility_visible(note_div);
+        app_code_lesson_quiz_wrong_set(span);
+        list_add(refused, span);
         on_wrong();
         return;
       }
       html_visibility_hidden(note_div);
+      app_code_expression_refusals_clear(refused);
+      list_clear(refused);
       html_data_set_test_happy_remove(span);
-      html_style_set(span, "backgroundColor", "");
-      html_style_set(span, "color", "");
+      app_code_expression_operator_chip_uncolored(span);
       html_style_opacity(span, 0.4);
       let keep = kept(text);
       if (keep) {
@@ -122,8 +128,8 @@ export function app_code_lesson_quiz_tokens_tap(
     if (not(guided)) {
       return;
     }
-    html_style_set(span, "backgroundColor", blue);
-    html_style_set(span, "color", "white");
+    app_code_expression_chosen_style_assign(span);
+    html_box_shadow_set(span, "none");
   }
   each_index(places, token_add);
   let rest = text_slice_from(code, cursor);

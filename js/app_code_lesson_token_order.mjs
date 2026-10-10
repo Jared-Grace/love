@@ -75,7 +75,7 @@ export function app_code_lesson_token_order() {
   let forwards = {
     question_label: "",
     on_question: app_code_lesson_quiz_question_none,
-    answer_label: "Please tap the blue token:",
+    answer_label: "Choose each token in order, the right choice is blue:",
     answer_on_button: html_text_set_code_dark_lines,
     answer_count_override: null,
   };
@@ -88,12 +88,12 @@ export function app_code_lesson_token_order() {
     forwards_include: false,
     batch_get: batch,
     forwards_code: true,
-    unscramble_label: "Please tap the blue token:",
+    unscramble_label: "Choose each token in order, the right choice is blue:",
     unscramble_on_answer: app_code_lesson_quiz_tokens_tap_guided,
     builds_more: [
       {
         on_answer: app_code_lesson_quiz_tokens_tap_next,
-        answer_label: "Please tap the next token:",
+        answer_label: "Choose each token in order:",
       },
     ],
   });

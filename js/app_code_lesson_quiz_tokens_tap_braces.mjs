@@ -18,6 +18,6 @@ export function app_code_lesson_quiz_tokens_tap_braces(
     correction_code_set,
     false,
     js_code_brace_is,
-    "Braces tapped:",
+    "Braces chosen:",
   );
 }

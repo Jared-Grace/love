@@ -18,6 +18,6 @@ export function app_code_lesson_quiz_tokens_tap_guided(
     correction_code_set,
     true,
     app_code_token_any,
-    "Tokens tapped:",
+    "Tokens chosen:",
   );
 }

@@ -62,7 +62,7 @@ export function app_code_lesson_token_order_braces() {
   let forwards = {
     question_label: "",
     on_question: app_code_lesson_quiz_question_none,
-    answer_label: "Please tap the next token:",
+    answer_label: "Choose each token in order:",
     answer_on_button: html_text_set_code_dark_lines,
     answer_count_override: null,
   };
@@ -75,7 +75,7 @@ export function app_code_lesson_token_order_braces() {
     forwards_include: false,
     batch_get: batch,
     forwards_code: true,
-    unscramble_label: "Please tap the next token:",
+    unscramble_label: "Choose each token in order:",
     unscramble_on_answer: app_code_lesson_quiz_tokens_tap_braces,
   });
   let painter = app_code_braces_painter_shared();

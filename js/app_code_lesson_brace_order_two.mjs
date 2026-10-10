@@ -62,7 +62,7 @@ export function app_code_lesson_brace_order_two() {
     );
     html_div_text(
       box_one,
-      "Now we find the braces by reading, without tapping",
+      "Now we find the braces by reading, without choosing them",
     );
     let box_two = app_code_container_light_blue(root);
     html_div_cycle_code(box_two, [
