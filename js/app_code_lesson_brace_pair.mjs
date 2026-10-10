@@ -1,3 +1,4 @@
+import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 import { modulo } from "./modulo.mjs";
@@ -37,7 +38,8 @@ export function app_code_lesson_brace_pair() {
   ("which brace pairs with which: in if (a) { if (b) { ... } }, the first { is closed by the last }, not by the } nearest to it");
   ("The one new fact is how a { and its } are found from each other: going down from a {, count 1 more for every { and 1 less for every }, and the } that brings the count back to 0 closes it; going up from a }, the same with the two swapped finds the { that opens it.");
   ("Asked for by the human 2026-10-09, after a learner asked why the last else in if ( if else ) else belongs to the first if when it is so far away from it: the else belongs to the if whose { the } before it closes, so matching braces is the fact underneath the question. The human asked for both ways, which } closes a { and which { opens a }, and at least two pairs of braces in every program.");
-  ("Placed straight after If after an if inside an if and before the first else inside an if, so it comes before the shape the learner tripped on and uses only shapes already taught: two ifs one after the other, an if and else, an if inside an if, an if inside an if with an if after it, and two ifs inside an if. Rejected: straight after If inside an else, where every nesting with else has been seen, because by then the learner has already met the question unequipped; and before If inside an if, because the nested shapes would be new there. Which if an else belongs to is left for a lesson of its own, after the nesting lessons with else.");
+  ("Placed straight after If after an if inside an if and before the first else inside an if, so it comes before the shape the learner tripped on and uses only shapes already taught: three ifs one after the other, an if and else with an if after it, an if inside an if with an if after it or before it, and two ifs inside an if. Rejected: straight after If inside an else, where every nesting with else has been seen, because by then the learner has already met the question unequipped; and before If inside an if, because the nested shapes would be new there. Which if an else belongs to is left for a lesson of its own, after the nesting lessons with else.");
+  ("Every program has exactly three pairs of braces, so every question offers three buttons - the three braces of the kind asked for - and the quiz is told to show three. Two pairs was the first draft and was rejected: it leaves one wrong answer, so a guess is right half the time, and a quiz told to show more fills the rest from other questions, which offered a different program and even the question itself.");
   ("Each screen has four of the five shapes. Two questions point at a { and two at a }, so both ways are asked on every screen.");
   ("The wrong answers are every other brace of the kind asked for, each once. In a nested program the nearest one is among them, which is the mistake the learner made.");
   ("There is no backwards quiz, because the question and the answer are the same kind of thing - a program with one brace pointed at - and reading it backwards is the other way of asking, which the screen already asks. There are no quizzes about lines or building the code, because no program here is run.");
@@ -50,19 +52,26 @@ export function app_code_lesson_brace_pair() {
   let say_joy = app_code_word_console_log_statement(joy);
   let say_peace = app_code_word_console_log_statement(peace);
   function shapes() {
-    "the five programs, each with at least two pairs of braces";
+    "the five programs, each with exactly three pairs of braces";
     let if_a = js_code_if_lines_multiple("a", [say_love]);
     let if_b = js_code_if_lines_multiple("b", [say_joy]);
-    let two_ifs = list_concat(if_a, if_b);
+    let if_c = js_code_if_lines_multiple("c", [say_peace]);
+    let three_ifs = list_concat_multiple([if_a, if_b, if_c]);
     let if_else = js_code_if_else_lines_multiple("a", [say_love], [say_joy]);
+    let else_then_if = list_concat(if_else, if_c);
     let statements = list_concat([say_love], if_b);
     let nested = js_code_if_lines_multiple("a", statements);
-    let if_c = js_code_if_lines_multiple("c", [say_peace]);
     let after_nested = list_concat(nested, if_c);
-    let inner_c = js_code_if_lines_multiple("c", [say_peace]);
-    let statements2 = list_concat(if_b, inner_c);
+    let before_nested = list_concat(if_c, nested);
+    let statements2 = list_concat(if_b, if_c);
     let two_inside = js_code_if_lines_multiple("a", statements2);
-    let lines_list = [two_ifs, if_else, nested, after_nested, two_inside];
+    let lines_list = [
+      three_ifs,
+      else_then_if,
+      after_nested,
+      before_nested,
+      two_inside,
+    ];
     let codes = list_map(lines_list, list_join_newline);
     return codes;
   }
@@ -223,7 +232,7 @@ export function app_code_lesson_brace_pair() {
     on_question: painter,
     answer_label,
     answer_on_button: painter,
-    answer_count_override: null,
+    answer_count_override: 3,
     decoys,
   };
   let quizzes_get = app_code_lesson_quizzes_unscramble({
