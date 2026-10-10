@@ -1,10 +1,11 @@
 import { fn_name } from "./fn_name.mjs";
-import { equal } from "./equal.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { function_ast } from "./function_ast.mjs";
+import { catch_null_async } from "./catch_null_async.mjs";
+import { equal } from "./equal.mjs";
 import { js_function_flow_read } from "./js_function_flow_read.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
+import { not_equal } from "./not_equal.mjs";
 export async function functions_flow_reads() {
   ("What the flow check needs from every function, as a map from name to what ",
     fn_name("js_function_flow_read"),
@@ -13,10 +14,11 @@ export async function functions_flow_reads() {
   let f_names = await functions_names();
   let known = new Set(f_names);
   async function read_one(f_name) {
-    function lambda() {
-      return null;
+    async function lambda() {
+      let r = await function_ast(f_name);
+      return r;
     }
-    let ast = await (await function_ast(f_name)).catch(lambda);
+    let ast = await catch_null_async(lambda);
     if (equal(ast, null)) {
       return null;
     }
