@@ -95,7 +95,7 @@ export function app_code_lesson_token_order() {
   let lesson = app_code_lesson_base(
     name_id,
     above,
-    2,
+    1,
     batch,
     app_code_lesson_token_order_example_choose,
     null,
