@@ -125,12 +125,15 @@ export function js_function_flow_read(f_name, ast, known) {
     }
   }
   js_visit(ast, binding_read);
+  ("Every name whose being a repo function was asked, so an answer kept from an earlier reading can be trusted only while each of these is still answered the same way.");
+  let asked = [];
   for (let name of js_names_unbound_mentioned_referenced(ast, referenced)) {
     if (imported.has(name) || equal(name, f_name)) {
       continue;
     }
     ("A bound name is set aside only from being taken for a repo function. An outside name that is also bound somewhere is still counted, because the binding may sit in a scope that does not cover every use.");
     let b4 = allowed_names.includes(name);
+    asked.push(name);
     if (known.has(name)) {
       let b3 = bound.has(name);
       if (not(b3)) {
@@ -187,7 +190,24 @@ export function js_function_flow_read(f_name, ast, known) {
       called.add(x.callee);
     }
   }
-  js_visit(ast, called_read);
+  ("Every name read inside each node, gathered in one walk of the file: each reading name is added to every node around it. Asking the walker again for each node that is asked about walked the same lines once for every node around them - measured 2026-10-11, nine in every ten seconds of reading the repo went there.");
+  ("The answer is the one a walk of that node alone gives, because whether a name reads a value or only names a key is settled by the node holding it, and that node sits inside every node around the name except the name itself - which is never asked about as a key.");
+  let inside = new Map();
+  function inside_read(v) {
+    let x = v.node;
+    if (not_equal(x.type, "Identifier") || not(referenced.has(x))) {
+      return;
+    }
+    for (let a of v.stack) {
+      if (not(js_node_is(a))) {
+        continue;
+      }
+      if (not(inside.has(a))) {
+        inside.set(a, []);
+      }
+      inside.get(a).push(x);
+    }
+  }
   let names_known = new Map();
   function names(node) {
     if (equal(node, null) || equal(node, undefined)) {
@@ -198,7 +218,7 @@ export function js_function_flow_read(f_name, ast, known) {
     let b5 = names_known.has(node);
     if (not(b5)) {
       let found = new Set();
-      for (let n of js_identifiers_referenced_nodes(node)) {
+      for (let n of inside.get(node) ?? []) {
         let itself = imported.has(n.name) && not(called.has(n));
         found.add(itself ? "(the function " + n.name + ")" : n.name);
       }
@@ -232,7 +252,6 @@ export function js_function_flow_read(f_name, ast, known) {
       key_reads.add(x);
     }
   }
-  js_visit(ast, key_read);
   let aliases = new Map();
   function alias_add(bound, data, via, gate) {
     "Via, as for worked-out-from, is a repo function the line changes things through, followed only if it does change what it is handed. Gate is a repo function whose answer this made-up name stands for: the function is always reported, and what it was handed is followed only if it can hand back what it was handed.";
@@ -439,7 +458,14 @@ export function js_function_flow_read(f_name, ast, known) {
     }
     used_in.get(x.name).push(host);
   }
-  js_visit(ast, use_read);
+  ("The readings above share one walk of the file, since none needs what another finds, and nothing asks what any found until the walk below. A walk costs more than any one reading done on it - measured 2026-10-11, most of the time spent reading the repo.");
+  function gather_read(v) {
+    called_read(v);
+    inside_read(v);
+    key_read(v);
+    use_read(v);
+  }
+  js_visit(ast, gather_read);
   function node_read(v) {
     let x = v.node;
     let stack = v.stack.slice(0, -1);
@@ -741,6 +767,7 @@ export function js_function_flow_read(f_name, ast, known) {
     machine: [...new Set(machine)],
     reflect: [...new Set(reflect)],
     strange: [...new Set(strange)],
+    asked,
   };
   return read;
 }
