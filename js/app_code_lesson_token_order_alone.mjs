@@ -71,7 +71,7 @@ export function app_code_lesson_token_order_alone() {
     null,
     quizzes_get,
     app_code_tokens_choose_label,
-    app_code_tokens_chips,
+    app_code_tokens_order_div,
   );
   return lesson;
 }

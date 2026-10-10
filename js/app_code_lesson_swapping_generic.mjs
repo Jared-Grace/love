@@ -1,3 +1,4 @@
+import { eval_expression_confined } from "./eval_expression_confined.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
@@ -42,7 +43,7 @@ export function app_code_lesson_swapping_generic(config) {
       op,
       want_true,
       wrap,
-      eval,
+      eval_expression_confined,
     );
     let pair = list_random_item(pairs);
     let a = pair[0];

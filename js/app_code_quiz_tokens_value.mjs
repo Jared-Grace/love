@@ -1,3 +1,4 @@
+import { eval_expression_confined } from "./eval_expression_confined.mjs";
 import { catch_null } from "./catch_null.mjs";
 import { list_join } from "./list_join.mjs";
 export function app_code_quiz_tokens_value(token_list) {
@@ -5,7 +6,7 @@ export function app_code_quiz_tokens_value(token_list) {
   "Asked of every rearrangement of an unscramble, so failing has to be as ordinary as succeeding. A row that will not read is not a mistake anybody made; it is the usual answer, and the asking is what tells the few that read from the many that do not.";
   function run() {
     let source = list_join(token_list, " ");
-    let value = eval(source);
+    let value = eval_expression_confined(source);
     return value;
   }
   let r = catch_null(run);

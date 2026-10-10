@@ -33,11 +33,6 @@ export function app_code_lesson_token_order() {
     app_code_quiz_tokens_order,
   );
   let order_label = "Its tokens, in order:";
-  function tokens_div(container, text) {
-    "the tokens of a worked example, in the order they are read";
-    let div = html_div(container);
-    html_text_set_code_dark_lines(div, text);
-  }
   function above(root, context) {
     "what a token is, as a piece we unscramble code out of, then the order the tokens of a program are read in";
     let box_one = app_code_container_light_blue(root);
@@ -95,7 +90,7 @@ export function app_code_lesson_token_order() {
     null,
     quizzes_get,
     app_code_tokens_choose_label_guided,
-    tokens_div,
+    app_code_tokens_order_div,
   );
   return lesson;
 }
