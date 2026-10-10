@@ -1,11 +1,12 @@
-import { permission_grant_refusals_parameters_object } from "./permission_grant_refusals_parameters_object.mjs";
-import { permission_grant_refusals_context_destructive } from "./permission_grant_refusals_context_destructive.mjs";
-import { permission_grant_refusals_parameters } from "./permission_grant_refusals_parameters.mjs";
-import { permission_grant_seam_chains_text } from "./permission_grant_seam_chains_text.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
+import { list_add } from "./list_add.mjs";
+import { permission_grant_refusals_context_destructive } from "./permission_grant_refusals_context_destructive.mjs";
+import { permission_grant_seam_chains_text } from "./permission_grant_seam_chains_text.mjs";
+import { permission_grant_refusals_code_overwrite } from "./permission_grant_refusals_code_overwrite.mjs";
+import { permission_grant_refusals_parameters } from "./permission_grant_refusals_parameters.mjs";
+import { permission_grant_refusals_parameters_object } from "./permission_grant_refusals_parameters_object.mjs";
 export async function permission_grant_refusals_context(unaliased, context) {
   "every reason this dispatcher function must not be handed an automatic allow rule — an empty list is the clean answer";
   "each reason is a whole sentence rather than a code, because the one who reads it is deciding by hand whether to grant anyway";
@@ -45,6 +46,11 @@ export async function permission_grant_refusals_context(unaliased, context) {
         permission_grant_seam_chains_text(delete_paths),
     );
   }
+  await permission_grant_refusals_code_overwrite(
+    unaliased,
+    refusals,
+    remembered,
+  );
   permission_grant_refusals_parameters(ast, params, refusals, unaliased);
   permission_grant_refusals_parameters_object(ast, params, refusals, unaliased);
   return refusals;
