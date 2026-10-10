@@ -1,3 +1,4 @@
+import { app_code_lesson_quiz_question_tokens_explain } from "./app_code_lesson_quiz_question_tokens_explain.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
@@ -11,7 +12,6 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_braces_two_nested } from "./app_code_braces_two_nested.mjs";
 import { app_code_braces_paired_with_order } from "./app_code_braces_paired_with_order.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
 import { app_code_lesson_quiz_tokens_tap_braces } from "./app_code_lesson_quiz_tokens_tap_braces.mjs";
@@ -61,7 +61,7 @@ export function app_code_lesson_token_order_braces() {
   );
   let forwards = {
     question_label: "",
-    on_question: app_code_lesson_quiz_question_none,
+    on_question: app_code_lesson_quiz_question_tokens_explain,
     answer_label: "Choose each token in order:",
     answer_on_button: html_text_set_code_dark_lines,
     answer_count_override: null,

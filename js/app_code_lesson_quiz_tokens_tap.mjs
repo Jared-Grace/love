@@ -1,7 +1,6 @@
-import { html_style_padding_x } from "./html_style_padding_x.mjs";
-import { app_code_expression_operator_chip } from "./app_code_expression_operator_chip.mjs";
+import { app_code_token_chip_thin } from "./app_code_token_chip_thin.mjs";
+import { each } from "./each.mjs";
 import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
-import { app_code_expression_refusals_clear } from "./app_code_expression_refusals_clear.mjs";
 import { list_clear } from "./list_clear.mjs";
 import { app_code_expression_operator_chip_uncolored } from "./app_code_expression_operator_chip_uncolored.mjs";
 import { app_code_expression_chosen_style_assign } from "./app_code_expression_chosen_style_assign.mjs";
@@ -84,9 +83,7 @@ export function app_code_lesson_quiz_tokens_tap(
     html_span_text(div, between);
     let text = text_slice(code, start, end);
     let span = html_span_text(div, text);
-    app_code_expression_operator_chip(span);
-    ("thinner at the sides than an operator's chip, because here every token of a line wears one, and the full room either side of each pushed a phone-wide line onto two");
-    html_style_padding_x(span, "1px");
+    app_code_token_chip_thin(span);
     function on_tap() {
       let next = property_get(state, "next");
       let right = equal(index, next);
@@ -98,7 +95,7 @@ export function app_code_lesson_quiz_tokens_tap(
         return;
       }
       html_visibility_hidden(note_div);
-      app_code_expression_refusals_clear(refused);
+      each(refused, app_code_token_chip_thin);
       list_clear(refused);
       html_data_set_test_happy_remove(span);
       app_code_expression_operator_chip_uncolored(span);
