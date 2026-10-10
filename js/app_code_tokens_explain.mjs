@@ -12,7 +12,8 @@ export function app_code_tokens_explain(parent) {
   ("The example has both braces, so the learner sees a { and a } each counted as a token of its own before any brace lesson leans on that.");
   html_div_cycle_code(parent, ["Each piece of code is called a token"]);
   let example = "if (a) { }";
-  html_div_cycle_code(parent, ["Here are the tokens of ", example, ":"]);
+  html_div_cycle_code(parent, ["Suppose this is our code:"]);
+  html_div_cycle_code(parent, ["", example]);
   let order = app_code_quiz_tokens_order(example);
   let tokens = text_split_space(order);
   let parts = [""];
@@ -21,8 +22,13 @@ export function app_code_tokens_explain(parent) {
   }
   each(tokens, part_add);
   let colors = app_code_tokens_explain_colors();
+  html_div_cycle_code(parent, ["Then we can add colors to each token/piece:"]);
   app_code_tokens_painted(parent, example, colors, false);
+  html_div_cycle_code(parent, [
+    "Therefore, here are the colored tokens separated from each other:",
+  ]);
   app_code_tokens_painted(parent, example, colors, true);
+  html_div_cycle_code(parent, ["And here are the tokens uncolored:"]);
   html_div_cycle_code(parent, parts);
   html_div_cycle_code(parent, [
     "We read the tokens of code left to right, then top to bottom",
