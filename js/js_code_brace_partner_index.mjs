@@ -42,5 +42,5 @@ export function js_code_brace_partner_index(code, index) {
       return i;
     }
   }
-  error();
+  error("no brace pairs with the brace at index");
 }

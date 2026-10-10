@@ -6,6 +6,9 @@ import { multiply } from "./multiply.mjs";
 import { divide } from "./divide.mjs";
 import { modulo } from "./modulo.mjs";
 import { subtract } from "./subtract.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
 export function js_arithmetic_value(code) {
   "the value of a line of JS arithmetic - numbers, + - * / % **, a sign in front, and parentheses - worked out without running it as code: (2 + 3) * 4 comes back as 20";
   "Comparisons are answered too - < > <= >= and the strict === and !== - because the lessons that swap the two sides of an operator ask whether 3 < 5 === 5 < 3, and that question is a comparison of two pieces of arithmetic. The loose == and != are refused, as nothing here writes them and a lesson teaches the strict pair.";
@@ -177,19 +180,19 @@ export function js_arithmetic_value(code) {
       if (equal(op, "<")) {
         at = at + 1;
         let right4 = additive();
-        value = value < right4;
+        value = less_than(value, right4);
       } else if (equal(op, ">")) {
         at = at + 1;
         let right5 = additive();
-        value = value > right5;
+        value = greater_than(value, right5);
       } else if (equal(op, "<=")) {
         at = at + 1;
         let right6 = additive();
-        value = value <= right6;
+        value = less_than_equal(value, right6);
       } else if (equal(op, ">=")) {
         at = at + 1;
         let right7 = additive();
-        value = value >= right7;
+        value = greater_than_equal(value, right7);
       } else {
         return value;
       }
@@ -202,11 +205,11 @@ export function js_arithmetic_value(code) {
       if (equal(op, "===")) {
         at = at + 1;
         let right8 = relational();
-        value = value === right8;
+        value = equal(value, right8);
       } else if (equal(op, "!==")) {
         at = at + 1;
         let right9 = relational();
-        value = value !== right9;
+        value = not_equal(value, right9);
       } else {
         return value;
       }
