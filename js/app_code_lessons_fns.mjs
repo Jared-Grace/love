@@ -539,6 +539,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_token_order,
     app_code_lesson_token_order_alone,
     app_code_lesson_token_order_braces_colored,
+    app_code_lesson_token_order_braces_only,
     app_code_lesson_if_twice,
     app_code_lesson_if_two_bounds,
     app_code_lesson_if_two_ifs,

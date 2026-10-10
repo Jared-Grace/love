@@ -343,6 +343,9 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_token_order_braces_colored: text_frozen(
       "token_order_braces_colored",
     ),
+    app_code_lesson_token_order_braces_only: text_frozen(
+      "token_order_braces_only",
+    ),
     app_code_lesson_if_else_in_if: text_frozen("if_else_in_if"),
     app_code_lesson_if_else_in_if_else: text_frozen("if_else_outer"),
     app_code_lesson_if_in_else: text_frozen("if_in_else"),
