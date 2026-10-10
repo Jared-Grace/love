@@ -7,7 +7,7 @@ import { list_first } from "./list_first.mjs";
 import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
-import { js_code_if_else_if_else_lines_multiple } from "./js_code_if_else_if_else_lines_multiple.mjs";
+import { js_code_if_else_if_with_else_lines_multiple } from "./js_code_if_else_if_with_else_lines_multiple.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { js_code_else_if_dots } from "./js_code_else_if_dots.mjs";
@@ -49,7 +49,7 @@ export function app_code_lesson_else_if_order() {
     let statement2 = app_code_word_console_log_statement(item2);
     let item3 = list_get(words, 2);
     let statement3 = app_code_word_console_log_statement(item3);
-    let chain = js_code_if_else_if_else_lines_multiple(
+    let chain = js_code_if_else_if_with_else_lines_multiple(
       first_check,
       [statement],
       second_check,

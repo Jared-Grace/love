@@ -6,7 +6,7 @@ import { list_first } from "./list_first.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
-export function js_code_if_else_if_else_lines_multiple(
+export function js_code_if_else_if_with_else_lines_multiple(
   condition,
   statements_yes,
   condition_else,
