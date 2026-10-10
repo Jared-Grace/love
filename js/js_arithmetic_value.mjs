@@ -8,6 +8,7 @@ import { modulo } from "./modulo.mjs";
 import { subtract } from "./subtract.mjs";
 export function js_arithmetic_value(code) {
   "the value of a line of JS arithmetic - numbers, + - * / % **, a sign in front, and parentheses - worked out without running it as code: (2 + 3) * 4 comes back as 20";
+  "Comparisons are answered too - < > <= >= and the strict === and !== - because the lessons that swap the two sides of an operator ask whether 3 < 5 === 5 < 3, and that question is a comparison of two pieces of arithmetic. The loose == and != are refused, as nothing here writes them and a lesson teaches the strict pair.";
   "It stands where eval stood in the lessons that work out the answer to a line they built themselves. eval gave the right number, but it will run anything at all, and a function that reaches it cannot be told apart from one that hands the machine to whatever text it is given. That one call made every code lesson count as dangerous to edit, because the lesson list imports the lessons that held it. This answers only arithmetic and throws on anything else, so it is safe whatever text arrives.";
   "It follows JS's own rules rather than school arithmetic, so it agrees with eval on every line it accepts: * / % before + -, left to right within a level, ** binding tightest and grouping to the right, a sign in front of the left side of ** refused as JS refuses it, and ++ or -- written together refused as JS refuses them. A number with a leading 0 is refused too, because module code is strict and strict JS refuses it.";
   let tokens = [];
@@ -31,15 +32,29 @@ export function js_arithmetic_value(code) {
       i = i + text.length;
       continue;
     }
+    let triple = code.slice(i, i + 3);
+    if (equal(triple, "===") || equal(triple, "!==")) {
+      tokens.push({
+        op: triple,
+      });
+      i = i + 3;
+      continue;
+    }
     let pair = code.slice(i, i + 2);
-    if (equal(pair, "**") || equal(pair, "++") || equal(pair, "--")) {
+    if (
+      equal(pair, "**") ||
+      equal(pair, "++") ||
+      equal(pair, "--") ||
+      equal(pair, "<=") ||
+      equal(pair, ">=")
+    ) {
       tokens.push({
         op: pair,
       });
       i = i + 2;
       continue;
     }
-    if ("+-*/%()".includes(c)) {
+    if ("+-*/%()<>".includes(c)) {
       tokens.push({
         op: c,
       });
@@ -71,7 +86,7 @@ export function js_arithmetic_value(code) {
       return r2;
     }
     if (equal(token.op, "(")) {
-      let value = additive();
+      let value = equality();
       let left = peek();
       if (not_equal(left, ")")) {
         throw new Error("a ( is never closed: " + code);
@@ -155,7 +170,49 @@ export function js_arithmetic_value(code) {
       }
     }
   }
-  let result = additive();
+  function relational() {
+    let value = additive();
+    while (true) {
+      let op = peek();
+      if (equal(op, "<")) {
+        at = at + 1;
+        let right4 = additive();
+        value = value < right4;
+      } else if (equal(op, ">")) {
+        at = at + 1;
+        let right5 = additive();
+        value = value > right5;
+      } else if (equal(op, "<=")) {
+        at = at + 1;
+        let right6 = additive();
+        value = value <= right6;
+      } else if (equal(op, ">=")) {
+        at = at + 1;
+        let right7 = additive();
+        value = value >= right7;
+      } else {
+        return value;
+      }
+    }
+  }
+  function equality() {
+    let value = relational();
+    while (true) {
+      let op = peek();
+      if (equal(op, "===")) {
+        at = at + 1;
+        let right8 = relational();
+        value = value === right8;
+      } else if (equal(op, "!==")) {
+        at = at + 1;
+        let right9 = relational();
+        value = value !== right9;
+      } else {
+        return value;
+      }
+    }
+  }
+  let result = equality();
   if (not_equal(at, tokens.length)) {
     throw new Error("not arithmetic: " + code);
   }
