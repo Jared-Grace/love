@@ -72,10 +72,10 @@ export function app_code_lesson_brace_order_two() {
       "{ }",
       " has a colour of its own. Under the code are only its braces, in the order we read them:",
     ]);
-    let colors_two = app_code_braces_colors_random();
+    let t = app_code_braces_two_ifs();
+    let colors_two = app_code_braces_colors_next(t);
     let first_two = list_get(colors_two, 0);
     let second_two = list_get(colors_two, 1);
-    let t = app_code_braces_two_ifs();
     app_code_braces_paired_with_order_colors(box_two, t, colors_two);
     app_code_div_braces_painted(box_two, [
       ["The first ", "if", " ends with "],
@@ -101,7 +101,8 @@ export function app_code_lesson_brace_order_two() {
     app_code_braces_paired_with_order(box_three, e);
     let box_four = app_code_container_light_blue(root);
     html_div_cycle_code(box_four, ["Here one ", "if", " is inside the other:"]);
-    let colors = app_code_braces_colors_random();
+    let n = app_code_braces_two_nested();
+    let colors = app_code_braces_colors_next(n);
     let outer = list_get(colors, 0);
     let inner = list_get(colors, 1);
     let left_outer = {
@@ -120,7 +121,6 @@ export function app_code_lesson_brace_order_two() {
       brace: right,
       color: inner,
     };
-    let n = app_code_braces_two_nested();
     app_code_braces_paired_with_order_colors(box_four, n, colors);
     app_code_div_braces_painted(box_four, [
       ["There are two ", left, ": "],

@@ -2712,6 +2712,7 @@
       "Bash(node scripts/ai.mjs commons_pictures_search:*)",
       "Bash(node scripts/ai.mjs bible_glyph_chapters_name_badges_seated_draw:*)",
       "Bash(node scripts/ai.mjs function_new_from_temp_multiple:*)",
+      "Bash(node scripts/ai.mjs function_overwrite_from_temp_edit_safe:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -5313,6 +5314,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args commons_pictures_search:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args bible_glyph_chapters_name_badges_seated_draw:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args function_new_from_temp_multiple:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args function_overwrite_from_temp_edit_safe:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -7913,6 +7915,7 @@
       "Bash(node scripts/aig.mjs commons_pictures_search:*)",
       "Bash(node scripts/aig.mjs bible_glyph_chapters_name_badges_seated_draw:*)",
       "Bash(node scripts/aig.mjs function_new_from_temp_multiple:*)",
+      "Bash(node scripts/aig.mjs function_overwrite_from_temp_edit_safe:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -10513,7 +10516,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args app_bible_card_claims_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args commons_pictures_search:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args bible_glyph_chapters_name_badges_seated_draw:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args function_new_from_temp_multiple:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args function_new_from_temp_multiple:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args function_overwrite_from_temp_edit_safe:*)"
     ],
     "defaultMode": "acceptEdits"
   },

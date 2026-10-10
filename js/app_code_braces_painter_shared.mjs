@@ -13,7 +13,7 @@ export function app_code_braces_painter_shared() {
     let order = app_code_braces_sequence(code);
     let missing = property_exists_not(colors_by_order, order);
     if (missing) {
-      let random = app_code_braces_colors_random();
+      let random = app_code_braces_colors_next(code);
       property_set(colors_by_order, order, random);
     }
     let colors = property_get(colors_by_order, order);

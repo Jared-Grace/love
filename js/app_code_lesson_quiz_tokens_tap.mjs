@@ -64,7 +64,7 @@ export function app_code_lesson_quiz_tokens_tap(
   html_style_code_dark(div);
   html_style_white_space(div, "pre-wrap");
   html_text_align_left(div);
-  let colors = app_code_braces_colors_random();
+  let colors = app_code_braces_colors_next(code);
   let lines = [];
   function line_add(row) {
     "a labelled line under the code, empty until a token it keeps is chosen";

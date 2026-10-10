@@ -32,7 +32,7 @@ export function app_code_lesson_quiz_braces_order(
   let variations = [tokens];
   let chosen = [];
   ("the colours are put in a random order once for the question, so a brace keeps the colour it was given while more are tapped after it; and the answer to show is said once, because there is only one");
-  let colors = app_code_braces_colors_random();
+  let colors = app_code_braces_colors_next(sequence);
   correction_code_set(sequence);
   let buttons = [];
   let pieces = {
