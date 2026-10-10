@@ -1,30 +1,30 @@
-import { html_style_set } from "./html_style_set.mjs";
-import { object_property_names } from "./object_property_names.mjs";
-import { equal } from "./equal.mjs";
-import { subtract } from "./subtract.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { not } from "./not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_font_sans_serif_set_html } from "./html_font_sans_serif_set_html.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_element } from "./html_element.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { json_to } from "./json_to.mjs";
 import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
+import { equal } from "./equal.mjs";
+import { subtract } from "./subtract.mjs";
+import { not } from "./not.mjs";
 import { ebible_offline_chapter_codes_name } from "./ebible_offline_chapter_codes_name.mjs";
-import { catch_null_async } from "./catch_null_async.mjs";
 import { ebible_offline_kept_any_get } from "./ebible_offline_kept_any_get.mjs";
+import { catch_null_async } from "./catch_null_async.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { ebible_chapter_codes_canonical_browser } from "./ebible_chapter_codes_canonical_browser.mjs";
+import { ebible_offline_store } from "./ebible_offline_store.mjs";
 import { indexeddb_keys_backend } from "./indexeddb_keys_backend.mjs";
 import { ebible_offline_database } from "./ebible_offline_database.mjs";
-import { ebible_offline_store } from "./ebible_offline_store.mjs";
 import { global_get } from "./global_get.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
 import { ebible_chapter_codes_browser } from "./ebible_chapter_codes_browser.mjs";
 import { ebible_index_flat } from "./ebible_index_flat.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
+import { object_property_names } from "./object_property_names.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_offline_folders_get } from "./ebible_offline_folders_get.mjs";
 import { ebible_offline_download } from "./ebible_offline_download.mjs";
@@ -104,19 +104,28 @@ export async function bible_offline_check_preview() {
   async function environment() {
     let estimate = null;
     let persisted = null;
-    try {
-      estimate = await navigator.storage.estimate();
-      estimate = {
-        usage: estimate.usage,
-        quota: estimate.quota,
-      };
-    } catch (e) {
-      estimate = String(e);
-    }
-    try {
-      persisted = await navigator.storage.persisted();
-    } catch (e) {
-      persisted = String(e);
+    ("A browser hands a page its storage only over https or on localhost, and a phone opening the dev site over the home network has neither - so the report says that in words rather than as the error the missing object throws.");
+    let storage = navigator.storage;
+    if (not(storage)) {
+      let absent =
+        "navigator.storage is absent - this page is not on https or localhost";
+      estimate = absent;
+      persisted = absent;
+    } else {
+      try {
+        estimate = await storage.estimate();
+        estimate = {
+          usage: estimate.usage,
+          quota: estimate.quota,
+        };
+      } catch (e) {
+        estimate = String(e);
+      }
+      try {
+        persisted = await storage.persisted();
+      } catch (e) {
+        persisted = String(e);
+      }
     }
     let controller = navigator.serviceWorker
       ? navigator.serviceWorker.controller
