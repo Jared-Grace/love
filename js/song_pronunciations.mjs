@@ -5,9 +5,11 @@ export function song_pronunciations() {
   let pronunciations = {
     asaph: "a-saf",
     choirmaster: "choir-master",
+    ephraim:'e-frame',
     ezrahite: "Ezra-height",
     rahab: "Ray-hab",
-    zion: "Zai-on",zoan:'zoh-an'
+    zion: "Zai-on",
+    zoan:'zoh-an'
   };
   return pronunciations;
 }
