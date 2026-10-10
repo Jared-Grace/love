@@ -41,20 +41,10 @@ export function app_code_lesson_token_order() {
     html_div_cycle_code(box_one, [
       "When we unscramble code, we build it out of pieces",
     ]);
-    html_div_cycle_code(box_one, ["Each piece is called a token"]);
-    let first = "if (a) {";
-    html_div_cycle_code(box_one, ["Here are the tokens of ", first, ":"]);
-    let first_order = app_code_quiz_tokens_order(first);
-    let first_tokens = text_split_space(first_order);
-    let parts = [""];
-    function part_add(token) {
-      list_add_multiple(parts, [token, " "]);
-    }
-    each(first_tokens, part_add);
-    html_div_cycle_code(box_one, parts);
+    app_code_tokens_explain(box_one);
     let box_two = app_code_container_light_blue(root);
     html_div_cycle_code(box_two, [
-      "We read the tokens of code left to right, then top to bottom, the same way we read a book",
+      "Here is a longer program, and its tokens in the order we read them:",
     ]);
     let nested = app_code_braces_two_nested();
     let nested_order = app_code_quiz_tokens_order(nested);
