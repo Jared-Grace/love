@@ -14,6 +14,12 @@ at the end of a syllable is written with an h after it - ih, eh, uh - because
 a bare i or e there would be read long.  A g before e, i or y is written gh, or
 it would be read as j.
 
+★ AN AY WITH NOTHING BEFORE IT IS WRITTEN A.  Heard 2026-10-10: a song sang
+Asaph spelled ay-saf as Eye-saf, because ay alone is the word aye.  After a
+consonant it holds - Ephraim as ee-fray-im sang right - so only a syllable that
+opens on the vowel and ends on it is written a, as in a-saf, which a generator
+reads long because nothing closes it.
+
 ★ THE STRESS IS NOT WRITTEN.  The hand-made spellings beside it carry none, and
 capitals are the only mark a generator might honour and the one most likely to
 be read as letters spelled out.  The stress is still in the sound returned with
@@ -189,6 +195,8 @@ def syllable_spelled(onset, nucleus, coda):
         head += "h"
     if nucleus == "I" and head:
         middle = "y" if not coda else "igh"
+    if nucleus == "A" and not head and not coda:
+        middle = "a"
     return head + middle + letters_of(coda)
 
 
