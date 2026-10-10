@@ -1,6 +1,6 @@
+import { list_permutations } from "./list_permutations.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_braces_colors_next } from "./app_code_braces_colors_next.mjs";
-import { list_get } from "./list_get.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_code_dark_lines_braces_paired_colors } from "./app_code_code_dark_lines_braces_paired_colors.mjs";
 import { list_join_space } from "./list_join_space.mjs";
@@ -29,14 +29,13 @@ export function app_code_lesson_quiz_braces_choose_colored_generic(
   backwards,
 ) {
   "A quiz choosing between programs and their braces, where everything on the screen wears the one pair of colours, as the human asked 2026-10-11: the code or braces asked about is drawn in two colours, and every choice is drawn in those same two colours.";
-  "Because the colours are part of what is shown, the colours are part of the answer too: a choice is right only when its braces stand in the right order AND each pair wears the colour its partner wears in the question. Two orders of braces times two ways of giving out the two colours makes four choices, where the braces alone made two.";
+  "Because the colours are part of what is shown, the colours are part of the answer too: a choice is right only when its braces stand in the right order AND each pair wears the colour its partner wears in the question. Two orders of braces times two ways of giving out the two colours gives four choices, where the braces alone gave two; three wrong ones are always offered beside the right one, picked at random from the rest, so three pairs also give four.";
   "Forwards (backwards false) shows the code and offers braces; backwards shows the braces and offers code. Backwards, a choice whose braces and colours are exactly the question's is a second right answer, as an if and its else is beside two ifs, so it is never drawn.";
   let code = property_get(qa, "question");
   let sequence = property_get(qa, "answer");
   let colors = app_code_braces_colors_next(code);
-  let first = list_get(colors, 0);
-  let second = list_get(colors, 1);
-  let swapped = [second, first];
+  ("every way of giving out the same colours to the pairs: with two pairs the colours as drawn and swapped, with three pairs six ways");
+  let colorings = list_permutations(colors);
   let question_div = html_div(parent);
   let shown_question = backwards ? sequence : code;
   app_code_code_dark_lines_braces_paired_colors(
@@ -61,7 +60,7 @@ export function app_code_lesson_quiz_braces_choose_colored_generic(
   for (let p of programs) {
     let p_code = property_get(p, "question");
     let p_braces = property_get(p, "answer");
-    for (let cs of [colors, swapped]) {
+    for (let cs of colorings) {
       let key = key_get(p_braces, cs);
       let shown_key = backwards ? p_code + "|" + list_join_space(cs) : key;
       let same = equal(key, right_key);
