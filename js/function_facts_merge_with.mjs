@@ -8,7 +8,7 @@ import { list_difference } from "./list_difference.mjs";
 import { list_remove_every } from "./list_remove_every.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { property_delete } from "./property_delete.mjs";
-export function function_facts_merge_with(facts, data, add) {
+export function function_facts_merge_with(facts, data, adder) {
   arguments_assert(arguments, 3);
   ("Fold what one file says into the index everything is looked up in, putting the file's name into each list with add, which is handed the list and the name and leaves the name in the list exactly once.");
   ("Add is handed in because one file folded on its own wants to scan the list, while every file folded in one go wants to remember what each list holds - the lists of the most-used names run to thousands, and scanning one for every file that uses the name measured 2026-10-11 at most of the three seconds the index took to build.");
@@ -28,7 +28,7 @@ export function function_facts_merge_with(facts, data, add) {
     );
     function identifier_add(i_name) {
       let list = property_initialize(items_to_functions, i_name, []);
-      add(list, f_name);
+      adder(list, f_name);
     }
     each(items, identifier_add);
     let items_old = property_initialize(f_this, property_name, []);
