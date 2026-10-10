@@ -1,3 +1,4 @@
+import { app_code_code_dark_lines_braces_paired } from "./app_code_code_dark_lines_braces_paired.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
@@ -149,6 +150,49 @@ export function app_code_lesson_brace_pair() {
       app_code_lesson_if_after_nested,
       ["an ", "if", " can go inside the ", "{ ... }", " of an ", "if", "."],
     );
+    let box_paired = app_code_container_light_blue(root);
+    html_div_cycle_code(box_paired, [
+      "Braces come in pairs. Every ",
+      left2,
+      " has a matching ",
+      right2,
+      ", which means every ",
+      right2,
+      " has a matching ",
+      left2,
+      " too",
+    ]);
+    html_div_cycle_code(box_paired, [
+      "A ",
+      left2,
+      " begins a section of code, and its ",
+      right2,
+      " ends it",
+    ]);
+    html_div_cycle_code(box_paired, [
+      "Here each pair has a colour of its own:",
+    ]);
+    let if_b3 = js_code_if_lines_multiple("b", [say_joy]);
+    let statements4 = list_concat([say_love], if_b3);
+    let nested3 = js_code_if_lines_multiple("a", statements4);
+    let if_c3 = js_code_if_lines_multiple("c", [say_peace]);
+    let list4 = list_concat(nested3, if_c3);
+    let paired_code = list_join_newline(list4);
+    let paired_div = html_div(box_paired);
+    app_code_code_dark_lines_braces_paired(paired_div, paired_code);
+    html_div_cycle_code(box_paired, [
+      "The ",
+      left2,
+      " after ",
+      "if (a)",
+      " is closed by the last ",
+      right2,
+      " before ",
+      "if (c)",
+      ", not by the ",
+      right2,
+      " nearest to it",
+    ]);
     let if_b2 = js_code_if_lines_multiple("b", [say_joy]);
     let statements3 = list_concat([say_love], if_b2);
     let lines = js_code_if_lines_multiple("a", statements3);
@@ -160,11 +204,7 @@ export function app_code_lesson_brace_pair() {
     let closing_outer = list_get(closings, 1);
     let box_two = app_code_container_light_blue(root);
     html_div_cycle_code(box_two, [
-      "Every ",
-      left2,
-      " has one ",
-      right2,
-      " that closes it. Which ",
+      "Without the colours, which ",
       right2,
       " closes this ",
       left2,
