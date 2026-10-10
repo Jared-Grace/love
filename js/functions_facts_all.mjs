@@ -1,16 +1,17 @@
-import { functions_facts_remembered_write } from "./functions_facts_remembered_write.mjs";
-import { functions_facts_entry } from "./functions_facts_entry.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_paths } from "./functions_paths.mjs";
 import { functions_facts_cache_path } from "./functions_facts_cache_path.mjs";
-import { file_stamps_by_path } from "./file_stamps_by_path.mjs";
-import { file_read_json } from "./file_read_json.mjs";
+import { file_read_held } from "./file_read_held.mjs";
+import { json_from } from "./json_from.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { list_map } from "./list_map.mjs";
-import { property_get } from "./property_get.mjs";
 import { null_not_is } from "./null_not_is.mjs";
+import { file_stamps_by_path } from "./file_stamps_by_path.mjs";
+import { functions_facts_entry } from "./functions_facts_entry.mjs";
+import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
+import { functions_facts_remembered_write } from "./functions_facts_remembered_write.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { list_map } from "./list_map.mjs";
 export async function functions_facts_all() {
   arguments_assert(arguments, 0);
   ("What every function file says about itself, reading only the ones that have");
@@ -30,7 +31,8 @@ export async function functions_facts_all() {
   let f_paths = await functions_paths();
   let cache_path = functions_facts_cache_path();
   async function remembered_read() {
-    let read = await file_read_json(cache_path);
+    let text = await file_read_held(cache_path);
+    let read = json_from(text);
     return read;
   }
   let remembered_or_null = await catch_null_async(remembered_read);
