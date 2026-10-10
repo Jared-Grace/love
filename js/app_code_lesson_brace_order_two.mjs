@@ -1,4 +1,5 @@
-import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
+import { app_code_lesson_token_order_braces } from "./app_code_lesson_token_order_braces.mjs";
+import { html_div_text } from "./html_div_text.mjs";
 import { app_code_braces_two_batch } from "./app_code_braces_two_batch.mjs";
 import { app_code_braces_two_ifs } from "./app_code_braces_two_ifs.mjs";
 import { app_code_braces_two_if_else } from "./app_code_braces_two_if_else.mjs";
@@ -50,16 +51,19 @@ export function app_code_lesson_brace_order_two() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_token_order,
-      ["we read the tokens of code left to right, then top to bottom."],
+      app_code_lesson_token_order_braces,
+      [
+        "the braces of code are its ",
+        left,
+        " and ",
+        right,
+        " tokens, in the order we read them.",
+      ],
     );
-    html_div_cycle_code(box_one, [
-      "The braces of code are its ",
-      left,
-      " and ",
-      right,
-      " tokens, in the order we read them",
-    ]);
+    html_div_text(
+      box_one,
+      "Now we find the braces by reading, without tapping",
+    );
     let box_two = app_code_container_light_blue(root);
     html_div_cycle_code(box_two, [
       "Here one ",
