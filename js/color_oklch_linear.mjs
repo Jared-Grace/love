@@ -1,9 +1,10 @@
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { math_cos_degrees } from "./math_cos_degrees.mjs";
 import { multiply } from "./multiply.mjs";
 import { math_sin_degrees } from "./math_sin_degrees.mjs";
+import { subtract } from "./subtract.mjs";
 import { exponent } from "./exponent.mjs";
+import { integer_is_assert } from "./integer_is_assert.mjs";
 import { list_sum } from "./list_sum.mjs";
 export function color_oklch_linear(lightness, chroma, hue) {
   arguments_assert(arguments, 3);
@@ -38,6 +39,7 @@ export function color_oklch_linear(lightness, chroma, hue) {
   function row_light(row) {
     "one of the three lights, as the weighted sum of what the three kinds of cone in the eye receive";
     function weighted(weight, place) {
+      integer_is_assert(place);
       let cone = cones[place];
       let term = multiply(weight, cone);
       return term;

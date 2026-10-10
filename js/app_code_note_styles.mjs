@@ -7,6 +7,7 @@ import { subtract } from "./subtract.mjs";
 import { range_from } from "./range_from.mjs";
 import { js_comments_get } from "./js_comments_get.mjs";
 import { property_get } from "./property_get.mjs";
+import { integer_is_assert } from "./integer_is_assert.mjs";
 import { app_code_note_names_marked } from "./app_code_note_names_marked.mjs";
 import { app_code_note_marks } from "./app_code_note_marks.mjs";
 import { app_code_note_name_color_or_null } from "./app_code_note_name_color_or_null.mjs";
@@ -36,6 +37,7 @@ export function app_code_note_styles(code) {
     let end = property_get(comment, "end");
     let last = subtract(end, 1);
     for (let index of range_from(start, last)) {
+      integer_is_assert(index);
       styles[index] = [dim, full];
     }
   }
@@ -44,6 +46,7 @@ export function app_code_note_styles(code) {
   for (let mark of marks) {
     let name = mark[0];
     let mark_from = mark[1];
+    integer_is_assert(mark_from);
     let mark_to = mark[2];
     let mark_last = subtract(mark_to, 1);
     styles[mark_from] = [dim, faded];
@@ -53,6 +56,7 @@ export function app_code_note_styles(code) {
       let name_from = add(mark_from, 1);
       let name_last = subtract(mark_last, 1);
       for (let index of range_from(name_from, name_last)) {
+        integer_is_assert(index);
         styles[index] = [color, full];
       }
     }
@@ -61,6 +65,7 @@ export function app_code_note_styles(code) {
   for (let span of spans) {
     let span_last = subtract(span[1], 1);
     for (let index of range_from(span[0], span_last)) {
+      integer_is_assert(index);
       styles[index] = [span[2], full];
     }
   }

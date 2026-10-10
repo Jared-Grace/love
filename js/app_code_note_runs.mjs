@@ -6,6 +6,7 @@ import { text_empty } from "./text_empty.mjs";
 import { range_from } from "./range_from.mjs";
 import { add } from "./add.mjs";
 import { text_slice } from "./text_slice.mjs";
+import { integer_is_assert } from "./integer_is_assert.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 export function app_code_note_runs(code) {
@@ -22,6 +23,7 @@ export function app_code_note_runs(code) {
   for (let index of range_from(0, last_of_code)) {
     let after = add(index, 1);
     let character = text_slice(code, index, after);
+    integer_is_assert(index);
     let next = styles[index];
     if (json_equal(next, style)) {
       saying = list_join_empty([saying, character]);

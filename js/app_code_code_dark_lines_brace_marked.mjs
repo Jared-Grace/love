@@ -1,4 +1,3 @@
-import { equal } from "./equal.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_text_align_left } from "./html_text_align_left.mjs";
@@ -6,6 +5,8 @@ import { text_empty } from "./text_empty.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { app_code_brace_unmarked } from "./app_code_brace_unmarked.mjs";
 import { property_get } from "./property_get.mjs";
+import { integer_is_assert } from "./integer_is_assert.mjs";
+import { equal } from "./equal.mjs";
 import { html_text_code_breakable_add } from "./html_text_code_breakable_add.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_span_text_code_highlight } from "./app_code_span_text_code_highlight.mjs";
@@ -22,6 +23,7 @@ export function app_code_code_dark_lines_brace_marked(component, text) {
   let unmarked = app_code_brace_unmarked(text);
   let code = property_get(unmarked, "code");
   let index = property_get(unmarked, "index");
+  integer_is_assert(index);
   if (equal(index, -1)) {
     html_text_code_breakable_add(component, code, html_span_text);
     return;

@@ -1,7 +1,8 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { list_index_of } from "./list_index_of.mjs";
+import { integer_is_assert } from "./integer_is_assert.mjs";
 import { list_size } from "./list_size.mjs";
 import { less_than } from "./less_than.mjs";
 export function app_code_note_name_color_in_or_null(colors, names, name) {
@@ -18,6 +19,7 @@ export function app_code_note_name_color_in_or_null(colors, names, name) {
   }
   ("A lesson naming more than the list has colours for leaves the rest plain. Giving out a colour twice would say two names were one name, which is the one thing this exists to say truthfully.");
   let index = list_index_of(names, name);
+  integer_is_assert(index);
   let count = list_size(colors);
   if (less_than(index, count)) {
     let color = colors[index];

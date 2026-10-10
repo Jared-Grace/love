@@ -1,7 +1,8 @@
-import { multiply_round } from "./multiply_round.mjs";
-import { html_viewport_readout_update } from "./html_viewport_readout_update.mjs";
 import { not } from "./not.mjs";
+import { property_name_internal_not_assert } from "./property_name_internal_not_assert.mjs";
+import { multiply_round } from "./multiply_round.mjs";
 import { divide } from "./divide.mjs";
+import { html_viewport_readout_update } from "./html_viewport_readout_update.mjs";
 export function html_viewport_readout_when_asked(bar) {
   "when the page's address ends in ?viewport, a small box of numbers in the corner of the screen saying how tall the window is by every measure the browser keeps, and where the bar held against the top really is - read live, so a person on a phone can screenshot it with the browser's own bar showing and again with it slid away, and the two pictures say which height went stale";
   "made for the home bar losing its top row on a phone with the text size turned up, once the browser's bar slid away, 2026-09-28. On a desktop there is no bar that slides, so it cannot be seen here, and measuring on the phone is the only way to know";
@@ -50,6 +51,7 @@ export function html_viewport_readout_when_asked(bar) {
       "pointer-events": "none",
     });
     page.appendChild(probe);
+    property_name_internal_not_assert(unit);
     probes[unit] = probe;
   }
   ("A RENAME BROKE BOTH OF THE PLACES A NUMBER IS ROUNDED HERE, and nothing said so, because this only runs when the address asks for it. One left Math.round_to, which is nothing, so the first reading threw before the box was ever written; the other renamed every read of a record's field to each_one while leaving the field itself called each, so the widest things on the page came out undefined. Found 2026-10-03 by reading the body rather than by running it - a readout nobody can see failing is the one place a crash waits longest.");
