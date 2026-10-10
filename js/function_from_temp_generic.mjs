@@ -16,7 +16,8 @@ export async function function_from_temp_generic(f_name, declaration_write) {
   let file_name = property_get(r, "file_name");
   let base = property_get(r, "base");
   let import_lines = property_get(r, "import_lines");
-  await declaration_write(declaration, base);
+  ("The import lines go to the writer as well, so a writer that checks the draft before writing it checks the very draft that lands. Reading the draft a second time to check it would leave a gap between the check and the write in which the draft could change.");
+  await declaration_write(declaration, base, import_lines);
   let output = await function_auto(base);
   for (let line of import_lines) {
     await function_import_line_add(base, line);

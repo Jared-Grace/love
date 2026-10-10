@@ -1,3 +1,4 @@
+import { app_code_lesson_token_order_braces_two } from "./app_code_lesson_token_order_braces_two.mjs";
 import { app_code_lesson_token_order_braces_only } from "./app_code_lesson_token_order_braces_only.mjs";
 import { app_code_lesson_token_order_braces_colored } from "./app_code_lesson_token_order_braces_colored.mjs";
 import { app_code_lesson_token_order_alone } from "./app_code_lesson_token_order_alone.mjs";
@@ -541,6 +542,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_token_order_alone,
     app_code_lesson_token_order_braces_colored,
     app_code_lesson_token_order_braces_only,
+    app_code_lesson_token_order_braces_two,
     app_code_lesson_if_twice,
     app_code_lesson_if_two_bounds,
     app_code_lesson_if_two_ifs,
