@@ -12,7 +12,7 @@ export function list_adder_unique_sets() {
     if (held.has(item)) {
       return;
     }
-    held.adder(item);
+    held.add(item);
     list.push(item);
   }
   return adder;

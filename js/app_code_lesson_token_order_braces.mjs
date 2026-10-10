@@ -61,24 +61,38 @@ export function app_code_lesson_token_order_braces() {
     "{ { } }",
   );
   ("Its quizzes ask, like any quiz, from the code to what the code gives - here its braces in order - and not for every token chosen one by one, as the human asked 2026-10-11. The code and its pieces are coloured by pair, a piece for every brace, as the human asked 2026-10-11 too; the code is drawn by the quiz itself, so it and the pieces wear the one list of colours.");
+  ("Both ways of choosing come before the writing, as the human asked 2026-10-11: from the code to its braces, then from the braces to the code. Two pairs stand in only two orders, so each choice has two buttons; a wrong button with the same braces as the right one is never drawn, so an if and its else never stands beside two ifs as a second right answer. The colours of each drawing are its own, so a button never matches the code by colour.");
   let forwards = {
-    question_label: "",
-    on_question: app_code_lesson_quiz_question_none,
+    question_label: "Code:",
+    on_question: app_code_code_dark_lines_braces_paired_random,
     answer_label: "Which are its braces, in order?",
+    answer_on_button: app_code_code_dark_lines_braces_paired_random,
+    answer_count_override: null,
+  };
+  let backwards = {
+    question_label: "Braces:",
+    on_question: app_code_code_dark_lines_braces_paired_random,
+    answer_label: "Which code has these braces, in order?",
     answer_on_button: app_code_code_dark_lines_braces_paired_random,
     answer_count_override: null,
   };
   let quizzes_get = app_code_lesson_quizzes_generic({
     lines: false,
     forwards,
-    backwards: forwards,
+    backwards,
     backwards_code: false,
-    backwards_include: false,
-    forwards_include: false,
+    backwards_include: true,
+    forwards_include: true,
     batch_get: batch,
-    forwards_code: true,
-    unscramble_label: "Please write the braces of this code in order:",
-    unscramble_on_answer: app_code_lesson_quiz_braces_order_colored,
+    forwards_code: false,
+    builds_more: [
+      {
+        question_label: "",
+        on_question: app_code_lesson_quiz_question_none,
+        answer_label: "Please write the braces of this code in order:",
+        on_answer: app_code_lesson_quiz_braces_order_colored,
+      },
+    ],
   });
   let painter = app_code_braces_painter_shared();
   function braces_div(container, text) {

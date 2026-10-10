@@ -10,8 +10,8 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { property_delete } from "./property_delete.mjs";
 export function function_facts_merge_with(facts, data, adder) {
   arguments_assert(arguments, 3);
-  ("Fold what one file says into the index everything is looked up in, putting the file's name into each list with add, which is handed the list and the name and leaves the name in the list exactly once.");
-  ("Add is handed in because one file folded on its own wants to scan the list, while every file folded in one go wants to remember what each list holds - the lists of the most-used names run to thousands, and scanning one for every file that uses the name measured 2026-10-11 at most of the three seconds the index took to build.");
+  ("Fold what one file says into the index everything is looked up in, putting the file's name into each list with adder, which is handed the list and the name and leaves the name in the list exactly once.");
+  ("The adder is handed in because one file folded on its own wants to scan the list, while every file folded in one go wants to remember what each list holds - the lists of the most-used names run to thousands, and scanning one for every file that uses the name measured 2026-10-11 at most of the three seconds the index took to build.");
   let f_name = property_get(facts, "f_name");
   ("The tables keyed by names and words are records with no parent, because a word can be anything a file holds - a string reading __proto__ written into an ordinary record would swap out that record's parent rather than be stored, and constructor would read back as a function nobody stored.");
   let functions_empty = object_words_new();
