@@ -1,9 +1,11 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { integer_is_assert } from "./integer_is_assert.mjs";
 import { app_code_brace_mark_left } from "./app_code_brace_mark_left.mjs";
 import { app_code_brace_mark_right } from "./app_code_brace_mark_right.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_brace_marked(code, index) {
   arguments_assert(arguments, 2);
+  integer_is_assert(index);
   ("code with the brace at index pointed at, written as the text a question carries");
   let before = code.slice(0, index);
   let brace = code[index];

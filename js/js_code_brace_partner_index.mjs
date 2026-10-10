@@ -1,13 +1,15 @@
-import { equal } from "./equal.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
-import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { integer_is_assert } from "./integer_is_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
+import { equal } from "./equal.mjs";
 import { assert } from "./assert.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { less_than } from "./less_than.mjs";
 import { error } from "./error.mjs";
 export function js_code_brace_partner_index(code, index) {
   arguments_assert(arguments, 2);
+  integer_is_assert(index);
   ("where the brace pairing with the brace at index stands: the } that closes a {, or the { that opens a }");
   ("Counted, not searched for: walking away from the brace, one of its own kind adds 1 and one of the other kind takes 1 away, and the brace that brings the count back to 0 is its partner. That is the rule a learner is taught, so the answer a quiz marks right is reached the way the learner is asked to reach it.");
   ("A { walks down the code and a } walks up it, because a { is always opened before the } that closes it.");
