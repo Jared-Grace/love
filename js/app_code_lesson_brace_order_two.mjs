@@ -1,17 +1,14 @@
+import { app_code_braces_two_batch } from "./app_code_braces_two_batch.mjs";
+import { app_code_braces_two_ifs } from "./app_code_braces_two_ifs.mjs";
+import { app_code_braces_two_if_else } from "./app_code_braces_two_if_else.mjs";
+import { app_code_braces_two_nested } from "./app_code_braces_two_nested.mjs";
 import { app_code_braces_colors_random } from "./app_code_braces_colors_random.mjs";
 import { app_code_braces_paired_with_order_colors } from "./app_code_braces_paired_with_order_colors.mjs";
 import { app_code_div_braces_painted } from "./app_code_div_braces_painted.mjs";
 import { app_code_braces_painter_shared } from "./app_code_braces_painter_shared.mjs";
 import { html_div } from "./html_div.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
-import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
-import { list_concat } from "./list_concat.mjs";
-import { list_join_newline } from "./list_join_newline.mjs";
-import { js_code_if_else_lines_multiple } from "./js_code_if_else_lines_multiple.mjs";
-import { list_shuffle } from "./list_shuffle.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { app_code_braces_sequence } from "./app_code_braces_sequence.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
@@ -34,41 +31,8 @@ export function app_code_lesson_brace_order_two() {
   ("Placed straight after Which brace pairs with which and straight before The order of the braces, so writing braces out in order is first met with the fewest pairs it can be met with.");
   ("Two pairs can stand in only two orders, { } { } and { { } }, so the only quiz is writing the braces out, where a guess is not right half the time. A quiz choosing the braces of the code would offer two buttons, and a quiz choosing the code of the braces would have two right buttons whenever an if and else stood beside two ifs, since both are { } { }. Both are left to the lesson with three pairs.");
   ("The writing is a first draft by Claude 2026-10-10.");
-  let fruits = fruits_of_the_spirit();
-  let love = list_get(fruits, 0);
-  let joy = list_get(fruits, 1);
-  let say_love = app_code_word_console_log_statement(love);
-  let say_joy = app_code_word_console_log_statement(joy);
-  function nested() {
-    let if_b = js_code_if_lines_multiple("b", [say_joy]);
-    let statements = list_concat([say_love], if_b);
-    let lines = js_code_if_lines_multiple("a", statements);
-    let code = list_join_newline(lines);
-    return code;
-  }
-  function two_ifs() {
-    let if_a = js_code_if_lines_multiple("a", [say_love]);
-    let if_b2 = js_code_if_lines_multiple("b", [say_joy]);
-    let lines2 = list_concat(if_a, if_b2);
-    let code2 = list_join_newline(lines2);
-    return code2;
-  }
-  function if_else() {
-    let lines3 = js_code_if_else_lines_multiple("a", [say_love], [say_joy]);
-    let code3 = list_join_newline(lines3);
-    return code3;
-  }
-  function batch_get() {
-    "the three programs with two pairs of braces, in a random order";
-    let n = nested();
-    let t = two_ifs();
-    let e = if_else();
-    let codes = [n, t, e];
-    list_shuffle(codes);
-    return codes;
-  }
   let batch = app_code_batch_question_answer_fns(
-    batch_get,
+    app_code_braces_two_batch,
     app_code_braces_sequence,
   );
   function above(root, context) {
@@ -93,8 +57,8 @@ export function app_code_lesson_brace_order_two() {
     let colors_two = app_code_braces_colors_random();
     let first_two = list_get(colors_two, 0);
     let second_two = list_get(colors_two, 1);
-    let t2 = two_ifs();
-    app_code_braces_paired_with_order_colors(box_two, t2, colors_two);
+    let t = app_code_braces_two_ifs();
+    app_code_braces_paired_with_order_colors(box_two, t, colors_two);
     app_code_div_braces_painted(box_two, [
       ["The first ", "if", " ends with "],
       {
@@ -115,8 +79,8 @@ export function app_code_lesson_brace_order_two() {
       "else",
       " are one after the other too:",
     ]);
-    let e2 = if_else();
-    app_code_braces_paired_with_order(box_three, e2);
+    let e = app_code_braces_two_if_else();
+    app_code_braces_paired_with_order(box_three, e);
     let box_four = app_code_container_light_blue(root);
     html_div_cycle_code(box_four, ["Here one ", "if", " is inside the other:"]);
     let colors = app_code_braces_colors_random();
@@ -138,8 +102,8 @@ export function app_code_lesson_brace_order_two() {
       brace: right,
       color: inner,
     };
-    let n2 = nested();
-    app_code_braces_paired_with_order_colors(box_four, n2, colors);
+    let n = app_code_braces_two_nested();
+    app_code_braces_paired_with_order_colors(box_four, n, colors);
     app_code_div_braces_painted(box_four, [
       ["There are two ", left, ": "],
       left_outer,
