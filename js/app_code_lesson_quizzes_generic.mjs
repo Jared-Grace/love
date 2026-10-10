@@ -76,6 +76,14 @@ export function app_code_lesson_quizzes_generic(params) {
     }
   }
   each(codes, lambda2);
+  ("a lesson may build more than once on the forwards record, each a quiz of its own with its own answer drawing and its own label, put straight after the first; a lesson that shows the learner how first and then asks with nothing to follow needs two");
+  let builds_more = property_get_or(params, "builds_more", []);
+  function build_more_add(more) {
+    let build = object_copy(forwards);
+    object_assign(build, more);
+    list_add(infos, build);
+  }
+  each(builds_more, build_more_add);
   ("THE QUIZZES ABOUT LINES COME LAST, after every quiz a lesson already had, so a quiz keeps its place in the list and the progress kept against that place still names the same quiz");
   let lines = property_get_or(params, "lines", false);
   if (lines) {
