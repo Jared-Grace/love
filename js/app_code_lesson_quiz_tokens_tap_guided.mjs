@@ -19,5 +19,6 @@ export function app_code_lesson_quiz_tokens_tap_guided(
     true,
     app_code_token_any,
     "Tokens chosen:",
+    false,
   );
 }

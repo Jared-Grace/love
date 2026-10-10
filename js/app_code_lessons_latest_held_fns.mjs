@@ -1,3 +1,4 @@
+import { app_code_lesson_token_order_braces_colored } from "./app_code_lesson_token_order_braces_colored.mjs";
 import { app_code_lesson_token_order_alone } from "./app_code_lesson_token_order_alone.mjs";
 import { app_code_lesson_token_order_braces } from "./app_code_lesson_token_order_braces.mjs";
 import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
@@ -85,11 +86,13 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-10: hold The order of two pairs of braces, put straight before The order of the braces, until the human has read its first draft";
   "2026-10-10: hold The order of the tokens, put straight after Two changes in an if, before any lesson with more than one if, until the human has read its first draft";
   "2026-10-10: hold The order of the tokens, with no blue, put straight after The order of the tokens, until the human has read its first draft";
+  "2026-10-10: hold The order of the tokens, braces colored, put straight after The order of the tokens, with no blue, until the human has read its first draft";
   "2026-10-10: hold The braces among the tokens, put straight after Which brace pairs with which, until the human has read its first draft";
   let fns = [
     app_code_lesson_brace_pair,
     app_code_lesson_token_order,
     app_code_lesson_token_order_alone,
+    app_code_lesson_token_order_braces_colored,
     app_code_lesson_token_order_braces,
     app_code_lesson_brace_order_two,
     app_code_lesson_brace_order,
