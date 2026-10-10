@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { app_code_token_chip_thin } from "./app_code_token_chip_thin.mjs";
 import { each } from "./each.mjs";
 import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
@@ -86,6 +87,11 @@ export function app_code_lesson_quiz_tokens_tap(
     app_code_token_chip_thin(span);
     function on_tap() {
       let next = property_get(state, "next");
+      let chosen = less_than(index, next);
+      if (chosen) {
+        ("a token already chosen cannot be chosen again, so tapping it does nothing at all - it is neither right nor wrong, as the human asked 2026-10-10");
+        return;
+      }
       let right = equal(index, next);
       if (not(right)) {
         html_visibility_visible(note_div);
