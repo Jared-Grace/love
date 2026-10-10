@@ -1,3 +1,6 @@
+import { app_code_tokens_choose_say } from "./app_code_tokens_choose_say.mjs";
+import { app_code_tokens_choose_label_guided } from "./app_code_tokens_choose_label_guided.mjs";
+import { app_code_tokens_choose_label } from "./app_code_tokens_choose_label.mjs";
 import { app_code_braces_two_nested } from "./app_code_braces_two_nested.mjs";
 import { app_code_code_output } from "./app_code_code_output.mjs";
 import { app_code_tokens_chips } from "./app_code_tokens_chips.mjs";
@@ -57,6 +60,8 @@ export function app_code_lesson_token_order() {
       output: nested,
       on_output: app_code_tokens_chips,
     });
+    let box_three = app_code_container_light_blue(root);
+    app_code_tokens_choose_say(box_three, "Now you will ", "choose", true);
   }
   let name_id = app_code_lesson_statement_title_name_id(
     "The order of the tokens",
@@ -65,7 +70,7 @@ export function app_code_lesson_token_order() {
   let forwards = {
     question_label: "",
     on_question: app_code_lesson_quiz_question_none,
-    answer_label: "Choose each token in order, the right choice is blue:",
+    answer_label: app_code_tokens_choose_label_guided,
     answer_on_button: html_text_set_code_dark_lines,
     answer_count_override: null,
   };
@@ -78,12 +83,12 @@ export function app_code_lesson_token_order() {
     forwards_include: false,
     batch_get: batch,
     forwards_code: true,
-    unscramble_label: "Choose each token in order, the right choice is blue:",
+    unscramble_label: app_code_tokens_choose_label_guided,
     unscramble_on_answer: app_code_lesson_quiz_tokens_tap_guided,
     builds_more: [
       {
         on_answer: app_code_lesson_quiz_tokens_tap_next,
-        answer_label: "Choose each token in order:",
+        answer_label: app_code_tokens_choose_label,
       },
     ],
   });
@@ -95,7 +100,7 @@ export function app_code_lesson_token_order() {
     app_code_lesson_token_order_example_choose,
     null,
     quizzes_get,
-    "Choose each token in order, the right choice is blue:",
+    app_code_tokens_choose_label_guided,
     tokens_div,
   );
   return lesson;

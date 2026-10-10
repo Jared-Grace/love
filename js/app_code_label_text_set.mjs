@@ -1,3 +1,5 @@
+import { function_is } from "./function_is.mjs";
+import { html_clear } from "./html_clear.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
@@ -7,6 +9,14 @@ export function app_code_label_text_set(div, label) {
   "say something new in a label that has already been drawn, capitalised the same way the label was capitalised when it was made";
   "The capitalising lives here rather than at each caller for the same reason it lives in the drawing: a label always begins a line, and a lesson writing one should be writing what it says and not where the capitals go.";
   "Split out of the drawing rather than written beside it, so a label cannot be made one way and changed another - the two would drift the day either was touched.";
+  let drawn = function_is(label);
+  if (drawn) {
+    ("a label handed as a drawing rather than as words draws itself into the label, for a label whose words wear more than one colour; its capitals are its own");
+    html_clear(div);
+    label(div);
+    html_visibility_visible(div);
+    return;
+  }
   let empty = text_empty_is(label);
   if (empty) {
     ("asked to say nothing, the words already standing here are kept and made invisible rather than taken away - a line with nothing in it has no height, so emptying the label would pull everything under it up by a line at the very moment the learner is looking at that part of the screen");

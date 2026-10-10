@@ -1,3 +1,4 @@
+import { app_code_tokens_choose_label } from "./app_code_tokens_choose_label.mjs";
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
@@ -62,7 +63,7 @@ export function app_code_lesson_token_order_braces() {
   let forwards = {
     question_label: "",
     on_question: app_code_lesson_quiz_question_none,
-    answer_label: "Choose each token in order:",
+    answer_label: app_code_tokens_choose_label,
     answer_on_button: html_text_set_code_dark_lines,
     answer_count_override: null,
   };
@@ -75,7 +76,7 @@ export function app_code_lesson_token_order_braces() {
     forwards_include: false,
     batch_get: batch,
     forwards_code: true,
-    unscramble_label: "Choose each token in order:",
+    unscramble_label: app_code_tokens_choose_label,
     unscramble_on_answer: app_code_lesson_quiz_tokens_tap_braces,
   });
   let painter = app_code_braces_painter_shared();
