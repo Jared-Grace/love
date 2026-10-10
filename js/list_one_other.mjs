@@ -1,5 +1,7 @@
-import { list_multiple_is } from "./list_multiple_is.mjs";
+import { each } from "./each.mjs";
+import { property_name_internal_not_assert } from "./property_name_internal_not_assert.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { list_multiple_is } from "./list_multiple_is.mjs";
 export function list_one_other(
   list,
   one_get,
@@ -7,6 +9,10 @@ export function list_one_other(
   property_name_one,
   property_name_other,
 ) {
+  each(
+    [property_name_one, property_name_other],
+    property_name_internal_not_assert,
+  );
   let one = null;
   let other = [];
   if (list_empty_not_is(list)) {
