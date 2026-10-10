@@ -8,7 +8,7 @@ export function song_pronunciations() {
     ephraim: "ee-fray-im",
     ezrahite: "Ezra-height",
     rahab: "Ray-hab",
-    zion: "Zai-on",
+    zion: "zy-uhn",
     zoan:'zoh-an'
   };
   return pronunciations;
