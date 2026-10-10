@@ -77,6 +77,7 @@ import { visit_filter_cases_gate_run } from "./visit_filter_cases_gate_run.mjs";
 import { js_name_taken_is_cases_gate_run } from "./js_name_taken_is_cases_gate_run.mjs";
 import { js_imports_local_names_cases_gate_run } from "./js_imports_local_names_cases_gate_run.mjs";
 import { js_identifiers_referenced_names_cases_gate_run } from "./js_identifiers_referenced_names_cases_gate_run.mjs";
+import { js_identifier_rename_references_cases_gate_run } from "./js_identifier_rename_references_cases_gate_run.mjs";
 import { js_identifiers_rename_unused_number_suffixes_cases_gate_run } from "./js_identifiers_rename_unused_number_suffixes_cases_gate_run.mjs";
 import { function_imports_gate_run } from "./function_imports_gate_run.mjs";
 import { js_imports_relative_paths_cases_gate_run } from "./js_imports_relative_paths_cases_gate_run.mjs";
@@ -693,6 +694,7 @@ export function qa_gates() {
     js_name_taken_is_cases_gate_run,
     js_imports_local_names_cases_gate_run,
     js_identifiers_referenced_names_cases_gate_run,
+    js_identifier_rename_references_cases_gate_run,
     js_identifiers_rename_unused_number_suffixes_cases_gate_run,
     function_imports_gate_run,
     js_imports_relative_paths_cases_gate_run,
