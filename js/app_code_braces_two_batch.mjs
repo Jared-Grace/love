@@ -13,7 +13,8 @@ export function app_code_braces_two_batch() {
   let e = app_code_braces_two_if_else();
   let apart = [t, e];
   list_shuffle(apart);
-  let codes = [n, list_first(apart)];
+  let first = list_first(apart);
+  let codes = [n, first];
   list_shuffle(codes);
   return codes;
 }
