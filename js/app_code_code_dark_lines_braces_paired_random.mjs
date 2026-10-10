@@ -1,4 +1,4 @@
-import { app_code_braces_colors_random } from "./app_code_braces_colors_random.mjs";
+import { app_code_braces_colors_next } from "./app_code_braces_colors_next.mjs";
 import { app_code_code_dark_lines_braces_paired_colors } from "./app_code_code_dark_lines_braces_paired_colors.mjs";
 export function app_code_code_dark_lines_braces_paired_random(component, code) {
   "code with every pair of braces in a colour of its own, the colours put in a fresh random order for this one drawing. For a drawing nothing else has to agree with, such as one button of a quiz; two drawings that must wear the same colours are handed one list instead.";

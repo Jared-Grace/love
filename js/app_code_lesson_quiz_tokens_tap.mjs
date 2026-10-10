@@ -1,10 +1,10 @@
+import { app_code_braces_colors_next } from "./app_code_braces_colors_next.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_text_align_left } from "./html_text_align_left.mjs";
-import { app_code_braces_colors_random } from "./app_code_braces_colors_random.mjs";
 import { app_code_label_text } from "./app_code_label_text.mjs";
 import { text_space_nb } from "./text_space_nb.mjs";
 import { html_text_set } from "./html_text_set.mjs";

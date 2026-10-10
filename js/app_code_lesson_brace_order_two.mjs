@@ -1,10 +1,10 @@
+import { app_code_braces_colors_next } from "./app_code_braces_colors_next.mjs";
 import { app_code_lesson_token_order_braces } from "./app_code_lesson_token_order_braces.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_code_braces_two_batch } from "./app_code_braces_two_batch.mjs";
 import { app_code_braces_two_ifs } from "./app_code_braces_two_ifs.mjs";
 import { app_code_braces_two_if_else } from "./app_code_braces_two_if_else.mjs";
 import { app_code_braces_two_nested } from "./app_code_braces_two_nested.mjs";
-import { app_code_braces_colors_random } from "./app_code_braces_colors_random.mjs";
 import { app_code_braces_paired_with_order_colors } from "./app_code_braces_paired_with_order_colors.mjs";
 import { app_code_div_braces_painted } from "./app_code_div_braces_painted.mjs";
 import { app_code_braces_painter_shared } from "./app_code_braces_painter_shared.mjs";

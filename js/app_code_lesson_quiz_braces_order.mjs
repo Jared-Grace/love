@@ -1,4 +1,4 @@
-import { app_code_braces_colors_random } from "./app_code_braces_colors_random.mjs";
+import { app_code_braces_colors_next } from "./app_code_braces_colors_next.mjs";
 import { app_code_code_dark_lines_braces_paired_colors } from "./app_code_code_dark_lines_braces_paired_colors.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_div_text } from "./html_div_text.mjs";
