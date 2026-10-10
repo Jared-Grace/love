@@ -199,10 +199,12 @@ export function js_function_flow_read(f_name, ast, known) {
       return;
     }
     for (let a of v.stack) {
-      if (not(js_node_is(a))) {
+      let b11 = js_node_is(a);
+      if (not(b11)) {
         continue;
       }
-      if (not(inside.has(a))) {
+      let b12 = inside.has(a);
+      if (not(b12)) {
         inside.set(a, []);
       }
       inside.get(a).push(x);
