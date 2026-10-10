@@ -1,5 +1,5 @@
-import { app_code_tokens_choose_label } from "./app_code_tokens_choose_label.mjs";
-import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
+import { app_code_code_dark_lines_braces_paired_random } from "./app_code_code_dark_lines_braces_paired_random.mjs";
+import { app_code_lesson_quiz_braces_order } from "./app_code_lesson_quiz_braces_order.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
@@ -15,7 +15,6 @@ import { app_code_braces_paired_with_order } from "./app_code_braces_paired_with
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
-import { app_code_lesson_quiz_tokens_tap_braces } from "./app_code_lesson_quiz_tokens_tap_braces.mjs";
 import { app_code_braces_painter_shared } from "./app_code_braces_painter_shared.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
@@ -61,11 +60,12 @@ export function app_code_lesson_token_order_braces() {
     "The braces among the tokens",
     "{ { } }",
   );
+  ("Its quizzes ask, like any quiz, from the code to what the code gives - here its braces in order, written with a { piece and a } piece - and not for every token chosen one by one, as the human asked 2026-10-11");
   let forwards = {
-    question_label: "",
-    on_question: app_code_lesson_quiz_question_none,
-    answer_label: app_code_tokens_choose_label,
-    answer_on_button: html_text_set_code_dark_lines,
+    question_label: "Code:",
+    on_question: html_text_set_code_dark_lines,
+    answer_label: "Which are its braces, in order?",
+    answer_on_button: app_code_code_dark_lines_braces_paired_random,
     answer_count_override: null,
   };
   let quizzes_get = app_code_lesson_quizzes_generic({
@@ -77,8 +77,8 @@ export function app_code_lesson_token_order_braces() {
     forwards_include: false,
     batch_get: batch,
     forwards_code: true,
-    unscramble_label: app_code_tokens_choose_label,
-    unscramble_on_answer: app_code_lesson_quiz_tokens_tap_braces,
+    unscramble_label: "Please write its braces in order:",
+    unscramble_on_answer: app_code_lesson_quiz_braces_order,
   });
   let painter = app_code_braces_painter_shared();
   function braces_div(container, text) {
