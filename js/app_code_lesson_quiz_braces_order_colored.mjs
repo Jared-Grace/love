@@ -1,3 +1,6 @@
+import { app_code_label_text } from "./app_code_label_text.mjs";
+import { app_shared_spaced_frame_gap } from "./app_shared_spaced_frame_gap.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_braces_colors_next } from "./app_code_braces_colors_next.mjs";
 import { html_div } from "./html_div.mjs";
@@ -47,6 +50,7 @@ export function app_code_lesson_quiz_braces_order_colored(
   let colors = app_code_braces_colors_next(code);
   let code_div = html_div(parent);
   app_code_code_dark_lines_braces_paired_colors(code_div, code, colors);
+  app_code_label_text(parent, "Its braces:");
   let answer_div = html_div(parent);
   let chosen = [];
   function show() {
@@ -89,6 +93,8 @@ export function app_code_lesson_quiz_braces_order_colored(
     let order = property_get(piece, "order");
     let b = app_shared_button(row, brace, on_click);
     paint(b, color);
+    let style_value = app_shared_spaced_frame_gap();
+    html_style_set(b, "margin-right", style_value);
     let entry = {
       b,
       order,
