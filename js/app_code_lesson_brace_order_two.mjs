@@ -22,7 +22,6 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_braces_paired_with_order } from "./app_code_braces_paired_with_order.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-import { app_code_code_dark_lines_braces_paired_random } from "./app_code_code_dark_lines_braces_paired_random.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
 import { app_code_lesson_quiz_braces_order } from "./app_code_lesson_quiz_braces_order.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
@@ -31,7 +30,8 @@ export function app_code_lesson_brace_order_two() {
   ("the order of two pairs of braces: only the braces of a program, written down in the order they stand. An if inside an if gives { { } }, and one if after another gives { } { }");
   ("Asked for by the human 2026-10-10, as an easier step before The order of the braces, which has three pairs in every program.");
   ("Placed straight after Which brace pairs with which and straight before The order of the braces, so writing braces out in order is first met with the fewest pairs it can be met with.");
-  ("Two pairs can stand in only two orders, { } { } and { { } }, so the only quiz is writing the braces out, where a guess is not right half the time. A quiz choosing the braces of the code would offer two buttons, and a quiz choosing the code of the braces would have two right buttons whenever an if and else stood beside two ifs, since both are { } { }. Both are left to the lesson with three pairs.");
+  ("Two pairs can stand in only two orders, { } { } and { { } }, so the only quiz is writing the braces out, where a guess is not right half the time. A quiz choosing the braces of the code would offer two buttons, and a quiz choosing the code of the braces would have two right buttons whenever an if and else stood beside two ifs, since both are { } { }. Both were left to the lesson with three pairs.");
+  ("2026-10-11: both ways of choosing are put back before the writing, as the human asked: the goal is as easy as possible, so choosing is met with two pairs rather than waiting for three, and two buttons still teach, as true or false does in other lessons. A wrong button with the same braces as the right one is never drawn, so an if and its else never stands beside two ifs as a second right answer. The choices are drawn with no colours, since colours drawn apart from the code would not match it.");
   ("The writing is a first draft by Claude 2026-10-10.");
   let batch = app_code_batch_question_answer_fns(
     app_code_braces_two_batch,
@@ -184,16 +184,23 @@ export function app_code_lesson_brace_order_two() {
     question_label,
     on_question: html_text_set_code_dark_lines,
     answer_label: "Which are its braces, in order?",
-    answer_on_button: app_code_code_dark_lines_braces_paired_random,
+    answer_on_button: html_text_set_code_dark_lines,
+    answer_count_override: null,
+  };
+  let backwards = {
+    question_label: "Braces:",
+    on_question: html_text_set_code_dark_lines,
+    answer_label: "Which code has these braces, in order?",
+    answer_on_button: html_text_set_code_dark_lines,
     answer_count_override: null,
   };
   let quizzes_get = app_code_lesson_quizzes_generic({
     lines: false,
     forwards,
-    backwards: forwards,
+    backwards,
     backwards_code: false,
-    backwards_include: false,
-    forwards_include: false,
+    backwards_include: true,
+    forwards_include: true,
     batch_get: batch,
     forwards_code: true,
     unscramble_label: "Please write its braces in order:",
