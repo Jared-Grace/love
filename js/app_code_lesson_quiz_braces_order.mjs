@@ -1,3 +1,5 @@
+import { app_code_braces_colors_random } from "./app_code_braces_colors_random.mjs";
+import { app_code_code_dark_lines_braces_paired_colors } from "./app_code_code_dark_lines_braces_paired_colors.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { property_get } from "./property_get.mjs";
@@ -7,7 +9,6 @@ import { list_join_space } from "./list_join_space.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { text_space_nb } from "./text_space_nb.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { app_code_code_dark_lines_braces_paired } from "./app_code_code_dark_lines_braces_paired.mjs";
 import { app_code_lesson_quiz_pieces_select } from "./app_code_lesson_quiz_pieces_select.mjs";
 export function app_code_lesson_quiz_braces_order(
   parent,

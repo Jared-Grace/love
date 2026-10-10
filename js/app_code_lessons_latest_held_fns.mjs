@@ -1,3 +1,4 @@
+import { app_code_lesson_brace_order_two } from "./app_code_lesson_brace_order_two.mjs";
 import { app_code_lesson_brace_order } from "./app_code_lesson_brace_order.mjs";
 import { app_code_lesson_brace_pair } from "./app_code_lesson_brace_pair.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
@@ -78,8 +79,10 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-09: hold A log inside a while, put straight after 273 While so 274 and 275 move down one, until the human has read its first draft";
   "2026-10-09: hold Which brace pairs with which, put straight after If after an if inside an if, until the human has read its first draft";
   "2026-10-10: hold The order of the braces, put straight after Which brace pairs with which, until the human has read its first draft";
+  "2026-10-10: hold The order of two pairs of braces, put straight before The order of the braces, until the human has read its first draft";
   let fns = [
     app_code_lesson_brace_pair,
+    app_code_lesson_brace_order_two,
     app_code_lesson_brace_order,
     app_code_lesson_while_log,
     app_code_lesson_while_down,
