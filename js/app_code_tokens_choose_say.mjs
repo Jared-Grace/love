@@ -1,3 +1,4 @@
+import { app_code_token_chip_thin } from "./app_code_token_chip_thin.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -18,6 +19,7 @@ export function app_code_tokens_choose_say(parent, lead, word, guided) {
   }
   html_span_text(line, " - the right choice is ");
   let blue = html_span_text(line, "blue");
+  app_code_token_chip_thin(blue);
   app_code_expression_chosen_style_assign(blue);
   html_box_shadow_set(blue, "none");
   html_span_text(line, ":");
