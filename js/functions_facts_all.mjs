@@ -1,8 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_paths } from "./functions_paths.mjs";
 import { functions_facts_cache_path } from "./functions_facts_cache_path.mjs";
-import { file_read_held } from "./file_read_held.mjs";
-import { json_from } from "./json_from.mjs";
+import { file_read_json_held } from "./file_read_json_held.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { file_stamps_by_path } from "./file_stamps_by_path.mjs";
@@ -31,8 +30,7 @@ export async function functions_facts_all() {
   let f_paths = await functions_paths();
   let cache_path = functions_facts_cache_path();
   async function remembered_read() {
-    let text = await file_read_held(cache_path);
-    let read = json_from(text);
+    let read = await file_read_json_held(cache_path);
     return read;
   }
   let remembered_or_null = await catch_null_async(remembered_read);
