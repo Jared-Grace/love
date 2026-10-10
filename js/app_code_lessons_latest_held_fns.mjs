@@ -82,9 +82,11 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-10: hold The order of the braces, put straight after Which brace pairs with which, until the human has read its first draft";
   "2026-10-10: hold The order of two pairs of braces, put straight before The order of the braces, until the human has read its first draft";
   "2026-10-10: hold The order of the tokens, put straight before The order of two pairs of braces, until the human has read its first draft";
+  "2026-10-10: hold The braces among the tokens, put straight after The order of the tokens, until the human has read its first draft";
   let fns = [
     app_code_lesson_brace_pair,
     app_code_lesson_token_order,
+    app_code_lesson_token_order_braces,
     app_code_lesson_brace_order_two,
     app_code_lesson_brace_order,
     app_code_lesson_while_log,

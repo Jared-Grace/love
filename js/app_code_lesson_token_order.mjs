@@ -71,12 +71,9 @@ export function app_code_lesson_token_order() {
     "The order of the tokens",
     "if ( a ) {",
   );
-  function question_none(component, code) {
-    "the program is drawn by the quiz itself, every token ready to be tapped, so nothing is drawn above it";
-  }
   let forwards = {
     question_label: "",
-    on_question: question_none,
+    on_question: app_code_lesson_quiz_question_none,
     answer_label: "Please tap the blue token:",
     answer_on_button: html_text_set_code_dark_lines,
     answer_count_override: null,
