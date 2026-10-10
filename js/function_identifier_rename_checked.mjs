@@ -10,8 +10,7 @@ import { js_imports_local_names } from "./js_imports_local_names.mjs";
 import { js_scopes_shadowing } from "./js_scopes_shadowing.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { assert_json } from "./assert_json.mjs";
-import { js_identifier_rename_references } from "./js_identifier_rename_references.mjs";
-import { function_transform } from "./function_transform.mjs";
+import { function_identifier_replace } from "./function_identifier_replace.mjs";
 export async function function_identifier_rename_checked(
   f_name,
   name,
@@ -70,13 +69,6 @@ export async function function_identifier_rename_checked(
     name,
     scopes: scopes.length,
   });
-  ("Only the mentions that read or bind the value move. The word right of a dot,");
-  ("or a key written in an object, names a property of something else, and");
-  ("renaming it turned a set's held.add into held.adder, which throws on the");
-  ("first call.");
-  function lambda(ast_file) {
-    js_identifier_rename_references(ast_file, name, name_after);
-  }
-  let r = await function_transform(f_name, lambda);
+  let r = await function_identifier_replace(f_name, name, name_after);
   return r;
 }

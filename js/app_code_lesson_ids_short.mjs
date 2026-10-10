@@ -340,6 +340,9 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_token_order: text_frozen("token_order"),
     app_code_lesson_token_order_alone: text_frozen("token_order_alone"),
     app_code_lesson_token_order_braces: text_frozen("token_order_braces"),
+    app_code_lesson_token_order_braces_plain: text_frozen(
+      "token_order_braces_plain",
+    ),
     app_code_lesson_token_order_braces_colored: text_frozen(
       "token_order_braces_colored",
     ),
