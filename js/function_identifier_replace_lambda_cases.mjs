@@ -1,5 +1,5 @@
 import { text_frozen } from "./text_frozen.mjs";
-export function js_identifier_rename_references_cases() {
+export function function_identifier_replace_lambda_cases() {
   "Small written-out files, each with what replaces the name add and the file that comes out, leaving every place the word only names a property, a key or a method alone.";
   "The first case is the one that broke: a rename of a local add reached the word right of a dot and turned a set's held.add into held.adder.";
   "The replacement may be a whole expression rather than a name, because the command typed by hand has always allowed that; the last case keeps it allowed.";
