@@ -1,18 +1,19 @@
+import { app_code_lesson_expression_parentheses_moved_title_name_id } from "./app_code_lesson_expression_parentheses_moved_title_name_id.mjs";
+import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
+import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
+import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
+import { text_replace } from "./text_replace.mjs";
+import { text_split } from "./text_split.mjs";
+import { app_code_lesson_expression_parentheses_moved_arrange } from "./app_code_lesson_expression_parentheses_moved_arrange.mjs";
+import { js_arithmetic_value } from "./js_arithmetic_value.mjs";
+import { app_code_lesson_expression_parentheses_moved_expression } from "./app_code_lesson_expression_parentheses_moved_expression.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { app_code_lesson_expression_parentheses_moved_card_two_places } from "./app_code_lesson_expression_parentheses_moved_card_two_places.mjs";
 import { app_code_lesson_expression_parentheses_moved_card_worked } from "./app_code_lesson_expression_parentheses_moved_card_worked.mjs";
 import { app_code_lesson_expression_parentheses_moved_card_different_answer } from "./app_code_lesson_expression_parentheses_moved_card_different_answer.mjs";
 import { app_code_lesson_expression_parentheses_moved_card_changes_nothing } from "./app_code_lesson_expression_parentheses_moved_card_changes_nothing.mjs";
-import { app_code_lesson_expression_parentheses_moved_expression } from "./app_code_lesson_expression_parentheses_moved_expression.mjs";
-import { app_code_lesson_expression_parentheses_moved_arrange } from "./app_code_lesson_expression_parentheses_moved_arrange.mjs";
-import { text_replace } from "./text_replace.mjs";
-import { app_code_lesson_expression_parentheses_moved_title_name_id } from "./app_code_lesson_expression_parentheses_moved_title_name_id.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
-import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
-import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
-import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { text_split } from "./text_split.mjs";
 export function app_code_lesson_expression_parentheses_moved() {
   "the same three numbers and the same two operators, with the ( and ) in one of two places: (2 + 3) * 4 is 20 and 2 + (3 * 4) is 14. The first parentheses lesson showed the parentheses against no parentheses. This one shows them against THEMSELVES - nothing on the line differs except where the pair sits, so the answer can only come from reading their position. That is also the first place a learner sees parentheses that change nothing: 2 + (3 * 4) is what 2 + 3 * 4 already did, because the parentheses there agree with the * being stronger.";
   "The two wrong answers offered are the values of BOTH placements. One of them is the real answer and the multiple choice drops it as a duplicate, so what is left is always the other placement - the exact mistake of reading the parentheses in the wrong spot.";
@@ -48,8 +49,8 @@ export function app_code_lesson_expression_parentheses_moved() {
       c,
       false,
     );
-    let v5 = eval(grouped);
-    let v6 = eval(spread);
+    let v5 = js_arithmetic_value(grouped);
+    let v6 = js_arithmetic_value(spread);
     let r = [v5, v6];
     return r;
   }

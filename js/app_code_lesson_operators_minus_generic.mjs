@@ -1,24 +1,25 @@
-import { app_code_lesson_validity_operator } from "./app_code_lesson_validity_operator.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
-import { list_shuffle_cycled } from "./list_shuffle_cycled.mjs";
-import { each } from "./each.mjs";
-import { text_left_right_middle_random_space_nb } from "./text_left_right_middle_random_space_nb.mjs";
-import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { each_nested_args_range_1_list_adder } from "./each_nested_args_range_1_list_adder.mjs";
 import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
-import { app_code_lesson_operators_minus_generic_container_both_sides_number } from "./app_code_lesson_operators_minus_generic_container_both_sides_number.mjs";
-import { text_combine_right_fn } from "./text_combine_right_fn.mjs";
-import { boolean_to_text_validity } from "./boolean_to_text_validity.mjs";
-import { throws_not } from "./throws_not.mjs";
-import { html_div_code } from "./html_div_code.mjs";
-import { html_div_cycle_code_multiple } from "./html_div_cycle_code_multiple.mjs";
+import { each_nested_args_range_1_list_adder } from "./each_nested_args_range_1_list_adder.mjs";
+import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
+import { text_left_right_middle_random_space_nb } from "./text_left_right_middle_random_space_nb.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { html_div_code_multiple } from "./html_div_code_multiple.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { each } from "./each.mjs";
+import { list_shuffle_cycled } from "./list_shuffle_cycled.mjs";
+import { js_arithmetic_value } from "./js_arithmetic_value.mjs";
+import { throws_not } from "./throws_not.mjs";
+import { boolean_to_text_validity } from "./boolean_to_text_validity.mjs";
+import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { text_combine_right_fn } from "./text_combine_right_fn.mjs";
 import { text_articled_pad_space } from "./text_articled_pad_space.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
+import { app_code_lesson_operators_minus_generic_container_both_sides_number } from "./app_code_lesson_operators_minus_generic_container_both_sides_number.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { html_div_code_multiple } from "./html_div_code_multiple.mjs";
+import { html_div_cycle_code_multiple } from "./html_div_cycle_code_multiple.mjs";
+import { html_div_code } from "./html_div_code.mjs";
+import { app_code_lesson_validity_operator } from "./app_code_lesson_validity_operator.mjs";
 export function app_code_lesson_operators_minus_generic({
   operator,
   left_transform,
@@ -44,7 +45,7 @@ export function app_code_lesson_operators_minus_generic({
   }
   let symbols_to_answer = function lambda(symbols) {
     function lambda2() {
-      eval(symbols);
+      js_arithmetic_value(symbols);
     }
     let valid = throws_not(lambda2);
     let result = boolean_to_text_validity(valid);
