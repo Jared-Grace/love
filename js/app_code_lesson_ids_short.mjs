@@ -343,6 +343,12 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_token_order_braces_plain: text_frozen(
       "token_order_braces_plain",
     ),
+    app_code_lesson_token_order_braces_three: text_frozen(
+      "token_order_braces_three",
+    ),
+    app_code_lesson_token_order_braces_three_plain: text_frozen(
+      "token_order_braces_three_plain",
+    ),
     app_code_lesson_token_order_braces_colored: text_frozen(
       "token_order_braces_colored",
     ),

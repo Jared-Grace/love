@@ -1,16 +1,10 @@
+import { app_code_braces_three_batch } from "./app_code_braces_three_batch.mjs";
+import { app_code_braces_three_programs } from "./app_code_braces_three_programs.mjs";
 import { app_code_lesson_brace_order_two } from "./app_code_lesson_brace_order_two.mjs";
 import { app_code_braces_paired_with_order } from "./app_code_braces_paired_with_order.mjs";
 import { app_code_code_dark_lines_braces_paired_random } from "./app_code_code_dark_lines_braces_paired_random.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
-import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
-import { list_concat_multiple } from "./list_concat_multiple.mjs";
-import { list_join_newline } from "./list_join_newline.mjs";
-import { list_concat } from "./list_concat.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { app_code_braces_sequence } from "./app_code_braces_sequence.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
@@ -33,14 +27,8 @@ export function app_code_lesson_brace_order() {
   ("There are three quizzes: the code, choose its braces; the braces, choose their code; and the code, write its braces. The second is the one the human asked for first. The order of the quizzes is the order every lesson keeps, forwards, backwards and then the building, rather than the order they were asked for in.");
   ("The code in the quizzes is drawn without colours, because coloured code would let the colours be matched without the braces being read.");
   ("The writing is a first draft by Claude 2026-10-10.");
-  function batch_get() {
-    "four of the five programs";
-    let list = app_code_braces_three_programs();
-    let codes2 = list_shuffle_take(list, 4);
-    return codes2;
-  }
   let batch = app_code_batch_question_answer_fns(
-    batch_get,
+    app_code_braces_three_batch,
     app_code_braces_sequence,
   );
   function above(root, context) {
@@ -65,8 +53,8 @@ export function app_code_lesson_brace_order() {
       " there are more orders. Here is one, with only its braces under it:",
     ]);
     let programs = app_code_braces_three_programs();
-    let code3 = list_get(programs, 1);
-    app_code_braces_paired_with_order(box_two, code3);
+    let code = list_get(programs, 1);
+    app_code_braces_paired_with_order(box_two, code);
     html_div_cycle_code(box_two, [
       "A second ",
       left,
