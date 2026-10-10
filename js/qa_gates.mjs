@@ -1,5 +1,3 @@
-import { giveaway_psalms_songs_whole_chapter_parts_gate_run } from "./giveaway_psalms_songs_whole_chapter_parts_gate_run.mjs";
-import { giveaway_psalms_songs_rows_whole_chapter_parts_cases_gate_run } from "./giveaway_psalms_songs_rows_whole_chapter_parts_cases_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { stop_next_steps_hook_gate_run } from "./stop_next_steps_hook_gate_run.mjs";
@@ -88,6 +86,7 @@ import { js_imports_relative_named_cases_gate_run } from "./js_imports_relative_
 import { functions_imports_unexported_gate_run } from "./functions_imports_unexported_gate_run.mjs";
 import { function_paths_frozen_gate_run } from "./function_paths_frozen_gate_run.mjs";
 import { functions_unbound_gate_run } from "./functions_unbound_gate_run.mjs";
+import { functions_keys_unproven_gate_run } from "./functions_keys_unproven_gate_run.mjs";
 import { js_function_self_call_cases_gate_run } from "./js_function_self_call_cases_gate_run.mjs";
 import { bible_audio_recording_bucket_cases_gate_run } from "./bible_audio_recording_bucket_cases_gate_run.mjs";
 import { js_comment_migratable_cases_gate_run } from "./js_comment_migratable_cases_gate_run.mjs";
@@ -609,6 +608,8 @@ import { app_supper_tl_languages_gate_run } from "./app_supper_tl_languages_gate
 import { prayer_lead_all_creation_gate_run } from "./prayer_lead_all_creation_gate_run.mjs";
 import { app_bible_card_claims_gate_run } from "./app_bible_card_claims_gate_run.mjs";
 import { permission_grants_dispatch_unfenced_gate_run } from "./permission_grants_dispatch_unfenced_gate_run.mjs";
+import { giveaway_psalms_songs_rows_whole_chapter_parts_cases_gate_run } from "./giveaway_psalms_songs_rows_whole_chapter_parts_cases_gate_run.mjs";
+import { giveaway_psalms_songs_whole_chapter_parts_gate_run } from "./giveaway_psalms_songs_whole_chapter_parts_gate_run.mjs";
 export function qa_gates() {
   "Every gate the repo-wide check runs, gathered in one list, so adding a function here is the whole of wiring a new gate in.";
   let gates = [
@@ -700,6 +701,7 @@ export function qa_gates() {
     functions_imports_unexported_gate_run,
     function_paths_frozen_gate_run,
     functions_unbound_gate_run,
+    functions_keys_unproven_gate_run,
     js_function_self_call_cases_gate_run,
     bible_audio_recording_bucket_cases_gate_run,
     js_comment_migratable_cases_gate_run,
