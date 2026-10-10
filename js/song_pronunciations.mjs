@@ -5,7 +5,7 @@ export function song_pronunciations() {
   let pronunciations = {
     asaph: "a-saf",
     choirmaster: "choir-master",
-    ephraim:'e-frame',
+    ephraim: "ee-fray-im",
     ezrahite: "Ezra-height",
     rahab: "Ray-hab",
     zion: "Zai-on",
