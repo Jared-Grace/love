@@ -1,3 +1,4 @@
+import { app_code_brace_pair_example_choose } from "./app_code_brace_pair_example_choose.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
@@ -46,6 +47,7 @@ export function app_code_lesson_brace_pair() {
   ("The wrong answers are every other brace of the kind asked for, each once. In a nested program the nearest one is among them, which is the mistake the learner made.");
   ("There is no backwards quiz, because the question and the answer are the same kind of thing - a program with one brace pointed at - and reading it backwards is the other way of asking, which the screen already asks. There are no quizzes about lines or building the code, because no program here is run.");
   ("The writing is a first draft by Claude 2026-10-09.");
+  ("Its worked examples are chosen on the page since 2026-10-11, as the human asked: one brace is pointed at and the learner taps its pair, so no pair is printed under them.");
   let fruits = fruits_of_the_spirit();
   let love = list_get(fruits, 0);
   let joy = list_get(fruits, 1);
@@ -291,8 +293,8 @@ export function app_code_lesson_brace_pair() {
     above,
     2,
     batch,
-    painter,
-    "Its pair:",
+    app_code_brace_pair_example_choose,
+    null,
     quizzes_get,
     question_label,
     app_code_brace_marked_div,
