@@ -87,6 +87,7 @@ import { functions_imports_unexported_gate_run } from "./functions_imports_unexp
 import { function_paths_frozen_gate_run } from "./function_paths_frozen_gate_run.mjs";
 import { functions_unbound_gate_run } from "./functions_unbound_gate_run.mjs";
 import { functions_keys_unproven_gate_run } from "./functions_keys_unproven_gate_run.mjs";
+import { js_code_confined_cases_gate_run } from "./js_code_confined_cases_gate_run.mjs";
 import { js_function_self_call_cases_gate_run } from "./js_function_self_call_cases_gate_run.mjs";
 import { bible_audio_recording_bucket_cases_gate_run } from "./bible_audio_recording_bucket_cases_gate_run.mjs";
 import { js_comment_migratable_cases_gate_run } from "./js_comment_migratable_cases_gate_run.mjs";
@@ -702,6 +703,7 @@ export function qa_gates() {
     function_paths_frozen_gate_run,
     functions_unbound_gate_run,
     functions_keys_unproven_gate_run,
+    js_code_confined_cases_gate_run,
     js_function_self_call_cases_gate_run,
     bible_audio_recording_bucket_cases_gate_run,
     js_comment_migratable_cases_gate_run,
