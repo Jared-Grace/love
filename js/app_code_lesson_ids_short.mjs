@@ -337,6 +337,7 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_brace_pair: text_frozen("brace_pair"),
     app_code_lesson_brace_order: text_frozen("brace_order"),
     app_code_lesson_brace_order_two: text_frozen("brace_order_two"),
+    app_code_lesson_token_order: text_frozen("token_order"),
     app_code_lesson_if_else_in_if: text_frozen("if_else_in_if"),
     app_code_lesson_if_else_in_if_else: text_frozen("if_else_outer"),
     app_code_lesson_if_in_else: text_frozen("if_in_else"),

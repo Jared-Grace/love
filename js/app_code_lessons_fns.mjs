@@ -1,3 +1,4 @@
+import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
 import { app_code_lesson_brace_order_two } from "./app_code_lesson_brace_order_two.mjs";
 import { app_code_lesson_brace_order } from "./app_code_lesson_brace_order.mjs";
 import { app_code_lesson_brace_pair } from "./app_code_lesson_brace_pair.mjs";
@@ -544,6 +545,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_if_nested,
     app_code_lesson_if_after_nested,
     app_code_lesson_brace_pair,
+    app_code_lesson_token_order,
     app_code_lesson_brace_order_two,
     app_code_lesson_brace_order,
     app_code_lesson_if_else_in_if,

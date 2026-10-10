@@ -1,3 +1,4 @@
+import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
 import { app_code_braces_two_batch } from "./app_code_braces_two_batch.mjs";
 import { app_code_braces_two_ifs } from "./app_code_braces_two_ifs.mjs";
 import { app_code_braces_two_if_else } from "./app_code_braces_two_if_else.mjs";
@@ -46,13 +47,26 @@ export function app_code_lesson_brace_order_two() {
       app_code_lesson_brace_pair,
       ["a ", left, " begins a section of code, and its ", right, " ends it."],
     );
+    app_code_remember_from_lesson(
+      box_one,
+      context,
+      app_code_lesson_token_order,
+      ["we read the tokens of code left to right, then top to bottom."],
+    );
+    html_div_cycle_code(box_one, [
+      "The braces of code are its ",
+      left,
+      " and ",
+      right,
+      " tokens, in the order we read them",
+    ]);
     let box_two = app_code_container_light_blue(root);
     html_div_cycle_code(box_two, [
       "Here one ",
       "if",
       " comes after the other. Each ",
       "{ }",
-      " has a colour of its own. Under the code are only its braces, in the order they stand:",
+      " has a colour of its own. Under the code are only its braces, in the order we read them:",
     ]);
     let colors_two = app_code_braces_colors_random();
     let first_two = list_get(colors_two, 0);
