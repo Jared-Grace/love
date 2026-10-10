@@ -1,6 +1,3 @@
-import { object_property_names } from "./object_property_names.mjs";
-import { less_than } from "./less_than.mjs";
-import { not } from "./not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { functions_paths } from "./functions_paths.mjs";
@@ -12,11 +9,14 @@ import { functions_flow_reads_cache_path } from "./functions_flow_reads_cache_pa
 import { file_read_json } from "./file_read_json.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { not_equal } from "./not_equal.mjs";
+import { not } from "./not.mjs";
+import { less_than } from "./less_than.mjs";
 import { js_flow_read_revive } from "./js_flow_read_revive.mjs";
 import { function_ast } from "./function_ast.mjs";
 import { js_function_flow_read } from "./js_function_flow_read.mjs";
 import { js_flow_read_plain } from "./js_flow_read_plain.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
+import { object_property_names } from "./object_property_names.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function functions_flow_reads() {
   ("What the flow check needs from every function, as a map from name to what ",
@@ -75,7 +75,7 @@ export async function functions_flow_reads() {
     ) {
       return false;
     }
-    let asked = before.read.asked;
+    let asked = before.asked;
     for (let i = 0; less_than(i, asked.length); i++) {
       let left = known.has(asked[i]);
       if (not_equal(left, before.asked_known[i])) {
@@ -88,9 +88,13 @@ export async function functions_flow_reads() {
     let stamp = stamp_of(f_name);
     if (kept_holds(f_name, stamp)) {
       let kept = entries_before[f_name];
+      let read_kept = null;
+      if (not_equal(kept.read, null)) {
+        read_kept = js_flow_read_revive(kept.read);
+      }
       let r2 = {
         f_name,
-        read: js_flow_read_revive(kept.read),
+        read: read_kept,
         kept,
         read_again: false,
       };
@@ -113,16 +117,24 @@ export async function functions_flow_reads() {
     let read = js_function_flow_read(f_name, ast, known);
     let kept = null;
     if (not_equal(stamp, null)) {
+      ("A file holding no exported function of its own name reads as nothing before any name is asked about, so nothing is asked and the file alone decides it.");
+      let asked = [];
+      let plain = null;
+      if (not_equal(read, null)) {
+        asked = read.asked;
+        plain = js_flow_read_plain(read);
+      }
       let asked_known = [];
-      for (let name of read.asked) {
+      for (let name of asked) {
         let v = known.has(name);
         asked_known.push(v);
       }
       kept = {
         written: stamp.written,
         size: stamp.size,
+        asked,
         asked_known,
-        read: js_flow_read_plain(read),
+        read: plain,
       };
     }
     let r4 = {
@@ -143,6 +155,7 @@ export async function functions_flow_reads() {
       reads.set(one.f_name, one.read);
     }
     if (not_equal(one.kept, null)) {
+      ("A kept entry, not a reading, is what is counted, so a file that reads as nothing is remembered as nothing rather than walked again every time.");
       entries[one.f_name] = one.kept;
       entries_count = entries_count + 1;
     }
