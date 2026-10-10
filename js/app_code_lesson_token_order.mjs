@@ -2,7 +2,6 @@ import { app_code_token_order_batch } from "./app_code_token_order_batch.mjs";
 import { app_code_token_order_longer } from "./app_code_token_order_longer.mjs";
 import { app_code_tokens_choose_say } from "./app_code_tokens_choose_say.mjs";
 import { app_code_tokens_choose_label_guided } from "./app_code_tokens_choose_label_guided.mjs";
-import { app_code_tokens_choose_label } from "./app_code_tokens_choose_label.mjs";
 import { app_code_code_output } from "./app_code_code_output.mjs";
 import { app_code_tokens_chips } from "./app_code_tokens_chips.mjs";
 import { app_code_lesson_token_order_example_choose } from "./app_code_lesson_token_order_example_choose.mjs";
@@ -18,11 +17,10 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
 import { app_code_lesson_quiz_tokens_tap_guided } from "./app_code_lesson_quiz_tokens_tap_guided.mjs";
-import { app_code_lesson_quiz_tokens_tap_next } from "./app_code_lesson_quiz_tokens_tap_next.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 export function app_code_lesson_token_order() {
   arguments_assert(arguments, 0);
-  ("the order of the tokens: code is read one token at a time, left to right and then top to bottom, and the learner taps the tokens of a program in that order, first with the next one shown in blue, then with nothing to follow");
+  ("the order of the tokens: code is read one token at a time, left to right and then top to bottom, and the learner taps the tokens of a program in that order, with the next one shown in blue; the lesson after it asks for the same order with nothing to follow");
   ("Asked for by the human 2026-10-10: tap the tokens of the code left to right, top to bottom; first told to tap the blue token over and over, then told to choose the next token with none coloured; and after it the braces { { } } explained as the order of the tokens, which the lesson after this one does.");
   ("Placed straight after Two changes in an if and straight before The same if twice, so the order of the tokens is met before any program with more than one if, as the human asked 2026-10-10; every program it shows has one if only.");
   ("Rejected: its first place, straight after Which brace pairs with which, where it led straight into the order of the braces. The braces lesson after it still reads that order off the tokens, now met many lessons earlier.");
@@ -86,12 +84,7 @@ export function app_code_lesson_token_order() {
     forwards_code: true,
     unscramble_label: app_code_tokens_choose_label_guided,
     unscramble_on_answer: app_code_lesson_quiz_tokens_tap_guided,
-    builds_more: [
-      {
-        on_answer: app_code_lesson_quiz_tokens_tap_next,
-        answer_label: app_code_tokens_choose_label,
-      },
-    ],
+    builds_more: [],
   });
   let lesson = app_code_lesson_base(
     name_id,
