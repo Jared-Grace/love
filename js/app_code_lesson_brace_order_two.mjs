@@ -1,3 +1,4 @@
+import { app_code_lesson_brace_pair_two } from "./app_code_lesson_brace_pair_two.mjs";
 import { app_code_braces_colors_next } from "./app_code_braces_colors_next.mjs";
 import { app_code_lesson_token_order_braces } from "./app_code_lesson_token_order_braces.mjs";
 import { html_div_text } from "./html_div_text.mjs";
@@ -17,7 +18,6 @@ import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_brace_pair } from "./app_code_lesson_brace_pair.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_braces_paired_with_order } from "./app_code_braces_paired_with_order.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
@@ -45,7 +45,7 @@ export function app_code_lesson_brace_order_two() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_brace_pair,
+      app_code_lesson_brace_pair_two,
       ["a ", left, " begins a section of code, and its ", right, " ends it."],
     );
     app_code_remember_from_lesson(
