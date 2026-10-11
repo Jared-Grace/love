@@ -5,6 +5,7 @@ export function app_code_lesson_groups() {
   ("Numbers rather than lesson names, because the human gave the groups as ranges of the numbers a learner sees. A lesson moved across a boundary changes the group it shows in, which is what the ranges mean.");
   ("Each name is its parts in turn, words then code then words, the way a lesson title with code in it is written - so console.log is shown as code, at the human's request.");
   ("2026-10-08: Statements split in three at the human's request: Statements, the lines one at a time, through the remainder at 193; Formulas from 194, the average onward, where a line works out a question about the world - clocks, seats, grids, meetings, rectangles; Branching from 240, the first if. Not picked for 194: Word problems, since the lessons there are code to read rather than stories to solve; nor Arithmetic, which the Operators group already is.");
+  ("2026-10-11: Looping from 296, the first while, at the human's request, named as Branching is, a word then the keyword as code. Not picked: Loops, since Looping matches the roadmap's word for the stage.");
   let groups = [
     {
       parts: ["Identifiers"],
@@ -73,6 +74,10 @@ export function app_code_lesson_groups() {
     {
       parts: ["Branching: ", "if"],
       first: 240,
+    },
+    {
+      parts: ["Looping: ", "while"],
+      first: 296,
     },
   ];
   return groups;
