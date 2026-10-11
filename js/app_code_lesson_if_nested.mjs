@@ -1,7 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
-import { list_get } from "./list_get.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_braces_run_nested } from "./app_code_lesson_braces_run_nested.mjs";
@@ -24,8 +23,7 @@ export function app_code_lesson_if_nested() {
   let fruits = fruits_of_the_spirit();
   function above(root, context) {
     "the section-run lesson remembered, then a && b";
-    let joy = list_get(fruits, 1);
-    let say_joy = app_code_word_console_log_statement(joy);
+    let if_b = js_code_if_dots("b");
     let box_one = app_code_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
@@ -41,9 +39,9 @@ export function app_code_lesson_if_nested() {
     );
     let box_two = app_code_container_light_blue(root);
     html_div_cycle_code(box_two, [
-      "So ",
-      say_joy,
-      " runs only when ",
+      "So the lines inside ",
+      if_b,
+      " run only when ",
       "a && b",
       " is ",
       "true",
