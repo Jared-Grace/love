@@ -1,5 +1,5 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_braces_run_programs_shape } from "./app_code_braces_run_programs_shape.mjs";
@@ -20,12 +20,14 @@ export function app_code_lesson_braces_run_explain_generic(
   names,
 ) {
   arguments_assert(arguments, 4);
-  ("a Does this section run? lesson whose explanation of the shape is drawn by explain(root, context), below the box on what happens to a section that runs and to one that does not; the rest is as ",
+  ("a Does this section run? lesson whose explanation of the shape is drawn by explain(root, context), above the box on what happens to a section that runs and to one that does not; the rest is as ",
     fn_name("app_code_lesson_braces_run_generic"),
     " says");
   ("Made for If and else, whose shape already has a whole explanation in Else, at the human's asking 2026-10-11 that it appear here too.");
   function above(root, context) {
-    "what happens to a section that runs and to one that does not, then what is new about this shape";
+    "what is new about this shape, then what happens to a section that runs and to one that does not";
+    "The box on sections last, straight before the worked example, at the human's asking 2026-10-11: it is the rule the example is answered by, so it sits where the answering begins.";
+    explain(root, context);
     let box_steps = app_code_container_light_blue(root);
     html_div_cycle_code(box_steps, [
       "When a ",
@@ -37,7 +39,6 @@ export function app_code_lesson_braces_run_explain_generic(
       "{ ... }",
       " runs, it is as if only its lines were there",
     ]);
-    explain(root, context);
   }
   function programs() {
     let list = app_code_braces_run_programs_shape(code_get, names);
