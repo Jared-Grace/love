@@ -1,10 +1,11 @@
+import { html_style_white_space } from "./html_style_white_space.mjs";
+import { html_style_font_size } from "./html_style_font_size.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_font_sans_serif_set_html } from "./html_font_sans_serif_set_html.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_element } from "./html_element.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { json_to } from "./json_to.mjs";
 import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
@@ -47,8 +48,8 @@ export async function bible_offline_check_preview() {
   );
   let status = html_p_text(root, "");
   let shown = html_element(root, "pre");
-  html_style_set(shown, "white-space", "pre-wrap");
-  html_style_set(shown, "font-size", "0.75em");
+  html_style_white_space(shown, "pre-wrap");
+  html_style_font_size(shown, "0.75em");
   let report = {};
   function show(step) {
     html_text_content_set(status, step);

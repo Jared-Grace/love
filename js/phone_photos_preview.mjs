@@ -1,3 +1,4 @@
+import { html_style_max_width } from "./html_style_max_width.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div } from "./html_body_div.mjs";
@@ -8,7 +9,6 @@ import { app_shared_button_wide_input } from "./app_shared_button_wide_input.mjs
 import { html_div } from "./html_div.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { html_element } from "./html_element.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { html_media_source_file_set } from "./html_media_source_file_set.mjs";
 import { phone_photos_send } from "./phone_photos_send.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -32,7 +32,7 @@ export async function phone_photos_preview() {
     let row = html_div(listed);
     html_style_margin_top(row, "1em");
     let picture = html_element(row, "img");
-    html_style_set(picture, "max-width", "100%");
+    html_style_max_width(picture, "100%");
     html_media_source_file_set(picture, file);
     let line = html_p_text(row, "Sending...");
     try {

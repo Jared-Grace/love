@@ -1,3 +1,4 @@
+import { html_style_white_space } from "./html_style_white_space.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_container_blue_medium } from "./app_shared_container_blue_medium.mjs";
 import { app_receipts_color_get } from "./app_receipts_color_get.mjs";
@@ -16,7 +17,6 @@ import { app_receipts_payment_get } from "./app_receipts_payment_get.mjs";
 import { equal } from "./equal.mjs";
 import { app_receipts_payment_emoji } from "./app_receipts_payment_emoji.mjs";
 import { app_shared_field_title } from "./app_shared_field_title.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { app_receipts_photos_draw } from "./app_receipts_photos_draw.mjs";
 export function app_receipts_purchase_card_view(parent, purchase, php_per_usd) {
   "$plain parent";
@@ -64,7 +64,7 @@ export function app_receipts_purchase_card_view(parent, purchase, php_per_usd) {
     }
     app_shared_field_title(card, title);
     let shown = html_div_text(card, text);
-    html_style_set(shown, "white-space", "pre-wrap");
+    html_style_white_space(shown, "pre-wrap");
   }
   writing_show("Description", "description");
   app_receipts_photos_draw(card, purchase);

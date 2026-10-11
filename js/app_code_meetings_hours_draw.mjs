@@ -1,9 +1,9 @@
+import { html_style_background } from "./html_style_background.mjs";
 import { html_scroll_across_faded } from "./html_scroll_across_faded.mjs";
 import { app_code_grid_edge_line_pair_draw } from "./app_code_grid_edge_line_pair_draw.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { app_code_grid_edge_line_draw } from "./app_code_grid_edge_line_draw.mjs";
 import { not } from "./not.mjs";
 import { subtract } from "./subtract.mjs";
@@ -121,7 +121,7 @@ export function app_code_meetings_hours_draw(
       let chip_both = html_span(cell);
       html_style_code_dark(chip_both);
       html_span_text(chip_both, t3);
-      html_style_set(chip_both, "background", halves);
+      html_style_background(chip_both, halves);
     } else {
       let chip = app_code_explain_number_colored(t3, color);
       chip(cell);

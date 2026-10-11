@@ -1,3 +1,4 @@
+import { html_style_background } from "./html_style_background.mjs";
 import { html_scroll_across_faded } from "./html_scroll_across_faded.mjs";
 import { app_code_grid_edge_line_pair_draw } from "./app_code_grid_edge_line_pair_draw.mjs";
 import { list_map } from "./list_map.mjs";
@@ -5,7 +6,6 @@ import { list_includes } from "./list_includes.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { app_code_grid_edge_line_draw } from "./app_code_grid_edge_line_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
@@ -143,7 +143,7 @@ export function app_code_rectangles_edges_colored_draw(
         start_color,
         " 50%)",
       ]);
-      html_style_set(chip_both, "background", halves);
+      html_style_background(chip_both, halves);
       return;
     }
     let chip = app_code_explain_number_colored(t3, color);
