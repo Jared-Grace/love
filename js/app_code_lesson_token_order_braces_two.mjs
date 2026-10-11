@@ -18,6 +18,7 @@ export function app_code_lesson_token_order_braces_two() {
   ("Asked for by the human 2026-10-10: a lesson like The order of the tokens, braces only, right before the first lesson that teaches two pairs of braces in the code, looking ahead to the kinds of two pairs of braces at once. Put straight after The order of the tokens, braces only, and straight before The same if twice, the first lesson whose programs hold two pairs.");
   ("Its programs are the three of The braces among the tokens, so the if inside an if and the else are seen here before the lessons that teach them; the opening says so, since only the order of the tokens is asked.");
   ("Rejected: also a while among the programs. It is taught much later, and the three kinds here are the ones the next lessons teach.");
+  ("Since 2026-10-11 The braces among the tokens and the same with no colors come straight after it and before The same if twice, so all three lessons on two pairs of braces come before the first program with two pairs whose output is asked.");
   ("The writing is a first draft by Claude 2026-10-10.");
   let left = js_code_brace_left();
   let right = js_code_brace_right();
