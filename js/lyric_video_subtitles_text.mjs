@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { lyric_video_subtitles_card_event } from "./lyric_video_subtitles_card_event.mjs";
 import { lyric_video_screen_room } from "./lyric_video_screen_room.mjs";
 import { lyric_video_subtitles_styles } from "./lyric_video_subtitles_styles.mjs";
@@ -32,6 +33,7 @@ export function lyric_video_subtitles_text(document) {
   "★ THE MARGINS, THE POINT THE CARD IS CENTRED ON AND HOW MUCH ROOM A CARD HAS ARE ALL ASKED FOR IN ONE PLACE RATHER THAN WORKED OUT HERE. Whoever cuts a chapter into cards has to know the same three things before this ever runs, and while this held its own copy of them the two answers drifted: cards were cut to a width that was never measured and drawn at one that was, and the first anybody knew of it was a card clipped off the top of the frame and standing over the passage line at the foot.";
   "The three kinds of lettering are described somewhere else and dropped in here whole, because the line that names what a style's fields mean has to stand with them and this file only has to know where the section goes.";
   "★ EVERY DIALOGUE LINE IN THE FILE IS WRITTEN BY ONE FUNCTION SOMEWHERE ELSE, WHILE THE LINE NAMING WHAT A DIALOGUE LINE'S FIELDS MEAN STAYS HERE, AND THAT SPLIT IS NOT THE ONE THE STYLES REFUSED. The three styles are three lines standing together in one section, so the line describing them can stand with them. The Dialogue lines cannot: one is written for every sung line and they are laid into the file as the song runs, so nothing can hold them together. What keeps them from drifting from the line above them instead is that there is exactly one place where a Dialogue line is spelled out at all, so a field added to them is added once and read against a format line that is also written once.";
+  "★ THE LAST LINE ENDS WHEN ITS OWN TIME ENDS, NOT THE LEAD EARLIER. Every other line gives way early only so the next one can arrive early, and the last has no next one: shifted, it left Psalm 144:1-8 with no words for its last moments while the singing held on.";
   let width = document.width;
   let height = document.height;
   let font_size = document.font_size;
@@ -87,7 +89,8 @@ export function lyric_video_subtitles_text(document) {
   }
   function line_event(line) {
     let shown_start = subtract(line.start, lead);
-    let shown_end = subtract(line.end, lead);
+    let last = equal(line, lines_heard[subtract(lines_heard.length, 1)]);
+    let shown_end = last ? line.end : subtract(line.end, lead);
     let size_text = lyric_video_line_size_text(line, font_size, characters_max);
     let event = lyric_video_subtitles_dialogue_line({
       start: subtitles_time_text(shown_start),
@@ -105,7 +108,8 @@ export function lyric_video_subtitles_text(document) {
     return event2;
   }
   let v = cards.map(lambda);
-  let events = v.concat(lines_heard.map(line_event));
+  let v2 = lines_heard.map(line_event);
+  let events = v.concat(v2);
   let written = head.concat(events).join("\n") + "\n";
   return written;
 }
