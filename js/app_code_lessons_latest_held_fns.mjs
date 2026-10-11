@@ -1,3 +1,4 @@
+import { app_code_lesson_braces_run } from "./app_code_lesson_braces_run.mjs";
 import { app_code_lesson_brace_lines_two_nested } from "./app_code_lesson_brace_lines_two_nested.mjs";
 import { app_code_lesson_brace_lines_two } from "./app_code_lesson_brace_lines_two.mjs";
 import { app_code_lesson_brace_lines } from "./app_code_lesson_brace_lines.mjs";
@@ -102,7 +103,9 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-11: hold The lines between braces, one inside the other, split from The lines between braces, two pairs (now side by side) and put straight after it, until the human has read its first draft";
   "2026-10-11: The order of two pairs of braces and The order of the braces taken out at the human's asking: their three quizzes, over the same programs, are the quizzes of The braces among the tokens with no colors and its three-pair twin";
   "2026-10-11: Which brace pairs with which, two pairs and the two lessons on the lines between two pairs of braces moved straight after The braces among the tokens, with no colors, at the human's asking, so two pairs of braces are explained fully before The same if twice";
+  "2026-10-11: hold Does this section run?, new at the human's asking straight after If inside an if, until the human has read its first draft";
   let fns = [
+    app_code_lesson_braces_run,
     app_code_lesson_brace_lines_two,
     app_code_lesson_brace_lines_two_nested,
     app_code_lesson_brace_lines,
