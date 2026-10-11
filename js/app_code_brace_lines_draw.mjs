@@ -20,11 +20,11 @@ import { html_style_background_color_set } from "./html_style_background_color_s
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-export function app_code_brace_lines_draw(parent, question, color) {
-  arguments_assert(arguments, 3);
+export function app_code_brace_lines_draw(parent, question, color, chips) {
+  arguments_assert(arguments, 4);
   ("a program with the pointed-at { and the } that closes it drawn in color, every line a pale chip; hands back one record per line, its chip and whether the line stands between the two braces");
   ("A line is between the pair when it starts after the { and ends before the }, so the line holding either brace is not between it.");
-  ("Every line is a pale chip, the same chip every other choosing in this app is drawn with, so the learner can see what can be tapped. The spaces a line is indented by are left outside its chip, so the shape of the code stays as it is written.");
+  ("Every line is a pale chip, the same chip every other choosing in this app is drawn with, so the learner can see what can be tapped; when chips is false the lines are drawn plain, for code that is only read, as the human asked 2026-10-11 so the worked example does not look like buttons. The spaces a line is indented by are left outside its chip, so the shape of the code stays as it is written.");
   ("Drawn once here for the line choosing and for the worked example shown above it, so the example a learner reads and the code they then tap look the same.");
   let unmarked = app_code_brace_unmarked(question);
   let code = property_get(unmarked, "code");
@@ -48,7 +48,9 @@ export function app_code_brace_lines_draw(parent, question, color) {
     let spaces = text_take(line, indent);
     html_span_text(line_div, spaces);
     let chip = html_span_text(line_div, "");
-    app_code_expression_operator_chip(chip);
+    if (chips) {
+      app_code_expression_operator_chip(chip);
+    }
     let cursor = add(start, indent);
     for (let i = cursor; less_than(i, end); i++) {
       if (equal(i, open) || equal(i, close)) {

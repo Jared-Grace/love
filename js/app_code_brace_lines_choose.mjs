@@ -29,7 +29,7 @@ export function app_code_brace_lines_choose(
   ("A line tapped right wears the pair's colour and stays so; a line tapped wrong is turned red until a right one is tapped, and a line already chosen does nothing when tapped again.");
   let color = app_code_braces_color_next();
   html_div_text(parent, "Tap every line between the coloured braces:");
-  let entries = app_code_brace_lines_draw(parent, question, color);
+  let entries = app_code_brace_lines_draw(parent, question, color, true);
   let wanted = [];
   let refused = [];
   let state = {
