@@ -1,18 +1,12 @@
-import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
-import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
-import { app_code_quiz_choice_button } from "./app_code_quiz_choice_button.mjs";
+import { property_get } from "./property_get.mjs";
 import { property_text_to } from "./property_text_to.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
-import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
-import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
-import { html_style_set } from "./html_style_set.mjs";
-import { html_style_opacity } from "./html_style_opacity.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_shuffle } from "./list_shuffle.mjs";
-import { text_regex_match } from "./text_regex_match.mjs";
-import { equal } from "./equal.mjs";
 import { text_to } from "./text_to.mjs";
-import { property_get } from "./property_get.mjs";
+import { text_regex_match } from "./text_regex_match.mjs";
+import { list_shuffle } from "./list_shuffle.mjs";
+import { equal } from "./equal.mjs";
+import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
+import { list_map } from "./list_map.mjs";
 export function app_code_lesson_quiz_choose_operand(
   parent,
   info,
@@ -29,34 +23,19 @@ export function app_code_lesson_quiz_choose_operand(
   let choices = text_regex_match(quiz_question_text, /[0-9]+/g);
   ("shuffle rather than sort the numbers: value-sorting would always put the dividend (largest) last and the quotient (smallest) first, so the learner could pick by position without knowing the role");
   list_shuffle(choices);
-  let answered = false;
+  let state = {
+    answered: false,
+  };
   function each_button(choice) {
-    let b = app_code_quiz_choice_button(parent, choice, on_click);
-    ("the right number is marked as the way on where being right is already decided, so a walk of the whole course answers this kind without a second answer key that could disagree with this one");
     let right = equal(choice, quiz_answer_text);
-    if (right) {
-      html_data_set_test_happy(b);
-    }
-    async function on_click() {
-      if (answered) {
-        ("locked once the correct choice is chosen");
-        return;
-      }
-      let eq = equal(choice, quiz_answer_text);
-      if (eq) {
-        answered = true;
-        ("taken, so it stops being the way on - a walk that kept pressing this locked button would never reach what comes after it");
-        html_data_set_test_happy_remove(b);
-        app_shared_button_screen_green_style_assign(b);
-        await on_success();
-      } else {
-        ("a wrong pick dims just this choice and leaves the others live, and on_wrong marks the attempt so the review requeues it");
-        on_wrong();
-        app_code_lesson_quiz_wrong_set(b);
-        html_style_set(b, "pointer-events", "none");
-        html_style_opacity(b, "0.5");
-      }
-    }
+    let b = app_code_quiz_choice_button_answer(
+      parent,
+      choice,
+      right,
+      state,
+      on_success,
+      on_wrong,
+    );
     return b;
   }
   list_map(choices, each_button);

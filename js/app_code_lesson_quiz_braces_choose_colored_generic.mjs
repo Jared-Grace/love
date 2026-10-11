@@ -1,3 +1,4 @@
+import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
 import { list_permutations } from "./list_permutations.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_braces_colors_next } from "./app_code_braces_colors_next.mjs";
@@ -11,14 +12,7 @@ import { list_add } from "./list_add.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_concat } from "./list_concat.mjs";
-import { app_code_quiz_choice_button } from "./app_code_quiz_choice_button.mjs";
 import { app_shared_button_code_unframed } from "./app_shared_button_code_unframed.mjs";
-import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
-import { property_set } from "./property_set.mjs";
-import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
-import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
-import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { each } from "./each.mjs";
 export function app_code_lesson_quiz_braces_choose_colored_generic(
   parent,
@@ -87,29 +81,17 @@ export function app_code_lesson_quiz_braces_choose_colored_generic(
     let c_braces = property_get(choice, "braces");
     let c_colors = property_get(choice, "colors");
     let is_right = equal(choice, right);
-    let b = app_code_quiz_choice_button(parent, "", on_click);
+    let b = app_code_quiz_choice_button_answer(
+      parent,
+      "",
+      is_right,
+      state,
+      on_success,
+      on_wrong,
+    );
     let shown = backwards ? c_code : c_braces;
     app_code_code_dark_lines_braces_paired_colors(b, shown, c_colors);
     app_shared_button_code_unframed(b);
-    if (is_right) {
-      html_data_set_test_happy(b);
-    }
-    async function on_click() {
-      let answered = property_get(state, "answered");
-      if (answered) {
-        return;
-      }
-      if (is_right) {
-        property_set(state, "answered", true);
-        html_data_set_test_happy_remove(b);
-        app_shared_button_screen_green_style_assign(b);
-        await on_success();
-        return;
-      }
-      on_wrong();
-      app_code_lesson_quiz_wrong_set(b);
-      html_style_set(b, "pointer-events", "none");
-    }
   }
   each(choices, choice_draw);
 }
