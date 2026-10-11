@@ -11,22 +11,22 @@ import { text_split_newline } from "./text_split_newline.mjs";
 import { text_size } from "./text_size.mjs";
 import { less_than } from "./less_than.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { property_set } from "./property_set.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { list_add } from "./list_add.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
+import { list_get } from "./list_get.mjs";
 import { equal } from "./equal.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_transition_set } from "./html_transition_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
 import { sleep } from "./sleep.mjs";
-import { property_exists } from "./property_exists.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { html_height } from "./html_height.mjs";
 import { html_height_animate } from "./html_height_animate.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { list_all } from "./list_all.mjs";
+import { property_set } from "./property_set.mjs";
 import { html_element_width } from "./html_element_width.mjs";
 import { html_transition_transform_set } from "./html_transition_transform_set.mjs";
 import { html_pixels_text } from "./html_pixels_text.mjs";
@@ -40,7 +40,6 @@ import { app_code_if_block_reached } from "./app_code_if_block_reached.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { app_code_braces_run_output_show } from "./app_code_braces_run_output_show.mjs";
-import { list_get } from "./list_get.mjs";
 import { app_code_braces_color_next } from "./app_code_braces_color_next.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
@@ -66,8 +65,9 @@ export function app_code_braces_run_choose(parent, code, on_wrong, on_success) {
   html_style_code_dark(div);
   html_style_white_space(div, "pre-wrap");
   html_text_align_left(div);
-  let spans = {};
-  let faded = {};
+  ("The letters stand in a list whose places are the program's own places, a line's end taking a place that holds nothing, so a letter is found by where it stands in the program. Not picked: an object keyed by those numbers, which said the same but could not be proved safe to edit, so every change here needed the human.");
+  let spans = [];
+  let faded = [];
   let rows = [];
   let lines = text_split_newline(code);
   let line_start = 0;
@@ -80,11 +80,12 @@ export function app_code_braces_run_choose(parent, code, on_wrong, on_success) {
     for (let i = start; less_than(i, end); i++) {
       let letter = code.charAt(i);
       let span = html_span_text(line_div, letter);
-      property_set(spans, i, span);
+      list_add(spans, span);
       if (not_equal(letter, " ")) {
         list_add(written, i);
       }
     }
+    list_add(spans, null);
     list_add(rows, {
       line_div,
       start,
@@ -101,20 +102,20 @@ export function app_code_braces_run_choose(parent, code, on_wrong, on_success) {
       let from = property_get(r, "from");
       let to = property_get(r, "to");
       for (let i = from; less_than(i, to); i++) {
-        let span = property_get_or_null(spans, i);
+        let span = list_get(spans, i);
         if (equal(span, null)) {
           continue;
         }
         let value = text_combine_multiple(["opacity ", duration, "ms"]);
         html_transition_set(span, value);
         html_style_opacity(span, "0");
-        property_set(faded, i, true);
+        list_add(faded, i);
       }
     }
     await sleep(duration);
   }
   function faded_is(i) {
-    let f = property_exists(faded, i);
+    let f = list_includes(faded, i);
     return f;
   }
   async function row_shrink(row) {
@@ -150,7 +151,7 @@ export function app_code_braces_run_choose(parent, code, on_wrong, on_success) {
     let to = from + size;
     let width = 0;
     for (let i = from; less_than(i, to); i++) {
-      let span = property_get(spans, i);
+      let span = list_get(spans, i);
       width = width + html_element_width(span);
     }
     html_transition_transform_set(line_div, duration);
@@ -159,7 +160,7 @@ export function app_code_braces_run_choose(parent, code, on_wrong, on_success) {
     html_style_set(line_div, "transform", style_value);
     await sleep(duration);
     for (let i = from; less_than(i, to); i++) {
-      let span = property_get(spans, i);
+      let span = list_get(spans, i);
       html_display_none(span);
     }
     html_translation_transition_clear(line_div);
@@ -196,11 +197,12 @@ export function app_code_braces_run_choose(parent, code, on_wrong, on_success) {
   }
   function braces_plain(block) {
     "a pair's braces go back to the code's own colours, unless they have faded";
-    for (let key of ["open", "close"]) {
-      let i = property_get(block, key);
+    let open = property_get(block, "open");
+    let close = property_get(block, "close");
+    for (let i of [open, close]) {
       let b2 = faded_is(i);
       if (not(b2)) {
-        let span = property_get(spans, i);
+        let span = list_get(spans, i);
         html_style_clear(span);
       }
     }
@@ -233,7 +235,7 @@ export function app_code_braces_run_choose(parent, code, on_wrong, on_success) {
     let runs = property_get(block, "runs");
     let color = app_code_braces_color_next();
     for (let i of [open, close]) {
-      let span = property_get(spans, i);
+      let span = list_get(spans, i);
       html_style_background_color_set(span, color);
       html_font_color_set_white(span);
     }
