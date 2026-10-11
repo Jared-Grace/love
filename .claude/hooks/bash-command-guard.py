@@ -4154,6 +4154,39 @@ def find_js_text_replace(command):
     return None
 
 
+PREVIEW_PICTURE_SUFFIXES = (".jpg", ".jpeg", ".png")
+
+
+def find_ffmpeg_preview(command):
+    """True when a statement of `command` is an ffmpeg writing a picture into
+    a scratch place (`$S/...`, a scratchpad, /tmp) - a picture made only to be
+    looked at, which the Read tool or a granted function gives unasked. An
+    ffmpeg writing anywhere else is a real render and still goes to the human."""
+    for words in statements_words(command):
+        plain = list(words)
+        while plain and ASSIGN_RE.match(plain[0]):
+            plain = plain[1:]
+        if len(plain) < 3 or plain[0] != "ffmpeg":
+            continue
+        out = plain[-1]
+        scratch = out.startswith("$S/") or out.startswith("/tmp/") or "scratchpad" in out
+        if scratch and out.lower().endswith(PREVIEW_PICTURE_SUFFIXES):
+            return True
+    return False
+
+
+def ffmpeg_preview_deny_reason():
+    return (
+        "ffmpeg holds no grant, because it can write any file and read from "
+        "the network. A picture made only to look at needs neither: open each "
+        "picture with the Read tool (it shows images, and asks nobody); for a "
+        "glance over a whole video in Downloads, `node scripts/ai.mjs "
+        "downloads_video_frames_sheet_write \"<name>.mp4\"` writes a sheet of "
+        "frames and answers its path to Read. A real render goes through a "
+        "committed ffmpeg_* function, or hand the human a `!` line."
+    )
+
+
 def js_text_replace_deny_reason(name):
     return (
         f"A text replace in a function's file holds no grant, because it can "
@@ -5424,6 +5457,11 @@ def main():
     text_replace_name = find_js_text_replace(command)
     if text_replace_name is not None:
         return decide("deny", js_text_replace_deny_reason(text_replace_name))
+
+    # An ffmpeg making a picture only to look at, which the Read tool or a
+    # granted function gives unasked. See find_ffmpeg_preview.
+    if find_ffmpeg_preview(command):
+        return decide("deny", ffmpeg_preview_deny_reason())
 
     # A dispatcher call caught in a file the caller made for it, when the
     # command had already written that file itself. Unlike the floors above
