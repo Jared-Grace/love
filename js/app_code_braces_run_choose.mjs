@@ -1,3 +1,4 @@
+import { app_code_braces_run_output_show } from "./app_code_braces_run_output_show.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { less_than } from "./less_than.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -210,7 +211,7 @@ export function app_code_braces_run_choose(parent, code, on_wrong, on_success) {
   let state = {
     index: 0,
   };
-  function next() {
+  async function next() {
     "the next section still reached is asked about; once none is left, the program is done";
     let index = property_get(state, "index");
     while (
@@ -223,7 +224,7 @@ export function app_code_braces_run_choose(parent, code, on_wrong, on_success) {
     html_clear(ask);
     let b3 = list_size(blocks);
     if (greater_than_equal(index, b3)) {
-      on_success();
+      await app_code_braces_run_output_show(wrap, code, on_success);
       return;
     }
     let block = list_get(blocks, index);
