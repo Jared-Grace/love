@@ -42,7 +42,7 @@ export function app_code_brace_pair_example_choose(component, text, container) {
   let index = property_get(unmarked, "index");
   let partner = js_code_brace_partner_index(code, index);
   let color = app_code_braces_color_next();
-  html_div_text(component, "Tap the brace that pairs with the one pointed at:");
+  html_div_text(component, "Tap the matching brace:");
   let div = html_div(component);
   html_style_code_dark(div);
   html_style_white_space(div, "pre-wrap");

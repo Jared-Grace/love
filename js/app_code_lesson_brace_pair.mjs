@@ -1,3 +1,6 @@
+import { html_span_text_content } from "./html_span_text_content.mjs";
+import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
+import { app_code_lesson_token_order_braces } from "./app_code_lesson_token_order_braces.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { app_code_braces_colors_next } from "./app_code_braces_colors_next.mjs";
 import { app_code_code_dark_lines_braces_paired_colors } from "./app_code_code_dark_lines_braces_paired_colors.mjs";
@@ -52,6 +55,7 @@ export function app_code_lesson_brace_pair() {
   ("There is no backwards quiz, because the question and the answer are the same kind of thing - a program with one brace pointed at - and reading it backwards is the other way of asking, which the screen already asks. There are no quizzes about lines or building the code, because no program here is run.");
   ("The writing is a first draft by Claude 2026-10-09.");
   ("Its worked examples are chosen on the page since 2026-10-11, as the human asked: one brace is pointed at and the learner taps its pair, so no pair is printed under them.");
+  ("The braces line points back to The braces among the tokens, and the lines saying which { is closest to the first } were written by the human 2026-10-11.");
   let fruits = fruits_of_the_spirit();
   let love = list_get(fruits, 0);
   let joy = list_get(fruits, 1);
@@ -203,7 +207,13 @@ export function app_code_lesson_brace_pair() {
         ]);
       }
     }
-    app_code_div_braces_painted(box_paired, braces_painted);
+    let braces_line = app_code_div_braces_painted(box_paired, braces_painted);
+    html_span_text_content(braces_line, "as taught in ");
+    app_code_lesson_reference_draw(
+      braces_line,
+      context,
+      app_code_lesson_token_order_braces,
+    );
     let outer = list_get(colors, 0);
     let inner = list_get(colors, 1);
     let outer_left = {
@@ -241,6 +251,35 @@ export function app_code_lesson_brace_pair() {
     app_code_div_braces_painted(box_paired, [
       inner_right,
       [" closes the most recent ", left2, ", which is "],
+      inner_left,
+      [" not "],
+      outer_left,
+    ]);
+    app_code_div_braces_painted(box_paired, [
+      ["The first 3 braces are "],
+      outer_left,
+      [" "],
+      inner_left,
+      [" "],
+      inner_right,
+    ]);
+    app_code_div_braces_painted(box_paired, [
+      inner_left,
+      [" is closer to "],
+      inner_right,
+      [" than "],
+      outer_left,
+    ]);
+    app_code_div_braces_painted(box_paired, [
+      ["and "],
+      inner_left,
+      [" is closest to "],
+      inner_right,
+    ]);
+    app_code_div_braces_painted(box_paired, [
+      ["so "],
+      inner_right,
+      [" closes "],
       inner_left,
       [" not "],
       outer_left,
