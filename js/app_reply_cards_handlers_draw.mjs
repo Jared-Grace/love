@@ -54,6 +54,7 @@ export function app_reply_cards_handlers_draw(
     visible_count: property_get(r3, "visible_count"),
   };
   let card2 = property_get(r3, "card2");
+  let testament_held = property_get(r3, "testament_held");
   let languages_chooser = property_get(r3, "languages_chooser");
   async function update(verse_count) {
     let r4 = await app_reply_verses_refresh({

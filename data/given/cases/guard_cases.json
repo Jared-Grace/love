@@ -509,6 +509,8 @@
     { "command": "cd /home/j/a/repos/love; node scripts/ai.mjs function_overwrite_from_temp a | grep -c x", "decision": "deny", "reason_includes": "Call `node scripts/ai.mjs function_overwrite_from_temp_edit_safe` instead", "why": "inside a chain the same redirect must fire, not the generic grant-it-by-name hint" },
     { "command": "node scripts/ai.mjs function_overwrite_from_temp_edit_safe a", "decision": "allow", "why": "the checked twin itself stays unasked" },
     { "command": "cd /home/j/a/repos/love; cp js/app_code_lesson_groups.mjs scripts/temp/app_code_lesson_groups.mjs; grep -n x scripts/temp/app_code_lesson_groups.mjs", "decision": "deny", "reason_includes": "function_temp_write app_code_lesson_groups", "why": "a hand copy of a function into scripts/temp prompted while function_temp_write does it unasked" },
-    { "command": "cp /home/j/a/repos/love/js/path_join.mjs /home/j/a/repos/love/scripts/temp/path_join.mjs", "decision": "deny", "reason_includes": "function_temp_write path_join", "why": "the absolute spelling of the same copy" }
+    { "command": "cp /home/j/a/repos/love/js/path_join.mjs /home/j/a/repos/love/scripts/temp/path_join.mjs", "decision": "deny", "reason_includes": "function_temp_write path_join", "why": "the absolute spelling of the same copy" },
+    { "command": "cd /home/j/a/repos/love; node scripts/ai.mjs file_text_replace_once js/app_reply_visible_count.mjs a b 2>&1 | tail -2", "decision": "deny", "reason_includes": "function_overwrite_from_temp_edit_safe app_reply_visible_count", "why": "a text replace in a function's file prompted while draft-and-promote does it unasked" },
+    { "command": "node scripts/ai.mjs file_text_replace_once js/path_join.mjs a b", "decision": "deny", "reason_includes": "function_temp_write path_join", "why": "the lone call was silent, so the native prompt gave no route" }
   ]
 }

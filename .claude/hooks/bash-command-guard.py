@@ -4133,6 +4133,38 @@ def js_to_temp_copy_deny_reason(name):
     )
 
 
+def find_js_text_replace(command):
+    """The function name when a statement of `command` is
+    `node <dispatcher> file_text_replace_once js/<name>.mjs ...`, whose edit
+    the draft-and-promote route makes unasked; else None."""
+    js_prefixes = ("js/", REPO_ROOT + "/js/")
+    for words in statements_words(command):
+        if (
+            len(words) >= 4
+            and words[0] == "node"
+            and dispatcher_script_is(words[1])
+            and words[2] == "file_text_replace_once"
+        ):
+            for prefix in js_prefixes:
+                source = words[3]
+                if source.startswith(prefix) and source.endswith(".mjs"):
+                    name = source[len(prefix):-len(".mjs")]
+                    if FUNCTION_NAME_TEXT.match(name):
+                        return name
+    return None
+
+
+def js_text_replace_deny_reason(name):
+    return (
+        f"A text replace in a function's file holds no grant, because it can "
+        f"write anything. The same edit goes through unasked in three calls: "
+        f"`node scripts/ai.mjs function_temp_write {name}`, then the Edit tool "
+        f"on scripts/temp/{name}.mjs, then `node scripts/ai.mjs "
+        f"function_overwrite_from_temp_edit_safe {name}`, which writes it only "
+        f"if its check proves the edit cannot change anything dangerous."
+    )
+
+
 def untrusted_piece_hint(words, safe_verbs):
     """One sentence on how to reword the refused part `words`, or "" when
     there is nothing better to say than its name."""
@@ -5372,6 +5404,12 @@ def main():
     temp_copy_name = find_js_to_temp_copy(command)
     if temp_copy_name is not None:
         return decide("deny", js_to_temp_copy_deny_reason(temp_copy_name))
+
+    # A text replace in a function's file, which the draft-and-promote route
+    # makes unasked. Same placement and reason. See find_js_text_replace.
+    text_replace_name = find_js_text_replace(command)
+    if text_replace_name is not None:
+        return decide("deny", js_text_replace_deny_reason(text_replace_name))
 
     # A dispatcher call caught in a file the caller made for it, when the
     # command had already written that file itself. Unlike the floors above

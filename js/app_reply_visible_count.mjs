@@ -24,6 +24,7 @@ export function app_reply_visible_count(
     card,
     languages,
   );
+  let testament_held = app_reply_testament_choose(root);
   let card2 = app_shared_container_blue(root);
   app_shared_text_body(
     card2,
@@ -50,6 +51,7 @@ export function app_reply_visible_count(
     languages_chooser,
     card2,
     visible_count,
+    testament_held,
   };
   return r;
 }
