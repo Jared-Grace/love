@@ -11,7 +11,7 @@ export function app_reply_main_shortcuts_languages_ke(
   arguments_assert(arguments, 2);
   app_shared_text_body(
     root,
-    "3. (Optional) Or, instead of 1 or 2, choose shortcuts:",
+    "4. (Optional) Or, instead of 1 or 3, choose shortcuts:",
   );
   let r2 = app_reply_main_shortcuts_languages_ug(languages_chosen_default);
   let languages_ug = property_get(r2, "languages_ug");
