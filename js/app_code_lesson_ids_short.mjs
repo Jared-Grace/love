@@ -333,7 +333,7 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_if_else_change: text_frozen("if_else_change"),
     app_code_lesson_if_halve_or_triple: text_frozen("if_halve_or_triple"),
     app_code_lesson_if_nested: text_frozen("if_nested"),
-    app_code_lesson_braces_run: text_frozen("braces_run"),
+    app_code_lesson_braces_run: text_frozen("braces_run"), app_code_lesson_braces_run_if_else: text_frozen("braces_run_if_else"), app_code_lesson_braces_run_nested: text_frozen("braces_run_nested"), app_code_lesson_braces_run_after_nested: text_frozen("braces_run_after_nested"), app_code_lesson_braces_run_if_else_in_if: text_frozen("braces_run_if_else_in_if"), app_code_lesson_braces_run_if_in_else: text_frozen("braces_run_if_in_else"), app_code_lesson_braces_run_else_if: text_frozen("braces_run_else_if"), app_code_lesson_braces_run_else_if_else: text_frozen("braces_run_else_if_else"), app_code_lesson_braces_run_thrice: text_frozen("braces_run_thrice"),
     app_code_lesson_if_after_nested: text_frozen("if_after_nested"),
     app_code_lesson_brace_pair: text_frozen("brace_pair"),
     app_code_lesson_brace_pair_two: text_frozen("brace_pair_two"),

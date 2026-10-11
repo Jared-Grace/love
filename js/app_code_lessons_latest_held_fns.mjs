@@ -1,3 +1,11 @@
+import { app_code_lesson_braces_run_if_else } from "./app_code_lesson_braces_run_if_else.mjs";
+import { app_code_lesson_braces_run_nested } from "./app_code_lesson_braces_run_nested.mjs";
+import { app_code_lesson_braces_run_after_nested } from "./app_code_lesson_braces_run_after_nested.mjs";
+import { app_code_lesson_braces_run_if_else_in_if } from "./app_code_lesson_braces_run_if_else_in_if.mjs";
+import { app_code_lesson_braces_run_if_in_else } from "./app_code_lesson_braces_run_if_in_else.mjs";
+import { app_code_lesson_braces_run_else_if } from "./app_code_lesson_braces_run_else_if.mjs";
+import { app_code_lesson_braces_run_else_if_else } from "./app_code_lesson_braces_run_else_if_else.mjs";
+import { app_code_lesson_braces_run_thrice } from "./app_code_lesson_braces_run_thrice.mjs";
 import { app_code_lesson_braces_run } from "./app_code_lesson_braces_run.mjs";
 import { app_code_lesson_brace_lines_two_nested } from "./app_code_lesson_brace_lines_two_nested.mjs";
 import { app_code_lesson_brace_lines_two } from "./app_code_lesson_brace_lines_two.mjs";
@@ -104,8 +112,17 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-11: The order of two pairs of braces and The order of the braces taken out at the human's asking: their three quizzes, over the same programs, are the quizzes of The braces among the tokens with no colors and its three-pair twin";
   "2026-10-11: Which brace pairs with which, two pairs and the two lessons on the lines between two pairs of braces moved straight after The braces among the tokens, with no colors, at the human's asking, so two pairs of braces are explained fully before The same if twice";
   "2026-10-11: hold Does this section run?, new at the human's asking straight after If inside an if, until the human has read its first draft";
+  "2026-10-11: Does this section run? made one per shape of two or three pairs of braces, each straight before the first lesson of its shape, as the human asked - each 2 and 3 brace - and held with the first until the human has read them";
   let fns = [
     app_code_lesson_braces_run,
+    app_code_lesson_braces_run_if_else,
+    app_code_lesson_braces_run_nested,
+    app_code_lesson_braces_run_after_nested,
+    app_code_lesson_braces_run_if_else_in_if,
+    app_code_lesson_braces_run_if_in_else,
+    app_code_lesson_braces_run_else_if,
+    app_code_lesson_braces_run_else_if_else,
+    app_code_lesson_braces_run_thrice,
     app_code_lesson_brace_lines_two,
     app_code_lesson_brace_lines_two_nested,
     app_code_lesson_brace_lines,
