@@ -37,7 +37,7 @@ export function app_reply_cards_shortcuts_meeting_responses({
     buttons_responses,
   );
   let card4 = app_shared_container_blue(root);
-  app_shared_text_body(card4, "4. (Optional) Meeting:");
+  app_shared_text_body(card4, "5. (Optional) Meeting:");
   async function lambda5() {
     await clipboard_copy(
       "If God wills: I am willing to have a meeting with you and share the word of God! I plan on sending a message to you later to choose a date and time.",
@@ -45,7 +45,7 @@ export function app_reply_cards_shortcuts_meeting_responses({
   }
   app_shared_button(card4, "Meeting requested", lambda5);
   let card5 = app_shared_container_blue(root);
-  app_shared_text_body(card5, "5. (Optional) Choose any responses:");
+  app_shared_text_body(card5, "6. (Optional) Choose any responses:");
   function lambda9(choice) {
     let r = app_reply_response_button(
       choice,

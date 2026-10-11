@@ -4219,6 +4219,13 @@ def untrusted_piece_hint(words, safe_verbs):
 RELATIVE_REDIRECT_RE = re.compile(r"(?<![0-9&>])>>?\s*(?![/&~$])[A-Za-z0-9_.]")
 
 
+# A file fed in with `<` whose path starts with a plain word (so not a `$VAR`
+# the agent may not have set, not a `$(...)`, not /dev/), and is held up only
+# by a loop variable further along - `< js/app_code_lesson_$f.mjs`. Passing the
+# same path as an argument reads identically and runs unasked.
+FED_IN_REPO_FILE_RE = re.compile(r"(?<!<)<\s*(?!/dev/)[A-Za-z0-9_.][A-Za-z0-9_./-]*\$[A-Za-z_]")
+
+
 def unread_hint(why, command):
     """How to reword a command the tokenizer could not read, chosen by the
     construct it stopped on; "" when there is nothing specific to say."""
@@ -4232,7 +4239,7 @@ def unread_hint(why, command):
             "A heredoc hides what it feeds in. Create the file with the "
             "Write tool, then pass its path."
         )
-    if "'<'" in why:
+    if "'<'" in why and FED_IN_REPO_FILE_RE.search(command) and "<>" not in command:
         return (
             "Pass the file as an argument instead of feeding it in with `<`: "
             "`wc -l FILE`, `grep x FILE` and the like read it themselves, and "

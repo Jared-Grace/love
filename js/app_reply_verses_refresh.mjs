@@ -2,8 +2,9 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { list_clear } from "./list_clear.mjs";
 import { equal } from "./equal.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { property_get } from "./property_get.mjs";
+import { bible_references_old_testament } from "./bible_references_old_testament.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_reply_verses_add } from "./app_reply_verses_add.mjs";
 import { each_async } from "./each_async.mjs";
 import { property_set } from "./property_set.mjs";
@@ -14,6 +15,7 @@ export async function app_reply_verses_refresh({
   responses_buttons,
   encouragement,
   encouragement_singles,
+  testament_held,
   languages_chosen_held,
   buttons_refresh,
   visible_count_held,
@@ -24,6 +26,10 @@ export async function app_reply_verses_refresh({
   let e = encouragement;
   if (equal(verse_count, 1)) {
     e = encouragement_singles;
+  }
+  let old_only = property_get(testament_held, "old_only");
+  if (old_only) {
+    e = bible_references_old_testament(e);
   }
   let taken = list_shuffle_take(e, verse_count);
   let reference_current = null;

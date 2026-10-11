@@ -512,7 +512,7 @@
     { "command": "cp /home/j/a/repos/love/js/path_join.mjs /home/j/a/repos/love/scripts/temp/path_join.mjs", "decision": "deny", "reason_includes": "function_temp_write path_join", "why": "the absolute spelling of the same copy" },
     { "command": "cd /home/j/a/repos/love; node scripts/ai.mjs file_text_replace_once js/app_reply_visible_count.mjs a b 2>&1 | tail -2", "decision": "deny", "reason_includes": "function_overwrite_from_temp_edit_safe app_reply_visible_count", "why": "a text replace in a function's file prompted while draft-and-promote does it unasked" },
     { "command": "node scripts/ai.mjs file_text_replace_once js/path_join.mjs a b", "decision": "deny", "reason_includes": "function_temp_write path_join", "why": "the lone call was silent, so the native prompt gave no route" },
-    { "command": "for f in a b; do echo \"=== $f $(wc -l < js/app_code_lesson_$f.mjs)\"; done", "decision": "deny", "reason_includes": "Pass the file as an argument instead", "why": "a fed-in file with a $var in its path asked the human; passing the file as an argument runs unasked" },
+    { "command": "cd /home/j/a/repos/love; for f in a b; do echo \"=== $f $(wc -l < js/app_code_lesson_$f.mjs)\"; done", "decision": "deny", "reason_includes": "Pass the file as an argument instead", "why": "a fed-in file with a $var in its path asked the human; passing the file as an argument runs unasked" },
     { "command": "for f in a b; do echo \"=== $f\"; wc -l js/app_code_lesson_$f.mjs; done", "decision": "allow", "why": "the rewording the hint names" }
   ]
 }
