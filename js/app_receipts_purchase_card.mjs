@@ -24,16 +24,7 @@ import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_receipts_payment_get } from "./app_receipts_payment_get.mjs";
 import { app_receipts_choice_row } from "./app_receipts_choice_row.mjs";
-import { html_display_flex } from "./html_display_flex.mjs";
-import { html_style_set } from "./html_style_set.mjs";
-import { html_style_gap } from "./html_style_gap.mjs";
-import { html_element } from "./html_element.mjs";
-import { html_border_radius } from "./html_border_radius.mjs";
-import { app_shared_photo_screen } from "./app_shared_photo_screen.mjs";
-import { html_on_click } from "./html_on_click.mjs";
-import { html_media_source_file_set } from "./html_media_source_file_set.mjs";
-import { html_src_set } from "./html_src_set.mjs";
-import { property_exists } from "./property_exists.mjs";
+import { app_receipts_photos_draw } from "./app_receipts_photos_draw.mjs";
 import { app_receipts_purchase_photo_add } from "./app_receipts_purchase_photo_add.mjs";
 import { app_shared_button_wide_camera } from "./app_shared_button_wide_camera.mjs";
 import { emoji_camera } from "./emoji_camera.mjs";
@@ -91,8 +82,8 @@ export function app_receipts_purchase_card(
   usa_show(date, time);
   ("The price is pesos, with centavos after a point. What is typed is kept as an amount to the centavo or as nothing, and the box is set back to what was kept, so it never shows a price other than the one saved.");
   let price_input = app_shared_input_amount(card, "Price (₱ PHP)");
-  let value2 = property_get_or(purchase, "price", "");
-  html_value_set(price_input, value2);
+  let value = property_get_or(purchase, "price", "");
+  html_value_set(price_input, value);
   ("Under the price, what it comes to in US dollars, redrawn with every key pressed so it follows the typing.");
   let usd_line = html_div_text(card, "");
   function usd_show() {
@@ -160,44 +151,7 @@ export function app_receipts_purchase_card(
   }
   payment_show();
   writing_box("Description", "description");
-  ("Photos are small squares side by side, cropped to fill the square; pressing one opens it whole on a screen of its own.");
-  let pictures = html_div(card);
-  html_display_flex(pictures);
-  html_style_set(pictures, "flex-wrap", "wrap");
-  html_style_gap(pictures, "0.5em");
-  function thumbnail_add(picture_set) {
-    let picture = html_element(pictures, "img");
-    html_style_set(picture, "width", "6em");
-    html_style_set(picture, "height", "6em");
-    html_style_set(picture, "object-fit", "cover");
-    html_border_radius(picture, "0.3em");
-    picture_set(picture);
-    function on_open() {
-      app_shared_photo_screen(picture_set);
-    }
-    html_on_click(picture, on_open);
-  }
-  function file_show(file) {
-    function picture_set(picture) {
-      html_media_source_file_set(picture, file);
-    }
-    thumbnail_add(picture_set);
-  }
-  function url_show(src) {
-    function picture_set(picture) {
-      html_src_set(picture, src);
-    }
-    thumbnail_add(picture_set);
-  }
-  for (let photo of property_get(purchase, "photos")) {
-    if (property_exists(photo, "file")) {
-      let value = property_get(photo, "file");
-      file_show(value);
-    } else {
-      let src = property_get(photo, "url");
-      url_show(src);
-    }
-  }
+  let file_show = app_receipts_photos_draw(card, purchase);
   async function on_photo(file) {
     file_show(file);
     await app_receipts_purchase_photo_add(purchase, file);

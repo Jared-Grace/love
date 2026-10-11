@@ -3,11 +3,7 @@ import { app_shared_mobile_default_font_size } from "./app_shared_mobile_default
 import { property_get } from "./property_get.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_frozen } from "./text_frozen.mjs";
-import { html_hash_object_get } from "./html_hash_object_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
-import { html_query_property_get } from "./html_query_property_get.mjs";
-import { storage_local_name_get } from "./storage_local_name_get.mjs";
+import { app_receipts_folder_known } from "./app_receipts_folder_known.mjs";
 import { app_receipts_sync } from "./app_receipts_sync.mjs";
 import { html_on_window } from "./html_on_window.mjs";
 import { app_receipts_folder_code_valid_is } from "./app_receipts_folder_code_valid_is.mjs";
@@ -28,25 +24,12 @@ export function app_receipts_main(context) {
   let app_name = fn_name("app_receipts");
   let key = text_frozen("folder_code");
   let key2 = text_frozen("folder");
-  let hash = html_hash_object_get();
-  let linked = property_get_or_null(hash, key2);
-  if (null_is(linked)) {
-    linked = html_query_property_get(key2);
-  }
-  let saved = storage_local_name_get(app_name, key);
+  let known = app_receipts_folder_known(app_name);
   let sync_shown = app_receipts_sync;
   function on_online() {
     sync_shown();
   }
   html_on_window("online", on_online);
-  let known = linked;
-  if (null_is(known)) {
-    known = saved;
-  }
-  if (null_is(known)) {
-    known = "";
-  }
-  known = known.trim();
   if (app_receipts_folder_code_valid_is(known)) {
     on_code(known);
   } else {
