@@ -567,6 +567,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_brace_pair_two,
     app_code_lesson_brace_pair,
     app_code_lesson_brace_lines_two,
+    app_code_lesson_brace_lines_two_nested,
     app_code_lesson_brace_lines,
     app_code_lesson_brace_order_two,
     app_code_lesson_brace_order,
