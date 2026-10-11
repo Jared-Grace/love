@@ -1,9 +1,11 @@
+import { dev_trace_on_is } from "./dev_trace_on_is.mjs";
+import { not } from "./not.mjs";
+import { dev_trace_storage_key } from "./dev_trace_storage_key.mjs";
+import { storage_local_specify_get_json } from "./storage_local_specify_get_json.mjs";
 import { json_from } from "./json_from.mjs";
 import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { json_to } from "./json_to.mjs";
-import { not } from "./not.mjs";
-import { dev_trace_on_is } from "./dev_trace_on_is.mjs";
-import { dev_trace_storage_key } from "./dev_trace_storage_key.mjs";
+import { storage_local_specify_set_text } from "./storage_local_specify_set_text.mjs";
 export function dev_trace_add(kind, detail) {
   "Writes one step of what a /dev/ page did into the device's own storage - a tap, a fetch and how it ended, the loading screen going up or down, a read from the offline copy.";
   "Kept on the device rather than sent at once because the case this exists for is a phone with its wifi off: it cannot reach the machine that would write the line down. The trace waits on the phone and goes up once the network is back.";
@@ -15,7 +17,7 @@ export function dev_trace_add(kind, detail) {
   }
   try {
     let key = dev_trace_storage_key();
-    let held = localStorage.getItem(key);
+    let held = storage_local_specify_get_json(key);
     let list = held ? json_from(held) : [];
     list.push({
       t: date_now_milliseconds(),
@@ -25,7 +27,7 @@ export function dev_trace_add(kind, detail) {
     });
     let kept = list.slice(-600);
     let json = json_to(kept);
-    localStorage.setItem(key, json);
+    storage_local_specify_set_text(key, json);
   } catch (caught) {
     return;
   }

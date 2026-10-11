@@ -4,13 +4,11 @@ import { not } from "./not.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { firebase_storage_list_browser_quiet } from "./firebase_storage_list_browser_quiet.mjs";
 import { app_receipts_purchase_details_name } from "./app_receipts_purchase_details_name.mjs";
-import { property_exists } from "./property_exists.mjs";
-import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
-import { list_add } from "./list_add.mjs";
+import { app_receipts_purchases_remote_group } from "./app_receipts_purchases_remote_group.mjs";
 import { app_receipts_purchases_store } from "./app_receipts_purchases_store.mjs";
 import { indexeddb_get_all_backend } from "./indexeddb_get_all_backend.mjs";
 import { app_receipts_purchases_database } from "./app_receipts_purchases_database.mjs";
+import { property_get } from "./property_get.mjs";
 import { app_receipts_unsent_all } from "./app_receipts_unsent_all.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
@@ -20,9 +18,8 @@ import { list_includes } from "./list_includes.mjs";
 import { firebase_storage_url_metadata } from "./firebase_storage_url_metadata.mjs";
 import { http_json_browser_quiet } from "./http_json_browser_quiet.mjs";
 import { property_get_or } from "./property_get_or.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { firebase_storage_url } from "./firebase_storage_url.mjs";
-import { app_receipts_payment_get } from "./app_receipts_payment_get.mjs";
+import { app_receipts_purchase_photos_merge } from "./app_receipts_purchase_photos_merge.mjs";
+import { app_receipts_purchase_from_metadata } from "./app_receipts_purchase_from_metadata.mjs";
 import { indexeddb_put_backend } from "./indexeddb_put_backend.mjs";
 export async function app_receipts_purchases_pull(folder_code) {
   "$plain folder_code";
@@ -38,26 +35,7 @@ export async function app_receipts_purchases_pull(folder_code) {
   let prefix = text_combine_multiple(["receipts/", folder_code, "/"]);
   let names = await firebase_storage_list_browser_quiet(prefix);
   let details_name = app_receipts_purchase_details_name();
-  let remote = {};
-  for (let name of names) {
-    let parts = name.split("/");
-    let id = parts[2];
-    let file_name = parts[3];
-    let b = property_exists(remote, id);
-    if (not(b)) {
-      remote[id] = {
-        details: false,
-        photos: [],
-      };
-    }
-    let entry = property_get(remote, id);
-    if (equal(file_name, details_name)) {
-      entry.details = true;
-    } else {
-      let list = property_get(entry, "photos");
-      list_add(list, file_name);
-    }
-  }
+  let remote = app_receipts_purchases_remote_group(names, details_name);
   let store = app_receipts_purchases_store();
   let all = await indexeddb_get_all_backend(
     app_receipts_purchases_database,
@@ -72,8 +50,8 @@ export async function app_receipts_purchases_pull(folder_code) {
   let project_url = firebase_storage_url_project_jg();
   for (let id of object_property_names(remote)) {
     let entry = property_get(remote, id);
-    let b2 = property_get(entry, "details");
-    if (not(b2)) {
+    let b = property_get(entry, "details");
+    if (not(b)) {
       continue;
     }
     let details_path = app_receipts_purchase_path(
@@ -88,36 +66,20 @@ export async function app_receipts_purchases_pull(folder_code) {
     let about = await http_json_browser_quiet(url);
     let custom = property_get_or(about, "metadata", {});
     let before = property_get_or(local, id, null);
-    let photos = [];
-    let kept = {};
-    if (not_equal(before, null)) {
-      photos = property_get(before, "photos");
-      for (let photo of photos) {
-        kept[property_get(photo, "name")] = true;
-      }
-    }
-    for (let file_name of property_get(entry, "photos")) {
-      if (property_exists(kept, file_name)) {
-        continue;
-      }
-      let path = app_receipts_purchase_path(folder_code, id, file_name);
-      list_add(photos, {
-        name: file_name,
-        url: firebase_storage_url(path, project_url),
-      });
-    }
-    let purchase = {
-      key: id,
+    let file_names = property_get(entry, "photos");
+    let photos = app_receipts_purchase_photos_merge(
+      before,
+      file_names,
       folder_code,
-      date: property_get_or(custom, "date", ""),
-      time: property_get_or(custom, "time", ""),
-      price: property_get_or(custom, "price", ""),
-      description: property_get_or(custom, "description", ""),
-      notes: property_get_or(custom, "notes", ""),
-      color: property_get_or(custom, "color", "blue"),
-      payment: app_receipts_payment_get(custom),
+      id,
+      project_url,
+    );
+    let purchase = app_receipts_purchase_from_metadata(
+      id,
+      folder_code,
+      custom,
       photos,
-    };
+    );
     await indexeddb_put_backend(
       app_receipts_purchases_database,
       store,

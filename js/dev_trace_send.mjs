@@ -1,13 +1,15 @@
+import { dev_trace_on_is } from "./dev_trace_on_is.mjs";
+import { not } from "./not.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { fn_name } from "./fn_name.mjs";
+import { dev_trace_storage_key } from "./dev_trace_storage_key.mjs";
+import { storage_local_specify_get_json } from "./storage_local_specify_get_json.mjs";
 import { json_from } from "./json_from.mjs";
-import { json_to } from "./json_to.mjs";
 import { equal } from "./equal.mjs";
+import { json_to } from "./json_to.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { subtract } from "./subtract.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { not } from "./not.mjs";
-import { dev_trace_on_is } from "./dev_trace_on_is.mjs";
-import { dev_trace_storage_key } from "./dev_trace_storage_key.mjs";
+import { storage_local_specify_set_text } from "./storage_local_specify_set_text.mjs";
 export async function dev_trace_send() {
   "Sends what this /dev/ page traced on the device up to the dev server, which writes it down beside the errors pages report. Answers how many steps went up.";
   "Only the steps that were sent are taken off the device, and only once the server said it wrote them - a send that failed, because the wifi is still off, leaves every step where it was for the next try.";
@@ -26,7 +28,7 @@ export async function dev_trace_send() {
     return sent;
   }
   let key = dev_trace_storage_key();
-  let held = localStorage.getItem(key);
+  let held = storage_local_specify_get_json(key);
   let list = held ? json_from(held) : [];
   if (equal(list.length, 0)) {
     let r2 = 0;
@@ -49,7 +51,7 @@ export async function dev_trace_send() {
     return r3;
   }
   let last = list[subtract(list.length, 1)].t;
-  let now_held = localStorage.getItem(key);
+  let now_held = storage_local_specify_get_json(key);
   let now_list = now_held ? json_from(now_held) : [];
   function after(entry) {
     let g = greater_than(entry.t, last);
@@ -57,7 +59,7 @@ export async function dev_trace_send() {
   }
   let rest = now_list.filter(after);
   let json2 = json_to(rest);
-  localStorage.setItem(key, json2);
+  storage_local_specify_set_text(key, json2);
   let r4 = list.length;
   return r4;
 }

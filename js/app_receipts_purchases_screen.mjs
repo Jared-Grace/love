@@ -4,19 +4,15 @@ import { emoji_sync } from "./emoji_sync.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_shared_footer } from "./app_shared_footer.mjs";
+import { app_receipts_purchase_card } from "./app_receipts_purchase_card.mjs";
+import { app_receipts_purchases_list } from "./app_receipts_purchases_list.mjs";
+import { property_get } from "./property_get.mjs";
 import { html_loading } from "./html_loading.mjs";
 import { app_receipts_purchases_pull } from "./app_receipts_purchases_pull.mjs";
-import { equal } from "./equal.mjs";
-import { app_receipts_purchases_of } from "./app_receipts_purchases_of.mjs";
-import { app_receipts_php_per_usd } from "./app_receipts_php_per_usd.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { property_get } from "./property_get.mjs";
-import { app_receipts_purchase_card } from "./app_receipts_purchase_card.mjs";
-import { list_size } from "./list_size.mjs";
-import { app_receipts_days_draw } from "./app_receipts_days_draw.mjs";
-import { app_receipts_zone_set } from "./app_receipts_zone_set.mjs";
 import { app_receipts_purchase_new } from "./app_receipts_purchase_new.mjs";
 import { app_receipts_unsent_all } from "./app_receipts_unsent_all.mjs";
+import { list_size } from "./list_size.mjs";
+import { equal } from "./equal.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { app_receipts_sync } from "./app_receipts_sync.mjs";
 export async function app_receipts_purchases_screen(
@@ -41,11 +37,22 @@ export async function app_receipts_purchases_screen(
   let status = html_p_text(root, "");
   let list = html_div(root);
   app_shared_footer(root);
-  ("Under the buttons is either the list of every purchase, one line each, or the one purchase opened from it with a way back to the list above it. open_key names the opened one, or is null while the list shows.");
-  let open_key = null;
+  ("Under the buttons is either the list of every purchase, one line each, or the one purchase opened from it with a way back to the list above it.");
+  function card_draw(parent, purchase, php_per_usd) {
+    app_receipts_purchase_card(parent, purchase, sync_now, php_per_usd);
+  }
+  let shown = app_receipts_purchases_list(
+    list,
+    folder_code,
+    card_draw,
+    "No purchases yet - press ➕ Add a purchase",
+  );
+  let show = property_get(shown, "show");
+  let open = property_get(shown, "open");
+  let list_refresh = property_get(shown, "list_refresh");
   ("On opening, a loading screen covers everything until it has all arrived: what this phone keeps is drawn first, then what is waiting is sent and what other phones sent is brought down and drawn, and only then is the screen uncovered, so the person never presses a list that is about to change. With no internet the sending and bringing down end at once, so the cover lifts as soon as this phone's own purchases are drawn.");
   async function first_load() {
-    await list_show();
+    await show();
     await refresh();
   }
   await html_loading(first_load);
@@ -53,47 +60,12 @@ export async function app_receipts_purchases_screen(
   async function refresh() {
     await sync_now();
     await app_receipts_purchases_pull(folder_code);
-    if (equal(open_key, null)) {
-      await list_show();
-    }
-  }
-  async function list_show() {
-    let purchases = await app_receipts_purchases_of(folder_code);
-    let php_per_usd = await app_receipts_php_per_usd();
-    html_clear(list);
-    if (not_equal(open_key, null)) {
-      for (let purchase of purchases) {
-        let left = property_get(purchase, "key");
-        if (equal(left, open_key)) {
-          app_shared_button_wide(list, "📋 All purchases", on_all);
-          app_receipts_purchase_card(list, purchase, sync_now, php_per_usd);
-          return;
-        }
-      }
-      open_key = null;
-    }
-    let left2 = list_size(purchases);
-    if (equal(left2, 0)) {
-      html_p_text(list, "No purchases yet - press ➕ Add a purchase");
-    }
-    app_receipts_days_draw(list, purchases, php_per_usd, on_open, on_zone);
-  }
-  async function on_zone(zone) {
-    app_receipts_zone_set(zone);
-    await list_show();
-  }
-  async function on_open(purchase) {
-    open_key = property_get(purchase, "key");
-    await list_show();
-  }
-  async function on_all() {
-    open_key = null;
-    await list_show();
+    await list_refresh();
   }
   async function on_add() {
     let purchase = await app_receipts_purchase_new(folder_code);
-    open_key = property_get(purchase, "key");
-    await list_show();
+    let key = property_get(purchase, "key");
+    await open(key);
     await sync_now();
   }
   async function status_show() {
