@@ -1,3 +1,4 @@
+import { app_code_expression_operator_chip } from "./app_code_expression_operator_chip.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_brace_unmarked } from "./app_code_brace_unmarked.mjs";
 import { property_get } from "./property_get.mjs";
@@ -14,7 +15,6 @@ import { text_slice } from "./text_slice.mjs";
 import { html_text_code_breakable_add } from "./html_text_code_breakable_add.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { add } from "./add.mjs";
-import { app_code_token_chip_thin } from "./app_code_token_chip_thin.mjs";
 import { equal } from "./equal.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { not } from "./not.mjs";
@@ -35,7 +35,7 @@ export function app_code_brace_pair_example_choose(component, text, container) {
   ("a worked example where one brace is pointed at and every other brace can be tapped, and the learner taps the brace that pairs with it, as the human asked 2026-10-11, so the pairing is done on the page before any quiz asks for it");
   ("Every other brace can be tapped, both kinds, as the human asked: other braces are choosable. Rejected: only the braces of the other kind, which halves the choosing and leaves the learner nothing to get wrong about which kind closes which.");
   ("Nothing is counted here, as in the worked examples of The order of the tokens: a wrong brace is turned red until the right one is tapped, and the right one takes the colour of the brace pointed at, with the praise those examples end with under it.");
-  ("The brace pointed at wears a colour from the bag every pair of braces draws from, so it changes from one example to the next, as the human asked 2026-10-11. It wears the same chip as the braces that can be tapped, so all of them are the same width and the pointed-at one differs only by its colour.");
+  ("The brace pointed at wears a colour from the bag every pair of braces draws from, so it changes from one example to the next, as the human asked 2026-10-11. It wears the same chip as the braces that can be tapped, so all of them are the same width and the pointed-at one differs only by its colour. The chip is the full one an operator wears, not the thin one every token of a line wears, because here only the braces are chips, and the human asked 2026-10-11 for every brace to be padded.");
   ("Takes the example's outer box as well because that is how every worked example is drawn; the choosing needs only the box it is drawn in.");
   let unmarked = app_code_brace_unmarked(text);
   let code = property_get(unmarked, "code");
@@ -62,7 +62,7 @@ export function app_code_brace_pair_example_choose(component, text, container) {
     cursor = add(i, 1);
     let brace = code[i];
     let span = html_span_text(div, brace);
-    app_code_token_chip_thin(span);
+    app_code_expression_operator_chip(span);
     if (equal(i, index)) {
       colored(span);
       return;
@@ -82,7 +82,7 @@ export function app_code_brace_pair_example_choose(component, text, container) {
         return;
       }
       property_set(state, "done", true);
-      each(refused, app_code_token_chip_thin);
+      each(refused, app_code_expression_operator_chip);
       html_data_set_test_happy_remove(span);
       colored(span);
       app_shared_success_message(component);
