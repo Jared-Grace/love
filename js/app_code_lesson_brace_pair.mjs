@@ -39,7 +39,7 @@ import { app_code_brace_marked_div } from "./app_code_brace_marked_div.mjs";
 export function app_code_lesson_brace_pair() {
   arguments_assert(arguments, 0);
   ("which brace pairs with which: in if (a) { if (b) { ... } }, the first { is closed by the last }, not by the } nearest to it");
-  ("The one new fact is how a { and its } are found from each other: going down from a {, count 1 more for every { and 1 less for every }, and the } that brings the count back to 0 closes it; going up from a }, the same with the two swapped finds the { that opens it.");
+  ("The one new fact is that braces come in pairs, and the pair of a brace is found by eye: a } stands right under the start of the line its { is on. Rejected 2026-10-11 by the human: counting 1 more for every { and 1 less for every } until the count is 0, which was taught here first; the human asked for the pair to be eyeballed instead.");
   ("Asked for by the human 2026-10-09, after a learner asked why the last else in if ( if else ) else belongs to the first if when it is so far away from it: the else belongs to the if whose { the } before it closes, so matching braces is the fact underneath the question. The human asked for both ways, which } closes a { and which { opens a }, and at least two pairs of braces in every program.");
   ("Placed straight after If after an if inside an if and before the first else inside an if, so it comes before the shape the learner tripped on and uses only shapes already taught: three ifs one after the other, an if and else with an if after it, an if inside an if with an if after it or before it, and two ifs inside an if. Rejected: straight after If inside an else, where every nesting with else has been seen, because by then the learner has already met the question unequipped; and before If inside an if, because the nested shapes would be new there. Which if an else belongs to is left for a lesson of its own, after the nesting lessons with else.");
   ("Every program has exactly three pairs of braces, so every question offers three buttons - the three braces of the kind asked for - and the quiz is told to show three. Two pairs was the first draft and was rejected: it leaves one wrong answer, so a guess is right half the time, and a quiz told to show more fills the rest from other questions, which offered a different program and even the question itself.");
@@ -139,12 +139,8 @@ export function app_code_lesson_brace_pair() {
     return once;
   }
   let painter = app_code_code_dark_lines_brace_marked;
-  function code_shown(root, text) {
-    let div = html_div(root);
-    painter(div, text);
-  }
   function above(root, context) {
-    "an if inside an if remembered, then finding a } from its { by counting, and a { from its } the same way";
+    "an if inside an if remembered, then braces in pairs, shown in colours, with where a } stands to find it by eye";
     let left2 = js_code_brace_left();
     let right2 = js_code_brace_right();
     let box_one = app_code_container_light_blue(root);
@@ -197,73 +193,13 @@ export function app_code_lesson_brace_pair() {
       right2,
       " nearest to it",
     ]);
-    let if_b2 = js_code_if_lines_multiple("b", [say_joy]);
-    let statements3 = list_concat([say_love], if_b2);
-    let lines = js_code_if_lines_multiple("a", statements3);
-    let code5 = list_join_newline(lines);
-    let list2 = braces_of(code5, left2);
-    let opening = list_get(list2, 0);
-    let closings = braces_of(code5, right2);
-    let closing_inner = list_get(closings, 0);
-    let closing_outer = list_get(closings, 1);
-    let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, [
-      "Without the colours, which ",
+    html_div_cycle_code(box_paired, [
+      "A ",
       right2,
-      " closes this ",
-      left2,
-      "?",
-    ]);
-    let marked = app_code_brace_marked(code5, opening);
-    code_shown(box_two, marked);
-    html_div_cycle_code(box_two, [
-      "Count, going down. The ",
-      left2,
-      " we start at makes 1",
-    ]);
-    html_div_cycle_code(box_two, ["The next ", left2, " makes 2"]);
-    html_div_cycle_code(box_two, [
-      "The next ",
-      right2,
-      " makes 1. It is not the one, because the count is not 0",
-    ]);
-    html_div_cycle_code(box_two, [
-      "The next ",
-      right2,
-      " makes 0, so this is the ",
-      right2,
-      " that closes it:",
-    ]);
-    let marked2 = app_code_brace_marked(code5, closing_outer);
-    code_shown(box_two, marked2);
-    html_div_cycle_code(box_two, [
-      "It also stands right under the start of the line its ",
+      " stands right under the start of the line its ",
       left2,
       " is on",
     ]);
-    let box_three = app_code_container_light_blue(root);
-    html_div_cycle_code(box_three, [
-      "It works the other way too. Which ",
-      left2,
-      " opens this ",
-      right2,
-      "?",
-    ]);
-    let marked3 = app_code_brace_marked(code5, closing_inner);
-    code_shown(box_three, marked3);
-    html_div_cycle_code(box_three, [
-      "Count, going up. The ",
-      right2,
-      " we start at makes 1, and the next ",
-      left2,
-      " makes 0, so this is the ",
-      left2,
-      " that opens it:",
-    ]);
-    let list3 = braces_of(code5, left2);
-    let opening_inner = list_get(list3, 1);
-    let marked4 = app_code_brace_marked(code5, opening_inner);
-    code_shown(box_three, marked4);
   }
   let name_id = app_code_lesson_statement_title_name_id(
     "Which brace pairs with which",
@@ -291,7 +227,7 @@ export function app_code_lesson_brace_pair() {
   let lesson = app_code_lesson_base(
     name_id,
     above,
-    2,
+    1,
     batch,
     app_code_brace_pair_example_choose,
     null,
