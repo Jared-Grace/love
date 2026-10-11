@@ -90,6 +90,7 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-11: Which brace pairs with which, two pairs and the two lessons on the lines between two pairs of braces moved straight after The braces among the tokens, with no colors, at the human's asking, so two pairs of braces are explained fully before The same if twice";
   "2026-10-11: hold Does this section run?, new at the human's asking straight after If inside an if, until the human has read its first draft";
   "2026-10-11: Does this section run? made one per shape of two or three pairs of braces, each straight before the first lesson of its shape, as the human asked - each 2 and 3 brace - and held with the first until the human has read them";
+  "then deploy everything except the looping lessons, 2026-10-11, as the human asked: hold the three while lessons";
   let fns = [
     app_code_lesson_while_log,
     app_code_lesson_while_down,
