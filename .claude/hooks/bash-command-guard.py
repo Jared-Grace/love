@@ -5367,6 +5367,12 @@ def main():
     if twin_reason is not None:
         return decide("deny", twin_reason)
 
+    # The hand-made spelling of function_temp_write. After the allow decision
+    # for the same reason as the redirect above. See find_js_to_temp_copy.
+    temp_copy_name = find_js_to_temp_copy(command)
+    if temp_copy_name is not None:
+        return decide("deny", js_to_temp_copy_deny_reason(temp_copy_name))
+
     # A dispatcher call caught in a file the caller made for it, when the
     # command had already written that file itself. Unlike the floors above
     # this one sits after the allow decision, which is what keeps it honest:

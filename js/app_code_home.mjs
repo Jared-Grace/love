@@ -1,3 +1,4 @@
+import { app_code_lesson_groups_numbered } from "./app_code_lesson_groups_numbered.mjs";
 import { app_code_home_all_complete } from "./app_code_home_all_complete.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { app_code_home_value } from "./app_code_home_value.mjs";
@@ -8,7 +9,6 @@ import { storage_session_get_context } from "./storage_session_get_context.mjs";
 import { app_code_home_rows_start } from "./app_code_home_rows_start.mjs";
 import { app_code_review_number_key } from "./app_code_review_number_key.mjs";
 import { app_code_reviews_complete_read } from "./app_code_reviews_complete_read.mjs";
-import { app_code_lesson_groups } from "./app_code_lesson_groups.mjs";
 import { add_1 } from "./add_1.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -47,8 +47,8 @@ export async function app_code_home(context) {
   let review_number = property_get(r2, property_name);
   ("which reviews have been finished is read once for the whole list, the same way the finished lessons are, rather than once inside every row");
   let reviews_complete = app_code_reviews_complete_read(context);
-  ("the lessons are drawn into folding groups, one open at a time, like the front page's groups of apps - asked for by the human. A group starts at the lesson number it names, so the group a row lands in is only known as the rows are drawn.");
-  let groups = app_code_lesson_groups();
+  ("the lessons are drawn into folding groups, one open at a time, like the front page's groups of apps - asked for by the human. A group starts at the lesson it names, its number worked out from the lessons shown, so the group a row lands in is only known as the rows are drawn.");
+  let groups = app_code_lesson_groups_numbered(lessons);
   let cards = [];
   let group = null;
   let opened = null;
