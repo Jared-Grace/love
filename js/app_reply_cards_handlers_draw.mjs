@@ -64,6 +64,7 @@ export function app_reply_cards_handlers_draw(
       responses_buttons,
       encouragement,
       encouragement_singles,
+      testament_held,
       languages_chosen_held,
       buttons_refresh,
       visible_count_held,
