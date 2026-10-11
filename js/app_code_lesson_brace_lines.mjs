@@ -11,6 +11,7 @@ export function app_code_lesson_brace_lines() {
   arguments_assert(arguments, 0);
   ("which lines stand between a pair of braces, in programs with three pairs of braces: the learner taps every line between a { and the } that closes it");
   ("Asked for by the human 2026-10-11, as the version of The lines between braces, two pairs with three pairs, placed straight after it.");
+  ("Since 2026-10-11 it remembers The lines between braces, one inside the other, which now comes straight before it, and shows the lines of the outer pair worked out above the questions.");
   ("The writing is a first draft by Claude 2026-10-11.");
   let left = js_code_brace_left();
   let right = js_code_brace_right();
@@ -20,7 +21,7 @@ export function app_code_lesson_brace_lines() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_brace_lines_two,
+      app_code_lesson_brace_lines_two_nested,
       [
         "the lines of a section are the lines between its ",
         left,
@@ -29,6 +30,10 @@ export function app_code_lesson_brace_lines() {
         ".",
       ],
     );
+    let box_two = app_code_container_light_blue(root);
+    let codes = app_code_brace_pair_programs_three();
+    let code = list_get(codes, 0);
+    app_code_brace_lines_example(box_two, code, 0);
   }
   let name_id = app_code_lesson_statement_title_name_id(
     "The lines between braces",

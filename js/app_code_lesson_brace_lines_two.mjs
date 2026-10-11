@@ -12,6 +12,7 @@ export function app_code_lesson_brace_lines_two() {
   arguments_assert(arguments, 0);
   ("which lines stand between a pair of braces, in programs with two pairs of braces: the learner taps every line between a { and the } that closes it");
   ("Asked for by the human 2026-10-11, after Which brace pairs with which, with a version for two pairs and another for three. Placed straight after Which brace pairs with which, so both lessons on which brace pairs with which come first, and the two on lines follow in the same order, two pairs then three. Rejected: each lines lesson straight after the pairing lesson with its number of pairs, which would put two pairs, lines, three pairs, lines - the human said then, after brace matching.");
+  ("Split 2026-10-11, as the human asked, into this lesson with its two pairs side by side - two ifs, or an if and its else - and The lines between braces, one inside the other, after it, so the if inside an if is sure to be asked rather than one program of four.");
   ("The writing is a first draft by Claude 2026-10-11.");
   let left = js_code_brace_left();
   let right = js_code_brace_right();
@@ -31,15 +32,27 @@ export function app_code_lesson_brace_lines_two() {
       " and its ",
       right,
     ]);
+    let code = app_code_braces_two_ifs();
+    app_code_brace_lines_example(box_two, code, 0);
+  }
+  function codes_get() {
+    "two ifs one after the other, and an if and its else, each twice";
+    let codes = [
+      app_code_braces_two_ifs(),
+      app_code_braces_two_ifs(),
+      app_code_braces_two_if_else(),
+      app_code_braces_two_if_else(),
+    ];
+    return codes;
   }
   let name_id = app_code_lesson_statement_title_name_id(
-    "The lines between braces, two pairs",
+    "The lines between braces, side by side",
     "{ ... }",
   );
   let lesson = app_code_lesson_brace_lines_generic(
     name_id,
     above,
-    app_code_brace_pair_programs_two,
+    codes_get,
   );
   return lesson;
 }

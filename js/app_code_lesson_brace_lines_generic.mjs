@@ -24,7 +24,7 @@ import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 export function app_code_lesson_brace_lines_generic(name_id, above, codes_get) {
   arguments_assert(arguments, 3);
   ("a lesson on which lines stand between a pair of braces, over four of the programs codes_get hands back: one pair is drawn in a colour and the learner taps every line between its two braces, in the worked examples and in the quiz alike; asked for by the human 2026-10-11");
-  ("The pair pointed at is chosen by a { at random, so on one program it may be a pair inside another, holding one line, or the pair around it, holding the inner pair's lines too.");
+  ("The pair pointed at takes each { of the programs in turn rather than one at random, so a screen of an if inside an if asks for the pair around, holding the inner pair's lines too, as often as the pair inside, holding one line; a random choice could leave the pair around out of a screen, and it is the one that teaches. Changed 2026-10-11, when the human asked for the nested programs to be sure of being asked.");
   ("There is one quiz, the same choosing as the examples, because the question - a program with a pair coloured - and the answer - its lines - are already the lesson's whole fact, and no program here is run.");
   let left = js_code_brace_left();
   function between_lines(question) {
@@ -48,21 +48,23 @@ export function app_code_lesson_brace_lines_generic(name_id, above, codes_get) {
     return joined;
   }
   function batch_get() {
-    "four of the programs, each with one { at random pointed at";
+    "four of the programs, the first pointing at its first {, the next at its second, and so on round, then put in a random order";
     let list = codes_get();
     let codes = list_shuffle_take(list, 4);
-    function question_get(code) {
+    let questions = [];
+    for (let n = 0; less_than(n, codes.length); n++) {
+      let code = list_get(codes, n);
       let indexes = [];
       for (let i = 0; less_than(i, code.length); i++) {
         if (equal(code[i], left)) {
           list_add(indexes, i);
         }
       }
-      let index = list_random_item(indexes);
+      let index = list_get(indexes, modulo(n, list_size(indexes)));
       let question = app_code_brace_marked(code, index);
-      return question;
+      list_add(questions, question);
     }
-    let questions = list_map(codes, question_get);
+    list_shuffle(questions);
     return questions;
   }
   let batch = app_code_batch_question_answer_fns(batch_get, between_lines);
