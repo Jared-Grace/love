@@ -1,12 +1,14 @@
-import { fn_name } from "./fn_name.mjs";
-import { html_style_overflow_wrap } from "./html_style_overflow_wrap.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_screen_go_tab } from "./app_shared_screen_go_tab.mjs";
 import { app_code_examples } from "./app_code_examples.mjs";
 import { app_shared_button_numbered_progress } from "./app_shared_button_numbered_progress.mjs";
+import { app_code_lesson_open_tab } from "./app_code_lesson_open_tab.mjs";
+import { html_on_middle_click } from "./html_on_middle_click.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { html_style_overflow_wrap } from "./html_style_overflow_wrap.mjs";
 import { app_code_lesson_title_render } from "./app_code_lesson_title_render.mjs";
 export function app_code_home_lesson_button(
   g,
@@ -37,6 +39,11 @@ export function app_code_home_lesson_button(
     on_click,
   );
   let button = property_get(r, "button");
+  ("a middle click opens the lesson in a new tab and leaves this list where it is, at the human's request, 2026-10-11. Rejected: making the row a real link, which would also give copy-link and ctrl-click, but the row is the shared numbered button every app draws");
+  function on_middle_click() {
+    app_code_lesson_open_tab(context, id);
+  }
+  html_on_middle_click(button, on_middle_click);
   let gap = app_shared_spaced_gap();
   html_style_margin_top(button, gap);
   let title = property_get(r, "title");
