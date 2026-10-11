@@ -4232,6 +4232,13 @@ def unread_hint(why, command):
             "A heredoc hides what it feeds in. Create the file with the "
             "Write tool, then pass its path."
         )
+    if "'<'" in why:
+        return (
+            "Pass the file as an argument instead of feeding it in with `<`: "
+            "`wc -l FILE`, `grep x FILE` and the like read it themselves, and "
+            "a `$var` in the path is fine that way. Give a count its own line "
+            "rather than a `$(...)` inside an echo."
+        )
     if "'>'" in why and RELATIVE_REDIRECT_RE.search(command):
         return (
             "The output goes to a bare file name, and this hook checks the "
