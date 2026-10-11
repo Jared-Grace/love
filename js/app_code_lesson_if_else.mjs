@@ -1,5 +1,10 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_braces_run_if_else } from "./app_code_lesson_braces_run_if_else.mjs";
+import { js_code_else_dots } from "./js_code_else_dots.mjs";
+import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { app_code_if_else_program_lines } from "./app_code_if_else_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
@@ -12,7 +17,6 @@ import { app_code_if_either_decoys } from "./app_code_if_either_decoys.mjs";
 import { app_code_if_boolean_flipped } from "./app_code_if_boolean_flipped.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
-import { app_code_if_else_explain } from "./app_code_if_else_explain.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_if_else() {
   arguments_assert(arguments, 0);
@@ -25,8 +29,26 @@ export function app_code_lesson_if_else() {
   ("The writing is a first draft by Claude 2026-10-08.");
   ("The second box says else says the same as if (a) beside if (!a) as long as nothing changes a in between, at the human's word 2026-10-08, matching the last box of If and if not. Without it the claim is false: if something changes a between the two ifs, both can run, while else asks once and never runs both. Not picked: showing that difference here, a second new fact, left for a lesson after this one.");
   ("The last box says exactly one of the two runs, every time, at the human's question 2026-10-08, with no condition attached, unlike If and if not: else asks once and the side chosen stays chosen. Weighed and found not to need a condition: an await inside a side, since a changing a then cannot reach the other side; a return, continue or break, which sit inside a side and so only stop it partway; an exception thrown inside a side, the same; and one thrown while checking a, which stops the whole program. Not picked: naming any of these here, none of them yet taught.");
-  ("The explanation is shared with the Does this section run? before this lesson, at the human's asking 2026-10-11.");
+  ("The explanation moved to the Does this section run? before this lesson, at the human's asking 2026-10-11, that it introduce the shape; this lesson remembers it in one box. Not picked: sharing the whole explanation with that lesson, as for a day before, which said the same four boxes twice in a row.");
   let fruits = fruits_of_the_spirit();
+  function above(root, context) {
+    "the section-run lesson remembered: exactly one of if and else runs";
+    let box = app_code_container_light_blue(root);
+    let code2 = js_code_else_dots();
+    let code3 = js_code_if_dots("a");
+    app_code_remember_from_lesson(
+      box,
+      context,
+      app_code_lesson_braces_run_if_else,
+      [
+        "",
+        code2,
+        " runs when ",
+        code3,
+        " does not, so exactly one of the two runs, every time",
+      ],
+    );
+  }
   function program_get(name, value, words) {
     let lines2 = app_code_if_else_program_lines(name, value, words);
     let joined = list_join_newline(lines2);
@@ -71,7 +93,7 @@ export function app_code_lesson_if_else() {
     "if (a) { ... } else { ... }",
   );
   let lesson = app_code_lesson_code_logged({
-    above: app_code_if_else_explain,
+    above,
     name_id,
     batch_get: batch,
     example_count: 2,

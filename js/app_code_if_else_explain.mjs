@@ -18,7 +18,7 @@ import { app_code_if_else_program_lines } from "./app_code_if_else_program_lines
 export function app_code_if_else_explain(root, context) {
   arguments_assert(arguments, 2);
   ("if (a) beside if (!a) remembered, then the same program written with else, with a true and then false");
-  ("Shared by Else and the Does this section run? before it, at the human's asking 2026-10-11 that the else explanation appear there too, since that lesson is now where else is first met. Not picked: moving it out of Else, which would leave Else with no explanation of its own for a learner who comes back to it.");
+  ("The explanation of the Does this section run? before Else, at the human's asking 2026-10-11, since that lesson is now where else is first met. Else itself only remembers it, at the human's later asking the same day that each section-run lesson introduce its shape.");
   let bang = js_operator_bang_symbol();
   let fruits = fruits_of_the_spirit();
   let name = "a";
