@@ -251,6 +251,8 @@ export function app_code_braces_run_choose(parent, code, on_wrong, on_success) {
       right,
       [" run?"],
     ]);
+    ("The answers stand in a plain block, as a multiple choice quiz's do, so the space between them is the buttons' own margins, which meet and collapse: a flex column would add its gap to both margins.");
+    let choices = html_div(ask);
     let answered = {
       answered: false,
     };
@@ -268,7 +270,7 @@ export function app_code_braces_run_choose(parent, code, on_wrong, on_success) {
       "one answer, its braces coloured as the section's are";
       let right2 = equal(yes, runs);
       let b = app_code_quiz_choice_button_answer(
-        ask,
+        choices,
         "",
         right2,
         answered,
