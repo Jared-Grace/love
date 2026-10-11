@@ -1,12 +1,5 @@
-import { app_code_braces_run_output_show } from "./app_code_braces_run_output_show.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { less_than } from "./less_than.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { equal } from "./equal.mjs";
-import { subtract } from "./subtract.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { app_code_if_blocks } from "./app_code_if_blocks.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
@@ -16,14 +9,17 @@ import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_text_align_left } from "./html_text_align_left.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { text_size } from "./text_size.mjs";
+import { less_than } from "./less_than.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { property_set } from "./property_set.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { html_transition_set } from "./html_transition_set.mjs";
+import { equal } from "./equal.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { html_transition_set } from "./html_transition_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
 import { sleep } from "./sleep.mjs";
 import { property_exists } from "./property_exists.mjs";
@@ -36,10 +32,14 @@ import { html_transition_transform_set } from "./html_transition_transform_set.m
 import { html_pixels_text } from "./html_pixels_text.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_translation_transition_clear } from "./html_translation_transition_clear.mjs";
+import { subtract } from "./subtract.mjs";
+import { not } from "./not.mjs";
 import { html_style_clear } from "./html_style_clear.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_code_if_block_reached } from "./app_code_if_block_reached.mjs";
 import { html_clear } from "./html_clear.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { app_code_braces_run_output_show } from "./app_code_braces_run_output_show.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_code_braces_color_next } from "./app_code_braces_color_next.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -78,7 +78,7 @@ export function app_code_braces_run_choose(parent, code, on_wrong, on_success) {
     let line_div = html_div(div);
     let written = [];
     for (let i = start; less_than(i, end); i++) {
-      let letter = code[i];
+      let letter = code.charAt(i);
       let span = html_span_text(line_div, letter);
       property_set(spans, i, span);
       if (not_equal(letter, " ")) {
