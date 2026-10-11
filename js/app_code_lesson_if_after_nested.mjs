@@ -1,24 +1,11 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
-import { js_keyword_if } from "./js_keyword_if.mjs";
-import { js_code_wrap_parenthesis } from "./js_code_wrap_parenthesis.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { list_get } from "./list_get.mjs";
-import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
-import { js_code_if_lines } from "./js_code_if_lines.mjs";
-import { list_concat } from "./list_concat.mjs";
-import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
-import { list_concat_multiple } from "./list_concat_multiple.mjs";
-import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_if_nested } from "./app_code_lesson_if_nested.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { list_join_newline } from "./list_join_newline.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_code_lesson_braces_run_after_nested } from "./app_code_lesson_braces_run_after_nested.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_if_ab_logged } from "./app_code_lesson_if_ab_logged.mjs";
+import { app_code_if_after_nested_program_lines } from "./app_code_if_after_nested_program_lines.mjs";
 export function app_code_lesson_if_after_nested() {
   arguments_assert(arguments, 0);
   ('an if after an if inside an if: let a = false; let b = true; if (a) { console.log("love"); if (b) { console.log("joy"); } } if (b) { console.log("peace"); } console.log("patience"); writes out peace and patience');
@@ -30,124 +17,23 @@ export function app_code_lesson_if_after_nested() {
   ("The two ifs that ask b are named in sentences by their whole line, never as the if inside and the if after, so a sentence never leaves the reader to work out which one is meant.");
   ("Moved 2026-10-11 by the human to straight after The order of the braces, since its program has three pairs of braces: every lesson explaining three pairs - the braces among the tokens with three pairs, which brace pairs with which, the lines between braces and the order of the braces - comes before the first lesson asking what code with three pairs prints. The lessons with two pairs that stood between them move with them.");
   ("The writing is a first draft by Claude 2026-10-08.");
+  ("2026-10-11, at the human's asking: the explanation moved to Does this section run? An if after an if inside an if, straight before, which now introduces the shape; this lesson remembers it. Not picked: keeping the explanation here too, which would say the same thing twice in a row.");
   let fruits = fruits_of_the_spirit();
-  function if_one_line(condition, statement) {
-    "an if around one line, written on one line, for a sentence to name it whole: if (condition) { statement }";
-    let keyword = js_keyword_if();
-    let wrapped = js_code_wrap_parenthesis(condition);
-    let code = text_combine_multiple([
-      keyword,
-      " ",
-      wrapped,
-      " { ",
-      statement,
-      " }",
-    ]);
-    return code;
-  }
-  function program_lines(values, words) {
-    "let a = first value; let b = second value; if (a) { console.log(first word); if (b) { console.log(second word); } } if (b) { console.log(third word); } console.log(fourth word);";
-    let value_a = list_get(values, 0);
-    let setup_a = js_code_let_json_statement("a", value_a);
-    let value_b = list_get(values, 1);
-    let setup_b = js_code_let_json_statement("b", value_b);
-    let item = list_get(words, 0);
-    let statement2 = app_code_word_console_log_statement(item);
-    let item2 = list_get(words, 1);
-    let statement3 = app_code_word_console_log_statement(item2);
-    let inner = js_code_if_lines("b", statement3);
-    let outer_insides = list_concat([statement2], inner);
-    let outer = js_code_if_lines_multiple("a", outer_insides);
-    let item3 = list_get(words, 2);
-    let statement4 = app_code_word_console_log_statement(item3);
-    let after = js_code_if_lines("b", statement4);
-    let item4 = list_get(words, 3);
-    let statement5 = app_code_word_console_log_statement(item4);
-    let lines = list_concat_multiple([
-      [setup_a, setup_b],
-      outer,
-      after,
-      [statement5],
-    ]);
-    return lines;
-  }
   function above(root, context) {
-    "an if inside an if remembered, then an if after it, then the program with a false";
-    let love = list_get(fruits, 0);
-    let joy = list_get(fruits, 1);
-    let peace = list_get(fruits, 2);
-    let patience = list_get(fruits, 3);
-    let words4 = [love, joy, peace, patience];
-    let say_joy = app_code_word_console_log_statement(joy);
-    let say_peace = app_code_word_console_log_statement(peace);
-    let say_patience = app_code_word_console_log_statement(patience);
-    let if_a = js_code_if_dots("a");
-    let if_joy = if_one_line("b", say_joy);
-    let if_peace = if_one_line("b", say_peace);
+    "the section-run lesson remembered";
     let box_one = app_code_container_light_blue(root);
-    app_code_remember_from_lesson(box_one, context, app_code_lesson_if_nested, [
-      "An ",
-      "if",
-      " can go inside an ",
-      "if",
-    ]);
-    let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, [
-      "An ",
-      "if",
-      " can also go after an ",
-      "if",
-      ":",
-    ]);
-    let all_lines = program_lines([true, true], words4);
-    let all_written = list_join_newline(words4);
-    app_code_code_lines_writes_out(box_two, all_lines, all_written);
-    html_div_cycle_code(box_two, ["", if_joy, " is inside ", if_a]);
-    html_div_cycle_code(box_two, [
-      "",
-      if_peace,
-      " is after ",
-      if_a,
-      ", so ",
-      if_peace,
-      " is not inside ",
-      if_a,
-    ]);
-    let box_three = app_code_container_light_blue(root);
-    html_div_cycle_code(box_three, ["But suppose ", "a", " is ", "false", ":"]);
-    let none_lines = program_lines([false, true], words4);
-    let none_written = list_join_newline([peace, patience]);
-    app_code_code_lines_writes_out(box_three, none_lines, none_written);
-    html_div_cycle_code(box_three, [
-      "",
-      "a",
-      " is ",
-      "false",
-      ", so no line inside ",
-      if_a,
-      " runs",
-    ]);
-    html_div_cycle_code(box_three, ["So ", if_joy, " is never reached"]);
-    html_div_cycle_code(box_three, [
-      "",
-      "b",
-      " is ",
-      "true",
-      ", so ",
-      say_peace,
-      " inside ",
-      if_peace,
-      " still runs",
-    ]);
-    html_div_cycle_code(box_three, [
-      "",
-      say_patience,
-      " is outside every ",
-      "if",
-      ", so ",
-      say_patience,
-      " always runs",
-    ]);
+    app_code_remember_from_lesson(
+      box_one,
+      context,
+      app_code_lesson_braces_run_after_nested,
+      [
+        "An ",
+        "if",
+        " after another's ",
+        "}",
+        " is outside it, so it is reached whatever that one asks",
+      ],
+    );
   }
   let name_id = app_code_lesson_statement_title_name_id(
     "An if after an if inside an if",
@@ -155,7 +41,7 @@ export function app_code_lesson_if_after_nested() {
   );
   let lesson = app_code_lesson_if_ab_logged(
     fruits,
-    program_lines,
+    app_code_if_after_nested_program_lines,
     4,
     true,
     above,
