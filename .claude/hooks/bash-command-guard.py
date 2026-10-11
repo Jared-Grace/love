@@ -4089,6 +4089,24 @@ def untrusted_piece_hint(words, safe_verbs):
         return ""
     if verb not in safe_verbs:
         if len(plain) >= 3 and plain[0] == "node" and plain[1] in AI_DISPATCHER_SCRIPTS:
+            # A dangerous writer keeps its granted, checked twin under
+            # `<name>_edit_safe`; a `_multiple` has none of its own, so its
+            # single form's twin is the one to name, called once per name.
+            name = plain[2]
+            single = name[: -len("_multiple")] if name.endswith("_multiple") else name
+            for twin in (name + "_edit_safe", single + "_edit_safe"):
+                try:
+                    twin_verb = verb_of([plain[0], plain[1], twin])
+                except (IndexError, Unsupported):
+                    continue
+                if twin_verb in safe_verbs:
+                    each = " once per name" if single != name and twin == single + "_edit_safe" else ""
+                    return (
+                        f"`{name}` holds no grant, and should not: it can write "
+                        f"anything. Call `{twin}`{each} instead - it is granted, "
+                        "and writes only an edit its check proves cannot change "
+                        "anything dangerous, else it writes nothing and says why."
+                    )
             return (
                 f"`{plain[2]}` holds no grant. Run it as its own Bash call, "
                 "so the rest needs no human; if it should never prompt, "
