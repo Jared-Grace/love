@@ -4104,6 +4104,35 @@ def find_edit_safe_twin_reason(command, safe_verbs):
     return None
 
 
+def find_js_to_temp_copy(command):
+    """The function name when a statement of `command` is a plain
+    `cp js/<name>.mjs scripts/temp/...` (relative or under REPO_ROOT), which
+    function_temp_write does unasked; else None."""
+    js_prefixes = ("js/", REPO_ROOT + "/js/")
+    temp_prefixes = ("scripts/temp/", REPO_ROOT + "/scripts/temp/")
+    for words in statements_words(command):
+        if len(words) != 3 or words[0] != "cp":
+            continue
+        source, target = words[1], words[2]
+        if not target.startswith(temp_prefixes):
+            continue
+        for prefix in js_prefixes:
+            if source.startswith(prefix) and source.endswith(".mjs"):
+                name = source[len(prefix):-len(".mjs")]
+                if FUNCTION_NAME_TEXT.match(name):
+                    return name
+    return None
+
+
+def js_to_temp_copy_deny_reason(name):
+    return (
+        f"Copying a function's file into scripts/temp has a named command "
+        f"that needs no prompt: `node scripts/ai.mjs function_temp_write "
+        f"{name}` writes scripts/temp/{name}.mjs. Edit the draft there, then "
+        f"promote it with `node scripts/ai.mjs function_overwrite_from_temp_edit_safe {name}`."
+    )
+
+
 def untrusted_piece_hint(words, safe_verbs):
     """One sentence on how to reword the refused part `words`, or "" when
     there is nothing better to say than its name."""
