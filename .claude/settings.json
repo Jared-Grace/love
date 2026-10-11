@@ -2714,6 +2714,7 @@
       "Bash(node scripts/ai.mjs function_new_from_temp_multiple:*)",
       "Bash(node scripts/ai.mjs function_overwrite_from_temp_edit_safe:*)",
       "Bash(node scripts/ai.mjs playwright_url_texts_click_screenshot:*)",
+      "Bash(node scripts/ai.mjs function_temp_edit_safe_refusals:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -5317,6 +5318,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args function_new_from_temp_multiple:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args function_overwrite_from_temp_edit_safe:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args playwright_url_texts_click_screenshot:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args function_temp_edit_safe_refusals:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -7919,6 +7921,7 @@
       "Bash(node scripts/aig.mjs function_new_from_temp_multiple:*)",
       "Bash(node scripts/aig.mjs function_overwrite_from_temp_edit_safe:*)",
       "Bash(node scripts/aig.mjs playwright_url_texts_click_screenshot:*)",
+      "Bash(node scripts/aig.mjs function_temp_edit_safe_refusals:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -10521,7 +10524,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args bible_glyph_chapters_name_badges_seated_draw:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args function_new_from_temp_multiple:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args function_overwrite_from_temp_edit_safe:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args playwright_url_texts_click_screenshot:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args playwright_url_texts_click_screenshot:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args function_temp_edit_safe_refusals:*)"
     ],
     "defaultMode": "acceptEdits"
   },

@@ -2611,6 +2611,7 @@ export function permission_grant_names() {
     fn_name("function_new_from_temp_multiple"),
     fn_name("function_overwrite_from_temp_edit_safe"),
     fn_name("playwright_url_texts_click_screenshot"),
+    fn_name("function_temp_edit_safe_refusals"),
   ];
   return names;
 }
