@@ -504,6 +504,9 @@
     { "command": "cd /tmp/x/scratchpad && printf a >> used.txt && wc -l used.txt", "decision": "deny", "reason_includes": "it never follows `cd`. Write the whole path", "why": "a bare file name after cd into the scratchpad was told to write to the scratchpad, which it already did; the hint names the real fix" },
     { "command": "ls; bash data/given/cases/guard_script_fixture.sh", "decision": "deny", "reason_includes": "line 4 (awk)", "why": "a prompt for bash FILE showed two words; the human approved a script that ran awk unseen" },
     { "command": "ls; bash data/given/cases/guard_script_fixture.sh", "decision": "deny", "reason_includes": "line 6 (awk)", "why": "an awk program spanning lines leaves an unclosed quote on its first line; the word match still flags it" },
-    { "command": "bash data/given/cases/guard_script_fixture.sh", "decision": "deny", "reason_includes": "line 4 (awk)", "why": "a lone bash FILE was silent, so the native prompt gave no reason; it now asks with what the file holds" }
+    { "command": "bash data/given/cases/guard_script_fixture.sh", "decision": "deny", "reason_includes": "line 4 (awk)", "why": "a lone bash FILE was silent, so the native prompt gave no reason; it now asks with what the file holds" },
+    { "command": "node scripts/ai.mjs function_overwrite_from_temp_multiple a", "decision": "deny", "reason_includes": "function_overwrite_from_temp_edit_safe` once per name", "why": "the ungrantable overwrite prompted with no hint while its checked twin was granted; the redirect names the twin" },
+    { "command": "cd /home/j/a/repos/love; node scripts/ai.mjs function_overwrite_from_temp a | grep -c x", "decision": "deny", "reason_includes": "Call `node scripts/ai.mjs function_overwrite_from_temp_edit_safe` instead", "why": "inside a chain the same redirect must fire, not the generic grant-it-by-name hint" },
+    { "command": "node scripts/ai.mjs function_overwrite_from_temp_edit_safe a", "decision": "allow", "why": "the checked twin itself stays unasked" }
   ]
 }

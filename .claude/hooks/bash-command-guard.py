@@ -4059,6 +4059,51 @@ def untrusted_piece(command, safe_verbs, safe_exact_commands, outer_vars=None):
 COMMAND_BUILDING_VERBS = ("xargs", "sh", "bash", "eval", "env", "exec", "parallel")
 
 
+def edit_safe_twin_reason(words, safe_verbs):
+    """When `words` is `node <dispatcher> <name>` and <name> is ungranted but
+    has a granted, checked twin, the sentence that sends Claude to the twin;
+    else "".
+
+    A dangerous writer keeps its checked twin under `<name>_edit_safe`; a
+    `_multiple` has none of its own, so its single form's twin is the one to
+    name, called once per name."""
+    if len(words) < 3 or words[0] != "node" or not dispatcher_script_is(words[1]):
+        return ""
+    name = words[2]
+    try:
+        if verb_of(words[:3]) in safe_verbs:
+            return ""
+    except (IndexError, Unsupported):
+        return ""
+    single = name[: -len("_multiple")] if name.endswith("_multiple") else name
+    for twin in (name + "_edit_safe", single + "_edit_safe"):
+        try:
+            twin_verb = verb_of([words[0], words[1], twin])
+        except (IndexError, Unsupported):
+            continue
+        if twin_verb in safe_verbs:
+            each = " once per name" if single != name and twin == single + "_edit_safe" else ""
+            return (
+                f"`{name}` holds no grant, and should not: it can write "
+                f"anything. Call `node scripts/ai.mjs {twin}`{each} instead - it "
+                "is granted, and writes only an edit its check proves cannot "
+                "change anything dangerous, else it writes nothing and says "
+                f"why. If it refuses an edit you still need, hand the human "
+                f"`! node scripts/r.mjs {name} ...` to run themselves."
+            )
+    return ""
+
+
+def find_edit_safe_twin_reason(command, safe_verbs):
+    """The first statement of `command` that edit_safe_twin_reason redirects,
+    as that reason; else None."""
+    for words in statements_words(command):
+        reason = edit_safe_twin_reason(words, safe_verbs)
+        if reason:
+            return reason
+    return None
+
+
 def untrusted_piece_hint(words, safe_verbs):
     """One sentence on how to reword the refused part `words`, or "" when
     there is nothing better to say than its name."""
@@ -4089,24 +4134,9 @@ def untrusted_piece_hint(words, safe_verbs):
         return ""
     if verb not in safe_verbs:
         if len(plain) >= 3 and plain[0] == "node" and plain[1] in AI_DISPATCHER_SCRIPTS:
-            # A dangerous writer keeps its granted, checked twin under
-            # `<name>_edit_safe`; a `_multiple` has none of its own, so its
-            # single form's twin is the one to name, called once per name.
-            name = plain[2]
-            single = name[: -len("_multiple")] if name.endswith("_multiple") else name
-            for twin in (name + "_edit_safe", single + "_edit_safe"):
-                try:
-                    twin_verb = verb_of([plain[0], plain[1], twin])
-                except (IndexError, Unsupported):
-                    continue
-                if twin_verb in safe_verbs:
-                    each = " once per name" if single != name and twin == single + "_edit_safe" else ""
-                    return (
-                        f"`{name}` holds no grant, and should not: it can write "
-                        f"anything. Call `{twin}`{each} instead - it is granted, "
-                        "and writes only an edit its check proves cannot change "
-                        "anything dangerous, else it writes nothing and says why."
-                    )
+            twin_reason = edit_safe_twin_reason(plain, safe_verbs)
+            if twin_reason:
+                return twin_reason
             return (
                 f"`{plain[2]}` holds no grant. Run it as its own Bash call, "
                 "so the rest needs no human; if it should never prompt, "
@@ -5298,6 +5328,15 @@ def main():
             "Auto-approved: every command in this sequence/for-loop "
             "uses a verb already in permissions.allow."
         ))
+
+    # A writer that may never be granted, called where its granted, checked
+    # twin would do. After the allow decision, so it only ever turns a prompt
+    # into a redirect Claude can act on; the twin's own refusal is what
+    # escalates a genuinely dangerous edit to the human. See
+    # edit_safe_twin_reason.
+    twin_reason = find_edit_safe_twin_reason(command, safe_verbs)
+    if twin_reason is not None:
+        return decide("deny", twin_reason)
 
     # A dispatcher call caught in a file the caller made for it, when the
     # command had already written that file itself. Unlike the floors above
