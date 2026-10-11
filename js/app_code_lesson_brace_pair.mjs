@@ -1,3 +1,4 @@
+import { list_add_multiple } from "./list_add_multiple.mjs";
 import { app_code_braces_colors_next } from "./app_code_braces_colors_next.mjs";
 import { app_code_code_dark_lines_braces_paired_colors } from "./app_code_code_dark_lines_braces_paired_colors.mjs";
 import { app_code_braces_pair_color } from "./app_code_braces_pair_color.mjs";
@@ -193,10 +194,13 @@ export function app_code_lesson_brace_pair() {
       let brace_char = paired_code[i];
       if (equal(brace_char, left2) || equal(brace_char, right2)) {
         let brace_color = app_code_braces_pair_color(paired_code, i, colors);
-        list_add(braces_painted, {
-          brace: brace_char,
-          color: brace_color,
-        });
+        list_add_multiple(braces_painted, [
+          {
+            brace: brace_char,
+            color: brace_color,
+          },
+          [" "],
+        ]);
       }
     }
     app_code_div_braces_painted(box_paired, braces_painted);
