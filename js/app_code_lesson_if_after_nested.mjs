@@ -28,6 +28,7 @@ export function app_code_lesson_if_after_nested() {
   ("Reading forwards, the wrong answers offered are what the other three programs write out. One of them is the mistake of reading the if after as if it were inside: with a false and b true, that reading writes out only the last word, which is what a and b both false write out.");
   ("Reading backwards, the wrong program changes one name so that it writes out something else: b when a is true, a when a is false.");
   ("The two ifs that ask b are named in sentences by their whole line, never as the if inside and the if after, so a sentence never leaves the reader to work out which one is meant.");
+  ("Moved 2026-10-11 by the human to straight after The order of the braces, since its program has three pairs of braces: every lesson explaining three pairs - the braces among the tokens with three pairs, which brace pairs with which, the lines between braces and the order of the braces - comes before the first lesson asking what code with three pairs prints. The lessons with two pairs that stood between them move with them.");
   ("The writing is a first draft by Claude 2026-10-08.");
   let fruits = fruits_of_the_spirit();
   function if_one_line(condition, statement) {

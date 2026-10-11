@@ -19,6 +19,7 @@ export function app_code_lesson_token_order_braces_three() {
   ("the braces among the tokens, three pairs: as The braces among the tokens, but every program has three pairs of braces, each pair in a colour of its own");
   ("Asked for by the human 2026-10-11, as the lesson like The braces among the tokens but for three pairs, put straight before the first lesson whose code has three pairs, If after an if inside an if.");
   ("Its programs are the five orders three pairs can stand in, the programs of The order of the braces, so no two share an order. Some of them are taught in later lessons, so the learner is told to find only the braces, as The order of the tokens, two pairs of braces does.");
+  ("Since 2026-10-11 the lessons on which brace pairs with which, the lines between braces and the order of the braces also stand between this lesson and If after an if inside an if, as the human asked, so three pairs are explained fully before their output is asked.");
   ("The writing is a first draft by Claude 2026-10-11.");
   let batch = app_code_batch_question_answer_fns(
     app_code_braces_three_batch,
