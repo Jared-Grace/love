@@ -1,3 +1,4 @@
+import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
 import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
 import { app_code_lesson_while_down } from "./app_code_lesson_while_down.mjs";
@@ -95,6 +96,7 @@ export function app_code_lessons_latest_held_fns() {
     app_code_lesson_while_log,
     app_code_lesson_while_down,
     app_code_lesson_while_total,
+    app_code_lesson_while,
   ];
   return fns;
 }
