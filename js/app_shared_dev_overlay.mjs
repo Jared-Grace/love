@@ -4,6 +4,7 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { html_viewport_width_full } from "./html_viewport_width_full.mjs";
 import { html_viewport_height_visible } from "./html_viewport_height_visible.mjs";
 import { app_shared_color_page_background } from "./app_shared_color_page_background.mjs";
+import { html_scroll_body_mark } from "./html_scroll_body_mark.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_shared_column_max_width } from "./app_shared_column_max_width.mjs";
@@ -36,6 +37,8 @@ export function app_shared_dev_overlay(title_text) {
     "box-sizing": "border-box",
     "overflow-y": "auto",
   });
+  ("this panel is the box that scrolls, not the page - the page under a fixed panel is short, so a foot measuring against the page was pushed a whole screen down below the list");
+  html_scroll_body_mark(div);
   let title = html_p_text(div, title_text);
   ("centred rather than pushed right: the '← routes' pill is fixed at the top-left of every dev page, and a centred title clears it on a phone as well as a desktop, where a left-padded one drifted a long way from the cards it names");
   html_style_assign(title, {

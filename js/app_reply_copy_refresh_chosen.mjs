@@ -5,16 +5,21 @@ export async function app_reply_copy_refresh_chosen(
   languages_chosen_held,
   responses,
   bible_texts,
+  languages_show_held,
 ) {
-  arguments_assert(arguments, 3);
+  arguments_assert(arguments, 4);
   let languages_chosen = property_get(
     languages_chosen_held,
     "languages_chosen",
   );
+  let label_refresh = property_get(languages_show_held, "label_refresh");
+  label_refresh();
+  let languages_show = property_get(languages_show_held, "languages_show");
   let r = await app_reply_copy_refresh(
     languages_chosen,
     responses,
     bible_texts,
+    languages_show,
   );
   return r;
 }

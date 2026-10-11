@@ -1,4 +1,3 @@
-import { app_shared_container_blue_medium } from "./app_shared_container_blue_medium.mjs";
 import { html_div } from "./html_div.mjs";
 import { language_code_key } from "./language_code_key.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -9,7 +8,13 @@ import { html_clear } from "./html_clear.mjs";
 import { app_shared_languages_prompt_text } from "./app_shared_languages_prompt_text.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_shared_bible_subset_sorted_choose } from "./app_shared_bible_subset_sorted_choose.mjs";
-export function app_reply_languages_chooser(languages_chosen, root, languages) {
+import { app_shared_container_blue_medium } from "./app_shared_container_blue_medium.mjs";
+export function app_reply_languages_chooser(
+  languages_chosen,
+  root,
+  languages,
+  languages_changed,
+) {
   "the same scrolled, searchable list the bible reader and the search app choose languages from, rather than a button for every one of the hundreds of languages laid out on the page";
   let holder = html_div(root);
   let key_property = language_code_key();
@@ -21,6 +26,7 @@ export function app_reply_languages_chooser(languages_chosen, root, languages) {
       let en = list_find_property(languages, key_property, code);
       list_add(languages_chosen, en);
     }
+    languages_changed();
   }
   function update() {
     html_clear(holder);

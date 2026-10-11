@@ -17,13 +17,15 @@ export function app_reply_visible_count(
   languages,
   root,
   update,
+  languages_changed,
 ) {
-  arguments_assert(arguments, 6);
+  arguments_assert(arguments, 7);
   app_shared_button(card, "❤️", love);
   let languages_chooser = app_reply_languages_chooser(
     languages_chosen,
     card,
     languages,
+    languages_changed,
   );
   let testament_held = app_reply_testament_choose(root);
   let card2 = app_shared_container_blue(root);
