@@ -1,26 +1,3 @@
-import { app_code_lesson_braces_run_if_else } from "./app_code_lesson_braces_run_if_else.mjs";
-import { app_code_lesson_braces_run_nested } from "./app_code_lesson_braces_run_nested.mjs";
-import { app_code_lesson_braces_run_after_nested } from "./app_code_lesson_braces_run_after_nested.mjs";
-import { app_code_lesson_braces_run_if_else_in_if } from "./app_code_lesson_braces_run_if_else_in_if.mjs";
-import { app_code_lesson_braces_run_if_in_else } from "./app_code_lesson_braces_run_if_in_else.mjs";
-import { app_code_lesson_braces_run_else_if } from "./app_code_lesson_braces_run_else_if.mjs";
-import { app_code_lesson_braces_run_else_if_else } from "./app_code_lesson_braces_run_else_if_else.mjs";
-import { app_code_lesson_braces_run_thrice } from "./app_code_lesson_braces_run_thrice.mjs";
-import { app_code_lesson_braces_run } from "./app_code_lesson_braces_run.mjs";
-import { app_code_lesson_brace_lines_two_nested } from "./app_code_lesson_brace_lines_two_nested.mjs";
-import { app_code_lesson_brace_lines_two } from "./app_code_lesson_brace_lines_two.mjs";
-import { app_code_lesson_brace_lines } from "./app_code_lesson_brace_lines.mjs";
-import { app_code_lesson_brace_pair_two } from "./app_code_lesson_brace_pair_two.mjs";
-import { app_code_lesson_token_order_braces_three } from "./app_code_lesson_token_order_braces_three.mjs";
-import { app_code_lesson_token_order_braces_three_plain } from "./app_code_lesson_token_order_braces_three_plain.mjs";
-import { app_code_lesson_token_order_braces_plain } from "./app_code_lesson_token_order_braces_plain.mjs";
-import { app_code_lesson_token_order_braces_two } from "./app_code_lesson_token_order_braces_two.mjs";
-import { app_code_lesson_token_order_braces_only } from "./app_code_lesson_token_order_braces_only.mjs";
-import { app_code_lesson_token_order_braces_colored } from "./app_code_lesson_token_order_braces_colored.mjs";
-import { app_code_lesson_token_order_alone } from "./app_code_lesson_token_order_alone.mjs";
-import { app_code_lesson_token_order_braces } from "./app_code_lesson_token_order_braces.mjs";
-import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
-import { app_code_lesson_brace_pair } from "./app_code_lesson_brace_pair.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
 import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
 import { app_code_lesson_while_down } from "./app_code_lesson_while_down.mjs";
@@ -114,29 +91,6 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-11: hold Does this section run?, new at the human's asking straight after If inside an if, until the human has read its first draft";
   "2026-10-11: Does this section run? made one per shape of two or three pairs of braces, each straight before the first lesson of its shape, as the human asked - each 2 and 3 brace - and held with the first until the human has read them";
   let fns = [
-    app_code_lesson_braces_run,
-    app_code_lesson_braces_run_if_else,
-    app_code_lesson_braces_run_nested,
-    app_code_lesson_braces_run_after_nested,
-    app_code_lesson_braces_run_if_else_in_if,
-    app_code_lesson_braces_run_if_in_else,
-    app_code_lesson_braces_run_else_if,
-    app_code_lesson_braces_run_else_if_else,
-    app_code_lesson_braces_run_thrice,
-    app_code_lesson_brace_lines_two,
-    app_code_lesson_brace_lines_two_nested,
-    app_code_lesson_brace_lines,
-    app_code_lesson_brace_pair_two,
-    app_code_lesson_brace_pair,
-    app_code_lesson_token_order,
-    app_code_lesson_token_order_alone,
-    app_code_lesson_token_order_braces_colored,
-    app_code_lesson_token_order_braces_only,
-    app_code_lesson_token_order_braces_two,
-    app_code_lesson_token_order_braces,
-    app_code_lesson_token_order_braces_plain,
-    app_code_lesson_token_order_braces_three,
-    app_code_lesson_token_order_braces_three_plain,
     app_code_lesson_while_log,
     app_code_lesson_while_down,
     app_code_lesson_while_total,
