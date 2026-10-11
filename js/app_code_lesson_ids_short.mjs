@@ -337,10 +337,10 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_brace_pair: text_frozen("brace_pair"),
     app_code_lesson_brace_pair_two: text_frozen("brace_pair_two"),
     app_code_lesson_brace_lines_two: text_frozen("brace_lines_two"),
-    app_code_lesson_brace_lines_two_nested: text_frozen("brace_lines_two_nested"),
+    app_code_lesson_brace_lines_two_nested: text_frozen(
+      "brace_lines_two_nested",
+    ),
     app_code_lesson_brace_lines: text_frozen("brace_lines"),
-    app_code_lesson_brace_order: text_frozen("brace_order"),
-    app_code_lesson_brace_order_two: text_frozen("brace_order_two"),
     app_code_lesson_token_order: text_frozen("token_order"),
     app_code_lesson_token_order_alone: text_frozen("token_order_alone"),
     app_code_lesson_token_order_braces: text_frozen("token_order_braces"),

@@ -11,8 +11,6 @@ import { app_code_lesson_token_order_braces_colored } from "./app_code_lesson_to
 import { app_code_lesson_token_order_alone } from "./app_code_lesson_token_order_alone.mjs";
 import { app_code_lesson_token_order_braces } from "./app_code_lesson_token_order_braces.mjs";
 import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
-import { app_code_lesson_brace_order_two } from "./app_code_lesson_brace_order_two.mjs";
-import { app_code_lesson_brace_order } from "./app_code_lesson_brace_order.mjs";
 import { app_code_lesson_brace_pair } from "./app_code_lesson_brace_pair.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
 import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
@@ -91,8 +89,6 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-09: hold 275, A running total, until the human has read its first draft";
   "2026-10-09: hold A log inside a while, put straight after 273 While so 274 and 275 move down one, until the human has read its first draft";
   "2026-10-09: hold Which brace pairs with which, put straight after If after an if inside an if, until the human has read its first draft";
-  "2026-10-10: hold The order of the braces, put straight after Which brace pairs with which, until the human has read its first draft";
-  "2026-10-10: hold The order of two pairs of braces, put straight before The order of the braces, until the human has read its first draft";
   "2026-10-10: hold The order of the tokens, put straight after Two changes in an if, before any lesson with more than one if, until the human has read its first draft";
   "2026-10-10: hold The order of the tokens, with no blue, put straight after The order of the tokens, until the human has read its first draft";
   "2026-10-10: hold The order of the tokens, braces colored, put straight after The order of the tokens, with no blue, until the human has read its first draft";
@@ -104,6 +100,8 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-11: hold Which brace pairs with which, two pairs, put straight before Which brace pairs with which, until the human has read its first draft";
   "2026-10-11: hold The lines between braces, two pairs, and The lines between braces, put straight after Which brace pairs with which, until the human has read their first drafts";
   "2026-10-11: hold The lines between braces, one inside the other, split from The lines between braces, two pairs (now side by side) and put straight after it, until the human has read its first draft";
+  "2026-10-11: The order of two pairs of braces and The order of the braces taken out at the human's asking: their three quizzes, over the same programs, are the quizzes of The braces among the tokens with no colors and its three-pair twin";
+  "2026-10-11: Which brace pairs with which, two pairs and the two lessons on the lines between two pairs of braces moved straight after The braces among the tokens, with no colors, at the human's asking, so two pairs of braces are explained fully before The same if twice";
   let fns = [
     app_code_lesson_brace_lines_two,
     app_code_lesson_brace_lines_two_nested,
@@ -119,8 +117,6 @@ export function app_code_lessons_latest_held_fns() {
     app_code_lesson_token_order_braces_plain,
     app_code_lesson_token_order_braces_three,
     app_code_lesson_token_order_braces_three_plain,
-    app_code_lesson_brace_order_two,
-    app_code_lesson_brace_order,
     app_code_lesson_while_log,
     app_code_lesson_while_down,
     app_code_lesson_while_total,

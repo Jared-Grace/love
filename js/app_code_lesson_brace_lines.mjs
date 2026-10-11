@@ -14,6 +14,7 @@ export function app_code_lesson_brace_lines() {
   ("which lines stand between a pair of braces, in programs with three pairs of braces: the learner taps every line between a { and the } that closes it");
   ("Asked for by the human 2026-10-11, as the version of The lines between braces, two pairs with three pairs, placed straight after it.");
   ("Since 2026-10-11 it remembers The lines between braces, one inside the other, which now comes straight before it, and shows the lines of the outer pair worked out above the questions.");
+  ("Since 2026-10-11 the lessons on two pairs of braces stand much earlier, before The same if twice, so this lesson remembers back across the ifs between them.");
   ("The writing is a first draft by Claude 2026-10-11.");
   let left = js_code_brace_left();
   let right = js_code_brace_right();
