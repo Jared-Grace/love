@@ -1,3 +1,6 @@
+import { app_code_lesson_else_if_order } from "./app_code_lesson_else_if_order.mjs";
+import { app_code_lesson_braces_run_thrice } from "./app_code_lesson_braces_run_thrice.mjs";
+import { app_code_lesson_if_thrice } from "./app_code_lesson_if_thrice.mjs";
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
 import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
@@ -97,6 +100,9 @@ export function app_code_lessons_latest_held_fns() {
     app_code_lesson_while_down,
     app_code_lesson_while_total,
     app_code_lesson_while,
+    app_code_lesson_else_if_order,
+    app_code_lesson_braces_run_thrice,
+    app_code_lesson_if_thrice,
   ];
   return fns;
 }
