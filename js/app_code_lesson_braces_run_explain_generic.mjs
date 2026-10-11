@@ -1,5 +1,4 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_braces_run_programs_shape } from "./app_code_braces_run_programs_shape.mjs";
@@ -20,9 +19,10 @@ export function app_code_lesson_braces_run_explain_generic(
   names,
 ) {
   arguments_assert(arguments, 4);
-  ("a Does this section run? lesson whose explanation of the shape is drawn by explain(root, context), above the box on what happens to a section that runs and to one that does not; the rest is as ",
-    fn_name("app_code_lesson_braces_run_generic"),
-    " says");
+  ("a lesson on whether each section of code runs, in programs of one shape, code_get's, whose ifs ask names: each { ... } is coloured in turn and the learner says whether it runs; one that does not is swallowed, and one that runs loses the if around it, its lines moving out to where they now stand. The explanation of the shape is drawn by explain(root, context), above the box on what happens to a section that runs and to one that does not.");
+  ("Asked for by the human 2026-10-11: one of these straight before the first lesson of every shape of ifs with two or three pairs of braces, that shape's lesson then asking what it writes out. So each of these is where its shape is first met and explained, and the lesson after remembers it.");
+  ("There is one quiz, the same answering as the worked example, because the question - a program - and the answer - what runs of it - are the lesson's whole fact. The answer kept for a correction is the program as the steps leave it.");
+  ("2026-10-11: the form that took a list of rules instead of an explanation was deleted once every lesson had moved to this one; its notes are the three above.");
   ("Made for If and else, whose shape already has a whole explanation in Else, at the human's asking 2026-10-11 that it appear here too.");
   function above(root, context) {
     "what is new about this shape, then what happens to a section that runs and to one that does not";
