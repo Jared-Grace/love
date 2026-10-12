@@ -727,7 +727,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["1478", "chazaq", "might+i_am+proper_name", "Hezekiah"],
     ["5617", "yasha", "rescue+proper_name", "Hosea"],
     ["4502", "raah", "eyes+son+proper_name", "Reuben"],
-    ["4488", "rapha", "bandage+i_am", "Rhesa, Rephaiah"],
+    ["4488", "rapha", "bandage+i_am+proper_name", "Rhesa, Rephaiah"],
     ["3518", "ner", "lamp+i_am", "Neri, Neriah"],
     ["2493", "yhwh", "i_am+heart_on_fire", "Joel"],
     ["2422", "pathach", "unlocked+proper_name", "Jephthah"],
