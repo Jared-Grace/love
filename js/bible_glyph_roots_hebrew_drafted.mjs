@@ -692,7 +692,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["8297", "sar", "military_medal+proper_name", "Sarai, dominative"],
     ["1968", "aman", "anchor+proper_name", "Heman, faithful"],
     ["476", "shama", "heart_on_fire+ear+proper_name", "Elishama, God of hearing"],
-    ["475", "shub", "heart_on_fire+turn_back", "Eliashib, God will restore"],
+    ["475", "shub", "heart_on_fire+turn_back+proper_name", "Eliashib, God will restore"],
     ["5369", "ner", "lamp+proper_name", "Ner, lamp"],
     ["4441", "melek", "king+i_am", "Malchiah, king of Jah"],
     ["1954", "yasha", "rescue+proper_name", "Hoshea, deliverer"],
