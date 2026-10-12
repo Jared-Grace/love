@@ -756,7 +756,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["4105", "tob", "thumbs_up+heart_on_fire+proper_name", "Mehetabel, bettered of God"],
     ["3437", "shub", "turn_back+proper_name", "Jashub, he will return"],
     ["3359", "qum", "pointing_up+i_am+proper_name", "Jekamiah, Jah will rise"],
-    ["3168", "chazaq", "might+heart_on_fire", "Ezekiel, God will strengthen"],
+    ["3168", "chazaq", "might+heart_on_fire+proper_name", "Ezekiel, God will strengthen"],
     ["3037", "yada", "lightbulb+proper_name", "Jaddua, knowing"],
     ["2984", "bachar", "check_box+proper_name", "Ibhar, choice"],
     ["1955", "yasha", "rescue+i_am", "Hoshaiah, Jah has saved"],
