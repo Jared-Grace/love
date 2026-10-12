@@ -1162,7 +1162,7 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "1323",
-          glyph: "woman",
+          glyph: "girl+family",
         },
       ],
     },
@@ -2090,7 +2090,7 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "4687",
-          glyph: "scroll",
+          glyph: "scroll+exclamation",
         },
       ],
     },

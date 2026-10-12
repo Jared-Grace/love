@@ -1785,7 +1785,7 @@ export function bible_glyph_roots() {
         },
         {
           strong: "1492",
-          glyph: "lightbulb",
+          glyph: "eyes+lightbulb",
         },
       ],
     },
@@ -1985,7 +1985,7 @@ export function bible_glyph_roots() {
       words: [
         {
           strong: "1785",
-          glyph: "scroll",
+          glyph: "scroll+exclamation",
         },
       ],
     },
@@ -2929,11 +2929,11 @@ export function bible_glyph_roots() {
       words: [
         {
           strong: "5545",
-          glyph: "oil",
+          glyph: "oil+thing",
         },
         {
           strong: "5548",
-          glyph: "oil",
+          glyph: "oil+doing",
         },
       ],
     },

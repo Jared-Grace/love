@@ -552,7 +552,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["4145", "ploutos", "money_bag+describing", "rich"],
     ["4147", "ploutos", "money_bag+doing", "be rich"],
     ["1859", "heorte", "party_popper", "feast"],
-    ["1632", "ekcheo", "pouring_liquid+doing", "pour out"],
+    ["1632", "ekcheo", "jar+down_arrow+doing", "pour out"],
     ["3538", "nipto", "bathtub+doing", "wash"],
     ["3068", "louo", "bathtub", "bathe"],
     ["438", "anthos", "blossom", "flower"],
