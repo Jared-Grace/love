@@ -702,7 +702,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["3406", "rum", "up_arrow+proper_name", "Jerimoth, elevations"],
     ["3171", "chayah", "sprout+heart_on_fire+proper_name", "Jehiel, God will live"],
     ["1137", "banah", "brick+proper_name", "Bani, built"],
-    ["8203", "mishpat", "scales+i_am", "Shephatiah, Jah has judged"],
+    ["8203", "mishpat", "scales+i_am+proper_name", "Shephatiah, Jah has judged"],
     ["4266", "machaneh", "camp+proper_name", "Mahanaim, double camp"],
     ["2544", "chamor", "donkey+proper_name", "Hamor, donkey"],
     ["1712", "dag", "fish+proper_name", "Dagon, the fish-god"],
