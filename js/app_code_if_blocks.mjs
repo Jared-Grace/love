@@ -1,23 +1,24 @@
-import { equal } from "./equal.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { subtract } from "./subtract.mjs";
-import { less_than } from "./less_than.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_node_is } from "./js_node_is.mjs";
+import { not } from "./not.mjs";
+import { equal } from "./equal.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_add } from "./list_add.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { js_visit } from "./js_visit.mjs";
 import { error } from "./error.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { text_index_of_last_try } from "./text_index_of_last_try.mjs";
+import { subtract } from "./subtract.mjs";
 import { text_index_of_from } from "./text_index_of_from.mjs";
 import { text_indent_size } from "./text_indent_size.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_size } from "./list_size.mjs";
+import { less_than } from "./less_than.mjs";
 import { list_get } from "./list_get.mjs";
+import { js_unparse } from "./js_unparse.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 export function app_code_if_blocks(code) {
   arguments_assert(arguments, 1);
@@ -179,6 +180,10 @@ export function app_code_if_blocks(code) {
       let left3 = property_get(block, "end");
       let close = subtract(left3, 1);
       let runs = equal(i, ran);
+      ("what the section asks, as code, an else asking nothing; and whether a section before it in the same if ran, which is why an else if or an else whose own test does not decide it does not run: for a walkthrough to give the reason, asked for by the human 2026-10-12");
+      let test2 = property_get(object2, "test");
+      let asked = equal(test2, null) ? null : js_unparse(test2);
+      let before_ran = not_equal(ran, null) && less_than(ran, i);
       let steps = [];
       if (not(runs)) {
         let r2 = range(open + 1, close);
@@ -208,6 +213,8 @@ export function app_code_if_blocks(code) {
         close,
         runs,
         steps,
+        asked,
+        before_ran,
       });
     }
   }
