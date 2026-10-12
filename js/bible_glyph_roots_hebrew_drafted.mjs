@@ -749,7 +749,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["1845", "yada", "heart_on_fire+lightbulb+proper_name", "Eliada, God is knowing"],
     ["3065", "yehudi", "menorah+proper_name", "Jehudi"],
     ["8061", "shem", "name_tag+lightbulb+proper_name", "Shemida, name of knowing"],
-    ["7055", "qum", "pointing_up+heart_on_fire", "Kemuel, raised of God"],
+    ["7055", "qum", "pointing_up+heart_on_fire+proper_name", "Kemuel, raised of God"],
     ["6981", "qara", "waving_hand+proper_name", "Kore, crier"],
     ["5752", "ed", "witness+proper_name", "Oded, reiteration"],
     ["4439", "melek", "king+heart_on_fire", "Malchiel, king of God"],
