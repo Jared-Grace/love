@@ -107,6 +107,48 @@ export function js_flow_machine_power_cases() {
       power: false,
       why: "a namespace import read through a data method gives bytes",
     },
+    {
+      source:
+        'import fs from "fs";\nexport function f(p) {\n  let all = fs.readdirSync(p);\n  return all.filter((n) => fs.statSync(n).isFile());\n}\n',
+      power: false,
+      why: "a filter over a list of names hands back names, never the function that chose them",
+    },
+    {
+      source:
+        'import fs from "fs";\nexport function f(p) {\n  let all = fs.readdirSync(p);\n  return all.filter((n) => n).slice(1).find((n) => fs.existsSync(n));\n}\n',
+      power: false,
+      why: "a search over a filtered list of names is still a name",
+    },
+    {
+      source:
+        'import fs from "fs";\nexport function f(xs) {\n  return xs.filter(() => fs);\n}\n',
+      power: true,
+      why: "a filter on something handed in may be the caller's own, which may hand back the function",
+    },
+    {
+      source:
+        'import fs from "fs";\nexport function f(p) {\n  let all = fs.readdirSync(p);\n  return all.map(() => fs);\n}\n',
+      power: true,
+      why: "a map hands back what the function gave, and this one gives the module",
+    },
+    {
+      source:
+        'import fs from "fs";\nexport function f(p, xs) {\n  let all = p ? fs.readdirSync(p) : xs;\n  return all.find(() => fs);\n}\n',
+      power: true,
+      why: "a list that is plain data only some of the time: the other time it is whatever the caller handed in",
+    },
+    {
+      source:
+        'import fs from "fs";\nexport function f(p) {\n  let all = fs.readdirSync(p);\n  let found = null;\n  function keep(n) {\n    found = n;\n    return fs.existsSync(n);\n  }\n  all.filter(keep);\n  return found;\n}\n',
+      power: false,
+      why: "a callback handed only to a filter over names is only ever handed a name",
+    },
+    {
+      source:
+        'import fs from "fs";\nexport function f(p, g) {\n  let all = fs.readdirSync(p);\n  let found = null;\n  function keep(n) {\n    found = n;\n    return true;\n  }\n  all.filter(keep);\n  g(keep, fs);\n  return found;\n}\n',
+      power: true,
+      why: "a callback also handed to an unknown function may be called by it with the module",
+    },
   ];
   return cases;
 }

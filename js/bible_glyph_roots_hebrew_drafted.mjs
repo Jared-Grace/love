@@ -724,7 +724,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     [
       "494",
       "nathan",
-      "heart_on_fire+hands_giving",
+      "heart_on_fire+hands_giving+proper_name",
       "Elnathan, God is the giver",
     ],
     ["583", "ish", "man_beard+proper_name", "Enosh"],

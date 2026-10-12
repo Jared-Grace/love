@@ -18,9 +18,11 @@ import { js_flow_key_power_name } from "./js_flow_key_power_name.mjs";
 import { js_key_safe_is } from "./js_key_safe_is.mjs";
 import { js_flow_machine_power_name } from "./js_flow_machine_power_name.mjs";
 import { js_flow_machine_methods_data } from "./js_flow_machine_methods_data.mjs";
+import { js_flow_data_methods_element } from "./js_flow_data_methods_element.mjs";
 import { js_flow_control_tests } from "./js_flow_control_tests.mjs";
 import { subtract } from "./subtract.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
+import { greater_than } from "./greater_than.mjs";
 export function js_function_flow_read(f_name, ast, known) {
   "Everything the flow check needs from one function's file, read once: which names each name is worked out from, which names each may be the same object as, which calls it makes and what goes into each argument, what it hands back, what it changes in place, which values it calls, and every way it reaches outside the repo. Known is the set of every function name, because a name the file reads without importing it is about to be imported by the canonicalizer.";
   "Names are followed by spelling, not by scope, so two different variables sharing a name are joined into one. That can only make the answer more cautious.";
@@ -298,6 +300,10 @@ export function js_function_flow_read(f_name, ast, known) {
   ];
   let data_pending = [];
   let data_count = 0;
+  let methods_element = js_flow_data_methods_element();
+  ("Each answer kept for a ruling, and those ruled no. An answer still standing is plain data: a value the language built, whose methods are the language's own.");
+  let answers_kept = new Set();
+  let answers_denied = new Set();
   function data_call_receiver(node) {
     "The thing a call of a data method is made on - the object before the dot, or the imported method's own name - or null when the call is not one.";
     if (not_equal(node.type, "CallExpression")) {
@@ -357,6 +363,64 @@ export function js_function_flow_read(f_name, ast, known) {
     for (let n of list) {
       let b13 = machine_only(n, visiting);
       if (not(b13)) {
+        return false;
+      }
+    }
+    return true;
+  }
+  function element_call_receiver(node) {
+    "The thing a call of a plain data method is made on - the object before the dot - or null when the call is not one.";
+    if (not_equal(node.type, "CallExpression")) {
+      return null;
+    }
+    let c = node.callee;
+    if (
+      equal(c.type, "MemberExpression") &&
+      not(c.computed) &&
+      equal(c.property.type, "Identifier") &&
+      methods_element.includes(c.property.name)
+    ) {
+      let r30 = c.object;
+      return r30;
+    }
+    return null;
+  }
+  function plain_only(name, visiting) {
+    "Whether a name can hold nothing but plain data: an answer still standing, or a name every holding of which is such a name. A name holding nothing, or held through a repo function, or reached again inside its own question, is not.";
+    if (answers_kept.has(name)) {
+      let b17 = answers_denied.has(name);
+      let b15 = not(b17);
+      return b15;
+    }
+    if (visiting.has(name)) {
+      return false;
+    }
+    let sources = aliases.get(name) ?? [];
+    if (equal(sources.length, 0)) {
+      return false;
+    }
+    visiting.add(name);
+    let only = true;
+    for (let s of sources) {
+      if (
+        not_equal(s.via, null) ||
+        not_equal(s.gate, null) ||
+        not(plain_only_all(s.data, visiting))
+      ) {
+        only = false;
+        break;
+      }
+    }
+    visiting.delete(name);
+    return only;
+  }
+  function plain_only_all(list, visiting) {
+    if (equal(list.length, 0)) {
+      return false;
+    }
+    for (let n of list) {
+      let b16 = plain_only(n, visiting);
+      if (not(b16)) {
         return false;
       }
     }
@@ -496,13 +560,39 @@ export function js_function_flow_read(f_name, ast, known) {
           alias_add([answer], otherwise, null, null);
         }
         function lambda11() {}
+        answers_kept.add(answer);
         data_pending.push({
+          answer,
           receiver: held,
+          plain: false,
           otherwise: lambda10,
           granted: lambda11,
         });
         let r28 = [answer];
         return r28;
+      }
+      let element_receiver = element_call_receiver(node);
+      if (not_equal(element_receiver, null)) {
+        data_count = data_count + 1;
+        let answer = "(element answer " + data_count + ")";
+        let held = alias_names(element_receiver);
+        let otherwise = [...held, ...handed_in];
+        function lambda14() {
+          alias_add([answer], otherwise, null, null);
+        }
+        function lambda15() {
+          alias_add([answer], held, null, null);
+        }
+        answers_kept.add(answer);
+        data_pending.push({
+          answer,
+          receiver: held,
+          plain: true,
+          otherwise: lambda14,
+          granted: lambda15,
+        });
+        let r31 = [answer];
+        return r31;
       }
       let from = equal(node.callee.type, "MemberExpression")
         ? node.callee.object
@@ -583,9 +673,17 @@ export function js_function_flow_read(f_name, ast, known) {
     let b10 = used_in.has(x.name);
     if (not(b10)) {
       used_in.set(x.name, []);
+      used_handed.set(x.name, []);
     }
     used_in.get(x.name).push(host);
+    let handed_to =
+      not_equal(parent, null) && parent.arguments?.includes(x)
+        ? element_call_receiver(parent)
+        : null;
+    used_handed.get(x.name).push(handed_to);
   }
+  ("For each read of a name, the plain data it is handed to as a callback - the thing before the dot of a plain data method - or null for any other read.");
+  let used_handed = new Map();
   ("The readings above share one walk of the file, since none needs what another finds, and nothing asks what any found until the walk below. A walk costs more than any one reading done on it - measured 2026-10-11, most of the time spent reading the repo.");
   function gather_read(v) {
     called_read(v);
@@ -715,19 +813,50 @@ export function js_function_flow_read(f_name, ast, known) {
         own = parent.left.name;
       }
       let from = [];
+      let receivers = [];
       if (equal(own, null)) {
         from = names(statement_host(stack) ?? x);
+        let handed_to =
+          not_equal(parent, null) && parent.arguments?.includes(x)
+            ? element_call_receiver(parent)
+            : null;
+        receivers.push(handed_to);
       } else {
         for (let s of used_in.get(own) ?? []) {
           from.push(...names(s));
         }
+        receivers.push(...(used_handed.get(own) ?? []));
       }
       let bound = [];
       for (let p of x.params) {
         bound.push(...names(p));
       }
       source_add(bound, from, stack, null);
-      alias_add(bound, from, null, null);
+      ("A callback handed only to plain data methods is called with that data's own items and nothing else, so its parameters hold only those items - when the data is plain, which is ruled on after the walk like a data method's answer.");
+      let handed_only =
+        greater_than(receivers.length, 0) && not(receivers.includes(null));
+      if (handed_only) {
+        function lambda16(r) {
+          let r32 = alias_names(r);
+          return r32;
+        }
+        let held = receivers.flatMap(lambda16);
+        function lambda17() {
+          alias_add(bound, from, null, null);
+        }
+        function lambda18() {
+          alias_add(bound, held, null, null);
+        }
+        data_pending.push({
+          answer: null,
+          receiver: held,
+          plain: true,
+          otherwise: lambda17,
+          granted: lambda18,
+        });
+      } else {
+        alias_add(bound, from, null, null);
+      }
       if (equal(type, "FunctionDeclaration")) {
         let v24 = names(x.body);
         source_add([x.id.name], v24, stack, null);
@@ -802,7 +931,9 @@ export function js_function_flow_read(f_name, ast, known) {
             dynamic.push(passed_alias);
           }
           data_pending.push({
+            answer: null,
             receiver: alias_names(receiver),
+            plain: false,
             otherwise: lambda12,
             granted: lambda13,
           });
@@ -899,10 +1030,13 @@ export function js_function_flow_read(f_name, ast, known) {
     ruled = false;
     let standing = [];
     for (let p of pending) {
-      let only = machine_only_all(p.receiver, new Set());
+      let only = p.plain
+        ? plain_only_all(p.receiver, new Set())
+        : machine_only_all(p.receiver, new Set());
       if (only) {
         standing.push(p);
       } else {
+        answers_denied.add(p.answer);
         p.otherwise();
         ruled = true;
       }
