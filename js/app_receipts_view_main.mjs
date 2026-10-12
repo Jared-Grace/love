@@ -5,13 +5,14 @@ import { fn_name } from "./fn_name.mjs";
 import { app_receipts_folder_known } from "./app_receipts_folder_known.mjs";
 import { app_receipts_folder_code_valid_is } from "./app_receipts_folder_code_valid_is.mjs";
 import { app_receipts_code_screen } from "./app_receipts_code_screen.mjs";
-import { storage_local_name_set } from "./storage_local_name_set.mjs";
 import { text_frozen } from "./text_frozen.mjs";
+import { storage_local_name_set } from "./storage_local_name_set.mjs";
 import { html_hash_property_set } from "./html_hash_property_set.mjs";
 import { app_receipts_view_screen } from "./app_receipts_view_screen.mjs";
 export function app_receipts_view_main(context) {
   "The receipts app for looking only: it opens one folder's purchases, a day to a card, and any one of them whole, but nothing can be added, typed, marked or sent from it, so a link to it can go to someone who should see the receipts and not change them.";
   "The folder comes the way the receipts app finds it - the link first, then this device - and the code box shows only when none is known. The address in the bar always names the folder, so it opens the same folder when sent.";
+  "It reaches into the receipts app on purpose, and is recorded as known for it: it draws that app's own list, cards and download, so a change there reaches both and the list is written once. Moving those into shared code would name most of the receipts app as shared, which only these two apps use.";
   app_shared_app_fn_set(context, app_receipts_view_main);
   app_shared_mobile_default_font_size(context);
   let root = property_get(context, "root");

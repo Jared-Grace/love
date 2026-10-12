@@ -1,6 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { property_get } from "./property_get.mjs";
+import { property_set } from "./property_set.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { app_receipts_purchase_path } from "./app_receipts_purchase_path.mjs";
 import { list_add } from "./list_add.mjs";
@@ -24,7 +25,8 @@ export function app_receipts_purchase_photos_merge(
   if (not_equal(before, null)) {
     photos = property_get(before, "photos");
     for (let photo of photos) {
-      kept[property_get(photo, "name")] = true;
+      let property_name = property_get(photo, "name");
+      property_set(kept, property_name, true);
     }
   }
   for (let file_name of file_names) {
