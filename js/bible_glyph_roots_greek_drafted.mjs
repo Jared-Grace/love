@@ -738,6 +738,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["5502", "kerub", "cherub", "cherubim"],
     ["4519", "tsaba", "military_helmet", "sabaoth, hosts"],
     ["2581", "qanna", "face_steam+describing", "Cananaean, zealot"],
+    ["3745", "hosos", "back+abacus", "as much as"],
   ];
   let drafted = [];
   for (let row of rows) {
