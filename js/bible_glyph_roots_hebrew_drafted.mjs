@@ -765,7 +765,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["8616", "tiqvah", "crossed_fingers+proper_name", "Tikvah, hope"],
     ["2897", "tob", "thumbs_up+proper_name", "Tob, good"],
     ["3479", "yisrael", "wrestling+heart_on_fire+proper_name", "Israel"],
-    ["3481", "yisrael", "wrestling+heart_on_fire", "Israelite"],
+    ["3481", "yisrael", "wrestling+heart_on_fire+proper_name", "Israelite"],
     ["3061", "yadah", "hands_raised+proper_name", "Judah"],
   ];
   let drafted = [];
