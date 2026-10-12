@@ -26,6 +26,7 @@ export function app_code_lesson_braces_run_explain_generic(
   ("There is one quiz, the same answering as the worked example, because the question - a program - and the answer - what runs of it - are the lesson's whole fact. The answer kept for a correction is the program as the steps leave it.");
   ("2026-10-11: the form that took a list of rules instead of an explanation was deleted once every lesson had moved to this one; its notes are the three above.");
   ("Made for If and else, whose shape already has a whole explanation in Else, at the human's asking 2026-10-11 that it appear here too.");
+  ("2026-10-12: a lesson whose shape is explained in the lesson after hands over noop as explain, so its writing is the walkthrough alone; the two shapes of ifs one after another keep theirs, which say which may run and nothing of what is written out");
   function above(root, context) {
     "what is new about this shape, then what happens to a section that runs and to one that does not";
     "The box on sections last, straight before the worked example, at the human's asking 2026-10-11: it is the rule the example is answered by, so it sits where the answering begins.";
