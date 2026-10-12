@@ -1,20 +1,19 @@
 import { fn_name } from "./fn_name.mjs";
-import { equal } from "./equal.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { less_than } from "./less_than.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { not } from "./not.mjs";
 import { functions_parameters_dangerous } from "./functions_parameters_dangerous.mjs";
+import { equal } from "./equal.mjs";
 import { functions_delete_confined } from "./functions_delete_confined.mjs";
 import { functions_command_confined } from "./functions_command_confined.mjs";
 import { functions_code_overwrite_confined } from "./functions_code_overwrite_confined.mjs";
 import { functions_read_confined } from "./functions_read_confined.mjs";
 import { functions_send_confined } from "./functions_send_confined.mjs";
 import { functions_package_confined } from "./functions_package_confined.mjs";
+import { not } from "./not.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { js_flow_read_mutates } from "./js_flow_read_mutates.mjs";
 import { js_flow_alias_slice } from "./js_flow_alias_slice.mjs";
-import { js_flow_key_power_name } from "./js_flow_key_power_name.mjs";
+import { js_flow_power_names } from "./js_flow_power_names.mjs";
 import { js_flow_read_power } from "./js_flow_read_power.mjs";
+import { less_than } from "./less_than.mjs";
 import { js_flow_slice } from "./js_flow_slice.mjs";
 export function functions_edit_unsafe_from_reads(reads) {
   ("Which functions may not be rewritten without the human seeing it, each with the reason, worked out from what ",
@@ -104,14 +103,11 @@ export function functions_edit_unsafe_from_reads(reads) {
   }
   ("A function is capable when what it hands back may be a power a machine-reaching or machinery-reaching function handed out. Followed to a fixed point, so a function returning what a capable one returned is capable too.");
   let capable = new Set();
-  let key_power = js_flow_key_power_name();
+  let powers = js_flow_power_names();
   let returned = new Map();
   for (let [name, read] of reads) {
-    if (
-      (greater_than(read.machine.length, 0) ||
-        greater_than(read.reflect.length, 0)) &&
-      not(fences.has(name))
-    ) {
+    ("Reaching the machine does not by itself make a function capable: the machine is followed as a value, so only a function whose answer may hold it - the module, a handle, a method not yet called - hands it out. The language's machinery is not followed that way, so reaching it still does.");
+    if (greater_than(read.reflect.length, 0) && not(fences.has(name))) {
       capable.add(name);
     }
     ("Only holding is followed here: a yes or no, a count or a text worked out from a power is not the power.");
@@ -133,7 +129,7 @@ export function functions_edit_unsafe_from_reads(reads) {
         continue;
       }
       function lambda3(c) {
-        let r4 = equal(c, key_power) || capable.has(c);
+        let r4 = powers.includes(c) || capable.has(c);
         return r4;
       }
       if (callees.some(lambda3)) {
@@ -274,7 +270,8 @@ export function functions_edit_unsafe_from_reads(reads) {
     if (greater_than(used.length, 0)) {
       mark(name, "may call or change what " + used[0] + " hands back");
       function lambda6(c) {
-        let neq = not_equal(c, key_power);
+        let b7 = powers.includes(c);
+        let neq = not(b7);
         return neq;
       }
       callees = [...callees, ...used.filter(lambda6)];

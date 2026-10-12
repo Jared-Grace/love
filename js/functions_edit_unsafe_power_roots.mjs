@@ -1,18 +1,19 @@
-import { equal } from "./equal.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { subtract } from "./subtract.mjs";
-import { not } from "./not.mjs";
 import { functions_flow_reads } from "./functions_flow_reads.mjs";
 import { functions_edit_unsafe_from_reads } from "./functions_edit_unsafe_from_reads.mjs";
 import { js_flow_key_power_name } from "./js_flow_key_power_name.mjs";
+import { js_flow_power_names } from "./js_flow_power_names.mjs";
 import { js_flow_alias_slice } from "./js_flow_alias_slice.mjs";
+import { not } from "./not.mjs";
+import { equal } from "./equal.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { subtract } from "./subtract.mjs";
 export async function functions_edit_unsafe_power_roots() {
   "Every function the edit check thinks may hand out a power of its own - not by handing back another's - each with how many functions count as handing back a power only because of it, most first. A root that reads a record by a key it never proved, rather than one reaching the machine, is where a false alarm is cheapest to fix.";
   "Found by walking each function that counts as handing back a power down to where that power starts, so a root is counted once for every function standing on it; the head of the list is the one fix that clears the most refusals.";
   let reads = await functions_flow_reads();
   let world = functions_edit_unsafe_from_reads(reads);
   let key_power = js_flow_key_power_name();
+  let powers = js_flow_power_names();
   let from = new Map();
   for (let name of world.capable) {
     let read = reads.get(name);
@@ -28,7 +29,7 @@ export async function functions_edit_unsafe_power_roots() {
       world.mutating,
     ).callees;
     function lambda2(c) {
-      let r3 = equal(c, key_power) || world.capable.has(c);
+      let r3 = powers.includes(c) || world.capable.has(c);
       return r3;
     }
     let v = returned.filter(lambda2);
@@ -41,7 +42,8 @@ export async function functions_edit_unsafe_power_roots() {
     while (not(seen.has(current))) {
       seen.add(current);
       function lambda3(c) {
-        let r4 = not_equal(c, key_power) && not(seen.has(c));
+        let b2 = powers.includes(c);
+        let r4 = not(b2) && not(seen.has(c));
         return r4;
       }
       let next = (from.get(current) ?? []).find(lambda3);

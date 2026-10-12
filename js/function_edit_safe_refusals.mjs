@@ -1,17 +1,17 @@
-import { greater_than } from "./greater_than.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { functions_flow_reads } from "./functions_flow_reads.mjs";
+import { not } from "./not.mjs";
 import { functions_edit_unsafe_from_reads } from "./functions_edit_unsafe_from_reads.mjs";
-import { js_parse } from "./js_parse.mjs";
-import { js_code_export } from "./js_code_export.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { js_unparse } from "./js_unparse.mjs";
+import { js_code_export } from "./js_code_export.mjs";
+import { js_parse } from "./js_parse.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { js_function_flow_read } from "./js_function_flow_read.mjs";
+import { equal } from "./equal.mjs";
 import { js_flow_read_mutates } from "./js_flow_read_mutates.mjs";
 import { js_flow_alias_slice } from "./js_flow_alias_slice.mjs";
 import { js_flow_read_power } from "./js_flow_read_power.mjs";
-import { js_flow_key_power_name } from "./js_flow_key_power_name.mjs";
+import { js_flow_power_names } from "./js_flow_power_names.mjs";
 export async function function_edit_safe_refusals(
   f_name,
   declaration,
@@ -118,9 +118,9 @@ export async function function_edit_safe_refusals(
   for (let u of power.used) {
     refusals.push("the draft may call or change what " + u + " hands back");
   }
-  let key_power = js_flow_key_power_name();
+  let powers = js_flow_power_names();
   function lambda3(c) {
-    let r4 = equal(c, key_power) || world.capable.has(c);
+    let r4 = powers.includes(c) || world.capable.has(c);
     return r4;
   }
   let handed_back = returned.callees.filter(lambda3);

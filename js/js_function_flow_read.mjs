@@ -16,6 +16,8 @@ import { js_key_facts } from "./js_key_facts.mjs";
 import { js_flow_methods_plain } from "./js_flow_methods_plain.mjs";
 import { js_flow_key_power_name } from "./js_flow_key_power_name.mjs";
 import { js_key_safe_is } from "./js_key_safe_is.mjs";
+import { js_flow_machine_power_name } from "./js_flow_machine_power_name.mjs";
+import { js_flow_machine_methods_data } from "./js_flow_machine_methods_data.mjs";
 import { js_flow_control_tests } from "./js_flow_control_tests.mjs";
 import { subtract } from "./subtract.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
@@ -41,6 +43,10 @@ export function js_function_flow_read(f_name, ast, known) {
   let machine = [];
   let reflect = [];
   let strange = [];
+  ("Names that hold the machine itself: what a package that is not pure binds, and every machine global the file reads. A value may be the very same object as one of these, so each is followed like any variable, and a slice reaching one has reached a power.");
+  let machine_held = new Set();
+  ("A name bound to one method of such a package by name - readFileSync from fs - so calling it plainly is judged like calling that method on the package.");
+  let machine_methods_imported = new Map();
   for (let s of ast.body) {
     if (equal(s.type, "ImportDeclaration")) {
       let source = s.source.value;
@@ -52,6 +58,15 @@ export function js_function_flow_read(f_name, ast, known) {
         }
       } else if (not(b2)) {
         machine.push("imports " + source);
+        for (let sp of s.specifiers) {
+          machine_held.add(sp.local.name);
+          if (equal(sp.type, "ImportSpecifier")) {
+            let method = equal(sp.imported.type, "Identifier")
+              ? sp.imported.name
+              : String(sp.imported.value);
+            machine_methods_imported.set(sp.local.name, method);
+          }
+        }
       }
       continue;
     }
@@ -141,6 +156,7 @@ export function js_function_flow_read(f_name, ast, known) {
       }
     } else if (machine_names.includes(name)) {
       machine.push("the outside name " + name);
+      machine_held.add(name);
     } else if (equal(name, "Object")) {
       ("Object is judged at each use instead, below, since most of its methods only read what they are handed.");
       outside_object = true;
@@ -269,6 +285,83 @@ export function js_function_flow_read(f_name, ast, known) {
       });
     }
   }
+  ("A machine method whose answer is plain data hands back a fresh value, not the thing it was called on - but only when that thing can hold nothing but the machine, which is known once every line is read. So each such call is kept, with what to do if the ruling is no, and ruled on after the walk.");
+  let machine_power = js_flow_machine_power_name();
+  let methods_data = js_flow_machine_methods_data();
+  ("Machine globals that build a new handle out of the text they are handed and hold none of it.");
+  let machine_builders = [
+    "fetch",
+    "require",
+    "XMLHttpRequest",
+    "WebSocket",
+    "Worker",
+  ];
+  let data_pending = [];
+  let data_count = 0;
+  function data_call_receiver(node) {
+    "The thing a call of a data method is made on - the object before the dot, or the imported method's own name - or null when the call is not one.";
+    if (not_equal(node.type, "CallExpression")) {
+      return null;
+    }
+    let c = node.callee;
+    if (
+      equal(c.type, "MemberExpression") &&
+      not(c.computed) &&
+      equal(c.property.type, "Identifier") &&
+      methods_data.includes(c.property.name)
+    ) {
+      let r29 = c.object;
+      return r29;
+    }
+    if (
+      equal(c.type, "Identifier") &&
+      machine_methods_imported.has(c.name) &&
+      methods_data.includes(machine_methods_imported.get(c.name))
+    ) {
+      return c;
+    }
+    return null;
+  }
+  function machine_only(name, visiting) {
+    "Whether a name can hold nothing but the machine: the machine's own name, a name the machine is bound to, or a name every holding of which is such a name. A name holding nothing, or held through a repo function, or reached again inside its own question, is not.";
+    if (equal(name, machine_power)) {
+      return true;
+    }
+    if (visiting.has(name)) {
+      return false;
+    }
+    let sources = aliases.get(name) ?? [];
+    let b14 = machine_held.has(name);
+    if (not(b14) && equal(sources.length, 0)) {
+      return false;
+    }
+    visiting.add(name);
+    let only = true;
+    for (let s of sources) {
+      if (
+        not_equal(s.via, null) ||
+        not_equal(s.gate, null) ||
+        not(machine_only_all(s.data, visiting))
+      ) {
+        only = false;
+        break;
+      }
+    }
+    visiting.delete(name);
+    return only;
+  }
+  function machine_only_all(list, visiting) {
+    if (equal(list.length, 0)) {
+      return false;
+    }
+    for (let n of list) {
+      let b13 = machine_only(n, visiting);
+      if (not(b13)) {
+        return false;
+      }
+    }
+    return true;
+  }
   let alias_known = new Map();
   let call_count = 0;
   function alias_names(node) {
@@ -356,6 +449,13 @@ export function js_function_flow_read(f_name, ast, known) {
       let r18 = node.properties.flatMap(lambda4);
       return r18;
     }
+    if (equal(t, "ImportExpression")) {
+      let literal =
+        equal(node.source.type, "Literal") &&
+        pure.includes(String(node.source.value));
+      let r26 = literal ? names(node) : [machine_power, ...names(node)];
+      return r26;
+    }
     let callee =
       equal(t, "CallExpression") && equal(node.callee.type, "Identifier")
         ? node.callee.name
@@ -378,6 +478,32 @@ export function js_function_flow_read(f_name, ast, known) {
         return r21;
       }
       let handed_in = node.arguments.flatMap(lambda6);
+      let builder =
+        equal(node.callee.type, "Identifier") &&
+        machine_builders.includes(node.callee.name) &&
+        machine_held.has(node.callee.name);
+      if (builder) {
+        let r27 = [machine_power];
+        return r27;
+      }
+      let receiver = data_call_receiver(node);
+      if (not_equal(receiver, null)) {
+        data_count = data_count + 1;
+        let answer = "(data answer " + data_count + ")";
+        let held = alias_names(receiver);
+        let otherwise = [...held, ...handed_in];
+        function lambda10() {
+          alias_add([answer], otherwise, null, null);
+        }
+        function lambda11() {}
+        data_pending.push({
+          receiver: held,
+          otherwise: lambda10,
+          granted: lambda11,
+        });
+        let r28 = [answer];
+        return r28;
+      }
       let from = equal(node.callee.type, "MemberExpression")
         ? node.callee.object
         : node.callee;
@@ -657,13 +783,30 @@ export function js_function_flow_read(f_name, ast, known) {
           changed_alias.push(...alias_names(x.callee.object));
         }
         source_add(changed, whole, stack, null);
-        alias_add(
-          changed_alias,
-          [...changed_alias, ...alias_names(x.callee)],
-          null,
-          null,
-        );
-        mutations.push(changed_alias);
+        let callee_alias = alias_names(x.callee);
+        function lambda12() {
+          alias_add(
+            changed_alias,
+            [...changed_alias, ...callee_alias],
+            null,
+            null,
+          );
+          mutations.push(changed_alias);
+        }
+        let receiver = data_call_receiver(x);
+        if (equal(receiver, null)) {
+          lambda12();
+        } else {
+          ("The machine reads and writes what a data method is handed but keeps none of it, and stores nothing in what it is handed; it may still call a function it is handed, so what it is handed is used as a callee would be.");
+          function lambda13() {
+            dynamic.push(passed_alias);
+          }
+          data_pending.push({
+            receiver: alias_names(receiver),
+            otherwise: lambda12,
+            granted: lambda13,
+          });
+        }
       }
       ("A call whose callee is a value rather than a function this file or the repo names - a name handed in, a variable, a key read - runs whatever that value is, so the value is followed like a changed thing: a power arriving there is used.");
       let named_callee =
@@ -749,6 +892,26 @@ export function js_function_flow_read(f_name, ast, known) {
   }
   ("The whole file is walked, not just the exported function, because a helper declared beside it runs with the same powers.");
   js_visit(ast, node_read);
+  ("Each kept data call is ruled on now. A ruling of no adds holding, which may turn a yes already given into a no - so the yeses are asked again until a round rules no on none, and only those are granted: nothing was added after they were asked. A no is never asked again, which can only leave the answer more cautious.");
+  let pending = data_pending;
+  let ruled = true;
+  while (ruled) {
+    ruled = false;
+    let standing = [];
+    for (let p of pending) {
+      let only = machine_only_all(p.receiver, new Set());
+      if (only) {
+        standing.push(p);
+      } else {
+        p.otherwise();
+        ruled = true;
+      }
+    }
+    pending = standing;
+  }
+  for (let p of pending) {
+    p.granted();
+  }
   let params = [];
   for (let p of fn.params) {
     let v28 = names(p);
@@ -767,6 +930,7 @@ export function js_function_flow_read(f_name, ast, known) {
     dynamic,
     handed: [...handed],
     machine: [...new Set(machine)],
+    machine_held: [...machine_held],
     reflect: [...new Set(reflect)],
     strange: [...new Set(strange)],
     asked,

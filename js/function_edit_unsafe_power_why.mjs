@@ -1,7 +1,6 @@
-import { equal } from "./equal.mjs";
 import { functions_flow_reads } from "./functions_flow_reads.mjs";
 import { functions_edit_unsafe_from_reads } from "./functions_edit_unsafe_from_reads.mjs";
-import { js_flow_key_power_name } from "./js_flow_key_power_name.mjs";
+import { js_flow_power_names } from "./js_flow_power_names.mjs";
 import { js_flow_alias_slice } from "./js_flow_alias_slice.mjs";
 import { js_flow_read_power } from "./js_flow_read_power.mjs";
 export async function function_edit_unsafe_power_why(f_name) {
@@ -10,7 +9,7 @@ export async function function_edit_unsafe_power_why(f_name) {
   let reads = await functions_flow_reads();
   let world = functions_edit_unsafe_from_reads(reads);
   let read = reads.get(f_name);
-  let key_power = js_flow_key_power_name();
+  let powers = js_flow_power_names();
   function lambda(r) {
     let r2 = r.alias;
     return r2;
@@ -23,7 +22,7 @@ export async function function_edit_unsafe_power_why(f_name) {
     world.mutating,
   ).callees;
   function lambda2(c) {
-    let r3 = equal(c, key_power) || world.capable.has(c);
+    let r3 = powers.includes(c) || world.capable.has(c);
     return r3;
   }
   let returned_capable = returned.filter(lambda2);
