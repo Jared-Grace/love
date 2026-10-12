@@ -739,7 +739,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["6698", "tsur", "rock+proper_name", "Zur, rock"],
     ["3469", "yasha", "rescue+proper_name", "Ishi, saving"],
     ["468", "tsur", "heart_on_fire+rock+proper_name", "Elizur, God of the rock"],
-    ["171", "ohel", "tent+father", "Oholiab, tent of his father"],
+    ["171", "ohel", "tent+father+proper_name", "Oholiab, tent of his father"],
     ["170", "ohel", "tent+proper_name", "Oholah, her tent"],
     ["126", "adamah", "brown_square+proper_name", "Admah, earthy"],
     ["38", "ab", "father+sea", "Abiam, father of the sea"],
