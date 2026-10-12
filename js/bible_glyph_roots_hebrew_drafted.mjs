@@ -760,7 +760,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["3037", "yada", "lightbulb+proper_name", "Jaddua, knowing"],
     ["2984", "bachar", "check_box+proper_name", "Ibhar, choice"],
     ["1955", "yasha", "rescue+i_am+proper_name", "Hoshaiah, Jah has saved"],
-    ["140", "adon", "crown+pointing_up", "Adonikam, lord of rising"],
+    ["140", "adon", "crown+pointing_up+proper_name", "Adonikam, lord of rising"],
     ["22", "ab", "father+heart_on_fire", "Abiel, father of God"],
     ["8616", "tiqvah", "crossed_fingers+proper_name", "Tikvah, hope"],
     ["2897", "tob", "thumbs_up+proper_name", "Tob, good"],
