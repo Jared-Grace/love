@@ -700,7 +700,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["7237", "rabab", "multiply+proper_name", "Rabbah, great"],
     ["5417", "nathan", "hands_giving+heart_on_fire+proper_name", "Nethanel, given of God"],
     ["3406", "rum", "up_arrow+proper_name", "Jerimoth, elevations"],
-    ["3171", "chayah", "sprout+heart_on_fire", "Jehiel, God will live"],
+    ["3171", "chayah", "sprout+heart_on_fire+proper_name", "Jehiel, God will live"],
     ["1137", "banah", "brick+proper_name", "Bani, built"],
     ["8203", "mishpat", "scales+i_am", "Shephatiah, Jah has judged"],
     ["4266", "machaneh", "camp+proper_name", "Mahanaim, double camp"],
