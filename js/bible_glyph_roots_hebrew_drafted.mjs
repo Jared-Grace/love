@@ -753,7 +753,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["6981", "qara", "waving_hand+proper_name", "Kore, crier"],
     ["5752", "ed", "witness+proper_name", "Oded, reiteration"],
     ["4439", "melek", "king+heart_on_fire+proper_name", "Malchiel, king of God"],
-    ["4105", "tob", "thumbs_up+heart_on_fire", "Mehetabel, bettered of God"],
+    ["4105", "tob", "thumbs_up+heart_on_fire+proper_name", "Mehetabel, bettered of God"],
     ["3437", "shub", "turn_back+proper_name", "Jashub, he will return"],
     ["3359", "qum", "pointing_up+i_am", "Jekamiah, Jah will rise"],
     ["3168", "chazaq", "might+heart_on_fire", "Ezekiel, God will strengthen"],
