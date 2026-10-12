@@ -656,7 +656,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["53", "ab", "father+peace+proper_name", "Absalom, father of peace"],
     ["8111", "shamar", "guard+proper_name", "Samaria, watch-station"],
     ["3092", "mishpat", "i_am+scales+proper_name", "Jehoshaphat, Jehovah-judged"],
-    ["3083", "nathan", "i_am+hands_giving", "Jonathan, Jehovah-given"],
+    ["3083", "nathan", "i_am+hands_giving+proper_name", "Jonathan, Jehovah-given"],
     ["7205", "raah", "eyes+son", "Reuben, see ye a son"],
     ["40", "ab", "father+king", "Abimelech, father of the king"],
     ["6667", "tsedeq", "ruler+i_am", "Zedekiah, right of Jah"],
