@@ -410,7 +410,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["93", "dikaios", "ruler+no_entry+thing", "unrighteousness"],
     ["94", "dikaios", "ruler+no_entry+describing", "unrighteous"],
     ["4012", "peri", "clockwise_arrows", "around"],
-    ["5037", "te", "plus+plus", "both"],
+    ["5037", "te", "plus+link", "both"],
     ["2309", "thelo", "shooting_star+doing", "want"],
     ["2307", "thelo", "shooting_star", "will"],
     ["3992", "pempo", "incoming_envelope", "send"],
