@@ -696,7 +696,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["5369", "ner", "lamp+proper_name", "Ner, lamp"],
     ["4441", "melek", "king+i_am+proper_name", "Malchiah, king of Jah"],
     ["1954", "yasha", "rescue+proper_name", "Hoshea, deliverer"],
-    ["568", "amar", "speech+i_am", "Amariah, Jah has said"],
+    ["568", "amar", "speech+i_am+proper_name", "Amariah, Jah has said"],
     ["7237", "rabab", "multiply+proper_name", "Rabbah, great"],
     ["5417", "nathan", "hands_giving+heart_on_fire", "Nethanel, given of God"],
     ["3406", "rum", "up_arrow+proper_name", "Jerimoth, elevations"],
