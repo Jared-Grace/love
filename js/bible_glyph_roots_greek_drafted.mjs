@@ -740,6 +740,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["2581", "qanna", "face_steam+describing", "Cananaean, zealot"],
     ["3745", "hosos", "back+abacus", "as much as"],
     ["4214", "posos", "abacus+question", "how much"],
+    ["4169", "poios", "likeness+question", "what kind"],
   ];
   let drafted = [];
   for (let row of rows) {
