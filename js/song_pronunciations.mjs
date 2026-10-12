@@ -7,8 +7,9 @@ export function song_pronunciations() {
     choirmaster: "choir-master",
     endow: "en-dau",
     ephraim: "ee-fray-im",
-    Euphrates: 'you-fray-teez',
+    euphrates: 'you-fray-teez',
     ezrahite: "Ezra-height",
+    jesse: 'Jess-see',
     rahab: "Ray-hab",
     zion: "zai-uhn",
     zoan:'zoh-an'
