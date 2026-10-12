@@ -688,7 +688,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["5418", "nathan", "hands_giving+i_am+proper_name", "Nethaniah, given of Jah"],
     ["3124", "yonah", "dove+proper_name", "Jonah, dove"],
     ["3100", "yhwh", "i_am+heart_on_fire+proper_name", "Joel, Jehovah is his God"],
-    ["2900", "tob", "thumbs_up+i_am", "Tobiah, goodness of Jehovah"],
+    ["2900", "tob", "thumbs_up+i_am+proper_name", "Tobiah, goodness of Jehovah"],
     ["8297", "sar", "military_medal+proper_name", "Sarai, dominative"],
     ["1968", "aman", "anchor+proper_name", "Heman, faithful"],
     ["476", "shama", "heart_on_fire+ear", "Elishama, God of hearing"],
