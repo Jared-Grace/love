@@ -746,7 +746,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["8114", "shamar", "guard+i_am+proper_name", "Shemariah, Jah has guarded"],
     ["7211", "raah", "eyes+i_am+proper_name", "Reaiah, Jah has seen"],
     ["6611", "pathach", "unlocked+i_am+proper_name", "Pethahiah, Jah has opened"],
-    ["1845", "yada", "heart_on_fire+lightbulb", "Eliada, God is knowing"],
+    ["1845", "yada", "heart_on_fire+lightbulb+proper_name", "Eliada, God is knowing"],
     ["3065", "yehudi", "menorah", "Jehudi"],
     ["8061", "shem", "name_tag+lightbulb", "Shemida, name of knowing"],
     ["7055", "qum", "pointing_up+heart_on_fire", "Kemuel, raised of God"],
