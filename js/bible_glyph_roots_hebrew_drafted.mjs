@@ -745,7 +745,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["38", "ab", "father+sea+proper_name", "Abiam, father of the sea"],
     ["8114", "shamar", "guard+i_am+proper_name", "Shemariah, Jah has guarded"],
     ["7211", "raah", "eyes+i_am+proper_name", "Reaiah, Jah has seen"],
-    ["6611", "pathach", "unlocked+i_am", "Pethahiah, Jah has opened"],
+    ["6611", "pathach", "unlocked+i_am+proper_name", "Pethahiah, Jah has opened"],
     ["1845", "yada", "heart_on_fire+lightbulb", "Eliada, God is knowing"],
     ["3065", "yehudi", "menorah", "Jehudi"],
     ["8061", "shem", "name_tag+lightbulb", "Shemida, name of knowing"],
