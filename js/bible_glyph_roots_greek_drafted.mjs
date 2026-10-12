@@ -751,6 +751,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["4674", "su", "you+describing", "your"],
     ["3768", "ou", "no_entry+hourglass_not_done", "not yet"],
     ["2673", "katargeo", "zero+doing", "nullify"],
+    ["4130", "pimplemi", "jar+up_arrow+doing", "fill"],
   ];
   let drafted = [];
   for (let row of rows) {
