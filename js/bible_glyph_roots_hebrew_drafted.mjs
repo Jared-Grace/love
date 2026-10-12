@@ -729,7 +729,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ],
     ["583", "ish", "man_beard+proper_name", "Enosh"],
     ["6144", "ir", "city+proper_name", "Ar, a city"],
-    ["3043", "yada", "lightbulb+heart_on_fire", "Jediael, knowing God"],
+    ["3043", "yada", "lightbulb+heart_on_fire+proper_name", "Jediael, knowing God"],
     ["2062", "zeeb", "wolf+proper_name", "Zeeb, wolf"],
     ["501", "asah", "heart_on_fire+hammer", "Elasah, God has made"],
     ["460", "yasaph", "heart_on_fire+plus", "Eliasaph, God is gatherer"],
