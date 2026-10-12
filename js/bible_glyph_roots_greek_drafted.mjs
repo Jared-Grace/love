@@ -720,7 +720,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["4545", "shama", "ear+heart_on_fire+proper_name", "Samuel"],
     ["4528", "shaal", "question+heart_on_fire+proper_name", "Shealtiel"],
     ["2408", "rum", "up_arrow+i_am+proper_name", "Jeremiah"],
-    ["1662", "qum", "heart_on_fire+pointing_up", "Eliakim"],
+    ["1662", "qum", "heart_on_fire+pointing_up+proper_name", "Eliakim"],
     ["7", "ab", "father+i_am", "Abijah"],
     ["4524", "tsedeq", "ruler+proper_name", "Zadok"],
     ["2498", "mishpat", "i_am+scales", "Jehoshaphat"],
