@@ -719,7 +719,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["7652", "sheba", "seven+proper_name", "Sheba, seven"],
     ["5374", "ner", "lamp+i_am+proper_name", "Neriah, light of Jah"],
     ["2139", "zakar", "reminder_ribbon+proper_name", "Zaccur, mindful"],
-    ["7597", "shaal", "question+heart_on_fire", "Shealtiel, I have asked God"],
+    ["7597", "shaal", "question+heart_on_fire+proper_name", "Shealtiel, I have asked God"],
     ["5176", "nachash", "snake+proper_name", "Nahash"],
     [
       "494",
