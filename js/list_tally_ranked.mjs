@@ -1,6 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_tally } from "./list_tally.mjs";
 import { object_property_names } from "./object_property_names.mjs";
+import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 export function list_tally_ranked(list) {
@@ -11,7 +12,7 @@ export function list_tally_ranked(list) {
   let tally = list_tally(list);
   let rows = [];
   for (let value of object_property_names(tally)) {
-    let count = tally[value];
+    let count = property_get(tally, value);
     let row = {
       value,
       count,
