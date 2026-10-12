@@ -747,6 +747,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["4133", "plen", "curving_up+exclamation", "nevertheless"],
     ["4218", "pote", "joker+clock", "once ever"],
     ["4159", "pou", "round_pushpin+tray_out+question", "from where"],
+    ["1564", "ekeinos", "telescope+tray_out", "from there"],
   ];
   let drafted = [];
   for (let row of rows) {
