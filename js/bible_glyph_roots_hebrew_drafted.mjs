@@ -669,7 +669,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["8095", "shama", "ear+proper_name", "Simeon, hearing"],
     ["2148", "zakar", "reminder_ribbon+i_am+proper_name", "Zechariah, Jah has remembered"],
     ["1141", "banah", "brick+i_am+proper_name", "Benaiah, Jah has built"],
-    ["8098", "shama", "ear+i_am", "Shemaiah, Jah has heard"],
+    ["8098", "shama", "ear+i_am+proper_name", "Shemaiah, Jah has heard"],
     ["3470", "yasha", "rescue+i_am", "Isaiah, Jah has saved"],
     ["3079", "qum", "i_am+pointing_up", "Jehoiakim, Jehovah will raise"],
     ["3612", "keleb", "dog+proper_name", "Caleb"],
