@@ -234,14 +234,6 @@
    ]
   },
   {
-   "name": "app_receipts_purchases_pull",
-   "keys": [
-    "id",
-    "property_get(purchase, \"key\")",
-    "property_get(photo, \"name\")"
-   ]
-  },
-  {
    "name": "app_replace_goal_hash_ids_grow",
    "keys": [
     "index"
