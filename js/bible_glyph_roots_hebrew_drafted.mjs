@@ -742,7 +742,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["171", "ohel", "tent+father+proper_name", "Oholiab, tent of his father"],
     ["170", "ohel", "tent+proper_name", "Oholah, her tent"],
     ["126", "adamah", "brown_square+proper_name", "Admah, earthy"],
-    ["38", "ab", "father+sea", "Abiam, father of the sea"],
+    ["38", "ab", "father+sea+proper_name", "Abiam, father of the sea"],
     ["8114", "shamar", "guard+i_am", "Shemariah, Jah has guarded"],
     ["7211", "raah", "eyes+i_am", "Reaiah, Jah has seen"],
     ["6611", "pathach", "unlocked+i_am", "Pethahiah, Jah has opened"],
