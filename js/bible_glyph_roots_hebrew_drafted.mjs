@@ -646,7 +646,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["4608", "alah", "walking+pointing_up", "ascent"],
     ["3118", "yom", "sun", "day"],
     ["576", "ani", "me", "I"],
-    ["1145", "ben", "son+right_arrow", "Benjamite"],
+    ["1145", "ben", "son+right_arrow+proper_name", "Benjamite"],
     ["7637", "sheba", "seven+describing", "seventh"],
     ["4124", "ab", "father+proper_name", "Moab, from father"],
     ["1144", "ben", "son+right_arrow", "Benjamin, son of the right hand"],
