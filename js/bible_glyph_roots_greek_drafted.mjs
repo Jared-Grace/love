@@ -741,6 +741,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["3745", "hosos", "back+abacus", "as much as"],
     ["4214", "posos", "abacus+question", "how much"],
     ["4169", "poios", "likeness+question", "what kind"],
+    ["686", "ara", "right_arrow+lightbulb", "then so"],
   ];
   let drafted = [];
   for (let row of rows) {
