@@ -698,7 +698,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["1954", "yasha", "rescue+proper_name", "Hoshea, deliverer"],
     ["568", "amar", "speech+i_am+proper_name", "Amariah, Jah has said"],
     ["7237", "rabab", "multiply+proper_name", "Rabbah, great"],
-    ["5417", "nathan", "hands_giving+heart_on_fire", "Nethanel, given of God"],
+    ["5417", "nathan", "hands_giving+heart_on_fire+proper_name", "Nethanel, given of God"],
     ["3406", "rum", "up_arrow+proper_name", "Jerimoth, elevations"],
     ["3171", "chayah", "sprout+heart_on_fire", "Jehiel, God will live"],
     ["1137", "banah", "brick+proper_name", "Bani, built"],
