@@ -1,6 +1,10 @@
 import { bible_glyph_chapters_marks_group_misread } from "./bible_glyph_chapters_marks_group_misread.mjs";
 import { property_get } from "./property_get.mjs";
 import { assert_json } from "./assert_json.mjs";
+import { bible_glyph_marks_group_misread_accepted } from "./bible_glyph_marks_group_misread_accepted.mjs";
+import { list_add } from "./list_add.mjs";
+import { not } from "./not.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { fn_name } from "./fn_name.mjs";
 export function bible_glyph_marks_group_misread_gate_run() {
@@ -15,7 +19,41 @@ export function bible_glyph_marks_group_misread_gate_run() {
     reading,
     hint: "no two words anywhere in the written chapters were found touching picture to picture, which no written Bible can be true of - the walk is reading the stored shorthand rather than the parsed chapters, so it is looking at text where the pictures should be and can never find a fault",
   });
-  let misread = property_get(reading, "misread");
+  ("A JOIN READ IN ITS VERSE AND JUDGED HARMLESS IS PASSED, and only that exact verse and group. A listed join the reading no longer finds fails too, because a list that only grows stops saying which joins are left.");
+  let accepted = bible_glyph_marks_group_misread_accepted();
+  let keys = [];
+  for (let entry of accepted) {
+    list_add(keys, entry[0] + " " + entry[1] + " " + entry[2]);
+  }
+  let found = [];
+  let misread = [];
+  for (let item of property_get(reading, "misread")) {
+    let key =
+      property_get(item, "chapter_code") +
+      " " +
+      property_get(item, "verse_number") +
+      " " +
+      property_get(item, "group");
+    list_add(found, key);
+    let b = list_includes(keys, key);
+    if (not(b)) {
+      list_add(misread, item);
+    }
+  }
+  let stale = [];
+  for (let key of keys) {
+    let b2 = list_includes(found, key);
+    if (not(b2)) {
+      list_add(stale, key);
+    }
+  }
+  let b3 = list_empty_is(stale);
+  assert_json(b3, {
+    stale,
+    hint:
+      "these listed joins are no longer found - take them out of " +
+      fn_name("bible_glyph_marks_group_misread_accepted"),
+  });
   let none = list_empty_is(misread);
   assert_json(none, {
     misread,
