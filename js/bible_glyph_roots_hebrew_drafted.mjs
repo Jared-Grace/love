@@ -685,7 +685,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["4641", "asah", "hammer+i_am+proper_name", "Maaseiah, work of Jah"],
     ["446", "ab", "heart_on_fire+father+proper_name", "Eliab, God of father"],
     ["5662", "ebed", "kneeling+i_am+proper_name", "Obadiah, serving Jah"],
-    ["5418", "nathan", "hands_giving+i_am", "Nethaniah, given of Jah"],
+    ["5418", "nathan", "hands_giving+i_am+proper_name", "Nethaniah, given of Jah"],
     ["3124", "yonah", "dove+proper_name", "Jonah, dove"],
     ["3100", "yhwh", "i_am+heart_on_fire", "Joel, Jehovah is his God"],
     ["2900", "tob", "thumbs_up+i_am", "Tobiah, goodness of Jehovah"],
