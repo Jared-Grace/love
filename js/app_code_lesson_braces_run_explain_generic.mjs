@@ -2,6 +2,8 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_braces_run_programs_shape } from "./app_code_braces_run_programs_shape.mjs";
+import { list_get } from "./list_get.mjs";
+import { app_code_braces_run_walkthrough } from "./app_code_braces_run_walkthrough.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { app_code_if_blocks_kept } from "./app_code_if_blocks_kept.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
@@ -39,6 +41,10 @@ export function app_code_lesson_braces_run_explain_generic(
       "{ ... }",
       " runs, it is as if only its lines were there",
     ]);
+    ("2026-10-12, at the human's asking: then one program of the shape answered section by section, so the writing explains the exercise asked. Its program is the first of a fresh four, so it goes a different way from one visit to the next, as the examples do.");
+    let shown = app_code_braces_run_programs_shape(code_get, names);
+    let walked = list_get(shown, 0);
+    app_code_braces_run_walkthrough(root, walked);
   }
   function programs() {
     let list = app_code_braces_run_programs_shape(code_get, names);
