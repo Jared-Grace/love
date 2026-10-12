@@ -265,7 +265,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["5186", "natah", "white_cane+doing", "stretch out"],
     ["7626", "shebet", "wood", "tribe"],
     ["1008", "beyth-el", "house+heart_on_fire+proper_name", "Bethel"],
-    ["1035", "beyth-lechem", "house+bread", "Bethlehem"],
+    ["1035", "beyth-lechem", "house+bread+proper_name", "Bethlehem"],
     ["2145", "zakar", "reminder_ribbon+thing", "male"],
     ["2015", "haphak", "upside_down_face", "turn over"],
     ["1481", "guwr", "luggage", "sojourn"],
