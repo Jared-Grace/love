@@ -663,7 +663,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["74", "ab", "father+lamp+proper_name", "Abner, father of light"],
     ["3058", "hu", "i_am+pointing_back+proper_name", "Jehu, Jehovah is He"],
     ["6659", "tsedeq", "ruler+proper_name", "Zadok, just"],
-    ["3077", "yada", "i_am+lightbulb", "Jehoiada, Jehovah-known"],
+    ["3077", "yada", "i_am+lightbulb+proper_name", "Jehoiada, Jehovah-known"],
     ["3458", "shama", "ear+heart_on_fire", "Ishmael, God will hear"],
     ["623", "asaph", "crowd+proper_name", "Asaph, collector"],
     ["8095", "shama", "ear+proper_name", "Simeon, hearing"],
