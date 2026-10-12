@@ -712,7 +712,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["30", "hu", "father+pointing_back+proper_name", "Abihu, father of Him"],
     ["3048", "yada", "lightbulb+i_am+proper_name", "Jedaiah, Jah has known"],
     ["1283", "ra", "thumbs_down+proper_name", "Beriah, in trouble"],
-    ["453", "hu", "heart_on_fire+pointing_back", "Elihu, God of him"],
+    ["453", "hu", "heart_on_fire+pointing_back+proper_name", "Elihu, God of him"],
     ["121", "adam", "person+proper_name", "Adam"],
     ["48", "ab", "father+up_arrow", "Abiram, father of height"],
     ["7935", "shakan", "tent+i_am", "Shechaniah, Jah has dwelt"],
