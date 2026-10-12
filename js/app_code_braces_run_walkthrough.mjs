@@ -13,9 +13,9 @@ import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
+import { not } from "./not.mjs";
 import { less_than } from "./less_than.mjs";
 import { app_code_if_block_reached } from "./app_code_if_block_reached.mjs";
-import { not } from "./not.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
@@ -73,6 +73,50 @@ export function app_code_braces_run_walkthrough(root, code) {
     let parts3 = ["", asked, " is ", value];
     return parts3;
   }
+  function removed_lines(block) {
+    "what the answer takes out of the program, a line each, as plain writing and code taking turns";
+    "Asked for by the human 2026-10-12: because this, then we remove that, and now we have. Said in words the learner already has, its lines and this if, rather than naming each brace and header that goes: the program drawn next shows exactly which. Not picked: naming the if (a) { and } else { that go one by one, which is longer than the picture it describes.";
+    let runs = property_get(block, "runs");
+    let is_last = property_get(block, "is_last");
+    let ran_any = property_get(block, "ran_any");
+    if (not(is_last)) {
+      let line = runs ? ["So its lines stay"] : ["So its lines are removed"];
+      let r = [line];
+      return r;
+    }
+    if (runs) {
+      let line2 = [
+        "So its lines stay, and the rest of this ",
+        "if",
+        " is removed",
+      ];
+      let r2 = [line2];
+      return r2;
+    }
+    let gone = ["So its lines are removed"];
+    if (ran_any) {
+      let line3 = [
+        "Only the lines of the ",
+        "{ ... }",
+        " that ran stay. The rest of this ",
+        "if",
+        " is removed",
+      ];
+      let r3 = [gone, line3];
+      return r3;
+    }
+    let line4 = [
+      "No ",
+      "{ ... }",
+      " of this ",
+      "if",
+      " ran, so all of this ",
+      "if",
+      " is removed",
+    ];
+    let r4 = [gone, line4];
+    return r4;
+  }
   let first = true;
   for (let n = 0; less_than(n, count); n++) {
     let b = app_code_if_block_reached(blocks, n);
@@ -110,9 +154,13 @@ export function app_code_braces_run_walkthrough(root, code) {
     let item = list_get(words, 0);
     let item2 = list_get(words, 1);
     app_code_div_braces_painted(box, [item, left, [" ... "], right, item2]);
+    for (let removed of removed_lines(block)) {
+      html_div_cycle_code(box, removed);
+    }
+    html_div_cycle_code(box, ["Now we have:"]);
   }
   let box_end = app_code_container_light_blue(root);
-  html_div_cycle_code(box_end, ["So the code is as if it were only:"]);
   let lines_end = app_code_if_blocks_lines_kept(code, blocks, count);
   program_draw(box_end, lines_end, null, null);
+  html_div_cycle_code(box_end, ["So the code is as if it were only this"]);
 }

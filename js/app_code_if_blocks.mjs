@@ -184,6 +184,9 @@ export function app_code_if_blocks(code) {
       let test2 = property_get(object2, "test");
       let asked = equal(test2, null) ? null : js_unparse(test2);
       let before_ran = not_equal(ran, null) && less_than(ran, i);
+      ("whether this is the last section of its if, the one whose answer takes the rest of the if away, and whether any section of the if ran, which decides whether all of it goes: for the walkthrough to say what is removed, asked for by the human 2026-10-12");
+      let is_last = equal(i, last);
+      let ran_any = not_equal(ran, null);
       let steps = [];
       if (not(runs)) {
         let r2 = range(open + 1, close);
@@ -215,6 +218,8 @@ export function app_code_if_blocks(code) {
         steps,
         asked,
         before_ran,
+        is_last,
+        ran_any,
       });
     }
   }
