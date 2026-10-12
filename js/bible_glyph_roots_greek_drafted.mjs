@@ -705,7 +705,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["2917", "krino", "scales+thing", "judgment"],
     ["4613", "shama", "ear+proper_name", "Simon"],
     ["2501", "yoseph", "i_am+plus+proper_name", "Joseph"],
-    ["2268", "yasha", "rescue+i_am", "Isaiah"],
+    ["2268", "yasha", "rescue+i_am+proper_name", "Isaiah"],
     ["2464", "tsachaq", "laughing+proper_name", "Isaac"],
     ["4672", "shalom", "peace+proper_name", "Solomon"],
     ["4540", "shamar", "guard+proper_name", "Samaria"],
