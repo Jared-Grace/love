@@ -1,12 +1,13 @@
-import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
-import { less_than } from "./less_than.mjs";
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bible_glyph_word_marks_edge } from "./bible_glyph_word_marks_edge.mjs";
-import { list_add } from "./list_add.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
+import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
 import { property_get } from "./property_get.mjs";
+import { less_than } from "./less_than.mjs";
+import { bible_glyph_word_marks_edge } from "./bible_glyph_word_marks_edge.mjs";
+import { subtract } from "./subtract.mjs";
+import { equal } from "./equal.mjs";
+import { list_last } from "./list_last.mjs";
+import { list_add } from "./list_add.mjs";
+import { not } from "./not.mjs";
 export function bible_glyph_chapter_marks_adjacent(chapter_code) {
   "$plain chapter_code";
   "the code names one chapter, spelled as the chapter codes spell it. It names a chapter to look up and nothing that runs.";
@@ -37,12 +38,18 @@ export function bible_glyph_chapter_marks_adjacent(chapter_code) {
       let before_text = before.join("+");
       let after_text = after.join("+");
       let same = equal(before_text, after_text);
+      ("A NAME WRITTEN OUT AFTER ITS MARK IS SAID APART, because the name mark binds to the letters that follow it: a reader meeting a name mark with a name glued to it reads a name, never a group closing on that mark. So a reading of the join can tell a free-standing last mark from one that belongs to the letters after it.");
+      let after_word = words[subtract(index, 1)];
+      let left = list_last(after);
+      let after_named =
+        equal(left, "proper_name") && equal(typeof after_word[1], "string");
       list_add(found, {
         chapter_code,
         verse_number,
         before: before_text,
         after: after_text,
         same,
+        after_named,
       });
     }
   }
