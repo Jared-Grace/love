@@ -717,7 +717,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["5328", "paroh", "house+proper_name", "Pharaoh"],
     ["3017", "levi", "handshake+proper_name", "Levi"],
     ["958", "ben", "son+right_arrow+proper_name", "Benjamin"],
-    ["4545", "shama", "ear+heart_on_fire", "Samuel"],
+    ["4545", "shama", "ear+heart_on_fire+proper_name", "Samuel"],
     ["4528", "shaal", "question+heart_on_fire", "Shealtiel"],
     ["2408", "rum", "up_arrow+i_am", "Jeremiah"],
     ["1662", "qum", "heart_on_fire+pointing_up", "Eliakim"],
