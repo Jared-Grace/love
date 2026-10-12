@@ -713,7 +713,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["2448", "yadah", "hands_raised+proper_name", "Judah, the town"],
     ["2495", "yonah", "dove+proper_name", "Jonah"],
     ["76", "adam", "person+proper_name", "Adam"],
-    ["3482", "nathan", "hands_giving+heart_on_fire", "Nathanael, given of God"],
+    ["3482", "nathan", "hands_giving+heart_on_fire+proper_name", "Nathanael, given of God"],
     ["5328", "paroh", "house+proper_name", "Pharaoh"],
     ["3017", "levi", "handshake+proper_name", "Levi"],
     ["958", "ben", "son+right_arrow", "Benjamin"],
