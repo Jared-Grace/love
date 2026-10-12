@@ -709,7 +709,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["2464", "tsachaq", "laughing+proper_name", "Isaac"],
     ["4672", "shalom", "peace+proper_name", "Solomon"],
     ["4540", "shamar", "guard+proper_name", "Samaria"],
-    ["2197", "zakar", "reminder_ribbon+i_am", "Zechariah"],
+    ["2197", "zakar", "reminder_ribbon+i_am+proper_name", "Zechariah"],
     ["2448", "yadah", "hands_raised+proper_name", "Judah, the town"],
     ["2495", "yonah", "dove+proper_name", "Jonah"],
     ["76", "adam", "person+proper_name", "Adam"],
