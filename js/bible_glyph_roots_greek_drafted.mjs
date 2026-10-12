@@ -716,7 +716,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["3482", "nathan", "hands_giving+heart_on_fire+proper_name", "Nathanael, given of God"],
     ["5328", "paroh", "house+proper_name", "Pharaoh"],
     ["3017", "levi", "handshake+proper_name", "Levi"],
-    ["958", "ben", "son+right_arrow", "Benjamin"],
+    ["958", "ben", "son+right_arrow+proper_name", "Benjamin"],
     ["4545", "shama", "ear+heart_on_fire", "Samuel"],
     ["4528", "shaal", "question+heart_on_fire", "Shealtiel"],
     ["2408", "rum", "up_arrow+i_am", "Jeremiah"],
