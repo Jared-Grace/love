@@ -708,7 +708,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["1712", "dag", "fish+proper_name", "Dagon, the fish-god"],
     ["6943", "qadash", "sparkle+proper_name", "Kedesh, a sanctum"],
     ["2147", "zakar", "reminder_ribbon+proper_name", "Zichri, memorable"],
-    ["471", "qum", "heart_on_fire+pointing_up", "Eliakim, God of raising"],
+    ["471", "qum", "heart_on_fire+pointing_up+proper_name", "Eliakim, God of raising"],
     ["30", "hu", "father+pointing_back", "Abihu, father of Him"],
     ["3048", "yada", "lightbulb+i_am", "Jedaiah, Jah has known"],
     ["1283", "ra", "thumbs_down+proper_name", "Beriah, in trouble"],
