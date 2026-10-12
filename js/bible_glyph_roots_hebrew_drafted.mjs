@@ -682,7 +682,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["550", "aman", "anchor+proper_name", "Amnon, faithful"],
     ["895", "babel", "face_spiral+proper_name", "Babel"],
     ["29", "ab", "father+i_am+proper_name", "Abijah, father of Jah"],
-    ["4641", "asah", "hammer+i_am", "Maaseiah, work of Jah"],
+    ["4641", "asah", "hammer+i_am+proper_name", "Maaseiah, work of Jah"],
     ["446", "ab", "heart_on_fire+father", "Eliab, God of father"],
     ["5662", "ebed", "kneeling+i_am", "Obadiah, serving Jah"],
     ["5418", "nathan", "hands_giving+i_am", "Nethaniah, given of Jah"],
