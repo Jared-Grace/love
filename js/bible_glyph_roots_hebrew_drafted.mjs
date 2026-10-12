@@ -649,7 +649,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["1145", "ben", "son+right_arrow+proper_name", "Benjamite"],
     ["7637", "sheba", "seven+describing", "seventh"],
     ["4124", "ab", "father+proper_name", "Moab, from father"],
-    ["1144", "ben", "son+right_arrow", "Benjamin, son of the right hand"],
+    ["1144", "ben", "son+right_arrow+proper_name", "Benjamin, son of the right hand"],
     ["3414", "rum", "up_arrow+i_am", "Jeremiah, Jah will rise"],
     ["8050", "shama", "ear+heart_on_fire", "Samuel, heard of God"],
     ["2396", "chazaq", "might+i_am", "Hezekiah, strengthened of Jah"],
