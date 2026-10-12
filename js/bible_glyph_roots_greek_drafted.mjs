@@ -734,7 +734,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["2242", "alah", "pointing_up+proper_name", "Heli, Eli"],
     ["1800", "ish", "man_beard+proper_name", "Enosh"],
     ["1697", "chamor", "donkey+proper_name", "Hamor"],
-    ["1666", "elisha", "heart_on_fire+rescue", "Elisha"],
+    ["1666", "elisha", "heart_on_fire+rescue+proper_name", "Elisha"],
     ["5502", "kerub", "cherub", "cherubim"],
     ["4519", "tsaba", "military_helmet", "sabaoth, hosts"],
     ["2581", "qanna", "face_steam+describing", "Cananaean, zealot"],
