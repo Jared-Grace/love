@@ -744,6 +744,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["686", "ara", "right_arrow+lightbulb", "then so"],
     ["2425", "hikanos", "abacus+check", "enough worthy"],
     ["4061", "peritemno", "kitchen_knife+clockwise_arrows+thing", "circumcision"],
+    ["4133", "plen", "curving_up+exclamation", "nevertheless"],
   ];
   let drafted = [];
   for (let row of rows) {
