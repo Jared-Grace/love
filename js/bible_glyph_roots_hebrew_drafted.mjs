@@ -735,7 +735,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["460", "yasaph", "heart_on_fire+plus+proper_name", "Eliasaph, God is gatherer"],
     ["458", "melek", "heart_on_fire+king+proper_name", "Elimelech, God of the king"],
     ["8017", "shalom", "peace+heart_on_fire+proper_name", "Shelumiel, peace of God"],
-    ["7509", "rapha", "bandage+i_am", "Rephaiah, Jah has cured"],
+    ["7509", "rapha", "bandage+i_am+proper_name", "Rephaiah, Jah has cured"],
     ["6698", "tsur", "rock+proper_name", "Zur, rock"],
     ["3469", "yasha", "rescue+proper_name", "Ishi, saving"],
     ["468", "tsur", "heart_on_fire+rock", "Elizur, God of the rock"],
