@@ -678,7 +678,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["1436", "gadal", "top+i_am+proper_name", "Gedaliah, Jah has become great"],
     ["3316", "pathach", "unlocked+proper_name", "Jephthah, he will open"],
     ["3442", "yehoshua", "i_am+rescue+proper_name", "Jeshua, he will save"],
-    ["3088", "rum", "i_am+up_arrow", "Jehoram, Jehovah-raised"],
+    ["3088", "rum", "i_am+up_arrow+proper_name", "Jehoram, Jehovah-raised"],
     ["550", "aman", "anchor+proper_name", "Amnon, faithful"],
     ["895", "babel", "face_spiral", "Babel"],
     ["29", "ab", "father+i_am", "Abijah, father of Jah"],
