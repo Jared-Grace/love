@@ -3,6 +3,7 @@ import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_braces_run_after_nested } from "./app_code_lesson_braces_run_after_nested.mjs";
+import { app_code_if_after_nested_explain } from "./app_code_if_after_nested_explain.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_if_ab_logged } from "./app_code_lesson_if_ab_logged.mjs";
 import { app_code_if_after_nested_program_lines } from "./app_code_if_after_nested_program_lines.mjs";
@@ -34,6 +35,8 @@ export function app_code_lesson_if_after_nested() {
         " is outside it, so it is reached whatever that one asks",
       ],
     );
+    ("2026-10-12, at the human's asking: what the code writes out is explained back here, where it is first asked, the lesson before now walking through which sections run");
+    app_code_if_after_nested_explain(root, context);
   }
   let name_id = app_code_lesson_statement_title_name_id(
     "An if after an if inside an if",
