@@ -660,7 +660,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["7205", "raah", "eyes+son+proper_name", "Reuben, see ye a son"],
     ["40", "ab", "father+king+proper_name", "Abimelech, father of the king"],
     ["6667", "tsedeq", "ruler+i_am+proper_name", "Zedekiah, right of Jah"],
-    ["74", "ab", "father+lamp", "Abner, father of light"],
+    ["74", "ab", "father+lamp+proper_name", "Abner, father of light"],
     ["3058", "hu", "i_am+pointing_back", "Jehu, Jehovah is He"],
     ["6659", "tsedeq", "ruler+proper_name", "Zadok, just"],
     ["3077", "yada", "i_am+lightbulb", "Jehoiada, Jehovah-known"],
