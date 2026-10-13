@@ -17,12 +17,14 @@ export function giveaway_psalms_songs_rows_items(rows) {
   ("A row whose name the reading cannot place stops the whole answer rather than being left out. Leaving it out would publish a shelf with a recording silently missing from it, and nothing downstream would be any the wiser; the record was built from names that read, so a name that does not read means the record was edited by hand or the reading changed under it.");
   ("The files are sorted by the name they carry inside the box, because that sorted order is the whole of what a reader of a bare download page is given. The boxes are sorted the same way, which puts the psalms in number order because the chapter code is padded.");
   ("A box carries the psalm as a plain number as well as the padded code it is named after. Everything that writes words for a reader wants the number - a title, a sentence saying which psalm this is - and taking the number back out of the code would be the one bit of parsing this function exists to avoid. The grouping is on the number for the same reason: the number is what the reading hands over, and the code is made from it afterwards.");
+  ("Each file keeps the kind of thing it is, carried straight over from the record. What a box can be described as is read off the kinds actually inside it and never assumed - a sentence saying a box holds videos when it holds only singing is a lie told once and then published, and the whole reason to describe a box from its contents is that every box is at a different stage.");
   let placed = [];
   for (let row of rows) {
     let read = psalms_song_file_read_or_null(row.file_name);
     null_not_is_assert(read);
     let one = {
       chapter: read.chapter,
+      kind: row.kind,
       file_name: row.file_name,
       path_in_item: row.name_published,
     };
@@ -34,6 +36,7 @@ export function giveaway_psalms_songs_rows_items(rows) {
     let files = [];
     for (let one of group.items) {
       let file = {
+        kind: one.kind,
         file_name: one.file_name,
         path_in_item: one.path_in_item,
       };
