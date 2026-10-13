@@ -2,9 +2,12 @@ import { functions_flow_reads } from "./functions_flow_reads.mjs";
 import { not } from "./not.mjs";
 import { functions_edit_unsafe_from_reads } from "./functions_edit_unsafe_from_reads.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { js_unparse } from "./js_unparse.mjs";
-import { js_code_export } from "./js_code_export.mjs";
+import { function_read } from "./function_read.mjs";
+import { js_module_extras_codes } from "./js_module_extras_codes.mjs";
 import { js_parse } from "./js_parse.mjs";
+import { js_unparse } from "./js_unparse.mjs";
+import { json_equal } from "./json_equal.mjs";
+import { js_code_export } from "./js_code_export.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { js_function_flow_read } from "./js_function_flow_read.mjs";
 import { equal } from "./equal.mjs";
@@ -16,12 +19,13 @@ export async function function_edit_safe_refusals(
   f_name,
   declaration,
   import_lines,
+  extras,
 ) {
   "Every reason this declaration, with these package import lines, may not be written over the existing function of this name without the human seeing it. Empty means the edit cannot change anything dangerous.";
   "The draft is handed in rather than read here, so the caller can check exactly what it goes on to write.";
   "Two questions, and both must come back clean. Before: the function as it stands must be safe to edit, so nothing dangerous already depends on what it does. After: the draft must be safe in the same world - it passes nothing into an argument that steers a dangerous function, uses no power and hands none back, starts neither changing nor handing back what it is handed, and names nothing outside the repo's own functions and the plain built-in names.";
   "Only the one function is read again. That is enough: the function was safe before, so no dangerous value depended on its result, and the draft adds no dangerous parameter of its own, so no other function's answer can move.";
-  "The draft is read in the shape it will land in - its declaration exported on its own, with every outside name left bare - because the imports are worked out again from the names after it lands, and an import line in the draft is not what decides what a name means.";
+  "The draft is read in the shape it will land in - its declaration exported beside what the file keeps outside it, with every outside name left bare - because the imports are worked out again from the names after it lands, and an import line in the draft is not what decides what a name means.";
   let refusals = [];
   let reads = await functions_flow_reads();
   let b = reads.has(f_name);
@@ -41,8 +45,19 @@ export async function function_edit_safe_refusals(
   if (greater_than(import_lines.length, 0)) {
     refusals.push("the draft brings in a package: " + import_lines.join(" "));
   }
+  ("★ WHAT THE FILE KEEPS OUTSIDE ITS FUNCTION MAY BE CARRIED BUT NEVER CHANGED UNASKED. A statement on a module's top line runs the moment the file loads, and the function as it stands was judged with those statements beside it - so carried unchanged they are exactly what was already judged, and changed they are a new thing nothing here has weighed.");
+  let source_existing = await function_read(f_name);
+  let ast = js_parse(source_existing);
+  let codes_existing = js_module_extras_codes(ast);
+  let codes = extras.map(js_unparse);
+  let same = json_equal(codes, codes_existing);
+  if (not(same)) {
+    refusals.push("the draft changes what the file keeps outside its function");
+  }
+  ("They are read with the draft, because they are where a name the function reads may be bound: a value kept beside the function is the file's own, and read without it the draft looked like it reached for a name from nowhere.");
   let code_declaration = js_unparse(declaration);
-  let code = js_code_export(code_declaration);
+  let code_export = js_code_export(code_declaration);
+  let code = [...codes, code_export].join("\n");
   let landed = js_parse(code);
   let f_names = await functions_names();
   let known = new Set(f_names);
