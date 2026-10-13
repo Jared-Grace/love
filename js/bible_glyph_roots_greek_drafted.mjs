@@ -757,7 +757,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["3371", "meketi", "no_entry+repeat_single_button", "no longer"],
     ["473", "anti", "currency_exchange", "instead of"],
     ["5118", "tosoutos", "flashlight+abacus", "so many"],
-    ["5046", "telos", "end_arrow+describing", "perfect"],
+    ["5046", "telos", "end_arrow+goal_net+describing", "perfect"],
     ["4059", "peritemno", "kitchen_knife+clockwise_arrows+doing", "circumcise"],
     ["203", "akrobustia", "no_entry+kitchen_knife+clockwise_arrows+thing", "uncircumcision"],
     ["230", "aletheia", "check+manner", "truly"],
