@@ -1,3 +1,8 @@
+import { app_code_lesson_braces_step_if_else_in_if } from "./app_code_lesson_braces_step_if_else_in_if.mjs";
+import { app_code_lesson_braces_step_after_nested } from "./app_code_lesson_braces_step_after_nested.mjs";
+import { app_code_lesson_braces_step_nested } from "./app_code_lesson_braces_step_nested.mjs";
+import { app_code_lesson_braces_step_if_else } from "./app_code_lesson_braces_step_if_else.mjs";
+import { app_code_lesson_braces_step } from "./app_code_lesson_braces_step.mjs";
 import { app_code_lesson_braces_run_if_else } from "./app_code_lesson_braces_run_if_else.mjs";
 import { app_code_lesson_braces_run_nested } from "./app_code_lesson_braces_run_nested.mjs";
 import { app_code_lesson_braces_run_after_nested } from "./app_code_lesson_braces_run_after_nested.mjs";
@@ -563,25 +568,30 @@ export function app_code_lessons_fns() {
     app_code_lesson_brace_lines_two,
     app_code_lesson_brace_lines_two_nested,
     app_code_lesson_braces_run,
+    app_code_lesson_braces_step,
     app_code_lesson_if_twice,
     app_code_lesson_if_two_bounds,
     app_code_lesson_if_two_ifs,
     app_code_lesson_if_and_if_not,
     app_code_lesson_braces_run_if_else,
+    app_code_lesson_braces_step_if_else,
     app_code_lesson_if_else,
     app_code_lesson_if_else_once,
     app_code_lesson_if_halve_even,
     app_code_lesson_if_else_change,
     app_code_lesson_if_halve_or_triple,
     app_code_lesson_braces_run_nested,
+    app_code_lesson_braces_step_nested,
     app_code_lesson_if_nested,
     app_code_lesson_token_order_braces_three,
     app_code_lesson_token_order_braces_three_plain,
     app_code_lesson_brace_pair,
     app_code_lesson_brace_lines,
     app_code_lesson_braces_run_after_nested,
+    app_code_lesson_braces_step_after_nested,
     app_code_lesson_if_after_nested,
     app_code_lesson_braces_run_if_else_in_if,
+    app_code_lesson_braces_step_if_else_in_if,
     app_code_lesson_if_else_in_if,
     app_code_lesson_if_else_in_if_else,
     app_code_lesson_braces_run_if_in_else,
