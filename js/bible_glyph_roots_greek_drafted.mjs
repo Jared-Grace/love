@@ -786,7 +786,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["1614", "ekteino", "tray_out+hand_with_fingers_splayed", "stretch out"],
     ["1937", "epithumeo", "pointing_up+anger_symbol+doing", "desire"],
     ["5059", "teras", "exploding_head", "wonder"],
-    ["700", "aresko", "relieved_face+doing", "please"],
+    ["700", "aresko", "smiling_face_with_smiling_eyes+doing", "please"],
     ["839", "aurion", "sun+next_track", "tomorrow"],
     ["1887", "aurion", "pointing_up+sun+next_track", "next day"],
     ["1752", "heneka", "toward+information", "for the sake of"],
