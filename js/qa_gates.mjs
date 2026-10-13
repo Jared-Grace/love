@@ -1,3 +1,4 @@
+import { durations_near_each_cases_gate_run } from "./durations_near_each_cases_gate_run.mjs";
 import { js_flow_machine_power_cases_gate_run } from "./js_flow_machine_power_cases_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
@@ -1231,6 +1232,7 @@ export function qa_gates() {
     giveaway_psalms_songs_rows_whole_chapter_parts_cases_gate_run,
     giveaway_psalms_songs_whole_chapter_parts_gate_run,
     js_flow_machine_power_cases_gate_run,
+    durations_near_each_cases_gate_run,
   ];
   return gates;
 }
