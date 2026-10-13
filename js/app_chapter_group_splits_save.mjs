@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { json_to } from "./json_to.mjs";
 import { storage_local_name_set } from "./storage_local_name_set.mjs";
 import { text_frozen } from "./text_frozen.mjs";
+import { property_set } from "./property_set.mjs";
 import { app_shared_unsent_add_custom } from "./app_shared_unsent_add_custom.mjs";
 export async function app_chapter_group_splits_save(app_name, path, splits) {
   "$plain app_name";
@@ -18,8 +19,7 @@ export async function app_chapter_group_splits_save(app_name, path, splits) {
     type: "application/json",
   });
   let key = text_frozen("splits");
-  let custom = {
-    [key]: json,
-  };
+  let custom = {};
+  property_set(custom, key, json);
   await app_shared_unsent_add_custom(path, blob, custom);
 }
