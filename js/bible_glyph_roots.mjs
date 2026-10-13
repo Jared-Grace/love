@@ -2197,7 +2197,7 @@ export function bible_glyph_roots() {
       words: [
         {
           strong: "4501",
-          glyph: "sword",
+          glyph: "sword+top",
         },
       ],
     },
@@ -2255,7 +2255,7 @@ export function bible_glyph_roots() {
       words: [
         {
           strong: "3498",
-          glyph: "skull",
+          glyph: "coffin",
         },
       ],
     },
@@ -2375,7 +2375,7 @@ export function bible_glyph_roots() {
       words: [
         {
           strong: "4190",
-          glyph: "thumbs_down",
+          glyph: "smiling_face_with_horns",
         },
       ],
     },
@@ -2471,11 +2471,11 @@ export function bible_glyph_roots() {
       words: [
         {
           strong: "2570",
-          glyph: "thumbs_up",
+          glyph: "person_gesturing_ok",
         },
         {
           strong: "2573",
-          glyph: "thumbs_up+manner",
+          glyph: "person_gesturing_ok+manner",
         },
       ],
     },
@@ -2865,7 +2865,7 @@ export function bible_glyph_roots() {
       words: [
         {
           strong: "4043",
-          glyph: "walking",
+          glyph: "walking+clockwise_arrows",
         },
       ],
     },

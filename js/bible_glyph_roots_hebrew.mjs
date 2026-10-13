@@ -1776,11 +1776,11 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "1697",
-          glyph: "speech",
+          glyph: "voice",
         },
         {
           strong: "1696",
-          glyph: "voice",
+          glyph: "voice+doing",
         },
       ],
     },
@@ -2192,7 +2192,7 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "7563",
-          glyph: "thumbs_down",
+          glyph: "thumbs_down+person",
         },
       ],
     },
@@ -2212,7 +2212,7 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "7043",
-          glyph: "speech+thumbs_down",
+          glyph: "balloon+speech+doing",
         },
       ],
     },
@@ -2486,7 +2486,7 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "408",
-          glyph: "no_entry",
+          glyph: "no_entry+exclamation",
         },
       ],
     },

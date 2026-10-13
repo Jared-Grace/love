@@ -586,7 +586,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["6966", "qum", "person+pointing_up", "rise, set up"],
     ["5705", "ad", "finish", "until"],
     ["8668", "yasha", "rescue+thing", "salvation, rescue"],
-    ["7045", "qalal", "speech+thumbs_down", "curse"],
+    ["7045", "qalal", "balloon+speech", "curse"],
     ["6241", "eser", "ten+thing", "tenth part"],
     ["3830", "labash", "garment+thing", "clothing"],
     ["2399", "chata", "bow+thing", "sin"],
