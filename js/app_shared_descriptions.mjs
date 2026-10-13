@@ -42,6 +42,10 @@ export function app_shared_descriptions() {
       "The words of the sung songs, line by line, with what each line means and the passages of Scripture it rests on written out underneath.",
     receipts:
       "Keep a record of what was bought, with a photo of the receipt and the price in both pesos and dollars. Every phone that types the same folder code shares one list, and a phone with no internet keeps what you add until there is some.",
+    receipts_view:
+      "Look through one folder of receipts, a day to a card, with nothing that can be added or changed. For sending to somebody who should see what was bought.",
+    chapter_group:
+      "Divide a chapter of the Bible into groups of verses, and copy the words or the name of any group. Every phone that types the same folder code works on the same division.",
     privacy_policy:
       "What these apps do with anything you give them. There is nothing to sign up for and nothing is tracked, and what an app remembers is kept on your own device.",
   };
