@@ -7,7 +7,7 @@ import { app_receipts_folder_known } from "./app_receipts_folder_known.mjs";
 import { app_shared_unsent_sync } from "./app_shared_unsent_sync.mjs";
 import { html_on_window } from "./html_on_window.mjs";
 import { app_receipts_folder_code_valid_is } from "./app_receipts_folder_code_valid_is.mjs";
-import { app_receipts_code_screen } from "./app_receipts_code_screen.mjs";
+import { app_shared_folder_code_screen } from "./app_shared_folder_code_screen.mjs";
 import { storage_local_name_set } from "./storage_local_name_set.mjs";
 import { html_hash_property_set } from "./html_hash_property_set.mjs";
 import { app_receipts_purchases_screen } from "./app_receipts_purchases_screen.mjs";
@@ -33,7 +33,7 @@ export function app_receipts_main(context) {
   if (app_receipts_folder_code_valid_is(known)) {
     on_code(known);
   } else {
-    app_receipts_code_screen(root, known, on_code);
+    app_shared_folder_code_screen(root, known, on_code);
   }
   async function on_code(folder_code) {
     storage_local_name_set(app_name, key, folder_code);
@@ -46,6 +46,6 @@ export function app_receipts_main(context) {
   }
   function on_change(folder_code) {
     sync_shown = app_shared_unsent_sync;
-    app_receipts_code_screen(root, folder_code, on_code);
+    app_shared_folder_code_screen(root, folder_code, on_code);
   }
 }

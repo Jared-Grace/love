@@ -9,7 +9,7 @@ import { html_div } from "./html_div.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { app_receipts_folder_code_valid_is } from "./app_receipts_folder_code_valid_is.mjs";
 import { html_p_text } from "./html_p_text.mjs";
-export function app_receipts_code_screen(root, prefill, on_code) {
+export function app_shared_folder_code_screen(root, prefill, on_code) {
   "$plain root";
   "$plain prefill";
   "The screen that asks for the folder code and nothing else, so the one thing a person must do first is the only thing they see.";
