@@ -11,6 +11,7 @@ export function song_pronunciations() {
     ezrahite: "Ezra-height",
     jesse: 'Jess-see',
     rahab: "Ray-hab",
+    sinai: "sai-nai",
     zion: "zai-on",
     zoan:'zoh-an'
   };
