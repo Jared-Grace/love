@@ -773,6 +773,16 @@ export function bible_glyph_roots_greek_drafted() {
     ["4921", "sunistemi", "safety_pin+person+round_pushpin", "commend"],
     ["2579", "kan", "plus+traffic_light", "even if"],
     ["3385", "meti", "no_entry+question", "not?"],
+    ["1961", "epimeno", "pointing_up+pin+doing", "continue"],
+    ["1684", "embaino", "tray_in+footprints", "embark"],
+    ["1260", "dialogizomai", "metro+abacus+doing", "deliberate"],
+    ["350", "anakrino", "up_arrow+scales", "examine"],
+    ["5218", "hupakoe", "down_arrow+ear+loudspeaker+thing", "obedience"],
+    ["4328", "prosdokao", "toward+thinking", "expect"],
+    ["4461", "rhabbi", "teacher+top", "Rabbi"],
+    ["3360", "mechri", "finish+straight_ruler", "until"],
+    ["114", "atheteo", "no_entry+palm_down", "reject"],
+    ["5526", "chortazo", "face_savoring_food+doing", "satisfy"],
   ];
   let drafted = [];
   for (let row of rows) {
