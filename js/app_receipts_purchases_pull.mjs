@@ -1,3 +1,4 @@
+import { property_set } from "./property_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { browser_online_is } from "./browser_online_is.mjs";
 import { not } from "./not.mjs";
@@ -43,7 +44,8 @@ export async function app_receipts_purchases_pull(folder_code) {
   );
   let local = {};
   for (let purchase of all) {
-    local[property_get(purchase, "key")] = purchase;
+    let property_name = property_get(purchase, "key");
+    property_set(local, property_name, purchase);
   }
   let unsent = await app_receipts_unsent_all();
   let waiting = list_map_property(unsent, "key");
