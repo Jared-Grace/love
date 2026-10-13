@@ -1,3 +1,5 @@
+import { equal } from "./equal.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { giveaway_file_kinds } from "./giveaway_file_kinds.mjs";
 import { giveaway_file_kind_phrase } from "./giveaway_file_kind_phrase.mjs";
@@ -20,11 +22,11 @@ export function giveaway_psalms_item_description(item) {
   for (let kind of kinds) {
     let count = 0;
     for (let file of item.files) {
-      if (file.kind === kind) {
+      if (equal(file.kind, kind)) {
         count = count + 1;
       }
     }
-    if (count > 0) {
+    if (greater_than(count, 0)) {
       let phrase = giveaway_file_kind_phrase(kind, count);
       list_add(phrases, phrase);
     }
