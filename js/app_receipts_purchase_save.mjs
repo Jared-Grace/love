@@ -9,7 +9,7 @@ import { list_map_property } from "./list_map_property.mjs";
 import { json_to } from "./json_to.mjs";
 import { app_receipts_purchase_details_name } from "./app_receipts_purchase_details_name.mjs";
 import { app_receipts_purchase_path } from "./app_receipts_purchase_path.mjs";
-import { app_receipts_unsent_add_custom } from "./app_receipts_unsent_add_custom.mjs";
+import { app_shared_unsent_add_custom } from "./app_shared_unsent_add_custom.mjs";
 export async function app_receipts_purchase_save(purchase) {
   "$plain purchase";
   "Keep a purchase on this phone as it now stands, and put its details in line to be sent - so a date changed with no internet is kept here at once and reaches storage later.";
@@ -62,5 +62,5 @@ export async function app_receipts_purchase_save(purchase) {
   let folder_code = property_get(purchase, "folder_code");
   let details_name = app_receipts_purchase_details_name();
   let path = app_receipts_purchase_path(folder_code, id, details_name);
-  await app_receipts_unsent_add_custom(path, blob, custom);
+  await app_shared_unsent_add_custom(path, blob, custom);
 }

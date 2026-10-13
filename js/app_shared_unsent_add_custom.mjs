@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_receipts_store } from "./app_receipts_store.mjs";
 import { indexeddb_put_backend } from "./indexeddb_put_backend.mjs";
 import { app_receipts_database } from "./app_receipts_database.mjs";
-export async function app_receipts_unsent_add_custom(path, file, custom) {
+export async function app_shared_unsent_add_custom(path, file, custom) {
   "$plain path";
   "$plain file";
   "$plain custom";
