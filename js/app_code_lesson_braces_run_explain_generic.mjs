@@ -9,6 +9,7 @@ import { app_code_if_blocks_kept } from "./app_code_if_blocks_kept.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { app_code_braces_run_choose } from "./app_code_braces_run_choose.mjs";
 import { property_get } from "./property_get.mjs";
+import { app_code_program_step_through } from "./app_code_program_step_through.mjs";
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
 import { app_code_brace_marked_div } from "./app_code_brace_marked_div.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
@@ -78,6 +79,22 @@ export function app_code_lesson_braces_run_explain_generic(
     correction_code_set(answer);
     app_code_braces_run_choose(parent, question, on_wrong, on_success);
   }
+  function step_quiz(
+    parent,
+    info,
+    qa,
+    on_success,
+    on_wrong,
+    batch_get,
+    correction_code_set,
+  ) {
+    "the second quiz: the same program run a line at a time, the learner doing every step the computer does";
+    "Asked for by the human 2026-10-13: every step of the computing done by the learner, before the lesson after asks what such a program logs. A quiz after the first rather than in its place, so which sections run is still asked first, on its own.";
+    let question = property_get(qa, "question");
+    let answer = property_get(qa, "answer");
+    correction_code_set(answer);
+    app_code_program_step_through(parent, question, on_wrong, on_success);
+  }
   let forwards = {
     question_label: "",
     on_question: app_code_lesson_quiz_question_none,
@@ -100,6 +117,12 @@ export function app_code_lesson_braces_run_explain_generic(
         on_question: app_code_lesson_quiz_question_none,
         answer_label: "",
         on_answer: run_quiz,
+      },
+      {
+        question_label: "",
+        on_question: app_code_lesson_quiz_question_none,
+        answer_label: "",
+        on_answer: step_quiz,
       },
     ],
   });
