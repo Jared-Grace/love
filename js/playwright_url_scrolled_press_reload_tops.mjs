@@ -27,6 +27,15 @@ export async function playwright_url_scrolled_press_reload_tops(
     function scroll(to) {
       window.scrollTo(0, to);
     }
+    function tall() {
+      let r2 = {
+        page: document.documentElement.scrollHeight,
+        body: document.body.scrollHeight,
+        window: window.innerHeight,
+      };
+      return r2;
+    }
+    tops.heights = await page.evaluate(tall);
     await page.evaluate(scroll, top);
     await page.waitForTimeout(1000);
     tops.scrolled = await top_read(page);
