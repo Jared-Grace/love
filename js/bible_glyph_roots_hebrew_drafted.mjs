@@ -813,7 +813,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["6293", "paga", "toward+person+doing", "meet or encounter"],
     ["6113", "atsar", "stop_sign+doing", "restrain"],
     ["817", "asham", "sacrifice+scales", "guilt offering"],
-    ["4784", "marah", "gesturing_no+doing", "rebel"],
+    ["4784", "marah", "raised_fist+up_arrow+doing", "rebel"],
     ["5057", "nagid", "first_place+person", "leader"],
     ["2502", "chalats", "hand+tray_out+doing", "draw out or rescue"],
     ["2296", "chagar", "briefs+doing", "gird"],
