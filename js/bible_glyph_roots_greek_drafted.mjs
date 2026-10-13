@@ -766,6 +766,13 @@ export function bible_glyph_roots_greek_drafted() {
     ["3900", "pipto", "children_crossing+person+pointing_down+thing", "trespass"],
     ["156", "aiteo", "hand_receiving+question+thing", "charge"],
     ["2010", "epitrepo", "pointing_up+clockwise_arrows+doing", "permit"],
+    ["3763", "ou", "no_entry+joker+clock", "never"],
+    ["2560", "kakos", "thumbs_down+manner", "badly"],
+    ["3804", "pascho", "confounded_face+thing", "suffering"],
+    ["4815", "sullambano", "safety_pin+hand_receiving", "seize"],
+    ["4921", "sunistemi", "safety_pin+person+round_pushpin", "commend"],
+    ["2579", "kan", "plus+traffic_light", "even if"],
+    ["3385", "meti", "no_entry+question", "not?"],
   ];
   let drafted = [];
   for (let row of rows) {
