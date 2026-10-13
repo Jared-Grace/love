@@ -1,3 +1,4 @@
+import { lyric_video_pictures_folder } from "./lyric_video_pictures_folder.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
@@ -121,7 +122,7 @@ export async function lyric_video_bible_document_pictures_times_write(
     picture.end = end;
     let file_name = picture.name + ".png";
     picture.path = path_join([
-      "gitignore/lyric_video_pictures",
+      lyric_video_pictures_folder(),
       folder_name,
       file_name,
     ]);
