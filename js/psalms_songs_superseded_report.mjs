@@ -9,7 +9,6 @@ import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { audio_paths_durations } from "./audio_paths_durations.mjs";
 import { ardour_sessions_imports } from "./ardour_sessions_imports.mjs";
-import { text_includes } from "./text_includes.mjs";
 import { psalms_song_file_read_or_null } from "./psalms_song_file_read_or_null.mjs";
 import { equal } from "./equal.mjs";
 import { psalms_song_read_passage_code } from "./psalms_song_read_passage_code.mjs";
@@ -26,7 +25,7 @@ export async function psalms_songs_superseded_report() {
   ("★ A LENGTH THAT AGREES IS NEVER THE ANSWER, ONLY THE SHORTLIST. Over the real folder two recordings of different psalms agreed to within a thousandth of a second, and the session's own notes name the file it imported, which points into a folder where a freed name gets taken by a later download. Both of those cheap joins over-report. The sound is what decides, so every pair the lengths put forward is then compared properly.");
   ("★ WHAT IT WILL NOT DECIDE: WHICH OF THE TWO THE PERSON WANTS. A session proves an edit of that singing was made; it does not prove the edit was kept. Twice the person kept the raw and set the edit aside instead, and nothing measurable says so - so those sessions are listed as settled, by name, and this subtracts them. A session nobody has settled, whose source is still being given away, and whose edit has reached the folder the giveaway reads, comes back as wanted - which is a question rather than an instruction.");
   ("★ A RAW IS ONLY NAMED FOR MARKING IF THE EDIT THAT REPLACED IT HAS ACTUALLY BEEN HANDED OVER. This is the condition the first version of this left out, and leaving it out was not a near miss: the three recordings it named were the three whose edit never reached the folder the giveaway is built from, so following it would have taken away the only recording of those three psalms anybody can be given. Proved an edit exists, proved the raw was its source, and then quietly assumed the edit was available - which it was not. So a raw whose passage has no finished edit in that folder keeps its raw and comes back under the edits that are missing instead - which is a note to whoever can still write that edit out, and the opposite instruction to the one it would otherwise have carried.");
-  ("★ THE HANDING OVER IS READ OFF THE PERSON'S OWN LABEL, AND THAT IS NOT A SHORTCUT. Every finished edit in that folder carries the word session in a name the person typed - twenty-one of them, and the two they set aside carry their own aside-mark in front of it, so the label even says which way they decided. A name somebody typed about their own file means what they say it means; the names this report refuses to trust elsewhere are the ones a download tool invented. So a passage counts as handed over when the folder holds a recording labelled that way and the record places it at that passage.");
+  ("★ THE HANDING OVER IS READ OFF THE PERSON'S OWN LABEL, AND THAT IS NOT A SHORTCUT. Every finished edit in that folder carries the word session in a name the person typed - twenty-one of them, and the two they set aside carry their own aside-mark in front of it, so the label even says which way they decided. A name somebody typed about their own file means what they say it means; the names this report refuses to trust elsewhere are the ones a download tool invented. So a passage counts as handed over when the folder holds a recording labelled that way and the record places it at that passage. The label is read by the reader that already knows how it is written rather than by looking for the word, which matters twice: the word is on the end two spellings and two separators, and a working copy named with the word and something after it is not the finished edit at all.");
   ("★ THE OBVIOUS PROOF WAS TRIED FIRST AND IS NOT AVAILABLE: AN EDIT THAT TRAVELLED IS NOT A COPY OF THE ONE ON DISK. Comparing what a session wrote out, byte for byte, against that folder looked like the one test that cannot disagree with itself, and it answered no on every single session - which is the other way a check fails, by never being able to say yes. The pair it was built for is the proof: the written-out edit and the one that travelled are the same length to the byte and differ anyway, and they still differ once the sound alone is hashed with the wrapping thrown away. They are two renderings a minute apart, not a file and its copy. So identity was never going to answer this, and a figure near zero would have been the dead branch nobody checked.");
   ("The slack on the lengths is a twentieth of a second, which is wide. Narrow would halve the expensive comparisons and would also be a guess about how far a resampling moves a length; wide costs a handful of extra comparisons and cannot hide a pair.");
   ("A control file that has been renamed makes the comparison fail loudly rather than quietly scoring everything against nothing, which is the right failure: the scale is gone, so no answer here is readable.");
@@ -71,13 +70,13 @@ export async function psalms_songs_superseded_report() {
   }
   let passages_rendered = [];
   for (let file_name of file_names) {
-    let rendered_is = text_includes(file_name, "session");
-    if (not(rendered_is)) {
-      continue;
-    }
     let read_rendered = psalms_song_file_read_or_null(file_name);
     let unplaced_is = equal(read_rendered, null);
     if (unplaced_is) {
+      continue;
+    }
+    let rendered_is = read_rendered.session_is;
+    if (not(rendered_is)) {
       continue;
     }
     let passage_code = psalms_song_read_passage_code(read_rendered);
