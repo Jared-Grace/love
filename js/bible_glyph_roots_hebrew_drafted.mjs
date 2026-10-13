@@ -902,7 +902,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["5592", "saph", "door+pointing_down", "threshold or basin"],
     ["4676", "matstsebah", "rock+up_arrow", "standing stone"],
     ["4643", "maaser", "ten+hands_giving", "tithe"],
-    ["4578", "meah", "person+tray_in", "inner parts"],
+    ["4578", "meah", "tray_in+heart_organ", "inner parts"],
     ["4283", "mochorath", "sun+next_track+thing", "the next day"],
     ["3972", "meumah", "package+question", "anything"],
     ["3582", "kachad", "hand+tray_in+doing", "hide or cut off"],
