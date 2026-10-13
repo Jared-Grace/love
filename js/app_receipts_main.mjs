@@ -2,14 +2,9 @@ import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { app_shared_mobile_default_font_size } from "./app_shared_mobile_default_font_size.mjs";
 import { property_get } from "./property_get.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { text_frozen } from "./text_frozen.mjs";
-import { app_shared_folder_known } from "./app_shared_folder_known.mjs";
 import { app_shared_unsent_sync } from "./app_shared_unsent_sync.mjs";
 import { html_on_window } from "./html_on_window.mjs";
-import { app_shared_folder_code_valid_is } from "./app_shared_folder_code_valid_is.mjs";
-import { app_shared_folder_code_screen } from "./app_shared_folder_code_screen.mjs";
-import { storage_local_name_set } from "./storage_local_name_set.mjs";
-import { html_hash_property_set } from "./html_hash_property_set.mjs";
+import { app_shared_folder_choose } from "./app_shared_folder_choose.mjs";
 import { app_receipts_purchases_screen } from "./app_receipts_purchases_screen.mjs";
 export function app_receipts_main(context) {
   "Opens straight onto the camera when a folder code is already known - from the link first, then from this device - and onto the code box only when none is.";
@@ -21,31 +16,21 @@ export function app_receipts_main(context) {
   app_shared_app_fn_set(context, app_receipts_main);
   app_shared_mobile_default_font_size(context);
   let root = property_get(context, "root");
-  let app_name = fn_name("app_receipts");
-  let key = text_frozen("folder_code");
-  let key2 = text_frozen("folder");
-  let known = app_shared_folder_known(app_name);
   let sync_shown = app_shared_unsent_sync;
   function on_online() {
     sync_shown();
   }
   html_on_window("online", on_online);
-  if (app_shared_folder_code_valid_is(known)) {
-    on_code(known);
-  } else {
-    app_shared_folder_code_screen(root, known, on_code);
-  }
-  async function on_code(folder_code) {
-    storage_local_name_set(app_name, key, folder_code);
-    html_hash_property_set(key2, folder_code);
+  app_shared_folder_choose(root, fn_name("app_receipts"), on_folder);
+  async function on_folder(folder_code, on_change) {
+    function on_change_plain(folder_code_now) {
+      sync_shown = app_shared_unsent_sync;
+      on_change(folder_code_now);
+    }
     sync_shown = await app_receipts_purchases_screen(
       root,
       folder_code,
-      on_change,
+      on_change_plain,
     );
-  }
-  function on_change(folder_code) {
-    sync_shown = app_shared_unsent_sync;
-    app_shared_folder_code_screen(root, folder_code, on_code);
   }
 }
