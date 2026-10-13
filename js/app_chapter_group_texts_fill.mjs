@@ -1,6 +1,5 @@
+import { app_shared_bible_language_codes_chosen } from "./app_shared_bible_language_codes_chosen.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_hash_object_get } from "./html_hash_object_get.mjs";
-import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
 import { list_last } from "./list_last.mjs";
 import { ebible_language_to_bible_folder } from "./ebible_language_to_bible_folder.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
@@ -19,8 +18,7 @@ export async function app_chapter_group_texts_fill(texts, chapter_code) {
   "The plain running words are kept first, a space between verses, so there is always something to copy. Where the chapter can be had with its layout, each verse laid out takes the place of its plain one.";
   "It fills what it is handed rather than handing back something new, because the buttons that copy were drawn before any of this arrived and are already holding it.";
   arguments_assert(arguments, 2);
-  let hash = html_hash_object_get();
-  let languages_chosen = app_shared_bible_hash_to_languages_chosen(hash);
+  let languages_chosen = app_shared_bible_language_codes_chosen();
   let language = list_last(languages_chosen);
   let bible_folder = ebible_language_to_bible_folder(language);
   let verses = await ebible_verses_browser(bible_folder, chapter_code);
