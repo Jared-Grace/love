@@ -2716,24 +2716,12 @@ export function bible_glyph_characters() {
       character: "🫲",
     },
     {
-      name: "rightwards_hand",
-      character: "🫱",
-    },
-    {
-      name: "drooling_face",
-      character: "🤤",
-    },
-    {
       name: "exploding_head",
       character: "🤯",
     },
     {
       name: "relieved_face",
       character: "😌",
-    },
-    {
-      name: "sunrise",
-      character: "🌅",
     },
     {
       name: "vs_button",

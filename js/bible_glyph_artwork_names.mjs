@@ -1537,6 +1537,14 @@ export function bible_glyph_artwork_names() {
       asset: "Smiling face with heart-eyes",
     },
     {
+      glyph: "exploding_head",
+      asset: "Exploding head",
+    },
+    {
+      glyph: "relieved_face",
+      asset: "Relieved face",
+    },
+    {
       glyph: "thread",
       asset: "Thread",
     },
