@@ -764,6 +764,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["3916", "parachrema", "children_crossing+fast_forward", "immediately"],
     ["5599", "o", "waving_hand", "O"],
     ["3900", "pipto", "children_crossing+person+pointing_down+thing", "trespass"],
+    ["156", "aiteo", "pleading+thing", "charge"],
   ];
   let drafted = [];
   for (let row of rows) {
