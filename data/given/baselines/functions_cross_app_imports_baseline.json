@@ -11,7 +11,7 @@
   "app_message_provide_generic -> app_karate_container_main",
   "app_receipts_view_main -> app_shared_folder_code_screen",
   "app_receipts_view_main -> app_receipts_folder_code_valid_is",
-  "app_receipts_view_main -> app_receipts_folder_known",
+  "app_receipts_view_main -> app_shared_folder_known",
   "app_receipts_view_screen -> app_receipts_purchase_card_view",
   "app_receipts_view_screen -> app_receipts_purchases_list",
   "app_receipts_view_screen -> app_receipts_purchases_pull",

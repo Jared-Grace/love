@@ -2,7 +2,7 @@ import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { app_shared_mobile_default_font_size } from "./app_shared_mobile_default_font_size.mjs";
 import { property_get } from "./property_get.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_receipts_folder_known } from "./app_receipts_folder_known.mjs";
+import { app_shared_folder_known } from "./app_shared_folder_known.mjs";
 import { app_receipts_folder_code_valid_is } from "./app_receipts_folder_code_valid_is.mjs";
 import { app_shared_folder_code_screen } from "./app_shared_folder_code_screen.mjs";
 import { text_frozen } from "./text_frozen.mjs";
@@ -17,7 +17,7 @@ export function app_receipts_view_main(context) {
   app_shared_mobile_default_font_size(context);
   let root = property_get(context, "root");
   let app_name = fn_name("app_receipts_view");
-  let known = app_receipts_folder_known(app_name);
+  let known = app_shared_folder_known(app_name);
   if (app_receipts_folder_code_valid_is(known)) {
     on_code(known);
   } else {
