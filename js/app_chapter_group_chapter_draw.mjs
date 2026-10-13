@@ -29,6 +29,7 @@ import { clipboard_copy_browser } from "./clipboard_copy_browser.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_button_copy_text } from "./html_button_copy_text.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
+import { app_chapter_group_name } from "./app_chapter_group_name.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { each } from "./each.mjs";
 import { app_shared_unsent_all } from "./app_shared_unsent_all.mjs";
@@ -47,7 +48,7 @@ export async function app_chapter_group_chapter_draw({
   "$plain entries";
   "$plain content";
   "$plain chapter_code";
-  "Everything the grouping adds to a chapter once its verses are drawn: the folder, a save button and a line saying whether the division has been sent at the top; a heading with a copy button over every group; under the last verse of every group but the last, a button that joins it to the next; and on a chosen verse that does not already begin a group, a button that begins one there.";
+  "Everything the grouping adds to a chapter once its verses are drawn: the folder, a save button and a line saying whether the division has been sent at the top; a heading over every group with a button that copies its words and one that copies its name; under the last verse of every group but the last, a button that joins it to the next; and on a chosen verse that does not already begin a group, a button that begins one there.";
   "A division is only the verses that begin a group after the first. Beginning a group at a verse adds that verse, joining takes away the verse the next group began at, and a chapter never divided is all one group.";
   "Every change is kept on this device and sent at once, with nothing to press; the save button does the same again, for somebody who wants to be sure, and for after the internet comes back.";
   "A change draws only the headings and buttons again, never the verses, so the chapter does not move under the reader's finger.";
@@ -131,6 +132,13 @@ export async function app_chapter_group_chapter_draw({
     }
     let text3 = html_button_copy_text();
     app_shared_button(parent, text3, copy);
+    async function name_copy() {
+      let name = app_chapter_group_name(chapter_code, first, last);
+      await clipboard_copy_browser(name);
+      let told = text_combine_multiple(["✅ Copied ", name]);
+      html_text_set(said, told);
+    }
+    app_shared_button(parent, "🏷️ Copy name", name_copy);
     said = html_p_text(parent, "");
   }
   function refresh() {

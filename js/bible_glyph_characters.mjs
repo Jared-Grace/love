@@ -2720,10 +2720,6 @@ export function bible_glyph_characters() {
       character: "🤯",
     },
     {
-      name: "relieved_face",
-      character: "😌",
-    },
-    {
       name: "vs_button",
       character: "🆚",
     },

@@ -1541,10 +1541,6 @@ export function bible_glyph_artwork_names() {
       asset: "Exploding head",
     },
     {
-      glyph: "relieved_face",
-      asset: "Relieved face",
-    },
-    {
       glyph: "thread",
       asset: "Thread",
     },
