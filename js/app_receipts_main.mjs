@@ -6,7 +6,7 @@ import { text_frozen } from "./text_frozen.mjs";
 import { app_shared_folder_known } from "./app_shared_folder_known.mjs";
 import { app_shared_unsent_sync } from "./app_shared_unsent_sync.mjs";
 import { html_on_window } from "./html_on_window.mjs";
-import { app_receipts_folder_code_valid_is } from "./app_receipts_folder_code_valid_is.mjs";
+import { app_shared_folder_code_valid_is } from "./app_shared_folder_code_valid_is.mjs";
 import { app_shared_folder_code_screen } from "./app_shared_folder_code_screen.mjs";
 import { storage_local_name_set } from "./storage_local_name_set.mjs";
 import { html_hash_property_set } from "./html_hash_property_set.mjs";
@@ -30,7 +30,7 @@ export function app_receipts_main(context) {
     sync_shown();
   }
   html_on_window("online", on_online);
-  if (app_receipts_folder_code_valid_is(known)) {
+  if (app_shared_folder_code_valid_is(known)) {
     on_code(known);
   } else {
     app_shared_folder_code_screen(root, known, on_code);

@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_receipts_folder_code_valid_is(code) {
+export function app_shared_folder_code_valid_is(code) {
   arguments_assert(arguments, 1);
   ("$plain code");
   ("Whether a typed folder code can stand as one folder of a storage path: at least one letter, digit, dash or underscore, and nothing else.");

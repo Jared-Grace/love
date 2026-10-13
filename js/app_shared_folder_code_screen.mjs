@@ -7,7 +7,7 @@ import { html_on_enter } from "./html_on_enter.mjs";
 import { app_shared_button_wide_next } from "./app_shared_button_wide_next.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_value_get } from "./html_value_get.mjs";
-import { app_receipts_folder_code_valid_is } from "./app_receipts_folder_code_valid_is.mjs";
+import { app_shared_folder_code_valid_is } from "./app_shared_folder_code_valid_is.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 export function app_shared_folder_code_screen(root, prefill, on_code) {
   "$plain root";
@@ -28,7 +28,7 @@ export function app_shared_folder_code_screen(root, prefill, on_code) {
   function on_next() {
     html_clear(warning);
     let folder_code = html_value_get(code_input).trim();
-    let b = app_receipts_folder_code_valid_is(folder_code);
+    let b = app_shared_folder_code_valid_is(folder_code);
     if (not(b)) {
       html_p_text(
         warning,
