@@ -28,7 +28,6 @@ import { html_on_click } from "./html_on_click.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
-import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
 import { boolean_is } from "./boolean_is.mjs";
 import { error } from "./error.mjs";
@@ -150,7 +149,7 @@ export function app_code_program_step_through(
       property_set(state, "pressing", false);
       rows_plain();
       html_clear(ask);
-      app_shared_success_message(ask);
+      ("no success message of its own: the caller shows one, as for every other answerer in this app; showing one here as well put two on the page");
       await on_success();
     }
     app_code_quiz_choice_button_answer(
