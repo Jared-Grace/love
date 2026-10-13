@@ -2761,10 +2761,6 @@ export function bible_glyph_artwork_names() {
       asset: "Person raising hand",
     },
     {
-      glyph: "seedling",
-      asset: "Seedling",
-    },
-    {
       glyph: "face_screaming_in_fear",
       asset: "Face screaming in fear",
     },

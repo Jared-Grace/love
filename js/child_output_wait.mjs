@@ -26,5 +26,7 @@ export async function child_output_wait(child, program, words) {
     ]);
     throw new Error(message);
   }
-  return out;
+  ("What was printed is text already - it starts empty and only ever grows by text - so writing it into a fresh piece of text changes nothing. It is written out anyway because the listening hands back a record built inside a promise, beside the running program itself, and a reader working only from names cannot tell which part of that record this is; text written fresh says so where it leaves.");
+  let text = `${out}`;
+  return text;
 }
