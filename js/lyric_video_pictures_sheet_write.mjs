@@ -1,3 +1,4 @@
+import { lyric_video_pictures_folder } from "./lyric_video_pictures_folder.mjs";
 import { ceil } from "./ceil.mjs";
 import { divide } from "./divide.mjs";
 import { text_includes } from "./text_includes.mjs";
@@ -27,7 +28,7 @@ export async function lyric_video_pictures_sheet_write(document_name) {
     });
   }
   let folder_pictures = path_join([
-    "gitignore/lyric_video_pictures",
+    lyric_video_pictures_folder(),
     document_name,
   ]);
   let files = await folder_read_files(folder_pictures);
