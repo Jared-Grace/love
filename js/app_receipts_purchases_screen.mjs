@@ -10,7 +10,7 @@ import { property_get } from "./property_get.mjs";
 import { html_loading } from "./html_loading.mjs";
 import { app_receipts_purchases_pull } from "./app_receipts_purchases_pull.mjs";
 import { app_receipts_purchase_new } from "./app_receipts_purchase_new.mjs";
-import { app_receipts_unsent_all } from "./app_receipts_unsent_all.mjs";
+import { app_shared_unsent_all } from "./app_shared_unsent_all.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { html_text_set } from "./html_text_set.mjs";
@@ -69,7 +69,7 @@ export async function app_receipts_purchases_screen(
     await sync_now();
   }
   async function status_show() {
-    let unsent = await app_receipts_unsent_all();
+    let unsent = await app_shared_unsent_all();
     let count = list_size(unsent);
     if (equal(count, 0)) {
       html_text_set(status, "✅ Everything is sent");

@@ -10,7 +10,7 @@ import { app_receipts_purchases_store } from "./app_receipts_purchases_store.mjs
 import { indexeddb_get_all_backend } from "./indexeddb_get_all_backend.mjs";
 import { app_receipts_purchases_database } from "./app_receipts_purchases_database.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_receipts_unsent_all } from "./app_receipts_unsent_all.mjs";
+import { app_shared_unsent_all } from "./app_shared_unsent_all.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -47,7 +47,7 @@ export async function app_receipts_purchases_pull(folder_code) {
     let property_name = property_get(purchase, "key");
     property_set(local, property_name, purchase);
   }
-  let unsent = await app_receipts_unsent_all();
+  let unsent = await app_shared_unsent_all();
   let waiting = list_map_property(unsent, "key");
   let project_url = firebase_storage_url_project_jg();
   for (let id of object_property_names(remote)) {
