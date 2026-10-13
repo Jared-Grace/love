@@ -40,5 +40,10 @@ service firebase.storage {
       allow get, create, update;
       allow list: if code.size() > 0;
     }
+    // chapter_group: the same bargain as receipts - the folder code is the password, and each folder is a directory of its own holding how its chapters are divided
+    match /chapter_group/{code}/{allPaths=**} {
+      allow get, create, update;
+      allow list: if code.size() > 0;
+    }
   }
 }

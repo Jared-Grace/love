@@ -1,3 +1,5 @@
+import { each } from "./each.mjs";
+import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_chapter_group_path } from "./app_chapter_group_path.mjs";
 import { html_div } from "./html_div.mjs";
@@ -58,11 +60,8 @@ export async function app_chapter_group_chapter_draw({
   function on_folder() {
     on_change(folder_code);
   }
-  app_shared_button_wide(
-    top,
-    text_combine_multiple(["✏️ 📁 ", folder_code]),
-    on_folder,
-  );
+  let text2 = text_combine_multiple(["✏️ 📁 ", folder_code]);
+  app_shared_button_wide(top, text2, on_folder);
   app_shared_button_wide(top, "💾 Save", save);
   let status = html_p_text(top, "");
   let first_heading = html_div(top);
@@ -90,10 +89,12 @@ export async function app_chapter_group_chapter_draw({
     return begins;
   }
   function group_numbers(index) {
-    let group = [list_get(numbers, index)];
+    let item = list_get(numbers, index);
+    let group = [item];
     let next = index + 1;
-    while (next < count && not(begins_is(next))) {
-      list_add(group, list_get(numbers, next));
+    while (less_than(next, count) && not(begins_is(next))) {
+      let item2 = list_get(numbers, next);
+      list_add(group, item2);
       next = next + 1;
     }
     return group;
@@ -118,20 +119,21 @@ export async function app_chapter_group_chapter_draw({
       await clipboard_copy_browser(line);
       html_text_set(said, "✅ Copied");
     }
-    app_shared_button(parent, html_button_copy_text(), copy);
+    let text3 = html_button_copy_text();
+    app_shared_button(parent, text3, copy);
     said = html_p_text(parent, "");
   }
   function refresh() {
     html_clear(first_heading);
     heading_draw(first_heading, 0);
-    for (let index = 0; index < count; index = index + 1) {
+    for (let index = 0; less_than(index, count); index = index + 1) {
       let entry = list_get(entries, index);
       let split_place = property_get(entry, "split_place");
       let boundary = property_get(entry, "boundary");
       let number = list_get(numbers, index);
-      html_clear(split_place);
-      html_clear(boundary);
-      if (not(begins_is(index))) {
+      each([split_place, boundary], html_clear);
+      let b = begins_is(index);
+      if (not(b)) {
         async function split() {
           splits = splits.concat([number]);
           await changed();
@@ -139,11 +141,12 @@ export async function app_chapter_group_chapter_draw({
         app_shared_button(split_place, "✂️ Begin new group", split);
       }
       let next = index + 1;
-      if (next < count && begins_is(next)) {
+      if (less_than(next, count) && begins_is(next)) {
         let number_next = list_get(numbers, next);
         async function join() {
           function other_is(begun) {
-            let other = not(equal(begun, number_next));
+            let b2 = equal(begun, number_next);
+            let other = not(b2);
             return other;
           }
           splits = splits.filter(other_is);
