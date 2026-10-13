@@ -888,7 +888,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["197", "ulam", "classical_building+door", "portico"],
     ["6779", "tsamach", "sprout+up_arrow+doing", "sprout"],
     ["6654", "tsad", "pointing+person", "side"],
-    ["6203", "oreph", "scarf", "neck or back"],
+    ["6203", "oreph", "back+scarf", "neck or back"],
     ["6187", "erek", "receipt", "valuation"],
     ["3051", "yahab", "hands_giving+up_arrow", "give or ascribe"],
     ["2859", "chathan_inlaw", "man_in_tuxedo+family", "in-law"],
