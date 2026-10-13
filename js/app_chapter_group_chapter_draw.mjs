@@ -32,6 +32,8 @@ import { app_shared_button } from "./app_shared_button.mjs";
 import { app_chapter_group_name } from "./app_chapter_group_name.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { each } from "./each.mjs";
+import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
+import { html_parent_append } from "./html_parent_append.mjs";
 import { app_shared_unsent_all } from "./app_shared_unsent_all.mjs";
 import { app_chapter_group_splits_save } from "./app_chapter_group_splits_save.mjs";
 import { app_shared_unsent_sync } from "./app_shared_unsent_sync.mjs";
@@ -48,10 +50,10 @@ export async function app_chapter_group_chapter_draw({
   "$plain entries";
   "$plain content";
   "$plain chapter_code";
-  "Everything the grouping adds to a chapter once its verses are drawn: the folder, a save button and a line saying whether the division has been sent at the top; a heading over every group with a button that copies its words and one that copies its name; under the last verse of every group but the last, a button that joins it to the next; and on a chosen verse that does not already begin a group, a button that begins one there.";
+  "Everything the grouping adds to a chapter once its verses are drawn: the folder, a save button and a line saying whether the division has been sent at the top; every group in a box of its own, with a heading at its top and a button that copies its words and one that copies its name; under the last verse of every group but the last, a button that joins it to the next; and on a chosen verse that does not already begin a group, a button that begins one there.";
   "A division is only the verses that begin a group after the first. Beginning a group at a verse adds that verse, joining takes away the verse the next group began at, and a chapter never divided is all one group.";
   "Every change is kept on this device and sent at once, with nothing to press; the save button does the same again, for somebody who wants to be sure, and for after the internet comes back.";
-  "A change draws only the headings and buttons again, never the verses, so the chapter does not move under the reader's finger.";
+  "A change draws only the boxes, headings and buttons again and moves the verses into them, never drawing a verse again, so the chapter does not move under the reader's finger.";
   "The copy is the group's verses in the language being read, one after another on one line, respelled for singing.";
   arguments_assert(arguments, 1);
   let path = app_chapter_group_path(folder_code, chapter_code);
@@ -65,7 +67,8 @@ export async function app_chapter_group_chapter_draw({
   app_shared_button_wide(top, text2, on_folder);
   app_shared_button_wide(top, "💾 Save", save);
   let status = html_p_text(top, "");
-  let first_heading = html_div(top);
+  ("Every group is a box of its own, the same box the supper passages sit in, holding its heading and then its verses. The boxes live in one place made before anything else is added under the verses, so drawing them again never moves them past what comes after.");
+  let groups_place = html_div(content);
   ("The chapter is drawn as one group at once, before storage or the words have answered, so nothing on the page is waiting to be pressed while it cannot work; the division asked for arrives a moment later and the headings are drawn again.");
   let texts = {};
   let splits = [];
@@ -142,8 +145,8 @@ export async function app_chapter_group_chapter_draw({
     said = html_p_text(parent, "");
   }
   function refresh() {
-    html_clear(first_heading);
-    heading_draw(first_heading, 0);
+    html_clear(groups_place);
+    let card = null;
     for (let index = 0; less_than(index, count); index = index + 1) {
       let entry = list_get(entries, index);
       let split_place = property_get(entry, "split_place");
@@ -151,6 +154,18 @@ export async function app_chapter_group_chapter_draw({
       let number = list_get(numbers, index);
       each([split_place, boundary], html_clear);
       let b = begins_is(index);
+      if (b) {
+        card = app_shared_container_blue(groups_place);
+        let head = html_div(card);
+        html_centered(head);
+        heading_draw(head, index);
+      }
+      let row = property_get(entry, "row");
+      let actions = property_get(entry, "actions");
+      function gather(piece) {
+        html_parent_append(card, piece);
+      }
+      each([row, actions, boundary], gather);
       if (not(b)) {
         async function split() {
           splits = splits.concat([number]);
@@ -171,7 +186,6 @@ export async function app_chapter_group_chapter_draw({
           await changed();
         }
         app_shared_button_wide(boundary, "🔗 Join to next group", join);
-        heading_draw(boundary, next);
       }
     }
   }
