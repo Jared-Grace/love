@@ -9,15 +9,14 @@ import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { audio_paths_durations } from "./audio_paths_durations.mjs";
 import { ardour_sessions_imports } from "./ardour_sessions_imports.mjs";
-import { file_size } from "./file_size.mjs";
+import { text_includes } from "./text_includes.mjs";
+import { psalms_song_file_read_or_null } from "./psalms_song_file_read_or_null.mjs";
 import { equal } from "./equal.mjs";
-import { ardour_sessions_exports } from "./ardour_sessions_exports.mjs";
-import { files_same_bytes_is } from "./files_same_bytes_is.mjs";
+import { psalms_song_read_passage_code } from "./psalms_song_read_passage_code.mjs";
 import { durations_near_each } from "./durations_near_each.mjs";
 import { psalms_songs_superseded_settled } from "./psalms_songs_superseded_settled.mjs";
 import { less_than } from "./less_than.mjs";
 import { path_base } from "./path_base.mjs";
-import { psalms_song_file_read_or_null } from "./psalms_song_file_read_or_null.mjs";
 import { list_includes } from "./list_includes.mjs";
 export async function psalms_songs_superseded_report() {
   arguments_assert(arguments, 0);
@@ -26,8 +25,9 @@ export async function psalms_songs_superseded_report() {
   ("★ THE TWO CONTROLS ARE RUN EVERY TIME AND THEY ARE THE WHOLE SCALE. A residue of minus forty-eight decibels means nothing on its own. So one pair known to be the same singing and one pair known to be two different singings go through the very same comparison on every run, and the line between them is the midpoint of what they answered - never a number written down here. Pinning a threshold instead would be the one mistake that makes this look like it works forever: the first attempt at this comparison was wrong by twenty-six decibels and separated the two controls by only ten, which a fixed threshold would have hidden.");
   ("★ A LENGTH THAT AGREES IS NEVER THE ANSWER, ONLY THE SHORTLIST. Over the real folder two recordings of different psalms agreed to within a thousandth of a second, and the session's own notes name the file it imported, which points into a folder where a freed name gets taken by a later download. Both of those cheap joins over-report. The sound is what decides, so every pair the lengths put forward is then compared properly.");
   ("★ WHAT IT WILL NOT DECIDE: WHICH OF THE TWO THE PERSON WANTS. A session proves an edit of that singing was made; it does not prove the edit was kept. Twice the person kept the raw and set the edit aside instead, and nothing measurable says so - so those sessions are listed as settled, by name, and this subtracts them. A session nobody has settled, whose source is still being given away, and whose edit has reached the folder the giveaway reads, comes back as wanted - which is a question rather than an instruction.");
-  ("★ A RAW IS ONLY NAMED FOR MARKING IF THE EDIT THAT REPLACED IT HAS ACTUALLY BEEN HANDED OVER. This is the condition the first version of this left out, and leaving it out was not a near miss: the three recordings it named were the three whose edit never reached the folder the giveaway is built from, so following it would have taken away the only recording of those three psalms anybody can be given. Proved an edit exists, proved the raw was its source, and then quietly assumed the edit was available - which it was not. So what a session wrote out is compared, byte for byte, against the folder the giveaway reads; a session with nothing written out, or whose written-out copy never travelled, keeps its raw and comes back under the edits that are missing instead.");
-  ("★ THE HANDING OVER IS PROVED BY BYTES AND NOT BY ANY OF THE CHEAPER TESTS. Within one folder a copy really is a copy, so this one crossing admits the test that cannot disagree with itself - and it is cheap, because lengths are asked first and almost never agree. Note the direction of the only mistake it can still make: a session that was written out again after its copy travelled reads as never handed over, which keeps a raw that could have been marked. That is the harmless way round, and it is the way round to keep.");
+  ("★ A RAW IS ONLY NAMED FOR MARKING IF THE EDIT THAT REPLACED IT HAS ACTUALLY BEEN HANDED OVER. This is the condition the first version of this left out, and leaving it out was not a near miss: the three recordings it named were the three whose edit never reached the folder the giveaway is built from, so following it would have taken away the only recording of those three psalms anybody can be given. Proved an edit exists, proved the raw was its source, and then quietly assumed the edit was available - which it was not. So a raw whose passage has no finished edit in that folder keeps its raw and comes back under the edits that are missing instead - which is a note to whoever can still write that edit out, and the opposite instruction to the one it would otherwise have carried.");
+  ("★ THE HANDING OVER IS READ OFF THE PERSON'S OWN LABEL, AND THAT IS NOT A SHORTCUT. Every finished edit in that folder carries the word session in a name the person typed - twenty-one of them, and the two they set aside carry their own aside-mark in front of it, so the label even says which way they decided. A name somebody typed about their own file means what they say it means; the names this report refuses to trust elsewhere are the ones a download tool invented. So a passage counts as handed over when the folder holds a recording labelled that way and the record places it at that passage.");
+  ("★ THE OBVIOUS PROOF WAS TRIED FIRST AND IS NOT AVAILABLE: AN EDIT THAT TRAVELLED IS NOT A COPY OF THE ONE ON DISK. Comparing what a session wrote out, byte for byte, against that folder looked like the one test that cannot disagree with itself, and it answered no on every single session - which is the other way a check fails, by never being able to say yes. The pair it was built for is the proof: the written-out edit and the one that travelled are the same length to the byte and differ anyway, and they still differ once the sound alone is hashed with the wrapping thrown away. They are two renderings a minute apart, not a file and its copy. So identity was never going to answer this, and a figure near zero would have been the dead branch nobody checked.");
   ("The slack on the lengths is a twentieth of a second, which is wide. Narrow would halve the expensive comparisons and would also be a guess about how far a resampling moves a length; wide costs a handful of extra comparisons and cannot hide a pair.");
   ("A control file that has been renamed makes the comparison fail loudly rather than quietly scoring everything against nothing, which is the right failure: the scale is gone, so no answer here is readable.");
   let home = folder_home();
@@ -69,32 +69,19 @@ export async function psalms_songs_superseded_report() {
     list_add(paths_import, one.path_audio);
     sessions_by_path[one.path_audio] = one.session;
   }
-  let paths_by_size = {};
-  for (let path_audio of paths_audio) {
-    let size = await file_size(path_audio);
-    let held = paths_by_size[size];
-    let first_is = equal(held, undefined);
-    if (first_is) {
-      held = [];
-      paths_by_size[size] = held;
-    }
-    list_add(held, path_audio);
-  }
-  let exports_written = await ardour_sessions_exports(folder_ardour);
-  let sessions_handed = {};
-  for (let one of exports_written) {
-    let size = await file_size(one.path_audio);
-    let candidates = paths_by_size[size];
-    let none_is = equal(candidates, undefined);
-    if (none_is) {
+  let passages_rendered = [];
+  for (let file_name of file_names) {
+    let rendered_is = text_includes(file_name, "session");
+    if (not(rendered_is)) {
       continue;
     }
-    for (let path_audio of candidates) {
-      let copy_is = await files_same_bytes_is(one.path_audio, path_audio);
-      if (copy_is) {
-        sessions_handed[one.session] = true;
-      }
+    let read_rendered = psalms_song_file_read_or_null(file_name);
+    let unplaced_is = equal(read_rendered, null);
+    if (unplaced_is) {
+      continue;
     }
+    let passage_code = psalms_song_read_passage_code(read_rendered);
+    list_add(passages_rendered, passage_code);
   }
   let rows_import = await audio_paths_durations(paths_import);
   let shortlists = durations_near_each(rows_import, rows_audio, 0.05);
@@ -124,7 +111,11 @@ export async function psalms_songs_superseded_report() {
       let b = equal(read, null);
       let given = not(b);
       let settled_is = list_includes(settled, session);
-      let handed_is = equal(sessions_handed[session], true);
+      let handed_is = false;
+      if (given) {
+        let passage_code_given = psalms_song_read_passage_code(read);
+        handed_is = list_includes(passages_rendered, passage_code_given);
+      }
       let row = {
         session,
         file_name,

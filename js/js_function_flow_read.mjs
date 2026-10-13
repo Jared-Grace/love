@@ -19,10 +19,11 @@ import { js_key_safe_is } from "./js_key_safe_is.mjs";
 import { js_flow_machine_power_name } from "./js_flow_machine_power_name.mjs";
 import { js_flow_machine_methods_data } from "./js_flow_machine_methods_data.mjs";
 import { js_flow_data_methods_element } from "./js_flow_data_methods_element.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { js_flow_env_key_receiver } from "./js_flow_env_key_receiver.mjs";
 import { js_flow_control_tests } from "./js_flow_control_tests.mjs";
 import { subtract } from "./subtract.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
-import { greater_than } from "./greater_than.mjs";
 export function js_function_flow_read(f_name, ast, known) {
   "Everything the flow check needs from one function's file, read once: which names each name is worked out from, which names each may be the same object as, which calls it makes and what goes into each argument, what it hands back, what it changes in place, which values it calls, and every way it reaches outside the repo. Known is the set of every function name, because a name the file reads without importing it is about to be imported by the canonicalizer.";
   "Names are followed by spelling, not by scope, so two different variables sharing a name are joined into one. That can only make the answer more cautious.";
@@ -328,6 +329,24 @@ export function js_function_flow_read(f_name, ast, known) {
     }
     return null;
   }
+  function names_other(list, name) {
+    "The names in this list other than this one. A name that may be the very same thing as itself may hold nothing it did not already hold, so it adds nothing to what the name can be.";
+    function lambda21(n) {
+      let r33 = not_equal(n, name);
+      return r33;
+    }
+    let others = list.filter(lambda21);
+    return others;
+  }
+  function names_itself_only(s, others) {
+    "Whether this holding says only that a name may be the very same thing as itself: it names the name and nothing else, and goes through no repo function. A holding naming nothing at all is not one - it says the name may hold a fresh value.";
+    let r34 =
+      greater_than(s.data.length, 0) &&
+      equal(others.length, 0) &&
+      equal(s.via, null) &&
+      equal(s.gate, null);
+    return r34;
+  }
   function machine_only(name, visiting) {
     "Whether a name can hold nothing but the machine: the machine's own name, a name the machine is bound to, or a name every holding of which is such a name. A name holding nothing, or held through a repo function, or reached again inside its own question, is not.";
     if (equal(name, machine_power)) {
@@ -343,17 +362,27 @@ export function js_function_flow_read(f_name, ast, known) {
     }
     visiting.add(name);
     let only = true;
+    let grounded = false;
     for (let s of sources) {
+      let others = names_other(s.data, name);
+      if (names_itself_only(s, others)) {
+        continue;
+      }
+      grounded = true;
       if (
         not_equal(s.via, null) ||
         not_equal(s.gate, null) ||
-        not(machine_only_all(s.data, visiting))
+        not(machine_only_all(others, visiting))
       ) {
         only = false;
         break;
       }
     }
     visiting.delete(name);
+    ("A name every holding of which is itself holds only what the machine bound it to, so it is the machine only if the machine is bound to it.");
+    if (not(grounded)) {
+      only = b14;
+    }
     return only;
   }
   function machine_only_all(list, visiting) {
@@ -401,17 +430,27 @@ export function js_function_flow_read(f_name, ast, known) {
     }
     visiting.add(name);
     let only = true;
+    let grounded = false;
     for (let s of sources) {
+      let others = names_other(s.data, name);
+      if (names_itself_only(s, others)) {
+        continue;
+      }
+      grounded = true;
       if (
         not_equal(s.via, null) ||
         not_equal(s.gate, null) ||
-        not(plain_only_all(s.data, visiting))
+        not(plain_only_all(others, visiting))
       ) {
         only = false;
         break;
       }
     }
     visiting.delete(name);
+    ("A name every holding of which is itself was never handed plain data, so it is not known to hold any.");
+    if (not(grounded)) {
+      only = false;
+    }
     return only;
   }
   function plain_only_all(list, visiting) {
@@ -491,6 +530,27 @@ export function js_function_flow_read(f_name, ast, known) {
     ) {
       let r13 = alias_names(node.argument ?? node.expression);
       return r13;
+    }
+    ("A variable of the machine's environment, read by a key written out in capitals, is text - but only when what it is read from can hold nothing but the machine, so it is ruled on after the walk like a data method's answer.");
+    let env_receiver = js_flow_env_key_receiver(node);
+    if (not_equal(env_receiver, null)) {
+      data_count = data_count + 1;
+      let answer = "(data answer " + data_count + ")";
+      let held = alias_names(env_receiver);
+      function lambda19() {
+        alias_add([answer], held, null, null);
+      }
+      function lambda20() {}
+      answers_kept.add(answer);
+      data_pending.push({
+        answer,
+        receiver: held,
+        plain: false,
+        otherwise: lambda19,
+        granted: lambda20,
+      });
+      let env_answers = [answer];
+      return env_answers;
     }
     if (equal(t, "MemberExpression")) {
       let held = alias_names(node.object);

@@ -149,6 +149,38 @@ export function js_flow_machine_power_cases() {
       power: true,
       why: "a callback also handed to an unknown function may be called by it with the module",
     },
+    {
+      source: "export function f() {\n  return process.env.HOME;\n}\n",
+      power: false,
+      why: "a variable of the environment read by a key in capitals is text",
+    },
+    {
+      source:
+        'export function f() {\n  let here = process.env.PWD || "";\n  return here;\n}\n',
+      power: false,
+      why: "a variable of the environment, or empty text, is text",
+    },
+    {
+      source:
+        'export function f() {\n  let fs = process.getBuiltinModule("fs");\n  let here = process.env.PWD || "";\n  if (fs.existsSync(here)) {\n    return fs.realpathSync(here);\n  }\n  return here;\n}\n',
+      power: false,
+      why: "the machine handed to its own method is still only the machine, so what the environment gives stays text",
+    },
+    {
+      source: "export function f() {\n  return process.env;\n}\n",
+      power: true,
+      why: "the environment itself can be changed, and what a later command runs changes with it",
+    },
+    {
+      source: "export function f(k) {\n  return process.env[k];\n}\n",
+      power: true,
+      why: "a key worked out at run time may be constructor",
+    },
+    {
+      source: "export function f() {\n  return process.env.constructor;\n}\n",
+      power: true,
+      why: "a key with a small letter may be a name every object shares",
+    },
   ];
   return cases;
 }
