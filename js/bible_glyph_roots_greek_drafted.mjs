@@ -414,7 +414,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["2309", "thelo", "shooting_star+doing", "want"],
     ["2307", "thelo", "shooting_star", "will"],
     ["3992", "pempo", "incoming_envelope", "send"],
-    ["154", "aiteo", "person_raising_hand", "ask"],
+    ["154", "aiteo", "hand_receiving+question", "ask"],
     ["71", "ago", "guide_dog", "lead"],
     ["5342", "phero", "shopping_cart", "carry"],
     ["5346", "phemi", "left_speech_bubble", "say"],
@@ -764,7 +764,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["3916", "parachrema", "children_crossing+fast_forward", "immediately"],
     ["5599", "o", "waving_hand+speech", "O"],
     ["3900", "pipto", "children_crossing+person+pointing_down+thing", "trespass"],
-    ["156", "aiteo", "person_raising_hand+thing", "charge"],
+    ["156", "aiteo", "hand_receiving+question+thing", "charge"],
     ["2010", "epitrepo", "pointing_up+clockwise_arrows+doing", "permit"],
   ];
   let drafted = [];
