@@ -759,6 +759,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["5118", "tosoutos", "flashlight+abacus", "so many"],
     ["5046", "telos", "end_arrow+describing", "perfect"],
     ["4059", "peritemno", "kitchen_knife+clockwise_arrows+doing", "circumcise"],
+    ["203", "akrobustia", "no_entry+kitchen_knife+clockwise_arrows+thing", "uncircumcision"],
   ];
   let drafted = [];
   for (let row of rows) {
