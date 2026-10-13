@@ -1,7 +1,3 @@
-import { less_than } from "./less_than.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
-import { equal } from "./equal.mjs";
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_program_trace } from "./app_code_program_trace.mjs";
@@ -20,18 +16,24 @@ import { app_code_lesson_quiz_wrong_code_background_color } from "./app_code_les
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_get } from "./property_get.mjs";
+import { less_than } from "./less_than.mjs";
 import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { equal } from "./equal.mjs";
 import { property_set } from "./property_set.mjs";
+import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
 import { boolean_is } from "./boolean_is.mjs";
 import { error } from "./error.mjs";
 import { app_code_expression_value_choose_await } from "./app_code_expression_value_choose_await.mjs";
+import { subtract } from "./subtract.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { text_to } from "./text_to.mjs";
 import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
@@ -117,6 +119,7 @@ export function app_code_program_step_through(
         return;
       }
       property_set(state, "pressing", false);
+      html_data_set_test_happy_remove(row);
       rows_plain();
       html_style_background_color_set(row, highlight);
       html_font_color_set_white(row);
@@ -132,6 +135,13 @@ export function app_code_program_step_through(
     let b3 = list_size(trace);
     let done = greater_than_equal(index, b3);
     property_set(state, "pressing", true);
+    ("the line that runs next is marked as the way on, where being right is already decided, so a walk of the whole course can answer this question as it answers every other");
+    if (not(done)) {
+      let object = entry_get();
+      let line_next = property_get(object, "line");
+      let component2 = list_get(rows, line_next);
+      html_data_set_test_happy(component2);
+    }
     let choices = html_div(ask);
     let answered = {
       answered: false,

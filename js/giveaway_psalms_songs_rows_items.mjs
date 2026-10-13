@@ -1,10 +1,10 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { psalms_song_file_read_or_null } from "./psalms_song_file_read_or_null.mjs";
 import { null_not_is_assert } from "./null_not_is_assert.mjs";
-import { ebible_chapter_code_pad } from "./ebible_chapter_code_pad.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_group_by_property } from "./list_group_by_property.mjs";
 import { list_sort_text_property } from "./list_sort_text_property.mjs";
+import { ebible_chapter_code_pad } from "./ebible_chapter_code_pad.mjs";
 import { giveaway_chapter_identifier } from "./giveaway_chapter_identifier.mjs";
 export function giveaway_psalms_songs_rows_items(rows) {
   arguments_assert(arguments, 1);
@@ -16,19 +16,19 @@ export function giveaway_psalms_songs_rows_items(rows) {
   ("The psalm is read back off the recording's own name rather than taken apart out of the published name. The published name does say it - the first word is the chapter code with the verse range joined on - but pulling it back out would be a second statement of the rule that spelled it, and the two copies come apart the moment one of them is corrected. The reading is the one the record was built with, so it cannot disagree with itself.");
   ("A row whose name the reading cannot place stops the whole answer rather than being left out. Leaving it out would publish a shelf with a recording silently missing from it, and nothing downstream would be any the wiser; the record was built from names that read, so a name that does not read means the record was edited by hand or the reading changed under it.");
   ("The files are sorted by the name they carry inside the box, because that sorted order is the whole of what a reader of a bare download page is given. The boxes are sorted the same way, which puts the psalms in number order because the chapter code is padded.");
+  ("A box carries the psalm as a plain number as well as the padded code it is named after. Everything that writes words for a reader wants the number - a title, a sentence saying which psalm this is - and taking the number back out of the code would be the one bit of parsing this function exists to avoid. The grouping is on the number for the same reason: the number is what the reading hands over, and the code is made from it afterwards.");
   let placed = [];
   for (let row of rows) {
     let read = psalms_song_file_read_or_null(row.file_name);
     null_not_is_assert(read);
-    let chapter_code = ebible_chapter_code_pad("PSA", read.chapter);
     let one = {
-      chapter_code,
+      chapter: read.chapter,
       file_name: row.file_name,
       path_in_item: row.name_published,
     };
     list_add(placed, one);
   }
-  let grouped = list_group_by_property(placed, "chapter_code");
+  let grouped = list_group_by_property(placed, "chapter");
   let items = [];
   for (let group of grouped) {
     let files = [];
@@ -40,9 +40,11 @@ export function giveaway_psalms_songs_rows_items(rows) {
       list_add(files, file);
     }
     list_sort_text_property(files, "path_in_item");
+    let chapter_code = ebible_chapter_code_pad("PSA", group.key);
     let item = {
-      identifier: giveaway_chapter_identifier(group.key),
-      chapter_code: group.key,
+      identifier: giveaway_chapter_identifier(chapter_code),
+      chapter: group.key,
+      chapter_code,
       files_count: files.length,
       files,
     };
