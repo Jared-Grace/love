@@ -4,6 +4,7 @@ import { text_combine } from "./text_combine.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_js_parse } from "./file_js_parse.mjs";
 import { property_get } from "./property_get.mjs";
+import { js_module_extras_none_assert } from "./js_module_extras_none_assert.mjs";
 import { js_flo } from "./js_flo.mjs";
 import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
 import { equal_assert_json } from "./equal_assert_json.mjs";
@@ -20,6 +21,8 @@ export async function function_temp_declaration_read(f_name) {
   let path = path_join(["scripts", "temp", file_name]);
   let parsed = await file_js_parse(path);
   let ast = property_get(parsed, "ast");
+  ("Anything in the draft beside its imports and its function is refused rather than left behind, since only the function is carried out of here.");
+  js_module_extras_none_assert(ast, path);
   let declaration = js_flo(ast);
   let drafted = js_function_declaration_name(declaration);
   equal_assert_json(drafted, base, {

@@ -5,6 +5,9 @@ import { js_parse } from "./js_parse.mjs";
 import { js_imports_missing_add_all } from "./js_imports_missing_add_all.mjs";
 import { functions_names_to_paths } from "./functions_names_to_paths.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
+import { file_js_parse } from "./file_js_parse.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_module_extras_none_assert } from "./js_module_extras_none_assert.mjs";
 import { js_format } from "./js_format.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 import { function_source_formatted_overwrite } from "./function_source_formatted_overwrite.mjs";
@@ -22,6 +25,10 @@ export async function function_declaration_overwrite(declaration, f_name) {
   let dictionary = await functions_names_to_paths();
   let existing = property_get_or_null(dictionary, f_name);
   if (existing) {
+    ("The file being written over is read first and refused if it holds anything beside its imports and its function, because only the function is carried and the rest would be dropped without a word.");
+    let parsed = await file_js_parse(existing);
+    let ast_existing = property_get(parsed, "ast");
+    js_module_extras_none_assert(ast_existing, existing);
     let formatted = await js_format(contents_import);
     await file_overwrite(existing, formatted);
     return;
