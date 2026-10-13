@@ -1,6 +1,6 @@
 import { browser_online_is } from "./browser_online_is.mjs";
 import { not } from "./not.mjs";
-import { app_receipts_store } from "./app_receipts_store.mjs";
+import { app_shared_unsent_store } from "./app_shared_unsent_store.mjs";
 import { app_shared_unsent_all } from "./app_shared_unsent_all.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
@@ -16,7 +16,7 @@ export async function app_receipts_sync() {
   if (not(b)) {
     return;
   }
-  let store = app_receipts_store();
+  let store = app_shared_unsent_store();
   let unsent = await app_shared_unsent_all();
   for (let record of unsent) {
     let path = property_get(record, "key");
