@@ -1,7 +1,13 @@
-import { greater_than } from "./greater_than.mjs";
+import { function_read } from "./function_read.mjs";
+import { js_parse } from "./js_parse.mjs";
+import { js_module_extras_codes } from "./js_module_extras_codes.mjs";
+import { js_unparse } from "./js_unparse.mjs";
+import { json_equal } from "./json_equal.mjs";
+import { not } from "./not.mjs";
 import { function_edit_safe_refusals } from "./function_edit_safe_refusals.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { function_exists_assert } from "./function_exists_assert.mjs";
-import { function_declaration_overwrite } from "./function_declaration_overwrite.mjs";
+import { function_declaration_extras_overwrite } from "./function_declaration_extras_overwrite.mjs";
 import { function_from_temp_generic } from "./function_from_temp_generic.mjs";
 export async function function_overwrite_from_temp_edit_safe(f_name) {
   "Puts a function drafted in the throwaway folder over the existing function of that name, but only when the flow check says neither the function as it stands nor the draft can change anything dangerous. Otherwise it writes nothing and says why.";
@@ -11,7 +17,19 @@ export async function function_overwrite_from_temp_edit_safe(f_name) {
     declaration,
     base,
     import_lines,
+    extras,
   ) {
+    "★ WHAT THE FILE KEEPS OUTSIDE ITS FUNCTION MAY BE CARRIED BUT NEVER CHANGED HERE. The flow check reads the function and nothing beside it, and a statement on a module's top line runs the moment the file loads - so a changed one would be written on a proof that never looked at it. Carried unchanged it is exactly what was already there; any change to it goes to the human.";
+    let source_existing = await function_read(base);
+    let ast_existing = js_parse(source_existing);
+    let codes_existing = js_module_extras_codes(ast_existing);
+    let codes_draft = extras.map(js_unparse);
+    let same = json_equal(codes_draft, codes_existing);
+    if (not(same)) {
+      throw new Error(
+        "not written, because the draft changes what the file keeps outside its function, which the check does not read",
+      );
+    }
     let refusals = await function_edit_safe_refusals(
       base,
       declaration,
@@ -24,7 +42,7 @@ export async function function_overwrite_from_temp_edit_safe(f_name) {
       );
     }
     await function_exists_assert(base);
-    await function_declaration_overwrite(declaration, base);
+    await function_declaration_extras_overwrite(declaration, extras, base);
   }
   let output = await function_from_temp_generic(
     f_name,

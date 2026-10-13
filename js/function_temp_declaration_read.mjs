@@ -4,7 +4,7 @@ import { text_combine } from "./text_combine.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_js_parse } from "./file_js_parse.mjs";
 import { property_get } from "./property_get.mjs";
-import { js_module_extras_none_assert } from "./js_module_extras_none_assert.mjs";
+import { js_module_extras } from "./js_module_extras.mjs";
 import { js_flo } from "./js_flo.mjs";
 import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
 import { equal_assert_json } from "./equal_assert_json.mjs";
@@ -21,8 +21,8 @@ export async function function_temp_declaration_read(f_name) {
   let path = path_join(["scripts", "temp", file_name]);
   let parsed = await file_js_parse(path);
   let ast = property_get(parsed, "ast");
-  ("Anything in the draft beside its imports and its function is refused rather than left behind, since only the function is carried out of here.");
-  js_module_extras_none_assert(ast, path);
+  ("WHAT THE DRAFT KEEPS OUTSIDE ITS FUNCTION COMES BACK TOO, for the same reason as the import lines: the function alone is all the rest of the way carries, so a value kept beside it was dropped and the body left reading a name nothing bound. Each writer decides what to do with them; none may lose them by not being told.");
+  let extras = js_module_extras(ast);
   let declaration = js_flo(ast);
   let drafted = js_function_declaration_name(declaration);
   equal_assert_json(drafted, base, {
@@ -35,6 +35,7 @@ export async function function_temp_declaration_read(f_name) {
     file_name,
     declaration,
     import_lines,
+    extras,
   };
   return read;
 }
