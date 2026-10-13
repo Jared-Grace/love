@@ -762,7 +762,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["203", "akrobustia", "no_entry+kitchen_knife+clockwise_arrows+thing", "uncircumcision"],
     ["230", "aletheia", "check+manner", "truly"],
     ["3916", "parachrema", "children_crossing+fast_forward", "immediately"],
-    ["5599", "o", "waving_hand", "O"],
+    ["5599", "o", "speaking_head", "O"],
     ["3900", "pipto", "children_crossing+person+pointing_down+thing", "trespass"],
     ["156", "aiteo", "pleading+thing", "charge"],
     ["2010", "epitrepo", "pointing_up+clockwise_arrows+doing", "permit"],
