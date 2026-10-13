@@ -1,10 +1,12 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { giveaway_bible_folder } from "./giveaway_bible_folder.mjs";
 import { psalms_song_file_read_or_null } from "./psalms_song_file_read_or_null.mjs";
 import { null_not_is_assert } from "./null_not_is_assert.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_group_by_property } from "./list_group_by_property.mjs";
-import { list_sort_text_property } from "./list_sort_text_property.mjs";
 import { ebible_chapter_code_pad } from "./ebible_chapter_code_pad.mjs";
+import { giveaway_passage_text_file_names } from "./giveaway_passage_text_file_names.mjs";
+import { list_sort_text_property } from "./list_sort_text_property.mjs";
 import { giveaway_chapter_identifier } from "./giveaway_chapter_identifier.mjs";
 export function giveaway_psalms_songs_rows_items(rows) {
   arguments_assert(arguments, 1);
@@ -18,6 +20,11 @@ export function giveaway_psalms_songs_rows_items(rows) {
   ("The files are sorted by the name they carry inside the box, because that sorted order is the whole of what a reader of a bare download page is given. The boxes are sorted the same way, which puts the psalms in number order because the chapter code is padded.");
   ("A box carries the psalm as a plain number as well as the padded code it is named after. Everything that writes words for a reader wants the number - a title, a sentence saying which psalm this is - and taking the number back out of the code would be the one bit of parsing this function exists to avoid. The grouping is on the number for the same reason: the number is what the reading hands over, and the code is made from it afterwards.");
   ("Each file keeps the kind of thing it is, carried straight over from the record. What a box can be described as is read off the kinds actually inside it and never assumed - a sentence saying a box holds videos when it holds only singing is a lie told once and then published, and the whole reason to describe a box from its contents is that every box is at a different stage.");
+  ("★ EVERY BOX ALSO GETS THE WORDS OF ITS PSALM, AND THOSE FILES COME FROM THE PSALM'S NUMBER RATHER THAN FROM THE RECORD. A recording has to be written down before it can be named, because its mark says which take it is and that depends on how many takes there are; a psalm's words are named from the psalm and the translation and nothing else, so there is nothing to write down and no refresh of the record that could move them. That is why they are added here, where the box is assembled, instead of being rows in the record alongside the singing.");
+  ("★ SO A BOX NEVER HOLDS SINGING WITHOUT THE WORDS BEING SUNG, WHICH IS THE POINT OF PUTTING THEM IN AT THIS LAYER. The person asked that the psalm's own words go in its box; adding them one box at a time would leave a box somebody forgot, and nothing would say so. Here a box cannot exist without them, because the same loop that makes the box makes them.");
+  ("★ A FILE IN A BOX IS NOW ONE OF TWO THINGS, AND THE KIND IS WHAT SAYS WHICH, WHICH IS WHY NO SECOND FIELD WAS ADDED TO SAY IT AGAIN. A recording is a file sitting on this disk and carries the name it sits under; the words are made at the moment they are handed over and carry the two words naming which of the three renderings they are. A field saying disk or made would be a second copy of something the kind already settles, and two copies of one fact come apart. What reads a file therefore looks at its kind first - the same fixed list the description works off - and a kind nothing knows about stops it rather than being read as either.");
+  ("★ THE COUNT OF FILES IN A BOX NOW COUNTS BOTH, SO IT IS NO LONGER THE NUMBER OF ROWS THE RECORD HOLDS FOR THAT PSALM. Anything that printed the record's row count as the file count was right until this and is wrong after it, by exactly three per box. The count is taken from the list rather than worked out, so it cannot drift from what is in the box.");
+  let bible_folder = giveaway_bible_folder();
   let placed = [];
   for (let row of rows) {
     let read = psalms_song_file_read_or_null(row.file_name);
@@ -33,6 +40,7 @@ export function giveaway_psalms_songs_rows_items(rows) {
   let grouped = list_group_by_property(placed, "chapter");
   let items = [];
   for (let group of grouped) {
+    let chapter_code = ebible_chapter_code_pad("PSA", group.key);
     let files = [];
     for (let one of group.items) {
       let file = {
@@ -42,8 +50,17 @@ export function giveaway_psalms_songs_rows_items(rows) {
       };
       list_add(files, file);
     }
+    let named = giveaway_passage_text_file_names(chapter_code, bible_folder);
+    for (let one of named) {
+      let file = {
+        kind: one.kind,
+        mark: one.mark,
+        ending: one.ending,
+        path_in_item: one.file_name,
+      };
+      list_add(files, file);
+    }
     list_sort_text_property(files, "path_in_item");
-    let chapter_code = ebible_chapter_code_pad("PSA", group.key);
     let item = {
       identifier: giveaway_chapter_identifier(chapter_code),
       chapter: group.key,

@@ -3,6 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_shared_unsent_sync } from "./app_shared_unsent_sync.mjs";
 import { html_on_window } from "./html_on_window.mjs";
+import { app_chapter_group_hash_tidy } from "./app_chapter_group_hash_tidy.mjs";
 import { app_shared_folder_choose } from "./app_shared_folder_choose.mjs";
 import { app_chapter_group_verse_draw } from "./app_chapter_group_verse_draw.mjs";
 import { app_chapter_group_chapter_draw } from "./app_chapter_group_chapter_draw.mjs";
@@ -20,6 +21,7 @@ export function app_chapter_group_main(context) {
     await app_shared_unsent_sync();
   }
   html_on_window("online", on_online);
+  app_chapter_group_hash_tidy();
   app_shared_folder_choose(root, app_name, on_folder);
   async function on_folder(folder_code, on_change) {
     let entries = [];

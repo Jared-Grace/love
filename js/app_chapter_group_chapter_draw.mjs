@@ -7,6 +7,7 @@ import { app_chapter_group_splits_load } from "./app_chapter_group_splits_load.m
 import { not } from "./not.mjs";
 import { app_chapter_group_status_show } from "./app_chapter_group_status_show.mjs";
 import { app_chapter_group_scroll_keep } from "./app_chapter_group_scroll_keep.mjs";
+import { app_chapter_group_hash_tidy } from "./app_chapter_group_hash_tidy.mjs";
 import { html_scroll_body_top_kept } from "./html_scroll_body_top_kept.mjs";
 import { app_chapter_group_groups_draw } from "./app_chapter_group_groups_draw.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -56,7 +57,9 @@ export async function app_chapter_group_chapter_draw({
   await app_chapter_group_status_show(status, path);
   app_chapter_group_scroll_keep(path);
   function refresh() {
-    "Emptying the boxes makes the page short for a moment and the browser answers by going to the top, so how far down the reader was is read first and given back after.";
+    "The reader writes its own words into the link as it draws and each time a verse is let go of, so the link is tidied here, after it.";
+    app_chapter_group_hash_tidy();
+    ("Emptying the boxes makes the page short for a moment and the browser answers by going to the top, so how far down the reader was is read first and given back after.");
     html_scroll_body_top_kept(drawn);
   }
   function drawn() {
