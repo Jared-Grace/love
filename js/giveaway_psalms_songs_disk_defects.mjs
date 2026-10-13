@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_map_property_get } from "./list_map_property_get.mjs";
+import { list_map_property } from "./list_map_property.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
@@ -13,7 +13,7 @@ export function giveaway_psalms_songs_disk_defects(rows, file_names_disk) {
   ("★ A ROW WHOSE FILE IS GONE IS THE DANGEROUS ONE, BECAUSE NOTHING ABOUT IT LOOKS WRONG. The published name is still spelled correctly, the record is still complete, and the gate is still green - the only thing missing is the recording the name was built from. Two of these were found by hand the day the record was written, after the owner marked two raws superseded that afternoon.");
   ("A recording nobody wrote a row for is the opposite case and costs nothing but absence: the singing exists and is simply not being given away. It is still worth saying, because absence is silent and a record that looks complete is exactly what stops anybody looking.");
   ("Only the recordings a reader could place are handed in here. A download folder holds far more than songs, and a walk over it has already passed over everything it could not read as a psalm - so a name absent from this list is not a fault, it is a holiday snap.");
-  let names_recorded = list_map_property_get(rows, "file_name");
+  let names_recorded = list_map_property(rows, "file_name");
   let defects = [];
   for (let row of rows) {
     let on_disk = list_includes(file_names_disk, row.file_name);
