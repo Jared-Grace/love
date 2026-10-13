@@ -798,7 +798,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["1299", "diatasso", "clipboard+doing", "direct"],
     ["1065", "ge", "double_exclamation", "indeed"],
     ["5623", "opheleo", "chart_increasing+hand_receiving+doing", "profit"],
-    ["5132", "trapeza", "fork_and_knife_with_plate", "table"],
+    ["5132", "trapeza", "eating+round_pushpin", "table"],
     ["4531", "saleuo", "vibration_mode+doing", "shake"],
     ["4222", "potizo", "cup_with_straw+hands_giving+doing", "give to drink"],
     ["3625", "oikoumene", "house+globe", "inhabited world"],
@@ -812,7 +812,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["5013", "tapeinoo", "down_arrow+person+doing", "humble"],
     ["5007", "talanton", "coin+scales", "talent"],
     ["3634", "hos", "back+flashlight+likeness", "such as"],
-    ["3539", "nous", "brain+doing", "understand"],
+    ["3539", "nous", "brain+lightbulb+doing", "understand"],
     ["3113", "makrothen", "straight_ruler+tray_out", "from afar"],
   ];
   let drafted = [];
