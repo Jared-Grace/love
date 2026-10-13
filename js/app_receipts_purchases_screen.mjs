@@ -14,7 +14,7 @@ import { app_shared_unsent_all } from "./app_shared_unsent_all.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { html_text_set } from "./html_text_set.mjs";
-import { app_receipts_sync } from "./app_receipts_sync.mjs";
+import { app_shared_unsent_sync } from "./app_shared_unsent_sync.mjs";
 export async function app_receipts_purchases_screen(
   root,
   folder_code,
@@ -84,7 +84,7 @@ export async function app_receipts_purchases_screen(
   }
   async function sync_now() {
     await status_show();
-    await app_receipts_sync();
+    await app_shared_unsent_sync();
     await status_show();
   }
   return refresh;

@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_frozen } from "./text_frozen.mjs";
 import { app_receipts_folder_known } from "./app_receipts_folder_known.mjs";
-import { app_receipts_sync } from "./app_receipts_sync.mjs";
+import { app_shared_unsent_sync } from "./app_shared_unsent_sync.mjs";
 import { html_on_window } from "./html_on_window.mjs";
 import { app_receipts_folder_code_valid_is } from "./app_receipts_folder_code_valid_is.mjs";
 import { app_receipts_code_screen } from "./app_receipts_code_screen.mjs";
@@ -25,7 +25,7 @@ export function app_receipts_main(context) {
   let key = text_frozen("folder_code");
   let key2 = text_frozen("folder");
   let known = app_receipts_folder_known(app_name);
-  let sync_shown = app_receipts_sync;
+  let sync_shown = app_shared_unsent_sync;
   function on_online() {
     sync_shown();
   }
@@ -45,7 +45,7 @@ export function app_receipts_main(context) {
     );
   }
   function on_change(folder_code) {
-    sync_shown = app_receipts_sync;
+    sync_shown = app_shared_unsent_sync;
     app_receipts_code_screen(root, folder_code, on_code);
   }
 }
