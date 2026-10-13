@@ -16,7 +16,10 @@ import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
+import { whitespace_normalize } from "./whitespace_normalize.mjs";
 import { property_set } from "./property_set.mjs";
+import { app_chapter_group_laid_out_load } from "./app_chapter_group_laid_out_load.mjs";
+import { null_not_is } from "./null_not_is.mjs";
 import { app_chapter_group_splits_load } from "./app_chapter_group_splits_load.mjs";
 import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
@@ -34,6 +37,9 @@ import { html_clear } from "./html_clear.mjs";
 import { each } from "./each.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { html_parent_append } from "./html_parent_append.mjs";
+import { html_component_element_get } from "./html_component_element_get.mjs";
+import { html_component_wrap } from "./html_component_wrap.mjs";
+import { html_click } from "./html_click.mjs";
 import { app_shared_unsent_all } from "./app_shared_unsent_all.mjs";
 import { app_chapter_group_splits_save } from "./app_chapter_group_splits_save.mjs";
 import { app_shared_unsent_sync } from "./app_shared_unsent_sync.mjs";
@@ -54,7 +60,7 @@ export async function app_chapter_group_chapter_draw({
   "A division is only the verses that begin a group after the first. Beginning a group at a verse adds that verse, joining takes away the verse the next group began at, and a chapter never divided is all one group.";
   "Every change is kept on this device and sent at once, with nothing to press; the save button does the same again, for somebody who wants to be sure, and for after the internet comes back.";
   "A change draws only the boxes, headings and buttons again and moves the verses into them, never drawing a verse again, so the chapter does not move under the reader's finger.";
-  "The copy is the group's verses in the language being read, one after another on one line, respelled for singing.";
+  "The copy is the group's verses in the language being read, one after another with the line breaks and stepping the printing gives them where those can be had, respelled for singing.";
   arguments_assert(arguments, 1);
   let path = app_chapter_group_path(folder_code, chapter_code);
   let top = html_div(content);
@@ -85,7 +91,22 @@ export async function app_chapter_group_chapter_draw({
   for (let verse of verses) {
     let number = property_get(verse, number_key);
     let text = property_get_or(verse, "text", "");
-    property_set(texts, number, text);
+    let flat = whitespace_normalize(text);
+    property_set(texts, number, {
+      before: " ",
+      text: flat,
+    });
+  }
+  ("The plain running words are kept first, a space between verses, so there is always something to copy. Where the chapter can be had with its layout, each verse laid out takes the place of its plain one.");
+  let laid_out = await app_chapter_group_laid_out_load(
+    bible_folder,
+    chapter_code,
+  );
+  if (null_not_is(laid_out)) {
+    for (let piece of laid_out) {
+      let number = property_get(piece, "verse_number");
+      property_set(texts, number, piece);
+    }
   }
   ("A division made while storage was still being asked is the newer one, so then what storage answers is let go.");
   let loaded = await app_chapter_group_splits_load(app_name, path);
@@ -126,8 +147,11 @@ export async function app_chapter_group_chapter_draw({
     async function copy() {
       let group_texts = [];
       for (let number of group) {
-        let text = property_get_or(texts, number, "");
-        list_add(group_texts, text);
+        let piece = property_get_or(texts, number, {
+          before: " ",
+          text: "",
+        });
+        list_add(group_texts, piece);
       }
       let line = app_chapter_group_text(group_texts);
       await clipboard_copy_browser(line);
@@ -168,6 +192,11 @@ export async function app_chapter_group_chapter_draw({
       each([row, actions, boundary], gather);
       if (not(b)) {
         async function split() {
+          "The verse was chosen only to say where the new group begins, so once it has begun the verse is let go again, by pressing its own number the way a reader would.";
+          let row_element = html_component_element_get(row);
+          let number_element = property_get(row_element, "firstElementChild");
+          let number_button = html_component_wrap(number_element);
+          html_click(number_button);
           splits = splits.concat([number]);
           await changed();
         }
