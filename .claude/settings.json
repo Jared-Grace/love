@@ -4,6 +4,7 @@
       "Bash(find:*)",
       "Bash(grep:*)",
       "Bash(cat:*)",
+      "Bash(nl:*)",
       "Bash(cut:*)",
       "Bash(cd:*)",
       "Bash(date:*)",
