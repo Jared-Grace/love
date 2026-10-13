@@ -2471,11 +2471,11 @@ export function bible_glyph_roots() {
       words: [
         {
           strong: "2570",
-          glyph: "person_gesturing_ok",
+          glyph: "heart_eyes",
         },
         {
           strong: "2573",
-          glyph: "person_gesturing_ok+manner",
+          glyph: "heart_eyes+manner",
         },
       ],
     },
@@ -2697,19 +2697,19 @@ export function bible_glyph_roots() {
       words: [
         {
           strong: "3361",
-          glyph: "no_entry",
+          glyph: "no_entry+exclamation",
         },
         {
           strong: "3367",
-          glyph: "no_entry",
+          glyph: "no_entry+exclamation",
         },
         {
           strong: "3366",
-          glyph: "no_entry",
+          glyph: "no_entry+exclamation",
         },
         {
           strong: "3383",
-          glyph: "no_entry",
+          glyph: "no_entry+exclamation",
         },
       ],
     },
