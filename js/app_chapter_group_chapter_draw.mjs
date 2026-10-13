@@ -7,8 +7,7 @@ import { app_chapter_group_splits_load } from "./app_chapter_group_splits_load.m
 import { not } from "./not.mjs";
 import { app_chapter_group_status_show } from "./app_chapter_group_status_show.mjs";
 import { app_chapter_group_scroll_keep } from "./app_chapter_group_scroll_keep.mjs";
-import { html_scroll_window_top_get } from "./html_scroll_window_top_get.mjs";
-import { html_scroll_window_top_set } from "./html_scroll_window_top_set.mjs";
+import { html_scroll_body_top_kept } from "./html_scroll_body_top_kept.mjs";
 import { app_chapter_group_groups_draw } from "./app_chapter_group_groups_draw.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_without } from "./list_without.mjs";
@@ -58,9 +57,7 @@ export async function app_chapter_group_chapter_draw({
   app_chapter_group_scroll_keep(path);
   function refresh() {
     "Emptying the boxes makes the page short for a moment and the browser answers by going to the top, so how far down the reader was is read first and given back after.";
-    let scroll_top = html_scroll_window_top_get();
-    drawn();
-    html_scroll_window_top_set(scroll_top);
+    html_scroll_body_top_kept(drawn);
   }
   function drawn() {
     app_chapter_group_groups_draw({
