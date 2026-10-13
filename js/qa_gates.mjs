@@ -1,5 +1,3 @@
-import { durations_near_each_cases_gate_run } from "./durations_near_each_cases_gate_run.mjs";
-import { js_flow_machine_power_cases_gate_run } from "./js_flow_machine_power_cases_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { stop_next_steps_hook_gate_run } from "./stop_next_steps_hook_gate_run.mjs";
@@ -432,6 +430,7 @@ import { functions_name_word_repeated_gate_run } from "./functions_name_word_rep
 import { bible_glyph_chapters_marks_unseated_gate_run } from "./bible_glyph_chapters_marks_unseated_gate_run.mjs";
 import { bible_glyph_chapters_verse_marks_underdrawn_gate_run } from "./bible_glyph_chapters_verse_marks_underdrawn_gate_run.mjs";
 import { bible_glyph_roots_collisions_gate_run } from "./bible_glyph_roots_collisions_gate_run.mjs";
+import { bible_glyph_characters_twins_gate_run } from "./bible_glyph_characters_twins_gate_run.mjs";
 import { bible_glyph_chapters_collision_marks_gate_run } from "./bible_glyph_chapters_collision_marks_gate_run.mjs";
 import { apps_all_main_fns_gate_run } from "./apps_all_main_fns_gate_run.mjs";
 import { apps_pages_not_app_gate_run } from "./apps_pages_not_app_gate_run.mjs";
@@ -614,6 +613,8 @@ import { app_bible_card_claims_gate_run } from "./app_bible_card_claims_gate_run
 import { permission_grants_dispatch_unfenced_gate_run } from "./permission_grants_dispatch_unfenced_gate_run.mjs";
 import { giveaway_psalms_songs_rows_whole_chapter_parts_cases_gate_run } from "./giveaway_psalms_songs_rows_whole_chapter_parts_cases_gate_run.mjs";
 import { giveaway_psalms_songs_whole_chapter_parts_gate_run } from "./giveaway_psalms_songs_whole_chapter_parts_gate_run.mjs";
+import { js_flow_machine_power_cases_gate_run } from "./js_flow_machine_power_cases_gate_run.mjs";
+import { durations_near_each_cases_gate_run } from "./durations_near_each_cases_gate_run.mjs";
 export function qa_gates() {
   "Every gate the repo-wide check runs, gathered in one list, so adding a function here is the whole of wiring a new gate in.";
   let gates = [
@@ -1049,6 +1050,7 @@ export function qa_gates() {
     bible_glyph_chapters_marks_unseated_gate_run,
     bible_glyph_chapters_verse_marks_underdrawn_gate_run,
     bible_glyph_roots_collisions_gate_run,
+    bible_glyph_characters_twins_gate_run,
     bible_glyph_chapters_collision_marks_gate_run,
     apps_all_main_fns_gate_run,
     apps_pages_not_app_gate_run,
