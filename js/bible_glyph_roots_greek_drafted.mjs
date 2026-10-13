@@ -783,6 +783,12 @@ export function bible_glyph_roots_greek_drafted() {
     ["3360", "mechri", "finish+straight_ruler", "until"],
     ["114", "atheteo", "no_entry+palm_down", "reject"],
     ["5526", "chortazo", "face_savoring_food+doing", "satisfy"],
+    ["1614", "ekteino", "tray_out+rightwards_hand", "stretch out"],
+    ["1937", "epithumeo", "drooling_face+doing", "desire"],
+    ["5059", "teras", "exploding_head", "wonder"],
+    ["700", "aresko", "relieved_face+doing", "please"],
+    ["839", "aurion", "sunrise", "tomorrow"],
+    ["1887", "aurion", "pointing_up+sunrise", "next day"],
   ];
   let drafted = [];
   for (let row of rows) {
