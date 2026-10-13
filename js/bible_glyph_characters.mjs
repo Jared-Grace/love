@@ -1688,10 +1688,6 @@ export function bible_glyph_characters() {
       character: "🎉",
     },
     {
-      name: "evergreen_tree",
-      character: "🌲",
-    },
-    {
       name: "pouring_liquid",
       character: "🫗",
     },
@@ -1806,10 +1802,6 @@ export function bible_glyph_characters() {
     {
       name: "mouse_trap",
       character: "🪤",
-    },
-    {
-      name: "motorway",
-      character: "🛣️",
     },
     {
       name: "fearful_face",
@@ -2122,10 +2114,6 @@ export function bible_glyph_characters() {
     {
       name: "luggage",
       character: "🧳",
-    },
-    {
-      name: "person_standing",
-      character: "🧍",
     },
     {
       name: "person_with_white_cane",
@@ -2580,10 +2568,6 @@ export function bible_glyph_characters() {
       character: "⏮️",
     },
     {
-      name: "latin_cross",
-      character: "✝️",
-    },
-    {
       name: "confounded_face",
       character: "😖",
     },
@@ -2756,10 +2740,6 @@ export function bible_glyph_characters() {
       character: "🦀",
     },
     {
-      name: "bullseye",
-      character: "🎯",
-    },
-    {
       name: "paperclip",
       character: "📎",
     },
@@ -2772,16 +2752,8 @@ export function bible_glyph_characters() {
       character: "⏹️",
     },
     {
-      name: "face_with_steam_from_nose",
-      character: "😤",
-    },
-    {
       name: "hole",
       character: "🕳️",
-    },
-    {
-      name: "dagger",
-      character: "🗡️",
     },
     {
       name: "scarf",
@@ -2792,28 +2764,12 @@ export function bible_glyph_characters() {
       character: "💧",
     },
     {
-      name: "nut_and_bolt",
-      character: "🔩",
-    },
-    {
       name: "sparkles",
       character: "✨",
     },
     {
-      name: "loudly_crying_face",
-      character: "😭",
-    },
-    {
-      name: "ear_of_corn",
-      character: "🌽",
-    },
-    {
       name: "hourglass_not_done",
       character: "⏳",
-    },
-    {
-      name: "wind_face",
-      character: "🌬️",
     },
     {
       name: "spoon",
@@ -2824,32 +2780,8 @@ export function bible_glyph_characters() {
       character: "🤵",
     },
     {
-      name: "fork_and_knife_with_plate",
-      character: "🍽️",
-    },
-    {
-      name: "person_with_veil",
-      character: "👰",
-    },
-    {
-      name: "world_map",
-      character: "🗺️",
-    },
-    {
-      name: "oncoming_fist",
-      character: "👊",
-    },
-    {
       name: "smiling_face_with_smiling_eyes",
       character: "😊",
-    },
-    {
-      name: "person_raising_hand",
-      character: "🙋",
-    },
-    {
-      name: "face_screaming_in_fear",
-      character: "😱",
     },
     {
       name: "pleading_face",
@@ -2872,16 +2804,8 @@ export function bible_glyph_characters() {
       character: "🏴‍☠️",
     },
     {
-      name: "disguised_face",
-      character: "🥸",
-    },
-    {
       name: "desert",
       character: "🏜️",
-    },
-    {
-      name: "cloud_with_rain",
-      character: "🌧️",
     },
     {
       name: "hammer_and_wrench",
@@ -2904,16 +2828,8 @@ export function bible_glyph_characters() {
       character: "⛲",
     },
     {
-      name: "game_die",
-      character: "🎲",
-    },
-    {
       name: "straight_ruler",
       character: "📏",
-    },
-    {
-      name: "bow_and_arrow",
-      character: "🏹",
     },
     {
       name: "adhesive_bandage",

@@ -1373,10 +1373,6 @@ export function bible_glyph_artwork_names() {
       asset: "Party popper",
     },
     {
-      glyph: "evergreen_tree",
-      asset: "Evergreen tree",
-    },
-    {
       glyph: "pouring_liquid",
       asset: "Pouring liquid",
     },
@@ -1491,10 +1487,6 @@ export function bible_glyph_artwork_names() {
     {
       glyph: "mouse_trap",
       asset: "Mouse trap",
-    },
-    {
-      glyph: "motorway",
-      asset: "Motorway",
     },
     {
       glyph: "fearful_face",
@@ -1811,10 +1803,6 @@ export function bible_glyph_artwork_names() {
     {
       glyph: "luggage",
       asset: "Luggage",
-    },
-    {
-      glyph: "person_standing",
-      asset: "Person standing",
     },
     {
       glyph: "person_with_white_cane",
@@ -2369,10 +2357,6 @@ export function bible_glyph_artwork_names() {
       asset: "Last track button",
     },
     {
-      glyph: "latin_cross",
-      asset: "Latin cross",
-    },
-    {
       glyph: "confounded_face",
       asset: "Confounded face",
     },
@@ -2665,10 +2649,6 @@ export function bible_glyph_artwork_names() {
       asset: "Crab",
     },
     {
-      glyph: "bullseye",
-      asset: "Bullseye",
-    },
-    {
       glyph: "paperclip",
       asset: "Paperclip",
     },
@@ -2681,16 +2661,8 @@ export function bible_glyph_artwork_names() {
       asset: "Stop button",
     },
     {
-      glyph: "face_with_steam_from_nose",
-      asset: "Face with steam from nose",
-    },
-    {
       glyph: "hole",
       asset: "Hole",
-    },
-    {
-      glyph: "dagger",
-      asset: "Dagger",
     },
     {
       glyph: "scarf",
@@ -2701,28 +2673,12 @@ export function bible_glyph_artwork_names() {
       asset: "Droplet",
     },
     {
-      glyph: "nut_and_bolt",
-      asset: "Nut and bolt",
-    },
-    {
       glyph: "sparkles",
       asset: "Sparkles",
     },
     {
-      glyph: "loudly_crying_face",
-      asset: "Loudly crying face",
-    },
-    {
-      glyph: "ear_of_corn",
-      asset: "Ear of corn",
-    },
-    {
       glyph: "hourglass_not_done",
       asset: "Hourglass not done",
-    },
-    {
-      glyph: "wind_face",
-      asset: "Wind face",
     },
     {
       glyph: "spoon",
@@ -2733,32 +2689,8 @@ export function bible_glyph_artwork_names() {
       asset: "Person in tuxedo",
     },
     {
-      glyph: "fork_and_knife_with_plate",
-      asset: "Fork and knife with plate",
-    },
-    {
-      glyph: "person_with_veil",
-      asset: "Person with veil",
-    },
-    {
-      glyph: "world_map",
-      asset: "World map",
-    },
-    {
-      glyph: "oncoming_fist",
-      asset: "Oncoming fist",
-    },
-    {
       glyph: "smiling_face_with_smiling_eyes",
       asset: "Smiling face with smiling eyes",
-    },
-    {
-      glyph: "person_raising_hand",
-      asset: "Person raising hand",
-    },
-    {
-      glyph: "face_screaming_in_fear",
-      asset: "Face screaming in fear",
     },
     {
       glyph: "pleading_face",
@@ -2781,16 +2713,8 @@ export function bible_glyph_artwork_names() {
       asset: "Pirate flag",
     },
     {
-      glyph: "disguised_face",
-      asset: "Disguised face",
-    },
-    {
       glyph: "desert",
       asset: "Desert",
-    },
-    {
-      glyph: "cloud_with_rain",
-      asset: "Cloud with rain",
     },
     {
       glyph: "hammer_and_wrench",
@@ -2813,16 +2737,8 @@ export function bible_glyph_artwork_names() {
       asset: "Fountain",
     },
     {
-      glyph: "game_die",
-      asset: "Game die",
-    },
-    {
       glyph: "straight_ruler",
       asset: "Straight ruler",
-    },
-    {
-      glyph: "bow_and_arrow",
-      asset: "Bow and arrow",
     },
     {
       glyph: "adhesive_bandage",
