@@ -883,6 +883,12 @@ export function bible_glyph_roots_greek_drafted() {
     ["2895", "krabattos", "bed+backpack", "mat"],
     ["2798", "klados", "wood+leaf", "branch"],
     ["2768", "keras", "horn", "horn"],
+    ["2602", "katabole", "pointing_down+throwing+thing", "foundation"],
+    ["2545", "kaio", "candle+doing", "burn"],
+    ["2290", "thapto", "coffin+tray_in+doing", "bury"],
+    ["2289", "thanatoo", "skull+hands_giving+doing", "put to death"],
+    ["1980", "episkeptomai", "eyes+walking+doing", "visit or care for"],
+    ["1868", "epainos", "clapping_hands", "praise"],
   ];
   let drafted = [];
   for (let row of rows) {
