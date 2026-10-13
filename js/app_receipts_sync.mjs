@@ -6,7 +6,7 @@ import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { firebase_upload_blob_browser_quiet_custom } from "./firebase_upload_blob_browser_quiet_custom.mjs";
 import { indexeddb_delete_list_backend } from "./indexeddb_delete_list_backend.mjs";
-import { app_receipts_database } from "./app_receipts_database.mjs";
+import { app_shared_unsent_database } from "./app_shared_unsent_database.mjs";
 export async function app_receipts_sync() {
   "Send every file waiting on this phone, and forget each one here only once it has arrived - so a send cut off halfway leaves the file waiting for next time rather than lost.";
   "Stops at the first failure, since with no internet the rest would fail the same way. The ones not reached stay waiting.";
@@ -27,6 +27,8 @@ export async function app_receipts_sync() {
     } catch (e) {
       return;
     }
-    await indexeddb_delete_list_backend(app_receipts_database, store, [path]);
+    await indexeddb_delete_list_backend(app_shared_unsent_database, store, [
+      path,
+    ]);
   }
 }

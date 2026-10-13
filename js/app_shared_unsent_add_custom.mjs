@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_unsent_store } from "./app_shared_unsent_store.mjs";
 import { indexeddb_put_backend } from "./indexeddb_put_backend.mjs";
-import { app_receipts_database } from "./app_receipts_database.mjs";
+import { app_shared_unsent_database } from "./app_shared_unsent_database.mjs";
 export async function app_shared_unsent_add_custom(path, file, custom) {
   "$plain path";
   "$plain file";
@@ -14,5 +14,5 @@ export async function app_shared_unsent_add_custom(path, file, custom) {
     file,
     custom,
   };
-  await indexeddb_put_backend(app_receipts_database, store, path, record);
+  await indexeddb_put_backend(app_shared_unsent_database, store, path, record);
 }
