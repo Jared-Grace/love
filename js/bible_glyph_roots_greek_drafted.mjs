@@ -762,6 +762,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["203", "akrobustia", "no_entry+kitchen_knife+clockwise_arrows+thing", "uncircumcision"],
     ["230", "aletheia", "check+manner", "truly"],
     ["3916", "parachrema", "children_crossing+fast_forward", "immediately"],
+    ["5599", "o", "waving_hand", "O"],
   ];
   let drafted = [];
   for (let row of rows) {
