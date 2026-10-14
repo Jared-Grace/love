@@ -1038,6 +1038,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["3305", "mentoi", "new_moon+exclamation", "yet"],
     ["3177", "methermeneuo", "speech+arrow_both_ways+doing", "translate"],
     ["2875", "kopto", "fist+heart_organ+doing", "mourn by beating the chest"],
+    ["2841", "koinoneo", "handshake+hands_giving+doing", "share"],
   ];
   let drafted = [];
   for (let row of rows) {
