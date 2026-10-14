@@ -53,8 +53,7 @@ import { text_to } from "./text_to.mjs";
 import { boolean_is } from "./boolean_is.mjs";
 import { error } from "./error.mjs";
 import { app_code_expression_value_choose_await } from "./app_code_expression_value_choose_await.mjs";
-import { html_transition_set } from "./html_transition_set.mjs";
-import { sleep } from "./sleep.mjs";
+import { html_opacity_animate } from "./html_opacity_animate.mjs";
 import { app_code_value_logged_output } from "./app_code_value_logged_output.mjs";
 import { app_code_label_of_code } from "./app_code_label_of_code.mjs";
 import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
@@ -93,6 +92,8 @@ export function app_code_program_step_through_generic(
   let comments = [];
   ("what each line says right now, which is its code until a name in it is evaluated; kept, so a piece of it can be cut out to be sent somewhere");
   let shown = [];
+  ("the value each line's note says right now, null until there is a note; kept, so the value can fade out of the note before a new one arrives");
+  let noted = [];
   for (let line of lines) {
     let slot = html_div(program);
     let comment = html_div(slot);
@@ -101,6 +102,7 @@ export function app_code_program_step_through_generic(
     let row = html_div(program);
     html_text_set(row, line);
     list_add(shown, line);
+    list_add(noted, null);
     list_add(rows, row);
     list_add(starts, line_start);
     line_start = line_start + text_size(line) + 1;
@@ -152,6 +154,7 @@ export function app_code_program_step_through_generic(
     let marked = app_code_note_name_mark(name);
     let before = "// ";
     let note = text_combine_multiple([before, marked, " value: ", value_text]);
+    list_set(noted, line_index, value_text);
     let name_from = text_size(before) + text_size(open);
     let size = text_size(note);
     let right3 = text_size(value_text);
@@ -329,10 +332,7 @@ export function app_code_program_step_through_generic(
         property_set(box, "hidden", hidden2);
       }
       await html_height_change_animate(slot, comment2, note_write, duration);
-      let timing = text_combine_multiple(["opacity ", duration, "ms"]);
-      html_transition_set(comment2, timing);
-      html_style_opacity(comment2, "1");
-      await sleep(duration);
+      await html_opacity_animate(comment2, "1", duration);
       let line_from2 = list_get(starts, line_index);
       let left3 = property_get(action, "from");
       let name_from = subtract(left3, line_from2);
@@ -347,6 +347,16 @@ export function app_code_program_step_through_generic(
       let value2 = property_get(action, "value");
       let t = text_to(value2);
       ("2026-10-14, at the human's asking: the value in the note goes, and a copy of what is right of the = goes up into its place. What is right of the = is found from its two ends: it starts where it was written, and what follows it is untouched, so it ends that far from the end of the line as it now stands - which holds whether or not a name there was evaluated into a value");
+      ("2026-10-14, at the human's asking: the value the note said before fades out first, so it is seen going rather than vanishing as the new one sets off. Not picked: hiding it at once and pausing before the new one sets off, offered by the human as the other way; a fade is how this note already comes in, so it goes the same way");
+      let old = list_get(noted, line_index);
+      let old_spans = comment_draw(line_index, name2, old, "value");
+      let duration2 = app_shared_animation_duration();
+      let fades = [];
+      for (let span of old_spans) {
+        html_visibility_visible(span);
+        list_add(fades, html_opacity_animate(span, "0", duration2));
+      }
+      await Promise.all(fades);
       let hidden3 = comment_draw(line_index, name2, t, "value");
       let line_from3 = list_get(starts, line_index);
       let left5 = property_get(action, "from");
@@ -359,7 +369,6 @@ export function app_code_program_step_through_generic(
       let now = list_get(shown, line_index);
       let left8 = text_size(now);
       let right_to = subtract(left8, after_size);
-      let duration2 = app_shared_animation_duration();
       await piece_send(line_index, right_from, right_to, hidden3, duration2);
       return;
     }
