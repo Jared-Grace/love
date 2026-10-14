@@ -10,6 +10,7 @@ import { html_div_text } from "./html_div_text.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { bible_glyph_group_pieces } from "./bible_glyph_group_pieces.mjs";
 import { greater_than } from "./greater_than.mjs";
+import { bible_glyph_piece_meaning } from "./bible_glyph_piece_meaning.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { html_span } from "./html_span.mjs";
@@ -65,7 +66,7 @@ export function bible_glyph_group_overlay_open(names, lookup, meanings) {
   let pieces = bible_glyph_group_pieces(names, meanings);
   let several = greater_than(pieces.length, 1);
   for (let piece of pieces) {
-    let meaning = piece.meaning;
+    let meaning = bible_glyph_piece_meaning(piece, meanings, several);
     if (equal(meaning, null) && not(several)) {
       continue;
     }
