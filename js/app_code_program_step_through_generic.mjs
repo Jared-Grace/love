@@ -17,6 +17,7 @@ import { text_size } from "./text_size.mjs";
 import { app_code_expression_chosen_background_color } from "./app_code_expression_chosen_background_color.mjs";
 import { app_code_lesson_quiz_wrong_code_background_color } from "./app_code_lesson_quiz_wrong_code_background_color.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
+import { app_shared_glow_clear } from "./app_shared_glow_clear.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_set } from "./list_set.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -39,12 +40,18 @@ import { html_visibility_visible } from "./html_visibility_visible.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_last_or_null } from "./list_last_or_null.mjs";
 import { property_get } from "./property_get.mjs";
-import { not } from "./not.mjs";
+import { list_last } from "./list_last.mjs";
 import { list_size } from "./list_size.mjs";
+import { modulo } from "./modulo.mjs";
+import { not } from "./not.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { list_take } from "./list_take.mjs";
 import { app_shared_glow_look_here } from "./app_shared_glow_look_here.mjs";
 import { app_shared_button_inline_sentence } from "./app_shared_button_inline_sentence.mjs";
+import { app_code_code_dots_chip_add } from "./app_code_code_dots_chip_add.mjs";
+import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
+import { html_on_click } from "./html_on_click.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
 import { html_height_change_animate } from "./html_height_change_animate.mjs";
 import { less_than } from "./less_than.mjs";
@@ -55,14 +62,15 @@ import { app_shared_button_background } from "./app_shared_button_background.mjs
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 import { promise_later_catch_ignore } from "./promise_later_catch_ignore.mjs";
-import { html_on_click } from "./html_on_click.mjs";
 import { app_code_program_step_guide_line_next } from "./app_code_program_step_guide_line_next.mjs";
+import { text_trim } from "./text_trim.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
 import { text_to } from "./text_to.mjs";
 import { boolean_is } from "./boolean_is.mjs";
 import { error } from "./error.mjs";
-import { app_code_expression_value_choose_await } from "./app_code_expression_value_choose_await.mjs";
+import { app_code_expression_value_choose_buttons } from "./app_code_expression_value_choose_buttons.mjs";
+import { html_remove } from "./html_remove.mjs";
 import { html_opacity_animate } from "./html_opacity_animate.mjs";
 import { html_opacity_transition } from "./html_opacity_transition.mjs";
 import { sleep } from "./sleep.mjs";
@@ -72,7 +80,6 @@ import { app_code_example_answer_label } from "./app_code_example_answer_label.m
 import { app_code_style_normal_box } from "./app_code_style_normal_box.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_code_program_step_guide_action } from "./app_code_program_step_guide_action.mjs";
-import { app_shared_glow_clear } from "./app_shared_glow_clear.mjs";
 export function app_code_program_step_through_generic(
   parent,
   code,
@@ -142,6 +149,8 @@ export function app_code_program_step_through_generic(
   function rows_plain() {
     for (let row of rows) {
       html_style_background_color_set(row, "transparent");
+      ("a line the guide lit, to say it is the one to press, goes out with every other mark on the lines");
+      app_shared_glow_clear(row);
     }
   }
   function row_text_set(line_index, text) {
@@ -210,7 +219,7 @@ export function app_code_program_step_through_generic(
     }
   }
   async function guide_say(sentences, choose) {
-    "the guide's sentences written in place of what it said before, when this example guides. choose is null, or the words of the button the last sentence tells the learner to choose and a holder whose button is that button";
+    "the guide's sentences written in place of what it said before, when this example guides. choose is null, or what the last sentence tells the learner to choose: its words, whether it is a button or a line of the program, and a function handing back the thing itself, asked for only when it is to glow, since it may not be built yet when the guide speaks";
     if (null_is(guide)) {
       return;
     }
@@ -222,27 +231,42 @@ export function app_code_program_step_through_generic(
       let last = list_last_or_null(sentences);
       for (let sentence of sentences) {
         let words = null_is(choose) ? null : property_get(choose, "words");
-        let part = list_first(sentence);
+        let tail = list_last(sentence);
+        let count = list_size(sentence);
+        let left10 = modulo(count, 2);
+        let tail_code = equal(left10, 0);
+        ("the words to choose end the last sentence: at the end of its last run of words, or as the whole of its last run of code");
         let inline =
           equal(sentence, last) &&
           not(null_is(words)) &&
-          equal(list_size(sentence), 1) &&
-          text_ends_with(part, words);
+          (tail_code ? equal(tail, words) : text_ends_with(tail, words));
         if (not(inline)) {
           html_div_cycle_code(guide, sentence);
           continue;
         }
-        let left10 = text_size(part);
+        let count2 = subtract(count, 1);
+        let parts = list_take(sentence, count2);
+        let left12 = text_size(tail);
         let right5 = text_size(words);
-        let to4 = subtract(left10, right5);
-        let before = text_slice(part, 0, to4);
-        let line = html_div_cycle_code(guide, [before]);
-        function look_here() {
-          let object4 = property_get(choose, "holder");
-          let button = property_get(object4, "button");
-          app_shared_glow_look_here(button);
+        let to4 = subtract(left12, right5);
+        let before = text_slice(tail, 0, to4);
+        if (not(tail_code)) {
+          list_add(parts, before);
         }
-        app_shared_button_inline_sentence(line, words, look_here);
+        let line = html_div_cycle_code(guide, parts);
+        function look_here() {
+          let target_get = property_get(choose, "target_get");
+          let target = target_get();
+          app_shared_glow_look_here(target);
+        }
+        ("2026-10-14, at the human's asking: a button to choose is drawn as a button, and a line of the program to choose is drawn as the code it is, pressable - each looks like the thing it points at");
+        if (property_get(choose, "button")) {
+          app_shared_button_inline_sentence(line, words, look_here);
+          continue;
+        }
+        let chip = app_code_code_dots_chip_add(line, words);
+        html_cursor_pointer(chip);
+        html_on_click(chip, look_here);
       }
     }
     let duration = app_shared_animation_duration();
@@ -320,10 +344,36 @@ export function app_code_program_step_through_generic(
     html_clear(ask);
     let index = property_get(state, "index");
     let r = app_code_program_step_guide_line_next(lines, trace, index);
-    guide_say(r, null);
-    html_div_cycle_code(ask, ["What is the next line of code to run?"]);
     let b3 = list_size(trace);
     let done = greater_than_equal(index, b3);
+    let holder = {
+      button: null,
+    };
+    function complete_get() {
+      let button = property_get(holder, "button");
+      return button;
+    }
+    let choose = {
+      words: "The program is complete",
+      button: true,
+      target_get: complete_get,
+    };
+    if (not(done)) {
+      let object4 = entry_get();
+      let line_at = property_get(object4, "line");
+      function row_get() {
+        let row = list_get(rows, line_at);
+        return row;
+      }
+      let message2 = list_get(lines, line_at);
+      choose = {
+        words: text_trim(message2),
+        button: false,
+        target_get: row_get,
+      };
+    }
+    guide_say(r, choose);
+    html_div_cycle_code(ask, ["What is the next line of code to run?"]);
     property_set(state, "pressing", true);
     ("the line that runs next is marked as the way on, where being right is already decided, so a walk of the whole course can answer this question as it answers every other");
     if (not(done)) {
@@ -352,7 +402,7 @@ export function app_code_program_step_through_generic(
       ("no success message of its own: the caller shows one, as for every other answerer in this app; showing one here as well put two on the page");
       await on_success();
     }
-    app_code_quiz_choice_button_answer(
+    let complete = app_code_quiz_choice_button_answer(
       choices,
       "The program is complete",
       done,
@@ -360,6 +410,7 @@ export function app_code_program_step_through_generic(
       on_complete,
       on_wrong,
     );
+    property_set(holder, "button", complete);
   }
   async function action_do(action, line_index) {
     "what the right answer to what this line does then does";
@@ -369,6 +420,13 @@ export function app_code_program_step_through_generic(
       let value = property_get(action, "value");
       html_clear(ask);
       let said = text_to(value);
+      let value_holder = {
+        button: null,
+      };
+      function value_get() {
+        let button = property_get(value_holder, "button");
+        return button;
+      }
       guide_say(
         [
           [
@@ -378,7 +436,11 @@ export function app_code_program_step_through_generic(
           ],
           ["So choose: ", said],
         ],
-        null,
+        {
+          words: said,
+          button: true,
+          target_get: value_get,
+        },
       );
       html_div_cycle_code(ask, ["What is ", name, "?"]);
       let b4 = boolean_is(value);
@@ -390,7 +452,15 @@ export function app_code_program_step_through_generic(
         });
       }
       let n = not(value);
-      await app_code_expression_value_choose_await(ask, value, [n], on_wrong);
+      let asked = app_code_expression_value_choose_buttons(
+        ask,
+        value,
+        [n],
+        on_wrong,
+      );
+      property_set(value_holder, "button", asked.right);
+      await asked.pressed;
+      html_remove(asked.box);
       let line_from = list_get(starts, line_index);
       let left = property_get(action, "from");
       let from = subtract(left, line_from);
@@ -521,9 +591,14 @@ export function app_code_program_step_through_generic(
       button: null,
     };
     let r10 = app_code_program_step_guide_action(entry, k);
+    function action_get() {
+      let button = property_get(holder, "button");
+      return button;
+    }
     guide_say(r10, {
       words: right_words,
-      holder,
+      button: true,
+      target_get: action_get,
     });
     let question = equal(k, 0)
       ? "What does this line do?"
