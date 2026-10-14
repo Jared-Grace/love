@@ -37,9 +37,20 @@ export function app_code_program_step_guide_action(entry, k) {
     greater_than(k, 0) &&
     equal(property_get(list_get(actions, subtract(k, 1)), "kind"), "evaluate");
   if (equal(kind, "declare")) {
+    let name2 = property_get(action, "name");
+    ("the human's words 2026-10-14, with let and = written as code. They replace the whole first sentence group, which also said the expression on the right is solved if needed. Not picked: keeping that clause, since the guide asking to evaluate says so at the step it happens");
     let r3 = [
       [
-        "This is a let declaration and assign statement. These declare a variable. Then they solve the expression on the right if needed. Finally they assign a value",
+        "This is a ",
+        "let",
+        " declaration and assign (",
+        "=",
+        ") statement. The declaration means the code is telling JS there is a variable named ",
+        name2,
+        ". The assign means the variable named ",
+        name2,
+        " will be given a value of whatever is to the right of the ",
+        "=",
       ],
       ["First, choose: Declare a variable"],
     ];
