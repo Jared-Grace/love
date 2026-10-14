@@ -22,11 +22,12 @@ import { app_code_note_runs } from "./app_code_note_runs.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
-import { not } from "./not.mjs";
+import { null_is } from "./null_is.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { property_get } from "./property_get.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_size } from "./list_size.mjs";
+import { not } from "./not.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { equal } from "./equal.mjs";
 import { property_set } from "./property_set.mjs";
@@ -56,10 +57,10 @@ export function app_code_program_step_through_generic(
   code,
   on_wrong,
   on_success,
-  guided,
+  guide,
 ) {
   arguments_assert(arguments, 5);
-  ("guided: whether each question is preceded by what to do and why, at the human's asking 2026-10-14, as the order lesson's example guides step by step. The guide is written in the place the question is asked, over it, so it is read just before the choosing. Not picked: a guide above the program, which would be read away from the question it answers.");
+  ("guide: where to say what to do and why before each question, as the order lesson's example guides step by step, at the human's asking 2026-10-14; null when nothing is to be said, as in a quiz. The caller puts it on top, above the program, where the human asked for it the same day. Not picked: writing the guide under the program, just over the question, tried first and taken back.");
   ("a program the learner runs as the computer would, one step at a time. They are asked what the next line of code to run is, and press a line of the program, or that the program is complete; then what that line does, until they say it is complete: declare a variable, evaluate an expression, assign a value, log a value to the console. A name declared gets a note above its line saying what it holds, what is logged is written under the program, and a name evaluated is asked for and then stands in the line as its value. Asked for by the human 2026-10-13, so every step of the computing is done by the learner before they are asked what a program logs.");
   ("What runs, and what each line does, is ",
     fn_name("app_code_program_trace"),
@@ -132,12 +133,13 @@ export function app_code_program_step_through_generic(
     }
   }
   function guide_say(sentences) {
-    "the guide's sentences written where the question is asked, when this example guides";
-    if (not(guided)) {
+    "the guide's sentences written in place of what it said before, when this example guides";
+    if (null_is(guide)) {
       return;
     }
+    html_clear(guide);
     for (let sentence of sentences) {
-      html_div_cycle_code(ask, sentence);
+      html_div_cycle_code(guide, sentence);
     }
   }
   function entry_get() {
@@ -196,6 +198,7 @@ export function app_code_program_step_through_generic(
       property_set(state, "pressing", false);
       rows_plain();
       html_clear(ask);
+      guide_say([]);
       ("no success message of its own: the caller shows one, as for every other answerer in this app; showing one here as well put two on the page");
       await on_success();
     }

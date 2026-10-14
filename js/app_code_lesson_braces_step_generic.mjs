@@ -5,6 +5,7 @@ import { app_code_braces_run_programs_shape } from "./app_code_braces_run_progra
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { app_code_if_blocks_kept } from "./app_code_if_blocks_kept.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
+import { html_div_first } from "./html_div_first.mjs";
 import { app_code_program_step_through_generic } from "./app_code_program_step_through_generic.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
@@ -45,12 +46,14 @@ export function app_code_lesson_braces_step_generic(title, code_get, names) {
     function success() {
       app_shared_success_message(component);
     }
+    ("the guide stands on top of the card, above its Code: label, at the human's asking 2026-10-14");
+    let guide = html_div_first(container);
     app_code_program_step_through_generic(
       component,
       text,
       wrong,
       success,
-      true,
+      guide,
     );
   }
   function step_quiz(
@@ -71,7 +74,7 @@ export function app_code_lesson_braces_step_generic(title, code_get, names) {
       question,
       on_wrong,
       on_success,
-      false,
+      null,
     );
   }
   let forwards = {
