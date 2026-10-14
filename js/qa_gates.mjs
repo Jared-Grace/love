@@ -1,3 +1,4 @@
+import { lyric_video_document_name_take_is_cases_gate_run } from "./lyric_video_document_name_take_is_cases_gate_run.mjs";
 import { giveaway_psalms_record_documents_defects_cases_gate_run } from "./giveaway_psalms_record_documents_defects_cases_gate_run.mjs";
 import { giveaway_psalms_pictures_repo_defects_cases_gate_run } from "./giveaway_psalms_pictures_repo_defects_cases_gate_run.mjs";
 import { giveaway_psalms_descriptions_defects_cases_gate_run } from "./giveaway_psalms_descriptions_defects_cases_gate_run.mjs";
@@ -1251,6 +1252,7 @@ export function qa_gates() {
     giveaway_psalms_descriptions_defects_cases_gate_run,
     giveaway_psalms_pictures_repo_defects_cases_gate_run,
     giveaway_psalms_record_documents_defects_cases_gate_run,
+    lyric_video_document_name_take_is_cases_gate_run,
   ];
   return gates;
 }
