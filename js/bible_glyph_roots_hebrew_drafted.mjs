@@ -1090,7 +1090,17 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["4688", "metsolah", "water_wave+hole", "depths"],
     ["4419", "mallach", "salt+doer", "sailor"],
     ["2940", "taam_noun", "face_savoring_food+thing", "taste; decree"],
-    ["2864", "chathar", "pick+doing", "dig; row"],
+    ["2864", "chathar", "hole+pick+doing", "dig; row"],
+    ["2759", "charishi", "sun+fire+describing", "scorching"],
+    ["2587", "channun", "heart_orange+describing", "gracious"],
+    ["2394", "chozqah", "might+up_arrow+thing", "force"],
+    ["2259", "chobel", "knot+thread+doer", "sailor; captain"],
+    ["2224", "zarach", "sun+up_arrow+doing", "rise; shine"],
+    ["2197", "zaaph", "anger_symbol+water_wave", "rage"],
+    ["750", "arek", "straight_ruler+clock+describing", "slow; long"],
+    ["661", "aphaph", "water_wave+around+doing", "engulf"],
+    ["370", "meayin", "question+round_pushpin+tray_out", "from where"],
+    ["155", "addereth", "cloak+sparkles", "cloak; glory"],
   ];
   let drafted = [];
   for (let row of rows) {
