@@ -1049,7 +1049,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["3323", "yitshar", "oil+new_button", "fresh oil"],
     ["3276", "yaal", "chart_increasing+doing", "profit"],
     ["2664", "chaphas", "performing_arts+doing", "disguise or search"],
-    ["2344", "chol", "beach", "sand"],
+    ["2344", "chol", "sea+brown_square", "sand"],
     ["1722", "dehab", "gold+thing", "gold"],
     ["1548", "galach", "razor+doing", "shave"],
     ["1215", "betsa", "money_bag+hand_receiving", "gain"],
