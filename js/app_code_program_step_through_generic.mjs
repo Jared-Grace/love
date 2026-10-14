@@ -63,7 +63,8 @@ import { sleep } from "./sleep.mjs";
 import { app_code_value_logged_output } from "./app_code_value_logged_output.mjs";
 import { app_code_label_of_code } from "./app_code_label_of_code.mjs";
 import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
-import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
+import { app_code_style_normal_box } from "./app_code_style_normal_box.mjs";
+import { html_div_text } from "./html_div_text.mjs";
 import { app_code_program_step_guide_action } from "./app_code_program_step_guide_action.mjs";
 export function app_code_program_step_through_generic(
   parent,
@@ -126,7 +127,7 @@ export function app_code_program_step_through_generic(
   let state = {
     index: 0,
     pressing: false,
-    logged_labeled: false,
+    logged_box: null,
     asked: null,
   };
   let highlight = app_code_expression_chosen_background_color();
@@ -412,21 +413,29 @@ export function app_code_program_step_through_generic(
     }
     if (equal(kind, "log")) {
       ("2026-10-14, at the human's asking: what is logged comes in as the guide's words do - the room grows, and the words show once it has arrived - by the same function, so the two cannot come to move differently. Only what is new is hidden while it grows, so what was logged before stays readable");
-      let entry = html_div(logged);
-      let b6 = property_get(state, "logged_labeled");
+      ("2026-10-14, at the human's asking: every line logged goes into the one box, under the one label, as the output of a program is drawn everywhere else in this course; the first log brings the label and the box, and each one after it adds a line to the box. Not picked: a box for each log, done first, which drew one output as several");
       let value3 = property_get(action, "value");
       let answer = text_to(value3);
-      function log_write() {
-        if (not(b6)) {
+      let duration3 = app_shared_animation_duration();
+      let box2 = property_get(state, "logged_box");
+      if (null_is(box2)) {
+        let entry = html_div(logged);
+        function log_first() {
           let output = app_code_value_logged_output();
           let label = app_code_label_of_code(output);
           app_code_example_answer_label(entry, label);
+          let box3 = app_code_style_normal_box(entry);
+          html_div_text(box3, answer);
+          property_set(state, "logged_box", box3);
         }
-        app_code_style_normal_text(entry, answer);
+        await html_height_change_animate(logged, entry, log_first, duration3);
+        return;
       }
-      property_set(state, "logged_labeled", true);
-      let duration3 = app_shared_animation_duration();
-      await html_height_change_animate(logged, entry, log_write, duration3);
+      let line = html_div(box2);
+      function log_more() {
+        html_text_set(line, answer);
+      }
+      await html_height_change_animate(logged, line, log_more, duration3);
       return;
     }
     ("the line that ran stays highlighted while the next line is asked for, at the human's asking 2026-10-14, so the learner can see where the computer is coming from; pressing the next line moves the highlight there");
