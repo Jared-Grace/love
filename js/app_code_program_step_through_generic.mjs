@@ -41,8 +41,8 @@ import { property_get } from "./property_get.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
 import { property_set } from "./property_set.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { html_on_click } from "./html_on_click.mjs";
@@ -113,10 +113,12 @@ export function app_code_program_step_through_generic(
   let ask = html_div(wrap);
   html_flex_column_stretch(ask);
   app_code_flex_gap(ask);
+  ("asked: what the line is asked to do next while that is asked, so a line pressed then can be judged; null while nothing is asked of a line, as while it is doing what was chosen");
   let state = {
     index: 0,
     pressing: false,
     logged_labeled: false,
+    asked: null,
   };
   let highlight = app_code_expression_chosen_background_color();
   let wrong_color = app_code_lesson_quiz_wrong_code_background_color();
@@ -213,11 +215,36 @@ export function app_code_program_step_through_generic(
   }
   for (let i = 0; less_than(i, list_size(rows)); i++) {
     let row = list_get(rows, i);
-    function on_row() {
+    async function on_row() {
       "a line pressed while the next line to run is being asked for";
       let b = property_get(state, "pressing");
       if (not(b)) {
-        return;
+        ("2026-10-14, at the human's asking: pressing a line while what this line does is asked is a shortcut for choosing that this line is complete and then pressing that line - so it is right only where saying complete is right, and otherwise it is a wrong answer like any other. Not picked: ignoring the press, as before, which told the learner nothing. Not picked: taking the press as complete whatever was asked, which would let a line be left with its work undone");
+        let asked = property_get(state, "asked");
+        if (null_is(asked)) {
+          return;
+        }
+        let b5 = equal(asked, "complete");
+        if (not(b5)) {
+          on_wrong();
+          let object2 = entry_get();
+          let current = property_get(object2, "line");
+          let b8 = equal(i, current);
+          if (not(b8)) {
+            html_style_background_color_set(row, wrong_color);
+          }
+          return;
+        }
+        property_set(state, "asked", null);
+        let object3 = entry_get();
+        let value6 = property_get(object3, "line");
+        await action_do(
+          {
+            kind: "complete",
+          },
+          value6,
+        );
+        next_line_ask();
       }
       let index = property_get(state, "index");
       let b2 = list_size(trace);
@@ -401,6 +428,7 @@ export function app_code_program_step_through_generic(
           kind: "complete",
         };
     let kind = property_get(action, "kind");
+    property_set(state, "asked", kind);
     html_clear(ask);
     let r10 = app_code_program_step_guide_action(entry, k);
     guide_say(r10);
@@ -413,6 +441,7 @@ export function app_code_program_step_through_generic(
       answered: false,
     };
     async function on_right() {
+      property_set(state, "asked", null);
       await action_do(action, line_index);
       if (equal(kind, "complete")) {
         next_line_ask();
