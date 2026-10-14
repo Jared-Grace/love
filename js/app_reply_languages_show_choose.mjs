@@ -1,4 +1,3 @@
-import { list_add_multiple } from "./list_add_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
@@ -6,6 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { app_shared_buttons_mark_current } from "./app_shared_buttons_mark_current.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
 import { app_reply_languages_codes_text } from "./app_reply_languages_codes_text.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_text_set } from "./html_text_set.mjs";
@@ -60,4 +60,5 @@ export function app_reply_languages_show_choose(
   property_set(languages_show_held, "label_refresh", label_refresh);
   label_refresh();
   mark();
+  property_set(languages_show_held, "mark", mark);
 }

@@ -45,5 +45,6 @@ export function app_reply_testament_choose(root) {
   }
   each(choices, choice_draw);
   mark();
+  property_set(testament_held, "mark", mark);
   return testament_held;
 }
