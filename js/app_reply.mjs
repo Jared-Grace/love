@@ -1,3 +1,4 @@
+import { app_reply_languages_chosen_default } from "./app_reply_languages_chosen_default.mjs";
 import { app_reply_cards_handlers_draw } from "./app_reply_cards_handlers_draw.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_shared_footer } from "./app_shared_footer.mjs";
@@ -5,7 +6,6 @@ import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { bible_verses_uplifting } from "./bible_verses_uplifting.mjs";
 import { list_filter_text_includes_not } from "./list_filter_text_includes_not.mjs";
 import { ebible_versions_english_choices_browser } from "./ebible_versions_english_choices_browser.mjs";
-import { app_shared_bible_languages_chosen_default } from "./app_shared_bible_languages_chosen_default.mjs";
 import { app_reply_languages_chosen_reset } from "./app_reply_languages_chosen_reset.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_reply_initialize } from "./app_reply_initialize.mjs";
@@ -16,7 +16,7 @@ export async function app_reply(context) {
   let choices = property_get(r, "choices");
   let languages = property_get(r, "languages");
   await ebible_versions_english_choices_browser();
-  let languages_chosen_default = app_shared_bible_languages_chosen_default();
+  let languages_chosen_default = app_reply_languages_chosen_default();
   let languages_chosen_held = {
     languages_chosen: [],
   };
