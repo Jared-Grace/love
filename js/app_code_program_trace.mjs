@@ -1,21 +1,21 @@
-import { subtract } from "./subtract.mjs";
-import { equal } from "./equal.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { list_size } from "./list_size.mjs";
+import { subtract } from "./subtract.mjs";
+import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { error } from "./error.mjs";
 import { list_size_assert } from "./list_size_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { js_unparse } from "./js_unparse.mjs";
+import { not_equal } from "./not_equal.mjs";
 export function app_code_program_trace(code) {
   arguments_assert(arguments, 1);
-  ("every line of a program in the order the computer runs it, each with what running it does, in order: an expression evaluated, a value assigned to a name, a value logged to the console. A line is done once its last thing is done. Asked for by the human 2026-10-13, so a learner can do every step of the running themselves before being asked what a program logs.");
+  ("every line of a program in the order the computer runs it, each with what running it does, in order: a name declared, an expression evaluated, a value assigned to a name, a value logged to the console. A line is done once its last thing is done. Asked for by the human 2026-10-13, so a learner can do every step of the running themselves before being asked what a program logs.");
   ("A line is the line a statement begins on, and an else if's line is the one its own if begins on. Not picked: counting a line holding only } or } else { as one that runs, since nothing on it is worked out; the computer goes from an if's line straight to the first line of the { ... } it picks.");
   ("A value written out is used as it stands, with nothing to evaluate; a name is evaluated by looking up the value it holds. Anything else stops rather than guessing, so a program this does not answer for is refused where it arrives.");
   let ast = js_parse(code);
@@ -80,6 +80,10 @@ export function app_code_program_trace(code) {
       let id = property_get(declaration, "id");
       let name = property_get(id, "name");
       let init = property_get(declaration, "init");
+      list_add(actions, {
+        kind: "declare",
+        name,
+      });
       let value = value_of(init, actions);
       list_add(actions, {
         kind: "assign",

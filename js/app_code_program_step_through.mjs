@@ -1,4 +1,3 @@
-import { each } from "./each.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_program_trace } from "./app_code_program_trace.mjs";
@@ -9,13 +8,20 @@ import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_text_align_left } from "./html_text_align_left.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
-import { html_text_set } from "./html_text_set.mjs";
 import { list_add } from "./list_add.mjs";
+import { html_text_set } from "./html_text_set.mjs";
 import { text_size } from "./text_size.mjs";
 import { app_code_expression_chosen_background_color } from "./app_code_expression_chosen_background_color.mjs";
 import { app_code_lesson_quiz_wrong_code_background_color } from "./app_code_lesson_quiz_wrong_code_background_color.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { list_get } from "./list_get.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { html_clear } from "./html_clear.mjs";
+import { app_code_note_runs } from "./app_code_note_runs.mjs";
+import { html_span } from "./html_span.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
+import { html_style_opacity } from "./html_style_opacity.mjs";
 import { property_get } from "./property_get.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_size } from "./list_size.mjs";
@@ -24,9 +30,9 @@ import { greater_than_equal } from "./greater_than_equal.mjs";
 import { equal } from "./equal.mjs";
 import { property_set } from "./property_set.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
-import { html_clear } from "./html_clear.mjs";
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { html_on_click } from "./html_on_click.mjs";
+import { each } from "./each.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
@@ -36,9 +42,13 @@ import { app_code_expression_value_choose_await } from "./app_code_expression_va
 import { subtract } from "./subtract.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { text_to } from "./text_to.mjs";
-import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
+import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
+import { html_height_change_animate } from "./html_height_change_animate.mjs";
+import { html_transition_set } from "./html_transition_set.mjs";
+import { sleep } from "./sleep.mjs";
 import { app_code_value_logged_output } from "./app_code_value_logged_output.mjs";
 import { app_code_label_of_code } from "./app_code_label_of_code.mjs";
+import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
 export function app_code_program_step_through(
   parent,
@@ -47,12 +57,12 @@ export function app_code_program_step_through(
   on_success,
 ) {
   arguments_assert(arguments, 4);
-  ("a program the learner runs as the computer would, one step at a time. They are asked what the next line of code to run is, and press a line of the program, or that the program is complete; then what that line does, until they say it is complete: evaluate an expression, assign a value, log a value to the console. What is assigned is written under the program beside its name, what is logged under that, and a name evaluated is asked for and then stands in the line as its value. Asked for by the human 2026-10-13, so every step of the computing is done by the learner before they are asked what a program logs.");
+  ("a program the learner runs as the computer would, one step at a time. They are asked what the next line of code to run is, and press a line of the program, or that the program is complete; then what that line does, until they say it is complete: declare a variable, evaluate an expression, assign a value, log a value to the console. A name declared gets a note above its line saying what it holds, what is logged is written under the program, and a name evaluated is asked for and then stands in the line as its value. Asked for by the human 2026-10-13, so every step of the computing is done by the learner before they are asked what a program logs.");
   ("What runs, and what each line does, is ",
     fn_name("app_code_program_trace"),
     "'s to say, so the steps asked for here are the ones the computer takes.");
   ("A line is pressed in the program itself rather than picked from a list of copies, since the question is where in the program the computer is. A wrong line turns red until the right one is pressed. The answers are the choices of every other question in this app, so a wrong one turns red and is spent and the right one turns green.");
-  ("A line evaluated goes back to how it is written once it is complete, since the program itself does not change as it runs; what it came to is kept in the names written under it. Not picked: leaving if (false) { in the program, which would show a program nobody wrote.");
+  ("A line evaluated goes back to how it is written once it is complete, since the program itself does not change as it runs; what it came to is kept in the notes above the names. Not picked: leaving if (false) { in the program, which would show a program nobody wrote.");
   ("Not built yet: an expression with an operator in it, which is meant to be worked out by the pressing the expression lessons already teach; until then such a line is refused where it arrives.");
   let trace = app_code_program_trace(code);
   let wrap = html_div(parent);
@@ -70,14 +80,19 @@ export function app_code_program_step_through(
   let rows = [];
   let starts = [];
   let line_start = 0;
+  let slots = [];
+  let comments = [];
   for (let line of lines) {
+    let slot = html_div(program);
+    let comment = html_div(slot);
+    list_add(slots, slot);
+    list_add(comments, comment);
     let row = html_div(program);
     html_text_set(row, line);
     list_add(rows, row);
     list_add(starts, line_start);
     line_start = line_start + text_size(line) + 1;
   }
-  let names = html_div(wrap);
   let logged = html_div(wrap);
   let ask = html_div(wrap);
   html_flex_column_stretch(ask);
@@ -85,7 +100,6 @@ export function app_code_program_step_through(
   let state = {
     index: 0,
     pressing: false,
-    names_labeled: false,
     logged_labeled: false,
   };
   let highlight = app_code_expression_chosen_background_color();
@@ -99,6 +113,22 @@ export function app_code_program_step_through(
     let row = list_get(rows, line_index);
     let text = list_get(lines, line_index);
     html_text_set(row, text);
+  }
+  function comment_draw(line_index, name, value_text) {
+    "the note above a declared name saying what it holds, drawn as every other note in this app is";
+    let comment = list_get(comments, line_index);
+    let note = text_combine_multiple(["// ", name, " value: ", value_text]);
+    html_clear(comment);
+    let runs = app_code_note_runs(note);
+    for (let run of runs) {
+      let span = html_span(comment);
+      let text2 = list_get(run, 0);
+      html_span_text(span, text2);
+      let color = list_get(run, 1);
+      html_font_color_set(span, color);
+      let value4 = list_get(run, 2);
+      html_style_opacity(span, value4);
+    }
   }
   function entry_get() {
     let index = property_get(state, "index");
@@ -198,16 +228,29 @@ export function app_code_program_step_through(
       html_text_set(component, evaluated);
       return;
     }
-    if (equal(kind, "assign")) {
-      let b5 = property_get(state, "names_labeled");
-      if (not(b5)) {
-        app_code_example_answer_label(names, "Names:");
-        property_set(state, "names_labeled", true);
+    if (equal(kind, "declare")) {
+      ("2026-10-14, at the human's asking: declaring a name puts a note above its line saying it holds undefined; the room opens first, moving the program down, and then the note fades in, so nothing jumps. Assigning then writes the value over the undefined.");
+      ("Not picked: keeping the list of names under the program as well, which would say every value twice; the note stands by the line that made it, where the program is being read.");
+      let name4 = property_get(action, "name");
+      let slot = list_get(slots, line_index);
+      let comment2 = list_get(comments, line_index);
+      let duration = app_shared_animation_duration();
+      html_style_opacity(comment2, "0");
+      function note_write() {
+        comment_draw(line_index, name4, "undefined");
       }
+      await html_height_change_animate(slot, comment2, note_write, duration);
+      let timing = text_combine_multiple(["opacity ", duration, "ms"]);
+      html_transition_set(comment2, timing);
+      html_style_opacity(comment2, "1");
+      await sleep(duration);
+      return;
+    }
+    if (equal(kind, "assign")) {
       let name2 = property_get(action, "name");
       let value2 = property_get(action, "value");
       let t = text_to(value2);
-      html_div_cycle_code(names, ["", name2, " is ", t]);
+      comment_draw(line_index, name2, t);
       return;
     }
     if (equal(kind, "log")) {
@@ -240,7 +283,10 @@ export function app_code_program_step_through(
         };
     let kind = property_get(action, "kind");
     html_clear(ask);
-    html_div_cycle_code(ask, ["What does this line do?"]);
+    let question = equal(k, 0)
+      ? "What does this line do?"
+      : "What else does this line do?";
+    html_div_cycle_code(ask, [question]);
     let choices = html_div(ask);
     let answered = {
       answered: false,
@@ -254,6 +300,7 @@ export function app_code_program_step_through(
       actions_ask(k + 1);
     }
     let options = [
+      ["declare", "Declare a variable"],
       ["evaluate", "Evaluate an expression"],
       ["assign", "Assign a value"],
       ["log", "Log a value to the console"],
