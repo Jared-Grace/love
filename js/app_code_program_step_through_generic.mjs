@@ -48,6 +48,7 @@ import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { app_code_program_step_guide_line_next } from "./app_code_program_step_guide_line_next.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
+import { sleep_success_color } from "./sleep_success_color.mjs";
 import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
 import { text_to } from "./text_to.mjs";
 import { boolean_is } from "./boolean_is.mjs";
@@ -287,6 +288,7 @@ export function app_code_program_step_through_generic(
     };
     async function on_complete() {
       property_set(state, "pressing", false);
+      await sleep_success_color();
       rows_plain();
       for (
         let line_index = 0;
@@ -442,6 +444,8 @@ export function app_code_program_step_through_generic(
     };
     async function on_right() {
       property_set(state, "asked", null);
+      ("2026-10-14, at the human's asking: the right choice is held green for as long as any other success in this app before the question is taken away, by the same pause the value choices take");
+      await sleep_success_color();
       await action_do(action, line_index);
       if (equal(kind, "complete")) {
         next_line_ask();
