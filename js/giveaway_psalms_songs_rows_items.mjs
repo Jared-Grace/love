@@ -23,17 +23,27 @@ export function giveaway_psalms_songs_rows_items(rows) {
   ("★ SO A BOX NEVER HOLDS SINGING WITHOUT THE WORDS BEING SUNG, WHICH IS THE POINT OF PUTTING THEM IN AT THIS LAYER. The person asked that the psalm's own words go in its box; adding them one box at a time would leave a box somebody forgot, and nothing would say so. Here a box cannot exist without them, because the same loop that makes the box makes them.");
   ("★ A FILE IN A BOX IS NOW ONE OF TWO THINGS, AND THE KIND IS WHAT SAYS WHICH, WHICH IS WHY NO SECOND FIELD WAS ADDED TO SAY IT AGAIN. A recording is a file sitting on this disk and carries the name it sits under; the words are made at the moment they are handed over and carry the two words naming which of the three renderings they are. A field saying disk or made would be a second copy of something the kind already settles, and two copies of one fact come apart. What reads a file therefore looks at its kind first - the same fixed list the description works off - and a kind nothing knows about stops it rather than being read as either.");
   ("★ THE COUNT OF FILES IN A BOX NOW COUNTS BOTH, SO IT IS NO LONGER THE NUMBER OF ROWS THE RECORD HOLDS FOR THAT PSALM. Anything that printed the record's row count as the file count was right until this and is wrong after it, by exactly three per box. The count is taken from the list rather than worked out, so it cannot drift from what is in the box.");
+  ("★ A PICTURE CARRIES THE PLACE IT SITS IN THIS REPO AND A RECORDING DOES NOT, BECAUSE A PICTURE'S NAME DOES NOT SAY WHERE IT IS. Every recording of a psalm is in the one folder handed to the writer of the record, so a bare name finds it; a crop of a painting sits in one of nearly four hundred folders, one to a timing document, and the name on it says which painting it is and never which folder. Handed a crop called pd_bellini_gebed_in_de_hof_van_olijven.png and nothing else, whatever comes to upload these boxes has nowhere to look, and that is not a failure it could report - it is a file it quietly cannot find, in a box it uploads anyway. The record already worked the folder out during its walk, so the place is carried straight through rather than searched for again.");
+  ("The field is only on the files that have one, and the alternative was the same field on every file with nothing in it for the recordings. Nothing in a field is the shape that reads as a failed lookup rather than as an answer, and a reader could not tell a recording - which never had a path - from a picture whose path went missing. The shape of a file in a box already differs by its kind, deliberately: a made file carries the two words naming which rendering it is and no disk name at all, because it is not on any disk. So a kind bringing its own fields is the rule here and not an exception made for the paintings.");
+  ("The one file is now built where the row is read and handed along whole, rather than built there and copied field by field a second time once its box is known. The two lists were the same three fields written twice, which is two places to add a fourth and one of them easy to miss - as this very change would have been.");
   let bible_folder = giveaway_bible_folder();
   let placed = [];
   for (let row of rows) {
     let chapter_code_of_row = giveaway_passage_code_chapter_code(
       row.passage_code,
     );
-    let one = {
-      chapter_code: chapter_code_of_row,
+    let file = {
       kind: row.kind,
       file_name: row.file_name,
       path_in_item: row.name_published,
+    };
+    let path_in_repo = row.path_in_repo;
+    if (path_in_repo) {
+      file.path_in_repo = path_in_repo;
+    }
+    let one = {
+      chapter_code: chapter_code_of_row,
+      file: file,
     };
     list_add(placed, one);
   }
@@ -43,12 +53,7 @@ export function giveaway_psalms_songs_rows_items(rows) {
     let chapter_code = group.key;
     let files = [];
     for (let one of group.items) {
-      let file = {
-        kind: one.kind,
-        file_name: one.file_name,
-        path_in_item: one.path_in_item,
-      };
-      list_add(files, file);
+      list_add(files, one.file);
     }
     let named = giveaway_passage_text_file_names(chapter_code, bible_folder);
     for (let one of named) {

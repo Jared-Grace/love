@@ -59,10 +59,12 @@ export function app_code_program_trace(code) {
   }
   function line_add(node, actions) {
     let line = line_of(node);
-    list_add(trace, {
+    let entry = {
       line,
       actions,
-    });
+    };
+    list_add(trace, entry);
+    return entry;
   }
   function statements_run(statements) {
     for (let statement of statements) {
@@ -119,7 +121,9 @@ export function app_code_program_trace(code) {
     if (equal(type, "IfStatement")) {
       let test = property_get(node, "test");
       let value4 = value_of(test, actions);
-      line_add(node, actions);
+      let entry2 = line_add(node, actions);
+      ("an if's line also says what its condition came to, since a condition written out as true or false is not evaluated and so is in none of its actions; a guide saying why the next line runs reads it here");
+      property_set(entry2, "condition", value4);
       if (value4) {
         let consequent = property_get(node, "consequent");
         let value5 = property_get(consequent, "body");
