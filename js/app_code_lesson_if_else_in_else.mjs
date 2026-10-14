@@ -11,6 +11,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { js_code_else_one_line } from "./js_code_else_one_line.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_braces_run_if_else_in_else } from "./app_code_lesson_braces_run_if_else_in_else.mjs";
 import { app_code_lesson_if_in_else } from "./app_code_lesson_if_in_else.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -67,6 +68,26 @@ export function app_code_lesson_if_else_in_else() {
     let joy_dots = text_combine_multiple([say_joy, " ..."]);
     let else_joy = js_code_else_one_line(joy_dots);
     let else_kindness = js_code_else_one_line(say_kindness);
+    ("2026-10-14, at the human's asking: the section-run lesson straight before is remembered first, as Two else ifs remembers its own");
+    let box_run = app_code_container_light_blue(root);
+    app_code_remember_from_lesson(
+      box_run,
+      context,
+      app_code_lesson_braces_run_if_else_in_else,
+      [
+        "The ",
+        "if",
+        " and ",
+        "else",
+        " inside an ",
+        "else",
+        " are reached only when the ",
+        "if",
+        " before that ",
+        "else",
+        " is false",
+      ],
+    );
     let box_one = app_code_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
