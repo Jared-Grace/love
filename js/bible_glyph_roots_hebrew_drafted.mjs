@@ -1103,7 +1103,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["155", "addereth", "cloak+sparkles", "cloak; glory"],
     ["2545", "chamoth", "mother+family", "mother-in-law"],
     ["4772", "margeloth", "foot+round_pushpin", "place of the feet"],
-    ["7997", "shalal_verb", "plunder+doing", "plunder"],
+    ["7997", "shalal_verb", "plunder+hand+doing", "plunder"],
     ["7387", "reqam", "hand+zero+manner", "empty-handed"],
     ["4843", "marar", "lemon+doing", "be bitter"],
     ["3860", "lahen", "toward+pointing_back+crowd", "therefore; for them"],
