@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { giveaway_psalms_record_path } from "./giveaway_psalms_record_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { giveaway_psalms_paintings_rows } from "./giveaway_psalms_paintings_rows.mjs";
-import { equal } from "./equal.mjs";
+import { giveaway_record_row_picture_is } from "./giveaway_record_row_picture_is.mjs";
 import { not } from "./not.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_exists } from "./property_exists.mjs";
@@ -16,13 +16,14 @@ export async function giveaway_psalms_record_pictures_stale_report() {
   ("★ IT COMPARES THE RECORD AGAINST THE DOCUMENTS AND NOT AGAINST THE FOLDERS ON THE DISK, BECAUSE A CROP NOBODY HAS CHOSEN IS NOT A FAULT. The picture folders also hold crops that were tried and not used; those have no document naming them, and they are not meant to be given away. What is meant to be given away is what a timing document names, and that is the same list the record is built from - so a difference between the two can only mean the record has fallen behind, which is a thing somebody can fix.");
   ("★ IT REPORTS AND NEVER REFUSES, BECAUSE ONLY THE HUMAN CAN CLEAR IT. The record is rewritten by a command that is handed to a person to paste, since it reads a folder outside the repo. So any agent adding a crop leaves this disagreeing until that person runs the write - and a gate that an agent cannot clear would sit red as the normal state of the repo and stop meaning anything.");
   ("A picture the record has and no document names any more is reported beside the other direction. That one matters differently: the name in the record is the address a published file keeps, so a crop swapped out from under it is how a name already given to somebody stops pointing at anything.");
+  ("Which rows are pictures is asked of the named test for it rather than spelled here, because the record holds four kinds now and the spelling of the word is the record's own business.");
   let file_path = giveaway_psalms_record_path();
   let rows = await file_read_json(file_path);
   let held = await giveaway_psalms_paintings_rows();
   let recorded = {};
   let recorded_count = 0;
   for (let row of rows) {
-    let picture_is = equal(row.kind, "picture");
+    let picture_is = giveaway_record_row_picture_is(row);
     if (not(picture_is)) {
       continue;
     }
@@ -43,7 +44,7 @@ export async function giveaway_psalms_record_pictures_stale_report() {
   }
   let gone_from_documents = [];
   for (let row of rows) {
-    let picture_is = equal(row.kind, "picture");
+    let picture_is = giveaway_record_row_picture_is(row);
     if (not(picture_is)) {
       continue;
     }
