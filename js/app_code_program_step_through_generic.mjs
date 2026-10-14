@@ -9,6 +9,8 @@ import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_text_align_left } from "./html_text_align_left.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { list_add } from "./list_add.mjs";
+import { app_shared_code_padding_x } from "./app_shared_code_padding_x.mjs";
+import { html_style_bleed_x } from "./html_style_bleed_x.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { text_size } from "./text_size.mjs";
 import { app_code_expression_chosen_background_color } from "./app_code_expression_chosen_background_color.mjs";
@@ -103,6 +105,9 @@ export function app_code_program_step_through_generic(
     list_add(slots, slot);
     list_add(comments, comment);
     let row = html_div(program);
+    ("2026-10-14, at the human's asking: a line's colour runs to both edges of the program rather than stopping at its padding, and its text stays where it was");
+    let padding = app_shared_code_padding_x();
+    html_style_bleed_x(row, padding);
     html_text_set(row, line);
     list_add(shown, line);
     list_add(noted, null);
@@ -403,16 +408,22 @@ export function app_code_program_step_through_generic(
       return;
     }
     if (equal(kind, "log")) {
+      ("2026-10-14, at the human's asking: what is logged comes in as the guide's words do - the room grows, and the words show once it has arrived - by the same function, so the two cannot come to move differently. Only what is new is hidden while it grows, so what was logged before stays readable");
+      let entry = html_div(logged);
       let b6 = property_get(state, "logged_labeled");
-      if (not(b6)) {
-        let output = app_code_value_logged_output();
-        let label = app_code_label_of_code(output);
-        app_code_example_answer_label(logged, label);
-        property_set(state, "logged_labeled", true);
-      }
       let value3 = property_get(action, "value");
       let answer = text_to(value3);
-      app_code_style_normal_text(logged, answer);
+      function log_write() {
+        if (not(b6)) {
+          let output = app_code_value_logged_output();
+          let label = app_code_label_of_code(output);
+          app_code_example_answer_label(entry, label);
+        }
+        app_code_style_normal_text(entry, answer);
+      }
+      property_set(state, "logged_labeled", true);
+      let duration3 = app_shared_animation_duration();
+      await html_height_change_animate(logged, entry, log_write, duration3);
       return;
     }
     ("the line that ran stays highlighted while the next line is asked for, at the human's asking 2026-10-14, so the learner can see where the computer is coming from; pressing the next line moves the highlight there");
