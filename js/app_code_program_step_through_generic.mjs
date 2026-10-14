@@ -354,7 +354,8 @@ export function app_code_program_step_through_generic(
       let fades = [];
       for (let span of old_spans) {
         html_visibility_visible(span);
-        list_add(fades, html_opacity_animate(span, "0", duration2));
+        let item = await html_opacity_animate(span, "0", duration2);
+        list_add(fades, item);
       }
       await Promise.all(fades);
       let hidden3 = comment_draw(line_index, name2, t, "value");
