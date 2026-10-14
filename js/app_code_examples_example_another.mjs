@@ -1,14 +1,15 @@
-import { app_code_above_draw } from "./app_code_above_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_current } from "./app_code_lesson_current.mjs";
 import { app_code_lesson_title_strip } from "./app_code_lesson_title_strip.mjs";
 import { property_get } from "./property_get.mjs";
+import { app_code_above_draw } from "./app_code_above_draw.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_example_answer_gap } from "./app_code_example_answer_gap.mjs";
 import { app_code_lesson_text_example_another } from "./app_code_lesson_text_example_another.mjs";
 import { app_code_lesson_examples_plural_is } from "./app_code_lesson_examples_plural_is.mjs";
 import { app_code_lesson_examples_complete_is } from "./app_code_lesson_examples_complete_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { app_code_lesson_examples_guided_is } from "./app_code_lesson_examples_guided_is.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_code_batch_on_refill } from "./app_code_batch_on_refill.mjs";
@@ -43,6 +44,11 @@ export function app_code_examples_example_another(context, root) {
       word_one = "is the ";
     }
     is_a = text_combine_multiple([word_one, root_word, ":"]);
+  }
+  let guided = app_code_lesson_examples_guided_is(lesson);
+  if (guided) {
+    ("the human's words 2026-10-14");
+    is_a = "is an example that guides you step-by-step:";
   }
   let combined = text_combine("Here ", is_a);
   html_div_text(c, combined);

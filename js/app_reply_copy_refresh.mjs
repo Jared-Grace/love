@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { prayer_blessing_expand } from "./prayer_blessing_expand.mjs";
 import { prayer_blessing_aaronic } from "./prayer_blessing_aaronic.mjs";
 import { list_map } from "./list_map.mjs";
-import { text_emojis_jewish } from "./text_emojis_jewish.mjs";
+import { text_reply_jewish } from "./text_reply_jewish.mjs";
 import { app_reply_languages_codes_text } from "./app_reply_languages_codes_text.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
@@ -18,7 +18,7 @@ export async function app_reply_copy_refresh(
   let said = responses;
   if (jewish) {
     v = prayer_blessing_aaronic();
-    said = list_map(responses, text_emojis_jewish);
+    said = list_map(responses, text_reply_jewish);
   }
   let ending = [];
   if (languages_show) {
