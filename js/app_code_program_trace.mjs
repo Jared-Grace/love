@@ -86,12 +86,17 @@ export function app_code_program_trace(code) {
       list_add(actions, {
         kind: "declare",
         name,
+        from: property_get(id, "start"),
+        to: property_get(id, "end"),
       });
+      ("a declare says where its name is written, and an assign where what is right of the = is written, as an evaluate says where its name is, so a stepper can send a copy of either into the note it writes");
       let value = value_of(init, actions);
       list_add(actions, {
         kind: "assign",
         name,
         value,
+        from: property_get(init, "start"),
+        to: property_get(init, "end"),
       });
       property_set(values, name, value);
       line_add(node, actions);
