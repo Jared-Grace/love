@@ -1050,7 +1050,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["2215", "zizanion", "wheat+thumbs_down", "weeds"],
     ["2135", "eunouchos", "castle+kneeling", "eunuch"],
     ["2117", "euthus", "straight_ruler+describing", "straight"],
-    ["2066", "esthes", "jeans", "clothing"],
+    ["2066", "esthes", "t_shirt+sparkles", "clothing"],
     ["1950", "epilanthanomai", "brain+dashing_away+doing", "forget"],
     ["1807", "exaireo", "hand+tray_out+doing", "rescue or pluck out"],
     ["1753", "energeia", "tray_in+tools+thing", "working power"],
