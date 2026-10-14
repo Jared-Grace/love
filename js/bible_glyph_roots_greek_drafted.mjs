@@ -1107,7 +1107,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["155", "aitema", "hand_receiving+question+scroll", "request"],
     ["48", "hagnizo", "soap+sparkle+doing", "purify"],
     ["4108", "planos", "dizzy+doer", "deceiver"],
-    ["2959", "kuria", "crown+woman", "lady"],
+    ["2959", "kuria", "woman+crown", "lady"],
     ["5489", "chartes", "page_with_curl", "paper"],
     ["2137", "euodoo", "road+thumbs_up+doing", "prosper"],
     ["1926", "epidechomai", "palm_up_hand+toward+doing", "welcome"],
@@ -1116,7 +1116,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["5279", "hupomimnesko", "reminder_ribbon+hands_giving+doing", "remind"],
     ["3401", "mimeomai", "footprints+likeness+doing", "imitate"],
     ["2554", "kakopoieo", "thumbs_down+hand+doing", "do evil"],
-    ["1482", "ethnikos", "map+person", "pagan"],
+    ["1482", "ethnikos", "map+describing", "pagan"],
     ["516", "axios_manner", "gold+manner", "worthily"],
   ];
   let drafted = [];
