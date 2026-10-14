@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { giveaway_record_row_song_is } from "./giveaway_record_row_song_is.mjs";
@@ -16,7 +17,9 @@ export function giveaway_psalms_songs_disk_defects(rows, file_names_disk) {
   ("A recording nobody wrote a row for is the opposite case and costs nothing but absence: the singing exists and is simply not being given away. It is still worth saying, because absence is silent and a record that looks complete is exactly what stops anybody looking.");
   ("Only the recordings a reader could place are handed in here. A download folder holds far more than songs, and a walk over it has already passed over everything it could not read as a psalm - so a name absent from this list is not a fault, it is a holiday snap.");
   ("★ BOTH QUESTIONS ARE PUT TO THE SONG ROWS ALONE, BECAUSE BOTH ARE ABOUT A FOLDER THAT ONLY EVER HELD RECORDINGS. The record held nothing but singing until the paintings joined it, and one thousand eight hundred and thirteen picture rows would every one of them have been reported as a row whose file is gone - a crop lives in this repo and was never in anybody's download folder. That is the worst possible shape for this particular report: it is the one asked immediately before an upload, and the answer it gave would have been eighteen hundred faults none of which were faults, hiding the two that were.");
-  ("★ THE CROPS STILL NEED THE SAME QUESTION ASKED OF THEM, AND IT IS NOT THIS FUNCTION'S TO ASK. A picture row carries where it sits in this repo, so a crop deleted since the record was written is exactly the danger this is named for - a published name with nothing behind it. But it is a different set of names in a different place, found by a different walk, and bending this one to take two folders would make a caller that handed in the wrong pair agree with itself the whole time. The missing half is a check of its own, against the picture folders.");
+  ("★ THE SAME QUESTION IS ALREADY ASKED OF THE CROPS NEXT DOOR, WHICH IS WHY NARROWING THIS ONE GIVES NOTHING UP. ",
+    fn_name("giveaway_psalms_paintings_files_missing"),
+    " walks the timing documents, opens the path each one gives its picture, and names both the absent file and the document that asked for it - seven absent files across eight documents, measured. It asks from the documents' side rather than the record's, so it reports a crop that was never made as well as one that has been deleted, which this function could not do from a row that only exists because the crop was named. Bending this one to take two folders instead would make a caller that handed in the wrong pair agree with itself the whole time.");
   let song_rows = list_filter(rows, giveaway_record_row_song_is);
   let names_recorded = list_map_property(song_rows, "file_name");
   let defects = [];
