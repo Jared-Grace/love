@@ -1089,6 +1089,23 @@ export function bible_glyph_roots_greek_drafted() {
     ["5543", "chrestos", "smiling_face_with_hearts+describing", "kind"],
     ["5491", "cheilos", "kiss_mark", "lip"],
     ["5465", "chalao", "thread+down_arrow+doing", "let down"],
+    ["500", "antichristos", "vs_button+oil", "antichrist"],
+    ["2607", "kataginosko", "lightbulb+thumbs_down+doing", "condemn"],
+    ["2434", "hilasmos", "sacrifice+handshake", "atoning sacrifice"],
+    ["2251", "hemeteros", "me+crowd+describing", "our"],
+    ["443", "anthropoktonos", "person+fist+skull", "murderer"],
+    ["31", "aggelia", "angel+thing", "message"],
+    ["5584", "pselaphao", "hand+darkness+doing", "grope; touch"],
+    ["5186", "tuphloo", "person_with_white_cane+doing", "blind"],
+    ["4455", "popote", "joker+clock+all", "ever"],
+    ["4225", "pou_somewhere", "joker+round_pushpin", "somewhere"],
+    ["4217", "potapos", "earth+likeness+question", "what kind"],
+    ["2851", "kolasis", "scales+fist", "punishment"],
+    ["926", "barus", "package+down_arrow+describing", "heavy; burdensome"],
+    ["701", "arestos", "smiling_face_with_smiling_eyes+describing", "pleasing"],
+    ["212", "alazoneia", "peacock+up_arrow", "pride; boasting"],
+    ["155", "aitema", "hand_receiving+question+scroll", "request"],
+    ["48", "hagnizo", "soap+sparkle+doing", "purify"],
   ];
   let drafted = [];
   for (let row of rows) {
