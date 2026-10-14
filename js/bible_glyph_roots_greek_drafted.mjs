@@ -1030,7 +1030,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["3741", "hosios", "hands_praying+describing", "holy or devout"],
     ["3724", "horizo", "triangular_ruler+round_pushpin+doing", "appoint or determine"],
     ["3691", "oxus", "kitchen_knife+describing", "sharp"],
-    ["3584", "xeros", "cactus", "dry"],
+    ["3584", "xeros", "droplet+no_entry+describing", "dry"],
     ["3560", "noutheteo", "brain+exclamation+doing", "admonish"],
     ["3461", "murias", "multiply+ten", "myriad"],
     ["3418", "mnema", "tomb+round_pushpin", "tomb"],
