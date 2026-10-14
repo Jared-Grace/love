@@ -13,8 +13,8 @@ import { app_shared_bible_open } from "./app_shared_bible_open.mjs";
 import { emoji_book_open } from "./emoji_book_open.mjs";
 import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
 import { app_shared_bible_reference_entries } from "./app_shared_bible_reference_entries.mjs";
-import { app_shared_bible_books_audience } from "./app_shared_bible_books_audience.mjs";
 import { app_shared_bible_verse_block } from "./app_shared_bible_verse_block.mjs";
+import { app_shared_bible_books_audience } from "./app_shared_bible_books_audience.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
@@ -61,17 +61,18 @@ export function app_search_results_verse_button(
       reference,
       languages_chosen,
     );
-    ("The reference the reader sees and copies names the book in the bible the bible app would name it in, the last one chosen, so the same verse copies the same way from either app. The english one above stays only for finding the words, because that is the spelling the bible files are read by.");
-    let books_primary = await app_shared_bible_books_audience(languages_chosen);
-    let reference_shown = ebible_parts_chapter_code_to_reference(
+    ("the reference heads the verse the way it does in the supper and verses apps, set back so the words of the verse are what the eye lands on. On the screen it is in the app's own language, which is english for now, because the screen is read by the person using the app.");
+    app_shared_bible_verse_block(div_verse, reference, entries);
+    ("What is copied is for an audience, so its reference names the book in the first bible chosen - the language the paste puts first. The same verse then pastes the same way from this app and from the bible reader.");
+    let books_audience =
+      await app_shared_bible_books_audience(languages_chosen);
+    let reference_paste = ebible_parts_chapter_code_to_reference(
       chapter_code,
-      books_primary,
+      books_audience,
       [verse_number],
     );
-    ("the reference heads the verse the way it does in the supper and verses apps, set back so the words of the verse are what the eye lands on");
-    app_shared_bible_verse_block(div_verse, reference_shown, entries);
     ("what gets copied is the reference then each language's words, in the order they are read on the page");
-    list_add(bible_texts, reference_shown);
+    list_add(bible_texts, reference_paste);
     let texts = list_map_property(entries, "text");
     list_add_multiple(bible_texts, texts);
     async function copy() {

@@ -1,12 +1,12 @@
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { integer_to_try } from "./integer_to_try.mjs";
 import { list_last } from "./list_last.mjs";
+import { list_first } from "./list_first.mjs";
 import { property_get } from "./property_get.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { property_list_map_property } from "./property_list_map_property.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { not } from "./not.mjs";
-import { list_first } from "./list_first.mjs";
 import { list_first_last_slice } from "./list_first_last_slice.mjs";
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
@@ -26,7 +26,9 @@ export async function app_shared_bible_copy(
 ) {
   list_sort_number_mapper(verse_numbers_chosen, integer_to_try);
   let primary = list_last(languages_verses);
-  let primary_books = property_get(primary, "books");
+  ("Verses are copied to be shared, so the reference names the book in the first bible, the one whose words the paste puts first - the language the audience is assumed to read most easily. It is not the reader's own screen language: they may not read the audience's language at all.");
+  let audience = list_first(languages_verses);
+  let audience_books = property_get(audience, "books");
   let item_property_name = verse_number_key();
   let primary_verse_numbers = property_list_map_property(
     primary,
@@ -47,7 +49,7 @@ export async function app_shared_bible_copy(
   let last = list_last(sliced);
   let reference = ebible_parts_chapter_code_to_reference(
     chapter_code,
-    primary_books,
+    audience_books,
     [first, last],
   );
   let lines = [reference];
