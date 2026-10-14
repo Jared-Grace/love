@@ -2,7 +2,9 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapter_built_fetched } from "./bible_glyph_chapter_built_fetched.mjs";
 import { or } from "./or.mjs";
 import { bible_glyph_chapter_rosetta_verses } from "./bible_glyph_chapter_rosetta_verses.mjs";
+import { bible_glyph_characters_lookup } from "./bible_glyph_characters_lookup.mjs";
 import { app_emoji_bible_verse_key_draw } from "./app_emoji_bible_verse_key_draw.mjs";
+import { bible_glyph_words_tap_listen } from "./bible_glyph_words_tap_listen.mjs";
 import { bible_glyph_chapter_draw_html } from "./bible_glyph_chapter_draw_html.mjs";
 export async function app_emoji_bible_chapter_body(
   content,
@@ -25,9 +27,11 @@ export async function app_emoji_bible_chapter_body(
   let reading_shown = or(key_shown, english_shown);
   if (reading_shown) {
     let rows = await bible_glyph_chapter_rosetta_verses(chapter, traditions);
+    let lookup = bible_glyph_characters_lookup(traditions);
     for (let row of rows) {
-      app_emoji_bible_verse_key_draw(content, row, key_shown);
+      app_emoji_bible_verse_key_draw(content, row, key_shown, lookup);
     }
+    bible_glyph_words_tap_listen(content, chapter_code, lookup);
     return;
   }
   bible_glyph_chapter_draw_html(content, chapter, traditions);

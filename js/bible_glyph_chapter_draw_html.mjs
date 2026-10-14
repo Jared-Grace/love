@@ -1,11 +1,6 @@
 import { fn_name } from "./fn_name.mjs";
 import { bible_glyph_characters_lookup } from "./bible_glyph_characters_lookup.mjs";
-import { html_p } from "./html_p.mjs";
-import { html_span_text_content } from "./html_span_text_content.mjs";
-import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
-import { html_span } from "./html_span.mjs";
-import { html_attribute_set } from "./html_attribute_set.mjs";
-import { bible_glyph_verse_draw_html } from "./bible_glyph_verse_draw_html.mjs";
+import { bible_glyph_verse_paragraph_draw_html } from "./bible_glyph_verse_paragraph_draw_html.mjs";
 import { bible_glyph_words_tap_listen } from "./bible_glyph_words_tap_listen.mjs";
 export function bible_glyph_chapter_draw_html(parent, chapter, traditions) {
   "$plain chapter";
@@ -26,13 +21,12 @@ export function bible_glyph_chapter_draw_html(parent, chapter, traditions) {
     ". The page still tells nobody what a picture means until a word is tapped, so a reader working the pictures out from the key loses nothing.");
   let lookup = bible_glyph_characters_lookup(traditions);
   for (let verse of chapter.verses) {
-    let paragraph = html_p(parent);
-    let numbered = verse.verse_number + " ";
-    let number = html_span_text_content(paragraph, numbered);
-    app_shared_text_deemphasized(number);
-    let words_holder = html_span(paragraph);
-    html_attribute_set(words_holder, "dir", "auto");
-    bible_glyph_verse_draw_html(words_holder, verse.words, lookup);
+    bible_glyph_verse_paragraph_draw_html(
+      parent,
+      verse.verse_number,
+      verse.words,
+      lookup,
+    );
   }
   bible_glyph_words_tap_listen(parent, chapter.chapter_code, lookup);
 }

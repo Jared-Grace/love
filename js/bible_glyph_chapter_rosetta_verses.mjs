@@ -31,6 +31,7 @@ export async function bible_glyph_chapter_rosetta_verses(chapter, traditions) {
     let row = {
       verse_number: verse.verse_number,
       glyphs,
+      words: verse.words,
       original: verse.original,
       english: verse.english,
       tagalog,
