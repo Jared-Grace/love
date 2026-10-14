@@ -1,22 +1,15 @@
-import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
-import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
-import { app_code_quiz_choice_button } from "./app_code_quiz_choice_button.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_sort_number } from "./list_sort_number.mjs";
 import { noop } from "./noop.mjs";
 import { promise_wrap_unawait } from "./promise_wrap_unawait.mjs";
-import { text_to } from "./text_to.mjs";
-import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
-import { html_style_set } from "./html_style_set.mjs";
-import { html_style_opacity } from "./html_style_opacity.mjs";
-import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
+import { text_to } from "./text_to.mjs";
+import { equal } from "./equal.mjs";
+import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
 import { each } from "./each.mjs";
 import { html_remove } from "./html_remove.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 export async function app_code_expression_value_choose_await(
   parent,
   value,
@@ -38,34 +31,25 @@ export async function app_code_expression_value_choose_await(
   }
   ("the waiting is opened before the buttons are made, because each button is given what to do at the moment it is made");
   let pressed = promise_wrap_unawait(lambda$resolve);
-  let answered = false;
+  let answered = {
+    answered: false,
+  };
+  ("each value is a choice of the one kind every multiple choice in this app is built from, so it is marked as the way on, turned green or red, and spent, exactly as they are; this one only adds the pause and the waiting");
+  async function on_right() {
+    await sleep_success_color();
+    press(null);
+  }
   function each_button(choice) {
     let choice_text = text_to(choice);
-    let b = app_code_quiz_choice_button(box, choice_text, on_click);
-    ("the right value is marked as the way on where being right is already decided, so a walk of the whole course answers this kind without a second answer key that could disagree with this one");
-    let marked_is = equal(choice, value);
-    if (marked_is) {
-      html_data_set_test_happy(b);
-    }
-    async function on_click() {
-      if (answered) {
-        return;
-      }
-      let right_is = equal(choice, value);
-      if (not(right_is)) {
-        on_wrong();
-        app_code_lesson_quiz_wrong_set(b);
-        html_style_set(b, "pointer-events", "none");
-        html_style_opacity(b, "0.5");
-        return;
-      }
-      answered = true;
-      ("taken, so it stops being the way on for the whole of the pause that follows - the buttons stay on screen while the right one is held green, and a walk that found this still marked would press it again and again into a locked handler");
-      html_data_set_test_happy_remove(b);
-      app_shared_button_screen_green_style_assign(b);
-      await sleep_success_color();
-      press(null);
-    }
+    let right_is = equal(choice, value);
+    app_code_quiz_choice_button_answer(
+      box,
+      choice_text,
+      right_is,
+      answered,
+      on_right,
+      on_wrong,
+    );
   }
   each(choices, each_button);
   await pressed;
