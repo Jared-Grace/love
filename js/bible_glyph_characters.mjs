@@ -629,7 +629,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "mother",
-      character: "🤱",
+      character: "👩‍🍼",
     },
     {
       name: "wilderness",
@@ -1877,7 +1877,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "man_in_tuxedo",
-      character: "🤵",
+      character: "🤵‍♂️",
     },
     {
       name: "palm_tree",
