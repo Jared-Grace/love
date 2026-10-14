@@ -2,8 +2,8 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { giveaway_file_kinds } from "./giveaway_file_kinds.mjs";
 import { giveaway_psalms_item_description } from "./giveaway_psalms_item_description.mjs";
 import { catch_null } from "./catch_null.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { list_map_property } from "./list_map_property.mjs";
+import { list_unique } from "./list_unique.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
@@ -20,8 +20,8 @@ export function giveaway_psalms_descriptions_defects(items) {
   let kinds = giveaway_file_kinds();
   function description_or_null(item) {
     function description_get() {
-      let said = giveaway_psalms_item_description(item);
-      return said;
+      let paragraph = giveaway_psalms_item_description(item);
+      return paragraph;
     }
     let said = catch_null(description_get);
     return said;
