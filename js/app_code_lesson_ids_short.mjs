@@ -364,6 +364,9 @@ export function app_code_lesson_ids_short() {
       "braces_step_if_in_else",
     ),
     app_code_lesson_braces_step_else_if: text_frozen("braces_step_else_if"),
+    app_code_lesson_braces_step_else_if_twice: text_frozen(
+      "braces_step_else_if_twice",
+    ),
     app_code_lesson_braces_step_else_if_else: text_frozen(
       "braces_step_else_if_else",
     ),
