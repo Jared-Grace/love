@@ -37,13 +37,17 @@ import { html_bounding_client_rect } from "./html_bounding_client_rect.mjs";
 import { html_copy_fly_text_rect } from "./html_copy_fly_text_rect.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
 import { null_is } from "./null_is.mjs";
+import { list_last_or_null } from "./list_last_or_null.mjs";
+import { property_get } from "./property_get.mjs";
+import { not } from "./not.mjs";
+import { list_size } from "./list_size.mjs";
+import { text_ends_with } from "./text_ends_with.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_shared_glow_look_here } from "./app_shared_glow_look_here.mjs";
+import { app_shared_button_inline_sentence } from "./app_shared_button_inline_sentence.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
 import { html_height_change_animate } from "./html_height_change_animate.mjs";
-import { property_get } from "./property_get.mjs";
 import { less_than } from "./less_than.mjs";
-import { list_size } from "./list_size.mjs";
-import { not } from "./not.mjs";
 import { property_set } from "./property_set.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
@@ -68,6 +72,7 @@ import { app_code_example_answer_label } from "./app_code_example_answer_label.m
 import { app_code_style_normal_box } from "./app_code_style_normal_box.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_code_program_step_guide_action } from "./app_code_program_step_guide_action.mjs";
+import { app_shared_glow_clear } from "./app_shared_glow_clear.mjs";
 export function app_code_program_step_through_generic(
   parent,
   code,
@@ -204,17 +209,40 @@ export function app_code_program_step_through_generic(
       html_visibility_visible(span);
     }
   }
-  async function guide_say(sentences) {
-    "the guide's sentences written in place of what it said before, when this example guides";
+  async function guide_say(sentences, choose) {
+    "the guide's sentences written in place of what it said before, when this example guides. choose is null, or the words of the button the last sentence tells the learner to choose and a holder whose button is that button";
     if (null_is(guide)) {
       return;
     }
     ("2026-10-14, at the human's asking: the words go, the guide grows or shrinks to the new ones, and they show once it has arrived, as the order lesson's guide does - by the same function, so the two cannot come to move differently. Not awaited: the question under the program is asked at once, and only the guide's own room is slowed");
     ("Not picked: a fade, which the order lesson does not do; the words are hidden while anything moves, so nothing is read while it slides");
+    ("2026-10-14, at the human's asking: the words of the button the guide says to choose are drawn as a button in its sentence, so the learner sees what to look for rather than reading words to match up, and pressing it makes the real button below glow. Not picked: quotes, which say these are the words but leave the matching to the learner; a button that does nothing, which looks broken; and one that answers for the learner, who would then never find the real one");
     function change() {
       html_clear(guide);
+      let last = list_last_or_null(sentences);
       for (let sentence of sentences) {
-        html_div_cycle_code(guide, sentence);
+        let words = null_is(choose) ? null : property_get(choose, "words");
+        let part = list_first(sentence);
+        let inline =
+          equal(sentence, last) &&
+          not(null_is(words)) &&
+          equal(list_size(sentence), 1) &&
+          text_ends_with(part, words);
+        if (not(inline)) {
+          html_div_cycle_code(guide, sentence);
+          continue;
+        }
+        let left10 = text_size(part);
+        let right5 = text_size(words);
+        let to4 = subtract(left10, right5);
+        let before = text_slice(part, 0, to4);
+        let line = html_div_cycle_code(guide, [before]);
+        function look_here() {
+          let object4 = property_get(choose, "holder");
+          let button = property_get(object4, "button");
+          app_shared_glow_look_here(button);
+        }
+        app_shared_button_inline_sentence(line, words, look_here);
       }
     }
     let duration = app_shared_animation_duration();
@@ -292,7 +320,7 @@ export function app_code_program_step_through_generic(
     html_clear(ask);
     let index = property_get(state, "index");
     let r = app_code_program_step_guide_line_next(lines, trace, index);
-    guide_say(r);
+    guide_say(r, null);
     html_div_cycle_code(ask, ["What is the next line of code to run?"]);
     let b3 = list_size(trace);
     let done = greater_than_equal(index, b3);
@@ -320,7 +348,7 @@ export function app_code_program_step_through_generic(
         line_restore(line_index);
       }
       html_clear(ask);
-      guide_say([]);
+      guide_say([], null);
       ("no success message of its own: the caller shows one, as for every other answerer in this app; showing one here as well put two on the page");
       await on_success();
     }
@@ -341,10 +369,17 @@ export function app_code_program_step_through_generic(
       let value = property_get(action, "value");
       html_clear(ask);
       let said = text_to(value);
-      guide_say([
-        ["The note above the line that declares ", name, " says what it holds"],
-        ["So choose: ", said],
-      ]);
+      guide_say(
+        [
+          [
+            "The note above the line that declares ",
+            name,
+            " says what it holds",
+          ],
+          ["So choose: ", said],
+        ],
+        null,
+      );
       html_div_cycle_code(ask, ["What is ", name, "?"]);
       let b4 = boolean_is(value);
       if (not(b4)) {
@@ -468,8 +503,28 @@ export function app_code_program_step_through_generic(
     let kind = property_get(action, "kind");
     property_set(state, "asked", kind);
     html_clear(ask);
+    let options = [
+      ["declare", "Declare a variable"],
+      ["evaluate", "Solve an expression"],
+      ["assign", "Assign a value"],
+      ["log", "Log a value to the console"],
+      ["complete", "This line is complete; continue to the next line"],
+    ];
+    let right_words = null;
+    for (let option of options) {
+      let left11 = list_get(option, 0);
+      if (equal(left11, kind)) {
+        right_words = list_get(option, 1);
+      }
+    }
+    let holder = {
+      button: null,
+    };
     let r10 = app_code_program_step_guide_action(entry, k);
-    guide_say(r10);
+    guide_say(r10, {
+      words: right_words,
+      holder,
+    });
     let question = equal(k, 0)
       ? "What does this line do?"
       : "What else does this line do?";
@@ -480,6 +535,9 @@ export function app_code_program_step_through_generic(
     };
     async function on_right() {
       property_set(state, "asked", null);
+      ("the glow the guide's button lit says where to press, so it goes out once the press is made");
+      let element = property_get(holder, "button");
+      app_shared_glow_clear(element);
       ("2026-10-14, at the human's asking: the right choice stays green for at least as long as any other success in this app before the question is taken away");
       ("2026-10-14, at the human's asking again: what the choice does starts at once, while it is still green, since the question stays up until that is done. Only completing a line has nothing to show, so only it waits out the green. Not picked: the same pause before every action, the first version, which held the learner up for a green the animation already covers");
       if (equal(kind, "complete")) {
@@ -492,18 +550,11 @@ export function app_code_program_step_through_generic(
       }
       actions_ask(k + 1);
     }
-    let options = [
-      ["declare", "Declare a variable"],
-      ["evaluate", "Solve an expression"],
-      ["assign", "Assign a value"],
-      ["log", "Log a value to the console"],
-      ["complete", "This line is complete; continue to the next line"],
-    ];
     for (let option of options) {
       let option_kind = list_get(option, 0);
       let words = list_get(option, 1);
       let right2 = equal(option_kind, kind);
-      app_code_quiz_choice_button_answer(
+      let b = app_code_quiz_choice_button_answer(
         choices,
         words,
         right2,
@@ -511,6 +562,9 @@ export function app_code_program_step_through_generic(
         on_right,
         on_wrong,
       );
+      if (right2) {
+        property_set(holder, "button", b);
+      }
     }
   }
   next_line_ask();
