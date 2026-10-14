@@ -50,6 +50,7 @@ import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remo
 import { app_shared_button_background } from "./app_shared_button_background.mjs";
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
+import { promise_later_catch_ignore } from "./promise_later_catch_ignore.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { app_code_program_step_guide_line_next } from "./app_code_program_step_guide_line_next.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
@@ -269,12 +270,19 @@ export function app_code_program_step_through_generic(
       property_set(state, "pressing", false);
       html_data_set_test_happy_remove(row);
       rows_plain();
-      ("2026-10-14, at the human's asking: the right line goes green first, held as long as any right answer in this app is, and only then blue - green says it was right, as a right choice does, and blue then says where the computer is. Not picked: blue at once, which was the one right answer here that did not say so");
+      ("2026-10-14, at the human's asking: the right line goes green first, for as long as any right answer in this app is, and only then blue - green says it was right, as a right choice does, and blue then says where the computer is. Not picked: blue at once, which was the one right answer here that did not say so");
+      ("2026-10-14, at the human's asking again: the next question is asked at once, while the line is still green, so being right costs the learner no wait. Not picked: holding everything until the green is over, which was the first version. The turn to blue is skipped when the learner has already moved on to another line, since the line pressed then is no longer where the computer is");
       let green = app_shared_button_background();
       html_style_background_color_set(row, green);
       html_font_color_set_white(row);
-      await sleep_success_color();
-      html_style_background_color_set(row, highlight);
+      async function blue_later() {
+        await sleep_success_color();
+        let left9 = property_get(state, "index");
+        if (equal(left9, index)) {
+          html_style_background_color_set(row, highlight);
+        }
+      }
+      promise_later_catch_ignore(blue_later);
       actions_ask(0);
     }
     html_on_click(row, on_row);
@@ -472,8 +480,11 @@ export function app_code_program_step_through_generic(
     };
     async function on_right() {
       property_set(state, "asked", null);
-      ("2026-10-14, at the human's asking: the right choice is held green for as long as any other success in this app before the question is taken away, by the same pause the value choices take");
-      await sleep_success_color();
+      ("2026-10-14, at the human's asking: the right choice stays green for at least as long as any other success in this app before the question is taken away");
+      ("2026-10-14, at the human's asking again: what the choice does starts at once, while it is still green, since the question stays up until that is done. Only completing a line has nothing to show, so only it waits out the green. Not picked: the same pause before every action, the first version, which held the learner up for a green the animation already covers");
+      if (equal(kind, "complete")) {
+        await sleep_success_color();
+      }
       await action_do(action, line_index);
       if (equal(kind, "complete")) {
         next_line_ask();
