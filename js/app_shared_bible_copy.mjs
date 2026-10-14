@@ -8,11 +8,14 @@ import { list_multiple_is } from "./list_multiple_is.mjs";
 import { not } from "./not.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_first_last_slice } from "./list_first_last_slice.mjs";
+import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
+import { app_shared_bible_verse_text_shown } from "./app_shared_bible_verse_text_shown.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-import { app_shared_bible_verse_block_lines } from "./app_shared_bible_verse_block_lines.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { list_join_space } from "./list_join_space.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
 export async function app_shared_bible_copy(
@@ -38,11 +41,20 @@ export async function app_shared_bible_copy(
   }
   let slice = list_first_last_slice(normalized, primary_verse_numbers);
   let sliced = property_get(slice, "sliced");
-  let lines = [];
-  function per_verse(verse_number) {
+  ("Several verses copied together carry one reference naming the whole range, the way a person quotes a passage, rather than the reference again before every verse. The verses all come from this one chapter, so a single range can always say where they are from. Each bible then follows as one paragraph of its verses in order, so the bibles stay apart without a reference between every verse. A single verse comes out exactly as it did before: its reference, then the verse once per bible.");
+  ("Rejected: a line per verse inside each bible - it keeps verse breaks but reads as a list, not a passage; and a reference on every verse - that was the old shape, and the human asked for it to go.");
+  let first = list_first(sliced);
+  let last = list_last(sliced);
+  let reference = ebible_parts_chapter_code_to_reference(
+    chapter_code,
+    primary_books,
+    [first, last],
+  );
+  let lines = [reference];
+  function per_language(entry) {
+    let verses_l = property_get(entry, "verses");
     let texts = [];
-    function per_language(entry) {
-      let verses_l = property_get(entry, "verses");
+    function per_verse(verse_number) {
       let property_name = verse_number_key();
       let verse_l = list_find_property_or_null(
         verses_l,
@@ -53,19 +65,18 @@ export async function app_shared_bible_copy(
       if (nn) {
         ("copied text is only scripture - no language-name labels, unlike the on-screen parallel view");
         let text_l = property_get(verse_l, "text");
-        list_add(texts, text_l);
+        let shown = app_shared_bible_verse_text_shown(text_l);
+        list_add(texts, shown);
       }
     }
-    each(languages_verses, per_language);
-    let block = app_shared_bible_verse_block_lines(
-      chapter_code,
-      primary_books,
-      verse_number,
-      texts,
-    );
-    list_add_multiple(lines, block);
+    each(sliced, per_verse);
+    let e = list_empty_not_is(texts);
+    if (e) {
+      let paragraph = list_join_space(texts);
+      list_add(lines, paragraph);
+    }
   }
-  each(sliced, per_verse);
+  each(languages_verses, per_language);
   ("Whatever else the screen was showing about this passage follows the scripture, in the order the screen showed it. A reader on a gloss page has the verse in the language they are learning and a line for every word of it explained; copying gave them the english alone, so what landed on the clipboard was the one part of that screen they could already have got anywhere. What is put here is put by the screen that drew it, because only that screen knows what it drew.");
   ("It is added once at the end rather than after each verse, because these readers show a single verse at a time and the whole-chapter reader has nothing extra to add - so there is no verse for the wrong copy of it to attach to.");
   list_add_multiple(lines, lines_extra);
