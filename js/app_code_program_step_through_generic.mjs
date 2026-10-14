@@ -47,11 +47,12 @@ import { not } from "./not.mjs";
 import { property_set } from "./property_set.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
+import { app_shared_button_background } from "./app_shared_button_background.mjs";
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
+import { sleep_success_color } from "./sleep_success_color.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { app_code_program_step_guide_line_next } from "./app_code_program_step_guide_line_next.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
-import { sleep_success_color } from "./sleep_success_color.mjs";
 import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
 import { text_to } from "./text_to.mjs";
 import { boolean_is } from "./boolean_is.mjs";
@@ -268,8 +269,12 @@ export function app_code_program_step_through_generic(
       property_set(state, "pressing", false);
       html_data_set_test_happy_remove(row);
       rows_plain();
-      html_style_background_color_set(row, highlight);
+      ("2026-10-14, at the human's asking: the right line goes green first, held as long as any right answer in this app is, and only then blue - green says it was right, as a right choice does, and blue then says where the computer is. Not picked: blue at once, which was the one right answer here that did not say so");
+      let green = app_shared_button_background();
+      html_style_background_color_set(row, green);
       html_font_color_set_white(row);
+      await sleep_success_color();
+      html_style_background_color_set(row, highlight);
       actions_ask(0);
     }
     html_on_click(row, on_row);
