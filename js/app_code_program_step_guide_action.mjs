@@ -13,7 +13,7 @@ export function app_code_program_step_guide_action(entry, k) {
   ("what a guided example says while it asks what a line does next: what kind of line it is, the first time it is asked about, and then which to choose. Each sentence is a list of parts, words and code taking turns.");
   ("Asked for by the human 2026-10-14, whose words for a let line are these: This is a let declaration and assign statement. These declare a variable. Then they solve the expression on the right if needed. Finally they assign a value. First, choose ... and then: This expression is already solved to a single value, so it doesn't need solving. So choose assign a value.");
   ("Which kind of line it is, is read off what it does: a line that declares is a let, a line that logs is a console.log, and any other line here is an if. Not picked: reading it off the line's text, which would be a second answer to a question the trace already answers.");
-  ("2026-10-14, the human asked for the line spacing of the order lesson's guide, so each sentence is its own line and a sentence never holds two; and for if, ( ), true and false written as code. Evaluate an expression is said Solve an expression, as the human asked, the same words the option carries");
+  ("2026-10-14, the human asked for the line spacing of the order lesson's guide, so each sentence is its own line and a sentence never holds two; and for if, (...), true and false written as code. The parentheses are (...), as the human asked the same day, so their dots are drawn grey as the dots in { ... } are, by the one code writer every sentence goes through. Evaluate an expression is said Solve an expression, as the human asked, the same words the option carries");
   let kinds = list_map_property(actions, "kind");
   let size = list_size(actions);
   let complete = [
@@ -22,7 +22,7 @@ export function app_code_program_step_guide_action(entry, k) {
   let if_is = ["This is an ", "if", " statement"];
   let if_solves = [
     "It solves the condition inside the ",
-    "( )",
+    "(...)",
     " to ",
     "true",
     " or ",
