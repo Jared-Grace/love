@@ -9,14 +9,15 @@ import { list_take } from "./list_take.mjs";
 import { js_code_if_else_if_chain_lines_multiple } from "./js_code_if_else_if_chain_lines_multiple.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_copy } from "./list_copy.mjs";
-import { not } from "./not.mjs";
 import { list_includes } from "./list_includes.mjs";
+import { not } from "./not.mjs";
 import { list_set } from "./list_set.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { js_code_else_if_dots } from "./js_code_else_if_dots.mjs";
 import { js_code_else_dots } from "./js_code_else_dots.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_braces_run_else_if_twice } from "./app_code_lesson_braces_run_else_if_twice.mjs";
 import { app_code_lesson_else_if_else } from "./app_code_lesson_else_if_else.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -94,6 +95,20 @@ export function app_code_lesson_else_if_twice() {
     let else_if_b = js_code_else_if_dots("b");
     let else_if_c = js_code_else_if_dots("c");
     let else_dots = js_code_else_dots();
+    ("2026-10-14, at the human's asking: the section-run lesson straight before is remembered first, as Else if and else remembers its own, and this lesson's explanation stays here, where what the code writes out is first asked");
+    let box_run = app_code_container_light_blue(root);
+    app_code_remember_from_lesson(
+      box_run,
+      context,
+      app_code_lesson_braces_run_else_if_twice,
+      [
+        "Once one ",
+        "{ ... }",
+        " in an ",
+        "if",
+        " runs, the rest are not reached",
+      ],
+    );
     let box_one = app_code_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
