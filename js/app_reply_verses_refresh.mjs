@@ -27,7 +27,7 @@ export async function app_reply_verses_refresh({
   if (equal(verse_count, 1)) {
     e = encouragement_singles;
   }
-  let old_only = property_get(testament_held, "old_only");
+  let old_only = property_get(testament_held, "jewish");
   if (old_only) {
     e = bible_references_old_testament(e);
   }
