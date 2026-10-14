@@ -4,7 +4,7 @@ import { list_last } from "./list_last.mjs";
 import { property_get } from "./property_get.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
-export async function app_shared_bible_books_primary(languages_chosen) {
+export async function app_shared_bible_books_audience(languages_chosen) {
   "The book names of the bible a reader's choice puts first in charge - the last one chosen, the same bible the reader's top bar and copy button name a book in - so a reference reads the same in every app that hands one out.";
   "With nothing chosen there is no bible to ask, and english is what a page falls back on everywhere else.";
   let none = list_empty_is(languages_chosen);
