@@ -4,6 +4,7 @@ export function giveaway_psalms_songs_rows_defects_cases() {
   ("The written cases proving that every fault the giveaway record check can name is a fault it does name.");
   ("★ A CHECK WHOSE WRONG ANSWER NOBODY HAS EVER SEEN READS AS WORKING WHETHER IT WORKS OR NOT. The record it guards is clean, and a clean record exercises none of the branches that catch something - so running the check against the real record proves only that it says nothing, which is also what a broken check says. Each case here is a row built wrong on purpose, and the cases holding a correct row are here for the same reason from the other side: a check that answered with a fault for everything would pass every one of the others.");
   ("★ A CASE IS BUILT SO THAT ONLY THE ONE FAULT IT IS FOR CAN FIRE, AND THE TWO REPEAT CASES HAD TO BE REBUILT TO KEEP THAT TRUE. They were first written with a passage code that did not match their own disk name, which was invisible while the only questions asked were about the record agreeing with itself. The moment the passage was put to the disk name as well, both of them named two faults, and a case naming two faults cannot say which branch it is holding. The repeated name is now made the way it really happened - Psalm 150.wav and Psalm_150.wav are one space apart and both read as the same chapter and the same take - so the rows are each correct on their own and collide only with one another.");
+  ("★ TRYING TO WRITE A CASE FOR THE RECORD-WIDE REPEATED FILE IS WHAT PROVED THERE SHOULD NOT BE ONE. The check asked whether any two rows of the whole record named one file on disk, and no case could be built that made it the only fault: two rows share a file name only if the name on disk is one string, the passage check reads the passage out of that same string, and the one answer it gets can match at most one of the two rows - so the other always carried a passage that differs or a name that could not be read. A fault that can never be shown alone is a fault some other check is already naming, and the only rows it reached that no other check did were ones already reported for missing their pieces. So it was deleted rather than narrowed, and the question left in its place asks after one file twice inside one passage, which every kind can answer. A case that will not isolate is worth more than the check it refuses to hold.");
   ("The faults are compared as one word list rather than as whole defect objects. What is being held is that the right fault is named for the right row; the exact wording of a defect is for somebody reading a failure, and pinning it here would turn every improvement to that wording into a red gate.");
   ("The rows are spelled out rather than read off the real record. A case that read the record would change its own meaning every time a song was added, and the whole point of a case is that it says the same thing next year.");
   function row_song(file_name, passage_code, mark, name_published) {
@@ -58,6 +59,36 @@ export function giveaway_psalms_songs_rows_defects_cases() {
     "take00",
     "PSA139_engbsb_song_take00.wav",
   );
+  function row_picture(file_name, passage_code, mark, name_published) {
+    let r = {
+      file_name: file_name,
+      passage_code: passage_code,
+      bible_folder: "engbsb",
+      kind: "picture",
+      mark: mark,
+      ending: ".png",
+      name_published: name_published,
+    };
+    return r;
+  }
+  let crop = row_picture(
+    "pd_titiaan_heerlijkheid.png",
+    "PSA149_001-005",
+    "titiaan_heerlijkheid",
+    "PSA149_001-005_engbsb_picture_titiaan_heerlijkheid.png",
+  );
+  let crop_elsewhere = row_picture(
+    "pd_titiaan_heerlijkheid.png",
+    "PSA069",
+    "titiaan_heerlijkheid",
+    "PSA069_engbsb_picture_titiaan_heerlijkheid.png",
+  );
+  let crop_marked_twice = row_picture(
+    "pd_titiaan_heerlijkheid.png",
+    "PSA149_001-005",
+    "titiaan_heerlijkheid_again",
+    "PSA149_001-005_engbsb_picture_titiaan_heerlijkheid_again.png",
+  );
   let stanza = row_song(
     "Psalm_119_Aleph.wav",
     "PSA119_001-008",
@@ -87,8 +118,23 @@ export function giveaway_psalms_songs_rows_defects_cases() {
     },
     {
       rows: [good, file_twice],
-      faults: "file_repeated",
-      why: "One recording on disk claimed by two rows, which would send the same singing up twice under two names and tell a listener there are two songs where there is one.",
+      faults: "file_repeated_in_passage",
+      why: "One recording on disk claimed by two rows of one passage, which would send the same singing up twice under two names and tell a listener there are two songs where there is one. Both rows are correct on their own - two takes of Psalm 150, each named exactly as its own pieces spell it - so the only thing wrong is that they name one file.",
+    },
+    {
+      rows: [crop],
+      faults: "",
+      why: "A crop of a painting, with nothing wrong with it. It is here because the passage check is put to the song rows alone and a case is what proves that: a crop is called pd_titiaan_heerlijkheid.png, so a check that read a painting's name as a recording's title would call this unreadable, and before the narrowing it did.",
+    },
+    {
+      rows: [crop, crop_elsewhere],
+      faults: "",
+      why: "One crop standing in two psalms, which is the record working as intended rather than a fault - a painting of the glory of God suits more than one psalm, and every box it suits should hold it. This is the case the record-wide repeat question failed, and the reason there is no longer a record-wide repeat question.",
+    },
+    {
+      rows: [crop, crop_marked_twice],
+      faults: "file_repeated_in_passage",
+      why: "One crop in one psalm under two marks, which is the same fault as the two takes above reaching a picture. It is asked for separately because a check that quietly stopped looking at the picture rows would pass the two cases above it and only this one holds it to still looking. The two marks are what keep the given-away names apart, so the repeated name is not fired as well and this case names one fault.",
     },
     {
       rows: [part_as_whole],
