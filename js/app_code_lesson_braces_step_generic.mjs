@@ -5,7 +5,7 @@ import { app_code_braces_run_programs_shape } from "./app_code_braces_run_progra
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { app_code_if_blocks_kept } from "./app_code_if_blocks_kept.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
-import { app_code_program_step_through } from "./app_code_program_step_through.mjs";
+import { app_code_program_step_through_generic } from "./app_code_program_step_through_generic.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
 import { app_code_brace_marked_div } from "./app_code_brace_marked_div.mjs";
@@ -45,7 +45,13 @@ export function app_code_lesson_braces_step_generic(title, code_get, names) {
     function success() {
       app_shared_success_message(component);
     }
-    app_code_program_step_through(component, text, wrong, success, true);
+    app_code_program_step_through_generic(
+      component,
+      text,
+      wrong,
+      success,
+      true,
+    );
   }
   function step_quiz(
     parent,
@@ -60,7 +66,7 @@ export function app_code_lesson_braces_step_generic(title, code_get, names) {
     let question = property_get(qa, "question");
     let answer = property_get(qa, "answer");
     correction_code_set(answer);
-    app_code_program_step_through(
+    app_code_program_step_through_generic(
       parent,
       question,
       on_wrong,

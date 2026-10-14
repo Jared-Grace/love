@@ -22,25 +22,26 @@ import { app_code_note_runs } from "./app_code_note_runs.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
+import { not } from "./not.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { property_get } from "./property_get.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_size } from "./list_size.mjs";
-import { not } from "./not.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { equal } from "./equal.mjs";
 import { property_set } from "./property_set.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { html_on_click } from "./html_on_click.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_program_step_guide_line_next } from "./app_code_program_step_guide_line_next.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
+import { text_to } from "./text_to.mjs";
 import { boolean_is } from "./boolean_is.mjs";
 import { error } from "./error.mjs";
 import { app_code_expression_value_choose_await } from "./app_code_expression_value_choose_await.mjs";
 import { subtract } from "./subtract.mjs";
 import { text_slice } from "./text_slice.mjs";
-import { text_to } from "./text_to.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
 import { html_height_change_animate } from "./html_height_change_animate.mjs";
 import { html_transition_set } from "./html_transition_set.mjs";
@@ -49,13 +50,16 @@ import { app_code_value_logged_output } from "./app_code_value_logged_output.mjs
 import { app_code_label_of_code } from "./app_code_label_of_code.mjs";
 import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
-export function app_code_program_step_through(
+import { app_code_program_step_guide_action } from "./app_code_program_step_guide_action.mjs";
+export function app_code_program_step_through_generic(
   parent,
   code,
   on_wrong,
   on_success,
+  guided,
 ) {
-  arguments_assert(arguments, 4);
+  arguments_assert(arguments, 5);
+  ("guided: whether each question is preceded by what to do and why, at the human's asking 2026-10-14, as the order lesson's example guides step by step. The guide is written in the place the question is asked, over it, so it is read just before the choosing. Not picked: a guide above the program, which would be read away from the question it answers.");
   ("a program the learner runs as the computer would, one step at a time. They are asked what the next line of code to run is, and press a line of the program, or that the program is complete; then what that line does, until they say it is complete: declare a variable, evaluate an expression, assign a value, log a value to the console. A name declared gets a note above its line saying what it holds, what is logged is written under the program, and a name evaluated is asked for and then stands in the line as its value. Asked for by the human 2026-10-13, so every step of the computing is done by the learner before they are asked what a program logs.");
   ("What runs, and what each line does, is ",
     fn_name("app_code_program_trace"),
@@ -127,6 +131,15 @@ export function app_code_program_step_through(
       html_style_opacity(span, value4);
     }
   }
+  function guide_say(sentences) {
+    "the guide's sentences written where the question is asked, when this example guides";
+    if (not(guided)) {
+      return;
+    }
+    for (let sentence of sentences) {
+      html_div_cycle_code(ask, sentence);
+    }
+  }
   function entry_get() {
     let index = property_get(state, "index");
     let entry = list_get(trace, index);
@@ -161,8 +174,10 @@ export function app_code_program_step_through(
   function next_line_ask() {
     "the learner says which line runs next, or that the program is complete";
     html_clear(ask);
-    html_div_cycle_code(ask, ["What is the next line of code to run?"]);
     let index = property_get(state, "index");
+    let r = app_code_program_step_guide_line_next(lines, trace, index);
+    guide_say(r);
+    html_div_cycle_code(ask, ["What is the next line of code to run?"]);
     let b3 = list_size(trace);
     let done = greater_than_equal(index, b3);
     property_set(state, "pressing", true);
@@ -200,6 +215,11 @@ export function app_code_program_step_through(
       let name = property_get(action, "name");
       let value = property_get(action, "value");
       html_clear(ask);
+      let said = text_to(value);
+      guide_say([
+        ["The note above the line that declares ", name, " says what it holds"],
+        ["So choose: ", said],
+      ]);
       html_div_cycle_code(ask, ["What is ", name, "?"]);
       let b4 = boolean_is(value);
       if (not(b4)) {
@@ -263,7 +283,7 @@ export function app_code_program_step_through(
       return;
     }
     line_restore(line_index);
-    rows_plain();
+    ("the line that ran stays highlighted while the next line is asked for, at the human's asking 2026-10-14, so the learner can see where the computer is coming from; pressing the next line moves the highlight there");
     property_set(state, "index", property_get(state, "index") + 1);
   }
   function actions_ask(k) {
@@ -279,6 +299,8 @@ export function app_code_program_step_through(
         };
     let kind = property_get(action, "kind");
     html_clear(ask);
+    let r10 = app_code_program_step_guide_action(entry, k);
+    guide_say(r10);
     let question = equal(k, 0)
       ? "What does this line do?"
       : "What else does this line do?";
