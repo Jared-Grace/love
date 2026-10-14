@@ -13,6 +13,7 @@ import { list_get } from "./list_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { not_equal } from "./not_equal.mjs";
+import { not } from "./not.mjs";
 export function app_code_program_trace(code) {
   arguments_assert(arguments, 1);
   ("every line of a program in the order the computer runs it, each with what running it does, in order: a name declared, an expression evaluated, a value assigned to a name, a value logged to the console. A line is done once its last thing is done. Asked for by the human 2026-10-13, so a learner can do every step of the running themselves before being asked what a program logs.");
@@ -124,13 +125,21 @@ export function app_code_program_trace(code) {
       let entry2 = line_add(node, actions);
       ("an if's line also says what its condition came to, since a condition written out as true or false is not evaluated and so is in none of its actions; a guide saying why the next line runs reads it here");
       property_set(entry2, "condition", value4);
+      let alternate = property_get(node, "alternate");
+      ("an if's line also says what stands after its { ... }: none, else, or else_if; a guide saying which { ... } runs instead reads it here");
+      let after = "none";
+      if (not(equal(alternate, null))) {
+        after = equal(property_get(alternate, "type"), "IfStatement")
+          ? "else_if"
+          : "else";
+      }
+      property_set(entry2, "alternate", after);
       if (value4) {
         let consequent = property_get(node, "consequent");
         let value5 = property_get(consequent, "body");
         statements_run(value5);
         return;
       }
-      let alternate = property_get(node, "alternate");
       if (equal(alternate, null)) {
         return;
       }
