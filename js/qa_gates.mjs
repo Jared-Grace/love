@@ -1,3 +1,4 @@
+import { lyric_video_document_names_read_gate_run } from "./lyric_video_document_names_read_gate_run.mjs";
 import { giveaway_bible_verses_rendered_cases_gate_run } from "./giveaway_bible_verses_rendered_cases_gate_run.mjs";
 import { giveaway_psalms_items_gate_run } from "./giveaway_psalms_items_gate_run.mjs";
 import { giveaway_psalms_items_defects_cases_gate_run } from "./giveaway_psalms_items_defects_cases_gate_run.mjs";
@@ -1241,6 +1242,7 @@ export function qa_gates() {
     giveaway_psalms_items_defects_cases_gate_run,
     giveaway_psalms_items_gate_run,
     giveaway_bible_verses_rendered_cases_gate_run,
+    lyric_video_document_names_read_gate_run,
   ];
   return gates;
 }
