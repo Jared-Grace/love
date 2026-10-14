@@ -15,10 +15,10 @@ import { app_code_expression_chosen_background_color } from "./app_code_expressi
 import { app_code_lesson_quiz_wrong_code_background_color } from "./app_code_lesson_quiz_wrong_code_background_color.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { list_get } from "./list_get.mjs";
+import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_code_note_runs } from "./app_code_note_runs.mjs";
-import { html_span } from "./html_span.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
@@ -32,7 +32,6 @@ import { property_set } from "./property_set.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { html_on_click } from "./html_on_click.mjs";
-import { each } from "./each.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
@@ -68,10 +67,7 @@ export function app_code_program_step_through(
   let wrap = html_div(parent);
   html_flex_column_stretch(wrap);
   app_code_flex_gap(wrap);
-  let top = html_div(wrap);
-  html_flex_column_stretch(top);
-  app_code_flex_gap(top);
-  ("2026-10-13, at the human's asking: which line runs next is asked above the program, since the answer is pressed in the program below it; what a line does is asked under it, beside the names and what is logged.");
+  ("2026-10-14, at the human's asking: every question is asked under the program, which line runs next as well as what a line does. Not picked: asking which line runs next above the program, tried 2026-10-13 and taken back the next day.");
   let program = html_div(wrap);
   html_style_code_dark(program);
   html_style_white_space(program, "pre-wrap");
@@ -117,13 +113,14 @@ export function app_code_program_step_through(
   function comment_draw(line_index, name, value_text) {
     "the note above a declared name saying what it holds, drawn as every other note in this app is";
     let comment = list_get(comments, line_index);
-    let note = text_combine_multiple(["// ", name, " value: ", value_text]);
+    ("the name is marked as every note in this course marks one, at the human's asking 2026-10-14");
+    let marked = app_code_note_name_mark(name);
+    let note = text_combine_multiple(["// ", marked, " value: ", value_text]);
     html_clear(comment);
     let runs = app_code_note_runs(note);
     for (let run of runs) {
-      let span = html_span(comment);
       let text2 = list_get(run, 0);
-      html_span_text(span, text2);
+      let span = html_span_text(comment, text2);
       let color = list_get(run, 1);
       html_font_color_set(span, color);
       let value4 = list_get(run, 2);
@@ -154,7 +151,6 @@ export function app_code_program_step_through(
       }
       property_set(state, "pressing", false);
       html_data_set_test_happy_remove(row);
-      html_clear(top);
       rows_plain();
       html_style_background_color_set(row, highlight);
       html_font_color_set_white(row);
@@ -164,8 +160,8 @@ export function app_code_program_step_through(
   }
   function next_line_ask() {
     "the learner says which line runs next, or that the program is complete";
-    each([ask, top], html_clear);
-    html_div_cycle_code(top, ["What is the next line of code to run?"]);
+    html_clear(ask);
+    html_div_cycle_code(ask, ["What is the next line of code to run?"]);
     let index = property_get(state, "index");
     let b3 = list_size(trace);
     let done = greater_than_equal(index, b3);
@@ -177,14 +173,14 @@ export function app_code_program_step_through(
       let component2 = list_get(rows, line_next);
       html_data_set_test_happy(component2);
     }
-    let choices = html_div(top);
+    let choices = html_div(ask);
     let answered = {
       answered: false,
     };
     async function on_complete() {
       property_set(state, "pressing", false);
       rows_plain();
-      html_clear(top);
+      html_clear(ask);
       ("no success message of its own: the caller shows one, as for every other answerer in this app; showing one here as well put two on the page");
       await on_success();
     }
