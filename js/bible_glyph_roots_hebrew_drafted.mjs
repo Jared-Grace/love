@@ -1107,6 +1107,20 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["7387", "reqam", "hand+zero+manner", "empty-handed"],
     ["4843", "marar", "lemon+doing", "be bitter"],
     ["3860", "lahen", "toward+pointing_back+crowd", "therefore; for them"],
+    ["2994", "yebemeth", "woman+family", "sister-in-law"],
+    ["1353", "geullah", "currency_exchange+thing", "redemption"],
+    ["8584", "teudah", "witness+scroll", "testimony"],
+    ["8545", "temurah", "arrow_both_ways+package", "exchange"],
+    ["7872", "sebah", "older_person", "gray hair; old age"],
+    ["7663", "sabar", "crossed_fingers+clock+doing", "wait; hope"],
+    ["7648", "soba", "eating+top+thing", "fullness"],
+    ["7641", "shibboleth", "wheat+top", "ear of grain"],
+    ["7039", "qali", "wheat+fire", "roasted grain"],
+    ["6770", "tsame", "tongue+desert+doing", "thirst"],
+    ["6653", "tsebeth", "wheat+package", "bundle"],
+    ["6642", "tsabat", "hand+toward+doing", "hand to; offer"],
+    ["6595", "path", "bread+pinching_hand", "piece; morsel"],
+    ["6423", "peloni", "joker+person", "such a one"],
   ];
   let drafted = [];
   for (let row of rows) {
