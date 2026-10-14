@@ -1,3 +1,6 @@
+import { object_property_names } from "./object_property_names.mjs";
+import { equal } from "./equal.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_roots_testament_table } from "./bible_glyph_roots_testament_table.mjs";
 import { property_set } from "./property_set.mjs";
@@ -16,7 +19,7 @@ export function bible_glyph_testament_meanings(testament_name) {
   let meanings = {};
   for (let root of roots) {
     for (let word of root.words) {
-      if (word.glyph === "") {
+      if (equal(word.glyph, "")) {
         continue;
       }
       property_set(meanings, word.glyph, {
@@ -26,7 +29,7 @@ export function bible_glyph_testament_meanings(testament_name) {
     }
   }
   let old_name = ebible_testament_old_name();
-  if (testament_name !== old_name) {
+  if (not_equal(testament_name, old_name)) {
     return meanings;
   }
   let parts = {
@@ -40,7 +43,7 @@ export function bible_glyph_testament_meanings(testament_name) {
     me: "I; me; my; we; us; our",
     you: "you; your",
   };
-  for (let name of Object.keys(parts)) {
+  for (let name of object_property_names(parts)) {
     if (property_exists(meanings, name)) {
       continue;
     }

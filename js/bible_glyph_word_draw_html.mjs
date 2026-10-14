@@ -1,12 +1,11 @@
 import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
-import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_style_set } from "./html_style_set.mjs";
-import { property_exists } from "./property_exists.mjs";
-import { property_get } from "./property_get.mjs";
-import { bible_glyph_image_draw } from "./bible_glyph_image_draw.mjs";
+import { html_attribute_set } from "./html_attribute_set.mjs";
+import { list_join } from "./list_join.mjs";
+import { bible_glyph_name_draw_html } from "./bible_glyph_name_draw_html.mjs";
 export function bible_glyph_word_draw_html(parent, word, lookup) {
   "$plain word";
   "$plain lookup";
@@ -21,7 +20,10 @@ export function bible_glyph_word_draw_html(parent, word, lookup) {
   ("NOTHING HERE WIDENS ANYTHING, and that is the whole of this function's part in the grouping. A word is drawn tight and the gap that says where it ends is put in by the drawer one level up, one gap at a time, so that only the pairs that could be misread pay for it. An earlier version set the width as a style from inside here, which stopped working silently the moment the separator became a character, because the style it used widens a named list of separators that the new character is not on.");
   ("THE ONE THING THE RING DID THAT THE GAP CANNOT IS SURVIVE A LINE BREAK, so a group is still forbidden to break across lines - and that rule stopped being tidiness the moment the ring went. A group split over two lines loses the near gap the reader would have compared the far one against, and what is left on the page is glyphs at a line end and glyphs at a line start, which is exactly how two separate words look.");
   ("A GROUP OF ONE IS STILL A GROUP AND STILL GETS NOTHING DRAWN. One picture standing alone is already one word, so there is nothing to hold together and no gap inside it to be narrow.");
-  ("A glyph the lookup does not carry is drawn as its NAME rather than as a blank, for the same reason the plain text twin does it: a blank hides the fault at the moment a reader meets it, and a reader who can see the name can report what is missing. It is drawn as text that is never read as markup, because a name arriving with an angle bracket in it would otherwise vanish into the page and leave the sentence looking complete.");
+  ("EVERY GROUP, EVEN ONE OF ONE, IS ITS OWN SPAN AND SAYS WHICH PICTURES IT HOLDS, because a tap on a word opens that word with its meaning and the tap has to land on something that knows the whole word. The span draws nothing, so the page looks exactly as it did.");
+  ("Each glyph is drawn by ",
+    fn_name("bible_glyph_name_draw_html"),
+    ", which draws a glyph the lookup does not carry as its name rather than as a blank, for the same reason the plain text twin does it.");
   let plain = equal(typeof word, "string");
   if (plain) {
     html_span_text_content(parent, word);
@@ -33,20 +35,12 @@ export function bible_glyph_word_draw_html(parent, word, lookup) {
       html_span_text_content(parent, part);
       continue;
     }
-    let several = list_size_greater_than(part, 1);
-    let group = parent;
-    if (several) {
-      group = html_span(parent);
-      html_style_set(group, "whiteSpace", "nowrap");
-    }
+    let group = html_span(parent);
+    html_style_set(group, "whiteSpace", "nowrap");
+    let value = list_join(part, "+");
+    html_attribute_set(group, "data-glyphs", value);
     for (let name of part) {
-      let known = property_exists(lookup, name);
-      if (known) {
-        let character = property_get(lookup, name);
-        bible_glyph_image_draw(group, name, character);
-        continue;
-      }
-      html_span_text_content(group, name);
+      bible_glyph_name_draw_html(group, name, lookup);
     }
   }
 }
