@@ -322,7 +322,7 @@ export function app_code_program_step_through_generic(
     }
     let options = [
       ["declare", "Declare a variable"],
-      ["evaluate", "Evaluate an expression"],
+      ["evaluate", "Solve an expression"],
       ["assign", "Assign a value"],
       ["log", "Log a value to the console"],
       ["complete", "This line is complete; continue to the next line"],

@@ -8,12 +8,13 @@ import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { text_to } from "./text_to.mjs";
+import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { add } from "./add.mjs";
 export function app_code_program_step_guide_line_next(lines, trace, index) {
   arguments_assert(arguments, 3);
   ("what a guided example says while it asks which line runs next: why that line, and then which to choose. Each sentence is a list of parts, words and code taking turns, the way every sentence in this app that holds code is written.");
   ("Asked for by the human 2026-10-14, in words modelled on the order lesson's guided example: We always run the first line of code; the line at the top. Choose: ...");
-  ("Why a line runs next is read off the line that ran before it. After an if, it is the condition's value that decides; after any other line, the next line down runs, unless that line was the last of its { } to run, when the computer goes on below the }. Not picked: naming which } and which else are skipped, which is the lesson Does this section run? already teaches, and would make every step here a sentence longer.");
+  ("Why a line runs next is read off the line that ran before it. After an if, it is the condition's value that decides; after any other line, the next line down runs, unless that line was the last of its { } to run, when the computer goes on below the }. Which { ... } is run and which is not is now said too, at the human's asking 2026-10-14; first not picked because the lesson Does this section run? already teaches it.");
   let size = list_size(trace);
   if (greater_than_equal(index, size)) {
     let r = [["No line is left to run"], ["Choose: The program is complete"]];
@@ -36,18 +37,80 @@ export function app_code_program_step_guide_line_next(lines, trace, index) {
   if (property_exists(before, "condition")) {
     let value = property_get(before, "condition");
     let said = text_to(value);
+    let alternate = property_get(before, "alternate");
+    let braces = app_code_braces_dots();
+    ("2026-10-14, the human asked the if and else explained more, in these words for a false condition with an else: the { ... } for the if is not ran, so the { ... } for the else is ran, instead. Written with run for ran. The true case and the other two shapes after an if are said the same way, so the four read as one rule");
+    let runs = [
+      "The condition is ",
+      said,
+      ", so the ",
+      braces,
+      " for the ",
+      "if",
+      " is run",
+    ];
     if (value) {
-      let r3 = [
-        ["The condition is ", said, ", so the code inside its { } runs next"],
+      if (equal(alternate, "none")) {
+        let r3 = [runs, choose];
+        return r3;
+      }
+      let r9 = [
+        runs,
+        ["So the ", braces, " for the ", "else", " is not run"],
         choose,
       ];
-      return r3;
+      return r9;
     }
-    let r4 = [
-      ["The condition is ", said, ", so the code inside its { } is skipped"],
+    if (equal(alternate, "else")) {
+      let r4 = [
+        [
+          "The condition is ",
+          said,
+          ", so the ",
+          braces,
+          " for the ",
+          "if",
+          " is not run, so the ",
+          braces,
+          " for the ",
+          "else",
+          " is run, instead",
+        ],
+        choose,
+      ];
+      return r4;
+    }
+    if (equal(alternate, "else_if")) {
+      let r7 = [
+        [
+          "The condition is ",
+          said,
+          ", so the ",
+          braces,
+          " for the ",
+          "if",
+          " is not run, so the ",
+          "else if",
+          " is checked, instead",
+        ],
+        choose,
+      ];
+      return r7;
+    }
+    let r8 = [
+      [
+        "The condition is ",
+        said,
+        ", so the ",
+        braces,
+        " for the ",
+        "if",
+        " is not run",
+      ],
+      ["There is no ", "else", ", so the computer goes on below the ", "}"],
       choose,
     ];
-    return r4;
+    return r8;
   }
   let line_before = property_get(before, "line");
   let right = add(line_before, 1);
@@ -55,8 +118,13 @@ export function app_code_program_step_guide_line_next(lines, trace, index) {
     let r5 = [["The line under it runs next"], choose];
     return r5;
   }
+  let r10 = app_code_braces_dots();
   let r6 = [
-    ["Nothing more runs inside this { }, so the computer goes on below it"],
+    [
+      "Nothing more runs inside this ",
+      r10,
+      ", so the computer goes on below it",
+    ],
     choose,
   ];
   return r6;

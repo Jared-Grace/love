@@ -13,22 +13,39 @@ export function app_code_program_step_guide_action(entry, k) {
   ("what a guided example says while it asks what a line does next: what kind of line it is, the first time it is asked about, and then which to choose. Each sentence is a list of parts, words and code taking turns.");
   ("Asked for by the human 2026-10-14, whose words for a let line are these: This is a let declaration and assign statement. These declare a variable. Then they solve the expression on the right if needed. Finally they assign a value. First, choose ... and then: This expression is already solved to a single value, so it doesn't need solving. So choose assign a value.");
   ("Which kind of line it is, is read off what it does: a line that declares is a let, a line that logs is a console.log, and any other line here is an if. Not picked: reading it off the line's text, which would be a second answer to a question the trace already answers.");
+  ("2026-10-14, the human asked for the line spacing of the order lesson's guide, so each sentence is its own line and a sentence never holds two; and for if, ( ), true and false written as code. Evaluate an expression is said Solve an expression, as the human asked, the same words the option carries");
   let kinds = list_map_property(actions, "kind");
   let size = list_size(actions);
+  let complete = [
+    "So choose: This line is complete; continue to the next line",
+  ];
+  let if_is = ["This is an ", "if", " statement"];
+  let if_solves = [
+    "It solves the condition inside the ",
+    "( )",
+    " to ",
+    "true",
+    " or ",
+    "false",
+  ];
+  let solve = ["So choose: Solve an expression"];
   if (equal(k, size)) {
     if (equal(size, 0)) {
       let r = [
+        if_is,
+        if_solves,
         [
-          "This is an if statement. It solves the condition inside the ( ) to true or false. This condition is already true or false, so it doesn't need solving",
+          "This condition is already ",
+          "true",
+          " or ",
+          "false",
+          ", so it doesn't need solving",
         ],
-        ["So choose: This line is complete; continue to the next line"],
+        complete,
       ];
       return r;
     }
-    let r2 = [
-      ["Everything this line does is done"],
-      ["So choose: This line is complete; continue to the next line"],
-    ];
+    let r2 = [["Everything this line does is done"], complete];
     return r2;
   }
   let action = list_get(actions, k);
@@ -40,14 +57,13 @@ export function app_code_program_step_guide_action(entry, k) {
     let name2 = property_get(action, "name");
     ("the human's words 2026-10-14, with let and = written as code. They replace the whole first sentence group, which also said the expression on the right is solved if needed. Not picked: keeping that clause, since the guide asking to evaluate says so at the step it happens");
     let r3 = [
+      ["This is a ", "let", " declaration and assign (", "=", ") statement"],
       [
-        "This is a ",
-        "let",
-        " declaration and assign (",
-        "=",
-        ") statement. The declaration means the code is telling JS there is a variable named ",
+        "The declaration means the code is telling JS there is a variable named ",
         name2,
-        ". The assign means the variable named ",
+      ],
+      [
+        "The assign means the variable named ",
         name2,
         " will be given a value of whatever is to the right of the ",
         "=",
@@ -72,6 +88,7 @@ export function app_code_program_step_guide_action(entry, k) {
     ];
     return r5;
   }
+  let logs = ["This logs a value to the console"];
   if (equal(kind, "log")) {
     if (solved_before) {
       let r6 = [
@@ -81,9 +98,8 @@ export function app_code_program_step_guide_action(entry, k) {
       return r6;
     }
     let r7 = [
-      [
-        "This logs a value to the console. The value is already a single value, so it doesn't need solving",
-      ],
+      logs,
+      ["The value is already a single value, so it doesn't need solving"],
       ["So choose: Log a value to the console"],
     ];
     return r7;
@@ -96,28 +112,23 @@ export function app_code_program_step_guide_action(entry, k) {
         name,
         ", so it needs solving",
       ],
-      ["So choose: Evaluate an expression"],
+      solve,
     ];
     return r8;
   }
   if (list_includes(kinds, "log")) {
     let r9 = [
-      [
-        "This logs a value to the console. The value is the name ",
-        name,
-        ", so it needs solving first",
-      ],
-      ["So choose: Evaluate an expression"],
+      logs,
+      ["The value is the name ", name, ", so it needs solving first"],
+      solve,
     ];
     return r9;
   }
   let r10 = [
-    [
-      "This is an if statement. It solves the condition inside the ( ) to true or false. The condition is the name ",
-      name,
-      ", so it needs solving",
-    ],
-    ["So choose: Evaluate an expression"],
+    if_is,
+    if_solves,
+    ["The condition is the name ", name, ", so it needs solving"],
+    solve,
   ];
   return r10;
 }
