@@ -54,6 +54,8 @@ import { boolean_is } from "./boolean_is.mjs";
 import { error } from "./error.mjs";
 import { app_code_expression_value_choose_await } from "./app_code_expression_value_choose_await.mjs";
 import { html_opacity_animate } from "./html_opacity_animate.mjs";
+import { html_opacity_transition } from "./html_opacity_transition.mjs";
+import { sleep } from "./sleep.mjs";
 import { app_code_value_logged_output } from "./app_code_value_logged_output.mjs";
 import { app_code_label_of_code } from "./app_code_label_of_code.mjs";
 import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
@@ -351,13 +353,11 @@ export function app_code_program_step_through_generic(
       let old = list_get(noted, line_index);
       let old_spans = comment_draw(line_index, name2, old, "value");
       let duration2 = app_shared_animation_duration();
-      let fades = [];
       for (let span of old_spans) {
         html_visibility_visible(span);
-        let item = await html_opacity_animate(span, "0", duration2);
-        list_add(fades, item);
+        html_opacity_transition(span, "0", duration2);
       }
-      await Promise.all(fades);
+      await sleep(duration2);
       let hidden3 = comment_draw(line_index, name2, t, "value");
       let line_from3 = list_get(starts, line_index);
       let left5 = property_get(action, "from");
