@@ -1106,6 +1106,18 @@ export function bible_glyph_roots_greek_drafted() {
     ["212", "alazoneia", "peacock+up_arrow", "pride; boasting"],
     ["155", "aitema", "hand_receiving+question+scroll", "request"],
     ["48", "hagnizo", "soap+sparkle+doing", "purify"],
+    ["4108", "planos", "dizzy+doer", "deceiver"],
+    ["2959", "kuria", "crown+woman", "lady"],
+    ["5489", "chartes", "page_with_curl", "paper"],
+    ["2137", "euodoo", "road+thumbs_up+doing", "prosper"],
+    ["1926", "epidechomai", "palm_up_hand+toward+doing", "welcome"],
+    ["5396", "phluareo", "speech+zero+doing", "talk nonsense; slander"],
+    ["5383", "philoproteuo", "heart_orange+first_place+doing", "love to be first"],
+    ["5279", "hupomimnesko", "reminder_ribbon+hands_giving+doing", "remind"],
+    ["3401", "mimeomai", "footprints+likeness+doing", "imitate"],
+    ["2554", "kakopoieo", "thumbs_down+hand+doing", "do evil"],
+    ["1482", "ethnikos", "map+person", "pagan"],
+    ["516", "axios_manner", "gold+manner", "worthily"],
   ];
   let drafted = [];
   for (let row of rows) {
