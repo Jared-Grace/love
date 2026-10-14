@@ -6,6 +6,8 @@ import { app_code_batch_question_answer_fns } from "./app_code_batch_question_an
 import { app_code_if_blocks_kept } from "./app_code_if_blocks_kept.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { html_div_first } from "./html_div_first.mjs";
+import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
+import { app_code_flex_gap } from "./app_code_flex_gap.mjs";
 import { app_code_program_step_through_generic } from "./app_code_program_step_through_generic.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
@@ -48,6 +50,9 @@ export function app_code_lesson_braces_step_generic(title, code_get, names) {
     }
     ("the guide stands on top of the card, above its Code: label, at the human's asking 2026-10-14");
     let guide = html_div_first(container);
+    ("spaced as the questions under the program are, so a sentence of the guide reads as one as they do");
+    html_flex_column_stretch(guide);
+    app_code_flex_gap(guide);
     app_code_program_step_through_generic(
       component,
       text,
