@@ -17,12 +17,13 @@ import { html_style_background_color_set } from "./html_style_background_color_s
 import { list_get } from "./list_get.mjs";
 import { list_set } from "./list_set.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 import { text_slice } from "./text_slice.mjs";
+import { html_span_text } from "./html_span_text.mjs";
 import { app_code_note_name_mark_open } from "./app_code_note_name_mark_open.mjs";
 import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { equal } from "./equal.mjs";
+import { subtract } from "./subtract.mjs";
 import { app_code_note_runs } from "./app_code_note_runs.mjs";
 import { app_code_note_runs_cut } from "./app_code_note_runs_cut.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
@@ -52,7 +53,6 @@ import { text_to } from "./text_to.mjs";
 import { boolean_is } from "./boolean_is.mjs";
 import { error } from "./error.mjs";
 import { app_code_expression_value_choose_await } from "./app_code_expression_value_choose_await.mjs";
-import { subtract } from "./subtract.mjs";
 import { html_transition_set } from "./html_transition_set.mjs";
 import { sleep } from "./sleep.mjs";
 import { app_code_value_logged_output } from "./app_code_value_logged_output.mjs";
@@ -74,7 +74,7 @@ export function app_code_program_step_through_generic(
     fn_name("app_code_program_trace"),
     "'s to say, so the steps asked for here are the ones the computer takes.");
   ("A line is pressed in the program itself rather than picked from a list of copies, since the question is where in the program the computer is. A wrong line turns red until the right one is pressed. The answers are the choices of every other question in this app, so a wrong one turns red and is spent and the right one turns green.");
-  ("A line evaluated goes back to how it is written once it is complete, since the program itself does not change as it runs; what it came to is kept in the notes above the names. Not picked: leaving if (false) { in the program, which would show a program nobody wrote.");
+  ("2026-10-14, at the human's asking: a name solved into its value stays solved in its line while the program runs, so if (true) { stays in sight while what it decided runs; every line goes back to how it is written once the program is complete, since the program itself does not change. Not picked: putting the line back as soon as it is complete, done first and taken back, since the value then turned back into the name before the learner had used it. Not picked: leaving the solved lines once the program is complete, which would show a program nobody wrote.");
   ("Not built yet: an expression with an operator in it, which is meant to be worked out by the pressing the expression lessons already teach; until then such a line is refused where it arrives.");
   let trace = app_code_program_trace(code);
   let wrap = html_div(parent);
@@ -256,6 +256,13 @@ export function app_code_program_step_through_generic(
     async function on_complete() {
       property_set(state, "pressing", false);
       rows_plain();
+      for (
+        let line_index = 0;
+        less_than(line_index, list_size(lines));
+        line_index++
+      ) {
+        line_restore(line_index);
+      }
       html_clear(ask);
       guide_say([]);
       ("no success message of its own: the caller shows one, as for every other answerer in this app; showing one here as well put two on the page");
@@ -369,7 +376,6 @@ export function app_code_program_step_through_generic(
       app_code_style_normal_text(logged, answer);
       return;
     }
-    line_restore(line_index);
     ("the line that ran stays highlighted while the next line is asked for, at the human's asking 2026-10-14, so the learner can see where the computer is coming from; pressing the next line moves the highlight there");
     property_set(state, "index", property_get(state, "index") + 1);
   }
