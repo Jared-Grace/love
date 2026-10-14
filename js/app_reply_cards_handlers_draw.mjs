@@ -118,6 +118,7 @@ export function app_reply_cards_handlers_draw(
       responses,
       bible_texts,
       languages_show_held,
+      testament_held,
     );
     return r8;
   }

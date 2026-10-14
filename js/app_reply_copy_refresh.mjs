@@ -8,8 +8,9 @@ export async function app_reply_copy_refresh(
   responses,
   bible_texts,
   languages_show,
+  jewish,
 ) {
-  arguments_assert(arguments, 4);
+  arguments_assert(arguments, 5);
   let v = prayer_blessing_expand();
   let ending = [];
   if (languages_show) {

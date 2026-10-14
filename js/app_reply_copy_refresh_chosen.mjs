@@ -6,8 +6,9 @@ export async function app_reply_copy_refresh_chosen(
   responses,
   bible_texts,
   languages_show_held,
+  testament_held,
 ) {
-  arguments_assert(arguments, 4);
+  arguments_assert(arguments, 5);
   let languages_chosen = property_get(
     languages_chosen_held,
     "languages_chosen",
@@ -20,6 +21,7 @@ export async function app_reply_copy_refresh_chosen(
     responses,
     bible_texts,
     languages_show,
+    false,
   );
   return r;
 }
