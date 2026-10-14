@@ -1121,6 +1121,10 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["6642", "tsabat", "hand+toward+doing", "hand to; offer"],
     ["6595", "path", "bread+pinching_hand", "piece; morsel"],
     ["6423", "peloni", "joker+person", "such a one"],
+    ["6194", "aremah", "wheat+mountain", "heap"],
+    ["5702", "agan", "locked+person+doing", "refrain"],
+    ["5480", "suk", "oil+droplet+doing", "anoint"],
+    ["4909", "maskoreth", "coin+hammer+thing", "wages"],
   ];
   let drafted = [];
   for (let row of rows) {
