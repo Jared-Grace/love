@@ -24,6 +24,8 @@ import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
 import { null_is } from "./null_is.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
+import { html_height_change_animate } from "./html_height_change_animate.mjs";
 import { property_get } from "./property_get.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_size } from "./list_size.mjs";
@@ -43,8 +45,6 @@ import { error } from "./error.mjs";
 import { app_code_expression_value_choose_await } from "./app_code_expression_value_choose_await.mjs";
 import { subtract } from "./subtract.mjs";
 import { text_slice } from "./text_slice.mjs";
-import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
-import { html_height_change_animate } from "./html_height_change_animate.mjs";
 import { html_transition_set } from "./html_transition_set.mjs";
 import { sleep } from "./sleep.mjs";
 import { app_code_value_logged_output } from "./app_code_value_logged_output.mjs";
@@ -132,15 +132,21 @@ export function app_code_program_step_through_generic(
       html_style_opacity(span, value4);
     }
   }
-  function guide_say(sentences) {
+  async function guide_say(sentences) {
     "the guide's sentences written in place of what it said before, when this example guides";
     if (null_is(guide)) {
       return;
     }
-    html_clear(guide);
-    for (let sentence of sentences) {
-      html_div_cycle_code(guide, sentence);
+    ("2026-10-14, at the human's asking: the words go, the guide grows or shrinks to the new ones, and they show once it has arrived, as the order lesson's guide does - by the same function, so the two cannot come to move differently. Not awaited: the question under the program is asked at once, and only the guide's own room is slowed");
+    ("Not picked: a fade, which the order lesson does not do; the words are hidden while anything moves, so nothing is read while it slides");
+    function change() {
+      html_clear(guide);
+      for (let sentence of sentences) {
+        html_div_cycle_code(guide, sentence);
+      }
     }
+    let duration = app_shared_animation_duration();
+    await html_height_change_animate(guide, guide, change, duration);
   }
   function entry_get() {
     let index = property_get(state, "index");
