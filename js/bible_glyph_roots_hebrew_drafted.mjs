@@ -1029,7 +1029,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["1478", "gava", "wind+skull+doing", "perish"],
     ["1319", "basar", "newspaper+thumbs_up+doing", "bring good news"],
     ["957", "baz", "pirate_flag+thing", "plunder"],
-    ["343", "eyd", "tornado", "calamity"],
+    ["343", "eyd", "collision+exclamation", "calamity"],
     ["60", "ebel", "loudly_crying+coffin+thing", "mourning"],
     ["8543", "temol", "sun+back", "yesterday"],
     ["8537", "tom", "full_moon+heart_red", "integrity"],
