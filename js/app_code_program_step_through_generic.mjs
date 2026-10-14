@@ -5,6 +5,7 @@ import { html_div } from "./html_div.mjs";
 import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
 import { app_code_flex_gap } from "./app_code_flex_gap.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
+import { html_style_overflow_hidden } from "./html_style_overflow_hidden.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_text_align_left } from "./html_text_align_left.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
@@ -87,6 +88,8 @@ export function app_code_program_step_through_generic(
   ("2026-10-14, at the human's asking: every question is asked under the program, which line runs next as well as what a line does. Not picked: asking which line runs next above the program, tried 2026-10-13 and taken back the next day.");
   let program = html_div(wrap);
   html_style_code_dark(program);
+  ("2026-10-14, at the human's asking: the program keeps its rounded corners when its first or last line is coloured, since a line's colour now runs edge to edge and would otherwise square them off; what reaches past the corners is cut away");
+  html_style_overflow_hidden(program);
   html_style_white_space(program, "pre-wrap");
   html_text_align_left(program);
   let lines = text_split_newline(code);
