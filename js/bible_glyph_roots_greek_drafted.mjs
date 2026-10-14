@@ -1118,6 +1118,22 @@ export function bible_glyph_roots_greek_drafted() {
     ["2554", "kakopoieo", "thumbs_down+hand+doing", "do evil"],
     ["1482", "ethnikos", "map+describing", "pagan"],
     ["516", "axios_manner", "gold+manner", "worthily"],
+    ["5029", "tacha", "person_shrugging", "perhaps"],
+    ["4961", "sustratiotes", "safety_pin+military_helmet+person", "fellow soldier"],
+    ["4869", "sunaichmalotos", "safety_pin+chains+person", "fellow prisoner"],
+    ["4359", "prosopheilo", "toward+receipt+doing", "owe besides"],
+    ["4246", "presbutes", "old_man+person", "old man"],
+    ["3685", "oninemi", "thumbs_up+hand_receiving+doing", "benefit"],
+    ["3578", "xenia", "foreigner+house", "guest room"],
+    ["3417", "mneia", "reminder_ribbon+thing", "remembrance"],
+    ["2173", "euchrestos", "thumbs_up+hammer_and_wrench+describing", "useful"],
+    ["890", "achrestos", "no_entry+hammer_and_wrench+describing", "useless"],
+    ["1756", "energes", "tray_in+tools+describing", "effective"],
+    ["1677", "ellogao", "abacus+receipt+doing", "charge to account"],
+    ["1595", "hekousios", "me+heart_red+describing", "voluntary"],
+    ["661", "apotino", "receipt+check+doing", "repay"],
+    ["433", "aneko", "puzzle_piece+check+doing", "be fitting"],
+    ["375", "anapempo", "turn_back+walking+doing", "send back"],
   ];
   let drafted = [];
   for (let row of rows) {
