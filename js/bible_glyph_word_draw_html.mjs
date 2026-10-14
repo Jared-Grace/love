@@ -3,8 +3,9 @@ import { equal } from "./equal.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_style_set } from "./html_style_set.mjs";
-import { html_attribute_set } from "./html_attribute_set.mjs";
 import { list_join } from "./list_join.mjs";
+import { html_attribute_set } from "./html_attribute_set.mjs";
+import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
 import { bible_glyph_name_draw_html } from "./bible_glyph_name_draw_html.mjs";
 export function bible_glyph_word_draw_html(parent, word, lookup) {
   "$plain word";
@@ -21,6 +22,7 @@ export function bible_glyph_word_draw_html(parent, word, lookup) {
   ("THE ONE THING THE RING DID THAT THE GAP CANNOT IS SURVIVE A LINE BREAK, so a group is still forbidden to break across lines - and that rule stopped being tidiness the moment the ring went. A group split over two lines loses the near gap the reader would have compared the far one against, and what is left on the page is glyphs at a line end and glyphs at a line start, which is exactly how two separate words look.");
   ("A GROUP OF ONE IS STILL A GROUP AND STILL GETS NOTHING DRAWN. One picture standing alone is already one word, so there is nothing to hold together and no gap inside it to be narrow.");
   ("EVERY GROUP, EVEN ONE OF ONE, IS ITS OWN SPAN AND SAYS WHICH PICTURES IT HOLDS, because a tap on a word opens that word with its meaning and the tap has to land on something that knows the whole word. The span draws nothing, so the page looks exactly as it did.");
+  ("A GROUP SHOWS THE POINTER, because that says it can be tapped - and on an iPhone it is also what makes a tap on plain text reach the one listener above it at all; without it the tap is dropped silently.");
   ("Each glyph is drawn by ",
     fn_name("bible_glyph_name_draw_html"),
     ", which draws a glyph the lookup does not carry as its name rather than as a blank, for the same reason the plain text twin does it.");
@@ -39,6 +41,7 @@ export function bible_glyph_word_draw_html(parent, word, lookup) {
     html_style_set(group, "whiteSpace", "nowrap");
     let value = list_join(part, "+");
     html_attribute_set(group, "data-glyphs", value);
+    html_cursor_pointer(group);
     for (let name of part) {
       bible_glyph_name_draw_html(group, name, lookup);
     }
