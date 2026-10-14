@@ -48,6 +48,7 @@ import { text_ends_with } from "./text_ends_with.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { list_take } from "./list_take.mjs";
 import { app_shared_glow_look_here } from "./app_shared_glow_look_here.mjs";
+import { html_scroll_nearest } from "./html_scroll_nearest.mjs";
 import { app_shared_button_inline_sentence } from "./app_shared_button_inline_sentence.mjs";
 import { app_code_code_dots_chip_add } from "./app_code_code_dots_chip_add.mjs";
 import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
@@ -254,10 +255,12 @@ export function app_code_program_step_through_generic(
           list_add(parts, before);
         }
         let line = html_div_cycle_code(guide, parts);
-        function look_here() {
+        async function look_here() {
           let target_get = property_get(choose, "target_get");
           let target = target_get();
           app_shared_glow_look_here(target);
+          ("2026-10-14, at the human's asking: the thing lit up may be off screen, and a glow nobody can see answers nothing - so the page glides until it is in view");
+          await html_scroll_nearest(target);
         }
         ("2026-10-14, at the human's asking: a button to choose is drawn as a button, and a line of the program to choose is drawn as the code it is, pressable - each looks like the thing it points at");
         if (property_get(choose, "button")) {
