@@ -7,6 +7,7 @@ import { equal } from "./equal.mjs";
 import { list_join_underscore } from "./list_join_underscore.mjs";
 import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { list_filter } from "./list_filter.mjs";
+import { giveaway_record_row_song_is } from "./giveaway_record_row_song_is.mjs";
 import { giveaway_psalms_songs_row_passage_defect_or_null } from "./giveaway_psalms_songs_row_passage_defect_or_null.mjs";
 import { list_duplicates_by_property } from "./list_duplicates_by_property.mjs";
 import { list_map } from "./list_map.mjs";
@@ -82,10 +83,6 @@ export function giveaway_psalms_record_rows_defects(rows) {
     };
     return defect;
   }
-  function row_song_is(row) {
-    let song_is = equal(row.kind, "song");
-    return song_is;
-  }
   function row_placed(row) {
     let place = list_join_underscore([row.passage_code, row.file_name]);
     let placed = {
@@ -108,7 +105,7 @@ export function giveaway_psalms_record_rows_defects(rows) {
     rows,
     rebuilt_defect_or_null,
   );
-  let song_rows = list_filter(rows, row_song_is);
+  let song_rows = list_filter(rows, giveaway_record_row_song_is);
   let song_rows_spelled = list_filter(song_rows, row_pieces_spelled_is);
   let passage_defects = list_map_filter_null_not_is(
     song_rows_spelled,
