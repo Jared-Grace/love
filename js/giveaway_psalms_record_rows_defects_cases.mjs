@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-export function giveaway_psalms_songs_rows_defects_cases() {
+export function giveaway_psalms_record_rows_defects_cases() {
   arguments_assert(arguments, 0);
   ("The written cases proving that every fault the giveaway record check can name is a fault it does name.");
   ("★ A CHECK WHOSE WRONG ANSWER NOBODY HAS EVER SEEN READS AS WORKING WHETHER IT WORKS OR NOT. The record it guards is clean, and a clean record exercises none of the branches that catch something - so running the check against the real record proves only that it says nothing, which is also what a broken check says. Each case here is a row built wrong on purpose, and the cases holding a correct row are here for the same reason from the other side: a check that answered with a fault for everything would pass every one of the others.");

@@ -11,7 +11,7 @@ import { giveaway_psalms_songs_row_passage_defect_or_null } from "./giveaway_psa
 import { list_duplicates_by_property } from "./list_duplicates_by_property.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
-export function giveaway_psalms_songs_rows_defects(rows) {
+export function giveaway_psalms_record_rows_defects(rows) {
   arguments_assert(arguments, 1);
   ("$plain rows");
   ("Every row of a giveaway record that the naming functions do not stand behind, one fault to a row.");

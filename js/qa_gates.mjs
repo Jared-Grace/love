@@ -20,8 +20,8 @@ import { functions_dispatcher_commands_gate_run } from "./functions_dispatcher_c
 import { memory_symbol_gate_run } from "./memory_symbol_gate_run.mjs";
 import { memory_index_size_gate_run } from "./memory_index_size_gate_run.mjs";
 import { memory_index_lines_gate_run } from "./memory_index_lines_gate_run.mjs";
-import { giveaway_psalms_songs_rows_defects_cases_gate_run } from "./giveaway_psalms_songs_rows_defects_cases_gate_run.mjs";
-import { giveaway_psalms_songs_gate_run } from "./giveaway_psalms_songs_gate_run.mjs";
+import { giveaway_psalms_record_rows_defects_cases_gate_run } from "./giveaway_psalms_record_rows_defects_cases_gate_run.mjs";
+import { giveaway_psalms_record_gate_run } from "./giveaway_psalms_record_gate_run.mjs";
 import { examples_gate_run } from "./examples_gate_run.mjs";
 import { example_files_refuses_run_gate_run } from "./example_files_refuses_run_gate_run.mjs";
 import { example_files_command_refusals_gate_run } from "./example_files_command_refusals_gate_run.mjs";
@@ -640,8 +640,8 @@ export function qa_gates() {
     memory_symbol_gate_run,
     memory_index_size_gate_run,
     memory_index_lines_gate_run,
-    giveaway_psalms_songs_rows_defects_cases_gate_run,
-    giveaway_psalms_songs_gate_run,
+    giveaway_psalms_record_rows_defects_cases_gate_run,
+    giveaway_psalms_record_gate_run,
     examples_gate_run,
     example_files_refuses_run_gate_run,
     example_files_command_refusals_gate_run,

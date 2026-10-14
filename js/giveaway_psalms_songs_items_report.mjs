@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { giveaway_psalms_songs_path } from "./giveaway_psalms_songs_path.mjs";
+import { giveaway_psalms_record_path } from "./giveaway_psalms_record_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { giveaway_psalms_songs_rows_items } from "./giveaway_psalms_songs_rows_items.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -11,7 +11,7 @@ export async function giveaway_psalms_songs_items_report() {
   ("It takes no argument, so that it can be asked at any time by anybody without a decision to make first. The record is where it is, and the recordings themselves are not consulted - which is also why this answers the same on a machine that has never held them.");
   ("A line to a box is printed and the whole shelf is returned, because a hundred lines is readable and five hundred is not. The seam writes the returned answer out in full next to its printed form, so the file listing is one look away and is not in the way.");
   ("★ THE FILE COUNT IS ADDED UP OUT OF THE BOXES AND IS NO LONGER THE NUMBER OF ROWS IN THE RECORD, BECAUSE A BOX HOLDS MORE THAN THE RECORD WRITES DOWN. Every box also carries the words of its psalm, three files named from the psalm's number with nothing written down about them, so the record's row count came out five hundred and two against a shelf of seven hundred and forty-eight. A total that disagrees with the lines printed just above it is worse than no total: it reads as the shelf being wrong rather than the adding.");
-  let path = giveaway_psalms_songs_path();
+  let path = giveaway_psalms_record_path();
   let rows = await file_read_json(path);
   let items = giveaway_psalms_songs_rows_items(rows);
   let counts = list_map_property(items, "files_count");

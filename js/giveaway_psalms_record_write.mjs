@@ -10,9 +10,9 @@ import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_sort_text_property } from "./list_sort_text_property.mjs";
 import { list_duplicates_by_property } from "./list_duplicates_by_property.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-import { giveaway_psalms_songs_path } from "./giveaway_psalms_songs_path.mjs";
+import { giveaway_psalms_record_path } from "./giveaway_psalms_record_path.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
-export async function giveaway_psalms_songs_write(folder_audio) {
+export async function giveaway_psalms_record_write(folder_audio) {
   arguments_assert(arguments, 1);
   ("$plain folder_audio");
   ("Read every sung psalm out of a folder once and write down, for each one, the name it has on this disk beside the name it will be given away under.");
@@ -63,7 +63,7 @@ export async function giveaway_psalms_songs_write(folder_audio) {
   list_empty_is_assert_json(clashes, {
     hint: "two recordings would be given away under one name",
   });
-  let path = giveaway_psalms_songs_path();
+  let path = giveaway_psalms_record_path();
   await file_overwrite_json(path, rows);
   return rows;
 }

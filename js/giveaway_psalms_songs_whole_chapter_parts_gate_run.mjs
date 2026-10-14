@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { giveaway_psalms_songs_path } from "./giveaway_psalms_songs_path.mjs";
+import { giveaway_psalms_record_path } from "./giveaway_psalms_record_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { giveaway_psalms_songs_whole_chapter_parts } from "./giveaway_psalms_songs_whole_chapter_parts.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
@@ -10,7 +10,7 @@ export async function giveaway_psalms_songs_whole_chapter_parts_gate_run() {
   ("★ THIS IS THE FIRST CHECK ON THIS RECORD THAT REACHES OUTSIDE IT, SO IT IS THE FIRST ONE THAT CAN BE SLOW OR CAN FAIL FOR A REASON THAT IS NOBODY'S FAULT. Every other check here compares the record against itself. This one needs to know how many verses a psalm has, and only the text of the psalm says that, so it waits on a machine somewhere else. The reading keeps what it fetches on this disk, so the waiting is paid once and a later run is quick; a run on a machine that has never fetched them pays the whole wait, and a run with nothing to reach fails rather than passing quietly.");
   ("The record is read here and judged next door, the same way the other gate on this record is built, so that the judging can be handed rows on purpose and shown to fire.");
   ("Each offending row is printed whole before the count, because the repair is a rename on somebody's disk and the person doing it needs the name that is there now as well as the chapter number the range turned out to cover.");
-  let path = giveaway_psalms_songs_path();
+  let path = giveaway_psalms_record_path();
   let rows = await file_read_json(path);
   let found = await giveaway_psalms_songs_whole_chapter_parts(rows);
   for (let one of found) {

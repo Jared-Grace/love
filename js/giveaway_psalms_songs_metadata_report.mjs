@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { giveaway_psalms_songs_path } from "./giveaway_psalms_songs_path.mjs";
+import { giveaway_psalms_record_path } from "./giveaway_psalms_record_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { giveaway_psalms_songs_rows_items } from "./giveaway_psalms_songs_rows_items.mjs";
 import { giveaway_licence_url } from "./giveaway_licence_url.mjs";
@@ -12,7 +12,7 @@ export async function giveaway_psalms_songs_metadata_report() {
   ("★ THIS IS FOR READING THE WORDS BEFORE THEY ARE PUBLISHED, WHICH IS THE LAST MOMENT SOME OF THEM CAN BE CHANGED AT ALL. A title and a description can be rewritten afterwards as often as anybody likes; the address cannot be changed ever, and the licence is a promise made to whoever already downloaded the box under it. So the two lines that are cheap to fix and the two that are not are shown side by side on purpose.");
   ("The licence is said once above the list rather than once a box, because it is the same promise on every one of them and repeating it eighty times would make a reader check whether it was.");
   ("It takes no argument so that anybody can ask it at any time without deciding anything first, and it returns the whole shelf while printing a line to a box, because a page of lines can be read and eighty paragraphs cannot.");
-  let path = giveaway_psalms_songs_path();
+  let path = giveaway_psalms_record_path();
   let rows = await file_read_json(path);
   let items = giveaway_psalms_songs_rows_items(rows);
   let described = [];
