@@ -22,7 +22,7 @@ export function app_chapter_group_heading_draw(
   "$plain chapter_code";
   "$plain group";
   "$plain texts";
-  "What stands at the top of one group: which verses it holds, a button that copies their words, a button that copies their name, and a line saying what was just copied.";
+  "What stands at the top of one group: which verses it holds, a button that copies their words, a button that copies their reference, and a line saying what was just copied.";
   "The words are looked up when a button is pressed and not when it is drawn, because the heading is drawn before the words have arrived.";
   arguments_assert(arguments, 4);
   let first = list_get(group, 0);
@@ -54,6 +54,6 @@ export function app_chapter_group_heading_draw(
     let told = text_combine_multiple(["✅ Copied ", name]);
     html_text_set(said, told);
   }
-  app_shared_button(parent, "🏷️ Copy name", name_copy);
+  app_shared_button(parent, "🏷️ Copy reference", name_copy);
   said = html_p_text(parent, "");
 }
