@@ -5,11 +5,14 @@ import { list_concat_single_right } from "./list_concat_single_right.mjs";
 import { list_starts_with_curried_right } from "./list_starts_with_curried_right.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
+import { html_styles_inline_restore_later } from "./html_styles_inline_restore_later.mjs";
+import { list_add } from "./list_add.mjs";
 import { app_code_lesson_quiz_token_select_wrong_show } from "./app_code_lesson_quiz_token_select_wrong_show.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
+import { list_reverse } from "./list_reverse.mjs";
+import { list_clear } from "./list_clear.mjs";
 import { each } from "./each.mjs";
 import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
-import { list_add } from "./list_add.mjs";
 import { app_code_lesson_quiz_token_select_row_set } from "./app_code_lesson_quiz_token_select_row_set.mjs";
 import { app_code_lesson_quiz_token_select_done_is } from "./app_code_lesson_quiz_token_select_done_is.mjs";
 import { sleep_seconds } from "./sleep_seconds.mjs";
@@ -36,6 +39,7 @@ export function app_code_lesson_quiz_pieces_select(
   let tokens_unique = property_get(pieces, "tokens_unique");
   let variations = property_get(pieces, "variations");
   let buttons = property_get(pieces, "buttons");
+  let restores = [];
   function lambda(token) {
     let b = app_shared_button(parent, token, on_click);
     html_style_code_dark(b);
@@ -45,6 +49,9 @@ export function app_code_lesson_quiz_pieces_select(
       let variations_new = list_filter(variations, lambda2);
       let e = list_empty_is(variations_new);
       if (e) {
+        ("2026-10-14, at the human's asking: a refused piece goes back to exactly how it looked before, once a right one is tapped - its red edge too, which the plain dark style never touched, so a border stayed red. Saved before the red goes on, and put back newest first, so a piece refused twice ends as it was before the first red. Not picked: adding the border to the plain style, which would be one more property for every reset to remember");
+        let restore = html_styles_inline_restore_later(b);
+        list_add(restores, restore);
         app_code_lesson_quiz_token_select_wrong_show(
           b,
           note_div,
@@ -56,6 +63,11 @@ export function app_code_lesson_quiz_pieces_select(
         return;
       }
       html_text_content_set(note_div, "");
+      list_reverse(restores);
+      for (let restore2 of restores) {
+        restore2();
+      }
+      list_clear(restores);
       each(buttons, html_style_code_dark);
       app_shared_button_screen_green_style_assign(b);
       list_add(chosen, token);
