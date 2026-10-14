@@ -128,10 +128,10 @@ export function app_code_program_trace(code) {
       let alternate = property_get(node, "alternate");
       ("an if's line also says what stands after its { ... }: none, else, or else_if; a guide saying which { ... } runs instead reads it here");
       let after = "none";
-      if (not(equal(alternate, null))) {
-        after = equal(property_get(alternate, "type"), "IfStatement")
-          ? "else_if"
-          : "else";
+      let b = equal(alternate, null);
+      if (not(b)) {
+        let left3 = property_get(alternate, "type");
+        after = equal(left3, "IfStatement") ? "else_if" : "else";
       }
       property_set(entry2, "alternate", after);
       if (value4) {
