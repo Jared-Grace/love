@@ -344,6 +344,18 @@ export function app_code_lesson_ids_short() {
     ),
     app_code_lesson_braces_run_if_in_else: text_frozen("braces_run_if_in_else"),
     app_code_lesson_braces_run_else_if: text_frozen("braces_run_else_if"),
+    app_code_lesson_braces_run_if_else_in_if_else: text_frozen(
+      "braces_run_if_else_in_if_else",
+    ),
+    app_code_lesson_braces_step_if_else_in_if_else: text_frozen(
+      "braces_step_if_else_in_if_else",
+    ),
+    app_code_lesson_braces_run_if_else_in_else: text_frozen(
+      "braces_run_if_else_in_else",
+    ),
+    app_code_lesson_braces_step_if_else_in_else: text_frozen(
+      "braces_step_if_else_in_else",
+    ),
     app_code_lesson_braces_run_else_if_twice: text_frozen(
       "braces_run_else_if_twice",
     ),
