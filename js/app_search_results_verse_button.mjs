@@ -1,10 +1,10 @@
-import { app_search_results_verse_card } from "./app_search_results_verse_card.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_set_exists_not } from "./property_set_exists_not.mjs";
+import { app_search_results_verse_card } from "./app_search_results_verse_card.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { html_button_copy_text } from "./html_button_copy_text.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
@@ -13,6 +13,7 @@ import { app_shared_bible_open } from "./app_shared_bible_open.mjs";
 import { emoji_book_open } from "./emoji_book_open.mjs";
 import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
 import { app_shared_bible_reference_entries } from "./app_shared_bible_reference_entries.mjs";
+import { app_shared_bible_books_primary } from "./app_shared_bible_books_primary.mjs";
 import { app_shared_bible_verse_block } from "./app_shared_bible_verse_block.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -60,10 +61,17 @@ export function app_search_results_verse_button(
       reference,
       languages_chosen,
     );
+    ("The reference the reader sees and copies names the book in the bible the bible app would name it in, the last one chosen, so the same verse copies the same way from either app. The english one above stays only for finding the words, because that is the spelling the bible files are read by.");
+    let books_primary = await app_shared_bible_books_primary(languages_chosen);
+    let reference_shown = ebible_parts_chapter_code_to_reference(
+      chapter_code,
+      books_primary,
+      [verse_number],
+    );
     ("the reference heads the verse the way it does in the supper and verses apps, set back so the words of the verse are what the eye lands on");
-    app_shared_bible_verse_block(div_verse, reference, entries);
+    app_shared_bible_verse_block(div_verse, reference_shown, entries);
     ("what gets copied is the reference then each language's words, in the order they are read on the page");
-    list_add(bible_texts, reference);
+    list_add(bible_texts, reference_shown);
     let texts = list_map_property(entries, "text");
     list_add_multiple(bible_texts, texts);
     async function copy() {
