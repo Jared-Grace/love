@@ -145,6 +145,7 @@
   "three_strong",
   "comment",
   "log_twice",
+  "step_log_twice",
   "comment_skip",
   "comment_after",
   "name_value",
