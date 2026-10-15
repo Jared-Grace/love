@@ -70,7 +70,7 @@ export async function giveaway_psalms_songs_whole_chapter_parts_rename(
     let path_after = "";
     while (text_empty_is(file_name_after)) {
       let candidate = file_name_spell(one.chapter, take_number, ending);
-      let candidate_path = path_join(folder_audio, candidate);
+      let candidate_path = path_join([folder_audio, candidate]);
       let taken_is = await file_exists(candidate_path);
       if (taken_is) {
         take_number = take_number + 1;
@@ -79,7 +79,7 @@ export async function giveaway_psalms_songs_whole_chapter_parts_rename(
       file_name_after = candidate;
       path_after = candidate_path;
     }
-    let path_before = path_join(folder_audio, one.file_name);
+    let path_before = path_join([folder_audio, one.file_name]);
     await file_move(path_before, path_after);
     let moved = {
       file_name: one.file_name,
