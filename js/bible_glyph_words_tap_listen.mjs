@@ -1,7 +1,9 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
 import { bible_glyph_group_overlay_open } from "./bible_glyph_group_overlay_open.mjs";
 import { html_on } from "./html_on.mjs";
 export function bible_glyph_words_tap_listen(parent, chapter_code, lookup) {
@@ -13,9 +15,13 @@ export function bible_glyph_words_tap_listen(parent, chapter_code, lookup) {
   ("ONE LISTENER FOR THE WHOLE CHAPTER, NOT ONE PER WORD. A chapter is hundreds of words and each one already says which pictures it is, so a tap is asked where it landed and the word answers for itself.");
   ("THE MEANINGS ARE SENT FOR AT THE FIRST TAP, behind a fetch of their own, because they read the root tables and a page that draws no chapter must never carry those. By the time a chapter is on the screen its drawing has already sent for the same tables, so the wait is nothing.");
   ("A word that knows the spelling it was written in, from the span drawn round it, hands that spelling on as well, so the overlay can show and say it; a word drawn without one hands on null. How the word is said rides on the same span and is handed on the same way.");
+  ("WHETHER THE WORD IS A NAME IS ASKED BY THE WORD'S OWN NUMBER, from the same span, and never by its pictures, because a name may share its pictures with the common word it means; see ",
+    fn_name("bible_glyph_testament_names"),
+    ". A word drawn without a number is shown as a definition.");
   ("A TAP WHILE THE MEANINGS ARE STILL ON THEIR WAY IS IGNORED. The first tap is already going to open an overlay, and a reader who taps again because nothing seemed to happen would otherwise get a second one stacked over it, which one tap then closes and leaves the other behind.");
   let testament_name = bible_chapter_testament_name(chapter_code);
   let meanings = null;
+  let names_table = null;
   let opening = false;
   async function on_tap(event) {
     let group = event.target.closest("[data-glyphs]");
@@ -30,17 +36,32 @@ export function bible_glyph_words_tap_listen(parent, chapter_code, lookup) {
       opening = true;
       let tables = await import("./bible_glyph_testament_meanings.mjs");
       meanings = tables.bible_glyph_testament_meanings(testament_name);
+      let named = await import("./bible_glyph_testament_names.mjs");
+      names_table = named.bible_glyph_testament_names(testament_name);
       opening = false;
     }
     let spelled = group.closest("[data-original]");
     let original = null;
     let sound = null;
+    let name = null;
     let b = equal(spelled, null);
     if (not(b)) {
       original = spelled.dataset.original;
       sound = spelled.dataset.sound ?? null;
+      let strong = spelled.dataset.strong ?? null;
+      let b2 = equal(strong, null);
+      if (not(b2)) {
+        name = property_get_or_null(names_table, strong);
+      }
     }
-    bible_glyph_group_overlay_open(names, lookup, meanings, original, sound);
+    bible_glyph_group_overlay_open(
+      names,
+      lookup,
+      meanings,
+      original,
+      sound,
+      name,
+    );
   }
   html_on(parent, "click", on_tap);
 }

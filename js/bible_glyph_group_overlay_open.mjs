@@ -16,8 +16,8 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
-import { null_is } from "./null_is.mjs";
 import { not_equal } from "./not_equal.mjs";
+import { null_is } from "./null_is.mjs";
 import { bible_word_sound_url_cycling } from "./bible_word_sound_url_cycling.mjs";
 import { app_shared_gloss_bible_word_sound } from "./app_shared_gloss_bible_word_sound.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
@@ -30,8 +30,12 @@ export function bible_glyph_group_overlay_open(
   meanings,
   original,
   sound,
+  word_name,
 ) {
-  arguments_assert(arguments, 5);
+  arguments_assert(arguments, 6);
+  ("$plain word_name");
+  ("the word name is what the tapped word means as a name and who or what it names, found by the word's own number, or null when the word is no name or its number is not known.");
+  ("THE NAME GOES ON THE PIECE THAT HAS A ROOT, never on a small joined word such as and or the, because the name is the word the number belongs to.");
   ("$plain names");
   ("$plain lookup");
   ("$plain meanings");
@@ -109,7 +113,10 @@ export function bible_glyph_group_overlay_open(
       app_shared_text_deemphasized(unexplained);
       continue;
     }
-    let named = meaning.name;
+    let named = null;
+    if (not_equal(meaning.root, null)) {
+      named = word_name;
+    }
     let unnamed = null_is(named);
     let label_text = unnamed ? "Definition: " : "Name: ";
     let label = html_span_text_content(line, label_text);

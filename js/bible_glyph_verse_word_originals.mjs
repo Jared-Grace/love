@@ -9,6 +9,7 @@ export function bible_glyph_verse_word_originals(verse) {
   ("the verse is one built verse as it is kept. It is data to read and nothing that runs.");
   ("The original Hebrew or Greek spelling of each word of one built verse, with how that written word is said, in the verse's own English order, or null for a word whose original cannot be found.");
   ("EACH FOUND WORD IS ITS SPELLING AND ITS SOUND TOGETHER, the sound read from the verse's sounds at the same place as the written word, so the two can never come from different words. A verse built before sounds were kept gives a null sound and the spelling still.");
+  ("EACH FOUND WORD ALSO CARRIES ITS OWN NUMBER, because the number is what says whether the word is a name. Its pictures cannot say that, since a name may be drawn with the same pictures as the common word it means.");
   ("A WORD IS FOUND BY ITS NUMBER, NOT BY ITS PLACE. The words are kept in English order and the written words in the order they were written, and a word joined to others in the original can stand as several words in the English, so the third English word is seldom the third written one.");
   ("A NUMBER THE VERSE USES TWICE IS MATCHED IN TURN: the first English word holding it takes the first written word holding it, and so on. A written word once taken is not taken again, so two English words of one number land on two written words wherever the verse has two.");
   ("A word kept from before written words were kept has none to look in, so every word of such a verse comes back null.");
@@ -34,6 +35,7 @@ export function bible_glyph_verse_word_originals(verse) {
           found = {
             original: list_get(word, 0),
             sound,
+            strong,
           };
           list_add(taken, index);
           break;
