@@ -29,8 +29,9 @@ export function app_code_lesson_step_programs_generic(
     html_div_cycle_code(box, [
       "Run the program yourself, one line at a time, as the computer does",
     ]);
+    ("2026-10-15: says the line you chose rather than that line, the pointing word the lesson-text gate looks for. Not picked: showing a line of code here, since the line is a different one at every step");
     html_div_cycle_code(box, [
-      "First choose the next line to run. Then say what that line does, and do it",
+      "First choose the next line to run. Then say what the line you chose does, and do it",
     ]);
     html_div_cycle_code(box, [
       "When no line is left to run, choose: The program is complete",
