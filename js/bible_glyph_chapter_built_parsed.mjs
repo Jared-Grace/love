@@ -1,9 +1,11 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { bible_glyph_verse_word_originals } from "./bible_glyph_verse_word_originals.mjs";
+import { list_get } from "./list_get.mjs";
+import { add } from "./add.mjs";
 import { bible_glyph_drawn_for_english } from "./bible_glyph_drawn_for_english.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { list_get } from "./list_get.mjs";
 import { bible_glyph_keys_spelled } from "./bible_glyph_keys_spelled.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
@@ -27,10 +29,18 @@ export function bible_glyph_chapter_built_parsed(built, drawn) {
     fn_name("bible_glyph_drawn_for_english"),
     "'s table, so a word whose English says god or gods in small letters is drawn as an idol and not as God.");
   ("A word with no picture and no English of its own is left out: its English was pulled into a neighbour, which already says it.");
+  ("EACH VERSE ALSO KEEPS EACH WORD'S ORIGINAL SPELLING, in a list beside its words and one for one with them, from ",
+    fn_name("bible_glyph_verse_word_originals"),
+    ", so a tapped word can show and say the word it stands for. A word left out leaves its spelling out too, or every word after it would carry its neighbour's.");
   let verses = [];
   for (let verse of built.verses) {
     let words = [];
+    let originals_all = bible_glyph_verse_word_originals(verse);
+    let originals = [];
+    let index = 0;
     for (let pair of verse.words) {
+      let original = list_get(originals_all, index);
+      index = add(index, 1);
       let strong = pair[0];
       let english = pair[1];
       let spelled = null;
@@ -49,12 +59,14 @@ export function bible_glyph_chapter_built_parsed(built, drawn) {
       }
       let item = bible_glyph_word_parse(spelled);
       list_add(words, item);
+      list_add(originals, original);
     }
     list_add(verses, {
       verse_number: verse.verse_number,
       original: verse.original,
       english: verse.english,
       words,
+      originals,
     });
   }
   let chapter = {

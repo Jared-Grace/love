@@ -2847,6 +2847,42 @@ export function bible_glyph_characters() {
       name: "repeat_button",
       character: "🔁",
     },
+    {
+      name: "rotating_light",
+      character: "🚨",
+    },
+    {
+      name: "muted_speaker",
+      character: "🔇",
+    },
+    {
+      name: "person_in_lotus_position",
+      character: "🧘",
+    },
+    {
+      name: "nauseated_face",
+      character: "🤢",
+    },
+    {
+      name: "manual_wheelchair",
+      character: "🦽",
+    },
+    {
+      name: "person_cartwheeling",
+      character: "🤸",
+    },
+    {
+      name: "magic_wand",
+      character: "🪄",
+    },
+    {
+      name: "tired_face",
+      character: "😫",
+    },
+    {
+      name: "black_heart",
+      character: "🖤",
+    },
   ];
   return characters;
 }

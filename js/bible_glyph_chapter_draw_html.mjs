@@ -1,6 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { bible_glyph_characters_lookup } from "./bible_glyph_characters_lookup.mjs";
 import { bible_glyph_verse_paragraph_draw_html } from "./bible_glyph_verse_paragraph_draw_html.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
 import { bible_glyph_words_tap_listen } from "./bible_glyph_words_tap_listen.mjs";
 export function bible_glyph_chapter_draw_html(parent, chapter, traditions) {
   "$plain chapter";
@@ -21,10 +22,12 @@ export function bible_glyph_chapter_draw_html(parent, chapter, traditions) {
     ". The page still tells nobody what a picture means until a word is tapped, so a reader working the pictures out from the key loses nothing.");
   let lookup = bible_glyph_characters_lookup(traditions);
   for (let verse of chapter.verses) {
+    let originals = property_get_or_null(verse, "originals");
     bible_glyph_verse_paragraph_draw_html(
       parent,
       verse.verse_number,
       verse.words,
+      originals,
       lookup,
     );
   }

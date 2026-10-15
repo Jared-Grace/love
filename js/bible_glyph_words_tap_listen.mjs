@@ -1,6 +1,7 @@
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { bible_glyph_group_overlay_open } from "./bible_glyph_group_overlay_open.mjs";
 import { html_on } from "./html_on.mjs";
 export function bible_glyph_words_tap_listen(parent, chapter_code, lookup) {
@@ -11,6 +12,7 @@ export function bible_glyph_words_tap_listen(parent, chapter_code, lookup) {
   ("A tap on any drawn word of a chapter opens that word large, with its meaning.");
   ("ONE LISTENER FOR THE WHOLE CHAPTER, NOT ONE PER WORD. A chapter is hundreds of words and each one already says which pictures it is, so a tap is asked where it landed and the word answers for itself.");
   ("THE MEANINGS ARE SENT FOR AT THE FIRST TAP, behind a fetch of their own, because they read the root tables and a page that draws no chapter must never carry those. By the time a chapter is on the screen its drawing has already sent for the same tables, so the wait is nothing.");
+  ("A word that knows the spelling it was written in, from the span drawn round it, hands that spelling on as well, so the overlay can show and say it; a word drawn without one hands on null.");
   let testament_name = bible_chapter_testament_name(chapter_code);
   let meanings = null;
   async function on_tap(event) {
@@ -23,7 +25,13 @@ export function bible_glyph_words_tap_listen(parent, chapter_code, lookup) {
       let tables = await import("./bible_glyph_testament_meanings.mjs");
       meanings = tables.bible_glyph_testament_meanings(testament_name);
     }
-    bible_glyph_group_overlay_open(names, lookup, meanings);
+    let spelled = group.closest("[data-original]");
+    let original = null;
+    let b = equal(spelled, null);
+    if (not(b)) {
+      original = spelled.dataset.original;
+    }
+    bible_glyph_group_overlay_open(names, lookup, meanings, original);
   }
   html_on(parent, "click", on_tap);
 }

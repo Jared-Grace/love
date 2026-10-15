@@ -24,6 +24,7 @@ export function app_emoji_bible_verse_key_draw(
     content,
     row.verse_number,
     row.words,
+    row.originals,
     lookup,
   );
   if (others_shown) {

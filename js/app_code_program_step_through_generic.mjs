@@ -70,10 +70,12 @@ import { app_code_program_step_guide_line_next } from "./app_code_program_step_g
 import { text_trim } from "./text_trim.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
-import { text_to } from "./text_to.mjs";
+import { json_to } from "./json_to.mjs";
 import { boolean_is } from "./boolean_is.mjs";
-import { error } from "./error.mjs";
-import { app_code_expression_value_choose_buttons } from "./app_code_expression_value_choose_buttons.mjs";
+import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
+import { object_values } from "./object_values.mjs";
+import { list_remove_if_exists } from "./list_remove_if_exists.mjs";
+import { app_code_expression_value_choose_buttons_generic } from "./app_code_expression_value_choose_buttons_generic.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -81,6 +83,7 @@ import { html_opacity_animate } from "./html_opacity_animate.mjs";
 import { html_size_change_animate } from "./html_size_change_animate.mjs";
 import { html_opacity_transition } from "./html_opacity_transition.mjs";
 import { sleep } from "./sleep.mjs";
+import { text_to } from "./text_to.mjs";
 import { app_code_value_logged_output } from "./app_code_value_logged_output.mjs";
 import { app_code_label_of_code } from "./app_code_label_of_code.mjs";
 import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
@@ -150,7 +153,9 @@ export function app_code_program_step_through_generic(
     pressing: false,
     logged_box: null,
     asked: null,
+    held: {},
   };
+  ("held: the value each name holds so far, by name, so a name asked about can be offered the values the other names hold as the wrong choices");
   let highlight = app_code_expression_chosen_background_color();
   let wrong_color = app_code_lesson_quiz_wrong_code_background_color();
   function rows_plain() {
@@ -379,9 +384,9 @@ export function app_code_program_step_through_generic(
         let row = list_get(rows, line_at);
         return row;
       }
-      let message2 = list_get(lines, line_at);
+      let message = list_get(lines, line_at);
       choose = {
-        words: text_trim(message2),
+        words: text_trim(message),
         button: false,
         target_get: row_get,
       };
@@ -433,7 +438,8 @@ export function app_code_program_step_through_generic(
       let name = property_get(action, "name");
       let value = property_get(action, "value");
       html_clear(ask);
-      let said = text_to(value);
+      ('2026-10-15, at the human\'s asking: a value is written as it is written in code, so a string keeps its quotes - in the choices, in the note, and in the line it is solved into - and the name a holding love reads "love", never love. What is logged is written as the console writes it, without them');
+      let said = json_to(value);
       let value_holder = {
         button: null,
       };
@@ -457,20 +463,27 @@ export function app_code_program_step_through_generic(
         },
       );
       html_div_cycle_code(ask, ["What is ", name, "?"]);
+      ("2026-10-15, at the human's asking: a name may hold a string or a number as well as true or false. Wrong choices for true are false and for false true, as before; for anything else they are the name written as a string, the mix-up of a name with its own spelling, and each value another name holds, the mix-up of one name with another. Not picked: made-up values, which no step of the program could have led to");
+      let decoys = [];
       let b4 = boolean_is(value);
-      if (not(b4)) {
-        error({
-          message: "only a name holding true or false is asked for here",
-          code,
-          name,
-        });
+      if (b4) {
+        let n = not(value);
+        list_add(decoys, n);
+      } else {
+        list_add_if_not_includes(decoys, name);
+        let held = property_get(state, "held");
+        let held_values = object_values(held);
+        for (let held_value of held_values) {
+          list_add_if_not_includes(decoys, held_value);
+        }
+        list_remove_if_exists(decoys, value);
       }
-      let n = not(value);
-      let asked = app_code_expression_value_choose_buttons(
+      let asked = app_code_expression_value_choose_buttons_generic(
         ask,
         value,
-        [n],
+        decoys,
         on_wrong,
+        json_to,
       );
       property_set(value_holder, "button", asked.right);
       await asked.pressed;
@@ -483,7 +496,7 @@ export function app_code_program_step_through_generic(
       let text = list_get(lines, line_index);
       let to2 = text_size(text);
       let evaluated =
-        text_slice(text, 0, from) + text_to(value) + text_slice(text, to, to2);
+        text_slice(text, 0, from) + said + text_slice(text, to, to2);
       ("2026-10-15, at the human's asking: the name fades out, the room it took slides to the width of its value, and the value fades in, so the ( ) around it grow or shrink rather than jump. The slide is the one every height change in this app is made by, told width instead. Not picked: the name going at once, as the human first put it; it fades out because the old value in a note fades out too");
       ("Only done while the line still reads as it is written; a line already solved is written over at once, as before");
       let now = list_get(shown, line_index);
@@ -541,7 +554,9 @@ export function app_code_program_step_through_generic(
     if (equal(kind, "assign")) {
       let name2 = property_get(action, "name");
       let value2 = property_get(action, "value");
-      let t = text_to(value2);
+      let t = json_to(value2);
+      let held2 = property_get(state, "held");
+      property_set(held2, name2, value2);
       ("2026-10-14, at the human's asking: the value in the note goes, and a copy of what is right of the = goes up into its place. What is right of the = is found from its two ends: it starts where it was written, and what follows it is untouched, so it ends that far from the end of the line as it now stands - which holds whether or not a name there was evaluated into a value");
       ("2026-10-14, at the human's asking: the value the note said before fades out first, so it is seen going rather than vanishing as the new one sets off. Not picked: hiding it at once and pausing before the new one sets off, offered by the human as the other way; a fade is how this note already comes in, so it goes the same way");
       let old = list_get(noted, line_index);

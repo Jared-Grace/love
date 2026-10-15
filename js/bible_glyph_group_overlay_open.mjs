@@ -1,4 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { html_document_body } from "./html_document_body.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -16,14 +17,31 @@ import { not } from "./not.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { html_remove } from "./html_remove.mjs";
+import { null_is } from "./null_is.mjs";
+import { bible_word_sound_url_cycling } from "./bible_word_sound_url_cycling.mjs";
+import { app_shared_gloss_bible_word_sound } from "./app_shared_gloss_bible_word_sound.mjs";
+import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_on_click } from "./html_on_click.mjs";
-export function bible_glyph_group_overlay_open(names, lookup, meanings) {
-  arguments_assert(arguments, 3);
+import { html_stop_propagation } from "./html_stop_propagation.mjs";
+import { html_remove } from "./html_remove.mjs";
+export function bible_glyph_group_overlay_open(
+  names,
+  lookup,
+  meanings,
+  original,
+) {
+  arguments_assert(arguments, 4);
   ("$plain names");
   ("$plain lookup");
   ("$plain meanings");
-  ("the names are the pictures of one tapped group, the lookup maps a name to its character, and the meanings map a sequence to what it says. All three are data to draw and none runs.");
+  ("$plain original");
+  ("the names are the pictures of one tapped group, the lookup maps a name to its character, the meanings map a sequence to what it says, and the original is the word as it was written, or null where it is not known. All are data to draw and none runs.");
+  ("EACH MEANING IS LABELLED AS THE DEFINITION AND THE WRITTEN WORD AS THE WORD, so a reader who sees two lines of foreign-looking text knows which is which without being taught.");
+  ("THE WRITTEN WORD COMES WITH THE SAME SPEAKER AND TURTLE THE ORIGINAL BIBLE APP PUTS BESIDE A WORD, drawn by ",
+    fn_name("app_shared_gloss_bible_word_sound"),
+    " with the voices from ",
+    fn_name("bible_word_sound_url_cycling"),
+    ", so a word is said the same way in both apps. Tapping the word itself says it too. A tap on either press is kept from closing the overlay, because the reader asked to hear the word and not to leave it.");
   ("One tapped word of the picture Bible shown large over the page, with the name of each picture and what the word means. A tap anywhere closes it.");
   ("THE MEANING IS GIVEN ONLY WHEN IT IS ASKED FOR. The page itself still tells nobody what a picture means; a reader who taps one word has asked about that word and nothing else, so this answers that one word and goes away.");
   ("THE PICTURES ARE DRAWN BIG FIRST AND THEIR NAMES UNDER THEM, because the names are how the pictures were chosen - a reader who sees that the word is a heart and a fire can read the next such word without tapping.");
@@ -86,12 +104,33 @@ export function bible_glyph_group_overlay_open(names, lookup, meanings) {
       app_shared_text_deemphasized(unexplained);
       continue;
     }
+    let label = html_span_text_content(line, "Definition: ");
+    app_shared_text_deemphasized(label);
     let gloss = html_span_text_content(line, meaning.gloss);
     html_style_set(gloss, "fontWeight", "bold");
     if (not_equal(meaning.root, null)) {
       let root = html_span_text_content(line, " " + meaning.root);
       app_shared_text_deemphasized(root);
     }
+  }
+  let b = null_is(original);
+  if (not(b)) {
+    let word_line = html_div(card);
+    html_style_set(word_line, "marginTop", "0.75em");
+    let cycling = bible_word_sound_url_cycling();
+    let play = app_shared_gloss_bible_word_sound(
+      word_line,
+      original,
+      cycling.sound,
+      cycling.slow,
+    );
+    let word_label = html_span_text_content(word_line, "Word: ");
+    app_shared_text_deemphasized(word_label);
+    let written = html_span_text_content(word_line, original);
+    html_attribute_set(written, "dir", "auto");
+    html_style_set(written, "fontSize", "1.5em");
+    html_on_click(written, play);
+    html_on_click(word_line, html_stop_propagation);
   }
   function close() {
     html_remove(backdrop);
