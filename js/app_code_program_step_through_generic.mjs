@@ -1,3 +1,4 @@
+import { less_than_equal } from "./less_than_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_program_trace } from "./app_code_program_trace.mjs";
@@ -20,6 +21,7 @@ import { html_style_background_color_set } from "./html_style_background_color_s
 import { app_shared_glow_clear } from "./app_shared_glow_clear.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_set } from "./list_set.mjs";
+import { property_get } from "./property_get.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -42,7 +44,6 @@ import { html_copy_fly_text_rect } from "./html_copy_fly_text_rect.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_last_or_null } from "./list_last_or_null.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_size } from "./list_size.mjs";
 import { modulo } from "./modulo.mjs";
@@ -127,6 +128,8 @@ export function app_code_program_step_through_generic(
   let comments = [];
   ("what each line says right now, which is its code until a name in it is evaluated; kept, so a piece of it can be cut out to be sent somewhere");
   let shown = [];
+  ("each value solved into a line so far, as where it was written, from and to, and the size of the value now standing there; kept so a later solving on the same line can find where its own piece now stands");
+  let replaced = [];
   ("the value each line's note says right now, null until there is a note; kept, so the value can fade out of the note before a new one arrives");
   let noted = [];
   for (let line of lines) {
@@ -140,6 +143,7 @@ export function app_code_program_step_through_generic(
     html_style_bleed_x(row, padding);
     html_text_set(row, line);
     list_add(shown, line);
+    list_add(replaced, []);
     list_add(noted, null);
     list_add(rows, row);
     list_add(starts, line_start);
@@ -179,6 +183,21 @@ export function app_code_program_step_through_generic(
   function line_restore(line_index) {
     let text = list_get(lines, line_index);
     row_text_set(line_index, text);
+    list_set(replaced, line_index, []);
+  }
+  function position_now(done, position) {
+    "where a place in a line as it is written stands in the line as it reads now: moved by every value solved into the line wholly before it";
+    let shift = 0;
+    for (let r of done) {
+      let r_from = property_get(r, "from");
+      let r_to = property_get(r, "to");
+      if (less_than_equal(r_to, position)) {
+        let right6 = subtract(r_to, r_from);
+        shift = subtract(shift + property_get(r, "size"), right6);
+      }
+    }
+    let r2 = position + shift;
+    return r2;
   }
   function row_piece(line_index, from, to) {
     "the line written again as three pieces, the middle one from to to, handed back so a copy of it can be sent somewhere; the line looks as it did";
@@ -511,35 +530,51 @@ export function app_code_program_step_through_generic(
       let from = subtract(left, line_from);
       let left2 = property_get(action, "to");
       let to = subtract(left2, line_from);
-      let text = list_get(lines, line_index);
-      let to2 = text_size(text);
-      let evaluated =
-        text_slice(text, 0, from) + said + text_slice(text, to, to2);
-      ("2026-10-15, at the human's asking: the name fades out, the room it took slides to the width of its value, and the value fades in, so the ( ) around it grow or shrink rather than jump. The slide is the one every height change in this app is made by, told width instead. Not picked: the name going at once, as the human first put it; it fades out because the old value in a note fades out too");
-      ("Only done while the line still reads as it is written; a line already solved is written over at once, as before");
+      ("2026-10-15: a line may be solved more than once, a name in a + 1 and then the operator, so where the piece stands now is found from where it was written, moved by each value already solved into the line before it; a value solved inside the piece is swallowed by it");
+      let done = list_get(replaced, line_index);
+      let from_now = position_now(done, from);
+      let to_now = position_now(done, to);
       let now = list_get(shown, line_index);
-      if (equal(now, text)) {
-        let piece = row_piece(line_index, from, to);
-        html_display_inline_block(piece);
-        ("a box held narrower than its words would otherwise sit higher in the line, its bottom on the words' base, and make the line taller while it moves");
-        html_style_set(piece, "vertical-align", "top");
-        ("and its words are kept on one line, or a box narrower than the value it is growing to fit breaks the value over several lines and the whole line of the program grows tall while it moves - seen 2026-10-15");
-        html_style_set(piece, "white-space", "nowrap");
-        let duration4 = app_shared_animation_duration();
-        await html_opacity_animate(piece, "0", duration4);
-        function value_write() {
-          html_text_set(piece, said);
-        }
-        await html_size_change_animate(
-          piece,
-          "width",
-          piece,
-          value_write,
-          duration4,
-        );
-        await html_opacity_animate(piece, "1", duration4);
+      let to2 = text_size(now);
+      let evaluated =
+        text_slice(now, 0, from_now) + said + text_slice(now, to_now, to2);
+      ("2026-10-15, at the human's asking: the name fades out, the room it took slides to the width of its value, and the value fades in, so the ( ) around it grow or shrink rather than jump. The slide is the one every height change in this app is made by, told width instead. Not picked: the name going at once, as the human first put it; it fades out because the old value in a note fades out too");
+      let piece = row_piece(line_index, from_now, to_now);
+      html_display_inline_block(piece);
+      ("a box held narrower than its words would otherwise sit higher in the line, its bottom on the words' base, and make the line taller while it moves");
+      html_style_set(piece, "vertical-align", "top");
+      ("and its words are kept on one line, or a box narrower than the value it is growing to fit breaks the value over several lines and the whole line of the program grows tall while it moves - seen 2026-10-15");
+      html_style_set(piece, "white-space", "nowrap");
+      let duration4 = app_shared_animation_duration();
+      await html_opacity_animate(piece, "0", duration4);
+      function value_write() {
+        html_text_set(piece, said);
       }
+      await html_size_change_animate(
+        piece,
+        "width",
+        piece,
+        value_write,
+        duration4,
+      );
+      await html_opacity_animate(piece, "1", duration4);
       row_text_set(line_index, evaluated);
+      let kept = [];
+      for (let r of done) {
+        let a = property_get(r, "from");
+        let inside =
+          greater_than_equal(a, from) &&
+          less_than_equal(property_get(r, "to"), to);
+        if (not(inside)) {
+          list_add(kept, r);
+        }
+      }
+      list_add(kept, {
+        from,
+        to,
+        size: text_size(said),
+      });
+      list_set(replaced, line_index, kept);
       return;
     }
     if (equal(kind, "declare")) {

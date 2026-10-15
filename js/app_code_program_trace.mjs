@@ -5,14 +5,16 @@ import { text_slice } from "./text_slice.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { list_size } from "./list_size.mjs";
 import { subtract } from "./subtract.mjs";
-import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
-import { not_equal } from "./not_equal.mjs";
+import { equal } from "./equal.mjs";
+import { json_to } from "./json_to.mjs";
 import { error } from "./error.mjs";
 import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_size_assert } from "./list_size_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_set } from "./property_set.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { property_exists_assert } from "./property_exists_assert.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { not } from "./not.mjs";
@@ -33,6 +35,23 @@ export function app_code_program_trace(code) {
     let index = subtract(left, 1);
     return index;
   }
+  function name_evaluate(node, actions, within) {
+    "a name evaluated by looking up the value it holds, added to actions; within is the expression it stands in, or null when it stands alone";
+    let name = property_get(node, "name");
+    let value2 = property_get(values, name);
+    let from = property_get(node, "start");
+    let to = property_get(node, "end");
+    list_add(actions, {
+      kind: "evaluate",
+      name,
+      value: value2,
+      from,
+      to,
+      expression: null,
+      within,
+    });
+    return value2;
+  }
   function value_of(node, actions) {
     "what an expression comes to, with any evaluating it took added to actions";
     let type = property_get(node, "type");
@@ -41,53 +60,66 @@ export function app_code_program_trace(code) {
       return value;
     }
     if (equal(type, "Identifier")) {
-      let name = property_get(node, "name");
-      let value2 = property_get(values, name);
-      let from = property_get(node, "start");
-      let to = property_get(node, "end");
-      list_add(actions, {
-        kind: "evaluate",
-        name,
-        value: value2,
-        from,
-        to,
-        expression: null,
-      });
+      let value2 = name_evaluate(node, actions, null);
       return value2;
     }
     if (equal(type, "BinaryExpression")) {
-      ("2026-10-15, at the human's asking: an operator between two values written out is solved in one evaluate, as the lessons on operators solve one, so a program that logs 9 + 7 can be run a line at a time. Its name is the expression as it is written, and expression says the operator and its two sides, so a stepper can ask for what it comes to and offer the wrong values the operator lessons offer. Not picked: a side that is a name or another operator, which would be several solvings on one line; such a line is still refused where it arrives");
+      ("2026-10-15, at the human's asking: an operator between two values written out is solved in one evaluate, as the lessons on operators solve one, so a program that logs 9 + 7 can be run a line at a time. Its name is the expression with each side written as the value it came to, and expression says the operator and its two sides, so a stepper can ask for what it comes to and offer the wrong values the operator lessons offer");
+      ("2026-10-15, at the human's asking: a side may be a name, evaluated first, left before right, as the computer does, so a = a + 1; asks for a, then for what 11 + 1 comes to. within says which expression the name stands in, so a guide can say the name is part of it. Not picked: a side that is another operator, which needs the order of solving the expression lessons teach; such a line is still refused where it arrives");
       let left = property_get(node, "left");
       let right = property_get(node, "right");
-      let left_type = property_get(left, "type");
-      let right_type = property_get(right, "type");
-      if (not_equal(left_type, "Literal") || not_equal(right_type, "Literal")) {
+      let from2 = property_get(node, "start");
+      let to2 = property_get(node, "end");
+      let within = text_slice(code, from2, to2);
+      function side_of(side) {
+        "a side's value and how it is written once it is a value, any name in it evaluated first";
+        let side_type = property_get(side, "type");
+        if (equal(side_type, "Literal")) {
+          let from3 = property_get(side, "start");
+          let to3 = property_get(side, "end");
+          let r = {
+            value: property_get(side, "value"),
+            written: text_slice(code, from3, to3),
+          };
+          return r;
+        }
+        if (equal(side_type, "Identifier")) {
+          let value10 = name_evaluate(side, actions, within);
+          let r2 = {
+            value: value10,
+            written: json_to(value10),
+          };
+          return r2;
+        }
         error({
           message:
-            "only an operator between two values written out can be solved here",
+            "only an operator between values written out or names can be solved here",
           code,
-          left_type,
-          right_type,
+          side_type,
         });
       }
+      let left_side = side_of(left);
+      let right_side = side_of(right);
       let operator = property_get(node, "operator");
       let expression = {
-        left: property_get(left, "value"),
+        left: property_get(left_side, "value"),
         operator,
-        right: property_get(right, "value"),
+        right: property_get(right_side, "value"),
       };
       let left4 = property_get(expression, "left");
       let right2 = property_get(expression, "right");
       let value8 = app_code_operator_solve(left4, operator, right2);
-      let from2 = property_get(node, "start");
-      let to2 = property_get(node, "end");
+      let value11 = property_get(left_side, "written");
+      let value12 = property_get(right_side, "written");
+      let name4 = text_combine_multiple([value11, " ", operator, " ", value12]);
       list_add(actions, {
         kind: "evaluate",
-        name: text_slice(code, from2, to2),
+        name: name4,
         value: value8,
         from: from2,
         to: to2,
         expression,
+        within: null,
       });
       return value8;
     }
@@ -143,8 +175,8 @@ export function app_code_program_trace(code) {
     }
     if (equal(type, "ExpressionStatement")) {
       let expression = property_get(node, "expression");
-      let left_type2 = property_get(expression, "type");
-      if (equal(left_type2, "AssignmentExpression")) {
+      let left_type = property_get(expression, "type");
+      if (equal(left_type, "AssignmentExpression")) {
         ("2026-10-15, at the human's asking: a name given a new value, as a = 5; does, solves what is right of the = if needed and assigns it, as a let line does without declaring, so the lessons that change what a name holds can be run a line at a time. Not picked: += and the other operators that assign, which solve and assign in one; such a line is still refused where it arrives");
         let operator2 = property_get(expression, "operator");
         let target = property_get(expression, "left");

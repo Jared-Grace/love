@@ -126,6 +126,10 @@ export function app_code_program_step_guide_action(entry, k) {
     ];
     return r7;
   }
+  ("2026-10-15: what kind of line a log or an if is, is said only the first time the line is asked about; a line solving a name and then an operator would otherwise say it again before each");
+  let first = equal(k, 0);
+  let lead_log = first ? [logs] : [];
+  let lead_if = first ? [if_is, if_solves] : [];
   let name = property_get(action, "name");
   let expression = property_get(action, "expression");
   let b = null_is(expression);
@@ -138,11 +142,46 @@ export function app_code_program_step_guide_action(entry, k) {
       return concated2;
     }
     if (list_includes(kinds, "log")) {
-      let r11 = [logs, ["The value is ", name, operated + " first"], solve];
+      let r11 = list_concat(lead_log, [
+        ["The value is ", name, operated + " first"],
+        solve,
+      ]);
       return r11;
     }
-    let r13 = [if_is, if_solves, ["The condition is ", name, operated], solve];
+    let r13 = list_concat(lead_if, [
+      ["The condition is ", name, operated],
+      solve,
+    ]);
     return r13;
+  }
+  let within = property_get(action, "within");
+  let b2 = null_is(within);
+  if (not(b2)) {
+    ("2026-10-15, at the human's asking: a name standing in an operator's expression, as a in a + 1, is said to be in it, and to need solving before the operator can be");
+    let inside = [
+      ", which has the name ",
+      name,
+      " in it, so ",
+      name,
+      " needs solving first",
+    ];
+    if (list_includes(kinds, "assign")) {
+      let r14 = [["The expression on the right is ", within, ...inside], solve];
+      let concated4 = list_concat(intro, r14);
+      return concated4;
+    }
+    if (list_includes(kinds, "log")) {
+      let r15 = list_concat(lead_log, [
+        ["The value is ", within, ...inside],
+        solve,
+      ]);
+      return r15;
+    }
+    let r16 = list_concat(lead_if, [
+      ["The condition is ", within, ...inside],
+      solve,
+    ]);
+    return r16;
   }
   if (list_includes(kinds, "assign")) {
     let r8 = [
@@ -157,18 +196,15 @@ export function app_code_program_step_guide_action(entry, k) {
     return concated3;
   }
   if (list_includes(kinds, "log")) {
-    let r9 = [
-      logs,
+    let r9 = list_concat(lead_log, [
       ["The value is the name ", name, ", so it needs solving first"],
       solve,
-    ];
+    ]);
     return r9;
   }
-  let r10 = [
-    if_is,
-    if_solves,
+  let r10 = list_concat(lead_if, [
     ["The condition is the name ", name, ", so it needs solving"],
     solve,
-  ];
+  ]);
   return r10;
 }
