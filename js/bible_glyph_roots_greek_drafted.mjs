@@ -1155,6 +1155,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["5190", "epistole", "envelope+doer+proper_name", "Tychicus"],
     ["625", "hydor", "water+doer+proper_name", "Apollos"],
     ["3533", "nikao", "trophy+city+proper_name", "Nicopolis"],
+    ["2451", "ioudaios", "menorah+describing", "Jewish"],
     ["5502", "kerub", "cherub", "cherubim"],
     ["4519", "tsaba", "military_helmet", "sabaoth, hosts"],
     ["2581", "qanna", "face_steam+describing", "Cananaean, zealot"],
