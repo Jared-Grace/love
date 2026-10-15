@@ -9,8 +9,8 @@ import { subtract } from "./subtract.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { list_last } from "./list_last.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { null_is } from "./null_is.mjs";
+import { list_concat } from "./list_concat.mjs";
 export function app_code_program_step_guide_action(entry, k) {
   arguments_assert(arguments, 2);
   let actions = property_get(entry, "actions");
@@ -64,6 +64,7 @@ export function app_code_program_step_guide_action(entry, k) {
   if (assigns_only && equal(k, 0)) {
     let assigned = list_last(actions);
     let name3 = property_get(assigned, "name");
+    let long = property_get(assigned, "long");
     intro = [
       ["This is an assign (", "=", ") statement, with no ", "let"],
       [
@@ -73,6 +74,20 @@ export function app_code_program_step_guide_action(entry, k) {
       ],
       ["It will be given a value of whatever is to the right of the ", "="],
     ];
+    let b3 = null_is(long);
+    if (not(b3)) {
+      ("2026-10-15, at the human's asking: a += b; is said to be the shorter way to write a = a + b;, the words its lesson teaches it by, and every step after is said of the long way");
+      let object = list_get(actions, 0);
+      let compound = property_get(object, "within");
+      intro = [
+        ["This is a ", compound, " statement, a shorter way to write ", long],
+        [
+          "The variable named ",
+          name3,
+          " was declared before, so it is not declared again",
+        ],
+      ];
+    }
   }
   if (equal(kind, "declare")) {
     let name2 = property_get(action, "name");
@@ -136,6 +151,15 @@ export function app_code_program_step_guide_action(entry, k) {
   if (not(b)) {
     ("2026-10-15: an operator between two values, such as 9 + 7, is not a name, so it is called by what it is, in the words each kind of line uses for a name");
     let operated = ", which has an operator, so it needs solving";
+    let long_now = property_get(action, "within");
+    let b4 = null_is(long_now);
+    if (not(b4)) {
+      let r17 = [
+        ["Written the long way, this line is ", long_now, operated],
+        solve,
+      ];
+      return r17;
+    }
     if (list_includes(kinds, "assign")) {
       let r12 = [["The expression on the right is ", name, operated], solve];
       let concated2 = list_concat(intro, r12);
@@ -165,6 +189,23 @@ export function app_code_program_step_guide_action(entry, k) {
       name,
       " needs solving first",
     ];
+    let value = property_get(action, "from");
+    if (null_is(value)) {
+      let r18 = [
+        [
+          "Written the long way, the right of the ",
+          "=",
+          " has the name ",
+          name,
+          " in it, so ",
+          name,
+          " needs solving first",
+        ],
+        solve,
+      ];
+      let concated5 = list_concat(intro, r18);
+      return concated5;
+    }
     if (list_includes(kinds, "assign")) {
       let r14 = [["The expression on the right is ", within, ...inside], solve];
       let concated4 = list_concat(intro, r14);
