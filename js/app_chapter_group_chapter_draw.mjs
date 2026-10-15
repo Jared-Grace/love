@@ -1,4 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { app_chapter_group_title_set } from "./app_chapter_group_title_set.mjs";
 import { app_chapter_group_path } from "./app_chapter_group_path.mjs";
 import { app_chapter_group_top_draw } from "./app_chapter_group_top_draw.mjs";
 import { html_div } from "./html_div.mjs";
@@ -33,6 +34,7 @@ export async function app_chapter_group_chapter_draw({
   "A change draws only the boxes, headings and buttons again and moves the verses into them, never drawing a verse again, so the chapter does not move under the reader's finger.";
   "The copy is the group's verses in the language being read, one after another with the line breaks and stepping the printing gives them where those can be had, respelled for singing.";
   arguments_assert(arguments, 1);
+  app_chapter_group_title_set(chapter_code);
   let path = app_chapter_group_path(folder_code, chapter_code);
   let status = app_chapter_group_top_draw(
     content,
