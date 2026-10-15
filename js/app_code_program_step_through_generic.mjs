@@ -155,7 +155,9 @@ export function app_code_program_step_through_generic(
     logged_box: null,
     asked: null,
     held: {},
+    declared: {},
   };
+  ("declared: the line each name was declared on, by name, so a name given a new value on a later line has the value written into the note it already has");
   ("held: the value each name holds so far, by name, so a name asked about can be offered the values the other names hold as the wrong choices");
   let highlight = app_code_expression_chosen_background_color();
   let wrong_color = app_code_lesson_quiz_wrong_code_background_color();
@@ -533,6 +535,8 @@ export function app_code_program_step_through_generic(
       ("2026-10-14, at the human's asking: declaring a name puts a note above its line saying it holds undefined; the room opens first, moving the program down, and then the note fades in, so nothing jumps. Assigning then writes the value over the undefined.");
       ("Not picked: keeping the list of names under the program as well, which would say every value twice; the note stands by the line that made it, where the program is being read.");
       let name4 = property_get(action, "name");
+      let declared = property_get(state, "declared");
+      property_set(declared, name4, line_index);
       let slot = list_get(slots, line_index);
       let comment2 = list_get(comments, line_index);
       let duration = app_shared_animation_duration();
@@ -564,15 +568,18 @@ export function app_code_program_step_through_generic(
       property_set(held2, name2, value2);
       ("2026-10-14, at the human's asking: the value in the note goes, and a copy of what is right of the = goes up into its place. What is right of the = is found from its two ends: it starts where it was written, and what follows it is untouched, so it ends that far from the end of the line as it now stands - which holds whether or not a name there was evaluated into a value");
       ("2026-10-14, at the human's asking: the value the note said before fades out first, so it is seen going rather than vanishing as the new one sets off. Not picked: hiding it at once and pausing before the new one sets off, offered by the human as the other way; a fade is how this note already comes in, so it goes the same way");
-      let old = list_get(noted, line_index);
-      let old_spans = comment_draw(line_index, name2, old, "value");
+      ("2026-10-15, at the human's asking: a name given a new value on a later line, as a = 5; does, has it written into the note above the line that declared it, the one note saying what that name holds, so the guide pointing there stays true. Not picked: a second note above the later line, which would leave the first one saying a value the name no longer holds");
+      let declared2 = property_get(state, "declared");
+      let note_line = property_get(declared2, name2);
+      let old = list_get(noted, note_line);
+      let old_spans = comment_draw(note_line, name2, old, "value");
       let duration2 = app_shared_animation_duration();
       for (let span of old_spans) {
         html_visibility_visible(span);
         html_opacity_transition(span, "0", duration2);
       }
       await sleep(duration2);
-      let hidden3 = comment_draw(line_index, name2, t, "value");
+      let hidden3 = comment_draw(note_line, name2, t, "value");
       let line_from3 = list_get(starts, line_index);
       let left5 = property_get(action, "from");
       let right_from = subtract(left5, line_from3);

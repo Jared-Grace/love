@@ -6,9 +6,11 @@ import { equal } from "./equal.mjs";
 import { list_get } from "./list_get.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { subtract } from "./subtract.mjs";
-import { not } from "./not.mjs";
-import { null_is } from "./null_is.mjs";
 import { list_includes } from "./list_includes.mjs";
+import { not } from "./not.mjs";
+import { list_last } from "./list_last.mjs";
+import { list_concat } from "./list_concat.mjs";
+import { null_is } from "./null_is.mjs";
 export function app_code_program_step_guide_action(entry, k) {
   arguments_assert(arguments, 2);
   let actions = property_get(entry, "actions");
@@ -55,6 +57,23 @@ export function app_code_program_step_guide_action(entry, k) {
   let solved_before =
     greater_than(k, 0) &&
     equal(property_get(list_get(actions, subtract(k, 1)), "kind"), "evaluate");
+  ("2026-10-15, at the human's asking: a line giving a name a new value, as a = 5; does, assigns without declaring, so the first time it is asked about it says so in the let line's words for its assign. Not picked: saying nothing of what kind of line it is, as the other kinds each say");
+  let assigns_only =
+    list_includes(kinds, "assign") && not(list_includes(kinds, "declare"));
+  let intro = [];
+  if (assigns_only && equal(k, 0)) {
+    let assigned = list_last(actions);
+    let name3 = property_get(assigned, "name");
+    intro = [
+      ["This is an assign (", "=", ") statement, with no ", "let"],
+      [
+        "The variable named ",
+        name3,
+        " was declared before, so it is not declared again",
+      ],
+      ["It will be given a value of whatever is to the right of the ", "="],
+    ];
+  }
   if (equal(kind, "declare")) {
     let name2 = property_get(action, "name");
     ("the human's words 2026-10-14, with let and = written as code. They replace the whole first sentence group, which also said the expression on the right is solved if needed. Not picked: keeping that clause, since the guide asking to evaluate says so at the step it happens");
@@ -88,7 +107,8 @@ export function app_code_program_step_guide_action(entry, k) {
       ],
       ["So choose: Assign a value"],
     ];
-    return r5;
+    let concated = list_concat(intro, r5);
+    return concated;
   }
   let logs = ["This logs a value to the console"];
   if (equal(kind, "log")) {
@@ -112,9 +132,10 @@ export function app_code_program_step_guide_action(entry, k) {
   if (not(b)) {
     ("2026-10-15: an operator between two values, such as 9 + 7, is not a name, so it is called by what it is, in the words each kind of line uses for a name");
     let operated = ", which has an operator, so it needs solving";
-    if (list_includes(kinds, "declare")) {
+    if (list_includes(kinds, "assign")) {
       let r12 = [["The expression on the right is ", name, operated], solve];
-      return r12;
+      let concated2 = list_concat(intro, r12);
+      return concated2;
     }
     if (list_includes(kinds, "log")) {
       let r11 = [logs, ["The value is ", name, operated + " first"], solve];
@@ -123,7 +144,7 @@ export function app_code_program_step_guide_action(entry, k) {
     let r13 = [if_is, if_solves, ["The condition is ", name, operated], solve];
     return r13;
   }
-  if (list_includes(kinds, "declare")) {
+  if (list_includes(kinds, "assign")) {
     let r8 = [
       [
         "The expression on the right is the name ",
@@ -132,7 +153,8 @@ export function app_code_program_step_guide_action(entry, k) {
       ],
       solve,
     ];
-    return r8;
+    let concated3 = list_concat(intro, r8);
+    return concated3;
   }
   if (list_includes(kinds, "log")) {
     let r9 = [
