@@ -328,6 +328,12 @@ export function bible_glyph_names_greek() {
       about:
         "Silas, a leader who travelled with Paul and helped Peter write his first letter (Acts 15:40, 1 Peter 5:12).",
     },
+    4622: {
+      name: "Zion",
+      means: null,
+      about:
+        "The hill of Jerusalem where David took the stronghold (2 Samuel 5:7); often a name for Jerusalem and God's people (1 Peter 2:6).",
+    },
   };
   return names;
 }

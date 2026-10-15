@@ -230,6 +230,7 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_multiply: text_frozen("name_multiply"),
     app_code_lesson_statement_name_divide: text_frozen("name_divide"),
     app_code_lesson_statement_name_plus_assign: text_frozen("name_plus_eq"),
+    app_code_lesson_step_name_plus_assign: text_frozen("step_name_plus_eq"),
     app_code_lesson_statement_name_minus_assign: text_frozen("name_minus_eq"),
     app_code_lesson_statement_name_times_assign: text_frozen("name_times_eq"),
     app_code_lesson_statement_name_divide_assign: text_frozen("name_divide_eq"),

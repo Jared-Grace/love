@@ -180,6 +180,7 @@ import { app_code_lesson_statement_name_subtract } from "./app_code_lesson_state
 import { app_code_lesson_statement_name_multiply } from "./app_code_lesson_statement_name_multiply.mjs";
 import { app_code_lesson_statement_name_divide } from "./app_code_lesson_statement_name_divide.mjs";
 import { app_code_lesson_statement_name_plus_assign } from "./app_code_lesson_statement_name_plus_assign.mjs";
+import { app_code_lesson_step_name_plus_assign } from "./app_code_lesson_step_name_plus_assign.mjs";
 import { app_code_lesson_statement_name_minus_assign } from "./app_code_lesson_statement_name_minus_assign.mjs";
 import { app_code_lesson_statement_name_times_assign } from "./app_code_lesson_statement_name_times_assign.mjs";
 import { app_code_lesson_statement_name_divide_assign } from "./app_code_lesson_statement_name_divide_assign.mjs";
@@ -509,6 +510,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_multiply,
     app_code_lesson_statement_name_divide,
     app_code_lesson_statement_name_plus_assign,
+    app_code_lesson_step_name_plus_assign,
     app_code_lesson_statement_name_minus_assign,
     app_code_lesson_statement_name_times_assign,
     app_code_lesson_statement_name_divide_assign,
