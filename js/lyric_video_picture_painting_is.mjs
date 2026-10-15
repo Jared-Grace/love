@@ -1,3 +1,4 @@
+import { lyric_video_picture_painting_prefix } from "./lyric_video_picture_painting_prefix.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { path_basename } from "./path_basename.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
@@ -7,6 +8,7 @@ export async function lyric_video_picture_painting_is(picture) {
   "★ THE ANSWER DECIDES WHAT MAY BE SAID UNDER A PUBLISHED VIDEO. A sentence claiming no painting by a person was used is false the moment one of these is in the video, and a sentence naming a painter is false the moment the picture was drawn instead. So this is asked once per picture rather than assumed once per video.";
   arguments_assert(arguments, 1);
   let name = await path_basename(picture.path);
-  let painting_is = text_starts_with(name, "pd_");
+  let prefix = lyric_video_picture_painting_prefix();
+  let painting_is = text_starts_with(name, prefix);
   return painting_is;
 }
