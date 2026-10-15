@@ -8,13 +8,13 @@ import { property_set } from "./property_set.mjs";
 import { list_add } from "./list_add.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { js_visit } from "./js_visit.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { error } from "./error.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { text_index_of_last_try } from "./text_index_of_last_try.mjs";
 import { subtract } from "./subtract.mjs";
 import { text_index_of_from } from "./text_index_of_from.mjs";
 import { text_indent_size } from "./text_indent_size.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_size } from "./list_size.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_get } from "./list_get.mjs";
@@ -28,6 +28,7 @@ export function app_code_if_blocks(code) {
   ("The steps, asked for by the human 2026-10-11. The sections of one if, its else ifs and its else are answered in order, and one that does not run has its lines fade and its braces close up as it is answered. Once the last of them is answered, what is left of them goes: all of it when none ran; otherwise everything after the section that ran goes, and then that section loses everything before its { and its own }, and its lines move out to where they now stand. An if with nothing after it is then the same rule with one section, and an if and its else the same with two.");
   let ast = js_parse(code);
   let values = {};
+  let unread = [];
   let ifs = [];
   let followers = [];
   function on_visit(v) {
@@ -43,8 +44,16 @@ export function app_code_if_blocks(code) {
       let name = property_get(id, "name");
       let init = property_get(node, "init");
       ("2026-10-15: a let may hold another name's value, let b = a;, read the way an if's test is, so the lessons that copy a name can be stepped through too. Not picked: reading only a value written out, which stopped at the copy");
-      let value = test_value(init);
-      property_set(values, name, value);
+      ("2026-10-15: a let may also give a sum, let b = a + 1;, which this does not solve; the name is noted as unread and stops the program only if an if asks it, so the lessons that add to a name can be stepped through. Not picked: solving the sum here, a second solver beside the trace's");
+      let init_type = property_get(init, "type");
+      let readable =
+        equal(init_type, "Identifier") || equal(init_type, "Literal");
+      if (readable) {
+        let value = test_value(init);
+        property_set(values, name, value);
+      } else {
+        list_add(unread, name);
+      }
     }
     if (equal(type, "IfStatement")) {
       list_add(ifs, node);
@@ -63,6 +72,14 @@ export function app_code_if_blocks(code) {
     let type = property_get(test, "type");
     if (equal(type, "Identifier")) {
       let name = property_get(test, "name");
+      if (list_includes(unread, name)) {
+        error({
+          message:
+            "an if may only ask a name whose value is written out or copied",
+          code,
+          name,
+        });
+      }
       let value = property_get(values, name);
       return value;
     }
