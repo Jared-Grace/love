@@ -21,6 +21,7 @@ export async function bible_glyph_chapter_built(chapter_code) {
   ("EACH VERSE ALSO KEEPS ITS WORDS IN THE ORDER THEY WERE WRITTEN, for a reader of the original rather than of the English. Each written word is its letters followed by the keys of its parts, from ",
     fn_name("bible_glyph_word_original_keys"),
     ", so a Hebrew word with and joined to its front keeps and as a part of its own.");
+  ("EACH VERSE ALSO KEEPS HOW EACH WRITTEN WORD IS SAID, the interlinear's transliteration, in a list one for one with the written words, so a tapped word shows the word as it is said in this verse and not only the dictionary form of its root. It is a list of its own rather than a place inside each written word, because a written word is already its letters followed by however many keys its parts have.");
   let testament_name = bible_chapter_testament_name(chapter_code);
   let derived = await bible_glyph_chapter_derived(chapter_code);
   let source = await bible_interlinear_chapter_words(chapter_code);
@@ -34,9 +35,11 @@ export async function bible_glyph_chapter_built(chapter_code) {
     let row = list_get(source, index);
     index = add(index, 1);
     let original_words = [];
+    let sounds = [];
     for (let word of row.words) {
       let keys = bible_glyph_word_original_keys(word, testament_name);
       list_add(original_words, [word.original, ...keys]);
+      list_add(sounds, word.translit ?? null);
     }
     list_add(verses, {
       verse_number: verse.verse_number,
@@ -44,6 +47,7 @@ export async function bible_glyph_chapter_built(chapter_code) {
       english: bible_interlinear_verse_gloss_text(row),
       words,
       original_words,
+      sounds,
     });
   }
   let built = {

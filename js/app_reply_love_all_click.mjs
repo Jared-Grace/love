@@ -15,7 +15,6 @@ export async function app_reply_love_all_click(
     "languages_chosen",
   );
   property_set(languages_chosen_held, "languages_chosen", []);
-  languages_chosen_reset();
   function lambda13(language) {
     let list = property_get(languages_chosen_held, "languages_chosen");
     list_add(list, language);
