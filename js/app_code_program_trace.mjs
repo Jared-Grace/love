@@ -7,12 +7,13 @@ import { list_size } from "./list_size.mjs";
 import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { error } from "./error.mjs";
+import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
 import { list_size_assert } from "./list_size_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { js_unparse } from "./js_unparse.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
 export function app_code_program_trace(code) {
   arguments_assert(arguments, 1);
@@ -49,8 +50,45 @@ export function app_code_program_trace(code) {
         value: value2,
         from,
         to,
+        expression: null,
       });
       return value2;
+    }
+    if (equal(type, "BinaryExpression")) {
+      ("2026-10-15, at the human's asking: an operator between two values written out is solved in one evaluate, as the lessons on operators solve one, so a program that logs 9 + 7 can be run a line at a time. Its name is the expression as it is written, and expression says the operator and its two sides, so a stepper can ask for what it comes to and offer the wrong values the operator lessons offer. Not picked: a side that is a name or another operator, which would be several solvings on one line; such a line is still refused where it arrives");
+      let left = property_get(node, "left");
+      let right = property_get(node, "right");
+      let left_type = property_get(left, "type");
+      let right_type = property_get(right, "type");
+      if (not_equal(left_type, "Literal") || not_equal(right_type, "Literal")) {
+        error({
+          message:
+            "only an operator between two values written out can be solved here",
+          code,
+          left_type,
+          right_type,
+        });
+      }
+      let operator = property_get(node, "operator");
+      let expression = {
+        left: property_get(left, "value"),
+        operator,
+        right: property_get(right, "value"),
+      };
+      let left4 = property_get(expression, "left");
+      let right2 = property_get(expression, "right");
+      let value8 = app_code_operator_solve(left4, operator, right2);
+      let from2 = property_get(node, "start");
+      let to2 = property_get(node, "end");
+      list_add(actions, {
+        kind: "evaluate",
+        name: text_slice(code, from2, to2),
+        value: value8,
+        from: from2,
+        to: to2,
+        expression,
+      });
+      return value8;
     }
     error({
       message: "only a value written out or a name can be evaluated here",

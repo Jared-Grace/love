@@ -6,6 +6,8 @@ import { equal } from "./equal.mjs";
 import { list_get } from "./list_get.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { subtract } from "./subtract.mjs";
+import { not } from "./not.mjs";
+import { null_is } from "./null_is.mjs";
 import { list_includes } from "./list_includes.mjs";
 export function app_code_program_step_guide_action(entry, k) {
   arguments_assert(arguments, 2);
@@ -105,6 +107,22 @@ export function app_code_program_step_guide_action(entry, k) {
     return r7;
   }
   let name = property_get(action, "name");
+  let expression = property_get(action, "expression");
+  let b = null_is(expression);
+  if (not(b)) {
+    ("2026-10-15: an operator between two values, such as 9 + 7, is not a name, so it is called by what it is, in the words each kind of line uses for a name");
+    let operated = ", which has an operator, so it needs solving";
+    if (list_includes(kinds, "declare")) {
+      let r12 = [["The expression on the right is ", name, operated], solve];
+      return r12;
+    }
+    if (list_includes(kinds, "log")) {
+      let r11 = [logs, ["The value is ", name, operated + " first"], solve];
+      return r11;
+    }
+    let r13 = [if_is, if_solves, ["The condition is ", name, operated], solve];
+    return r13;
+  }
   if (list_includes(kinds, "declare")) {
     let r8 = [
       [

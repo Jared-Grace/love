@@ -72,6 +72,7 @@ import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
 import { json_to } from "./json_to.mjs";
 import { boolean_is } from "./boolean_is.mjs";
+import { app_code_expression_value_decoys } from "./app_code_expression_value_decoys.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { object_values } from "./object_values.mjs";
 import { list_remove_if_exists } from "./list_remove_if_exists.mjs";
@@ -105,7 +106,7 @@ export function app_code_program_step_through_generic(
     "'s to say, so the steps asked for here are the ones the computer takes.");
   ("A line is pressed in the program itself rather than picked from a list of copies, since the question is where in the program the computer is. A wrong line turns red until the right one is pressed. The answers are the choices of every other question in this app, so a wrong one turns red and is spent and the right one turns green.");
   ("2026-10-14, at the human's asking: a name solved into its value stays solved in its line while the program runs, so if (true) { stays in sight while what it decided runs; every line goes back to how it is written once the program is complete, since the program itself does not change. Not picked: putting the line back as soon as it is complete, done first and taken back, since the value then turned back into the name before the learner had used it. Not picked: leaving the solved lines once the program is complete, which would show a program nobody wrote.");
-  ("Not built yet: an expression with an operator in it, which is meant to be worked out by the pressing the expression lessons already teach; until then such a line is refused where it arrives.");
+  ("2026-10-15: one operator between two values written out is solved in one step, asked for by its value. Not built yet: a line with more than one operator, or a name beside an operator, which is meant to be worked out by the pressing the expression lessons already teach; until then such a line is refused where it arrives.");
   let trace = app_code_program_trace(code);
   let wrap = html_div(parent);
   html_flex_column_stretch(wrap);
@@ -447,26 +448,30 @@ export function app_code_program_step_through_generic(
         let button = property_get(value_holder, "button");
         return button;
       }
-      guide_say(
-        [
-          [
+      let expression = property_get(action, "expression");
+      let b6 = null_is(expression);
+      let operator_is = not(b6);
+      ("2026-10-15, at the human's asking: an operator between two values is solved by working it out, as the lessons on operators teach, so the guide says to solve it rather than pointing at a note");
+      let reason = operator_is
+        ? ["Solve ", name]
+        : [
             "The note above the line that declares ",
             name,
             " says what it holds",
-          ],
-          ["So choose: ", said],
-        ],
-        {
-          words: said,
-          button: true,
-          target_get: value_get,
-        },
-      );
+          ];
+      guide_say([reason, ["So choose: ", said]], {
+        words: said,
+        button: true,
+        target_get: value_get,
+      });
       html_div_cycle_code(ask, ["What is ", name, "?"]);
       ("2026-10-15, at the human's asking: a name may hold a string or a number as well as true or false. Wrong choices for true are false and for false true, as before; for anything else they are the name written as a string, the mix-up of a name with its own spelling, and each value another name holds, the mix-up of one name with another. Not picked: made-up values, which no step of the program could have led to");
       let decoys = [];
       let b4 = boolean_is(value);
-      if (b4) {
+      ("an operator solved is offered the wrong values the lessons on operators offer, the value the other operator would give on the same two values, so the same mistake is caught here as there");
+      if (operator_is) {
+        decoys = app_code_expression_value_decoys(expression, expression);
+      } else if (b4) {
         let n = not(value);
         list_add(decoys, n);
       } else {
