@@ -160,20 +160,34 @@ export function app_code_program_step_guide_action(entry, k) {
       ];
       return r17;
     }
+    ("2026-10-15, at the human's asking: an expression holding more than one operator, as a + b + c does, is named whole, as it reads now, and the operator to solve next is named after it, since one is solved at a time; an expression with one operator is the operator itself, and is said as before");
+    let whole = property_get(action, "whole");
+    function said_of(ending) {
+      if (equal(whole, name)) {
+        let r19 = [whole, operated + ending];
+        return r19;
+      }
+      let r20 = [
+        whole,
+        operated + ", one operator at a time, starting with ",
+        name,
+      ];
+      return r20;
+    }
     if (list_includes(kinds, "assign")) {
-      let r12 = [["The expression on the right is ", name, operated], solve];
+      let r12 = [["The expression on the right is ", ...said_of("")], solve];
       let concated2 = list_concat(intro, r12);
       return concated2;
     }
     if (list_includes(kinds, "log")) {
       let r11 = list_concat(lead_log, [
-        ["The value is ", name, operated + " first"],
+        ["The value is ", ...said_of(" first")],
         solve,
       ]);
       return r11;
     }
     let r13 = list_concat(lead_if, [
-      ["The condition is ", name, operated],
+      ["The condition is ", ...said_of("")],
       solve,
     ]);
     return r13;

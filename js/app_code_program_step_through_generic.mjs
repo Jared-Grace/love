@@ -73,7 +73,7 @@ import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
 import { json_to } from "./json_to.mjs";
 import { boolean_is } from "./boolean_is.mjs";
-import { app_code_expression_value_decoys } from "./app_code_expression_value_decoys.mjs";
+import { app_code_program_step_operator_decoys } from "./app_code_program_step_operator_decoys.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { object_values } from "./object_values.mjs";
 import { property_exists } from "./property_exists.mjs";
@@ -494,7 +494,7 @@ export function app_code_program_step_through_generic(
       let b4 = boolean_is(value);
       ("an operator solved is offered the wrong values the lessons on operators offer, the value the other operator would give on the same two values, so the same mistake is caught here as there");
       if (operator_is) {
-        decoys = app_code_expression_value_decoys(expression, expression);
+        decoys = app_code_program_step_operator_decoys(action);
       } else if (b4) {
         let n = not(value);
         list_add(decoys, n);

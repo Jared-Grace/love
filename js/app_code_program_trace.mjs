@@ -6,21 +6,24 @@ import { text_split_newline } from "./text_split_newline.mjs";
 import { list_size } from "./list_size.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_add } from "./list_add.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { not } from "./not.mjs";
+import { list_filter } from "./list_filter.mjs";
 import { equal } from "./equal.mjs";
 import { json_to } from "./json_to.mjs";
-import { error } from "./error.mjs";
 import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { error } from "./error.mjs";
+import { property_set } from "./property_set.mjs";
 import { property_exists_assert } from "./property_exists_assert.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_index_of_from } from "./text_index_of_from.mjs";
 import { text_size } from "./text_size.mjs";
 import { add } from "./add.mjs";
-import { property_set } from "./property_set.mjs";
 import { list_size_assert } from "./list_size_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { js_unparse } from "./js_unparse.mjs";
-import { not } from "./not.mjs";
 export function app_code_program_trace(code) {
   arguments_assert(arguments, 1);
   ("every line of a program in the order the computer runs it, each with what running it does, in order: a name declared, an expression evaluated, a value assigned to a name, a value logged to the console. A line is done once its last thing is done. Asked for by the human 2026-10-13, so a learner can do every step of the running themselves before being asked what a program logs.");
@@ -38,12 +41,10 @@ export function app_code_program_trace(code) {
     let index = subtract(left, 1);
     return index;
   }
-  function name_evaluate(node, actions, within) {
-    "a name evaluated by looking up the value it holds, added to actions; within is the expression it stands in, or null when it stands alone";
+  function name_evaluate(node, from, to, actions, within) {
+    "a name evaluated by looking up the value it holds, added to actions; it is written in the line from from to to; within is the expression it stands in, or null when it stands alone";
     let name = property_get(node, "name");
     let value2 = property_get(values, name);
-    let from = property_get(node, "start");
-    let to = property_get(node, "end");
     list_add(actions, {
       kind: "evaluate",
       name,
@@ -58,69 +59,130 @@ export function app_code_program_trace(code) {
   }
   function value_of(node, actions) {
     "what an expression comes to, with any evaluating it took added to actions";
-    let type = property_get(node, "type");
-    if (equal(type, "Literal")) {
-      let value = property_get(node, "value");
-      return value;
+    "2026-10-15, at the human's asking: an operator between two values written out is solved in one evaluate, as the lessons on operators solve one, so a program that logs 9 + 7 can be run a line at a time. Its name is the expression with each side written as the value it came to, and expression says the operator and its two sides, so a stepper can ask for what it comes to and offer the wrong values the operator lessons offer";
+    "2026-10-15, at the human's asking: a side may be a name, evaluated first, left before right, as the computer does, so a = a + 1; asks for a, then for what 11 + 1 comes to. within says the whole expression the name stands in, as it reads then, so a guide can say the name is part of it";
+    "2026-10-15, at the human's asking: a side may itself hold an operator, as a + b + c and n % 2 === 0 do, and !a and a || b are solved the same way. Every piece is solved in the order the computer solves it - the left side, then the right, then the operator between them - and each piece solved is written into the line as its value, so the operator over it then reads as values, 13 + c and then 13 + 14. whole says the whole expression as it reads when a piece is solved, and whole_value what it comes to, so a stepper can offer it as the wrong answer of solving the whole line instead of the step. Not picked: solving whichever operator is ready first, which the lesson on choosing the order teaches lands in the same place; the computer goes left to right, and these steps say what it does";
+    "Not picked: leaving the right of || unsolved when the left is true, and of && when it is false, as the computer does. A name looked up does nothing but give its value, so the value of the line is the same either way, and the lessons on || and && solve both sides; a side that did something, as a call does, is refused here before it could be run wrongly";
+    let top_from = property_get(node, "start");
+    let top_to = property_get(node, "end");
+    let solved = [];
+    let operated = [];
+    function inside_is(piece, from, to) {
+      "whether a piece solved stands wholly within from to to";
+      let piece_from = property_get(piece, "from");
+      let piece_to = property_get(piece, "to");
+      let r =
+        greater_than_equal(piece_from, from) && less_than_equal(piece_to, to);
+      return r;
     }
-    if (equal(type, "Identifier")) {
-      let value2 = name_evaluate(node, actions, null);
-      return value2;
+    function text_now(from, to) {
+      "the expression from from to to as it reads once each piece solved within it is written as its value; the pieces are kept in the order they stand in the line";
+      let text = "";
+      let at = from;
+      for (let piece of solved) {
+        if (inside_is(piece, from, to)) {
+          let piece_from = property_get(piece, "from");
+          text =
+            text +
+            text_slice(code, at, piece_from) +
+            property_get(piece, "written");
+          at = property_get(piece, "to");
+        }
+      }
+      let r4 = text + text_slice(code, at, to);
+      return r4;
     }
-    if (equal(type, "BinaryExpression")) {
-      ("2026-10-15, at the human's asking: an operator between two values written out is solved in one evaluate, as the lessons on operators solve one, so a program that logs 9 + 7 can be run a line at a time. Its name is the expression with each side written as the value it came to, and expression says the operator and its two sides, so a stepper can ask for what it comes to and offer the wrong values the operator lessons offer");
-      ("2026-10-15, at the human's asking: a side may be a name, evaluated first, left before right, as the computer does, so a = a + 1; asks for a, then for what 11 + 1 comes to. within says which expression the name stands in, so a guide can say the name is part of it. Not picked: a side that is another operator, which needs the order of solving the expression lessons teach; such a line is still refused where it arrives");
-      let left = property_get(node, "left");
-      let right = property_get(node, "right");
-      let from2 = property_get(node, "start");
-      let to2 = property_get(node, "end");
-      function side_of(side, within) {
-        "a side's value and how it is written once it is a value, any name in it evaluated first";
-        let side_type = property_get(side, "type");
-        if (equal(side_type, "Literal")) {
-          let from3 = property_get(side, "start");
-          let to3 = property_get(side, "end");
-          let r = {
-            value: property_get(side, "value"),
-            written: text_slice(code, from3, to3),
+    function piece_record(from, to, written) {
+      "a piece solved, written into the expression as its value; a piece solved within it before is swallowed by it. Pieces are solved left to right and a piece after its own sides, so a new piece either stands after every piece kept or swallows the last of them, and adding it last keeps them in line order";
+      function outside_is(piece) {
+        let b5 = inside_is(piece, from, to);
+        let r5 = not(b5);
+        return r5;
+      }
+      solved = list_filter(solved, outside_is);
+      list_add(solved, {
+        from,
+        to,
+        written,
+      });
+    }
+    function span_of(side) {
+      "where a side of an operator stands in the line, with any ( ) written round it, since once it is solved they go with it: (3 + 5) / 2 reads 8 / 2. A ( just before a side and a ) just after it are a pair, since the side holds as many of each as it closes; and they group the side rather than belonging to a call or an if, whose ( ) hold the whole of what is in them, which here is the operator the side stands in";
+      let from = property_get(side, "start");
+      let to = property_get(side, "end");
+      while (
+        equal(text_slice(code, subtract(from, 1), from), "(") &&
+        equal(text_slice(code, to, to + 1), ")")
+      ) {
+        from = subtract(from, 1);
+        to = to + 1;
+      }
+      let r6 = {
+        from,
+        to,
+      };
+      return r6;
+    }
+    function piece_of(piece, side) {
+      "what a piece of the expression comes to, any evaluating it took added to actions; side says it stands on a side of an operator rather than being the whole expression";
+      let type = property_get(piece, "type");
+      if (equal(type, "Literal")) {
+        let value = property_get(piece, "value");
+        return value;
+      }
+      let span = side
+        ? span_of(piece)
+        : {
+            from: top_from,
+            to: top_to,
           };
-          return r;
-        }
-        if (equal(side_type, "Identifier")) {
-          let value10 = name_evaluate(side, actions, within);
-          let r2 = {
-            value: value10,
-            written: json_to(value10),
-          };
-          return r2;
-        }
+      let from2 = property_get(span, "from");
+      let to2 = property_get(span, "to");
+      if (equal(type, "Identifier")) {
+        let within = side ? text_now(top_from, top_to) : null;
+        let value2 = name_evaluate(piece, from2, to2, actions, within);
+        let json = json_to(value2);
+        piece_record(from2, to2, json);
+        return value2;
+      }
+      let expression = null;
+      let value8 = null;
+      let unary_is =
+        equal(type, "UnaryExpression") &&
+        equal(property_get(piece, "operator"), "!");
+      if (equal(type, "BinaryExpression") || equal(type, "LogicalExpression")) {
+        let value10 = property_get(piece, "left");
+        let left4 = piece_of(value10, true);
+        let value11 = property_get(piece, "right");
+        let right2 = piece_of(value11, true);
+        let operator = property_get(piece, "operator");
+        expression = {
+          left: left4,
+          operator,
+          right: right2,
+        };
+        value8 = app_code_operator_solve(left4, operator, right2);
+      } else if (unary_is) {
+        let value12 = property_get(piece, "argument");
+        let argument = piece_of(value12, true);
+        expression = {
+          operator: "!",
+          argument,
+        };
+        value8 = not(argument);
+      } else {
         error({
           message:
-            "only an operator between values written out or names can be solved here",
+            "only a value written out, a name, or an operator between them can be evaluated here",
           code,
-          side_type,
+          type,
         });
       }
-      let within_left = text_slice(code, from2, to2);
-      let left_side = side_of(left, within_left);
-      ("2026-10-15, seen on screen: by the time a name on the right is asked for, the left side is already solved into the line, so the expression it stands in is said with the left written as its value, 1 + b and not a + b, the same text the line then shows");
-      let left_end = property_get(left, "end");
-      let within_right =
-        property_get(left_side, "written") + text_slice(code, left_end, to2);
-      let right_side = side_of(right, within_right);
-      let operator = property_get(node, "operator");
-      let expression = {
-        left: property_get(left_side, "value"),
-        operator,
-        right: property_get(right_side, "value"),
-      };
-      let left4 = property_get(expression, "left");
-      let right2 = property_get(expression, "right");
-      let value8 = app_code_operator_solve(left4, operator, right2);
-      let value11 = property_get(left_side, "written");
-      let value12 = property_get(right_side, "written");
-      let name4 = text_combine_multiple([value11, " ", operator, " ", value12]);
-      list_add(actions, {
+      let piece_from2 = property_get(piece, "start");
+      let piece_to2 = property_get(piece, "end");
+      let name4 = text_now(piece_from2, piece_to2);
+      let whole = text_now(top_from, top_to);
+      let action = {
         kind: "evaluate",
         name: name4,
         value: value8,
@@ -129,14 +191,20 @@ export function app_code_program_trace(code) {
         expression,
         within: null,
         lead: "",
-      });
+        whole,
+        whole_value: null,
+      };
+      list_add(actions, action);
+      list_add(operated, action);
+      let json2 = json_to(value8);
+      piece_record(from2, to2, json2);
       return value8;
     }
-    error({
-      message: "only a value written out or a name can be evaluated here",
-      code,
-      type,
-    });
+    let value9 = piece_of(node, false);
+    for (let action2 of operated) {
+      property_set(action2, "whole_value", value9);
+    }
+    return value9;
   }
   function shorter_run(
     expression,
@@ -200,6 +268,8 @@ export function app_code_program_trace(code) {
       },
       within: text_combine_multiple([name, " = ", solved]),
       lead,
+      whole: solved,
+      whole_value: value,
     });
     ("the value assigned is the one now written after lead, so it starts there; it ends where the line's untouched end begins, which the stepper finds from to");
     let lead_size = text_size(lead);
