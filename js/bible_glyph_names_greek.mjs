@@ -189,6 +189,50 @@ export function bible_glyph_names_greek() {
       about:
         "The father of Balaam, the prophet who loved the wages of wrongdoing (Numbers 22:5, 2 Peter 2:15).",
     },
+    5103: {
+      name: "Titus",
+      means: null,
+      about:
+        "A Greek believer Paul calls his true child in the faith, left in Crete to set the churches in order (Titus 1:4-5).",
+    },
+    2211: {
+      name: "Zenas",
+      means: null,
+      about: "A lawyer Paul asks Titus to help on his journey (Titus 3:13).",
+    },
+    2914: {
+      name: "Crete",
+      means: null,
+      about:
+        "A large island in the Mediterranean Sea, where Titus served the churches (Titus 1:5, Acts 27:7).",
+    },
+    2912: {
+      name: "Cretan",
+      means: null,
+      about: "A person from the island of Crete (Acts 2:11, Titus 1:12).",
+    },
+    734: {
+      name: "Artemas",
+      means: null,
+      about: "A helper Paul planned to send to Titus in Crete (Titus 3:12).",
+    },
+    5190: {
+      name: "Tychicus",
+      means: "fortunate",
+      about:
+        "A faithful helper who carried Paul's letters and news to the churches (Ephesians 6:21-22, Colossians 4:7-8).",
+    },
+    625: {
+      name: "Apollos",
+      means: null,
+      about:
+        "A Jewish believer from Alexandria, mighty in the Scriptures, who watered where Paul planted (Acts 18:24, 1 Corinthians 3:6).",
+    },
+    3533: {
+      name: "Nicopolis",
+      means: "city of victory",
+      about: "A city where Paul planned to spend the winter (Titus 3:12).",
+    },
   };
   return names;
 }
