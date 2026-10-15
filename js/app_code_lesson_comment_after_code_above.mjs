@@ -1,9 +1,9 @@
-import { property_text_to } from "./property_text_to.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_sum_lines } from "./app_code_lesson_sum_lines.mjs";
 import { js_code_comment_prefix } from "./js_code_comment_prefix.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
+import { property_text_to } from "./property_text_to.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_comment_skip_line } from "./app_code_lesson_comment_skip_line.mjs";
@@ -30,7 +30,7 @@ export function app_code_lesson_comment_after_code_above(root, context) {
     box_lines,
     context,
     app_code_lesson_comment_skip_line,
-    ["two slashes in front of a line skip that line:"],
+    ["two slashes in front of a line skip the whole line:"],
   );
   app_code_code_lines_writes_out(box_lines, [first_line, last_noted], value);
   let slashes = js_comment_start();
