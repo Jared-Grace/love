@@ -286,6 +286,48 @@ export function bible_glyph_names_greek() {
       about:
         "A Greek person; in the Bible often anyone who is not a Jew (Romans 1:16, Colossians 3:11).",
     },
+    4195: {
+      name: "Pontus",
+      means: "sea",
+      about:
+        "A land on the south shore of the Black Sea, where some of the Christians Peter wrote to lived (1 Peter 1:1).",
+    },
+    1053: {
+      name: "Galatia",
+      means: null,
+      about:
+        "A land in the middle of Asia Minor; Paul wrote the letter Galatians to its churches (Galatians 1:2, 1 Peter 1:1).",
+    },
+    2587: {
+      name: "Cappadocia",
+      means: "probably land of beautiful horses",
+      about:
+        "A land in eastern Asia Minor, where some of the Christians Peter wrote to lived (Acts 2:9, 1 Peter 1:1).",
+    },
+    773: {
+      name: "Asia",
+      means: null,
+      about:
+        "A Roman province in the west of what is now Turkey, home of the seven churches of Revelation (Revelation 1:4, 1 Peter 1:1).",
+    },
+    978: {
+      name: "Bithynia",
+      means: null,
+      about:
+        "A land by the Black Sea that the Spirit did not allow Paul to enter (Acts 16:7); later Christians lived there (1 Peter 1:1).",
+    },
+    4564: {
+      name: "Sarah",
+      means: "princess",
+      about:
+        "Abraham's wife, the mother of Isaac, who obeyed Abraham and called him lord (Genesis 17:15, 1 Peter 3:6).",
+    },
+    4610: {
+      name: "Silvanus",
+      means: "of the forest",
+      about:
+        "Silas, a leader who travelled with Paul and helped Peter write his first letter (Acts 15:40, 1 Peter 5:12).",
+    },
   };
   return names;
 }
