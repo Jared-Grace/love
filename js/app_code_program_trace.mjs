@@ -10,19 +10,22 @@ import { app_code_line_pieces_text } from "./app_code_line_pieces_text.mjs";
 import { app_code_line_pieces_add } from "./app_code_line_pieces_add.mjs";
 import { equal } from "./equal.mjs";
 import { json_to } from "./json_to.mjs";
-import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
-import { not } from "./not.mjs";
+import { app_code_expression_node } from "./app_code_expression_node.mjs";
+import { app_code_expression_node_before } from "./app_code_expression_node_before.mjs";
 import { error } from "./error.mjs";
+import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_exists_assert } from "./property_exists_assert.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_index_of_from } from "./text_index_of_from.mjs";
+import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
 import { text_size } from "./text_size.mjs";
 import { add } from "./add.mjs";
 import { list_size_assert } from "./list_size_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { js_unparse } from "./js_unparse.mjs";
+import { not } from "./not.mjs";
 export function app_code_program_trace(code) {
   arguments_assert(arguments, 1);
   ("every line of a program in the order the computer runs it, each with what running it does, in order: a name declared, an expression evaluated, a value assigned to a name, a value logged to the console. A line is done once its last thing is done. Asked for by the human 2026-10-13, so a learner can do every step of the running themselves before being asked what a program logs.");
@@ -123,20 +126,11 @@ export function app_code_program_trace(code) {
         let value11 = property_get(piece, "right");
         let right2 = piece_of(value11, true);
         let operator = property_get(piece, "operator");
-        expression = {
-          left: left4,
-          operator,
-          right: right2,
-        };
-        value8 = app_code_operator_solve(left4, operator, right2);
+        expression = app_code_expression_node(left4, operator, right2);
       } else if (unary_is) {
         let value12 = property_get(piece, "argument");
         let argument = piece_of(value12, true);
-        expression = {
-          operator: "!",
-          argument,
-        };
-        value8 = not(argument);
+        expression = app_code_expression_node_before("!", argument);
       } else {
         error({
           message:
@@ -145,6 +139,8 @@ export function app_code_program_trace(code) {
           type,
         });
       }
+      ("2026-10-16: expression is the very shape the expression lessons take a line apart in, built and worked out by their own functions, so a step a program takes and a step a lesson takes are one step: the wrong values offered beside it are worked out from it as a lesson's are. A ! had been written with its one side as argument, where the shape says right; nothing read it there only because a ! always comes to true or false, and those are offered without looking inside");
+      value8 = app_code_expression_solved(expression, expression);
       let piece_from = property_get(piece, "start");
       let piece_to = property_get(piece, "end");
       let name4 = text_now(piece_from, piece_to);
