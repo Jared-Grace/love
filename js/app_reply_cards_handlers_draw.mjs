@@ -4,6 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { noop } from "./noop.mjs";
 import { app_reply_visible_count } from "./app_reply_visible_count.mjs";
 import { app_reply_love_prepare } from "./app_reply_love_prepare.mjs";
+import { promise_later_catch_ignore } from "./promise_later_catch_ignore.mjs";
 import { app_reply_verses_refresh } from "./app_reply_verses_refresh.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { app_reply_typed_get } from "./app_reply_typed_get.mjs";
@@ -16,7 +17,7 @@ import { app_reply_key_down_handle } from "./app_reply_key_down_handle.mjs";
 import { html_on_keydown_body } from "./html_on_keydown_body.mjs";
 import { log } from "./log.mjs";
 import { property_set } from "./property_set.mjs";
-export async function app_reply_cards_handlers_draw(
+export function app_reply_cards_handlers_draw(
   languages_chosen_held,
   languages_chosen_reset,
   languages,
@@ -70,12 +71,15 @@ export async function app_reply_cards_handlers_draw(
   let testament_held = property_get(r3, "testament_held");
   let languages_chooser = property_get(r3, "languages_chooser");
   let prepared_held = {};
-  await app_reply_love_prepare(
-    languages,
-    prepared_held,
-    encouragement,
-    encouragement_singles,
-  );
+  async function love_prepare() {
+    await app_reply_love_prepare(
+      languages,
+      prepared_held,
+      encouragement,
+      encouragement_singles,
+    );
+  }
+  promise_later_catch_ignore(love_prepare);
   async function update(verse_count) {
     let r4 = await app_reply_verses_refresh({
       verse_count,

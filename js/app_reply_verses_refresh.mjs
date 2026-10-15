@@ -11,6 +11,7 @@ import { list_add_multiple } from "./list_add_multiple.mjs";
 import { property_set } from "./property_set.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { app_reply_verses_prepare } from "./app_reply_verses_prepare.mjs";
+import { promise_later_catch_ignore } from "./promise_later_catch_ignore.mjs";
 export async function app_reply_verses_refresh({
   verse_count,
   bible_texts,
@@ -60,5 +61,5 @@ export async function app_reply_verses_refresh({
       languages_chosen,
     );
   }
-  await catch_null_async(prepare);
+  promise_later_catch_ignore(prepare);
 }

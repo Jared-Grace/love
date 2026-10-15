@@ -238,9 +238,12 @@ import { app_code_lesson_statement_name_rectangles_join_across } from "./app_cod
 import { app_code_lesson_statement_name_rectangles_cover_together } from "./app_code_lesson_statement_name_rectangles_cover_together.mjs";
 import { app_code_lesson_statement_name_rectangle_wide_as_tall } from "./app_code_lesson_statement_name_rectangle_wide_as_tall.mjs";
 import { app_code_lesson_if_true } from "./app_code_lesson_if_true.mjs";
+import { app_code_lesson_braces_step_if_true } from "./app_code_lesson_braces_step_if_true.mjs";
 import { app_code_lesson_if_false } from "./app_code_lesson_if_false.mjs";
+import { app_code_lesson_braces_step_if_false } from "./app_code_lesson_braces_step_if_false.mjs";
 import { app_code_lesson_if_less_than } from "./app_code_lesson_if_less_than.mjs";
 import { app_code_lesson_if_name } from "./app_code_lesson_if_name.mjs";
+import { app_code_lesson_braces_step_if_name } from "./app_code_lesson_braces_step_if_name.mjs";
 import { app_code_lesson_if_names_less_than } from "./app_code_lesson_if_names_less_than.mjs";
 import { app_code_lesson_if_not } from "./app_code_lesson_if_not.mjs";
 import { app_code_lesson_if_steps } from "./app_code_lesson_if_steps.mjs";
@@ -555,9 +558,12 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_rectangles_cover_together,
     app_code_lesson_statement_name_rectangle_wide_as_tall,
     app_code_lesson_if_true,
+    app_code_lesson_braces_step_if_true,
     app_code_lesson_if_false,
+    app_code_lesson_braces_step_if_false,
     app_code_lesson_if_less_than,
     app_code_lesson_if_name,
+    app_code_lesson_braces_step_if_name,
     app_code_lesson_if_names_less_than,
     app_code_lesson_if_not,
     app_code_lesson_if_steps,
