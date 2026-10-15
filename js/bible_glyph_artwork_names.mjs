@@ -2756,6 +2756,42 @@ export function bible_glyph_artwork_names() {
       glyph: "repeat_button",
       asset: "Repeat button",
     },
+    {
+      glyph: "rotating_light",
+      asset: "Police car light",
+    },
+    {
+      glyph: "muted_speaker",
+      asset: "Muted speaker",
+    },
+    {
+      glyph: "person_in_lotus_position",
+      asset: "Person in lotus position",
+    },
+    {
+      glyph: "nauseated_face",
+      asset: "Nauseated face",
+    },
+    {
+      glyph: "manual_wheelchair",
+      asset: "Manual wheelchair",
+    },
+    {
+      glyph: "person_cartwheeling",
+      asset: "Person cartwheeling",
+    },
+    {
+      glyph: "magic_wand",
+      asset: "Magic wand",
+    },
+    {
+      glyph: "tired_face",
+      asset: "Tired face",
+    },
+    {
+      glyph: "black_heart",
+      asset: "Black heart",
+    },
   ];
   return names;
 }
