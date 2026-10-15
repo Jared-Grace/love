@@ -1,3 +1,4 @@
+import { null_not_is } from "./null_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { giveaway_psalms_record_path } from "./giveaway_psalms_record_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -41,7 +42,7 @@ export async function giveaway_psalms_chapter_upload_plan(
   let files = [];
   for (let one of item.files) {
     let text_is = equal(one.kind, "text");
-    let in_repo_is = not_null_is(one.path_in_repo);
+    let in_repo_is = null_not_is(one.path_in_repo);
     let made = text_is
       ? list_find_property(texts, "file_name", one.file_name)
       : null;
