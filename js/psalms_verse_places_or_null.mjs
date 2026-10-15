@@ -15,12 +15,12 @@ export function psalms_verse_places_or_null(verse_first, verse_last) {
   ("A letter in capitals is read as the same part, because the reading that hands these ends over matches a file name without regard to case and two recordings on this disk spell the word Psalm with a capital P and one does not.");
   ("A range running backwards is nothing rather than an empty span, because the caller is counting what is covered and must not be told that singing which exists covers nothing.");
   function place_or_null(verse_text, slot_whole) {
-    let digits = text_digits_leading(verse_text);
-    if (equal(digits, null)) {
+    let digits_leading = text_digits_leading(verse_text);
+    if (equal(digits_leading, null)) {
       return null;
     }
-    let rest = verse_text.slice(digits.length).toLowerCase();
-    let verse = Number(digits);
+    let rest = verse_text.slice(digits_leading.length).toLowerCase();
+    let verse = Number(digits_leading);
     let whole_is = equal(rest, "");
     if (whole_is) {
       let place_whole = multiply(verse, 100) + slot_whole;
