@@ -448,6 +448,7 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_not: text_frozen("name_not"),
     app_code_lesson_comment_note: text_frozen("comment"),
     app_code_lesson_log_twice: text_frozen("log_twice"),
+    app_code_lesson_step_log_twice: text_frozen("step_log_twice"),
     app_code_lesson_comment_skip_line: text_frozen("comment_skip"),
     app_code_lesson_comment_after_code: text_frozen("comment_after"),
     app_code_lesson_statement_name_true_false: text_frozen("name_true_false"),
