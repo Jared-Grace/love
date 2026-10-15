@@ -83,6 +83,7 @@ export function bible_glyph_group_overlay_open(
   app_shared_text_deemphasized(spoken_line);
   let pieces = bible_glyph_group_pieces(names, meanings);
   let several = greater_than(pieces.length, 1);
+  let roots = [];
   for (let piece of pieces) {
     let meaning = bible_glyph_piece_meaning(piece, meanings, several);
     if (equal(meaning, null) && not(several)) {
@@ -109,8 +110,12 @@ export function bible_glyph_group_overlay_open(
     let gloss = html_span_text_content(line, meaning.gloss);
     html_style_set(gloss, "fontWeight", "bold");
     if (not_equal(meaning.root, null)) {
-      let root = html_span_text_content(line, " " + meaning.root);
-      app_shared_text_deemphasized(root);
+      if (null_is(original)) {
+        let root = html_span_text_content(line, " " + meaning.root);
+        app_shared_text_deemphasized(root);
+      } else {
+        roots.push(meaning.root);
+      }
     }
   }
   let b = null_is(original);
@@ -130,6 +135,15 @@ export function bible_glyph_group_overlay_open(
     html_attribute_set(written, "dir", "auto");
     html_style_set(written, "fontSize", "1.5em");
     html_on_click(written, play);
+    if (greater_than(roots.length, 0)) {
+      let pronounce_line = html_div(word_line);
+      let pronounce_label = html_span_text_content(
+        pronounce_line,
+        "Pronounce: ",
+      );
+      app_shared_text_deemphasized(pronounce_label);
+      html_span_text_content(pronounce_line, roots.join(" "));
+    }
     html_on_click(word_line, html_stop_propagation);
   }
   function close() {
