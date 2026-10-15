@@ -6,13 +6,12 @@ import { text_split_newline } from "./text_split_newline.mjs";
 import { list_size } from "./list_size.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_add } from "./list_add.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
-import { not } from "./not.mjs";
-import { list_filter } from "./list_filter.mjs";
+import { app_code_line_pieces_text } from "./app_code_line_pieces_text.mjs";
+import { app_code_line_pieces_add } from "./app_code_line_pieces_add.mjs";
 import { equal } from "./equal.mjs";
 import { json_to } from "./json_to.mjs";
 import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
+import { not } from "./not.mjs";
 import { error } from "./error.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_exists_assert } from "./property_exists_assert.mjs";
@@ -67,44 +66,12 @@ export function app_code_program_trace(code) {
     let top_to = property_get(node, "end");
     let solved = [];
     let operated = [];
-    function inside_is(piece, from, to) {
-      "whether a piece solved stands wholly within from to to";
-      let piece_from = property_get(piece, "from");
-      let piece_to = property_get(piece, "to");
-      let r =
-        greater_than_equal(piece_from, from) && less_than_equal(piece_to, to);
+    function text_now(from, to) {
+      let r = app_code_line_pieces_text(code, solved, from, to);
       return r;
     }
-    function text_now(from, to) {
-      "the expression from from to to as it reads once each piece solved within it is written as its value; the pieces are kept in the order they stand in the line";
-      let text = "";
-      let at = from;
-      for (let piece of solved) {
-        if (inside_is(piece, from, to)) {
-          let piece_from = property_get(piece, "from");
-          text =
-            text +
-            text_slice(code, at, piece_from) +
-            property_get(piece, "written");
-          at = property_get(piece, "to");
-        }
-      }
-      let r4 = text + text_slice(code, at, to);
-      return r4;
-    }
     function piece_record(from, to, written) {
-      "a piece solved, written into the expression as its value; a piece solved within it before is swallowed by it. Pieces are solved left to right and a piece after its own sides, so a new piece either stands after every piece kept or swallows the last of them, and adding it last keeps them in line order";
-      function outside_is(piece) {
-        let b5 = inside_is(piece, from, to);
-        let r5 = not(b5);
-        return r5;
-      }
-      solved = list_filter(solved, outside_is);
-      list_add(solved, {
-        from,
-        to,
-        written,
-      });
+      solved = app_code_line_pieces_add(solved, from, to, written);
     }
     function span_of(side) {
       "where a side of an operator stands in the line, with any ( ) written round it, since once it is solved they go with it: (3 + 5) / 2 reads 8 / 2. A ( just before a side and a ) just after it are a pair, since the side holds as many of each as it closes; and they group the side rather than belonging to a call or an if, whose ( ) hold the whole of what is in them, which here is the operator the side stands in";
@@ -178,9 +145,9 @@ export function app_code_program_trace(code) {
           type,
         });
       }
-      let piece_from2 = property_get(piece, "start");
-      let piece_to2 = property_get(piece, "end");
-      let name4 = text_now(piece_from2, piece_to2);
+      let piece_from = property_get(piece, "start");
+      let piece_to = property_get(piece, "end");
+      let name4 = text_now(piece_from, piece_to);
       let whole = text_now(top_from, top_to);
       let action = {
         kind: "evaluate",
