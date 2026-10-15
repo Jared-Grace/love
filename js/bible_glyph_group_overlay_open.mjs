@@ -29,13 +29,16 @@ export function bible_glyph_group_overlay_open(
   lookup,
   meanings,
   original,
+  sound,
 ) {
-  arguments_assert(arguments, 4);
+  arguments_assert(arguments, 5);
   ("$plain names");
   ("$plain lookup");
   ("$plain meanings");
   ("$plain original");
-  ("the names are the pictures of one tapped group, the lookup maps a name to its character, the meanings map a sequence to what it says, and the original is the word as it was written, or null where it is not known. All are data to draw and none runs.");
+  ("$plain sound");
+  ("the names are the pictures of one tapped group, the lookup maps a name to its character, the meanings map a sequence to what it says, the original is the word as it was written, and the sound is how that written word is said; either of the last two is null where it is not known. All are data to draw and none runs.");
+  ("PRONOUNCE SHOWS THE WORD AS IT IS SAID IN THIS VERSE WHEN THE SOUND IS KNOWN, which is what the speaker beside it plays. Only a word whose chapter was built before sounds were kept falls back to the dictionary form of its root, which can differ from the word as said - with and joined to it, or a different tense.");
   ("EACH MEANING IS LABELLED AS THE DEFINITION AND THE WRITTEN WORD AS THE WORD, so a reader who sees two lines of foreign-looking text knows which is which without being taught.");
   ("THE WRITTEN WORD COMES WITH THE SAME SPEAKER AND TURTLE THE ORIGINAL BIBLE APP PUTS BESIDE A WORD, drawn by ",
     fn_name("app_shared_gloss_bible_word_sound"),
@@ -135,15 +138,19 @@ export function bible_glyph_group_overlay_open(
     html_attribute_set(written, "dir", "auto");
     html_style_set(written, "fontSize", "1.5em");
     html_on_click(written, play);
-    if (greater_than(roots.length, 0)) {
+    let pronounced = roots.join(" ");
+    let b4 = null_is(sound);
+    if (not(b4)) {
+      pronounced = sound;
+    }
+    if (greater_than(pronounced.length, 0)) {
       let pronounce_line = html_div(word_line);
       let pronounce_label = html_span_text_content(
         pronounce_line,
         "Pronounce: ",
       );
       app_shared_text_deemphasized(pronounce_label);
-      let text = roots.join(" ");
-      html_span_text_content(pronounce_line, text);
+      html_span_text_content(pronounce_line, pronounced);
     }
     html_on_click(word_line, html_stop_propagation);
   }
