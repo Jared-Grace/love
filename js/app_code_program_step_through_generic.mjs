@@ -1,4 +1,3 @@
-import { less_than_equal } from "./less_than_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_program_trace } from "./app_code_program_trace.mjs";
@@ -22,6 +21,8 @@ import { app_shared_glow_clear } from "./app_shared_glow_clear.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_set } from "./list_set.mjs";
 import { property_get } from "./property_get.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { subtract } from "./subtract.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -29,7 +30,6 @@ import { app_code_note_name_mark_open } from "./app_code_note_name_mark_open.mjs
 import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { equal } from "./equal.mjs";
-import { subtract } from "./subtract.mjs";
 import { app_code_note_runs } from "./app_code_note_runs.mjs";
 import { app_code_note_runs_cut } from "./app_code_note_runs_cut.mjs";
 import { app_code_note_name_colors } from "./app_code_note_name_colors.mjs";
@@ -525,8 +525,15 @@ export function app_code_program_step_through_generic(
       property_set(value_holder, "button", asked.right);
       await asked.pressed;
       html_remove(asked.box);
-      let line_from = list_get(starts, line_index);
       let left = property_get(action, "from");
+      ("2026-10-15: a value with no place in the line, as the a that a += b adds to, is asked for and not written in, since 1 += b would read as giving a value to 1");
+      if (null_is(left)) {
+        return;
+      }
+      ("and a value may be written in with words before it, as a += 8 is solved to a = 9, the = taking the place of the += with the value");
+      let lead = property_get(action, "lead");
+      let written = lead + said;
+      let line_from = list_get(starts, line_index);
       let from = subtract(left, line_from);
       let left2 = property_get(action, "to");
       let to = subtract(left2, line_from);
@@ -537,7 +544,7 @@ export function app_code_program_step_through_generic(
       let now = list_get(shown, line_index);
       let to2 = text_size(now);
       let evaluated =
-        text_slice(now, 0, from_now) + said + text_slice(now, to_now, to2);
+        text_slice(now, 0, from_now) + written + text_slice(now, to_now, to2);
       ("2026-10-15, at the human's asking: the name fades out, the room it took slides to the width of its value, and the value fades in, so the ( ) around it grow or shrink rather than jump. The slide is the one every height change in this app is made by, told width instead. Not picked: the name going at once, as the human first put it; it fades out because the old value in a note fades out too");
       let piece = row_piece(line_index, from_now, to_now);
       html_display_inline_block(piece);
@@ -548,7 +555,7 @@ export function app_code_program_step_through_generic(
       let duration4 = app_shared_animation_duration();
       await html_opacity_animate(piece, "0", duration4);
       function value_write() {
-        html_text_set(piece, said);
+        html_text_set(piece, written);
       }
       await html_size_change_animate(
         piece,
@@ -572,7 +579,7 @@ export function app_code_program_step_through_generic(
       list_add(kept, {
         from,
         to,
-        size: text_size(said),
+        size: text_size(written),
       });
       list_set(replaced, line_index, kept);
       return;
