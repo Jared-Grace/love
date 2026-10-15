@@ -70,8 +70,7 @@ export function app_code_program_trace(code) {
       let right = property_get(node, "right");
       let from2 = property_get(node, "start");
       let to2 = property_get(node, "end");
-      let within = text_slice(code, from2, to2);
-      function side_of(side) {
+      function side_of(side, within) {
         "a side's value and how it is written once it is a value, any name in it evaluated first";
         let side_type = property_get(side, "type");
         if (equal(side_type, "Literal")) {
@@ -98,8 +97,13 @@ export function app_code_program_trace(code) {
           side_type,
         });
       }
-      let left_side = side_of(left);
-      let right_side = side_of(right);
+      let within_left = text_slice(code, from2, to2);
+      let left_side = side_of(left, within_left);
+      ("2026-10-15, seen on screen: by the time a name on the right is asked for, the left side is already solved into the line, so the expression it stands in is said with the left written as its value, 1 + b and not a + b, the same text the line then shows");
+      let left_end = property_get(left, "end");
+      let within_right =
+        property_get(left_side, "written") + text_slice(code, left_end, to2);
+      let right_side = side_of(right, within_right);
       let operator = property_get(node, "operator");
       let expression = {
         left: property_get(left_side, "value"),
