@@ -822,6 +822,7 @@ export function bible_glyph_roots_hebrew_drafted() {
       "Elihu, God of him",
     ],
     ["121", "adam", "person+proper_name", "Adam"],
+    ["2332", "chavvah", "mother+sprout+proper_name", "Eve, life-giver"],
     ["48", "ab", "father+up_arrow+proper_name", "Abiram, father of height"],
     ["7935", "shakan", "tent+i_am+proper_name", "Shechaniah, Jah has dwelt"],
     ["7652", "sheba", "seven+proper_name", "Sheba, seven"],

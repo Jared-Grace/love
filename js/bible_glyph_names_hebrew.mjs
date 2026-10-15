@@ -328,6 +328,11 @@ export function bible_glyph_names_hebrew() {
       means: "my God is the LORD",
       about: "A prophet of Israel who was taken up to heaven without dying.",
     },
+    2332: {
+      name: "Eve",
+      means: "life-giver",
+      about: "The first woman, the mother of all the living (Genesis 3:20).",
+    },
   };
   return names;
 }

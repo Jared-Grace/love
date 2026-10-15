@@ -556,6 +556,22 @@ export function bible_glyph_names_greek() {
       means: "lame",
       about: "A believer at Rome who greeted Timothy (2 Timothy 4:21).",
     },
+    2096: {
+      name: "Eve",
+      means: "life-giver",
+      about: "The first woman, the mother of all the living (Genesis 3:20).",
+    },
+    4194: {
+      name: "Pontius",
+      means: "probably of the sea",
+      about: "The family name of Pilate, the Roman governor.",
+    },
+    4091: {
+      name: "Pilate",
+      means: "probably armed with a javelin",
+      about:
+        "The Roman governor of Judea who handed Jesus over to be crucified.",
+    },
   };
   return names;
 }
