@@ -20,9 +20,7 @@ import { html_style_background_color_set } from "./html_style_background_color_s
 import { app_shared_glow_clear } from "./app_shared_glow_clear.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_set } from "./list_set.mjs";
-import { property_get } from "./property_get.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
-import { subtract } from "./subtract.mjs";
+import { app_code_line_pieces_text } from "./app_code_line_pieces_text.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -30,6 +28,7 @@ import { app_code_note_name_mark_open } from "./app_code_note_name_mark_open.mjs
 import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { equal } from "./equal.mjs";
+import { subtract } from "./subtract.mjs";
 import { app_code_note_runs } from "./app_code_note_runs.mjs";
 import { app_code_note_runs_cut } from "./app_code_note_runs_cut.mjs";
 import { app_code_note_name_colors } from "./app_code_note_name_colors.mjs";
@@ -44,6 +43,7 @@ import { html_copy_fly_text_rect } from "./html_copy_fly_text_rect.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_last_or_null } from "./list_last_or_null.mjs";
+import { property_get } from "./property_get.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_size } from "./list_size.mjs";
 import { modulo } from "./modulo.mjs";
@@ -80,6 +80,7 @@ import { property_exists } from "./property_exists.mjs";
 import { list_remove_if_exists } from "./list_remove_if_exists.mjs";
 import { app_code_expression_value_choose_buttons_generic } from "./app_code_expression_value_choose_buttons_generic.mjs";
 import { html_remove } from "./html_remove.mjs";
+import { app_code_line_pieces_add } from "./app_code_line_pieces_add.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_opacity_animate } from "./html_opacity_animate.mjs";
@@ -128,7 +129,7 @@ export function app_code_program_step_through_generic(
   let comments = [];
   ("what each line says right now, which is its code until a name in it is evaluated; kept, so a piece of it can be cut out to be sent somewhere");
   let shown = [];
-  ("each value solved into a line so far, as where it was written, from and to, and the size of the value now standing there; kept so a later solving on the same line can find where its own piece now stands");
+  ("each value solved into a line so far, as where it was written, from and to, and the value now written there; kept so a later solving on the same line can find where its own piece now stands, by the rule the trace reads the line by");
   let replaced = [];
   ("the value each line's note says right now, null until there is a note; kept, so the value can fade out of the note before a new one arrives");
   let noted = [];
@@ -185,18 +186,12 @@ export function app_code_program_step_through_generic(
     row_text_set(line_index, text);
     list_set(replaced, line_index, []);
   }
-  function position_now(done, position) {
+  function position_now(line_index, position) {
     "where a place in a line as it is written stands in the line as it reads now: moved by every value solved into the line wholly before it";
-    let shift = 0;
-    for (let r of done) {
-      let r_from = property_get(r, "from");
-      let r_to = property_get(r, "to");
-      if (less_than_equal(r_to, position)) {
-        let right6 = subtract(r_to, r_from);
-        shift = subtract(shift + property_get(r, "size"), right6);
-      }
-    }
-    let r2 = position + shift;
+    let line = list_get(lines, line_index);
+    let done = list_get(replaced, line_index);
+    let before = app_code_line_pieces_text(line, done, 0, position);
+    let r2 = text_size(before);
     return r2;
   }
   function row_piece(line_index, from, to) {
@@ -538,13 +533,13 @@ export function app_code_program_step_through_generic(
       let left2 = property_get(action, "to");
       let to = subtract(left2, line_from);
       ("2026-10-15: a line may be solved more than once, a name in a + 1 and then the operator, so where the piece stands now is found from where it was written, moved by each value already solved into the line before it; a value solved inside the piece is swallowed by it");
+      let from_now = position_now(line_index, from);
+      let to_now = position_now(line_index, to);
       let done = list_get(replaced, line_index);
-      let from_now = position_now(done, from);
-      let to_now = position_now(done, to);
-      let now = list_get(shown, line_index);
-      let to2 = text_size(now);
-      let evaluated =
-        text_slice(now, 0, from_now) + written + text_slice(now, to_now, to2);
+      let done_after = app_code_line_pieces_add(done, from, to, written);
+      let line = list_get(lines, line_index);
+      let to2 = text_size(line);
+      let evaluated = app_code_line_pieces_text(line, done_after, 0, to2);
       ("2026-10-15, at the human's asking: the name fades out, the room it took slides to the width of its value, and the value fades in, so the ( ) around it grow or shrink rather than jump. The slide is the one every height change in this app is made by, told width instead. Not picked: the name going at once, as the human first put it; it fades out because the old value in a note fades out too");
       let piece = row_piece(line_index, from_now, to_now);
       html_display_inline_block(piece);
@@ -566,22 +561,7 @@ export function app_code_program_step_through_generic(
       );
       await html_opacity_animate(piece, "1", duration4);
       row_text_set(line_index, evaluated);
-      let kept = [];
-      for (let r of done) {
-        let a = property_get(r, "from");
-        let inside =
-          greater_than_equal(a, from) &&
-          less_than_equal(property_get(r, "to"), to);
-        if (not(inside)) {
-          list_add(kept, r);
-        }
-      }
-      list_add(kept, {
-        from,
-        to,
-        size: text_size(written),
-      });
-      list_set(replaced, line_index, kept);
+      list_set(replaced, line_index, done_after);
       return;
     }
     if (equal(kind, "declare")) {
