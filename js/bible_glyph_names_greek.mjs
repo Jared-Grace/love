@@ -612,6 +612,57 @@ export function bible_glyph_names_greek() {
       about:
         "A name for the people of Israel. Eber was one of their forefathers.",
     },
+    2786: {
+      name: "Cephas",
+      means: "rock",
+      about: "The Aramaic name Jesus gave Peter (John 1:42).",
+    },
+    2491: {
+      name: "John",
+      means: "the LORD is gracious",
+      about:
+        "The name of John the Baptist, and of John the apostle, the son of Zebedee.",
+    },
+    688: {
+      name: "Arabia",
+      means: "probably desert",
+      about:
+        "The desert lands south and east of Israel, where Paul went after he believed (Galatians 1:17).",
+    },
+    1154: {
+      name: "Damascus",
+      means: null,
+      about:
+        "The chief city of Syria. On the road to it Paul saw the Lord (Acts 9:3-6).",
+    },
+    4614: {
+      name: "Sinai",
+      means: null,
+      about: "The mountain where God gave Moses the law (Exodus 19:20).",
+    },
+    28: {
+      name: "Hagar",
+      means: "probably flight",
+      about:
+        "Sarah's Egyptian servant, the mother of Ishmael (Genesis 16:1-16).",
+    },
+    4947: {
+      name: "Syria",
+      means: null,
+      about:
+        "The land north of Israel. Its city Antioch is where the disciples were first called Christians (Acts 11:26).",
+    },
+    2791: {
+      name: "Cilicia",
+      means: null,
+      about:
+        "A land in the south-east of what is now Turkey. Its city Tarsus was Paul's home (Acts 22:3).",
+    },
+    1052: {
+      name: "Galatian",
+      means: null,
+      about: "A person from Galatia (Galatians 3:1).",
+    },
   };
   return names;
 }

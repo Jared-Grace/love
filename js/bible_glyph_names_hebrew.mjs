@@ -333,6 +333,32 @@ export function bible_glyph_names_hebrew() {
       means: "life-giver",
       about: "The first woman, the mother of all the living (Genesis 3:20).",
     },
+    3110: {
+      name: "Johanan",
+      means: "the LORD is gracious",
+      about: "A name several men in Israel had. In Greek it is John.",
+    },
+    6152: {
+      name: "Arabia",
+      means: "probably desert",
+      about: "The desert lands south and east of Israel.",
+    },
+    1834: {
+      name: "Damascus",
+      means: null,
+      about: "The chief city of Syria, north-east of Israel.",
+    },
+    5514: {
+      name: "Sinai",
+      means: null,
+      about: "The mountain where God gave Moses the law (Exodus 19:20).",
+    },
+    1904: {
+      name: "Hagar",
+      means: "probably flight",
+      about:
+        "Sarah's Egyptian servant, the mother of Ishmael (Genesis 16:1-16).",
+    },
   };
   return names;
 }
