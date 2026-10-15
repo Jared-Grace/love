@@ -572,6 +572,46 @@ export function bible_glyph_names_greek() {
       about:
         "The Roman governor of Judea who handed Jesus over to be crucified.",
     },
+    2136: {
+      name: "Euodia",
+      means: "good journey",
+      about:
+        "A woman of the church at Philippi whom Paul urged to agree with Syntyche (Philippians 4:2).",
+    },
+    4941: {
+      name: "Syntyche",
+      means: "fortunate",
+      about:
+        "A woman of the church at Philippi whom Paul urged to agree with Euodia (Philippians 4:2).",
+    },
+    2815: {
+      name: "Clement",
+      means: "mild",
+      about:
+        "A fellow worker of Paul at Philippi, whose name is in the book of life (Philippians 4:3).",
+    },
+    1891: {
+      name: "Epaphroditus",
+      means: "lovely",
+      about:
+        "The messenger who brought the Philippians' gift to Paul and was sick almost to death (Philippians 2:25-30).",
+    },
+    2541: {
+      name: "Caesar",
+      means: null,
+      about: "The title of the Roman emperor.",
+    },
+    5374: {
+      name: "Philippian",
+      means: null,
+      about: "A person from Philippi, a city in Macedonia (Philippians 4:15).",
+    },
+    1445: {
+      name: "Hebrew",
+      means: "one who comes from Eber",
+      about:
+        "A name for the people of Israel. Eber was one of their forefathers.",
+    },
   };
   return names;
 }
