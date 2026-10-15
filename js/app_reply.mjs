@@ -45,7 +45,7 @@ export async function app_reply(context) {
       languages,
     );
   }
-  app_reply_cards_handlers_draw(
+  await app_reply_cards_handlers_draw(
     languages_chosen_held,
     languages_chosen_reset,
     languages,
