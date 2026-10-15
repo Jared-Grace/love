@@ -29,6 +29,7 @@ export function app_shared_names() {
     privacy_policy: "Privacy Policy",
     sandbox: "Sandbox",
     g_bible: "g Bible",
+    chapter_group: "Chapter Groups",
   };
   return r;
 }
