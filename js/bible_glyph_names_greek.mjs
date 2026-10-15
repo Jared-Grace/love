@@ -346,6 +346,54 @@ export function bible_glyph_names_greek() {
       about:
         "The man of Uz who lost everything, sat in the ashes, and stayed steadfast; the Lord blessed his latter days (Job 2:8, James 5:11).",
     },
+    2332: {
+      name: "Thessalonica",
+      means: null,
+      about:
+        "A chief city of Macedonia where Paul preached and a church began; from it the word of the Lord sounded out (Acts 17:1-4, 1 Thessalonians 1:8).",
+    },
+    2331: {
+      name: "Thessalonian",
+      means: null,
+      about:
+        "A person from Thessalonica; Paul wrote two letters to the church there (1 Thessalonians 1:1).",
+    },
+    3109: {
+      name: "Macedonia",
+      means: null,
+      about:
+        "A land north of Greece; in a vision a man of Macedonia begged Paul, come over and help us (Acts 16:9).",
+    },
+    882: {
+      name: "Achaia",
+      means: null,
+      about:
+        "The southern part of Greece, with Corinth as its chief city (Acts 18:12, 1 Thessalonians 1:7).",
+    },
+    5375: {
+      name: "Philippi",
+      means: "of Philip, a name meaning lover of horses",
+      about:
+        "A city of Macedonia where Paul and Silas were beaten and jailed before God set them free (Acts 16:12-40, 1 Thessalonians 2:2).",
+    },
+    116: {
+      name: "Athens",
+      means: null,
+      about:
+        "The great city of Greece, where Paul found an altar to an unknown god and preached the God who made the world (Acts 17:22-24).",
+    },
+    2449: {
+      name: "Judea",
+      means: "the land of Judah",
+      about:
+        "The southern land of Israel around Jerusalem, named after the tribe of Judah (1 Thessalonians 2:14).",
+    },
+    4567: {
+      name: "Satan",
+      means: "the adversary",
+      about:
+        "The devil, the enemy of God and of His people, who hinders and tempts (1 Thessalonians 2:18, 3:5).",
+    },
   };
   return names;
 }
