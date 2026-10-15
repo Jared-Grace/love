@@ -3,9 +3,7 @@ import { fn_name } from "./fn_name.mjs";
 import { bible_glyph_roots_testament_table } from "./bible_glyph_roots_testament_table.mjs";
 import { ebible_testament_old_name } from "./ebible_testament_old_name.mjs";
 import { equal } from "./equal.mjs";
-import { bible_glyph_names_hebrew } from "./bible_glyph_names_hebrew.mjs";
 import { property_set } from "./property_set.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { bible_glyph_joined_key } from "./bible_glyph_joined_key.mjs";
@@ -16,19 +14,15 @@ export function bible_glyph_testament_meanings(testament_name) {
   ("the name is a testament's own name. It names which tables to read and nothing that runs.");
   ("Every picture sequence one testament draws, keyed by the sequence, with the root it draws and what that root means. It is the table a page asks backwards: given the pictures a reader tapped, what do they say.");
   ("A SEQUENCE NAMES ONE ROOT IN ONE TESTAMENT, and the collision gates hold that, so asking from the pictures lands on exactly one root. Across the two testaments one sequence may draw two roots, which is why a testament is named.");
-  ("A WORD THAT IS A NAME ALSO CARRIES WHAT THE NAME MEANS AND WHO OR WHAT IT NAMES, from ",
-    fn_name("bible_glyph_names_hebrew"),
-    ", looked up by the word's own number rather than its root's, because a name is one word and its root's other words are not names. Any other word carries null.");
+  ("WHETHER A WORD IS A NAME IS NOT ANSWERED HERE, because this table is keyed by pictures and a name may share its pictures with the common word it means; the word's own number answers it, through ",
+    fn_name("bible_glyph_testament_names"),
+    ".");
   ("Words of one root share their root's meaning, because a sibling's picture is the root's picture with a mark added and the mark is explained by its own name.");
   ("The Old Testament also carries the small joined Hebrew words, which have no Strong's number and so no root; they say the word they stand for and are keyed apart, by ",
     fn_name("bible_glyph_joined_key"),
     ", BECAUSE ONE PICTURE CAN MEAN TWO THINGS BY WHERE IT STANDS: the plus standing alone is the word also, and the plus joined to a word is and. Only the place in the group tells them apart, so the one who knows the place asks for the joined meaning.");
   let roots = bible_glyph_roots_testament_table(testament_name);
   let old_name = ebible_testament_old_name();
-  let names = {};
-  if (equal(testament_name, old_name)) {
-    names = bible_glyph_names_hebrew();
-  }
   let meanings = {};
   for (let root of roots) {
     for (let word of root.words) {
@@ -38,7 +32,6 @@ export function bible_glyph_testament_meanings(testament_name) {
       property_set(meanings, word.glyph, {
         root: root.root,
         gloss: root.gloss,
-        name: property_get_or_null(names, word.strong),
       });
     }
   }
@@ -60,7 +53,6 @@ export function bible_glyph_testament_meanings(testament_name) {
     let joined = bible_glyph_joined_key(name);
     property_set(meanings, joined, {
       root: null,
-      name: null,
       gloss: property_get(parts, name),
     });
   }

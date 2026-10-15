@@ -21,6 +21,7 @@ export function bible_glyph_verse_originals_draw_html(
   ("One stored verse of a picture Bible drawn onto a page, with each word that has an original spelling saying it, so a tap on the word can show and say the word it stands for.");
   ("THE SPELLING IS PUT ON A SPAN ROUND THE WORD, NOT ON EACH GROUP, because one English word can be several groups and every one of them stands for the same written word. The span draws nothing, so the page looks exactly as it did.");
   ("HOW THE WORD IS SAID GOES ON THE SAME SPAN, beside its spelling, so the overlay can show the word as it is said in this verse and not only the dictionary form of its root. A chapter built before sounds were kept has none, and its span carries the spelling alone.");
+  ("THE WORD'S NUMBER GOES ON THE SAME SPAN, so a tap can tell whether the word is a name. The pictures cannot tell it: a name may be drawn exactly like the common word it means.");
   ("A verse with no originals, such as one written by hand, hands in null and every word is drawn bare.");
   let word_before = null;
   let first = true;
@@ -44,6 +45,7 @@ export function bible_glyph_verse_originals_draw_html(
         if (not(b3)) {
           html_attribute_set(holder, "data-sound", original.sound);
         }
+        html_attribute_set(holder, "data-strong", original.strong);
       }
     }
     index = index + 1;
