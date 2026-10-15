@@ -15,8 +15,8 @@ import { app_code_program_trace } from "./app_code_program_trace.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
-import { subtract } from "./subtract.mjs";
 import { list_size } from "./list_size.mjs";
+import { subtract } from "./subtract.mjs";
 import { text_index_of_last_try } from "./text_index_of_last_try.mjs";
 import { text_index_of_from } from "./text_index_of_from.mjs";
 import { text_indent_size } from "./text_indent_size.mjs";
@@ -227,10 +227,14 @@ export function app_code_if_blocks(code) {
     let ran = null;
     let count = list_size(sections);
     for (let i = 0; less_than(i, count); i++) {
+      ("2026-10-15: once a section runs, the tests after it are not asked, as the computer does not ask them; an else if after the one that ran is never reached, so the program's trace holds no value for it");
+      if (not_equal(ran, null)) {
+        break;
+      }
       let object = list_get(sections, i);
       let test = property_get(object, "test");
       let value = equal(test, null) ? true : condition_value(test);
-      if (equal(ran, null) && value) {
+      if (value) {
         ran = i;
       }
     }
