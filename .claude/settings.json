@@ -2722,6 +2722,7 @@
       "Bash(node scripts/ai.mjs lyric_video_pictures_old_keep:*)",
       "Bash(node scripts/ai.mjs bible_glyph_roots_unseated_common:*)",
       "Bash(node scripts/ai.mjs audio_peak_decibels:*)",
+      "Bash(node scripts/ai.mjs qa_gates_giveaway_run:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -5332,6 +5333,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args lyric_video_pictures_old_keep:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args bible_glyph_roots_unseated_common:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args audio_peak_decibels:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args qa_gates_giveaway_run:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -7941,6 +7943,7 @@
       "Bash(node scripts/aig.mjs lyric_video_pictures_old_keep:*)",
       "Bash(node scripts/aig.mjs bible_glyph_roots_unseated_common:*)",
       "Bash(node scripts/aig.mjs audio_peak_decibels:*)",
+      "Bash(node scripts/aig.mjs qa_gates_giveaway_run:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -10550,7 +10553,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args bible_glyph_roots_drafted_row_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args lyric_video_pictures_old_keep:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args bible_glyph_roots_unseated_common:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args audio_peak_decibels:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args audio_peak_decibels:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args qa_gates_giveaway_run:*)"
     ],
     "defaultMode": "acceptEdits"
   },
