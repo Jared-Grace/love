@@ -16,8 +16,8 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { null_is } from "./null_is.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { bible_word_sound_url_cycling } from "./bible_word_sound_url_cycling.mjs";
 import { app_shared_gloss_bible_word_sound } from "./app_shared_gloss_bible_word_sound.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
@@ -39,6 +39,7 @@ export function bible_glyph_group_overlay_open(
   ("$plain sound");
   ("the names are the pictures of one tapped group, the lookup maps a name to its character, the meanings map a sequence to what it says, the original is the word as it was written, and the sound is how that written word is said; either of the last two is null where it is not known. All are data to draw and none runs.");
   ("PRONOUNCE SHOWS THE WORD AS IT IS SAID IN THIS VERSE WHEN THE SOUND IS KNOWN, which is what the speaker beside it plays. Only a word whose chapter was built before sounds were kept falls back to the dictionary form of its root, which can differ from the word as said - with and joined to it, or a different tense.");
+  ("A NAME IS LABELLED AS A NAME AND NOT AS A DEFINITION, followed by what the name means and who or what it names, so a reader who taps Jonah learns that the name is the word for a dove and that he was a prophet. A name whose meaning nobody knows shows who or what it names and leaves the meaning out.");
   ("EACH MEANING IS LABELLED AS THE DEFINITION AND THE WRITTEN WORD AS THE WORD, so a reader who sees two lines of foreign-looking text knows which is which without being taught.");
   ("THE WRITTEN WORD COMES WITH THE SAME SPEAKER AND TURTLE THE ORIGINAL BIBLE APP PUTS BESIDE A WORD, drawn by ",
     fn_name("app_shared_gloss_bible_word_sound"),
@@ -108,9 +109,13 @@ export function bible_glyph_group_overlay_open(
       app_shared_text_deemphasized(unexplained);
       continue;
     }
-    let label = html_span_text_content(line, "Definition: ");
+    let named = meaning.name;
+    let unnamed = null_is(named);
+    let label_text = unnamed ? "Definition: " : "Name: ";
+    let label = html_span_text_content(line, label_text);
     app_shared_text_deemphasized(label);
-    let gloss = html_span_text_content(line, meaning.gloss);
+    let gloss_text = unnamed ? meaning.gloss : named.name;
+    let gloss = html_span_text_content(line, gloss_text);
     html_style_set(gloss, "fontWeight", "bold");
     if (not_equal(meaning.root, null)) {
       if (null_is(original)) {
@@ -120,6 +125,18 @@ export function bible_glyph_group_overlay_open(
         roots.push(meaning.root);
       }
     }
+    if (unnamed) {
+      continue;
+    }
+    let b2 = null_is(named.means);
+    let means_known = not(b2);
+    if (means_known) {
+      let means_line = html_div(line);
+      let means_label = html_span_text_content(means_line, "Means: ");
+      app_shared_text_deemphasized(means_label);
+      html_span_text_content(means_line, named.means);
+    }
+    html_div_text(line, named.about);
   }
   let b = null_is(original);
   if (not(b)) {
