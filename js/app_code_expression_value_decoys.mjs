@@ -6,9 +6,12 @@ import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { equal } from "./equal.mjs";
 import { ternary } from "./ternary.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
+import { text_is } from "./text_is.mjs";
+import { app_code_text_join_decoys } from "./app_code_text_join_decoys.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { equal_not } from "./equal_not.mjs";
-import { not } from "./not.mjs";
 import { number_nan_is } from "./number_nan_is.mjs";
+import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_unique } from "./list_unique.mjs";
 export function app_code_expression_value_decoys(current, node) {
@@ -28,6 +31,11 @@ export function app_code_expression_value_decoys(current, node) {
   let slipped = app_code_operator_solve(left, other, right);
   let whole = app_code_expression_value(current);
   let candidates = [slipped, whole];
+  ("2026-10-15, seen on screen: two pieces of text joined have no other operator's value, since text times text is not a value, so on its own a join was asked with one button. It is offered the wrong joins the lesson on joining two names offers");
+  if (text_is(left) && text_is(right)) {
+    let joins_wrong = app_code_text_join_decoys(left, right);
+    candidates = list_concat(candidates, joins_wrong);
+  }
   function wrong_is(candidate) {
     "A misread symbol on two strings is not a value at all: \"a\" * \"b\" is NaN, which would show up as an answer nobody could have meant.";
     let differs = equal_not(candidate, value);
