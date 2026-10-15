@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -25,11 +26,13 @@ export function app_code_lesson_groups_numbered(lessons) {
     let id = property_get(ids, fn.name);
     return id;
   }
-  let every = list_map(app_code_lessons_fns(), id_of);
+  let list = app_code_lessons_fns();
+  let every = list_map(list, id_of);
   let groups = app_code_lesson_groups();
   function start_of(group) {
     let lesson_fn = property_get(group, "lesson");
-    let start = list_index_of(every, id_of(lesson_fn));
+    let item = id_of(lesson_fn);
+    let start = list_index_of(every, item);
     return start;
   }
   let starts = list_map(groups, start_of);
@@ -38,7 +41,7 @@ export function app_code_lesson_groups_numbered(lessons) {
     let start = start_of(group);
     let end = list_size(every);
     for (let other of starts) {
-      if (start < other && other < end) {
+      if (less_than(start, other) && less_than(other, end)) {
         end = other;
       }
     }
