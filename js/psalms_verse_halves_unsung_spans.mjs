@@ -13,13 +13,14 @@ export function psalms_verse_halves_unsung_spans(halves_sung, verse_last) {
   ("★ THE RUNS ARE WHAT MAKES THIS ANSWER READABLE, AND READABLE IS THE WHOLE POINT OF IT. A psalm with nothing sung in it has three hundred missing halves, and a list of three hundred words tells the person holding the microphone nothing they can act on. Joined into runs it says 1-14 and 18-21, which is the next two recordings named for them.");
   ("The chapter's length is handed in, as everywhere else on this record, because it is the one fact that is in the text of the psalm rather than in the names of the files, and a judging that fetched it could neither be run from a written case nor be run at all without a network.");
   ("An empty answer means every half of the chapter is covered. It is not the same as an empty answer from a chapter nobody has sung, which cannot arise here because this is told a length and a chapter with no singing hands back the whole chapter as one run.");
+  ("The place in the chapter a run opens and shuts at is carried as a verse and a half rather than as one counted-from-the-start number, so that nothing here has to divide by two and nothing reading it has to know which way the halving went.");
   let letters = ["a", "b"];
   let spans = [];
   let run_first = null;
   let run_last = null;
   for (let verse = 1; less_than_equal(verse, verse_last); verse = verse + 1) {
     for (let letter of letters) {
-      let half = {
+      let spot = {
         verse: verse,
         half: letter,
       };
@@ -37,9 +38,9 @@ export function psalms_verse_halves_unsung_spans(halves_sung, verse_last) {
       }
       let run_shut_is = equal(run_first, null);
       if (run_shut_is) {
-        run_first = half;
+        run_first = spot;
       }
-      run_last = half;
+      run_last = spot;
     }
   }
   let b2 = equal(run_first, null);
