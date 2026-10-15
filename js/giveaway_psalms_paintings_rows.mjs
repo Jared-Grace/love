@@ -1,7 +1,7 @@
+import { path_folder_name } from "./path_folder_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { giveaway_bible_folder } from "./giveaway_bible_folder.mjs";
 import { lyric_video_documents_pictures } from "./lyric_video_documents_pictures.mjs";
-import { path_name } from "./path_name.mjs";
 import { lyric_video_bible_document_name_read_or_null } from "./lyric_video_bible_document_name_read_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_add } from "./list_add.mjs";
@@ -38,15 +38,15 @@ export async function giveaway_psalms_paintings_rows() {
   let unread = [];
   let other_book = [];
   for (let one of held.pictures) {
-    let document_name = path_name(one.path);
-    let read = lyric_video_bible_document_name_read_or_null(document_name);
+    let folder_name = path_folder_name(one.picture.path);
+    let read = lyric_video_bible_document_name_read_or_null(folder_name);
     if (null_is(read)) {
-      list_add(unread, document_name);
+      list_add(unread, folder_name);
       continue;
     }
     let psalms_is = equal(read.book_code, "PSA");
     if (not(psalms_is)) {
-      list_add(other_book, document_name);
+      list_add(other_book, folder_name);
       continue;
     }
     let chapter_code = ebible_chapter_code_pad("PSA", read.chapter_number);
