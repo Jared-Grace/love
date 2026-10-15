@@ -334,6 +334,18 @@ export function bible_glyph_names_greek() {
       about:
         "The hill of Jerusalem where David took the stronghold (2 Samuel 5:7); often a name for Jerusalem and God's people (1 Peter 2:6).",
     },
+    4460: {
+      name: "Rahab",
+      means: "broad",
+      about:
+        "The woman of Jericho who hid Israel's spies and hung a scarlet cord in her window; her faith was shown by what she did (Joshua 2:18, James 2:25).",
+    },
+    2492: {
+      name: "Job",
+      means: null,
+      about:
+        "The man of Uz who lost everything, sat in the ashes, and stayed steadfast; the Lord blessed his latter days (Job 2:8, James 5:11).",
+    },
   };
   return names;
 }

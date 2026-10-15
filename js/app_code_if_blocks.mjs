@@ -10,12 +10,16 @@ import { not_equal } from "./not_equal.mjs";
 import { js_visit } from "./js_visit.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { error } from "./error.mjs";
+import { null_is } from "./null_is.mjs";
+import { app_code_program_trace } from "./app_code_program_trace.mjs";
+import { property_exists } from "./property_exists.mjs";
 import { text_slice } from "./text_slice.mjs";
-import { text_index_of_last_try } from "./text_index_of_last_try.mjs";
+import { text_split_newline } from "./text_split_newline.mjs";
 import { subtract } from "./subtract.mjs";
+import { list_size } from "./list_size.mjs";
+import { text_index_of_last_try } from "./text_index_of_last_try.mjs";
 import { text_index_of_from } from "./text_index_of_from.mjs";
 import { text_indent_size } from "./text_indent_size.mjs";
-import { list_size } from "./list_size.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_unparse } from "./js_unparse.mjs";
@@ -92,6 +96,46 @@ export function app_code_if_blocks(code) {
       code,
       type,
     });
+  }
+  let conditions = null;
+  function condition_value(test) {
+    "what the test of an if comes to: read as a let's value is when it is a name a let gave a value written out or copied, or true or false itself, and otherwise what it came to when the program ran";
+    "2026-10-15, at the human's asking, so the lessons whose ifs ask n < 5 or !a can be stepped through: a test this does not read is answered by the program's trace, which solves it the way the learner stepping through it does, and so cannot disagree with the steps. Not picked: a second solver here, already declined above for a let giving a sum. An if the program never reaches has no value in the trace, and stops rather than guessing";
+    let type2 = property_get(test, "type");
+    let name_read =
+      equal(type2, "Identifier") &&
+      not(list_includes(unread, property_get(test, "name")));
+    if (name_read || equal(type2, "Literal")) {
+      let value2 = test_value(test);
+      return value2;
+    }
+    if (null_is(conditions)) {
+      conditions = {};
+      let trace = app_code_program_trace(code);
+      for (let entry of trace) {
+        if (property_exists(entry, "condition")) {
+          let line = property_get(entry, "line");
+          let condition = property_get(entry, "condition");
+          property_set(conditions, line, condition);
+        }
+      }
+    }
+    let start2 = property_get(test, "start");
+    let before = text_slice(code, 0, start2);
+    let lines = text_split_newline(before);
+    let left4 = list_size(lines);
+    let line2 = subtract(left4, 1);
+    let b2 = property_exists(conditions, line2);
+    if (not(b2)) {
+      error({
+        message:
+          "an if the program never reaches may only ask a name or true or false",
+        code,
+        line: line2,
+      });
+    }
+    let value3 = property_get(conditions, line2);
+    return value3;
   }
   function column(index) {
     "how far along its line a place in the program stands";
@@ -185,7 +229,7 @@ export function app_code_if_blocks(code) {
     for (let i = 0; less_than(i, count); i++) {
       let object = list_get(sections, i);
       let test = property_get(object, "test");
-      let value = equal(test, null) ? true : test_value(test);
+      let value = equal(test, null) ? true : condition_value(test);
       if (equal(ran, null) && value) {
         ran = i;
       }
