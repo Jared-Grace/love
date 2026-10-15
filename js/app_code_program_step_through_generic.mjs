@@ -30,8 +30,8 @@ import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { app_code_note_runs } from "./app_code_note_runs.mjs";
 import { app_code_note_runs_cut } from "./app_code_note_runs_cut.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { app_code_note_name_colors } from "./app_code_note_name_colors.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { app_shared_color_code_font } from "./app_shared_color_code_font.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
@@ -75,7 +75,10 @@ import { boolean_is } from "./boolean_is.mjs";
 import { error } from "./error.mjs";
 import { app_code_expression_value_choose_buttons } from "./app_code_expression_value_choose_buttons.mjs";
 import { html_remove } from "./html_remove.mjs";
+import { html_display_inline_block } from "./html_display_inline_block.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { html_opacity_animate } from "./html_opacity_animate.mjs";
+import { html_size_change_animate } from "./html_size_change_animate.mjs";
 import { html_opacity_transition } from "./html_opacity_transition.mjs";
 import { sleep } from "./sleep.mjs";
 import { app_code_value_logged_output } from "./app_code_value_logged_output.mjs";
@@ -481,6 +484,28 @@ export function app_code_program_step_through_generic(
       let to2 = text_size(text);
       let evaluated =
         text_slice(text, 0, from) + text_to(value) + text_slice(text, to, to2);
+      ("2026-10-15, at the human's asking: the name fades out, the room it took slides to the width of its value, and the value fades in, so the ( ) around it grow or shrink rather than jump. The slide is the one every height change in this app is made by, told width instead. Not picked: the name going at once, as the human first put it; it fades out because the old value in a note fades out too");
+      ("Only done while the line still reads as it is written; a line already solved is written over at once, as before");
+      let now = list_get(shown, line_index);
+      if (equal(now, text)) {
+        let piece = row_piece(line_index, from, to);
+        html_display_inline_block(piece);
+        ("a box held narrower than its words would otherwise sit higher in the line, its bottom on the words' base, and make the line taller while it moves");
+        html_style_set(piece, "vertical-align", "top");
+        let duration4 = app_shared_animation_duration();
+        await html_opacity_animate(piece, "0", duration4);
+        function value_write() {
+          html_text_set(piece, said);
+        }
+        await html_size_change_animate(
+          piece,
+          "width",
+          piece,
+          value_write,
+          duration4,
+        );
+        await html_opacity_animate(piece, "1", duration4);
+      }
       row_text_set(line_index, evaluated);
       return;
     }
