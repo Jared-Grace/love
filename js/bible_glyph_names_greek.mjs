@@ -233,6 +233,59 @@ export function bible_glyph_names_greek() {
       means: "city of victory",
       about: "A city where Paul planned to spend the winter (Titus 3:12).",
     },
+    2857: {
+      name: "Colossae",
+      means: "probably huge",
+      about:
+        "A town in Asia Minor whose church received Paul's letter to the Colossians (Colossians 1:2).",
+    },
+    2993: {
+      name: "Laodicea",
+      means: "justice of the people",
+      about:
+        "A city near Colossae; its church is the lukewarm church of Revelation 3:14-16.",
+    },
+    2994: {
+      name: "Laodicean",
+      means: "justice of the people",
+      about: "A person of the church at Laodicea (Colossians 4:16).",
+    },
+    2404: {
+      name: "Hierapolis",
+      means: "holy city",
+      about:
+        "A city near Colossae where Epaphras worked hard for the church (Colossians 4:13).",
+    },
+    921: {
+      name: "Barnabas",
+      means: "son of encouragement",
+      about:
+        "Joseph, a Levite from Cyprus, whom the apostles named Barnabas (Acts 4:36); he travelled with Paul and was Mark's cousin (Colossians 4:10).",
+    },
+    2459: {
+      name: "Justus",
+      means: "just",
+      about:
+        "A surname of three men; in Colossians, Jesus called Justus, a Jewish helper of Paul (Colossians 4:11).",
+    },
+    3564: {
+      name: "Nympha",
+      means: "bride",
+      about:
+        "A Christian at Laodicea with a church in her house (Colossians 4:15).",
+    },
+    4658: {
+      name: "Scythian",
+      means: null,
+      about:
+        "A person from the horse-riding peoples north of the Black Sea, thought the roughest of foreigners (Colossians 3:11).",
+    },
+    1672: {
+      name: "Greek",
+      means: null,
+      about:
+        "A Greek person; in the Bible often anyone who is not a Jew (Romans 1:16, Colossians 3:11).",
+    },
   };
   return names;
 }

@@ -456,6 +456,7 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_number: text_frozen("name_number"),
     app_code_lesson_statement_name_minus_one: text_frozen("name_minus_one"),
     app_code_lesson_statement_name_plus_one: text_frozen("name_plus_one"),
+    app_code_lesson_step_name_plus_one: text_frozen("step_name_plus_one"),
   };
   return short;
 }
