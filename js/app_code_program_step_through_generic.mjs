@@ -75,6 +75,7 @@ import { boolean_is } from "./boolean_is.mjs";
 import { app_code_expression_value_decoys } from "./app_code_expression_value_decoys.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { object_values } from "./object_values.mjs";
+import { property_exists } from "./property_exists.mjs";
 import { list_remove_if_exists } from "./list_remove_if_exists.mjs";
 import { app_code_expression_value_choose_buttons_generic } from "./app_code_expression_value_choose_buttons_generic.mjs";
 import { html_remove } from "./html_remove.mjs";
@@ -156,7 +157,9 @@ export function app_code_program_step_through_generic(
     asked: null,
     held: {},
     declared: {},
+    held_before: {},
   };
+  ("held_before: the values each name held before it was given the one it holds now, by name, so a name asked about after a new value can be offered its old one as a wrong choice");
   ("declared: the line each name was declared on, by name, so a name given a new value on a later line has the value written into the note it already has");
   ("held: the value each name holds so far, by name, so a name asked about can be offered the values the other names hold as the wrong choices");
   let highlight = app_code_expression_chosen_background_color();
@@ -483,6 +486,14 @@ export function app_code_program_step_through_generic(
         for (let held_value of held_values) {
           list_add_if_not_includes(decoys, held_value);
         }
+        ("2026-10-15, at the human's asking: a name given a new value is offered the value it held before as a wrong choice, the mix-up of reading only the line that declared it, which the lesson on giving a name a new value puts on its buttons on purpose");
+        let before2 = property_get(state, "held_before");
+        if (property_exists(before2, name)) {
+          let olds = property_get(before2, name);
+          for (let old_value of olds) {
+            list_add_if_not_includes(decoys, old_value);
+          }
+        }
         list_remove_if_exists(decoys, value);
       }
       let asked = app_code_expression_value_choose_buttons_generic(
@@ -565,6 +576,16 @@ export function app_code_program_step_through_generic(
       let value2 = property_get(action, "value");
       let t = json_to(value2);
       let held2 = property_get(state, "held");
+      if (property_exists(held2, name2)) {
+        let before = property_get(state, "held_before");
+        let b9 = property_exists(before, name2);
+        if (not(b9)) {
+          property_set(before, name2, []);
+        }
+        let list2 = property_get(before, name2);
+        let value7 = property_get(held2, name2);
+        list_add(list2, value7);
+      }
       property_set(held2, name2, value2);
       ("2026-10-14, at the human's asking: the value in the note goes, and a copy of what is right of the = goes up into its place. What is right of the = is found from its two ends: it starts where it was written, and what follows it is untouched, so it ends that far from the end of the line as it now stands - which holds whether or not a name there was evaluated into a value");
       ("2026-10-14, at the human's asking: the value the note said before fades out first, so it is seen going rather than vanishing as the new one sets off. Not picked: hiding it at once and pausing before the new one sets off, offered by the human as the other way; a fade is how this note already comes in, so it goes the same way");
