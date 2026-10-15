@@ -5,8 +5,10 @@ export function giveaway_psalms_record_rows_defects_cases() {
   ("★ A CHECK WHOSE WRONG ANSWER NOBODY HAS EVER SEEN READS AS WORKING WHETHER IT WORKS OR NOT. The record it guards is clean, and a clean record exercises none of the branches that catch something - so running the check against the real record proves only that it says nothing, which is also what a broken check says. Each case here is a row built wrong on purpose, and the cases holding a correct row are here for the same reason from the other side: a check that answered with a fault for everything would pass every one of the others.");
   ("★ A CASE IS BUILT SO THAT ONLY THE ONE FAULT IT IS FOR CAN FIRE, AND THE TWO REPEAT CASES HAD TO BE REBUILT TO KEEP THAT TRUE. They were first written with a passage code that did not match their own disk name, which was invisible while the only questions asked were about the record agreeing with itself. The moment the passage was put to the disk name as well, both of them named two faults, and a case naming two faults cannot say which branch it is holding. The repeated name is now made the way it really happened - Psalm 150.wav and Psalm_150.wav are one space apart and both read as the same chapter and the same take - so the rows are each correct on their own and collide only with one another.");
   ("★ TRYING TO WRITE A CASE FOR THE RECORD-WIDE REPEATED FILE IS WHAT PROVED THERE SHOULD NOT BE ONE. The check asked whether any two rows of the whole record named one file on disk, and no case could be built that made it the only fault: two rows share a file name only if the name on disk is one string, the passage check reads the passage out of that same string, and the one answer it gets can match at most one of the two rows - so the other always carried a passage that differs or a name that could not be read. A fault that can never be shown alone is a fault some other check is already naming, and the only rows it reached that no other check did were ones already reported for missing their pieces. So it was deleted rather than narrowed, and the question left in its place asks after one file twice inside one passage, which every kind can answer. A case that will not isolate is worth more than the check it refuses to hold.");
+  ("★ A PICTURE'S GIVEN-AWAY NAME HERE CARRIES NO TRANSLATION, AND THAT IS THE RULE RATHER THAN AN OVERSIGHT WAITING TO BE TIDIED. The naming rule leaves the translation out of a picture because there are no words in a painting to translate, and the reasons are written where the name is spelled. The translation is still stored beside the name in these rows, exactly as the record stores it, so a picture case is the shape the record really holds: a true fact kept beside an address that does not spell it. Putting the word back into these three names would turn all three red and would read, to somebody who had not opened the namer, like the check catching something.");
   ("The faults are compared as one word list rather than as whole defect objects. What is being held is that the right fault is named for the right row; the exact wording of a defect is for somebody reading a failure, and pinning it here would turn every improvement to that wording into a red gate.");
   ("The rows are spelled out rather than read off the real record. A case that read the record would change its own meaning every time a song was added, and the whole point of a case is that it says the same thing next year.");
+  ("The names are spelled out by hand rather than asked of the naming function, which is the one place in this repo where that is right: a case that spelled its name with the namer would agree with the namer by construction, and agreeing with the namer is the whole of what the check under test is asking.");
   function row_song(file_name, passage_code, mark, name_published) {
     let r = {
       file_name: file_name,
@@ -75,19 +77,19 @@ export function giveaway_psalms_record_rows_defects_cases() {
     "pd_titiaan_heerlijkheid.png",
     "PSA149_001-005",
     "titiaan_heerlijkheid",
-    "PSA149_001-005_engbsb_picture_titiaan_heerlijkheid.png",
+    "PSA149_001-005_picture_titiaan_heerlijkheid.png",
   );
   let crop_elsewhere = row_picture(
     "pd_titiaan_heerlijkheid.png",
     "PSA069",
     "titiaan_heerlijkheid",
-    "PSA069_engbsb_picture_titiaan_heerlijkheid.png",
+    "PSA069_picture_titiaan_heerlijkheid.png",
   );
   let crop_marked_twice = row_picture(
     "pd_titiaan_heerlijkheid.png",
     "PSA149_001-005",
     "titiaan_heerlijkheid_again",
-    "PSA149_001-005_engbsb_picture_titiaan_heerlijkheid_again.png",
+    "PSA149_001-005_picture_titiaan_heerlijkheid_again.png",
   );
   let stanza = row_song(
     "Psalm_119_Aleph.wav",
@@ -124,7 +126,7 @@ export function giveaway_psalms_record_rows_defects_cases() {
     {
       rows: [crop],
       faults: "",
-      why: "A crop of a painting, with nothing wrong with it. It is here because the passage check is put to the song rows alone and a case is what proves that: a crop is called pd_titiaan_heerlijkheid.png, so a check that read a painting's name as a recording's title would call this unreadable, and before the narrowing it did.",
+      why: "A crop of a painting, with nothing wrong with it. It is here because the passage check is put to the song rows alone and a case is what proves that: a crop is called pd_titiaan_heerlijkheid.png, so a check that read a painting's name as a recording's title would call this unreadable, and before the narrowing it did. It holds a second thing now: that a picture's name is spelled without a translation in it, so a namer that went back to putting one there would be caught here.",
     },
     {
       rows: [crop, crop_elsewhere],
