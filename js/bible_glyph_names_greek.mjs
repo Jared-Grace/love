@@ -396,7 +396,7 @@ export function bible_glyph_names_greek() {
     },
     3090: {
       name: "Lois",
-      means: "not known",
+      means: null,
       about:
         "Timothy's grandmother, in whom his sincere faith lived first (2 Timothy 1:5).",
     },
@@ -408,7 +408,7 @@ export function bible_glyph_names_greek() {
     },
     5436: {
       name: "Phygelus",
-      means: "fugitive",
+      means: "probably fugitive",
       about: "One of those in Asia who turned away from Paul (2 Timothy 1:15).",
     },
     2061: {
@@ -424,13 +424,13 @@ export function bible_glyph_names_greek() {
     },
     4516: {
       name: "Rome",
-      means: "strength",
+      means: "probably strength",
       about:
         "The capital of the empire, where Paul was held in chains (2 Timothy 1:17).",
     },
     2181: {
       name: "Ephesus",
-      means: "desirable",
+      means: "probably desirable",
       about:
         "A great city of Asia, where Paul taught and where Timothy served (1 Timothy 1:3).",
     },
@@ -448,12 +448,12 @@ export function bible_glyph_names_greek() {
     },
     2389: {
       name: "Jannes",
-      means: "not known",
+      means: null,
       about: "One of the magicians who opposed Moses (2 Timothy 3:8).",
     },
     2387: {
       name: "Jambres",
-      means: "not known",
+      means: null,
       about: "One of the magicians who opposed Moses (2 Timothy 3:8).",
     },
     490: {
@@ -470,7 +470,7 @@ export function bible_glyph_names_greek() {
     },
     3082: {
       name: "Lystra",
-      means: "not known",
+      means: null,
       about:
         "A city where Paul was stoned, and Timothy's home (Acts 14:19, 16:1).",
     },
@@ -481,7 +481,7 @@ export function bible_glyph_names_greek() {
     },
     1149: {
       name: "Dalmatia",
-      means: "not known",
+      means: null,
       about:
         "A mountain land on the coast across from Italy, where Titus went (2 Timothy 4:10).",
     },
@@ -521,7 +521,7 @@ export function bible_glyph_names_greek() {
     },
     2882: {
       name: "Corinth",
-      means: "not known",
+      means: null,
       about:
         "A Greek city between two harbours, where Paul founded a church (Acts 18:1-11).",
     },
@@ -532,7 +532,7 @@ export function bible_glyph_names_greek() {
     },
     3399: {
       name: "Miletus",
-      means: "not known",
+      means: null,
       about:
         "A port city where Paul said farewell to the Ephesian elders (Acts 20:17).",
     },
