@@ -171,6 +171,24 @@ export function bible_glyph_names_greek() {
       about:
         "Two men: a silversmith in Ephesus who stirred up a riot against Paul, and a Christian John praised (3 John 1:12).",
     },
+    3575: {
+      name: "Noah",
+      means: "rest",
+      about:
+        "The righteous man God saved with his family in the ark from the flood (Genesis 6-9); Peter calls him a preacher of righteousness (2 Peter 2:5).",
+    },
+    3091: {
+      name: "Lot",
+      means: "a covering",
+      about:
+        "Abraham's nephew, rescued from Sodom before it was destroyed (Genesis 19); Peter calls him righteous (2 Peter 2:7).",
+    },
+    1007: {
+      name: "Bosor (Beor)",
+      means: "burning",
+      about:
+        "The father of Balaam, the prophet who loved the wages of wrongdoing (Numbers 22:5, 2 Peter 2:15).",
+    },
   };
   return names;
 }
