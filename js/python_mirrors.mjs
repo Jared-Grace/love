@@ -1,12 +1,13 @@
-import { functions_input_taken_away } from "./functions_input_taken_away.mjs";
-import { memory_folder_spellings } from "./memory_folder_spellings.mjs";
-import { curl_read_hosts } from "./curl_read_hosts.mjs";
-import { dispatcher_scripts_claude } from "./dispatcher_scripts_claude.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { dispatcher_scripts } from "./dispatcher_scripts.mjs";
+import { dispatcher_scripts_claude } from "./dispatcher_scripts_claude.mjs";
 import { dispatcher_commands_fn_named } from "./dispatcher_commands_fn_named.mjs";
 import { functions_dispatcher_denied } from "./functions_dispatcher_denied.mjs";
+import { memory_folder_spellings } from "./memory_folder_spellings.mjs";
+import { curl_read_hosts } from "./curl_read_hosts.mjs";
+import { functions_input_taken_away } from "./functions_input_taken_away.mjs";
+import { functions_fixed_call_twins } from "./functions_fixed_call_twins.mjs";
 export function python_mirrors() {
   arguments_assert(arguments, 0);
   ("Every list of names the python guard needs, together with where its generated");
@@ -71,6 +72,15 @@ export function python_mirrors() {
         ".py",
       ]),
       source: functions_input_taken_away,
+    },
+    {
+      constant: "FUNCTIONS_FIXED_CALL_TWINS",
+      path: text_combine_multiple([
+        ".claude/hooks/",
+        functions_fixed_call_twins.name,
+        ".py",
+      ]),
+      source: functions_fixed_call_twins,
     },
   ];
   return mirrors;

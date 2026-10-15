@@ -5143,6 +5143,47 @@ def ai_output_redirect_deny_reason(target):
 # cannot leave a stale name being advised about here.
 from functions_input_taken_away import FUNCTIONS_INPUT_TAKEN_AWAY
 
+# Granted functions that only call another function with fixed plain-word
+# inputs, each as "twin fn arg ...", generated from
+# js/functions_fixed_call_twins.mjs. See fixed_call_twin.
+from functions_fixed_call_twins import FUNCTIONS_FIXED_CALL_TWINS
+
+
+def fixed_call_twin(command):
+    """If `command` is a lone dispatcher call that a granted function makes
+    with exactly these inputs, return (fn, args, twin); else None.
+
+    The reason it exists: a function that takes a word cannot be granted when
+    what it reaches could be steered by that word, so its prompt comes back
+    every time and the grant it suggests is refused. A granted function taking
+    nothing and passing that same word is the identical call, and only the
+    JS side can read that one stands for the other - so it does, and this
+    reads the generated answer. Matched on the whole input list, never on the
+    name alone: a different word is a different call the twin does not make."""
+    statements = list(statements_words(command))
+    if len(statements) != 1:
+        return None
+    words = statements[0]
+    if len(words) < 4 or words[0] != "node" or not ai_script_is(words[1]):
+        return None
+    call = words[2:]
+    for line in FUNCTIONS_FIXED_CALL_TWINS:
+        twin, *made = line.split(" ")
+        if made == call:
+            return (words[2], words[3:], twin)
+    return None
+
+
+def fixed_call_twin_deny_reason(fn, args, twin):
+    return (
+        f"Run this instead - it is already approved, so it needs no human:\n"
+        f"  node scripts/ai.mjs {twin}\n"
+        f"`{twin}` takes nothing and only calls `{fn} {' '.join(args)}`, so "
+        "it is the same call. "
+        f"`{fn}` itself cannot be granted, because a rule for it would cover "
+        "every input it is ever handed."
+    )
+
 # One dispatcher statement followed by a removal, and nothing else on the line.
 # The middle excludes the operators that end a statement, so the `rm` has to be
 # chained onto THIS call rather than onto something further along.
@@ -5462,6 +5503,14 @@ def main():
     # granted function gives unasked. See find_ffmpeg_preview.
     if find_ffmpeg_preview(command):
         return decide("deny", ffmpeg_preview_deny_reason())
+
+    # A call some granted function already makes with these exact inputs.
+    # After the allow decision, so it only ever turns a prompt into the
+    # approved command that does the same thing. See fixed_call_twin.
+    fixed_twin = fixed_call_twin(command)
+    if fixed_twin is not None:
+        fn, args, twin = fixed_twin
+        return decide("deny", fixed_call_twin_deny_reason(fn, args, twin))
 
     # A dispatcher call caught in a file the caller made for it, when the
     # command had already written that file itself. Unlike the floors above
