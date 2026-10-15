@@ -11,7 +11,6 @@ import { ebible_chapter_code_pad } from "./ebible_chapter_code_pad.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { giveaway_passage_code } from "./giveaway_passage_code.mjs";
 import { path_base } from "./path_base.mjs";
-import { list_join_underscore } from "./list_join_underscore.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_set } from "./property_set.mjs";
 import { giveaway_painting_mark } from "./giveaway_painting_mark.mjs";
@@ -55,7 +54,7 @@ export async function giveaway_psalms_paintings_rows() {
       ? chapter_code
       : giveaway_passage_code(chapter_code, read.verse_first, read.verse_last);
     let file_name = path_base(one.picture.path);
-    let key = list_join_underscore([passage_code, file_name]);
+    let key = one.picture.path;
     if (property_exists(seen, key)) {
       continue;
     }
