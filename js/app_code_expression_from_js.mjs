@@ -28,9 +28,9 @@ export function app_code_expression_from_js(node, values) {
     let symbol = property_get(node, "operator");
     let acted_on = property_get(node, "argument");
     let acted_on_shape = app_code_expression_from_js(acted_on, values);
-    let negative_is =
+    let minus_spelled_is =
       equal(symbol, "-") && equal(js_node_type(acted_on), "Literal");
-    if (negative_is) {
+    if (minus_spelled_is) {
       ("a minus in front of a plain number is how that number is spelled, not an operator anybody presses");
       let negative = -acted_on_shape;
       return negative;
