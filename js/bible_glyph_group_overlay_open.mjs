@@ -142,7 +142,8 @@ export function bible_glyph_group_overlay_open(
         "Pronounce: ",
       );
       app_shared_text_deemphasized(pronounce_label);
-      html_span_text_content(pronounce_line, roots.join(" "));
+      let text = roots.join(" ");
+      html_span_text_content(pronounce_line, text);
     }
     html_on_click(word_line, html_stop_propagation);
   }
