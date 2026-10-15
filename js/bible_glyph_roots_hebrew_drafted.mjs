@@ -9,6 +9,7 @@ export function bible_glyph_roots_hebrew_drafted() {
   "A NAME ALSO WAITS WHEN ONE OF ITS PICTURES WOULD ARRIVE AS LETTERS OR IN THE READER'S OWN FONT. The artwork set has no brother and no family, so Ahab, Ahijah, Ammon and Amram wait, and sabbath, calf, sacrifice, iron and fruit are still English words, so Shabbethai, Eglon, Zebah, Barzillai and Ephrath wait with them; half a name drawn and half spelled stops reading as one name.";
   "A NAME WAITS WHEN ITS TWO PICTURES ARE A COMMON PHRASE ON THEIR OWN. The last picture of one word and the first of the next can be read as one name, so Adonijah, the crown and I AM, would be read wherever the Lord GOD is said, eighty four times, against twenty six real ones; Hor is every mount before a name, Shem every name before one, and Nathan every gift handed to someone named. Where the false reading is not what the verse says and is common, the name waits. Jonathan stays, read falsely twenty five times against eighty two, because the false reading is I AM giving, which is what those verses say; a name built as a sentence about God is misread only as that sentence.";
   "THE FIVE NAMES OF JONAH THAT STOOD IN ENGLISH WERE DRAWN BY WHAT EACH NAME COMES FROM, and what was turned down is kept here. Amittai is from the word for truth, so it takes truth's check; a scroll or a hand raised to swear were turned down as claiming an oath the name does not. Joppa is from beautiful and takes beautiful's own face and sparkle rather than a harbour, because the name says beautiful and not port. Tarshish probably names a precious stone, so it takes the gem; a ship was turned down because the ships are named after the port, not the port after the ships, and the probably is said in the overlay rather than hidden. Hebrew is from Eber, whose name is the word for the side across, so it takes the bridge with a person - one from across; a flag was turned down as a nation the word does not say. Nineveh is a foreign name with no Hebrew meaning, so it takes how its own people wrote it: the old sign for Nineveh is a fish inside an enclosure, drawn here as the city and the fish; a crown on a city was turned down because it says capital, which is a fact about Nineveh and not its name, and a lion because it is Assyria's emblem and not the city's.";
+  "SEVEN NAMES THE LETTER OF JUDE REACHES BACK TO WERE DRAWN HERE FIRST, so their Greek forms can copy them. Cain takes getting, the coin and the receiving hand of the word his mother played on (Genesis 4:1); a knife or Abel's blood was turned down as drawing his crime and not his name. Balaam is probably not of the people, so it takes the foreigner; his donkey was turned down because Hamor already wears the donkey, as the word his name is. Korah is from the root for bald, so it takes hair with the no-entry sign; Strong's ice was turned down as further from the root, and the ground swallowing him as his end and not his name. Michael asks who is like God, drawn as likeness, God and the question mark. Enoch is dedicated, drawn as a gift and God, given to God; walking was turned down as what he did and not what he was called. Sodom is probably burnt, drawn as fire and a city; Gomorrah is probably a heap of ruins, drawn as a ruined house and a city. Each probably is said in the overlay rather than hidden.";
   let rows = [
     ["530", "aman", "anchor+check", "faithfulness"],
     ["8198", "mishpachah", "houses+female_sign", "maidservant"],
@@ -733,6 +734,18 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["8659", "tarshish", "gem_stone+proper_name", "Tarshish"],
     ["5680", "abar", "bridge+person+proper_name", "Hebrew"],
     ["5210", "nineveh", "city+fish+proper_name", "Nineveh"],
+    ["7014", "qanah", "coin+hand_receiving+proper_name", "Cain, gotten"],
+    ["1109", "bilam", "foreigner+proper_name", "Balaam"],
+    ["7141", "qorach", "hair+no_entry+proper_name", "Korah"],
+    [
+      "4317",
+      "mikael",
+      "likeness+heart_on_fire+question+proper_name",
+      "Michael, who is like God?",
+    ],
+    ["2585", "chanok", "gift+heart_on_fire+proper_name", "Enoch, dedicated"],
+    ["5467", "sedom", "fire+city+proper_name", "Sodom"],
+    ["6017", "amorah", "derelict_house+city+proper_name", "Gomorrah"],
     [
       "3100",
       "yhwh",
