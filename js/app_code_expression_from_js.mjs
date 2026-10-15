@@ -32,8 +32,8 @@ export function app_code_expression_from_js(node, values) {
       equal(symbol, "-") && equal(js_node_type(acted_on), "Literal");
     if (minus_spelled_is) {
       ("a minus in front of a plain number is how that number is spelled, not an operator anybody presses");
-      let negative = -acted_on_shape;
-      return negative;
+      let minus_spelled = -acted_on_shape;
+      return minus_spelled;
     }
     let before = app_code_expression_node_before(symbol, acted_on_shape);
     return before;
