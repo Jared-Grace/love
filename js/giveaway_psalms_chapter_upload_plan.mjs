@@ -1,3 +1,4 @@
+import { folder_repo_love } from "./folder_repo_love.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { giveaway_psalms_record_path } from "./giveaway_psalms_record_path.mjs";
@@ -9,7 +10,6 @@ import { list_find_property } from "./list_find_property.mjs";
 import { giveaway_psalms_item_withheld_why_or_null } from "./giveaway_psalms_item_withheld_why_or_null.mjs";
 import { giveaway_psalms_chapter_text_files } from "./giveaway_psalms_chapter_text_files.mjs";
 import { equal } from "./equal.mjs";
-import { folder_repo_relative_resolve } from "./folder_repo_relative_resolve.mjs";
 import { path_join } from "./path_join.mjs";
 import { text_size } from "./text_size.mjs";
 import { file_size } from "./file_size.mjs";
@@ -42,14 +42,13 @@ export async function giveaway_psalms_chapter_upload_plan(
   let files = [];
   for (let one of item.files) {
     let text_is = equal(one.kind, "text");
-    let in_repo_is = null_not_is(one.path_in_repo);
+    let in_repo_is = null_not_is(one.path_in_repo ?? null);
     let made = text_is
-      ? list_find_property(texts, "file_name", one.file_name)
+      ? list_find_property(texts, "file_name", one.path_in_item)
       : null;
     let text = text_is ? made.text : null;
-    let path_repo = in_repo_is
-      ? await folder_repo_relative_resolve(one.path_in_repo)
-      : null;
+    let folder = folder_repo_love();
+    let path_repo = in_repo_is ? path_join([folder, one.path_in_repo]) : null;
     let path_media = text_is
       ? null
       : (path_repo ?? path_join([folder_media, one.file_name]));
