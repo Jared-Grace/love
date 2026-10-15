@@ -182,6 +182,7 @@
   "name_multiply",
   "name_divide",
   "name_plus_eq",
+  "step_name_plus_eq",
   "name_minus_eq",
   "name_times_eq",
   "name_divide_eq",
