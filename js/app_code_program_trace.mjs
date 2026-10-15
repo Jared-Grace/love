@@ -16,6 +16,8 @@ import { list_get } from "./list_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { property_exists_assert } from "./property_exists_assert.mjs";
+import { text_size } from "./text_size.mjs";
+import { text_index_of_from } from "./text_index_of_from.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { not } from "./not.mjs";
 export function app_code_program_trace(code) {
@@ -49,6 +51,7 @@ export function app_code_program_trace(code) {
       to,
       expression: null,
       within,
+      lead: "",
     });
     return value2;
   }
@@ -124,6 +127,7 @@ export function app_code_program_trace(code) {
         to: to2,
         expression,
         within: null,
+        lead: "",
       });
       return value8;
     }
@@ -172,6 +176,7 @@ export function app_code_program_trace(code) {
         value,
         from: property_get(init, "start"),
         to: property_get(init, "end"),
+        long: null,
       });
       property_set(values, name, value);
       line_add(node, actions);
@@ -181,13 +186,13 @@ export function app_code_program_trace(code) {
       let expression = property_get(node, "expression");
       let left_type = property_get(expression, "type");
       if (equal(left_type, "AssignmentExpression")) {
-        ("2026-10-15, at the human's asking: a name given a new value, as a = 5; does, solves what is right of the = if needed and assigns it, as a let line does without declaring, so the lessons that change what a name holds can be run a line at a time. Not picked: += and the other operators that assign, which solve and assign in one; such a line is still refused where it arrives");
+        ("2026-10-15, at the human's asking: a name given a new value, as a = 5; does, solves what is right of the = if needed and assigns it, as a let line does without declaring, so the lessons that change what a name holds can be run a line at a time.");
         let operator2 = property_get(expression, "operator");
         let target = property_get(expression, "left");
         let target_type = property_get(target, "type");
-        if (not_equal(operator2, "=") || not_equal(target_type, "Identifier")) {
+        if (not_equal(target_type, "Identifier")) {
           error({
-            message: "only a name given a value with = can be assigned here",
+            message: "only a name can be assigned here",
             code,
             operator: operator2,
             target_type,
@@ -196,13 +201,89 @@ export function app_code_program_trace(code) {
         let name3 = property_get(target, "name");
         property_exists_assert(values, name3);
         let right3 = property_get(expression, "right");
-        let value9 = value_of(right3, actions);
+        let long = null;
+        let value9 = null;
+        if (equal(operator2, "=")) {
+          value9 = value_of(right3, actions);
+        } else {
+          ("2026-10-15, at the human's asking: a += b; and the other operators that assign are the shorter way to write a = a + b;, as the lessons on them teach, so they are run as the long line is: the name's value is asked for first, as the computer reads it first, then the right side, then the operator, whose value is written into the line with an = in place of the += and what follows, so a += 8 reads a = 9. The name's value is asked for without being written into the line, since 1 += 8 would read as giving a value to 1. Not picked: writing the line out the long way first, a change that solves nothing");
+          let left5 = text_size(operator2);
+          let to4 = subtract(left5, 1);
+          ("the right side is a name or a value written out, as in every lesson on these operators; an operator there would need ( ) around it in the long way, a *= b + 1 being a = a * (b + 1), so it is refused rather than written out wrong");
+          let right_type = property_get(right3, "type");
+          if (
+            not_equal(right_type, "Identifier") &&
+            not_equal(right_type, "Literal")
+          ) {
+            error({
+              message:
+                "only a name or a value written out can be right of an operator that assigns here",
+              code,
+              right_type,
+            });
+          }
+          let symbol = text_slice(operator2, 0, to4);
+          let compound_from = property_get(expression, "start");
+          let compound_to = property_get(expression, "end");
+          let compound = text_slice(code, compound_from, compound_to);
+          let right_from = property_get(right3, "start");
+          let right_to = property_get(right3, "end");
+          let right_text = text_slice(code, right_from, right_to);
+          long = text_combine_multiple([
+            name3,
+            " = ",
+            name3,
+            " ",
+            symbol,
+            " ",
+            right_text,
+          ]);
+          let held = property_get(values, name3);
+          list_add(actions, {
+            kind: "evaluate",
+            name: name3,
+            value: held,
+            from: null,
+            to: null,
+            expression: null,
+            within: compound,
+            lead: "",
+          });
+          let right_value = value_of(right3, actions);
+          let held_written = json_to(held);
+          let right_written = json_to(right_value);
+          let index_from = property_get(target, "end");
+          let operator_from = text_index_of_from(code, operator2, index_from);
+          value9 = app_code_operator_solve(held, symbol, right_value);
+          let name5 = text_combine_multiple([
+            held_written,
+            " ",
+            symbol,
+            " ",
+            right_written,
+          ]);
+          list_add(actions, {
+            kind: "evaluate",
+            name: name5,
+            value: value9,
+            from: operator_from,
+            to: right_to,
+            expression: {
+              left: held,
+              operator: symbol,
+              right: right_value,
+            },
+            within: text_combine_multiple([name3, " = ", name5]),
+            lead: "= ",
+          });
+        }
         list_add(actions, {
           kind: "assign",
           name: name3,
           value: value9,
           from: property_get(right3, "start"),
           to: property_get(right3, "end"),
+          long,
         });
         property_set(values, name3, value9);
         line_add(node, actions);
