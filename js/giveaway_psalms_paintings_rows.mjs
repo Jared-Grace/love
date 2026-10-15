@@ -1,7 +1,7 @@
-import { path_folder_name } from "./path_folder_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { giveaway_bible_folder } from "./giveaway_bible_folder.mjs";
 import { lyric_video_documents_pictures } from "./lyric_video_documents_pictures.mjs";
+import { path_folder_name } from "./path_folder_name.mjs";
 import { lyric_video_bible_document_name_read_or_null } from "./lyric_video_bible_document_name_read_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_add } from "./list_add.mjs";
@@ -11,23 +11,24 @@ import { ebible_chapter_code_pad } from "./ebible_chapter_code_pad.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { giveaway_passage_code } from "./giveaway_passage_code.mjs";
 import { path_base } from "./path_base.mjs";
-import { property_exists } from "./property_exists.mjs";
-import { property_set } from "./property_set.mjs";
 import { giveaway_painting_mark } from "./giveaway_painting_mark.mjs";
 import { giveaway_passage_file_name } from "./giveaway_passage_file_name.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { property_set } from "./property_set.mjs";
 import { list_sort_text_property } from "./list_sort_text_property.mjs";
 import { list_unique } from "./list_unique.mjs";
 export async function giveaway_psalms_paintings_rows() {
   arguments_assert(arguments, 0);
   ("Every painting that has been cropped for a psalm's lyric video, written down beside the name it will be given away under.");
-  ("★ THE PASSAGE A PAINTING BELONGS TO IS READ OFF THE NAME OF THE DOCUMENT THAT NAMES THE PAINTING, AND IT CANNOT BE REACHED FORWARD FROM THE RECORDINGS. The obvious route - walk the sung psalms, and for each one open the timing document it would have - drops seven hundred and seventy-four of the two thousand and sixty-nine paintings, silently. Thirty-one picture-bearing documents are whole-chapter documents of chapters that are only ever sung in parts: Psalm 78 holds eighty-two paintings that way, Psalm 89 fifty-seven. Those documents exist and hold the work; no recording addresses them. So the walk starts from the documents, and a document's own name is what says which passage it is for.");
-  ("★ THE NAME IS WHAT IS READ AND NOT THE PASSAGE WRITTEN INSIDE THE DOCUMENT, THOUGH THE FIELD INSIDE IS EASIER TO READ. That field says Psalm 147:12-20 - words printed on the video for a person to read - and user-facing words are changed for a reader whenever a reader is better served. The name is an address: one function spells it, nothing may respell it, and a round-trip check holds every one of the five hundred and seventeen documents to spelling back to its own address. An address that reads back is the safe thing to depend on; the readable field is the fragile one.");
-  ("★ ONE ROW PER PASSAGE AND PAINTING, SO THE TAKES OF ONE PASSAGE ARE UNIONED RATHER THAN COUNTED, AND THAT UNION LOSES NOTHING BY CONSTRUCTION. Eighteen passages are timed by more than one document - Psalm 150 by six of them - and the paintings do not move when a passage is sung again: the later take's document names the same picture folder as the first, so a hundred and fifty-one of these repeats name a hundred and fifty-one files and not three hundred. Measured: of the eighteen hundred and thirteen passage-and-painting keys, a hundred and fifty-one are named by more than one document and not one of them is given two different paths. So the first document the walk meets keeps the row and there is no second copy for it to have preferred - which is why this is a union and not a choice. Without it the same file would be published several times under several names.");
-  ("★ THE PASSAGE STAYS IN THE KEY RATHER THAN THE CHAPTER, WHICH ADMITS TWO HUNDRED AND NINETY-FOUR BYTE-IDENTICAL DUPLICATES INTO THE BOXES ON PURPOSE. Within one chapter, two hundred and ninety-five painting names are claimed by more than one passage, and two hundred and ninety-four of those are the same picture - so keying by chapter instead would publish a shorter name and fewer files. It is not done, for three reasons. The one remaining pair is two genuinely different crops under one name - Psalm 119's pd_johansen_kerstboom.png is cropped differently for verses 1-8 and for verses 105-112 - so chapter keying would collide there and refuse the whole record until somebody renames a file on this disk, which is the owner's to do and not a thing to be blocked behind. Deduplicating by bytes instead would make a permanent address depend on a byte comparison that a recrop flips. And the passage is the one authored fact here: a document says which verses it is for, and a reader asking which paintings go with a part of a psalm has an answer rather than a chapter's worth of pictures.");
+  ("★ THE PASSAGE A PAINTING BELONGS TO IS READ OFF THE FOLDER THE CROP SITS IN, AND NOT OFF THE DOCUMENT THAT NAMES THE CROP. A file has one place on the disk and so it has one passage; the documents naming it are many, and taking the passage from them gave one file as many published names as there were documents naming it. Measured on 2026-10-15, that was eight hundred and ninety-seven of the two thousand and eighty files carrying more than one published name, and eighteen names each claimed by two genuinely different crops. Reading the folder ends both at once, because the folder is where the file is and a published name is an address for a file. No reader had to be written for it: the timing writer copies a document's pictures into a folder named after that document, so a crop folder's name is a document's name and the one reader of document names reads it unchanged.");
+  ("★ THE WALK STILL STARTS FROM THE DOCUMENTS, BECAUSE NOTHING ELSE REACHES THE CROPS. The obvious route - walk the sung psalms, and for each one open the timing document it would have - drops seven hundred and seventy-four of the paintings, silently. Thirty-one picture-bearing documents are whole-chapter documents of chapters that are only ever sung in parts: Psalm 78 holds eighty-two paintings that way, Psalm 89 fifty-seven. Those documents exist and hold the work; no recording addresses them. So the documents are the way in, and the folder each one points at is what says which passage a crop is for.");
+  ("★ THE NAME IS WHAT IS READ AND NOT THE PASSAGE WRITTEN INSIDE THE DOCUMENT, THOUGH THE FIELD INSIDE IS EASIER TO READ. That field says Psalm 147:12-20 - words printed on the video for a person to read - and user-facing words are changed for a reader whenever a reader is better served. The name is an address: one function spells it, nothing may respell it, and a round-trip check holds every one of the documents to spelling back to its own address. An address that reads back is the safe thing to depend on; the readable field is the fragile one.");
+  ("★ ONE ROW PER PUBLISHED NAME, AND WHAT IS KEPT BESIDE EACH NAME IS THE PATH IT WAS TAKEN FROM, WHICH IS WHAT TELLS A HARMLESS REPEAT FROM A REAL COLLISION. The same crop is met again and again - a passage timed twice names the same folder twice, and a chapter's whole-chapter document names pictures that the document of each part names as well - so the four thousand six hundred and seventy-one meetings of a picture on 2026-10-15 are only two thousand and eighty files, and two thousand five hundred and ninety-one of those meetings are a file arriving again under the name it already holds. Those are a union and lose nothing, so they are passed over in silence. Seven are a different file arriving at a name already taken, which leaves two thousand and seventy-three names; and a file silently losing its only address is the fault this record exists to avoid, so those seven are passed over by path, into the answer, where a reader can see the pair.");
+  ("★ THE SEVEN ARE ONE PAIR OF FOLDERS AND THEY WILL NOT BE THE LAST. A passage sung twice is timed twice, and the second take's document gets a folder of its own with the mark in its name - bsb_PSA_133_take1 beside bsb_PSA_133 - so the same seven crops sit in two folders under one passage, a take being no part of a passage. Those seven pairs are byte-identical today, so which folder was met first decides nothing; that is a fact about this disk this week and not a thing to build on, which is why the paths are reported rather than assumed harmless. Comparing the bytes is not done here, because nothing here looks at the disk.");
   ("★ THE KIND WORD IS `picture` AND NOT `painting`, THOUGH EVERY ONE OF THESE IS A CROP OF A PAINTING TODAY. Asked on 2026-10-14, all two thousand and sixty-nine pictures the timing documents name begin `pd_` and not one was drawn by a model, so `painting` would have been true of every file going up. It is still the wrong word. The kind says what sort of file a reader is holding, and `picture` is the whole of what this kind has to say: something to look at, rather than to listen to or to read. `painting` says that and also makes a claim about where the picture came from - and a kind word can never be taken back, so the first drawn picture ever given away would need a second kind beside this one, and a box would then hold `picture` files and `painting` files with a reader made to learn two words for one thing. Where a picture came from is said twice over without this word: the mark carries the painter's name, and the prefix on the file it was cropped from says it is a painting in the public domain.");
   ("★ THE BIBLE FOLDER IS IN A PAINTING'S NAME EVEN THOUGH NOBODY TRANSLATED THE PAINTING. The crop was chosen for a line of a particular English text and timed against it, so the word is true; and it keeps every file in a box to one shape, which is what lets somebody automating a download split a name into its pieces without knowing which kind of file they have in hand.");
-  ("A document whose name will not read is reported rather than passed over, and so is a document naming a book other than the Psalms. This folder holds nothing but timing documents, so a name that will not read is not somebody's stray file - it is paintings going silently missing from the giveaway.");
-  ("Nothing here looks at the disk. Whether the file a document names is actually there is a different question with a different answer - seven of the eighteen hundred and thirteen are not on this machine - and it is asked by its own check, so that a missing crop is reported rather than quietly keeping a row out of the record.");
+  ("A folder whose name will not read is reported rather than passed over, and so is a folder naming a book other than the Psalms. Nothing but crops for these videos is kept in there, so a name that will not read is not somebody's stray file - it is paintings going silently missing from the giveaway.");
+  ("Nothing here looks at the disk. Whether the file a document names is actually there is a different question with a different answer, and it is asked by its own check, so that a missing crop is reported rather than quietly keeping a row out of the record.");
   let bible_folder = giveaway_bible_folder();
   let kind = "picture";
   let ending = ".png";
@@ -36,6 +37,7 @@ export async function giveaway_psalms_paintings_rows() {
   let seen = {};
   let unread = [];
   let other_book = [];
+  let passed_over = [];
   for (let one of held.pictures) {
     let folder_name = path_folder_name(one.picture.path);
     let read = lyric_video_bible_document_name_read_or_null(folder_name);
@@ -54,11 +56,6 @@ export async function giveaway_psalms_paintings_rows() {
       ? chapter_code
       : giveaway_passage_code(chapter_code, read.verse_first, read.verse_last);
     let file_name = path_base(one.picture.path);
-    let key = one.picture.path;
-    if (property_exists(seen, key)) {
-      continue;
-    }
-    property_set(seen, key, true);
     let mark = giveaway_painting_mark(file_name);
     let name_published = giveaway_passage_file_name(
       passage_code,
@@ -67,6 +64,17 @@ export async function giveaway_psalms_paintings_rows() {
       mark,
       ending,
     );
+    let path_before = property_get_or_null(seen, name_published);
+    let b = null_is(path_before);
+    let taken_is = not(b);
+    if (taken_is) {
+      let same_is = equal(path_before, one.picture.path);
+      if (not(same_is)) {
+        list_add(passed_over, one.picture.path);
+      }
+      continue;
+    }
+    property_set(seen, name_published, one.picture.path);
     let row = {
       file_name: file_name,
       path_in_repo: one.picture.path,
@@ -85,6 +93,7 @@ export async function giveaway_psalms_paintings_rows() {
     rows: rows,
     unread: list_unique(unread),
     other_book: list_unique(other_book),
+    passed_over: list_unique(passed_over),
   };
   return answer;
 }
