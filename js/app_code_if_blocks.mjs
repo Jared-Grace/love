@@ -42,7 +42,8 @@ export function app_code_if_blocks(code) {
       let id = property_get(node, "id");
       let name = property_get(id, "name");
       let init = property_get(node, "init");
-      let value = property_get(init, "value");
+      ("2026-10-15: a let may hold another name's value, let b = a;, read the way an if's test is, so the lessons that copy a name can be stepped through too. Not picked: reading only a value written out, which stopped at the copy");
+      let value = test_value(init);
       property_set(values, name, value);
     }
     if (equal(type, "IfStatement")) {
@@ -58,7 +59,7 @@ export function app_code_if_blocks(code) {
   }
   js_visit(ast, on_visit);
   function test_value(test) {
-    "true or false, for the test of an if";
+    "the value a name or a value written out holds: true or false for the test of an if, and anything a let gives";
     let type = property_get(test, "type");
     if (equal(type, "Identifier")) {
       let name = property_get(test, "name");
