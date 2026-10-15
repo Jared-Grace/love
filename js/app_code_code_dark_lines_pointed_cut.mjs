@@ -19,8 +19,8 @@ export function app_code_code_dark_lines_pointed_cut(cut) {
   function negative_cut(piece) {
     "the pieces to draw a whole number, name or negative number as";
     let drawn = cut(piece);
-    let negative = /^-\d/.test(piece);
-    if (not(negative)) {
+    let minus_spelled = /^-\d/.test(piece);
+    if (not(minus_spelled)) {
       return drawn;
     }
     function lambda(pair) {
