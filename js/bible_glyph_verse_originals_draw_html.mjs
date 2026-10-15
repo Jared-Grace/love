@@ -17,9 +17,10 @@ export function bible_glyph_verse_originals_draw_html(
   ("$plain words");
   ("$plain originals");
   ("$plain lookup");
-  ("the words are one stored verse, the originals are each word's spelling in the language it was written in or null, and the lookup is a glyph name to character table. All are data to draw and none runs.");
+  ("the words are one stored verse, the originals are each word's spelling in the language it was written in with how it is said, or null, and the lookup is a glyph name to character table. All are data to draw and none runs.");
   ("One stored verse of a picture Bible drawn onto a page, with each word that has an original spelling saying it, so a tap on the word can show and say the word it stands for.");
   ("THE SPELLING IS PUT ON A SPAN ROUND THE WORD, NOT ON EACH GROUP, because one English word can be several groups and every one of them stands for the same written word. The span draws nothing, so the page looks exactly as it did.");
+  ("HOW THE WORD IS SAID GOES ON THE SAME SPAN, beside its spelling, so the overlay can show the word as it is said in this verse and not only the dictionary form of its root. A chapter built before sounds were kept has none, and its span carries the spelling alone.");
   ("A verse with no originals, such as one written by hand, hands in null and every word is drawn bare.");
   let word_before = null;
   let first = true;
@@ -38,7 +39,11 @@ export function bible_glyph_verse_originals_draw_html(
       let b2 = null_is(original);
       if (not(b2)) {
         holder = html_span(parent);
-        html_attribute_set(holder, "data-original", original);
+        html_attribute_set(holder, "data-original", original.original);
+        let b3 = null_is(original.sound);
+        if (not(b3)) {
+          html_attribute_set(holder, "data-sound", original.sound);
+        }
       }
     }
     index = index + 1;
