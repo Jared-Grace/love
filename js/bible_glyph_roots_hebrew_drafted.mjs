@@ -833,6 +833,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["1834", "dammeseq", "city+lightning+proper_name", "Damascus"],
     ["5514", "sinay", "mountain+fire+proper_name", "Sinai"],
     ["1904", "hagar", "woman+dashing_away+proper_name", "Hagar"],
+    ["6162", "erabon", "handshake+money_bag+thing", "pledge"],
     ["48", "ab", "father+up_arrow+proper_name", "Abiram, father of height"],
     ["7935", "shakan", "tent+i_am+proper_name", "Shechaniah, Jah has dwelt"],
     ["7652", "sheba", "seven+proper_name", "Sheba, seven"],
