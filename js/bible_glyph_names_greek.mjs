@@ -394,6 +394,168 @@ export function bible_glyph_names_greek() {
       about:
         "The devil, the enemy of God and of His people, who hinders and tempts (1 Thessalonians 2:18, 3:5).",
     },
+    3090: {
+      name: "Lois",
+      means: "not known",
+      about:
+        "Timothy's grandmother, in whom his sincere faith lived first (2 Timothy 1:5).",
+    },
+    2131: {
+      name: "Eunice",
+      means: "good victory",
+      about:
+        "Timothy's mother, a believer, who shared that faith (2 Timothy 1:5, Acts 16:1).",
+    },
+    5436: {
+      name: "Phygelus",
+      means: "fugitive",
+      about: "One of those in Asia who turned away from Paul (2 Timothy 1:15).",
+    },
+    2061: {
+      name: "Hermogenes",
+      means: "born of Hermes",
+      about: "One of those in Asia who turned away from Paul (2 Timothy 1:15).",
+    },
+    3683: {
+      name: "Onesiphorus",
+      means: "bringing profit",
+      about:
+        "He often refreshed Paul and was not ashamed of his chains (2 Timothy 1:16).",
+    },
+    4516: {
+      name: "Rome",
+      means: "strength",
+      about:
+        "The capital of the empire, where Paul was held in chains (2 Timothy 1:17).",
+    },
+    2181: {
+      name: "Ephesus",
+      means: "desirable",
+      about:
+        "A great city of Asia, where Paul taught and where Timothy served (1 Timothy 1:3).",
+    },
+    5211: {
+      name: "Hymenaeus",
+      means: "the wedding song",
+      about:
+        "He swerved from the truth, saying the resurrection had already happened (2 Timothy 2:17-18).",
+    },
+    5372: {
+      name: "Philetus",
+      means: "beloved",
+      about:
+        "He taught with Hymenaeus that the resurrection had already happened (2 Timothy 2:17-18).",
+    },
+    2389: {
+      name: "Jannes",
+      means: "not known",
+      about: "One of the magicians who opposed Moses (2 Timothy 3:8).",
+    },
+    2387: {
+      name: "Jambres",
+      means: "not known",
+      about: "One of the magicians who opposed Moses (2 Timothy 3:8).",
+    },
+    490: {
+      name: "Antioch",
+      means: "named for King Antiochus",
+      about:
+        "The city where the disciples were first called Christians (Acts 11:26).",
+    },
+    2430: {
+      name: "Iconium",
+      means: "image",
+      about:
+        "A city where Paul was persecuted on his first journey (2 Timothy 3:11).",
+    },
+    3082: {
+      name: "Lystra",
+      means: "not known",
+      about:
+        "A city where Paul was stoned, and Timothy's home (Acts 14:19, 16:1).",
+    },
+    2913: {
+      name: "Crescens",
+      means: "growing",
+      about: "He went to Galatia while Paul was in prison (2 Timothy 4:10).",
+    },
+    1149: {
+      name: "Dalmatia",
+      means: "not known",
+      about:
+        "A mountain land on the coast across from Italy, where Titus went (2 Timothy 4:10).",
+    },
+    2591: {
+      name: "Carpus",
+      means: "fruit",
+      about: "At Troas Paul left his cloak with him (2 Timothy 4:13).",
+    },
+    5174: {
+      name: "Troas",
+      means: "the land of Troy",
+      about:
+        "A port where Paul saw the vision of the man from Macedonia and raised Eutychus (Acts 16:8-9, 20:9-12).",
+    },
+    223: {
+      name: "Alexander",
+      means: "defender of men",
+      about: "A coppersmith who did Paul great harm (2 Timothy 4:14).",
+    },
+    4251: {
+      name: "Prisca",
+      means: "old",
+      about:
+        "Wife of Aquila and Paul's fellow worker, also called Priscilla (2 Timothy 4:19, Romans 16:3).",
+    },
+    207: {
+      name: "Aquila",
+      means: "eagle",
+      about:
+        "A tentmaker, husband of Prisca and Paul's fellow worker (Acts 18:2-3, 2 Timothy 4:19).",
+    },
+    2037: {
+      name: "Erastus",
+      means: "beloved",
+      about:
+        "The city treasurer, who stayed at Corinth (Romans 16:23, 2 Timothy 4:20).",
+    },
+    2882: {
+      name: "Corinth",
+      means: "not known",
+      about:
+        "A Greek city between two harbours, where Paul founded a church (Acts 18:1-11).",
+    },
+    5161: {
+      name: "Trophimus",
+      means: "nourishing",
+      about: "Paul left him sick at Miletus (2 Timothy 4:20).",
+    },
+    3399: {
+      name: "Miletus",
+      means: "not known",
+      about:
+        "A port city where Paul said farewell to the Ephesian elders (Acts 20:17).",
+    },
+    2103: {
+      name: "Eubulus",
+      means: "good counsel",
+      about: "A believer at Rome who greeted Timothy (2 Timothy 4:21).",
+    },
+    4227: {
+      name: "Pudens",
+      means: "modest",
+      about: "A believer at Rome who greeted Timothy (2 Timothy 4:21).",
+    },
+    3044: {
+      name: "Linus",
+      means: "flax",
+      about: "A believer at Rome who greeted Timothy (2 Timothy 4:21).",
+    },
+    2803: {
+      name: "Claudia",
+      means: "lame",
+      about: "A believer at Rome who greeted Timothy (2 Timothy 4:21).",
+    },
   };
   return names;
 }
