@@ -196,6 +196,7 @@
   "name_decrement",
   "step_name_dec",
   "name_fill_from",
+  "step_swap_try",
   "name_swap_try",
   "name_temp_keep",
   "name_swap",
