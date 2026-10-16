@@ -1,3 +1,4 @@
+import { app_code_program_trace_shorter } from "./app_code_program_trace_shorter.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { property_get } from "./property_get.mjs";
@@ -7,13 +8,8 @@ import { list_size } from "./list_size.mjs";
 import { subtract } from "./subtract.mjs";
 import { app_code_program_trace_value } from "./app_code_program_trace_value.mjs";
 import { property_exists_assert } from "./property_exists_assert.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_add } from "./list_add.mjs";
-import { json_to } from "./json_to.mjs";
-import { text_index_of_from } from "./text_index_of_from.mjs";
-import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
 import { text_size } from "./text_size.mjs";
-import { add } from "./add.mjs";
 import { property_set } from "./property_set.mjs";
 import { equal } from "./equal.mjs";
 import { list_size_assert } from "./list_size_assert.mjs";
@@ -53,73 +49,19 @@ export function app_code_program_trace(code) {
     lead,
     actions,
   ) {
-    "a line written the shorter way, a += b; or a++;, run as its long way a = a + b; is: the name's value asked for without being written into the line, since 1 += 8 would read as giving a value to 1; then the right side, by right_get; then the operator, its value written into the line from the operator to the end, after lead, so a += 8 reads a = 9; then the assign, whose value is the one written there";
-    let name = property_get(target, "name");
-    property_exists_assert(values, name);
-    let compound_from = property_get(expression, "start");
-    let compound_to = property_get(expression, "end");
-    let compound = text_slice(code, compound_from, compound_to);
-    let long = text_combine_multiple([
-      name,
-      " = ",
-      name,
-      " ",
+    let r2 = app_code_program_trace_shorter(
+      expression,
+      target,
+      operator,
       symbol,
-      " ",
       right_text,
-    ]);
-    let held = property_get(values, name);
-    list_add(actions, {
-      kind: "evaluate",
-      name,
-      value: held,
-      from: null,
-      to: null,
-      expression: null,
-      within: compound,
-      lead: "",
-    });
-    let right_value = right_get();
-    let held_written = json_to(held);
-    let right_written = json_to(right_value);
-    let index_from = property_get(target, "end");
-    let operator_from = text_index_of_from(code, operator, index_from);
-    let value = app_code_operator_solve(held, symbol, right_value);
-    let solved = text_combine_multiple([
-      held_written,
-      " ",
-      symbol,
-      " ",
-      right_written,
-    ]);
-    list_add(actions, {
-      kind: "evaluate",
-      name: solved,
-      value,
-      from: operator_from,
-      to: compound_to,
-      expression: {
-        left: held,
-        operator: symbol,
-        right: right_value,
-      },
-      within: text_combine_multiple([name, " = ", solved]),
+      right_get,
       lead,
-      whole: solved,
-      whole_value: value,
-    });
-    ("the value assigned is the one now written after lead, so it starts there; it ends where the line's untouched end begins, which the stepper finds from to");
-    let lead_size = text_size(lead);
-    let value_from = add(operator_from, lead_size);
-    list_add(actions, {
-      kind: "assign",
-      name,
-      value,
-      from: value_from,
-      to: compound_to,
-      long,
-    });
-    property_set(values, name, value);
+      actions,
+      values,
+      code,
+    );
+    return r2;
   }
   function line_add(node, actions) {
     let line = line_of(node);
@@ -184,17 +126,17 @@ export function app_code_program_trace(code) {
         }
         let name3 = property_get(target, "name");
         property_exists_assert(values, name3);
-        let right3 = property_get(expression, "right");
+        let right = property_get(expression, "right");
         let long = null;
         let value9 = null;
         if (equal(operator2, "=")) {
-          value9 = value_of(right3, actions);
+          value9 = value_of(right, actions);
         } else {
           ("2026-10-15, at the human's asking: a += b; and the other operators that assign are the shorter way to write a = a + b;, as the lessons on them teach, so they are run as the long line is: the name's value is asked for first, as the computer reads it first, then the right side, then the operator, whose value is written into the line with an = in place of the += and what follows, so a += 8 reads a = 9. The name's value is asked for without being written into the line, since 1 += 8 would read as giving a value to 1. Not picked: writing the line out the long way first, a change that solves nothing");
           let left5 = text_size(operator2);
           let to4 = subtract(left5, 1);
           ("the right side is a name or a value written out, as in every lesson on these operators; an operator there would need ( ) around it in the long way, a *= b + 1 being a = a * (b + 1), so it is refused rather than written out wrong");
-          let right_type = property_get(right3, "type");
+          let right_type = property_get(right, "type");
           if (
             not_equal(right_type, "Identifier") &&
             not_equal(right_type, "Literal")
@@ -207,11 +149,11 @@ export function app_code_program_trace(code) {
             });
           }
           let symbol = text_slice(operator2, 0, to4);
-          let right_from = property_get(right3, "start");
-          let right_to = property_get(right3, "end");
+          let right_from = property_get(right, "start");
+          let right_to = property_get(right, "end");
           let right_text = text_slice(code, right_from, right_to);
           function right_get() {
-            let right_value = value_of(right3, actions);
+            let right_value = value_of(right, actions);
             return right_value;
           }
           shorter_run(
@@ -231,8 +173,8 @@ export function app_code_program_trace(code) {
           kind: "assign",
           name: name3,
           value: value9,
-          from: property_get(right3, "start"),
-          to: property_get(right3, "end"),
+          from: property_get(right, "start"),
+          to: property_get(right, "end"),
           long,
         });
         property_set(values, name3, value9);
