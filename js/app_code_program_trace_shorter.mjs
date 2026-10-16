@@ -10,7 +10,7 @@ import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
 import { text_size } from "./text_size.mjs";
 import { add } from "./add.mjs";
 import { property_set } from "./property_set.mjs";
-export function app_code_program_trace_shorter(
+export function app_code_program_trace_shorter({
   expression,
   target,
   operator,
@@ -21,8 +21,8 @@ export function app_code_program_trace_shorter(
   actions,
   values,
   code,
-) {
-  arguments_assert(arguments, 10);
+}) {
+  arguments_assert(arguments, 1);
   ("a line written the shorter way, a += b; or a++;, run as its long way a = a + b; is: the name's value asked for without being written into the line, since 1 += 8 would read as giving a value to 1; then the right side, by right_get; then the operator, its value written into the line from the operator to the end, after lead, so a += 8 reads a = 9; then the assign, whose value is the one written there");
   let name = property_get(target, "name");
   property_exists_assert(values, name);

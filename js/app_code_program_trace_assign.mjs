@@ -62,18 +62,18 @@ export function app_code_program_trace_assign(
       );
       return right_value;
     }
-    app_code_program_trace_shorter(
+    app_code_program_trace_shorter({
       expression,
       target,
-      operator2,
+      operator: operator2,
       symbol,
       right_text,
       right_get,
-      "= ",
+      lead: "= ",
       actions,
       values,
       code,
-    );
+    });
     return;
   }
   let value9 = app_code_program_trace_value(right, actions, code, values);

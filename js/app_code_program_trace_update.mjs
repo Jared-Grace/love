@@ -28,16 +28,16 @@ export function app_code_program_trace_update(
     let r = 1;
     return r;
   }
-  app_code_program_trace_shorter(
+  app_code_program_trace_shorter({
     expression,
     target,
     operator,
     symbol,
-    "1",
-    one_get,
-    " = ",
+    right_text: "1",
+    right_get: one_get,
+    lead: " = ",
     actions,
     values,
     code,
-  );
+  });
 }
