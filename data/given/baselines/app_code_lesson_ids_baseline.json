@@ -210,6 +210,7 @@
   "name_or",
   "name_and",
   "name_remainder",
+  "step_avg_two",
   "name_avg_two",
   "name_avg_three",
   "name_middle",
