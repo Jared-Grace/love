@@ -1,4 +1,3 @@
-import { app_code_program_trace_shorter } from "./app_code_program_trace_shorter.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { property_get } from "./property_get.mjs";
@@ -7,17 +6,15 @@ import { text_split_newline } from "./text_split_newline.mjs";
 import { list_size } from "./list_size.mjs";
 import { subtract } from "./subtract.mjs";
 import { app_code_program_trace_value } from "./app_code_program_trace_value.mjs";
-import { property_exists_assert } from "./property_exists_assert.mjs";
 import { list_add } from "./list_add.mjs";
-import { text_size } from "./text_size.mjs";
-import { property_set } from "./property_set.mjs";
 import { equal } from "./equal.mjs";
-import { list_size_assert } from "./list_size_assert.mjs";
-import { list_get } from "./list_get.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { error } from "./error.mjs";
-import { js_unparse } from "./js_unparse.mjs";
+import { app_code_program_trace_declare } from "./app_code_program_trace_declare.mjs";
+import { app_code_program_trace_assign } from "./app_code_program_trace_assign.mjs";
+import { app_code_program_trace_update } from "./app_code_program_trace_update.mjs";
+import { app_code_program_trace_log } from "./app_code_program_trace_log.mjs";
+import { property_set } from "./property_set.mjs";
 import { not } from "./not.mjs";
+import { error } from "./error.mjs";
 export function app_code_program_trace(code) {
   arguments_assert(arguments, 1);
   ("every line of a program in the order the computer runs it, each with what running it does, in order: a name declared, an expression evaluated, a value assigned to a name, a value logged to the console. A line is done once its last thing is done. Asked for by the human 2026-10-13, so a learner can do every step of the running themselves before being asked what a program logs.");
@@ -39,30 +36,6 @@ export function app_code_program_trace(code) {
     let r = app_code_program_trace_value(node, actions, code, values);
     return r;
   }
-  function shorter_run(
-    expression,
-    target,
-    operator,
-    symbol,
-    right_text,
-    right_get,
-    lead,
-    actions,
-  ) {
-    let r2 = app_code_program_trace_shorter(
-      expression,
-      target,
-      operator,
-      symbol,
-      right_text,
-      right_get,
-      lead,
-      actions,
-      values,
-      code,
-    );
-    return r2;
-  }
   function line_add(node, actions) {
     let line = line_of(node);
     let entry = {
@@ -82,162 +55,30 @@ export function app_code_program_trace(code) {
     let type = property_get(node, "type");
     let actions = [];
     if (equal(type, "VariableDeclaration")) {
-      let declarations = property_get(node, "declarations");
-      list_size_assert(declarations, 1);
-      let declaration = list_get(declarations, 0);
-      let id = property_get(declaration, "id");
-      let name = property_get(id, "name");
-      let init = property_get(declaration, "init");
-      list_add(actions, {
-        kind: "declare",
-        name,
-        from: property_get(id, "start"),
-        to: property_get(id, "end"),
-      });
-      ("a declare says where its name is written, and an assign where what is right of the = is written, as an evaluate says where its name is, so a stepper can send a copy of either into the note it writes");
-      let value = value_of(init, actions);
-      list_add(actions, {
-        kind: "assign",
-        name,
-        value,
-        from: property_get(init, "start"),
-        to: property_get(init, "end"),
-        long: null,
-      });
-      property_set(values, name, value);
+      app_code_program_trace_declare(node, actions, code, values);
       line_add(node, actions);
       return;
     }
     if (equal(type, "ExpressionStatement")) {
       let expression = property_get(node, "expression");
       let left_type = property_get(expression, "type");
+      ("an expression line begins where its expression does, so the line added for it is the one its expression is on");
       if (equal(left_type, "AssignmentExpression")) {
-        ("2026-10-15, at the human's asking: a name given a new value, as a = 5; does, solves what is right of the = if needed and assigns it, as a let line does without declaring, so the lessons that change what a name holds can be run a line at a time.");
-        let operator2 = property_get(expression, "operator");
-        let target = property_get(expression, "left");
-        let target_type = property_get(target, "type");
-        if (not_equal(target_type, "Identifier")) {
-          error({
-            message: "only a name can be assigned here",
-            code,
-            operator: operator2,
-            target_type,
-          });
-        }
-        let name3 = property_get(target, "name");
-        property_exists_assert(values, name3);
-        let right = property_get(expression, "right");
-        let long = null;
-        let value9 = null;
-        if (equal(operator2, "=")) {
-          value9 = value_of(right, actions);
-        } else {
-          ("2026-10-15, at the human's asking: a += b; and the other operators that assign are the shorter way to write a = a + b;, as the lessons on them teach, so they are run as the long line is: the name's value is asked for first, as the computer reads it first, then the right side, then the operator, whose value is written into the line with an = in place of the += and what follows, so a += 8 reads a = 9. The name's value is asked for without being written into the line, since 1 += 8 would read as giving a value to 1. Not picked: writing the line out the long way first, a change that solves nothing");
-          let left5 = text_size(operator2);
-          let to4 = subtract(left5, 1);
-          ("the right side is a name or a value written out, as in every lesson on these operators; an operator there would need ( ) around it in the long way, a *= b + 1 being a = a * (b + 1), so it is refused rather than written out wrong");
-          let right_type = property_get(right, "type");
-          if (
-            not_equal(right_type, "Identifier") &&
-            not_equal(right_type, "Literal")
-          ) {
-            error({
-              message:
-                "only a name or a value written out can be right of an operator that assigns here",
-              code,
-              right_type,
-            });
-          }
-          let symbol = text_slice(operator2, 0, to4);
-          let right_from = property_get(right, "start");
-          let right_to = property_get(right, "end");
-          let right_text = text_slice(code, right_from, right_to);
-          function right_get() {
-            let right_value = value_of(right, actions);
-            return right_value;
-          }
-          shorter_run(
-            expression,
-            target,
-            operator2,
-            symbol,
-            right_text,
-            right_get,
-            "= ",
-            actions,
-          );
-          line_add(expression, actions);
-          return;
-        }
-        list_add(actions, {
-          kind: "assign",
-          name: name3,
-          value: value9,
-          from: property_get(right, "start"),
-          to: property_get(right, "end"),
-          long,
-        });
-        property_set(values, name3, value9);
-        line_add(node, actions);
-        return;
+        app_code_program_trace_assign(expression, actions, code, values);
+      } else if (equal(left_type, "UpdateExpression")) {
+        app_code_program_trace_update(expression, actions, code, values);
+      } else {
+        app_code_program_trace_log(expression, actions, code, values);
       }
-      if (equal(left_type, "UpdateExpression")) {
-        ("2026-10-15, at the human's asking: a++; is the shorter way to write a = a + 1;, and a--; of a = a - 1;, as the lessons on them teach, so they are run as a += 1; is: the name's value is asked for, then what the operator comes to, written into the line in place of the ++ as = and the value, so a++ reads a = 10. Not picked: ++a, which no lesson writes, and which gives a different value when it is used rather than run as a line, so it is refused rather than run as if it were the same");
-        let prefix = property_get(expression, "prefix");
-        let target2 = property_get(expression, "argument");
-        let target_type2 = property_get(target2, "type");
-        if (prefix || not_equal(target_type2, "Identifier")) {
-          error({
-            message: "only a name followed by ++ or -- is run here",
-            code,
-            target_type: target_type2,
-          });
-        }
-        let operator3 = property_get(expression, "operator");
-        let symbol2 = text_slice(operator3, 0, 1);
-        function one_get() {
-          let r3 = 1;
-          return r3;
-        }
-        shorter_run(
-          expression,
-          target2,
-          operator3,
-          symbol2,
-          "1",
-          one_get,
-          " = ",
-          actions,
-        );
-        line_add(expression, actions);
-        return;
-      }
-      let callee = property_get(expression, "callee");
-      let called = js_unparse(callee);
-      if (not_equal(called, "console.log")) {
-        error({
-          message: "only console.log can be called here",
-          code,
-          called,
-        });
-      }
-      let args = property_get(expression, "arguments");
-      list_size_assert(args, 1);
-      let arg = list_get(args, 0);
-      let value3 = value_of(arg, actions);
-      list_add(actions, {
-        kind: "log",
-        value: value3,
-      });
       line_add(node, actions);
       return;
     }
     if (equal(type, "IfStatement")) {
       let test = property_get(node, "test");
-      let value4 = value_of(test, actions);
+      let value = value_of(test, actions);
       let entry2 = line_add(node, actions);
       ("an if's line also says what its condition came to, since a condition written out as true or false is not evaluated and so is in none of its actions; a guide saying why the next line runs reads it here");
-      property_set(entry2, "condition", value4);
+      property_set(entry2, "condition", value);
       let alternate = property_get(node, "alternate");
       ("an if's line also says what stands after its { ... }: none, else, or else_if; a guide saying which { ... } runs instead reads it here");
       let after = "none";
@@ -247,7 +88,7 @@ export function app_code_program_trace(code) {
         after = equal(left3, "IfStatement") ? "else_if" : "else";
       }
       property_set(entry2, "alternate", after);
-      if (value4) {
+      if (value) {
         let consequent = property_get(node, "consequent");
         let value5 = property_get(consequent, "body");
         statements_run(value5);
