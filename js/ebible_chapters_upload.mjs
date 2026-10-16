@@ -1,8 +1,8 @@
+import { firebase_upload_object_compressed_chunked_changed } from "./firebase_upload_object_compressed_chunked_changed.mjs";
 import { ebible_bible_folder_commercial_assert } from "./ebible_bible_folder_commercial_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { ebible_firebase_upload_path } from "./ebible_firebase_upload_path.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
-import { firebase_upload_object_compressed_chunked } from "./firebase_upload_object_compressed_chunked.mjs";
 import { ebible_version_chapters_cache } from "./ebible_version_chapters_cache.mjs";
 export async function ebible_chapters_upload(bible_folder) {
   await ebible_bible_folder_commercial_assert(bible_folder);
@@ -19,6 +19,6 @@ export async function ebible_chapters_upload(bible_folder) {
     };
     return v;
   }
-  await firebase_upload_object_compressed_chunked(chapters, lambda);
+  await firebase_upload_object_compressed_chunked_changed(chapters, lambda);
   return chapters;
 }
