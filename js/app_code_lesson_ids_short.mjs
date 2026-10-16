@@ -467,6 +467,7 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_step_name_plus_one: text_frozen("step_name_plus_one"),
     app_code_lesson_step_name_one_more: text_frozen("step_name_one_more"),
     app_code_lesson_step_name_copy_kept: text_frozen("step_copy_kept"),
+    app_code_lesson_step_name_swap_try: text_frozen("step_swap_try"),
   };
   return short;
 }

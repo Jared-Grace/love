@@ -1,15 +1,7 @@
-import { ebible_chapters_each_verses } from "./ebible_chapters_each_verses.mjs";
-import { list_adder_async } from "./list_adder_async.mjs";
+import { ebible_version_chapters_cache } from "./ebible_version_chapters_cache.mjs";
 export async function ebible_version_chapters_all(version) {
-  async function lambda(la) {
-    async function each_chapter(chapter_code, verses) {
-      la({
-        chapter_code,
-        verses,
-      });
-    }
-    await ebible_chapters_each_verses(version, each_chapter);
-  }
-  let chapters = await list_adder_async(lambda);
+  "Every chapter of one version, for the bundle a device keeps to read without internet.";
+  "It is read from the same chapters the chapter-by-chapter upload publishes, so the bundle and the chapters can never be two printings under one name. It used to walk the archive's pages itself, and when the Berean Standard Bible moved to its publisher's newer printing this road was left behind: a device that saved the Berean read Psalm 62 verse 9 as 'the exalted but a lie' while every chapter read online said 'the exalted are but a lie', and an offline copy is asked first, so the old words won.";
+  let chapters = await ebible_version_chapters_cache(version);
   return chapters;
 }
