@@ -159,6 +159,7 @@ import { app_code_lesson_statement_name_again } from "./app_code_lesson_statemen
 import { app_code_lesson_step_name_again } from "./app_code_lesson_step_name_again.mjs";
 import { app_code_lesson_statement_name_again_last } from "./app_code_lesson_statement_name_again_last.mjs";
 import { app_code_lesson_statement_name_copy } from "./app_code_lesson_statement_name_copy.mjs";
+import { app_code_lesson_step_name_copy_kept } from "./app_code_lesson_step_name_copy_kept.mjs";
 import { app_code_lesson_statement_name_copy_kept } from "./app_code_lesson_statement_name_copy_kept.mjs";
 import { app_code_lesson_statement_name_plus_one } from "./app_code_lesson_statement_name_plus_one.mjs";
 import { app_code_lesson_step_name_plus_one } from "./app_code_lesson_step_name_plus_one.mjs";
@@ -495,6 +496,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_step_name_again,
     app_code_lesson_statement_name_again_last,
     app_code_lesson_statement_name_copy,
+    app_code_lesson_step_name_copy_kept,
     app_code_lesson_statement_name_copy_kept,
     app_code_lesson_statement_name_plus_one,
     app_code_lesson_step_name_plus_one,
