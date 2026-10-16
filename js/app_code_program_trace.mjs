@@ -1,5 +1,3 @@
-import { app_code_program_trace_name } from "./app_code_program_trace_name.mjs";
-import { app_code_program_trace_value } from "./app_code_program_trace_value.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { property_get } from "./property_get.mjs";
@@ -7,20 +5,21 @@ import { text_slice } from "./text_slice.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { list_size } from "./list_size.mjs";
 import { subtract } from "./subtract.mjs";
-import { list_add } from "./list_add.mjs";
-import { equal } from "./equal.mjs";
-import { json_to } from "./json_to.mjs";
-import { error } from "./error.mjs";
-import { property_set } from "./property_set.mjs";
+import { app_code_program_trace_value } from "./app_code_program_trace_value.mjs";
 import { property_exists_assert } from "./property_exists_assert.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { list_add } from "./list_add.mjs";
+import { json_to } from "./json_to.mjs";
 import { text_index_of_from } from "./text_index_of_from.mjs";
 import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
 import { text_size } from "./text_size.mjs";
 import { add } from "./add.mjs";
+import { property_set } from "./property_set.mjs";
+import { equal } from "./equal.mjs";
 import { list_size_assert } from "./list_size_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { not_equal } from "./not_equal.mjs";
+import { error } from "./error.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { not } from "./not.mjs";
 export function app_code_program_trace(code) {
@@ -40,19 +39,8 @@ export function app_code_program_trace(code) {
     let index = subtract(left, 1);
     return index;
   }
-  function name_evaluate(node, from, to, actions, within) {
-    let r2 = app_code_program_trace_name(
-      node,
-      from,
-      to,
-      actions,
-      within,
-      values,
-    );
-    return r2;
-  }
   function value_of(node, actions) {
-    let r = app_code_program_trace_value(node, actions, code, name_evaluate);
+    let r = app_code_program_trace_value(node, actions, code, values);
     return r;
   }
   function shorter_run(
@@ -132,7 +120,6 @@ export function app_code_program_trace(code) {
       long,
     });
     property_set(values, name, value);
-    line_add(expression, actions);
   }
   function line_add(node, actions) {
     let line = line_of(node);
@@ -237,6 +224,7 @@ export function app_code_program_trace(code) {
             "= ",
             actions,
           );
+          line_add(expression, actions);
           return;
         }
         list_add(actions, {
@@ -279,6 +267,7 @@ export function app_code_program_trace(code) {
           " = ",
           actions,
         );
+        line_add(expression, actions);
         return;
       }
       let callee = property_get(expression, "callee");

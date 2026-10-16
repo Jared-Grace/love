@@ -5,6 +5,7 @@ import { app_code_line_pieces_add } from "./app_code_line_pieces_add.mjs";
 import { equal } from "./equal.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { subtract } from "./subtract.mjs";
+import { app_code_program_trace_name } from "./app_code_program_trace_name.mjs";
 import { json_to } from "./json_to.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
 import { app_code_expression_node_before } from "./app_code_expression_node_before.mjs";
@@ -12,12 +13,7 @@ import { error } from "./error.mjs";
 import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_set } from "./property_set.mjs";
-export function app_code_program_trace_value(
-  node,
-  actions,
-  code,
-  name_evaluate,
-) {
+export function app_code_program_trace_value(node, actions, code, values) {
   arguments_assert(arguments, 4);
   ("what an expression comes to, with any evaluating it took added to actions");
   ("2026-10-15, at the human's asking: an operator between two values written out is solved in one evaluate, as the lessons on operators solve one, so a program that logs 9 + 7 can be run a line at a time. Its name is the expression with each side written as the value it came to, and expression says the operator and its two sides, so a stepper can ask for what it comes to and offer the wrong values the operator lessons offer");
@@ -69,7 +65,14 @@ export function app_code_program_trace_value(
     let to2 = property_get(span, "to");
     if (equal(type, "Identifier")) {
       let within = side ? text_now(top_from, top_to) : null;
-      let value2 = name_evaluate(piece, from2, to2, actions, within);
+      let value2 = app_code_program_trace_name(
+        piece,
+        from2,
+        to2,
+        actions,
+        within,
+        values,
+      );
       let json = json_to(value2);
       piece_record(from2, to2, json);
       return value2;
