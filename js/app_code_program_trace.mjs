@@ -1,3 +1,4 @@
+import { app_code_program_trace_name } from "./app_code_program_trace_name.mjs";
 import { app_code_program_trace_value } from "./app_code_program_trace_value.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
@@ -40,20 +41,15 @@ export function app_code_program_trace(code) {
     return index;
   }
   function name_evaluate(node, from, to, actions, within) {
-    "a name evaluated by looking up the value it holds, added to actions; it is written in the line from from to to; within is the expression it stands in, or null when it stands alone";
-    let name = property_get(node, "name");
-    let value2 = property_get(values, name);
-    list_add(actions, {
-      kind: "evaluate",
-      name,
-      value: value2,
+    let r2 = app_code_program_trace_name(
+      node,
       from,
       to,
-      expression: null,
+      actions,
       within,
-      lead: "",
-    });
-    return value2;
+      values,
+    );
+    return r2;
   }
   function value_of(node, actions) {
     let r = app_code_program_trace_value(node, actions, code, name_evaluate);
