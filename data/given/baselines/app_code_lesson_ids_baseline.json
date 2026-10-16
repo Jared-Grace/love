@@ -269,6 +269,7 @@
   "number_text_plus",
   "number_text_join",
   "if_even",
+  "step_if_change",
   "if_change",
   "if_two_lines",
   "if_two_changes",
