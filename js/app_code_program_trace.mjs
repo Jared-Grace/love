@@ -5,15 +5,14 @@ import { text_slice } from "./text_slice.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { list_size } from "./list_size.mjs";
 import { subtract } from "./subtract.mjs";
-import { app_code_program_trace_value } from "./app_code_program_trace_value.mjs";
 import { list_add } from "./list_add.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_program_trace_declare } from "./app_code_program_trace_declare.mjs";
 import { app_code_program_trace_assign } from "./app_code_program_trace_assign.mjs";
 import { app_code_program_trace_update } from "./app_code_program_trace_update.mjs";
 import { app_code_program_trace_log } from "./app_code_program_trace_log.mjs";
+import { app_code_program_trace_if } from "./app_code_program_trace_if.mjs";
 import { property_set } from "./property_set.mjs";
-import { not } from "./not.mjs";
 import { error } from "./error.mjs";
 export function app_code_program_trace(code) {
   arguments_assert(arguments, 1);
@@ -31,10 +30,6 @@ export function app_code_program_trace(code) {
     let left = list_size(lines);
     let index = subtract(left, 1);
     return index;
-  }
-  function value_of(node, actions) {
-    let r = app_code_program_trace_value(node, actions, code, values);
-    return r;
   }
   function line_add(node, actions) {
     let line = line_of(node);
@@ -74,36 +69,15 @@ export function app_code_program_trace(code) {
       return;
     }
     if (equal(type, "IfStatement")) {
-      let test = property_get(node, "test");
-      let value = value_of(test, actions);
+      let run = app_code_program_trace_if(node, actions, code, values);
       let entry2 = line_add(node, actions);
       ("an if's line also says what its condition came to, since a condition written out as true or false is not evaluated and so is in none of its actions; a guide saying why the next line runs reads it here");
+      let value = property_get(run, "condition");
       property_set(entry2, "condition", value);
-      let alternate = property_get(node, "alternate");
-      ("an if's line also says what stands after its { ... }: none, else, or else_if; a guide saying which { ... } runs instead reads it here");
-      let after = "none";
-      let b = equal(alternate, null);
-      if (not(b)) {
-        let left3 = property_get(alternate, "type");
-        after = equal(left3, "IfStatement") ? "else_if" : "else";
-      }
-      property_set(entry2, "alternate", after);
-      if (value) {
-        let consequent = property_get(node, "consequent");
-        let value5 = property_get(consequent, "body");
-        statements_run(value5);
-        return;
-      }
-      if (equal(alternate, null)) {
-        return;
-      }
-      let left2 = property_get(alternate, "type");
-      if (equal(left2, "IfStatement")) {
-        statement_run(alternate);
-        return;
-      }
-      let value6 = property_get(alternate, "body");
-      statements_run(value6);
+      let value2 = property_get(run, "alternate");
+      property_set(entry2, "alternate", value2);
+      let value3 = property_get(run, "next");
+      statements_run(value3);
       return;
     }
     error({
