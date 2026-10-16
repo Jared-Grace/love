@@ -1,4 +1,5 @@
 import { firebase_bucket } from "./firebase_bucket.mjs";
+import { property_set } from "./property_set.mjs";
 export async function firebase_storage_stored_query(query) {
   "What storage already holds of the files a listing query names: for each name, the checksum of its bytes and the two settings it was written with.";
   "IT ASKS ONE PAGE OF A THOUSAND AT A TIME AND KEEPS ONLY THOSE THREE THINGS. A hundred thousand files asked for in one go come back as a hundred thousand full descriptions held at once, which is most of a machine's memory spent on fields nobody reads.";
@@ -14,11 +15,11 @@ export async function firebase_storage_stored_query(query) {
     let [files, next] = await bucket.getFiles(page);
     for (let file of files) {
       let metadata = file.metadata;
-      stored[file.name] = {
+      property_set(stored, file.name, {
         md5: metadata.md5Hash,
         content_type: metadata.contentType,
         cache_control: metadata.cacheControl,
-      };
+      });
     }
     page = next;
   }

@@ -2,6 +2,7 @@ import { firebase_storage_stored } from "./firebase_storage_stored.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { firebase_storage_download_json_jg_decompress } from "./firebase_storage_download_json_jg_decompress.mjs";
 import { firebase_upload_object_compressed_md5 } from "./firebase_upload_object_compressed_md5.mjs";
+import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 export async function firebase_upload_object_compressed_md5_check(prefix) {
   "$plain prefix";
@@ -13,7 +14,7 @@ export async function firebase_upload_object_compressed_md5_check(prefix) {
   for (let name of names) {
     let value = await firebase_storage_download_json_jg_decompress(name);
     let computed = await firebase_upload_object_compressed_md5(value);
-    let kept = stored[name];
+    let kept = property_get(stored, name);
     checked.push({
       name,
       same: equal(computed, kept.md5),
