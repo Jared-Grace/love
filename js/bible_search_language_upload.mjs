@@ -1,3 +1,4 @@
+import { firebase_upload_object_compressed_chunked_changed } from "./firebase_upload_object_compressed_chunked_changed.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { ebible_language_arabic } from "./ebible_language_arabic.mjs";
@@ -15,7 +16,6 @@ import { object_to_list } from "./object_to_list.mjs";
 import { bible_search_language_word_path } from "./bible_search_language_word_path.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { object_values_map } from "./object_values_map.mjs";
-import { firebase_upload_object_compressed_chunked } from "./firebase_upload_object_compressed_chunked.mjs";
 import { list_size } from "./list_size.mjs";
 export async function bible_search_language_upload(language_code) {
   "$plain language_code";
@@ -53,7 +53,7 @@ export async function bible_search_language_upload(language_code) {
     };
     return file;
   }
-  await firebase_upload_object_compressed_chunked(entries, word_file);
+  await firebase_upload_object_compressed_chunked_changed(entries, word_file);
   ("the build is marked last, the same mark the English words are dated by, because a saved copy of any word under the index folder is thrown away when that mark moves - so one mark keeps every language's saved copies honest");
   let built = date_time_zone_now_iso();
   await bible_search_built_upload(built);
