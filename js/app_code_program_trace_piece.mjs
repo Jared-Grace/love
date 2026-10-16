@@ -1,7 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_program_trace_span } from "./app_code_program_trace_span.mjs";
+import { text_slice } from "./text_slice.mjs";
+import { subtract } from "./subtract.mjs";
 import { app_code_program_trace_piece_name } from "./app_code_program_trace_piece_name.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
 import { app_code_expression_node_before } from "./app_code_expression_node_before.mjs";
@@ -17,14 +18,19 @@ export function app_code_program_trace_piece(state, piece, side) {
     return value;
   }
   let code = property_get(state, "code");
-  let span = side
-    ? app_code_program_trace_span(piece, code)
-    : {
-        from: property_get(state, "top_from"),
-        to: property_get(state, "top_to"),
-      };
-  let from = property_get(span, "from");
-  let to = property_get(span, "to");
+  let from = side
+    ? property_get(piece, "start")
+    : property_get(state, "top_from");
+  let to = side ? property_get(piece, "end") : property_get(state, "top_to");
+  ("a side of an operator stands in the line with any ( ) written round it, since once it is solved they go with it: (3 + 5) / 2 reads 8 / 2. A ( just before a side and a ) just after it are a pair, since the side holds as many of each as it closes; and they group the side rather than belonging to a call or an if, whose ( ) hold the whole of what is in them, which here is the operator the side stands in");
+  while (
+    side &&
+    equal(text_slice(code, subtract(from, 1), from), "(") &&
+    equal(text_slice(code, to, to + 1), ")")
+  ) {
+    from = subtract(from, 1);
+    to = to + 1;
+  }
   if (equal(type, "Identifier")) {
     let value2 = app_code_program_trace_piece_name(
       state,
