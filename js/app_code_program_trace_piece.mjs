@@ -17,6 +17,16 @@ export function app_code_program_trace_piece(state, piece, side) {
     let value = property_get(piece, "value");
     return value;
   }
+  ("a minus straight before a number written out is that number's sign, so -1 is a value written out as 5 is, with nothing to evaluate - the minus lesson teaches it as the negative sign. Added 2026-10-17 so the programs of Square inside the grid, whose squares one past an edge sit at -1, can be stepped through. Not picked: evaluating it as an operator before its number, as ! is, which would ask the learner to solve a number they can already read");
+  let negative_is =
+    equal(type, "UnaryExpression") &&
+    equal(property_get(piece, "operator"), "-") &&
+    equal(property_get(property_get(piece, "argument"), "type"), "Literal");
+  if (negative_is) {
+    let object = property_get(piece, "argument");
+    let value_negative = -property_get(object, "value");
+    return value_negative;
+  }
   let code = property_get(state, "code");
   let from = side
     ? property_get(piece, "start")
