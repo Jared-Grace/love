@@ -182,6 +182,8 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_expression_choose_order_and_before_or:
       text_frozen("order_and_or"),
     app_code_lesson_expression_and_before_or: text_frozen("and_or_line"),
+    app_code_lesson_expression_choose_order_stop_early:
+      text_frozen("order_stop_early"),
     app_code_lesson_expression_choose_order_parentheses:
       text_frozen("order_brackets"),
     app_code_lesson_expression_parentheses_or: text_frozen("brackets_or"),
