@@ -9,9 +9,7 @@ import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { not } from "./not.mjs";
 import { app_code_expression_node_before } from "./app_code_expression_node_before.mjs";
-import { property_get_or } from "./property_get_or.mjs";
-import { app_code_expression_node_parenthesis_wrapped } from "./app_code_expression_node_parenthesis_wrapped.mjs";
-import { app_code_expression_node } from "./app_code_expression_node.mjs";
+import { object_copy_assign } from "./object_copy_assign.mjs";
 export function app_code_expression_solved(item, node) {
   arguments_assert(arguments, 2);
   ("the same expression with one of its operators worked out and standing there as its value - the step a learner sees after picking that operator: picking the * in 1 + 2 * 3 gives back 1 + 6");
@@ -63,17 +61,11 @@ export function app_code_expression_solved(item, node) {
   let left_new = app_code_expression_solved(left, node);
   let right = property_get(item, "right");
   let right_new = app_code_expression_solved(right, node);
-  let symbol = property_get(item, "operator");
-  let written = property_get_or(item, "parenthesised", false);
-  if (written) {
-    ("parentheses the lesson wrote survive every step, so a line the learner is working through does not quietly lose the pair it was showing them");
-    let built_marked = app_code_expression_node_parenthesis_wrapped(
-      left_new,
-      symbol,
-      right_new,
-    );
-    return built_marked;
-  }
-  let built = app_code_expression_node(left_new, symbol, right_new);
+  ("every mark the lesson put on an operator survives every step - the parentheses it wrote, so a line the learner is working through does not quietly lose the pair it was showing them, and any other - because the node is copied with only its two sides replaced. Not picked, 2026-10-17: building it afresh and carrying each mark across by name, which a new mark would be silently dropped by");
+  let sides = {
+    left: left_new,
+    right: right_new,
+  };
+  let built = object_copy_assign(item, sides);
   return built;
 }
