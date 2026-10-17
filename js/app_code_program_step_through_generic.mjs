@@ -1,4 +1,3 @@
-import { js_value_code } from "./js_value_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_program_trace } from "./app_code_program_trace.mjs";
@@ -79,7 +78,7 @@ import { app_code_program_step_guide_line_next } from "./app_code_program_step_g
 import { text_trim } from "./text_trim.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
-import { json_to } from "./json_to.mjs";
+import { js_value_code } from "./js_value_code.mjs";
 import { app_code_expression_name_is } from "./app_code_expression_name_is.mjs";
 import { app_code_program_step_solve_decoys } from "./app_code_program_step_solve_decoys.mjs";
 import { app_code_expression_choose_order_ask } from "./app_code_expression_choose_order_ask.mjs";
@@ -586,7 +585,7 @@ export function app_code_program_step_through_generic(
           value,
           decoys,
           on_wrong,
-          json_to,
+          js_value_code,
         );
         property_set(value_holder, "button", asked.right);
         await asked.pressed;
