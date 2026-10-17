@@ -1,4 +1,3 @@
-import { app_code_lesson_step_if_two_lines } from "./app_code_lesson_step_if_two_lines.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
 import { app_code_lesson_while_down } from "./app_code_lesson_while_down.mjs";
 import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
@@ -102,8 +101,8 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-17: hold Stop early on && and ||, new at the human's asking straight after Stop early on &&, until the human has read its first draft";
   "2026-10-17: Stop early on && and || released, the human having read and approved its wording";
   "2026-10-18: hold Step by step: Two lines in an if, new at the human's asking straight before Two lines in an if, until the human has read its first draft";
+  "2026-10-18: Step by step: Two lines in an if released, the human having approved it for latest";
   let fns = [
-    app_code_lesson_step_if_two_lines,
     app_code_lesson_while_log,
     app_code_lesson_while_down,
     app_code_lesson_while_total,
