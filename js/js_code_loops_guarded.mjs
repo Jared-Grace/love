@@ -10,6 +10,7 @@ export function js_code_loops_guarded(code) {
   "The same program, except that every while line counts its runs and stops the program with an error once the runs pass a thousand, so a program run only to see what it logs always ends.";
   "Asked for by the line-order quiz, which runs every order of a program's lines: an order putting a while's closing brace straight after it leaves a loop that never changes what it asks, and the page froze, measured 2026-10-09 on the first while lesson.";
   "A THOUSAND IS FAR PAST ANY PROGRAM A LESSON ASKS ABOUT, whose loops run a handful of times, so the guard stops only an order that would never end.";
+  "IT THROWS A PLAIN STRING, NOT A NEW ERROR. The runner refuses any program that names something outside itself, and Error is such a name - so with it every program holding a loop was refused, and the line-order quiz found no right order at all, measured 2026-10-17 on a review in the while lesson. A thrown string still stops the program, and the quiz counts any stop as a wrong order.";
   "Only a line starting with while and ending with an open brace is guarded, which is the one shape the lessons write a while in.";
   let lines = text_split_newline(code);
   let keyword = js_keyword_while();
@@ -18,7 +19,7 @@ export function js_code_loops_guarded(code) {
     if (text_starts_with(trimmed, keyword) && text_ends_with(trimmed, "{")) {
       let guarded =
         line +
-        ' loop_steps += 1; if (loop_steps > 1000) { throw new Error("loop_steps"); }';
+        ' loop_steps += 1; if (loop_steps > 1000) { throw "loop_steps"; }';
       return guarded;
     }
     return line;
