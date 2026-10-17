@@ -17,6 +17,12 @@ import { app_shared_code_padding_x } from "./app_shared_code_padding_x.mjs";
 import { html_style_bleed_x } from "./html_style_bleed_x.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { text_size } from "./text_size.mjs";
+import { boolean_is } from "./boolean_is.mjs";
+import { not } from "./not.mjs";
+import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
+import { object_values } from "./object_values.mjs";
+import { property_exists } from "./property_exists.mjs";
+import { list_remove_if_exists } from "./list_remove_if_exists.mjs";
 import { app_code_expression_chosen_background_color } from "./app_code_expression_chosen_background_color.mjs";
 import { app_code_lesson_quiz_wrong_code_background_color } from "./app_code_lesson_quiz_wrong_code_background_color.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -49,7 +55,6 @@ import { list_last_or_null } from "./list_last_or_null.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_size } from "./list_size.mjs";
 import { modulo } from "./modulo.mjs";
-import { not } from "./not.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { list_take } from "./list_take.mjs";
@@ -74,17 +79,13 @@ import { text_trim } from "./text_trim.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
 import { json_to } from "./json_to.mjs";
-import { property_exists } from "./property_exists.mjs";
-import { app_code_expression_choose_order_ask } from "./app_code_expression_choose_order_ask.mjs";
+import { app_code_expression_name_is } from "./app_code_expression_name_is.mjs";
 import { app_code_program_step_solve_decoys } from "./app_code_program_step_solve_decoys.mjs";
+import { app_code_expression_choose_order_ask } from "./app_code_expression_choose_order_ask.mjs";
 import { promise_wrap } from "./promise_wrap.mjs";
 import { each } from "./each.mjs";
 import { html_remove } from "./html_remove.mjs";
-import { boolean_is } from "./boolean_is.mjs";
 import { app_code_program_step_operator_decoys } from "./app_code_program_step_operator_decoys.mjs";
-import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
-import { object_values } from "./object_values.mjs";
-import { list_remove_if_exists } from "./list_remove_if_exists.mjs";
 import { app_code_expression_value_choose_buttons_generic } from "./app_code_expression_value_choose_buttons_generic.mjs";
 import { app_code_line_pieces_add } from "./app_code_line_pieces_add.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
@@ -191,6 +192,31 @@ export function app_code_program_step_through_generic(
   ("held_before: the values each name held before it was given the one it holds now, by name, so a name asked about after a new value can be offered its old one as a wrong choice");
   ("declared: the line each name was declared on, by name, so a name given a new value on a later line has the value written into the note it already has");
   ("held: the value each name holds so far, by name, so a name asked about can be offered the values the other names hold as the wrong choices");
+  function name_decoys(name, value) {
+    "2026-10-15, at the human's asking: a name may hold a string or a number as well as true or false. Wrong choices for true are false and for false true, as before; for anything else they are the name written as a string, the mix-up of a name with its own spelling, and each value another name holds, the mix-up of one name with another. Not picked: made-up values, which no step of the program could have led to";
+    let decoys = [];
+    if (boolean_is(value)) {
+      let n = not(value);
+      list_add(decoys, n);
+      return decoys;
+    }
+    list_add_if_not_includes(decoys, name);
+    let held = property_get(state, "held");
+    let held_values = object_values(held);
+    for (let held_value of held_values) {
+      list_add_if_not_includes(decoys, held_value);
+    }
+    ("2026-10-15, at the human's asking: a name given a new value is offered the value it held before as a wrong choice, the mix-up of reading only the line that declared it, which the lesson on giving a name a new value puts on its buttons on purpose");
+    let before2 = property_get(state, "held_before");
+    if (property_exists(before2, name)) {
+      let olds = property_get(before2, name);
+      for (let old_value of olds) {
+        list_add_if_not_includes(decoys, old_value);
+      }
+    }
+    list_remove_if_exists(decoys, value);
+    return decoys;
+  }
   let highlight = app_code_expression_chosen_background_color();
   let wrong_color = app_code_lesson_quiz_wrong_code_background_color();
   function rows_plain() {
@@ -488,7 +514,18 @@ export function app_code_program_step_through_generic(
       if (whole_is) {
         ("2026-10-17, at the human's asking: an expression with more than one operator is solved on a line of its own under the program, the line every expression lesson presses, by the same function, so the two cannot come to press differently: the learner chooses the operator that goes next and then what it comes to, and the line shortens until one value is left. That value is then written into the program's line in place of the expression, as a value asked for alone is. Not picked: pressing the operators in the program's own line, which would be a second pressable line to keep in step with the first. Not picked: saying what to press in the guide above the program, which a quiz does not have; it is said over the line, as the expression lessons' quizzes say it");
         let tree = property_get(action, "tree");
-        guide_say([["Solve ", name, " one operator at a time"]], null);
+        ("2026-10-17: a name pressed on the line is offered the same wrong values a name asked for alone is, so reading it in the line and reading it on its own cannot catch different mistakes");
+        function solve_decoys(current, node) {
+          if (app_code_expression_name_is(node)) {
+            let value8 = property_get(node, "name");
+            let value9 = property_get(node, "value");
+            let decoys_named = name_decoys(value8, value9);
+            return decoys_named;
+          }
+          let decoys_solved = app_code_program_step_solve_decoys(current, node);
+          return decoys_solved;
+        }
+        guide_say([["Solve ", name, " one step at a time"]], null);
         let said_box = html_div(ask);
         let solver_box = html_div(ask);
         function say(text_said) {
@@ -504,7 +541,7 @@ export function app_code_program_step_through_generic(
             tree,
             say,
             finished,
-            decoys_get: app_code_program_step_solve_decoys,
+            decoys_get: solve_decoys,
             on_wrong,
             on_success: resolve,
           });
@@ -536,31 +573,12 @@ export function app_code_program_step_through_generic(
           target_get: value_get,
         });
         html_div_cycle_code(ask, ["What is ", name, "?"]);
-        ("2026-10-15, at the human's asking: a name may hold a string or a number as well as true or false. Wrong choices for true are false and for false true, as before; for anything else they are the name written as a string, the mix-up of a name with its own spelling, and each value another name holds, the mix-up of one name with another. Not picked: made-up values, which no step of the program could have led to");
         let decoys = [];
-        let b4 = boolean_is(value);
         ("an operator solved is offered the wrong values the lessons on operators offer, the value the other operator would give on the same two values, so the same mistake is caught here as there");
         if (operator_is) {
           decoys = app_code_program_step_operator_decoys(action);
-        } else if (b4) {
-          let n = not(value);
-          list_add(decoys, n);
         } else {
-          list_add_if_not_includes(decoys, name);
-          let held = property_get(state, "held");
-          let held_values = object_values(held);
-          for (let held_value of held_values) {
-            list_add_if_not_includes(decoys, held_value);
-          }
-          ("2026-10-15, at the human's asking: a name given a new value is offered the value it held before as a wrong choice, the mix-up of reading only the line that declared it, which the lesson on giving a name a new value puts on its buttons on purpose");
-          let before2 = property_get(state, "held_before");
-          if (property_exists(before2, name)) {
-            let olds = property_get(before2, name);
-            for (let old_value of olds) {
-              list_add_if_not_includes(decoys, old_value);
-            }
-          }
-          list_remove_if_exists(decoys, value);
+          decoys = name_decoys(name, value);
         }
         let asked = app_code_expression_value_choose_buttons_generic(
           ask,

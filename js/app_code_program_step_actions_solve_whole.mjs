@@ -1,4 +1,3 @@
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
@@ -12,23 +11,25 @@ import { list_last } from "./list_last.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
+import { app_code_expression_name } from "./app_code_expression_name.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { app_code_expression_from_js } from "./app_code_expression_from_js.mjs";
+import { app_code_expression_names_apart } from "./app_code_expression_names_apart.mjs";
 import { catch_null } from "./catch_null.mjs";
 import { app_code_expression_values_number_boolean_is } from "./app_code_expression_values_number_boolean_is.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
-import { object_copy_assign } from "./object_copy_assign.mjs";
-import { json_to } from "./json_to.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
+import { object_copy_assign } from "./object_copy_assign.mjs";
 import { list_get } from "./list_get.mjs";
+import { subtract } from "./subtract.mjs";
 import { list_set } from "./list_set.mjs";
 export function app_code_program_step_actions_solve_whole(code, actions) {
   arguments_assert(arguments, 2);
-  ("the actions of one line of a program's trace, as a learner stepping through it is asked them: an expression holding more than one operator is solved whole, as the expression lessons solve a line - every name in it first, one at a time, then one action carrying the expression's shape, whose operators the learner presses in the order they go, choosing what each comes to. code is the whole program, since the trace places every action in it");
+  ("the actions of one line of a program's trace, as a learner stepping through it is asked them: an expression holding more than one operator is solved whole, as the expression lessons solve a line - one action carrying the expression's shape, whose names and operators the learner presses in the order JavaScript takes them, choosing what each comes to. code is the whole program, since the trace places every action in it");
   ("Asked for by the human 2026-10-17: when solving an expression, as in let a = ..., the entire expression should be solved step by step, like the existing expression solver - you choose the next operator to solve, and you choose the solved value.");
-  ("The names go first because the line a learner presses holds values only, as every expression lesson's line does. Each name keeps the words the trace gives it, but what it is said to stand in is the expression as it reads by then, with only the names before it solved.");
-  ("Not picked: making a name pressable on that line, beside its operators, which would change the line every expression lesson presses. Not picked: an expression with one operator, which is still asked for by its value, as the step lessons built on it were shown and kept; pressing the only operator there is would be a press that cannot be wrong.");
+  ("2026-10-17, at the human's asking: a name is read when JavaScript reaches it and not before, so the names stand in the pressed line as names, each one pressed in its turn among the operators. In a * b + c, c is read after the * is worked out. Reading every name first would teach an order JavaScript does not keep, and one that gives the wrong value once a line changes what it reads, as ++s * s does.");
+  ("Not picked: every name first, then the operators, which is how this was first built. Not picked: each name just before the operator that uses it, which reads s + ++s as 6 where JavaScript gets 5. Not picked: an expression with one operator, which is still asked for by its value, as the step lessons built on it were shown and kept; pressing the only operator there is would be a press that cannot be wrong.");
   ("An expression is left as the trace gives it, one operator after another, wherever its shape cannot be read whole: a line written the short way, as a += b * 2, whose operator has no place of its own in the line; a value that is a string, which the pressed line would write without its quotes; or a shape that works out to anything but what the trace says, which would mean the two read the line by different rules.");
   let result = [];
   let run = [];
@@ -88,13 +89,16 @@ export function app_code_program_step_actions_solve_whole(code, actions) {
       if (null_is(from)) {
         return false;
       }
-      values[property_get(named, "name")] = property_get(named, "value");
+      let name = property_get(named, "name");
+      let value = property_get(named, "value");
+      values[name] = app_code_expression_name(name, value);
     }
     let slice = text_slice(code, root_from, root_to);
     function parse() {
       let expression = js_parse_expression(slice);
       let shape = app_code_expression_from_js(expression, values);
-      return shape;
+      let apart = app_code_expression_names_apart(shape);
+      return apart;
     }
     let tree = catch_null(parse);
     if (null_is(tree)) {
@@ -108,19 +112,6 @@ export function app_code_program_step_actions_solve_whole(code, actions) {
     let right = property_get(root, "value");
     if (not_equal(worked, right)) {
       return false;
-    }
-    let solved_text = "";
-    let at = root_from;
-    for (let named of names) {
-      let from2 = property_get(named, "from");
-      let within = solved_text + text_slice(code, at, root_to);
-      let renamed = object_copy_assign(named, {
-        within,
-      });
-      list_add(result, renamed);
-      let object = property_get(named, "value");
-      solved_text = solved_text + text_slice(code, at, from2) + json_to(object);
-      at = property_get(named, "to");
     }
     let whole = app_code_expression_code(tree);
     let solving = object_copy_assign(root, {
