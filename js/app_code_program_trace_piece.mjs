@@ -1,6 +1,9 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
+import { js_value_name_built_in_is } from "./js_value_name_built_in_is.mjs";
+import { js_value_names } from "./js_value_names.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { subtract } from "./subtract.mjs";
 import { app_code_program_trace_piece_name } from "./app_code_program_trace_piece_name.mjs";
@@ -13,18 +16,44 @@ export function app_code_program_trace_piece(state, piece, side) {
   ("what a piece of the expression comes to, any evaluating it took added to state's actions; side says it stands on a side of an operator rather than being the whole expression");
   ("state holds what every piece of one expression shares: the program's code, the values its names hold, the actions, the pieces of the line already written as their values, the evaluates of operators so far, and where the whole expression starts and ends");
   let type = property_get(piece, "type");
-  if (equal(type, "Literal")) {
-    let value = property_get(piece, "value");
-    return value;
+  ("2026-10-17, at the human's asking: NaN, Infinity and undefined are names JavaScript gives a value itself, so they read as a value written out does, with nothing to evaluate - the program never said what they hold, so there is no line a learner could look it up on. A name the program holds is read as one of its own. Not picked: asking for them as names, which points the learner at a note no line of the program wrote");
+  let values_held = property_get(state, "values");
+  function written_is(part) {
+    let part_type = property_get(part, "type");
+    if (equal(part_type, "Literal")) {
+      return true;
+    }
+    let b = equal(part_type, "Identifier");
+    if (not(b)) {
+      return false;
+    }
+    let name_read = property_get(part, "name");
+    let built_in_is = js_value_name_built_in_is(values_held, name_read);
+    return built_in_is;
   }
-  ("a minus straight before a number written out is that number's sign, so -1 is a value written out as 5 is, with nothing to evaluate - the minus lesson teaches it as the negative sign. Added 2026-10-17 so the programs of Square inside the grid, whose squares one past an edge sit at -1, can be stepped through. Not picked: evaluating it as an operator before its number, as ! is, which would ask the learner to solve a number they can already read");
+  function written_value(part) {
+    let part_type = property_get(part, "type");
+    if (equal(part_type, "Literal")) {
+      let value = property_get(part, "value");
+      return value;
+    }
+    let built_in = js_value_names();
+    let name_read2 = property_get(part, "name");
+    let value_built_in = property_get(built_in, name_read2);
+    return value_built_in;
+  }
+  if (written_is(piece)) {
+    let value_written = written_value(piece);
+    return value_written;
+  }
+  ("a minus straight before a value written out is that value's sign, so -1 is a value written out as 5 is, with nothing to evaluate - the minus lesson teaches it as the negative sign; -Infinity reads the same way. Added 2026-10-17 so the programs of Square inside the grid, whose squares one past an edge sit at -1, can be stepped through. Not picked: evaluating it as an operator before its number, as ! is, which would ask the learner to solve a number they can already read");
   let negative_is =
     equal(type, "UnaryExpression") &&
     equal(property_get(piece, "operator"), "-") &&
-    equal(property_get(property_get(piece, "argument"), "type"), "Literal");
+    written_is(property_get(piece, "argument"));
   if (negative_is) {
     let object = property_get(piece, "argument");
-    let value_negative = -property_get(object, "value");
+    let value_negative = -written_value(object);
     return value_negative;
   }
   let code = property_get(state, "code");

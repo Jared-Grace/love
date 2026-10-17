@@ -2,6 +2,8 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_node_type } from "./js_node_type.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
+import { js_value_name_built_in_is } from "./js_value_name_built_in_is.mjs";
+import { js_value_names } from "./js_value_names.mjs";
 import { app_code_expression_node_before } from "./app_code_expression_node_before.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
@@ -21,6 +23,12 @@ export function app_code_expression_from_js(node, values) {
   }
   if (equal(type, "Identifier")) {
     let name = property_get(node, "name");
+    ("2026-10-17: NaN, Infinity and undefined stand as the value JavaScript gives them, unless the line's names hold one of them");
+    if (js_value_name_built_in_is(values, name)) {
+      let built_in = js_value_names();
+      let value_built_in = property_get(built_in, name);
+      return value_built_in;
+    }
     let value_named = property_get(values, name);
     return value_named;
   }
