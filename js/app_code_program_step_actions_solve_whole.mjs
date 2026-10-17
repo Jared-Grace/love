@@ -12,6 +12,8 @@ import { not_equal } from "./not_equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { app_code_expression_name } from "./app_code_expression_name.mjs";
+import { property_get_or } from "./property_get_or.mjs";
+import { properties_get } from "./properties_get.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { app_code_expression_from_js } from "./app_code_expression_from_js.mjs";
@@ -92,6 +94,14 @@ export function app_code_program_step_actions_solve_whole(code, actions) {
       let name = property_get(named, "name");
       let value = property_get(named, "value");
       values[name] = app_code_expression_name(name, value);
+    }
+    ("2026-10-17: a name on the side of an && or an || that JavaScript skips is never read, so the trace has no step for it; the step that skipped it lists it, and it stands in the line as a name the learner never presses");
+    for (let operator of operators) {
+      let skipped = property_get_or(operator, "skipped", {});
+      for (let skipped_name of properties_get(skipped)) {
+        let value2 = property_get(skipped, skipped_name);
+        values[skipped_name] = app_code_expression_name(skipped_name, value2);
+      }
     }
     let slice = text_slice(code, root_from, root_to);
     function parse() {

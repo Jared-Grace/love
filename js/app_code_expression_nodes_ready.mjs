@@ -5,6 +5,8 @@ import { not } from "./not.mjs";
 import { app_code_expression_name_is } from "./app_code_expression_name_is.mjs";
 import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
 import { property_get } from "./property_get.mjs";
+import { app_code_expression_node_settled_is } from "./app_code_expression_node_settled_is.mjs";
+import { app_code_expression_node_logical_is } from "./app_code_expression_node_logical_is.mjs";
 import { or } from "./or.mjs";
 import { list_concat } from "./list_concat.mjs";
 export function app_code_expression_nodes_ready(item) {
@@ -43,6 +45,17 @@ export function app_code_expression_nodes_ready(item) {
   let right = property_get(item, "right");
   let left_is = app_code_expression_node_is(left);
   let right_is = app_code_expression_node_is(right);
+  ("2026-10-17, at the human's asking: an && or an || is read left side first, and its right side only if the left has not already settled it - so nothing on its right is ready while the left is still being worked out, and once the left settles it the operator is ready whatever stands on its right. Not picked: offering both sides at once, as every other operator does, which would let a learner work out a side JavaScript never reads");
+  let settled = app_code_expression_node_settled_is(item);
+  if (settled) {
+    let decided = [item];
+    return decided;
+  }
+  let logical = app_code_expression_node_logical_is(item);
+  if (logical && left_is) {
+    let left_first = app_code_expression_nodes_ready(left);
+    return left_first;
+  }
   let either = or(left_is, right_is);
   if (not(either)) {
     let single = [item];

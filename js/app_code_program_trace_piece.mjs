@@ -4,10 +4,16 @@ import { equal } from "./equal.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { subtract } from "./subtract.mjs";
 import { app_code_program_trace_piece_name } from "./app_code_program_trace_piece_name.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
+import { app_code_expression_node_settled_is } from "./app_code_expression_node_settled_is.mjs";
+import { app_code_expression_from_js } from "./app_code_expression_from_js.mjs";
+import { app_code_program_trace_piece_solved } from "./app_code_program_trace_piece_solved.mjs";
+import { js_identifiers_names } from "./js_identifiers_names.mjs";
+import { list_last } from "./list_last.mjs";
+import { property_set } from "./property_set.mjs";
 import { app_code_expression_node_before } from "./app_code_expression_node_before.mjs";
 import { error } from "./error.mjs";
-import { app_code_program_trace_piece_solved } from "./app_code_program_trace_piece_solved.mjs";
 export function app_code_program_trace_piece(state, piece, side) {
   arguments_assert(arguments, 3);
   ("what a piece of the expression comes to, any evaluating it took added to state's actions; side says it stands on a side of an operator rather than being the whole expression");
@@ -59,9 +65,39 @@ export function app_code_program_trace_piece(state, piece, side) {
     let piece2 = property_get(piece, "left");
     let left = app_code_program_trace_piece(state, piece2, true);
     let piece3 = property_get(piece, "right");
-    let right = app_code_program_trace_piece(state, piece3, true);
     let operator = property_get(piece, "operator");
+    ("2026-10-17, at the human's asking: an && or an || whose left side settles it is worked out without its right side ever being read, as JavaScript works it out. The right side stays in the shape as written, so the step shows what is skipped; its names are kept on the step as skipped, with the values they hold, so a line solved whole can still write them as names. Asked of a shape whose right side is not read yet, since ",
+      fn_name("app_code_expression_node_settled_is"),
+      " looks only at the left. Not picked: reading the right side and throwing it away, the way this was first built");
+    let left_only = app_code_expression_node(left, operator, null);
+    let settled = app_code_expression_node_settled_is(left_only);
+    let right = null;
+    if (settled) {
+      let values = property_get(state, "values");
+      right = app_code_expression_from_js(piece3, values);
+    } else {
+      right = app_code_program_trace_piece(state, piece3, true);
+    }
     expression = app_code_expression_node(left, operator, right);
+    if (settled) {
+      let value_settled = app_code_program_trace_piece_solved(
+        state,
+        piece,
+        expression,
+        from,
+        to,
+      );
+      let names = js_identifiers_names(piece3);
+      let skipped = {};
+      for (let skipped_name of names) {
+        let object2 = property_get(state, "values");
+        skipped[skipped_name] = property_get(object2, skipped_name);
+      }
+      let actions = property_get(state, "actions");
+      let settling = list_last(actions);
+      property_set(settling, "skipped", skipped);
+      return value_settled;
+    }
   } else if (unary_is) {
     let piece4 = property_get(piece, "argument");
     let argument = app_code_program_trace_piece(state, piece4, true);
