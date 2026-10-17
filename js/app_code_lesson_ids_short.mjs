@@ -192,6 +192,8 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_expression_parentheses_and_or: text_frozen("brackets_pair"),
     app_code_lesson_expression_choose_order_stop_early_and:
       text_frozen("order_stop_and"),
+    app_code_lesson_expression_choose_order_stop_early_both:
+      text_frozen("order_stop_both"),
     app_code_lesson_expression_choose_order_not_twice:
       text_frozen("order_not_twice"),
     app_code_lesson_expression_not_twice: text_frozen("not_twice"),

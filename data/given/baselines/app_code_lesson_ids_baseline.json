@@ -116,6 +116,7 @@
   "order_moved",
   "brackets_pair",
   "order_stop_and",
+  "order_stop_both",
   "order_not_twice",
   "not_twice",
   "order_not",
