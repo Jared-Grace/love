@@ -1,10 +1,10 @@
+import { js_value_code } from "./js_value_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_exists_assert } from "./property_exists_assert.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_add } from "./list_add.mjs";
-import { json_to } from "./json_to.mjs";
 import { text_index_of_from } from "./text_index_of_from.mjs";
 import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
 import { text_size } from "./text_size.mjs";
@@ -50,8 +50,8 @@ export function app_code_program_trace_shorter({
     lead: "",
   });
   let right_value = right_get();
-  let held_written = json_to(held);
-  let right_written = json_to(right_value);
+  let held_written = js_value_code(held);
+  let right_written = js_value_code(right_value);
   let index_from = property_get(target, "end");
   let operator_from = text_index_of_from(code, operator, index_from);
   let value = app_code_operator_solve(held, symbol, right_value);
