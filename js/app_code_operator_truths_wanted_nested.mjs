@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_operator_truths_wanted } from "./app_code_operator_truths_wanted.mjs";
 import { list_get } from "./list_get.mjs";
@@ -25,8 +26,11 @@ export function app_code_operator_truths_wanted_nested(
     let truths_left = [first_truth, second_truth, alone_truth];
     return truths_left;
   }
-  let alone_truth_right = list_get(outer, 0);
-  let gathered_value_right = list_get(outer, 1);
+  ("2026-10-17: with the pair gathered on the right, the side standing alone is read first, and JavaScript stops there when it already settles the line - false before &&, true before ||. The pair the lesson says goes first would then never run. So the alone side takes the one value that does not settle: true for &&, false for ||. That value hands the line straight through to the pair, so the pair has to come to what was wanted.");
+  ("Not picked: keeping the outer answer's own choice and only swapping it when it settles. That is this same rule with an extra branch, because the only choice that never settles is the one picked here.");
+  ("Not picked: leaving the gathered-left lines alone is not a choice made here - with the pair on the left it runs first anyway, so nothing it says goes first is skipped.");
+  let alone_truth_right = equal(alone_symbol, "&&");
+  let gathered_value_right = want_true;
   let inner_right = app_code_operator_truths_wanted(
     gathered_symbol,
     gathered_value_right,
