@@ -9,7 +9,7 @@ export function app_code_lesson_expression_choose_order_stop_early_or_intro(
 ) {
   arguments_assert(arguments, 1);
   ("the sentences that say what is different about the stop-early-on-|| lesson, in a card of their own");
-  ("The human's own wording, 2026-10-17, kept nearly word for word: JS is written JavaScript, a we is added to Suppose have, and the And is dropped from the line giving the answer. The ... stands for a right side not looked at yet, which is what lets the answer be said before it is read");
+  ("The human's own wording, 2026-10-17, kept word for word as they laid the page out the second time, which opens on what true || true and true || false come to rather than on Suppose we have: true || .... The ... stands for a right side not looked at yet, which is what lets the answer be said before it is read");
   let and_symbol = js_operator_and_symbol();
   let or_symbol = js_operator_or_symbol();
   let true_word = js_keyword_true();
@@ -19,11 +19,16 @@ export function app_code_lesson_expression_choose_order_stop_early_or_intro(
   let skipped = [false_word, " ", and_symbol, " ", false_word].join("");
   let whole = [true_word, " ", or_symbol, " ", skipped].join("");
   let skipped_wrapped = ["(", skipped, ")"].join("");
-  html_div_cycle_code(parent, ["Suppose we have: ", stops]);
+  let with_true = [true_word, " ", or_symbol, " ", true_word].join("");
+  let with_false = [true_word, " ", or_symbol, " ", false_word].join("");
+  html_div_cycle_code(parent, ["So ", with_true, " is ", true_word]);
+  html_div_cycle_code(parent, ["And ", with_false, " is ", true_word]);
   html_div_cycle_code(parent, [
-    "Then no matter what ",
+    "For ",
+    stops,
+    " , it doesn't matter what the ",
     dots,
-    " is, the answer to ",
+    " is : ",
     stops,
     " is always ",
     true_word,
