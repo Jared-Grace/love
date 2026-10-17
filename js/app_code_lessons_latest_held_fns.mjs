@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_choose_order_stop_early } from "./app_code_lesson_expression_choose_order_stop_early.mjs";
+import { app_code_lesson_expression_choose_order_stop_early_or } from "./app_code_lesson_expression_choose_order_stop_early_or.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
 import { app_code_lesson_while_down } from "./app_code_lesson_while_down.mjs";
 import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
@@ -99,7 +99,7 @@ export function app_code_lessons_latest_held_fns() {
   "then stop latest at lesson 292, Else if twice, 2026-10-11, as the human asked: hold 293 onward";
   "2026-10-17: hold Stop early on && and ||, new at the human's asking straight after && before ||, until the human has read its first draft";
   let fns = [
-    app_code_lesson_expression_choose_order_stop_early,
+    app_code_lesson_expression_choose_order_stop_early_or,
     app_code_lesson_while_log,
     app_code_lesson_while_down,
     app_code_lesson_while_total,
