@@ -30,7 +30,8 @@ export async function playwright_happy_walk_capped(page, steps_max) {
   ("how many right answers are wanted from each screen before the walk moves on. One proves the question can be answered; the second proves the screen can ask again, which is what a learner practising does and is a whole path nothing else walks.");
   let instances_max = 2;
   ("a screen answered this many times without the count ever moving is a screen whose app is not saying that anything was taken - so the walk would answer it forever. Named here rather than left to the step allowance because the failure it reports is a different one and names a different repair.");
-  let answers_max = 60;
+  ("2026-10-17: raised from 60 to 200. A guided example of running a program counts no right answers, being an example and not a quiz, and once an expression with several operators came to be solved one operator at a time - the operator, then its value - the guided example of the grid lesson took 61 presses and was called stuck at its last line. Not picked: counting a right answer in a guided example, which would say a learner answered what they were shown");
+  let answers_max = 200;
   let steps = 0;
   ("a control that goes from the page between being found and being pressed is an ordinary miss, and a run of them in a row is not. One means a screen moved while it was being read; a run of them means the screen is offering something marked that cannot be pressed at all, and every one of them costs the press its whole timeout - so left alone the walk spends hours saying nothing rather than naming the screen.");
   let missed = 0;
