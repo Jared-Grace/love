@@ -1,4 +1,3 @@
-import { each } from "./each.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_program_trace } from "./app_code_program_trace.mjs";
@@ -79,6 +78,7 @@ import { property_exists } from "./property_exists.mjs";
 import { app_code_expression_choose_order_ask } from "./app_code_expression_choose_order_ask.mjs";
 import { app_code_program_step_solve_decoys } from "./app_code_program_step_solve_decoys.mjs";
 import { promise_wrap } from "./promise_wrap.mjs";
+import { each } from "./each.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { boolean_is } from "./boolean_is.mjs";
 import { app_code_program_step_operator_decoys } from "./app_code_program_step_operator_decoys.mjs";
@@ -100,6 +100,7 @@ import { app_code_example_answer_label } from "./app_code_example_answer_label.m
 import { app_code_style_normal_box } from "./app_code_style_normal_box.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_code_program_step_guide_action } from "./app_code_program_step_guide_action.mjs";
+import { property_get_or } from "./property_get_or.mjs";
 export function app_code_program_step_through_generic(
   parent,
   code,
@@ -783,7 +784,19 @@ export function app_code_program_step_through_generic(
         next_line_ask();
         return;
       }
-      actions_ask(k + 1);
+      ("2026-10-17, at the human's asking: Solve an expression is chosen once for an expression, and its every step after that - each name, then its operators - is asked straight on, without choosing it again; which steps go on is ",
+        fn_name("app_code_program_step_actions_solve_whole"),
+        "'s to say");
+      let next = k + 1;
+      while (
+        less_than(next, list_size(actions)) &&
+        property_get_or(list_get(actions, next), "continues", false)
+      ) {
+        let item = list_get(actions, next);
+        await action_do(item, line_index);
+        next = next + 1;
+      }
+      actions_ask(next);
     }
     for (let option of options) {
       let option_kind = list_get(option, 0);

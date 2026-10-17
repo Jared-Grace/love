@@ -1,16 +1,17 @@
-import { equal } from "./equal.mjs";
-import { less_than } from "./less_than.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
-import { not } from "./not.mjs";
+import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
+import { equal } from "./equal.mjs";
 import { null_is } from "./null_is.mjs";
+import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
+import { less_than } from "./less_than.mjs";
 import { list_last } from "./list_last.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { app_code_expression_from_js } from "./app_code_expression_from_js.mjs";
@@ -21,6 +22,7 @@ import { object_copy_assign } from "./object_copy_assign.mjs";
 import { json_to } from "./json_to.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { list_get } from "./list_get.mjs";
+import { list_set } from "./list_set.mjs";
 export function app_code_program_step_actions_solve_whole(code, actions) {
   arguments_assert(arguments, 2);
   ("the actions of one line of a program's trace, as a learner stepping through it is asked them: an expression holding more than one operator is solved whole, as the expression lessons solve a line - every name in it first, one at a time, then one action carrying the expression's shape, whose operators the learner presses in the order they go, choosing what each comes to. code is the whole program, since the trace places every action in it");
@@ -130,11 +132,50 @@ export function app_code_program_step_actions_solve_whole(code, actions) {
     return true;
   }
   function run_end() {
+    let start = list_size(result);
     let done = run_whole();
     if (not(done)) {
       run_plain();
     }
     run = [];
+    run_continues_mark(start);
+  }
+  function run_continues_mark(start) {
+    "2026-10-17, at the human's asking: solving an expression is chosen once, and every step of it after that is asked straight on - each name in it, then its operators - without choosing Solve an expression again. So each step after the first inside the one expression is marked continues. Inside is inside the span of the run's last operator, which holds the whole expression; a run with no operator, or a step with no place in the line, as the a that a += b adds to, is chosen as before. Not picked: chaining every evaluating in a run, which would join names that only sit side by side, as two things logged";
+    let top = null;
+    for (let index = start; less_than(index, list_size(result)); index++) {
+      let action = list_get(result, index);
+      if (operator_is(action)) {
+        top = action;
+      }
+    }
+    if (null_is(top)) {
+      return;
+    }
+    let top_from = property_get(top, "from");
+    let top_to = property_get(top, "to");
+    function inside_is(action) {
+      let from = property_get(action, "from");
+      if (null_is(from)) {
+        return false;
+      }
+      let r4 =
+        greater_than_equal(from, top_from) &&
+        less_than_equal(property_get(action, "to"), top_to);
+      return r4;
+    }
+    for (let index = start + 1; less_than(index, list_size(result)); index++) {
+      let index2 = subtract(index, 1);
+      let before = list_get(result, index2);
+      let action = list_get(result, index);
+      let joined = inside_is(before) && inside_is(action);
+      if (joined) {
+        let marked = object_copy_assign(action, {
+          continues: true,
+        });
+        list_set(result, index, marked);
+      }
+    }
   }
   ("a run of evaluating with nothing else between may still hold two expressions one after the other, as an if's condition and the line inside its { } can; each ends at an operator that no operator after it in the run holds inside its own span");
   function top_is(index) {
