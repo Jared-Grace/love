@@ -1,10 +1,11 @@
+import { app_code_lesson_expression_choose_order_stop_early } from "./app_code_lesson_expression_choose_order_stop_early.mjs";
+import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
+import { app_code_lesson_while_down } from "./app_code_lesson_while_down.mjs";
+import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
+import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { app_code_lesson_else_if_order } from "./app_code_lesson_else_if_order.mjs";
 import { app_code_lesson_braces_run_thrice } from "./app_code_lesson_braces_run_thrice.mjs";
 import { app_code_lesson_if_thrice } from "./app_code_lesson_if_thrice.mjs";
-import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
-import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
-import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
-import { app_code_lesson_while_down } from "./app_code_lesson_while_down.mjs";
 export function app_code_lessons_latest_held_fns() {
   "the lessons kept off latest while every other lesson is shown there, asked for by the human 2026-09-30: deploy through lesson 204 and skip 205, the 24-hour clock, which is not ready to hand over yet";
   "A list of lessons rather than a cut at a number, for the same reason the released list is one: a lesson put in above would move a number, and a list names the lesson itself. Empty it to show every lesson on latest again. The working copy shows these lessons whatever this holds.";
@@ -96,7 +97,9 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-11: Does this section run? made one per shape of two or three pairs of braces, each straight before the first lesson of its shape, as the human asked - each 2 and 3 brace - and held with the first until the human has read them";
   "then deploy everything except the looping lessons, 2026-10-11, as the human asked: hold the three while lessons";
   "then stop latest at lesson 292, Else if twice, 2026-10-11, as the human asked: hold 293 onward";
+  "2026-10-17: hold Stop early on && and ||, new at the human's asking straight after && before ||, until the human has read its first draft";
   let fns = [
+    app_code_lesson_expression_choose_order_stop_early,
     app_code_lesson_while_log,
     app_code_lesson_while_down,
     app_code_lesson_while_total,
