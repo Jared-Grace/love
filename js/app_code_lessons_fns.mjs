@@ -275,6 +275,7 @@ import { app_code_lesson_number_text_join } from "./app_code_lesson_number_text_
 import { app_code_lesson_if_even } from "./app_code_lesson_if_even.mjs";
 import { app_code_lesson_step_if_change } from "./app_code_lesson_step_if_change.mjs";
 import { app_code_lesson_if_change } from "./app_code_lesson_if_change.mjs";
+import { app_code_lesson_step_if_two_lines } from "./app_code_lesson_step_if_two_lines.mjs";
 import { app_code_lesson_if_two_lines } from "./app_code_lesson_if_two_lines.mjs";
 import { app_code_lesson_if_two_changes } from "./app_code_lesson_if_two_changes.mjs";
 import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
@@ -620,6 +621,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_if_even,
     app_code_lesson_step_if_change,
     app_code_lesson_if_change,
+    app_code_lesson_step_if_two_lines,
     app_code_lesson_if_two_lines,
     app_code_lesson_if_two_changes,
     app_code_lesson_token_order,
