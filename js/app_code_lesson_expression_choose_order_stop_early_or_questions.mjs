@@ -3,7 +3,7 @@ import { app_code_lesson_expression_choose_order_and_before_or_expression } from
 import { app_code_expression_stops_early_marked } from "./app_code_expression_stops_early_marked.mjs";
 import { app_code_lesson_expression_choose_order_and_before_or_tree_of_code } from "./app_code_lesson_expression_choose_order_and_before_or_tree_of_code.mjs";
 import { app_code_lesson_expression_choose_order_questions_generic } from "./app_code_lesson_expression_choose_order_questions_generic.mjs";
-export function app_code_lesson_expression_choose_order_stop_early_questions() {
+export function app_code_lesson_expression_choose_order_stop_early_or_questions() {
   arguments_assert(arguments, 0);
   ("the question bank of the stop-early lesson: the lines of the && before || lesson, each marked to be solved as JavaScript solves it");
   ("The same lines rather than new ones, because what is new here is only the order they are solved in. Among them are true || false && false, where the || is solved first and the && never is, and false && true || true, where the && still goes first and stopping early does not jump ahead of it. Some lines stop early and some do not, so a learner has to look at the left side each time rather than skip every time");
