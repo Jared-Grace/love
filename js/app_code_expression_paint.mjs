@@ -4,6 +4,7 @@ import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { not } from "./not.mjs";
 import { text_to } from "./text_to.mjs";
 import { html_span_text } from "./html_span_text.mjs";
+import { app_code_expression_name_is } from "./app_code_expression_name_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_span } from "./html_span.mjs";
 import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
@@ -24,6 +25,13 @@ export function app_code_expression_paint(parent, item, on_operator) {
     ("nothing but a value, so there is no operator to offer and the number is written as it stands");
     let text = text_to(item);
     html_span_text(parent, text);
+    return;
+  }
+  ("2026-10-17: a name not yet read is one piece the learner can press, the name itself, so it is handed over as its own operator piece and its own whole");
+  if (app_code_expression_name_is(item)) {
+    let name = property_get(item, "name");
+    let name_span = html_span_text(parent, name);
+    on_operator(item, name_span, name_span);
     return;
   }
   let symbol = property_get(item, "operator");

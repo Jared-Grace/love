@@ -1,7 +1,8 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { not } from "./not.mjs";
+import { app_code_expression_name_is } from "./app_code_expression_name_is.mjs";
 import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { or } from "./or.mjs";
@@ -20,6 +21,11 @@ export function app_code_expression_nodes_ready(item) {
   if (not(node_is)) {
     let none = [];
     return none;
+  }
+  ("2026-10-17: a name waits on nothing, so it is ready as it stands; standing in a line as written, it comes in the list where it is written, which is the order JavaScript reads it in");
+  if (app_code_expression_name_is(item)) {
+    let named = [item];
+    return named;
   }
   let before_is = app_code_expression_node_before_is(item);
   if (before_is) {

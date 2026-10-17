@@ -1,21 +1,31 @@
-import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
-import { and } from "./and.mjs";
-import { app_code_operator_solve_before } from "./app_code_operator_solve_before.mjs";
-import { app_code_expression_node_before } from "./app_code_expression_node_before.mjs";
-import { app_code_expression_node } from "./app_code_expression_node.mjs";
-import { app_code_expression_node_parenthesis_wrapped } from "./app_code_expression_node_parenthesis_wrapped.mjs";
-import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
-import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
+import { app_code_expression_name_is } from "./app_code_expression_name_is.mjs";
+import { and } from "./and.mjs";
 import { property_get } from "./property_get.mjs";
+import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
+import { app_code_operator_solve_before } from "./app_code_operator_solve_before.mjs";
+import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
+import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
+import { not } from "./not.mjs";
+import { app_code_expression_node_before } from "./app_code_expression_node_before.mjs";
 import { property_get_or } from "./property_get_or.mjs";
+import { app_code_expression_node_parenthesis_wrapped } from "./app_code_expression_node_parenthesis_wrapped.mjs";
+import { app_code_expression_node } from "./app_code_expression_node.mjs";
 export function app_code_expression_solved(item, node) {
   arguments_assert(arguments, 2);
   ("the same expression with one of its operators worked out and standing there as its value - the step a learner sees after picking that operator: picking the * in 1 + 2 * 3 gives back 1 + 6");
   ("One step, not the answer. A learner who is shown the whole line collapse at once has watched something happen; a learner who picks and is answered, and then picks again, has done every step of it, and the step they get wrong is the one thing they did not know.");
   let same = equal(item, node);
+  ("2026-10-17: a name is worked out by reading it, so it stands there as the value it holds; a name other than the one picked stays a name, and is not looked inside, since it has no sides");
+  let name_is = app_code_expression_name_is(item);
+  if (and(same, name_is)) {
+    let read = property_get(item, "value");
+    return read;
+  }
+  if (name_is) {
+    return item;
+  }
   let node_before_is = app_code_expression_node_before_is(node);
   if (and(same, node_before_is)) {
     let symbol_before = property_get(node, "operator");

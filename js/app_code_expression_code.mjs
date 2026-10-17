@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { not } from "./not.mjs";
 import { text_to } from "./text_to.mjs";
+import { app_code_expression_name_is } from "./app_code_expression_name_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
 import { app_code_operator_called_is } from "./app_code_operator_called_is.mjs";
@@ -20,6 +21,11 @@ export function app_code_expression_code(item) {
   if (not(node_is)) {
     let text = text_to(item);
     return text;
+  }
+  ("2026-10-17: a name not yet read is written as the name, the way the line was typed");
+  if (app_code_expression_name_is(item)) {
+    let name = property_get(item, "name");
+    return name;
   }
   let symbol = property_get(item, "operator");
   let before_is = app_code_expression_node_before_is(item);
