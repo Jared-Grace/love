@@ -1,15 +1,17 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 export function app_code_lesson_name_id_category_then(left, paint) {
   arguments_assert(arguments, 2);
-  ("A lesson name whose home title opens with the category word and then whatever else is handed in.");
+  ("A lesson name whose home title is whatever paint draws; the category word is taken and no longer drawn, see below.");
   ("Fifty lessons were each writing the same three-deep nest to say that: a title maker returning a painter, whose first line writes the category. Only the lines after that first one ever differed, so only those are asked for here, as paint.");
   ("The title maker is handed the capitalised category word, which is what the category line wants. It used to be handed a list of the lesson's own words ahead of that word as well, and that list was what the lesson's id was built out of. Ids are written down under each lesson's function name now, so the list was read by nobody and came off here and off every caller in one move.");
   ("A wrapper that paints its words into the title still receives them - that is a title, not an id. What went is the second, silent use the same list was being put to.");
+  ("2026-10-18, asked for by the human: the category word is no longer painted. The home list shows each lesson inside the card of its group, which already names it, and the heading at the top of a lesson names that group instead (",
+    fn_name("app_code_lesson_group_category_paint"),
+    "), since a category word - Statements on every if lesson - could disagree with the group the lesson sits in. The word is still handed in, so the fifty callers are unchanged.");
   function title_get(left_upper) {
     function render(parent) {
-      app_code_lesson_name_id_category(parent, left_upper);
       paint(parent);
     }
     return render;

@@ -7,6 +7,7 @@ import { add_1_period } from "./add_1_period.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_space } from "./html_span_space.mjs";
 import { emoji_check } from "./emoji_check.mjs";
+import { app_code_lesson_group_category_paint } from "./app_code_lesson_group_category_paint.mjs";
 import { subtract_1 } from "./subtract_1.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_code_title_strip } from "./app_code_title_strip.mjs";
@@ -31,6 +32,8 @@ export function app_code_lesson_title_strip(root, context, lesson) {
       html_span_text(title, check);
       html_span_space(title);
     }
+    ("the group the lesson sits under on the home list leads its title, where a category word used to, at the human's request 2026-10-18");
+    app_code_lesson_group_category_paint(title, lesson_index);
     app_code_lesson_title_render(title, lesson);
   }
   let index_previous = subtract_1(lesson_index);
