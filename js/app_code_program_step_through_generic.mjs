@@ -1,3 +1,4 @@
+import { js_value_code } from "./js_value_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_program_trace } from "./app_code_program_trace.mjs";
@@ -509,7 +510,7 @@ export function app_code_program_step_through_generic(
       let value = property_get(action, "value");
       html_clear(ask);
       ('2026-10-15, at the human\'s asking: a value is written as it is written in code, so a string keeps its quotes - in the choices, in the note, and in the line it is solved into - and the name a holding love reads "love", never love. What is logged is written as the console writes it, without them');
-      let said = json_to(value);
+      let said = js_value_code(value);
       let whole_is = property_exists(action, "tree");
       if (whole_is) {
         ("2026-10-17, at the human's asking: an expression with more than one operator is solved on a line of its own under the program, the line every expression lesson presses, by the same function, so the two cannot come to press differently: the learner chooses the operator that goes next and then what it comes to, and the line shortens until one value is left. That value is then written into the program's line in place of the expression, as a value asked for alone is. Not picked: pressing the operators in the program's own line, which would be a second pressable line to keep in step with the first. Not picked: saying what to press in the guide above the program, which a quiz does not have; it is said over the line, as the expression lessons' quizzes say it");
@@ -667,7 +668,7 @@ export function app_code_program_step_through_generic(
     if (equal(kind, "assign")) {
       let name2 = property_get(action, "name");
       let value2 = property_get(action, "value");
-      let t = json_to(value2);
+      let t = js_value_code(value2);
       let held2 = property_get(state, "held");
       if (property_exists(held2, name2)) {
         let before = property_get(state, "held_before");
