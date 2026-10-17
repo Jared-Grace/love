@@ -475,7 +475,7 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_step_name_copy_kept: text_frozen("step_copy_kept"),
     app_code_lesson_step_name_swap_try: text_frozen("step_swap_try"),
     app_code_lesson_step_if_change: text_frozen("step_if_change"),
-    app_code_lesson_step_if_two_lines: text_frozen("step_if_two_lines"),
+    app_code_lesson_step_if_two_lines: text_frozen("step_if_two"),
     app_code_lesson_step_name_average_two: text_frozen("step_avg_two"),
     app_code_lesson_step_name_grid_inside: text_frozen("step_grid_inside"),
     app_code_lesson_step_name_average_three: text_frozen("step_avg_three"),
