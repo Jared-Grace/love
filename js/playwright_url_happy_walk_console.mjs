@@ -1,9 +1,9 @@
-import { equal } from "./equal.mjs";
-import { list_add } from "./list_add.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { list_add } from "./list_add.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { playwright_happy_walk_capped } from "./playwright_happy_walk_capped.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
+import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 export async function playwright_url_happy_walk_console(url, steps) {
   "$plain url";
@@ -37,6 +37,8 @@ export async function playwright_url_happy_walk_console(url, steps) {
     } catch (err) {
       stuck = err.message;
     }
+    ("the page is read five seconds after the walk ends, so what it shows is where it came to rest and not a moment inside an animation - which is what tells a page that stopped asking from one still moving");
+    await page.waitForTimeout(5000);
     shown = await page.innerText("body");
   }
   await playwright_test_blank(on_page);

@@ -59,6 +59,15 @@ export async function playwright_happy_walk_capped(page, steps_max) {
     let url_before = page.url();
     let step = await playwright_happy_step(page, selector);
     let bare = property_get(step, "none");
+    let answered_here = less_than(0, answers);
+    if (bare && not(leaving) && answered_here) {
+      ("2026-10-17: a screen answered here without its count moving - a guided example, which counts nothing - is waited on once for its next question before being taken as finished, as a counted screen already is above. Its next question comes only once what the last answer did has finished moving, and solving an expression one operator at a time ends in four moves - the success shown, the expression fading out, the room fitting the value, the value fading in - which outlast a walk that looked at once: it took the way out, and left the example half run. Not picked: shortening the moves on the page, which are there for the learner and asked for by the human");
+      let asking = await playwright_happy_answer_wait(page, wait_ms);
+      if (asking) {
+        step = await playwright_happy_step(page, selector);
+        bare = property_get(step, "none");
+      }
+    }
     if (bare) {
       ("the two kinds together are everything the screen has marked, so a screen offering none of the one wanted is offering the other - which makes this the ordinary way a walk crosses a screen with nothing to answer, and the ordinary way it leaves one that has stopped asking");
       leaving = not(leaving);
