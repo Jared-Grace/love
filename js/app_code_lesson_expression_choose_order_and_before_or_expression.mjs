@@ -5,7 +5,6 @@ import { app_code_operator_truths_wanted } from "./app_code_operator_truths_want
 import { boolean_random } from "./boolean_random.mjs";
 import { list_get } from "./list_get.mjs";
 import { ternary } from "./ternary.mjs";
-import { not } from "./not.mjs";
 import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
 import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
 export function app_code_lesson_expression_choose_order_and_before_or_expression(
@@ -27,11 +26,7 @@ export function app_code_lesson_expression_choose_order_and_before_or_expression
   let or_right_side = list_get(outer, 1);
   let and_value = ternary(and_left, or_left_side, or_right_side);
   let far_truth = ternary(and_left, or_right_side, or_left_side);
-  ("2026-10-17, at the human's asking: a line with the && on the right of the || has a false on its left. JavaScript reads the || left side first and never reads its right side once that is true, so true || false && true has no && to work out at all, and a lesson on && going first would be asking for a step JavaScript skips. With false there, the || waits on the &&, which is then what the whole line comes to. Not picked: rewording the lesson to say && only groups first, which a learner meets before they have met skipping. Not picked: leaving the line maker alone and letting the press order follow JavaScript, which marks the && wrong on a lesson titled for it");
-  if (not(and_left)) {
-    far_truth = false;
-    and_value = want_true;
-  }
+  ("2026-10-17, at the human's asking: every pair of trues and falses is drawn, true || false && true among them. The lessons solve both sides of an || before it, as a beginner's rule that comes to the same answer as JavaScript's on every line drawn here, so the && is always there to work out first. Not picked: drawing a false on the left of the || whenever the && is on its right, built earlier the same day while the lessons followed JavaScript in skipping; it stopped a step being skipped, but by leaving out every line with a true there");
   let inner = app_code_operator_truths_wanted(and_symbol, and_value);
   let inner_left = list_get(inner, 0);
   let inner_right = list_get(inner, 1);
