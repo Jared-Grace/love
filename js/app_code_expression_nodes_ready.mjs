@@ -5,6 +5,8 @@ import { not } from "./not.mjs";
 import { app_code_expression_name_is } from "./app_code_expression_name_is.mjs";
 import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
 import { property_get } from "./property_get.mjs";
+import { app_code_expression_node_stops_early_is } from "./app_code_expression_node_stops_early_is.mjs";
+import { app_code_expression_node_settled_is } from "./app_code_expression_node_settled_is.mjs";
 import { or } from "./or.mjs";
 import { list_concat } from "./list_concat.mjs";
 export function app_code_expression_nodes_ready(item) {
@@ -44,6 +46,17 @@ export function app_code_expression_nodes_ready(item) {
   let left_is = app_code_expression_node_is(left);
   let right_is = app_code_expression_node_is(right);
   ("2026-10-17, at the human's asking: an && or an || waits on both its sides, as every other operator does. JavaScript stops at the left side when that already decides the answer, but on a line made only of values, names and operators, working out the right side as well cannot change the answer, so a beginner learns one rule for every operator, as simple sorts are taught before fast ones. Stopping early is a lesson of its own, for the lines where it changes what happens. Not picked: offering only the left side until it settles the line, built earlier the same day, which asked a beginner for a second rule before it could make any difference to them");
+  ("2026-10-17, at the human's asking: an && or an || the lesson on stopping early marked is read as JavaScript reads it - its left side first, and once that value decides the answer the operator is ready at once, its right side never worked out. Not picked: offering the right side alongside the left, which is the beginner's rule this lesson is there to go past");
+  if (app_code_expression_node_stops_early_is(item)) {
+    if (app_code_expression_node_settled_is(item)) {
+      let settled = [item];
+      return settled;
+    }
+    if (left_is) {
+      let first = app_code_expression_nodes_ready(left);
+      return first;
+    }
+  }
   let either = or(left_is, right_is);
   if (not(either)) {
     let single = [item];
