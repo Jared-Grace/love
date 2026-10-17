@@ -1,5 +1,3 @@
-import { app_code_lesson_expression_choose_order_stop_early_or } from "./app_code_lesson_expression_choose_order_stop_early_or.mjs";
-import { app_code_lesson_expression_choose_order_stop_early_and } from "./app_code_lesson_expression_choose_order_stop_early_and.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
 import { app_code_lesson_while_down } from "./app_code_lesson_while_down.mjs";
 import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
@@ -99,9 +97,8 @@ export function app_code_lessons_latest_held_fns() {
   "then deploy everything except the looping lessons, 2026-10-11, as the human asked: hold the three while lessons";
   "then stop latest at lesson 292, Else if twice, 2026-10-11, as the human asked: hold 293 onward";
   "2026-10-17: hold Stop early on ||, new at the human's asking straight after && before ||, and Stop early on &&, straight after the parentheses lessons, until the human has read their first drafts";
+  "2026-10-17: both stop-early lessons released, the human having read and approved their wording";
   let fns = [
-    app_code_lesson_expression_choose_order_stop_early_or,
-    app_code_lesson_expression_choose_order_stop_early_and,
     app_code_lesson_while_log,
     app_code_lesson_while_down,
     app_code_lesson_while_total,
