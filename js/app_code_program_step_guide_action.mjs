@@ -11,6 +11,7 @@ import { not } from "./not.mjs";
 import { list_last } from "./list_last.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_concat } from "./list_concat.mjs";
+import { property_exists } from "./property_exists.mjs";
 export function app_code_program_step_guide_action(entry, k) {
   arguments_assert(arguments, 2);
   let actions = property_get(entry, "actions");
@@ -163,6 +164,14 @@ export function app_code_program_step_guide_action(entry, k) {
     ("2026-10-15, at the human's asking: an expression holding more than one operator, as a + b + c does, is named whole, as it reads now, and the operator to solve next is named after it, since one is solved at a time; an expression with one operator is the operator itself, and is said as before");
     let whole = property_get(action, "whole");
     function said_of(ending) {
+      "2026-10-17: an expression solved whole, its operators pressed in the order they go, is said to have more than one operator and to be solved one at a time, since the learner is about to choose which goes first";
+      if (property_exists(action, "tree")) {
+        let r21 = [
+          whole,
+          ", which has more than one operator, so it is solved one operator at a time",
+        ];
+        return r21;
+      }
       if (equal(whole, name)) {
         let r19 = [whole, operated + ending];
         return r19;

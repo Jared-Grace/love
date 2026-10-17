@@ -1,6 +1,11 @@
+import { each } from "./each.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_program_trace } from "./app_code_program_trace.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_code_program_step_actions_solve_whole } from "./app_code_program_step_actions_solve_whole.mjs";
+import { object_copy_property_set } from "./object_copy_property_set.mjs";
+import { list_add } from "./list_add.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
 import { app_code_flex_gap } from "./app_code_flex_gap.mjs";
@@ -9,7 +14,6 @@ import { html_style_overflow_hidden } from "./html_style_overflow_hidden.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_text_align_left } from "./html_text_align_left.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
-import { list_add } from "./list_add.mjs";
 import { app_shared_code_padding_x } from "./app_shared_code_padding_x.mjs";
 import { html_style_bleed_x } from "./html_style_bleed_x.mjs";
 import { html_text_set } from "./html_text_set.mjs";
@@ -43,7 +47,6 @@ import { html_copy_fly_text_rect } from "./html_copy_fly_text_rect.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_last_or_null } from "./list_last_or_null.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_size } from "./list_size.mjs";
 import { modulo } from "./modulo.mjs";
@@ -72,14 +75,17 @@ import { text_trim } from "./text_trim.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
 import { json_to } from "./json_to.mjs";
+import { property_exists } from "./property_exists.mjs";
+import { app_code_expression_choose_order_ask } from "./app_code_expression_choose_order_ask.mjs";
+import { app_code_program_step_solve_decoys } from "./app_code_program_step_solve_decoys.mjs";
+import { promise_wrap } from "./promise_wrap.mjs";
+import { html_remove } from "./html_remove.mjs";
 import { boolean_is } from "./boolean_is.mjs";
 import { app_code_program_step_operator_decoys } from "./app_code_program_step_operator_decoys.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { object_values } from "./object_values.mjs";
-import { property_exists } from "./property_exists.mjs";
 import { list_remove_if_exists } from "./list_remove_if_exists.mjs";
 import { app_code_expression_value_choose_buttons_generic } from "./app_code_expression_value_choose_buttons_generic.mjs";
-import { html_remove } from "./html_remove.mjs";
 import { app_code_line_pieces_add } from "./app_code_line_pieces_add.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -109,8 +115,25 @@ export function app_code_program_step_through_generic(
     "'s to say, so the steps asked for here are the ones the computer takes.");
   ("A line is pressed in the program itself rather than picked from a list of copies, since the question is where in the program the computer is. A wrong line turns red until the right one is pressed. The answers are the choices of every other question in this app, so a wrong one turns red and is spent and the right one turns green.");
   ("2026-10-14, at the human's asking: a name solved into its value stays solved in its line while the program runs, so if (true) { stays in sight while what it decided runs; every line goes back to how it is written once the program is complete, since the program itself does not change. Not picked: putting the line back as soon as it is complete, done first and taken back, since the value then turned back into the name before the learner had used it. Not picked: leaving the solved lines once the program is complete, which would show a program nobody wrote.");
-  ("2026-10-15: one operator between two values written out is solved in one step, asked for by its value. Not built yet: a line with more than one operator, or a name beside an operator, which is meant to be worked out by the pressing the expression lessons already teach; until then such a line is refused where it arrives.");
-  let trace = app_code_program_trace(code);
+  ("2026-10-15: one operator between two values written out is solved in one step, asked for by its value. 2026-10-17: an expression with more than one operator is worked out by the pressing the expression lessons already teach, once each name in it is solved.");
+  ("2026-10-17, at the human's asking: an expression holding more than one operator is solved whole, as the expression lessons solve a line - the learner presses the operator that goes next and chooses what it comes to, until one value is left - and that value is written into the program's line; which expressions, and how their names are asked for first, is ",
+    fn_name("app_code_program_step_actions_solve_whole"),
+    "'s to say. This replaces the operators being asked for one after another in the order the computer takes them, which left the order to the program rather than to the learner");
+  let traced = app_code_program_trace(code);
+  let trace = [];
+  for (let traced_entry of traced) {
+    let traced_actions = property_get(traced_entry, "actions");
+    let grouped = app_code_program_step_actions_solve_whole(
+      code,
+      traced_actions,
+    );
+    let entry_grouped = object_copy_property_set(
+      traced_entry,
+      "actions",
+      grouped,
+    );
+    list_add(trace, entry_grouped);
+  }
   let wrap = html_div(parent);
   html_flex_column_stretch(wrap);
   app_code_flex_gap(wrap);
@@ -460,66 +483,95 @@ export function app_code_program_step_through_generic(
       html_clear(ask);
       ('2026-10-15, at the human\'s asking: a value is written as it is written in code, so a string keeps its quotes - in the choices, in the note, and in the line it is solved into - and the name a holding love reads "love", never love. What is logged is written as the console writes it, without them');
       let said = json_to(value);
-      let value_holder = {
-        button: null,
-      };
-      function value_get() {
-        let button = property_get(value_holder, "button");
-        return button;
-      }
-      let expression = property_get(action, "expression");
-      let b6 = null_is(expression);
-      let operator_is = not(b6);
-      ("2026-10-15, at the human's asking: an operator between two values is solved by working it out, as the lessons on operators teach, so the guide says to solve it rather than pointing at a note");
-      let reason = operator_is
-        ? ["Solve ", name]
-        : [
-            "The note above the line that declares ",
-            name,
-            " says what it holds",
-          ];
-      guide_say([reason, ["So choose: ", said]], {
-        words: said,
-        button: true,
-        target_get: value_get,
-      });
-      html_div_cycle_code(ask, ["What is ", name, "?"]);
-      ("2026-10-15, at the human's asking: a name may hold a string or a number as well as true or false. Wrong choices for true are false and for false true, as before; for anything else they are the name written as a string, the mix-up of a name with its own spelling, and each value another name holds, the mix-up of one name with another. Not picked: made-up values, which no step of the program could have led to");
-      let decoys = [];
-      let b4 = boolean_is(value);
-      ("an operator solved is offered the wrong values the lessons on operators offer, the value the other operator would give on the same two values, so the same mistake is caught here as there");
-      if (operator_is) {
-        decoys = app_code_program_step_operator_decoys(action);
-      } else if (b4) {
-        let n = not(value);
-        list_add(decoys, n);
+      let whole_is = property_exists(action, "tree");
+      if (whole_is) {
+        ("2026-10-17, at the human's asking: an expression with more than one operator is solved on a line of its own under the program, the line every expression lesson presses, by the same function, so the two cannot come to press differently: the learner chooses the operator that goes next and then what it comes to, and the line shortens until one value is left. That value is then written into the program's line in place of the expression, as a value asked for alone is. Not picked: pressing the operators in the program's own line, which would be a second pressable line to keep in step with the first. Not picked: saying what to press in the guide above the program, which a quiz does not have; it is said over the line, as the expression lessons' quizzes say it");
+        let tree = property_get(action, "tree");
+        guide_say([["Solve ", name, " one operator at a time"]], null);
+        let said_box = html_div(ask);
+        let solver_box = html_div(ask);
+        function say(text_said) {
+          html_clear(said_box);
+          html_div_cycle_code(said_box, [text_said]);
+        }
+        function finished() {
+          html_clear(said_box);
+        }
+        function solver_start(resolve) {
+          app_code_expression_choose_order_ask({
+            parent: solver_box,
+            tree,
+            say,
+            finished,
+            decoys_get: app_code_program_step_solve_decoys,
+            on_wrong,
+            on_success: resolve,
+          });
+        }
+        await promise_wrap(solver_start);
+        each([said_box, solver_box], html_remove);
       } else {
-        list_add_if_not_includes(decoys, name);
-        let held = property_get(state, "held");
-        let held_values = object_values(held);
-        for (let held_value of held_values) {
-          list_add_if_not_includes(decoys, held_value);
+        let value_holder = {
+          button: null,
+        };
+        function value_get() {
+          let button = property_get(value_holder, "button");
+          return button;
         }
-        ("2026-10-15, at the human's asking: a name given a new value is offered the value it held before as a wrong choice, the mix-up of reading only the line that declared it, which the lesson on giving a name a new value puts on its buttons on purpose");
-        let before2 = property_get(state, "held_before");
-        if (property_exists(before2, name)) {
-          let olds = property_get(before2, name);
-          for (let old_value of olds) {
-            list_add_if_not_includes(decoys, old_value);
+        let expression = property_get(action, "expression");
+        let b6 = null_is(expression);
+        let operator_is = not(b6);
+        ("2026-10-15, at the human's asking: an operator between two values is solved by working it out, as the lessons on operators teach, so the guide says to solve it rather than pointing at a note");
+        let reason = operator_is
+          ? ["Solve ", name]
+          : [
+              "The note above the line that declares ",
+              name,
+              " says what it holds",
+            ];
+        guide_say([reason, ["So choose: ", said]], {
+          words: said,
+          button: true,
+          target_get: value_get,
+        });
+        html_div_cycle_code(ask, ["What is ", name, "?"]);
+        ("2026-10-15, at the human's asking: a name may hold a string or a number as well as true or false. Wrong choices for true are false and for false true, as before; for anything else they are the name written as a string, the mix-up of a name with its own spelling, and each value another name holds, the mix-up of one name with another. Not picked: made-up values, which no step of the program could have led to");
+        let decoys = [];
+        let b4 = boolean_is(value);
+        ("an operator solved is offered the wrong values the lessons on operators offer, the value the other operator would give on the same two values, so the same mistake is caught here as there");
+        if (operator_is) {
+          decoys = app_code_program_step_operator_decoys(action);
+        } else if (b4) {
+          let n = not(value);
+          list_add(decoys, n);
+        } else {
+          list_add_if_not_includes(decoys, name);
+          let held = property_get(state, "held");
+          let held_values = object_values(held);
+          for (let held_value of held_values) {
+            list_add_if_not_includes(decoys, held_value);
           }
+          ("2026-10-15, at the human's asking: a name given a new value is offered the value it held before as a wrong choice, the mix-up of reading only the line that declared it, which the lesson on giving a name a new value puts on its buttons on purpose");
+          let before2 = property_get(state, "held_before");
+          if (property_exists(before2, name)) {
+            let olds = property_get(before2, name);
+            for (let old_value of olds) {
+              list_add_if_not_includes(decoys, old_value);
+            }
+          }
+          list_remove_if_exists(decoys, value);
         }
-        list_remove_if_exists(decoys, value);
+        let asked = app_code_expression_value_choose_buttons_generic(
+          ask,
+          value,
+          decoys,
+          on_wrong,
+          json_to,
+        );
+        property_set(value_holder, "button", asked.right);
+        await asked.pressed;
+        html_remove(asked.box);
       }
-      let asked = app_code_expression_value_choose_buttons_generic(
-        ask,
-        value,
-        decoys,
-        on_wrong,
-        json_to,
-      );
-      property_set(value_holder, "button", asked.right);
-      await asked.pressed;
-      html_remove(asked.box);
       let left = property_get(action, "from");
       ("2026-10-15: a value with no place in the line, as the a that a += b adds to, is asked for and not written in, since 1 += b would read as giving a value to 1");
       if (null_is(left)) {
