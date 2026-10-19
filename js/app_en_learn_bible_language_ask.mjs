@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
-import { app_shared_mobile_default_font_size } from "./app_shared_mobile_default_font_size.mjs";
+import { html_mobile_default } from "./html_mobile_default.mjs";
 import { app_shared_screen_centered } from "./app_shared_screen_centered.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
@@ -18,8 +18,8 @@ export function app_en_learn_bible_language_ask(context, on_chosen) {
   "Tapping a language remembers it on this device and writes it into the address, then hands over to on_chosen, which opens the app in it. Being written into the address is what the rest of the app already reads, so nothing past this screen has to know it was asked.";
   arguments_assert(arguments, 2);
   let root = html_clear_context(context);
-  ("this screen comes before the app starts, so it sets the same type every screen after it has, or it is drawn in the browser's bare default");
-  app_shared_mobile_default_font_size(context);
+  ("this screen comes before the app starts, so it sets the type the app opens at itself, or it is drawn in the browser's bare default. The plain mobile default rather than the app's own: the app's reads a size this reader chose, kept under the app's name, which is not known until the app starts - and on a first visit nobody has chosen one, so the two agree.");
+  html_mobile_default(context);
   let column = app_shared_screen_centered(root);
   let card = app_shared_container_blue(column);
   app_shared_text_body(card, "Choose the language you speak");
