@@ -14,6 +14,7 @@ export function bible_glyph_roots_hebrew_drafted() {
   "NINE NAMES HEBREWS REACHES BACK TO ARE DRAWN HERE FIRST THE SAME WAY. Melchizedek is king of righteousness and Salem is peace, which is how Hebrews itself reads both names (Hebrews 7:2); Salem is the city with peace, the picture Jerusalem already wears under the same root, because the psalm names them as one place (Psalm 76:2); a picture of its own was turned down as making two cities of one. Abel is breath, the fog that breath already wears. Esau is hairy (Genesis 25:25), the hair. Gideon is a hewer, the axe. Barak is lightning, the cloud with lightning that the lightning word already wears. Samson is of the sun, the sun's face. Jericho is the city and the moon, the likeliest reading of its name; the trumpets and the falling walls were turned down as what happened to it and not what it was called. Aaron's name has no sure meaning, so he is drawn by what Hebrews says of him: his rod that budded (Hebrews 9:4, Numbers 17:8), the staff and the blossom; the priest was turned down because every priest wears it.";
   "THREE NAMES ROMANS REACHES BACK TO ARE DRAWN HERE FIRST THE SAME WAY. Rebekah is from the root of tying up, the root of the stall where the calf is tied, so she is the knot; the cow of the stall was turned down as reading as the stall itself. Jesse is from there is, the word whose picture is the link, so he is the link; the root of David was turned down as what he became and not what he was called. Miriam is from rebellion, so she wears the raised fist going up that rebellion already wears; bitterness was turned down because the name's own root word is rebellion.";
   "TWENTY SIX NAMES AND WORDS ACTS REACHES BACK TO ARE DRAWN HERE FIRST THE SAME WAY, each by what its name means. Saul is asked, the question; Hananiah is the LORD has favored, the heart of favor and I AM; Gamaliel is reward of God, the gift paid back and God; Haran is parched, the sun on the desert, since the bare desert with a map is already Arabia; Canaan is humbled, down and a person; Shechem is the shoulder ridge, the burden on the mountain, since there is no shoulder; Midian is strife, the swords and the tent, the tents being what Midian lived in (Judges 6:5); Molech is the king word made an idol, the king and the idol; Kiyyun is a statue set up, the pin of setting and the idol; Gaza is strong, the fist and a city; Ashdod is ravager, the picture ravaging already wears; Galilee is the circle, the hollow circle on the map; Lod has no sure meaning, so it is drawn by what was done there, the bed Aeneas rose from (Acts 9:33-35); Sharon is the plain, the straight ruler laid on the earth; the female gazelle is the gazelle with the woman's sign, since the bare deer with that sign is already the doe; Hagab is locust; Kish is a bow; Tyre is a rock, the rock in the waves, kept apart from the rock of the bare rock word, which is another root; Sidon is a fishery, the fish and the city, since the fishing pole is already Moses; Mattithiah is gift of the LORD; twins are two babies; Talmai is furrowed, the field; Heleph is change, the turning arrows; Madai, Media, is the bear of Daniel's vision (Daniel 7:5) on the map, since the name has no Hebrew meaning; Elam is hidden, the eyes and the lock that hiding already wears; the Chaldeans are the map and the star, the stargazers Daniel names (Daniel 2:2).";
+  "THIRTEEN NAMES AND WORDS MARK REACHES BACK TO ARE DRAWN HERE FIRST THE SAME WAY, each by what its name means. Abiathar is father of abundance, the father and the takeout box that abundance (yathar) already wears. Ramah is height, up and the name sign, which Arimathea copies. Baal-zebub is lord of the fly, the key of lordship and the fly. Kinnereth is harp-shaped, the harp, which Gennesaret copies. Zabdi is giving, the gift, which Zebedee copies. Jair is he enlightens, the light, which Jairus copies. Edom is red, and is the red circle with the map, because the red circle with the name sign is already Rufus in the New Testament and a land is a map. The Girgashite has no sure derivation, so it is drawn as the people God drove out of the land (Joshua 24:11), away and the tent; the pigs were turned down as Mark's event rather than the people's name, and clay as a guess Strong's does not give. The skull (gulgoleth) is from rolling, so it is the round skull, which Golgotha copies. To open (pathach) is the unlocked lock, which Ephphatha copies. Nard is the herb and the bottle of ointment. To leave (shebaq) is the waving hand, which sabachthani copies. The young lamb (taleh) is the lamb and the baby, which talitha copies, because Mark calls the girl a little lamb in her own tongue.";
   let rows = [
     ["530", "aman", "anchor+check", "faithfulness"],
     ["8198", "mishpachah", "houses+female_sign", "maidservant"],
@@ -1491,6 +1492,24 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["4074", "maday", "map+bear+proper_name", "Madai, Media"],
     ["5867", "alam", "eyes+locked+proper_name", "Elam, hidden"],
     ["3778", "kesed", "map+star+proper_name", "Chaldean"],
+    [
+      "54",
+      "yathar",
+      "father+takeout_box+proper_name",
+      "Abiathar, father of abundance",
+    ],
+    ["7414", "rum", "up_arrow+proper_name", "Ramah, height"],
+    ["1176", "baal", "key+fly+proper_name", "Baal-zebub, lord of the fly"],
+    ["3672", "kinnor", "harp+proper_name", "Kinnereth, harp-shaped"],
+    ["1622", "girgashi", "away+tent+proper_name", "Girgashite"],
+    ["1538", "galal", "skull+hollow_circle", "skull"],
+    ["6606", "pathach", "unlocked", "open"],
+    ["2067", "zabad", "gift+proper_name", "Zabdi, giving"],
+    ["2971", "or", "light+proper_name", "Jair, enlightener"],
+    ["123", "adom", "red_circle+map+proper_name", "Edom, red"],
+    ["5373", "nerd", "herb+lotion_bottle", "nard"],
+    ["7662", "shebaq", "waving_hand+doing", "leave"],
+    ["2924", "taleh", "lamb+baby", "young lamb"],
   ];
   let drafted = [];
   for (let row of rows) {
