@@ -1,0 +1,30 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
+import { html_style_set } from "./html_style_set.mjs";
+import { html_viewport_height_visible } from "./html_viewport_height_visible.mjs";
+import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
+import { app_shared_column_max_width } from "./app_shared_column_max_width.mjs";
+import { html_style_max_width } from "./html_style_max_width.mjs";
+import { html_style_margin_x } from "./html_style_margin_x.mjs";
+import { html_centered } from "./html_centered.mjs";
+export function app_shared_screen_centered(parent) {
+  arguments_assert(arguments, 1);
+  ("a screen with only a little on it - a question asked before anything else can be drawn - sits in the middle of the window, top to bottom, with its words centred, in the same column width every other screen keeps. Returns the column to draw into.");
+  ("safe center rather than plain center: when the column is taller than the window, plain center pushes half of it above the top, where no scrolling reaches; safe center starts it at the top instead.");
+  let screen = html_div(parent);
+  html_flex_column_stretch(screen);
+  html_style_set(screen, "justify-content", "safe center");
+  let height = html_viewport_height_visible();
+  html_style_set(screen, "min-height", height);
+  html_style_set(screen, "box-sizing", "border-box");
+  let gap = app_shared_content_edge_gap();
+  html_style_set(screen, "padding", gap);
+  let column = html_div(screen);
+  let width = app_shared_column_max_width();
+  html_style_max_width(column, width);
+  html_style_set(column, "width", "100%");
+  html_style_margin_x(column, "auto");
+  html_centered(column);
+  return column;
+}
