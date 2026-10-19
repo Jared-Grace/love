@@ -1,3 +1,4 @@
+import { app_en_learn_bible_gloss_tagalog_glosses_empty_gate_run } from "./app_en_learn_bible_gloss_tagalog_glosses_empty_gate_run.mjs";
 import { app_en_learn_bible_gloss_tagalog_misaligned_gate_run } from "./app_en_learn_bible_gloss_tagalog_misaligned_gate_run.mjs";
 import { lyric_video_recording_video_notes_gate_run } from "./lyric_video_recording_video_notes_gate_run.mjs";
 import { giveaway_psalms_pictures_passed_over_gate_run } from "./giveaway_psalms_pictures_passed_over_gate_run.mjs";
@@ -1263,6 +1264,7 @@ export function qa_gates() {
     giveaway_psalms_pictures_passed_over_gate_run,
     lyric_video_recording_video_notes_gate_run,
     app_en_learn_bible_gloss_tagalog_misaligned_gate_run,
+    app_en_learn_bible_gloss_tagalog_glosses_empty_gate_run,
   ];
   return gates;
 }
