@@ -12,7 +12,7 @@ export function song_pronunciations() {
     jesse: 'Jess-see',
     rahab: "Ray-hab",
     sinai: "sai-nai",
-    succoth: "suh-koth",
+    succoth: "sue-koth",
     zion: "zai-on",
     zoan:'zoh-an'
   };
