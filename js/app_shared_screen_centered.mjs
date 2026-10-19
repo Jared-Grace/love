@@ -1,4 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { html_margin_0 } from "./html_margin_0.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -12,6 +13,8 @@ export function app_shared_screen_centered(parent) {
   arguments_assert(arguments, 1);
   ("a screen with only a little on it - a question asked before anything else can be drawn - sits in the middle of the window, top to bottom, with its words centred, in the same column width every other screen keeps. Returns the column to draw into.");
   ("safe center rather than plain center: when the column is taller than the window, plain center pushes half of it above the top, where no scrolling reaches; safe center starts it at the top instead.");
+  ("the screen is exactly as tall as the window, so any margin around it is the scrollbar that appears on a screen with nothing to scroll");
+  html_margin_0(parent);
   let screen = html_div(parent);
   html_flex_column_stretch(screen);
   html_style_set(screen, "justify-content", "safe center");
