@@ -6,10 +6,10 @@ import { app_shared_color_blue_pale } from "./app_shared_color_blue_pale.mjs";
 import { app_shared_container_blue_background_color } from "./app_shared_container_blue_background_color.mjs";
 export function app_shared_container_blue(parent) {
   let div = app_shared_container_base(parent);
-  html_style_background_color_set(
-    div,
-    app_shared_container_blue_background_color(),
-  );
-  html_border(div, app_shared_spaced_frame_gap(), app_shared_color_blue_pale());
+  let background = app_shared_container_blue_background_color();
+  html_style_background_color_set(div, background);
+  let border_width = app_shared_spaced_frame_gap();
+  let border_color = app_shared_color_blue_pale();
+  html_border(div, border_width, border_color);
   return div;
 }
