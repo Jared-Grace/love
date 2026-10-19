@@ -11,7 +11,7 @@ import { property_get } from "./property_get.mjs";
 import { app_en_learn_bible_language_code_save } from "./app_en_learn_bible_language_code_save.mjs";
 import { app_shared_bible_language_hash_key } from "./app_shared_bible_language_hash_key.mjs";
 import { html_hash_property_set } from "./html_hash_property_set.mjs";
-import { app_shared_button } from "./app_shared_button.mjs";
+import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 export function app_en_learn_bible_language_ask(context, on_chosen) {
   "The first screen a new reader sees: which language do you speak? One button for each language this app explains English in.";
   "The question is written in every one of those languages and in english, because the app does not yet know which one the reader can read - that is the very thing being asked.";
@@ -38,6 +38,7 @@ export function app_en_learn_bible_language_ask(context, on_chosen) {
       html_hash_property_set(key, language_code);
       await on_chosen();
     }
-    app_shared_button(card, name, on_click);
+    ("wide, the way a stack of choices is drawn everywhere else in these apps: the whole line is the target, which on a phone is the difference between a tap and a miss");
+    app_shared_button_wide(card, name, on_click);
   }
 }
