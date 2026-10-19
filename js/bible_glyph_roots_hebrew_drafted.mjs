@@ -13,6 +13,7 @@ export function bible_glyph_roots_hebrew_drafted() {
   "THREE NAMES 2 PETER REACHES BACK TO ARE DRAWN HERE FIRST THE SAME WAY. Noah is rest, drawn as the seat that resting already wears, the comfort his father named him for (Genesis 5:29); the ark was turned down as what he built and not what he was called. Lot is a covering, drawn as the veil; the pillar of salt was turned down because it was his wife's end, not his. Beor is burning, drawn as the fire and wood that burning already wears.";
   "NINE NAMES HEBREWS REACHES BACK TO ARE DRAWN HERE FIRST THE SAME WAY. Melchizedek is king of righteousness and Salem is peace, which is how Hebrews itself reads both names (Hebrews 7:2); Salem is the city with peace, the picture Jerusalem already wears under the same root, because the psalm names them as one place (Psalm 76:2); a picture of its own was turned down as making two cities of one. Abel is breath, the fog that breath already wears. Esau is hairy (Genesis 25:25), the hair. Gideon is a hewer, the axe. Barak is lightning, the cloud with lightning that the lightning word already wears. Samson is of the sun, the sun's face. Jericho is the city and the moon, the likeliest reading of its name; the trumpets and the falling walls were turned down as what happened to it and not what it was called. Aaron's name has no sure meaning, so he is drawn by what Hebrews says of him: his rod that budded (Hebrews 9:4, Numbers 17:8), the staff and the blossom; the priest was turned down because every priest wears it.";
   "THREE NAMES ROMANS REACHES BACK TO ARE DRAWN HERE FIRST THE SAME WAY. Rebekah is from the root of tying up, the root of the stall where the calf is tied, so she is the knot; the cow of the stall was turned down as reading as the stall itself. Jesse is from there is, the word whose picture is the link, so he is the link; the root of David was turned down as what he became and not what he was called. Miriam is from rebellion, so she wears the raised fist going up that rebellion already wears; bitterness was turned down because the name's own root word is rebellion.";
+  "TWENTY SIX NAMES AND WORDS ACTS REACHES BACK TO ARE DRAWN HERE FIRST THE SAME WAY, each by what its name means. Saul is asked, the question; Hananiah is the LORD has favored, the heart of favor and I AM; Gamaliel is reward of God, the gift paid back and God; Haran is parched, the sun on the desert, since the bare desert with a map is already Arabia; Canaan is humbled, down and a person; Shechem is the shoulder ridge, the burden on the mountain, since there is no shoulder; Midian is strife, the swords and the tent, the tents being what Midian lived in (Judges 6:5); Molech is the king word made an idol, the king and the idol; Kiyyun is a statue set up, the pin of setting and the idol; Gaza is strong, the fist and a city; Ashdod is ravager, the picture ravaging already wears; Galilee is the circle, the hollow circle on the map; Lod has no sure meaning, so it is drawn by what was done there, the bed Aeneas rose from (Acts 9:33-35); Sharon is the plain, the straight ruler laid on the earth; the female gazelle is the gazelle with the woman's sign, since the bare deer with that sign is already the doe; Hagab is locust; Kish is a bow; Tyre is a rock, the rock in the waves, kept apart from the rock of the bare rock word, which is another root; Sidon is a fishery, the fish and the city, since the fishing pole is already Moses; Mattithiah is gift of the LORD; twins are two babies; Talmai is furrowed, the field; Heleph is change, the turning arrows; Madai, Media, is the bear of Daniel's vision (Daniel 7:5) on the map, since the name has no Hebrew meaning; Elam is hidden, the eyes and the lock that hiding already wears; the Chaldeans are the map and the star, the stargazers Daniel names (Daniel 2:2).";
   let rows = [
     ["530", "aman", "anchor+check", "faithfulness"],
     ["8198", "mishpachah", "houses+female_sign", "maidservant"],
@@ -1444,6 +1445,52 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["7259", "marbeq", "knot+proper_name", "Rebekah"],
     ["3448", "hayah", "link+proper_name", "Jesse"],
     ["4813", "meri", "raised_fist+up_arrow+proper_name", "Miriam"],
+    ["7586", "shaal", "question+proper_name", "Saul, asked"],
+    [
+      "2608",
+      "chanan",
+      "heart_orange+i_am+proper_name",
+      "Hananiah, the LORD has favored",
+    ],
+    [
+      "1583",
+      "gamal",
+      "turn_back+gift+heart_on_fire+proper_name",
+      "Gamaliel, reward of God",
+    ],
+    ["2771", "charar", "sun+desert+proper_name", "Haran, parched"],
+    ["3667", "kana", "down_arrow+person+proper_name", "Canaan, humbled"],
+    [
+      "7927",
+      "shekem",
+      "backpack+mountain+proper_name",
+      "Shechem, shoulder ridge",
+    ],
+    ["4080", "midyan", "crossed_swords+tent+proper_name", "Midian, strife"],
+    ["4432", "melek", "king+moai", "Molech"],
+    ["3594", "kun", "pin+moai", "Kiyyun, a set-up statue"],
+    ["5804", "az", "raised_fist+city+proper_name", "Gaza, strong"],
+    ["795", "shadad", "bomb+flexed_biceps+proper_name", "Ashdod, ravager"],
+    ["1551", "galil", "hollow_circle+map+proper_name", "Galilee, the circle"],
+    ["3850", "lod", "city+bed+proper_name", "Lod"],
+    ["8289", "yashar", "straight_ruler+earth+proper_name", "Sharon, the plain"],
+    ["6646", "tsebi", "deer+sparkles+female_sign", "female gazelle"],
+    ["2285", "chagab", "locusts+proper_name", "Hagab, locust"],
+    ["7027", "qosh", "bow+proper_name", "Kish, bow"],
+    ["6865", "tsor", "rock+water_wave+proper_name", "Tyre, rock"],
+    ["6721", "tsud", "fish+city+proper_name", "Sidon, fishery"],
+    [
+      "4993",
+      "mattath",
+      "gift+i_am+proper_name",
+      "Mattithiah, gift of the LORD",
+    ],
+    ["8380", "teom", "two+baby", "twins"],
+    ["8526", "talmay", "field+proper_name", "Talmai, furrowed"],
+    ["2501", "chalaph", "clockwise_arrows+proper_name", "Heleph, change"],
+    ["4074", "maday", "map+bear+proper_name", "Madai, Media"],
+    ["5867", "alam", "eyes+locked+proper_name", "Elam, hidden"],
+    ["3778", "kesed", "map+star+proper_name", "Chaldean"],
   ];
   let drafted = [];
   for (let row of rows) {
