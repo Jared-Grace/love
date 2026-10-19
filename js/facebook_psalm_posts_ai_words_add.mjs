@@ -6,6 +6,7 @@ export async function facebook_psalm_posts_ai_words_add() {
   "Edits every psalm post already on the facebook profile whose first line says 'put to music' so that it says 'put to music using AI', the wording the human asked for on 2026-10-19 for posts already out as well as later ones.";
   "★ IT FINDS ITS OWN POSTS: a post counts when its text holds 'put to music' and not 'using AI', so a second run does nothing and a run cut short is finished by the next one.";
   "★ NOTHING IS SAVED UNLESS THE EDITED TEXT IS READ BACK HOLDING THE NEW WORDS. The caret is placed after 'music' and the words typed there; if they landed anywhere else, it throws with the dialog unsaved and the browser is closed, which discards the edit.";
+  "★ EVERY STEP WAITS FOR WHAT IT NEEDS RATHER THAN A FIXED TIME: on the first run the post's menu was still a spinner four seconds after the click.";
   "A picture is left for each step in gitignore/facebook_psalm_posts_ai_words_add_N.png.";
   "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   let puppeteer = await import("puppeteer");
@@ -21,6 +22,8 @@ export async function facebook_psalm_posts_ai_words_add() {
   });
   let steps = [];
   let edited = 0;
+  let pages = await browser.pages();
+  let page = pages[0];
   async function picture(name) {
     let p = folder_gitignore_join(
       "facebook_psalm_posts_ai_words_add_" + steps.length + ".png",
@@ -30,8 +33,6 @@ export async function facebook_psalm_posts_ai_words_add() {
     });
     steps.push(name + " " + p);
   }
-  let pages = await browser.pages();
-  let page = pages[0];
   try {
     page.setDefaultTimeout(120000);
     let agent = await browser.userAgent();
@@ -59,16 +60,22 @@ export async function facebook_psalm_posts_ai_words_add() {
         };
         return r;
       }
-      await sleep(4000);
-      let menu = await page.evaluate(
-        "(function(){var ms=[].slice.call(document.querySelectorAll('[role=menuitem]'));var e=ms.find(function(x){return (x.innerText||'').trim().indexOf('Edit post')===0});if(!e)return ms.map(function(x){return (x.innerText||'').trim().split('\\n')[0]}).join(' / ')||'no menu';e.click();return 'clicked'})()",
-      );
+      let menu = "no menu";
+      for (let w = 0; w < 45; w++) {
+        await sleep(1000);
+        menu = await page.evaluate(
+          "(function(){var ms=[].slice.call(document.querySelectorAll('[role=menuitem]'));if(!ms.length)return 'no menu';var e=ms.find(function(x){return (x.innerText||'').trim().indexOf('Edit post')===0});if(!e)return ms.map(function(x){return (x.innerText||'').trim().split('\\n')[0]}).join(' / ');e.click();return 'clicked'})()",
+        );
+        if (menu !== "no menu") {
+          break;
+        }
+      }
       await picture("menu");
       if (menu !== "clicked") {
         throw new Error("Edit post not in the menu: " + menu);
       }
       let placed = "missing";
-      for (let w = 0; w < 30; w++) {
+      for (let w = 0; w < 45; w++) {
         placed = await page.evaluate(
           "(function(){var ds=[].slice.call(document.querySelectorAll('[role=dialog]'));for(var k=ds.length-1;k>=0;k--){var tb=ds[k].querySelector('[role=textbox]');if(!tb)continue;var walk=document.createTreeWalker(tb,NodeFilter.SHOW_TEXT);var node;while((node=walk.nextNode())){var at=node.nodeValue.indexOf('put to music');if(at>=0){tb.focus();var r=document.createRange();r.setStart(node,at+'put to music'.length);r.collapse(true);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);return 'placed'}}return 'no words in the text box'}return 'missing'})()",
         );
@@ -105,7 +112,7 @@ export async function facebook_psalm_posts_ai_words_add() {
         await picture("save");
         throw new Error("Save: " + saved);
       }
-      await sleep(8000);
+      await sleep(10000);
       await picture("saved");
       edited = edited + 1;
     }
