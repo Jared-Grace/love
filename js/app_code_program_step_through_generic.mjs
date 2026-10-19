@@ -617,7 +617,7 @@ export function app_code_program_step_through_generic(
       ("a box held narrower than its words would otherwise sit higher in the line, its bottom on the words' base, and make the line taller while it moves");
       html_style_set(piece, "vertical-align", "top");
       ("and its words are kept on one line, or a box narrower than the value it is growing to fit breaks the value over several lines and the whole line of the program grows tall while it moves - seen 2026-10-15");
-      html_style_set(piece, "white-space", "nowrap");
+      html_style_white_space(piece, "nowrap");
       let duration4 = app_shared_animation_duration();
       await html_opacity_animate(piece, "0", duration4);
       function value_write() {

@@ -1,3 +1,5 @@
+import { html_style_padding } from "./html_style_padding.mjs";
+import { html_width_full } from "./html_width_full.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_margin_0 } from "./html_margin_0.mjs";
 import { html_div } from "./html_div.mjs";
@@ -22,11 +24,11 @@ export function app_shared_screen_centered(parent) {
   html_style_set(screen, "min-height", height);
   html_style_set(screen, "box-sizing", "border-box");
   let gap = app_shared_content_edge_gap();
-  html_style_set(screen, "padding", gap);
+  html_style_padding(screen, gap);
   let column = html_div(screen);
   let width = app_shared_column_max_width();
   html_style_max_width(column, width);
-  html_style_set(column, "width", "100%");
+  html_width_full(column);
   html_style_margin_x(column, "auto");
   html_centered(column);
   return column;
