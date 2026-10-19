@@ -5184,6 +5184,36 @@ def fixed_call_twin_deny_reason(fn, args, twin):
         "every input it is ever handed."
     )
 
+
+def cp_into_scripts_temp(command):
+    """True when some statement copies a file into scripts/temp.
+
+    The reason it exists: the read-only sandbox reads only the repo, so a file
+    made elsewhere - a session scratchpad - gets copied in before a sandboxed
+    script reads it, and `cp` has no rule, so the copy asks the human every
+    time. Written into scripts/temp in the first place it needs no copy and
+    nobody is asked."""
+    for words in statements_words(command):
+        if len(words) < 3 or words[0] != "cp":
+            continue
+        target = words[-1]
+        for prefix in ("scripts/temp", "./scripts/temp",
+                       "/home/j/a/repos/love/scripts/temp"):
+            if target == prefix or target.startswith(prefix + "/"):
+                return True
+    return False
+
+
+def cp_into_scripts_temp_deny_reason():
+    return (
+        "Write the file into scripts/temp in the first place instead of "
+        "copying it there - `cp` has no rule, so the copy asks the human "
+        "every time. Writing there is already approved: the Write tool on "
+        "scripts/temp/<name>, or a command's output sent there with "
+        "`> scripts/temp/<name>`. The read-only sandbox reads only the repo, "
+        "so scripts/temp is where anything it reads should be made."
+    )
+
 # One dispatcher statement followed by a removal, and nothing else on the line.
 # The middle excludes the operators that end a statement, so the `rm` has to be
 # chained onto THIS call rather than onto something further along.
@@ -5511,6 +5541,12 @@ def main():
     if fixed_twin is not None:
         fn, args, twin = fixed_twin
         return decide("deny", fixed_call_twin_deny_reason(fn, args, twin))
+
+    # A copy into scripts/temp of a file that could have been made there.
+    # After the allow decision, so it only turns a prompt into the approved
+    # route. See cp_into_scripts_temp.
+    if cp_into_scripts_temp(command):
+        return decide("deny", cp_into_scripts_temp_deny_reason())
 
     # A dispatcher call caught in a file the caller made for it, when the
     # command had already written that file itself. Unlike the floors above
