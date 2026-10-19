@@ -5470,6 +5470,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["5580", "christos", "lying_face+oil", "false Christ"],
     ["5589", "psichion", "bread+pinching_hand", "crumb"],
     ["5614", "yasha", "rescue+pleading", "Hosanna, save now"],
+    ["707", "rum", "up_arrow+proper_name", "Arimathea"],
   ];
   let drafted = [];
   for (let row of rows) {
