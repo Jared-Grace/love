@@ -22,6 +22,7 @@ export function bible_glyph_roots_greek_drafted() {
   ("HEBREWS IS DRAWN THE SAME WAY. Its Greek words that mean what a Hebrew word means copy the Hebrew picture under their own Greek roots: the male goat (tragos) is the goat with the horn, the bull (tauros) is the bull, sand (ammos) is the sea's brown edge, ashes (spodos) are ashes and the burnt offering (holokautoma) is the burnt offering. The heifer (damalis) is the cow and the female sign, since the bare bull is the Hebrew heifer's word. Manna is bread from the sky. Where a picture was already worn by another Greek root, the Hebrews word got its own: brief (brachus) is the pinching hand and the hourglass, since the bare pinching hand is small (mikros); to spring up (phuo) is the seed going up, since the sprout doing is life; to yield (hupeiko) is bowing down, since kneeling down is to submit; a craftsman (technites) is the artist, since the tools' doer is a workman; the whirlwind (thuella) is the cyclone, since the tornado is lailaps; hyssop is the herb and the droplet, a sprinkler, since the bare herb is grass; seizure (harpage) is the snatching hand and the money bag, since snatching as a thing is harpagmos; burning (kausis) is the candle and the fire; the encumbrance (onkos) is many backpacks, since the bare package is a matter (pragma); the anchor is the anchor and the ship, since the bare anchor is already taken; reverence (eulabeia) adds fear to taking hold well; an attendant (therapon) is the bandage and the giving hands, since the bandage's doer is a physician and the bandage with a person is a leper; doing good (eupoiia) is well and the hammer, since the thumbs-up hammer is doing good of another root. To translate and hard to explain are filed with methermeneuo, the same word, and keep its picture; the word hard (dus) is the lock, as in hard to understand. The foot is a step (basis): to cross over, the outcome and permanent are through, out of and not past the foot. The thistle (tribolos) is three arrows, its own name; to saw in two is the saw; the scourge is the thread striking; the mercy seat is atonement and the seat; the olive branch held out is supplication; the jar (stamnos) is the amphora; a corpse (kolon) is the skull and the leg; marrow is in the bone; the stars of Abraham's promise (astron) are the plain star as a thing. Turned down: the bare drum for to torture, since torture by the drum (tumpanizo) is the drum beaten with a fist.");
   ("THE LAST WORDS OF HEBREWS. Its names from the Hebrew Bible, Aaron, Melchizedek, Salem, Abel, Esau, Jericho, Gideon, Barak and Samson, copy the Hebrew pictures and are filed under the Hebrew roots. Salem shares the picture of Jerusalem under the root Jerusalem is already filed under here, because the psalm names them as one place (Psalm 76:2); a picture of its own was turned down as making two cities of one. Levitical is Levi's handshake name as a describing word, since the bare handshake describing is already common, and Egyptian is the narrow place with a person, as in the Hebrew. Red is the red circle as a describing word; blood was turned down because blood already wears its own picture. Italy is probably the land of calves, drawn as the map and the calf, and the probably is said in the overlay; a Roman eagle was turned down as an emblem and not the name. And yet (kaitoi) is and with the exclamation, the and that turns against what was said.");
   ("ROMANS IS DRAWN THE SAME WAY, and its Greek words that mean what a Hebrew word means copy the Hebrew picture under their own Greek roots: beautiful feet (horaios) wear the face and sparkle of beautiful, the fatness of the olive (piotes) the bacon of fat, clay (pelos) the brown square and water, the womb (metra) the hugging face and baby, the potter (kerameus) the artist, and to abhor (bdelusso) the vomiting of an abomination. Where a new picture was needed, with what was turned down: grafted in is in, the branch and doing, and broken off is out, the branch and the crash, since breaking bread was turned down for branches; tribute is the coin and the cart it is carried in, since the coin and the crown already mean gold; the neck is the giraffe, the plainest neck there is; meat is the meat on the bone, since bare meat is already flesh; vegetables are the herb and the fork and knife; the throat is the mouth and the hole, an open grave (Romans 3:13); the asp is the snake with the tooth; coals are fire and the rock; to boil is bubbles and fire; a trap is the net and the deer, game caught, since the mouse trap is the snare; stupor is the dizzy and sleeping face; the back is the body and the back arrow; tenderly devoted is the friend's heart with the houses of a family, since the friend's heart with the child is already love of children; the patroness Phoebe (Romans 16:2) is the one who stands before with the woman's sign; groaning, travail, suffering, comfort, glory, help, rest, striving, growing and agreeing together each take the pin of together on the picture they already wear alone. Hardness, mind-set, forbearance, futility, deceit, the grave, merciless, worthless and to think too highly each took one more sign because the shorter picture was already another root's.");
+  ("THE NAMES OF ROMANS. Rebecca, Baal, Jesse and Mary copy their Hebrew pictures under their Hebrew roots. A name with a meaning is drawn by its meaning, and a name without one by what Romans says of the person, with what was turned down: Phoebe is bright, the light with the woman's sign; Epaenetus is praised; Andronicus is the man of victory, the man and the trophy; Aristobulus is best counsel, first place and the lightbulb; Asyncritus is beyond compare, without the together of the scales; Phlegon is blazing, the tongue of fire; Philologus is fond of words, the friend's heart and speech; Patrobas is a father's life, the father and the sprout; Jason is about to cure, the bandage; Sopater and Sosipater, one man by two spellings, are a safe father, rescue and the father; Tryphaena is luxurious and Tryphosa luxuriating, the lotion of luxury as a describing word and as a doing word; Urbanus is of the city; Ampliatus is enlarged, more; Stachys is an ear of grain, the sheaf as a thing, since the sheaf alone is already Demetrius; Rufus is red; Tertius is third and Quartus fourth, the numbers, since third place is already the word third; Lucius is lamplight, the candle, since the light is already Phoebe; Narcissus is the white flower; Nereus is the old man of the sea, the wave and the old man, since the wave alone is already Pontus; Olympas is of Olympus, the mountain; Hermes is the messenger, the wing and speech, and Hermas is named from him; Herod is a hero, the superhero, and Herodion is of Herod, drawn here first so his name can be named from it. Cenchreae is millet, the grain, and a harbour, the anchor. Spain is the west, the map and the sunset; Persis is a Persian woman, the map and the east with a person; Illyricum is the shore of the Adriatic, the map and the wave. Junia's name has no meaning given, so Junia is the fellow prisoner Romans 16:7 calls them, the chains and the pin of together; the month of June was turned down as a calendar the pictures do not have. Julia and Julius share a family name read as downy, youthful, so they are the child; the month of July was turned down because seven with a name would read as Septimus, and the household of Caesar as a guess. Apelles is approved in Christ (Romans 16:10), the microscope that testing already wears.");
   let rows = [
     ["79", "adelphos", "brother+female_sign", "sister"],
     ["4238", "prasso", "hammer+repeat_button+doing", "practise"],
@@ -3996,6 +3997,45 @@ export function bible_glyph_roots_greek_drafted() {
     ["279", "metanoeo", "no_entry+brain+turn_back+describing", "unrepentant"],
     ["265", "hamartia", "bow+thing", "sin"],
     ["215", "laleo", "no_entry+voice+describing", "unspeakable"],
+    ["4479", "marbeq", "knot+proper_name", "Rebecca"],
+    ["896", "baal", "key+proper_name", "Baal"],
+    ["2421", "hayah", "link+proper_name", "Jesse"],
+    ["3137", "meri", "raised_fist+up_arrow+proper_name", "Mary"],
+    ["2437", "illurikon", "map+water_wave", "Illyricum"],
+    ["4681", "spania", "map+sunset", "Spain"],
+    ["4069", "persis", "map+east+person", "Persis"],
+    ["5402", "phos", "light+female_sign+proper_name", "Phoebe"],
+    ["2747", "kegchreai", "sheaf_of_rice+anchor", "Cenchreae"],
+    ["4720", "stachus", "sheaf_of_rice+thing+proper_name", "Stachys"],
+    ["1866", "epainos", "pointing_up+clapping_hands+proper_name", "Epaenetus"],
+    ["408", "aner", "man_beard+trophy+proper_name", "Andronicus"],
+    ["2458", "iounias", "chains+safety_pin+proper_name", "Junia"],
+    ["291", "amplias", "more+proper_name", "Ampliatus"],
+    ["3773", "ourbanos", "city+proper_name", "Urbanus"],
+    ["559", "apelles", "microscope+proper_name", "Apelles"],
+    ["711", "aristoboulos", "first_place+lightbulb+proper_name", "Aristobulus"],
+    ["2264", "herodes", "superhero+proper_name", "Herod"],
+    ["2267", "herodes", "superhero+proper_name+describing", "Herodion"],
+    ["3488", "narkissos", "white_flower+proper_name", "Narcissus"],
+    ["5170", "truphe", "lotion_bottle+describing+proper_name", "Tryphaena"],
+    ["5173", "truphe", "lotion_bottle+doing+proper_name", "Tryphosa"],
+    ["4504", "rhouphos", "red_circle+proper_name", "Rufus"],
+    ["799", "krino", "no_entry+safety_pin+scales+proper_name", "Asyncritus"],
+    ["5393", "phlox", "fire+tongue+proper_name", "Phlegon"],
+    ["2060", "hermes", "wing+speech+proper_name", "Hermes"],
+    ["2057", "hermes", "wing+speech+describing+proper_name", "Hermas"],
+    ["3969", "pater", "father+sprout+proper_name", "Patrobas"],
+    ["5378", "philos", "heart_orange+speech+proper_name", "Philologus"],
+    ["2457", "ioulios", "child+proper_name", "Julius"],
+    ["2456", "ioulios", "child+proper_name+female_sign", "Julia"],
+    ["3517", "nereus", "water_wave+older_person+proper_name", "Nereus"],
+    ["3652", "olumpas", "mountain+proper_name", "Olympas"],
+    ["3066", "loukios", "candle+proper_name", "Lucius"],
+    ["2394", "iaomai", "bandage+proper_name", "Jason"],
+    ["4986", "soter", "rescue+father+proper_name", "Sopater"],
+    ["4989", "soter", "rescue+father+proper_name", "Sosipater"],
+    ["5060", "tertios", "three+proper_name", "Tertius"],
+    ["2890", "kouartos", "four+proper_name", "Quartus"],
   ];
   let drafted = [];
   for (let row of rows) {
