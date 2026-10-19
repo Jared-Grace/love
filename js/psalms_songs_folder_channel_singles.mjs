@@ -1,3 +1,6 @@
+import { subtract } from "./subtract.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { psalms_songs_folder_channel_compare } from "./psalms_songs_folder_channel_compare.mjs";
 import { equal } from "./equal.mjs";
@@ -20,26 +23,29 @@ export async function psalms_songs_folder_channel_singles(
     let verses = row.passage.split(":")[1];
     let ends = verses.split("-");
     let first = parseInt(ends[0], 10);
-    let last = parseInt(ends[ends.length - 1], 10);
-    return {
+    let last = parseInt(ends[subtract(ends.length, 1)], 10);
+    let r = {
       first,
       last,
     };
+    return r;
   }
   let sung_by_verse = {};
   for (let row of compared.rows) {
     let range = range_of(row);
-    for (let verse = range.first; verse <= range.last; verse++) {
+    for (let verse = range.first; less_than_equal(verse, range.last); verse++) {
       let key = row.chapter + ":" + verse;
-      let before = sung_by_verse[key] === undefined ? 0 : sung_by_verse[key];
+      let before = equal(sung_by_verse[key], undefined)
+        ? 0
+        : sung_by_verse[key];
       sung_by_verse[key] = before + row.recordings.length;
     }
   }
   function verse_short_any(row) {
     let range = range_of(row);
-    for (let verse = range.first; verse <= range.last; verse++) {
+    for (let verse = range.first; less_than_equal(verse, range.last); verse++) {
       let key = row.chapter + ":" + verse;
-      if (sung_by_verse[key] < 2) {
+      if (less_than(sung_by_verse[key], 2)) {
         return true;
       }
     }
@@ -47,11 +53,13 @@ export async function psalms_songs_folder_channel_singles(
   }
   function single_short(row) {
     let one = equal(row.recordings.length, 1);
-    return one && verse_short_any(row);
+    let r2 = one && verse_short_any(row);
+    return r2;
   }
   let singles_rows = compared.rows.filter(single_short);
   function chapter_of(row) {
-    return row.chapter;
+    let r3 = row.chapter;
+    return r3;
   }
   let chapters = singles_rows.map(chapter_of);
   let verse_last_by_chapter = await psalms_chapters_verse_last(chapters);
@@ -59,7 +67,8 @@ export async function psalms_songs_folder_channel_singles(
     let whole_passage =
       row.chapter + ":1-" + verse_last_by_chapter[row.chapter];
     let whole_chapter = equal(row.passage, whole_passage);
-    return whole_chapter ? row.passage + " (whole chapter)" : row.passage;
+    let r4 = whole_chapter ? row.passage + " (whole chapter)" : row.passage;
+    return r4;
   }
   let singles = singles_rows.map(label);
   let result = {
