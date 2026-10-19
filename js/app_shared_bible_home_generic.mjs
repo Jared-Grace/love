@@ -7,7 +7,6 @@ import { app_shared_bible_home_generic_unknown_shown } from "./app_shared_bible_
 import { app_shared_bible_home_generic_bottom } from "./app_shared_bible_home_generic_bottom.mjs";
 import { app_shared_bible_home_generic_lambda$a } from "./app_shared_bible_home_generic_lambda$a.mjs";
 import { app_shared_bible_verse_arrows } from "./app_shared_bible_verse_arrows.mjs";
-import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 export async function app_shared_bible_home_generic(
   context,
@@ -61,7 +60,6 @@ export async function app_shared_bible_home_generic(
   let languages_available = property_get(r2, "languages_available");
   let verse_current = property_get(r2, "verse_current");
   app_shared_bible_verse_arrows(context, chapter_code, verse_current, foot);
-  html_page_bottom_space(content);
   list_add_multiple(languages_verses, languages_available);
   let v = {
     bar,
