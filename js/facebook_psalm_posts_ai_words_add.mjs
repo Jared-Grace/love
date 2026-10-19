@@ -6,7 +6,8 @@ export async function facebook_psalm_posts_ai_words_add() {
   "Edits every psalm post already on the facebook profile whose first line says 'put to music' so that it says 'put to music using AI', the wording the human asked for on 2026-10-19 for posts already out as well as later ones.";
   "★ IT FINDS ITS OWN POSTS: a post counts when its text holds 'put to music' and not 'using AI', so a second run does nothing and a run cut short is finished by the next one.";
   "★ NOTHING IS SAVED UNLESS THE EDITED TEXT IS READ BACK HOLDING THE NEW WORDS. The caret is placed after 'music' and the words typed there; if they landed anywhere else, it throws with the dialog unsaved and the browser is closed, which discards the edit.";
-  "★ EVERY STEP WAITS FOR WHAT IT NEEDS RATHER THAN A FIXED TIME: on the first runs the post's menu was still a spinner four seconds after the click, and Save was still switched off a few seconds after the words were typed.";
+  "★ EVERY STEP WAITS FOR WHAT IT NEEDS RATHER THAN A FIXED TIME: on the first runs the post's menu was still a spinner four seconds after the click.";
+  "★ SAVE IS PRESSED WITH THE MOUSE AND PROVED BY THE EDIT PAGE CLOSING. On the 'Edit reel' page the Save button read as disabled to a script for a full minute while it showed blue and ready, so the flag is not asked; the page going away is what says it saved, and a page that stays is an error rather than a post found again and edited twice.";
   "A picture is left for each step in gitignore/facebook_psalm_posts_ai_words_add_N.png.";
   "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   let puppeteer = await import("puppeteer");
@@ -33,6 +34,8 @@ export async function facebook_psalm_posts_ai_words_add() {
     });
     steps.push(name + " " + p);
   }
+  let text_box_read =
+    "(function(){var ds=[].slice.call(document.querySelectorAll('[role=dialog]'));for(var k=ds.length-1;k>=0;k--){var tb=ds[k].querySelector('[role=textbox]');if(tb)return tb.innerText}return ''})()";
   try {
     page.setDefaultTimeout(120000);
     let agent = await browser.userAgent();
@@ -91,9 +94,7 @@ export async function facebook_psalm_posts_ai_words_add() {
       await sleep(1000);
       await page.keyboard.type(" using AI");
       await sleep(1500);
-      let check = await page.evaluate(
-        "(function(){var ds=[].slice.call(document.querySelectorAll('[role=dialog]'));for(var k=ds.length-1;k>=0;k--){var tb=ds[k].querySelector('[role=textbox]');if(tb)return tb.innerText}return ''})()",
-      );
+      let check = await page.evaluate(text_box_read);
       await picture("words typed");
       if (check.indexOf("put to music using AI") < 0) {
         throw new Error(
@@ -105,22 +106,29 @@ export async function facebook_psalm_posts_ai_words_add() {
           "'using AI' is in the text twice: " + check.slice(0, 200),
         );
       }
-      let saved = "missing";
+      await sleep(3000);
+      let spot = await page.evaluate(
+        "(function(){var ds=[].slice.call(document.querySelectorAll('[role=dialog]'));for(var k=ds.length-1;k>=0;k--){var bs=[].slice.call(ds[k].querySelectorAll('[role=button],button')).filter(function(b){var r=b.getBoundingClientRect();return r.width>0&&r.height>0&&((b.getAttribute('aria-label')||'')==='Save'||(b.innerText||'').trim()==='Save')});if(bs.length){var r=bs[bs.length-1].getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2}}}return null})()",
+      );
+      if (spot === null) {
+        await picture("save");
+        throw new Error("Save: missing");
+      }
+      await page.mouse.click(spot.x, spot.y);
+      let closed = false;
       for (let w = 0; w < 60; w++) {
-        saved = await page.evaluate(
-          "(function(){var ds=[].slice.call(document.querySelectorAll('[role=dialog]'));for(var k=ds.length-1;k>=0;k--){var bs=[].slice.call(ds[k].querySelectorAll('[role=button],button')).filter(function(b){var r=b.getBoundingClientRect();return r.width>0&&((b.getAttribute('aria-label')||'')==='Save'||(b.innerText||'').trim()==='Save')});if(bs.length){var b=bs[bs.length-1];if(b.getAttribute('aria-disabled')==='true')return 'disabled';b.click();return 'clicked'}}return 'missing'})()",
-        );
-        if (saved === "clicked") {
+        await sleep(1000);
+        let still = await page.evaluate(text_box_read);
+        if (still.indexOf("put to music using AI") < 0) {
+          closed = true;
           break;
         }
-        await sleep(1000);
       }
-      if (saved !== "clicked") {
-        await picture("save");
-        throw new Error("Save: " + saved);
-      }
-      await sleep(10000);
       await picture("saved");
+      if (!closed) {
+        throw new Error("the edit page did not close after Save");
+      }
+      await sleep(5000);
       edited = edited + 1;
     }
     let r2 = {
