@@ -18,6 +18,8 @@ import { file_read_json } from "./file_read_json.mjs";
 import { lyric_video_document_video_name } from "./lyric_video_document_video_name.mjs";
 import { path_dirname } from "./path_dirname.mjs";
 import { path_join } from "./path_join.mjs";
+import { lyric_video_recording_video_path_chosen } from "./lyric_video_recording_video_path_chosen.mjs";
+import { equal } from "./equal.mjs";
 import { list_size } from "./list_size.mjs";
 export async function giveaway_psalms_videos_paths(folder_audio) {
   arguments_assert(arguments, 1);
@@ -28,13 +30,13 @@ export async function giveaway_psalms_videos_paths(folder_audio) {
   ("★ WHAT IS NOT THERE IS NAMED RATHER THAN LEFT OUT, in three kinds: a song nobody has timed yet, a song that is timed but whose video has not been rendered, and a song the two walks above do not hand over in the first place. All three are perfectly ordinary states of this folder rather than faults, and all three are invisible in a map of what was found - a walk cannot report its own silence, so the caller is handed it. Measured on 2026-10-15 there were two hundred and thirty-eight videos on the disk against five hundred and twenty-six recordings, so what is missing is most of it and a caller that could not see that would read a short answer as a complete one.");
   ("★ THE TRANSLATION IS READ OFF THE DOCUMENTS RATHER THAN ASKED FOR, for the same reason the record this feeds does not ask for it: there is one right answer, so taking it as an argument would only make a wrong one possible. What a video is called is then grown by the same function that named it when it was rendered, so the two spellings cannot drift - and the day they would have, the file is simply not found and nothing says why.");
   ("★ THE THIRD KIND IS THE ONE THIS WALK COULD NOT SEE ABOUT ITSELF, AND IT IS FOUND BY ASKING THE GIVEAWAY'S OWN WALK WHAT IT HOLDS AND SUBTRACTING. The two walks above refuse a recording that came out of an editing session, because a timing document is addressed by chapter alone and two singings of one chapter would fight over it. The giveaway has no such limit and walks the folder its own way, so it holds recordings these two never offer - and a recording never offered cannot be reported as untimed or as unrendered either, because both of those are answers about something that was asked about. So it was absent rather than missing, which is the one state a caller cannot tell from complete. Measured on 2026-10-16 the giveaway's walk held five hundred and thirty-seven recordings against this walk's five hundred and nineteen, and among the eighteen were both recordings of Psalm 131 - the only two there are - so that psalm's two finished videos were unreachable and nothing said so.");
-  ("★ THE NOTE IS ASKED FIRST AND THE GROWN NAME ONLY AFTER IT, BECAUSE ONE OF THEM KNOWS AND THE OTHER GUESSES. A note is written by the render itself, which was holding both files at the moment it made one from the other. A grown name is rebuilt afterwards out of a timing document and a mark, and nothing in it checks that the file answering to that name is the file that was made - so when a recording is renamed after its render, the name it used to have is left free for some other file to answer to, and this walk hands that one out. Measured on 2026-10-19 in one folder it had happened twice: Psalm 134's recording was given a video twelve seconds shorter than itself, and Psalm 119 verses 129 to 136 one fourteen seconds shorter. Both play perfectly and both are of a different singing, which is why nothing complained. Asked in the other order a note could never correct either of them, because the grown name found a file and the note was never reached at all.");
-  ("★ THE GROWN NAME IS STILL ASKED, AND FOR NEARLY ALL OF THE DISK IT IS STILL THE ONLY THING THAT ANSWERS. The notes began long after almost every video here was rendered, so most recordings have none, and what asking the note first costs those is one look that finds nothing. What changed is only which answer wins where both can speak. Written as a replacement rather than as a precedence this would report the whole folder as unrendered the day it landed.");
-  ("★ THE NOTE IS THE ONLY THING THAT EVER WORKS FOR AN EDITED RECORDING, AND THAT IS WHY IT CANNOT BE THE SECOND QUESTION. The grown name is built from the timing document and the mark saying which singing of the passage this is, and an edited recording's mark is not the mark its video was rendered under - Psalm 131's videos are named for the un-edited numbering the editing replaced. That is not a thing a cleverer name can fix: what an edited file was made from lives inside its editing session and in no name at all, so the join has to be written down by whoever knows it, which is the render.");
-  ("★ A NOTE IS KEYED BY THE RECORDING'S OWN FILE NAME, SO RENAMING A RECORDING STILL LOSES ITS NOTE. Asking the note first fixes which answer wins; it does not make the note survive a rename, and nothing here can. What it does buy is that the join can be put right afterwards by writing a new note, which before this was impossible whenever the old name still found some file.");
+  ("★ BOTH THE GROWN NAME AND THE RENDER'S OWN NOTE ARE ASKED, AND WHERE THEY DISAGREE THE LENGTH DECIDES - NEITHER ONE WINS BY ORDER. Both sides have been caught lying here. A grown name hands out whatever file now answers to a name a recording used to have, which gave Psalm 134 a video twelve seconds shorter than itself and Psalm 119 verses 129 to 136 one fourteen seconds shorter. A note records the render that wrote it and not the latest one, so a second render that left no note strands it on a superseded file, which on 2026-10-19 was true of four of the fourteen notes. Asking in a fixed order picks one of those two faults and cannot see the other, so the choice is handed to the one thing neither side invents.");
+  ("★ ASKING BOTH COSTS ALMOST NOTHING BECAUSE ALMOST NOTHING HAS A NOTE. The notes began long after nearly every video here was rendered, so for most recordings the note lookup finds nothing and the grown name is the whole answer, exactly as before. The two files are only measured where a note and a name point at different files, which on the folder measured was four rows out of five hundred and sixty-four.");
+  ("★ THE NOTE IS THE ONLY THING THAT EVER WORKS FOR AN EDITED RECORDING. The grown name is built from the timing document and the mark saying which singing of the passage this is, and an edited recording's mark is not the mark its video was rendered under - Psalm 131's videos are named for the un-edited numbering the editing replaced. That is not a thing a cleverer name can fix: what an edited file was made from lives inside its editing session and in no name at all, so the join has to be written down by whoever knows it, which is the render.");
+  ("★ A NOTE IS KEYED BY THE RECORDING'S OWN FILE NAME, SO RENAMING A RECORDING STILL LOSES ITS NOTE. Asking both sides fixes which answer wins; it does not make the note survive a rename, and nothing here can. What it does buy is that a wrong join can be put right afterwards by writing a new note, which before this was impossible whenever the old name still found some file.");
   ("★ A RECORDING ITS NOTE ANSWERS FOR IS NEVER REPORTED AS UNTIMED, EVEN WHERE ITS TIMING DOCUMENT HAS GONE. Nothing can be rendered without timings, so a note is standing proof that the timings existed; a document missing now means it was renamed or moved since, which is a question about the documents and not about this song's video. Listed as untimed it would send somebody off to time a passage that is already sung, timed and rendered.");
   ("★ A RECORDING RESCUED BY ITS NOTE LEAVES THE UNREACHABLE LIST RATHER THAN APPEARING IN BOTH, BECAUSE THAT LIST IS READ AS WORK OUTSTANDING. Kept in both it would be reported as a song with no video while its video was being handed out beside it, and a reader clearing the list would go looking for something already found. What is lost by moving it is the knowledge that the two walks above still cannot see it, and that is recoverable from the notes list, which names exactly the rows neither walk could reach by name.");
-  ("Recovering the join afterwards from the sound itself was tried on 2026-10-18 and does work - fifteen hundred comparisons of loudness over eighteen recordings, every true pair separated from every wrong one - but it answers with a likelihood and a threshold somebody has to choose. Length turned out to answer exactly instead: the renderer in use writes the video to the recording's own length, so a true pair agrees in every digit and no threshold is wanted. Both are ways back for the renders that happened before the notes, and neither is the way forward.");
+  ("Recovering the join afterwards from the sound itself was tried on 2026-10-18 and does work - fifteen hundred comparisons of loudness over eighteen recordings, every true pair separated from every wrong one - but it answers with a likelihood and a threshold somebody has to choose. Length turned out to answer exactly instead: the renderer in use writes the video to the recording's own length, so a true pair agrees in every digit and no threshold is wanted.");
   ("A video on the disk that no recording claims is not reached by this and is not meant to be. Those are renders of recordings that have since been renamed - a cut that became the plain take, a second version - and the file plays perfectly while being a superseded cut of a song that is now given away under another name. Walking the disk from that end is a different question and is asked as one, by the command that joins the unclaimed videos to recordings by length.");
   let version = await lyric_video_documents_version();
   let chapters = await psalms_songs_folder_chapters(folder_audio);
@@ -90,39 +92,45 @@ export async function giveaway_psalms_videos_paths(folder_audio) {
   let untimed = [];
   let unrendered = [];
   for (let one of wanted) {
-    let path_noted = await lyric_video_recording_video_path_or_null(
-      one.path_audio,
-    );
-    let b = null_is(path_noted);
-    let noted_is = not(b);
-    if (noted_is) {
-      property_set(paths, one.path_audio, path_noted);
-      list_add(noted, one.path_audio);
-      continue;
-    }
     let path_document = lyric_video_recording_document_path(
       one.path_passage,
       one.mark,
     );
     let timed_is = await file_exists(path_document);
-    if (not(timed_is)) {
-      list_add(untimed, one.path_audio);
-      continue;
+    let path_grown = null;
+    let path_named = null;
+    if (timed_is) {
+      let document = await file_read_json(path_document);
+      let name_video = lyric_video_document_video_name(
+        document,
+        version,
+        one.mark,
+      );
+      let folder_song = await path_dirname(one.path_audio);
+      path_grown = path_join([folder_song, name_video]);
+      let rendered_is = await file_exists(path_grown);
+      if (rendered_is) {
+        path_named = path_grown;
+      }
     }
-    let document = await file_read_json(path_document);
-    let name_video = lyric_video_document_video_name(
-      document,
-      version,
-      one.mark,
+    let path_video = await lyric_video_recording_video_path_chosen(
+      one.path_audio,
+      path_named,
     );
-    let folder_song = await path_dirname(one.path_audio);
-    let path_video = path_join([folder_song, name_video]);
-    let rendered_is = await file_exists(path_video);
-    if (not(rendered_is)) {
-      list_add(unrendered, path_video);
+    let chosen_absent_is = null_is(path_video);
+    if (chosen_absent_is) {
+      if (timed_is) {
+        list_add(unrendered, path_grown);
+      } else {
+        list_add(untimed, one.path_audio);
+      }
       continue;
     }
     property_set(paths, one.path_audio, path_video);
+    let named_is = equal(path_video, path_named);
+    if (not(named_is)) {
+      list_add(noted, one.path_audio);
+    }
   }
   let answer = {
     songs: list_size(wanted),
