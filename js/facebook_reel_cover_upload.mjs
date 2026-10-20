@@ -1,7 +1,13 @@
 import { sleep } from "./sleep.mjs";
-export async function facebook_reel_cover_upload(page, picture_path) {
+export async function facebook_reel_cover_upload(
+  page,
+  picture_path,
+  picture_take,
+) {
   "$plain page";
   "$plain picture_path";
+  "$plain picture_take";
+  "picture_take is called with no arguments after each step and leaves a picture, because the first real post (2026-10-20, 12:40) lost its whole composer somewhere in here while a trial without words had not.";
   "On a reel's settings page, presses the cover's Edit, hands the thumbnail box the picture, and saves it, then answers what the save button was.";
   "★ A REEL'S COVER IS OTHERWISE ITS FIRST FRAME, and a lyric video begins dark, so the reels showed black until played (the human, 2026-10-20).";
   "Every button is looked for inside the dialog titled 'Edit thumbnail' once it opens, because the settings page behind it has a Save of its own (save as draft).";
@@ -12,12 +18,14 @@ export async function facebook_reel_cover_upload(page, picture_path) {
   if (edit !== "clicked") {
     throw new Error("no cover Edit on the reel settings page");
   }
+  await sleep(3000);
+  await picture_take();
   let input = await page.waitForSelector(
     '[role=dialog] input[type=file][accept=".png,.jpg,.jpeg"]',
   );
-  await sleep(2000);
   await input.uploadFile(picture_path);
   await sleep(6000);
+  await picture_take();
   let saved = null;
   let tries = 0;
   while (saved !== "clicked" && tries < 30) {
@@ -32,6 +40,13 @@ export async function facebook_reel_cover_upload(page, picture_path) {
   if (saved !== "clicked") {
     throw new Error("cover Save was " + saved);
   }
-  await sleep(4000);
+  await sleep(8000);
+  await picture_take();
+  let settings = await page.evaluate(
+    "[].slice.call(document.querySelectorAll('[role=dialog] [role=button],[role=dialog] button')).some(function(x){var r=x.getBoundingClientRect();return r.width>0&&r.height>0&&(x.innerText||'').trim()==='Post'})",
+  );
+  if (!settings) {
+    throw new Error("the reel settings page is gone after the cover was saved");
+  }
   return saved;
 }

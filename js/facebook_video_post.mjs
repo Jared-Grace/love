@@ -149,10 +149,8 @@ export async function facebook_video_post(file_path, text, cover_path) {
       );
       if (post_seen && !covered) {
         step = "cover";
-        await facebook_reel_cover_upload(page, cover_path);
+        await facebook_reel_cover_upload(page, cover_path, picture_take);
         covered = true;
-        await sleep(8000);
-        await picture_take();
         step = "post";
       }
       posted = await click_in_dialog("Post");
