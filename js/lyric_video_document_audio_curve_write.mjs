@@ -4,15 +4,15 @@ import { file_read_json } from "./file_read_json.mjs";
 import { number_is } from "./number_is.mjs";
 import { lyric_video_audio_cut_end } from "./lyric_video_audio_cut_end.mjs";
 import { lyric_video_audio_cut } from "./lyric_video_audio_cut.mjs";
-import { lyric_video_audio_lift } from "./lyric_video_audio_lift.mjs";
-export async function lyric_video_document_audio_write(
+import { lyric_video_audio_lift_curve } from "./lyric_video_audio_lift_curve.mjs";
+export async function lyric_video_document_audio_curve_write(
   path_audio,
   path_document,
   path_audio_cut,
 ) {
   "$plain path_audio";
   "$plain path_document";
-  "$plain path_output";
+  "$plain path_audio_cut";
   "Writes the sound a lyric video's film will carry: the recording cut where the document says it begins and ends, with any rise in loudness the document asks for. It is what the render plays, and it can be written on its own so a change to the sound is heard before a whole film is made.";
   arguments_assert(arguments, 3);
   let document = await file_read_json(path_document);
@@ -35,11 +35,12 @@ export async function lyric_video_document_audio_write(
   if (lift) {
     let seconds_from = subtract(lift.from, seconds_cut);
     let seconds_to = subtract(lift.to, seconds_cut);
-    await lyric_video_audio_lift(
+    await lyric_video_audio_lift_curve(
       path_cut,
       seconds_from,
       seconds_to,
       lift.decibels,
+      lift.power,
       path_audio_cut,
     );
   }
