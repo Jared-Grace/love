@@ -13,9 +13,9 @@ export function verse_name_pad(verse_name, count) {
   ("The letter is set aside, the digits are padded on their own, and the letter is put back after them. It is given no width of its own, because every letter that occurs is a single one and a width would have to guess at a second.");
   ("A verse with no letter comes back exactly as a plain number padding would have left it, so this is safe to use everywhere a verse is padded and there is no second rule to remember for the ones that are plain.");
   let verse_text = text_from_number(verse_name);
-  let digits = text_digits_only(verse_text);
+  let verse_digits = text_digits_only(verse_text);
   let letters = text_letters_only(verse_text);
-  let digits_padded = number_pad(digits, count);
+  let digits_padded = number_pad(verse_digits, count);
   let padded = text_combine(digits_padded, letters);
   return padded;
 }
