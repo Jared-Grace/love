@@ -47,11 +47,11 @@ export function app_code_program_trace_piece(state, piece, side) {
     return value_written;
   }
   ("a minus straight before a value written out is that value's sign, so -1 is a value written out as 5 is, with nothing to evaluate - the minus lesson teaches it as the negative sign; -Infinity reads the same way. Added 2026-10-17 so the programs of Square inside the grid, whose squares one past an edge sit at -1, can be stepped through. Not picked: evaluating it as an operator before its number, as ! is, which would ask the learner to solve a number they can already read");
-  let negative_is =
+  let below_zero_is =
     equal(type, "UnaryExpression") &&
     equal(property_get(piece, "operator"), "-") &&
     written_is(property_get(piece, "argument"));
-  if (negative_is) {
+  if (below_zero_is) {
     let object = property_get(piece, "argument");
     let value_negative = -written_value(object);
     return value_negative;
