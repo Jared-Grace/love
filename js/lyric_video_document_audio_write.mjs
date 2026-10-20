@@ -5,7 +5,7 @@ import { number_is } from "./number_is.mjs";
 import { lyric_video_audio_cut_end } from "./lyric_video_audio_cut_end.mjs";
 import { lyric_video_audio_cut } from "./lyric_video_audio_cut.mjs";
 import { lyric_video_audio_lift_curve } from "./lyric_video_audio_lift_curve.mjs";
-export async function lyric_video_document_audio_curve_write(
+export async function lyric_video_document_audio_write(
   path_audio,
   path_document,
   path_audio_cut,
