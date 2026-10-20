@@ -6,12 +6,12 @@ export function youtube_video_upload_received(answer) {
   "No Range header means nothing has landed yet, which is what YouTube sends before the first byte arrives — so that reads as zero rather than as an error.";
   arguments_assert(arguments, 1);
   let headers = property_get(answer, "headers");
-  let range = headers["range"];
-  if (equal(range, undefined)) {
+  let span = headers["range"];
+  if (equal(span, undefined)) {
     let r2 = 0;
     return r2;
   }
-  let last = range.split("-")[1];
+  let last = span.split("-")[1];
   let r = Number(last) + 1;
   return r;
 }
