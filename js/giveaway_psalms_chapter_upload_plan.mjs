@@ -41,18 +41,18 @@ export async function giveaway_psalms_chapter_upload_plan(
   let texts = await giveaway_psalms_chapter_text_files(chapter);
   let files = [];
   for (let one of item.files) {
-    let text_is = equal(one.kind, "text");
+    let kind_text_is = equal(one.kind, "text");
     let in_repo_is = null_not_is(one.path_in_repo ?? null);
-    let made = text_is
+    let made = kind_text_is
       ? list_find_property(texts, "file_name", one.path_in_item)
       : null;
-    let text = text_is ? made.text : null;
+    let text = kind_text_is ? made.text : null;
     let folder = folder_repo_love();
     let path_repo = in_repo_is ? path_join([folder, one.path_in_repo]) : null;
-    let path_media = text_is
+    let path_media = kind_text_is
       ? null
       : (path_repo ?? path_join([folder_media, one.file_name]));
-    let size = text_is ? text_size(text) : await file_size(path_media);
+    let size = kind_text_is ? text_size(text) : await file_size(path_media);
     let file = {
       path_in_item: one.path_in_item,
       kind: one.kind,
