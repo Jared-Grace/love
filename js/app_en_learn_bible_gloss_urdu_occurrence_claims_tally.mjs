@@ -1,15 +1,14 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_not } from "./property_not.mjs";
-import { property_get } from "./property_get.mjs";
-import { null_is } from "./null_is.mjs";
+import { gloss_occurrence_claim_counted_is } from "./gloss_occurrence_claim_counted_is.mjs";
 import { not } from "./not.mjs";
-import { and } from "./and.mjs";
 import { app_en_learn_bible_gloss_urdu_chapters_claims_generic } from "./app_en_learn_bible_gloss_urdu_chapters_claims_generic.mjs";
 import { gloss_passages_occurrence_claims_urdu } from "./gloss_passages_occurrence_claims_urdu.mjs";
+import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_filter } from "./list_filter.mjs";
+import { list_size } from "./list_size.mjs";
 export async function app_en_learn_bible_gloss_urdu_occurrence_claims_tally() {
   "How many sentences of the Urdu store say which time over one of its English words has come, split by how far the reading got with each one: the ones whose number it read, the ones whose number it could not read, and the ones it decided were about some other time than this word's.";
   "★ THIS IS WHAT STOPS THE GATE BESIDE IT GOING QUIET. The reading finds a claim by the words the store happens to spell it with, so a chapter worded any other way is found nowhere and reports nothing wrong - which is the same answer as a chapter with nothing wrong in it. A floor under the number counted turns that silence into a red gate, and the number is here rather than inside the gate so that anybody can ask it without running one.";
@@ -25,18 +24,9 @@ export async function app_en_learn_bible_gloss_urdu_occurrence_claims_tally() {
     if (elsewhere) {
       return false;
     }
-    let claimed = property_get(claim, "claimed");
-    let unread = null_is(claimed);
+    let counted = gloss_occurrence_claim_counted_is(claim);
+    let unread = not(counted);
     return unread;
-  }
-  function counted_is(claim) {
-    let elsewhere = property_not(claim, "about_this");
-    let here = not(elsewhere);
-    let claimed = property_get(claim, "claimed");
-    let unread = null_is(claimed);
-    let read = not(unread);
-    let counted = and(here, read);
-    return counted;
   }
   let chapters = await app_en_learn_bible_gloss_urdu_chapters_claims_generic(
     gloss_passages_occurrence_claims_urdu,
@@ -50,7 +40,7 @@ export async function app_en_learn_bible_gloss_urdu_occurrence_claims_tally() {
     each(found, claim_read);
   }
   each(chapters, chapter_read);
-  let list = list_filter(claims, counted_is);
+  let list = list_filter(claims, gloss_occurrence_claim_counted_is);
   let list2 = list_filter(claims, unread_is);
   let list3 = list_filter(claims, elsewhere_is);
   let r = {
