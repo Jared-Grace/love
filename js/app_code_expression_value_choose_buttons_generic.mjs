@@ -17,7 +17,7 @@ export function app_code_expression_value_choose_buttons_generic(
   value,
   decoys,
   on_wrong,
-  text_get,
+  value_text,
 ) {
   arguments_assert(arguments, 5);
   ("the values to choose from, made in a box of their own under parent, handed back as the box, the right value's button, and a waiting that ends once the right value is pressed and has stayed green as long as any other success. Not awaited here, so a caller can point at the right button while the learner looks for it, as the step-through guide does at the human's asking 2026-10-14. ",
@@ -28,7 +28,7 @@ export function app_code_expression_value_choose_buttons_generic(
   let choices = list_concat(decoys, [value]);
   let texts = list_any(choices, text_is);
   if (texts) {
-    list_sort_text_mapper(choices, text_get);
+    list_sort_text_mapper(choices, value_text);
   } else {
     list_sort_number(choices);
   }
@@ -52,7 +52,7 @@ export function app_code_expression_value_choose_buttons_generic(
     pressed,
   };
   function each_button(choice) {
-    let choice_text = text_get(choice);
+    let choice_text = value_text(choice);
     let right_is = equal(choice, value);
     let b = app_code_quiz_choice_button_answer(
       box,
