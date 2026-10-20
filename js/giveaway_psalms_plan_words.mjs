@@ -1,3 +1,4 @@
+import { list_add_multiple } from "./list_add_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_add } from "./list_add.mjs";
 import { giveaway_psalms_item_subjects } from "./giveaway_psalms_item_subjects.mjs";
@@ -18,29 +19,34 @@ export async function giveaway_psalms_plan_words(chapter, plan) {
   ("★ THE SUBJECTS GO AS ONE SAYING WITH SEMICOLONS BETWEEN THEM RATHER THAN AS SEVERAL SAYINGS. That is the host's own shorthand for a word that holds several, and it is the only shape that reads the same down both roads: a patch would take a real list, but the notes on a first file cannot - several of one word there have to be numbered one by one, and a reader that had to tell a list from a saying would be branching on what it was handed. One shape, two plain walks. If the host turns out to show the semicolons rather than splitting on them, the three words are all still there to be searched for and the mending is a rewrite of this one line - which is the cheap kind of wrong, since words on a page can be rewritten as often as anyone likes.");
   ("The licence is the one of these that is a promise and not just a word, so the only safe direction to ever change it is a freer one.");
   let words = [];
-  list_add(words, {
-    name: "title",
-    said: plan.title,
-  });
-  list_add(words, {
-    name: "description",
-    said: plan.description,
-  });
-  list_add(words, {
-    name: "licenseurl",
-    said: plan.licence_url,
-  });
+  list_add_multiple(words, [
+    {
+      name: "title",
+      said: plan.title,
+    },
+    {
+      name: "description",
+      said: plan.description,
+    },
+    {
+      name: "licenseurl",
+      said: plan.licence_url,
+    },
+  ]);
   let subjects = giveaway_psalms_item_subjects(chapter);
-  list_add(words, {
-    name: "subject",
-    said: list_join_semicolon_space(subjects),
-  });
-  list_add(words, {
-    name: "language",
-    said: giveaway_psalms_language(),
-  });
+  list_add_multiple(words, [
+    {
+      name: "subject",
+      said: list_join_semicolon_space(subjects),
+    },
+    {
+      name: "language",
+      said: giveaway_psalms_language(),
+    },
+  ]);
   let day = await giveaway_psalms_files_date_or_null(plan.files);
-  let day_known_is = not(null_is(day));
+  let b = null_is(day);
+  let day_known_is = not(b);
   if (day_known_is) {
     list_add(words, {
       name: "date",
