@@ -6,7 +6,7 @@ import { giveaway_psalms_plan_words } from "./giveaway_psalms_plan_words.mjs";
 import { giveaway_archive_metadata_headers_words } from "./giveaway_archive_metadata_headers_words.mjs";
 import { null_is } from "./null_is.mjs";
 import { file_read_buffer } from "./file_read_buffer.mjs";
-import { giveaway_archive_file_put } from "./giveaway_archive_file_put.mjs";
+import { giveaway_archive_file_put_patient } from "./giveaway_archive_file_put_patient.mjs";
 import { true_is_assert_json } from "./true_is_assert_json.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_add } from "./list_add.mjs";
@@ -19,8 +19,9 @@ export async function giveaway_psalms_chapter_upload(chapter, folder_media) {
   ("★ A BOX BEING HELD BACK STOPS THIS AND NOTHING ELSE IN THE CHAIN, BECAUSE THIS IS THE ONLY STEP THAT CANNOT BE TAKEN BACK. The plan next door answers freely for a held-back box, which is how somebody sees what is still missing from it. Here the hold is a refusal: a psalm with nothing sung in it would go out as a box of pictures and verses under a name that promises a song, and that name can never be reissued.");
   ("★ THE WORDS THAT BECOME THE BOX'S PAGE TRAVEL WITH THE FIRST FILE ONLY, BECAUSE THEY ARE NOTES ABOUT THE BOX AND NOT ABOUT ANY FILE IN IT. The host takes them from whichever request carries them and keeps them in a file it rewrites in place, so sending them eleven times would say the same thing eleven times and the last one would win. Sending them once, on the request that may also be the one that brings the box into being, is the same outcome with ten fewer chances to disagree with itself.");
   ("★ WHICH WORDS THOSE ARE IS ASKED OF ONE PLACE, THE SAME PLACE THE MENDING ROAD ASKS. They used to be named here and named again by the patch that brings an already-public page back in step, which meant a word added to one road was missing from the other - and the only sign of it would have been a new box carrying a word every older box lacked. The kind of thing the box holds is still passed in from here, because the host settles that when a box comes into being and treats it afterwards as what the box is rather than as a word written on it.");
+  ("★ THE WAITING LIVES UNDER THIS WALK RATHER THAN IN IT, SO THAT A SLOW MOMENT AND A REAL REFUSAL ARRIVE HERE LOOKING DIFFERENT. The sender below tries a busy host again, waiting longer each time, and only answers once it has either got the file in or run out of patience. So a number reaching this line has already survived half an hour of trying, which is what lets this walk keep its old shape: it still stops dead on the first file that truly will not go, and it no longer stops on a connection that was merely slow to open - the fault that ended three runs of this in a row on a machine whose plainer tools reached the same address at once.");
   ("Each file is read off the disk only when its turn comes. A box of recordings is gigabytes, and holding all of it in memory to send it one piece at a time would be paying for the whole box to send the first file of it.");
-  ("A number from the host that is not plain success stops the walk where it stands, naming the file it happened on. The sending can simply be run again afterwards - the host is asked to make the box if it is not there, so the files that already landed are written over with themselves rather than refused.");
+  ("A number from the host that is not plain success stops the walk where it stands, naming the file it happened on and how many tries it was given. The sending can simply be run again afterwards - the host is asked to make the box if it is not there, so the files that already landed are written over with themselves rather than refused.");
   let plan = await giveaway_psalms_chapter_upload_plan(chapter, folder_media);
   null_is_assert_json(plan.withheld_why, {
     identifier: plan.identifier,
@@ -36,7 +37,7 @@ export async function giveaway_psalms_chapter_upload(chapter, folder_media) {
     let made_is = null_is(file.path_on_disk);
     let body = made_is ? file.text : await file_read_buffer(file.path_on_disk);
     let headers_extra = first_is ? notes : {};
-    let r = await giveaway_archive_file_put(
+    let r = await giveaway_archive_file_put_patient(
       plan.identifier,
       file.path_in_item,
       body,
@@ -46,6 +47,8 @@ export async function giveaway_psalms_chapter_upload(chapter, folder_media) {
       identifier: plan.identifier,
       path_in_item: file.path_in_item,
       status: r.status,
+      tried: r.tried,
+      threw_why: r.threw_why,
       sent_already: list_size(sent),
       hint: "the host did not accept this file, so the rest of the box was left unsent - running this again sends only what is missing",
     });
