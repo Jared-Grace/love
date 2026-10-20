@@ -5782,7 +5782,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["5473", "chalkos", "bronze+jar", "copper pot"],
     ["2778", "kensos", "coin+clipboard", "tax"],
     ["2829", "klepto", "hand+lying_face+thing", "theft"],
-    ["2835", "kodrantes", "coin+four4", "quadrans"],
+    ["2835", "kodrantes", "coin+divide+four", "quadrans"],
     ["3016", "lepis", "coin+pinching_hand", "small coin"],
     ["2855", "kollubistes", "coin+shuffle+doer", "money changer"],
     ["2856", "koloboo", "scissors+clock+doing", "shorten"],
