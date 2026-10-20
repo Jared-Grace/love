@@ -15,7 +15,7 @@ export function giveaway_passage_code(chapter_code, verse_first, verse_last) {
   ("Both ends of the range are written even when a part is one verse long. A single verse written once would be a fourth shape for a reader to learn, and the saving is three characters.");
   let first_padded = verse_name_pad(verse_first, 3);
   let last_padded = verse_name_pad(verse_last, 3);
-  let range = list_join_dash([first_padded, last_padded]);
-  let passage_code = list_join_underscore([chapter_code, range]);
+  let span = list_join_dash([first_padded, last_padded]);
+  let passage_code = list_join_underscore([chapter_code, span]);
   return passage_code;
 }
