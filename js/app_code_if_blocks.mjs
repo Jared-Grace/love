@@ -146,7 +146,7 @@ export function app_code_if_blocks(code) {
     let difference = subtract(left, 1);
     return difference;
   }
-  function range(from, to) {
+  function span(from, to) {
     let r = {
       from,
       to,
@@ -165,8 +165,8 @@ export function app_code_if_blocks(code) {
     let open = property_get(block, "start");
     let left2 = property_get(block, "end");
     let close = subtract(left2, 1);
-    let header = range(start, open + 1);
-    let closing = range(close, close + 1);
+    let header = span(start, open + 1);
+    let closing = span(close, close + 1);
     let newline = text_index_of_from(code, "\n", open);
     let line = text_slice(code, newline + 1, close);
     let body_indent = text_indent_size(line);
@@ -255,13 +255,13 @@ export function app_code_if_blocks(code) {
       let ran_any = not_equal(ran, null);
       let steps = [];
       if (not(runs)) {
-        let r2 = range(open + 1, close);
+        let r2 = span(open + 1, close);
         let item = fading([r2]);
         list_add(steps, item);
       }
       if (equal(i, last)) {
         if (equal(ran, null)) {
-          let r3 = range(start, end);
+          let r3 = span(start, end);
           let item2 = fading([r3]);
           list_add(steps, item2);
         } else {
@@ -269,7 +269,7 @@ export function app_code_if_blocks(code) {
           let block_ran = property_get(object3, "block");
           let after = property_get(block_ran, "end");
           if (less_than(after, end)) {
-            let r4 = range(after, end);
+            let r4 = span(after, end);
             let item3 = fading([r4]);
             list_add(steps, item3);
           }
