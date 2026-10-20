@@ -4,9 +4,12 @@ import { facebook_page_user_data_path } from "./facebook_page_user_data_path.mjs
 import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
 import { sleep } from "./sleep.mjs";
 import { facebook_composer_ai_label_add } from "./facebook_composer_ai_label_add.mjs";
-export async function facebook_video_post(file_path, text) {
+import { facebook_reel_cover_upload } from "./facebook_reel_cover_upload.mjs";
+export async function facebook_video_post(file_path, text, cover_path) {
   "$plain file_path";
   "$plain text";
+  "$plain cover_path";
+  "★ A REEL'S COVER IS SET TO THE PICTURE AT cover_path once its settings page shows, because otherwise it is the film's first frame, and a film that begins dark showed black until played (the human, 2026-10-20).";
   "Posts one film with words above it to the facebook profile the page profile is signed in to, public and labelled as made with AI, and answers the steps it took.";
   "★ IT POSTS NOTHING UNLESS THE POST READS PUBLIC AND THE AI LABEL READS ON. Both are checked on the composer's own button names before it moves on, so a facebook that changed its defaults stops the post rather than sending it out wrong. The singing is made with a model, and youtube already carries the same videos marked as altered or synthetic.";
   "★ THE BROWSER READS THE FILM OFF THE DISK ITSELF, through the composer's file box, so nothing carries its bytes and no size limit of a message-passing tool applies.";
@@ -139,7 +142,19 @@ export async function facebook_video_post(file_path, text) {
     step = "post";
     let posted = null;
     let presses = 0;
+    let covered = false;
     while (posted === null && presses < 5) {
+      let post_seen = await page.evaluate(
+        "[].slice.call(document.querySelectorAll('[role=dialog] [role=button],[role=dialog] button')).some(function(x){var r=x.getBoundingClientRect();return r.width>0&&r.height>0&&(x.innerText||'').trim()==='Post'})",
+      );
+      if (post_seen && !covered) {
+        step = "cover";
+        await facebook_reel_cover_upload(page, cover_path);
+        covered = true;
+        await sleep(8000);
+        await picture_take();
+        step = "post";
+      }
       posted = await click_in_dialog("Post");
       if (posted === null) {
         posted = await click_in_dialog("Share");

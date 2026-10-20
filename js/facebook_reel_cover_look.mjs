@@ -81,6 +81,7 @@ export async function facebook_reel_cover_look(file_path) {
     }
     await picture_take();
     let saved = await facebook_reel_cover_upload(page, cover);
+    await sleep(8000);
     await picture_take();
     let r = {
       saved,
