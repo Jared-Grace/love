@@ -1,0 +1,9 @@
+export function giveaway_psalms_language() {
+  "The language a box of sung psalms is in, spelled the way archive.org wants a language spelled - three letters, not the English word for it.";
+  "★ THE HOST IS GIVEN THE CODE AND NOT THE WORD, BECAUSE THE CODE IS WHAT GATHERS BOXES TOGETHER AND THE WORD IS ONLY WHAT A READER SEES. A page sent eng shows a reader English, so nothing is lost by sending the code; a page sent English is a page whose language is a piece of free text, and free text does not join up with the millions of other items already filed under the code. The whole reason to say the language at all is that somebody browsing one language finds these, so the value has to be the one that browsing uses.";
+  "★ IT IS ONE VALUE RATHER THAN A QUESTION ASKED OF A BOX, BECAUSE THE RECORD HOLDS EXACTLY ONE TRANSLATION AND THAT WAS MEASURED RATHER THAN ASSUMED. All 3385 rows of the giveaway record name the same bible folder, engbsb, counted on 2026-10-20. A function taking a box and reading its language off would be a lookup with one row in it, dressed up as a choice.";
+  "★ SO THIS IS THE ONE PLACE A SECOND TRANSLATION ARRIVES, AND IT ARRIVES AS A CHANGED SIGNATURE RATHER THAN AS A SILENT WRONG ANSWER. The day a psalm is sung in another tongue, this stops being a constant and starts being asked of the row's bible folder - and because every caller goes through this name, the compiler finds all of them. The failure that was being avoided is the other shape: the language left out of the page altogether, where a second translation's boxes would simply go on saying nothing and nobody would be told.";
+  "Nothing about the licence, the paintings or the singing is said here. A box's language is a fact about the words in it, and the paintings have no language at all - they are in the box because they are what the video was made from, not because they are something to read.";
+  let language = "eng";
+  return language;
+}
