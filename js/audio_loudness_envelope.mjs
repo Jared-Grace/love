@@ -38,14 +38,14 @@ export async function audio_loudness_envelope(path_media) {
   if (equal(readings.length, 0)) {
     error("the loudness meter answered no readings at all for this recording");
   }
-  let floor = audio_loudness_silence_floor();
+  let silence_floor = audio_loudness_silence_floor();
   let shape = [];
   for (let reading of readings) {
     let said = reading.reading;
     let number_is = Number.isFinite(said);
-    let held = number_is ? said : floor;
-    let quieter_is = less_than(held, floor);
-    let kept = quieter_is ? floor : held;
+    let held = number_is ? said : silence_floor;
+    let quieter_is = less_than(held, silence_floor);
+    let kept = quieter_is ? silence_floor : held;
     list_add(shape, kept);
   }
   return shape;
