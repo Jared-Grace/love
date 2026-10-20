@@ -42,8 +42,8 @@ export async function audio_loudness_envelope(path_media) {
   let shape = [];
   for (let reading of readings) {
     let said = reading.reading;
-    let number_is = Number.isFinite(said);
-    let held = number_is ? said : silence_floor;
+    let finite_is = Number.isFinite(said);
+    let held = finite_is ? said : silence_floor;
     let quieter_is = less_than(held, silence_floor);
     let kept = quieter_is ? silence_floor : held;
     list_add(shape, kept);
