@@ -10,6 +10,7 @@ export function song_pronunciations() {
     euphrates: 'you-fray-teez',
     ezrahite: "Ezra-height",
     jesse: 'Jess-see',
+    mete:'meet',
     rahab: "Ray-hab",
     sinai: "sai-nai",
     succoth: "sue-koth",
