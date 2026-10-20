@@ -141,8 +141,8 @@ export function app_code_if_blocks(code) {
     "how far along its line a place in the program stands";
     let before = text_slice(code, 0, index);
     ("a place on the first line has no newline before it, which is found at one before the program begins, so the same subtraction answers for it");
-    let newline = text_index_of_last_try(before, "\n");
-    let left = subtract(index, newline);
+    let newline_index = text_index_of_last_try(before, "\n");
+    let left = subtract(index, newline_index);
     let difference = subtract(left, 1);
     return difference;
   }
@@ -167,8 +167,8 @@ export function app_code_if_blocks(code) {
     let close = subtract(left2, 1);
     let header = span(start, open + 1);
     let closing = span(close, close + 1);
-    let newline = text_index_of_from(code, "\n", open);
-    let line = text_slice(code, newline + 1, close);
+    let newline_index = text_index_of_from(code, "\n", open);
+    let line = text_slice(code, newline_index + 1, close);
     let body_indent = text_indent_size(line);
     let right = column(start);
     let step = {
