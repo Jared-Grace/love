@@ -1,5 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_passages_occurrence_claims_urdu } from "./gloss_passages_occurrence_claims_urdu.mjs";
+import { property_not } from "./property_not.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
@@ -15,7 +16,7 @@ export function gloss_passages_occurrence_claims_wrong_urdu(
   "$plain text_index";
   "the index says which of a passage's texts is the wording being explained, and it names a place in a list rather than anything that runs.";
   "A ROW HERE IS WRONG UNDER EVERY RULE THERE IS, WHICH IS WHAT MAKES IT SAFE TO FAIL A BUILD ON. Whether two spellings of one word count as the same word is an open question about what the store teaches, so the reading beside this counts both ways and a claim agreeing with either is left alone. What is left is a number that no way of counting reaches, and nobody has to decide anything to call it wrong.";
-  "A claim whose number could not be read at all is left alone here rather than counted wrong, because not knowing what a sentence said is not the same as knowing it said something false. Those are gathered by their own reading, so they can be counted and looked at rather than vanishing between two tests.";
+  "Three kinds of row are left alone here rather than counted wrong, and each has its own reading beside this one so that none of them vanishes between two tests. A sentence whose number could not be read at all: not knowing what a sentence said is not knowing it said something false. A sentence counting to some other time than this word's: it is a true thing to say and this reading cannot check it. And a sentence whose ending nobody has listed, which may be either.";
   "Every field the reading gathered is kept, the wording included. The number claimed and the two counts side by side are the whole of the mend: where both counts agree, there is one number to write instead, and where they differ, a reader can see which rule the sentence was following.";
   arguments_assert(arguments, 3);
   let all = gloss_passages_occurrence_claims_urdu(
@@ -24,6 +25,10 @@ export function gloss_passages_occurrence_claims_wrong_urdu(
     word_keys_read,
   );
   function disagreeing_is(claim) {
+    let elsewhere = property_not(claim, "about_this");
+    if (elsewhere) {
+      return false;
+    }
     let claimed = property_get(claim, "claimed");
     let unread = null_is(claimed);
     if (unread) {
