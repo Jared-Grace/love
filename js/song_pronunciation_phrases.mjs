@@ -4,6 +4,7 @@ export function song_pronunciation_phrases() {
   "Write a key in plain letters and single spaces only, since each word of it is matched as it stands.";
   let phrases = {
     "flee the bow": "flee the boe",
+    "draw the bow": "draw the boe",
   };
   return phrases;
 }
