@@ -45,12 +45,12 @@ export function app_code_lesson_groups_numbered(lessons) {
         end = other;
       }
     }
-    let range = list_slice(every, start, end);
+    let span = list_slice(every, start, end);
     function shown_is(id) {
       let shown_one = list_includes(lesson_ids, id);
       return shown_one;
     }
-    let shown_ids = list_filter(range, shown_is);
+    let shown_ids = list_filter(span, shown_is);
     let shown = list_empty_not_is(shown_ids);
     if (shown) {
       let lesson_id = list_first(shown_ids);
