@@ -32,8 +32,8 @@ export async function psalms_songs_folder_channel_singles(
   }
   let sung_by_verse = {};
   for (let row of compared.rows) {
-    let range = range_of(row);
-    for (let verse = range.first; less_than_equal(verse, range.last); verse++) {
+    let span = range_of(row);
+    for (let verse = span.first; less_than_equal(verse, span.last); verse++) {
       let key = row.chapter + ":" + verse;
       let before = equal(sung_by_verse[key], undefined)
         ? 0
@@ -42,8 +42,8 @@ export async function psalms_songs_folder_channel_singles(
     }
   }
   function verse_short_any(row) {
-    let range = range_of(row);
-    for (let verse = range.first; less_than_equal(verse, range.last); verse++) {
+    let span = range_of(row);
+    for (let verse = span.first; less_than_equal(verse, span.last); verse++) {
       let key = row.chapter + ":" + verse;
       if (less_than(sung_by_verse[key], 2)) {
         return true;
