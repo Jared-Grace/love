@@ -1,4 +1,3 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -21,8 +20,7 @@ export function app_code_expression_value_choose_buttons_generic(
 ) {
   arguments_assert(arguments, 5);
   ("the values to choose from, made in a box of their own under parent, handed back as the box, the right value's button, and a waiting that ends once the right value is pressed and has stayed green as long as any other success. Not awaited here, so a caller can point at the right button while the learner looks for it, as the step-through guide does at the human's asking 2026-10-14. ",
-    fn_name("text_get"),
-    " writes a value as its button says it");
+    "value_text writes a value as its button says it");
   ("The offered values go in order, smallest first, so where they stand says nothing about which is right; sorted as numbers rather than as writing, because 12 written down sorts before 5. Once any of them is a string there is no smallest, so they go in the order their writing sorts in, which says as little");
   let box = html_div(parent);
   let choices = list_concat(decoys, [value]);
