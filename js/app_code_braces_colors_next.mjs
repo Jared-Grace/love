@@ -31,11 +31,11 @@ export function app_code_braces_colors_next(code) {
   let taken = [];
   while (less_than(taken.length, count)) {
     if (list_empty_is(remaining)) {
-      let round = app_code_braces_colors();
-      list_shuffle(round);
+      let colors_round = app_code_braces_colors();
+      list_shuffle(colors_round);
       let fresh = [];
       let used = [];
-      for (let color of round) {
+      for (let color of colors_round) {
         if (list_includes(taken, color)) {
           list_add(used, color);
         } else {
