@@ -9,6 +9,9 @@ import { equal } from "./equal.mjs";
 import { text_words_punctuation_split } from "./text_words_punctuation_split.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
 import { not } from "./not.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { and } from "./and.mjs";
+import { or } from "./or.mjs";
 import { property_or_null } from "./property_or_null.mjs";
 import { list_add } from "./list_add.mjs";
 import { each_index } from "./each_index.mjs";
@@ -18,11 +21,13 @@ export function gloss_passages_occurrence_claims_urdu(
   text_index,
   word_keys_read,
 ) {
-  "Every place an Urdu chapter tells a reader which time over one of its English words has come, with the number the sentence names and the number the chapter's own words give.";
+  "Every place an Urdu chapter counts how many times over one of its English words has come, with the number the sentence names, the number the chapter's own words give, and whether the sentence was counting up to this word or talking about some other time.";
   "$plain text_index";
   "the index says which of a passage's texts is the wording being explained, and it names a place in a list rather than anything that runs.";
   "THIS IS THE COMMONEST CLAIM THE URDU STORE MAKES AND NOTHING HAS EVER CHECKED IT. Four thousand six hundred and seventy-one sentences say a quoted English word has come for such-and-such a time in this chapter, measured on 2026-10-20, and every one of them is a plain matter of counting: the chapter holds its own words in order, so the count can be taken again. A wrong one teaches a student to count wrong.";
   "WHAT IS LOOKED FOR IS THE NARROWEST SENTENCE THAT CAN BE SETTLED, AND IT IS BUILT FROM THE WORD BEING EXPLAINED RATHER THAN SEARCHED FOR LOOSELY. The quoted word, then the chapter phrase, then one word, then the word for time over. A sentence that says the same thing about a Hebrew root, about a shape of parsing, or about a word of the original quoted in its own letters, is talking about something this reading cannot count, and none of those puts the English word in quotes in front of the phrase - so they are left alone by the shape of the thing looked for rather than by a list of exceptions.";
+  "★ THE SAME WORDS CAN SAY THIS IS THE SECOND TIME AND THE FIRST TIME WAS SOMETHING ELSE, AND ONLY WHAT COMES AFTER TELLS THEM APART. Read off the store on 2026-10-20: the word came in this story for the first time for a man who was not there - a sentence standing inside the explanation of the second one, saying nothing at all about where this word stands. It is the past tense that marks it, and the present tense that marks a count reaching this word. So the two words behind the word for time over are read, and only a present-tense ending, or the full stop of a sentence that ended there, says the count is about this word. Everything else is handed over with that said, and settled by nobody.";
+  "The endings are allowed by name rather than the past ones refused by name. A shape nobody listed then comes back as not counted rather than as counted wrongly, and the cost of that is a row somebody reads; the cost the other way round is a sentence failing a build for saying something true.";
   "THE COUNT IS KEPT AS THE WALK GOES, SO IT DEPENDS ON THE WALK BEING IN CHAPTER ORDER. The reading beside this hands the explanations over passage by passage and word by word, in the order the chapter was written, which is the order a count has to be taken in. A tally raised one explanation at a time is therefore the count through this explanation and including it - which is exactly what the sentence claims.";
   "BOTH WAYS OF COUNTING ARE CARRIED, BECAUSE WHICH ONE IS RIGHT IS NOT THIS READING'S TO SETTLE. A chapter opening a sentence writes And and closing one writes and, and whether those are the same word is a question about what the store is teaching, not about arithmetic. So the count is taken twice, once on the spelling as written and once with the capitals folded away, and whoever reads these findings decides. A claim that agrees with neither count is wrong under either rule and needs nobody's decision.";
   "A SPELLING THE TABLE DOES NOT HOLD COMES BACK AS NOTHING RATHER THAN AS A WRONG NUMBER. The same slot carries ordinary counting words - once, twice, several times - and those are a different claim, about how often the word comes in the whole chapter rather than about which time this is. The claim is still handed over, with nothing where its number would be, so it can be counted and looked at instead of disappearing.";
@@ -30,6 +35,9 @@ export function gloss_passages_occurrence_claims_urdu(
   arguments_assert(arguments, 3);
   let ordinals = text_ordinals_urdu();
   let times_word = "بار";
+  let stop_mark = "۔";
+  let comings = ["آیا", "آیٔی", "آئی", "آیٔے"];
+  let standings = ["ہے", "ہَیں"];
   let exact_counts = {};
   let folded_counts = {};
   function entry_claims(context) {
@@ -52,11 +60,18 @@ export function gloss_passages_occurrence_claims_urdu(
       }
       let tokens = text_words_punctuation_split(part);
       let spelled = list_get_or_null(tokens, 0);
-      let behind = list_get_or_null(tokens, 1);
-      let counting = equal(behind, times_word);
+      let counted = list_get_or_null(tokens, 1);
+      let counting = equal(counted, times_word);
       if (not(counting)) {
         return;
       }
+      let behind = list_get_or_null(tokens, 2);
+      let standing = list_get_or_null(tokens, 3);
+      let ended = equal(behind, stop_mark);
+      let coming_is = list_includes(comings, behind);
+      let standing_is = list_includes(standings, standing);
+      let present = and(coming_is, standing_is);
+      let about_this = or(ended, present);
       let claimed = property_or_null(ordinals, spelled);
       let claim = {
         verses_key,
@@ -66,6 +81,8 @@ export function gloss_passages_occurrence_claims_urdu(
         claimed,
         expected_exact,
         expected_folded,
+        behind,
+        about_this,
         explain,
       };
       list_add(claims, claim);
