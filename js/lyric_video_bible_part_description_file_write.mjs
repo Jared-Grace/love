@@ -26,9 +26,9 @@ export async function lyric_video_bible_part_description_file_write(
   let passage = document.passage;
   let reference = passage.split(" ")[1];
   let chapter_number = reference.split(":")[0];
-  let range = reference.split(":")[1];
-  let verse_first = Number(range.split("-")[0]);
-  let verse_last = Number(range.split("-")[1]);
+  let span = reference.split(":")[1];
+  let verse_first = Number(span.split("-")[0]);
+  let verse_last = Number(span.split("-")[1]);
   let title = passage + " (BSB) lyric video";
   let song = Number(song_number);
   let later = greater_than(song, 1);
