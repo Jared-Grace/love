@@ -1,8 +1,6 @@
+import { lyric_video_document_audio_write } from "./lyric_video_document_audio_write.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { lyric_video_document_faults_write } from "./lyric_video_document_faults_write.mjs";
-import { number_is } from "./number_is.mjs";
-import { lyric_video_audio_cut_end } from "./lyric_video_audio_cut_end.mjs";
-import { lyric_video_audio_cut } from "./lyric_video_audio_cut.mjs";
 import { lyric_video_document_cut } from "./lyric_video_document_cut.mjs";
 import { lyric_video_subtitles_text } from "./lyric_video_subtitles_text.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
@@ -32,16 +30,11 @@ export async function lyric_video_document_write(
   await lyric_video_document_faults_write(document, path_output);
   let seconds_cut = document.audio_from || 0;
   let path_audio_cut = path_subtitles + ".wav";
-  if (number_is(document.audio_to)) {
-    await lyric_video_audio_cut_end(
-      path_audio,
-      seconds_cut,
-      document.audio_to,
-      path_audio_cut,
-    );
-  } else {
-    await lyric_video_audio_cut(path_audio, seconds_cut, path_audio_cut);
-  }
+  let written = await lyric_video_document_audio_write(
+    path_audio,
+    path_document,
+    path_audio_cut,
+  );
   document = lyric_video_document_cut(document, seconds_cut);
   let subtitles = lyric_video_subtitles_text(document);
   await file_overwrite(path_subtitles, subtitles);
