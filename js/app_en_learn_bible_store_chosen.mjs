@@ -20,8 +20,8 @@ export function app_en_learn_bible_store_chosen() {
     function store_is(store) {
       let language = property_get(store, "language");
       let language_code = property_get(language, property_name);
-      let r = equal(language_code, code);
-      return r;
+      let matches = equal(language_code, code);
+      return matches;
     }
     let found = list_find_or_null(stores, store_is);
     return found;
