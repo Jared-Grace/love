@@ -7,7 +7,6 @@ import { app_shared_bible_ref_chapter_code } from "./app_shared_bible_ref_chapte
 import { null_is } from "./null_is.mjs";
 import { app_shared_bible_read_render_verse } from "./app_shared_bible_read_render_verse.mjs";
 import { list_map_add_async } from "./list_map_add_async.mjs";
-import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 import { app_shared_bible_read_count_refresh } from "./app_shared_bible_read_count_refresh.mjs";
 import { app_shared_bible_read_resume } from "./app_shared_bible_read_resume.mjs";
 import { promise_later } from "./promise_later.mjs";
@@ -83,7 +82,6 @@ export async function app_shared_bible_read_chapter_draw({
   let verse_numbers_chosen = property_get(r, "verse_numbers_chosen");
   await list_map_add_async(primary_verses, render_verse, updates);
   chapter_action(content, chapter_code);
-  html_page_bottom_space(content);
   app_shared_bible_read_count_refresh(verse_numbers_chosen, max, count_status);
   async function resume() {
     let r3 = await app_shared_bible_read_resume(
