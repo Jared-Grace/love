@@ -1,0 +1,113 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { giveaway_psalms_chapters_uploaded } from "./giveaway_psalms_chapters_uploaded.mjs";
+import { giveaway_psalms_record_path } from "./giveaway_psalms_record_path.mjs";
+import { file_read_json } from "./file_read_json.mjs";
+import { giveaway_psalms_songs_rows_items } from "./giveaway_psalms_songs_rows_items.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { giveaway_psalms_chapter_upload_plan } from "./giveaway_psalms_chapter_upload_plan.mjs";
+import { giveaway_archive_item_read_or_null } from "./giveaway_archive_item_read_or_null.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { not } from "./not.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { list_words_missing } from "./list_words_missing.mjs";
+import { list_includes_not } from "./list_includes_not.mjs";
+import { list_find_property } from "./list_find_property.mjs";
+import { number_from_text } from "./number_from_text.mjs";
+import { equal } from "./equal.mjs";
+import { subtract } from "./subtract.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_size } from "./list_size.mjs";
+export async function giveaway_psalms_boxes_whole_report(folder_media) {
+  arguments_assert(arguments, 1);
+  ("$plain folder_media");
+  ("Every psalm's box this repo has written down as gone out, asked of the place that holds it, and told apart into the ones holding everything they were meant to hold and the ones that do not.");
+  ("★ HANDING A FILE OVER IS NOT THE SAME AS THE PLACE KEEPING IT, AND NOTHING UNTIL NOW COULD TELL THOSE APART. The sending answers with how many files it handed over, and a box that took twenty of twenty-two answers exactly like a box that took all of them. A box short one song still opens, still looks finished, and still breaks the one promise the giving away makes - that somebody can take this home and not need anybody else's site. So the only answer worth having comes from asking the place itself what it is holding, name by name.");
+  ("★ THE WANTED NAMES ARE WORKED OUT THE SAME WAY THE SENDER WORKED THEM OUT, BY ASKING THE PLAN. A hand-written list of what should be in a box would be a second opinion about the same thing, and the day it drifted from the plan this would start reporting faults that are its own. Asking the plan means this check and the sending can only ever disagree about what ARRIVED.");
+  ("★ A BOX STILL BEING FILED IS SAID TO BE STILL BEING FILED, NOT SAID TO BE BROKEN. The place takes the files at once and writes them into the box afterwards, so for a while a box truthfully holds less than was sent. Reported as a fault, that would send somebody sending files that are already there; reported as waiting, it says come back and ask again. Both answers name the missing files, because which files are not in yet is the useful part either way.");
+  ("★ SIZES ARE COMPARED AS WELL AS NAMES, AND A FEW BYTES OF DIFFERENCE ON THE WORDS IS EXPECTED RATHER THAN WRONG. A film cut off halfway keeps its name and loses its length, so names alone would pass it. The words of a psalm are the one exception: the plan measures them in letters and the place measures them in bytes, and a letter outside the plain alphabet weighs more than one byte. So the gap is reported as a number rather than as a verdict - a handful of bytes is that counting difference, and millions is a file that did not finish.");
+  let gone = await giveaway_psalms_chapters_uploaded();
+  let path = giveaway_psalms_record_path();
+  let rows = await file_read_json(path);
+  let items = giveaway_psalms_songs_rows_items(rows);
+  let whole = [];
+  let short = [];
+  let filing = [];
+  let unanswered = [];
+  for (let item of items) {
+    let gone_is = list_includes(gone, item.chapter_code);
+    if (gone_is) {
+      let plan = await giveaway_psalms_chapter_upload_plan(
+        item.chapter,
+        folder_media,
+      );
+      let live = await giveaway_archive_item_read_or_null(plan.identifier);
+      let said_is = null_not_is(live);
+      let silent_is = not(said_is);
+      if (silent_is) {
+        list_add(unanswered, {
+          chapter: item.chapter,
+          identifier: plan.identifier,
+          why: "the place would not say what is in this box",
+        });
+      } else {
+        let held = live.files;
+        let names_held = list_map_property(held, "name");
+        let names_wanted = list_map_property(plan.files, "path_in_item");
+        let missing = list_words_missing(names_wanted, names_held);
+        let sizes_off = [];
+        for (let one of plan.files) {
+          let there_is = list_includes_not(missing, one.path_in_item);
+          if (there_is) {
+            let row = list_find_property(held, "name", one.path_in_item);
+            let size_held = number_from_text(row.size);
+            let same_is = equal(size_held, one.size);
+            let off_is = not(same_is);
+            if (off_is) {
+              list_add(sizes_off, {
+                path_in_item: one.path_in_item,
+                kind: one.kind,
+                size_wanted: one.size,
+                size_held: size_held,
+                short_by: subtract(one.size, size_held),
+              });
+            }
+          }
+        }
+        let missing_none_is = list_empty_is(missing);
+        let sizes_right_is = list_empty_is(sizes_off);
+        let whole_is = missing_none_is && sizes_right_is;
+        let row_report = {
+          chapter: item.chapter,
+          identifier: plan.identifier,
+          wanted: list_size(plan.files),
+          held: list_size(held),
+          missing: missing,
+          sizes_off: sizes_off,
+        };
+        if (whole_is) {
+          list_add(whole, row_report);
+        } else {
+          let filing_is = equal(live.pending_tasks, true);
+          if (filing_is) {
+            list_add(filing, row_report);
+          } else {
+            list_add(short, row_report);
+          }
+        }
+      }
+    }
+  }
+  let report = {
+    gone_count: list_size(gone),
+    whole_count: list_size(whole),
+    filing_count: list_size(filing),
+    short_count: list_size(short),
+    unanswered_count: list_size(unanswered),
+    short: short,
+    filing: filing,
+    unanswered: unanswered,
+    whole: list_map_property(whole, "chapter"),
+  };
+  return report;
+}
