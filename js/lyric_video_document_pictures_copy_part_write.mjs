@@ -31,10 +31,10 @@ export async function lyric_video_document_pictures_copy_part_write(
     let all = true;
     for (let k = 0; less_than(k, lines.length); k++) {
       let text_from = lines_from[i + k].text;
-      let text_to = lines[k].text;
+      let line_text = lines[k].text;
       let same =
-        text_starts_with(text_to, text_from) ||
-        text_starts_with(text_from, text_to);
+        text_starts_with(line_text, text_from) ||
+        text_starts_with(text_from, line_text);
       if (not(same)) {
         all = false;
         break;
