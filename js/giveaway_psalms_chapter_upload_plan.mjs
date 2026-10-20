@@ -11,7 +11,7 @@ import { giveaway_psalms_item_withheld_why_or_null } from "./giveaway_psalms_ite
 import { giveaway_psalms_chapter_text_files } from "./giveaway_psalms_chapter_text_files.mjs";
 import { equal } from "./equal.mjs";
 import { path_join } from "./path_join.mjs";
-import { text_size } from "./text_size.mjs";
+import { text_bytes_size } from "./text_bytes_size.mjs";
 import { file_size } from "./file_size.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -52,7 +52,9 @@ export async function giveaway_psalms_chapter_upload_plan(
     let path_media = kind_text_is
       ? null
       : (path_repo ?? path_join([folder_media, one.file_name]));
-    let size = kind_text_is ? text_size(text) : await file_size(path_media);
+    let size = kind_text_is
+      ? text_bytes_size(text)
+      : await file_size(path_media);
     let file = {
       path_in_item: one.path_in_item,
       kind: one.kind,
