@@ -3,7 +3,8 @@ import { property_get } from "./property_get.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { error } from "./error.mjs";
 import { text_slice } from "./text_slice.mjs";
-import { app_code_program_trace_shorter } from "./app_code_program_trace_shorter.mjs";
+import { app_code_program_trace_long_way } from "./app_code_program_trace_long_way.mjs";
+import { app_code_program_trace_assign } from "./app_code_program_trace_assign.mjs";
 export function app_code_program_trace_update(
   expression,
   actions,
@@ -24,20 +25,17 @@ export function app_code_program_trace_update(
   }
   let operator = property_get(expression, "operator");
   let symbol = text_slice(operator, 0, 1);
-  function one_get() {
-    let r = 1;
-    return r;
-  }
-  app_code_program_trace_shorter({
+  ("2026-10-21, at the human's asking: the line is written the long way first, a = a + 1;, and then run as a line written that way is");
+  let name = property_get(target, "name");
+  let long = app_code_program_trace_long_way(
     expression,
-    target,
-    operator,
+    name,
     symbol,
-    right_text: "1",
-    right_get: one_get,
-    lead: " = ",
+    "1",
     actions,
-    values,
     code,
-  });
+  );
+  let expression_long = property_get(long, "expression");
+  let code_long = property_get(long, "code");
+  app_code_program_trace_assign(expression_long, actions, code_long, values);
 }

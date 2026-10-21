@@ -6,8 +6,8 @@ import { property_exists_assert } from "./property_exists_assert.mjs";
 import { text_size } from "./text_size.mjs";
 import { subtract } from "./subtract.mjs";
 import { text_slice } from "./text_slice.mjs";
+import { app_code_program_trace_long_way } from "./app_code_program_trace_long_way.mjs";
 import { app_code_program_trace_value } from "./app_code_program_trace_value.mjs";
-import { app_code_program_trace_shorter } from "./app_code_program_trace_shorter.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_set } from "./property_set.mjs";
 export function app_code_program_trace_assign(
@@ -53,27 +53,18 @@ export function app_code_program_trace_assign(
     let right_from = property_get(right, "start");
     let right_to = property_get(right, "end");
     let right_text = text_slice(code, right_from, right_to);
-    function right_get() {
-      let right_value = app_code_program_trace_value(
-        right,
-        actions,
-        code,
-        values,
-      );
-      return right_value;
-    }
-    app_code_program_trace_shorter({
+    ("2026-10-21, at the human's asking: the line is written the long way first, and the long line is then run as one written that way is - the name's value asked for in its place in the line, then the right side, then the operator. What is said above of the value asked for without a place in the line, and of not writing the line out first, was so until then");
+    let long = app_code_program_trace_long_way(
       expression,
-      target,
-      operator: operator2,
+      name3,
       symbol,
       right_text,
-      right_get,
-      lead: "= ",
       actions,
-      values,
       code,
-    });
+    );
+    let expression_long = property_get(long, "expression");
+    let code_long = property_get(long, "code");
+    app_code_program_trace_assign(expression_long, actions, code_long, values);
     return;
   }
   let value9 = app_code_program_trace_value(right, actions, code, values);

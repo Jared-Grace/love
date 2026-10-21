@@ -83,6 +83,10 @@ import { promise_later_catch_ignore } from "./promise_later_catch_ignore.mjs";
 import { app_code_program_step_guide_line_next } from "./app_code_program_step_guide_line_next.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
+import { html_display_inline_block } from "./html_display_inline_block.mjs";
+import { html_style_set } from "./html_style_set.mjs";
+import { html_opacity_animate } from "./html_opacity_animate.mjs";
+import { html_size_change_animate } from "./html_size_change_animate.mjs";
 import { js_value_code } from "./js_value_code.mjs";
 import { app_code_expression_name_is } from "./app_code_expression_name_is.mjs";
 import { app_code_program_step_solve_decoys } from "./app_code_program_step_solve_decoys.mjs";
@@ -93,10 +97,6 @@ import { html_remove } from "./html_remove.mjs";
 import { app_code_program_step_operator_decoys } from "./app_code_program_step_operator_decoys.mjs";
 import { app_code_expression_value_choose_buttons_generic } from "./app_code_expression_value_choose_buttons_generic.mjs";
 import { app_code_line_pieces_add } from "./app_code_line_pieces_add.mjs";
-import { html_display_inline_block } from "./html_display_inline_block.mjs";
-import { html_style_set } from "./html_style_set.mjs";
-import { html_opacity_animate } from "./html_opacity_animate.mjs";
-import { html_size_change_animate } from "./html_size_change_animate.mjs";
 import { html_opacity_transition } from "./html_opacity_transition.mjs";
 import { sleep } from "./sleep.mjs";
 import { text_to } from "./text_to.mjs";
@@ -163,6 +163,8 @@ export function app_code_program_step_through_generic(
   let shown = [];
   ("each value solved into a line so far, as where it was written, from and to, and the value now written there; kept so a later solving on the same line can find where its own piece now stands, by the rule the trace reads the line by");
   let replaced = [];
+  ("what each line reads before anything is solved into it: its code, or once a line written the shorter way is written the long way, the long line; the places the trace names in a line are places in this, and every piece solved is cut from it. 2026-10-21, at the human's asking, so a++ can be written a = a + 1 before it is run");
+  let bases = [];
   ("the value each line's note says right now, null until there is a note; kept, so the value can fade out of the note before a new one arrives");
   let noted = [];
   for (let line of lines) {
@@ -177,6 +179,7 @@ export function app_code_program_step_through_generic(
     html_text_set(row, line);
     list_add(shown, line);
     list_add(replaced, []);
+    list_add(bases, line);
     list_add(noted, null);
     list_add(rows, row);
     list_add(starts, line_start);
@@ -242,10 +245,11 @@ export function app_code_program_step_through_generic(
     let text = list_get(lines, line_index);
     row_text_set(line_index, text);
     list_set(replaced, line_index, []);
+    list_set(bases, line_index, text);
   }
   function position_now(line_index, position) {
     "where a place in a line as it is written stands in the line as it reads now: moved by every value solved into the line wholly before it";
-    let line = list_get(lines, line_index);
+    let line = list_get(bases, line_index);
     let done = list_get(replaced, line_index);
     let before = app_code_line_pieces_text(line, done, 0, position);
     let r2 = text_size(before);
@@ -561,6 +565,29 @@ export function app_code_program_step_through_generic(
     );
     property_set(holder, "button", complete);
   }
+  async function piece_rewrite(line_index, from_now, to_now, written) {
+    "the piece of a line from from_now to to_now, as it reads now, written over as written";
+    "2026-10-15, at the human's asking: the name fades out, the room it took slides to the width of its value, and the value fades in, so the ( ) around it grow or shrink rather than jump. The slide is the one every height change in this app is made by, told width instead. Not picked: the name going at once, as the human first put it; it fades out because the old value in a note fades out too";
+    let piece = row_piece(line_index, from_now, to_now);
+    html_display_inline_block(piece);
+    ("a box held narrower than its words would otherwise sit higher in the line, its bottom on the words' base, and make the line taller while it moves");
+    html_style_set(piece, "vertical-align", "top");
+    ("and its words are kept on one line, or a box narrower than the value it is growing to fit breaks the value over several lines and the whole line of the program grows tall while it moves - seen 2026-10-15");
+    html_style_white_space(piece, "nowrap");
+    let duration4 = app_shared_animation_duration();
+    await html_opacity_animate(piece, "0", duration4);
+    function value_write() {
+      html_text_set(piece, written);
+    }
+    await html_size_change_animate(
+      piece,
+      "width",
+      piece,
+      value_write,
+      duration4,
+    );
+    await html_opacity_animate(piece, "1", duration4);
+  }
   async function action_do(action, line_index) {
     "what the right answer to what this line does then does";
     let kind = property_get(action, "kind");
@@ -668,31 +695,31 @@ export function app_code_program_step_through_generic(
       let to_now = position_now(line_index, to);
       let done = list_get(replaced, line_index);
       let done_after = app_code_line_pieces_add(done, from, to, written);
-      let line = list_get(lines, line_index);
+      let line = list_get(bases, line_index);
       let to2 = text_size(line);
       let evaluated = app_code_line_pieces_text(line, done_after, 0, to2);
-      ("2026-10-15, at the human's asking: the name fades out, the room it took slides to the width of its value, and the value fades in, so the ( ) around it grow or shrink rather than jump. The slide is the one every height change in this app is made by, told width instead. Not picked: the name going at once, as the human first put it; it fades out because the old value in a note fades out too");
-      let piece = row_piece(line_index, from_now, to_now);
-      html_display_inline_block(piece);
-      ("a box held narrower than its words would otherwise sit higher in the line, its bottom on the words' base, and make the line taller while it moves");
-      html_style_set(piece, "vertical-align", "top");
-      ("and its words are kept on one line, or a box narrower than the value it is growing to fit breaks the value over several lines and the whole line of the program grows tall while it moves - seen 2026-10-15");
-      html_style_white_space(piece, "nowrap");
-      let duration4 = app_shared_animation_duration();
-      await html_opacity_animate(piece, "0", duration4);
-      function value_write() {
-        html_text_set(piece, written);
-      }
-      await html_size_change_animate(
-        piece,
-        "width",
-        piece,
-        value_write,
-        duration4,
-      );
-      await html_opacity_animate(piece, "1", duration4);
+      await piece_rewrite(line_index, from_now, to_now, written);
       row_text_set(line_index, evaluated);
       list_set(replaced, line_index, done_after);
+      return;
+    }
+    if (equal(kind, "expand")) {
+      ("2026-10-21, at the human's asking: a line written the shorter way is written out the long way in the program, a++ becoming a = a + 1, by the same fade and slide a value is solved in with, and the long line is then what the line reads and what every step after it solves into");
+      line_restore(line_index);
+      let line_from4 = list_get(starts, line_index);
+      let left14 = property_get(action, "from");
+      let compound_from = subtract(left14, line_from4);
+      let left15 = property_get(action, "to");
+      let compound_to = subtract(left15, line_from4);
+      let long = property_get(action, "written");
+      let line4 = list_get(lines, line_index);
+      let to5 = text_size(line4);
+      let sliced = text_slice(line4, 0, compound_from);
+      let sliced2 = text_slice(line4, compound_to, to5);
+      let long_line = text_combine_multiple([sliced, long, sliced2]);
+      await piece_rewrite(line_index, compound_from, compound_to, long);
+      row_text_set(line_index, long_line);
+      list_set(bases, line_index, long_line);
       return;
     }
     if (equal(kind, "declare")) {
@@ -757,7 +784,7 @@ export function app_code_program_step_through_generic(
       let line_from3 = list_get(starts, line_index);
       let left5 = property_get(action, "from");
       let right_from = subtract(left5, line_from3);
-      let original = list_get(lines, line_index);
+      let original = list_get(bases, line_index);
       let left6 = text_size(original);
       let left7 = property_get(action, "to");
       let right4 = subtract(left7, line_from3);
@@ -813,6 +840,7 @@ export function app_code_program_step_through_generic(
     property_set(state, "asked", kind);
     html_clear(ask);
     let options = [
+      ["expand", "Write it the long way"],
       ["declare", "Declare a variable"],
       ["evaluate", "Solve an expression"],
       ["assign", "Assign a value"],
