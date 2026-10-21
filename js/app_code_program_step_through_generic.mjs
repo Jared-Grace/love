@@ -71,6 +71,8 @@ import { property_set } from "./property_set.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
+import { text_starts_with } from "./text_starts_with.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
 import { app_shared_button_background } from "./app_shared_button_background.mjs";
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
@@ -410,16 +412,38 @@ export function app_code_program_step_through_generic(
         ("2026-10-21, at the human's asking: a wrong press says why when the reason is a rule, and the rule is said rather than the answer, so the learner still finds the right line. The first is a line holding only }, which a learner may take for a step; said once each time the next line is asked for. Not picked: making } a step, which would be a press with nothing to do");
         let message2 = list_get(lines, i);
         let pressed_text = text_trim(message2);
-        let brace_said = property_get(state, "brace_said");
-        if (equal(pressed_text, "}") && not(brace_said)) {
-          property_set(state, "brace_said", true);
-          let braces_shown = app_code_braces_dots();
+        let reason_said = property_get(state, "reason_said");
+        if (reason_said) {
+          return;
+        }
+        let braces_shown = app_code_braces_dots();
+        if (equal(pressed_text, "}")) {
+          property_set(state, "reason_said", true);
           html_div_cycle_code(ask, [
             "Nothing runs on a line holding only ",
             "}",
             "; it only marks where the ",
             braces_shown,
             " ends",
+          ]);
+          return;
+        }
+        if (done) {
+          return;
+        }
+        ("2026-10-21, at the human's asking: the second is a line pressed below an if that is to run next - most likely if (false), whose { ... } the learner can already see will not run. The if line still runs first, since running it is how the computer finds that out. Not picked: taking the skip as right for a written false, which would teach skipping whenever the learner thinks they know the answer");
+        let object5 = entry_get();
+        let line_due = property_get(object5, "line");
+        let message3 = list_get(lines, line_due);
+        let due_text = text_trim(message3);
+        if (text_starts_with(due_text, "if (") && greater_than(i, line_due)) {
+          property_set(state, "reason_said", true);
+          html_div_cycle_code(ask, [
+            "The computer reaches the ",
+            "if",
+            " line first; it runs that line to find out whether the ",
+            braces_shown,
+            " runs",
           ]);
         }
         return;
@@ -480,7 +504,7 @@ export function app_code_program_step_through_generic(
     guide_say(r, choose);
     html_div_cycle_code(ask, ["What is the next line of code to run?"]);
     property_set(state, "pressing", true);
-    property_set(state, "brace_said", false);
+    property_set(state, "reason_said", false);
     ("the line that runs next is marked as the way on, where being right is already decided, so a walk of the whole course can answer this question as it answers every other");
     if (not(done)) {
       let object = entry_get();
