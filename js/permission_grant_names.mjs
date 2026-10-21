@@ -2620,7 +2620,7 @@ export function permission_grant_names() {
     fn_name("audio_peak_decibels"),
     fn_name("qa_gates_giveaway_run"),
     fn_name("giveaway_psalms_chapter_upload"),
-    fn_name("audio_wav_band_loudness_tenths"),
+    fn_name("audio_band_loudness_tenths"),
     fn_name("lyric_video_bible_part_description_file_write"),
   ];
   return names;

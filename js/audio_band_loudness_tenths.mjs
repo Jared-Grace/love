@@ -6,7 +6,7 @@ import { file_exists } from "./file_exists.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { ffmpeg_words_run } from "./ffmpeg_words_run.mjs";
 import { ffmpeg_metadata_numbers } from "./ffmpeg_metadata_numbers.mjs";
-export async function audio_wav_band_loudness_tenths(
+export async function audio_band_loudness_tenths(
   path_wav,
   seconds_start,
   seconds_length,
