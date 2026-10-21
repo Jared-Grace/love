@@ -839,13 +839,14 @@ export function app_code_program_step_through_generic(
     let kind = property_get(action, "kind");
     property_set(state, "asked", kind);
     html_clear(ask);
+    ("2026-10-21, at the human's asking: writing a line the long way comes last, because only a line written the shorter way needs it, and the choices a learner reaches for on most lines stay where they were. Not picked: first, as it was, which put the rarest choice where every line's eye lands first");
     let options = [
-      ["expand", "Write it the long way"],
       ["declare", "Declare a variable"],
       ["evaluate", "Solve an expression"],
       ["assign", "Assign a value"],
       ["log", "Log a value to the console"],
       ["complete", "This line is complete; continue to the next line"],
+      ["expand", "Write it the long way"],
     ];
     let right_words = null;
     for (let option of options) {
