@@ -82,7 +82,7 @@ import { sleep_success_color } from "./sleep_success_color.mjs";
 import { promise_later_catch_ignore } from "./promise_later_catch_ignore.mjs";
 import { app_code_program_step_guide_line_next } from "./app_code_program_step_guide_line_next.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
-import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
+import { app_code_quiz_choice_button_answer_generic } from "./app_code_quiz_choice_button_answer_generic.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_opacity_animate } from "./html_opacity_animate.mjs";
@@ -108,7 +108,6 @@ import { html_div_text } from "./html_div_text.mjs";
 import { app_code_program_step_guide_action } from "./app_code_program_step_guide_action.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { list_any } from "./list_any.mjs";
-import { app_code_quiz_choice_button_answer_generic } from "./app_code_quiz_choice_button_answer_generic.mjs";
 export function app_code_program_step_through_generic(
   parent,
   code,
@@ -555,13 +554,42 @@ export function app_code_program_step_through_generic(
       ("no success message of its own: the caller shows one, as for every other answerer in this app; showing one here as well put two on the page");
       await on_success();
     }
-    let complete = app_code_quiz_choice_button_answer(
+    function soft_take() {
+      "2026-10-21, at the human's asking: the program called complete while lines are left to run, when every step left only solves and none changes anything - an if (a) { whose a is false, say - is a shortcut taken in the head, and the learner is right that nothing more happens; so it is let off the first time, gray rather than red, and the rule is said. The lines left still run one at a time, since reading a is the step being taught. Not picked: taking it as right, which would skip that reading; and counting it, which would call a correct answer a mistake. Where anything left declares, assigns, logs or is written the long way, the shortcut is wrong and counts";
+      let told = app_code_step_reasons_told();
+      let reason = "nothing_left";
+      if (property_exists(told, reason)) {
+        return false;
+      }
+      let size = list_size(trace);
+      for (let k = index; less_than(k, size); k++) {
+        let entry = list_get(trace, k);
+        for (let action of property_get(entry, "actions")) {
+          let kind = property_get(action, "kind");
+          let b12 = list_includes(["evaluate", "complete"], kind);
+          if (not(b12)) {
+            return false;
+          }
+        }
+      }
+      property_set(told, reason, true);
+      let b13 = property_get(state, "reason_said");
+      if (not(b13)) {
+        property_set(state, "reason_said", true);
+        html_div_cycle_code(ask, [
+          "You are right that nothing more will change. The computer still runs each line that is left, one at a time, to find that out; press the next line to run",
+        ]);
+      }
+      return true;
+    }
+    let complete = app_code_quiz_choice_button_answer_generic(
       choices,
       "The program is complete",
       done,
       answered,
       on_complete,
       on_wrong,
+      soft_take,
     );
     property_set(holder, "button", complete);
   }
