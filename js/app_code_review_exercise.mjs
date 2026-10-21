@@ -1,4 +1,4 @@
-import { html_data_test_quiz_correct_bump } from "./html_data_test_quiz_correct_bump.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
@@ -6,16 +6,23 @@ import { app_code_example_answer_label } from "./app_code_example_answer_label.m
 import { app_code_label_text_set } from "./app_code_label_text_set.mjs";
 import { app_code_lesson_quiz_show_correction } from "./app_code_lesson_quiz_show_correction.mjs";
 import { html_div } from "./html_div.mjs";
+import { html_clear } from "./html_clear.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { html_text_set } from "./html_text_set.mjs";
+import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { app_code_quiz_reveal_button } from "./app_code_quiz_reveal_button.mjs";
 import { app_code_lesson_quiz_render_correction } from "./app_code_lesson_quiz_render_correction.mjs";
 import { app_code_quiz_correction } from "./app_code_quiz_correction.mjs";
 import { app_code_lesson_quiz_correction_code_set } from "./app_code_lesson_quiz_correction_code_set.mjs";
+import { or } from "./or.mjs";
 import { not } from "./not.mjs";
+import { html_data_test_quiz_correct_bump } from "./html_data_test_quiz_correct_bump.mjs";
 export function app_code_review_exercise(
   parent,
   exercise,
   on_correct,
   on_incorrect,
+  added_count,
 ) {
   "render one review question; on_incorrect fires on a wrong answer, on_correct(clean) fires when finally answered correctly (clean is false if any wrong attempt happened first)";
   "A WRONG ANSWER IS NOT ANSWERED BY SHOWING THE ANSWER. The learner is told they were wrong and left to go on trying, and the answer waits under a button of its own. This screen used to put the answer up the instant anything went wrong, which is the one moment it helps least: a learner who was one tap away from working it out never finds out that they were.";
@@ -55,6 +62,32 @@ export function app_code_review_exercise(
     app_code_lesson_quiz_show_correction(container_correction);
   }
   let answers_div = html_div(a_container);
+  ("2026-10-21, at the human's asking: a miss adds added_count more of this quiz to the review, and the learner may say it was a slip and keep them out. The app already lets them skip any quiz or review, so this is the same choice made precisely: the learner knows whether their finger or their understanding missed, and is asked only right after the miss, while they still know. Not picked: an undo, which would take the red back after it had shown which answer was wrong; and counting the quiz as answered right, which nothing here reads - the added quizzes are all a miss leads to. added_count is 0 where nothing is added, and then nothing is offered");
+  let aside = html_div(parent);
+  let excused = false;
+  let offered = false;
+  function aside_offer() {
+    if (offered) {
+      return;
+    }
+    ("2026-10-21, at the human's asking: a cancel covers the misses made before it, not after it. A wrong press after a cancel counts again, and the button is offered again, so each slip is answered for on its own. Not picked: one cancel excusing the whole quiz, which would let a learner who slipped once miss every choice after it for free");
+    excused = false;
+    offered = true;
+    html_clear(aside);
+    let text = text_combine_multiple([
+      "Wrong by accident? Don't add the ",
+      added_count,
+      " extra quizzes",
+    ]);
+    function excuse() {
+      excused = true;
+      offered = false;
+      html_clear(aside);
+      let said = html_div(aside);
+      html_text_set(said, "Okay. That miss won't add extra quizzes.");
+    }
+    app_shared_button_wide(aside, text, excuse);
+  }
   app_code_quiz_reveal_button(parent, on_reveal);
   let container_correction = html_div(parent);
   app_code_lesson_quiz_render_correction(
@@ -72,9 +105,13 @@ export function app_code_review_exercise(
   function on_wrong() {
     failed = true;
     on_incorrect();
+    if (greater_than(added_count, 0)) {
+      aside_offer();
+    }
   }
   async function on_success() {
-    let clean = not(failed);
+    let left = not(failed);
+    let clean = or(left, excused);
     html_data_test_quiz_correct_bump();
     await on_correct(clean);
   }
