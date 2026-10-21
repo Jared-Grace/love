@@ -137,7 +137,7 @@ export function app_code_review_present_fn_present(
     function on_incorrect() {
       app_code_review_hide_success(success_container);
     }
-    app_code_review_exercise(c, exercise, on_correct, on_incorrect);
+    app_code_review_exercise(c, exercise, on_correct, on_incorrect, 2);
   }
   return present;
 }

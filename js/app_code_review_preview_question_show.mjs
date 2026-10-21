@@ -1,8 +1,8 @@
-import { app_code_review_seed_fresh } from "./app_code_review_seed_fresh.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_code_review_containers } from "./app_code_review_containers.mjs";
 import { property_get } from "./property_get.mjs";
+import { app_code_review_seed_fresh } from "./app_code_review_seed_fresh.mjs";
 import { app_code_review_seed_to_exercise } from "./app_code_review_seed_to_exercise.mjs";
 import { app_code_review_show_success } from "./app_code_review_show_success.mjs";
 import { app_code_review_hide_success } from "./app_code_review_hide_success.mjs";
@@ -24,7 +24,7 @@ export function app_code_review_preview_question_show(stage) {
     function on_incorrect() {
       app_code_review_hide_success(success_container);
     }
-    app_code_review_exercise(c, exercise, on_correct, on_incorrect);
+    app_code_review_exercise(c, exercise, on_correct, on_incorrect, 0);
   }
   return question_show;
 }
