@@ -69,13 +69,14 @@ import { html_height_change_animate } from "./html_height_change_animate.mjs";
 import { less_than } from "./less_than.mjs";
 import { property_set } from "./property_set.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
+import { text_trim } from "./text_trim.mjs";
+import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
 import { app_shared_button_background } from "./app_shared_button_background.mjs";
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 import { promise_later_catch_ignore } from "./promise_later_catch_ignore.mjs";
 import { app_code_program_step_guide_line_next } from "./app_code_program_step_guide_line_next.mjs";
-import { text_trim } from "./text_trim.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
 import { js_value_code } from "./js_value_code.mjs";
@@ -406,6 +407,21 @@ export function app_code_program_step_through_generic(
       if (not(right)) {
         on_wrong();
         html_style_background_color_set(row, wrong_color);
+        ("2026-10-21, at the human's asking: a wrong press says why when the reason is a rule, and the rule is said rather than the answer, so the learner still finds the right line. The first is a line holding only }, which a learner may take for a step; said once each time the next line is asked for. Not picked: making } a step, which would be a press with nothing to do");
+        let message2 = list_get(lines, i);
+        let pressed_text = text_trim(message2);
+        let brace_said = property_get(state, "brace_said");
+        if (equal(pressed_text, "}") && not(brace_said)) {
+          property_set(state, "brace_said", true);
+          let braces_shown = app_code_braces_dots();
+          html_div_cycle_code(ask, [
+            "Nothing runs on a line holding only ",
+            "}",
+            "; it only marks where the ",
+            braces_shown,
+            " ends",
+          ]);
+        }
         return;
       }
       property_set(state, "pressing", false);
@@ -464,6 +480,7 @@ export function app_code_program_step_through_generic(
     guide_say(r, choose);
     html_div_cycle_code(ask, ["What is the next line of code to run?"]);
     property_set(state, "pressing", true);
+    property_set(state, "brace_said", false);
     ("the line that runs next is marked as the way on, where being right is already decided, so a walk of the whole course can answer this question as it answers every other");
     if (not(done)) {
       let object = entry_get();
@@ -486,6 +503,10 @@ export function app_code_program_step_through_generic(
       ) {
         line_restore(line_index);
       }
+      ("2026-10-21, at the human's asking: the whole program turns green once it is complete, green saying solved as it says right everywhere else in this app");
+      let background = app_shared_button_background();
+      html_style_background_color_set(program, background);
+      html_font_color_set_white(program);
       html_clear(ask);
       guide_say([], null);
       ("no success message of its own: the caller shows one, as for every other answerer in this app; showing one here as well put two on the page");
