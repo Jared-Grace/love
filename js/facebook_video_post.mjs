@@ -179,13 +179,21 @@ export async function facebook_video_post(file_path, text, cover_path) {
     await sleep(8000);
     await picture_take();
     step = "upload finished";
-    await page.waitForFunction(
-      "!/uploading|posting/i.test(document.body.innerText)",
-      {
-        timeout: 1800000,
-        polling: 3000,
-      },
-    );
+    ("★ IT ASKS THE PAGE AGAIN EVERY TEN SECONDS FOR UP TO AN HOUR, rather than handing the page one long wait. On 2026-10-21 one long wait died at exactly ten minutes, the protocolTimeout, with the page still reading 'Posting'; the human said waiting a long time is fine.");
+    let waited = 0;
+    let busy = true;
+    while (busy) {
+      busy = await page.evaluate(
+        "/uploading|posting/i.test(document.body.innerText)",
+      );
+      if (busy) {
+        if (waited >= 3600000) {
+          throw new Error("still uploading or posting after an hour");
+        }
+        await sleep(10000);
+        waited = waited + 10000;
+      }
+    }
     await sleep(10000);
     await picture_take();
     let r = {
