@@ -4187,6 +4187,35 @@ def ffmpeg_preview_deny_reason():
     )
 
 
+def find_ffmpeg_band_loudness(command):
+    """True when a statement of `command` is an ffmpeg measuring how loud a
+    band of pitches is (a bandpass filter feeding astats) - the reading the
+    granted audio_band_loudness_tenths gives unasked."""
+    for words in statements_words(command):
+        plain = list(words)
+        while plain and ASSIGN_RE.match(plain[0]):
+            plain = plain[1:]
+        if not plain or plain[0] != "ffmpeg":
+            continue
+        for word in plain:
+            if "bandpass" in word and "astats" in word:
+                return True
+    return False
+
+
+def ffmpeg_band_loudness_deny_reason():
+    return (
+        "ffmpeg holds no grant, because it can write any file and read from "
+        "the network. A band's loudness a tenth of a second at a time is "
+        "already approved: `node scripts/ai.mjs audio_band_loudness_tenths "
+        "<path_audio> <seconds_start> <seconds_length> <hertz_center> "
+        "<hertz_width>` - a whole path ending in .wav or .mp4, then plain "
+        "numbers, e.g. `node scripts/ai.mjs audio_band_loudness_tenths "
+        "/home/j/Downloads/Psalm_119_He.wav 2.5 3 550 800`. Each reading's "
+        "second counts from the start you gave."
+    )
+
+
 def js_text_replace_deny_reason(name):
     return (
         f"A text replace in a function's file holds no grant, because it can "
@@ -5533,6 +5562,11 @@ def main():
     # granted function gives unasked. See find_ffmpeg_preview.
     if find_ffmpeg_preview(command):
         return decide("deny", ffmpeg_preview_deny_reason())
+
+    # An ffmpeg measuring a band's loudness, which a granted function gives
+    # unasked. Same placement and reason. See find_ffmpeg_band_loudness.
+    if find_ffmpeg_band_loudness(command):
+        return decide("deny", ffmpeg_band_loudness_deny_reason())
 
     # A call some granted function already makes with these exact inputs.
     # After the allow decision, so it only ever turns a prompt into the

@@ -24,7 +24,8 @@ import { sleep_success_color } from "./sleep_success_color.mjs";
 import { list_remove_at } from "./list_remove_at.mjs";
 import { not } from "./not.mjs";
 import { app_code_review_seed_fresh } from "./app_code_review_seed_fresh.mjs";
-import { list_add_multiple } from "./list_add_multiple.mjs";
+import { list_insert } from "./list_insert.mjs";
+import { list_add } from "./list_add.mjs";
 import { app_code_review_persist } from "./app_code_review_persist.mjs";
 import { app_code_review_hide_success } from "./app_code_review_hide_success.mjs";
 import { app_code_review_exercise } from "./app_code_review_exercise.mjs";
@@ -121,12 +122,14 @@ export function app_code_review_present_fn_present(
       list_remove_at(queue, cursor);
       passed = add_1(passed);
       if (not(clean)) {
-        ("two fresh copies go to the end rather than one, so answering it right once more is not enough to clear it. A single copy can be cleared by a guess - the choices narrow as wrong ones are dimmed, so the last pick left is right whether or not the learner knows why. Two consecutive copies cannot both be luck.");
+        ("two fresh copies go back in rather than one, so answering it right once more is not enough to clear it. A single copy can be cleared by a guess - the choices narrow as wrong ones are dimmed, so the last pick left is right whether or not the learner knows why. Two copies cannot both be luck.");
+        ("2026-10-21, at the human's asking: the first copy comes right after, while the mistake is fresh, and the second at the end, to see that it stuck after a gap. Not picked: both at the end, as before. The removed quiz's place, cursor, now holds the quiz that came after it, so a copy put there is the very next one shown");
         let lesson_id = property_get(seed, "lesson_id");
         let kind_index = property_get(seed, "kind_index");
         let requeued = app_code_review_seed_fresh(lesson_id, kind_index);
         let requeued_again = app_code_review_seed_fresh(lesson_id, kind_index);
-        list_add_multiple(queue, [requeued, requeued_again]);
+        list_insert(queue, cursor, requeued);
+        list_add(queue, requeued_again);
       }
       app_code_review_persist(context, key, passed, queue);
       present();
