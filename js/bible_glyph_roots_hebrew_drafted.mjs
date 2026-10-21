@@ -63,6 +63,9 @@ export function bible_glyph_roots_hebrew_drafted() {
   "NEHEMIAH IS DRAWN THE SAME WAY, 65 rows in one pass checked against the table and against itself; 83 more of its words already wait under the books before it. Words Strong's calls the same as, a form of, or for another join that word's key and picture: Geshem is the rain, Anan the cloud, Meah the hundred, Mekonah the base, Shushan the lily, Hodevah, Joiada, Joiakim, Piltai and the chamber. Names of one root go under it with +proper_name: Ahzai, Bunni, Baruch, Helkai, Jadon, Milalai, Nebai, Nehum, Nahamani, Pileha, Salmai, Meraiah (rebellion, a thing, since Miriam already wears the rising fist), Hallohesh the enchanter and the goldsmith refiner. Places of two words are both pictures with +proper_name: Beth-gilgal, Beth-haccerem, Beth-azmaveth, En-rimmon, and Col-hozeh, every seer. Names with Jah or God take no tag: Azaniah, Besodeiah, Hazaiah, Hananeel, Jekabzeel, Anaiah, Ananiah and Kolaiah; Jekabzeel takes +doing because it says God will gather, and Azaniah and Anaiah take describing because Jaazaniah and Anthothijah already wear the bare root with I AM. The speech of Ashdod is Ashdod's picture with the tongue. Drawn by their meaning under their own key, because the root picture does not fit or there is none: the myrtle, the choir, the lap, to roof over, the bolt, the lifting up, merchandise, the orchard, the bare sunny place, to shade, the queen consort, to rule, the procession and error.";
   "NEHEMIAH WAITS, 46 new words. Strong's is unsure of 114 Addon, 186 Uzai, 384 Ithiel, 1148 Beninu, 1658 Gishpa, 3133 Joed, 4047 Magpiash, 4597 Maai, 5041 Neballat, 6023 Amashsay, 6764 Tsalaph and 7968 Shallun. Foreign: 435 Elul, 942 Bavvai, 3691 Chisleu, 5212 Nisan and 5571 Sanballat. The root has no picture for 1084 Bilgai, 1562 Gilalai, 2812 Hashabnah, 2813 Chashabnejah, 3662 Kenani, 4153 Moadjah, 4424 Melatjah, 4573 Maadjah, 4898 Meshezabel, 5802 Azbuk, 5987 Amok, 6265 Athajah, 7733 Shobek and 8023 Shiloni. The root picture is not the meaning for 1229 Bakbukjah, 1373 Gabbai, 1599 Ginnethon, 2446 Chakaljah, 2736 Charhajah, 2739 Charumaph, 2756 Chariph, 4559 Mispereth, 6420 Palal, 6421 Pelaljah, 7040 Kallai and 7485 Raamjah. Waiting with a name that waits: 2772 Horonite, 5300 Nephushesim and 6542 Persian.";
   "NEHEMIAH TURNED DOWN, each because another root already wears it: nauseated_face+thing (zara, so defilement is of the altar), shaking_face+thing (raad, so error wanders the road), sponge+thing (rakak, so pardon wipes the scroll), umbrella+doing (kaphar, so to shade is at sunset), crown+hand+doing (sarar, so to rule holds the key), speech+turn_back+i_am (Anthothijah), ear+i_am (Jaazaniah), raised_fist+up_arrow+proper_name (Miriam) and hand_receiving+thing (shoal, so merchandise is a package received).";
+  "ESTHER IS DRAWN THE SAME WAY, 46 rows in one pass checked against the table and against itself; 6 more of its words already wait under the books before it. Words Strong's calls another form of, or for, another join that word's key and picture: the garden and the scepter. The edict and the decree take the picture their Aramaic counterparts already wear in Ezra, and the treasury and damage take theirs, because the Hebrew and the Aramaic are one word. Dalphon is dripping, its root with +proper_name, and Hadassah is the myrtle with +proper_name. Foreign words that are not names never wait, so the royal mule, the cotton, the noble and the mare are drawn by what they are. Pur is the lot, with the broken piece Strong's says it was. Drawn by their meaning under their own key, because the root picture does not fit or there is none: if only, upbringing, to compel, marble, the palace, mother of pearl, white linen, to become Jews, beauty, to spread a bed, splendor, to hold out, to succeed, the royal crown, the cosmetic, to come to an end, the black stone, ready, to scatter, the open village, the full account, to shout for joy, drinking, a turn, the robe and authority.";
+  "ESTHER WAITS, 37 new words. Foreign: 5 Abagtha, 118 Adalja, 133 Admatha, 143 Adar, 630 Aspatha, 635 Esther, 742 Aridai, 743 Aridatha, 747 Arisai, 903 Bigtha, 904 Bigthan, 968 Biztha, 1896 Hegai, 1912 India, 2001 Haman, 2047 Hathach, 2055 Vajezatha, 2060 Vashti, 2238 Zeresh, 2242 Zethar, 2726 Harbona, 2887 Tebeth, 3752 Carcas, 3771 Carshena, 4099 Medatha, 4104 Mehuman, 4462 Memucan, 4825 Meres, 4826 Marsena, 5510 Sivan, 6334 Poratha, 6534 Parmashta, 6577 Parshandatha, 8190 Shaashgaz, 8369 Shethar and 8657 Teresh. The root has no picture for 91 Agagite.";
+  "ESTHER TURNED DOWN, each because another root already wears it: might+thing (gibbor, so authority holds a scroll), hand+right_arrow+doing (yamin, so holding out the scepter shows the wood), straight_ruler+thumbs_up+doing (yashar, so to succeed takes the check) and gem_stone+thing (anaq, so splendor wears the crown). Not drawn at all: a die, an oyster and a cotton boll, which the font does not hold.";
   let rows = [
     ["11", "abad", "wilted_flower+place", "Abaddon, destruction"],
     ["1413", "gadad", "crowd+clamp+doing", "crowd together"],
@@ -7355,6 +7358,57 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["8418", "halak", "walking+crowd", "a procession"],
     ["8442", "taah", "shaking_face+road", "error"],
     ["8503", "kalah", "end_arrow+thing", "the uttermost"],
+    ["12", "abad", "wilted_flower+thing", "destruction"],
+    ["13", "abad", "wilted_flower+thing", "destruction"],
+    ["327", "achashtaran", "mule+crown", "a royal mule"],
+    ["432", "al", "no_entry+question", "if only; though"],
+    ["545", "aman", "anchor+baby", "upbringing"],
+    ["597", "anas", "fist+pointing+doing", "to compel"],
+    ["923", "bahat", "rock+white_circle", "marble"],
+    ["963", "bazah", "unamused_face+thing", "contempt"],
+    ["1055", "bayith", "house+multiply", "a palace"],
+    ["1594", "gan", "garden", "a garden"],
+    ["1595", "genez", "money_bag+locked", "a treasury"],
+    ["1813", "dalaph", "droplet+eye+proper_name", "Dalphon, dripping"],
+    ["1858", "dar", "white_circle+gem_stone", "mother of pearl"],
+    ["1919", "hadas", "herb+white_flower+proper_name", "Hadassah, myrtle"],
+    ["2010", "nuach", "seat+thing", "a release, rest"],
+    ["2020", "natsal", "hand+rescue+thing", "deliverance"],
+    ["2027", "harag", "fist+skull+thing", "slaughter"],
+    ["2353", "chur", "t_shirt+white_circle", "white linen"],
+    [
+      "3054",
+      "yadah",
+      "hands_raised+proper_name+person+doing",
+      "to become Jews",
+    ],
+    ["3308", "yapheh", "face+sparkle+thing", "beauty"],
+    ["3331", "yatsa", "bed+arrow_both_ways+doing", "to spread a bed"],
+    ["3366", "yaqar", "gem_stone+crown", "honor, splendor"],
+    ["3447", "yashat", "hand+right_arrow+wood", "to hold out"],
+    ["3768", "karpas", "thread+herb", "cotton"],
+    ["3787", "kasher", "straight_ruler+check+doing", "to be right, succeed"],
+    ["3804", "kathar", "crown+ring", "a royal crown"],
+    ["3982", "amar", "speech+crown", "a command"],
+    ["4795", "maraq", "soap+water_wave+thing", "a cosmetic treatment"],
+    ["5143", "nezeq", "money_bag+down_arrow+thing", "damage"],
+    ["5486", "suph", "end_arrow+away+doing", "to come to an end"],
+    ["5508", "sochereth", "brick+black_circle", "black stone"],
+    ["6259", "athad", "check+clock+describing", "ready"],
+    ["6332", "pur", "lots+puzzle_piece", "Pur, the lot"],
+    ["6340", "pazar", "hand_sending+arrow_both_ways+doing", "to scatter"],
+    ["6519", "perazah", "house+national_park", "an open village"],
+    ["6575", "parash", "divide+voice+thing", "a full account"],
+    ["6579", "partam", "crown+top+person", "a noble"],
+    ["6599", "pithgam", "left_speech_bubble+crown", "a decree"],
+    ["6670", "tsahal", "grinning_face+loudspeaker+doing", "to shout for joy"],
+    ["7424", "rammak", "horse+female_sign", "a mare"],
+    ["8275", "shebet", "wood", "a scepter"],
+    ["8360", "shathah", "cup_with_straw+thing", "drinking"],
+    ["8447", "tor", "repeat_button+walking", "a turn"],
+    ["8509", "takrik", "coat+around", "a robe"],
+    ["8562", "maraq", "lotion_bottle+soap", "a cosmetic"],
+    ["8633", "taqaph", "might+scroll", "authority, power"],
   ];
   let drafted = [];
   for (let row of rows) {
