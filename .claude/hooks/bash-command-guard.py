@@ -1981,6 +1981,39 @@ def is_safe_git_rm_tmp(words):
     return True
 
 
+# The letters `file` may be given that only change what it prints or how it
+# follows a name. Left out on purpose: -C (compiles a magic file, and writes
+# it into the current folder), -m / -f / -F / -P / -e (each takes a value, and
+# -m and -f name further files to read), and every flag not listed.
+FILE_READ_SHORT_LETTERS = set("bihLzZkENp")
+FILE_READ_LONG_FLAGS = {
+    "--brief", "--mime", "--mime-type", "--mime-encoding", "--dereference",
+    "--no-dereference", "--uncompress", "--uncompress-noreport",
+    "--keep-going", "--no-pad", "--preserve-date", "--",
+}
+
+
+def is_safe_file_read(words):
+    """Narrow allow-shape for `file`, which names what each file holds and
+    writes nothing - except under -C, which compiles a magic file into the
+    current folder. That one flag is why `file` holds no plain verb rule, the
+    same reason `sort` does not (-o). Accepted shape: `file`, then only the
+    printing flags listed above, then names."""
+    if not words or words[0] != "file" or len(words) < 2:
+        return False
+    for w in words[1:]:
+        if not w.startswith("-"):
+            continue
+        if w.startswith("--"):
+            if w not in FILE_READ_LONG_FLAGS:
+                return False
+            continue
+        letters = w[1:]
+        if not letters or not set(letters) <= FILE_READ_SHORT_LETTERS:
+            return False
+    return True
+
+
 def is_safe_bare_mount(words):
     """True iff this is `mount` invoked with zero arguments - the read-only
     form that just lists currently mounted filesystems (equivalent to
@@ -2442,6 +2475,7 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             and not is_safe_sandboxed_node_eval(unwrapped)
             and not is_safe_sandboxed_node_script(unwrapped)
             and not is_safe_sed(words)
+            and not is_safe_file_read(words)
             and not is_safe_bare_mount(words)
             and not is_safe_claude_temp_rm(words)
             and not is_safe_claude_temp_mkdir(words)
