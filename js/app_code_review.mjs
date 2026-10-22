@@ -1,11 +1,12 @@
 import { html_clear_context } from "./html_clear_context.mjs";
 import { app_code_review_title_strip } from "./app_code_review_title_strip.mjs";
 import { app_code_review_checkpoint } from "./app_code_review_checkpoint.mjs";
-import { property_get } from "./property_get.mjs";
-import { app_code_review_explain } from "./app_code_review_explain.mjs";
+import { app_code_milestone_intro_is } from "./app_code_milestone_intro_is.mjs";
+import { app_code_milestone_intro } from "./app_code_milestone_intro.mjs";
 import { app_code_review_passed } from "./app_code_review_passed.mjs";
 import { app_code_review_key } from "./app_code_review_key.mjs";
 import { app_code_review_g } from "./app_code_review_g.mjs";
+import { property_get } from "./property_get.mjs";
 import { app_code_review_progress } from "./app_code_review_progress.mjs";
 import { app_code_review_restart_button } from "./app_code_review_restart_button.mjs";
 import { app_code_review_home_text } from "./app_code_review_home_text.mjs";
@@ -16,8 +17,11 @@ export function app_code_review(context) {
   let root = html_clear_context(context);
   app_code_review_title_strip(root, context);
   let checkpoint = app_code_review_checkpoint(context);
-  let explain = property_get(checkpoint, "explain");
-  app_code_review_explain(root, explain);
+  let intro = app_code_milestone_intro_is(context, checkpoint);
+  if (intro) {
+    app_code_milestone_intro(root, context, checkpoint);
+    return;
+  }
   let r = app_code_review_passed(context, root);
   let r4 = app_code_review_key(r);
   let r5 = app_code_review_g(r4);
