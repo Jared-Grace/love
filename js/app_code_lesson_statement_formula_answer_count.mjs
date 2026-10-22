@@ -6,14 +6,15 @@ import { list_get } from "./list_get.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
+import { equal } from "./equal.mjs";
 import { list_map } from "./list_map.mjs";
+import { app_code_programs_answers_paired } from "./app_code_programs_answers_paired.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { function_is } from "./function_is.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
-import { equal } from "./equal.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
@@ -66,10 +67,20 @@ export function app_code_lesson_statement_formula_answer_count({
     let code = list_join_newline(lines);
     return code;
   }
+  ("2026-10-22, the human's rule: as many examples as the program has cases. Two buttons means the answers are only true or false, so the program has two cases: it shows two examples, and its programs come in pairs that each hold both answers, so the two examples are one of each");
+  let two_cases = equal(answer_count, 2);
+  let example_count = 1;
+  if (two_cases) {
+    example_count = 2;
+  }
   function programs_get() {
     "the programs of one screen: a fresh draw of numbers, each written as its program";
     let values_list = values_get();
     let codes = list_map(values_list, program_of);
+    if (two_cases) {
+      let paired = app_code_programs_answers_paired(codes);
+      return paired;
+    }
     return codes;
   }
   let batch = app_code_batch_question_answer_fns(
@@ -130,7 +141,7 @@ export function app_code_lesson_statement_formula_answer_count({
     above,
     name_id,
     batch_get: batch,
-    example_count: 1,
+    example_count,
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
