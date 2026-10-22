@@ -26,6 +26,7 @@ export async function giveaway_psalms_boxes_whole_report(folder_media) {
   ("★ THE WANTED NAMES ARE WORKED OUT THE SAME WAY THE SENDER WORKED THEM OUT, BY ASKING THE PLAN. A hand-written list of what should be in a box would be a second opinion about the same thing, and the day it drifted from the plan this would start reporting faults that are its own. Asking the plan means this check and the sending can only ever disagree about what ARRIVED.");
   ("★ A BOX STILL BEING FILED IS SAID TO BE STILL BEING FILED, NOT SAID TO BE BROKEN. The place takes the files at once and writes them into the box afterwards, so for a while a box truthfully holds less than was sent. Reported as a fault, that would send somebody sending files that are already there; reported as waiting, it says come back and ask again. Both answers name the missing files, because which files are not in yet is the useful part either way.");
   ("★ SIZES ARE COMPARED AS WELL AS NAMES, AND ANY DIFFERENCE AT ALL IS A REAL ONE. A film cut off halfway keeps its name and loses its length, so names alone would pass it. The first run of this called nineteen boxes short, and every one of those was the words of a psalm counted in letters on this side and in bytes on the other - which differ wherever a letter is not a plain one. That was a fault in the measuring, and it was mended where it was made rather than excused here: the plan counts bytes now. A check that has to forgive its own false alarms teaches a reader to skip its answers, so a gap here is left meaning exactly one thing.");
+  ("★ A NAME THE PLACE DOES NOT HOLD AT ALL IS A BOX HOLDING NOTHING, NOT A QUESTION THAT FAILED. Asked about a box that was never made, the place answers plainly and at once with an empty answer - no list of files in it, not even an empty one. Read as though a list were always there, that ended the whole walk on the very first such box, which is the opposite of useful: a box whose first file never went is exactly the box somebody needs named. So an answer with no list of files is read as a box holding nothing, every file it was meant to hold is reported missing, and it is counted short like any other short box. The mender then sends the whole of it, which is the right amount to send into a box with nothing in it.");
   let gone = await giveaway_psalms_chapters_uploaded();
   let path = giveaway_psalms_record_path();
   let rows = await file_read_json(path);
@@ -51,7 +52,7 @@ export async function giveaway_psalms_boxes_whole_report(folder_media) {
           why: "the place would not say what is in this box",
         });
       } else {
-        let held = live.files;
+        let held = live.files ?? [];
         let names_held = list_map_property(held, "name");
         let names_wanted = list_map_property(plan.files, "path_in_item");
         let missing = list_words_missing(names_wanted, names_held);
