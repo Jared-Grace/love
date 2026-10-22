@@ -96,6 +96,9 @@ export function bible_glyph_roots_hebrew_drafted() {
   "HOSEA IS DRAWN THE SAME WAY, 27 rows in one pass checked against the table and against itself, and 2 new words of it wait. Baali is the master's picture with +proper_name and Jareb the contending picture with +proper_name, because each is a single-root name; Diblaim is the cake's picture with +two, because it is a dual. Beth-arbel takes God's heart_on_fire and so no +proper_name; Lo-ammi and Lo-ruhamah get a key of their own with +proper_name, because each is a compound. The harlot's hire and to hire share one key, because one is the noun of the other. Drawn by their meaning under their own key, because the root picture does not fit or there is none: where, shame, to heal, the offering, the trinket, the fowler, the half-homer, enmity, adultery, lewdness, compassion, iniquity, to bear fruit, to dry up, destruction, terror, the fragments, the drought and to teach to walk.";
   "HOSEA WAITS, 2 new words. It is foreign: 4644 Moph and 8020 Shalman.";
   "HOSEA TURNED DOWN: the recounting key for the hire (tanah_hire instead) and the loosening key for the fruit (para_fruit instead), because each shares a spelling with another word. Each of these because another root already wears it: wilderness+sun (choreb), wilderness+fire (charab), wilderness+hot_face (tsechichah) and water+wilderness+doing (nashath), so the drought is sun+water+zero and to dry up is grapes+wilderness+doing.";
+  "JOEL AND AMOS ARE DRAWN THE SAME WAY, 35 rows in one pass checked against the table and against itself, and 4 new words of them wait. Aven is the wickedness picture with +proper_name and Amos the burden picture with +proper_name, because each is a single-root name; Beth-eden gets a key of its own with +proper_name, because it is a compound. Damascus the fabric takes the city's picture and oh takes alas's, because Strong's calls each a variation or permutation of that word; the thought takes the musing word's picture, because Strong's says it stands for it. The fishhook is the fisher's picture and the woman's sign, and the shrine-booth the thicket's picture and the woman's sign, because each is a feminine with another meaning. Frail and northern take their root's picture as a describing word, the herdsman the cow with a person, the ruin and the late crop their root's thing, the locust larva the locusts with the worm under the locust's key, and to burn a kinsman's body sits under the burning key. Drawn by their meaning under their own key, because the root picture does not fit or there is none: to bewail, the devouring locust, the clod, the granary, to shrivel, the flush of anxiety, the kernel, the stench, the splinter, the plumb-line, dusky, the piece, to tend sycamore figs, to trample, the palace, the sieve, the revelry, to press down, to babble and to loathe.";
+  "JOEL AND AMOS WAIT, 4 new words. Built on a name that waits: 3125 the Jevanite (Javan) and 7615 the Shebaite (Sheba). The root's picture is not the meaning Strong's gives: 6602 Pethuel, enlarged of God, whose root wears the enticing fishing pole. Strong's says probably for 2579 Hamath-rabbah.";
+  "JOEL AND AMOS TURNED DOWN: the curse for to bewail, the sweeping for the clod, the throwing down for the granary, the crown for the flush, the dividing for the kernel, the anger for the splinter and the plaiting for the sieve, because Strong's says each word takes the root only in a sense the root's picture does not show; a key of their own for dusky (aphel_dusk), the piece (badal_part) and to loathe (taab_loathe), because the word they would have joined is another word. Each of these because another root already wears it: castle (melek), crying_face+loudspeaker+doing (yalal), nauseated_face+thing (zara), partying_face+thing (ranan), wheat+knot (omer), puzzle_piece+thing (shear_noun), wheat+house (megurah), nauseated_face+doing (gaal_defile), nauseated_face+heart_red+doing (quts_loathe), footprints+down_arrow+doing (bus), foot+collision+doing (baat), foot+crowd+down_arrow+doing (radad) and speech+repeat+doing (tanah).";
   let rows = [
     ["11", "abad", "wilted_flower+place", "Abaddon, destruction"],
     ["1413", "gadad", "crowd+clamp+doing", "crowd together"],
@@ -9664,6 +9667,51 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["8514", "taluah", "sun+water+zero", "drought"],
     ["8566", "tanah_hire", "coin+broken_heart+doing", "to hire"],
     ["8637", "regel", "foot+baby+doing", "to teach to walk"],
+    ["421", "alah_wail", "crying_face+broken_heart+doing", "to bewail"],
+    ["1501", "gazam", "locusts+mouth", "a devouring locust"],
+    ["2523", "chalash", "person+down_arrow+describing", "frail"],
+    ["4053", "migraphah", "brown_square+stone", "a clod"],
+    ["4460", "mammegurah", "wheat+house+multiply", "a granary"],
+    ["5685", "abash", "seed+wilderness+doing", "to shrivel"],
+    [
+      "6289",
+      "paarur",
+      "hot_face+anxious_face_with_sweat",
+      "a flush of anxiety",
+    ],
+    ["6507", "perudah", "seed+thing", "a kernel"],
+    ["6709", "tsachanah", "nauseated_face+wind", "a stench"],
+    ["6830", "tsaphon", "compass+up_arrow+describing", "northern"],
+    ["7111", "qetsaphah", "wood+puzzle_piece", "a splinter"],
+    ["206", "aven", "thumbs_down+hole+proper_name", "Aven, wickedness"],
+    ["594", "anak", "stone+thread+down_arrow", "a plumb-line"],
+    ["651", "aphel_dusk", "sunset+describing", "dusky"],
+    ["915", "badal_part", "puzzle_piece+ear", "a piece"],
+    ["951", "baqar", "cow_face+person", "a herdsman"],
+    [
+      "1040",
+      "beth_eden",
+      "house+smile+sparkles+proper_name",
+      "Beth-eden, house of pleasure",
+    ],
+    ["1103", "balas", "fig+pinching_hand+doing", "to tend sycamore figs"],
+    ["1318", "bashas", "foot+wheat+collision+doing", "to trample"],
+    ["1462", "gob", "locusts+worm", "a locust larva"],
+    ["1729", "dag", "fish+person+female_sign", "a fishhook"],
+    ["1833", "dammeseq", "city+lightning+proper_name", "Damascus"],
+    ["1930", "ahah", "crying_face+speech", "alas"],
+    ["2034", "harac", "house+collision+thing", "a ruin"],
+    ["2038", "harmon", "castle+up_arrow", "a palace"],
+    ["3531", "kebarah", "wheat+hole+knot", "a sieve"],
+    ["3954", "laqash", "harvest+last_track+thing", "the late crop"],
+    ["4797", "mirzach", "party_popper+thing", "a revelry"],
+    ["5522", "sak", "crowd+thorns+female_sign", "a shrine-booth"],
+    ["5635", "saraph", "fire+family+doing", "to burn a kinsman's body"],
+    ["5781", "uwq", "clamp+down_arrow+doing", "to press down"],
+    ["5986", "amas", "package+up_arrow+doing+proper_name", "Amos, burdensome"],
+    ["6527", "parat", "mouth+repeat+doing", "to babble"],
+    ["7808", "siyach", "thinking+mouth+thing", "a thought"],
+    ["8374", "taab_loathe", "nauseated_face+scales+doing", "to loathe"],
   ];
   let drafted = [];
   for (let row of rows) {
