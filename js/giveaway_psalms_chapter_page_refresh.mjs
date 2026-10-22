@@ -5,7 +5,7 @@ import { list_includes } from "./list_includes.mjs";
 import { true_is_assert_json } from "./true_is_assert_json.mjs";
 import { null_is_assert_json } from "./null_is_assert_json.mjs";
 import { giveaway_psalms_plan_words } from "./giveaway_psalms_plan_words.mjs";
-import { giveaway_archive_metadata_write_multiple } from "./giveaway_archive_metadata_write_multiple.mjs";
+import { giveaway_archive_metadata_write_multiple_patient } from "./giveaway_archive_metadata_write_multiple_patient.mjs";
 export async function giveaway_psalms_chapter_page_refresh(
   chapter,
   folder_media,
@@ -33,7 +33,7 @@ export async function giveaway_psalms_chapter_page_refresh(
     hint: "the plan is held back, so the record is not ready to be described",
   });
   let words = await giveaway_psalms_plan_words(chapter, plan);
-  let said = await giveaway_archive_metadata_write_multiple(
+  let said = await giveaway_archive_metadata_write_multiple_patient(
     plan.identifier,
     words,
   );
