@@ -1,3 +1,5 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { giveaway_psalms_chapter_upload_plan } from "./giveaway_psalms_chapter_upload_plan.mjs";
 import { null_is_assert_json } from "./null_is_assert_json.mjs";
@@ -50,7 +52,11 @@ export async function giveaway_psalms_chapter_upload(chapter, folder_media) {
       tried: r.tried,
       threw_why: r.threw_why,
       sent_already: list_size(sent),
-      hint: "the host did not accept this file, so the rest of the box was left unsent - running this again sends only what is missing",
+      hint: text_combine_multiple([
+        "the host did not accept this file, so the rest of the box was left unsent - running ",
+        fn_name("giveaway_psalms_boxes_mend"),
+        " afterwards sends only what is missing",
+      ]),
     });
     list_add(sent, r);
     first_is = false;
