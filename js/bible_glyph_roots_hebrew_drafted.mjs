@@ -105,6 +105,9 @@ export function bible_glyph_roots_hebrew_drafted() {
   "NAHUM AND HABAKKUK ARE DRAWN THE SAME WAY, 27 rows in one pass checked against the table and against itself, and 2 new words of them wait. Habakkuk is the embrace with repeat and +proper_name, because his name is the embrace word doubled. The laughingstock takes the laughing word's key, because Strong's points it at a neighboring number by mistake and its own meaning is laughter. The healing is the dimness picture and the woman's sign, because it is a feminine with another meaning. To gallop, the crowned one, to dye crimson, the hiding, purity, the pledge, exultation, utter disgrace and on high take their root's picture with a part that says which; empty and emptiness share one key. Drawn by their meaning under their own key, because the root picture does not fit or there is none: empty, the bare place, the tottering, chariot steel, to brandish, to bind, the beam, eagerness, to shake, to be bare, nakedness, to pervert, the chieftain and the stall.";
   "NAHUM AND HABAKKUK WAIT, 2 new words. Strong's says uncertain for 512 the Elkoshite; Strong's says perhaps for 3572 Cushan.";
   "NAHUM AND HABAKKUK TURNED DOWN: the pricking key for the bare place (maar_bare) and the waking key for to be bare and nakedness (uwr_bare), because each shares a spelling with another word; the dwelling-ruler's picture for the beam and the emptying jar for the bare place, because Strong's says each word takes the root only in a sense the root's picture does not show. Each of these because another root already wears it: partying_face+thing (ranan), see_no_evil_monkey+thing (sathar), hug+proper_name (nacham), wood+link (chashaq), cave+describing (nabab) and crown+shield+person (tiphsar).";
+  "ZEPHANIAH, ZECHARIAH AND MALACHI ARE DRAWN THE SAME WAY, 30 rows in one pass checked against the table and against itself, and 3 new words of them wait; Haggai had nothing left to draw. Helem is the dreaming picture with +proper_name and Malachi the messenger with +proper_name, because each is a single-root name; Regem-melech gets a key of its own with the heap's stone, the king and +proper_name, because it is a compound. Maktesh, Hen and the base take the picture of their word, because Strong's says each is the same; the meadow and the head take their word's picture, because each is the feminine with the same meaning; the possession takes the possession word's picture, because it is from the same root; the corner sits under the corner word's key, because that word is made from it. Cedar work is the cedar and the woman's sign, because it is a feminine with another meaning. Treacheries, the salt pit, laden, foolish, brotherhood, strength, lofty, the stronghold, the burdensome thing, the bell, the shade, the wanderer and the pipe take their root's picture with a part that says which. Drawn by their meaning under their own key, because the root picture does not fit or there is none: bay, the apple of the eye, filthy, to rise, the reeling and bright red.";
+  "ZEPHANIAH, ZECHARIAH AND MALACHI WAIT, 3 new words. It is foreign: 7627 Shebat. Strong's says uncertain for 2317 Hadrach. Its root has no picture: 1910 Hadad-rimmon.";
+  "ZEPHANIAH, ZECHARIAH AND MALACHI TURNED DOWN: the word for lest for the corner, and the thunder for to rise (raam_rise instead), because each shares a spelling with another word; the brandishing for the reeling (raal_reel instead), because Strong's says the word takes the root only in a sense the root's picture does not show. Each of these because another root already wears it: mountain+up_arrow+doing (gaah) and woozy_face+thing (holelah).";
   let rows = [
     ["11", "abad", "wilted_flower+place", "Abaddon, destruction"],
     ["1413", "gadad", "crowd+clamp+doing", "crowd together"],
@@ -9774,6 +9777,41 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["7022", "qalah", "eyes+pointing_down+multiply", "utter disgrace"],
     ["7315", "rum", "up_arrow+place", "on high"],
     ["7517", "repheth", "cow_face+house", "a stall"],
+    ["731", "erez", "cedar+female_sign", "cedar work"],
+    ["900", "bagad", "performing_arts+multiply", "treacheries"],
+    ["3741", "kar", "ram+field", "a meadow"],
+    ["4379", "karah", "pick+hole+salt", "a salt pit"],
+    ["4389", "maktesh", "rock+hole+hammer", "Maktesh, the hollow"],
+    ["4476", "mesheq", "hand+house", "a possession"],
+    ["5187", "natal", "hand+up_arrow+package+person", "laden"],
+    ["196", "evil", "clown_face+describing", "foolish"],
+    ["264", "ach", "brother+thing", "brotherhood"],
+    ["554", "amots", "horse+red_circle", "bay"],
+    ["556", "amats", "superhero+thing", "strength"],
+    ["892", "babah", "eye+black_circle", "the apple of the eye"],
+    ["1208", "batsar", "wall+locked+up_arrow", "lofty"],
+    ["1225", "batsar", "wall+locked+place", "a stronghold"],
+    ["2494", "chalam", "dream+doing+proper_name", "Helem, a dream"],
+    ["2581", "chen", "heart_orange", "Hen, grace"],
+    ["4369", "mekonah", "wheel+bucket", "a base"],
+    ["4614", "amas", "package+up_arrow+thing", "a burdensome thing"],
+    ["4698", "tsalal_tingle", "ear+vibration_mode+thing", "a bell"],
+    ["4699", "tsalal", "umbrella+sunset+thing", "a shade"],
+    ["5289", "naar", "hand+vibration_mode+person", "a wanderer"],
+    ["6434", "pinnah", "triangular_ruler+wall", "a corner"],
+    ["6674", "tso", "pile_of_poo+coat", "filthy"],
+    ["6804", "tsinnor", "water_wave+hole+right_arrow", "a pipe"],
+    ["7213", "raam_rise", "city+up_arrow+doing", "to rise"],
+    ["7222", "rosh", "person_gesturing_ok", "the head"],
+    [
+      "7278",
+      "regem_melek",
+      "rock+king+proper_name",
+      "Regem-melech, king's heap",
+    ],
+    ["7478", "raal_reel", "grapes+woozy_face", "a reeling"],
+    ["8320", "saruq", "horse+red_circle+sparkles", "bright red"],
+    ["4401", "malak", "angel+proper_name", "Malachi, my messenger"],
   ];
   let drafted = [];
   for (let row of rows) {
