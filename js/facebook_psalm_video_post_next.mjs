@@ -6,9 +6,7 @@ import { folder_read_files } from "./folder_read_files.mjs";
 import { not } from "./not.mjs";
 import { file_read } from "./file_read.mjs";
 import { equal } from "./equal.mjs";
-import { youtube_channel_lyric_videos } from "./youtube_channel_lyric_videos.mjs";
-import { youtube_channel_uploads_all } from "./youtube_channel_uploads_all.mjs";
-import { less_than } from "./less_than.mjs";
+import { facebook_psalm_youtube_public } from "./facebook_psalm_youtube_public.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { facebook_psalm_video_post } from "./facebook_psalm_video_post.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
@@ -24,8 +22,8 @@ export async function facebook_psalm_video_post_next() {
   let names = await folder_read_files(path_folder);
   let by_title = {};
   for (let name of names) {
-    let b2 = name.startsWith("Psalm");
-    if (not(b2) || not(name.endsWith(".mp4.description.txt"))) {
+    let b = name.startsWith("Psalm");
+    if (not(b) || not(name.endsWith(".mp4.description.txt"))) {
       continue;
     }
     let description_path = folder_user_downloads_path(name);
@@ -37,18 +35,9 @@ export async function facebook_psalm_video_post_next() {
       by_title[title] = film;
     }
   }
-  let channel_id = youtube_channel_lyric_videos();
-  let videos = await youtube_channel_uploads_all(channel_id);
-  function lambda(v) {
-    let r2 = equal(v.privacy, "public") && v.title.startsWith("Psalm");
-    return r2;
-  }
-  videos = videos.filter(lambda);
-  function lambda2(a, b) {
-    let r3 = less_than(a.published_at, b.published_at) ? -1 : 1;
-    return r3;
-  }
-  videos.sort(lambda2);
+  let listed = await facebook_psalm_youtube_public();
+  let videos = listed.videos;
+  let youtube_error = listed.youtube_error;
   let missing = [];
   for (let v of videos) {
     if (not_equal(ledger[v.title], undefined)) {
@@ -73,12 +62,14 @@ export async function facebook_psalm_video_post_next() {
       steps: r.steps,
       cover: r.cover,
       cover_error: r.cover_error,
+      youtube_error,
     };
     return r4;
   }
   let r5 = {
     posted: null,
     missing,
+    youtube_error,
   };
   return r5;
 }
