@@ -2,13 +2,16 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_review_c } from "./app_code_review_c.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_review_restart_text } from "./app_code_review_restart_text.mjs";
+import { app_code_review_checkpoint } from "./app_code_review_checkpoint.mjs";
 export function app_code_review_passed(context, root) {
   arguments_assert(arguments, 2);
   let r2 = app_code_review_c(context, root);
   let c = property_get(r2, "c");
   let success_container = property_get(r2, "success_container");
   let r3 = app_code_review_restart_text(r2);
-  let restart_text = property_get(r3, "restart_text");
+  ("the restart words come from the checkpoint, so a milestone says milestone rather than review");
+  let checkpoint = app_code_review_checkpoint(context);
+  let restart_text = property_get(checkpoint, "restart");
   let back_button = property_get(r3, "back_button");
   let has_next = property_get(r3, "has_next");
   let go_restart = property_get(r3, "go_restart");

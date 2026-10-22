@@ -18,7 +18,7 @@ export function app_code_review_checkpoint(context) {
   "What the review screen is asking about in this tab: a review, or a milestone - both drawn by the one screen.";
   "key is what it is filed under, both its half-answered questions and the list of finished checkpoints: a review's number, or a milestone's id. A review's number is a count and a milestone's id is a word, so the two can never be mistaken for each other in that one list.";
   "number is where it stands in the run of lessons, which is all the arrows and the way on read: the lesson it stands after. lessons is what its questions are drawn from, and title the words at the top of the screen.";
-  "explain is the lines it says about itself under the title and again once finished - none for a review; again is the restart button's words once it is finished.";
+  "explain is the lines it says about itself under the title and again once finished - none for a review; again is the restart button's words once it is finished, and restart its words before.";
   "A milestone is asked for only when one was the last thing this tab picked, and only when its id still names one - otherwise the review this tab holds is what is shown, as it always was.";
   arguments_assert(arguments, 1);
   let milestone_left = app_code_milestone_left_is(context);
@@ -31,6 +31,7 @@ export function app_code_review_checkpoint(context) {
       let title = text_combine("Milestone: ", label);
       let explain = app_code_milestone_explain();
       let again = app_shared_button_restart_text("Do this milestone again");
+      let restart = app_shared_button_restart_text("Restart milestone");
       let r = {
         key: id,
         number: property_get(milestone, "number"),
@@ -38,6 +39,7 @@ export function app_code_review_checkpoint(context) {
         title,
         explain,
         again,
+        restart,
       };
       return r;
     }
@@ -50,6 +52,7 @@ export function app_code_review_checkpoint(context) {
   let label = app_code_review_range_label(number, scope);
   let title = text_combine("Review: ", label);
   let again = app_shared_button_restart_text("Do another review");
+  let restart = app_shared_button_restart_text("Restart review");
   let r = {
     key: number,
     number,
@@ -57,6 +60,7 @@ export function app_code_review_checkpoint(context) {
     title,
     explain: [],
     again,
+    restart,
   };
   return r;
 }
