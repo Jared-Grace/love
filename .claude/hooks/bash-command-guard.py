@@ -4231,6 +4231,35 @@ def lyric_video_upload_deny_reason():
     )
 
 
+def find_lyric_video_described(command):
+    """True when a statement of `command` runs youtube_video_described_write
+    for a lyric video - the write the granted
+    youtube_video_described_write_private_lyric_video makes unasked while the
+    video is still private."""
+    for words in statements_words(command):
+        plain = list(words)
+        while plain and ASSIGN_RE.match(plain[0]):
+            plain = plain[1:]
+        if len(plain) < 5 or plain[0] != "node" or plain[1] != "scripts/ai.mjs":
+            continue
+        if plain[2] != "youtube_video_described_write":
+            continue
+        if plain[-1].endswith(" (BSB) lyric video.mp4"):
+            return True
+    return False
+
+
+def lyric_video_described_deny_reason():
+    return (
+        "A private lyric video's title and description are already approved: "
+        "`node scripts/ai.mjs youtube_video_described_write_private_lyric_video "
+        "<video_id> \"<file_path>\"`, with the same two arguments. It refuses a "
+        "video that is not private or not on the lyric video channel; only "
+        "then hand the human a `!` line for youtube_video_described_write, "
+        "because that one changes what viewers already see."
+    )
+
+
 def ffmpeg_band_loudness_deny_reason():
     return (
         "ffmpeg holds no grant, because it can write any file and read from "
@@ -5600,6 +5629,12 @@ def main():
     # makes unasked. Same placement and reason. See find_lyric_video_upload.
     if find_lyric_video_upload(command):
         return decide("deny", lyric_video_upload_deny_reason())
+
+    # A lyric video's title and words through the open writer, which a
+    # granted twin writes unasked while the video is private. Same placement
+    # and reason. See find_lyric_video_described.
+    if find_lyric_video_described(command):
+        return decide("deny", lyric_video_described_deny_reason())
 
     # A call some granted function already makes with these exact inputs.
     # After the allow decision, so it only ever turns a prompt into the
