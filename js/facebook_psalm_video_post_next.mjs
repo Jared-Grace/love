@@ -1,15 +1,15 @@
-import { equal } from "./equal.mjs";
-import { less_than } from "./less_than.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { facebook_psalm_posted_path } from "./facebook_psalm_posted_path.mjs";
 import { file_read_json_exists_ensure } from "./file_read_json_exists_ensure.mjs";
-import { folder_read_files } from "./folder_read_files.mjs";
 import { folder_user_downloads_path } from "./folder_user_downloads_path.mjs";
+import { folder_read_files } from "./folder_read_files.mjs";
+import { not } from "./not.mjs";
 import { file_read } from "./file_read.mjs";
-import { youtube_channel_uploads_all } from "./youtube_channel_uploads_all.mjs";
+import { equal } from "./equal.mjs";
 import { youtube_channel_lyric_videos } from "./youtube_channel_lyric_videos.mjs";
+import { youtube_channel_uploads_all } from "./youtube_channel_uploads_all.mjs";
+import { less_than } from "./less_than.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { facebook_psalm_video_post } from "./facebook_psalm_video_post.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function facebook_psalm_video_post_next() {
@@ -71,6 +71,8 @@ export async function facebook_psalm_video_post_next() {
       file_path: film,
       missing,
       steps: r.steps,
+      cover: r.cover,
+      cover_error: r.cover_error,
     };
     return r4;
   }

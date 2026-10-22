@@ -2730,6 +2730,7 @@
       "Bash(node scripts/ai.mjs lyric_video_bible_part_description_file_write:*)",
       "Bash(node scripts/ai.mjs bible_glyph_chapter_built:*)",
       "Bash(node scripts/ai.mjs youtube_studio_upload_private_lyric_video:*)",
+      "Bash(node scripts/ai.mjs youtube_video_described_write_private_lyric_video:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -5346,6 +5347,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args lyric_video_bible_part_description_file_write:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args bible_glyph_chapter_built:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args youtube_studio_upload_private_lyric_video:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args youtube_video_described_write_private_lyric_video:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -7961,6 +7963,7 @@
       "Bash(node scripts/aig.mjs lyric_video_bible_part_description_file_write:*)",
       "Bash(node scripts/aig.mjs bible_glyph_chapter_built:*)",
       "Bash(node scripts/aig.mjs youtube_studio_upload_private_lyric_video:*)",
+      "Bash(node scripts/aig.mjs youtube_video_described_write_private_lyric_video:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -10576,7 +10579,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args audio_band_loudness_tenths:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args lyric_video_bible_part_description_file_write:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args bible_glyph_chapter_built:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args youtube_studio_upload_private_lyric_video:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args youtube_studio_upload_private_lyric_video:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args youtube_video_described_write_private_lyric_video:*)"
     ],
     "defaultMode": "acceptEdits"
   },
