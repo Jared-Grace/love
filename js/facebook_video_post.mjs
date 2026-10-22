@@ -142,7 +142,8 @@ export async function facebook_video_post(file_path, text, cover_path) {
     step = "post";
     let posted = null;
     let presses = 0;
-    let covered = false;
+    ("★ THE COVER STEP IS OFF FOR NOW (covered starts true). Since it was added, 1 run posted and 4 did not - two sat on 'Posting' for good - so the human asked on 2026-10-22 to try a run without it, to learn whether it is the cause. Set covered back to false to turn it on.");
+    let covered = true;
     while (posted === null && presses < 5) {
       let post_seen = await page.evaluate(
         "[].slice.call(document.querySelectorAll('[role=dialog] [role=button],[role=dialog] button')).some(function(x){var r=x.getBoundingClientRect();return r.width>0&&r.height>0&&(x.innerText||'').trim()==='Post'})",
