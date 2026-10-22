@@ -85,6 +85,8 @@ export function bible_glyph_roots_hebrew_drafted() {
   "JEREMIAH IS DRAWN THE SAME WAY, 143 rows in one pass checked against the table and against itself, and 20 new words of it wait. Jucal takes the picture of Jehucal and Coniah the picture of Jeconiah, because Strong's says each is a form of it or for it; the manacles, the coat of mail, the deed, the good for nothing, the ambush, the cub and the fisherman take the picture of their word, because Strong's says each is a variation of it, the same or for it; we takes me, because it is contracted from we; the Aramaic earth and beneath take the earth and under, because each is that word in another spelling or corresponds to it. Merathaim takes bitterness and two, and Beth-diblathaim the house, the fig cake and two, because each is a dual; Goah, Jehucal, Madmen, Ephai and Pekod take their root with +proper_name. Beth-gamul, Magor-missabib and Ebed-melech each get their own key with +proper_name; Gemariah, Igdaliah, Irijah, Mahseiah and Abdeel hold the LORD or God, so they take no +proper_name. Timber is the tree and the woman's sign, because it is a feminine with another meaning; the young she-camel likewise. Drawn by their meaning under their own key, because the root picture does not fit or there is none: the fire-pot, the knuckle, mud, the drought, the shower, ink, the bough, the sound, the streak, the cell, the potsherd, the governor, the sacrificial cake, the bird-trap, the prison, the bundle, the belly, the desolation, the sickle, the worn-out rag, clay, the resting place, mourning, the rag, the branch, the juniper, the hyena, the collar, destruction, the canopy, the wall, the field, vermilion, the guidepost and to compete.";
   "JEREMIAH WAITS, 20 new words. It is foreign: 528 Amon, 4508 Minni, 4781 Merodach, 4996 No, 5021 Nebushazban, 5371 Nergal-sharezer, 5562 Samgar-nebo, 6548 Pharaoh-hophra, 8310 Sarsechim, 8347 Sheshach and 8471 Tahpanhes. Its name holds a foreign word: 7248 Rab-mag. Strong's is only guessing (perhaps) for 210 Uphaz. Strong's says probably for 1185 Baalis, 2601 Hanamel and 3153 Jezaniah. Strong's says uncertain for 2262 Habazziniah. Strong's says apparently for 5161 the Nehelamite. The root has no picture for 3570 Cushi. Built on a name that waits: 4183 the Morashtite.";
   "JEREMIAH TURNED DOWN: the root's camp for the cell, because Strong's means a vault or prison, so it is chains and a house; the root's lamp for the soil, because Strong's says only probably identical, so tilling takes the freshly plowed field's picture; the root's binding for the discarded, because Strong's says in the sense of bereavement, so it takes the widow's picture of its own word; the root's dog for the bird-trap, because only the name is shared, so it is a basket and a bird; the root's salt for the rag, because the root's sense is not the meaning, so it is an old person and a garment; the root's stirring for the resting place, so it is a couch and a place; the root's flag of land for the Morashtite, because Moresheth-gath holds Gath, which waits; a key of its own for the silly, the supervision and the discarded, because each word already lives under the key of its family, kesil, pequddah and almanah. Each of these because another root already wears it: broken_chain+thing (sheber), confetti_ball+thing (chadah), wheat+knot+thing (alam_bind), woozy_face+thing (holelah), pause_button+thing (shaqat), brown_square+droplet (chomer), nauseated_face+describing (baash), locked+house (sohar), wheat+kitchen_knife (chermesh), cloud+droplet+doing (raaph), brick+droplet (taphel) and face_exhaling+wind+doing (puach).";
+  "LAMENTATIONS IS DRAWN THE SAME WAY, 31 rows in one pass checked against the table and against itself; it holds no names, so none of it waits. The ostrich takes the picture of the ostrich word, because Strong's makes that word its feminine; the booth takes the hedge's thorns with the hut, because Strong's says it is from that root in the sense of interlacing. Drawn by their meaning under their own key, because the root picture does not fit or there is none: nursing, the hardness of heart, the offscouring, to tread down, to weigh, to becloud, to grow dim, to tear in pieces, to be white, to cling and to be bound.";
+  "LAMENTATIONS TURNED DOWN: the root's handbreadth for nursing, because Strong's means the children carried, so it is the baby and the hand; the plain shield for the covering, because Strong's means blindness of heart, so it is the shield and the heart. Each of these because another root already wears it: bird+desert as a picture of its own for the ostrich (yaanah wears bird+wilderness), hugging_face+describing (rachum), black_circle+thing (naqod) and black_circle+fire (pecham).";
   let rows = [
     ["11", "abad", "wilted_flower+place", "Abaddon, destruction"],
     ["1413", "gadad", "crowd+clamp+doing", "crowd together"],
@@ -8972,6 +8974,37 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["8595", "taa", "face_with_peeking_eye+thing", "a mockery"],
     ["8600", "puwts", "confetti_ball+multiply", "a scattering"],
     ["8606", "palats", "vibration_mode+fearful_face+thing", "horror"],
+    ["1508", "gazar", "axe+divide+person", "a figure"],
+    ["2014", "pug", "heart_red+cold_face+thing", "a rest"],
+    ["2911", "tachan", "flour+stone+thing", "a millstone"],
+    ["2949", "tippuch", "baby+hand", "nursing"],
+    ["3175", "yachal", "hourglass+crossed_fingers+describing", "hoping"],
+    ["3283", "yaanah", "bird+wilderness", "an ostrich"],
+    ["3728", "kaphash", "footprints+dust+doing", "to tread down"],
+    ["3973", "maas", "gesturing_no+throwing+thing", "refuse"],
+    ["4044", "meginnah", "shield+heart_red", "hardness of heart"],
+    ["4065", "nadach", "leftwards_pushing_hand+thing", "a cause of banishment"],
+    ["4262", "chamad", "heart_eyes+thing", "a treasure"],
+    ["4485", "nagan", "harp+squinting_face_with_tongue", "a mocking song"],
+    ["4868", "shabbath", "sabbath+thing", "a ruin"],
+    ["5206", "nud", "walking+around+repeat", "a wandering"],
+    ["5501", "sechi", "broom+throwing", "offscouring"],
+    ["5537", "sala_weigh", "scales+gem_stone+doing", "to be weighed"],
+    ["5743", "ub", "cloud+darkness+doing", "to becloud"],
+    ["5792", "avath", "scales+shuffle+thing", "a wrong"],
+    ["6004", "amam_dim", "cloud+crowd+doing", "to grow dim"],
+    ["6314", "pug", "heart_red+cold_face+thing", "a rest"],
+    ["6582", "pashach", "bear+divide+doing", "to tear in pieces"],
+    ["6705", "tsachach", "white_circle+sparkles+doing", "to be white"],
+    ["6821", "tsaphad", "bone+link+doing", "to cling"],
+    ["6836", "tsaphah", "guard+telescope+thing", "a watching"],
+    ["7012", "qum", "person+pointing_up+thing", "a rising up"],
+    ["7362", "racham", "hugging_face+person", "compassionate"],
+    ["7612", "shaah", "wind+derelict_house+thing", "destruction"],
+    ["7815", "shachar", "black_circle+face", "soot"],
+    ["7900", "suk_hedge", "thorns+hut", "a booth"],
+    ["8244", "saqad", "knot+hand+doing", "to be bound"],
+    ["8381", "alah", "face_with_symbols_on_mouth+thing", "a curse"],
   ];
   let drafted = [];
   for (let row of rows) {
