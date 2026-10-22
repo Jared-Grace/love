@@ -12,6 +12,7 @@ import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
 import { app_code_brace_marked_div } from "./app_code_brace_marked_div.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
+import { app_code_program_step_correction } from "./app_code_program_step_correction.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { property_set } from "./property_set.mjs";
@@ -103,6 +104,7 @@ export function app_code_lesson_step_programs_generic(
         on_question: app_code_lesson_quiz_question_none,
         answer_label: "",
         on_answer: step_quiz,
+        correction: app_code_program_step_correction,
       },
     ],
   });

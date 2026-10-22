@@ -1,4 +1,6 @@
 import { property_get } from "./property_get.mjs";
+import { property_get_or } from "./property_get_or.mjs";
+import { app_code_quiz_correction } from "./app_code_quiz_correction.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
 import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
@@ -8,7 +10,6 @@ import { html_div } from "./html_div.mjs";
 import { app_code_review_exercise_excuse } from "./app_code_review_exercise_excuse.mjs";
 import { app_code_quiz_reveal_button } from "./app_code_quiz_reveal_button.mjs";
 import { app_code_lesson_quiz_render_correction } from "./app_code_lesson_quiz_render_correction.mjs";
-import { app_code_quiz_correction } from "./app_code_quiz_correction.mjs";
 import { app_code_lesson_quiz_correction_code_set } from "./app_code_lesson_quiz_correction_code_set.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { not } from "./not.mjs";
@@ -34,6 +35,12 @@ export function app_code_review_exercise(
   let answer_label = property_get(info, "answer_label");
   let answer_property = property_get(info, "answer_property");
   let on_answer = property_get(info, "on_answer");
+  ("a quiz may draw its own answer, as the lesson's quiz lets it, or the same quiz would show one answer in its lesson and another here");
+  let correction_render = property_get_or(
+    info,
+    "correction",
+    app_code_quiz_correction,
+  );
   let qa = {
     question,
     answer,
@@ -65,12 +72,12 @@ export function app_code_review_exercise(
   let container_correction = html_div(parent);
   app_code_lesson_quiz_render_correction(
     container_correction,
-    app_code_quiz_correction,
+    correction_render,
     qa,
   );
   let correction_code_set = app_code_lesson_quiz_correction_code_set(
     container_correction,
-    app_code_quiz_correction,
+    correction_render,
     qa,
     answer_property,
   );
