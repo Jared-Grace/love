@@ -9,6 +9,7 @@ import { app_code_quiz_hash_key } from "./app_code_quiz_hash_key.mjs";
 import { app_code_hash_review_restore } from "./app_code_hash_review_restore.mjs";
 import { app_code_hash_milestone_restore } from "./app_code_hash_milestone_restore.mjs";
 import { app_code_hash_complete_restore } from "./app_code_hash_complete_restore.mjs";
+import { app_code_hash_questions_restore } from "./app_code_hash_questions_restore.mjs";
 export function app_code_hash_restore(context) {
   "if the URL carries a shared hash, seed the lesson, screen, and quiz position into storage BEFORE the first render, so the link opens right where it was shared from";
   "It reads the address as the object every other page reads it as, rather than taking the text and cutting it up itself. Its own parsing named these three fields in a shape no reading of the repo could see, so all three sat unanswered while the gate that counts unanswered words reported nothing about this page at all - and the parsing itself was a second, quietly different copy of what one shared reader already does.";
@@ -34,4 +35,5 @@ export function app_code_hash_restore(context) {
   app_code_hash_review_restore(context, hash);
   app_code_hash_milestone_restore(context, hash);
   app_code_hash_complete_restore(context, hash);
+  app_code_hash_questions_restore(context, hash);
 }

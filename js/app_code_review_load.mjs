@@ -5,6 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { app_code_review_seeds_live } from "./app_code_review_seeds_live.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
+import { app_code_review_questions_cap } from "./app_code_review_questions_cap.mjs";
 import { app_code_review_seeds_gather } from "./app_code_review_seeds_gather.mjs";
 export function app_code_review_load(context, checkpoint_key, lessons) {
   "$plain checkpoint_key";
@@ -23,14 +24,16 @@ export function app_code_review_load(context, checkpoint_key, lessons) {
     let finished = list_empty_is(queue_stored);
     let usable = live_any || finished;
     if (usable) {
+      let queue_capped = app_code_review_questions_cap(context, queue_live);
       let resumed = {
-        queue: queue_live,
+        queue: queue_capped,
         passed: passed_stored,
       };
       return resumed;
     }
   }
-  let queue = app_code_review_seeds_gather(lessons);
+  let gathered = app_code_review_seeds_gather(lessons);
+  let queue = app_code_review_questions_cap(context, gathered);
   let passed = 0;
   let fresh = {
     queue,
