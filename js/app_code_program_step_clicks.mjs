@@ -1,10 +1,10 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { app_code_program_trace } from "./app_code_program_trace.mjs";
+import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_value_code } from "./js_value_code.mjs";
 import { property_exists } from "./property_exists.mjs";
-import { list_add } from "./list_add.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { app_code_program_step_actions_solve_whole } from "./app_code_program_step_actions_solve_whole.mjs";
@@ -14,40 +14,72 @@ import { equal } from "./equal.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 export function app_code_program_step_clicks(code) {
   arguments_assert(arguments, 1);
-  ("every right press a learner makes stepping through the program code, in order, each one a sentence of words and code taking turns: the line that runs next, what it does, the value a name or an operator comes to, and last that the program is complete. 2026-10-23, asked for by the human so Show me the answer on a step-by-step question says the steps to press rather than the program again");
-  ("The presses are the ones the step-through asks for, read off the same trace and the same grouping of an expression solved whole, so the two cannot come to disagree. An expression solved whole is one sentence, since the operators can be pressed in more than one right order. Not picked: one sentence per operator, which would name one order as the answer when another is right too");
+  ("every right press a learner makes stepping through the program code, in order: the line that runs next, what it does, the value a name or an operator comes to, and last that the program is complete. 2026-10-23, asked for by the human so Show me the answer on a step-by-step question says the steps to press rather than the program again");
+  ("The presses are the ones the step-through asks for, read off the same trace and the same grouping of an expression solved whole, so the two cannot come to disagree. An expression solved whole is one step, since the operators can be pressed in more than one right order. Not picked: one step per operator, which would name one order as the answer when another is right too");
+  ("Each step is a list of pieces, each piece a text and its kind: words, code, or button - what is pressed as a button on the screen is drawn as one, at the human's asking the same day, so the learner sees the thing to press");
   let lines = text_split_newline(code);
   let traced = app_code_program_trace(code);
-  let words = {
+  let options = {
     declare: "Declare a variable",
     evaluate: "Solve an expression",
     assign: "Assign a value",
     log: "Log a value to the console",
     expand: "Write it the long way",
   };
+  function words(text) {
+    let r = {
+      text,
+      kind: "words",
+    };
+    return r;
+  }
+  function code_piece(text) {
+    let r2 = {
+      text,
+      kind: "code",
+    };
+    return r2;
+  }
+  function button(text) {
+    let r3 = {
+      text,
+      kind: "button",
+    };
+    return r3;
+  }
   let clicks = [];
+  function choose_add(text) {
+    let v = words("Choose ");
+    let v2 = button(text);
+    list_add(clicks, [v, v2]);
+  }
   function value_add(action) {
     let value = property_get(action, "value");
     let said = js_value_code(value);
     if (property_exists(action, "tree")) {
       let whole = property_get(action, "whole");
-      list_add(clicks, [
-        "Solve ",
-        whole,
-        " one operator at a time, until it is ",
-        said,
-      ]);
+      let v3 = words("Solve ");
+      let v4 = code_piece(whole);
+      let v5 = words(" one operator at a time, until it is ");
+      let v6 = code_piece(said);
+      list_add(clicks, [v3, v4, v5, v6]);
       return;
     }
     ("the value is said with what it is the value of, the question it answers being What is a?, since a row of bare values would not say which one is which");
     let name = property_get(action, "name");
-    list_add(clicks, ["Choose ", said, " for ", name]);
+    let v7 = words("Choose ");
+    let v8 = button(said);
+    let v9 = words(" for ");
+    let v10 = code_piece(name);
+    list_add(clicks, [v7, v8, v9, v10]);
   }
   for (let traced_entry of traced) {
     let line = property_get(traced_entry, "line");
     let message = list_get(lines, line);
     let trimmed = text_trim(message);
-    list_add(clicks, ["Choose the line ", trimmed]);
+    let v11 = words("Choose the line ");
+    let v12 = code_piece(trimmed);
+    list_add(clicks, [v11, v12]);
     let traced_actions = property_get(traced_entry, "actions");
     let actions = app_code_program_step_actions_solve_whole(
       code,
@@ -57,7 +89,8 @@ export function app_code_program_step_clicks(code) {
     while (less_than(k, list_size(actions))) {
       let action = list_get(actions, k);
       let kind = property_get(action, "kind");
-      list_add(clicks, ["Choose: " + property_get(words, kind)]);
+      let value2 = property_get(options, kind);
+      choose_add(value2);
       k = k + 1;
       if (equal(kind, "evaluate")) {
         value_add(action);
@@ -71,10 +104,8 @@ export function app_code_program_step_clicks(code) {
         k = k + 1;
       }
     }
-    list_add(clicks, [
-      "Choose: This line is complete; continue to the next line",
-    ]);
+    choose_add("This line is complete; continue to the next line");
   }
-  list_add(clicks, ["Choose: The program is complete"]);
+  choose_add("The program is complete");
   return clicks;
 }
