@@ -102,6 +102,9 @@ export function bible_glyph_roots_hebrew_drafted() {
   "OBADIAH AND MICAH ARE DRAWN THE SAME WAY, 14 rows in one pass checked against the table and against itself, and 2 new words of them wait; Jonah had nothing left to draw. Beth-ezel and Beth-le-aphrah get a key of their own with +proper_name, because each is a compound. Maroth is the bitter picture with water and +proper_name, Zaanan the sheep with +proper_name and Shaphir the beautiful picture with +proper_name, because each is a single-root name. The hedge takes the hedge word's picture, because Strong's says it stands for it; the going forth takes the going out word's picture, because it is the feminine with the same meaning. Splendor takes its root's thing, to be far off its root as a doing word, the standing place its root with a house and haughtily the height picture as a describing word. Drawn by their meaning under their own key, because there is no root picture: hunger, to pervert and to harness.";
   "OBADIAH AND MICAH WAIT, 2 new words. It is foreign: 5614 Sepharad. Built on a name that waits: 4182 Moresheth-gath (Gath).";
   "OBADIAH AND MICAH TURNED DOWN: the robe for splendor, because Strong's word for the mantle already wears cloak+sparkle (addereth); lemon+proper_name for Maroth (Marah wears it); fork_and_knife+zero for hunger (tevath, fasting).";
+  "NAHUM AND HABAKKUK ARE DRAWN THE SAME WAY, 27 rows in one pass checked against the table and against itself, and 2 new words of them wait. Habakkuk is the embrace with repeat and +proper_name, because his name is the embrace word doubled. The laughingstock takes the laughing word's key, because Strong's points it at a neighboring number by mistake and its own meaning is laughter. The healing is the dimness picture and the woman's sign, because it is a feminine with another meaning. To gallop, the crowned one, to dye crimson, the hiding, purity, the pledge, exultation, utter disgrace and on high take their root's picture with a part that says which; empty and emptiness share one key. Drawn by their meaning under their own key, because the root picture does not fit or there is none: empty, the bare place, the tottering, chariot steel, to brandish, to bind, the beam, eagerness, to shake, to be bare, nakedness, to pervert, the chieftain and the stall.";
+  "NAHUM AND HABAKKUK WAIT, 2 new words. Strong's says uncertain for 512 the Elkoshite; Strong's says perhaps for 3572 Cushan.";
+  "NAHUM AND HABAKKUK TURNED DOWN: the pricking key for the bare place (maar_bare) and the waking key for to be bare and nakedness (uwr_bare), because each shares a spelling with another word; the dwelling-ruler's picture for the beam and the emptying jar for the bare place, because Strong's says each word takes the root only in a sense the root's picture does not show. Each of these because another root already wears it: partying_face+thing (ranan), see_no_evil_monkey+thing (sathar), hug+proper_name (nacham), wood+link (chashaq), cave+describing (nabab) and crown+shield+person (tiphsar).";
   let rows = [
     ["11", "abad", "wilted_flower+place", "Abaddon, destruction"],
     ["1413", "gadad", "crowd+clamp+doing", "crowd together"],
@@ -9739,6 +9742,38 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["7317", "rum", "up_arrow+describing", "haughtily"],
     ["7573", "ratham", "horse+link+doing", "to harness"],
     ["8208", "shaphar", "star+face+doing+proper_name", "Shaphir, beautiful"],
+    ["950", "buqah", "hole+zero+describing", "empty"],
+    ["4003", "buqah", "hole+thing", "emptiness"],
+    ["1725", "dahar", "horse+dashing_away+doing", "to gallop"],
+    ["3545", "kahah", "dim_button+female_sign", "a healing"],
+    ["4502", "nezer", "crown+soap+person", "a crowned one"],
+    ["4626", "maar_bare", "coat+no_entry+hole", "a bare place"],
+    ["6375", "piyq", "leg+shaking_face", "a tottering"],
+    ["6393", "peladah", "sword+wheel", "chariot steel"],
+    ["7477", "raal", "sword+arrow_both_ways+doing", "to brandish"],
+    ["7576", "rathaq", "chains+doing", "to bind"],
+    ["8529", "tolaath", "worm+red_circle+doing", "to dye crimson"],
+    ["2253", "chabah", "see_no_evil_monkey+hole", "a hiding"],
+    [
+      "2265",
+      "chabaq",
+      "people_hugging+repeat+proper_name",
+      "Habakkuk, embrace",
+    ],
+    ["2890", "taher", "soap+thing", "purity"],
+    ["3714", "kaphis", "wood+link+house", "a beam"],
+    ["4041", "megammah", "right_arrow+plus", "eagerness"],
+    ["4128", "mud", "earth+arrow_both_ways+doing", "to shake"],
+    ["5783", "uwr_bare", "coat+no_entry+doing", "to be bare"],
+    ["4589", "uwr_bare", "coat+no_entry+thing", "nakedness"],
+    ["4890", "tsachaq", "laughing+thing", "a laughingstock"],
+    ["5671", "abat", "package+hand_sending+thing", "a pledge"],
+    ["5951", "alats_exult", "partying_face+multiply+thing", "exultation"],
+    ["6127", "aqal", "scales+collision+doing", "to pervert"],
+    ["6518", "paraz", "crown+house+person", "a chieftain"],
+    ["7022", "qalah", "eyes+pointing_down+multiply", "utter disgrace"],
+    ["7315", "rum", "up_arrow+place", "on high"],
+    ["7517", "repheth", "cow_face+house", "a stall"],
   ];
   let drafted = [];
   for (let row of rows) {
