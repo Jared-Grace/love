@@ -93,6 +93,9 @@ export function bible_glyph_roots_hebrew_drafted() {
   "DANIEL IS DRAWN THE SAME WAY, 386 rows in one pass checked against the table and against itself, and 14 new words of it wait. Most of Daniel is Aramaic, so 222 of its words take the key and picture of the Hebrew word Strong's says each corresponds to. Night takes the night word and to flee the wandering word, because Strong's points each at a neighboring number by mistake, its own definition naming the night and the fleeing; to will and the matter get a key of their own, because the number Strong's names is the interpretation. The later, the other, the stream, these, the conjurer, the magician, the associate, the nail, to record, a certain one and the mouth take the picture of their word, because Strong's says each is the same, akin, for it, or the feminine with the same meaning; the dark takes the darkness word's picture and thirty the thirty word's, because each already lives under that key. A Mede is Madai's picture with +person, because it is a gentilic; the chief diviner gets its own key with +proper_name. The bottom is the earth and the woman's sign, because it is a feminine with another meaning; women likewise. Drawn by their meaning under their own key, because the root picture does not fit or there is none: the threshing-floor, to heat, firm, the tree, lo, the palace-tent, the knee, the heart, to be enraged, the pit, the body, the instrument, the judge, the counselor, the piece, the necklace, to buy, brightness, the crime, flattery, the clay pot, to be harsh, to singe, the loin, to decree, to rejoice, fasting, clay, the window, to bind, to grieve, the concubine, to reach, the hidden treasure, advice, the steward, the setting of the sun, the lord, the reward, the lampstand, the trigon, to intend, the bagpipe, the cloak, the overseer, the time, chaff, the signet, the pretext, the stump, the potter, the tunic, the palm, the psaltery, the king's food, to wet, the knot, the lyre, the mystery, to write down, to strive, the side, to serve, the moment, continually and the magistrate.";
   "DANIEL WAITS, 14 new words. It is foreign: 195 Ulai, 828 Ashpenaz, 1095 Belteshazzar, 1096 Belteshazzar, 1112 Belshazzar, 1113 Belshazzar, 4335 Meshach, 4336 Meshach, 5664 Abed-nego and 5665 Abed-nego. Strong's says probably for 1757 Dura, 7714 Shadrach and 7715 Shadrach. Built on a name that waits: 6543 the Persian.";
   "DANIEL TURNED DOWN: the root's glory for the threshing-floor, the ram for the tree, the riding for the knee, the arching body for the pit, the frost-flake for the clay, the cutting for the loin, the piercing for the window, the digging for the grieving, the finding for the reaching, the seed for the hidden treasure, the king for the advice, the wing-flap for the lord, the intertwining for the trigon, the dye for the wetting, the enclosing for the riddle, the hammer for the tunic, the disappearing for the palm, the sun for the serving and the looking for the moment, because Strong's says each word takes the root only in a sense the root's picture does not show; a key of their own for the heart, the pit, the clay pot, the singeing and the palm, because the root they would have joined is another word. Each of these because another root already wears it: three+zero for thirty under its own key (shloshim), sunset (ereb), hand_receiving (laqach), infinity, which reads as I AM (yhwh), pointing_up+describing (alah), anchor+check (aman), smile+doing (sus), window (challon), bellhop_bell+doing (sharath), candle (ammud), flute (chalil), flute+wind (ugab), harp+ten (nebel), harp+thread (men), crutch+doing (shaan), fire+up_arrow+doing (lahat), airplane_arrival+doing (athah), crown+person (razan) and broken_heart+doing (yara_break).";
+  "HOSEA IS DRAWN THE SAME WAY, 27 rows in one pass checked against the table and against itself, and 2 new words of it wait. Baali is the master's picture with +proper_name and Jareb the contending picture with +proper_name, because each is a single-root name; Diblaim is the cake's picture with +two, because it is a dual. Beth-arbel takes God's heart_on_fire and so no +proper_name; Lo-ammi and Lo-ruhamah get a key of their own with +proper_name, because each is a compound. The harlot's hire and to hire share one key, because one is the noun of the other. Drawn by their meaning under their own key, because the root picture does not fit or there is none: where, shame, to heal, the offering, the trinket, the fowler, the half-homer, enmity, adultery, lewdness, compassion, iniquity, to bear fruit, to dry up, destruction, terror, the fragments, the drought and to teach to walk.";
+  "HOSEA WAITS, 2 new words. It is foreign: 4644 Moph and 8020 Shalman.";
+  "HOSEA TURNED DOWN: the recounting key for the hire (tanah_hire instead) and the loosening key for the fruit (para_fruit instead), because each shares a spelling with another word. Each of these because another root already wears it: wilderness+sun (choreb), wilderness+fire (charab), wilderness+hot_face (tsechichah) and water+wilderness+doing (nashath), so the drought is sun+water+zero and to dry up is grapes+wilderness+doing.";
   let rows = [
     ["11", "abad", "wilted_flower+place", "Abaddon, destruction"],
     ["1413", "gadad", "crowd+clamp+doing", "crowd together"],
@@ -9619,6 +9622,48 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["8631", "taqaph", "flexed_biceps+fist+doing", "to grow strong"],
     ["8632", "taqaph", "might+scroll", "power"],
     ["8651", "shaar", "gate", "a door"],
+    ["165", "ay", "question+round_pushpin", "where"],
+    ["866", "tanah_hire", "coin+broken_heart+thing", "a harlot's hire"],
+    [
+      "1009",
+      "beth_arbel",
+      "house+ninja+heart_on_fire",
+      "Beth-arbel, house of God's ambush",
+    ],
+    ["1180", "baal", "key+proper_name", "Baali, my master"],
+    ["1317", "bosh", "flushed+thing", "shame"],
+    ["1455", "gahah", "bandage+away+doing", "to heal"],
+    ["1691", "debelah", "fig+flatbread+two", "Diblaim, two cakes"],
+    ["1890", "yahab", "hands_giving+up_arrow+thing", "an offering"],
+    ["2484", "chali", "gem_stone+thread", "a trinket"],
+    ["3352", "yaqosh", "snare+person", "a fowler"],
+    ["3377", "riv", "wrestling+doing+proper_name", "Jareb, he will contend"],
+    [
+      "3818",
+      "lo_ammi",
+      "no_entry+family+proper_name",
+      "Lo-ammi, not my people",
+    ],
+    [
+      "3819",
+      "lo_ruhamah",
+      "no_entry+hugging_face+doing+proper_name",
+      "Lo-ruhamah, not pitied",
+    ],
+    ["3963", "lethek", "scales+wheat", "a half-homer"],
+    ["4895", "mastemah", "angry_face+crossed_swords+thing", "enmity"],
+    ["5005", "naaph", "ring+no_entry+thing", "adultery"],
+    ["5040", "nabluth", "flushed+woman", "lewdness"],
+    ["5164", "nacham", "hug+thing", "compassion"],
+    ["5932", "evel", "scales+thumbs_down", "iniquity"],
+    ["6500", "para_fruit", "grapes+tree+doing", "to bear fruit"],
+    ["6784", "tsamaq", "grapes+desert+doing", "to dry up"],
+    ["6987", "qeteb", "bomb+thing", "destruction"],
+    ["7578", "retet", "shaking_face+fearful_face", "terror"],
+    ["7616", "shabab", "puzzle_piece+collision", "fragments"],
+    ["8514", "taluah", "sun+water+zero", "drought"],
+    ["8566", "tanah_hire", "coin+broken_heart+doing", "to hire"],
+    ["8637", "regel", "foot+baby+doing", "to teach to walk"],
   ];
   let drafted = [];
   for (let row of rows) {

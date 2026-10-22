@@ -4260,6 +4260,31 @@ def lyric_video_described_deny_reason():
     )
 
 
+GREP_LIST_WHILE_READ_RE = re.compile(
+    r"\bgrep\b[^|;&]*\s-[a-zA-Z]*l[a-zA-Z]*\b[^|;&]*\|\s*while\s+read\b"
+)
+
+
+def find_grep_list_while_read(command):
+    """True when `command` lists files with grep -l and walks them with a
+    `while read` loop - a loop the guard can never approve, since read holds
+    no rule, and one grep answers the same question with the file name in
+    front of each match."""
+    return GREP_LIST_WHILE_READ_RE.search(command) is not None
+
+
+def grep_list_while_read_deny_reason():
+    return (
+        "`read` holds no rule, so a `grep -l ... | while read f` loop always "
+        "asks the human. One grep does the same unasked: grep over several "
+        "files already puts each file's name in front of what it found, e.g. "
+        "`grep -a -o -m1 '<pattern>' <folder>/*` for the first match in each "
+        "file, or `grep -a -c '<pattern>' <folder>/*` for a count. If the body "
+        "needs more than grep, `for f in <folder>/*; do ...; done` over "
+        "approved verbs is approved too."
+    )
+
+
 def ffmpeg_band_loudness_deny_reason():
     return (
         "ffmpeg holds no grant, because it can write any file and read from "
@@ -5635,6 +5660,11 @@ def main():
     # and reason. See find_lyric_video_described.
     if find_lyric_video_described(command):
         return decide("deny", lyric_video_described_deny_reason())
+
+    # A grep -l feeding a while-read loop, which one grep answers unasked.
+    # Same placement and reason. See find_grep_list_while_read.
+    if find_grep_list_while_read(command):
+        return decide("deny", grep_list_while_read_deny_reason())
 
     # A call some granted function already makes with these exact inputs.
     # After the allow decision, so it only ever turns a prompt into the
