@@ -114,8 +114,12 @@ export function app_code_program_step_through_generic(
   on_wrong,
   on_success,
   guide,
+  on_step,
 ) {
-  arguments_assert(arguments, 5);
+  arguments_assert(arguments, 6);
+  ("on_step is called on every right press, in the order ",
+    fn_name("app_code_program_step_clicks"),
+    " lists them, so a list of the presses can say which are done. 2026-10-23, at the human's asking: Show me the answer colours its finished steps green and lights the next one");
   ("guide: where to say what to do and why before each question, as the order lesson's example guides step by step, at the human's asking 2026-10-14; null when nothing is to be said, as in a quiz. The caller puts it on top, above the program, where the human asked for it the same day. Not picked: writing the guide under the program, just over the question, tried first and taken back.");
   ("a program the learner runs as the computer would, one step at a time. They are asked what the next line of code to run is, and press a line of the program, or that the program is complete; then what that line does, until they say it is complete: declare a variable, evaluate an expression, assign a value, log a value to the console. A name declared gets a note above its line saying what it holds, what is logged is written under the program, and a name evaluated is asked for and then stands in the line as its value. Asked for by the human 2026-10-13, so every step of the computing is done by the learner before they are asked what a program logs.");
   ("What runs, and what each line does, is ",
@@ -399,6 +403,7 @@ export function app_code_program_step_through_generic(
           return;
         }
         property_set(state, "asked", null);
+        on_step();
         let object3 = entry_get();
         let value6 = property_get(object3, "line");
         await action_do(
@@ -468,6 +473,7 @@ export function app_code_program_step_through_generic(
       }
       property_set(state, "pressing", false);
       html_data_set_test_happy_remove(row);
+      on_step();
       rows_plain();
       ("2026-10-14, at the human's asking: the right line goes green first, for as long as any right answer in this app is, and only then blue - green says it was right, as a right choice does, and blue then says where the computer is. Not picked: blue at once, which was the one right answer here that did not say so");
       ("2026-10-14, at the human's asking again: the next question is asked at once, while the line is still green, so being right costs the learner no wait. Not picked: holding everything until the green is over, which was the first version. The turn to blue is skipped when the learner has already moved on to another line, since the line pressed then is no longer where the computer is");
@@ -536,6 +542,7 @@ export function app_code_program_step_through_generic(
     };
     async function on_complete() {
       property_set(state, "pressing", false);
+      on_step();
       await sleep_success_color();
       rows_plain();
       for (
@@ -662,6 +669,7 @@ export function app_code_program_step_through_generic(
           });
         }
         await promise_wrap(solver_start);
+        on_step();
         each([said_box, solver_box], html_remove);
       } else {
         let value_holder = {
@@ -704,6 +712,7 @@ export function app_code_program_step_through_generic(
         );
         property_set(value_holder, "button", asked.right);
         await asked.pressed;
+        on_step();
         html_remove(asked.box);
       }
       let left = property_get(action, "from");
@@ -906,6 +915,7 @@ export function app_code_program_step_through_generic(
     };
     async function on_right() {
       property_set(state, "asked", null);
+      on_step();
       ("the glow the guide's button lit says where to press, so it goes out once the press is made");
       let element = property_get(holder, "button");
       app_shared_glow_clear(element);

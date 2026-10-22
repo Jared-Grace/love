@@ -45,6 +45,8 @@ export function app_code_lesson_step_programs_generic(
   function example_choose(component, text, container) {
     "a worked example answered on the page, with nothing to tell the lesson when an answer is wrong";
     function wrong() {}
+    ("the worked example has no answer to show, so a press done is told to nobody");
+    function step_none() {}
     function success() {
       app_shared_success_message(component);
     }
@@ -59,6 +61,7 @@ export function app_code_lesson_step_programs_generic(
       wrong,
       success,
       guide,
+      step_none,
     );
   }
   function step_quiz(
@@ -72,14 +75,20 @@ export function app_code_lesson_step_programs_generic(
   ) {
     "the quiz: the same answering as the worked example";
     let question = property_get(qa, "question");
-    let answer = property_get(qa, "answer");
-    correction_code_set(answer);
+    ("the answer shown is the list of presses, so what is handed to it is how many of them are done, and it is drawn again with each one; 2026-10-23, at the human's asking, so the steps pressed turn green and the next one glows");
+    let done = 0;
+    correction_code_set(done);
+    function on_step() {
+      done = done + 1;
+      correction_code_set(done);
+    }
     app_code_program_step_through_generic(
       parent,
       question,
       on_wrong,
       on_success,
       null,
+      on_step,
     );
   }
   let forwards = {
