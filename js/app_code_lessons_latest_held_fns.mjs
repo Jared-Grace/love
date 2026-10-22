@@ -1,10 +1,8 @@
+import { fn_name } from "./fn_name.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
 import { app_code_lesson_while_down } from "./app_code_lesson_while_down.mjs";
 import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
-import { app_code_lesson_else_if_order } from "./app_code_lesson_else_if_order.mjs";
-import { app_code_lesson_braces_run_thrice } from "./app_code_lesson_braces_run_thrice.mjs";
-import { app_code_lesson_if_thrice } from "./app_code_lesson_if_thrice.mjs";
 export function app_code_lessons_latest_held_fns() {
   "the lessons kept off latest while every other lesson is shown there, asked for by the human 2026-09-30: deploy through lesson 204 and skip 205, the 24-hour clock, which is not ready to hand over yet";
   "A list of lessons rather than a cut at a number, for the same reason the released list is one: a lesson put in above would move a number, and a list names the lesson itself. Empty it to show every lesson on latest again. The working copy shows these lessons whatever this holds.";
@@ -102,14 +100,18 @@ export function app_code_lessons_latest_held_fns() {
   "2026-10-17: Stop early on && and || released, the human having read and approved its wording";
   "2026-10-18: hold Step by step: Two lines in an if, new at the human's asking straight before Two lines in an if, until the human has read its first draft";
   "2026-10-18: Step by step: Two lines in an if released, the human having approved it for latest";
+  ("2026-10-22: released by the human, deploy everything except the while lessons: ",
+    fn_name("app_code_lesson_else_if_order"),
+    ", ",
+    fn_name("app_code_lesson_braces_run_thrice"),
+    " and ",
+    fn_name("app_code_lesson_if_thrice"),
+    " shown again");
   let fns = [
     app_code_lesson_while_log,
     app_code_lesson_while_down,
     app_code_lesson_while_total,
     app_code_lesson_while,
-    app_code_lesson_else_if_order,
-    app_code_lesson_braces_run_thrice,
-    app_code_lesson_if_thrice,
   ];
   return fns;
 }
