@@ -1,21 +1,3 @@
-import { giveaway_psalms_boxes_whole_gate_run } from "./giveaway_psalms_boxes_whole_gate_run.mjs";
-import { app_en_learn_bible_gloss_urdu_occurrence_claim_rule_gate_run } from "./app_en_learn_bible_gloss_urdu_occurrence_claim_rule_gate_run.mjs";
-import { app_en_learn_bible_gloss_urdu_occurrence_claim_gate_run } from "./app_en_learn_bible_gloss_urdu_occurrence_claim_gate_run.mjs";
-import { app_en_learn_bible_gloss_tagalog_glosses_empty_gate_run } from "./app_en_learn_bible_gloss_tagalog_glosses_empty_gate_run.mjs";
-import { app_en_learn_bible_gloss_tagalog_misaligned_gate_run } from "./app_en_learn_bible_gloss_tagalog_misaligned_gate_run.mjs";
-import { lyric_video_recording_video_notes_gate_run } from "./lyric_video_recording_video_notes_gate_run.mjs";
-import { giveaway_psalms_pictures_passed_over_gate_run } from "./giveaway_psalms_pictures_passed_over_gate_run.mjs";
-import { giveaway_psalms_songs_rows_verses_unsung_cases_gate_run } from "./giveaway_psalms_songs_rows_verses_unsung_cases_gate_run.mjs";
-import { giveaway_psalms_rows_uploaded_defects_cases_gate_run } from "./giveaway_psalms_rows_uploaded_defects_cases_gate_run.mjs";
-import { lyric_video_document_name_take_is_cases_gate_run } from "./lyric_video_document_name_take_is_cases_gate_run.mjs";
-import { giveaway_psalms_record_documents_defects_cases_gate_run } from "./giveaway_psalms_record_documents_defects_cases_gate_run.mjs";
-import { giveaway_psalms_pictures_repo_defects_cases_gate_run } from "./giveaway_psalms_pictures_repo_defects_cases_gate_run.mjs";
-import { giveaway_psalms_descriptions_defects_cases_gate_run } from "./giveaway_psalms_descriptions_defects_cases_gate_run.mjs";
-import { giveaway_psalms_descriptions_gate_run } from "./giveaway_psalms_descriptions_gate_run.mjs";
-import { lyric_video_document_names_read_gate_run } from "./lyric_video_document_names_read_gate_run.mjs";
-import { giveaway_bible_verses_rendered_cases_gate_run } from "./giveaway_bible_verses_rendered_cases_gate_run.mjs";
-import { giveaway_psalms_items_gate_run } from "./giveaway_psalms_items_gate_run.mjs";
-import { giveaway_psalms_items_defects_cases_gate_run } from "./giveaway_psalms_items_defects_cases_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { stop_next_steps_hook_gate_run } from "./stop_next_steps_hook_gate_run.mjs";
@@ -590,6 +572,7 @@ import { bible_usfm_markers_named_gate_run } from "./bible_usfm_markers_named_ga
 import { ebible_version_words_spelled_gate_run } from "./ebible_version_words_spelled_gate_run.mjs";
 import { app_code_lessons_above_broken_gate_run } from "./app_code_lessons_above_broken_gate_run.mjs";
 import { app_code_above_vague_gate_run } from "./app_code_above_vague_gate_run.mjs";
+import { app_code_lessons_above_repeated_gate_run } from "./app_code_lessons_above_repeated_gate_run.mjs";
 import { bible_glyph_chapters_unlisted_gate_run } from "./bible_glyph_chapters_unlisted_gate_run.mjs";
 import { gloss_same_as_gate_run } from "./gloss_same_as_gate_run.mjs";
 import { bible_glyph_chapters_name_tag_fire_joined_gate_run } from "./bible_glyph_chapters_name_tag_fire_joined_gate_run.mjs";
@@ -633,6 +616,24 @@ import { giveaway_psalms_songs_rows_whole_chapter_parts_cases_gate_run } from ".
 import { giveaway_psalms_songs_whole_chapter_parts_gate_run } from "./giveaway_psalms_songs_whole_chapter_parts_gate_run.mjs";
 import { js_flow_machine_power_cases_gate_run } from "./js_flow_machine_power_cases_gate_run.mjs";
 import { durations_near_each_cases_gate_run } from "./durations_near_each_cases_gate_run.mjs";
+import { giveaway_psalms_items_defects_cases_gate_run } from "./giveaway_psalms_items_defects_cases_gate_run.mjs";
+import { giveaway_psalms_items_gate_run } from "./giveaway_psalms_items_gate_run.mjs";
+import { giveaway_bible_verses_rendered_cases_gate_run } from "./giveaway_bible_verses_rendered_cases_gate_run.mjs";
+import { lyric_video_document_names_read_gate_run } from "./lyric_video_document_names_read_gate_run.mjs";
+import { giveaway_psalms_descriptions_gate_run } from "./giveaway_psalms_descriptions_gate_run.mjs";
+import { giveaway_psalms_descriptions_defects_cases_gate_run } from "./giveaway_psalms_descriptions_defects_cases_gate_run.mjs";
+import { giveaway_psalms_pictures_repo_defects_cases_gate_run } from "./giveaway_psalms_pictures_repo_defects_cases_gate_run.mjs";
+import { giveaway_psalms_record_documents_defects_cases_gate_run } from "./giveaway_psalms_record_documents_defects_cases_gate_run.mjs";
+import { lyric_video_document_name_take_is_cases_gate_run } from "./lyric_video_document_name_take_is_cases_gate_run.mjs";
+import { giveaway_psalms_rows_uploaded_defects_cases_gate_run } from "./giveaway_psalms_rows_uploaded_defects_cases_gate_run.mjs";
+import { giveaway_psalms_songs_rows_verses_unsung_cases_gate_run } from "./giveaway_psalms_songs_rows_verses_unsung_cases_gate_run.mjs";
+import { giveaway_psalms_pictures_passed_over_gate_run } from "./giveaway_psalms_pictures_passed_over_gate_run.mjs";
+import { lyric_video_recording_video_notes_gate_run } from "./lyric_video_recording_video_notes_gate_run.mjs";
+import { app_en_learn_bible_gloss_tagalog_misaligned_gate_run } from "./app_en_learn_bible_gloss_tagalog_misaligned_gate_run.mjs";
+import { app_en_learn_bible_gloss_tagalog_glosses_empty_gate_run } from "./app_en_learn_bible_gloss_tagalog_glosses_empty_gate_run.mjs";
+import { app_en_learn_bible_gloss_urdu_occurrence_claim_gate_run } from "./app_en_learn_bible_gloss_urdu_occurrence_claim_gate_run.mjs";
+import { app_en_learn_bible_gloss_urdu_occurrence_claim_rule_gate_run } from "./app_en_learn_bible_gloss_urdu_occurrence_claim_rule_gate_run.mjs";
+import { giveaway_psalms_boxes_whole_gate_run } from "./giveaway_psalms_boxes_whole_gate_run.mjs";
 export function qa_gates() {
   "Every gate the repo-wide check runs, gathered in one list, so adding a function here is the whole of wiring a new gate in.";
   let gates = [
@@ -1210,6 +1211,7 @@ export function qa_gates() {
     ebible_version_words_spelled_gate_run,
     app_code_lessons_above_broken_gate_run,
     app_code_above_vague_gate_run,
+    app_code_lessons_above_repeated_gate_run,
     bible_glyph_chapters_unlisted_gate_run,
     gloss_same_as_gate_run,
     bible_glyph_chapters_name_tag_fire_joined_gate_run,

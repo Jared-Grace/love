@@ -1,22 +1,22 @@
-import { equal } from "./equal.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
 import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
 import { app_code_lesson_fn_id_set } from "./app_code_lesson_fn_id_set.mjs";
-import { html_element_fake_lines } from "./html_element_fake_lines.mjs";
 import { app_code_lesson_above_fake_draw } from "./app_code_lesson_above_fake_draw.mjs";
+import { html_element_fake_lines } from "./html_element_fake_lines.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_code_lessons_fake_page_lambda } from "./app_code_lessons_fake_page_lambda.mjs";
 import { property_get } from "./property_get.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_get } from "./list_get.mjs";
-import { list_add } from "./list_add.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { list_all } from "./list_all.mjs";
 import { each_index } from "./each_index.mjs";
 export function app_code_lessons_above_repeated() {
@@ -60,8 +60,11 @@ export function app_code_lessons_above_repeated() {
     let taught = lesson.above_taught_fn_name;
     let marked = not_equal(taught, undefined);
     if (marked) {
-      let object = property_get(next, "lesson");
-      let next_id = equal(next, undefined) ? null : property_get(object, "id");
+      let next_id = null;
+      if (not(last)) {
+        let object = property_get(next, "lesson");
+        next_id = property_get(object, "id");
+      }
       let left = property_get(ids, taught);
       let follows = equal(left, next_id);
       if (not(follows)) {
