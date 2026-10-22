@@ -4237,6 +4237,22 @@ def find_ffmpeg_band_loudness(command):
     return False
 
 
+def find_ffmpeg_echo_tail(command):
+    """True when a statement of `command` is an ffmpeg putting an echo on a
+    recording (an aecho filter) - the ending the granted
+    audio_wav_tail_echo_write writes unasked."""
+    for words in statements_words(command):
+        plain = list(words)
+        while plain and ASSIGN_RE.match(plain[0]):
+            plain = plain[1:]
+        if not plain or plain[0] != "ffmpeg":
+            continue
+        for word in plain:
+            if "aecho" in word:
+                return True
+    return False
+
+
 def find_lyric_video_upload(command):
     """True when a statement of `command` runs youtube_studio_upload_private
     on a lyric video - the upload the granted
@@ -4329,6 +4345,20 @@ def ffmpeg_band_loudness_deny_reason():
         "numbers, e.g. `node scripts/ai.mjs audio_band_loudness_tenths "
         "/home/j/Downloads/Psalm_119_He.wav 2.5 3 550 800`. Each reading's "
         "second counts from the start you gave."
+    )
+
+
+def ffmpeg_echo_tail_deny_reason():
+    return (
+        "ffmpeg holds no grant, because it can write any file and read from "
+        "the network. An echo ringing out at the end of a song is already "
+        "approved: `node scripts/ai.mjs audio_wav_tail_echo_write <path_wav> "
+        "<seconds_cut> <seconds_fade_start>` - a whole path ending in .wav, "
+        "then plain numbers, e.g. `node scripts/ai.mjs "
+        "audio_wav_tail_echo_write /home/j/Downloads/Psalm_119_Beth.wav "
+        "77.95 79.7`. It writes `<name> echo tail.wav` next to the song and "
+        "never overwrites; the echo itself is fixed in that function, so a "
+        "different echo is an edit there, not an argument."
     )
 
 
@@ -5683,6 +5713,11 @@ def main():
     # unasked. Same placement and reason. See find_ffmpeg_band_loudness.
     if find_ffmpeg_band_loudness(command):
         return decide("deny", ffmpeg_band_loudness_deny_reason())
+
+    # An ffmpeg echoing a song's ending, which a granted function writes
+    # unasked. Same placement and reason. See find_ffmpeg_echo_tail.
+    if find_ffmpeg_echo_tail(command):
+        return decide("deny", ffmpeg_echo_tail_deny_reason())
 
     # A lyric video's upload through the open upload, which a granted twin
     # makes unasked. Same placement and reason. See find_lyric_video_upload.
