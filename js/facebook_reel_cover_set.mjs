@@ -43,7 +43,7 @@ export async function facebook_reel_cover_set(reel_url, picture_path) {
     await click_named("Choose a thumbnail");
     step = "hand over the picture";
     let input = await page.waitForSelector(
-      '[role=dialog][aria-label="Choose a thumbnail"] input[type=file][accept=".png,.jpg,.jpeg"]',
+      'input[type=file][accept=".png,.jpg,.jpeg"]',
     );
     await input.uploadFile(picture_path);
     await sleep(6000);
