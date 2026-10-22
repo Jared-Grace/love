@@ -7,8 +7,8 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
@@ -26,6 +26,7 @@ import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_lesson_statement_formula_answer_count } from "./app_code_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_seat_less } from "./app_code_lesson_statement_name_seat_less.mjs";
 import { app_code_explain_containers } from "./app_code_explain_containers.mjs";
+import { property_set } from "./property_set.mjs";
 export function app_code_lesson_statement_name_grid_inside() {
   arguments_assert(arguments, 0);
   ("whether a square is inside a grid whose rows and columns are numbered from 0: let in_r = 0 <= r && r < rows; let in_c = 0 <= c && c < cols; let ok = in_r && in_c; - picked by the human 2026-10-02 from a list of next lessons. In DSA it is the check made before stepping to a neighbouring square of a grid, so a search never reads past an edge.");
@@ -86,8 +87,12 @@ export function app_code_lesson_statement_name_grid_inside() {
     ];
     let taken_in = list_shuffle_take(insides, 2);
     let taken_out = list_shuffle_take(outsides, 2);
-    let taken = list_concat(taken_in, taken_out);
-    list_shuffle(taken);
+    ("2026-10-22: in pairs, one inside and one outside in a fresh order, because the two examples are the first two and the next two, so each pair the learner is shown holds both answers");
+    let first = [taken_in[0], taken_out[0]];
+    list_shuffle(first);
+    let second = [taken_in[1], taken_out[1]];
+    list_shuffle(second);
+    let taken = list_concat(first, second);
     return taken;
   }
   let grid_color = app_code_highlight_color();
@@ -320,5 +325,7 @@ export function app_code_lesson_statement_name_grid_inside() {
     ],
     answer_count: 2,
   });
+  ("2026-10-22, the human's rule: as many examples as the program has cases, and this one has two, a square inside the grid and a square outside it. The boxes work through both, but a learner who finished Step by step: Square inside the grid is shown a short line in their place, so the examples have to show both. Set here rather than handed to the builder, which the other lessons sharing it would then each have to hand a 1");
+  property_set(lesson, "example_count", 2);
   return lesson;
 }
