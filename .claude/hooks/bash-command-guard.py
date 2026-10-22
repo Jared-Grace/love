@@ -4203,6 +4203,34 @@ def find_ffmpeg_band_loudness(command):
     return False
 
 
+def find_lyric_video_upload(command):
+    """True when a statement of `command` runs youtube_studio_upload_private
+    on a lyric video - the upload the granted
+    youtube_studio_upload_private_lyric_video makes unasked."""
+    for words in statements_words(command):
+        plain = list(words)
+        while plain and ASSIGN_RE.match(plain[0]):
+            plain = plain[1:]
+        if len(plain) < 5 or plain[0] != "node" or plain[1] != "scripts/ai.mjs":
+            continue
+        if plain[2] != "youtube_studio_upload_private":
+            continue
+        if plain[-1].endswith(" (BSB) lyric video.mp4"):
+            return True
+    return False
+
+
+def lyric_video_upload_deny_reason():
+    return (
+        "A lyric video's private upload is already approved, and it names "
+        "the channel itself: `node scripts/ai.mjs "
+        "youtube_studio_upload_private_lyric_video \"<file_path>\"` - a whole "
+        "path ending in (BSB) lyric video.mp4, e.g. `node scripts/ai.mjs "
+        "youtube_studio_upload_private_lyric_video \"/home/j/Downloads/"
+        "Psalm_119_Beth (BSB) lyric video.mp4\"`."
+    )
+
+
 def ffmpeg_band_loudness_deny_reason():
     return (
         "ffmpeg holds no grant, because it can write any file and read from "
@@ -5567,6 +5595,11 @@ def main():
     # unasked. Same placement and reason. See find_ffmpeg_band_loudness.
     if find_ffmpeg_band_loudness(command):
         return decide("deny", ffmpeg_band_loudness_deny_reason())
+
+    # A lyric video's upload through the open upload, which a granted twin
+    # makes unasked. Same placement and reason. See find_lyric_video_upload.
+    if find_lyric_video_upload(command):
+        return decide("deny", lyric_video_upload_deny_reason())
 
     # A call some granted function already makes with these exact inputs.
     # After the allow decision, so it only ever turns a prompt into the
