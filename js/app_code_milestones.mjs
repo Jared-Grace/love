@@ -6,6 +6,7 @@ import { list_index_of } from "./list_index_of.mjs";
 import { add_1 } from "./add_1.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_map } from "./list_map.mjs";
+import { list_max } from "./list_max.mjs";
 export function app_code_milestones() {
   arguments_assert(arguments, 0);
   ("the milestones: like a review, a mix of questions from many lessons, but chosen by what the lessons hold rather than by being the last ones before it - asked for by the human 2026-10-22, so a learner can practise one kind of program until it is easy");
@@ -20,13 +21,25 @@ export function app_code_milestones() {
     return next;
   }
   let at_once = list_map(steps, after);
+  ("Each stands after the last lesson either one draws from, so both are reached only once every lesson in them has been met. The labels are drafts, not yet read by the human.");
+  function number_of(lesson) {
+    let index = list_index_of(lessons, lesson);
+    let number = add_1(index);
+    return number;
+  }
+  let numbers = list_map(at_once, number_of);
+  let number = list_max(numbers);
   let r = [
     {
       id: "milestone_braces_steps",
+      label: "braces, step by step",
+      number,
       lessons: steps,
     },
     {
       id: "milestone_braces_at_once",
+      label: "braces, all at once",
+      number,
       lessons: at_once,
     },
   ];
