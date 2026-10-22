@@ -49,18 +49,19 @@ export async function facebook_reel_cover_set(reel_url, picture_path) {
     await sleep(6000);
     await picture_take();
     step = "save the thumbnail";
-    let saved = null;
+    ("On 2026-10-22 handing over the picture chose it and closed the thumbnail box by itself, so a box already gone counts as saved; Save is pressed only if the box is still open.");
+    let saved = "not asked";
     let tries = 0;
-    while (saved !== "clicked" && tries < 30) {
+    while (saved !== "clicked" && saved !== "gone" && tries < 30) {
       saved = await page.evaluate(
-        "(function(){var d=document.querySelector('[role=dialog][aria-label=\"Choose a thumbnail\"]');if(!d)return null;var e=d.querySelector('[role=button][aria-label=Save]');if(!e)return null;if(e.getAttribute('aria-disabled')==='true')return 'disabled';e.click();return 'clicked'})()",
+        "(function(){var d=document.querySelector('[role=dialog][aria-label=\"Choose a thumbnail\"]');if(!d)return 'gone';var e=d.querySelector('[role=button][aria-label=Save]');if(!e)return null;if(e.getAttribute('aria-disabled')==='true')return 'disabled';e.click();return 'clicked'})()",
       );
-      if (saved !== "clicked") {
+      if (saved !== "clicked" && saved !== "gone") {
         await sleep(1000);
       }
       tries = tries + 1;
     }
-    if (saved !== "clicked") {
+    if (saved !== "clicked" && saved !== "gone") {
       throw new Error("the thumbnail's Save was " + saved);
     }
     await sleep(6000);
