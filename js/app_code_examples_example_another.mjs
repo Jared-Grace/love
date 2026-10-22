@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_current } from "./app_code_lesson_current.mjs";
 import { app_code_lesson_title_strip } from "./app_code_lesson_title_strip.mjs";
-import { property_get } from "./property_get.mjs";
+import { app_code_lesson_above_shown } from "./app_code_lesson_above_shown.mjs";
 import { app_code_above_draw } from "./app_code_above_draw.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_example_answer_gap } from "./app_code_example_answer_gap.mjs";
@@ -22,7 +22,7 @@ export function app_code_examples_example_another(context, root) {
   arguments_assert(arguments, 2);
   let lesson = app_code_lesson_current(context);
   app_code_lesson_title_strip(root, context, lesson);
-  let above = property_get(lesson, "above");
+  let above = app_code_lesson_above_shown(context, lesson);
   let above_line = app_code_above_draw(root, above, context);
   let c = app_code_container_light_blue(root);
   app_code_example_answer_gap(c);

@@ -23,5 +23,7 @@ export function app_code_lesson_step_before_lesson_generic(
     above_step(root, context);
   }
   property_set(lesson, "above", above);
+  ("2026-10-22: says whose boxes it opened with, so the lesson after it can leave them out for a learner who finished this one, rather than show them twice in a row");
+  property_set(lesson, "above_taught_fn_name", lesson_get.name);
   return lesson;
 }
