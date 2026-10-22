@@ -5,10 +5,10 @@ import { app_code_review_checkpoint } from "./app_code_review_checkpoint.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_review_complete_record } from "./app_code_review_complete_record.mjs";
 import { app_code_review_celebration } from "./app_code_review_celebration.mjs";
+import { app_code_review_explain } from "./app_code_review_explain.mjs";
 import { app_code_review_render_continue } from "./app_code_review_render_continue.mjs";
 import { app_code_advance_or_no_more } from "./app_code_advance_or_no_more.mjs";
 import { app_code_review_button_unfinished_before } from "./app_code_review_button_unfinished_before.mjs";
-import { app_shared_button_restart_text } from "./app_shared_button_restart_text.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 export function app_code_review_finish_show({
   success_container,
@@ -36,6 +36,8 @@ export function app_code_review_finish_show({
   let checkpoint_key = property_get(checkpoint, "key");
   app_code_review_complete_record(context, checkpoint_key);
   app_code_review_celebration(c);
+  let explain = property_get(checkpoint, "explain");
+  app_code_review_explain(c, explain);
   function render_continue(continue_parent) {
     let r = app_code_review_render_continue(continue_parent, go_next);
     return r;
@@ -44,6 +46,6 @@ export function app_code_review_finish_show({
   ("the next unfinished lesson is not drawn here: it is already among the buttons under the review from the start, and stays there once the review is finished");
   ("a lesson skipped before this review is offered too, as a way back");
   app_code_review_button_unfinished_before(context, c, number);
-  let another = app_shared_button_restart_text("Do another review");
-  html_text_set(restart_button, another);
+  let again = property_get(checkpoint, "again");
+  html_text_set(restart_button, again);
 }
