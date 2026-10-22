@@ -99,6 +99,9 @@ export function bible_glyph_roots_hebrew_drafted() {
   "JOEL AND AMOS ARE DRAWN THE SAME WAY, 35 rows in one pass checked against the table and against itself, and 4 new words of them wait. Aven is the wickedness picture with +proper_name and Amos the burden picture with +proper_name, because each is a single-root name; Beth-eden gets a key of its own with +proper_name, because it is a compound. Damascus the fabric takes the city's picture and oh takes alas's, because Strong's calls each a variation or permutation of that word; the thought takes the musing word's picture, because Strong's says it stands for it. The fishhook is the fisher's picture and the woman's sign, and the shrine-booth the thicket's picture and the woman's sign, because each is a feminine with another meaning. Frail and northern take their root's picture as a describing word, the herdsman the cow with a person, the ruin and the late crop their root's thing, the locust larva the locusts with the worm under the locust's key, and to burn a kinsman's body sits under the burning key. Drawn by their meaning under their own key, because the root picture does not fit or there is none: to bewail, the devouring locust, the clod, the granary, to shrivel, the flush of anxiety, the kernel, the stench, the splinter, the plumb-line, dusky, the piece, to tend sycamore figs, to trample, the palace, the sieve, the revelry, to press down, to babble and to loathe.";
   "JOEL AND AMOS WAIT, 4 new words. Built on a name that waits: 3125 the Jevanite (Javan) and 7615 the Shebaite (Sheba). The root's picture is not the meaning Strong's gives: 6602 Pethuel, enlarged of God, whose root wears the enticing fishing pole. Strong's says probably for 2579 Hamath-rabbah.";
   "JOEL AND AMOS TURNED DOWN: the curse for to bewail, the sweeping for the clod, the throwing down for the granary, the crown for the flush, the dividing for the kernel, the anger for the splinter and the plaiting for the sieve, because Strong's says each word takes the root only in a sense the root's picture does not show; a key of their own for dusky (aphel_dusk), the piece (badal_part) and to loathe (taab_loathe), because the word they would have joined is another word. Each of these because another root already wears it: castle (melek), crying_face+loudspeaker+doing (yalal), nauseated_face+thing (zara), partying_face+thing (ranan), wheat+knot (omer), puzzle_piece+thing (shear_noun), wheat+house (megurah), nauseated_face+doing (gaal_defile), nauseated_face+heart_red+doing (quts_loathe), footprints+down_arrow+doing (bus), foot+collision+doing (baat), foot+crowd+down_arrow+doing (radad) and speech+repeat+doing (tanah).";
+  "OBADIAH AND MICAH ARE DRAWN THE SAME WAY, 14 rows in one pass checked against the table and against itself, and 2 new words of them wait; Jonah had nothing left to draw. Beth-ezel and Beth-le-aphrah get a key of their own with +proper_name, because each is a compound. Maroth is the bitter picture with water and +proper_name, Zaanan the sheep with +proper_name and Shaphir the beautiful picture with +proper_name, because each is a single-root name. The hedge takes the hedge word's picture, because Strong's says it stands for it; the going forth takes the going out word's picture, because it is the feminine with the same meaning. Splendor takes its root's thing, to be far off its root as a doing word, the standing place its root with a house and haughtily the height picture as a describing word. Drawn by their meaning under their own key, because there is no root picture: hunger, to pervert and to harness.";
+  "OBADIAH AND MICAH WAIT, 2 new words. It is foreign: 5614 Sepharad. Built on a name that waits: 4182 Moresheth-gath (Gath).";
+  "OBADIAH AND MICAH TURNED DOWN: the robe for splendor, because Strong's word for the mantle already wears cloak+sparkle (addereth); lemon+proper_name for Maroth (Marah wears it); fork_and_knife+zero for hunger (tevath, fasting).";
   let rows = [
     ["11", "abad", "wilted_flower+place", "Abaddon, destruction"],
     ["1413", "gadad", "crowd+clamp+doing", "crowd together"],
@@ -9712,6 +9715,30 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["6527", "parat", "mouth+repeat+doing", "to babble"],
     ["7808", "siyach", "thinking+mouth+thing", "a thought"],
     ["8374", "taab_loathe", "nauseated_face+scales+doing", "to loathe"],
+    ["145", "adar", "sparkles+up_arrow+thing", "splendor"],
+    [
+      "1018",
+      "beth_ezel",
+      "house+children_crossing+proper_name",
+      "Beth-ezel, house of the side",
+    ],
+    [
+      "1036",
+      "beth_le_aphrah",
+      "house+dust+proper_name",
+      "Beth-le-aphrah, house of dust",
+    ],
+    ["1972", "haleah", "telescope+right_arrow+doing", "to be far off"],
+    ["3445", "yeshach", "fork_and_knife+hole", "hunger"],
+    ["4163", "yatsa", "walking+tray_out", "a going forth"],
+    ["4534", "suk_hedge", "thorns+around+thing", "a hedge"],
+    ["4796", "mar", "lemon+water+proper_name", "Maroth, bitter springs"],
+    ["5686", "abath", "knot+thumbs_down+doing", "to pervert"],
+    ["5979", "amad", "person+round_pushpin+house", "a standing place"],
+    ["6630", "tson", "sheep+proper_name", "Zaanan, sheep pasture"],
+    ["7317", "rum", "up_arrow+describing", "haughtily"],
+    ["7573", "ratham", "horse+link+doing", "to harness"],
+    ["8208", "shaphar", "star+face+doing+proper_name", "Shaphir, beautiful"],
   ];
   let drafted = [];
   for (let row of rows) {
