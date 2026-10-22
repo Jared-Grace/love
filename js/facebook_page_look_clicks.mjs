@@ -13,7 +13,11 @@ export async function facebook_page_look_clicks(url, click_labels) {
   try {
     let clicked = [];
     ("click_labels is one comma-joined text, because a command line hands over text, never a list.");
+    ("★ AN EMPTY LABEL IS SKIPPED, because every name holds the empty text, so it clicked the first button on the page - 'Back to previous page' on 2026-10-22, when nothing at all was asked to be clicked.");
     for (let label of click_labels.split(",")) {
+      if (label === "") {
+        continue;
+      }
       let c = await page.evaluate(
         "(function(w){var es=[].slice.call(document.querySelectorAll('[role=button],[role=link],a,button,[role=menuitem],[role=radio],[role=option],[role=tab]')).filter(function(x){var r=x.getBoundingClientRect();return r.width>0&&r.height>0});var e=es.find(function(x){return ((x.getAttribute('aria-label')||'')+' '+(x.innerText||'')).indexOf(w)>=0});if(!e)return null;e.click();return (e.getAttribute('aria-label')||'')+' | '+(e.innerText||'').slice(0,80)})(" +
           JSON.stringify(label) +
