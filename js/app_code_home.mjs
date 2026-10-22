@@ -1,5 +1,3 @@
-import { app_code_lesson_groups_numbered } from "./app_code_lesson_groups_numbered.mjs";
-import { app_code_home_all_complete } from "./app_code_home_all_complete.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { app_code_home_value } from "./app_code_home_value.mjs";
 import { property_get } from "./property_get.mjs";
@@ -9,6 +7,7 @@ import { storage_session_get_context } from "./storage_session_get_context.mjs";
 import { app_code_home_rows_start } from "./app_code_home_rows_start.mjs";
 import { app_code_review_number_key } from "./app_code_review_number_key.mjs";
 import { app_code_reviews_complete_read } from "./app_code_reviews_complete_read.mjs";
+import { app_code_lesson_groups_numbered } from "./app_code_lesson_groups_numbered.mjs";
 import { add_1 } from "./add_1.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -22,8 +21,10 @@ import { app_code_home_just_left_next } from "./app_code_home_just_left_next.mjs
 import { app_code_review_scope } from "./app_code_review_scope.mjs";
 import { app_code_review_complete_is } from "./app_code_review_complete_is.mjs";
 import { app_code_home_review_row } from "./app_code_home_review_row.mjs";
+import { app_code_home_milestone_rows } from "./app_code_home_milestone_rows.mjs";
 import { each_index } from "./each_index.mjs";
 import { app_code_home_groups_finish } from "./app_code_home_groups_finish.mjs";
+import { app_code_home_all_complete } from "./app_code_home_all_complete.mjs";
 import { app_code_home_just_left_center } from "./app_code_home_just_left_center.mjs";
 export async function app_code_home(context) {
   "on returning home the row just left is scrolled to the vertical center, so the learner lands back where they were - and that row is the review checkpoint where a review is what they came back from, and the lesson (its id is remembered in lesson_id) otherwise";
@@ -45,6 +46,7 @@ export async function app_code_home(context) {
   let review_left = property_get(r2, "review_left");
   let property_name = app_code_review_number_key();
   let review_number = property_get(r2, property_name);
+  let milestone_id_left = property_get(r2, "milestone_id_left");
   ("which reviews have been finished is read once for the whole list, the same way the finished lessons are, rather than once inside every row");
   let reviews_complete = app_code_reviews_complete_read(context);
   ("the lessons are drawn into folding groups, one open at a time, like the front page's groups of apps - asked for by the human. A group starts at the lesson it names, its number worked out from the lessons shown, so the group a row lands in is only known as the rows are drawn.");
@@ -110,6 +112,22 @@ export async function app_code_home(context) {
       if (review_is) {
         opened = group;
       }
+    }
+    let milestone_row_left = app_code_home_milestone_rows(
+      body,
+      context,
+      lesson_number,
+      reviews_complete,
+      milestone_id_left,
+    );
+    let milestone_is = null_not_is(milestone_row_left);
+    just_left = app_code_home_just_left_next(
+      just_left,
+      milestone_row_left,
+      milestone_is,
+    );
+    if (milestone_is) {
+      opened = group;
     }
   }
   each_index(lessons, lambda);

@@ -1,10 +1,10 @@
-import { app_code_review_number_get } from "./app_code_review_number_get.mjs";
-import { app_code_review_button_unfinished } from "./app_code_review_button_unfinished.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_review_skip_button } from "./app_code_review_skip_button.mjs";
 import { app_code_review_arrow } from "./app_code_review_arrow.mjs";
 import { app_code_review_go_restart } from "./app_code_review_go_restart.mjs";
 import { property_get } from "./property_get.mjs";
+import { app_code_review_checkpoint } from "./app_code_review_checkpoint.mjs";
+import { app_code_review_button_unfinished } from "./app_code_review_button_unfinished.mjs";
 export function app_code_review_c(context, root) {
   arguments_assert(arguments, 2);
   let r2 = app_code_review_skip_button(context, root);
@@ -18,7 +18,8 @@ export function app_code_review_c(context, root) {
   let key = property_get(r4, "key");
   let g = property_get(r4, "g");
   ("the next thing this learner has not finished is offered among the ways off the screen from the start, not only once the review is finished - drawn where it is somewhere other than the lesson straight after the review, which happens when that lesson is already finished, at the human's request");
-  let number = app_code_review_number_get(context);
+  let checkpoint = app_code_review_checkpoint(context);
+  let number = property_get(checkpoint, "number");
   app_code_review_button_unfinished(context, g, number);
   let progress = property_get(r4, "progress");
   let success_container = property_get(r4, "success_container");
