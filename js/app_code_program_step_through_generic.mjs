@@ -69,13 +69,7 @@ import { app_shared_animation_duration } from "./app_shared_animation_duration.m
 import { html_height_change_animate } from "./html_height_change_animate.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
-import { text_trim } from "./text_trim.mjs";
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
-import { text_starts_with } from "./text_starts_with.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { app_code_program_step_line_wrong_words } from "./app_code_program_step_line_wrong_words.mjs";
-import { app_code_program_step_line_ran_words } from "./app_code_program_step_line_ran_words.mjs";
-import { app_code_program_step_line_never_words } from "./app_code_program_step_line_never_words.mjs";
+import { app_code_program_step_line_press_words } from "./app_code_program_step_line_press_words.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_code_step_reasons_told } from "./app_code_step_reasons_told.mjs";
 import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
@@ -85,6 +79,7 @@ import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 import { promise_later_catch_ignore } from "./promise_later_catch_ignore.mjs";
 import { html_cycle_code } from "./html_cycle_code.mjs";
+import { text_trim } from "./text_trim.mjs";
 import { app_code_program_step_guide_line_next } from "./app_code_program_step_guide_line_next.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { app_code_quiz_choice_button_answer_generic } from "./app_code_quiz_choice_button_answer_generic.mjs";
@@ -437,80 +432,18 @@ export function app_code_program_step_through_generic(
       let done = greater_than_equal(index, b2);
       let right = not(done) && equal(i, property_get(entry_get(), "line"));
       if (not(right)) {
-        ("2026-10-21, at the human's asking: a wrong press says why when the reason is a rule, and the rule is said rather than the answer, so the learner still finds the right line. The first is a line holding only }, which a learner may take for a step; said once each time the next line is asked for. Not picked: making } a step, which would be a press with nothing to do");
-        let message2 = list_get(lines, i);
-        let pressed_text = text_trim(message2);
-        let braces_shown = app_code_braces_dots();
+        ("why the press is wrong, where a rule says why; asked of the one function the gate over every program also asks");
+        let press = app_code_program_step_line_press_words(
+          lines,
+          trace,
+          index,
+          i,
+        );
         let reason = null;
         let reason_words = null;
-        if (equal(pressed_text, "}")) {
-          reason = "brace";
-          reason_words = [
-            "Nothing runs on a line holding only ",
-            "}",
-            "; it only marks where the ",
-            braces_shown,
-            " ends",
-          ];
-        } else if (equal(pressed_text, "} else {")) {
-          ("2026-10-23, at the human's asking: like a line holding only }, a } else { line is never run by itself. Not picked: telling the learner to choose a line inside the { } that runs, since the line due may come after the whole if");
-          reason = "else_brace";
-          reason_words = [
-            "Nothing runs on a line holding only ",
-            "} else {",
-            "; it only marks where the ",
-            "if",
-            "'s ",
-            braces_shown,
-            " ends and the ",
-            "else " + braces_shown,
-            " starts",
-          ];
-        } else if (not(done)) {
-          ("2026-10-21, at the human's asking: the second is a line pressed below an if that is to run next - most likely if (false), whose { ... } the learner can already see will not run. The if line still runs first, since running it is how the computer finds that out. Not picked: taking the skip as right for a written false, which would teach skipping whenever the learner thinks they know the answer");
-          let object5 = entry_get();
-          let line_due = property_get(object5, "line");
-          let message3 = list_get(lines, line_due);
-          let due_text = text_trim(message3);
-          if (text_starts_with(due_text, "if (") && greater_than(i, line_due)) {
-            reason = "if_skip";
-            reason_words = [
-              "The computer reaches the ",
-              "if",
-              " line first; it runs that line to find out whether the ",
-              braces_shown,
-              " runs",
-            ];
-          }
-          ("2026-10-23, at the human's asking that every wrong press says why: otherwise the rule that decides the next line is said, where one does");
-          if (null_is(reason)) {
-            let wrong = app_code_program_step_line_wrong_words(
-              lines,
-              trace,
-              index,
-              i,
-            );
-            if (null_is(wrong)) {
-              wrong = app_code_program_step_line_ran_words(
-                lines,
-                trace,
-                index,
-                i,
-              );
-            }
-            if (null_is(wrong)) {
-              wrong = app_code_program_step_line_never_words(
-                lines,
-                trace,
-                index,
-                i,
-              );
-            }
-            if (null_not_is(wrong)) {
-              reason = property_get(wrong, "reason");
-              reason_words = property_get(wrong, "words");
-            }
-          }
+        if (null_not_is(press)) {
+          reason = property_get(press, "reason");
+          reason_words = property_get(press, "words");
         }
         ("2026-10-21, at the human's asking: a press with a reason is a fair guess at a rule nobody has said yet - every line runs, so } must run at some point - so the first time a reason is told it is not counted as a mistake, and the line goes gray rather than red. Once told, the same press counts as any wrong one does, since practising a rule already said is what counting it buys. Not picked: never counting these, which would let the rule go unpractised");
         let told = app_code_step_reasons_told();
