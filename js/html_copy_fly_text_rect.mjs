@@ -1,10 +1,10 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { html_clone_over } from "./html_clone_over.mjs";
 import { html_style_text_look_copy } from "./html_style_text_look_copy.mjs";
 import { html_bounding_client_rect } from "./html_bounding_client_rect.mjs";
 import { html_move_animate_rect } from "./html_move_animate_rect.mjs";
-import { html_parent_remove } from "./html_parent_remove.mjs";
+import { html_remove } from "./html_remove.mjs";
 export async function html_copy_fly_text_rect(component, rect_to, duration) {
   arguments_assert(arguments, 3);
   ("send a copy of some words across to a given place on the screen and let it go once it arrives, the words themselves left where they stand, and the copy looking as they do");
@@ -17,5 +17,6 @@ export async function html_copy_fly_text_rect(component, rect_to, duration) {
   html_style_text_look_copy(component, clone);
   let rect_from = html_bounding_client_rect(clone);
   await html_move_animate_rect(clone, rect_from, rect_to, duration);
-  html_parent_remove(clone);
+  ("2026-10-23: let go by a remove that asks nothing of where the copy hangs, because a screen drawn afresh while the copy is crossing has already taken it off the page, and a learner leaving mid-flight was shown an error");
+  html_remove(clone);
 }
