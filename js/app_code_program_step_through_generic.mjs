@@ -112,7 +112,7 @@ import { app_code_style_normal_box } from "./app_code_style_normal_box.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_code_program_step_guide_action } from "./app_code_program_step_guide_action.mjs";
 import { property_get_or } from "./property_get_or.mjs";
-import { list_any } from "./list_any.mjs";
+import { app_code_program_step_order_words } from "./app_code_program_step_order_words.mjs";
 import { add } from "./add.mjs";
 import { app_code_program_step_solved_already_words } from "./app_code_program_step_solved_already_words.mjs";
 import { html_scroll_center } from "./html_scroll_center.mjs";
@@ -1039,12 +1039,6 @@ export function app_code_program_step_through_generic(
       actions_ask(next);
     }
     ("2026-10-21, at the human's asking: two fair guesses are soft misses, like a press on a brace line - the first time grey and not counted, after that a real miss. Choosing Solve before Declare on a let line, and choosing Solve when the value is already one value");
-    function lambda(a) {
-      let left13 = property_get(a, "kind");
-      let eq = equal(left13, "evaluate");
-      return eq;
-    }
-    let evaluate_ahead = list_any(actions, lambda);
     let reason_said = {
       said: false,
     };
@@ -1054,17 +1048,14 @@ export function app_code_program_step_through_generic(
       let right2 = equal(option_kind, kind);
       let reason = null;
       let reason_words = null;
-      if (equal(option_kind, "evaluate")) {
-        if (equal(kind, "declare") && evaluate_ahead) {
-          reason = "declare_first";
-          reason_words = [
-            "This app takes a ",
-            "let",
-            " line in this order: declare the name, then solve the right of the ",
-            "=",
-            ", then assign",
-          ];
-        } else if (
+      ("a step this line does at another time - later, or already - is said first, since it is the truer reason; only a step the line never does falls to the reasons below");
+      let order = app_code_program_step_order_words(actions, k, option_kind);
+      let b18 = null_is(order);
+      if (not(b18)) {
+        reason = property_get(order, "reason");
+        reason_words = property_get(order, "words");
+      } else if (equal(option_kind, "evaluate")) {
+        if (
           equal(kind, "declare") ||
           equal(kind, "assign") ||
           equal(kind, "log")
