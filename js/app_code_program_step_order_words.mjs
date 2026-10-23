@@ -223,6 +223,19 @@ export function app_code_program_step_order_words(
     };
     return r20;
   }
+  if (equal(at, -1) && equal(option_kind, "log")) {
+    ("2026-10-23, at the human's asking, in their words: Logging to the console needs console.log(...) - but there is no console.log(...)");
+    let r21 = {
+      reason: "log_none",
+      words: [
+        "Logging to the console needs ",
+        "console.log(...)",
+        " - but there is no ",
+        "console.log(...)",
+      ],
+    };
+    return r21;
+  }
   if (equal(at, -1)) {
     return null;
   }
