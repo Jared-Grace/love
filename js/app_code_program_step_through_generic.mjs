@@ -529,6 +529,21 @@ export function app_code_program_step_through_generic(
     }
     html_cycle_code(reason_box, reason_words);
   }
+  function program_left_words() {
+    "2026-10-23, at the human's asking: the program said complete too soon says why with a sign on the screen - the last line the computer runs, which has not run yet. Not picked: naming the next line to run, which hands over the answer to the question asked";
+    let size3 = list_size(trace);
+    let index4 = subtract(size3, 1);
+    let entry_last = list_get(trace, index4);
+    let line_end = property_get(entry_last, "line");
+    let message5 = list_get(lines, line_end);
+    let text_end = text_trim(message5);
+    let r12 = [
+      "The line ",
+      text_end,
+      " still has to run, so the program is not complete yet",
+    ];
+    return r12;
+  }
   function next_line_ask() {
     "the learner says which line runs next, or that the program is complete";
     html_clear(ask);
@@ -587,7 +602,8 @@ export function app_code_program_step_through_generic(
     }
     function soft_take() {
       "2026-10-21, at the human's asking: the program called complete while lines are left to run, when every step left only solves and none changes anything - an if (a) { whose a is false, say - is a shortcut taken in the head, and the learner is right that nothing more happens; so it is let off the first time, gray rather than red, and the rule is said. The lines left still run one at a time, since reading a is the step being taught. Not picked: taking it as right, which would skip that reading; and counting it, which would call a correct answer a mistake. Where anything left declares, assigns, logs or is written the long way, the shortcut is wrong and counts";
-      line_reason_show(null);
+      let v = program_left_words();
+      line_reason_show(v);
       let told = app_code_step_reasons_told();
       let reason = "nothing_left";
       if (property_exists(told, reason)) {
@@ -1134,7 +1150,18 @@ export function app_code_program_step_through_generic(
       await program_finish();
     }
     function soft_none() {
-      reason_show(null);
+      "2026-10-23, at the human's asking: said too soon, the program's being complete is answered with a sign - this line's step still to do, or else the last line still to run";
+      let program_reason = program_left_words();
+      let complete_order = app_code_program_step_order_words(
+        actions,
+        k,
+        "complete",
+      );
+      let b19 = null_is(complete_order);
+      if (not(b19)) {
+        program_reason = property_get(complete_order, "words");
+      }
+      reason_show(program_reason);
       return false;
     }
     let program_button = app_code_quiz_choice_button_answer_generic(
