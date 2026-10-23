@@ -1,7 +1,7 @@
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_program_line_enclosing } from "./app_code_program_line_enclosing.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 export function app_code_program_step_line_never_words(
   lines,
   trace,
@@ -16,7 +16,8 @@ export function app_code_program_step_line_never_words(
     return r2;
   }
   let runs = trace.map(lambda);
-  if (runs.includes(pressed)) {
+  ("A line starting with } closes a { } rather than sitting inside it, so the if it closes is not one it is inside");
+  if (runs.includes(pressed) || lines[pressed].trim().startsWith("}")) {
     return null;
   }
   function lambda2(j) {
