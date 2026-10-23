@@ -1,13 +1,13 @@
-import { app_code_expression_choose_order_ask } from "./app_code_expression_choose_order_ask.mjs";
-import { app_code_head_spaced_above_code } from "./app_code_head_spaced_above_code.mjs";
-import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
-import { html_height_change_animate } from "./html_height_change_animate.mjs";
-import { app_shared_success_message } from "./app_shared_success_message.mjs";
-import { html_div_first } from "./html_div_first.mjs";
-import { html_clear } from "./html_clear.mjs";
-import { html_text_set } from "./html_text_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { html_div_first } from "./html_div_first.mjs";
+import { app_code_head_spaced_above_code } from "./app_code_head_spaced_above_code.mjs";
 import { html_div } from "./html_div.mjs";
+import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
+import { html_text_set } from "./html_text_set.mjs";
+import { html_clear } from "./html_clear.mjs";
+import { app_shared_success_message } from "./app_shared_success_message.mjs";
+import { html_height_change_animate } from "./html_height_change_animate.mjs";
+import { app_code_expression_choose_order_ask } from "./app_code_expression_choose_order_ask.mjs";
 import { noop } from "./noop.mjs";
 export function app_code_lesson_expression_choose_order_solve_example(
   parent,
@@ -55,5 +55,6 @@ export function app_code_lesson_expression_choose_order_solve_example(
     decoys_get,
     on_wrong: noop,
     on_success: noop,
+    value_arrive: noop,
   });
 }

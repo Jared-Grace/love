@@ -83,6 +83,7 @@ import { promise_later_catch_ignore } from "./promise_later_catch_ignore.mjs";
 import { app_code_program_step_guide_line_next } from "./app_code_program_step_guide_line_next.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { app_code_quiz_choice_button_answer_generic } from "./app_code_quiz_choice_button_answer_generic.mjs";
+import { each } from "./each.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_opacity_animate } from "./html_opacity_animate.mjs";
@@ -95,7 +96,6 @@ import { promise_wrap } from "./promise_wrap.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { app_code_program_step_operator_decoys } from "./app_code_program_step_operator_decoys.mjs";
 import { app_code_expression_value_choose_buttons_generic } from "./app_code_expression_value_choose_buttons_generic.mjs";
-import { each } from "./each.mjs";
 import { app_code_line_pieces_add } from "./app_code_line_pieces_add.mjs";
 import { html_opacity_transition } from "./html_opacity_transition.mjs";
 import { sleep } from "./sleep.mjs";
@@ -600,6 +600,20 @@ export function app_code_program_step_through_generic(
     );
     property_set(holder, "button", complete);
   }
+  function note_value_source(name) {
+    "the value in the note saying what name holds, drawn again showing and handed back so a copy of it can be sent down; null when name has no note";
+    let declared3 = property_get(state, "declared");
+    let b16 = property_exists(declared3, name);
+    if (not(b16)) {
+      return null;
+    }
+    let note_line2 = property_get(declared3, name);
+    let value_text2 = list_get(noted, note_line2);
+    let spans = comment_draw(note_line2, name, value_text2, "value");
+    each(spans, html_visibility_visible);
+    let first = list_first(spans);
+    return first;
+  }
   async function piece_rewrite(line_index, from_now, to_now, written) {
     "the piece of a line from from_now to to_now, as it reads now, written over as written";
     await piece_arrive(line_index, from_now, to_now, written, null);
@@ -670,6 +684,21 @@ export function app_code_program_step_through_generic(
         function finished() {
           html_clear(said_box);
         }
+        async function value_arrive(node, node_span) {
+          "2026-10-23, at the human's asking: a name pressed on the line under the program has its value sent down from its note onto the name, as a name asked for alone does, before the line writes the value in";
+          let b17 = app_code_expression_name_is(node);
+          if (not(b17)) {
+            return;
+          }
+          let value10 = property_get(node, "name");
+          let source2 = note_value_source(value10);
+          if (null_is(source2)) {
+            return;
+          }
+          let rect2 = html_bounding_client_rect(node_span);
+          let duration5 = app_shared_animation_duration();
+          await html_copy_fly_text_rect(source2, rect2, duration5);
+        }
         function solver_start(resolve) {
           app_code_expression_choose_order_ask({
             parent: solver_box,
@@ -679,6 +708,7 @@ export function app_code_program_step_through_generic(
             decoys_get: solve_decoys,
             on_wrong,
             on_success: resolve,
+            value_arrive,
           });
         }
         await promise_wrap(solver_start);
@@ -733,14 +763,8 @@ export function app_code_program_step_through_generic(
         await asked.pressed;
         on_step();
         html_remove(asked.box);
-        let declared3 = property_get(state, "declared");
-        if (not(operator_is) && property_exists(declared3, name)) {
-          ("the note is drawn again with its value showing, so its value has words to send down into the line");
-          let note_line2 = property_get(declared3, name);
-          let value_text2 = list_get(noted, note_line2);
-          let spans = comment_draw(note_line2, name, value_text2, "value");
-          each(spans, html_visibility_visible);
-          source = list_first(spans);
+        if (not(operator_is)) {
+          source = note_value_source(name);
         }
       }
       let left = property_get(action, "from");

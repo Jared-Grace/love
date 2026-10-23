@@ -1,6 +1,7 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { app_code_expression_choose_order_ask } from "./app_code_expression_choose_order_ask.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
+import { noop } from "./noop.mjs";
 export function app_code_lesson_expression_choose_order_solve_answer_draw(
   parent,
   tree,
@@ -27,5 +28,6 @@ export function app_code_lesson_expression_choose_order_solve_answer_draw(
     decoys_get,
     on_wrong,
     on_success,
+    value_arrive: noop,
   });
 }

@@ -17,6 +17,7 @@ export function app_code_expression_choose_order_ask({
   decoys_get,
   on_wrong,
   on_success,
+  value_arrive,
 }) {
   arguments_assert(arguments, 1);
   ("press the operators of one line in the order they solve in, with what to do next said out loud after every press - the whole of it, for the lesson's front page and for its quiz alike");
@@ -45,7 +46,7 @@ export function app_code_expression_choose_order_ask({
     let next = app_code_label_solve_next();
     say(next);
   }
-  async function on_chosen(node, value, node_span_unused, waiting_on) {
+  async function on_chosen(node, value, node_span, waiting_on) {
     "the press is answered by asking what the chosen part comes to, and nothing on the line moves until the right value is pressed";
     "the values are named as the thing being waited on, so a learner who goes on pressing the line is shown where the asking moved to rather than being answered with nothing";
     let said = app_code_label_solve_choice();
@@ -58,6 +59,8 @@ export function app_code_expression_choose_order_ask({
       decoys,
       on_wrong,
     );
+    ("2026-10-23, at the human's asking: once the right value is pressed, whoever asked may show where it came from before the line writes it in, as a program stepped through sends a name's value down from its note; a page with nothing to show hands in a function that does nothing");
+    await value_arrive(node, node_span);
   }
   app_code_expression_choose_line(
     line_holder,
