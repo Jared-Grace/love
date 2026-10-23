@@ -5,8 +5,8 @@ import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
 import { app_code_program_line_enclosing } from "./app_code_program_line_enclosing.mjs";
 export function app_code_program_step_line_wrong_words(
   lines,
@@ -86,6 +86,27 @@ export function app_code_program_step_line_wrong_words(
           ],
         };
         return r5;
+      }
+      ("2026-10-23, the human's words for pressing a later } else if line while an earlier one is due, with are ran said as run: each is checked in turn, so none is passed over. Said for any line pressed further down the chain, not only another } else if: a line inside a later branch is reached past the one due just the same");
+      if (
+        equal(due, block_end) &&
+        lines[due].trim().startsWith("} else if (") &&
+        greater_than(pressed, block_end) &&
+        less_than_equal(pressed, chain_end)
+      ) {
+        let r8 = {
+          reason: "else_if_order",
+          words: [
+            "The ",
+            "} else if (...) {",
+            " lines run in order until ",
+            "...",
+            " is true - You skipped a ",
+            "} else if (...) {",
+            " line",
+          ],
+        };
+        return r8;
       }
       if (
         has_else &&
