@@ -209,6 +209,19 @@ export function app_code_program_step_order_words(actions, k, option_kind) {
     };
     return r19;
   }
+  if (equal(at, -1) && equal(option_kind, "assign")) {
+    ("2026-10-23, at the human's asking, whose words were: If the line has a = then there is an assign, but this line does not have a =. Shaped like the declare one above it, so it too says if and not if and only if");
+    let r20 = {
+      reason: "assign_none",
+      words: [
+        "If the line has a ",
+        "=",
+        ", then there is an assign. But this line does not have a ",
+        "=",
+      ],
+    };
+    return r20;
+  }
   if (equal(at, -1)) {
     return null;
   }
