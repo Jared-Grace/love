@@ -92,10 +92,10 @@ import { app_code_expression_name_is } from "./app_code_expression_name_is.mjs";
 import { app_code_program_step_solve_decoys } from "./app_code_program_step_solve_decoys.mjs";
 import { app_code_expression_choose_order_ask } from "./app_code_expression_choose_order_ask.mjs";
 import { promise_wrap } from "./promise_wrap.mjs";
-import { each } from "./each.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { app_code_program_step_operator_decoys } from "./app_code_program_step_operator_decoys.mjs";
 import { app_code_expression_value_choose_buttons_generic } from "./app_code_expression_value_choose_buttons_generic.mjs";
+import { each } from "./each.mjs";
 import { app_code_line_pieces_add } from "./app_code_line_pieces_add.mjs";
 import { html_opacity_transition } from "./html_opacity_transition.mjs";
 import { sleep } from "./sleep.mjs";
@@ -602,6 +602,11 @@ export function app_code_program_step_through_generic(
   }
   async function piece_rewrite(line_index, from_now, to_now, written) {
     "the piece of a line from from_now to to_now, as it reads now, written over as written";
+    await piece_arrive(line_index, from_now, to_now, written, null);
+  }
+  async function piece_arrive(line_index, from_now, to_now, written, source) {
+    "the piece of a line from from_now to to_now, as it reads now, written over as written; source is null, or words on the screen a copy of which flies into the piece before it shows";
+    "2026-10-23, at the human's asking: a name's value is seen coming from the note that says it, and an expression's value from the line it was solved on, so the learner sees where the value in the line came from. Not picked: flying the name out to the note first, which says nothing the guide does not";
     "2026-10-15, at the human's asking: the name fades out, the room it took slides to the width of its value, and the value fades in, so the ( ) around it grow or shrink rather than jump. The slide is the one every height change in this app is made by, told width instead. Not picked: the name going at once, as the human first put it; it fades out because the old value in a note fades out too";
     let piece = row_piece(line_index, from_now, to_now);
     html_display_inline_block(piece);
@@ -621,7 +626,13 @@ export function app_code_program_step_through_generic(
       value_write,
       duration4,
     );
-    await html_opacity_animate(piece, "1", duration4);
+    if (null_is(source)) {
+      await html_opacity_animate(piece, "1", duration4);
+      return;
+    }
+    let rect = html_bounding_client_rect(piece);
+    await html_copy_fly_text_rect(source, rect, duration4);
+    html_style_opacity(piece, "1");
   }
   async function action_do(action, line_index) {
     "what the right answer to what this line does then does";
@@ -633,6 +644,8 @@ export function app_code_program_step_through_generic(
       ('2026-10-15, at the human\'s asking: a value is written as it is written in code, so a string keeps its quotes - in the choices, in the note, and in the line it is solved into - and the name a holding love reads "love", never love. What is logged is written as the console writes it, without them');
       let said = js_value_code(value);
       let whole_is = property_exists(action, "tree");
+      let source = null;
+      let solved_box = null;
       if (whole_is) {
         ("2026-10-17, at the human's asking: an expression with more than one operator is solved on a line of its own under the program, the line every expression lesson presses, by the same function, so the two cannot come to press differently: the learner chooses the operator that goes next and then what it comes to, and the line shortens until one value is left. That value is then written into the program's line in place of the expression, as a value asked for alone is. Not picked: pressing the operators in the program's own line, which would be a second pressable line to keep in step with the first. Not picked: saying what to press in the guide above the program, which a quiz does not have; it is said over the line, as the expression lessons' quizzes say it");
         let tree = property_get(action, "tree");
@@ -670,7 +683,13 @@ export function app_code_program_step_through_generic(
         }
         await promise_wrap(solver_start);
         on_step();
-        each([said_box, solver_box], html_remove);
+        html_remove(said_box);
+        ("the line under the program is drawn again as the one value it came to, plain, so that value has words to send up into the program's line");
+        html_clear(solver_box);
+        let solved_line = html_div(solver_box);
+        html_style_code_dark(solved_line);
+        source = html_span_text(solved_line, said);
+        solved_box = solver_box;
       } else {
         let value_holder = {
           button: null,
@@ -714,10 +733,23 @@ export function app_code_program_step_through_generic(
         await asked.pressed;
         on_step();
         html_remove(asked.box);
+        let declared3 = property_get(state, "declared");
+        if (not(operator_is) && property_exists(declared3, name)) {
+          ("the note is drawn again with its value showing, so its value has words to send down into the line");
+          let note_line2 = property_get(declared3, name);
+          let value_text2 = list_get(noted, note_line2);
+          let spans = comment_draw(note_line2, name, value_text2, "value");
+          each(spans, html_visibility_visible);
+          source = list_first(spans);
+        }
       }
       let left = property_get(action, "from");
       ("2026-10-15: a value with no place in the line, as the a that a += b adds to, is asked for and not written in, since 1 += b would read as giving a value to 1");
       if (null_is(left)) {
+        let b14 = null_is(solved_box);
+        if (not(b14)) {
+          html_remove(solved_box);
+        }
         return;
       }
       ("and a value may be written in with words before it, as a += 8 is solved to a = 9, the = taking the place of the += with the value");
@@ -735,7 +767,11 @@ export function app_code_program_step_through_generic(
       let line = list_get(bases, line_index);
       let to2 = text_size(line);
       let evaluated = app_code_line_pieces_text(line, done_after, 0, to2);
-      await piece_rewrite(line_index, from_now, to_now, written);
+      await piece_arrive(line_index, from_now, to_now, written, source);
+      let b15 = null_is(solved_box);
+      if (not(b15)) {
+        html_remove(solved_box);
+      }
       row_text_set(line_index, evaluated);
       list_set(replaced, line_index, done_after);
       return;
