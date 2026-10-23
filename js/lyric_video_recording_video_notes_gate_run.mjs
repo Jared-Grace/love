@@ -1,8 +1,9 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { lyric_video_recording_video_notes_unsound } from "./lyric_video_recording_video_notes_unsound.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { list_add } from "./list_add.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { fn_name } from "./fn_name.mjs";
 export async function lyric_video_recording_video_notes_gate_run() {
   arguments_assert(arguments, 0);
   ("QA gate: the store of recording-to-video notes is sound about itself - every note is filed under the recording it names, and no video is named by two notes.");
@@ -10,7 +11,23 @@ export async function lyric_video_recording_video_notes_gate_run() {
   ("★ BOTH FAULTS ARE SILENT, WHICH IS WHY THEY ARE WORTH A GATE AT ALL. A misfiled note is found by nobody and reads as a song that was never rendered; two notes on one video read as two finished songs and hand the same file out twice. Neither throws and neither leaves an empty answer, so without this nothing ever asks.");
   ("It ratchets against nothing rather than against a baseline, because every note in the store was written by a command that could have checked this, so a fault here is new work rather than inherited history.");
   let unsound = await lyric_video_recording_video_notes_unsound();
-  list_empty_is_assert_json(unsound.misnamed, {
+  ("Each offender is filed under the store that reads it. The offenders are file names, which name no function, and a complaint naming no function cannot be placed by a deployment, so it held every app back - a recording claimed twice stopped a bible page from shipping. Naming the store in the hint would not do: a hint is advice and is taken out before anything is placed, so the name has to stand in the accusation itself.");
+  let store = fn_name("lyric_video_recording_video_notes");
+  let misnamed = [];
+  for (let found of unsound.misnamed) {
+    list_add(misnamed, {
+      store,
+      found,
+    });
+  }
+  let shared = [];
+  for (let found of unsound.shared) {
+    list_add(shared, {
+      store,
+      found,
+    });
+  }
+  list_empty_is_assert_json(misnamed, {
     hint: text_combine_multiple([
       "each of these notes is filed under a name that is not the recording it names, so nothing can ever find it - the store is addressed by ",
       fn_name("lyric_video_recording_video_note_path"),
@@ -19,14 +36,9 @@ export async function lyric_video_recording_video_notes_gate_run() {
       " and delete the misfiled one",
     ]),
   });
-  list_empty_is_assert_json(unsound.shared, {
-    hint: text_combine_multiple([
-      "more than one recording claims each of these videos, and the giveaway would hand the same file out under both songs - listen to the recordings and delete the note that is wrong from the store ",
-      fn_name("lyric_video_recording_video_notes"),
-      " reads",
-    ]),
+  list_empty_is_assert_json(shared, {
+    hint: "more than one recording claims each of these videos, and the giveaway would hand the same file out under both songs - listen to the recordings and delete the note that is wrong",
   });
-  ("The store is named in the complaint, as the misfiled half already names its own, because a complaint naming no function cannot be placed by a deployment and so holds every app back - a fault in which recording goes with which video stopped a bible page from shipping.");
   ("Says how many notes it read, because a gate that answers nothing cannot be told apart from one that looked at nothing.");
   let answer = {
     notes: unsound.notes,
