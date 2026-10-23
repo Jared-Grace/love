@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
 import { emoji_important } from "./emoji_important.mjs";
+import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
 import { emoji_repeat } from "./emoji_repeat.mjs";
 import { js_keyword_if } from "./js_keyword_if.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
@@ -13,7 +13,7 @@ export function app_code_milestone_explain() {
   let left = emoji_important();
   let first = text_combine_middle_space_nb(
     left,
-    "Before you go on to new lessons, please practice this",
+    "Before you go on to new lessons, please practice this if you need to",
   );
   let left2 = emoji_repeat();
   let second = text_combine_middle_space_nb(

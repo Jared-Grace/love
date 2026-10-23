@@ -6,6 +6,8 @@ import { property_get } from "./property_get.mjs";
 import { app_code_review_complete_record } from "./app_code_review_complete_record.mjs";
 import { app_code_review_celebration } from "./app_code_review_celebration.mjs";
 import { app_code_review_explain } from "./app_code_review_explain.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { html_parent_append } from "./html_parent_append.mjs";
 import { app_code_review_render_continue } from "./app_code_review_render_continue.mjs";
 import { app_code_advance_or_no_more } from "./app_code_advance_or_no_more.mjs";
 import { app_code_review_button_unfinished_before } from "./app_code_review_button_unfinished_before.mjs";
@@ -38,6 +40,10 @@ export function app_code_review_finish_show({
   app_code_review_celebration(c);
   let explain = property_get(checkpoint, "explain");
   app_code_review_explain(c, explain);
+  ("A milestone's again button is moved to straight under its words, which end by telling the learner to do it again - asked for by the human 2026-10-23. A review says nothing there, so its button stays where it was");
+  if (list_empty_not_is(explain)) {
+    html_parent_append(c, restart_button);
+  }
   function render_continue(continue_parent) {
     let r = app_code_review_render_continue(continue_parent, go_next);
     return r;
