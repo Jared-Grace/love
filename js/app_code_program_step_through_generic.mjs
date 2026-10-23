@@ -80,6 +80,7 @@ import { app_shared_button_background } from "./app_shared_button_background.mjs
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 import { promise_later_catch_ignore } from "./promise_later_catch_ignore.mjs";
+import { html_cycle_code } from "./html_cycle_code.mjs";
 import { app_code_program_step_guide_line_next } from "./app_code_program_step_guide_line_next.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { app_code_quiz_choice_button_answer_generic } from "./app_code_quiz_choice_button_answer_generic.mjs";
@@ -112,7 +113,6 @@ import { app_code_style_normal_box } from "./app_code_style_normal_box.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_code_program_step_guide_action } from "./app_code_program_step_guide_action.mjs";
 import { property_get_or } from "./property_get_or.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
 import { app_code_program_step_order_words } from "./app_code_program_step_order_words.mjs";
 import { add } from "./add.mjs";
 import { app_code_program_step_solved_already_words } from "./app_code_program_step_solved_already_words.mjs";
@@ -211,7 +211,9 @@ export function app_code_program_step_through_generic(
     held: {},
     declared: {},
     held_before: {},
+    reason_box: null,
   };
+  ("reason_box: where the reason for a wrong press goes while the next line is asked for");
   ("held_before: the values each name held before it was given the one it holds now, by name, so a name asked about after a new value can be offered its old one as a wrong choice");
   ("declared: the line each name was declared on, by name, so a name given a new value on a later line has the value written into the note it already has");
   ("held: the value each name holds so far, by name, so a name asked about can be offered the values the other names hold as the wrong choices");
@@ -475,12 +477,7 @@ export function app_code_program_step_through_generic(
           on_wrong();
           html_style_background_color_set(row, wrong_color);
         }
-        let reason_said = property_get(state, "reason_said");
-        if (null_is(reason) || reason_said) {
-          return;
-        }
-        property_set(state, "reason_said", true);
-        html_div_cycle_code(ask, reason_words);
+        line_reason_show(reason_words);
         return;
       }
       property_set(state, "pressing", false);
@@ -523,6 +520,15 @@ export function app_code_program_step_through_generic(
     ("no success message of its own: the caller shows one, as for every other answerer in this app; showing one here as well put two on the page");
     await on_success();
   }
+  function line_reason_show(reason_words) {
+    "2026-10-23, at the human's asking: while the next line is asked for, each wrong press says its own reason in place of the one before, and a press with no reason takes the old one away, so the words on screen are always about the last press. Not picked: saying only the first reason, as it was, which left the reason for one line standing under another";
+    let reason_box = property_get(state, "reason_box");
+    html_clear(reason_box);
+    if (null_is(reason_words)) {
+      return;
+    }
+    html_cycle_code(reason_box, reason_words);
+  }
   function next_line_ask() {
     "the learner says which line runs next, or that the program is complete";
     html_clear(ask);
@@ -559,7 +565,6 @@ export function app_code_program_step_through_generic(
     guide_say(r, choose);
     html_div_cycle_code(ask, ["What is the next line of code to run?"]);
     property_set(state, "pressing", true);
-    property_set(state, "reason_said", false);
     ("the line that runs next is marked as the way on, where being right is already decided, so a walk of the whole course can answer this question as it answers every other");
     if (not(done)) {
       let object = entry_get();
@@ -568,6 +573,9 @@ export function app_code_program_step_through_generic(
       html_data_set_test_happy(component);
     }
     let choices = html_div(ask);
+    ("the reason for a wrong press goes under the choices");
+    let reason_box = html_div(ask);
+    property_set(state, "reason_box", reason_box);
     let answered = {
       answered: false,
     };
@@ -579,6 +587,7 @@ export function app_code_program_step_through_generic(
     }
     function soft_take() {
       "2026-10-21, at the human's asking: the program called complete while lines are left to run, when every step left only solves and none changes anything - an if (a) { whose a is false, say - is a shortcut taken in the head, and the learner is right that nothing more happens; so it is let off the first time, gray rather than red, and the rule is said. The lines left still run one at a time, since reading a is the step being taught. Not picked: taking it as right, which would skip that reading; and counting it, which would call a correct answer a mistake. Where anything left declares, assigns, logs or is written the long way, the shortcut is wrong and counts";
+      line_reason_show(null);
       let told = app_code_step_reasons_told();
       let reason = "nothing_left";
       if (property_exists(told, reason)) {
@@ -596,13 +605,9 @@ export function app_code_program_step_through_generic(
         }
       }
       property_set(told, reason, true);
-      let b13 = property_get(state, "reason_said");
-      if (not(b13)) {
-        property_set(state, "reason_said", true);
-        html_div_cycle_code(ask, [
-          "You are right that nothing more will change. The computer still runs each line that is left, one at a time, to find that out; press the next line to run",
-        ]);
-      }
+      line_reason_show([
+        "You are right that nothing more will change. The computer still runs each line that is left, one at a time, to find that out; press the next line to run",
+      ]);
       return true;
     }
     let complete = app_code_quiz_choice_button_answer_generic(
