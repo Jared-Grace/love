@@ -9,6 +9,7 @@ import { subtract } from "./subtract.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { list_last } from "./list_last.mjs";
+import { js_value_code } from "./js_value_code.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_exists } from "./property_exists.mjs";
@@ -118,10 +119,10 @@ export function app_code_program_step_guide_action(entry, k) {
       ];
       return r4;
     }
+    let value = property_get(action, "value");
+    let code = js_value_code(value);
     let r5 = [
-      [
-        "This expression is already solved to a single value, so it doesn't need solving",
-      ],
+      ["", code, " is already a solved value, so no solving is needed"],
       ["So choose: Assign a value"],
     ];
     let concated = list_concat(intro, r5);
@@ -136,9 +137,11 @@ export function app_code_program_step_guide_action(entry, k) {
       ];
       return r6;
     }
+    let value2 = property_get(action, "value");
+    let code2 = js_value_code(value2);
     let r7 = [
       logs,
-      ["The value is already a single value, so it doesn't need solving"],
+      ["", code2, " is already a solved value, so no solving is needed"],
       ["So choose: Log a value to the console"],
     ];
     return r7;

@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { app_code_program_trace } from "./app_code_program_trace.mjs";
@@ -5,13 +6,14 @@ import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_value_code } from "./js_value_code.mjs";
 import { property_exists } from "./property_exists.mjs";
+import { list_size } from "./list_size.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { app_code_program_step_actions_solve_whole } from "./app_code_program_step_actions_solve_whole.mjs";
 import { less_than } from "./less_than.mjs";
-import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { property_get_or } from "./property_get_or.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
 export function app_code_program_step_clicks(code) {
   arguments_assert(arguments, 1);
   ("every right press a learner makes stepping through the program code, in order: the line that runs next, what it does, the value a name or an operator comes to, and last that the program is complete. 2026-10-23, asked for by the human so Show me the answer on a step-by-step question says the steps to press rather than the program again");
@@ -73,6 +75,8 @@ export function app_code_program_step_clicks(code) {
     let v10 = code_piece(name);
     list_add(clicks, [v7, v8, v9, v10]);
   }
+  ("counted down rather than compared with the last entry, since a line run twice can make two entries alike");
+  let entries_left = list_size(traced);
   for (let traced_entry of traced) {
     let line = property_get(traced_entry, "line");
     let message = list_get(lines, line);
@@ -104,8 +108,16 @@ export function app_code_program_step_clicks(code) {
         k = k + 1;
       }
     }
+    ("2026-10-23: the last line ends with the one press saying the program is complete, the shortcut the step-through offers there, rather than the two presses it stands for");
+    entries_left = subtract(entries_left, 1);
+    if (equal(entries_left, 0)) {
+      choose_add("This program is complete");
+      continue;
+    }
     choose_add("This line is complete; continue to the next line");
   }
-  choose_add("The program is complete");
+  if (list_empty_is(traced)) {
+    choose_add("The program is complete");
+  }
   return clicks;
 }
