@@ -50,6 +50,7 @@ import { list_first } from "./list_first.mjs";
 import { html_bounding_client_rect } from "./html_bounding_client_rect.mjs";
 import { html_copy_fly_text_rect } from "./html_copy_fly_text_rect.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
+import { property_set } from "./property_set.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_last_or_null } from "./list_last_or_null.mjs";
 import { list_last } from "./list_last.mjs";
@@ -67,7 +68,6 @@ import { html_on_click } from "./html_on_click.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
 import { html_height_change_animate } from "./html_height_change_animate.mjs";
 import { less_than } from "./less_than.mjs";
-import { property_set } from "./property_set.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
@@ -108,6 +108,9 @@ import { html_div_text } from "./html_div_text.mjs";
 import { app_code_program_step_guide_action } from "./app_code_program_step_guide_action.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { list_any } from "./list_any.mjs";
+import { add } from "./add.mjs";
+import { app_code_program_step_solved_already_words } from "./app_code_program_step_solved_already_words.mjs";
+import { html_scroll_center } from "./html_scroll_center.mjs";
 export function app_code_program_step_through_generic(
   parent,
   code,
@@ -198,6 +201,7 @@ export function app_code_program_step_through_generic(
     pressing: false,
     logged_box: null,
     asked: null,
+    choose: null,
     held: {},
     declared: {},
     held_before: {},
@@ -321,6 +325,8 @@ export function app_code_program_step_through_generic(
   }
   async function guide_say(sentences, choose) {
     "the guide's sentences written in place of what it said before, when this example guides. choose is null, or what the last sentence tells the learner to choose: its words, whether it is a button or a line of the program, and a function handing back the thing itself, asked for only when it is to glow, since it may not be built yet when the guide speaks";
+    "the thing to choose is kept whether or not this example guides, so a quiz's Show me the answer can point at it too";
+    property_set(state, "choose", choose);
     if (null_is(guide)) {
       return;
     }
@@ -492,6 +498,25 @@ export function app_code_program_step_through_generic(
     }
     html_on_click(row, on_row);
   }
+  async function program_finish() {
+    "every line goes back to how it is written and the program turns green, once the learner has said it is complete, by either way of saying so";
+    rows_plain();
+    for (
+      let line_index = 0;
+      less_than(line_index, list_size(lines));
+      line_index++
+    ) {
+      line_restore(line_index);
+    }
+    ("2026-10-21, at the human's asking: the whole program turns green once it is complete, green saying solved as it says right everywhere else in this app");
+    let background = app_shared_button_background();
+    html_style_background_color_set(program, background);
+    html_font_color_set_white(program);
+    html_clear(ask);
+    guide_say([], null);
+    ("no success message of its own: the caller shows one, as for every other answerer in this app; showing one here as well put two on the page");
+    await on_success();
+  }
   function next_line_ask() {
     "the learner says which line runs next, or that the program is complete";
     html_clear(ask);
@@ -544,22 +569,7 @@ export function app_code_program_step_through_generic(
       property_set(state, "pressing", false);
       on_step();
       await sleep_success_color();
-      rows_plain();
-      for (
-        let line_index = 0;
-        less_than(line_index, list_size(lines));
-        line_index++
-      ) {
-        line_restore(line_index);
-      }
-      ("2026-10-21, at the human's asking: the whole program turns green once it is complete, green saying solved as it says right everywhere else in this app");
-      let background = app_shared_button_background();
-      html_style_background_color_set(program, background);
-      html_font_color_set_white(program);
-      html_clear(ask);
-      guide_say([], null);
-      ("no success message of its own: the caller shows one, as for every other answerer in this app; showing one here as well put two on the page");
-      await on_success();
+      await program_finish();
     }
     function soft_take() {
       "2026-10-21, at the human's asking: the program called complete while lines are left to run, when every step left only solves and none changes anything - an if (a) { whose a is false, say - is a shortcut taken in the head, and the learner is right that nothing more happens; so it is let off the first time, gray rather than red, and the rule is said. The lines left still run one at a time, since reading a is the step being taught. Not picked: taking it as right, which would skip that reading; and counting it, which would call a correct answer a mistake. Where anything left declares, assigns, logs or is written the long way, the shortcut is wrong and counts";
@@ -1035,9 +1045,17 @@ export function app_code_program_step_through_generic(
           equal(kind, "log")
         ) {
           reason = "solved_already";
-          reason_words = [
-            "This is already a single value; there is nothing to solve",
-          ];
+          ("the value said is the one this line assigns or logs: the action asked about, or, for a declare, the assign after it");
+          let index3 = add(k, 1);
+          let valued = equal(kind, "declare")
+            ? list_get(actions, index3)
+            : action;
+          let message4 = list_get(lines, line_index);
+          let line_text = text_trim(message4);
+          reason_words = app_code_program_step_solved_already_words(
+            line_text,
+            valued,
+          );
         } else if (equal(kind, "complete") && equal(b7, 0)) {
           reason = "solved_already";
           reason_words = [
@@ -1076,6 +1094,62 @@ export function app_code_program_step_through_generic(
         property_set(holder, "button", b);
       }
     }
+    ("2026-10-23, at the human's asking: the very last choice says the program is complete, a shortcut for saying this line is complete and then that the program is - so it is right only on the last line to run, once everything it does is done, and anywhere else it is a wrong answer like any other. Offered on every line, not only the last, which would give away that the line is the last. Saying the line is complete stays right too, and the program is then said complete as before");
+    let size2 = list_size(trace);
+    let index2 = property_get(state, "index");
+    let left16 = add(index2, 1);
+    let line_last = equal(left16, size2);
+    let program_right = equal(kind, "complete") && line_last;
+    async function on_program_complete() {
+      property_set(state, "asked", null);
+      on_step();
+      let element2 = property_get(holder, "button");
+      app_shared_glow_clear(element2);
+      await sleep_success_color();
+      await action_do(action, line_index);
+      await program_finish();
+    }
+    function soft_none() {
+      return false;
+    }
+    let program_button = app_code_quiz_choice_button_answer_generic(
+      choices,
+      "This program is complete",
+      program_right,
+      answered,
+      on_program_complete,
+      on_wrong,
+      soft_none,
+    );
+    if (program_right) {
+      ("Show me the answer says this shortcut for the last line, so it is the choice pointed at");
+      function program_button_get() {
+        return program_button;
+      }
+      property_set(state, "choose", {
+        words: "This program is complete",
+        button: true,
+        target_get: program_button_get,
+      });
+    }
+  }
+  async function look_here_now() {
+    "2026-10-23, at the human's asking: the right choice of the question asked now glows, and the page glides until it is in the middle, so the learner pressing the glowing step of Show me the answer finds where to press. Centred rather than nearest: the learner's eye is on the answer, not on the choice, so the choice is brought to where an eye looks first. Nothing happens once the program is complete";
+    let choose2 = property_get(state, "choose");
+    if (null_is(choose2)) {
+      return;
+    }
+    let target_get2 = property_get(choose2, "target_get");
+    let target2 = target_get2();
+    if (null_is(target2)) {
+      return;
+    }
+    app_shared_glow_look_here(target2);
+    await html_scroll_center(target2);
   }
   next_line_ask();
+  let r11 = {
+    look_here: look_here_now,
+  };
+  return r11;
 }
