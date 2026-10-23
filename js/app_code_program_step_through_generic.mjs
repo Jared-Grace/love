@@ -532,6 +532,14 @@ export function app_code_program_step_through_generic(
   }
   function program_left_words() {
     "2026-10-23, at the human's asking: the program said complete too soon says why with a sign on the screen - the last line the computer runs, which has not run yet. Not picked: naming the next line to run, which hands over the answer to the question asked";
+    "2026-10-23, at the human's asking, for the program said complete on its first line: before anything has run, the rule for where to start is said, which is the instruction the learner needs there. Not picked: naming the last line still to run, as it does further on, which on the first line says nothing about what to press";
+    let index_now = property_get(state, "index");
+    if (equal(index_now, 0)) {
+      let r13 = [
+        "No line has run yet, so the program is not complete. The computer runs a program one line at a time, starting from the top",
+      ];
+      return r13;
+    }
     let size3 = list_size(trace);
     let index4 = subtract(size3, 1);
     let entry_last = list_get(trace, index4);
