@@ -20,8 +20,13 @@ export async function lyric_video_recording_video_notes_gate_run() {
     ]),
   });
   list_empty_is_assert_json(unsound.shared, {
-    hint: "more than one recording claims each of these videos, and the giveaway would hand the same file out under both songs - listen to the recordings and delete the note that is wrong",
+    hint: text_combine_multiple([
+      "more than one recording claims each of these videos, and the giveaway would hand the same file out under both songs - listen to the recordings and delete the note that is wrong from the store ",
+      fn_name("lyric_video_recording_video_notes"),
+      " reads",
+    ]),
   });
+  ("The store is named in the complaint, as the misfiled half already names its own, because a complaint naming no function cannot be placed by a deployment and so holds every app back - a fault in which recording goes with which video stopped a bible page from shipping.");
   ("Says how many notes it read, because a gate that answers nothing cannot be told apart from one that looked at nothing.");
   let answer = {
     notes: unsound.notes,
