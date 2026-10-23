@@ -452,6 +452,20 @@ export function app_code_program_step_through_generic(
             braces_shown,
             " ends",
           ];
+        } else if (equal(pressed_text, "} else {")) {
+          ("2026-10-23, at the human's asking: like a line holding only }, a } else { line is never run by itself. Not picked: telling the learner to choose a line inside the { } that runs, since the line due may come after the whole if");
+          reason = "else_brace";
+          reason_words = [
+            "Nothing runs on a line holding only ",
+            "} else {",
+            "; it only marks where the ",
+            "if",
+            "'s ",
+            braces_shown,
+            " ends and the ",
+            "else " + braces_shown,
+            " starts",
+          ];
         } else if (not(done)) {
           ("2026-10-21, at the human's asking: the second is a line pressed below an if that is to run next - most likely if (false), whose { ... } the learner can already see will not run. The if line still runs first, since running it is how the computer finds that out. Not picked: taking the skip as right for a written false, which would teach skipping whenever the learner thinks they know the answer");
           let object5 = entry_get();
