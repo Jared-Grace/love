@@ -119,6 +119,7 @@ export async function app_next_home(context) {
     url,
     run,
     count,
+    languages_chosen,
   });
   await clipboard_copy_try(reading_text);
 }

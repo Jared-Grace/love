@@ -10,6 +10,9 @@ import { app_next_url_onward_link } from "./app_next_url_onward_link.mjs";
 import { app_next_copy_button } from "./app_next_copy_button.mjs";
 import { app_next_ways_onward } from "./app_next_ways_onward.mjs";
 import { app_next_count_choose } from "./app_next_count_choose.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_centered } from "./html_centered.mjs";
+import { app_shared_bible_languages_gear } from "./app_shared_bible_languages_gear.mjs";
 export function app_next_reading_show({
   context,
   content,
@@ -18,6 +21,7 @@ export function app_next_reading_show({
   url,
   run,
   count,
+  languages_chosen,
 }) {
   "Everything this page puts on the screen once it knows what it is showing: the reading in its card, the way to carry it away, the link on to what comes next, and the ways onward under it.";
   "$plain reading_text";
@@ -46,5 +50,9 @@ export function app_next_reading_show({
   app_next_ways_onward(context, content, run);
   ("How much to send stands last, under the reading and under the ways on from it, because it is the one thing here that is not about this passage. Somebody who opened this link came to copy what is in the card; they set the size once, when it turns out to be wrong for who they are writing to, and then never again for the rest of a book.");
   app_next_count_choose(content, count);
+  ("Which languages a passage comes in is the other thing set once rather than per message, so it stands with the size, last. It is the same gear the search and the verses app offer, asked for by name: the choice is written into the link the way the size is, so the link pasted into a message carries the languages with it too.");
+  let languages_row = html_div(content);
+  html_centered(languages_row);
+  app_shared_bible_languages_gear(languages_row, content, languages_chosen);
   return card;
 }
