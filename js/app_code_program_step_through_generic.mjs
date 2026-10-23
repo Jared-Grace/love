@@ -91,9 +91,10 @@ import { html_size_change_animate } from "./html_size_change_animate.mjs";
 import { js_value_code } from "./js_value_code.mjs";
 import { app_code_expression_name_is } from "./app_code_expression_name_is.mjs";
 import { app_code_program_step_solve_decoys } from "./app_code_program_step_solve_decoys.mjs";
-import { html_descendants_innermost } from "./html_descendants_innermost.mjs";
+import { html_text_get } from "./html_text_get.mjs";
 import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
 import { app_code_expression_replaced_set } from "./app_code_expression_replaced_set.mjs";
+import { html_descendants_innermost } from "./html_descendants_innermost.mjs";
 import { html_move_animate_settle } from "./html_move_animate_settle.mjs";
 import { app_code_expression_choose_order_ask } from "./app_code_expression_choose_order_ask.mjs";
 import { promise_wrap } from "./promise_wrap.mjs";
@@ -711,10 +712,11 @@ export function app_code_program_step_through_generic(
           }
           ("2026-10-23, at the human's asking: the name fades out first, its room slides to the width of its value with the rest of the line sliding along, and the value flies into the empty room and shows once it lands - as a name solved in the program's line does. Not picked: flying onto the name while it still stands, as before, which put the value over a word it was about to replace. The line then writes the same value again in its own settling, which moves nothing");
           let duration5 = app_shared_animation_duration();
-          let inner = html_descendants_innermost(node_span);
-          for (let piece of inner) {
-            await html_opacity_animate(piece, "0", duration5);
-          }
+          ("the name's letters are written into a piece of their own to fade, since the blue block holds them bare and fading the block would take its blue away too - seen 2026-10-23, when nothing faded");
+          let name_text = html_text_get(node_span);
+          html_clear(node_span);
+          let name_piece = html_span_text(node_span, name_text);
+          await html_opacity_animate(name_piece, "0", duration5);
           let node_value = app_code_expression_solved(node, node);
           let written = null;
           function value_room() {
