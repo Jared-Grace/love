@@ -6,6 +6,7 @@ import { app_shared_hash_screen_add } from "./app_shared_hash_screen_add.mjs";
 import { app_code_hash_quiz_add } from "./app_code_hash_quiz_add.mjs";
 import { app_code_hash_review_add } from "./app_code_hash_review_add.mjs";
 import { app_code_hash_milestone_add } from "./app_code_hash_milestone_add.mjs";
+import { app_code_hash_questions_add } from "./app_code_hash_questions_add.mjs";
 import { app_code_hash_course_add } from "./app_code_hash_course_add.mjs";
 import { html_hash_set_object } from "./html_hash_set_object.mjs";
 export function app_code_hash_write(context) {
@@ -26,6 +27,7 @@ export function app_code_hash_write(context) {
   app_code_hash_quiz_add(context, hash);
   app_code_hash_review_add(context, hash);
   app_code_hash_milestone_add(context, hash);
+  app_code_hash_questions_add(context, hash);
   app_code_hash_course_add(hash);
   html_hash_set_object(hash);
 }
