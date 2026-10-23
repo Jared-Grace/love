@@ -1,3 +1,4 @@
+import { app_code_quiz_lines_order_indent_gate_run } from "./app_code_quiz_lines_order_indent_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { stop_next_steps_hook_gate_run } from "./stop_next_steps_hook_gate_run.mjs";
@@ -1273,6 +1274,7 @@ export function qa_gates() {
     app_en_learn_bible_gloss_urdu_occurrence_claim_gate_run,
     app_en_learn_bible_gloss_urdu_occurrence_claim_rule_gate_run,
     giveaway_psalms_boxes_whole_gate_run,
+    app_code_quiz_lines_order_indent_gate_run,
   ];
   return gates;
 }
