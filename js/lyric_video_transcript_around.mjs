@@ -1,7 +1,10 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { text_includes } from "./text_includes.mjs";
+import { text_ends_with } from "./text_ends_with.mjs";
+import { assert_json } from "./assert_json.mjs";
+import { not } from "./not.mjs";
 import { lyric_video_transcripts_path } from "./lyric_video_transcripts_path.mjs";
 import { file_exists } from "./file_exists.mjs";
-import { not } from "./not.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
@@ -22,6 +25,14 @@ export async function lyric_video_transcript_around(
   ("★ EVERY HEARING ANSWERS SEPARATELY, AND THAT IS THE POINT RATHER THAN A DETAIL OF THE STORAGE. A single answer to this question reads as what the recording holds; two answers side by side read as what the recording holds plus how much of that was the listener, and the second reading is the true one. Where the singing is plain the hearings say the same thing and the extra columns cost a glance; where a note is held or a word repeated they part company, and that is exactly where somebody was about to quote one of them as a measurement.");
   ("★ BOTH MOMENTS ARE MADE NUMBERS FIRST, AND LEAVING THAT OUT WIDENED THE FAR EDGE OF THE WINDOW INSTEAD OF FAILING. A command line hands every argument over as text, and one of the two ends of a window is worked out by adding: four and four came back as the forty fourth second rather than the eighth, so the answer held forty seconds of a song and looked entirely reasonable. Subtraction makes numbers of its own accord and so the near edge was right, which is what made the wrong edge hard to see.");
   ("It answers with nothing rather than refusing when the song has no transcript kept, because every song heard before the transcript was kept is in exactly that position and there is no fault in it - the reading simply predates the keeping.");
+  ("★ A NAME THAT IS A PATH IS REFUSED, BECAUSE IT WOULD BE ANSWERED WITH THE SAME NOTHING. The hearings are kept under the song's bare name, bsb_PSA_118_25-29_take1, never under the file it is described in; handed data/given/lyric_videos/bsb_PSA_118_25-29_take1.json the lookup finds no key and the empty answer reads exactly like nothing having been heard there - which once came within one call of deciding where a song was cut.");
+  let path_is =
+    text_includes(name_document, "/") || text_ends_with(name_document, ".json");
+  let b = not(path_is);
+  assert_json(b, {
+    hint: "pass the song's bare name, without the folder or .json - the hearings are kept under the name",
+    name_document,
+  });
   let path_findings = lyric_video_transcripts_path();
   let there = await file_exists(path_findings);
   if (not(there)) {
