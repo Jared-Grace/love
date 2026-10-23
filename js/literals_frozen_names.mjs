@@ -94,6 +94,7 @@ export function literals_frozen_names() {
     fn_name("app_receipts_purchases_database_name"),
     fn_name("app_receipts_purchases_store"),
     fn_name("app_code_course_hash_key"),
+    fn_name("gloss_upload_namespace_en_learn_bible_tagalog"),
   ];
   return names;
 }
