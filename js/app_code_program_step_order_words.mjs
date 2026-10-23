@@ -197,14 +197,6 @@ export function app_code_program_step_order_words(actions, k, option_kind) {
     return r18;
   }
   if (equal(at, -1) && equal(option_kind, "declare")) {
-    ("2026-10-23, at the human's asking, whose words were: This line doesn't have let, so no declare. Only let is named, since it is the one way to declare this course has taught; var and const would be named here once taught, and not before, so a reason never leans on a word the learner has not met");
-    let r19 = {
-      reason: "declare_none",
-      words: ["This line doesn't have ", "let", ", so nothing is declared"],
-    };
-    return r19;
-  }
-  if (equal(at, -1) && equal(option_kind, "declare")) {
     ("2026-10-23, at the human's asking, whose words were: if a line has let then it needs a declare; however this line doesn't have let. Said one way only, if and not only if, so it stays true once var or const is taught; and only let is named, the one way to declare this course has taught so far. Not picked: This line doesn't have let, so no declare, which says let is the only way");
     let r19 = {
       reason: "declare_none",
