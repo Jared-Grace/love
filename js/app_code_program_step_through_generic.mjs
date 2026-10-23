@@ -74,6 +74,7 @@ import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { app_code_program_step_line_wrong_words } from "./app_code_program_step_line_wrong_words.mjs";
+import { app_code_program_step_line_ran_words } from "./app_code_program_step_line_ran_words.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_code_step_reasons_told } from "./app_code_step_reasons_told.mjs";
 import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
@@ -474,6 +475,14 @@ export function app_code_program_step_through_generic(
               index,
               i,
             );
+            if (null_is(wrong)) {
+              wrong = app_code_program_step_line_ran_words(
+                lines,
+                trace,
+                index,
+                i,
+              );
+            }
             if (null_not_is(wrong)) {
               reason = property_get(wrong, "reason");
               reason_words = property_get(wrong, "words");
