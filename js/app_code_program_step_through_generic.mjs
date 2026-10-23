@@ -73,6 +73,8 @@ import { text_trim } from "./text_trim.mjs";
 import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { greater_than } from "./greater_than.mjs";
+import { app_code_program_step_line_wrong_words } from "./app_code_program_step_line_wrong_words.mjs";
+import { null_not_is } from "./null_not_is.mjs";
 import { app_code_step_reasons_told } from "./app_code_step_reasons_told.mjs";
 import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
@@ -116,7 +118,6 @@ import { property_get_or } from "./property_get_or.mjs";
 import { app_code_program_step_order_words } from "./app_code_program_step_order_words.mjs";
 import { add } from "./add.mjs";
 import { app_code_program_step_solved_already_words } from "./app_code_program_step_solved_already_words.mjs";
-import { null_not_is } from "./null_not_is.mjs";
 import { html_scroll_center } from "./html_scroll_center.mjs";
 export function app_code_program_step_through_generic(
   parent,
@@ -464,6 +465,19 @@ export function app_code_program_step_through_generic(
               braces_shown,
               " runs",
             ];
+          }
+          ("2026-10-23, at the human's asking that every wrong press says why: otherwise the rule that decides the next line is said, where one does");
+          if (null_is(reason)) {
+            let wrong = app_code_program_step_line_wrong_words(
+              lines,
+              trace,
+              index,
+              i,
+            );
+            if (null_not_is(wrong)) {
+              reason = property_get(wrong, "reason");
+              reason_words = property_get(wrong, "words");
+            }
           }
         }
         ("2026-10-21, at the human's asking: a press with a reason is a fair guess at a rule nobody has said yet - every line runs, so } must run at some point - so the first time a reason is told it is not counted as a mistake, and the line goes gray rather than red. Once told, the same press counts as any wrong one does, since practising a rule already said is what counting it buys. Not picked: never counting these, which would let the rule go unpractised");
