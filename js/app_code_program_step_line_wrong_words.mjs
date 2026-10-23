@@ -1,12 +1,12 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
+import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { less_than } from "./less_than.mjs";
+import { not } from "./not.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { not } from "./not.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 export function app_code_program_step_line_wrong_words(
   lines,
   trace,
@@ -31,13 +31,13 @@ export function app_code_program_step_line_wrong_words(
   let previous_text = lines[previous].trim();
   let braces = app_code_braces_dots();
   let opens = previous_text.endsWith("{");
-  if (opens && previous_text.includes("if (") && equal(due, previous + 1)) {
-    ("where the if's own { ... } closes, and where the whole if closes, else and all: a } followed by else carries on into the else");
-    let depth = 0;
+  if (opens && previous_text.includes("if (")) {
+    ("where the if's own { ... } closes, and where the whole if closes, else and all: a } followed by else carries on into the else. The count starts inside the { the if line ends with, since a line like } else if (b) { also starts with a }");
+    let depth = 1;
     let block_end = -1;
     let chain_end = -1;
     for (
-      let j = previous;
+      let j = previous + 1;
       less_than(j, lines.length) && equal(chain_end, -1);
       j++
     ) {
@@ -67,10 +67,51 @@ export function app_code_program_step_line_wrong_words(
     if (equal(block_end, -1) || equal(chain_end, -1)) {
       return null;
     }
+    let has_else = lines[block_end].trim().startsWith("} else");
+    let b2 = equal(due, previous + 1);
+    if (not(b2)) {
+      ("2026-10-23, the human's words for an if that was false, with are ran said as run: the line due is not the one right after the if, so its { ... } was skipped");
+      if (greater_than(pressed, previous) && less_than(pressed, block_end)) {
+        let r5 = {
+          reason: "if_false_skip",
+          words: [
+            "The ",
+            "if",
+            " was false, so its ",
+            braces,
+            " is skipped - none of the lines inside the ",
+            "if (...) " + braces,
+            " run",
+          ],
+        };
+        return r5;
+      }
+      if (
+        has_else &&
+        greater_than_equal(due, block_end) &&
+        less_than_equal(due, chain_end) &&
+        greater_than(pressed, chain_end)
+      ) {
+        let r6 = {
+          reason: "if_false_else",
+          words: [
+            "The ",
+            "if",
+            " was false, so its ",
+            "else " + braces,
+            " runs - ",
+            "else " + braces,
+            " cannot be skipped",
+          ],
+        };
+        return r6;
+      }
+      return null;
+    }
     if (
       greater_than_equal(pressed, block_end) &&
       less_than_equal(pressed, chain_end) &&
-      lines[block_end].trim().startsWith("} else")
+      has_else
     ) {
       let r2 = {
         reason: "if_true_else",
