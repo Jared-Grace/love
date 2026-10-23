@@ -112,6 +112,7 @@ import { app_code_style_normal_box } from "./app_code_style_normal_box.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_code_program_step_guide_action } from "./app_code_program_step_guide_action.mjs";
 import { property_get_or } from "./property_get_or.mjs";
+import { html_cycle_code } from "./html_cycle_code.mjs";
 import { app_code_program_step_order_words } from "./app_code_program_step_order_words.mjs";
 import { add } from "./add.mjs";
 import { app_code_program_step_solved_already_words } from "./app_code_program_step_solved_already_words.mjs";
@@ -1039,9 +1040,15 @@ export function app_code_program_step_through_generic(
       actions_ask(next);
     }
     ("2026-10-21, at the human's asking: two fair guesses are soft misses, like a press on a brace line - the first time grey and not counted, after that a real miss. Choosing Solve before Declare on a let line, and choosing Solve when the value is already one value");
-    let reason_said = {
-      said: false,
-    };
+    ("2026-10-23, at the human's asking: each wrong press says its own reason, in place of the one before, and a press with no reason takes the old one away, so the words on screen are always about the last press. Not picked: saying only the first reason, as it was, which left the reason for one choice standing under another");
+    let reason_box = html_div(ask);
+    function reason_show(reason_words) {
+      html_clear(reason_box);
+      if (null_is(reason_words)) {
+        return;
+      }
+      html_cycle_code(reason_box, reason_words);
+    }
     for (let option of options) {
       let option_kind = list_get(option, 0);
       let words = list_get(option, 1);
@@ -1084,11 +1091,7 @@ export function app_code_program_step_through_generic(
         }
       }
       function soft_take() {
-        let b10 = null_is(reason);
-        if (not(b10) && not(property_get(reason_said, "said"))) {
-          property_set(reason_said, "said", true);
-          html_div_cycle_code(ask, reason_words);
-        }
+        reason_show(reason_words);
         let told = app_code_step_reasons_told();
         let b11 = null_is(reason);
         let soft = not(b11) && not(property_exists(told, reason));
@@ -1126,6 +1129,7 @@ export function app_code_program_step_through_generic(
       await program_finish();
     }
     function soft_none() {
+      reason_show(null);
       return false;
     }
     let program_button = app_code_quiz_choice_button_answer_generic(
