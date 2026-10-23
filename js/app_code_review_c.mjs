@@ -5,6 +5,10 @@ import { app_code_review_go_restart } from "./app_code_review_go_restart.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_review_checkpoint } from "./app_code_review_checkpoint.mjs";
 import { app_code_review_button_unfinished } from "./app_code_review_button_unfinished.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { html_text_set } from "./html_text_set.mjs";
+import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
+import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
 export function app_code_review_c(context, root) {
   arguments_assert(arguments, 2);
   let r2 = app_code_review_skip_button(context, root);
@@ -21,6 +25,16 @@ export function app_code_review_c(context, root) {
   let checkpoint = app_code_review_checkpoint(context);
   let number = property_get(checkpoint, "number");
   app_code_review_button_unfinished(context, g, number);
+  ("A milestone's skip button says milestone, not review - asked for by the human 2026-10-23. Only a milestone has words to explain itself");
+  let explain = property_get(checkpoint, "explain");
+  if (list_empty_not_is(explain) && property_get(r3, "has_next")) {
+    let left = emoji_arrow_right();
+    let text = text_combine_middle_space_nb(
+      left,
+      "Skip this milestone and go to the next lesson",
+    );
+    html_text_set(skip_button, text);
+  }
   let progress = property_get(r4, "progress");
   let success_container = property_get(r4, "success_container");
   let c = property_get(r4, "c");
