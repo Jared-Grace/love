@@ -1,17 +1,18 @@
-import { fn_name } from "./fn_name.mjs";
-import { app_code_lines_held_count } from "./app_code_lines_held_count.mjs";
-import { list_skip } from "./list_skip.mjs";
-import { list_take } from "./list_take.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { html_div_code_dark } from "./html_div_code_dark.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_code_lines_orders } from "./app_code_lines_orders.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { app_code_lines_held_count } from "./app_code_lines_held_count.mjs";
+import { list_skip } from "./list_skip.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
+import { list_take } from "./list_take.mjs";
 import { app_code_lesson_quiz_lines_show } from "./app_code_lesson_quiz_lines_show.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
+import { app_code_lines_indent_braces } from "./app_code_lines_indent_braces.mjs";
 import { app_code_lesson_quiz_pieces_select } from "./app_code_lesson_quiz_pieces_select.mjs";
 export function app_code_lesson_quiz_lines_order(
   parent,
@@ -49,7 +50,9 @@ export function app_code_lesson_quiz_lines_order(
   };
   function show(variations_now, chosen_now) {
     let order = list_first(variations_now);
-    let joined = list_join_newline(order);
+    ("the answer shown is indented by its own { }, for the same reason the lines tapped are");
+    let list = app_code_lines_indent_braces(order);
+    let joined = list_join_newline(list);
     correction_code_set(joined);
     app_code_lesson_quiz_lines_show(answer_div, chosen_now, lines);
   }
