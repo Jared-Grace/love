@@ -6,6 +6,7 @@ import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { js_value_code } from "./js_value_code.mjs";
 import { subtract } from "./subtract.mjs";
+import { null_is } from "./null_is.mjs";
 export function app_code_program_step_order_words(actions, k, option_kind) {
   arguments_assert(arguments, 3);
   ("why a choice is not the step now when the line does it at another time: later, or already done, or the line said complete with a step still to do. Returns null when none of these is so, and otherwise {reason, words}, words and code taking turns. actions is the line's steps in order and k the one asked now. 2026-10-23, at the human's asking: a choice the line makes later, or made earlier, gets a good explanation rather than a plain miss. The rule is said rather than the answer, so the learner still finds the step. Not picked: naming the step that comes first, which hands over the answer");
@@ -175,6 +176,25 @@ export function app_code_program_step_order_words(actions, k, option_kind) {
       words: words_then(v, [". So this line is not complete yet"]),
     };
     return r;
+  }
+  if (equal(at, -1) && equal(option_kind, "expand")) {
+    ("2026-10-23, at the human's asking: writing it the long way, chosen on a line with no shorter way in it, says what a shorter way looks like, so the learner can see this line has none; shown with the line's own name where it has one");
+    let shown = null_is(name) ? "a" : name;
+    let r18 = {
+      reason: "long_already",
+      words: [
+        "Only a line written the shorter way, like ",
+        shown + " += 1;",
+        " or ",
+        shown + "++;",
+        ", has a long way to write. This line has no ",
+        "+=",
+        " or ",
+        "++",
+        ", so it is already written the long way",
+      ],
+    };
+    return r18;
   }
   if (equal(at, -1)) {
     return null;
