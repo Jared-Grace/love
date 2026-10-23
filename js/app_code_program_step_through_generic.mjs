@@ -116,6 +116,7 @@ import { property_get_or } from "./property_get_or.mjs";
 import { app_code_program_step_order_words } from "./app_code_program_step_order_words.mjs";
 import { add } from "./add.mjs";
 import { app_code_program_step_solved_already_words } from "./app_code_program_step_solved_already_words.mjs";
+import { null_not_is } from "./null_not_is.mjs";
 import { html_scroll_center } from "./html_scroll_center.mjs";
 export function app_code_program_step_through_generic(
   parent,
@@ -1077,7 +1078,8 @@ export function app_code_program_step_through_generic(
       let reason = null;
       let reason_words = null;
       ("a step this line does at another time - later, or already - is said first, since it is the truer reason; only a step the line never does falls to the reasons below");
-      let order_line = text_trim(list_get(lines, line_index));
+      let message6 = list_get(lines, line_index);
+      let order_line = text_trim(message6);
       let order = app_code_program_step_order_words(
         actions,
         k,
@@ -1115,6 +1117,24 @@ export function app_code_program_step_through_generic(
             "false",
             "; there is nothing to solve",
           ];
+        } else if (equal(kind, "complete")) {
+          ("2026-10-23, at the human's asking that every wrong choice says why: Solve on a finished line that never had anything to solve says its value was already one value, as the same press said earlier on that line - told by the last value the line assigns or logs");
+          let valued2 = null;
+          for (let item2 of actions) {
+            let kind2 = property_get(item2, "kind");
+            if (equal(kind2, "assign") || equal(kind2, "log")) {
+              valued2 = item2;
+            }
+          }
+          if (null_not_is(valued2)) {
+            reason = "solved_already";
+            let message7 = list_get(lines, line_index);
+            let line_text2 = text_trim(message7);
+            reason_words = app_code_program_step_solved_already_words(
+              line_text2,
+              valued2,
+            );
+          }
         }
       }
       function soft_take() {
@@ -1158,11 +1178,13 @@ export function app_code_program_step_through_generic(
     function soft_none() {
       "2026-10-23, at the human's asking: said too soon, the program's being complete is answered with a sign - this line's step still to do, or else the last line still to run";
       let program_reason = program_left_words();
+      let message8 = list_get(lines, line_index);
+      let line_text3 = text_trim(message8);
       let complete_order = app_code_program_step_order_words(
         actions,
         k,
         "complete",
-        text_trim(list_get(lines, line_index)),
+        line_text3,
       );
       let b19 = null_is(complete_order);
       if (not(b19)) {
