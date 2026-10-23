@@ -1077,7 +1077,13 @@ export function app_code_program_step_through_generic(
       let reason = null;
       let reason_words = null;
       ("a step this line does at another time - later, or already - is said first, since it is the truer reason; only a step the line never does falls to the reasons below");
-      let order = app_code_program_step_order_words(actions, k, option_kind);
+      let order_line = text_trim(list_get(lines, line_index));
+      let order = app_code_program_step_order_words(
+        actions,
+        k,
+        option_kind,
+        order_line,
+      );
       let b18 = null_is(order);
       if (not(b18)) {
         reason = property_get(order, "reason");
@@ -1156,6 +1162,7 @@ export function app_code_program_step_through_generic(
         actions,
         k,
         "complete",
+        text_trim(list_get(lines, line_index)),
       );
       let b19 = null_is(complete_order);
       if (not(b19)) {
