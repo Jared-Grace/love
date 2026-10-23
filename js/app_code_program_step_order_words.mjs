@@ -7,8 +7,14 @@ import { equal } from "./equal.mjs";
 import { js_value_code } from "./js_value_code.mjs";
 import { subtract } from "./subtract.mjs";
 import { null_is } from "./null_is.mjs";
-export function app_code_program_step_order_words(actions, k, option_kind) {
-  arguments_assert(arguments, 3);
+import { app_code_program_step_assign_none_words } from "./app_code_program_step_assign_none_words.mjs";
+export function app_code_program_step_order_words(
+  actions,
+  k,
+  option_kind,
+  line_text,
+) {
+  arguments_assert(arguments, 4);
   ("why a choice is not the step now when the line does it at another time: later, or already done, or the line said complete with a step still to do. Returns null when none of these is so, and otherwise {reason, words}, words and code taking turns. actions is the line's steps in order and k the one asked now. 2026-10-23, at the human's asking: a choice the line makes later, or made earlier, gets a good explanation rather than a plain miss. The rule is said rather than the answer, so the learner still finds the step. Not picked: naming the step that comes first, which hands over the answer");
   ("2026-10-23, at the human's asking, whose words were: This line doesn't have a // yet, so it hasn't been declared; The // still has undefined as its value, so it hasn't been assigned yet. So each reason points at a sign on the screen - the // line, the value it shows, what is right of the =, the output - that says whether a step has happened. Not picked: the order rule alone, as it was, which the learner had to take on trust");
   let size = list_size(actions);
@@ -210,15 +216,10 @@ export function app_code_program_step_order_words(actions, k, option_kind) {
     return r19;
   }
   if (equal(at, -1) && equal(option_kind, "assign")) {
-    ("2026-10-23, at the human's asking, whose words were: If the line has a = then there is an assign, but this line does not have a =. Shaped like the declare one above it, so it too says if and not if and only if");
+    ("line_text is the line as written, so the words can name an operator holding = that is not an assign");
     let r20 = {
       reason: "assign_none",
-      words: [
-        "If the line has a ",
-        "=",
-        ", then there is an assign. But this line does not have a ",
-        "=",
-      ],
+      words: app_code_program_step_assign_none_words(line_text),
     };
     return r20;
   }
