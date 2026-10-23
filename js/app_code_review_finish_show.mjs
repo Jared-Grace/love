@@ -4,9 +4,10 @@ import { html_remove } from "./html_remove.mjs";
 import { app_code_review_checkpoint } from "./app_code_review_checkpoint.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_review_complete_record } from "./app_code_review_complete_record.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { app_code_milestone_celebration } from "./app_code_milestone_celebration.mjs";
 import { app_code_review_celebration } from "./app_code_review_celebration.mjs";
 import { app_code_review_explain } from "./app_code_review_explain.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { html_parent_append } from "./html_parent_append.mjs";
 import { app_code_review_render_continue } from "./app_code_review_render_continue.mjs";
 import { app_code_advance_or_no_more } from "./app_code_advance_or_no_more.mjs";
@@ -37,8 +38,13 @@ export function app_code_review_finish_show({
   let number = property_get(checkpoint, "number");
   let checkpoint_key = property_get(checkpoint, "key");
   app_code_review_complete_record(context, checkpoint_key);
-  app_code_review_celebration(c);
   let explain = property_get(checkpoint, "explain");
+  ("A milestone is told it finished a milestone, not a review - asked for by the human 2026-10-23. Only a milestone has words to explain itself");
+  if (list_empty_not_is(explain)) {
+    app_code_milestone_celebration(c);
+  } else {
+    app_code_review_celebration(c);
+  }
   app_code_review_explain(c, explain);
   ("A milestone's again button is moved to straight under its words, which end by telling the learner to do it again - asked for by the human 2026-10-23. A review says nothing there, so its button stays where it was");
   if (list_empty_not_is(explain)) {

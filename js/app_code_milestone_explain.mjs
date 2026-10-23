@@ -13,7 +13,7 @@ export function app_code_milestone_explain() {
   let left = emoji_important();
   let first = text_combine_middle_space_nb(
     left,
-    "Before you go on to new lessons, please practice this if you need to",
+    "Before you go on to new lessons, please practice this milestone if you need to",
   );
   let left2 = emoji_repeat();
   let second = text_combine_middle_space_nb(
