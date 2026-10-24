@@ -689,7 +689,7 @@ export function bible_glyph_chapter_jos24() {
           "He",
           "is",
           "a",
-          "jealous",
+          "$face_steam+describing",
           "$heart_on_fire.",
           "He",
           "will",
