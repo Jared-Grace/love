@@ -209,7 +209,7 @@ export function bible_glyph_chapter_isa09() {
           "Wonderful",
           "Counselor,",
           "Mighty",
-          "$fire,",
+          "$heart_on_fire,",
           "Everlasting",
           "$father,",
           "Prince",
