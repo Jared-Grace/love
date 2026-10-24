@@ -462,7 +462,7 @@ export function bible_glyph_chapter_lam01() {
         words: [
           "He",
           "sent",
-          "fire",
+          "$fire",
           "from",
           "on",
           "high,",
