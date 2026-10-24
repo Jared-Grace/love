@@ -49,7 +49,7 @@ export function bible_glyph_chapter_zep03() {
           "near",
           "to",
           "her",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
@@ -522,7 +522,7 @@ export function bible_glyph_chapter_zep03() {
           "The",
           "$i_am",
           "your",
-          "$fire",
+          "$heart_on_fire",
           "is",
           "among",
           "you;",
