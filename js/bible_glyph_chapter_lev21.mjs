@@ -271,7 +271,7 @@ export function bible_glyph_chapter_lev21() {
           "burned",
           "in",
           "the",
-          "fire.",
+          "$fire.",
         ],
       },
       {
