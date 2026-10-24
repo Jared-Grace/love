@@ -33,7 +33,7 @@ export function bible_glyph_chapter_mic02() {
           "it",
           "because",
           "the",
-          "$fire",
+          "$heart_on_fire",
           "is",
           "in",
           "their",
