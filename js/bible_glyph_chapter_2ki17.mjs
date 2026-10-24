@@ -1022,7 +1022,7 @@ export function bible_glyph_chapter_2ki17() {
           "$hammer+doing",
           "its",
           "own",
-          "gods,",
+          "$moai,",
           "$map",
           "by",
           "$map,",
