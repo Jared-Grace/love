@@ -808,7 +808,7 @@ export function bible_glyph_chapter_1ki18() {
           "$name_tag",
           "of",
           "your",
-          "$fire,",
+          "$moai,",
           "but",
           "do",
           "$no_entry",
