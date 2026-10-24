@@ -132,7 +132,7 @@ export function bible_glyph_chapter_deu07() {
           "to",
           "$kneeling+doing",
           "other",
-          "$fire.",
+          "$moai.",
           "Then",
           "the",
           "anger",
