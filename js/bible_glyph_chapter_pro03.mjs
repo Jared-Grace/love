@@ -92,7 +92,7 @@ export function bible_glyph_chapter_pro03() {
           "the",
           "$eyes",
           "of",
-          "$fire",
+          "$heart_on_fire",
           "and",
           "$person.",
         ],
