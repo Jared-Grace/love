@@ -165,7 +165,7 @@ export function bible_glyph_chapter_amo05() {
           "will",
           "sweep",
           "like",
-          "fire",
+          "$fire",
           "through",
           "the",
           "$house",
