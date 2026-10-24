@@ -144,7 +144,7 @@ export function bible_glyph_chapter_deu05() {
           "afraid",
           "of",
           "the",
-          "fire",
+          "$fire",
           "and",
           "would",
           "$no_entry",
