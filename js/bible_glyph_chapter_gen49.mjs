@@ -585,7 +585,7 @@ export function bible_glyph_chapter_gen49() {
         words: [
           "by",
           "the",
-          "$fire",
+          "$heart_on_fire",
           "of",
           "your",
           "$father",
