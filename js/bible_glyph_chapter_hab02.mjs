@@ -396,7 +396,7 @@ export function bible_glyph_chapter_hab02() {
           "only",
           "feeds",
           "the",
-          "fire,",
+          "$fire,",
           "and",
           "the",
           "nations",
