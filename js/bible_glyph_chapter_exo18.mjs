@@ -343,7 +343,7 @@ export function bible_glyph_chapter_exo18() {
           "than",
           "all",
           "other",
-          "gods,",
+          "$moai,",
           "for",
           "He",
           "did",
