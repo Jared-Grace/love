@@ -73,7 +73,7 @@ export function bible_glyph_chapter_zec03() {
           "snatched",
           "from",
           "the",
-          "fire?",
+          "$fire?",
         ],
       },
       {
