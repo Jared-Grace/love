@@ -327,7 +327,7 @@ export function bible_glyph_chapter_gen37() {
           "his",
           "$brother",
           "were",
-          "$heart_on_fire",
+          "$face_steam+doing",
           "of",
           "him,",
           "but",
