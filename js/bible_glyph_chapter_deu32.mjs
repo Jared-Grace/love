@@ -445,7 +445,7 @@ export function bible_glyph_chapter_deu32() {
         verse_number: 16,
         words: [
           "They",
-          "$heart_on_fire",
+          "$face_steam+doing",
           "Him",
           "with",
           "foreign",
