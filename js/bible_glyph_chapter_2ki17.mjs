@@ -1100,7 +1100,7 @@ export function bible_glyph_chapter_2ki17() {
           "and",
           "$proper_name$Anammelech,",
           "the",
-          "gods",
+          "$moai",
           "of",
           "$proper_name$Sepharvaim.",
         ],
