@@ -108,7 +108,7 @@ export function bible_glyph_chapter_1sa07() {
           "away",
           "the",
           "foreign",
-          "$fire",
+          "$moai",
           "among",
           "you",
           "and",
