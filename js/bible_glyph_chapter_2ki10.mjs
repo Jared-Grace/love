@@ -3,7 +3,6 @@ export function bible_glyph_chapter_2ki10() {
   "THE LINE THE WHOLE CHAPTER EXISTS FOR IS THE ONE LINE WITH NO PICTURE ON IT. The twenty eighth is seven words long and says that Jehu wiped Baal out of Israel. Every other line on the page is busy: seventy sons, two heaps of heads, letters, a chariot, a temple full of people. The sentence they were all leading to is blank, because a name and a wiping out are two things this collection cannot draw. A reader following the pictures watches the killing and never learns what it was for.";
   "THE SETTING APART PICTURE IS DRAWN OVER AN ASSEMBLY CALLED FOR BAAL. In the twentieth line Jehu orders a solemn assembly, and the Hebrew verb is the one this collection draws with a sparkle, the same word it uses for making a thing holy to God. Jehu is lying, and the text does not soften the word for him. So the picture that everywhere else means set apart for God is here set over a gathering called for a false one. Nothing marks the difference, and I have left it standing, because the Hebrew leaves it standing too.";
   "THE PROPHET PICTURE IS DRAWN OVER THE PROPHETS OF BAAL. The nineteenth line summons them by the same word Israel uses for Elijah, and this collection has one picture for it. A reader who has learnt that the loudspeaker means a man who speaks for God will read this line and get it exactly backwards. That is the second page in this collection to show the same hole, and 1 Kings 22 was the first.";
-  "THE GOD FLAME NEVER HAS TO STAND DOWN ON A PAGE ABOUT NOTHING BUT A FALSE GOD. Baal is named seventeen times here and never once with the Hebrew word for God, only with his own name, so the flame is never asked to serve both at once. It is drawn a single time, in the thirty first line, for the God of Israel. Set that beside 2 Kings 17 or Judges 2, where one line holds both senses and the picture has to be put away, and the difference turns out to be nothing but which word the writer happened to use.";
   "THE BLESSING PICTURE IS A HELLO AGAIN, AND IT STANDS BESIDE ITS OWN PART. In the fifteenth line Jehu greets Jehonadab, and the Hebrew word is the one for blessing, so the draft drew a mouth with a thumb raised. Two ordinary speaking mouths stand in the same line, one when Jehu asks his question and one when Jehonadab answers. That is the fifteenth line in this collection where a group mark sits next to the plain mark it is built from, and 1 Samuel 25 showed the same word doing the same job as a hello.";
   "THE CLOSING FORMULA OF A REIGN IS BUILT TWICE ON THE HEBREW WORD FOR WORD, AND ENGLISH CALLS IT SOMETHING ELSE BOTH TIMES. The thirty fourth line asks whether the rest of the acts of Jehu are written in the Book of the Chronicles. Underneath, the Hebrew says the rest of the words of Jehu, and the book is the book of the words of the days. Two speaking pictures and one day picture came off that one line, because writing the sentence out the Hebrew way would leave a reader unable to recognise the book being named.";
   "The tally. One hundred and ninety five marks over thirty six lines, not quite five and a half to a line. What cannot be drawn here is the furniture of the trick: the sacred pillar burned in the twenty sixth line and torn down in the twenty seventh, the wardrobe of garments handed out in the twenty second, the baskets the heads arrive in, and the chariot Jehu pulls a man up into. The twenty eighth line has nothing at all.";
@@ -1061,7 +1060,15 @@ export function bible_glyph_chapter_2ki10() {
       },
       {
         verse_number: 28,
-        words: ["Thus", "$i_am+pointing_back", "wiped", "Baal", "out", "of", "$wrestling+heart_on_fire."],
+        words: [
+          "Thus",
+          "$i_am+pointing_back",
+          "wiped",
+          "Baal",
+          "out",
+          "of",
+          "$wrestling+heart_on_fire.",
+        ],
       },
       {
         verse_number: 29,
