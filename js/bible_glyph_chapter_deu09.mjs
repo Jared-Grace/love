@@ -96,7 +96,7 @@ export function bible_glyph_chapter_deu09() {
           "as",
           "a",
           "consuming",
-          "fire.",
+          "$fire.",
           "He",
           "will",
           "destroy",
