@@ -170,7 +170,7 @@ export function bible_glyph_chapter_jol02() {
           "the",
           "$voice",
           "of",
-          "fire",
+          "$fire",
           "$eating",
           "stubble,",
           "like",
