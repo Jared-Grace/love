@@ -726,7 +726,7 @@ export function bible_glyph_chapter_deu05() {
           "For",
           "this",
           "great",
-          "fire",
+          "$fire",
           "will",
           "$eating",
           "us.",
