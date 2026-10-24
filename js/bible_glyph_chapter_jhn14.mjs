@@ -27,7 +27,7 @@ export function bible_glyph_chapter_jhn14() {
           "You",
           "$anchor+doing",
           "in",
-          "$fire;",
+          "$heart_on_fire;",
           "$plus",
           "$anchor+doing",
           "in",
