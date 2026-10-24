@@ -26,7 +26,7 @@ export function bible_glyph_chapter_psa145() {
           "exalt",
           "You,",
           "my",
-          "$fire",
+          "$heart_on_fire",
           "and",
           "$king,",
           "and",
