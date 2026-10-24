@@ -174,7 +174,7 @@ export function bible_glyph_chapter_isa09() {
           "fuel",
           "for",
           "the",
-          "fire.",
+          "$fire.",
         ],
       },
       {
