@@ -448,7 +448,7 @@ export function bible_glyph_chapter_jhn02() {
           "it",
           "is",
           "written:",
-          "“$heart_on_fire",
+          "“$face_steam",
           "for",
           "Your",
           "$house",
