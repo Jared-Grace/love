@@ -458,7 +458,7 @@ export function bible_glyph_chapter_rut01() {
           "$family",
           "and",
           "her",
-          "$fire;",
+          "$moai;",
           "$turn_back",
           "her",
           "back",
