@@ -481,7 +481,7 @@ export function bible_glyph_chapter_jos24() {
           "Cast",
           "aside",
           "the",
-          "gods",
+          "$moai",
           "your",
           "$father",
           "$kneeling+doing",
