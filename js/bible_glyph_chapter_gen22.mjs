@@ -188,7 +188,7 @@ export function bible_glyph_chapter_gen22() {
           "himself",
           "$hand_receiving",
           "the",
-          "fire",
+          "$fire",
           "and",
           "the",
           "sacrificial",
