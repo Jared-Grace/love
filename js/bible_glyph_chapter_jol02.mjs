@@ -543,7 +543,7 @@ export function bible_glyph_chapter_jol02() {
           "Then",
           "the",
           "$i_am",
-          "$heart_on_fire",
+          "$face_steam+doing",
           "for",
           "His",
           "$earth,",
