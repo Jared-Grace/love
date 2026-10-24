@@ -843,7 +843,7 @@ export function bible_glyph_chapter_deu07() {
           "images",
           "of",
           "their",
-          "$fire.",
+          "$moai.",
           "Do",
           "$no_entry",
           "covet",
@@ -874,7 +874,7 @@ export function bible_glyph_chapter_deu07() {
           "to",
           "$i_am",
           "your",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
