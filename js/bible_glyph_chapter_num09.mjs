@@ -499,7 +499,7 @@ export function bible_glyph_chapter_num09() {
           "the",
           "tabernacle",
           "like",
-          "fire.",
+          "$fire.",
         ],
       },
       {
