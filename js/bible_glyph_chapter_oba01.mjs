@@ -581,7 +581,7 @@ export function bible_glyph_chapter_oba01() {
           "be",
           "a",
           "blazing",
-          "fire,",
+          "$fire,",
           "and",
           "the",
           "$house",
