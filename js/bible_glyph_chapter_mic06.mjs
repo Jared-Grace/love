@@ -181,7 +181,7 @@ export function bible_glyph_chapter_mic06() {
           "bow",
           "before",
           "the",
-          "$fire",
+          "$heart_on_fire",
           "on",
           "high?",
           "Should",
@@ -272,7 +272,7 @@ export function bible_glyph_chapter_mic06() {
           "humbly",
           "with",
           "your",
-          "$fire?",
+          "$heart_on_fire?",
         ],
       },
       {
