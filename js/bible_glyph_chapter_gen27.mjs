@@ -550,7 +550,7 @@ export function bible_glyph_chapter_gen27() {
           "the",
           "$i_am",
           "your",
-          "$fire",
+          "$heart_on_fire",
           "brought",
           "it",
           "to",
@@ -772,7 +772,7 @@ export function bible_glyph_chapter_gen27() {
         verse_number: 28,
         words: [
           "May",
-          "$fire",
+          "$heart_on_fire",
           "$hands_giving",
           "you",
           "the",
