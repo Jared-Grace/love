@@ -192,7 +192,7 @@ export function bible_glyph_chapter_zec12() {
           "Hosts",
           "is",
           "their",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
@@ -317,7 +317,7 @@ export function bible_glyph_chapter_zec12() {
           "will",
           "be",
           "like",
-          "$fire,",
+          "$heart_on_fire,",
           "like",
           "the",
           "$angel",
