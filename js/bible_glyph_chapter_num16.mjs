@@ -1050,7 +1050,7 @@ export function bible_glyph_chapter_num16() {
         verse_number: 35,
         words: [
           "And",
-          "fire",
+          "$fire",
           "came",
           "forth",
           "from",
