@@ -205,7 +205,7 @@ export function bible_glyph_chapter_num16() {
           "and",
           "tomorrow",
           "$hands_giving",
-          "fire",
+          "$fire",
           "and",
           "incense",
           "in",
