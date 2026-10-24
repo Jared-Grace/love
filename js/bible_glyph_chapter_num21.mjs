@@ -804,7 +804,7 @@ export function bible_glyph_chapter_num21() {
         words: [
           "For",
           "a",
-          "fire",
+          "$fire",
           "went",
           "out",
           "from",
