@@ -43,7 +43,7 @@ export function bible_glyph_chapter_ezk01() {
           "$eye",
           "visions",
           "of",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
