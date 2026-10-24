@@ -423,7 +423,7 @@ export function bible_glyph_chapter_exo16() {
           "the",
           "$i_am",
           "your",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
