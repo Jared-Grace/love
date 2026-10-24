@@ -762,7 +762,7 @@ export function bible_glyph_chapter_deu05() {
           "of",
           "the",
           "$sprout",
-          "$fire",
+          "$heart_on_fire",
           "$mouth",
           "out",
           "of",
