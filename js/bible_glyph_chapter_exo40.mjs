@@ -2,7 +2,6 @@ export function bible_glyph_chapter_exo40() {
   "Exodus 40, drawn in pictures, so that a person who cannot read the letters can still follow it. God tells Moses how to raise the tent, Moses raises it piece by piece, and then the cloud comes down and Moses cannot get in. It is the last chapter of Exodus. Thirty eight lines.";
   "THE WHOLE CHAPTER IS ABOUT A TENT AND THERE IS NO TENT. The word tabernacle appears seventeen times on this page and the words Tent of Meeting appear twelve more, twenty nine mentions in thirty eight lines, and every single one of them is plain. There is no picture in this collection for a tent, a tabernacle, a shelter or a covering, so the one object the chapter is entirely about is invisible from the first line to the last. A reader following pictures sees things being placed and anointed and set up, over and over, and never learns what they are being placed inside.";
   "THE CLOUD IS THE LAST WORD OF EXODUS AND THE CLOUD IS BLANK. From the thirty fourth line to the end, the cloud is the subject of every sentence: it covers the tent, it settles so Moses cannot enter, it lifts and the people travel, it stays and they wait, it is over the tent by day. Six clouds in five lines and not one of them is drawn. What the page gives instead is a star for glory, the name, a crossing-out and a footprint, so a reader can see that something stopped Moses from going in and never sees the thing that stopped him.";
-  "AND THE FIRE IN THE VERY LAST LINE IS BLANK TOO. The cloud was over the tabernacle by day, and fire was in the cloud by night. That is the closing image of the whole book and the word fire has nothing on it, because the flame in this collection is seated on the Hebrew word for God rather than on the Hebrew word for fire. On this page it is worse than usual, because the word God never occurs here, so the flame picture does not appear anywhere in the chapter at all. Two chapters running now have opened or closed on literal fire and drawn none of it.";
   "EVERY PIECE OF FURNITURE IS BLANK EXCEPT ONE. The ark is named eight times, the veil four, the curtain four, the table three, the basin three, the lampstand twice and the lamps twice, and the mercy seat, the poles, the bases, the frames, the crossbars, the posts, the covering, the tunics and the holy garments once each. All of them are plain. The altar is the only object on the page with a picture, and it lands ten times. So the chapter reads as a man carrying things into a place, and the only thing a reader can identify is the altar.";
   "THREE LINES COME OUT WITH NOTHING ON THEM AT ALL. The seventeenth line, which is the sentence that says the tabernacle was finally set up, the twenty fourth, which puts the lampstand in place, and the twenty eighth, which hangs the curtain at the entrance. The seventeenth is the worst of the three, because it is the moment the book has been building toward for fifteen chapters and it arrives as a row of ordinary letters.";
   "WHAT THE PAGE DOES CARRY IS THE REFRAIN AND THE OIL. Just as the LORD had commanded him closes the nineteenth, twenty first, twenty third, twenty fifth, twenty seventh, twenty ninth and thirty second lines, and each time the name mark lands on it, so a reader can see one sentence repeating seven times down the page without reading a word of it. That repetition is the point of the chapter and it survives intact. The oil arrives too, six times in seven lines, on anointing the tent, the altar, the basin, Aaron and his sons, alongside seven marks for holiness, so the middle of the page is legible as a consecration even to someone who cannot read.";
@@ -14,7 +13,14 @@ export function bible_glyph_chapter_exo40() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "the", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,"],
+        words: [
+          "Then",
+          "the",
+          "$i_am",
+          "$mouth",
+          "to",
+          "$fishing_pole+proper_name,",
+        ],
       },
       {
         verse_number: 2,
