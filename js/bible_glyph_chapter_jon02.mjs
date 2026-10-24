@@ -22,7 +22,7 @@ export function bible_glyph_chapter_jon02() {
           "the",
           "$i_am",
           "his",
-          "$fire,",
+          "$heart_on_fire,",
         ],
       },
       {
@@ -170,7 +170,7 @@ export function bible_glyph_chapter_jon02() {
           "O",
           "$i_am",
           "my",
-          "$fire!",
+          "$heart_on_fire!",
         ],
       },
       {
