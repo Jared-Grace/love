@@ -381,7 +381,7 @@ export function bible_glyph_chapter_num25() {
           "because",
           "he",
           "was",
-          "$heart_on_fire",
+          "$face_steam+doing",
           "for",
           "his",
           "$heart_on_fire",
