@@ -232,7 +232,7 @@ export function bible_glyph_chapter_mic03() {
           "no",
           "answer",
           "from",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
