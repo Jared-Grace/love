@@ -449,7 +449,7 @@ export function bible_glyph_chapter_deu32() {
           "Him",
           "with",
           "foreign",
-          "gods;",
+          "$moai;",
           "they",
           "enraged",
           "Him",
