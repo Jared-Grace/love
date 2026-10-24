@@ -146,7 +146,7 @@ export function bible_glyph_chapter_exo32() {
           "These",
           "are",
           "your",
-          "gods,",
+          "$moai,",
           "O",
           "$wrestling+heart_on_fire,",
           "who",
