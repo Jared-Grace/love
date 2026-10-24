@@ -287,7 +287,7 @@ export function bible_glyph_chapter_exo15() {
           "You",
           "among",
           "the",
-          "$fire,",
+          "$moai,",
           "O",
           "$i_am?",
           "Who",
