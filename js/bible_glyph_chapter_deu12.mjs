@@ -1072,7 +1072,7 @@ export function bible_glyph_chapter_deu12() {
           "$woman",
           "in",
           "the",
-          "fire",
+          "$fire",
           "as",
           "sacrifices",
           "to",
