@@ -255,7 +255,7 @@ export function bible_glyph_chapter_zep03() {
           "consumed",
           "by",
           "the",
-          "fire",
+          "$fire",
           "of",
           "My",
           "$face_steam.",
