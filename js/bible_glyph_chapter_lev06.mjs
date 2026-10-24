@@ -344,7 +344,7 @@ export function bible_glyph_chapter_lev06() {
         verse_number: 13,
         words: [
           "The",
-          "fire",
+          "$fire",
           "shall",
           "be",
           "kept",
