@@ -732,7 +732,7 @@ export function bible_glyph_chapter_exo14() {
           "the",
           "pillar",
           "of",
-          "fire",
+          "$fire",
           "and",
           "cloud,",
           "and",
