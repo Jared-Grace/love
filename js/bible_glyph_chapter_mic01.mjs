@@ -233,7 +233,7 @@ export function bible_glyph_chapter_mic01() {
           "burned",
           "in",
           "the",
-          "fire,",
+          "$fire,",
           "and",
           "I",
           "will",
