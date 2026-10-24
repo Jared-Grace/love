@@ -626,7 +626,7 @@ export function bible_glyph_chapter_2ki10() {
           "and",
           "$eye",
           "my",
-          "$heart_on_fire",
+          "$face_steam",
           "for",
           "the",
           "$i_am.",
