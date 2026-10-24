@@ -155,7 +155,7 @@ export function bible_glyph_chapter_lev03() {
           "$tree",
           "on",
           "the",
-          "fire,",
+          "$fire,",
           "as",
           "a",
           "food",
