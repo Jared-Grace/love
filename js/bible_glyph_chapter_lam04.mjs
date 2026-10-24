@@ -319,7 +319,7 @@ export function bible_glyph_chapter_lam04() {
           "has",
           "kindled",
           "a",
-          "fire",
+          "$fire",
           "in",
           "$proper_name$Zion,",
           "and",
