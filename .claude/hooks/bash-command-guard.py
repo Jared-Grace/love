@@ -4310,6 +4310,36 @@ def lyric_video_described_deny_reason():
     )
 
 
+def find_youtube_video_delete(command):
+    """True when a statement of `command` runs youtube_video_delete on one
+    video - the delete the granted
+    youtube_video_delete_replaced_private_lyric_video makes unasked when a
+    newer private copy of the same song stands in for it."""
+    for words in statements_words(command):
+        plain = list(words)
+        while plain and ASSIGN_RE.match(plain[0]):
+            plain = plain[1:]
+        if len(plain) != 4 or plain[0] != "node" or plain[1] != "scripts/ai.mjs":
+            continue
+        if plain[2] == "youtube_video_delete":
+            return True
+    return False
+
+
+def youtube_video_delete_deny_reason():
+    return (
+        "Deleting a video is for good, so the open delete holds no grant. "
+        "Deleting a private lyric video that a newer private upload of the "
+        "same song replaces is already approved: `node scripts/ai.mjs "
+        "youtube_video_delete_replaced_private_lyric_video <video_id_old> "
+        "<video_id_new>`. It refuses unless both are private on the lyric "
+        "video channel, carry the same title, and the old one was uploaded "
+        "first. If the new one is already public, the human's no-argument "
+        "`youtube_lyric_videos_copies_delete` clears the old copy; hand them "
+        "that `!` line rather than this one."
+    )
+
+
 GREP_LIST_WHILE_READ_RE = re.compile(
     r"\bgrep\b[^|;&]*\s-[a-zA-Z]*l[a-zA-Z]*\b[^|;&]*\|\s*while\s+read\b"
 )
@@ -5729,6 +5759,12 @@ def main():
     # and reason. See find_lyric_video_described.
     if find_lyric_video_described(command):
         return decide("deny", lyric_video_described_deny_reason())
+
+    # One video's delete through the open delete, which a granted twin makes
+    # unasked for a replaced private copy. Same placement and reason. See
+    # find_youtube_video_delete.
+    if find_youtube_video_delete(command):
+        return decide("deny", youtube_video_delete_deny_reason())
 
     # A grep -l feeding a while-read loop, which one grep answers unasked.
     # Same placement and reason. See find_grep_list_while_read.
