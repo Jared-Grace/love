@@ -22,7 +22,7 @@ export function bible_glyph_chapter_psa138() {
           "$heart_organ;",
           "before",
           "the",
-          "$fire",
+          "$moai",
           "I",
           "sing",
           "Your",
