@@ -75,7 +75,7 @@ export function bible_glyph_chapter_isa58() {
           "$scales+thing",
           "of",
           "their",
-          "$fire.",
+          "$heart_on_fire.",
           "They",
           "ask",
           "Me",
@@ -88,7 +88,7 @@ export function bible_glyph_chapter_isa58() {
           "the",
           "nearness",
           "of",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
