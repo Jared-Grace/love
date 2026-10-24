@@ -1000,7 +1000,7 @@ export function bible_glyph_chapter_jer23() {
           "$speech",
           "$no_entry",
           "like",
-          "fire,",
+          "$fire,",
           "declares",
           "the",
           "$i_am,",
