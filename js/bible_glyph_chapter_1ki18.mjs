@@ -814,7 +814,7 @@ export function bible_glyph_chapter_1ki18() {
           "$no_entry",
           "light",
           "the",
-          "fire.",
+          "$fire.",
         ],
       },
       {
