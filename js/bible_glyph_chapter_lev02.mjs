@@ -350,7 +350,7 @@ export function bible_glyph_chapter_lev02() {
           "salt",
           "$covenant",
           "of",
-          "$fire",
+          "$heart_on_fire",
           "out",
           "of",
           "$grain_offering;",
