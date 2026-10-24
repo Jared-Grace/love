@@ -672,7 +672,7 @@ export function bible_glyph_chapter_2ki05() {
           "to",
           "any",
           "other",
-          "$fire",
+          "$moai",
           "but",
           "the",
           "$i_am.",
