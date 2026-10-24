@@ -407,7 +407,7 @@ export function bible_glyph_chapter_lev16() {
           "incense",
           "on",
           "the",
-          "fire",
+          "$fire",
           "before",
           "the",
           "$i_am,",
