@@ -291,7 +291,7 @@ export function bible_glyph_chapter_isa26() {
           "will",
           "see",
           "Your",
-          "$heart_on_fire",
+          "$face_steam",
           "for",
           "Your",
           "$family",
