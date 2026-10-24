@@ -804,7 +804,7 @@ export function bible_glyph_chapter_gen31() {
           "you",
           "steal",
           "my",
-          "$fire?",
+          "$moai?",
         ],
       },
       {
@@ -843,7 +843,7 @@ export function bible_glyph_chapter_gen31() {
           "you",
           "find",
           "your",
-          "$fire,",
+          "$moai,",
           "he",
           "shall",
           "$no_entry",
