@@ -362,7 +362,7 @@ export function bible_glyph_chapter_zep02() {
           "starves",
           "all",
           "the",
-          "$fire",
+          "$moai",
           "of",
           "the",
           "$earth.",
