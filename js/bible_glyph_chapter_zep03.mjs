@@ -258,7 +258,7 @@ export function bible_glyph_chapter_zep03() {
           "fire",
           "of",
           "My",
-          "$heart_on_fire.",
+          "$face_steam.",
         ],
       },
       {
