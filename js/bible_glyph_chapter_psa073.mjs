@@ -57,7 +57,7 @@ export function bible_glyph_chapter_psa073() {
         words: [
           "For",
           "I",
-          "$heart_on_fire",
+          "$face_steam+doing",
           "the",
           "arrogant",
           "when",
