@@ -597,7 +597,7 @@ export function bible_glyph_chapter_zep01() {
           "fire",
           "of",
           "His",
-          "$heart_on_fire.",
+          "$face_steam.",
           "For",
           "indeed,",
           "He",
