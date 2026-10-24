@@ -481,7 +481,7 @@ export function bible_glyph_chapter_gen42() {
           "for",
           "I",
           "fear",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
@@ -811,7 +811,7 @@ export function bible_glyph_chapter_gen42() {
           "is",
           "this",
           "that",
-          "$fire",
+          "$heart_on_fire",
           "has",
           "$hammer+doing",
           "to",
