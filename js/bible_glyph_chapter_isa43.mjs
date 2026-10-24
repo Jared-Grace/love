@@ -110,7 +110,7 @@ export function bible_glyph_chapter_isa43() {
           "the",
           "$i_am",
           "your",
-          "$fire,",
+          "$heart_on_fire,",
           "the",
           "$sparkle",
           "One",
@@ -411,7 +411,7 @@ export function bible_glyph_chapter_isa43() {
           "that",
           "I",
           "am",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
