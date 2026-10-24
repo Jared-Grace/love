@@ -696,7 +696,7 @@ export function bible_glyph_chapter_deu05() {
           "out",
           "of",
           "the",
-          "fire.",
+          "$fire.",
           "Today",
           "we",
           "have",
