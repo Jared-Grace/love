@@ -547,7 +547,7 @@ export function bible_glyph_chapter_jer07() {
           "offerings",
           "to",
           "other",
-          "$fire",
+          "$moai",
           "to",
           "provoke",
           "Me",
