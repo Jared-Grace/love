@@ -1691,7 +1691,7 @@ export function bible_glyph_chapter_1ki22() {
           "the",
           "$i_am,",
           "the",
-          "$fire",
+          "$heart_on_fire",
           "of",
           "$wrestling+heart_on_fire,",
           "to",
