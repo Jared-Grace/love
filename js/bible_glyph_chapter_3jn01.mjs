@@ -148,7 +148,7 @@ export function bible_glyph_chapter_3jn01() {
           "manner",
           "worthy",
           "of",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
@@ -284,7 +284,7 @@ export function bible_glyph_chapter_3jn01() {
           "good",
           "is",
           "$tray_out",
-          "$fire;",
+          "$heart_on_fire;",
           "the",
           "one",
           "who",
@@ -293,7 +293,7 @@ export function bible_glyph_chapter_3jn01() {
           "has",
           "$no_entry",
           "$eye",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
