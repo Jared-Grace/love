@@ -1,9 +1,10 @@
-import { app_code_lesson_ids } from "./app_code_lesson_ids.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_ids } from "./app_code_lesson_ids.mjs";
 import { app_code_progress_lessons_complete_mark } from "./app_code_progress_lessons_complete_mark.mjs";
 import { app_code_review_numbers } from "./app_code_review_numbers.mjs";
 import { app_code_review_complete_record } from "./app_code_review_complete_record.mjs";
 import { each } from "./each.mjs";
+import { app_code_milestone_ids } from "./app_code_milestone_ids.mjs";
 export function app_code_progress_all_complete_mark(context) {
   "Writes every lesson down as finished on this learner's own disk, for somebody who has already learnt this elsewhere and wants the list to say so rather than working back through it.";
   "It marks rather than counts: a record gains a complete flag, and the quizzes it has actually answered are left exactly as they were. So the mark is honest about being a mark, and a learner who later answers a quiz for real still has that answer written down under it.";
@@ -16,4 +17,7 @@ export function app_code_progress_all_complete_mark(context) {
     app_code_review_complete_record(context, number);
   }
   each(numbers, each_number);
+  ("2026-10-24, at the human's asking: the milestones are marked too, filed under their ids in the same list of finished checkpoints, for the reason the reviews are - a milestone left open says there is work left that the learner has just said there is not");
+  let ids = app_code_milestone_ids();
+  each(ids, each_number);
 }

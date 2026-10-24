@@ -1,13 +1,15 @@
-import { property_in_list } from "./property_in_list.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_progress_lessons_complete_mark } from "./app_code_progress_lessons_complete_mark.mjs";
 import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
+import { property_in_list } from "./property_in_list.mjs";
 import { app_code_lessons_fns_shown } from "./app_code_lessons_fns_shown.mjs";
 import { app_code_review_numbers } from "./app_code_review_numbers.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_all } from "./list_all.mjs";
 import { app_code_review_complete_record } from "./app_code_review_complete_record.mjs";
 import { each } from "./each.mjs";
+import { app_code_milestones } from "./app_code_milestones.mjs";
+import { property_get } from "./property_get.mjs";
 export function app_code_progress_ids_complete_mark(context, lesson_ids) {
   arguments_assert(arguments, 2);
   ("Writes the lessons with these ids down as finished on this reader's own disk, and every review standing where each lesson at or above it is one of them, so a review before the first lesson left open reads done and every one after it stays open, because it may ask about that lesson.");
@@ -27,4 +29,16 @@ export function app_code_progress_ids_complete_mark(context, lesson_ids) {
     }
   }
   each(numbers, each_number);
+  ("2026-10-24, at the human's asking: a milestone is marked by the same rule, read at the lesson it stands under, and filed under its id");
+  let milestones = app_code_milestones();
+  function each_milestone(milestone) {
+    let count = property_get(milestone, "number");
+    let above = list_take(fns, count);
+    let all = list_all(above, marked_is);
+    if (all) {
+      let number2 = property_get(milestone, "id");
+      app_code_review_complete_record(context, number2);
+    }
+  }
+  each(milestones, each_milestone);
 }
