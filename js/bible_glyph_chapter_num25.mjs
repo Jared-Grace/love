@@ -384,7 +384,7 @@ export function bible_glyph_chapter_num25() {
           "$heart_on_fire",
           "for",
           "his",
-          "$fire",
+          "$heart_on_fire",
           "and",
           "made",
           "atonement",
