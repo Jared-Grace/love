@@ -1094,7 +1094,7 @@ export function bible_glyph_chapter_2ki17() {
           "$son",
           "in",
           "the",
-          "fire",
+          "$fire",
           "to",
           "$proper_name$Adrammelech",
           "and",
