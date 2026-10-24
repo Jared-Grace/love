@@ -605,7 +605,7 @@ export function bible_glyph_chapter_lev04() {
           "the",
           "$i_am",
           "his",
-          "$fire,",
+          "$heart_on_fire,",
           "which",
           "are",
           "$no_entry",
