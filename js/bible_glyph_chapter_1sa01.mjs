@@ -514,7 +514,7 @@ export function bible_glyph_chapter_1sa01() {
           "and",
           "may",
           "the",
-          "$fire",
+          "$heart_on_fire",
           "of",
           "$wrestling+heart_on_fire",
           "$hands_giving",
