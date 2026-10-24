@@ -114,7 +114,7 @@ export function bible_glyph_chapter_neh01() {
           "been",
           "burned",
           "with",
-          "fire.",
+          "$fire.",
         ],
       },
       {
