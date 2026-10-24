@@ -316,7 +316,7 @@ export function bible_glyph_chapter_job23() {
       {
         verse_number: 16,
         words: [
-          "$fire",
+          "$heart_on_fire",
           "has",
           "made",
           "my",
