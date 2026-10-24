@@ -222,7 +222,7 @@ export function bible_glyph_chapter_gen22() {
           "he",
           "$speech.",
           "The",
-          "fire",
+          "$fire",
           "and",
           "the",
           "$tree",
