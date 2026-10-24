@@ -301,7 +301,7 @@ export function bible_glyph_chapter_isa26() {
           "to",
           "shame.",
           "The",
-          "fire",
+          "$fire",
           "set",
           "for",
           "Your",
