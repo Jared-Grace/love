@@ -281,7 +281,7 @@ export function bible_glyph_chapter_1sa07() {
           "to",
           "$i_am",
           "our",
-          "$fire",
+          "$heart_on_fire",
           "for",
           "us,",
           "that",
