@@ -299,7 +299,7 @@ export function bible_glyph_chapter_ecc01() {
           "a",
           "$thumbs_down",
           "task",
-          "$fire",
+          "$heart_on_fire",
           "has",
           "$hands_giving",
           "upon",
