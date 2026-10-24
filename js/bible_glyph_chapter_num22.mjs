@@ -297,7 +297,7 @@ export function bible_glyph_chapter_num22() {
         verse_number: 9,
         words: [
           "Then",
-          "$fire",
+          "$heart_on_fire",
           "$footprints",
           "to",
           "$proper_name$Balaam",
@@ -318,7 +318,7 @@ export function bible_glyph_chapter_num22() {
           "Balaam",
           "$speech",
           "to",
-          "$fire,",
+          "$heart_on_fire,",
           "$proper_name$Balak",
           "$son",
           "of",
@@ -380,7 +380,7 @@ export function bible_glyph_chapter_num22() {
         verse_number: 12,
         words: [
           "But",
-          "$fire",
+          "$heart_on_fire",
           "$speech",
           "to",
           "$proper_name$Balaam,",
@@ -578,7 +578,7 @@ export function bible_glyph_chapter_num22() {
           "the",
           "$i_am",
           "my",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
@@ -613,7 +613,7 @@ export function bible_glyph_chapter_num22() {
         words: [
           "That",
           "$night",
-          "$fire",
+          "$heart_on_fire",
           "$footprints",
           "to",
           "$proper_name$Balaam",
@@ -674,7 +674,7 @@ export function bible_glyph_chapter_num22() {
         verse_number: 22,
         words: [
           "Then",
-          "$fire",
+          "$heart_on_fire",
           "anger",
           "was",
           "kindled",
@@ -1247,7 +1247,7 @@ export function bible_glyph_chapter_num22() {
           "the",
           "$speech",
           "that",
-          "$fire",
+          "$heart_on_fire",
           "puts",
           "in",
           "my",
