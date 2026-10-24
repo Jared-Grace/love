@@ -951,7 +951,7 @@ export function bible_glyph_chapter_jol02() {
           "$earth,",
           "$blood",
           "and",
-          "fire",
+          "$fire",
           "and",
           "columns",
           "of",
