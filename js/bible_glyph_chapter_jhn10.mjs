@@ -844,7 +844,7 @@ export function bible_glyph_chapter_jhn10() {
           "$speech",
           "you",
           "are",
-          "$fire?",
+          "$moai?",
         ],
       },
       {
