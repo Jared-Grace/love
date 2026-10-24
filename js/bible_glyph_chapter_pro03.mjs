@@ -610,7 +610,7 @@ export function bible_glyph_chapter_pro03() {
         words: [
           "Do",
           "$no_entry",
-          "$heart_on_fire",
+          "$face_steam+doing",
           "a",
           "violent",
           "$man_beard,",
