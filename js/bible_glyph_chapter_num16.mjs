@@ -1384,7 +1384,7 @@ export function bible_glyph_chapter_num16() {
           "your",
           "censer,",
           "$hands_giving",
-          "fire",
+          "$fire",
           "in",
           "it",
           "from",
