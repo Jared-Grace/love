@@ -515,7 +515,7 @@ export function bible_glyph_chapter_deu29() {
           "and",
           "$kneeling+doing",
           "the",
-          "gods",
+          "$moai",
           "of",
           "those",
           "$map$s.",
