@@ -381,7 +381,7 @@ export function bible_glyph_chapter_deu09() {
           "the",
           "finger",
           "of",
-          "$fire,",
+          "$heart_on_fire,",
           "with",
           "the",
           "exact",
