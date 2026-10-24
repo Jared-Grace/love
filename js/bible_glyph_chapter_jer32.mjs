@@ -1210,7 +1210,7 @@ export function bible_glyph_chapter_jer32() {
           "pass",
           "through",
           "the",
-          "fire",
+          "$fire",
           "to",
           "$proper_name$Molech,",
           "something",
