@@ -105,7 +105,7 @@ export function bible_glyph_chapter_psa116() {
           "and",
           "$ruler;",
           "our",
-          "$fire",
+          "$heart_on_fire",
           "is",
           "full",
           "of",
