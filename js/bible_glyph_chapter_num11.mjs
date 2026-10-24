@@ -44,7 +44,7 @@ export function bible_glyph_chapter_num11() {
           "among",
           "them,",
           "and",
-          "fire",
+          "$fire",
           "from",
           "the",
           "$i_am",
