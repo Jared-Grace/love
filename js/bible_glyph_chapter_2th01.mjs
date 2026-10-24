@@ -216,7 +216,7 @@ export function bible_glyph_chapter_2th01() {
         words: [
           "$tray_in",
           "blazing",
-          "fire,",
+          "$fire,",
           "$hands_giving",
           "vengeance",
           "to",
