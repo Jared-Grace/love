@@ -125,7 +125,7 @@ export function bible_glyph_chapter_mic01() {
           "wax",
           "before",
           "the",
-          "fire,",
+          "$fire,",
           "like",
           "$water",
           "rushing",
