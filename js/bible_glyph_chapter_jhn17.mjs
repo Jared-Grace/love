@@ -91,7 +91,7 @@ export function bible_glyph_chapter_jhn17() {
           "the",
           "only",
           "true",
-          "$fire,",
+          "$heart_on_fire,",
           "$plus",
           "him",
           "whom",
