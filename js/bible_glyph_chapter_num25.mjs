@@ -47,7 +47,7 @@ export function bible_glyph_chapter_num25() {
           "$sacrifice",
           "for",
           "their",
-          "$fire.",
+          "$moai.",
           "And",
           "the",
           "$family",
@@ -56,7 +56,7 @@ export function bible_glyph_chapter_num25() {
           "$bowing",
           "to",
           "these",
-          "$fire.",
+          "$moai.",
         ],
       },
       {
