@@ -306,7 +306,7 @@ export function bible_glyph_chapter_isa01() {
           "$scroll",
           "of",
           "our",
-          "$fire,",
+          "$heart_on_fire,",
           "you",
           "$family",
           "of",
