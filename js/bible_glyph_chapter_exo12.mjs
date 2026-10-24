@@ -249,7 +249,7 @@ export function bible_glyph_chapter_exo12() {
           "roasted",
           "over",
           "the",
-          "fire,",
+          "$fire,",
           "its",
           "head",
           "and",
