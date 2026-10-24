@@ -87,7 +87,7 @@ export function bible_glyph_chapter_deu09() {
           "$sun",
           "$i_am",
           "your",
-          "$fire",
+          "$heart_on_fire",
           "goes",
           "across",
           "ahead",
