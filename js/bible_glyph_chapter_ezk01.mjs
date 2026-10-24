@@ -126,7 +126,7 @@ export function bible_glyph_chapter_ezk01() {
           "great",
           "cloud",
           "with",
-          "fire",
+          "$fire",
           "$hand_receiving",
           "back",
           "and",
@@ -148,7 +148,7 @@ export function bible_glyph_chapter_ezk01() {
           "out",
           "of",
           "the",
-          "fire.",
+          "$fire.",
         ],
       },
       {
