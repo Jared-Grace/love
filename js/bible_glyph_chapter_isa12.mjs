@@ -47,7 +47,7 @@ export function bible_glyph_chapter_isa12() {
         verse_number: 2,
         words: [
           "Surely",
-          "$fire",
+          "$heart_on_fire",
           "is",
           "my",
           "salvation;",
