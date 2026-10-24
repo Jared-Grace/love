@@ -700,7 +700,7 @@ export function bible_glyph_chapter_jdg06() {
           "unleavened",
           "bread.",
           "And",
-          "fire",
+          "$fire",
           "$walking+pointing_up",
           "$tray_out",
           "the",
