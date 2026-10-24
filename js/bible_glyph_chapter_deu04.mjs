@@ -445,7 +445,7 @@ export function bible_glyph_chapter_deu04() {
           "out",
           "of",
           "the",
-          "fire.",
+          "$fire.",
           "You",
           "$ear",
           "the",
