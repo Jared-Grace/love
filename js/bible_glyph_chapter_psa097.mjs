@@ -140,7 +140,7 @@ export function bible_glyph_chapter_psa097() {
           "Him,",
           "all",
           "you",
-          "$fire!",
+          "$moai!",
         ],
       },
       {
@@ -184,7 +184,7 @@ export function bible_glyph_chapter_psa097() {
           "far",
           "above",
           "all",
-          "$fire.",
+          "$moai.",
         ],
       },
       {
