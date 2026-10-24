@@ -417,7 +417,7 @@ export function bible_glyph_chapter_gen26() {
           "and",
           "the",
           "$proper_name$Philistines",
-          "$heart_on_fire",
+          "$face_steam+doing",
           "him.",
         ],
       },
