@@ -992,7 +992,7 @@ export function bible_glyph_chapter_jer07() {
           "$woman",
           "in",
           "the",
-          "fire,",
+          "$fire,",
           "something",
           "I",
           "$no_entry",
