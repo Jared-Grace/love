@@ -750,7 +750,7 @@ export function bible_glyph_chapter_deu31() {
           "turn",
           "to",
           "other",
-          "gods",
+          "$moai",
           "and",
           "$kneeling+doing",
           "them,",
