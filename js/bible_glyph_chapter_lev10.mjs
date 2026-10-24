@@ -47,7 +47,7 @@ export function bible_glyph_chapter_lev10() {
         verse_number: 2,
         words: [
           "So",
-          "fire",
+          "$fire",
           "came",
           "out",
           "from",
