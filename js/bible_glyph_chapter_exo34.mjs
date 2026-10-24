@@ -463,7 +463,7 @@ export function bible_glyph_chapter_exo34() {
           "is",
           "a",
           "$face_steam+describing",
-          "$moai.",
+          "$heart_on_fire.",
         ],
       },
       {
