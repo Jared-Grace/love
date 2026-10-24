@@ -101,7 +101,7 @@ export function bible_glyph_chapter_pro02() {
           "the",
           "knowledge",
           "of",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
@@ -316,7 +316,7 @@ export function bible_glyph_chapter_pro02() {
           "$covenant",
           "of",
           "her",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
