@@ -649,7 +649,7 @@ export function bible_glyph_chapter_jud01() {
           "them",
           "$tray_out",
           "the",
-          "fire;",
+          "$fire;",
           "to",
           "still",
           "others",
