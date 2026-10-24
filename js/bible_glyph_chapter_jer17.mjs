@@ -940,7 +940,7 @@ export function bible_glyph_chapter_jer17() {
           "kindle",
           "an",
           "unquenchable",
-          "fire",
+          "$fire",
           "in",
           "its",
           "gates",
