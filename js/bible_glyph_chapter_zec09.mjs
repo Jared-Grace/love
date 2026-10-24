@@ -121,7 +121,7 @@ export function bible_glyph_chapter_zec09() {
           "be",
           "consumed",
           "by",
-          "fire.",
+          "$fire.",
         ],
       },
       {
