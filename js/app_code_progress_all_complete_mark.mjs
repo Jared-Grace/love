@@ -1,23 +1,21 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_ids } from "./app_code_lesson_ids.mjs";
 import { app_code_progress_lessons_complete_mark } from "./app_code_progress_lessons_complete_mark.mjs";
-import { app_code_review_numbers } from "./app_code_review_numbers.mjs";
+import { app_code_checkpoints } from "./app_code_checkpoints.mjs";
 import { app_code_review_complete_record } from "./app_code_review_complete_record.mjs";
+import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
-import { app_code_milestone_ids } from "./app_code_milestone_ids.mjs";
 export function app_code_progress_all_complete_mark(context) {
   "Writes every lesson down as finished on this learner's own disk, for somebody who has already learnt this elsewhere and wants the list to say so rather than working back through it.";
   "It marks rather than counts: a record gains a complete flag, and the quizzes it has actually answered are left exactly as they were. So the mark is honest about being a mark, and a learner who later answers a quiz for real still has that answer written down under it.";
   arguments_assert(arguments, 1);
   let lesson_ids = app_code_lesson_ids();
   app_code_progress_lessons_complete_mark(context, lesson_ids);
-  ("the reviews are marked too, and are filed apart from the lessons, so they are written down by their own name here. Marking only the lessons would leave a list of finished lessons with unfinished reviews standing between them, which says the learner has work left to do that they have just said they have not.");
-  let numbers = app_code_review_numbers();
-  function each_number(number) {
+  ("the checkpoints - reviews and milestones - are marked too, and are filed apart from the lessons, so they are written down by their own key here. Marking only the lessons would leave a list of finished lessons with unfinished checkpoints standing between them, which says the learner has work left to do that they have just said they have not.");
+  let checkpoints = app_code_checkpoints();
+  function each_checkpoint(checkpoint) {
+    let number = property_get(checkpoint, "key");
     app_code_review_complete_record(context, number);
   }
-  each(numbers, each_number);
-  ("2026-10-24, at the human's asking: the milestones are marked too, filed under their ids in the same list of finished checkpoints, for the reason the reviews are - a milestone left open says there is work left that the learner has just said there is not");
-  let ids = app_code_milestone_ids();
-  each(ids, each_number);
+  each(checkpoints, each_checkpoint);
 }
