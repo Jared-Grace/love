@@ -603,7 +603,7 @@ export function bible_glyph_chapter_deu29() {
           "$i_am",
           "anger",
           "and",
-          "$heart_on_fire",
+          "$face_steam",
           "will",
           "burn",
           "against",
