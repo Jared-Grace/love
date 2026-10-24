@@ -685,7 +685,7 @@ export function bible_glyph_chapter_gen26() {
           "I",
           "am",
           "the",
-          "$fire",
+          "$heart_on_fire",
           "of",
           "$father+map",
           "your",
