@@ -552,7 +552,7 @@ export function bible_glyph_chapter_exo14() {
           "the",
           "$angel",
           "of",
-          "$fire,",
+          "$heart_on_fire,",
           "who",
           "had",
           "$walking",
