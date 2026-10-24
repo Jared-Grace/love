@@ -1249,7 +1249,7 @@ export function bible_glyph_chapter_1ki18() {
         words: [
           "Then",
           "the",
-          "fire",
+          "$fire",
           "of",
           "the",
           "$i_am",
