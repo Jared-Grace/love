@@ -523,7 +523,7 @@ export function bible_glyph_chapter_num09() {
           "would",
           "appear",
           "like",
-          "fire",
+          "$fire",
           "at",
           "$night.",
         ],
