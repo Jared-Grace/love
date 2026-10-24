@@ -153,7 +153,7 @@ export function bible_glyph_chapter_psa029() {
           "with",
           "flames",
           "of",
-          "fire.",
+          "$fire.",
         ],
       },
       {
