@@ -712,7 +712,7 @@ export function bible_glyph_chapter_gen04() {
           "him",
           "$proper_name$Seth,",
           "saying,",
-          "$fire",
+          "$heart_on_fire",
           "has",
           "granted",
           "me",
