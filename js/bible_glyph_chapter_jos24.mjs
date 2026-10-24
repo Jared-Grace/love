@@ -574,7 +574,7 @@ export function bible_glyph_chapter_jos24() {
           "to",
           "$kneeling+doing",
           "other",
-          "gods.",
+          "$moai.",
         ],
       },
       {
