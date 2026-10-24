@@ -216,7 +216,7 @@ export function bible_glyph_chapter_isa01() {
           "are",
           "burned",
           "with",
-          "fire.",
+          "$fire.",
           "Foreigners",
           "$eating",
           "your",
