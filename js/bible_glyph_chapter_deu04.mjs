@@ -862,7 +862,7 @@ export function bible_glyph_chapter_deu04() {
           "consuming",
           "fire,",
           "a",
-          "$heart_on_fire",
+          "$face_steam+describing",
           "$heart_on_fire.",
         ],
       },
