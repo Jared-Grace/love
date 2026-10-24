@@ -713,7 +713,7 @@ export function bible_glyph_chapter_jos24() {
           "and",
           "$kneeling+doing",
           "foreign",
-          "gods,",
+          "$moai,",
           "He",
           "will",
           "$turn_back",
