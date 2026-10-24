@@ -471,7 +471,7 @@ export function bible_glyph_chapter_job01() {
           "and",
           "$speech,",
           "The",
-          "fire",
+          "$fire",
           "of",
           "$heart_on_fire",
           "fell",
