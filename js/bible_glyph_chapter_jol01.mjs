@@ -596,7 +596,7 @@ export function bible_glyph_chapter_jol01() {
           "dried",
           "up,",
           "and",
-          "fire",
+          "$fire",
           "has",
           "consumed",
           "the",
