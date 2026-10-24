@@ -224,7 +224,7 @@ export function bible_glyph_chapter_lev06() {
           "$morning,",
           "and",
           "the",
-          "fire",
+          "$fire",
           "of",
           "$altar",
           "must",
