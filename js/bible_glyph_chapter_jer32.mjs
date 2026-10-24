@@ -1014,7 +1014,7 @@ export function bible_glyph_chapter_jer32() {
           "offerings",
           "to",
           "other",
-          "$fire.",
+          "$moai.",
         ],
       },
       {
