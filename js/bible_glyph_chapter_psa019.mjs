@@ -19,7 +19,7 @@ export function bible_glyph_chapter_psa019() {
           "the",
           "$star",
           "of",
-          "$fire;",
+          "$heart_on_fire;",
           "the",
           "skies",
           "proclaim",
