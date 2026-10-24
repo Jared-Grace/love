@@ -1099,7 +1099,7 @@ export function bible_glyph_chapter_jdg06() {
           "Baal",
           "is",
           "a",
-          "$fire,",
+          "$moai,",
           "let",
           "him",
           "contend",
