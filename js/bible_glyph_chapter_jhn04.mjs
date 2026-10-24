@@ -210,7 +210,7 @@ export function bible_glyph_chapter_jhn04() {
           "the",
           "gift",
           "of",
-          "$fire",
+          "$heart_on_fire",
           "$plus",
           "who",
           "it",
@@ -589,7 +589,7 @@ export function bible_glyph_chapter_jhn04() {
       {
         verse_number: 24,
         words: [
-          "$fire",
+          "$heart_on_fire",
           "is",
           "$wind,",
           "$plus",
