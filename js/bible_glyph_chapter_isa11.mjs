@@ -420,7 +420,7 @@ export function bible_glyph_chapter_isa11() {
         words: [
           "Then",
           "the",
-          "$heart_on_fire",
+          "$face_steam",
           "of",
           "$fruit",
           "will",
@@ -437,7 +437,7 @@ export function bible_glyph_chapter_isa11() {
           "$fruit",
           "will",
           "$no_entry",
-          "$heart_on_fire",
+          "$face_steam+doing",
           "$hands_raised+proper_name,",
           "$no_entry",
           "$hands_raised+proper_name",
