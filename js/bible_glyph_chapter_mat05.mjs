@@ -150,7 +150,7 @@ export function bible_glyph_chapter_mat05() {
           "$pointing_back",
           "will",
           "$eye",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
@@ -167,7 +167,7 @@ export function bible_glyph_chapter_mat05() {
           "called",
           "$son",
           "of",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
@@ -919,7 +919,7 @@ export function bible_glyph_chapter_mat05() {
           "$pointing",
           "it",
           "is",
-          "$fire",
+          "$heart_on_fire",
           "$throne;",
         ],
       },
