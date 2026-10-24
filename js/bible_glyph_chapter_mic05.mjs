@@ -141,7 +141,7 @@ export function bible_glyph_chapter_mic05() {
           "the",
           "$i_am",
           "His",
-          "$fire.",
+          "$heart_on_fire.",
           "And",
           "they",
           "will",
