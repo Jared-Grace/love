@@ -417,7 +417,7 @@ export function bible_glyph_chapter_rut02() {
           "the",
           "$i_am,",
           "the",
-          "$fire",
+          "$heart_on_fire",
           "of",
           "$wrestling+heart_on_fire,",
           "under",
