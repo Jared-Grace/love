@@ -829,7 +829,7 @@ export function bible_glyph_chapter_ezk37() {
           "will",
           "be",
           "their",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
@@ -961,7 +961,7 @@ export function bible_glyph_chapter_ezk37() {
           "will",
           "be",
           "their",
-          "$fire,",
+          "$heart_on_fire,",
           "and",
           "they",
           "will",
