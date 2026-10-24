@@ -792,7 +792,7 @@ export function bible_glyph_chapter_exo35() {
           "the",
           "$wind",
           "of",
-          "$fire,",
+          "$heart_on_fire,",
           "with",
           "$wisdom,",
           "ability",
