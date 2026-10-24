@@ -302,7 +302,7 @@ export function bible_glyph_chapter_lev06() {
         verse_number: 12,
         words: [
           "The",
-          "fire",
+          "$fire",
           "on",
           "$altar",
           "shall",
@@ -322,7 +322,7 @@ export function bible_glyph_chapter_lev06() {
           "$tree",
           "to",
           "the",
-          "fire,",
+          "$fire,",
           "arrange",
           "$burnt_offering",
           "on",
