@@ -307,7 +307,7 @@ export function bible_glyph_chapter_hab01() {
           "$lightning",
           "is",
           "their",
-          "god.",
+          "$moai.",
         ],
       },
       {
