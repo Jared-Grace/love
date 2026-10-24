@@ -1153,7 +1153,7 @@ export function bible_glyph_chapter_2ki17() {
           "$kneeling+doing",
           "their",
           "own",
-          "gods",
+          "$moai",
           "according",
           "to",
           "the",
