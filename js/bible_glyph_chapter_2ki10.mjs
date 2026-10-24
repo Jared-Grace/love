@@ -1164,7 +1164,7 @@ export function bible_glyph_chapter_2ki10() {
           "the",
           "$i_am,",
           "the",
-          "$fire",
+          "$heart_on_fire",
           "of",
           "$wrestling+heart_on_fire,",
           "with",
