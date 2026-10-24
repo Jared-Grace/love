@@ -341,7 +341,7 @@ export function bible_glyph_chapter_1ki20() {
           "$speech.",
           "May",
           "my",
-          "gods",
+          "$moai",
           "$hammer+doing",
           "so",
           "to",
