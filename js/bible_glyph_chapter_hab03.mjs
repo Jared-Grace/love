@@ -492,7 +492,7 @@ export function bible_glyph_chapter_hab03() {
           "rejoice",
           "in",
           "the",
-          "$fire",
+          "$heart_on_fire",
           "of",
           "my",
           "salvation!",
