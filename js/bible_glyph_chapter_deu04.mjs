@@ -1327,7 +1327,7 @@ export function bible_glyph_chapter_deu04() {
           "$eye",
           "His",
           "great",
-          "fire,",
+          "$fire,",
           "and",
           "you",
           "$ear",
@@ -1336,7 +1336,7 @@ export function bible_glyph_chapter_deu04() {
           "out",
           "of",
           "the",
-          "fire.",
+          "$fire.",
         ],
       },
       {
