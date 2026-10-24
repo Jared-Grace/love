@@ -443,7 +443,7 @@ export function bible_glyph_chapter_deu06() {
           "you,",
           "is",
           "a",
-          "$heart_on_fire",
+          "$face_steam+describing",
           "$heart_on_fire.",
           "Otherwise",
           "the",
