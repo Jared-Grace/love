@@ -592,7 +592,7 @@ export function bible_glyph_chapter_num06() {
           "it",
           "on",
           "the",
-          "fire",
+          "$fire",
           "under",
           "the",
           "peace",
