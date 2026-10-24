@@ -260,7 +260,7 @@ export function bible_glyph_chapter_isa09() {
           "and",
           "forevermore.",
           "The",
-          "$heart_on_fire",
+          "$face_steam",
           "of",
           "the",
           "$i_am",
