@@ -315,7 +315,7 @@ export function bible_glyph_chapter_1ki19() {
           "have",
           "been",
           "very",
-          "$heart_on_fire",
+          "$face_steam+doing",
           "for",
           "the",
           "$i_am,",
