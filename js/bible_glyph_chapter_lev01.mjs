@@ -338,7 +338,7 @@ export function bible_glyph_chapter_lev01() {
           "is",
           "on",
           "the",
-          "fire",
+          "$fire",
           "of",
           "$altar.",
         ],
