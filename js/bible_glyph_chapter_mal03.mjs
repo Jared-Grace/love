@@ -87,7 +87,7 @@ export function bible_glyph_chapter_mal03() {
           "like",
           "a",
           "refiner",
-          "fire,",
+          "$fire,",
           "like",
           "a",
           "launderer",
