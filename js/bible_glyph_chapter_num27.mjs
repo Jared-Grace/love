@@ -426,7 +426,7 @@ export function bible_glyph_chapter_num27() {
           "May",
           "$i_am,",
           "the",
-          "$fire",
+          "$heart_on_fire",
           "of",
           "the",
           "$wind",
