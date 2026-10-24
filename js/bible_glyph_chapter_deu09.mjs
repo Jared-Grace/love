@@ -563,7 +563,7 @@ export function bible_glyph_chapter_deu09() {
           "was",
           "blazing",
           "with",
-          "fire,",
+          "$fire,",
           "with",
           "the",
           "two",
