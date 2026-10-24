@@ -606,7 +606,7 @@ export function bible_glyph_chapter_mrk11() {
         "“Have",
         "$anchor",
         "in",
-        "$fire.",
+        "$heart_on_fire.",
       ],
     },
     {
