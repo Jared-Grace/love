@@ -387,7 +387,7 @@ export function bible_glyph_chapter_lev02() {
           "roasted",
           "on",
           "the",
-          "fire",
+          "$fire",
           "as",
           "$grain_offering.",
         ],
