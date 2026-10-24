@@ -211,7 +211,7 @@ export function bible_glyph_chapter_psa046() {
           "shields",
           "in",
           "the",
-          "fire.",
+          "$fire.",
         ],
       },
       {
