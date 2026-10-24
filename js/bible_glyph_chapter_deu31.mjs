@@ -563,7 +563,7 @@ export function bible_glyph_chapter_deu31() {
           "with",
           "the",
           "foreign",
-          "gods",
+          "$moai",
           "of",
           "the",
           "$earth",
