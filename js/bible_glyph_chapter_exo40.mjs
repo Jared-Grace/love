@@ -912,7 +912,7 @@ export function bible_glyph_chapter_exo40() {
           "by",
           "day,",
           "and",
-          "fire",
+          "$fire",
           "was",
           "in",
           "the",
