@@ -112,7 +112,7 @@ export function bible_glyph_chapter_job28() {
           "below",
           "as",
           "by",
-          "fire.",
+          "$fire.",
         ],
       },
       {
