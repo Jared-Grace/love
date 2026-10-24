@@ -1047,7 +1047,7 @@ export function bible_glyph_chapter_deu12() {
           "the",
           "$i_am",
           "your",
-          "$fire",
+          "$heart_on_fire",
           "in",
           "this",
           "way,",
