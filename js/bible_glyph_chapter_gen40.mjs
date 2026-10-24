@@ -220,7 +220,7 @@ export function bible_glyph_chapter_gen40() {
           "interpretations",
           "belong",
           "to",
-          "$fire?",
+          "$heart_on_fire?",
           "Tell",
           "them",
           "to",
