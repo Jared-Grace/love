@@ -187,7 +187,7 @@ export function bible_glyph_chapter_lev01() {
           "$priest",
           "$hands_giving",
           "a",
-          "fire",
+          "$fire",
           "on",
           "$altar",
           "and",
@@ -195,7 +195,7 @@ export function bible_glyph_chapter_lev01() {
           "$tree",
           "on",
           "the",
-          "fire.",
+          "$fire.",
         ],
       },
       {
