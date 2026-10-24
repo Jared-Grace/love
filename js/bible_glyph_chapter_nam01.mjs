@@ -409,7 +409,7 @@ export function bible_glyph_chapter_nam01() {
           "$house",
           "of",
           "your",
-          "$fire;",
+          "$moai;",
           "I",
           "will",
           "prepare",
