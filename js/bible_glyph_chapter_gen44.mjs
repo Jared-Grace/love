@@ -443,7 +443,7 @@ export function bible_glyph_chapter_gen44() {
           "we",
           "$ruler+doing",
           "ourselves?",
-          "$fire",
+          "$heart_on_fire",
           "has",
           "found",
           "the",
