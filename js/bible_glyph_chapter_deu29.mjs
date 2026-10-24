@@ -509,7 +509,7 @@ export function bible_glyph_chapter_deu29() {
           "the",
           "$i_am",
           "our",
-          "$fire",
+          "$heart_on_fire",
           "to",
           "$walking",
           "and",
