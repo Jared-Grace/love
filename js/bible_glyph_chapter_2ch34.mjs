@@ -956,7 +956,7 @@ export function bible_glyph_chapter_2ch34() {
           "incense",
           "to",
           "other",
-          "$fire,",
+          "$moai,",
           "that",
           "they",
           "might",
