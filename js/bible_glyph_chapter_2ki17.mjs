@@ -228,7 +228,7 @@ export function bible_glyph_chapter_2ki17() {
           "the",
           "$i_am",
           "their",
-          "$fire,",
+          "$heart_on_fire,",
           "who",
           "had",
           "brought",
@@ -252,7 +252,7 @@ export function bible_glyph_chapter_2ki17() {
           "had",
           "worshiped",
           "other",
-          "$fire,",
+          "$moai,",
         ],
       },
       {
