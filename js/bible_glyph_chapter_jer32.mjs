@@ -982,7 +982,7 @@ export function bible_glyph_chapter_jer32() {
           "set",
           "it",
           "on",
-          "fire;",
+          "$fire;",
           "they",
           "will",
           "burn",
