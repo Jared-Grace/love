@@ -884,7 +884,7 @@ export function bible_glyph_chapter_1ki18() {
           "he",
           "is",
           "a",
-          "$fire!",
+          "$moai!",
           "Perhaps",
           "he",
           "is",
