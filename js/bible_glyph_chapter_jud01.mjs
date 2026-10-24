@@ -252,7 +252,7 @@ export function bible_glyph_chapter_jud01() {
           "punishment",
           "of",
           "eternal",
-          "fire.",
+          "$fire.",
         ],
       },
       {
