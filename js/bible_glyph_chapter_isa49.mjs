@@ -130,7 +130,7 @@ export function bible_glyph_chapter_isa49() {
           "is",
           "with",
           "My",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
@@ -177,7 +177,7 @@ export function bible_glyph_chapter_isa49() {
           "$i_am,",
           "and",
           "My",
-          "$fire",
+          "$heart_on_fire",
           "is",
           "My",
           "strength",
