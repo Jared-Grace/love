@@ -1056,7 +1056,7 @@ export function bible_glyph_chapter_deu12() {
           "$hammer+doing",
           "for",
           "their",
-          "gods",
+          "$moai",
           "every",
           "abomination",
           "which",
@@ -1077,7 +1077,7 @@ export function bible_glyph_chapter_deu12() {
           "sacrifices",
           "to",
           "their",
-          "gods.",
+          "$moai.",
         ],
       },
       {
