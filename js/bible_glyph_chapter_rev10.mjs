@@ -49,7 +49,7 @@ export function bible_glyph_chapter_rev10() {
           "like",
           "pillars",
           "of",
-          "fire.",
+          "$fire.",
         ],
       },
       {
