@@ -685,7 +685,7 @@ export function bible_glyph_chapter_exo32() {
           "it",
           "in",
           "the",
-          "fire,",
+          "$fire,",
           "ground",
           "it",
           "to",
