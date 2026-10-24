@@ -390,7 +390,7 @@ export function bible_glyph_chapter_nam03() {
         words: [
           "There",
           "the",
-          "fire",
+          "$fire",
           "will",
           "devour",
           "you;",
