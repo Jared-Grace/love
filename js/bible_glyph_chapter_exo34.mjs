@@ -487,7 +487,7 @@ export function bible_glyph_chapter_exo34() {
           "themselves",
           "to",
           "their",
-          "gods",
+          "$moai",
           "and",
           "sacrifice",
           "to",
