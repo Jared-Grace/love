@@ -531,7 +531,7 @@ export function bible_glyph_chapter_deu11() {
           "to",
           "$kneeling+doing",
           "other",
-          "$fire",
+          "$moai",
           "and",
           "to",
           "$bowing",
