@@ -620,7 +620,7 @@ export function bible_glyph_chapter_2ki22() {
           "incense",
           "to",
           "other",
-          "gods,",
+          "$moai,",
           "that",
           "they",
           "might",
