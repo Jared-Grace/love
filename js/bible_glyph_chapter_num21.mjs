@@ -148,7 +148,7 @@ export function bible_glyph_chapter_num21() {
           "and",
           "spoke",
           "against",
-          "$fire",
+          "$heart_on_fire",
           "and",
           "against",
           "$fishing_pole+proper_name.",
