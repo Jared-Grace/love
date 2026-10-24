@@ -25,7 +25,7 @@ export function bible_glyph_chapter_gen30() {
           "for",
           "$hand+foot,",
           "she",
-          "$heart_on_fire",
+          "$face_steam+doing",
           "her",
           "$sister,",
           "and",
