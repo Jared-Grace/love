@@ -353,7 +353,7 @@ export function bible_glyph_chapter_isa43() {
           "Before",
           "Me",
           "$no_entry",
-          "god",
+          "$moai",
           "was",
           "formed,",
           "and",
