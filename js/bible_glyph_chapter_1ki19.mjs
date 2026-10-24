@@ -509,7 +509,7 @@ export function bible_glyph_chapter_1ki19() {
           "the",
           "$i_am,",
           "the",
-          "$fire",
+          "$heart_on_fire",
           "of",
           "Hosts,",
           "but",
