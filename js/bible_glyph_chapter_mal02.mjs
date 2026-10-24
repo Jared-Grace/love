@@ -380,7 +380,7 @@ export function bible_glyph_chapter_mal02() {
           "of",
           "a",
           "foreign",
-          "$fire.",
+          "$moai.",
         ],
       },
       {
