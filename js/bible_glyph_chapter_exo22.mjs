@@ -179,7 +179,7 @@ export function bible_glyph_chapter_exo22() {
         words: [
           "If",
           "a",
-          "fire",
+          "$fire",
           "breaks",
           "out",
           "and",
@@ -203,7 +203,7 @@ export function bible_glyph_chapter_exo22() {
           "who",
           "started",
           "the",
-          "fire",
+          "$fire",
           "must",
           "make",
           "full",
