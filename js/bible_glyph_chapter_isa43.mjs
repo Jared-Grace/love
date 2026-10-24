@@ -86,7 +86,7 @@ export function bible_glyph_chapter_isa43() {
           "$walking",
           "through",
           "the",
-          "fire,",
+          "$fire,",
           "you",
           "will",
           "$no_entry",
