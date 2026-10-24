@@ -302,7 +302,7 @@ export function bible_glyph_chapter_deu18() {
           "daughter",
           "in",
           "the",
-          "fire,",
+          "$fire,",
           "who",
           "practices",
           "divination",
