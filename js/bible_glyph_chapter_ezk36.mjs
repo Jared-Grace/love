@@ -986,7 +986,7 @@ export function bible_glyph_chapter_ezk36() {
           "will",
           "be",
           "your",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
