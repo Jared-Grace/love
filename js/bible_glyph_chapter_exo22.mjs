@@ -618,7 +618,7 @@ export function bible_glyph_chapter_exo22() {
           "sacrifices",
           "to",
           "any",
-          "$fire",
+          "$moai",
           "other",
           "than",
           "$i_am",
