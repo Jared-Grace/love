@@ -39,7 +39,7 @@ export function bible_glyph_chapter_exo32() {
           "Come,",
           "$hammer+doing",
           "us",
-          "gods",
+          "$moai",
           "who",
           "will",
           "$walking",
