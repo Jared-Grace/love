@@ -269,7 +269,7 @@ export function bible_glyph_chapter_luk15() {
         "the",
         "$angel",
         "of",
-        "$fire",
+        "$heart_on_fire",
         "over",
         "one",
         "$bow+doer",
