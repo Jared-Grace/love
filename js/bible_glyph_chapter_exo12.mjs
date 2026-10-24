@@ -361,7 +361,7 @@ export function bible_glyph_chapter_exo12() {
           "against",
           "all",
           "the",
-          "$fire",
+          "$moai",
           "of",
           "$clamp+proper_name.",
           "I",
