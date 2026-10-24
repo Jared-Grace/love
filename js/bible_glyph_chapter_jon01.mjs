@@ -150,7 +150,7 @@ export function bible_glyph_chapter_jon01() {
           "to",
           "his",
           "own",
-          "$fire.",
+          "$moai.",
           "And",
           "they",
           "threw",
