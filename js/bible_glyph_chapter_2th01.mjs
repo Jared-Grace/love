@@ -225,7 +225,7 @@ export function bible_glyph_chapter_2th01() {
           "do",
           "$no_entry",
           "$lightbulb",
-          "$fire",
+          "$heart_on_fire",
           "$plus",
           "do",
           "$no_entry",
