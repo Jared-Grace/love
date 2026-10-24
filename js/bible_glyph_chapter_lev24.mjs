@@ -405,7 +405,7 @@ export function bible_glyph_chapter_lev24() {
           "$man_beard,",
           "$speech+thumbs_down",
           "his",
-          "$fire,",
+          "$heart_on_fire,",
           "he",
           "shall",
           "$lifting",
@@ -582,7 +582,7 @@ export function bible_glyph_chapter_lev24() {
           "am",
           "$i_am",
           "your",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
