@@ -485,7 +485,7 @@ export function bible_glyph_chapter_jol03() {
           "the",
           "$i_am",
           "your",
-          "$fire,",
+          "$heart_on_fire,",
           "who",
           "dwells",
           "in",
