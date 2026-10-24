@@ -1,7 +1,7 @@
 export function bible_glyph_chapter_exo01() {
   "Exodus 1, drawn in pictures, so that a person who cannot read the letters can still follow it. Joseph dies, a new king who never knew him puts Israel to forced labor, and two midwives refuse to kill the baby boys. Twenty two lines.";
   "THREE LINES IN A ROW ON THIS PAGE HAVE NOTHING ON THEM AT ALL. The second, third and fourth are the roll call of the brothers, eleven names one after another, and a name is the one thing this collection never draws. It is the longest run of empty lines anywhere in these chapters. A reader following pictures sees the family arrive in Egypt in the first line and then meets three blank rows before anything happens again, and those three rows are the entire nation being listed by name.";
-  "AND THE TWO PEOPLE THE CHAPTER IS ACTUALLY ABOUT ARE NEVER DRAWN ONCE. The word midwife or midwives turns up seven times in eight lines, and there is no picture for a midwife. Shiphrah and Puah get a name tag on the line that names them, which says these are names, not which names. Everything they do is drawn around them: the fear of God gets a flame, the refusing gets a crossing-out, the boys get a child. The women themselves are plain letters every single time, in the one chapter of Exodus where the whole story turns on what two women decided.";
+  "AND THE TWO PEOPLE THE CHAPTER IS ACTUALLY ABOUT ARE NEVER DRAWN ONCE. The word midwife or midwives turns up seven times in eight lines, and there is no picture for a midwife. Shiphrah and Puah get a name tag on the line that names them, which says these are names, not which names. Everything they do is drawn around them: the fear of God gets $glyph heart_on_fire, the refusing gets a crossing-out, the boys get a child. The women themselves are plain letters every single time, in the one chapter of Exodus where the whole story turns on what two women decided.";
   "AND THE ORDER TO DROWN THE BABIES IS THE ONE VIOLENT LINE WITH NO VIOLENCE IN IT. The sixteenth line says if it is a son, kill him, and that gets a skull. The twenty second line says every son born to the Hebrews you must throw into the Nile, and it gets a family, a son, a woman and a sprouting shoot, and not one of those is the throwing or the river or the baby. There is no picture for a river, no picture for a baby, and no picture for drowning. So the mildest reading of the page is the last line, and the last line is the worst thing in the chapter.";
   "AND THE SLAVERY IS ALMOST ENTIRELY INVISIBLE TOO. Taskmasters, forced labor, brick, mortar, work in the fields, Pithom and Rameses are all plain. The eleventh line keeps one picture, a city, out of a sentence that is otherwise the whole machinery of Egyptian state labor. The twelfth keeps one and the fourteenth keeps one. Four lines about a nation being worked to death carry five pictures between them.";
   "AND THE HAMMER FOR MAKING HAD TO COME OFF THE ONE KIND THING GOD DOES HERE. The twenty first line says because the midwives feared God, He gave them families of their own, and the Hebrew verb under gave is asah, to make. A hammer on the word gave would teach a reader that a hammer means give, and the reader has already met that hammer twice in this chapter meaning do. The same line lost a house as well, because a house sitting on the word families would teach that a house means a family, and this collection already has a separate picture for a family. That picture came off the first line for the same reason.";
@@ -38,15 +38,33 @@ export function bible_glyph_chapter_exo01() {
       },
       {
         verse_number: 2,
-        words: ["$eyes+son,", "$ear+proper_name,", "$handshake+proper_name,", "and", "$hands_raised+proper_name;"],
+        words: [
+          "$eyes+son,",
+          "$ear+proper_name,",
+          "$handshake+proper_name,",
+          "and",
+          "$hands_raised+proper_name;",
+        ],
       },
       {
         verse_number: 3,
-        words: ["$proper_name$Issachar,", "$proper_name$Zebulun,", "and", "$son+right_arrow;"],
+        words: [
+          "$proper_name$Issachar,",
+          "$proper_name$Zebulun,",
+          "and",
+          "$son+right_arrow;",
+        ],
       },
       {
         verse_number: 4,
-        words: ["$proper_name$Dan", "and", "$proper_name$Naphtali;", "$proper_name$Gad", "and", "$proper_name$Asher."],
+        words: [
+          "$proper_name$Dan",
+          "and",
+          "$proper_name$Naphtali;",
+          "$proper_name$Gad",
+          "and",
+          "$proper_name$Asher.",
+        ],
       },
       {
         verse_number: 5,
