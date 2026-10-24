@@ -539,7 +539,7 @@ export function bible_glyph_chapter_2ki02() {
           "the",
           "$i_am,",
           "the",
-          "$fire",
+          "$heart_on_fire",
           "of",
           "$heart_on_fire+i_am?",
           "he",
