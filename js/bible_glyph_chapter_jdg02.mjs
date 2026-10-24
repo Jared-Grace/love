@@ -663,7 +663,7 @@ export function bible_glyph_chapter_jdg02() {
           "$walking",
           "after",
           "other",
-          "gods",
+          "$moai",
           "to",
           "$kneeling+doing",
           "them",
