@@ -549,7 +549,7 @@ export function bible_glyph_chapter_isa09() {
           "burns",
           "like",
           "a",
-          "fire",
+          "$fire",
           "that",
           "consumes",
           "the",
