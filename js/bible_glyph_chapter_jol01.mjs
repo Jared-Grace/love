@@ -557,7 +557,7 @@ export function bible_glyph_chapter_jol01() {
           "I",
           "call.",
           "For",
-          "fire",
+          "$fire",
           "has",
           "consumed",
           "the",
