@@ -57,7 +57,7 @@ export function bible_glyph_chapter_jos24() {
           "the",
           "$i_am,",
           "the",
-          "$fire",
+          "$heart_on_fire",
           "of",
           "$wrestling+heart_on_fire,",
           "$speech:",
@@ -81,7 +81,7 @@ export function bible_glyph_chapter_jos24() {
           "they",
           "$kneeling+doing",
           "other",
-          "$fire.",
+          "$moai.",
         ],
       },
       {
