@@ -129,7 +129,7 @@ export function bible_glyph_chapter_isa53() {
           "struck",
           "down",
           "by",
-          "$fire,",
+          "$heart_on_fire,",
           "and",
           "afflicted.",
         ],
