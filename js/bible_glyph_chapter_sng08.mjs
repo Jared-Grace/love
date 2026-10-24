@@ -181,7 +181,7 @@ export function bible_glyph_chapter_sng08() {
           "as",
           "$skull,",
           "its",
-          "$heart_on_fire",
+          "$face_steam",
           "as",
           "unrelenting",
           "as",
