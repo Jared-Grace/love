@@ -99,7 +99,7 @@ export function bible_glyph_chapter_jol02() {
           "Before",
           "them",
           "a",
-          "fire",
+          "$fire",
           "$eating,",
           "and",
           "behind",
