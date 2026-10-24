@@ -40,7 +40,7 @@ export function bible_glyph_chapter_nam01() {
           "jealous",
           "and",
           "avenging",
-          "$fire;",
+          "$heart_on_fire;",
           "the",
           "$i_am",
           "is",
