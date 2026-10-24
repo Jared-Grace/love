@@ -194,7 +194,7 @@ export function bible_glyph_chapter_hos06() {
           "the",
           "knowledge",
           "of",
-          "$fire",
+          "$heart_on_fire",
           "rather",
           "than",
           "burnt",
