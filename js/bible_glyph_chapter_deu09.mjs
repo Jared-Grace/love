@@ -766,7 +766,7 @@ export function bible_glyph_chapter_deu09() {
           "it",
           "in",
           "the",
-          "fire.",
+          "$fire.",
           "Then",
           "I",
           "crushed",
