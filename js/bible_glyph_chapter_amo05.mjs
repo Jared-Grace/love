@@ -746,7 +746,7 @@ export function bible_glyph_chapter_amo05() {
           "idols,",
           "your",
           "star",
-          "$fire,",
+          "$moai,",
           "which",
           "you",
           "$hammer+doing",
