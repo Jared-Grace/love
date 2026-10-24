@@ -192,7 +192,7 @@ export function bible_glyph_chapter_ezk36() {
           "in",
           "My",
           "burning",
-          "$heart_on_fire",
+          "$face_steam",
           "I",
           "have",
           "$mouth",
