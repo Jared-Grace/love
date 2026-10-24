@@ -577,7 +577,7 @@ export function bible_glyph_chapter_mat05() {
           "subject",
           "to",
           "the",
-          "fire",
+          "$fire",
           "of",
           "hell.",
         ],
