@@ -334,7 +334,7 @@ export function bible_glyph_chapter_2sa05() {
           "for",
           "the",
           "$i_am",
-          "$fire",
+          "$heart_on_fire",
           "of",
           "Hosts",
           "was",
