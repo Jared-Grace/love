@@ -349,7 +349,7 @@ export function bible_glyph_chapter_num18() {
           "portion",
           "$tray_out",
           "the",
-          "fire.",
+          "$fire.",
           "From",
           "all",
           "the",
