@@ -328,7 +328,7 @@ export function bible_glyph_chapter_isa64() {
           "been",
           "burned",
           "with",
-          "fire,",
+          "$fire,",
           "and",
           "all",
           "that",
