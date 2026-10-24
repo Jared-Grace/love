@@ -589,7 +589,7 @@ export function bible_glyph_chapter_2ki17() {
           "daughters",
           "in",
           "the",
-          "fire,",
+          "$fire,",
           "and",
           "practiced",
           "divination",
