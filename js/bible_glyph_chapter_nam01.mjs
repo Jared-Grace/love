@@ -183,7 +183,7 @@ export function bible_glyph_chapter_nam01() {
           "poured",
           "out",
           "like",
-          "fire;",
+          "$fire;",
           "even",
           "rocks",
           "are",
