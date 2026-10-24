@@ -303,7 +303,7 @@ export function bible_glyph_chapter_gen39() {
           "and",
           "$bow+doing",
           "against",
-          "$fire?",
+          "$heart_on_fire?",
         ],
       },
       {
