@@ -258,7 +258,7 @@ export function bible_glyph_chapter_lev06() {
           "ashes",
           "that",
           "the",
-          "fire",
+          "$fire",
           "has",
           "consumed",
           "of",
