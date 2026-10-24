@@ -563,7 +563,7 @@ export function bible_glyph_chapter_deu32() {
         words: [
           "They",
           "have",
-          "$heart_on_fire",
+          "$face_steam+doing",
           "Me",
           "by",
           "that",
@@ -581,7 +581,7 @@ export function bible_glyph_chapter_deu32() {
           "So",
           "I",
           "will",
-          "$heart_on_fire",
+          "$face_steam+doing",
           "them",
           "by",
           "those",
