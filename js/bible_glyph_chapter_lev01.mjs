@@ -484,7 +484,7 @@ export function bible_glyph_chapter_lev01() {
           "$tree",
           "on",
           "the",
-          "fire.",
+          "$fire.",
           "It",
           "$burnt_offering,",
           "a",
