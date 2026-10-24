@@ -987,7 +987,7 @@ export function bible_glyph_chapter_deu01() {
           "$road,",
           "in",
           "the",
-          "fire",
+          "$fire",
           "by",
           "$night",
           "and",
