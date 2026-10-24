@@ -480,7 +480,7 @@ export function bible_glyph_chapter_jer01() {
           "incense",
           "to",
           "other",
-          "gods,",
+          "$moai,",
           "and",
           "$bowing",
           "the",
