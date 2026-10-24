@@ -716,7 +716,7 @@ export function bible_glyph_chapter_exo13() {
           "the",
           "pillar",
           "of",
-          "fire",
+          "$fire",
           "by",
           "$night",
           "left",
