@@ -76,7 +76,7 @@ export function bible_glyph_chapter_lev19() {
           "or",
           "$hammer+doing",
           "molten",
-          "$fire",
+          "$moai",
           "for",
           "yourselves.",
           "I",
@@ -84,7 +84,7 @@ export function bible_glyph_chapter_lev19() {
           "the",
           "$i_am",
           "your",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
