@@ -58,7 +58,7 @@ export function bible_glyph_chapter_psa100() {
           "$i_am,",
           "He",
           "is",
-          "$fire.",
+          "$heart_on_fire.",
           "It",
           "is",
           "He",
