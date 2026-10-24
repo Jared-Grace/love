@@ -124,7 +124,7 @@ export function bible_glyph_chapter_psa008() {
           "lower",
           "than",
           "the",
-          "$fire;",
+          "$heart_on_fire;",
           "You",
           "crowned",
           "him",
