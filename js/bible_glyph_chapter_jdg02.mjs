@@ -128,7 +128,7 @@ export function bible_glyph_chapter_jdg02() {
           "sides,",
           "and",
           "their",
-          "gods",
+          "$moai",
           "will",
           "be",
           "a",
