@@ -398,7 +398,7 @@ export function bible_glyph_chapter_deu09() {
           "out",
           "of",
           "the",
-          "fire",
+          "$fire",
           "on",
           "the",
           "$sun",
