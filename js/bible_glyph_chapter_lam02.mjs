@@ -130,7 +130,7 @@ export function bible_glyph_chapter_lam02() {
           "like",
           "a",
           "flaming",
-          "fire",
+          "$fire",
           "that",
           "consumes",
           "everything",
