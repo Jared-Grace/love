@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
 import { list_size } from "./list_size.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
@@ -79,6 +79,11 @@ export function app_code_program_step_line_press_words(lines, trace, index, i) {
       }
       return wrong;
     }
+  }
+  if (done && null_is(reason)) {
+    ("2026-10-24, at the human's asking that every wrong press says why: a line pressed once every line due has run. Words picked by the human from the ones offered");
+    reason = "program_done";
+    reason_words = ["The program is complete - no line is left to run"];
   }
   if (null_is(reason)) {
     return null;

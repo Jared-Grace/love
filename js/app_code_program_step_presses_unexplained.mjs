@@ -1,15 +1,16 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
-import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_program_step_correction } from "./app_code_program_step_correction.mjs";
+import { not } from "./not.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { app_code_program_trace } from "./app_code_program_trace.mjs";
-import { less_than } from "./less_than.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
 import { list_size } from "./list_size.mjs";
+import { less_than } from "./less_than.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_code_program_step_line_press_words } from "./app_code_program_step_line_press_words.mjs";
 import { null_is } from "./null_is.mjs";
@@ -38,9 +39,14 @@ export function app_code_program_step_presses_unexplained() {
     list_add(seen, code);
     let lines = text_split_newline(code);
     let trace = app_code_program_trace(code);
-    for (let index = 0; less_than(index, list_size(trace)); index++) {
-      let object2 = list_get(trace, index);
-      let due = property_get(object2, "line");
+    ("the last step looked at is the one after the program has finished, where no line is due and every press is wrong");
+    for (let index = 0; less_than_equal(index, list_size(trace)); index++) {
+      let due = -1;
+      let b2 = list_size(trace);
+      if (less_than(index, b2)) {
+        let object2 = list_get(trace, index);
+        due = property_get(object2, "line");
+      }
       for (let i = 0; less_than(i, list_size(lines)); i++) {
         if (equal(i, due)) {
           continue;
