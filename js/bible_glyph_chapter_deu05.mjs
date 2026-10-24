@@ -248,7 +248,7 @@ export function bible_glyph_chapter_deu05() {
           "$heart_on_fire,",
           "am",
           "a",
-          "$heart_on_fire",
+          "$face_steam+describing",
           "$heart_on_fire,",
           "visiting",
           "the",
