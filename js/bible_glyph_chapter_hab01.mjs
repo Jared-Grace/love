@@ -321,7 +321,7 @@ export function bible_glyph_chapter_hab01() {
           "O",
           "$i_am,",
           "my",
-          "$fire,",
+          "$heart_on_fire,",
           "my",
           "$sparkle",
           "One?",
