@@ -690,19 +690,19 @@ export function bible_glyph_chapter_exo02() {
           "bondage",
           "$walking+pointing_up",
           "to",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
         verse_number: 24,
         words: [
           "So",
-          "$fire",
+          "$heart_on_fire",
           "$ear",
           "their",
           "groaning,",
           "and",
-          "$fire",
+          "$heart_on_fire",
           "remembered",
           "His",
           "$covenant",
@@ -716,7 +716,7 @@ export function bible_glyph_chapter_exo02() {
       {
         verse_number: 25,
         words: [
-          "$fire",
+          "$heart_on_fire",
           "$eye",
           "the",
           "Israelites",
