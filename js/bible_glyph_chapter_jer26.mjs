@@ -476,7 +476,7 @@ export function bible_glyph_chapter_jer26() {
           "the",
           "$i_am",
           "your",
-          "$fire,",
+          "$heart_on_fire,",
           "so",
           "that",
           "the",
@@ -604,7 +604,7 @@ export function bible_glyph_chapter_jer26() {
           "the",
           "$i_am",
           "our",
-          "$fire!",
+          "$heart_on_fire!",
         ],
       },
       {
