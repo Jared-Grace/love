@@ -341,7 +341,7 @@ export function bible_glyph_chapter_isa26() {
           "O",
           "$i_am",
           "our",
-          "$fire,",
+          "$heart_on_fire,",
           "other",
           "$crown$s",
           "besides",
