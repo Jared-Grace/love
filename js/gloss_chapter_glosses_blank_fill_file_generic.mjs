@@ -24,6 +24,7 @@ import { gloss_passage_entries_set } from "./gloss_passage_entries_set.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
 import { file_delete } from "./file_delete.mjs";
+import { gloss_write_files_blanks_from_store_generic } from "./gloss_write_files_blanks_from_store_generic.mjs";
 export async function gloss_chapter_glosses_blank_fill_file_generic(
   chapter_code,
   fn,
@@ -116,11 +117,17 @@ export async function gloss_chapter_glosses_blank_fill_file_generic(
   let contents = json_format_to(chapter);
   await file_overwrite_uncached(path, contents);
   await file_delete(file_path);
+  ("The hand-off files are given the same meanings, because the stale repair lets a hand-off file win over the store, and a file still holding the blank would write it back over the meaning.");
+  let handed_off = await gloss_write_files_blanks_from_store_generic(
+    chapter_code,
+    fn,
+  );
   let r = {
     chapter_code,
     verses: keys_named,
     filled,
     taken_away: file_path,
+    handed_off,
   };
   return r;
 }
