@@ -85,7 +85,7 @@ export function bible_glyph_chapter_hos14() {
           "again",
           "$speech",
           "Our",
-          "$fire",
+          "$moai",
           "to",
           "the",
           "work",
