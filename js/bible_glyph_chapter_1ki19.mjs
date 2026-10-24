@@ -273,7 +273,7 @@ export function bible_glyph_chapter_1ki19() {
           "the",
           "$mountain",
           "of",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
