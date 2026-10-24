@@ -231,7 +231,7 @@ export function bible_glyph_chapter_gen25() {
           "$skull",
           "of",
           "$father+map,",
-          "$fire",
+          "$heart_on_fire",
           "$speech+thumbs_up",
           "$proper_name$Isaac",
           "his",
