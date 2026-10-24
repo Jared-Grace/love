@@ -556,7 +556,7 @@ export function bible_glyph_chapter_deu04() {
           "out",
           "of",
           "the",
-          "fire",
+          "$fire",
           "at",
           "$proper_name$Horeb.",
         ],
