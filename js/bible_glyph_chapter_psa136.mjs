@@ -409,7 +409,7 @@ export function bible_glyph_chapter_psa136() {
           "$hands_raised",
           "to",
           "the",
-          "$fire",
+          "$heart_on_fire",
           "of",
           "$sky!",
           "His",
