@@ -90,7 +90,7 @@ export function bible_glyph_chapter_num11() {
           "$proper_name$Taberah,",
           "because",
           "the",
-          "fire",
+          "$fire",
           "of",
           "the",
           "$i_am",
