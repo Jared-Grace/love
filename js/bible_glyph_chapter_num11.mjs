@@ -951,7 +951,7 @@ export function bible_glyph_chapter_num11() {
           "$speech,",
           "Are",
           "you",
-          "$heart_on_fire",
+          "$face_steam+doing",
           "on",
           "my",
           "account?",
