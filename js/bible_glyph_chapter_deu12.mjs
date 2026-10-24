@@ -103,7 +103,7 @@ export function bible_glyph_chapter_deu12() {
           "idols",
           "of",
           "their",
-          "gods,",
+          "$moai,",
           "and",
           "wipe",
           "out",
