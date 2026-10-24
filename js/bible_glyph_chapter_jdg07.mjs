@@ -541,7 +541,7 @@ export function bible_glyph_chapter_jdg07() {
           "$man_beard",
           "of",
           "Israel.",
-          "$fire",
+          "$heart_on_fire",
           "has",
           "$hands_giving",
           "$proper_name$Midian",
