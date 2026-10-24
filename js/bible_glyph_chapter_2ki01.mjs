@@ -542,7 +542,7 @@ export function bible_glyph_chapter_2ki01() {
         verse_number: 14,
         words: [
           "Behold,",
-          "fire",
+          "$fire",
           "has",
           "come",
           "down",
