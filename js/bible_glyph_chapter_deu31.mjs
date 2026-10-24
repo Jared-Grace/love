@@ -670,7 +670,7 @@ export function bible_glyph_chapter_deu31() {
           "turning",
           "to",
           "other",
-          "gods.",
+          "$moai.",
         ],
       },
       {
