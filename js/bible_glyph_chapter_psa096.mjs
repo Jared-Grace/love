@@ -84,7 +84,7 @@ export function bible_glyph_chapter_psa096() {
           "feared",
           "above",
           "all",
-          "$fire.",
+          "$moai.",
         ],
       },
       {
@@ -93,7 +93,7 @@ export function bible_glyph_chapter_psa096() {
           "For",
           "all",
           "the",
-          "$fire",
+          "$moai",
           "of",
           "the",
           "$family",
