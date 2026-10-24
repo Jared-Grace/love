@@ -76,7 +76,7 @@ export function bible_glyph_chapter_mic04() {
           "$house",
           "of",
           "the",
-          "$fire",
+          "$heart_on_fire",
           "of",
           "$hand+foot.",
           "He",
