@@ -107,7 +107,7 @@ export function bible_glyph_chapter_num23() {
         verse_number: 4,
         words: [
           "And",
-          "$fire",
+          "$heart_on_fire",
           "met",
           "with",
           "him,",
@@ -227,7 +227,7 @@ export function bible_glyph_chapter_num23() {
           "curse",
           "those",
           "whom",
-          "$fire",
+          "$heart_on_fire",
           "has",
           "$no_entry",
           "cursed?",
@@ -540,7 +540,7 @@ export function bible_glyph_chapter_num23() {
       {
         verse_number: 19,
         words: [
-          "$fire",
+          "$heart_on_fire",
           "is",
           "$no_entry",
           "a",
@@ -614,7 +614,7 @@ export function bible_glyph_chapter_num23() {
           "The",
           "$i_am",
           "their",
-          "$fire",
+          "$heart_on_fire",
           "is",
           "with",
           "them,",
@@ -632,7 +632,7 @@ export function bible_glyph_chapter_num23() {
       {
         verse_number: 22,
         words: [
-          "$fire",
+          "$heart_on_fire",
           "brought",
           "them",
           "out",
@@ -673,7 +673,7 @@ export function bible_glyph_chapter_num23() {
           "What",
           "great",
           "things",
-          "$fire",
+          "$heart_on_fire",
           "has",
           "done.",
         ],
@@ -774,7 +774,7 @@ export function bible_glyph_chapter_num23() {
           "the",
           "$eyes",
           "of",
-          "$fire",
+          "$heart_on_fire",
           "that",
           "you",
           "curse",
