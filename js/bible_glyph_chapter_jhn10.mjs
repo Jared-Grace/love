@@ -823,7 +823,7 @@ export function bible_glyph_chapter_jhn10() {
           "$person,",
           "$hammer",
           "Yourself",
-          "$fire.",
+          "$heart_on_fire.",
         ],
       },
       {
@@ -902,7 +902,7 @@ export function bible_glyph_chapter_jhn10() {
           "the",
           "$son",
           "of",
-          "$fire?",
+          "$heart_on_fire?",
         ],
       },
       {
