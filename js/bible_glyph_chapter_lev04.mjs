@@ -333,7 +333,7 @@ export function bible_glyph_chapter_lev04() {
           "on",
           "a",
           "$tree",
-          "fire",
+          "$fire",
           "on",
           "the",
           "ash",
