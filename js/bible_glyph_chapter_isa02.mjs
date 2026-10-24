@@ -92,7 +92,7 @@ export function bible_glyph_chapter_isa02() {
           "$house",
           "of",
           "the",
-          "$fire",
+          "$heart_on_fire",
           "of",
           "$hand+foot.",
           "He",
