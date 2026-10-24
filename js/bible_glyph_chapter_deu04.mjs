@@ -1006,7 +1006,7 @@ export function bible_glyph_chapter_deu04() {
           "you",
           "will",
           "$kneeling+doing",
-          "$fire",
+          "$moai",
           "made",
           "by",
           "the",
