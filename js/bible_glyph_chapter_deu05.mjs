@@ -739,7 +739,7 @@ export function bible_glyph_chapter_deu05() {
           "the",
           "$i_am",
           "our",
-          "$fire",
+          "$heart_on_fire",
           "any",
           "longer,",
           "we",
