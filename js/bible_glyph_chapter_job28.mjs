@@ -438,7 +438,7 @@ export function bible_glyph_chapter_job28() {
         verse_number: 23,
         words: [
           "But",
-          "$fire",
+          "$heart_on_fire",
           "understands",
           "its",
           "$road,",
