@@ -111,7 +111,7 @@ export function bible_glyph_chapter_isa64() {
           "has",
           "seen",
           "any",
-          "$fire",
+          "$heart_on_fire",
           "besides",
           "You,",
           "who",
