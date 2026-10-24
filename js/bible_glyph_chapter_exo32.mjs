@@ -830,7 +830,7 @@ export function bible_glyph_chapter_exo32() {
           "it",
           "into",
           "the",
-          "fire,",
+          "$fire,",
           "out",
           "came",
           "this",
