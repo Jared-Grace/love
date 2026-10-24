@@ -370,7 +370,7 @@ export function bible_glyph_chapter_2ki01() {
           "a",
           "$man_beard",
           "of",
-          "$fire,",
+          "$heart_on_fire,",
           "may",
           "fire",
           "come",
