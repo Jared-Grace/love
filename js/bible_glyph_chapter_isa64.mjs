@@ -38,7 +38,7 @@ export function bible_glyph_chapter_isa64() {
         verse_number: 2,
         words: [
           "as",
-          "fire",
+          "$fire",
           "kindles",
           "the",
           "brushwood",
