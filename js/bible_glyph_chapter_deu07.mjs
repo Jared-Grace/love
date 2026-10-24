@@ -182,7 +182,7 @@ export function bible_glyph_chapter_deu07() {
           "idols",
           "in",
           "the",
-          "fire.",
+          "$fire.",
         ],
       },
       {
