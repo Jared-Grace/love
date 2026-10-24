@@ -686,7 +686,7 @@ export function bible_glyph_chapter_exo13() {
           "a",
           "pillar",
           "of",
-          "fire",
+          "$fire",
           "to",
           "give",
           "them",
