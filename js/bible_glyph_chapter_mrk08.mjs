@@ -868,7 +868,7 @@ export function bible_glyph_chapter_mrk08() {
           "the",
           "things",
           "of",
-          "$fire",
+          "$heart_on_fire",
           "but",
           "the",
           "things",
