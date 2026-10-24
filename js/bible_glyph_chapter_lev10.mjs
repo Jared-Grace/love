@@ -201,7 +201,7 @@ export function bible_glyph_chapter_lev10() {
           "may",
           "mourn",
           "the",
-          "fire",
+          "$fire",
           "that",
           "$i_am",
           "has",
