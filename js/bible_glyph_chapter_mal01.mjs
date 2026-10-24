@@ -317,7 +317,7 @@ export function bible_glyph_chapter_mal01() {
           "the",
           "favor",
           "of",
-          "$fire.",
+          "$heart_on_fire.",
           "Will",
           "He",
           "be",
