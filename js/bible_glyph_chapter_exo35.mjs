@@ -84,7 +84,7 @@ export function bible_glyph_chapter_exo35() {
           "$no_entry",
           "light",
           "a",
-          "fire",
+          "$fire",
           "in",
           "any",
           "of",
