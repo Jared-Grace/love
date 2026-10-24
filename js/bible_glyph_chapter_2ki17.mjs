@@ -1316,7 +1316,7 @@ export function bible_glyph_chapter_2ki17() {
           "$no_entry",
           "worship",
           "other",
-          "gods.",
+          "$moai.",
         ],
       },
       {
