@@ -50,7 +50,7 @@ export function bible_glyph_chapter_psa091() {
           "my",
           "fortress,",
           "my",
-          "$fire,",
+          "$heart_on_fire,",
           "in",
           "whom",
           "I",
