@@ -282,7 +282,7 @@ export function bible_glyph_chapter_dan01() {
         verse_number: 9,
         words: [
           "Now",
-          "$fire",
+          "$heart_on_fire",
           "had",
           "$hands_giving",
           "$proper_name$Daniel",
@@ -499,7 +499,7 @@ export function bible_glyph_chapter_dan01() {
           "these",
           "four",
           "$child",
-          "$fire",
+          "$heart_on_fire",
           "$hands_giving",
           "knowledge",
           "and",
