@@ -165,7 +165,7 @@ export function bible_glyph_chapter_1jn01() {
           "announce",
           "to",
           "you:",
-          "$fire",
+          "$heart_on_fire",
           "is",
           "$light,",
           "$plus",
