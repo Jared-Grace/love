@@ -277,7 +277,7 @@ export function bible_glyph_chapter_psa027() {
           "forsake",
           "me,",
           "O",
-          "$fire",
+          "$heart_on_fire",
           "of",
           "my",
           "salvation.",
