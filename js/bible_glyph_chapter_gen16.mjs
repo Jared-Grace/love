@@ -415,7 +415,7 @@ export function bible_glyph_chapter_gen16() {
           "You",
           "are",
           "the",
-          "$fire",
+          "$heart_on_fire",
           "who",
           "$eye",
           "me.",
