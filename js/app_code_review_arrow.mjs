@@ -1,11 +1,13 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
+import { app_code_review_next_word } from "./app_code_review_next_word.mjs";
 import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
+import { text_combine } from "./text_combine.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { app_shared_button_gap_above } from "./app_shared_button_gap_above.mjs";
-export function app_code_review_arrow(r2) {
-  arguments_assert(arguments, 1);
+export function app_code_review_arrow(r2, context) {
+  arguments_assert(arguments, 2);
   let skip_button = property_get(r2, "skip_button");
   let go_next = property_get(r2, "go_next");
   let queue = property_get(r2, "queue");
@@ -19,10 +21,10 @@ export function app_code_review_arrow(r2) {
   let back_button = property_get(r2, "back_button");
   if (has_next) {
     let arrow = emoji_arrow_right();
-    let next_text = text_combine_middle_space_nb(
-      arrow,
-      "Skip this review and go to the next lesson",
-    );
+    ("the button says where it goes: to the milestone under the same lesson where there is one, as the way on does");
+    let next_word = app_code_review_next_word(context);
+    let right = text_combine("Skip this review and go to the next ", next_word);
+    let next_text = text_combine_middle_space_nb(arrow, right);
     skip_button = app_shared_button_wide(g, next_text, go_next);
     app_shared_button_gap_above(skip_button);
   }
