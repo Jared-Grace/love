@@ -2629,6 +2629,7 @@ export function permission_grant_names() {
     fn_name("lyric_video_transcript_around"),
     fn_name("downloads_video_frames_at_write"),
     fn_name("youtube_video_delete_replaced_private_lyric_video"),
+    fn_name("psalms_songs_folder_channel_compare"),
   ];
   return names;
 }
