@@ -19,13 +19,13 @@ import { greater_than_equal } from "./greater_than_equal.mjs";
 import { add } from "./add.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_code_review_seed_to_exercise } from "./app_code_review_seed_to_exercise.mjs";
+import { list_insert } from "./list_insert.mjs";
+import { list_add } from "./list_add.mjs";
 import { app_code_review_show_success } from "./app_code_review_show_success.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 import { list_remove_at } from "./list_remove_at.mjs";
 import { not } from "./not.mjs";
 import { app_code_review_seed_fresh } from "./app_code_review_seed_fresh.mjs";
-import { list_insert } from "./list_insert.mjs";
-import { list_add } from "./list_add.mjs";
 import { app_code_review_persist } from "./app_code_review_persist.mjs";
 import { app_code_review_hide_success } from "./app_code_review_hide_success.mjs";
 import { app_code_review_exercise } from "./app_code_review_exercise.mjs";
@@ -116,6 +116,14 @@ export function app_code_review_present_fn_present(
     progress_draw(position, total);
     let seed = list_get(queue, cursor);
     let exercise = app_code_review_seed_to_exercise(seed);
+    ("where each fresh copy goes after a miss, one place per copy - the count handed to the quiz is read off this list, so what the learner is told is added cannot disagree with what is put back");
+    function place_next(copy) {
+      list_insert(queue, cursor, copy);
+    }
+    function place_end(copy) {
+      list_add(queue, copy);
+    }
+    let places = [place_next, place_end];
     async function on_correct(clean) {
       app_code_review_show_success(success_container);
       await sleep_success_color();
@@ -126,10 +134,11 @@ export function app_code_review_present_fn_present(
         ("2026-10-21, at the human's asking: the first copy comes right after, while the mistake is fresh, and the second at the end, to see that it stuck after a gap. Not picked: both at the end, as before. The removed quiz's place, cursor, now holds the quiz that came after it, so a copy put there is the very next one shown");
         let lesson_id = property_get(seed, "lesson_id");
         let kind_index = property_get(seed, "kind_index");
-        let requeued = app_code_review_seed_fresh(lesson_id, kind_index);
-        let requeued_again = app_code_review_seed_fresh(lesson_id, kind_index);
-        list_insert(queue, cursor, requeued);
-        list_add(queue, requeued_again);
+        function each_place(place) {
+          let copy = app_code_review_seed_fresh(lesson_id, kind_index);
+          place(copy);
+        }
+        each(places, each_place);
       }
       app_code_review_persist(context, key, passed, queue);
       present();
@@ -137,7 +146,14 @@ export function app_code_review_present_fn_present(
     function on_incorrect() {
       app_code_review_hide_success(success_container);
     }
-    app_code_review_exercise(c, exercise, on_correct, on_incorrect, 2);
+    let added_count = list_size(places);
+    app_code_review_exercise(
+      c,
+      exercise,
+      on_correct,
+      on_incorrect,
+      added_count,
+    );
   }
   return present;
 }
