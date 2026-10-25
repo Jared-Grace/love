@@ -4353,6 +4353,31 @@ def find_grep_list_while_read(command):
     return GREP_LIST_WHILE_READ_RE.search(command) is not None
 
 
+AI_RESULT_NEWEST_RE = re.compile(
+    r"\bls\s+(?:-[a-zA-Z]*\s+)*-[a-zA-Z]*t[a-zA-Z]*\b[^|;&]*ai_result_"
+)
+
+
+def find_ai_result_newest(command):
+    """True when `command` lists the dispatcher's filed answers newest first
+    (`ls -t gitignore/ai_result_*`) to find the one a call just wrote - which
+    picks up a peer's answer whenever a peer finished in between."""
+    return AI_RESULT_NEWEST_RE.search(command) is not None
+
+
+def ai_result_newest_deny_reason():
+    return (
+        "The newest gitignore/ai_result_*.json is whoever finished last, and "
+        "peers write there all the time - so `ls -t ... | head -1` can hand "
+        "back a peer's answer, and a wrong reading looks exactly like a right "
+        "one. Every `node scripts/ai.mjs` call prints the path of its own "
+        "filed answer on its last line: run each call as its own Bash call "
+        "and read that path (or read the answer it prints, which is whole "
+        "when short). Never send the call to /dev/null and then go looking "
+        "for what it wrote."
+    )
+
+
 def grep_list_while_read_deny_reason():
     return (
         "`read` holds no rule, so a `grep -l ... | while read f` loop always "
@@ -5770,6 +5795,11 @@ def main():
     # Same placement and reason. See find_grep_list_while_read.
     if find_grep_list_while_read(command):
         return decide("deny", grep_list_while_read_deny_reason())
+
+    # A filed answer found by "newest first", which may be a peer's. See
+    # find_ai_result_newest.
+    if find_ai_result_newest(command):
+        return decide("deny", ai_result_newest_deny_reason())
 
     # A call some granted function already makes with these exact inputs.
     # After the allow decision, so it only ever turns a prompt into the
