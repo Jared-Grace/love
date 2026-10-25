@@ -8,6 +8,8 @@ import { app_code_review_button_unfinished } from "./app_code_review_button_unfi
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
 import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { app_code_review_next_word } from "./app_code_review_next_word.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 export function app_code_review_c(context, root) {
   arguments_assert(arguments, 2);
@@ -29,10 +31,9 @@ export function app_code_review_c(context, root) {
   let explain = property_get(checkpoint, "explain");
   if (list_empty_not_is(explain) && property_get(r3, "has_next")) {
     let left = emoji_arrow_right();
-    let text = text_combine_middle_space_nb(
-      left,
-      "Skip this milestone and go to the next lesson",
-    );
+    let right = app_code_review_next_word(context);
+    let right2 = text_combine("Skip this milestone and go to the next ", right);
+    let text = text_combine_middle_space_nb(left, right2);
     html_text_set(skip_button, text);
   }
   let progress = property_get(r4, "progress");
