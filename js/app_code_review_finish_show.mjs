@@ -51,7 +51,7 @@ export function app_code_review_finish_show({
     html_parent_append(c, restart_button);
   }
   function render_continue(continue_parent) {
-    let r = app_code_review_render_continue(continue_parent, go_next);
+    let r = app_code_review_render_continue(continue_parent, go_next, context);
     return r;
   }
   app_code_advance_or_no_more(c, has_next, render_continue);

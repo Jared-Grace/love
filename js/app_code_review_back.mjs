@@ -1,7 +1,9 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_get } from "./list_get.mjs";
+import { app_code_review_milestone_next_or_null } from "./app_code_review_milestone_next_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
+import { app_code_milestone_go } from "./app_code_milestone_go.mjs";
 import { app_code_lesson_go } from "./app_code_lesson_go.mjs";
 import { app_code_review_persist } from "./app_code_review_persist.mjs";
 import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
@@ -23,8 +25,15 @@ export function app_code_review_back(r2, context) {
     next_lesson = list_get(lessons, next_index);
   }
   ("the way on from a review is the lesson straight after it, because the button says continue to the next lesson and goes where its word promises. It used to go to the next lesson the learner had NOT finished instead, so a learner could be carried past lessons with nothing on the page saying so; the unfinished one is now offered on a button of its own that says what it is, drawn where the review is finished");
-  has_next = null_not_is(next_lesson);
+  ("2026-10-25, at the human's asking: a milestone standing under the same lesson comes first, because the list of lessons draws it there - two milestones share a lesson, and the first one said there were no more lessons while the second was waiting");
+  let milestone_next = app_code_review_milestone_next_or_null(context);
+  let milestone_is = null_not_is(milestone_next);
+  has_next = null_not_is(next_lesson) || milestone_is;
   async function go_next() {
+    if (milestone_is) {
+      await app_code_milestone_go(context, milestone_next);
+      return;
+    }
     await app_code_lesson_go(next_lesson, context);
   }
   app_code_review_persist(context, key, passed, queue);
