@@ -740,7 +740,7 @@ export function bible_glyph_chapter_mrk05() {
         "flow",
         "of",
         "$blood",
-        "stopped,",
+        "$fallen_leaf+doing,",
         "$plus",
         "she",
         "$lightbulb",
