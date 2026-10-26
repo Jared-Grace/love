@@ -1130,7 +1130,7 @@ export function bible_glyph_chapter_1ki13() {
           "Lay",
           "my",
           "bones",
-          "beside",
+          "$children_crossing",
           "his",
           "bones.",
         ],
