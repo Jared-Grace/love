@@ -994,7 +994,7 @@ export function bible_glyph_chapter_ezk36() {
         words: [
           "I",
           "will",
-          "save",
+          "$rescue",
           "you",
           "from",
           "all",
