@@ -501,7 +501,7 @@ export function bible_glyph_chapter_mrk04() {
           "$plus",
           "it",
           "becomes",
-          "unfruitful.",
+          "$no_entry+fruit+describing.",
         ],
       },
       {
