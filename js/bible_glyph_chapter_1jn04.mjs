@@ -490,7 +490,7 @@ export function bible_glyph_chapter_1jn04() {
           "$flashlight",
           "$globe",
           "we",
-          "are",
+          "$link",
           "just",
           "like",
           "Him.",
