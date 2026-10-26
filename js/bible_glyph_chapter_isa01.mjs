@@ -735,7 +735,7 @@ export function bible_glyph_chapter_isa01() {
           "I",
           "will",
           "$away+doing",
-          "all",
+          "$all",
           "your",
           "impurities.",
         ],
