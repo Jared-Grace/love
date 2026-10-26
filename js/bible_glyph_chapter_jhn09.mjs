@@ -520,7 +520,7 @@ export function bible_glyph_chapter_jhn09() {
           "$lightbulb",
           "$pointing",
           "he",
-          "is",
+          "$link",
           "our",
           "$son",
           "$plus",
