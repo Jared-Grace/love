@@ -284,7 +284,7 @@ export function bible_glyph_chapter_mrk05() {
         "begged",
         "$pointing_back,",
         "$speech,",
-        "“Send",
+        "“$incoming_envelope",
         "us",
         "into",
         "the",
