@@ -638,7 +638,7 @@ export function bible_glyph_chapter_mat05() {
         verse_number: 25,
         words: [
           "$thumbs_up+brain+doing",
-          "quickly",
+          "$fast_forward+manner",
           "with",
           "$you",
           "adversary,",
