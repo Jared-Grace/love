@@ -597,7 +597,7 @@ export function bible_glyph_chapter_exo20() {
           "of",
           "earth,",
           "and",
-          "sacrifice",
+          "$sacrifice",
           "on",
           "it",
           "your",
