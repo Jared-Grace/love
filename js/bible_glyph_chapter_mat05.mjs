@@ -988,7 +988,7 @@ export function bible_glyph_chapter_mat05() {
           "be",
           "$no_entry.",
           "Anything",
-          "more",
+          "$spring+describing",
           "comes",
           "$tray_out",
           "the",
