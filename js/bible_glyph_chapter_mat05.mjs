@@ -816,7 +816,7 @@ export function bible_glyph_chapter_mat05() {
           "body",
           "$footprints+away",
           "into",
-          "hell.",
+          "$valley+proper_name.",
         ],
       },
       {
