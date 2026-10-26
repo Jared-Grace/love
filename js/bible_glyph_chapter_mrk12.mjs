@@ -842,7 +842,7 @@ export function bible_glyph_chapter_mrk12() {
         "other",
         "$scroll",
         "is",
-        "greater",
+        "$top",
         "than",
         "these.",
       ],
