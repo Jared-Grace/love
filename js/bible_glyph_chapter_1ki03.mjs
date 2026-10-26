@@ -192,7 +192,7 @@ export function bible_glyph_chapter_1ki03() {
           "my",
           "$father",
           "$two_hearts+proper_name,",
-          "because",
+          "$back+flashlight",
           "he",
           "$walking",
           "before",
