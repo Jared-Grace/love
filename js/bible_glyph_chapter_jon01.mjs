@@ -141,7 +141,7 @@ export function bible_glyph_chapter_jon01() {
           "The",
           "sailors",
           "were",
-          "afraid,",
+          "$fear+doing,",
           "and",
           "each",
           "$man_beard",
