@@ -316,7 +316,7 @@ export function bible_glyph_chapter_rut03() {
           "$woman,",
           "$no_entry",
           "be",
-          "afraid.",
+          "$fear+doing.",
           "I",
           "will",
           "$hammer+doing",
