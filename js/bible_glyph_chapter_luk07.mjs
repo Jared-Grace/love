@@ -331,7 +331,7 @@ export function bible_glyph_chapter_luk07() {
         "He",
         "approached",
         "the",
-        "gate",
+        "$door+city",
         "of",
         "the",
         "$city,",
