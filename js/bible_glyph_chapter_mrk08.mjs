@@ -381,7 +381,7 @@ export function bible_glyph_chapter_mrk08() {
           "$pin",
           "leaven",
           "of",
-          "the",
+          "$pin",
           "$proper_name$Pharisees",
           "$plus",
           "of",
