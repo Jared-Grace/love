@@ -58,7 +58,7 @@ export function bible_glyph_chapter_rut04() {
           "Then",
           "Boaz",
           "$hand_receiving",
-          "ten",
+          "$ten",
           "of",
           "the",
           "elders",
