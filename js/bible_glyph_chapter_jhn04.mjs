@@ -516,7 +516,7 @@ export function bible_glyph_chapter_jhn04() {
           "you",
           "will",
           "$bowing",
-          "the",
+          "$pin",
           "$father",
           "neither",
           "$tray_in",
