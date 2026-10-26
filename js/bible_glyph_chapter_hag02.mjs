@@ -449,7 +449,7 @@ export function bible_glyph_chapter_hag02() {
           "$back+flashlight",
           "they",
           "offer",
-          "there",
+          "$telescope",
           "is",
           "defiled.",
         ],
