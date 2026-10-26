@@ -544,7 +544,7 @@ export function bible_glyph_chapter_1ki13() {
           "he",
           "$speech,",
           "Are",
-          "you",
+          "$you",
           "the",
           "$man_beard",
           "of",
