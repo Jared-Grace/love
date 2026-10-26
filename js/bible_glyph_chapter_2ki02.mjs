@@ -270,7 +270,7 @@ export function bible_glyph_chapter_2ki02() {
           "a",
           "company",
           "of",
-          "fifty",
+          "$five+zero",
           "$man_beard",
           "from",
           "the",
