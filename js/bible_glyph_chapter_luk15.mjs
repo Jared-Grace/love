@@ -644,7 +644,7 @@ export function bible_glyph_chapter_luk15() {
         "$plus",
         "is",
         "alive",
-        "again.",
+        "$up_arrow+sprout+doing.",
         "He",
         "$link",
         "lost",
