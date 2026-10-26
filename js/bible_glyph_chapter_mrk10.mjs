@@ -1186,7 +1186,7 @@ export function bible_glyph_chapter_mrk10() {
       words: [
         "$plus",
         "$back+flashlight",
-        "wants",
+        "$shooting_star+doing",
         "to",
         "be",
         "first",
