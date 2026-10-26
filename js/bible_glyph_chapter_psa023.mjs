@@ -40,7 +40,7 @@ export function bible_glyph_chapter_psa023() {
           "He",
           "leads",
           "me",
-          "beside",
+          "$pointing_up",
           "quiet",
           "$water.",
         ],
