@@ -535,7 +535,7 @@ export function bible_glyph_chapter_gen02() {
           "the",
           "$i_am",
           "$heart_on_fire",
-          "formed",
+          "$artist",
           "every",
           "$sprout",
           "of",
