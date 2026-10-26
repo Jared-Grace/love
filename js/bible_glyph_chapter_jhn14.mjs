@@ -836,7 +836,7 @@ export function bible_glyph_chapter_jhn14() {
           "have",
           "told",
           "you",
-          "before",
+          "$clock+back",
           "it",
           "happens,",
           "so",
