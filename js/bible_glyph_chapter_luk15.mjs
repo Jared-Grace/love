@@ -200,7 +200,7 @@ export function bible_glyph_chapter_luk15() {
         "if",
         "she",
         "$wilted_flower",
-        "one",
+        "$one",
         "of",
         "them,",
         "does",
