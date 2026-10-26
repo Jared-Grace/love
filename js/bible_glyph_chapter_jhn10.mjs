@@ -226,7 +226,7 @@ export function bible_glyph_chapter_jhn10() {
         words: [
           "I",
           "$link",
-          "the",
+          "$pin",
           "$door.",
           "If",
           "anyone",
