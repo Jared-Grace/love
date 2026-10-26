@@ -701,7 +701,7 @@ export function bible_glyph_chapter_mrk05() {
         "she",
         "$footprints",
         "$tray_in",
-        "the",
+        "$pin",
         "$crowd",
         "behind",
         "Him",
