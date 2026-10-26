@@ -44,7 +44,7 @@ export function bible_glyph_chapter_jhn14() {
           "$link",
           "$multiply",
           "$pin+house.",
-          "If",
+          "$traffic_light",
           "it",
           "were",
           "$no_entry",
