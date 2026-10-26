@@ -323,7 +323,7 @@ export function bible_glyph_chapter_hag01() {
           "new",
           "$wine,",
           "and",
-          "oil,",
+          "$oil+new_button,",
           "and",
           "on",
           "whatever",
