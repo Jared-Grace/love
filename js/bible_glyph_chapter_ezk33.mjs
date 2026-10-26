@@ -938,7 +938,7 @@ export function bible_glyph_chapter_ezk33() {
           "You",
           "have",
           "relied",
-          "on",
+          "$pointing_up",
           "your",
           "$sword,",
           "you",
