@@ -789,7 +789,7 @@ export function bible_glyph_chapter_mrk08() {
           "$son",
           "of",
           "$person",
-          "must",
+          "$knot",
           "suffer",
           "many",
           "things",
