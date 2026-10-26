@@ -162,7 +162,7 @@ export function bible_glyph_chapter_psa136() {
           "struck",
           "down",
           "the",
-          "firstborn",
+          "$first_place+baby",
           "of",
           "$clamp+proper_name.",
           "His",
