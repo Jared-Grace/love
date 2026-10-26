@@ -652,7 +652,7 @@ export function bible_glyph_chapter_gen02() {
           "And",
           "from",
           "the",
-          "rib",
+          "$x_ray",
           "that",
           "the",
           "$i_am",
