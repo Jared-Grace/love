@@ -587,7 +587,7 @@ export function bible_glyph_chapter_luk15() {
         "the",
         "$father",
         "$speech",
-        "to",
+        "$toward",
         "$pointing_back",
         "$kneeling,",
         "Quick!",
