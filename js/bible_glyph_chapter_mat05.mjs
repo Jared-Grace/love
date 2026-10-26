@@ -329,7 +329,7 @@ export function bible_glyph_chapter_mat05() {
           "they",
           "set",
           "it",
-          "on",
+          "$pointing_up",
           "a",
           "stand,",
           "$plus",
