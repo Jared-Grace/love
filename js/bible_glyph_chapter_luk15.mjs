@@ -235,7 +235,7 @@ export function bible_glyph_chapter_luk15() {
         "her",
         "$heart_orange",
         "$plus",
-        "neighbors,",
+        "$houses+person,",
         "$speech,",
         "Rejoice",
         "with",
