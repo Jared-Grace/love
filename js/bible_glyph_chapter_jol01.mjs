@@ -309,7 +309,7 @@ export function bible_glyph_chapter_jol01() {
           "vinedressers,",
           "over",
           "the",
-          "wheat",
+          "$wheat",
           "and",
           "barley,",
           "because",
