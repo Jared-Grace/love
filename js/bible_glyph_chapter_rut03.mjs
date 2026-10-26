@@ -150,7 +150,7 @@ export function bible_glyph_chapter_rut03() {
           "I",
           "will",
           "$hammer+doing",
-          "everything",
+          "$all",
           "you",
           "$speech,",
           "Ruth",
