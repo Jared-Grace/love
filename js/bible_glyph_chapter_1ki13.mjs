@@ -513,7 +513,7 @@ export function bible_glyph_chapter_1ki13() {
           "they",
           "saddled",
           "the",
-          "donkey",
+          "$donkey",
           "for",
           "him,",
           "and",
