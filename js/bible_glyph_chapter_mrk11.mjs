@@ -448,7 +448,7 @@ export function bible_glyph_chapter_mrk11() {
         "$joker",
         "to",
         "carry",
-        "merchandise",
+        "$toolbox",
         "through",
         "the",
         "temple",
