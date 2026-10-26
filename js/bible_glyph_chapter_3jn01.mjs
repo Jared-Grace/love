@@ -349,7 +349,7 @@ export function bible_glyph_chapter_3jn01() {
       {
         verse_number: 14,
         words: [
-          "Instead",
+          "$curving_right",
           "I",
           "$crossed_fingers+doing",
           "to",
