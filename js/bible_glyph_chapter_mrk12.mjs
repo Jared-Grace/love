@@ -741,7 +741,7 @@ export function bible_glyph_chapter_mrk12() {
       verse_number: 28,
       words: [
         "$plus",
-        "one",
+        "$one",
         "of",
         "the",
         "scribes",
