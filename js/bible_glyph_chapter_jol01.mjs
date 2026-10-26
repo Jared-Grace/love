@@ -393,7 +393,7 @@ export function bible_glyph_chapter_jol01() {
           "the",
           "$grain_offering",
           "and",
-          "drink",
+          "$pouring_liquid+wine+thing",
           "offerings",
           "are",
           "withheld",
