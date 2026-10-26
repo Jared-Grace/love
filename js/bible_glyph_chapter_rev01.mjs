@@ -469,7 +469,7 @@ export function bible_glyph_chapter_rev01() {
           "the",
           "$voice",
           "of",
-          "many",
+          "$multiply",
           "$water.",
         ],
       },
