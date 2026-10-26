@@ -629,7 +629,7 @@ export function bible_glyph_chapter_mrk08() {
           "placed",
           "His",
           "$hand",
-          "on",
+          "$pointing_up",
           "$pointing_back",
           "eyes,",
           "$plus",
