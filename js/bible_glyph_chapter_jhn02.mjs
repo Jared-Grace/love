@@ -125,7 +125,7 @@ export function bible_glyph_chapter_jhn02() {
           "$curving_right",
           "six",
           "$stone+describing",
-          "water",
+          "$water+amphora",
           "jars",
           "were",
           "standing",
