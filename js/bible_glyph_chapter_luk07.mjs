@@ -34,7 +34,7 @@ export function bible_glyph_chapter_luk07() {
       words: [
         "There",
         "a",
-        "centurion",
+        "$input_numbers+all+clapper_board+doer",
         "had",
         "a",
         "$kneeling",
