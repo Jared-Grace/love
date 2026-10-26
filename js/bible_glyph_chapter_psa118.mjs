@@ -546,7 +546,7 @@ export function bible_glyph_chapter_psa118() {
           "shine",
           "upon",
           "us.",
-          "Bind",
+          "$knot",
           "the",
           "festal",
           "sacrifice",
