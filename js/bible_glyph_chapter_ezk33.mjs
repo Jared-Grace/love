@@ -807,7 +807,7 @@ export function bible_glyph_chapter_ezk33() {
           "He",
           "opened",
           "my",
-          "mouth",
+          "$face_with_open_mouth",
           "before",
           "he",
           "$footprints",
