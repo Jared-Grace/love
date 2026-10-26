@@ -159,7 +159,7 @@ export function bible_glyph_chapter_ezk36() {
           "and",
           "abandoned",
           "$city,",
-          "which",
+          "$back+flashlight",
           "have",
           "become",
           "a",
