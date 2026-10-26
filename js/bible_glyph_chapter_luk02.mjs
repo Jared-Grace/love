@@ -1317,7 +1317,7 @@ export function bible_glyph_chapter_luk02() {
         "$mother",
         "treasured",
         "up",
-        "all",
+        "$all",
         "these",
         "things",
         "$tray_in",
