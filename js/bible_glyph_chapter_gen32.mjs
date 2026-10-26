@@ -60,7 +60,7 @@ export function bible_glyph_chapter_gen32() {
           "ahead",
           "of",
           "him",
-          "to",
+          "$toward",
           "his",
           "$brother",
           "$proper_name$Esau",
