@@ -692,7 +692,7 @@ export function bible_glyph_chapter_luk15() {
         "$one",
         "of",
         "$pin",
-        "servants",
+        "$baby",
         "and",
         "asked",
         "what",
