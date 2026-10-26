@@ -311,7 +311,7 @@ export function bible_glyph_chapter_mrk10() {
         "$pointing_back.",
         "$information",
         "to",
-        "such",
+        "$flashlight+likeness",
         "as",
         "these",
         "belongs",
