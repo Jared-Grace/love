@@ -252,7 +252,7 @@ export function bible_glyph_chapter_jhn01() {
         verse_number: 13,
         words: [
           "children",
-          "born",
+          "$hatching_chick",
           "$no_entry",
           "$tray_out",
           "$blood,",
