@@ -121,7 +121,7 @@ export function bible_glyph_chapter_psa112() {
           "will",
           "$no_entry",
           "be",
-          "shaken",
+          "$vibration_mode+doing",
           "$hourglass;",
           "the",
           "$ruler",
