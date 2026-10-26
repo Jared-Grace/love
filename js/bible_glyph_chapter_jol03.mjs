@@ -214,7 +214,7 @@ export function bible_glyph_chapter_jol03() {
           "will",
           "$turn_back",
           "your",
-          "recompense",
+          "$turn_back+gift+thing",
           "upon",
           "your",
           "heads.",
