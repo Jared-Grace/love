@@ -235,7 +235,7 @@ export function bible_glyph_chapter_rut03() {
           "$bed+doing",
           "at",
           "his",
-          "feet",
+          "$foot+round_pushpin",
           "was",
           "a",
           "$woman!",
