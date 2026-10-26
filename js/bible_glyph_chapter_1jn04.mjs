@@ -456,7 +456,7 @@ export function bible_glyph_chapter_1jn04() {
           "abides",
           "in",
           "$heart_on_fire,",
-          "and",
+          "$plus",
           "$heart_on_fire",
           "in",
           "him.",
