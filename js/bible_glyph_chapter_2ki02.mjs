@@ -368,7 +368,7 @@ export function bible_glyph_chapter_2ki02() {
           "inherit",
           "a",
           "double",
-          "portion",
+          "$face_with_open_mouth",
           "of",
           "your",
           "$wind.",
