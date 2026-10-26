@@ -260,7 +260,7 @@ export function bible_glyph_chapter_mrk08() {
           "$footprints",
           "to",
           "the",
-          "district",
+          "$pizza",
           "of",
           "$proper_name$Dalmanutha.",
         ],
