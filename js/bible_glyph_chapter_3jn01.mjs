@@ -238,7 +238,7 @@ export function bible_glyph_chapter_3jn01() {
           "$thumbs_down",
           "$speech",
           "against",
-          "us.",
+          "$me.",
           "$plus",
           "$no_entry",
           "satisfied",
