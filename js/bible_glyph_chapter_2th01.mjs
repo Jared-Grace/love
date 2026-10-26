@@ -317,7 +317,7 @@ export function bible_glyph_chapter_2th01() {
           "will",
           "count",
           "you",
-          "worthy",
+          "$gold+doing",
           "of",
           "His",
           "calling,",
