@@ -627,7 +627,7 @@ export function bible_glyph_chapter_rev01() {
           "lampstands:",
           "The",
           "$seven",
-          "stars",
+          "$star_plain",
           "are",
           "the",
           "$angel",
