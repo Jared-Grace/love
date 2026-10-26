@@ -362,7 +362,7 @@ export function bible_glyph_chapter_jhn17() {
           "$pointing_back",
           "was",
           "lost",
-          "except",
+          "$traffic_light",
           "the",
           "$son",
           "of",
