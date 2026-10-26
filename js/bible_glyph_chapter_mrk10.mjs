@@ -465,7 +465,7 @@ export function bible_glyph_chapter_mrk10() {
         "$pointing_back,",
         "“$teacher,",
         "all",
-        "these",
+        "$flashlight",
         "I",
         "have",
         "kept",
