@@ -303,7 +303,7 @@ export function bible_glyph_chapter_deu26() {
           "$footprints",
           "us",
           "$toward",
-          "this",
+          "$flashlight",
           "$place",
           "and",
           "$hands_giving",
