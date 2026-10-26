@@ -532,7 +532,7 @@ export function bible_glyph_chapter_1jn04() {
         words: [
           "We",
           "$heart_red+doing",
-          "because",
+          "$pointing",
           "He",
           "first",
           "$heart_red+doing$d",
