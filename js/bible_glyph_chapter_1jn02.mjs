@@ -640,7 +640,7 @@ export function bible_glyph_chapter_1jn02() {
           "$plus",
           "$pointing",
           "$no_entry",
-          "lie",
+          "$lying_face",
           "comes",
           "$tray_out",
           "$pin",
