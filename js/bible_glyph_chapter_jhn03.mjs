@@ -672,7 +672,7 @@ export function bible_glyph_chapter_jhn03() {
           "$pointing_down+proper_name,",
           "the",
           "One",
-          "you",
+          "$you",
           "$witness+doing$ed",
           "about,",
           "look,",
