@@ -155,7 +155,7 @@ export function bible_glyph_chapter_ezk36() {
           "to",
           "the",
           "desolate",
-          "ruins",
+          "$desert+thing",
           "and",
           "abandoned",
           "$city,",
