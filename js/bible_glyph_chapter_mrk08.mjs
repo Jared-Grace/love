@@ -667,7 +667,7 @@ export function bible_glyph_chapter_mrk08() {
           "$footprints+tray_in",
           "back",
           "$toward+tray_in",
-          "the",
+          "$pin",
           "village.",
         ],
       },
