@@ -49,7 +49,7 @@ export function bible_glyph_chapter_jhn04() {
           "$cross",
           "$pointing_back",
           "who",
-          "baptized,",
+          "$diving_mask,",
           "but",
           "$pointing_back",
           "$learner),",
