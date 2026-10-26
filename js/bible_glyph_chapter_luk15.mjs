@@ -594,7 +594,7 @@ export function bible_glyph_chapter_luk15() {
         "$tray_out+shopping_cart",
         "the",
         "best",
-        "robe",
+        "$dress+crown",
         "$plus",
         "put",
         "it",
