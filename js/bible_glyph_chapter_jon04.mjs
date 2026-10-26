@@ -233,7 +233,7 @@ export function bible_glyph_chapter_jon04() {
           "a",
           "scorching",
           "east",
-          "wind,",
+          "$wind,",
           "and",
           "the",
           "$sun_with_face",
