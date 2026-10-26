@@ -529,7 +529,7 @@ export function bible_glyph_chapter_1ki03() {
           "had",
           "been",
           "a",
-          "dream.",
+          "$dream.",
           "So",
           "he",
           "$footprints",
