@@ -473,7 +473,7 @@ export function bible_glyph_chapter_1jn05() {
           "$bow,",
           "yet",
           "there",
-          "is",
+          "$link",
           "$bow",
           "that",
           "does",
