@@ -312,7 +312,7 @@ export function bible_glyph_chapter_jhn14() {
           "I",
           "am",
           "$tray_in",
-          "the",
+          "$pin",
           "$father",
           "$plus",
           "the",
