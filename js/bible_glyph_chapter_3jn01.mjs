@@ -84,7 +84,7 @@ export function bible_glyph_chapter_3jn01() {
           "I",
           "have",
           "$no_entry",
-          "greater",
+          "$top",
           "$smile",
           "than",
           "to",
