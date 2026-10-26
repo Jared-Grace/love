@@ -568,7 +568,7 @@ export function bible_glyph_chapter_rut04() {
           "your",
           "$person_other",
           "and",
-          "sustain",
+          "$package+hand+doing",
           "you",
           "in",
           "your",
