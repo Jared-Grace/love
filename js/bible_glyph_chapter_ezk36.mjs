@@ -824,7 +824,7 @@ export function bible_glyph_chapter_ezk36() {
           "am",
           "the",
           "$i_am,",
-          "declares",
+          "$microphone",
           "the",
           "$crown",
           "$i_am,",
