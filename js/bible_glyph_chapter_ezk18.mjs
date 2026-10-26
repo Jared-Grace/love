@@ -184,7 +184,7 @@ export function bible_glyph_chapter_ezk18() {
           "He",
           "does",
           "$no_entry",
-          "oppress",
+          "$raised_fist+pointing_down+doing",
           "any",
           "$man_beard,",
           "but",
