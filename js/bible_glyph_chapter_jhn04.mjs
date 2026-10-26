@@ -1210,7 +1210,7 @@ export function bible_glyph_chapter_jhn04() {
           "come",
           "$walking+pointing_down",
           "$clock+back",
-          "my",
+          "$me",
           "$baby",
           "$skull.”",
         ],
