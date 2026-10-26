@@ -276,7 +276,7 @@ export function bible_glyph_chapter_1jn03() {
           "he",
           "has",
           "been",
-          "born",
+          "$hatching_chick",
           "$tray_out",
           "$heart_on_fire.",
         ],
