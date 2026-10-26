@@ -549,7 +549,7 @@ export function bible_glyph_chapter_1jn04() {
           "$heart_red+doing",
           "$heart_on_fire,”",
           "but",
-          "hates",
+          "$face_with_symbols_on_mouth",
           "$pointing_back",
           "$brother,",
           "he",
