@@ -438,7 +438,7 @@ export function bible_glyph_chapter_mrk12() {
         "$flashlight?",
         "$plus",
         "whose",
-        "inscription?",
+        "$pointing_up+writing_hand+thing?",
         "$proper_name$Caesar's,",
         "they",
         "$speech",
