@@ -346,7 +346,7 @@ export function bible_glyph_chapter_ezk36() {
           "side;",
           "I",
           "will",
-          "turn",
+          "$curving_right+doing",
           "toward",
           "you,",
           "and",
