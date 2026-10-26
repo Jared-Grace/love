@@ -106,7 +106,7 @@ export function bible_glyph_chapter_mrk04() {
           "$road,",
           "$plus",
           "the",
-          "birds",
+          "$bird+all",
           "$footprints",
           "$plus",
           "devoured",
