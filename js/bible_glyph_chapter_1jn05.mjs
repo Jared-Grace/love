@@ -206,7 +206,7 @@ export function bible_glyph_chapter_1jn05() {
         verse_number: 9,
         words: [
           "Even",
-          "if",
+          "$traffic_light",
           "we",
           "$hand_receiving",
           "the",
