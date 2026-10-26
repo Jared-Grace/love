@@ -535,7 +535,7 @@ export function bible_glyph_chapter_jer26() {
           "$you",
           "will",
           "$hands_giving",
-          "innocent",
+          "$smiling_face_with_halo+describing",
           "$blood",
           "upon",
           "yourselves,",
