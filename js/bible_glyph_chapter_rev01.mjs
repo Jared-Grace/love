@@ -417,7 +417,7 @@ export function bible_glyph_chapter_rev01() {
           "a",
           "golden",
           "sash",
-          "around",
+          "$clockwise_arrows+ribbon+doing",
           "His",
           "chest.",
         ],
