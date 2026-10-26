@@ -462,7 +462,7 @@ export function bible_glyph_chapter_mrk11() {
         "He",
         "began",
         "to",
-        "teach,",
+        "$teacher+doing,",
         "$plus",
         "was",
         "in",
