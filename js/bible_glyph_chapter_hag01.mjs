@@ -433,7 +433,7 @@ export function bible_glyph_chapter_hag01() {
           "So",
           "the",
           "$i_am",
-          "stirred",
+          "$rooster",
           "the",
           "$wind",
           "of",
