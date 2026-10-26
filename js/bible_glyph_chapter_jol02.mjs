@@ -34,7 +34,7 @@ export function bible_glyph_chapter_jol02() {
           "in",
           "the",
           "$earth",
-          "tremble,",
+          "$vibration_mode,",
           "for",
           "the",
           "$sun",
