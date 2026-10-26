@@ -790,7 +790,7 @@ export function bible_glyph_chapter_luk15() {
         "I",
         "could",
         "celebrate",
-        "with",
+        "$linked_paperclips",
         "my",
         "$heart_orange.",
       ],
