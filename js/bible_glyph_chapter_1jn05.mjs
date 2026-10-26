@@ -103,7 +103,7 @@ export function bible_glyph_chapter_1jn05() {
           "$globe.",
           "$plus",
           "$flashlight",
-          "is",
+          "$link",
           "the",
           "victory",
           "that",
