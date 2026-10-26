@@ -182,7 +182,7 @@ export function bible_glyph_chapter_mrk11() {
         "they",
         "brought",
         "$pin",
-        "colt",
+        "$donkey+child",
         "to",
         "$cross",
         "$plus",
