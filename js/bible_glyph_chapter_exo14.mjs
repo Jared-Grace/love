@@ -242,7 +242,7 @@ export function bible_glyph_chapter_exo14() {
           "the",
           "Israelites",
           "and",
-          "overtook",
+          "$running+hand_receiving+doing",
           "them",
           "as",
           "they",
