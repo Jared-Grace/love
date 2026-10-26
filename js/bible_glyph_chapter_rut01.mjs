@@ -24,7 +24,7 @@ export function bible_glyph_chapter_rut01() {
           "there",
           "was",
           "a",
-          "famine",
+          "$famine",
           "in",
           "the",
           "$earth.",
