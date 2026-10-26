@@ -677,7 +677,7 @@ export function bible_glyph_chapter_2ki02() {
           "And",
           "they",
           "sent",
-          "fifty",
+          "$five+zero",
           "$man_beard,",
           "who",
           "searched",
