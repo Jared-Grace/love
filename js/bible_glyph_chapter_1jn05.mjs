@@ -147,7 +147,7 @@ export function bible_glyph_chapter_1jn05() {
           "One",
           "who",
           "$footprints",
-          "by",
+          "$metro",
           "$water",
           "$plus",
           "$blood,",
