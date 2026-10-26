@@ -344,7 +344,7 @@ export function bible_glyph_chapter_1jn03() {
           "Do",
           "$no_entry",
           "be",
-          "like",
+          "$likeness",
           "$proper_name$Cain,",
           "who",
           "belonged",
