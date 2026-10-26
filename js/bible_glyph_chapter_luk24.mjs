@@ -472,7 +472,7 @@ export function bible_glyph_chapter_luk24() {
           "chief",
           "priests",
           "$plus",
-          "rulers",
+          "$clapper_board+doer",
           "delivered",
           "$pointing_back",
           "up",
