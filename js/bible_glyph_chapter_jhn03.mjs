@@ -915,7 +915,7 @@ export function bible_glyph_chapter_jhn03() {
           "$angry_face",
           "of",
           "$heart_on_fire",
-          "remains",
+          "$pin+doing",
           "on",
           "$pointing_back.",
         ],
