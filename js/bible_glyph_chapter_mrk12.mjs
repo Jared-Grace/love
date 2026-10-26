@@ -209,7 +209,7 @@ export function bible_glyph_chapter_mrk12() {
         "$fist+skull",
         "him,",
         "$plus",
-        "threw",
+        "$tray_out+throwing",
         "$pointing_back",
         "out",
         "of",
