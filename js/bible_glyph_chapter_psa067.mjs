@@ -95,7 +95,7 @@ export function bible_glyph_chapter_psa067() {
           "nations",
           "upon",
           "$earth.",
-          "Selah",
+          "$pause_button",
         ],
       },
       {
