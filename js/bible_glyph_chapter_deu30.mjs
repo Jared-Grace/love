@@ -106,7 +106,7 @@ export function bible_glyph_chapter_deu30() {
           "$turn_back",
           "you",
           "from",
-          "captivity",
+          "$turn_back+chains",
           "and",
           "have",
           "compassion",
