@@ -872,7 +872,7 @@ export function bible_glyph_chapter_jhn01() {
           "“$teacher+top”",
           "($back+flashlight",
           "$speech+arrow_both_ways+doing",
-          "Teacher),",
+          "$teacher),",
           "“where",
           "are",
           "You",
