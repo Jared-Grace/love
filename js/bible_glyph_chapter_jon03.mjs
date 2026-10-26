@@ -195,7 +195,7 @@ export function bible_glyph_chapter_jon03() {
           "$person",
           "or",
           "$paw_prints,",
-          "herd",
+          "$cow_face",
           "or",
           "$sheep,",
           "taste",
