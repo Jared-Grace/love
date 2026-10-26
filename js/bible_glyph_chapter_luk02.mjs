@@ -777,7 +777,7 @@ export function bible_glyph_chapter_luk02() {
     },
     {
       verse_number: 30,
-      words: ["$pointing", "$me", "eyes", "have", "$eye", "Your", "salvation,"],
+      words: ["$pointing", "$me", "eyes", "have", "$eye", "Your", "$rescue+describing,"],
     },
     {
       verse_number: 31,
