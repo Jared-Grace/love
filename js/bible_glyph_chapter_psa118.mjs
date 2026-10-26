@@ -557,7 +557,7 @@ export function bible_glyph_chapter_psa118() {
           "horns",
           "of",
           "the",
-          "altar.",
+          "$altar.",
         ],
       },
       {
