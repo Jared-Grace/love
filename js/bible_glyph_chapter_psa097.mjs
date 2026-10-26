@@ -111,7 +111,7 @@ export function bible_glyph_chapter_psa097() {
           "$newspaper",
           "His",
           "$ruler+thing;",
-          "all",
+          "$all",
           "the",
           "$family",
           "$eye",
