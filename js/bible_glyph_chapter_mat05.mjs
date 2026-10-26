@@ -205,7 +205,7 @@ export function bible_glyph_chapter_mat05() {
           "persecute",
           "you",
           "$plus",
-          "falsely",
+          "$lying_face+doing",
           "$speech",
           "all",
           "kinds",
