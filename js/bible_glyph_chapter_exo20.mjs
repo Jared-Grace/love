@@ -388,7 +388,7 @@ export function bible_glyph_chapter_exo20() {
           "his",
           "$ox",
           "or",
-          "donkey,",
+          "$donkey,",
           "or",
           "anything",
           "that",
