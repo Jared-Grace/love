@@ -852,7 +852,7 @@ export function bible_glyph_chapter_jhn03() {
       {
         verse_number: 34,
         words: [
-          "For",
+          "$information",
           "the",
           "One",
           "whom",
