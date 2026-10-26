@@ -513,7 +513,7 @@ export function bible_glyph_chapter_1jn05() {
           "one",
           "can",
           "$no_entry",
-          "touch",
+          "$fire+hand+doing",
           "$pointing_back.",
         ],
       },
