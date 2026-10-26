@@ -19,7 +19,7 @@ export function bible_glyph_chapter_psa134() {
           "$song",
           "of",
           "ascents.",
-          "Come,",
+          "$exclamation,",
           "$speech+thumbs_up",
           "the",
           "$i_am,",
