@@ -426,7 +426,7 @@ export function bible_glyph_chapter_deu30() {
           "need",
           "to",
           "$speech,",
-          "Who",
+          "$person+question",
           "will",
           "ascend",
           "into",
