@@ -359,7 +359,7 @@ export function bible_glyph_chapter_mrk11() {
         "was",
         "not",
         "the",
-        "season",
+        "$alarm_clock",
         "for",
         "figs.",
       ],
