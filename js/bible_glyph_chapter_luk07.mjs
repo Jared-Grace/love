@@ -1085,7 +1085,7 @@ export function bible_glyph_chapter_luk07() {
         "$plus",
         "she",
         "stood",
-        "behind",
+        "$back",
         "Him",
         "at",
         "$pointing_back",
