@@ -552,7 +552,7 @@ export function bible_glyph_chapter_mrk10() {
         "to",
         "$pointing_back",
         "$learner,",
-        "“How",
+        "“$gear+question",
         "hard",
         "it",
         "is",
