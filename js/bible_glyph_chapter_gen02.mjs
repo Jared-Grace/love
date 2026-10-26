@@ -514,7 +514,7 @@ export function bible_glyph_chapter_gen02() {
           "$person",
           "to",
           "be",
-          "alone.",
+          "$one+person.",
           "I",
           "will",
           "$hammer+doing",
