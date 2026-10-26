@@ -649,7 +649,7 @@ export function bible_glyph_chapter_gen32() {
           "$woman,",
           "his",
           "$two",
-          "maidservants,",
+          "$houses+female_sign,",
           "and",
           "his",
           "eleven",
