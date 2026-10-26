@@ -584,7 +584,7 @@ export function bible_glyph_chapter_jhn09() {
           "had",
           "already",
           "determined",
-          "that",
+          "$right_arrow+toward",
           "anyone",
           "who",
           "confessed",
