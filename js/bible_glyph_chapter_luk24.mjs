@@ -607,7 +607,7 @@ export function bible_glyph_chapter_luk24() {
           "$speech",
           "to",
           "$pointing_back,",
-          "O",
+          "$waving_hand+speech",
           "foolish",
           "ones,",
           "$plus",
