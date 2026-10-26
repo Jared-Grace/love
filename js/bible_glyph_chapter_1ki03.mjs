@@ -324,7 +324,7 @@ export function bible_glyph_chapter_1ki03() {
           "and",
           "$thumbs_down.",
           "$pointing",
-          "who",
+          "$person+question",
           "is",
           "able",
           "to",
