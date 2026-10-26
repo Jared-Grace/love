@@ -189,7 +189,7 @@ export function bible_glyph_chapter_psa112() {
           "$person+round_pushpin",
           "$clock+all;",
           "his",
-          "horn",
+          "$horn",
           "will",
           "be",
           "lifted",
