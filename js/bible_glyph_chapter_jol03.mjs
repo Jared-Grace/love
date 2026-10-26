@@ -582,7 +582,7 @@ export function bible_glyph_chapter_jol03() {
           "$earth",
           "they",
           "shed",
-          "innocent",
+          "$smiling_face_with_halo+describing",
           "$blood.",
         ],
       },
