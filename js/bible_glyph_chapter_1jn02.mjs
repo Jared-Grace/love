@@ -109,7 +109,7 @@ export function bible_glyph_chapter_1jn02() {
           "$plus",
           "does",
           "$no_entry",
-          "keep",
+          "$guard",
           "$pointing_back",
           "$scroll$s",
           "is",
