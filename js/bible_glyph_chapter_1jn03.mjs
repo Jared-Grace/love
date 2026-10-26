@@ -109,7 +109,7 @@ export function bible_glyph_chapter_1jn03() {
           "who",
           "has",
           "this",
-          "hope",
+          "$crossed_fingers",
           "in",
           "$pointing_back",
           "purifies",
