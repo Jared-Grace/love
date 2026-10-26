@@ -570,7 +570,7 @@ export function bible_glyph_chapter_jhn09() {
           "$pointing_back",
           "parents",
           "$speech",
-          "this",
+          "$flashlight",
           "$pointing",
           "they",
           "were",
