@@ -1,22 +1,23 @@
+import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
+import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
+import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
 import { app_code_lesson_operators_value_max_range_1_next } from "./app_code_lesson_operators_value_max_range_1_next.mjs";
+import { js_operator_to_code_call } from "./js_operator_to_code_call.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_map } from "./list_map.mjs";
+import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
+import { html_style_code_dark } from "./html_style_code_dark.mjs";
+import { app_code_function_call_wrong_say } from "./app_code_function_call_wrong_say.mjs";
+import { app_code_lesson_quizzes_unscramble_both } from "./app_code_lesson_quizzes_unscramble_both.mjs";
+import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
+import { html_div_text_code_dark } from "./html_div_text_code_dark.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code_instead_could_write } from "./html_div_cycle_code_instead_could_write.mjs";
+import { equal_0 } from "./equal_0.mjs";
+import { each_index } from "./each_index.mjs";
 import { js_operator_first_code_call } from "./js_operator_first_code_call.mjs";
 import { app_code_code_example_name } from "./app_code_code_example_name.mjs";
 import { html_div_cycle_code_bold } from "./html_div_cycle_code_bold.mjs";
-import { equal_0 } from "./equal_0.mjs";
-import { js_operator_to_code_call } from "./js_operator_to_code_call.mjs";
-import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
-import { app_code_lesson_quizzes_unscramble_both } from "./app_code_lesson_quizzes_unscramble_both.mjs";
-import { html_div_text_code_dark } from "./html_div_text_code_dark.mjs";
-import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
-import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
-import { html_style_code_dark } from "./html_style_code_dark.mjs";
-import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
-import { list_map } from "./list_map.mjs";
-import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
-import { property_get } from "./property_get.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { each_index } from "./each_index.mjs";
 export function app_code_lesson_functions_arithmetic() {
   let name_id = app_code_lesson_name_id("functions", ["arithmetic"]);
   let example_answer_label = "Function: ";
@@ -48,6 +49,7 @@ export function app_code_lesson_functions_arithmetic() {
     answer_label: quiz_label,
     answer_on_button: html_style_code_dark,
     answer_count_override: null,
+    wrong_say: app_code_function_call_wrong_say,
   };
   let backwards = {
     question_label: "Function call: ",
@@ -55,6 +57,7 @@ export function app_code_lesson_functions_arithmetic() {
     answer_label: quiz_backwards_label_answer,
     answer_on_button: html_style_code_dark,
     answer_count_override: quiz_backwards_answer_count_override,
+    wrong_say: app_code_function_call_wrong_say,
   };
   let quizzes_get = app_code_lesson_quizzes_unscramble_both({
     batch_get,
