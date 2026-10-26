@@ -309,7 +309,7 @@ export function bible_glyph_chapter_jol02() {
           "$voice",
           "in",
           "the",
-          "presence",
+          "$face",
           "of",
           "His",
           "army.",
