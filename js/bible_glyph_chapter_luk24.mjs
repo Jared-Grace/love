@@ -476,7 +476,7 @@ export function bible_glyph_chapter_luk24() {
           "delivered",
           "$pointing_back",
           "up",
-          "to",
+          "$toward+tray_in",
           "a",
           "sentence",
           "of",
