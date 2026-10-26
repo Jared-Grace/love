@@ -341,7 +341,7 @@ export function bible_glyph_chapter_jon04() {
           "$pleading_face+eyes+doing",
           "about",
           "the",
-          "great",
+          "$top",
           "$city",
           "of",
           "$proper_name$Nineveh,",
