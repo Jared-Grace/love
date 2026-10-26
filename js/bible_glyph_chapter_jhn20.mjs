@@ -257,7 +257,7 @@ export function bible_glyph_chapter_jhn20() {
           "$proper_name$Mary",
           "$person+round_pushpin",
           "outside",
-          "the",
+          "$pin",
           "$tomb",
           "weeping.",
           "As",
