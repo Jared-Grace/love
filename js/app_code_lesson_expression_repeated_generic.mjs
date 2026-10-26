@@ -1,13 +1,13 @@
-import { equal_not } from "./equal_not.mjs";
-import { list_random_item } from "./list_random_item.mjs";
-import { list_includes_not } from "./list_includes_not.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_expression_repeated_generic_expanded_code } from "./app_code_lesson_expression_repeated_generic_expanded_code.mjs";
-import { list_map } from "./list_map.mjs";
-import { app_code_lesson_expression_repeated_generic_lefts } from "./app_code_lesson_expression_repeated_generic_lefts.mjs";
+import { equal_not } from "./equal_not.mjs";
 import { list_filter } from "./list_filter.mjs";
+import { list_random_item } from "./list_random_item.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_includes_not } from "./list_includes_not.mjs";
+import { app_code_lesson_expression_repeated_generic_lefts } from "./app_code_lesson_expression_repeated_generic_lefts.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -16,6 +16,7 @@ import { app_code_label_code_question } from "./app_code_label_code_question.mjs
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
+import { app_code_repeated_wrong_say } from "./app_code_repeated_wrong_say.mjs";
 import { app_code_lesson_quizzes_unscramble_both } from "./app_code_lesson_quizzes_unscramble_both.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { html_div_text_code_dark } from "./html_div_text_code_dark.mjs";
@@ -108,6 +109,7 @@ export function app_code_lesson_expression_repeated_generic(words) {
     answer_label: written_out,
     answer_on_button: html_style_code_dark,
     answer_count_override: null,
+    wrong_say: app_code_repeated_wrong_say,
   };
   let noun_label = text_combine_multiple([noun_upper, ": "]);
   let which_code = text_combine_multiple([
@@ -121,6 +123,7 @@ export function app_code_lesson_expression_repeated_generic(words) {
     answer_label: which_code,
     answer_on_button: html_style_code_dark,
     answer_count_override: null,
+    wrong_say: app_code_repeated_wrong_say,
   };
   let quizzes_get = app_code_lesson_quizzes_unscramble_both({
     batch_get,

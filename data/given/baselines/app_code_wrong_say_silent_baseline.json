@@ -2,11 +2,8 @@
  "known": [
   "app_code_lesson_brace_pair",
   "app_code_lesson_brace_pair_two",
-  "app_code_lesson_expression_exponent",
-  "app_code_lesson_expression_multiply",
   "app_code_lesson_expression_not_equal_same",
   "app_code_lesson_expression_remainder_divide",
-  "app_code_lesson_expression_remainder_subtract",
   "app_code_lesson_expression_true_false",
   "app_code_lesson_expression_which_part_first",
   "app_code_lesson_expression_whole_part_both",

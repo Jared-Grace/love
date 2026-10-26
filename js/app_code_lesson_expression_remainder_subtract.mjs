@@ -1,19 +1,20 @@
-import { app_code_lesson_expression_remainder_subtract_above } from "./app_code_lesson_expression_remainder_subtract_above.mjs";
-import { app_code_lesson_expression_remainder_subtract_title_name_id } from "./app_code_lesson_expression_remainder_subtract_title_name_id.mjs";
-import { app_code_lesson_expression_remainder_subtract_code } from "./app_code_lesson_expression_remainder_subtract_code.mjs";
 import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { integer_random } from "./integer_random.mjs";
 import { integer_random_below } from "./integer_random_below.mjs";
 import { multiply_add } from "./multiply_add.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
-import { app_code_lesson_quizzes_unscramble_both } from "./app_code_lesson_quizzes_unscramble_both.mjs";
-import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
-import { html_div_text_code_dark } from "./html_div_text_code_dark.mjs";
-import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
-import { integer_random } from "./integer_random.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { app_code_lesson_expression_remainder_subtract_code } from "./app_code_lesson_expression_remainder_subtract_code.mjs";
 import { list_map } from "./list_map.mjs";
+import { app_code_lesson_expression_remainder_subtract_title_name_id } from "./app_code_lesson_expression_remainder_subtract_title_name_id.mjs";
+import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
+import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
+import { app_code_remainder_subtract_wrong_say } from "./app_code_remainder_subtract_wrong_say.mjs";
+import { app_code_lesson_quizzes_unscramble_both } from "./app_code_lesson_quizzes_unscramble_both.mjs";
+import { app_code_lesson_expression_remainder_subtract_above } from "./app_code_lesson_expression_remainder_subtract_above.mjs";
+import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
+import { html_div_text_code_dark } from "./html_div_text_code_dark.mjs";
 export function app_code_lesson_expression_remainder_subtract() {
   "practice a % b (remainder) by writing it out as repeated subtraction (17 % 5 becomes 17 - 5 - 5 - 5): the quiz matches the % form with its subtraction chain, because this lesson teaches what % MEANS - take the divisor away again and again until what is left is smaller than it, and that leftover is the remainder - not the closed-form value; divisor 3..6, 2 or 3 subtractions, leftover 1..divisor-1";
   let percent = js_operator_percent_sign();
@@ -48,6 +49,7 @@ export function app_code_lesson_expression_remainder_subtract() {
     answer_label: "What is this worked out by subtracting? ",
     answer_on_button: html_style_code_dark,
     answer_count_override: null,
+    wrong_say: app_code_remainder_subtract_wrong_say,
   };
   let backwards = {
     question_label: "Subtraction: ",
@@ -55,6 +57,7 @@ export function app_code_lesson_expression_remainder_subtract() {
     answer_label: "Which code uses % for this? ",
     answer_on_button: html_style_code_dark,
     answer_count_override: null,
+    wrong_say: app_code_remainder_subtract_wrong_say,
   };
   let quizzes_get = app_code_lesson_quizzes_unscramble_both({
     batch_get,
