@@ -510,7 +510,7 @@ export function bible_glyph_chapter_jhn03() {
           "$all",
           "who",
           "does",
-          "evil",
+          "$no_entry+heavy_dollar_sign+describing",
           "hates",
           "the",
           "$light,",
