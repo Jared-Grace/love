@@ -818,7 +818,7 @@ export function bible_glyph_chapter_luk24() {
           "$clock",
           "and",
           "returned",
-          "to",
+          "$toward+tray_in",
           "$city+peace.",
           "$plus",
           "they",
