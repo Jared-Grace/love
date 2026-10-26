@@ -1181,7 +1181,7 @@ export function bible_glyph_chapter_luk02() {
         "midst",
         "of",
         "the",
-        "teachers,",
+        "$teacher,",
         "$plus",
         "$ear",
         "$pointing_back,",
