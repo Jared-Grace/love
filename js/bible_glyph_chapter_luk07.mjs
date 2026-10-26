@@ -999,7 +999,7 @@ export function bible_glyph_chapter_luk07() {
         "$person",
         "$plus",
         "a",
-        "drunkard,",
+        "$wine+cup_with_straw+doer,",
         "a",
         "$heart_orange",
         "of",
