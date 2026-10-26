@@ -593,7 +593,7 @@ export function bible_glyph_chapter_jhn02() {
           "$tray_in",
           "the",
           "$party_popper,",
-          "many",
+          "$multiply",
           "$anchor+doing",
           "in",
           "$pointing_back",
