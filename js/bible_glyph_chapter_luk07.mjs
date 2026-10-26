@@ -1187,7 +1187,7 @@ export function bible_glyph_chapter_luk07() {
         "you.”",
         "“$speech",
         "it,",
-        "Teacher,”",
+        "$teacher,”",
         "he",
         "replied.",
       ],
