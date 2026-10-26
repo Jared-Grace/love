@@ -831,7 +831,7 @@ export function bible_glyph_chapter_1jn02() {
           "$watch,",
           "little",
           "children,",
-          "remain",
+          "$pin+doing",
           "$tray_in",
           "$pointing_back,",
           "so",
