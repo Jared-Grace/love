@@ -95,7 +95,7 @@ export function bible_glyph_chapter_luk15() {
         "$plus",
         "$walking",
         "after",
-        "the",
+        "$pin",
         "one",
         "that",
         "is",
