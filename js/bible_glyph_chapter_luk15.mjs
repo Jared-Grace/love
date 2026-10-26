@@ -499,7 +499,7 @@ export function bible_glyph_chapter_luk15() {
         "to",
         "be",
         "called",
-        "your",
+        "$you",
         "$son.",
         "$hammer",
         "me",
