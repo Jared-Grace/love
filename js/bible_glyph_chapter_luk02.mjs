@@ -462,7 +462,7 @@ export function bible_glyph_chapter_luk02() {
         "$person+sheep",
         "had",
         "$mouth",
-        "to",
+        "$toward",
         "$pointing_back.",
       ],
     },
