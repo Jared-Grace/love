@@ -542,7 +542,7 @@ export function bible_glyph_chapter_rev01() {
           "$first_place",
           "$plus",
           "$pin",
-          "Last,",
+          "$end_arrow+describing,",
         ],
       },
       {
