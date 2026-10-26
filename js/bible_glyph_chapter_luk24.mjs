@@ -800,7 +800,7 @@ export function bible_glyph_chapter_luk24() {
           "$road",
           "and",
           "opened",
-          "the",
+          "$pin",
           "Scriptures",
           "to",
           "us?",
