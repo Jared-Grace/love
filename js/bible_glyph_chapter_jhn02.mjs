@@ -321,7 +321,7 @@ export function bible_glyph_chapter_jhn02() {
           "$plus",
           "they",
           "stayed",
-          "there",
+          "$telescope+manner",
           "$no_entry",
           "many",
           "$sun.",
