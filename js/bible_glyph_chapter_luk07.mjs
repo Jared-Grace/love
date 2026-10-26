@@ -987,7 +987,7 @@ export function bible_glyph_chapter_luk07() {
         "$footprints",
         "$eating",
         "$plus",
-        "drinking,",
+        "$cup_with_straw,",
         "$plus",
         "you",
         "are",
