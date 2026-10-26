@@ -356,7 +356,7 @@ export function bible_glyph_chapter_mrk08() {
           "$no_entry",
           "$bread",
           "was",
-          "with",
+          "$linked_paperclips",
           "them",
           "$tray_in",
           "the",
