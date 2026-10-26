@@ -165,7 +165,7 @@ export function bible_glyph_chapter_1jn05() {
           "$blood.",
           "$plus",
           "it",
-          "is",
+          "$link",
           "the",
           "$wind",
           "who",
