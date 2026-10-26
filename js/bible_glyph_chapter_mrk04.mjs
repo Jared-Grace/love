@@ -437,7 +437,7 @@ export function bible_glyph_chapter_mrk04() {
           "for",
           "only",
           "a",
-          "season.",
+          "$toward+alarm_clock+describing.",
           "When",
           "trouble",
           "or",
