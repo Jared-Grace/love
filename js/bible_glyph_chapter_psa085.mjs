@@ -95,7 +95,7 @@ export function bible_glyph_chapter_psa085() {
           "$hourglass?",
           "Will",
           "You",
-          "draw",
+          "$hook+doing",
           "out",
           "Your",
           "anger",
