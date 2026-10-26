@@ -145,7 +145,7 @@ export function bible_glyph_chapter_jon03() {
         words: [
           "When",
           "$speech",
-          "reached",
+          "$hand+doing",
           "the",
           "$king",
           "of",
