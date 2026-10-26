@@ -373,7 +373,7 @@ export function bible_glyph_chapter_jdg13() {
           "“$exclamation,",
           "the",
           "$man_beard",
-          "who",
+          "$back+flashlight",
           "$footprints",
           "to",
           "me",
