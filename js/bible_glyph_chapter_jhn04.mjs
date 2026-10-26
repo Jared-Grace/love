@@ -207,7 +207,7 @@ export function bible_glyph_chapter_jhn04() {
           "“$traffic_light",
           "you",
           "$lightbulb",
-          "the",
+          "$pin",
           "gift",
           "of",
           "$heart_on_fire",
