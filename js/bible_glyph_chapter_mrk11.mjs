@@ -842,7 +842,7 @@ export function bible_glyph_chapter_mrk11() {
         "He",
         "will",
         "ask,",
-        "‘Why",
+        "‘$metro",
         "then",
         "did",
         "you",
