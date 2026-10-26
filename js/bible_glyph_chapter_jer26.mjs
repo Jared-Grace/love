@@ -182,7 +182,7 @@ export function bible_glyph_chapter_jer26() {
           "the",
           "$megaphone,",
           "whom",
-          "I",
+          "$me",
           "have",
           "sent",
           "you",
