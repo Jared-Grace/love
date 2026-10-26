@@ -445,7 +445,7 @@ export function bible_glyph_chapter_jol02() {
           "$sparkle+doing",
           "a",
           "$eating+locked;",
-          "proclaim",
+          "$waving_hand",
           "a",
           "sacred",
           "assembly.",
