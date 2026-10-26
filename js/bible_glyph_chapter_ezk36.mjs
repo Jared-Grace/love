@@ -696,7 +696,7 @@ export function bible_glyph_chapter_ezk36() {
           "$speech",
           "of",
           "them,",
-          "These",
+          "$flashlight+flashlight",
           "are",
           "the",
           "$family",
