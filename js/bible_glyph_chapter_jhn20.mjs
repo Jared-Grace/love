@@ -860,7 +860,7 @@ export function bible_glyph_chapter_jhn20() {
           "$anchor+doing",
           "$pointing",
           "$cross",
-          "is",
+          "$link",
           "the",
           "$oil,",
           "the",
