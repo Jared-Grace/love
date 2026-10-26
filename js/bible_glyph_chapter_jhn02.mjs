@@ -399,7 +399,7 @@ export function bible_glyph_chapter_jhn02() {
           "poured",
           "out",
           "the",
-          "coins",
+          "$scissors+coin",
           "of",
           "the",
           "$coin+shuffle+doer",
