@@ -760,7 +760,7 @@ export function bible_glyph_chapter_1jn02() {
           "written",
           "to",
           "$you",
-          "about",
+          "$clockwise_arrows",
           "those",
           "who",
           "are",
