@@ -168,7 +168,7 @@ export function bible_glyph_chapter_jhn09() {
           "$water_wave+person+place",
           "of",
           "$proper_name$Siloam",
-          "(which",
+          "($back+flashlight",
           "means",
           "$hand_sending).",
           "So",
