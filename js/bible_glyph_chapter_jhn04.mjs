@@ -1020,7 +1020,7 @@ export function bible_glyph_chapter_jhn04() {
           "only",
           "$metro",
           "of",
-          "your",
+          "$you+describing",
           "words;",
           "for",
           "$pointing_back",
