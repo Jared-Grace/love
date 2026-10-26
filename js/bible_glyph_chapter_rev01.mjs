@@ -456,7 +456,7 @@ export function bible_glyph_chapter_rev01() {
           "were",
           "like",
           "polished",
-          "bronze",
+          "$bronze+white_circle+incense",
           "refined",
           "$tray_in",
           "a",
