@@ -285,7 +285,7 @@ export function bible_glyph_chapter_mrk05() {
         "$pointing_back,",
         "$speech,",
         "“$incoming_envelope",
-        "us",
+        "$me",
         "into",
         "the",
         "pigs,",
