@@ -208,7 +208,7 @@ export function bible_glyph_chapter_jhn04() {
           "you",
           "$lightbulb",
           "$pin",
-          "gift",
+          "$hands_giving+gift",
           "of",
           "$heart_on_fire",
           "$plus",
