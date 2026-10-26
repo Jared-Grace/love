@@ -863,7 +863,7 @@ export function bible_glyph_chapter_jhn20() {
           "$link",
           "$pin",
           "$oil,",
-          "the",
+          "$pin",
           "$son",
           "of",
           "$heart_on_fire,",
