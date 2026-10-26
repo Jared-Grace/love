@@ -89,7 +89,7 @@ export function bible_glyph_chapter_jhn17() {
           "$lightbulb",
           "You,",
           "$pin",
-          "only",
+          "$one+describing",
           "true",
           "$heart_on_fire,",
           "$plus",
