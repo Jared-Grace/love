@@ -770,7 +770,7 @@ export function bible_glyph_chapter_jhn03() {
       },
       {
         verse_number: 30,
-        words: ["He", "must", "$chart_increasing;", "I", "must", "decrease.”"],
+        words: ["He", "must", "$chart_increasing;", "$me", "must", "decrease.”"],
       },
       {
         verse_number: 31,
