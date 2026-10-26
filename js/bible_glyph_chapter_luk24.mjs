@@ -339,7 +339,7 @@ export function bible_glyph_chapter_luk24() {
           "$pointing_back",
           "$speech+crowd+doing",
           "$plus",
-          "deliberated,",
+          "$safety_pin+magnifying_glass,",
           "$plus",
           "$cross",
           "$pointing_back",
