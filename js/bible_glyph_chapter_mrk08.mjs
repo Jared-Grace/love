@@ -193,7 +193,7 @@ export function bible_glyph_chapter_mrk08() {
           "$plus",
           "$speech",
           "that",
-          "these",
+          "$flashlight",
           "be",
           "set",
           "before",
