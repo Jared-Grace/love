@@ -40,7 +40,7 @@ export function bible_glyph_chapter_mrk05() {
         "had",
         "$footprints+tray_out",
         "$tray_out",
-        "the",
+        "$pin",
         "$ship,",
         "at",
         "once",
