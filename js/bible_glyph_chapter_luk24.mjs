@@ -1128,7 +1128,7 @@ export function bible_glyph_chapter_luk24() {
           "$skull",
           "on",
           "the",
-          "third",
+          "$third_place",
           "$sun,",
         ],
       },
