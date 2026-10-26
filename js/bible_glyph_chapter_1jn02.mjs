@@ -505,7 +505,7 @@ export function bible_glyph_chapter_1jn02() {
           "$plus",
           "$pointing_back",
           "$pointing_up+anger_symbol+thing,",
-          "but",
+          "$curving_right",
           "whoever",
           "$hammer",
           "the",
