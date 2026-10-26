@@ -1150,7 +1150,7 @@ export function bible_glyph_chapter_mat05() {
       {
         verse_number: 45,
         words: [
-          "that",
+          "$back+flashlight+gear+question",
           "you",
           "may",
           "be",
