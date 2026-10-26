@@ -604,7 +604,7 @@ export function bible_glyph_chapter_luk07() {
         "$thumbs_down,",
         "$plus",
         "to",
-        "many",
+        "$multiply",
         "who",
         "were",
         "blind",
