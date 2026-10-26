@@ -786,7 +786,7 @@ export function bible_glyph_chapter_luk15() {
         "a",
         "young",
         "$goat+baby",
-        "so",
+        "$right_arrow+toward",
         "I",
         "could",
         "celebrate",
