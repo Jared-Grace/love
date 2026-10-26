@@ -187,7 +187,7 @@ export function bible_glyph_chapter_jol01() {
           "fangs",
           "of",
           "a",
-          "lioness.",
+          "$lion+female_sign.",
         ],
       },
       {
