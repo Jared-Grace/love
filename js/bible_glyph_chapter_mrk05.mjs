@@ -1080,7 +1080,7 @@ export function bible_glyph_chapter_mrk05() {
         "$plus",
         "immediately",
         "$pin",
-        "girl",
+        "$girl+pinching_hand",
         "got",
         "up",
         "$plus",
