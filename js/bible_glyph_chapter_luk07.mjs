@@ -634,7 +634,7 @@ export function bible_glyph_chapter_luk07() {
         "$plus",
         "$ear:",
         "the",
-        "blind",
+        "$person_with_white_cane",
         "receive",
         "sight,",
         "the",
