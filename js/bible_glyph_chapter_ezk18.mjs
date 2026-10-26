@@ -561,7 +561,7 @@ export function bible_glyph_chapter_ezk18() {
           "for",
           "his",
           "own",
-          "iniquity.",
+          "$cyclone.",
         ],
       },
       {
