@@ -111,7 +111,7 @@ export function bible_glyph_chapter_jud01() {
           "in",
           "among",
           "you",
-          "unnoticed,",
+          "$children_crossing+tray_in+ninja+doing,",
           "ungodly",
           "ones",
           "who",
