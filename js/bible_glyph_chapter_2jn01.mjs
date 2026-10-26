@@ -130,7 +130,7 @@ export function bible_glyph_chapter_2jn01() {
           "you,",
           "$woman+crown,",
           "$no_entry",
-          "as",
+          "$likeness",
           "a",
           "new",
           "$scroll,",
