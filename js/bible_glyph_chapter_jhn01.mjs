@@ -1209,7 +1209,7 @@ export function bible_glyph_chapter_jhn01() {
           "$angel$s",
           "of",
           "$heart_on_fire",
-          "ascending",
+          "$walking+pointing_up",
           "$plus",
           "descending",
           "on",
