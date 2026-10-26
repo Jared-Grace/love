@@ -532,7 +532,7 @@ export function bible_glyph_chapter_hag02() {
           "$wilted_flower+wind,",
           "$microbe+wheat,",
           "and",
-          "hail,",
+          "$ice,",
           "but",
           "you",
           "did",
