@@ -194,7 +194,7 @@ export function bible_glyph_chapter_rev10() {
           "and",
           "$hourglass,",
           "who",
-          "created",
+          "$milky_way+doing",
           "$sky",
           "$plus",
           "everything",
