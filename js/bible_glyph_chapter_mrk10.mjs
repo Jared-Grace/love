@@ -786,7 +786,7 @@ export function bible_glyph_chapter_mrk10() {
         "be",
         "$end_arrow+describing,",
         "$plus",
-        "the",
+        "$pin",
         "$end_arrow+describing",
         "$first_place.”",
       ],
