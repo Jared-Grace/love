@@ -1019,7 +1019,7 @@ export function bible_glyph_chapter_mat05() {
         verse_number: 39,
         words: [
           "But",
-          "I",
+          "$me",
           "$speech",
           "you,",
           "$no_entry",
