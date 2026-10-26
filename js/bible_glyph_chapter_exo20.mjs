@@ -175,7 +175,7 @@ export function bible_glyph_chapter_exo20() {
           "$heart_on_fire",
           "in",
           "vain,",
-          "for",
+          "$pointing",
           "the",
           "$i_am",
           "will",
