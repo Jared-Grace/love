@@ -146,7 +146,7 @@ export function bible_glyph_chapter_isa01() {
           "do",
           "you",
           "want",
-          "more",
+          "$repeat",
           "$fist?",
           "Why",
           "do",
