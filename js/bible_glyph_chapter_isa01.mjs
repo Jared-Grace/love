@@ -226,7 +226,7 @@ export function bible_glyph_chapter_isa01() {
           "-",
           "a",
           "desolation",
-          "demolished",
+          "$upside_down_face+thing",
           "by",
           "strangers.",
         ],
