@@ -922,7 +922,7 @@ export function bible_glyph_chapter_luk07() {
         "sitting",
         "$tray_in",
         "the",
-        "marketplace",
+        "$shopping_cart+round_pushpin",
         "$plus",
         "calling",
         "out",
