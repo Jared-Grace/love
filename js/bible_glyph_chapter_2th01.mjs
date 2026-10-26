@@ -147,7 +147,7 @@ export function bible_glyph_chapter_2th01() {
           "will",
           "be",
           "counted",
-          "worthy",
+          "$pointing_down+gold+doing",
           "of",
           "the",
           "$castle",
