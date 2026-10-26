@@ -221,7 +221,7 @@ export function bible_glyph_chapter_luk24() {
           "$proper_name$Joanna,",
           "$plus",
           "$proper_name$Mary",
-          "the",
+          "$pin",
           "mother",
           "of",
           "$proper_name$James,",
