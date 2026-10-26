@@ -718,7 +718,7 @@ export function bible_glyph_chapter_jhn03() {
           "I",
           "$speech,",
           "‘I",
-          "am",
+          "$link",
           "$no_entry",
           "the",
           "$oil,",
