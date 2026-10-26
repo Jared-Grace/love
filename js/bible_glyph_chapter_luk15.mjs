@@ -12,7 +12,7 @@ export function bible_glyph_chapter_luk15() {
       verse_number: 1,
       words: [
         "$curving_right",
-        "all",
+        "$all",
         "the",
         "tax",
         "collectors",
