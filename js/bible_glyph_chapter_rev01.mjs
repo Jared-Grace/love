@@ -419,7 +419,7 @@ export function bible_glyph_chapter_rev01() {
           "sash",
           "$clockwise_arrows+ribbon+doing",
           "His",
-          "chest.",
+          "$breast_feeding.",
         ],
       },
       {
