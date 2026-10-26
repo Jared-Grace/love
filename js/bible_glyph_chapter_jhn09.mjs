@@ -480,7 +480,7 @@ export function bible_glyph_chapter_jhn09() {
           "they",
           "summoned",
           "his",
-          "parents.",
+          "$butterfly+doer.",
         ],
       },
       {
