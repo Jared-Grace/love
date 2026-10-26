@@ -1089,7 +1089,7 @@ export function bible_glyph_chapter_mrk04() {
           "$plus",
           "$pin",
           "$sea",
-          "obey",
+          "$down_arrow+ear+loudspeaker+doing",
           "$pointing_back?",
         ],
       },
