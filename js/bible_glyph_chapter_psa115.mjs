@@ -263,7 +263,7 @@ export function bible_glyph_chapter_psa115() {
           "$i_am,",
           "$pinching_hand",
           "and",
-          "great",
+          "$top",
           "alike.",
         ],
       },
