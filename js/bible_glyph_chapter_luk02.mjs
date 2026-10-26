@@ -842,7 +842,7 @@ export function bible_glyph_chapter_luk02() {
         "$plus",
         "was",
         "$speech",
-        "to",
+        "$toward",
         "$proper_name$Mary",
         "$pointing_back",
         "$mother,",
