@@ -900,7 +900,7 @@ export function bible_glyph_chapter_jhn03() {
           "the",
           "$son",
           "has",
-          "eternal",
+          "$hourglass+describing",
           "$sprout.",
           "Whoever",
           "rejects",
