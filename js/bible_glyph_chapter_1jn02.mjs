@@ -216,7 +216,7 @@ export function bible_glyph_chapter_1jn02() {
           "am",
           "writing",
           "to",
-          "you,",
+          "$you,",
           "which",
           "is",
           "true",
