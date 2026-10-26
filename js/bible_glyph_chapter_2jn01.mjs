@@ -276,7 +276,7 @@ export function bible_glyph_chapter_2jn01() {
         verse_number: 10,
         words: [
           "$traffic_light",
-          "anyone",
+          "$joker",
           "$footprints",
           "to",
           "you",
