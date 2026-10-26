@@ -626,7 +626,7 @@ export function bible_glyph_chapter_jhn01() {
           "$bridge",
           "$pin",
           "$pointing_down+proper_name,",
-          "where",
+          "$back+round_pushpin",
           "$proper_name$John",
           "was",
           "baptizing.",
