@@ -269,7 +269,7 @@ export function bible_glyph_chapter_jhn01() {
           "will",
           "of",
           "$man_beard,",
-          "but",
+          "$curving_up",
           "$tray_out",
           "$heart_on_fire.",
         ],
