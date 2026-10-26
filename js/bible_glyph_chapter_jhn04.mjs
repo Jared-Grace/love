@@ -1132,7 +1132,7 @@ export function bible_glyph_chapter_jhn04() {
           "$wine.",
           "$plus",
           "there",
-          "was",
+          "$link",
           "a",
           "royal",
           "official",
