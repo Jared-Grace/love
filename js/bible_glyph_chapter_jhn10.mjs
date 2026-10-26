@@ -165,7 +165,7 @@ export function bible_glyph_chapter_jhn10() {
           "$speech+wisdom",
           "to",
           "$pointing_back,",
-          "but",
+          "$curving_right",
           "they",
           "did",
           "$no_entry",
