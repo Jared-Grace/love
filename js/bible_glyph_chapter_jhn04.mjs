@@ -1136,7 +1136,7 @@ export function bible_glyph_chapter_jhn04() {
           "a",
           "royal",
           "official",
-          "whose",
+          "$back+flashlight",
           "$son",
           "lay",
           "sick",
