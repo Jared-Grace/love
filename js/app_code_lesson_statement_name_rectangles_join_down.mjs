@@ -99,10 +99,10 @@ export function app_code_lesson_statement_name_rectangles_join_down() {
     let chip = app_code_explain_number_colored(text, end_color);
     return chip;
   }
-  function call_worked(name, first, second, color) {
+  function call_worked(name, first, second_inner, color) {
     "name(first, second) as one code chip, both edges in the colour of the part they play";
     let chip = app_code_explain_code_colored_inline(
-      [name + "(", first, ", ", second, ")"],
+      [name + "(", first, ", ", second_inner, ")"],
       [plain, color, plain, color, plain],
     );
     return chip;
