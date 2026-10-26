@@ -269,7 +269,7 @@ export function bible_glyph_chapter_mrk08() {
         verse_number: 11,
         words: [
           "$plus",
-          "the",
+          "$pin",
           "$proper_name$Pharisees",
           "$footprints+tray_out",
           "$plus",
