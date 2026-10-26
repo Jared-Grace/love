@@ -350,7 +350,7 @@ export function bible_glyph_chapter_jhn04() {
           "springing",
           "up",
           "$toward+tray_in",
-          "eternal",
+          "$hourglass+describing",
           "$sprout.”",
         ],
       },
