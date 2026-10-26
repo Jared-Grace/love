@@ -229,7 +229,7 @@ export function bible_glyph_chapter_mat05() {
           "great",
           "is",
           "your",
-          "reward",
+          "$dollar_banknote",
           "$tray_in",
           "$sky;",
           "in",
