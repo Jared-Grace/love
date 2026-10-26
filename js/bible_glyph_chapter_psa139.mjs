@@ -434,7 +434,7 @@ export function bible_glyph_chapter_psa139() {
       {
         verse_number: 20,
         words: [
-          "who",
+          "$back+flashlight",
           "$speech",
           "of",
           "You",
