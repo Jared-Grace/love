@@ -266,7 +266,7 @@ export function bible_glyph_chapter_mrk05() {
         "on",
         "the",
         "$mountain",
-        "nearby",
+        "$toward",
         "a",
         "large",
         "herd",
