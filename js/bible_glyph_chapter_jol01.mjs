@@ -146,7 +146,7 @@ export function bible_glyph_chapter_jol01() {
           "the",
           "$grapes+water",
           "wine,",
-          "for",
+          "$pointing",
           "it",
           "has",
           "been",
