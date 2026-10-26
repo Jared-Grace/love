@@ -497,7 +497,7 @@ export function bible_glyph_chapter_2ki02() {
           "up",
           "the",
           "$cloak+sparkles",
-          "that",
+          "$back+flashlight",
           "had",
           "fallen",
           "from",
