@@ -554,7 +554,7 @@ export function bible_glyph_chapter_jdg13() {
           "burnt",
           "offering,",
           "offer",
-          "it",
+          "$pointing_back",
           "to",
           "the",
           "$i_am.”",
