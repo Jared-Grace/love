@@ -460,7 +460,7 @@ export function bible_glyph_chapter_luk24() {
           "before",
           "$heart_on_fire",
           "$plus",
-          "all",
+          "$all",
           "the",
           "$family.",
         ],
