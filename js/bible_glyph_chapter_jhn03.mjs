@@ -332,7 +332,7 @@ export function bible_glyph_chapter_jhn03() {
           "$pin",
           "One",
           "who",
-          "descended",
+          "$walking+pointing_down",
           "$tray_out",
           "$sky,",
           "$pin",
