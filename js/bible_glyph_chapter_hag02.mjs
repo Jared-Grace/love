@@ -499,7 +499,7 @@ export function bible_glyph_chapter_hag02() {
           "there",
           "were",
           "but",
-          "ten.",
+          "$ten.",
           "When",
           "one",
           "$footprints",
