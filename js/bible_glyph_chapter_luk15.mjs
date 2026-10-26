@@ -37,7 +37,7 @@ export function bible_glyph_chapter_luk15() {
         "$proper_name$Pharisees",
         "$plus",
         "the",
-        "scribes",
+        "$writing_hand+doer",
         "began",
         "to",
         "grumble,",
