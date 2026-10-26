@@ -477,7 +477,7 @@ export function bible_glyph_chapter_jhn03() {
         verse_number: 19,
         words: [
           "And",
-          "this",
+          "$flashlight",
           "is",
           "the",
           "$scales+thing:",
