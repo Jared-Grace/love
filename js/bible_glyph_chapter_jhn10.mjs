@@ -439,7 +439,7 @@ export function bible_glyph_chapter_jhn10() {
           "will",
           "be",
           "$one",
-          "flock,",
+          "$person+sheep+thing,",
           "$one",
           "$person+sheep.",
         ],
