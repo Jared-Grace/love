@@ -90,7 +90,7 @@ export function bible_glyph_chapter_jhn09() {
           "is",
           "$sun,",
           "we",
-          "must",
+          "$knot",
           "do",
           "the",
           "$tools",
