@@ -450,7 +450,7 @@ export function bible_glyph_chapter_1jn04() {
           "$link",
           "$heart_red;",
           "whoever",
-          "abides",
+          "$pin+doing",
           "in",
           "$heart_red",
           "abides",
