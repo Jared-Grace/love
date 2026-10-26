@@ -422,7 +422,7 @@ export function bible_glyph_chapter_jhn03() {
           "$hand_sending",
           "His",
           "$son",
-          "into",
+          "$toward+tray_in",
           "the",
           "$globe",
           "to",
