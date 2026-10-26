@@ -618,7 +618,7 @@ export function bible_glyph_chapter_mrk11() {
         "in",
         "$speech",
         "to",
-        "you",
+        "$you",
         "$pointing",
         "if",
         "anyone",
