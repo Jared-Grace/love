@@ -510,7 +510,7 @@ export function bible_glyph_chapter_mrk04() {
           "$plus",
           "still",
           "$telescope",
-          "are",
+          "$link",
           "like",
           "the",
           "seed",
