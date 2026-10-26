@@ -154,7 +154,7 @@ export function bible_glyph_chapter_jol01() {
           "off",
           "from",
           "your",
-          "mouth.",
+          "$face_with_open_mouth.",
         ],
       },
       {
