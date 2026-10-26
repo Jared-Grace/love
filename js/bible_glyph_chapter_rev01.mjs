@@ -539,7 +539,7 @@ export function bible_glyph_chapter_rev01() {
           "I",
           "$link",
           "$pin",
-          "First",
+          "$first_place",
           "$plus",
           "$pin",
           "Last,",
