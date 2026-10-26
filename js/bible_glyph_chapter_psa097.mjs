@@ -32,7 +32,7 @@ export function bible_glyph_chapter_psa097() {
       {
         verse_number: 2,
         words: [
-          "Clouds",
+          "$cloud",
           "and",
           "thick",
           "darkness",
