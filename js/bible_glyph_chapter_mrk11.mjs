@@ -27,7 +27,7 @@ export function bible_glyph_chapter_mrk11() {
         "Olives,",
         "Jesus",
         "$hand_sending",
-        "two",
+        "$two",
         "of",
         "$pointing_back",
         "$learner,",
