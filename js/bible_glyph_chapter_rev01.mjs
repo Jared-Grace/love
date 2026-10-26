@@ -279,7 +279,7 @@ export function bible_glyph_chapter_rev01() {
       {
         verse_number: 9,
         words: [
-          "I,",
+          "$me,",
           "$proper_name$John,",
           "your",
           "$brother",
