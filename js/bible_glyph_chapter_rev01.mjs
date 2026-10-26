@@ -63,7 +63,7 @@ export function bible_glyph_chapter_rev01() {
           "of",
           "$heart_on_fire,",
           "$plus",
-          "the",
+          "$pin",
           "$witness+thing",
           "of",
           "$cross",
