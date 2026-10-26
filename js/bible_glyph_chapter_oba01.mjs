@@ -257,7 +257,7 @@ export function bible_glyph_chapter_oba01() {
           "will",
           "I",
           "$no_entry",
-          "destroy",
+          "$wilted_flower",
           "the",
           "wise",
           "men",
