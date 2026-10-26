@@ -506,7 +506,7 @@ export function bible_glyph_chapter_jhn04() {
           "to",
           "$pointing_back,",
           "“$anchor+doing",
-          "Me,",
+          "$me,",
           "$woman,",
           "$pointing",
           "a",
