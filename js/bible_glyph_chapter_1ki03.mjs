@@ -901,7 +901,7 @@ export function bible_glyph_chapter_1ki03() {
           "$sprout",
           "one",
           "$speech",
-          "to",
+          "$toward",
           "the",
           "$king,",
           "because",
