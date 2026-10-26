@@ -213,7 +213,7 @@ export function bible_glyph_chapter_ezk36() {
           "as",
           "their",
           "own",
-          "possession",
+          "$hand_receiving+brown_square+thing",
           "with",
           "wholehearted",
           "joy",
