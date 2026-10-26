@@ -408,7 +408,7 @@ export function bible_glyph_chapter_luk24() {
           "Are",
           "$you",
           "the",
-          "only",
+          "$one+describing",
           "visitor",
           "to",
           "$city+peace",
