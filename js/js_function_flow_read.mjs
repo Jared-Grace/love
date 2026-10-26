@@ -887,11 +887,11 @@ export function js_function_flow_read(f_name, ast, known) {
         }
         receivers.push(...(used_handed.get(own) ?? []));
       }
-      let bound = [];
+      let params_bound = [];
       for (let p of x.params) {
-        bound.push(...names(p));
+        params_bound.push(...names(p));
       }
-      source_add(bound, from, stack, null);
+      source_add(params_bound, from, stack, null);
       ("A callback handed only to plain data methods is called with that data's own items and nothing else, so its parameters hold only those items - when the data is plain, which is ruled on after the walk like a data method's answer.");
       let handed_only =
         greater_than(receivers.length, 0) && not(receivers.includes(null));
@@ -902,10 +902,10 @@ export function js_function_flow_read(f_name, ast, known) {
         }
         let held = receivers.flatMap(lambda16);
         function lambda17() {
-          alias_add(bound, from, null, null);
+          alias_add(params_bound, from, null, null);
         }
         function lambda18() {
-          alias_add(bound, held, null, null);
+          alias_add(params_bound, held, null, null);
         }
         data_pending.push({
           answer: null,
@@ -915,7 +915,7 @@ export function js_function_flow_read(f_name, ast, known) {
           granted: lambda18,
         });
       } else {
-        alias_add(bound, from, null, null);
+        alias_add(params_bound, from, null, null);
       }
       if (equal(type, "FunctionDeclaration")) {
         let v24 = names(x.body);

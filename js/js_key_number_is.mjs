@@ -1,10 +1,10 @@
-import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
+import { less_than } from "./less_than.mjs";
 export function js_key_number_is(node, facts, depth) {
   "whether the code alone shows this key is always a number - a written number, a sign or arithmetic, a length, a Math call, one of the repo's arithmetic calls, or a name checked to be a whole number earlier or only ever given numbers. A number can never name the language's own machinery, so a record reached with one is safe whatever the number is.";
   "+ counts only when both sides are numbers, because + joins words as well. A name that refers round to itself while being judged is taken as a number for that one step: every other value it is given still has to be one, so the loop cannot let a word in.";
@@ -107,19 +107,19 @@ export function js_key_number_is(node, facts, depth) {
   }
   visiting.add(node.name);
   let node2 = inits.get(node.name);
-  let is = js_key_number_is(node2, facts, deeper);
+  let held_number = js_key_number_is(node2, facts, deeper);
   let assigns = property_get(facts, "assigns");
   for (let assignment of assigns.get(node.name) ?? []) {
-    if (not(is)) {
+    if (not(held_number)) {
       break;
     }
     if (equal(assignment.operator, "=") || equal(assignment.operator, "+=")) {
-      is = js_key_number_is(assignment.right, facts, deeper);
+      held_number = js_key_number_is(assignment.right, facts, deeper);
     } else {
       let v = assignment.operator.slice(0, -1);
-      is = arithmetic.includes(v);
+      held_number = arithmetic.includes(v);
     }
   }
   visiting.delete(node.name);
-  return is;
+  return held_number;
 }
