@@ -803,7 +803,7 @@ export function bible_glyph_chapter_mat05() {
           "for",
           "you",
           "to",
-          "lose",
+          "$wilted_flower",
           "one",
           "part",
           "of",
