@@ -270,7 +270,7 @@ export function bible_glyph_chapter_exo20() {
         words: [
           "$pointing",
           "in",
-          "six",
+          "$six",
           "$sun",
           "the",
           "$i_am",
