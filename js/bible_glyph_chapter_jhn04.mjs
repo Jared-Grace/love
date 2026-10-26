@@ -393,7 +393,7 @@ export function bible_glyph_chapter_jhn04() {
           "to",
           "$pointing_back,",
           "“Go,",
-          "call",
+          "$loudspeaker+doing",
           "your",
           "$man_beard",
           "$plus",
