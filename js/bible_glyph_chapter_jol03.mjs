@@ -123,7 +123,7 @@ export function bible_glyph_chapter_jol03() {
           "of",
           "$proper_name$Philistia?",
           "Are",
-          "you",
+          "$you",
           "rendering",
           "against",
           "Me",
