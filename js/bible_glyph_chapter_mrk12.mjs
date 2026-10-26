@@ -478,7 +478,7 @@ export function bible_glyph_chapter_mrk12() {
         "$plus",
         "the",
         "$proper_name$Sadducees,",
-        "who",
+        "$back+flashlight",
         "$speech",
         "there",
         "is",
