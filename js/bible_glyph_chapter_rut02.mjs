@@ -249,7 +249,7 @@ export function bible_glyph_chapter_rut02() {
           "but",
           "stay",
           "here",
-          "close",
+          "$paperclip",
           "to",
           "my",
           "servant",
