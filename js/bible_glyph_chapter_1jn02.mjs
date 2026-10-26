@@ -82,7 +82,7 @@ export function bible_glyph_chapter_1jn02() {
         words: [
           "$plus",
           "$tray_in",
-          "this",
+          "$flashlight",
           "we",
           "$lightbulb",
           "$pointing",
