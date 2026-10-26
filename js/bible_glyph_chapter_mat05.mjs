@@ -1219,7 +1219,7 @@ export function bible_glyph_chapter_mat05() {
           "$one+manner",
           "$you",
           "$brother,",
-          "what",
+          "$flashlight+question",
           "more",
           "are",
           "you",
