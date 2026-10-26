@@ -822,7 +822,7 @@ export function bible_glyph_chapter_luk02() {
         "$father",
         "$plus",
         "$mother",
-        "were",
+        "$link",
         "amazed",
         "at",
         "what",
