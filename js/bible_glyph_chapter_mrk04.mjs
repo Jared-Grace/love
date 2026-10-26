@@ -1033,7 +1033,7 @@ export function bible_glyph_chapter_mrk04() {
           "Be",
           "still!",
           "$plus",
-          "the",
+          "$pin",
           "wind",
           "died",
           "down",
