@@ -555,7 +555,7 @@ export function bible_glyph_chapter_jhn04() {
         words: [
           "$curving_up",
           "a",
-          "time",
+          "$clock",
           "$footprints",
           "$plus",
           "has",
