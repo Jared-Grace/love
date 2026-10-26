@@ -850,7 +850,7 @@ export function bible_glyph_chapter_jhn20() {
         verse_number: 31,
         words: [
           "But",
-          "these",
+          "$flashlight",
           "are",
           "written",
           "so",
