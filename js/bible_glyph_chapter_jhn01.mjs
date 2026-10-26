@@ -962,7 +962,7 @@ export function bible_glyph_chapter_jhn01() {
           "He",
           "brought",
           "$pointing_back",
-          "to",
+          "$toward",
           "$cross.",
           "$cross",
           "looked",
