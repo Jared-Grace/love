@@ -379,7 +379,7 @@ export function bible_glyph_chapter_luk07() {
         "He",
         "had",
         "$heart_red+pleading",
-        "on",
+        "$pointing_up",
         "$pointing_back",
         "$plus",
         "was",
