@@ -183,7 +183,7 @@ export function bible_glyph_chapter_gen32() {
           "was",
           "in",
           "great",
-          "fear",
+          "$fear+doing",
           "and",
           "distress,",
           "so",
