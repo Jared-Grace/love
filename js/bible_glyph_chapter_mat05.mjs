@@ -195,7 +195,7 @@ export function bible_glyph_chapter_mat05() {
         verse_number: 11,
         words: [
           "$gift+smile",
-          "are",
+          "$link",
           "you",
           "when",
           "people",
