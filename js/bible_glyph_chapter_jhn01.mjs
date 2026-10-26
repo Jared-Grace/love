@@ -629,7 +629,7 @@ export function bible_glyph_chapter_jhn01() {
           "$back+round_pushpin",
           "$proper_name$John",
           "$link",
-          "baptizing.",
+          "$diving_mask.",
         ],
       },
       {
