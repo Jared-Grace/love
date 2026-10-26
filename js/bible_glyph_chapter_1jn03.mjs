@@ -602,7 +602,7 @@ export function bible_glyph_chapter_1jn03() {
           "$hand_receiving",
           "$away",
           "$pointing_back",
-          "whatever",
+          "$back+flashlight",
           "we",
           "ask,",
           "$pointing",
