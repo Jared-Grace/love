@@ -714,7 +714,7 @@ export function bible_glyph_chapter_jud01() {
           "$raised_fist+thing",
           "$plus",
           "$key,",
-          "before",
+          "$last_track",
           "all",
           "$hourglass,",
           "$plus",
