@@ -515,7 +515,7 @@ export function bible_glyph_chapter_jhn02() {
           "six",
           "$year",
           "this",
-          "temple",
+          "$hut",
           "was",
           "in",
           "the",
