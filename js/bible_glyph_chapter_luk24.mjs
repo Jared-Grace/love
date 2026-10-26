@@ -1028,7 +1028,7 @@ export function bible_glyph_chapter_luk24() {
           "piece",
           "of",
           "broiled",
-          "fish,",
+          "$fish,",
         ],
       },
       {
