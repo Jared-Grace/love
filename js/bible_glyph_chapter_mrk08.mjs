@@ -301,7 +301,7 @@ export function bible_glyph_chapter_mrk08() {
           "$wind,",
           "He",
           "$speech,",
-          "Why",
+          "$flashlight+question",
           "does",
           "this",
           "generation",
