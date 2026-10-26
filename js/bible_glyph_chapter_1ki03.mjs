@@ -379,7 +379,7 @@ export function bible_glyph_chapter_1ki03() {
           "$no_entry",
           "asked",
           "for",
-          "long",
+          "$multiply",
           "$sun",
           "for",
           "yourself,",
