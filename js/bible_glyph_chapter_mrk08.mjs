@@ -744,7 +744,7 @@ export function bible_glyph_chapter_mrk08() {
           "But",
           "who",
           "do",
-          "you",
+          "$you",
           "$speech",
           "that",
           "I",
