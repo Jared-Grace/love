@@ -712,7 +712,7 @@ export function bible_glyph_chapter_luk02() {
         "$wind",
         "$toward+tray_in",
         "the",
-        "temple",
+        "$classical_building",
         "courts,",
         "$plus",
         "$tray_in",
