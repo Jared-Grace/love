@@ -506,7 +506,7 @@ export function bible_glyph_chapter_exo20() {
           "And",
           "the",
           "$family",
-          "stood",
+          "$person+round_pushpin",
           "at",
           "a",
           "distance",
