@@ -898,7 +898,7 @@ export function bible_glyph_chapter_jer26() {
           "so",
           "he",
           "was",
-          "not",
+          "$zero+manner",
           "$hands_giving",
           "into",
           "the",
