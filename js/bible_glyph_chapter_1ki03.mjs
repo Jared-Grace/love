@@ -468,7 +468,7 @@ export function bible_glyph_chapter_1ki03() {
           "ask",
           "for,",
           "both",
-          "riches",
+          "$money_bag",
           "and",
           "$star,",
           "so",
