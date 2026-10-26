@@ -381,7 +381,7 @@ export function bible_glyph_chapter_jhn04() {
           "coming",
           "$round_pushpin+manner",
           "to",
-          "draw",
+          "$bucket+doing",
           "water.”",
         ],
       },
