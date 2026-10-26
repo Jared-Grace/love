@@ -78,7 +78,7 @@ export function bible_glyph_chapter_mrk10() {
         "$speech",
         "to",
         "$pointing_back,",
-        "“What",
+        "“$flashlight+question",
         "did",
         "$fishing_pole+proper_name",
         "command",
