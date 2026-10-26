@@ -546,7 +546,7 @@ export function bible_glyph_chapter_mrk08() {
           "people",
           "brought",
           "a",
-          "blind",
+          "$person_with_white_cane",
           "man",
           "to",
           "$pointing_back",
