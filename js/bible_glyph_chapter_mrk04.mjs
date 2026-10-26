@@ -861,7 +861,7 @@ export function bible_glyph_chapter_mrk04() {
         words: [
           "$plus",
           "with",
-          "many",
+          "$multiply",
           "such",
           "$framed_picture",
           "Jesus",
