@@ -60,7 +60,7 @@ export function app_code_repeated_wrong_say(question, answer, choice) {
     let count = divide(size + 1, 2);
     return count;
   }
-  function said(short_tokens, long_tokens, forwards) {
+  function said(short_tokens, long_tokens, is_forwards) {
     let b3 = list_size_equal(short_tokens, 3);
     if (not(b3)) {
       return null;
@@ -81,7 +81,7 @@ export function app_code_repeated_wrong_say(question, answer, choice) {
       }
       let short_code = code;
       let long_code = right;
-      if (not(forwards)) {
+      if (not(is_forwards)) {
         short_code = right;
         long_code = code;
       }
@@ -98,7 +98,7 @@ export function app_code_repeated_wrong_say(question, answer, choice) {
         long_code,
         "",
       ];
-      if (not(forwards)) {
+      if (not(is_forwards)) {
         parts = [
           "Remember: ",
           long_code,
