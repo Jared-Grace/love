@@ -311,7 +311,7 @@ export function bible_glyph_chapter_jon04() {
           "$hot_face+doing",
           "$no_entry",
           "made",
-          "grow.",
+          "$top+doing.",
           "It",
           "sprang",
           "up",
