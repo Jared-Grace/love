@@ -452,7 +452,7 @@ export function bible_glyph_chapter_jhn09() {
           "man",
           "$speech,",
           "He",
-          "is",
+          "$link",
           "a",
           "$megaphone.",
         ],
