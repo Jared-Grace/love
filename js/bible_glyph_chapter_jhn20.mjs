@@ -192,7 +192,7 @@ export function bible_glyph_chapter_jhn20() {
           "$no_entry",
           "lying",
           "with",
-          "the",
+          "$pin",
           "linen",
           "cloths,",
           "but",
