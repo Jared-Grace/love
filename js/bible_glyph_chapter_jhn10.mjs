@@ -316,7 +316,7 @@ export function bible_glyph_chapter_jhn10() {
           "are",
           "$no_entry",
           "his",
-          "own.",
+          "$identification_card.",
           "When",
           "he",
           "sees",
