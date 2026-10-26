@@ -933,7 +933,7 @@ export function bible_glyph_chapter_mrk04() {
           "they",
           "had",
           "dismissed",
-          "the",
+          "$pin",
           "$crowd,",
           "they",
           "took",
