@@ -1218,7 +1218,7 @@ export function bible_glyph_chapter_ezk36() {
           "around",
           "you",
           "that",
-          "remain",
+          "$puzzle_piece+doing",
           "will",
           "$lightbulb",
           "that",
