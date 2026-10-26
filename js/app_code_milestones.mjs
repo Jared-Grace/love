@@ -24,8 +24,8 @@ export function app_code_milestones() {
   ("Each stands after the last lesson either one draws from, so both are reached only once every lesson in them has been met. The labels are drafts, not yet read by the human.");
   function number_of(lesson) {
     let index = list_index_of(lessons, lesson);
-    let number = add_1(index);
-    return number;
+    let number_inner = add_1(index);
+    return number_inner;
   }
   let numbers = list_map(at_once, number_of);
   let number = list_max(numbers);
