@@ -740,7 +740,7 @@ export function bible_glyph_chapter_ezk18() {
           "of",
           "the",
           "$thumbs_down?",
-          "declares",
+          "$microphone",
           "the",
           "$crown",
           "$i_am.",
