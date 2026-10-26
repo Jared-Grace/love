@@ -466,7 +466,7 @@ export function bible_glyph_chapter_jhn01() {
           "$no_entry.”",
           "“Are",
           "you",
-          "the",
+          "$pin",
           "$megaphone?”",
           "$plus",
           "he",
