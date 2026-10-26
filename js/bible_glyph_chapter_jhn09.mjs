@@ -774,7 +774,7 @@ export function bible_glyph_chapter_jhn09() {
           "$round_pushpin+tray_out+question",
           "$flashlight",
           "man",
-          "is",
+          "$link",
           "from.",
         ],
       },
