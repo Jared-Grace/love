@@ -160,7 +160,7 @@ export function bible_glyph_chapter_luk07() {
         "come",
         "$down_arrow",
         "my",
-        "roof.",
+        "$house+umbrella.",
       ],
     },
     {
