@@ -740,7 +740,7 @@ export function bible_glyph_chapter_luk07() {
         "$plus",
         "living",
         "in",
-        "luxury",
+        "$lotion_bottle+thing",
         "are",
         "found",
         "$tray_in",
