@@ -646,7 +646,7 @@ export function bible_glyph_chapter_mrk08() {
           "he",
           "could",
           "see",
-          "everything",
+          "$all",
           "$end_arrow+light+manner.",
         ],
       },
