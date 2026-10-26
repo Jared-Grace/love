@@ -34,7 +34,7 @@ export function bible_glyph_chapter_psa138() {
         words: [
           "I",
           "$bowing",
-          "toward",
+          "$toward",
           "Your",
           "$sparkle+thing",
           "temple",
