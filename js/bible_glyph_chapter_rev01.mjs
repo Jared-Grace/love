@@ -333,7 +333,7 @@ export function bible_glyph_chapter_rev01() {
           "a",
           "loud",
           "$voice",
-          "like",
+          "$likeness",
           "a",
           "trumpet,",
         ],
