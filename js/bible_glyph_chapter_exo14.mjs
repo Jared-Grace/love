@@ -162,7 +162,7 @@ export function bible_glyph_chapter_exo14() {
           "Pharaoh",
           "prepared",
           "his",
-          "chariot",
+          "$chariot",
           "and",
           "$hand_receiving",
           "his",
