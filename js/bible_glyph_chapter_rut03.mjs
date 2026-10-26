@@ -537,7 +537,7 @@ export function bible_glyph_chapter_rut03() {
           "$speech,",
           "$no_entry",
           "$footprints",
-          "to",
+          "$toward",
           "your",
           "mother-in-law",
           "$hand+zero+manner.",
