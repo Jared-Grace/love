@@ -446,7 +446,7 @@ export function bible_glyph_chapter_hag02() {
           "of",
           "their",
           "$hand;",
-          "whatever",
+          "$back+flashlight",
           "they",
           "offer",
           "there",
