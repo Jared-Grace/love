@@ -127,7 +127,7 @@ export function bible_glyph_chapter_mrk08() {
           "do",
           "you",
           "have?",
-          "Seven,",
+          "$seven,",
           "they",
           "$speech.",
         ],
