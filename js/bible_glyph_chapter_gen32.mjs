@@ -901,7 +901,7 @@ export function bible_glyph_chapter_gen32() {
           "$eating",
           "the",
           "tendon",
-          "attached",
+          "$back+flashlight",
           "to",
           "the",
           "socket",
