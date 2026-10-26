@@ -32,7 +32,7 @@ export function bible_glyph_chapter_jol01() {
         verse_number: 2,
         words: [
           "$ear",
-          "this,",
+          "$flashlight,",
           "O",
           "elders;",
           "give",
