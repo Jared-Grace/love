@@ -909,7 +909,7 @@ export function bible_glyph_chapter_jhn04() {
       {
         verse_number: 38,
         words: [
-          "I",
+          "$me",
           "$hand_sending",
           "you",
           "to",
