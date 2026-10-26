@@ -285,7 +285,7 @@ export function bible_glyph_chapter_luk07() {
         "the",
         "messengers",
         "$down_arrow+turn_back",
-        "to",
+        "$toward+tray_in",
         "the",
         "$house,",
         "they",
