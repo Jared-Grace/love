@@ -209,7 +209,7 @@ export function bible_glyph_chapter_luk15() {
         "a",
         "$lamp",
         "$plus",
-        "sweep",
+        "$broom+doing",
         "the",
         "$house",
         "$plus",
