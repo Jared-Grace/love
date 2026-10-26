@@ -235,7 +235,7 @@ export function bible_glyph_chapter_jhn20() {
           "yet",
           "$lightbulb",
           "the",
-          "Scripture,",
+          "$writing_hand+thing,",
           "$pointing",
           "$pointing_back",
           "had",
