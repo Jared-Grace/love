@@ -145,7 +145,7 @@ export function bible_glyph_chapter_mrk10() {
         "$pointing_back",
         "male",
         "$plus",
-        "female.",
+        "$female_sign.",
       ],
     },
     {
