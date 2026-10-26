@@ -353,7 +353,7 @@ export function bible_glyph_chapter_2th01() {
           "be",
           "glorified",
           "$tray_in",
-          "you,",
+          "$you,",
           "$plus",
           "you",
           "$tray_in",
