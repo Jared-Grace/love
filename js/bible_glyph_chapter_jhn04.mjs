@@ -258,7 +258,7 @@ export function bible_glyph_chapter_jhn04() {
           "$link",
           "$water_wave+down_arrow+describing.",
           "$round_pushpin+tray_out+question",
-          "then",
+          "$right_arrow",
           "will",
           "You",
           "get",
