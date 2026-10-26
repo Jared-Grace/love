@@ -581,7 +581,7 @@ export function bible_glyph_chapter_1jn02() {
           "remained",
           "with",
           "$me.",
-          "But",
+          "$curving_up",
           "their",
           "departure",
           "made",
