@@ -255,7 +255,7 @@ export function bible_glyph_chapter_hag02() {
           "$gold",
           "is",
           "Mine,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am",
           "of",
