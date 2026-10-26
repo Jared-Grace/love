@@ -16,7 +16,7 @@ export function bible_glyph_chapter_isa01() {
         words: [
           "The",
           "vision",
-          "concerning",
+          "$pointing_up",
           "$hands_raised+proper_name",
           "and",
           "$city+peace",
