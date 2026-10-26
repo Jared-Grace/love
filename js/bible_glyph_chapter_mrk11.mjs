@@ -95,7 +95,7 @@ export function bible_glyph_chapter_mrk11() {
         "$speech",
         "to",
         "him,",
-        "‘The",
+        "‘$pin",
         "$crown",
         "needs",
         "$pointing_back,",
