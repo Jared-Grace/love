@@ -1025,7 +1025,7 @@ export function bible_glyph_chapter_1ki13() {
           "beside",
           "it.",
           "The",
-          "lion",
+          "$lion",
           "had",
           "$no_entry",
           "$eating",
