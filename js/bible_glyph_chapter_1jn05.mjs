@@ -337,7 +337,7 @@ export function bible_glyph_chapter_1jn05() {
           "you",
           "who",
           "$anchor+doing",
-          "in",
+          "$toward+tray_in",
           "the",
           "$name_tag",
           "of",
