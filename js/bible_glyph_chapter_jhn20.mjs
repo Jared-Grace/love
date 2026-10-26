@@ -663,7 +663,7 @@ export function bible_glyph_chapter_jhn20() {
         verse_number: 25,
         words: [
           "$right_arrow",
-          "the",
+          "$pin",
           "other",
           "$learner",
           "$speech",
