@@ -142,7 +142,7 @@ export function bible_glyph_chapter_exo14() {
           "$family",
           "and",
           "$speech,",
-          "What",
+          "$flashlight+question",
           "have",
           "we",
           "$hammer+doing?",
