@@ -355,7 +355,7 @@ export function bible_glyph_chapter_jhn03() {
           "$pin",
           "$wilderness,",
           "so",
-          "the",
+          "$pin",
           "$son",
           "of",
           "$person",
