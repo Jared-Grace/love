@@ -21,7 +21,7 @@ export function bible_glyph_chapter_jol01() {
           "$i_am",
           "$back+flashlight",
           "$link",
-          "to",
+          "$toward",
           "$i_am+heart_on_fire",
           "$son",
           "of",
