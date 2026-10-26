@@ -165,7 +165,7 @@ export function bible_glyph_chapter_mrk12() {
         "$pointing",
         "They",
         "will",
-        "respect",
+        "$bowing+eyes+doing",
         "my",
         "$son.",
       ],
