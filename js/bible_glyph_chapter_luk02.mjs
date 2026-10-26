@@ -1058,7 +1058,7 @@ export function bible_glyph_chapter_luk02() {
         "$party_popper",
         "of",
         "$pin",
-        "Passover.",
+        "$lamb+door.",
       ],
     },
     {
