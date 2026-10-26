@@ -67,7 +67,7 @@ export function bible_glyph_chapter_jhn04() {
           "had",
           "to",
           "pass",
-          "through",
+          "$metro",
           "$guard+proper_name.",
         ],
       },
