@@ -202,7 +202,7 @@ export function bible_glyph_chapter_gen01() {
           "was",
           "$morning,",
           "the",
-          "second",
+          "$second_place",
           "$sun.",
         ],
       },
