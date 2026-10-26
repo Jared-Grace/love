@@ -205,7 +205,7 @@ export function bible_glyph_chapter_jud01() {
           "chains",
           "under",
           "darkness",
-          "for",
+          "$toward+tray_in",
           "the",
           "$scales+thing",
           "of",
