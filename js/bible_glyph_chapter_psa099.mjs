@@ -36,7 +36,7 @@ export function bible_glyph_chapter_psa099() {
       {
         verse_number: 2,
         words: [
-          "Great",
+          "$top",
           "is",
           "the",
           "$i_am",
