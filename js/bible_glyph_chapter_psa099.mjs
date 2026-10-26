@@ -148,7 +148,7 @@ export function bible_glyph_chapter_psa099() {
           "the",
           "$candle",
           "of",
-          "cloud;",
+          "$cloud;",
           "they",
           "kept",
           "His",
