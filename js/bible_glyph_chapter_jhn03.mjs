@@ -68,7 +68,7 @@ export function bible_glyph_chapter_jhn03() {
           "You",
           "are",
           "$hammer$ing",
-          "if",
+          "$traffic_light",
           "$heart_on_fire",
           "were",
           "$no_entry",
