@@ -911,7 +911,7 @@ export function bible_glyph_chapter_mrk12() {
         "$burnt_offering",
         "offerings",
         "$plus",
-        "sacrifices.",
+        "$sacrifice.",
       ],
     },
     {
