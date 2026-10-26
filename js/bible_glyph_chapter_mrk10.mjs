@@ -602,7 +602,7 @@ export function bible_glyph_chapter_mrk10() {
       verse_number: 25,
       words: [
         "It",
-        "is",
+        "$link",
         "$thumbs_up+face_exhaling+more",
         "for",
         "a",
