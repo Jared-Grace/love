@@ -357,7 +357,7 @@ export function bible_glyph_chapter_rut03() {
           "is",
           "a",
           "redeemer",
-          "nearer",
+          "$magnet",
           "$tray_out",
           "I.",
         ],
