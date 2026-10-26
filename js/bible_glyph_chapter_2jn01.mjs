@@ -333,7 +333,7 @@ export function bible_glyph_chapter_2jn01() {
           "use",
           "$page_with_curl",
           "$plus",
-          "ink.",
+          "$black_circle+thing.",
           "Instead",
           "I",
           "hope",
