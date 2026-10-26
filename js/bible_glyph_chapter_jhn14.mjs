@@ -423,7 +423,7 @@ export function bible_glyph_chapter_jhn14() {
           "you",
           "will",
           "keep",
-          "My",
+          "$me+describing",
           "$scroll$s.",
         ],
       },
