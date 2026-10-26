@@ -207,7 +207,7 @@ export function bible_glyph_chapter_exo20() {
       {
         verse_number: 9,
         words: [
-          "Six",
+          "$six",
           "$sun",
           "you",
           "shall",
