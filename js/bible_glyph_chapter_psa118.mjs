@@ -136,7 +136,7 @@ export function bible_glyph_chapter_psa118() {
           "on",
           "those",
           "who",
-          "hate",
+          "$heart_red+thumbs_down",
           "me.",
         ],
       },
