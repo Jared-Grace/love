@@ -18,7 +18,7 @@ export function bible_glyph_chapter_psa067() {
           "May",
           "$heart_on_fire",
           "be",
-          "gracious",
+          "$heart_orange+doing",
           "to",
           "us",
           "and",
