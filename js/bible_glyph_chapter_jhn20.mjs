@@ -228,7 +228,7 @@ export function bible_glyph_chapter_jhn20() {
       {
         verse_number: 9,
         words: [
-          "For",
+          "$information",
           "they",
           "did",
           "not",
