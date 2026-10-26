@@ -461,7 +461,7 @@ export function bible_glyph_chapter_hag02() {
           "$heart_organ",
           "$pleading",
           "$tray_out",
-          "this",
+          "$flashlight",
           "$sun",
           "forward:",
           "Before",
