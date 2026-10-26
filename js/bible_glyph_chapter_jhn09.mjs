@@ -719,7 +719,7 @@ export function bible_glyph_chapter_jhn09() {
           "$flashlight+question",
           "do",
           "you",
-          "want",
+          "$shooting_star+doing",
           "to",
           "$ear",
           "it",
