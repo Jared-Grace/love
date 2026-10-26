@@ -308,7 +308,7 @@ export function bible_glyph_chapter_jon04() {
           "$back+flashlight",
           "you",
           "$no_entry",
-          "tended",
+          "$hot_face+doing",
           "$no_entry",
           "made",
           "grow.",
