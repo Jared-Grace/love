@@ -174,7 +174,7 @@ export function bible_glyph_chapter_psa085() {
       {
         verse_number: 9,
         words: [
-          "Surely",
+          "$check+exclamation",
           "His",
           "salvation",
           "is",
