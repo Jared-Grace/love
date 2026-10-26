@@ -481,7 +481,7 @@ export function bible_glyph_chapter_1jn04() {
           "have",
           "$microphone",
           "on",
-          "the",
+          "$pin",
           "$sun",
           "of",
           "$scales+thing;",
