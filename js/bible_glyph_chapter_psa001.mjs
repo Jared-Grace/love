@@ -66,7 +66,7 @@ export function bible_glyph_chapter_psa001() {
           "$scroll",
           "he",
           "meditates",
-          "day",
+          "$sun+manner",
           "and",
           "$night.",
         ],
