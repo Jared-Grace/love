@@ -233,7 +233,7 @@ export function bible_glyph_chapter_2th01() {
           "the",
           "$angel+thumbs_up",
           "of",
-          "our",
+          "$me",
           "$crown",
           "$cross.",
         ],
