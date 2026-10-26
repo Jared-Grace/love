@@ -206,7 +206,7 @@ export function bible_glyph_chapter_ezk33() {
           "away",
           "in",
           "his",
-          "iniquity,",
+          "$cyclone,",
           "but",
           "his",
           "$blood",
