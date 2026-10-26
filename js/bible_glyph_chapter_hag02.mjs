@@ -170,7 +170,7 @@ export function bible_glyph_chapter_hag02() {
           "My",
           "$wind",
           "$person+round_pushpin",
-          "among",
+          "$radio_button",
           "you;",
           "$no_entry",
           "be",
