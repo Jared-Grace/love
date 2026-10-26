@@ -369,7 +369,7 @@ export function bible_glyph_chapter_jhn17() {
           "destruction,",
           "that",
           "$pin",
-          "Scripture",
+          "$writing_hand+thing",
           "might",
           "be",
           "fulfilled.",
