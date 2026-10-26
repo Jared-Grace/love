@@ -284,7 +284,7 @@ export function bible_glyph_chapter_1jn05() {
         words: [
           "$plus",
           "$flashlight",
-          "is",
+          "$link",
           "that",
           "$witness+thing:",
           "$heart_on_fire",
