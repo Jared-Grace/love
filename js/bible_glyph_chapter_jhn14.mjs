@@ -898,7 +898,7 @@ export function bible_glyph_chapter_jhn14() {
           "$hammer",
           "exactly",
           "what",
-          "the",
+          "$pin",
           "$father",
           "has",
           "commanded",
