@@ -498,7 +498,7 @@ export function bible_glyph_chapter_1jn03() {
           "$heart_organ+two_hearts",
           "$away",
           "$pointing_back,",
-          "how",
+          "$gear+question",
           "can",
           "the",
           "$heart_red",
