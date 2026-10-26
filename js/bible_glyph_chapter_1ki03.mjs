@@ -683,7 +683,7 @@ export function bible_glyph_chapter_1ki03() {
           "up",
           "in",
           "the",
-          "middle",
+          "$radio_button",
           "of",
           "the",
           "$night",
