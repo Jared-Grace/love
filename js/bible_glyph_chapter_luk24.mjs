@@ -298,7 +298,7 @@ export function bible_glyph_chapter_luk24() {
           "that",
           "$pointing_back",
           "$sun",
-          "two",
+          "$two",
           "$tray_out",
           "$pointing_back",
           "were",
