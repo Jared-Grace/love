@@ -165,7 +165,7 @@ export function bible_glyph_chapter_jhn03() {
         verse_number: 6,
         words: [
           "$meat",
-          "is",
+          "$link",
           "$hatching_chick",
           "$tray_out",
           "$meat,",
