@@ -441,7 +441,7 @@ export function bible_glyph_chapter_hag01() {
           "$son",
           "of",
           "$question+heart_on_fire,",
-          "governor",
+          "$crown+city",
           "of",
           "$hands_raised+proper_name,",
           "and",
