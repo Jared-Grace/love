@@ -621,7 +621,7 @@ export function bible_glyph_chapter_jud01() {
           "you",
           "await",
           "the",
-          "mercy",
+          "$heart_hands",
           "of",
           "our",
           "$crown",
