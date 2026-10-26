@@ -204,7 +204,7 @@ export function bible_glyph_chapter_jhn04() {
           "$speech",
           "to",
           "$pointing_back,",
-          "“If",
+          "“$traffic_light",
           "you",
           "$lightbulb",
           "the",
