@@ -135,7 +135,7 @@ export function bible_glyph_chapter_jhn04() {
           "Samaria",
           "$footprints",
           "to",
-          "draw",
+          "$bucket+doing",
           "$water,",
           "$cross",
           "$speech",
