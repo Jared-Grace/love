@@ -534,7 +534,7 @@ export function bible_glyph_chapter_1jn04() {
           "$heart_red+doing",
           "$pointing",
           "$pointing_back",
-          "first",
+          "$first_place",
           "$heart_red+doing$d",
           "us.",
         ],
