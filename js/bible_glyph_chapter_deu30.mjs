@@ -310,7 +310,7 @@ export function bible_glyph_chapter_deu30() {
           "fruit",
           "of",
           "your",
-          "womb,",
+          "$baby+house,",
           "the",
           "offspring",
           "of",
