@@ -1192,7 +1192,7 @@ export function bible_glyph_chapter_ezk33() {
           "singer",
           "of",
           "love",
-          "songs",
+          "$song",
           "with",
           "a",
           "beautiful",
