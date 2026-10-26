@@ -655,7 +655,7 @@ export function bible_glyph_chapter_jol02() {
           "$fear+doing,",
           "O",
           "$brown_square;",
-          "rejoice",
+          "$woman_dancing",
           "and",
           "be",
           "glad,",
