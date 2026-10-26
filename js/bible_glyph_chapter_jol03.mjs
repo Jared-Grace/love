@@ -20,7 +20,7 @@ export function bible_glyph_chapter_jol03() {
           "and",
           "at",
           "that",
-          "time,",
+          "$clock,",
           "when",
           "I",
           "$turn_back",
