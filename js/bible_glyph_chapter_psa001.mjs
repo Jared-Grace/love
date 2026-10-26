@@ -115,7 +115,7 @@ export function bible_glyph_chapter_psa001() {
           "they",
           "are",
           "like",
-          "chaff",
+          "$wheat+dashing_away",
           "driven",
           "off",
           "by",
