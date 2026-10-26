@@ -1256,7 +1256,7 @@ export function bible_glyph_chapter_luk07() {
         "who",
         "was",
         "forgiven",
-        "more.”",
+        "$multiply+more.”",
         "He",
         "was",
         "in",
