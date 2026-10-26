@@ -319,7 +319,7 @@ export function bible_glyph_chapter_jhn20() {
           "they",
           "have",
           "taken",
-          "my",
+          "$me",
           "$crown,",
           "$plus",
           "I",
