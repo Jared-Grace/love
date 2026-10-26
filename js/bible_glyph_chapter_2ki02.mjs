@@ -362,7 +362,7 @@ export function bible_glyph_chapter_2ki02() {
           "you.",
           "$heart_on_fire+rescue",
           "$speech,",
-          "Please",
+          "$pleading",
           "let",
           "me",
           "inherit",
