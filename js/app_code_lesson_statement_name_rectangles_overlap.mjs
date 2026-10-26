@@ -130,7 +130,14 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
     );
     return chip;
   }
-  function rectangles_draw(columns, rows, first, second, across_inner, down) {
+  function rectangles_draw(
+    columns,
+    rows,
+    first,
+    second,
+    across_inner,
+    down_inner,
+  ) {
     "the picture of two rectangles with their edges numbered, as an entry of the writing";
     function draw(box) {
       app_code_rectangles_edges_draw(
@@ -140,7 +147,7 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
         first,
         second,
         across_inner,
-        down,
+        down_inner,
       );
     }
     return draw;
