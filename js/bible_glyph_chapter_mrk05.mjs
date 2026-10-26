@@ -77,7 +77,7 @@ export function bible_glyph_chapter_mrk05() {
         "been",
         "living",
         "$tray_in",
-        "the",
+        "$pin",
         "tombs.",
       ],
     },
