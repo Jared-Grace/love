@@ -709,7 +709,7 @@ export function bible_glyph_chapter_luk07() {
         "see?",
         "A",
         "$tanabata_tree",
-        "swaying",
+        "$vibration_mode+doing",
         "in",
         "the",
         "$wind+dashing_away?",
