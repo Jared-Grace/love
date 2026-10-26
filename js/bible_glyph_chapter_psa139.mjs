@@ -294,7 +294,7 @@ export function bible_glyph_chapter_psa139() {
           "and",
           "wonderfully",
           "made.",
-          "Marvelous",
+          "$star_struck",
           "are",
           "Your",
           "works,",
