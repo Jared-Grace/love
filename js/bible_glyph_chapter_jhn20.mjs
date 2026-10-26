@@ -732,7 +732,7 @@ export function bible_glyph_chapter_jhn20() {
           "$door",
           "$locked+doing,",
           "$plus",
-          "stood",
+          "$person+round_pushpin",
           "among",
           "them",
           "$plus",
