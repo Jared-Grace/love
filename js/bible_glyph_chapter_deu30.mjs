@@ -671,7 +671,7 @@ export function bible_glyph_chapter_deu30() {
           "and",
           "cursing.",
           "Therefore",
-          "choose",
+          "$check_box",
           "$sprout,",
           "so",
           "that",
