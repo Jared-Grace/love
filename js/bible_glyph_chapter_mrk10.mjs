@@ -1172,7 +1172,7 @@ export function bible_glyph_chapter_mrk10() {
         "$shooting_star+doing",
         "to",
         "become",
-        "great",
+        "$top",
         "$tray_in",
         "you",
         "must",
