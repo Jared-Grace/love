@@ -92,7 +92,7 @@ export function bible_glyph_chapter_jhn14() {
           "presence,",
           "so",
           "that",
-          "where",
+          "$back+round_pushpin",
           "I",
           "am,",
           "there",
