@@ -420,7 +420,7 @@ export function bible_glyph_chapter_jhn01() {
           "$plus",
           "$proper_name$Levites",
           "to",
-          "ask",
+          "$question",
           "$pointing_back,",
           "“Who",
           "are",
