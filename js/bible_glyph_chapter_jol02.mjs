@@ -531,7 +531,7 @@ export function bible_glyph_chapter_jol02() {
           "among",
           "the",
           "$family,",
-          "Where",
+          "$question+round_pushpin",
           "is",
           "their",
           "$heart_on_fire?",
