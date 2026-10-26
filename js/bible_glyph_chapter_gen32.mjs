@@ -286,7 +286,7 @@ export function bible_glyph_chapter_gen32() {
           "for",
           "Your",
           "$kneeling.",
-          "Indeed,",
+          "$pointing,",
           "with",
           "only",
           "my",
