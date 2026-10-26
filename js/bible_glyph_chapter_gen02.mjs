@@ -411,7 +411,7 @@ export function bible_glyph_chapter_gen02() {
           "And",
           "the",
           "fourth",
-          "river",
+          "$water+national_park",
           "is",
           "the",
           "$proper_name$Euphrates.",
