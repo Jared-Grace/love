@@ -1095,7 +1095,7 @@ export function bible_glyph_chapter_jhn01() {
           "$speech",
           "of",
           "$pointing_back,",
-          "“Here",
+          "“$exclamation",
           "is",
           "a",
           "true",
