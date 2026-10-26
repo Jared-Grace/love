@@ -920,7 +920,7 @@ export function bible_glyph_chapter_jhn04() {
           "$no_entry",
           "worked",
           "for.",
-          "Others",
+          "$plus+one",
           "have",
           "done",
           "the",
