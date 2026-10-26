@@ -360,7 +360,7 @@ export function bible_glyph_chapter_1jn02() {
           "writing",
           "to",
           "you,",
-          "young",
+          "$new_button+person",
           "men,",
           "$pointing",
           "you",
