@@ -432,7 +432,7 @@ export function bible_glyph_chapter_1jn03() {
           "$brother",
           "is",
           "a",
-          "murderer,",
+          "$person+fist+skull,",
           "$plus",
           "you",
           "$lightbulb",
