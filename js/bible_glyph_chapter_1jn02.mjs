@@ -512,7 +512,7 @@ export function bible_glyph_chapter_1jn02() {
           "will",
           "of",
           "$heart_on_fire",
-          "remains",
+          "$pin+doing",
           "$hourglass.",
         ],
       },
