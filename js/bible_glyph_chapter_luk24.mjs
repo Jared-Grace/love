@@ -533,7 +533,7 @@ export function bible_glyph_chapter_luk24() {
           "They",
           "were",
           "at",
-          "the",
+          "$pin",
           "$tomb",
           "early",
           "this",
