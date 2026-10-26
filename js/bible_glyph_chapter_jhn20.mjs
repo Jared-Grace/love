@@ -255,7 +255,7 @@ export function bible_glyph_chapter_jhn20() {
         words: [
           "$curving_right",
           "$proper_name$Mary",
-          "stood",
+          "$person+round_pushpin",
           "outside",
           "the",
           "$tomb",
