@@ -128,7 +128,7 @@ export function bible_glyph_chapter_mrk12() {
         "another,",
         "and",
         "this",
-        "one",
+        "$plus+telescope+manner",
         "they",
         "killed.",
         "$plus",
