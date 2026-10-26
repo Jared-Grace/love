@@ -559,7 +559,7 @@ export function bible_glyph_chapter_luk07() {
         "in",
         "$speech,",
         "$proper_name$“John",
-        "the",
+        "$pin",
         "$diving_mask+doer",
         "$hand_sending",
         "us",
