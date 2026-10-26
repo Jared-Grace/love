@@ -803,7 +803,7 @@ export function bible_glyph_chapter_isa01() {
           "and",
           "those",
           "who",
-          "forsake",
+          "$derelict_house+doing",
           "the",
           "$i_am",
           "will",
