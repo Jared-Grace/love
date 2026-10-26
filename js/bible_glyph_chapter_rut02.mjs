@@ -647,7 +647,7 @@ export function bible_glyph_chapter_rut02() {
           "Where",
           "did",
           "you",
-          "glean",
+          "$hand+sheaf_of_rice+doing",
           "$sun,",
           "and",
           "where",
