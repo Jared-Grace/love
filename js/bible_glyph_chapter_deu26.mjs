@@ -710,7 +710,7 @@ export function bible_glyph_chapter_deu26() {
           "has",
           "$hammer+doing,",
           "in",
-          "praise",
+          "$clapping_hands+thing",
           "and",
           "$name_tag",
           "and",
