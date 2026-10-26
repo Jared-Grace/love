@@ -80,7 +80,7 @@ export function bible_glyph_chapter_jhn03() {
         verse_number: 3,
         words: [
           "$cross",
-          "replied,",
+          "$speech+turn_back,",
           "“$check+manner,",
           "$check+manner,",
           "I",
