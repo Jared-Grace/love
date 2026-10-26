@@ -104,7 +104,7 @@ export function bible_glyph_chapter_1jn01() {
           "we",
           "proclaim",
           "to",
-          "you,",
+          "$you,",
           "so",
           "that",
           "you",
