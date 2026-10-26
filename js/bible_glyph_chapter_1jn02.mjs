@@ -560,7 +560,7 @@ export function bible_glyph_chapter_1jn02() {
           "went",
           "out",
           "$tray_out",
-          "us,",
+          "$me,",
           "but",
           "they",
           "did",
