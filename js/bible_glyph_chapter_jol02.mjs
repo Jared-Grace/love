@@ -260,7 +260,7 @@ export function bible_glyph_chapter_jol02() {
           "run",
           "along",
           "the",
-          "wall;",
+          "$brick+shield;",
           "they",
           "climb",
           "into",
