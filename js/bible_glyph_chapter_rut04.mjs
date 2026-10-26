@@ -317,7 +317,7 @@ export function bible_glyph_chapter_rut04() {
           "$speech",
           "to",
           "$proper_name$Boaz,",
-          "Buy",
+          "$coin+hand_receiving",
           "it",
           "for",
           "yourself.",
