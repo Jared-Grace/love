@@ -19,7 +19,7 @@ export function bible_glyph_chapter_jhn03() {
         words: [
           "Now",
           "there",
-          "was",
+          "$link",
           "a",
           "$person",
           "$tray_out",
