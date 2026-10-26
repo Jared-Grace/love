@@ -522,7 +522,7 @@ export function bible_glyph_chapter_2ki02() {
           "he",
           "$hand_receiving",
           "the",
-          "cloak",
+          "$cloak+sparkles",
           "that",
           "had",
           "fallen",
