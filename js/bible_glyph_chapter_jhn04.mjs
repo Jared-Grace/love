@@ -489,7 +489,7 @@ export function bible_glyph_chapter_jhn04() {
           "$pointing",
           "$tray_in",
           "$city+peace",
-          "is",
+          "$link",
           "the",
           "$place",
           "where",
