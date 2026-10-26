@@ -495,7 +495,7 @@ export function bible_glyph_chapter_jhn03() {
           "$darkness",
           "rather",
           "than",
-          "the",
+          "$pin",
           "$light",
           "because",
           "their",
