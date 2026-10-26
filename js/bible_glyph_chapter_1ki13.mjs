@@ -1066,7 +1066,7 @@ export function bible_glyph_chapter_1ki13() {
           "own",
           "$city",
           "to",
-          "mourn",
+          "$crying_face+doing",
           "for",
           "him",
           "and",
