@@ -67,7 +67,7 @@ export function bible_glyph_chapter_mrk12() {
         "$kneeling",
         "to",
         "$pin",
-        "tenants",
+        "$earth+tools+doer",
         "to",
         "$hand_receiving",
         "his",
