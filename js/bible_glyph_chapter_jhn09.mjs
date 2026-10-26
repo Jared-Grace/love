@@ -133,7 +133,7 @@ export function bible_glyph_chapter_jhn09() {
           "He",
           "had",
           "$speech",
-          "this,",
+          "$flashlight,",
           "He",
           "spit",
           "on",
