@@ -349,7 +349,7 @@ export function bible_glyph_chapter_jhn03() {
           "$fishing_pole+proper_name",
           "lifted",
           "up",
-          "the",
+          "$pin",
           "snake",
           "$tray_in",
           "the",
