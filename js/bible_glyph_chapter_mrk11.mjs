@@ -105,7 +105,7 @@ export function bible_glyph_chapter_mrk11() {
         "$pointing_back",
         "back",
         "here",
-        "shortly.’”",
+        "$fast_forward.’”",
       ],
     },
     {
