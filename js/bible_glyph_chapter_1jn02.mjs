@@ -717,7 +717,7 @@ export function bible_glyph_chapter_1jn02() {
           "remain",
           "$tray_in",
           "you.",
-          "If",
+          "$traffic_light",
           "it",
           "does,",
           "$plus",
