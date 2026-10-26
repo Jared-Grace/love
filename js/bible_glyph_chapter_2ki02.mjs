@@ -625,7 +625,7 @@ export function bible_glyph_chapter_2ki02() {
           "for",
           "your",
           "$crown.",
-          "Perhaps",
+          "$no_entry+traffic_light",
           "the",
           "$wind",
           "of",
