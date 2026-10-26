@@ -1229,7 +1229,7 @@ export function bible_glyph_chapter_luk24() {
           "was",
           "carried",
           "up",
-          "into",
+          "$toward+tray_in",
           "$sky.",
         ],
       },
