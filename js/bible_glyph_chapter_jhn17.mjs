@@ -452,7 +452,7 @@ export function bible_glyph_chapter_jhn17() {
           "of",
           "$pin",
           "$globe,",
-          "but",
+          "$curving_up",
           "$right_arrow+toward",
           "You",
           "keep",
