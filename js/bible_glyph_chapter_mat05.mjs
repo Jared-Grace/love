@@ -390,7 +390,7 @@ export function bible_glyph_chapter_mat05() {
           "to",
           "abolish",
           "them,",
-          "but",
+          "$curving_up",
           "to",
           "fulfill",
           "them.",
