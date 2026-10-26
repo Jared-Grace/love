@@ -207,7 +207,7 @@ export function bible_glyph_chapter_jhn01() {
         words: [
           "He",
           "$footprints",
-          "to",
+          "$toward+tray_in",
           "His",
           "own,",
           "$plus",
