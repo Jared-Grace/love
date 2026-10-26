@@ -549,7 +549,7 @@ export function bible_glyph_chapter_1ki13() {
           "$man_beard",
           "of",
           "$heart_on_fire",
-          "who",
+          "$back+flashlight",
           "$footprints",
           "from",
           "$hands_raised+proper_name?",
