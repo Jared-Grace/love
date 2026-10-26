@@ -210,7 +210,7 @@ export function bible_glyph_chapter_jdg13() {
           "of",
           "$heart_on_fire,",
           "exceedingly",
-          "awesome.",
+          "$fear+doing.",
           "I",
           "did",
           "$no_entry",
