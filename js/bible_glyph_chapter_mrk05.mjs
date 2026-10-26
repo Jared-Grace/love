@@ -998,7 +998,7 @@ export function bible_glyph_chapter_mrk05() {
         "this",
         "commotion",
         "$plus",
-        "weeping?",
+        "$loudly_crying?",
         "The",
         "$baby",
         "has",
