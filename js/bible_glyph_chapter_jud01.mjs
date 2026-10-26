@@ -511,7 +511,7 @@ export function bible_glyph_chapter_jud01() {
           "after",
           "$pointing_back",
           "own",
-          "lusts.",
+          "$pointing_up+anger_symbol+thing.",
           "$plus",
           "$pointing_back",
           "mouths",
