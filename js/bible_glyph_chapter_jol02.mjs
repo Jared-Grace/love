@@ -579,7 +579,7 @@ export function bible_glyph_chapter_jol02() {
           "you",
           "will",
           "be",
-          "satisfied.",
+          "$eating+top.",
           "$no_entry",
           "again",
           "will",
