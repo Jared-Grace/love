@@ -132,7 +132,7 @@ export function bible_glyph_chapter_psa023() {
       {
         verse_number: 6,
         words: [
-          "Surely",
+          "$check+exclamation",
           "$thumbs_up",
           "and",
           "$gift",
