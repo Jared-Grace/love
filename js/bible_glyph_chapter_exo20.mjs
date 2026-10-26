@@ -354,7 +354,7 @@ export function bible_glyph_chapter_exo20() {
           "You",
           "shall",
           "$no_entry",
-          "bear",
+          "$speech+turn_back",
           "false",
           "$witness",
           "against",
