@@ -170,7 +170,7 @@ export function bible_glyph_chapter_jhn10() {
           "did",
           "$no_entry",
           "$lightbulb",
-          "what",
+          "$flashlight+question",
           "He",
           "was",
           "$mouth",
