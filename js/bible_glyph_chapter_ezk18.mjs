@@ -1027,7 +1027,7 @@ export function bible_glyph_chapter_ezk18() {
           "for",
           "yourselves",
           "a",
-          "new",
+          "$new_button",
           "$heart_organ",
           "and",
           "a",
