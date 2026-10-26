@@ -48,7 +48,7 @@ export function bible_glyph_chapter_jhn10() {
           "$hand+lying_face+doer",
           "$plus",
           "a",
-          "robber.",
+          "$ninja.",
         ],
       },
       {
