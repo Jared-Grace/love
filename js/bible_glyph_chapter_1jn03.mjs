@@ -607,7 +607,7 @@ export function bible_glyph_chapter_1jn03() {
           "ask,",
           "$pointing",
           "we",
-          "keep",
+          "$guard",
           "$pointing_back",
           "$scroll$s",
           "$plus",
