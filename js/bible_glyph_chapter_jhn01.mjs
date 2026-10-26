@@ -171,7 +171,7 @@ export function bible_glyph_chapter_jhn01() {
           "$light$s",
           "every",
           "$person,",
-          "was",
+          "$link",
           "$footprints",
           "into",
           "the",
