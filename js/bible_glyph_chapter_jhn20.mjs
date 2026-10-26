@@ -756,7 +756,7 @@ export function bible_glyph_chapter_jhn20() {
           "$hand+pointing_up",
           "$round_pushpin",
           "$plus",
-          "look",
+          "$exclamation",
           "at",
           "My",
           "$hand.",
