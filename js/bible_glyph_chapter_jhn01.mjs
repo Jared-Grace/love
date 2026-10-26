@@ -807,7 +807,7 @@ export function bible_glyph_chapter_jhn01() {
           "$proper_name$John",
           "was",
           "there",
-          "again",
+          "$repeat",
           "with",
           "two",
           "of",
