@@ -828,7 +828,7 @@ export function bible_glyph_chapter_mat05() {
           "been",
           "$speech,",
           "$back+flashlight",
-          "divorces",
+          "$away+free_button",
           "$pointing_back",
           "$woman",
           "must",
