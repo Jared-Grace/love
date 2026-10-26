@@ -1052,7 +1052,7 @@ export function bible_glyph_chapter_jhn09() {
           "$pointing",
           "We",
           "$eyes,",
-          "your",
+          "$you",
           "$bow",
           "remains.",
         ],
