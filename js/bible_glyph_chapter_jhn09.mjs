@@ -723,7 +723,7 @@ export function bible_glyph_chapter_jhn09() {
           "to",
           "$ear",
           "it",
-          "again?",
+          "$repeat?",
           "Do",
           "$plus",
           "you",
