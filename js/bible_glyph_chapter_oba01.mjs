@@ -195,7 +195,7 @@ export function bible_glyph_chapter_oba01() {
           "be",
           "pillaged,",
           "his",
-          "hidden",
+          "$locked+gem_stone",
           "treasures",
           "sought",
           "out!",
