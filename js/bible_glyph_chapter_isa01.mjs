@@ -817,7 +817,7 @@ export function bible_glyph_chapter_isa01() {
           "you",
           "will",
           "be",
-          "ashamed",
+          "$flushed",
           "of",
           "the",
           "sacred",
