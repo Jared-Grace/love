@@ -313,7 +313,7 @@ export function bible_glyph_chapter_psa139() {
           "frame",
           "was",
           "$no_entry",
-          "hidden",
+          "$hand+tray_in+doing",
           "$tray_out",
           "You",
           "when",
