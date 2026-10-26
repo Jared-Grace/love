@@ -456,7 +456,7 @@ export function bible_glyph_chapter_ezk33() {
           "righteousness",
           "of",
           "the",
-          "righteous",
+          "$ruler",
           "will",
           "$no_entry",
           "deliver",
