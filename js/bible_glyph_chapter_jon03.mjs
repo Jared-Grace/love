@@ -290,7 +290,7 @@ export function bible_glyph_chapter_jon03() {
           "$thumbs_down",
           "$road,",
           "He",
-          "relented",
+          "$hug+doing",
           "from",
           "the",
           "$thumbs_down",
