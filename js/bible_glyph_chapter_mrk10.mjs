@@ -748,7 +748,7 @@ export function bible_glyph_chapter_mrk10() {
         "$tray_in",
         "the",
         "present",
-        "age",
+        "$alarm_clock",
         "—",
         "$house",
         "$plus",
