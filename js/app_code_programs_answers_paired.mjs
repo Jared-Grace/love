@@ -21,8 +21,8 @@ export function app_code_programs_answers_paired(codes) {
   let first_answer = eval_console_log_lines(first);
   function same_is(code) {
     let answer = eval_console_log_lines(code);
-    let same = equal(answer, first_answer);
-    return same;
+    let same_inner = equal(answer, first_answer);
+    return same_inner;
   }
   let same = list_filter(codes, same_is);
   let other = list_filter_not(codes, same_is);
