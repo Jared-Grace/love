@@ -84,7 +84,7 @@ export function bible_glyph_chapter_psa101() {
           "it",
           "shall",
           "$no_entry",
-          "cling",
+          "$paperclip",
           "to",
           "me.",
         ],
