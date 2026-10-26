@@ -43,7 +43,7 @@ export function bible_glyph_chapter_luk15() {
         "grumble,",
         "$speech",
         "$pointing",
-        "This",
+        "$flashlight",
         "man",
         "welcomes",
         "$bow+doer",
