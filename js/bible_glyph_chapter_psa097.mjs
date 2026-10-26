@@ -247,7 +247,7 @@ export function bible_glyph_chapter_psa097() {
           "to",
           "His",
           "$sparkle+thing",
-          "name.",
+          "$reminder_ribbon+thing.",
         ],
       },
     ],
