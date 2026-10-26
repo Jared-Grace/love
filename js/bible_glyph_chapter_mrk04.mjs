@@ -28,7 +28,7 @@ export function bible_glyph_chapter_mrk04() {
           "large",
           "$crowd",
           "gathered",
-          "around",
+          "$toward",
           "$pointing_back",
           "that",
           "$pointing_back",
