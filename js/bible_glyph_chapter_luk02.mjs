@@ -987,7 +987,7 @@ export function bible_glyph_chapter_luk02() {
         "waiting",
         "for",
         "the",
-        "redemption",
+        "$currency_exchange+broken_chain+thing",
         "of",
         "$city+peace.",
       ],
