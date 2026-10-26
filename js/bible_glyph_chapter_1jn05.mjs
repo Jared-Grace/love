@@ -508,7 +508,7 @@ export function bible_glyph_chapter_1jn05() {
           "protects",
           "$pointing_back,",
           "$plus",
-          "the",
+          "$pin",
           "$thumbs_down",
           "one",
           "can",
