@@ -181,7 +181,7 @@ export function bible_glyph_chapter_isa01() {
           "top",
           "of",
           "your",
-          "head,",
+          "$person_gesturing_ok,",
           "there",
           "is",
           "no",
