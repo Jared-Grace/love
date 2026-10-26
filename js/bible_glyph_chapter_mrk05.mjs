@@ -422,7 +422,7 @@ export function bible_glyph_chapter_mrk05() {
         "$plus",
         "to",
         "the",
-        "pigs.",
+        "$pig.",
       ],
     },
     {
