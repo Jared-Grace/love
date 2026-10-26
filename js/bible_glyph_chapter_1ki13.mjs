@@ -1011,7 +1011,7 @@ export function bible_glyph_chapter_1ki13() {
           "found",
           "the",
           "body",
-          "lying",
+          "$throwing",
           "on",
           "the",
           "$road,",
