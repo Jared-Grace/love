@@ -696,7 +696,7 @@ export function bible_glyph_chapter_jhn01() {
           "$no_entry",
           "$lightbulb",
           "$pointing_back,",
-          "but",
+          "$curving_up",
           "I",
           "$footprints",
           "baptizing",
