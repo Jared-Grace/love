@@ -256,7 +256,7 @@ export function bible_glyph_chapter_mrk05() {
         "out",
         "of",
         "the",
-        "region.",
+        "$map+round_pushpin.",
       ],
     },
     {
