@@ -258,7 +258,7 @@ export function bible_glyph_chapter_psa115() {
           "$speech+thumbs_up",
           "those",
           "who",
-          "fear",
+          "$fear+describing",
           "the",
           "$i_am,",
           "small",
