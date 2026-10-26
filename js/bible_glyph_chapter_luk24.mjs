@@ -442,7 +442,7 @@ export function bible_glyph_chapter_luk24() {
           "$pointing_back,",
           "The",
           "events",
-          "involving",
+          "$clockwise_arrows",
           "$cross",
           "of",
           "$proper_name$Nazareth,",
