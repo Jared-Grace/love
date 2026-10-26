@@ -462,7 +462,7 @@ export function bible_glyph_chapter_jhn09() {
         words: [
           "The",
           "$menorah",
-          "still",
+          "$right_arrow",
           "did",
           "$no_entry",
           "$anchor+doing",
