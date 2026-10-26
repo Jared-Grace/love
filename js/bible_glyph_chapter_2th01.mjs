@@ -294,7 +294,7 @@ export function bible_glyph_chapter_2th01() {
           "$me",
           "$witness+thing+describing",
           "to",
-          "you",
+          "$you",
           "was",
           "$anchor+doing.",
         ],
