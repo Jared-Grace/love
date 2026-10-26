@@ -195,7 +195,7 @@ export function bible_glyph_chapter_hag02() {
           "a",
           "little",
           "while,",
-          "I",
+          "$me",
           "will",
           "shake",
           "the",
