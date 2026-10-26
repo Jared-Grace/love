@@ -328,7 +328,7 @@ export function bible_glyph_chapter_2th01() {
           "$battery",
           "every",
           "good",
-          "desire",
+          "$thinking+thumbs_up+thing",
           "$plus",
           "every",
           "$tools",
