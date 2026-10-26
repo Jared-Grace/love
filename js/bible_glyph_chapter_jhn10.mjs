@@ -780,7 +780,7 @@ export function bible_glyph_chapter_jhn10() {
           "have",
           "shown",
           "you",
-          "many",
+          "$multiply",
           "$thumbs_up",
           "$tools",
           "$tray_out",
