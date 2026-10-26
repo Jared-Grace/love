@@ -70,7 +70,7 @@ export function bible_glyph_chapter_jdg13() {
           "His",
           "$woman",
           "was",
-          "barren",
+          "$pregnant_woman+no_entry+describing",
           "and",
           "had",
           "$no_entry",
