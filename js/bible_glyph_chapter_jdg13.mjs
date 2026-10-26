@@ -400,7 +400,7 @@ export function bible_glyph_chapter_jdg13() {
           "When",
           "he",
           "$footprints",
-          "to",
+          "$toward",
           "the",
           "$man_beard,",
           "he",
