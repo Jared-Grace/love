@@ -162,7 +162,7 @@ export function bible_glyph_chapter_hag01() {
           "have",
           "$eating+top+check.",
           "You",
-          "drink",
+          "$cup_with_straw",
           "but",
           "never",
           "have",
