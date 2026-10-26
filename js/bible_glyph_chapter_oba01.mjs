@@ -66,7 +66,7 @@ export function bible_glyph_chapter_oba01() {
           "will",
           "$hands_giving",
           "you",
-          "small",
+          "$pinching_hand",
           "among",
           "the",
           "$map;",
