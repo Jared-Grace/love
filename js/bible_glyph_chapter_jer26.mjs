@@ -794,7 +794,7 @@ export function bible_glyph_chapter_jer26() {
           "$might+person",
           "men",
           "and",
-          "officials",
+          "$military_medal",
           "$ear",
           "his",
           "$speech,",
