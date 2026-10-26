@@ -314,7 +314,7 @@ export function bible_glyph_chapter_mrk05() {
         "went",
         "$toward+tray_in",
         "$pin",
-        "pigs,",
+        "$pig,",
         "$plus",
         "$pin",
         "herd",
