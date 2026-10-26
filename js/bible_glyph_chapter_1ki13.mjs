@@ -947,7 +947,7 @@ export function bible_glyph_chapter_1ki13() {
           "of",
           "$heart_on_fire",
           "$back+flashlight",
-          "disobeyed",
+          "$raised_fist+up_arrow+doing",
           "the",
           "command",
           "of",
