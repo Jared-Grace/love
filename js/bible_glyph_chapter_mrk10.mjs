@@ -763,7 +763,7 @@ export function bible_glyph_chapter_mrk10() {
         "$field,",
         "along",
         "$linked_paperclips",
-        "persecutions",
+        "$running+toward+thing",
         "$plus",
         "$tray_in",
         "the",
