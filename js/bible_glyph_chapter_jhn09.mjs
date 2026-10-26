@@ -527,7 +527,7 @@ export function bible_glyph_chapter_jhn09() {
           "$pointing",
           "he",
           "was",
-          "born",
+          "$hatching_chick",
           "$person_with_white_cane.",
         ],
       },
