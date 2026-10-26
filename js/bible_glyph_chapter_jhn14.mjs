@@ -801,7 +801,7 @@ export function bible_glyph_chapter_jhn14() {
           "am",
           "$footprints",
           "back",
-          "to",
+          "$toward",
           "you.’",
           "If",
           "you",
