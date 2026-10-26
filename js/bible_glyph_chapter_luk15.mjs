@@ -390,7 +390,7 @@ export function bible_glyph_chapter_luk15() {
         "out",
         "to",
         "a",
-        "citizen",
+        "$city+person",
         "of",
         "that",
         "country,",
