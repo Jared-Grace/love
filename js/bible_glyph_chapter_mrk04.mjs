@@ -763,7 +763,7 @@ export function bible_glyph_chapter_mrk04() {
           "$pin",
           "sickle,",
           "$pointing",
-          "the",
+          "$pin",
           "harvest",
           "has",
           "come.",
