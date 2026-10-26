@@ -970,7 +970,7 @@ export function bible_glyph_chapter_jol02() {
           "$darkness,",
           "and",
           "the",
-          "moon",
+          "$moon",
           "to",
           "$blood,",
           "before",
