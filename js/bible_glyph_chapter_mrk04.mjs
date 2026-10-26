@@ -257,7 +257,7 @@ export function bible_glyph_chapter_mrk04() {
           "$pointing_back",
           "with",
           "the",
-          "Twelve",
+          "$one+two",
           "asked",
           "$pointing_back",
           "about",
