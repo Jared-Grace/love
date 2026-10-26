@@ -35,7 +35,7 @@ export function bible_glyph_chapter_1ki13() {
           "$proper_name$Jeroboam",
           "was",
           "standing",
-          "beside",
+          "$pointing_up",
           "the",
           "altar",
           "to",
