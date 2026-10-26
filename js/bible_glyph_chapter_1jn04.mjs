@@ -145,7 +145,7 @@ export function bible_glyph_chapter_1jn04() {
         verse_number: 5,
         words: [
           "They",
-          "are",
+          "$link",
           "from",
           "$pin",
           "$globe.",
