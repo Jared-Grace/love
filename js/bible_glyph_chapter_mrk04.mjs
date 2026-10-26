@@ -555,7 +555,7 @@ export function bible_glyph_chapter_mrk04() {
           "to",
           "put",
           "it",
-          "under",
+          "$down_arrow",
           "a",
           "basket",
           "or",
