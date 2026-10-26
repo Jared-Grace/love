@@ -621,7 +621,7 @@ export function bible_glyph_chapter_jhn04() {
           "is",
           "$speech",
           "$oil.",
-          "When",
+          "$back+clock",
           "He",
           "$footprints,",
           "He",
