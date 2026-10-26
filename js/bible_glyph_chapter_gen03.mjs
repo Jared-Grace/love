@@ -174,7 +174,7 @@ export function bible_glyph_chapter_gen03() {
           "for",
           "food",
           "and",
-          "pleasing",
+          "$heart_eyes+hand_receiving+thing",
           "to",
           "the",
           "$eyes,",
