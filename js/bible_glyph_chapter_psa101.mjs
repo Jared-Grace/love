@@ -73,7 +73,7 @@ export function bible_glyph_chapter_psa101() {
           "my",
           "$eyes.",
           "I",
-          "hate",
+          "$heart_red+thumbs_down",
           "the",
           "$hammer+doing",
           "of",
