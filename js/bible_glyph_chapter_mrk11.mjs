@@ -212,7 +212,7 @@ export function bible_glyph_chapter_mrk11() {
         "$curving_right",
         "others",
         "spread",
-        "branches",
+        "$leaf+road",
         "they",
         "had",
         "cut",
