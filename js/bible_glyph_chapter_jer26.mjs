@@ -768,7 +768,7 @@ export function bible_glyph_chapter_jer26() {
           "He",
           "prophesied",
           "against",
-          "this",
+          "$flashlight",
           "$city",
           "and",
           "against",
