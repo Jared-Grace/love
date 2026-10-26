@@ -749,7 +749,7 @@ export function bible_glyph_chapter_jhn01() {
           "the",
           "One",
           "who",
-          "sent",
+          "$incoming_envelope",
           "me",
           "to",
           "baptize",
