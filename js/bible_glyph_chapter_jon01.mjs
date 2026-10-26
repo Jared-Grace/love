@@ -480,7 +480,7 @@ export function bible_glyph_chapter_jon01() {
           "$toward",
           "the",
           "$i_am:",
-          "Please,",
+          "$pleading_face+exclamation,",
           "O",
           "$i_am,",
           "do",
