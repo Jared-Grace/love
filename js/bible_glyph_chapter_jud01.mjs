@@ -397,7 +397,7 @@ export function bible_glyph_chapter_jud01() {
           "$no_entry+water+describing,",
           "carried",
           "along",
-          "by",
+          "$down_arrow",
           "the",
           "wind;",
           "autumn",
