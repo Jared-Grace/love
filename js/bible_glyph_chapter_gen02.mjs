@@ -358,7 +358,7 @@ export function bible_glyph_chapter_gen02() {
           "$earth",
           "is",
           "$thumbs_up;",
-          "bdellium",
+          "$droplet+gem_stone",
           "and",
           "onyx",
           "are",
