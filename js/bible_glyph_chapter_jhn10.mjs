@@ -229,7 +229,7 @@ export function bible_glyph_chapter_jhn10() {
           "$pin",
           "$door.",
           "$traffic_light",
-          "anyone",
+          "$joker",
           "enters",
           "$metro",
           "Me,",
