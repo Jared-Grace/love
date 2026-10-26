@@ -290,7 +290,7 @@ export function bible_glyph_chapter_1jn05() {
           "$heart_on_fire",
           "has",
           "$hands_giving",
-          "us",
+          "$me",
           "$hourglass+describing",
           "$sprout,",
           "$plus",
