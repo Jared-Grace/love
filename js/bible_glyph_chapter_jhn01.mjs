@@ -1205,7 +1205,7 @@ export function bible_glyph_chapter_jhn01() {
           "$sky",
           "opened",
           "$plus",
-          "the",
+          "$pin",
           "$angel$s",
           "of",
           "$heart_on_fire",
