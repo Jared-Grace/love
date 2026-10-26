@@ -400,7 +400,7 @@ export function bible_glyph_chapter_jud01() {
           "$down_arrow",
           "the",
           "$wind+dashing_away;",
-          "autumn",
+          "$fallen_leaf+clock+describing",
           "$tree",
           "without",
           "fruit,",
