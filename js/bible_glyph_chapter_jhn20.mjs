@@ -260,7 +260,7 @@ export function bible_glyph_chapter_jhn20() {
           "$pin",
           "$tomb",
           "weeping.",
-          "As",
+          "$likeness",
           "she",
           "wept,",
           "she",
