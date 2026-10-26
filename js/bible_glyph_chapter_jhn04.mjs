@@ -159,7 +159,7 @@ export function bible_glyph_chapter_jhn04() {
           "$pin",
           "$city",
           "to",
-          "buy",
+          "$coin+hand_receiving",
           "$bread+hands_giving+thing.)",
         ],
       },
