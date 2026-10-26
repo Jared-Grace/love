@@ -581,7 +581,7 @@ export function bible_glyph_chapter_jer26() {
           "and",
           "the",
           "$megaphone,",
-          "This",
+          "$flashlight",
           "$man_beard",
           "is",
           "not",
