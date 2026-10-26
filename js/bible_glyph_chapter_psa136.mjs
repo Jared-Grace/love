@@ -276,7 +276,7 @@ export function bible_glyph_chapter_psa136() {
           "He",
           "struck",
           "down",
-          "great",
+          "$top",
           "$king.",
           "His",
           "$gift",
