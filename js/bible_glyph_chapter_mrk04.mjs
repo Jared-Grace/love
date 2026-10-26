@@ -988,7 +988,7 @@ export function bible_glyph_chapter_mrk04() {
           "$pointing_back",
           "$link",
           "$tray_in",
-          "the",
+          "$pin",
           "stern,",
           "sleeping",
           "on",
