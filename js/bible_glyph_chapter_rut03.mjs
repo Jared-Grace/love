@@ -289,7 +289,7 @@ export function bible_glyph_chapter_rut03() {
           "shown",
           "more",
           "$gift",
-          "now",
+          "$next_track+describing",
           "$tray_out",
           "before,",
           "because",
