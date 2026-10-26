@@ -271,7 +271,7 @@ export function bible_glyph_chapter_mrk05() {
         "large",
         "$paw_prints+crowd",
         "of",
-        "pigs",
+        "$pig",
         "$link",
         "feeding.",
       ],
