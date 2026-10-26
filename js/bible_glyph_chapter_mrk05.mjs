@@ -488,7 +488,7 @@ export function bible_glyph_chapter_mrk05() {
         "own",
         "people,",
         "$plus",
-        "tell",
+        "$newspaper",
         "$pointing_back",
         "how",
         "much",
