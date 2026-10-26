@@ -331,7 +331,7 @@ export function bible_glyph_chapter_1ki13() {
           "to",
           "the",
           "$king,",
-          "If",
+          "$traffic_light",
           "you",
           "were",
           "to",
