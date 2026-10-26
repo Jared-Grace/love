@@ -791,7 +791,7 @@ export function bible_glyph_chapter_jer26() {
           "and",
           "all",
           "his",
-          "mighty",
+          "$might+person",
           "men",
           "and",
           "officials",
