@@ -1176,7 +1176,7 @@ export function bible_glyph_chapter_mrk10() {
         "$tray_in",
         "you",
         "must",
-        "be",
+        "$link",
         "your",
         "servant,",
       ],
