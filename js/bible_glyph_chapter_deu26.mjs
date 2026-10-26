@@ -703,7 +703,7 @@ export function bible_glyph_chapter_deu26() {
           "you",
           "$pointing_up+most",
           "$pointing_up",
-          "all",
+          "$all",
           "the",
           "$map",
           "He",
