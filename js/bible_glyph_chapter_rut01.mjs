@@ -552,7 +552,7 @@ export function bible_glyph_chapter_rut01() {
           "When",
           "Naomi",
           "$eye",
-          "that",
+          "$pointing",
           "Ruth",
           "was",
           "determined",
