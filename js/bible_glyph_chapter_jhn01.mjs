@@ -184,7 +184,7 @@ export function bible_glyph_chapter_jhn01() {
           "He",
           "was",
           "$tray_in",
-          "the",
+          "$pin",
           "$globe,",
           "$plus",
           "though",
