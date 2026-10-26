@@ -901,7 +901,7 @@ export function bible_glyph_chapter_luk02() {
       words: [
         "$plus",
         "there",
-        "was",
+        "$link",
         "a",
         "prophetess,",
         "$proper_name$Anna",
