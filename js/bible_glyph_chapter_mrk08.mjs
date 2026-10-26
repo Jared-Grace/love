@@ -303,7 +303,7 @@ export function bible_glyph_chapter_mrk08() {
           "$speech,",
           "$flashlight+question",
           "does",
-          "this",
+          "$flashlight",
           "$dna",
           "demand",
           "a",
