@@ -251,7 +251,7 @@ export function bible_glyph_chapter_mrk10() {
         "$man_beard",
         "and",
         "marries",
-        "another,",
+        "$plus+one,",
         "she",
         "commits",
         "adultery.”",
