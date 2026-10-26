@@ -720,7 +720,7 @@ export function bible_glyph_chapter_gen01() {
           "$framed_picture,",
           "after",
           "Our",
-          "likeness;",
+          "$likeness+thing;",
           "and",
           "let",
           "them",
