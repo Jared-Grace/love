@@ -142,7 +142,7 @@ export function bible_glyph_chapter_hag02() {
           "am",
           "with",
           "you,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am",
           "of",
