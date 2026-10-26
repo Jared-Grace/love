@@ -273,7 +273,7 @@ export function bible_glyph_chapter_isa01() {
           "us",
           "a",
           "few",
-          "survivors,",
+          "$ring_buoy+person,",
           "we",
           "would",
           "have",
