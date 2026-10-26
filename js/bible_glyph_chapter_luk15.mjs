@@ -417,7 +417,7 @@ export function bible_glyph_chapter_luk15() {
         "$pointing_back",
         "$baby+house",
         "$tray_out",
-        "the",
+        "$pin",
         "pods",
         "the",
         "pigs",
