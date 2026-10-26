@@ -559,7 +559,7 @@ export function bible_glyph_chapter_1jn05() {
           "has",
           "$hands_giving",
           "$me",
-          "understanding,",
+          "$metro+brain,",
           "so",
           "that",
           "we",
