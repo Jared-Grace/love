@@ -837,7 +837,7 @@ export function bible_glyph_chapter_jhn04() {
           "months",
           "$plus",
           "then",
-          "the",
+          "$pin",
           "harvest",
           "$footprints?",
           "I",
