@@ -152,7 +152,7 @@ export function bible_glyph_chapter_jhn17() {
         words: [
           "I",
           "revealed",
-          "Your",
+          "$you",
           "$name_tag",
           "to",
           "the",
