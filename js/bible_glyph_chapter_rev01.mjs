@@ -639,7 +639,7 @@ export function bible_glyph_chapter_rev01() {
           "the",
           "$seven",
           "$lamp+seat",
-          "are",
+          "$link",
           "the",
           "$seven",
           "$church.",
