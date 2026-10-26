@@ -861,7 +861,7 @@ export function bible_glyph_chapter_jhn20() {
           "$pointing",
           "$cross",
           "$link",
-          "the",
+          "$pin",
           "$oil,",
           "the",
           "$son",
