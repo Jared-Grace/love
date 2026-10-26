@@ -188,7 +188,7 @@ export function bible_glyph_chapter_jhn03() {
           "$pointing",
           "I",
           "$speech,",
-          "‘You",
+          "‘$you",
           "$knot",
           "be",
           "born",
