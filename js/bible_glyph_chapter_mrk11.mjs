@@ -421,7 +421,7 @@ export function bible_glyph_chapter_mrk11() {
         "there.",
         "$plus",
         "the",
-        "tables",
+        "$eating+round_pushpin",
         "of",
         "the",
         "money",
