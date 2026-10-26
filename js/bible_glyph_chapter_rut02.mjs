@@ -310,7 +310,7 @@ export function bible_glyph_chapter_rut02() {
           "this,",
           "she",
           "fell",
-          "on",
+          "$pointing_up",
           "her",
           "face,",
           "$bowing",
