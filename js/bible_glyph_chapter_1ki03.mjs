@@ -537,7 +537,7 @@ export function bible_glyph_chapter_1ki03() {
           "$city+peace,",
           "and",
           "$person+round_pushpin",
-          "before",
+          "$face",
           "the",
           "ark",
           "of",
