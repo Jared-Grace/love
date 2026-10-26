@@ -1201,7 +1201,7 @@ export function bible_glyph_chapter_luk02() {
         "astounded",
         "at",
         "$pointing_back",
-        "understanding",
+        "$safety_pin+lightbulb+thing",
         "$plus",
         "answers.",
       ],
