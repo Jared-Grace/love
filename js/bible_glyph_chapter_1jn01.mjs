@@ -204,7 +204,7 @@ export function bible_glyph_chapter_1jn01() {
           "do",
           "$no_entry",
           "$hammer",
-          "the",
+          "$pin",
           "$check.",
         ],
       },
