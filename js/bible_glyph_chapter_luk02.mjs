@@ -168,7 +168,7 @@ export function bible_glyph_chapter_luk02() {
         "$pointing_back",
         "$tray_in",
         "a",
-        "manger,",
+        "$ox+basket,",
         "because",
         "there",
         "was",
