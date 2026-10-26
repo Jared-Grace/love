@@ -245,7 +245,7 @@ export function bible_glyph_chapter_deu30() {
           "$heart_on_fire",
           "will",
           "$hands_giving",
-          "all",
+          "$all",
           "these",
           "curses",
           "upon",
