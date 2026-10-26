@@ -48,8 +48,8 @@ export function app_code_comment_wrong_say(question, answer, choice) {
   }
   let program = list_join_newline(kept);
   function trace_get() {
-    let trace = app_code_program_trace(program);
-    return trace;
+    let traced = app_code_program_trace(program);
+    return traced;
   }
   let trace = catch_null(trace_get);
   if (null_is(trace)) {
