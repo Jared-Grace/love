@@ -633,7 +633,7 @@ export function bible_glyph_chapter_mrk12() {
         "you",
         "$no_entry",
         "$lightbulb",
-        "the",
+        "$pin",
         "Scriptures",
         "or",
         "the",
