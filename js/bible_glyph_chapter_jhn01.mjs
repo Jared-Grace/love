@@ -392,7 +392,7 @@ export function bible_glyph_chapter_jhn01() {
           "$one+butterfly",
           "$heart_on_fire,",
           "who",
-          "is",
+          "$link",
           "at",
           "the",
           "$father’s",
