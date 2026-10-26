@@ -623,7 +623,7 @@ export function bible_glyph_chapter_hag02() {
           "the",
           "$i_am",
           "$link",
-          "to",
+          "$toward",
           "$proper_name$Haggai",
           "a",
           "$second_place",
