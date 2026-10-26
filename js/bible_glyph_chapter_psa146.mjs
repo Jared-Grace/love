@@ -191,7 +191,7 @@ export function bible_glyph_chapter_psa146() {
           "fatherless",
           "and",
           "the",
-          "widow",
+          "$widow",
           "He",
           "$witness+doing,",
           "but",
