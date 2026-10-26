@@ -343,7 +343,7 @@ export function bible_glyph_chapter_jon01() {
           "$speech",
           "to",
           "him,",
-          "What",
+          "$flashlight+question",
           "have",
           "you",
           "$hammer+doing?",
