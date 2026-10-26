@@ -357,7 +357,7 @@ export function bible_glyph_chapter_psa115() {
           "$watch",
           "and",
           "$hourglass.",
-          "Hallelujah!",
+          "$clapping_hands!",
         ],
       },
     ],
