@@ -77,7 +77,7 @@ export function bible_glyph_chapter_1jn01() {
           "proclaim",
           "to",
           "you",
-          "the",
+          "$pin",
           "eternal",
           "$sprout",
           "that",
