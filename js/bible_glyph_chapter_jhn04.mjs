@@ -309,7 +309,7 @@ export function bible_glyph_chapter_jhn04() {
           "who",
           "$cup_with_straw",
           "$tray_out",
-          "this",
+          "$flashlight",
           "$water",
           "will",
           "be",
