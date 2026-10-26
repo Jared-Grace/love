@@ -161,7 +161,7 @@ export function bible_glyph_chapter_3jn01() {
           "on",
           "$up_arrow",
           "of",
-          "the",
+          "$pin",
           "$name_tag,",
           "$hand_receiving",
           "nothing",
