@@ -198,7 +198,7 @@ export function bible_glyph_chapter_psa139() {
         verse_number: 10,
         words: [
           "$plus",
-          "there",
+          "$telescope",
           "Your",
           "$hand",
           "will",
