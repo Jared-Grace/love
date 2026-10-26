@@ -271,7 +271,7 @@ export function bible_glyph_chapter_1jn01() {
         words: [
           "$traffic_light",
           "we",
-          "confess",
+          "$people_with_bunny_ears+speech+doing",
           "our",
           "$bow,",
           "He",
