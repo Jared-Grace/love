@@ -1174,7 +1174,7 @@ export function bible_glyph_chapter_jhn04() {
           "$son,",
           "who",
           "was",
-          "about",
+          "$soon",
           "to",
           "$skull.",
         ],
