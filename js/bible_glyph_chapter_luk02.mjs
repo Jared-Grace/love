@@ -654,7 +654,7 @@ export function bible_glyph_chapter_luk02() {
         "was",
         "$ruler",
         "$plus",
-        "devout,",
+        "$thumbs_up+hand_receiving+describing,",
         "waiting",
         "for",
         "the",
