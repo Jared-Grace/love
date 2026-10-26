@@ -630,7 +630,7 @@ export function bible_glyph_chapter_jhn09() {
           "called",
           "$pin",
           "$person",
-          "who",
+          "$back+flashlight",
           "had",
           "been",
           "blind",
