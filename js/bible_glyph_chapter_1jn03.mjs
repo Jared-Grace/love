@@ -201,7 +201,7 @@ export function bible_glyph_chapter_1jn03() {
           "who",
           "$hammer",
           "$ruler+thing",
-          "is",
+          "$link",
           "$ruler,",
           "just",
           "as",
