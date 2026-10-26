@@ -200,7 +200,7 @@ export function bible_glyph_chapter_jon01() {
           "can",
           "you",
           "$sleeping_face+down_arrow+doing?",
-          "Get",
+          "$person+pointing_up",
           "up",
           "and",
           "call",
