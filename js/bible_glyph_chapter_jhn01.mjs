@@ -854,7 +854,7 @@ export function bible_glyph_chapter_jhn01() {
         verse_number: 38,
         words: [
           "$cross",
-          "turned",
+          "$person+clockwise_arrows+doing",
           "$plus",
           "saw",
           "$pointing_back",
