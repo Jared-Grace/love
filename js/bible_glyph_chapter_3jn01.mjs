@@ -207,7 +207,7 @@ export function bible_glyph_chapter_3jn01() {
           "loves",
           "to",
           "be",
-          "first",
+          "$heart_orange+first_place+doing",
           "among",
           "$pointing_back,",
           "will",
