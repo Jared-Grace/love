@@ -1309,7 +1309,7 @@ export function bible_glyph_chapter_luk07() {
         "them",
         "with",
         "$pointing_back",
-        "hair.",
+        "$hair.",
       ],
     },
     {
