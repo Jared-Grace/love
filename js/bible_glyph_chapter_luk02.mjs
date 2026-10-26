@@ -450,7 +450,7 @@ export function bible_glyph_chapter_luk02() {
       verse_number: 18,
       words: [
         "$plus",
-        "all",
+        "$all",
         "who",
         "$ear",
         "it",
