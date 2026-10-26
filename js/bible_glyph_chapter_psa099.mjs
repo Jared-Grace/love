@@ -75,7 +75,7 @@ export function bible_glyph_chapter_psa099() {
           "$king",
           "$heart_red+doing",
           "$scales+thing.",
-          "You",
+          "$you",
           "have",
           "established",
           "equity;",
