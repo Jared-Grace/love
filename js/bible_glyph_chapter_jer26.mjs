@@ -393,7 +393,7 @@ export function bible_glyph_chapter_jer26() {
           "the",
           "officials",
           "and",
-          "all",
+          "$all",
           "the",
           "$family,",
           "This",
