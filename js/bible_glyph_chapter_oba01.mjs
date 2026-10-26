@@ -180,7 +180,7 @@ export function bible_glyph_chapter_oba01() {
           "would",
           "they",
           "$no_entry",
-          "leave",
+          "$puzzle_piece+doing",
           "some",
           "gleanings?",
         ],
