@@ -970,7 +970,7 @@ export function bible_glyph_chapter_jhn04() {
       {
         verse_number: 40,
         words: [
-          "So",
+          "$right_arrow",
           "when",
           "the",
           "$proper_name$Samaritans",
