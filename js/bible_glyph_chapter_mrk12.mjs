@@ -654,7 +654,7 @@ export function bible_glyph_chapter_mrk12() {
         "they",
         "will",
         "neither",
-        "marry",
+        "$ring+doing",
         "nor",
         "be",
         "given",
