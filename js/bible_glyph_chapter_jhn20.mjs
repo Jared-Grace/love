@@ -507,7 +507,7 @@ export function bible_glyph_chapter_jhn20() {
           "on",
           "that",
           "very",
-          "first",
+          "$one",
           "$sun",
           "of",
           "the",
