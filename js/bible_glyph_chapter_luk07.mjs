@@ -1422,7 +1422,7 @@ export function bible_glyph_chapter_luk07() {
         "this",
         "who",
         "$plus",
-        "forgives",
+        "$balloon",
         "$bow?”",
       ],
     },
