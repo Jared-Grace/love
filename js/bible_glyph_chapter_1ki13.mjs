@@ -1034,7 +1034,7 @@ export function bible_glyph_chapter_1ki13() {
           "$no_entry",
           "mauled",
           "the",
-          "donkey.",
+          "$donkey.",
         ],
       },
       {
