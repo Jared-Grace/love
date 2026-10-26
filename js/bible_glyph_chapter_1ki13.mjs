@@ -895,7 +895,7 @@ export function bible_glyph_chapter_1ki13() {
           "$eye",
           "the",
           "body",
-          "lying",
+          "$throwing",
           "on",
           "the",
           "$road,",
