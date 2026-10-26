@@ -243,7 +243,7 @@ export function bible_glyph_chapter_psa096() {
           "Let",
           "the",
           "fields",
-          "exult,",
+          "$partying_face+up_arrow+doing,",
           "and",
           "all",
           "that",
