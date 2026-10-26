@@ -247,7 +247,7 @@ export function bible_glyph_chapter_1jn03() {
           "$tools",
           "of",
           "the",
-          "devil.",
+          "$metro+throwing.",
         ],
       },
       {
