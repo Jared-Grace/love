@@ -1229,7 +1229,7 @@ export function bible_glyph_chapter_luk02() {
         "have",
         "You",
         "$hammer",
-        "this",
+        "$flashlight+manner",
         "to",
         "$me?",
         "Your",
