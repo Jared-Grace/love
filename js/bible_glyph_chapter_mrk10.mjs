@@ -937,7 +937,7 @@ export function bible_glyph_chapter_mrk10() {
         "$hammer",
         "for",
         "us",
-        "whatever",
+        "$back+flashlight",
         "we",
         "ask",
         "of",
