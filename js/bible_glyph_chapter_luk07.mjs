@@ -89,7 +89,7 @@ export function bible_glyph_chapter_luk07() {
         "pleaded",
         "with",
         "$pointing_back",
-        "earnestly,",
+        "$fast_forward+heart_red+manner,",
         "in",
         "$speech,",
         "“$pointing",
