@@ -487,7 +487,7 @@ export function bible_glyph_chapter_1jn04() {
           "$scales+thing;",
           "for",
           "in",
-          "this",
+          "$flashlight",
           "$globe",
           "we",
           "are",
