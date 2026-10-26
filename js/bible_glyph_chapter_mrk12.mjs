@@ -1073,7 +1073,7 @@ export function bible_glyph_chapter_mrk12() {
         "seats",
         "$tray_in",
         "the",
-        "synagogues,",
+        "$synagogue,",
         "$plus",
         "the",
         "places",
