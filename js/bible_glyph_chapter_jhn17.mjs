@@ -246,7 +246,7 @@ export function bible_glyph_chapter_jhn17() {
           "$pointing_back.",
           "$no_entry",
           "concerning",
-          "the",
+          "$pin",
           "$globe",
           "do",
           "I",
