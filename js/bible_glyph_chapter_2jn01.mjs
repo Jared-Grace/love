@@ -21,7 +21,7 @@ export function bible_glyph_chapter_2jn01() {
           "To",
           "the",
           "$check_box+describing",
-          "lady",
+          "$woman+crown",
           "$plus",
           "$pointing_back",
           "$child,",
