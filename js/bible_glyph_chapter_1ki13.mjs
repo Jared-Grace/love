@@ -647,7 +647,7 @@ export function bible_glyph_chapter_1ki13() {
           "$speech",
           "to",
           "him,",
-          "I",
+          "$me",
           "$plus",
           "am",
           "a",
