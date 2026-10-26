@@ -195,7 +195,7 @@ export function bible_glyph_chapter_isa01() {
           "festering",
           "sores,",
           "$no_entry",
-          "cleansed",
+          "$clamp+hands_giving+doing",
           "$no_entry",
           "bandaged",
           "$no_entry",
