@@ -734,7 +734,7 @@ export function bible_glyph_chapter_isa01() {
           "$silver+dust;",
           "I",
           "will",
-          "remove",
+          "$away+doing",
           "all",
           "your",
           "impurities.",
