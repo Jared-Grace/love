@@ -620,7 +620,7 @@ export function bible_glyph_chapter_jhn17() {
           "$link",
           "$one",
           "just",
-          "as",
+          "$likeness",
           "We",
           "are",
           "$one:",
