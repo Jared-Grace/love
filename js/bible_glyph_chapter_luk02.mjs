@@ -599,7 +599,7 @@ export function bible_glyph_chapter_luk02() {
         "$pointing",
         "“$all",
         "firstborn",
-        "male",
+        "$man_beard+describing",
         "shall",
         "be",
         "$sparkle,",
