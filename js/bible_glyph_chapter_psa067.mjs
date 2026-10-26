@@ -90,7 +90,7 @@ export function bible_glyph_chapter_psa067() {
           "$family",
           "$mountain+straight_ruler",
           "and",
-          "lead",
+          "$guide_dog",
           "the",
           "nations",
           "upon",
