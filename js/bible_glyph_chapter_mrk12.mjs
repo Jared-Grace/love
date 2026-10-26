@@ -136,7 +136,7 @@ export function bible_glyph_chapter_mrk12() {
         "others:",
         "some",
         "they",
-        "beat,",
+        "$fist+repeat,",
         "and",
         "some",
         "they",
