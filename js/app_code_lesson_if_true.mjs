@@ -1,4 +1,3 @@
-import { not_equal } from "./not_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_first } from "./list_first.mjs";
@@ -6,10 +5,12 @@ import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
+import { text_replace } from "./text_replace.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_functions_console_log_string } from "./app_code_lesson_functions_console_log_string.mjs";
@@ -61,6 +62,13 @@ export function app_code_lesson_if_true() {
     batch_get,
     eval_console_log_lines,
   );
+  function backwards_decoys(question, answer) {
+    "the same program with false in place of true: it holds the very word the screen shows, so it can only be turned down by reading the value inside the parentheses";
+    "Asked for by the human 2026-10-26, after the programs borrowed from the other questions were found to write out other words, so the right one could be picked by spotting the word. False is not taught until the next lesson, but the screen above says the lines inside run when the value is true, so turning it down is one step from what is shown. Not picked: the word written without quotes, which asks about strings rather than about the if; and no decoy at all, which left a choice that gives itself away.";
+    let swapped = text_replace(answer, "(true)", "(false)");
+    let found = [swapped];
+    return found;
+  }
   function above(root, context) {
     "the line the learner knows, then the same line inside an if, writing out the same word";
     let quoted = app_code_string_code(shown);
@@ -115,7 +123,7 @@ export function app_code_lesson_if_true() {
     unscramble: false,
     lines: true,
     decoys: null,
-    backwards_decoys: null,
+    backwards_decoys,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
   });
