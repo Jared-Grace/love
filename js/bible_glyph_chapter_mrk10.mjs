@@ -97,7 +97,7 @@ export function bible_glyph_chapter_mrk10() {
         "a",
         "man",
         "to",
-        "write",
+        "$writing_hand",
         "a",
         "certificate",
         "of",
