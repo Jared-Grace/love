@@ -195,7 +195,7 @@ export function bible_glyph_chapter_mrk12() {
         "will",
         "be",
         "the",
-        "inheritance.",
+        "$inheritance.",
       ],
     },
     {
