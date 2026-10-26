@@ -1171,7 +1171,7 @@ export function bible_glyph_chapter_mrk10() {
         "$back+flashlight",
         "$shooting_star+doing",
         "to",
-        "become",
+        "$butterfly",
         "$top",
         "$tray_in",
         "you",
