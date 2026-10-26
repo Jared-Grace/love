@@ -343,7 +343,7 @@ export function bible_glyph_chapter_3jn01() {
           "with",
           "$black_circle+thing",
           "$plus",
-          "pen.",
+          "$tanabata_tree.",
         ],
       },
       {
