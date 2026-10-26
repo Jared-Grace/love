@@ -230,7 +230,7 @@ export function bible_glyph_chapter_1jn05() {
           "He",
           "has",
           "$witness+doing",
-          "about",
+          "$clockwise_arrows",
           "$pointing_back",
           "$son.",
         ],
