@@ -751,7 +751,7 @@ export function bible_glyph_chapter_gen02() {
           "they",
           "were",
           "$no_entry",
-          "ashamed.",
+          "$flushed.",
         ],
       },
     ],
