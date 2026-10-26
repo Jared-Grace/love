@@ -1333,7 +1333,7 @@ export function bible_glyph_chapter_jhn04() {
           "was",
           "$curving_right",
           "the",
-          "second",
+          "$second_place",
           "sign",
           "that",
           "$cross",
