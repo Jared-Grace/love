@@ -733,7 +733,7 @@ export function bible_glyph_chapter_jol02() {
           "He",
           "sends",
           "you",
-          "showers,",
+          "$rain+water_wave,",
           "both",
           "autumn",
           "and",
