@@ -212,7 +212,7 @@ export function bible_glyph_chapter_psa115() {
           "in",
           "the",
           "$i_am!",
-          "He",
+          "$pointing_back",
           "is",
           "their",
           "help",
