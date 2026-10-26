@@ -233,7 +233,7 @@ export function bible_glyph_chapter_jon02() {
           "I",
           "will",
           "fulfill.",
-          "Salvation",
+          "$rescue+thing",
           "is",
           "from",
           "the",
