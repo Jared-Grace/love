@@ -393,7 +393,7 @@ export function bible_glyph_chapter_rut01() {
           "up?",
           "Would",
           "you",
-          "refrain",
+          "$locked+person+doing",
           "from",
           "having",
           "$man_beard?",
