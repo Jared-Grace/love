@@ -33,7 +33,7 @@ export function bible_glyph_chapter_3jn01() {
         words: [
           "$heart_red+describing,",
           "I",
-          "pray",
+          "$hands_praying",
           "that",
           "in",
           "$all",
