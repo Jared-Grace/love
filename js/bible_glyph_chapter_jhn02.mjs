@@ -18,7 +18,7 @@ export function bible_glyph_chapter_jhn02() {
           "$plus",
           "On",
           "the",
-          "third",
+          "$third_place",
           "$sun",
           "a",
           "wedding",
