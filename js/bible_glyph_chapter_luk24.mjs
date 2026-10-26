@@ -969,7 +969,7 @@ export function bible_glyph_chapter_luk24() {
           "see",
           "that",
           "I",
-          "have.",
+          "$raised_fist.",
         ],
       },
       {
