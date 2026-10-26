@@ -153,7 +153,7 @@ export function bible_glyph_chapter_jhn02() {
           "$pointing_back,",
           "“Fill",
           "the",
-          "jars",
+          "$water+amphora",
           "with",
           "$water.”",
           "$plus",
