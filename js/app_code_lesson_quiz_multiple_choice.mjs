@@ -1,7 +1,12 @@
-import { app_code_lesson_quiz_multiple_choice_each_button } from "./app_code_lesson_quiz_multiple_choice_each_button.mjs";
-import { app_code_lesson_quiz_multiple_choice_next_get } from "./app_code_lesson_quiz_multiple_choice_next_get.mjs";
-import { list_map } from "./list_map.mjs";
 import { property_get } from "./property_get.mjs";
+import { app_code_lesson_quiz_multiple_choice_next_get } from "./app_code_lesson_quiz_multiple_choice_next_get.mjs";
+import { property_get_or } from "./property_get_or.mjs";
+import { null_is } from "./null_is.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { html_text_set } from "./html_text_set.mjs";
+import { app_code_lesson_quiz_multiple_choice_each_button } from "./app_code_lesson_quiz_multiple_choice_each_button.mjs";
+import { list_map } from "./list_map.mjs";
+import { html_div } from "./html_div.mjs";
 export function app_code_lesson_quiz_multiple_choice(
   parent,
   info,
@@ -14,16 +19,30 @@ export function app_code_lesson_quiz_multiple_choice(
   let r = app_code_lesson_quiz_multiple_choice_next_get(info, qa, batch_get);
   let next_get = property_get(r, "next_get");
   let distractor_count = property_get(r, "distractor_count");
+  ("a lesson may say, for a wrong choice, what that choice gets wrong; wrong_say is handed the choice pressed and answers the words, or null for a choice it has nothing to say about. Said underneath the choices, so the red stays on the choice and the reason sits where the eye goes next. Absent, a wrong press only turns red, as every quiz did before 2026-10-26");
+  let wrong_say = property_get_or(info, "wrong_say", null);
+  let note = null;
+  function on_wrong_choice(quiz_choice) {
+    on_wrong();
+    if (null_is(wrong_say)) {
+      return;
+    }
+    let said = wrong_say(quiz_choice);
+    if (null_not_is(said)) {
+      html_text_set(note, said);
+    }
+  }
   let r2 = app_code_lesson_quiz_multiple_choice_each_button({
     r,
     distractor_count,
     next_get,
     parent,
     on_success,
-    on_wrong,
+    on_wrong: on_wrong_choice,
     answer_on_button,
   });
   let each_button = property_get(r2, "each_button");
   let choices = property_get(r2, "choices");
   list_map(choices, each_button);
+  note = html_div(parent);
 }

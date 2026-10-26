@@ -11,6 +11,8 @@ import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_replace } from "./text_replace.mjs";
+import { text_includes } from "./text_includes.mjs";
+import { not } from "./not.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_functions_console_log_string } from "./app_code_lesson_functions_console_log_string.mjs";
@@ -69,6 +71,16 @@ export function app_code_lesson_if_true() {
     let found = [swapped];
     return found;
   }
+  function backwards_wrong_say(choice) {
+    "said when the learner picks the program with false in it: why it writes out nothing, in the words the screen above already uses for the if. Asked for by the human 2026-10-26";
+    let b = text_includes(choice, "(false)");
+    if (not(b)) {
+      return null;
+    }
+    let r =
+      "Remember: the value inside ( ) is false, so the lines inside { } do not run";
+    return r;
+  }
   function above(root, context) {
     "the line the learner knows, then the same line inside an if, writing out the same word";
     let quoted = app_code_string_code(shown);
@@ -124,6 +136,7 @@ export function app_code_lesson_if_true() {
     lines: true,
     decoys: null,
     backwards_decoys,
+    backwards_wrong_say,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
   });

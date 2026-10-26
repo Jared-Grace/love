@@ -27,13 +27,17 @@ export function app_code_lesson_quiz_multiple_choice_each_button({
   let choices = property_get(r2, "choices");
   function each_button(quiz_choice) {
     let right = equal(quiz_choice, quiz_answer_text);
+    function on_wrong_choice() {
+      "told which choice was pressed, so a reminder can be about that one wrong choice";
+      on_wrong(quiz_choice);
+    }
     let b = app_code_quiz_choice_button_answer(
       parent,
       quiz_choice,
       right,
       state,
       on_success,
-      on_wrong,
+      on_wrong_choice,
     );
     let nn = null_not_is(answer_on_button);
     if (nn) {
