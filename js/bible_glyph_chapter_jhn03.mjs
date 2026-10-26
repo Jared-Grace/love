@@ -291,7 +291,7 @@ export function bible_glyph_chapter_jhn03() {
       {
         verse_number: 12,
         words: [
-          "If",
+          "$traffic_light",
           "I",
           "have",
           "$speech",
