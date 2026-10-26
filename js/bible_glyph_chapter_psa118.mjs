@@ -167,7 +167,7 @@ export function bible_glyph_chapter_psa118() {
           "$thumbs_up",
           "to",
           "take",
-          "refuge",
+          "$hut",
           "in",
           "the",
           "$i_am",
