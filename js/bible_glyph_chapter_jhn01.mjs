@@ -901,7 +901,7 @@ export function bible_glyph_chapter_jhn01() {
           "stayed",
           "with",
           "$pointing_back",
-          "that",
+          "$telescope",
           "$sun.",
           "It",
           "was",
