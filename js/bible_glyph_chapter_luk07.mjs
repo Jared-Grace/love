@@ -135,7 +135,7 @@ export function bible_glyph_chapter_luk07() {
         "$no_entry",
         "far",
         "$away",
-        "the",
+        "$pin",
         "$house,",
         "the",
         "centurion",
