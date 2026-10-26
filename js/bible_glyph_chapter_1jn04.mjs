@@ -344,7 +344,7 @@ export function bible_glyph_chapter_1jn04() {
           "another,",
           "$heart_on_fire",
           "remains",
-          "in",
+          "$tray_in",
           "us,",
           "and",
           "His",
