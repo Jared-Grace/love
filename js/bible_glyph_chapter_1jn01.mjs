@@ -199,7 +199,7 @@ export function bible_glyph_chapter_1jn01() {
           "$pin",
           "$darkness,",
           "we",
-          "lie",
+          "$lying_face+doing",
           "$plus",
           "do",
           "$no_entry",
