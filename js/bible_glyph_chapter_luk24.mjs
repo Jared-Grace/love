@@ -1068,7 +1068,7 @@ export function bible_glyph_chapter_luk24() {
           "$safety_pin",
           "$you:",
           "$pointing",
-          "everything",
+          "$all",
           "$knot",
           "be",
           "fulfilled",
