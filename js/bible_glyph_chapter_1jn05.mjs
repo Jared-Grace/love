@@ -157,7 +157,7 @@ export function bible_glyph_chapter_1jn05() {
           "$tray_in",
           "$water",
           "$one+manner,",
-          "but",
+          "$curving_up",
           "$tray_in",
           "$water",
           "$plus",
