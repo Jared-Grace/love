@@ -350,7 +350,7 @@ export function bible_glyph_chapter_1ki03() {
           "of",
           "the",
           "$crown,",
-          "that",
+          "$pointing",
           "$peace+proper_name",
           "had",
           "asked",
