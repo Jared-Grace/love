@@ -184,7 +184,7 @@ export function bible_glyph_chapter_jhn03() {
           "Do",
           "$no_entry",
           "be",
-          "amazed",
+          "$astonished",
           "$pointing",
           "I",
           "$speech,",
