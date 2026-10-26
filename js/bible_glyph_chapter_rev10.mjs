@@ -169,7 +169,7 @@ export function bible_glyph_chapter_rev10() {
           "$sea",
           "$plus",
           "on",
-          "the",
+          "$pin",
           "$earth",
           "lifted",
           "up",
