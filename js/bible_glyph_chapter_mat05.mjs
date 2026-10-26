@@ -644,7 +644,7 @@ export function bible_glyph_chapter_mat05() {
           "adversary,",
           "$finish",
           "you",
-          "are",
+          "$link",
           "still",
           "with",
           "$pointing_back",
