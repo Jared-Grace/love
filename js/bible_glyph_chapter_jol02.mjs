@@ -973,7 +973,7 @@ export function bible_glyph_chapter_jol02() {
           "$moon",
           "to",
           "$blood,",
-          "before",
+          "$face",
           "the",
           "great",
           "and",
