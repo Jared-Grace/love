@@ -550,7 +550,7 @@ export function bible_glyph_chapter_1jn02() {
           "is",
           "the",
           "$end_arrow+describing",
-          "hour.",
+          "$clock.",
         ],
       },
       {
