@@ -28,7 +28,7 @@ export function bible_glyph_chapter_jhn09() {
           "$person",
           "$person_with_white_cane",
           "$tray_out",
-          "birth.",
+          "$hatching_chick+thing.",
         ],
       },
       {
