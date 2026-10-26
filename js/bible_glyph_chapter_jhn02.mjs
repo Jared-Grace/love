@@ -450,7 +450,7 @@ export function bible_glyph_chapter_jhn02() {
           "$writing_hand:",
           "“$face_steam",
           "for",
-          "Your",
+          "$you",
           "$house",
           "will",
           "consume",
