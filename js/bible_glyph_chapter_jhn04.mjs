@@ -293,7 +293,7 @@ export function bible_glyph_chapter_jhn04() {
           "$son,",
           "$plus",
           "$pointing_back",
-          "livestock?”",
+          "$ox+bread+hands_giving?”",
         ],
       },
       {
