@@ -895,7 +895,7 @@ export function bible_glyph_chapter_mrk12() {
         "$tray_out",
         "all",
         "your",
-        "strength,",
+        "$might,",
         "$plus",
         "to",
         "$heart_red+doing",
