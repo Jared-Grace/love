@@ -987,7 +987,7 @@ export function bible_glyph_chapter_mrk08() {
           "If",
           "anyone",
           "is",
-          "ashamed",
+          "$pointing_up+flushed",
           "of",
           "Me",
           "$plus",
