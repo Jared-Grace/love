@@ -578,7 +578,7 @@ export function bible_glyph_chapter_jud01() {
           "ones",
           "who",
           "cause",
-          "divisions,",
+          "$away+metro+triangular_ruler+doing,",
           "worldly,",
           "$no_entry",
           "having",
