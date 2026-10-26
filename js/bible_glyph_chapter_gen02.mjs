@@ -210,7 +210,7 @@ export function bible_glyph_chapter_gen02() {
           "breathed",
           "into",
           "his",
-          "nostrils",
+          "$nose+fire",
           "the",
           "breath",
           "of",
