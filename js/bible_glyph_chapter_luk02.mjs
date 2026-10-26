@@ -132,7 +132,7 @@ export function bible_glyph_chapter_luk02() {
       words: [
         "$butterfly",
         "$pointing_back",
-        "were",
+        "$link",
         "$tray_in",
         "that",
         "place,",
