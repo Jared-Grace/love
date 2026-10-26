@@ -1122,7 +1122,7 @@ export function bible_glyph_chapter_luk24() {
           "will",
           "$confounded_face",
           "$plus",
-          "rise",
+          "$person+up_arrow",
           "$tray_out",
           "the",
           "$skull",
