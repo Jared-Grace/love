@@ -252,7 +252,7 @@ export function bible_glyph_chapter_exo14() {
           "$sea",
           "near",
           "Pi-hahiroth,",
-          "opposite",
+          "$face",
           "Baal-zephon.",
         ],
       },
