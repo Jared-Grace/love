@@ -45,7 +45,7 @@ export function bible_glyph_chapter_psa085() {
           "$all",
           "their",
           "$bow.",
-          "Selah",
+          "$pause_button",
         ],
       },
       {
