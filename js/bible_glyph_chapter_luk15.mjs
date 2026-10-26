@@ -84,7 +84,7 @@ export function bible_glyph_chapter_luk15() {
         "$pointing_back,",
         "does",
         "$no_entry",
-        "leave",
+        "$pointing_down+puzzle_piece+doing",
         "the",
         "ninety",
         "nine",
