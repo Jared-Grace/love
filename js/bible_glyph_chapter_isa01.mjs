@@ -869,7 +869,7 @@ export function bible_glyph_chapter_isa01() {
           "man",
           "will",
           "become",
-          "tinder",
+          "$hand+vibration_mode+thread",
           "and",
           "his",
           "work",
