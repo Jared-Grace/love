@@ -544,7 +544,7 @@ export function bible_glyph_chapter_mrk11() {
         "went",
         "out",
         "of",
-        "the",
+        "$pin",
         "$city.",
       ],
     },
