@@ -74,7 +74,7 @@ export function bible_glyph_chapter_jhn10() {
         verse_number: 3,
         words: [
           "The",
-          "gatekeeper",
+          "$door+guard",
           "opens",
           "for",
           "him,",
