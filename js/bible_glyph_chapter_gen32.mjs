@@ -545,7 +545,7 @@ export function bible_glyph_chapter_gen32() {
           "$second_place",
           "and",
           "the",
-          "third",
+          "$third_place",
           "and",
           "all",
           "those",
