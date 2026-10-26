@@ -320,7 +320,7 @@ export function bible_glyph_chapter_mat05() {
           "a",
           "$lamp",
           "$plus",
-          "put",
+          "$palm_down",
           "$pointing_back",
           "under",
           "a",
