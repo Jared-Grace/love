@@ -473,7 +473,7 @@ export function bible_glyph_chapter_2ki02() {
           "$eye",
           "him",
           "$no_entry",
-          "more.",
+          "$repeat.",
           "Then",
           "he",
           "took",
