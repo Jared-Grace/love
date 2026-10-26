@@ -89,7 +89,7 @@ export function bible_glyph_chapter_deu26() {
           "your",
           "$heart_on_fire",
           "will",
-          "choose",
+          "$check_box",
           "as",
           "a",
           "dwelling",
