@@ -999,7 +999,7 @@ export function bible_glyph_chapter_mrk05() {
         "commotion",
         "$plus",
         "$loudly_crying?",
-        "The",
+        "$pin",
         "$baby",
         "has",
         "$no_entry",
