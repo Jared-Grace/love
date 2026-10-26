@@ -490,7 +490,7 @@ export function bible_glyph_chapter_1jn05() {
           "$lightbulb",
           "$pointing",
           "$all",
-          "born",
+          "$hatching_chick",
           "$tray_out",
           "$heart_on_fire",
           "does",
