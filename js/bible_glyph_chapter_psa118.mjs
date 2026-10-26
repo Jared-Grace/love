@@ -500,7 +500,7 @@ export function bible_glyph_chapter_psa118() {
           "cause",
           "us",
           "to",
-          "prosper,",
+          "$chart_increasing,",
           "we",
           "pray.",
         ],
