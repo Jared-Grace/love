@@ -1181,7 +1181,7 @@ export function bible_glyph_chapter_mrk12() {
         "$widow",
         "has",
         "put",
-        "more",
+        "$multiply+more",
         "into",
         "the",
         "treasury",
