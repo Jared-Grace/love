@@ -789,7 +789,7 @@ export function bible_glyph_chapter_jdg13() {
           "$no_entry",
           "$eye",
           "us",
-          "all",
+          "$all",
           "these",
           "things,",
           "and",
