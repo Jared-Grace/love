@@ -325,7 +325,7 @@ export function bible_glyph_chapter_mat05() {
           "$down_arrow",
           "a",
           "$basket+triangular_ruler.",
-          "Instead",
+          "$curving_up",
           "they",
           "set",
           "it",
