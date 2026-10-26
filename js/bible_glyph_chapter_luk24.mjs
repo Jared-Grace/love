@@ -1120,7 +1120,7 @@ export function bible_glyph_chapter_luk24() {
           "The",
           "$oil",
           "will",
-          "suffer",
+          "$confounded_face",
           "$plus",
           "rise",
           "$tray_out",
