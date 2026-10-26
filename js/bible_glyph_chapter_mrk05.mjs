@@ -1114,7 +1114,7 @@ export function bible_glyph_chapter_mrk05() {
         "one",
         "should",
         "$lightbulb",
-        "this,",
+        "$flashlight,",
         "$plus",
         "was",
         "$speech",
