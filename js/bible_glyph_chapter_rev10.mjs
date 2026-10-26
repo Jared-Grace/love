@@ -106,7 +106,7 @@ export function bible_glyph_chapter_rev10() {
           "cried",
           "out,",
           "the",
-          "seven",
+          "$seven",
           "thunders",
           "$mouth",
           "their",
