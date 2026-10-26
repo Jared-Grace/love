@@ -598,7 +598,7 @@ export function bible_glyph_chapter_mrk05() {
         "$multiply,",
         "$speech,",
         "$pointing",
-        "“My",
+        "“$me",
         "little",
         "$girl+baby",
         "is",
