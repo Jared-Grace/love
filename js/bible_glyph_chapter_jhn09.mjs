@@ -984,7 +984,7 @@ export function bible_glyph_chapter_jhn09() {
           "$speech,",
           "For",
           "$scales+thing",
-          "I",
+          "$me",
           "have",
           "$footprints",
           "into",
