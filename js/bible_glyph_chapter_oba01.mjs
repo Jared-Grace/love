@@ -608,7 +608,7 @@ export function bible_glyph_chapter_oba01() {
           "it.",
           "Therefore",
           "$no_entry",
-          "survivor",
+          "$ring_buoy+person",
           "will",
           "remain",
           "from",
