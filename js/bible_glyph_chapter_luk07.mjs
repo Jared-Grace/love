@@ -378,7 +378,7 @@ export function bible_glyph_chapter_luk07() {
         "$pointing_back,",
         "He",
         "had",
-        "compassion",
+        "$heart_red+pleading",
         "on",
         "$pointing_back",
         "$plus",
