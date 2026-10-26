@@ -758,7 +758,7 @@ export function bible_glyph_chapter_jhn17() {
           "$heart_red+doing",
           "me",
           "may",
-          "be",
+          "$link",
           "$tray_in",
           "$pointing_back,",
           "$plus",
