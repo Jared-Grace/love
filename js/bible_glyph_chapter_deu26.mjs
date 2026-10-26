@@ -21,7 +21,7 @@ export function bible_glyph_chapter_deu26() {
           "into",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "your",
