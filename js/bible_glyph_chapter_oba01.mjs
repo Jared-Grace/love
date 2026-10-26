@@ -671,7 +671,7 @@ export function bible_glyph_chapter_oba01() {
           "exiles",
           "of",
           "this",
-          "host",
+          "$shield+hole",
           "of",
           "the",
           "$wrestling+heart_on_fire",
