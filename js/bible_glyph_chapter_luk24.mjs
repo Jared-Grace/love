@@ -1012,7 +1012,7 @@ export function bible_glyph_chapter_luk24() {
           "you",
           "have",
           "$joker",
-          "here",
+          "$round_pushpin+manner",
           "to",
           "$fork_and_knife+describing?",
         ],
