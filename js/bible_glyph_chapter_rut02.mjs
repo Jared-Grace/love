@@ -579,7 +579,7 @@ export function bible_glyph_chapter_rut02() {
           "the",
           "$field",
           "$finish",
-          "evening.",
+          "$sunset.",
           "And",
           "when",
           "she",
