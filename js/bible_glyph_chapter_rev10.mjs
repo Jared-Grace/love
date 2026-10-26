@@ -29,7 +29,7 @@ export function bible_glyph_chapter_rev10() {
           "wrapped",
           "in",
           "a",
-          "cloud,",
+          "$cloud,",
           "$plus",
           "a",
           "rainbow",
