@@ -958,7 +958,7 @@ export function bible_glyph_chapter_mat05() {
           "swear",
           "$tray_in",
           "your",
-          "head,",
+          "$person_gesturing_ok,",
           "$pointing",
           "you",
           "can",
