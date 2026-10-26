@@ -195,7 +195,7 @@ export function bible_glyph_chapter_mrk04() {
         words: [
           "$plus",
           "still",
-          "other",
+          "$plus+one",
           "seed",
           "fell",
           "on",
