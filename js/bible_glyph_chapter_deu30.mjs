@@ -555,7 +555,7 @@ export function bible_glyph_chapter_deu30() {
           "$guard",
           "His",
           "$scroll,",
-          "statutes,",
+          "$statute,",
           "and",
           "$scales+thing,",
           "so",
