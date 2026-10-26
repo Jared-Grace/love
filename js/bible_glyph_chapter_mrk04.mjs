@@ -575,7 +575,7 @@ export function bible_glyph_chapter_mrk04() {
       {
         verse_number: 22,
         words: [
-          "For",
+          "$information",
           "there",
           "is",
           "$no_entry",
