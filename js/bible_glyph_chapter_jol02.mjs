@@ -408,7 +408,7 @@ export function bible_glyph_chapter_jol02() {
       {
         verse_number: 14,
         words: [
-          "Who",
+          "$person+question",
           "$lightbulb?",
           "He",
           "may",
