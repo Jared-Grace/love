@@ -270,7 +270,7 @@ export function bible_glyph_chapter_exo14() {
           "saw",
           "the",
           "$clamp+person",
-          "marching",
+          "$tent+away",
           "after",
           "them,",
           "and",
