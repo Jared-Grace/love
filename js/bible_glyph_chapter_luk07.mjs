@@ -484,7 +484,7 @@ export function bible_glyph_chapter_luk07() {
         "$plus",
         "this",
         "$speech",
-        "about",
+        "$clockwise_arrows",
         "$pointing_back",
         "$footprints+tray_out",
         "$tray_in",
