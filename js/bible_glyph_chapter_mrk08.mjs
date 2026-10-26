@@ -796,7 +796,7 @@ export function bible_glyph_chapter_mrk08() {
           "$plus",
           "be",
           "rejected",
-          "by",
+          "$down_arrow",
           "the",
           "elders",
           "$plus",
