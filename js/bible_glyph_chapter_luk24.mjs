@@ -665,7 +665,7 @@ export function bible_glyph_chapter_luk24() {
           "was",
           "written",
           "$tray_in",
-          "all",
+          "$all",
           "the",
           "Scriptures",
           "about",
