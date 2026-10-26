@@ -185,7 +185,7 @@ export function bible_glyph_chapter_jhn17() {
       {
         verse_number: 7,
         words: [
-          "Now",
+          "$watch",
           "they",
           "have",
           "$lightbulb",
