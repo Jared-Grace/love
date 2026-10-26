@@ -23,7 +23,7 @@ export function bible_glyph_chapter_jhn03() {
           "a",
           "$person",
           "$tray_out",
-          "the",
+          "$pin",
           "$proper_name$Pharisees",
           "$name_tag$d",
           "$proper_name$Nicodemus,",
