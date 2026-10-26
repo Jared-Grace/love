@@ -128,7 +128,7 @@ export function bible_glyph_chapter_1ki03() {
           "to",
           "$proper_name$Gibeon",
           "to",
-          "sacrifice,",
+          "$sacrifice,",
           "for",
           "it",
           "was",
