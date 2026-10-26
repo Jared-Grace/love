@@ -585,7 +585,7 @@ export function bible_glyph_chapter_1jn05() {
           "He",
           "is",
           "the",
-          "true",
+          "$check+describing",
           "$heart_on_fire",
           "$plus",
           "eternal",
