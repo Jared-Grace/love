@@ -699,7 +699,7 @@ export function bible_glyph_chapter_mrk11() {
         "$balloon",
         "whatever",
         "you",
-        "hold",
+        "$raised_fist",
         "$pointing_down",
         "anyone,",
         "$plus",
