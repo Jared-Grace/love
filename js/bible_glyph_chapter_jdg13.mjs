@@ -303,7 +303,7 @@ export function bible_glyph_chapter_jdg13() {
           "$footprints",
           "to",
           "us",
-          "again",
+          "$repeat",
           "to",
           "teach",
           "us",
