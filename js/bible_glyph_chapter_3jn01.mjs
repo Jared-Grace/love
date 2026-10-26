@@ -111,7 +111,7 @@ export function bible_glyph_chapter_3jn01() {
           "you",
           "$hammer",
           "$toward+tray_in",
-          "the",
+          "$pin",
           "$brother,",
           "$plus",
           "they",
