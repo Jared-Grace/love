@@ -1231,7 +1231,7 @@ export function bible_glyph_chapter_luk02() {
         "$hammer",
         "this",
         "to",
-        "us?",
+        "$me?",
         "Your",
         "$father",
         "and",
