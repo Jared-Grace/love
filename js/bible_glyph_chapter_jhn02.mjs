@@ -338,7 +338,7 @@ export function bible_glyph_chapter_jhn02() {
           "the",
           "$menorah",
           "was",
-          "near,",
+          "$magnet,",
           "$plus",
           "$cross",
           "went",
