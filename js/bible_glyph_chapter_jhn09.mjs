@@ -746,7 +746,7 @@ export function bible_glyph_chapter_jhn09() {
           "$plus",
           "$speech,",
           "$you",
-          "are",
+          "$link",
           "His",
           "$learner;",
           "we",
