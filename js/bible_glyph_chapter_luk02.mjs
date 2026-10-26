@@ -1193,7 +1193,7 @@ export function bible_glyph_chapter_luk02() {
     {
       verse_number: 47,
       words: [
-        "All",
+        "$all",
         "who",
         "$ear",
         "$pointing_back",
