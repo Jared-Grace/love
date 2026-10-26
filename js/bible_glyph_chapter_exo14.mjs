@@ -734,7 +734,7 @@ export function bible_glyph_chapter_exo14() {
           "of",
           "$fire",
           "and",
-          "cloud,",
+          "$cloud,",
           "and",
           "He",
           "threw",
