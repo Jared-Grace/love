@@ -540,7 +540,7 @@ export function bible_glyph_chapter_rut04() {
           "be",
           "the",
           "$i_am,",
-          "who",
+          "$back+flashlight",
           "has",
           "$no_entry",
           "left",
