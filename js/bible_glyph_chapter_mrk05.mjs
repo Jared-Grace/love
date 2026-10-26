@@ -273,7 +273,7 @@ export function bible_glyph_chapter_mrk05() {
         "of",
         "$pig",
         "$link",
-        "feeding.",
+        "$sheep+fork_and_knife+doing.",
       ],
     },
     {
