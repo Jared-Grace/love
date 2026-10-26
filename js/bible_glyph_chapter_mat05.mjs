@@ -493,7 +493,7 @@ export function bible_glyph_chapter_mat05() {
           "that",
           "of",
           "the",
-          "scribes",
+          "$writing_hand+doer",
           "$plus",
           "$proper_name$Pharisees,",
           "you",
