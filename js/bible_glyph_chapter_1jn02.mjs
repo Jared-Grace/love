@@ -537,7 +537,7 @@ export function bible_glyph_chapter_1jn02() {
           "$footprints,",
           "$plus",
           "$watch",
-          "many",
+          "$multiply",
           "antichrists",
           "have",
           "appeared.",
