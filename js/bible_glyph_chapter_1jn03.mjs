@@ -390,7 +390,7 @@ export function bible_glyph_chapter_1jn03() {
           "the",
           "$globe",
           "$face_with_symbols_on_mouth",
-          "you.",
+          "$you.",
         ],
       },
       {
