@@ -182,7 +182,7 @@ export function bible_glyph_chapter_1jn02() {
           "writing",
           "to",
           "you,",
-          "but",
+          "$curving_up",
           "an",
           "old",
           "$scroll",
