@@ -117,7 +117,7 @@ export function bible_glyph_chapter_deu26() {
           "to",
           "him,",
           "I",
-          "declare",
+          "$newspaper",
           "$sun",
           "to",
           "the",
