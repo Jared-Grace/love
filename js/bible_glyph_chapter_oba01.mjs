@@ -379,7 +379,7 @@ export function bible_glyph_chapter_oba01() {
           "of",
           "$foreigner+thumbs_down,",
           "$no_entry",
-          "rejoice",
+          "$beaming+doing",
           "over",
           "the",
           "$son",
