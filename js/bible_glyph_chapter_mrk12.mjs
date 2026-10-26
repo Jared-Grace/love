@@ -358,7 +358,7 @@ export function bible_glyph_chapter_mrk12() {
         "from",
         "no",
         "one.",
-        "Indeed,",
+        "$information,",
         "You",
         "are",
         "$eyes",
