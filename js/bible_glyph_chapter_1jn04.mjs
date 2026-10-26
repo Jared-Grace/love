@@ -409,7 +409,7 @@ export function bible_glyph_chapter_1jn04() {
         verse_number: 15,
         words: [
           "If",
-          "anyone",
+          "$back+flashlight",
           "confesses",
           "that",
           "$cross",
