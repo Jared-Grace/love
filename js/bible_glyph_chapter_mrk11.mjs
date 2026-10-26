@@ -63,7 +63,7 @@ export function bible_glyph_chapter_mrk11() {
         "$donkey+child",
         "tied",
         "there,",
-        "on",
+        "$pointing_up",
         "which",
         "$no_entry",
         "$person",
