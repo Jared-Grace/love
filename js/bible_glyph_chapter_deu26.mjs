@@ -702,7 +702,7 @@ export function bible_glyph_chapter_deu26() {
           "$hands_giving",
           "you",
           "$pointing_up+most",
-          "above",
+          "$pointing_up",
           "all",
           "the",
           "$map",
