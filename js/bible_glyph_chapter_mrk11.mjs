@@ -712,7 +712,7 @@ export function bible_glyph_chapter_mrk11() {
         "may",
         "$balloon",
         "you",
-        "your",
+        "$you",
         "trespasses.”",
       ],
     },
