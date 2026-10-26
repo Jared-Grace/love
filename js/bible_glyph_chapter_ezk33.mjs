@@ -104,7 +104,7 @@ export function bible_glyph_chapter_ezk33() {
           "$voice",
           "of",
           "the",
-          "horn",
+          "$trumpet",
           "but",
           "does",
           "$no_entry",
