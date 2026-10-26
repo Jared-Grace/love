@@ -994,7 +994,7 @@ export function bible_glyph_chapter_jhn10() {
           "$pin",
           "$pointing_down+proper_name",
           "to",
-          "the",
+          "$pin",
           "$place",
           "where",
           "$proper_name$John",
