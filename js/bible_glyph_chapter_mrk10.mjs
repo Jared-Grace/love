@@ -976,7 +976,7 @@ export function bible_glyph_chapter_mrk10() {
         "“$hands_giving",
         "to",
         "us",
-        "that",
+        "$right_arrow+toward",
         "one",
         "of",
         "us",
