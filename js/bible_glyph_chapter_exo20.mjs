@@ -127,7 +127,7 @@ export function bible_glyph_chapter_exo20() {
           "$son",
           "to",
           "the",
-          "third",
+          "$child+three",
           "and",
           "fourth",
           "generations",
