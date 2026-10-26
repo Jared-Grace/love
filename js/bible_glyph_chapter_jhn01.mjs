@@ -1120,7 +1120,7 @@ export function bible_glyph_chapter_jhn01() {
           "$speech.",
           "$cross",
           "answered,",
-          "“Before",
+          "“$last_track",
           "$proper_name$Philip",
           "called",
           "you,",
