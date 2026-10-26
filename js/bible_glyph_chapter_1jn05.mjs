@@ -105,7 +105,7 @@ export function bible_glyph_chapter_1jn05() {
           "$flashlight",
           "$link",
           "the",
-          "victory",
+          "$trophy",
           "that",
           "has",
           "overcome",
