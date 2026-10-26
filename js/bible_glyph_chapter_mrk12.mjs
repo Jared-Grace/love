@@ -962,7 +962,7 @@ export function bible_glyph_chapter_mrk12() {
         "courts,",
         "He",
         "$speech,",
-        "How",
+        "$gear+question",
         "can",
         "the",
         "scribes",
