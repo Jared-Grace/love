@@ -118,7 +118,7 @@ export function bible_glyph_chapter_rev10() {
         words: [
           "$back+clock",
           "$pin",
-          "seven",
+          "$seven",
           "thunders",
           "had",
           "$mouth,",
