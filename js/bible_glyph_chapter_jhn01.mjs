@@ -411,7 +411,7 @@ export function bible_glyph_chapter_jhn01() {
           "$proper_name$John’s",
           "$witness+thing",
           "$back+clock",
-          "the",
+          "$pin",
           "$menorah",
           "$tray_out",
           "$city+peace",
