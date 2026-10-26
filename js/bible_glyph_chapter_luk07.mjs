@@ -249,7 +249,7 @@ export function bible_glyph_chapter_luk07() {
         "at",
         "$pointing_back,",
         "$plus",
-        "turning",
+        "$person+clockwise_arrows+doing",
         "to",
         "the",
         "$crowd",
