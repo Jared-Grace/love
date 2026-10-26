@@ -1019,7 +1019,7 @@ export function bible_glyph_chapter_mrk08() {
           "of",
           "$pointing_back",
           "$father",
-          "with",
+          "$linked_paperclips",
           "the",
           "$sparkle",
           "$angel.",
