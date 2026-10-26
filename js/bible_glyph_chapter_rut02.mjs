@@ -740,7 +740,7 @@ export function bible_glyph_chapter_rut02() {
           "also",
           "$speech",
           "me,",
-          "Stay",
+          "$paperclip",
           "$linked_paperclips",
           "my",
           "young",
