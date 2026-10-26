@@ -406,7 +406,7 @@ export function bible_glyph_chapter_jdg13() {
           "he",
           "$speech,",
           "“Are",
-          "you",
+          "$you",
           "the",
           "$man_beard",
           "who",
