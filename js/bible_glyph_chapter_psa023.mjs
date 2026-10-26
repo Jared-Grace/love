@@ -62,7 +62,7 @@ export function bible_glyph_chapter_psa023() {
           "$ruler+thing",
           "for",
           "the",
-          "sake",
+          "$right_arrow+toward",
           "of",
           "His",
           "$name_tag.",
