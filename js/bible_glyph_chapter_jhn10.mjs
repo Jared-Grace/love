@@ -259,7 +259,7 @@ export function bible_glyph_chapter_jhn10() {
           "$footprints",
           "except",
           "to",
-          "steal",
+          "$hand+lying_face",
           "$plus",
           "kill",
           "$plus",
