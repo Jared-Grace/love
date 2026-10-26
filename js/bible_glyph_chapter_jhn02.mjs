@@ -215,7 +215,7 @@ export function bible_glyph_chapter_jhn02() {
           "$lightbulb",
           "$round_pushpin+tray_out+question",
           "it",
-          "was",
+          "$link",
           "from,",
           "but",
           "the",
