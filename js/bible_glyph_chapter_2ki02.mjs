@@ -639,7 +639,7 @@ export function bible_glyph_chapter_2ki02() {
           "put",
           "him",
           "on",
-          "one",
+          "$one",
           "of",
           "the",
           "$mountain",
