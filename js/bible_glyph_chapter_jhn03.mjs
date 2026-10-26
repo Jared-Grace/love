@@ -664,7 +664,7 @@ export function bible_glyph_chapter_jhn03() {
           "the",
           "One",
           "who",
-          "was",
+          "$link",
           "with",
           "you",
           "beyond",
