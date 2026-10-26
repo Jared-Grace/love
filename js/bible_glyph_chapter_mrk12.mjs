@@ -588,7 +588,7 @@ export function bible_glyph_chapter_mrk12() {
         "any",
         "children.",
         "$plus",
-        "last",
+        "$end_arrow+describing",
         "of",
         "all,",
         "$pin",
