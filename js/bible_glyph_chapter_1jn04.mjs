@@ -511,7 +511,7 @@ export function bible_glyph_chapter_1jn04() {
           "$throwing",
           "$tray_out+manner",
           "$fear,",
-          "because",
+          "$pointing",
           "$fear",
           "involves",
           "punishment.",
