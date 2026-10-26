@@ -1,6 +1,3 @@
-import { bible_glyph_chapters_note_glyph_gate_run } from "./bible_glyph_chapters_note_glyph_gate_run.mjs";
-import { app_code_program_step_presses_gate_run } from "./app_code_program_step_presses_gate_run.mjs";
-import { app_code_quiz_lines_order_indent_gate_run } from "./app_code_quiz_lines_order_indent_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { stop_next_steps_hook_gate_run } from "./stop_next_steps_hook_gate_run.mjs";
@@ -289,6 +286,7 @@ import { functions_operators_raw_gate_run } from "./functions_operators_raw_gate
 import { functions_arity_gate_run } from "./functions_arity_gate_run.mjs";
 import { functions_arguments_assert_gate_run } from "./functions_arguments_assert_gate_run.mjs";
 import { app_shared_imports_gate_run } from "./app_shared_imports_gate_run.mjs";
+import { app_code_wrong_say_silent_gate_run } from "./app_code_wrong_say_silent_gate_run.mjs";
 import { functions_app_specific_imports_gate_run } from "./functions_app_specific_imports_gate_run.mjs";
 import { functions_cross_app_imports_gate_run } from "./functions_cross_app_imports_gate_run.mjs";
 import { folders_function_named_orphaned_gate_run } from "./folders_function_named_orphaned_gate_run.mjs";
@@ -637,6 +635,9 @@ import { app_en_learn_bible_gloss_tagalog_glosses_empty_gate_run } from "./app_e
 import { app_en_learn_bible_gloss_urdu_occurrence_claim_gate_run } from "./app_en_learn_bible_gloss_urdu_occurrence_claim_gate_run.mjs";
 import { app_en_learn_bible_gloss_urdu_occurrence_claim_rule_gate_run } from "./app_en_learn_bible_gloss_urdu_occurrence_claim_rule_gate_run.mjs";
 import { giveaway_psalms_boxes_whole_gate_run } from "./giveaway_psalms_boxes_whole_gate_run.mjs";
+import { app_code_quiz_lines_order_indent_gate_run } from "./app_code_quiz_lines_order_indent_gate_run.mjs";
+import { app_code_program_step_presses_gate_run } from "./app_code_program_step_presses_gate_run.mjs";
+import { bible_glyph_chapters_note_glyph_gate_run } from "./bible_glyph_chapters_note_glyph_gate_run.mjs";
 export function qa_gates() {
   "Every gate the repo-wide check runs, gathered in one list, so adding a function here is the whole of wiring a new gate in.";
   let gates = [
@@ -928,6 +929,7 @@ export function qa_gates() {
     functions_arity_gate_run,
     functions_arguments_assert_gate_run,
     app_shared_imports_gate_run,
+    app_code_wrong_say_silent_gate_run,
     functions_app_specific_imports_gate_run,
     functions_cross_app_imports_gate_run,
     folders_function_named_orphaned_gate_run,
