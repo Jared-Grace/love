@@ -755,7 +755,7 @@ export function bible_glyph_chapter_jhn14() {
           "$balloon",
           "with",
           "you;",
-          "My",
+          "$me+describing",
           "$peace",
           "I",
           "$hands_giving",
