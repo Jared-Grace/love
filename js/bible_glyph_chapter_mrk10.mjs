@@ -699,7 +699,7 @@ export function bible_glyph_chapter_mrk10() {
       verse_number: 29,
       words: [
         "$cross",
-        "replied,",
+        "$left_speech_bubble,",
         "“$check+manner",
         "I",
         "am",
