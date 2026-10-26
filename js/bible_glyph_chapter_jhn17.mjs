@@ -532,7 +532,7 @@ export function bible_glyph_chapter_jhn17() {
           "$pointing_back",
           "also",
           "may",
-          "be",
+          "$link",
           "$sparkle+doing",
           "$tray_in",
           "$check.",
