@@ -108,7 +108,7 @@ export function bible_glyph_chapter_psa097() {
         words: [
           "The",
           "$sky",
-          "proclaim",
+          "$newspaper",
           "His",
           "$ruler+thing;",
           "all",
