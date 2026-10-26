@@ -396,7 +396,7 @@ export function bible_glyph_chapter_jer26() {
           "$all",
           "the",
           "$family,",
-          "This",
+          "$flashlight",
           "$man_beard",
           "is",
           "worthy",
