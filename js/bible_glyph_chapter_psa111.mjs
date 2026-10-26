@@ -159,7 +159,7 @@ export function bible_glyph_chapter_psa111() {
           "They",
           "are",
           "upheld",
-          "forever",
+          "$clock+all",
           "and",
           "$hourglass,",
           "$hammer+doing",
