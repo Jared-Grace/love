@@ -522,7 +522,7 @@ export function bible_glyph_chapter_1ki03() {
         words: [
           "Then",
           "$peace+proper_name",
-          "awoke,",
+          "$sleeping_face+up_arrow+doing,",
           "and",
           "indeed",
           "it",
