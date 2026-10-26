@@ -21,7 +21,7 @@ export function bible_glyph_chapter_mrk05() {
         "other",
         "side",
         "of",
-        "the",
+        "$pin",
         "$sea,",
         "to",
         "the",
