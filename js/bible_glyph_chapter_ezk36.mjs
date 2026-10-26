@@ -624,7 +624,7 @@ export function bible_glyph_chapter_ezk36() {
           "poured",
           "out",
           "My",
-          "wrath",
+          "$angry_face",
           "upon",
           "them",
           "because",
