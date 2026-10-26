@@ -333,7 +333,7 @@ export function bible_glyph_chapter_jhn04() {
           "never",
           "$tongue+desert+doing",
           "$hourglass.",
-          "Indeed,",
+          "$curving_up,",
           "$pin",
           "$water",
           "I",
