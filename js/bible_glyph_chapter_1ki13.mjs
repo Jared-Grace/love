@@ -126,7 +126,7 @@ export function bible_glyph_chapter_1ki13() {
           "$i_am",
           "has",
           "$mouth:",
-          "Surely",
+          "$exclamation",
           "the",
           "altar",
           "will",
