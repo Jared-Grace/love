@@ -202,7 +202,7 @@ export function bible_glyph_chapter_mrk11() {
       verse_number: 8,
       words: [
         "$plus",
-        "many",
+        "$multiply",
         "spread",
         "$pointing_back",
         "$garment",
