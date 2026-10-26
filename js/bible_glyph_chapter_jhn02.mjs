@@ -99,7 +99,7 @@ export function bible_glyph_chapter_jhn02() {
           "has",
           "$no_entry+hourglass_not_done",
           "yet",
-          "come.”",
+          "$airplane_arrival.”",
         ],
       },
       {
