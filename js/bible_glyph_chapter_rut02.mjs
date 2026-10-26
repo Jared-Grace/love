@@ -206,7 +206,7 @@ export function bible_glyph_chapter_rut02() {
           "has",
           "continued",
           "from",
-          "morning",
+          "$morning",
           "until",
           "now,",
           "except",
