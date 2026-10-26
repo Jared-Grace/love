@@ -910,7 +910,7 @@ export function bible_glyph_chapter_mrk04() {
           "$telescope",
           "$sun,",
           "when",
-          "evening",
+          "$sunset",
           "came,",
           "He",
           "$speech",
