@@ -351,7 +351,7 @@ export function bible_glyph_chapter_3jn01() {
         words: [
           "Instead",
           "I",
-          "hope",
+          "$crossed_fingers+doing",
           "to",
           "$eye",
           "you",
