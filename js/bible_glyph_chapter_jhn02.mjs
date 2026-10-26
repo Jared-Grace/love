@@ -384,7 +384,7 @@ export function bible_glyph_chapter_jhn02() {
           "and",
           "drove",
           "them",
-          "all",
+          "$all",
           "$tray_out",
           "the",
           "temple,",
