@@ -107,7 +107,7 @@ export function bible_glyph_chapter_rev10() {
           "out,",
           "the",
           "$seven",
-          "thunders",
+          "$cloud+loudspeaker",
           "$mouth",
           "their",
           "$voice.",
