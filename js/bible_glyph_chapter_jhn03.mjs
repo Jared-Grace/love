@@ -359,7 +359,7 @@ export function bible_glyph_chapter_jhn03() {
           "$son",
           "of",
           "$person",
-          "must",
+          "$knot",
           "be",
           "lifted",
           "up,",
