@@ -131,7 +131,7 @@ export function bible_glyph_chapter_jhn14() {
           "do",
           "$no_entry",
           "$lightbulb",
-          "where",
+          "$round_pushpin+question",
           "You",
           "are",
           "going,",
