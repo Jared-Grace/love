@@ -166,7 +166,7 @@ export function bible_glyph_chapter_mrk12() {
         "They",
         "will",
         "$bowing+eyes+doing",
-        "my",
+        "$me",
         "$son.",
       ],
     },
