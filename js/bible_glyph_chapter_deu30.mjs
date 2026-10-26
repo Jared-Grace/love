@@ -615,7 +615,7 @@ export function bible_glyph_chapter_deu30() {
         verse_number: 18,
         words: [
           "I",
-          "declare",
+          "$newspaper",
           "to",
           "you",
           "$sun",
