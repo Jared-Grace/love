@@ -398,7 +398,7 @@ export function bible_glyph_chapter_jhn03() {
           "$one+butterfly",
           "$son,",
           "that",
-          "everyone",
+          "$all",
           "who",
           "$anchor+doing$s",
           "in",
