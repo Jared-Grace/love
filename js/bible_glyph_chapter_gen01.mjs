@@ -147,7 +147,7 @@ export function bible_glyph_chapter_gen01() {
           "and",
           "let",
           "it",
-          "separate",
+          "$construction",
           "$water",
           "from",
           "$water.",
