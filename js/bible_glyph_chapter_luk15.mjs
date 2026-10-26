@@ -307,7 +307,7 @@ export function bible_glyph_chapter_luk15() {
         "$father,",
         "$father,",
         "$hands_giving",
-        "me",
+        "$me",
         "my",
         "share",
         "of",
