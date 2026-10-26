@@ -763,7 +763,7 @@ export function bible_glyph_chapter_jhn20() {
           "$plus",
           "reach",
           "out",
-          "your",
+          "$you",
           "$hand",
           "$plus",
           "put",
