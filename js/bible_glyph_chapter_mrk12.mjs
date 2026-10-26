@@ -433,7 +433,7 @@ export function bible_glyph_chapter_mrk12() {
         "$speech",
         "$pointing_back,",
         "Whose",
-        "image",
+        "$camera",
         "is",
         "this?",
         "$plus",
