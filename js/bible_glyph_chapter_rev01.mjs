@@ -402,7 +402,7 @@ export function bible_glyph_chapter_rev01() {
           "$lamp+seat",
           "was",
           "One",
-          "like",
+          "$people_with_bunny_ears",
           "the",
           "$son",
           "of",
