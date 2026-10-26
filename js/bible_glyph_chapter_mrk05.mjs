@@ -703,7 +703,7 @@ export function bible_glyph_chapter_mrk05() {
         "$tray_in",
         "$pin",
         "$crowd",
-        "behind",
+        "$back+tray_out",
         "Him",
         "and",
         "touched",
