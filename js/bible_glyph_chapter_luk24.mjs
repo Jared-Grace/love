@@ -650,7 +650,7 @@ export function bible_glyph_chapter_luk24() {
         verse_number: 27,
         words: [
           "$plus",
-          "beginning",
+          "$clapper_board",
           "with",
           "$fishing_pole+proper_name",
           "$plus",
