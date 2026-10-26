@@ -550,7 +550,7 @@ export function bible_glyph_chapter_jhn20() {
           "He",
           "had",
           "$speech",
-          "this,",
+          "$flashlight,",
           "He",
           "showed",
           "$pointing_back",
