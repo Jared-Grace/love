@@ -492,7 +492,7 @@ export function bible_glyph_chapter_luk15() {
       verse_number: 19,
       words: [
         "I",
-        "am",
+        "$link",
         "no",
         "longer",
         "worthy",
