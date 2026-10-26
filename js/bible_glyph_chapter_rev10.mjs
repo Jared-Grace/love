@@ -320,7 +320,7 @@ export function bible_glyph_chapter_rev10() {
           "$pointing_back,",
           "$hands_giving",
           "me",
-          "the",
+          "$pin",
           "small",
           "scroll.",
           "$plus",
