@@ -935,7 +935,7 @@ export function bible_glyph_chapter_mrk08() {
           "$person_other",
           "for",
           "My",
-          "sake",
+          "$toward+information",
           "$plus",
           "for",
           "the",
