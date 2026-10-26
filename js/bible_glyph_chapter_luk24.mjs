@@ -964,7 +964,7 @@ export function bible_glyph_chapter_luk24() {
           "$meat",
           "$plus",
           "$bone,",
-          "as",
+          "$likeness",
           "you",
           "see",
           "that",
