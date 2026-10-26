@@ -531,7 +531,7 @@ export function bible_glyph_chapter_rut02() {
           "his",
           "young",
           "men,",
-          "Even",
+          "$plus",
           "if",
           "she",
           "gathers",
