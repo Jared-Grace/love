@@ -291,7 +291,7 @@ export function bible_glyph_chapter_rev01() {
           "$plus",
           "$castle",
           "$plus",
-          "perseverance",
+          "$person_climbing",
           "$tray_in",
           "$cross,",
           "was",
