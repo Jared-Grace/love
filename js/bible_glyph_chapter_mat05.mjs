@@ -1106,7 +1106,7 @@ export function bible_glyph_chapter_mat05() {
           "to",
           "borrow",
           "from",
-          "you.",
+          "$you.",
         ],
       },
       {
