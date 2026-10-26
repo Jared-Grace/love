@@ -105,7 +105,7 @@ export function bible_glyph_chapter_jhn20() {
           "out",
           "$plus",
           "$footprints",
-          "for",
+          "$toward+tray_in",
           "$pin",
           "$tomb.",
         ],
