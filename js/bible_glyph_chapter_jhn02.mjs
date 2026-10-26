@@ -424,7 +424,7 @@ export function bible_glyph_chapter_jhn02() {
           "$flashlight",
           "out",
           "of",
-          "here!",
+          "$round_pushpin+tray_out!",
           "$no_entry",
           "$hammer",
           "the",
