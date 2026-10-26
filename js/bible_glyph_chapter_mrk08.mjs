@@ -938,7 +938,7 @@ export function bible_glyph_chapter_mrk08() {
           "$toward+information",
           "$plus",
           "for",
-          "the",
+          "$pin",
           "$angel+thumbs_up",
           "will",
           "save",
