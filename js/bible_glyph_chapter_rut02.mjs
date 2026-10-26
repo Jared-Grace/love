@@ -208,7 +208,7 @@ export function bible_glyph_chapter_rut02() {
           "from",
           "$morning",
           "$finish",
-          "now,",
+          "$watch,",
           "except",
           "that",
           "she",
