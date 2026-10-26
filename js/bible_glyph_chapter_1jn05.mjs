@@ -576,7 +576,7 @@ export function bible_glyph_chapter_1jn05() {
           "Him",
           "who",
           "is",
-          "true,",
+          "$check+describing,",
           "$tray_in",
           "$pointing_back",
           "$son",
