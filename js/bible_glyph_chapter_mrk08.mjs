@@ -66,7 +66,7 @@ export function bible_glyph_chapter_mrk08() {
         verse_number: 3,
         words: [
           "$plus",
-          "if",
+          "$traffic_light",
           "I",
           "send",
           "$pointing_back",
