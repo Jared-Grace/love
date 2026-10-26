@@ -318,7 +318,7 @@ export function bible_glyph_chapter_1jn01() {
           "$link",
           "$no_entry",
           "$tray_in",
-          "us.",
+          "$me.",
         ],
       },
     ],
