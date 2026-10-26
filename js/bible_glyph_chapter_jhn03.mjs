@@ -45,7 +45,7 @@ export function bible_glyph_chapter_jhn03() {
           "$night",
           "$plus",
           "$speech,",
-          "“Rabbi,",
+          "“$teacher+top,",
           "we",
           "$lightbulb",
           "$pointing",
