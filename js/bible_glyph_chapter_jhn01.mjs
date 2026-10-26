@@ -725,7 +725,7 @@ export function bible_glyph_chapter_jhn01() {
           "$pin",
           "$wind",
           "descending",
-          "like",
+          "$likeness",
           "a",
           "dove",
           "$tray_out",
