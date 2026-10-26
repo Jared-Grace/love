@@ -756,7 +756,7 @@ export function bible_glyph_chapter_gen03() {
           "to",
           "$kneeling+doing",
           "the",
-          "ground",
+          "$brown_square",
           "from",
           "which",
           "he",
