@@ -605,7 +605,7 @@ export function bible_glyph_chapter_deu26() {
           "you",
           "to",
           "$hammer+doing",
-          "these",
+          "$flashlight+flashlight",
           "$locked_with_pen",
           "and",
           "$scales+thing.",
