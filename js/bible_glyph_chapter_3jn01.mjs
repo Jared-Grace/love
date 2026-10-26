@@ -175,7 +175,7 @@ export function bible_glyph_chapter_3jn01() {
         words: [
           "$right_arrow",
           "we",
-          "ought",
+          "$receipt+doing",
           "to",
           "support",
           "such",
