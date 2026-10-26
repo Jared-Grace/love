@@ -82,7 +82,7 @@ export function bible_glyph_chapter_psa139() {
           "is",
           "on",
           "my",
-          "tongue,",
+          "$tongue,",
           "You",
           "$lightbulb",
           "all",
