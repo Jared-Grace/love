@@ -380,7 +380,7 @@ export function bible_glyph_chapter_jhn02() {
           "a",
           "$knot+collision+thing",
           "$tray_out",
-          "cords",
+          "$knot+thread",
           "and",
           "drove",
           "them",
