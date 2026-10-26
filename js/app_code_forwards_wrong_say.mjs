@@ -7,6 +7,7 @@ import { app_code_math_call_wrong_say } from "./app_code_math_call_wrong_say.mjs
 import { app_code_string_value_wrong_say } from "./app_code_string_value_wrong_say.mjs";
 import { app_code_lines_wrong_say } from "./app_code_lines_wrong_say.mjs";
 import { app_code_program_trace_wrong_say } from "./app_code_program_trace_wrong_say.mjs";
+import { app_code_program_lets_wrong_say } from "./app_code_program_lets_wrong_say.mjs";
 export function app_code_forwards_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("said when a learner picks a wrong output for code: the first reminder that has something to say about this pick, or null when none does");
@@ -41,5 +42,10 @@ export function app_code_forwards_wrong_say(question, answer, choice) {
   }
   ("2026-10-26: a program that gives names values is followed line by line last, because it answers any wrong pick, while the two reminders about lines name the one mistake a pick makes");
   let traced = app_code_program_trace_wrong_say(question, answer, choice);
-  return traced;
+  if (null_not_is(traced)) {
+    return traced;
+  }
+  ("2026-10-26: a program of let lines the trace cannot follow, such as one calling Math, is run instead and each name's value read off, so it comes after the trace, which says more where it can follow");
+  let lets = app_code_program_lets_wrong_say(question, answer, choice);
+  return lets;
 }
