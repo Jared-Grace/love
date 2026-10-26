@@ -500,7 +500,7 @@ export function bible_glyph_chapter_mrk12() {
         "$fishing_pole+proper_name",
         "$writing_hand",
         "for",
-        "us",
+        "$me",
         "$pointing",
         "if",
         "a",
