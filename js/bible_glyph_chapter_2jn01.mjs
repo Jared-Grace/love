@@ -209,7 +209,7 @@ export function bible_glyph_chapter_2jn01() {
           "deceiver",
           "$plus",
           "$pin",
-          "antichrist.",
+          "$vs_button+oil.",
         ],
       },
       {
