@@ -1194,7 +1194,7 @@ export function bible_glyph_chapter_mrk12() {
     {
       verse_number: 44,
       words: [
-        "For",
+        "$information",
         "they",
         "all",
         "contributed",
