@@ -958,7 +958,7 @@ export function bible_glyph_chapter_mrk12() {
         "teaching",
         "$tray_in",
         "the",
-        "temple",
+        "$classical_building",
         "courts,",
         "He",
         "$speech,",
