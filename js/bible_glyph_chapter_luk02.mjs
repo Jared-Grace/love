@@ -1309,7 +1309,7 @@ export function bible_glyph_chapter_luk02() {
         "$proper_name$Nazareth,",
         "$plus",
         "$link",
-        "obedient",
+        "$down_arrow+kneeling+doing",
         "to",
         "$pointing_back,",
         "$plus",
