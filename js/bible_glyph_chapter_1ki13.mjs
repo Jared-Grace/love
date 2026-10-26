@@ -128,7 +128,7 @@ export function bible_glyph_chapter_1ki13() {
           "$mouth:",
           "$exclamation",
           "the",
-          "altar",
+          "$altar",
           "will",
           "be",
           "split",
