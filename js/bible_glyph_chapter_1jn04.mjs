@@ -414,7 +414,7 @@ export function bible_glyph_chapter_1jn04() {
           "$pointing",
           "$cross",
           "$link",
-          "the",
+          "$pin",
           "$son",
           "of",
           "$heart_on_fire,",
