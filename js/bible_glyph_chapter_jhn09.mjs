@@ -226,7 +226,7 @@ export function bible_glyph_chapter_jhn09() {
           "but",
           "he",
           "looks",
-          "like",
+          "$people_with_bunny_ears",
           "$pointing_back.",
           "But",
           "the",
