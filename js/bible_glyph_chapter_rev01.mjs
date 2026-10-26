@@ -608,7 +608,7 @@ export function bible_glyph_chapter_rev01() {
           "This",
           "is",
           "the",
-          "mystery",
+          "$crystal_ball",
           "of",
           "the",
           "seven",
