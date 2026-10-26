@@ -98,7 +98,7 @@ export function bible_glyph_chapter_psa085() {
           "$hook+doing",
           "out",
           "Your",
-          "anger",
+          "$nose+fire",
           "to",
           "all",
           "generations?",
