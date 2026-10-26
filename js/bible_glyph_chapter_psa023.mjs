@@ -23,7 +23,7 @@ export function bible_glyph_chapter_psa023() {
           "I",
           "shall",
           "$no_entry",
-          "want.",
+          "$empty_nest+doing.",
         ],
       },
       {
