@@ -399,7 +399,7 @@ export function bible_glyph_chapter_jhn17() {
           "have",
           "$me+describing",
           "$smile",
-          "fulfilled",
+          "$battery",
           "$tray_in",
           "themselves.",
         ],
