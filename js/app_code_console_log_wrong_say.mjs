@@ -57,8 +57,8 @@ export function app_code_console_log_wrong_say(question, answer, choice) {
   let message2 = text_slice(call, start_size, to2);
   let inside = text_trim(message2);
   function trace_get() {
-    let trace = app_code_program_trace(code);
-    return trace;
+    let traced = app_code_program_trace(code);
+    return traced;
   }
   let trace = catch_null(trace_get);
   if (null_is(trace)) {
