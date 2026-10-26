@@ -309,7 +309,7 @@ export function bible_glyph_chapter_hag01() {
           "have",
           "summoned",
           "a",
-          "drought",
+          "$desert+sun",
           "on",
           "the",
           "$earth",
