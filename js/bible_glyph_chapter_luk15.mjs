@@ -331,7 +331,7 @@ export function bible_glyph_chapter_luk15() {
         "$sun",
         "later,",
         "$pin",
-        "younger",
+        "$beginner",
         "$son",
         "gathered",
         "everything",
