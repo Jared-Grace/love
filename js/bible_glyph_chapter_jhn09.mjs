@@ -624,7 +624,7 @@ export function bible_glyph_chapter_jhn09() {
         words: [
           "$right_arrow",
           "a",
-          "second",
+          "$second_place",
           "time",
           "they",
           "called",
