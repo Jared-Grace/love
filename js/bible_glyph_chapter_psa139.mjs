@@ -428,7 +428,7 @@ export function bible_glyph_chapter_psa139() {
           "me,",
           "you",
           "$blood",
-          "men!",
+          "$man_beard!",
         ],
       },
       {
