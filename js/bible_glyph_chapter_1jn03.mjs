@@ -322,7 +322,7 @@ export function bible_glyph_chapter_1jn03() {
       {
         verse_number: 11,
         words: [
-          "This",
+          "$flashlight",
           "is",
           "the",
           "message",
