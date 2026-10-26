@@ -16,6 +16,7 @@ import { add } from "./add.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { text_to } from "./text_to.mjs";
 import { equal } from "./equal.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_value_code } from "./js_value_code.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -42,6 +43,7 @@ export function app_code_program_trace_wrong_say(question, answer, choice) {
     words = "";
   }
   let checked = [];
+  let loops_checked = [];
   function then_add() {
     let first =
       list_empty_is(assigned) &&
@@ -70,7 +72,13 @@ export function app_code_program_trace_wrong_say(question, answer, choice) {
       code_add(t);
       let alternate = property_get(entry, "alternate");
       ("2026-10-26: a while's line is checked again after every pass, so each check is said where it happens, and a false one ends the loop rather than skipping lines");
-      if (condition) {
+      ("2026-10-26: a while checked again says only that its { } runs again, since the first check already said what the { } holds; the shorter words keep a long loop readable");
+      let again =
+        equal(alternate, "loop") && list_includes(loops_checked, index);
+      list_add(loops_checked, index);
+      if (condition && again) {
+        words = words + ", so its { } runs again";
+      } else if (condition) {
         words = words + ", so the lines inside its { } run";
       } else if (equal(alternate, "loop")) {
         words = words + ", so the loop stops";
