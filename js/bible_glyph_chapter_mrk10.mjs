@@ -536,7 +536,7 @@ export function bible_glyph_chapter_mrk10() {
         "$information",
         "he",
         "had",
-        "great",
+        "$multiply",
         "$money_bag+hand_receiving+thing.",
       ],
     },
