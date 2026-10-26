@@ -613,7 +613,7 @@ export function bible_glyph_chapter_rut01() {
         verse_number: 20,
         words: [
           "$no_entry",
-          "call",
+          "$waving_hand",
           "me",
           "$proper_name$Naomi,",
           "she",
