@@ -135,7 +135,7 @@ export function bible_glyph_chapter_jhn01() {
           "$light,",
           "so",
           "that",
-          "through",
+          "$metro",
           "$pointing_back",
           "$all",
           "might",
