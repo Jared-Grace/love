@@ -409,7 +409,7 @@ export function bible_glyph_chapter_gen01() {
           "to",
           "give",
           "light",
-          "upon",
+          "$pointing_up",
           "the",
           "$earth;",
           "and",
