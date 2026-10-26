@@ -468,7 +468,7 @@ export function bible_glyph_chapter_mat05() {
           "will",
           "be",
           "called",
-          "great",
+          "$top",
           "$tray_in",
           "the",
           "$castle",
