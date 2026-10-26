@@ -835,7 +835,7 @@ export function bible_glyph_chapter_jhn10() {
           "Is",
           "it",
           "$no_entry",
-          "written",
+          "$writing_hand",
           "$tray_in",
           "your",
           "$scroll,",
