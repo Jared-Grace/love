@@ -237,7 +237,7 @@ export function bible_glyph_chapter_1jn01() {
           "$pointing_back",
           "$son",
           "$soap+doing",
-          "us",
+          "$me",
           "$away",
           "all",
           "$bow.",
