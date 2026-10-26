@@ -398,7 +398,7 @@ export function bible_glyph_chapter_luk24() {
       {
         verse_number: 18,
         words: [
-          "One",
+          "$one",
           "of",
           "them,",
           "$name_tag",
