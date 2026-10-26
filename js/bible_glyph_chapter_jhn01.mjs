@@ -34,7 +34,7 @@ export function bible_glyph_chapter_jhn01() {
           "the",
           "$speech",
           "$link",
-          "with",
+          "$toward",
           "$heart_on_fire,",
           "$plus",
           "the",
