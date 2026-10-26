@@ -1071,7 +1071,7 @@ export function bible_glyph_chapter_ezk36() {
           "you",
           "will",
           "$nauseated_face+thumbs_down+doing",
-          "yourselves",
+          "$face",
           "for",
           "your",
           "iniquities",
