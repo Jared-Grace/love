@@ -640,7 +640,7 @@ export function bible_glyph_chapter_jhn14() {
           "Me,",
           "he",
           "will",
-          "keep",
+          "$guard",
           "My",
           "$speech,",
           "$plus",
