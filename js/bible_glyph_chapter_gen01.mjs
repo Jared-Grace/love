@@ -808,7 +808,7 @@ export function bible_glyph_chapter_gen01() {
           "the",
           "$earth",
           "and",
-          "subdue",
+          "$foot+earth+doing",
           "it,",
           "and",
           "have",
