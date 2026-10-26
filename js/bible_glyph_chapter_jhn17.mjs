@@ -78,7 +78,7 @@ export function bible_glyph_chapter_jhn17() {
       {
         verse_number: 3,
         words: [
-          "Now",
+          "$curving_right",
           "$flashlight",
           "is",
           "eternal",
