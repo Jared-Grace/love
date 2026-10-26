@@ -288,7 +288,7 @@ export function bible_glyph_chapter_rev10() {
           "scroll",
           "that",
           "lies",
-          "open",
+          "$unlocked",
           "$tray_in",
           "the",
           "$hand",
