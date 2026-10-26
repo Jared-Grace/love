@@ -209,7 +209,7 @@ export function bible_glyph_chapter_psa029() {
           "enthroned",
           "over",
           "the",
-          "flood;",
+          "$water_wave+earth;",
           "the",
           "$i_am",
           "is",
