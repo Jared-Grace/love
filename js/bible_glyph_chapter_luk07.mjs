@@ -117,7 +117,7 @@ export function bible_glyph_chapter_luk07() {
         "has",
         "built",
         "$me",
-        "synagogue.”",
+        "$synagogue.”",
       ],
     },
     {
