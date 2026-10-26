@@ -328,7 +328,7 @@ export function bible_glyph_chapter_rut04() {
         words: [
           "At",
           "this,",
-          "Boaz",
+          "$field+sheaf_of_rice+proper_name",
           "$speech",
           "to",
           "the",
