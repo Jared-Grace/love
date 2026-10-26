@@ -697,7 +697,7 @@ export function bible_glyph_chapter_jhn09() {
           "$gear+question",
           "did",
           "He",
-          "open",
+          "$unlocked",
           "your",
           "eyes?",
         ],
