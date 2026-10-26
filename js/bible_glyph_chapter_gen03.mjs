@@ -275,7 +275,7 @@ export function bible_glyph_chapter_gen03() {
           "themselves",
           "from",
           "the",
-          "presence",
+          "$face",
           "of",
           "the",
           "$i_am",
