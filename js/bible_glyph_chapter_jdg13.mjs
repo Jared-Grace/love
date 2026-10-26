@@ -116,7 +116,7 @@ export function bible_glyph_chapter_jdg13() {
       {
         verse_number: 4,
         words: [
-          "Now",
+          "$watch",
           "please",
           "be",
           "careful",
