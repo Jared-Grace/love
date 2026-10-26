@@ -424,7 +424,7 @@ export function bible_glyph_chapter_rut04() {
           "$family",
           "at",
           "the",
-          "gate,",
+          "$gate,",
           "and",
           "the",
           "elders",
