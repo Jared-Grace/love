@@ -823,7 +823,7 @@ export function bible_glyph_chapter_mrk11() {
         "$tray_out",
         "$person?",
         "$speech+turn_back",
-        "Me.”",
+        "$me.”",
       ],
     },
     {
