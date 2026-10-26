@@ -154,7 +154,7 @@ export function bible_glyph_chapter_psa118() {
           "$i_am",
           "than",
           "to",
-          "trust",
+          "$anchor+doing",
           "in",
           "$person.",
         ],
