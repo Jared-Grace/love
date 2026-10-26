@@ -156,7 +156,7 @@ export function bible_glyph_chapter_luk15() {
       words: [
         "I",
         "$speech",
-        "you",
+        "$you",
         "$pointing",
         "in",
         "the",
