@@ -696,7 +696,7 @@ export function bible_glyph_chapter_jhn20() {
           "were,",
           "$plus",
           "$throwing",
-          "my",
+          "$me",
           "$hand",
           "into",
           "$pointing_back",
