@@ -667,7 +667,7 @@ export function bible_glyph_chapter_luk15() {
         "$son",
         "$link",
         "$tray_in",
-        "the",
+        "$pin",
         "$field,",
         "$plus",
         "as",
