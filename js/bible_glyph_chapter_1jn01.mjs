@@ -184,7 +184,7 @@ export function bible_glyph_chapter_1jn01() {
       {
         verse_number: 6,
         words: [
-          "If",
+          "$traffic_light",
           "we",
           "$speech",
           "$pointing",
