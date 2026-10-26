@@ -254,7 +254,7 @@ export function bible_glyph_chapter_jhn14() {
           "can",
           "you",
           "$speech,",
-          "‘Show",
+          "‘$television",
           "us",
           "the",
           "$father’?",
