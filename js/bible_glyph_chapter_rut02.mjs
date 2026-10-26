@@ -527,7 +527,7 @@ export function bible_glyph_chapter_rut02() {
           "to",
           "glean,",
           "$proper_name$Boaz",
-          "ordered",
+          "$speech+scroll",
           "his",
           "young",
           "men,",
