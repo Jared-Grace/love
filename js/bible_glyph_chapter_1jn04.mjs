@@ -284,7 +284,7 @@ export function bible_glyph_chapter_1jn04() {
         verse_number: 10,
         words: [
           "$tray_in",
-          "this",
+          "$flashlight",
           "is",
           "$heart_red:",
           "$no_entry",
