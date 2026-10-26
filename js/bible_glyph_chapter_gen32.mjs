@@ -542,7 +542,7 @@ export function bible_glyph_chapter_gen32() {
           "also",
           "$speech+scroll",
           "the",
-          "second",
+          "$second_place",
           "and",
           "the",
           "third",
