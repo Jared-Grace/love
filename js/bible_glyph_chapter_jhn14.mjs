@@ -434,7 +434,7 @@ export function bible_glyph_chapter_jhn14() {
           "I",
           "will",
           "$question",
-          "the",
+          "$pin",
           "$father,",
           "$plus",
           "He",
