@@ -125,7 +125,7 @@ export function bible_glyph_chapter_mrk11() {
         "outside",
         "in",
         "the",
-        "street,",
+        "$two+road+round_pushpin,",
         "$plus",
         "they",
         "untied",
