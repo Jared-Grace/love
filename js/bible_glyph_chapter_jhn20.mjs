@@ -287,7 +287,7 @@ export function bible_glyph_chapter_jhn20() {
           "one",
           "at",
           "the",
-          "head",
+          "$person_gesturing_ok",
           "$plus",
           "one",
           "at",
