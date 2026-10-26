@@ -401,7 +401,7 @@ export function bible_glyph_chapter_jhn09() {
           "He",
           "does",
           "$no_entry",
-          "keep",
+          "$guard",
           "$pin",
           "$sabbath.",
           "But",
