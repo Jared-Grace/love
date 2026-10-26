@@ -861,7 +861,7 @@ export function bible_glyph_chapter_jhn10() {
           "$speech",
           "of",
           "$heart_on_fire",
-          "came,",
+          "$butterfly,",
           "$plus",
           "$pin",
           "Scripture",
