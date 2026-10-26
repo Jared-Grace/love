@@ -171,7 +171,7 @@ export function bible_glyph_chapter_psa146() {
           "who",
           "are",
           "weighed",
-          "down.",
+          "$curving_up+person+doing.",
           "The",
           "$i_am",
           "$heart_red+doing",
