@@ -388,7 +388,7 @@ export function bible_glyph_chapter_isa01() {
           "$footprints",
           "your",
           "worthless",
-          "offerings",
+          "$grain_offering",
           "$no_entry",
           "$plus+doing;",
           "your",
