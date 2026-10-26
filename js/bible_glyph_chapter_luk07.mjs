@@ -290,7 +290,7 @@ export function bible_glyph_chapter_luk07() {
         "$house,",
         "they",
         "found",
-        "the",
+        "$pin",
         "$kneeling",
         "in",
         "good",
