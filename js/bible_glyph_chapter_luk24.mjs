@@ -1069,7 +1069,7 @@ export function bible_glyph_chapter_luk24() {
           "$you:",
           "$pointing",
           "everything",
-          "must",
+          "$knot",
           "be",
           "fulfilled",
           "that",
