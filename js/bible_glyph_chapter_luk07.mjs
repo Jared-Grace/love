@@ -1116,7 +1116,7 @@ export function bible_glyph_chapter_luk07() {
         "them",
         "with",
         "the",
-        "perfume.",
+        "$lotion_bottle.",
       ],
     },
     {
