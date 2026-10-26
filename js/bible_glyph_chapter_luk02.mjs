@@ -542,7 +542,7 @@ export function bible_glyph_chapter_luk02() {
         "$angel",
         "had",
         "given",
-        "before",
+        "$last_track",
         "$pointing_back",
         "was",
         "conceived",
