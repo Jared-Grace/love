@@ -53,7 +53,7 @@ export function bible_glyph_chapter_mrk05() {
         "met",
         "$pointing_back",
         "$tray_out",
-        "the",
+        "$pin",
         "$tomb.",
       ],
     },
