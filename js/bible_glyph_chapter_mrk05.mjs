@@ -676,7 +676,7 @@ export function bible_glyph_chapter_mrk05() {
         "$plus",
         "had",
         "spent",
-        "all",
+        "$all",
         "$pointing_back",
         "had,",
         "$plus",
