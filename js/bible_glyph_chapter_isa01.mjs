@@ -461,7 +461,7 @@ export function bible_glyph_chapter_isa01() {
           "$plus",
           "$pointing",
           "you",
-          "multiply",
+          "$multiply+doing",
           "your",
           "$hands_praying+thing,",
           "I",
