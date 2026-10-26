@@ -82,7 +82,7 @@ export function bible_glyph_chapter_isa01() {
           "owner,",
           "and",
           "the",
-          "donkey",
+          "$donkey",
           "its",
           "master's",
           "manger,",
