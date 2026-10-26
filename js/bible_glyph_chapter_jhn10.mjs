@@ -808,7 +808,7 @@ export function bible_glyph_chapter_jhn10() {
           "are",
           "$no_entry",
           "stoning",
-          "You",
+          "$you",
           "for",
           "a",
           "$thumbs_up",
