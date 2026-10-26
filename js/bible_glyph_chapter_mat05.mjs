@@ -1156,7 +1156,7 @@ export function bible_glyph_chapter_mat05() {
           "be",
           "$son",
           "of",
-          "your",
+          "$you",
           "$father",
           "$tray_in",
           "$sky.",
