@@ -466,7 +466,7 @@ export function bible_glyph_chapter_jhn02() {
           "$speech",
           "to",
           "$pointing_back,",
-          "“What",
+          "“$flashlight+question",
           "sign",
           "can",
           "You",
