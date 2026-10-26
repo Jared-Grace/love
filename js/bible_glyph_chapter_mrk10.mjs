@@ -1379,7 +1379,7 @@ export function bible_glyph_chapter_mrk10() {
         "$pointing_back,",
         "in",
         "$speech,",
-        "“What",
+        "“$flashlight+question",
         "do",
         "you",
         "want",
