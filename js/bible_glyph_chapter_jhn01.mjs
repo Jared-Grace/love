@@ -362,7 +362,7 @@ export function bible_glyph_chapter_jhn01() {
         verse_number: 17,
         words: [
           "$pointing",
-          "the",
+          "$pin",
           "$scroll",
           "was",
           "$hands_giving$n",
