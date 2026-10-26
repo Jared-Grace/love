@@ -148,7 +148,7 @@ export function bible_glyph_chapter_psa029() {
           "of",
           "the",
           "$i_am",
-          "strikes",
+          "$pick+doing",
           "with",
           "flames",
           "of",
