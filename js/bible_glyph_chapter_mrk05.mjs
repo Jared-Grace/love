@@ -875,7 +875,7 @@ export function bible_glyph_chapter_mrk05() {
         "$toward+tray_in",
         "$peace,",
         "$plus",
-        "be",
+        "$link",
         "free",
         "of",
         "your",
