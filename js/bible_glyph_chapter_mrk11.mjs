@@ -186,7 +186,7 @@ export function bible_glyph_chapter_mrk11() {
         "$toward",
         "$cross",
         "$plus",
-        "threw",
+        "$pointing_up+throwing",
         "$pointing_back",
         "$garment",
         "over",
