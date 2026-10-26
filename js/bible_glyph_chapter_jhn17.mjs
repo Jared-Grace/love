@@ -39,7 +39,7 @@ export function bible_glyph_chapter_jhn17() {
           "$star+doing",
           "Your",
           "$son,",
-          "that",
+          "$right_arrow+toward",
           "the",
           "$son",
           "may",
