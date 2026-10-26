@@ -493,7 +493,7 @@ export function bible_glyph_chapter_jhn03() {
           "$heart_red+doing$ed",
           "$pin",
           "$darkness",
-          "rather",
+          "$more",
           "than",
           "$pin",
           "$light",
