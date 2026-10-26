@@ -874,7 +874,7 @@ export function bible_glyph_chapter_1ki03() {
           "$sprout",
           "$child",
           "in",
-          "two,",
+          "$two,",
           "and",
           "$hands_giving",
           "half",
