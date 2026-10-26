@@ -564,7 +564,7 @@ export function bible_glyph_chapter_jhn01() {
           "you",
           "$link",
           "$no_entry",
-          "the",
+          "$pin",
           "$oil,",
           "nor",
           "$heart_on_fire+i_am,",
