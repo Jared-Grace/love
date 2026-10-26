@@ -123,7 +123,7 @@ export function bible_glyph_chapter_jud01() {
           "condemnation.",
           "They",
           "turn",
-          "the",
+          "$pin",
           "$gift",
           "of",
           "our",
