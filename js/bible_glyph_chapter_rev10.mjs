@@ -409,7 +409,7 @@ export function bible_glyph_chapter_rev10() {
           "$plus",
           "$map",
           "$plus",
-          "tongues",
+          "$tongue",
           "$plus",
           "$king.",
         ],
