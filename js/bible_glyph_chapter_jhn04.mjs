@@ -714,7 +714,7 @@ export function bible_glyph_chapter_jhn04() {
           "$eye",
           "a",
           "$person",
-          "who",
+          "$back+flashlight",
           "$speech",
           "me",
           "everything",
