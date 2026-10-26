@@ -538,7 +538,7 @@ export function bible_glyph_chapter_jhn14() {
         verse_number: 20,
         words: [
           "$tray_in",
-          "that",
+          "$telescope",
           "$sun",
           "you",
           "will",
