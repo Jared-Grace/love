@@ -53,7 +53,7 @@ export function bible_glyph_chapter_luk24() {
           "rolled",
           "away",
           "$away",
-          "the",
+          "$pin",
           "$tomb,",
         ],
       },
