@@ -310,7 +310,7 @@ export function bible_glyph_chapter_rut04() {
           "So",
           "the",
           "kinsman-redeemer",
-          "removed",
+          "$sword+tray_out+doing",
           "his",
           "sandal",
           "and",
