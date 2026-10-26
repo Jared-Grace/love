@@ -929,7 +929,7 @@ export function bible_glyph_chapter_jhn09() {
         words: [
           "He",
           "$speech+turn_back,",
-          "Who",
+          "$flashlight+question",
           "is",
           "He,",
           "$crown,",
