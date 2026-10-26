@@ -621,7 +621,7 @@ export function bible_glyph_chapter_1ki03() {
         words: [
           "On",
           "the",
-          "third",
+          "$third_place",
           "$sun",
           "after",
           "I",
