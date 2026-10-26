@@ -73,7 +73,7 @@ export function bible_glyph_chapter_1ki03() {
           "the",
           "$snow_capped_mountain",
           "places,",
-          "because",
+          "$pointing",
           "a",
           "$house",
           "for",
