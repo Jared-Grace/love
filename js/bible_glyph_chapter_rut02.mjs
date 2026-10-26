@@ -810,7 +810,7 @@ export function bible_glyph_chapter_rut02() {
           "the",
           "$barley",
           "and",
-          "wheat",
+          "$wheat",
           "$harvest",
           "were",
           "finished.",
