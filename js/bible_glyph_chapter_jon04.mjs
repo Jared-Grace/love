@@ -236,7 +236,7 @@ export function bible_glyph_chapter_jon04() {
           "wind,",
           "and",
           "the",
-          "sun",
+          "$sun_with_face",
           "$fist",
           "down",
           "on",
