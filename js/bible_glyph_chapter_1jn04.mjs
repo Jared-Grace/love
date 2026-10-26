@@ -422,7 +422,7 @@ export function bible_glyph_chapter_1jn04() {
           "$pin+doing",
           "$tray_in",
           "him,",
-          "and",
+          "$plus",
           "he",
           "$tray_in",
           "$heart_on_fire.",
