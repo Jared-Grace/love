@@ -401,7 +401,7 @@ export function bible_glyph_chapter_psa118() {
       {
         verse_number: 20,
         words: [
-          "This",
+          "$flashlight",
           "is",
           "the",
           "gate",
