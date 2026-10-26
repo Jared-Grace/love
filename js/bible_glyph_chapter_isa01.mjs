@@ -757,7 +757,7 @@ export function bible_glyph_chapter_isa01() {
           "as",
           "at",
           "the",
-          "beginning.",
+          "$first_place+sun.",
           "After",
           "that",
           "you",
