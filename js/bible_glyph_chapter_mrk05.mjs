@@ -288,7 +288,7 @@ export function bible_glyph_chapter_mrk05() {
         "$me",
         "into",
         "$pin",
-        "pigs,",
+        "$pig,",
         "so",
         "that",
         "we",
