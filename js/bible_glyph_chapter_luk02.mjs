@@ -951,7 +951,7 @@ export function bible_glyph_chapter_luk02() {
         "$no_entry",
         "leave",
         "the",
-        "temple,",
+        "$classical_building,",
         "worshiping",
         "$night",
         "$plus",
