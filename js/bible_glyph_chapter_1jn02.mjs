@@ -127,7 +127,7 @@ export function bible_glyph_chapter_1jn02() {
       {
         verse_number: 5,
         words: [
-          "But",
+          "$curving_right",
           "whoever",
           "keeps",
           "$pointing_back",
