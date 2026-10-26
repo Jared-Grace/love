@@ -189,7 +189,7 @@ export function bible_glyph_chapter_gen01() {
         words: [
           "And",
           "$heart_on_fire",
-          "called",
+          "$waving_hand",
           "the",
           "expanse",
           "$sky.",
