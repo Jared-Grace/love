@@ -1056,7 +1056,7 @@ export function bible_glyph_chapter_1ki13() {
           "it",
           "on",
           "the",
-          "donkey,",
+          "$donkey,",
           "and",
           "$turn_back",
           "and",
