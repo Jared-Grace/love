@@ -125,7 +125,7 @@ export function bible_glyph_chapter_mrk05() {
         "$sun,",
         "$tray_in",
         "$pin",
-        "tombs",
+        "$tomb+round_pushpin",
         "$plus",
         "$tray_in",
         "$pin",
