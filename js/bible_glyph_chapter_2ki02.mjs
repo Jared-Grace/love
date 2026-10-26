@@ -768,7 +768,7 @@ export function bible_glyph_chapter_2ki02() {
           "$hand_receiving",
           "me",
           "a",
-          "new",
+          "$new_button",
           "$jar+salt",
           "and",
           "put",
