@@ -746,7 +746,7 @@ export function bible_glyph_chapter_luk02() {
         "$pointing_back",
         "$palm_up_hand+doing",
         "$pointing_back",
-        "in",
+        "$toward+tray_in",
         "his",
         "arms",
         "$plus",
