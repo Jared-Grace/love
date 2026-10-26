@@ -160,7 +160,7 @@ export function bible_glyph_chapter_hag01() {
           "but",
           "never",
           "have",
-          "enough.",
+          "$eating+top+check.",
           "You",
           "drink",
           "but",
