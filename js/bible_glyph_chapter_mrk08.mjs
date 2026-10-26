@@ -992,7 +992,7 @@ export function bible_glyph_chapter_mrk08() {
           "$me",
           "$plus",
           "of",
-          "My",
+          "$me+describing",
           "$speech",
           "$tray_in",
           "this",
