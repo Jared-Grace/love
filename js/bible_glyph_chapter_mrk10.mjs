@@ -781,7 +781,7 @@ export function bible_glyph_chapter_mrk10() {
         "$multiply",
         "who",
         "are",
-        "first",
+        "$first_place",
         "will",
         "be",
         "last,",
