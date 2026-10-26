@@ -1079,7 +1079,7 @@ export function bible_glyph_chapter_mat05() {
           "$one",
           "$road+straight_ruler,",
           "go",
-          "with",
+          "$linked_paperclips",
           "$pointing_back",
           "two.",
         ],
