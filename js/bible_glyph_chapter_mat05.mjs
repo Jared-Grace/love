@@ -215,7 +215,7 @@ export function bible_glyph_chapter_mat05() {
           "you",
           "because",
           "of",
-          "Me.",
+          "$me.",
         ],
       },
       {
