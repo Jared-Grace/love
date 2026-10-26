@@ -917,7 +917,7 @@ export function bible_glyph_chapter_1ki13() {
           "$city",
           "where",
           "the",
-          "old",
+          "$old_man",
           "$megaphone",
           "$person+house.",
         ],
