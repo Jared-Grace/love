@@ -800,7 +800,7 @@ export function bible_glyph_chapter_jer26() {
           "$speech,",
           "the",
           "$king",
-          "sought",
+          "$magnifying_glass",
           "to",
           "put",
           "him",
