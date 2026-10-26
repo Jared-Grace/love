@@ -648,7 +648,7 @@ export function bible_glyph_chapter_mrk11() {
         "he",
         "$mouth",
         "will",
-        "happen,",
+        "$butterfly,",
         "it",
         "will",
         "be",
