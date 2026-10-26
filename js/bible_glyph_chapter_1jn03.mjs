@@ -207,7 +207,7 @@ export function bible_glyph_chapter_1jn03() {
           "as",
           "Christ",
           "is",
-          "righteous.",
+          "$ruler.",
         ],
       },
       {
