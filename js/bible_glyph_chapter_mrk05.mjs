@@ -17,7 +17,7 @@ export function bible_glyph_chapter_mrk05() {
         "they",
         "$footprints",
         "to",
-        "the",
+        "$pin",
         "other",
         "side",
         "of",
