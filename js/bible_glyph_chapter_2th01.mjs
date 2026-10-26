@@ -105,7 +105,7 @@ export function bible_glyph_chapter_2th01() {
           "why",
           "$me",
           "$pointing_back",
-          "boast",
+          "$peacock",
           "$tray_in",
           "the",
           "$church",
