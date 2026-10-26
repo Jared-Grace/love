@@ -864,7 +864,7 @@ export function bible_glyph_chapter_jhn03() {
           "words",
           "of",
           "$heart_on_fire,",
-          "for",
+          "$information",
           "$heart_on_fire",
           "$hands_giving$s",
           "the",
