@@ -168,7 +168,7 @@ export function bible_glyph_chapter_mrk10() {
       verse_number: 8,
       words: [
         "$plus",
-        "the",
+        "$pin",
         "two",
         "will",
         "become",
