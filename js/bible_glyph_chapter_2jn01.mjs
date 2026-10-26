@@ -262,7 +262,7 @@ export function bible_glyph_chapter_2jn01() {
           "remains",
           "$tray_in",
           "the",
-          "teaching",
+          "$teacher+thing",
           "has",
           "$plus",
           "the",
