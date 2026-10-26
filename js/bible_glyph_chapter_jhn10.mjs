@@ -211,7 +211,7 @@ export function bible_glyph_chapter_jhn10() {
           "$link",
           "$hand+lying_face+doer",
           "$plus",
-          "robbers,",
+          "$ninja,",
           "but",
           "the",
           "$sheep",
