@@ -814,7 +814,7 @@ export function bible_glyph_chapter_luk07() {
         "you,",
         "$tray_in",
         "those",
-        "born",
+        "$hatching_chick+person+describing",
         "of",
         "$woman",
         "there",
