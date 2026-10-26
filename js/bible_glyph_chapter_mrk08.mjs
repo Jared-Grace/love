@@ -501,7 +501,7 @@ export function bible_glyph_chapter_mrk08() {
           "I",
           "broke",
           "$pin",
-          "seven",
+          "$seven",
           "for",
           "$pin",
           "four",
