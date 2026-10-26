@@ -30,7 +30,7 @@ export function bible_glyph_chapter_mrk12() {
         "around",
         "it,",
         "$plus",
-        "dug",
+        "$pick+doing",
         "a",
         "wine",
         "vat,",
