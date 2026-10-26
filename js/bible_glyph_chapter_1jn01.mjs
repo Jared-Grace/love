@@ -120,7 +120,7 @@ export function bible_glyph_chapter_1jn01() {
           "of",
           "ours",
           "is",
-          "with",
+          "$linked_paperclips",
           "the",
           "$father",
           "$plus",
