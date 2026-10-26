@@ -406,7 +406,7 @@ export function bible_glyph_chapter_mrk04() {
           "$pin",
           "seed",
           "sown",
-          "on",
+          "$pointing_up",
           "rocky",
           "ground:",
           "they",
