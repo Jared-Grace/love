@@ -86,7 +86,7 @@ export function bible_glyph_chapter_psa023() {
           "I",
           "will",
           "$no_entry",
-          "fear",
+          "$fear+doing",
           "$thumbs_down,",
           "for",
           "You",
