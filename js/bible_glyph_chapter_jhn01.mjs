@@ -773,7 +773,7 @@ export function bible_glyph_chapter_jhn01() {
           "He",
           "who",
           "will",
-          "baptize",
+          "$diving_mask",
           "$tray_in",
           "the",
           "$sparkle",
