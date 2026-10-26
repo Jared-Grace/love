@@ -828,7 +828,7 @@ export function bible_glyph_chapter_jhn01() {
           "$speech,",
           "“$exclamation,",
           "$pin",
-          "Lamb",
+          "$lamb",
           "of",
           "$heart_on_fire!”",
         ],
