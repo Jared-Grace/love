@@ -1178,7 +1178,7 @@ export function bible_glyph_chapter_mrk10() {
         "must",
         "$link",
         "your",
-        "servant,",
+        "$bellhop_bell+doer,",
       ],
     },
     {
