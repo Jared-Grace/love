@@ -630,7 +630,7 @@ export function bible_glyph_chapter_mrk11() {
         "lifted",
         "up",
         "$plus",
-        "thrown",
+        "$throwing",
         "into",
         "the",
         "$sea,’",
