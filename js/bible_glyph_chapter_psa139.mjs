@@ -254,7 +254,7 @@ export function bible_glyph_chapter_psa139() {
           "the",
           "$sun,",
           "for",
-          "darkness",
+          "$darkness+thing",
           "is",
           "as",
           "light",
