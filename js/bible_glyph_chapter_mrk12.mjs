@@ -788,7 +788,7 @@ export function bible_glyph_chapter_mrk12() {
         "$wrestling+heart_on_fire,",
         "the",
         "$crown",
-        "our",
+        "$me",
         "$heart_on_fire,",
         "the",
         "$crown",
