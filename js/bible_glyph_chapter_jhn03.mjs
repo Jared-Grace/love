@@ -88,7 +88,7 @@ export function bible_glyph_chapter_jhn03() {
           "to",
           "$you,",
           "$no_entry",
-          "one",
+          "$joker",
           "can",
           "$eye",
           "the",
