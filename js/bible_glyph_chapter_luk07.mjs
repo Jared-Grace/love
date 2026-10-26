@@ -327,7 +327,7 @@ export function bible_glyph_chapter_luk07() {
     {
       verse_number: 12,
       words: [
-        "As",
+        "$likeness",
         "He",
         "approached",
         "the",
