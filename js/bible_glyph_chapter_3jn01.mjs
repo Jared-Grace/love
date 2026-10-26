@@ -159,7 +159,7 @@ export function bible_glyph_chapter_3jn01() {
           "went",
           "out",
           "on",
-          "behalf",
+          "$up_arrow",
           "of",
           "the",
           "$name_tag,",
