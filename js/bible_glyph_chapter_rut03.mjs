@@ -456,7 +456,7 @@ export function bible_glyph_chapter_rut03() {
           "her,",
           "$hands_giving+up_arrow",
           "the",
-          "shawl",
+          "$scarf+woman",
           "you",
           "are",
           "wearing",
