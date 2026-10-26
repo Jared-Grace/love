@@ -143,7 +143,7 @@ export function bible_glyph_chapter_gen02() {
           "nor",
           "had",
           "any",
-          "plant",
+          "$herb",
           "of",
           "the",
           "$field",
