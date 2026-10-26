@@ -364,7 +364,7 @@ export function bible_glyph_chapter_1jn05() {
           "$flashlight",
           "$link",
           "$pin",
-          "confidence",
+          "$microphone",
           "that",
           "we",
           "have",
