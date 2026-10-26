@@ -1382,7 +1382,7 @@ export function bible_glyph_chapter_mrk10() {
         "“$flashlight+question",
         "do",
         "you",
-        "want",
+        "$shooting_star+doing",
         "Me",
         "to",
         "$hammer",
