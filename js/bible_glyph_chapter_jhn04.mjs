@@ -447,7 +447,7 @@ export function bible_glyph_chapter_jhn04() {
           "have",
           "$link",
           "$no_entry",
-          "your",
+          "$you",
           "$man_beard.",
           "You",
           "have",
