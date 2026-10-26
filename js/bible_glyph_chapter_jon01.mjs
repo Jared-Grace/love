@@ -540,7 +540,7 @@ export function bible_glyph_chapter_jon01() {
           "the",
           "men",
           "greatly",
-          "feared",
+          "$fear+doing",
           "the",
           "$i_am;",
           "they",
