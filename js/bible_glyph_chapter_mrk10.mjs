@@ -174,7 +174,7 @@ export function bible_glyph_chapter_mrk10() {
         "become",
         "$one",
         "$meat.",
-        "So",
+        "$likeness+plus+plus",
         "they",
         "are",
         "no",
