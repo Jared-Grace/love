@@ -457,7 +457,7 @@ export function bible_glyph_chapter_jhn14() {
           "$wind",
           "of",
           "$check.",
-          "The",
+          "$pin",
           "$globe",
           "$no_entry",
           "$hand_receiving",
