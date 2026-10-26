@@ -107,7 +107,7 @@ export function bible_glyph_chapter_1ki03() {
           "$two_hearts+proper_name,",
           "except",
           "that",
-          "he",
+          "$pointing_back",
           "sacrificed",
           "and",
           "burned",
