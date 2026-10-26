@@ -138,7 +138,7 @@ export function bible_glyph_chapter_luk07() {
         "$pin",
         "$house,",
         "$pin",
-        "centurion",
+        "$input_numbers+all+clapper_board+doer",
         "$incoming_envelope",
         "$heart_orange",
         "in",
