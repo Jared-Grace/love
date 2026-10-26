@@ -838,7 +838,7 @@ export function bible_glyph_chapter_jhn01() {
         words: [
           "$plus",
           "when",
-          "the",
+          "$pin",
           "two",
           "$learner$s",
           "$ear",
