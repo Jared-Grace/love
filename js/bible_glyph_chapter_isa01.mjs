@@ -662,7 +662,7 @@ export function bible_glyph_chapter_isa01() {
           "They",
           "all",
           "$heart_red+doing",
-          "bribes",
+          "$money_bag+hand_sending",
           "and",
           "chase",
           "after",
