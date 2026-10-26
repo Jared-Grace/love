@@ -257,7 +257,7 @@ export function bible_glyph_chapter_psa139() {
           "$darkness+thing",
           "is",
           "as",
-          "light",
+          "$light+herb",
           "to",
           "You.",
         ],
