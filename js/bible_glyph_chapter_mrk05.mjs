@@ -688,7 +688,7 @@ export function bible_glyph_chapter_mrk05() {
         "$footprints",
         "into",
         "the",
-        "worse.",
+        "$thumbs_down+more.",
       ],
     },
     {
