@@ -411,7 +411,7 @@ export function bible_glyph_chapter_mrk04() {
           "ground:",
           "they",
           "$ear",
-          "the",
+          "$pin",
           "$speech",
           "and",
           "at",
