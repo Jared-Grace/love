@@ -933,7 +933,7 @@ export function bible_glyph_chapter_luk24() {
           "doubts",
           "$walking+pointing_up",
           "$tray_in",
-          "your",
+          "$you",
           "$heart_organ?",
         ],
       },
