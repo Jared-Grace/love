@@ -131,7 +131,7 @@ export function bible_glyph_chapter_3jn01() {
           "the",
           "$church",
           "about",
-          "your",
+          "$you",
           "$heart_red.",
           "You",
           "will",
