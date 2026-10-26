@@ -360,7 +360,7 @@ export function bible_glyph_chapter_gen02() {
           "$thumbs_up;",
           "$droplet+gem_stone",
           "and",
-          "onyx",
+          "$gem_stone+stone",
           "are",
           "found",
           "$telescope.",
