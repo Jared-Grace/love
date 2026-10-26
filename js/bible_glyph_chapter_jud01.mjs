@@ -270,7 +270,7 @@ export function bible_glyph_chapter_jud01() {
           "$meat,",
           "$no_entry+palm_down",
           "$crown+raised_fist,",
-          "and",
+          "$curving_right",
           "slander",
           "the",
           "$star.",
