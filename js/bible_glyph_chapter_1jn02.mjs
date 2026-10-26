@@ -842,7 +842,7 @@ export function bible_glyph_chapter_1jn02() {
           "we",
           "may",
           "be",
-          "confident",
+          "$microphone",
           "$plus",
           "$no_entry",
           "ashamed",
