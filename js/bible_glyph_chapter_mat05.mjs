@@ -574,7 +574,7 @@ export function bible_glyph_chapter_mat05() {
           "fool,",
           "will",
           "be",
-          "subject",
+          "$scales+thumbs_down+describing",
           "to",
           "the",
           "$fire",
