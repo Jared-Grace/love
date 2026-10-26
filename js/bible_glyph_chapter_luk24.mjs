@@ -908,7 +908,7 @@ export function bible_glyph_chapter_luk24() {
           "startled",
           "$plus",
           "$tray_in+fear+describing,",
-          "thinking",
+          "$thinking",
           "they",
           "had",
           "seen",
