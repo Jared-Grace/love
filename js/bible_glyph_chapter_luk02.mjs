@@ -177,7 +177,7 @@ export function bible_glyph_chapter_luk02() {
         "for",
         "$pointing_back",
         "$tray_in",
-        "the",
+        "$pin",
         "inn.",
       ],
     },
