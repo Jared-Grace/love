@@ -326,7 +326,7 @@ export function bible_glyph_chapter_jhn17() {
           "may",
           "be",
           "$one",
-          "as",
+          "$likeness",
           "We",
           "are.",
         ],
