@@ -182,7 +182,7 @@ export function bible_glyph_chapter_psa085() {
           "to",
           "those",
           "who",
-          "fear",
+          "$fear+describing",
           "Him,",
           "that",
           "$star",
