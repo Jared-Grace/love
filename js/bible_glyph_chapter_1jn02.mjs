@@ -277,7 +277,7 @@ export function bible_glyph_chapter_1jn02() {
           "there",
           "is",
           "$no_entry",
-          "cause",
+          "$snare",
           "of",
           "stumbling.",
         ],
