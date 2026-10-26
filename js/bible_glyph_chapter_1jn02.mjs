@@ -777,7 +777,7 @@ export function bible_glyph_chapter_1jn02() {
           "as",
           "for",
           "you,",
-          "the",
+          "$pin",
           "anointing",
           "you",
           "$hand_receiving",
