@@ -423,7 +423,7 @@ export function bible_glyph_chapter_jud01() {
           "up",
           "their",
           "own",
-          "shame;",
+          "$flushed+thing;",
           "wandering",
           "stars,",
           "for",
