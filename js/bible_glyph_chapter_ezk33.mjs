@@ -381,7 +381,7 @@ export function bible_glyph_chapter_ezk33() {
           "because",
           "of",
           "them.",
-          "How",
+          "$question+likeness",
           "can",
           "we",
           "$sprout+doing?",
