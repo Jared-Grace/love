@@ -532,7 +532,7 @@ export function bible_glyph_chapter_rut03() {
           "measures",
           "of",
           "$barley,",
-          "for",
+          "$pointing",
           "he",
           "$speech,",
           "$no_entry",
