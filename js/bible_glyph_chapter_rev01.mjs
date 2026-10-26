@@ -641,7 +641,7 @@ export function bible_glyph_chapter_rev01() {
           "lampstands",
           "are",
           "the",
-          "seven",
+          "$seven",
           "$church.",
         ],
       },
