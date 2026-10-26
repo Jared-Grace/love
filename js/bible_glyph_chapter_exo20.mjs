@@ -601,7 +601,7 @@ export function bible_glyph_chapter_exo20() {
           "on",
           "it",
           "your",
-          "burnt",
+          "$burnt_offering",
           "offerings",
           "and",
           "peace",
