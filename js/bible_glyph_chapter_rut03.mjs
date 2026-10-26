@@ -474,7 +474,7 @@ export function bible_glyph_chapter_rut03() {
           "$six",
           "measures",
           "of",
-          "barley",
+          "$barley",
           "and",
           "placed",
           "it",
