@@ -718,7 +718,7 @@ export function bible_glyph_chapter_jhn14() {
         verse_number: 26,
         words: [
           "But",
-          "the",
+          "$pin",
           "$hug+doer,",
           "the",
           "$sparkle",
