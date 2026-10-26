@@ -361,7 +361,7 @@ export function bible_glyph_chapter_2jn01() {
           "$pin",
           "$child",
           "of",
-          "your",
+          "$you",
           "elect",
           "$brother+female_sign",
           "send",
