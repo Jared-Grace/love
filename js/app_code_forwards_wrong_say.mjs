@@ -3,6 +3,8 @@ import { app_code_comment_wrong_say } from "./app_code_comment_wrong_say.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_code_console_log_wrong_say } from "./app_code_console_log_wrong_say.mjs";
 import { app_code_expression_wrong_say } from "./app_code_expression_wrong_say.mjs";
+import { app_code_math_call_wrong_say } from "./app_code_math_call_wrong_say.mjs";
+import { app_code_string_value_wrong_say } from "./app_code_string_value_wrong_say.mjs";
 import { app_code_lines_wrong_say } from "./app_code_lines_wrong_say.mjs";
 import { app_code_program_trace_wrong_say } from "./app_code_program_trace_wrong_say.mjs";
 export function app_code_forwards_wrong_say(question, answer, choice) {
@@ -22,6 +24,16 @@ export function app_code_forwards_wrong_say(question, answer, choice) {
   let expression = app_code_expression_wrong_say(question, answer, choice);
   if (null_not_is(expression)) {
     return expression;
+  }
+  ("2026-10-26: one Math call given numbers is answered after the working of operators, which has no step for a call, so the two never both speak on a call that only holds numbers");
+  let math = app_code_math_call_wrong_say(question, answer, choice);
+  if (null_not_is(math)) {
+    return math;
+  }
+  ("2026-10-26: a string standing alone has no operator and is no call, so it is answered here by what its quote marks mean");
+  let string = app_code_string_value_wrong_say(question, answer, choice);
+  if (null_not_is(string)) {
+    return string;
   }
   let lines = app_code_lines_wrong_say(question, answer, choice);
   if (null_not_is(lines)) {
