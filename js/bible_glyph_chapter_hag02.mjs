@@ -247,7 +247,7 @@ export function bible_glyph_chapter_hag02() {
         verse_number: 8,
         words: [
           "The",
-          "silver",
+          "$silver",
           "is",
           "Mine,",
           "and",
