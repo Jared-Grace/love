@@ -511,7 +511,7 @@ export function bible_glyph_chapter_jhn03() {
           "who",
           "does",
           "$no_entry+heavy_dollar_sign+describing",
-          "hates",
+          "$face_with_symbols_on_mouth",
           "the",
           "$light,",
           "and",
