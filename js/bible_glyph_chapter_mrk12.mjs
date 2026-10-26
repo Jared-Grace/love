@@ -188,7 +188,7 @@ export function bible_glyph_chapter_mrk12() {
         "$waving_hand+pointing_down,",
         "let",
         "us",
-        "kill",
+        "$fist+skull",
         "$pointing_back,",
         "$plus",
         "ours",
