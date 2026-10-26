@@ -63,7 +63,7 @@ export function bible_glyph_chapter_luk07() {
         "$hand_sending",
         "$pointing_back",
         "some",
-        "elders",
+        "$old_man",
         "of",
         "the",
         "$menorah",
