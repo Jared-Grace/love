@@ -127,7 +127,7 @@ export function bible_glyph_chapter_mat05() {
         words: [
           "$gift+smile",
           "are",
-          "the",
+          "$pin",
           "merciful,",
           "$pointing",
           "$pointing_back",
