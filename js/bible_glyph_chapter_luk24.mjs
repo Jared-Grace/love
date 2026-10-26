@@ -371,7 +371,7 @@ export function bible_glyph_chapter_luk24() {
           "He",
           "$speech",
           "$pointing_back,",
-          "What",
+          "$flashlight+question",
           "are",
           "these",
           "$speech",
