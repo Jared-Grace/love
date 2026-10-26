@@ -515,7 +515,7 @@ export function bible_glyph_chapter_ezk36() {
           "of",
           "its",
           "children,",
-          "declares",
+          "$microphone",
           "the",
           "$crown",
           "$i_am.",
