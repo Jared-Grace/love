@@ -75,7 +75,7 @@ export function bible_glyph_chapter_psa139() {
       {
         verse_number: 4,
         words: [
-          "Even",
+          "$pointing",
           "before",
           "a",
           "word",
