@@ -377,7 +377,7 @@ export function bible_glyph_chapter_rev10() {
           "as",
           "honey",
           "$tray_in",
-          "my",
+          "$me",
           "mouth,",
           "but",
           "when",
