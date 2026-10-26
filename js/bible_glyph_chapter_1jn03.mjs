@@ -42,7 +42,7 @@ export function bible_glyph_chapter_1jn03() {
           "is",
           "what",
           "we",
-          "are!",
+          "$link!",
           "The",
           "reason",
           "the",
