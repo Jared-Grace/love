@@ -186,7 +186,7 @@ export function bible_glyph_chapter_ezk33() {
           "the",
           "$trumpet",
           "to",
-          "warn",
+          "$rotating_light+doing",
           "the",
           "$family,",
           "and",
