@@ -691,7 +691,7 @@ export function bible_glyph_chapter_luk15() {
         "called",
         "$one",
         "of",
-        "the",
+        "$pin",
         "servants",
         "and",
         "asked",
