@@ -717,7 +717,7 @@ export function bible_glyph_chapter_mat05() {
           "$speech",
           "$you",
           "$pointing",
-          "anyone",
+          "$all",
           "who",
           "$eyes",
           "a",
