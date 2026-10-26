@@ -1108,7 +1108,7 @@ export function bible_glyph_chapter_mrk05() {
         "gave",
         "$pointing_back",
         "strict",
-        "orders",
+        "$crown+exclamation+doing",
         "that",
         "no",
         "one",
