@@ -1087,7 +1087,7 @@ export function bible_glyph_chapter_mrk05() {
         "$walking,",
         "for",
         "she",
-        "was",
+        "$link",
         "twelve",
         "years",
         "old.",
