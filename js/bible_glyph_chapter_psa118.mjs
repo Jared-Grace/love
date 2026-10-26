@@ -588,7 +588,7 @@ export function bible_glyph_chapter_psa118() {
           "to",
           "the",
           "$i_am,",
-          "for",
+          "$pointing",
           "He",
           "is",
           "$thumbs_up;",
