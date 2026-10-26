@@ -481,7 +481,7 @@ export function bible_glyph_chapter_1jn02() {
           "the",
           "$peacock+up_arrow",
           "of",
-          "life,",
+          "$sprout+money_bag,",
           "is",
           "$no_entry",
           "$tray_out",
