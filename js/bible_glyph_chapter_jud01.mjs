@@ -96,7 +96,7 @@ export function bible_glyph_chapter_jud01() {
           "all",
           "entrusted",
           "to",
-          "the",
+          "$pin",
           "$sparkle.",
         ],
       },
