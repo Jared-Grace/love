@@ -570,7 +570,7 @@ export function bible_glyph_chapter_jol03() {
           "because",
           "of",
           "the",
-          "violence",
+          "$boxing_glove",
           "done",
           "to",
           "the",
