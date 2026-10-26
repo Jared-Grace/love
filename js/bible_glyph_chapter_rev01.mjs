@@ -31,7 +31,7 @@ export function bible_glyph_chapter_rev01() {
           "$kneeling",
           "what",
           "$knot",
-          "soon",
+          "$fast_forward+thing",
           "$butterfly",
           "to",
           "pass.",
