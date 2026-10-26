@@ -835,7 +835,7 @@ export function bible_glyph_chapter_mrk12() {
         "this:",
         "$heart_red+doing",
         "your",
-        "neighbor",
+        "$house_with_garden",
         "as",
         "$you+pointing_back.",
         "$no_entry",
