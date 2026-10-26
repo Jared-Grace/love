@@ -690,7 +690,7 @@ export function bible_glyph_chapter_jhn04() {
           "Then",
           "the",
           "$woman",
-          "left",
+          "$balloon",
           "$pointing_back",
           "water",
           "jar",
