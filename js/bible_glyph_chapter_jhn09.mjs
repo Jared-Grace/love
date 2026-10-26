@@ -880,7 +880,7 @@ export function bible_glyph_chapter_jhn09() {
           "replied,",
           "$you",
           "were",
-          "born",
+          "$hatching_chick",
           "$tray_in",
           "utter",
           "$bow,",
