@@ -816,7 +816,7 @@ export function bible_glyph_chapter_mrk11() {
       words: [
         "Was",
         "$proper_name$John’s",
-        "baptism",
+        "$diving_mask+thing",
         "$tray_out",
         "$sky",
         "or",
