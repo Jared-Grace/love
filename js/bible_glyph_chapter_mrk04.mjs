@@ -445,7 +445,7 @@ export function bible_glyph_chapter_mrk04() {
           "$butterfly",
           "$metro",
           "of",
-          "the",
+          "$pin",
           "$speech,",
           "they",
           "quickly",
