@@ -716,7 +716,7 @@ export function bible_glyph_chapter_jhn10() {
           "$hourglass,",
           "$plus",
           "$no_entry",
-          "one",
+          "$joker",
           "will",
           "$hand+fast_forward",
           "$pointing_back",
