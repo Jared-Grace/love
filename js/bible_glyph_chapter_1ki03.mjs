@@ -576,7 +576,7 @@ export function bible_glyph_chapter_1ki03() {
           "were",
           "$broken_heart",
           "$footprints",
-          "to",
+          "$toward",
           "the",
           "$king",
           "and",
