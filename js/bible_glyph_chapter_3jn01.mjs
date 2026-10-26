@@ -173,7 +173,7 @@ export function bible_glyph_chapter_3jn01() {
       {
         verse_number: 8,
         words: [
-          "Therefore",
+          "$right_arrow",
           "we",
           "ought",
           "to",
