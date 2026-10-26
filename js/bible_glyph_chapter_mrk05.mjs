@@ -517,7 +517,7 @@ export function bible_glyph_chapter_mrk05() {
         "$plus",
         "$clapper_board",
         "to",
-        "proclaim",
+        "$public_address",
         "$tray_in",
         "the",
         "$proper_name$Decapolis",
