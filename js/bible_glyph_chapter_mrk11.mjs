@@ -854,7 +854,7 @@ export function bible_glyph_chapter_mrk11() {
     {
       verse_number: 32,
       words: [
-        "But",
+        "$curving_up",
         "if",
         "we",
         "$speech,",
