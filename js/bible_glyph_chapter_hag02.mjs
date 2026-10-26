@@ -668,7 +668,7 @@ export function bible_glyph_chapter_hag02() {
           "$castle",
           "$throne",
           "and",
-          "destroy",
+          "$bomb",
           "the",
           "power",
           "of",
