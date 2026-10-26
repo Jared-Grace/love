@@ -168,7 +168,7 @@ export function bible_glyph_chapter_rev10() {
           "$pin",
           "$sea",
           "$plus",
-          "on",
+          "$pointing_up",
           "$pin",
           "$earth",
           "lifted",
