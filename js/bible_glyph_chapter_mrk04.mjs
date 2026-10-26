@@ -1081,7 +1081,7 @@ export function bible_glyph_chapter_mrk04() {
           "$arrow_both_ways,",
           "$flashlight+question",
           "is",
-          "this,",
+          "$flashlight,",
           "$pointing",
           "$plus",
           "the",
