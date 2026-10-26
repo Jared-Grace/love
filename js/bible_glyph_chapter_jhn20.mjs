@@ -461,7 +461,7 @@ export function bible_glyph_chapter_jhn20() {
           "My",
           "$father",
           "$plus",
-          "your",
+          "$you",
           "$father,",
           "to",
           "My",
