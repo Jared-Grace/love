@@ -902,7 +902,7 @@ export function bible_glyph_chapter_1ki13() {
           "with",
           "the",
           "$lion",
-          "standing",
+          "$person+round_pushpin",
           "beside",
           "it,",
           "and",
