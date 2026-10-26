@@ -679,7 +679,7 @@ export function bible_glyph_chapter_mrk12() {
         "the",
         "$skull",
         "$pointing",
-        "rising,",
+        "$person+pointing_up,",
         "have",
         "you",
         "$no_entry",
