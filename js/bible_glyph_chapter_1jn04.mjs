@@ -384,7 +384,7 @@ export function bible_glyph_chapter_1jn04() {
         verse_number: 14,
         words: [
           "$plus",
-          "we",
+          "$me",
           "have",
           "seen",
           "$plus",
