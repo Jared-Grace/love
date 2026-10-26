@@ -78,7 +78,7 @@ export function bible_glyph_chapter_rev10() {
           "his",
           "left",
           "foot",
-          "on",
+          "$pointing_up",
           "the",
           "$earth,",
         ],
