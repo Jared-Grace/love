@@ -539,7 +539,7 @@ export function bible_glyph_chapter_1ki03() {
           "$person+round_pushpin",
           "$face",
           "the",
-          "ark",
+          "$ark",
           "of",
           "the",
           "$covenant",
