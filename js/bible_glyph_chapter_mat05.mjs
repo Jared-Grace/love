@@ -1213,7 +1213,7 @@ export function bible_glyph_chapter_mat05() {
         verse_number: 47,
         words: [
           "$plus",
-          "if",
+          "$traffic_light",
           "you",
           "greet",
           "only",
