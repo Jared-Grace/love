@@ -105,7 +105,7 @@ export function bible_glyph_chapter_jol02() {
           "$next_track",
           "them",
           "a",
-          "flame",
+          "$fire+tongue",
           "$fire+up_arrow+doing.",
           "The",
           "$earth",
