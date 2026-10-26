@@ -948,7 +948,7 @@ export function bible_glyph_chapter_mrk08() {
       {
         verse_number: 36,
         words: [
-          "What",
+          "$flashlight+question",
           "does",
           "it",
           "profit",
