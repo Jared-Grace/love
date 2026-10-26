@@ -322,7 +322,7 @@ export function bible_glyph_chapter_mrk05() {
         "about",
         "two",
         "thousand",
-        "rushed",
+        "$running+heart_red+doing",
         "$pointing_down",
         "$pin",
         "steep",
