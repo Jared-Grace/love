@@ -94,7 +94,7 @@ export function bible_glyph_chapter_psa001() {
           "$leaf",
           "does",
           "$no_entry",
-          "wither,",
+          "$fallen_leaf+doing,",
           "and",
           "who",
           "prospers",
