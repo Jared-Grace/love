@@ -675,7 +675,7 @@ export function bible_glyph_chapter_jhn09() {
           "was",
           "$person_with_white_cane",
           "but",
-          "now",
+          "$stopwatch",
           "I",
           "$eyes.",
         ],
