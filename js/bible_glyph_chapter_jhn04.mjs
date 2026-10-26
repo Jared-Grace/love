@@ -1086,7 +1086,7 @@ export function bible_glyph_chapter_jhn04() {
           "Galilee,",
           "the",
           "$proper_name$Galileans",
-          "welcomed",
+          "$palm_up_hand+doing",
           "$pointing_back.",
           "They",
           "had",
