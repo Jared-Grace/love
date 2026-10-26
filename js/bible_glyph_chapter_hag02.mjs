@@ -684,7 +684,7 @@ export function bible_glyph_chapter_hag02() {
           "and",
           "their",
           "riders;",
-          "horses",
+          "$horse",
           "and",
           "their",
           "riders",
