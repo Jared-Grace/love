@@ -591,7 +591,7 @@ export function bible_glyph_chapter_ezk18() {
           "$scales+thing",
           "and",
           "right,",
-          "carefully",
+          "$guard",
           "$hammer+doing$ing",
           "$all",
           "My",
