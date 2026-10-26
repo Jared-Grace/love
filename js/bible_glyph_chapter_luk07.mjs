@@ -598,7 +598,7 @@ export function bible_glyph_chapter_luk07() {
         "their",
         "diseases",
         "$plus",
-        "afflictions",
+        "$thread+collision+thing",
         "$plus",
         "$wind",
         "$thumbs_down,",
