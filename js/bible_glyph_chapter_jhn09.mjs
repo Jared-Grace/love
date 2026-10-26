@@ -274,7 +274,7 @@ export function bible_glyph_chapter_jhn09() {
           "$speech",
           "to",
           "me,",
-          "Go",
+          "$walking+away",
           "to",
           "$proper_name$Siloam",
           "$plus",
