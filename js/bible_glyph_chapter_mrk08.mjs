@@ -150,7 +150,7 @@ export function bible_glyph_chapter_mrk08() {
           "He",
           "$hand_receiving",
           "the",
-          "seven",
+          "$seven",
           "$bread,",
           "gave",
           "$gift+thumbs_up,",
