@@ -313,7 +313,7 @@ export function bible_glyph_chapter_gen02() {
           "$garden,",
           "and",
           "from",
-          "there",
+          "$telescope",
           "it",
           "branched",
           "into",
