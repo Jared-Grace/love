@@ -453,7 +453,7 @@ export function bible_glyph_chapter_exo14() {
           "as",
           "for",
           "$you,",
-          "lift",
+          "$up_arrow",
           "up",
           "your",
           "staff",
