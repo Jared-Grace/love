@@ -402,7 +402,7 @@ export function bible_glyph_chapter_luk15() {
         "$pointing_back",
         "$field",
         "to",
-        "feed",
+        "$sheep+fork_and_knife+doing",
         "pigs.",
       ],
     },
