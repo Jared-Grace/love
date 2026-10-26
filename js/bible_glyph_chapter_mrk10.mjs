@@ -1021,7 +1021,7 @@ export function bible_glyph_chapter_mrk10() {
         "$cup",
         "I",
         "will",
-        "drink,",
+        "$cup_with_straw,",
         "or",
         "be",
         "baptized",
