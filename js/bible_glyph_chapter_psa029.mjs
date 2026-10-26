@@ -195,7 +195,7 @@ export function bible_glyph_chapter_psa029() {
           "in",
           "His",
           "$classical_building",
-          "all",
+          "$all",
           "$speech,",
           "$star!",
         ],
