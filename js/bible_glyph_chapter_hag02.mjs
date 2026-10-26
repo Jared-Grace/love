@@ -82,7 +82,7 @@ export function bible_glyph_chapter_hag02() {
           "its",
           "former",
           "$star?",
-          "How",
+          "$flashlight+question",
           "does",
           "it",
           "$eye",
