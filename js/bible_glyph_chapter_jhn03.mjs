@@ -243,7 +243,7 @@ export function bible_glyph_chapter_jhn03() {
           "“You",
           "$link",
           "$wrestling+heart_on_fire’s",
-          "teacher,”",
+          "$teacher,”",
           "$cross",
           "$speech,",
           "“and",
