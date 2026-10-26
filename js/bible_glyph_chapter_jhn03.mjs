@@ -407,7 +407,7 @@ export function bible_glyph_chapter_jhn03() {
           "$no_entry",
           "$wilted_flower",
           "$curving_up",
-          "have",
+          "$raised_fist",
           "eternal",
           "$sprout.",
         ],
