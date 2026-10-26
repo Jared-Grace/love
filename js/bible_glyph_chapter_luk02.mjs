@@ -1025,7 +1025,7 @@ export function bible_glyph_chapter_luk02() {
       words: [
         "The",
         "$baby",
-        "grew",
+        "$chart_increasing",
         "$plus",
         "became",
         "strong,",
