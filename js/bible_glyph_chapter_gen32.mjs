@@ -755,7 +755,7 @@ export function bible_glyph_chapter_gen32() {
           "go",
           "unless",
           "you",
-          "bless",
+          "$speech+thumbs_up",
           "me.",
         ],
       },
