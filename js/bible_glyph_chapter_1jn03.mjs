@@ -357,7 +357,7 @@ export function bible_glyph_chapter_1jn03() {
           "$pointing_back",
           "$brother.",
           "$plus",
-          "why",
+          "$toward+heart_red",
           "did",
           "$proper_name$Cain",
           "slay",
