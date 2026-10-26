@@ -320,7 +320,7 @@ export function bible_glyph_chapter_2th01() {
           "$gold+doing",
           "of",
           "His",
-          "calling,",
+          "$waving_hand+thing,",
           "$plus",
           "that",
           "He",
