@@ -43,7 +43,7 @@ export function bible_glyph_chapter_psa100() {
           "$footprints",
           "into",
           "His",
-          "presence",
+          "$face",
           "with",
           "joyful",
           "songs.",
