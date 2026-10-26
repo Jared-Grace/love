@@ -876,7 +876,7 @@ export function bible_glyph_chapter_mrk05() {
         "$peace,",
         "$plus",
         "$link",
-        "free",
+        "$red_apple+describing",
         "of",
         "your",
         "affliction.”",
