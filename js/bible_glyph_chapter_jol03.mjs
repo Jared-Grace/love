@@ -598,7 +598,7 @@ export function bible_glyph_chapter_jol03() {
           "and",
           "$city+peace",
           "from",
-          "generation",
+          "$dna",
           "to",
           "generation.",
         ],
