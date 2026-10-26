@@ -173,7 +173,7 @@ export function bible_glyph_chapter_jhn02() {
           "$speech",
           "to",
           "$pointing_back,",
-          "“Now",
+          "“$watch",
           "$bucket+doing",
           "some",
           "out",
