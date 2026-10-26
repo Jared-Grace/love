@@ -305,7 +305,7 @@ export function bible_glyph_chapter_jhn03() {
           "do",
           "$no_entry",
           "$anchor+doing,",
-          "how",
+          "$gear+question",
           "will",
           "you",
           "$anchor+doing",
