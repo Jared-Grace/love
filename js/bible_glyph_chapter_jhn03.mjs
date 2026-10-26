@@ -427,7 +427,7 @@ export function bible_glyph_chapter_jhn03() {
           "$globe",
           "to",
           "$scales",
-          "the",
+          "$pin",
           "$globe,",
           "but",
           "to",
