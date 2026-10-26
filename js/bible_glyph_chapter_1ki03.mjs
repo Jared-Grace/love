@@ -65,7 +65,7 @@ export function bible_glyph_chapter_1ki03() {
         words: [
           "The",
           "$family,",
-          "however,",
+          "$one+check,",
           "were",
           "still",
           "sacrificing",
