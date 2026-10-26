@@ -324,7 +324,7 @@ export function bible_glyph_chapter_rut01() {
           "$turn_back,",
           "my",
           "$woman.",
-          "Why",
+          "$flashlight+question",
           "would",
           "you",
           "$walking",
