@@ -719,7 +719,7 @@ export function bible_glyph_chapter_jhn17() {
           "did",
           "$no_entry",
           "$lightbulb",
-          "You,",
+          "$you,",
           "I",
           "$lightbulb",
           "You,",
