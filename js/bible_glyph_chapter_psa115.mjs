@@ -42,7 +42,7 @@ export function bible_glyph_chapter_psa115() {
       {
         verse_number: 2,
         words: [
-          "Why",
+          "$flashlight+question",
           "should",
           "the",
           "$map",
