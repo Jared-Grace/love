@@ -24,7 +24,7 @@ export function bible_glyph_chapter_1jn04() {
           "$anchor+doing",
           "$all",
           "$wind,",
-          "but",
+          "$curving_up",
           "test",
           "the",
           "$wind$s",
