@@ -148,7 +148,7 @@ export function bible_glyph_chapter_1jn02() {
           "$lightbulb",
           "$pointing",
           "we",
-          "are",
+          "$link",
           "$tray_in",
           "$pointing_back.",
         ],
