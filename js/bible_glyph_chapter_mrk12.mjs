@@ -481,7 +481,7 @@ export function bible_glyph_chapter_mrk12() {
         "$back+flashlight",
         "$speech",
         "there",
-        "is",
+        "$link",
         "$no_entry",
         "$person+up_arrow,",
         "$footprints",
