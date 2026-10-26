@@ -589,7 +589,7 @@ export function bible_glyph_chapter_jud01() {
       {
         verse_number: 20,
         words: [
-          "But",
+          "$curving_right",
           "you,",
           "$heart_red+describing,",
           "building",
