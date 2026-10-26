@@ -633,7 +633,7 @@ export function bible_glyph_chapter_jhn09() {
           "$back+flashlight",
           "had",
           "been",
-          "blind",
+          "$person_with_white_cane",
           "$plus",
           "$speech",
           "to",
