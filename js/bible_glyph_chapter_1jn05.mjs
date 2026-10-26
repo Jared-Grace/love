@@ -594,7 +594,7 @@ export function bible_glyph_chapter_1jn05() {
       },
       {
         verse_number: 21,
-        words: ["Little", "children,", "$locked_with_key", "$pointing_back+pointing_back", "$away", "idols."],
+        words: ["Little", "children,", "$locked_with_key", "$pointing_back+pointing_back", "$away", "$moai."],
       },
     ],
   };
