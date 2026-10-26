@@ -338,7 +338,7 @@ export function bible_glyph_chapter_gen03() {
           "He",
           "$speech,",
           "$person+question",
-          "told",
+          "$newspaper",
           "you",
           "that",
           "you",
