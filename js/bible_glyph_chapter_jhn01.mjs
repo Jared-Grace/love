@@ -137,7 +137,7 @@ export function bible_glyph_chapter_jhn01() {
           "that",
           "through",
           "$pointing_back",
-          "everyone",
+          "$all",
           "might",
           "$anchor+doing.",
         ],
