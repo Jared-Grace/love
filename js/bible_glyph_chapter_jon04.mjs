@@ -232,7 +232,7 @@ export function bible_glyph_chapter_jon04() {
           "$input_numbers+doing",
           "a",
           "scorching",
-          "east",
+          "$compass+right_arrow+thing",
           "$wind,",
           "and",
           "the",
