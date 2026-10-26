@@ -470,7 +470,7 @@ export function bible_glyph_chapter_jhn02() {
           "$placard",
           "can",
           "You",
-          "show",
+          "$television",
           "us",
           "$pointing",
           "You",
