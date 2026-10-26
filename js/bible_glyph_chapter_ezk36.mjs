@@ -63,7 +63,7 @@ export function bible_glyph_chapter_ezk36() {
           "have",
           "become",
           "our",
-          "possession,",
+          "$hand_receiving+brown_square+thing,",
         ],
       },
       {
