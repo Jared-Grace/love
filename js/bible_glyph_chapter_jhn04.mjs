@@ -398,7 +398,7 @@ export function bible_glyph_chapter_jhn04() {
           "$man_beard",
           "$plus",
           "$footprints",
-          "back.”",
+          "$round_pushpin+manner.”",
         ],
       },
       {
