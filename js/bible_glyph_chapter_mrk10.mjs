@@ -777,7 +777,7 @@ export function bible_glyph_chapter_mrk10() {
     {
       verse_number: 31,
       words: [
-        "But",
+        "$curving_right",
         "$multiply",
         "who",
         "are",
