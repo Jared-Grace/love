@@ -338,7 +338,7 @@ export function bible_glyph_chapter_rev10() {
           "$you",
           "stomach",
           "bitter,",
-          "but",
+          "$curving_up",
           "$tray_in",
           "$you",
           "mouth",
