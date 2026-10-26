@@ -410,7 +410,7 @@ export function bible_glyph_chapter_1jn04() {
         words: [
           "$traffic_light",
           "$back+flashlight",
-          "confesses",
+          "$people_with_bunny_ears+speech+doing",
           "that",
           "$cross",
           "is",
