@@ -31,7 +31,7 @@ export function bible_glyph_chapter_jon02() {
           "$speech:",
           "In",
           "my",
-          "distress",
+          "$clamp",
           "I",
           "called",
           "to",
