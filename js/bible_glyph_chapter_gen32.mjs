@@ -531,7 +531,7 @@ export function bible_glyph_chapter_gen32() {
           "$exclamation,",
           "$hand+foot",
           "is",
-          "behind",
+          "$next_track",
           "us.",
         ],
       },
