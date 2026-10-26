@@ -349,7 +349,7 @@ export function bible_glyph_chapter_jon04() {
           "has",
           "more",
           "than",
-          "120,000",
+          "$two",
           "$person",
           "who",
           "$no_entry",
