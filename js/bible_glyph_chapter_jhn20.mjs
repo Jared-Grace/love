@@ -849,7 +849,7 @@ export function bible_glyph_chapter_jhn20() {
       {
         verse_number: 31,
         words: [
-          "But",
+          "$curving_right",
           "$flashlight",
           "are",
           "written",
