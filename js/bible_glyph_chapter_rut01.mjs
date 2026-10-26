@@ -693,7 +693,7 @@ export function bible_glyph_chapter_rut01() {
           "$first_place+sun",
           "of",
           "the",
-          "barley",
+          "$barley",
           "$harvest.",
         ],
       },
