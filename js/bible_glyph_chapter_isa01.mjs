@@ -678,7 +678,7 @@ export function bible_glyph_chapter_isa01() {
           "plea",
           "of",
           "the",
-          "widow",
+          "$widow",
           "$no_entry",
           "$footprints",
           "before",
