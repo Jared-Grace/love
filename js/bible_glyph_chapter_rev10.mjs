@@ -69,7 +69,7 @@ export function bible_glyph_chapter_rev10() {
           "He",
           "placed",
           "$pointing_back",
-          "right",
+          "$hand+right_arrow",
           "foot",
           "on",
           "the",
