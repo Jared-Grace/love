@@ -878,7 +878,7 @@ export function bible_glyph_chapter_isa01() {
           "$two",
           "will",
           "$fire+wood",
-          "together,",
+          "$linked_paperclips+manner,",
           "with",
           "no",
           "one",
