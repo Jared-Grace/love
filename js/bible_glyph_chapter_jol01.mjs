@@ -37,7 +37,7 @@ export function bible_glyph_chapter_jol01() {
           "elders;",
           "give",
           "ear,",
-          "all",
+          "$all",
           "you",
           "who",
           "$person+house",
