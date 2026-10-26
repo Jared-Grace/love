@@ -158,7 +158,7 @@ export function bible_glyph_chapter_isa01() {
           "has",
           "a",
           "massive",
-          "wound,",
+          "$thermometer_face+thing,",
           "and",
           "your",
           "whole",
