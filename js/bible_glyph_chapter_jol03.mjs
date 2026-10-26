@@ -286,7 +286,7 @@ export function bible_glyph_chapter_jol03() {
       {
         verse_number: 10,
         words: [
-          "Beat",
+          "$hammer+down_arrow+doing",
           "your",
           "plowshares",
           "into",
