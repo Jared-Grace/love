@@ -288,7 +288,7 @@ export function bible_glyph_chapter_jhn10() {
           "$pin",
           "$thumbs_up",
           "$person+sheep.",
-          "The",
+          "$pin",
           "$thumbs_up",
           "$person+sheep",
           "lays",
