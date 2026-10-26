@@ -518,7 +518,7 @@ export function bible_glyph_chapter_jhn10() {
           "$tray_in",
           "$pin",
           "$menorah",
-          "because",
+          "$metro",
           "of",
           "these",
           "$speech.",
