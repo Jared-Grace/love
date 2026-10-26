@@ -408,7 +408,7 @@ export function bible_glyph_chapter_gen32() {
           "goats,",
           "two",
           "hundred",
-          "ewes",
+          "$sheep+female_sign",
           "and",
           "twenty",
           "rams,",
