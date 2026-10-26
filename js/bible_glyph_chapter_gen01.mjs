@@ -297,7 +297,7 @@ export function bible_glyph_chapter_gen01() {
           "and",
           "it",
           "was",
-          "so.",
+          "$right_arrow.",
         ],
       },
       {
