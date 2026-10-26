@@ -674,7 +674,7 @@ export function bible_glyph_chapter_mrk12() {
     {
       verse_number: 26,
       words: [
-        "But",
+        "$curving_right",
         "$clockwise_arrows",
         "the",
         "$skull",
