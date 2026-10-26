@@ -149,7 +149,7 @@ export function bible_glyph_chapter_luk07() {
         "$no_entry",
         "$weary_face+repeat+doing",
         "Yourself,",
-        "for",
+        "$information",
         "I",
         "am",
         "$no_entry",
