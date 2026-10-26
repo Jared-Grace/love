@@ -828,7 +828,7 @@ export function bible_glyph_chapter_gen01() {
           "$sky",
           "and",
           "over",
-          "every",
+          "$all",
           "$sprout",
           "thing",
           "that",
