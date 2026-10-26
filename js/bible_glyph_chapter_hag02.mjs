@@ -127,7 +127,7 @@ export function bible_glyph_chapter_hag02() {
           "And",
           "be",
           "$might+up_arrow,",
-          "all",
+          "$all",
           "you",
           "$family",
           "of",
