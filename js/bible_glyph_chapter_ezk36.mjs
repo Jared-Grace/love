@@ -742,7 +742,7 @@ export function bible_glyph_chapter_ezk36() {
       {
         verse_number: 22,
         words: [
-          "Therefore",
+          "$right_arrow",
           "$speech",
           "the",
           "$house",
