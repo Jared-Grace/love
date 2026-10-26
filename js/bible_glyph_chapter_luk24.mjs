@@ -35,7 +35,7 @@ export function bible_glyph_chapter_luk24() {
           "to",
           "the",
           "$tomb+round_pushpin,",
-          "bringing",
+          "$shopping_cart",
           "the",
           "spices",
           "they",
