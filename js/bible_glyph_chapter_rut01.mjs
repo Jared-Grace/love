@@ -123,7 +123,7 @@ export function bible_glyph_chapter_rut01() {
           "as",
           "their",
           "wives,",
-          "one",
+          "$one",
           "$name_tag",
           "$proper_name$Orpah",
           "and",
