@@ -582,7 +582,7 @@ export function bible_glyph_chapter_hag02() {
         words: [
           "Is",
           "there",
-          "still",
+          "$repeat",
           "$seed",
           "in",
           "the",
