@@ -71,7 +71,7 @@ export function bible_glyph_chapter_jon04() {
           "and",
           "$hugging_face+describing",
           "$heart_on_fire,",
-          "slow",
+          "$straight_ruler+clock+describing",
           "to",
           "anger,",
           "abounding",
