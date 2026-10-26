@@ -519,7 +519,7 @@ export function bible_glyph_chapter_mrk05() {
         "to",
         "$public_address",
         "$tray_in",
-        "the",
+        "$pin",
         "$proper_name$Decapolis",
         "how",
         "much",
