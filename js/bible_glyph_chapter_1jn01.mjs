@@ -137,7 +137,7 @@ export function bible_glyph_chapter_1jn01() {
           "$plus",
           "we",
           "write",
-          "these",
+          "$flashlight",
           "things",
           "so",
           "that",
