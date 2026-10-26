@@ -574,7 +574,7 @@ export function bible_glyph_chapter_1jn02() {
           "had",
           "belonged",
           "$tray_out",
-          "us,",
+          "$me,",
           "they",
           "would",
           "have",
