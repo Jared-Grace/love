@@ -833,7 +833,7 @@ export function bible_glyph_chapter_luk15() {
         "$you",
         "are",
         "$all+clock",
-        "with",
+        "$linked_paperclips",
         "me,",
         "$plus",
         "all",
