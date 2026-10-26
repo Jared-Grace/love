@@ -481,7 +481,7 @@ export function bible_glyph_chapter_mrk08() {
           "many",
           "$basket",
           "of",
-          "broken",
+          "$bread+collision+thing",
           "pieces",
           "did",
           "you",
