@@ -802,7 +802,7 @@ export function bible_glyph_chapter_1jn02() {
           "$oil+thing",
           "teaches",
           "you",
-          "about",
+          "$clockwise_arrows",
           "all",
           "things",
           "$plus",
