@@ -80,7 +80,7 @@ export function bible_glyph_chapter_jhn17() {
         words: [
           "$curving_right",
           "$flashlight",
-          "is",
+          "$link",
           "eternal",
           "$sprout,",
           "that",
