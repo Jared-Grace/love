@@ -444,7 +444,7 @@ export function bible_glyph_chapter_1ki13() {
           "$heart_on_fire",
           "had",
           "$hammer",
-          "that",
+          "$back+flashlight",
           "$sun",
           "in",
           "Bethel,",
