@@ -145,7 +145,7 @@ export function bible_glyph_chapter_1jn03() {
           "you",
           "$lightbulb",
           "$pointing",
-          "Christ",
+          "$telescope",
           "$light",
           "to",
           "take",
