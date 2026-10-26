@@ -473,7 +473,7 @@ export function bible_glyph_chapter_1jn02() {
           "$meat,",
           "$plus",
           "the",
-          "desires",
+          "$pointing_up+anger_symbol+thing",
           "of",
           "the",
           "eyes,",
