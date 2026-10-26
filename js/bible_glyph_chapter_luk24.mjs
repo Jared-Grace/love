@@ -796,7 +796,7 @@ export function bible_glyph_chapter_luk24() {
           "with",
           "us",
           "$tray_in",
-          "the",
+          "$pin",
           "$road",
           "and",
           "opened",
