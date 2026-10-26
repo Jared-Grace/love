@@ -136,7 +136,7 @@ export function bible_glyph_chapter_jud01() {
           "$plus",
           "deny",
           "$me",
-          "only",
+          "$one+describing",
           "Master",
           "$plus",
           "$crown,",
