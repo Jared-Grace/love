@@ -548,7 +548,7 @@ export function bible_glyph_chapter_luk15() {
         "embraced",
         "$pointing_back,",
         "$plus",
-        "kissed",
+        "$pointing_down+heart_orange+mouth+doing",
         "$pointing_back.",
       ],
     },
