@@ -793,7 +793,7 @@ export function bible_glyph_chapter_jhn03() {
           "$earth",
           "belongs",
           "to",
-          "the",
+          "$pin",
           "$earth",
           "$plus",
           "$mouth$s",
