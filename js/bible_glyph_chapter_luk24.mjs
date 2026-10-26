@@ -146,7 +146,7 @@ export function bible_glyph_chapter_luk24() {
           "while",
           "He",
           "was",
-          "still",
+          "$repeat_single_button",
           "$tray_in",
           "$proper_name$Galilee:",
         ],
