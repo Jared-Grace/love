@@ -171,7 +171,7 @@ export function bible_glyph_chapter_oba01() {
           "what",
           "they",
           "wanted?",
-          "If",
+          "$traffic_light",
           "grape",
           "gatherers",
           "$footprints",
