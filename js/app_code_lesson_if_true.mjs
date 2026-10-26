@@ -71,14 +71,19 @@ export function app_code_lesson_if_true() {
     let found = [swapped];
     return found;
   }
-  function backwards_wrong_say(choice) {
+  function backwards_wrong_say(question, answer, choice) {
     "said when the learner picks the program with false in it: why it writes out nothing, in the words the screen above already uses for the if. Asked for by the human 2026-10-26";
     let b = text_includes(choice, "(false)");
     if (not(b)) {
       return null;
     }
-    let r =
-      "Remember: the value inside ( ) is false, so the lines inside { } do not run";
+    let r = [
+      "Remember: the value inside ",
+      "( )",
+      " is false, so the lines inside ",
+      "{ }",
+      " do not run",
+    ];
     return r;
   }
   function above(root, context) {

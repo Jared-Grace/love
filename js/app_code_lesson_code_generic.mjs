@@ -8,6 +8,7 @@ import { property_get_or } from "./property_get_or.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { value_or_if_null } from "./value_or_if_null.mjs";
 import { app_code_button_value_lines } from "./app_code_button_value_lines.mjs";
+import { app_code_expression_wrong_say } from "./app_code_expression_wrong_say.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
 import { app_code_lesson_quizzes_unscramble } from "./app_code_lesson_quizzes_unscramble.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
@@ -79,6 +80,7 @@ export function app_code_lesson_code_generic(params) {
     answer_on_button: app_code_button_value_lines,
     answer_count_override: forwards_answer_count_override,
     decoys,
+    wrong_say: app_code_expression_wrong_say,
   };
   ("a lesson may likewise override the backwards quiz labels: the question shown (the value) and the multiple-choice answer prompt; absent, they fall back to the generic Value: / What code produces this value? wording");
   let backwards_question_label_override = property_get_or(
