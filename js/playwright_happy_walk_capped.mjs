@@ -82,12 +82,12 @@ export async function playwright_happy_walk_capped(page, steps_max) {
     list_add(trail, step);
     let end = property_get(step, "end");
     if (end) {
-      let walked = {
+      let walked_inner = {
         steps: list_size(trail),
         trail,
         ended: true,
       };
-      return walked;
+      return walked_inner;
     }
     let pressed = property_get(step, "pressed");
     missed = missed + 1;
