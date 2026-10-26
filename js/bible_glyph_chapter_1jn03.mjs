@@ -624,7 +624,7 @@ export function bible_glyph_chapter_1jn03() {
         verse_number: 23,
         words: [
           "$plus",
-          "this",
+          "$flashlight",
           "is",
           "$pointing_back",
           "$scroll:",
