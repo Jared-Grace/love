@@ -597,7 +597,7 @@ export function bible_glyph_chapter_exo14() {
           "$wrestling+heart_on_fire.",
           "The",
           "cloud",
-          "was",
+          "$link",
           "there",
           "in",
           "the",
