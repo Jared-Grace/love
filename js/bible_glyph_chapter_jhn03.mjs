@@ -298,7 +298,7 @@ export function bible_glyph_chapter_jhn03() {
           "to",
           "you",
           "about",
-          "earthly",
+          "$pointing_up+earth+describing",
           "things",
           "$plus",
           "you",
