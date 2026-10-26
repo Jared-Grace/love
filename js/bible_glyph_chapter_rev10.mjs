@@ -371,7 +371,7 @@ export function bible_glyph_chapter_rev10() {
           "$pointing_back.",
           "$plus",
           "it",
-          "was",
+          "$link",
           "as",
           "sweet",
           "as",
