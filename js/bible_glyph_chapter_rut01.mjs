@@ -385,7 +385,7 @@ export function bible_glyph_chapter_rut01() {
         words: [
           "would",
           "you",
-          "wait",
+          "$crossed_fingers+clock+doing",
           "for",
           "them",
           "to",
