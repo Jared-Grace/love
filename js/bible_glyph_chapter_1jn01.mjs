@@ -280,7 +280,7 @@ export function bible_glyph_chapter_1jn01() {
           "$plus",
           "$ruler",
           "to",
-          "forgive",
+          "$balloon",
           "us",
           "our",
           "$bow",
