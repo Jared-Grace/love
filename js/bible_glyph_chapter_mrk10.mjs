@@ -1062,7 +1062,7 @@ export function bible_glyph_chapter_mrk10() {
         "$pin",
         "baptism",
         "that",
-        "I",
+        "$me",
         "undergo",
         "you",
         "will",
