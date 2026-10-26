@@ -421,7 +421,7 @@ export function bible_glyph_chapter_jhn02() {
           "He",
           "$speech,",
           "“Take",
-          "these",
+          "$flashlight",
           "out",
           "of",
           "here!",
