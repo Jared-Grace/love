@@ -568,7 +568,7 @@ export function bible_glyph_chapter_rev01() {
           "I",
           "$raised_fist",
           "the",
-          "keys",
+          "$old_key",
           "of",
           "$skull",
           "$plus",
