@@ -781,7 +781,7 @@ export function bible_glyph_chapter_mrk12() {
         "The",
         "most",
         "important",
-        "is",
+        "$link",
         "this:",
         "$ear,",
         "O",
