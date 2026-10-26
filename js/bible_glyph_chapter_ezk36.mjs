@@ -112,7 +112,7 @@ export function bible_glyph_chapter_ezk36() {
           "up",
           "in",
           "the",
-          "lips",
+          "$kiss_mark",
           "and",
           "slander",
           "of",
