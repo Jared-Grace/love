@@ -397,7 +397,7 @@ export function bible_glyph_chapter_gen03() {
           "to",
           "the",
           "$woman,",
-          "What",
+          "$flashlight+question",
           "is",
           "this",
           "you",
