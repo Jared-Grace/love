@@ -328,7 +328,7 @@ export function bible_glyph_chapter_hag01() {
           "on",
           "whatever",
           "the",
-          "ground",
+          "$brown_square",
           "$walking+tray_out,",
           "on",
           "$person",
