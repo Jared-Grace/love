@@ -989,7 +989,7 @@ export function bible_glyph_chapter_jhn10() {
           "$plus",
           "He",
           "went",
-          "back",
+          "$repeat",
           "across",
           "the",
           "$pointing_down+proper_name",
