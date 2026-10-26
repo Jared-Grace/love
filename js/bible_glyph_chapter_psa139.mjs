@@ -418,7 +418,7 @@ export function bible_glyph_chapter_psa139() {
           "that",
           "You",
           "would",
-          "slay",
+          "$sword+skull+doing",
           "the",
           "$thumbs_down,",
           "O",
