@@ -653,7 +653,7 @@ export function bible_glyph_chapter_gen02() {
           "from",
           "the",
           "$x_ray",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "$heart_on_fire",
