@@ -21,7 +21,7 @@ export function bible_glyph_chapter_1ki03() {
           "formed",
           "an",
           "alliance",
-          "with",
+          "$safety_pin",
           "$house+proper_name",
           "$king",
           "of",
