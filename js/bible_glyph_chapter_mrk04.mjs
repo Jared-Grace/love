@@ -345,7 +345,7 @@ export function bible_glyph_chapter_mrk04() {
           "$flashlight",
           "parable?",
           "$plus",
-          "how",
+          "$gear+question",
           "will",
           "you",
           "$lightbulb",
