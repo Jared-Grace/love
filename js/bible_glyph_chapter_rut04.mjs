@@ -498,7 +498,7 @@ export function bible_glyph_chapter_rut04() {
         verse_number: 13,
         words: [
           "So",
-          "Boaz",
+          "$field+sheaf_of_rice+proper_name",
           "$hand_receiving",
           "$proper_name$Ruth",
           "and",
