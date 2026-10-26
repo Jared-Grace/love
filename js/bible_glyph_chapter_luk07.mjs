@@ -433,7 +433,7 @@ export function bible_glyph_chapter_luk07() {
         "sat",
         "up",
         "$plus",
-        "began",
+        "$clapper_board",
         "to",
         "$mouth,",
         "$plus",
