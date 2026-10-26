@@ -538,7 +538,7 @@ export function bible_glyph_chapter_jhn02() {
           "He",
           "was",
           "$speech",
-          "about",
+          "$clockwise_arrows",
           "the",
           "temple",
           "of",
