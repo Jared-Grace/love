@@ -739,7 +739,7 @@ export function bible_glyph_chapter_jdg13() {
         words: [
           "he",
           "$speech",
-          "to",
+          "$toward",
           "his",
           "$woman,",
           "“We",
