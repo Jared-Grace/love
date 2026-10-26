@@ -1330,7 +1330,7 @@ export function bible_glyph_chapter_luk02() {
       words: [
         "$plus",
         "$cross",
-        "grew",
+        "$last_track+footprints+doing",
         "$tray_in",
         "$wisdom",
         "$plus",
