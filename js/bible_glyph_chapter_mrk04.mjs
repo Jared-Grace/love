@@ -557,7 +557,7 @@ export function bible_glyph_chapter_mrk04() {
           "it",
           "$down_arrow",
           "a",
-          "basket",
+          "$basket+triangular_ruler",
           "or",
           "$down_arrow",
           "a",
