@@ -500,7 +500,7 @@ export function bible_glyph_chapter_rev01() {
           "was",
           "$likeness",
           "$pin",
-          "sun",
+          "$sun_with_face",
           "$light",
           "$tray_in",
           "$pointing_back",
