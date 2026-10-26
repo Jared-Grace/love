@@ -426,7 +426,7 @@ export function bible_glyph_chapter_rut01() {
       {
         verse_number: 14,
         words: [
-          "Again",
+          "$repeat",
           "they",
           "wept",
           "$lifting,",
