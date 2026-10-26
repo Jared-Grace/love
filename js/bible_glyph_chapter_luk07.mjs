@@ -730,7 +730,7 @@ export function bible_glyph_chapter_luk07() {
         "$person",
         "dressed",
         "$tray_in",
-        "fine",
+        "$yarn+describing",
         "$garment?",
         "Look,",
         "those",
