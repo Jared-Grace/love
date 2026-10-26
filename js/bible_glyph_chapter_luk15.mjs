@@ -119,7 +119,7 @@ export function bible_glyph_chapter_luk15() {
         "it",
         "$pointing_up",
         "$pointing_back",
-        "shoulders",
+        "$person_shrugging+thing",
         "$smile+doing.",
       ],
     },
