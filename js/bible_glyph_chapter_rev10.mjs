@@ -312,7 +312,7 @@ export function bible_glyph_chapter_rev10() {
           "I",
           "went",
           "to",
-          "the",
+          "$pin",
           "$angel",
           "$plus",
           "$speech",
