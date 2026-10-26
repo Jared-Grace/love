@@ -1117,7 +1117,7 @@ export function bible_glyph_chapter_luk02() {
       words: [
         "Assuming",
         "$pointing_back",
-        "was",
+        "$link",
         "$tray_in",
         "their",
         "company,",
