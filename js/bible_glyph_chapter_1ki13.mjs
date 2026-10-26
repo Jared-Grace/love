@@ -421,7 +421,7 @@ export function bible_glyph_chapter_1ki13() {
           "Now",
           "a",
           "certain",
-          "old",
+          "$old_man",
           "$megaphone",
           "was",
           "living",
