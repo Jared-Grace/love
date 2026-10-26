@@ -1050,7 +1050,7 @@ export function bible_glyph_chapter_mat05() {
           "$plus",
           "if",
           "someone",
-          "wants",
+          "$shooting_star+doing",
           "to",
           "sue",
           "you",
