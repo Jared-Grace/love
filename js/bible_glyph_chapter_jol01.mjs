@@ -228,7 +228,7 @@ export function bible_glyph_chapter_jol01() {
           "like",
           "a",
           "$girl+white_flower",
-          "dressed",
+          "$briefs+doing",
           "in",
           "sackcloth,",
           "grieving",
