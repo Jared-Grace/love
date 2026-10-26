@@ -766,7 +766,7 @@ export function bible_glyph_chapter_jhn10() {
           "$stone",
           "$repeat",
           "to",
-          "stone",
+          "$rock+throwing",
           "$pointing_back.",
         ],
       },
