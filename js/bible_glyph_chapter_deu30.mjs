@@ -719,7 +719,7 @@ export function bible_glyph_chapter_deu30() {
           "$brown_square",
           "the",
           "$i_am",
-          "swore",
+          "$raised_back_of_hand+doing",
           "to",
           "$hands_giving",
           "to",
