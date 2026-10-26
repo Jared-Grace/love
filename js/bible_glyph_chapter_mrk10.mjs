@@ -20,7 +20,7 @@ export function bible_glyph_chapter_mrk10() {
         "$footprints",
         "into",
         "$pin",
-        "region",
+        "$construction",
         "of",
         "$proper_name$Judea",
         "$plus",
