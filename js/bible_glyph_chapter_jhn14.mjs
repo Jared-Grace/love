@@ -673,7 +673,7 @@ export function bible_glyph_chapter_jhn14() {
           "Me",
           "does",
           "$no_entry",
-          "keep",
+          "$guard",
           "My",
           "$speech.",
           "$plus",
