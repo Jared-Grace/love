@@ -15,7 +15,7 @@ export function bible_glyph_chapter_jdg13() {
       {
         verse_number: 1,
         words: [
-          "Again",
+          "$plus+doing",
           "the",
           "$son",
           "of",
