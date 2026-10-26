@@ -571,7 +571,7 @@ export function bible_glyph_chapter_mrk12() {
         "$seed.",
         "$plus",
         "$pin",
-        "third",
+        "$third_place",
         "did",
         "likewise.",
       ],
