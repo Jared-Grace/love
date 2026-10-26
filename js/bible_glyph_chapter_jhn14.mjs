@@ -859,7 +859,7 @@ export function bible_glyph_chapter_jhn14() {
           "$mouth",
           "with",
           "you",
-          "much",
+          "$multiply",
           "longer,",
           "for",
           "the",
