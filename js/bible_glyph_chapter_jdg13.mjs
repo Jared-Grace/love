@@ -537,7 +537,7 @@ export function bible_glyph_chapter_jdg13() {
           "$i_am",
           "$speech,",
           "“Even",
-          "if",
+          "$traffic_light",
           "I",
           "stay,",
           "I",
