@@ -132,7 +132,7 @@ export function bible_glyph_chapter_2jn01() {
           "$no_entry",
           "$likeness",
           "a",
-          "new",
+          "$new_button",
           "$scroll,",
           "but",
           "one",
