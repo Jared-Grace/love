@@ -891,7 +891,7 @@ export function bible_glyph_chapter_exo14() {
           "the",
           "$sea",
           "on",
-          "dry",
+          "$fallen_leaf+brown_square",
           "ground,",
           "with",
           "walls",
