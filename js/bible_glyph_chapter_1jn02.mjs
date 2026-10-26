@@ -799,7 +799,7 @@ export function bible_glyph_chapter_1jn02() {
           "just",
           "as",
           "$pointing_back",
-          "anointing",
+          "$oil+thing",
           "teaches",
           "you",
           "about",
