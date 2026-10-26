@@ -413,7 +413,7 @@ export function bible_glyph_chapter_hag02() {
           "defiled,",
           "the",
           "$priest",
-          "answered.",
+          "$speech+turn_back.",
         ],
       },
       {
