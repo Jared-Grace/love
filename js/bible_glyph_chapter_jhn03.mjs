@@ -870,7 +870,7 @@ export function bible_glyph_chapter_jhn03() {
           "the",
           "$wind",
           "without",
-          "limit.",
+          "$triangular_ruler.",
         ],
       },
       {
