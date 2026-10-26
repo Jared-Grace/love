@@ -324,7 +324,7 @@ export function bible_glyph_chapter_jhn10() {
           "$wolf",
           "$footprints,",
           "he",
-          "abandons",
+          "$balloon",
           "the",
           "$sheep",
           "$plus",
