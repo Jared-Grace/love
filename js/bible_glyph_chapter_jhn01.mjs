@@ -410,7 +410,7 @@ export function bible_glyph_chapter_jhn01() {
           "was",
           "$proper_name$John’s",
           "$witness+thing",
-          "when",
+          "$back+clock",
           "the",
           "$menorah",
           "$tray_out",
