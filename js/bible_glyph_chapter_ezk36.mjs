@@ -1215,7 +1215,7 @@ export function bible_glyph_chapter_ezk36() {
           "Then",
           "the",
           "$map",
-          "around",
+          "$around",
           "you",
           "that",
           "$puzzle_piece+doing",
