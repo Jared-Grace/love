@@ -411,7 +411,7 @@ export function bible_glyph_chapter_hag01() {
           "$i_am,",
           "$speech",
           "the",
-          "message",
+          "$angel+thing",
           "of",
           "the",
           "$i_am",
