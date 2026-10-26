@@ -263,7 +263,7 @@ export function bible_glyph_chapter_mrk11() {
         "$two_hearts+proper_name!",
         "$proper_name$Hosanna",
         "$tray_in",
-        "the",
+        "$pin",
         "highest!”",
       ],
     },
