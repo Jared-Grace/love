@@ -252,7 +252,7 @@ export function bible_glyph_chapter_2th01() {
           "separated",
           "from",
           "the",
-          "presence",
+          "$face",
           "of",
           "the",
           "$crown",
