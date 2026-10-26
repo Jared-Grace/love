@@ -162,7 +162,7 @@ export function bible_glyph_chapter_mrk04() {
           "they",
           "had",
           "$no_entry",
-          "root.",
+          "$ginger_root.",
         ],
       },
       {
