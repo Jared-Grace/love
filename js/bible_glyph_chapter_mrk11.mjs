@@ -814,7 +814,7 @@ export function bible_glyph_chapter_mrk11() {
     {
       verse_number: 30,
       words: [
-        "Was",
+        "$link",
         "$proper_name$John’s",
         "$diving_mask+thing",
         "$tray_out",
