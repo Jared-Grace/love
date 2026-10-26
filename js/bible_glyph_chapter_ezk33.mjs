@@ -68,7 +68,7 @@ export function bible_glyph_chapter_ezk33() {
           "him",
           "as",
           "their",
-          "watchman,",
+          "$guard+telescope+doing,",
         ],
       },
       {
