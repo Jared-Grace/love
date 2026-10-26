@@ -287,7 +287,7 @@ export function bible_glyph_chapter_psa139() {
           "I",
           "$hands_raised",
           "You,",
-          "for",
+          "$pointing",
           "I",
           "am",
           "fearfully",
