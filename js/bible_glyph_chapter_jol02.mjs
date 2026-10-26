@@ -891,7 +891,7 @@ export function bible_glyph_chapter_jol02() {
           "My",
           "$wind",
           "$pointing_up",
-          "all",
+          "$all",
           "$meat.",
           "Your",
           "$son",
