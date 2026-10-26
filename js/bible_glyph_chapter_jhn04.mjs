@@ -1117,7 +1117,7 @@ export function bible_glyph_chapter_jhn04() {
           "He",
           "$footprints",
           "once",
-          "again",
+          "$repeat",
           "to",
           "$proper_name$Cana",
           "in",
