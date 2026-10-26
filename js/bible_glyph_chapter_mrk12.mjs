@@ -993,7 +993,7 @@ export function bible_glyph_chapter_mrk12() {
         "to",
         "$me",
         "$crown,",
-        "Sit",
+        "$seat",
         "$tray_out",
         "$me",
         "right",
