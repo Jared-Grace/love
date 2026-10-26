@@ -384,7 +384,7 @@ export function bible_glyph_chapter_mrk05() {
         "$imp+doing",
         "by",
         "$pin",
-        "legion",
+        "$military_helmet+all+crowd",
         "sitting",
         "there,",
         "clothed",
