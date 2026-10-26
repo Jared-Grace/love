@@ -1034,7 +1034,7 @@ export function bible_glyph_chapter_ezk33() {
           "waste,",
           "and",
           "the",
-          "pride",
+          "$peacock",
           "of",
           "her",
           "strength",
