@@ -610,7 +610,7 @@ export function bible_glyph_chapter_jhn14() {
           "to",
           "$pointing_back,",
           "“$crown,",
-          "why",
+          "$flashlight+question",
           "$pointing",
           "are",
           "You",
