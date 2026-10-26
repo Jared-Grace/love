@@ -1020,7 +1020,7 @@ export function bible_glyph_chapter_jhn09() {
           "with",
           "$pointing_back",
           "$ear",
-          "this",
+          "$flashlight",
           "$plus",
           "$speech",
           "to",
