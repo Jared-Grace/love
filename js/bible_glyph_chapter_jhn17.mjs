@@ -644,7 +644,7 @@ export function bible_glyph_chapter_jhn17() {
           "into",
           "one,",
           "that",
-          "the",
+          "$pin",
           "$globe",
           "may",
           "$lightbulb",
