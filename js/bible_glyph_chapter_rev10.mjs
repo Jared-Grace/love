@@ -124,7 +124,7 @@ export function bible_glyph_chapter_rev10() {
           "$mouth,",
           "I",
           "was",
-          "about",
+          "$soon",
           "to",
           "put",
           "it",
