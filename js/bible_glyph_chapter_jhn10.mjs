@@ -1031,7 +1031,7 @@ export function bible_glyph_chapter_jhn10() {
           "$clockwise_arrows",
           "$flashlight",
           "man",
-          "was",
+          "$link",
           "$check+describing.",
         ],
       },
