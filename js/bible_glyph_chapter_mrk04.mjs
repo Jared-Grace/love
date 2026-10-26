@@ -171,7 +171,7 @@ export function bible_glyph_chapter_mrk04() {
           "$plus",
           "$plus+one",
           "seed",
-          "fell",
+          "$person+pointing_down",
           "among",
           "the",
           "thorns,",
