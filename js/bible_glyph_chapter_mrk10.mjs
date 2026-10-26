@@ -495,7 +495,7 @@ export function bible_glyph_chapter_mrk10() {
         "$turtle+doing.",
         "$walking+away,",
         "sell",
-        "everything",
+        "$back+abacus",
         "you",
         "own",
         "$plus",
