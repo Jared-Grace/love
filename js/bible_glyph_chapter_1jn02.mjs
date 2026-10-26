@@ -416,7 +416,7 @@ export function bible_glyph_chapter_1jn02() {
           "$speech",
           "of",
           "$heart_on_fire",
-          "abides",
+          "$pin+doing",
           "$tray_in",
           "you,",
           "$plus",
