@@ -131,7 +131,7 @@ export function bible_glyph_chapter_mrk05() {
         "the",
         "$mountain,",
         "he",
-        "kept",
+        "$metro",
         "crying",
         "out",
         "$plus",
