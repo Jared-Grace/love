@@ -292,7 +292,7 @@ export function bible_glyph_chapter_2th01() {
           "$anchor+doing,",
           "$pointing",
           "our",
-          "testimony",
+          "$witness+thing+describing",
           "to",
           "you",
           "was",
