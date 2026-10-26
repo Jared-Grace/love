@@ -910,7 +910,7 @@ export function bible_glyph_chapter_jhn03() {
           "$no_entry",
           "$eye",
           "$sprout.",
-          "Instead,",
+          "$curving_up,",
           "the",
           "wrath",
           "of",
