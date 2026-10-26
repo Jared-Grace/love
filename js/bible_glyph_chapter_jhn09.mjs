@@ -1039,7 +1039,7 @@ export function bible_glyph_chapter_jhn09() {
           "$traffic_light",
           "you",
           "were",
-          "blind,",
+          "$person_with_white_cane,",
           "you",
           "would",
           "have",
