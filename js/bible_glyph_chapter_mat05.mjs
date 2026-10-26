@@ -616,7 +616,7 @@ export function bible_glyph_chapter_mat05() {
           "$telescope+manner",
           "before",
           "the",
-          "altar,",
+          "$altar,",
           "$plus",
           "go.",
           "First",
