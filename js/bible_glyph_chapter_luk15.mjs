@@ -590,7 +590,7 @@ export function bible_glyph_chapter_luk15() {
         "$toward",
         "$pointing_back",
         "$kneeling,",
-        "Quick!",
+        "$fast_forward+manner!",
         "Bring",
         "the",
         "best",
