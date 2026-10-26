@@ -720,7 +720,7 @@ export function bible_glyph_chapter_rut02() {
           "a",
           "close",
           "relative.",
-          "He",
+          "$pointing_back",
           "is",
           "one",
           "of",
