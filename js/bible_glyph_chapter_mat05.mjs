@@ -422,7 +422,7 @@ export function bible_glyph_chapter_mat05() {
           "$no_entry",
           "disappear",
           "$away",
-          "the",
+          "$pin",
           "$scroll,",
           "$finish",
           "everything",
