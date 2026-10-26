@@ -293,7 +293,7 @@ export function bible_glyph_chapter_jhn20() {
           "at",
           "the",
           "$foot,",
-          "where",
+          "$back+round_pushpin",
           "$cross",
           "body",
           "had",
