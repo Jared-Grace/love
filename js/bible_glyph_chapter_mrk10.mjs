@@ -1205,7 +1205,7 @@ export function bible_glyph_chapter_mrk10() {
         "$plus",
         "for",
         "even",
-        "the",
+        "$pin",
         "$son",
         "of",
         "$person",
