@@ -225,7 +225,7 @@ export function bible_glyph_chapter_jhn10() {
         verse_number: 9,
         words: [
           "I",
-          "am",
+          "$link",
           "the",
           "$door.",
           "If",
