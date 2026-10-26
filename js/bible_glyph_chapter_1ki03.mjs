@@ -412,7 +412,7 @@ export function bible_glyph_chapter_1ki03() {
       {
         verse_number: 12,
         words: [
-          "behold,",
+          "$exclamation,",
           "I",
           "have",
           "$hammer+doing",
