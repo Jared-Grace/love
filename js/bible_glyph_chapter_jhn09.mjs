@@ -171,7 +171,7 @@ export function bible_glyph_chapter_jhn09() {
           "($back+flashlight",
           "$speech+arrow_both_ways+doing",
           "$hand_sending).",
-          "So",
+          "$right_arrow",
           "the",
           "man",
           "went",
