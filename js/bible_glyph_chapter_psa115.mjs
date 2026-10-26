@@ -187,7 +187,7 @@ export function bible_glyph_chapter_psa115() {
           "$house",
           "of",
           "$proper_name$Aaron,",
-          "trust",
+          "$anchor+doing",
           "in",
           "the",
           "$i_am!",
