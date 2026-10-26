@@ -458,7 +458,7 @@ export function bible_glyph_chapter_gen02() {
           "$eating",
           "freely",
           "from",
-          "every",
+          "$all",
           "$tree",
           "of",
           "the",
