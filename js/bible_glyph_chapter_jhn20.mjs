@@ -114,7 +114,7 @@ export function bible_glyph_chapter_jhn20() {
         verse_number: 4,
         words: [
           "$pin",
-          "two",
+          "$two",
           "were",
           "running",
           "together,",
