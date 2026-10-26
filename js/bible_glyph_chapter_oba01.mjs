@@ -119,7 +119,7 @@ export function bible_glyph_chapter_oba01() {
       {
         verse_number: 4,
         words: [
-          "Though",
+          "$traffic_light",
           "you",
           "soar",
           "like",
