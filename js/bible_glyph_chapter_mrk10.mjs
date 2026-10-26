@@ -1076,7 +1076,7 @@ export function bible_glyph_chapter_mrk10() {
       words: [
         "$curving_right",
         "to",
-        "sit",
+        "$seat",
         "$tray_out",
         "My",
         "right",
