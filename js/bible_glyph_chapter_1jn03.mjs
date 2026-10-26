@@ -76,7 +76,7 @@ export function bible_glyph_chapter_1jn03() {
           "will",
           "be",
           "has",
-          "not",
+          "$no_entry+hourglass_not_done",
           "yet",
           "been",
           "revealed.",
