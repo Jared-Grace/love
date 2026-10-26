@@ -21,7 +21,7 @@ export function bible_glyph_chapter_luk07() {
         "$pin",
         "hearing",
         "of",
-        "the",
+        "$pin",
         "$family,",
         "He",
         "went",
