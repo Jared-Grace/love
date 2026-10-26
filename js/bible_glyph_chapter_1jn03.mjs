@@ -50,7 +50,7 @@ export function bible_glyph_chapter_1jn03() {
           "does",
           "$no_entry",
           "$lightbulb",
-          "us",
+          "$me",
           "is",
           "$pointing",
           "it",
