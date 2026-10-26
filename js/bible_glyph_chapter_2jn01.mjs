@@ -323,7 +323,7 @@ export function bible_glyph_chapter_2jn01() {
           "$multiply",
           "things",
           "to",
-          "write",
+          "$writing_hand",
           "to",
           "$you,",
           "but",
