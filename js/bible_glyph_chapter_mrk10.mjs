@@ -1163,7 +1163,7 @@ export function bible_glyph_chapter_mrk10() {
         "shall",
         "$no_entry",
         "be",
-        "this",
+        "$flashlight+manner",
         "way",
         "$tray_in",
         "you.",
