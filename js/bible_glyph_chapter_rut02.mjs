@@ -321,7 +321,7 @@ export function bible_glyph_chapter_rut02() {
           "$speech",
           "to",
           "him,",
-          "Why",
+          "$flashlight+question+lightbulb",
           "have",
           "I",
           "found",
