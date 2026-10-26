@@ -1053,7 +1053,7 @@ export function bible_glyph_chapter_mrk04() {
           "to",
           "$pointing_back,",
           "$flashlight+question",
-          "are",
+          "$link",
           "you",
           "so",
           "afraid?",
