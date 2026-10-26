@@ -467,7 +467,7 @@ export function bible_glyph_chapter_jhn20() {
           "My",
           "$heart_on_fire",
           "$plus",
-          "your",
+          "$you",
           "$heart_on_fire.",
         ],
       },
