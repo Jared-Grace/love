@@ -902,7 +902,7 @@ export function bible_glyph_chapter_mrk11() {
         "will",
         "I",
         "$speech",
-        "you",
+        "$you",
         "$tray_in",
         "what",
         "$key",
