@@ -166,7 +166,7 @@ export function bible_glyph_chapter_jon02() {
           "$sprout",
           "from",
           "the",
-          "pit,",
+          "$hole+skull,",
           "O",
           "$i_am",
           "my",
