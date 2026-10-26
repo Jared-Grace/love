@@ -126,7 +126,7 @@ export function bible_glyph_chapter_psa001() {
       {
         verse_number: 5,
         words: [
-          "Therefore",
+          "$pointing_up",
           "the",
           "$thumbs_down",
           "will",
