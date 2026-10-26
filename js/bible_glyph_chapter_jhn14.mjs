@@ -112,7 +112,7 @@ export function bible_glyph_chapter_jhn14() {
           "$road",
           "to",
           "the",
-          "place",
+          "$back+round_pushpin",
           "where",
           "I",
           "am",
