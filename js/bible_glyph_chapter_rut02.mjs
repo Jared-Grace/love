@@ -387,7 +387,7 @@ export function bible_glyph_chapter_rut02() {
           "how",
           "you",
           "$walking",
-          "to",
+          "$toward",
           "a",
           "$family",
           "you",
