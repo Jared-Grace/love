@@ -353,7 +353,7 @@ export function bible_glyph_chapter_jhn09() {
           "$plus",
           "the",
           "$proper_name$Pharisees",
-          "asked",
+          "$question",
           "$pointing_back",
           "how",
           "he",
