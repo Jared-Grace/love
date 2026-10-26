@@ -419,7 +419,7 @@ export function bible_glyph_chapter_luk07() {
         "in",
         "$speech",
         "to",
-        "you,",
+        "$you,",
         "get",
         "up.”",
       ],
