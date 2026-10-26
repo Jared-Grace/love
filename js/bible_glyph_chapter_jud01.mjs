@@ -659,7 +659,7 @@ export function bible_glyph_chapter_jud01() {
           "$face_with_symbols_on_mouth",
           "$plus",
           "the",
-          "clothing",
+          "$dress",
           "$black_circle+doing",
           "by",
           "the",
