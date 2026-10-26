@@ -105,7 +105,7 @@ export function bible_glyph_chapter_luk24() {
           "were",
           "terrified",
           "$plus",
-          "bowed",
+          "$bed+down_arrow+doing",
           "their",
           "faces",
           "to",
