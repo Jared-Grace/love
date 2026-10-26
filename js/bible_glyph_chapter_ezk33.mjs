@@ -586,7 +586,7 @@ export function bible_glyph_chapter_ezk33() {
           "he",
           "restores",
           "a",
-          "pledge,",
+          "$package+locked+thing,",
           "makes",
           "restitution",
           "for",
