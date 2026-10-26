@@ -677,7 +677,7 @@ export function bible_glyph_chapter_rut01() {
           "land",
           "of",
           "$father+proper_name",
-          "with",
+          "$linked_paperclips",
           "her",
           "daughter-in-law",
           "$proper_name$Ruth",
