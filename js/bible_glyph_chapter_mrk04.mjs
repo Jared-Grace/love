@@ -1087,7 +1087,7 @@ export function bible_glyph_chapter_mrk04() {
           "$pin",
           "wind",
           "$plus",
-          "the",
+          "$pin",
           "$sea",
           "obey",
           "$pointing_back?",
