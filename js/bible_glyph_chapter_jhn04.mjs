@@ -629,7 +629,7 @@ export function bible_glyph_chapter_jhn04() {
           "explain",
           "everything",
           "to",
-          "us.”",
+          "$me.”",
         ],
       },
       {
