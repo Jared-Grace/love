@@ -289,7 +289,7 @@ export function bible_glyph_chapter_mrk11() {
         "since",
         "the",
         "hour",
-        "was",
+        "$link",
         "$hourglass_done",
         "$sunset+clock,",
         "He",
