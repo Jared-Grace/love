@@ -762,7 +762,7 @@ export function bible_glyph_chapter_luk15() {
         "his",
         "$father,",
         "$speech,",
-        "Look,",
+        "$exclamation,",
         "all",
         "these",
         "$year",
