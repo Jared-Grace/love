@@ -561,7 +561,7 @@ export function bible_glyph_chapter_jhn04() {
           "has",
           "$watch",
           "come",
-          "when",
+          "$back+clock",
           "the",
           "true",
           "worshipers",
