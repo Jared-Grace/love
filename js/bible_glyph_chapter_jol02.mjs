@@ -630,7 +630,7 @@ export function bible_glyph_chapter_jol02() {
           "$sea.",
           "And",
           "its",
-          "stench",
+          "$nauseated_face+nose",
           "will",
           "rise;",
           "its",
