@@ -648,7 +648,7 @@ export function bible_glyph_chapter_jer26() {
           "and",
           "$speech",
           "to",
-          "all",
+          "$all",
           "the",
           "$family",
           "of",
