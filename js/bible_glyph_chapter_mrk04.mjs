@@ -215,7 +215,7 @@ export function bible_glyph_chapter_mrk04() {
           "fruit",
           "-",
           "one",
-          "thirtyfold,",
+          "$three+ten,",
           "$plus",
           "another",
           "sixtyfold,",
