@@ -365,7 +365,7 @@ export function bible_glyph_chapter_jhn14() {
           "I",
           "am",
           "$walking",
-          "to",
+          "$toward",
           "the",
           "$father.",
         ],
