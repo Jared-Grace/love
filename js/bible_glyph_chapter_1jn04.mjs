@@ -30,7 +30,7 @@ export function bible_glyph_chapter_1jn04() {
           "$wind$s",
           "to",
           "see",
-          "whether",
+          "$traffic_light",
           "they",
           "are",
           "from",
