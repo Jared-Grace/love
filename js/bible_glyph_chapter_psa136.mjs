@@ -197,7 +197,7 @@ export function bible_glyph_chapter_psa136() {
           "and",
           "an",
           "outstretched",
-          "arm.",
+          "$hand+might.",
           "His",
           "$gift",
           "endures",
