@@ -312,7 +312,7 @@ export function bible_glyph_chapter_deu26() {
           "$earth,",
           "an",
           "$earth",
-          "flowing",
+          "$water+right_arrow",
           "with",
           "milk",
           "and",
