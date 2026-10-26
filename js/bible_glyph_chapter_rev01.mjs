@@ -537,7 +537,7 @@ export function bible_glyph_chapter_rev01() {
           "$no_entry",
           "$fear+doing.",
           "I",
-          "am",
+          "$link",
           "the",
           "First",
           "$plus",
