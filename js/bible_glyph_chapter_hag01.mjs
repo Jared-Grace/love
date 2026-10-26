@@ -27,7 +27,7 @@ export function bible_glyph_chapter_hag01() {
           "of",
           "the",
           "sixth",
-          "month,",
+          "$new_moon,",
           "the",
           "$speech",
           "of",
