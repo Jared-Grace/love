@@ -87,7 +87,7 @@ export function bible_glyph_chapter_ezk18() {
         verse_number: 4,
         words: [
           "$exclamation,",
-          "every",
+          "$all",
           "$person_other",
           "belongs",
           "to",
