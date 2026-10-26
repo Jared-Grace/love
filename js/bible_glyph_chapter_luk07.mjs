@@ -153,7 +153,7 @@ export function bible_glyph_chapter_luk07() {
         "I",
         "am",
         "$no_entry",
-        "worthy",
+        "$abacus+check",
         "to",
         "have",
         "You",
