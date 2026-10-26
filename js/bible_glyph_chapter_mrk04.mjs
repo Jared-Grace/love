@@ -853,7 +853,7 @@ export function bible_glyph_chapter_mrk04() {
           "nest",
           "in",
           "$pointing_back",
-          "shade.",
+          "$umbrella_on_ground.",
         ],
       },
       {
