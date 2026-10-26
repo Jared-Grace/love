@@ -780,7 +780,7 @@ export function bible_glyph_chapter_mrk04() {
           "can",
           "we",
           "compare",
-          "the",
+          "$pin",
           "$castle",
           "of",
           "$heart_on_fire?",
