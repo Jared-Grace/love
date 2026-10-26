@@ -1213,7 +1213,7 @@ export function bible_glyph_chapter_mrk12() {
         "$pointing_back",
         "had",
         "to",
-        "live",
+        "$sprout+money_bag",
         "on.",
       ],
     },
