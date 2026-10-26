@@ -843,7 +843,7 @@ export function bible_glyph_chapter_1ki13() {
           "him",
           "$adhesive_bandage+doing",
           "the",
-          "donkey",
+          "$donkey",
           "for",
           "him.",
         ],
