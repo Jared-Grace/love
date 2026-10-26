@@ -473,7 +473,7 @@ export function bible_glyph_chapter_mrk08() {
           "$pin",
           "five",
           "$bread",
-          "for",
+          "$toward+tray_in",
           "$pin",
           "five",
           "thousand,",
