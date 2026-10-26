@@ -111,7 +111,7 @@ export function bible_glyph_chapter_rut02() {
           "was",
           "from",
           "the",
-          "clan",
+          "$houses",
           "of",
           "$heart_on_fire+king.",
         ],
