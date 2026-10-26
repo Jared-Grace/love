@@ -17,7 +17,7 @@ export function bible_glyph_chapter_1jn05() {
       {
         verse_number: 1,
         words: [
-          "Everyone",
+          "$all",
           "who",
           "$anchor+doing",
           "$pointing",
