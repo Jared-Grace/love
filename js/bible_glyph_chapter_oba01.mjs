@@ -238,7 +238,7 @@ export function bible_glyph_chapter_oba01() {
           "$mouse_trap+hole",
           "for",
           "you",
-          "without",
+          "$dotted_line_face",
           "your",
           "awareness",
           "of",
