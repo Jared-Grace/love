@@ -653,7 +653,7 @@ export function bible_glyph_chapter_1jn02() {
           "Who",
           "$link",
           "the",
-          "liar",
+          "$lying_face+doer",
           "if",
           "$no_entry",
           "the",
