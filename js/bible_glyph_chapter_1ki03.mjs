@@ -255,7 +255,7 @@ export function bible_glyph_chapter_1ki03() {
           "only",
           "a",
           "little",
-          "child,",
+          "$child+flexed_biceps,",
           "and",
           "I",
           "do",
