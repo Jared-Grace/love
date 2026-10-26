@@ -12,7 +12,7 @@ export function bible_glyph_chapter_luk02() {
     {
       verse_number: 1,
       words: [
-        "Now",
+        "$curving_right",
         "$tray_in",
         "those",
         "$sun",
