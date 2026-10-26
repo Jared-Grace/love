@@ -767,7 +767,7 @@ export function bible_glyph_chapter_jhn04() {
           "$speech",
           "to",
           "$pointing_back,",
-          "“I",
+          "“$me",
           "have",
           "food",
           "to",
