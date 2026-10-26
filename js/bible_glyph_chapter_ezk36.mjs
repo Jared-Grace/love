@@ -1170,7 +1170,7 @@ export function bible_glyph_chapter_ezk36() {
           "of",
           "all",
           "who",
-          "pass",
+          "$bridge",
           "through.",
         ],
       },
