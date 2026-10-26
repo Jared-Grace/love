@@ -281,7 +281,7 @@ export function bible_glyph_chapter_jhn02() {
           "first",
           "of",
           "His",
-          "signs,",
+          "$placard,",
           "$tray_in",
           "$proper_name$Cana",
           "of",
