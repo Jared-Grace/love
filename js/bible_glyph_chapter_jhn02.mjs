@@ -402,7 +402,7 @@ export function bible_glyph_chapter_jhn02() {
           "coins",
           "of",
           "the",
-          "money",
+          "$coin+shuffle+doer",
           "changers",
           "$plus",
           "overturned",
