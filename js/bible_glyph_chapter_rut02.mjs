@@ -440,7 +440,7 @@ export function bible_glyph_chapter_rut02() {
           "I",
           "continue",
           "to",
-          "find",
+          "$magnifying_glass+exclamation",
           "favor",
           "in",
           "your",
