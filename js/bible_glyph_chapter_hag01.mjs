@@ -338,7 +338,7 @@ export function bible_glyph_chapter_hag01() {
           "on",
           "$all",
           "the",
-          "labor",
+          "$weary_face+thing",
           "of",
           "your",
           "hands.",
