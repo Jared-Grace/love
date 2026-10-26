@@ -24,7 +24,7 @@ export function bible_glyph_chapter_gen32() {
           "$angel",
           "of",
           "$heart_on_fire",
-          "met",
+          "$toward+person+doing",
           "him.",
         ],
       },
