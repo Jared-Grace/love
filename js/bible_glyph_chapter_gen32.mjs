@@ -521,7 +521,7 @@ export function bible_glyph_chapter_gen32() {
           "They",
           "are",
           "a",
-          "gift",
+          "$grain_offering",
           "$hand_sending",
           "to",
           "my",
