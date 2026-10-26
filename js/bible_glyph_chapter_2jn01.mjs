@@ -163,7 +163,7 @@ export function bible_glyph_chapter_2jn01() {
           "$pointing_back",
           "$scroll.",
           "$flashlight",
-          "is",
+          "$link",
           "the",
           "$scroll,",
           "just",
