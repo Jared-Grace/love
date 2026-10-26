@@ -503,7 +503,7 @@ export function bible_glyph_chapter_jhn20() {
         words: [
           "It",
           "was",
-          "evening",
+          "$sunset",
           "on",
           "that",
           "very",
