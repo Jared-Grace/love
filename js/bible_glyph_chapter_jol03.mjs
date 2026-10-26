@@ -250,7 +250,7 @@ export function bible_glyph_chapter_jol03() {
           "a",
           "distant",
           "$map.",
-          "Indeed,",
+          "$pointing,",
           "the",
           "$i_am",
           "has",
