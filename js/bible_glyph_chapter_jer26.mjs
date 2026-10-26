@@ -244,7 +244,7 @@ export function bible_glyph_chapter_jer26() {
           "$ear",
           "$up_arrow+i_am",
           "$mouth",
-          "these",
+          "$flashlight+flashlight",
           "$speech",
           "in",
           "the",
