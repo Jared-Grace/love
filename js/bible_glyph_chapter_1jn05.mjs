@@ -530,7 +530,7 @@ export function bible_glyph_chapter_1jn05() {
           "$plus",
           "that",
           "the",
-          "whole",
+          "$hollow_circle",
           "$globe",
           "lies",
           "$tray_in",
