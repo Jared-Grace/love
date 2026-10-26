@@ -33,7 +33,7 @@ export function bible_glyph_chapter_jhn04() {
           "$hammer",
           "$plus",
           "baptizing",
-          "more",
+          "$multiply+more",
           "$learner",
           "than",
           "$proper_name$John,",
