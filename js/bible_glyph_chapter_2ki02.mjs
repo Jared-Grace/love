@@ -645,7 +645,7 @@ export function bible_glyph_chapter_2ki02() {
           "$mountain",
           "or",
           "in",
-          "one",
+          "$one",
           "of",
           "the",
           "valleys.",
