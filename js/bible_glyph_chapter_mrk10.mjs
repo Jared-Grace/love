@@ -471,7 +471,7 @@ export function bible_glyph_chapter_mrk10() {
         "kept",
         "$tray_out",
         "my",
-        "youth.”",
+        "$beginner+thing.”",
       ],
     },
     {
