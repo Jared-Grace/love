@@ -425,7 +425,7 @@ export function bible_glyph_chapter_rut03() {
           "up",
           "$hourglass_not_done+manner",
           "$man_beard",
-          "else",
+          "$person+sheep",
           "could",
           "recognize",
           "her.",
