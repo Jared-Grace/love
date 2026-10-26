@@ -674,7 +674,7 @@ export function bible_glyph_chapter_gen32() {
           "them",
           "across",
           "the",
-          "stream,",
+          "$national_park,",
           "along",
           "with",
           "all",
