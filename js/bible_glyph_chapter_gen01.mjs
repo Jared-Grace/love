@@ -484,7 +484,7 @@ export function bible_glyph_chapter_gen01() {
           "$night,",
           "and",
           "to",
-          "separate",
+          "$construction",
           "the",
           "$light",
           "from",
