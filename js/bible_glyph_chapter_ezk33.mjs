@@ -790,7 +790,7 @@ export function bible_glyph_chapter_ezk33() {
         words: [
           "Now",
           "the",
-          "evening",
+          "$sunset",
           "before",
           "the",
           "fugitive",
