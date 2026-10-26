@@ -535,7 +535,7 @@ export function bible_glyph_chapter_mrk04() {
           "$six+zero,",
           "$plus",
           "a",
-          "hundredfold.",
+          "$input_numbers+all.",
         ],
       },
       {
