@@ -246,7 +246,7 @@ export function bible_glyph_chapter_mrk10() {
         "$plus",
         "$traffic_light",
         "$pointing_back",
-        "divorces",
+        "$away+free_button",
         "$pointing_back",
         "$man_beard",
         "and",
