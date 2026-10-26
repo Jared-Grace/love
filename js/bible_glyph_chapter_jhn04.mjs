@@ -1243,7 +1243,7 @@ export function bible_glyph_chapter_jhn04() {
       {
         verse_number: 51,
         words: [
-          "And",
+          "$curving_right",
           "while",
           "$pointing_back",
           "was",
