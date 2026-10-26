@@ -1157,7 +1157,7 @@ export function bible_glyph_chapter_luk24() {
       },
       {
         verse_number: 48,
-        words: ["$you", "are", "$witness", "of", "these", "things."],
+        words: ["$you", "are", "$witness", "of", "$flashlight", "things."],
       },
       {
         verse_number: 49,
