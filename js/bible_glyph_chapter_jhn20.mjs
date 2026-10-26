@@ -380,7 +380,7 @@ export function bible_glyph_chapter_jhn20() {
           "$pointing",
           "He",
           "was",
-          "the",
+          "$pin",
           "gardener,",
           "she",
           "$speech",
