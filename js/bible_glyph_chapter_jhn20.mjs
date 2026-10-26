@@ -700,7 +700,7 @@ export function bible_glyph_chapter_jhn20() {
           "$hand",
           "into",
           "$pointing_back",
-          "side,",
+          "$bone+x_ray,",
           "I",
           "will",
           "never",
