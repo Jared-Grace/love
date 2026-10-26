@@ -815,7 +815,7 @@ export function bible_glyph_chapter_jer26() {
           "he",
           "fled",
           "in",
-          "fear",
+          "$fear+doing",
           "and",
           "$footprints",
           "to",
