@@ -415,7 +415,7 @@ export function bible_glyph_chapter_mrk04() {
           "$speech",
           "and",
           "at",
-          "once",
+          "$fast_forward",
           "$hand_receiving",
           "$pointing_back",
           "with",
