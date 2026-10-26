@@ -206,7 +206,7 @@ export function bible_glyph_chapter_mrk12() {
         "$hand_receiving",
         "$pointing_back",
         "and",
-        "killed",
+        "$fist+skull",
         "him,",
         "$plus",
         "threw",
