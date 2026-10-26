@@ -385,7 +385,7 @@ export function bible_glyph_chapter_rev10() {
           "had",
           "eaten",
           "$pointing_back,",
-          "my",
+          "$me",
           "stomach",
           "turned",
           "bitter.",
