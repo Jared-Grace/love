@@ -957,7 +957,7 @@ export function bible_glyph_chapter_mrk10() {
         "do",
         "you",
         "$shooting_star+doing",
-        "Me",
+        "$me",
         "to",
         "$hammer",
         "for",
