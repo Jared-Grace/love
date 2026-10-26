@@ -191,7 +191,7 @@ export function bible_glyph_chapter_luk02() {
         "$tray_in",
         "$pointing_back",
         "region",
-        "nearby,",
+        "$map+round_pushpin,",
         "living",
         "out",
         "in",
