@@ -214,7 +214,7 @@ export function bible_glyph_chapter_exo20() {
           "$kneeling+doing",
           "and",
           "$hammer+doing",
-          "all",
+          "$all",
           "your",
           "$tools,",
         ],
