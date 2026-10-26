@@ -221,7 +221,7 @@ export function bible_glyph_chapter_1jn05() {
           "$top.",
           "$pointing",
           "this",
-          "is",
+          "$link",
           "the",
           "$witness+thing",
           "of",
