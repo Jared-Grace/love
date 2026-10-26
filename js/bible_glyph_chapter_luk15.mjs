@@ -695,7 +695,7 @@ export function bible_glyph_chapter_luk15() {
         "$baby",
         "and",
         "asked",
-        "what",
+        "$flashlight+question",
         "was",
         "going",
         "on.",
