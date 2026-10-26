@@ -865,7 +865,7 @@ export function bible_glyph_chapter_mrk05() {
         "$speech",
         "to",
         "$pointing_back,",
-        "“Daughter,",
+        "“$girl,",
         "your",
         "$anchor",
         "has",
