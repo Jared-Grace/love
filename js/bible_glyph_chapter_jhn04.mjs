@@ -865,7 +865,7 @@ export function bible_glyph_chapter_jhn04() {
         words: [
           "Already",
           "$pin",
-          "reaper",
+          "$harvest+doing",
           "$hand_receiving",
           "his",
           "wages",
