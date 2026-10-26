@@ -1139,7 +1139,7 @@ export function bible_glyph_chapter_jhn01() {
       {
         verse_number: 49,
         words: [
-          "“Rabbi,”",
+          "“$teacher+top,”",
           "$hands_giving+heart_on_fire",
           "$speech+turn_back,",
           "“You",
