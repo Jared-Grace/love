@@ -126,7 +126,7 @@ export function bible_glyph_chapter_hag02() {
           "$priest.",
           "And",
           "be",
-          "strong,",
+          "$might+up_arrow,",
           "all",
           "you",
           "$family",
