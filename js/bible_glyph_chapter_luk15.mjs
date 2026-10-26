@@ -175,7 +175,7 @@ export function bible_glyph_chapter_luk15() {
         "who",
         "repents",
         "than",
-        "over",
+        "$pointing_up",
         "ninety",
         "nine",
         "$ruler",
