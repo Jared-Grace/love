@@ -178,7 +178,7 @@ export function bible_glyph_chapter_psa096() {
           "$crown+sparkles+female_sign",
           "of",
           "$sparkle+thing;",
-          "tremble",
+          "$dizzy",
           "before",
           "Him,",
           "all",
