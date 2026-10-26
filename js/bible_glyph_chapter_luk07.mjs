@@ -1234,7 +1234,7 @@ export function bible_glyph_chapter_luk07() {
         "Which",
         "of",
         "$pointing_back",
-        "then",
+        "$right_arrow",
         "will",
         "$heart_red+doing",
         "$pointing_back",
