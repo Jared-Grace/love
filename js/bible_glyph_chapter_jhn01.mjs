@@ -619,7 +619,7 @@ export function bible_glyph_chapter_jhn01() {
         verse_number: 28,
         words: [
           "All",
-          "this",
+          "$flashlight",
           "happened",
           "$tray_in",
           "$proper_name$Bethany",
