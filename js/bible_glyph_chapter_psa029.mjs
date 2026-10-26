@@ -128,7 +128,7 @@ export function bible_glyph_chapter_psa029() {
           "makes",
           "Lebanon",
           "$man_dancing+doing",
-          "like",
+          "$likeness",
           "a",
           "calf,",
           "and",
