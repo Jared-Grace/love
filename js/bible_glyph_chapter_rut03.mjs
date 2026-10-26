@@ -65,7 +65,7 @@ export function bible_glyph_chapter_rut03() {
           "$pointing_back",
           "is",
           "winnowing",
-          "barley",
+          "$barley",
           "on",
           "the",
           "threshing",
