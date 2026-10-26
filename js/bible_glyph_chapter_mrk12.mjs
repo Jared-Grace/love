@@ -1087,7 +1087,7 @@ export function bible_glyph_chapter_mrk12() {
       verse_number: 40,
       words: [
         "They",
-        "defraud",
+        "$pointing_down+eating",
         "widows",
         "of",
         "their",
