@@ -210,7 +210,7 @@ export function bible_glyph_chapter_jud01() {
           "$scales+thing",
           "of",
           "the",
-          "great",
+          "$top",
           "$sun.",
         ],
       },
