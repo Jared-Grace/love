@@ -685,7 +685,7 @@ export function bible_glyph_chapter_mat05() {
           "$no_entry",
           "get",
           "out",
-          "until",
+          "$finish",
           "you",
           "have",
           "paid",
