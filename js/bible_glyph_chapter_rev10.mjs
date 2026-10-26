@@ -235,7 +235,7 @@ export function bible_glyph_chapter_rev10() {
           "$voice",
           "of",
           "$pin",
-          "seventh",
+          "$seven+describing",
           "$angel,",
           "when",
           "he",
