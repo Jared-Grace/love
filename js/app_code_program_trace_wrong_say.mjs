@@ -12,8 +12,8 @@ import { null_not_is } from "./null_not_is.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_index_of } from "./text_index_of.mjs";
 import { text_index_of_last } from "./text_index_of_last.mjs";
-import { text_slice } from "./text_slice.mjs";
 import { add } from "./add.mjs";
+import { text_slice } from "./text_slice.mjs";
 import { text_to } from "./text_to.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
@@ -69,8 +69,11 @@ export function app_code_program_trace_wrong_say(question, answer, choice) {
       let t = text_to(condition);
       code_add(t);
       let alternate = property_get(entry, "alternate");
+      ("2026-10-26: a while's line is checked again after every pass, so each check is said where it happens, and a false one ends the loop rather than skipping lines");
       if (condition) {
         words = words + ", so the lines inside its { } run";
+      } else if (equal(alternate, "loop")) {
+        words = words + ", so the loop stops";
       } else if (equal(alternate, "none")) {
         words = words + ", so the lines inside its { } are skipped";
       } else {

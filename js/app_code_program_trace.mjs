@@ -1,5 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
+import { less_than } from "./less_than.mjs";
+import { list_size } from "./list_size.mjs";
+import { error } from "./error.mjs";
 import { app_code_program_trace_statement } from "./app_code_program_trace_statement.mjs";
 import { app_code_program_trace_line } from "./app_code_program_trace_line.mjs";
 import { list_add } from "./list_add.mjs";
@@ -22,6 +25,15 @@ export function app_code_program_trace(code) {
   function statement_run(node) {
     "one statement run, its lines added to the trace in the order they run: its own line once what it does is done, then the lines of any { ... } it picks";
     "an expression line begins where its expression does, so the line added for it is the one its expression is on";
+    "2026-10-26: a while can run forever, so a program whose run grows past this many lines is refused rather than followed without end; no lesson's loop comes near it";
+    let lines_most = 10000;
+    let b = list_size(trace);
+    if (less_than(lines_most, b)) {
+      error({
+        message: "this program runs too many lines to follow",
+        code,
+      });
+    }
     let actions = [];
     let run = app_code_program_trace_statement(node, actions, code, values);
     let line = app_code_program_trace_line(node, code);
@@ -31,7 +43,7 @@ export function app_code_program_trace(code) {
     };
     list_add(trace, entry);
     let type = property_get(node, "type");
-    if (equal(type, "IfStatement")) {
+    if (equal(type, "IfStatement") || equal(type, "WhileStatement")) {
       ("an if's line also says what its condition came to, since a condition written out as true or false is not evaluated and so is in none of its actions; a guide saying why the next line runs reads it here");
       let value = property_get(run, "condition");
       property_set(entry, "condition", value);
