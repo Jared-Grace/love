@@ -709,7 +709,7 @@ export function bible_glyph_chapter_gen32() {
           "the",
           "man",
           "$eye",
-          "that",
+          "$pointing",
           "he",
           "could",
           "$no_entry",
