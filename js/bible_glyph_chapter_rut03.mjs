@@ -128,7 +128,7 @@ export function bible_glyph_chapter_rut03() {
           "and",
           "uncover",
           "his",
-          "feet,",
+          "$foot+round_pushpin,",
           "and",
           "lie",
           "down,",
