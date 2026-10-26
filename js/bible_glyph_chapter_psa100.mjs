@@ -118,7 +118,7 @@ export function bible_glyph_chapter_psa100() {
           "and",
           "His",
           "faithfulness",
-          "continues",
+          "$finish",
           "through",
           "all",
           "generations.",
