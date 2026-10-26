@@ -510,7 +510,7 @@ export function bible_glyph_chapter_luk24() {
           "it",
           "is",
           "the",
-          "third",
+          "$third_place",
           "$sun",
           "$away",
           "these",
