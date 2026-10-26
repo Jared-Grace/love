@@ -228,7 +228,7 @@ export function bible_glyph_chapter_rev10() {
         words: [
           "$curving_up",
           "$tray_in",
-          "the",
+          "$pin",
           "$sun",
           "of",
           "the",
