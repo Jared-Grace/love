@@ -118,10 +118,10 @@ export function app_code_lesson_statement_name_meeting_ended() {
     return chip;
   }
   let spaced_at_most = js_code_binary_spaced_nb("", at_most, "");
-  function check_worked(ended, started) {
+  function check_worked(ended_inner, started) {
     "ended <= started as one code chip, the first meeting's end in the end colour and the second's start in the start colour";
     let chip = app_code_explain_code_colored_inline(
-      [ended, spaced_at_most, started],
+      [ended_inner, spaced_at_most, started],
       [end_color, plain, start_color],
     );
     return chip;
