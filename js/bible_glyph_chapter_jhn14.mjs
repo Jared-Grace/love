@@ -403,7 +403,7 @@ export function bible_glyph_chapter_jhn14() {
           "ask",
           "Me",
           "for",
-          "anything",
+          "$joker",
           "$tray_in",
           "My",
           "$name_tag,",
