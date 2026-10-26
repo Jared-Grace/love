@@ -259,7 +259,7 @@ export function bible_glyph_chapter_jdg13() {
           "and",
           "$eating",
           "$no_entry",
-          "anything",
+          "$all",
           "unclean,",
           "because",
           "the",
