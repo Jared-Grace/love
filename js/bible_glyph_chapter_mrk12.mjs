@@ -1120,7 +1120,7 @@ export function bible_glyph_chapter_mrk12() {
         "$pin",
         "$crowd",
         "putting",
-        "money",
+        "$bronze",
         "into",
         "it.",
         "$plus",
