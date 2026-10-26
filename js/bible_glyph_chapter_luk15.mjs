@@ -182,7 +182,7 @@ export function bible_glyph_chapter_luk15() {
         "who",
         "have",
         "$no_entry",
-        "need",
+        "$sos_button",
         "to",
         "repent.",
       ],
