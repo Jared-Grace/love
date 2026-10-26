@@ -82,7 +82,7 @@ export function bible_glyph_chapter_mrk10() {
         "did",
         "$fishing_pole+proper_name",
         "command",
-        "you?”",
+        "$you?”",
       ],
     },
     {
