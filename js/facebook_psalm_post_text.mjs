@@ -10,8 +10,8 @@ export async function facebook_psalm_post_text(description_path) {
   let title = lines[0];
   let passage = title.split(" (BSB)")[0];
   function lambda(line) {
-    let r = /^\d+ /.test(line);
-    return r;
+    let r_inner = /^\d+ /.test(line);
+    return r_inner;
   }
   let verses = lines.filter(lambda);
   if (equal(verses.length, 0)) {
