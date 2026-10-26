@@ -1139,7 +1139,7 @@ export function bible_glyph_chapter_luk07() {
         "$pointing_back+pointing_back,",
         "in",
         "$speech,",
-        "“If",
+        "“$traffic_light",
         "this",
         "man",
         "were",
