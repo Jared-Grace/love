@@ -676,7 +676,7 @@ export function bible_glyph_chapter_1jn03() {
           "He",
           "remains",
           "$tray_in",
-          "us:",
+          "$me:",
           "$tray_out",
           "the",
           "$wind",
