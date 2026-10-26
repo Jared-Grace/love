@@ -280,7 +280,7 @@ export function bible_glyph_chapter_jhn14() {
           "$tray_in",
           "Me?",
           "$pin",
-          "words",
+          "$speech+thing",
           "I",
           "$speech",
           "to",
