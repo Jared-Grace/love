@@ -120,7 +120,7 @@ export function bible_glyph_chapter_jhn20() {
           "$crowd+round_pushpin,",
           "$plus",
           "$pin",
-          "other",
+          "$plus+one",
           "$learner",
           "outran",
           "$rock+proper_name",
