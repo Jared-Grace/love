@@ -417,7 +417,7 @@ export function bible_glyph_chapter_rut03() {
           "at",
           "his",
           "$foot+round_pushpin",
-          "until",
+          "$finish",
           "morning,",
           "but",
           "she",
