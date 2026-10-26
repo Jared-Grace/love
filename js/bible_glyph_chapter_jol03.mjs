@@ -418,7 +418,7 @@ export function bible_glyph_chapter_jol03() {
         verse_number: 15,
         words: [
           "The",
-          "sun",
+          "$sun_with_face",
           "and",
           "moon",
           "will",
