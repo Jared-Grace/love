@@ -730,7 +730,7 @@ export function bible_glyph_chapter_jer26() {
           "against",
           "them?",
           "But",
-          "we",
+          "$me",
           "are",
           "about",
           "to",
