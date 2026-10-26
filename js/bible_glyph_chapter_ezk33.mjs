@@ -1105,7 +1105,7 @@ export function bible_glyph_chapter_ezk33() {
           "$mouth",
           "about",
           "you",
-          "near",
+          "$children_crossing",
           "the",
           "walls",
           "and",
