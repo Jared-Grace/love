@@ -311,7 +311,7 @@ export function bible_glyph_chapter_jol03() {
         words: [
           "$footprints",
           "$running+fast_forward+doing,",
-          "all",
+          "$all",
           "you",
           "surrounding",
           "$map,",
