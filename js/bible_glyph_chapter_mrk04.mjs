@@ -558,7 +558,7 @@ export function bible_glyph_chapter_mrk04() {
           "$down_arrow",
           "a",
           "$basket+triangular_ruler",
-          "or",
+          "$shuffle",
           "$down_arrow",
           "a",
           "bed?",
