@@ -632,7 +632,7 @@ export function bible_glyph_chapter_gen03() {
           "$turn_back",
           "to",
           "the",
-          "ground,",
+          "$brown_square,",
           "because",
           "$tray_out",
           "it",
