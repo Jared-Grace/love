@@ -837,7 +837,7 @@ export function bible_glyph_chapter_mat05() {
           "a",
           "certificate",
           "of",
-          "divorce.",
+          "$away+ring+thing.",
         ],
       },
       {
