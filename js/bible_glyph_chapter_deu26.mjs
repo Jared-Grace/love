@@ -484,7 +484,7 @@ export function bible_glyph_chapter_deu26() {
           "fatherless,",
           "and",
           "the",
-          "widow,",
+          "$widow,",
           "according",
           "to",
           "all",
