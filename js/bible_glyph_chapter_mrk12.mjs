@@ -683,7 +683,7 @@ export function bible_glyph_chapter_mrk12() {
         "have",
         "you",
         "$no_entry",
-        "read",
+        "$open_book",
         "$tray_in",
         "the",
         "Book",
