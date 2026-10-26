@@ -238,7 +238,7 @@ export function bible_glyph_chapter_jdg13() {
           "$speech",
           "to",
           "me,",
-          "‘Behold,",
+          "‘$exclamation,",
           "you",
           "will",
           "conceive",
