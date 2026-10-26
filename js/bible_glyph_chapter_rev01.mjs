@@ -30,7 +30,7 @@ export function bible_glyph_chapter_rev01() {
           "$pointing_back",
           "$kneeling",
           "what",
-          "must",
+          "$knot",
           "soon",
           "come",
           "to",
