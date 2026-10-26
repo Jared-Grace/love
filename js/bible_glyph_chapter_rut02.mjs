@@ -147,7 +147,7 @@ export function bible_glyph_chapter_rut02() {
         verse_number: 5,
         words: [
           "And",
-          "Boaz",
+          "$field+sheaf_of_rice+proper_name",
           "$speech",
           "the",
           "foreman",
