@@ -393,7 +393,7 @@ export function bible_glyph_chapter_jol03() {
         verse_number: 14,
         words: [
           "$crowd+loudspeaker,",
-          "multitudes",
+          "$crowd+loudspeaker",
           "in",
           "the",
           "valley",
