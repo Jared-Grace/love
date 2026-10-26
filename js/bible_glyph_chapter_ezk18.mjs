@@ -641,7 +641,7 @@ export function bible_glyph_chapter_ezk18() {
           "$ruler+thing",
           "of",
           "the",
-          "righteous",
+          "$ruler",
           "man",
           "will",
           "fall",
