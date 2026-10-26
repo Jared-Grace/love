@@ -26,7 +26,7 @@ export function bible_glyph_chapter_jhn14() {
           "troubled.",
           "You",
           "$anchor+doing",
-          "in",
+          "$toward+tray_in",
           "$heart_on_fire;",
           "$plus",
           "$anchor+doing",
