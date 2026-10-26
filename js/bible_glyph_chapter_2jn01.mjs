@@ -59,7 +59,7 @@ export function bible_glyph_chapter_2jn01() {
           "will",
           "be",
           "with",
-          "us",
+          "$me",
           "$hourglass:",
         ],
       },
