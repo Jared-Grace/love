@@ -152,7 +152,7 @@ export function bible_glyph_chapter_2jn01() {
         verse_number: 6,
         words: [
           "$plus",
-          "this",
+          "$flashlight",
           "is",
           "$heart_red,",
           "that",
