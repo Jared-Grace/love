@@ -802,7 +802,7 @@ export function bible_glyph_chapter_mrk04() {
           "a",
           "mustard",
           "seed,",
-          "which,",
+          "$back+flashlight,",
           "when",
           "sown",
           "on",
