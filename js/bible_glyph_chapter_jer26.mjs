@@ -372,7 +372,7 @@ export function bible_glyph_chapter_jer26() {
           "$door",
           "of",
           "the",
-          "New",
+          "$new_button",
           "$gate",
           "of",
           "the",
