@@ -154,7 +154,7 @@ export function bible_glyph_chapter_3jn01() {
       {
         verse_number: 7,
         words: [
-          "For",
+          "$information",
           "they",
           "went",
           "out",
