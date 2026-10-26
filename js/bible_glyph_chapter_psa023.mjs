@@ -77,7 +77,7 @@ export function bible_glyph_chapter_psa023() {
           "$walking",
           "through",
           "the",
-          "valley",
+          "$valley",
           "of",
           "the",
           "shadow",
