@@ -727,7 +727,7 @@ export function bible_glyph_chapter_jhn09() {
           "Do",
           "$plus",
           "you",
-          "want",
+          "$shooting_star+doing",
           "to",
           "become",
           "His",
