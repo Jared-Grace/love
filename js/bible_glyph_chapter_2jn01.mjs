@@ -104,7 +104,7 @@ export function bible_glyph_chapter_2jn01() {
           "have",
           "found",
           "$tray_out",
-          "your",
+          "$you",
           "$child",
           "$walking",
           "$tray_in",
