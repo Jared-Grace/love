@@ -658,7 +658,7 @@ export function bible_glyph_chapter_mat05() {
           "over",
           "to",
           "the",
-          "judge,",
+          "$scales+doer,",
           "$plus",
           "the",
           "judge",
