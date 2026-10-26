@@ -189,7 +189,7 @@ export function bible_glyph_chapter_1th01() {
           "example",
           "to",
           "all",
-          "the",
+          "$pin",
           "$anchor+doing",
           "$tray_in",
           "$proper_name$Macedonia",
