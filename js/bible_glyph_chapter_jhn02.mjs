@@ -527,7 +527,7 @@ export function bible_glyph_chapter_jhn02() {
           "$pointing_back",
           "up",
           "$tray_in",
-          "three",
+          "$three",
           "$sun?”",
         ],
       },
