@@ -280,7 +280,7 @@ export function bible_glyph_chapter_gen03() {
           "the",
           "$i_am",
           "$heart_on_fire",
-          "among",
+          "$radio_button",
           "the",
           "$tree",
           "of",
