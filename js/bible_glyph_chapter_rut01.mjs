@@ -647,7 +647,7 @@ export function bible_glyph_chapter_rut01() {
           "me",
           "$hand+zero+manner.",
           "$flashlight+question",
-          "call",
+          "$waving_hand",
           "me",
           "$proper_name$Naomi?",
           "After",
