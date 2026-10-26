@@ -346,7 +346,7 @@ export function bible_glyph_chapter_luk15() {
         "he",
         "squandered",
         "$pointing_back",
-        "wealth",
+        "$house+money_bag",
         "in",
         "wild",
         "$sprout+doing.",
