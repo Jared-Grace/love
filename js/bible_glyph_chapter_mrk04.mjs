@@ -342,7 +342,7 @@ export function bible_glyph_chapter_mrk04() {
           "you",
           "$no_entry",
           "$lightbulb",
-          "this",
+          "$flashlight",
           "parable?",
           "$plus",
           "how",
