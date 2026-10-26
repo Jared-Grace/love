@@ -224,7 +224,7 @@ export function bible_glyph_chapter_jol01() {
       {
         verse_number: 8,
         words: [
-          "Wail",
+          "$crying_face+broken_heart+doing",
           "like",
           "a",
           "virgin",
