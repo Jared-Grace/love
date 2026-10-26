@@ -477,7 +477,7 @@ export function bible_glyph_chapter_jon01() {
           "they",
           "cried",
           "out",
-          "to",
+          "$toward",
           "the",
           "$i_am:",
           "Please,",
