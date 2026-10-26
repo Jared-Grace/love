@@ -968,7 +968,7 @@ export function bible_glyph_chapter_mat05() {
           "single",
           "$hair",
           "$white_circle",
-          "or",
+          "$shuffle",
           "black.",
         ],
       },
