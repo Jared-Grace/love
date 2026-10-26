@@ -135,7 +135,7 @@ export function bible_glyph_chapter_2jn01() {
           "$new_button",
           "$scroll,",
           "$curving_up",
-          "one",
+          "$back+flashlight",
           "we",
           "have",
           "had",
