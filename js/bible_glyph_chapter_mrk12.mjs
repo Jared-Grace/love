@@ -664,7 +664,7 @@ export function bible_glyph_chapter_mrk12() {
         "they",
         "will",
         "be",
-        "like",
+        "$likeness",
         "the",
         "$angel",
         "$tray_in",
