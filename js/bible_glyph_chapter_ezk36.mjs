@@ -1297,7 +1297,7 @@ export function bible_glyph_chapter_ezk36() {
           "$city+peace",
           "during",
           "her",
-          "appointed",
+          "$alarm_clock",
           "feasts,",
           "so",
           "will",
