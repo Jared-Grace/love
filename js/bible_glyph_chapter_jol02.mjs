@@ -504,7 +504,7 @@ export function bible_glyph_chapter_jol02() {
           "the",
           "$altar,",
           "$speech,",
-          "Spare",
+          "$pleading_face+eyes+doing",
           "Your",
           "$family,",
           "O",
