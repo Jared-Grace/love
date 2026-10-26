@@ -231,7 +231,7 @@ export function bible_glyph_chapter_jon04() {
           "$heart_on_fire",
           "$input_numbers+doing",
           "a",
-          "scorching",
+          "$sun+fire+describing",
           "$compass+right_arrow+thing",
           "$wind,",
           "and",
