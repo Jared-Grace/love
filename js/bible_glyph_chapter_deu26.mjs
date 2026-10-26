@@ -561,7 +561,7 @@ export function bible_glyph_chapter_deu26() {
           "from",
           "Your",
           "$sparkle+thing",
-          "habitation,",
+          "$house+bed,",
           "$tray_out",
           "the",
           "$sky,",
