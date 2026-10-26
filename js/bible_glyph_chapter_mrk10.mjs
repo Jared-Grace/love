@@ -336,7 +336,7 @@ export function bible_glyph_chapter_mrk10() {
         "does",
         "not",
         "$palm_up_hand+doing",
-        "the",
+        "$pin",
         "$castle",
         "of",
         "$heart_on_fire",
