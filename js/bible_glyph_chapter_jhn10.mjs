@@ -562,7 +562,7 @@ export function bible_glyph_chapter_jhn10() {
           "Can",
           "a",
           "demon",
-          "open",
+          "$unlocked",
           "the",
           "eyes",
           "of",
