@@ -1088,7 +1088,7 @@ export function bible_glyph_chapter_mrk12() {
       words: [
         "They",
         "$pointing_down+eating",
-        "widows",
+        "$widow",
         "of",
         "their",
         "$house,",
