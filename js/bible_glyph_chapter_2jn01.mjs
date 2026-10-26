@@ -17,7 +17,7 @@ export function bible_glyph_chapter_2jn01() {
         verse_number: 1,
         words: [
           "The",
-          "elder,",
+          "$old_man,",
           "To",
           "the",
           "chosen",
