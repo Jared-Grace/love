@@ -978,7 +978,7 @@ export function bible_glyph_chapter_mrk05() {
         "people",
         "weeping",
         "$plus",
-        "wailing",
+        "$crying_face+loudspeaker+doing",
         "loudly.",
       ],
     },
