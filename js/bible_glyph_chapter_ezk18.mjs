@@ -821,7 +821,7 @@ export function bible_glyph_chapter_ezk18() {
           "$no_entry",
           "just.’",
           "$ear",
-          "now,",
+          "$pleading,",
           "O",
           "$house",
           "of",
