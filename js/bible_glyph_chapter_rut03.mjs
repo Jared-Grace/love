@@ -388,7 +388,7 @@ export function bible_glyph_chapter_rut03() {
           "he",
           "does",
           "$no_entry",
-          "want",
+          "$smiling_face_with_hearts+doing",
           "to",
           "redeem",
           "you,",
