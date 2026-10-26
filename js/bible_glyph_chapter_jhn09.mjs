@@ -786,7 +786,7 @@ export function bible_glyph_chapter_jhn09() {
           "answered,",
           "That",
           "is",
-          "remarkable",
+          "$astonished+describing",
           "$information.",
           "You",
           "do",
