@@ -210,7 +210,7 @@ export function bible_glyph_chapter_1jn02() {
           "Then",
           "$repeat,",
           "a",
-          "new",
+          "$new_button",
           "$scroll",
           "I",
           "am",
