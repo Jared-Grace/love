@@ -263,7 +263,7 @@ export function bible_glyph_chapter_luk02() {
         "be",
         "for",
         "all",
-        "the",
+        "$pin",
         "$family.",
       ],
     },
