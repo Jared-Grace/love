@@ -485,7 +485,7 @@ export function bible_glyph_chapter_luk15() {
         "$sky",
         "$plus",
         "against",
-        "you.",
+        "$you.",
       ],
     },
     {
