@@ -1108,7 +1108,7 @@ export function bible_glyph_chapter_mrk10() {
         "$plus",
         "when",
         "$pin",
-        "ten",
+        "$ten",
         "$ear",
         "it,",
         "they",
