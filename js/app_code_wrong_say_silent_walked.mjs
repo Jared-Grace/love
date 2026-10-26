@@ -22,7 +22,7 @@ export function app_code_wrong_say_silent_walked() {
     let lesson = fn();
     let asked = 0;
     let said = 0;
-    for (let round = 0; less_than(round, 2); round++) {
+    for (let pass = 0; less_than(pass, 2); pass++) {
       let batch = property_get(lesson, "batch");
       for (let qa of batch()) {
         let exercises = property_get(qa, "exercises");
