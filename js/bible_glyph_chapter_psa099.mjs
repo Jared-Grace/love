@@ -46,7 +46,7 @@ export function bible_glyph_chapter_psa099() {
           "is",
           "exalted",
           "$pointing_up",
-          "all",
+          "$all",
           "the",
           "$family.",
         ],
