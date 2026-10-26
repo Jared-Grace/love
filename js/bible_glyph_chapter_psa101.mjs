@@ -173,7 +173,7 @@ export function bible_glyph_chapter_psa101() {
           "one",
           "who",
           "$hammer+doing",
-          "deceit",
+          "$lying_face+right_arrow+thing",
           "shall",
           "$person+house",
           "in",
