@@ -876,7 +876,7 @@ export function bible_glyph_chapter_1ki13() {
           "$road,",
           "with",
           "the",
-          "donkey",
+          "$donkey",
           "and",
           "the",
           "$lion",
