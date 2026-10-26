@@ -718,7 +718,7 @@ export function bible_glyph_chapter_gen03() {
           "$thumbs_down.",
           "And",
           "$watch,",
-          "lest",
+          "$no_entry+traffic_light",
           "he",
           "reach",
           "out",
