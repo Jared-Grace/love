@@ -633,7 +633,7 @@ export function bible_glyph_chapter_rev01() {
           "$angel",
           "of",
           "the",
-          "seven",
+          "$seven",
           "$church,",
           "$plus",
           "the",
