@@ -891,7 +891,7 @@ export function bible_glyph_chapter_mrk04() {
           "$mouth",
           "to",
           "$pointing_back,",
-          "but",
+          "$curving_right",
           "privately",
           "He",
           "explained",
