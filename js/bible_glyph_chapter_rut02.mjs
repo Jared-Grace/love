@@ -421,7 +421,7 @@ export function bible_glyph_chapter_rut02() {
           "of",
           "$wrestling+heart_on_fire,",
           "under",
-          "whose",
+          "$back+flashlight",
           "wings",
           "you",
           "have",
