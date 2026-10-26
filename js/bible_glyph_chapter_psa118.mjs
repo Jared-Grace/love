@@ -442,7 +442,7 @@ export function bible_glyph_chapter_psa118() {
           "$stone",
           "the",
           "builders",
-          "rejected",
+          "$gesturing_no+throwing+doing",
           "has",
           "become",
           "the",
