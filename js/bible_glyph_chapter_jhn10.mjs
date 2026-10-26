@@ -597,7 +597,7 @@ export function bible_glyph_chapter_jhn10() {
           "was",
           "$walking",
           "$tray_in",
-          "the",
+          "$pin",
           "temple",
           "courts,",
           "$tray_in",
