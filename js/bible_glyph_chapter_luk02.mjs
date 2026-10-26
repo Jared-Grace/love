@@ -1055,7 +1055,7 @@ export function bible_glyph_chapter_luk02() {
         "$city+peace",
         "for",
         "$pin",
-        "Feast",
+        "$party_popper",
         "of",
         "$pin",
         "Passover.",
