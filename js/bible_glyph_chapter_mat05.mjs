@@ -887,7 +887,7 @@ export function bible_glyph_chapter_mat05() {
           "$speech",
           "to",
           "$pin",
-          "ancients,",
+          "$clapper_board+describing,",
           "$no_entry",
           "break",
           "your",
