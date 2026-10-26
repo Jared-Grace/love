@@ -253,7 +253,7 @@ export function bible_glyph_chapter_mrk04() {
           "was",
           "$one+describing,",
           "those",
-          "around",
+          "$clockwise_arrows",
           "$pointing_back",
           "with",
           "the",
