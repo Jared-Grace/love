@@ -301,7 +301,7 @@ export function bible_glyph_chapter_jon04() {
           "$i_am",
           "$speech,",
           "You",
-          "cared",
+          "$pleading_face+eyes+doing",
           "about",
           "the",
           "plant,",
