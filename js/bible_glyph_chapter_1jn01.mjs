@@ -162,7 +162,7 @@ export function bible_glyph_chapter_1jn01() {
           "$away",
           "$pointing_back",
           "$plus",
-          "announce",
+          "$newspaper",
           "to",
           "you:",
           "$heart_on_fire",
