@@ -770,7 +770,7 @@ export function bible_glyph_chapter_gen01() {
           "in",
           "His",
           "own",
-          "image;",
+          "$framed_picture;",
           "in",
           "the",
           "image",
