@@ -809,7 +809,7 @@ export function bible_glyph_chapter_jhn01() {
           "there",
           "$repeat",
           "with",
-          "two",
+          "$two",
           "of",
           "$pointing_back’s",
           "$learner$s.",
