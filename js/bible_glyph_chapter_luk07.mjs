@@ -110,7 +110,7 @@ export function bible_glyph_chapter_luk07() {
         "$information",
         "he",
         "$heart_red+doing",
-        "our",
+        "$me",
         "$map",
         "$plus",
         "$pointing_back",
