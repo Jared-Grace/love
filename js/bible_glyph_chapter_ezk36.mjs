@@ -1302,7 +1302,7 @@ export function bible_glyph_chapter_ezk36() {
           "$right_arrow",
           "will",
           "the",
-          "ruined",
+          "$desert+describing",
           "$city",
           "be",
           "filled",
