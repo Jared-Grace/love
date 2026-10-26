@@ -906,7 +906,7 @@ export function bible_glyph_chapter_mrk05() {
         "$flashlight+question",
         "$weary_face+repeat+doing",
         "the",
-        "Teacher",
+        "$teacher",
         "any",
         "longer?”",
       ],
