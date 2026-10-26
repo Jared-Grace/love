@@ -939,7 +939,7 @@ export function bible_glyph_chapter_luk02() {
         "$pointing_back",
         "was",
         "a",
-        "widow",
+        "$widow",
         "to",
         "the",
         "age",
