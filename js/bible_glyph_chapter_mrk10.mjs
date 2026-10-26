@@ -1010,7 +1010,7 @@ export function bible_glyph_chapter_mrk10() {
         "do",
         "$no_entry",
         "$lightbulb",
-        "what",
+        "$flashlight+question",
         "you",
         "are",
         "asking.",
