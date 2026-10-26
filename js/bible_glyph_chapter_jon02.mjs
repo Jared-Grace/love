@@ -18,7 +18,7 @@ export function bible_glyph_chapter_jon02() {
           "$fish,",
           "$dove+proper_name",
           "$hands_praying",
-          "to",
+          "$toward",
           "the",
           "$i_am",
           "his",
