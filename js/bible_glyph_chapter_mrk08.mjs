@@ -474,7 +474,7 @@ export function bible_glyph_chapter_mrk08() {
           "five",
           "$bread",
           "for",
-          "the",
+          "$pin",
           "five",
           "thousand,",
           "how",
