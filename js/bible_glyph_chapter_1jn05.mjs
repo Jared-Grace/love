@@ -53,7 +53,7 @@ export function bible_glyph_chapter_1jn05() {
           "$pointing",
           "we",
           "$heart_red+doing",
-          "the",
+          "$pin",
           "$child",
           "of",
           "$heart_on_fire:",
