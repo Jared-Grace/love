@@ -526,7 +526,7 @@ export function bible_glyph_chapter_1jn02() {
           "$end_arrow+describing",
           "$clock,",
           "$plus",
-          "just",
+          "$likeness",
           "as",
           "you",
           "have",
