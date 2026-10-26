@@ -430,7 +430,7 @@ export function bible_glyph_chapter_rev01() {
           "$plus",
           "$hair",
           "were",
-          "white",
+          "$white_circle",
           "like",
           "wool,",
           "as",
