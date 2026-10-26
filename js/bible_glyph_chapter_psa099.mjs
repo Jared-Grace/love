@@ -78,7 +78,7 @@ export function bible_glyph_chapter_psa099() {
           "$you",
           "have",
           "established",
-          "equity;",
+          "$straight_ruler+thumbs_up+thing;",
           "$you",
           "have",
           "$hammer+doing",
