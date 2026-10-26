@@ -616,7 +616,7 @@ export function bible_glyph_chapter_oba01() {
           "$house",
           "of",
           "$proper_name$Esau,",
-          "for",
+          "$pointing",
           "the",
           "$i_am",
           "has",
