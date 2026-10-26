@@ -515,7 +515,7 @@ export function bible_glyph_chapter_1jn04() {
           "$fear",
           "$raised_fist",
           "$scales+fist.",
-          "The",
+          "$pin",
           "one",
           "who",
           "$fear+doing$s",
