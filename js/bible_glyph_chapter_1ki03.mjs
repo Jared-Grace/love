@@ -911,7 +911,7 @@ export function bible_glyph_chapter_1ki03() {
           "for",
           "her",
           "$son,",
-          "Please,",
+          "$pleading_face+manner,",
           "my",
           "$crown,",
           "$hands_giving",
