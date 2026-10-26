@@ -393,7 +393,7 @@ export function bible_glyph_chapter_jhn20() {
           "$pointing_back",
           "off,",
           "$speech",
-          "me",
+          "$me",
           "where",
           "you",
           "have",
