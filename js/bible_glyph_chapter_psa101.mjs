@@ -183,7 +183,7 @@ export function bible_glyph_chapter_psa101() {
           "one",
           "who",
           "$mouth",
-          "lies",
+          "$lying_face",
           "shall",
           "stand",
           "before",
