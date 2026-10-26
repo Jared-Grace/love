@@ -146,7 +146,7 @@ export function bible_glyph_chapter_gen03() {
           "$eyes",
           "will",
           "be",
-          "opened,",
+          "$eye+unlocked+doing,",
           "and",
           "you",
           "will",
