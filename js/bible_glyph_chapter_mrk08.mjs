@@ -771,7 +771,7 @@ export function bible_glyph_chapter_mrk08() {
           "$speech",
           "to",
           "anyone",
-          "about",
+          "$clockwise_arrows",
           "$pointing_back.",
         ],
       },
