@@ -181,7 +181,7 @@ export function bible_glyph_chapter_jhn20() {
         words: [
           "$plus",
           "$pin",
-          "cloth",
+          "$scarf+droplet",
           "that",
           "had",
           "been",
