@@ -815,7 +815,7 @@ export function bible_glyph_chapter_mrk04() {
           "all",
           "the",
           "$seed",
-          "upon",
+          "$pointing_up",
           "the",
           "$earth.",
         ],
