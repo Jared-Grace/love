@@ -51,7 +51,7 @@ export function bible_glyph_chapter_isa01() {
           "ear,",
           "O",
           "$earth,",
-          "for",
+          "$pointing",
           "the",
           "$i_am",
           "has",
