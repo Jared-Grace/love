@@ -774,7 +774,7 @@ export function bible_glyph_chapter_rut02() {
           "you",
           "to",
           "work",
-          "with",
+          "$linked_paperclips",
           "his",
           "$girl",
           "women,",
