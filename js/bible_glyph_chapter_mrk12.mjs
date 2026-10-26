@@ -508,7 +508,7 @@ export function bible_glyph_chapter_mrk12() {
         "$brother",
         "$skull",
         "$plus",
-        "leaves",
+        "$pointing_down+puzzle_piece+doing",
         "a",
         "$woman",
         "$plus",
