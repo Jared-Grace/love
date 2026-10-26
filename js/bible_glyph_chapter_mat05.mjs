@@ -775,7 +775,7 @@ export function bible_glyph_chapter_mat05() {
           "be",
           "thrown",
           "into",
-          "hell.",
+          "$valley+proper_name.",
         ],
       },
       {
