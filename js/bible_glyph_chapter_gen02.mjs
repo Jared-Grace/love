@@ -581,7 +581,7 @@ export function bible_glyph_chapter_gen02() {
         words: [
           "The",
           "$person",
-          "gave",
+          "$waving_hand",
           "$name_tag",
           "to",
           "all",
