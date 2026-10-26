@@ -432,7 +432,7 @@ export function bible_glyph_chapter_jhn09() {
           "$speech",
           "to",
           "the",
-          "blind",
+          "$person_with_white_cane",
           "man",
           "again,",
           "What",
