@@ -630,7 +630,7 @@ export function bible_glyph_chapter_1jn02() {
           "you",
           "$no_entry",
           "$lightbulb",
-          "the",
+          "$pin",
           "$check,",
           "but",
           "$pointing",
