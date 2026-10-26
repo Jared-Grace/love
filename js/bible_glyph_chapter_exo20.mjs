@@ -146,7 +146,7 @@ export function bible_glyph_chapter_exo20() {
           "$gift",
           "to",
           "a",
-          "thousand",
+          "$ten+all",
           "generations",
           "of",
           "those",
