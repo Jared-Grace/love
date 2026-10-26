@@ -693,7 +693,7 @@ export function bible_glyph_chapter_mrk11() {
         "$plus",
         "$back+clock",
         "you",
-        "stand",
+        "$person+round_pushpin+doing",
         "to",
         "$hands_praying,",
         "forgive",
