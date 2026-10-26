@@ -1010,7 +1010,7 @@ export function bible_glyph_chapter_mrk08() {
           "$pointing_up+flushed",
           "of",
           "$pointing_back",
-          "when",
+          "$back+clock",
           "He",
           "$footprints",
           "$tray_in",
