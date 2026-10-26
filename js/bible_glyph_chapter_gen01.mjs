@@ -432,7 +432,7 @@ export function bible_glyph_chapter_gen01() {
           "greater",
           "light",
           "to",
-          "rule",
+          "$joystick+thing",
           "the",
           "day,",
           "and",
