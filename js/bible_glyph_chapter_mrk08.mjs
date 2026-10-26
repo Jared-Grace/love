@@ -105,7 +105,7 @@ export function bible_glyph_chapter_mrk08() {
           "desolate",
           "place",
           "could",
-          "anyone",
+          "$joker",
           "find",
           "enough",
           "$bread",
