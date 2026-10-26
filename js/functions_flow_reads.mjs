@@ -87,15 +87,15 @@ export async function functions_flow_reads() {
   async function read_one(f_name) {
     let stamp = stamp_of(f_name);
     if (kept_holds(f_name, stamp)) {
-      let kept = entries_before[f_name];
+      let kept_inner = entries_before[f_name];
       let read_kept = null;
-      if (not_equal(kept.read, null)) {
-        read_kept = js_flow_read_revive(kept.read);
+      if (not_equal(kept_inner.read, null)) {
+        read_kept = js_flow_read_revive(kept_inner.read);
       }
       let r2 = {
         f_name,
         read: read_kept,
-        kept,
+        kept: kept_inner,
         read_again: false,
       };
       return r2;
