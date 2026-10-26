@@ -534,7 +534,7 @@ export function bible_glyph_chapter_jhn02() {
       {
         verse_number: 21,
         words: [
-          "But",
+          "$curving_right",
           "He",
           "was",
           "$speech",
