@@ -609,7 +609,7 @@ export function bible_glyph_chapter_ezk36() {
           "was",
           "like",
           "the",
-          "uncleanness",
+          "$soap+no_entry+thing",
           "of",
           "a",
           "woman's",
