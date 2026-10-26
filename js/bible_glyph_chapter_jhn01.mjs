@@ -303,7 +303,7 @@ export function bible_glyph_chapter_jhn01() {
           "from",
           "the",
           "$father,",
-          "full",
+          "$battery+describing",
           "of",
           "$gift",
           "$plus",
