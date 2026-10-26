@@ -24,7 +24,7 @@ export function bible_glyph_chapter_mrk12() {
         "a",
         "vineyard,",
         "$plus",
-        "put",
+        "$clockwise_arrows+palm_down",
         "a",
         "wall",
         "around",
