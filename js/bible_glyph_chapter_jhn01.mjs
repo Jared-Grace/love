@@ -646,7 +646,7 @@ export function bible_glyph_chapter_jhn01() {
           "$pointing_back",
           "$plus",
           "$speech,",
-          "“Look,",
+          "“$exclamation,",
           "the",
           "Lamb",
           "of",
