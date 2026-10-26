@@ -485,7 +485,7 @@ export function bible_glyph_chapter_mrk04() {
           "the",
           "$lying_face+mouse_trap",
           "of",
-          "wealth,",
+          "$money_bag,",
           "$plus",
           "the",
           "desire",
