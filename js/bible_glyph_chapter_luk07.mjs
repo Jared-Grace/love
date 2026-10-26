@@ -420,7 +420,7 @@ export function bible_glyph_chapter_luk07() {
         "$speech",
         "to",
         "$you,",
-        "get",
+        "$person+pointing_up",
         "up.”",
       ],
     },
