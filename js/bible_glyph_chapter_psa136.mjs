@@ -100,7 +100,7 @@ export function bible_glyph_chapter_psa136() {
           "out",
           "the",
           "$earth",
-          "upon",
+          "$pointing_up",
           "the",
           "$water.",
           "His",
