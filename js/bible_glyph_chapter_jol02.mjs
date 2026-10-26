@@ -793,7 +793,7 @@ export function bible_glyph_chapter_jol02() {
           "locust",
           "-",
           "My",
-          "great",
+          "$top",
           "$raised_fist",
           "that",
           "I",
