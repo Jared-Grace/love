@@ -128,7 +128,7 @@ export function bible_glyph_chapter_psa099() {
           "$name_tag;",
           "they",
           "called",
-          "to",
+          "$toward",
           "the",
           "$i_am",
           "and",
