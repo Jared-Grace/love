@@ -297,7 +297,7 @@ export function bible_glyph_chapter_rut03() {
           "have",
           "$zero+manner",
           "$walking",
-          "after",
+          "$next_track",
           "the",
           "younger",
           "men,",
