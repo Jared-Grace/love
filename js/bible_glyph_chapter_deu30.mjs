@@ -189,7 +189,7 @@ export function bible_glyph_chapter_deu30() {
           "to",
           "prosper",
           "and",
-          "multiply",
+          "$multiply+doing",
           "more",
           "than",
           "your",
