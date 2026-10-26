@@ -218,7 +218,7 @@ export function bible_glyph_chapter_mrk08() {
           "picked",
           "up",
           "$seven",
-          "basketfuls",
+          "$basket+bread",
           "of",
           "$bread+collision+thing",
           "pieces",
