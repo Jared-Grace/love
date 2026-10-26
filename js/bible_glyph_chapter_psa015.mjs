@@ -112,7 +112,7 @@ export function bible_glyph_chapter_psa015() {
           "his",
           "$silver",
           "at",
-          "interest,",
+          "$coin+chart_increasing,",
           "and",
           "does",
           "$no_entry",
