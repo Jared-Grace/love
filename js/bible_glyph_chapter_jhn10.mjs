@@ -764,7 +764,7 @@ export function bible_glyph_chapter_jhn10() {
           "picked",
           "up",
           "$stone",
-          "again",
+          "$repeat",
           "to",
           "stone",
           "$pointing_back.",
