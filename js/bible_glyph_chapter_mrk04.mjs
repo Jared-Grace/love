@@ -993,7 +993,7 @@ export function bible_glyph_chapter_mrk04() {
           "sleeping",
           "$pointing_up",
           "$pin",
-          "cushion.",
+          "$toward+person_gesturing_ok+thing.",
           "$plus",
           "they",
           "woke",
