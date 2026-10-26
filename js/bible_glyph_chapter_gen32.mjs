@@ -816,7 +816,7 @@ export function bible_glyph_chapter_gen32() {
           "Jacob",
           "requested,",
           "Please",
-          "tell",
+          "$newspaper",
           "me",
           "your",
           "$name_tag.",
