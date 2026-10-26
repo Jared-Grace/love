@@ -237,7 +237,7 @@ export function bible_glyph_chapter_mrk05() {
         "$military_helmet+all+crowd,",
         "$pointing",
         "we",
-        "are",
+        "$link",
         "$multiply.”",
       ],
     },
