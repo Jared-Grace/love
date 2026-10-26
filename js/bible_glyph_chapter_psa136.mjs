@@ -289,7 +289,7 @@ export function bible_glyph_chapter_psa136() {
         words: [
           "and",
           "slaughtered",
-          "mighty",
+          "$crown+mountain",
           "$king.",
           "His",
           "$gift",
