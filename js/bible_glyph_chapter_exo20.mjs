@@ -422,7 +422,7 @@ export function bible_glyph_chapter_exo20() {
           "$mountain",
           "enveloped",
           "in",
-          "smoke,",
+          "$fire+cloud+describing,",
           "the",
           "$family",
           "$eye",
