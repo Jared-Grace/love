@@ -380,7 +380,7 @@ export function bible_glyph_chapter_rev01() {
           "that",
           "was",
           "$mouth",
-          "with",
+          "$linked_paperclips",
           "me.",
           "$plus",
           "having",
