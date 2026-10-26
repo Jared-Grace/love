@@ -157,7 +157,7 @@ export function bible_glyph_chapter_psa115() {
           "do",
           "all",
           "who",
-          "trust",
+          "$anchor+doing",
           "in",
           "them.",
         ],
