@@ -1068,7 +1068,7 @@ export function bible_glyph_chapter_jhn04() {
           "$megaphone",
           "has",
           "$no_entry",
-          "honor",
+          "$heavy_dollar_sign",
           "$tray_in",
           "his",
           "$identification_card",
