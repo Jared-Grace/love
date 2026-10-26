@@ -196,7 +196,7 @@ export function bible_glyph_chapter_1jn02() {
           "This",
           "old",
           "$scroll",
-          "is",
+          "$link",
           "the",
           "$speech",
           "you",
