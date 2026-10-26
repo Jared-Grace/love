@@ -405,7 +405,7 @@ export function bible_glyph_chapter_rut02() {
           "$i_am",
           "$peace+doing",
           "your",
-          "work,",
+          "$hand+hammer,",
           "and",
           "may",
           "you",
