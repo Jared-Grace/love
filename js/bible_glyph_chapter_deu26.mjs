@@ -354,7 +354,7 @@ export function bible_glyph_chapter_deu26() {
           "$heart_on_fire",
           "and",
           "$bowing",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "your",
