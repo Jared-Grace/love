@@ -747,7 +747,7 @@ export function bible_glyph_chapter_jdg13() {
           "surely",
           "$skull+doing",
           "$skull+doing,",
-          "for",
+          "$pointing",
           "we",
           "have",
           "$eye",
