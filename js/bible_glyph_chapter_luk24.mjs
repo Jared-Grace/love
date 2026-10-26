@@ -1245,7 +1245,7 @@ export function bible_glyph_chapter_luk24() {
           "$toward+tray_in",
           "$city+peace",
           "$linked_paperclips",
-          "great",
+          "$top",
           "$smile.",
         ],
       },
