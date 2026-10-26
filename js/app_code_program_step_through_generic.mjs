@@ -728,11 +728,11 @@ export function app_code_program_step_through_generic(
           let name_piece = html_span_text(node_span, name_text);
           await html_opacity_animate(name_piece, "0", duration5);
           let node_value = app_code_expression_solved(node, node);
-          let written = null;
+          let written_inner = null;
           function value_room() {
             app_code_expression_replaced_set(node_span, node_value);
-            written = html_descendants_innermost(node_span);
-            for (let piece of written) {
+            written_inner = html_descendants_innermost(node_span);
+            for (let piece of written_inner) {
               html_style_opacity(piece, "0");
             }
           }
@@ -740,7 +740,7 @@ export function app_code_program_step_through_generic(
           await html_move_animate_settle(pieces, value_room, duration5);
           let rect2 = html_bounding_client_rect(node_span);
           await html_copy_fly_text_rect(source2, rect2, duration5);
-          for (let piece of written) {
+          for (let piece of written_inner) {
             html_style_opacity(piece, "1");
           }
         }
