@@ -117,7 +117,7 @@ export function bible_glyph_chapter_2th01() {
           "$plus",
           "$anchor",
           "$tray_in",
-          "all",
+          "$all",
           "the",
           "persecution",
           "$plus",
