@@ -70,7 +70,7 @@ export function bible_glyph_chapter_rut01() {
           "$name_tag",
           "of",
           "his",
-          "two",
+          "$two",
           "$son",
           "were",
           "$proper_name$Mahlon",
