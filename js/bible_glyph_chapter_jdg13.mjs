@@ -59,7 +59,7 @@ export function bible_glyph_chapter_jdg13() {
           "$proper_name$Zorah,",
           "of",
           "the",
-          "clan",
+          "$houses",
           "of",
           "the",
           "$proper_name$Danites,",
