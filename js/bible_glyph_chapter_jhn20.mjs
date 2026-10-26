@@ -830,7 +830,7 @@ export function bible_glyph_chapter_jhn20() {
           "$multiply",
           "$plus",
           "$plus+one",
-          "signs",
+          "$placard",
           "in",
           "the",
           "$face+tray_in",
