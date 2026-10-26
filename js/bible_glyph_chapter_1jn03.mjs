@@ -683,7 +683,7 @@ export function bible_glyph_chapter_1jn03() {
           "He",
           "has",
           "$hands_giving",
-          "us.",
+          "$me.",
         ],
       },
     ],
