@@ -70,7 +70,7 @@ export function bible_glyph_chapter_mrk11() {
         "has",
         "yet",
         "sat.",
-        "Untie",
+        "$free_button",
         "$pointing_back",
         "$plus",
         "bring",
