@@ -635,7 +635,7 @@ export function bible_glyph_chapter_luk24() {
           "the",
           "$oil",
           "to",
-          "suffer",
+          "$confounded_face",
           "$flashlight",
           "things",
           "$plus",
