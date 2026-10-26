@@ -108,7 +108,7 @@ export function bible_glyph_chapter_1jn03() {
           "$all",
           "who",
           "has",
-          "this",
+          "$flashlight",
           "$crossed_fingers",
           "in",
           "$pointing_back",
