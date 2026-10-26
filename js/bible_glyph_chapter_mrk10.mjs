@@ -706,7 +706,7 @@ export function bible_glyph_chapter_mrk10() {
         "in",
         "$speech",
         "to",
-        "you,",
+        "$you,",
         "there",
         "is",
         "$no_entry",
