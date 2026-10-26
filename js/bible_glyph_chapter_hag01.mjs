@@ -336,7 +336,7 @@ export function bible_glyph_chapter_hag01() {
           "$paw_prints,",
           "and",
           "on",
-          "all",
+          "$all",
           "the",
           "labor",
           "of",
