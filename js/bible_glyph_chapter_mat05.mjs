@@ -626,7 +626,7 @@ export function bible_glyph_chapter_mat05() {
           "$you",
           "$brother,",
           "$plus",
-          "then",
+          "$telescope+clock",
           "$footprints",
           "to",
           "offer",
