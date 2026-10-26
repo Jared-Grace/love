@@ -247,7 +247,7 @@ export function bible_glyph_chapter_1th01() {
           "$information",
           "$pointing_back",
           "themselves",
-          "report",
+          "$newspaper",
           "what",
           "kind",
           "of",
