@@ -188,7 +188,7 @@ export function bible_glyph_chapter_1ki13() {
           "out",
           "toward",
           "him",
-          "withered,",
+          "$fallen_leaf,",
           "so",
           "$back+flashlight",
           "he",
