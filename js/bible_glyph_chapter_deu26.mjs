@@ -332,7 +332,7 @@ export function bible_glyph_chapter_deu26() {
           "firstfruits",
           "of",
           "the",
-          "land",
+          "$brown_square",
           "that",
           "You,",
           "O",
