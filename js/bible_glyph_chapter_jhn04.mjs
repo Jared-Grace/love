@@ -1163,7 +1163,7 @@ export function bible_glyph_chapter_jhn04() {
           "to",
           "$pointing_back",
           "$plus",
-          "begged",
+          "$question",
           "Him",
           "to",
           "come",
