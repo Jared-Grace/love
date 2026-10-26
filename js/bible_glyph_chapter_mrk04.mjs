@@ -458,7 +458,7 @@ export function bible_glyph_chapter_mrk04() {
         words: [
           "$plus",
           "others",
-          "are",
+          "$link",
           "like",
           "the",
           "seed",
