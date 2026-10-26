@@ -201,7 +201,7 @@ export function bible_glyph_chapter_psa138() {
           "$hourglass",
           "-",
           "$no_entry",
-          "abandon",
+          "$palm_down+doing",
           "the",
           "works",
           "of",
