@@ -852,7 +852,7 @@ export function bible_glyph_chapter_jol02() {
           "that",
           "I",
           "am",
-          "present",
+          "$magnet+thing",
           "in",
           "$wrestling+heart_on_fire,",
           "and",
