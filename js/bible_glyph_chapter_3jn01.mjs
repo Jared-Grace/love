@@ -335,7 +335,7 @@ export function bible_glyph_chapter_3jn01() {
           "write",
           "to",
           "$you,",
-          "but",
+          "$curving_up",
           "I",
           "would",
           "$no_entry",
