@@ -197,7 +197,7 @@ export function bible_glyph_chapter_ezk18() {
           "He",
           "does",
           "$no_entry",
-          "commit",
+          "$supervillain",
           "$supervillain+thing,",
           "but",
           "$hands_giving$s",
