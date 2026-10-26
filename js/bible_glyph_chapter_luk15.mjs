@@ -231,7 +231,7 @@ export function bible_glyph_chapter_luk15() {
         "it,",
         "she",
         "calls",
-        "together",
+        "$safety_pin+waving_hand",
         "her",
         "$heart_orange",
         "$plus",
