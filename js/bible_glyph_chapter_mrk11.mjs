@@ -769,7 +769,7 @@ export function bible_glyph_chapter_mrk11() {
         "$flashlight+question",
         "$hands_giving",
         "You",
-        "the",
+        "$pin",
         "$key",
         "to",
         "$hammer",
