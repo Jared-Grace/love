@@ -524,7 +524,7 @@ export function bible_glyph_chapter_isa01() {
         verse_number: 18,
         words: [
           "$walking",
-          "now,",
+          "$pleading,",
           "let",
           "us",
           "reason",
