@@ -86,7 +86,7 @@ export function bible_glyph_chapter_2jn01() {
           "will",
           "be",
           "$linked_paperclips",
-          "us",
+          "$me",
           "$tray_in",
           "$check",
           "$plus",
