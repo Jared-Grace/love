@@ -542,7 +542,7 @@ export function bible_glyph_chapter_ezk18() {
           "practiced",
           "$fist+down_arrow+thing",
           "and",
-          "robbed",
+          "$supervillain",
           "his",
           "$brother,",
           "and",
