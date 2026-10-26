@@ -627,7 +627,7 @@ export function bible_glyph_chapter_mrk04() {
           "$ear.",
           "$tray_in",
           "the",
-          "measure",
+          "$triangular_ruler",
           "you",
           "use,",
           "it",
