@@ -74,7 +74,7 @@ export function bible_glyph_chapter_deu26() {
           "$hands_giving",
           "you,",
           "and",
-          "put",
+          "$palm_down",
           "them",
           "in",
           "a",
