@@ -151,7 +151,7 @@ export function bible_glyph_chapter_luk07() {
         "Yourself,",
         "$information",
         "I",
-        "am",
+        "$link",
         "$no_entry",
         "$abacus+check",
         "to",
