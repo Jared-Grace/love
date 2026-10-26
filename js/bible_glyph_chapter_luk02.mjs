@@ -278,7 +278,7 @@ export function bible_glyph_chapter_luk02() {
         "been",
         "born",
         "to",
-        "you",
+        "$you",
         "$tray_in",
         "the",
         "$city",
