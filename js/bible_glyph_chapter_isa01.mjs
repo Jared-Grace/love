@@ -507,7 +507,7 @@ export function bible_glyph_chapter_isa01() {
           "and",
           "correct",
           "the",
-          "oppressor.",
+          "$ninja+fist.",
           "Defend",
           "the",
           "fatherless",
