@@ -244,7 +244,7 @@ export function bible_glyph_chapter_jhn02() {
           "$pointing_back,",
           "“Every",
           "$person",
-          "serves",
+          "$palm_down",
           "the",
           "$thumbs_up",
           "wine",
