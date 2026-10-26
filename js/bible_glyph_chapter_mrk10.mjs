@@ -340,7 +340,7 @@ export function bible_glyph_chapter_mrk10() {
         "$castle",
         "of",
         "$heart_on_fire",
-        "like",
+        "$likeness",
         "a",
         "little",
         "child",
