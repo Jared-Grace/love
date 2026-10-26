@@ -165,7 +165,7 @@ export function bible_glyph_chapter_1th01() {
           "the",
           "$speech",
           "$tray_in",
-          "great",
+          "$multiply",
           "$clamp",
           "with",
           "the",
