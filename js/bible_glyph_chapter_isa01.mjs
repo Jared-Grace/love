@@ -434,7 +434,7 @@ export function bible_glyph_chapter_isa01() {
           "Me;",
           "I",
           "am",
-          "weary",
+          "$tired_face+doing",
           "of",
           "bearing",
           "them.",
