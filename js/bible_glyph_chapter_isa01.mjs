@@ -453,7 +453,7 @@ export function bible_glyph_chapter_isa01() {
           "prayer,",
           "I",
           "will",
-          "hide",
+          "$eyes+locked+doing",
           "My",
           "$eyes",
           "from",
