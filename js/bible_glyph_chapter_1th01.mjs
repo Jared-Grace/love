@@ -262,7 +262,7 @@ export function bible_glyph_chapter_1th01() {
           "to",
           "$heart_on_fire",
           "$away",
-          "idols",
+          "$moai",
           "to",
           "serve",
           "the",
