@@ -434,7 +434,7 @@ export function bible_glyph_chapter_jhn09() {
           "the",
           "$person_with_white_cane",
           "man",
-          "again,",
+          "$repeat,",
           "What",
           "do",
           "you",
