@@ -333,7 +333,7 @@ export function bible_glyph_chapter_luk02() {
         "great",
         "heavenly",
         "$military_helmet+star,",
-        "praising",
+        "$clapping_hands+doing",
         "$heart_on_fire",
         "$plus",
         "$speech,",
