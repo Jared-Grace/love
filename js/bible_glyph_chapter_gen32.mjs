@@ -215,7 +215,7 @@ export function bible_glyph_chapter_gen32() {
           "$traffic_light",
           "$proper_name$Esau",
           "$footprints",
-          "one",
+          "$one",
           "camp",
           "and",
           "attacks",
