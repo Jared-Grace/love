@@ -100,7 +100,7 @@ export function bible_glyph_chapter_rev01() {
           "the",
           "$alarm_clock",
           "is",
-          "near.",
+          "$magnet.",
         ],
       },
       {
