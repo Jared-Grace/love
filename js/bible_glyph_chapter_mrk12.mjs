@@ -865,7 +865,7 @@ export function bible_glyph_chapter_mrk12() {
         "$pointing",
         "$one",
         "God",
-        "is,",
+        "$link,",
         "$plus",
         "there",
         "is",
