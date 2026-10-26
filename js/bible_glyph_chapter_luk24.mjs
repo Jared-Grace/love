@@ -303,7 +303,7 @@ export function bible_glyph_chapter_luk24() {
           "$pointing_back",
           "$link",
           "$walking",
-          "to",
+          "$toward+tray_in",
           "a",
           "village",
           "$name_tag",
