@@ -582,7 +582,7 @@ export function bible_glyph_chapter_1jn04() {
         verse_number: 21,
         words: [
           "And",
-          "this",
+          "$flashlight",
           "$scroll",
           "we",
           "have",
