@@ -710,7 +710,7 @@ export function bible_glyph_chapter_mrk04() {
           "$sun,",
           "$plus",
           "$pin",
-          "seed",
+          "$seed+thing",
           "sprouts",
           "$plus",
           "grows,",
