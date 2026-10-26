@@ -1103,7 +1103,7 @@ export function bible_glyph_chapter_ezk36() {
           "to",
           "you.",
           "Be",
-          "ashamed",
+          "$flushed",
           "and",
           "disgraced",
           "for",
