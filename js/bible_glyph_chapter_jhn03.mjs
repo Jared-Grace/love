@@ -666,7 +666,7 @@ export function bible_glyph_chapter_jhn03() {
           "who",
           "$link",
           "$linked_paperclips",
-          "you",
+          "$you",
           "beyond",
           "the",
           "$pointing_down+proper_name,",
