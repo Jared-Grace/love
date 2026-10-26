@@ -631,7 +631,7 @@ export function bible_glyph_chapter_jhn02() {
           "He",
           "had",
           "$no_entry",
-          "need",
+          "$sos_button",
           "$pointing",
           "anyone",
           "should",
