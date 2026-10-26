@@ -940,7 +940,7 @@ export function bible_glyph_chapter_mrk04() {
           "$pointing_back",
           "with",
           "them,",
-          "since",
+          "$likeness",
           "He",
           "was",
           "already",
