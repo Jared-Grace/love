@@ -402,7 +402,7 @@ export function bible_glyph_chapter_mrk04() {
           "$plus",
           "some",
           "$link",
-          "like",
+          "$people_with_bunny_ears+manner",
           "the",
           "seed",
           "sown",
