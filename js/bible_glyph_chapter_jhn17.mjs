@@ -444,7 +444,7 @@ export function bible_glyph_chapter_jhn17() {
           "do",
           "$no_entry",
           "ask",
-          "that",
+          "$right_arrow+toward",
           "You",
           "$lifting",
           "$pointing_back",
