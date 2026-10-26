@@ -430,7 +430,7 @@ export function bible_glyph_chapter_1jn03() {
           "$face_with_symbols_on_mouth",
           "$pointing_back",
           "$brother",
-          "is",
+          "$link",
           "a",
           "$person+fist+skull,",
           "$plus",
