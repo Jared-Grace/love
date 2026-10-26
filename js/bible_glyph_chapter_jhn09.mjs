@@ -161,7 +161,7 @@ export function bible_glyph_chapter_jhn09() {
           "$speech",
           "to",
           "$pointing_back,",
-          "Go,",
+          "$walking+away,",
           "wash",
           "in",
           "the",
