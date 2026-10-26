@@ -184,7 +184,7 @@ export function bible_glyph_chapter_psa146() {
         words: [
           "The",
           "$i_am",
-          "protects",
+          "$guard",
           "the",
           "foreigners;",
           "the",
