@@ -227,7 +227,7 @@ export function bible_glyph_chapter_1jn04() {
           "$hatching_chick",
           "of",
           "$heart_on_fire",
-          "and",
+          "$plus",
           "$lightbulb$s",
           "$heart_on_fire.",
         ],
