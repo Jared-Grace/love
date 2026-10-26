@@ -47,7 +47,7 @@ export function bible_glyph_chapter_jhn09() {
           "$shuffle",
           "$pointing_back",
           "$butterfly+doer,",
-          "that",
+          "$right_arrow+toward",
           "he",
           "was",
           "born",
