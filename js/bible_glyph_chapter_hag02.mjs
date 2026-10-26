@@ -680,7 +680,7 @@ export function bible_glyph_chapter_hag02() {
           "I",
           "will",
           "overturn",
-          "chariots",
+          "$chariot",
           "and",
           "their",
           "riders;",
