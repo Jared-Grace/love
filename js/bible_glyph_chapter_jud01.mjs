@@ -192,7 +192,7 @@ export function bible_glyph_chapter_jud01() {
           "their",
           "own",
           "$clapper_board+thing",
-          "but",
+          "$curving_up",
           "abandoned",
           "their",
           "proper",
