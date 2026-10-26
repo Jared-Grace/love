@@ -187,7 +187,7 @@ export function bible_glyph_chapter_jol03() {
           "to",
           "send",
           "them",
-          "far",
+          "$satellite+doing",
           "from",
           "their",
           "homeland.",
