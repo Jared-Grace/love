@@ -67,7 +67,7 @@ export function bible_glyph_chapter_2jn01() {
         verse_number: 3,
         words: [
           "$gift,",
-          "mercy,",
+          "$heart_hands,",
           "and",
           "$peace",
           "from",
