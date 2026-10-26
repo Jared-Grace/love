@@ -609,7 +609,7 @@ export function bible_glyph_chapter_mrk12() {
         "will",
         "$pointing_back",
         "be?",
-        "For",
+        "$information",
         "all",
         "seven",
         "were",
