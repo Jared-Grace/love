@@ -642,7 +642,7 @@ export function bible_glyph_chapter_jhn01() {
           "$eyes",
           "$cross",
           "$footprints",
-          "toward",
+          "$toward",
           "$pointing_back",
           "$plus",
           "$speech,",
