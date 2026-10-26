@@ -69,7 +69,7 @@ export function bible_glyph_chapter_luk24() {
           "$no_entry",
           "$magnifying_glass+exclamation",
           "$pin",
-          "body",
+          "$x_ray",
           "of",
           "$pin",
           "$crown",
