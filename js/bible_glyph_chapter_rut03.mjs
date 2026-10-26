@@ -494,7 +494,7 @@ export function bible_glyph_chapter_rut03() {
           "When",
           "Ruth",
           "$footprints",
-          "to",
+          "$toward",
           "her",
           "mother-in-law,",
           "Naomi",
