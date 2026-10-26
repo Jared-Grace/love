@@ -1016,7 +1016,7 @@ export function bible_glyph_chapter_ezk18() {
           "away",
           "from",
           "yourselves",
-          "all",
+          "$all",
           "the",
           "transgressions",
           "you",
