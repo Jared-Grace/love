@@ -573,7 +573,7 @@ export function bible_glyph_chapter_jud01() {
         verse_number: 19,
         words: [
           "$flashlight",
-          "are",
+          "$link",
           "the",
           "ones",
           "who",
