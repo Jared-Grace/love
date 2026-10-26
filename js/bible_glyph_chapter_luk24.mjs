@@ -1097,7 +1097,7 @@ export function bible_glyph_chapter_luk24() {
           "He",
           "opened",
           "$pointing_back",
-          "minds",
+          "$brain",
           "to",
           "understand",
           "the",
