@@ -739,7 +739,7 @@ export function bible_glyph_chapter_mrk11() {
         "priests",
         "$plus",
         "the",
-        "scribes",
+        "$writing_hand+doer",
         "$plus",
         "the",
         "elders",
