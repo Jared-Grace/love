@@ -868,7 +868,7 @@ export function bible_glyph_chapter_mrk12() {
         "$link,",
         "$plus",
         "there",
-        "is",
+        "$link",
         "$no_entry",
         "other",
         "but",
