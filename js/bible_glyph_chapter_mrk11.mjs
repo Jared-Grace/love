@@ -909,7 +909,7 @@ export function bible_glyph_chapter_mrk11() {
         "I",
         "am",
         "$hammer",
-        "these",
+        "$flashlight",
         "things.”",
       ],
     },
