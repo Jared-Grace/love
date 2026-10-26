@@ -290,7 +290,7 @@ export function bible_glyph_chapter_ezk18() {
           "$hammer+doing$s",
           "any",
           "of",
-          "these",
+          "$flashlight+flashlight",
           "things",
         ],
       },
