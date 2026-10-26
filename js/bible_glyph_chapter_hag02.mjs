@@ -174,7 +174,7 @@ export function bible_glyph_chapter_hag02() {
           "you;",
           "$no_entry",
           "be",
-          "afraid.",
+          "$fear+doing.",
         ],
       },
       {
