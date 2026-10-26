@@ -351,7 +351,7 @@ export function bible_glyph_chapter_mat05() {
           "same",
           "way,",
           "let",
-          "your",
+          "$you",
           "$light",
           "$flashlight+doing",
           "before",
