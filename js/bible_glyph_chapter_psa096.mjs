@@ -116,7 +116,7 @@ export function bible_glyph_chapter_psa096() {
           "are",
           "before",
           "Him;",
-          "strength",
+          "$mechanical_arm",
           "and",
           "beauty",
           "fill",
