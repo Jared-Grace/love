@@ -393,7 +393,7 @@ export function bible_glyph_chapter_jol02() {
           "$hugging_face+describing,",
           "$straight_ruler+clock+describing",
           "to",
-          "anger,",
+          "$nose+fire,",
           "abounding",
           "in",
           "$gift.",
