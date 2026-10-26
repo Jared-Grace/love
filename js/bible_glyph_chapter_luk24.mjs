@@ -1174,7 +1174,7 @@ export function bible_glyph_chapter_luk24() {
           "$pointing_up",
           "you.",
           "$curving_right",
-          "remain",
+          "$seat",
           "$tray_in",
           "the",
           "$city",
