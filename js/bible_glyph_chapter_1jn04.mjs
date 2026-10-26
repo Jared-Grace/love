@@ -25,7 +25,7 @@ export function bible_glyph_chapter_1jn04() {
           "$all",
           "$wind,",
           "$curving_up",
-          "test",
+          "$microscope+doing",
           "the",
           "$wind$s",
           "to",
