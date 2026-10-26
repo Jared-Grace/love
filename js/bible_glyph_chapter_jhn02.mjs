@@ -416,7 +416,7 @@ export function bible_glyph_chapter_jhn02() {
           "$plus",
           "to",
           "those",
-          "selling",
+          "$coin+hands_giving",
           "$dove",
           "He",
           "$speech,",
