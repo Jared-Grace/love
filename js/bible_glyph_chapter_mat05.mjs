@@ -742,7 +742,7 @@ export function bible_glyph_chapter_mat05() {
         words: [
           "$traffic_light",
           "your",
-          "right",
+          "$hand+right_arrow",
           "eye",
           "causes",
           "you",
