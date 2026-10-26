@@ -401,7 +401,7 @@ export function bible_glyph_chapter_jud01() {
           "the",
           "$wind+dashing_away;",
           "autumn",
-          "trees",
+          "$tree",
           "without",
           "fruit,",
           "twice",
