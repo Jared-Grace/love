@@ -416,7 +416,7 @@ export function bible_glyph_chapter_jhn14() {
       {
         verse_number: 15,
         words: [
-          "If",
+          "$traffic_light",
           "you",
           "$heart_red+doing",
           "Me,",
