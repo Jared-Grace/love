@@ -733,7 +733,7 @@ export function bible_glyph_chapter_2ki02() {
           "$toward",
           "$heart_on_fire+rescue,",
           "Please",
-          "note,",
+          "$exclamation,",
           "our",
           "$crown,",
           "that",
