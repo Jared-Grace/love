@@ -317,7 +317,7 @@ export function bible_glyph_chapter_luk15() {
         "he",
         "divided",
         "his",
-        "property",
+        "$sprout+money_bag",
         "between",
         "$pointing_back.",
       ],
