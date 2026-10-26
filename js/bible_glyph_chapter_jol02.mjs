@@ -1002,7 +1002,7 @@ export function bible_glyph_chapter_jol02() {
           "will",
           "be",
           "saved;",
-          "for",
+          "$pointing",
           "on",
           "Mount",
           "$proper_name$Zion",
