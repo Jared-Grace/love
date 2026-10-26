@@ -65,7 +65,7 @@ export function bible_glyph_chapter_1jn04() {
           "$cross",
           "$oil",
           "has",
-          "come",
+          "$footprints",
           "in",
           "the",
           "$meat",
