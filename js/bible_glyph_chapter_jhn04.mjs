@@ -559,7 +559,7 @@ export function bible_glyph_chapter_jhn04() {
           "$footprints",
           "$plus",
           "has",
-          "now",
+          "$watch",
           "come",
           "when",
           "the",
