@@ -41,7 +41,7 @@ export function bible_glyph_chapter_exo14() {
           "$sea,",
           "directly",
           "opposite",
-          "Baal-zephon.",
+          "$key+compass+up_arrow+place+proper_name.",
         ],
       },
       {
