@@ -1157,7 +1157,7 @@ export function bible_glyph_chapter_1ki13() {
           "Bethel,",
           "and",
           "against",
-          "all",
+          "$all",
           "the",
           "$house",
           "on",
