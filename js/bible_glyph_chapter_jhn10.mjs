@@ -815,7 +815,7 @@ export function bible_glyph_chapter_jhn10() {
           "$tools,",
           "$curving_up",
           "for",
-          "blasphemy,",
+          "$speech+face_with_symbols_on_mouth,",
           "$plus",
           "$pointing",
           "$you,",
