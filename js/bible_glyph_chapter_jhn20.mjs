@@ -414,7 +414,7 @@ export function bible_glyph_chapter_jhn20() {
           "$pointing_back,",
           "$proper_name$Mary.",
           "She",
-          "turned",
+          "$person+clockwise_arrows+doing",
           "and",
           "$speech",
           "$pointing_back",
