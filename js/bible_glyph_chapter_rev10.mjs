@@ -386,7 +386,7 @@ export function bible_glyph_chapter_rev10() {
           "eaten",
           "$pointing_back,",
           "$me",
-          "stomach",
+          "$baby+house",
           "turned",
           "$lemon+doing.",
         ],
