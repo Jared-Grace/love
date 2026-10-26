@@ -305,7 +305,7 @@ export function bible_glyph_chapter_luk02() {
         "you:",
         "you",
         "will",
-        "find",
+        "$magnifying_glass+exclamation",
         "a",
         "baby",
         "wrapped",
