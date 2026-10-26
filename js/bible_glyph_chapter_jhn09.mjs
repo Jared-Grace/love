@@ -71,7 +71,7 @@ export function bible_glyph_chapter_jhn09() {
           "happened",
           "so",
           "that",
-          "the",
+          "$pin",
           "$tools",
           "of",
           "$heart_on_fire",
