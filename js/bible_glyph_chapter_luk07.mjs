@@ -401,7 +401,7 @@ export function bible_glyph_chapter_luk07() {
         "and",
         "touched",
         "the",
-        "coffin,",
+        "$coffin+bed,",
         "$plus",
         "those",
         "carrying",
