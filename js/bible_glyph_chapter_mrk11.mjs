@@ -759,7 +759,7 @@ export function bible_glyph_chapter_mrk11() {
         "to",
         "$pointing_back,",
         "“$tray_in",
-        "what",
+        "$likeness+question",
         "$key",
         "are",
         "You",
