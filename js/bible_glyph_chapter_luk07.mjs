@@ -1344,7 +1344,7 @@ export function bible_glyph_chapter_luk07() {
         "My",
         "head",
         "with",
-        "oil,",
+        "$oil+olive,",
         "but",
         "she",
         "has",
