@@ -577,7 +577,7 @@ export function bible_glyph_chapter_jon01() {
           "$three",
           "$sun",
           "and",
-          "three",
+          "$three",
           "$night",
           "in",
           "the",
