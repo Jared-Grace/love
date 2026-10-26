@@ -122,7 +122,7 @@ export function bible_glyph_chapter_jhn20() {
           "$pin",
           "$plus+one",
           "$learner",
-          "outran",
+          "$last_track+running",
           "$rock+proper_name",
           "$plus",
           "$footprints",
