@@ -714,7 +714,7 @@ export function bible_glyph_chapter_jdg13() {
           "did",
           "$no_entry",
           "$eye",
-          "again",
+          "$plus+doing",
           "to",
           "$proper_name$Manoah",
           "and",
