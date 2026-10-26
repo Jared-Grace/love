@@ -483,7 +483,7 @@ export function bible_glyph_chapter_rev01() {
           "$pointing_back",
           "$hand+right_arrow",
           "$hand",
-          "seven",
+          "$seven",
           "$star_plain,",
           "$plus",
           "$tray_out",
