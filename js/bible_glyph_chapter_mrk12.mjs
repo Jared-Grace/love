@@ -1080,7 +1080,7 @@ export function bible_glyph_chapter_mrk12() {
         "of",
         "honor",
         "$tray_in",
-        "banquets.",
+        "$eating+sunset.",
       ],
     },
     {
