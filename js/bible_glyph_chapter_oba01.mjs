@@ -235,7 +235,7 @@ export function bible_glyph_chapter_oba01() {
           "will",
           "$palm_down",
           "a",
-          "trap",
+          "$mouse_trap+hole",
           "for",
           "you",
           "without",
