@@ -1315,7 +1315,7 @@ export function bible_glyph_chapter_ezk36() {
           "will",
           "$lightbulb",
           "$pointing",
-          "I",
+          "$me",
           "am",
           "the",
           "$i_am.",
