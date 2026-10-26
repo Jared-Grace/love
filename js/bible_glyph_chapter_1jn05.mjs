@@ -125,7 +125,7 @@ export function bible_glyph_chapter_1jn05() {
           "$trophy+doing",
           "the",
           "$globe?",
-          "Only",
+          "$traffic_light",
           "he",
           "who",
           "$anchor+doing",
