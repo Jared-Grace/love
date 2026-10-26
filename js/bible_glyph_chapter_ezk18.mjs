@@ -501,7 +501,7 @@ export function bible_glyph_chapter_ezk18() {
           "does",
           "$no_entry",
           "$hand_receiving",
-          "interest",
+          "$coin+chart_increasing",
           "or",
           "usury.",
           "He",
