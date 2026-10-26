@@ -503,7 +503,7 @@ export function bible_glyph_chapter_jud01() {
         words: [
           "$flashlight",
           "men",
-          "are",
+          "$link",
           "grumblers",
           "and",
           "faultfinders,",
