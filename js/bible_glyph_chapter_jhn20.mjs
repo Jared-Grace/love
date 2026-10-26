@@ -682,7 +682,7 @@ export function bible_glyph_chapter_jhn20() {
           "$eye",
           "$pin",
           "nail",
-          "marks",
+          "$hammer+likeness",
           "$tray_in",
           "$pointing_back",
           "$hand,",
