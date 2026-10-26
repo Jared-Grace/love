@@ -165,7 +165,7 @@ export function bible_glyph_chapter_rev10() {
           "$eye",
           "standing",
           "on",
-          "the",
+          "$pin",
           "$sea",
           "$plus",
           "on",
