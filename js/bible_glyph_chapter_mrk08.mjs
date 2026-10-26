@@ -73,7 +73,7 @@ export function bible_glyph_chapter_mrk08() {
           "to",
           "$pointing_back",
           "$house",
-          "hungry,",
+          "$eating+no_entry+describing,",
           "they",
           "will",
           "faint",
