@@ -536,7 +536,7 @@ export function bible_glyph_chapter_luk07() {
         "is",
         "to",
         "$footprints,",
-        "or",
+        "$shuffle",
         "should",
         "we",
         "look",
