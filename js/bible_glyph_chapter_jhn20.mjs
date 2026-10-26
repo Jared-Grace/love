@@ -717,7 +717,7 @@ export function bible_glyph_chapter_jhn20() {
           "$pointing_back",
           "$learner",
           "$link",
-          "inside",
+          "$tray_in+pointing_down",
           "once",
           "$repeat,",
           "$plus",
