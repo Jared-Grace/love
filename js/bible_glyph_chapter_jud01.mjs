@@ -368,7 +368,7 @@ export function bible_glyph_chapter_jud01() {
           "perished",
           "in",
           "$proper_name$Korah's",
-          "rebellion.",
+          "$speech+raised_fist+thing.",
         ],
       },
       {
