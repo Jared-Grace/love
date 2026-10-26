@@ -516,7 +516,7 @@ export function bible_glyph_chapter_luk07() {
         "$plus",
         "$proper_name$John",
         "$toward+waving_hand",
-        "two",
+        "$two",
         "of",
         "$pointing_back",
         "$learner",
