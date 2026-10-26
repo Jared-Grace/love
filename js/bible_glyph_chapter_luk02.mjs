@@ -240,7 +240,7 @@ export function bible_glyph_chapter_luk02() {
       verse_number: 10,
       words: [
         "$plus",
-        "the",
+        "$pin",
         "$angel",
         "was",
         "$speech",
