@@ -467,7 +467,7 @@ export function bible_glyph_chapter_1jn05() {
       {
         verse_number: 17,
         words: [
-          "All",
+          "$all",
           "unrighteousness",
           "is",
           "$bow,",
