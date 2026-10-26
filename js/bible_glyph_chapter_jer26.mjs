@@ -621,7 +621,7 @@ export function bible_glyph_chapter_jer26() {
           "up",
           "and",
           "$speech",
-          "to",
+          "$toward",
           "the",
           "whole",
           "$church",
