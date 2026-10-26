@@ -150,7 +150,7 @@ export function bible_glyph_chapter_rut01() {
           "$proper_name$Mahlon",
           "and",
           "$proper_name$Chilion",
-          "also",
+          "$plus",
           "$skull+doing,",
           "and",
           "the",
