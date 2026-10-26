@@ -70,7 +70,7 @@ export function bible_glyph_chapter_jud01() {
           "to",
           "$writing_hand",
           "to",
-          "you",
+          "$you",
           "about",
           "the",
           "$rescue+thing",
