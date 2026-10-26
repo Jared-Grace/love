@@ -558,7 +558,7 @@ export function bible_glyph_chapter_jdg13() {
           "to",
           "the",
           "$i_am.”",
-          "For",
+          "$pointing",
           "$proper_name$Manoah",
           "did",
           "$no_entry",
