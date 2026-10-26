@@ -303,7 +303,7 @@ export function bible_glyph_chapter_jon01() {
       {
         verse_number: 9,
         words: [
-          "I",
+          "$me",
           "am",
           "a",
           "$proper_name$Hebrew,",
