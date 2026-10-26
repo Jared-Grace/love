@@ -101,7 +101,7 @@ export function bible_glyph_chapter_jhn09() {
           "Me.",
           "$night",
           "$footprints,",
-          "when",
+          "$back+clock",
           "$no_entry",
           "one",
           "can",
