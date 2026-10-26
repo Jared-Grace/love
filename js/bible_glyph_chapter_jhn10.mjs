@@ -477,7 +477,7 @@ export function bible_glyph_chapter_jhn10() {
           "$pointing_back",
           "from",
           "Me,",
-          "but",
+          "$curving_up",
           "I",
           "lay",
           "$pointing_back",
