@@ -491,7 +491,7 @@ export function bible_glyph_chapter_ezk33() {
           "the",
           "$ruler",
           "be",
-          "able",
+          "$might+doing",
           "to",
           "$sprout+doing",
           "by",
