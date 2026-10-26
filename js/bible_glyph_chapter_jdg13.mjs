@@ -154,7 +154,7 @@ export function bible_glyph_chapter_jdg13() {
           "shall",
           "touch",
           "his",
-          "head,",
+          "$person_gesturing_ok,",
           "because",
           "the",
           "boy",
