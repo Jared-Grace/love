@@ -224,7 +224,7 @@ export function bible_glyph_chapter_1jn02() {
           "$pointing_back",
           "$plus",
           "$tray_in",
-          "you,",
+          "$you,",
           "$pointing",
           "the",
           "$darkness",
