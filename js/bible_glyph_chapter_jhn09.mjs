@@ -427,7 +427,7 @@ export function bible_glyph_chapter_jhn09() {
       {
         verse_number: 17,
         words: [
-          "So",
+          "$right_arrow",
           "they",
           "$speech",
           "to",
