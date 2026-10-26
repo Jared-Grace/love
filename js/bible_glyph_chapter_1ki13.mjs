@@ -219,7 +219,7 @@ export function bible_glyph_chapter_1ki13() {
           "to",
           "the",
           "sign",
-          "that",
+          "$back+flashlight",
           "the",
           "$man_beard",
           "of",
