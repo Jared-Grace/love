@@ -159,7 +159,7 @@ export function bible_glyph_chapter_psa096() {
           "$name_tag;",
           "$lifting",
           "an",
-          "offering",
+          "$grain_offering",
           "and",
           "$footprints",
           "into",
