@@ -639,7 +639,7 @@ export function bible_glyph_chapter_1ki03() {
           "was",
           "$dotted_line_face",
           "$alien",
-          "with",
+          "$safety_pin",
           "us",
           "in",
           "the",
