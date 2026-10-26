@@ -769,7 +769,7 @@ export function bible_glyph_chapter_luk24() {
           "$pointing_back,",
           "$plus",
           "$pointing_back",
-          "disappeared",
+          "$dotted_line_face+describing",
           "$away",
           "$pointing_back",
           "sight.",
