@@ -378,7 +378,7 @@ export function bible_glyph_chapter_jhn02() {
           "He",
           "$hammer",
           "a",
-          "whip",
+          "$knot+collision+thing",
           "$tray_out",
           "cords",
           "and",
