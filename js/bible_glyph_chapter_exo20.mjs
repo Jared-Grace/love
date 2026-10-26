@@ -355,7 +355,7 @@ export function bible_glyph_chapter_exo20() {
           "shall",
           "$no_entry",
           "$speech+turn_back",
-          "false",
+          "$lying_face",
           "$witness",
           "against",
           "your",
