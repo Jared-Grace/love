@@ -1168,7 +1168,7 @@ export function bible_glyph_chapter_mrk10() {
         "$tray_in",
         "you.",
         "$curving_up,",
-        "whoever",
+        "$back+flashlight",
         "wants",
         "to",
         "become",
