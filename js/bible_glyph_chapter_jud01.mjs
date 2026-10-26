@@ -331,7 +331,7 @@ export function bible_glyph_chapter_jud01() {
           "know",
           "by",
           "instinct,",
-          "like",
+          "$likeness",
           "irrational",
           "animals,",
           "$tray_in",
