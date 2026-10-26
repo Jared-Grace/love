@@ -499,7 +499,7 @@ export function bible_glyph_chapter_jhn01() {
           "do",
           "you",
           "$speech",
-          "about",
+          "$clockwise_arrows",
           "$you+pointing_back?”",
         ],
       },
