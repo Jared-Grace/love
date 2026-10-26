@@ -1266,7 +1266,7 @@ export function bible_glyph_chapter_luk07() {
         "“You",
         "have",
         "judged",
-        "correctly.”",
+        "$person+up_arrow+manner.”",
       ],
     },
     {
