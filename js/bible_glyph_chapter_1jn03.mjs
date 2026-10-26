@@ -588,7 +588,7 @@ export function bible_glyph_chapter_1jn03() {
           "us,",
           "we",
           "have",
-          "confidence",
+          "$microphone",
           "before",
           "$heart_on_fire,",
         ],
