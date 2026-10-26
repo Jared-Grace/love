@@ -1023,7 +1023,7 @@ export function bible_glyph_chapter_mrk04() {
           "and",
           "rebuked",
           "$pin",
-          "wind",
+          "$wind+dashing_away",
           "$plus",
           "$speech",
           "to",
