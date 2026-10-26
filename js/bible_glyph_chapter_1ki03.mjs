@@ -725,7 +725,7 @@ export function bible_glyph_chapter_1ki03() {
           "the",
           "$morning",
           "to",
-          "nurse",
+          "$breast_feeding+doing",
           "my",
           "$son,",
           "he",
