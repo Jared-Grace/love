@@ -1028,7 +1028,7 @@ export function bible_glyph_chapter_jhn10() {
           "$all",
           "$proper_name$John",
           "$speech",
-          "about",
+          "$clockwise_arrows",
           "this",
           "man",
           "was",
