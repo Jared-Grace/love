@@ -601,7 +601,7 @@ export function bible_glyph_chapter_1jn02() {
         words: [
           "$plus",
           "you",
-          "have",
+          "$raised_fist",
           "an",
           "$oil+thing",
           "$away",
