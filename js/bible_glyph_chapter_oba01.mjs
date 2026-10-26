@@ -346,7 +346,7 @@ export function bible_glyph_chapter_oba01() {
           "foreigners",
           "$footprints",
           "his",
-          "gate",
+          "$gate",
           "and",
           "cast",
           "lots",
