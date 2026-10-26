@@ -68,7 +68,7 @@ export function bible_glyph_chapter_rut02() {
           "$eyes",
           "I",
           "may",
-          "find",
+          "$magnifying_glass+exclamation",
           "favor.",
           "$walking,",
           "my",
