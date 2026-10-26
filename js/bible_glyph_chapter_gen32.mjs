@@ -765,7 +765,7 @@ export function bible_glyph_chapter_gen32() {
           "The",
           "man",
           "$speech,",
-          "What",
+          "$flashlight+question",
           "is",
           "your",
           "$name_tag?",
