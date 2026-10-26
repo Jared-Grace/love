@@ -109,7 +109,7 @@ export function bible_glyph_chapter_psa023() {
           "You",
           "prepare",
           "a",
-          "table",
+          "$hand_sending+thing",
           "before",
           "me",
           "in",
