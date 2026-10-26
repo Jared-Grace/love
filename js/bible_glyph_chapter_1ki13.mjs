@@ -100,7 +100,7 @@ export function bible_glyph_chapter_1ki13() {
           "you,",
           "and",
           "$person",
-          "bones",
+          "$bone",
           "will",
           "be",
           "burned",
