@@ -375,7 +375,7 @@ export function bible_glyph_chapter_rev01() {
           "$turn_back",
           "to",
           "$eyes",
-          "the",
+          "$pin",
           "$voice",
           "that",
           "was",
