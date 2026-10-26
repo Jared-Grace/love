@@ -540,7 +540,7 @@ export function bible_glyph_chapter_rut01() {
           "anything",
           "but",
           "$skull",
-          "separates",
+          "$divide+arrow_both_ways+doing",
           "you",
           "and",
           "me.",
