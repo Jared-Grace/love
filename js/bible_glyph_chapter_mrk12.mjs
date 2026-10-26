@@ -839,7 +839,7 @@ export function bible_glyph_chapter_mrk12() {
         "$likeness",
         "$you+pointing_back.",
         "$no_entry",
-        "other",
+        "$plus+one",
         "$scroll",
         "is",
         "$top",
