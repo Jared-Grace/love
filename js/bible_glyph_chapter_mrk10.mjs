@@ -206,7 +206,7 @@ export function bible_glyph_chapter_mrk10() {
         "$plus",
         "back",
         "inside",
-        "the",
+        "$pin",
         "$house,",
         "the",
         "$learner",
