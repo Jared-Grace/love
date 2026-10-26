@@ -634,7 +634,7 @@ export function bible_glyph_chapter_jhn10() {
           "$oil,",
           "$speech",
           "us",
-          "plainly.",
+          "$microphone.",
         ],
       },
       {
