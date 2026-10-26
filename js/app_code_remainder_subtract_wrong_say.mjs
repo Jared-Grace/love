@@ -33,7 +33,7 @@ export function app_code_remainder_subtract_wrong_say(
   }
   let percent = js_operator_percent_sign();
   let minus = "-";
-  function said(short_tokens, long_tokens, forwards) {
+  function said(short_tokens, long_tokens, is_forwards) {
     let b2 = list_size_equal(short_tokens, 3);
     if (not(b2) || not(equal(list_get(short_tokens, 1), percent))) {
       return null;
@@ -72,7 +72,7 @@ export function app_code_remainder_subtract_wrong_say(
     let left_code = text_to(left);
     let short_code = code;
     let long_code = right;
-    if (not(forwards)) {
+    if (not(is_forwards)) {
       short_code = right;
       long_code = code;
     }
@@ -91,7 +91,7 @@ export function app_code_remainder_subtract_wrong_say(
       left_code,
       "",
     ];
-    if (not(forwards)) {
+    if (not(is_forwards)) {
       parts = [
         "Remember: ",
         long_code,
