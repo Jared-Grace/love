@@ -104,7 +104,7 @@ export function bible_glyph_chapter_mrk05() {
         "$plus",
         "smashed",
         "the",
-        "shackles,",
+        "$chains+foot,",
         "$plus",
         "$no_entry",
         "one",
