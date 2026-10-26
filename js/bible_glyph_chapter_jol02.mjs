@@ -203,7 +203,7 @@ export function bible_glyph_chapter_jol02() {
           "They",
           "charge",
           "like",
-          "mighty",
+          "$might+person",
           "men;",
           "they",
           "scale",
