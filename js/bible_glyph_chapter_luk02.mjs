@@ -809,7 +809,7 @@ export function bible_glyph_chapter_luk02() {
         "the",
         "$star",
         "of",
-        "Your",
+        "$you",
         "$family",
         "$wrestling+heart_on_fire.”",
       ],
