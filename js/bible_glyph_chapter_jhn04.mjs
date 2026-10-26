@@ -322,7 +322,7 @@ export function bible_glyph_chapter_jhn04() {
         words: [
           "$curving_right",
           "$back+flashlight",
-          "drinks",
+          "$cup_with_straw",
           "$tray_out",
           "the",
           "$water",
