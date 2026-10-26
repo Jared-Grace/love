@@ -285,7 +285,7 @@ export function bible_glyph_chapter_2jn01() {
           "$no_entry",
           "bring",
           "$flashlight",
-          "teaching,",
+          "$teacher+thing,",
           "$no_entry",
           "$hand_receiving",
           "$pointing_back",
