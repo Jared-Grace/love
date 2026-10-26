@@ -663,7 +663,7 @@ export function bible_glyph_chapter_mrk10() {
         "this",
         "is",
         "impossible,",
-        "but",
+        "$curving_up",
         "$no_entry",
         "with",
         "$heart_on_fire.",
