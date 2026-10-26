@@ -99,7 +99,7 @@ export function bible_glyph_chapter_mrk08() {
           "$learner",
           "replied,",
           "$pointing",
-          "where",
+          "$round_pushpin+tray_out+question",
           "in",
           "this",
           "desolate",
