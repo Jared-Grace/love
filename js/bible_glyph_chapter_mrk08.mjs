@@ -742,7 +742,7 @@ export function bible_glyph_chapter_mrk08() {
           "$pointing_up+question",
           "$pointing_back,",
           "But",
-          "who",
+          "$flashlight+question",
           "do",
           "$you",
           "$speech",
