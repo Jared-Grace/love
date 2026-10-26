@@ -1429,7 +1429,7 @@ export function bible_glyph_chapter_mrk10() {
         "$walking+footprints",
         "$pointing_back",
         "$tray_in",
-        "the",
+        "$pin",
         "$road.",
       ],
     },
