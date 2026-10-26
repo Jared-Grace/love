@@ -632,7 +632,7 @@ export function bible_glyph_chapter_1jn02() {
           "$lightbulb",
           "$pin",
           "$check,",
-          "but",
+          "$curving_up",
           "$pointing",
           "you",
           "$lightbulb",
