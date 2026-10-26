@@ -191,7 +191,7 @@ export function bible_glyph_chapter_gen01() {
           "$heart_on_fire",
           "$waving_hand",
           "the",
-          "expanse",
+          "$sky+arrow_both_ways",
           "$sky.",
           "And",
           "there",
