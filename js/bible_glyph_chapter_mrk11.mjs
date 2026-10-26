@@ -209,7 +209,7 @@ export function bible_glyph_chapter_mrk11() {
         "on",
         "$pin",
         "$road,",
-        "while",
+        "$curving_right",
         "others",
         "spread",
         "branches",
