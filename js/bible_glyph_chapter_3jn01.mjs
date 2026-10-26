@@ -201,7 +201,7 @@ export function bible_glyph_chapter_3jn01() {
           "to",
           "the",
           "$church,",
-          "but",
+          "$curving_up",
           "$proper_name$Diotrephes,",
           "who",
           "loves",
