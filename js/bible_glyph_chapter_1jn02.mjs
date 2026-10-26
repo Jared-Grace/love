@@ -476,7 +476,7 @@ export function bible_glyph_chapter_1jn02() {
           "$pointing_up+anger_symbol+thing",
           "of",
           "the",
-          "eyes,",
+          "$eye,",
           "$plus",
           "the",
           "pride",
