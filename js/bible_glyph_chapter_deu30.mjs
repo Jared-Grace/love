@@ -662,7 +662,7 @@ export function bible_glyph_chapter_deu30() {
           "I",
           "have",
           "$hands_giving",
-          "before",
+          "$face",
           "you",
           "$sprout",
           "and",
