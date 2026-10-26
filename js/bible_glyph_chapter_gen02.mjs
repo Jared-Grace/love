@@ -617,7 +617,7 @@ export function bible_glyph_chapter_gen02() {
           "the",
           "$i_am",
           "$heart_on_fire",
-          "caused",
+          "$person+pointing_down",
           "a",
           "deep",
           "sleep",
