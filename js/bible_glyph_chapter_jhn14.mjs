@@ -175,7 +175,7 @@ export function bible_glyph_chapter_jhn14() {
       {
         verse_number: 7,
         words: [
-          "If",
+          "$traffic_light",
           "you",
           "had",
           "$lightbulb",
