@@ -167,7 +167,7 @@ export function bible_glyph_chapter_1th01() {
           "$tray_in",
           "$multiply",
           "$clamp",
-          "with",
+          "$linked_paperclips",
           "the",
           "$smile",
           "of",
