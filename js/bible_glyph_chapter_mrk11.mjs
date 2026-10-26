@@ -450,7 +450,7 @@ export function bible_glyph_chapter_mrk11() {
         "carry",
         "$toolbox",
         "$metro",
-        "the",
+        "$pin",
         "temple",
         "courts.",
       ],
