@@ -944,7 +944,7 @@ export function bible_glyph_chapter_ezk33() {
           "you",
           "have",
           "$hammer+doing",
-          "detestable",
+          "$vomiting",
           "acts,",
           "and",
           "each",
