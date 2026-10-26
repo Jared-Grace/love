@@ -41,7 +41,7 @@ export function bible_glyph_chapter_rev10() {
           "was",
           "$likeness",
           "the",
-          "sun,",
+          "$sun_with_face,",
           "$plus",
           "$pointing_back",
           "$foot",
