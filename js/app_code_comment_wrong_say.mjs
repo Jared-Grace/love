@@ -22,12 +22,12 @@ export function app_code_comment_wrong_say(question, answer, choice) {
   ("A line is cut at its first //, so a // inside a text would be cut wrongly; no lesson writes one, and such a line would most likely fail to be followed and stay silent. Not picked: the working of each sum as the expression reminder gives it, which says again what the comment lessons are not about; what each line writes out is enough to find the slip");
   let code = text_to(question);
   let right = text_to(answer);
-  let marker = "//";
+  let comment_marker = "//";
   let lines = text_split_newline(code);
   let comments = [];
   let kept = [];
   for (let line of lines) {
-    let at = text_index_of_try(line, marker);
+    let at = text_index_of_try(line, comment_marker);
     if (equal(at, -1)) {
       list_add(kept, line);
       continue;
@@ -61,7 +61,7 @@ export function app_code_comment_wrong_say(question, answer, choice) {
     list_add_multiple(parts, [words, piece]);
     words = "";
   }
-  code_add(marker);
+  code_add(comment_marker);
   words = " to the end of its line, so ";
   let first = true;
   for (let comment of comments) {
