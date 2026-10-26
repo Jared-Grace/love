@@ -304,7 +304,7 @@ export function bible_glyph_chapter_mrk08() {
           "$flashlight+question",
           "does",
           "this",
-          "generation",
+          "$dna",
           "demand",
           "a",
           "sign?",
