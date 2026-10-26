@@ -259,7 +259,7 @@ export function bible_glyph_chapter_rev10() {
           "to",
           "His",
           "$kneeling",
-          "the",
+          "$pin",
           "$megaphone.",
         ],
       },
