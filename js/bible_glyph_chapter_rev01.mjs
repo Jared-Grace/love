@@ -436,7 +436,7 @@ export function bible_glyph_chapter_rev01() {
           "as",
           "$white_circle",
           "as",
-          "snow,",
+          "$snow,",
           "$plus",
           "$pointing_back",
           "eyes",
