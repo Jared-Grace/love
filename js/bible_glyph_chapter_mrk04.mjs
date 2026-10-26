@@ -736,7 +736,7 @@ export function bible_glyph_chapter_mrk04() {
           "$first_place+manner",
           "the",
           "stalk,",
-          "then",
+          "$clock+next_track",
           "the",
           "head,",
           "then",
