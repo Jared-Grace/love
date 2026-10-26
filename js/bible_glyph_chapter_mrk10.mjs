@@ -537,7 +537,7 @@ export function bible_glyph_chapter_mrk10() {
         "he",
         "had",
         "great",
-        "wealth.",
+        "$money_bag+hand_receiving+thing.",
       ],
     },
     {
