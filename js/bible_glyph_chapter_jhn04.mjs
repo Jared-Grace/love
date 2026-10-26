@@ -1285,7 +1285,7 @@ export function bible_glyph_chapter_jhn04() {
           "$pointing_back,",
           "$pointing",
           "“The",
-          "fever",
+          "$fire+thermometer_face",
           "$balloon",
           "$pointing_back",
           "$back+sun",
