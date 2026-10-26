@@ -855,7 +855,7 @@ export function bible_glyph_chapter_luk24() {
         words: [
           "$plus",
           "$pointing_back",
-          "told",
+          "$tray_out+military_medal+doing",
           "what",
           "had",
           "happened",
