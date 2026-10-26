@@ -297,7 +297,7 @@ export function bible_glyph_chapter_ezk36() {
           "surely",
           "the",
           "$map",
-          "around",
+          "$around",
           "you",
           "will",
           "endure",
