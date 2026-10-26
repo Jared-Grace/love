@@ -234,7 +234,7 @@ export function bible_glyph_chapter_mrk08() {
           "About",
           "four",
           "thousand",
-          "were",
+          "$link",
           "there.",
           "$plus",
           "Jesus",
