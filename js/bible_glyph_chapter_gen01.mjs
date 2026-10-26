@@ -19,7 +19,7 @@ export function bible_glyph_chapter_gen01() {
           "the",
           "beginning",
           "$heart_on_fire",
-          "created",
+          "$milky_way+doing",
           "the",
           "$sky",
           "and",
