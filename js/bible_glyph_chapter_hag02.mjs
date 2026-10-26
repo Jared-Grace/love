@@ -522,7 +522,7 @@ export function bible_glyph_chapter_hag02() {
         words: [
           "I",
           "struck",
-          "all",
+          "$all",
           "the",
           "work",
           "of",
