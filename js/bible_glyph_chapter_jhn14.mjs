@@ -441,7 +441,7 @@ export function bible_glyph_chapter_jhn14() {
           "will",
           "$hands_giving",
           "you",
-          "another",
+          "$plus+one",
           "$hug+doer",
           "to",
           "be",
