@@ -528,7 +528,7 @@ export function bible_glyph_chapter_gen32() {
           "$crown",
           "$proper_name$Esau.",
           "And",
-          "behold,",
+          "$exclamation,",
           "$hand+foot",
           "is",
           "behind",
