@@ -186,7 +186,7 @@ export function bible_glyph_chapter_luk02() {
       words: [
         "$plus",
         "there",
-        "were",
+        "$link",
         "$person+sheep",
         "$tray_in",
         "$pointing_back",
