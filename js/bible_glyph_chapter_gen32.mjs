@@ -297,7 +297,7 @@ export function bible_glyph_chapter_gen32() {
           "the",
           "$pointing_down+proper_name,",
           "but",
-          "now",
+          "$watch",
           "I",
           "have",
           "become",
