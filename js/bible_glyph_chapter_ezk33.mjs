@@ -459,7 +459,7 @@ export function bible_glyph_chapter_ezk33() {
           "$ruler",
           "will",
           "$no_entry",
-          "deliver",
+          "$hand+rescue",
           "him",
           "in",
           "the",
