@@ -1230,7 +1230,7 @@ export function bible_glyph_chapter_mat05() {
           "$no_entry",
           "$plus",
           "the",
-          "Gentiles",
+          "$map+describing",
           "$hammer",
           "$pointing_back?",
         ],
