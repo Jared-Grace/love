@@ -1225,7 +1225,7 @@ export function bible_glyph_chapter_luk02() {
         "to",
         "$pointing_back,",
         "“$child,",
-        "why",
+        "$flashlight+question",
         "have",
         "You",
         "$hammer",
