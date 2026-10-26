@@ -598,7 +598,7 @@ export function bible_glyph_chapter_rev01() {
           "that",
           "will",
           "$butterfly",
-          "after",
+          "$linked_paperclips",
           "this.",
         ],
       },
