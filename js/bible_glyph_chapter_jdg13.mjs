@@ -273,7 +273,7 @@ export function bible_glyph_chapter_jdg13() {
           "$tray_out",
           "the",
           "$baby+house",
-          "until",
+          "$finish",
           "the",
           "$sun",
           "of",
