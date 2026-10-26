@@ -58,7 +58,7 @@ export function bible_glyph_chapter_psa112() {
         words: [
           "$money_bag+more",
           "and",
-          "riches",
+          "$money_bag",
           "are",
           "in",
           "his",
