@@ -282,7 +282,7 @@ export function bible_glyph_chapter_luk07() {
       words: [
         "$plus",
         "when",
-        "the",
+        "$pin",
         "messengers",
         "$down_arrow+turn_back",
         "$toward+tray_in",
