@@ -934,7 +934,7 @@ export function bible_glyph_chapter_mrk12() {
         "$no_entry",
         "$straight_ruler+away+manner",
         "$away",
-        "the",
+        "$pin",
         "$castle",
         "of",
         "$heart_on_fire.",
