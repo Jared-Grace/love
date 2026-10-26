@@ -897,7 +897,7 @@ export function bible_glyph_chapter_mat05() {
           "your",
           "vows",
           "to",
-          "the",
+          "$pin",
           "$crown.",
         ],
       },
