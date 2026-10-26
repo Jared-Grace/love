@@ -555,7 +555,7 @@ export function bible_glyph_chapter_luk02() {
       verse_number: 22,
       words: [
         "$plus",
-        "when",
+        "$back+clock",
         "the",
         "$sun",
         "of",
