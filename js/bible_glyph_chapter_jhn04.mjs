@@ -1122,7 +1122,7 @@ export function bible_glyph_chapter_jhn04() {
           "$proper_name$Cana",
           "in",
           "$proper_name$Galilee,",
-          "where",
+          "$back+round_pushpin",
           "He",
           "had",
           "$hammer",
