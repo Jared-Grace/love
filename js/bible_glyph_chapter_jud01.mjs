@@ -195,7 +195,7 @@ export function bible_glyph_chapter_jud01() {
           "$curving_up",
           "$away+waving_hand+doing",
           "their",
-          "proper",
+          "$identification_card",
           "dwelling,",
           "he",
           "has",
