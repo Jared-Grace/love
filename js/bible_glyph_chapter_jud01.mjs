@@ -268,7 +268,7 @@ export function bible_glyph_chapter_jud01() {
           "$pig+doing",
           "the",
           "$meat,",
-          "reject",
+          "$no_entry+palm_down",
           "$crown+raised_fist,",
           "and",
           "slander",
