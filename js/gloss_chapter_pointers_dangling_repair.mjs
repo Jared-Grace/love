@@ -1,6 +1,4 @@
-import { property_null_is } from "./property_null_is.mjs";
 import { gloss_chapter_passages_collect_all } from "./gloss_chapter_passages_collect_all.mjs";
-import { gloss_chapter_passages_collected_write } from "./gloss_chapter_passages_collected_write.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
@@ -8,12 +6,17 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { gloss_entry_word_read } from "./gloss_entry_word_read.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
+import { property_null_is } from "./property_null_is.mjs";
 import { gloss_explains_word_wording } from "./gloss_explains_word_wording.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
 import { gloss_passage_entries_changed_set } from "./gloss_passage_entries_changed_set.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
+import { gloss_write_files_stale_generic } from "./gloss_write_files_stale_generic.mjs";
+import { gloss_chapter_passages_collected_write } from "./gloss_chapter_passages_collected_write.mjs";
+import { list_difference } from "./list_difference.mjs";
+import { gloss_write_files_from_store_generic } from "./gloss_write_files_from_store_generic.mjs";
 export async function gloss_chapter_pointers_dangling_repair(
   chapter_code,
   fn,
@@ -66,6 +69,11 @@ export async function gloss_chapter_pointers_dangling_repair(
   if (none) {
     return changes;
   }
+  ("★ THE HAND-OFF FILES ARE BROUGHT ALONG. A hand-off file that agreed with the store before this write would disagree after it, and the stale repair lets the file win - so the old pointer would quietly come back. Only files this write made stale are rewritten; one already stale holds someone's unstored work and is left alone.");
+  let stale_before = await gloss_write_files_stale_generic(chapter_code, fn);
   await gloss_chapter_passages_collected_write(read);
+  let stale_after = await gloss_write_files_stale_generic(chapter_code, fn);
+  let followed = list_difference(stale_after, stale_before);
+  await gloss_write_files_from_store_generic(chapter_code, fn, followed);
   return changes;
 }
