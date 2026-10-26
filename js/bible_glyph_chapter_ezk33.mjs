@@ -711,7 +711,7 @@ export function bible_glyph_chapter_ezk33() {
           "$scales+thing",
           "and",
           "right,",
-          "he",
+          "$pointing_back",
           "will",
           "$sprout+doing",
           "because",
