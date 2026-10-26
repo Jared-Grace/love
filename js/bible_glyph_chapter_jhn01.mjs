@@ -951,7 +951,7 @@ export function bible_glyph_chapter_jhn01() {
           "the",
           "$oil”",
           "($back+flashlight",
-          "is",
+          "$link",
           "translated",
           "$oil).",
         ],
