@@ -158,7 +158,7 @@ export function bible_glyph_chapter_luk07() {
         "have",
         "You",
         "come",
-        "under",
+        "$down_arrow",
         "my",
         "roof.",
       ],
