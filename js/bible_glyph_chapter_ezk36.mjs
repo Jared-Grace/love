@@ -206,7 +206,7 @@ export function bible_glyph_chapter_ezk36() {
           "against",
           "all",
           "$proper_name$Edom,",
-          "who",
+          "$back+flashlight",
           "$hands_giving",
           "My",
           "$earth",
