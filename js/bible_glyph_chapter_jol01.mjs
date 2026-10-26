@@ -354,7 +354,7 @@ export function bible_glyph_chapter_jol01() {
           "withered.",
           "$pointing",
           "the",
-          "joy",
+          "$grinning_face",
           "$tray_out",
           "$person",
           "has",
