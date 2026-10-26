@@ -597,7 +597,7 @@ export function bible_glyph_chapter_mat05() {
           "$altar",
           "and",
           "there",
-          "remember",
+          "$reminder_ribbon+doing",
           "$pointing",
           "your",
           "$brother",
