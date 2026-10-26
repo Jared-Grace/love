@@ -500,7 +500,7 @@ export function bible_glyph_chapter_jon01() {
           "us",
           "innocent",
           "$blood!",
-          "For",
+          "$pointing",
           "You,",
           "O",
           "$i_am,",
