@@ -147,7 +147,7 @@ export function bible_glyph_chapter_gen02() {
           "of",
           "the",
           "$field",
-          "sprouted;",
+          "$sprout+up_arrow+doing;",
           "for",
           "the",
           "$i_am",
