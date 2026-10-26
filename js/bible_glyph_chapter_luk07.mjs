@@ -877,7 +877,7 @@ export function bible_glyph_chapter_luk07() {
         "experts",
         "in",
         "the",
-        "law",
+        "$scroll+describing",
         "rejected",
         "$heart_on_fire",
         "purpose",
