@@ -20,7 +20,7 @@ export function bible_glyph_chapter_mrk08() {
           "large",
           "$crowd",
           "gathered",
-          "again,",
+          "$repeat,",
           "$plus",
           "they",
           "had",
