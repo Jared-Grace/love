@@ -760,7 +760,7 @@ export function bible_glyph_chapter_luk07() {
         "$eye?",
         "A",
         "$megaphone?",
-        "Yes,",
+        "$head_shaking_vertically,",
         "I",
         "am",
         "in",
