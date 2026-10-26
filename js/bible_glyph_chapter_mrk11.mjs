@@ -795,7 +795,7 @@ export function bible_glyph_chapter_mrk11() {
         "if",
         "you",
         "$speech+turn_back",
-        "Me,",
+        "$me,",
         "$plus",
         "I",
         "will",
