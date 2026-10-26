@@ -371,7 +371,7 @@ export function bible_glyph_chapter_luk15() {
         "$map+round_pushpin,",
         "$plus",
         "$pointing_back",
-        "began",
+        "$clapper_board",
         "to",
         "be",
         "in",
