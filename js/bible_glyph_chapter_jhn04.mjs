@@ -946,7 +946,7 @@ export function bible_glyph_chapter_jhn04() {
           "the",
           "$proper_name$Samaritans",
           "$anchor+doing",
-          "in",
+          "$toward+tray_in",
           "$pointing_back",
           "because",
           "of",
