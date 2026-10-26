@@ -1062,7 +1062,7 @@ export function bible_glyph_chapter_mrk05() {
         "$pointing_back,",
         "$proper_name$“Talitha",
         "$person+pointing_up+exclamation!”",
-        "which",
+        "$back+flashlight",
         "means,",
         "“Little",
         "girl,",
