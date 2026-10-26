@@ -961,7 +961,7 @@ export function bible_glyph_chapter_1ki03() {
           "$no_entry",
           "$skull+doing",
           "him.",
-          "She",
+          "$pointing_back",
           "is",
           "his",
           "$mother.",
