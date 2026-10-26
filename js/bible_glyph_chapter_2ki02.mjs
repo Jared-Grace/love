@@ -385,7 +385,7 @@ export function bible_glyph_chapter_2ki02() {
           "thing,",
           "Elijah",
           "$speech.",
-          "If",
+          "$traffic_light",
           "you",
           "$eye",
           "me",
