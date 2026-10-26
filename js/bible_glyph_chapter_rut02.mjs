@@ -513,7 +513,7 @@ export function bible_glyph_chapter_rut02() {
           "and",
           "had",
           "some",
-          "left",
+          "$takeout_box+doing",
           "over.",
         ],
       },
