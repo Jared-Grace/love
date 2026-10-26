@@ -329,7 +329,7 @@ export function bible_glyph_chapter_1ki03() {
           "$might+doing",
           "to",
           "judge",
-          "this",
+          "$flashlight",
           "$star+describing",
           "$family",
           "of",
