@@ -341,7 +341,7 @@ export function bible_glyph_chapter_jdg13() {
           "the",
           "$woman",
           "as",
-          "she",
+          "$pointing_back",
           "was",
           "sitting",
           "in",
