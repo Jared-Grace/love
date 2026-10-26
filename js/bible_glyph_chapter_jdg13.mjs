@@ -150,7 +150,7 @@ export function bible_glyph_chapter_jdg13() {
           "a",
           "$son.",
           "$no_entry",
-          "razor",
+          "$razor+hair",
           "shall",
           "touch",
           "his",
