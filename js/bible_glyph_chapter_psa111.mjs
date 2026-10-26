@@ -27,7 +27,7 @@ export function bible_glyph_chapter_psa111() {
           "$heart_organ",
           "in",
           "the",
-          "council",
+          "$shushing_face+crowd",
           "of",
           "the",
           "upright",
