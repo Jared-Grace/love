@@ -58,7 +58,7 @@ export function bible_glyph_chapter_jhn09() {
         verse_number: 3,
         words: [
           "$cross",
-          "answered,",
+          "$speech+turn_back,",
           "Neither",
           "this",
           "man",
