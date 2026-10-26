@@ -135,7 +135,7 @@ export function bible_glyph_chapter_jhn09() {
           "$speech",
           "$flashlight,",
           "He",
-          "spit",
+          "$mouth+droplet+doing",
           "on",
           "the",
           "ground,",
