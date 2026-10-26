@@ -210,7 +210,7 @@ export function bible_glyph_chapter_1ki03() {
           "You",
           "have",
           "kept",
-          "this",
+          "$flashlight",
           "$gift",
           "for",
           "him",
