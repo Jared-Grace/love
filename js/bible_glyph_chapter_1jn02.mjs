@@ -654,7 +654,7 @@ export function bible_glyph_chapter_1jn02() {
           "$link",
           "the",
           "$lying_face+doer",
-          "if",
+          "$traffic_light",
           "$no_entry",
           "the",
           "one",
