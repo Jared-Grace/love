@@ -569,7 +569,7 @@ export function bible_glyph_chapter_exo20() {
           "Me",
           "$moai",
           "of",
-          "silver",
+          "$silver",
           "or",
           "$moai",
           "of",
