@@ -20,8 +20,8 @@ export function app_code_expression_wrong_say(question, answer, choice) {
   function steps_get() {
     let tree = app_code_expression_flat_tree_of_code(question);
     let steps = app_code_expression_press_steps(tree);
-    let codes = list_map(steps, app_code_expression_code);
-    return codes;
+    let listed = list_map(steps, app_code_expression_code);
+    return listed;
   }
   let codes = catch_null(steps_get);
   if (null_is(codes)) {
