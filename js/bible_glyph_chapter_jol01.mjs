@@ -461,7 +461,7 @@ export function bible_glyph_chapter_jol01() {
           "will",
           "$footprints",
           "as",
-          "destruction",
+          "$bomb+flexed_biceps+thing",
           "from",
           "the",
           "$might.",
