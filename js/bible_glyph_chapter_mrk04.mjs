@@ -119,7 +119,7 @@ export function bible_glyph_chapter_mrk04() {
           "$plus",
           "some",
           "$person+pointing_down",
-          "on",
+          "$pointing_up",
           "rocky",
           "ground,",
           "where",
