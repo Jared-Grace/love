@@ -213,7 +213,7 @@ export function bible_glyph_chapter_jhn10() {
           "$plus",
           "$ninja,",
           "$curving_up",
-          "the",
+          "$pin",
           "$sheep",
           "did",
           "$no_entry",
