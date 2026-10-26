@@ -529,7 +529,7 @@ export function bible_glyph_chapter_gen03() {
           "and",
           "he",
           "will",
-          "rule",
+          "$joystick",
           "over",
           "you.",
         ],
