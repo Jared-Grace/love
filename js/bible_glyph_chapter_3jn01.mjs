@@ -166,7 +166,7 @@ export function bible_glyph_chapter_3jn01() {
           "$hand_receiving",
           "nothing",
           "$away",
-          "the",
+          "$pin",
           "Gentiles.",
         ],
       },
