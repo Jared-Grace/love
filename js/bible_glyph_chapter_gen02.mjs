@@ -363,7 +363,7 @@ export function bible_glyph_chapter_gen02() {
           "onyx",
           "are",
           "found",
-          "there.",
+          "$telescope.",
         ],
       },
       {
