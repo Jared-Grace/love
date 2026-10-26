@@ -69,7 +69,7 @@ export function bible_glyph_chapter_jon04() {
           "a",
           "$heart_orange+describing",
           "and",
-          "compassionate",
+          "$hugging_face+describing",
           "$heart_on_fire,",
           "slow",
           "to",
