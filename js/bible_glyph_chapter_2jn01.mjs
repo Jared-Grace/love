@@ -35,7 +35,7 @@ export function bible_glyph_chapter_2jn01() {
           "$no_entry",
           "$me",
           "$one+describing,",
-          "but",
+          "$curving_up",
           "$plus",
           "all",
           "who",
