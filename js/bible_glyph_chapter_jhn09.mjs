@@ -388,7 +388,7 @@ export function bible_glyph_chapter_jhn09() {
           "this,",
           "some",
           "$tray_out",
-          "the",
+          "$pin",
           "$proper_name$Pharisees",
           "$speech,",
           "This",
