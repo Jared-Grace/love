@@ -1195,7 +1195,7 @@ export function bible_glyph_chapter_ezk33() {
           "$song",
           "with",
           "a",
-          "beautiful",
+          "$face+sparkle",
           "$voice,",
           "who",
           "skillfully",
