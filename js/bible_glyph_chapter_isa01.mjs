@@ -429,7 +429,7 @@ export function bible_glyph_chapter_isa01() {
           "have",
           "become",
           "a",
-          "burden",
+          "$backpack+weary_face",
           "to",
           "Me;",
           "I",
