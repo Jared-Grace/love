@@ -147,8 +147,8 @@ export function app_code_lesson_if_cases_generic(
       each([true, false], runs_each);
     }
     each(seeds, seed_each);
-    function made(way) {
-      let left = list_first(way);
+    function made(way_inner) {
+      let left = list_first(way_inner);
       let m = equal(left, answer);
       return m;
     }
