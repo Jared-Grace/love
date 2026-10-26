@@ -605,7 +605,7 @@ export function bible_glyph_chapter_gen02() {
           "Adam",
           "$no_entry",
           "suitable",
-          "helper",
+          "$rescue+hand",
           "was",
           "found.",
         ],
