@@ -244,7 +244,7 @@ export function bible_glyph_chapter_1th01() {
       {
         verse_number: 9,
         words: [
-          "For",
+          "$information",
           "$pointing_back",
           "themselves",
           "report",
