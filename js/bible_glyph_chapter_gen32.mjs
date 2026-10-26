@@ -584,7 +584,7 @@ export function bible_glyph_chapter_gen32() {
           "right",
           "behind",
           "us.",
-          "For",
+          "$pointing",
           "he",
           "$speech,",
           "I",
