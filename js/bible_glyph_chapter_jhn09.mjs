@@ -552,7 +552,7 @@ export function bible_glyph_chapter_jhn09() {
           "do",
           "$no_entry",
           "$lightbulb.",
-          "Ask",
+          "$question",
           "$pointing_back.",
           "$pointing_back",
           "is",
