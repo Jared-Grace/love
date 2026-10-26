@@ -1058,7 +1058,7 @@ export function bible_glyph_chapter_mat05() {
           "$hand_receiving",
           "your",
           "$dress,",
-          "let",
+          "$balloon",
           "$pointing_back",
           "have",
           "your",
