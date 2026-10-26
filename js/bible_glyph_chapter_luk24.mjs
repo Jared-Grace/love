@@ -528,7 +528,7 @@ export function bible_glyph_chapter_luk24() {
           "$tray_out",
           "our",
           "$woman",
-          "astounded",
+          "$tray_out+person+round_pushpin",
           "us.",
           "They",
           "were",
