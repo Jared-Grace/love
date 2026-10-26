@@ -629,7 +629,7 @@ export function bible_glyph_chapter_luk02() {
         "of",
         "turtledoves",
         "$shuffle",
-        "two",
+        "$two",
         "young",
         "pigeons.",
       ],
