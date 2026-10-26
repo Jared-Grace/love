@@ -989,7 +989,7 @@ export function bible_glyph_chapter_mrk08() {
           "is",
           "$pointing_up+flushed",
           "of",
-          "Me",
+          "$me",
           "$plus",
           "of",
           "My",
