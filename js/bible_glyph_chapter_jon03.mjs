@@ -264,7 +264,7 @@ export function bible_glyph_chapter_jon03() {
           "from",
           "His",
           "fierce",
-          "anger,",
+          "$nose+fire,",
           "so",
           "that",
           "we",
