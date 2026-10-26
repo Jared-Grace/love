@@ -713,7 +713,7 @@ export function bible_glyph_chapter_jol02() {
           "of",
           "$proper_name$Zion,",
           "and",
-          "rejoice",
+          "$beaming+doing",
           "in",
           "the",
           "$i_am",
