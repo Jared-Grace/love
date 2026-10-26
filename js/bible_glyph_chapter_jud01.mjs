@@ -191,7 +191,7 @@ export function bible_glyph_chapter_jud01() {
           "within",
           "their",
           "own",
-          "domain",
+          "$clapper_board+thing",
           "but",
           "abandoned",
           "their",
