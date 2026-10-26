@@ -812,7 +812,7 @@ export function bible_glyph_chapter_mat05() {
           "$plus",
           "$no_entry",
           "your",
-          "whole",
+          "$hollow_circle",
           "body",
           "$footprints+away",
           "into",
