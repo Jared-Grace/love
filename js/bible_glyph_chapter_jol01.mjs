@@ -230,7 +230,7 @@ export function bible_glyph_chapter_jol01() {
           "$girl+white_flower",
           "$briefs+doing",
           "in",
-          "sackcloth,",
+          "$sackcloth,",
           "grieving",
           "for",
           "the",
