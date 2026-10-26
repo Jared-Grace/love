@@ -212,7 +212,7 @@ export function bible_glyph_chapter_jol02() {
           "like",
           "men",
           "of",
-          "war.",
+          "$crossed_swords.",
           "$man_beard",
           "$walking",
           "in",
