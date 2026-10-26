@@ -405,7 +405,7 @@ export function bible_glyph_chapter_jhn03() {
           "$pointing_back",
           "shall",
           "$no_entry",
-          "perish",
+          "$wilted_flower",
           "but",
           "have",
           "eternal",
