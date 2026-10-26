@@ -787,7 +787,7 @@ export function bible_glyph_chapter_luk24() {
           "$no_entry",
           "our",
           "$heart_organ",
-          "burning",
+          "$candle+doing",
           "$tray_in",
           "us",
           "as",
