@@ -611,7 +611,7 @@ export function bible_glyph_chapter_exo20() {
           "and",
           "goats",
           "and",
-          "cattle.",
+          "$cow_face.",
           "In",
           "every",
           "$place",
