@@ -365,7 +365,7 @@ export function bible_glyph_chapter_mat05() {
           "$tools",
           "$plus",
           "$star+doing",
-          "your",
+          "$you",
           "$father",
           "$tray_in",
           "$sky.",
