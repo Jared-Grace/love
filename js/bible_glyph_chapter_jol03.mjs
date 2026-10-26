@@ -498,7 +498,7 @@ export function bible_glyph_chapter_jol03() {
           "be",
           "$sparkle+thing,",
           "$no_entry",
-          "again",
+          "$repeat",
           "to",
           "be",
           "overrun",
