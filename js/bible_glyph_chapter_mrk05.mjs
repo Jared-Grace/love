@@ -916,7 +916,7 @@ export function bible_glyph_chapter_mrk05() {
       words: [
         "$curving_right",
         "$cross",
-        "overheard",
+        "$children_crossing+ear+loudspeaker",
         "the",
         "$speech",
         "being",
