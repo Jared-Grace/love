@@ -770,7 +770,7 @@ export function bible_glyph_chapter_jhn20() {
           "it",
           "$toward+tray_in",
           "$me",
-          "side.",
+          "$bone+x_ray.",
           "$plus",
           "do",
           "$no_entry",
