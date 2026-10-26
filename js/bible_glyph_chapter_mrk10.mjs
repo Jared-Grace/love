@@ -1169,7 +1169,7 @@ export function bible_glyph_chapter_mrk10() {
         "you.",
         "$curving_up,",
         "$back+flashlight",
-        "wants",
+        "$shooting_star+doing",
         "to",
         "become",
         "great",
