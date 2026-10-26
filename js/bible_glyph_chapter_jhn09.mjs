@@ -97,7 +97,7 @@ export function bible_glyph_chapter_jhn09() {
           "of",
           "Him",
           "who",
-          "sent",
+          "$incoming_envelope",
           "Me.",
           "$night",
           "$footprints,",
