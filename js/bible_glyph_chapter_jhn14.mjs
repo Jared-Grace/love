@@ -720,7 +720,7 @@ export function bible_glyph_chapter_jhn14() {
           "But",
           "$pin",
           "$hug+doer,",
-          "the",
+          "$pin",
           "$sparkle",
           "$wind,",
           "whom",
