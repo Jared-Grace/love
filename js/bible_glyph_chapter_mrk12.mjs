@@ -583,7 +583,7 @@ export function bible_glyph_chapter_mrk12() {
         "$no_entry",
         "of",
         "$pin",
-        "seven",
+        "$seven",
         "left",
         "any",
         "children.",
