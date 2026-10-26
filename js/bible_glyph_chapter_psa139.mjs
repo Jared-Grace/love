@@ -474,7 +474,7 @@ export function bible_glyph_chapter_psa139() {
         verse_number: 22,
         words: [
           "I",
-          "hate",
+          "$heart_red+thumbs_down",
           "them",
           "with",
           "perfect",
