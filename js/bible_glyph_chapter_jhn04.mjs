@@ -212,7 +212,7 @@ export function bible_glyph_chapter_jhn04() {
           "of",
           "$heart_on_fire",
           "$plus",
-          "who",
+          "$flashlight+question",
           "it",
           "is",
           "that",
