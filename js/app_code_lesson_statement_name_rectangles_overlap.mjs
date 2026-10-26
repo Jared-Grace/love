@@ -195,13 +195,13 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
   function meeting_draws(word, first_from, first_to, second_from, second_to) {
     "the lines treating one direction of the two rectangles as two meetings: where each goes, where the shared part starts and ends, and the check";
     let later_inner = list_max([first_from, second_from]);
-    let earlier = list_min([first_to, second_to]);
+    let earlier_inner = list_min([first_to, second_to]);
     let t_first_from = text_to(first_from);
     let t_first_to = text_to(first_to);
     let t_second_from = text_to(second_from);
     let t_second_to = text_to(second_to);
     let t_later = text_to(later_inner);
-    let t_earlier = text_to(earlier);
+    let t_earlier = text_to(earlier_inner);
     let v = from(t_first_from);
     let v2 = till(t_first_to);
     let draw3 = app_code_explain_said([
