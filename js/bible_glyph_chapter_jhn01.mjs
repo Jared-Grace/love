@@ -1014,7 +1014,7 @@ export function bible_glyph_chapter_jhn01() {
       {
         verse_number: 44,
         words: [
-          "Now",
+          "$curving_right",
           "$proper_name$Philip",
           "$link",
           "$away",
