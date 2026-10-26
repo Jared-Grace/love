@@ -720,7 +720,7 @@ export function bible_glyph_chapter_mrk12() {
       verse_number: 27,
       words: [
         "He",
-        "is",
+        "$link",
         "$no_entry",
         "the",
         "$heart_on_fire",
