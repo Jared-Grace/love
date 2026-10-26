@@ -426,7 +426,7 @@ export function bible_glyph_chapter_jhn10() {
           "also",
           "I",
           "$knot",
-          "bring",
+          "$guide_dog",
           "in,",
           "$plus",
           "they",
