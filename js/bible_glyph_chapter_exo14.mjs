@@ -261,7 +261,7 @@ export function bible_glyph_chapter_exo14() {
         words: [
           "As",
           "$house+proper_name",
-          "approached,",
+          "$magnet+doing,",
           "the",
           "$son",
           "looked",
