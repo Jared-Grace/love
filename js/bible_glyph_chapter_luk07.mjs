@@ -205,7 +205,7 @@ export function bible_glyph_chapter_luk07() {
         "$key,",
         "with",
         "soldiers",
-        "under",
+        "$down_arrow",
         "me.",
         "$plus",
         "I",
