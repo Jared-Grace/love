@@ -32,7 +32,7 @@ export function bible_glyph_chapter_rev01() {
           "what",
           "$knot",
           "soon",
-          "come",
+          "$butterfly",
           "to",
           "pass.",
           "He",
