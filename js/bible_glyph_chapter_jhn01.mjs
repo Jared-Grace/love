@@ -981,7 +981,7 @@ export function bible_glyph_chapter_jhn01() {
           "be",
           "called",
           "$proper_name$Cephas”",
-          "(which",
+          "($back+flashlight",
           "is",
           "translated",
           "$rock+proper_name).",
