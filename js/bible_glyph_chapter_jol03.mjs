@@ -277,7 +277,7 @@ export function bible_glyph_chapter_jol03() {
           "the",
           "$man_beard",
           "of",
-          "war",
+          "$crossed_swords",
           "advance",
           "and",
           "attack.",
