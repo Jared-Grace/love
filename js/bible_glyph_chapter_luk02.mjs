@@ -417,7 +417,7 @@ export function bible_glyph_chapter_luk02() {
         "$plus",
         "$i_am+plus,",
         "$plus",
-        "the",
+        "$pin",
         "Baby",
         "lying",
         "$tray_in",
