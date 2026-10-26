@@ -107,7 +107,7 @@ export function bible_glyph_chapter_jol03() {
         verse_number: 4,
         words: [
           "$plus",
-          "what",
+          "$flashlight+question",
           "do",
           "you",
           "have",
