@@ -95,7 +95,7 @@ export function bible_glyph_chapter_isa01() {
           "$family",
           "do",
           "$no_entry",
-          "understand.",
+          "$brain.",
         ],
       },
       {
