@@ -367,7 +367,7 @@ export function bible_glyph_chapter_mrk04() {
           "like",
           "the",
           "seed",
-          "along",
+          "$children_crossing",
           "the",
           "$road,",
           "where",
