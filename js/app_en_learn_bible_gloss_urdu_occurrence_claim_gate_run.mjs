@@ -15,7 +15,7 @@ export async function app_en_learn_bible_gloss_urdu_occurrence_claim_gate_run() 
   "THE FLOOR IS THE HALF THAT MATTERS. The sweep finds a claim by the words the store spells it with, so a chapter worded any other way is found nowhere and reports nothing wrong - which reads exactly like a chapter with nothing wrong in it. Holding the number of sentences read to what was read when this was written turns that silence red. It will fire on a deliberate rewording, and that is right: somebody then has to come here and say what the new wording is, or the check quietly stops being a check.";
   "A store that is not on the disk is passed over and said so, rather than counted as clean. The store lives on a drive that is not always mounted, and a sweep that read nothing and called it nought would turn one unmounted drive into a green gate for everybody.";
   arguments_assert(arguments, 0);
-  let floor = 4167;
+  let floored = 4167;
   let fn = app_en_learn_bible_gloss_urdu_generate;
   let stored = await gloss_store_stored_is(fn);
   if (not(stored)) {
@@ -32,12 +32,12 @@ export async function app_en_learn_bible_gloss_urdu_occurrence_claim_gate_run() 
   });
   let tally = await app_en_learn_bible_gloss_urdu_occurrence_claims_tally();
   let counted = property_get(tally, "counted");
-  let thin = less_than(counted, floor);
+  let thin = less_than(counted, floored);
   let enough = not(thin);
   assert_json(enough, {
     hint: "fewer of these sentences can be read now than when this gate was written, so the reading may be looking for a wording the store has stopped using and reporting nothing wrong because it is finding nothing at all - teach the reading the new wording, or lower the floor here on purpose",
     counted,
-    floor,
+    floor: floored,
     tally,
   });
   return tally;
