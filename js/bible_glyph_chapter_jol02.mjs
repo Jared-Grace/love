@@ -191,7 +191,7 @@ export function bible_glyph_chapter_jol02() {
           "horror",
           "before",
           "them;",
-          "every",
+          "$all",
           "face",
           "turns",
           "pale.",
