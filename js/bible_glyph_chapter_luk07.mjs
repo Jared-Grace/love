@@ -593,7 +593,7 @@ export function bible_glyph_chapter_luk07() {
         "$clock",
         "He",
         "healed",
-        "many",
+        "$multiply",
         "of",
         "their",
         "diseases",
