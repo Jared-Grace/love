@@ -437,7 +437,7 @@ export function bible_glyph_chapter_gen03() {
           "you",
           "above",
           "all",
-          "livestock",
+          "$paw_prints",
           "and",
           "every",
           "$sprout",
