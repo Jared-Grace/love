@@ -106,7 +106,7 @@ export function bible_glyph_chapter_gen32() {
           "have",
           "remained",
           "there",
-          "until",
+          "$finish",
           "now.",
         ],
       },
