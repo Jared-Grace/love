@@ -504,7 +504,7 @@ export function bible_glyph_chapter_luk24() {
           "$currency_exchange+broken_chain+doing",
           "$wrestling+heart_on_fire.",
           "$plus",
-          "besides",
+          "$double_exclamation",
           "all",
           "this,",
           "it",
