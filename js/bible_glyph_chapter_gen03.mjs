@@ -258,7 +258,7 @@ export function bible_glyph_chapter_gen03() {
           "$walking",
           "in",
           "the",
-          "garden",
+          "$garden",
           "in",
           "the",
           "$wind",
