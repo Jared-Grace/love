@@ -91,7 +91,7 @@ export function bible_glyph_chapter_jhn03() {
           "$joker",
           "can",
           "$eye",
-          "the",
+          "$pin",
           "$castle",
           "of",
           "$heart_on_fire",
