@@ -520,7 +520,7 @@ export function bible_glyph_chapter_gen03() {
           "forth",
           "$son.",
           "Your",
-          "desire",
+          "$heart_eyes+right_arrow",
           "will",
           "be",
           "for",
