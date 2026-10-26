@@ -302,7 +302,7 @@ export function bible_glyph_chapter_gen02() {
         words: [
           "Now",
           "a",
-          "river",
+          "$water+national_park",
           "flowed",
           "out",
           "of",
