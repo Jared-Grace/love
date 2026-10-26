@@ -331,7 +331,7 @@ export function bible_glyph_chapter_1jn05() {
           "I",
           "have",
           "written",
-          "these",
+          "$flashlight",
           "things",
           "to",
           "you",
