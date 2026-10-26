@@ -769,7 +769,7 @@ export function bible_glyph_chapter_jhn20() {
           "put",
           "it",
           "into",
-          "My",
+          "$me",
           "side.",
           "$plus",
           "do",
