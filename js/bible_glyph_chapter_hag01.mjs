@@ -109,7 +109,7 @@ export function bible_glyph_chapter_hag01() {
           "Is",
           "it",
           "a",
-          "time",
+          "$clock",
           "for",
           "you",
           "yourselves",
