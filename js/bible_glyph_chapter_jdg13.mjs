@@ -291,7 +291,7 @@ export function bible_glyph_chapter_jdg13() {
           "the",
           "$i_am,",
           "$speech,",
-          "“Please,",
+          "“$pleading_face+manner,",
           "$crown,",
           "let",
           "the",
