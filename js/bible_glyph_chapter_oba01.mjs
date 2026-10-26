@@ -356,7 +356,7 @@ export function bible_glyph_chapter_oba01() {
           "were",
           "just",
           "like",
-          "one",
+          "$one",
           "of",
           "them.",
         ],
