@@ -514,7 +514,7 @@ export function bible_glyph_chapter_mrk08() {
           "collect?",
           "They",
           "$speech,",
-          "Seven.",
+          "$seven.",
         ],
       },
       {
