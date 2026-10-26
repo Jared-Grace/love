@@ -136,7 +136,7 @@ export function bible_glyph_chapter_1jn04() {
           "he",
           "who",
           "is",
-          "in",
+          "$tray_in",
           "the",
           "$globe.",
         ],
