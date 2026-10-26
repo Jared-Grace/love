@@ -1020,7 +1020,7 @@ export function bible_glyph_chapter_jhn01() {
           "$away",
           "$proper_name$Bethsaida,",
           "$tray_out",
-          "the",
+          "$pin",
           "$city",
           "of",
           "$proper_name$Andrew",
