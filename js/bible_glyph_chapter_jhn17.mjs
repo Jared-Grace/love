@@ -594,7 +594,7 @@ export function bible_glyph_chapter_jhn17() {
           "may",
           "$anchor+doing",
           "$pointing",
-          "You",
+          "$you",
           "$hand_sending",
           "me.",
         ],
