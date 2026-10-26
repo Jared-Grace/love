@@ -457,7 +457,7 @@ export function bible_glyph_chapter_gen01() {
           "them",
           "in",
           "the",
-          "expanse",
+          "$sky+arrow_both_ways",
           "of",
           "the",
           "$sky",
