@@ -463,7 +463,7 @@ export function bible_glyph_chapter_mrk10() {
         "replied",
         "to",
         "$pointing_back,",
-        "“Teacher,",
+        "“$teacher,",
         "all",
         "these",
         "I",
