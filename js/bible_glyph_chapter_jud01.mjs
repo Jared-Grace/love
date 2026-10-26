@@ -522,7 +522,7 @@ export function bible_glyph_chapter_jud01() {
           "for",
           "their",
           "own",
-          "advantage.",
+          "$chart_increasing+hand_receiving+thing.",
         ],
       },
       {
