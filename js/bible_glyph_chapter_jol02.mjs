@@ -753,7 +753,7 @@ export function bible_glyph_chapter_jol02() {
           "be",
           "$battery",
           "of",
-          "grain,",
+          "$wheat+wind,",
           "and",
           "the",
           "vats",
