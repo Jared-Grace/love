@@ -551,7 +551,7 @@ export function bible_glyph_chapter_hag02() {
           "Consider",
           "carefully",
           "$tray_out",
-          "this",
+          "$flashlight",
           "$sun",
           "forward,",
           "from",
