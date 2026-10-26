@@ -1035,7 +1035,7 @@ export function bible_glyph_chapter_jhn04() {
           "$flashlight",
           "man",
           "truly",
-          "is",
+          "$link",
           "$pin",
           "$rescue+doer",
           "of",
