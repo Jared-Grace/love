@@ -481,7 +481,7 @@ export function bible_glyph_chapter_ezk36() {
           "$crown",
           "$i_am",
           "$speech:",
-          "Because",
+          "$information",
           "people",
           "$speech",
           "to",
