@@ -220,7 +220,7 @@ export function bible_glyph_chapter_rev10() {
           "be",
           "no",
           "more",
-          "delay!",
+          "$timer_clock!",
         ],
       },
       {
