@@ -36,7 +36,7 @@ export function bible_glyph_chapter_ezk18() {
           "by",
           "quoting",
           "this",
-          "proverb",
+          "$speech+likeness+doing",
           "about",
           "the",
           "land",
