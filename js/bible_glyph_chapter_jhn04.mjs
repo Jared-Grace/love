@@ -578,7 +578,7 @@ export function bible_glyph_chapter_jhn04() {
           "$father",
           "is",
           "seeking",
-          "such",
+          "$flashlight+likeness",
           "as",
           "these",
           "to",
