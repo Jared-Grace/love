@@ -866,7 +866,7 @@ export function bible_glyph_chapter_mat05() {
           "$plus",
           "he",
           "who",
-          "marries",
+          "$ring+doing",
           "a",
           "divorced",
           "woman",
