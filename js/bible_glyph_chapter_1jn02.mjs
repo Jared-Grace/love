@@ -208,7 +208,7 @@ export function bible_glyph_chapter_1jn02() {
         verse_number: 8,
         words: [
           "Then",
-          "again,",
+          "$repeat,",
           "a",
           "new",
           "$scroll",
