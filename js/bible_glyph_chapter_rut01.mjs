@@ -638,7 +638,7 @@ export function bible_glyph_chapter_rut01() {
           "$me",
           "$walking",
           "away",
-          "full,",
+          "$battery+describing,",
           "but",
           "the",
           "$i_am",
