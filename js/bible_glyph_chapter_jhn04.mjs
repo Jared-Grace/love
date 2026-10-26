@@ -697,7 +697,7 @@ export function bible_glyph_chapter_jhn04() {
           "$plus",
           "went",
           "back",
-          "into",
+          "$toward+tray_in",
           "$pin",
           "$city",
           "$plus",
