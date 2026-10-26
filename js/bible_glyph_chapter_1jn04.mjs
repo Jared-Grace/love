@@ -32,7 +32,7 @@ export function bible_glyph_chapter_1jn04() {
           "see",
           "$traffic_light",
           "they",
-          "are",
+          "$link",
           "$tray_out",
           "$heart_on_fire,",
           "because",
