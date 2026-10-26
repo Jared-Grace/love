@@ -992,7 +992,7 @@ export function bible_glyph_chapter_mrk04() {
           "stern,",
           "sleeping",
           "on",
-          "the",
+          "$pin",
           "cushion.",
           "$plus",
           "they",
