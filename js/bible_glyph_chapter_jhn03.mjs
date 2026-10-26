@@ -597,7 +597,7 @@ export function bible_glyph_chapter_jhn03() {
           "baptizing",
           "$tray_in",
           "$proper_name$Aenon",
-          "near",
+          "$magnet",
           "$proper_name$Salim,",
           "because",
           "the",
