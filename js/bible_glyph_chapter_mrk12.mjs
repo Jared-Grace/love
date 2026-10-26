@@ -764,7 +764,7 @@ export function bible_glyph_chapter_mrk12() {
         "$pointing_back,",
         "Which",
         "$scroll",
-        "is",
+        "$link",
         "the",
         "most",
         "important",
