@@ -51,7 +51,7 @@ export function bible_glyph_chapter_1th01() {
           "thank",
           "$heart_on_fire",
           "for",
-          "all",
+          "$all",
           "of",
           "you,",
           "$hammer",
