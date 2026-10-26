@@ -1072,7 +1072,7 @@ export function bible_glyph_chapter_jhn04() {
           "$tray_in",
           "his",
           "$identification_card",
-          "hometown.",
+          "$father+earth.",
         ],
       },
       {
