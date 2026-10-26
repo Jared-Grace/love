@@ -898,7 +898,7 @@ export function bible_glyph_chapter_jhn10() {
           "I",
           "$speech,",
           "I",
-          "am",
+          "$link",
           "the",
           "$son",
           "of",
