@@ -444,7 +444,7 @@ export function bible_glyph_chapter_gen03() {
           "of",
           "the",
           "$field.",
-          "On",
+          "$pointing_up",
           "your",
           "belly",
           "you",
