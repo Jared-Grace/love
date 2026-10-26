@@ -1051,7 +1051,7 @@ export function bible_glyph_chapter_luk02() {
         "$walking",
         "$pointing_down",
         "$year",
-        "to",
+        "$toward+tray_in",
         "$city+peace",
         "for",
         "the",
