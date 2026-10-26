@@ -41,7 +41,7 @@ export function bible_glyph_chapter_jhn10() {
           "climbs",
           "in",
           "some",
-          "other",
+          "$plus+one+road",
           "way,",
           "is",
           "a",
