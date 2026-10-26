@@ -813,7 +813,7 @@ export function bible_glyph_chapter_mrk08() {
           "$linked_paperclips",
           "$three",
           "$sun",
-          "rise",
+          "$person+up_arrow",
           "again.",
         ],
       },
