@@ -491,7 +491,7 @@ export function bible_glyph_chapter_rev01() {
           "mouth",
           "$walking+tray_out",
           "a",
-          "sharp",
+          "$kitchen_knife+describing",
           "$two+mouth",
           "$sword.",
           "$plus",
