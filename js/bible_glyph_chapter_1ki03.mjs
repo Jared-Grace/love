@@ -162,7 +162,7 @@ export function bible_glyph_chapter_1ki03() {
           "$peace+proper_name",
           "in",
           "a",
-          "dream,",
+          "$dream,",
           "and",
           "$heart_on_fire",
           "$speech:",
