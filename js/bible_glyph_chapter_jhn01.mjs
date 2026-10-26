@@ -88,7 +88,7 @@ export function bible_glyph_chapter_jhn01() {
       {
         verse_number: 5,
         words: [
-          "The",
+          "$pin",
           "$light",
           "$light",
           "$tray_in",
