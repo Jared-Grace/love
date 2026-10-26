@@ -453,7 +453,7 @@ export function bible_glyph_chapter_jhn14() {
       {
         verse_number: 17,
         words: [
-          "the",
+          "$pin",
           "$wind",
           "of",
           "$check.",
