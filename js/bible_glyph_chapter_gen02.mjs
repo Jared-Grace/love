@@ -731,7 +731,7 @@ export function bible_glyph_chapter_gen02() {
           "they",
           "will",
           "become",
-          "one",
+          "$one",
           "$meat.",
         ],
       },
