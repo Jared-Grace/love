@@ -1059,7 +1059,7 @@ export function bible_glyph_chapter_mrk10() {
         "will",
         "drink,",
         "$plus",
-        "the",
+        "$pin",
         "baptism",
         "that",
         "I",
