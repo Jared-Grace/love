@@ -94,7 +94,7 @@ export function bible_glyph_chapter_1jn04() {
           "$pin",
           "spirit",
           "of",
-          "the",
+          "$pin",
           "anti$oil,",
           "which",
           "you",
