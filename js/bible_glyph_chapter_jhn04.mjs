@@ -782,7 +782,7 @@ export function bible_glyph_chapter_jhn04() {
         verse_number: 33,
         words: [
           "$right_arrow",
-          "the",
+          "$pin",
           "$learner",
           "$speech",
           "to",
