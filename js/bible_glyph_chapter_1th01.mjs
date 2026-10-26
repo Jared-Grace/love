@@ -116,7 +116,7 @@ export function bible_glyph_chapter_1th01() {
           "$me",
           "$angel+thumbs_up",
           "came",
-          "to",
+          "$toward+tray_in",
           "you",
           "$no_entry",
           "$tray_in",
