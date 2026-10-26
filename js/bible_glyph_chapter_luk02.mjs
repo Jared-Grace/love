@@ -494,7 +494,7 @@ export function bible_glyph_chapter_luk02() {
         "giving",
         "$star+doing",
         "$plus",
-        "praising",
+        "$clapping_hands+doing",
         "$heart_on_fire",
         "for",
         "all",
