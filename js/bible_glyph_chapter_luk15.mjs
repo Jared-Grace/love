@@ -772,7 +772,7 @@ export function bible_glyph_chapter_luk15() {
         "you",
         "$plus",
         "never",
-        "disobeyed",
+        "$children_crossing+footprints",
         "a",
         "$scroll",
         "of",
