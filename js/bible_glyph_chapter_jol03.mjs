@@ -303,7 +303,7 @@ export function bible_glyph_chapter_jol03() {
           "$speech,",
           "I",
           "am",
-          "strong!",
+          "$might+person!",
         ],
       },
       {
