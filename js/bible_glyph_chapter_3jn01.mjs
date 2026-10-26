@@ -320,7 +320,7 @@ export function bible_glyph_chapter_3jn01() {
           "$pointing",
           "our",
           "$witness+thing",
-          "is",
+          "$link",
           "true.",
         ],
       },
