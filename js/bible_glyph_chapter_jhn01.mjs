@@ -209,7 +209,7 @@ export function bible_glyph_chapter_jhn01() {
           "$footprints",
           "$toward+tray_in",
           "His",
-          "own,",
+          "$identification_card,",
           "$plus",
           "His",
           "own",
