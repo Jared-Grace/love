@@ -498,7 +498,7 @@ export function bible_glyph_chapter_jhn02() {
           "$sun",
           "I",
           "will",
-          "raise",
+          "$person+pointing_up",
           "$pointing_back",
           "up",
           "again.”",
