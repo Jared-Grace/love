@@ -908,7 +908,7 @@ export function bible_glyph_chapter_jhn01() {
           "about",
           "the",
           "tenth",
-          "hour.",
+          "$clock.",
         ],
       },
       {
