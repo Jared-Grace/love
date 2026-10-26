@@ -187,7 +187,7 @@ export function bible_glyph_chapter_gen02() {
           "$face",
           "of",
           "the",
-          "ground.",
+          "$brown_square.",
         ],
       },
       {
