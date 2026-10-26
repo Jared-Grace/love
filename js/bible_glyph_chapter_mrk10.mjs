@@ -762,7 +762,7 @@ export function bible_glyph_chapter_mrk10() {
         "$plus",
         "$field,",
         "along",
-        "with",
+        "$linked_paperclips",
         "persecutions",
         "$plus",
         "$tray_in",
