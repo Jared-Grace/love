@@ -58,7 +58,7 @@ export function bible_glyph_chapter_mrk11() {
         "$pointing_back",
         "you",
         "will",
-        "find",
+        "$magnifying_glass+exclamation",
         "a",
         "colt",
         "tied",
