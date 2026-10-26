@@ -424,7 +424,7 @@ export function bible_glyph_chapter_mat05() {
           "$away",
           "the",
           "$scroll,",
-          "until",
+          "$finish",
           "everything",
           "is",
           "accomplished.",
