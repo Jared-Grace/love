@@ -572,7 +572,7 @@ export function bible_glyph_chapter_jhn03() {
           "His",
           "$learner$s",
           "$footprints",
-          "into",
+          "$toward+tray_in",
           "the",
           "$menorah",
           "$earth,",
