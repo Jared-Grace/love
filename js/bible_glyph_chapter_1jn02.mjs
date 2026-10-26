@@ -873,7 +873,7 @@ export function bible_glyph_chapter_1jn02() {
           "$ruler+thing",
           "has",
           "been",
-          "born",
+          "$hatching_chick",
           "$tray_out",
           "$pointing_back.",
         ],
