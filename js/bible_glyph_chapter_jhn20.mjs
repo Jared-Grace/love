@@ -784,7 +784,7 @@ export function bible_glyph_chapter_jhn20() {
         verse_number: 28,
         words: [
           "$proper_name$Thomas",
-          "replied",
+          "$speech+turn_back",
           "$plus",
           "$speech",
           "$pointing_back,",
