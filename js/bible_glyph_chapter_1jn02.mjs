@@ -409,7 +409,7 @@ export function bible_glyph_chapter_1jn02() {
           "men,",
           "$pointing",
           "you",
-          "are",
+          "$link",
           "$might+describing,",
           "$plus",
           "the",
