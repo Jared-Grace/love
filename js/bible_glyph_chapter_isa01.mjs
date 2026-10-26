@@ -368,7 +368,7 @@ export function bible_glyph_chapter_isa01() {
           "$eye",
           "before",
           "Me,",
-          "who",
+          "$person+question",
           "has",
           "required",
           "this",
