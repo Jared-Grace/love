@@ -689,7 +689,7 @@ export function bible_glyph_chapter_mat05() {
           "you",
           "have",
           "paid",
-          "the",
+          "$pin",
           "last",
           "penny.",
         ],
