@@ -91,7 +91,7 @@ export function bible_glyph_chapter_1ki13() {
           "priests",
           "of",
           "the",
-          "high",
+          "$snow_capped_mountain",
           "places",
           "who",
           "burn",
