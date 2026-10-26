@@ -513,7 +513,7 @@ export function bible_glyph_chapter_oba01() {
           "as",
           "you",
           "drank",
-          "on",
+          "$pointing_up",
           "My",
           "$sparkle+thing",
           "$mountain,",
