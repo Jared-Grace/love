@@ -177,7 +177,7 @@ export function bible_glyph_chapter_jol02() {
           "a",
           "$bone+describing",
           "$family",
-          "deployed",
+          "$card_index_dividers",
           "for",
           "battle.",
         ],
