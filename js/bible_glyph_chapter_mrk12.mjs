@@ -965,7 +965,7 @@ export function bible_glyph_chapter_mrk12() {
         "$gear+question",
         "can",
         "the",
-        "scribes",
+        "$writing_hand+doer",
         "$speech",
         "$pointing",
         "the",
