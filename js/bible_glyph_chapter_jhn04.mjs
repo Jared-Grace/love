@@ -553,7 +553,7 @@ export function bible_glyph_chapter_jhn04() {
       {
         verse_number: 23,
         words: [
-          "But",
+          "$curving_up",
           "a",
           "time",
           "$footprints",
