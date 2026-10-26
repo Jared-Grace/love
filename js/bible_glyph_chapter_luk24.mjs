@@ -883,7 +883,7 @@ export function bible_glyph_chapter_luk24() {
           "$pointing_back",
           "were",
           "$mouth",
-          "these",
+          "$flashlight",
           "things,",
           "$pointing_back",
           "stood",
