@@ -507,7 +507,7 @@ export function bible_glyph_chapter_mrk10() {
         "you",
         "will",
         "have",
-        "treasure",
+        "$gem_stone",
         "$tray_in",
         "the",
         "$sky,",
