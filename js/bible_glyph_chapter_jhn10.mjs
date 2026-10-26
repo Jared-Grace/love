@@ -43,7 +43,7 @@ export function bible_glyph_chapter_jhn10() {
           "some",
           "$plus+one+road",
           "way,",
-          "is",
+          "$link",
           "a",
           "$hand+lying_face+doer",
           "$plus",
