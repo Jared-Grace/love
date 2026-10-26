@@ -342,7 +342,7 @@ export function bible_glyph_chapter_jhn14() {
           "you,",
           "whoever",
           "$anchor+doing",
-          "in",
+          "$toward+tray_in",
           "Me",
           "will",
           "$hammer",
