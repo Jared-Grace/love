@@ -166,7 +166,7 @@ export function bible_glyph_chapter_gen32() {
           "is",
           "$walking",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "you,",
           "and",
           "four",
