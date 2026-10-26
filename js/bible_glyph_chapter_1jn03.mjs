@@ -579,7 +579,7 @@ export function bible_glyph_chapter_1jn03() {
         verse_number: 21,
         words: [
           "$heart_red+describing,",
-          "if",
+          "$traffic_light",
           "our",
           "$heart_organ",
           "do",
