@@ -207,7 +207,7 @@ export function bible_glyph_chapter_jon02() {
           "to",
           "$bubbles",
           "$fog",
-          "forsake",
+          "$derelict_house+doing",
           "His",
           "$gift.",
         ],
