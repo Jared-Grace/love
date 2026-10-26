@@ -14,7 +14,7 @@ export function bible_glyph_chapter_psa096() {
       {
         verse_number: 1,
         words: [
-          "Sing",
+          "$song+doing",
           "to",
           "the",
           "$i_am",
