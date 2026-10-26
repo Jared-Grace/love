@@ -233,7 +233,7 @@ export function bible_glyph_chapter_ezk36() {
         words: [
           "$right_arrow",
           "$megaphone+doing",
-          "concerning",
+          "$pointing_up",
           "the",
           "land",
           "of",
