@@ -337,7 +337,7 @@ export function bible_glyph_chapter_jdg13() {
           "$heart_on_fire",
           "$footprints",
           "again",
-          "to",
+          "$toward",
           "the",
           "$woman",
           "as",
