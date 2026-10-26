@@ -1080,7 +1080,7 @@ export function bible_glyph_chapter_luk02() {
         "$repeat+thing",
         "of",
         "$pin",
-        "Feast.",
+        "$party_popper.",
       ],
     },
     {
