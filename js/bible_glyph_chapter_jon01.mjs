@@ -310,7 +310,7 @@ export function bible_glyph_chapter_jon01() {
           "$speech",
           "Jonah.",
           "And",
-          "I",
+          "$me",
           "worship",
           "the",
           "$i_am,",
