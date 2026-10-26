@@ -449,7 +449,7 @@ export function bible_glyph_chapter_jer26() {
           "against",
           "this",
           "$city",
-          "all",
+          "$all",
           "the",
           "$speech",
           "that",
