@@ -403,7 +403,7 @@ export function bible_glyph_chapter_luk15() {
         "$field",
         "to",
         "$sheep+fork_and_knife+doing",
-        "pigs.",
+        "$pig.",
       ],
     },
     {
