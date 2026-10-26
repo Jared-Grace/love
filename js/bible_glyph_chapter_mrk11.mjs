@@ -115,7 +115,7 @@ export function bible_glyph_chapter_mrk11() {
         "they",
         "went",
         "$plus",
-        "found",
+        "$magnifying_glass+exclamation",
         "the",
         "colt",
         "tied",
