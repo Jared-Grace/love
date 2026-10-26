@@ -752,7 +752,7 @@ export function bible_glyph_chapter_jhn14() {
         words: [
           "$peace",
           "I",
-          "leave",
+          "$balloon",
           "with",
           "you;",
           "My",
