@@ -258,7 +258,7 @@ export function bible_glyph_chapter_mrk11() {
         "$footprints",
         "$castle",
         "of",
-        "our",
+        "$me",
         "$father",
         "$two_hearts+proper_name!",
         "$proper_name$Hosanna",
