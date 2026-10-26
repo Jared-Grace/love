@@ -645,7 +645,7 @@ export function bible_glyph_chapter_gen32() {
           "and",
           "$hand_receiving",
           "his",
-          "two",
+          "$two",
           "$woman,",
           "his",
           "two",
