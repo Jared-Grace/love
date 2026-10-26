@@ -453,7 +453,7 @@ export function bible_glyph_chapter_1jn03() {
         verse_number: 16,
         words: [
           "$tray_in",
-          "this",
+          "$flashlight",
           "we",
           "$lightbulb",
           "what",
