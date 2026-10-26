@@ -142,7 +142,7 @@ export function bible_glyph_chapter_psa136() {
         verse_number: 9,
         words: [
           "the",
-          "moon",
+          "$moon",
           "and",
           "stars",
           "to",
