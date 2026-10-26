@@ -24,7 +24,7 @@ export function bible_glyph_chapter_psa097() {
           "let",
           "the",
           "distant",
-          "shores",
+          "$sea+round_pushpin",
           "be",
           "glad.",
         ],
