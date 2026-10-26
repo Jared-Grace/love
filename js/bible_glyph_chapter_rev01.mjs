@@ -397,7 +397,7 @@ export function bible_glyph_chapter_rev01() {
         words: [
           "$plus",
           "$tray_in",
-          "among",
+          "$radio_button",
           "the",
           "lampstands",
           "was",
