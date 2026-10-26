@@ -458,7 +458,7 @@ export function bible_glyph_chapter_luk15() {
         "I",
         "am",
         "$eating+hollow_circle",
-        "here",
+        "$round_pushpin",
         "to",
         "death!",
       ],
