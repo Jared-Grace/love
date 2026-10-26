@@ -333,7 +333,7 @@ export function bible_glyph_chapter_isa01() {
           "full",
           "from",
           "the",
-          "burnt",
+          "$burnt_offering",
           "offerings",
           "of",
           "rams",
