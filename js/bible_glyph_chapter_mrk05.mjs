@@ -287,7 +287,7 @@ export function bible_glyph_chapter_mrk05() {
         "“$incoming_envelope",
         "$me",
         "into",
-        "the",
+        "$pin",
         "pigs,",
         "so",
         "that",
