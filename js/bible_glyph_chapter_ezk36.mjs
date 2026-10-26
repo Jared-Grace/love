@@ -216,7 +216,7 @@ export function bible_glyph_chapter_ezk36() {
           "$hand_receiving+brown_square+thing",
           "with",
           "wholehearted",
-          "joy",
+          "$beaming",
           "and",
           "utter",
           "contempt,",
