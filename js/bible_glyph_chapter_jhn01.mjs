@@ -1122,7 +1122,7 @@ export function bible_glyph_chapter_jhn01() {
           "answered,",
           "“$last_track",
           "$proper_name$Philip",
-          "called",
+          "$loudspeaker+doing",
           "you,",
           "while",
           "you",
