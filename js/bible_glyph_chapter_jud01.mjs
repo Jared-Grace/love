@@ -518,7 +518,7 @@ export function bible_glyph_chapter_jud01() {
           "$mouth",
           "$up_arrow+mountain+describing,",
           "flattering",
-          "others",
+          "$face",
           "for",
           "their",
           "own",
