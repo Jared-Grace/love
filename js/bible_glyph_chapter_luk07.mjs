@@ -919,7 +919,7 @@ export function bible_glyph_chapter_luk07() {
         "are",
         "$people_with_bunny_ears",
         "$baby",
-        "sitting",
+        "$seat",
         "$tray_in",
         "the",
         "$shopping_cart+round_pushpin",
