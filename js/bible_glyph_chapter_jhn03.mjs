@@ -124,7 +124,7 @@ export function bible_glyph_chapter_jhn03() {
           "mother’s",
           "$baby+house",
           "a",
-          "second",
+          "$second_place",
           "time",
           "to",
           "be",
