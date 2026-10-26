@@ -26,7 +26,7 @@ export function bible_glyph_chapter_psa112() {
           "$i_am,",
           "who",
           "greatly",
-          "delights",
+          "$smiling_face_with_hearts+doing",
           "in",
           "His",
           "$scroll.",
