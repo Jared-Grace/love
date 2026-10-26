@@ -318,7 +318,7 @@ export function bible_glyph_chapter_gen32() {
           "my",
           "$brother",
           "$proper_name$Esau,",
-          "for",
+          "$pointing",
           "I",
           "am",
           "afraid",
