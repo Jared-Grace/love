@@ -1201,7 +1201,7 @@ export function bible_glyph_chapter_mrk12() {
         "$tray_out",
         "$pointing_back",
         "$spring+doing,",
-        "but",
+        "$curving_right",
         "she",
         "$tray_out",
         "$pointing_back",
