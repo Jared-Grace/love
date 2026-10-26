@@ -257,7 +257,7 @@ export function bible_glyph_chapter_jud01() {
       {
         verse_number: 8,
         words: [
-          "Yet",
+          "$new_moon+exclamation",
           "$plus",
           "in",
           "the",
