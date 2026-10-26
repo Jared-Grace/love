@@ -616,7 +616,7 @@ export function bible_glyph_chapter_luk24() {
           "$heart_organ",
           "to",
           "$anchor+doing",
-          "all",
+          "$all",
           "that",
           "the",
           "$megaphone",
