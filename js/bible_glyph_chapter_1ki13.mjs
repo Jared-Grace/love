@@ -837,7 +837,7 @@ export function bible_glyph_chapter_1ki13() {
           "$cup_with_straw,",
           "the",
           "$megaphone",
-          "who",
+          "$back+flashlight",
           "had",
           "$turn_back",
           "him",
