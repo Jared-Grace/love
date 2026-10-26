@@ -1148,7 +1148,7 @@ export function bible_glyph_chapter_luk24() {
           "$pointing_back",
           "$name_tag",
           "to",
-          "all",
+          "$all",
           "$map,",
           "beginning",
           "in",
