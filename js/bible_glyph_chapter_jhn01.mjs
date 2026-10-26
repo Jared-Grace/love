@@ -612,7 +612,7 @@ export function bible_glyph_chapter_jhn01() {
           "$no_entry",
           "$gold+describing",
           "to",
-          "untie.”",
+          "$free_button.”",
         ],
       },
       {
