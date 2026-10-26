@@ -396,7 +396,7 @@ export function bible_glyph_chapter_jhn01() {
           "at",
           "the",
           "$father’s",
-          "side,",
+          "$hug+x_ray,",
           "has",
           "made",
           "Him",
