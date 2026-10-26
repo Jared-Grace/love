@@ -867,7 +867,7 @@ export function bible_glyph_chapter_jol02() {
           "there",
           "is",
           "no",
-          "other.",
+          "$repeat.",
           "My",
           "$family",
           "will",
