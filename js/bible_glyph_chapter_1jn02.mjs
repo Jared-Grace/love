@@ -682,7 +682,7 @@ export function bible_glyph_chapter_1jn02() {
         verse_number: 23,
         words: [
           "Whoever",
-          "denies",
+          "$gesturing_no",
           "the",
           "$son",
           "does",
