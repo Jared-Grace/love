@@ -865,7 +865,7 @@ export function bible_glyph_chapter_mrk11() {
         "$fear+doing",
         "the",
         "$crowd,",
-        "for",
+        "$information",
         "they",
         "all",
         "held",
