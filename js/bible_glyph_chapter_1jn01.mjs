@@ -107,7 +107,7 @@ export function bible_glyph_chapter_1jn01() {
           "$you,",
           "so",
           "that",
-          "you",
+          "$you",
           "$plus",
           "may",
           "have",
