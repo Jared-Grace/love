@@ -940,7 +940,7 @@ export function bible_glyph_chapter_luk07() {
         "you",
         "did",
         "$no_entry",
-        "dance;",
+        "$man_dancing;",
         "we",
         "sang",
         "a",
