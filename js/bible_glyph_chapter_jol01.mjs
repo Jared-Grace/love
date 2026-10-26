@@ -434,7 +434,7 @@ export function bible_glyph_chapter_jol01() {
           "your",
           "$heart_on_fire,",
           "and",
-          "cry",
+          "$loudspeaker+mouth",
           "out",
           "to",
           "the",
