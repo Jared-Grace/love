@@ -241,7 +241,7 @@ export function bible_glyph_chapter_deu26() {
           "we",
           "called",
           "out",
-          "to",
+          "$toward",
           "the",
           "$i_am,",
           "the",
