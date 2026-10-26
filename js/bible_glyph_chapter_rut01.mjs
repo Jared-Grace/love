@@ -208,7 +208,7 @@ export function bible_glyph_chapter_rut01() {
           "by",
           "her",
           "$two",
-          "daughters-in-law,",
+          "$bouquet,",
           "she",
           "left",
           "the",
