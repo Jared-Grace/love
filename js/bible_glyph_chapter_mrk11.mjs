@@ -91,7 +91,7 @@ export function bible_glyph_chapter_mrk11() {
         "are",
         "you",
         "$hammer",
-        "this?’",
+        "$flashlight?’",
         "$speech",
         "to",
         "him,",
