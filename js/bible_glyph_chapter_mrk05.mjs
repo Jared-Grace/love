@@ -110,7 +110,7 @@ export function bible_glyph_chapter_mrk05() {
         "one",
         "had",
         "the",
-        "strength",
+        "$might+doing",
         "to",
         "subdue",
         "$pointing_back.",
