@@ -219,7 +219,7 @@ export function bible_glyph_chapter_1jn04() {
           "comes",
           "from",
           "$heart_on_fire.",
-          "Everyone",
+          "$all",
           "who",
           "$heart_red+doing$s",
           "has",
