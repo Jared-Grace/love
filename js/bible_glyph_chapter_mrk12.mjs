@@ -404,7 +404,7 @@ export function bible_glyph_chapter_mrk12() {
         "Jesus",
         "$lightbulb",
         "$pointing_back",
-        "hypocrisy",
+        "$performing_arts+thing",
         "$speech",
         "to",
         "$pointing_back,",
