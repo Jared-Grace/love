@@ -273,7 +273,7 @@ export function bible_glyph_chapter_rut04() {
           "the",
           "$currency_exchange+thing",
           "or",
-          "exchange",
+          "$arrow_both_ways+package",
           "of",
           "property,",
           "to",
