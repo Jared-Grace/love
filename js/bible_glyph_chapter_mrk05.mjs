@@ -626,7 +626,7 @@ export function bible_glyph_chapter_mrk05() {
         "$plus",
         "He",
         "went",
-        "with",
+        "$linked_paperclips",
         "$pointing_back,",
         "$plus",
         "a",
