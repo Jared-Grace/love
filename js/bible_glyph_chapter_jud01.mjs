@@ -89,7 +89,7 @@ export function bible_glyph_chapter_jud01() {
           "contend",
           "earnestly",
           "for",
-          "the",
+          "$pin",
           "$anchor",
           "once",
           "for",
