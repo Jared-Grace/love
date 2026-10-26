@@ -729,7 +729,7 @@ export function bible_glyph_chapter_mat05() {
           "has",
           "$hourglass_done",
           "committed",
-          "adultery",
+          "$broken_heart+doing",
           "with",
           "$pointing_back",
           "$tray_in",
