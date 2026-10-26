@@ -196,7 +196,7 @@ export function bible_glyph_chapter_1jn05() {
           "$blood,",
           "$plus",
           "these",
-          "three",
+          "$three",
           "are",
           "in",
           "agreement.",
