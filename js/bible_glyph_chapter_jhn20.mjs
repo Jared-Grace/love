@@ -98,7 +98,7 @@ export function bible_glyph_chapter_jhn20() {
           "So",
           "$rock+proper_name",
           "$plus",
-          "the",
+          "$pin",
           "other",
           "$learner",
           "set",
