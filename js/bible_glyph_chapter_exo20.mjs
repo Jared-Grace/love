@@ -106,7 +106,7 @@ export function bible_glyph_chapter_exo20() {
           "$no_entry",
           "$kneeling+doing",
           "them;",
-          "for",
+          "$pointing",
           "I,",
           "the",
           "$i_am",
