@@ -291,7 +291,7 @@ export function bible_glyph_chapter_mrk11() {
         "hour",
         "was",
         "already",
-        "late,",
+        "$sunset+clock,",
         "He",
         "went",
         "out",
