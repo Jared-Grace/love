@@ -904,7 +904,7 @@ export function bible_glyph_chapter_mrk05() {
         "has",
         "$skull.",
         "$flashlight+question",
-        "bother",
+        "$weary_face+repeat+doing",
         "the",
         "Teacher",
         "any",
