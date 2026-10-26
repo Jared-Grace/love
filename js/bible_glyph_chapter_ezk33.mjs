@@ -855,7 +855,7 @@ export function bible_glyph_chapter_ezk33() {
           "living",
           "in",
           "the",
-          "ruins",
+          "$desert+thing",
           "in",
           "the",
           "land",
