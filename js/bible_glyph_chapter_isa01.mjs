@@ -834,7 +834,7 @@ export function bible_glyph_chapter_isa01() {
           "by",
           "the",
           "gardens",
-          "that",
+          "$back+flashlight",
           "you",
           "have",
           "chosen.",
