@@ -879,7 +879,7 @@ export function bible_glyph_chapter_jhn04() {
           "so",
           "that",
           "$pin",
-          "sower",
+          "$seed+doing",
           "$plus",
           "$pin",
           "$harvest+doing",
