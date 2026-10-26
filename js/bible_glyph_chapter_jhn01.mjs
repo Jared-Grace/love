@@ -489,7 +489,7 @@ export function bible_glyph_chapter_jhn01() {
           "must",
           "$hands_giving",
           "an",
-          "answer",
+          "$speech+turn_back+thing",
           "to",
           "those",
           "who",
