@@ -523,7 +523,7 @@ export function bible_glyph_chapter_jol01() {
       {
         verse_number: 18,
         words: [
-          "How",
+          "$flashlight+question",
           "the",
           "cattle",
           "groan!",
