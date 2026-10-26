@@ -714,7 +714,7 @@ export function bible_glyph_chapter_mrk05() {
     {
       verse_number: 28,
       words: [
-        "For",
+        "$information",
         "she",
         "was",
         "$speech,",
