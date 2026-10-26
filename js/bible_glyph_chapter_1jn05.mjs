@@ -446,7 +446,7 @@ export function bible_glyph_chapter_1jn05() {
           "of",
           "$bow+doing.",
           "There",
-          "is",
+          "$link",
           "a",
           "$bow",
           "that",
