@@ -83,7 +83,7 @@ export function bible_glyph_chapter_1jn04() {
           "that",
           "does",
           "$no_entry",
-          "confess",
+          "$people_with_bunny_ears+speech+doing",
           "$cross",
           "is",
           "$no_entry",
