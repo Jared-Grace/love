@@ -1388,7 +1388,7 @@ export function bible_glyph_chapter_mrk10() {
         "$hammer",
         "for",
         "you?”",
-        "The",
+        "$pin",
         "blind",
         "man",
         "was",
