@@ -98,7 +98,7 @@ export function bible_glyph_chapter_jhn03() {
           "$traffic_light",
           "he",
           "is",
-          "born",
+          "$hatching_chick",
           "again.”",
         ],
       },
