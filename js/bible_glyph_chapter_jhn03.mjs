@@ -620,7 +620,7 @@ export function bible_glyph_chapter_jhn03() {
           "(For",
           "$proper_name$John",
           "had",
-          "not",
+          "$no_entry+hourglass_not_done",
           "yet",
           "been",
           "thrown",
