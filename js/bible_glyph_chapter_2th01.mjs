@@ -229,7 +229,7 @@ export function bible_glyph_chapter_2th01() {
           "$plus",
           "do",
           "$no_entry",
-          "obey",
+          "$down_arrow+ear+loudspeaker+doing",
           "the",
           "$angel+thumbs_up",
           "of",
