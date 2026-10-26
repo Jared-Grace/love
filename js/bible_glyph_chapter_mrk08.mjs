@@ -919,7 +919,7 @@ export function bible_glyph_chapter_mrk08() {
         verse_number: 35,
         words: [
           "For",
-          "whoever",
+          "$back+flashlight",
           "wants",
           "to",
           "save",
