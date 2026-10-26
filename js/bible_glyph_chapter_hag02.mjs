@@ -595,7 +595,7 @@ export function bible_glyph_chapter_hag02() {
           "$fruit+red_circle,",
           "and",
           "the",
-          "olive",
+          "$olive",
           "$tree",
           "have",
           "$no_entry",
