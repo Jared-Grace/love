@@ -700,7 +700,7 @@ export function bible_glyph_chapter_jhn17() {
           "You",
           "$heart_red+doing",
           "me",
-          "before",
+          "$last_track",
           "the",
           "foundation",
           "of",
