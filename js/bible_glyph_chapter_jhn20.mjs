@@ -279,7 +279,7 @@ export function bible_glyph_chapter_jhn20() {
           "$plus",
           "she",
           "saw",
-          "two",
+          "$two",
           "$angel",
           "$tray_in",
           "white",
