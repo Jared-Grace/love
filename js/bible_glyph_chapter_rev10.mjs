@@ -226,7 +226,7 @@ export function bible_glyph_chapter_rev10() {
       {
         verse_number: 7,
         words: [
-          "But",
+          "$curving_up",
           "$tray_in",
           "the",
           "$sun",
