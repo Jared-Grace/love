@@ -246,7 +246,7 @@ export function bible_glyph_chapter_jon04() {
           "that",
           "he",
           "grew",
-          "faint",
+          "$face_exhaling+doing",
           "and",
           "wished",
           "to",
