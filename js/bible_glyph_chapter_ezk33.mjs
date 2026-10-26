@@ -1082,7 +1082,7 @@ export function bible_glyph_chapter_ezk33() {
           "waste",
           "because",
           "of",
-          "all",
+          "$all",
           "the",
           "abominations",
           "they",
