@@ -785,7 +785,7 @@ export function bible_glyph_chapter_mrk12() {
         "this:",
         "$ear,",
         "O",
-        "Israel,",
+        "$wrestling+heart_on_fire,",
         "the",
         "$crown",
         "our",
