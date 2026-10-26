@@ -593,7 +593,7 @@ export function bible_glyph_chapter_mrk04() {
           "to",
           "$footprints",
           "to",
-          "light.",
+          "$light+describing.",
         ],
       },
       {
