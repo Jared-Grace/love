@@ -471,7 +471,7 @@ export function bible_glyph_chapter_jol02() {
           "nursing",
           "at",
           "the",
-          "breast.",
+          "$breast_feeding.",
           "Let",
           "the",
           "bridegroom",
