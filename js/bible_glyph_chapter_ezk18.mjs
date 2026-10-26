@@ -343,7 +343,7 @@ export function bible_glyph_chapter_ezk18() {
           "lifts",
           "his",
           "$eyes",
-          "to",
+          "$toward",
           "$moai;",
           "he",
           "$hammer+doing$s",
