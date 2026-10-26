@@ -857,7 +857,7 @@ export function bible_glyph_chapter_isa01() {
           "like",
           "a",
           "$garden",
-          "without",
+          "$dotted_line_face",
           "$water.",
         ],
       },
