@@ -365,7 +365,7 @@ export function bible_glyph_chapter_luk15() {
         "a",
         "severe",
         "famine",
-        "swept",
+        "$butterfly",
         "through",
         "that",
         "country,",
