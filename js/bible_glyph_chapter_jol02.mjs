@@ -394,7 +394,7 @@ export function bible_glyph_chapter_jol02() {
           "$straight_ruler+clock+describing",
           "to",
           "$nose+fire,",
-          "abounding",
+          "$multiply",
           "in",
           "$gift.",
           "And",
