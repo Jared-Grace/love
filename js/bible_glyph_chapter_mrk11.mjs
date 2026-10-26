@@ -832,7 +832,7 @@ export function bible_glyph_chapter_mrk11() {
         "$plus",
         "they",
         "$speech",
-        "among",
+        "$toward",
         "$pointing_back+pointing_back,",
         "“If",
         "we",
