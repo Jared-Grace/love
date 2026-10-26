@@ -816,7 +816,7 @@ export function bible_glyph_chapter_jhn09() {
           "$ear",
           "a",
           "$bow+doer,",
-          "but",
+          "$curving_up",
           "He",
           "does",
           "$ear",
