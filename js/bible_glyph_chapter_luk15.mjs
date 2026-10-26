@@ -419,7 +419,7 @@ export function bible_glyph_chapter_luk15() {
         "$tray_out",
         "$pin",
         "pods",
-        "the",
+        "$pin",
         "pigs",
         "were",
         "eating,",
