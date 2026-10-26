@@ -882,7 +882,7 @@ export function bible_glyph_chapter_mrk08() {
           "$plus",
           "Jesus",
           "called",
-          "the",
+          "$pin",
           "$crowd",
           "to",
           "Him",
