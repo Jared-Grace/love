@@ -785,7 +785,7 @@ export function bible_glyph_chapter_jhn09() {
           "$person",
           "answered,",
           "That",
-          "is",
+          "$link",
           "$astonished+describing",
           "$information.",
           "You",
