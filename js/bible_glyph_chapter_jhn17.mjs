@@ -18,7 +18,7 @@ export function bible_glyph_chapter_jhn17() {
       {
         verse_number: 1,
         words: [
-          "These",
+          "$flashlight",
           "things",
           "$mouth",
           "$cross,",
