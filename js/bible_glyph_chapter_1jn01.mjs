@@ -289,7 +289,7 @@ export function bible_glyph_chapter_1jn01() {
           "cleanse",
           "us",
           "$away",
-          "all",
+          "$all",
           "unrighteousness.",
         ],
       },
