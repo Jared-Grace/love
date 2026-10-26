@@ -654,7 +654,7 @@ export function bible_glyph_chapter_jhn20() {
           "$no_entry",
           "$linked_paperclips",
           "$pointing_back",
-          "when",
+          "$back+clock",
           "$cross",
           "$footprints.",
         ],
