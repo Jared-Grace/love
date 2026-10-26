@@ -1383,7 +1383,7 @@ export function bible_glyph_chapter_luk07() {
         "forgiven",
         "$dim_button,",
         "$heart_red+doing",
-        "little.”",
+        "$dim_button.”",
       ],
     },
     {
