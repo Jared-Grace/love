@@ -178,7 +178,7 @@ export function bible_glyph_chapter_luk07() {
         "to",
         "$footprints",
         "to",
-        "You.",
+        "$you.",
         "But",
         "just",
         "$speech",
