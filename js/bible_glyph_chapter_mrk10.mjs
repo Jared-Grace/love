@@ -611,7 +611,7 @@ export function bible_glyph_chapter_mrk10() {
         "pass",
         "$metro",
         "the",
-        "eye",
+        "$hole+sewing_needle",
         "of",
         "a",
         "needle",
