@@ -270,7 +270,7 @@ export function bible_glyph_chapter_jol03() {
           "$crossed_swords;",
           "$rooster",
           "the",
-          "mighty",
+          "$might+person",
           "men;",
           "let",
           "all",
