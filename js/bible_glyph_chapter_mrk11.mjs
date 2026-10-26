@@ -297,7 +297,7 @@ export function bible_glyph_chapter_mrk11() {
         "out",
         "to",
         "$proper_name$Bethany",
-        "with",
+        "$linked_paperclips",
         "the",
         "Twelve.",
       ],
