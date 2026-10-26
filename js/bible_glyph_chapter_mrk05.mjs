@@ -914,7 +914,7 @@ export function bible_glyph_chapter_mrk05() {
     {
       verse_number: 36,
       words: [
-        "But",
+        "$curving_right",
         "$cross",
         "overheard",
         "the",
