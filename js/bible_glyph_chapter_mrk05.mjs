@@ -993,7 +993,7 @@ export function bible_glyph_chapter_mrk05() {
         "$speech",
         "to",
         "$pointing_back,",
-        "“Why",
+        "“$flashlight+question",
         "all",
         "this",
         "commotion",
