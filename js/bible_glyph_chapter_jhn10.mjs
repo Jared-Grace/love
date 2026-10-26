@@ -951,7 +951,7 @@ export function bible_glyph_chapter_jhn10() {
           "$plus",
           "$lightbulb",
           "$pointing",
-          "the",
+          "$pin",
           "$father",
           "is",
           "$tray_in",
