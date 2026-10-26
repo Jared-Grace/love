@@ -53,7 +53,7 @@ export function bible_glyph_chapter_oba01() {
           "us",
           "go",
           "to",
-          "battle",
+          "$crossed_swords",
           "against",
           "her!",
         ],
