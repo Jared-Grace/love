@@ -361,7 +361,7 @@ export function bible_glyph_chapter_1jn05() {
         verse_number: 14,
         words: [
           "$plus",
-          "this",
+          "$flashlight",
           "is",
           "the",
           "confidence",
