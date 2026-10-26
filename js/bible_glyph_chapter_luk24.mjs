@@ -948,7 +948,7 @@ export function bible_glyph_chapter_luk24() {
           "$foot.",
           "$pointing",
           "it",
-          "is",
+          "$link",
           "I",
           "$pointing_back.",
           "Touch",
