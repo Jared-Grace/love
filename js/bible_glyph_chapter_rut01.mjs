@@ -694,7 +694,7 @@ export function bible_glyph_chapter_rut01() {
           "of",
           "the",
           "barley",
-          "harvest.",
+          "$harvest.",
         ],
       },
     ],
