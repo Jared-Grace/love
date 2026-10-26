@@ -181,7 +181,7 @@ export function bible_glyph_chapter_jhn10() {
       {
         verse_number: 7,
         words: [
-          "So",
+          "$right_arrow",
           "$cross",
           "$speech",
           "again,",
