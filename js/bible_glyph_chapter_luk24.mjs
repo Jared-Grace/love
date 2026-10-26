@@ -931,7 +931,7 @@ export function bible_glyph_chapter_luk24() {
           "why",
           "do",
           "doubts",
-          "arise",
+          "$walking+pointing_up",
           "$tray_in",
           "your",
           "$heart_organ?",
