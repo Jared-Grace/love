@@ -244,7 +244,7 @@ export function bible_glyph_chapter_mrk10() {
       verse_number: 12,
       words: [
         "$plus",
-        "if",
+        "$traffic_light",
         "$pointing_back",
         "divorces",
         "$pointing_back",
