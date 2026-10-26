@@ -32,6 +32,7 @@ export async function bible_glyph_chapters_verse_marks_offenders_word_draw(
   "A GLOSS IS COMPARED BY ITS LETTERS ALONE, so case and the full stop at the end of a verse cannot part two spellings of one word, and a gloss of several words matches only through the one word of it the root's own gloss names - see the phrase paragraph below - so a phrase naming none of the root, or two words of it, still matches nothing and is passed over rather than guessed at.";
   "ONLY THE PLAIN WORDS OF A VERSE ARE LOOKED AT, because a parsed verse holds two kinds of thing - the English a person typed, and the picture groups the shorthand turned into objects - and asking a group for its letters is asking a thing that has none.";
   "EACH VERSE COMMITS ITSELF under the name of the one entry it changed, because a run of independent repairs that commits once at the end loses every one of their names to a single sweep.";
+  "THE MARK REPLACES THE WORD BETWEEN ITS OUTER PUNCTUATION, NOT ITS LETTERS (2026-10-27). The word was once swapped by finding its letters-only spelling inside it, and daughters-in-law has no run daughtersinlaw in it to find - so the swap changed nothing, the edit committed nothing, and the word was still handed back as drawn. Keeping the opening quotes and the closing marks and replacing everything between them draws a hyphenated word the same as any other.";
   "A ROW'S GLOSS IS OFTEN A PHRASE AND ONLY ONE WORD OF IT IS THE ROOT (2026-09-17). The interlinear prints but Your name under a single Hebrew word, and read whole that phrase is spelled nowhere in the verse, so a hundred and fourteen of a hundred and forty six short verses were being refused for want of one shared word. So a row now stands for the one word of its phrase that the root's own gloss names, when exactly one does - name, out of but Your name, for the root glossed name. Nothing downstream moves: the word still has to stand in the verse as many times as the mark is short, on both sides, before a mark is drawn.";
   "A PHRASE NEVER NARROWS TO A LITTLE WORD UNLESS THE ROOT IS ONLY LITTLE WORDS (2026-09-17). The first run drew twenty nine marks and one was wrong: and they went in to offer seats the root for coming in twice, the interlinear glossed the first went in, and the one word of that phrase the root's gloss names is in - so a second footprints landed on in, while the second seat of that root was really bring, further down the verse. The little-word guard further on only looks at the word once it is shared, and by then in had already been chosen out of the phrase. So the phrase step keeps the same rule itself: a joining word may be what a phrase stands for only when the root's own gloss is nothing but joining words.";
   arguments_assert(arguments, 1);
@@ -212,8 +213,8 @@ export async function bible_glyph_chapters_verse_marks_offenders_word_draw(
       continue;
     }
     for (let entry of entries) {
-      let letters = text_letters_only(entry);
-      let to = entry.replace(letters, "$" + offender.glyph);
+      let parts = entry.match(/^([“"‘(]*)(.*?)([.,;:!?”’)]*)$/);
+      let to = parts[1] + "$" + offender.glyph + parts[3];
       let done = await function_call_commit(
         bible_glyph_chapter_verse_word_replace,
         [chapter_code, offender.verse_number, entry, 1, to],
