@@ -223,7 +223,7 @@ export function bible_glyph_chapter_jon02() {
           "of",
           "thanksgiving,",
           "will",
-          "sacrifice",
+          "$sacrifice",
           "to",
           "You.",
           "What",
