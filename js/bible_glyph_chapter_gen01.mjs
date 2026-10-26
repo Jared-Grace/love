@@ -555,7 +555,7 @@ export function bible_glyph_chapter_gen01() {
           "$heart_on_fire",
           "$milky_way+doing",
           "the",
-          "great",
+          "$top",
           "$dragon",
           "creatures",
           "and",
