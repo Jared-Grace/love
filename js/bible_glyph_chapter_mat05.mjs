@@ -479,7 +479,7 @@ export function bible_glyph_chapter_mat05() {
       {
         verse_number: 20,
         words: [
-          "For",
+          "$information",
           "I",
           "$speech",
           "you",
