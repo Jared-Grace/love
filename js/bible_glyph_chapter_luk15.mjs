@@ -11,7 +11,7 @@ export function bible_glyph_chapter_luk15() {
     {
       verse_number: 1,
       words: [
-        "Now",
+        "$curving_right",
         "all",
         "the",
         "tax",
