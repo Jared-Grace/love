@@ -348,7 +348,7 @@ export function bible_glyph_chapter_jhn01() {
         words: [
           "$tray_out",
           "$pointing_back’s",
-          "fullness",
+          "$battery+thing",
           "we",
           "have",
           "all",
