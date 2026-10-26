@@ -623,7 +623,7 @@ export function bible_glyph_chapter_jhn03() {
           "$no_entry+hourglass_not_done",
           "yet",
           "been",
-          "thrown",
+          "$throwing",
           "into",
           "prison.)",
         ],
