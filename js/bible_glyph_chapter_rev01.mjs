@@ -287,7 +287,7 @@ export function bible_glyph_chapter_rev01() {
           "$safety_pin+handshake+person",
           "$tray_in",
           "the",
-          "tribulation",
+          "$clamp",
           "$plus",
           "$castle",
           "$plus",
