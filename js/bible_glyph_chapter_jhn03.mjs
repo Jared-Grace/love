@@ -660,7 +660,7 @@ export function bible_glyph_chapter_jhn03() {
           "John",
           "$plus",
           "$speech,",
-          "“Rabbi,",
+          "“$teacher+top,",
           "the",
           "One",
           "who",
