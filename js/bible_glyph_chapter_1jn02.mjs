@@ -450,7 +450,7 @@ export function bible_glyph_chapter_1jn02() {
           "of",
           "the",
           "$father",
-          "is",
+          "$link",
           "$no_entry",
           "$tray_in",
           "$pointing_back.",
