@@ -246,7 +246,7 @@ export function bible_glyph_chapter_rut03() {
         words: [
           "$person+question",
           "are",
-          "you?",
+          "$you?",
           "he",
           "$speech.",
           "I",
