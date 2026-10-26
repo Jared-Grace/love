@@ -1227,7 +1227,7 @@ export function bible_glyph_chapter_mrk10() {
         "a",
         "ransom",
         "for",
-        "many.”",
+        "$multiply.”",
       ],
     },
     {
