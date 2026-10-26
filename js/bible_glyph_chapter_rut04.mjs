@@ -442,7 +442,7 @@ export function bible_glyph_chapter_rut04() {
           "$proper_name$Rachel",
           "and",
           "$proper_name$Leah,",
-          "who",
+          "$back+flashlight",
           "together",
           "built",
           "up",
