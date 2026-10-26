@@ -58,7 +58,7 @@ export function bible_glyph_chapter_rev01() {
           "everything",
           "he",
           "$eye:",
-          "the",
+          "$pin",
           "$speech",
           "of",
           "$heart_on_fire,",
