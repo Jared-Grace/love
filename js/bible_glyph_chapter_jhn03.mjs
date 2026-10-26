@@ -52,7 +52,7 @@ export function bible_glyph_chapter_jhn03() {
           "You",
           "are",
           "a",
-          "teacher",
+          "$teacher",
           "who",
           "has",
           "$footprints",
