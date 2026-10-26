@@ -697,7 +697,7 @@ export function bible_glyph_chapter_jol02() {
           "fig",
           "tree",
           "and",
-          "vine",
+          "$vine",
           "$hands_giving",
           "their",
           "best.",
