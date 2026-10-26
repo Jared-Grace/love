@@ -85,7 +85,7 @@ export function bible_glyph_chapter_luk15() {
         "does",
         "$no_entry",
         "$pointing_down+puzzle_piece+doing",
-        "the",
+        "$pin",
         "ninety",
         "nine",
         "$tray_in",
