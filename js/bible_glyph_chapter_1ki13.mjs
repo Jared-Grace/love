@@ -760,7 +760,7 @@ export function bible_glyph_chapter_1ki13() {
           "the",
           "$i_am",
           "$speech:",
-          "Because",
+          "$information",
           "you",
           "have",
           "defied",
