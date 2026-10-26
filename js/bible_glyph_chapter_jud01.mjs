@@ -310,7 +310,7 @@ export function bible_glyph_chapter_jud01() {
           "The",
           "$crown",
           "$right_anger_bubble",
-          "you.",
+          "$you.",
         ],
       },
       {
