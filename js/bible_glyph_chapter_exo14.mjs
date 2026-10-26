@@ -569,7 +569,7 @@ export function bible_glyph_chapter_exo14() {
           "The",
           "$candle",
           "of",
-          "cloud",
+          "$cloud",
           "also",
           "moved",
           "from",
