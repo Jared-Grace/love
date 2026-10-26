@@ -591,7 +591,7 @@ export function bible_glyph_chapter_luk15() {
         "$pointing_back",
         "$kneeling,",
         "$fast_forward+manner!",
-        "Bring",
+        "$tray_out+shopping_cart",
         "the",
         "best",
         "robe",
