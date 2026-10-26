@@ -437,7 +437,7 @@ export function bible_glyph_chapter_jhn20() {
           "cling",
           "to",
           "Me,",
-          "for",
+          "$information",
           "I",
           "have",
           "not",
