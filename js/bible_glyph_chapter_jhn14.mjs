@@ -228,7 +228,7 @@ export function bible_glyph_chapter_jhn14() {
           "“Have",
           "I",
           "been",
-          "with",
+          "$linked_paperclips",
           "you",
           "all",
           "this",
