@@ -535,7 +535,7 @@ export function bible_glyph_chapter_jud01() {
           "what",
           "was",
           "foretold",
-          "by",
+          "$down_arrow",
           "the",
           "$hand_sending+doer",
           "of",
