@@ -144,7 +144,7 @@ export function bible_glyph_chapter_jer26() {
           "the",
           "$i_am",
           "$speech:",
-          "If",
+          "$traffic_light",
           "you",
           "do",
           "$no_entry",
