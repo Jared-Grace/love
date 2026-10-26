@@ -580,7 +580,7 @@ export function bible_glyph_chapter_mrk04() {
           "$link",
           "$no_entry",
           "thing",
-          "hidden",
+          "$face_with_peeking_eye+describing",
           "that",
           "will",
           "$no_entry",
