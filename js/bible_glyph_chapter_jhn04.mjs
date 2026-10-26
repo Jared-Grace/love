@@ -1010,7 +1010,7 @@ export function bible_glyph_chapter_jhn04() {
           "They",
           "$speech",
           "to",
-          "the",
+          "$pin",
           "$woman,",
           "$pointing",
           "“We",
