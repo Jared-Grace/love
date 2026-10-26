@@ -1081,7 +1081,7 @@ export function bible_glyph_chapter_mat05() {
           "go",
           "$linked_paperclips",
           "$pointing_back",
-          "two.",
+          "$two.",
         ],
       },
       {
