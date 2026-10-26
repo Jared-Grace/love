@@ -516,7 +516,7 @@ export function bible_glyph_chapter_jud01() {
           "$pointing_back",
           "mouths",
           "$mouth",
-          "arrogance,",
+          "$up_arrow+mountain+describing,",
           "flattering",
           "others",
           "for",
