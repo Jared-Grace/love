@@ -444,7 +444,7 @@ export function bible_glyph_chapter_jol01() {
       {
         verse_number: 15,
         words: [
-          "Alas",
+          "$crying_face+speech",
           "for",
           "the",
           "$sun!",
