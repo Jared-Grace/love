@@ -105,7 +105,7 @@ export function bible_glyph_chapter_1th01() {
           "that",
           "He",
           "has",
-          "chosen",
+          "$check_box+thing",
           "you.",
         ],
       },
