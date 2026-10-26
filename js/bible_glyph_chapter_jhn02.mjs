@@ -639,7 +639,7 @@ export function bible_glyph_chapter_jhn02() {
           "$clockwise_arrows",
           "the",
           "$person,",
-          "for",
+          "$information",
           "$pointing_back",
           "$lightbulb",
           "what",
