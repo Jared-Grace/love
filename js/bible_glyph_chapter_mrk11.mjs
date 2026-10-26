@@ -217,7 +217,7 @@ export function bible_glyph_chapter_mrk11() {
         "had",
         "cut",
         "$tray_out",
-        "the",
+        "$pin",
         "$field.",
       ],
     },
