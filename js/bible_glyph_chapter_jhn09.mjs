@@ -1046,7 +1046,7 @@ export function bible_glyph_chapter_jhn09() {
           "$no_entry",
           "$bow.",
           "But",
-          "since",
+          "$watch",
           "you",
           "$speech,",
           "$pointing",
