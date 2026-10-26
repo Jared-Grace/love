@@ -422,7 +422,7 @@ export function bible_glyph_chapter_psa118() {
           "$hands_raised",
           "to",
           "You,",
-          "for",
+          "$pointing",
           "You",
           "have",
           "answered",
