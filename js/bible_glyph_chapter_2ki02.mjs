@@ -23,7 +23,7 @@ export function bible_glyph_chapter_2ki02() {
           "$sky",
           "in",
           "a",
-          "whirlwind,",
+          "$tornado,",
           "$heart_on_fire+i_am",
           "and",
           "$heart_on_fire+rescue",
