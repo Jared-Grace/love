@@ -459,7 +459,7 @@ export function bible_glyph_chapter_rut04() {
           "and",
           "famous",
           "in",
-          "Bethlehem.",
+          "$house+bread+proper_name.",
         ],
       },
       {
