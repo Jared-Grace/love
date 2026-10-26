@@ -367,7 +367,7 @@ export function bible_glyph_chapter_mrk12() {
         "$person,",
         "and",
         "You",
-        "teach",
+        "$teacher+doing",
         "the",
         "$road",
         "of",
