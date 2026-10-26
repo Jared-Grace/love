@@ -1151,7 +1151,7 @@ export function bible_glyph_chapter_luk07() {
         "who",
         "$plus",
         "what",
-        "kind",
+        "$earth+likeness+question",
         "of",
         "$woman",
         "is",
