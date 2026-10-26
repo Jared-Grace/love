@@ -703,7 +703,7 @@ export function bible_glyph_chapter_deu30() {
           "fast",
           "to",
           "Him.",
-          "For",
+          "$pointing",
           "He",
           "is",
           "your",
