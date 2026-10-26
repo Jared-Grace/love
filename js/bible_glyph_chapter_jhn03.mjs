@@ -58,7 +58,7 @@ export function bible_glyph_chapter_jhn03() {
           "$footprints",
           "$away",
           "$heart_on_fire.",
-          "For",
+          "$information",
           "$no_entry",
           "one",
           "could",
