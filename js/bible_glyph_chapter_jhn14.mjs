@@ -41,7 +41,7 @@ export function bible_glyph_chapter_jhn14() {
           "My",
           "$father’s",
           "$house",
-          "are",
+          "$link",
           "$multiply",
           "$pin+house.",
           "If",
