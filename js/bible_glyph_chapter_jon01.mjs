@@ -174,7 +174,7 @@ export function bible_glyph_chapter_jon01() {
           "$end_arrow+mountain",
           "of",
           "the",
-          "vessel,",
+          "$ship+top,",
           "where",
           "he",
           "lay",
