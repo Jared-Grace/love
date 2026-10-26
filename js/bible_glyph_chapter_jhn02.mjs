@@ -353,7 +353,7 @@ export function bible_glyph_chapter_jhn02() {
           "$plus",
           "$tray_in",
           "the",
-          "temple",
+          "$classical_building",
           "He",
           "found",
           "those",
