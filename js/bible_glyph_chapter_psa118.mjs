@@ -105,7 +105,7 @@ export function bible_glyph_chapter_psa118() {
           "will",
           "$no_entry",
           "be",
-          "afraid.",
+          "$fear+doing.",
           "What",
           "can",
           "$person",
