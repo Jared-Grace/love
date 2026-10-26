@@ -748,7 +748,7 @@ export function bible_glyph_chapter_luk02() {
         "$pointing_back",
         "$toward+tray_in",
         "his",
-        "arms",
+        "$hug+flexed_biceps",
         "$plus",
         "$speech+thumbs_up",
         "$heart_on_fire",
