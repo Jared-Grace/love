@@ -692,7 +692,7 @@ export function bible_glyph_chapter_1jn02() {
           "$father.",
           "$plus",
           "whoever",
-          "confesses",
+          "$people_with_bunny_ears+speech+doing",
           "the",
           "$son",
           "has",
