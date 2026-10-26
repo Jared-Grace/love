@@ -187,7 +187,7 @@ export function bible_glyph_chapter_rut02() {
         words: [
           "She",
           "$speech,",
-          "Please",
+          "$pleading",
           "let",
           "me",
           "$hand+sheaf_of_rice+doing",
