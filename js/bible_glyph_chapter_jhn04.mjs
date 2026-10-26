@@ -1344,7 +1344,7 @@ export function bible_glyph_chapter_jhn04() {
           "$footprints",
           "$tray_out",
           "$proper_name$Judea",
-          "into",
+          "$toward+tray_in",
           "$proper_name$Galilee.",
         ],
       },
