@@ -474,7 +474,7 @@ export function bible_glyph_chapter_mrk11() {
         "$no_entry",
         "written",
         "$pointing",
-        "‘My",
+        "‘$me",
         "$house",
         "will",
         "be",
