@@ -406,7 +406,7 @@ export function bible_glyph_chapter_psa139() {
           "awake,",
           "I",
           "am",
-          "still",
+          "$repeat",
           "with",
           "You.",
         ],
