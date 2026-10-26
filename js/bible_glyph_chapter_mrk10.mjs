@@ -445,7 +445,7 @@ export function bible_glyph_chapter_mrk10() {
         "$no_entry",
         "bear",
         "false",
-        "witness,",
+        "$lying_face+witness+doing,",
         "$no_entry",
         "cheat",
         "others,",
