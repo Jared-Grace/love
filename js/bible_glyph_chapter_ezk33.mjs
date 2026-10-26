@@ -88,7 +88,7 @@ export function bible_glyph_chapter_ezk33() {
           "the",
           "horn",
           "to",
-          "warn",
+          "$rotating_light+doing",
           "the",
           "$family.",
         ],
