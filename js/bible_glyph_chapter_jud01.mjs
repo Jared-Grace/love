@@ -556,7 +556,7 @@ export function bible_glyph_chapter_jud01() {
           "In",
           "the",
           "$end_arrow+describing",
-          "times",
+          "$timer_clock",
           "there",
           "will",
           "be",
