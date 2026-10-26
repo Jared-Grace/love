@@ -166,7 +166,7 @@ export function bible_glyph_chapter_1jn03() {
           "$no_entry",
           "one",
           "who",
-          "remains",
+          "$pin+doing",
           "$tray_in",
           "$pointing_back",
           "keeps",
