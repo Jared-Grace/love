@@ -131,7 +131,7 @@ export function bible_glyph_chapter_jhn01() {
           "to",
           "$witness+doing",
           "$clockwise_arrows",
-          "the",
+          "$pin",
           "$light,",
           "so",
           "that",
