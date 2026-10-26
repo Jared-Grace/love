@@ -389,7 +389,7 @@ export function bible_glyph_chapter_rut01() {
           "for",
           "them",
           "$finish",
-          "grow",
+          "$top+doing",
           "up?",
           "Would",
           "you",
