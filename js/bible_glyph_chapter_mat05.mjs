@@ -886,7 +886,7 @@ export function bible_glyph_chapter_mat05() {
           "was",
           "$speech",
           "to",
-          "the",
+          "$pin",
           "ancients,",
           "$no_entry",
           "break",
