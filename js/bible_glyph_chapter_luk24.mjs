@@ -1014,7 +1014,7 @@ export function bible_glyph_chapter_luk24() {
           "$joker",
           "here",
           "to",
-          "eat?",
+          "$fork_and_knife+describing?",
         ],
       },
       {
