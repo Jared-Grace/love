@@ -700,7 +700,7 @@ export function bible_glyph_chapter_jhn03() {
           "anything",
           "unless",
           "it",
-          "is",
+          "$link",
           "$hands_giving$n",
           "him",
           "$tray_out",
