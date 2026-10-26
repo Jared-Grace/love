@@ -941,7 +941,7 @@ export function bible_glyph_chapter_jol02() {
           "I",
           "will",
           "$hands_giving",
-          "wonders",
+          "$shooting_star",
           "in",
           "the",
           "$sky",
