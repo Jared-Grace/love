@@ -72,7 +72,7 @@ export function bible_glyph_chapter_jud01() {
           "to",
           "$you",
           "$clockwise_arrows",
-          "the",
+          "$pin",
           "$rescue+thing",
           "we",
           "share,",
