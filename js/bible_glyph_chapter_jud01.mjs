@@ -36,7 +36,7 @@ export function bible_glyph_chapter_jud01() {
           "the",
           "$father",
           "$plus",
-          "kept",
+          "$guard",
           "for",
           "$cross",
           "$oil,",
