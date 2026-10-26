@@ -304,7 +304,7 @@ export function bible_glyph_chapter_jol01() {
           "dismayed,",
           "O",
           "farmers;",
-          "wail,",
+          "$crying_face+loudspeaker+doing,",
           "O",
           "vinedressers,",
           "over",
