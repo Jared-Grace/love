@@ -604,7 +604,7 @@ export function bible_glyph_chapter_1ki13() {
           "with",
           "you",
           "in",
-          "this",
+          "$flashlight",
           "$place.",
         ],
       },
