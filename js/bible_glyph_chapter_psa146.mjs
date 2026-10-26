@@ -29,7 +29,7 @@ export function bible_glyph_chapter_psa146() {
         words: [
           "I",
           "will",
-          "praise",
+          "$clapping_hands",
           "the",
           "$i_am",
           "while",
