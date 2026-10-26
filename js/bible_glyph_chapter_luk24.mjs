@@ -1060,7 +1060,7 @@ export function bible_glyph_chapter_luk24() {
           "I",
           "$mouth",
           "$toward",
-          "you",
+          "$you",
           "while",
           "I",
           "was",
