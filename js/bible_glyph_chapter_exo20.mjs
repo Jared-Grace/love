@@ -684,7 +684,7 @@ export function bible_glyph_chapter_exo20() {
           "$altar",
           "on",
           "steps,",
-          "lest",
+          "$back+flashlight",
           "your",
           "nakedness",
           "be",
