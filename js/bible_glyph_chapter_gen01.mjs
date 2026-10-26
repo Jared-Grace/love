@@ -361,7 +361,7 @@ export function bible_glyph_chapter_gen01() {
           "Let",
           "there",
           "be",
-          "lights",
+          "$light+thing",
           "in",
           "the",
           "expanse",
