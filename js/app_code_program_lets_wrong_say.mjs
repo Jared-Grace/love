@@ -48,8 +48,8 @@ export function app_code_program_lets_wrong_say(question, answer, choice) {
   }
   function run(program) {
     function get() {
-      let logs = eval_console_log_to_list(program);
-      return logs;
+      let logged = eval_console_log_to_list(program);
+      return logged;
     }
     let logs = catch_null(get);
     return logs;
