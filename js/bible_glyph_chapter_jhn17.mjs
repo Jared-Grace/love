@@ -491,7 +491,7 @@ export function bible_glyph_chapter_jhn17() {
           "$sparkle+doing",
           "$pointing_back",
           "$tray_in",
-          "the",
+          "$pin",
           "$check.",
           "Your",
           "$speech",
