@@ -425,7 +425,7 @@ export function bible_glyph_chapter_gen01() {
           "$heart_on_fire",
           "$hammer+doing",
           "the",
-          "two",
+          "$two",
           "great",
           "lights:",
           "the",
