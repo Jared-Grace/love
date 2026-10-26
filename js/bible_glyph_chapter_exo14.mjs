@@ -941,7 +941,7 @@ export function bible_glyph_chapter_exo14() {
           "the",
           "$top",
           "$hand",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "had",
