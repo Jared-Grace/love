@@ -783,7 +783,7 @@ export function bible_glyph_chapter_gen03() {
           "side",
           "of",
           "the",
-          "Garden",
+          "$garden",
           "of",
           "$proper_name$Eden,",
           "along",
