@@ -525,7 +525,7 @@ export function bible_glyph_chapter_deu26() {
           "$tray_out",
           "it",
           "while",
-          "unclean,",
+          "$soap+no_entry,",
           "or",
           "$no_entry",
           "$hands_giving",
