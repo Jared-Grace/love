@@ -688,7 +688,7 @@ export function bible_glyph_chapter_isa01() {
       {
         verse_number: 24,
         words: [
-          "Therefore",
+          "$right_arrow",
           "the",
           "$crown",
           "$i_am",
