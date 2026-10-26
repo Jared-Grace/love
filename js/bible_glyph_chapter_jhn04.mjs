@@ -62,7 +62,7 @@ export function bible_glyph_chapter_jhn04() {
       {
         verse_number: 4,
         words: [
-          "Now",
+          "$curving_right",
           "$pointing_back",
           "had",
           "to",
