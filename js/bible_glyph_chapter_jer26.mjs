@@ -405,7 +405,7 @@ export function bible_glyph_chapter_jer26() {
           "$scales+thing",
           "of",
           "$skull,",
-          "for",
+          "$pointing",
           "he",
           "has",
           "prophesied",
