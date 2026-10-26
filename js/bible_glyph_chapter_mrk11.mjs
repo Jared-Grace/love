@@ -868,7 +868,7 @@ export function bible_glyph_chapter_mrk11() {
         "$information",
         "they",
         "all",
-        "held",
+        "$raised_fist",
         "$pointing",
         "$proper_name$John",
         "really",
