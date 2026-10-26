@@ -227,7 +227,7 @@ export function bible_glyph_chapter_mrk12() {
         "$crown",
         "of",
         "the",
-        "vineyard",
+        "$vineyard",
         "$hammer?",
         "He",
         "will",
