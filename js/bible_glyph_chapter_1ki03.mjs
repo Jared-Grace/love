@@ -595,7 +595,7 @@ export function bible_glyph_chapter_1ki03() {
           "$pleading_face+manner,",
           "my",
           "$crown,",
-          "this",
+          "$flashlight",
           "$woman",
           "and",
           "I",
