@@ -322,7 +322,7 @@ export function bible_glyph_chapter_oba01() {
           "with",
           "$flushed+cloak",
           "and",
-          "cut",
+          "$scissors",
           "off",
           "$hourglass.",
         ],
