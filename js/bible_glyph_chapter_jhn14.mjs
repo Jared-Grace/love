@@ -571,7 +571,7 @@ export function bible_glyph_chapter_jhn14() {
           "$plus",
           "$guard",
           "$pointing_back",
-          "is",
+          "$link",
           "the",
           "one",
           "who",
