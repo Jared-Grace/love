@@ -527,7 +527,7 @@ export function bible_glyph_chapter_jhn10() {
       {
         verse_number: 20,
         words: [
-          "Many",
+          "$multiply",
           "$tray_out",
           "$pointing_back",
           "$speech,",
