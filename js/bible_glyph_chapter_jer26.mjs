@@ -85,7 +85,7 @@ export function bible_glyph_chapter_jer26() {
           "you;",
           "do",
           "$no_entry",
-          "omit",
+          "$scissors+down_arrow+doing",
           "a",
           "$speech.",
         ],
