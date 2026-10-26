@@ -407,7 +407,7 @@ export function bible_glyph_chapter_jhn02() {
           "$plus",
           "overturned",
           "their",
-          "tables.",
+          "$eating+round_pushpin.",
         ],
       },
       {
