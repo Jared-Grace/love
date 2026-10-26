@@ -450,7 +450,7 @@ export function bible_glyph_chapter_mrk10() {
         "cheat",
         "others,",
         "$heavy_dollar_sign+doing",
-        "your",
+        "$you",
         "$father",
         "$plus",
         "$mother.”",
