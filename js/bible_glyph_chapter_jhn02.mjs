@@ -446,7 +446,7 @@ export function bible_glyph_chapter_jhn02() {
           "$reminder_ribbon+doing",
           "$pointing",
           "it",
-          "is",
+          "$link",
           "$writing_hand:",
           "“$face_steam",
           "for",
