@@ -480,7 +480,7 @@ export function bible_glyph_chapter_jhn04() {
           "$father",
           "$bowing",
           "$tray_in",
-          "this",
+          "$flashlight",
           "$mountain,",
           "$plus",
           "you",
