@@ -398,7 +398,7 @@ export function bible_glyph_chapter_isa01() {
           "to",
           "Me",
           "-",
-          "New",
+          "$new_moon",
           "Moons,",
           "$sabbath,",
           "and",
