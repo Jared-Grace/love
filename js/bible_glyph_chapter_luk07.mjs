@@ -638,7 +638,7 @@ export function bible_glyph_chapter_luk07() {
         "receive",
         "sight,",
         "the",
-        "lame",
+        "$foot+bandage",
         "$walking,",
         "the",
         "lepers",
