@@ -279,7 +279,7 @@ export function bible_glyph_chapter_jol01() {
           "ruined;",
           "the",
           "land",
-          "mourns.",
+          "$loudly_crying+coffin.",
           "For",
           "the",
           "grain",
