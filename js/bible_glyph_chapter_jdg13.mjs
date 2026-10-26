@@ -286,7 +286,7 @@ export function bible_glyph_chapter_jdg13() {
         words: [
           "Then",
           "Manoah",
-          "prayed",
+          "$hands_praying+incense+doing",
           "to",
           "the",
           "$i_am,",
