@@ -45,7 +45,7 @@ export function bible_glyph_chapter_jhn02() {
           "had",
           "been",
           "invited",
-          "to",
+          "$toward+tray_in",
           "the",
           "wedding,",
           "$plus",
