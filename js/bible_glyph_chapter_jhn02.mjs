@@ -467,7 +467,7 @@ export function bible_glyph_chapter_jhn02() {
           "to",
           "$pointing_back,",
           "“$flashlight+question",
-          "sign",
+          "$placard",
           "can",
           "You",
           "show",
