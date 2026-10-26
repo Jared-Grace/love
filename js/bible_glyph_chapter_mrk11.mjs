@@ -42,7 +42,7 @@ export function bible_glyph_chapter_mrk11() {
         "$speech",
         "to",
         "$pointing_back,",
-        "“Go",
+        "“$walking+away",
         "into",
         "the",
         "village",
