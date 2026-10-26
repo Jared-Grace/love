@@ -548,7 +548,7 @@ export function bible_glyph_chapter_1ki03() {
           "$crown,",
           "and",
           "$hammer+doing",
-          "burnt",
+          "$burnt_offering",
           "offerings",
           "and",
           "$hammer+doing",
