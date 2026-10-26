@@ -891,7 +891,7 @@ export function bible_glyph_chapter_jhn04() {
       {
         verse_number: 37,
         words: [
-          "For",
+          "$information",
           "$tray_in",
           "this",
           "the",
