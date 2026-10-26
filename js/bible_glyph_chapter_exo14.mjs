@@ -376,7 +376,7 @@ export function bible_glyph_chapter_exo14() {
           "Do",
           "$no_entry",
           "be",
-          "afraid.",
+          "$fear+doing.",
           "Stand",
           "firm",
           "and",
