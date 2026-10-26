@@ -138,7 +138,7 @@ export function bible_glyph_chapter_rev10() {
           "$tray_out",
           "$sky",
           "$speech,",
-          "Seal",
+          "$ring+locked+doing",
           "up",
           "what",
           "$pin",
