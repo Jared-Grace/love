@@ -990,7 +990,7 @@ export function bible_glyph_chapter_jol02() {
         verse_number: 32,
         words: [
           "And",
-          "everyone",
+          "$all",
           "who",
           "calls",
           "on",
