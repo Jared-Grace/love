@@ -885,7 +885,7 @@ export function bible_glyph_chapter_jhn09() {
           "utter",
           "$bow,",
           "$plus",
-          "you",
+          "$you",
           "are",
           "instructing",
           "us?",
