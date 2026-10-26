@@ -201,7 +201,7 @@ export function bible_glyph_chapter_1th01() {
       {
         verse_number: 8,
         words: [
-          "For",
+          "$information",
           "the",
           "$speech",
           "of",
