@@ -486,7 +486,7 @@ export function bible_glyph_chapter_2ki02() {
           "tore",
           "them",
           "in",
-          "two.",
+          "$two.",
         ],
       },
       {
