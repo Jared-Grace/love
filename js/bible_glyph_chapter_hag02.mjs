@@ -464,7 +464,7 @@ export function bible_glyph_chapter_hag02() {
           "$flashlight",
           "$sun",
           "$walking+pointing_up:",
-          "Before",
+          "$clock+back",
           "one",
           "stone",
           "was",
