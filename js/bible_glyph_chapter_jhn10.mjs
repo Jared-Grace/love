@@ -677,7 +677,7 @@ export function bible_glyph_chapter_jhn10() {
           "$link",
           "$no_entry",
           "$tray_out",
-          "My",
+          "$me+describing",
           "$sheep.",
         ],
       },
