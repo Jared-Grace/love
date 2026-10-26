@@ -402,7 +402,7 @@ export function bible_glyph_chapter_exo14() {
           "will",
           "$no_entry",
           "$eye",
-          "again.",
+          "$plus+doing.",
         ],
       },
       {
