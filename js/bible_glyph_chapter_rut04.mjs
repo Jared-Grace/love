@@ -489,7 +489,7 @@ export function bible_glyph_chapter_rut04() {
           "$hands_giving",
           "you",
           "$tray_out",
-          "this",
+          "$flashlight",
           "young",
           "woman.",
         ],
