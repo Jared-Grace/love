@@ -36,7 +36,7 @@ export function bible_glyph_chapter_psa029() {
       {
         verse_number: 2,
         words: [
-          "Ascribe",
+          "$hands_giving+up_arrow",
           "to",
           "the",
           "$i_am",
