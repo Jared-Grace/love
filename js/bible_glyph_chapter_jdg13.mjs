@@ -723,7 +723,7 @@ export function bible_glyph_chapter_jdg13() {
           "Then",
           "$proper_name$Manoah",
           "$lightbulb",
-          "that",
+          "$pointing",
           "he",
           "had",
           "been",
