@@ -269,7 +269,7 @@ export function bible_glyph_chapter_jud01() {
           "the",
           "$meat,",
           "reject",
-          "authority,",
+          "$crown+raised_fist,",
           "and",
           "slander",
           "the",
