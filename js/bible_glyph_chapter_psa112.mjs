@@ -83,7 +83,7 @@ export function bible_glyph_chapter_psa112() {
           "upright,",
           "for",
           "the",
-          "gracious",
+          "$heart_orange+describing",
           "and",
           "compassionate",
           "and",
