@@ -136,7 +136,7 @@ export function bible_glyph_chapter_1jn01() {
         words: [
           "$plus",
           "we",
-          "write",
+          "$writing_hand",
           "$flashlight",
           "things",
           "so",
