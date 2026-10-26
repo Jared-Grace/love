@@ -462,7 +462,7 @@ export function bible_glyph_chapter_gen02() {
           "$tree",
           "of",
           "the",
-          "garden,",
+          "$garden,",
         ],
       },
       {
