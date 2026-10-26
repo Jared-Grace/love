@@ -37,7 +37,7 @@ export function bible_glyph_chapter_jhn10() {
           "$metro",
           "the",
           "$door,",
-          "but",
+          "$curving_up",
           "climbs",
           "in",
           "some",
