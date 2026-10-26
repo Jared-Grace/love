@@ -1120,7 +1120,7 @@ export function bible_glyph_chapter_mat05() {
           "was",
           "$speech,",
           "$heart_red+doing",
-          "your",
+          "$you",
           "$house_with_garden",
           "$plus",
           "hate",
