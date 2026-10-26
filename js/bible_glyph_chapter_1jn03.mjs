@@ -116,7 +116,7 @@ export function bible_glyph_chapter_1jn03() {
           "$pointing_back+pointing_back,",
           "$likeness",
           "as",
-          "Christ",
+          "$telescope",
           "is",
           "pure.",
         ],
