@@ -117,7 +117,7 @@ export function bible_glyph_chapter_1jn03() {
           "$likeness",
           "as",
           "$telescope",
-          "is",
+          "$link",
           "$soap+sparkle.",
         ],
       },
