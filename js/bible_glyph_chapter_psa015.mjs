@@ -96,7 +96,7 @@ export function bible_glyph_chapter_psa015() {
           "who",
           "does",
           "$no_entry",
-          "revise",
+          "$arrow_both_ways+hands_giving+doing",
           "a",
           "costly",
           "$raised_back_of_hand+doing,",
