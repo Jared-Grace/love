@@ -395,7 +395,7 @@ export function bible_glyph_chapter_psa136() {
           "$hands_giving",
           "$bread",
           "to",
-          "every",
+          "$all",
           "$meat.",
           "His",
           "$gift",
