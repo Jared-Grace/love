@@ -444,7 +444,7 @@ export function bible_glyph_chapter_jhn20() {
           "yet",
           "ascended",
           "to",
-          "the",
+          "$pin",
           "$father.",
           "But",
           "$walking",
