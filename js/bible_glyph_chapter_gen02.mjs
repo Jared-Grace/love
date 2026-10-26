@@ -75,7 +75,7 @@ export function bible_glyph_chapter_gen02() {
           "made",
           "it",
           "$sparkle+doing,",
-          "because",
+          "$pointing",
           "on",
           "that",
           "day",
