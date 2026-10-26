@@ -180,7 +180,7 @@ export function bible_glyph_chapter_jhn04() {
           "a",
           "$proper_name$Samaritan",
           "$woman?”",
-          "the",
+          "$pin",
           "$proper_name$Samaritan",
           "$woman",
           "$speech",
