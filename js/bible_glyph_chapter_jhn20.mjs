@@ -29,7 +29,7 @@ export function bible_glyph_chapter_jhn20() {
           "while",
           "it",
           "was",
-          "still",
+          "$repeat_single_button",
           "$darkness,",
           "$proper_name$Mary",
           "$proper_name$Magdalene",
