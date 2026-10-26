@@ -128,7 +128,7 @@ export function bible_glyph_chapter_psa111() {
           "$hands_giving",
           "them",
           "the",
-          "inheritance",
+          "$inheritance",
           "of",
           "the",
           "$map.",
