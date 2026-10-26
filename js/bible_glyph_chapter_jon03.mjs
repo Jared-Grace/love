@@ -129,7 +129,7 @@ export function bible_glyph_chapter_jon03() {
           "and",
           "dressed",
           "in",
-          "sackcloth,",
+          "$sackcloth,",
           "from",
           "the",
           "greatest",
