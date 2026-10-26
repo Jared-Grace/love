@@ -148,7 +148,7 @@ export function bible_glyph_chapter_psa096() {
       {
         verse_number: 8,
         words: [
-          "Ascribe",
+          "$hands_giving+up_arrow",
           "to",
           "the",
           "$i_am",
