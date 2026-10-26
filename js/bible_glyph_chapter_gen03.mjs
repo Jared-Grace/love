@@ -116,7 +116,7 @@ export function bible_glyph_chapter_gen03() {
         verse_number: 4,
         words: [
           "The",
-          "serpent",
+          "$snake",
           "$speech",
           "to",
           "the",
