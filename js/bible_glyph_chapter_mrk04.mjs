@@ -101,7 +101,7 @@ export function bible_glyph_chapter_mrk04() {
           "some",
           "seed",
           "$person+pointing_down",
-          "along",
+          "$children_crossing",
           "the",
           "$road,",
           "$plus",
