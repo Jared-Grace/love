@@ -335,7 +335,7 @@ export function bible_glyph_chapter_rev10() {
           "It",
           "will",
           "$lemon+doing",
-          "your",
+          "$you",
           "stomach",
           "bitter,",
           "but",
