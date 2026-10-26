@@ -18,7 +18,7 @@ export function bible_glyph_chapter_jhn20() {
       {
         verse_number: 1,
         words: [
-          "Early",
+          "$morning",
           "on",
           "$pin",
           "first",
