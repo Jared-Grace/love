@@ -75,7 +75,7 @@ export function bible_glyph_chapter_jon03() {
           "$proper_name$Nineveh",
           "$link",
           "a",
-          "great",
+          "$top",
           "$city",
           "to",
           "$heart_on_fire,",
