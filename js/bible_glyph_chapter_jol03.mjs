@@ -316,7 +316,7 @@ export function bible_glyph_chapter_jol03() {
           "surrounding",
           "$map,",
           "and",
-          "gather",
+          "$tray_in+doing",
           "yourselves.",
           "Bring",
           "down",
