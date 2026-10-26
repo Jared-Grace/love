@@ -66,7 +66,7 @@ export function bible_glyph_chapter_1jn02() {
           "$no_entry",
           "for",
           "ours",
-          "only",
+          "$one+manner",
           "but",
           "$plus",
           "for",
