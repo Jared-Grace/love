@@ -993,7 +993,7 @@ export function bible_glyph_chapter_luk07() {
         "are",
         "in",
         "$speech,",
-        "‘Look,",
+        "‘$exclamation,",
         "a",
         "glutton",
         "$person",
