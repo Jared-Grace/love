@@ -241,7 +241,7 @@ export function bible_glyph_chapter_jhn17() {
         verse_number: 9,
         words: [
           "I",
-          "ask",
+          "$question",
           "concerning",
           "$pointing_back.",
           "$no_entry",
