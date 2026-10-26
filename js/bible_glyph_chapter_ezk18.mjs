@@ -375,7 +375,7 @@ export function bible_glyph_chapter_ezk18() {
           "$hammer+doing",
           "$all",
           "these",
-          "abominations,",
+          "$vomiting,",
           "he",
           "will",
           "surely",
