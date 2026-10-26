@@ -795,7 +795,7 @@ export function bible_glyph_chapter_1jn02() {
           "to",
           "teach",
           "you.",
-          "But",
+          "$curving_up",
           "just",
           "as",
           "$pointing_back",
