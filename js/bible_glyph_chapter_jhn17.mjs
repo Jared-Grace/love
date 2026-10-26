@@ -722,7 +722,7 @@ export function bible_glyph_chapter_jhn17() {
           "$you,",
           "I",
           "$lightbulb",
-          "You,",
+          "$you,",
           "$plus",
           "these",
           "have",
