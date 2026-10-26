@@ -709,7 +709,7 @@ export function bible_glyph_chapter_luk24() {
           "$pointing",
           "it",
           "is",
-          "nearly",
+          "$toward",
           "evening",
           "$plus",
           "the",
