@@ -213,7 +213,7 @@ export function bible_glyph_chapter_jhn02() {
           "did",
           "$no_entry",
           "$lightbulb",
-          "where",
+          "$round_pushpin+tray_out+question",
           "it",
           "was",
           "from,",
