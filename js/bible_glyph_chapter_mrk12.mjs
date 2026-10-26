@@ -35,7 +35,7 @@ export function bible_glyph_chapter_mrk12() {
         "wine",
         "vat,",
         "$plus",
-        "built",
+        "$brick",
         "a",
         "watchtower.",
         "$plus",
