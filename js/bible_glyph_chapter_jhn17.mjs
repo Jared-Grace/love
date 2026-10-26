@@ -251,7 +251,7 @@ export function bible_glyph_chapter_jhn17() {
           "do",
           "I",
           "$question,",
-          "but",
+          "$curving_up",
           "concerning",
           "those",
           "whom",
