@@ -90,7 +90,7 @@ export function bible_glyph_chapter_1jn02() {
           "have",
           "$lightbulb",
           "$pointing_back,",
-          "if",
+          "$traffic_light",
           "we",
           "keep",
           "$pointing_back",
