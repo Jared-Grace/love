@@ -44,7 +44,7 @@ export function bible_glyph_chapter_jon01() {
           "preach",
           "against",
           "it,",
-          "because",
+          "$pointing",
           "its",
           "$thumbs_down",
           "has",
