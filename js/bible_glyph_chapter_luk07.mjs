@@ -1101,7 +1101,7 @@ export function bible_glyph_chapter_luk07() {
         "her",
         "tears",
         "$plus",
-        "wipe",
+        "$sponge+hand+doing",
         "$pointing_back",
         "with",
         "her",
