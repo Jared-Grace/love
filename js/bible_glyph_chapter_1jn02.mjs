@@ -254,7 +254,7 @@ export function bible_glyph_chapter_1jn02() {
           "$pointing_back",
           "$brother",
           "is",
-          "still",
+          "$finish",
           "$tray_in",
           "the",
           "$darkness.",
