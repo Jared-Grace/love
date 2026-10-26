@@ -36,7 +36,7 @@ export function bible_glyph_chapter_jon01() {
           "$walking",
           "$toward",
           "the",
-          "great",
+          "$top",
           "$city",
           "of",
           "$proper_name$Nineveh",
