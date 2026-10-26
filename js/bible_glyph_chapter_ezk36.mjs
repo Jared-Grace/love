@@ -231,7 +231,7 @@ export function bible_glyph_chapter_ezk36() {
       {
         verse_number: 6,
         words: [
-          "Therefore",
+          "$right_arrow",
           "prophesy",
           "concerning",
           "the",
