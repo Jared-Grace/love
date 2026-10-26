@@ -66,7 +66,7 @@ export function bible_glyph_chapter_jhn09() {
           "nor",
           "$pointing_back",
           "$butterfly+doer,",
-          "but",
+          "$curving_up",
           "this",
           "happened",
           "so",
