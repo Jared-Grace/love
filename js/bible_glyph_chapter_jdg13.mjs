@@ -96,7 +96,7 @@ export function bible_glyph_chapter_jdg13() {
           "“Behold,",
           "you",
           "are",
-          "barren",
+          "$pregnant_woman+no_entry+describing",
           "and",
           "have",
           "$no_entry",
