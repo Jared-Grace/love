@@ -114,7 +114,7 @@ export function bible_glyph_chapter_1jn03() {
           "$pointing_back",
           "$soap+sparkle+doing",
           "$pointing_back+pointing_back,",
-          "just",
+          "$likeness",
           "as",
           "Christ",
           "is",
