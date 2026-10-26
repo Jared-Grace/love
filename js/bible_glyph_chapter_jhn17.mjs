@@ -71,7 +71,7 @@ export function bible_glyph_chapter_jhn17() {
           "may",
           "$hands_giving",
           "$pointing_back",
-          "eternal",
+          "$hourglass+describing",
           "$sprout.",
         ],
       },
