@@ -932,7 +932,7 @@ export function bible_glyph_chapter_jhn04() {
           "taken",
           "up",
           "$pointing_back",
-          "labor.”",
+          "$face_exhaling.”",
         ],
       },
       {
