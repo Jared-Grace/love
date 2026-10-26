@@ -64,8 +64,8 @@ export function app_code_math_call_wrong_say(question, answer, choice) {
     return null;
   }
   let name = text_slice(code, 0, open);
-  function named(f) {
-    let left = property_get(f, "name");
+  function named(candidate) {
+    let left = property_get(candidate, "name");
     let n = equal(left, name);
     return n;
   }
