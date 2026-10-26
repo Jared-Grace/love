@@ -302,7 +302,7 @@ export function bible_glyph_chapter_mrk12() {
         "had",
         "$speech",
         "this",
-        "parable",
+        "$framed_picture",
         "$toward",
         "$pointing_back.",
         "$plus",
