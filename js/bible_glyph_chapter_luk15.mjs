@@ -341,7 +341,7 @@ export function bible_glyph_chapter_luk15() {
         "$toward+tray_in",
         "a",
         "distant",
-        "country,",
+        "$map+round_pushpin,",
         "where",
         "he",
         "squandered",
