@@ -250,7 +250,7 @@ export function bible_glyph_chapter_jhn14() {
           "$eye",
           "the",
           "$father.",
-          "How",
+          "$gear+question",
           "can",
           "you",
           "$speech,",
