@@ -1212,7 +1212,7 @@ export function bible_glyph_chapter_jhn01() {
           "$walking+pointing_up",
           "$plus",
           "descending",
-          "on",
+          "$pointing_up",
           "$pin",
           "$son",
           "of",
