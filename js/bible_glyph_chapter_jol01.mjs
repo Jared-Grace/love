@@ -389,7 +389,7 @@ export function bible_glyph_chapter_jol01() {
           "of",
           "my",
           "$heart_on_fire,",
-          "because",
+          "$pointing",
           "the",
           "grain",
           "and",
