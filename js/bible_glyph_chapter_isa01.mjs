@@ -197,7 +197,7 @@ export function bible_glyph_chapter_isa01() {
           "$no_entry",
           "$clamp+hands_giving+doing",
           "$no_entry",
-          "bandaged",
+          "$adhesive_bandage+doing",
           "$no_entry",
           "soothed",
           "with",
