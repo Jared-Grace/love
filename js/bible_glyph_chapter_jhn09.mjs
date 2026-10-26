@@ -355,7 +355,7 @@ export function bible_glyph_chapter_jhn09() {
           "$proper_name$Pharisees",
           "$question",
           "$pointing_back",
-          "how",
+          "$gear+question",
           "he",
           "had",
           "received",
