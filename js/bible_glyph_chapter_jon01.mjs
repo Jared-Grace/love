@@ -211,7 +211,7 @@ export function bible_glyph_chapter_jon01() {
           "this",
           "$heart_on_fire",
           "will",
-          "consider",
+          "$thinking+eyes+doing",
           "us,",
           "so",
           "that",
