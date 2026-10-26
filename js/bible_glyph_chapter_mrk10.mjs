@@ -27,7 +27,7 @@ export function bible_glyph_chapter_mrk10() {
         "$bridge",
         "$pin",
         "$pointing_down+proper_name.",
-        "Again",
+        "$repeat",
         "a",
         "$crowd",
         "$safety_pin+walking+doing",
