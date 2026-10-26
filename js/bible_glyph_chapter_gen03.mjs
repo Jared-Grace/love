@@ -18,7 +18,7 @@ export function bible_glyph_chapter_gen03() {
           "Now",
           "the",
           "$snake",
-          "was",
+          "$link",
           "more",
           "crafty",
           "than",
