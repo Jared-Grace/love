@@ -440,7 +440,7 @@ export function bible_glyph_chapter_1jn02() {
           "$tray_in",
           "the",
           "$globe.",
-          "If",
+          "$traffic_light",
           "anyone",
           "$heart_red+doing$s",
           "the",
