@@ -112,7 +112,7 @@ export function bible_glyph_chapter_mat05() {
           "who",
           "$eating+hollow_circle+doing",
           "$plus",
-          "thirst",
+          "$tongue+desert+doing",
           "for",
           "$ruler+thing,",
           "$pointing",
