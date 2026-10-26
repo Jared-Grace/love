@@ -111,7 +111,7 @@ export function bible_glyph_chapter_luk02() {
         "there",
         "to",
         "register",
-        "with",
+        "$safety_pin",
         "$proper_name$Mary,",
         "who",
         "was",
