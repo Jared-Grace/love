@@ -300,7 +300,7 @@ export function bible_glyph_chapter_luk02() {
         "will",
         "be",
         "a",
-        "sign",
+        "$placard",
         "to",
         "you:",
         "you",
