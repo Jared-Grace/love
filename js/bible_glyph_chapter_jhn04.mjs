@@ -870,7 +870,7 @@ export function bible_glyph_chapter_jhn04() {
           "his",
           "wages",
           "$plus",
-          "gathers",
+          "$crowd+doing",
           "a",
           "crop",
           "for",
