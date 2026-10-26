@@ -369,7 +369,7 @@ export function bible_glyph_chapter_jhn09() {
           "$pointing_up+palm_down",
           "$brown_square+water",
           "on",
-          "my",
+          "$me",
           "eyes,",
           "$plus",
           "I",
