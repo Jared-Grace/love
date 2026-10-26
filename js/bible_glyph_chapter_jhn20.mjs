@@ -671,7 +671,7 @@ export function bible_glyph_chapter_jhn20() {
           "We",
           "have",
           "$eye",
-          "the",
+          "$pin",
           "$crown.",
           "But",
           "he",
