@@ -680,7 +680,7 @@ export function bible_glyph_chapter_luk24() {
           "they",
           "approached",
           "$pin",
-          "village",
+          "$houses",
           "where",
           "they",
           "were",
