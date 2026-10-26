@@ -234,7 +234,7 @@ export function bible_glyph_chapter_mrk05() {
         "“My",
         "$name_tag",
         "is",
-        "Legion,",
+        "$military_helmet+all+crowd,",
         "$pointing",
         "we",
         "are",
