@@ -70,7 +70,7 @@ export function bible_glyph_chapter_mrk04() {
           "$plus",
           "$tray_in",
           "$pointing_back",
-          "teaching",
+          "$teacher+thing",
           "He",
           "$speech",
           "to",
