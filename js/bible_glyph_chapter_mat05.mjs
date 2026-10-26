@@ -565,7 +565,7 @@ export function bible_glyph_chapter_mat05() {
           "$scales+thumbs_down+describing",
           "to",
           "the",
-          "Sanhedrin.",
+          "$safety_pin+seat.",
           "But",
           "anyone",
           "who",
