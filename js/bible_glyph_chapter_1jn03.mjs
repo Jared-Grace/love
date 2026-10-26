@@ -66,7 +66,7 @@ export function bible_glyph_chapter_1jn03() {
           "$heart_red+describing,",
           "we",
           "are",
-          "now",
+          "$watch",
           "$child",
           "of",
           "$heart_on_fire,",
