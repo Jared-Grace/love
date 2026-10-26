@@ -26,7 +26,7 @@ export function bible_glyph_chapter_rev01() {
           "$hands_giving",
           "$pointing_back",
           "to",
-          "show",
+          "$television",
           "$pointing_back",
           "$kneeling",
           "what",
