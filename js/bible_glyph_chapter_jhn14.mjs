@@ -159,7 +159,7 @@ export function bible_glyph_chapter_jhn14() {
           "$pin",
           "$check",
           "$plus",
-          "the",
+          "$pin",
           "$sprout.",
           "$no_entry",
           "one",
