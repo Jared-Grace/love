@@ -654,7 +654,7 @@ export function bible_glyph_chapter_luk24() {
           "with",
           "$fishing_pole+proper_name",
           "$plus",
-          "all",
+          "$all",
           "the",
           "$megaphone,",
           "He",
