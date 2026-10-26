@@ -579,7 +579,7 @@ export function bible_glyph_chapter_mrk08() {
           "$houses.",
           "$plus",
           "He",
-          "spit",
+          "$mouth+droplet+doing",
           "on",
           "$pointing_back",
           "eyes",
