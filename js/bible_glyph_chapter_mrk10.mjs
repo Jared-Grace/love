@@ -436,7 +436,7 @@ export function bible_glyph_chapter_mrk10() {
         "$pin",
         "$scroll:",
         "$no_entry",
-        "murder,",
+        "$kitchen_knife+doing,",
         "$no_entry",
         "commit",
         "adultery,",
