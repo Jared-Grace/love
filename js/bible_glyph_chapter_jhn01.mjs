@@ -667,7 +667,7 @@ export function bible_glyph_chapter_jhn01() {
           "This",
           "is",
           "He",
-          "of",
+          "$up_arrow",
           "whom",
           "I",
           "$speech,",
