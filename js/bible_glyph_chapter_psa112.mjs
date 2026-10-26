@@ -128,7 +128,7 @@ export function bible_glyph_chapter_psa112() {
           "man",
           "will",
           "be",
-          "remembered",
+          "$reminder_ribbon+thing",
           "$hourglass.",
         ],
       },
