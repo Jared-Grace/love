@@ -621,7 +621,7 @@ export function bible_glyph_chapter_mat05() {
           "$walking+away.",
           "$first_place+manner",
           "be",
-          "reconciled",
+          "$metro+plus+one+doing",
           "to",
           "$you",
           "$brother,",
