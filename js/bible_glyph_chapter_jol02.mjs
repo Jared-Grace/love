@@ -281,7 +281,7 @@ export function bible_glyph_chapter_jol02() {
           "them",
           "the",
           "$earth",
-          "quakes;",
+          "$vibration_mode;",
           "the",
           "$sky",
           "tremble.",
