@@ -227,7 +227,7 @@ export function bible_glyph_chapter_jol01() {
           "$crying_face+broken_heart+doing",
           "like",
           "a",
-          "virgin",
+          "$girl+white_flower",
           "dressed",
           "in",
           "sackcloth,",
