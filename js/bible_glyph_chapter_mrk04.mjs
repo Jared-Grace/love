@@ -945,7 +945,7 @@ export function bible_glyph_chapter_mrk04() {
           "was",
           "already",
           "$tray_in",
-          "the",
+          "$pin",
           "boat.",
           "$plus",
           "other",
