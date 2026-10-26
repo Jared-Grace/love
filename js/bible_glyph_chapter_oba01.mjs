@@ -128,7 +128,7 @@ export function bible_glyph_chapter_oba01() {
           "and",
           "make",
           "your",
-          "nest",
+          "$nest_with_eggs",
           "$brain+arrow_both_ways",
           "the",
           "stars,",
