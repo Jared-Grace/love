@@ -301,7 +301,7 @@ export function bible_glyph_chapter_gen32() {
           "I",
           "have",
           "become",
-          "two",
+          "$two",
           "camps.",
         ],
       },
