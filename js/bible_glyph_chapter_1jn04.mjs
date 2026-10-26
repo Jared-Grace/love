@@ -123,7 +123,7 @@ export function bible_glyph_chapter_1jn04() {
           "you",
           "have",
           "overcome",
-          "them,",
+          "$pointing_back,",
           "because",
           "greater",
           "is",
