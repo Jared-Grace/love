@@ -894,7 +894,7 @@ export function bible_glyph_chapter_1ki03() {
           "Then",
           "the",
           "$woman",
-          "whose",
+          "$back+flashlight",
           "$son",
           "was",
           "the",
