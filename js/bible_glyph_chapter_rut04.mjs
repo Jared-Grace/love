@@ -469,7 +469,7 @@ export function bible_glyph_chapter_rut04() {
           "may",
           "your",
           "$house",
-          "become",
+          "$link",
           "like",
           "the",
           "$house",
