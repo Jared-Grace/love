@@ -504,7 +504,7 @@ export function bible_glyph_chapter_jud01() {
           "$flashlight",
           "men",
           "$link",
-          "grumblers",
+          "$speech+anger_symbol+doer",
           "and",
           "faultfinders,",
           "$walking",
