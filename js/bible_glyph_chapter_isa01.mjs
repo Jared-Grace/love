@@ -483,7 +483,7 @@ export function bible_glyph_chapter_isa01() {
           "and",
           "cleanse",
           "yourselves.",
-          "Remove",
+          "$away+doing",
           "your",
           "evil",
           "deeds",
