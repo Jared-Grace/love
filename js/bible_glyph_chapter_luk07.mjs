@@ -40,7 +40,7 @@ export function bible_glyph_chapter_luk07() {
         "$kneeling",
         "who",
         "was",
-        "sick",
+        "$thumbs_down+manner",
         "and",
         "about",
         "to",
