@@ -208,7 +208,7 @@ export function bible_glyph_chapter_jhn03() {
           "$ear",
           "its",
           "$voice,",
-          "but",
+          "$curving_up",
           "you",
           "do",
           "$no_entry",
