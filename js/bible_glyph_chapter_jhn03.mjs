@@ -675,7 +675,7 @@ export function bible_glyph_chapter_jhn03() {
           "$you",
           "$witness+doing$ed",
           "about,",
-          "look,",
+          "$exclamation,",
           "He",
           "is",
           "baptizing,",
