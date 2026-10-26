@@ -561,7 +561,7 @@ export function bible_glyph_chapter_rut03() {
           "$man_beard",
           "will",
           "$no_entry",
-          "rest",
+          "$pause_button+doing",
           "unless",
           "he",
           "has",
