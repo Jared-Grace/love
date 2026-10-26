@@ -481,7 +481,7 @@ export function bible_glyph_chapter_jhn17() {
           "$no_entry",
           "$tray_out",
           "of",
-          "the",
+          "$pin",
           "$globe.",
         ],
       },
