@@ -158,7 +158,7 @@ export function bible_glyph_chapter_oba01() {
           "by",
           "$night,",
           "oh,",
-          "how",
+          "$question+likeness",
           "you",
           "will",
           "be",
