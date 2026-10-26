@@ -1054,7 +1054,7 @@ export function bible_glyph_chapter_luk02() {
         "$toward+tray_in",
         "$city+peace",
         "for",
-        "the",
+        "$pin",
         "Feast",
         "of",
         "the",
