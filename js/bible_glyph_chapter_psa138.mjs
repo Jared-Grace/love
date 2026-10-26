@@ -37,7 +37,7 @@ export function bible_glyph_chapter_psa138() {
           "$toward",
           "Your",
           "$sparkle+thing",
-          "temple",
+          "$classical_building",
           "and",
           "$hands_raised",
           "to",
