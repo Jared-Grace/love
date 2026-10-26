@@ -118,7 +118,7 @@ export function bible_glyph_chapter_psa138() {
           "of",
           "the",
           "$i_am,",
-          "for",
+          "$pointing",
           "the",
           "$star",
           "of",
