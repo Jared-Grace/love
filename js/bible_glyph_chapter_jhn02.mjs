@@ -174,7 +174,7 @@ export function bible_glyph_chapter_jhn02() {
           "to",
           "$pointing_back,",
           "“Now",
-          "draw",
+          "$bucket+doing",
           "some",
           "out",
           "$plus",
