@@ -368,7 +368,7 @@ export function bible_glyph_chapter_jhn03() {
       {
         verse_number: 15,
         words: [
-          "that",
+          "$right_arrow+toward",
           "everyone",
           "who",
           "$anchor+doing$s",
