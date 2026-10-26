@@ -418,7 +418,7 @@ export function bible_glyph_chapter_gen32() {
         verse_number: 15,
         words: [
           "thirty",
-          "milk",
+          "$breast_feeding+doing",
           "$camel",
           "with",
           "their",
