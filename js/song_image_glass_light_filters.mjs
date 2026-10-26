@@ -17,8 +17,8 @@ export function song_image_glass_light_filters(document, key, width) {
   arguments_assert(arguments, 3);
   let base = song_image_glass_filters_width(width);
   let name = String(key) + ".png";
-  function lambda(picture) {
-    let left = path_base(picture.path);
+  function lambda(picture_inner) {
+    let left = path_base(picture_inner.path);
     let eq = equal(left, name);
     return eq;
   }
