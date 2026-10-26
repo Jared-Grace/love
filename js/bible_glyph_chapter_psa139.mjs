@@ -438,7 +438,7 @@ export function bible_glyph_chapter_psa139() {
           "$speech",
           "of",
           "You",
-          "deceitfully;",
+          "$thinking+map+thing;",
           "Your",
           "enemies",
           "$lifting",
