@@ -483,7 +483,7 @@ export function bible_glyph_chapter_jhn01() {
           "to",
           "$pointing_back,",
           "“Who",
-          "are",
+          "$link",
           "you?",
           "We",
           "must",
