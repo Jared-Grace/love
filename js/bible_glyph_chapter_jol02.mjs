@@ -474,7 +474,7 @@ export function bible_glyph_chapter_jol02() {
           "$breast_feeding.",
           "Let",
           "the",
-          "bridegroom",
+          "$man_in_tuxedo",
           "$walking+tray_out",
           "his",
           "room,",
