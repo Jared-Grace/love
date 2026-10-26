@@ -365,7 +365,7 @@ export function bible_glyph_chapter_hag02() {
           "it",
           "touches",
           "$bread,",
-          "stew,",
+          "$pot_of_food+thing,",
           "$wine,",
           "oil,",
           "or",
