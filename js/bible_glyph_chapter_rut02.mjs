@@ -364,7 +364,7 @@ export function bible_glyph_chapter_rut02() {
           "for",
           "your",
           "mother-in-law",
-          "since",
+          "$next_track",
           "the",
           "$skull",
           "of",
