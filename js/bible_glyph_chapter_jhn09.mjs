@@ -906,7 +906,7 @@ export function bible_glyph_chapter_jhn09() {
           "had",
           "thrown",
           "$pointing_back",
-          "out,",
+          "$tray_out+manner,",
           "$plus",
           "when",
           "He",
