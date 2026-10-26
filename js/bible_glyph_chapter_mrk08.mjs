@@ -739,7 +739,7 @@ export function bible_glyph_chapter_mrk08() {
         words: [
           "$plus",
           "$pointing_back",
-          "asked",
+          "$pointing_up+question",
           "$pointing_back,",
           "But",
           "who",
