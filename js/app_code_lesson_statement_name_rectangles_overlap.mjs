@@ -139,7 +139,7 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
     down_inner,
   ) {
     "the picture of two rectangles with their edges numbered, as an entry of the writing";
-    function draw(box) {
+    function draw_inner(box) {
       app_code_rectangles_edges_draw(
         box,
         columns,
@@ -150,7 +150,7 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
         down_inner,
       );
     }
-    return draw;
+    return draw_inner;
   }
   let crossing_draw = rectangles_draw(
     4,
