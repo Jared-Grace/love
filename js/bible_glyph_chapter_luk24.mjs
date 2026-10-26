@@ -815,7 +815,7 @@ export function bible_glyph_chapter_luk24() {
           "up",
           "that",
           "very",
-          "hour",
+          "$clock",
           "and",
           "returned",
           "to",
