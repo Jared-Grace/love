@@ -1041,7 +1041,7 @@ export function bible_glyph_chapter_jhn10() {
           "$plus",
           "$multiply",
           "$anchor+doing",
-          "in",
+          "$toward+tray_in",
           "$pointing_back",
           "there.",
         ],
