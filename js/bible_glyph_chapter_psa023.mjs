@@ -89,7 +89,7 @@ export function bible_glyph_chapter_psa023() {
           "$fear+doing",
           "$thumbs_down,",
           "for",
-          "You",
+          "$you",
           "are",
           "with",
           "me;",
