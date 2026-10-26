@@ -497,7 +497,7 @@ export function bible_glyph_chapter_jol02() {
           "the",
           "$i_am",
           "weep",
-          "between",
+          "$brain+arrow_both_ways",
           "the",
           "portico",
           "and",
