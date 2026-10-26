@@ -801,7 +801,7 @@ export function bible_glyph_chapter_luk02() {
         "a",
         "$light",
         "$toward+tray_in",
-        "revelation",
+        "$away+see_no_evil_monkey+thing",
         "to",
         "the",
         "$map",
