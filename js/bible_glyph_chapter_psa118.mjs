@@ -491,7 +491,7 @@ export function bible_glyph_chapter_psa118() {
         words: [
           "O",
           "$i_am,",
-          "save",
+          "$rescue",
           "us,",
           "we",
           "pray.",
