@@ -174,7 +174,7 @@ export function bible_glyph_chapter_luk07() {
         "not",
         "consider",
         "myself",
-        "worthy",
+        "$gold+doing",
         "to",
         "$footprints",
         "to",
