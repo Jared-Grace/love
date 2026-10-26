@@ -720,7 +720,7 @@ export function bible_glyph_chapter_luk15() {
         "killed",
         "$pin",
         "fattened",
-        "calf,",
+        "$ox+child,",
         "$pointing",
         "he",
         "has",
