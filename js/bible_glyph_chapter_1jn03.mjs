@@ -563,7 +563,7 @@ export function bible_glyph_chapter_1jn03() {
           "condemn",
           "us,",
           "$heart_on_fire",
-          "is",
+          "$link",
           "$top",
           "than",
           "$me",
