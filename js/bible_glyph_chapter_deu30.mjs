@@ -19,7 +19,7 @@ export function bible_glyph_chapter_deu30() {
         words: [
           "When",
           "all",
-          "these",
+          "$flashlight+flashlight",
           "$speech",
           "$footprints",
           "upon",
