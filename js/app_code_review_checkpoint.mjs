@@ -33,7 +33,7 @@ export function app_code_review_checkpoint(context) {
       let again_inner = app_shared_button_restart_text(
         "Do this milestone again",
       );
-      let restart = app_shared_button_restart_text("Restart milestone");
+      let restart_inner = app_shared_button_restart_text("Restart milestone");
       let r = {
         key: id,
         number: property_get(milestone, "number"),
@@ -41,7 +41,7 @@ export function app_code_review_checkpoint(context) {
         title: title_inner,
         explain,
         again: again_inner,
-        restart,
+        restart: restart_inner,
       };
       return r;
     }
