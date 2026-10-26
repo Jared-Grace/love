@@ -1113,7 +1113,7 @@ export function bible_glyph_chapter_mrk12() {
         "was",
         "sitting",
         "$vs_button+round_pushpin",
-        "the",
+        "$pin",
         "treasury,",
         "He",
         "watched",
