@@ -210,7 +210,7 @@ export function bible_glyph_chapter_mrk10() {
         "$house,",
         "$pin",
         "$learner",
-        "asked",
+        "$pointing_up+question",
         "$pointing_back",
         "$clockwise_arrows",
         "$flashlight",
