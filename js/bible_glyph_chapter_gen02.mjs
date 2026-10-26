@@ -135,7 +135,7 @@ export function bible_glyph_chapter_gen02() {
           "the",
           "$field",
           "had",
-          "yet",
+          "$clock+back",
           "appeared",
           "on",
           "the",
