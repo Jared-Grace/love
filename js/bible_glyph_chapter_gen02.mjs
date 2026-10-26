@@ -404,7 +404,7 @@ export function bible_glyph_chapter_gen02() {
           "$walking",
           "along",
           "the",
-          "east",
+          "$compass+right_arrow+manner",
           "side",
           "of",
           "$proper_name$Assyria.",
