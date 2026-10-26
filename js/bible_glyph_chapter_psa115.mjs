@@ -127,7 +127,7 @@ export function bible_glyph_chapter_psa115() {
           "$hand,",
           "but",
           "$no_entry",
-          "feel;",
+          "$hand+raised_back_of_hand+doing;",
           "they",
           "have",
           "feet,",
