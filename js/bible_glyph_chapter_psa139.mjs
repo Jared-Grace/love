@@ -490,7 +490,7 @@ export function bible_glyph_chapter_psa139() {
       {
         verse_number: 23,
         words: [
-          "Search",
+          "$detective+doing",
           "me,",
           "O",
           "$heart_on_fire,",
