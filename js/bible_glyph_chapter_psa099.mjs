@@ -200,7 +200,7 @@ export function bible_glyph_chapter_psa099() {
           "His",
           "$sparkle+thing",
           "$mountain,",
-          "for",
+          "$pointing",
           "the",
           "$i_am",
           "our",
