@@ -167,7 +167,7 @@ export function bible_glyph_chapter_jol01() {
           "invaded",
           "My",
           "$earth,",
-          "powerful",
+          "$bone+describing",
           "and",
           "without",
           "number;",
