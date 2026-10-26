@@ -559,7 +559,7 @@ export function bible_glyph_chapter_gen01() {
           "$dragon",
           "creatures",
           "and",
-          "every",
+          "$all",
           "$sprout",
           "$person_other",
           "that",
