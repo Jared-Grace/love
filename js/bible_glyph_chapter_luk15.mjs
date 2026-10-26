@@ -237,7 +237,7 @@ export function bible_glyph_chapter_luk15() {
         "$plus",
         "$houses+person,",
         "$speech,",
-        "Rejoice",
+        "$safety_pin+smile+doing",
         "with",
         "me,",
         "$pointing",
