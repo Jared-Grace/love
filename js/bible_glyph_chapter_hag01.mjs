@@ -294,7 +294,7 @@ export function bible_glyph_chapter_hag01() {
           "have",
           "withheld",
           "their",
-          "dew",
+          "$dew",
           "and",
           "the",
           "$earth",
