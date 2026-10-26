@@ -95,7 +95,7 @@ export function bible_glyph_chapter_hag01() {
           "of",
           "the",
           "$i_am",
-          "came",
+          "$link",
           "$hand",
           "$proper_name$Haggai",
           "the",
