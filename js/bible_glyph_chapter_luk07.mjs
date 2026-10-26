@@ -1342,7 +1342,7 @@ export function bible_glyph_chapter_luk07() {
         "$no_entry",
         "anoint",
         "My",
-        "head",
+        "$person_gesturing_ok",
         "with",
         "$oil+olive,",
         "but",
