@@ -106,7 +106,7 @@ export function bible_glyph_chapter_hag02() {
         verse_number: 4,
         words: [
           "But",
-          "now",
+          "$watch",
           "be",
           "strong,",
           "O",
