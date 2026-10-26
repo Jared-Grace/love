@@ -1334,7 +1334,7 @@ export function bible_glyph_chapter_luk02() {
         "$tray_in",
         "$wisdom",
         "$plus",
-        "stature",
+        "$person+straight_ruler",
         "$plus",
         "$gift",
         "with",
