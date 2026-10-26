@@ -262,7 +262,7 @@ export function bible_glyph_chapter_rut03() {
           "of",
           "your",
           "garment",
-          "over",
+          "$pointing_up",
           "me,",
           "for",
           "$you",
