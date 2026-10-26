@@ -1173,7 +1173,7 @@ export function bible_glyph_chapter_luk24() {
           "$father",
           "$pointing_up",
           "you.",
-          "But",
+          "$curving_right",
           "remain",
           "$tray_in",
           "the",
