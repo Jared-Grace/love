@@ -356,7 +356,7 @@ export function bible_glyph_chapter_jhn14() {
           "will",
           "$hammer",
           "even",
-          "greater",
+          "$top",
           "things",
           "than",
           "these,",
