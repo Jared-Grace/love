@@ -394,7 +394,7 @@ export function bible_glyph_chapter_isa01() {
           "your",
           "$incense",
           "is",
-          "detestable",
+          "$vomiting",
           "to",
           "Me",
           "-",
