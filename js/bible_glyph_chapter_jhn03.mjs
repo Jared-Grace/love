@@ -720,7 +720,7 @@ export function bible_glyph_chapter_jhn03() {
           "‘I",
           "$link",
           "$no_entry",
-          "the",
+          "$pin",
           "$oil,",
           "but",
           "$link",
