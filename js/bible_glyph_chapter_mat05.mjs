@@ -1217,7 +1217,7 @@ export function bible_glyph_chapter_mat05() {
           "you",
           "$saluting_face",
           "only",
-          "your",
+          "$you",
           "$brother,",
           "what",
           "more",
