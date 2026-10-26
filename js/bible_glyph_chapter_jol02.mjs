@@ -926,7 +926,7 @@ export function bible_glyph_chapter_jol02() {
           "women,",
           "I",
           "will",
-          "pour",
+          "$jar+down_arrow+doing",
           "out",
           "My",
           "$wind",
