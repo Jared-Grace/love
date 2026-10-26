@@ -990,7 +990,7 @@ export function bible_glyph_chapter_mrk04() {
           "$tray_in",
           "$pin",
           "$ship+back,",
-          "sleeping",
+          "$sleeping_face+doing",
           "$pointing_up",
           "$pin",
           "$toward+person_gesturing_ok+thing.",
