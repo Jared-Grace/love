@@ -51,7 +51,7 @@ export function bible_glyph_chapter_mrk10() {
         "Pharisees",
         "$footprints+toward",
         "to",
-        "test",
+        "$test_tube",
         "$pointing_back.",
         "They",
         "inquired",
