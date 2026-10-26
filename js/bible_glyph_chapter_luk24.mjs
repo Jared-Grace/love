@@ -229,7 +229,7 @@ export function bible_glyph_chapter_luk24() {
           "$pin",
           "other",
           "women",
-          "with",
+          "$safety_pin",
           "$pointing_back",
           "who",
           "$speech",
