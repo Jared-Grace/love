@@ -240,7 +240,7 @@ export function bible_glyph_chapter_mat05() {
           "persecuted",
           "the",
           "$megaphone",
-          "before",
+          "$last_track",
           "you.",
         ],
       },
