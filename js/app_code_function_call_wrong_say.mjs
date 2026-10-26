@@ -33,8 +33,8 @@ export function app_code_function_call_wrong_say(question, answer, choice) {
     return null;
   }
   let symbol = list_get(sum, 1);
-  function matches(o) {
-    let left2 = property_get(o, "operator");
+  function matches(candidate) {
+    let left2 = property_get(candidate, "operator");
     let m = equal(left2, symbol);
     return m;
   }
