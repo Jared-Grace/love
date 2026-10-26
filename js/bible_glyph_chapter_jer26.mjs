@@ -373,7 +373,7 @@ export function bible_glyph_chapter_jer26() {
           "of",
           "the",
           "New",
-          "Gate",
+          "$gate",
           "of",
           "the",
           "$i_am.",
