@@ -219,7 +219,7 @@ export function bible_glyph_chapter_ezk36() {
           "$beaming",
           "and",
           "utter",
-          "contempt,",
+          "$thumbs_down+leftwards_pushing_hand,",
           "so",
           "that",
           "its",
