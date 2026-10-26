@@ -639,7 +639,7 @@ export function bible_glyph_chapter_isa01() {
           "$silver",
           "has",
           "become",
-          "dross;",
+          "$silver+dust;",
           "your",
           "fine",
           "wine",
