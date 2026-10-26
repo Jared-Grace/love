@@ -925,7 +925,7 @@ export function bible_glyph_chapter_luk02() {
         "a",
         "$man_beard",
         "for",
-        "seven",
+        "$seven",
         "$year",
         "after",
         "$pointing_back",
