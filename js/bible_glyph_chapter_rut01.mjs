@@ -446,7 +446,7 @@ export function bible_glyph_chapter_rut01() {
       {
         verse_number: 15,
         words: [
-          "Look,",
+          "$exclamation,",
           "$speech",
           "Naomi,",
           "your",
