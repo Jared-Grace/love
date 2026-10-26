@@ -363,7 +363,7 @@ export function bible_glyph_chapter_2th01() {
           "the",
           "$gift",
           "of",
-          "our",
+          "$me",
           "$heart_on_fire",
           "$plus",
           "the",
