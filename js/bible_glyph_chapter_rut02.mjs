@@ -326,7 +326,7 @@ export function bible_glyph_chapter_rut02() {
           "I",
           "found",
           "such",
-          "favor",
+          "$heart_orange",
           "in",
           "your",
           "$eyes,",
