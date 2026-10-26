@@ -349,7 +349,7 @@ export function bible_glyph_chapter_1jn04() {
           "$plus",
           "$pointing_back",
           "$heart_red",
-          "is",
+          "$link",
           "$end_arrow+doing",
           "$tray_in",
           "$me.",
