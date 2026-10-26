@@ -572,7 +572,7 @@ export function bible_glyph_chapter_luk15() {
         "$link",
         "no",
         "longer",
-        "worthy",
+        "$gold+describing",
         "to",
         "be",
         "called",
