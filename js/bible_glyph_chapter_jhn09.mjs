@@ -1054,7 +1054,7 @@ export function bible_glyph_chapter_jhn09() {
           "$eyes,",
           "$you",
           "$bow",
-          "remains.",
+          "$pin+doing.",
         ],
       },
     ],
