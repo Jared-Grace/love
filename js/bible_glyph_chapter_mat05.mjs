@@ -360,7 +360,7 @@ export function bible_glyph_chapter_mat05() {
           "they",
           "may",
           "$eye",
-          "your",
+          "$you",
           "$thumbs_up",
           "$tools",
           "$plus",
