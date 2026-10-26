@@ -113,7 +113,7 @@ export function bible_glyph_chapter_2th01() {
           "$heart_on_fire",
           "$up_arrow",
           "your",
-          "perseverance",
+          "$person_climbing",
           "$plus",
           "$anchor",
           "$tray_in",
