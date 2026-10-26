@@ -661,7 +661,7 @@ export function bible_glyph_chapter_luk15() {
     {
       verse_number: 25,
       words: [
-        "Meanwhile",
+        "$curving_right",
         "$pointing_back",
         "older",
         "$son",
