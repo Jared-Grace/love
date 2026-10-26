@@ -137,7 +137,7 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
     );
     return chip;
   }
-  function rectangle_draw(edges, across, down) {
+  function rectangle_draw(edges, across_inner, down) {
     "one rectangle with the given edges on a 5 by 5 grid, its edge numbers coloured";
     function draw(box) {
       app_code_rectangles_edges_colored_draw(
@@ -146,7 +146,7 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
         5,
         edges,
         [0, 0, 0, 0],
-        [across],
+        [across_inner],
         [down],
         null,
         overlap_color,
