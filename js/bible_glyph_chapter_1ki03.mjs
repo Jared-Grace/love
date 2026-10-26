@@ -133,7 +133,7 @@ export function bible_glyph_chapter_1ki03() {
           "it",
           "was",
           "the",
-          "great",
+          "$top",
           "high",
           "place,",
           "and",
