@@ -160,7 +160,7 @@ export function bible_glyph_chapter_luk24() {
           "$son",
           "of",
           "$person",
-          "must",
+          "$knot",
           "be",
           "delivered",
           "into",
