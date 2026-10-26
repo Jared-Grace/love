@@ -76,7 +76,7 @@ export function bible_glyph_chapter_rut03() {
         verse_number: 3,
         words: [
           "Therefore",
-          "wash",
+          "$bathtub+doing",
           "yourself,",
           "put",
           "on",
