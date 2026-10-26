@@ -340,7 +340,7 @@ export function bible_glyph_chapter_gen03() {
           "$person+question",
           "$newspaper",
           "you",
-          "that",
+          "$pointing",
           "you",
           "were",
           "naked?",
