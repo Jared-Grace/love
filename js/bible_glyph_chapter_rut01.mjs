@@ -690,7 +690,7 @@ export function bible_glyph_chapter_rut01() {
           "Bethlehem",
           "at",
           "the",
-          "beginning",
+          "$first_place+sun",
           "of",
           "the",
           "barley",
