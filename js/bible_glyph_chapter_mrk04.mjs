@@ -279,7 +279,7 @@ export function bible_glyph_chapter_mrk04() {
           "been",
           "$hands_giving",
           "the",
-          "mystery",
+          "$crystal_ball",
           "of",
           "the",
           "$castle",
