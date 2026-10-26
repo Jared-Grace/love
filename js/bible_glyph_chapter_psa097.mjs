@@ -69,7 +69,7 @@ export function bible_glyph_chapter_psa097() {
         verse_number: 4,
         words: [
           "His",
-          "lightning",
+          "$cloud_with_lightning",
           "illuminates",
           "the",
           "$globe;",
