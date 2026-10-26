@@ -915,7 +915,7 @@ export function bible_glyph_chapter_jhn09() {
           "He",
           "$speech,",
           "Do",
-          "you",
+          "$you",
           "$anchor+doing",
           "in",
           "the",
