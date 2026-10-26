@@ -96,7 +96,7 @@ export function bible_glyph_chapter_luk07() {
         "this",
         "man",
         "is",
-        "worthy",
+        "$gold+describing",
         "to",
         "have",
         "You",
