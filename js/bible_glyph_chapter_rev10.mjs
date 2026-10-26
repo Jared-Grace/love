@@ -404,7 +404,7 @@ export function bible_glyph_chapter_rev10() {
           "prophesy",
           "$repeat",
           "about",
-          "many",
+          "$multiply",
           "$family",
           "$plus",
           "$map",
