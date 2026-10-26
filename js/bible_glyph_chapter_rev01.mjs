@@ -559,7 +559,7 @@ export function bible_glyph_chapter_rev01() {
           "$exclamation,",
           "now",
           "I",
-          "am",
+          "$link",
           "$sprout+doing",
           "$hourglass",
           "$plus",
