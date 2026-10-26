@@ -1261,7 +1261,7 @@ export function bible_glyph_chapter_mrk10() {
         "$toward+hand_receiving+question,",
         "was",
         "sitting",
-        "beside",
+        "$children_crossing",
         "$pin",
         "$road.",
       ],
