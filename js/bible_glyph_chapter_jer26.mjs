@@ -156,7 +156,7 @@ export function bible_glyph_chapter_jer26() {
           "in",
           "My",
           "$scroll,",
-          "which",
+          "$back+flashlight",
           "I",
           "have",
           "$hands_giving",
