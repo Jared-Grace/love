@@ -432,7 +432,7 @@ export function bible_glyph_chapter_psa118() {
           "have",
           "become",
           "my",
-          "salvation.",
+          "$rescue+thing.",
         ],
       },
       {
