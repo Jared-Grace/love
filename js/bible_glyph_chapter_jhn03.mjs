@@ -335,7 +335,7 @@ export function bible_glyph_chapter_jhn03() {
           "descended",
           "$tray_out",
           "$sky,",
-          "the",
+          "$pin",
           "$son",
           "of",
           "$person.",
