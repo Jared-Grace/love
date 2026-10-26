@@ -55,7 +55,7 @@ export function bible_glyph_chapter_psa146() {
           "Put",
           "$no_entry",
           "your",
-          "trust",
+          "$anchor+doing",
           "in",
           "princes,",
           "in",
