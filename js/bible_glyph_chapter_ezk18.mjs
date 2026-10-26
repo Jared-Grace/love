@@ -78,7 +78,7 @@ export function bible_glyph_chapter_ezk18() {
           "$repeat",
           "$speech+likeness+doing",
           "this",
-          "proverb",
+          "$speech+likeness",
           "in",
           "$wrestling+heart_on_fire.",
         ],
