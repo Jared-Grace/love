@@ -650,7 +650,7 @@ export function bible_glyph_chapter_jhn20() {
           "$one+two,",
           "$speech",
           "$proper_name$Didymus,",
-          "was",
+          "$link",
           "$no_entry",
           "with",
           "$pointing_back",
