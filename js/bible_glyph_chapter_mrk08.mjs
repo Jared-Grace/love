@@ -894,7 +894,7 @@ export function bible_glyph_chapter_mrk08() {
           "$speech",
           "to",
           "$pointing_back,",
-          "If",
+          "$traffic_light",
           "anyone",
           "wants",
           "to",
