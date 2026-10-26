@@ -489,7 +489,7 @@ export function bible_glyph_chapter_deu30() {
           "the",
           "$speech",
           "is",
-          "very",
+          "$double_exclamation",
           "$magnet",
           "you;",
           "it",
