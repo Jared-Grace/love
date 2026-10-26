@@ -403,7 +403,7 @@ export function bible_glyph_chapter_mat05() {
           "$information",
           "I",
           "$speech",
-          "you,",
+          "$you,",
           "until",
           "$sky",
           "$plus",
