@@ -406,7 +406,7 @@ export function bible_glyph_chapter_jhn01() {
       {
         verse_number: 19,
         words: [
-          "This",
+          "$flashlight",
           "was",
           "$proper_name$John’s",
           "$witness+thing",
