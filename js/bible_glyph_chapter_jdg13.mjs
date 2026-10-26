@@ -209,7 +209,7 @@ export function bible_glyph_chapter_jdg13() {
           "$angel",
           "of",
           "$heart_on_fire,",
-          "exceedingly",
+          "$double_exclamation",
           "$fear+doing.",
           "I",
           "did",
