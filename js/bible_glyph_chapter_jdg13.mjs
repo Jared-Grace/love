@@ -214,7 +214,7 @@ export function bible_glyph_chapter_jdg13() {
           "I",
           "did",
           "$no_entry",
-          "ask",
+          "$question",
           "him",
           "where",
           "he",
