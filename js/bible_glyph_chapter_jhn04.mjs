@@ -1331,7 +1331,7 @@ export function bible_glyph_chapter_jhn04() {
         words: [
           "$flashlight",
           "was",
-          "now",
+          "$curving_right",
           "the",
           "second",
           "sign",
