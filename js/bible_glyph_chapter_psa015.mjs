@@ -118,7 +118,7 @@ export function bible_glyph_chapter_psa015() {
           "$no_entry",
           "$hand_receiving",
           "a",
-          "bribe",
+          "$money_bag+hand_sending",
           "against",
           "the",
           "innocent.",
