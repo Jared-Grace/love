@@ -63,7 +63,7 @@ export function bible_glyph_chapter_jhn20() {
           "$plus",
           "to",
           "the",
-          "other",
+          "$plus+one",
           "$learner,",
           "the",
           "one",
