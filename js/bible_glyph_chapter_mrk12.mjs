@@ -87,7 +87,7 @@ export function bible_glyph_chapter_mrk12() {
         "they",
         "$hand_receiving",
         "$pointing_back,",
-        "beat",
+        "$fist+repeat",
         "him,",
         "$plus",
         "$hand_sending",
