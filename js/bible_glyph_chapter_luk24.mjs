@@ -142,7 +142,7 @@ export function bible_glyph_chapter_luk24() {
           "He",
           "$mouth",
           "to",
-          "you",
+          "$you",
           "while",
           "He",
           "was",
