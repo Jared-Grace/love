@@ -481,7 +481,7 @@ export function bible_glyph_chapter_jol01() {
           "our",
           "very",
           "$eyes,",
-          "joy",
+          "$beaming",
           "and",
           "gladness",
           "from",
