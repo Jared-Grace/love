@@ -310,7 +310,7 @@ export function bible_glyph_chapter_oba01() {
           "Because",
           "of",
           "the",
-          "violence",
+          "$boxing_glove",
           "against",
           "your",
           "$brother",
