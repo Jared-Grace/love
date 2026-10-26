@@ -383,7 +383,7 @@ export function bible_glyph_chapter_ezk36() {
           "and",
           "the",
           "ruins",
-          "rebuilt.",
+          "$brick.",
         ],
       },
       {
