@@ -531,7 +531,7 @@ export function bible_glyph_chapter_mrk05() {
         "$plus",
         "$all",
         "was",
-        "amazed.",
+        "$astonished.",
       ],
     },
     {
