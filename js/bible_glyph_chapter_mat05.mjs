@@ -1241,7 +1241,7 @@ export function bible_glyph_chapter_mat05() {
           "Be",
           "$end_arrow+net+describing,",
           "$right_arrow,",
-          "as",
+          "$likeness",
           "your",
           "heavenly",
           "$father",
