@@ -1004,7 +1004,7 @@ export function bible_glyph_chapter_jhn09() {
           "who",
           "$eyes",
           "may",
-          "become",
+          "$butterfly",
           "$person_with_white_cane.",
         ],
       },
