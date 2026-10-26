@@ -846,7 +846,7 @@ export function bible_glyph_chapter_mat05() {
           "$curving_right",
           "$me",
           "$speech",
-          "you",
+          "$you",
           "$pointing",
           "anyone",
           "who",
