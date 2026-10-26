@@ -8,6 +8,7 @@ import { or } from "./or.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { add } from "./add.mjs";
+import { app_code_lesson_quiz_multiple_choice_distractors_fit } from "./app_code_lesson_quiz_multiple_choice_distractors_fit.mjs";
 import { list_concat } from "./list_concat.mjs";
 export function app_code_lesson_quiz_multiple_choice_choices(
   r2,
@@ -45,7 +46,12 @@ export function app_code_lesson_quiz_multiple_choice_choices(
     }
     attempts = add(attempts, 1);
   }
-  let choices = list_concat(distractors, [quiz_answer_text]);
+  ("only as many wrong answers as are short enough to read together, never fewer than one");
+  let fitting = app_code_lesson_quiz_multiple_choice_distractors_fit(
+    distractors,
+    quiz_answer_text,
+  );
+  let choices = list_concat(fitting, [quiz_answer_text]);
   let r = {
     quiz_answer_text,
     choices,
