@@ -212,7 +212,7 @@ export function bible_glyph_chapter_jhn01() {
           "$identification_card,",
           "$plus",
           "His",
-          "own",
+          "$identification_card",
           "did",
           "$no_entry",
           "receive",
