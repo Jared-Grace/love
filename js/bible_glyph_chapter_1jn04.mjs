@@ -411,7 +411,7 @@ export function bible_glyph_chapter_1jn04() {
           "$traffic_light",
           "$back+flashlight",
           "$people_with_bunny_ears+speech+doing",
-          "that",
+          "$pointing",
           "$cross",
           "is",
           "the",
