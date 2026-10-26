@@ -381,7 +381,7 @@ export function bible_glyph_chapter_rev01() {
           "was",
           "$mouth",
           "$linked_paperclips",
-          "me.",
+          "$me.",
           "$plus",
           "having",
           "$turn_back",
