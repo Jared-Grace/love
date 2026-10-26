@@ -159,7 +159,7 @@ export function bible_glyph_chapter_1jn04() {
           "$globe’s",
           "perspective,",
           "and",
-          "the",
+          "$pin",
           "$globe",
           "$ear$s",
           "to",
