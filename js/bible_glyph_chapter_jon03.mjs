@@ -257,7 +257,7 @@ export function bible_glyph_chapter_jon03() {
           "may",
           "$turn_back",
           "and",
-          "relent;",
+          "$hug+doing;",
           "He",
           "may",
           "$turn_back",
