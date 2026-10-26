@@ -183,7 +183,7 @@ export function bible_glyph_chapter_gen03() {
           "the",
           "$tree",
           "was",
-          "desirable",
+          "$heart_eyes+doing",
           "for",
           "obtaining",
           "wisdom,",
