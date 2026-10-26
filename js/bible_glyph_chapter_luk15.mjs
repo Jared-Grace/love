@@ -335,7 +335,7 @@ export function bible_glyph_chapter_luk15() {
         "$son",
         "gathered",
         "everything",
-        "together",
+        "$crowd+doing",
         "$plus",
         "journeyed",
         "to",
