@@ -300,7 +300,7 @@ export function bible_glyph_chapter_rev01() {
           "$sea+mountain",
           "of",
           "$proper_name$Patmos",
-          "because",
+          "$metro",
           "of",
           "the",
           "$speech",
