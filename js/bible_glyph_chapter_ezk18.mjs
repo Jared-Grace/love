@@ -373,7 +373,7 @@ export function bible_glyph_chapter_ezk18() {
           "he",
           "has",
           "$hammer+doing",
-          "all",
+          "$all",
           "these",
           "abominations,",
           "he",
