@@ -43,7 +43,7 @@ export function bible_glyph_chapter_rut03() {
       {
         verse_number: 2,
         words: [
-          "Now",
+          "$watch",
           "is",
           "$no_entry",
           "$proper_name$Boaz,",
