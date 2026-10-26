@@ -225,7 +225,7 @@ export function bible_glyph_chapter_psa096() {
           "and",
           "the",
           "$earth",
-          "rejoice;",
+          "$woman_dancing;",
           "let",
           "the",
           "$sea",
