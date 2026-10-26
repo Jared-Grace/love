@@ -873,7 +873,7 @@ export function bible_glyph_chapter_jhn04() {
           "$crowd+doing",
           "a",
           "crop",
-          "for",
+          "$toward+tray_in",
           "eternal",
           "$sprout,",
           "so",
