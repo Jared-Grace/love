@@ -190,7 +190,7 @@ export function bible_glyph_chapter_rut02() {
           "Please",
           "let",
           "me",
-          "glean",
+          "$hand+sheaf_of_rice+doing",
           "and",
           "gather",
           "among",
