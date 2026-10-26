@@ -72,7 +72,7 @@ export function bible_glyph_chapter_exo20() {
           "for",
           "yourself",
           "an",
-          "idol",
+          "$nesting_dolls",
           "in",
           "the",
           "form",
