@@ -278,7 +278,7 @@ export function bible_glyph_chapter_rev10() {
           "$mouth",
           "to",
           "me",
-          "again",
+          "$repeat",
           "$plus",
           "$speech,",
           "Go,",
