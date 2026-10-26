@@ -681,7 +681,7 @@ export function bible_glyph_chapter_luk24() {
           "approached",
           "$pin",
           "$houses",
-          "where",
+          "$back+flashlight+round_pushpin",
           "they",
           "were",
           "$walking,",
