@@ -133,7 +133,7 @@ export function bible_glyph_chapter_luk24() {
           "He",
           "is",
           "$no_entry",
-          "here;",
+          "$round_pushpin;",
           "He",
           "has",
           "risen!",
