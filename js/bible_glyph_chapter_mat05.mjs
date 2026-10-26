@@ -1215,7 +1215,7 @@ export function bible_glyph_chapter_mat05() {
           "$plus",
           "$traffic_light",
           "you",
-          "greet",
+          "$saluting_face",
           "only",
           "your",
           "$brother,",
