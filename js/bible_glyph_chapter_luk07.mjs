@@ -878,7 +878,7 @@ export function bible_glyph_chapter_luk07() {
         "in",
         "the",
         "$scroll+describing",
-        "rejected",
+        "$no_entry+palm_down",
         "$heart_on_fire",
         "$shooting_star+lightbulb+thing",
         "for",
