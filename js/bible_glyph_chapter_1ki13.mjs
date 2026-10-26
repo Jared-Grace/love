@@ -834,7 +834,7 @@ export function bible_glyph_chapter_1ki13() {
           "eating",
           "$bread",
           "and",
-          "drinking,",
+          "$cup_with_straw,",
           "the",
           "$megaphone",
           "who",
