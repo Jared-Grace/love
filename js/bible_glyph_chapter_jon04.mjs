@@ -179,7 +179,7 @@ export function bible_glyph_chapter_jon04() {
           "up",
           "to",
           "provide",
-          "shade",
+          "$umbrella_on_ground",
           "over",
           "$dove+proper_name",
           "head",
