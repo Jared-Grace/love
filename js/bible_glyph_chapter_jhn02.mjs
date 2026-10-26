@@ -362,7 +362,7 @@ export function bible_glyph_chapter_jhn02() {
           "$plus",
           "$sheep",
           "$plus",
-          "doves,",
+          "$dove,",
           "$plus",
           "the",
           "money",
