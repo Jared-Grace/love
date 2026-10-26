@@ -115,7 +115,7 @@ export function bible_glyph_chapter_psa136() {
           "He",
           "$hammer+doing",
           "the",
-          "great",
+          "$top",
           "$light.",
           "His",
           "$gift",
