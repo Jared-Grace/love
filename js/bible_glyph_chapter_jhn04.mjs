@@ -365,7 +365,7 @@ export function bible_glyph_chapter_jhn04() {
           "“$crown,",
           "$hands_giving",
           "$me",
-          "this",
+          "$flashlight",
           "$water",
           "so",
           "that",
