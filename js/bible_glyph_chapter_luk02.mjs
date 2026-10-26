@@ -82,7 +82,7 @@ export function bible_glyph_chapter_luk02() {
         "$city",
         "of",
         "$proper_name$Nazareth,",
-        "to",
+        "$toward+tray_in",
         "$proper_name$Judea,",
         "to",
         "the",
