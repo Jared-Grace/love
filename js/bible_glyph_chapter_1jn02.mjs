@@ -33,7 +33,7 @@ export function bible_glyph_chapter_1jn02() {
           "$bow+doing.",
           "$plus",
           "$traffic_light",
-          "anyone",
+          "$joker",
           "does",
           "$bow+doing,",
           "we",
