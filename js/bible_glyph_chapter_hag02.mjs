@@ -349,7 +349,7 @@ export function bible_glyph_chapter_hag02() {
       {
         verse_number: 12,
         words: [
-          "If",
+          "$exclamation",
           "a",
           "$man_beard",
           "$lifting",
