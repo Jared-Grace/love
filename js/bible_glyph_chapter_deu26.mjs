@@ -324,7 +324,7 @@ export function bible_glyph_chapter_deu26() {
         words: [
           "And",
           "$watch,",
-          "behold,",
+          "$exclamation,",
           "I",
           "have",
           "$footprints",
