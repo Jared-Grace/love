@@ -555,7 +555,7 @@ export function bible_glyph_chapter_luk15() {
     {
       verse_number: 21,
       words: [
-        "The",
+        "$pin",
         "$son",
         "$speech",
         "to",
