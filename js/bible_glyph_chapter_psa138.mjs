@@ -136,7 +136,7 @@ export function bible_glyph_chapter_psa138() {
           "$i_am",
           "is",
           "on",
-          "high,",
+          "$up_arrow,",
           "He",
           "$eye",
           "the",
