@@ -152,7 +152,7 @@ export function bible_glyph_chapter_jon04() {
           "sat",
           "in",
           "its",
-          "shade",
+          "$umbrella_on_ground",
           "to",
           "$eye",
           "what",
