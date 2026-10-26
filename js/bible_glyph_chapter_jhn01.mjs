@@ -422,7 +422,7 @@ export function bible_glyph_chapter_jhn01() {
           "to",
           "$question",
           "$pointing_back,",
-          "“Who",
+          "“$flashlight+question",
           "are",
           "you?”",
         ],
