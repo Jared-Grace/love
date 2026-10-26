@@ -579,7 +579,7 @@ export function bible_glyph_chapter_jdg13() {
           "Then",
           "Manoah",
           "$speech",
-          "to",
+          "$toward",
           "the",
           "$angel",
           "of",
