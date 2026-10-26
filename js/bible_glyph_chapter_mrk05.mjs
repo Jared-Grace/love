@@ -779,7 +779,7 @@ export function bible_glyph_chapter_mrk05() {
         "$crowd,",
         "was",
         "$speech,",
-        "“Who",
+        "“$flashlight+question",
         "touched",
         "My",
         "$garment?”",
