@@ -605,7 +605,7 @@ export function bible_glyph_chapter_2ki02() {
       {
         verse_number: 16,
         words: [
-          "Look,",
+          "$exclamation,",
           "they",
           "$speech",
           "to",
