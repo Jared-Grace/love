@@ -250,7 +250,7 @@ export function bible_glyph_chapter_jhn09() {
           "$gear+question",
           "$right_arrow",
           "were",
-          "your",
+          "$you",
           "eyes",
           "$unlocked?",
         ],
