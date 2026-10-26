@@ -381,7 +381,7 @@ export function bible_glyph_chapter_jhn20() {
           "He",
           "was",
           "$pin",
-          "gardener,",
+          "$garden+doer,",
           "she",
           "$speech",
           "$pointing_back,",
