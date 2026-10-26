@@ -673,7 +673,7 @@ export function bible_glyph_chapter_jhn09() {
           "$pointing",
           "I",
           "was",
-          "blind",
+          "$person_with_white_cane",
           "but",
           "now",
           "I",
