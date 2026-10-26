@@ -1167,7 +1167,7 @@ export function bible_glyph_chapter_mat05() {
           "$sun_with_face",
           "to",
           "rise",
-          "on",
+          "$pointing_up",
           "the",
           "$thumbs_down",
           "$plus",
