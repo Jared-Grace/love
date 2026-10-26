@@ -637,7 +637,7 @@ export function bible_glyph_chapter_mrk11() {
         "$plus",
         "does",
         "$no_entry",
-        "doubt",
+        "$metro+scales",
         "$tray_in",
         "$pointing_back",
         "$heart_organ",
