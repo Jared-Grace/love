@@ -554,7 +554,7 @@ export function bible_glyph_chapter_1jn05() {
           "of",
           "$heart_on_fire",
           "has",
-          "come",
+          "$airplane_arrival",
           "$plus",
           "has",
           "$hands_giving",
