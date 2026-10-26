@@ -903,7 +903,7 @@ export function bible_glyph_chapter_mrk12() {
         "$house_with_garden",
         "$likeness",
         "$pointing_back+pointing_back,",
-        "is",
+        "$link",
         "more",
         "important",
         "than",
