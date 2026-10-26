@@ -117,7 +117,7 @@ export function bible_glyph_chapter_gen32() {
           "have",
           "$ox",
           "and",
-          "donkeys",
+          "$donkey",
           "and",
           "$sheep,",
           "$kneeling",
