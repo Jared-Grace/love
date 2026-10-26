@@ -830,7 +830,7 @@ export function bible_glyph_chapter_mrk12() {
       verse_number: 31,
       words: [
         "The",
-        "second",
+        "$second_place",
         "is",
         "this:",
         "$heart_red+doing",
