@@ -93,7 +93,7 @@ export function bible_glyph_chapter_2ki02() {
           "Bethel",
           "came",
           "out",
-          "to",
+          "$toward",
           "$heart_on_fire+rescue",
           "and",
           "$speech,",
