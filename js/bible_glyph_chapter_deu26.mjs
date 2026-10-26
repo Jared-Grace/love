@@ -429,7 +429,7 @@ export function bible_glyph_chapter_deu26() {
           "the",
           "$handshake,",
           "the",
-          "foreigner,",
+          "$foreigner,",
           "the",
           "fatherless,",
           "and",
