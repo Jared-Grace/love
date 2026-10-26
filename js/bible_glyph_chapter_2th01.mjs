@@ -176,7 +176,7 @@ export function bible_glyph_chapter_2th01() {
           "affliction",
           "those",
           "who",
-          "afflict",
+          "$clamp+doing",
           "you,",
         ],
       },
