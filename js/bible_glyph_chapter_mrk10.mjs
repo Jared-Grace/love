@@ -732,7 +732,7 @@ export function bible_glyph_chapter_mrk10() {
         "sake",
         "$plus",
         "for",
-        "the",
+        "$pin",
         "$angel+thumbs_up",
       ],
     },
