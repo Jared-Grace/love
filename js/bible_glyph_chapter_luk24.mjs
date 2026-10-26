@@ -1063,7 +1063,7 @@ export function bible_glyph_chapter_luk24() {
           "$you",
           "while",
           "I",
-          "was",
+          "$link",
           "$repeat_single_button",
           "with",
           "$you:",
