@@ -1169,7 +1169,7 @@ export function bible_glyph_chapter_jhn04() {
           "come",
           "$walking+pointing_down",
           "$plus",
-          "heal",
+          "$bandage+doing",
           "$pointing_back",
           "$son,",
           "who",
