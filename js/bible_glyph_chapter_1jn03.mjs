@@ -614,7 +614,7 @@ export function bible_glyph_chapter_1jn03() {
           "$hammer",
           "what",
           "is",
-          "pleasing",
+          "$smiling_face_with_smiling_eyes+describing",
           "in",
           "$pointing_back",
           "sight.",
