@@ -275,7 +275,7 @@ export function bible_glyph_chapter_gen01() {
           "bring",
           "forth",
           "grass,",
-          "plants",
+          "$herb",
           "yielding",
           "seed,",
           "and",
