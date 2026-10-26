@@ -494,7 +494,7 @@ export function bible_glyph_chapter_jhn03() {
           "$pin",
           "$darkness",
           "$more",
-          "than",
+          "$shuffle",
           "$pin",
           "$light",
           "because",
