@@ -739,7 +739,7 @@ export function bible_glyph_chapter_mrk04() {
           "$clock+next_track",
           "the",
           "head,",
-          "then",
+          "$clock+next_track",
           "the",
           "ripe",
           "grain",
