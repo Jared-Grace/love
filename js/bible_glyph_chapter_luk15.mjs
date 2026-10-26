@@ -504,7 +504,7 @@ export function bible_glyph_chapter_luk15() {
         "$hammer",
         "$me",
         "$likeness",
-        "one",
+        "$one",
         "of",
         "$you",
         "hired",
