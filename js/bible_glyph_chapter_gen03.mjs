@@ -776,7 +776,7 @@ export function bible_glyph_chapter_gen03() {
           "$person",
           "and",
           "$tent+doing",
-          "cherubim",
+          "$cherub",
           "on",
           "the",
           "$compass+right_arrow",
