@@ -593,7 +593,7 @@ export function bible_glyph_chapter_rut02() {
           "was",
           "about",
           "an",
-          "ephah",
+          "$bucket+input_numbers",
           "of",
           "barley.",
         ],
