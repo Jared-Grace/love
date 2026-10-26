@@ -172,7 +172,7 @@ export function bible_glyph_chapter_1jn01() {
           "$tray_in",
           "$pointing_back",
           "there",
-          "is",
+          "$link",
           "$no_entry",
           "$darkness",
           "-",
