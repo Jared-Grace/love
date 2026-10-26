@@ -320,7 +320,7 @@ export function bible_glyph_chapter_jol02() {
           "very",
           "$multiply,",
           "for",
-          "mighty",
+          "$bone+describing",
           "are",
           "those",
           "who",
