@@ -306,7 +306,7 @@ export function bible_glyph_chapter_ezk18() {
           "any",
           "of",
           "them).",
-          "Indeed,",
+          "$plus,",
           "the",
           "son",
           "eats",
