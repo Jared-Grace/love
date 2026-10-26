@@ -67,7 +67,7 @@ export function bible_glyph_chapter_1jn02() {
           "for",
           "ours",
           "$one+manner",
-          "but",
+          "$curving_up",
           "$plus",
           "for",
           "those",
