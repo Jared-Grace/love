@@ -169,7 +169,7 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
     let v = from(start_across);
     let v2 = till(end_across);
     let v3_inner = from(start_down);
-    let v4 = till(end_down);
+    let v4_inner = till(end_down);
     let said = app_code_explain_said([
       "The ",
       rectangle_word,
@@ -184,7 +184,7 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
       " from ",
       v3_inner,
       " to ",
-      v4,
+      v4_inner,
     ]);
     return said;
   }
