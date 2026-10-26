@@ -563,7 +563,7 @@ export function bible_glyph_chapter_jol02() {
           "$speech",
           "His",
           "$family:",
-          "Behold,",
+          "$exclamation,",
           "I",
           "will",
           "$hand_sending",
