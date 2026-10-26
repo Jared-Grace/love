@@ -291,7 +291,7 @@ export function bible_glyph_chapter_2th01() {
           "have",
           "$anchor+doing,",
           "$pointing",
-          "our",
+          "$me",
           "$witness+thing+describing",
           "to",
           "you",
