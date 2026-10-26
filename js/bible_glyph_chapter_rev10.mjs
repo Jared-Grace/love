@@ -158,7 +158,7 @@ export function bible_glyph_chapter_rev10() {
         verse_number: 5,
         words: [
           "$plus",
-          "the",
+          "$pin",
           "$angel",
           "I",
           "had",
