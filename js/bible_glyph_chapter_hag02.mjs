@@ -647,7 +647,7 @@ export function bible_glyph_chapter_hag02() {
           "of",
           "$hands_raised+proper_name",
           "$speech",
-          "I",
+          "$me",
           "am",
           "about",
           "to",
