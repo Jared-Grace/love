@@ -353,7 +353,7 @@ export function bible_glyph_chapter_rev01() {
           "$incoming_envelope",
           "it",
           "to",
-          "the",
+          "$pin",
           "seven",
           "$church:",
           "to",
