@@ -853,7 +853,7 @@ export function bible_glyph_chapter_jhn09() {
           "a",
           "man",
           "born",
-          "blind.",
+          "$person_with_white_cane.",
         ],
       },
       {
