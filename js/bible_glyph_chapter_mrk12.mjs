@@ -411,7 +411,7 @@ export function bible_glyph_chapter_mrk12() {
         "$flashlight+question",
         "are",
         "you",
-        "testing",
+        "$test_tube",
         "$me?",
         "Bring",
         "$me",
