@@ -1000,7 +1000,7 @@ export function bible_glyph_chapter_mrk12() {
         "hand",
         "$finish",
         "I",
-        "put",
+        "$palm_down",
         "Your",
         "$enemy",
         "under",
