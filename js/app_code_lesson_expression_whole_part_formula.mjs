@@ -1,18 +1,19 @@
-import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
-import { app_code_lesson_expression_whole_part_formula_recognize_decoys } from "./app_code_lesson_expression_whole_part_formula_recognize_decoys.mjs";
-import { app_code_lesson_expression_whole_part_formula_above } from "./app_code_lesson_expression_whole_part_formula_above.mjs";
-import { app_code_lesson_expression_whole_part_formula_title_name_id } from "./app_code_lesson_expression_whole_part_formula_title_name_id.mjs";
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
-import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
-import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
-import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
-import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { list_map } from "./list_map.mjs";
-import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
+import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
+import { app_code_lesson_expression_whole_part_formula_recognize_decoys } from "./app_code_lesson_expression_whole_part_formula_recognize_decoys.mjs";
+import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
+import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
+import { app_code_whole_part_wrong_say } from "./app_code_whole_part_wrong_say.mjs";
+import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
+import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
+import { list_map } from "./list_map.mjs";
+import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { html_div } from "./html_div.mjs";
+import { app_code_lesson_expression_whole_part_formula_title_name_id } from "./app_code_lesson_expression_whole_part_formula_title_name_id.mjs";
+import { app_code_lesson_expression_whole_part_formula_above } from "./app_code_lesson_expression_whole_part_formula_above.mjs";
 export function app_code_lesson_expression_whole_part_formula() {
   "the FIRST of the three whole-part lessons: LEARN THE EQUATION a / b => Math.floor(a / b) * b (rewrite a division into its whole-part formula). The learner builds the formula from tokens given the division, so they produce the rewrite themselves rather than just recognising it. The next lesson evaluates the formula, and the one after does both. Uses the shared divisor/quotient batch so a quotient-0 division can appear";
   function make(divisor, quotient) {
@@ -50,6 +51,7 @@ export function app_code_lesson_expression_whole_part_formula() {
       answer_count_override: null,
       answer_property: "answer",
       on_answer: app_code_lesson_quiz_multiple_choice,
+      wrong_say: app_code_whole_part_wrong_say,
       decoys: recognize_decoys,
     };
     let build = {

@@ -1,20 +1,21 @@
-import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
-import { app_code_lesson_expression_whole_part_both_above } from "./app_code_lesson_expression_whole_part_both_above.mjs";
-import { app_code_lesson_expression_whole_part_both_decoys_backwards } from "./app_code_lesson_expression_whole_part_both_decoys_backwards.mjs";
-import { app_code_lesson_expression_whole_part_both_decoys } from "./app_code_lesson_expression_whole_part_both_decoys.mjs";
-import { app_code_lesson_expression_whole_part_both_title_name_id } from "./app_code_lesson_expression_whole_part_both_title_name_id.mjs";
 import { app_code_uneven_dividend } from "./app_code_uneven_dividend.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
-import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
-import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { text_to } from "./text_to.mjs";
-import { list_map } from "./list_map.mjs";
-import { noop } from "./noop.mjs";
-import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
-import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
+import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
+import { app_code_lesson_expression_whole_part_both_decoys } from "./app_code_lesson_expression_whole_part_both_decoys.mjs";
+import { app_code_lesson_expression_whole_part_both_decoys_backwards } from "./app_code_lesson_expression_whole_part_both_decoys_backwards.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
+import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
+import { noop } from "./noop.mjs";
+import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
+import { app_code_whole_part_wrong_say } from "./app_code_whole_part_wrong_say.mjs";
+import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
+import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
+import { list_map } from "./list_map.mjs";
+import { app_code_lesson_expression_whole_part_both_title_name_id } from "./app_code_lesson_expression_whole_part_both_title_name_id.mjs";
+import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
+import { app_code_lesson_expression_whole_part_both_above } from "./app_code_lesson_expression_whole_part_both_above.mjs";
 export function app_code_lesson_expression_whole_part_both() {
   "the THIRD whole-part lesson: DO BOTH steps at once. Given a division a / b, the learner gives its whole part value directly (rewrite with the formula Math.floor(a / b) * b, then evaluate). The answer is the whole part quotient*divisor - NOT what a / b evaluates to - so this is an explicit-answer multiple choice, not an eval lesson. Tailored decoys are the tempting partial answers: the quotient (rounded down but not multiplied back), the remainder, and the raw decimal division";
   function make(divisor, quotient) {
@@ -60,6 +61,7 @@ export function app_code_lesson_expression_whole_part_both() {
       answer_count_override: null,
       answer_property: "answer",
       on_answer: app_code_lesson_quiz_multiple_choice,
+      wrong_say: app_code_whole_part_wrong_say,
       decoys,
     };
     let backwards = {
@@ -70,6 +72,7 @@ export function app_code_lesson_expression_whole_part_both() {
       answer_count_override: null,
       answer_property: "question",
       on_answer: app_code_lesson_quiz_multiple_choice,
+      wrong_say: app_code_whole_part_wrong_say,
       decoys: decoys_backwards,
     };
     let infos = [forwards, backwards];

@@ -1,12 +1,13 @@
-import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
-import { app_code_lesson_expression_remainder_divide_percent_expression } from "./app_code_lesson_expression_remainder_divide_percent_expression.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_expression_remainder_divide_percent_expression } from "./app_code_lesson_expression_remainder_divide_percent_expression.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
+import { app_code_whole_part_wrong_say } from "./app_code_whole_part_wrong_say.mjs";
 import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
 import { app_code_lesson_expression_remainder_divide_item_qa_for } from "./app_code_lesson_expression_remainder_divide_item_qa_for.mjs";
 import { app_code_lesson_expression_remainder_divide_qa_for } from "./app_code_lesson_expression_remainder_divide_qa_for.mjs";
+import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { list_map } from "./list_map.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_expression_remainder_divide_quizzes_get(
@@ -28,6 +29,7 @@ export function app_code_lesson_expression_remainder_divide_quizzes_get(
     answer_count_override: null,
     answer_property: "answer",
     on_answer: app_code_lesson_quiz_multiple_choice,
+    wrong_say: app_code_whole_part_wrong_say,
     decoys: recognize_decoys,
   };
   let build = {
@@ -47,6 +49,7 @@ export function app_code_lesson_expression_remainder_divide_quizzes_get(
     answer_count_override: null,
     answer_property: "answer",
     on_answer: app_code_lesson_quiz_multiple_choice,
+    wrong_say: app_code_whole_part_wrong_say,
     decoys: backwards_decoys,
     backwards: true,
     qa_for: app_code_lesson_expression_remainder_divide_item_qa_for,
