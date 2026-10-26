@@ -459,7 +459,7 @@ export function bible_glyph_chapter_hag02() {
         words: [
           "$watch",
           "$heart_organ",
-          "carefully",
+          "$pleading",
           "$tray_out",
           "this",
           "$sun",
