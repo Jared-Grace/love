@@ -94,7 +94,7 @@ export function bible_glyph_chapter_1jn05() {
         verse_number: 4,
         words: [
           "$pointing",
-          "everyone",
+          "$all",
           "born",
           "$tray_out",
           "$heart_on_fire",
