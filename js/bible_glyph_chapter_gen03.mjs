@@ -297,7 +297,7 @@ export function bible_glyph_chapter_gen03() {
           "$heart_on_fire",
           "called",
           "out",
-          "to",
+          "$toward",
           "the",
           "$person,",
           "Where",
