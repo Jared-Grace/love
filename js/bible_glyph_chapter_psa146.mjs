@@ -101,7 +101,7 @@ export function bible_glyph_chapter_psa146() {
           "of",
           "$hand+foot,",
           "whose",
-          "hope",
+          "$crossed_fingers+clock+thing",
           "is",
           "in",
           "the",
