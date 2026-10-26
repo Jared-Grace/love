@@ -358,7 +358,7 @@ export function bible_glyph_chapter_jhn02() {
           "found",
           "those",
           "$coin+hands_giving",
-          "cattle",
+          "$ox",
           "$plus",
           "$sheep",
           "$plus",
