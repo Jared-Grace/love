@@ -1011,7 +1011,7 @@ export function bible_glyph_chapter_luk24() {
           "Do",
           "you",
           "have",
-          "anything",
+          "$joker",
           "here",
           "to",
           "eat?",
