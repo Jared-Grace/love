@@ -1150,7 +1150,7 @@ export function bible_glyph_chapter_luk24() {
           "to",
           "$all",
           "$map,",
-          "beginning",
+          "$clapper_board",
           "in",
           "$city+peace.",
         ],
