@@ -202,7 +202,7 @@ export function bible_glyph_chapter_luk24() {
           "things",
           "to",
           "$pin",
-          "Eleven",
+          "$one+ten",
           "$plus",
           "to",
           "all",
