@@ -1307,7 +1307,7 @@ export function bible_glyph_chapter_mrk10() {
         "$pointing_back",
         "to",
         "be",
-        "silent,",
+        "$mouth+locked,",
         "but",
         "he",
         "cried",
