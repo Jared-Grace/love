@@ -554,7 +554,7 @@ export function bible_glyph_chapter_mrk08() {
           "$hug",
           "$pointing_back",
           "to",
-          "touch",
+          "$fire+hand+doing",
           "$pointing_back.",
         ],
       },
