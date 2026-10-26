@@ -83,7 +83,7 @@ export function bible_glyph_chapter_psa096() {
           "be",
           "feared",
           "$pointing_up",
-          "all",
+          "$all",
           "$moai.",
         ],
       },
