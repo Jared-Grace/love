@@ -852,7 +852,7 @@ export function bible_glyph_chapter_gen32() {
           "$eye",
           "$heart_on_fire",
           "$face",
-          "to",
+          "$toward",
           "$face,",
           "and",
           "yet",
