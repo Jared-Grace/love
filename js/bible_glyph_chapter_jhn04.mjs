@@ -703,7 +703,7 @@ export function bible_glyph_chapter_jhn04() {
           "$plus",
           "$speech",
           "to",
-          "the",
+          "$pin",
           "$person,",
         ],
       },
