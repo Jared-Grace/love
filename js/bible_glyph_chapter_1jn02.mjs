@@ -670,7 +670,7 @@ export function bible_glyph_chapter_1jn02() {
           "the",
           "antichrist,",
           "who",
-          "denies",
+          "$gesturing_no",
           "the",
           "$father",
           "$plus",
