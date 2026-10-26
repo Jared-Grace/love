@@ -723,7 +723,7 @@ export function bible_glyph_chapter_mrk10() {
         "$mother",
         "$shuffle",
         "$father",
-        "or",
+        "$shuffle",
         "$child",
         "or",
         "$field",
