@@ -1195,7 +1195,7 @@ export function bible_glyph_chapter_mat05() {
           "$heart_red+doing",
           "you,",
           "$flashlight+question",
-          "reward",
+          "$dollar_banknote",
           "will",
           "you",
           "get?",
