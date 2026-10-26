@@ -762,7 +762,7 @@ export function bible_glyph_chapter_exo14() {
           "$horse+right_arrow+doing.",
           "Let",
           "us",
-          "flee",
+          "$running+dashing_away",
           "from",
           "the",
           "$wrestling+heart_on_fire,",
