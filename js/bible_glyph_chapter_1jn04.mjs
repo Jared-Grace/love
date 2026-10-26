@@ -346,7 +346,7 @@ export function bible_glyph_chapter_1jn04() {
           "$pin+doing",
           "$tray_in",
           "$me,",
-          "and",
+          "$plus",
           "His",
           "$heart_red",
           "is",
