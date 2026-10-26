@@ -345,7 +345,7 @@ export function bible_glyph_chapter_luk07() {
         "carried",
         "out,",
         "the",
-        "only",
+        "$one+butterfly",
         "$son",
         "of",
         "$pointing_back",
