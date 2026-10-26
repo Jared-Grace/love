@@ -792,7 +792,7 @@ export function bible_glyph_chapter_mrk12() {
         "$heart_on_fire,",
         "the",
         "$crown",
-        "is",
+        "$link",
         "One.",
       ],
     },
