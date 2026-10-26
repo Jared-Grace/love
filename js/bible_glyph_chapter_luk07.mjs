@@ -1326,7 +1326,7 @@ export function bible_glyph_chapter_luk07() {
         "has",
         "$no_entry",
         "stopped",
-        "kissing",
+        "$pointing_down+heart_orange+mouth+doing",
         "My",
         "$foot",
         "$away",
