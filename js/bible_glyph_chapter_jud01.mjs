@@ -656,7 +656,7 @@ export function bible_glyph_chapter_jud01() {
           "mercy",
           "$tray_in",
           "$fear,",
-          "hating",
+          "$face_with_symbols_on_mouth",
           "$plus",
           "the",
           "clothing",
