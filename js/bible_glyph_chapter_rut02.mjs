@@ -725,7 +725,7 @@ export function bible_glyph_chapter_rut02() {
           "one",
           "of",
           "our",
-          "kinsman-redeemers.",
+          "$currency_exchange.",
         ],
       },
       {
