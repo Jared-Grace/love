@@ -426,7 +426,7 @@ export function bible_glyph_chapter_jhn17() {
           "of",
           "$pin",
           "$globe,",
-          "just",
+          "$likeness",
           "as",
           "I",
           "am",
