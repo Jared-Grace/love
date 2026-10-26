@@ -25,7 +25,7 @@ export function bible_glyph_chapter_ezk33() {
           "of",
           "the",
           "$i_am",
-          "came",
+          "$link",
           "to",
           "me,",
           "$speech,",
