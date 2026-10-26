@@ -454,7 +454,7 @@ export function bible_glyph_chapter_oba01() {
           "the",
           "$divide+road",
           "to",
-          "cut",
+          "$scissors",
           "off",
           "their",
           "fugitives,",
