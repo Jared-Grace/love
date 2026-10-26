@@ -198,7 +198,7 @@ export function bible_glyph_chapter_1jn04() {
           "$wind",
           "of",
           "$check",
-          "and",
+          "$plus",
           "the",
           "$wind",
           "of",
