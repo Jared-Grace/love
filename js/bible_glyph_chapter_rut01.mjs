@@ -207,7 +207,7 @@ export function bible_glyph_chapter_rut01() {
           "Accompanied",
           "by",
           "her",
-          "two",
+          "$two",
           "daughters-in-law,",
           "she",
           "left",
