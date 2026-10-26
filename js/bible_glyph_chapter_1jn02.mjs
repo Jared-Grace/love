@@ -740,7 +740,7 @@ export function bible_glyph_chapter_1jn02() {
           "$plus",
           "$flashlight",
           "$link",
-          "the",
+          "$pin",
           "promise",
           "$pointing_back",
           "made",
