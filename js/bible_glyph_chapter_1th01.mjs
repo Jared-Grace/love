@@ -289,7 +289,7 @@ export function bible_glyph_chapter_1th01() {
           "$pin",
           "$skull,",
           "$cross",
-          "our",
+          "$me",
           "$ring_buoy+doing",
           "$tray_out",
           "$pin",
