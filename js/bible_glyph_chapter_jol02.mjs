@@ -337,7 +337,7 @@ export function bible_glyph_chapter_jol02() {
           "$top",
           "and",
           "very",
-          "dreadful.",
+          "$fear+doing.",
           "Who",
           "can",
           "endure",
