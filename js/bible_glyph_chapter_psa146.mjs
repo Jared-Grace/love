@@ -166,7 +166,7 @@ export function bible_glyph_chapter_psa146() {
           "$person_with_white_cane+describing.",
           "The",
           "$i_am",
-          "lifts",
+          "$lifting+person+doing",
           "those",
           "who",
           "are",
