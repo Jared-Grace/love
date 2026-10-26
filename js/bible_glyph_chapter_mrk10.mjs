@@ -711,7 +711,7 @@ export function bible_glyph_chapter_mrk10() {
         "is",
         "$no_entry",
         "one",
-        "who",
+        "$back+flashlight",
         "has",
         "left",
         "$house",
