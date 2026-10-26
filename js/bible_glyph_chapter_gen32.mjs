@@ -866,7 +866,7 @@ export function bible_glyph_chapter_gen32() {
         verse_number: 31,
         words: [
           "The",
-          "sun",
+          "$sun_with_face",
           "$sun+up_arrow+doing",
           "above",
           "him",
