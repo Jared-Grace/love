@@ -723,7 +723,7 @@ export function bible_glyph_chapter_1ki03() {
           "up",
           "in",
           "the",
-          "morning",
+          "$morning",
           "to",
           "nurse",
           "my",
