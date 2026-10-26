@@ -793,7 +793,7 @@ export function bible_glyph_chapter_ezk33() {
           "$sunset",
           "before",
           "the",
-          "fugitive",
+          "$door+running+person",
           "$footprints,",
           "the",
           "$hand",
