@@ -566,7 +566,7 @@ export function bible_glyph_chapter_jon01() {
           "had",
           "appointed",
           "a",
-          "great",
+          "$top",
           "$fish",
           "to",
           "swallow",
