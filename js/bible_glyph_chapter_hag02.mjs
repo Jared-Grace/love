@@ -570,7 +570,7 @@ export function bible_glyph_chapter_hag02() {
           "of",
           "the",
           "$i_am",
-          "temple",
+          "$classical_building",
           "was",
           "laid;",
           "consider",
