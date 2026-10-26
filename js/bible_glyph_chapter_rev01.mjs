@@ -520,7 +520,7 @@ export function bible_glyph_chapter_rev01() {
           "at",
           "$pointing_back",
           "$foot",
-          "like",
+          "$likeness",
           "a",
           "$skull",
           "man.",
