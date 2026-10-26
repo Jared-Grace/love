@@ -645,7 +645,7 @@ export function bible_glyph_chapter_1jn03() {
           "should",
           "$heart_red+doing",
           "$arrow_both_ways",
-          "just",
+          "$likeness",
           "as",
           "He",
           "$scroll",
