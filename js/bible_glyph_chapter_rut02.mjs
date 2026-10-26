@@ -49,7 +49,7 @@ export function bible_glyph_chapter_rut02() {
           "$speech",
           "to",
           "$proper_name$Naomi,",
-          "Please",
+          "$pleading",
           "let",
           "me",
           "$walking",
