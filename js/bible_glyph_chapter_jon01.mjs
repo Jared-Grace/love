@@ -319,7 +319,7 @@ export function bible_glyph_chapter_jon01() {
           "of",
           "the",
           "$sky,",
-          "who",
+          "$back+flashlight",
           "$hammer+doing",
           "the",
           "$sea",
