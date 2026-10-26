@@ -71,7 +71,7 @@ export function bible_glyph_chapter_psa015() {
           "casts",
           "$no_entry",
           "scorn",
-          "on",
+          "$pointing_up",
           "his",
           "friend,",
         ],
