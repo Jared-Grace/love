@@ -325,7 +325,7 @@ export function bible_glyph_chapter_exo20() {
           "long",
           "in",
           "the",
-          "land",
+          "$brown_square",
           "that",
           "the",
           "$i_am",
