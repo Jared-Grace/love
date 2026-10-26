@@ -472,7 +472,7 @@ export function bible_glyph_chapter_luk15() {
         "up",
         "$walking",
         "to",
-        "my",
+        "$me",
         "$father",
         "$plus",
         "$speech",
