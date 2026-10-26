@@ -670,7 +670,7 @@ export function bible_glyph_chapter_luk15() {
         "$pin",
         "$field,",
         "$plus",
-        "as",
+        "$likeness",
         "he",
         "$footprints",
         "near",
