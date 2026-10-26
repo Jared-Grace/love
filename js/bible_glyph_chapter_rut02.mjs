@@ -225,7 +225,7 @@ export function bible_glyph_chapter_rut02() {
         verse_number: 8,
         words: [
           "Then",
-          "Boaz",
+          "$field+sheaf_of_rice+proper_name",
           "$speech",
           "to",
           "$proper_name$Ruth,",
