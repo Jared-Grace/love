@@ -487,7 +487,7 @@ export function bible_glyph_chapter_mrk11() {
         "all",
         "$pin",
         "$map’?",
-        "But",
+        "$curving_right",
         "$you",
         "have",
         "$hammer",
