@@ -150,7 +150,7 @@ export function bible_glyph_chapter_deu30() {
           "your",
           "$heart_on_fire",
           "will",
-          "gather",
+          "$tray_in+doing",
           "you",
           "and",
           "$hand_receiving",
