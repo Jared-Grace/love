@@ -372,7 +372,7 @@ export function bible_glyph_chapter_jhn01() {
           "$plus",
           "$check",
           "came",
-          "through",
+          "$metro",
           "$cross",
           "$oil.",
         ],
