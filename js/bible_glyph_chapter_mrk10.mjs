@@ -1426,7 +1426,7 @@ export function bible_glyph_chapter_mrk10() {
         "his",
         "sight",
         "$plus",
-        "followed",
+        "$walking+footprints",
         "$pointing_back",
         "$tray_in",
         "the",
