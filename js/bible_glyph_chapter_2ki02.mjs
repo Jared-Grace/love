@@ -304,7 +304,7 @@ export function bible_glyph_chapter_2ki02() {
           "$heart_on_fire+i_am",
           "$hand_receiving",
           "his",
-          "cloak,",
+          "$cloak+sparkles,",
           "rolled",
           "it",
           "up",
