@@ -139,7 +139,7 @@ export function bible_glyph_chapter_jdg13() {
         verse_number: 5,
         words: [
           "For",
-          "behold,",
+          "$exclamation,",
           "you",
           "will",
           "conceive",
