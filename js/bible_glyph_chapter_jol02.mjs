@@ -68,7 +68,7 @@ export function bible_glyph_chapter_jol02() {
           "Like",
           "the",
           "$dawn",
-          "overspreading",
+          "$folding_hand_fan",
           "the",
           "$mountain,",
           "a",
