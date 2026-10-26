@@ -469,7 +469,7 @@ export function bible_glyph_chapter_jhn03() {
           "$heart_on_fire$’s",
           "one",
           "and",
-          "only",
+          "$one+butterfly",
           "$son.",
         ],
       },
