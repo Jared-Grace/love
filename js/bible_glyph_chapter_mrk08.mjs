@@ -957,7 +957,7 @@ export function bible_glyph_chapter_mrk08() {
           "to",
           "$chart_increasing_with_yen+doing",
           "$pin",
-          "whole",
+          "$hollow_circle",
           "$globe",
           "$plus",
           "forfeit",
