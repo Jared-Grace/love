@@ -79,7 +79,7 @@ export function bible_glyph_chapter_psa001() {
           "like",
           "a",
           "$tree",
-          "planted",
+          "$sprout+right_arrow+doing",
           "by",
           "streams",
           "of",
