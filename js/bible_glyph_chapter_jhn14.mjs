@@ -803,7 +803,7 @@ export function bible_glyph_chapter_jhn14() {
           "back",
           "$toward",
           "you.’",
-          "If",
+          "$traffic_light",
           "you",
           "$heart_red+doing",
           "Me,",
