@@ -191,7 +191,7 @@ export function bible_glyph_chapter_2jn01() {
           "have",
           "gone",
           "out",
-          "into",
+          "$toward+tray_in",
           "the",
           "$globe,",
           "$no_entry",
