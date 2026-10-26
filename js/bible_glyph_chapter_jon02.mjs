@@ -195,7 +195,7 @@ export function bible_glyph_chapter_jon02() {
           "to",
           "Your",
           "$sparkle+thing",
-          "temple.",
+          "$classical_building.",
         ],
       },
       {
