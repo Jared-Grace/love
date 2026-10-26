@@ -142,7 +142,7 @@ export function bible_glyph_chapter_rev10() {
           "up",
           "what",
           "$pin",
-          "seven",
+          "$seven",
           "thunders",
           "have",
           "$mouth,",
