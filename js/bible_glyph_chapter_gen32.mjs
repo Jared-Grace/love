@@ -319,7 +319,7 @@ export function bible_glyph_chapter_gen32() {
           "$brother",
           "$proper_name$Esau,",
           "$pointing",
-          "I",
+          "$me",
           "am",
           "$fear+describing",
           "that",
