@@ -460,7 +460,7 @@ export function bible_glyph_chapter_rev01() {
           "refined",
           "$tray_in",
           "a",
-          "furnace,",
+          "$furnace,",
           "$plus",
           "$pointing_back",
           "$voice",
