@@ -495,7 +495,7 @@ export function bible_glyph_chapter_rut02() {
           "she",
           "sat",
           "down",
-          "beside",
+          "$pointing+person",
           "the",
           "harvesters,",
           "and",
