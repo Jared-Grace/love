@@ -89,7 +89,7 @@ export function bible_glyph_chapter_mrk05() {
         "had",
         "often",
         "been",
-        "bound",
+        "$knot",
         "with",
         "$chains+foot",
         "$plus",
