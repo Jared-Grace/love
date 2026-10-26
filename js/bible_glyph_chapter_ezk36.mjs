@@ -223,7 +223,7 @@ export function bible_glyph_chapter_ezk36() {
           "so",
           "that",
           "its",
-          "pastureland",
+          "$herb+city",
           "became",
           "plunder.",
         ],
