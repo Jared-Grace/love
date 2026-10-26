@@ -286,7 +286,7 @@ export function bible_glyph_chapter_jol02() {
           "$sky",
           "$earth+up_down_arrow+doing.",
           "The",
-          "sun",
+          "$sun_with_face",
           "and",
           "moon",
           "grow",
