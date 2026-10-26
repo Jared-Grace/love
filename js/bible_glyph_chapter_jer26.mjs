@@ -348,7 +348,7 @@ export function bible_glyph_chapter_jer26() {
           "of",
           "$hands_raised+proper_name",
           "$ear",
-          "these",
+          "$flashlight+flashlight",
           "$speech,",
           "they",
           "went",
