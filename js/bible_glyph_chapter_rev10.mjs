@@ -296,7 +296,7 @@ export function bible_glyph_chapter_rev10() {
           "the",
           "$angel",
           "$person+round_pushpin",
-          "on",
+          "$pointing_up",
           "the",
           "$sea",
           "$plus",
