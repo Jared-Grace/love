@@ -262,7 +262,7 @@ export function bible_glyph_chapter_luk24() {
         verse_number: 12,
         words: [
           "$rock+proper_name,",
-          "however,",
+          "$curving_right,",
           "got",
           "up",
           "and",
