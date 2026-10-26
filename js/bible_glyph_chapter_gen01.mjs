@@ -203,7 +203,7 @@ export function bible_glyph_chapter_gen01() {
           "$morning,",
           "the",
           "second",
-          "day.",
+          "$sun.",
         ],
       },
       {
