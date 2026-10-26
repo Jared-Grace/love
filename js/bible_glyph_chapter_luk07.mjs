@@ -732,7 +732,7 @@ export function bible_glyph_chapter_luk07() {
         "$tray_in",
         "$yarn+describing",
         "$garment?",
-        "Look,",
+        "$exclamation,",
         "those",
         "$tray_in",
         "elegant",
