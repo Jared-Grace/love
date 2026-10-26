@@ -78,8 +78,8 @@ export function js_key_number_is(node, facts, depth) {
     }
     if (equal(callee.name, "add")) {
       function argument_number_is(argument) {
-        let is = js_key_number_is(argument, facts, deeper);
-        return is;
+        let argument_is = js_key_number_is(argument, facts, deeper);
+        return argument_is;
       }
       let is = node.arguments.every(argument_number_is);
       return is;
