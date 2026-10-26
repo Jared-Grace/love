@@ -766,7 +766,7 @@ export function bible_glyph_chapter_1jn02() {
           "are",
           "trying",
           "to",
-          "deceive",
+          "$dizzy+doing",
           "$you.",
         ],
       },
