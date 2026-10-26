@@ -615,7 +615,7 @@ export function bible_glyph_chapter_exo14() {
           "$no_entry",
           "camp",
           "went",
-          "near",
+          "$magnet+doing",
           "the",
           "other.",
         ],
