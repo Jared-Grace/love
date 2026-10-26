@@ -727,7 +727,7 @@ export function bible_glyph_chapter_mrk12() {
         "of",
         "the",
         "$skull,",
-        "but",
+        "$curving_up",
         "of",
         "the",
         "$sprout+doing.",
