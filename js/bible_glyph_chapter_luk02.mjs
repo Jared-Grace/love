@@ -857,7 +857,7 @@ export function bible_glyph_chapter_luk02() {
         "$plus",
         "$person+up_arrow",
         "of",
-        "many",
+        "$multiply",
         "$tray_in",
         "$wrestling+heart_on_fire,",
         "$plus",
