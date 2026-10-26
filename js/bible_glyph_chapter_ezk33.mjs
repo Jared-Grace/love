@@ -864,7 +864,7 @@ export function bible_glyph_chapter_ezk33() {
           "are",
           "$speech,",
           "$father+map",
-          "was",
+          "$link",
           "only",
           "$one,",
           "yet",
