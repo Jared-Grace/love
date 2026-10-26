@@ -972,7 +972,7 @@ export function bible_glyph_chapter_ezk18() {
       {
         verse_number: 30,
         words: [
-          "Therefore,",
+          "$right_arrow,",
           "O",
           "$house",
           "of",
