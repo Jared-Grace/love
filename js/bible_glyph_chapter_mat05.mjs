@@ -318,7 +318,7 @@ export function bible_glyph_chapter_mat05() {
           "people",
           "light",
           "a",
-          "lamp",
+          "$lamp",
           "$plus",
           "put",
           "$pointing_back",
