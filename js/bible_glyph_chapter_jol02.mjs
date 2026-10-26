@@ -499,7 +499,7 @@ export function bible_glyph_chapter_jol02() {
           "weep",
           "$brain+arrow_both_ways",
           "the",
-          "portico",
+          "$classical_building+door",
           "and",
           "the",
           "$altar,",
