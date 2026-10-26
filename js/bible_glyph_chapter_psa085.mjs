@@ -118,7 +118,7 @@ export function bible_glyph_chapter_psa085() {
           "Your",
           "$family",
           "may",
-          "rejoice",
+          "$beaming+doing",
           "in",
           "You?",
         ],
