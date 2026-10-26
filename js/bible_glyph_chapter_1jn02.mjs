@@ -405,7 +405,7 @@ export function bible_glyph_chapter_1jn02() {
           "written",
           "to",
           "you,",
-          "young",
+          "$new_button+person",
           "men,",
           "$pointing",
           "you",
