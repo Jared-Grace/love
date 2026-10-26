@@ -611,7 +611,7 @@ export function bible_glyph_chapter_mrk12() {
         "be?",
         "$information",
         "all",
-        "seven",
+        "$seven",
         "were",
         "$woman",
         "to",
