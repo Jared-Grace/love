@@ -1220,7 +1220,7 @@ export function bible_glyph_chapter_1ki13() {
           "priest",
           "of",
           "the",
-          "high",
+          "$snow_capped_mountain",
           "places.",
         ],
       },
