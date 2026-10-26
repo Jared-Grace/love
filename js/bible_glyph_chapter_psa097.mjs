@@ -20,7 +20,7 @@ export function bible_glyph_chapter_psa097() {
           "let",
           "the",
           "$earth",
-          "rejoice;",
+          "$woman_dancing;",
           "let",
           "the",
           "distant",
