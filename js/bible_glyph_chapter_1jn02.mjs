@@ -287,7 +287,7 @@ export function bible_glyph_chapter_1jn02() {
         words: [
           "$curving_right",
           "whoever",
-          "hates",
+          "$face_with_symbols_on_mouth",
           "$pointing_back",
           "$brother",
           "is",
