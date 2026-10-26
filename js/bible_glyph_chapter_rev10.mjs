@@ -373,7 +373,7 @@ export function bible_glyph_chapter_rev10() {
           "it",
           "$link",
           "as",
-          "sweet",
+          "$honey+describing",
           "as",
           "$honey",
           "$tray_in",
