@@ -138,7 +138,7 @@ export function bible_glyph_chapter_3jn01() {
           "$hammer",
           "well",
           "to",
-          "send",
+          "$walking+waving_hand+doing",
           "them",
           "on",
           "their",
