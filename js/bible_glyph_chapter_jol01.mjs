@@ -536,7 +536,7 @@ export function bible_glyph_chapter_jol01() {
           "they",
           "have",
           "no",
-          "pasture.",
+          "$person+sheep+place.",
           "Even",
           "the",
           "flocks",
