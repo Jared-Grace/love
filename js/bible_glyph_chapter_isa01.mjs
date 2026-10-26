@@ -582,7 +582,7 @@ export function bible_glyph_chapter_isa01() {
         verse_number: 20,
         words: [
           "But",
-          "if",
+          "$traffic_light",
           "you",
           "resist",
           "and",
