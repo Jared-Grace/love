@@ -149,7 +149,7 @@ export function bible_glyph_chapter_psa067() {
           "of",
           "the",
           "$earth",
-          "fear",
+          "$fear+doing",
           "Him.",
         ],
       },
