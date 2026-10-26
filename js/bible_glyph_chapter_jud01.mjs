@@ -428,7 +428,7 @@ export function bible_glyph_chapter_jud01() {
           "$star_plain,",
           "for",
           "whom",
-          "blackest",
+          "$fog+new_moon",
           "$darkness",
           "has",
           "been",
