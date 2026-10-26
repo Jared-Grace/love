@@ -773,7 +773,7 @@ export function bible_glyph_chapter_2ki02() {
           "and",
           "$palm_down",
           "some",
-          "salt",
+          "$salt",
           "in",
           "it.",
           "So",
