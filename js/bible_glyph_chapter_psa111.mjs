@@ -14,7 +14,7 @@ export function bible_glyph_chapter_psa111() {
       {
         verse_number: 1,
         words: [
-          "Hallelujah!",
+          "$clapping_hands!",
           "I",
           "will",
           "$hands_raised",
