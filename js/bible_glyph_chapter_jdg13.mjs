@@ -411,7 +411,7 @@ export function bible_glyph_chapter_jdg13() {
           "$man_beard",
           "who",
           "$mouth",
-          "to",
+          "$toward",
           "my",
           "$woman?”",
           "“I",
