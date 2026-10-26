@@ -323,7 +323,7 @@ export function bible_glyph_chapter_1ki03() {
           "$thumbs_up",
           "and",
           "$thumbs_down.",
-          "For",
+          "$pointing",
           "who",
           "is",
           "able",
