@@ -424,7 +424,7 @@ export function bible_glyph_chapter_mrk10() {
         "$thumbs_up",
         "$traffic_light",
         "One",
-        "alone,",
+        "$one,",
         "$heart_on_fire.",
       ],
     },
