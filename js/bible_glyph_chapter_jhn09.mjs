@@ -165,7 +165,7 @@ export function bible_glyph_chapter_jhn09() {
           "wash",
           "$toward+tray_in",
           "the",
-          "Pool",
+          "$water_wave+person+place",
           "of",
           "$proper_name$Siloam",
           "(which",
