@@ -61,7 +61,7 @@ export function bible_glyph_chapter_jol03() {
           "My",
           "$family,",
           "My",
-          "inheritance",
+          "$inheritance",
           "$wrestling+heart_on_fire,",
           "whom",
           "they",
