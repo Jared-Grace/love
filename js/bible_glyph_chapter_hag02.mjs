@@ -402,7 +402,7 @@ export function bible_glyph_chapter_hag02() {
           "touches",
           "any",
           "of",
-          "these,",
+          "$flashlight+flashlight,",
           "does",
           "it",
           "become",
