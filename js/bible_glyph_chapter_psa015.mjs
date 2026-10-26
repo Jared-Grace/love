@@ -90,7 +90,7 @@ export function bible_glyph_chapter_psa015() {
           "honors",
           "those",
           "who",
-          "fear",
+          "$fear+describing",
           "the",
           "$i_am,",
           "who",
