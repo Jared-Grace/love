@@ -791,7 +791,7 @@ export function bible_glyph_chapter_2ki02() {
           "he",
           "went",
           "out",
-          "to",
+          "$toward",
           "the",
           "spring,",
           "cast",
