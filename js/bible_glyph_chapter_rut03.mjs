@@ -554,7 +554,7 @@ export function bible_glyph_chapter_rut03() {
           "$finish",
           "you",
           "$lightbulb",
-          "how",
+          "$question+likeness",
           "$speech",
           "go,",
           "for",
