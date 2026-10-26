@@ -22,7 +22,7 @@ export function bible_glyph_chapter_psa136() {
           "to",
           "the",
           "$i_am,",
-          "for",
+          "$pointing",
           "He",
           "is",
           "$thumbs_up.",
