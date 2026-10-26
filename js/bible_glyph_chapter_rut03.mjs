@@ -384,7 +384,7 @@ export function bible_glyph_chapter_rut03() {
           "redeem",
           "you.",
           "But",
-          "if",
+          "$traffic_light",
           "he",
           "does",
           "$no_entry",
