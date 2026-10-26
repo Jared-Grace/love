@@ -140,7 +140,7 @@ export function bible_glyph_chapter_jhn20() {
           "bent",
           "down,",
           "$eyes",
-          "the",
+          "$pin",
           "linen",
           "cloths",
           "lying",
