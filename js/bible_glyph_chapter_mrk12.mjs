@@ -998,7 +998,7 @@ export function bible_glyph_chapter_mrk12() {
         "$me",
         "right",
         "hand",
-        "until",
+        "$finish",
         "I",
         "put",
         "Your",
