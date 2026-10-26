@@ -164,7 +164,7 @@ export function bible_glyph_chapter_1jn02() {
           "$pointing_back",
           "$receipt+doing",
           "$walking",
-          "as",
+          "$likeness",
           "Jesus",
           "$walking.",
         ],
