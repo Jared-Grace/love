@@ -314,7 +314,7 @@ export function bible_glyph_chapter_1jn04() {
         verse_number: 11,
         words: [
           "Be$heart_red+describing$d,",
-          "if",
+          "$traffic_light",
           "$heart_on_fire",
           "so",
           "$heart_red+doing$ed",
