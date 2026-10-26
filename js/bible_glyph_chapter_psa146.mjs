@@ -160,7 +160,7 @@ export function bible_glyph_chapter_psa146() {
           "$i_am",
           "opens",
           "the",
-          "eyes",
+          "$eye+unlocked+doing",
           "of",
           "the",
           "blind.",
