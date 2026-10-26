@@ -583,7 +583,7 @@ export function bible_glyph_chapter_gen03() {
           "eat",
           "of",
           "it",
-          "all",
+          "$all",
           "the",
           "$sun",
           "of",
