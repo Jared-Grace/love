@@ -49,7 +49,7 @@ export function bible_glyph_chapter_ezk33() {
           "$footprints",
           "the",
           "$sword",
-          "against",
+          "$pointing_up",
           "a",
           "$earth,",
           "and",
