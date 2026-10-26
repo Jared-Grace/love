@@ -24,7 +24,7 @@ export function bible_glyph_chapter_psa138() {
           "the",
           "$moai",
           "I",
-          "sing",
+          "$harp+doing",
           "Your",
           "praises.",
         ],
