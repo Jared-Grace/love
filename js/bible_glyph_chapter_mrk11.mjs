@@ -140,7 +140,7 @@ export function bible_glyph_chapter_mrk11() {
         "who",
         "were",
         "standing",
-        "there",
+        "$telescope+manner",
         "$speech",
         "to",
         "$pointing_back,",
