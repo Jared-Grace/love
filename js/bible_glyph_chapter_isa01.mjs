@@ -594,7 +594,7 @@ export function bible_glyph_chapter_isa01() {
           "by",
           "the",
           "$sword.",
-          "For",
+          "$pointing",
           "the",
           "mouth",
           "of",
