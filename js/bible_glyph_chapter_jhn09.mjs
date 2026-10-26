@@ -279,7 +279,7 @@ export function bible_glyph_chapter_jhn09() {
           "$proper_name$Siloam",
           "$plus",
           "wash.",
-          "So",
+          "$right_arrow",
           "I",
           "went",
           "$plus",
