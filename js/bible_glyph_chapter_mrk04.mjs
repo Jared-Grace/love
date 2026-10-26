@@ -842,7 +842,7 @@ export function bible_glyph_chapter_mrk04() {
           "$plus",
           "$hammer",
           "great",
-          "branches,",
+          "$wood+leaf,",
           "so",
           "that",
           "the",
