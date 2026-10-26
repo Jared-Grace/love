@@ -580,7 +580,7 @@ export function bible_glyph_chapter_jhn17() {
           "$plus",
           "I",
           "$tray_in",
-          "You,",
+          "$you,",
           "that",
           "they",
           "also",
