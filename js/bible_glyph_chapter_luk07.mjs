@@ -796,7 +796,7 @@ export function bible_glyph_chapter_luk07() {
         "You,",
         "who",
         "will",
-        "prepare",
+        "$pointing_down+toolbox+doing",
         "Your",
         "$road",
         "before",
