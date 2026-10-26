@@ -211,7 +211,7 @@ export function bible_glyph_chapter_psa112() {
           "grieved;",
           "he",
           "will",
-          "gnash",
+          "$grimacing_face+tooth+doing",
           "his",
           "teeth",
           "and",
