@@ -273,7 +273,7 @@ export function bible_glyph_chapter_hag02() {
           "$house",
           "will",
           "be",
-          "greater",
+          "$top",
           "$tray_out",
           "the",
           "former,",
