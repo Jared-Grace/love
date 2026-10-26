@@ -562,7 +562,7 @@ export function bible_glyph_chapter_isa01() {
       {
         verse_number: 19,
         words: [
-          "If",
+          "$traffic_light",
           "you",
           "are",
           "willing",
