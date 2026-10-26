@@ -316,7 +316,7 @@ export function bible_glyph_chapter_mrk05() {
         "$pin",
         "pigs,",
         "$plus",
-        "the",
+        "$pin",
         "herd",
         "of",
         "about",
