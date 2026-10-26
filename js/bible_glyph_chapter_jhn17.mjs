@@ -739,7 +739,7 @@ export function bible_glyph_chapter_jhn17() {
           "$plus",
           "I",
           "made",
-          "Your",
+          "$you",
           "$name_tag",
           "known",
           "to",
