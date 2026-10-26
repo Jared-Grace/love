@@ -722,7 +722,7 @@ export function bible_glyph_chapter_jhn04() {
           "ever",
           "$hammer.",
           "Could",
-          "this",
+          "$flashlight",
           "be",
           "the",
           "$oil?”",
