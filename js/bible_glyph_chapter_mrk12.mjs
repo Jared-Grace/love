@@ -275,7 +275,7 @@ export function bible_glyph_chapter_mrk12() {
         "$plus",
         "it",
         "is",
-        "marvelous",
+        "$astonished+describing",
         "$tray_in",
         "our",
         "eyes?",
