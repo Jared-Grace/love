@@ -348,7 +348,7 @@ export function bible_glyph_chapter_2jn01() {
           "face,",
           "so",
           "that",
-          "our",
+          "$me",
           "$smile",
           "may",
           "be",
