@@ -1144,7 +1144,7 @@ export function bible_glyph_chapter_mrk12() {
         "and",
         "$throwing",
         "in",
-        "two",
+        "$two",
         "small",
         "copper",
         "coins,",
