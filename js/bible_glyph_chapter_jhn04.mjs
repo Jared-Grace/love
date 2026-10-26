@@ -271,7 +271,7 @@ export function bible_glyph_chapter_jhn04() {
         verse_number: 12,
         words: [
           "$no_entry",
-          "are",
+          "$link",
           "$you",
           "$top",
           "than",
