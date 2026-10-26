@@ -459,7 +459,7 @@ export function bible_glyph_chapter_jol03() {
           "will",
           "be",
           "a",
-          "refuge",
+          "$hut+place",
           "for",
           "His",
           "$family,",
