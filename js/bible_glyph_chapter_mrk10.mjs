@@ -838,7 +838,7 @@ export function bible_glyph_chapter_mrk10() {
         "was",
         "going",
         "to",
-        "happen",
+        "$walking+two+doing",
         "to",
         "$pointing_back.",
       ],
