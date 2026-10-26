@@ -815,7 +815,7 @@ export function bible_glyph_chapter_ezk33() {
           "me",
           "in",
           "the",
-          "morning.",
+          "$morning.",
           "So",
           "my",
           "$face_with_open_mouth",
