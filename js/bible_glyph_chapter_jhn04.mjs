@@ -833,7 +833,7 @@ export function bible_glyph_chapter_jhn04() {
           "there",
           "are",
           "$repeat_single_button",
-          "four",
+          "$four+new_moon",
           "months",
           "$plus",
           "then",
