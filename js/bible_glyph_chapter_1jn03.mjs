@@ -129,7 +129,7 @@ export function bible_glyph_chapter_1jn03() {
           "$hammer",
           "$bow",
           "$hammer",
-          "lawlessness",
+          "$no_entry+scroll+thing",
           "as",
           "well.",
           "$plus",
