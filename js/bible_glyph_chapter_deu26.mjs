@@ -637,7 +637,7 @@ export function bible_glyph_chapter_deu26() {
           "that",
           "the",
           "$i_am",
-          "is",
+          "$link",
           "your",
           "$heart_on_fire",
           "and",
