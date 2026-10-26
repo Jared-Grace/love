@@ -999,7 +999,7 @@ export function bible_glyph_chapter_mrk08() {
           "adulterous",
           "$plus",
           "$bow+doer",
-          "generation,",
+          "$dna,",
           "$plus",
           "the",
           "$son",
