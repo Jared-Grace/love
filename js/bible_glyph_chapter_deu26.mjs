@@ -413,7 +413,7 @@ export function bible_glyph_chapter_deu26() {
           "$fruit+basket",
           "in",
           "the",
-          "third",
+          "$third_place",
           "$year,",
           "the",
           "$year",
