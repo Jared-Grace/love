@@ -1001,7 +1001,7 @@ export function bible_glyph_chapter_ezk18() {
           "so",
           "that",
           "your",
-          "iniquity",
+          "$cyclone",
           "will",
           "$no_entry",
           "$link",
