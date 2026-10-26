@@ -248,7 +248,7 @@ export function bible_glyph_chapter_jhn02() {
           "the",
           "$thumbs_up",
           "wine",
-          "first,",
+          "$first_place+manner,",
           "$plus",
           "then",
           "the",
