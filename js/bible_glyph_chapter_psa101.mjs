@@ -161,7 +161,7 @@ export function bible_glyph_chapter_psa101() {
           "of",
           "integrity",
           "shall",
-          "minister",
+          "$bellhop_bell+doing",
           "to",
           "me.",
         ],
