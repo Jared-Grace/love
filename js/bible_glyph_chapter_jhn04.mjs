@@ -340,7 +340,7 @@ export function bible_glyph_chapter_jhn04() {
           "$hands_giving",
           "$pointing_back",
           "will",
-          "become",
+          "$butterfly",
           "$tray_in",
           "$pointing_back",
           "a",
