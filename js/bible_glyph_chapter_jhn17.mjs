@@ -127,7 +127,7 @@ export function bible_glyph_chapter_jhn17() {
         verse_number: 5,
         words: [
           "$plus",
-          "now",
+          "$watch",
           "$star+doing",
           "me,",
           "$father,",
