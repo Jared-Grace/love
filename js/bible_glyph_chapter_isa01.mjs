@@ -390,7 +390,7 @@ export function bible_glyph_chapter_isa01() {
           "worthless",
           "offerings",
           "$no_entry",
-          "more;",
+          "$plus+doing;",
           "your",
           "incense",
           "is",
