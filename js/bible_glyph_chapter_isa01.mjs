@@ -152,7 +152,7 @@ export function bible_glyph_chapter_isa01() {
           "do",
           "you",
           "keep",
-          "rebelling?",
+          "$away+thing?",
           "Your",
           "head",
           "has",
