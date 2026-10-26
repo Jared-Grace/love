@@ -681,7 +681,7 @@ export function bible_glyph_chapter_mrk04() {
           "Jesus",
           "also",
           "$speech,",
-          "The",
+          "$pin",
           "$castle",
           "of",
           "$heart_on_fire",
