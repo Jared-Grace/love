@@ -1127,7 +1127,7 @@ export function bible_glyph_chapter_1ki13() {
           "$heart_on_fire",
           "is",
           "buried.",
-          "Lay",
+          "$seat+doing",
           "my",
           "bones",
           "$children_crossing",
