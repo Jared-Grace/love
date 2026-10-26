@@ -1007,7 +1007,7 @@ export function bible_glyph_chapter_mrk08() {
           "$person",
           "will",
           "be",
-          "ashamed",
+          "$pointing_up+flushed",
           "of",
           "$pointing_back",
           "when",
