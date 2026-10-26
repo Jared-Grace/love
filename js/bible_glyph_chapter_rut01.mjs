@@ -432,7 +432,7 @@ export function bible_glyph_chapter_rut01() {
           "$lifting,",
           "and",
           "$proper_name$Orpah",
-          "kissed",
+          "$face_blowing_a_kiss",
           "her",
           "mother-in-law",
           "goodbye,",
