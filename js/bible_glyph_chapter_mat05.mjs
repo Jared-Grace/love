@@ -436,7 +436,7 @@ export function bible_glyph_chapter_mat05() {
           "So",
           "then,",
           "$back+flashlight",
-          "breaks",
+          "$free_button",
           "one",
           "of",
           "the",
