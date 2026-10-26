@@ -1040,7 +1040,7 @@ export function bible_glyph_chapter_mrk12() {
         "$plus",
         "$tray_in",
         "$pointing_back",
-        "teaching",
+        "$teacher+thing",
         "Jesus",
         "also",
         "$speech,",
