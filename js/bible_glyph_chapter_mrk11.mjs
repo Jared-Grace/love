@@ -163,7 +163,7 @@ export function bible_glyph_chapter_mrk11() {
         "to",
         "$pointing_back",
         "just",
-        "as",
+        "$likeness",
         "$cross",
         "had",
         "$speech,",
