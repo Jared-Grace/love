@@ -194,7 +194,7 @@ export function bible_glyph_chapter_jhn01() {
           "made",
           "through",
           "$pointing_back,",
-          "the",
+          "$pin",
           "$globe",
           "did",
           "$no_entry",
