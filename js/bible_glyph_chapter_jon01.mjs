@@ -114,7 +114,7 @@ export function bible_glyph_chapter_jon01() {
           "$throwing+doing",
           "a",
           "great",
-          "wind",
+          "$wind",
           "upon",
           "the",
           "$sea,",
