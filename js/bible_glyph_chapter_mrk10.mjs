@@ -416,7 +416,7 @@ export function bible_glyph_chapter_mrk10() {
         "in",
         "$speech",
         "calling",
-        "Me",
+        "$me",
         "$thumbs_up?",
         "$no_entry",
         "one",
