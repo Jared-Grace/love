@@ -305,7 +305,7 @@ export function bible_glyph_chapter_jon04() {
           "about",
           "the",
           "$sprout+umbrella,",
-          "which",
+          "$back+flashlight",
           "you",
           "$no_entry",
           "tended",
