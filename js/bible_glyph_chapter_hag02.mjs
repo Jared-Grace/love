@@ -509,7 +509,7 @@ export function bible_glyph_chapter_hag02() {
           "to",
           "draw",
           "out",
-          "fifty",
+          "$five+zero",
           "baths,",
           "there",
           "were",
