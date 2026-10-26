@@ -248,7 +248,7 @@ export function bible_glyph_chapter_jdg13() {
           "to",
           "a",
           "$son.",
-          "Now",
+          "$watch",
           "therefore",
           "drink",
           "$no_entry",
