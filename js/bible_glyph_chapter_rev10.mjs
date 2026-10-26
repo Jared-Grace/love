@@ -367,7 +367,7 @@ export function bible_glyph_chapter_rev10() {
           "the",
           "$angel",
           "$plus",
-          "ate",
+          "$pointing_down+eating",
           "$pointing_back.",
           "$plus",
           "it",
