@@ -485,7 +485,7 @@ export function bible_glyph_chapter_rut02() {
           "$tray_out",
           "$bread,",
           "and",
-          "dip",
+          "$down_arrow+water+doing",
           "it",
           "into",
           "the",
