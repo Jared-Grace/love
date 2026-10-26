@@ -109,7 +109,7 @@ export function bible_glyph_chapter_deu30() {
           "$turn_back+chains",
           "and",
           "have",
-          "compassion",
+          "$hugging_face+doing",
           "on",
           "you",
           "and",
