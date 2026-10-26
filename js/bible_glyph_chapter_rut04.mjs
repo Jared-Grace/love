@@ -22,7 +22,7 @@ export function bible_glyph_chapter_rut04() {
           "sat",
           "down",
           "$telescope.",
-          "Soon",
+          "$exclamation",
           "the",
           "kinsman-redeemer",
           "of",
