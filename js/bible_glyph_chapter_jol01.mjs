@@ -280,7 +280,7 @@ export function bible_glyph_chapter_jol01() {
           "the",
           "$brown_square",
           "$loudly_crying+coffin.",
-          "For",
+          "$pointing",
           "the",
           "grain",
           "is",
