@@ -472,7 +472,7 @@ export function bible_glyph_chapter_rut01() {
           "Ruth",
           "$speech:",
           "$no_entry",
-          "urge",
+          "$toward+person+doing",
           "me",
           "to",
           "leave",
