@@ -50,7 +50,7 @@ export function bible_glyph_chapter_jhn09() {
           "$right_arrow+toward",
           "he",
           "was",
-          "born",
+          "$hatching_chick",
           "$person_with_white_cane?",
         ],
       },
