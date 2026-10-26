@@ -742,7 +742,7 @@ export function bible_glyph_chapter_mrk11() {
         "$writing_hand+doer",
         "$plus",
         "the",
-        "elders",
+        "$old_man",
         "$footprints",
         "to",
         "$pointing_back.",
