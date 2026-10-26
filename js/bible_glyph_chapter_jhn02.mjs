@@ -302,7 +302,7 @@ export function bible_glyph_chapter_jhn02() {
       {
         verse_number: 12,
         words: [
-          "After",
+          "$linked_paperclips",
           "this",
           "He",
           "went",
