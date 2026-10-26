@@ -34,7 +34,7 @@ export function bible_glyph_chapter_jhn02() {
           "of",
           "$cross",
           "$link",
-          "there.",
+          "$telescope+manner.",
         ],
       },
       {
