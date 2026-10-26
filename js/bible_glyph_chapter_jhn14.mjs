@@ -724,7 +724,7 @@ export function bible_glyph_chapter_jhn14() {
           "$sparkle",
           "$wind,",
           "whom",
-          "the",
+          "$pin",
           "$father",
           "will",
           "send",
