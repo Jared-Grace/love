@@ -963,7 +963,7 @@ export function bible_glyph_chapter_luk24() {
           "have",
           "$meat",
           "$plus",
-          "bones,",
+          "$bone,",
           "as",
           "you",
           "see",
