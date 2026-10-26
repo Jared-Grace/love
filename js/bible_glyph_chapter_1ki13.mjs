@@ -1052,7 +1052,7 @@ export function bible_glyph_chapter_1ki13() {
           "$man_beard",
           "of",
           "$heart_on_fire,",
-          "laid",
+          "$seat+doing",
           "it",
           "on",
           "the",
