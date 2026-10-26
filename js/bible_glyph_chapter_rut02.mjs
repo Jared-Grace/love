@@ -752,7 +752,7 @@ export function bible_glyph_chapter_rut02() {
           "gathering",
           "$all",
           "my",
-          "harvest.",
+          "$harvest.",
         ],
       },
       {
