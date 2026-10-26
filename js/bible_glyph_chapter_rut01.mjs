@@ -438,7 +438,7 @@ export function bible_glyph_chapter_rut01() {
           "goodbye,",
           "but",
           "$proper_name$Ruth",
-          "clung",
+          "$paperclip",
           "to",
           "her.",
         ],
