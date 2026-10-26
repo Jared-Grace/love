@@ -145,7 +145,7 @@ export function bible_glyph_chapter_1ki03() {
           "offerings",
           "on",
           "that",
-          "altar.",
+          "$altar.",
         ],
       },
       {
