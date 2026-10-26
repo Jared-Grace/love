@@ -321,7 +321,7 @@ export function bible_glyph_chapter_mrk05() {
         "of",
         "about",
         "two",
-        "thousand",
+        "$two+ten+all",
         "$running+heart_red+doing",
         "$pointing_down",
         "$pin",
