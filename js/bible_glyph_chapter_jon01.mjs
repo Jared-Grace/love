@@ -487,7 +487,7 @@ export function bible_glyph_chapter_jon01() {
           "$no_entry",
           "let",
           "us",
-          "perish",
+          "$wilted_flower",
           "on",
           "account",
           "of",
