@@ -1303,7 +1303,7 @@ export function bible_glyph_chapter_mrk10() {
       words: [
         "$plus",
         "many",
-        "admonished",
+        "$right_anger_bubble",
         "$pointing_back",
         "to",
         "be",
