@@ -686,7 +686,7 @@ export function bible_glyph_chapter_exo20() {
           "steps,",
           "$back+flashlight",
           "your",
-          "nakedness",
+          "$face_with_peeking_eye",
           "be",
           "exposed",
           "on",
