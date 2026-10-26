@@ -707,7 +707,7 @@ export function bible_glyph_chapter_jer26() {
           "Did",
           "he",
           "$no_entry",
-          "fear",
+          "$fear+describing",
           "the",
           "$i_am",
           "and",
