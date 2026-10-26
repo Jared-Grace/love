@@ -252,7 +252,7 @@ export function bible_glyph_chapter_mrk12() {
         "never",
         "read",
         "this",
-        "Scripture:",
+        "$writing_hand+thing:",
         "The",
         "$stone",
         "the",
