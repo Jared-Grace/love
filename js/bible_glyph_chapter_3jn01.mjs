@@ -56,7 +56,7 @@ export function bible_glyph_chapter_3jn01() {
       {
         verse_number: 3,
         words: [
-          "For",
+          "$information",
           "I",
           "$smile+doing",
           "greatly",
