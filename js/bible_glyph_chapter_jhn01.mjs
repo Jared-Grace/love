@@ -92,7 +92,7 @@ export function bible_glyph_chapter_jhn01() {
           "$light",
           "$light",
           "$tray_in",
-          "the",
+          "$pin",
           "$darkness,",
           "$plus",
           "the",
