@@ -309,7 +309,7 @@ export function bible_glyph_chapter_gen32() {
         verse_number: 11,
         words: [
           "Please",
-          "deliver",
+          "$hand+rescue",
           "me",
           "from",
           "the",
