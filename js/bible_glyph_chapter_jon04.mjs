@@ -93,7 +93,7 @@ export function bible_glyph_chapter_jon04() {
           "$watch,",
           "O",
           "$i_am,",
-          "please",
+          "$pleading",
           "$hand_receiving",
           "my",
           "$person_other",
