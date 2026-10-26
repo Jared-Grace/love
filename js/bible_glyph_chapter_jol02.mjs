@@ -362,7 +362,7 @@ export function bible_glyph_chapter_jol02() {
           "$heart_organ,",
           "with",
           "fasting,",
-          "weeping,",
+          "$loudly_crying+thing,",
           "and",
           "mourning.",
         ],
