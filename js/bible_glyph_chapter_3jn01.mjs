@@ -22,7 +22,7 @@ export function bible_glyph_chapter_3jn01() {
           "$pin",
           "$heart_red+describing,",
           "whom",
-          "I",
+          "$me",
           "$heart_red+doing",
           "$tray_in",
           "$check.",
