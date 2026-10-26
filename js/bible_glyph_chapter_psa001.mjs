@@ -111,7 +111,7 @@ export function bible_glyph_chapter_psa001() {
           "$right_arrow",
           "the",
           "$thumbs_down!",
-          "For",
+          "$pointing",
           "they",
           "are",
           "like",
