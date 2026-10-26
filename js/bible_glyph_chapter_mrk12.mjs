@@ -233,7 +233,7 @@ export function bible_glyph_chapter_mrk12() {
         "will",
         "$footprints",
         "$plus",
-        "kill",
+        "$wilted_flower",
         "those",
         "tenants,",
         "$plus",
