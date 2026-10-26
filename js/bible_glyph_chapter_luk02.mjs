@@ -392,7 +392,7 @@ export function bible_glyph_chapter_luk02() {
         "that",
         "has",
         "happened,",
-        "which",
+        "$back+flashlight",
         "the",
         "$crown",
         "has",
