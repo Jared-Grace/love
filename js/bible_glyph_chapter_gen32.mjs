@@ -550,7 +550,7 @@ export function bible_glyph_chapter_gen32() {
           "all",
           "those",
           "$walking",
-          "behind",
+          "$next_track",
           "the",
           "herds,",
           "You",
