@@ -283,7 +283,7 @@ export function bible_glyph_chapter_luk07() {
         "$plus",
         "when",
         "$pin",
-        "messengers",
+        "$incoming_envelope",
         "$down_arrow+turn_back",
         "$toward+tray_in",
         "$pin",
