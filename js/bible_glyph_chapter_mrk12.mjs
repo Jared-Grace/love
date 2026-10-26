@@ -181,7 +181,7 @@ export function bible_glyph_chapter_mrk12() {
         "one",
         "another,",
         "$pointing",
-        "This",
+        "$flashlight",
         "is",
         "the",
         "heir.",
