@@ -324,7 +324,7 @@ export function bible_glyph_chapter_jhn04() {
           "$back+flashlight",
           "$cup_with_straw",
           "$tray_out",
-          "the",
+          "$pin",
           "$water",
           "I",
           "$hands_giving",
