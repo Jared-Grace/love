@@ -355,7 +355,7 @@ export function bible_glyph_chapter_luk24() {
       {
         verse_number: 16,
         words: [
-          "But",
+          "$curving_right",
           "$pointing_back",
           "eyes",
           "were",
