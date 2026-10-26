@@ -451,7 +451,7 @@ export function bible_glyph_chapter_mrk08() {
           "$no_entry",
           "$eyes?",
           "$plus",
-          "having",
+          "$raised_fist",
           "ears,",
           "do",
           "you",
