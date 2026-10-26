@@ -595,7 +595,7 @@ export function bible_glyph_chapter_mrk05() {
         "pleaded",
         "with",
         "$pointing_back",
-        "urgently,",
+        "$multiply,",
         "$speech,",
         "$pointing",
         "“My",
