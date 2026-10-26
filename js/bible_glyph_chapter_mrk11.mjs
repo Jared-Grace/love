@@ -83,7 +83,7 @@ export function bible_glyph_chapter_mrk11() {
       words: [
         "$plus",
         "$traffic_light",
-        "anyone",
+        "$joker",
         "$speech",
         "to",
         "you,",
