@@ -391,7 +391,7 @@ export function bible_glyph_chapter_jhn14() {
           "be",
           "glorified",
           "$tray_in",
-          "the",
+          "$pin",
           "$son.",
         ],
       },
