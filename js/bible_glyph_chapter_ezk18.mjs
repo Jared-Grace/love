@@ -1054,7 +1054,7 @@ export function bible_glyph_chapter_ezk18() {
           "in",
           "anyone’s",
           "$skull,",
-          "declares",
+          "$microphone",
           "the",
           "$crown",
           "$i_am.",
