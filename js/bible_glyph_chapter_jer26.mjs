@@ -673,7 +673,7 @@ export function bible_glyph_chapter_jer26() {
           "will",
           "become",
           "a",
-          "heap",
+          "$derelict_house+thing",
           "of",
           "rubble,",
           "and",
