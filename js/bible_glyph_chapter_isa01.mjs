@@ -109,7 +109,7 @@ export function bible_glyph_chapter_isa01() {
           "$family",
           "$star+describing",
           "with",
-          "iniquity,",
+          "$cyclone,",
           "a",
           "brood",
           "of",
