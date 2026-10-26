@@ -310,7 +310,7 @@ export function bible_glyph_chapter_gen02() {
           "to",
           "water",
           "the",
-          "garden,",
+          "$garden,",
           "and",
           "from",
           "there",
