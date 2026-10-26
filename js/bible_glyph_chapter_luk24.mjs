@@ -1086,7 +1086,7 @@ export function bible_glyph_chapter_luk24() {
           "$plus",
           "the",
           "Psalms",
-          "about",
+          "$clockwise_arrows",
           "Me.",
         ],
       },
