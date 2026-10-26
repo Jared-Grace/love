@@ -689,7 +689,7 @@ export function bible_glyph_chapter_mrk10() {
         "$me",
         "have",
         "left",
-        "everything",
+        "$all",
         "$plus",
         "followed",
         "You.”",
