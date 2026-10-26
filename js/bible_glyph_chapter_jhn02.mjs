@@ -564,7 +564,7 @@ export function bible_glyph_chapter_jhn02() {
           "He",
           "had",
           "$speech",
-          "this,",
+          "$flashlight,",
           "$plus",
           "they",
           "$anchor+doing",
