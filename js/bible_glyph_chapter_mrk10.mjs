@@ -609,7 +609,7 @@ export function bible_glyph_chapter_mrk10() {
         "$camel",
         "to",
         "pass",
-        "through",
+        "$metro",
         "the",
         "eye",
         "of",
