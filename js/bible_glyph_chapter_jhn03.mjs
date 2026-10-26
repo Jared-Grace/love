@@ -395,7 +395,7 @@ export function bible_glyph_chapter_jhn03() {
           "His",
           "one",
           "and",
-          "only",
+          "$one+butterfly",
           "$son,",
           "that",
           "everyone",
