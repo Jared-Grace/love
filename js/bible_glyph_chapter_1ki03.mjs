@@ -237,7 +237,7 @@ export function bible_glyph_chapter_1ki03() {
           "$i_am",
           "my",
           "$heart_on_fire,",
-          "You",
+          "$you",
           "have",
           "$castle+doing",
           "Your",
