@@ -42,7 +42,7 @@ export function bible_glyph_chapter_psa085() {
           "$family;",
           "You",
           "covered",
-          "all",
+          "$all",
           "their",
           "$bow.",
           "Selah",
