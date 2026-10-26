@@ -87,7 +87,7 @@ export function bible_glyph_chapter_1jn04() {
           "$cross",
           "is",
           "$no_entry",
-          "from",
+          "$tray_out",
           "$heart_on_fire.",
           "This",
           "is",
