@@ -59,7 +59,7 @@ export function bible_glyph_chapter_ezk36() {
           "$exclamation+grinning_face!",
           "The",
           "$hourglass",
-          "heights",
+          "$snow_capped_mountain",
           "have",
           "become",
           "our",
