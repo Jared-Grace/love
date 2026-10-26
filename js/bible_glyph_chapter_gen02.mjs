@@ -522,7 +522,7 @@ export function bible_glyph_chapter_gen02() {
           "him",
           "a",
           "suitable",
-          "helper.",
+          "$rescue+hand.",
         ],
       },
       {
