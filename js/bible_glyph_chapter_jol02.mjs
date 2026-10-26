@@ -1012,7 +1012,7 @@ export function bible_glyph_chapter_jol02() {
           "there",
           "will",
           "be",
-          "deliverance,",
+          "$door+running,",
           "as",
           "the",
           "$i_am",
