@@ -438,7 +438,7 @@ export function bible_glyph_chapter_jhn10() {
           "there",
           "will",
           "be",
-          "one",
+          "$one",
           "flock,",
           "one",
           "$person+sheep.",
