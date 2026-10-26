@@ -73,7 +73,7 @@ export function bible_glyph_chapter_jhn01() {
         words: [
           "$tray_in",
           "$pointing_back",
-          "was",
+          "$link",
           "$sprout,",
           "$plus",
           "that",
