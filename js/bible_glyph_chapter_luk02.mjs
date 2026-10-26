@@ -38,7 +38,7 @@ export function bible_glyph_chapter_luk02() {
     {
       verse_number: 2,
       words: [
-        "This",
+        "$flashlight",
         "was",
         "the",
         "first",
