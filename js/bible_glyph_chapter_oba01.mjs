@@ -297,7 +297,7 @@ export function bible_glyph_chapter_oba01() {
           "$proper_name$Esau",
           "will",
           "be",
-          "cut",
+          "$scissors",
           "down",
           "in",
           "the",
