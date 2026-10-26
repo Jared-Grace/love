@@ -576,7 +576,7 @@ export function bible_glyph_chapter_mrk08() {
           "out",
           "of",
           "the",
-          "village.",
+          "$houses.",
           "$plus",
           "He",
           "spit",
