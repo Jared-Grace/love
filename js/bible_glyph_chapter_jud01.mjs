@@ -555,7 +555,7 @@ export function bible_glyph_chapter_jud01() {
           "$you,",
           "In",
           "the",
-          "last",
+          "$end_arrow+describing",
           "times",
           "there",
           "will",
