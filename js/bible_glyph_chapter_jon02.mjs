@@ -84,7 +84,7 @@ export function bible_glyph_chapter_jon02() {
           "breakers",
           "and",
           "waves",
-          "swept",
+          "$bridge",
           "over",
           "me.",
         ],
