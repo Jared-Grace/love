@@ -699,7 +699,7 @@ export function bible_glyph_chapter_jhn01() {
           "$curving_up",
           "I",
           "$footprints",
-          "baptizing",
+          "$diving_mask",
           "$tray_in",
           "$water",
           "so",
