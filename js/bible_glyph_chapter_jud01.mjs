@@ -710,7 +710,7 @@ export function bible_glyph_chapter_jud01() {
           "$crown,",
           "be",
           "$star,",
-          "majesty,",
+          "$top+thing,",
           "dominion",
           "$plus",
           "$key,",
