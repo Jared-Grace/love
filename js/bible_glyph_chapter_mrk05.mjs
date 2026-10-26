@@ -879,7 +879,7 @@ export function bible_glyph_chapter_mrk05() {
         "$red_apple+describing",
         "of",
         "your",
-        "affliction.”",
+        "$thread+collision+thing.”",
       ],
     },
     {
