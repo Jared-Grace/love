@@ -84,7 +84,7 @@ export function bible_glyph_chapter_1ki13() {
           "and",
           "he",
           "will",
-          "sacrifice",
+          "$sacrifice",
           "upon",
           "you",
           "the",
