@@ -1018,7 +1018,7 @@ export function bible_glyph_chapter_jhn04() {
           "no",
           "longer",
           "only",
-          "because",
+          "$metro",
           "of",
           "your",
           "words;",
