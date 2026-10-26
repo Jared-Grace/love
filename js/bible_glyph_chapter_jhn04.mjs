@@ -168,7 +168,7 @@ export function bible_glyph_chapter_jhn04() {
         words: [
           "“$gear+question",
           "can",
-          "You,",
+          "$you,",
           "a",
           "$menorah,",
           "ask",
