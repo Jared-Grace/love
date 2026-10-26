@@ -258,7 +258,7 @@ export function bible_glyph_chapter_deu26() {
           "and",
           "$eye",
           "our",
-          "affliction,",
+          "$persevering_face+thing,",
           "our",
           "toil,",
           "and",
