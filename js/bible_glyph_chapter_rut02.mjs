@@ -677,7 +677,7 @@ export function bible_glyph_chapter_rut02() {
           "$man_beard",
           "I",
           "$hammer+doing",
-          "with",
+          "$linked_paperclips",
           "$sun",
           "is",
           "$proper_name$Boaz,",
