@@ -132,7 +132,7 @@ export function bible_glyph_chapter_rev01() {
           "$plus",
           "$away",
           "the",
-          "seven",
+          "$seven",
           "$wind",
           "$face+tray_in",
           "$pointing_back",
