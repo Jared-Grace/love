@@ -1211,7 +1211,7 @@ export function bible_glyph_chapter_luk07() {
         "$coin+ten,",
         "and",
         "the",
-        "other",
+        "$vs_button",
         "fifty.",
       ],
     },
