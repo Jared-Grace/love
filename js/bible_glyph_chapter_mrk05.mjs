@@ -522,7 +522,7 @@ export function bible_glyph_chapter_mrk05() {
         "$pin",
         "$proper_name$Decapolis",
         "how",
-        "much",
+        "$back+abacus",
         "$cross",
         "had",
         "$hammer",
