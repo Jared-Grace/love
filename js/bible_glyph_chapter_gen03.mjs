@@ -355,7 +355,7 @@ export function bible_glyph_chapter_gen03() {
           "I",
           "commanded",
           "you",
-          "not",
+          "$zero+manner",
           "to",
           "eat?",
         ],
