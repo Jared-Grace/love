@@ -572,7 +572,7 @@ export function bible_glyph_chapter_gen03() {
           "$speech+thumbs_down",
           "is",
           "the",
-          "ground",
+          "$brown_square",
           "because",
           "of",
           "you;",
