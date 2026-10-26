@@ -426,7 +426,7 @@ export function bible_glyph_chapter_hag02() {
           "it",
           "is",
           "with",
-          "this",
+          "$flashlight",
           "$family",
           "and",
           "this",
