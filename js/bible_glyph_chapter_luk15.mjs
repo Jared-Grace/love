@@ -756,7 +756,7 @@ export function bible_glyph_chapter_luk15() {
     {
       verse_number: 29,
       words: [
-        "But",
+        "$curving_right",
         "he",
         "answered",
         "his",
