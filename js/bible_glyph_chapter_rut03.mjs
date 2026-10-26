@@ -371,7 +371,7 @@ export function bible_glyph_chapter_rut03() {
           "and",
           "in",
           "the",
-          "morning,",
+          "$morning,",
           "if",
           "he",
           "wants",
