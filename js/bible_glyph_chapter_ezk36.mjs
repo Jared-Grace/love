@@ -761,7 +761,7 @@ export function bible_glyph_chapter_ezk36() {
           "$no_entry",
           "for",
           "your",
-          "sake",
+          "$right_arrow+toward",
           "that",
           "I",
           "will",
