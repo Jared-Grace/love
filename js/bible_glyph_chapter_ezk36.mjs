@@ -852,7 +852,7 @@ export function bible_glyph_chapter_ezk36() {
           "the",
           "$map",
           "and",
-          "gather",
+          "$tray_in+doing",
           "you",
           "out",
           "of",
