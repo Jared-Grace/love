@@ -516,7 +516,7 @@ export function bible_glyph_chapter_jhn10() {
           "was",
           "$t_shirt+scissors+thing",
           "$tray_in",
-          "the",
+          "$pin",
           "$menorah",
           "because",
           "of",
