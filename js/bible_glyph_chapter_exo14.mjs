@@ -741,7 +741,7 @@ export function bible_glyph_chapter_exo14() {
           "their",
           "camp",
           "into",
-          "confusion.",
+          "$crowd+tornado+doing.",
         ],
       },
       {
