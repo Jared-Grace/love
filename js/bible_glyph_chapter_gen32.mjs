@@ -491,7 +491,7 @@ export function bible_glyph_chapter_gen32() {
           "do",
           "you",
           "belong,",
-          "where",
+          "$question+right_arrow",
           "are",
           "you",
           "$walking,",
