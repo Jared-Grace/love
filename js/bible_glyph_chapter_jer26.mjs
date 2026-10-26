@@ -298,7 +298,7 @@ export function bible_glyph_chapter_jer26() {
       {
         verse_number: 9,
         words: [
-          "How",
+          "$flashlight+question+lightbulb",
           "dare",
           "you",
           "prophesy",
