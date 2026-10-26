@@ -98,7 +98,7 @@ export function bible_glyph_chapter_rev01() {
           "$pointing_back,",
           "$information",
           "the",
-          "time",
+          "$alarm_clock",
           "is",
           "near.",
         ],
