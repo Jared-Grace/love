@@ -363,7 +363,7 @@ export function bible_glyph_chapter_jhn17() {
           "was",
           "lost",
           "$traffic_light",
-          "the",
+          "$pin",
           "$son",
           "of",
           "destruction,",
