@@ -441,7 +441,7 @@ export function bible_glyph_chapter_hag02() {
           "it",
           "is",
           "with",
-          "every",
+          "$all",
           "work",
           "of",
           "their",
