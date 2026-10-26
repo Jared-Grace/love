@@ -638,7 +638,7 @@ export function bible_glyph_chapter_rev01() {
           "$plus",
           "the",
           "$seven",
-          "lampstands",
+          "$lamp+seat",
           "are",
           "the",
           "$seven",
