@@ -70,7 +70,7 @@ export function bible_glyph_chapter_jhn03() {
           "$hammer$ing",
           "$traffic_light",
           "$heart_on_fire",
-          "were",
+          "$link",
           "$no_entry",
           "with",
           "$pointing_back.”",
