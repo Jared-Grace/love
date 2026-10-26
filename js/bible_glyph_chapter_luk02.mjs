@@ -155,7 +155,7 @@ export function bible_glyph_chapter_luk02() {
         "$pregnant_woman+doing",
         "to",
         "$pointing_back",
-        "firstborn",
+        "$first_place+baby",
         "$son,",
         "$plus",
         "wrapped",
