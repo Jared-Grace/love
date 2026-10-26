@@ -239,7 +239,7 @@ export function bible_glyph_chapter_mrk12() {
         "$plus",
         "$hands_giving",
         "the",
-        "vineyard",
+        "$vineyard",
         "to",
         "others.",
       ],
