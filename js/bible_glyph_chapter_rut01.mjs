@@ -332,7 +332,7 @@ export function bible_glyph_chapter_rut01() {
           "me?",
           "Are",
           "there",
-          "still",
+          "$repeat",
           "$son",
           "in",
           "my",
