@@ -377,7 +377,7 @@ export function bible_glyph_chapter_oba01() {
           "$brother",
           "$sun",
           "of",
-          "misfortune,",
+          "$foreigner+thumbs_down,",
           "$no_entry",
           "rejoice",
           "over",
