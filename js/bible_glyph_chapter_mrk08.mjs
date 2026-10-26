@@ -850,7 +850,7 @@ export function bible_glyph_chapter_mrk08() {
           "at",
           "$pointing_back",
           "$learner,",
-          "rebuked",
+          "$right_anger_bubble",
           "$rock+proper_name",
           "$plus",
           "$speech,",
