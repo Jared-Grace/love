@@ -619,7 +619,7 @@ export function bible_glyph_chapter_jdg13() {
           "my",
           "$name_tag,",
           "since",
-          "it",
+          "$pointing_back",
           "is",
           "beyond",
           "understanding?”",
