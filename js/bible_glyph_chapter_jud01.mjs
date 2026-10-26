@@ -94,7 +94,7 @@ export function bible_glyph_chapter_jud01() {
           "$one+clock",
           "for",
           "all",
-          "entrusted",
+          "$children_crossing+hands_giving",
           "to",
           "$pin",
           "$sparkle.",
