@@ -691,7 +691,7 @@ export function bible_glyph_chapter_luk24() {
           "to",
           "be",
           "$walking",
-          "farther.",
+          "$road+right_arrow+manner.",
         ],
       },
       {
