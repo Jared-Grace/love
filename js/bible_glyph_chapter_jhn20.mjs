@@ -169,7 +169,7 @@ export function bible_glyph_chapter_jhn20() {
           "$tomb",
           "$plus",
           "saw",
-          "the",
+          "$pin",
           "linen",
           "cloths",
           "lying",
