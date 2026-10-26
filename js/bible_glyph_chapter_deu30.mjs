@@ -134,7 +134,7 @@ export function bible_glyph_chapter_deu30() {
         verse_number: 4,
         words: [
           "Even",
-          "if",
+          "$traffic_light",
           "you",
           "have",
           "been",
