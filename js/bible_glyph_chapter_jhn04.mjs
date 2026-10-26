@@ -406,7 +406,7 @@ export function bible_glyph_chapter_jhn04() {
         words: [
           "The",
           "$woman",
-          "replied",
+          "$speech+turn_back",
           "$plus",
           "$speech,",
           "“I",
