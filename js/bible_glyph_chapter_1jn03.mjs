@@ -325,7 +325,7 @@ export function bible_glyph_chapter_1jn03() {
           "$flashlight",
           "$link",
           "the",
-          "message",
+          "$angel+thing",
           "you",
           "have",
           "$ear",
