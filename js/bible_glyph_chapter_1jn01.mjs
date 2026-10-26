@@ -260,7 +260,7 @@ export function bible_glyph_chapter_1jn01() {
           "$plus",
           "$pin",
           "$check",
-          "is",
+          "$link",
           "$no_entry",
           "$tray_in",
           "us.",
