@@ -541,7 +541,7 @@ export function bible_glyph_chapter_1jn03() {
           "we",
           "belong",
           "to",
-          "the",
+          "$pin",
           "$check,",
           "$plus",
           "will",
