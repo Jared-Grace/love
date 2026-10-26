@@ -378,7 +378,7 @@ export function bible_glyph_chapter_psa139() {
           "O",
           "$heart_on_fire!",
           "$flashlight+question",
-          "vast",
+          "$bone+might+doing",
           "is",
           "their",
           "sum!",
