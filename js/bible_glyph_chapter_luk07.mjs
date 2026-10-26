@@ -1026,7 +1026,7 @@ export function bible_glyph_chapter_luk07() {
       verse_number: 36,
       words: [
         "Then",
-        "one",
+        "$joker",
         "of",
         "the",
         "$proper_name$Pharisees",
