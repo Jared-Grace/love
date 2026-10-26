@@ -940,7 +940,7 @@ export function bible_glyph_chapter_jhn04() {
         words: [
           "Many",
           "$tray_out",
-          "that",
+          "$telescope",
           "$city",
           "of",
           "the",
