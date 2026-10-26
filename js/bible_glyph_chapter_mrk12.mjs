@@ -345,7 +345,7 @@ export function bible_glyph_chapter_mrk12() {
         "$speech",
         "to",
         "$pointing_back,",
-        "Teacher,",
+        "$teacher,",
         "we",
         "$lightbulb",
         "$pointing",
