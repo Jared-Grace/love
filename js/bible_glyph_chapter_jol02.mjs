@@ -916,7 +916,7 @@ export function bible_glyph_chapter_jol02() {
       {
         verse_number: 29,
         words: [
-          "Even",
+          "$plus",
           "on",
           "My",
           "$kneeling,",
