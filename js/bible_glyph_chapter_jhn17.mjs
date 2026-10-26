@@ -368,7 +368,7 @@ export function bible_glyph_chapter_jhn17() {
           "of",
           "destruction,",
           "that",
-          "the",
+          "$pin",
           "Scripture",
           "might",
           "be",
