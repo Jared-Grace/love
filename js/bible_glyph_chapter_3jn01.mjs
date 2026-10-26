@@ -178,7 +178,7 @@ export function bible_glyph_chapter_3jn01() {
           "$receipt+doing",
           "to",
           "support",
-          "such",
+          "$flashlight+likeness",
           "men,",
           "so",
           "that",
