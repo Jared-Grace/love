@@ -372,7 +372,7 @@ export function bible_glyph_chapter_luk07() {
       words: [
         "$plus",
         "when",
-        "the",
+        "$pin",
         "$crown",
         "$eye",
         "$pointing_back,",
