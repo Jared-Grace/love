@@ -463,7 +463,7 @@ export function bible_glyph_chapter_gen32() {
           "keep",
           "some",
           "distance",
-          "between",
+          "$brain+arrow_both_ways",
           "the",
           "herds.",
         ],
