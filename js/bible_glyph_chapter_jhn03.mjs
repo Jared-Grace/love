@@ -72,7 +72,7 @@ export function bible_glyph_chapter_jhn03() {
           "$heart_on_fire",
           "$link",
           "$no_entry",
-          "with",
+          "$linked_paperclips",
           "$pointing_back.”",
         ],
       },
