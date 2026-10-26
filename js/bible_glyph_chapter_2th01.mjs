@@ -248,7 +248,7 @@ export function bible_glyph_chapter_2th01() {
           "penalty",
           "of",
           "eternal",
-          "destruction,",
+          "$derelict_house,",
           "separated",
           "from",
           "the",
