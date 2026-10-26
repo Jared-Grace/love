@@ -442,7 +442,7 @@ export function bible_glyph_chapter_mrk04() {
           "trouble",
           "or",
           "persecution",
-          "comes",
+          "$butterfly",
           "because",
           "of",
           "the",
