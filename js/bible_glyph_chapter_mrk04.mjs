@@ -477,7 +477,7 @@ export function bible_glyph_chapter_mrk04() {
         words: [
           "$plus",
           "the",
-          "worries",
+          "$worried_face+thing",
           "of",
           "this",
           "$hourglass,",
