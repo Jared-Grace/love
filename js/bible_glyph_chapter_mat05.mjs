@@ -322,7 +322,7 @@ export function bible_glyph_chapter_mat05() {
           "$plus",
           "$palm_down",
           "$pointing_back",
-          "under",
+          "$down_arrow",
           "a",
           "basket.",
           "Instead",
