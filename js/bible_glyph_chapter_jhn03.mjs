@@ -625,7 +625,7 @@ export function bible_glyph_chapter_jhn03() {
           "been",
           "$throwing",
           "$toward+tray_in",
-          "prison.)",
+          "$locked_with_key+thing.)",
         ],
       },
       {
