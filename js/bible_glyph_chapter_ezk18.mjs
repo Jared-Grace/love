@@ -31,7 +31,7 @@ export function bible_glyph_chapter_ezk18() {
         words: [
           "$flashlight+question",
           "do",
-          "you",
+          "$you",
           "mean",
           "by",
           "quoting",
