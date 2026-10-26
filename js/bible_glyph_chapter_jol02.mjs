@@ -349,7 +349,7 @@ export function bible_glyph_chapter_jol02() {
         words: [
           "Yet",
           "$plus",
-          "now,",
+          "$watch,",
           "declares",
           "the",
           "$i_am,",
