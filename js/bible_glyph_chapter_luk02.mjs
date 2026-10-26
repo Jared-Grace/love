@@ -1079,7 +1079,7 @@ export function bible_glyph_chapter_luk02() {
         "$pin",
         "custom",
         "of",
-        "the",
+        "$pin",
         "Feast.",
       ],
     },
