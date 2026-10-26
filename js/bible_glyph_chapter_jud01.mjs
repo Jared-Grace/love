@@ -91,7 +91,7 @@ export function bible_glyph_chapter_jud01() {
           "for",
           "$pin",
           "$anchor",
-          "once",
+          "$one+clock",
           "for",
           "all",
           "entrusted",
