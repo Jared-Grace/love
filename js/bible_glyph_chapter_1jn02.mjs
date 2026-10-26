@@ -741,7 +741,7 @@ export function bible_glyph_chapter_1jn02() {
           "$flashlight",
           "$link",
           "$pin",
-          "promise",
+          "$pointing_up+angel",
           "$pointing_back",
           "made",
           "to",
