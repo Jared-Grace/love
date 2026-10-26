@@ -744,7 +744,7 @@ export function bible_glyph_chapter_luk07() {
         "are",
         "found",
         "$tray_in",
-        "palaces.",
+        "$king+describing.",
       ],
     },
     {
