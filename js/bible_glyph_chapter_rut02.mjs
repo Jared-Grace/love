@@ -700,7 +700,7 @@ export function bible_glyph_chapter_rut02() {
           "to",
           "her",
           "daughter-in-law,",
-          "who",
+          "$back+flashlight",
           "has",
           "$no_entry",
           "withdrawn",
