@@ -504,7 +504,7 @@ export function bible_glyph_chapter_1jn02() {
           "away",
           "$plus",
           "$pointing_back",
-          "desires,",
+          "$pointing_up+anger_symbol+thing,",
           "but",
           "whoever",
           "$hammer",
