@@ -422,7 +422,7 @@ export function bible_glyph_chapter_luk02() {
         "lying",
         "$tray_in",
         "$pin",
-        "manger.",
+        "$ox+basket.",
       ],
     },
     {
