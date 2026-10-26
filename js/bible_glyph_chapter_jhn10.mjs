@@ -292,7 +292,7 @@ export function bible_glyph_chapter_jhn10() {
           "$thumbs_up",
           "$person+sheep",
           "lays",
-          "down",
+          "$palm_down",
           "$pointing_back",
           "$person_other",
           "for",
