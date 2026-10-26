@@ -373,7 +373,7 @@ export function bible_glyph_chapter_gen03() {
           "You",
           "$hands_giving",
           "me,",
-          "she",
+          "$pointing_back",
           "$hands_giving",
           "me",
           "some",
