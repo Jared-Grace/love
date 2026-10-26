@@ -184,7 +184,7 @@ export function bible_glyph_chapter_1ki03() {
           "You",
           "have",
           "$hammer+doing",
-          "much",
+          "$top",
           "$gift",
           "to",
           "Your",
