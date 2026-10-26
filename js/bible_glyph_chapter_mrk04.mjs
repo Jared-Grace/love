@@ -429,7 +429,7 @@ export function bible_glyph_chapter_mrk04() {
           "they",
           "have",
           "$no_entry",
-          "root",
+          "$ginger_root",
           "$tray_in",
           "themselves;",
           "they",
