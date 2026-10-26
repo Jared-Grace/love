@@ -808,7 +808,7 @@ export function bible_glyph_chapter_luk15() {
         "has",
         "squandered",
         "your",
-        "wealth",
+        "$sprout+money_bag",
         "with",
         "prostitutes,",
         "$footprints",
