@@ -1023,7 +1023,7 @@ export function bible_glyph_chapter_jhn10() {
           "$hammer",
           "$no_entry",
           "a",
-          "sign,",
+          "$placard,",
           "but",
           "everything",
           "$proper_name$John",
