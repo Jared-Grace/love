@@ -1191,7 +1191,7 @@ export function bible_glyph_chapter_jhn04() {
           "$eye",
           "$placard",
           "$plus",
-          "wonders,",
+          "$exploding_head,",
           "you",
           "will",
           "never",
