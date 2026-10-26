@@ -719,7 +719,7 @@ export function bible_glyph_chapter_jhn20() {
           "were",
           "inside",
           "once",
-          "again,",
+          "$repeat,",
           "$plus",
           "$proper_name$Thomas",
           "was",
