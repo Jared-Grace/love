@@ -193,7 +193,7 @@ export function bible_glyph_chapter_psa112() {
           "will",
           "be",
           "lifted",
-          "high",
+          "$up_arrow",
           "in",
           "$star.",
         ],
