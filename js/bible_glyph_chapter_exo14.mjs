@@ -567,7 +567,7 @@ export function bible_glyph_chapter_exo14() {
           "$next_track",
           "them.",
           "The",
-          "pillar",
+          "$candle",
           "of",
           "cloud",
           "also",
