@@ -893,7 +893,7 @@ export function bible_glyph_chapter_jhn09() {
           "they",
           "threw",
           "$pointing_back",
-          "out.",
+          "$tray_out+manner.",
         ],
       },
       {
