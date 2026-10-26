@@ -82,7 +82,7 @@ export function bible_glyph_chapter_psa023() {
           "the",
           "shadow",
           "of",
-          "death,",
+          "$skull+darkness,",
           "I",
           "will",
           "$no_entry",
