@@ -39,7 +39,7 @@ export function bible_glyph_chapter_psa112() {
           "$seed",
           "will",
           "be",
-          "mighty",
+          "$might+person",
           "in",
           "the",
           "$earth;",
