@@ -909,7 +909,7 @@ export function bible_glyph_chapter_ezk36() {
           "$hands_giving",
           "you",
           "a",
-          "new",
+          "$new_button",
           "$heart_organ",
           "and",
           "$hands_giving",
