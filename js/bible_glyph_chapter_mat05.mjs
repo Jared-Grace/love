@@ -664,7 +664,7 @@ export function bible_glyph_chapter_mat05() {
           "$scales+doer",
           "to",
           "the",
-          "officer,",
+          "$down_arrow+person_rowing_boat+doer,",
           "$plus",
           "you",
           "be",
