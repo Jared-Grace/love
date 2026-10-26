@@ -126,7 +126,7 @@ export function bible_glyph_chapter_psa029() {
         words: [
           "He",
           "makes",
-          "Lebanon",
+          "$white_circle+mountain+proper_name",
           "$man_dancing+doing",
           "$likeness",
           "a",
