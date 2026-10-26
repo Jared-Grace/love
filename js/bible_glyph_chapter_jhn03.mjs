@@ -128,7 +128,7 @@ export function bible_glyph_chapter_jhn03() {
           "time",
           "to",
           "be",
-          "born?”",
+          "$hatching_chick?”",
         ],
       },
       {
