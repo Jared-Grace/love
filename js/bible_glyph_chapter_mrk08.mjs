@@ -121,7 +121,7 @@ export function bible_glyph_chapter_mrk08() {
           "Jesus",
           "asked",
           "$pointing_back,",
-          "How",
+          "$abacus+question",
           "many",
           "$bread",
           "do",
