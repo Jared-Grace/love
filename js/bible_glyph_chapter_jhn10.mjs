@@ -1014,7 +1014,7 @@ export function bible_glyph_chapter_jhn10() {
           "$plus",
           "$multiply",
           "$footprints",
-          "to",
+          "$toward",
           "$pointing_back",
           "$plus",
           "$speech,",
