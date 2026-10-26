@@ -42,7 +42,7 @@ export function bible_glyph_chapter_jon04() {
           "what",
           "I",
           "$speech",
-          "while",
+          "$finish",
           "I",
           "was",
           "still",
