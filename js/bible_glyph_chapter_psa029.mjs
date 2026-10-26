@@ -225,7 +225,7 @@ export function bible_glyph_chapter_psa029() {
           "The",
           "$i_am",
           "$hands_giving",
-          "strength",
+          "$mechanical_arm",
           "to",
           "His",
           "$family;",
