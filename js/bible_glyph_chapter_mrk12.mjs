@@ -1121,7 +1121,7 @@ export function bible_glyph_chapter_mrk12() {
         "$crowd",
         "putting",
         "$bronze",
-        "into",
+        "$toward+tray_in",
         "it.",
         "$plus",
         "many",
