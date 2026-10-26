@@ -477,7 +477,7 @@ export function bible_glyph_chapter_jol02() {
           "$man_in_tuxedo",
           "$walking+tray_out",
           "his",
-          "room,",
+          "$door+bed,",
           "and",
           "the",
           "bride",
