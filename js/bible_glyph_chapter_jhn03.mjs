@@ -113,7 +113,7 @@ export function bible_glyph_chapter_jhn03() {
           "$hatching_chick",
           "when",
           "he",
-          "is",
+          "$link",
           "$old_man+describing?”",
           "$proper_name$Nicodemus",
           "$speech.",
