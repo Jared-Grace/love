@@ -1064,7 +1064,7 @@ export function bible_glyph_chapter_luk24() {
           "while",
           "I",
           "was",
-          "still",
+          "$repeat_single_button",
           "with",
           "$you:",
           "$pointing",
