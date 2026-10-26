@@ -26,7 +26,7 @@ export function bible_glyph_chapter_jhn09() {
           "$eye",
           "a",
           "$person",
-          "blind",
+          "$person_with_white_cane",
           "$tray_out",
           "birth.",
         ],
