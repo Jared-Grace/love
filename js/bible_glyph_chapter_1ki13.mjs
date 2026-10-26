@@ -841,7 +841,7 @@ export function bible_glyph_chapter_1ki13() {
           "had",
           "$turn_back",
           "him",
-          "saddled",
+          "$adhesive_bandage+doing",
           "the",
           "donkey",
           "for",
