@@ -218,7 +218,7 @@ export function bible_glyph_chapter_gen02() {
           "and",
           "the",
           "$person",
-          "became",
+          "$link",
           "a",
           "$sprout",
           "$person_other.",
