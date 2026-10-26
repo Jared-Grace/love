@@ -448,7 +448,7 @@ export function bible_glyph_chapter_mrk05() {
         "$pointing_back",
         "was",
         "getting",
-        "into",
+        "$toward+tray_in",
         "the",
         "$ship,",
         "the",
