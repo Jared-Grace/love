@@ -585,7 +585,7 @@ export function bible_glyph_chapter_luk24() {
           "found",
           "it",
           "just",
-          "as",
+          "$likeness",
           "$plus",
           "the",
           "$woman",
