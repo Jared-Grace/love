@@ -427,7 +427,7 @@ export function bible_glyph_chapter_gen03() {
           "$toward",
           "the",
           "$snake:",
-          "Because",
+          "$pointing",
           "you",
           "have",
           "$hammer+doing",
