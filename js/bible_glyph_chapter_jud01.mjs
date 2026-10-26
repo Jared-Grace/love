@@ -474,7 +474,7 @@ export function bible_glyph_chapter_jud01() {
           "to",
           "convict",
           "all",
-          "the",
+          "$pin",
           "ungodly",
           "of",
           "every",
