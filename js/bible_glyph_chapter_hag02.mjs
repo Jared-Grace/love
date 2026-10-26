@@ -540,7 +540,7 @@ export function bible_glyph_chapter_hag02() {
           "turn",
           "to",
           "Me,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
