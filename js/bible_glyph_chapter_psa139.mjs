@@ -510,7 +510,7 @@ export function bible_glyph_chapter_psa139() {
         verse_number: 24,
         words: [
           "$eye",
-          "if",
+          "$traffic_light",
           "there",
           "is",
           "any",
