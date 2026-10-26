@@ -588,7 +588,7 @@ export function bible_glyph_chapter_1jn05() {
           "$check+describing",
           "$heart_on_fire",
           "$plus",
-          "eternal",
+          "$hourglass+describing",
           "$sprout.",
         ],
       },
