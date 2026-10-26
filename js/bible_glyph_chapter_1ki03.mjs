@@ -694,7 +694,7 @@ export function bible_glyph_chapter_1ki03() {
           "from",
           "my",
           "side",
-          "while",
+          "$broom",
           "I",
           "was",
           "asleep,",
