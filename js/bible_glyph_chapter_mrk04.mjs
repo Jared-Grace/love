@@ -30,7 +30,7 @@ export function bible_glyph_chapter_mrk04() {
           "gathered",
           "$toward",
           "$pointing_back",
-          "that",
+          "$likeness+plus+plus",
           "$pointing_back",
           "got",
           "into",
