@@ -416,7 +416,7 @@ export function bible_glyph_chapter_mrk12() {
         "$shopping_cart",
         "$me",
         "a",
-        "denarius",
+        "$coin+ten",
         "to",
         "$eye.",
       ],
