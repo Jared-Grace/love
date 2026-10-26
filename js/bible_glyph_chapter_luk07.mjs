@@ -827,7 +827,7 @@ export function bible_glyph_chapter_luk07() {
         "yet",
         "even",
         "the",
-        "least",
+        "$pinching_hand",
         "$tray_in",
         "the",
         "$castle",
