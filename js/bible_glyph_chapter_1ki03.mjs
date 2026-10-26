@@ -663,7 +663,7 @@ export function bible_glyph_chapter_1ki03() {
           "the",
           "$son",
           "of",
-          "this",
+          "$flashlight",
           "$woman",
           "$skull+doing,",
           "because",
