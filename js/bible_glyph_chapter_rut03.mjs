@@ -62,7 +62,7 @@ export function bible_glyph_chapter_rut03() {
           "In",
           "fact,",
           "$night",
-          "he",
+          "$pointing_back",
           "is",
           "winnowing",
           "barley",
