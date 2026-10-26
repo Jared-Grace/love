@@ -82,7 +82,7 @@ export function bible_glyph_chapter_1th01() {
           "$person_climbing",
           "$crossed_fingers",
           "in",
-          "our",
+          "$me",
           "$crown",
           "$cross",
           "$oil,",
