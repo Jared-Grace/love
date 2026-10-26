@@ -540,7 +540,7 @@ export function bible_glyph_chapter_jer26() {
           "upon",
           "yourselves,",
           "upon",
-          "this",
+          "$flashlight",
           "$city,",
           "and",
           "upon",
