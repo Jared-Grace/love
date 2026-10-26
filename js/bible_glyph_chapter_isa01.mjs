@@ -252,7 +252,7 @@ export function bible_glyph_chapter_isa01() {
           "shack",
           "in",
           "a",
-          "cucumber",
+          "$fruit+rock+field",
           "field,",
           "like",
           "a",
