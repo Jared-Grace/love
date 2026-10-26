@@ -889,7 +889,7 @@ export function bible_glyph_chapter_luk02() {
         "the",
         "thoughts",
         "$tray_out",
-        "many",
+        "$multiply",
         "$heart_organ",
         "will",
         "be",
