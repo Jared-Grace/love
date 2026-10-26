@@ -166,7 +166,7 @@ export function bible_glyph_chapter_jdg13() {
           "$heart_on_fire",
           "$tray_out",
           "the",
-          "womb,",
+          "$baby+house,",
           "and",
           "he",
           "will",
