@@ -206,7 +206,7 @@ export function bible_glyph_chapter_jon02() {
           "cling",
           "to",
           "worthless",
-          "idols",
+          "$fog",
           "forsake",
           "His",
           "$gift.",
