@@ -799,7 +799,7 @@ export function bible_glyph_chapter_luk24() {
           "$pin",
           "$road",
           "and",
-          "opened",
+          "$metro+unlocked",
           "$pin",
           "Scriptures",
           "to",
