@@ -879,7 +879,7 @@ export function bible_glyph_chapter_luk24() {
       {
         verse_number: 36,
         words: [
-          "While",
+          "$curving_right",
           "$pointing_back",
           "were",
           "$mouth",
