@@ -68,7 +68,7 @@ export function bible_glyph_chapter_jud01() {
           "$all",
           "$fast_forward+heart_red",
           "to",
-          "write",
+          "$writing_hand",
           "to",
           "you",
           "about",
