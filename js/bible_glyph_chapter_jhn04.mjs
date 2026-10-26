@@ -250,7 +250,7 @@ export function bible_glyph_chapter_jhn04() {
           "have",
           "nothing",
           "to",
-          "draw",
+          "$bucket+thing",
           "with",
           "$plus",
           "the",
