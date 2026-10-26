@@ -240,7 +240,7 @@ export function bible_glyph_chapter_rut01() {
           "$speech",
           "to",
           "her",
-          "two",
+          "$two",
           "daughters-in-law,",
           "$walking",
           "$turn_back,",
