@@ -1079,7 +1079,7 @@ export function bible_glyph_chapter_mrk05() {
       words: [
         "$plus",
         "immediately",
-        "the",
+        "$pin",
         "girl",
         "got",
         "up",
