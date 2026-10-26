@@ -399,7 +399,7 @@ export function bible_glyph_chapter_jol03() {
           "$valley",
           "of",
           "decision!",
-          "For",
+          "$pointing",
           "the",
           "$sun",
           "of",
