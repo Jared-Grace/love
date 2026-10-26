@@ -330,7 +330,7 @@ export function bible_glyph_chapter_1ki03() {
           "to",
           "judge",
           "this",
-          "great",
+          "$star+describing",
           "$family",
           "of",
           "Yours?",
