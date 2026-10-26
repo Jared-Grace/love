@@ -276,7 +276,7 @@ export function bible_glyph_chapter_mrk10() {
         "on",
         "$pointing_back,",
         "but",
-        "the",
+        "$pin",
         "$learner",
         "rebuked",
         "$pointing_back.",
