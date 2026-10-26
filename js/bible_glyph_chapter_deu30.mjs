@@ -376,7 +376,7 @@ export function bible_glyph_chapter_deu30() {
           "if",
           "you",
           "$turn_back",
-          "to",
+          "$toward",
           "$i_am",
           "with",
           "all",
