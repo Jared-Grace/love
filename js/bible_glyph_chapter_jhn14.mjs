@@ -359,7 +359,7 @@ export function bible_glyph_chapter_jhn14() {
           "$top",
           "things",
           "than",
-          "these,",
+          "$flashlight,",
           "because",
           "$pointing",
           "I",
