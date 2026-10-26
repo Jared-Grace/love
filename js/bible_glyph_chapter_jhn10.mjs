@@ -857,7 +857,7 @@ export function bible_glyph_chapter_jhn10() {
           "$moai,",
           "$toward",
           "whom",
-          "the",
+          "$pin",
           "$speech",
           "of",
           "$heart_on_fire",
