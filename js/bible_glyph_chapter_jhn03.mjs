@@ -810,7 +810,7 @@ export function bible_glyph_chapter_jhn03() {
           "$sky",
           "is",
           "above",
-          "all.",
+          "$all.",
         ],
       },
       {
