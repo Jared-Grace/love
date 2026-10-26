@@ -1105,7 +1105,7 @@ export function bible_glyph_chapter_luk02() {
         "$city+peace,",
         "$plus",
         "$pointing_back",
-        "parents",
+        "$butterfly+doer",
         "did",
         "$no_entry",
         "$lightbulb",
