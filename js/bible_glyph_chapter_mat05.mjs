@@ -642,7 +642,7 @@ export function bible_glyph_chapter_mat05() {
           "with",
           "$you",
           "adversary,",
-          "while",
+          "$finish",
           "you",
           "are",
           "still",
