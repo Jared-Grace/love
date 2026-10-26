@@ -606,7 +606,7 @@ export function bible_glyph_chapter_jhn01() {
           "me,",
           "whose",
           "sandal",
-          "straps",
+          "$sandal+ribbon",
           "I",
           "$link",
           "$no_entry",
