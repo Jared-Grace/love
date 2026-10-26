@@ -686,7 +686,7 @@ export function bible_glyph_chapter_deu26() {
           "you",
           "are",
           "to",
-          "keep",
+          "$guard",
           "all",
           "His",
           "$scroll.",
