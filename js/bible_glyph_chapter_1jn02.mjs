@@ -162,7 +162,7 @@ export function bible_glyph_chapter_1jn02() {
           "abide",
           "$tray_in",
           "$pointing_back",
-          "must",
+          "$receipt+doing",
           "$walking",
           "as",
           "Jesus",
