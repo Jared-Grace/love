@@ -220,7 +220,7 @@ export function bible_glyph_chapter_luk07() {
         "$walking;",
         "$plus",
         "to",
-        "another,",
+        "$plus+one,",
         "‘$footprints,’",
         "$plus",
         "he",
