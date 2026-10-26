@@ -1031,7 +1031,7 @@ export function bible_glyph_chapter_ezk18() {
           "$heart_organ",
           "and",
           "a",
-          "new",
+          "$new_button",
           "$wind.",
           "Why",
           "should",
