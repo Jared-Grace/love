@@ -275,7 +275,7 @@ export function bible_glyph_chapter_1jn01() {
           "our",
           "$bow,",
           "He",
-          "is",
+          "$link",
           "$anchor+describing",
           "$plus",
           "just",
