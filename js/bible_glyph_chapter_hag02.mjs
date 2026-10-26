@@ -643,7 +643,7 @@ export function bible_glyph_chapter_hag02() {
         words: [
           "$speech",
           "$proper_name$Zerubbabel",
-          "governor",
+          "$crown+city",
           "of",
           "$hands_raised+proper_name",
           "$speech",
