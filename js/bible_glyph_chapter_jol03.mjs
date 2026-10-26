@@ -46,7 +46,7 @@ export function bible_glyph_chapter_jol03() {
           "down",
           "$toward",
           "the",
-          "Valley",
+          "$valley",
           "of",
           "$i_am+scales.",
           "There",
