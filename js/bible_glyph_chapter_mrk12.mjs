@@ -1176,7 +1176,7 @@ export function bible_glyph_chapter_mrk12() {
         "$speech",
         "you",
         "$pointing",
-        "this",
+        "$flashlight",
         "$poor",
         "$widow",
         "has",
