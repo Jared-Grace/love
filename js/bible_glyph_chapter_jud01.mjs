@@ -374,7 +374,7 @@ export function bible_glyph_chapter_jud01() {
       {
         verse_number: 12,
         words: [
-          "These",
+          "$flashlight",
           "men",
           "are",
           "hidden",
