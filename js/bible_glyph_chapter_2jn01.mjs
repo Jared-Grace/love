@@ -186,7 +186,7 @@ export function bible_glyph_chapter_2jn01() {
         verse_number: 7,
         words: [
           "$pointing",
-          "many",
+          "$multiply",
           "deceivers",
           "have",
           "gone",
