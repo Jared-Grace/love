@@ -1246,7 +1246,7 @@ export function bible_glyph_chapter_mat05() {
           "heavenly",
           "$father",
           "is",
-          "perfect.",
+          "$end_arrow+net+describing.",
         ],
       },
     ],
