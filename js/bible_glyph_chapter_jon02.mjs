@@ -106,7 +106,7 @@ export function bible_glyph_chapter_jon02() {
           "yet",
           "I",
           "will",
-          "look",
+          "$face_with_monocle",
           "once",
           "$plus+doing",
           "toward",
