@@ -492,7 +492,7 @@ export function bible_glyph_chapter_jol02() {
           "the",
           "$priest",
           "who",
-          "minister",
+          "$bellhop_bell+doing",
           "before",
           "the",
           "$i_am",
