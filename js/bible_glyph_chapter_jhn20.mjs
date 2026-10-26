@@ -673,7 +673,7 @@ export function bible_glyph_chapter_jhn20() {
           "$eye",
           "$pin",
           "$crown.",
-          "But",
+          "$curving_right",
           "he",
           "$speech",
           "$pointing_back,",
