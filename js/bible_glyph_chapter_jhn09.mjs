@@ -800,7 +800,7 @@ export function bible_glyph_chapter_jhn09() {
           "yet",
           "He",
           "opened",
-          "my",
+          "$me",
           "eyes.",
         ],
       },
