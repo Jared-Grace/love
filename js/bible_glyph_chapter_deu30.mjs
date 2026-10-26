@@ -490,7 +490,7 @@ export function bible_glyph_chapter_deu30() {
           "$speech",
           "is",
           "very",
-          "near",
+          "$magnet",
           "you;",
           "it",
           "is",
