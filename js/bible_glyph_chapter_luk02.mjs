@@ -906,7 +906,7 @@ export function bible_glyph_chapter_luk02() {
         "prophetess,",
         "$proper_name$Anna",
         "the",
-        "daughter",
+        "$girl",
         "of",
         "$proper_name$Phanuel,",
         "$tray_out",
