@@ -502,7 +502,7 @@ export function bible_glyph_chapter_1jn05() {
           "One",
           "who",
           "was",
-          "born",
+          "$hatching_chick",
           "$tray_out",
           "$heart_on_fire",
           "protects",
