@@ -582,7 +582,7 @@ export function bible_glyph_chapter_mrk08() {
           "$mouth+droplet+doing",
           "on",
           "$pointing_back",
-          "eyes",
+          "$eyes+thing",
           "and",
           "placed",
           "His",
