@@ -266,7 +266,7 @@ export function bible_glyph_chapter_1jn04() {
           "His",
           "one",
           "and",
-          "only",
+          "$one+butterfly",
           "$son",
           "into",
           "the",
