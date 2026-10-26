@@ -141,7 +141,7 @@ export function bible_glyph_chapter_1ki03() {
           "$walking+pointing_up",
           "a",
           "$ten+all",
-          "burnt",
+          "$burnt_offering",
           "offerings",
           "on",
           "that",
