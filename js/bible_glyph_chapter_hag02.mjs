@@ -604,7 +604,7 @@ export function bible_glyph_chapter_hag02() {
           "fruit.",
           "But",
           "$tray_out",
-          "this",
+          "$flashlight",
           "$sun",
           "on",
           "I",
