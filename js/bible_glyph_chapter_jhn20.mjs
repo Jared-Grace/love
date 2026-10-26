@@ -205,7 +205,7 @@ export function bible_glyph_chapter_jhn20() {
       {
         verse_number: 8,
         words: [
-          "Then",
+          "$right_arrow",
           "the",
           "other",
           "$learner,",
