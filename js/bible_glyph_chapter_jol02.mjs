@@ -422,7 +422,7 @@ export function bible_glyph_chapter_jol02() {
           "a",
           "$speech+thumbs_up",
           "-",
-          "grain",
+          "$grain_offering",
           "and",
           "drink",
           "offerings",
