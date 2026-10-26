@@ -754,7 +754,7 @@ export function bible_glyph_chapter_jhn04() {
           "$question",
           "$pointing_back,",
           "$speech,",
-          "“Rabbi,",
+          "“$teacher+top,",
           "$eating",
           "something.”",
         ],
