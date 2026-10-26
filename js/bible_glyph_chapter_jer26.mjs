@@ -462,7 +462,7 @@ export function bible_glyph_chapter_jer26() {
         verse_number: 13,
         words: [
           "So",
-          "now",
+          "$watch",
           "correct",
           "your",
           "$road",
