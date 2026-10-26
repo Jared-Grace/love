@@ -392,7 +392,7 @@ export function bible_glyph_chapter_mat05() {
           "them,",
           "$curving_up",
           "to",
-          "fulfill",
+          "$battery",
           "them.",
         ],
       },
