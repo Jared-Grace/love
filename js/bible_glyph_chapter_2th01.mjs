@@ -29,7 +29,7 @@ export function bible_glyph_chapter_2th01() {
           "$proper_name$Thessalonians",
           "$tray_in",
           "$heart_on_fire",
-          "our",
+          "$me",
           "$father",
           "$plus",
           "the",
