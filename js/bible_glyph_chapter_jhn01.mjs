@@ -173,7 +173,7 @@ export function bible_glyph_chapter_jhn01() {
           "$person,",
           "$link",
           "$footprints",
-          "into",
+          "$toward+tray_in",
           "$pin",
           "$globe.",
         ],
