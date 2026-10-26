@@ -241,7 +241,7 @@ export function bible_glyph_chapter_jhn03() {
         verse_number: 10,
         words: [
           "“You",
-          "are",
+          "$link",
           "$wrestling+heart_on_fire’s",
           "teacher,”",
           "$cross",
