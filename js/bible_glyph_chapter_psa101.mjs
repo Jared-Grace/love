@@ -42,7 +42,7 @@ export function bible_glyph_chapter_psa101() {
           "that",
           "is",
           "blameless.",
-          "When",
+          "$question+clock",
           "will",
           "You",
           "$footprints",
