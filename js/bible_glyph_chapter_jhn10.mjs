@@ -208,7 +208,7 @@ export function bible_glyph_chapter_jhn10() {
           "$footprints",
           "$last_track",
           "Me",
-          "were",
+          "$link",
           "$hand+lying_face+doer",
           "$plus",
           "robbers,",
