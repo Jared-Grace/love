@@ -617,7 +617,7 @@ export function bible_glyph_chapter_luk15() {
     {
       verse_number: 23,
       words: [
-        "Bring",
+        "$shopping_cart",
         "the",
         "fattened",
         "calf",
