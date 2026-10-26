@@ -1202,7 +1202,7 @@ export function bible_glyph_chapter_jhn04() {
         verse_number: 49,
         words: [
           "$pin",
-          "official",
+          "$king+describing",
           "$speech",
           "to",
           "$pointing_back,",
