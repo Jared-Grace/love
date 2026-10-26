@@ -766,7 +766,7 @@ export function bible_glyph_chapter_jhn09() {
           "$mouth",
           "to",
           "$fishing_pole+proper_name,",
-          "but",
+          "$curving_right",
           "we",
           "do",
           "$no_entry",
