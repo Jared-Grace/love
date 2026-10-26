@@ -110,7 +110,7 @@ export function bible_glyph_chapter_psa096() {
       {
         verse_number: 6,
         words: [
-          "Splendor",
+          "$sparkles+light",
           "and",
           "majesty",
           "are",
