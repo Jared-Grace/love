@@ -771,7 +771,7 @@ export function bible_glyph_chapter_2ki02() {
           "$new_button",
           "$jar+salt",
           "and",
-          "put",
+          "$palm_down",
           "some",
           "salt",
           "in",
