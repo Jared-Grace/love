@@ -405,7 +405,7 @@ export function bible_glyph_chapter_ezk33() {
           "I",
           "take",
           "no",
-          "pleasure",
+          "$smiling_face_with_hearts+doing",
           "in",
           "the",
           "$skull",
