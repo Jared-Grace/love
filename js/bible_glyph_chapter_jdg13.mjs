@@ -168,7 +168,7 @@ export function bible_glyph_chapter_jdg13() {
           "the",
           "$baby+house,",
           "and",
-          "he",
+          "$pointing_back",
           "will",
           "begin",
           "to",
