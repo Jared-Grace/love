@@ -321,7 +321,7 @@ export function bible_glyph_chapter_1jn04() {
           "us,",
           "we",
           "$plus",
-          "ought",
+          "$receipt+doing",
           "to",
           "$heart_red+doing",
           "one",
