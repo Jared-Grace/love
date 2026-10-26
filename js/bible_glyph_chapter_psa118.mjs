@@ -404,7 +404,7 @@ export function bible_glyph_chapter_psa118() {
           "$flashlight",
           "is",
           "the",
-          "gate",
+          "$gate",
           "of",
           "the",
           "$i_am;",
