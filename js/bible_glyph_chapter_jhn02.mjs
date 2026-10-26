@@ -521,7 +521,7 @@ export function bible_glyph_chapter_jhn02() {
           "the",
           "building,",
           "$plus",
-          "You",
+          "$you",
           "will",
           "raise",
           "$pointing_back",
