@@ -805,7 +805,7 @@ export function bible_glyph_chapter_mrk08() {
           "priests",
           "$plus",
           "the",
-          "scribes,",
+          "$writing_hand+doer,",
           "$plus",
           "be",
           "killed,",
