@@ -1052,7 +1052,7 @@ export function bible_glyph_chapter_jhn04() {
           "$sun,",
           "He",
           "left",
-          "for",
+          "$toward+tray_in",
           "$proper_name$Galilee.",
         ],
       },
