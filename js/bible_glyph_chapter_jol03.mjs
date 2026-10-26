@@ -82,7 +82,7 @@ export function bible_glyph_chapter_jol03() {
         words: [
           "They",
           "$throwing+lots+doing",
-          "lots",
+          "$lots",
           "for",
           "My",
           "$family;",
