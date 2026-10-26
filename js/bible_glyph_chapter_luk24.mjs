@@ -1255,7 +1255,7 @@ export function bible_glyph_chapter_luk24() {
           "$plus",
           "they",
           "were",
-          "continually",
+          "$metro",
           "$tray_in",
           "the",
           "temple,",
