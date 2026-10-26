@@ -1010,7 +1010,7 @@ export function bible_glyph_chapter_mat05() {
           "for",
           "eye",
           "$plus",
-          "tooth",
+          "$tooth",
           "for",
           "tooth.",
         ],
