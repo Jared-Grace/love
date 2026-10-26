@@ -190,7 +190,7 @@ export function bible_glyph_chapter_1ki13() {
           "him",
           "withered,",
           "so",
-          "that",
+          "$back+flashlight",
           "he",
           "could",
           "$no_entry",
