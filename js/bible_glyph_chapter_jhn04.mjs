@@ -1071,7 +1071,7 @@ export function bible_glyph_chapter_jhn04() {
           "honor",
           "$tray_in",
           "his",
-          "own",
+          "$identification_card",
           "hometown.",
         ],
       },
