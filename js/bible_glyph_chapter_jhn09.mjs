@@ -207,7 +207,7 @@ export function bible_glyph_chapter_jhn09() {
           "who",
           "used",
           "to",
-          "sit",
+          "$seat",
           "$plus",
           "beg?",
         ],
