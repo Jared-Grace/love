@@ -486,7 +486,7 @@ export function bible_glyph_chapter_exo20() {
           "so",
           "that",
           "the",
-          "fear",
+          "$fear",
           "of",
           "Him",
           "may",
