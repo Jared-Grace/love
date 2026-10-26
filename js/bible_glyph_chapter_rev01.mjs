@@ -233,7 +233,7 @@ export function bible_glyph_chapter_rev01() {
           "$plus",
           "all",
           "$pin",
-          "tribes",
+          "$camp",
           "of",
           "$pin",
           "$earth",
