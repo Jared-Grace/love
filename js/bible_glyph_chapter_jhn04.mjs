@@ -1253,7 +1253,7 @@ export function bible_glyph_chapter_jhn04() {
           "way,",
           "his",
           "$kneeling",
-          "met",
+          "$toward+person+doing",
           "$pointing_back,",
           "$speech",
           "$pointing",
