@@ -1027,7 +1027,7 @@ export function bible_glyph_chapter_mrk10() {
         "baptized",
         "with",
         "$pin",
-        "baptism",
+        "$diving_mask+thing",
         "I",
         "will",
         "undergo?”",
