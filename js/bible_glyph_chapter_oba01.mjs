@@ -481,7 +481,7 @@ export function bible_glyph_chapter_oba01() {
           "the",
           "$i_am",
           "is",
-          "near",
+          "$magnet",
           "for",
           "all",
           "the",
