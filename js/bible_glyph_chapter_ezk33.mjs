@@ -398,7 +398,7 @@ export function bible_glyph_chapter_ezk33() {
           "as",
           "I",
           "$sprout,",
-          "declares",
+          "$microphone",
           "the",
           "$crown",
           "$i_am,",
