@@ -20,7 +20,7 @@ export function bible_glyph_chapter_psa099() {
           "let",
           "the",
           "$family",
-          "tremble.",
+          "$vibration_mode.",
           "He",
           "is",
           "enthroned",
