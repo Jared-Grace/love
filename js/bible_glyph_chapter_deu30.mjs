@@ -324,7 +324,7 @@ export function bible_glyph_chapter_deu30() {
           "$brown_square,",
           "for",
           "$thumbs_up.",
-          "Indeed,",
+          "$pointing,",
           "the",
           "$i_am",
           "will",
