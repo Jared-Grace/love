@@ -414,7 +414,7 @@ export function bible_glyph_chapter_jhn17() {
           "$you",
           "$speech,",
           "$plus",
-          "the",
+          "$pin",
           "$globe",
           "hated",
           "$pointing_back,",
