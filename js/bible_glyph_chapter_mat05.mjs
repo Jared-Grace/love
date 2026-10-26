@@ -1099,7 +1099,7 @@ export function bible_glyph_chapter_mat05() {
           "turn",
           "away",
           "from",
-          "the",
+          "$pin",
           "one",
           "who",
           "wants",
