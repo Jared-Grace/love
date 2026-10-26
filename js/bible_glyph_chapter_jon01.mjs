@@ -355,7 +355,7 @@ export function bible_glyph_chapter_jon01() {
           "fleeing",
           "from",
           "the",
-          "presence",
+          "$face",
           "of",
           "the",
           "$i_am,",
