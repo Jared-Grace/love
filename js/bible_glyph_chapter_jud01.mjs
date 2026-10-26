@@ -699,7 +699,7 @@ export function bible_glyph_chapter_jud01() {
         words: [
           "to",
           "the",
-          "only",
+          "$one+describing",
           "$heart_on_fire",
           "our",
           "$rescue+doer,",
