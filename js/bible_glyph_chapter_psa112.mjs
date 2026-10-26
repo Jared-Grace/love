@@ -116,7 +116,7 @@ export function bible_glyph_chapter_psa112() {
       {
         verse_number: 6,
         words: [
-          "Surely",
+          "$pointing",
           "he",
           "will",
           "$no_entry",
