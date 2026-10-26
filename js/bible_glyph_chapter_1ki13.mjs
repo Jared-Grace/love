@@ -1099,7 +1099,7 @@ export function bible_glyph_chapter_1ki13() {
       {
         verse_number: 31,
         words: [
-          "After",
+          "$next_track",
           "he",
           "had",
           "buried",
