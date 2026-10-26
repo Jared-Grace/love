@@ -129,7 +129,7 @@ export function bible_glyph_chapter_jol02() {
           "$plus",
           "$no_entry",
           "will",
-          "escape",
+          "$door+running",
           "them.",
         ],
       },
