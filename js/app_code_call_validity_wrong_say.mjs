@@ -22,8 +22,8 @@ export function app_code_call_validity_wrong_say(question, answer, choice) {
   ("Not picked: saying where a symbol is missing; the lesson takes a symbol out everywhere it stands, so having none of it is the whole of what went wrong");
   let line = text_to(question);
   let right_answer = text_to(answer);
-  function starts(o) {
-    let verb = property_get(o, "verb");
+  function starts(candidate) {
+    let verb = property_get(candidate, "verb");
     let to = text_size(verb);
     let left = text_slice(line, 0, to);
     let s = equal(left, verb);
