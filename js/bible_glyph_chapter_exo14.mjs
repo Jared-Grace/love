@@ -558,7 +558,7 @@ export function bible_glyph_chapter_exo14() {
           "$walking",
           "before",
           "the",
-          "camp",
+          "$camp",
           "of",
           "$wrestling+heart_on_fire,",
           "withdrew",
