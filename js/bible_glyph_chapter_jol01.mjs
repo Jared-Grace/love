@@ -169,7 +169,7 @@ export function bible_glyph_chapter_jol01() {
           "$earth,",
           "$bone+describing",
           "and",
-          "without",
+          "$dotted_line_face",
           "number;",
           "its",
           "teeth",
