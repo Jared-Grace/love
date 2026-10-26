@@ -1113,7 +1113,7 @@ export function bible_glyph_chapter_mrk10() {
         "it,",
         "they",
         "became",
-        "indignant",
+        "$face_steam+right_anger_bubble+doing",
         "with",
         "$proper_name$James",
         "$plus",
