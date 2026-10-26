@@ -915,7 +915,7 @@ export function bible_glyph_chapter_jhn04() {
           "to",
           "reap",
           "what",
-          "you",
+          "$you",
           "have",
           "$no_entry",
           "worked",
