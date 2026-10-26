@@ -232,7 +232,7 @@ export function bible_glyph_chapter_hag02() {
           "I",
           "will",
           "$battery",
-          "this",
+          "$flashlight",
           "$house",
           "with",
           "$star,",
