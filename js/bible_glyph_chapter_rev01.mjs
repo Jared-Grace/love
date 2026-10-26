@@ -538,7 +538,7 @@ export function bible_glyph_chapter_rev01() {
           "$fear+doing.",
           "I",
           "$link",
-          "the",
+          "$pin",
           "First",
           "$plus",
           "the",
