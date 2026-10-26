@@ -178,7 +178,7 @@ export function bible_glyph_chapter_jol01() {
           "teeth",
           "of",
           "a",
-          "lion,",
+          "$lion,",
           "and",
           "its",
           "fangs",
