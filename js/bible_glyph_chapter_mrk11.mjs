@@ -565,7 +565,7 @@ export function bible_glyph_chapter_mrk11() {
         "the",
         "fig",
         "tree",
-        "withered",
+        "$fallen_leaf+doing",
         "$tray_out",
         "its",
         "roots.",
