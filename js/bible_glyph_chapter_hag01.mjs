@@ -240,7 +240,7 @@ export function bible_glyph_chapter_hag01() {
         words: [
           "You",
           "expected",
-          "much,",
+          "$multiply+doing,",
           "but",
           "behold,",
           "it",
