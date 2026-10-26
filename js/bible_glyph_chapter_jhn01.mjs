@@ -1141,7 +1141,7 @@ export function bible_glyph_chapter_jhn01() {
         words: [
           "“Rabbi,”",
           "$hands_giving+heart_on_fire",
-          "answered,",
+          "$speech+turn_back,",
           "“You",
           "are",
           "the",
