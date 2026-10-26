@@ -33,7 +33,7 @@ export function bible_glyph_chapter_jhn17() {
           "$speech:",
           "$father,",
           "the",
-          "hour",
+          "$clock",
           "has",
           "$footprints.",
           "$star+doing",
