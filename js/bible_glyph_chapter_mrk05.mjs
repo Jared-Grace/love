@@ -546,7 +546,7 @@ export function bible_glyph_chapter_mrk05() {
         "$tray_in",
         "the",
         "$ship",
-        "to",
+        "$toward+tray_in",
         "the",
         "other",
         "side,",
