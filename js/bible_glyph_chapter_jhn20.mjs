@@ -119,7 +119,7 @@ export function bible_glyph_chapter_jhn20() {
           "running",
           "together,",
           "$plus",
-          "the",
+          "$pin",
           "other",
           "$learner",
           "outran",
