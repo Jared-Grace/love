@@ -486,7 +486,7 @@ export function bible_glyph_chapter_jhn03() {
           "has",
           "$footprints",
           "into",
-          "the",
+          "$pin",
           "$globe,",
           "but",
           "$person$s",
