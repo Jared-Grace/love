@@ -559,7 +559,7 @@ export function bible_glyph_chapter_jhn01() {
           "$right_arrow",
           "do",
           "you",
-          "baptize,",
+          "$diving_mask,",
           "if",
           "you",
           "are",
