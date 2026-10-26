@@ -833,7 +833,7 @@ export function bible_glyph_chapter_gen01() {
           "thing",
           "that",
           "moves",
-          "upon",
+          "$pointing_up",
           "the",
           "$earth.",
         ],
