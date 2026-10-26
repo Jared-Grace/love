@@ -323,7 +323,7 @@ export function bible_glyph_chapter_jhn09() {
           "who",
           "had",
           "been",
-          "blind.",
+          "$person_with_white_cane.",
         ],
       },
       {
