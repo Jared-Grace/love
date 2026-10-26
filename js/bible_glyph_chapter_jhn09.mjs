@@ -878,7 +878,7 @@ export function bible_glyph_chapter_jhn09() {
         words: [
           "They",
           "replied,",
-          "You",
+          "$you",
           "were",
           "born",
           "$tray_in",
