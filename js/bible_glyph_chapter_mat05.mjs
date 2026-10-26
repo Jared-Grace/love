@@ -383,7 +383,7 @@ export function bible_glyph_chapter_mat05() {
           "$pin",
           "$scroll",
           "or",
-          "the",
+          "$pin",
           "$megaphone.",
           "$no_entry",
           "$footprints",
