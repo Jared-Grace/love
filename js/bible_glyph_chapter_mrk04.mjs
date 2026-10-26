@@ -764,7 +764,7 @@ export function bible_glyph_chapter_mrk04() {
           "$wheat+scissors,",
           "$pointing",
           "$pin",
-          "harvest",
+          "$harvest",
           "has",
           "come.",
         ],
