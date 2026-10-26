@@ -358,7 +358,7 @@ export function bible_glyph_chapter_jud01() {
           "$proper_name$Cain,",
           "$plus",
           "rushed",
-          "headlong",
+          "$dollar_banknote",
           "into",
           "the",
           "$dizzy+thing",
