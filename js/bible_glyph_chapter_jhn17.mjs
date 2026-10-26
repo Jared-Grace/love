@@ -572,7 +572,7 @@ export function bible_glyph_chapter_jhn17() {
           "$one,",
           "just",
           "$likeness",
-          "You,",
+          "$you,",
           "$father,",
           "are",
           "$tray_in",
