@@ -300,7 +300,7 @@ export function bible_glyph_chapter_rev10() {
           "the",
           "$sea",
           "$plus",
-          "on",
+          "$pointing_up",
           "the",
           "$earth.",
         ],
