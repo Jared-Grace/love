@@ -1004,7 +1004,7 @@ export function bible_glyph_chapter_mrk05() {
         "has",
         "$no_entry",
         "$skull",
-        "but",
+        "$curving_up",
         "is",
         "asleep.”",
       ],
