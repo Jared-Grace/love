@@ -49,7 +49,7 @@ export function bible_glyph_chapter_3jn01() {
           "just",
           "$likeness",
           "your",
-          "soul",
+          "$person_other",
           "prospers.",
         ],
       },
