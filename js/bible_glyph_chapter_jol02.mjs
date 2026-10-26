@@ -230,7 +230,7 @@ export function bible_glyph_chapter_jol02() {
           "They",
           "do",
           "$no_entry",
-          "jostle",
+          "$clamp+crowd+doing",
           "$man_beard",
           "against",
           "$brother;",
