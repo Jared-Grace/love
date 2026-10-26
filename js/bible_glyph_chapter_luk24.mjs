@@ -1093,7 +1093,7 @@ export function bible_glyph_chapter_luk24() {
       {
         verse_number: 45,
         words: [
-          "Then",
+          "$telescope+clock",
           "He",
           "opened",
           "$pointing_back",
