@@ -505,7 +505,7 @@ export function bible_glyph_chapter_1jn04() {
           "$fear",
           "$tray_in",
           "$heart_red,",
-          "but",
+          "$curving_up",
           "perfect",
           "$heart_red",
           "drives",
