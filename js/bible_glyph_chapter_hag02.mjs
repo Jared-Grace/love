@@ -97,7 +97,7 @@ export function bible_glyph_chapter_hag02() {
           "your",
           "$eyes",
           "like",
-          "nothing",
+          "$dotted_line_face",
           "in",
           "comparison?",
         ],
