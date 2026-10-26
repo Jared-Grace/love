@@ -83,7 +83,7 @@ export function bible_glyph_chapter_jhn17() {
           "$link",
           "$hourglass+describing",
           "$sprout,",
-          "that",
+          "$right_arrow+toward",
           "they",
           "may",
           "$lightbulb",
