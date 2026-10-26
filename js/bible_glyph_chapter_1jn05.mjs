@@ -558,7 +558,7 @@ export function bible_glyph_chapter_1jn05() {
           "$plus",
           "has",
           "$hands_giving",
-          "us",
+          "$me",
           "understanding,",
           "so",
           "that",
