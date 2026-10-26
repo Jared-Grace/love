@@ -280,7 +280,7 @@ export function bible_glyph_chapter_rut01() {
           "of",
           "$woman",
           "to",
-          "find",
+          "$magnifying_glass+exclamation",
           "rest",
           "in",
           "the",
