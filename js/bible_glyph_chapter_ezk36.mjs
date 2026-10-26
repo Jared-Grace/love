@@ -920,7 +920,7 @@ export function bible_glyph_chapter_ezk36() {
           "you;",
           "I",
           "will",
-          "remove",
+          "$away+doing",
           "your",
           "$heart_organ",
           "of",
