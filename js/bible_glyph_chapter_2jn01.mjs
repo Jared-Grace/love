@@ -362,7 +362,7 @@ export function bible_glyph_chapter_2jn01() {
           "$child",
           "of",
           "$you",
-          "elect",
+          "$check_box+describing",
           "$brother+female_sign",
           "send",
           "you",
