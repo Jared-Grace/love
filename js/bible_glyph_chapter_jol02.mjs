@@ -312,7 +312,7 @@ export function bible_glyph_chapter_jol02() {
           "$face",
           "of",
           "His",
-          "army.",
+          "$raised_fist.",
           "Indeed,",
           "His",
           "camp",
