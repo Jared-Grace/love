@@ -437,7 +437,7 @@ export function bible_glyph_chapter_1ki13() {
           "$all",
           "the",
           "deeds",
-          "that",
+          "$back+flashlight",
           "the",
           "$man_beard",
           "of",
