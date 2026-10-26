@@ -32,7 +32,7 @@ export function bible_glyph_chapter_psa067() {
           "shine",
           "upon",
           "us.",
-          "Selah",
+          "$pause_button",
         ],
       },
       {
