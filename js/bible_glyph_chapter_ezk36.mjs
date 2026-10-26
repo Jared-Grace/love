@@ -225,7 +225,7 @@ export function bible_glyph_chapter_ezk36() {
           "its",
           "$herb+city",
           "became",
-          "plunder.",
+          "$pirate_flag+thing.",
         ],
       },
       {
