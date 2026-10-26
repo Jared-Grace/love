@@ -1079,7 +1079,7 @@ export function bible_glyph_chapter_jhn04() {
         verse_number: 45,
         words: [
           "Yet",
-          "when",
+          "$back+clock",
           "He",
           "$footprints",
           "into",
