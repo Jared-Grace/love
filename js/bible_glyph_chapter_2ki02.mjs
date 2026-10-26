@@ -422,7 +422,7 @@ export function bible_glyph_chapter_2ki02() {
           "together,",
           "$exclamation",
           "a",
-          "chariot",
+          "$chariot",
           "of",
           "$fire",
           "with",
