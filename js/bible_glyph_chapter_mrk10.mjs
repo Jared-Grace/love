@@ -873,7 +873,7 @@ export function bible_glyph_chapter_mrk10() {
         "$plus",
         "they",
         "will",
-        "condemn",
+        "$pointing_down+scales",
         "$pointing_back",
         "to",
         "$skull",
