@@ -199,7 +199,7 @@ export function bible_glyph_chapter_luk15() {
         "coins,",
         "if",
         "she",
-        "loses",
+        "$wilted_flower",
         "one",
         "of",
         "them,",
