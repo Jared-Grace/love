@@ -194,7 +194,7 @@ export function bible_glyph_chapter_mrk11() {
         "$plus",
         "He",
         "sat",
-        "on",
+        "$pointing_up",
         "$pointing_back.",
       ],
     },
