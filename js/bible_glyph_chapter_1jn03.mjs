@@ -500,7 +500,7 @@ export function bible_glyph_chapter_1jn03() {
           "$pointing_back,",
           "$gear+question",
           "can",
-          "the",
+          "$pin",
           "$heart_red",
           "of",
           "$heart_on_fire",
