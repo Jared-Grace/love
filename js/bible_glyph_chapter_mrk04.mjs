@@ -884,7 +884,7 @@ export function bible_glyph_chapter_mrk04() {
         words: [
           "Without",
           "a",
-          "parable",
+          "$framed_picture",
           "He",
           "did",
           "$no_entry",
