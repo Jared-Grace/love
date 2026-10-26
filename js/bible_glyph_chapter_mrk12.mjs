@@ -103,7 +103,7 @@ export function bible_glyph_chapter_mrk12() {
         "he",
         "$hand_sending",
         "$pointing_back",
-        "another",
+        "$plus+one",
         "$kneeling,",
         "and",
         "they",
