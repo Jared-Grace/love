@@ -517,7 +517,7 @@ export function bible_glyph_chapter_isa01() {
           "case",
           "of",
           "the",
-          "widow.",
+          "$widow.",
         ],
       },
       {
