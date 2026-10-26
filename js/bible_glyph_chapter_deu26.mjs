@@ -107,7 +107,7 @@ export function bible_glyph_chapter_deu26() {
           "the",
           "$priest",
           "who",
-          "is",
+          "$link",
           "serving",
           "at",
           "that",
