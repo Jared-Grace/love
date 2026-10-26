@@ -918,7 +918,7 @@ export function bible_glyph_chapter_jhn01() {
           "$proper_name$Simon",
           "$rock+proper_name’s",
           "$brother,",
-          "was",
+          "$link",
           "one",
           "$tray_out",
           "the",
