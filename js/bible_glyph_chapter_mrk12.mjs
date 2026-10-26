@@ -77,7 +77,7 @@ export function bible_glyph_chapter_mrk12() {
         "$fruit",
         "of",
         "$pin",
-        "vineyard.",
+        "$vineyard.",
       ],
     },
     {
