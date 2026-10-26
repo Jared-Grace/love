@@ -569,7 +569,7 @@ export function bible_glyph_chapter_jhn01() {
           "nor",
           "$heart_on_fire+i_am,",
           "nor",
-          "the",
+          "$pin",
           "$megaphone?”",
         ],
       },
