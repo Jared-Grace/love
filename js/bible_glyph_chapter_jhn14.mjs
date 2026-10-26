@@ -209,7 +209,7 @@ export function bible_glyph_chapter_jhn14() {
           "“$crown,",
           "$television",
           "us",
-          "the",
+          "$pin",
           "$father",
           "$plus",
           "that",
