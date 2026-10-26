@@ -274,7 +274,7 @@ export function bible_glyph_chapter_mrk04() {
           "to",
           "$pointing_back,",
           "To",
-          "you",
+          "$you",
           "has",
           "been",
           "$hands_giving",
