@@ -333,7 +333,7 @@ export function bible_glyph_chapter_jhn10() {
           "$plus",
           "the",
           "$wolf",
-          "pounces",
+          "$hand+fast_forward",
           "on",
           "$pointing_back",
           "$plus",
