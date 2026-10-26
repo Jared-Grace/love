@@ -186,7 +186,7 @@ export function bible_glyph_chapter_rev01() {
           "$plus",
           "has",
           "$hammer",
-          "us",
+          "$me",
           "a",
           "$castle,",
           "priests",
