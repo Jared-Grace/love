@@ -617,7 +617,7 @@ export function bible_glyph_chapter_jhn03() {
       {
         verse_number: 24,
         words: [
-          "(For",
+          "($information",
           "$proper_name$John",
           "had",
           "$no_entry+hourglass_not_done",
