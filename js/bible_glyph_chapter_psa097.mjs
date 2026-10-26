@@ -235,7 +235,7 @@ export function bible_glyph_chapter_psa097() {
       {
         verse_number: 12,
         words: [
-          "Rejoice",
+          "$beaming+doing",
           "in",
           "the",
           "$i_am,",
