@@ -95,7 +95,7 @@ export function bible_glyph_chapter_jon03() {
           "$sun",
           "of",
           "his",
-          "journey,",
+          "$walking+thing,",
           "$dove+proper_name",
           "set",
           "out",
