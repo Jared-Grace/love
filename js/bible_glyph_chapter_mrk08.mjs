@@ -720,7 +720,7 @@ export function bible_glyph_chapter_mrk08() {
           "You",
           "are",
           "John",
-          "the",
+          "$pin",
           "$diving_mask+doer,",
           "$plus",
           "others",
