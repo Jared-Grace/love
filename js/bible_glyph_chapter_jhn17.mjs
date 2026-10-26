@@ -295,7 +295,7 @@ export function bible_glyph_chapter_jhn17() {
           "no",
           "longer",
           "$tray_in",
-          "the",
+          "$pin",
           "$globe,",
           "$plus",
           "$pointing_back",
