@@ -37,7 +37,7 @@ export function bible_glyph_chapter_jol03() {
           "I",
           "will",
           "$tray_in+doing",
-          "all",
+          "$all",
           "the",
           "$map",
           "and",
