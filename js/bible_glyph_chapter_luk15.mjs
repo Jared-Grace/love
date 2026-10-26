@@ -714,7 +714,7 @@ export function bible_glyph_chapter_luk15() {
         "has",
         "returned,",
         "$plus",
-        "your",
+        "$you",
         "$father",
         "has",
         "killed",
