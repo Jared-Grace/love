@@ -530,7 +530,7 @@ export function bible_glyph_chapter_jhn20() {
           "$cross",
           "$footprints",
           "$plus",
-          "stood",
+          "$person+round_pushpin",
           "among",
           "them",
           "$plus",
