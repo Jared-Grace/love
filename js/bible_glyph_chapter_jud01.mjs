@@ -345,7 +345,7 @@ export function bible_glyph_chapter_jud01() {
       {
         verse_number: 11,
         words: [
-          "Woe",
+          "$weary_face",
           "to",
           "$pointing_back!",
           "$pointing",
