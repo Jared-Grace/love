@@ -381,7 +381,7 @@ export function bible_glyph_chapter_1jn05() {
           "will,",
           "He",
           "$ear",
-          "us.",
+          "$me.",
         ],
       },
       {
