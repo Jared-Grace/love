@@ -219,7 +219,7 @@ export function bible_glyph_chapter_psa139() {
           "If",
           "I",
           "$speech,",
-          "Surely",
+          "$check+exclamation",
           "the",
           "$darkness",
           "will",
