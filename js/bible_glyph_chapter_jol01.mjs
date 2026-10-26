@@ -237,7 +237,7 @@ export function bible_glyph_chapter_jol01() {
           "husband",
           "of",
           "her",
-          "youth.",
+          "$child+flexed_biceps+thing.",
         ],
       },
       {
