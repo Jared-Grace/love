@@ -194,7 +194,7 @@ export function bible_glyph_chapter_1jn03() {
           "let",
           "no",
           "one",
-          "deceive",
+          "$dizzy+doing",
           "you:",
           "The",
           "one",
