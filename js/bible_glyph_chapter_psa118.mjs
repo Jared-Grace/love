@@ -33,7 +33,7 @@ export function bible_glyph_chapter_psa118() {
         verse_number: 2,
         words: [
           "Let",
-          "Israel",
+          "$wrestling+heart_on_fire",
           "$speech:",
           "His",
           "$gift",
