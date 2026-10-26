@@ -866,7 +866,7 @@ export function bible_glyph_chapter_ezk33() {
           "$father+map",
           "was",
           "only",
-          "one,",
+          "$one,",
           "yet",
           "he",
           "possessed",
