@@ -214,7 +214,7 @@ export function bible_glyph_chapter_luk24() {
         verse_number: 10,
         words: [
           "It",
-          "was",
+          "$link",
           "$proper_name$Mary",
           "$proper_name$Magdalene,",
           "$plus",
