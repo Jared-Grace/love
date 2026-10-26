@@ -167,7 +167,7 @@ export function bible_glyph_chapter_3jn01() {
           "nothing",
           "$away",
           "$pin",
-          "Gentiles.",
+          "$map+describing.",
         ],
       },
       {
