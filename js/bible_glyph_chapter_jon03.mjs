@@ -222,7 +222,7 @@ export function bible_glyph_chapter_jon03() {
           "be",
           "covered",
           "with",
-          "sackcloth,",
+          "$sackcloth,",
           "and",
           "have",
           "everyone",
