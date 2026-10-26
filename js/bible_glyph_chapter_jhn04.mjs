@@ -1113,7 +1113,7 @@ export function bible_glyph_chapter_jhn04() {
       {
         verse_number: 46,
         words: [
-          "So",
+          "$right_arrow",
           "He",
           "$footprints",
           "once",
