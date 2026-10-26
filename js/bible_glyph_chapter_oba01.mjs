@@ -215,7 +215,7 @@ export function bible_glyph_chapter_oba01() {
           "you",
           "to",
           "the",
-          "border;",
+          "$passport_control;",
           "the",
           "men",
           "at",
