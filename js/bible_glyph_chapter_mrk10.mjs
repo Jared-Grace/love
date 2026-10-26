@@ -254,7 +254,7 @@ export function bible_glyph_chapter_mrk10() {
         "$plus+one,",
         "she",
         "commits",
-        "adultery.”",
+        "$broken_heart+ring+doing.”",
       ],
     },
     {
