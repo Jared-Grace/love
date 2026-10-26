@@ -1036,7 +1036,7 @@ export function bible_glyph_chapter_jhn04() {
           "man",
           "truly",
           "is",
-          "the",
+          "$pin",
           "$rescue+doer",
           "of",
           "the",
