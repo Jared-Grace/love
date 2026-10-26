@@ -790,7 +790,7 @@ export function bible_glyph_chapter_jhn01() {
           "$plus",
           "$witness+doing$ed",
           "$pointing",
-          "this",
+          "$flashlight",
           "is",
           "the",
           "$son",
