@@ -219,7 +219,7 @@ export function bible_glyph_chapter_jhn02() {
           "from,",
           "but",
           "the",
-          "servants",
+          "$bellhop_bell+doer",
           "who",
           "had",
           "drawn",
