@@ -768,7 +768,7 @@ export function bible_glyph_chapter_jhn20() {
           "$plus",
           "put",
           "it",
-          "into",
+          "$toward+tray_in",
           "$me",
           "side.",
           "$plus",
