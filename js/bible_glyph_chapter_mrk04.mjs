@@ -118,7 +118,7 @@ export function bible_glyph_chapter_mrk04() {
         words: [
           "$plus",
           "some",
-          "fell",
+          "$person+pointing_down",
           "on",
           "rocky",
           "ground,",
