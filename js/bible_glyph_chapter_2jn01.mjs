@@ -289,7 +289,7 @@ export function bible_glyph_chapter_2jn01() {
           "$no_entry",
           "$hand_receiving",
           "$pointing_back",
-          "into",
+          "$toward+tray_in",
           "your",
           "house,",
           "$plus",
