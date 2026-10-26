@@ -90,7 +90,7 @@ export function bible_glyph_chapter_luk24() {
           "$two",
           "$man_beard",
           "$tray_in",
-          "radiant",
+          "$cloud_with_lightning+doing",
           "$t_shirt+sparkles",
           "stood",
           "beside",
