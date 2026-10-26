@@ -148,7 +148,7 @@ export function bible_glyph_chapter_rut04() {
           "do",
           "so.",
           "But",
-          "if",
+          "$traffic_light",
           "you",
           "will",
           "$no_entry",
