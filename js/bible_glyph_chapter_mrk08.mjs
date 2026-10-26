@@ -396,7 +396,7 @@ export function bible_glyph_chapter_mrk08() {
           "began",
           "to",
           "discuss",
-          "with",
+          "$toward",
           "$arrow_both_ways",
           "the",
           "fact",
