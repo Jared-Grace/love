@@ -991,7 +991,7 @@ export function bible_glyph_chapter_mrk04() {
           "$pin",
           "$ship+back,",
           "sleeping",
-          "on",
+          "$pointing_up",
           "$pin",
           "cushion.",
           "$plus",
