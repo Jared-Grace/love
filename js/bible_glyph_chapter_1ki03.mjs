@@ -755,7 +755,7 @@ export function bible_glyph_chapter_1ki03() {
         verse_number: 22,
         words: [
           "The",
-          "other",
+          "$plus+one",
           "$woman",
           "$speech,",
           "$no_entry,",
