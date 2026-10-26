@@ -79,7 +79,7 @@ export function bible_glyph_chapter_1jn05() {
           "$heart_on_fire,",
           "$right_arrow+toward",
           "we",
-          "keep",
+          "$guard",
           "$pointing_back",
           "$scroll$s.",
           "$plus",
