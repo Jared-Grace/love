@@ -40,7 +40,7 @@ export function bible_glyph_chapter_jud01() {
           "for",
           "$cross",
           "$oil,",
-          "called:",
+          "$waving_hand+describing:",
         ],
       },
       {
