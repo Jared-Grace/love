@@ -602,7 +602,7 @@ export function bible_glyph_chapter_mat05() {
           "your",
           "$brother",
           "has",
-          "something",
+          "$joker",
           "$pointing_down",
           "you,",
         ],
