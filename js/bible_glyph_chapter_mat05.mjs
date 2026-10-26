@@ -197,7 +197,7 @@ export function bible_glyph_chapter_mat05() {
           "$gift+smile",
           "$link",
           "you",
-          "when",
+          "$back+clock",
           "people",
           "insult",
           "you",
