@@ -15,7 +15,7 @@ export function bible_glyph_chapter_psa015() {
         words: [
           "O",
           "$i_am,",
-          "who",
+          "$person+question",
           "may",
           "abide",
           "in",
