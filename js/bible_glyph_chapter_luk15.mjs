@@ -393,7 +393,7 @@ export function bible_glyph_chapter_luk15() {
         "$city+person",
         "of",
         "that",
-        "country,",
+        "$map+round_pushpin,",
         "$plus",
         "he",
         "sent",
