@@ -644,7 +644,7 @@ export function bible_glyph_chapter_jhn20() {
         words: [
           "$curving_right",
           "$proper_name$Thomas,",
-          "one",
+          "$one",
           "$tray_out",
           "the",
           "Twelve,",
