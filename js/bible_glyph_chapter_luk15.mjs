@@ -270,7 +270,7 @@ export function bible_glyph_chapter_luk15() {
         "$angel",
         "of",
         "$heart_on_fire",
-        "over",
+        "$pointing_up",
         "one",
         "$bow+doer",
         "who",
