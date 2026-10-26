@@ -1,7 +1,8 @@
-import { app_code_lesson_validity_base } from "./app_code_lesson_validity_base.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_batch_question_answer_fns_validity_identifier } from "./app_code_batch_question_answer_fns_validity_identifier.mjs";
 import { app_code_lesson_symbols_counting_quiz_backwards_on_button } from "./app_code_lesson_symbols_counting_quiz_backwards_on_button.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_validity_base } from "./app_code_lesson_validity_base.mjs";
+import { app_code_identifier_validity_wrong_say } from "./app_code_identifier_validity_wrong_say.mjs";
 export function app_code_lesson_identifiers_valid(
   name_id,
   above,
@@ -23,6 +24,7 @@ export function app_code_lesson_identifiers_valid(
     on_question,
     example_answer_label,
     backwards_answer_on_button,
+    wrong_say: app_code_identifier_validity_wrong_say,
   });
   return lesson;
 }

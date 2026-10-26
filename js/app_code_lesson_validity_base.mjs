@@ -1,7 +1,6 @@
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_quiz_backwards_label_answer_validity } from "./app_code_quiz_backwards_label_answer_validity.mjs";
 import { noop } from "./noop.mjs";
-import { app_code_validity_wrong_say } from "./app_code_validity_wrong_say.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
 import { app_code_lesson_quizzes } from "./app_code_lesson_quizzes.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
@@ -13,6 +12,7 @@ export function app_code_lesson_validity_base({
   on_question,
   example_answer_label,
   backwards_answer_on_button,
+  wrong_say,
 }) {
   let quiz_label = example_answer_label;
   let example_question_label = app_code_label_code_question();
@@ -25,7 +25,7 @@ export function app_code_lesson_validity_base({
     answer_label: quiz_label,
     answer_on_button: noop,
     answer_count_override: null,
-    wrong_say: app_code_validity_wrong_say,
+    wrong_say,
   };
   let backwards = {
     question_label: backwards_question_label,
