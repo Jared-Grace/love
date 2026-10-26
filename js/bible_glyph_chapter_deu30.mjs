@@ -248,7 +248,7 @@ export function bible_glyph_chapter_deu30() {
           "$all",
           "$flashlight+flashlight",
           "$speech+raised_back_of_hand",
-          "upon",
+          "$pointing_up",
           "your",
           "enemies",
           "who",
