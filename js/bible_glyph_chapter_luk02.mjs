@@ -455,7 +455,7 @@ export function bible_glyph_chapter_luk02() {
         "$ear",
         "it",
         "were",
-        "amazed",
+        "$astonished",
         "at",
         "what",
         "the",
