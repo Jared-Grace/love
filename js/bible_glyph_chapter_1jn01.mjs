@@ -278,7 +278,7 @@ export function bible_glyph_chapter_1jn01() {
           "$link",
           "$anchor+describing",
           "$plus",
-          "just",
+          "$ruler",
           "to",
           "forgive",
           "us",
