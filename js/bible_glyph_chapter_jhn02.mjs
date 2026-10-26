@@ -614,7 +614,7 @@ export function bible_glyph_chapter_jhn02() {
           "did",
           "$no_entry",
           "$anchor+doing",
-          "Himself",
+          "$pointing_back+repeat",
           "to",
           "$pointing_back,",
           "because",
