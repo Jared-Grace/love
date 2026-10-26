@@ -592,7 +592,7 @@ export function bible_glyph_chapter_jhn02() {
           "$lamb+door,",
           "$tray_in",
           "the",
-          "Feast,",
+          "$party_popper,",
           "many",
           "$anchor+doing",
           "in",
