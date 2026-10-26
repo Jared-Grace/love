@@ -537,7 +537,7 @@ export function bible_glyph_chapter_ezk18() {
           "for",
           "his",
           "$father,",
-          "because",
+          "$pointing",
           "he",
           "practiced",
           "extortion",
