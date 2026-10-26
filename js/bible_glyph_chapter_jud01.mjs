@@ -706,7 +706,7 @@ export function bible_glyph_chapter_jud01() {
           "through",
           "$cross",
           "$oil",
-          "our",
+          "$me",
           "$crown,",
           "be",
           "$star,",
