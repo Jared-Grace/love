@@ -611,7 +611,7 @@ export function bible_glyph_chapter_isa01() {
           "$question+likeness",
           "the",
           "$anchor",
-          "city",
+          "$city+wall",
           "has",
           "become",
           "a",
