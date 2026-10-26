@@ -1228,7 +1228,7 @@ export function bible_glyph_chapter_1ki13() {
         verse_number: 34,
         words: [
           "And",
-          "this",
+          "$flashlight",
           "$speech",
           "became",
           "the",
