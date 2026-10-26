@@ -278,7 +278,7 @@ export function bible_glyph_chapter_psa139() {
           "in",
           "my",
           "mother's",
-          "womb.",
+          "$baby+house.",
         ],
       },
       {
