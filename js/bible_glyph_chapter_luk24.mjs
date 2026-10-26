@@ -86,7 +86,7 @@ export function bible_glyph_chapter_luk24() {
           "puzzling",
           "over",
           "$flashlight,",
-          "suddenly",
+          "$exclamation",
           "two",
           "$man_beard",
           "$tray_in",
