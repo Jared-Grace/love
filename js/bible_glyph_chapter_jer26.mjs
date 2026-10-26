@@ -317,7 +317,7 @@ export function bible_glyph_chapter_jer26() {
           "like",
           "$proper_name$Shiloh",
           "and",
-          "this",
+          "$flashlight",
           "$city",
           "will",
           "be",
