@@ -573,7 +573,7 @@ export function bible_glyph_chapter_jon01() {
           "$dove+proper_name,",
           "and",
           "$dove+proper_name",
-          "spent",
+          "$link",
           "three",
           "$sun",
           "and",
