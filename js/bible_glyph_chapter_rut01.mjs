@@ -281,7 +281,7 @@ export function bible_glyph_chapter_rut01() {
           "$woman",
           "to",
           "$magnifying_glass+exclamation",
-          "rest",
+          "$seat+thing",
           "in",
           "the",
           "$house",
