@@ -352,7 +352,7 @@ export function bible_glyph_chapter_jol01() {
           "orchard",
           "are",
           "withered.",
-          "Surely",
+          "$pointing",
           "the",
           "joy",
           "$tray_out",
