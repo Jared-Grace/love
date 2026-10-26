@@ -216,7 +216,7 @@ export function bible_glyph_chapter_psa111() {
           "$nerd_face+thing.",
           "His",
           "$clapping_hands+thing",
-          "endures",
+          "$person+round_pushpin",
           "forever.",
         ],
       },
