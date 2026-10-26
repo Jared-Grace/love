@@ -733,7 +733,7 @@ export function bible_glyph_chapter_mrk04() {
           "produces",
           "a",
           "crop:",
-          "first",
+          "$first_place+manner",
           "the",
           "stalk,",
           "then",
