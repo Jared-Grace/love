@@ -729,7 +729,7 @@ export function bible_glyph_chapter_jhn09() {
           "you",
           "$shooting_star+doing",
           "to",
-          "become",
+          "$butterfly",
           "His",
           "$learner?",
         ],
