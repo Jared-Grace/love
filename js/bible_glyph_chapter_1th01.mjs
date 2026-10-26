@@ -87,7 +87,7 @@ export function bible_glyph_chapter_1th01() {
           "$cross",
           "$oil,",
           "before",
-          "our",
+          "$me",
           "$heart_on_fire",
           "$plus",
           "$father.",
