@@ -334,7 +334,7 @@ export function bible_glyph_chapter_rev10() {
           "$pointing_back.",
           "It",
           "will",
-          "make",
+          "$lemon+doing",
           "your",
           "stomach",
           "bitter,",
