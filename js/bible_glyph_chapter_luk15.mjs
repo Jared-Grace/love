@@ -538,7 +538,7 @@ export function bible_glyph_chapter_luk15() {
         "was",
         "filled",
         "with",
-        "compassion.",
+        "$heart_red+pleading.",
         "$plus",
         "he",
         "ran",
