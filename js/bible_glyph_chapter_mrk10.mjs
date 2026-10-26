@@ -307,7 +307,7 @@ export function bible_glyph_chapter_mrk10() {
         "to",
         "$me;",
         "$no_entry",
-        "hinder",
+        "$stop_sign",
         "$pointing_back.",
         "For",
         "to",
