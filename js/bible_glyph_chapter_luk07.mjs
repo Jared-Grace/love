@@ -904,7 +904,7 @@ export function bible_glyph_chapter_luk07() {
         "$person",
         "of",
         "this",
-        "generation,",
+        "$dna,",
         "$plus",
         "what",
         "are",
