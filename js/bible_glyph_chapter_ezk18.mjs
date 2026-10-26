@@ -170,7 +170,7 @@ export function bible_glyph_chapter_ezk18() {
           "neighbor’s",
           "$woman",
           "$no_entry",
-          "approach",
+          "$magnet+doing",
           "a",
           "$woman",
           "during",
