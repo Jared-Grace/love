@@ -309,7 +309,7 @@ export function bible_glyph_chapter_ezk33() {
           "But",
           "if",
           "$you",
-          "warn",
+          "$rotating_light+doing",
           "the",
           "$thumbs_down",
           "one",
