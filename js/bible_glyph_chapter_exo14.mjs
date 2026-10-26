@@ -564,7 +564,7 @@ export function bible_glyph_chapter_exo14() {
           "withdrew",
           "and",
           "$walking",
-          "behind",
+          "$next_track",
           "them.",
           "The",
           "pillar",
