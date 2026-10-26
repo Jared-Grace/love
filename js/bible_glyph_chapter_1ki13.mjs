@@ -37,7 +37,7 @@ export function bible_glyph_chapter_1ki13() {
           "standing",
           "$pointing_up",
           "the",
-          "altar",
+          "$altar",
           "to",
           "burn",
           "incense.",
