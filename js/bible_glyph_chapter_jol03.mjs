@@ -196,7 +196,7 @@ export function bible_glyph_chapter_jol03() {
       {
         verse_number: 7,
         words: [
-          "Behold,",
+          "$exclamation,",
           "I",
           "will",
           "rouse",
