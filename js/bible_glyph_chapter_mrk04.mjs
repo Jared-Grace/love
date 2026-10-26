@@ -150,7 +150,7 @@ export function bible_glyph_chapter_mrk04() {
           "$back+clock",
           "the",
           "sun",
-          "rose",
+          "$sun+up_arrow+doing",
           "the",
           "seedlings",
           "were",
