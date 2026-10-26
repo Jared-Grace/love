@@ -163,7 +163,7 @@ export function bible_glyph_chapter_rev10() {
           "I",
           "had",
           "$eye",
-          "standing",
+          "$person+round_pushpin",
           "on",
           "$pin",
           "$sea",
