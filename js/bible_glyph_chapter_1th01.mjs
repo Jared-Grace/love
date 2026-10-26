@@ -231,7 +231,7 @@ export function bible_glyph_chapter_1th01() {
           "out,",
           "so",
           "that",
-          "we",
+          "$me",
           "do",
           "$no_entry",
           "$sos_button",
