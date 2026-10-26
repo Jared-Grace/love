@@ -292,7 +292,7 @@ export function bible_glyph_chapter_jhn14() {
           "on",
           "My",
           "own.",
-          "Instead,",
+          "$curving_right,",
           "$pin",
           "$father",
           "$tray_in",
