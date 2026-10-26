@@ -746,7 +746,7 @@ export function bible_glyph_chapter_jhn20() {
       {
         verse_number: 27,
         words: [
-          "Then",
+          "$clock+next_track",
           "He",
           "$speech",
           "to",
