@@ -227,7 +227,7 @@ export function bible_glyph_chapter_rut04() {
           "$skull+doing",
           "on",
           "his",
-          "inheritance.",
+          "$inheritance.",
         ],
       },
       {
