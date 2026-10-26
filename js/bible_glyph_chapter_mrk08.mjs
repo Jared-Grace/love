@@ -313,7 +313,7 @@ export function bible_glyph_chapter_mrk08() {
           "$speech",
           "you,",
           "no",
-          "sign",
+          "$placard",
           "will",
           "be",
           "$hands_giving",
