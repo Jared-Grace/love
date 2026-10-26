@@ -559,7 +559,7 @@ export function bible_glyph_chapter_jhn02() {
           "$skull,",
           "$pointing_back",
           "$learner",
-          "remembered",
+          "$reminder_ribbon+doing",
           "$pointing",
           "He",
           "had",
