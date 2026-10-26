@@ -183,7 +183,7 @@ export function bible_glyph_chapter_hag01() {
           "put",
           "into",
           "a",
-          "bag",
+          "$knot+package",
           "pierced",
           "through.",
         ],
