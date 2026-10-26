@@ -620,7 +620,7 @@ export function bible_glyph_chapter_rut01() {
           "$speech.",
           "$waving_hand",
           "me",
-          "Mara,",
+          "$lemon+proper_name,",
           "because",
           "the",
           "$might",
