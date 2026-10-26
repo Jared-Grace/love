@@ -276,7 +276,7 @@ export function bible_glyph_chapter_jhn02() {
         words: [
           "$cross",
           "$hammer",
-          "this,",
+          "$flashlight,",
           "the",
           "first",
           "of",
