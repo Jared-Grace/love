@@ -234,7 +234,7 @@ export function bible_glyph_chapter_luk24() {
           "who",
           "$speech",
           "this",
-          "to",
+          "$toward",
           "$pin",
           "$hand_sending+doer.",
         ],
