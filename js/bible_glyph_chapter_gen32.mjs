@@ -499,7 +499,7 @@ export function bible_glyph_chapter_gen32() {
           "whose",
           "animals",
           "are",
-          "these",
+          "$flashlight+flashlight",
           "before",
           "you?",
         ],
