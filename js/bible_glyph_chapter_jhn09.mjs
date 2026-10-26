@@ -578,7 +578,7 @@ export function bible_glyph_chapter_jhn09() {
           "of",
           "the",
           "$menorah.",
-          "For",
+          "$information",
           "the",
           "$menorah",
           "had",
