@@ -134,7 +134,7 @@ export function bible_glyph_chapter_exo20() {
           "of",
           "those",
           "who",
-          "hate",
+          "$heart_red+thumbs_down",
           "Me,",
         ],
       },
