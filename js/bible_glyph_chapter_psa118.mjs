@@ -577,7 +577,7 @@ export function bible_glyph_chapter_psa118() {
           "$heart_on_fire;",
           "I",
           "will",
-          "exalt",
+          "$up_arrow",
           "You.",
         ],
       },
