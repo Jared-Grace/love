@@ -17,7 +17,7 @@ export function bible_glyph_chapter_mrk12() {
         "to",
         "$pointing_back",
         "$tray_in",
-        "parables:",
+        "$framed_picture:",
         "A",
         "$person",
         "planted",
