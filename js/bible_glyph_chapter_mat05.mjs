@@ -762,7 +762,7 @@ export function bible_glyph_chapter_mat05() {
           "you",
           "to",
           "$wilted_flower",
-          "one",
+          "$one",
           "part",
           "of",
           "your",
