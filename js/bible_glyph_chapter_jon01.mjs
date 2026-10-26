@@ -196,7 +196,7 @@ export function bible_glyph_chapter_jon01() {
           "him",
           "and",
           "$speech,",
-          "How",
+          "$flashlight+question",
           "can",
           "you",
           "sleep?",
