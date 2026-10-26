@@ -69,7 +69,7 @@ export function bible_glyph_chapter_luk15() {
     {
       verse_number: 4,
       words: [
-        "What",
+        "$flashlight+question",
         "$person",
         "$tray_out",
         "you,",
