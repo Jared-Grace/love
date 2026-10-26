@@ -763,7 +763,7 @@ export function bible_glyph_chapter_jdg13() {
           "$speech",
           "to",
           "him,",
-          "“If",
+          "“$crossed_fingers+manner",
           "the",
           "$i_am",
           "had",
