@@ -782,7 +782,7 @@ export function bible_glyph_chapter_mrk08() {
           "He",
           "began",
           "to",
-          "teach",
+          "$teacher+doing",
           "$pointing_back",
           "$pointing",
           "the",
