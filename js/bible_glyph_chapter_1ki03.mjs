@@ -108,7 +108,7 @@ export function bible_glyph_chapter_1ki03() {
           "except",
           "that",
           "$pointing_back",
-          "sacrificed",
+          "$sacrifice",
           "and",
           "burned",
           "incense",
