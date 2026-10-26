@@ -476,7 +476,7 @@ export function bible_glyph_chapter_jhn09() {
           "received",
           "his",
           "sight,",
-          "until",
+          "$finish",
           "they",
           "summoned",
           "his",
