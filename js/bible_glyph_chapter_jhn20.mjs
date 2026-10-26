@@ -52,7 +52,7 @@ export function bible_glyph_chapter_jhn20() {
       {
         verse_number: 2,
         words: [
-          "So",
+          "$right_arrow",
           "she",
           "ran",
           "$plus",
