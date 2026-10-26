@@ -19,7 +19,7 @@ export function bible_glyph_chapter_mrk04() {
           "Jesus",
           "began",
           "to",
-          "teach",
+          "$teacher+doing",
           "beside",
           "the",
           "$sea.",
