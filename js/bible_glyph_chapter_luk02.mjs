@@ -371,7 +371,7 @@ export function bible_glyph_chapter_luk02() {
         "had",
         "left",
         "$pointing_back",
-        "into",
+        "$toward+tray_in",
         "the",
         "$sky,",
         "the",
