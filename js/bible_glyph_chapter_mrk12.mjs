@@ -659,7 +659,7 @@ export function bible_glyph_chapter_mrk12() {
         "be",
         "given",
         "in",
-        "marriage.",
+        "$ring+hands_giving+doing.",
         "Instead,",
         "they",
         "will",
