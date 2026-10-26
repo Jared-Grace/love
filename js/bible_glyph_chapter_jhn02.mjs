@@ -636,7 +636,7 @@ export function bible_glyph_chapter_jhn02() {
           "anyone",
           "should",
           "$witness+doing",
-          "about",
+          "$clockwise_arrows",
           "the",
           "$person,",
           "for",
