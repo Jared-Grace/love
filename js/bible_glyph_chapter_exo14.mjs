@@ -821,7 +821,7 @@ export function bible_glyph_chapter_exo14() {
           "out",
           "his",
           "$hand",
-          "over",
+          "$pointing_up",
           "the",
           "$sea,",
           "and",
