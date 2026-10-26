@@ -776,7 +776,7 @@ export function bible_glyph_chapter_mrk12() {
       verse_number: 29,
       words: [
         "$cross",
-        "replied,",
+        "$speech+turn_back,",
         "$pointing",
         "The",
         "most",
