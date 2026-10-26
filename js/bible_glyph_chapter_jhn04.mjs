@@ -911,7 +911,7 @@ export function bible_glyph_chapter_jhn04() {
         words: [
           "$me",
           "$hand_sending",
-          "you",
+          "$you",
           "to",
           "reap",
           "what",
