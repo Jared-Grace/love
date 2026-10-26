@@ -132,7 +132,7 @@ export function bible_glyph_chapter_psa101() {
           "I",
           "will",
           "$no_entry",
-          "endure.",
+          "$might+doing.",
         ],
       },
       {
