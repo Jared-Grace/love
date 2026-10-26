@@ -216,7 +216,7 @@ export function bible_glyph_chapter_rev01() {
           "He",
           "is",
           "$footprints",
-          "with",
+          "$linked_paperclips",
           "the",
           "clouds,",
           "$plus",
