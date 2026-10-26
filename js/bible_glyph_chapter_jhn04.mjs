@@ -222,7 +222,7 @@ export function bible_glyph_chapter_jhn04() {
           "‘$hands_giving",
           "Me",
           "a",
-          "drink,’",
+          "$cup_with_straw,’",
           "you",
           "would",
           "have",
