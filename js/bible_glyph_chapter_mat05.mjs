@@ -932,7 +932,7 @@ export function bible_glyph_chapter_mat05() {
           "$earth,",
           "$pointing",
           "it",
-          "is",
+          "$link",
           "$pointing_back",
           "$foot+seat;",
           "or",
