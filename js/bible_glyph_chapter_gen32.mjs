@@ -212,7 +212,7 @@ export function bible_glyph_chapter_gen32() {
         words: [
           "He",
           "$speech,",
-          "If",
+          "$traffic_light",
           "$proper_name$Esau",
           "$footprints",
           "one",
