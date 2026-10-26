@@ -50,7 +50,7 @@ export function bible_glyph_chapter_jhn04() {
           "$pointing_back",
           "who",
           "$diving_mask,",
-          "but",
+          "$curving_up",
           "$pointing_back",
           "$learner),",
         ],
