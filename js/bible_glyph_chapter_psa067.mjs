@@ -88,7 +88,7 @@ export function bible_glyph_chapter_psa067() {
           "judge",
           "the",
           "$family",
-          "justly",
+          "$mountain+straight_ruler",
           "and",
           "lead",
           "the",
