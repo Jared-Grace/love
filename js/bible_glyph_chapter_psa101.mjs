@@ -52,7 +52,7 @@ export function bible_glyph_chapter_psa101() {
           "will",
           "$walking",
           "with",
-          "integrity",
+          "$full_moon+heart_red",
           "of",
           "$heart_organ",
           "in",
