@@ -587,7 +587,7 @@ export function bible_glyph_chapter_mrk10() {
         "$pointing_back,",
         "“$child,",
         "$gear+question",
-        "hard",
+        "$weary_face+describing",
         "it",
         "is",
         "to",
