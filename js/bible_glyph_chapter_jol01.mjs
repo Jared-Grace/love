@@ -282,7 +282,7 @@ export function bible_glyph_chapter_jol01() {
           "$loudly_crying+coffin.",
           "$pointing",
           "the",
-          "grain",
+          "$wheat+barley",
           "is",
           "destroyed,",
           "the",
