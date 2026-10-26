@@ -745,7 +745,7 @@ export function bible_glyph_chapter_1jn02() {
           "$pointing_back",
           "$pointing_up+angel+doing",
           "to",
-          "us:",
+          "$me:",
           "eternal",
           "$sprout.",
         ],
