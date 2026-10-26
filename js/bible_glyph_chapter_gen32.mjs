@@ -823,7 +823,7 @@ export function bible_glyph_chapter_gen32() {
           "But",
           "he",
           "$speech,",
-          "Why",
+          "$flashlight+question",
           "do",
           "you",
           "ask",
