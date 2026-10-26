@@ -793,7 +793,7 @@ export function bible_glyph_chapter_mrk12() {
         "the",
         "$crown",
         "$link",
-        "One.",
+        "$one.",
       ],
     },
     {
