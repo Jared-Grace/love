@@ -231,7 +231,7 @@ export function bible_glyph_chapter_hag02() {
           "and",
           "I",
           "will",
-          "fill",
+          "$battery",
           "this",
           "$house",
           "with",
