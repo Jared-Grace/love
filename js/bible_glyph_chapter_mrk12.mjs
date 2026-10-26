@@ -1025,7 +1025,7 @@ export function bible_glyph_chapter_mrk12() {
         "$son?",
         "$plus",
         "$pin",
-        "large",
+        "$multiply",
         "$crowd",
         "$ear",
         "to",
