@@ -245,7 +245,7 @@ export function bible_glyph_chapter_jhn10() {
           "$footprints+tray_out",
           "out",
           "$plus",
-          "find",
+          "$magnifying_glass+exclamation",
           "$sheep+herb+thing.",
         ],
       },
