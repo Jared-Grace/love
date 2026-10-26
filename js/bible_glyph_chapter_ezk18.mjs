@@ -676,7 +676,7 @@ export function bible_glyph_chapter_ezk18() {
           "he",
           "has",
           "$hammer+doing,",
-          "keeps",
+          "$guard",
           "all",
           "My",
           "statutes,",
