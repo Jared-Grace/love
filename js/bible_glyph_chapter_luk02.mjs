@@ -202,7 +202,7 @@ export function bible_glyph_chapter_luk02() {
         "$locked_with_key+thing",
         "$pointing_up",
         "$pointing_back",
-        "flocks",
+        "$person+sheep+thing",
         "by",
         "$night.",
       ],
