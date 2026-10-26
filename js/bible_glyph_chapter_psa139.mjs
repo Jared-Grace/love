@@ -391,7 +391,7 @@ export function bible_glyph_chapter_psa139() {
           "I",
           "were",
           "to",
-          "count",
+          "$abacus",
           "them,",
           "they",
           "would",
