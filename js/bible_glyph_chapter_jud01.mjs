@@ -219,7 +219,7 @@ export function bible_glyph_chapter_jud01() {
         words: [
           "In",
           "$people_with_bunny_ears",
-          "manner,",
+          "$gear,",
           "$proper_name$Sodom",
           "$plus",
           "$proper_name$Gomorrah",
