@@ -205,7 +205,7 @@ export function bible_glyph_chapter_gen02() {
           "$dust",
           "$tray_out",
           "the",
-          "ground",
+          "$brown_square",
           "and",
           "breathed",
           "into",
