@@ -420,7 +420,7 @@ export function bible_glyph_chapter_rut02() {
           "$heart_on_fire",
           "of",
           "$wrestling+heart_on_fire,",
-          "under",
+          "$down_arrow",
           "$back+flashlight",
           "wings",
           "you",
