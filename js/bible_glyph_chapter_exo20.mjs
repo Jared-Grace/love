@@ -268,7 +268,7 @@ export function bible_glyph_chapter_exo20() {
       {
         verse_number: 11,
         words: [
-          "For",
+          "$pointing",
           "in",
           "six",
           "$sun",
