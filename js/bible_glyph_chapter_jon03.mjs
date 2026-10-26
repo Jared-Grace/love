@@ -30,7 +30,7 @@ export function bible_glyph_chapter_jon03() {
       {
         verse_number: 2,
         words: [
-          "Get",
+          "$person+pointing_up",
           "up!",
           "$walking",
           "to",
