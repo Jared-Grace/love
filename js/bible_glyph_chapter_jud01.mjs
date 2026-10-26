@@ -292,7 +292,7 @@ export function bible_glyph_chapter_jud01() {
           "$metro+throwing",
           "over",
           "the",
-          "body",
+          "$x_ray",
           "of",
           "$fishing_pole+proper_name,",
           "did",
