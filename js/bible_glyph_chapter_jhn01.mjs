@@ -560,7 +560,7 @@ export function bible_glyph_chapter_jhn01() {
           "do",
           "you",
           "$diving_mask,",
-          "if",
+          "$traffic_light",
           "you",
           "are",
           "$no_entry",
