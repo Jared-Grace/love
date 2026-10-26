@@ -100,7 +100,7 @@ export function bible_glyph_chapter_jol03() {
           "for",
           "$wine",
           "to",
-          "drink.",
+          "$cup_with_straw.",
         ],
       },
       {
