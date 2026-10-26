@@ -1189,7 +1189,7 @@ export function bible_glyph_chapter_jhn04() {
           "“$traffic_light",
           "you",
           "$eye",
-          "signs",
+          "$placard",
           "$plus",
           "wonders,",
           "you",
