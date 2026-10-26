@@ -62,7 +62,7 @@ export function bible_glyph_chapter_jhn10() {
           "$metro",
           "the",
           "$door",
-          "is",
+          "$link",
           "the",
           "$person+sheep",
           "of",
