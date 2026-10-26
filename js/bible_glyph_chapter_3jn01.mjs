@@ -19,7 +19,7 @@ export function bible_glyph_chapter_3jn01() {
           "elder,",
           "To",
           "$proper_name$Gaius",
-          "the",
+          "$pin",
           "$heart_red+describing,",
           "whom",
           "I",
