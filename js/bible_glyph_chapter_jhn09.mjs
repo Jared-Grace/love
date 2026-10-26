@@ -955,7 +955,7 @@ export function bible_glyph_chapter_jhn09() {
           "$pointing_back;",
           "He",
           "is",
-          "the",
+          "$pin",
           "One",
           "$mouth",
           "with",
