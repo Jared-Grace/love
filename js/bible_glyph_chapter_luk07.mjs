@@ -590,7 +590,7 @@ export function bible_glyph_chapter_luk07() {
         "$tray_in",
         "that",
         "very",
-        "hour",
+        "$clock",
         "He",
         "healed",
         "many",
