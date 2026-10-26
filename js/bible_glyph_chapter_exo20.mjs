@@ -573,7 +573,7 @@ export function bible_glyph_chapter_exo20() {
           "or",
           "$moai",
           "of",
-          "gold;",
+          "$gold;",
           "you",
           "shall",
           "$no_entry",
