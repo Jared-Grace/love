@@ -920,7 +920,7 @@ export function bible_glyph_chapter_mrk08() {
         words: [
           "For",
           "$back+flashlight",
-          "wants",
+          "$shooting_star+doing",
           "to",
           "save",
           "$pointing_back",
