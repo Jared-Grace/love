@@ -579,7 +579,7 @@ export function bible_glyph_chapter_1jn02() {
           "would",
           "have",
           "remained",
-          "with",
+          "$linked_paperclips",
           "$me.",
           "$curving_up",
           "their",
