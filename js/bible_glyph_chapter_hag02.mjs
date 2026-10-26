@@ -319,7 +319,7 @@ export function bible_glyph_chapter_hag02() {
           "of",
           "the",
           "$i_am",
-          "came",
+          "$link",
           "to",
           "$proper_name$Haggai",
           "the",
