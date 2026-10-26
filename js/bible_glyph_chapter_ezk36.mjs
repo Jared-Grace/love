@@ -1037,7 +1037,7 @@ export function bible_glyph_chapter_ezk36() {
           "of",
           "the",
           "$field",
-          "plentiful,",
+          "$multiply+doing,",
           "so",
           "that",
           "you",
