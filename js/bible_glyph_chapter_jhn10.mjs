@@ -706,7 +706,7 @@ export function bible_glyph_chapter_jhn10() {
           "$hands_giving",
           "$pointing_back",
           "$sprout",
-          "eternal,",
+          "$hourglass+describing,",
           "$plus",
           "they",
           "will",
