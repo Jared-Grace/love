@@ -1208,7 +1208,7 @@ export function bible_glyph_chapter_jhn04() {
           "$pointing_back,",
           "“$crown,",
           "come",
-          "down",
+          "$walking+pointing_down",
           "before",
           "my",
           "$baby",
