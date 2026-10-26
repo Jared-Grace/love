@@ -470,7 +470,7 @@ export function bible_glyph_chapter_mrk10() {
         "have",
         "kept",
         "$tray_out",
-        "my",
+        "$me",
         "$beginner+thing.”",
       ],
     },
