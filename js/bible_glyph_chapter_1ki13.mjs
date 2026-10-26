@@ -527,7 +527,7 @@ export function bible_glyph_chapter_1ki13() {
         words: [
           "He",
           "$walking",
-          "after",
+          "$next_track",
           "the",
           "$man_beard",
           "of",
