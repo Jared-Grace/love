@@ -106,7 +106,7 @@ export function bible_glyph_chapter_psa118() {
           "$no_entry",
           "be",
           "$fear+doing.",
-          "What",
+          "$flashlight+question",
           "can",
           "$person",
           "$hammer+doing",
