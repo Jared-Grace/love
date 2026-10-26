@@ -63,7 +63,7 @@ export function bible_glyph_chapter_jon04() {
           "$proper_name$Tarshish.",
           "I",
           "$lightbulb",
-          "that",
+          "$pointing",
           "You",
           "are",
           "a",
