@@ -45,7 +45,7 @@ export function bible_glyph_chapter_jon02() {
           "the",
           "belly",
           "of",
-          "Sheol",
+          "$pointing_down+skull",
           "I",
           "called",
           "for",
