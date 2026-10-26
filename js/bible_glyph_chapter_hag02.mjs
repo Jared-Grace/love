@@ -492,7 +492,7 @@ export function bible_glyph_chapter_hag02() {
           "a",
           "$wheat+mountain",
           "of",
-          "twenty",
+          "$two+zero",
           "ephahs",
           "of",
           "grain,",
