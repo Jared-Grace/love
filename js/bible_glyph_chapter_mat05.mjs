@@ -1187,7 +1187,7 @@ export function bible_glyph_chapter_mat05() {
       {
         verse_number: 46,
         words: [
-          "If",
+          "$traffic_light",
           "you",
           "$heart_red+doing",
           "those",
