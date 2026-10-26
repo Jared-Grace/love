@@ -231,7 +231,7 @@ export function bible_glyph_chapter_deu26() {
           "over",
           "to",
           "hard",
-          "labor.",
+          "$kneeling+thing.",
         ],
       },
       {
