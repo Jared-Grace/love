@@ -477,7 +477,7 @@ export function bible_glyph_chapter_ezk33() {
           "cause",
           "him",
           "to",
-          "stumble",
+          "$hiking_boot+rock",
           "in",
           "the",
           "$sun",
