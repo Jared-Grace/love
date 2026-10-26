@@ -539,7 +539,7 @@ export function bible_glyph_chapter_jhn02() {
           "was",
           "$speech",
           "$clockwise_arrows",
-          "the",
+          "$pin",
           "temple",
           "of",
           "$pointing_back",
