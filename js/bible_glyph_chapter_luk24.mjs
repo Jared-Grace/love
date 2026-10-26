@@ -337,7 +337,7 @@ export function bible_glyph_chapter_luk24() {
           "$plus",
           "as",
           "$pointing_back",
-          "talked",
+          "$speech+crowd+doing",
           "$plus",
           "deliberated,",
           "$plus",
