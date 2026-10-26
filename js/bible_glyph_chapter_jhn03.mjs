@@ -479,7 +479,7 @@ export function bible_glyph_chapter_jhn03() {
           "$curving_right",
           "$flashlight",
           "is",
-          "the",
+          "$pin",
           "$scales+thing:",
           "The",
           "$light",
