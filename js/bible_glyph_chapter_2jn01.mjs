@@ -320,7 +320,7 @@ export function bible_glyph_chapter_2jn01() {
         words: [
           "I",
           "have",
-          "many",
+          "$multiply",
           "things",
           "to",
           "write",
