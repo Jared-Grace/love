@@ -321,7 +321,7 @@ export function bible_glyph_chapter_jhn04() {
         verse_number: 14,
         words: [
           "But",
-          "whoever",
+          "$back+flashlight",
           "drinks",
           "$tray_out",
           "the",
