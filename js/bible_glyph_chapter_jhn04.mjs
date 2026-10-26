@@ -995,7 +995,7 @@ export function bible_glyph_chapter_jhn04() {
         verse_number: 41,
         words: [
           "$plus",
-          "many",
+          "$multiply",
           "more",
           "$anchor+doing",
           "because",
