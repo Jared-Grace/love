@@ -340,7 +340,7 @@ export function bible_glyph_chapter_2jn01() {
           "to",
           "come",
           "to",
-          "you",
+          "$you",
           "$plus",
           "$mouth",
           "face",
