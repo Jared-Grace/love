@@ -245,7 +245,7 @@ export function bible_glyph_chapter_1jn04() {
           "$heart_on_fire,",
           "$pointing",
           "$heart_on_fire",
-          "is",
+          "$link",
           "$heart_red.",
         ],
       },
