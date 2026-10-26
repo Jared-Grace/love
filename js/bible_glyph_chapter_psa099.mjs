@@ -104,7 +104,7 @@ export function bible_glyph_chapter_psa099() {
           "footstool;",
           "$sparkle",
           "is",
-          "He.",
+          "$pointing_back.",
         ],
       },
       {
