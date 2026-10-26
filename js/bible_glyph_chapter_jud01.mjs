@@ -560,7 +560,7 @@ export function bible_glyph_chapter_jud01() {
           "there",
           "will",
           "be",
-          "scoffers",
+          "$squinting_face_with_tongue+doer",
           "$walking",
           "after",
           "their",
