@@ -216,7 +216,7 @@ export function bible_glyph_chapter_1jn01() {
           "we",
           "$walking",
           "$tray_in",
-          "the",
+          "$pin",
           "$light",
           "as",
           "$pointing_back",
