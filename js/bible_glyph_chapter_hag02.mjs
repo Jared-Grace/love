@@ -721,7 +721,7 @@ export function bible_glyph_chapter_hag02() {
           "$son",
           "of",
           "$question+heart_on_fire,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am,",
           "and",
