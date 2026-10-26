@@ -483,7 +483,7 @@ export function bible_glyph_chapter_gen02() {
           "$thumbs_up",
           "and",
           "$thumbs_down;",
-          "for",
+          "$pointing",
           "in",
           "the",
           "$sun",
