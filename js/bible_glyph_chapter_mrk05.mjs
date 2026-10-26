@@ -238,7 +238,7 @@ export function bible_glyph_chapter_mrk05() {
         "$pointing",
         "we",
         "are",
-        "many.”",
+        "$multiply.”",
       ],
     },
     {
