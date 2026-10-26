@@ -569,7 +569,7 @@ export function bible_glyph_chapter_luk07() {
         "$speech:",
         "Are",
         "You",
-        "the",
+        "$pin",
         "One",
         "who",
         "is",
