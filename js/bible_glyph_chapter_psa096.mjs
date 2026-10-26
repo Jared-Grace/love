@@ -68,7 +68,7 @@ export function bible_glyph_chapter_psa096() {
         verse_number: 4,
         words: [
           "$pointing",
-          "great",
+          "$top",
           "is",
           "the",
           "$i_am,",
