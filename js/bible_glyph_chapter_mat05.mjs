@@ -619,7 +619,7 @@ export function bible_glyph_chapter_mat05() {
           "$altar,",
           "$plus",
           "$walking+away.",
-          "First",
+          "$first_place+manner",
           "be",
           "reconciled",
           "to",
