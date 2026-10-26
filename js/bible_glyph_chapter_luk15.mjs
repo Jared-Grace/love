@@ -309,7 +309,7 @@ export function bible_glyph_chapter_luk15() {
         "$hands_giving",
         "$me",
         "my",
-        "share",
+        "$pizza",
         "of",
         "the",
         "estate.",
