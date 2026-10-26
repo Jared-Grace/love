@@ -47,7 +47,7 @@ export function bible_glyph_chapter_2jn01() {
       {
         verse_number: 2,
         words: [
-          "because",
+          "$metro",
           "of",
           "the",
           "$check",
