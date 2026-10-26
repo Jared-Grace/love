@@ -256,7 +256,7 @@ export function bible_glyph_chapter_luk02() {
         "good",
         "news",
         "of",
-        "great",
+        "$top",
         "$smile",
         "that",
         "will",
