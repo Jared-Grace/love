@@ -573,7 +573,7 @@ export function bible_glyph_chapter_mrk12() {
         "$pin",
         "$third_place",
         "did",
-        "likewise.",
+        "$likeness+pointing_back.",
       ],
     },
     {
