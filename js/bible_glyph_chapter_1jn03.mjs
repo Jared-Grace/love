@@ -386,7 +386,7 @@ export function bible_glyph_chapter_1jn03() {
           "be",
           "surprised,",
           "$brother,",
-          "if",
+          "$traffic_light",
           "the",
           "$globe",
           "hates",
