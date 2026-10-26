@@ -786,7 +786,7 @@ export function bible_glyph_chapter_mrk04() {
           "$heart_on_fire?",
           "$tray_in",
           "what",
-          "parable",
+          "$framed_picture",
           "shall",
           "we",
           "present",
