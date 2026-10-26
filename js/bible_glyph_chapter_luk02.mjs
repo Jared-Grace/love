@@ -98,7 +98,7 @@ export function bible_glyph_chapter_luk02() {
         "the",
         "$house",
         "$plus",
-        "line",
+        "$father+crowd+thing",
         "of",
         "$two_hearts+proper_name.",
       ],
