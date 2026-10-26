@@ -175,7 +175,7 @@ export function bible_glyph_chapter_gen01() {
           "$water",
           "which",
           "were",
-          "above",
+          "$pointing_up",
           "the",
           "expanse;",
           "and",
