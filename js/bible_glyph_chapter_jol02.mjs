@@ -172,7 +172,7 @@ export function bible_glyph_chapter_jol02() {
           "of",
           "$fire",
           "$eating",
-          "stubble,",
+          "$fallen_leaf+wheat,",
           "like",
           "a",
           "mighty",
