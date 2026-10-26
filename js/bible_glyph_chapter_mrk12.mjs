@@ -852,7 +852,7 @@ export function bible_glyph_chapter_mrk12() {
       words: [
         "$plus",
         "$pin",
-        "scribe",
+        "$writing_hand+doer",
         "$speech",
         "to",
         "$pointing_back,",
