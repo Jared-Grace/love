@@ -632,7 +632,7 @@ export function bible_glyph_chapter_gen02() {
           "slept,",
           "He",
           "$hand_receiving",
-          "one",
+          "$one",
           "of",
           "his",
           "ribs",
