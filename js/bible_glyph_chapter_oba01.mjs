@@ -240,7 +240,7 @@ export function bible_glyph_chapter_oba01() {
           "you",
           "$dotted_line_face",
           "your",
-          "awareness",
+          "$brain+thing",
           "of",
           "it.",
         ],
