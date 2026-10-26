@@ -140,7 +140,7 @@ export function bible_glyph_chapter_1ki03() {
           "$peace+proper_name",
           "$walking+pointing_up",
           "a",
-          "thousand",
+          "$ten+all",
           "burnt",
           "offerings",
           "on",
