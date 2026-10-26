@@ -722,7 +722,7 @@ export function bible_glyph_chapter_jhn01() {
           "“$pointing",
           "I",
           "saw",
-          "the",
+          "$pin",
           "$wind",
           "descending",
           "like",
