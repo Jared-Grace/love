@@ -35,7 +35,7 @@ export function bible_glyph_chapter_jhn04() {
           "$diving_mask",
           "$multiply+more",
           "$learner",
-          "than",
+          "$shuffle",
           "$proper_name$John,",
         ],
       },
