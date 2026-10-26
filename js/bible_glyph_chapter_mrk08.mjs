@@ -960,7 +960,7 @@ export function bible_glyph_chapter_mrk08() {
           "$hollow_circle",
           "$globe",
           "$plus",
-          "forfeit",
+          "$money_bag+dashing_away+doing",
           "$pointing_back",
           "$person_other?",
         ],
