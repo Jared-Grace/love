@@ -276,7 +276,7 @@ export function bible_glyph_chapter_gen02() {
           "And",
           "in",
           "the",
-          "middle",
+          "$radio_button",
           "of",
           "the",
           "garden",
