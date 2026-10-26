@@ -511,7 +511,7 @@ export function bible_glyph_chapter_jol01() {
           "granaries",
           "are",
           "broken",
-          "down,",
+          "$house+collision+doing,",
           "for",
           "the",
           "grain",
