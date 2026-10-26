@@ -109,7 +109,7 @@ export function bible_glyph_chapter_rev01() {
           "$proper_name$John,",
           "To",
           "the",
-          "seven",
+          "$seven",
           "$church",
           "$tray_in",
           "$proper_name$Asia:",
