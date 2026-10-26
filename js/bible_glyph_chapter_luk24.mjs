@@ -322,7 +322,7 @@ export function bible_glyph_chapter_luk24() {
           "$pointing_back",
           "were",
           "talking",
-          "with",
+          "$toward",
           "$arrow_both_ways",
           "about",
           "everything",
