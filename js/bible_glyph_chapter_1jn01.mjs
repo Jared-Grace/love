@@ -211,7 +211,7 @@ export function bible_glyph_chapter_1jn01() {
       {
         verse_number: 7,
         words: [
-          "But",
+          "$curving_right",
           "$traffic_light",
           "we",
           "$walking",
