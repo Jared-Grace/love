@@ -171,7 +171,7 @@ export function bible_glyph_chapter_luk02() {
         "$ox+basket,",
         "$metro+pointing",
         "there",
-        "was",
+        "$link",
         "$no_entry",
         "$place",
         "for",
