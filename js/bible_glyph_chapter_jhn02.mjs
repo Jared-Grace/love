@@ -569,7 +569,7 @@ export function bible_glyph_chapter_jhn02() {
           "they",
           "$anchor+doing",
           "the",
-          "Scripture",
+          "$writing_hand+thing",
           "$plus",
           "the",
           "$speech",
