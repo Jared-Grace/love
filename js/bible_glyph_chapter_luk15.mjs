@@ -583,7 +583,7 @@ export function bible_glyph_chapter_luk15() {
     {
       verse_number: 22,
       words: [
-        "But",
+        "$curving_right",
         "the",
         "$father",
         "$speech",
