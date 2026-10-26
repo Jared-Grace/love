@@ -593,7 +593,7 @@ export function bible_glyph_chapter_ezk18() {
           "right,",
           "carefully",
           "$hammer+doing$ing",
-          "all",
+          "$all",
           "My",
           "statutes,",
           "he",
