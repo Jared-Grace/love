@@ -929,7 +929,7 @@ export function bible_glyph_chapter_mrk10() {
         "$pointing_back",
         "in",
         "$speech,",
-        "“Teacher,",
+        "“$teacher,",
         "we",
         "want",
         "You",
