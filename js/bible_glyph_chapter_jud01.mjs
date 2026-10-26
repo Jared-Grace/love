@@ -283,7 +283,7 @@ export function bible_glyph_chapter_jud01() {
           "even",
           "$proper_name$Michael",
           "the",
-          "archangel,",
+          "$clapper_board+angel,",
           "when",
           "he",
           "disputed",
