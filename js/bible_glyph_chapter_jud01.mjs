@@ -377,7 +377,7 @@ export function bible_glyph_chapter_jud01() {
           "$flashlight",
           "men",
           "are",
-          "hidden",
+          "$rock+water_wave",
           "reefs",
           "$tray_in",
           "$you",
