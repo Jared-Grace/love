@@ -279,7 +279,7 @@ export function bible_glyph_chapter_jhn01() {
         words: [
           "The",
           "$speech",
-          "became",
+          "$butterfly",
           "$meat",
           "$plus",
           "made",
