@@ -365,7 +365,7 @@ export function bible_glyph_chapter_mrk10() {
         "placing",
         "His",
         "$hand",
-        "on",
+        "$pointing_up",
         "them.",
       ],
     },
