@@ -1152,7 +1152,7 @@ export function bible_glyph_chapter_1ki13() {
           "$i_am",
           "against",
           "the",
-          "altar",
+          "$altar",
           "in",
           "Bethel,",
           "and",
