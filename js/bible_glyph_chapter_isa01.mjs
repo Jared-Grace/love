@@ -627,7 +627,7 @@ export function bible_glyph_chapter_isa01() {
           "within",
           "her,",
           "but",
-          "now",
+          "$watch",
           "only",
           "murderers!",
         ],
