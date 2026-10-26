@@ -321,7 +321,7 @@ export function bible_glyph_chapter_gen32() {
           "$pointing",
           "I",
           "am",
-          "afraid",
+          "$fear+describing",
           "that",
           "he",
           "may",
