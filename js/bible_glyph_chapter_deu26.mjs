@@ -547,7 +547,7 @@ export function bible_glyph_chapter_deu26() {
           "I",
           "have",
           "$hammer+doing",
-          "everything",
+          "$all",
           "You",
           "commanded",
           "me.",
