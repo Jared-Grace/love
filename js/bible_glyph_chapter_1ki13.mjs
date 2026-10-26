@@ -308,7 +308,7 @@ export function bible_glyph_chapter_1ki13() {
           "my",
           "$house",
           "and",
-          "refresh",
+          "$hand+heart_red+doing",
           "yourself,",
           "and",
           "I",
