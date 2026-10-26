@@ -328,7 +328,7 @@ export function bible_glyph_chapter_jhn03() {
           "ascended",
           "$toward+tray_in",
           "$sky",
-          "except",
+          "$traffic_light",
           "the",
           "One",
           "who",
