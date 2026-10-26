@@ -513,7 +513,7 @@ export function bible_glyph_chapter_1jn04() {
           "$fear,",
           "$pointing",
           "$fear",
-          "involves",
+          "$raised_fist",
           "$scales+fist.",
           "The",
           "one",
