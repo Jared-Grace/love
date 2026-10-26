@@ -1182,7 +1182,7 @@ export function bible_glyph_chapter_mrk12() {
         "has",
         "put",
         "$multiply+more",
-        "into",
+        "$toward+tray_in",
         "$pin",
         "treasury",
         "than",
