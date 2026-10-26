@@ -253,7 +253,7 @@ export function bible_glyph_chapter_jon02() {
           "it",
           "vomited",
           "$dove+proper_name",
-          "onto",
+          "$toward",
           "dry",
           "land.",
         ],
