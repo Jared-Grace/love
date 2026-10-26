@@ -623,7 +623,7 @@ export function bible_glyph_chapter_jhn14() {
           "$plus",
           "not",
           "to",
-          "the",
+          "$pin",
           "$globe?”",
         ],
       },
