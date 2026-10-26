@@ -841,7 +841,7 @@ export function bible_glyph_chapter_jhn14() {
           "happens,",
           "so",
           "that",
-          "when",
+          "$back+clock",
           "it",
           "does",
           "happen",
