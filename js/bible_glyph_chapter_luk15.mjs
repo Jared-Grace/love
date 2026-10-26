@@ -420,7 +420,7 @@ export function bible_glyph_chapter_luk15() {
         "$pin",
         "$horn+seed",
         "$pin",
-        "pigs",
+        "$pig",
         "were",
         "eating,",
         "$plus",
