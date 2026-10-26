@@ -355,7 +355,7 @@ export function bible_glyph_chapter_1ki13() {
           "$cup_with_straw",
           "$water",
           "in",
-          "this",
+          "$flashlight",
           "$place.",
         ],
       },
