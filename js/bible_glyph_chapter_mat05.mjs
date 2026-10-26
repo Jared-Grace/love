@@ -910,7 +910,7 @@ export function bible_glyph_chapter_mat05() {
           "$you,",
           "$no_entry",
           "to",
-          "swear",
+          "$hand_with_fingers_splayed+doing",
           "at",
           "all:",
           "either",
