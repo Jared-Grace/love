@@ -228,7 +228,7 @@ export function bible_glyph_chapter_rev01() {
           "$plus",
           "those",
           "who",
-          "pierced",
+          "$tray_out+scorpion+doing",
           "$pointing_back;",
           "$plus",
           "all",
