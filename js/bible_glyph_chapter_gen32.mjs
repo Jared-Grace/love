@@ -713,7 +713,7 @@ export function bible_glyph_chapter_gen32() {
           "he",
           "could",
           "$no_entry",
-          "overpower",
+          "$might+doing",
           "Jacob,",
           "he",
           "struck",
