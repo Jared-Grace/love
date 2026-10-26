@@ -80,7 +80,7 @@ export function bible_glyph_chapter_jol02() {
           "such",
           "as",
           "$no_entry",
-          "was",
+          "$link",
           "$tray_out",
           "$hourglass,",
           "nor",
