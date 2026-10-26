@@ -203,7 +203,7 @@ export function bible_glyph_chapter_gen32() {
           "and",
           "camels,",
           "into",
-          "two",
+          "$two",
           "camps.",
         ],
       },
