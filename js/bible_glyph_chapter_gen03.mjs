@@ -662,7 +662,7 @@ export function bible_glyph_chapter_gen03() {
           "$woman",
           "$proper_name$Eve,",
           "$pointing",
-          "she",
+          "$pointing_back",
           "would",
           "be",
           "the",
