@@ -519,7 +519,7 @@ export function bible_glyph_chapter_jhn14() {
           "Me",
           "no",
           "more,",
-          "but",
+          "$curving_right",
           "you",
           "will",
           "see",
