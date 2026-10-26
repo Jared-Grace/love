@@ -35,7 +35,7 @@ export function bible_glyph_chapter_rev10() {
           "$bow+cloud",
           "above",
           "$pointing_back",
-          "head.",
+          "$person_gesturing_ok.",
           "$pointing_back",
           "face",
           "was",
