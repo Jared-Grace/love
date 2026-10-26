@@ -246,7 +246,7 @@ export function bible_glyph_chapter_luk24() {
           "their",
           "words",
           "$light",
-          "like",
+          "$likeness+traffic_light",
           "nonsense",
           "to",
           "$pointing_back,",
