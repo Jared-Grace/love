@@ -763,7 +763,7 @@ export function bible_glyph_chapter_jol02() {
           "new",
           "$wine",
           "and",
-          "oil.",
+          "$oil+new_button.",
         ],
       },
       {
