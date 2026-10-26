@@ -553,7 +553,7 @@ export function bible_glyph_chapter_gen01() {
         words: [
           "And",
           "$heart_on_fire",
-          "created",
+          "$milky_way+doing",
           "the",
           "great",
           "sea",
