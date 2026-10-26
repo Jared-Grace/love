@@ -1176,7 +1176,7 @@ export function bible_glyph_chapter_ezk33() {
           "$walking",
           "after",
           "dishonest",
-          "gain.",
+          "$money_bag+hand_receiving.",
         ],
       },
       {
