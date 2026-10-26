@@ -552,7 +552,7 @@ export function bible_glyph_chapter_deu30() {
           "$road,",
           "and",
           "to",
-          "keep",
+          "$guard",
           "His",
           "$scroll,",
           "statutes,",
