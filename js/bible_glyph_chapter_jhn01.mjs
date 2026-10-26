@@ -856,7 +856,7 @@ export function bible_glyph_chapter_jhn01() {
           "$cross",
           "$person+clockwise_arrows+doing",
           "$plus",
-          "saw",
+          "$cinema+doing",
           "$pointing_back",
           "following,",
           "and",
