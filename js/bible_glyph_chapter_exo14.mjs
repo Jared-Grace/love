@@ -138,7 +138,7 @@ export function bible_glyph_chapter_exo14() {
           "$upside_down_face",
           "their",
           "$heart_organ",
-          "about",
+          "$toward",
           "$family",
           "and",
           "$speech,",
