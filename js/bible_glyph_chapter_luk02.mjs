@@ -828,7 +828,7 @@ export function bible_glyph_chapter_luk02() {
         "what",
         "was",
         "$mouth",
-        "about",
+        "$clockwise_arrows",
         "$pointing_back.",
       ],
     },
