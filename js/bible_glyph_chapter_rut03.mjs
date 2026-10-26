@@ -540,7 +540,7 @@ export function bible_glyph_chapter_rut03() {
           "to",
           "your",
           "mother-in-law",
-          "empty-handed.",
+          "$hand+zero+manner.",
         ],
       },
       {
