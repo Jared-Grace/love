@@ -337,7 +337,7 @@ export function bible_glyph_chapter_1jn04() {
           "ever",
           "seen",
           "$heart_on_fire.",
-          "If",
+          "$traffic_light",
           "we",
           "$heart_red+doing",
           "one",
