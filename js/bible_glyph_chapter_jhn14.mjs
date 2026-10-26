@@ -685,7 +685,7 @@ export function bible_glyph_chapter_jhn14() {
           "$no_entry",
           "My",
           "own,",
-          "but",
+          "$curving_up",
           "it",
           "is",
           "from",
