@@ -537,7 +537,7 @@ export function bible_glyph_chapter_isa01() {
           "sins",
           "are",
           "like",
-          "scarlet,",
+          "$red_circle,",
           "they",
           "will",
           "be",
