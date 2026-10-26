@@ -460,7 +460,7 @@ export function bible_glyph_chapter_mrk04() {
           "others",
           "$link",
           "like",
-          "the",
+          "$pin",
           "seed",
           "sown",
           "among",
