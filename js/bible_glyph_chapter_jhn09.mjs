@@ -852,7 +852,7 @@ export function bible_glyph_chapter_jhn09() {
           "of",
           "a",
           "man",
-          "born",
+          "$hatching_chick",
           "$person_with_white_cane.",
         ],
       },
