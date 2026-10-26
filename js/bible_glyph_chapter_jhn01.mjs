@@ -579,7 +579,7 @@ export function bible_glyph_chapter_jhn01() {
           "$proper_name$John",
           "$speech,",
           "“I",
-          "baptize",
+          "$diving_mask",
           "$tray_in",
           "$water,",
           "but",
