@@ -60,7 +60,7 @@ export function bible_glyph_chapter_jhn14() {
           "$walking",
           "there",
           "to",
-          "prepare",
+          "$luggage+doing",
           "a",
           "$place",
           "for",
