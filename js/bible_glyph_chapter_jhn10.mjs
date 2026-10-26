@@ -999,7 +999,7 @@ export function bible_glyph_chapter_jhn10() {
           "$back+round_pushpin",
           "$proper_name$John",
           "had",
-          "first",
+          "$first_place",
           "been",
           "baptizing,",
           "$plus",
