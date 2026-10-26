@@ -287,7 +287,7 @@ export function bible_glyph_chapter_psa115() {
         verse_number: 15,
         words: [
           "May",
-          "you",
+          "$you",
           "be",
           "$speech+thumbs_up",
           "by",
