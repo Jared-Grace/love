@@ -188,7 +188,7 @@ export function bible_glyph_chapter_gen32() {
           "distress,",
           "so",
           "he",
-          "divided",
+          "$divide+doing",
           "the",
           "$family",
           "with",
