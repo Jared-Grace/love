@@ -180,7 +180,7 @@ export function bible_glyph_chapter_mrk10() {
         "no",
         "longer",
         "$two,",
-        "but",
+        "$curving_up",
         "$one",
         "$meat.",
       ],
