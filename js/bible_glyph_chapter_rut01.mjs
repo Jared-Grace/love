@@ -388,7 +388,7 @@ export function bible_glyph_chapter_rut01() {
           "$crossed_fingers+clock+doing",
           "for",
           "them",
-          "to",
+          "$finish",
           "grow",
           "up?",
           "Would",
