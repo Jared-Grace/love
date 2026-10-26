@@ -46,7 +46,7 @@ export function bible_glyph_chapter_jhn02() {
           "been",
           "invited",
           "$toward+tray_in",
-          "the",
+          "$pin",
           "wedding,",
           "$plus",
           "$pointing_back",
