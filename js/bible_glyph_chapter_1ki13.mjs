@@ -178,7 +178,7 @@ export function bible_glyph_chapter_1ki13() {
           "altar",
           "and",
           "$speech,",
-          "Seize",
+          "$crab",
           "him!",
           "But",
           "the",
