@@ -488,7 +488,7 @@ export function bible_glyph_chapter_mrk12() {
         "$toward",
         "$pointing_back",
         "$plus",
-        "questioned",
+        "$pointing_up+question",
         "$pointing_back,",
         "$speech,",
       ],
