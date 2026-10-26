@@ -666,7 +666,7 @@ export function bible_glyph_chapter_isa01() {
           "and",
           "chase",
           "after",
-          "rewards.",
+          "$coin+peace.",
           "They",
           "do",
           "$no_entry",
