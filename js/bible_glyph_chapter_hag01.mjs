@@ -418,7 +418,7 @@ export function bible_glyph_chapter_hag01() {
           "to",
           "the",
           "$family:",
-          "I",
+          "$me",
           "am",
           "with",
           "you,",
