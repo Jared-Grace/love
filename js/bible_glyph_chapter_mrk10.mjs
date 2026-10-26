@@ -1079,7 +1079,7 @@ export function bible_glyph_chapter_mrk10() {
         "$seat",
         "$tray_out",
         "My",
-        "right",
+        "$hand+right_arrow",
         "or",
         "$tray_out",
         "My",
