@@ -160,7 +160,7 @@ export function bible_glyph_chapter_jol01() {
       {
         verse_number: 6,
         words: [
-          "For",
+          "$pointing",
           "a",
           "$map",
           "has",
