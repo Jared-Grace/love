@@ -23,7 +23,7 @@ export function bible_glyph_chapter_psa015() {
           "$tent?",
           "$person+question",
           "may",
-          "dwell",
+          "$tent+doing",
           "on",
           "Your",
           "$sparkle+thing",
