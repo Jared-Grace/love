@@ -179,7 +179,7 @@ export function bible_glyph_chapter_jol02() {
           "$family",
           "$card_index_dividers",
           "for",
-          "battle.",
+          "$crossed_swords.",
         ],
       },
       {
