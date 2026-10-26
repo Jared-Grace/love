@@ -586,7 +586,7 @@ export function bible_glyph_chapter_jhn01() {
           "among",
           "you",
           "$person+round_pushpin",
-          "One",
+          "$back+flashlight",
           "you",
           "do",
           "$no_entry",
