@@ -258,7 +258,7 @@ export function bible_glyph_chapter_luk15() {
         "way,",
         "I",
         "$speech",
-        "you,",
+        "$you,",
         "there",
         "is",
         "$smile",
