@@ -110,7 +110,7 @@ export function bible_glyph_chapter_jhn03() {
           "a",
           "$person",
           "be",
-          "born",
+          "$hatching_chick",
           "when",
           "he",
           "is",
