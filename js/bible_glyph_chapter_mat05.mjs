@@ -296,7 +296,7 @@ export function bible_glyph_chapter_mat05() {
           "$pin",
           "$light",
           "of",
-          "the",
+          "$pin",
           "$globe.",
           "A",
           "$city",
