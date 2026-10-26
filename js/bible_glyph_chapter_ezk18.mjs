@@ -1006,7 +1006,7 @@ export function bible_glyph_chapter_ezk18() {
           "$no_entry",
           "$link",
           "your",
-          "downfall.",
+          "$hiking_boot+rock+thing.",
         ],
       },
       {
