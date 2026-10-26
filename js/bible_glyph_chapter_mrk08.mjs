@@ -185,7 +185,7 @@ export function bible_glyph_chapter_mrk08() {
           "a",
           "few",
           "small",
-          "fish,",
+          "$fish+baby,",
           "$plus",
           "Jesus",
           "$speech+thumbs_up",
