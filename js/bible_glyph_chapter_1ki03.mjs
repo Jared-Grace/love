@@ -877,7 +877,7 @@ export function bible_glyph_chapter_1ki03() {
           "$two,",
           "and",
           "$hands_giving",
-          "half",
+          "$divide",
           "to",
           "the",
           "one",
