@@ -138,7 +138,7 @@ export function bible_glyph_chapter_luk24() {
           "has",
           "risen!",
           "$reminder_ribbon+doing",
-          "how",
+          "$likeness",
           "He",
           "$mouth",
           "to",
