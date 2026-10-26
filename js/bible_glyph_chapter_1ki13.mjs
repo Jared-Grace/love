@@ -720,7 +720,7 @@ export function bible_glyph_chapter_1ki13() {
           "sitting",
           "at",
           "the",
-          "table,",
+          "$hand_sending+thing,",
           "the",
           "$speech",
           "of",
