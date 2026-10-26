@@ -995,7 +995,7 @@ export function bible_glyph_chapter_mrk08() {
           "$me+describing",
           "$speech",
           "$tray_in",
-          "this",
+          "$flashlight",
           "adulterous",
           "$plus",
           "$bow+doer",
