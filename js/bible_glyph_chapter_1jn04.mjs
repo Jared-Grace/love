@@ -351,7 +351,7 @@ export function bible_glyph_chapter_1jn04() {
           "$heart_red",
           "is",
           "perfected",
-          "in",
+          "$tray_in",
           "us.",
         ],
       },
