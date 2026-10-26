@@ -1028,7 +1028,7 @@ export function bible_glyph_chapter_jhn09() {
           "Are",
           "$plus",
           "$me",
-          "blind?",
+          "$person_with_white_cane?",
         ],
       },
       {
