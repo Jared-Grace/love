@@ -246,7 +246,7 @@ export function bible_glyph_chapter_deu30() {
           "will",
           "$hands_giving",
           "$all",
-          "these",
+          "$flashlight+flashlight",
           "$speech+raised_back_of_hand",
           "upon",
           "your",
