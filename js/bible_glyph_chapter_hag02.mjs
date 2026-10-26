@@ -290,7 +290,7 @@ export function bible_glyph_chapter_hag02() {
           "will",
           "$hands_giving",
           "$peace,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am",
           "of",
