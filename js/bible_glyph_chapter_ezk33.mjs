@@ -661,7 +661,7 @@ export function bible_glyph_chapter_ezk33() {
           "$no_entry",
           "just.",
           "But",
-          "it",
+          "$pointing_back",
           "is",
           "their",
           "$road",
