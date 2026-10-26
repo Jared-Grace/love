@@ -691,7 +691,7 @@ export function bible_glyph_chapter_mrk10() {
         "left",
         "$all",
         "$plus",
-        "followed",
+        "$walking+footprints",
         "You.”",
       ],
     },
