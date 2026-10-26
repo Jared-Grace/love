@@ -249,7 +249,7 @@ export function bible_glyph_chapter_mat05() {
         words: [
           "$you",
           "$link",
-          "the",
+          "$pin",
           "salt",
           "of",
           "the",
