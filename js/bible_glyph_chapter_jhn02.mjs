@@ -454,7 +454,7 @@ export function bible_glyph_chapter_jhn02() {
           "$house",
           "will",
           "consume",
-          "Me.”",
+          "$me.”",
         ],
       },
       {
