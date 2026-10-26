@@ -960,7 +960,7 @@ export function bible_glyph_chapter_jhn04() {
           "$pointing",
           "“He",
           "$speech",
-          "me",
+          "$me",
           "everything",
           "I",
           "ever",
