@@ -656,7 +656,7 @@ export function bible_glyph_chapter_jhn17() {
           "You",
           "$heart_red+doing",
           "$pointing_back",
-          "just",
+          "$likeness",
           "as",
           "You",
           "$heart_red+doing",
