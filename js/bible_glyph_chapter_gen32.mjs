@@ -698,7 +698,7 @@ export function bible_glyph_chapter_gen32() {
           "$wrestling+dust",
           "with",
           "him",
-          "until",
+          "$finish",
           "$walking+pointing_up.",
         ],
       },
