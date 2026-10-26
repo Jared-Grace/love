@@ -636,7 +636,7 @@ export function bible_glyph_chapter_mrk12() {
         "$pin",
         "Scriptures",
         "or",
-        "the",
+        "$pin",
         "$lightning",
         "of",
         "$heart_on_fire?",
