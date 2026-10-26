@@ -389,7 +389,7 @@ export function bible_glyph_chapter_1jn04() {
           "seen",
           "$plus",
           "$witness+doing",
-          "that",
+          "$pointing",
           "the",
           "$father",
           "has",
