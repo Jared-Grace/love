@@ -539,7 +539,7 @@ export function bible_glyph_chapter_mrk11() {
         "$plus",
         "$back+clock",
         "$sunset+clock",
-        "came,",
+        "$butterfly,",
         "they",
         "went",
         "out",
