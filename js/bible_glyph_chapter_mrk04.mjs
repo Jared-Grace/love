@@ -685,7 +685,7 @@ export function bible_glyph_chapter_mrk04() {
           "$castle",
           "of",
           "$heart_on_fire",
-          "is",
+          "$link",
           "like",
           "a",
           "$person",
