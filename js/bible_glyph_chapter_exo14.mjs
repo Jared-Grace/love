@@ -458,7 +458,7 @@ export function bible_glyph_chapter_exo14() {
           "your",
           "$white_cane",
           "and",
-          "stretch",
+          "$white_cane+doing",
           "out",
           "your",
           "$hand",
