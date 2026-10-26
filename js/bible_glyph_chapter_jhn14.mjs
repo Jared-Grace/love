@@ -83,7 +83,7 @@ export function bible_glyph_chapter_jhn14() {
           "I",
           "will",
           "$footprints",
-          "back",
+          "$repeat",
           "$plus",
           "welcome",
           "you",
