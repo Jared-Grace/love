@@ -1016,7 +1016,7 @@ export function bible_glyph_chapter_jhn01() {
         words: [
           "Now",
           "$proper_name$Philip",
-          "was",
+          "$link",
           "$away",
           "$proper_name$Bethsaida,",
           "$tray_out",
