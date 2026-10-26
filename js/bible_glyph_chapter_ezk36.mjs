@@ -1258,7 +1258,7 @@ export function bible_glyph_chapter_ezk36() {
           "$i_am",
           "$speech:",
           "Once",
-          "again",
+          "$repeat",
           "I",
           "will",
           "hear",
