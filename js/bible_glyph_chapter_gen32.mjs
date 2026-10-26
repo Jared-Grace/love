@@ -727,7 +727,7 @@ export function bible_glyph_chapter_gen32() {
           "it",
           "as",
           "they",
-          "wrestled.",
+          "$wrestling+dust.",
         ],
       },
       {
