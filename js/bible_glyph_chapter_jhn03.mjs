@@ -462,7 +462,7 @@ export function bible_glyph_chapter_jhn03() {
           "has",
           "$no_entry",
           "$anchor+doing$ed",
-          "in",
+          "$toward+tray_in",
           "the",
           "$name_tag",
           "of",
