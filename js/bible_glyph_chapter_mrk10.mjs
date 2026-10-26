@@ -570,7 +570,7 @@ export function bible_glyph_chapter_mrk10() {
     {
       verse_number: 24,
       words: [
-        "The",
+        "$pin",
         "$learner",
         "were",
         "amazed",
