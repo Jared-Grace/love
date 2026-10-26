@@ -408,7 +408,7 @@ export function bible_glyph_chapter_mrk12() {
         "$speech",
         "to",
         "$pointing_back,",
-        "Why",
+        "$flashlight+question",
         "are",
         "you",
         "testing",
