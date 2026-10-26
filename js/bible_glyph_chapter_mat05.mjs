@@ -640,7 +640,7 @@ export function bible_glyph_chapter_mat05() {
           "$thumbs_up+brain+doing",
           "quickly",
           "with",
-          "your",
+          "$you",
           "adversary,",
           "while",
           "you",
