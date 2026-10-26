@@ -50,7 +50,7 @@ export function bible_glyph_chapter_1jn04() {
         verse_number: 2,
         words: [
           "By",
-          "this",
+          "$flashlight",
           "you",
           "will",
           "$lightbulb",
