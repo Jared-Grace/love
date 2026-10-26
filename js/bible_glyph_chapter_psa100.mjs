@@ -93,7 +93,7 @@ export function bible_glyph_chapter_psa100() {
           "His",
           "courts",
           "with",
-          "praise;",
+          "$clapping_hands+thing;",
           "$hands_raised",
           "to",
           "Him",
