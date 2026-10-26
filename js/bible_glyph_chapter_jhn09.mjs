@@ -568,7 +568,7 @@ export function bible_glyph_chapter_jhn09() {
         verse_number: 22,
         words: [
           "$pointing_back",
-          "parents",
+          "$butterfly+doer",
           "$speech",
           "$flashlight",
           "$pointing",
