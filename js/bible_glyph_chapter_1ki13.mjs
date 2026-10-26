@@ -715,7 +715,7 @@ export function bible_glyph_chapter_1ki13() {
         verse_number: 20,
         words: [
           "While",
-          "they",
+          "$pointing_back",
           "were",
           "sitting",
           "at",
