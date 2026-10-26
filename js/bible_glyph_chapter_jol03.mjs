@@ -321,7 +321,7 @@ export function bible_glyph_chapter_jol03() {
           "Bring",
           "$stone+down_arrow+doing",
           "Your",
-          "mighty",
+          "$might+person",
           "ones,",
           "O",
           "$i_am.",
