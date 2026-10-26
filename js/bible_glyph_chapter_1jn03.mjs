@@ -566,7 +566,7 @@ export function bible_glyph_chapter_1jn03() {
           "is",
           "greater",
           "than",
-          "our",
+          "$me",
           "$heart_organ,",
           "$plus",
           "He",
