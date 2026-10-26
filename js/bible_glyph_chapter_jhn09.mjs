@@ -862,7 +862,7 @@ export function bible_glyph_chapter_jhn09() {
           "$traffic_light",
           "this",
           "man",
-          "were",
+          "$link",
           "not",
           "from",
           "$heart_on_fire,",
