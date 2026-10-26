@@ -521,7 +521,7 @@ export function bible_glyph_chapter_jhn20() {
           "with",
           "the",
           "$door",
-          "locked",
+          "$locked+doing",
           "for",
           "fear",
           "of",
