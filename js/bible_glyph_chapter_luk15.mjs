@@ -246,7 +246,7 @@ export function bible_glyph_chapter_luk15() {
         "found",
         "my",
         "lost",
-        "coin.",
+        "$coin+hand.",
       ],
     },
     {
