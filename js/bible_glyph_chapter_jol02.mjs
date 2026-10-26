@@ -234,7 +234,7 @@ export function bible_glyph_chapter_jol02() {
           "$man_beard",
           "against",
           "$brother;",
-          "each",
+          "$might+man_beard",
           "$walking",
           "in",
           "his",
