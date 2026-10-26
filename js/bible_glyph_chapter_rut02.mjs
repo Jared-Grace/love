@@ -237,7 +237,7 @@ export function bible_glyph_chapter_rut02() {
           "and",
           "$hand+sheaf_of_rice+doing",
           "in",
-          "another",
+          "$plus+one",
           "$field,",
           "and",
           "$no_entry",
