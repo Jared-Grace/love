@@ -16,7 +16,7 @@ export function bible_glyph_chapter_3jn01() {
         verse_number: 1,
         words: [
           "$pin",
-          "elder,",
+          "$old_man,",
           "To",
           "$proper_name$Gaius",
           "$pin",
