@@ -644,7 +644,7 @@ export function bible_glyph_chapter_jhn04() {
           "$mouth",
           "to",
           "you",
-          "am",
+          "$link",
           "He.”",
         ],
       },
