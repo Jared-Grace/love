@@ -300,7 +300,7 @@ export function bible_glyph_chapter_jhn09() {
           "to",
           "$pointing_back,",
           "$round_pushpin+question",
-          "is",
+          "$link",
           "He?",
           "He",
           "$speech,",
