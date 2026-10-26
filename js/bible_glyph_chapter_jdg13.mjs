@@ -512,7 +512,7 @@ export function bible_glyph_chapter_jdg13() {
           "of",
           "the",
           "$i_am,",
-          "“Please",
+          "“$pleading",
           "stay",
           "here,",
           "and",
