@@ -309,7 +309,7 @@ export function bible_glyph_chapter_jud01() {
           "$speech,",
           "The",
           "$crown",
-          "rebuke",
+          "$right_anger_bubble",
           "you.",
         ],
       },
