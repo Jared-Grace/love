@@ -149,7 +149,7 @@ export function bible_glyph_chapter_mrk04() {
           "$plus",
           "$back+clock",
           "the",
-          "sun",
+          "$sun_with_face",
           "$sun+up_arrow+doing",
           "the",
           "seedlings",
