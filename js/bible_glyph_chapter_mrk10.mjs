@@ -1420,7 +1420,7 @@ export function bible_glyph_chapter_mrk10() {
         "healed",
         "you.”",
         "$plus",
-        "immediately",
+        "$fast_forward",
         "he",
         "received",
         "his",
