@@ -163,7 +163,7 @@ export function bible_glyph_chapter_jhn09() {
           "$pointing_back,",
           "$walking+away,",
           "wash",
-          "in",
+          "$toward+tray_in",
           "the",
           "Pool",
           "of",
