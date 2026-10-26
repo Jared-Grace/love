@@ -800,7 +800,7 @@ export function bible_glyph_chapter_jhn10() {
       {
         verse_number: 33,
         words: [
-          "The",
+          "$pin",
           "$menorah",
           "answered",
           "$pointing_back,",
