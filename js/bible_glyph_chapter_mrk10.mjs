@@ -981,7 +981,7 @@ export function bible_glyph_chapter_mrk10() {
         "of",
         "us",
         "may",
-        "sit",
+        "$seat",
         "$tray_out",
         "Your",
         "right",
