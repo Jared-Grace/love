@@ -325,7 +325,7 @@ export function bible_glyph_chapter_2jn01() {
           "to",
           "write",
           "to",
-          "you,",
+          "$you,",
           "but",
           "I",
           "would",
