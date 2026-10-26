@@ -569,7 +569,7 @@ export function bible_glyph_chapter_jhn17() {
           "all",
           "may",
           "be",
-          "one,",
+          "$one,",
           "just",
           "as",
           "You,",
