@@ -254,7 +254,7 @@ export function bible_glyph_chapter_mat05() {
           "of",
           "$pin",
           "$earth.",
-          "But",
+          "$curving_right",
           "if",
           "$pin",
           "$salt",
