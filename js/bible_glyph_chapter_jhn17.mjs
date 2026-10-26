@@ -589,7 +589,7 @@ export function bible_glyph_chapter_jhn17() {
           "$tray_in",
           "Us,",
           "that",
-          "the",
+          "$pin",
           "$globe",
           "may",
           "$anchor+doing",
