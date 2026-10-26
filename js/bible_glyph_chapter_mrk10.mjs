@@ -1142,7 +1142,7 @@ export function bible_glyph_chapter_mrk10() {
         "of",
         "the",
         "$map",
-        "lord",
+        "$pointing_down+crown+doing",
         "it",
         "over",
         "$pointing_back,",
