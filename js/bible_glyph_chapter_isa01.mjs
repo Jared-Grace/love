@@ -458,7 +458,7 @@ export function bible_glyph_chapter_isa01() {
           "$eyes",
           "from",
           "you;",
-          "even",
+          "$plus",
           "though",
           "you",
           "multiply",
