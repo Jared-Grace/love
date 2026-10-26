@@ -527,7 +527,7 @@ export function bible_glyph_chapter_jol03() {
           "$walking",
           "with",
           "$milk.",
-          "All",
+          "$all",
           "the",
           "streams",
           "of",
