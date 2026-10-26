@@ -54,7 +54,7 @@ export function bible_glyph_chapter_mrk11() {
         "soon",
         "as",
         "you",
-        "enter",
+        "$toward+tray_in+walking",
         "$pointing_back",
         "you",
         "will",
