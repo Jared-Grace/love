@@ -247,7 +247,7 @@ export function bible_glyph_chapter_gen01() {
           "$earth,",
           "and",
           "the",
-          "gathering",
+          "$water+tray_in",
           "of",
           "the",
           "$water",
