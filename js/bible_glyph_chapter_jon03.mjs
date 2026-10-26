@@ -281,7 +281,7 @@ export function bible_glyph_chapter_jon03() {
           "$eye",
           "their",
           "actions,",
-          "that",
+          "$pointing",
           "they",
           "had",
           "$turn_back",
