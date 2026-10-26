@@ -430,7 +430,7 @@ export function bible_glyph_chapter_jhn02() {
           "the",
           "$house",
           "of",
-          "My",
+          "$me",
           "$father",
           "into",
           "a",
