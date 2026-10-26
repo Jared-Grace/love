@@ -969,7 +969,7 @@ export function bible_glyph_chapter_mrk08() {
         verse_number: 37,
         words: [
           "Or",
-          "what",
+          "$flashlight+question",
           "can",
           "a",
           "$person",
