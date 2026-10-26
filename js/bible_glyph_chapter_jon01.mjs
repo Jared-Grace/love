@@ -574,7 +574,7 @@ export function bible_glyph_chapter_jon01() {
           "and",
           "$dove+proper_name",
           "$link",
-          "three",
+          "$three",
           "$sun",
           "and",
           "three",
