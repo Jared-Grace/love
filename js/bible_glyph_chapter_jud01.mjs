@@ -450,7 +450,7 @@ export function bible_glyph_chapter_jud01() {
           "these",
           "men,",
           "$speech,",
-          "Behold,",
+          "$exclamation,",
           "the",
           "$crown",
           "$footprints",
