@@ -505,7 +505,7 @@ export function bible_glyph_chapter_hag02() {
           "$footprints",
           "to",
           "the",
-          "winepress",
+          "$grapes+foot",
           "to",
           "draw",
           "out",
