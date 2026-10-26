@@ -109,7 +109,7 @@ export function bible_glyph_chapter_jer26() {
           "that",
           "I",
           "may",
-          "relent",
+          "$hug+doing",
           "of",
           "the",
           "$thumbs_down",
