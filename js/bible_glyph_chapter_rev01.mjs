@@ -342,7 +342,7 @@ export function bible_glyph_chapter_rev01() {
         verse_number: 11,
         words: [
           "$speech,",
-          "Write",
+          "$writing_hand",
           "on",
           "a",
           "scroll",
