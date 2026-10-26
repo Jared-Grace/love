@@ -133,7 +133,7 @@ export function bible_glyph_chapter_hag02() {
           "of",
           "the",
           "$earth,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
           "$hammer+doing,",
