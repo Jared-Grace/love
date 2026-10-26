@@ -313,7 +313,7 @@ export function bible_glyph_chapter_mrk05() {
         "out,",
         "went",
         "into",
-        "the",
+        "$pin",
         "pigs,",
         "$plus",
         "the",
