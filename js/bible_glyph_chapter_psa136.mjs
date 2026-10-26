@@ -213,7 +213,7 @@ export function bible_glyph_chapter_psa136() {
           "Red",
           "Sea",
           "in",
-          "two.",
+          "$axe+divide+thing.",
           "His",
           "$gift",
           "endures",
