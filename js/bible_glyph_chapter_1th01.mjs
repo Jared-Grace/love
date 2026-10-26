@@ -213,7 +213,7 @@ export function bible_glyph_chapter_1th01() {
           "$away",
           "you,",
           "$no_entry",
-          "only",
+          "$one+manner",
           "$tray_in",
           "$proper_name$Macedonia",
           "$plus",
