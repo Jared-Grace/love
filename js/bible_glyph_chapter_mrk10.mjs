@@ -520,7 +520,7 @@ export function bible_glyph_chapter_mrk10() {
     {
       verse_number: 22,
       words: [
-        "But",
+        "$curving_right",
         "the",
         "man",
         "was",
