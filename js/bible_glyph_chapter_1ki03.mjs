@@ -224,7 +224,7 @@ export function bible_glyph_chapter_1ki03() {
           "on",
           "his",
           "$throne",
-          "this",
+          "$flashlight",
           "$sun.",
         ],
       },
