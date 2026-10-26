@@ -155,7 +155,7 @@ export function bible_glyph_chapter_jon01() {
           "they",
           "threw",
           "the",
-          "cargo",
+          "$toolbox",
           "into",
           "the",
           "$sea",
