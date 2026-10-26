@@ -21,7 +21,7 @@ export function bible_glyph_chapter_exo20() {
     verses: [
       {
         verse_number: 1,
-        words: ["And", "$heart_on_fire", "$mouth", "all", "these", "$speech:"],
+        words: ["And", "$heart_on_fire", "$mouth", "$all", "these", "$speech:"],
       },
       {
         verse_number: 2,
