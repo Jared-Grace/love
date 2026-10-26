@@ -417,7 +417,7 @@ export function bible_glyph_chapter_isa01() {
         verse_number: 14,
         words: [
           "$person_other",
-          "hate",
+          "$heart_red+thumbs_down",
           "your",
           "$new_moon",
           "Moons",
