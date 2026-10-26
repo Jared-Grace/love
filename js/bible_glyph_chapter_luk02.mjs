@@ -313,7 +313,7 @@ export function bible_glyph_chapter_luk02() {
         "swaddling",
         "cloths",
         "$plus",
-        "lying",
+        "$bed+doing",
         "$tray_in",
         "a",
         "manger.”",
