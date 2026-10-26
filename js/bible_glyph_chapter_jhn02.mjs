@@ -600,7 +600,7 @@ export function bible_glyph_chapter_jhn02() {
           "$name_tag,",
           "seeing",
           "the",
-          "signs",
+          "$placard",
           "$pointing_back",
           "was",
           "$hammer.",
