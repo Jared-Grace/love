@@ -528,7 +528,7 @@ export function bible_glyph_chapter_luk07() {
         "$crown",
         "in",
         "$speech,",
-        "“Are",
+        "“$link",
         "$you",
         "the",
         "One",
