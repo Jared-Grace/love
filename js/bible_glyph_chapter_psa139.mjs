@@ -344,7 +344,7 @@ export function bible_glyph_chapter_psa139() {
           "my",
           "unformed",
           "body;",
-          "all",
+          "$all",
           "my",
           "$sun",
           "were",
