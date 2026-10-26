@@ -1084,7 +1084,7 @@ export function bible_glyph_chapter_mrk10() {
         "$tray_out",
         "My",
         "$hand+back",
-        "is",
+        "$link",
         "$no_entry",
         "Mine",
         "to",
