@@ -622,7 +622,7 @@ export function bible_glyph_chapter_rev01() {
           "$plus",
           "of",
           "the",
-          "seven",
+          "$seven",
           "golden",
           "lampstands:",
           "The",
