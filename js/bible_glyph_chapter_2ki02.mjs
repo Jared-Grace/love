@@ -43,7 +43,7 @@ export function bible_glyph_chapter_2ki02() {
           "$pleading",
           "$person+house",
           "$flashlight+round_pushpin,",
-          "for",
+          "$pointing",
           "the",
           "$i_am",
           "has",
