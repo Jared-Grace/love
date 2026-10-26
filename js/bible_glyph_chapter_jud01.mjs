@@ -703,7 +703,7 @@ export function bible_glyph_chapter_jud01() {
           "$heart_on_fire",
           "$me",
           "$rescue+doer,",
-          "through",
+          "$metro",
           "$cross",
           "$oil",
           "$me",
