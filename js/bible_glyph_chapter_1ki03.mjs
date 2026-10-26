@@ -42,7 +42,7 @@ export function bible_glyph_chapter_1ki03() {
           "he",
           "had",
           "finished",
-          "building",
+          "$brick",
           "his",
           "$house",
           "and",
