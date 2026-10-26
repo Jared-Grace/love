@@ -126,7 +126,7 @@ export function bible_glyph_chapter_jud01() {
           "$pin",
           "$gift",
           "of",
-          "our",
+          "$me",
           "$heart_on_fire",
           "into",
           "a",
