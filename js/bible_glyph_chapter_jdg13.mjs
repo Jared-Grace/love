@@ -431,7 +431,7 @@ export function bible_glyph_chapter_jdg13() {
           "$speech",
           "$footprints",
           "true,",
-          "what",
+          "$flashlight+question",
           "shall",
           "be",
           "the",
