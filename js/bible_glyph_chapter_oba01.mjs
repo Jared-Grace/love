@@ -320,7 +320,7 @@ export function bible_glyph_chapter_oba01() {
           "be",
           "covered",
           "with",
-          "shame",
+          "$flushed+cloak",
           "and",
           "cut",
           "off",
