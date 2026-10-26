@@ -412,7 +412,7 @@ export function bible_glyph_chapter_rut02() {
           "receive",
           "a",
           "rich",
-          "reward",
+          "$coin+hammer+thing",
           "from",
           "the",
           "$i_am,",
