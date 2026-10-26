@@ -19,7 +19,7 @@ export function bible_glyph_chapter_luk15() {
         "$plus",
         "the",
         "$bow+doer",
-        "were",
+        "$link",
         "drawing",
         "near",
         "to",
