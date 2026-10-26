@@ -128,7 +128,7 @@ export function bible_glyph_chapter_2jn01() {
           "I",
           "urge",
           "you,",
-          "lady,",
+          "$woman+crown,",
           "$no_entry",
           "as",
           "a",
