@@ -194,7 +194,7 @@ export function bible_glyph_chapter_luk15() {
         "$flashlight+question",
         "$woman",
         "having",
-        "ten",
+        "$ten",
         "silver",
         "coins,",
         "if",
