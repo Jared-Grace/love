@@ -1187,7 +1187,7 @@ export function bible_glyph_chapter_mrk12() {
         "treasury",
         "than",
         "all",
-        "the",
+        "$pin",
         "others.",
       ],
     },
