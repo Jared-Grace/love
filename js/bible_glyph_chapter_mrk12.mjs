@@ -1097,7 +1097,7 @@ export function bible_glyph_chapter_mrk12() {
         "a",
         "show",
         "$hands_praying.",
-        "These",
+        "$flashlight",
         "men",
         "will",
         "$hand_receiving",
