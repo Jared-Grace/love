@@ -38,7 +38,7 @@ export function bible_glyph_chapter_1ki03() {
           "$city",
           "of",
           "$two_hearts+proper_name,",
-          "until",
+          "$finish",
           "he",
           "had",
           "finished",
