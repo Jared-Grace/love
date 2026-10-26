@@ -438,7 +438,7 @@ export function bible_glyph_chapter_1jn03() {
           "$lightbulb",
           "$pointing",
           "a",
-          "murderer",
+          "$person+fist+skull",
           "does",
           "$no_entry",
           "have",
