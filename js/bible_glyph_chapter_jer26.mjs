@@ -772,7 +772,7 @@ export function bible_glyph_chapter_jer26() {
           "$city",
           "and",
           "against",
-          "this",
+          "$flashlight",
           "$earth",
           "the",
           "same",
