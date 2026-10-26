@@ -235,7 +235,7 @@ export function bible_glyph_chapter_1jn02() {
           "true",
           "$light",
           "is",
-          "already",
+          "$hourglass_done",
           "$light.",
         ],
       },
