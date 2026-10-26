@@ -462,7 +462,7 @@ export function bible_glyph_chapter_ezk36() {
           "you",
           "will",
           "$no_entry",
-          "longer",
+          "$plus+doing",
           "deprive",
           "them",
           "of",
