@@ -467,7 +467,7 @@ export function bible_glyph_chapter_jhn04() {
           "I",
           "see",
           "$pointing",
-          "You",
+          "$you",
           "$link",
           "a",
           "$megaphone.",
