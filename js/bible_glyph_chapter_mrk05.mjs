@@ -456,7 +456,7 @@ export function bible_glyph_chapter_mrk05() {
         "who",
         "had",
         "been",
-        "possessed",
+        "$imp+doing",
         "$hug",
         "$pointing_back",
         "to",
