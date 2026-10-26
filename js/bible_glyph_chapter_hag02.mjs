@@ -252,7 +252,7 @@ export function bible_glyph_chapter_hag02() {
           "Mine,",
           "and",
           "the",
-          "gold",
+          "$gold",
           "is",
           "Mine,",
           "declares",
