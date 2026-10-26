@@ -572,7 +572,7 @@ export function bible_glyph_chapter_deu26() {
           "$wrestling+heart_on_fire",
           "and",
           "the",
-          "land",
+          "$brown_square",
           "You",
           "have",
           "$hands_giving",
