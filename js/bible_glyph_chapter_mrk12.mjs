@@ -261,7 +261,7 @@ export function bible_glyph_chapter_mrk12() {
         "has",
         "$butterfly",
         "the",
-        "cornerstone;",
+        "$triangular_ruler+stone;",
       ],
     },
     {
