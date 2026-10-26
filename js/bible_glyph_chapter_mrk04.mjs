@@ -1040,7 +1040,7 @@ export function bible_glyph_chapter_mrk04() {
           "$plus",
           "it",
           "was",
-          "perfectly",
+          "$top",
           "$sea+pause_button.",
         ],
       },
