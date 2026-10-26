@@ -172,7 +172,7 @@ export function bible_glyph_chapter_mrk10() {
         "$two",
         "will",
         "become",
-        "one",
+        "$one",
         "$meat.",
         "So",
         "they",
