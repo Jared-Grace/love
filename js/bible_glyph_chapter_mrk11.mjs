@@ -584,7 +584,7 @@ export function bible_glyph_chapter_mrk11() {
         "$pointing_back,",
         "“$teacher+top,",
         "$exclamation!",
-        "The",
+        "$pin",
         "fig",
         "tree",
         "You",
