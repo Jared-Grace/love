@@ -271,7 +271,7 @@ export function bible_glyph_chapter_rut04() {
           "$wrestling+heart_on_fire,",
           "$pointing_up",
           "the",
-          "redemption",
+          "$currency_exchange+thing",
           "or",
           "exchange",
           "of",
