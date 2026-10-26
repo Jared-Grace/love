@@ -717,7 +717,7 @@ export function bible_glyph_chapter_exo14() {
           "At",
           "morning",
           "watch,",
-          "however,",
+          "$link,",
           "the",
           "$i_am",
           "looked",
