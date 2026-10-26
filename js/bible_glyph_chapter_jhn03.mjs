@@ -415,7 +415,7 @@ export function bible_glyph_chapter_jhn03() {
       {
         verse_number: 17,
         words: [
-          "For",
+          "$information",
           "$heart_on_fire",
           "did",
           "$no_entry",
