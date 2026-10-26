@@ -1148,7 +1148,7 @@ export function bible_glyph_chapter_mrk10() {
         "$pointing_back,",
         "$plus",
         "$pointing_back",
-        "superiors",
+        "$top",
         "exercise",
         "authority",
         "over",
