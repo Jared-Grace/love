@@ -281,7 +281,7 @@ export function bible_glyph_chapter_rev01() {
         words: [
           "$me,",
           "$proper_name$John,",
-          "your",
+          "$you",
           "$brother",
           "$plus",
           "partner",
