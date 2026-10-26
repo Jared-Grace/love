@@ -438,7 +438,7 @@ export function bible_glyph_chapter_gen02() {
           "$kneeling+doing",
           "it",
           "and",
-          "keep",
+          "$guard",
           "it.",
         ],
       },
