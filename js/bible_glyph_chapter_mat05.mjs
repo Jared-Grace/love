@@ -853,7 +853,7 @@ export function bible_glyph_chapter_mat05() {
           "divorces",
           "$pointing_back",
           "$woman,",
-          "except",
+          "$children_crossing+tray_out+round_pushpin",
           "on",
           "the",
           "$speech",
