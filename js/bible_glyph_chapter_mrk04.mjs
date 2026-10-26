@@ -392,7 +392,7 @@ export function bible_glyph_chapter_mrk04() {
           "that",
           "was",
           "sown",
-          "in",
+          "$toward+tray_in",
           "$pointing_back.",
         ],
       },
