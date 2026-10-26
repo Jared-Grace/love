@@ -246,7 +246,7 @@ export function bible_glyph_chapter_rev10() {
           "his",
           "trumpet,",
           "$pin",
-          "mystery",
+          "$crystal_ball",
           "of",
           "$heart_on_fire",
           "will",
