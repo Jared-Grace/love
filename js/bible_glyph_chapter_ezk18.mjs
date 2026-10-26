@@ -622,7 +622,7 @@ export function bible_glyph_chapter_ezk18() {
           "$no_entry",
           "$lifting",
           "the",
-          "iniquity",
+          "$cyclone",
           "of",
           "his",
           "$father,",
