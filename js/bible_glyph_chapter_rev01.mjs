@@ -481,7 +481,7 @@ export function bible_glyph_chapter_rev01() {
           "held",
           "$tray_in",
           "$pointing_back",
-          "right",
+          "$hand+right_arrow",
           "$hand",
           "seven",
           "stars,",
