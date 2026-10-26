@@ -25,7 +25,7 @@ export function bible_glyph_chapter_psa112() {
           "the",
           "$i_am,",
           "who",
-          "greatly",
+          "$double_exclamation",
           "$smiling_face_with_hearts+doing",
           "in",
           "His",
