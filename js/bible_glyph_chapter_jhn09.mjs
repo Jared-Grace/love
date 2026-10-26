@@ -118,7 +118,7 @@ export function bible_glyph_chapter_jhn09() {
           "the",
           "$globe,",
           "I",
-          "am",
+          "$link",
           "the",
           "$light",
           "of",
