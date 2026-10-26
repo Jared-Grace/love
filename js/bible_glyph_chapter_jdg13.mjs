@@ -216,7 +216,7 @@ export function bible_glyph_chapter_jdg13() {
           "$no_entry",
           "$question",
           "him",
-          "where",
+          "$question+round_pushpin",
           "he",
           "came",
           "from,",
