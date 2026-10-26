@@ -659,7 +659,7 @@ export function bible_glyph_chapter_jol02() {
           "and",
           "be",
           "glad,",
-          "for",
+          "$pointing",
           "the",
           "$i_am",
           "has",
