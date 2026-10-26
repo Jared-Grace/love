@@ -647,7 +647,7 @@ export function bible_glyph_chapter_jhn20() {
           "$one",
           "$tray_out",
           "$pin",
-          "Twelve,",
+          "$one+two,",
           "$speech",
           "$proper_name$Didymus,",
           "was",
