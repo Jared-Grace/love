@@ -1139,7 +1139,7 @@ export function bible_glyph_chapter_jhn04() {
           "$back+flashlight",
           "$son",
           "lay",
-          "sick",
+          "$thermometer_face",
           "$tray_in",
           "$proper_name$Capernaum.",
         ],
