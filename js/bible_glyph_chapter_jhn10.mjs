@@ -417,7 +417,7 @@ export function bible_glyph_chapter_jhn10() {
           "$plus+one",
           "$sheep",
           "that",
-          "are",
+          "$link",
           "$no_entry",
           "$tray_out",
           "this",
