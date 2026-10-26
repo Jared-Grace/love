@@ -171,7 +171,7 @@ export function bible_glyph_chapter_2th01() {
           "for",
           "$heart_on_fire",
           "to",
-          "repay",
+          "$currency_exchange+hands_giving+away",
           "with",
           "affliction",
           "those",
