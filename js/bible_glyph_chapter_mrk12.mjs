@@ -660,7 +660,7 @@ export function bible_glyph_chapter_mrk12() {
         "given",
         "in",
         "$ring+hands_giving+doing.",
-        "Instead,",
+        "$curving_up,",
         "they",
         "will",
         "be",
