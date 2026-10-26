@@ -619,7 +619,7 @@ export function bible_glyph_chapter_gen03() {
         words: [
           "By",
           "the",
-          "sweat",
+          "$droplet+hot_face",
           "of",
           "your",
           "brow",
