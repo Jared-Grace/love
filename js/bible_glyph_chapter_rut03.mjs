@@ -31,7 +31,7 @@ export function bible_glyph_chapter_rut03() {
           "place",
           "for",
           "you,",
-          "that",
+          "$back+flashlight",
           "it",
           "may",
           "be",
