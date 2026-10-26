@@ -677,7 +677,7 @@ export function bible_glyph_chapter_jhn20() {
           "he",
           "$speech",
           "$pointing_back,",
-          "Unless",
+          "$traffic_light",
           "I",
           "$eye",
           "$pin",
