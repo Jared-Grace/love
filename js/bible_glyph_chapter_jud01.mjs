@@ -263,7 +263,7 @@ export function bible_glyph_chapter_jud01() {
           "the",
           "same",
           "way",
-          "these",
+          "$flashlight",
           "dreamers",
           "defile",
           "the",
