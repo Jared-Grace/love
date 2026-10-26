@@ -469,7 +469,7 @@ export function bible_glyph_chapter_psa118() {
       {
         verse_number: 24,
         words: [
-          "This",
+          "$flashlight",
           "is",
           "the",
           "$sun",
