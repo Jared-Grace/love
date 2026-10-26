@@ -48,7 +48,7 @@ export function bible_glyph_chapter_rut03() {
           "$no_entry",
           "$proper_name$Boaz,",
           "with",
-          "whose",
+          "$back+flashlight",
           "servant",
           "girls",
           "you",
