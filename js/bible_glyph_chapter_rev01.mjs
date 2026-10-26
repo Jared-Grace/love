@@ -566,7 +566,7 @@ export function bible_glyph_chapter_rev01() {
           "$hourglass!",
           "$plus",
           "I",
-          "hold",
+          "$raised_fist",
           "the",
           "keys",
           "of",
