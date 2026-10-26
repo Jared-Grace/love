@@ -315,7 +315,7 @@ export function bible_glyph_chapter_jhn09() {
         words: [
           "They",
           "brought",
-          "to",
+          "$toward",
           "the",
           "$proper_name$Pharisees",
           "the",
