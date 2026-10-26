@@ -649,7 +649,7 @@ export function bible_glyph_chapter_mrk04() {
       {
         verse_number: 25,
         words: [
-          "For",
+          "$information",
           "whoever",
           "has",
           "will",
