@@ -445,7 +445,7 @@ export function bible_glyph_chapter_jhn14() {
           "$hug+doer",
           "to",
           "$link",
-          "with",
+          "$linked_paperclips",
           "you",
           "$hourglass.",
         ],
