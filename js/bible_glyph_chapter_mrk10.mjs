@@ -667,7 +667,7 @@ export function bible_glyph_chapter_mrk10() {
         "$no_entry",
         "with",
         "$heart_on_fire.",
-        "For",
+        "$information",
         "all",
         "things",
         "are",
