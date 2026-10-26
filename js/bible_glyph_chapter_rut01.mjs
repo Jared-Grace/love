@@ -645,7 +645,7 @@ export function bible_glyph_chapter_rut01() {
           "has",
           "$turn_back",
           "me",
-          "empty.",
+          "$hand+zero+manner.",
           "Why",
           "call",
           "me",
