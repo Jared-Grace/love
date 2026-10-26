@@ -556,7 +556,7 @@ export function bible_glyph_chapter_jhn17() {
           "$anchor+doing",
           "in",
           "me",
-          "through",
+          "$metro",
           "their",
           "$speech,",
         ],
