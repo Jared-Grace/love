@@ -26,7 +26,7 @@ export function bible_glyph_chapter_jhn17() {
           "lifting",
           "up",
           "$pointing_back",
-          "eyes",
+          "$eye",
           "to",
           "the",
           "$sky",
