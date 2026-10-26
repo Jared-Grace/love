@@ -508,7 +508,7 @@ export function bible_glyph_chapter_jhn17() {
           "$hand_sending",
           "me",
           "$toward+tray_in",
-          "the",
+          "$pin",
           "$globe,",
           "I",
           "also",
