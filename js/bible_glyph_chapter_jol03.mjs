@@ -420,7 +420,7 @@ export function bible_glyph_chapter_jol03() {
           "The",
           "$sun_with_face",
           "and",
-          "moon",
+          "$moon",
           "will",
           "grow",
           "dark,",
