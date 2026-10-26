@@ -337,7 +337,7 @@ export function bible_glyph_chapter_jol01() {
           "is",
           "withered;",
           "the",
-          "pomegranate,",
+          "$fruit+red_circle,",
           "the",
           "palm,",
           "and",
