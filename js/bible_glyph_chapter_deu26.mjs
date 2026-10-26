@@ -78,7 +78,7 @@ export function bible_glyph_chapter_deu26() {
           "them",
           "in",
           "a",
-          "basket.",
+          "$basket+thread.",
           "Then",
           "$walking",
           "to",
