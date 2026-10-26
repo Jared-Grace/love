@@ -928,7 +928,7 @@ export function bible_glyph_chapter_mrk08() {
           "will",
           "lose",
           "$pointing_back,",
-          "but",
+          "$curving_right",
           "$back+flashlight",
           "loses",
           "$pointing_back",
