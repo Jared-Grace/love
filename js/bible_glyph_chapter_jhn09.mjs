@@ -415,7 +415,7 @@ export function bible_glyph_chapter_jhn09() {
           "$bow+doer",
           "$hammer",
           "$flashlight+likeness",
-          "signs?",
+          "$placard?",
           "$plus",
           "there",
           "was",
