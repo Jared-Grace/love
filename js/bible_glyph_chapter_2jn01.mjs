@@ -331,7 +331,7 @@ export function bible_glyph_chapter_2jn01() {
           "would",
           "$no_entry",
           "use",
-          "paper",
+          "$page_with_curl",
           "$plus",
           "ink.",
           "Instead",
