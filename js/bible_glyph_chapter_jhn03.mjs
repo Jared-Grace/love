@@ -566,7 +566,7 @@ export function bible_glyph_chapter_jhn03() {
         verse_number: 22,
         words: [
           "After",
-          "this,",
+          "$flashlight,",
           "$cross",
           "$plus",
           "His",
