@@ -290,7 +290,7 @@ export function bible_glyph_chapter_1jn01() {
           "us",
           "$away",
           "$all",
-          "unrighteousness.",
+          "$ruler+no_entry+thing.",
         ],
       },
       {
