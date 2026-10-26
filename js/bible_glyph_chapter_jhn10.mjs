@@ -889,7 +889,7 @@ export function bible_glyph_chapter_jhn10() {
           "$globe?",
           "How",
           "can",
-          "you",
+          "$you",
           "$speech",
           "$pointing",
           "I",
