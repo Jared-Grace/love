@@ -293,7 +293,7 @@ export function bible_glyph_chapter_1th01() {
           "$ring_buoy+doing",
           "$tray_out",
           "$pin",
-          "wrath",
+          "$angry_face",
           "that",
           "is",
           "$footprints.",
