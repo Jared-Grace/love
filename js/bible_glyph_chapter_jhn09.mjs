@@ -622,7 +622,7 @@ export function bible_glyph_chapter_jhn09() {
       {
         verse_number: 24,
         words: [
-          "So",
+          "$right_arrow",
           "a",
           "second",
           "time",
