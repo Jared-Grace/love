@@ -51,7 +51,7 @@ export function bible_glyph_chapter_psa096() {
       {
         verse_number: 3,
         words: [
-          "Declare",
+          "$abacus",
           "His",
           "$star",
           "among",
