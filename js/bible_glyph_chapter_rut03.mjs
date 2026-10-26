@@ -249,7 +249,7 @@ export function bible_glyph_chapter_rut03() {
           "$you?",
           "he",
           "$speech.",
-          "I",
+          "$me",
           "am",
           "your",
           "servant",
