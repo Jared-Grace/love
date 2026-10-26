@@ -225,7 +225,7 @@ export function bible_glyph_chapter_jol03() {
         words: [
           "I",
           "will",
-          "sell",
+          "$coin+hands_giving",
           "your",
           "$son",
           "and",
