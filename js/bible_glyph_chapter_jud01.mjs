@@ -627,7 +627,7 @@ export function bible_glyph_chapter_jud01() {
           "$crown",
           "$cross",
           "$oil",
-          "to",
+          "$toward+tray_in",
           "bring",
           "you",
           "$sprout",
