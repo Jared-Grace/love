@@ -30,7 +30,7 @@ export function bible_glyph_chapter_jhn14() {
           "$heart_on_fire;",
           "$plus",
           "$anchor+doing",
-          "in",
+          "$toward+tray_in",
           "Me.",
         ],
       },
