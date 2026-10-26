@@ -810,7 +810,7 @@ export function bible_glyph_chapter_luk15() {
         "your",
         "$sprout+money_bag",
         "$linked_paperclips",
-        "prostitutes,",
+        "$love_hotel+woman,",
         "$footprints",
         "back,",
         "you",
