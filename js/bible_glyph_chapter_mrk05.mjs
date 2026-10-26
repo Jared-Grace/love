@@ -753,7 +753,7 @@ export function bible_glyph_chapter_mrk05() {
         "healed",
         "of",
         "her",
-        "affliction.",
+        "$thread+collision+thing.",
       ],
     },
     {
