@@ -195,7 +195,7 @@ export function bible_glyph_chapter_psa101() {
         verse_number: 8,
         words: [
           "Every",
-          "morning",
+          "$morning",
           "I",
           "will",
           "remove",
