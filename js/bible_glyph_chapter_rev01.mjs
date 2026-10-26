@@ -218,7 +218,7 @@ export function bible_glyph_chapter_rev01() {
           "$footprints",
           "$linked_paperclips",
           "$pin",
-          "clouds,",
+          "$cloud,",
           "$plus",
           "every",
           "eye",
