@@ -119,7 +119,7 @@ export function bible_glyph_chapter_psa015() {
           "$hand_receiving",
           "a",
           "$money_bag+hand_sending",
-          "against",
+          "$pointing_up",
           "the",
           "innocent.",
           "He",
