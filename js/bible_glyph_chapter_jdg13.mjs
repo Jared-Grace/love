@@ -490,7 +490,7 @@ export function bible_glyph_chapter_jdg13() {
           "$no_entry",
           "$eating",
           "anything",
-          "unclean.",
+          "$soap+no_entry+thing.",
           "She",
           "must",
           "do",
