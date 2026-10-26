@@ -254,7 +254,7 @@ export function bible_glyph_chapter_3jn01() {
           "forbids",
           "those",
           "who",
-          "want",
+          "$shooting_star+lightbulb+doing",
           "to,",
           "$plus",
           "puts",
