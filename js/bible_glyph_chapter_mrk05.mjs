@@ -376,7 +376,7 @@ export function bible_glyph_chapter_mrk05() {
         "$cross",
         "$plus",
         "saw",
-        "the",
+        "$pin",
         "man",
         "who",
         "had",
