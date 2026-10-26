@@ -971,7 +971,7 @@ export function bible_glyph_chapter_ezk36() {
           "in",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "I",
           "$hands_giving",
           "your",
