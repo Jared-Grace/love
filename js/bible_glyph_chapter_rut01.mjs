@@ -366,7 +366,7 @@ export function bible_glyph_chapter_rut01() {
           "$speech",
           "there",
           "was",
-          "hope",
+          "$crossed_fingers",
           "for",
           "me",
           "to",
