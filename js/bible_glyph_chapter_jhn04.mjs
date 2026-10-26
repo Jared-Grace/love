@@ -1298,7 +1298,7 @@ export function bible_glyph_chapter_jhn04() {
       {
         verse_number: 53,
         words: [
-          "Then",
+          "$right_arrow",
           "the",
           "$father",
           "$lightbulb",
