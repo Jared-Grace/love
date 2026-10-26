@@ -400,7 +400,7 @@ export function bible_glyph_chapter_mrk12() {
     {
       verse_number: 15,
       words: [
-        "But",
+        "$curving_right",
         "Jesus",
         "$lightbulb",
         "$pointing_back",
