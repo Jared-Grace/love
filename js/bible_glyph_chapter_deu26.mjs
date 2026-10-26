@@ -153,7 +153,7 @@ export function bible_glyph_chapter_deu26() {
           "to",
           "$hand_receiving",
           "the",
-          "basket",
+          "$basket+thread",
           "from",
           "your",
           "$hand",
