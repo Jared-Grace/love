@@ -75,7 +75,7 @@ export function bible_glyph_chapter_jud01() {
           "$pin",
           "$rescue+thing",
           "we",
-          "share,",
+          "$handshake+describing,",
           "I",
           "felt",
           "it",
