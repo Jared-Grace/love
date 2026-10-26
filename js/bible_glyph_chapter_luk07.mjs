@@ -307,7 +307,7 @@ export function bible_glyph_chapter_luk07() {
         "time",
         "He",
         "$walking",
-        "to",
+        "$toward+tray_in",
         "a",
         "$city",
         "called",
