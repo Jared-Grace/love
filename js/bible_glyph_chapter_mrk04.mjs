@@ -1034,7 +1034,7 @@ export function bible_glyph_chapter_mrk04() {
           "still!",
           "$plus",
           "$pin",
-          "wind",
+          "$wind+dashing_away",
           "died",
           "down",
           "$plus",
