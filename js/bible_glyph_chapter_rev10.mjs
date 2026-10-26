@@ -23,7 +23,7 @@ export function bible_glyph_chapter_rev10() {
           "$might+describing",
           "$angel",
           "coming",
-          "down",
+          "$walking+pointing_down",
           "$tray_out",
           "$sky,",
           "wrapped",
