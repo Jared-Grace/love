@@ -728,7 +728,7 @@ export function bible_glyph_chapter_mrk08() {
           "$pointing",
           "still",
           "others",
-          "one",
+          "$one",
           "of",
           "$pin",
           "$megaphone.",
