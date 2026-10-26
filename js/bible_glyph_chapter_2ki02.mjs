@@ -354,7 +354,7 @@ export function bible_glyph_chapter_2ki02() {
           "$hammer+doing",
           "for",
           "you",
-          "before",
+          "$clock+back",
           "I",
           "am",
           "$hand_receiving",
