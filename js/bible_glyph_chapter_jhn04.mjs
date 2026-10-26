@@ -762,7 +762,7 @@ export function bible_glyph_chapter_jhn04() {
       {
         verse_number: 32,
         words: [
-          "But",
+          "$curving_right",
           "He",
           "$speech",
           "to",
