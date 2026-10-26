@@ -278,7 +278,7 @@ export function bible_glyph_chapter_jhn04() {
           "our",
           "$father",
           "$hand+foot,",
-          "who",
+          "$back+flashlight",
           "$hands_giving",
           "us",
           "this",
