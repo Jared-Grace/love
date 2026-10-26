@@ -1123,7 +1123,7 @@ export function bible_glyph_chapter_mat05() {
           "$you",
           "$house_with_garden",
           "$plus",
-          "hate",
+          "$face_with_symbols_on_mouth",
           "$you",
           "$enemy.",
         ],
