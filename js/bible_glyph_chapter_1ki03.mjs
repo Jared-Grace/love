@@ -882,7 +882,7 @@ export function bible_glyph_chapter_1ki03() {
           "the",
           "one",
           "and",
-          "half",
+          "$divide",
           "to",
           "the",
           "other.",
