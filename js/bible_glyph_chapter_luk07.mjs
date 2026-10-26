@@ -1076,7 +1076,7 @@ export function bible_glyph_chapter_luk07() {
         "alabaster",
         "jar",
         "of",
-        "perfume.",
+        "$lotion_bottle.",
       ],
     },
     {
