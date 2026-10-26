@@ -602,7 +602,7 @@ export function bible_glyph_chapter_mrk12() {
       words: [
         "$tray_in",
         "the",
-        "resurrection,",
+        "$person+up_arrow,",
         "then,",
         "whose",
         "$woman",
