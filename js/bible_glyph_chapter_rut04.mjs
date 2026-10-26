@@ -17,7 +17,7 @@ export function bible_glyph_chapter_rut04() {
           "went",
           "to",
           "the",
-          "gate",
+          "$gate",
           "and",
           "sat",
           "down",
