@@ -1027,7 +1027,7 @@ export function bible_glyph_chapter_jhn09() {
           "$pointing_back,",
           "Are",
           "$plus",
-          "we",
+          "$me",
           "blind?",
         ],
       },
