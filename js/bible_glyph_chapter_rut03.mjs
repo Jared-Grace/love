@@ -214,7 +214,7 @@ export function bible_glyph_chapter_rut03() {
           "secretly,",
           "$luggage+chains+doing",
           "his",
-          "feet,",
+          "$foot+round_pushpin,",
           "and",
           "lay",
           "down.",
