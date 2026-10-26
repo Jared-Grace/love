@@ -558,7 +558,7 @@ export function bible_glyph_chapter_mrk10() {
         "is",
         "for",
         "$pin",
-        "rich",
+        "$money_bag+thing",
         "to",
         "$footprints+tray_in",
         "$pin",
