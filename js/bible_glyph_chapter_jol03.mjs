@@ -464,7 +464,7 @@ export function bible_glyph_chapter_jol03() {
           "His",
           "$family,",
           "a",
-          "stronghold",
+          "$shield+house",
           "for",
           "the",
           "$son",
