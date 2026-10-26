@@ -107,7 +107,7 @@ export function bible_glyph_chapter_jhn10() {
           "out",
           "all",
           "his",
-          "own,",
+          "$identification_card,",
           "he",
           "$walking",
           "on",
