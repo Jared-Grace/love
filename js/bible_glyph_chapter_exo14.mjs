@@ -190,7 +190,7 @@ export function bible_glyph_chapter_exo14() {
           "$clamp+proper_name,",
           "with",
           "officers",
-          "over",
+          "$pointing_up",
           "all",
           "of",
           "them.",
