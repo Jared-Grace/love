@@ -287,7 +287,7 @@ export function bible_glyph_chapter_deu26() {
           "$hand+might,",
           "with",
           "great",
-          "terror,",
+          "$fear+thing,",
           "and",
           "with",
           "signs",
