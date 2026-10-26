@@ -1076,7 +1076,7 @@ export function bible_glyph_chapter_luk02() {
         "up",
         "$pointing_down",
         "to",
-        "the",
+        "$pin",
         "custom",
         "of",
         "the",
