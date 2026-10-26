@@ -363,7 +363,7 @@ export function bible_glyph_chapter_ezk36() {
         words: [
           "I",
           "will",
-          "multiply",
+          "$multiply+doing",
           "the",
           "$person",
           "upon",
