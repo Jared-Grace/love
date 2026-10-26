@@ -329,7 +329,7 @@ export function bible_glyph_chapter_jer26() {
           "the",
           "$family",
           "assembled",
-          "against",
+          "$toward",
           "$up_arrow+i_am",
           "in",
           "the",
