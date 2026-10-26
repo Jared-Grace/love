@@ -193,7 +193,7 @@ export function bible_glyph_chapter_deu26() {
           "and",
           "he",
           "went",
-          "down",
+          "$walking+pointing_down",
           "to",
           "$clamp+proper_name",
           "and",
