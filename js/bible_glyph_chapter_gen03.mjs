@@ -431,7 +431,7 @@ export function bible_glyph_chapter_gen03() {
           "you",
           "have",
           "$hammer+doing",
-          "this,",
+          "$flashlight,",
           "$speech+thumbs_down",
           "are",
           "you",
