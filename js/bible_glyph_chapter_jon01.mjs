@@ -242,7 +242,7 @@ export function bible_glyph_chapter_jon01() {
           "is",
           "responsible",
           "for",
-          "this",
+          "$flashlight",
           "$thumbs_down",
           "that",
           "is",
