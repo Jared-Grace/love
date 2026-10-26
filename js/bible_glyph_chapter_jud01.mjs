@@ -135,7 +135,7 @@ export function bible_glyph_chapter_jud01() {
           "immorality",
           "$plus",
           "deny",
-          "our",
+          "$me",
           "only",
           "Master",
           "$plus",
