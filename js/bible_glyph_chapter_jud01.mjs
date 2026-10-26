@@ -81,7 +81,7 @@ export function bible_glyph_chapter_jud01() {
           "it",
           "necessary",
           "to",
-          "write",
+          "$writing_hand",
           "and",
           "urge",
           "you",
