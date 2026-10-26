@@ -899,7 +899,7 @@ export function bible_glyph_chapter_exo14() {
           "$water",
           "on",
           "their",
-          "right",
+          "$hand+right_arrow",
           "and",
           "on",
           "their",
