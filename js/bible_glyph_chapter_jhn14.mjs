@@ -85,7 +85,7 @@ export function bible_glyph_chapter_jhn14() {
           "$footprints",
           "$repeat",
           "$plus",
-          "welcome",
+          "$children_crossing+hand_receiving",
           "you",
           "into",
           "My",
