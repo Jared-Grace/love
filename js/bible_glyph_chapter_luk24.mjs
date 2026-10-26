@@ -275,7 +275,7 @@ export function bible_glyph_chapter_luk24() {
           "down,",
           "he",
           "$eyes",
-          "only",
+          "$one+describing",
           "the",
           "linen",
           "cloths.",
