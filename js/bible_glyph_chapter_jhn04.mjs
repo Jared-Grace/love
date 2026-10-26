@@ -751,7 +751,7 @@ export function bible_glyph_chapter_jhn04() {
           "meantime",
           "the",
           "$learner",
-          "urged",
+          "$question",
           "$pointing_back,",
           "$speech,",
           "“Rabbi,",
