@@ -121,7 +121,7 @@ export function bible_glyph_chapter_2th01() {
           "the",
           "$running+toward+thing",
           "$plus",
-          "affliction",
+          "$clamp",
           "you",
           "are",
           "enduring.",
