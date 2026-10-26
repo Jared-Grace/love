@@ -589,7 +589,7 @@ export function bible_glyph_chapter_rut01() {
           "$footprints",
           "Bethlehem,",
           "the",
-          "whole",
+          "$all",
           "$city",
           "was",
           "stirred",
