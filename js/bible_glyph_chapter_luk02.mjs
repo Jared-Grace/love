@@ -474,7 +474,7 @@ export function bible_glyph_chapter_luk02() {
         "treasured",
         "up",
         "$all",
-        "these",
+        "$flashlight",
         "$speech+thing",
         "and",
         "pondered",
