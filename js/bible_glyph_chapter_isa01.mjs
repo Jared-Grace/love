@@ -797,7 +797,7 @@ export function bible_glyph_chapter_isa01() {
           "and",
           "sinners",
           "will",
-          "together",
+          "$linked_paperclips+manner",
           "be",
           "shattered,",
           "and",
