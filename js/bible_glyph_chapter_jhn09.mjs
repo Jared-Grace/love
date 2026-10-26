@@ -338,7 +338,7 @@ export function bible_glyph_chapter_jhn09() {
           "when",
           "$cross",
           "$hammer",
-          "the",
+          "$pin",
           "mud",
           "$plus",
           "opened",
