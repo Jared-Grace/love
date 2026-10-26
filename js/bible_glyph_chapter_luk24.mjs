@@ -1138,7 +1138,7 @@ export function bible_glyph_chapter_luk24() {
           "$plus",
           "$brain+turn_back",
           "and",
-          "forgiveness",
+          "$balloon+thing",
           "of",
           "$bow",
           "will",
