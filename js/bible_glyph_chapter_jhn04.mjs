@@ -894,7 +894,7 @@ export function bible_glyph_chapter_jhn04() {
           "$information",
           "$tray_in",
           "$flashlight",
-          "the",
+          "$pin",
           "$speech",
           "is",
           "true,",
