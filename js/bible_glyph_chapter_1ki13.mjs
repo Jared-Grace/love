@@ -52,7 +52,7 @@ export function bible_glyph_chapter_1ki13() {
           "out",
           "against",
           "the",
-          "altar",
+          "$altar",
           "by",
           "the",
           "$speech",
