@@ -299,7 +299,7 @@ export function bible_glyph_chapter_jhn09() {
           "$speech",
           "to",
           "$pointing_back,",
-          "Where",
+          "$round_pushpin+question",
           "is",
           "He?",
           "He",
