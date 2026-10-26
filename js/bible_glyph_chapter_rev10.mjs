@@ -32,7 +32,7 @@ export function bible_glyph_chapter_rev10() {
           "$cloud,",
           "$plus",
           "a",
-          "rainbow",
+          "$bow+cloud",
           "above",
           "$pointing_back",
           "head.",
