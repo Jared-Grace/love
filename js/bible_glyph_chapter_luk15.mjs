@@ -190,7 +190,7 @@ export function bible_glyph_chapter_luk15() {
     {
       verse_number: 8,
       words: [
-        "Or",
+        "$shuffle",
         "what",
         "$woman",
         "having",
