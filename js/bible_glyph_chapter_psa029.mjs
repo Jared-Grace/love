@@ -73,7 +73,7 @@ export function bible_glyph_chapter_psa029() {
           "$heart_on_fire",
           "of",
           "$star",
-          "thunders;",
+          "$loudspeaker+cloud_with_lightning+doing;",
           "the",
           "$i_am",
           "is",
