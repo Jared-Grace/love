@@ -186,7 +186,7 @@ export function bible_glyph_chapter_1jn02() {
           "an",
           "old",
           "$scroll",
-          "which",
+          "$back+flashlight",
           "you",
           "have",
           "had",
