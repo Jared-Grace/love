@@ -489,7 +489,7 @@ export function bible_glyph_chapter_ezk33() {
           "$no_entry",
           "will",
           "the",
-          "righteous",
+          "$ruler",
           "be",
           "able",
           "to",
