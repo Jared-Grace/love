@@ -587,7 +587,7 @@ export function bible_glyph_chapter_jhn09() {
           "$right_arrow+toward",
           "anyone",
           "who",
-          "confessed",
+          "$people_with_bunny_ears+speech+doing",
           "$pointing_back",
           "as",
           "the",
