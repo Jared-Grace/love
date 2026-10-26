@@ -890,7 +890,7 @@ export function bible_glyph_chapter_jol02() {
           "out",
           "My",
           "$wind",
-          "on",
+          "$pointing_up",
           "all",
           "$meat.",
           "Your",
