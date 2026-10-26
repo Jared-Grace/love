@@ -233,7 +233,7 @@ export function bible_glyph_chapter_gen02() {
           "$heart_on_fire",
           "$sprout+down_arrow+doing",
           "a",
-          "garden",
+          "$garden",
           "in",
           "$proper_name$Eden,",
           "in",
