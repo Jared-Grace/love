@@ -962,7 +962,7 @@ export function bible_glyph_chapter_mrk04() {
           "soon",
           "a",
           "violent",
-          "windstorm",
+          "$tornado",
           "came",
           "up,",
           "$plus",
