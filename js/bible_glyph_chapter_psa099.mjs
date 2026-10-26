@@ -189,7 +189,7 @@ export function bible_glyph_chapter_psa099() {
       {
         verse_number: 9,
         words: [
-          "Exalt",
+          "$up_arrow",
           "the",
           "$i_am",
           "our",
