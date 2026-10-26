@@ -267,7 +267,7 @@ export function bible_glyph_chapter_jhn09() {
           "$hammer",
           "mud",
           "$plus",
-          "anointed",
+          "$pointing_up+oil+hand+doing",
           "my",
           "eyes",
           "$plus",
