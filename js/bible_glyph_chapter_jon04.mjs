@@ -182,7 +182,7 @@ export function bible_glyph_chapter_jon04() {
           "$umbrella_on_ground",
           "over",
           "$dove+proper_name",
-          "head",
+          "$person_gesturing_ok",
           "to",
           "ease",
           "his",
