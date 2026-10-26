@@ -42,7 +42,7 @@ export function bible_glyph_chapter_jhn09() {
           "$teacher+top,",
           "$flashlight+question",
           "$bow+doing,",
-          "this",
+          "$flashlight",
           "man",
           "or",
           "$pointing_back",
