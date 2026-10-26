@@ -394,7 +394,7 @@ export function bible_glyph_chapter_jhn04() {
           "$pointing_back,",
           "“Go,",
           "$loudspeaker+doing",
-          "your",
+          "$you",
           "$man_beard",
           "$plus",
           "$footprints",
