@@ -166,7 +166,7 @@ export function bible_glyph_chapter_jhn03() {
         words: [
           "$meat",
           "is",
-          "born",
+          "$hatching_chick",
           "$tray_out",
           "$meat,",
           "but",
