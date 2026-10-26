@@ -1319,7 +1319,7 @@ export function bible_glyph_chapter_luk02() {
         "up",
         "$all",
         "these",
-        "things",
+        "$speech+thing",
         "$tray_in",
         "$pointing_back",
         "$heart_organ.",
