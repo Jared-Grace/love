@@ -759,7 +759,7 @@ export function bible_glyph_chapter_exo14() {
           "they",
           "had",
           "difficulty",
-          "driving.",
+          "$horse+right_arrow+doing.",
           "Let",
           "us",
           "flee",
