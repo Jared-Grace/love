@@ -469,7 +469,7 @@ export function bible_glyph_chapter_1jn05() {
         words: [
           "$all",
           "$ruler+no_entry+thing",
-          "is",
+          "$link",
           "$bow,",
           "yet",
           "there",
