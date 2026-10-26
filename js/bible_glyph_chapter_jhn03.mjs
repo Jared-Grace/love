@@ -723,7 +723,7 @@ export function bible_glyph_chapter_jhn03() {
           "the",
           "$oil,",
           "but",
-          "am",
+          "$link",
           "$hand_sending",
           "ahead",
           "of",
