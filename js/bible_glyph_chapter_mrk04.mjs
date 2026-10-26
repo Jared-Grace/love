@@ -15,7 +15,7 @@ export function bible_glyph_chapter_mrk04() {
         words: [
           "$plus",
           "Once",
-          "again",
+          "$repeat",
           "Jesus",
           "began",
           "to",
