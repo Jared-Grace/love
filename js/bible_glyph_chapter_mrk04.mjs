@@ -20,7 +20,7 @@ export function bible_glyph_chapter_mrk04() {
           "began",
           "to",
           "$teacher+doing",
-          "beside",
+          "$children_crossing",
           "the",
           "$sea.",
           "Such",
