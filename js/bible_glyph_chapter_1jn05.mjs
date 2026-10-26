@@ -498,7 +498,7 @@ export function bible_glyph_chapter_1jn05() {
           "keep",
           "on",
           "$bow+doing;",
-          "the",
+          "$pin",
           "One",
           "who",
           "was",
