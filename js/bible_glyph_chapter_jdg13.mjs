@@ -261,7 +261,7 @@ export function bible_glyph_chapter_jdg13() {
           "$no_entry",
           "$all",
           "$soap+no_entry+thing,",
-          "because",
+          "$pointing",
           "the",
           "boy",
           "will",
