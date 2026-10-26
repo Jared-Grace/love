@@ -350,7 +350,7 @@ export function bible_glyph_chapter_jol02() {
           "Yet",
           "$plus",
           "$watch,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am,",
           "$turn_back",
