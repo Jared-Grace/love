@@ -212,7 +212,7 @@ export function bible_glyph_chapter_rev01() {
       {
         verse_number: 7,
         words: [
-          "Behold,",
+          "$exclamation,",
           "He",
           "is",
           "$footprints",
