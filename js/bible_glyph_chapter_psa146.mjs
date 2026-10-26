@@ -186,7 +186,7 @@ export function bible_glyph_chapter_psa146() {
           "$i_am",
           "$guard",
           "the",
-          "foreigners;",
+          "$foreigner;",
           "the",
           "fatherless",
           "and",
