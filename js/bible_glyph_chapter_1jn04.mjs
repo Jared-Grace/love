@@ -42,7 +42,7 @@ export function bible_glyph_chapter_1jn04() {
           "gone",
           "out",
           "into",
-          "the",
+          "$pin",
           "$globe.",
         ],
       },
