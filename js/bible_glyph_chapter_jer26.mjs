@@ -499,7 +499,7 @@ export function bible_glyph_chapter_jer26() {
           "As",
           "for",
           "me,",
-          "here",
+          "$exclamation",
           "I",
           "am",
           "in",
