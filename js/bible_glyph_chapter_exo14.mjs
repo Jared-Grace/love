@@ -229,7 +229,7 @@ export function bible_glyph_chapter_exo14() {
           "The",
           "$clamp+person",
           "-",
-          "all",
+          "$all",
           "$house+proper_name's",
           "horses",
           "and",
