@@ -634,7 +634,7 @@ export function bible_glyph_chapter_mrk12() {
         "$no_entry",
         "$lightbulb",
         "$pin",
-        "Scriptures",
+        "$writing_hand+thing",
         "or",
         "$pin",
         "$lightning",
