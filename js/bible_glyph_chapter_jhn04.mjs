@@ -273,7 +273,7 @@ export function bible_glyph_chapter_jhn04() {
           "$no_entry",
           "are",
           "$you",
-          "greater",
+          "$top",
           "than",
           "our",
           "$father",
