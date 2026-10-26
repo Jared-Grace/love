@@ -664,7 +664,7 @@ export function bible_glyph_chapter_jol02() {
           "$i_am",
           "has",
           "$hammer+doing",
-          "great",
+          "$top+doing",
           "things.",
         ],
       },
