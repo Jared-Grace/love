@@ -246,7 +246,7 @@ export function bible_glyph_chapter_isa01() {
           "shelter",
           "in",
           "a",
-          "vineyard,",
+          "$vineyard,",
           "like",
           "a",
           "shack",
