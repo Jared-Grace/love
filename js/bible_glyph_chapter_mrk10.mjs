@@ -157,7 +157,7 @@ export function bible_glyph_chapter_mrk10() {
         "a",
         "$person",
         "will",
-        "leave",
+        "$pointing_down+puzzle_piece+doing",
         "$pointing_back",
         "$father",
         "$plus",
