@@ -1051,7 +1051,7 @@ export function bible_glyph_chapter_luk24() {
         verse_number: 44,
         words: [
           "$speech",
-          "to",
+          "$toward",
           "$pointing_back,",
           "These",
           "are",
