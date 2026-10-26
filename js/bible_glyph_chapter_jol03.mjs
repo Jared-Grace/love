@@ -301,7 +301,7 @@ export function bible_glyph_chapter_jol03() {
           "the",
           "weak",
           "$speech,",
-          "I",
+          "$me",
           "am",
           "$might+person!",
         ],
