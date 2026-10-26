@@ -167,7 +167,7 @@ export function bible_glyph_chapter_jhn14() {
           "to",
           "$pin",
           "$father",
-          "except",
+          "$traffic_light",
           "through",
           "Me.",
         ],
