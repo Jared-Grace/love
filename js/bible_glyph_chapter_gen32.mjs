@@ -136,7 +136,7 @@ export function bible_glyph_chapter_gen32() {
           "that",
           "I",
           "may",
-          "find",
+          "$magnifying_glass+exclamation",
           "favor",
           "in",
           "your",
