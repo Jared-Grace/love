@@ -701,7 +701,7 @@ export function bible_glyph_chapter_oba01() {
           "$city",
           "of",
           "the",
-          "Negev.",
+          "$compass+down_arrow.",
         ],
       },
       {
