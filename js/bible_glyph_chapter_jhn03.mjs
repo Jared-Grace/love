@@ -691,7 +691,7 @@ export function bible_glyph_chapter_jhn03() {
         verse_number: 27,
         words: [
           "$proper_name$John",
-          "replied,",
+          "$speech+turn_back,",
           "“A",
           "$person",
           "can",
