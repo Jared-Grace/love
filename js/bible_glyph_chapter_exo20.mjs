@@ -383,7 +383,7 @@ export function bible_glyph_chapter_exo20() {
           "his",
           "$kneeling",
           "or",
-          "maidservant,",
+          "$broom,",
           "or",
           "his",
           "ox",
