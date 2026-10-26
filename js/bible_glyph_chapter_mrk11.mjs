@@ -148,7 +148,7 @@ export function bible_glyph_chapter_mrk11() {
         "are",
         "you",
         "$hammer,",
-        "untying",
+        "$free_button",
         "the",
         "colt?”",
       ],
