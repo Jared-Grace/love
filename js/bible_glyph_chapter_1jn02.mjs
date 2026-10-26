@@ -665,7 +665,7 @@ export function bible_glyph_chapter_1jn02() {
           "$link",
           "the",
           "$oil?",
-          "This",
+          "$flashlight",
           "$link",
           "the",
           "antichrist,",
