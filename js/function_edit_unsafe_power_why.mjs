@@ -10,8 +10,8 @@ export async function function_edit_unsafe_power_why(f_name) {
   let world = functions_edit_unsafe_from_reads(reads);
   let read = reads.get(f_name);
   let powers = js_flow_power_names();
-  function lambda(r) {
-    let r2 = r.alias;
+  function lambda(r_inner) {
+    let r2 = r_inner.alias;
     return r2;
   }
   let starts = read.returns.map(lambda);
