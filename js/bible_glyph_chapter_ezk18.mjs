@@ -347,7 +347,7 @@ export function bible_glyph_chapter_ezk18() {
           "$moai;",
           "he",
           "$hammer+doing$s",
-          "abominations.",
+          "$vomiting.",
         ],
       },
       {
