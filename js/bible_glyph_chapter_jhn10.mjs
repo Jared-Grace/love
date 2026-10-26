@@ -609,7 +609,7 @@ export function bible_glyph_chapter_jhn10() {
         verse_number: 24,
         words: [
           "$right_arrow",
-          "the",
+          "$pin",
           "$menorah",
           "gathered",
           "$around+doing",
