@@ -434,7 +434,7 @@ export function bible_glyph_chapter_jhn03() {
           "$rescue",
           "$pin",
           "$globe",
-          "through",
+          "$metro",
           "$pointing_back.",
         ],
       },
