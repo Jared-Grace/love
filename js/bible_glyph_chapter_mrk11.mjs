@@ -207,7 +207,7 @@ export function bible_glyph_chapter_mrk11() {
         "$pointing_back",
         "$garment",
         "on",
-        "the",
+        "$pin",
         "$road,",
         "while",
         "others",
