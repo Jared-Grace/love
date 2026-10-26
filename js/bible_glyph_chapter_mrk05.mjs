@@ -25,7 +25,7 @@ export function bible_glyph_chapter_mrk05() {
         "$sea,",
         "to",
         "$pin",
-        "region",
+        "$map+round_pushpin",
         "of",
         "$pin",
         "$proper_name$Gerasenes.",
