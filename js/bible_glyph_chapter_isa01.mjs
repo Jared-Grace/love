@@ -549,7 +549,7 @@ export function bible_glyph_chapter_isa01() {
           "they",
           "are",
           "as",
-          "red",
+          "$red_circle+doing",
           "as",
           "crimson,",
           "they",
