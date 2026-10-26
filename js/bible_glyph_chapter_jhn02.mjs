@@ -122,7 +122,7 @@ export function bible_glyph_chapter_jhn02() {
       {
         verse_number: 6,
         words: [
-          "Now",
+          "$curving_right",
           "six",
           "stone",
           "water",
