@@ -832,7 +832,7 @@ export function bible_glyph_chapter_jhn04() {
           "$pointing",
           "there",
           "are",
-          "still",
+          "$repeat_single_button",
           "four",
           "months",
           "$plus",
