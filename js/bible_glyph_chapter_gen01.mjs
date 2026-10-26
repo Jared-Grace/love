@@ -929,7 +929,7 @@ export function bible_glyph_chapter_gen01() {
           "$heart_on_fire",
           "$eye",
           "everything",
-          "that",
+          "$back+flashlight",
           "He",
           "had",
           "$hammer+doing,",
