@@ -44,7 +44,7 @@ export function bible_glyph_chapter_jhn09() {
           "$bow+doing,",
           "$flashlight",
           "man",
-          "or",
+          "$shuffle",
           "$pointing_back",
           "parents,",
           "that",
