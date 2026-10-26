@@ -503,7 +503,7 @@ export function bible_glyph_chapter_oba01() {
           "upon",
           "your",
           "own",
-          "head.",
+          "$person_gesturing_ok.",
         ],
       },
       {
