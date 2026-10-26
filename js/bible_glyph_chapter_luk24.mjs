@@ -163,7 +163,7 @@ export function bible_glyph_chapter_luk24() {
           "$knot",
           "be",
           "delivered",
-          "into",
+          "$toward+tray_in",
           "the",
           "$hand",
           "of",
