@@ -1003,7 +1003,7 @@ export function bible_glyph_chapter_mrk12() {
         "$palm_down",
         "Your",
         "$enemy",
-        "under",
+        "$down_arrow+pointing_down",
         "Your",
         "$foot.",
       ],
