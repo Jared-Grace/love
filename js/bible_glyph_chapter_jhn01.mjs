@@ -321,7 +321,7 @@ export function bible_glyph_chapter_jhn01() {
           "cried",
           "out,",
           "$speech,",
-          "“This",
+          "“$flashlight",
           "was",
           "He",
           "of",
