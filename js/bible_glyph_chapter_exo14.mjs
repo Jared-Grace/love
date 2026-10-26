@@ -96,7 +96,7 @@ export function bible_glyph_chapter_exo14() {
           "and",
           "all",
           "his",
-          "army,",
+          "$raised_fist,",
           "and",
           "the",
           "$clamp+person",
