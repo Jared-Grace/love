@@ -124,7 +124,7 @@ export function bible_glyph_chapter_oba01() {
           "soar",
           "like",
           "the",
-          "eagle",
+          "$eagle",
           "and",
           "make",
           "your",
