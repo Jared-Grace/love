@@ -111,7 +111,7 @@ export function bible_glyph_chapter_jhn04() {
           "$face_exhaling+doing",
           "$tray_out",
           "the",
-          "journey,",
+          "$road+walking+thing,",
           "sat",
           "down",
           "by",
