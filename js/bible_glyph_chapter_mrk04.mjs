@@ -127,7 +127,7 @@ export function bible_glyph_chapter_mrk04() {
           "did",
           "$no_entry",
           "have",
-          "much",
+          "$multiply",
           "$earth.",
           "$plus",
           "it",
