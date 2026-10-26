@@ -71,7 +71,7 @@ export function bible_glyph_chapter_psa023() {
       {
         verse_number: 4,
         words: [
-          "Even",
+          "$plus",
           "though",
           "I",
           "$walking",
