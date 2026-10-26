@@ -366,7 +366,7 @@ export function bible_glyph_chapter_jhn09() {
           "to",
           "$pointing_back,",
           "He",
-          "put",
+          "$pointing_up+palm_down",
           "$brown_square+water",
           "on",
           "my",
