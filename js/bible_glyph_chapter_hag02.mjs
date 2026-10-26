@@ -457,7 +457,7 @@ export function bible_glyph_chapter_hag02() {
       {
         verse_number: 15,
         words: [
-          "Now",
+          "$watch",
           "$heart_organ",
           "carefully",
           "$tray_out",
