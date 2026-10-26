@@ -1174,7 +1174,7 @@ export function bible_glyph_chapter_jhn01() {
           "‘I",
           "$eye",
           "you",
-          "under",
+          "$down_arrow+pointing_down",
           "the",
           "fig",
           "tree’?",
