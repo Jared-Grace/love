@@ -331,7 +331,7 @@ export function bible_glyph_chapter_jhn09() {
         words: [
           "Now",
           "it",
-          "was",
+          "$link",
           "a",
           "$sabbath",
           "$sun",
