@@ -126,7 +126,7 @@ export function bible_glyph_chapter_ezk33() {
           "on",
           "his",
           "own",
-          "head.",
+          "$person_gesturing_ok.",
         ],
       },
       {
