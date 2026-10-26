@@ -129,7 +129,7 @@ export function bible_glyph_chapter_psa136() {
           "the",
           "$sun_with_face",
           "to",
-          "rule",
+          "$joystick+thing",
           "the",
           "$sun.",
           "His",
