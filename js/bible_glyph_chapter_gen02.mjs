@@ -374,7 +374,7 @@ export function bible_glyph_chapter_gen02() {
           "of",
           "the",
           "second",
-          "river",
+          "$water+national_park",
           "is",
           "the",
           "$proper_name$Gihon;",
