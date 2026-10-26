@@ -485,7 +485,7 @@ export function bible_glyph_chapter_mrk11() {
         "$hands_praying+thing",
         "for",
         "all",
-        "the",
+        "$pin",
         "$map’?",
         "But",
         "you",
