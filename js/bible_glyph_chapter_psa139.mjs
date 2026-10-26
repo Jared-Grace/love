@@ -265,7 +265,7 @@ export function bible_glyph_chapter_psa139() {
       {
         verse_number: 13,
         words: [
-          "For",
+          "$pointing",
           "You",
           "formed",
           "my",
