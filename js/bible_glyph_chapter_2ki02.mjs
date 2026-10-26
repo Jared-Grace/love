@@ -348,7 +348,7 @@ export function bible_glyph_chapter_2ki02() {
           "$heart_on_fire+rescue,",
           "Tell",
           "me",
-          "what",
+          "$flashlight+question",
           "I",
           "can",
           "$hammer+doing",
