@@ -615,7 +615,7 @@ export function bible_glyph_chapter_jhn09() {
           "is",
           "old",
           "enough;",
-          "ask",
+          "$pointing_up+question",
           "$pointing_back.",
         ],
       },
