@@ -561,7 +561,7 @@ export function bible_glyph_chapter_mrk04() {
           "$shuffle",
           "$down_arrow",
           "a",
-          "bed?",
+          "$bed?",
           "Does",
           "he",
           "$no_entry",
