@@ -264,7 +264,7 @@ export function bible_glyph_chapter_1jn03() {
           "$pointing",
           "$pointing_back",
           "$seed",
-          "abides",
+          "$pin+doing",
           "$tray_in",
           "$pointing_back;",
           "he",
