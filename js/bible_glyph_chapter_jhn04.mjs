@@ -176,7 +176,7 @@ export function bible_glyph_chapter_jhn04() {
           "a",
           "drink",
           "from",
-          "me,",
+          "$me,",
           "a",
           "$proper_name$Samaritan",
           "$woman?”",
