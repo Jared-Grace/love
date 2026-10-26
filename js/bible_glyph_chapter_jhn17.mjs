@@ -453,7 +453,7 @@ export function bible_glyph_chapter_jhn17() {
           "the",
           "$globe,",
           "but",
-          "that",
+          "$right_arrow+toward",
           "You",
           "keep",
           "$pointing_back",
