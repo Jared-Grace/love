@@ -405,7 +405,7 @@ export function bible_glyph_chapter_jhn09() {
           "$pin",
           "$sabbath.",
           "But",
-          "others",
+          "$plus+one",
           "$speech,",
           "How",
           "can",
