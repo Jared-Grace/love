@@ -725,7 +725,7 @@ export function bible_glyph_chapter_mrk10() {
         "$father",
         "$shuffle",
         "$child",
-        "or",
+        "$shuffle",
         "$field",
         "for",
         "My",
