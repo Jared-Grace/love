@@ -131,7 +131,7 @@ export function bible_glyph_chapter_psa138() {
       {
         verse_number: 6,
         words: [
-          "Though",
+          "$pointing",
           "the",
           "$i_am",
           "is",
