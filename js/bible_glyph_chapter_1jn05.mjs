@@ -77,7 +77,7 @@ export function bible_glyph_chapter_1jn05() {
           "$heart_red",
           "of",
           "$heart_on_fire,",
-          "that",
+          "$right_arrow+toward",
           "we",
           "keep",
           "$pointing_back",
