@@ -569,7 +569,7 @@ export function bible_glyph_chapter_jhn14() {
           "My",
           "$scroll$s",
           "$plus",
-          "keeps",
+          "$guard",
           "$pointing_back",
           "is",
           "the",
