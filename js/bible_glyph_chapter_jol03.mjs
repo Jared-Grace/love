@@ -409,7 +409,7 @@ export function bible_glyph_chapter_jol03() {
           "near",
           "in",
           "the",
-          "valley",
+          "$valley",
           "of",
           "decision.",
         ],
