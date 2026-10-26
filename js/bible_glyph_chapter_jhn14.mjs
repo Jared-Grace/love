@@ -782,7 +782,7 @@ export function bible_glyph_chapter_jhn14() {
           "do",
           "not",
           "be",
-          "afraid.",
+          "$fearful_face+running+doing.",
         ],
       },
       {
