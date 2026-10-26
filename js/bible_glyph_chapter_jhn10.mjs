@@ -367,7 +367,7 @@ export function bible_glyph_chapter_jhn10() {
         verse_number: 14,
         words: [
           "I",
-          "am",
+          "$link",
           "the",
           "$thumbs_up",
           "$person+sheep.",
