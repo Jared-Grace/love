@@ -1041,7 +1041,7 @@ export function bible_glyph_chapter_mrk04() {
           "it",
           "was",
           "perfectly",
-          "calm.",
+          "$sea+pause_button.",
         ],
       },
       {
