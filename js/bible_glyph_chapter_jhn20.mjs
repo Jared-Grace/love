@@ -829,7 +829,7 @@ export function bible_glyph_chapter_jhn20() {
           "$hammer",
           "$multiply",
           "$plus",
-          "other",
+          "$plus+one",
           "signs",
           "in",
           "the",
