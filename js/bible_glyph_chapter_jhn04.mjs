@@ -769,7 +769,7 @@ export function bible_glyph_chapter_jhn04() {
           "$pointing_back,",
           "“$me",
           "have",
-          "food",
+          "$fork_and_knife",
           "to",
           "$eating",
           "that",
