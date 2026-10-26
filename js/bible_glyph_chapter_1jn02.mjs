@@ -62,7 +62,7 @@ export function bible_glyph_chapter_1jn02() {
           "for",
           "$me",
           "$bow$s,",
-          "and",
+          "$curving_right",
           "$no_entry",
           "for",
           "ours",
