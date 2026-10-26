@@ -531,7 +531,7 @@ export function bible_glyph_chapter_jud01() {
           "$curving_right",
           "$you,",
           "$heart_red+describing,",
-          "remember",
+          "$reminder_ribbon+doing",
           "what",
           "was",
           "foretold",
