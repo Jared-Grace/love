@@ -850,7 +850,7 @@ export function bible_glyph_chapter_jol02() {
           "will",
           "$lightbulb",
           "that",
-          "I",
+          "$me",
           "am",
           "$magnet+thing",
           "in",
