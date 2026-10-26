@@ -690,7 +690,7 @@ export function bible_glyph_chapter_mat05() {
           "have",
           "paid",
           "$pin",
-          "last",
+          "$end_arrow+describing",
           "penny.",
         ],
       },
