@@ -252,7 +252,7 @@ export function bible_glyph_chapter_jhn09() {
           "were",
           "your",
           "eyes",
-          "opened?",
+          "$unlocked?",
         ],
       },
       {
