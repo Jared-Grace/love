@@ -104,7 +104,7 @@ export function bible_glyph_chapter_1jn04() {
           "coming",
           "$plus",
           "is",
-          "already",
+          "$hourglass_done",
           "$tray_in",
           "$pin",
           "$globe.",
