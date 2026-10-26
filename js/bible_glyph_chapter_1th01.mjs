@@ -74,7 +74,7 @@ export function bible_glyph_chapter_1th01() {
           "$anchor,",
           "$plus",
           "your",
-          "labor",
+          "$face_exhaling",
           "of",
           "$heart_red,",
           "$plus",
