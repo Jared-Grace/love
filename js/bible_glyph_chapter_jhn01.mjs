@@ -826,7 +826,7 @@ export function bible_glyph_chapter_jhn01() {
           "by,",
           "he",
           "$speech,",
-          "“Look,",
+          "“$exclamation,",
           "the",
           "Lamb",
           "of",
