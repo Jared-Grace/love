@@ -36,7 +36,7 @@ export function bible_glyph_chapter_gen03() {
           "And",
           "he",
           "$speech",
-          "to",
+          "$toward",
           "the",
           "$woman,",
           "Did",
