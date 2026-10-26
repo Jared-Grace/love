@@ -228,7 +228,7 @@ export function bible_glyph_chapter_jon03() {
           "everyone",
           "$waving_hand",
           "out",
-          "to",
+          "$toward",
           "$heart_on_fire",
           "earnestly.",
           "Let",
