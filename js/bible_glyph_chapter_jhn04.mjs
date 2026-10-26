@@ -814,7 +814,7 @@ export function bible_glyph_chapter_jhn04() {
           "Him",
           "who",
           "$incoming_envelope",
-          "Me",
+          "$me",
           "$plus",
           "to",
           "finish",
