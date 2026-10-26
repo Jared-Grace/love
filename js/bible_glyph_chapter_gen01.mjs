@@ -434,7 +434,7 @@ export function bible_glyph_chapter_gen01() {
           "to",
           "$joystick+thing",
           "the",
-          "day,",
+          "$sun,",
           "and",
           "the",
           "lesser",
