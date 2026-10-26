@@ -187,7 +187,7 @@ export function bible_glyph_chapter_psa085() {
           "that",
           "$star",
           "may",
-          "dwell",
+          "$tent+doing",
           "in",
           "our",
           "$earth.",
