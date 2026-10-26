@@ -121,7 +121,7 @@ export function bible_glyph_chapter_psa023() {
           "You",
           "anoint",
           "my",
-          "head",
+          "$person_gesturing_ok",
           "with",
           "$lotion_bottle;",
           "my",
