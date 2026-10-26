@@ -1165,7 +1165,7 @@ export function bible_glyph_chapter_luk02() {
       verse_number: 46,
       words: [
         "$plus",
-        "after",
+        "$linked_paperclips",
         "three",
         "$sun",
         "they",
