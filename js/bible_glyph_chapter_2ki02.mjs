@@ -413,7 +413,7 @@ export function bible_glyph_chapter_2ki02() {
         verse_number: 11,
         words: [
           "As",
-          "they",
+          "$pointing_back",
           "were",
           "$walking",
           "along",
