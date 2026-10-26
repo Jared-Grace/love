@@ -955,7 +955,7 @@ export function bible_glyph_chapter_jol02() {
           "and",
           "columns",
           "of",
-          "smoke.",
+          "$fire+cloud.",
         ],
       },
       {
