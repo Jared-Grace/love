@@ -389,7 +389,7 @@ export function bible_glyph_chapter_hag02() {
           "So",
           "Haggai",
           "$speech,",
-          "If",
+          "$traffic_light",
           "one",
           "who",
           "is",
