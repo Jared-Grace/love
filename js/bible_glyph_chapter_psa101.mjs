@@ -114,7 +114,7 @@ export function bible_glyph_chapter_psa101() {
           "his",
           "neighbor",
           "in",
-          "secret,",
+          "$see_no_evil_monkey+thing,",
           "I",
           "will",
           "put",
