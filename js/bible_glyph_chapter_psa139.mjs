@@ -399,7 +399,7 @@ export function bible_glyph_chapter_psa139() {
           "the",
           "grains",
           "of",
-          "sand;",
+          "$sea+brown_square;",
           "and",
           "when",
           "I",
