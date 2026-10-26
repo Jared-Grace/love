@@ -230,7 +230,7 @@ export function bible_glyph_chapter_jon03() {
           "out",
           "$toward",
           "$heart_on_fire",
-          "earnestly.",
+          "$might+up_arrow+thing.",
           "Let",
           "each",
           "$man_beard",
