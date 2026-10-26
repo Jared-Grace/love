@@ -124,7 +124,7 @@ export function bible_glyph_chapter_1jn01() {
           "the",
           "$father",
           "$plus",
-          "with",
+          "$linked_paperclips",
           "$pointing_back",
           "$son,",
           "$cross",
