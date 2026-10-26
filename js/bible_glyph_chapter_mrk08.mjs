@@ -319,7 +319,7 @@ export function bible_glyph_chapter_mrk08() {
           "$hands_giving",
           "to",
           "this",
-          "generation.",
+          "$dna.",
         ],
       },
       {
