@@ -878,7 +878,7 @@ export function bible_glyph_chapter_jhn04() {
           "$sprout,",
           "so",
           "that",
-          "the",
+          "$pin",
           "sower",
           "$plus",
           "the",
