@@ -253,7 +253,7 @@ export function bible_glyph_chapter_1jn03() {
       {
         verse_number: 9,
         words: [
-          "Anyone",
+          "$all",
           "born",
           "$tray_out",
           "$heart_on_fire",
