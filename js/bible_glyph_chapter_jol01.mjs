@@ -499,7 +499,7 @@ export function bible_glyph_chapter_jol01() {
           "seeds",
           "lie",
           "shriveled",
-          "beneath",
+          "$down_arrow",
           "the",
           "clods;",
           "the",
