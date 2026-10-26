@@ -908,7 +908,7 @@ export function bible_glyph_chapter_gen32() {
           "of",
           "the",
           "hip,",
-          "because",
+          "$pointing",
           "the",
           "socket",
           "of",
