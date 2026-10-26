@@ -350,7 +350,7 @@ export function bible_glyph_chapter_jhn03() {
           "lifted",
           "up",
           "$pin",
-          "snake",
+          "$snake",
           "$tray_in",
           "$pin",
           "$wilderness,",
