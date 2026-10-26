@@ -142,7 +142,7 @@ export function bible_glyph_chapter_psa096() {
           "$i_am",
           "$star",
           "and",
-          "strength.",
+          "$mechanical_arm.",
         ],
       },
       {
