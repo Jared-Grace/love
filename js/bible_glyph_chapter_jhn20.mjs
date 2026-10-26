@@ -421,7 +421,7 @@ export function bible_glyph_chapter_jhn20() {
           "in",
           "$proper_name$Hebrew,",
           "$proper_name$Rabboni,",
-          "which",
+          "$back+flashlight",
           "$speech",
           "Teacher.",
         ],
