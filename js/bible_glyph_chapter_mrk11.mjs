@@ -696,7 +696,7 @@ export function bible_glyph_chapter_mrk11() {
         "$person+round_pushpin+doing",
         "to",
         "$hands_praying,",
-        "forgive",
+        "$balloon",
         "whatever",
         "you",
         "hold",
