@@ -440,7 +440,7 @@ export function bible_glyph_chapter_jhn01() {
           "confessed",
           "$pointing",
           "“I",
-          "am",
+          "$link",
           "$no_entry",
           "the",
           "$oil.”",
