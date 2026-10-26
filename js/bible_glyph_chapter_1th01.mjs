@@ -67,7 +67,7 @@ export function bible_glyph_chapter_1th01() {
         verse_number: 3,
         words: [
           "continually",
-          "recalling",
+          "$reminder_ribbon+doing",
           "your",
           "$tools",
           "of",
