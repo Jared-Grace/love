@@ -523,7 +523,7 @@ export function bible_glyph_chapter_mrk04() {
           "the",
           "$speech",
           "$plus",
-          "receive",
+          "$children_crossing+palm_up_hand+doing",
           "it",
           "$plus",
           "produce",
