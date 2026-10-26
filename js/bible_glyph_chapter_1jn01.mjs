@@ -258,7 +258,7 @@ export function bible_glyph_chapter_1jn01() {
           "$dizzy+doing",
           "$pointing_back+pointing_back",
           "$plus",
-          "the",
+          "$pin",
           "$check",
           "is",
           "$no_entry",
