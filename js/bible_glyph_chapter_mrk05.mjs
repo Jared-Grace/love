@@ -333,7 +333,7 @@ export function bible_glyph_chapter_mrk05() {
         "$plus",
         "drowned",
         "$tray_in",
-        "the",
+        "$pin",
         "$sea.",
       ],
     },
