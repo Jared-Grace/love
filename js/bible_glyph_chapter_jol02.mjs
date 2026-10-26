@@ -417,7 +417,7 @@ export function bible_glyph_chapter_jol02() {
           "$hug+doing",
           "and",
           "leave",
-          "behind",
+          "$next_track",
           "Him",
           "a",
           "$speech+thumbs_up",
