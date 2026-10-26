@@ -642,7 +642,7 @@ export function bible_glyph_chapter_jhn02() {
           "$information",
           "$pointing_back",
           "$lightbulb",
-          "what",
+          "$flashlight+question",
           "was",
           "$tray_in",
           "the",
