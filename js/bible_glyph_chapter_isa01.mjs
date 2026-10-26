@@ -406,7 +406,7 @@ export function bible_glyph_chapter_isa01() {
           "I",
           "$no_entry",
           "endure",
-          "iniquity",
+          "$thumbs_down+hole",
           "in",
           "a",
           "solemn",
