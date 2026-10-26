@@ -183,7 +183,7 @@ export function bible_glyph_chapter_exo20() {
           "leave",
           "anyone",
           "unpunished",
-          "who",
+          "$back+flashlight",
           "takes",
           "His",
           "$name_tag",
