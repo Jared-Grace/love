@@ -850,7 +850,7 @@ export function bible_glyph_chapter_1jn02() {
           "$pointing_back",
           "$tray_in",
           "$pointing_back",
-          "coming.",
+          "$children_crossing+link+thing.",
         ],
       },
       {
