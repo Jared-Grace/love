@@ -247,7 +247,7 @@ export function bible_glyph_chapter_luk24() {
           "words",
           "$light",
           "$likeness+traffic_light",
-          "nonsense",
+          "$speech+clown_face",
           "to",
           "$pointing_back,",
           "$plus",
