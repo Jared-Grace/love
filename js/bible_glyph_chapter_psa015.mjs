@@ -125,7 +125,7 @@ export function bible_glyph_chapter_psa015() {
           "He",
           "who",
           "$hammer+doing",
-          "these",
+          "$flashlight+flashlight",
           "things",
           "will",
           "$no_entry",
