@@ -228,7 +228,7 @@ export function bible_glyph_chapter_psa136() {
           "$wrestling+heart_on_fire",
           "through",
           "the",
-          "midst.",
+          "$radio_button.",
           "His",
           "$gift",
           "endures",
