@@ -269,7 +269,7 @@ export function bible_glyph_chapter_psa096() {
           "$face",
           "the",
           "$i_am,",
-          "for",
+          "$pointing",
           "He",
           "$footprints;",
           "He",
