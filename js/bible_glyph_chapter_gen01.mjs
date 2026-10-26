@@ -257,7 +257,7 @@ export function bible_glyph_chapter_gen01() {
           "and",
           "$heart_on_fire",
           "$eye",
-          "that",
+          "$pointing",
           "it",
           "was",
           "$thumbs_up.",
