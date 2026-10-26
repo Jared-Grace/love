@@ -184,7 +184,7 @@ export function bible_glyph_chapter_rut03() {
         verse_number: 7,
         words: [
           "After",
-          "Boaz",
+          "$field+sheaf_of_rice+proper_name",
           "had",
           "finished",
           "eating",
