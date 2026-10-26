@@ -719,7 +719,7 @@ export function bible_glyph_chapter_mrk05() {
         "was",
         "$speech,",
         "$pointing",
-        "“If",
+        "“$traffic_light",
         "I",
         "only",
         "touch",
