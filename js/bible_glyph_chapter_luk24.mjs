@@ -207,7 +207,7 @@ export function bible_glyph_chapter_luk24() {
           "to",
           "all",
           "$pin",
-          "others.",
+          "$puzzle_piece.",
         ],
       },
       {
