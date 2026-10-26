@@ -1053,7 +1053,7 @@ export function bible_glyph_chapter_mrk10() {
         "“$pin",
         "$cup",
         "that",
-        "I",
+        "$me",
         "drink",
         "you",
         "will",
