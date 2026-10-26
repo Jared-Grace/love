@@ -205,7 +205,7 @@ export function bible_glyph_chapter_2jn01() {
           "such",
           "one",
           "is",
-          "the",
+          "$pin",
           "deceiver",
           "$plus",
           "the",
