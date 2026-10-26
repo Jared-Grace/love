@@ -798,7 +798,7 @@ export function bible_glyph_chapter_mrk08() {
           "rejected",
           "$down_arrow",
           "the",
-          "elders",
+          "$old_man",
           "$plus",
           "the",
           "chief",
