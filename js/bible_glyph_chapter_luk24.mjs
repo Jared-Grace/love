@@ -705,7 +705,7 @@ export function bible_glyph_chapter_luk24() {
           "$speech,",
           "Stay",
           "with",
-          "us,",
+          "$me,",
           "$pointing",
           "it",
           "is",
