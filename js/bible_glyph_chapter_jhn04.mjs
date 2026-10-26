@@ -256,7 +256,7 @@ export function bible_glyph_chapter_jhn04() {
           "the",
           "$well",
           "$link",
-          "deep.",
+          "$water_wave+down_arrow+describing.",
           "Where",
           "then",
           "will",
