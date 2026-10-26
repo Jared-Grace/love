@@ -495,7 +495,7 @@ export function bible_glyph_chapter_1jn03() {
           "but",
           "$locked+doing",
           "$pointing_back",
-          "compassion",
+          "$heart_organ+two_hearts",
           "$away",
           "$pointing_back,",
           "how",
