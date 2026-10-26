@@ -198,7 +198,7 @@ export function bible_glyph_chapter_1jn05() {
           "these",
           "$three",
           "are",
-          "in",
+          "$toward+tray_in",
           "agreement.",
         ],
       },
