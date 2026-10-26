@@ -524,7 +524,7 @@ export function bible_glyph_chapter_jol02() {
           "among",
           "the",
           "$map.",
-          "Why",
+          "$flashlight+question",
           "should",
           "they",
           "$speech",
