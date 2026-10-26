@@ -192,7 +192,7 @@ export function bible_glyph_chapter_jhn03() {
           "$knot",
           "be",
           "$hatching_chick",
-          "again.’",
+          "$up_arrow+tray_out.’",
         ],
       },
       {
