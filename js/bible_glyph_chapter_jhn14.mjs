@@ -903,7 +903,7 @@ export function bible_glyph_chapter_jhn14() {
           "has",
           "commanded",
           "Me.",
-          "Get",
+          "$person+pointing_up",
           "up;",
           "let",
           "us",
