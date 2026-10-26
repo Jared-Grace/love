@@ -376,7 +376,7 @@ export function bible_glyph_chapter_jhn20() {
           "are",
           "you",
           "seeking?",
-          "Thinking",
+          "$thinking",
           "$pointing",
           "He",
           "was",
