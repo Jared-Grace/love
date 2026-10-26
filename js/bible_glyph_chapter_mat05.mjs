@@ -1076,7 +1076,7 @@ export function bible_glyph_chapter_mat05() {
           "you",
           "to",
           "go",
-          "one",
+          "$one",
           "$road+straight_ruler,",
           "go",
           "with",
