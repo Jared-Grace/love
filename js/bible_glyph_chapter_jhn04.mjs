@@ -627,7 +627,7 @@ export function bible_glyph_chapter_jhn04() {
           "He",
           "will",
           "explain",
-          "everything",
+          "$all",
           "to",
           "$me.”",
         ],
