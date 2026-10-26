@@ -134,7 +134,7 @@ export function bible_glyph_chapter_oba01() {
           "stars,",
           "even",
           "from",
-          "there",
+          "$telescope",
           "I",
           "will",
           "bring",
