@@ -252,7 +252,7 @@ export function bible_glyph_chapter_jhn10() {
       {
         verse_number: 10,
         words: [
-          "The",
+          "$pin",
           "thief",
           "does",
           "$no_entry",
