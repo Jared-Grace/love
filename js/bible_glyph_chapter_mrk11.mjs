@@ -64,7 +64,7 @@ export function bible_glyph_chapter_mrk11() {
         "tied",
         "there,",
         "$pointing_up",
-        "which",
+        "$back+flashlight",
         "$no_entry",
         "$person",
         "has",
