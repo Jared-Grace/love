@@ -110,7 +110,7 @@ export function bible_glyph_chapter_3jn01() {
           "what",
           "you",
           "$hammer",
-          "for",
+          "$toward+tray_in",
           "the",
           "$brother,",
           "$plus",
