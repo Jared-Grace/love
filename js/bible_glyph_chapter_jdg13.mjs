@@ -547,7 +547,7 @@ export function bible_glyph_chapter_jdg13() {
           "your",
           "$bread.",
           "But",
-          "if",
+          "$traffic_light",
           "you",
           "$hammer+doing",
           "a",
