@@ -285,7 +285,7 @@ export function bible_glyph_chapter_luk02() {
         "of",
         "$two_hearts+proper_name.",
         "He",
-        "is",
+        "$link",
         "the",
         "$oil,",
         "the",
