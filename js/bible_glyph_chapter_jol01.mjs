@@ -243,7 +243,7 @@ export function bible_glyph_chapter_jol01() {
       {
         verse_number: 9,
         words: [
-          "Grain",
+          "$grain_offering",
           "and",
           "drink",
           "offerings",
