@@ -452,7 +452,7 @@ export function bible_glyph_chapter_oba01() {
           "$person+round_pushpin",
           "at",
           "the",
-          "crossroads",
+          "$divide+road",
           "to",
           "cut",
           "off",
