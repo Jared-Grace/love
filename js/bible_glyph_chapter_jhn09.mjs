@@ -341,7 +341,7 @@ export function bible_glyph_chapter_jhn09() {
           "$pin",
           "$brown_square+water",
           "$plus",
-          "opened",
+          "$unlocked",
           "his",
           "eyes.",
         ],
