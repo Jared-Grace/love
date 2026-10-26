@@ -266,7 +266,7 @@ export function bible_glyph_chapter_psa096() {
       {
         verse_number: 13,
         words: [
-          "before",
+          "$face",
           "the",
           "$i_am,",
           "for",
