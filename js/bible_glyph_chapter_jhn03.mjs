@@ -383,7 +383,7 @@ export function bible_glyph_chapter_jhn03() {
       {
         verse_number: 16,
         words: [
-          "For",
+          "$information",
           "$heart_on_fire",
           "so",
           "$heart_red+doing$ed",
