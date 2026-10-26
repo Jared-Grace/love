@@ -803,7 +803,7 @@ export function bible_glyph_chapter_jhn04() {
           "$speech",
           "to",
           "$pointing_back,",
-          "“My",
+          "“$me+describing",
           "food",
           "is",
           "to",
