@@ -20,7 +20,7 @@ export function bible_glyph_chapter_mrk12() {
         "$framed_picture:",
         "A",
         "$person",
-        "planted",
+        "$sprout+down_arrow+doing",
         "a",
         "vineyard,",
         "$plus",
