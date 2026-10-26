@@ -623,7 +623,7 @@ export function bible_glyph_chapter_isa01() {
           "of",
           "$scales+thing;",
           "$ruler+thing",
-          "resided",
+          "$night+doing",
           "within",
           "her,",
           "but",
