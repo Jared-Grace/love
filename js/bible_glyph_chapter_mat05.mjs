@@ -918,7 +918,7 @@ export function bible_glyph_chapter_mat05() {
           "$sky,",
           "$pointing",
           "it",
-          "is",
+          "$link",
           "$heart_on_fire",
           "$throne;",
         ],
