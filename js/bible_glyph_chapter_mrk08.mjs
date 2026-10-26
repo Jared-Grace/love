@@ -467,7 +467,7 @@ export function bible_glyph_chapter_mrk08() {
       {
         verse_number: 19,
         words: [
-          "When",
+          "$back+clock",
           "I",
           "broke",
           "the",
