@@ -1012,7 +1012,7 @@ export function bible_glyph_chapter_ezk18() {
       {
         verse_number: 31,
         words: [
-          "Cast",
+          "$throwing",
           "away",
           "from",
           "yourselves",
