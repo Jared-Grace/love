@@ -545,7 +545,7 @@ export function bible_glyph_chapter_isa01() {
           "white",
           "as",
           "snow;",
-          "though",
+          "$traffic_light",
           "they",
           "are",
           "as",
