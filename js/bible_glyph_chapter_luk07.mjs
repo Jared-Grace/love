@@ -95,7 +95,7 @@ export function bible_glyph_chapter_luk07() {
         "“$pointing",
         "this",
         "man",
-        "is",
+        "$link",
         "$gold+describing",
         "to",
         "have",
