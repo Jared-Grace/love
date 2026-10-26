@@ -477,7 +477,7 @@ export function bible_glyph_chapter_2ki02() {
           "Then",
           "he",
           "took",
-          "hold",
+          "$might+up_arrow",
           "of",
           "his",
           "own",
