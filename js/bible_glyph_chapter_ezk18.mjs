@@ -1033,7 +1033,7 @@ export function bible_glyph_chapter_ezk18() {
           "a",
           "$new_button",
           "$wind.",
-          "Why",
+          "$flashlight+question",
           "should",
           "you",
           "$skull+doing,",
