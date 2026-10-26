@@ -224,7 +224,7 @@ export function bible_glyph_chapter_psa097() {
           "the",
           "$ruler,",
           "and",
-          "gladness",
+          "$beaming",
           "on",
           "the",
           "upright",
