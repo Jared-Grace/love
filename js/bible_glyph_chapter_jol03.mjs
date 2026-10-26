@@ -439,7 +439,7 @@ export function bible_glyph_chapter_jol03() {
           "The",
           "$i_am",
           "will",
-          "roar",
+          "$lion+loudspeaker",
           "from",
           "$proper_name$Zion",
           "and",
