@@ -414,7 +414,7 @@ export function bible_glyph_chapter_jhn10() {
           "$plus",
           "I",
           "have",
-          "other",
+          "$plus+one",
           "$sheep",
           "that",
           "are",
