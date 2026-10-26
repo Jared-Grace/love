@@ -218,7 +218,7 @@ export function bible_glyph_chapter_2th01() {
           "$fire+tongue",
           "$fire,",
           "$hands_giving",
-          "vengeance",
+          "$scales+turn_back",
           "to",
           "those",
           "who",
