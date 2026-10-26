@@ -78,7 +78,7 @@ export function bible_glyph_chapter_jhn01() {
           "$plus",
           "that",
           "$sprout",
-          "was",
+          "$link",
           "the",
           "$light",
           "of",
