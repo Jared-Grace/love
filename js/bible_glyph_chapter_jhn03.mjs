@@ -122,7 +122,7 @@ export function bible_glyph_chapter_jhn03() {
           "$footprints+tray_in",
           "his",
           "mother’s",
-          "womb",
+          "$baby+house",
           "a",
           "second",
           "time",
