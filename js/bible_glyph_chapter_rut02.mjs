@@ -583,7 +583,7 @@ export function bible_glyph_chapter_rut02() {
           "And",
           "when",
           "she",
-          "beat",
+          "$wheat+fist+doing",
           "out",
           "what",
           "she",
