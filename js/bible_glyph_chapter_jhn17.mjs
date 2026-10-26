@@ -603,7 +603,7 @@ export function bible_glyph_chapter_jhn17() {
         verse_number: 22,
         words: [
           "$plus",
-          "the",
+          "$pin",
           "$star",
           "that",
           "You",
