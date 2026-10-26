@@ -118,7 +118,7 @@ export function bible_glyph_chapter_exo20() {
           "$heart_on_fire,",
           "$clipboard+doing",
           "the",
-          "iniquity",
+          "$cyclone",
           "of",
           "the",
           "$father",
