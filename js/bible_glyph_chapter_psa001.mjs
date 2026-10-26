@@ -91,7 +91,7 @@ export function bible_glyph_chapter_psa001() {
           "in",
           "$clock,",
           "whose",
-          "leaf",
+          "$leaf",
           "does",
           "$no_entry",
           "wither,",
