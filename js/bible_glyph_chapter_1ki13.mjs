@@ -337,7 +337,7 @@ export function bible_glyph_chapter_1ki13() {
           "to",
           "$hands_giving",
           "me",
-          "half",
+          "$divide",
           "your",
           "$house,",
           "I",
