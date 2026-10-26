@@ -199,7 +199,7 @@ export function bible_glyph_chapter_deu26() {
           "and",
           "lived",
           "there,",
-          "few",
+          "$pinching_hand+input_numbers",
           "in",
           "number,",
           "and",
