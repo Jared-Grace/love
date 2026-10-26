@@ -15,7 +15,7 @@ export function bible_glyph_chapter_1ki13() {
       {
         verse_number: 1,
         words: [
-          "Suddenly",
+          "$exclamation",
           "a",
           "$man_beard",
           "of",
