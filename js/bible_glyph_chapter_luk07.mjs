@@ -607,7 +607,7 @@ export function bible_glyph_chapter_luk07() {
         "$multiply",
         "who",
         "were",
-        "blind",
+        "$person_with_white_cane",
         "He",
         "gave",
         "$eyes.",
