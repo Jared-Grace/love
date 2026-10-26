@@ -96,7 +96,7 @@ export function bible_glyph_chapter_1jn03() {
           "will",
           "$eye",
           "$pointing_back",
-          "as",
+          "$likeness",
           "He",
           "is.",
         ],
