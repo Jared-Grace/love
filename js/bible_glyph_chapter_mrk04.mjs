@@ -100,7 +100,7 @@ export function bible_glyph_chapter_mrk04() {
           "sowing,",
           "some",
           "seed",
-          "fell",
+          "$person+pointing_down",
           "along",
           "the",
           "$road,",
