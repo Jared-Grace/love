@@ -253,7 +253,7 @@ export function bible_glyph_chapter_jhn10() {
         verse_number: 10,
         words: [
           "$pin",
-          "thief",
+          "$hand+lying_face+doer",
           "does",
           "$no_entry",
           "$footprints",
