@@ -770,7 +770,7 @@ export function bible_glyph_chapter_ezk33() {
           "tenth",
           "month,",
           "a",
-          "fugitive",
+          "$door+running+person",
           "from",
           "$city+peace",
           "$footprints",
