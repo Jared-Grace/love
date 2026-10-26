@@ -1000,7 +1000,7 @@ export function bible_glyph_chapter_luk02() {
         "they",
         "had",
         "done",
-        "everything",
+        "$all",
         "required",
         "by",
         "the",
