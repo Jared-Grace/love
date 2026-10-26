@@ -167,7 +167,7 @@ export function bible_glyph_chapter_rut02() {
           "The",
           "foreman",
           "answered,",
-          "She",
+          "$pointing_back",
           "is",
           "the",
           "$proper_name$Moabitess",
