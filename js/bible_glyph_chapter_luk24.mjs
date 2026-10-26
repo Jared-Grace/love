@@ -888,7 +888,7 @@ export function bible_glyph_chapter_luk24() {
           "$pointing_back",
           "$person+round_pushpin",
           "$tray_in",
-          "among",
+          "$radio_button",
           "$pointing_back",
           "$plus",
           "$speech",
