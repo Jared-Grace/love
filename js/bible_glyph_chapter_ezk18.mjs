@@ -39,7 +39,7 @@ export function bible_glyph_chapter_ezk18() {
           "$speech+likeness+doing",
           "$pointing_up",
           "the",
-          "land",
+          "$brown_square",
           "of",
           "$wrestling+heart_on_fire:",
           "‘The",
