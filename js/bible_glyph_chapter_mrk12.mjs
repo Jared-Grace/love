@@ -496,7 +496,7 @@ export function bible_glyph_chapter_mrk12() {
     {
       verse_number: 19,
       words: [
-        "Teacher,",
+        "$teacher,",
         "$fishing_pole+proper_name",
         "wrote",
         "for",
