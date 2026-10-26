@@ -147,7 +147,7 @@ export function bible_glyph_chapter_luk07() {
         "$pointing_back,",
         "“$crown,",
         "$no_entry",
-        "trouble",
+        "$weary_face+repeat+doing",
         "Yourself,",
         "for",
         "I",
