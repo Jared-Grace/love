@@ -57,7 +57,7 @@ export function bible_glyph_chapter_1jn05() {
           "$child",
           "of",
           "$heart_on_fire:",
-          "when",
+          "$back+clock",
           "we",
           "$heart_red+doing",
           "$heart_on_fire",
