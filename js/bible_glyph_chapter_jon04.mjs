@@ -191,7 +191,7 @@ export function bible_glyph_chapter_jon04() {
           "$dove+proper_name",
           "was",
           "greatly",
-          "pleased",
+          "$beaming+doing",
           "with",
           "the",
           "plant.",
