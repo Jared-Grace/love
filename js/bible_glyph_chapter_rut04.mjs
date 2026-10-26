@@ -139,7 +139,7 @@ export function bible_glyph_chapter_rut04() {
           "of",
           "my",
           "$family.",
-          "If",
+          "$traffic_light",
           "you",
           "want",
           "to",
