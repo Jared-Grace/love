@@ -843,7 +843,7 @@ export function bible_glyph_chapter_jhn04() {
           "I",
           "$speech",
           "you,",
-          "lift",
+          "$pointing_up+lifting",
           "up",
           "your",
           "eyes",
