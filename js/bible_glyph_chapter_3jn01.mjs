@@ -269,7 +269,7 @@ export function bible_glyph_chapter_3jn01() {
         words: [
           "$heart_red+describing,",
           "$no_entry",
-          "imitate",
+          "$footprints+likeness+doing",
           "what",
           "is",
           "$thumbs_down",
