@@ -730,7 +730,7 @@ export function bible_glyph_chapter_exo14() {
           "$clamp+person",
           "from",
           "the",
-          "pillar",
+          "$candle",
           "of",
           "$fire",
           "and",
