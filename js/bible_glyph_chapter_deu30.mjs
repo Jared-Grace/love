@@ -604,7 +604,7 @@ export function bible_glyph_chapter_deu30() {
           "to",
           "$bowing",
           "to",
-          "other",
+          "$plus+one",
           "$moai",
           "and",
           "$kneeling+doing",
