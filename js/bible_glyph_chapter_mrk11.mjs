@@ -432,7 +432,7 @@ export function bible_glyph_chapter_mrk11() {
         "of",
         "those",
         "$coin+hands_giving",
-        "doves",
+        "$dove",
         "He",
         "overturned.",
       ],
