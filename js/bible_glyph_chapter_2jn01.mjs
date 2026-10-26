@@ -54,7 +54,7 @@ export function bible_glyph_chapter_2jn01() {
           "that",
           "$pin+doing",
           "$tray_in",
-          "us",
+          "$me",
           "$plus",
           "will",
           "be",
