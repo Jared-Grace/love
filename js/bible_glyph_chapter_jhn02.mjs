@@ -514,7 +514,7 @@ export function bible_glyph_chapter_jhn02() {
           "“Forty",
           "six",
           "$year",
-          "this",
+          "$flashlight",
           "$hut",
           "was",
           "in",
