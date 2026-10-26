@@ -493,7 +493,7 @@ export function bible_glyph_chapter_1jn03() {
           "in",
           "$sos_button,",
           "but",
-          "withholds",
+          "$locked+doing",
           "$pointing_back",
           "compassion",
           "$away",
