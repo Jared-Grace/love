@@ -18,7 +18,7 @@ export function bible_glyph_chapter_luk07() {
         "$pointing_back",
         "$speech+thing",
         "in",
-        "the",
+        "$pin",
         "hearing",
         "of",
         "the",
