@@ -566,7 +566,7 @@ export function bible_glyph_chapter_oba01() {
           "will",
           "reclaim",
           "their",
-          "possession.",
+          "$hand_receiving+brown_square.",
         ],
       },
       {
