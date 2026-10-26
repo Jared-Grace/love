@@ -686,7 +686,7 @@ export function bible_glyph_chapter_mrk12() {
         "$open_book",
         "$tray_in",
         "the",
-        "Book",
+        "$open_book+thing",
         "of",
         "$fishing_pole+proper_name,",
         "at",
