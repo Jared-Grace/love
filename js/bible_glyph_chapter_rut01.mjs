@@ -225,7 +225,7 @@ export function bible_glyph_chapter_rut01() {
           "the",
           "$road",
           "$turn_back",
-          "to",
+          "$toward",
           "the",
           "$earth",
           "of",
