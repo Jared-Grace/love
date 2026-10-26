@@ -556,7 +556,7 @@ export function bible_glyph_chapter_1jn04() {
           "$link",
           "a",
           "liar.",
-          "For",
+          "$information",
           "anyone",
           "who",
           "does",
