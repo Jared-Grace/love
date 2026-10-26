@@ -490,7 +490,7 @@ export function bible_glyph_chapter_jhn02() {
           "to",
           "$pointing_back,",
           "“$free_button",
-          "this",
+          "$flashlight",
           "$hut,",
           "$plus",
           "$tray_in",
