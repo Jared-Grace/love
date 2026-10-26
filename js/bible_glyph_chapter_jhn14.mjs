@@ -494,7 +494,7 @@ export function bible_glyph_chapter_jhn14() {
           "I",
           "will",
           "$no_entry",
-          "leave",
+          "$balloon",
           "you",
           "as",
           "orphans;",
