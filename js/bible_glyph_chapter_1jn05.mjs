@@ -291,7 +291,7 @@ export function bible_glyph_chapter_1jn05() {
           "has",
           "$hands_giving",
           "us",
-          "eternal",
+          "$hourglass+describing",
           "$sprout,",
           "$plus",
           "$flashlight",
