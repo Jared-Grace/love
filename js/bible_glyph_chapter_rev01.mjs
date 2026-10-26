@@ -232,7 +232,7 @@ export function bible_glyph_chapter_rev01() {
           "$pointing_back;",
           "$plus",
           "all",
-          "the",
+          "$pin",
           "tribes",
           "of",
           "the",
