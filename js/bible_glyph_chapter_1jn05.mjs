@@ -296,7 +296,7 @@ export function bible_glyph_chapter_1jn05() {
           "$plus",
           "$flashlight",
           "$sprout",
-          "is",
+          "$link",
           "$tray_in",
           "$pointing_back",
           "$son.",
