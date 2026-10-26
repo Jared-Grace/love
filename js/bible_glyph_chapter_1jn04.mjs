@@ -22,7 +22,7 @@ export function bible_glyph_chapter_1jn04() {
           "do",
           "$no_entry",
           "$anchor+doing",
-          "every",
+          "$all",
           "$wind,",
           "but",
           "test",
