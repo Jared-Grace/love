@@ -384,7 +384,7 @@ export function bible_glyph_chapter_hag01() {
           "$proper_name$Haggai",
           "the",
           "$megaphone,",
-          "because",
+          "$back+flashlight",
           "the",
           "$i_am",
           "their",
