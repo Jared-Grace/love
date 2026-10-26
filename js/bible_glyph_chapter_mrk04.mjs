@@ -291,7 +291,7 @@ export function bible_glyph_chapter_mrk04() {
           "on",
           "the",
           "outside",
-          "everything",
+          "$all",
           "is",
           "expressed",
           "$tray_in",
