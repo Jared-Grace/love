@@ -1251,7 +1251,7 @@ export function bible_glyph_chapter_mrk10() {
         "a",
         "large",
         "$crowd,",
-        "the",
+        "$pin",
         "$son",
         "of",
         "$proper_name$Timaeus,",
