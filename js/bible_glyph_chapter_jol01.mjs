@@ -554,7 +554,7 @@ export function bible_glyph_chapter_jol01() {
           "O",
           "$i_am,",
           "I",
-          "call.",
+          "$waving_hand.",
           "For",
           "$fire",
           "has",
