@@ -1006,7 +1006,7 @@ export function bible_glyph_chapter_mrk05() {
         "$skull",
         "$curving_up",
         "is",
-        "asleep.”",
+        "$sleeping_face+doing.”",
       ],
     },
     {
