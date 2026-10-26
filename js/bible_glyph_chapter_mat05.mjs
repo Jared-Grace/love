@@ -1132,7 +1132,7 @@ export function bible_glyph_chapter_mat05() {
         verse_number: 44,
         words: [
           "But",
-          "I",
+          "$me",
           "$speech",
           "you,",
           "$heart_red+doing",
