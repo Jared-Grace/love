@@ -362,7 +362,7 @@ export function bible_glyph_chapter_1ki13() {
       {
         verse_number: 9,
         words: [
-          "For",
+          "$pointing",
           "this",
           "is",
           "what",
