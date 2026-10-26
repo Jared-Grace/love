@@ -452,7 +452,7 @@ export function bible_glyph_chapter_exo14() {
           "And",
           "as",
           "for",
-          "you,",
+          "$you,",
           "lift",
           "up",
           "your",
