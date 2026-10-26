@@ -1089,7 +1089,7 @@ export function bible_glyph_chapter_ezk36() {
           "your",
           "$right_arrow+toward",
           "that",
-          "I",
+          "$me",
           "will",
           "$hammer+doing,",
           "declares",
