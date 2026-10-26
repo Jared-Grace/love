@@ -632,7 +632,7 @@ export function bible_glyph_chapter_luk24() {
           "not",
           "necessary",
           "for",
-          "the",
+          "$pin",
           "$oil",
           "to",
           "$confounded_face",
