@@ -226,7 +226,7 @@ export function bible_glyph_chapter_gen03() {
           "and",
           "they",
           "$lightbulb",
-          "that",
+          "$pointing",
           "they",
           "were",
           "naked;",
