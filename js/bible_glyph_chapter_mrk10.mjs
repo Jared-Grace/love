@@ -1375,7 +1375,7 @@ export function bible_glyph_chapter_mrk10() {
       words: [
         "$plus",
         "$cross",
-        "asked",
+        "$speech+turn_back",
         "$pointing_back,",
         "in",
         "$speech,",
