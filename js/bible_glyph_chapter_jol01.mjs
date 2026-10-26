@@ -314,7 +314,7 @@ export function bible_glyph_chapter_jol01() {
           "$barley,",
           "$pointing",
           "the",
-          "harvest",
+          "$harvest",
           "of",
           "the",
           "$field",
