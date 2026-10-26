@@ -256,7 +256,7 @@ export function bible_glyph_chapter_2ki02() {
           "you.",
           "So",
           "the",
-          "two",
+          "$two",
           "of",
           "them",
           "$walking",
