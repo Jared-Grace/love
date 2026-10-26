@@ -679,7 +679,7 @@ export function bible_glyph_chapter_luk24() {
           "as",
           "they",
           "approached",
-          "the",
+          "$pin",
           "village",
           "where",
           "they",
