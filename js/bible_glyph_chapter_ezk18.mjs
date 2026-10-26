@@ -190,7 +190,7 @@ export function bible_glyph_chapter_ezk18() {
           "but",
           "$turn_back$s",
           "the",
-          "pledge",
+          "$package+locked+thing",
           "to",
           "the",
           "debtor.",
