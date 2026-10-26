@@ -353,7 +353,7 @@ export function bible_glyph_chapter_1jn05() {
           "$pointing",
           "you",
           "have",
-          "eternal",
+          "$hourglass+describing",
           "$sprout.",
         ],
       },
