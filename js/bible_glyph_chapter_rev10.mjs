@@ -141,7 +141,7 @@ export function bible_glyph_chapter_rev10() {
           "Seal",
           "up",
           "what",
-          "the",
+          "$pin",
           "seven",
           "thunders",
           "have",
