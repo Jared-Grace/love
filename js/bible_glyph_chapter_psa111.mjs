@@ -217,7 +217,7 @@ export function bible_glyph_chapter_psa111() {
           "His",
           "$clapping_hands+thing",
           "$person+round_pushpin",
-          "forever.",
+          "$clock+all.",
         ],
       },
     ],
