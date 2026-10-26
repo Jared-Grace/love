@@ -589,7 +589,7 @@ export function bible_glyph_chapter_mrk10() {
         "$gear+question",
         "$weary_face+describing",
         "it",
-        "is",
+        "$link",
         "to",
         "$footprints+tray_in",
         "$pin",
