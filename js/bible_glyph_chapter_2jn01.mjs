@@ -308,7 +308,7 @@ export function bible_glyph_chapter_2jn01() {
           "$smile+doing",
           "to",
           "$pointing_back",
-          "shares",
+          "$handshake+hands_giving+doing",
           "in",
           "$pointing_back",
           "$thumbs_down",
