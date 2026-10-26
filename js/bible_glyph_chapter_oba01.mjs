@@ -552,7 +552,7 @@ export function bible_glyph_chapter_oba01() {
           "there",
           "will",
           "be",
-          "deliverance,",
+          "$door+running,",
           "and",
           "it",
           "will",
