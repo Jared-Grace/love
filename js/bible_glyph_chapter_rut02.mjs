@@ -480,7 +480,7 @@ export function bible_glyph_chapter_rut02() {
           "her,",
           "Come",
           "over",
-          "here,",
+          "$pointing_down+round_pushpin,",
           "have",
           "$tray_out",
           "$bread,",
