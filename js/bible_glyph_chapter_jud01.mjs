@@ -46,7 +46,7 @@ export function bible_glyph_chapter_jud01() {
       {
         verse_number: 2,
         words: [
-          "Mercy",
+          "$heart_hands",
           "$plus",
           "$peace",
           "$plus",
