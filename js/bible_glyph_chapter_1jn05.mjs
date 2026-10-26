@@ -122,7 +122,7 @@ export function bible_glyph_chapter_1jn05() {
           "is",
           "it",
           "that",
-          "overcomes",
+          "$trophy+doing",
           "the",
           "$globe?",
           "Only",
