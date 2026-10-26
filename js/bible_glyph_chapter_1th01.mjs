@@ -154,7 +154,7 @@ export function bible_glyph_chapter_1th01() {
           "became",
           "$footprints+likeness+doer",
           "of",
-          "us",
+          "$me",
           "$plus",
           "of",
           "the",
