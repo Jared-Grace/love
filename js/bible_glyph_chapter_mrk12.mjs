@@ -485,7 +485,7 @@ export function bible_glyph_chapter_mrk12() {
         "$no_entry",
         "resurrection,",
         "$footprints",
-        "to",
+        "$toward",
         "$pointing_back",
         "$plus",
         "questioned",
