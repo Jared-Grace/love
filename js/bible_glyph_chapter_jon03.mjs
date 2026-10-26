@@ -81,7 +81,7 @@ export function bible_glyph_chapter_jon03() {
           "$heart_on_fire,",
           "requiring",
           "a",
-          "three",
+          "$three",
           "day",
           "$walking+thing.",
         ],
