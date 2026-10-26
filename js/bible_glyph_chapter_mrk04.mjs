@@ -468,7 +468,7 @@ export function bible_glyph_chapter_mrk04() {
           "thorns:",
           "they",
           "$ear",
-          "the",
+          "$pin",
           "$speech,",
         ],
       },
