@@ -1171,7 +1171,7 @@ export function bible_glyph_chapter_luk24() {
           "of",
           "My",
           "$father",
-          "upon",
+          "$pointing_up",
           "you.",
           "But",
           "remain",
