@@ -566,7 +566,7 @@ export function bible_glyph_chapter_jud01() {
           "their",
           "own",
           "ungodly",
-          "desires.",
+          "$pointing_up+anger_symbol+thing.",
         ],
       },
       {
