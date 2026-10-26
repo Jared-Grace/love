@@ -883,7 +883,7 @@ export function bible_glyph_chapter_jol02() {
         verse_number: 28,
         words: [
           "And",
-          "afterward,",
+          "$next_track,",
           "I",
           "will",
           "pour",
