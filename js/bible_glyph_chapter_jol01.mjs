@@ -293,7 +293,7 @@ export function bible_glyph_chapter_jol01() {
           "up,",
           "and",
           "the",
-          "oil",
+          "$oil+new_button",
           "fails.",
         ],
       },
