@@ -627,7 +627,7 @@ export function bible_glyph_chapter_gen03() {
           "will",
           "$eating",
           "$bread,",
-          "until",
+          "$finish",
           "you",
           "$turn_back",
           "to",
