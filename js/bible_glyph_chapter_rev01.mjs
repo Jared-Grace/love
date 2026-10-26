@@ -579,7 +579,7 @@ export function bible_glyph_chapter_rev01() {
       {
         verse_number: 19,
         words: [
-          "Therefore",
+          "$right_arrow",
           "$writing_hand",
           "down",
           "the",
