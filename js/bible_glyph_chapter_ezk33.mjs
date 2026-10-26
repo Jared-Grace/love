@@ -184,7 +184,7 @@ export function bible_glyph_chapter_ezk33() {
           "$no_entry",
           "$trumpet+doing",
           "the",
-          "horn",
+          "$trumpet",
           "to",
           "warn",
           "the",
