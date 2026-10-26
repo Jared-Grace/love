@@ -461,7 +461,7 @@ export function bible_glyph_chapter_jhn02() {
         verse_number: 18,
         words: [
           "$plus",
-          "the",
+          "$pin",
           "$menorah",
           "$speech",
           "to",
