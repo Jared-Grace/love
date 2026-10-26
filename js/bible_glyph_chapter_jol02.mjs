@@ -825,7 +825,7 @@ export function bible_glyph_chapter_jol02() {
           "$i_am",
           "your",
           "God,",
-          "who",
+          "$back+flashlight",
           "has",
           "$hammer+doing",
           "wonders",
