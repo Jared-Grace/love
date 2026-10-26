@@ -791,7 +791,7 @@ export function bible_glyph_chapter_mrk08() {
           "$person",
           "$knot",
           "suffer",
-          "many",
+          "$multiply",
           "things",
           "$plus",
           "be",
