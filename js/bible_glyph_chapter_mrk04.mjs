@@ -158,7 +158,7 @@ export function bible_glyph_chapter_mrk04() {
           "$plus",
           "they",
           "withered",
-          "because",
+          "$metro",
           "they",
           "had",
           "$no_entry",
