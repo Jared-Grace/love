@@ -535,7 +535,7 @@ export function bible_glyph_chapter_rut02() {
           "if",
           "she",
           "gathers",
-          "among",
+          "$brain+arrow_both_ways",
           "the",
           "sheaves,",
           "$no_entry",
