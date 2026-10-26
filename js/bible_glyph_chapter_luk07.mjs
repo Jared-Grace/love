@@ -933,7 +933,7 @@ export function bible_glyph_chapter_luk07() {
         "‘We",
         "played",
         "the",
-        "flute",
+        "$flute+doing",
         "for",
         "you",
         "$plus",
