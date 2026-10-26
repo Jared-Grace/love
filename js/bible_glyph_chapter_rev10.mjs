@@ -99,7 +99,7 @@ export function bible_glyph_chapter_rev10() {
           "roar",
           "of",
           "a",
-          "lion.",
+          "$lion.",
           "$plus",
           "when",
           "he",
