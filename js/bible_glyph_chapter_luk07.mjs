@@ -284,7 +284,7 @@ export function bible_glyph_chapter_luk07() {
         "when",
         "the",
         "messengers",
-        "returned",
+        "$down_arrow+turn_back",
         "to",
         "the",
         "$house,",
