@@ -27,8 +27,8 @@ export function app_code_review_checkpoint(context) {
     let id = storage_session_get_context(context, key_milestone);
     let milestone = app_code_milestone_get_or_null(id);
     if (null_not_is(milestone)) {
-      let label = property_get(milestone, "label");
-      let title = text_combine("Milestone: ", label);
+      let label_inner = property_get(milestone, "label");
+      let title = text_combine("Milestone: ", label_inner);
       let explain = app_code_milestone_explain();
       let again = app_shared_button_restart_text("Do this milestone again");
       let restart = app_shared_button_restart_text("Restart milestone");
