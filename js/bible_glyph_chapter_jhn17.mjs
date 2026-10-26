@@ -750,7 +750,7 @@ export function bible_glyph_chapter_jhn17() {
           "it",
           "known,",
           "that",
-          "the",
+          "$pin",
           "$heart_red",
           "with",
           "which",
