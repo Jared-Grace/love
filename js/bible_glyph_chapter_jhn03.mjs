@@ -369,7 +369,7 @@ export function bible_glyph_chapter_jhn03() {
         verse_number: 15,
         words: [
           "$right_arrow+toward",
-          "everyone",
+          "$all",
           "who",
           "$anchor+doing$s",
           "$tray_in",
