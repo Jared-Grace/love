@@ -184,7 +184,7 @@ export function bible_glyph_chapter_mrk12() {
         "$flashlight",
         "is",
         "the",
-        "heir.",
+        "$inheritance+doer.",
         "Come,",
         "let",
         "us",
