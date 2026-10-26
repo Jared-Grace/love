@@ -1038,7 +1038,7 @@ export function bible_glyph_chapter_luk02() {
         "of",
         "$heart_on_fire",
         "$link",
-        "upon",
+        "$pointing_up",
         "$pointing_back.",
       ],
     },
