@@ -402,7 +402,7 @@ export function bible_glyph_chapter_jhn09() {
           "does",
           "$no_entry",
           "keep",
-          "the",
+          "$pin",
           "$sabbath.",
           "But",
           "others",
