@@ -879,7 +879,7 @@ export function bible_glyph_chapter_1ki13() {
           "donkey",
           "and",
           "the",
-          "lion",
+          "$lion",
           "standing",
           "beside",
           "it.",
