@@ -628,7 +628,7 @@ export function bible_glyph_chapter_1jn03() {
           "$link",
           "$pointing_back",
           "$scroll:",
-          "that",
+          "$right_arrow+toward",
           "we",
           "should",
           "$anchor+doing",
