@@ -306,7 +306,7 @@ export function bible_glyph_chapter_mrk11() {
       verse_number: 12,
       words: [
         "$plus",
-        "the",
+        "$pin",
         "next",
         "day,",
         "as",
