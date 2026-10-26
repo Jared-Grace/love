@@ -612,7 +612,7 @@ export function bible_glyph_chapter_rev01() {
           "of",
           "the",
           "$seven",
-          "stars",
+          "$star_plain",
           "you",
           "$eye",
           "in",
