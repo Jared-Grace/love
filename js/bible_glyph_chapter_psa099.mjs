@@ -30,7 +30,7 @@ export function bible_glyph_chapter_psa099() {
           "let",
           "the",
           "$earth",
-          "quake.",
+          "$vibration_mode+earth+doing.",
         ],
       },
       {
