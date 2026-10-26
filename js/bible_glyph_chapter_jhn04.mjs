@@ -948,7 +948,7 @@ export function bible_glyph_chapter_jhn04() {
           "$anchor+doing",
           "$toward+tray_in",
           "$pointing_back",
-          "because",
+          "$metro",
           "of",
           "the",
           "$speech",
