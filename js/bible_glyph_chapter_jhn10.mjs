@@ -332,7 +332,7 @@ export function bible_glyph_chapter_jhn10() {
           "away,",
           "$plus",
           "the",
-          "wolf",
+          "$wolf",
           "pounces",
           "on",
           "$pointing_back",
