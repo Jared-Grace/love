@@ -401,7 +401,7 @@ export function bible_glyph_chapter_jhn03() {
           "$all",
           "who",
           "$anchor+doing$s",
-          "in",
+          "$toward+tray_in",
           "$pointing_back",
           "shall",
           "$no_entry",
