@@ -261,7 +261,7 @@ export function bible_glyph_chapter_jhn17() {
           "me,",
           "$pointing",
           "they",
-          "are",
+          "$link",
           "Yours.",
         ],
       },
