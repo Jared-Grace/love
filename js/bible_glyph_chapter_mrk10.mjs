@@ -1282,7 +1282,7 @@ export function bible_glyph_chapter_mrk10() {
         "he",
         "began",
         "to",
-        "cry",
+        "$raven+doing",
         "out",
         "$plus",
         "be",
