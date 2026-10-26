@@ -502,7 +502,7 @@ export function bible_glyph_chapter_luk07() {
         "$plus",
         "$pointing_back",
         "$learner",
-        "informed",
+        "$newspaper",
         "him",
         "about",
         "all",
