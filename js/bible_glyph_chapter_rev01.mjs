@@ -88,7 +88,7 @@ export function bible_glyph_chapter_rev01() {
           "$speech",
           "of",
           "this",
-          "prophecy,",
+          "$megaphone+thing,",
           "$plus",
           "obey",
           "what",
