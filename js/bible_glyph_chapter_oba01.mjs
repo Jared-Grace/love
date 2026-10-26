@@ -301,7 +301,7 @@ export function bible_glyph_chapter_oba01() {
           "down",
           "in",
           "the",
-          "slaughter.",
+          "$kitchen_knife+crowd.",
         ],
       },
       {
