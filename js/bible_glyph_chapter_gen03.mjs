@@ -779,7 +779,7 @@ export function bible_glyph_chapter_gen03() {
           "cherubim",
           "on",
           "the",
-          "east",
+          "$compass+right_arrow",
           "side",
           "of",
           "the",
