@@ -555,7 +555,7 @@ export function bible_glyph_chapter_ezk36() {
           "your",
           "$map",
           "to",
-          "stumble,",
+          "$hiking_boot+rock,",
           "declares",
           "the",
           "$crown",
