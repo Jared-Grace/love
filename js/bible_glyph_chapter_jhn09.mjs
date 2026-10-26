@@ -645,7 +645,7 @@ export function bible_glyph_chapter_jhn09() {
           "$me",
           "$lightbulb",
           "$pointing",
-          "this",
+          "$flashlight",
           "$person",
           "is",
           "a",
