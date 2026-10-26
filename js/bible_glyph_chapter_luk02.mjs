@@ -503,7 +503,7 @@ export function bible_glyph_chapter_luk02() {
         "$ear",
         "$plus",
         "$eye,",
-        "just",
+        "$likeness",
         "as",
         "it",
         "had",
