@@ -1065,7 +1065,7 @@ export function bible_glyph_chapter_luk24() {
           "I",
           "$link",
           "$repeat_single_button",
-          "with",
+          "$safety_pin",
           "$you:",
           "$pointing",
           "everything",
