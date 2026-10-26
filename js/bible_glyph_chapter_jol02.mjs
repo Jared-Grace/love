@@ -385,7 +385,7 @@ export function bible_glyph_chapter_jol02() {
           "$i_am",
           "your",
           "$heart_on_fire.",
-          "For",
+          "$pointing",
           "He",
           "is",
           "gracious",
