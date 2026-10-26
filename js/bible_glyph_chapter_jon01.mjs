@@ -311,7 +311,7 @@ export function bible_glyph_chapter_jon01() {
           "Jonah.",
           "And",
           "$me",
-          "worship",
+          "$fear+describing",
           "the",
           "$i_am,",
           "the",
