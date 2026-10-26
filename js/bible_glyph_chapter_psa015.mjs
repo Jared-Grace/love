@@ -21,7 +21,7 @@ export function bible_glyph_chapter_psa015() {
           "in",
           "Your",
           "tent?",
-          "Who",
+          "$person+question",
           "may",
           "dwell",
           "on",
