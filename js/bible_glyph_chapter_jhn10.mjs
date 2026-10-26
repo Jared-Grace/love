@@ -548,7 +548,7 @@ export function bible_glyph_chapter_jhn10() {
           "Others",
           "$speech,",
           "$flashlight",
-          "are",
+          "$link",
           "$no_entry",
           "the",
           "$speech+thing",
