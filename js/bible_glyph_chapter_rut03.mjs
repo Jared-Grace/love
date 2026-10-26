@@ -527,7 +527,7 @@ export function bible_glyph_chapter_rut03() {
           "He",
           "$hands_giving",
           "me",
-          "these",
+          "$flashlight+flashlight",
           "$six",
           "measures",
           "of",
