@@ -624,7 +624,7 @@ export function bible_glyph_chapter_rev01() {
           "the",
           "$seven",
           "golden",
-          "lampstands:",
+          "$lamp+seat:",
           "The",
           "$seven",
           "$star_plain",
