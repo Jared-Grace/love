@@ -437,7 +437,7 @@ export function bible_glyph_chapter_rut03() {
           "it",
           "be",
           "$lightbulb",
-          "that",
+          "$pointing",
           "a",
           "$woman",
           "$footprints",
