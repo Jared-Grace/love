@@ -473,7 +473,7 @@ export function bible_glyph_chapter_hag02() {
           "another",
           "in",
           "the",
-          "temple",
+          "$classical_building",
           "of",
           "the",
           "$i_am,",
