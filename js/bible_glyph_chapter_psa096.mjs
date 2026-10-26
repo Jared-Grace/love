@@ -19,7 +19,7 @@ export function bible_glyph_chapter_psa096() {
           "the",
           "$i_am",
           "a",
-          "new",
+          "$new_button",
           "$song;",
           "$song+doing",
           "to",
