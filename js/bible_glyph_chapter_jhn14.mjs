@@ -153,7 +153,7 @@ export function bible_glyph_chapter_jhn14() {
           "$pointing_back,",
           "“I",
           "$link",
-          "the",
+          "$pin",
           "$road",
           "$plus",
           "the",
