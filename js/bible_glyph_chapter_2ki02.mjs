@@ -324,7 +324,7 @@ export function bible_glyph_chapter_2ki02() {
           "so",
           "that",
           "the",
-          "two",
+          "$two",
           "of",
           "them",
           "crossed",
