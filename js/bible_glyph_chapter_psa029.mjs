@@ -163,7 +163,7 @@ export function bible_glyph_chapter_psa029() {
           "of",
           "the",
           "$i_am",
-          "shakes",
+          "$dizzy",
           "the",
           "$wilderness;",
           "the",
