@@ -1039,7 +1039,7 @@ export function bible_glyph_chapter_jhn04() {
           "$pin",
           "$rescue+doer",
           "of",
-          "the",
+          "$pin",
           "$globe.”",
         ],
       },
