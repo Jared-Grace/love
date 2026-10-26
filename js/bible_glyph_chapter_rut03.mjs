@@ -372,7 +372,7 @@ export function bible_glyph_chapter_rut03() {
           "in",
           "the",
           "$morning,",
-          "if",
+          "$traffic_light",
           "he",
           "wants",
           "to",
