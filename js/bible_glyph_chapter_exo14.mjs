@@ -715,7 +715,7 @@ export function bible_glyph_chapter_exo14() {
         verse_number: 24,
         words: [
           "At",
-          "morning",
+          "$morning",
           "$guard+night,",
           "$link,",
           "the",
