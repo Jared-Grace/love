@@ -394,7 +394,7 @@ export function bible_glyph_chapter_jud01() {
           "are",
           "clouds",
           "without",
-          "water,",
+          "$no_entry+water+describing,",
           "carried",
           "along",
           "by",
