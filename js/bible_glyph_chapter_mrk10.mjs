@@ -101,7 +101,7 @@ export function bible_glyph_chapter_mrk10() {
         "a",
         "certificate",
         "of",
-        "divorce",
+        "$away+ring+thing",
         "$plus",
         "send",
         "her",
