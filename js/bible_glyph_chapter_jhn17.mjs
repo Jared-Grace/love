@@ -384,7 +384,7 @@ export function bible_glyph_chapter_jhn17() {
           "am",
           "$footprints",
           "$toward",
-          "You,",
+          "$you,",
           "$plus",
           "these",
           "things",
