@@ -684,7 +684,7 @@ export function bible_glyph_chapter_jud01() {
           "to",
           "present",
           "you",
-          "unblemished",
+          "$soap+sparkles+describing",
           "before",
           "$pointing_back",
           "$star",
