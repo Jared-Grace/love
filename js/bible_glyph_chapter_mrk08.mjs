@@ -811,7 +811,7 @@ export function bible_glyph_chapter_mrk08() {
           "killed,",
           "$plus",
           "$linked_paperclips",
-          "three",
+          "$three",
           "$sun",
           "rise",
           "again.",
