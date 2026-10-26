@@ -150,7 +150,7 @@ export function bible_glyph_chapter_jol01() {
           "it",
           "has",
           "been",
-          "cut",
+          "$scissors",
           "off",
           "from",
           "your",
