@@ -433,7 +433,7 @@ export function bible_glyph_chapter_2ki02() {
           "and",
           "separated",
           "the",
-          "two",
+          "$two",
           "of",
           "them,",
           "and",
