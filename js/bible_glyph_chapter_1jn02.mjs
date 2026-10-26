@@ -285,7 +285,7 @@ export function bible_glyph_chapter_1jn02() {
       {
         verse_number: 11,
         words: [
-          "But",
+          "$curving_right",
           "whoever",
           "hates",
           "$pointing_back",
