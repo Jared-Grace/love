@@ -20,7 +20,7 @@ export function bible_glyph_chapter_jon03() {
           "the",
           "$i_am",
           "$link",
-          "to",
+          "$toward",
           "$dove+proper_name",
           "a",
           "second",
