@@ -190,7 +190,7 @@ export function bible_glyph_chapter_psa029() {
           "strips",
           "the",
           "forests",
-          "bare.",
+          "$wood+scissors+doing.",
           "And",
           "in",
           "His",
