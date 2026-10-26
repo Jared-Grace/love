@@ -136,7 +136,7 @@ export function bible_glyph_chapter_gen02() {
           "$field",
           "had",
           "$clock+back",
-          "appeared",
+          "$link",
           "on",
           "the",
           "$earth,",
