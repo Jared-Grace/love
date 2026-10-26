@@ -218,7 +218,7 @@ export function bible_glyph_chapter_jon03() {
           "both",
           "$person",
           "and",
-          "beast",
+          "$paw_prints",
           "be",
           "covered",
           "with",
