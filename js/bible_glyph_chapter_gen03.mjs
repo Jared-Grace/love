@@ -709,7 +709,7 @@ export function bible_glyph_chapter_gen03() {
           "has",
           "become",
           "like",
-          "one",
+          "$one",
           "$tray_out",
           "Us,",
           "$lightbulb",
