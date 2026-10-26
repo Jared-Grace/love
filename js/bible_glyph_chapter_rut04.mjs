@@ -161,7 +161,7 @@ export function bible_glyph_chapter_rut04() {
           "I",
           "may",
           "$lightbulb,",
-          "because",
+          "$pointing",
           "there",
           "is",
           "no",
