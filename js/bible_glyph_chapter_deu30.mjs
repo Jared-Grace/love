@@ -687,7 +687,7 @@ export function bible_glyph_chapter_deu30() {
         verse_number: 20,
         words: [
           "and",
-          "that",
+          "$back+flashlight",
           "you",
           "may",
           "$heart_red+doing",
