@@ -451,7 +451,7 @@ export function bible_glyph_chapter_gen03() {
           "will",
           "$walking,",
           "and",
-          "dust",
+          "$dust",
           "you",
           "will",
           "$eating",
