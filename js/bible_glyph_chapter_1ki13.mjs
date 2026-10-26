@@ -629,7 +629,7 @@ export function bible_glyph_chapter_1ki13() {
           "$no_entry",
           "$cup_with_straw",
           "$water",
-          "there,",
+          "$telescope,",
           "$no_entry",
           "$turn_back",
           "by",
