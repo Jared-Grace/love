@@ -130,7 +130,7 @@ export function bible_glyph_chapter_luk02() {
     {
       verse_number: 6,
       words: [
-        "While",
+        "$butterfly",
         "$pointing_back",
         "were",
         "$tray_in",
