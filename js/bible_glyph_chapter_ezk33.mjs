@@ -987,7 +987,7 @@ export function bible_glyph_chapter_ezk33() {
           "the",
           "ruins",
           "will",
-          "fall",
+          "$person+pointing_down",
           "by",
           "the",
           "$sword,",
