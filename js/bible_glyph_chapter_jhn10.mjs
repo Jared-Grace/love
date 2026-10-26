@@ -551,7 +551,7 @@ export function bible_glyph_chapter_jhn10() {
           "are",
           "$no_entry",
           "the",
-          "words",
+          "$speech+thing",
           "of",
           "a",
           "man",
