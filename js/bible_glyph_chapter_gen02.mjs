@@ -395,7 +395,7 @@ export function bible_glyph_chapter_gen02() {
           "$name_tag",
           "of",
           "the",
-          "third",
+          "$third_place",
           "$water+national_park",
           "is",
           "the",
