@@ -490,7 +490,7 @@ export function bible_glyph_chapter_luk07() {
         "$tray_in",
         "$proper_name$Judea",
         "$plus",
-        "all",
+        "$all",
         "the",
         "surrounding",
         "region.",
