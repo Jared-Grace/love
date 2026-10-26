@@ -819,7 +819,7 @@ export function bible_glyph_chapter_mrk05() {
         "He",
         "kept",
         "looking",
-        "around",
+        "$clockwise_arrows+eyes+toward",
         "to",
         "$eye",
         "who",
