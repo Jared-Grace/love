@@ -387,7 +387,7 @@ export function bible_glyph_chapter_rev01() {
           "$turn_back",
           "I",
           "$eye",
-          "seven",
+          "$seven",
           "golden",
           "lampstands,",
         ],
