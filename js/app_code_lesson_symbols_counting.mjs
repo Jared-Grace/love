@@ -1,11 +1,12 @@
-import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
-import { app_code_lesson_symbols_counting_quiz_backwards_on_button } from "./app_code_lesson_symbols_counting_quiz_backwards_on_button.mjs";
 import { text_size_text_to } from "./text_size_text_to.mjs";
-import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
-import { app_code_lesson_quizzes } from "./app_code_lesson_quizzes.mjs";
-import { noop } from "./noop.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { app_code_label_symbols } from "./app_code_label_symbols.mjs";
+import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_code_lesson_symbols_counting_quiz_backwards_on_button } from "./app_code_lesson_symbols_counting_quiz_backwards_on_button.mjs";
+import { noop } from "./noop.mjs";
+import { app_code_symbols_count_wrong_say } from "./app_code_symbols_count_wrong_say.mjs";
+import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
+import { app_code_lesson_quizzes } from "./app_code_lesson_quizzes.mjs";
+import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 export function app_code_lesson_symbols_counting(
   name_id,
   above,
@@ -31,6 +32,7 @@ export function app_code_lesson_symbols_counting(
     answer_label: label_answer_forwards,
     answer_on_button: noop,
     answer_count_override: null,
+    wrong_say: app_code_symbols_count_wrong_say,
   };
   let backwards = {
     question_label: "Count: ",
