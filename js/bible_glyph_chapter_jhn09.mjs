@@ -169,7 +169,7 @@ export function bible_glyph_chapter_jhn09() {
           "of",
           "$proper_name$Siloam",
           "($back+flashlight",
-          "means",
+          "$speech+arrow_both_ways+doing",
           "$hand_sending).",
           "So",
           "the",
