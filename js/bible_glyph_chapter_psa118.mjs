@@ -478,7 +478,7 @@ export function bible_glyph_chapter_psa118() {
           "$hammer+doing;",
           "we",
           "will",
-          "rejoice",
+          "$woman_dancing",
           "and",
           "be",
           "glad",
