@@ -34,7 +34,7 @@ export function bible_glyph_chapter_mrk10() {
         "to",
         "$pointing_back,",
         "$plus",
-        "as",
+        "$likeness",
         "was",
         "His",
         "custom",
