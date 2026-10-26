@@ -257,7 +257,7 @@ export function bible_glyph_chapter_jol02() {
           "the",
           "$city;",
           "they",
-          "run",
+          "$running",
           "along",
           "the",
           "$brick+shield;",
