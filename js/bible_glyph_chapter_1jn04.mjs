@@ -320,7 +320,7 @@ export function bible_glyph_chapter_1jn04() {
           "$heart_red+doing$ed",
           "us,",
           "we",
-          "also",
+          "$plus",
           "ought",
           "to",
           "$heart_red+doing",
