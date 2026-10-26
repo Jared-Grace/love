@@ -536,7 +536,7 @@ export function bible_glyph_chapter_rut01() {
           "ever",
           "so",
           "$plus+doing,",
-          "if",
+          "$pointing",
           "anything",
           "but",
           "$skull",
