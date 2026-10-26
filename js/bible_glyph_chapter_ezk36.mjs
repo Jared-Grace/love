@@ -56,7 +56,7 @@ export function bible_glyph_chapter_ezk36() {
           "$speech",
           "of",
           "you,",
-          "Aha!",
+          "$exclamation+grinning_face!",
           "The",
           "$hourglass",
           "heights",
