@@ -307,7 +307,7 @@ export function bible_glyph_chapter_mrk08() {
           "$dna",
           "$magnifying_glass",
           "a",
-          "sign?",
+          "$placard?",
           "$check+manner,",
           "I",
           "$speech",
