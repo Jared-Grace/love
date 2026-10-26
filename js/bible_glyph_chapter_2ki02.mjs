@@ -330,7 +330,7 @@ export function bible_glyph_chapter_2ki02() {
           "crossed",
           "over",
           "on",
-          "dry",
+          "$desert+brown_square",
           "ground.",
         ],
       },
