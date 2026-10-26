@@ -625,7 +625,7 @@ export function bible_glyph_chapter_1jn03() {
         words: [
           "$plus",
           "$flashlight",
-          "is",
+          "$link",
           "$pointing_back",
           "$scroll:",
           "that",
