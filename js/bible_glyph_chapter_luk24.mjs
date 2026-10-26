@@ -1167,7 +1167,7 @@ export function bible_glyph_chapter_luk24() {
           "I",
           "$hand_sending",
           "the",
-          "promise",
+          "$pointing_up+angel",
           "of",
           "My",
           "$father",
