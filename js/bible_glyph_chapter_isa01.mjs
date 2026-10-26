@@ -699,7 +699,7 @@ export function bible_glyph_chapter_isa01() {
           "One",
           "of",
           "$wrestling+heart_on_fire,",
-          "declares:",
+          "$microphone:",
           "Ah,",
           "I",
           "will",
