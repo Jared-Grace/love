@@ -212,7 +212,7 @@ export function bible_glyph_chapter_gen02() {
           "his",
           "$nose+fire",
           "the",
-          "breath",
+          "$nose+dashing_away",
           "of",
           "$sprout,",
           "and",
