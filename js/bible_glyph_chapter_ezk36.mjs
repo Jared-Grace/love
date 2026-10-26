@@ -1190,7 +1190,7 @@ export function bible_glyph_chapter_ezk36() {
           "become",
           "like",
           "the",
-          "garden",
+          "$garden",
           "of",
           "$proper_name$Eden.",
           "The",
