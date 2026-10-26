@@ -231,7 +231,7 @@ export function bible_glyph_chapter_mrk05() {
         "$speech",
         "to",
         "$pointing_back,",
-        "“My",
+        "“$me",
         "$name_tag",
         "is",
         "$military_helmet+all+crowd,",
