@@ -175,7 +175,7 @@ export function bible_glyph_chapter_psa111() {
           "He",
           "has",
           "sent",
-          "redemption",
+          "$coin+turn_back+thing",
           "to",
           "His",
           "$family;",
