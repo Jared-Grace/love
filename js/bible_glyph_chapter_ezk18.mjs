@@ -237,7 +237,7 @@ export function bible_glyph_chapter_ezk18() {
           "$hammer+doing$s",
           "$check",
           "$scales+thing",
-          "between",
+          "$brain+arrow_both_ways",
           "one",
           "$man_beard",
           "and",
