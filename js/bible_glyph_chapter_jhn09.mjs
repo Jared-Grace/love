@@ -46,7 +46,7 @@ export function bible_glyph_chapter_jhn09() {
           "man",
           "$shuffle",
           "$pointing_back",
-          "parents,",
+          "$butterfly+doer,",
           "that",
           "he",
           "was",
