@@ -800,7 +800,7 @@ export function bible_glyph_chapter_luk15() {
       words: [
         "$curving_right",
         "$back+clock",
-        "this",
+        "$flashlight",
         "$son",
         "of",
         "yours,",
