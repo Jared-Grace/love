@@ -657,7 +657,7 @@ export function bible_glyph_chapter_jhn09() {
         words: [
           "He",
           "$speech+turn_back,",
-          "Whether",
+          "$traffic_light",
           "He",
           "is",
           "a",
