@@ -238,7 +238,7 @@ export function bible_glyph_chapter_gen03() {
           "$leaf",
           "and",
           "$hammer+doing",
-          "coverings",
+          "$briefs+thing",
           "for",
           "themselves.",
         ],
