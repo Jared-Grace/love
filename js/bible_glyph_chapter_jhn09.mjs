@@ -1038,7 +1038,7 @@ export function bible_glyph_chapter_jhn09() {
           "$speech,",
           "$traffic_light",
           "you",
-          "were",
+          "$link",
           "$person_with_white_cane,",
           "you",
           "would",
