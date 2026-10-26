@@ -199,7 +199,7 @@ export function bible_glyph_chapter_jon03() {
           "or",
           "$sheep,",
           "$face_savoring_food+doing",
-          "anything",
+          "$package+question",
           "at",
           "all.",
           "They",
