@@ -186,7 +186,7 @@ export function bible_glyph_chapter_psa112() {
           "$poor;",
           "his",
           "$ruler+thing",
-          "endures",
+          "$person+round_pushpin",
           "forever;",
           "his",
           "horn",
