@@ -85,7 +85,7 @@ export function bible_glyph_chapter_psa138() {
       {
         verse_number: 4,
         words: [
-          "All",
+          "$all",
           "the",
           "$king",
           "of",
