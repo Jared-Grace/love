@@ -480,7 +480,7 @@ export function bible_glyph_chapter_jol02() {
           "$door+bed,",
           "and",
           "the",
-          "bride",
+          "$bouquet",
           "her",
           "chamber.",
         ],
