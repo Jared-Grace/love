@@ -218,7 +218,7 @@ export function bible_glyph_chapter_jol02() {
           "in",
           "$road,",
           "$no_entry",
-          "swerving",
+          "$package+hand_sending+doing",
           "from",
           "the",
           "course.",
