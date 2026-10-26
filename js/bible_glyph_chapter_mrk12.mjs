@@ -995,7 +995,7 @@ export function bible_glyph_chapter_mrk12() {
         "$crown,",
         "Sit",
         "$tray_out",
-        "My",
+        "$me",
         "right",
         "hand",
         "until",
