@@ -452,7 +452,7 @@ export function bible_glyph_chapter_jhn04() {
           "You",
           "have",
           "spoken",
-          "truthfully.”",
+          "$check+describing.”",
         ],
       },
       {
