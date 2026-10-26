@@ -859,7 +859,7 @@ export function bible_glyph_chapter_jhn09() {
       {
         verse_number: 33,
         words: [
-          "If",
+          "$traffic_light",
           "this",
           "man",
           "were",
