@@ -419,7 +419,7 @@ export function bible_glyph_chapter_gen32() {
         words: [
           "thirty",
           "milk",
-          "camels",
+          "$camel",
           "with",
           "their",
           "$son,",
