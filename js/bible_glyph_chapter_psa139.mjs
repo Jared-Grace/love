@@ -267,7 +267,7 @@ export function bible_glyph_chapter_psa139() {
         words: [
           "$pointing",
           "You",
-          "formed",
+          "$coin+hand_receiving",
           "my",
           "inmost",
           "being;",
