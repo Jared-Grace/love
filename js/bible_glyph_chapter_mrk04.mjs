@@ -357,7 +357,7 @@ export function bible_glyph_chapter_mrk04() {
       },
       {
         verse_number: 14,
-        words: ["The", "farmer", "sows", "the", "$speech."],
+        words: ["$pin", "farmer", "sows", "the", "$speech."],
       },
       {
         verse_number: 15,
