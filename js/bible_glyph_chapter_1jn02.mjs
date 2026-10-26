@@ -662,7 +662,7 @@ export function bible_glyph_chapter_1jn02() {
           "denies",
           "$pointing",
           "$cross",
-          "is",
+          "$link",
           "the",
           "$oil?",
           "This",
