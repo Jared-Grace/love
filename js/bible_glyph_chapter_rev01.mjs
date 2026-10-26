@@ -426,7 +426,7 @@ export function bible_glyph_chapter_rev01() {
         verse_number: 14,
         words: [
           "$pointing_back",
-          "head",
+          "$person_gesturing_ok",
           "$plus",
           "hair",
           "were",
