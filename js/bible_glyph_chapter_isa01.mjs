@@ -629,7 +629,7 @@ export function bible_glyph_chapter_isa01() {
           "but",
           "$watch",
           "only",
-          "murderers!",
+          "$sword+coffin!",
         ],
       },
       {
