@@ -492,7 +492,7 @@ export function bible_glyph_chapter_mrk10() {
         "“$one",
         "thing",
         "you",
-        "lack.",
+        "$turtle+doing.",
         "Go,",
         "sell",
         "everything",
