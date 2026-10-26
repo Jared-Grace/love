@@ -903,7 +903,7 @@ export function bible_glyph_chapter_jhn04() {
           "$seed+doing",
           "$plus",
           "another",
-          "reaps.",
+          "$harvest+doing.",
         ],
       },
       {
