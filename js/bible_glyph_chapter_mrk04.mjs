@@ -967,7 +967,7 @@ export function bible_glyph_chapter_mrk04() {
           "up,",
           "$plus",
           "$pin",
-          "waves",
+          "$sea+wind",
           "were",
           "breaking",
           "over",
