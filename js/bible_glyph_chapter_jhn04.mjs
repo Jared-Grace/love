@@ -854,7 +854,7 @@ export function bible_glyph_chapter_jhn04() {
           "fields,",
           "$pointing",
           "they",
-          "are",
+          "$link",
           "ripe",
           "for",
           "harvest.",
