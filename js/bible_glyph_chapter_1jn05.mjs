@@ -371,7 +371,7 @@ export function bible_glyph_chapter_1jn05() {
           "before",
           "$pointing_back:",
           "$pointing",
-          "if",
+          "$traffic_light",
           "we",
           "ask",
           "anything",
