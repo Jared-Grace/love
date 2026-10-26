@@ -569,7 +569,7 @@ export function bible_glyph_chapter_jon01() {
           "$top",
           "$fish",
           "to",
-          "swallow",
+          "$whale",
           "$dove+proper_name,",
           "and",
           "$dove+proper_name",
