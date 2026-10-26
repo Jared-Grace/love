@@ -695,7 +695,7 @@ export function bible_glyph_chapter_exo14() {
           "after",
           "them",
           "-",
-          "all",
+          "$all",
           "$house+proper_name's",
           "horses",
           "and",
