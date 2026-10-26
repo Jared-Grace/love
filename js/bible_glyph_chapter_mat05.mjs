@@ -629,7 +629,7 @@ export function bible_glyph_chapter_mat05() {
           "$telescope+clock",
           "$footprints",
           "to",
-          "offer",
+          "$toward+shopping_cart",
           "$you",
           "gift.",
         ],
