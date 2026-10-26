@@ -872,7 +872,7 @@ export function bible_glyph_chapter_isa01() {
           "$hand+vibration_mode+thread",
           "and",
           "his",
-          "work",
+          "$hand+hammer",
           "a",
           "spark;",
           "both",
