@@ -174,7 +174,7 @@ export function bible_glyph_chapter_jhn01() {
           "$link",
           "$footprints",
           "into",
-          "the",
+          "$pin",
           "$globe.",
         ],
       },
