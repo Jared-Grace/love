@@ -93,7 +93,7 @@ export function bible_glyph_chapter_psa101() {
         verse_number: 4,
         words: [
           "A",
-          "perverse",
+          "$curly_loop+describing",
           "$heart_organ",
           "shall",
           "depart",
