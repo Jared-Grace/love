@@ -71,7 +71,7 @@ export function bible_glyph_chapter_1jn05() {
         verse_number: 3,
         words: [
           "For",
-          "this",
+          "$flashlight",
           "is",
           "the",
           "$heart_red",
