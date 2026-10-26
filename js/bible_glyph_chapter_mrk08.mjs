@@ -854,7 +854,7 @@ export function bible_glyph_chapter_mrk08() {
           "$rock+proper_name",
           "$plus",
           "$speech,",
-          "Get",
+          "$walking+away",
           "behind",
           "Me,",
           "$proper_name$Satan,",
