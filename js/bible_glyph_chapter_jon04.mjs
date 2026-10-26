@@ -225,7 +225,7 @@ export function bible_glyph_chapter_jon04() {
         words: [
           "As",
           "the",
-          "sun",
+          "$sun_with_face",
           "was",
           "$sun+up_arrow+doing,",
           "$heart_on_fire",
