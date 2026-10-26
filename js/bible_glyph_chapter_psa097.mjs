@@ -175,7 +175,7 @@ export function bible_glyph_chapter_psa097() {
           "Most",
           "High",
           "over",
-          "all",
+          "$all",
           "the",
           "$earth;",
           "You",
