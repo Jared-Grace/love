@@ -903,7 +903,7 @@ export function bible_glyph_chapter_mrk05() {
         "$girl",
         "has",
         "$skull.",
-        "Why",
+        "$flashlight+question",
         "bother",
         "the",
         "Teacher",
