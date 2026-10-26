@@ -371,7 +371,7 @@ export function bible_glyph_chapter_jhn01() {
           "$gift",
           "$plus",
           "$check",
-          "came",
+          "$butterfly",
           "$metro",
           "$cross",
           "$oil.",
