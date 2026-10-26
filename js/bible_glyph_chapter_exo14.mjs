@@ -750,7 +750,7 @@ export function bible_glyph_chapter_exo14() {
           "He",
           "caused",
           "their",
-          "chariot",
+          "$chariot",
           "$wheel+counterclockwise_arrows_button",
           "to",
           "wobble,",
