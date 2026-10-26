@@ -900,7 +900,7 @@ export function bible_glyph_chapter_jhn04() {
           "$check+describing,",
           "$pointing",
           "one",
-          "sows",
+          "$seed+doing",
           "$plus",
           "another",
           "reaps.",
