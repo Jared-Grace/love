@@ -225,7 +225,7 @@ export function bible_glyph_chapter_gen32() {
           "other",
           "camp",
           "can",
-          "escape.",
+          "$door+running.",
         ],
       },
       {
