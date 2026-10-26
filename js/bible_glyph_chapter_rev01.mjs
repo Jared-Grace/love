@@ -399,7 +399,7 @@ export function bible_glyph_chapter_rev01() {
           "$tray_in",
           "$radio_button",
           "the",
-          "lampstands",
+          "$lamp+seat",
           "was",
           "One",
           "like",
