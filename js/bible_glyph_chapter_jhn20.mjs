@@ -838,7 +838,7 @@ export function bible_glyph_chapter_jhn20() {
           "the",
           "$learner,",
           "$back+flashlight",
-          "are",
+          "$link",
           "$no_entry",
           "written",
           "$tray_in",
