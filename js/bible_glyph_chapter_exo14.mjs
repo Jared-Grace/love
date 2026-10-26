@@ -234,7 +234,7 @@ export function bible_glyph_chapter_exo14() {
           "$horse",
           "and",
           "chariots,",
-          "horsemen",
+          "$horse+doer",
           "and",
           "troops",
           "-",
