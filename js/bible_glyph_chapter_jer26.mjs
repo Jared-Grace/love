@@ -21,7 +21,7 @@ export function bible_glyph_chapter_jer26() {
           "beginning",
           "of",
           "the",
-          "reign",
+          "$castle",
           "of",
           "$i_am+pointing_up",
           "$son",
