@@ -447,7 +447,7 @@ export function bible_glyph_chapter_jer26() {
           "$house",
           "and",
           "against",
-          "this",
+          "$flashlight",
           "$city",
           "$all",
           "the",
