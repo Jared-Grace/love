@@ -760,7 +760,7 @@ export function bible_glyph_chapter_ezk33() {
           "$year",
           "of",
           "our",
-          "exile,",
+          "$luggage+chains+thing,",
           "on",
           "the",
           "fifth",
