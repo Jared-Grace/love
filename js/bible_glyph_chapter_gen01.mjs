@@ -802,7 +802,7 @@ export function bible_glyph_chapter_gen01() {
           "Be",
           "fruitful",
           "and",
-          "multiply",
+          "$multiply+doing",
           "and",
           "fill",
           "the",
