@@ -192,7 +192,7 @@ export function bible_glyph_chapter_jon01() {
         words: [
           "The",
           "captain",
-          "approached",
+          "$magnet+doing",
           "him",
           "and",
           "$speech,",
