@@ -1308,7 +1308,7 @@ export function bible_glyph_chapter_mrk10() {
         "to",
         "be",
         "$mouth+locked,",
-        "but",
+        "$curving_right",
         "he",
         "cried",
         "out",
