@@ -122,7 +122,7 @@ export function bible_glyph_chapter_psa097() {
       {
         verse_number: 7,
         words: [
-          "All",
+          "$all",
           "who",
           "$kneeling+doing",
           "carved",
