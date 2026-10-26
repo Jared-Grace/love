@@ -1010,7 +1010,7 @@ export function bible_glyph_chapter_luk02() {
         "$crown,",
         "they",
         "$turn_back",
-        "to",
+        "$toward+tray_in",
         "$proper_name$Galilee,",
         "to",
         "their",
