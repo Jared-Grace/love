@@ -140,7 +140,7 @@ export function bible_glyph_chapter_psa139() {
           "escape",
           "Your",
           "$wind?",
-          "Where",
+          "$question+right_arrow",
           "can",
           "I",
           "flee",
