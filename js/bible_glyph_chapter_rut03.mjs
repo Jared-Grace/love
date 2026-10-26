@@ -163,7 +163,7 @@ export function bible_glyph_chapter_rut03() {
           "So",
           "she",
           "went",
-          "down",
+          "$walking+pointing_down",
           "to",
           "the",
           "threshing",
