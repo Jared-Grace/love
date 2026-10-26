@@ -17,7 +17,7 @@ export function bible_glyph_chapter_jhn03() {
       {
         verse_number: 1,
         words: [
-          "Now",
+          "$curving_right",
           "there",
           "$link",
           "a",
