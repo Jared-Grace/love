@@ -364,7 +364,7 @@ export function bible_glyph_chapter_jhn04() {
           "$pointing_back,",
           "“$crown,",
           "$hands_giving",
-          "me",
+          "$me",
           "this",
           "$water",
           "so",
