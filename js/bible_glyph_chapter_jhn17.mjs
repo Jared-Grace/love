@@ -639,7 +639,7 @@ export function bible_glyph_chapter_jhn17() {
           "that",
           "they",
           "may",
-          "be",
+          "$link",
           "perfected",
           "into",
           "one,",
