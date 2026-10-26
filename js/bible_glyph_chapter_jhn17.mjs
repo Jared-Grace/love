@@ -337,7 +337,7 @@ export function bible_glyph_chapter_jhn17() {
           "When",
           "I",
           "was",
-          "with",
+          "$linked_paperclips",
           "$pointing_back,",
           "I",
           "kept",
