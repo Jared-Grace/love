@@ -388,7 +388,7 @@ export function bible_glyph_chapter_rev10() {
           "$me",
           "stomach",
           "turned",
-          "bitter.",
+          "$lemon+doing.",
         ],
       },
       {
