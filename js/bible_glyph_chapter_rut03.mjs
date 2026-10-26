@@ -170,7 +170,7 @@ export function bible_glyph_chapter_rut03() {
           "floor",
           "and",
           "$hammer+doing",
-          "everything",
+          "$all",
           "her",
           "mother-in-law",
           "had",
