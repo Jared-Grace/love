@@ -351,7 +351,7 @@ export function bible_glyph_chapter_psa139() {
           "written",
           "in",
           "Your",
-          "book",
+          "$closed_book",
           "and",
           "ordained",
           "for",
