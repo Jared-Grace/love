@@ -73,7 +73,7 @@ export function bible_glyph_chapter_jon04() {
           "$heart_on_fire,",
           "$straight_ruler+clock+describing",
           "to",
-          "anger,",
+          "$nose+fire,",
           "abounding",
           "in",
           "$gift,",
