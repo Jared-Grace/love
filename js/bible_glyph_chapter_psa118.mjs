@@ -77,7 +77,7 @@ export function bible_glyph_chapter_psa118() {
         words: [
           "$tray_out",
           "my",
-          "distress",
+          "$pinching_hand+anxious_face_with_sweat",
           "I",
           "called",
           "to",
