@@ -884,7 +884,7 @@ export function bible_glyph_chapter_jhn10() {
           "$sparkle+doing",
           "$plus",
           "$hand_sending",
-          "into",
+          "$toward+tray_in",
           "the",
           "$globe?",
           "How",
