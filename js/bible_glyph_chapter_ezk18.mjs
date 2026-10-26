@@ -571,7 +571,7 @@ export function bible_glyph_chapter_ezk18() {
           "you",
           "may",
           "$speech,",
-          "‘Why",
+          "‘$flashlight+question+lightbulb",
           "shouldn’t",
           "the",
           "$son",
