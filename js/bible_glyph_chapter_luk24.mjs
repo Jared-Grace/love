@@ -924,7 +924,7 @@ export function bible_glyph_chapter_luk24() {
           "$speech",
           "$pointing_back,",
           "Why",
-          "are",
+          "$link",
           "you",
           "$shaking_face+doing,",
           "$plus",
