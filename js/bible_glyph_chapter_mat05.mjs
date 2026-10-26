@@ -453,7 +453,7 @@ export function bible_glyph_chapter_mat05() {
           "will",
           "be",
           "called",
-          "least",
+          "$pinching_hand+describing",
           "$tray_in",
           "the",
           "$castle",
