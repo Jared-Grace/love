@@ -384,7 +384,7 @@ export function bible_glyph_chapter_rut04() {
           "$skull+doing",
           "through",
           "his",
-          "inheritance,",
+          "$inheritance,",
           "so",
           "that",
           "the",
