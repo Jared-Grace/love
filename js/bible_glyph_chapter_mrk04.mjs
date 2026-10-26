@@ -989,7 +989,7 @@ export function bible_glyph_chapter_mrk04() {
           "$link",
           "$tray_in",
           "$pin",
-          "stern,",
+          "$ship+back,",
           "sleeping",
           "on",
           "$pin",
