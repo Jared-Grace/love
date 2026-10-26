@@ -689,7 +689,7 @@ export function bible_glyph_chapter_rut02() {
         verse_number: 20,
         words: [
           "May",
-          "he",
+          "$pointing_back",
           "be",
           "blessed",
           "by",
