@@ -131,7 +131,7 @@ export function bible_glyph_chapter_psa001() {
           "$thumbs_down",
           "will",
           "$no_entry",
-          "stand",
+          "$person+pointing_up",
           "in",
           "the",
           "$scales+thing,",
