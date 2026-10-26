@@ -228,7 +228,7 @@ export function bible_glyph_chapter_jhn10() {
           "$link",
           "$pin",
           "$door.",
-          "If",
+          "$traffic_light",
           "anyone",
           "enters",
           "$metro",
