@@ -431,7 +431,7 @@ export function bible_glyph_chapter_ezk33() {
           "$thumbs_down",
           "$road!",
           "For",
-          "why",
+          "$flashlight+question",
           "should",
           "you",
           "$skull+doing,",
