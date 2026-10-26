@@ -343,7 +343,7 @@ export function bible_glyph_chapter_jhn17() {
           "kept",
           "$pointing_back",
           "$tray_in",
-          "Your",
+          "$you",
           "$name_tag,",
           "which",
           "You",
