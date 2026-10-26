@@ -702,7 +702,7 @@ export function bible_glyph_chapter_jhn17() {
           "me",
           "$last_track",
           "the",
-          "foundation",
+          "$pointing_down+throwing+thing",
           "of",
           "the",
           "$globe.",
