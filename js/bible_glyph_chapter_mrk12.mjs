@@ -943,7 +943,7 @@ export function bible_glyph_chapter_mrk12() {
         "one",
         "$superhero+doing",
         "to",
-        "question",
+        "$pointing_up+question",
         "$pointing_back",
         "any",
         "further.",
