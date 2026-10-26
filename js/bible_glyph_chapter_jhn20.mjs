@@ -753,7 +753,7 @@ export function bible_glyph_chapter_jhn20() {
           "$proper_name$Thomas,",
           "Put",
           "your",
-          "finger",
+          "$hand+pointing_up",
           "here",
           "$plus",
           "look",
