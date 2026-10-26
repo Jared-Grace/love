@@ -65,7 +65,7 @@ export function bible_glyph_chapter_psa146() {
           "$person",
           "who",
           "cannot",
-          "save.",
+          "$rescue+thing.",
         ],
       },
       {
