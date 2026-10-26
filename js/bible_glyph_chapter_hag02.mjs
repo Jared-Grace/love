@@ -137,7 +137,7 @@ export function bible_glyph_chapter_hag02() {
           "the",
           "$i_am.",
           "$hammer+doing,",
-          "for",
+          "$pointing",
           "I",
           "am",
           "with",
