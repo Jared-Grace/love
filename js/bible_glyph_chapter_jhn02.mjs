@@ -389,7 +389,7 @@ export function bible_glyph_chapter_jhn02() {
           "the",
           "$classical_building,",
           "$plus",
-          "both",
+          "$plus+link",
           "the",
           "$sheep",
           "$plus",
