@@ -931,7 +931,7 @@ export function bible_glyph_chapter_mrk10() {
         "$speech,",
         "“$teacher,",
         "we",
-        "want",
+        "$shooting_star+doing",
         "You",
         "to",
         "$hammer",
