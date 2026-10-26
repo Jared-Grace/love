@@ -416,7 +416,7 @@ export function bible_glyph_chapter_rev01() {
           "with",
           "a",
           "golden",
-          "sash",
+          "$ribbon",
           "$clockwise_arrows+ribbon+doing",
           "His",
           "$breast_feeding.",
