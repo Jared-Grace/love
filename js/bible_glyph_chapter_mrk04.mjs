@@ -122,7 +122,7 @@ export function bible_glyph_chapter_mrk04() {
           "$pointing_up",
           "rocky",
           "ground,",
-          "where",
+          "$back+round_pushpin",
           "it",
           "did",
           "$no_entry",
