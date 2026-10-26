@@ -212,7 +212,7 @@ export function bible_glyph_chapter_1jn01() {
         verse_number: 7,
         words: [
           "But",
-          "if",
+          "$traffic_light",
           "we",
           "$walking",
           "$tray_in",
