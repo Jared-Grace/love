@@ -166,8 +166,8 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
   let is_true = app_code_explain_number_colored("true", plain);
   function goes_said(start_across, end_across, start_down, end_down) {
     "The rectangle goes across from start_across to end_across, and down from start_down to end_down";
-    let v = from(start_across);
-    let v2 = till(end_across);
+    let v_inner = from(start_across);
+    let v2_inner = till(end_across);
     let v3_inner = from(start_down);
     let v4_inner = till(end_down);
     let said = app_code_explain_said([
@@ -176,9 +176,9 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
       " goes across ",
       right_arrow,
       " from ",
-      v,
+      v_inner,
       " to ",
-      v2,
+      v2_inner,
       ", and down ",
       down_arrow,
       " from ",
@@ -190,15 +190,15 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
   }
   function size_said(word, end, start, result) {
     "The width or height is end - start, which is result";
-    let v = minus_worked(end, start);
-    let v2 = length(result);
+    let v_size = minus_worked(end, start);
+    let v2_size = length(result);
     let said = app_code_explain_said([
       "The ",
       word,
       " is ",
-      v,
+      v_size,
       ", which is ",
-      v2,
+      v2_size,
     ]);
     return said;
   }

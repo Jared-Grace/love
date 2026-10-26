@@ -144,7 +144,7 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   }
   function rectangle_draw(marked, corner) {
     "the rectangle from 1 to 4 across and 1 to 3 down, with the marked squares filled in the square's colour and the corner's lines drawn in it, either null for none";
-    function draw(box) {
+    function draw_box(box) {
       app_code_rectangles_edges_colored_draw(
         box,
         5,
@@ -158,12 +158,15 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
         corner,
       );
     }
-    return draw;
+    return draw_box;
   }
   function square_draw(across, down) {
     "the rectangle with one square filled, its lines left plain";
-    let draw = rectangle_draw([across, across + 1, down, down + 1], null);
-    return draw;
+    let drawn_square = rectangle_draw(
+      [across, across + 1, down, down + 1],
+      null,
+    );
+    return drawn_square;
   }
   let right_arrow = app_code_arrow_inline_draw(0);
   let down_arrow = app_code_arrow_inline_draw(90);

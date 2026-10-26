@@ -107,8 +107,8 @@ export async function facebook_video_post(file_path, text, cover_path) {
     step = "ai label";
     let labels = await dialog_labels();
     function lambda(l) {
-      let r = l.indexOf("AI label off") >= 0;
-      return r;
+      let has_off = l.indexOf("AI label off") >= 0;
+      return has_off;
     }
     let ai_off = labels.find(lambda);
     if (ai_off) {
@@ -118,8 +118,8 @@ export async function facebook_video_post(file_path, text, cover_path) {
     }
     labels = await dialog_labels();
     function lambda2(l) {
-      let r = l.indexOf("AI label") === 0 && l.indexOf("AI label off") < 0;
-      return r;
+      let has_on = l.indexOf("AI label") === 0 && l.indexOf("AI label off") < 0;
+      return has_on;
     }
     let ai_on = labels.find(lambda2);
     if (!ai_on) {
@@ -129,8 +129,8 @@ export async function facebook_video_post(file_path, text, cover_path) {
     }
     step = "public";
     function lambda3(l) {
-      let r = l.indexOf("Sharing with Public") >= 0;
-      return r;
+      let has_public = l.indexOf("Sharing with Public") >= 0;
+      return has_public;
     }
     let is_public = labels.find(lambda3);
     if (!is_public) {

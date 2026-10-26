@@ -79,8 +79,8 @@ export function functions_edit_unsafe_from_reads(reads) {
         mutating.add(name);
         mutating_grew = true;
       }
-      function lambda(r) {
-        let r2 = r.alias;
+      function lambda(r_read) {
+        let r2 = r_read.alias;
         return r2;
       }
       let b4 = returns_alias.has(name);
@@ -111,8 +111,8 @@ export function functions_edit_unsafe_from_reads(reads) {
       capable.add(name);
     }
     ("Only holding is followed here: a yes or no, a count or a text worked out from a power is not the power.");
-    function lambda2(r) {
-      let r3 = r.alias;
+    function lambda2(r_read2) {
+      let r3 = r_read2.alias;
       return r3;
     }
     let starts2 = read.returns.map(lambda2);
@@ -279,8 +279,8 @@ export function functions_edit_unsafe_from_reads(reads) {
     ("A result that matters makes the function unsafe to edit, and so every function its result is worked out from - but it does not make the parameters steer for every caller. The caller whose result matters already follows the arguments of that one call, because a call's names include its arguments; marking the parameters would refuse every other caller, everywhere, for a value only one of them uses. The exception is a function that keeps state between calls, since an earlier call from anywhere can then change what a later one hands back.");
     ("A result is followed through its conditions as well, because for a result the condition is part of the value: which return ran decides what comes back.");
     if (returns_danger.has(name)) {
-      function lambda7(r) {
-        let r6 = [...r.data, ...r.control];
+      function lambda7(r_read3) {
+        let r6 = [...r_read3.data, ...r_read3.control];
         return r6;
       }
       let returned_from = read.returns.map(lambda7);

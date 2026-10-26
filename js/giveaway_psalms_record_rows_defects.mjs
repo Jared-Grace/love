@@ -85,18 +85,18 @@ export function giveaway_psalms_record_rows_defects(rows) {
   }
   function row_placed(row) {
     let place = list_join_underscore([row.passage_code, row.file_name]);
-    let placed = {
+    let row_placed_at = {
       place,
       file_name: row.file_name,
       name_published: row.name_published,
     };
-    return placed;
+    return row_placed_at;
   }
-  function place_repeat_defect(placed) {
+  function place_repeat_defect(repeat_placed) {
     let defect = {
       fault: "file_repeated_in_passage",
-      file_name: placed.file_name,
-      name_published: placed.name_published,
+      file_name: repeat_placed.file_name,
+      name_published: repeat_placed.name_published,
       expected: "",
     };
     return defect;

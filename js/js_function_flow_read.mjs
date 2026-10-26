@@ -274,9 +274,9 @@ export function js_function_flow_read(f_name, ast, known) {
     }
   }
   let aliases = new Map();
-  function alias_add(bound, data, via, gate) {
+  function alias_add(alias_bound, data, via, gate) {
     "Via, as for worked-out-from, is a repo function the line changes things through, followed only if it does change what it is handed. Gate is a repo function whose answer this made-up name stands for: the function is always reported, and what it was handed is followed only if it can hand back what it was handed.";
-    for (let b of bound) {
+    for (let b of alias_bound) {
       let b6 = aliases.has(b);
       if (not(b6)) {
         aliases.set(b, []);
@@ -677,11 +677,11 @@ export function js_function_flow_read(f_name, ast, known) {
     }
     return out;
   }
-  function source_add(bound, data, stack, via) {
+  function source_add(source_bound, data, stack, via) {
     "What a name is worked out from is kept in two parts: the values that can flow into it, and the conditions deciding whether the line setting it runs. A condition can choose between values but cannot make a new one, so a question about which values are possible follows only the first part.";
     "Via is the repo function a name was handed to, when the only way that line changes the name is through that function changing what it is handed; null otherwise. It is followed only to a function that can change what it is handed, which is not known until every function is read.";
     let control = control_names(stack);
-    for (let b of bound) {
+    for (let b of source_bound) {
       if (equal(b, key_power)) {
         continue;
       }
