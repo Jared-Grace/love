@@ -657,7 +657,7 @@ export function bible_glyph_chapter_1jn03() {
         words: [
           "$plus",
           "whoever",
-          "keeps",
+          "$guard",
           "$pointing_back",
           "$scroll$s",
           "remains",
