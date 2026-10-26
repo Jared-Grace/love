@@ -58,7 +58,7 @@ export function bible_glyph_chapter_psa139() {
           "search",
           "out",
           "my",
-          "path",
+          "$railway_track+doing",
           "and",
           "my",
           "lying",
