@@ -188,7 +188,7 @@ export function bible_glyph_chapter_2th01() {
           "grant",
           "relief",
           "to",
-          "you",
+          "$you",
           "who",
           "are",
           "oppressed,",
