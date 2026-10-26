@@ -44,7 +44,7 @@ export function bible_glyph_chapter_psa112() {
           "the",
           "$earth;",
           "the",
-          "generation",
+          "$dna",
           "of",
           "the",
           "upright",
