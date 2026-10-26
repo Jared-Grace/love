@@ -68,7 +68,7 @@ export function bible_glyph_chapter_luk24() {
           "did",
           "$no_entry",
           "$magnifying_glass+exclamation",
-          "the",
+          "$pin",
           "body",
           "of",
           "the",
