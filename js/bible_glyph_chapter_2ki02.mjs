@@ -131,7 +131,7 @@ export function bible_glyph_chapter_2ki02() {
           "$speech",
           "to",
           "him,",
-          "Please",
+          "$pleading",
           "$person+house",
           "here,",
           "for",
