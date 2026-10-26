@@ -169,7 +169,7 @@ export function bible_glyph_chapter_mrk04() {
         verse_number: 7,
         words: [
           "$plus",
-          "other",
+          "$plus+one",
           "seed",
           "fell",
           "among",
