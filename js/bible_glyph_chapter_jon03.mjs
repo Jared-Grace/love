@@ -198,7 +198,7 @@ export function bible_glyph_chapter_jon03() {
           "$cow_face",
           "or",
           "$sheep,",
-          "taste",
+          "$face_savoring_food+doing",
           "anything",
           "at",
           "all.",
