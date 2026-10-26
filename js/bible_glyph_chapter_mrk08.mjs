@@ -896,7 +896,7 @@ export function bible_glyph_chapter_mrk08() {
           "$pointing_back,",
           "$traffic_light",
           "$joker",
-          "wants",
+          "$shooting_star+doing",
           "to",
           "$footprints",
           "after",
