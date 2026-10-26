@@ -111,7 +111,7 @@ export function bible_glyph_chapter_jon01() {
           "Then",
           "the",
           "$i_am",
-          "hurled",
+          "$throwing+doing",
           "a",
           "great",
           "wind",
