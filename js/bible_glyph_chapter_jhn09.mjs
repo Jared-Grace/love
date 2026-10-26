@@ -917,7 +917,7 @@ export function bible_glyph_chapter_jhn09() {
           "Do",
           "$you",
           "$anchor+doing",
-          "in",
+          "$toward+tray_in",
           "the",
           "$son",
           "of",
