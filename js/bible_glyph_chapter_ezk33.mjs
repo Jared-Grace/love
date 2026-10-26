@@ -1037,7 +1037,7 @@ export function bible_glyph_chapter_ezk33() {
           "$peacock",
           "of",
           "her",
-          "strength",
+          "$mechanical_arm",
           "will",
           "come",
           "to",
