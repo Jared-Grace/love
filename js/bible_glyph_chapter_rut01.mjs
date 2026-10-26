@@ -139,7 +139,7 @@ export function bible_glyph_chapter_rut01() {
           "in",
           "Moab",
           "about",
-          "ten",
+          "$ten",
           "$year,",
         ],
       },
