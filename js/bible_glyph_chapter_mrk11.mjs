@@ -582,7 +582,7 @@ export function bible_glyph_chapter_mrk11() {
         "$speech",
         "to",
         "$pointing_back,",
-        "“Rabbi,",
+        "“$teacher+top,",
         "look!",
         "The",
         "fig",
