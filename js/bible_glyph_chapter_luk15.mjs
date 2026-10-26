@@ -725,7 +725,7 @@ export function bible_glyph_chapter_luk15() {
         "he",
         "has",
         "$pointing_back",
-        "back",
+        "$away+hand_receiving",
         "safe",
         "and",
         "sound.",
