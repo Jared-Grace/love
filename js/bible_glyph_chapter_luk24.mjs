@@ -980,7 +980,7 @@ export function bible_glyph_chapter_luk24() {
           "He",
           "had",
           "$speech",
-          "this,",
+          "$flashlight,",
           "He",
           "showed",
           "$pointing_back",
