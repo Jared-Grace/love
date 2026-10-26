@@ -56,7 +56,7 @@ export function bible_glyph_chapter_1ki03() {
           "as",
           "the",
           "$brick+shield",
-          "around",
+          "$around",
           "$city+peace.",
         ],
       },
