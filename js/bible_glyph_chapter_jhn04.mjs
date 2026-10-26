@@ -437,7 +437,7 @@ export function bible_glyph_chapter_jhn04() {
           "you",
           "have",
           "had",
-          "five",
+          "$five",
           "$man_beard,",
           "$plus",
           "the",
