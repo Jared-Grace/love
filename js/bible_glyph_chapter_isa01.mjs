@@ -656,7 +656,7 @@ export function bible_glyph_chapter_isa01() {
           "rulers",
           "are",
           "rebels,",
-          "friends",
+          "$link+person",
           "of",
           "thieves.",
           "They",
