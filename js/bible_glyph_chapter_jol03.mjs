@@ -363,7 +363,7 @@ export function bible_glyph_chapter_jol03() {
         words: [
           "$hand_sending",
           "the",
-          "sickle,",
+          "$wheat+hook,",
           "for",
           "the",
           "harvest",
