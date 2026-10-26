@@ -540,7 +540,7 @@ export function bible_glyph_chapter_jhn02() {
           "$speech",
           "$clockwise_arrows",
           "$pin",
-          "temple",
+          "$hut",
           "of",
           "$pointing_back",
           "body.",
