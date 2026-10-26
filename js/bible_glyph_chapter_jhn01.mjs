@@ -769,7 +769,7 @@ export function bible_glyph_chapter_jhn01() {
           "descend",
           "$plus",
           "$pin+doing",
-          "is",
+          "$link",
           "He",
           "who",
           "will",
