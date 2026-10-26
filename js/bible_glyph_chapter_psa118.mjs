@@ -458,7 +458,7 @@ export function bible_glyph_chapter_psa118() {
           "the",
           "$i_am,",
           "and",
-          "it",
+          "$pointing_back",
           "is",
           "marvelous",
           "in",
