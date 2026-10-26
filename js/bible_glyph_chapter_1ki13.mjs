@@ -1106,7 +1106,7 @@ export function bible_glyph_chapter_1ki13() {
           "him,",
           "he",
           "$speech",
-          "to",
+          "$toward",
           "his",
           "$son,",
           "When",
