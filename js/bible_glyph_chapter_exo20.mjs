@@ -254,7 +254,7 @@ export function bible_glyph_chapter_exo20() {
           "your",
           "$kneeling",
           "or",
-          "maidservant",
+          "$broom",
           "or",
           "livestock,",
           "nor",
