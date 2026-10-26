@@ -135,7 +135,7 @@ export function bible_glyph_chapter_jol01() {
           "drunkards,",
           "and",
           "$loudly_crying;",
-          "wail,",
+          "$crying_face+loudspeaker+doing,",
           "all",
           "you",
           "drinkers",
