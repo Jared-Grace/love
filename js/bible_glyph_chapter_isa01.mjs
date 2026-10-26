@@ -65,7 +65,7 @@ export function bible_glyph_chapter_isa01() {
           "them",
           "up,",
           "but",
-          "they",
+          "$pointing_back",
           "have",
           "rebelled",
           "against",
