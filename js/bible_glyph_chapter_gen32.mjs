@@ -787,7 +787,7 @@ export function bible_glyph_chapter_gen32() {
           "be",
           "$speech",
           "any",
-          "longer",
+          "$repeat",
           "that",
           "your",
           "$name_tag",
