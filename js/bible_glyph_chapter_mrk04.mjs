@@ -351,7 +351,7 @@ export function bible_glyph_chapter_mrk04() {
           "$lightbulb",
           "any",
           "of",
-          "the",
+          "$pin",
           "parables?",
         ],
       },
