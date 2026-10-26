@@ -680,7 +680,7 @@ export function bible_glyph_chapter_jhn04() {
           "are",
           "You",
           "$mouth",
-          "with",
+          "$linked_paperclips",
           "$pointing_back?”",
         ],
       },
