@@ -564,7 +564,7 @@ export function bible_glyph_chapter_rut02() {
           "to",
           "gather.",
           "$no_entry",
-          "rebuke",
+          "$pointing+anger_symbol+doing",
           "her.",
         ],
       },
