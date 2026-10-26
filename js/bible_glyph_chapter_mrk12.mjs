@@ -303,7 +303,7 @@ export function bible_glyph_chapter_mrk12() {
         "$speech",
         "this",
         "parable",
-        "against",
+        "$toward",
         "$pointing_back.",
         "$plus",
         "they",
