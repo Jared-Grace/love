@@ -583,7 +583,7 @@ export function bible_glyph_chapter_jol01() {
           "of",
           "the",
           "$field",
-          "pant",
+          "$deer+water+doing",
           "for",
           "You,",
           "for",
