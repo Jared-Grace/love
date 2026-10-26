@@ -391,7 +391,7 @@ export function bible_glyph_chapter_jhn17() {
           "I",
           "$mouth",
           "$tray_in",
-          "the",
+          "$pin",
           "$globe,",
           "that",
           "they",
