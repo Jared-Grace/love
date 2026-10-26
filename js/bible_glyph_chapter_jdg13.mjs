@@ -666,7 +666,7 @@ export function bible_glyph_chapter_jdg13() {
         words: [
           "When",
           "the",
-          "flame",
+          "$fire+tongue",
           "went",
           "up",
           "from",
