@@ -163,7 +163,7 @@ export function bible_glyph_chapter_psa146() {
           "$eye+unlocked+doing",
           "of",
           "the",
-          "blind.",
+          "$person_with_white_cane+describing.",
           "The",
           "$i_am",
           "lifts",
