@@ -1137,7 +1137,7 @@ export function bible_glyph_chapter_mrk12() {
       verse_number: 42,
       words: [
         "$plus",
-        "one",
+        "$one",
         "$poor",
         "widow",
         "$footprints",
