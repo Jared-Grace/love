@@ -687,7 +687,7 @@ export function bible_glyph_chapter_2ki02() {
           "but",
           "did",
           "$no_entry",
-          "find",
+          "$magnifying_glass+exclamation",
           "him.",
         ],
       },
