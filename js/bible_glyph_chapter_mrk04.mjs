@@ -567,7 +567,7 @@ export function bible_glyph_chapter_mrk04() {
           "$no_entry",
           "set",
           "it",
-          "on",
+          "$pointing_up",
           "a",
           "stand?",
         ],
