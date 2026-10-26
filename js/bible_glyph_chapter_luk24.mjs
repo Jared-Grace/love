@@ -1066,7 +1066,7 @@ export function bible_glyph_chapter_luk24() {
           "was",
           "still",
           "with",
-          "you:",
+          "$you:",
           "$pointing",
           "everything",
           "must",
