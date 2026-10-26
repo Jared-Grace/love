@@ -913,7 +913,7 @@ export function bible_glyph_chapter_exo14() {
           "$sun",
           "the",
           "$i_am",
-          "saved",
+          "$rescue",
           "$wrestling+heart_on_fire",
           "from",
           "the",
