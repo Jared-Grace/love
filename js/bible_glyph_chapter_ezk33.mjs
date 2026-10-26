@@ -825,7 +825,7 @@ export function bible_glyph_chapter_ezk33() {
           "I",
           "was",
           "$no_entry",
-          "mute",
+          "$knot+doing",
           "any",
           "longer.",
         ],
