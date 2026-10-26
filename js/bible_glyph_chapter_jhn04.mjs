@@ -1292,7 +1292,7 @@ export function bible_glyph_chapter_jhn04() {
           "at",
           "the",
           "seventh",
-          "hour.”",
+          "$clock.”",
         ],
       },
       {
