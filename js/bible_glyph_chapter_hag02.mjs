@@ -433,7 +433,7 @@ export function bible_glyph_chapter_hag02() {
           "$map",
           "before",
           "Me,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am,",
           "and",
