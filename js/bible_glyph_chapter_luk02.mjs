@@ -249,7 +249,7 @@ export function bible_glyph_chapter_luk02() {
         "“$no_entry",
         "$fear+doing!",
         "For",
-        "behold,",
+        "$exclamation,",
         "I",
         "bring",
         "you",
