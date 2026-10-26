@@ -446,7 +446,7 @@ export function bible_glyph_chapter_gen03() {
           "$field.",
           "$pointing_up",
           "your",
-          "belly",
+          "$pregnant_woman+place",
           "you",
           "will",
           "$walking,",
