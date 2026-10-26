@@ -1102,7 +1102,7 @@ export function bible_glyph_chapter_mrk12() {
         "will",
         "$hand_receiving",
         "$spring+describing",
-        "condemnation.",
+        "$scales+thing.",
       ],
     },
     {
