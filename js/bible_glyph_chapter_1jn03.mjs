@@ -195,7 +195,7 @@ export function bible_glyph_chapter_1jn03() {
           "no",
           "one",
           "$dizzy+doing",
-          "you:",
+          "$you:",
           "The",
           "one",
           "who",
