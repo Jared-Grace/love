@@ -594,7 +594,7 @@ export function bible_glyph_chapter_jhn14() {
           "$heart_red+doing",
           "$pointing_back",
           "$plus",
-          "reveal",
+          "$lightbulb+eyes+doing",
           "$me+pointing_back",
           "to",
           "$pointing_back.",
