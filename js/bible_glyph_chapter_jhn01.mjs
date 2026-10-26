@@ -215,7 +215,7 @@ export function bible_glyph_chapter_jhn01() {
           "$identification_card",
           "did",
           "$no_entry",
-          "receive",
+          "$children_crossing+hand_receiving",
           "$pointing_back.",
         ],
       },
