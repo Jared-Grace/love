@@ -1029,7 +1029,7 @@ export function bible_glyph_chapter_mrk04() {
           "to",
           "$pin",
           "$sea,",
-          "Silence!",
+          "$mouth+locked!",
           "Be",
           "still!",
           "$plus",
