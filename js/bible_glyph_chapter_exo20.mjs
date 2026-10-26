@@ -476,7 +476,7 @@ export function bible_glyph_chapter_exo20() {
           "to",
           "the",
           "$family.",
-          "For",
+          "$pointing",
           "$heart_on_fire",
           "has",
           "$footprints",
