@@ -634,7 +634,7 @@ export function bible_glyph_chapter_jhn14() {
           "$speech",
           "to",
           "$pointing_back,",
-          "“If",
+          "“$traffic_light",
           "anyone",
           "$heart_red+doing",
           "Me,",
