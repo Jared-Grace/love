@@ -133,7 +133,7 @@ export function bible_glyph_chapter_psa099() {
           "$i_am",
           "and",
           "$pointing_back",
-          "answered",
+          "$speech+turn_back",
           "them.",
         ],
       },
