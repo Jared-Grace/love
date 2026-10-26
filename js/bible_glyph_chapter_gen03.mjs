@@ -750,7 +750,7 @@ export function bible_glyph_chapter_gen03() {
           "him",
           "from",
           "the",
-          "Garden",
+          "$garden",
           "of",
           "$proper_name$Eden",
           "to",
