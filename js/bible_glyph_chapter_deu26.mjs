@@ -230,7 +230,7 @@ export function bible_glyph_chapter_deu26() {
           "us",
           "over",
           "to",
-          "hard",
+          "$mechanical_arm+describing",
           "$kneeling+thing.",
         ],
       },
