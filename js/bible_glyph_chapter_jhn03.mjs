@@ -896,7 +896,7 @@ export function bible_glyph_chapter_jhn03() {
         words: [
           "Whoever",
           "$anchor+doing$s",
-          "in",
+          "$toward+tray_in",
           "the",
           "$son",
           "has",
