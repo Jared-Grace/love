@@ -496,7 +496,7 @@ export function bible_glyph_chapter_luk24() {
           "hoping",
           "$pointing",
           "$pointing_back",
-          "was",
+          "$link",
           "the",
           "One",
           "who",
