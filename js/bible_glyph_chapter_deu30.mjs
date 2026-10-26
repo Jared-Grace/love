@@ -204,7 +204,7 @@ export function bible_glyph_chapter_deu30() {
           "your",
           "$heart_on_fire",
           "will",
-          "circumcise",
+          "$scissors+covenant+doing",
           "your",
           "$heart_organ",
           "and",
