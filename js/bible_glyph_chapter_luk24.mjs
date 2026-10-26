@@ -710,7 +710,7 @@ export function bible_glyph_chapter_luk24() {
           "it",
           "is",
           "$toward",
-          "evening",
+          "$sunset+star",
           "$plus",
           "the",
           "$sun",
