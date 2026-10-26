@@ -930,7 +930,7 @@ export function bible_glyph_chapter_mrk12() {
         "to",
         "$pointing_back,",
         "You",
-        "are",
+        "$link",
         "$no_entry",
         "$straight_ruler+away+manner",
         "$away",
