@@ -377,7 +377,7 @@ export function bible_glyph_chapter_ezk33() {
           "we",
           "are",
           "wasting",
-          "away",
+          "$melting_face+down_arrow+doing",
           "because",
           "of",
           "them.",
