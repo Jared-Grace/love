@@ -256,7 +256,7 @@ export function bible_glyph_chapter_1th01() {
           "gave",
           "us,",
           "$plus",
-          "how",
+          "$gear+question",
           "you",
           "$turn_back",
           "to",
