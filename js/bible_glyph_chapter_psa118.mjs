@@ -128,7 +128,7 @@ export function bible_glyph_chapter_psa118() {
           "my",
           "helper.",
           "Therefore",
-          "I",
+          "$me",
           "will",
           "$eye",
           "in",
