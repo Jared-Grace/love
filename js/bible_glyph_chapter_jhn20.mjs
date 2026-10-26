@@ -34,7 +34,7 @@ export function bible_glyph_chapter_jhn20() {
           "$proper_name$Mary",
           "$proper_name$Magdalene",
           "$footprints",
-          "to",
+          "$toward+tray_in",
           "$pin",
           "tomb",
           "$plus",
