@@ -175,7 +175,7 @@ export function bible_glyph_chapter_jhn17() {
           "$hands_giving",
           "$pointing_back,",
           "$plus",
-          "Your",
+          "$you",
           "$speech",
           "they",
           "have",
