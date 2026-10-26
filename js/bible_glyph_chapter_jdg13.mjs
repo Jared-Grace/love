@@ -104,7 +104,7 @@ export function bible_glyph_chapter_jdg13() {
           "but",
           "you",
           "will",
-          "conceive",
+          "$pregnant_woman+doing",
           "and",
           "give",
           "birth",
