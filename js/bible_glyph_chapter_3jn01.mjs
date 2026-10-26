@@ -307,7 +307,7 @@ export function bible_glyph_chapter_3jn01() {
           "$all,",
           "$plus",
           "from",
-          "the",
+          "$pin",
           "$check",
           "$pointing_back.",
           "$plus",
