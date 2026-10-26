@@ -32,7 +32,7 @@ export function bible_glyph_chapter_1jn02() {
           "$no_entry",
           "$bow+doing.",
           "$plus",
-          "if",
+          "$traffic_light",
           "anyone",
           "does",
           "$bow+doing,",
