@@ -127,7 +127,7 @@ export function bible_glyph_chapter_psa136() {
         verse_number: 8,
         words: [
           "the",
-          "sun",
+          "$sun_with_face",
           "to",
           "rule",
           "the",
