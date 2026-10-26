@@ -69,7 +69,7 @@ export function bible_glyph_chapter_rut02() {
           "I",
           "may",
           "$magnifying_glass+exclamation",
-          "favor.",
+          "$heart_orange.",
           "$walking,",
           "my",
           "$woman,",
