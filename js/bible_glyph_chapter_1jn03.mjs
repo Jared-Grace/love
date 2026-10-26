@@ -297,7 +297,7 @@ export function bible_glyph_chapter_1jn03() {
           "$child",
           "of",
           "the",
-          "devil:",
+          "$metro+throwing:",
           "Anyone",
           "who",
           "does",
