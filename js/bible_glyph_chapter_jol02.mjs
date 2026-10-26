@@ -900,7 +900,7 @@ export function bible_glyph_chapter_jol02() {
           "will",
           "prophesy,",
           "your",
-          "old",
+          "$old_man",
           "men",
           "will",
           "dream",
