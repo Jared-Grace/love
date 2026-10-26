@@ -36,7 +36,7 @@ export function bible_glyph_chapter_jol03() {
         words: [
           "I",
           "will",
-          "gather",
+          "$tray_in+doing",
           "all",
           "the",
           "$map",
