@@ -223,7 +223,7 @@ export function bible_glyph_chapter_2ki02() {
           "him,",
           "$pleading",
           "$person+house",
-          "here,",
+          "$flashlight+round_pushpin,",
           "for",
           "the",
           "$i_am",
