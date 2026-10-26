@@ -444,7 +444,7 @@ export function bible_glyph_chapter_jol02() {
           "$proper_name$Zion;",
           "$sparkle+doing",
           "a",
-          "fast;",
+          "$eating+locked;",
           "proclaim",
           "a",
           "sacred",
