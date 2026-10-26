@@ -488,7 +488,7 @@ export function bible_glyph_chapter_luk02() {
       verse_number: 20,
       words: [
         "$plus",
-        "the",
+        "$pin",
         "$person+sheep",
         "$down_arrow+turn_back,",
         "giving",
