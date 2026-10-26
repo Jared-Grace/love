@@ -204,7 +204,7 @@ export function bible_glyph_chapter_jer26() {
           "I",
           "will",
           "$hands_giving",
-          "this",
+          "$flashlight",
           "$house",
           "like",
           "$proper_name$Shiloh,",
