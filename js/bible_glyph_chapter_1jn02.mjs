@@ -870,7 +870,7 @@ export function bible_glyph_chapter_1jn02() {
           "$all",
           "who",
           "$hammer",
-          "righteousness",
+          "$ruler+thing",
           "has",
           "been",
           "born",
