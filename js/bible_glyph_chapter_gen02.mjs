@@ -238,7 +238,7 @@ export function bible_glyph_chapter_gen02() {
           "$proper_name$Eden,",
           "in",
           "the",
-          "east,",
+          "$compass+right_arrow,",
           "where",
           "He",
           "placed",
