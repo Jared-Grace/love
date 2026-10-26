@@ -787,7 +787,7 @@ export function bible_glyph_chapter_jhn09() {
           "That",
           "is",
           "remarkable",
-          "indeed.",
+          "$information.",
           "You",
           "do",
           "$no_entry",
