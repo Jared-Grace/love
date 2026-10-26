@@ -479,7 +479,7 @@ export function bible_glyph_chapter_1jn02() {
           "$eye,",
           "$plus",
           "the",
-          "pride",
+          "$peacock+up_arrow",
           "of",
           "life,",
           "is",
