@@ -199,7 +199,7 @@ export function bible_glyph_chapter_luk02() {
         "fields",
         "$plus",
         "$locked_with_key",
-        "watch",
+        "$locked_with_key+thing",
         "over",
         "$pointing_back",
         "flocks",
