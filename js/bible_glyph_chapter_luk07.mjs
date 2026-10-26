@@ -1208,7 +1208,7 @@ export function bible_glyph_chapter_luk07() {
         "him",
         "five",
         "hundred",
-        "denarii,",
+        "$coin+ten,",
         "and",
         "the",
         "other",
