@@ -187,7 +187,7 @@ export function bible_glyph_chapter_rut01() {
           "$hands_giving",
           "them",
           "$bread,",
-          "she",
+          "$pointing_back",
           "and",
           "her",
           "daughters-in-law",
