@@ -53,7 +53,7 @@ export function bible_glyph_chapter_psa085() {
         words: [
           "You",
           "withheld",
-          "all",
+          "$all",
           "Your",
           "fury;",
           "You",
