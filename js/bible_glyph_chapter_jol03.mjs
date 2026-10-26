@@ -44,7 +44,7 @@ export function bible_glyph_chapter_jol03() {
           "bring",
           "them",
           "down",
-          "to",
+          "$toward",
           "the",
           "Valley",
           "of",
