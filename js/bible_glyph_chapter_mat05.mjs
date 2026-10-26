@@ -940,7 +940,7 @@ export function bible_glyph_chapter_mat05() {
           "$city+peace,",
           "$pointing",
           "it",
-          "is",
+          "$link",
           "the",
           "$city",
           "of",
