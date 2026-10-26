@@ -483,7 +483,7 @@ export function bible_glyph_chapter_1jn03() {
         verse_number: 17,
         words: [
           "If",
-          "anyone",
+          "$back+flashlight",
           "with",
           "$globe",
           "possessions",
