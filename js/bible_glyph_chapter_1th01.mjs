@@ -268,7 +268,7 @@ export function bible_glyph_chapter_1th01() {
           "the",
           "$sprout+doing",
           "$plus",
-          "true",
+          "$check+describing",
           "$heart_on_fire.",
         ],
       },
