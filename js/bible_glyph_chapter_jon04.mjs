@@ -213,7 +213,7 @@ export function bible_glyph_chapter_jon04() {
           "that",
           "attacked",
           "the",
-          "plant",
+          "$sprout+umbrella",
           "so",
           "that",
           "it",
