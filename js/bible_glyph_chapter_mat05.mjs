@@ -80,7 +80,7 @@ export function bible_glyph_chapter_mat05() {
           "are",
           "those",
           "who",
-          "mourn,",
+          "$loudly_crying+doing,",
           "$pointing",
           "$pointing_back",
           "will",
