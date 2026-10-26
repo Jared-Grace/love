@@ -769,7 +769,7 @@ export function bible_glyph_chapter_2ki02() {
           "me",
           "a",
           "new",
-          "bowl",
+          "$jar+salt",
           "and",
           "put",
           "some",
