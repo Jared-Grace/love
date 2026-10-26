@@ -1080,7 +1080,7 @@ export function bible_glyph_chapter_mrk10() {
         "$tray_out",
         "My",
         "$hand+right_arrow",
-        "or",
+        "$shuffle",
         "$tray_out",
         "My",
         "left",
