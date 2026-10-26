@@ -338,7 +338,7 @@ export function bible_glyph_chapter_jon04() {
           "should",
           "$me",
           "$no_entry",
-          "care",
+          "$pleading_face+eyes+doing",
           "about",
           "the",
           "great",
