@@ -626,7 +626,7 @@ export function bible_glyph_chapter_hag02() {
           "to",
           "$proper_name$Haggai",
           "a",
-          "second",
+          "$second_place",
           "time",
           "on",
           "the",
