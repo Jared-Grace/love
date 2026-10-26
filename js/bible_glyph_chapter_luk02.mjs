@@ -1077,7 +1077,7 @@ export function bible_glyph_chapter_luk02() {
         "$pointing_down",
         "to",
         "$pin",
-        "custom",
+        "$repeat+thing",
         "of",
         "$pin",
         "Feast.",
