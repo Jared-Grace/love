@@ -851,7 +851,7 @@ export function bible_glyph_chapter_gen32() {
           "have",
           "$eye",
           "$heart_on_fire",
-          "face",
+          "$face",
           "to",
           "face,",
           "and",
