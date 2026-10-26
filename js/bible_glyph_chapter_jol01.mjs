@@ -514,7 +514,7 @@ export function bible_glyph_chapter_jol01() {
           "$house+collision+doing,",
           "$pointing",
           "the",
-          "grain",
+          "$wheat+barley",
           "has",
           "withered",
           "away.",
