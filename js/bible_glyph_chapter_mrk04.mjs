@@ -66,7 +66,7 @@ export function bible_glyph_chapter_mrk04() {
           "many",
           "things",
           "$tray_in",
-          "parables,",
+          "$framed_picture,",
           "$plus",
           "$tray_in",
           "$pointing_back",
