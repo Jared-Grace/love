@@ -34,7 +34,7 @@ export function bible_glyph_chapter_jon04() {
           "the",
           "$i_am,",
           "$speech,",
-          "O",
+          "$pleading_face+exclamation",
           "$i_am,",
           "is",
           "this",
