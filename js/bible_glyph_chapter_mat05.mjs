@@ -21,7 +21,7 @@ export function bible_glyph_chapter_mat05() {
           "When",
           "Jesus",
           "$eye",
-          "the",
+          "$pin",
           "$crowd,",
           "He",
           "went",
