@@ -42,7 +42,7 @@ export function bible_glyph_chapter_psa099() {
           "$i_am",
           "in",
           "$proper_name$Zion;",
-          "He",
+          "$pointing_back",
           "is",
           "exalted",
           "above",
