@@ -260,7 +260,7 @@ export function bible_glyph_chapter_ezk18() {
           "$check.",
           "He",
           "is",
-          "righteous;",
+          "$ruler;",
           "surely",
           "he",
           "will",
