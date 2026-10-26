@@ -254,7 +254,7 @@ export function bible_glyph_chapter_mrk11() {
       words: [
         "$speech+thumbs_up",
         "is",
-        "the",
+        "$pin",
         "$footprints",
         "$castle",
         "of",
