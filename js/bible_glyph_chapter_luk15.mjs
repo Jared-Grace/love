@@ -61,7 +61,7 @@ export function bible_glyph_chapter_luk15() {
         "$speech",
         "to",
         "$pointing_back",
-        "this",
+        "$flashlight",
         "$framed_picture,",
         "$speech.",
       ],
