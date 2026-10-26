@@ -76,7 +76,7 @@ export function bible_glyph_chapter_mrk08() {
           "$eating+no_entry+describing,",
           "they",
           "will",
-          "faint",
+          "$tray_out+free_button+doing",
           "$tray_in",
           "the",
           "$road,",
