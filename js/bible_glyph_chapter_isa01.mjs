@@ -877,7 +877,7 @@ export function bible_glyph_chapter_isa01() {
           "spark;",
           "both",
           "will",
-          "burn",
+          "$fire+wood",
           "together,",
           "with",
           "no",
