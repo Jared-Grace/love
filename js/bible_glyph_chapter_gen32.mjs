@@ -593,7 +593,7 @@ export function bible_glyph_chapter_gen32() {
           "Esau",
           "with",
           "the",
-          "gift",
+          "$grain_offering",
           "that",
           "is",
           "$walking",
