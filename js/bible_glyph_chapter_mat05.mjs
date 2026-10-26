@@ -400,7 +400,7 @@ export function bible_glyph_chapter_mat05() {
         verse_number: 18,
         words: [
           "$check+manner",
-          "For",
+          "$information",
           "I",
           "$speech",
           "you,",
