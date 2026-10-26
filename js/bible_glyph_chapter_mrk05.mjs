@@ -171,7 +171,7 @@ export function bible_glyph_chapter_mrk05() {
         "loud",
         "$voice,",
         "$speech,",
-        "“What",
+        "“$flashlight+question",
         "is",
         "there",
         "between",
