@@ -25,7 +25,7 @@ export function bible_glyph_chapter_rut03() {
           "should",
           "I",
           "$no_entry",
-          "seek",
+          "$magnifying_glass",
           "a",
           "resting",
           "place",
