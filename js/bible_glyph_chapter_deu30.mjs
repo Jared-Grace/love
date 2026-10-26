@@ -496,7 +496,7 @@ export function bible_glyph_chapter_deu30() {
           "is",
           "in",
           "your",
-          "mouth",
+          "$face_with_open_mouth",
           "and",
           "in",
           "your",
