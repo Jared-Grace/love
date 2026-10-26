@@ -705,7 +705,7 @@ export function bible_glyph_chapter_mrk11() {
         "$plus",
         "so",
         "that",
-        "your",
+        "$you",
         "$father",
         "$tray_in",
         "$sky",
