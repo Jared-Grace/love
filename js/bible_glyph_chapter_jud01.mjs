@@ -623,7 +623,7 @@ export function bible_glyph_chapter_jud01() {
           "the",
           "$heart_hands",
           "of",
-          "our",
+          "$me",
           "$crown",
           "$cross",
           "$oil",
