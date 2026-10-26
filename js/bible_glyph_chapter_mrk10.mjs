@@ -1167,7 +1167,7 @@ export function bible_glyph_chapter_mrk10() {
         "way",
         "$tray_in",
         "you.",
-        "Instead,",
+        "$curving_up,",
         "whoever",
         "wants",
         "to",
