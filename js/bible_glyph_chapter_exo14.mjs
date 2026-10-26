@@ -176,7 +176,7 @@ export function bible_glyph_chapter_exo14() {
         words: [
           "He",
           "$hand_receiving",
-          "600",
+          "$six",
           "of",
           "the",
           "best",
