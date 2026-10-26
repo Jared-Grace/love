@@ -815,7 +815,7 @@ export function bible_glyph_chapter_luk15() {
         "back,",
         "you",
         "kill",
-        "the",
+        "$pin",
         "fattened",
         "calf",
         "for",
