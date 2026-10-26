@@ -720,7 +720,7 @@ export function bible_glyph_chapter_jud01() {
           "$plus",
           "$watch,",
           "$plus",
-          "for",
+          "$toward+tray_in",
           "$all",
           "$hourglass.",
           "$check+manner.",
