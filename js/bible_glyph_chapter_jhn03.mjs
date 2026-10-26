@@ -329,7 +329,7 @@ export function bible_glyph_chapter_jhn03() {
           "$toward+tray_in",
           "$sky",
           "$traffic_light",
-          "the",
+          "$pin",
           "One",
           "who",
           "descended",
