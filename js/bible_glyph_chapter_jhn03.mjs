@@ -876,7 +876,7 @@ export function bible_glyph_chapter_jhn03() {
       {
         verse_number: 35,
         words: [
-          "The",
+          "$pin",
           "$father",
           "$heart_red+doing$s",
           "the",
