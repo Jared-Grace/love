@@ -78,7 +78,7 @@ export function bible_glyph_chapter_1jn01() {
           "to",
           "$you",
           "$pin",
-          "eternal",
+          "$hourglass+describing",
           "$sprout",
           "that",
           "was",
