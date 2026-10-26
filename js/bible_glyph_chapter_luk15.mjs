@@ -674,7 +674,7 @@ export function bible_glyph_chapter_luk15() {
         "he",
         "$footprints",
         "near",
-        "the",
+        "$pin",
         "$house,",
         "he",
         "$ear",
