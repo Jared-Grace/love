@@ -687,7 +687,7 @@ export function bible_glyph_chapter_jhn04() {
       {
         verse_number: 28,
         words: [
-          "Then",
+          "$right_arrow",
           "the",
           "$woman",
           "$balloon",
