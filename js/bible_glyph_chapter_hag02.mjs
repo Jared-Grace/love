@@ -421,7 +421,7 @@ export function bible_glyph_chapter_hag02() {
         words: [
           "Then",
           "Haggai",
-          "replied,",
+          "$speech+turn_back,",
           "So",
           "it",
           "is",
