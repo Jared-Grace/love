@@ -91,7 +91,7 @@ export function bible_glyph_chapter_luk24() {
           "$man_beard",
           "$tray_in",
           "radiant",
-          "apparel",
+          "$t_shirt+sparkles",
           "stood",
           "beside",
           "$pointing_back.",
