@@ -824,7 +824,7 @@ export function bible_glyph_chapter_luk24() {
           "they",
           "found",
           "the",
-          "Eleven",
+          "$one+ten",
           "$plus",
           "those",
           "with",
