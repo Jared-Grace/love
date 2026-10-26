@@ -262,7 +262,7 @@ export function bible_glyph_chapter_mrk05() {
     {
       verse_number: 11,
       words: [
-        "There",
+        "$telescope+manner",
         "on",
         "the",
         "$mountain",
