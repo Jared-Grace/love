@@ -577,7 +577,7 @@ export function bible_glyph_chapter_mrk04() {
         words: [
           "$information",
           "there",
-          "is",
+          "$link",
           "$no_entry",
           "thing",
           "hidden",
