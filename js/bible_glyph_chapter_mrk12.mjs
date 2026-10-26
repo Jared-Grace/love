@@ -925,7 +925,7 @@ export function bible_glyph_chapter_mrk12() {
         "he",
         "had",
         "answered",
-        "wisely,",
+        "$brain+raised_fist+manner,",
         "$speech",
         "to",
         "$pointing_back,",
