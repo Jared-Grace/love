@@ -115,7 +115,7 @@ export function bible_glyph_chapter_luk24() {
           "men",
           "$speech",
           "$pointing_back,",
-          "Why",
+          "$flashlight+question",
           "do",
           "you",
           "look",
