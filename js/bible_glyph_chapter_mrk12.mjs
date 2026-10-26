@@ -173,7 +173,7 @@ export function bible_glyph_chapter_mrk12() {
     {
       verse_number: 7,
       words: [
-        "But",
+        "$curving_right",
         "the",
         "tenants",
         "$speech",
