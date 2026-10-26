@@ -68,7 +68,7 @@ export function bible_glyph_chapter_psa136() {
           "He",
           "alone",
           "$hammer+doing",
-          "great",
+          "$top",
           "$star_struck.",
           "His",
           "$gift",
