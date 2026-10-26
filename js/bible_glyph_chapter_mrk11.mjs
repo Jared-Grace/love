@@ -60,7 +60,7 @@ export function bible_glyph_chapter_mrk11() {
         "will",
         "$magnifying_glass+exclamation",
         "a",
-        "colt",
+        "$donkey+child",
         "tied",
         "there,",
         "on",
