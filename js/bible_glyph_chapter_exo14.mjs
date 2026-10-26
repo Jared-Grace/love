@@ -876,7 +876,7 @@ export function bible_glyph_chapter_exo14() {
           "one",
           "of",
           "them",
-          "survived.",
+          "$puzzle_piece+doing.",
         ],
       },
       {
