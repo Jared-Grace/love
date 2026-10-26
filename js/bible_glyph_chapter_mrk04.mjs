@@ -760,7 +760,7 @@ export function bible_glyph_chapter_mrk04() {
           "ripe,",
           "he",
           "$hand_sending",
-          "the",
+          "$pin",
           "sickle,",
           "$pointing",
           "the",
