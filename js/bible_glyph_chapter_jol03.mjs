@@ -161,7 +161,7 @@ export function bible_glyph_chapter_jol03() {
           "$footprints",
           "My",
           "$thumbs_up",
-          "treasures",
+          "$heart_eyes+thing",
           "to",
           "your",
           "temples.",
