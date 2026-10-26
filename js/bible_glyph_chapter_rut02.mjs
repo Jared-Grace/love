@@ -192,7 +192,7 @@ export function bible_glyph_chapter_rut02() {
           "me",
           "$hand+sheaf_of_rice+doing",
           "and",
-          "gather",
+          "$crowd+doing",
           "among",
           "the",
           "sheaves",
