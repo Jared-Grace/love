@@ -363,7 +363,7 @@ export function bible_glyph_chapter_2jn01() {
           "of",
           "your",
           "elect",
-          "sister",
+          "$brother+female_sign",
           "send",
           "you",
           "greetings.",
