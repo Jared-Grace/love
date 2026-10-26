@@ -459,7 +459,7 @@ export function bible_glyph_chapter_1jn03() {
           "what",
           "$heart_red",
           "is:",
-          "Jesus",
+          "$telescope",
           "laid",
           "down",
           "$pointing_back",
