@@ -385,7 +385,7 @@ export function bible_glyph_chapter_mrk12() {
         "$coin+clipboard",
         "to",
         "$proper_name$Caesar,",
-        "or",
+        "$shuffle",
         "not?",
         "Should",
         "we",
