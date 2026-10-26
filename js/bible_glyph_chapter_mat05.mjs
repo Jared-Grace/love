@@ -1012,7 +1012,7 @@ export function bible_glyph_chapter_mat05() {
           "$plus",
           "$tooth",
           "for",
-          "tooth.",
+          "$tooth.",
         ],
       },
       {
