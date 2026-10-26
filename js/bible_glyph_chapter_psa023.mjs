@@ -98,7 +98,7 @@ export function bible_glyph_chapter_psa023() {
           "and",
           "Your",
           "$white_cane+walking,",
-          "they",
+          "$pointing_back",
           "comfort",
           "me.",
         ],
