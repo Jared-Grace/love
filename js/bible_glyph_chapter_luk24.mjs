@@ -1004,7 +1004,7 @@ export function bible_glyph_chapter_luk24() {
           "their",
           "$smile",
           "$plus",
-          "amazement,",
+          "$astonished,",
           "He",
           "$speech",
           "$pointing_back,",
