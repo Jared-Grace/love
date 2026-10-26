@@ -986,7 +986,7 @@ export function bible_glyph_chapter_mrk04() {
         words: [
           "$plus",
           "$pointing_back",
-          "was",
+          "$link",
           "$tray_in",
           "the",
           "stern,",
