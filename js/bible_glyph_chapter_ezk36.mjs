@@ -264,7 +264,7 @@ export function bible_glyph_chapter_ezk36() {
           "My",
           "burning",
           "$face_steam",
-          "because",
+          "$information",
           "you",
           "have",
           "endured",
