@@ -417,7 +417,7 @@ export function bible_glyph_chapter_1jn05() {
         verse_number: 16,
         words: [
           "$traffic_light",
-          "anyone",
+          "$joker",
           "$eye",
           "$pointing_back",
           "$brother",
