@@ -544,7 +544,7 @@ export function bible_glyph_chapter_jhn04() {
           "$lightbulb,",
           "$pointing",
           "$rescue+thing",
-          "is",
+          "$link",
           "$tray_out",
           "$pin",
           "$menorah.",
