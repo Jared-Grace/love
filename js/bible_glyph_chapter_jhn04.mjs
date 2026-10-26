@@ -1329,7 +1329,7 @@ export function bible_glyph_chapter_jhn04() {
       {
         verse_number: 54,
         words: [
-          "This",
+          "$flashlight",
           "was",
           "now",
           "the",
