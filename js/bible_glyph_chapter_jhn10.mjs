@@ -737,7 +737,7 @@ export function bible_glyph_chapter_jhn10() {
           "to",
           "Me,",
           "is",
-          "greater",
+          "$top",
           "than",
           "all,",
           "$plus",
