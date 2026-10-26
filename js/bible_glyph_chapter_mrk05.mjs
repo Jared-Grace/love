@@ -944,7 +944,7 @@ export function bible_glyph_chapter_mrk05() {
         "to",
         "follow",
         "$pointing_back",
-        "except",
+        "$traffic_light",
         "$rock+proper_name",
         "$plus",
         "$proper_name$James",
