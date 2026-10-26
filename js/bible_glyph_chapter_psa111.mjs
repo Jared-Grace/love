@@ -98,7 +98,7 @@ export function bible_glyph_chapter_psa111() {
         words: [
           "He",
           "$hands_giving",
-          "food",
+          "$wolf+thing",
           "to",
           "those",
           "who",
