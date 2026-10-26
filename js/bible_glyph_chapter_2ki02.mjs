@@ -584,7 +584,7 @@ export function bible_glyph_chapter_2ki02() {
           "$wind",
           "of",
           "$heart_on_fire+i_am",
-          "rests",
+          "$seat+doing",
           "on",
           "$heart_on_fire+rescue.",
           "And",
