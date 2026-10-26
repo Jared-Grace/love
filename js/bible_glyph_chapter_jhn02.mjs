@@ -229,7 +229,7 @@ export function bible_glyph_chapter_jhn02() {
           "$lightbulb.",
           "Then",
           "he",
-          "called",
+          "$loudspeaker+doing",
           "the",
           "bridegroom",
           "aside",
