@@ -609,7 +609,7 @@ export function bible_glyph_chapter_jhn02() {
       {
         verse_number: 24,
         words: [
-          "But",
+          "$curving_right",
           "$cross",
           "did",
           "$no_entry",
