@@ -404,7 +404,7 @@ export function bible_glyph_chapter_jud01() {
           "$tree",
           "without",
           "fruit,",
-          "twice",
+          "$two+repeat",
           "$skull,",
           "uprooted.",
         ],
