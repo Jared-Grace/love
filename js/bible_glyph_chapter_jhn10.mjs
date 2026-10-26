@@ -499,7 +499,7 @@ export function bible_glyph_chapter_jhn10() {
           "$hand_receiving",
           "$pointing_back",
           "$repeat.",
-          "This",
+          "$flashlight",
           "$scroll",
           "I",
           "received",
