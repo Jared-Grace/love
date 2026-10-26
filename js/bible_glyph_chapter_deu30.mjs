@@ -321,7 +321,7 @@ export function bible_glyph_chapter_deu30() {
           "produce",
           "of",
           "your",
-          "land,",
+          "$brown_square,",
           "for",
           "$thumbs_up.",
           "Indeed,",
