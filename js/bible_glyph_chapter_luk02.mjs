@@ -490,7 +490,7 @@ export function bible_glyph_chapter_luk02() {
         "$plus",
         "the",
         "$person+sheep",
-        "returned,",
+        "$down_arrow+turn_back,",
         "giving",
         "$star+doing",
         "$plus",
