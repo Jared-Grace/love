@@ -369,7 +369,7 @@ export function bible_glyph_chapter_jer26() {
           "sat",
           "at",
           "the",
-          "entrance",
+          "$door",
           "of",
           "the",
           "New",
