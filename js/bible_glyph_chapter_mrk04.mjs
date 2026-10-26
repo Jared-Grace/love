@@ -218,7 +218,7 @@ export function bible_glyph_chapter_mrk04() {
           "$three+ten,",
           "$plus",
           "another",
-          "sixtyfold,",
+          "$six+zero,",
           "$plus",
           "another",
           "a",
