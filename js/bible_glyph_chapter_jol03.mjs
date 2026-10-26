@@ -381,7 +381,7 @@ export function bible_glyph_chapter_jol03() {
           "the",
           "wine",
           "vats",
-          "overflow",
+          "$cup+water_wave+doing",
           "because",
           "their",
           "$thumbs_down",
