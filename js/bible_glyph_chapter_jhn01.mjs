@@ -164,7 +164,7 @@ export function bible_glyph_chapter_jhn01() {
       {
         verse_number: 9,
         words: [
-          "The",
+          "$pin",
           "true",
           "$light,",
           "which",
