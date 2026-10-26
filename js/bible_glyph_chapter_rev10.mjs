@@ -398,7 +398,7 @@ export function bible_glyph_chapter_rev10() {
           "they",
           "$speech",
           "to",
-          "me,",
+          "$me,",
           "You",
           "must",
           "prophesy",
