@@ -115,7 +115,7 @@ export function bible_glyph_chapter_gen32() {
         words: [
           "I",
           "have",
-          "oxen",
+          "$ox",
           "and",
           "donkeys",
           "and",
