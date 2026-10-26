@@ -593,7 +593,7 @@ export function bible_glyph_chapter_luk15() {
         "$fast_forward+manner!",
         "$tray_out+shopping_cart",
         "the",
-        "best",
+        "$first_place",
         "$dress+crown",
         "$plus",
         "put",
