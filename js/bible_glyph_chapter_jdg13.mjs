@@ -615,7 +615,7 @@ export function bible_glyph_chapter_jdg13() {
           "“$flashlight+question",
           "do",
           "you",
-          "ask",
+          "$question",
           "my",
           "$name_tag,",
           "since",
