@@ -1308,7 +1308,7 @@ export function bible_glyph_chapter_jhn04() {
           "the",
           "$clock",
           "$tray_in",
-          "which",
+          "$back+flashlight",
           "$cross",
           "had",
           "$speech",
