@@ -100,7 +100,7 @@ export function bible_glyph_chapter_jhn10() {
       {
         verse_number: 4,
         words: [
-          "When",
+          "$back+clock",
           "he",
           "has",
           "brought",
