@@ -689,7 +689,7 @@ export function bible_glyph_chapter_mrk08() {
           "$proper_name$Philippi.",
           "$plus",
           "$tray_in",
-          "the",
+          "$pin",
           "$road",
           "He",
           "questioned",
