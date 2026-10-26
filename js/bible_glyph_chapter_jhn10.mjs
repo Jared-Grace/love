@@ -296,7 +296,7 @@ export function bible_glyph_chapter_jhn10() {
           "$pointing_back",
           "$person_other",
           "for",
-          "the",
+          "$pin",
           "$sheep.",
         ],
       },
