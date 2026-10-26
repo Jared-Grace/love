@@ -496,7 +496,7 @@ export function bible_glyph_chapter_2ki02() {
           "picked",
           "up",
           "the",
-          "cloak",
+          "$cloak+sparkles",
           "that",
           "had",
           "fallen",
