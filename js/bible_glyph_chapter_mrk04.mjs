@@ -197,7 +197,7 @@ export function bible_glyph_chapter_mrk04() {
           "still",
           "$plus+one",
           "seed",
-          "fell",
+          "$person+pointing_down",
           "on",
           "$thumbs_up",
           "$earth",
