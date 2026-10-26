@@ -938,7 +938,7 @@ export function bible_glyph_chapter_jhn09() {
           "I",
           "may",
           "$anchor+doing",
-          "in",
+          "$toward+tray_in",
           "$pointing_back?",
         ],
       },
