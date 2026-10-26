@@ -1338,7 +1338,7 @@ export function bible_glyph_chapter_mrk10() {
         "they",
         "called",
         "$pin",
-        "blind",
+        "$person_with_white_cane",
         "man,",
         "in",
         "$speech",
