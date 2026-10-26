@@ -20,7 +20,7 @@ export function bible_glyph_chapter_gen03() {
           "$snake",
           "$link",
           "more",
-          "crafty",
+          "$winking_face+describing",
           "than",
           "any",
           "$sprout",
