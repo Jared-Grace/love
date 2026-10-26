@@ -175,7 +175,7 @@ export function bible_glyph_chapter_jol02() {
           "$fallen_leaf+wheat,",
           "like",
           "a",
-          "mighty",
+          "$bone+describing",
           "$family",
           "deployed",
           "for",
