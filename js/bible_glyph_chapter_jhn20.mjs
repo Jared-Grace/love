@@ -642,7 +642,7 @@ export function bible_glyph_chapter_jhn20() {
       {
         verse_number: 24,
         words: [
-          "Now",
+          "$curving_right",
           "$proper_name$Thomas,",
           "one",
           "$tray_out",
