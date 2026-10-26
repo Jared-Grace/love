@@ -219,7 +219,7 @@ export function bible_glyph_chapter_psa097() {
         verse_number: 11,
         words: [
           "$light",
-          "shines",
+          "$seed+doing",
           "on",
           "the",
           "$ruler,",
