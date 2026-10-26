@@ -122,7 +122,7 @@ export function bible_glyph_chapter_1th01() {
           "$tray_in",
           "$speech",
           "$one+manner,",
-          "but",
+          "$curving_up",
           "$plus",
           "$tray_in",
           "$lightning,",
