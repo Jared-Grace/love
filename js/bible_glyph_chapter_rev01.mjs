@@ -434,7 +434,7 @@ export function bible_glyph_chapter_rev01() {
           "like",
           "wool,",
           "as",
-          "white",
+          "$white_circle",
           "as",
           "snow,",
           "$plus",
