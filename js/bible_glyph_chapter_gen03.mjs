@@ -493,7 +493,7 @@ export function bible_glyph_chapter_gen03() {
           "will",
           "strike",
           "his",
-          "heel.",
+          "$foot+end_arrow.",
         ],
       },
       {
