@@ -37,7 +37,7 @@ export function bible_glyph_chapter_gen32() {
           "them,",
           "he",
           "$speech,",
-          "This",
+          "$flashlight",
           "is",
           "the",
           "camp",
