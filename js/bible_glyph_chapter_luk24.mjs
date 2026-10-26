@@ -738,7 +738,7 @@ export function bible_glyph_chapter_luk24() {
           "at",
           "the",
           "table",
-          "with",
+          "$linked_paperclips",
           "$pointing_back,",
           "He",
           "$hand_receiving",
