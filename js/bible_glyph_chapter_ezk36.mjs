@@ -1276,7 +1276,7 @@ export function bible_glyph_chapter_ezk36() {
           "them:",
           "I",
           "will",
-          "multiply",
+          "$multiply+doing",
           "their",
           "$person",
           "like",
