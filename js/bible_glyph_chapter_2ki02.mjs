@@ -643,7 +643,7 @@ export function bible_glyph_chapter_2ki02() {
           "of",
           "the",
           "$mountain",
-          "or",
+          "$shuffle",
           "in",
           "$one",
           "of",
