@@ -515,7 +515,7 @@ export function bible_glyph_chapter_luk07() {
       words: [
         "$plus",
         "$proper_name$John",
-        "called",
+        "$toward+waving_hand",
         "two",
         "of",
         "$pointing_back",
