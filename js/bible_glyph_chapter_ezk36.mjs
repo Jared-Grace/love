@@ -1204,7 +1204,7 @@ export function bible_glyph_chapter_ezk36() {
           "destroyed",
           "are",
           "now",
-          "fortified",
+          "$wall+locked+describing",
           "and",
           "inhabited.",
         ],
