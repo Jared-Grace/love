@@ -42,7 +42,7 @@ export function bible_glyph_chapter_jdg13() {
           "the",
           "$proper_name$Philistines",
           "for",
-          "forty",
+          "$four+zero",
           "$year.",
         ],
       },
