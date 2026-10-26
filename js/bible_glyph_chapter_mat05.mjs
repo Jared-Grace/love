@@ -110,7 +110,7 @@ export function bible_glyph_chapter_mat05() {
           "are",
           "those",
           "who",
-          "hunger",
+          "$eating+hollow_circle+doing",
           "$plus",
           "thirst",
           "for",
