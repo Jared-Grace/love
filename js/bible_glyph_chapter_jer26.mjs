@@ -736,7 +736,7 @@ export function bible_glyph_chapter_jer26() {
           "to",
           "$hammer+doing",
           "a",
-          "great",
+          "$top",
           "$thumbs_down",
           "upon",
           "our",
