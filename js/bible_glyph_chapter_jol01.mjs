@@ -512,7 +512,7 @@ export function bible_glyph_chapter_jol01() {
           "are",
           "broken",
           "$house+collision+doing,",
-          "for",
+          "$pointing",
           "the",
           "grain",
           "has",
