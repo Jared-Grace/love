@@ -637,7 +637,7 @@ export function bible_glyph_chapter_mat05() {
       {
         verse_number: 25,
         words: [
-          "Reconcile",
+          "$thumbs_up+brain+doing",
           "quickly",
           "with",
           "your",
