@@ -290,7 +290,7 @@ export function bible_glyph_chapter_gen32() {
           "with",
           "only",
           "my",
-          "staff",
+          "$wood+leaf",
           "I",
           "came",
           "across",
