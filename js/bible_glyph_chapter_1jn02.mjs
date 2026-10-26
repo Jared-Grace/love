@@ -867,7 +867,7 @@ export function bible_glyph_chapter_1jn02() {
           "also",
           "$lightbulb",
           "$pointing",
-          "everyone",
+          "$all",
           "who",
           "$hammer",
           "righteousness",
