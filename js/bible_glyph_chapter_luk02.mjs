@@ -690,7 +690,7 @@ export function bible_glyph_chapter_luk02() {
         "$no_entry",
         "$eye",
         "$skull",
-        "before",
+        "$clock+back",
         "he",
         "had",
         "$eye",
