@@ -337,7 +337,7 @@ export function bible_glyph_chapter_oba01() {
           "stood",
           "$newspaper+thing,",
           "$sun",
-          "strangers",
+          "$alien",
           "carried",
           "off",
           "his",
