@@ -285,7 +285,7 @@ export function bible_glyph_chapter_exo20() {
           "$sea",
           "and",
           "$all",
-          "that",
+          "$back+flashlight",
           "is",
           "in",
           "them,",
