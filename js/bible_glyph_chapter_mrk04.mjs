@@ -483,7 +483,7 @@ export function bible_glyph_chapter_mrk04() {
           "$hourglass,",
           "$plus",
           "the",
-          "deceitfulness",
+          "$lying_face+mouse_trap",
           "of",
           "wealth,",
           "$plus",
