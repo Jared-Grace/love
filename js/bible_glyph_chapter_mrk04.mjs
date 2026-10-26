@@ -713,7 +713,7 @@ export function bible_glyph_chapter_mrk04() {
           "$seed+thing",
           "$seed+sprout+doing",
           "$plus",
-          "grows,",
+          "$right_arrow+straight_ruler+doing,",
           "though",
           "$pointing_back",
           "does",
