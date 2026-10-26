@@ -508,7 +508,7 @@ export function bible_glyph_chapter_mrk08() {
           "thousand,",
           "$abacus+question",
           "many",
-          "basketfuls",
+          "$basket+bread",
           "did",
           "you",
           "collect?",
