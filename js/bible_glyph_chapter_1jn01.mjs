@@ -82,7 +82,7 @@ export function bible_glyph_chapter_1jn01() {
           "$sprout",
           "that",
           "was",
-          "with",
+          "$toward",
           "$pin",
           "$father",
           "$plus",
