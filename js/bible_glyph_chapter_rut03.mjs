@@ -509,7 +509,7 @@ export function bible_glyph_chapter_rut03() {
           "Ruth",
           "told",
           "her",
-          "all",
+          "$all",
           "that",
           "Boaz",
           "had",
