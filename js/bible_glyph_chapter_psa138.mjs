@@ -125,7 +125,7 @@ export function bible_glyph_chapter_psa138() {
           "the",
           "$i_am",
           "is",
-          "great.",
+          "$top.",
         ],
       },
       {
