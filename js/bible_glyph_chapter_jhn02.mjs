@@ -582,7 +582,7 @@ export function bible_glyph_chapter_jhn02() {
       {
         verse_number: 23,
         words: [
-          "While",
+          "$likeness",
           "He",
           "was",
           "$tray_in",
