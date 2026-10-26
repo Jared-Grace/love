@@ -135,7 +135,7 @@ export function bible_glyph_chapter_1jn03() {
           "$plus",
           "$bow",
           "is",
-          "lawlessness.",
+          "$no_entry+scroll+thing.",
         ],
       },
       {
