@@ -901,7 +901,7 @@ export function bible_glyph_chapter_mrk10() {
         "flog",
         "$pointing_back",
         "$plus",
-        "kill",
+        "$fist+skull",
         "Him,",
         "$plus",
         "after",
