@@ -1060,7 +1060,7 @@ export function bible_glyph_chapter_mrk10() {
         "$cup_with_straw,",
         "$plus",
         "$pin",
-        "baptism",
+        "$diving_mask+thing",
         "that",
         "$me",
         "undergo",
