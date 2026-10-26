@@ -330,7 +330,7 @@ export function bible_glyph_chapter_mrk10() {
         "in",
         "$speech",
         "to",
-        "you,",
+        "$you,",
         "anyone",
         "who",
         "does",
