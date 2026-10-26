@@ -367,7 +367,7 @@ export function bible_glyph_chapter_jhn09() {
           "$pointing_back,",
           "He",
           "put",
-          "mud",
+          "$brown_square+water",
           "on",
           "my",
           "eyes,",
