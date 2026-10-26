@@ -1242,7 +1242,7 @@ export function bible_glyph_chapter_luk24() {
           "$pointing_back",
           "and",
           "returned",
-          "to",
+          "$toward+tray_in",
           "$city+peace",
           "with",
           "great",
