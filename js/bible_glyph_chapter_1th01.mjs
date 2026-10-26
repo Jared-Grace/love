@@ -100,7 +100,7 @@ export function bible_glyph_chapter_1th01() {
           "$lightbulb,",
           "$brother",
           "$heart_red+doing",
-          "by",
+          "$down_arrow",
           "$heart_on_fire,",
           "that",
           "He",
