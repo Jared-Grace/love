@@ -218,7 +218,7 @@ export function bible_glyph_chapter_1jn05() {
           "of",
           "$heart_on_fire",
           "is",
-          "greater.",
+          "$top.",
           "$pointing",
           "this",
           "is",
