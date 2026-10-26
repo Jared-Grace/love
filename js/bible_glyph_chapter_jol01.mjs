@@ -455,7 +455,7 @@ export function bible_glyph_chapter_jol01() {
           "the",
           "$i_am",
           "is",
-          "near,",
+          "$magnet,",
           "and",
           "it",
           "will",
