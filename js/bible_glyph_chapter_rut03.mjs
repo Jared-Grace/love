@@ -311,7 +311,7 @@ export function bible_glyph_chapter_rut03() {
         verse_number: 11,
         words: [
           "And",
-          "now,",
+          "$watch,",
           "my",
           "$woman,",
           "$no_entry",
