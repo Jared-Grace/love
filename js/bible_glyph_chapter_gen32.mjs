@@ -169,7 +169,7 @@ export function bible_glyph_chapter_gen32() {
           "$footprints+toward+doing",
           "you,",
           "and",
-          "four",
+          "$four",
           "hundred",
           "$man_beard",
           "with",
