@@ -130,7 +130,7 @@ export function bible_glyph_chapter_1jn04() {
           "He",
           "who",
           "is",
-          "in",
+          "$tray_in",
           "you",
           "than",
           "he",
