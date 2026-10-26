@@ -164,7 +164,7 @@ export function bible_glyph_chapter_1jn01() {
           "$plus",
           "$newspaper",
           "to",
-          "you:",
+          "$you:",
           "$heart_on_fire",
           "$link",
           "$light,",
