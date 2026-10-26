@@ -41,7 +41,7 @@ export function bible_glyph_chapter_gen03() {
           "$woman,",
           "Did",
           "$heart_on_fire",
-          "really",
+          "$pointing",
           "$speech,",
           "You",
           "must",
