@@ -99,7 +99,7 @@ export function bible_glyph_chapter_jon01() {
           "away",
           "from",
           "the",
-          "presence",
+          "$face",
           "of",
           "the",
           "$i_am.",
