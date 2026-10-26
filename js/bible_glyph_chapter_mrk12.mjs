@@ -540,7 +540,7 @@ export function bible_glyph_chapter_mrk12() {
         "$brother.",
         "$plus",
         "$pin",
-        "first",
+        "$first_place",
         "one",
         "$hand_receiving",
         "a",
