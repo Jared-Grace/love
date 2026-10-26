@@ -506,7 +506,7 @@ export function bible_glyph_chapter_luk07() {
         "him",
         "$clockwise_arrows",
         "$all",
-        "these",
+        "$flashlight",
         "things.",
       ],
     },
