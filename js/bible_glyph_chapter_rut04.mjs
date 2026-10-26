@@ -269,7 +269,7 @@ export function bible_glyph_chapter_rut04() {
           "times",
           "in",
           "$wrestling+heart_on_fire,",
-          "concerning",
+          "$pointing_up",
           "the",
           "redemption",
           "or",
