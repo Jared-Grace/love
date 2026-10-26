@@ -232,7 +232,7 @@ export function bible_glyph_chapter_mrk10() {
         "$pointing_back",
         "$woman",
         "$plus",
-        "marries",
+        "$ring+doing",
         "another",
         "commits",
         "adultery",
