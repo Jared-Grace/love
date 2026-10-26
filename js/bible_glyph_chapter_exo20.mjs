@@ -481,7 +481,7 @@ export function bible_glyph_chapter_exo20() {
           "has",
           "$footprints",
           "to",
-          "test",
+          "$test_tube",
           "you,",
           "so",
           "that",
