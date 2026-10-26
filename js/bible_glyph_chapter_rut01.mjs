@@ -40,7 +40,7 @@ export function bible_glyph_chapter_rut01() {
           "his",
           "$woman",
           "and",
-          "two",
+          "$two",
           "$son,",
           "$walking",
           "to",
