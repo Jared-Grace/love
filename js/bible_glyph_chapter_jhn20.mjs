@@ -480,7 +480,7 @@ export function bible_glyph_chapter_jhn20() {
           "and",
           "announced",
           "to",
-          "the",
+          "$pin",
           "$learner,",
           "$pointing",
           "she",
