@@ -645,7 +645,7 @@ export function bible_glyph_chapter_mrk12() {
     {
       verse_number: 25,
       words: [
-        "When",
+        "$back+clock",
         "they",
         "rise",
         "$tray_out",
