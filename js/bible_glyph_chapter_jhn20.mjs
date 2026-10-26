@@ -695,7 +695,7 @@ export function bible_glyph_chapter_jhn20() {
           "nails",
           "were,",
           "$plus",
-          "put",
+          "$throwing",
           "my",
           "$hand",
           "into",
