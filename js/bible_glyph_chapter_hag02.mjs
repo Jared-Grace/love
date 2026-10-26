@@ -269,7 +269,7 @@ export function bible_glyph_chapter_hag02() {
           "latter",
           "$star",
           "of",
-          "this",
+          "$flashlight",
           "$house",
           "will",
           "be",
