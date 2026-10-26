@@ -100,7 +100,7 @@ export function bible_glyph_chapter_luk15() {
         "that",
         "is",
         "lost",
-        "until",
+        "$finish",
         "he",
         "finds",
         "$pointing_back?",
