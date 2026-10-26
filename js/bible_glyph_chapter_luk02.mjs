@@ -327,7 +327,7 @@ export function bible_glyph_chapter_luk02() {
         "there",
         "appeared",
         "$safety_pin",
-        "the",
+        "$pin",
         "$angel",
         "a",
         "great",
