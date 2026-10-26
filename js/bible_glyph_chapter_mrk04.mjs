@@ -719,7 +719,7 @@ export function bible_glyph_chapter_mrk04() {
           "does",
           "$no_entry",
           "$lightbulb",
-          "how.",
+          "$likeness.",
         ],
       },
       {
