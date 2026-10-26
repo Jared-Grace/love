@@ -39,7 +39,7 @@ export function bible_glyph_chapter_rev01() {
           "made",
           "it",
           "known",
-          "by",
+          "$metro",
           "$hand_sending",
           "$pointing_back",
           "$angel",
