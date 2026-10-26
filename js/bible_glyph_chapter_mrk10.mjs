@@ -1158,7 +1158,7 @@ export function bible_glyph_chapter_mrk10() {
     {
       verse_number: 43,
       words: [
-        "But",
+        "$curving_right",
         "it",
         "shall",
         "$no_entry",
