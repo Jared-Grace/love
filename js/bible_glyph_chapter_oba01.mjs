@@ -670,7 +670,7 @@ export function bible_glyph_chapter_oba01() {
           "the",
           "exiles",
           "of",
-          "this",
+          "$flashlight",
           "$shield+hole",
           "of",
           "the",
