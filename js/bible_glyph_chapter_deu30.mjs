@@ -367,7 +367,7 @@ export function bible_glyph_chapter_deu30() {
           "are",
           "written",
           "in",
-          "this",
+          "$flashlight",
           "$closed_book",
           "of",
           "the",
