@@ -202,7 +202,7 @@ export function bible_glyph_chapter_gen02() {
           "$person",
           "from",
           "the",
-          "dust",
+          "$dust",
           "$tray_out",
           "the",
           "ground",
