@@ -750,7 +750,7 @@ export function bible_glyph_chapter_isa01() {
           "judges",
           "as",
           "at",
-          "first,",
+          "$first_place,",
           "and",
           "your",
           "counselors",
