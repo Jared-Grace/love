@@ -271,7 +271,7 @@ export function bible_glyph_chapter_luk02() {
       verse_number: 11,
       words: [
         "$pointing",
-        "today",
+        "$pin+sun",
         "a",
         "$rescue+doer",
         "has",
