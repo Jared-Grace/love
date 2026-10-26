@@ -1057,7 +1057,7 @@ export function bible_glyph_chapter_luk02() {
         "$pin",
         "Feast",
         "of",
-        "the",
+        "$pin",
         "Passover.",
       ],
     },
