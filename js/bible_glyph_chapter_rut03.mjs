@@ -212,7 +212,7 @@ export function bible_glyph_chapter_rut03() {
           "Ruth",
           "$footprints",
           "secretly,",
-          "uncovered",
+          "$luggage+chains+doing",
           "his",
           "feet,",
           "and",
