@@ -71,7 +71,7 @@ export function bible_glyph_chapter_1jn03() {
           "of",
           "$heart_on_fire,",
           "$plus",
-          "what",
+          "$flashlight+question",
           "we",
           "will",
           "be",
