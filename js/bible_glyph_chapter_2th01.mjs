@@ -43,7 +43,7 @@ export function bible_glyph_chapter_2th01() {
         words: [
           "$gift",
           "to",
-          "you",
+          "$you",
           "$plus",
           "$peace",
           "$away",
