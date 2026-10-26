@@ -846,7 +846,7 @@ export function bible_glyph_chapter_mrk04() {
           "so",
           "that",
           "the",
-          "birds",
+          "$bird+all",
           "of",
           "the",
           "$sky",
