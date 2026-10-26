@@ -20,7 +20,7 @@ export function bible_glyph_chapter_2jn01() {
           "$old_man,",
           "To",
           "the",
-          "chosen",
+          "$check_box+describing",
           "lady",
           "$plus",
           "$pointing_back",
