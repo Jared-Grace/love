@@ -470,7 +470,7 @@ export function bible_glyph_chapter_ezk18() {
           "$package+locked+thing,",
           "or",
           "commit",
-          "robbery.",
+          "$supervillain+thing.",
           "He",
           "$hands_giving$s",
           "his",
