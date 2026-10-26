@@ -119,7 +119,7 @@ export function bible_glyph_chapter_rut04() {
           "$speech,",
           "you",
           "may",
-          "buy",
+          "$coin+hand_receiving",
           "it",
           "back",
           "in",
