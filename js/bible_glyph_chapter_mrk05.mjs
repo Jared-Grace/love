@@ -272,7 +272,7 @@ export function bible_glyph_chapter_mrk05() {
         "herd",
         "of",
         "pigs",
-        "was",
+        "$link",
         "feeding.",
       ],
     },
