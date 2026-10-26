@@ -492,7 +492,7 @@ export function bible_glyph_chapter_jhn04() {
           "$link",
           "$pin",
           "$place",
-          "where",
+          "$back+round_pushpin",
           "one",
           "must",
           "$bowing.”",
