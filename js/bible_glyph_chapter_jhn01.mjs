@@ -907,7 +907,7 @@ export function bible_glyph_chapter_jhn01() {
           "was",
           "$likeness",
           "the",
-          "tenth",
+          "$ten+describing",
           "$clock.",
         ],
       },
