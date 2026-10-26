@@ -27,7 +27,7 @@ export function bible_glyph_chapter_psa085() {
           "$turn_back",
           "$hand+foot",
           "from",
-          "captivity.",
+          "$turn_back+chains.",
         ],
       },
       {
