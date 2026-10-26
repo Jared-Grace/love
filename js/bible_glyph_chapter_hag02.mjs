@@ -553,7 +553,7 @@ export function bible_glyph_chapter_hag02() {
           "$tray_out",
           "$flashlight",
           "$sun",
-          "forward,",
+          "$walking+pointing_up,",
           "from",
           "the",
           "twenty-fourth",
