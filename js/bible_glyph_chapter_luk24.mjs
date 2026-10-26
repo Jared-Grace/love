@@ -198,7 +198,7 @@ export function bible_glyph_chapter_luk24() {
           "they",
           "reported",
           "all",
-          "these",
+          "$flashlight",
           "things",
           "to",
           "$pin",
