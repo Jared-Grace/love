@@ -81,7 +81,7 @@ export function bible_glyph_chapter_jhn17() {
           "$curving_right",
           "$flashlight",
           "$link",
-          "eternal",
+          "$hourglass+describing",
           "$sprout,",
           "that",
           "they",
