@@ -530,7 +530,7 @@ export function bible_glyph_chapter_mrk11() {
         "astonished",
         "at",
         "$pointing_back",
-        "teaching.",
+        "$teacher+thing.",
       ],
     },
     {
