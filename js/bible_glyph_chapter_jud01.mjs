@@ -21,7 +21,7 @@ export function bible_glyph_chapter_jud01() {
           "of",
           "$cross",
           "$oil",
-          "and",
+          "$curving_right",
           "a",
           "$brother",
           "of",
