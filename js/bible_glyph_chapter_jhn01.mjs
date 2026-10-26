@@ -149,7 +149,7 @@ export function bible_glyph_chapter_jhn01() {
           "himself",
           "$link",
           "$no_entry",
-          "the",
+          "$pin",
           "$light,",
           "but",
           "he",
