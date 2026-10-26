@@ -1020,7 +1020,7 @@ export function bible_glyph_chapter_mrk12() {
         "$round_pushpin+tray_out+question",
         "can",
         "He",
-        "be",
+        "$link",
         "$pointing_back",
         "$son?",
         "$plus",
