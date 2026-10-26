@@ -888,7 +888,7 @@ export function bible_glyph_chapter_jhn09() {
           "$you",
           "are",
           "instructing",
-          "us?",
+          "$me?",
           "$plus",
           "they",
           "threw",
