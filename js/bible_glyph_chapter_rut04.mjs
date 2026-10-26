@@ -577,7 +577,7 @@ export function bible_glyph_chapter_rut04() {
           "$pointing",
           "your",
           "daughter-in-law,",
-          "who",
+          "$back+flashlight",
           "$heart_red+doing",
           "you,",
           "has",
