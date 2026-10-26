@@ -42,7 +42,7 @@ export function bible_glyph_chapter_mrk08() {
         words: [
           "I",
           "have",
-          "compassion",
+          "$heart_red+pleading",
           "for",
           "this",
           "$crowd,",
