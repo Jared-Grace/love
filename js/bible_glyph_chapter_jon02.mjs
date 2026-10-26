@@ -62,7 +62,7 @@ export function bible_glyph_chapter_jon02() {
         words: [
           "For",
           "You",
-          "cast",
+          "$throwing",
           "me",
           "into",
           "the",
