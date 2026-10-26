@@ -740,7 +740,7 @@ export function bible_glyph_chapter_mat05() {
       {
         verse_number: 29,
         words: [
-          "If",
+          "$traffic_light",
           "your",
           "right",
           "eye",
