@@ -543,7 +543,7 @@ export function bible_glyph_chapter_jhn01() {
           "$hand_sending",
           "were",
           "$tray_out",
-          "the",
+          "$pin",
           "$proper_name$Pharisees.",
         ],
       },
