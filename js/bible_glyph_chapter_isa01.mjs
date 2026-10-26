@@ -445,7 +445,7 @@ export function bible_glyph_chapter_isa01() {
         words: [
           "When",
           "you",
-          "spread",
+          "$folding_hand_fan",
           "out",
           "your",
           "hands",
