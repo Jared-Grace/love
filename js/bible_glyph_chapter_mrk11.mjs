@@ -150,7 +150,7 @@ export function bible_glyph_chapter_mrk11() {
         "$hammer,",
         "$free_button",
         "the",
-        "colt?”",
+        "$donkey+child?”",
       ],
     },
     {
