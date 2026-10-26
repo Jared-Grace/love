@@ -30,7 +30,7 @@ export function bible_glyph_chapter_mrk10() {
         "Again",
         "a",
         "$crowd",
-        "came",
+        "$safety_pin+walking+doing",
         "to",
         "$pointing_back,",
         "$plus",
