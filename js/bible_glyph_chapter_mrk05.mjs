@@ -383,7 +383,7 @@ export function bible_glyph_chapter_mrk05() {
         "been",
         "possessed",
         "by",
-        "the",
+        "$pin",
         "legion",
         "sitting",
         "there,",
