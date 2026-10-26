@@ -329,7 +329,7 @@ export function bible_glyph_chapter_rev01() {
           "I",
           "$ear",
           "$back",
-          "me",
+          "$me",
           "a",
           "loud",
           "$voice",
