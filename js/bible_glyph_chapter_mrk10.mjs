@@ -592,7 +592,7 @@ export function bible_glyph_chapter_mrk10() {
         "is",
         "to",
         "$footprints+tray_in",
-        "the",
+        "$pin",
         "$castle",
         "of",
         "$heart_on_fire!",
