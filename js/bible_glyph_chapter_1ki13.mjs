@@ -730,7 +730,7 @@ export function bible_glyph_chapter_1ki13() {
           "to",
           "the",
           "$megaphone",
-          "who",
+          "$back+flashlight",
           "had",
           "$turn_back",
           "him.",
