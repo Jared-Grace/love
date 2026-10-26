@@ -603,7 +603,7 @@ export function bible_glyph_chapter_mrk10() {
       words: [
         "It",
         "is",
-        "easier",
+        "$thumbs_up+face_exhaling+more",
         "for",
         "a",
         "camel",
