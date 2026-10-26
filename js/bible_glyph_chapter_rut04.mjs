@@ -337,7 +337,7 @@ export function bible_glyph_chapter_rut04() {
           "all",
           "the",
           "$family,",
-          "You",
+          "$you",
           "are",
           "$witness",
           "$sun",
