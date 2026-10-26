@@ -789,7 +789,7 @@ export function bible_glyph_chapter_mrk11() {
         "will",
         "$pointing_up+question",
         "you",
-        "one",
+        "$one",
         "$speech,",
         "$plus",
         "if",
