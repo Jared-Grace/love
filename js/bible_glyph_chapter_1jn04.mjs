@@ -533,7 +533,7 @@ export function bible_glyph_chapter_1jn04() {
           "We",
           "$heart_red+doing",
           "$pointing",
-          "He",
+          "$pointing_back",
           "first",
           "$heart_red+doing$d",
           "us.",
