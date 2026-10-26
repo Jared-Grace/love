@@ -821,7 +821,7 @@ export function bible_glyph_chapter_mrk10() {
         "$walking+footprints",
         "$fear+doing.",
         "$plus",
-        "again",
+        "$repeat",
         "He",
         "took",
         "the",
