@@ -835,7 +835,7 @@ export function bible_glyph_chapter_mrk08() {
           "and",
           "began",
           "to",
-          "rebuke",
+          "$right_anger_bubble",
           "$pointing_back.",
         ],
       },
