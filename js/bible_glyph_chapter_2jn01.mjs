@@ -222,7 +222,7 @@ export function bible_glyph_chapter_2jn01() {
           "you",
           "do",
           "$no_entry",
-          "lose",
+          "$wilted_flower",
           "what",
           "we",
           "have",
