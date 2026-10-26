@@ -85,7 +85,7 @@ export function bible_glyph_chapter_mrk08() {
           "of",
           "$pointing_back",
           "have",
-          "come",
+          "$airplane_arrival",
           "a",
           "great",
           "distance.",
