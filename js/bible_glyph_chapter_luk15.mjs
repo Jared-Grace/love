@@ -367,7 +367,7 @@ export function bible_glyph_chapter_luk15() {
         "$eating+hollow_circle",
         "$butterfly",
         "through",
-        "that",
+        "$telescope",
         "$map+round_pushpin,",
         "$plus",
         "$pointing_back",
