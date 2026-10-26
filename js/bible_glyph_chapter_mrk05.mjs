@@ -198,7 +198,7 @@ export function bible_glyph_chapter_mrk05() {
     {
       verse_number: 8,
       words: [
-        "For",
+        "$information",
         "He",
         "had",
         "been",
