@@ -164,7 +164,7 @@ export function bible_glyph_chapter_psa001() {
           "the",
           "$thumbs_down",
           "will",
-          "perish.",
+          "$wilted_flower.",
         ],
       },
     ],
