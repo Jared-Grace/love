@@ -237,7 +237,7 @@ export function bible_glyph_chapter_rev10() {
           "$pin",
           "$seven+describing",
           "$angel,",
-          "when",
+          "$back+clock",
           "he",
           "is",
           "about",
