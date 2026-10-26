@@ -613,7 +613,7 @@ export function bible_glyph_chapter_mat05() {
           "$balloon",
           "your",
           "gift",
-          "there",
+          "$telescope+manner",
           "before",
           "the",
           "altar,",
