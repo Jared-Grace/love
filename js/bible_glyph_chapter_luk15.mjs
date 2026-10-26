@@ -213,7 +213,7 @@ export function bible_glyph_chapter_luk15() {
         "the",
         "$house",
         "$plus",
-        "search",
+        "$magnifying_glass",
         "carefully",
         "until",
         "she",
