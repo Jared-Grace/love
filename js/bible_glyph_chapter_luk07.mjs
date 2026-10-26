@@ -363,7 +363,7 @@ export function bible_glyph_chapter_luk07() {
         "the",
         "$city",
         "$link",
-        "with",
+        "$safety_pin",
         "$pointing_back.",
       ],
     },
