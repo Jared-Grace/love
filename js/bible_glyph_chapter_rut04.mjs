@@ -590,7 +590,7 @@ export function bible_glyph_chapter_rut04() {
           "to",
           "you",
           "than",
-          "seven",
+          "$seven",
           "$son.",
         ],
       },
