@@ -286,7 +286,7 @@ export function bible_glyph_chapter_1th01() {
           "He",
           "raised",
           "$tray_out",
-          "the",
+          "$pin",
           "$skull,",
           "$cross",
           "our",
