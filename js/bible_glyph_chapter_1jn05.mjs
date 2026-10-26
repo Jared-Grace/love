@@ -362,7 +362,7 @@ export function bible_glyph_chapter_1jn05() {
         words: [
           "$plus",
           "$flashlight",
-          "is",
+          "$link",
           "the",
           "confidence",
           "that",
