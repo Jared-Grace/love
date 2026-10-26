@@ -540,7 +540,7 @@ export function bible_glyph_chapter_ezk18() {
           "$pointing",
           "he",
           "practiced",
-          "extortion",
+          "$fist+down_arrow+thing",
           "and",
           "robbed",
           "his",
