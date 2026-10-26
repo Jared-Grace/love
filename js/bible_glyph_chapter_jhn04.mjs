@@ -85,7 +85,7 @@ export function bible_glyph_chapter_jhn04() {
           "$speech",
           "$proper_name$Sychar,",
           "$house_with_garden",
-          "the",
+          "$pin",
           "plot",
           "of",
           "ground",
