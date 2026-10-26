@@ -113,7 +113,7 @@ export function bible_glyph_chapter_1jn01() {
           "have",
           "$handshake",
           "$linked_paperclips",
-          "us.",
+          "$me.",
           "$plus",
           "this",
           "$handshake",
