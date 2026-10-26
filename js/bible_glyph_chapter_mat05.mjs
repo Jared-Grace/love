@@ -1242,7 +1242,7 @@ export function bible_glyph_chapter_mat05() {
           "$end_arrow+net+describing,",
           "$right_arrow,",
           "$likeness",
-          "your",
+          "$you",
           "heavenly",
           "$father",
           "is",
