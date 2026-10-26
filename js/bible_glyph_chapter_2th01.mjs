@@ -302,7 +302,7 @@ export function bible_glyph_chapter_2th01() {
       {
         verse_number: 11,
         words: [
-          "To",
+          "$toward+tray_in",
           "this",
           "end",
           "we",
