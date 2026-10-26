@@ -497,7 +497,7 @@ export function bible_glyph_chapter_oba01() {
           "to",
           "you;",
           "your",
-          "recompense",
+          "$turn_back+gift+thing",
           "will",
           "$turn_back",
           "upon",
