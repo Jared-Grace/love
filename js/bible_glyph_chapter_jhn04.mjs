@@ -144,7 +144,7 @@ export function bible_glyph_chapter_jhn04() {
           "“$hands_giving",
           "$me",
           "a",
-          "drink.”",
+          "$cup_with_straw.”",
         ],
       },
       {
