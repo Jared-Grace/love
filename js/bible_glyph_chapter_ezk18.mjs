@@ -403,7 +403,7 @@ export function bible_glyph_chapter_ezk18() {
           "$son",
           "who",
           "$eye$s",
-          "all",
+          "$all",
           "the",
           "$bow$s",
           "his",
