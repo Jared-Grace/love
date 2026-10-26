@@ -126,7 +126,7 @@ export function bible_glyph_chapter_luk07() {
         "So",
         "$cross",
         "$walking",
-        "with",
+        "$safety_pin",
         "$pointing_back.",
         "But",
         "when",
