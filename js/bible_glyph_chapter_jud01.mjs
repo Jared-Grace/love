@@ -529,7 +529,7 @@ export function bible_glyph_chapter_jud01() {
         verse_number: 17,
         words: [
           "But",
-          "you,",
+          "$you,",
           "$heart_red+describing,",
           "remember",
           "what",
