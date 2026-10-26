@@ -281,7 +281,7 @@ export function bible_glyph_chapter_rev10() {
           "$repeat",
           "$plus",
           "$speech,",
-          "Go,",
+          "$walking+away,",
           "$hand_receiving",
           "the",
           "small",
