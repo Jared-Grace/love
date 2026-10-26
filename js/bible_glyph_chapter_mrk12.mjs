@@ -379,7 +379,7 @@ export function bible_glyph_chapter_mrk12() {
         "$check.",
         "Is",
         "it",
-        "lawful",
+        "$tray_out+link",
         "to",
         "$hands_giving",
         "taxes",
