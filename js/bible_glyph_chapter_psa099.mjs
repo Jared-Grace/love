@@ -45,7 +45,7 @@ export function bible_glyph_chapter_psa099() {
           "$pointing_back",
           "is",
           "exalted",
-          "above",
+          "$pointing_up",
           "all",
           "the",
           "$family.",
