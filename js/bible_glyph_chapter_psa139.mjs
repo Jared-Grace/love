@@ -369,7 +369,7 @@ export function bible_glyph_chapter_psa139() {
         verse_number: 17,
         words: [
           "$flashlight+question",
-          "precious",
+          "$gem_stone+doing",
           "to",
           "me",
           "are",
