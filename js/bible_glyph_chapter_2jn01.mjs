@@ -336,7 +336,7 @@ export function bible_glyph_chapter_2jn01() {
           "$black_circle+thing.",
           "$curving_up",
           "I",
-          "hope",
+          "$crossed_fingers+doing",
           "to",
           "come",
           "to",
