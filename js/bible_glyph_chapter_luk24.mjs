@@ -1200,7 +1200,7 @@ export function bible_glyph_chapter_luk24() {
           "$pointing_back",
           "out",
           "as",
-          "far",
+          "$finish",
           "as",
           "$proper_name$Bethany,",
           "$plus",
