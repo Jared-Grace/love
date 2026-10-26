@@ -380,7 +380,7 @@ export function bible_glyph_chapter_psa118() {
       {
         verse_number: 19,
         words: [
-          "Open",
+          "$unlocked",
           "to",
           "me",
           "the",
