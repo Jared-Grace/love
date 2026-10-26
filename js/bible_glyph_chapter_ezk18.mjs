@@ -649,7 +649,7 @@ export function bible_glyph_chapter_ezk18() {
           "him,",
           "and",
           "the",
-          "wickedness",
+          "$thumbs_down+person+thing",
           "of",
           "the",
           "$thumbs_down",
