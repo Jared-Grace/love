@@ -153,7 +153,7 @@ export function bible_glyph_chapter_oba01() {
           "$footprints",
           "to",
           "you,",
-          "if",
+          "$traffic_light",
           "robbers",
           "by",
           "$night,",
