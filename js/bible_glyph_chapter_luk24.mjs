@@ -1163,7 +1163,7 @@ export function bible_glyph_chapter_luk24() {
         verse_number: 49,
         words: [
           "$plus",
-          "behold,",
+          "$exclamation,",
           "I",
           "$hand_sending",
           "the",
