@@ -875,7 +875,7 @@ export function bible_glyph_chapter_ezk33() {
           "But",
           "$me",
           "are",
-          "many;",
+          "$multiply;",
           "surely",
           "the",
           "$earth",
