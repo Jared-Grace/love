@@ -260,7 +260,7 @@ export function bible_glyph_chapter_deu26() {
           "our",
           "$persevering_face+thing,",
           "our",
-          "toil,",
+          "$hot_face,",
           "and",
           "our",
           "oppression.",
