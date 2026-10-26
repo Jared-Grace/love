@@ -89,7 +89,7 @@ export function bible_glyph_chapter_psa001() {
           "its",
           "$fruit",
           "in",
-          "season,",
+          "$clock,",
           "whose",
           "leaf",
           "does",
