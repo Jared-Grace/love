@@ -761,7 +761,7 @@ export function bible_glyph_chapter_mrk05() {
       words: [
         "$plus",
         "at",
-        "once",
+        "$fast_forward",
         "$cross",
         "was",
         "aware",
