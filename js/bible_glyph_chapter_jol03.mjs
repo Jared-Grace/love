@@ -114,7 +114,7 @@ export function bible_glyph_chapter_jol03() {
           "against",
           "Me,",
           "O",
-          "Tyre,",
+          "$rock+water_wave+proper_name,",
           "$proper_name$Sidon,",
           "and",
           "all",
