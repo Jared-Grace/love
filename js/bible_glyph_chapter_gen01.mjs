@@ -573,7 +573,7 @@ export function bible_glyph_chapter_gen01() {
           "their",
           "kind,",
           "and",
-          "every",
+          "$all",
           "winged",
           "$bird",
           "after",
