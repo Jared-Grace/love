@@ -488,7 +488,7 @@ export function bible_glyph_chapter_jhn09() {
         words: [
           "$plus",
           "they",
-          "asked",
+          "$question",
           "them,",
           "Is",
           "this",
