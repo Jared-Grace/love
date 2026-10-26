@@ -668,7 +668,7 @@ export function bible_glyph_chapter_luk24() {
           "$all",
           "the",
           "$writing_hand+thing",
-          "about",
+          "$clockwise_arrows",
           "$pointing_back+pointing_back.",
         ],
       },
