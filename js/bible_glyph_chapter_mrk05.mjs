@@ -672,7 +672,7 @@ export function bible_glyph_chapter_mrk05() {
         "care",
         "of",
         "many",
-        "physicians",
+        "$bandage+doer",
         "$plus",
         "had",
         "spent",
