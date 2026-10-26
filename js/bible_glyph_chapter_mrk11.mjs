@@ -117,7 +117,7 @@ export function bible_glyph_chapter_mrk11() {
         "$plus",
         "$magnifying_glass+exclamation",
         "the",
-        "colt",
+        "$donkey+child",
         "tied",
         "at",
         "a",
