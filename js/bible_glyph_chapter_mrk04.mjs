@@ -109,7 +109,7 @@ export function bible_glyph_chapter_mrk04() {
           "$bird+all",
           "$footprints",
           "$plus",
-          "devoured",
+          "$pointing_down+eating",
           "$pointing_back.",
         ],
       },
