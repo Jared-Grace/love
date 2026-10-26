@@ -178,7 +178,7 @@ export function bible_glyph_chapter_psa085() {
           "His",
           "salvation",
           "is",
-          "near",
+          "$magnet",
           "to",
           "those",
           "who",
