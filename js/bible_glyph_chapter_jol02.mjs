@@ -114,7 +114,7 @@ export function bible_glyph_chapter_jol02() {
           "is",
           "like",
           "the",
-          "Garden",
+          "$garden",
           "of",
           "$proper_name$Eden,",
           "but",
