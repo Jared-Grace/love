@@ -432,7 +432,7 @@ export function bible_glyph_chapter_jhn03() {
           "but",
           "to",
           "$rescue",
-          "the",
+          "$pin",
           "$globe",
           "through",
           "$pointing_back.",
