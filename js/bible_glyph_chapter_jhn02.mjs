@@ -129,7 +129,7 @@ export function bible_glyph_chapter_jhn02() {
           "jars",
           "were",
           "standing",
-          "there,",
+          "$telescope+manner,",
           "for",
           "the",
           "purification",
