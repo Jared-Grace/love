@@ -99,7 +99,7 @@ export function bible_glyph_chapter_ezk36() {
           "you",
           "became",
           "a",
-          "possession",
+          "$hand_receiving+brown_square+thing",
           "of",
           "the",
           "rest",
