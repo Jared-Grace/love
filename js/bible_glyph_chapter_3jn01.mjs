@@ -281,7 +281,7 @@ export function bible_glyph_chapter_3jn01() {
           "one",
           "who",
           "does",
-          "good",
+          "$thumbs_up+hand+doing",
           "is",
           "$tray_out",
           "$heart_on_fire;",
