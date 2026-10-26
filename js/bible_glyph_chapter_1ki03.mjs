@@ -166,7 +166,7 @@ export function bible_glyph_chapter_1ki03() {
           "and",
           "$heart_on_fire",
           "$speech:",
-          "Ask,",
+          "$question,",
           "and",
           "I",
           "will",
