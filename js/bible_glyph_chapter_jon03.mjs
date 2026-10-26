@@ -242,7 +242,7 @@ export function bible_glyph_chapter_jon03() {
           "and",
           "from",
           "the",
-          "violence",
+          "$boxing_glove",
           "in",
           "his",
           "hands.",
