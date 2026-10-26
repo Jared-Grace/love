@@ -1139,7 +1139,7 @@ export function bible_glyph_chapter_mrk12() {
         "$plus",
         "$one",
         "$poor",
-        "widow",
+        "$widow",
         "$footprints",
         "and",
         "put",
