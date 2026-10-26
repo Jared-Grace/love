@@ -634,7 +634,7 @@ export function bible_glyph_chapter_jhn03() {
           "Then",
           "a",
           "dispute",
-          "arose",
+          "$butterfly",
           "between",
           "$proper_name$John’s",
           "$learner$s",
