@@ -250,7 +250,7 @@ export function bible_glyph_chapter_psa096() {
           "is",
           "in",
           "them.",
-          "Then",
+          "$telescope+clock",
           "all",
           "the",
           "$tree",
