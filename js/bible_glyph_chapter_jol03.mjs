@@ -538,7 +538,7 @@ export function bible_glyph_chapter_jol03() {
           "$water,",
           "and",
           "a",
-          "spring",
+          "$spring",
           "will",
           "flow",
           "from",
