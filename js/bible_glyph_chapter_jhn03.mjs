@@ -879,7 +879,7 @@ export function bible_glyph_chapter_jhn03() {
           "$pin",
           "$father",
           "$heart_red+doing$s",
-          "the",
+          "$pin",
           "$son",
           "$plus",
           "has",
