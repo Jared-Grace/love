@@ -208,7 +208,7 @@ export function bible_glyph_chapter_psa101() {
           "that",
           "I",
           "may",
-          "cut",
+          "$scissors",
           "off",
           "every",
           "evildoer",
