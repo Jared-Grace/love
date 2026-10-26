@@ -534,7 +534,7 @@ export function bible_glyph_chapter_rut04() {
           "the",
           "$woman",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Naomi,",
           "Blessed",
           "be",
