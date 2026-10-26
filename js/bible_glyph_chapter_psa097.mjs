@@ -181,7 +181,7 @@ export function bible_glyph_chapter_psa097() {
           "You",
           "are",
           "exalted",
-          "far",
+          "$double_exclamation",
           "above",
           "$all",
           "$moai.",
