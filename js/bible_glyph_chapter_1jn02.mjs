@@ -580,7 +580,7 @@ export function bible_glyph_chapter_1jn02() {
           "have",
           "remained",
           "with",
-          "us.",
+          "$me.",
           "But",
           "their",
           "departure",
