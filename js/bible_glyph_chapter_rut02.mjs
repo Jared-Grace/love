@@ -489,7 +489,7 @@ export function bible_glyph_chapter_rut02() {
           "it",
           "into",
           "the",
-          "vinegar",
+          "$wine+lemon",
           "sauce.",
           "So",
           "she",
