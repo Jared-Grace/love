@@ -283,7 +283,7 @@ export function bible_glyph_chapter_rut02() {
           "men",
           "$zero+manner",
           "to",
-          "touch",
+          "$hand+doing",
           "you.",
           "And",
           "when",
