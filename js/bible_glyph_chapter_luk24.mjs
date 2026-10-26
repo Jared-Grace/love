@@ -107,7 +107,7 @@ export function bible_glyph_chapter_luk24() {
           "$plus",
           "$bed+down_arrow+doing",
           "their",
-          "faces",
+          "$face",
           "to",
           "the",
           "$earth,",
