@@ -141,7 +141,7 @@ export function bible_glyph_chapter_jhn17() {
           "had",
           "alongside",
           "You",
-          "before",
+          "$last_track",
           "$pin",
           "$globe",
           "was.",
