@@ -370,7 +370,7 @@ export function bible_glyph_chapter_jdg13() {
           "her",
           "$man_beard,",
           "$speech,",
-          "“Behold,",
+          "“$exclamation,",
           "the",
           "$man_beard",
           "who",
