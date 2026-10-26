@@ -90,7 +90,7 @@ export function bible_glyph_chapter_3jn01() {
           "to",
           "$ear",
           "that",
-          "my",
+          "$me+describing",
           "$child",
           "are",
           "$walking",
