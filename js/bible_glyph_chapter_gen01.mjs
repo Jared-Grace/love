@@ -309,7 +309,7 @@ export function bible_glyph_chapter_gen01() {
           "brought",
           "forth",
           "grass,",
-          "plants",
+          "$herb",
           "yielding",
           "seed",
           "after",
