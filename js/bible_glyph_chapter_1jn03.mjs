@@ -546,7 +546,7 @@ export function bible_glyph_chapter_1jn03() {
           "$plus",
           "will",
           "assure",
-          "our",
+          "$me",
           "$heart_organ",
           "in",
           "$pointing_back",
