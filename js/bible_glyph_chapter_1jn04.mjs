@@ -69,7 +69,7 @@ export function bible_glyph_chapter_1jn04() {
           "in",
           "the",
           "$meat",
-          "is",
+          "$link",
           "$tray_out",
           "$heart_on_fire,",
         ],
