@@ -1111,7 +1111,7 @@ export function bible_glyph_chapter_jhn01() {
       {
         verse_number: 48,
         words: [
-          "“How",
+          "“$round_pushpin+tray_out+question",
           "do",
           "You",
           "$lightbulb",
