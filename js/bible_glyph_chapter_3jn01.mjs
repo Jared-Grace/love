@@ -273,7 +273,7 @@ export function bible_glyph_chapter_3jn01() {
           "what",
           "is",
           "$thumbs_down",
-          "but",
+          "$curving_up",
           "what",
           "is",
           "$thumbs_up.",
