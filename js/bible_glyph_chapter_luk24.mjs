@@ -406,7 +406,7 @@ export function bible_glyph_chapter_luk24() {
           "$speech",
           "$pointing_back,",
           "Are",
-          "You",
+          "$you",
           "the",
           "only",
           "visitor",
