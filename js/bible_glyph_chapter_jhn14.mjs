@@ -165,7 +165,7 @@ export function bible_glyph_chapter_jhn14() {
           "one",
           "$footprints",
           "to",
-          "the",
+          "$pin",
           "$father",
           "except",
           "through",
