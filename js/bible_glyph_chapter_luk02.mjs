@@ -152,7 +152,7 @@ export function bible_glyph_chapter_luk02() {
         "$plus",
         "she",
         "gave",
-        "birth",
+        "$pregnant_woman+doing",
         "to",
         "$pointing_back",
         "firstborn",
