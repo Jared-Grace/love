@@ -388,7 +388,7 @@ export function bible_glyph_chapter_rev01() {
           "I",
           "$eye",
           "$seven",
-          "golden",
+          "$coin+crown+describing",
           "$lamp+seat,",
         ],
       },
