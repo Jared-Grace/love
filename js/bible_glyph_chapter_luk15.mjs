@@ -368,7 +368,7 @@ export function bible_glyph_chapter_luk15() {
         "$butterfly",
         "through",
         "that",
-        "country,",
+        "$map+round_pushpin,",
         "$plus",
         "$pointing_back",
         "began",
