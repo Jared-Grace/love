@@ -228,7 +228,7 @@ export function bible_glyph_chapter_mrk10() {
         "to",
         "$pointing_back,",
         "“$back+flashlight",
-        "divorces",
+        "$away+free_button",
         "$pointing_back",
         "$woman",
         "$plus",
