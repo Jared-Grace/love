@@ -264,7 +264,7 @@ export function bible_glyph_chapter_jol01() {
           "mourning,",
           "those",
           "who",
-          "minister",
+          "$bellhop_bell+doing",
           "before",
           "the",
           "$i_am.",
