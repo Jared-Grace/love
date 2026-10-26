@@ -1209,7 +1209,7 @@ export function bible_glyph_chapter_jhn04() {
           "“$crown,",
           "come",
           "$walking+pointing_down",
-          "before",
+          "$clock+back",
           "my",
           "$baby",
           "$skull.”",
