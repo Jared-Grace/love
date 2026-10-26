@@ -119,7 +119,7 @@ export function bible_glyph_chapter_1jn04() {
           "$heart_on_fire,",
           "little",
           "children,",
-          "and",
+          "$plus",
           "you",
           "have",
           "overcome",
