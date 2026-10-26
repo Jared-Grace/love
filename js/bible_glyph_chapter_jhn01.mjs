@@ -768,7 +768,7 @@ export function bible_glyph_chapter_jhn01() {
           "$wind",
           "descend",
           "$plus",
-          "rest",
+          "$pin+doing",
           "is",
           "He",
           "who",
