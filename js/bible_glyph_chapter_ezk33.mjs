@@ -892,7 +892,7 @@ export function bible_glyph_chapter_ezk33() {
       {
         verse_number: 25,
         words: [
-          "Therefore",
+          "$right_arrow",
           "$speech",
           "to",
           "them",
