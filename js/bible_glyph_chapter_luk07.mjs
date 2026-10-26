@@ -529,7 +529,7 @@ export function bible_glyph_chapter_luk07() {
         "in",
         "$speech,",
         "“Are",
-        "You",
+        "$you",
         "the",
         "One",
         "who",
