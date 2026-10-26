@@ -61,7 +61,7 @@ export function bible_glyph_chapter_psa111() {
       {
         verse_number: 3,
         words: [
-          "Splendid",
+          "$sparkles+light",
           "and",
           "majestic",
           "is",
