@@ -1101,7 +1101,7 @@ export function bible_glyph_chapter_mrk12() {
         "men",
         "will",
         "$hand_receiving",
-        "greater",
+        "$spring+describing",
         "condemnation.",
       ],
     },
