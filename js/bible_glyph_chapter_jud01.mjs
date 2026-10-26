@@ -660,7 +660,7 @@ export function bible_glyph_chapter_jud01() {
           "$plus",
           "the",
           "clothing",
-          "stained",
+          "$black_circle+doing",
           "by",
           "the",
           "$meat.",
