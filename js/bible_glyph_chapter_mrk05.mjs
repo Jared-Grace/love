@@ -696,7 +696,7 @@ export function bible_glyph_chapter_mrk05() {
       words: [
         "having",
         "$ear",
-        "about",
+        "$clockwise_arrows",
         "$cross,",
         "she",
         "$footprints",
