@@ -411,7 +411,7 @@ export function bible_glyph_chapter_mrk11() {
         "those",
         "who",
         "were",
-        "selling",
+        "$coin+hands_giving",
         "$plus",
         "those",
         "who",
