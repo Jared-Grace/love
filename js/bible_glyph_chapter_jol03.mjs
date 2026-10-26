@@ -241,7 +241,7 @@ export function bible_glyph_chapter_jol03() {
           "and",
           "they",
           "will",
-          "sell",
+          "$coin+hands_giving",
           "them",
           "to",
           "the",
