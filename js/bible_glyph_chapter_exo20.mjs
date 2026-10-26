@@ -256,7 +256,7 @@ export function bible_glyph_chapter_exo20() {
           "or",
           "$broom",
           "or",
-          "livestock,",
+          "$paw_prints,",
           "nor",
           "the",
           "foreigner",
