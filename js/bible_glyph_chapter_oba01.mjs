@@ -189,7 +189,7 @@ export function bible_glyph_chapter_oba01() {
         verse_number: 6,
         words: [
           "But",
-          "how",
+          "$question+likeness",
           "$proper_name$Esau",
           "will",
           "be",
