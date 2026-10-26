@@ -240,7 +240,7 @@ export function bible_glyph_chapter_psa118() {
           "extinguished",
           "like",
           "burning",
-          "thorns;",
+          "$thorns;",
           "in",
           "the",
           "$name_tag",
