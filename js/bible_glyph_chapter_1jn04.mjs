@@ -268,7 +268,7 @@ export function bible_glyph_chapter_1jn04() {
           "and",
           "$one+butterfly",
           "$son",
-          "into",
+          "$toward+tray_in",
           "the",
           "$globe,",
           "so",
