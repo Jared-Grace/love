@@ -57,7 +57,7 @@ export function bible_glyph_chapter_jhn01() {
           "were",
           "made,",
           "$plus",
-          "without",
+          "$scissors+manner",
           "$pointing_back",
           "nothing",
           "was",
