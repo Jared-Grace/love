@@ -820,7 +820,7 @@ export function bible_glyph_chapter_jdg13() {
           "And",
           "the",
           "boy",
-          "grew,",
+          "$top+doing,",
           "and",
           "the",
           "$i_am",
