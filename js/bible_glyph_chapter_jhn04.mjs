@@ -104,7 +104,7 @@ export function bible_glyph_chapter_jhn04() {
           "Now",
           "$hand+foot’s",
           "well",
-          "was",
+          "$link",
           "there.",
           "So",
           "$cross,",
