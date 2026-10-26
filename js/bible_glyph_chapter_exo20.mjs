@@ -260,7 +260,7 @@ export function bible_glyph_chapter_exo20() {
           "nor",
           "the",
           "$foreigner",
-          "within",
+          "$back+flashlight",
           "your",
           "gates.",
         ],
