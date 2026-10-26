@@ -46,7 +46,7 @@ export function bible_glyph_chapter_rev10() {
           "$pointing_back",
           "$foot",
           "were",
-          "like",
+          "$likeness",
           "pillars",
           "of",
           "$fire.",
