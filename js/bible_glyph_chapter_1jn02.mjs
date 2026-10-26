@@ -175,7 +175,7 @@ export function bible_glyph_chapter_1jn02() {
           "$heart_red+describing,",
           "$no_entry",
           "a",
-          "new",
+          "$new_button",
           "$scroll",
           "am",
           "I",
