@@ -290,7 +290,7 @@ export function bible_glyph_chapter_jol02() {
           "and",
           "$moon",
           "grow",
-          "dark,",
+          "$black_heart+doing,",
           "and",
           "the",
           "stars",
