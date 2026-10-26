@@ -182,7 +182,7 @@ export function bible_glyph_chapter_1jn05() {
       },
       {
         verse_number: 7,
-        words: ["$pointing", "there", "are", "$three", "that", "$witness+doing:"],
+        words: ["$pointing", "there", "$link", "$three", "that", "$witness+doing:"],
       },
       {
         verse_number: 8,
