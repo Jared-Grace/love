@@ -79,7 +79,7 @@ export function bible_glyph_chapter_1th01() {
           "$heart_red,",
           "$plus",
           "your",
-          "enduring",
+          "$person_climbing",
           "hope",
           "in",
           "our",
