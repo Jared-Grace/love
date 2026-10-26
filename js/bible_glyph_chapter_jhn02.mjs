@@ -543,7 +543,7 @@ export function bible_glyph_chapter_jhn02() {
           "$hut",
           "of",
           "$pointing_back",
-          "body.",
+          "$x_ray.",
         ],
       },
       {
