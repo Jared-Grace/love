@@ -683,7 +683,7 @@ export function bible_glyph_chapter_jdg13() {
           "ascended",
           "in",
           "the",
-          "flame",
+          "$fire+tongue",
           "of",
           "the",
           "$altar.",
