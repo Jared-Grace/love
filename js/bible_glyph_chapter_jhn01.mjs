@@ -157,7 +157,7 @@ export function bible_glyph_chapter_jhn01() {
           "to",
           "$witness+doing",
           "about",
-          "the",
+          "$pin",
           "$light.",
         ],
       },
