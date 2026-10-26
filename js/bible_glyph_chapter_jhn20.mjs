@@ -805,7 +805,7 @@ export function bible_glyph_chapter_jhn20() {
           "you",
           "have",
           "$eye",
-          "Me,",
+          "$me,",
           "you",
           "have",
           "$anchor+doing.",
