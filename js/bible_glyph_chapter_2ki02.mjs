@@ -613,7 +613,7 @@ export function bible_glyph_chapter_2ki02() {
           "your",
           "$kneeling",
           "have",
-          "fifty",
+          "$five+zero",
           "valiant",
           "men.",
           "Please",
