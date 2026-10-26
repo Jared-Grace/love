@@ -975,7 +975,7 @@ export function bible_glyph_chapter_jol02() {
           "$blood,",
           "$face",
           "the",
-          "great",
+          "$top",
           "and",
           "awesome",
           "$sun",
