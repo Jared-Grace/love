@@ -924,7 +924,7 @@ export function bible_glyph_chapter_mrk10() {
         "$son",
         "of",
         "$proper_name$Zebedee,",
-        "came",
+        "$toward+walking+doing",
         "to",
         "$pointing_back",
         "in",
