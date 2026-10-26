@@ -155,7 +155,7 @@ export function bible_glyph_chapter_jon04() {
           "$umbrella_on_ground",
           "to",
           "$eye",
-          "what",
+          "$flashlight+question",
           "would",
           "happen",
           "to",
