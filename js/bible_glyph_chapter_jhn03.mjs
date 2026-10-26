@@ -99,7 +99,7 @@ export function bible_glyph_chapter_jhn03() {
           "he",
           "is",
           "$hatching_chick",
-          "again.”",
+          "$up_arrow+tray_out.”",
         ],
       },
       {
