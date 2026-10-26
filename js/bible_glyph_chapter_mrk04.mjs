@@ -440,7 +440,7 @@ export function bible_glyph_chapter_mrk04() {
           "$toward+alarm_clock+describing.",
           "When",
           "$clamp",
-          "or",
+          "$shuffle",
           "persecution",
           "$butterfly",
           "because",
