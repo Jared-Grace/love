@@ -361,7 +361,7 @@ export function bible_glyph_chapter_jon04() {
           "their",
           "$hand+away,",
           "and",
-          "many",
+          "$multiply",
           "cattle",
           "as",
           "well?",
