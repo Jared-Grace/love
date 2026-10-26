@@ -230,7 +230,7 @@ export function bible_glyph_chapter_1jn01() {
           "with",
           "$arrow_both_ways,",
           "$plus",
-          "the",
+          "$pin",
           "$blood",
           "of",
           "$cross",
