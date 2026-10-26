@@ -797,7 +797,7 @@ export function bible_glyph_chapter_ezk36() {
           "$sparkle+doing",
           "of",
           "My",
-          "great",
+          "$top",
           "name,",
           "which",
           "has",
