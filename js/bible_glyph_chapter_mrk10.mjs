@@ -715,7 +715,7 @@ export function bible_glyph_chapter_mrk10() {
         "has",
         "left",
         "$house",
-        "or",
+        "$shuffle",
         "$brother",
         "or",
         "sisters",
