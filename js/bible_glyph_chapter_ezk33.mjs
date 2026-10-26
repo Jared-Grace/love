@@ -246,7 +246,7 @@ export function bible_glyph_chapter_ezk33() {
           "$speech",
           "from",
           "My",
-          "mouth",
+          "$face_with_open_mouth",
           "and",
           "give",
           "them",
