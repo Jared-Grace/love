@@ -388,7 +388,7 @@ export function bible_glyph_chapter_jol02() {
           "$pointing",
           "He",
           "is",
-          "gracious",
+          "$heart_orange+describing",
           "and",
           "compassionate,",
           "slow",
