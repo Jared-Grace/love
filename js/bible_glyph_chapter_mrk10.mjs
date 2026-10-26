@@ -212,7 +212,7 @@ export function bible_glyph_chapter_mrk10() {
         "$learner",
         "asked",
         "$pointing_back",
-        "about",
+        "$clockwise_arrows",
         "this",
         "matter.",
       ],
