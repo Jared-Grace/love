@@ -1184,7 +1184,7 @@ export function bible_glyph_chapter_mrk12() {
         "$multiply+more",
         "$toward+tray_in",
         "$pin",
-        "treasury",
+        "$money_bag+locked_with_key",
         "than",
         "all",
         "$pin",
