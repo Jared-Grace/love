@@ -350,7 +350,7 @@ export function bible_glyph_chapter_rev01() {
           "you",
           "$eyes",
           "$plus",
-          "send",
+          "$incoming_envelope",
           "it",
           "to",
           "the",
