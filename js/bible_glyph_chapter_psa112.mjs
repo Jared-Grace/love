@@ -67,7 +67,7 @@ export function bible_glyph_chapter_psa112() {
           "his",
           "$ruler+thing",
           "$person+round_pushpin",
-          "forever.",
+          "$clock+all.",
         ],
       },
       {
