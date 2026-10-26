@@ -131,7 +131,7 @@ export function bible_glyph_chapter_jdg13() {
           "to",
           "$eating",
           "$no_entry",
-          "anything",
+          "$all",
           "unclean.",
         ],
       },
