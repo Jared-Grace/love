@@ -87,7 +87,7 @@ export function bible_glyph_chapter_deu30() {
           "according",
           "to",
           "everything",
-          "I",
+          "$me",
           "am",
           "giving",
           "you",
