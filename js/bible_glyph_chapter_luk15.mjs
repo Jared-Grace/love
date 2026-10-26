@@ -526,7 +526,7 @@ export function bible_glyph_chapter_luk15() {
         "while",
         "$pointing_back",
         "was",
-        "still",
+        "$repeat_single_button",
         "in",
         "the",
         "distance,",
