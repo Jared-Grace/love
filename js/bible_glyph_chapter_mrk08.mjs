@@ -444,7 +444,7 @@ export function bible_glyph_chapter_mrk08() {
       {
         verse_number: 18,
         words: [
-          "Having",
+          "$raised_fist",
           "eyes,",
           "do",
           "you",
