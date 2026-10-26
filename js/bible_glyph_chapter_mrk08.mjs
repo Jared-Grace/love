@@ -900,7 +900,7 @@ export function bible_glyph_chapter_mrk08() {
           "to",
           "$footprints",
           "after",
-          "Me,",
+          "$me,",
           "he",
           "must",
           "deny",
