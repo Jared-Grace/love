@@ -220,7 +220,7 @@ export function bible_glyph_chapter_1th01() {
           "$proper_name$Achaia,",
           "$curving_up",
           "$tray_in",
-          "every",
+          "$all",
           "$place",
           "your",
           "$anchor",
