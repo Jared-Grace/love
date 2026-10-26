@@ -838,7 +838,7 @@ export function bible_glyph_chapter_jhn04() {
           "$plus",
           "then",
           "$pin",
-          "harvest",
+          "$harvest",
           "$footprints?",
           "I",
           "$speech",
