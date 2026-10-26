@@ -413,7 +413,7 @@ export function bible_glyph_chapter_luk15() {
         "He",
         "longed",
         "to",
-        "fill",
+        "$battery+jar+doing",
         "$pointing_back",
         "belly",
         "$tray_out",
