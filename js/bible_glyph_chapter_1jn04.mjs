@@ -562,7 +562,7 @@ export function bible_glyph_chapter_1jn04() {
           "does",
           "$no_entry",
           "$heart_red+doing",
-          "his",
+          "$pointing_back",
           "$brother,",
           "whom",
           "he",
