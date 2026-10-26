@@ -282,7 +282,7 @@ export function bible_glyph_chapter_jhn20() {
           "$two",
           "$angel",
           "$tray_in",
-          "white",
+          "$white_circle",
           "sitting",
           "one",
           "at",
