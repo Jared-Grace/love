@@ -35,11 +35,11 @@ export function app_code_braces_colors_next(code) {
       list_shuffle(colors_round);
       let fresh = [];
       let used = [];
-      for (let color of colors_round) {
-        if (list_includes(taken, color)) {
-          list_add(used, color);
+      for (let color_inner of colors_round) {
+        if (list_includes(taken, color_inner)) {
+          list_add(used, color_inner);
         } else {
-          list_add(fresh, color);
+          list_add(fresh, color_inner);
         }
       }
       list_add_multiple(remaining, fresh);
