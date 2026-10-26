@@ -899,7 +899,7 @@ export function bible_glyph_chapter_gen01() {
           "everything",
           "that",
           "creeps",
-          "upon",
+          "$pointing_up",
           "the",
           "$earth,",
           "in",
