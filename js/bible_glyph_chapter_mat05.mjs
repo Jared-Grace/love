@@ -892,7 +892,7 @@ export function bible_glyph_chapter_mat05() {
           "break",
           "your",
           "oath,",
-          "but",
+          "$curving_right",
           "$hands_giving+away",
           "your",
           "vows",
