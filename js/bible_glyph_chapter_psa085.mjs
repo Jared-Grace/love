@@ -151,7 +151,7 @@ export function bible_glyph_chapter_psa085() {
           "$i_am",
           "will",
           "$mouth,",
-          "for",
+          "$pointing",
           "He",
           "will",
           "$mouth",
