@@ -140,7 +140,7 @@ export function bible_glyph_chapter_psa112() {
           "$no_entry",
           "fear",
           "$thumbs_down",
-          "news;",
+          "$ear+loudspeaker+thing;",
           "his",
           "$heart_organ",
           "is",
