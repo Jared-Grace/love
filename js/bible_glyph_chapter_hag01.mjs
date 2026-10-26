@@ -216,7 +216,7 @@ export function bible_glyph_chapter_hag01() {
           "$footprints",
           "$tree,",
           "and",
-          "build",
+          "$brick",
           "the",
           "$house,",
           "so",
