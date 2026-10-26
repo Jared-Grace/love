@@ -143,7 +143,7 @@ export function bible_glyph_chapter_mrk08() {
           "to",
           "sit",
           "down",
-          "on",
+          "$pointing_up",
           "the",
           "$earth.",
           "$plus",
