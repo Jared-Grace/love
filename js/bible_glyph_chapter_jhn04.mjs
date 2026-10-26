@@ -314,7 +314,7 @@ export function bible_glyph_chapter_jhn04() {
           "will",
           "be",
           "thirsty",
-          "again.",
+          "$repeat.",
         ],
       },
       {
