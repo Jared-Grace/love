@@ -574,7 +574,7 @@ export function bible_glyph_chapter_1ki03() {
           "$woman",
           "who",
           "were",
-          "prostitutes",
+          "$broken_heart",
           "$footprints",
           "to",
           "the",
