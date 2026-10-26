@@ -950,7 +950,7 @@ export function bible_glyph_chapter_mrk05() {
         "$proper_name$James",
         "$plus",
         "$proper_name$John",
-        "the",
+        "$pin",
         "$brother",
         "of",
         "$proper_name$James.",
