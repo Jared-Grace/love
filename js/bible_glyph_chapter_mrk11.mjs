@@ -284,7 +284,7 @@ export function bible_glyph_chapter_mrk11() {
         "looked",
         "$clockwise_arrows+eyes+toward",
         "at",
-        "everything,",
+        "$all,",
         "but",
         "since",
         "the",
