@@ -719,7 +719,7 @@ export function bible_glyph_chapter_luk02() {
         "the",
         "moment",
         "the",
-        "parents",
+        "$butterfly+doer",
         "brought",
         "in",
         "the",
