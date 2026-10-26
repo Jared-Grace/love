@@ -793,7 +793,7 @@ export function bible_glyph_chapter_1ki03() {
           "So",
           "they",
           "$mouth",
-          "before",
+          "$face",
           "the",
           "$king.",
         ],
