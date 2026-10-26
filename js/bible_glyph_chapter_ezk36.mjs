@@ -501,7 +501,7 @@ export function bible_glyph_chapter_ezk36() {
       {
         verse_number: 14,
         words: [
-          "therefore",
+          "$right_arrow",
           "you",
           "will",
           "$no_entry",
