@@ -16,7 +16,7 @@ export function bible_glyph_chapter_luk07() {
         "had",
         "concluded",
         "$pointing_back",
-        "discourse",
+        "$speech+thing",
         "in",
         "the",
         "hearing",
