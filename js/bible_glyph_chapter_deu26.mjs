@@ -595,7 +595,7 @@ export function bible_glyph_chapter_deu26() {
       {
         verse_number: 16,
         words: [
-          "This",
+          "$flashlight",
           "$sun",
           "the",
           "$i_am",
