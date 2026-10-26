@@ -556,7 +556,7 @@ export function bible_glyph_chapter_gen01() {
           "$milky_way+doing",
           "the",
           "great",
-          "sea",
+          "$dragon",
           "creatures",
           "and",
           "every",
