@@ -318,7 +318,7 @@ export function bible_glyph_chapter_1ki03() {
           "$family",
           "and",
           "to",
-          "discern",
+          "$brain",
           "between",
           "$thumbs_up",
           "and",
