@@ -604,7 +604,7 @@ export function bible_glyph_chapter_exo20() {
           "$burnt_offering",
           "offerings",
           "and",
-          "peace",
+          "$peace+gift",
           "offerings,",
           "your",
           "$sheep",
