@@ -559,7 +559,7 @@ export function bible_glyph_chapter_mrk05() {
         "$plus",
         "He",
         "was",
-        "beside",
+        "$children_crossing",
         "the",
         "$sea.",
       ],
