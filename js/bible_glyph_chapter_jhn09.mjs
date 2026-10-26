@@ -1036,7 +1036,7 @@ export function bible_glyph_chapter_jhn09() {
         words: [
           "$cross",
           "$speech,",
-          "If",
+          "$traffic_light",
           "you",
           "were",
           "blind,",
