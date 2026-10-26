@@ -179,7 +179,7 @@ export function bible_glyph_chapter_mrk10() {
         "are",
         "no",
         "longer",
-        "two,",
+        "$two,",
         "but",
         "one",
         "$meat.",
