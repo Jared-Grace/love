@@ -197,7 +197,7 @@ export function bible_glyph_chapter_mrk10() {
         "let",
         "$person",
         "$no_entry",
-        "separate.”",
+        "$scissors+away.”",
       ],
     },
     {
