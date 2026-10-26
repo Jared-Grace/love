@@ -242,7 +242,7 @@ export function bible_glyph_chapter_jhn01() {
           "the",
           "$key",
           "to",
-          "become",
+          "$butterfly",
           "$child$ren",
           "of",
           "$heart_on_fire.",
