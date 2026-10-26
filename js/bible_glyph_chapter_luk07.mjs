@@ -549,7 +549,7 @@ export function bible_glyph_chapter_luk07() {
       verse_number: 20,
       words: [
         "When",
-        "the",
+        "$pin",
         "$man_beard",
         "$children_crossing+butterfly",
         "to",
