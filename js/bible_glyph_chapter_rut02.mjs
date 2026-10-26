@@ -806,7 +806,7 @@ export function bible_glyph_chapter_rut02() {
           "to",
           "$hand+sheaf_of_rice+doing",
           "grain",
-          "until",
+          "$finish",
           "the",
           "barley",
           "and",
