@@ -55,7 +55,7 @@ export function app_code_not_wrapped_wrong_say(question, answer, choice) {
   let difference = subtract(long_text.length, 1);
   let inner = long_text.slice(2, difference);
   if (equal(short_text, question)) {
-    let parts = [
+    let said = [
       "Remember: ",
       op,
       " asks the opposite of ",
@@ -70,7 +70,7 @@ export function app_code_not_wrapped_wrong_say(question, answer, choice) {
       bang,
       " around it",
     ];
-    return parts;
+    return said;
   }
   let parts = [
     "Remember: ",
