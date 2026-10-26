@@ -904,7 +904,7 @@ export function bible_glyph_chapter_mrk10() {
         "$fist+skull",
         "Him,",
         "$plus",
-        "after",
+        "$linked_paperclips",
         "three",
         "$sun",
         "He",
