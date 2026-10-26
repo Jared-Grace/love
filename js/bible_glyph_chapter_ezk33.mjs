@@ -347,7 +347,7 @@ export function bible_glyph_chapter_ezk33() {
           "Now",
           "as",
           "for",
-          "you,",
+          "$you,",
           "$son",
           "of",
           "$person,",
