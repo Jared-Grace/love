@@ -396,7 +396,7 @@ export function bible_glyph_chapter_mrk10() {
         "I",
         "$hammer",
         "to",
-        "inherit",
+        "$inheritance+doing",
         "eternal",
         "$sprout?”",
       ],
