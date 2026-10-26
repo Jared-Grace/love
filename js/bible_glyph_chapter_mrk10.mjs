@@ -1413,7 +1413,7 @@ export function bible_glyph_chapter_mrk10() {
         "$speech",
         "to",
         "$pointing_back,",
-        "“Go,",
+        "“$walking+away,",
         "your",
         "$anchor",
         "has",
