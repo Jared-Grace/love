@@ -224,7 +224,7 @@ export function bible_glyph_chapter_jdg13() {
           "he",
           "did",
           "$no_entry",
-          "tell",
+          "$newspaper",
           "me",
           "his",
           "$name_tag.",
