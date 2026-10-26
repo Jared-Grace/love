@@ -154,7 +154,7 @@ export function bible_glyph_chapter_2th01() {
           "of",
           "$heart_on_fire,",
           "for",
-          "which",
+          "$back+flashlight",
           "you",
           "$plus",
           "suffer.",
