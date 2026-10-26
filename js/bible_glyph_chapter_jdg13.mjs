@@ -364,7 +364,7 @@ export function bible_glyph_chapter_jdg13() {
           "the",
           "$woman",
           "ran",
-          "quickly",
+          "$fast_forward+doing",
           "to",
           "tell",
           "her",
