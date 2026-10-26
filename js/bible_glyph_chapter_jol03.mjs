@@ -268,7 +268,7 @@ export function bible_glyph_chapter_jol03() {
           "$sparkle+doing",
           "for",
           "$crossed_swords;",
-          "rouse",
+          "$rooster",
           "the",
           "mighty",
           "men;",
