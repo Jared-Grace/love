@@ -713,7 +713,7 @@ export function bible_glyph_chapter_jer26() {
           "and",
           "seek",
           "the",
-          "favor",
+          "$face",
           "of",
           "the",
           "$i_am,",
