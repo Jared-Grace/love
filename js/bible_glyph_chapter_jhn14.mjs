@@ -156,7 +156,7 @@ export function bible_glyph_chapter_jhn14() {
           "$pin",
           "$road",
           "$plus",
-          "the",
+          "$pin",
           "$check",
           "$plus",
           "the",
