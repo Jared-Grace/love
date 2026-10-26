@@ -57,7 +57,7 @@ export function bible_glyph_chapter_luk07() {
         "When",
         "he",
         "$ear",
-        "about",
+        "$clockwise_arrows",
         "$cross,",
         "he",
         "$hand_sending",
