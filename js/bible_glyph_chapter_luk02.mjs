@@ -326,7 +326,7 @@ export function bible_glyph_chapter_luk02() {
         "$lightning+clock+manner",
         "there",
         "appeared",
-        "with",
+        "$safety_pin",
         "the",
         "$angel",
         "a",
