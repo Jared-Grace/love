@@ -1345,7 +1345,7 @@ export function bible_glyph_chapter_mrk10() {
         "to",
         "$pointing_back,",
         "“Take",
-        "courage!",
+        "$heart_red+flexed_biceps+doing!",
         "Get",
         "up!",
         "He",
