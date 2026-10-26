@@ -206,7 +206,7 @@ export function bible_glyph_chapter_psa111() {
           "beginning",
           "of",
           "$wisdom;",
-          "all",
+          "$all",
           "who",
           "$hammer+doing",
           "His",
