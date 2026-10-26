@@ -575,7 +575,7 @@ export function bible_glyph_chapter_jhn20() {
           "$cross",
           "$speech",
           "$pointing_back",
-          "again,",
+          "$repeat,",
           "$peace",
           "be",
           "with",
