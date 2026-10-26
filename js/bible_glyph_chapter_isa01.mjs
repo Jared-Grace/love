@@ -498,7 +498,7 @@ export function bible_glyph_chapter_isa01() {
       {
         verse_number: 17,
         words: [
-          "Learn",
+          "$learner+doing",
           "to",
           "do",
           "right;",
