@@ -514,7 +514,7 @@ export function bible_glyph_chapter_jhn09() {
         verse_number: 20,
         words: [
           "His",
-          "parents",
+          "$butterfly+doer",
           "$speech+turn_back,",
           "We",
           "$lightbulb",
