@@ -73,7 +73,7 @@ export function bible_glyph_chapter_mrk12() {
         "his",
         "share",
         "of",
-        "the",
+        "$pin",
         "$fruit",
         "of",
         "the",
