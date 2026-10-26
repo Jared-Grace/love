@@ -169,7 +169,7 @@ export function bible_glyph_chapter_luk02() {
         "$tray_in",
         "a",
         "$ox+basket,",
-        "because",
+        "$metro+pointing",
         "there",
         "was",
         "$no_entry",
