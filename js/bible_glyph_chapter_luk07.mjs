@@ -19,7 +19,7 @@ export function bible_glyph_chapter_luk07() {
         "$speech+thing",
         "in",
         "$pin",
-        "hearing",
+        "$ear+loudspeaker+thing",
         "of",
         "$pin",
         "$family,",
