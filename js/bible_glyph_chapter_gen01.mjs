@@ -844,7 +844,7 @@ export function bible_glyph_chapter_gen01() {
           "And",
           "$heart_on_fire",
           "$speech,",
-          "Behold,",
+          "$exclamation,",
           "I",
           "have",
           "given",
