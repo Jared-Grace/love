@@ -1329,7 +1329,7 @@ export function bible_glyph_chapter_mrk10() {
       words: [
         "$plus",
         "$cross",
-        "stopped,",
+        "$person+round_pushpin,",
         "in",
         "$speech,",
         "“Call",
