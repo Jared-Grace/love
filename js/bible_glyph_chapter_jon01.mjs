@@ -62,7 +62,7 @@ export function bible_glyph_chapter_jon01() {
           "got",
           "up",
           "to",
-          "flee",
+          "$dashing_away",
           "to",
           "$proper_name$Tarshish,",
           "away",
