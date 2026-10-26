@@ -79,7 +79,7 @@ export function bible_glyph_chapter_psa099() {
           "have",
           "established",
           "equity;",
-          "You",
+          "$you",
           "have",
           "$hammer+doing",
           "$scales+thing",
