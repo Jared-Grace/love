@@ -1,4 +1,3 @@
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
@@ -6,21 +5,23 @@ import { list_add_multiple } from "./list_add_multiple.mjs";
 import { not } from "./not.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { catch_null } from "./catch_null.mjs";
-import { list_join_newline } from "./list_join_newline.mjs";
 import { list_map } from "./list_map.mjs";
+import { list_join_newline } from "./list_join_newline.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { list_slice } from "./list_slice.mjs";
-import { equal } from "./equal.mjs";
-import { text_slice } from "./text_slice.mjs";
 import { text_size } from "./text_size.mjs";
+import { text_slice } from "./text_slice.mjs";
+import { equal } from "./equal.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_last } from "./list_last.mjs";
 import { text_index_of_last } from "./text_index_of_last.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
+import { list_includes_not } from "./list_includes_not.mjs";
 import { js_value_code } from "./js_value_code.mjs";
 import { list_first } from "./list_first.mjs";
 import { text_index_of_try } from "./text_index_of_try.mjs";
+import { subtract } from "./subtract.mjs";
 import { list_add } from "./list_add.mjs";
 export function app_code_program_lets_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
@@ -60,6 +61,7 @@ export function app_code_program_lets_wrong_say(question, answer, choice) {
   }
   let index = 0;
   let lets_seen = 0;
+  let names = [];
   for (let raw of lines) {
     let line = text_trim(raw);
     index = index + 1;
@@ -80,6 +82,7 @@ export function app_code_program_lets_wrong_say(question, answer, choice) {
       then_add();
       if (
         list_size_1(args) &&
+        list_includes_not(names, inside) &&
         not(equal(inside, js_value_code(list_first(args))))
       ) {
         code_add(inside);
@@ -120,6 +123,7 @@ export function app_code_program_lets_wrong_say(question, answer, choice) {
     let value = list_last(list3);
     let value_code = js_value_code(value);
     lets_seen = lets_seen + 1;
+    list_add(names, name);
     then_add();
     let b2 = equal(side, value_code);
     if (not(b2)) {
