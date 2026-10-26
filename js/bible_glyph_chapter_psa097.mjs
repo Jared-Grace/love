@@ -155,7 +155,7 @@ export function bible_glyph_chapter_psa097() {
           "$woman",
           "of",
           "$hands_raised+proper_name",
-          "exult,",
+          "$woman_dancing,",
           "because",
           "of",
           "Your",
