@@ -18,7 +18,7 @@ export function bible_glyph_chapter_1jn02() {
           "$me",
           "little",
           "children,",
-          "these",
+          "$flashlight",
           "things",
           "I",
           "am",
