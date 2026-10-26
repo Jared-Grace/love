@@ -333,7 +333,7 @@ export function bible_glyph_chapter_deu26() {
           "of",
           "the",
           "$brown_square",
-          "that",
+          "$back+flashlight",
           "You,",
           "O",
           "$i_am,",
