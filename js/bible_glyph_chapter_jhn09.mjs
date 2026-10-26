@@ -750,7 +750,7 @@ export function bible_glyph_chapter_jhn09() {
           "His",
           "$learner;",
           "we",
-          "are",
+          "$link",
           "$learner",
           "of",
           "$fishing_pole+proper_name.",
