@@ -398,7 +398,7 @@ export function bible_glyph_chapter_luk15() {
         "he",
         "$incoming_envelope",
         "$pointing_back",
-        "into",
+        "$toward+tray_in",
         "$pointing_back",
         "$field",
         "to",
