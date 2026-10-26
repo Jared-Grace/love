@@ -205,7 +205,7 @@ export function bible_glyph_chapter_luk15() {
         "them,",
         "does",
         "$no_entry",
-        "light",
+        "$fire+hand",
         "a",
         "lamp",
         "$plus",
