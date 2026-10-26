@@ -636,7 +636,7 @@ export function bible_glyph_chapter_jud01() {
       },
       {
         verse_number: 22,
-        words: ["$plus", "have", "mercy", "on", "those", "who", "doubt;"],
+        words: ["$plus", "have", "mercy", "on", "those", "who", "$metro+scales;"],
       },
       {
         verse_number: 23,
