@@ -80,7 +80,7 @@ export function bible_glyph_chapter_ezk33() {
           "the",
           "$sword",
           "$footprints",
-          "against",
+          "$pointing_up",
           "that",
           "$earth",
           "and",
