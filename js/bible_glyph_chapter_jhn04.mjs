@@ -1184,7 +1184,7 @@ export function bible_glyph_chapter_jhn04() {
         words: [
           "$cross",
           "$speech",
-          "to",
+          "$toward",
           "$pointing_back,",
           "“Unless",
           "you",
