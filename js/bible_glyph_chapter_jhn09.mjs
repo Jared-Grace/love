@@ -749,7 +749,7 @@ export function bible_glyph_chapter_jhn09() {
           "$link",
           "His",
           "$learner;",
-          "we",
+          "$me",
           "$link",
           "$learner",
           "of",
