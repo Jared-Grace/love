@@ -846,7 +846,7 @@ export function bible_glyph_chapter_luk02() {
         "$proper_name$Mary",
         "$pointing_back",
         "$mother,",
-        "“Behold,",
+        "“$exclamation,",
         "this",
         "Child",
         "is",
