@@ -111,7 +111,7 @@ export function bible_glyph_chapter_mrk12() {
         "him",
         "over",
         "the",
-        "head",
+        "$person_gesturing_ok+fist+doing",
         "$plus",
         "treated",
         "him",
