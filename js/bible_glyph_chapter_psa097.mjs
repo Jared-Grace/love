@@ -138,7 +138,7 @@ export function bible_glyph_chapter_psa097() {
           "idols.",
           "$bowing",
           "Him,",
-          "all",
+          "$all",
           "you",
           "$moai!",
         ],
