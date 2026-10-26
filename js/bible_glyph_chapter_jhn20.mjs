@@ -269,7 +269,7 @@ export function bible_glyph_chapter_jhn20() {
           "to",
           "look",
           "into",
-          "the",
+          "$pin",
           "$tomb,",
         ],
       },
