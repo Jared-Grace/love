@@ -83,7 +83,7 @@ export function bible_glyph_chapter_jon03() {
           "a",
           "three",
           "day",
-          "journey.",
+          "$walking+thing.",
         ],
       },
       {
