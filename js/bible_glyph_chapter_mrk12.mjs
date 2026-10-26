@@ -414,7 +414,7 @@ export function bible_glyph_chapter_mrk12() {
         "testing",
         "$me?",
         "Bring",
-        "Me",
+        "$me",
         "a",
         "denarius",
         "to",
