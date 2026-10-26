@@ -129,7 +129,7 @@ export function bible_glyph_chapter_1jn02() {
         words: [
           "$curving_right",
           "whoever",
-          "keeps",
+          "$guard",
           "$pointing_back",
           "$speech,",
           "$tray_in",
