@@ -78,7 +78,7 @@ export function bible_glyph_chapter_mrk08() {
           "will",
           "$tray_out+free_button+doing",
           "$tray_in",
-          "the",
+          "$pin",
           "$road,",
           "$plus",
           "some",
