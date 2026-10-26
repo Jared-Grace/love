@@ -74,7 +74,7 @@ export function bible_glyph_chapter_psa112() {
         verse_number: 4,
         words: [
           "$light",
-          "dawns",
+          "$sun+up_arrow+doing",
           "in",
           "the",
           "$darkness",
