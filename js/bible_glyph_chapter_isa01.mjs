@@ -608,7 +608,7 @@ export function bible_glyph_chapter_isa01() {
         verse_number: 21,
         words: [
           "See",
-          "how",
+          "$question+likeness",
           "the",
           "$anchor",
           "city",
