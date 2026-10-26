@@ -82,7 +82,7 @@ export function bible_glyph_chapter_mrk11() {
       verse_number: 3,
       words: [
         "$plus",
-        "if",
+        "$traffic_light",
         "anyone",
         "$speech",
         "to",
