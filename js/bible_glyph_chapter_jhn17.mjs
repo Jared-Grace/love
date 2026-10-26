@@ -190,7 +190,7 @@ export function bible_glyph_chapter_jhn17() {
           "have",
           "$lightbulb",
           "$pointing",
-          "everything",
+          "$all",
           "You",
           "have",
           "$hands_giving",
