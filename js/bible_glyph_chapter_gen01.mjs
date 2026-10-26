@@ -687,7 +687,7 @@ export function bible_glyph_chapter_gen01() {
           "their",
           "kind,",
           "and",
-          "everything",
+          "$all",
           "that",
           "creeps",
           "on",
