@@ -298,7 +298,7 @@ export function bible_glyph_chapter_luk15() {
       words: [
         "$plus",
         "the",
-        "younger",
+        "$beginner",
         "of",
         "$pointing_back",
         "$speech",
