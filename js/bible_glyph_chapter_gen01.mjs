@@ -91,7 +91,7 @@ export function bible_glyph_chapter_gen01() {
           "$thumbs_up;",
           "and",
           "$heart_on_fire",
-          "separated",
+          "$construction",
           "the",
           "$light",
           "from",
