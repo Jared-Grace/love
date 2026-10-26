@@ -251,7 +251,7 @@ export function bible_glyph_chapter_jon03() {
       {
         verse_number: 9,
         words: [
-          "Who",
+          "$person+question",
           "$lightbulb?",
           "$heart_on_fire",
           "may",
