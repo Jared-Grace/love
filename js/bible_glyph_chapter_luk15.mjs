@@ -635,7 +635,7 @@ export function bible_glyph_chapter_luk15() {
       verse_number: 24,
       words: [
         "$pointing",
-        "this",
+        "$flashlight",
         "$son",
         "of",
         "mine",
