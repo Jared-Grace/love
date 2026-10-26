@@ -41,7 +41,7 @@ export function bible_glyph_chapter_1jn04() {
           "have",
           "gone",
           "out",
-          "into",
+          "$toward+tray_in",
           "$pin",
           "$globe.",
         ],
