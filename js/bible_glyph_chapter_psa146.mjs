@@ -147,7 +147,7 @@ export function bible_glyph_chapter_psa146() {
           "hungry.",
           "The",
           "$i_am",
-          "sets",
+          "$foot+up_arrow+doing",
           "the",
           "prisoners",
           "free.",
