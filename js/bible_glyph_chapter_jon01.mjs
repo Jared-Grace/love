@@ -19,7 +19,7 @@ export function bible_glyph_chapter_jon01() {
           "of",
           "the",
           "$i_am",
-          "came",
+          "$link",
           "to",
           "$dove+proper_name",
           "$son",
