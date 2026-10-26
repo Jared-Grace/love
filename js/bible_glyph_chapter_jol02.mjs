@@ -334,7 +334,7 @@ export function bible_glyph_chapter_jol02() {
           "the",
           "$i_am",
           "is",
-          "great",
+          "$top",
           "and",
           "very",
           "dreadful.",
