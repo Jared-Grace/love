@@ -735,7 +735,7 @@ export function bible_glyph_chapter_jhn04() {
           "they",
           "left",
           "$tray_out",
-          "the",
+          "$pin",
           "$city",
           "$plus",
           "$footprints",
