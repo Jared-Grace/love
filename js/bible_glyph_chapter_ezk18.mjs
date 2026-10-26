@@ -86,7 +86,7 @@ export function bible_glyph_chapter_ezk18() {
       {
         verse_number: 4,
         words: [
-          "Behold,",
+          "$exclamation,",
           "every",
           "$person_other",
           "belongs",
