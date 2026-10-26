@@ -144,7 +144,7 @@ export function bible_glyph_chapter_deu30() {
           "farthest",
           "$sky,",
           "from",
-          "there",
+          "$telescope",
           "the",
           "$i_am",
           "your",
