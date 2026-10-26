@@ -386,7 +386,7 @@ export function bible_glyph_chapter_jud01() {
           "feasting",
           "with",
           "you",
-          "shamelessly,",
+          "$no_entry+fear+manner,",
           "$person+sheep",
           "only",
           "$pointing_back+pointing_back.",
