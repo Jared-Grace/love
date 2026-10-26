@@ -103,7 +103,7 @@ export function bible_glyph_chapter_2th01() {
           "$likeness+plus+plus",
           "is",
           "why",
-          "we",
+          "$me",
           "$pointing_back",
           "boast",
           "$tray_in",
