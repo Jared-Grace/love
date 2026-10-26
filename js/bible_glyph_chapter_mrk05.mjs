@@ -667,7 +667,7 @@ export function bible_glyph_chapter_mrk05() {
         "had",
         "borne",
         "much",
-        "under",
+        "$down_arrow",
         "the",
         "care",
         "of",
