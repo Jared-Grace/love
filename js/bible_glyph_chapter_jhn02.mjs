@@ -471,7 +471,7 @@ export function bible_glyph_chapter_jhn02() {
           "can",
           "You",
           "$television",
-          "us",
+          "$me",
           "$pointing",
           "You",
           "may",
