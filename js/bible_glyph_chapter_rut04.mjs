@@ -406,7 +406,7 @@ export function bible_glyph_chapter_rut04() {
           "of",
           "his",
           "home.",
-          "You",
+          "$you",
           "are",
           "$witness",
           "today.",
