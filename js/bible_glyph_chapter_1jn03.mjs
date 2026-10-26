@@ -417,7 +417,7 @@ export function bible_glyph_chapter_1jn03() {
           "does",
           "$no_entry",
           "$heart_red+doing",
-          "remains",
+          "$pin+doing",
           "$tray_in",
           "$skull.",
         ],
