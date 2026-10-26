@@ -638,7 +638,7 @@ export function bible_glyph_chapter_jol02() {
           "odor",
           "will",
           "ascend.",
-          "For",
+          "$pointing",
           "He",
           "has",
           "$hammer+doing",
