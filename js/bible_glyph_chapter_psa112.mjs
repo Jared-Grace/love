@@ -162,7 +162,7 @@ export function bible_glyph_chapter_psa112() {
           "does",
           "$no_entry",
           "$fear+doing,",
-          "until",
+          "$finish",
           "he",
           "$eye",
           "in",
