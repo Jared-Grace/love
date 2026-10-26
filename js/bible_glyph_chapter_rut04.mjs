@@ -99,7 +99,7 @@ export function bible_glyph_chapter_rut04() {
           "piece",
           "of",
           "land",
-          "that",
+          "$back+flashlight",
           "belonged",
           "to",
           "our",
