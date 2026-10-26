@@ -491,7 +491,7 @@ export function bible_glyph_chapter_1jn03() {
           "$pointing_back",
           "$brother",
           "in",
-          "need,",
+          "$sos_button,",
           "but",
           "withholds",
           "$pointing_back",
