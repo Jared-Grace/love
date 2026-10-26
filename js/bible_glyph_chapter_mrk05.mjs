@@ -461,7 +461,7 @@ export function bible_glyph_chapter_mrk05() {
         "$pointing_back",
         "to",
         "go",
-        "with",
+        "$linked_paperclips",
         "$pointing_back.",
       ],
     },
