@@ -468,7 +468,7 @@ export function bible_glyph_chapter_oba01() {
           "$sun",
           "of",
           "their",
-          "distress.",
+          "$clamp.",
         ],
       },
       {
