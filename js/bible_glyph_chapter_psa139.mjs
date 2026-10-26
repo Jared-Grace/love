@@ -377,7 +377,7 @@ export function bible_glyph_chapter_psa139() {
           "thoughts,",
           "O",
           "$heart_on_fire!",
-          "How",
+          "$flashlight+question",
           "vast",
           "is",
           "their",
