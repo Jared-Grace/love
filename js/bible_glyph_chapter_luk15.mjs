@@ -312,7 +312,7 @@ export function bible_glyph_chapter_luk15() {
         "$pizza",
         "of",
         "the",
-        "estate.",
+        "$house+money_bag.",
         "So",
         "he",
         "divided",
