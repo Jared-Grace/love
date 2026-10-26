@@ -474,7 +474,7 @@ export function bible_glyph_chapter_jdg13() {
           "$no_entry",
           "$eating",
           "anything",
-          "that",
+          "$back+flashlight",
           "$walking+tray_out",
           "from",
           "the",
