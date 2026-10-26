@@ -46,7 +46,7 @@ export function bible_glyph_chapter_jol02() {
           "indeed,",
           "it",
           "is",
-          "near",
+          "$magnet",
           "-",
         ],
       },
