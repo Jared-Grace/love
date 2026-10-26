@@ -636,7 +636,7 @@ export function bible_glyph_chapter_isa01() {
         verse_number: 22,
         words: [
           "Your",
-          "silver",
+          "$silver",
           "has",
           "become",
           "dross;",
