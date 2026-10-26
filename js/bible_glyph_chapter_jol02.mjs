@@ -817,7 +817,7 @@ export function bible_glyph_chapter_jol02() {
           "$eating+top.",
           "You",
           "will",
-          "praise",
+          "$clapping_hands",
           "the",
           "$name_tag",
           "of",
