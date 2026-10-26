@@ -221,7 +221,7 @@ export function bible_glyph_chapter_1jn03() {
           "is",
           "$tray_out",
           "the",
-          "devil,",
+          "$metro+throwing,",
           "$pointing",
           "the",
           "devil",
