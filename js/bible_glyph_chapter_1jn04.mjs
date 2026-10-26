@@ -70,7 +70,7 @@ export function bible_glyph_chapter_1jn04() {
           "the",
           "$meat",
           "is",
-          "from",
+          "$tray_out",
           "$heart_on_fire,",
         ],
       },
