@@ -268,7 +268,7 @@ export function bible_glyph_chapter_jhn02() {
           "$thumbs_up",
           "wine",
           "$finish",
-          "now.”",
+          "$stopwatch.”",
         ],
       },
       {
