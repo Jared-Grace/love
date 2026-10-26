@@ -500,7 +500,7 @@ export function bible_glyph_chapter_1jn04() {
         verse_number: 18,
         words: [
           "There",
-          "is",
+          "$link",
           "$no_entry",
           "$fear",
           "in",
