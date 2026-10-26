@@ -342,7 +342,7 @@ export function bible_glyph_chapter_jol01() {
           "$palm_tree,",
           "and",
           "the",
-          "apple",
+          "$red_apple",
           "-",
           "all",
           "the",
