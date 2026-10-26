@@ -340,7 +340,7 @@ export function bible_glyph_chapter_jhn20() {
           "she",
           "had",
           "$speech",
-          "this,",
+          "$flashlight,",
           "she",
           "turned",
           "around",
