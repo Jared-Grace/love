@@ -906,7 +906,7 @@ export function bible_glyph_chapter_1ki03() {
           "$king,",
           "$pointing",
           "her",
-          "compassion",
+          "$hugging_face",
           "burned",
           "for",
           "her",
