@@ -1046,7 +1046,7 @@ export function bible_glyph_chapter_mrk12() {
         "$speech,",
         "$eyes",
         "for",
-        "the",
+        "$pin",
         "scribes.",
         "They",
         "like",
