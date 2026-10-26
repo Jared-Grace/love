@@ -207,7 +207,7 @@ export function bible_glyph_chapter_psa096() {
           "moved.",
           "He",
           "will",
-          "judge",
+          "$scales+speech+doing",
           "the",
           "$family",
           "with",
