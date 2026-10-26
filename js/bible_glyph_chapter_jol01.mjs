@@ -196,7 +196,7 @@ export function bible_glyph_chapter_jol01() {
           "It",
           "has",
           "laid",
-          "waste",
+          "$astonished+thing",
           "My",
           "grapevine",
           "and",
