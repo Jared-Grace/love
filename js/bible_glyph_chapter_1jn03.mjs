@@ -89,7 +89,7 @@ export function bible_glyph_chapter_1jn03() {
           "we",
           "will",
           "be",
-          "like",
+          "$people_with_bunny_ears",
           "$pointing_back,",
           "$pointing",
           "we",
