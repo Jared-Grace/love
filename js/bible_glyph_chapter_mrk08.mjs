@@ -909,7 +909,7 @@ export function bible_glyph_chapter_mrk08() {
           "$lifting",
           "up",
           "$pointing_back",
-          "cross",
+          "$cross+wood",
           "and",
           "follow",
           "$me.",
