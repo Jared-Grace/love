@@ -251,7 +251,7 @@ export function bible_glyph_chapter_3jn01() {
           "the",
           "$brother",
           "$plus",
-          "forbids",
+          "$stop_sign",
           "those",
           "who",
           "$shooting_star+lightbulb+doing",
