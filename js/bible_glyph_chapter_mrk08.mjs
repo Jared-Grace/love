@@ -183,7 +183,7 @@ export function bible_glyph_chapter_mrk08() {
           "they",
           "had",
           "a",
-          "few",
+          "$dim_button",
           "small",
           "$fish+baby,",
           "$plus",
