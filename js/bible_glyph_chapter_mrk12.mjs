@@ -60,7 +60,7 @@ export function bible_glyph_chapter_mrk12() {
         "$plus",
         "At",
         "harvest",
-        "time",
+        "$alarm_clock",
         "he",
         "$hand_sending",
         "a",
