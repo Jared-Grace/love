@@ -230,7 +230,7 @@ export function bible_glyph_chapter_psa118() {
         words: [
           "They",
           "swarmed",
-          "around",
+          "$around+doing",
           "me",
           "like",
           "bees,",
