@@ -443,7 +443,7 @@ export function bible_glyph_chapter_luk15() {
         "senses",
         "and",
         "said,",
-        "How",
+        "$abacus+question",
         "many",
         "hired",
         "servants",
