@@ -174,7 +174,7 @@ export function bible_glyph_chapter_2jn01() {
           "$away",
           "the",
           "beginning,",
-          "that",
+          "$right_arrow+toward",
           "you",
           "must",
           "$walking",
