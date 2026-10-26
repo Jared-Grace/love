@@ -641,7 +641,7 @@ export function bible_glyph_chapter_jdg13() {
           "and",
           "offered",
           "them",
-          "on",
+          "$pointing_up",
           "a",
           "rock",
           "to",
