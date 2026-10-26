@@ -310,7 +310,7 @@ export function bible_glyph_chapter_jol03() {
         verse_number: 11,
         words: [
           "$footprints",
-          "quickly,",
+          "$running+fast_forward+doing,",
           "all",
           "you",
           "surrounding",
