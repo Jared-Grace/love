@@ -856,7 +856,7 @@ export function bible_glyph_chapter_luk15() {
         "$plus",
         "$smile+doing,",
         "$pointing",
-        "this",
+        "$flashlight",
         "$brother",
         "of",
         "yours",
