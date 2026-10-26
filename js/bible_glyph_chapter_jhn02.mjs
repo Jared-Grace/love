@@ -447,7 +447,7 @@ export function bible_glyph_chapter_jhn02() {
           "$pointing",
           "it",
           "is",
-          "written:",
+          "$writing_hand:",
           "“$face_steam",
           "for",
           "Your",
