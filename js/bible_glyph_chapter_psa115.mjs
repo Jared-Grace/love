@@ -208,7 +208,7 @@ export function bible_glyph_chapter_psa115() {
           "$fear+describing",
           "the",
           "$i_am,",
-          "trust",
+          "$anchor+doing",
           "in",
           "the",
           "$i_am!",
