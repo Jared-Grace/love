@@ -274,7 +274,7 @@ export function bible_glyph_chapter_1jn05() {
           "$heart_on_fire",
           "has",
           "$witness+doing",
-          "about",
+          "$clockwise_arrows",
           "$pointing_back",
           "$son.",
         ],
