@@ -716,7 +716,7 @@ export function bible_glyph_chapter_jhn20() {
           "later",
           "$pointing_back",
           "$learner",
-          "were",
+          "$link",
           "inside",
           "once",
           "$repeat,",
