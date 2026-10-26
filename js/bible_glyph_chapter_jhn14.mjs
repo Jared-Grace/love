@@ -884,7 +884,7 @@ export function bible_glyph_chapter_jhn14() {
           "$curving_up",
           "so",
           "that",
-          "the",
+          "$pin",
           "$globe",
           "may",
           "$lightbulb",
