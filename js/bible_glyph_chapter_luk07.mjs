@@ -251,7 +251,7 @@ export function bible_glyph_chapter_luk07() {
         "$plus",
         "$person+clockwise_arrows+doing",
         "to",
-        "the",
+        "$pin",
         "$crowd",
         "following",
         "$pointing_back",
