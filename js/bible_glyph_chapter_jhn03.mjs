@@ -39,7 +39,7 @@ export function bible_glyph_chapter_jhn03() {
         words: [
           "He",
           "$footprints",
-          "to",
+          "$toward",
           "$pointing_back",
           "at",
           "$night",
