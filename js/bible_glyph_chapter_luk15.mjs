@@ -364,7 +364,7 @@ export function bible_glyph_chapter_luk15() {
         "had,",
         "a",
         "severe",
-        "famine",
+        "$eating+hollow_circle",
         "$butterfly",
         "through",
         "that",
