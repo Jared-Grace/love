@@ -107,7 +107,7 @@ export function bible_glyph_chapter_exo20() {
           "$kneeling+doing",
           "them;",
           "$pointing",
-          "I,",
+          "$me,",
           "the",
           "$i_am",
           "your",
