@@ -90,7 +90,7 @@ export function bible_glyph_chapter_rev01() {
           "this",
           "$megaphone+thing,",
           "$plus",
-          "obey",
+          "$guard",
           "what",
           "is",
           "written",
