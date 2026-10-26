@@ -181,7 +181,7 @@ export function bible_glyph_chapter_psa096() {
           "$dizzy",
           "before",
           "Him,",
-          "all",
+          "$all",
           "the",
           "$earth.",
         ],
