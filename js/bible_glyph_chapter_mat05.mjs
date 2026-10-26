@@ -593,7 +593,7 @@ export function bible_glyph_chapter_mat05() {
           "your",
           "gift",
           "at",
-          "the",
+          "$pin",
           "altar",
           "and",
           "there",
