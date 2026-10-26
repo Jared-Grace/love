@@ -412,7 +412,7 @@ export function bible_glyph_chapter_luk02() {
         "a",
         "hurry",
         "$plus",
-        "found",
+        "$up_arrow+magnifying_glass+exclamation+doing",
         "$proper_name$Mary",
         "$plus",
         "$i_am+plus,",
