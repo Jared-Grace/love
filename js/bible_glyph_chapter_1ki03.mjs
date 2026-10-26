@@ -372,7 +372,7 @@ export function bible_glyph_chapter_1ki03() {
           "have",
           "asked",
           "for",
-          "this",
+          "$flashlight",
           "$speech,",
           "and",
           "have",
