@@ -378,7 +378,7 @@ export function bible_glyph_chapter_mrk08() {
           "out.",
           "$eyes",
           "of",
-          "the",
+          "$pin",
           "leaven",
           "of",
           "the",
