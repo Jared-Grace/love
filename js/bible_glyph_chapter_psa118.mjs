@@ -85,7 +85,7 @@ export function bible_glyph_chapter_psa118() {
           "$i_am;",
           "the",
           "$i_am",
-          "answered",
+          "$speech+turn_back",
           "and",
           "set",
           "me",
