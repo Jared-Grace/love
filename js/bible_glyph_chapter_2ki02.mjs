@@ -400,7 +400,7 @@ export function bible_glyph_chapter_2ki02() {
           "be",
           "yours.",
           "But",
-          "if",
+          "$traffic_light",
           "not,",
           "it",
           "will",
