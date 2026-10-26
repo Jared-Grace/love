@@ -973,7 +973,7 @@ export function bible_glyph_chapter_jhn10() {
           "tried",
           "$repeat",
           "to",
-          "seize",
+          "$hand+clamp",
           "$pointing_back,",
           "$plus",
           "He",
