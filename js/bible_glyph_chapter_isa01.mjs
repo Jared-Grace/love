@@ -392,7 +392,7 @@ export function bible_glyph_chapter_isa01() {
           "$no_entry",
           "$plus+doing;",
           "your",
-          "incense",
+          "$incense",
           "is",
           "detestable",
           "to",
