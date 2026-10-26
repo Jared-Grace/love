@@ -40,7 +40,7 @@ export function bible_glyph_chapter_psa111() {
       {
         verse_number: 2,
         words: [
-          "Great",
+          "$top",
           "are",
           "the",
           "works",
