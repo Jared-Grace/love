@@ -282,7 +282,7 @@ export function bible_glyph_chapter_jhn04() {
           "$hands_giving",
           "us",
           "this",
-          "well",
+          "$well",
           "$plus",
           "$pointing_back",
           "drank",
