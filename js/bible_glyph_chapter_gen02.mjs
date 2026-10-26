@@ -382,7 +382,7 @@ export function bible_glyph_chapter_gen02() {
           "winds",
           "through",
           "the",
-          "whole",
+          "$all",
           "$earth",
           "of",
           "$proper_name$Cush.",
