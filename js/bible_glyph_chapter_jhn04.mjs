@@ -307,7 +307,7 @@ export function bible_glyph_chapter_jhn04() {
           "$pointing_back,",
           "“$all",
           "who",
-          "drinks",
+          "$cup_with_straw",
           "$tray_out",
           "this",
           "$water",
