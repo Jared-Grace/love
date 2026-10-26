@@ -420,7 +420,7 @@ export function bible_glyph_chapter_jhn10() {
           "$link",
           "$no_entry",
           "$tray_out",
-          "this",
+          "$flashlight",
           "$house+hollow_circle.",
           "Them",
           "also",
