@@ -382,7 +382,7 @@ export function bible_glyph_chapter_mrk12() {
         "$tray_out+link",
         "to",
         "$hands_giving",
-        "taxes",
+        "$coin+clipboard",
         "to",
         "$proper_name$Caesar,",
         "or",
