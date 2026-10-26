@@ -783,7 +783,7 @@ export function bible_glyph_chapter_luk24() {
           "$speech",
           "to",
           "$arrow_both_ways,",
-          "Were",
+          "$link",
           "$no_entry",
           "our",
           "$heart_organ",
