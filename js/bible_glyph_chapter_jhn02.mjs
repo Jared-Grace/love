@@ -387,7 +387,7 @@ export function bible_glyph_chapter_jhn02() {
           "$all",
           "$tray_out",
           "the",
-          "temple,",
+          "$classical_building,",
           "$plus",
           "both",
           "the",
