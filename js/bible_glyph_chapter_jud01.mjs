@@ -204,7 +204,7 @@ export function bible_glyph_chapter_jud01() {
           "eternal",
           "$knot+thing",
           "$down_arrow",
-          "darkness",
+          "$fog+new_moon",
           "$toward+tray_in",
           "the",
           "$scales+thing",
