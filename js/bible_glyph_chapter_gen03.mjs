@@ -300,7 +300,7 @@ export function bible_glyph_chapter_gen03() {
           "$toward",
           "the",
           "$person,",
-          "Where",
+          "$question+round_pushpin",
           "are",
           "you?",
         ],
