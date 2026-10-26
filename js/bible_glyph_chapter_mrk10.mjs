@@ -513,7 +513,7 @@ export function bible_glyph_chapter_mrk10() {
         "$sky,",
         "$plus",
         "$waving_hand+round_pushpin,",
-        "follow",
+        "$walking+footprints",
         "Me.”",
       ],
     },
