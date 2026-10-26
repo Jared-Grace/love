@@ -441,7 +441,7 @@ export function bible_glyph_chapter_mrk10() {
         "commit",
         "adultery,",
         "$no_entry",
-        "steal,",
+        "$hand+lying_face,",
         "$no_entry",
         "bear",
         "false",
