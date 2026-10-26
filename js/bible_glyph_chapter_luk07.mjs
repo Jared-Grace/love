@@ -1212,7 +1212,7 @@ export function bible_glyph_chapter_luk07() {
         "and",
         "the",
         "$vs_button",
-        "fifty.",
+        "$five+zero.",
       ],
     },
     {
