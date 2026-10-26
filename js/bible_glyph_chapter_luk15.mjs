@@ -174,7 +174,7 @@ export function bible_glyph_chapter_luk15() {
         "$bow+doer",
         "who",
         "repents",
-        "than",
+        "$shuffle",
         "$pointing_up",
         "ninety",
         "nine",
