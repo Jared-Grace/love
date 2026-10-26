@@ -910,7 +910,7 @@ export function bible_glyph_chapter_jhn14() {
           "go",
           "on",
           "from",
-          "here.",
+          "$round_pushpin+tray_out.",
         ],
       },
     ],
