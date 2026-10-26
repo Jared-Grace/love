@@ -372,7 +372,7 @@ export function bible_glyph_chapter_mrk05() {
         "$plus",
         "they",
         "$footprints",
-        "to",
+        "$toward",
         "$cross",
         "$plus",
         "saw",
