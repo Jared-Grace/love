@@ -115,7 +115,7 @@ export function bible_glyph_chapter_hag02() {
           "the",
           "$i_am.",
           "Be",
-          "strong,",
+          "$might+up_arrow,",
           "O",
           "$i_am+rescue",
           "$son",
