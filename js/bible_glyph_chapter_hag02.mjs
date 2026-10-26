@@ -108,7 +108,7 @@ export function bible_glyph_chapter_hag02() {
           "But",
           "$watch",
           "be",
-          "strong,",
+          "$might+up_arrow,",
           "O",
           "Zerubbabel,",
           "declares",
