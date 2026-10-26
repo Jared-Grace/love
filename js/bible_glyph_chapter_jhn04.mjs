@@ -331,7 +331,7 @@ export function bible_glyph_chapter_jhn04() {
           "$pointing_back",
           "will",
           "never",
-          "thirst",
+          "$tongue+desert+doing",
           "$hourglass.",
           "Indeed,",
           "$pin",
