@@ -843,7 +843,7 @@ export function bible_glyph_chapter_mrk11() {
         "will",
         "ask,",
         "‘$metro",
-        "then",
+        "$right_arrow",
         "did",
         "you",
         "$no_entry",
