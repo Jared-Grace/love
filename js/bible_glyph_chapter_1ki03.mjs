@@ -33,7 +33,7 @@ export function bible_glyph_chapter_1ki03() {
           "He",
           "$footprints",
           "her",
-          "to",
+          "$toward",
           "the",
           "$city",
           "of",
