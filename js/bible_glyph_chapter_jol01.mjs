@@ -47,7 +47,7 @@ export function bible_glyph_chapter_jol01() {
           "Has",
           "anything",
           "like",
-          "this",
+          "$flashlight",
           "ever",
           "happened",
           "in",
