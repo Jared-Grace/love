@@ -265,7 +265,7 @@ export function bible_glyph_chapter_jud01() {
           "way",
           "$flashlight",
           "$dream+doing",
-          "defile",
+          "$pig+doing",
           "the",
           "$meat,",
           "reject",
