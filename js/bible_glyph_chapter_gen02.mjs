@@ -279,7 +279,7 @@ export function bible_glyph_chapter_gen02() {
           "$radio_button",
           "of",
           "the",
-          "garden",
+          "$garden",
           "were",
           "the",
           "$tree",
