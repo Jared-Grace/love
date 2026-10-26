@@ -359,7 +359,7 @@ export function bible_glyph_chapter_jon04() {
           "hand",
           "from",
           "their",
-          "left,",
+          "$hand+away,",
           "and",
           "many",
           "cattle",
