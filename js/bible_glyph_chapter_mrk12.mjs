@@ -547,7 +547,7 @@ export function bible_glyph_chapter_mrk12() {
         "$woman",
         "$plus",
         "$skull,",
-        "leaving",
+        "$balloon",
         "$no_entry",
         "$seed.",
       ],
