@@ -920,7 +920,7 @@ export function bible_glyph_chapter_mrk04() {
           "us",
           "cross",
           "to",
-          "the",
+          "$pin",
           "other",
           "side.",
         ],
