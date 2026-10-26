@@ -288,7 +288,7 @@ export function bible_glyph_chapter_2ki02() {
           "them,",
           "as",
           "the",
-          "two",
+          "$two",
           "of",
           "them",
           "stood",
