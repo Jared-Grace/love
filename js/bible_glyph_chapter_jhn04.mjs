@@ -857,7 +857,7 @@ export function bible_glyph_chapter_jhn04() {
           "$link",
           "ripe",
           "for",
-          "harvest.",
+          "$harvest.",
         ],
       },
       {
