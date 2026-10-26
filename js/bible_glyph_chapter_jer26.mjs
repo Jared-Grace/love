@@ -532,7 +532,7 @@ export function bible_glyph_chapter_jer26() {
           "me",
           "to",
           "$skull+doing,",
-          "you",
+          "$you",
           "will",
           "$hands_giving",
           "innocent",
