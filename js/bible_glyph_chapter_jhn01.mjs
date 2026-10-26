@@ -624,7 +624,7 @@ export function bible_glyph_chapter_jhn01() {
           "$tray_in",
           "$proper_name$Bethany",
           "$bridge",
-          "the",
+          "$pin",
           "$pointing_down+proper_name,",
           "where",
           "$proper_name$John",
