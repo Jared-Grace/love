@@ -730,7 +730,7 @@ export function bible_glyph_chapter_jhn10() {
         words: [
           "My",
           "$father,",
-          "who",
+          "$back+flashlight",
           "has",
           "$hands_giving",
           "them",
