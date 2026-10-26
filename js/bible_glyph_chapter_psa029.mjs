@@ -78,7 +78,7 @@ export function bible_glyph_chapter_psa029() {
           "$i_am",
           "is",
           "over",
-          "many",
+          "$multiply",
           "$water.",
         ],
       },
