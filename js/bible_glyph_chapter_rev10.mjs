@@ -380,7 +380,7 @@ export function bible_glyph_chapter_rev10() {
           "$me",
           "mouth,",
           "but",
-          "when",
+          "$back+clock",
           "I",
           "had",
           "eaten",
