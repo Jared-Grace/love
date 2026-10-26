@@ -688,7 +688,7 @@ export function bible_glyph_chapter_jhn17() {
           "that",
           "they",
           "may",
-          "see",
+          "$eye+doing",
           "my",
           "$star,",
           "which",
