@@ -864,7 +864,7 @@ export function bible_glyph_chapter_jhn10() {
           "$butterfly,",
           "$plus",
           "$pin",
-          "Scripture",
+          "$writing_hand+thing",
           "can$no_entry",
           "be",
           "broken,",
