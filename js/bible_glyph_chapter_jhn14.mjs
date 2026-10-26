@@ -767,7 +767,7 @@ export function bible_glyph_chapter_jhn14() {
           "$hands_giving",
           "to",
           "you",
-          "as",
+          "$likeness",
           "the",
           "$globe",
           "$hands_giving.",
