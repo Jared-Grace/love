@@ -1099,7 +1099,7 @@ export function bible_glyph_chapter_luk24() {
           "$pointing_back",
           "$brain",
           "to",
-          "understand",
+          "$safety_pin+lightbulb+doing",
           "the",
           "Scriptures.",
         ],
