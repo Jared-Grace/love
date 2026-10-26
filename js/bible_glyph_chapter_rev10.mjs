@@ -116,7 +116,7 @@ export function bible_glyph_chapter_rev10() {
       {
         verse_number: 4,
         words: [
-          "When",
+          "$back+clock",
           "the",
           "seven",
           "thunders",
