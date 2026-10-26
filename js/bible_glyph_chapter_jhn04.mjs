@@ -996,7 +996,7 @@ export function bible_glyph_chapter_jhn04() {
         words: [
           "$plus",
           "$multiply",
-          "more",
+          "$multiply+more",
           "$anchor+doing",
           "because",
           "of",
