@@ -802,7 +802,7 @@ export function bible_glyph_chapter_jhn03() {
           "$tray_out",
           "$pin",
           "$earth.",
-          "The",
+          "$pin",
           "One",
           "who",
           "$footprints",
