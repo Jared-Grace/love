@@ -42,7 +42,7 @@ export function bible_glyph_chapter_luk02() {
         "was",
         "the",
         "first",
-        "census,",
+        "$away+writing_hand+thing,",
         "taken",
         "while",
         "$proper_name$Quirinius",
