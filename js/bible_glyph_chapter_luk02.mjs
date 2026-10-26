@@ -853,7 +853,7 @@ export function bible_glyph_chapter_luk02() {
         "appointed",
         "for",
         "the",
-        "fall",
+        "$person+pointing_down+thing",
         "$plus",
         "rise",
         "of",
