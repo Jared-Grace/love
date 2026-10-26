@@ -379,7 +379,7 @@ export function bible_glyph_chapter_mrk08() {
           "$eyes",
           "of",
           "$pin",
-          "leaven",
+          "$bubbles",
           "of",
           "$pin",
           "$proper_name$Pharisees",
