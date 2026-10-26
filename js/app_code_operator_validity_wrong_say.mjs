@@ -19,8 +19,8 @@ export function app_code_operator_validity_wrong_say(question, answer, choice) {
   ("The operator is read off the line rather than handed in by the lesson, so every lesson asking about such lines is answered without being changed, and a lesson about something else is left silent. Not picked: the parser's own complaint, which is written for programmers; one sentence for every line, which would call a line valid without saying why");
   let line = text_to(question);
   let right_answer = text_to(answer);
-  function in_line(operator) {
-    let r = text_includes(line, operator);
+  function in_line(candidate) {
+    let r = text_includes(line, candidate);
     return r;
   }
   function symbol_get(o) {
