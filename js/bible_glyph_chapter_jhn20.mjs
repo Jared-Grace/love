@@ -45,7 +45,7 @@ export function bible_glyph_chapter_jhn20() {
           "been",
           "removed",
           "$tray_out",
-          "the",
+          "$pin",
           "entrance.",
         ],
       },
