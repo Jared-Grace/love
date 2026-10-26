@@ -55,7 +55,7 @@ export function bible_glyph_chapter_rev01() {
           "$back+flashlight",
           "$witness+doing",
           "to",
-          "everything",
+          "$back+abacus",
           "he",
           "$eye:",
           "$pin",
