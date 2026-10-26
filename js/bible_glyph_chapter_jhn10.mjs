@@ -514,7 +514,7 @@ export function bible_glyph_chapter_jhn10() {
           "Again",
           "there",
           "was",
-          "division",
+          "$t_shirt+scissors+thing",
           "$tray_in",
           "the",
           "$menorah",
