@@ -85,7 +85,7 @@ export function bible_glyph_chapter_psa097() {
         words: [
           "The",
           "$mountain",
-          "melt",
+          "$melting_face",
           "like",
           "$candle+droplet",
           "at",
