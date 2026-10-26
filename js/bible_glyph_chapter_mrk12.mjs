@@ -498,7 +498,7 @@ export function bible_glyph_chapter_mrk12() {
       words: [
         "$teacher,",
         "$fishing_pole+proper_name",
-        "wrote",
+        "$writing_hand",
         "for",
         "us",
         "$pointing",
