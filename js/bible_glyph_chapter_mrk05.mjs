@@ -451,7 +451,7 @@ export function bible_glyph_chapter_mrk05() {
         "$toward+tray_in",
         "$pin",
         "$ship,",
-        "the",
+        "$pin",
         "man",
         "who",
         "had",
