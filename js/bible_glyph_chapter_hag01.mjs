@@ -319,7 +319,7 @@ export function bible_glyph_chapter_hag01() {
           "$mountain,",
           "on",
           "the",
-          "grain,",
+          "$wheat+barley,",
           "new",
           "$wine,",
           "and",
