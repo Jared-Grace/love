@@ -310,7 +310,7 @@ export function bible_glyph_chapter_jer26() {
           "$i_am,",
           "$speech",
           "that",
-          "this",
+          "$flashlight",
           "$house",
           "will",
           "become",
