@@ -1068,7 +1068,7 @@ export function bible_glyph_chapter_luk02() {
         "$back+clock",
         "He",
         "was",
-        "twelve",
+        "$one+two",
         "years",
         "old,",
         "$pointing_back",
