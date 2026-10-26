@@ -146,7 +146,7 @@ export function bible_glyph_chapter_psa139() {
           "flee",
           "from",
           "Your",
-          "presence?",
+          "$face?",
         ],
       },
       {
