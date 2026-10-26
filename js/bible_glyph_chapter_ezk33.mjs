@@ -521,7 +521,7 @@ export function bible_glyph_chapter_ezk33() {
           "but",
           "he",
           "then",
-          "trusts",
+          "$anchor+doing",
           "in",
           "his",
           "righteousness",
