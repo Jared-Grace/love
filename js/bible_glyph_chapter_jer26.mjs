@@ -684,7 +684,7 @@ export function bible_glyph_chapter_jer26() {
           "$house",
           "a",
           "wooded",
-          "ridge.",
+          "$snow_capped_mountain.",
         ],
       },
       {
