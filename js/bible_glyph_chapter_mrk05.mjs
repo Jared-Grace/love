@@ -529,7 +529,7 @@ export function bible_glyph_chapter_mrk05() {
         "for",
         "$pointing_back,",
         "$plus",
-        "everyone",
+        "$all",
         "was",
         "amazed.",
       ],
