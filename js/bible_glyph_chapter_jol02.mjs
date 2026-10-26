@@ -828,7 +828,7 @@ export function bible_glyph_chapter_jol02() {
           "$back+flashlight",
           "has",
           "$hammer+doing",
-          "wonders",
+          "$star_struck",
           "for",
           "you.",
           "My",
