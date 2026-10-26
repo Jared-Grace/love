@@ -170,7 +170,7 @@ export function bible_glyph_chapter_jon04() {
           "the",
           "$i_am",
           "$heart_on_fire",
-          "appointed",
+          "$input_numbers+doing",
           "a",
           "vine,",
           "and",
