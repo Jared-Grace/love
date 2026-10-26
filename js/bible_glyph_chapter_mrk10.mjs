@@ -1185,7 +1185,7 @@ export function bible_glyph_chapter_mrk10() {
       verse_number: 44,
       words: [
         "$plus",
-        "whoever",
+        "$back+flashlight",
         "wants",
         "to",
         "be",
