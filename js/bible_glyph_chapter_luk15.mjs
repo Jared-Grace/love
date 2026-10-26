@@ -663,7 +663,7 @@ export function bible_glyph_chapter_luk15() {
       words: [
         "$curving_right",
         "$pointing_back",
-        "older",
+        "$old_man",
         "$son",
         "$link",
         "$tray_in",
