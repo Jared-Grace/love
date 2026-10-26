@@ -233,7 +233,7 @@ export function bible_glyph_chapter_jhn09() {
           "man",
           "kept",
           "$speech,",
-          "I",
+          "$me",
           "am",
           "the",
           "one.",
