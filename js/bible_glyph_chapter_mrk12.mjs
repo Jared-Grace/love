@@ -177,7 +177,7 @@ export function bible_glyph_chapter_mrk12() {
         "the",
         "$earth+tools+doer",
         "$speech",
-        "to",
+        "$toward",
         "one",
         "another,",
         "$pointing",
