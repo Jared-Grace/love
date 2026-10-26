@@ -188,7 +188,7 @@ export function bible_glyph_chapter_3jn01() {
           "$safety_pin+tools+doer",
           "workers",
           "for",
-          "the",
+          "$pin",
           "$check.",
         ],
       },
