@@ -204,7 +204,7 @@ export function bible_glyph_chapter_jhn17() {
         verse_number: 8,
         words: [
           "$pointing",
-          "the",
+          "$pin",
           "words",
           "that",
           "You",
