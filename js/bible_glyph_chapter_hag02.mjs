@@ -180,7 +180,7 @@ export function bible_glyph_chapter_hag02() {
       {
         verse_number: 6,
         words: [
-          "For",
+          "$pointing",
           "this",
           "is",
           "what",
