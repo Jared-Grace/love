@@ -115,7 +115,7 @@ export function bible_glyph_chapter_1jn04() {
         words: [
           "You",
           "are",
-          "from",
+          "$tray_out",
           "$heart_on_fire,",
           "little",
           "children,",
