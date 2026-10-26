@@ -535,7 +535,7 @@ export function bible_glyph_chapter_jhn10() {
           "is",
           "$imp",
           "$plus",
-          "insane.",
+          "$zany_face+doing.",
           "Why",
           "$ear",
           "you",
