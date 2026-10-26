@@ -250,7 +250,7 @@ export function bible_glyph_chapter_1jn02() {
           "the",
           "$light",
           "$plus",
-          "hates",
+          "$face_with_symbols_on_mouth",
           "$pointing_back",
           "$brother",
           "is",
