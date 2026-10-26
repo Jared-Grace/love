@@ -130,7 +130,7 @@ export function bible_glyph_chapter_psa015() {
           "will",
           "$no_entry",
           "be",
-          "shaken",
+          "$vibration_mode+doing",
           "$hourglass.",
         ],
       },
