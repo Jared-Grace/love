@@ -556,7 +556,7 @@ export function bible_glyph_chapter_isa01() {
           "will",
           "become",
           "like",
-          "wool.",
+          "$yarn.",
         ],
       },
       {
