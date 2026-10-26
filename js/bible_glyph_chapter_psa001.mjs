@@ -19,7 +19,7 @@ export function bible_glyph_chapter_psa001() {
           "is",
           "the",
           "$man_beard",
-          "who",
+          "$back+flashlight",
           "does",
           "$no_entry",
           "$walking",
