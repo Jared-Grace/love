@@ -1050,7 +1050,7 @@ export function bible_glyph_chapter_ezk18() {
           "I",
           "take",
           "$no_entry",
-          "pleasure",
+          "$smiling_face_with_hearts+doing",
           "in",
           "anyone’s",
           "$skull,",
