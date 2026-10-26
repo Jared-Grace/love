@@ -370,7 +370,7 @@ export function bible_glyph_chapter_mrk04() {
           "$children_crossing",
           "the",
           "$road,",
-          "where",
+          "$back+round_pushpin",
           "the",
           "$speech",
           "is",
