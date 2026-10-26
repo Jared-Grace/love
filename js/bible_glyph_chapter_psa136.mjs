@@ -69,7 +69,7 @@ export function bible_glyph_chapter_psa136() {
           "alone",
           "$hammer+doing",
           "great",
-          "wonders.",
+          "$star_struck.",
           "His",
           "$gift",
           "endures",
