@@ -587,7 +587,7 @@ export function bible_glyph_chapter_deu30() {
         verse_number: 17,
         words: [
           "But",
-          "if",
+          "$traffic_light",
           "your",
           "$heart_organ",
           "turns",
