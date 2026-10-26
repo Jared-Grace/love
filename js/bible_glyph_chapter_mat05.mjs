@@ -623,7 +623,7 @@ export function bible_glyph_chapter_mat05() {
           "be",
           "reconciled",
           "to",
-          "your",
+          "$you",
           "$brother,",
           "$plus",
           "then",
