@@ -357,7 +357,7 @@ export function bible_glyph_chapter_psa139() {
           "for",
           "me",
           "before",
-          "one",
+          "$one",
           "of",
           "them",
           "came",
