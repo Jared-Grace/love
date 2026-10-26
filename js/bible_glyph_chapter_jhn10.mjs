@@ -598,7 +598,7 @@ export function bible_glyph_chapter_jhn10() {
           "$walking",
           "$tray_in",
           "$pin",
-          "temple",
+          "$classical_building",
           "courts,",
           "$tray_in",
           "$peace+proper_name's",
