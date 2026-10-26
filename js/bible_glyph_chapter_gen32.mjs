@@ -388,7 +388,7 @@ export function bible_glyph_chapter_gen32() {
           "he",
           "$hand_receiving",
           "a",
-          "gift",
+          "$grain_offering",
           "for",
           "his",
           "$brother",
