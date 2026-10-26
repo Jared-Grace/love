@@ -413,7 +413,7 @@ export function bible_glyph_chapter_mrk12() {
         "you",
         "$test_tube",
         "$me?",
-        "Bring",
+        "$shopping_cart",
         "$me",
         "a",
         "denarius",
