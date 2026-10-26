@@ -32,7 +32,7 @@ export function bible_glyph_chapter_jer26() {
           "$hands_raised+proper_name,",
           "this",
           "$speech",
-          "came",
+          "$link",
           "from",
           "the",
           "$i_am:",
