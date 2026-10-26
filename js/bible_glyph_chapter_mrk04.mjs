@@ -532,7 +532,7 @@ export function bible_glyph_chapter_mrk04() {
           "-",
           "$three+ten,",
           "$plus",
-          "sixtyfold,",
+          "$six+zero,",
           "$plus",
           "a",
           "hundredfold.",
