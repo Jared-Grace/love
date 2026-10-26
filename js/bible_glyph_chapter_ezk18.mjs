@@ -467,7 +467,7 @@ export function bible_glyph_chapter_ezk18() {
           "or",
           "retain",
           "a",
-          "pledge,",
+          "$package+locked+thing,",
           "or",
           "commit",
           "robbery.",
