@@ -790,7 +790,7 @@ export function bible_glyph_chapter_mat05() {
           "you",
           "to",
           "sin,",
-          "cut",
+          "$axe+doing",
           "$pointing_back",
           "off",
           "$plus",
