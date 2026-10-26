@@ -962,7 +962,7 @@ export function bible_glyph_chapter_jol02() {
         verse_number: 31,
         words: [
           "The",
-          "sun",
+          "$sun_with_face",
           "will",
           "be",
           "turned",
