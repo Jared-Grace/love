@@ -113,7 +113,7 @@ export function bible_glyph_chapter_jhn09() {
         words: [
           "$back+clock",
           "I",
-          "am",
+          "$link",
           "$tray_in",
           "the",
           "$globe,",
