@@ -408,7 +408,7 @@ export function bible_glyph_chapter_mrk05() {
         "had",
         "$eye",
         "it",
-        "described",
+        "$open_book+speech+doing",
         "to",
         "$pointing_back",
         "what",
