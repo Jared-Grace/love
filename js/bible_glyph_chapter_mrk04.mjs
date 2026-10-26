@@ -488,7 +488,7 @@ export function bible_glyph_chapter_mrk04() {
           "$money_bag,",
           "$plus",
           "the",
-          "desire",
+          "$pointing_up+anger_symbol+thing",
           "for",
           "other",
           "things",
