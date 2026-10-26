@@ -367,7 +367,7 @@ export function bible_glyph_chapter_deu26() {
           "So",
           "you",
           "shall",
-          "rejoice",
+          "$beaming+doing",
           "in",
           "all",
           "the",
