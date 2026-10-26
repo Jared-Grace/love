@@ -716,7 +716,7 @@ export function bible_glyph_chapter_jhn04() {
           "$person",
           "$back+flashlight",
           "$speech",
-          "me",
+          "$me",
           "everything",
           "I",
           "ever",
