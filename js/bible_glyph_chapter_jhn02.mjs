@@ -523,7 +523,7 @@ export function bible_glyph_chapter_jhn02() {
           "$plus",
           "$you",
           "will",
-          "raise",
+          "$person+pointing_up",
           "$pointing_back",
           "up",
           "$tray_in",
