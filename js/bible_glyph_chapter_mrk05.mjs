@@ -515,7 +515,7 @@ export function bible_glyph_chapter_mrk05() {
         "went",
         "$footprints+away",
         "$plus",
-        "began",
+        "$clapper_board",
         "to",
         "proclaim",
         "$tray_in",
