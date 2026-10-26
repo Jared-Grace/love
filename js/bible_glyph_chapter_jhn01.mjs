@@ -1213,7 +1213,7 @@ export function bible_glyph_chapter_jhn01() {
           "$plus",
           "descending",
           "on",
-          "the",
+          "$pin",
           "$son",
           "of",
           "$person.”",
