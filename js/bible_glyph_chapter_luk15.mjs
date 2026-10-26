@@ -338,7 +338,7 @@ export function bible_glyph_chapter_luk15() {
         "$crowd+doing",
         "$plus",
         "journeyed",
-        "to",
+        "$toward+tray_in",
         "a",
         "distant",
         "country,",
