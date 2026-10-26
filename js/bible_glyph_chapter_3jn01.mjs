@@ -289,7 +289,7 @@ export function bible_glyph_chapter_3jn01() {
           "one",
           "who",
           "does",
-          "evil",
+          "$thumbs_down+hand+doing",
           "has",
           "$no_entry",
           "$eye",
