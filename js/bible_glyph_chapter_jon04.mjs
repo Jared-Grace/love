@@ -90,7 +90,7 @@ export function bible_glyph_chapter_jon04() {
         verse_number: 3,
         words: [
           "And",
-          "now,",
+          "$watch,",
           "O",
           "$i_am,",
           "please",
