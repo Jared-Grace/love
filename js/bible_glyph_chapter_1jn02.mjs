@@ -46,7 +46,7 @@ export function bible_glyph_chapter_1jn02() {
           "$cross",
           "$oil,",
           "the",
-          "Righteous",
+          "$ruler",
           "One.",
         ],
       },
