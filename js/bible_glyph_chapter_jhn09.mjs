@@ -349,7 +349,7 @@ export function bible_glyph_chapter_jhn09() {
       {
         verse_number: 15,
         words: [
-          "So",
+          "$right_arrow",
           "$plus",
           "the",
           "$proper_name$Pharisees",
