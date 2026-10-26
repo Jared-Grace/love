@@ -814,7 +814,7 @@ export function bible_glyph_chapter_jol02() {
           "until",
           "you",
           "are",
-          "satisfied.",
+          "$eating+top.",
           "You",
           "will",
           "praise",
