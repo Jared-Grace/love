@@ -338,7 +338,7 @@ export function bible_glyph_chapter_ezk18() {
           "$no_entry",
           "$turn_back",
           "a",
-          "pledge.",
+          "$package+locked+thing.",
           "He",
           "lifts",
           "his",
