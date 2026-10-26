@@ -863,7 +863,7 @@ export function bible_glyph_chapter_exo14() {
           "-",
           "the",
           "entire",
-          "army",
+          "$raised_fist",
           "of",
           "$house+proper_name",
           "that",
