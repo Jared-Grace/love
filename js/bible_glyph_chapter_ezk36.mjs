@@ -556,7 +556,7 @@ export function bible_glyph_chapter_ezk36() {
           "$map",
           "to",
           "$hiking_boot+rock,",
-          "declares",
+          "$microphone",
           "the",
           "$crown",
           "$i_am.",
