@@ -202,7 +202,7 @@ export function bible_glyph_chapter_2ki02() {
           "from",
           "you?",
           "$plus,",
-          "I",
+          "$me",
           "$lightbulb,",
           "he",
           "$speech.",
