@@ -409,7 +409,7 @@ export function bible_glyph_chapter_luk24() {
           "$you",
           "the",
           "$one+describing",
-          "visitor",
+          "$children_crossing+house+doing",
           "to",
           "$city+peace",
           "$plus",
