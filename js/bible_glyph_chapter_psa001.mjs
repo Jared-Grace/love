@@ -148,7 +148,7 @@ export function bible_glyph_chapter_psa001() {
       {
         verse_number: 6,
         words: [
-          "For",
+          "$pointing",
           "the",
           "$i_am",
           "$lightbulb",
