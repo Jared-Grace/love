@@ -231,7 +231,7 @@ export function bible_glyph_chapter_1jn02() {
           "is",
           "fading",
           "$plus",
-          "the",
+          "$pin",
           "true",
           "$light",
           "is",
