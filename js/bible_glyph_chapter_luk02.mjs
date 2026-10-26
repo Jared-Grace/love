@@ -1138,7 +1138,7 @@ export function bible_glyph_chapter_luk02() {
         "their",
         "$dna+person",
         "$plus",
-        "friends.",
+        "$lightbulb+describing.",
       ],
     },
     {
