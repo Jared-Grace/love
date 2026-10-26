@@ -463,7 +463,7 @@ export function bible_glyph_chapter_jol02() {
           "assemble",
           "the",
           "aged;",
-          "gather",
+          "$crowd+doing",
           "the",
           "children,",
           "even",
