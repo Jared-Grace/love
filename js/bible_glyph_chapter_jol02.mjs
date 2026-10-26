@@ -680,7 +680,7 @@ export function bible_glyph_chapter_jol02() {
           "of",
           "the",
           "$field,",
-          "for",
+          "$pointing",
           "the",
           "open",
           "pastures",
