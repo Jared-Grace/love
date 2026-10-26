@@ -36,7 +36,7 @@ export function bible_glyph_chapter_psa023() {
           "down",
           "in",
           "green",
-          "pastures;",
+          "$field+sheep;",
           "He",
           "leads",
           "me",
