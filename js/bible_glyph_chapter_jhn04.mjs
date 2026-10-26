@@ -851,7 +851,7 @@ export function bible_glyph_chapter_jhn04() {
           "look",
           "at",
           "$pin",
-          "fields,",
+          "$map+round_pushpin,",
           "$pointing",
           "they",
           "$link",
