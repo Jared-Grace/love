@@ -437,7 +437,7 @@ export function bible_glyph_chapter_luk02() {
         "made",
         "known",
         "$pin",
-        "message",
+        "$speech+thing",
         "$mouth",
         "to",
         "$pointing_back",
