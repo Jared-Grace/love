@@ -1,16 +1,15 @@
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { text_trim } from "./text_trim.mjs";
 import { text_to } from "./text_to.mjs";
-import { js_tokenizer_normalized } from "./js_tokenizer_normalized.mjs";
-import { catch_null } from "./catch_null.mjs";
+import { text_trim } from "./text_trim.mjs";
+import { js_tokenizer_normalized_or_null } from "./js_tokenizer_normalized_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { js_string_quote } from "./js_string_quote.mjs";
 import { text_size } from "./text_size.mjs";
-import { equal } from "./equal.mjs";
 import { text_slice } from "./text_slice.mjs";
+import { equal } from "./equal.mjs";
+import { subtract } from "./subtract.mjs";
 export function app_code_string_value_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("said when a learner picks a wrong value for a string standing alone: the quote marks only show where the string starts and ends, so its value is what is between them, spaces and all, as parts that take turns between words and code. null for anything but one string in double quotes whose inside is the right answer");
@@ -18,11 +17,7 @@ export function app_code_string_value_wrong_say(question, answer, choice) {
   let message = text_to(question);
   let code = text_trim(message);
   let right = text_to(answer);
-  function tokens_get() {
-    let tokens = js_tokenizer_normalized(code);
-    return tokens;
-  }
-  let tokens = catch_null(tokens_get);
+  let tokens = js_tokenizer_normalized_or_null(code);
   if (null_is(tokens) || not(list_size_1(tokens))) {
     return null;
   }

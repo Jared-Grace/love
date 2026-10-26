@@ -1,15 +1,14 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_to } from "./text_to.mjs";
-import { js_tokenizer_normalized } from "./js_tokenizer_normalized.mjs";
-import { catch_null } from "./catch_null.mjs";
+import { js_tokenizer_normalized_or_null } from "./js_tokenizer_normalized_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { not } from "./not.mjs";
 import { list_get } from "./list_get.mjs";
-import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_find_or_null } from "./list_find_or_null.mjs";
+import { equal } from "./equal.mjs";
 import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
+import { list_find_or_null } from "./list_find_or_null.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 export function app_code_function_call_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
@@ -17,16 +16,8 @@ export function app_code_function_call_wrong_say(question, answer, choice) {
   ("Not picked: naming what is wrong with the pick; a wrong pick may have the wrong function, the wrong numbers or both, and the rule with the right rewriting beside it answers all three");
   let code = text_to(question);
   let right = text_to(answer);
-  function tokens_get(text) {
-    function get() {
-      let tokens = js_tokenizer_normalized(text);
-      return tokens;
-    }
-    let tokens = catch_null(get);
-    return tokens;
-  }
-  let a = tokens_get(code);
-  let b = tokens_get(right);
+  let a = js_tokenizer_normalized_or_null(code);
+  let b = js_tokenizer_normalized_or_null(right);
   if (null_is(a) || null_is(b)) {
     return null;
   }
