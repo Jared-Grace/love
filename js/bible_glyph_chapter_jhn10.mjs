@@ -193,7 +193,7 @@ export function bible_glyph_chapter_jhn10() {
           "$pointing",
           "I",
           "$link",
-          "the",
+          "$pin",
           "$door",
           "for",
           "the",
