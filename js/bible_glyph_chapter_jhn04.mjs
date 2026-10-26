@@ -510,7 +510,7 @@ export function bible_glyph_chapter_jhn04() {
           "$woman,",
           "$pointing",
           "a",
-          "time",
+          "$clock",
           "$footprints",
           "when",
           "you",
