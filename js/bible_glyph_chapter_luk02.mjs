@@ -911,7 +911,7 @@ export function bible_glyph_chapter_luk02() {
         "$proper_name$Phanuel,",
         "$tray_out",
         "the",
-        "tribe",
+        "$camp",
         "of",
         "$proper_name$Asher,",
         "well",
