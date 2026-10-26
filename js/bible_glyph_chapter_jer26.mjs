@@ -47,7 +47,7 @@ export function bible_glyph_chapter_jer26() {
           "the",
           "$i_am",
           "$speech:",
-          "Stand",
+          "$person+round_pushpin",
           "in",
           "the",
           "courtyard",
