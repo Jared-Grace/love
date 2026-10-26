@@ -7,6 +7,7 @@ import { html_div_text } from "./html_div_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_code_braces_sequence } from "./app_code_braces_sequence.mjs";
+import { app_code_braces_order_wrong_say } from "./app_code_braces_order_wrong_say.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
 import { app_code_lesson_quiz_braces_order_plain } from "./app_code_lesson_quiz_braces_order_plain.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
@@ -48,6 +49,7 @@ export function app_code_lesson_braces_among_plain_generic(
     answer_label: "Which are its braces, in order?",
     answer_on_button: html_text_set_code_dark_lines,
     answer_count_override: null,
+    wrong_say: app_code_braces_order_wrong_say,
   };
   let backwards = {
     question_label: "Braces:",
@@ -55,6 +57,7 @@ export function app_code_lesson_braces_among_plain_generic(
     answer_label: "Which code has these braces, in order?",
     answer_on_button: html_text_set_code_dark_lines,
     answer_count_override: null,
+    wrong_say: app_code_braces_order_wrong_say,
   };
   let quizzes_get = app_code_lesson_quizzes_generic({
     lines: false,

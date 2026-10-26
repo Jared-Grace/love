@@ -18,6 +18,7 @@ import { list_map } from "./list_map.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_code_code_dark_lines_brace_marked } from "./app_code_code_dark_lines_brace_marked.mjs";
+import { app_code_brace_pair_wrong_say } from "./app_code_brace_pair_wrong_say.mjs";
 import { app_code_lesson_quizzes_unscramble } from "./app_code_lesson_quizzes_unscramble.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_brace_pair_example_choose } from "./app_code_brace_pair_example_choose.mjs";
@@ -104,6 +105,7 @@ export function app_code_lesson_brace_pair_generic(
     answer_on_button: painter,
     answer_count_override: pairs,
     decoys,
+    wrong_say: app_code_brace_pair_wrong_say,
   };
   let quizzes_get = app_code_lesson_quizzes_unscramble({
     batch_get: batch,
