@@ -496,7 +496,7 @@ export function bible_glyph_chapter_jol02() {
           "before",
           "the",
           "$i_am",
-          "weep",
+          "$loudly_crying",
           "$brain+arrow_both_ways",
           "the",
           "$classical_building+door",
