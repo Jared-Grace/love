@@ -418,7 +418,7 @@ export function bible_glyph_chapter_mrk04() {
           "$fast_forward",
           "$hand_receiving",
           "$pointing_back",
-          "with",
+          "$linked_paperclips",
           "$smile.",
         ],
       },
