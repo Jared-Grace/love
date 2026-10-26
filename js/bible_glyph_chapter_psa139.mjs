@@ -44,7 +44,7 @@ export function bible_glyph_chapter_psa139() {
           "I",
           "rise;",
           "You",
-          "understand",
+          "$brain",
           "my",
           "thoughts",
           "from",
