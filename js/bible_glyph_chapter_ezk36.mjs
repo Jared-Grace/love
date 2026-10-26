@@ -318,7 +318,7 @@ export function bible_glyph_chapter_ezk36() {
           "$wrestling+heart_on_fire,",
           "will",
           "$hands_giving",
-          "branches",
+          "$tree+leaf",
           "and",
           "$lifting",
           "$fruit",
