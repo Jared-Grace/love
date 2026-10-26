@@ -683,7 +683,7 @@ export function bible_glyph_chapter_jol02() {
           "$pointing",
           "the",
           "open",
-          "pastures",
+          "$field+sheep",
           "have",
           "turned",
           "green;",
