@@ -602,7 +602,7 @@ export function bible_glyph_chapter_jhn03() {
           "because",
           "the",
           "$water",
-          "was",
+          "$link",
           "plentiful",
           "there,",
           "$plus",
