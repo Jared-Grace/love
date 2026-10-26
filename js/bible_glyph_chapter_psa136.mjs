@@ -335,7 +335,7 @@ export function bible_glyph_chapter_psa136() {
           "$earth",
           "as",
           "an",
-          "inheritance.",
+          "$inheritance.",
           "His",
           "$gift",
           "endures",
