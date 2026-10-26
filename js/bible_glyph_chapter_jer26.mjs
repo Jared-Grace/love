@@ -526,7 +526,7 @@ export function bible_glyph_chapter_jer26() {
           "for",
           "certain",
           "that",
-          "if",
+          "$traffic_light",
           "you",
           "put",
           "me",
