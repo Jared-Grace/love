@@ -390,7 +390,7 @@ export function bible_glyph_chapter_mrk12() {
         "Should",
         "we",
         "$hands_giving,",
-        "or",
+        "$shuffle",
         "should",
         "we",
         "not",
