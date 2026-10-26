@@ -1055,7 +1055,7 @@ export function bible_glyph_chapter_ezk33() {
           "no",
           "one",
           "will",
-          "pass",
+          "$bridge",
           "through.",
         ],
       },
