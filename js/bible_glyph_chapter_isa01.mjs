@@ -269,7 +269,7 @@ export function bible_glyph_chapter_isa01() {
           "of",
           "Hosts",
           "had",
-          "left",
+          "$takeout_box+doing",
           "us",
           "a",
           "few",
