@@ -445,7 +445,7 @@ export function bible_glyph_chapter_mrk11() {
         "would",
         "$no_entry",
         "allow",
-        "anyone",
+        "$joker",
         "to",
         "carry",
         "merchandise",
