@@ -229,7 +229,7 @@ export function bible_glyph_chapter_jhn03() {
           "everyone",
           "born",
           "$tray_out",
-          "the",
+          "$pin",
           "$wind.",
         ],
       },
