@@ -596,7 +596,7 @@ export function bible_glyph_chapter_jhn04() {
           "His",
           "$bowing",
           "ones",
-          "must",
+          "$knot",
           "$bowing",
           "$tray_in",
           "$wind",
