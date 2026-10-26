@@ -1001,7 +1001,7 @@ export function bible_glyph_chapter_jhn01() {
           "$toward+tray_in",
           "$proper_name$Galilee.",
           "$plus",
-          "finding",
+          "$magnifying_glass+exclamation",
           "$proper_name$Philip,",
           "$cross",
           "$speech",
