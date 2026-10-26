@@ -885,7 +885,7 @@ export function bible_glyph_chapter_jhn04() {
           "$harvest+doing",
           "may",
           "$smile+doing",
-          "together.",
+          "$crowd+round_pushpin.",
         ],
       },
       {
