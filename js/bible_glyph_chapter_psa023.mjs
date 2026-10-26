@@ -123,7 +123,7 @@ export function bible_glyph_chapter_psa023() {
           "my",
           "head",
           "with",
-          "oil;",
+          "$lotion_bottle;",
           "my",
           "$cup",
           "overflows.",
