@@ -73,7 +73,7 @@ export function bible_glyph_chapter_hag01() {
           "$family",
           "$speech,",
           "The",
-          "time",
+          "$clock",
           "has",
           "$no_entry",
           "$footprints",
