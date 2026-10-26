@@ -28,7 +28,7 @@ export function bible_glyph_chapter_1jn03() {
           "$father",
           "has",
           "$hands_giving",
-          "us,",
+          "$me,",
           "that",
           "we",
           "should",
