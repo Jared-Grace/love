@@ -442,7 +442,7 @@ export function bible_glyph_chapter_1jn03() {
           "does",
           "$no_entry",
           "have",
-          "eternal",
+          "$hourglass+describing",
           "$sprout",
           "residing",
           "$tray_in",
