@@ -305,7 +305,7 @@ export function bible_glyph_chapter_luk24() {
           "$walking",
           "$toward+tray_in",
           "a",
-          "village",
+          "$houses",
           "$name_tag",
           "$proper_name$Emmaus,",
           "about",
