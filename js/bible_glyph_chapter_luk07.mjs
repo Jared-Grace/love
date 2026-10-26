@@ -646,7 +646,7 @@ export function bible_glyph_chapter_luk07() {
         "cleansed",
         "$plus",
         "the",
-        "deaf",
+        "$ear+locked",
         "$ear,",
         "the",
         "$skull",
