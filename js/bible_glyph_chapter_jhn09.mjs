@@ -329,7 +329,7 @@ export function bible_glyph_chapter_jhn09() {
       {
         verse_number: 14,
         words: [
-          "Now",
+          "$curving_right",
           "it",
           "$link",
           "a",
