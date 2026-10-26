@@ -342,7 +342,7 @@ export function bible_glyph_chapter_mrk05() {
       words: [
         "$plus",
         "those",
-        "tending",
+        "$sheep+fork_and_knife+doing",
         "$pointing_back",
         "ran",
         "off",
