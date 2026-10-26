@@ -684,7 +684,7 @@ export function bible_glyph_chapter_rut01() {
           "the",
           "$proper_name$Moabitess.",
           "And",
-          "they",
+          "$pointing_back",
           "$footprints",
           "in",
           "Bethlehem",
