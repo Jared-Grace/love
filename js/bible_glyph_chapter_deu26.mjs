@@ -323,7 +323,7 @@ export function bible_glyph_chapter_deu26() {
         verse_number: 10,
         words: [
           "And",
-          "now,",
+          "$watch,",
           "behold,",
           "I",
           "have",
