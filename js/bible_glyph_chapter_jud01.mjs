@@ -380,7 +380,7 @@ export function bible_glyph_chapter_jud01() {
           "hidden",
           "reefs",
           "$tray_in",
-          "your",
+          "$you",
           "$heart_red",
           "feasts,",
           "feasting",
