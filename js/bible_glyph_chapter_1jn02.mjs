@@ -523,7 +523,7 @@ export function bible_glyph_chapter_1jn02() {
           "it",
           "is",
           "the",
-          "last",
+          "$end_arrow+describing",
           "hour,",
           "$plus",
           "just",
