@@ -436,7 +436,7 @@ export function bible_glyph_chapter_jol02() {
       {
         verse_number: 15,
         words: [
-          "Blow",
+          "$trumpet+doing",
           "the",
           "ram's",
           "horn",
