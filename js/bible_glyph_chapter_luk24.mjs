@@ -201,7 +201,7 @@ export function bible_glyph_chapter_luk24() {
           "these",
           "things",
           "to",
-          "the",
+          "$pin",
           "Eleven",
           "$plus",
           "to",
