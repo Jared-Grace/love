@@ -414,7 +414,7 @@ export function bible_glyph_chapter_jdg13() {
           "$toward",
           "my",
           "$woman?”",
-          "“I",
+          "“$me",
           "am,”",
           "he",
           "$speech.",
