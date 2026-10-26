@@ -882,7 +882,7 @@ export function bible_glyph_chapter_jhn09() {
           "were",
           "$hatching_chick",
           "$tray_in",
-          "utter",
+          "$hollow_circle",
           "$bow,",
           "$plus",
           "$you",
