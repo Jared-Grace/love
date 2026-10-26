@@ -110,7 +110,7 @@ export function bible_glyph_chapter_2jn01() {
           "$tray_in",
           "the",
           "$check,",
-          "just",
+          "$likeness",
           "as",
           "we",
           "$hand_receiving",
