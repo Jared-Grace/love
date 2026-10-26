@@ -259,7 +259,7 @@ export function bible_glyph_chapter_mrk12() {
         "$brick",
         "$microscope+thumbs_down+doing",
         "has",
-        "become",
+        "$butterfly",
         "the",
         "cornerstone;",
       ],
