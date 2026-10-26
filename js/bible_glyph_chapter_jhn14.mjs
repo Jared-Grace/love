@@ -614,7 +614,7 @@ export function bible_glyph_chapter_jhn14() {
           "$pointing",
           "are",
           "You",
-          "going",
+          "$soon",
           "to",
           "reveal",
           "$you+pointing_back",
