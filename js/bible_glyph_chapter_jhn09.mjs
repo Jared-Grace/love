@@ -138,7 +138,7 @@ export function bible_glyph_chapter_jhn09() {
           "$mouth+droplet+doing",
           "on",
           "the",
-          "ground,",
+          "$down_arrow+earth,",
           "$hammer",
           "mud",
           "$tray_out",
