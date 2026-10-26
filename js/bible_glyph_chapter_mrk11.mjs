@@ -624,7 +624,7 @@ export function bible_glyph_chapter_mrk11() {
         "anyone",
         "$speech",
         "to",
-        "this",
+        "$flashlight",
         "$mountain,",
         "‘Be",
         "lifted",
