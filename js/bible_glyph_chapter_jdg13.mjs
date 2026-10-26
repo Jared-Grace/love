@@ -305,7 +305,7 @@ export function bible_glyph_chapter_jdg13() {
           "us",
           "$repeat",
           "to",
-          "teach",
+          "$bow+toward",
           "us",
           "what",
           "to",
