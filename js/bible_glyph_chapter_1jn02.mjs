@@ -603,7 +603,7 @@ export function bible_glyph_chapter_1jn02() {
           "you",
           "have",
           "an",
-          "anointing",
+          "$oil+thing",
           "$away",
           "the",
           "$sparkle",
