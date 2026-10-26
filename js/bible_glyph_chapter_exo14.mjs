@@ -873,7 +873,7 @@ export function bible_glyph_chapter_exo14() {
           "the",
           "$sea.",
           "$no_entry",
-          "one",
+          "$one",
           "of",
           "them",
           "$puzzle_piece+doing.",
