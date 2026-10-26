@@ -155,7 +155,7 @@ export function bible_glyph_chapter_2jn01() {
           "$flashlight",
           "$link",
           "$heart_red,",
-          "that",
+          "$right_arrow+toward",
           "we",
           "$walking",
           "$pointing_down",
