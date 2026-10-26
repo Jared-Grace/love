@@ -698,7 +698,7 @@ export function bible_glyph_chapter_gen02() {
           "be",
           "called",
           "$woman,",
-          "for",
+          "$pointing",
           "out",
           "of",
           "$man_beard",
