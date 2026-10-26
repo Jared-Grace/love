@@ -52,7 +52,7 @@ export function bible_glyph_chapter_rev01() {
       {
         verse_number: 2,
         words: [
-          "who",
+          "$back+flashlight",
           "$witness+doing",
           "to",
           "everything",
