@@ -284,7 +284,7 @@ export function bible_glyph_chapter_2jn01() {
           "does",
           "$no_entry",
           "bring",
-          "this",
+          "$flashlight",
           "teaching,",
           "$no_entry",
           "$hand_receiving",
