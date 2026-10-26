@@ -213,7 +213,7 @@ export function bible_glyph_chapter_mrk12() {
         "$pointing_back",
         "out",
         "of",
-        "the",
+        "$pin",
         "vineyard.",
       ],
     },
