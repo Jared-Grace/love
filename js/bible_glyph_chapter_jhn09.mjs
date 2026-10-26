@@ -958,7 +958,7 @@ export function bible_glyph_chapter_jhn09() {
           "$pin",
           "One",
           "$mouth",
-          "with",
+          "$linked_paperclips",
           "you.",
         ],
       },
