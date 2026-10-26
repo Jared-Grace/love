@@ -264,7 +264,7 @@ export function bible_glyph_chapter_mrk11() {
         "$proper_name$Hosanna",
         "$tray_in",
         "$pin",
-        "highest!”",
+        "$giraffe+describing!”",
       ],
     },
     {
