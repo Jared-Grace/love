@@ -1046,7 +1046,7 @@ export function bible_glyph_chapter_ezk36() {
           "$repeat",
           "$hand_receiving",
           "the",
-          "reproach",
+          "$face_with_rolling_eyes",
           "of",
           "famine",
           "among",
