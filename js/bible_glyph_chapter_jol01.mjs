@@ -526,7 +526,7 @@ export function bible_glyph_chapter_jol01() {
           "$flashlight+question",
           "the",
           "cattle",
-          "groan!",
+          "$face_exhaling+voice+doing!",
           "The",
           "herds",
           "wander",
