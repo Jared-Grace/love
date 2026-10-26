@@ -453,7 +453,7 @@ export function bible_glyph_chapter_deu30() {
           "it",
           "is",
           "$no_entry",
-          "beyond",
+          "$bridge+thing",
           "the",
           "$sea,",
           "that",
