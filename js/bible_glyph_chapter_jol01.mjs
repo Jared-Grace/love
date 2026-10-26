@@ -344,7 +344,7 @@ export function bible_glyph_chapter_jol01() {
           "the",
           "$red_apple",
           "-",
-          "all",
+          "$all",
           "the",
           "$tree",
           "of",
