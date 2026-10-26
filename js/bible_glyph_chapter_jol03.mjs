@@ -49,7 +49,7 @@ export function bible_glyph_chapter_jol03() {
           "$valley",
           "of",
           "$i_am+scales.",
-          "There",
+          "$telescope",
           "I",
           "will",
           "enter",
