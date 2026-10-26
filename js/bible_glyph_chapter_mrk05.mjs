@@ -722,7 +722,7 @@ export function bible_glyph_chapter_mrk05() {
         "“$traffic_light",
         "I",
         "only",
-        "touch",
+        "$fire+hand+doing",
         "$pointing_back",
         "$garment,",
         "I",
