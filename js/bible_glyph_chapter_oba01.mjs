@@ -523,7 +523,7 @@ export function bible_glyph_chapter_oba01() {
           "$map",
           "will",
           "drink",
-          "continually.",
+          "$clock+infinity.",
           "They",
           "will",
           "drink",
