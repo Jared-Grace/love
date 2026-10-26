@@ -65,7 +65,7 @@ export function bible_glyph_chapter_jud01() {
           "I",
           "was",
           "$hammer",
-          "every",
+          "$all",
           "effort",
           "to",
           "write",
