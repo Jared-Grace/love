@@ -20,7 +20,7 @@ export function bible_glyph_chapter_psa015() {
           "abide",
           "in",
           "Your",
-          "tent?",
+          "$tent?",
           "$person+question",
           "may",
           "dwell",
