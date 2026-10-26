@@ -470,7 +470,7 @@ export function bible_glyph_chapter_gen03() {
           "I",
           "will",
           "put",
-          "enmity",
+          "$enemy+thing",
           "between",
           "you",
           "and",
