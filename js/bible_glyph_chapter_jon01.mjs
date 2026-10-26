@@ -263,7 +263,7 @@ export function bible_glyph_chapter_jon01() {
       {
         verse_number: 8,
         words: [
-          "Tell",
+          "$newspaper",
           "us",
           "now,",
           "they",
