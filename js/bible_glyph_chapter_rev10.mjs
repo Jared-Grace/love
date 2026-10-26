@@ -400,7 +400,7 @@ export function bible_glyph_chapter_rev10() {
           "to",
           "$me,",
           "You",
-          "must",
+          "$knot",
           "prophesy",
           "again",
           "about",
