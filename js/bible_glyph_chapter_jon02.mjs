@@ -137,7 +137,7 @@ export function bible_glyph_chapter_jon02() {
           "$adhesive_bandage+doing",
           "around",
           "my",
-          "head.",
+          "$person_gesturing_ok.",
         ],
       },
       {
