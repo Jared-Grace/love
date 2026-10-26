@@ -90,7 +90,7 @@ export function bible_glyph_chapter_rut02() {
           "$field",
           "and",
           "gleaned",
-          "after",
+          "$next_track",
           "the",
           "harvesters.",
           "And",
