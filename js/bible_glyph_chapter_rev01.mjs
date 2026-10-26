@@ -499,7 +499,7 @@ export function bible_glyph_chapter_rev01() {
           "face",
           "was",
           "$likeness",
-          "the",
+          "$pin",
           "sun",
           "$light",
           "$tray_in",
