@@ -522,7 +522,7 @@ export function bible_glyph_chapter_luk24() {
       {
         verse_number: 22,
         words: [
-          "Furthermore,",
+          "$curving_up,",
           "$plus",
           "some",
           "$tray_out",
