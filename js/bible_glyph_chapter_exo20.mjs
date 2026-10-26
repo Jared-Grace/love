@@ -649,7 +649,7 @@ export function bible_glyph_chapter_exo20() {
           "you",
           "must",
           "$no_entry",
-          "build",
+          "$brick",
           "it",
           "with",
           "stones",
