@@ -199,7 +199,7 @@ export function bible_glyph_chapter_mat05() {
           "you",
           "$back+clock",
           "people",
-          "insult",
+          "$face_with_symbols_on_mouth+doing",
           "you",
           "$plus",
           "persecute",
