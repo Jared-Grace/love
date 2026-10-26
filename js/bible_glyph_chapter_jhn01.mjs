@@ -27,7 +27,7 @@ export function bible_glyph_chapter_jhn01() {
           "$tray_in",
           "the",
           "beginning",
-          "was",
+          "$link",
           "the",
           "$speech,",
           "$plus",
