@@ -209,7 +209,7 @@ export function bible_glyph_chapter_deu26() {
           "a",
           "$top",
           "$map,",
-          "mighty",
+          "$bone+describing",
           "and",
           "numerous.",
         ],
