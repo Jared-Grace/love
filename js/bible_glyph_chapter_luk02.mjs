@@ -666,7 +666,7 @@ export function bible_glyph_chapter_luk02() {
         "$sparkle",
         "$wind",
         "was",
-        "upon",
+        "$pointing_up",
         "$pointing_back.",
       ],
     },
