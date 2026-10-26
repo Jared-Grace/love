@@ -175,7 +175,7 @@ export function bible_glyph_chapter_mrk05() {
         "is",
         "there",
         "between",
-        "me",
+        "$me",
         "$plus",
         "You,",
         "$cross,",
