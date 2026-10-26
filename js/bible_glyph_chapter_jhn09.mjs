@@ -260,7 +260,7 @@ export function bible_glyph_chapter_jhn09() {
         words: [
           "He",
           "$speech+turn_back,",
-          "The",
+          "$pin",
           "$person",
           "$speech",
           "$cross",
