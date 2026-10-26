@@ -800,7 +800,7 @@ export function bible_glyph_chapter_luk02() {
       words: [
         "a",
         "$light",
-        "for",
+        "$toward+tray_in",
         "revelation",
         "to",
         "the",
