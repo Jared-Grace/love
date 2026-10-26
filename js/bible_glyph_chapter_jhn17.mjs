@@ -134,7 +134,7 @@ export function bible_glyph_chapter_jhn17() {
           "alongside",
           "Yourself,",
           "with",
-          "the",
+          "$pin",
           "$star",
           "that",
           "I",
