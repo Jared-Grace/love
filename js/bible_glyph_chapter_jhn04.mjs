@@ -831,7 +831,7 @@ export function bible_glyph_chapter_jhn04() {
           "$speech",
           "$pointing",
           "there",
-          "are",
+          "$link",
           "$repeat_single_button",
           "$four+new_moon",
           "months",
