@@ -642,7 +642,7 @@ export function bible_glyph_chapter_mrk10() {
         "to",
         "one",
         "another,",
-        "“Who",
+        "“$flashlight+question",
         "then",
         "can",
         "be",
