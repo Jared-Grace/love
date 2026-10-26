@@ -363,7 +363,7 @@ export function bible_glyph_chapter_mrk08() {
           "$ship,",
           "$no_entry",
           "but",
-          "one.",
+          "$one.",
         ],
       },
       {
