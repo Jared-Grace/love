@@ -789,7 +789,7 @@ export function bible_glyph_chapter_jhn03() {
           "who",
           "is",
           "$tray_out",
-          "the",
+          "$pin",
           "$earth",
           "belongs",
           "to",
