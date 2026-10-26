@@ -149,7 +149,7 @@ export function bible_glyph_chapter_mrk12() {
         "He",
         "still",
         "had",
-        "one",
+        "$one",
         "to",
         "send,",
         "a",
