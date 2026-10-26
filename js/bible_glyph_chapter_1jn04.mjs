@@ -553,7 +553,7 @@ export function bible_glyph_chapter_1jn04() {
           "$pointing_back",
           "$brother,",
           "he",
-          "is",
+          "$link",
           "a",
           "liar.",
           "For",
