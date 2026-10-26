@@ -340,7 +340,7 @@ export function bible_glyph_chapter_rev10() {
           "bitter,",
           "but",
           "$tray_in",
-          "your",
+          "$you",
           "mouth",
           "it",
           "will",
