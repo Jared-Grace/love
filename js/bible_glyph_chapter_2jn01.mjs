@@ -352,7 +352,7 @@ export function bible_glyph_chapter_2jn01() {
           "$smile",
           "may",
           "be",
-          "complete.",
+          "$battery.",
         ],
       },
       {
