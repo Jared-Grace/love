@@ -1352,7 +1352,7 @@ export function bible_glyph_chapter_mrk10() {
         "is",
         "calling",
         "for",
-        "you.”",
+        "$you.”",
       ],
     },
     {
