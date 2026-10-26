@@ -175,7 +175,7 @@ export function bible_glyph_chapter_luk24() {
           "$plus",
           "on",
           "the",
-          "third",
+          "$third_place",
           "$sun",
           "rise",
           "again.",
