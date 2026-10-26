@@ -280,7 +280,7 @@ export function bible_glyph_chapter_jon04() {
           "angry",
           "about",
           "the",
-          "plant?",
+          "$sprout+umbrella?",
           "I",
           "do,",
           "he",
