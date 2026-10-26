@@ -232,7 +232,7 @@ export function bible_glyph_chapter_ezk36() {
         verse_number: 6,
         words: [
           "$right_arrow",
-          "prophesy",
+          "$megaphone+doing",
           "concerning",
           "the",
           "land",
