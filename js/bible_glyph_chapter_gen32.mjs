@@ -100,7 +100,7 @@ export function bible_glyph_chapter_gen32() {
           "have",
           "been",
           "staying",
-          "with",
+          "$linked_paperclips",
           "$proper_name$Laban",
           "and",
           "have",
