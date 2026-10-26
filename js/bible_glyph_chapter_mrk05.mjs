@@ -1070,7 +1070,7 @@ export function bible_glyph_chapter_mrk05() {
         "$speech",
         "to",
         "$you,",
-        "get",
+        "$person+pointing_up",
         "up.”",
       ],
     },
