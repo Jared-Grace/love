@@ -592,7 +592,7 @@ export function bible_glyph_chapter_hag02() {
           "the",
           "$fig,",
           "the",
-          "pomegranate,",
+          "$fruit+red_circle,",
           "and",
           "the",
           "olive",
