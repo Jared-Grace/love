@@ -117,7 +117,7 @@ export function bible_glyph_chapter_luk15() {
         "he",
         "puts",
         "it",
-        "on",
+        "$pointing_up",
         "$pointing_back",
         "shoulders",
         "$smile+doing.",
