@@ -772,7 +772,7 @@ export function bible_glyph_chapter_jhn09() {
           "$no_entry",
           "$lightbulb",
           "where",
-          "this",
+          "$flashlight",
           "man",
           "is",
           "from.",
