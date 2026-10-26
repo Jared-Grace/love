@@ -556,7 +556,7 @@ export function bible_glyph_chapter_jhn01() {
           "to",
           "$pointing_back,",
           "“$flashlight+question",
-          "then",
+          "$right_arrow",
           "do",
           "you",
           "baptize,",
