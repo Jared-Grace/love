@@ -226,7 +226,7 @@ export function bible_glyph_chapter_jon03() {
           "and",
           "have",
           "everyone",
-          "call",
+          "$waving_hand",
           "out",
           "to",
           "$heart_on_fire",
