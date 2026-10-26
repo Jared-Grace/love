@@ -166,7 +166,7 @@ export function bible_glyph_chapter_psa138() {
           "me",
           "from",
           "the",
-          "anger",
+          "$nose+fire",
           "of",
           "my",
           "foes.",
