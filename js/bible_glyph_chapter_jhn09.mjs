@@ -419,7 +419,7 @@ export function bible_glyph_chapter_jhn09() {
           "$plus",
           "there",
           "was",
-          "division",
+          "$t_shirt+scissors+thing",
           "$tray_in",
           "$pointing_back.",
         ],
