@@ -1238,7 +1238,7 @@ export function bible_glyph_chapter_luk07() {
         "will",
         "$heart_red+doing",
         "$pointing_back",
-        "more?”",
+        "$multiply+more?”",
       ],
     },
     {
