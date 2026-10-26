@@ -267,7 +267,7 @@ export function bible_glyph_chapter_1jn02() {
           "$heart_red+doing$s",
           "$pointing_back",
           "$brother",
-          "remains",
+          "$pin+doing",
           "$tray_in",
           "the",
           "$light,",
