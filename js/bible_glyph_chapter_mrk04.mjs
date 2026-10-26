@@ -588,7 +588,7 @@ export function bible_glyph_chapter_mrk04() {
           "$light,",
           "nor",
           "anything",
-          "concealed",
+          "$away+face_with_peeking_eye+describing",
           "except",
           "to",
           "$footprints",
