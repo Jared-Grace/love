@@ -76,7 +76,7 @@ export function bible_glyph_chapter_ezk18() {
           "will",
           "no",
           "$repeat",
-          "quote",
+          "$speech+likeness+doing",
           "this",
           "proverb",
           "in",
