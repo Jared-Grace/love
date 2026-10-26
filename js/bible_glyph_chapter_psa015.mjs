@@ -59,7 +59,7 @@ export function bible_glyph_chapter_psa015() {
           "$foot+doing",
           "$pointing_up",
           "his",
-          "tongue,",
+          "$tongue,",
           "who",
           "$no_entry",
           "$hammer+doing",
