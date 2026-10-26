@@ -546,7 +546,7 @@ export function bible_glyph_chapter_rut02() {
       {
         verse_number: 16,
         words: [
-          "Rather,",
+          "$plus,",
           "pull",
           "out",
           "for",
