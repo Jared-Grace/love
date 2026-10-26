@@ -67,8 +67,8 @@ export function app_code_whole_part_wrong_say(question, answer, choice) {
   let input = multiply(quotient, d);
   let whole_value = text_to(input);
   let division = js_code_binary_spaced_nb(dividend, "/", divisor);
-  let floor = text_combine_multiple(["Math.floor(", division, ")"]);
-  let whole = js_code_binary_spaced_nb(floor, "*", divisor);
+  let floored = text_combine_multiple(["Math.floor(", division, ")"]);
+  let whole = js_code_binary_spaced_nb(floored, "*", divisor);
   let remainder = js_code_binary_spaced_nb(dividend, "-", whole);
   let percent_code = js_code_binary_spaced_nb(dividend, percent, divisor);
   let forms = {
@@ -99,7 +99,7 @@ export function app_code_whole_part_wrong_say(question, answer, choice) {
   if (equal(pair, "division whole")) {
     let r = [
       "Remember: ",
-      floor,
+      floored,
       " rounds ",
       division,
       " down to a whole number, and multiplying that by ",
@@ -125,7 +125,7 @@ export function app_code_whole_part_wrong_say(question, answer, choice) {
       " is ",
       whole,
       ": ",
-      floor,
+      floored,
       " is ",
       t,
       ", and ",
