@@ -1002,7 +1002,7 @@ export function bible_glyph_chapter_mrk04() {
           "$speech",
           "to",
           "$pointing_back,",
-          "Teacher,",
+          "$teacher,",
           "do",
           "You",
           "$no_entry",
