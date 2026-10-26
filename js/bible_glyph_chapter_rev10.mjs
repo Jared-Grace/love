@@ -252,7 +252,7 @@ export function bible_glyph_chapter_rev10() {
           "will",
           "be",
           "fulfilled,",
-          "just",
+          "$likeness",
           "as",
           "He",
           "proclaimed",
