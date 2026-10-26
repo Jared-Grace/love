@@ -191,7 +191,7 @@ export function bible_glyph_chapter_jhn03() {
           "‘$you",
           "$knot",
           "be",
-          "born",
+          "$hatching_chick",
           "again.’",
         ],
       },
