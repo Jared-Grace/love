@@ -189,7 +189,7 @@ export function bible_glyph_chapter_hag02() {
           "of",
           "Hosts",
           "$speech:",
-          "Once",
+          "$one",
           "$repeat,",
           "in",
           "a",
