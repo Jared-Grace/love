@@ -154,7 +154,7 @@ export function bible_glyph_chapter_jol03() {
           "you",
           "$hand_receiving",
           "My",
-          "silver",
+          "$silver",
           "and",
           "gold",
           "and",
