@@ -1178,7 +1178,7 @@ export function bible_glyph_chapter_luk24() {
           "$tray_in",
           "the",
           "$city",
-          "until",
+          "$finish",
           "you",
           "have",
           "been",
