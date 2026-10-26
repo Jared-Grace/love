@@ -688,7 +688,7 @@ export function bible_glyph_chapter_gen32() {
           "So",
           "$hand+foot",
           "was",
-          "left",
+          "$takeout_box+doing",
           "all",
           "alone,",
           "and",
