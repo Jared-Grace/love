@@ -244,7 +244,7 @@ export function bible_glyph_chapter_rut02() {
           "go",
           "away",
           "from",
-          "this",
+          "$flashlight",
           "place,",
           "but",
           "stay",
