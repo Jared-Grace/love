@@ -288,7 +288,7 @@ export function bible_glyph_chapter_jol02() {
           "The",
           "$sun_with_face",
           "and",
-          "moon",
+          "$moon",
           "grow",
           "dark,",
           "and",
