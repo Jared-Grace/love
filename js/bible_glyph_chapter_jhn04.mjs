@@ -174,7 +174,7 @@ export function bible_glyph_chapter_jhn04() {
           "ask",
           "for",
           "a",
-          "drink",
+          "$cup_with_straw",
           "from",
           "$me,",
           "a",
