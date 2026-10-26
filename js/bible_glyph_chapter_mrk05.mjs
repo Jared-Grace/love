@@ -491,7 +491,7 @@ export function bible_glyph_chapter_mrk05() {
         "$newspaper",
         "$pointing_back",
         "how",
-        "much",
+        "$back+abacus",
         "the",
         "$crown",
         "has",
