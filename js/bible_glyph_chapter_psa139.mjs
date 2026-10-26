@@ -519,7 +519,7 @@ export function bible_glyph_chapter_psa139() {
           "in",
           "me,",
           "and",
-          "lead",
+          "$guide_dog",
           "me",
           "in",
           "the",
