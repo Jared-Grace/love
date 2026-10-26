@@ -235,7 +235,7 @@ export function bible_glyph_chapter_mrk12() {
         "$plus",
         "$wilted_flower",
         "those",
-        "tenants,",
+        "$earth+tools+doer,",
         "$plus",
         "$hands_giving",
         "the",
