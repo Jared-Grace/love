@@ -646,7 +646,7 @@ export function bible_glyph_chapter_1ki03() {
           "$house,",
           "only",
           "the",
-          "two",
+          "$two",
           "of",
           "us",
           "in",
