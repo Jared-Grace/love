@@ -333,7 +333,7 @@ export function bible_glyph_chapter_gen02() {
           "is",
           "the",
           "$proper_name$Pishon;",
-          "it",
+          "$pointing_back",
           "winds",
           "through",
           "the",
