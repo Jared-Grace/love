@@ -166,7 +166,7 @@ export function bible_glyph_chapter_oba01() {
           "would",
           "they",
           "$no_entry",
-          "steal",
+          "$ninja+doing",
           "only",
           "what",
           "they",
