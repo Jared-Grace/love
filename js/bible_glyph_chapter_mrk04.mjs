@@ -863,7 +863,7 @@ export function bible_glyph_chapter_mrk04() {
           "with",
           "many",
           "such",
-          "parables",
+          "$framed_picture",
           "Jesus",
           "$mouth",
           "the",
