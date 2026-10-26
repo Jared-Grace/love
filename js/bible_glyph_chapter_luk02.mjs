@@ -32,7 +32,7 @@ export function bible_glyph_chapter_luk02() {
         "of",
         "$pin",
         "$all",
-        "empire.",
+        "$house+globe.",
       ],
     },
     {
