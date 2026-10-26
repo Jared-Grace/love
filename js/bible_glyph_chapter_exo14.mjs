@@ -27,7 +27,7 @@ export function bible_glyph_chapter_exo14() {
           "encamp",
           "before",
           "Pi-hahiroth,",
-          "between",
+          "$brain+arrow_both_ways",
           "$proper_name$Migdol",
           "and",
           "the",
