@@ -908,7 +908,7 @@ export function bible_glyph_chapter_jhn10() {
       {
         verse_number: 37,
         words: [
-          "If",
+          "$traffic_light",
           "I",
           "am",
           "$no_entry",
