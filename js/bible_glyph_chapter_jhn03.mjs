@@ -64,7 +64,7 @@ export function bible_glyph_chapter_jhn03() {
           "could",
           "$hammer",
           "the",
-          "signs",
+          "$placard",
           "You",
           "are",
           "$hammer$ing",
