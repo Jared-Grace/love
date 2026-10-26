@@ -146,7 +146,7 @@ export function bible_glyph_chapter_psa111() {
           "$check",
           "and",
           "$scales+thing;",
-          "all",
+          "$all",
           "His",
           "precepts",
           "are",
