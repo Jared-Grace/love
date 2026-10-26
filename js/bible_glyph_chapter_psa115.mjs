@@ -151,7 +151,7 @@ export function bible_glyph_chapter_psa115() {
           "$hammer+doing",
           "them",
           "become",
-          "like",
+          "$likeness",
           "them,",
           "as",
           "do",
