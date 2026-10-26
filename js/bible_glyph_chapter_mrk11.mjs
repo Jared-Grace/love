@@ -872,7 +872,7 @@ export function bible_glyph_chapter_mrk11() {
         "$pointing",
         "$proper_name$John",
         "really",
-        "was",
+        "$link",
         "a",
         "$megaphone.",
       ],
