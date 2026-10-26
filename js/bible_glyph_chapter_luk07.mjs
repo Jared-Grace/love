@@ -551,7 +551,7 @@ export function bible_glyph_chapter_luk07() {
         "When",
         "the",
         "$man_beard",
-        "came",
+        "$children_crossing+butterfly",
         "to",
         "$pointing_back,",
         "they",
