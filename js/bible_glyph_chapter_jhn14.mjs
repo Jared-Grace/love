@@ -831,7 +831,7 @@ export function bible_glyph_chapter_jhn14() {
         verse_number: 29,
         words: [
           "$plus",
-          "now",
+          "$watch",
           "I",
           "have",
           "told",
