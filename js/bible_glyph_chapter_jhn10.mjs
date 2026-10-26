@@ -533,7 +533,7 @@ export function bible_glyph_chapter_jhn10() {
           "$speech,",
           "He",
           "is",
-          "demon-possessed",
+          "$imp",
           "$plus",
           "insane.",
           "Why",
