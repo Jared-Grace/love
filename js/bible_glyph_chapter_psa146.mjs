@@ -37,7 +37,7 @@ export function bible_glyph_chapter_psa146() {
           "$sprout;",
           "I",
           "will",
-          "sing",
+          "$harp+doing",
           "praises",
           "to",
           "my",
