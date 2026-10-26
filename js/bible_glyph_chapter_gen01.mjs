@@ -949,7 +949,7 @@ export function bible_glyph_chapter_gen01() {
           "$morning,",
           "the",
           "sixth",
-          "day.",
+          "$sun.",
         ],
       },
     ],
