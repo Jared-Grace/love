@@ -128,7 +128,7 @@ export function bible_glyph_chapter_ezk18() {
           "a",
           "$man_beard",
           "is",
-          "righteous",
+          "$ruler",
           "and",
           "$hammer+doing$s",
           "what",
