@@ -108,7 +108,7 @@ export function bible_glyph_chapter_jhn04() {
           "$telescope+manner.",
           "So",
           "$cross,",
-          "weary",
+          "$face_exhaling+doing",
           "$tray_out",
           "the",
           "journey,",
