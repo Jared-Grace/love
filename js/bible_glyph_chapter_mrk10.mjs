@@ -233,7 +233,7 @@ export function bible_glyph_chapter_mrk10() {
         "$woman",
         "$plus",
         "$ring+doing",
-        "another",
+        "$plus+one",
         "commits",
         "adultery",
         "against",
