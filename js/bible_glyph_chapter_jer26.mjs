@@ -452,7 +452,7 @@ export function bible_glyph_chapter_jer26() {
           "$all",
           "the",
           "$speech",
-          "that",
+          "$back+flashlight",
           "you",
           "have",
           "$ear.",
