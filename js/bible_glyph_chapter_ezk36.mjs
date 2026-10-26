@@ -1043,7 +1043,7 @@ export function bible_glyph_chapter_ezk36() {
           "you",
           "will",
           "$no_entry",
-          "longer",
+          "$repeat",
           "$hand_receiving",
           "the",
           "reproach",
