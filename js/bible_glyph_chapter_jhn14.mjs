@@ -881,7 +881,7 @@ export function bible_glyph_chapter_jhn14() {
       {
         verse_number: 31,
         words: [
-          "But",
+          "$curving_up",
           "so",
           "that",
           "the",
