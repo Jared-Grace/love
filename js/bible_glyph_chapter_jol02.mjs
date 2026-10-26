@@ -414,7 +414,7 @@ export function bible_glyph_chapter_jol02() {
           "may",
           "$turn_back",
           "and",
-          "relent",
+          "$hug+doing",
           "and",
           "leave",
           "behind",
