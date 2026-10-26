@@ -253,7 +253,7 @@ export function bible_glyph_chapter_jhn20() {
       {
         verse_number: 11,
         words: [
-          "But",
+          "$curving_right",
           "$proper_name$Mary",
           "stood",
           "outside",
