@@ -233,7 +233,7 @@ export function bible_glyph_chapter_luk24() {
           "$pointing_back",
           "who",
           "$speech",
-          "this",
+          "$flashlight",
           "$toward",
           "$pin",
           "$hand_sending+doer.",
