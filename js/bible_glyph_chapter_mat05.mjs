@@ -1030,7 +1030,7 @@ export function bible_glyph_chapter_mat05() {
           "person.",
           "If",
           "someone",
-          "slaps",
+          "$hand_with_fingers_splayed+face+doing",
           "you",
           "on",
           "your",
