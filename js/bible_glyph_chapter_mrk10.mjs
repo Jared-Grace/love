@@ -235,7 +235,7 @@ export function bible_glyph_chapter_mrk10() {
         "$ring+doing",
         "$plus+one",
         "commits",
-        "adultery",
+        "$broken_heart+ring+doing",
         "against",
         "$pointing_back.",
       ],
