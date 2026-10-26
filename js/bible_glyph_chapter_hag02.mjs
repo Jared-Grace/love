@@ -490,7 +490,7 @@ export function bible_glyph_chapter_hag02() {
           "$footprints",
           "expecting",
           "a",
-          "heap",
+          "$wheat+mountain",
           "of",
           "twenty",
           "ephahs",
