@@ -145,7 +145,7 @@ export function bible_glyph_chapter_jhn09() {
           "the",
           "saliva,",
           "$plus",
-          "applied",
+          "$pointing_up+oil+hand+doing",
           "$pointing_back",
           "to",
           "the",
