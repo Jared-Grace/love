@@ -509,7 +509,7 @@ export function bible_glyph_chapter_rut02() {
           "ate",
           "and",
           "was",
-          "satisfied",
+          "$eating+top",
           "and",
           "had",
           "some",
