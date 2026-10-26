@@ -84,7 +84,7 @@ export function bible_glyph_chapter_jhn04() {
           "$guard+proper_name",
           "$speech",
           "$proper_name$Sychar,",
-          "near",
+          "$house_with_garden",
           "the",
           "plot",
           "of",
