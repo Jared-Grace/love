@@ -666,7 +666,7 @@ export function bible_glyph_chapter_1ki03() {
           "$flashlight",
           "$woman",
           "$skull+doing,",
-          "because",
+          "$back+flashlight",
           "she",
           "rolled",
           "over",
