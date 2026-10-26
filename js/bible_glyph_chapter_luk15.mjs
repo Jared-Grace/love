@@ -809,7 +809,7 @@ export function bible_glyph_chapter_luk15() {
         "squandered",
         "your",
         "$sprout+money_bag",
-        "with",
+        "$linked_paperclips",
         "prostitutes,",
         "$footprints",
         "back,",
