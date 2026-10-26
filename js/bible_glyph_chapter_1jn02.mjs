@@ -643,7 +643,7 @@ export function bible_glyph_chapter_1jn02() {
           "lie",
           "comes",
           "$tray_out",
-          "the",
+          "$pin",
           "$check.",
         ],
       },
