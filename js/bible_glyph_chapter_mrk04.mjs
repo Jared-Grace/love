@@ -600,7 +600,7 @@ export function bible_glyph_chapter_mrk04() {
         verse_number: 23,
         words: [
           "$traffic_light",
-          "anyone",
+          "$joker",
           "has",
           "ears",
           "to",
