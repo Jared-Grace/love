@@ -194,7 +194,7 @@ export function bible_glyph_chapter_exo20() {
       {
         verse_number: 8,
         words: [
-          "Remember",
+          "$reminder_ribbon",
           "the",
           "$sabbath",
           "$sun",
