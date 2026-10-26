@@ -214,7 +214,7 @@ export function bible_glyph_chapter_jhn20() {
           "to",
           "the",
           "$tomb",
-          "first,",
+          "$first_place,",
           "$plus",
           "went",
           "in,",
