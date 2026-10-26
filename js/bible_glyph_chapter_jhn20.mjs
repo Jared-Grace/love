@@ -343,7 +343,7 @@ export function bible_glyph_chapter_jhn20() {
           "$flashlight,",
           "she",
           "turned",
-          "around",
+          "$back",
           "$plus",
           "saw",
           "$cross",
