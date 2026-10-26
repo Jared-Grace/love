@@ -439,7 +439,7 @@ export function bible_glyph_chapter_jhn09() {
           "do",
           "you",
           "$speech",
-          "about",
+          "$clockwise_arrows",
           "$pointing_back,",
           "since",
           "it",
