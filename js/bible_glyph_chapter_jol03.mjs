@@ -319,7 +319,7 @@ export function bible_glyph_chapter_jol03() {
           "$tray_in+doing",
           "yourselves.",
           "Bring",
-          "down",
+          "$stone+down_arrow+doing",
           "Your",
           "mighty",
           "ones,",
