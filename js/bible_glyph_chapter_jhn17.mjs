@@ -714,7 +714,7 @@ export function bible_glyph_chapter_jhn17() {
           "$ruler",
           "$father,",
           "$plus",
-          "the",
+          "$pin",
           "$globe",
           "did",
           "$no_entry",
