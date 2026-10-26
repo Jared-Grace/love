@@ -825,7 +825,7 @@ export function bible_glyph_chapter_mrk05() {
         "who",
         "had",
         "$hammer",
-        "this.",
+        "$flashlight.",
       ],
     },
     {
