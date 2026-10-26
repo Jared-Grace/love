@@ -334,7 +334,7 @@ export function bible_glyph_chapter_2jn01() {
           "$page_with_curl",
           "$plus",
           "$black_circle+thing.",
-          "Instead",
+          "$curving_up",
           "I",
           "hope",
           "to",
