@@ -309,7 +309,7 @@ export function bible_glyph_chapter_jhn03() {
           "will",
           "you",
           "$anchor+doing",
-          "if",
+          "$traffic_light",
           "I",
           "$speech",
           "to",
