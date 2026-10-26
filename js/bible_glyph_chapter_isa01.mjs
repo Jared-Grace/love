@@ -565,7 +565,7 @@ export function bible_glyph_chapter_isa01() {
           "$traffic_light",
           "you",
           "are",
-          "willing",
+          "$heart_red+check+doing",
           "and",
           "$ear,",
           "you",
