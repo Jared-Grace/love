@@ -623,7 +623,7 @@ export function bible_glyph_chapter_jhn01() {
           "$butterfly",
           "$tray_in",
           "$proper_name$Bethany",
-          "beyond",
+          "$bridge",
           "the",
           "$pointing_down+proper_name,",
           "where",
