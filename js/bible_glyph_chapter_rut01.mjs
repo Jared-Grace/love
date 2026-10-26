@@ -92,7 +92,7 @@ export function bible_glyph_chapter_rut01() {
           "$father+proper_name",
           "and",
           "settled",
-          "there.",
+          "$telescope.",
         ],
       },
       {
