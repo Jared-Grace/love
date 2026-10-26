@@ -186,7 +186,7 @@ export function bible_glyph_chapter_jol02() {
         verse_number: 6,
         words: [
           "$family",
-          "writhe",
+          "$dizzy",
           "in",
           "horror",
           "before",
