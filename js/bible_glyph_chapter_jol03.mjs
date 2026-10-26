@@ -550,7 +550,7 @@ export function bible_glyph_chapter_jol03() {
           "to",
           "water",
           "the",
-          "Valley",
+          "$national_park",
           "of",
           "$proper_name$Acacias.",
         ],
