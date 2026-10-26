@@ -941,7 +941,7 @@ export function bible_glyph_chapter_jhn10() {
           "$anchor+doing",
           "Me,",
           "$anchor+doing",
-          "the",
+          "$pin",
           "$tools,",
           "so",
           "that",
