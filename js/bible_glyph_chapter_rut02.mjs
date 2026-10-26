@@ -462,7 +462,7 @@ export function bible_glyph_chapter_rut02() {
           "am",
           "$no_entry",
           "like",
-          "one",
+          "$one",
           "of",
           "your",
           "servant",
