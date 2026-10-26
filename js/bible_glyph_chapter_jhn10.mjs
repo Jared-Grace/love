@@ -863,7 +863,7 @@ export function bible_glyph_chapter_jhn10() {
           "$heart_on_fire",
           "came,",
           "$plus",
-          "the",
+          "$pin",
           "Scripture",
           "can$no_entry",
           "be",
