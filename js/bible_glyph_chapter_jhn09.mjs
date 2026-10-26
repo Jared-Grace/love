@@ -460,7 +460,7 @@ export function bible_glyph_chapter_jhn09() {
       {
         verse_number: 18,
         words: [
-          "The",
+          "$pin",
           "$menorah",
           "$right_arrow",
           "did",
