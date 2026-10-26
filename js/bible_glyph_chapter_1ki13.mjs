@@ -1247,7 +1247,7 @@ export function bible_glyph_chapter_1ki13() {
           "destruction",
           "from",
           "the",
-          "face",
+          "$face",
           "of",
           "the",
           "earth.",
