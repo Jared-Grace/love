@@ -173,7 +173,7 @@ export function bible_glyph_chapter_2th01() {
           "to",
           "$currency_exchange+hands_giving+away",
           "with",
-          "affliction",
+          "$clamp",
           "those",
           "who",
           "$clamp+doing",
