@@ -310,7 +310,7 @@ export function bible_glyph_chapter_exo14() {
           "$wilderness",
           "to",
           "$skull+doing?",
-          "What",
+          "$flashlight+question",
           "have",
           "you",
           "$hammer+doing",
