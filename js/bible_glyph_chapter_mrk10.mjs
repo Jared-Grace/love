@@ -390,7 +390,7 @@ export function bible_glyph_chapter_mrk10() {
         "asking",
         "$pointing_back,",
         "“$thumbs_up",
-        "Teacher,",
+        "$teacher,",
         "what",
         "must",
         "I",
