@@ -163,7 +163,7 @@ export function bible_glyph_chapter_deu26() {
           "down",
           "$face",
           "the",
-          "altar",
+          "$altar",
           "of",
           "the",
           "$i_am",
