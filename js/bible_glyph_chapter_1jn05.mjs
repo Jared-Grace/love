@@ -142,7 +142,7 @@ export function bible_glyph_chapter_1jn05() {
         verse_number: 6,
         words: [
           "This",
-          "is",
+          "$link",
           "the",
           "One",
           "who",
