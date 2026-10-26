@@ -698,7 +698,7 @@ export function bible_glyph_chapter_mrk08() {
           "$speech",
           "to",
           "$pointing_back,",
-          "Who",
+          "$flashlight+question",
           "do",
           "$person",
           "$speech",
