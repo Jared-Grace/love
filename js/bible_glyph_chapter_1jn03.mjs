@@ -105,7 +105,7 @@ export function bible_glyph_chapter_1jn03() {
         verse_number: 3,
         words: [
           "$plus",
-          "everyone",
+          "$all",
           "who",
           "has",
           "this",
