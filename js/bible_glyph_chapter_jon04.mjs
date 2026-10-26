@@ -336,7 +336,7 @@ export function bible_glyph_chapter_jon04() {
         words: [
           "So",
           "should",
-          "I",
+          "$me",
           "$no_entry",
           "care",
           "about",
