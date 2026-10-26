@@ -782,7 +782,7 @@ export function bible_glyph_chapter_luk02() {
     {
       verse_number: 31,
       words: [
-        "which",
+        "$back+flashlight",
         "You",
         "have",
         "prepared",
