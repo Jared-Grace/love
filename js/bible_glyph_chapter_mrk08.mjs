@@ -220,7 +220,7 @@ export function bible_glyph_chapter_mrk08() {
           "seven",
           "basketfuls",
           "of",
-          "broken",
+          "$bread+collision+thing",
           "pieces",
           "that",
           "were",
