@@ -939,7 +939,7 @@ export function bible_glyph_chapter_exo14() {
           "$wrestling+heart_on_fire",
           "$eye",
           "the",
-          "great",
+          "$top",
           "$hand",
           "that",
           "the",
