@@ -303,7 +303,7 @@ export function bible_glyph_chapter_1jn03() {
           "does",
           "$no_entry",
           "$hammer",
-          "righteousness",
+          "$ruler+thing",
           "is",
           "$no_entry",
           "$tray_out",
