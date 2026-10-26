@@ -850,7 +850,7 @@ export function bible_glyph_chapter_gen01() {
           "given",
           "you",
           "every",
-          "plant",
+          "$herb",
           "yielding",
           "$seed",
           "which",
