@@ -244,7 +244,7 @@ export function bible_glyph_chapter_rut03() {
       {
         verse_number: 9,
         words: [
-          "Who",
+          "$person+question",
           "are",
           "you?",
           "he",
