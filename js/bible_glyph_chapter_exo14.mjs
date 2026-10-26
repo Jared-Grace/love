@@ -927,7 +927,7 @@ export function bible_glyph_chapter_exo14() {
           "the",
           "$clamp+proper_name",
           "$skull+doing",
-          "on",
+          "$pointing_up",
           "the",
           "shore.",
         ],
