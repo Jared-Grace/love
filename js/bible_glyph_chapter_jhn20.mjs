@@ -843,7 +843,7 @@ export function bible_glyph_chapter_jhn20() {
           "$writing_hand",
           "$tray_in",
           "this",
-          "book.",
+          "$open_book+thing.",
         ],
       },
       {
