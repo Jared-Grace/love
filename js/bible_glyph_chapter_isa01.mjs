@@ -419,7 +419,7 @@ export function bible_glyph_chapter_isa01() {
           "$person_other",
           "hate",
           "your",
-          "New",
+          "$new_moon",
           "Moons",
           "and",
           "your",
