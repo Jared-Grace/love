@@ -569,7 +569,7 @@ export function bible_glyph_chapter_1jn02() {
           "$tray_out",
           "$me.",
           "For",
-          "if",
+          "$traffic_light",
           "they",
           "had",
           "belonged",
