@@ -29,7 +29,7 @@ export function bible_glyph_chapter_ezk18() {
       {
         verse_number: 2,
         words: [
-          "What",
+          "$flashlight+question",
           "do",
           "you",
           "mean",
