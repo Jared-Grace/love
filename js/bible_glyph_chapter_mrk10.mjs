@@ -59,7 +59,7 @@ export function bible_glyph_chapter_mrk10() {
         "$pointing_back,",
         "“Is",
         "it",
-        "lawful",
+        "$tray_out+link",
         "for",
         "a",
         "$man_beard",
