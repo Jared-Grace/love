@@ -464,7 +464,7 @@ export function bible_glyph_chapter_mrk04() {
           "seed",
           "sown",
           "among",
-          "the",
+          "$pin",
           "thorns:",
           "they",
           "$ear",
