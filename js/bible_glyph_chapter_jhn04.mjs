@@ -1046,7 +1046,7 @@ export function bible_glyph_chapter_jhn04() {
       {
         verse_number: 43,
         words: [
-          "After",
+          "$linked_paperclips",
           "the",
           "two",
           "$sun,",
