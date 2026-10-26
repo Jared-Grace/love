@@ -269,7 +269,7 @@ export function bible_glyph_chapter_jhn17() {
         verse_number: 10,
         words: [
           "$plus",
-          "all",
+          "$all",
           "mine",
           "are",
           "Yours,",
