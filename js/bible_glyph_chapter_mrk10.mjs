@@ -489,7 +489,7 @@ export function bible_glyph_chapter_mrk10() {
         "$speech",
         "to",
         "$pointing_back,",
-        "“One",
+        "“$one",
         "thing",
         "you",
         "lack.",
