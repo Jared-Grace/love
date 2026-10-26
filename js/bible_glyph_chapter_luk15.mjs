@@ -177,7 +177,7 @@ export function bible_glyph_chapter_luk15() {
         "$shuffle",
         "$pointing_up",
         "ninety",
-        "nine",
+        "$nine+nine",
         "$ruler",
         "who",
         "have",
