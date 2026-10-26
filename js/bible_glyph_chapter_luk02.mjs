@@ -436,7 +436,7 @@ export function bible_glyph_chapter_luk02() {
         "they",
         "made",
         "known",
-        "the",
+        "$pin",
         "message",
         "$mouth",
         "to",
