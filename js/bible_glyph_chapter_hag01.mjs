@@ -242,7 +242,7 @@ export function bible_glyph_chapter_hag01() {
           "expected",
           "$multiply+doing,",
           "but",
-          "behold,",
+          "$exclamation,",
           "it",
           "amounted",
           "to",
