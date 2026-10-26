@@ -896,7 +896,7 @@ export function bible_glyph_chapter_luk24() {
           "$peace",
           "be",
           "with",
-          "you.",
+          "$you.",
         ],
       },
       {
