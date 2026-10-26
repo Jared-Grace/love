@@ -183,7 +183,7 @@ export function bible_glyph_chapter_jon03() {
           "$proper_name$Nineveh:",
           "By",
           "the",
-          "decree",
+          "$face_savoring_food+thing",
           "of",
           "the",
           "$king",
