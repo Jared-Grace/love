@@ -1167,7 +1167,7 @@ export function bible_glyph_chapter_jhn04() {
           "Him",
           "to",
           "come",
-          "down",
+          "$walking+pointing_down",
           "$plus",
           "heal",
           "$pointing_back",
