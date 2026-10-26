@@ -801,7 +801,7 @@ export function bible_glyph_chapter_luk24() {
           "and",
           "$metro+unlocked",
           "$pin",
-          "Scriptures",
+          "$writing_hand+thing",
           "to",
           "us?",
         ],
