@@ -454,7 +454,7 @@ export function bible_glyph_chapter_jhn01() {
           "asked",
           "$pointing_back,",
           "“Who",
-          "then?",
+          "$right_arrow?",
           "Are",
           "you",
           "$heart_on_fire+i_am?”",
