@@ -81,7 +81,7 @@ export function bible_glyph_chapter_jol03() {
         verse_number: 3,
         words: [
           "They",
-          "cast",
+          "$throwing+lots+doing",
           "lots",
           "for",
           "My",
