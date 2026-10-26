@@ -23,7 +23,7 @@ export function bible_glyph_chapter_jon03() {
           "$toward",
           "$dove+proper_name",
           "a",
-          "second",
+          "$second_place",
           "time:",
         ],
       },
