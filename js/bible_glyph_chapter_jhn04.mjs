@@ -874,7 +874,7 @@ export function bible_glyph_chapter_jhn04() {
           "a",
           "crop",
           "$toward+tray_in",
-          "eternal",
+          "$hourglass+describing",
           "$sprout,",
           "so",
           "that",
