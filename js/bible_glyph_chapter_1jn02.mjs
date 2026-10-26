@@ -226,7 +226,7 @@ export function bible_glyph_chapter_1jn02() {
           "$tray_in",
           "$you,",
           "$pointing",
-          "the",
+          "$pin",
           "$darkness",
           "is",
           "fading",
