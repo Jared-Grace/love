@@ -173,7 +173,7 @@ export function bible_glyph_chapter_rut02() {
           "$proper_name$Moabitess",
           "who",
           "$turn_back",
-          "with",
+          "$linked_paperclips",
           "$proper_name$Naomi",
           "from",
           "the",
