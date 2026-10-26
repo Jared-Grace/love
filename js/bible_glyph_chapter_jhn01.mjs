@@ -130,7 +130,7 @@ export function bible_glyph_chapter_jhn01() {
           "$witness+thing,",
           "to",
           "$witness+doing",
-          "about",
+          "$clockwise_arrows",
           "the",
           "$light,",
           "so",
