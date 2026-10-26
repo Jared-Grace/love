@@ -483,7 +483,7 @@ export function bible_glyph_chapter_gen03() {
           "and",
           "her",
           "$seed.",
-          "He",
+          "$pointing_back",
           "will",
           "crush",
           "your",
