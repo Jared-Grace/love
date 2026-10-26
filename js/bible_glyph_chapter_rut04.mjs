@@ -247,7 +247,7 @@ export function bible_glyph_chapter_rut04() {
           "jeopardize",
           "my",
           "own",
-          "inheritance.",
+          "$inheritance.",
           "Take",
           "my",
           "right",
