@@ -150,7 +150,7 @@ export function bible_glyph_chapter_jhn03() {
           "$castle",
           "of",
           "$heart_on_fire",
-          "unless",
+          "$traffic_light",
           "he",
           "is",
           "born",
