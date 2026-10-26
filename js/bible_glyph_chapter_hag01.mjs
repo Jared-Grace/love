@@ -154,7 +154,7 @@ export function bible_glyph_chapter_hag01() {
           "$multiply+doing",
           "but",
           "$footprints",
-          "little.",
+          "$pinching_hand+input_numbers.",
           "You",
           "$eating",
           "but",
