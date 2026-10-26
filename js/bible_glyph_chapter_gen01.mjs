@@ -717,7 +717,7 @@ export function bible_glyph_chapter_gen01() {
           "$person",
           "in",
           "Our",
-          "image,",
+          "$framed_picture,",
           "after",
           "Our",
           "likeness;",
