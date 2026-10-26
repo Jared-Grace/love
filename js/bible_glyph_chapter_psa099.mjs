@@ -58,7 +58,7 @@ export function bible_glyph_chapter_psa099() {
           "them",
           "$hands_raised",
           "Your",
-          "great",
+          "$top",
           "and",
           "awesome",
           "$name_tag;",
