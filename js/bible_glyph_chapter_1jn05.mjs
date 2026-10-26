@@ -524,7 +524,7 @@ export function bible_glyph_chapter_1jn05() {
           "$lightbulb",
           "$pointing",
           "we",
-          "are",
+          "$link",
           "$tray_out",
           "$heart_on_fire,",
           "$plus",
