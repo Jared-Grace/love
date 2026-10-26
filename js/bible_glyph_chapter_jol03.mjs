@@ -366,7 +366,7 @@ export function bible_glyph_chapter_jol03() {
           "$wheat+hook,",
           "for",
           "the",
-          "harvest",
+          "$harvest",
           "is",
           "ripe.",
           "$footprints,",
