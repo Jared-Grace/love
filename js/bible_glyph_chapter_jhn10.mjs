@@ -263,7 +263,7 @@ export function bible_glyph_chapter_jhn10() {
           "$plus",
           "$sacrifice+doing",
           "$plus",
-          "destroy.",
+          "$wilted_flower.",
           "I",
           "$footprints",
           "that",
