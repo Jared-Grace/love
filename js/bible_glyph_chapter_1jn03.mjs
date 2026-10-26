@@ -134,7 +134,7 @@ export function bible_glyph_chapter_1jn03() {
           "well.",
           "$plus",
           "$bow",
-          "is",
+          "$link",
           "$no_entry+scroll+thing.",
         ],
       },
