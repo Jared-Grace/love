@@ -154,7 +154,7 @@ export function bible_glyph_chapter_rut04() {
           "$no_entry",
           "redeem",
           "it,",
-          "tell",
+          "$newspaper",
           "me",
           "so",
           "that",
