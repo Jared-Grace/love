@@ -449,7 +449,7 @@ export function bible_glyph_chapter_mrk10() {
         "$no_entry",
         "cheat",
         "others,",
-        "honor",
+        "$heavy_dollar_sign+doing",
         "your",
         "$father",
         "$plus",
