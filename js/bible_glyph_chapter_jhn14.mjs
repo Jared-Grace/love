@@ -327,7 +327,7 @@ export function bible_glyph_chapter_jhn14() {
           "on",
           "account",
           "of",
-          "the",
+          "$pin",
           "$tools",
           "$pointing_back.",
         ],
