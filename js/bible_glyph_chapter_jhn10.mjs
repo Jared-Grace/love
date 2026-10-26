@@ -184,7 +184,7 @@ export function bible_glyph_chapter_jhn10() {
           "$right_arrow",
           "$cross",
           "$speech",
-          "again,",
+          "$repeat,",
           "$check+manner,",
           "$check+manner,",
           "I",
