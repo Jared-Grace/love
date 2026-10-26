@@ -226,7 +226,7 @@ export function bible_glyph_chapter_jud01() {
           "$plus",
           "the",
           "$city",
-          "around",
+          "$clockwise_arrows",
           "$pointing_back,",
           "who",
           "indulged",
