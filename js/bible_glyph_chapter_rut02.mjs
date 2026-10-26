@@ -196,7 +196,7 @@ export function bible_glyph_chapter_rut02() {
           "among",
           "the",
           "sheaves",
-          "after",
+          "$next_track",
           "the",
           "harvesters.",
           "So",
