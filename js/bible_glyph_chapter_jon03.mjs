@@ -207,7 +207,7 @@ export function bible_glyph_chapter_jon03() {
           "$no_entry",
           "eat",
           "or",
-          "drink.",
+          "$cup_with_straw.",
         ],
       },
       {
