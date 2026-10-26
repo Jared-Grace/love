@@ -1164,7 +1164,7 @@ export function bible_glyph_chapter_mat05() {
           "He",
           "causes",
           "$pointing_back",
-          "sun",
+          "$sun_with_face",
           "to",
           "rise",
           "on",
