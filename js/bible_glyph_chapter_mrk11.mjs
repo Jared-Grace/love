@@ -538,7 +538,7 @@ export function bible_glyph_chapter_mrk11() {
       words: [
         "$plus",
         "$back+clock",
-        "evening",
+        "$sunset+clock",
         "came,",
         "they",
         "went",
