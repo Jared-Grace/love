@@ -347,7 +347,7 @@ export function bible_glyph_chapter_jhn10() {
         words: [
           "$pointing",
           "he",
-          "is",
+          "$link",
           "a",
           "hired",
           "servant",
