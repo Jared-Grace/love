@@ -514,7 +514,7 @@ export function bible_glyph_chapter_jhn17() {
           "also",
           "$hand_sending",
           "$pointing_back",
-          "into",
+          "$toward+tray_in",
           "the",
           "$globe.",
         ],
