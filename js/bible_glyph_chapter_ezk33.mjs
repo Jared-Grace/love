@@ -331,7 +331,7 @@ export function bible_glyph_chapter_ezk33() {
           "$skull+doing",
           "in",
           "his",
-          "iniquity,",
+          "$cyclone,",
           "but",
           "$you",
           "will",
