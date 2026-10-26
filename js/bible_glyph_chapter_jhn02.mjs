@@ -97,7 +97,7 @@ export function bible_glyph_chapter_jhn02() {
           "My",
           "hour",
           "has",
-          "not",
+          "$no_entry+hourglass_not_done",
           "yet",
           "come.”",
         ],
