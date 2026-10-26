@@ -728,7 +728,7 @@ export function bible_glyph_chapter_jhn17() {
           "have",
           "$lightbulb",
           "$pointing",
-          "You",
+          "$you",
           "$hand_sending",
           "me.",
         ],
