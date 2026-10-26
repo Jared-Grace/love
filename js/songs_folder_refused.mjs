@@ -16,8 +16,8 @@ export function songs_folder_refused(file_names, read_or_null) {
   let recordings = list_filter_ends_with_any(file_names, endings);
   function refused_is(file_name) {
     let read = read_or_null(file_name);
-    let refused = equal(read, null);
-    return refused;
+    let refused_inner = equal(read, null);
+    return refused_inner;
   }
   let refused = list_filter(recordings, refused_is);
   return refused;
