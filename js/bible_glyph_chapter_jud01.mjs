@@ -701,7 +701,7 @@ export function bible_glyph_chapter_jud01() {
           "the",
           "$one+describing",
           "$heart_on_fire",
-          "our",
+          "$me",
           "$rescue+doer,",
           "through",
           "$cross",
