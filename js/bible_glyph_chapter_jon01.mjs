@@ -338,7 +338,7 @@ export function bible_glyph_chapter_jon01() {
           "were",
           "even",
           "more",
-          "afraid",
+          "$fear+doing",
           "and",
           "$speech",
           "to",
