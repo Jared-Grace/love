@@ -166,7 +166,7 @@ export function bible_glyph_chapter_jhn04() {
       {
         verse_number: 9,
         words: [
-          "“How",
+          "“$gear+question",
           "can",
           "You,",
           "a",
