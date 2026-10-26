@@ -423,7 +423,7 @@ export function bible_glyph_chapter_isa01() {
           "Moons",
           "and",
           "your",
-          "appointed",
+          "$alarm_clock",
           "feasts.",
           "They",
           "have",
