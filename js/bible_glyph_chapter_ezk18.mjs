@@ -855,7 +855,7 @@ export function bible_glyph_chapter_ezk18() {
           "$turn_back$s",
           "from",
           "his",
-          "righteousness",
+          "$ruler+thing",
           "and",
           "$hammer+doing$s",
           "iniquity,",
