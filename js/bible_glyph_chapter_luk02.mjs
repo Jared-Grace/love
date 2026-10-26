@@ -89,7 +89,7 @@ export function bible_glyph_chapter_luk02() {
         "$city",
         "of",
         "$two_hearts+proper_name",
-        "called",
+        "$waving_hand",
         "$proper_name$Bethlehem,",
         "since",
         "$pointing_back",
