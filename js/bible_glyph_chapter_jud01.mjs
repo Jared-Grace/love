@@ -552,7 +552,7 @@ export function bible_glyph_chapter_jud01() {
           "they",
           "$speech",
           "to",
-          "you,",
+          "$you,",
           "In",
           "the",
           "last",
