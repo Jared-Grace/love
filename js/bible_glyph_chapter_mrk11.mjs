@@ -139,7 +139,7 @@ export function bible_glyph_chapter_mrk11() {
         "some",
         "who",
         "were",
-        "standing",
+        "$person+round_pushpin",
         "$telescope+manner",
         "$speech",
         "to",
