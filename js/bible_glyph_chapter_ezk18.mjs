@@ -850,7 +850,7 @@ export function bible_glyph_chapter_ezk18() {
         words: [
           "If",
           "a",
-          "righteous",
+          "$ruler",
           "man",
           "$turn_back$s",
           "from",
