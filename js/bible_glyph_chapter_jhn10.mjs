@@ -231,7 +231,7 @@ export function bible_glyph_chapter_jhn10() {
           "If",
           "anyone",
           "enters",
-          "through",
+          "$metro",
           "Me,",
           "he",
           "will",
