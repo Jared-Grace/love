@@ -540,7 +540,7 @@ export function bible_glyph_chapter_gen32() {
         words: [
           "He",
           "also",
-          "instructed",
+          "$speech+scroll",
           "the",
           "second",
           "and",
