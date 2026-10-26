@@ -1181,7 +1181,7 @@ export function bible_glyph_chapter_jhn01() {
           "You",
           "will",
           "$eye",
-          "greater",
+          "$top",
           "things",
           "than",
           "these.”",
