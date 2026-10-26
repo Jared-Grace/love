@@ -138,7 +138,7 @@ export function bible_glyph_chapter_psa112() {
           "He",
           "does",
           "$no_entry",
-          "fear",
+          "$fear+doing",
           "$thumbs_down",
           "$ear+loudspeaker+thing;",
           "his",
