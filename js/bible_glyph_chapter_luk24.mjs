@@ -1258,7 +1258,7 @@ export function bible_glyph_chapter_luk24() {
           "$metro",
           "$tray_in",
           "$pin",
-          "temple,",
+          "$classical_building,",
           "$speech+thumbs_up",
           "$heart_on_fire.",
         ],
