@@ -460,7 +460,7 @@ export function bible_glyph_chapter_jdg13() {
           "$woman",
           "must",
           "heed",
-          "everything",
+          "$all",
           "I",
           "$speech",
           "her.",
