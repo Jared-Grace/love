@@ -45,7 +45,7 @@ export function bible_glyph_chapter_luk15() {
         "$pointing",
         "$flashlight",
         "man",
-        "welcomes",
+        "$toward+palm_up_hand+doing",
         "$bow+doer",
         "$plus",
         "eats",
