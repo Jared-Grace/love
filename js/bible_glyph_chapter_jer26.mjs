@@ -868,7 +868,7 @@ export function bible_glyph_chapter_jer26() {
           "and",
           "his",
           "body",
-          "thrown",
+          "$throwing",
           "into",
           "the",
           "burial",
