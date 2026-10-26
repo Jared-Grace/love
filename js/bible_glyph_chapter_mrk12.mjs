@@ -324,7 +324,7 @@ export function bible_glyph_chapter_mrk12() {
         "$pointing_back",
         "some",
         "of",
-        "the",
+        "$pin",
         "$proper_name$Pharisees",
         "$plus",
         "$proper_name$Herodians,",
