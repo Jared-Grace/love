@@ -789,7 +789,7 @@ export function bible_glyph_chapter_jhn04() {
           "$arrow_both_ways,",
           "“Could",
           "$no_entry",
-          "someone",
+          "$joker",
           "have",
           "brought",
           "$pointing_back",
