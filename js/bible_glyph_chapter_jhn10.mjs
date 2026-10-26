@@ -993,7 +993,7 @@ export function bible_glyph_chapter_jhn10() {
           "$bridge",
           "$pin",
           "$pointing_down+proper_name",
-          "to",
+          "$toward+tray_in",
           "$pin",
           "$place",
           "where",
