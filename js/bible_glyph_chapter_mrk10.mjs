@@ -1189,7 +1189,7 @@ export function bible_glyph_chapter_mrk10() {
         "$shooting_star+doing",
         "to",
         "$link",
-        "first",
+        "$first_place",
         "$tray_in",
         "you",
         "must",
