@@ -339,7 +339,7 @@ export function bible_glyph_chapter_isa01() {
           "rams",
           "and",
           "the",
-          "fat",
+          "$bacon",
           "of",
           "well-fed",
           "cattle;",
