@@ -189,7 +189,7 @@ export function bible_glyph_chapter_jhn09() {
           "At",
           "this,",
           "his",
-          "neighbors",
+          "$houses+person",
           "$plus",
           "those",
           "who",
