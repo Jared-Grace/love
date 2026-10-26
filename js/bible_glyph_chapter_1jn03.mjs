@@ -486,7 +486,7 @@ export function bible_glyph_chapter_1jn03() {
           "$back+flashlight",
           "with",
           "$globe",
-          "possessions",
+          "$sprout+money_bag",
           "sees",
           "$pointing_back",
           "$brother",
