@@ -139,7 +139,7 @@ export function bible_glyph_chapter_psa023() {
           "will",
           "follow",
           "me",
-          "all",
+          "$all",
           "the",
           "$sun",
           "of",
