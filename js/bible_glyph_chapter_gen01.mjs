@@ -781,7 +781,7 @@ export function bible_glyph_chapter_gen01() {
           "him;",
           "$reminder_ribbon+thing",
           "and",
-          "female",
+          "$female_sign",
           "He",
           "created",
           "them.",
