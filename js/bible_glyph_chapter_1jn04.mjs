@@ -367,7 +367,7 @@ export function bible_glyph_chapter_1jn04() {
           "remain",
           "in",
           "Him",
-          "and",
+          "$plus",
           "He",
           "in",
           "us:",
