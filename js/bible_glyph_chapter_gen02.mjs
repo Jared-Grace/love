@@ -148,7 +148,7 @@ export function bible_glyph_chapter_gen02() {
           "the",
           "$field",
           "$sprout+up_arrow+doing;",
-          "for",
+          "$pointing",
           "the",
           "$i_am",
           "$heart_on_fire",
