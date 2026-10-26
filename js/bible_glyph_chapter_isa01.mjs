@@ -532,7 +532,7 @@ export function bible_glyph_chapter_isa01() {
           "$speech",
           "the",
           "$i_am.",
-          "Though",
+          "$traffic_light",
           "your",
           "sins",
           "are",
