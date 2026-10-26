@@ -428,7 +428,7 @@ export function bible_glyph_chapter_mrk11() {
         "changers",
         "$plus",
         "the",
-        "seats",
+        "$pointing_down+seat+thing",
         "of",
         "those",
         "$coin+hands_giving",
