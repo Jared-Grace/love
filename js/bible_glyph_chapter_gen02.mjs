@@ -531,7 +531,7 @@ export function bible_glyph_chapter_gen02() {
           "And",
           "$tray_out",
           "the",
-          "ground",
+          "$brown_square",
           "the",
           "$i_am",
           "$heart_on_fire",
