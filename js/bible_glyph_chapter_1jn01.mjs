@@ -153,7 +153,7 @@ export function bible_glyph_chapter_1jn01() {
         words: [
           "$plus",
           "this",
-          "is",
+          "$link",
           "the",
           "message",
           "we",
