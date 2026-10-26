@@ -154,7 +154,7 @@ export function bible_glyph_chapter_exo20() {
           "$heart_red+doing",
           "Me",
           "and",
-          "keep",
+          "$guard",
           "My",
           "$scroll.",
         ],
