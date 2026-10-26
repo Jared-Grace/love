@@ -218,7 +218,7 @@ export function bible_glyph_chapter_1jn01() {
           "$tray_in",
           "$pin",
           "$light",
-          "as",
+          "$likeness",
           "$pointing_back",
           "is",
           "$tray_in",
