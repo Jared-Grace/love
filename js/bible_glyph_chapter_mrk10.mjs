@@ -433,7 +433,7 @@ export function bible_glyph_chapter_mrk10() {
       words: [
         "You",
         "$lightbulb",
-        "the",
+        "$pin",
         "$scroll:",
         "$no_entry",
         "murder,",
