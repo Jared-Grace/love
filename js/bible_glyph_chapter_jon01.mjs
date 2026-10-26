@@ -432,7 +432,7 @@ export function bible_glyph_chapter_jon01() {
           "for",
           "this",
           "violent",
-          "storm",
+          "$tornado",
           "that",
           "has",
           "come",
