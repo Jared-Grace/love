@@ -512,7 +512,7 @@ export function bible_glyph_chapter_exo20() {
           "distance",
           "as",
           "$fishing_pole+proper_name",
-          "approached",
+          "$walking+toward",
           "the",
           "thick",
           "darkness",
