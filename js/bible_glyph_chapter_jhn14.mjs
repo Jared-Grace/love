@@ -863,7 +863,7 @@ export function bible_glyph_chapter_jhn14() {
           "longer,",
           "$information",
           "the",
-          "prince",
+          "$clapper_board+doer",
           "of",
           "this",
           "$globe",
