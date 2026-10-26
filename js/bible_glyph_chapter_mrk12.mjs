@@ -692,7 +692,7 @@ export function bible_glyph_chapter_mrk12() {
         "at",
         "the",
         "burning",
-        "bush,",
+        "$thorns+tree,",
         "how",
         "$heart_on_fire",
         "$speech",
