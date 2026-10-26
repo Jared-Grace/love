@@ -426,7 +426,7 @@ export function bible_glyph_chapter_gen03() {
           "$speech",
           "$toward",
           "the",
-          "serpent:",
+          "$snake:",
           "Because",
           "you",
           "have",
