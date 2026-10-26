@@ -342,7 +342,7 @@ export function bible_glyph_chapter_jol03() {
           "$valley",
           "of",
           "$i_am+scales,",
-          "for",
+          "$pointing",
           "there",
           "I",
           "will",
