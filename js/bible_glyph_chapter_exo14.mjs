@@ -456,7 +456,7 @@ export function bible_glyph_chapter_exo14() {
           "$up_arrow",
           "up",
           "your",
-          "staff",
+          "$white_cane",
           "and",
           "stretch",
           "out",
