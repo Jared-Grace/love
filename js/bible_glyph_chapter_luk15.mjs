@@ -608,7 +608,7 @@ export function bible_glyph_chapter_luk15() {
         "$pointing_back",
         "$hand",
         "$plus",
-        "sandals",
+        "$sandal",
         "on",
         "his",
         "$foot.",
