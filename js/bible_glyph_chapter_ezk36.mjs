@@ -1181,7 +1181,7 @@ export function bible_glyph_chapter_ezk36() {
           "they",
           "will",
           "$speech,",
-          "This",
+          "$flashlight+double_exclamation",
           "$earth",
           "that",
           "was",
