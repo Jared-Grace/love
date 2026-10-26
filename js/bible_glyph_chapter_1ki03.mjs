@@ -904,7 +904,7 @@ export function bible_glyph_chapter_1ki03() {
           "$toward",
           "the",
           "$king,",
-          "because",
+          "$pointing",
           "her",
           "compassion",
           "burned",
