@@ -747,7 +747,7 @@ export function bible_glyph_chapter_mrk08() {
           "$you",
           "$speech",
           "that",
-          "I",
+          "$me",
           "am?",
           "$rock+proper_name",
           "$speech",
