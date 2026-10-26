@@ -795,7 +795,7 @@ export function bible_glyph_chapter_gen32() {
           "$hand+foot,",
           "but",
           "$wrestling+heart_on_fire,",
-          "because",
+          "$pointing",
           "you",
           "have",
           "struggled",
