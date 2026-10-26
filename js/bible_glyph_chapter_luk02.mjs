@@ -31,7 +31,7 @@ export function bible_glyph_chapter_luk02() {
         "taken",
         "of",
         "the",
-        "whole",
+        "$all",
         "empire.",
       ],
     },
