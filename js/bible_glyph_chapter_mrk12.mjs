@@ -1112,7 +1112,7 @@ export function bible_glyph_chapter_mrk12() {
         "Jesus",
         "was",
         "sitting",
-        "opposite",
+        "$vs_button+round_pushpin",
         "the",
         "treasury,",
         "He",
