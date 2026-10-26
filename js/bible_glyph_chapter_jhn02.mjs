@@ -93,7 +93,7 @@ export function bible_glyph_chapter_jhn02() {
           "Me",
           "$plus",
           "to",
-          "you?",
+          "$you?",
           "My",
           "hour",
           "has",
