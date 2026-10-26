@@ -68,7 +68,7 @@ export function bible_glyph_chapter_rut04() {
           "and",
           "$speech,",
           "Sit",
-          "here,",
+          "$flashlight+round_pushpin,",
           "and",
           "they",
           "did",
