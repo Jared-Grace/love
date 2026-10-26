@@ -578,7 +578,7 @@ export function bible_glyph_chapter_rut02() {
           "in",
           "the",
           "$field",
-          "until",
+          "$finish",
           "evening.",
           "And",
           "when",
