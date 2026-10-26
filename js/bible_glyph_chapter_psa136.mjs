@@ -243,7 +243,7 @@ export function bible_glyph_chapter_psa136() {
           "$house+proper_name",
           "and",
           "his",
-          "army",
+          "$raised_fist",
           "into",
           "the",
           "Red",
