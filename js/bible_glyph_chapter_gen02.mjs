@@ -746,7 +746,7 @@ export function bible_glyph_chapter_gen02() {
           "$woman",
           "were",
           "$two",
-          "naked,",
+          "$garment+no_entry+describing,",
           "and",
           "they",
           "were",
