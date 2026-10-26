@@ -37,7 +37,7 @@ export function bible_glyph_chapter_jhn09() {
           "$plus",
           "$pointing_back",
           "$learner",
-          "asked",
+          "$question",
           "$pointing_back,",
           "Rabbi,",
           "who",
