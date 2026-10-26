@@ -415,7 +415,7 @@ export function bible_glyph_chapter_jol01() {
           "a",
           "solemn",
           "assembly!",
-          "Gather",
+          "$crowd+doing",
           "the",
           "elders",
           "and",
