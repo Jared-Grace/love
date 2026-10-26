@@ -243,7 +243,7 @@ export function bible_glyph_chapter_luk07() {
         "When",
         "$cross",
         "$ear",
-        "this,",
+        "$flashlight,",
         "He",
         "marveled",
         "at",
