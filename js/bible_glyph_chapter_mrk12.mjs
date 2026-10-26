@@ -1205,7 +1205,7 @@ export function bible_glyph_chapter_mrk12() {
         "she",
         "$tray_out",
         "$pointing_back",
-        "poverty",
+        "$turtle+poor+thing",
         "has",
         "put",
         "in",
