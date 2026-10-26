@@ -558,7 +558,7 @@ export function bible_glyph_chapter_jhn20() {
           "$hand",
           "$plus",
           "His",
-          "side.",
+          "$bone+x_ray.",
           "The",
           "$learner",
           "$smile+doing",
