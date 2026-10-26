@@ -691,7 +691,7 @@ export function bible_glyph_chapter_oba01() {
           "exiles",
           "from",
           "$city+peace",
-          "who",
+          "$back+flashlight",
           "are",
           "in",
           "$proper_name$Sepharad",
