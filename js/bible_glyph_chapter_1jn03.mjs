@@ -118,7 +118,7 @@ export function bible_glyph_chapter_1jn03() {
           "as",
           "$telescope",
           "is",
-          "pure.",
+          "$soap+sparkle.",
         ],
       },
       {
