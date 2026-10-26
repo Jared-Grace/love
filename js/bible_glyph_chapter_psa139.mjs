@@ -78,7 +78,7 @@ export function bible_glyph_chapter_psa139() {
           "$pointing",
           "before",
           "a",
-          "word",
+          "$left_speech_bubble",
           "is",
           "on",
           "my",
