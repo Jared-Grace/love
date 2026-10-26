@@ -104,7 +104,7 @@ export function bible_glyph_chapter_rut01() {
           "$heart_on_fire+king",
           "$skull+doing,",
           "and",
-          "she",
+          "$pointing_back",
           "was",
           "left",
           "with",
