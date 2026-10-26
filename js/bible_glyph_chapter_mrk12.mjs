@@ -1148,7 +1148,7 @@ export function bible_glyph_chapter_mrk12() {
         "small",
         "copper",
         "coins,",
-        "which",
+        "$back+flashlight",
         "amounted",
         "to",
         "a",
