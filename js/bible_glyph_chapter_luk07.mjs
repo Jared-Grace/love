@@ -68,7 +68,7 @@ export function bible_glyph_chapter_luk07() {
         "the",
         "$menorah",
         "to",
-        "ask",
+        "$question",
         "$pointing_back",
         "to",
         "$footprints",
