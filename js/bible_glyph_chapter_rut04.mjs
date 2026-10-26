@@ -252,7 +252,7 @@ export function bible_glyph_chapter_rut04() {
           "my",
           "right",
           "of",
-          "redemption,",
+          "$currency_exchange+thing,",
           "because",
           "I",
           "$no_entry",
