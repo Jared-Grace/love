@@ -1176,7 +1176,7 @@ export function bible_glyph_chapter_mat05() {
           "$plus",
           "sends",
           "rain",
-          "on",
+          "$pointing_up",
           "the",
           "$ruler",
           "$plus",
