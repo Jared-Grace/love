@@ -295,7 +295,7 @@ export function bible_glyph_chapter_rut03() {
           "because",
           "you",
           "have",
-          "not",
+          "$zero+manner",
           "$walking",
           "after",
           "the",
