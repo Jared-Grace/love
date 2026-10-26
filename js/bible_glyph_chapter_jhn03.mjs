@@ -171,7 +171,7 @@ export function bible_glyph_chapter_jhn03() {
           "$meat,",
           "but",
           "$wind",
-          "is",
+          "$link",
           "$hatching_chick",
           "$tray_out",
           "the",
