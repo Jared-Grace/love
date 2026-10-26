@@ -180,7 +180,7 @@ export function bible_glyph_chapter_jhn20() {
         verse_number: 7,
         words: [
           "$plus",
-          "the",
+          "$pin",
           "cloth",
           "that",
           "had",
