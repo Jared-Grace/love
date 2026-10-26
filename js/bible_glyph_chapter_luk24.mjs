@@ -712,7 +712,7 @@ export function bible_glyph_chapter_luk24() {
           "$toward",
           "$sunset+star",
           "$plus",
-          "the",
+          "$pin",
           "$sun",
           "is",
           "almost",
