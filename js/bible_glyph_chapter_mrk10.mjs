@@ -25,7 +25,7 @@ export function bible_glyph_chapter_mrk10() {
         "$proper_name$Judea",
         "$plus",
         "beyond",
-        "the",
+        "$pin",
         "$pointing_down+proper_name.",
         "Again",
         "a",
