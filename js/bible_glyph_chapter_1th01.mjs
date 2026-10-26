@@ -182,7 +182,7 @@ export function bible_glyph_chapter_1th01() {
           "As",
           "a",
           "result",
-          "you",
+          "$you",
           "have",
           "$butterfly",
           "an",
