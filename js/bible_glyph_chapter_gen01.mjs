@@ -215,7 +215,7 @@ export function bible_glyph_chapter_gen01() {
           "Let",
           "the",
           "$water",
-          "under",
+          "$down_arrow",
           "the",
           "$sky",
           "be",
