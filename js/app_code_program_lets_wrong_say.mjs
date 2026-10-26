@@ -70,11 +70,11 @@ export function app_code_program_lets_wrong_say(question, answer, choice) {
     let to = text_size(log_start);
     let left = text_slice(line, 0, to);
     if (equal(left, log_start)) {
-      let logs = run(before);
-      if (null_is(logs) || list_empty_is(logs)) {
+      let logged = run(before);
+      if (null_is(logged) || list_empty_is(logged)) {
         return null;
       }
-      let args = list_last(logs);
+      let args = list_last(logged);
       let from2 = text_size(log_start);
       let to2 = text_index_of_last(line, ")");
       let message = text_slice(line, from2, to2);
