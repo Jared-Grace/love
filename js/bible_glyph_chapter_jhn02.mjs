@@ -417,7 +417,7 @@ export function bible_glyph_chapter_jhn02() {
           "to",
           "those",
           "selling",
-          "doves",
+          "$dove",
           "He",
           "$speech,",
           "“Take",
