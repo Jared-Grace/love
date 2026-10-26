@@ -754,7 +754,7 @@ export function bible_glyph_chapter_mrk04() {
           "As",
           "soon",
           "as",
-          "the",
+          "$pin",
           "$fruit",
           "is",
           "ripe,",
