@@ -107,7 +107,7 @@ export function bible_glyph_chapter_gen01() {
           "called",
           "the",
           "$light",
-          "Day,",
+          "$sun,",
           "and",
           "the",
           "$darkness",
