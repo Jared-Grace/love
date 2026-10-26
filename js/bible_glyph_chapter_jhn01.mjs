@@ -678,7 +678,7 @@ export function bible_glyph_chapter_jhn01() {
           "after",
           "me",
           "has",
-          "surpassed",
+          "$tray_in+toward",
           "me,",
           "$pointing",
           "He",
