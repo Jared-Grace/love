@@ -306,7 +306,7 @@ export function bible_glyph_chapter_jhn02() {
           "$flashlight",
           "He",
           "went",
-          "down",
+          "$walking+pointing_down",
           "to",
           "$proper_name$Capernaum,",
           "$plus",
