@@ -420,7 +420,7 @@ export function bible_glyph_chapter_2ki02() {
           "and",
           "$mouth",
           "together,",
-          "suddenly",
+          "$exclamation",
           "a",
           "chariot",
           "of",
