@@ -1040,7 +1040,7 @@ export function bible_glyph_chapter_mat05() {
           "to",
           "$pointing_back",
           "the",
-          "other",
+          "$plus+one",
           "$plus.",
         ],
       },
