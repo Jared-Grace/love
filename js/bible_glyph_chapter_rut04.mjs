@@ -21,7 +21,7 @@ export function bible_glyph_chapter_rut04() {
           "and",
           "sat",
           "down",
-          "there.",
+          "$telescope.",
           "Soon",
           "the",
           "kinsman-redeemer",
