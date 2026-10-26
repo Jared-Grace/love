@@ -46,7 +46,7 @@ export function bible_glyph_chapter_jon03() {
           "the",
           "message",
           "$back+flashlight",
-          "I",
+          "$me",
           "$mouth",
           "you.",
         ],
