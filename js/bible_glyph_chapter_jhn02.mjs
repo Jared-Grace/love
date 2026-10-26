@@ -261,7 +261,7 @@ export function bible_glyph_chapter_jhn02() {
           "drunk",
           "freely.",
           "But",
-          "you",
+          "$you",
           "have",
           "saved",
           "the",
