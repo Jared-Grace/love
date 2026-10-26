@@ -577,7 +577,7 @@ export function bible_glyph_chapter_exo14() {
           "them",
           "and",
           "stood",
-          "behind",
+          "$next_track",
           "them,",
         ],
       },
