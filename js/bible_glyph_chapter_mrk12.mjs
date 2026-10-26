@@ -267,7 +267,7 @@ export function bible_glyph_chapter_mrk12() {
     {
       verse_number: 11,
       words: [
-        "this",
+        "$flashlight",
         "is",
         "from",
         "the",
