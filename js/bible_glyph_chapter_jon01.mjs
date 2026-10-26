@@ -34,7 +34,7 @@ export function bible_glyph_chapter_jon01() {
           "$person+pointing_up",
           "up!",
           "$walking",
-          "to",
+          "$toward",
           "the",
           "great",
           "$city",
