@@ -585,7 +585,7 @@ export function bible_glyph_chapter_jhn10() {
           "$tray_in",
           "$city+peace.",
           "It",
-          "was",
+          "$link",
           "$snow+clock,",
         ],
       },
