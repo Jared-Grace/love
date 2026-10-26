@@ -310,7 +310,7 @@ export function bible_glyph_chapter_luk07() {
         "$toward+tray_in",
         "a",
         "$city",
-        "called",
+        "$waving_hand",
         "$proper_name$Nain,",
         "$plus",
         "$pointing_back",
