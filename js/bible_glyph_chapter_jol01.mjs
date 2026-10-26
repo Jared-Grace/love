@@ -134,7 +134,7 @@ export function bible_glyph_chapter_jol01() {
           "you",
           "drunkards,",
           "and",
-          "weep;",
+          "$loudly_crying;",
           "wail,",
           "all",
           "you",
