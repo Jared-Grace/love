@@ -788,7 +788,7 @@ export function bible_glyph_chapter_jhn09() {
           "$link",
           "$astonished+describing",
           "$information.",
-          "You",
+          "$you",
           "do",
           "$no_entry",
           "$lightbulb",
