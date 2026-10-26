@@ -592,7 +592,7 @@ export function bible_glyph_chapter_1ki03() {
           "one",
           "$woman",
           "$speech,",
-          "Please,",
+          "$pleading_face+manner,",
           "my",
           "$crown,",
           "this",
