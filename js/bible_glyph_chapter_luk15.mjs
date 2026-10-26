@@ -239,7 +239,7 @@ export function bible_glyph_chapter_luk15() {
         "$speech,",
         "$safety_pin+smile+doing",
         "with",
-        "me,",
+        "$me,",
         "$pointing",
         "I",
         "have",
