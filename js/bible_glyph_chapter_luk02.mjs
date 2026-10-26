@@ -855,7 +855,7 @@ export function bible_glyph_chapter_luk02() {
         "the",
         "$person+pointing_down+thing",
         "$plus",
-        "rise",
+        "$person+up_arrow",
         "of",
         "many",
         "$tray_in",
