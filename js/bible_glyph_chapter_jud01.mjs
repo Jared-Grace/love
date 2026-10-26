@@ -688,7 +688,7 @@ export function bible_glyph_chapter_jud01() {
           "before",
           "$pointing_back",
           "$star",
-          "presence",
+          "$pointing_down+face+tray_in",
           "$tray_in",
           "great",
           "joy,",
