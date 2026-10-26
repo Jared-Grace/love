@@ -489,7 +489,7 @@ export function bible_glyph_chapter_jhn02() {
           "$speech",
           "to",
           "$pointing_back,",
-          "“Destroy",
+          "“$free_button",
           "this",
           "temple,",
           "$plus",
