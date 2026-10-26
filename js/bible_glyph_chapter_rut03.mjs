@@ -302,7 +302,7 @@ export function bible_glyph_chapter_rut03() {
           "younger",
           "men,",
           "whether",
-          "rich",
+          "$money_bag+describing",
           "or",
           "$pinching_hand+person.",
         ],
