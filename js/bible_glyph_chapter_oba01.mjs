@@ -81,7 +81,7 @@ export function bible_glyph_chapter_oba01() {
         verse_number: 3,
         words: [
           "The",
-          "pride",
+          "$peacock+fire",
           "of",
           "your",
           "$heart_organ",
