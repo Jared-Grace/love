@@ -656,7 +656,7 @@ export function bible_glyph_chapter_jhn03() {
           "$plus",
           "they",
           "$footprints",
-          "to",
+          "$toward",
           "John",
           "$plus",
           "$speech,",
