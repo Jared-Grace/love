@@ -786,7 +786,7 @@ export function bible_glyph_chapter_rut02() {
           "to",
           "you",
           "in",
-          "another",
+          "$plus+one",
           "$field.",
         ],
       },
