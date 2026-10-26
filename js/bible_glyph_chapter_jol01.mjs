@@ -532,7 +532,7 @@ export function bible_glyph_chapter_jol01() {
           "$knot+walking+doing",
           "in",
           "confusion",
-          "because",
+          "$pointing",
           "they",
           "have",
           "no",
