@@ -205,7 +205,7 @@ export function bible_glyph_chapter_rut03() {
           "end",
           "of",
           "the",
-          "heap",
+          "$wheat+mountain",
           "of",
           "grain.",
           "Then",
