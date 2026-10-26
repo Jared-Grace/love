@@ -599,7 +599,7 @@ export function bible_glyph_chapter_mrk04() {
       {
         verse_number: 23,
         words: [
-          "If",
+          "$traffic_light",
           "anyone",
           "has",
           "ears",
