@@ -1257,7 +1257,7 @@ export function bible_glyph_chapter_mrk10() {
         "$proper_name$Timaeus,",
         "$proper_name$Bartimaeus,",
         "a",
-        "blind",
+        "$person_with_white_cane",
         "beggar,",
         "was",
         "sitting",
