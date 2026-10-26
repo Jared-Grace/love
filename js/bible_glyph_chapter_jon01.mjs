@@ -199,7 +199,7 @@ export function bible_glyph_chapter_jon01() {
           "$flashlight+question",
           "can",
           "you",
-          "sleep?",
+          "$sleeping_face+down_arrow+doing?",
           "Get",
           "up",
           "and",
