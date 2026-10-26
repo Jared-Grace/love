@@ -121,7 +121,7 @@ export function bible_glyph_chapter_mrk10() {
         "“Moses",
         "wrote",
         "you",
-        "this",
+        "$flashlight",
         "$scroll",
         "because",
         "of",
