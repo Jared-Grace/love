@@ -214,7 +214,7 @@ export function bible_glyph_chapter_mrk12() {
         "out",
         "of",
         "$pin",
-        "vineyard.",
+        "$vineyard.",
       ],
     },
     {
