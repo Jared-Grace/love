@@ -32,7 +32,7 @@ export function bible_glyph_chapter_jhn04() {
           "was",
           "$hammer",
           "$plus",
-          "baptizing",
+          "$diving_mask",
           "$multiply+more",
           "$learner",
           "than",
