@@ -621,7 +621,7 @@ export function bible_glyph_chapter_jol03() {
           "For",
           "the",
           "$i_am",
-          "dwells",
+          "$tent+doing",
           "in",
           "$proper_name$Zion.",
         ],
