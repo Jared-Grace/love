@@ -416,7 +416,7 @@ export function bible_glyph_chapter_jhn01() {
           "$tray_out",
           "$city+peace",
           "$hand_sending",
-          "priests",
+          "$priest",
           "$plus",
           "$proper_name$Levites",
           "to",
