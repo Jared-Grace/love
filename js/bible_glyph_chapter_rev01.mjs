@@ -189,7 +189,7 @@ export function bible_glyph_chapter_rev01() {
           "$me",
           "a",
           "$castle,",
-          "priests",
+          "$priest",
           "to",
           "$pointing_back",
           "$heart_on_fire",
