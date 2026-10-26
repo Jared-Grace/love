@@ -435,7 +435,7 @@ export function bible_glyph_chapter_mrk12() {
         "Whose",
         "$camera",
         "is",
-        "this?",
+        "$flashlight?",
         "$plus",
         "whose",
         "inscription?",
