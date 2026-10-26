@@ -1198,7 +1198,7 @@ export function bible_glyph_chapter_ezk36() {
           "that",
           "were",
           "once",
-          "ruined,",
+          "$desert+describing,",
           "desolate,",
           "and",
           "destroyed",
