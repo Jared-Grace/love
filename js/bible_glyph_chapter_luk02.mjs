@@ -387,7 +387,7 @@ export function bible_glyph_chapter_luk02() {
         "$proper_name$Bethlehem",
         "$plus",
         "$eye",
-        "this",
+        "$flashlight",
         "$speech+thing",
         "that",
         "has",
