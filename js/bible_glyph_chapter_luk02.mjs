@@ -93,7 +93,7 @@ export function bible_glyph_chapter_luk02() {
         "$proper_name$Bethlehem,",
         "$metro",
         "$pointing_back",
-        "was",
+        "$link",
         "$tray_out",
         "the",
         "$house",
