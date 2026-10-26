@@ -530,7 +530,7 @@ export function bible_glyph_chapter_rev01() {
           "$pointing_back",
           "right",
           "hand",
-          "on",
+          "$pointing_up",
           "me",
           "$speech,",
           "Do",
