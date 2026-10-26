@@ -522,7 +522,7 @@ export function bible_glyph_chapter_1jn03() {
           "word",
           "and",
           "$tongue,",
-          "but",
+          "$curving_up",
           "$tray_in",
           "$tools",
           "$plus",
