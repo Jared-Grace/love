@@ -629,7 +629,7 @@ export function bible_glyph_chapter_oba01() {
           "Those",
           "from",
           "the",
-          "Negev",
+          "$compass+down_arrow",
           "will",
           "possess",
           "the",
