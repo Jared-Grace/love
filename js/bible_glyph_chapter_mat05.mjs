@@ -142,7 +142,7 @@ export function bible_glyph_chapter_mat05() {
         words: [
           "$gift+smile",
           "are",
-          "the",
+          "$pin",
           "pure",
           "in",
           "$heart_organ,",
