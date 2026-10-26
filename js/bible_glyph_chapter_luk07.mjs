@@ -712,7 +712,7 @@ export function bible_glyph_chapter_luk07() {
         "swaying",
         "in",
         "the",
-        "wind?",
+        "$wind+dashing_away?",
       ],
     },
     {
