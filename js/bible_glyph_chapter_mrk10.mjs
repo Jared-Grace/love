@@ -894,7 +894,7 @@ export function bible_glyph_chapter_mrk10() {
         "mock",
         "$pointing_back",
         "$plus",
-        "spit",
+        "$tray_in+mouth+droplet+doing",
         "on",
         "$pointing_back",
         "$plus",
