@@ -380,7 +380,7 @@ export function bible_glyph_chapter_hag02() {
           "$no_entry,",
           "the",
           "$priest",
-          "replied.",
+          "$speech+turn_back.",
         ],
       },
       {
