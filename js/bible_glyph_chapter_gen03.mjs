@@ -726,7 +726,7 @@ export function bible_glyph_chapter_gen03() {
           "$hand",
           "and",
           "$hand_receiving",
-          "also",
+          "$plus",
           "from",
           "the",
           "$tree",
