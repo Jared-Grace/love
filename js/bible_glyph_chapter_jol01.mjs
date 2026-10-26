@@ -391,7 +391,7 @@ export function bible_glyph_chapter_jol01() {
           "$heart_on_fire,",
           "$pointing",
           "the",
-          "grain",
+          "$grain_offering",
           "and",
           "drink",
           "offerings",
