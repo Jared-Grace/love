@@ -747,7 +747,7 @@ export function bible_glyph_chapter_jol02() {
         verse_number: 24,
         words: [
           "The",
-          "threshing",
+          "$wheat+hollow_circle",
           "floors",
           "will",
           "be",
