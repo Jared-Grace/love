@@ -592,7 +592,7 @@ export function bible_glyph_chapter_ezk36() {
           "in",
           "their",
           "own",
-          "land,",
+          "$brown_square,",
           "they",
           "defiled",
           "it",
