@@ -26,7 +26,7 @@ export function bible_glyph_chapter_mrk12() {
         "$plus",
         "$clockwise_arrows+palm_down",
         "a",
-        "wall",
+        "$brick+clockwise_arrows+thing",
         "around",
         "it,",
         "$plus",
