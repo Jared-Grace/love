@@ -794,7 +794,7 @@ export function bible_glyph_chapter_jol02() {
           "-",
           "My",
           "great",
-          "army",
+          "$raised_fist",
           "that",
           "I",
           "sent",
