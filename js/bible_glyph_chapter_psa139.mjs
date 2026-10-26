@@ -454,7 +454,7 @@ export function bible_glyph_chapter_psa139() {
           "Do",
           "I",
           "$no_entry",
-          "hate",
+          "$heart_red+thumbs_down",
           "those",
           "who",
           "hate",
