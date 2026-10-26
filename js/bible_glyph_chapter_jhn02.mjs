@@ -589,7 +589,7 @@ export function bible_glyph_chapter_jhn02() {
           "$city+peace",
           "$tray_in",
           "the",
-          "Passover,",
+          "$lamb+door,",
           "$tray_in",
           "the",
           "Feast,",
