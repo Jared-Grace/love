@@ -40,7 +40,7 @@ export function bible_glyph_chapter_2ki02() {
           "$speech",
           "to",
           "$heart_on_fire+rescue,",
-          "Please",
+          "$pleading",
           "$person+house",
           "here,",
           "for",
