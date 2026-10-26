@@ -1035,7 +1035,7 @@ export function bible_glyph_chapter_mat05() {
           "on",
           "your",
           "$hand+right_arrow",
-          "cheek,",
+          "$bone+face,",
           "turn",
           "to",
           "$pointing_back",
