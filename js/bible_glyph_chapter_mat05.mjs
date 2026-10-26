@@ -284,7 +284,7 @@ export function bible_glyph_chapter_mat05() {
           "out",
           "and",
           "trampled",
-          "by",
+          "$down_arrow",
           "$person.",
         ],
       },
