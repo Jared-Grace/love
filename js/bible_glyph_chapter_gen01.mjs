@@ -648,7 +648,7 @@ export function bible_glyph_chapter_gen01() {
           "after",
           "their",
           "kind:",
-          "livestock",
+          "$paw_prints",
           "and",
           "creeping",
           "things",
