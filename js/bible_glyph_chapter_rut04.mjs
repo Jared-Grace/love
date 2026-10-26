@@ -287,7 +287,7 @@ export function bible_glyph_chapter_rut04() {
           "would",
           "remove",
           "his",
-          "sandal",
+          "$sandal",
           "and",
           "$hands_giving",
           "it",
