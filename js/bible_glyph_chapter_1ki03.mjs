@@ -319,7 +319,7 @@ export function bible_glyph_chapter_1ki03() {
           "and",
           "to",
           "$brain",
-          "between",
+          "$brain+arrow_both_ways",
           "$thumbs_up",
           "and",
           "$thumbs_down.",
