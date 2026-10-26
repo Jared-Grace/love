@@ -794,7 +794,7 @@ export function bible_glyph_chapter_mat05() {
           "$pointing_back",
           "off",
           "$plus",
-          "throw",
+          "$throwing",
           "it",
           "$away.",
           "It",
