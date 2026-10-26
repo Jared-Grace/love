@@ -324,7 +324,7 @@ export function bible_glyph_chapter_luk24() {
           "talking",
           "$toward",
           "$arrow_both_ways",
-          "about",
+          "$clockwise_arrows",
           "everything",
           "that",
           "had",
