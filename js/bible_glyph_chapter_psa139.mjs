@@ -423,7 +423,7 @@ export function bible_glyph_chapter_psa139() {
           "$thumbs_down,",
           "O",
           "God!",
-          "Away",
+          "$away+doing",
           "$tray_out",
           "me,",
           "you",
