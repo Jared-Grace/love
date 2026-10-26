@@ -294,7 +294,7 @@ export function bible_glyph_chapter_jol02() {
           "and",
           "the",
           "stars",
-          "lose",
+          "$crowd+doing",
           "their",
           "brightness.",
         ],
