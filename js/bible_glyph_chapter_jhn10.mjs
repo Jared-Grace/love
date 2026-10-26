@@ -162,7 +162,7 @@ export function bible_glyph_chapter_jhn10() {
           "$cross",
           "$speech",
           "$flashlight",
-          "illustration",
+          "$speech+wisdom",
           "to",
           "$pointing_back,",
           "but",
