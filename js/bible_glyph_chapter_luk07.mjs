@@ -107,7 +107,7 @@ export function bible_glyph_chapter_luk07() {
     {
       verse_number: 5,
       words: [
-        "for",
+        "$information",
         "he",
         "$heart_red+doing",
         "our",
