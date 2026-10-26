@@ -402,7 +402,7 @@ export function bible_glyph_chapter_rev10() {
           "$you",
           "$knot",
           "prophesy",
-          "again",
+          "$repeat",
           "about",
           "many",
           "$family",
