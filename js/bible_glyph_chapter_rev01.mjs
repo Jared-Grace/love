@@ -611,7 +611,7 @@ export function bible_glyph_chapter_rev01() {
           "$crystal_ball",
           "of",
           "the",
-          "seven",
+          "$seven",
           "stars",
           "you",
           "$eye",
