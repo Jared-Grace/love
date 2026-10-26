@@ -95,7 +95,7 @@ export function bible_glyph_chapter_jhn01() {
           "$pin",
           "$darkness,",
           "$plus",
-          "the",
+          "$pin",
           "$darkness",
           "has",
           "$no_entry",
