@@ -424,7 +424,7 @@ export function bible_glyph_chapter_mrk11() {
         "$eating+round_pushpin",
         "of",
         "the",
-        "money",
+        "$coin+shuffle+doer",
         "changers",
         "$plus",
         "the",
