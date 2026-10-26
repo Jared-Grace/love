@@ -425,7 +425,7 @@ export function bible_glyph_chapter_jud01() {
           "own",
           "$flushed+thing;",
           "wandering",
-          "stars,",
+          "$star_plain,",
           "for",
           "whom",
           "blackest",
