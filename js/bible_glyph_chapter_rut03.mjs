@@ -256,7 +256,7 @@ export function bible_glyph_chapter_rut03() {
           "$proper_name$Ruth,",
           "she",
           "$speech.",
-          "Spread",
+          "$folding_hand_fan",
           "the",
           "corner",
           "of",
