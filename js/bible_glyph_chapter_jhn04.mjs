@@ -1021,7 +1021,7 @@ export function bible_glyph_chapter_jhn04() {
           "$metro",
           "of",
           "$you+describing",
-          "words;",
+          "$voice+thing;",
           "for",
           "$pointing_back",
           "have",
