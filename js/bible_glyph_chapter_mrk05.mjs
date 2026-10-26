@@ -836,7 +836,7 @@ export function bible_glyph_chapter_mrk05() {
         "$woman,",
         "$fear+doing",
         "$plus",
-        "trembling,",
+        "$fearful_face+doing,",
         "$lightbulb",
         "what",
         "had",
