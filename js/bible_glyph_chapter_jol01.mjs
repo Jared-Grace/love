@@ -372,7 +372,7 @@ export function bible_glyph_chapter_jol01() {
           "lament,",
           "O",
           "$priest;",
-          "wail,",
+          "$crying_face+loudspeaker+doing,",
           "O",
           "ministers",
           "of",
