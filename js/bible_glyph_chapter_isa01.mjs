@@ -586,7 +586,7 @@ export function bible_glyph_chapter_isa01() {
           "you",
           "resist",
           "and",
-          "rebel,",
+          "$raised_fist+up_arrow+doing,",
           "you",
           "will",
           "be",
