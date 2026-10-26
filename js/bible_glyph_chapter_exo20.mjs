@@ -375,7 +375,7 @@ export function bible_glyph_chapter_exo20() {
           "You",
           "shall",
           "$no_entry",
-          "covet",
+          "$heart_eyes+doing",
           "your",
           "neighbor's",
           "$woman,",
