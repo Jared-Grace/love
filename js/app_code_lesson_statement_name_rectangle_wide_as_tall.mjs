@@ -168,7 +168,7 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
     "The rectangle goes across from start_across to end_across, and down from start_down to end_down";
     let v = from(start_across);
     let v2 = till(end_across);
-    let v3 = from(start_down);
+    let v3_inner = from(start_down);
     let v4 = till(end_down);
     let said = app_code_explain_said([
       "The ",
@@ -182,7 +182,7 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
       ", and down ",
       down_arrow,
       " from ",
-      v3,
+      v3_inner,
       " to ",
       v4,
     ]);
