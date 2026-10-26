@@ -708,7 +708,7 @@ export function bible_glyph_chapter_luk07() {
         "to",
         "see?",
         "A",
-        "reed",
+        "$tanabata_tree",
         "swaying",
         "in",
         "the",
