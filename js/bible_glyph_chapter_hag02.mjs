@@ -588,7 +588,7 @@ export function bible_glyph_chapter_hag02() {
           "the",
           "$wheat+house?",
           "The",
-          "vine,",
+          "$vine,",
           "the",
           "$fig,",
           "the",
