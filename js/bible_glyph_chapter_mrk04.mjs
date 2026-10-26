@@ -441,7 +441,7 @@ export function bible_glyph_chapter_mrk04() {
           "When",
           "$clamp",
           "$shuffle",
-          "persecution",
+          "$running+toward+thing",
           "$butterfly",
           "because",
           "of",
