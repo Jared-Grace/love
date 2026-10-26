@@ -277,7 +277,7 @@ export function bible_glyph_chapter_1ki03() {
           "$kneeling",
           "is",
           "here",
-          "among",
+          "$radio_button",
           "Your",
           "$family,",
           "whom",
