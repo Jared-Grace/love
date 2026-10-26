@@ -156,7 +156,7 @@ export function bible_glyph_chapter_rev01() {
           "$skull,",
           "$plus",
           "the",
-          "ruler",
+          "$clapper_board+doer",
           "of",
           "the",
           "$king",
