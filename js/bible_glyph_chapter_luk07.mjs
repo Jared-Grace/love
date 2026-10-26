@@ -786,7 +786,7 @@ export function bible_glyph_chapter_luk07() {
         "it",
         "is",
         "written:",
-        "Behold,",
+        "$exclamation,",
         "I",
         "$hand_sending",
         "My",
