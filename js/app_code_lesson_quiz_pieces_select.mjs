@@ -59,6 +59,7 @@ export function app_code_lesson_quiz_pieces_select(
           token,
           tokens_unique,
           on_wrong,
+          variations,
         );
         return;
       }
