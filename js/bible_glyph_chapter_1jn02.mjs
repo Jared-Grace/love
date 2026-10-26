@@ -460,7 +460,7 @@ export function bible_glyph_chapter_1jn02() {
         verse_number: 16,
         words: [
           "$pointing",
-          "all",
+          "$all",
           "that",
           "is",
           "$tray_in",
