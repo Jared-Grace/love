@@ -877,7 +877,7 @@ export function bible_glyph_chapter_mat05() {
       {
         verse_number: 33,
         words: [
-          "Again,",
+          "$repeat,",
           "you",
           "have",
           "$ear",
