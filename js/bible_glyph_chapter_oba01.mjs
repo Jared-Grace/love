@@ -223,7 +223,7 @@ export function bible_glyph_chapter_oba01() {
           "with",
           "you",
           "will",
-          "deceive",
+          "$performing_arts+eyes+doing",
           "and",
           "overpower",
           "you.",
