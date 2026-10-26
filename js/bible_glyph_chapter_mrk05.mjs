@@ -306,7 +306,7 @@ export function bible_glyph_chapter_mrk05() {
         "them",
         "permission.",
         "$plus",
-        "the",
+        "$pin",
         "unclean",
         "$wind",
         "came",
