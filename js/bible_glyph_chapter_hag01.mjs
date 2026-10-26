@@ -395,7 +395,7 @@ export function bible_glyph_chapter_hag01() {
           "So",
           "the",
           "$family",
-          "feared",
+          "$fear+doing",
           "the",
           "$i_am.",
         ],
