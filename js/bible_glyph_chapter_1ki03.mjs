@@ -244,7 +244,7 @@ export function bible_glyph_chapter_1ki03() {
           "$kneeling",
           "in",
           "the",
-          "place",
+          "$down_arrow",
           "of",
           "my",
           "$father",
