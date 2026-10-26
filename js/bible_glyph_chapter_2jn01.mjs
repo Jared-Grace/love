@@ -279,7 +279,7 @@ export function bible_glyph_chapter_2jn01() {
           "$joker",
           "$footprints",
           "to",
-          "you",
+          "$you",
           "$plus",
           "does",
           "$no_entry",
