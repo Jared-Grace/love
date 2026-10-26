@@ -133,7 +133,7 @@ export function bible_glyph_chapter_1th01() {
           "$wind,",
           "$plus",
           "great",
-          "conviction.",
+          "$battery+shopping_cart+thing.",
           "You",
           "$lightbulb",
           "how",
