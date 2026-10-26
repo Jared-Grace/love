@@ -539,7 +539,7 @@ export function bible_glyph_chapter_jhn20() {
           "$peace",
           "be",
           "with",
-          "you.",
+          "$you.",
         ],
       },
       {
