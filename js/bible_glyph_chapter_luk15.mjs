@@ -639,7 +639,7 @@ export function bible_glyph_chapter_luk15() {
         "$son",
         "of",
         "mine",
-        "was",
+        "$link",
         "$skull",
         "$plus",
         "is",
