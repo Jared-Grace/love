@@ -460,7 +460,7 @@ export function bible_glyph_chapter_jol02() {
           "$sparkle+doing",
           "the",
           "$church;",
-          "assemble",
+          "$tray_in+doing",
           "the",
           "aged;",
           "$crowd+doing",
