@@ -678,7 +678,7 @@ export function bible_glyph_chapter_luk15() {
         "$house,",
         "he",
         "$ear",
-        "music",
+        "$safety_pin+loudspeaker+thing",
         "$plus",
         "dancing.",
       ],
