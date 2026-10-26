@@ -429,7 +429,7 @@ export function bible_glyph_chapter_hag02() {
           "$flashlight",
           "$family",
           "and",
-          "this",
+          "$flashlight",
           "$map",
           "before",
           "Me,",
