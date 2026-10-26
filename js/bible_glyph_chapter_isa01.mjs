@@ -101,7 +101,7 @@ export function bible_glyph_chapter_isa01() {
       {
         verse_number: 4,
         words: [
-          "Alas,",
+          "$weary_face,",
           "O",
           "$bow+doing",
           "$map,",
