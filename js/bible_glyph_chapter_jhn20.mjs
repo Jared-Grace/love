@@ -190,7 +190,7 @@ export function bible_glyph_chapter_jhn20() {
           "$person_gesturing_ok",
           "was",
           "$no_entry",
-          "lying",
+          "$bed+doing",
           "with",
           "$pin",
           "linen",
