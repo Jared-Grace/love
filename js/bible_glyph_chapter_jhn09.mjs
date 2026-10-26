@@ -111,7 +111,7 @@ export function bible_glyph_chapter_jhn09() {
       {
         verse_number: 5,
         words: [
-          "While",
+          "$back+clock",
           "I",
           "am",
           "$tray_in",
