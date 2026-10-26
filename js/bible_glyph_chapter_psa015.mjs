@@ -56,7 +56,7 @@ export function bible_glyph_chapter_psa015() {
           "who",
           "has",
           "$no_entry",
-          "slander",
+          "$foot+doing",
           "on",
           "his",
           "tongue,",
