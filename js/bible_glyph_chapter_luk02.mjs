@@ -41,7 +41,7 @@ export function bible_glyph_chapter_luk02() {
         "$flashlight",
         "was",
         "the",
-        "first",
+        "$first_place",
         "$away+writing_hand+thing,",
         "taken",
         "while",
