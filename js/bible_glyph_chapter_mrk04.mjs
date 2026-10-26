@@ -907,7 +907,7 @@ export function bible_glyph_chapter_mrk04() {
         words: [
           "$plus",
           "$tray_in",
-          "that",
+          "$telescope",
           "$sun,",
           "when",
           "evening",
