@@ -652,7 +652,7 @@ export function bible_glyph_chapter_1ki13() {
           "am",
           "a",
           "$megaphone",
-          "like",
+          "$likeness",
           "you,",
           "and",
           "an",
