@@ -24,7 +24,7 @@ export function bible_glyph_chapter_psa029() {
           "$son",
           "of",
           "$heart_on_fire,",
-          "ascribe",
+          "$hands_giving+up_arrow",
           "to",
           "the",
           "$i_am",
