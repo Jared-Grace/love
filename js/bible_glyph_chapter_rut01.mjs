@@ -355,7 +355,7 @@ export function bible_glyph_chapter_rut01() {
           "I",
           "am",
           "too",
-          "old",
+          "$old_man+doing",
           "to",
           "have",
           "another",
