@@ -44,7 +44,7 @@ export function bible_glyph_chapter_mrk04() {
           "$tray_in",
           "it,",
           "$plus",
-          "all",
+          "$all",
           "the",
           "$crowd",
           "crowded",
