@@ -280,7 +280,7 @@ export function bible_glyph_chapter_oba01() {
         words: [
           "Then",
           "your",
-          "mighty",
+          "$might+person",
           "men,",
           "O",
           "Teman,",
