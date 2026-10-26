@@ -1025,7 +1025,7 @@ export function bible_glyph_chapter_jhn10() {
           "a",
           "$placard,",
           "but",
-          "everything",
+          "$all",
           "$proper_name$John",
           "$speech",
           "about",
