@@ -484,7 +484,7 @@ export function bible_glyph_chapter_jhn02() {
         verse_number: 19,
         words: [
           "$cross",
-          "answered",
+          "$speech+turn_back",
           "$plus",
           "$speech",
           "to",
