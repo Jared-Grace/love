@@ -126,7 +126,7 @@ export function bible_glyph_chapter_jol02() {
           "a",
           "$wilderness",
           "$astonished+thing;",
-          "surely",
+          "$plus",
           "$no_entry",
           "will",
           "escape",
