@@ -562,7 +562,7 @@ export function bible_glyph_chapter_luk24() {
           "vision",
           "of",
           "$angel,",
-          "who",
+          "$back+flashlight",
           "$speech",
           "$pointing_back",
           "is",
