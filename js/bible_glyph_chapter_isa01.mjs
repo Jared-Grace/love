@@ -76,7 +76,7 @@ export function bible_glyph_chapter_isa01() {
         verse_number: 3,
         words: [
           "The",
-          "ox",
+          "$ox",
           "$lightbulb",
           "its",
           "owner,",
