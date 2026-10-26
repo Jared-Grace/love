@@ -84,7 +84,7 @@ export function bible_glyph_chapter_psa146() {
           "$sun",
           "his",
           "plans",
-          "perish.",
+          "$wilted_flower.",
         ],
       },
       {
