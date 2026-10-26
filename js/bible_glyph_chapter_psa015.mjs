@@ -110,7 +110,7 @@ export function bible_glyph_chapter_psa015() {
           "$no_entry",
           "$hands_giving",
           "his",
-          "money",
+          "$silver",
           "at",
           "interest,",
           "and",
