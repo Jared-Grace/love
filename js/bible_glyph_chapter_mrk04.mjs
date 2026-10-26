@@ -63,7 +63,7 @@ export function bible_glyph_chapter_mrk04() {
           "He",
           "taught",
           "$pointing_back",
-          "many",
+          "$multiply",
           "things",
           "$tray_in",
           "$framed_picture,",
