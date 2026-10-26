@@ -643,7 +643,7 @@ export function bible_glyph_chapter_jdg13() {
           "them",
           "$pointing_up",
           "a",
-          "rock",
+          "$rock",
           "to",
           "the",
           "$i_am,",
