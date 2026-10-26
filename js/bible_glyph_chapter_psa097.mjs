@@ -35,7 +35,7 @@ export function bible_glyph_chapter_psa097() {
           "$cloud",
           "and",
           "thick",
-          "darkness",
+          "$cloud+black_circle",
           "surround",
           "Him;",
           "$ruler+thing",
