@@ -567,7 +567,7 @@ export function bible_glyph_chapter_jhn10() {
           "eyes",
           "of",
           "the",
-          "blind?",
+          "$person_with_white_cane?",
         ],
       },
       {
