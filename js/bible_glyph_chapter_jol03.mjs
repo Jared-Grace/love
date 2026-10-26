@@ -57,7 +57,7 @@ export function bible_glyph_chapter_jol03() {
           "judgment",
           "$linked_paperclips",
           "them",
-          "concerning",
+          "$pointing_up",
           "My",
           "$family,",
           "My",
