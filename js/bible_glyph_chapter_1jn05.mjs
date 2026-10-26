@@ -111,7 +111,7 @@ export function bible_glyph_chapter_1jn05() {
           "overcome",
           "the",
           "$globe:",
-          "our",
+          "$me",
           "$anchor.",
         ],
       },
