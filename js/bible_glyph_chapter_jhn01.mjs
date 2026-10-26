@@ -935,7 +935,7 @@ export function bible_glyph_chapter_jhn01() {
         verse_number: 41,
         words: [
           "He",
-          "first",
+          "$first_place+manner",
           "found",
           "his",
           "own",
