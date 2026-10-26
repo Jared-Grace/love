@@ -130,7 +130,7 @@ export function bible_glyph_chapter_psa029() {
           "$man_dancing+doing",
           "$likeness",
           "a",
-          "calf,",
+          "$calf,",
           "and",
           "$proper_name$Sirion",
           "$likeness",
