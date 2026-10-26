@@ -284,7 +284,7 @@ export function bible_glyph_chapter_hag02() {
           "Hosts.",
           "And",
           "in",
-          "this",
+          "$flashlight",
           "$place",
           "I",
           "will",
