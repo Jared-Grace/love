@@ -805,7 +805,7 @@ export function bible_glyph_chapter_jhn04() {
           "$pointing_back,",
           "“$me+describing",
           "food",
-          "is",
+          "$link",
           "to",
           "$hammer",
           "the",
