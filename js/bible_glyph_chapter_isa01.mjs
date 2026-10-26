@@ -20,7 +20,7 @@ export function bible_glyph_chapter_isa01() {
           "$hands_raised+proper_name",
           "and",
           "$city+peace",
-          "that",
+          "$back+flashlight",
           "$rescue+i_am",
           "$son",
           "of",
