@@ -394,7 +394,7 @@ export function bible_glyph_chapter_jhn02() {
           "$sheep",
           "$plus",
           "the",
-          "cattle.",
+          "$ox.",
           "He",
           "poured",
           "out",
