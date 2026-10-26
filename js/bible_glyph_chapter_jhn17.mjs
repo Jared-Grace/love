@@ -455,7 +455,7 @@ export function bible_glyph_chapter_jhn17() {
           "$curving_up",
           "$right_arrow+toward",
           "You",
-          "keep",
+          "$guard",
           "$pointing_back",
           "$tray_out",
           "of",
