@@ -111,7 +111,7 @@ export function bible_glyph_chapter_mrk10() {
     {
       verse_number: 5,
       words: [
-        "But",
+        "$curving_right",
         "$cross",
         "was",
         "in",
