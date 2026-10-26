@@ -213,7 +213,7 @@ export function bible_glyph_chapter_psa111() {
           "precepts",
           "gain",
           "$thumbs_up",
-          "understanding.",
+          "$nerd_face+thing.",
           "His",
           "praise",
           "endures",
