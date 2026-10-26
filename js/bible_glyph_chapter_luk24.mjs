@@ -951,7 +951,7 @@ export function bible_glyph_chapter_luk24() {
           "$link",
           "I",
           "$pointing_back.",
-          "Touch",
+          "$hand+darkness+doing",
           "Me",
           "$plus",
           "$eye,",
