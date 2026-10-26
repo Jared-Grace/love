@@ -664,7 +664,7 @@ export function bible_glyph_chapter_jhn20() {
         words: [
           "$right_arrow",
           "$pin",
-          "other",
+          "$plus+one",
           "$learner",
           "$speech",
           "$pointing_back,",
