@@ -680,7 +680,7 @@ export function bible_glyph_chapter_jhn20() {
           "Unless",
           "I",
           "$eye",
-          "the",
+          "$pin",
           "nail",
           "marks",
           "$tray_in",
