@@ -388,7 +388,7 @@ export function bible_glyph_chapter_luk07() {
         "to",
         "$pointing_back,",
         "“$no_entry",
-        "weep.”",
+        "$loudly_crying.”",
       ],
     },
     {
