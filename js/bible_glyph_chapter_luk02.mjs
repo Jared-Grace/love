@@ -956,7 +956,7 @@ export function bible_glyph_chapter_luk02() {
         "$night",
         "$plus",
         "$sun,",
-        "fasting",
+        "$eating+locked",
         "$plus",
         "praying.",
       ],
