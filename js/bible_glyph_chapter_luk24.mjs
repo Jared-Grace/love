@@ -611,7 +611,7 @@ export function bible_glyph_chapter_luk24() {
           "foolish",
           "ones,",
           "$plus",
-          "slow",
+          "$turtle+clock+describing",
           "of",
           "$heart_organ",
           "to",
