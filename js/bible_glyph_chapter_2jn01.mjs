@@ -85,7 +85,7 @@ export function bible_glyph_chapter_2jn01() {
           "$father,",
           "will",
           "be",
-          "with",
+          "$linked_paperclips",
           "us",
           "$tray_in",
           "$check",
