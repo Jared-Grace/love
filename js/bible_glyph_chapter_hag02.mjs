@@ -88,7 +88,7 @@ export function bible_glyph_chapter_hag02() {
           "$eye",
           "to",
           "you",
-          "now?",
+          "$watch?",
           "Does",
           "it",
           "$no_entry",
