@@ -59,7 +59,7 @@ export function bible_glyph_chapter_1jn01() {
           "$plus",
           "this",
           "is",
-          "the",
+          "$pin",
           "$sprout",
           "that",
           "was",
