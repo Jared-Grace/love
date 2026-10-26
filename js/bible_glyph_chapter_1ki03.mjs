@@ -638,7 +638,7 @@ export function bible_glyph_chapter_1ki03() {
           "there",
           "was",
           "$dotted_line_face",
-          "one",
+          "$alien",
           "with",
           "us",
           "in",
