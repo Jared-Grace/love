@@ -132,7 +132,7 @@ export function bible_glyph_chapter_mrk12() {
         "they",
         "killed.",
         "$plus",
-        "many",
+        "$multiply",
         "others:",
         "some",
         "they",
