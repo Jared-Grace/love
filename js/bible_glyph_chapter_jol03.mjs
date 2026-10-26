@@ -343,7 +343,7 @@ export function bible_glyph_chapter_jol03() {
           "of",
           "$i_am+scales,",
           "$pointing",
-          "there",
+          "$telescope",
           "I",
           "will",
           "$person+house",
