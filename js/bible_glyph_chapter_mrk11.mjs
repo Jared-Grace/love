@@ -406,7 +406,7 @@ export function bible_glyph_chapter_mrk11() {
         "$plus",
         "began",
         "to",
-        "drive",
+        "$tray_out+throwing",
         "out",
         "those",
         "who",
