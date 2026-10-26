@@ -574,7 +574,7 @@ export function bible_glyph_chapter_rut04() {
           "your",
           "old",
           "age.",
-          "For",
+          "$pointing",
           "your",
           "daughter-in-law,",
           "who",
