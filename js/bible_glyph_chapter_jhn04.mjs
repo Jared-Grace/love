@@ -214,7 +214,7 @@ export function bible_glyph_chapter_jhn04() {
           "$plus",
           "$flashlight+question",
           "it",
-          "is",
+          "$link",
           "that",
           "$speech",
           "to",
