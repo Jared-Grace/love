@@ -42,7 +42,7 @@ export function bible_glyph_chapter_2ki02() {
           "$heart_on_fire+rescue,",
           "$pleading",
           "$person+house",
-          "here,",
+          "$flashlight+round_pushpin,",
           "for",
           "the",
           "$i_am",
