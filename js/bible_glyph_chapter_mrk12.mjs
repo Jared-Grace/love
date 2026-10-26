@@ -604,7 +604,7 @@ export function bible_glyph_chapter_mrk12() {
         "the",
         "$person+up_arrow,",
         "then,",
-        "whose",
+        "$flashlight+question",
         "$woman",
         "will",
         "$pointing_back",
