@@ -511,7 +511,7 @@ export function bible_glyph_chapter_jhn10() {
       {
         verse_number: 19,
         words: [
-          "Again",
+          "$repeat",
           "there",
           "was",
           "$t_shirt+scissors+thing",
