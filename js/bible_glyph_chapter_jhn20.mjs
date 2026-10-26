@@ -187,7 +187,7 @@ export function bible_glyph_chapter_jhn20() {
           "been",
           "around",
           "$pointing_back",
-          "head",
+          "$person_gesturing_ok",
           "was",
           "$no_entry",
           "lying",
