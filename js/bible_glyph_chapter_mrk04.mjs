@@ -1022,7 +1022,7 @@ export function bible_glyph_chapter_mrk04() {
           "up",
           "and",
           "rebuked",
-          "the",
+          "$pin",
           "wind",
           "$plus",
           "$speech",
