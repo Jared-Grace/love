@@ -37,7 +37,7 @@ export function bible_glyph_chapter_rev10() {
           "$pointing_back",
           "$person_gesturing_ok.",
           "$pointing_back",
-          "face",
+          "$face",
           "was",
           "like",
           "the",
