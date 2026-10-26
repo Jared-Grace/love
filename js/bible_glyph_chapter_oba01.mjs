@@ -349,7 +349,7 @@ export function bible_glyph_chapter_oba01() {
           "$gate",
           "and",
           "$throwing+lots+doing",
-          "lots",
+          "$lots",
           "for",
           "$city+peace,",
           "you",
