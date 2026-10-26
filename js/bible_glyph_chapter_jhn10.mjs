@@ -996,7 +996,7 @@ export function bible_glyph_chapter_jhn10() {
           "$toward+tray_in",
           "$pin",
           "$place",
-          "where",
+          "$back+round_pushpin",
           "$proper_name$John",
           "had",
           "first",
