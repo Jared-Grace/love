@@ -726,7 +726,7 @@ export function bible_glyph_chapter_1ki13() {
           "of",
           "the",
           "$i_am",
-          "came",
+          "$link",
           "to",
           "the",
           "$megaphone",
