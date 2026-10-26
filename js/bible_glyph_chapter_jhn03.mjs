@@ -912,7 +912,7 @@ export function bible_glyph_chapter_jhn03() {
           "$sprout.",
           "$curving_up,",
           "the",
-          "wrath",
+          "$angry_face",
           "of",
           "$heart_on_fire",
           "remains",
