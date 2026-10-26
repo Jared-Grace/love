@@ -156,7 +156,7 @@ export function bible_glyph_chapter_jhn04() {
           "had",
           "gone",
           "$toward+tray_in",
-          "the",
+          "$pin",
           "$city",
           "to",
           "buy",
