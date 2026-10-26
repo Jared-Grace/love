@@ -591,7 +591,7 @@ export function bible_glyph_chapter_rev01() {
           "the",
           "things",
           "that",
-          "are,",
+          "$link,",
           "$plus",
           "the",
           "things",
