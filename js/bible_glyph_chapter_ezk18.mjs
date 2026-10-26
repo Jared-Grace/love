@@ -887,7 +887,7 @@ export function bible_glyph_chapter_ezk18() {
           "$turn_back$s",
           "from",
           "the",
-          "wickedness",
+          "$thumbs_down+person+thing",
           "he",
           "has",
           "$hammer+doing",
