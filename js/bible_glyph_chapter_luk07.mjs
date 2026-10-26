@@ -1178,7 +1178,7 @@ export function bible_glyph_chapter_luk07() {
         "$proper_name$“Simon,",
         "I",
         "have",
-        "something",
+        "$joker",
         "to",
         "be",
         "in",
