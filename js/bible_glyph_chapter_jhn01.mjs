@@ -389,7 +389,7 @@ export function bible_glyph_chapter_jhn01() {
           "The",
           "one",
           "and",
-          "only",
+          "$one+butterfly",
           "$heart_on_fire,",
           "who",
           "is",
