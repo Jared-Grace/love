@@ -264,7 +264,7 @@ export function bible_glyph_chapter_rut03() {
           "garment",
           "$pointing_up",
           "me,",
-          "for",
+          "$pointing",
           "$you",
           "are",
           "a",
