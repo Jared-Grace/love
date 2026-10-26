@@ -316,7 +316,7 @@ export function bible_glyph_chapter_luk02() {
         "$bed+doing",
         "$tray_in",
         "a",
-        "manger.”",
+        "$ox+basket.”",
       ],
     },
     {
