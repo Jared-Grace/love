@@ -679,7 +679,7 @@ export function bible_glyph_chapter_jud01() {
           "keep",
           "you",
           "from",
-          "stumbling",
+          "$no_entry+hiking_boot+rock+describing",
           "$plus",
           "to",
           "present",
