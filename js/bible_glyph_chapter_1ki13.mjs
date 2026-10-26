@@ -743,7 +743,7 @@ export function bible_glyph_chapter_1ki13() {
           "he",
           "cried",
           "out",
-          "to",
+          "$toward",
           "the",
           "$man_beard",
           "of",
