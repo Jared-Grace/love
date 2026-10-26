@@ -502,7 +502,7 @@ export function bible_glyph_chapter_isa01() {
           "to",
           "do",
           "right;",
-          "seek",
+          "$magnifying_glass+question",
           "$scales",
           "and",
           "correct",
