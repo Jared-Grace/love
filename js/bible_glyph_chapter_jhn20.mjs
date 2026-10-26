@@ -827,7 +827,7 @@ export function bible_glyph_chapter_jhn20() {
         words: [
           "$cross",
           "$hammer",
-          "many",
+          "$multiply",
           "$plus",
           "other",
           "signs",
