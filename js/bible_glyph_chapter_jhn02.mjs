@@ -110,7 +110,7 @@ export function bible_glyph_chapter_jhn02() {
           "$speech",
           "to",
           "$pin",
-          "servants,",
+          "$bellhop_bell+doer,",
           "“$hammer",
           "whatever",
           "He",
