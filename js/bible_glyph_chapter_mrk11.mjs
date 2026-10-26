@@ -278,7 +278,7 @@ export function bible_glyph_chapter_mrk11() {
         "went",
         "into",
         "the",
-        "temple",
+        "$classical_building",
         "courts.",
         "He",
         "looked",
