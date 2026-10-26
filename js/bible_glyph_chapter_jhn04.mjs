@@ -119,7 +119,7 @@ export function bible_glyph_chapter_jhn04() {
           "well.",
           "It",
           "$link",
-          "about",
+          "$likeness",
           "the",
           "sixth",
           "$clock.",
