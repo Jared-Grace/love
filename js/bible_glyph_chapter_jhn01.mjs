@@ -585,7 +585,7 @@ export function bible_glyph_chapter_jhn01() {
           "but",
           "among",
           "you",
-          "stands",
+          "$person+round_pushpin",
           "One",
           "you",
           "do",
