@@ -411,7 +411,7 @@ export function bible_glyph_chapter_mat05() {
           "pass",
           "away,",
           "one",
-          "jot",
+          "$writing_hand+baby",
           "or",
           "one",
           "stroke",
