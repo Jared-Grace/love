@@ -265,7 +265,7 @@ export function bible_glyph_chapter_rut03() {
           "over",
           "me,",
           "for",
-          "you",
+          "$you",
           "are",
           "a",
           "kinsman-redeemer.",
