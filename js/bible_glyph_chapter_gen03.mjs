@@ -645,7 +645,7 @@ export function bible_glyph_chapter_gen03() {
           "are,",
           "and",
           "to",
-          "dust",
+          "$dust",
           "you",
           "will",
           "$turn_back.",
