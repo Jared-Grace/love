@@ -59,7 +59,7 @@ export function bible_glyph_chapter_psa023() {
           "the",
           "paths",
           "of",
-          "righteousness",
+          "$ruler+thing",
           "for",
           "the",
           "sake",
