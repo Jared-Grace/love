@@ -135,7 +135,7 @@ export function bible_glyph_chapter_1ki13() {
           "apart,",
           "and",
           "the",
-          "ashes",
+          "$bacon+ashes",
           "upon",
           "it",
           "will",
