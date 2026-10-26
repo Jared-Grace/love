@@ -710,7 +710,7 @@ export function bible_glyph_chapter_jhn03() {
       {
         verse_number: 28,
         words: [
-          "You",
+          "$you",
           "yourselves",
           "can",
           "$witness+doing",
