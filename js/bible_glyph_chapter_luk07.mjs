@@ -42,7 +42,7 @@ export function bible_glyph_chapter_luk07() {
         "was",
         "$thumbs_down+manner",
         "and",
-        "about",
+        "$soon",
         "to",
         "die,",
         "whom",
