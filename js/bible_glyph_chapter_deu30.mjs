@@ -393,7 +393,7 @@ export function bible_glyph_chapter_deu30() {
         verse_number: 11,
         words: [
           "$pointing",
-          "this",
+          "$flashlight",
           "$scroll",
           "I",
           "give",
