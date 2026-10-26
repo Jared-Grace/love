@@ -543,7 +543,7 @@ export function bible_glyph_chapter_rut04() {
           "$back+flashlight",
           "has",
           "$no_entry",
-          "left",
+          "$sabbath+doing",
           "you",
           "without",
           "a",
