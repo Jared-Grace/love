@@ -132,7 +132,7 @@ export function bible_glyph_chapter_psa139() {
       {
         verse_number: 7,
         words: [
-          "Where",
+          "$question+right_arrow",
           "can",
           "I",
           "$walking",
