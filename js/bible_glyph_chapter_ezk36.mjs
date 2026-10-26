@@ -1014,7 +1014,7 @@ export function bible_glyph_chapter_ezk36() {
           "will",
           "$no_entry",
           "$hands_giving",
-          "famine",
+          "$famine",
           "upon",
           "you.",
         ],
