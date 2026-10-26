@@ -250,7 +250,7 @@ export function bible_glyph_chapter_mrk12() {
         "Have",
         "you",
         "never",
-        "read",
+        "$open_book",
         "$flashlight",
         "$writing_hand+thing:",
         "The",
