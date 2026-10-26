@@ -559,7 +559,7 @@ export function bible_glyph_chapter_mrk11() {
         "back",
         "in",
         "the",
-        "morning,",
+        "$morning,",
         "they",
         "$eye",
         "the",
