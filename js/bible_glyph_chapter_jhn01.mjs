@@ -971,7 +971,7 @@ export function bible_glyph_chapter_jhn01() {
           "and",
           "$speech,",
           "“You",
-          "are",
+          "$link",
           "$ear+proper_name",
           "$son",
           "of",
