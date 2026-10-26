@@ -242,7 +242,7 @@ export function bible_glyph_chapter_1jn03() {
           "was",
           "revealed,",
           "to",
-          "destroy",
+          "$free_button",
           "the",
           "$tools",
           "of",
