@@ -886,7 +886,7 @@ export function bible_glyph_chapter_jol02() {
           "$next_track,",
           "I",
           "will",
-          "pour",
+          "$jar+down_arrow+doing",
           "out",
           "My",
           "$wind",
