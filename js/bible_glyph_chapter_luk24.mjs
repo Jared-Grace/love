@@ -505,7 +505,7 @@ export function bible_glyph_chapter_luk24() {
           "$wrestling+heart_on_fire.",
           "$plus",
           "$double_exclamation",
-          "all",
+          "$all",
           "this,",
           "it",
           "is",
