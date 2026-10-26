@@ -183,7 +183,7 @@ export function bible_glyph_chapter_psa097() {
           "exalted",
           "far",
           "above",
-          "all",
+          "$all",
           "$moai.",
         ],
       },
