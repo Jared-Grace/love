@@ -252,7 +252,7 @@ export function bible_glyph_chapter_rev01() {
       {
         verse_number: 8,
         words: [
-          "I",
+          "$me",
           "am",
           "the",
           "$proper_name$Alpha",
