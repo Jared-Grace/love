@@ -971,7 +971,7 @@ export function bible_glyph_chapter_mrk04() {
           "were",
           "breaking",
           "over",
-          "the",
+          "$pin",
           "boat,",
           "so",
           "that",
