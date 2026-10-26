@@ -284,7 +284,7 @@ export function bible_glyph_chapter_deu26() {
           "and",
           "an",
           "outstretched",
-          "arm,",
+          "$hand+might,",
           "with",
           "great",
           "terror,",
