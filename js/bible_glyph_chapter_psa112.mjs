@@ -56,7 +56,7 @@ export function bible_glyph_chapter_psa112() {
       {
         verse_number: 3,
         words: [
-          "Wealth",
+          "$money_bag+more",
           "and",
           "riches",
           "are",
