@@ -289,7 +289,7 @@ export function bible_glyph_chapter_jud01() {
           "disputed",
           "with",
           "the",
-          "devil",
+          "$metro+throwing",
           "over",
           "the",
           "body",
