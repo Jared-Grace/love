@@ -560,7 +560,7 @@ export function bible_glyph_chapter_luk02() {
         "$sun",
         "of",
         "$pointing_back",
-        "purification",
+        "$soap+thing",
         "$pointing_down",
         "to",
         "the",
