@@ -391,7 +391,7 @@ export function bible_glyph_chapter_mrk10() {
         "$pointing_back,",
         "“$thumbs_up",
         "$teacher,",
-        "what",
+        "$flashlight+question",
         "must",
         "I",
         "$hammer",
