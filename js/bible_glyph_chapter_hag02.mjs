@@ -111,7 +111,7 @@ export function bible_glyph_chapter_hag02() {
           "$might+up_arrow,",
           "O",
           "Zerubbabel,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
           "Be",
