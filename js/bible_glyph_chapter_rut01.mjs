@@ -191,7 +191,7 @@ export function bible_glyph_chapter_rut01() {
           "and",
           "her",
           "daughters-in-law",
-          "prepared",
+          "$person+pointing_up",
           "to",
           "$turn_back",
           "from",
