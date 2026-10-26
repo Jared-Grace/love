@@ -730,7 +730,7 @@ export function bible_glyph_chapter_2ki02() {
           "the",
           "$city",
           "$speech",
-          "to",
+          "$toward",
           "$heart_on_fire+rescue,",
           "Please",
           "note,",
