@@ -346,7 +346,7 @@ export function bible_glyph_chapter_gen01() {
           "and",
           "there",
           "was",
-          "morning,",
+          "$morning,",
           "the",
           "third",
           "day.",
