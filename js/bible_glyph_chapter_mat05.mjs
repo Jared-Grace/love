@@ -1093,7 +1093,7 @@ export function bible_glyph_chapter_mat05() {
           "one",
           "who",
           "asks",
-          "you,",
+          "$you,",
           "$plus",
           "$no_entry",
           "turn",
