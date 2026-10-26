@@ -903,7 +903,7 @@ export function bible_glyph_chapter_jol02() {
           "$old_man",
           "men",
           "will",
-          "dream",
+          "$dream+doing",
           "dreams,",
           "your",
           "young",
