@@ -82,7 +82,7 @@ export function bible_glyph_chapter_exo14() {
           "that",
           "he",
           "will",
-          "pursue",
+          "$running+toward",
           "them.",
           "But",
           "I",
