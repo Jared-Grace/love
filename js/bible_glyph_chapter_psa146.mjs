@@ -78,7 +78,7 @@ export function bible_glyph_chapter_psa146() {
           "$turn_back",
           "to",
           "the",
-          "ground;",
+          "$brown_square;",
           "on",
           "that",
           "$sun",
