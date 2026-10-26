@@ -117,7 +117,7 @@ export function bible_glyph_chapter_jhn20() {
           "$two",
           "were",
           "running",
-          "together,",
+          "$crowd+round_pushpin,",
           "$plus",
           "$pin",
           "other",
