@@ -231,7 +231,7 @@ export function bible_glyph_chapter_jhn02() {
           "he",
           "$loudspeaker+doing",
           "the",
-          "bridegroom",
+          "$person_in_tuxedo",
           "aside",
         ],
       },
