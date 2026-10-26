@@ -321,7 +321,7 @@ export function bible_glyph_chapter_psa139() {
           "was",
           "$hammer+doing",
           "in",
-          "secret,",
+          "$see_no_evil_monkey+thing,",
           "when",
           "I",
           "was",
