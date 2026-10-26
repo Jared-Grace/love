@@ -850,7 +850,7 @@ export function bible_glyph_chapter_mrk04() {
           "of",
           "the",
           "$sky",
-          "nest",
+          "$pointing_down+tent+doing",
           "in",
           "$pointing_back",
           "$umbrella_on_ground.",
