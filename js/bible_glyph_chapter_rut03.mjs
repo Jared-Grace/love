@@ -304,7 +304,7 @@ export function bible_glyph_chapter_rut03() {
           "whether",
           "rich",
           "or",
-          "poor.",
+          "$pinching_hand+person.",
         ],
       },
       {
