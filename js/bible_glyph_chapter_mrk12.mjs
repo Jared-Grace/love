@@ -647,7 +647,7 @@ export function bible_glyph_chapter_mrk12() {
       words: [
         "$back+clock",
         "they",
-        "rise",
+        "$person+up_arrow",
         "$tray_out",
         "the",
         "$skull,",
