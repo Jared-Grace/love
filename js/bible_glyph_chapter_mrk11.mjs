@@ -732,7 +732,7 @@ export function bible_glyph_chapter_mrk11() {
         "$walking",
         "$tray_in",
         "the",
-        "temple",
+        "$classical_building",
         "courts,",
         "the",
         "chief",
