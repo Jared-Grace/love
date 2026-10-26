@@ -926,7 +926,7 @@ export function bible_glyph_chapter_luk24() {
           "Why",
           "are",
           "you",
-          "troubled,",
+          "$shaking_face+doing,",
           "$plus",
           "why",
           "do",
