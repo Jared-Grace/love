@@ -103,7 +103,7 @@ export function bible_glyph_chapter_mrk08() {
           "in",
           "this",
           "desolate",
-          "place",
+          "$wilderness+thing",
           "could",
           "$joker",
           "find",
