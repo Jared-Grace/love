@@ -506,7 +506,7 @@ export function bible_glyph_chapter_mrk08() {
           "$pin",
           "four",
           "thousand,",
-          "how",
+          "$abacus+question",
           "many",
           "basketfuls",
           "did",
