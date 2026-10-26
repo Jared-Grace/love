@@ -838,7 +838,7 @@ export function bible_glyph_chapter_luk24() {
         words: [
           "$speech,",
           "$pointing",
-          "the",
+          "$pin",
           "$crown",
           "has",
           "indeed",
