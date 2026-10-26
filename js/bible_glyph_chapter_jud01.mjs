@@ -424,7 +424,7 @@ export function bible_glyph_chapter_jud01() {
           "their",
           "own",
           "$flushed+thing;",
-          "wandering",
+          "$dizzy+star",
           "$star_plain,",
           "for",
           "whom",
