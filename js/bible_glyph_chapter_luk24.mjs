@@ -285,7 +285,7 @@ export function bible_glyph_chapter_luk24() {
           "$footprints+away,",
           "wondering",
           "to",
-          "himself",
+          "$pointing_back+repeat",
           "what",
           "had",
           "happened.",
