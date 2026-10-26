@@ -490,7 +490,7 @@ export function bible_glyph_chapter_luk24() {
       {
         verse_number: 21,
         words: [
-          "But",
+          "$curving_right",
           "$me",
           "were",
           "hoping",
