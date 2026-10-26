@@ -591,7 +591,7 @@ export function bible_glyph_chapter_luk24() {
           "$woman",
           "had",
           "$speech,",
-          "but",
+          "$curving_right",
           "$pointing_back",
           "they",
           "did",
