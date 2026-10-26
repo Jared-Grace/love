@@ -951,7 +951,7 @@ export function bible_glyph_chapter_exo14() {
           "$clamp+proper_name,",
           "the",
           "$family",
-          "feared",
+          "$fear+doing",
           "the",
           "$i_am",
           "and",
