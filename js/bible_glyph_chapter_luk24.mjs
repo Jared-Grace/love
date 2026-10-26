@@ -183,7 +183,7 @@ export function bible_glyph_chapter_luk24() {
       },
       {
         verse_number: 8,
-        words: ["$plus", "they", "remembered", "$pointing_back", "words."],
+        words: ["$plus", "they", "remembered", "$pointing_back", "$speech+thing."],
       },
       {
         verse_number: 9,
