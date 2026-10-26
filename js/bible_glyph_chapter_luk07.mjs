@@ -491,7 +491,7 @@ export function bible_glyph_chapter_luk07() {
         "$proper_name$Judea",
         "$plus",
         "$all",
-        "the",
+        "$pin",
         "surrounding",
         "region.",
       ],
