@@ -1203,7 +1203,7 @@ export function bible_glyph_chapter_luk02() {
         "$pointing_back",
         "$safety_pin+lightbulb+thing",
         "$plus",
-        "answers.",
+        "$speech+turn_back+thing.",
       ],
     },
     {
