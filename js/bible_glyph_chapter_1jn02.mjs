@@ -753,7 +753,7 @@ export function bible_glyph_chapter_1jn02() {
       {
         verse_number: 26,
         words: [
-          "These",
+          "$flashlight",
           "things",
           "I",
           "have",
