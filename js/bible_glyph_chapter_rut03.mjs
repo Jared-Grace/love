@@ -551,7 +551,7 @@ export function bible_glyph_chapter_rut03() {
           "$woman,",
           "$speech",
           "Naomi,",
-          "until",
+          "$finish",
           "you",
           "$lightbulb",
           "how",
