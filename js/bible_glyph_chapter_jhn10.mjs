@@ -805,7 +805,7 @@ export function bible_glyph_chapter_jhn10() {
           "answered",
           "$pointing_back,",
           "We",
-          "are",
+          "$link",
           "$no_entry",
           "stoning",
           "$you",
