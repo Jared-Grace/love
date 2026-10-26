@@ -214,7 +214,7 @@ export function bible_glyph_chapter_luk15() {
         "$house",
         "$plus",
         "$magnifying_glass",
-        "carefully",
+        "$pointing_up+worried_face+heart_red+manner",
         "until",
         "she",
         "finds",
