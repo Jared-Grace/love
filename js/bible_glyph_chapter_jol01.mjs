@@ -144,7 +144,7 @@ export function bible_glyph_chapter_jol01() {
           "because",
           "of",
           "the",
-          "sweet",
+          "$grapes+water",
           "wine,",
           "for",
           "it",
