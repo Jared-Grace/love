@@ -614,7 +614,7 @@ export function bible_glyph_chapter_mrk10() {
         "$hole+sewing_needle",
         "of",
         "a",
-        "needle",
+        "$sewing_needle",
         "than",
         "for",
         "a",
