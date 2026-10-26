@@ -396,7 +396,7 @@ export function bible_glyph_chapter_jol03() {
           "$crowd+loudspeaker",
           "in",
           "the",
-          "valley",
+          "$valley",
           "of",
           "decision!",
           "For",
