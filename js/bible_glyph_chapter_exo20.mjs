@@ -346,7 +346,7 @@ export function bible_glyph_chapter_exo20() {
       },
       {
         verse_number: 15,
-        words: ["You", "shall", "$no_entry", "steal."],
+        words: ["You", "shall", "$no_entry", "$ninja+doing."],
       },
       {
         verse_number: 16,
