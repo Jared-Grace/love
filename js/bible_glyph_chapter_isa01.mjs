@@ -85,7 +85,7 @@ export function bible_glyph_chapter_isa01() {
           "$donkey",
           "its",
           "master's",
-          "manger,",
+          "$cow_face+wheat+thing,",
           "but",
           "$wrestling+heart_on_fire",
           "does",
