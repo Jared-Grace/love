@@ -1006,7 +1006,7 @@ export function bible_glyph_chapter_mrk04() {
           "do",
           "You",
           "$no_entry",
-          "care",
+          "$worried_face+heart_red+doing",
           "$pointing",
           "we",
           "are",
