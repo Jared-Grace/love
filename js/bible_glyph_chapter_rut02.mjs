@@ -281,7 +281,7 @@ export function bible_glyph_chapter_rut02() {
           "the",
           "young",
           "men",
-          "not",
+          "$zero+manner",
           "to",
           "touch",
           "you.",
