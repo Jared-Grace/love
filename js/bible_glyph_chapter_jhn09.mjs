@@ -247,7 +247,7 @@ export function bible_glyph_chapter_jhn09() {
           "$speech",
           "to",
           "$pointing_back,",
-          "How",
+          "$gear+question",
           "then",
           "were",
           "your",
