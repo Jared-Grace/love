@@ -246,7 +246,7 @@ export function bible_glyph_chapter_jhn10() {
           "out",
           "$plus",
           "find",
-          "pasture.",
+          "$sheep+herb+thing.",
         ],
       },
       {
