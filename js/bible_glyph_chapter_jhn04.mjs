@@ -1288,7 +1288,7 @@ export function bible_glyph_chapter_jhn04() {
           "fever",
           "left",
           "$pointing_back",
-          "yesterday",
+          "$back+sun",
           "at",
           "the",
           "seventh",
