@@ -412,7 +412,7 @@ export function bible_glyph_chapter_mrk12() {
         "are",
         "you",
         "testing",
-        "Me?",
+        "$me?",
         "Bring",
         "Me",
         "a",
