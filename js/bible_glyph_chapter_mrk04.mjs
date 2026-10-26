@@ -295,7 +295,7 @@ export function bible_glyph_chapter_mrk04() {
           "is",
           "expressed",
           "$tray_in",
-          "parables,",
+          "$framed_picture,",
         ],
       },
       {
