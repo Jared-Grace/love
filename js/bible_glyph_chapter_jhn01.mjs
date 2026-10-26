@@ -610,7 +610,7 @@ export function bible_glyph_chapter_jhn01() {
           "I",
           "$link",
           "$no_entry",
-          "worthy",
+          "$gold+describing",
           "to",
           "untie.”",
         ],
