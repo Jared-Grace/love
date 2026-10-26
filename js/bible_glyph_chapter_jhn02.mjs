@@ -343,7 +343,7 @@ export function bible_glyph_chapter_jhn02() {
           "$cross",
           "went",
           "up",
-          "to",
+          "$toward+tray_in",
           "$city+peace.",
         ],
       },
