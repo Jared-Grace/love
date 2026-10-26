@@ -125,7 +125,7 @@ export function bible_glyph_chapter_jon03() {
           "They",
           "proclaimed",
           "a",
-          "fast",
+          "$eating+locked",
           "and",
           "dressed",
           "in",
