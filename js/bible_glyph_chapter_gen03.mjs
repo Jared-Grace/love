@@ -640,7 +640,7 @@ export function bible_glyph_chapter_gen03() {
           "you",
           "$hand_receiving.",
           "For",
-          "dust",
+          "$dust",
           "you",
           "are,",
           "and",
