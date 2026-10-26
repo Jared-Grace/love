@@ -47,7 +47,7 @@ export function bible_glyph_chapter_psa115() {
           "the",
           "$map",
           "$speech,",
-          "Where",
+          "$question+round_pushpin",
           "is",
           "their",
           "$heart_on_fire?",
