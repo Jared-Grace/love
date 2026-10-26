@@ -87,7 +87,7 @@ export function bible_glyph_chapter_1jn05() {
           "$scroll$s",
           "are",
           "$no_entry",
-          "burdensome,",
+          "$package+down_arrow+describing,",
         ],
       },
       {
