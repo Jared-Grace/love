@@ -1175,7 +1175,7 @@ export function bible_glyph_chapter_luk02() {
         "the",
         "$classical_building",
         "courts,",
-        "sitting",
+        "$pointing_down+seat+round_pushpin+doing",
         "$tray_in",
         "the",
         "midst",
