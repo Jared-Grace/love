@@ -374,7 +374,7 @@ export function bible_glyph_chapter_1jn04() {
           "He",
           "has",
           "$hands_giving$n",
-          "us",
+          "$me",
           "of",
           "His",
           "$wind.",
