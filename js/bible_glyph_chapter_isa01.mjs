@@ -486,7 +486,7 @@ export function bible_glyph_chapter_isa01() {
           "$away+doing",
           "your",
           "evil",
-          "deeds",
+          "$clapper_board",
           "from",
           "My",
           "$eyes.",
