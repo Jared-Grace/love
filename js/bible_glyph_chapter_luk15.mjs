@@ -619,7 +619,7 @@ export function bible_glyph_chapter_luk15() {
       words: [
         "$shopping_cart",
         "$pin",
-        "fattened",
+        "$sheaf_of_rice+describing",
         "$ox+child",
         "$plus",
         "kill",
