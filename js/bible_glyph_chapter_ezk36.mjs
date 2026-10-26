@@ -1060,7 +1060,7 @@ export function bible_glyph_chapter_ezk36() {
           "Then",
           "you",
           "will",
-          "remember",
+          "$reminder_ribbon",
           "your",
           "$thumbs_down",
           "$road",
