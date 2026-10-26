@@ -36,7 +36,7 @@ export function bible_glyph_chapter_3jn01() {
           "pray",
           "that",
           "in",
-          "every",
+          "$all",
           "way",
           "you",
           "may",
