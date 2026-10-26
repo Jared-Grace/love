@@ -379,7 +379,7 @@ export function bible_glyph_chapter_jhn04() {
           "to",
           "keep",
           "coming",
-          "here",
+          "$round_pushpin+manner",
           "to",
           "draw",
           "water.”",
