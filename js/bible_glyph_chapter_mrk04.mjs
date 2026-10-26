@@ -1027,7 +1027,7 @@ export function bible_glyph_chapter_mrk04() {
           "$plus",
           "$speech",
           "to",
-          "the",
+          "$pin",
           "$sea,",
           "Silence!",
           "Be",
