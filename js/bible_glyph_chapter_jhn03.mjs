@@ -584,7 +584,7 @@ export function bible_glyph_chapter_jhn03() {
           "with",
           "them",
           "$plus",
-          "baptized.",
+          "$diving_mask.",
         ],
       },
       {
