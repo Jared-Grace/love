@@ -591,7 +591,7 @@ export function bible_glyph_chapter_mrk12() {
         "last",
         "of",
         "all,",
-        "the",
+        "$pin",
         "$woman",
         "$skull",
         "too.",
