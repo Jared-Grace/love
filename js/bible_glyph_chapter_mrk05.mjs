@@ -1061,7 +1061,7 @@ export function bible_glyph_chapter_mrk05() {
         "to",
         "$pointing_back,",
         "$proper_name$“Talitha",
-        "koum!”",
+        "$person+pointing_up+exclamation!”",
         "which",
         "means,",
         "“Little",
