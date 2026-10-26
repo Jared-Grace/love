@@ -1223,7 +1223,7 @@ export function bible_glyph_chapter_jhn04() {
           "to",
           "$pointing_back,",
           "“$walking,",
-          "your",
+          "$you",
           "$son",
           "$sprout+doing.”",
           "The",
