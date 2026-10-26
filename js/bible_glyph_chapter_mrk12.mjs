@@ -1017,7 +1017,7 @@ export function bible_glyph_chapter_mrk12() {
         "$pointing_back",
         "$crown.",
         "$plus",
-        "how",
+        "$round_pushpin+tray_out+question",
         "can",
         "He",
         "be",
