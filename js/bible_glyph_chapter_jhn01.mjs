@@ -919,7 +919,7 @@ export function bible_glyph_chapter_jhn01() {
           "$rock+proper_name’s",
           "$brother,",
           "$link",
-          "one",
+          "$one",
           "$tray_out",
           "the",
           "two",
