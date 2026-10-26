@@ -60,7 +60,7 @@ export function bible_glyph_chapter_luk24() {
       {
         verse_number: 3,
         words: [
-          "but",
+          "$curving_right",
           "when",
           "they",
           "entered,",
