@@ -980,7 +980,7 @@ export function bible_glyph_chapter_mat05() {
           "your",
           "$speech",
           "be",
-          "Yes,",
+          "$head_shaking_vertically,",
           "yes,",
           "and",
           "your",
