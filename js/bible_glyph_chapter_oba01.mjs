@@ -410,7 +410,7 @@ export function bible_glyph_chapter_oba01() {
           "$no_entry",
           "$footprints",
           "the",
-          "gate",
+          "$gate",
           "of",
           "My",
           "$family",
