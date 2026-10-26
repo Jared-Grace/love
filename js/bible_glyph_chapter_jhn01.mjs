@@ -727,7 +727,7 @@ export function bible_glyph_chapter_jhn01() {
           "descending",
           "$likeness",
           "a",
-          "dove",
+          "$dove",
           "$tray_out",
           "$sky,",
           "$plus",
