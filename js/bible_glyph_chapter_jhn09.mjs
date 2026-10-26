@@ -694,7 +694,7 @@ export function bible_glyph_chapter_jhn09() {
           "$hammer",
           "to",
           "you?",
-          "How",
+          "$gear+question",
           "did",
           "He",
           "open",
