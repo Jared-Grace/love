@@ -1018,7 +1018,7 @@ export function bible_glyph_chapter_ezk33() {
           "will",
           "$skull+doing",
           "by",
-          "plague.",
+          "$face_with_medical_mask.",
         ],
       },
       {
