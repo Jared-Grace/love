@@ -470,7 +470,7 @@ export function bible_glyph_chapter_mrk08() {
           "$back+clock",
           "I",
           "broke",
-          "the",
+          "$pin",
           "five",
           "$bread",
           "for",
