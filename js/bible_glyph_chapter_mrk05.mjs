@@ -1049,7 +1049,7 @@ export function bible_glyph_chapter_mrk05() {
       verse_number: 41,
       words: [
         "$plus",
-        "taking",
+        "$raised_fist+doing",
         "the",
         "child",
         "by",
