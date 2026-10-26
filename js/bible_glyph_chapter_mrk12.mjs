@@ -818,7 +818,7 @@ export function bible_glyph_chapter_mrk12() {
         "$tray_out",
         "all",
         "your",
-        "mind",
+        "$metro+brain",
         "$plus",
         "$tray_out",
         "all",
