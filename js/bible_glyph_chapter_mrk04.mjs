@@ -895,7 +895,7 @@ export function bible_glyph_chapter_mrk04() {
           "privately",
           "He",
           "explained",
-          "everything",
+          "$all",
           "to",
           "His",
           "own",
