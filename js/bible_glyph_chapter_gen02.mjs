@@ -183,7 +183,7 @@ export function bible_glyph_chapter_gen02() {
           "and",
           "watered",
           "the",
-          "whole",
+          "$all",
           "surface",
           "of",
           "the",
