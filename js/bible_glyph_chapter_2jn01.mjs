@@ -26,7 +26,7 @@ export function bible_glyph_chapter_2jn01() {
           "$pointing_back",
           "$child,",
           "whom",
-          "I",
+          "$me",
           "$heart_red+doing",
           "$tray_in",
           "the",
