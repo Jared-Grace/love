@@ -295,7 +295,7 @@ export function bible_glyph_chapter_jhn02() {
           "$pointing_back",
           "$learner",
           "$anchor+doing",
-          "in",
+          "$toward+tray_in",
           "$pointing_back.",
         ],
       },
