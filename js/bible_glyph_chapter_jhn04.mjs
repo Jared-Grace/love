@@ -254,7 +254,7 @@ export function bible_glyph_chapter_jhn04() {
           "with",
           "$plus",
           "the",
-          "well",
+          "$well",
           "is",
           "deep.",
           "Where",
