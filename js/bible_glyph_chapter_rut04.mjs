@@ -650,7 +650,7 @@ export function bible_glyph_chapter_rut04() {
         verse_number: 18,
         words: [
           "Now",
-          "these",
+          "$flashlight+flashlight",
           "are",
           "the",
           "generations",
