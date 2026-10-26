@@ -850,7 +850,7 @@ export function bible_glyph_chapter_jhn04() {
           "$plus",
           "look",
           "at",
-          "the",
+          "$pin",
           "fields,",
           "$pointing",
           "they",
