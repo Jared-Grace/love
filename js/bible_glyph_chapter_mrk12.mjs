@@ -750,7 +750,7 @@ export function bible_glyph_chapter_mrk12() {
         "and",
         "$ear",
         "$pointing_back",
-        "debate.",
+        "$safety_pin+magnifying_glass.",
         "$eye",
         "$pointing",
         "how",
