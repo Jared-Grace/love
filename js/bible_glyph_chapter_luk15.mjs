@@ -506,7 +506,7 @@ export function bible_glyph_chapter_luk15() {
         "like",
         "one",
         "of",
-        "your",
+        "$you",
         "hired",
         "servants.",
       ],
