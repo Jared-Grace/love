@@ -470,7 +470,7 @@ export function bible_glyph_chapter_exo20() {
           "Do",
           "$no_entry",
           "be",
-          "afraid,",
+          "$fear+doing,",
           "$fishing_pole+proper_name",
           "$speech",
           "to",
