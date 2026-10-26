@@ -134,7 +134,7 @@ export function bible_glyph_chapter_deu26() {
           "that",
           "the",
           "$i_am",
-          "swore",
+          "$raised_back_of_hand+doing",
           "to",
           "our",
           "$father",
