@@ -192,7 +192,7 @@ export function bible_glyph_chapter_jhn01() {
           "$globe",
           "was",
           "made",
-          "through",
+          "$metro",
           "$pointing_back,",
           "$pin",
           "$globe",
