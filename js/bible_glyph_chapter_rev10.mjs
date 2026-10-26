@@ -399,7 +399,7 @@ export function bible_glyph_chapter_rev10() {
           "$speech",
           "to",
           "$me,",
-          "You",
+          "$you",
           "$knot",
           "prophesy",
           "again",
