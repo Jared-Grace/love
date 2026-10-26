@@ -63,7 +63,7 @@ export function bible_glyph_chapter_gen03() {
           "$speech",
           "to",
           "the",
-          "serpent,",
+          "$snake,",
           "We",
           "may",
           "$eating",
