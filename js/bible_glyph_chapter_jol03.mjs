@@ -129,7 +129,7 @@ export function bible_glyph_chapter_jol03() {
           "Me",
           "a",
           "$turn_back+gift+thing?",
-          "If",
+          "$traffic_light",
           "$you",
           "retaliate",
           "against",
