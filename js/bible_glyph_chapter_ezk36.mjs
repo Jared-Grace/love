@@ -819,7 +819,7 @@ export function bible_glyph_chapter_ezk36() {
           "$map",
           "will",
           "$lightbulb",
-          "that",
+          "$pointing",
           "I",
           "am",
           "the",
