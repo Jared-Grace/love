@@ -494,7 +494,7 @@ export function bible_glyph_chapter_jhn02() {
           "$hut,",
           "$plus",
           "$tray_in",
-          "three",
+          "$three",
           "$sun",
           "I",
           "will",
