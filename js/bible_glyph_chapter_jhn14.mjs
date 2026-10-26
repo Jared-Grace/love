@@ -215,7 +215,7 @@ export function bible_glyph_chapter_jhn14() {
           "that",
           "will",
           "be",
-          "enough",
+          "$check+battery+doing",
           "for",
           "us.”",
         ],
