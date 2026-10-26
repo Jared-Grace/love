@@ -727,7 +727,7 @@ export function bible_glyph_chapter_jhn14() {
           "$pin",
           "$father",
           "will",
-          "send",
+          "$incoming_envelope",
           "$tray_in",
           "My",
           "$name_tag,",
