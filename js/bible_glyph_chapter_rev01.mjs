@@ -297,7 +297,7 @@ export function bible_glyph_chapter_rev01() {
           "was",
           "$tray_in",
           "the",
-          "island",
+          "$sea+mountain",
           "of",
           "$proper_name$Patmos",
           "because",
