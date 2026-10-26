@@ -224,7 +224,7 @@ export function bible_glyph_chapter_1jn04() {
           "$heart_red+doing$s",
           "has",
           "been",
-          "born",
+          "$hatching_chick",
           "of",
           "$heart_on_fire",
           "and",
