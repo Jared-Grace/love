@@ -744,7 +744,7 @@ export function bible_glyph_chapter_mrk12() {
         "$one",
         "of",
         "the",
-        "scribes",
+        "$writing_hand+doer",
         "came",
         "up",
         "and",
