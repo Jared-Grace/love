@@ -118,7 +118,7 @@ export function bible_glyph_chapter_jhn04() {
           "the",
           "well.",
           "It",
-          "was",
+          "$link",
           "about",
           "the",
           "sixth",
