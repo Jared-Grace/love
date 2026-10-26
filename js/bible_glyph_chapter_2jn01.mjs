@@ -33,7 +33,7 @@ export function bible_glyph_chapter_2jn01() {
           "$check,",
           "$plus",
           "$no_entry",
-          "I",
+          "$me",
           "alone,",
           "but",
           "$plus",
