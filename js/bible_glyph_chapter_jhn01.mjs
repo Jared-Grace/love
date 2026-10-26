@@ -620,7 +620,7 @@ export function bible_glyph_chapter_jhn01() {
         words: [
           "All",
           "$flashlight",
-          "happened",
+          "$butterfly",
           "$tray_in",
           "$proper_name$Bethany",
           "beyond",
