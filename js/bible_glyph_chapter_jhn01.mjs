@@ -1077,7 +1077,7 @@ export function bible_glyph_chapter_jhn01() {
           "$speech.",
           "“$footprints",
           "$plus",
-          "see,”",
+          "$exclamation,”",
           "$proper_name$Philip",
           "$speech.",
         ],
