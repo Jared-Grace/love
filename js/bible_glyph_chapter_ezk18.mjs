@@ -717,7 +717,7 @@ export function bible_glyph_chapter_ezk18() {
           "Because",
           "of",
           "the",
-          "righteousness",
+          "$ruler+thing",
           "he",
           "has",
           "$hammer+doing,",
