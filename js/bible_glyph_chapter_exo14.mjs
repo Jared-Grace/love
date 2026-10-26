@@ -54,7 +54,7 @@ export function bible_glyph_chapter_exo14() {
           "of",
           "the",
           "$wrestling+heart_on_fire,",
-          "They",
+          "$pointing_back",
           "are",
           "wandering",
           "the",
