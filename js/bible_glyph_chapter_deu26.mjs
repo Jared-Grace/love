@@ -290,7 +290,7 @@ export function bible_glyph_chapter_deu26() {
           "$fear+thing,",
           "and",
           "with",
-          "signs",
+          "$placard",
           "and",
           "wonders.",
         ],
