@@ -505,7 +505,7 @@ export function bible_glyph_chapter_1jn05() {
           "$hatching_chick",
           "$tray_out",
           "$heart_on_fire",
-          "protects",
+          "$guard",
           "$pointing_back,",
           "$plus",
           "$pin",
