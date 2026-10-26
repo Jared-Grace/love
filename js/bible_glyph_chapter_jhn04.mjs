@@ -1034,7 +1034,7 @@ export function bible_glyph_chapter_jhn04() {
           "$pointing",
           "$flashlight",
           "man",
-          "truly",
+          "$check+describing+manner",
           "$link",
           "$pin",
           "$rescue+doer",
