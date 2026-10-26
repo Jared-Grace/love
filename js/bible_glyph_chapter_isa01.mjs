@@ -154,7 +154,7 @@ export function bible_glyph_chapter_isa01() {
           "keep",
           "$away+thing?",
           "Your",
-          "head",
+          "$person_gesturing_ok",
           "has",
           "a",
           "massive",
