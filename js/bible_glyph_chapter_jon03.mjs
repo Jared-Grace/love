@@ -105,7 +105,7 @@ export function bible_glyph_chapter_jon03() {
           "and",
           "proclaimed,",
           "Forty",
-          "more",
+          "$repeat",
           "$sun",
           "and",
           "$proper_name$Nineveh",
