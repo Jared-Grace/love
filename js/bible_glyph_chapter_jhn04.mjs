@@ -938,7 +938,7 @@ export function bible_glyph_chapter_jhn04() {
       {
         verse_number: 39,
         words: [
-          "Many",
+          "$multiply",
           "$tray_out",
           "$telescope",
           "$city",
