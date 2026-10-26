@@ -754,7 +754,7 @@ export function bible_glyph_chapter_jhn10() {
       },
       {
         verse_number: 30,
-        words: ["I", "$plus", "$pin", "$father", "are", "one."],
+        words: ["I", "$plus", "$pin", "$father", "are", "$one."],
       },
       {
         verse_number: 31,
