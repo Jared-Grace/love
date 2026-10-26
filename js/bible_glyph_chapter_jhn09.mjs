@@ -248,7 +248,7 @@ export function bible_glyph_chapter_jhn09() {
           "to",
           "$pointing_back,",
           "$gear+question",
-          "then",
+          "$right_arrow",
           "were",
           "your",
           "eyes",
