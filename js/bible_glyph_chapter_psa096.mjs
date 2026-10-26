@@ -25,7 +25,7 @@ export function bible_glyph_chapter_psa096() {
           "to",
           "the",
           "$i_am,",
-          "all",
+          "$all",
           "the",
           "$earth.",
         ],
