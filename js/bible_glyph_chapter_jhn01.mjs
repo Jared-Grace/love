@@ -366,7 +366,7 @@ export function bible_glyph_chapter_jhn01() {
           "$scroll",
           "was",
           "$hands_giving$n",
-          "through",
+          "$metro",
           "$fishing_pole+proper_name;",
           "$gift",
           "$plus",
