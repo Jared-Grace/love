@@ -81,7 +81,7 @@ export function bible_glyph_chapter_psa001() {
           "$tree",
           "$sprout+right_arrow+doing",
           "by",
-          "streams",
+          "$divide+water",
           "of",
           "$water,",
           "which",
