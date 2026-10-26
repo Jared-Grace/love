@@ -1240,7 +1240,7 @@ export function bible_glyph_chapter_mat05() {
         words: [
           "Be",
           "perfect,",
-          "therefore,",
+          "$right_arrow,",
           "as",
           "your",
           "heavenly",
