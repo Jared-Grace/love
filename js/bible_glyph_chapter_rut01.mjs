@@ -522,7 +522,7 @@ export function bible_glyph_chapter_rut01() {
           "will",
           "$skull+doing,",
           "and",
-          "there",
+          "$telescope",
           "I",
           "will",
           "be",
