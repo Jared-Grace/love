@@ -307,7 +307,7 @@ export function bible_glyph_chapter_jhn02() {
           "He",
           "went",
           "$walking+pointing_down",
-          "to",
+          "$toward+tray_in",
           "$proper_name$Capernaum,",
           "$plus",
           "$pointing_back",
