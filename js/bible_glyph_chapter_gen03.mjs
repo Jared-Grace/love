@@ -595,7 +595,7 @@ export function bible_glyph_chapter_gen03() {
         verse_number: 18,
         words: [
           "Both",
-          "thorns",
+          "$thorns",
           "and",
           "thistles",
           "it",
