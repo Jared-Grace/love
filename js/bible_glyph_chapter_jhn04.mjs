@@ -468,7 +468,7 @@ export function bible_glyph_chapter_jhn04() {
           "see",
           "$pointing",
           "You",
-          "are",
+          "$link",
           "a",
           "$megaphone.",
         ],
