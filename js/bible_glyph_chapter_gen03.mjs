@@ -322,7 +322,7 @@ export function bible_glyph_chapter_gen03() {
           "I",
           "was",
           "$fear+doing",
-          "because",
+          "$pointing",
           "I",
           "was",
           "naked;",
