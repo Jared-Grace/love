@@ -403,7 +403,7 @@ export function bible_glyph_chapter_rut02() {
           "May",
           "the",
           "$i_am",
-          "repay",
+          "$peace+doing",
           "your",
           "work,",
           "and",
