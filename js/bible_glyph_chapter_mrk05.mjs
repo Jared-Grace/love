@@ -746,7 +746,7 @@ export function bible_glyph_chapter_mrk05() {
         "$lightbulb",
         "in",
         "her",
-        "body",
+        "$x_ray",
         "$pointing",
         "she",
         "was",
