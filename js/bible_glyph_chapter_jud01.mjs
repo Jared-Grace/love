@@ -74,7 +74,7 @@ export function bible_glyph_chapter_jud01() {
           "$clockwise_arrows",
           "$pin",
           "$rescue+thing",
-          "we",
+          "$me",
           "$handshake+describing,",
           "I",
           "felt",
