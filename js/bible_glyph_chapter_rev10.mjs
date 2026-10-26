@@ -94,7 +94,7 @@ export function bible_glyph_chapter_rev10() {
           "a",
           "loud",
           "$voice",
-          "like",
+          "$likeness",
           "the",
           "roar",
           "of",
