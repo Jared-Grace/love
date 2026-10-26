@@ -404,7 +404,7 @@ export function bible_glyph_chapter_jhn10() {
           "My",
           "$person_other",
           "for",
-          "the",
+          "$pin",
           "$sheep.",
         ],
       },
