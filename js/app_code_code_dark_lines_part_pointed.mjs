@@ -22,8 +22,8 @@ export function app_code_code_dark_lines_part_pointed(pointers, part, color) {
     function cut(piece) {
       let b = word.test(piece);
       if (not(b)) {
-        let drawn = [[piece, on ? color : null]];
-        return drawn;
+        let drawn_inner = [[piece, on ? color : null]];
+        return drawn_inner;
       }
       if (equal(count, first)) {
         on = true;
