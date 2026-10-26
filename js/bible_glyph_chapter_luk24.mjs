@@ -827,7 +827,7 @@ export function bible_glyph_chapter_luk24() {
           "$one+ten",
           "$plus",
           "those",
-          "with",
+          "$safety_pin",
           "$pointing_back",
           "gathered",
           "together,",
