@@ -642,7 +642,7 @@ export function bible_glyph_chapter_jhn09() {
           "$star",
           "to",
           "$heart_on_fire.",
-          "We",
+          "$me",
           "$lightbulb",
           "$pointing",
           "this",
