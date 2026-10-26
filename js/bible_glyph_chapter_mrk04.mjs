@@ -134,7 +134,7 @@ export function bible_glyph_chapter_mrk04() {
           "sprang",
           "up",
           "$fast_forward",
-          "because",
+          "$metro",
           "it",
           "had",
           "$no_entry",
