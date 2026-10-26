@@ -732,7 +732,7 @@ export function bible_glyph_chapter_jhn14() {
           "My",
           "$name_tag,",
           "will",
-          "teach",
+          "$teacher+doing",
           "you",
           "all",
           "things",
