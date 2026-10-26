@@ -154,7 +154,7 @@ export function bible_glyph_chapter_jud01() {
           "all",
           "this,",
           "I",
-          "want",
+          "$shooting_star+lightbulb+doing",
           "to",
           "remind",
           "you",
