@@ -1299,7 +1299,7 @@ export function bible_glyph_chapter_ezk36() {
           "her",
           "$alarm_clock",
           "feasts,",
-          "so",
+          "$right_arrow",
           "will",
           "the",
           "ruined",
