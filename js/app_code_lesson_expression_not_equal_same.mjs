@@ -11,6 +11,7 @@ import { app_code_label_code_question } from "./app_code_label_code_question.mjs
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
+import { app_code_not_wrapped_wrong_say } from "./app_code_not_wrapped_wrong_say.mjs";
 import { app_code_lesson_quizzes_unscramble_both } from "./app_code_lesson_quizzes_unscramble_both.mjs";
 import { app_code_lesson_expression_not_equal_same_title_name_id } from "./app_code_lesson_expression_not_equal_same_title_name_id.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
@@ -101,6 +102,7 @@ export function app_code_lesson_expression_not_equal_same() {
     answer_label: written_with,
     answer_on_button: html_style_code_dark,
     answer_count_override: null,
+    wrong_say: app_code_not_wrapped_wrong_say,
   };
   let backwards = {
     question_label: written_with,
@@ -108,6 +110,7 @@ export function app_code_lesson_expression_not_equal_same() {
     answer_label: which_code,
     answer_on_button: html_style_code_dark,
     answer_count_override: null,
+    wrong_say: app_code_not_wrapped_wrong_say,
   };
   let quizzes_get = app_code_lesson_quizzes_unscramble_both({
     batch_get,

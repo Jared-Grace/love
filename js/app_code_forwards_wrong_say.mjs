@@ -8,6 +8,8 @@ import { app_code_string_value_wrong_say } from "./app_code_string_value_wrong_s
 import { app_code_lines_wrong_say } from "./app_code_lines_wrong_say.mjs";
 import { app_code_program_trace_wrong_say } from "./app_code_program_trace_wrong_say.mjs";
 import { app_code_program_lets_wrong_say } from "./app_code_program_lets_wrong_say.mjs";
+import { app_code_value_itself_wrong_say } from "./app_code_value_itself_wrong_say.mjs";
+import { app_code_part_first_wrong_say } from "./app_code_part_first_wrong_say.mjs";
 export function app_code_forwards_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("said when a learner picks a wrong output for code: the first reminder that has something to say about this pick, or null when none does");
@@ -47,5 +49,14 @@ export function app_code_forwards_wrong_say(question, answer, choice) {
   }
   ("2026-10-26: a program of let lines the trace cannot follow, such as one calling Math, is run instead and each name's value read off, so it comes after the trace, which says more where it can follow");
   let lets = app_code_program_lets_wrong_say(question, answer, choice);
-  return lets;
+  if (null_not_is(lets)) {
+    return lets;
+  }
+  ("2026-10-27: two quizzes whose answer is not a value worked out: true or false standing alone, which gives itself back, and the part of a line solved first. Each takes only its own shape, so neither speaks where one above does");
+  let itself = app_code_value_itself_wrong_say(question, answer, choice);
+  if (null_not_is(itself)) {
+    return itself;
+  }
+  let part = app_code_part_first_wrong_say(question, answer, choice);
+  return part;
 }
