@@ -186,7 +186,7 @@ export function bible_glyph_chapter_2th01() {
           "$plus",
           "to",
           "grant",
-          "relief",
+          "$person_in_lotus_position",
           "to",
           "$you",
           "who",
