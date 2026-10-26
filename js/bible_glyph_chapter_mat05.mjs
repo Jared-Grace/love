@@ -159,7 +159,7 @@ export function bible_glyph_chapter_mat05() {
           "$gift+smile",
           "are",
           "$pin",
-          "peacemakers,",
+          "$peace+hammer+doer,",
           "$pointing",
           "$pointing_back",
           "will",
