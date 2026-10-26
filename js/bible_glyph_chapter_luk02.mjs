@@ -1120,7 +1120,7 @@ export function bible_glyph_chapter_luk02() {
         "$link",
         "$tray_in",
         "their",
-        "company,",
+        "$safety_pin+road+thing,",
         "they",
         "$footprints",
         "a",
