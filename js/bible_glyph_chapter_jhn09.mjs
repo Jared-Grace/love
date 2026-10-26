@@ -407,7 +407,7 @@ export function bible_glyph_chapter_jhn09() {
           "But",
           "$plus+one",
           "$speech,",
-          "How",
+          "$gear+question",
           "can",
           "a",
           "$person",
