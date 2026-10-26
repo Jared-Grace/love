@@ -60,7 +60,7 @@ export function bible_glyph_chapter_1jn02() {
           "atoning",
           "sacrifice",
           "for",
-          "our",
+          "$me",
           "$bow$s,",
           "and",
           "$no_entry",
