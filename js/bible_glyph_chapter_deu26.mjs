@@ -701,7 +701,7 @@ export function bible_glyph_chapter_deu26() {
           "will",
           "$hands_giving",
           "you",
-          "high",
+          "$pointing_up+most",
           "above",
           "all",
           "the",
