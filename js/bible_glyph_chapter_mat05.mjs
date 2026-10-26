@@ -1024,7 +1024,7 @@ export function bible_glyph_chapter_mat05() {
           "you,",
           "$no_entry",
           "to",
-          "resist",
+          "$shield+doing",
           "an",
           "$thumbs_down",
           "person.",
