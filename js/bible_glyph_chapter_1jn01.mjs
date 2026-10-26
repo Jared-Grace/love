@@ -239,7 +239,7 @@ export function bible_glyph_chapter_1jn01() {
           "$soap+doing",
           "$me",
           "$away",
-          "all",
+          "$all",
           "$bow.",
         ],
       },
