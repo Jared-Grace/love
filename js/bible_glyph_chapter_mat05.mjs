@@ -459,7 +459,7 @@ export function bible_glyph_chapter_mat05() {
           "$castle",
           "of",
           "$sky;",
-          "but",
+          "$curving_right",
           "$back+flashlight",
           "$hammer",
           "$plus",
