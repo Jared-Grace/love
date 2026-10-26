@@ -887,7 +887,7 @@ export function bible_glyph_chapter_jhn01() {
           "“$footprints",
           "$plus",
           "$eye.”",
-          "So",
+          "$right_arrow",
           "they",
           "$footprints",
           "$plus",
