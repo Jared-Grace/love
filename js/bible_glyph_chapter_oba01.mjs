@@ -251,7 +251,7 @@ export function bible_glyph_chapter_oba01() {
           "In",
           "that",
           "$sun,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am,",
           "will",
