@@ -134,7 +134,7 @@ export function bible_glyph_chapter_jon02() {
           "me;",
           "the",
           "seaweed",
-          "wrapped",
+          "$adhesive_bandage+doing",
           "around",
           "my",
           "head.",
