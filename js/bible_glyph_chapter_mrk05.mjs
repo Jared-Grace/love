@@ -797,7 +797,7 @@ export function bible_glyph_chapter_mrk05() {
         "$pointing_back,",
         "“You",
         "$eyes",
-        "the",
+        "$pin",
         "$crowd",
         "pressing",
         "in",
