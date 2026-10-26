@@ -610,7 +610,7 @@ export function bible_glyph_chapter_mat05() {
       {
         verse_number: 24,
         words: [
-          "leave",
+          "$balloon",
           "your",
           "gift",
           "there",
