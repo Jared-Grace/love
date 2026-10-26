@@ -146,7 +146,7 @@ export function bible_glyph_chapter_psa099() {
           "them",
           "from",
           "the",
-          "pillar",
+          "$candle",
           "of",
           "cloud;",
           "they",
