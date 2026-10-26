@@ -19,7 +19,7 @@ export function bible_glyph_chapter_ezk36() {
           "$son",
           "of",
           "$person,",
-          "prophesy",
+          "$megaphone+doing",
           "to",
           "the",
           "$mountain",
