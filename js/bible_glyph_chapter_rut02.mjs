@@ -57,7 +57,7 @@ export function bible_glyph_chapter_rut02() {
           "the",
           "fields",
           "and",
-          "glean",
+          "$hand+sheaf_of_rice+doing",
           "heads",
           "of",
           "grain",
