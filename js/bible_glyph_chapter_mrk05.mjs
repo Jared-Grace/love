@@ -872,7 +872,7 @@ export function bible_glyph_chapter_mrk05() {
         "healed",
         "you.",
         "Go",
-        "in",
+        "$toward+tray_in",
         "$peace,",
         "$plus",
         "be",
