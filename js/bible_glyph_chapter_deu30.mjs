@@ -395,7 +395,7 @@ export function bible_glyph_chapter_deu30() {
           "$pointing",
           "$flashlight",
           "$scroll",
-          "I",
+          "$me",
           "give",
           "you",
           "$sun",
