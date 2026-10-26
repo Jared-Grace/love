@@ -1270,7 +1270,7 @@ export function bible_glyph_chapter_luk02() {
         "I",
         "had",
         "to",
-        "be",
+        "$link",
         "$tray_in",
         "the",
         "house",
