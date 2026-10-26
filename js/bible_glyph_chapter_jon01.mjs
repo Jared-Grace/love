@@ -123,7 +123,7 @@ export function bible_glyph_chapter_jon01() {
           "a",
           "violent",
           "storm",
-          "arose",
+          "$link",
           "that",
           "the",
           "$ship",
