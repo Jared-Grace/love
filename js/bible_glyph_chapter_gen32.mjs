@@ -411,7 +411,7 @@ export function bible_glyph_chapter_gen32() {
           "$sheep+female_sign",
           "and",
           "twenty",
-          "rams,",
+          "$ram,",
         ],
       },
       {
