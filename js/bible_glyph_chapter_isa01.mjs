@@ -596,7 +596,7 @@ export function bible_glyph_chapter_isa01() {
           "$sword.",
           "$pointing",
           "the",
-          "mouth",
+          "$face_with_open_mouth",
           "of",
           "the",
           "$i_am",
