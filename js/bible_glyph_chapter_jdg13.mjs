@@ -478,7 +478,7 @@ export function bible_glyph_chapter_jdg13() {
           "$walking+tray_out",
           "from",
           "the",
-          "vine,",
+          "$vine,",
           "$no_entry",
           "drink",
           "any",
