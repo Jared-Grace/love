@@ -912,7 +912,7 @@ export function bible_glyph_chapter_gen01() {
           "have",
           "given",
           "every",
-          "green",
+          "$leaf+describing",
           "plant",
           "for",
           "food;",
