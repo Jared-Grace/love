@@ -247,7 +247,7 @@ export function bible_glyph_chapter_3jn01() {
           "$pointing_back",
           "refuses",
           "to",
-          "welcome",
+          "$palm_up_hand+toward+doing",
           "the",
           "$brother",
           "$plus",
