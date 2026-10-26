@@ -623,7 +623,7 @@ export function bible_glyph_chapter_deu30() {
           "you",
           "will",
           "surely",
-          "perish;",
+          "$wilted_flower;",
           "you",
           "will",
           "$no_entry",
