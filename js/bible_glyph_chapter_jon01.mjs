@@ -431,7 +431,7 @@ export function bible_glyph_chapter_jon01() {
           "blame",
           "for",
           "this",
-          "violent",
+          "$top",
           "$tornado",
           "that",
           "has",
