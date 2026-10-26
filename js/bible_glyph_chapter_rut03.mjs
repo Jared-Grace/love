@@ -404,7 +404,7 @@ export function bible_glyph_chapter_rut03() {
           "lie",
           "here",
           "until",
-          "morning.",
+          "$morning.",
         ],
       },
       {
