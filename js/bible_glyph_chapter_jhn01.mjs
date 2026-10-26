@@ -1128,7 +1128,7 @@ export function bible_glyph_chapter_jhn01() {
           "you",
           "were",
           "$down_arrow",
-          "the",
+          "$pin",
           "fig",
           "tree,",
           "I",
