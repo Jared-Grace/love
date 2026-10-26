@@ -524,7 +524,7 @@ export function bible_glyph_chapter_mrk11() {
         "$pointing_back,",
         "because",
         "the",
-        "whole",
+        "$all",
         "$crowd",
         "was",
         "astonished",
