@@ -218,7 +218,7 @@ export function bible_glyph_chapter_jud01() {
         verse_number: 7,
         words: [
           "In",
-          "like",
+          "$people_with_bunny_ears",
           "manner,",
           "$proper_name$Sodom",
           "$plus",
