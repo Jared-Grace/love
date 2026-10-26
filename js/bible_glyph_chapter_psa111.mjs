@@ -90,7 +90,7 @@ export function bible_glyph_chapter_psa111() {
           "is",
           "$heart_orange+describing",
           "and",
-          "compassionate.",
+          "$hugging_face+describing.",
         ],
       },
       {
