@@ -97,7 +97,7 @@ export function bible_glyph_chapter_psa023() {
           "rod",
           "and",
           "Your",
-          "staff,",
+          "$white_cane+walking,",
           "they",
           "comfort",
           "me.",
