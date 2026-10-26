@@ -912,7 +912,7 @@ export function bible_glyph_chapter_mrk08() {
           "cross",
           "and",
           "follow",
-          "Me.",
+          "$me.",
         ],
       },
       {
