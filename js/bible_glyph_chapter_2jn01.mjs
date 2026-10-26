@@ -338,7 +338,7 @@ export function bible_glyph_chapter_2jn01() {
           "I",
           "$crossed_fingers+doing",
           "to",
-          "come",
+          "$butterfly",
           "to",
           "$you",
           "$plus",
