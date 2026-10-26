@@ -491,7 +491,7 @@ export function bible_glyph_chapter_jon01() {
           "on",
           "account",
           "of",
-          "this",
+          "$flashlight",
           "$man_beard",
           "$person_other!",
           "Do",
