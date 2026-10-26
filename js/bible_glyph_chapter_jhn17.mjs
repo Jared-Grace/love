@@ -379,7 +379,7 @@ export function bible_glyph_chapter_jhn17() {
         verse_number: 13,
         words: [
           "But",
-          "now",
+          "$watch",
           "I",
           "am",
           "$footprints",
