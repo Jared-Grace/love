@@ -610,7 +610,7 @@ export function bible_glyph_chapter_gen01() {
           "and",
           "let",
           "$bird",
-          "multiply",
+          "$multiply+doing",
           "on",
           "the",
           "$earth.",
