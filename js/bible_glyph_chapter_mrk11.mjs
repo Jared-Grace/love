@@ -667,7 +667,7 @@ export function bible_glyph_chapter_mrk11() {
         "$speech",
         "to",
         "you,",
-        "whatever",
+        "$back+abacus",
         "you",
         "ask",
         "for",
