@@ -41,7 +41,7 @@ export function bible_glyph_chapter_psa023() {
           "leads",
           "me",
           "$pointing_up",
-          "quiet",
+          "$seat+thing",
           "$water.",
         ],
       },
