@@ -506,7 +506,7 @@ export function bible_glyph_chapter_1ki13() {
           "$son,",
           "Saddle",
           "the",
-          "donkey",
+          "$donkey",
           "for",
           "me.",
           "So",
