@@ -815,7 +815,7 @@ export function bible_glyph_chapter_gen32() {
           "And",
           "Jacob",
           "requested,",
-          "Please",
+          "$pleading",
           "$newspaper",
           "me",
           "your",
