@@ -490,7 +490,7 @@ export function bible_glyph_chapter_isa01() {
           "from",
           "My",
           "$eyes.",
-          "Stop",
+          "$stop_button",
           "doing",
           "evil!",
         ],
