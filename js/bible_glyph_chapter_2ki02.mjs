@@ -682,7 +682,7 @@ export function bible_glyph_chapter_2ki02() {
           "who",
           "searched",
           "for",
-          "three",
+          "$three",
           "$sun",
           "but",
           "did",
