@@ -266,7 +266,7 @@ export function bible_glyph_chapter_ezk18() {
           "will",
           "$sprout+doing",
           "$sprout+doing,",
-          "declares",
+          "$microphone",
           "the",
           "$crown",
           "$i_am.",
