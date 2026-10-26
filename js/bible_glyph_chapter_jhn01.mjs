@@ -151,7 +151,7 @@ export function bible_glyph_chapter_jhn01() {
           "$no_entry",
           "$pin",
           "$light,",
-          "but",
+          "$curving_up",
           "he",
           "came",
           "to",
