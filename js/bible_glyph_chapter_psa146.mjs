@@ -219,7 +219,7 @@ export function bible_glyph_chapter_psa146() {
           "for",
           "all",
           "generations.",
-          "Hallelujah!",
+          "$clapping_hands!",
         ],
       },
     ],
