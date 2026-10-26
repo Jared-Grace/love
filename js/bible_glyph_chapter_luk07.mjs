@@ -896,7 +896,7 @@ export function bible_glyph_chapter_luk07() {
       words: [
         "To",
         "what",
-        "then",
+        "$right_arrow",
         "can",
         "I",
         "compare",
