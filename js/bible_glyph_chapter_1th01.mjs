@@ -292,7 +292,7 @@ export function bible_glyph_chapter_1th01() {
           "our",
           "deliverer",
           "$tray_out",
-          "the",
+          "$pin",
           "wrath",
           "that",
           "is",
