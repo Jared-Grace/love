@@ -203,7 +203,7 @@ export function bible_glyph_chapter_jon01() {
           "$person+pointing_up",
           "up",
           "and",
-          "call",
+          "$waving_hand",
           "on",
           "your",
           "$heart_on_fire.",
