@@ -478,7 +478,7 @@ export function bible_glyph_chapter_psa139() {
           "them",
           "with",
           "perfect",
-          "hatred;",
+          "$heart_red+thumbs_down+thing;",
           "I",
           "count",
           "them",
