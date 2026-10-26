@@ -511,7 +511,7 @@ export function bible_glyph_chapter_rev01() {
         verse_number: 17,
         words: [
           "$plus",
-          "when",
+          "$back+clock",
           "I",
           "$eye",
           "$pointing_back,",
