@@ -85,7 +85,7 @@ export function bible_glyph_chapter_jhn20() {
           "do",
           "$no_entry",
           "$lightbulb",
-          "where",
+          "$round_pushpin+question",
           "they",
           "have",
           "put",
