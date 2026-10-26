@@ -181,7 +181,7 @@ export function bible_glyph_chapter_psa118() {
       {
         verse_number: 10,
         words: [
-          "All",
+          "$all",
           "the",
           "$map",
           "surrounded",
