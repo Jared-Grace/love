@@ -34,7 +34,7 @@ export function bible_glyph_chapter_gen01() {
           "the",
           "$earth",
           "was",
-          "formless",
+          "$wilderness+no_entry",
           "and",
           "empty,",
           "and",
