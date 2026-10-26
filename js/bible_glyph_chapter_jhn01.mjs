@@ -156,7 +156,7 @@ export function bible_glyph_chapter_jhn01() {
           "came",
           "to",
           "$witness+doing",
-          "about",
+          "$clockwise_arrows",
           "$pin",
           "$light.",
         ],
