@@ -576,7 +576,7 @@ export function bible_glyph_chapter_jhn10() {
           "At",
           "that",
           "$telescope+clock",
-          "the",
+          "$pin",
           "Feast",
           "of",
           "Dedication",
