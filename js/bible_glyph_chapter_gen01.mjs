@@ -45,7 +45,7 @@ export function bible_glyph_chapter_gen01() {
           "face",
           "of",
           "the",
-          "deep,",
+          "$sea+down_arrow,",
           "and",
           "the",
           "$wind",
