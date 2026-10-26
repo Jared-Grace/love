@@ -1048,7 +1048,7 @@ export function bible_glyph_chapter_ezk36() {
           "the",
           "$face_with_rolling_eyes",
           "of",
-          "famine",
+          "$famine",
           "among",
           "the",
           "$map.",
