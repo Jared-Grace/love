@@ -527,7 +527,7 @@ export function bible_glyph_chapter_luk02() {
         "time",
         "for",
         "the",
-        "circumcision",
+        "$kitchen_knife+clockwise_arrows+doing",
         "of",
         "$pointing_back,",
         "$plus",
