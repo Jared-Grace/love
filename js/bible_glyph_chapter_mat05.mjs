@@ -184,7 +184,7 @@ export function bible_glyph_chapter_mat05() {
           "$ruler+thing,",
           "$pointing",
           "$pointing_back",
-          "is",
+          "$link",
           "the",
           "$castle",
           "of",
