@@ -613,7 +613,7 @@ export function bible_glyph_chapter_exo20() {
           "and",
           "$cow_face.",
           "In",
-          "every",
+          "$all",
           "$place",
           "where",
           "I",
