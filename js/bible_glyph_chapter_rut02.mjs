@@ -445,7 +445,7 @@ export function bible_glyph_chapter_rut02() {
           "in",
           "your",
           "$eyes,",
-          "for",
+          "$pointing",
           "you",
           "have",
           "comforted",
