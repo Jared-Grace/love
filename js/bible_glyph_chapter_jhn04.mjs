@@ -675,7 +675,7 @@ export function bible_glyph_chapter_jhn04() {
           "do",
           "You",
           "want?”",
-          "or",
+          "$shuffle",
           "“Why",
           "are",
           "You",
