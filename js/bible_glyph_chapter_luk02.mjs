@@ -1288,7 +1288,7 @@ export function bible_glyph_chapter_luk02() {
         "$no_entry",
         "$safety_pin+lightbulb+doing",
         "$pin",
-        "statement",
+        "$speech+thing",
         "$mouth",
         "to",
         "$pointing_back.",
