@@ -374,7 +374,7 @@ export function bible_glyph_chapter_1jn03() {
           "$pointing_back",
           "$brother",
           "were",
-          "righteous.",
+          "$ruler.",
         ],
       },
       {
