@@ -585,7 +585,7 @@ export function bible_glyph_chapter_jhn14() {
           "will",
           "be",
           "$heart_red+doing",
-          "by",
+          "$down_arrow",
           "My",
           "$father,",
           "$plus",
