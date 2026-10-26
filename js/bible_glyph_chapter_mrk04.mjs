@@ -692,7 +692,7 @@ export function bible_glyph_chapter_mrk04() {
           "who",
           "scatters",
           "$seed+thing",
-          "on",
+          "$pointing_up",
           "$pin",
           "$earth.",
         ],
