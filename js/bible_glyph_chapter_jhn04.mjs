@@ -773,7 +773,7 @@ export function bible_glyph_chapter_jhn04() {
           "to",
           "$eating",
           "that",
-          "you",
+          "$you",
           "$no_entry",
           "$lightbulb.”",
         ],
