@@ -557,7 +557,7 @@ export function bible_glyph_chapter_jer26() {
           "to",
           "$mouth",
           "$all",
-          "these",
+          "$flashlight+flashlight",
           "$speech",
           "in",
           "your",
