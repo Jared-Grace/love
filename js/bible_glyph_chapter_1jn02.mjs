@@ -92,7 +92,7 @@ export function bible_glyph_chapter_1jn02() {
           "$pointing_back,",
           "$traffic_light",
           "we",
-          "keep",
+          "$guard",
           "$pointing_back",
           "$scroll$s.",
         ],
