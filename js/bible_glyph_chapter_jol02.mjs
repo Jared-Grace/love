@@ -106,7 +106,7 @@ export function bible_glyph_chapter_jol02() {
           "them",
           "a",
           "flame",
-          "scorches.",
+          "$fire+up_arrow+doing.",
           "The",
           "$earth",
           "before",
