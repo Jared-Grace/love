@@ -69,7 +69,7 @@ export function bible_glyph_chapter_jhn02() {
           "of",
           "$cross",
           "$speech",
-          "to",
+          "$toward",
           "$pointing_back,",
           "“They",
           "have",
