@@ -193,7 +193,7 @@ export function bible_glyph_chapter_mrk10() {
         "$heart_on_fire",
         "has",
         "joined",
-        "together,",
+        "$safety_pin+yoke+doing,",
         "let",
         "$person",
         "$no_entry",
