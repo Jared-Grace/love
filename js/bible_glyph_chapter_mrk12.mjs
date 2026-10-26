@@ -220,7 +220,7 @@ export function bible_glyph_chapter_mrk12() {
     {
       verse_number: 9,
       words: [
-        "What",
+        "$flashlight+question",
         "then",
         "will",
         "the",
