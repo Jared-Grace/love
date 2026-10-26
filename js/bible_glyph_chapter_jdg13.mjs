@@ -241,7 +241,7 @@ export function bible_glyph_chapter_jdg13() {
           "‘$exclamation,",
           "you",
           "will",
-          "conceive",
+          "$pregnant_woman",
           "and",
           "give",
           "birth",
