@@ -566,7 +566,7 @@ export function bible_glyph_chapter_jol01() {
           "flames",
           "have",
           "scorched",
-          "all",
+          "$all",
           "the",
           "$tree",
           "of",
