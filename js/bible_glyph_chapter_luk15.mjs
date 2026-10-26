@@ -72,7 +72,7 @@ export function bible_glyph_chapter_luk15() {
         "$flashlight+question",
         "$person",
         "$tray_out",
-        "you,",
+        "$you,",
         "having",
         "a",
         "hundred",
