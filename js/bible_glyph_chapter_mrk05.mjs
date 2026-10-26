@@ -855,7 +855,7 @@ export function bible_glyph_chapter_mrk05() {
         "to",
         "$pointing_back",
         "$pin",
-        "whole",
+        "$all",
         "$check.",
       ],
     },
