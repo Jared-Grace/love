@@ -100,7 +100,7 @@ export function bible_glyph_chapter_2ki02() {
           "Do",
           "you",
           "$lightbulb",
-          "that",
+          "$pointing",
           "$sun",
           "the",
           "$i_am",
