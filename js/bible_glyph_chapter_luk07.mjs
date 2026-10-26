@@ -768,7 +768,7 @@ export function bible_glyph_chapter_luk07() {
         "to",
         "you,",
         "$plus",
-        "more",
+        "$spring+describing",
         "than",
         "a",
         "$megaphone.",
