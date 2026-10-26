@@ -49,7 +49,7 @@ export function bible_glyph_chapter_jon02() {
           "I",
           "called",
           "for",
-          "help,",
+          "$sos_button+doing,",
           "and",
           "You",
           "$ear",
