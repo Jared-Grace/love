@@ -135,7 +135,7 @@ export function bible_glyph_chapter_mrk05() {
         "crying",
         "out",
         "$plus",
-        "cutting",
+        "$pointing_down+fist+heart_organ+doing",
         "$pointing_back+pointing_back",
         "with",
         "stones.",
