@@ -25,7 +25,7 @@ export function bible_glyph_chapter_psa001() {
           "$walking",
           "in",
           "the",
-          "counsel",
+          "$person_tipping_hand",
           "of",
           "the",
           "$thumbs_down,",
