@@ -65,7 +65,7 @@ export function bible_glyph_chapter_rev10() {
           "scroll",
           "which",
           "lay",
-          "open.",
+          "$unlocked.",
           "He",
           "placed",
           "$pointing_back",
