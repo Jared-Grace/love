@@ -169,7 +169,7 @@ export function bible_glyph_chapter_luk15() {
         "$smile",
         "$tray_in",
         "$sky",
-        "over",
+        "$pointing_up",
         "one",
         "$bow+doer",
         "who",
