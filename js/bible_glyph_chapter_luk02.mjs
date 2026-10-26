@@ -382,7 +382,7 @@ export function bible_glyph_chapter_luk02() {
         "$arrow_both_ways,",
         "“Let",
         "us",
-        "go",
+        "$metro+footprints",
         "to",
         "$proper_name$Bethlehem",
         "$plus",
