@@ -138,7 +138,7 @@ export function bible_glyph_chapter_luk02() {
         "place,",
         "the",
         "$sun",
-        "came",
+        "$jar+up_arrow+doing",
         "for",
         "$pointing_back",
         "to",
