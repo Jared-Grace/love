@@ -628,7 +628,7 @@ export function bible_glyph_chapter_jhn09() {
           "time",
           "they",
           "called",
-          "the",
+          "$pin",
           "$person",
           "who",
           "had",
