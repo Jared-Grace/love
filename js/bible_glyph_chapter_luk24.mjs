@@ -1136,7 +1136,7 @@ export function bible_glyph_chapter_luk24() {
         verse_number: 47,
         words: [
           "$plus",
-          "repentance",
+          "$brain+turn_back",
           "and",
           "forgiveness",
           "of",
