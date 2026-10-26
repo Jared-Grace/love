@@ -408,7 +408,7 @@ export function bible_glyph_chapter_gen03() {
           "$woman",
           "$speech,",
           "The",
-          "serpent",
+          "$snake",
           "deceived",
           "me,",
           "and",
