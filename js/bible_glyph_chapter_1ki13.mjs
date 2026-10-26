@@ -60,7 +60,7 @@ export function bible_glyph_chapter_1ki13() {
           "the",
           "$i_am:",
           "O",
-          "altar,",
+          "$altar,",
           "altar,",
           "this",
           "is",
