@@ -330,7 +330,7 @@ export function bible_glyph_chapter_rev10() {
           "me,",
           "$hand_receiving",
           "$plus",
-          "eat",
+          "$pointing_down+eating",
           "$pointing_back.",
           "It",
           "will",
