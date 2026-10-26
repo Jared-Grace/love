@@ -31,7 +31,7 @@ export function bible_glyph_chapter_1jn05() {
           "$tray_out",
           "$heart_on_fire,",
           "$plus",
-          "everyone",
+          "$all",
           "who",
           "$heart_red+doing",
           "the",
