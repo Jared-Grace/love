@@ -328,7 +328,7 @@ export function bible_glyph_chapter_mrk05() {
         "steep",
         "bank",
         "into",
-        "the",
+        "$pin",
         "$sea,",
         "$plus",
         "drowned",
