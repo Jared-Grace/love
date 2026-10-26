@@ -615,7 +615,7 @@ export function bible_glyph_chapter_mrk10() {
         "of",
         "a",
         "$sewing_needle",
-        "than",
+        "$shuffle",
         "for",
         "a",
         "rich",
