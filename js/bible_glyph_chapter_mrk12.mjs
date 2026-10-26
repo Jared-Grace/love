@@ -1200,7 +1200,7 @@ export function bible_glyph_chapter_mrk12() {
         "contributed",
         "$tray_out",
         "$pointing_back",
-        "surplus,",
+        "$spring+doing,",
         "but",
         "she",
         "$tray_out",
