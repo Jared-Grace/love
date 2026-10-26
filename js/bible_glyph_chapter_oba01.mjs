@@ -597,7 +597,7 @@ export function bible_glyph_chapter_oba01() {
           "$proper_name$Esau",
           "will",
           "be",
-          "stubble.",
+          "$fallen_leaf+wheat.",
           "$hand+foot",
           "will",
           "set",
