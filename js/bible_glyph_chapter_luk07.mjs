@@ -1198,7 +1198,7 @@ export function bible_glyph_chapter_luk07() {
         "Two",
         "men",
         "were",
-        "debtors",
+        "$toolbox+receipt+doer",
         "to",
         "a",
         "certain",
