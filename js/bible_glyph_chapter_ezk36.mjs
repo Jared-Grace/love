@@ -311,7 +311,7 @@ export function bible_glyph_chapter_ezk36() {
         verse_number: 8,
         words: [
           "But",
-          "you,",
+          "$you,",
           "O",
           "$mountain",
           "of",
