@@ -723,7 +723,7 @@ export function bible_glyph_chapter_gen32() {
           "Jacob",
           "hip",
           "and",
-          "dislocated",
+          "$bone+broken_chain+doing",
           "it",
           "as",
           "they",
