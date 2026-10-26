@@ -644,7 +644,7 @@ export function bible_glyph_chapter_exo14() {
           "with",
           "a",
           "strong",
-          "east",
+          "$compass+right_arrow+thing",
           "$wind",
           "that",
           "turned",
