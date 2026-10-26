@@ -651,7 +651,7 @@ export function bible_glyph_chapter_1jn02() {
         verse_number: 22,
         words: [
           "Who",
-          "is",
+          "$link",
           "the",
           "liar",
           "if",
