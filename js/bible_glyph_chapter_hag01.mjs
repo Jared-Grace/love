@@ -120,7 +120,7 @@ export function bible_glyph_chapter_hag01() {
           "paneled",
           "$house,",
           "while",
-          "this",
+          "$flashlight",
           "$house",
           "lies",
           "in",
