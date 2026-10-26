@@ -535,7 +535,7 @@ export function bible_glyph_chapter_jhn09() {
         verse_number: 21,
         words: [
           "But",
-          "how",
+          "$gear+question",
           "he",
           "now",
           "$eyes,",
