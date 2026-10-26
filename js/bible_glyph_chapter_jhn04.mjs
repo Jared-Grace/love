@@ -334,7 +334,7 @@ export function bible_glyph_chapter_jhn04() {
           "thirst",
           "$hourglass.",
           "Indeed,",
-          "the",
+          "$pin",
           "$water",
           "I",
           "$hands_giving",
