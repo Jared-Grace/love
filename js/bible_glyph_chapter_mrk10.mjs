@@ -606,7 +606,7 @@ export function bible_glyph_chapter_mrk10() {
         "$thumbs_up+face_exhaling+more",
         "for",
         "a",
-        "camel",
+        "$camel",
         "to",
         "pass",
         "through",
