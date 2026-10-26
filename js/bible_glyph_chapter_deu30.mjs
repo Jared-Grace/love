@@ -275,7 +275,7 @@ export function bible_glyph_chapter_deu30() {
           "$i_am",
           "and",
           "$hammer+doing",
-          "all",
+          "$all",
           "His",
           "$scroll",
           "that",
