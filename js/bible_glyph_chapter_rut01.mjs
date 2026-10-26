@@ -579,7 +579,7 @@ export function bible_glyph_chapter_rut01() {
           "two",
           "women",
           "$walking",
-          "until",
+          "$finish",
           "they",
           "$footprints",
           "to",
