@@ -151,7 +151,7 @@ export function bible_glyph_chapter_hag01() {
           "You",
           "have",
           "planted",
-          "much",
+          "$multiply+doing",
           "but",
           "$footprints",
           "little.",
