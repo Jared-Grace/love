@@ -56,7 +56,7 @@ export function bible_glyph_chapter_exo20() {
           "shall",
           "have",
           "$no_entry",
-          "other",
+          "$plus+one",
           "$moai",
           "before",
           "Me.",
