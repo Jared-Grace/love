@@ -221,7 +221,7 @@ export function bible_glyph_chapter_psa085() {
           "and",
           "$ruler+thing",
           "looks",
-          "down",
+          "$window+eyes+doing",
           "from",
           "$sky.",
         ],
