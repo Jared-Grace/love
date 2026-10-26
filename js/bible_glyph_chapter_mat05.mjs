@@ -670,7 +670,7 @@ export function bible_glyph_chapter_mat05() {
           "be",
           "thrown",
           "into",
-          "prison.",
+          "$locked_with_key+thing.",
         ],
       },
       {
