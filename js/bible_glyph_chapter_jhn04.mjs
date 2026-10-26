@@ -476,7 +476,7 @@ export function bible_glyph_chapter_jhn04() {
       {
         verse_number: 20,
         words: [
-          "Our",
+          "$me",
           "$father",
           "$bowing",
           "$tray_in",
