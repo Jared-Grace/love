@@ -515,7 +515,7 @@ export function bible_glyph_chapter_jhn09() {
         words: [
           "His",
           "parents",
-          "answered,",
+          "$speech+turn_back,",
           "We",
           "$lightbulb",
           "$pointing",
