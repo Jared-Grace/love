@@ -175,7 +175,7 @@ export function bible_glyph_chapter_mrk12() {
       words: [
         "$curving_right",
         "the",
-        "tenants",
+        "$earth+tools+doer",
         "$speech",
         "to",
         "one",
