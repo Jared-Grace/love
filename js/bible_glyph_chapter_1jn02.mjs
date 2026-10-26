@@ -313,7 +313,7 @@ export function bible_glyph_chapter_1jn02() {
           "has",
           "blinded",
           "$pointing_back",
-          "eyes.",
+          "$eye.",
         ],
       },
       {
