@@ -433,7 +433,7 @@ export function bible_glyph_chapter_mrk08() {
           "not",
           "see",
           "or",
-          "understand?",
+          "$safety_pin+lightbulb+doing?",
           "Is",
           "your",
           "$heart_organ",
