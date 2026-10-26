@@ -682,7 +682,7 @@ export function bible_glyph_chapter_gen01() {
           "kind,",
           "and",
           "the",
-          "livestock",
+          "$paw_prints",
           "after",
           "their",
           "kind,",
