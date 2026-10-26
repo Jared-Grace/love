@@ -656,7 +656,7 @@ export function bible_glyph_chapter_jhn09() {
         verse_number: 25,
         words: [
           "He",
-          "answered,",
+          "$speech+turn_back,",
           "Whether",
           "He",
           "is",
