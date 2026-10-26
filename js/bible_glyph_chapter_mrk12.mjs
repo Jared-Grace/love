@@ -629,7 +629,7 @@ export function bible_glyph_chapter_mrk12() {
         "you",
         "$no_entry",
         "mistaken",
-        "because",
+        "$metro",
         "you",
         "$no_entry",
         "$lightbulb",
