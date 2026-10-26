@@ -429,7 +429,7 @@ export function bible_glyph_chapter_jer26() {
           "$up_arrow+i_am",
           "$speech",
           "to",
-          "all",
+          "$all",
           "the",
           "officials",
           "and",
