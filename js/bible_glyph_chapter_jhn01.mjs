@@ -752,7 +752,7 @@ export function bible_glyph_chapter_jhn01() {
           "$incoming_envelope",
           "me",
           "to",
-          "baptize",
+          "$diving_mask",
           "$tray_in",
           "$water",
           "$speech",
