@@ -183,7 +183,7 @@ export function bible_glyph_chapter_2ki02() {
           "$proper_name$Jericho",
           "came",
           "up",
-          "to",
+          "$toward",
           "$heart_on_fire+rescue",
           "and",
           "$speech,",
