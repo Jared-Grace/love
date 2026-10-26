@@ -567,7 +567,7 @@ export function bible_glyph_chapter_1jn02() {
           "$no_entry",
           "belong",
           "$tray_out",
-          "us.",
+          "$me.",
           "For",
           "if",
           "they",
