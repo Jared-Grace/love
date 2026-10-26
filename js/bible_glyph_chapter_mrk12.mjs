@@ -870,7 +870,7 @@ export function bible_glyph_chapter_mrk12() {
         "there",
         "$link",
         "$no_entry",
-        "other",
+        "$plus+one",
         "but",
         "$pointing_back.",
       ],
