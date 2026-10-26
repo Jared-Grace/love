@@ -333,7 +333,7 @@ export function bible_glyph_chapter_jhn02() {
           "$plus",
           "when",
           "the",
-          "Passover",
+          "$lamb+door",
           "of",
           "the",
           "$menorah",
