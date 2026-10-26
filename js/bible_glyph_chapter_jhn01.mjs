@@ -147,7 +147,7 @@ export function bible_glyph_chapter_jhn01() {
         words: [
           "He",
           "himself",
-          "was",
+          "$link",
           "$no_entry",
           "the",
           "$light,",
