@@ -405,7 +405,7 @@ export function bible_glyph_chapter_jhn02() {
           "$coin+shuffle+doer",
           "changers",
           "$plus",
-          "overturned",
+          "$up_arrow+counterclockwise_arrows_button+doing",
           "their",
           "$eating+round_pushpin.",
         ],
