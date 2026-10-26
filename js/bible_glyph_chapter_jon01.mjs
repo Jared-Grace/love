@@ -218,7 +218,7 @@ export function bible_glyph_chapter_jon01() {
           "we",
           "may",
           "$no_entry",
-          "perish.",
+          "$wilted_flower.",
         ],
       },
       {
