@@ -35,7 +35,7 @@ export function bible_glyph_chapter_ezk18() {
           "mean",
           "by",
           "quoting",
-          "this",
+          "$flashlight",
           "$speech+likeness+doing",
           "about",
           "the",
