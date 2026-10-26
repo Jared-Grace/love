@@ -1105,7 +1105,7 @@ export function bible_glyph_chapter_jhn01() {
           "there",
           "is",
           "$no_entry",
-          "deceit.”",
+          "$performing_arts.”",
         ],
       },
       {
