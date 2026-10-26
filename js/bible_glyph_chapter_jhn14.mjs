@@ -510,7 +510,7 @@ export function bible_glyph_chapter_jhn14() {
         words: [
           "In",
           "a",
-          "little",
+          "$pinching_hand",
           "while",
           "the",
           "$globe",
