@@ -346,7 +346,7 @@ export function bible_glyph_chapter_2th01() {
           "the",
           "$name_tag",
           "of",
-          "our",
+          "$me",
           "$crown",
           "$cross",
           "may",
