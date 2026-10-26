@@ -298,7 +298,7 @@ export function bible_glyph_chapter_jhn01() {
           "the",
           "one",
           "and",
-          "only",
+          "$one+butterfly",
           "Son",
           "from",
           "the",
