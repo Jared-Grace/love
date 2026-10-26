@@ -545,7 +545,7 @@ export function bible_glyph_chapter_jhn09() {
           "$lightbulb,",
           "$shuffle",
           "$flashlight+question",
-          "opened",
+          "$unlocked",
           "$pointing_back",
           "eyes,",
           "we",
