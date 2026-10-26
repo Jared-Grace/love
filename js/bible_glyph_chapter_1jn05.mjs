@@ -283,7 +283,7 @@ export function bible_glyph_chapter_1jn05() {
         verse_number: 11,
         words: [
           "$plus",
-          "this",
+          "$flashlight",
           "is",
           "that",
           "$witness+thing:",
