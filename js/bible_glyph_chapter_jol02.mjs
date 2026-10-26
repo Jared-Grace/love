@@ -857,7 +857,7 @@ export function bible_glyph_chapter_jol02() {
           "$wrestling+heart_on_fire,",
           "and",
           "that",
-          "I",
+          "$me",
           "am",
           "the",
           "$i_am",
