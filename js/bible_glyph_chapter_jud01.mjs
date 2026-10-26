@@ -202,7 +202,7 @@ export function bible_glyph_chapter_jud01() {
           "kept",
           "in",
           "eternal",
-          "chains",
+          "$knot+thing",
           "under",
           "darkness",
           "$toward+tray_in",
