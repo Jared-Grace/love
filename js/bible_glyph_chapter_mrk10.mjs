@@ -1215,7 +1215,7 @@ export function bible_glyph_chapter_mrk10() {
         "to",
         "be",
         "served",
-        "but",
+        "$curving_up",
         "to",
         "serve,",
         "$plus",
