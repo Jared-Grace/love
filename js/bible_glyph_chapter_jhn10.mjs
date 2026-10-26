@@ -759,7 +759,7 @@ export function bible_glyph_chapter_jhn10() {
       {
         verse_number: 31,
         words: [
-          "The",
+          "$pin",
           "$menorah",
           "picked",
           "up",
