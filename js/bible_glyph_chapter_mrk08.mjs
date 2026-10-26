@@ -311,7 +311,7 @@ export function bible_glyph_chapter_mrk08() {
           "$check+manner,",
           "I",
           "$speech",
-          "you,",
+          "$you,",
           "no",
           "$placard",
           "will",
