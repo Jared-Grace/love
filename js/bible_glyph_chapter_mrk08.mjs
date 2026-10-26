@@ -29,7 +29,7 @@ export function bible_glyph_chapter_mrk08() {
           "$eating.",
           "Jesus",
           "called",
-          "the",
+          "$pin",
           "$learner",
           "and",
           "$speech",
