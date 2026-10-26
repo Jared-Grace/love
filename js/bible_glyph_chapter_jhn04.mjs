@@ -105,7 +105,7 @@ export function bible_glyph_chapter_jhn04() {
           "$hand+foot’s",
           "well",
           "$link",
-          "there.",
+          "$telescope+manner.",
           "So",
           "$cross,",
           "weary",
