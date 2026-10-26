@@ -600,7 +600,7 @@ export function bible_glyph_chapter_mrk05() {
         "$pointing",
         "“My",
         "little",
-        "daughter",
+        "$girl+baby",
         "is",
         "near",
         "death.",
