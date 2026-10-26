@@ -102,7 +102,7 @@ export function bible_glyph_chapter_jol02() {
           "$fire",
           "$eating,",
           "and",
-          "behind",
+          "$next_track",
           "them",
           "a",
           "flame",
