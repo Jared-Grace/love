@@ -987,7 +987,7 @@ export function bible_glyph_chapter_ezk18() {
           "to",
           "his",
           "$road$s,",
-          "declares",
+          "$microphone",
           "the",
           "$crown",
           "$i_am.",
