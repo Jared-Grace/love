@@ -362,7 +362,7 @@ export function bible_glyph_chapter_luk07() {
         "from",
         "the",
         "$city",
-        "was",
+        "$link",
         "with",
         "$pointing_back.",
       ],
