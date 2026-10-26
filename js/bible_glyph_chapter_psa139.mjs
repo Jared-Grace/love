@@ -167,7 +167,7 @@ export function bible_glyph_chapter_psa139() {
           "my",
           "bed",
           "in",
-          "Sheol,",
+          "$pointing_down+skull,",
           "You",
           "are",
           "there.",
