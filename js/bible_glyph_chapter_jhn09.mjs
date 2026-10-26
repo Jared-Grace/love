@@ -500,7 +500,7 @@ export function bible_glyph_chapter_jhn09() {
           "was",
           "$hatching_chick",
           "$person_with_white_cane?",
-          "So",
+          "$right_arrow",
           "$gear+question",
           "is",
           "it",
