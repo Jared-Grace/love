@@ -257,7 +257,7 @@ export function bible_glyph_chapter_mrk12() {
         "$stone",
         "the",
         "builders",
-        "rejected",
+        "$microscope+thumbs_down+doing",
         "has",
         "become",
         "the",
