@@ -145,7 +145,7 @@ export function bible_glyph_chapter_psa112() {
           "$heart_organ",
           "is",
           "steadfast,",
-          "trusting",
+          "$anchor+doing",
           "in",
           "the",
           "$i_am.",
