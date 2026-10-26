@@ -79,7 +79,7 @@ export function bible_glyph_chapter_jhn17() {
         verse_number: 3,
         words: [
           "Now",
-          "this",
+          "$flashlight",
           "is",
           "eternal",
           "$sprout,",
