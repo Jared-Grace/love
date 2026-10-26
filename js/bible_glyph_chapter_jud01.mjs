@@ -487,7 +487,7 @@ export function bible_glyph_chapter_jud01() {
           "$plus",
           "of",
           "every",
-          "harsh",
+          "$brick+describing",
           "word",
           "that",
           "ungodly",
