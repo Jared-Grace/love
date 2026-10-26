@@ -790,7 +790,7 @@ export function bible_glyph_chapter_1jn02() {
           "you",
           "do",
           "$no_entry",
-          "need",
+          "$sos_button",
           "anyone",
           "to",
           "teach",
