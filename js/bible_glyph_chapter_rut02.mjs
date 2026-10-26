@@ -292,7 +292,7 @@ export function bible_glyph_chapter_rut02() {
           "thirsty,",
           "$walking",
           "and",
-          "drink",
+          "$cup_with_straw",
           "from",
           "the",
           "jars",
