@@ -619,7 +619,7 @@ export function bible_glyph_chapter_gen32() {
           "So",
           "the",
           "gifts",
-          "went",
+          "$bridge",
           "on",
           "before",
           "him,",
