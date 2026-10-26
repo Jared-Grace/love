@@ -156,7 +156,7 @@ export function bible_glyph_chapter_gen02() {
           "$no_entry",
           "sent",
           "$rain+doing",
-          "upon",
+          "$pointing_up",
           "the",
           "$earth,",
           "and",
