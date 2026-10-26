@@ -95,7 +95,7 @@ export function bible_glyph_chapter_1jn05() {
         words: [
           "$pointing",
           "$all",
-          "born",
+          "$hatching_chick",
           "$tray_out",
           "$heart_on_fire",
           "overcomes",
