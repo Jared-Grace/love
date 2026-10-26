@@ -26,7 +26,7 @@ export function bible_glyph_chapter_exo20() {
       {
         verse_number: 2,
         words: [
-          "I",
+          "$me",
           "am",
           "the",
           "$i_am",
