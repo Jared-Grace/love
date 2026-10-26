@@ -201,7 +201,7 @@ export function bible_glyph_chapter_isa01() {
           "$no_entry",
           "$sponge+heart_red+doing",
           "with",
-          "oil.",
+          "$lotion_bottle.",
         ],
       },
       {
