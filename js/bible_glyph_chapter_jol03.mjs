@@ -339,7 +339,7 @@ export function bible_glyph_chapter_jol03() {
           "advance",
           "to",
           "the",
-          "Valley",
+          "$valley",
           "of",
           "$i_am+scales,",
           "for",
