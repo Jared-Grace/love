@@ -87,7 +87,7 @@ export function bible_glyph_chapter_jhn09() {
         words: [
           "$finish",
           "it",
-          "is",
+          "$link",
           "$sun,",
           "we",
           "$knot",
