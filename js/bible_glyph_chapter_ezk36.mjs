@@ -999,7 +999,7 @@ export function bible_glyph_chapter_ezk36() {
           "from",
           "all",
           "your",
-          "uncleanness.",
+          "$soap+no_entry+thing.",
           "I",
           "will",
           "summon",
