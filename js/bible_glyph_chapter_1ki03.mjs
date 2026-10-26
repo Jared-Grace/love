@@ -869,7 +869,7 @@ export function bible_glyph_chapter_1ki03() {
           "the",
           "$king",
           "$speech,",
-          "Cut",
+          "$axe+divide+doing",
           "the",
           "$sprout",
           "$child",
