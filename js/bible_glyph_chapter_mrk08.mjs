@@ -682,7 +682,7 @@ export function bible_glyph_chapter_mrk08() {
           "$pointing_back",
           "$learner",
           "to",
-          "the",
+          "$pin",
           "villages",
           "around",
           "$proper_name$Caesarea",
