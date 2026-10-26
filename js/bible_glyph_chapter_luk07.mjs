@@ -1206,7 +1206,7 @@ export function bible_glyph_chapter_luk07() {
         "One",
         "owed",
         "him",
-        "five",
+        "$five+input_numbers+all",
         "hundred",
         "$coin+ten,",
         "and",
