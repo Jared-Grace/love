@@ -603,7 +603,7 @@ export function bible_glyph_chapter_mrk11() {
         "$speech",
         "to",
         "$pointing_back,",
-        "“Have",
+        "“$raised_fist",
         "$anchor",
         "in",
         "$heart_on_fire.",
