@@ -695,7 +695,7 @@ export function bible_glyph_chapter_gen32() {
           "there",
           "a",
           "$man_beard",
-          "wrestled",
+          "$wrestling+dust",
           "with",
           "him",
           "until",
