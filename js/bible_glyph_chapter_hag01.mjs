@@ -256,7 +256,7 @@ export function bible_glyph_chapter_hag01() {
           "blew",
           "away.",
           "Why?",
-          "declares",
+          "$microphone",
           "the",
           "$i_am",
           "of",
