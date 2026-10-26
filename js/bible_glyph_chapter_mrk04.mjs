@@ -443,7 +443,7 @@ export function bible_glyph_chapter_mrk04() {
           "$shuffle",
           "$running+toward+thing",
           "$butterfly",
-          "because",
+          "$metro",
           "of",
           "the",
           "$speech,",
