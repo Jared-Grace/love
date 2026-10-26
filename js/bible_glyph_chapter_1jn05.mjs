@@ -294,7 +294,7 @@ export function bible_glyph_chapter_1jn05() {
           "eternal",
           "$sprout,",
           "$plus",
-          "this",
+          "$flashlight",
           "$sprout",
           "is",
           "$tray_in",
