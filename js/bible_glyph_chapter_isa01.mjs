@@ -263,7 +263,7 @@ export function bible_glyph_chapter_isa01() {
       {
         verse_number: 9,
         words: [
-          "Unless",
+          "$crossed_fingers+no_entry",
           "the",
           "$i_am",
           "of",
