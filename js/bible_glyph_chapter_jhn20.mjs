@@ -329,7 +329,7 @@ export function bible_glyph_chapter_jhn20() {
           "$round_pushpin+question",
           "they",
           "have",
-          "put",
+          "$palm_down",
           "$pointing_back.",
         ],
       },
