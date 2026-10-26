@@ -382,7 +382,7 @@ export function bible_glyph_chapter_mat05() {
           "abolish",
           "$pin",
           "$scroll",
-          "or",
+          "$shuffle",
           "$pin",
           "$megaphone.",
           "$no_entry",
