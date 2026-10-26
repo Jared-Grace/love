@@ -147,7 +147,7 @@ export function bible_glyph_chapter_luk15() {
         "have",
         "found",
         "my",
-        "lost",
+        "$wilted_flower",
         "$sheep.",
       ],
     },
