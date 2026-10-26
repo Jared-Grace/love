@@ -546,7 +546,7 @@ export function bible_glyph_chapter_mrk10() {
         "$plus",
         "$cross",
         "looked",
-        "around,",
+        "$clockwise_arrows+eyes+toward,",
         "in",
         "$speech",
         "to",
