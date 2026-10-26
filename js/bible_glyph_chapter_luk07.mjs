@@ -463,7 +463,7 @@ export function bible_glyph_chapter_luk07() {
         "$speech,",
         "“$pointing",
         "a",
-        "great",
+        "$top",
         "$megaphone",
         "has",
         "appeared",
