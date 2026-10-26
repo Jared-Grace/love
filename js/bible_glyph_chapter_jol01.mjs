@@ -410,7 +410,7 @@ export function bible_glyph_chapter_jol01() {
         words: [
           "$sparkle+doing",
           "a",
-          "fast;",
+          "$eating+locked;",
           "proclaim",
           "a",
           "solemn",
