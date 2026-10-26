@@ -606,7 +606,7 @@ export function bible_glyph_chapter_ezk36() {
           "$road",
           "before",
           "Me",
-          "was",
+          "$link",
           "like",
           "the",
           "$soap+no_entry+thing",
