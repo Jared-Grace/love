@@ -109,7 +109,7 @@ export function bible_glyph_chapter_jol03() {
           "$plus",
           "$flashlight+question",
           "do",
-          "you",
+          "$you",
           "have",
           "against",
           "Me,",
