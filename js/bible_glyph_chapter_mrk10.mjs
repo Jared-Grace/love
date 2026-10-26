@@ -1138,7 +1138,7 @@ export function bible_glyph_chapter_mrk10() {
         "those",
         "regarded",
         "as",
-        "rulers",
+        "$crown+clapper_board+doing",
         "of",
         "the",
         "$map",
