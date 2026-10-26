@@ -284,7 +284,7 @@ export function bible_glyph_chapter_jon01() {
           "your",
           "$tools,",
           "and",
-          "where",
+          "$question+round_pushpin+tray_out",
           "have",
           "you",
           "$footprints",
