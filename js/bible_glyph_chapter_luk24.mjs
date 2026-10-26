@@ -902,7 +902,7 @@ export function bible_glyph_chapter_luk24() {
       {
         verse_number: 37,
         words: [
-          "But",
+          "$curving_right",
           "they",
           "were",
           "startled",
