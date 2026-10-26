@@ -716,7 +716,7 @@ export function bible_glyph_chapter_jhn09() {
           "did",
           "not",
           "$ear.",
-          "Why",
+          "$flashlight+question",
           "do",
           "you",
           "want",
