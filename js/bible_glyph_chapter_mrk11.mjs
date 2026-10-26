@@ -819,7 +819,7 @@ export function bible_glyph_chapter_mrk11() {
         "$diving_mask+thing",
         "$tray_out",
         "$sky",
-        "or",
+        "$shuffle",
         "$tray_out",
         "$person?",
         "Answer",
