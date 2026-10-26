@@ -492,7 +492,7 @@ export function bible_glyph_chapter_mrk05() {
         "$pointing_back",
         "how",
         "$back+abacus",
-        "the",
+        "$pin",
         "$crown",
         "has",
         "$hammer",
