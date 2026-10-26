@@ -502,7 +502,7 @@ export function bible_glyph_chapter_mrk12() {
         "for",
         "$me",
         "$pointing",
-        "if",
+        "$traffic_light",
         "a",
         "man's",
         "$brother",
