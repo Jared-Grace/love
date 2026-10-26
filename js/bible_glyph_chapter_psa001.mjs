@@ -108,7 +108,7 @@ export function bible_glyph_chapter_psa001() {
         verse_number: 4,
         words: [
           "$no_entry",
-          "so",
+          "$right_arrow",
           "the",
           "$thumbs_down!",
           "For",
