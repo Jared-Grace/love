@@ -440,7 +440,7 @@ export function bible_glyph_chapter_mat05() {
           "$one",
           "of",
           "the",
-          "least",
+          "$pinching_hand+describing",
           "of",
           "$flashlight",
           "$scroll",
