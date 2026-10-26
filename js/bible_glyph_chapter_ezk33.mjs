@@ -44,7 +44,7 @@ export function bible_glyph_chapter_ezk33() {
           "and",
           "$speech",
           "them:",
-          "Suppose",
+          "$pointing",
           "I",
           "$footprints",
           "the",
