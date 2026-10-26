@@ -365,7 +365,7 @@ export function bible_glyph_chapter_gen32() {
           "too",
           "numerous",
           "to",
-          "count.",
+          "$abacus.",
         ],
       },
       {
