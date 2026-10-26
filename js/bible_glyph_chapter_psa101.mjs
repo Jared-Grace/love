@@ -65,7 +65,7 @@ export function bible_glyph_chapter_psa101() {
         words: [
           "I",
           "will",
-          "set",
+          "$palm_down+round_pushpin+doing",
           "$no_entry",
           "worthless",
           "$speech",
