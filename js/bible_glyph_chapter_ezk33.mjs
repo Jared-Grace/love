@@ -1164,7 +1164,7 @@ export function bible_glyph_chapter_ezk33() {
           "$no_entry",
           "$hammer+doing",
           "them.",
-          "Although",
+          "$pointing",
           "they",
           "$hammer+doing",
           "love",
