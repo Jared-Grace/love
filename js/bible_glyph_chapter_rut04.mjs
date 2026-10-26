@@ -453,7 +453,7 @@ export function bible_glyph_chapter_rut04() {
           "May",
           "you",
           "$hammer+doing",
-          "prosperous",
+          "$raised_fist",
           "in",
           "$proper_name$Ephrathah",
           "and",
