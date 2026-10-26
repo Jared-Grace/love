@@ -319,7 +319,7 @@ export function bible_glyph_chapter_jud01() {
           "These",
           "men,",
           "however,",
-          "slander",
+          "$speech+face_with_symbols_on_mouth+doing",
           "what",
           "they",
           "do",
