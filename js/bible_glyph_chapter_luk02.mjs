@@ -1149,7 +1149,7 @@ export function bible_glyph_chapter_luk02() {
         "they",
         "did",
         "$no_entry",
-        "find",
+        "$magnifying_glass+exclamation",
         "Him,",
         "they",
         "returned",
