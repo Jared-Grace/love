@@ -1389,7 +1389,7 @@ export function bible_glyph_chapter_mrk10() {
         "for",
         "you?”",
         "$pin",
-        "blind",
+        "$person_with_white_cane",
         "man",
         "was",
         "in",
