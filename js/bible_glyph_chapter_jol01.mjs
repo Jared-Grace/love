@@ -312,7 +312,7 @@ export function bible_glyph_chapter_jol01() {
           "$wheat",
           "and",
           "$barley,",
-          "because",
+          "$pointing",
           "the",
           "harvest",
           "of",
