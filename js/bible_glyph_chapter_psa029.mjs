@@ -133,7 +133,7 @@ export function bible_glyph_chapter_psa029() {
           "calf,",
           "and",
           "$proper_name$Sirion",
-          "like",
+          "$likeness",
           "a",
           "$son",
           "wild",
