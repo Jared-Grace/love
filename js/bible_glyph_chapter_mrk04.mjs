@@ -551,7 +551,7 @@ export function bible_glyph_chapter_mrk04() {
           "$footprints",
           "in",
           "a",
-          "lamp",
+          "$lamp",
           "to",
           "put",
           "it",
