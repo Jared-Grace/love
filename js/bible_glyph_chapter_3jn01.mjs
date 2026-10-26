@@ -47,7 +47,7 @@ export function bible_glyph_chapter_3jn01() {
           "good",
           "health,",
           "just",
-          "as",
+          "$likeness",
           "your",
           "soul",
           "prospers.",
