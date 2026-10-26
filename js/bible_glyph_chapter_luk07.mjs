@@ -718,7 +718,7 @@ export function bible_glyph_chapter_luk07() {
     {
       verse_number: 25,
       words: [
-        "Otherwise,",
+        "$curving_up,",
         "what",
         "did",
         "you",
