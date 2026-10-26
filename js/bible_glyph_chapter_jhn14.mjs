@@ -232,7 +232,7 @@ export function bible_glyph_chapter_jhn14() {
           "you",
           "all",
           "this",
-          "time,",
+          "$timer_clock,",
           "$proper_name$Philip,",
           "$plus",
           "you",
