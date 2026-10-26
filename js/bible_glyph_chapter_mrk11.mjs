@@ -834,7 +834,7 @@ export function bible_glyph_chapter_mrk11() {
         "$speech",
         "$toward",
         "$pointing_back+pointing_back,",
-        "“If",
+        "“$traffic_light",
         "we",
         "$speech,",
         "‘$tray_out",
