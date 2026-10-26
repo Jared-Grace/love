@@ -471,7 +471,7 @@ export function bible_glyph_chapter_rut03() {
           "he",
           "poured",
           "in",
-          "six",
+          "$six",
           "measures",
           "of",
           "barley",
