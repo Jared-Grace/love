@@ -375,7 +375,7 @@ export function bible_glyph_chapter_jol03() {
           "grapes,",
           "for",
           "the",
-          "winepress",
+          "$grapes+foot+amphora",
           "is",
           "$battery;",
           "the",
