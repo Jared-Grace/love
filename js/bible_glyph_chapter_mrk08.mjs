@@ -856,7 +856,7 @@ export function bible_glyph_chapter_mrk08() {
           "$speech,",
           "$walking+away",
           "$back",
-          "Me,",
+          "$me,",
           "$proper_name$Satan,",
           "$pointing",
           "you",
