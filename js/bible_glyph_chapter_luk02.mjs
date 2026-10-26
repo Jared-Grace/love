@@ -323,7 +323,7 @@ export function bible_glyph_chapter_luk02() {
       verse_number: 13,
       words: [
         "$plus",
-        "suddenly",
+        "$lightning+clock+manner",
         "there",
         "appeared",
         "with",
