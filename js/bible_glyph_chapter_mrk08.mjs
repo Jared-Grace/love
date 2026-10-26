@@ -282,7 +282,7 @@ export function bible_glyph_chapter_mrk08() {
           "from",
           "$pointing_back",
           "a",
-          "sign",
+          "$placard",
           "from",
           "$sky,",
           "to",
