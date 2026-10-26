@@ -751,7 +751,7 @@ export function bible_glyph_chapter_jol02() {
           "floors",
           "will",
           "be",
-          "full",
+          "$battery",
           "of",
           "grain,",
           "and",
