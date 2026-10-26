@@ -358,7 +358,7 @@ export function bible_glyph_chapter_gen32() {
           "offspring",
           "like",
           "the",
-          "sand",
+          "$sea+brown_square",
           "of",
           "the",
           "$sea,",
