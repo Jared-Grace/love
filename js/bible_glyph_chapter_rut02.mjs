@@ -703,7 +703,7 @@ export function bible_glyph_chapter_rut02() {
           "$back+flashlight",
           "has",
           "$no_entry",
-          "withdrawn",
+          "$derelict_house+doing",
           "His",
           "$gift",
           "from",
