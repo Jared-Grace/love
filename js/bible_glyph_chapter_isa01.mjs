@@ -272,7 +272,7 @@ export function bible_glyph_chapter_isa01() {
           "$takeout_box+doing",
           "us",
           "a",
-          "few",
+          "$pinching_hand+input_numbers",
           "$ring_buoy+person,",
           "we",
           "would",
