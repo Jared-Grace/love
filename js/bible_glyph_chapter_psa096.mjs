@@ -229,7 +229,7 @@ export function bible_glyph_chapter_psa096() {
           "let",
           "the",
           "$sea",
-          "resound,",
+          "$loudspeaker+cloud_with_lightning+doing,",
           "and",
           "all",
           "that",
