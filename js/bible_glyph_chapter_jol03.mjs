@@ -130,7 +130,7 @@ export function bible_glyph_chapter_jol03() {
           "a",
           "recompense?",
           "If",
-          "you",
+          "$you",
           "retaliate",
           "against",
           "Me,",
