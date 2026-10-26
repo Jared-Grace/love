@@ -521,7 +521,7 @@ export function bible_glyph_chapter_1jn03() {
           "in",
           "word",
           "and",
-          "speech,",
+          "$tongue,",
           "but",
           "$tray_in",
           "$tools",
