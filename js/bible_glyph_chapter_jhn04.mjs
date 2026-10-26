@@ -23,7 +23,7 @@ export function bible_glyph_chapter_jhn04() {
           "$cross",
           "$lightbulb",
           "$pointing",
-          "the",
+          "$pin",
           "$proper_name$Pharisees",
           "had",
           "$ear",
