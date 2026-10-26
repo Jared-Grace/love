@@ -348,7 +348,7 @@ export function bible_glyph_chapter_jol02() {
         verse_number: 12,
         words: [
           "Yet",
-          "even",
+          "$plus",
           "now,",
           "declares",
           "the",
