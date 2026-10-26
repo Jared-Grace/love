@@ -541,7 +541,7 @@ export function bible_glyph_chapter_psa118() {
           "has",
           "made",
           "His",
-          "light",
+          "$light+doing",
           "to",
           "shine",
           "upon",
