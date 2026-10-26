@@ -464,7 +464,7 @@ export function bible_glyph_chapter_deu30() {
           "$speech,",
           "$person+question",
           "will",
-          "cross",
+          "$bridge",
           "the",
           "$sea",
           "to",
