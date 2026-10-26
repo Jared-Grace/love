@@ -449,7 +449,7 @@ export function bible_glyph_chapter_gen02() {
           "the",
           "$i_am",
           "$heart_on_fire",
-          "commanded",
+          "$speech+scroll",
           "the",
           "$person,",
           "$speech,",
