@@ -817,7 +817,7 @@ export function bible_glyph_chapter_rut02() {
           "And",
           "she",
           "lived",
-          "with",
+          "$safety_pin",
           "her",
           "mother-in-law.",
         ],
