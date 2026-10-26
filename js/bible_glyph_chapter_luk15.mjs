@@ -89,7 +89,7 @@ export function bible_glyph_chapter_luk15() {
         "ninety",
         "nine",
         "$tray_in",
-        "the",
+        "$pin",
         "open",
         "$wilderness",
         "$plus",
