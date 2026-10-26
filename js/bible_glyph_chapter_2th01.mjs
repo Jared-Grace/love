@@ -74,7 +74,7 @@ export function bible_glyph_chapter_2th01() {
           "$brother,",
           "$likeness",
           "is",
-          "fitting,",
+          "$gold+describing,",
           "$pointing",
           "your",
           "$anchor",
