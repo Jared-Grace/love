@@ -284,7 +284,7 @@ export function bible_glyph_chapter_jol02() {
           "$vibration_mode;",
           "the",
           "$sky",
-          "tremble.",
+          "$earth+up_down_arrow+doing.",
           "The",
           "sun",
           "and",
