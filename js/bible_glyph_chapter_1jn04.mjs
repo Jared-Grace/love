@@ -362,7 +362,7 @@ export function bible_glyph_chapter_1jn04() {
           "$flashlight",
           "we",
           "$lightbulb",
-          "that",
+          "$pointing",
           "we",
           "remain",
           "in",
