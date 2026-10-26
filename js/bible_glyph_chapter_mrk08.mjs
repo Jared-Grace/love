@@ -52,7 +52,7 @@ export function bible_glyph_chapter_mrk08() {
           "already",
           "been",
           "with",
-          "Me",
+          "$me",
           "$three",
           "$sun",
           "$plus",
