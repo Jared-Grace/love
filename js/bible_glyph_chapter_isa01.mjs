@@ -875,7 +875,7 @@ export function bible_glyph_chapter_isa01() {
           "$hand+hammer",
           "a",
           "spark;",
-          "both",
+          "$two",
           "will",
           "$fire+wood",
           "together,",
