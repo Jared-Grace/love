@@ -19,7 +19,7 @@ export function bible_glyph_chapter_rev10() {
           "$plus",
           "I",
           "$eye",
-          "another",
+          "$plus+one",
           "mighty",
           "$angel",
           "coming",
