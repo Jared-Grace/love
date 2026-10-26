@@ -453,7 +453,7 @@ export function bible_glyph_chapter_gen01() {
         words: [
           "And",
           "$heart_on_fire",
-          "set",
+          "$hands_giving",
           "them",
           "in",
           "the",
