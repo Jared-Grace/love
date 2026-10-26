@@ -79,7 +79,7 @@ export function bible_glyph_chapter_jon02() {
           "swirled",
           "about",
           "me;",
-          "all",
+          "$all",
           "Your",
           "breakers",
           "and",
