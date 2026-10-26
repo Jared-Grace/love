@@ -64,7 +64,7 @@ export function bible_glyph_chapter_jon04() {
           "I",
           "$lightbulb",
           "$pointing",
-          "You",
+          "$you",
           "are",
           "a",
           "gracious",
