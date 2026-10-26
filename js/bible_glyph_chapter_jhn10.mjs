@@ -26,7 +26,7 @@ export function bible_glyph_chapter_jhn10() {
           "$check+manner,",
           "I",
           "$speech",
-          "you,",
+          "$you,",
           "whoever",
           "does",
           "$no_entry",
