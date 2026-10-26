@@ -529,7 +529,7 @@ export function bible_glyph_chapter_jol01() {
           "$face_exhaling+voice+doing!",
           "The",
           "herds",
-          "wander",
+          "$knot+walking+doing",
           "in",
           "confusion",
           "because",
