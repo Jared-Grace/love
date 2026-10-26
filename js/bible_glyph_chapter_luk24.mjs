@@ -1101,7 +1101,7 @@ export function bible_glyph_chapter_luk24() {
           "to",
           "$safety_pin+lightbulb+doing",
           "$pin",
-          "Scriptures.",
+          "$writing_hand+thing.",
         ],
       },
       {
