@@ -27,7 +27,7 @@ export function bible_glyph_chapter_mat05() {
           "went",
           "up",
           "on",
-          "the",
+          "$pin",
           "$mountain,",
           "$plus",
           "when",
