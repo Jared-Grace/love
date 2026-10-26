@@ -633,7 +633,7 @@ export function bible_glyph_chapter_1jn03() {
           "should",
           "$anchor+doing",
           "in",
-          "the",
+          "$pin",
           "$name_tag",
           "of",
           "$pointing_back",
