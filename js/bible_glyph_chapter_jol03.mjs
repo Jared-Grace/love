@@ -479,7 +479,7 @@ export function bible_glyph_chapter_jol03() {
           "you",
           "will",
           "$lightbulb",
-          "that",
+          "$pointing",
           "I",
           "am",
           "the",
