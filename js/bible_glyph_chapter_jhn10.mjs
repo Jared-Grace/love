@@ -359,7 +359,7 @@ export function bible_glyph_chapter_jhn10() {
           "to",
           "$pointing_back",
           "about",
-          "the",
+          "$pin",
           "$sheep.",
         ],
       },
