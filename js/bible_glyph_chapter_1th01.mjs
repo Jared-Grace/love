@@ -38,7 +38,7 @@ export function bible_glyph_chapter_1th01() {
           "$oil:",
           "$gift",
           "to",
-          "you",
+          "$you",
           "$plus",
           "$peace.",
         ],
