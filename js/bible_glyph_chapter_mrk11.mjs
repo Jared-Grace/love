@@ -641,7 +641,7 @@ export function bible_glyph_chapter_mrk11() {
         "$tray_in",
         "$pointing_back",
         "$heart_organ",
-        "but",
+        "$curving_up",
         "$anchor+doing",
         "$pointing",
         "what",
