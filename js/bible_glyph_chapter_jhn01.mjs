@@ -1143,7 +1143,7 @@ export function bible_glyph_chapter_jhn01() {
           "$hands_giving+heart_on_fire",
           "$speech+turn_back,",
           "“You",
-          "are",
+          "$link",
           "the",
           "$son",
           "of",
