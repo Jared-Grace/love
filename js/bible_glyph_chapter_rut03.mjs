@@ -398,7 +398,7 @@ export function bible_glyph_chapter_rut03() {
           "the",
           "$i_am",
           "$sprout,",
-          "I",
+          "$me",
           "will.",
           "Now",
           "lie",
