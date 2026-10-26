@@ -273,7 +273,7 @@ export function bible_glyph_chapter_mrk08() {
           "$proper_name$Pharisees",
           "$footprints+tray_out",
           "$plus",
-          "began",
+          "$clapper_board",
           "to",
           "argue",
           "with",
