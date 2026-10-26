@@ -1084,7 +1084,7 @@ export function bible_glyph_chapter_mrk04() {
           "$flashlight,",
           "$pointing",
           "$plus",
-          "the",
+          "$pin",
           "wind",
           "$plus",
           "the",
