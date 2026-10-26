@@ -558,7 +558,7 @@ export function bible_glyph_chapter_1jn03() {
         words: [
           "Even",
           "$traffic_light",
-          "our",
+          "$me",
           "$heart_organ",
           "condemn",
           "us,",
