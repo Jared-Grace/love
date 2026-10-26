@@ -398,7 +398,7 @@ export function bible_glyph_chapter_luk07() {
         "He",
         "went",
         "up",
-        "and",
+        "$curving_right",
         "touched",
         "the",
         "$coffin+bed,",
