@@ -493,7 +493,7 @@ export function bible_glyph_chapter_jhn17() {
           "$tray_in",
           "$pin",
           "$check.",
-          "Your",
+          "$you+describing",
           "$speech",
           "is",
           "$check.",
