@@ -107,7 +107,7 @@ export function bible_glyph_chapter_isa01() {
           "$map,",
           "a",
           "$family",
-          "laden",
+          "$star+describing",
           "with",
           "iniquity,",
           "a",
