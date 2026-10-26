@@ -113,7 +113,7 @@ export function bible_glyph_chapter_deu30() {
           "on",
           "you",
           "and",
-          "gather",
+          "$tray_in+doing",
           "you",
           "from",
           "all",
