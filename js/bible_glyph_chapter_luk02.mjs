@@ -1166,7 +1166,7 @@ export function bible_glyph_chapter_luk02() {
       words: [
         "$plus",
         "$linked_paperclips",
-        "three",
+        "$three",
         "$sun",
         "they",
         "found",
