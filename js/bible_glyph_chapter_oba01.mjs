@@ -204,7 +204,7 @@ export function bible_glyph_chapter_oba01() {
       {
         verse_number: 7,
         words: [
-          "All",
+          "$all",
           "the",
           "men",
           "allied",
