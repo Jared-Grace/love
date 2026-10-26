@@ -551,7 +551,7 @@ export function bible_glyph_chapter_ezk18() {
           "was",
           "$no_entry",
           "$thumbs_up",
-          "among",
+          "$radio_button",
           "his",
           "$family,",
           "behold,",
