@@ -227,7 +227,7 @@ export function bible_glyph_chapter_jon04() {
           "the",
           "sun",
           "was",
-          "rising,",
+          "$sun+up_arrow+doing,",
           "$heart_on_fire",
           "appointed",
           "a",
