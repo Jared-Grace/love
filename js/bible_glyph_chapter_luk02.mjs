@@ -863,7 +863,7 @@ export function bible_glyph_chapter_luk02() {
         "$plus",
         "for",
         "a",
-        "sign",
+        "$placard",
         "that",
         "will",
         "be",
