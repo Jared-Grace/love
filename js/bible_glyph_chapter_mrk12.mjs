@@ -155,7 +155,7 @@ export function bible_glyph_chapter_mrk12() {
         "a",
         "$heart_red+describing",
         "$son.",
-        "Finally",
+        "$end_arrow+describing",
         "he",
         "$hand_sending",
         "$pointing_back",
