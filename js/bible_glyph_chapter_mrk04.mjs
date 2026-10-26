@@ -181,7 +181,7 @@ export function bible_glyph_chapter_mrk04() {
           "grew",
           "up",
           "$plus",
-          "choked",
+          "$safety_pin+wind+no_entry+doing",
           "$pointing_back,",
           "$plus",
           "they",
