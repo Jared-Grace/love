@@ -568,7 +568,7 @@ export function bible_glyph_chapter_jhn17() {
           "they",
           "all",
           "may",
-          "be",
+          "$link",
           "$one,",
           "just",
           "as",
