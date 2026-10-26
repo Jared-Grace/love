@@ -744,7 +744,7 @@ export function bible_glyph_chapter_jhn10() {
           "$no_entry",
           "one",
           "can",
-          "snatch",
+          "$hand+fast_forward",
           "them",
           "$tray_out",
           "My",
