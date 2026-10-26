@@ -311,7 +311,7 @@ export function bible_glyph_chapter_jol01() {
           "the",
           "$wheat",
           "and",
-          "barley,",
+          "$barley,",
           "because",
           "the",
           "harvest",
