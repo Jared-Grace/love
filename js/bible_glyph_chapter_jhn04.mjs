@@ -1118,7 +1118,7 @@ export function bible_glyph_chapter_jhn04() {
           "$footprints",
           "once",
           "$repeat",
-          "to",
+          "$toward+tray_in",
           "$proper_name$Cana",
           "in",
           "$proper_name$Galilee,",
