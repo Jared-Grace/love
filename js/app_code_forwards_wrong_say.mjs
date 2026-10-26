@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_wrong_say } from "./app_code_expression_wrong_say.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_code_lines_wrong_say } from "./app_code_lines_wrong_say.mjs";
+import { app_code_program_trace_wrong_say } from "./app_code_program_trace_wrong_say.mjs";
 export function app_code_forwards_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("said when a learner picks a wrong output for code: the first reminder that has something to say about this pick, or null when none does");
@@ -11,5 +12,10 @@ export function app_code_forwards_wrong_say(question, answer, choice) {
     return expression;
   }
   let lines = app_code_lines_wrong_say(question, answer, choice);
-  return lines;
+  if (null_not_is(lines)) {
+    return lines;
+  }
+  ("2026-10-26: a program that gives names values is followed line by line last, because it answers any wrong pick, while the two reminders about lines name the one mistake a pick makes");
+  let traced = app_code_program_trace_wrong_say(question, answer, choice);
+  return traced;
 }
