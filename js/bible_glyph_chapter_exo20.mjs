@@ -547,7 +547,7 @@ export function bible_glyph_chapter_exo20() {
           "$eye",
           "for",
           "yourselves",
-          "that",
+          "$pointing",
           "I",
           "have",
           "$mouth",
