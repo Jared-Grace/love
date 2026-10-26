@@ -315,7 +315,7 @@ export function bible_glyph_chapter_jhn14() {
           "$pin",
           "$father",
           "$plus",
-          "the",
+          "$pin",
           "$father",
           "is",
           "$tray_in",
