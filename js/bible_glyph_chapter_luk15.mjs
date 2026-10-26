@@ -330,7 +330,7 @@ export function bible_glyph_chapter_luk15() {
         "many",
         "$sun",
         "later,",
-        "the",
+        "$pin",
         "younger",
         "$son",
         "gathered",
