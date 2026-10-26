@@ -454,7 +454,7 @@ export function bible_glyph_chapter_rut03() {
           "he",
           "$speech",
           "her,",
-          "Bring",
+          "$hands_giving+up_arrow",
           "the",
           "shawl",
           "you",
