@@ -687,7 +687,7 @@ export function bible_glyph_chapter_luk24() {
           "$walking,",
           "$plus",
           "$pointing_back",
-          "seemed",
+          "$toward+hammer",
           "to",
           "be",
           "$walking",
