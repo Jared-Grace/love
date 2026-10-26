@@ -492,7 +492,7 @@ export function bible_glyph_chapter_rev01() {
           "$walking+tray_out",
           "a",
           "sharp",
-          "double-edged",
+          "$two+mouth",
           "$sword.",
           "$plus",
           "$pointing_back",
