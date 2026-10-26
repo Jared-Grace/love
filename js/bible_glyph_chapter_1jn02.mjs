@@ -332,7 +332,7 @@ export function bible_glyph_chapter_1jn02() {
           "have",
           "been",
           "forgiven",
-          "through",
+          "$metro",
           "$pointing_back",
           "$name_tag.",
         ],
