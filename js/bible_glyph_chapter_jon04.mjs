@@ -207,7 +207,7 @@ export function bible_glyph_chapter_jon04() {
           "next",
           "day,",
           "$heart_on_fire",
-          "appointed",
+          "$input_numbers+doing",
           "a",
           "worm",
           "that",
