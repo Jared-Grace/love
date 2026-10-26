@@ -251,7 +251,7 @@ export function bible_glyph_chapter_deu30() {
           "$pointing_up",
           "your",
           "enemies",
-          "who",
+          "$back+flashlight",
           "hate",
           "you",
           "and",
