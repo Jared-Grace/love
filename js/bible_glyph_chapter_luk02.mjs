@@ -598,7 +598,7 @@ export function bible_glyph_chapter_luk02() {
         "$crown,",
         "$pointing",
         "“$all",
-        "firstborn",
+        "$metro+unlocked",
         "$man_beard+describing",
         "shall",
         "be",
