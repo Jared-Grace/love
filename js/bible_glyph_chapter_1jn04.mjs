@@ -413,7 +413,7 @@ export function bible_glyph_chapter_1jn04() {
           "$people_with_bunny_ears+speech+doing",
           "$pointing",
           "$cross",
-          "is",
+          "$link",
           "the",
           "$son",
           "of",
