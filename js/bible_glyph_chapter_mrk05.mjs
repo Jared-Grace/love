@@ -269,7 +269,7 @@ export function bible_glyph_chapter_mrk05() {
         "$toward",
         "a",
         "large",
-        "herd",
+        "$paw_prints+crowd",
         "of",
         "pigs",
         "$link",
