@@ -195,7 +195,7 @@ export function bible_glyph_chapter_mrk08() {
           "that",
           "$flashlight",
           "be",
-          "set",
+          "$children_crossing+palm_down",
           "before",
           "the",
           "people",
