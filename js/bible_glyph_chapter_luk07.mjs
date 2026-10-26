@@ -354,7 +354,7 @@ export function bible_glyph_chapter_luk07() {
         "$pointing_back",
         "$link",
         "a",
-        "widow,",
+        "$widow,",
         "$plus",
         "a",
         "large",
