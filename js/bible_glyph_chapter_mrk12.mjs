@@ -1060,7 +1060,7 @@ export function bible_glyph_chapter_mrk12() {
         "receive",
         "greetings",
         "$tray_in",
-        "the",
+        "$pin",
         "marketplaces,",
       ],
     },
