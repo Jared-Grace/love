@@ -108,7 +108,7 @@ export function bible_glyph_chapter_jon02() {
           "will",
           "look",
           "once",
-          "more",
+          "$plus+doing",
           "toward",
           "Your",
           "$sparkle+thing",
