@@ -185,7 +185,7 @@ export function bible_glyph_chapter_3jn01() {
           "we",
           "may",
           "be",
-          "fellow",
+          "$safety_pin+tools+doer",
           "workers",
           "for",
           "the",
