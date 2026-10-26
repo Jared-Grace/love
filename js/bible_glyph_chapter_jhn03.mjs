@@ -783,7 +783,7 @@ export function bible_glyph_chapter_jhn03() {
           "above",
           "is",
           "above",
-          "all.",
+          "$all.",
           "$pin",
           "one",
           "who",
