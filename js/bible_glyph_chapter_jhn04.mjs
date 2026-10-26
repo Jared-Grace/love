@@ -349,7 +349,7 @@ export function bible_glyph_chapter_jhn04() {
           "$water",
           "springing",
           "up",
-          "to",
+          "$toward+tray_in",
           "eternal",
           "$sprout.”",
         ],
