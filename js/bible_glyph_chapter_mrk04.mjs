@@ -285,7 +285,7 @@ export function bible_glyph_chapter_mrk04() {
           "$castle",
           "of",
           "$heart_on_fire,",
-          "but",
+          "$curving_right",
           "to",
           "those",
           "on",
