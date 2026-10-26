@@ -345,7 +345,7 @@ export function bible_glyph_chapter_jhn03() {
         verse_number: 14,
         words: [
           "Just",
-          "as",
+          "$likeness",
           "$fishing_pole+proper_name",
           "lifted",
           "up",
