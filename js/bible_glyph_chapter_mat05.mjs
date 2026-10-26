@@ -94,7 +94,7 @@ export function bible_glyph_chapter_mat05() {
           "$gift+smile",
           "are",
           "$pin",
-          "meek,",
+          "$person_in_lotus_position+describing,",
           "$pointing",
           "$pointing_back",
           "will",
