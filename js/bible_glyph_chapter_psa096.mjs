@@ -21,7 +21,7 @@ export function bible_glyph_chapter_psa096() {
           "a",
           "new",
           "song;",
-          "sing",
+          "$song+doing",
           "to",
           "the",
           "$i_am,",
