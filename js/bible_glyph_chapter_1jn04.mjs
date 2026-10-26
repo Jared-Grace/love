@@ -509,7 +509,7 @@ export function bible_glyph_chapter_1jn04() {
           "$end_arrow+net+describing",
           "$heart_red",
           "drives",
-          "out",
+          "$tray_out+manner",
           "$fear,",
           "because",
           "$fear",
