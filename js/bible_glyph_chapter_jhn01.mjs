@@ -628,7 +628,7 @@ export function bible_glyph_chapter_jhn01() {
           "$pointing_down+proper_name,",
           "$back+round_pushpin",
           "$proper_name$John",
-          "was",
+          "$link",
           "baptizing.",
         ],
       },
