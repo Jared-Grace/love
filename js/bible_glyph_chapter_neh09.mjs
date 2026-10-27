@@ -688,7 +688,7 @@ export function bible_glyph_chapter_neh09() {
           "$road,",
           "nor",
           "the",
-          "pillar",
+          "$candle",
           "of",
           "$fire",
           "by",
