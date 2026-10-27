@@ -1051,7 +1051,7 @@ export function bible_glyph_chapter_deu32() {
           "I,",
           "I",
           "am",
-          "He,",
+          "$pointing_back,",
           "and",
           "there",
           "is",
