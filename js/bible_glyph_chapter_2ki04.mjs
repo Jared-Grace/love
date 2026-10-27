@@ -18,7 +18,7 @@ export function bible_glyph_chapter_2ki04() {
           "the",
           "$woman",
           "of",
-          "one",
+          "$one",
           "of",
           "the",
           "$son",
