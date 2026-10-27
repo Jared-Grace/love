@@ -330,7 +330,7 @@ export function bible_glyph_chapter_1ki21() {
           "$speech,",
           "$waving_hand",
           "a",
-          "fast",
+          "$eating+locked",
           "and",
           "give",
           "$proper_name$Naboth",
