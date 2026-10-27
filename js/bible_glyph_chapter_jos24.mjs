@@ -711,7 +711,7 @@ export function bible_glyph_chapter_jos24() {
           "$i_am",
           "and",
           "$kneeling+doing",
-          "foreign",
+          "$detective+thing",
           "$moai,",
           "He",
           "will",
