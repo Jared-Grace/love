@@ -655,7 +655,7 @@ export function bible_glyph_chapter_jdg11() {
           "$anchor",
           "$wrestling+heart_on_fire",
           "to",
-          "pass",
+          "$bridge",
           "through",
           "his",
           "territory.",
