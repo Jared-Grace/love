@@ -463,7 +463,7 @@ export function bible_glyph_chapter_gen09() {
           "that",
           "$sprout",
           "of",
-          "every",
+          "$all",
           "$meat",
           "that",
           "is",
