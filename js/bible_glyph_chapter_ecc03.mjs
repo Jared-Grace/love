@@ -86,7 +86,7 @@ export function bible_glyph_chapter_ecc03() {
           "weep",
           "and",
           "a",
-          "time",
+          "$clock",
           "to",
           "laugh,",
           "a",
