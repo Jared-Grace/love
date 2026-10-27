@@ -564,7 +564,7 @@ export function bible_glyph_chapter_pro08() {
           "side,",
           "and",
           "His",
-          "delight",
+          "$smiling_face_with_hearts+eyes+thing",
           "$sun",
           "by",
           "$sun,",
