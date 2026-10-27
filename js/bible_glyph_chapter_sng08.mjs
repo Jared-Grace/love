@@ -411,7 +411,7 @@ export function bible_glyph_chapter_sng08() {
           "$two_hearts,",
           "and",
           "be",
-          "like",
+          "$likeness+doing",
           "a",
           "gazelle",
           "or",
