@@ -298,7 +298,7 @@ export function bible_glyph_chapter_1sa16() {
         words: [
           "Next",
           "Jesse",
-          "presented",
+          "$bridge",
           "$proper_name$Shammah,",
           "but",
           "Samuel",
