@@ -535,7 +535,7 @@ export function bible_glyph_chapter_2ki04() {
           "and",
           "at",
           "that",
-          "time",
+          "$alarm_clock",
           "the",
           "next",
           "year",
