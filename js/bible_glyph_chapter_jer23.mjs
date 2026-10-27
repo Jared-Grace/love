@@ -1028,7 +1028,7 @@ export function bible_glyph_chapter_jer23() {
           "the",
           "$i_am,",
           "who",
-          "steal",
+          "$ninja+doing",
           "$speech",
           "from",
           "one",
