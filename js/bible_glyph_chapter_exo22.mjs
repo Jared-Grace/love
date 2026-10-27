@@ -795,7 +795,7 @@ export function bible_glyph_chapter_exo22() {
           "is",
           "the",
           "only",
-          "covering",
+          "$coat+thing",
           "he",
           "has",
           "for",
