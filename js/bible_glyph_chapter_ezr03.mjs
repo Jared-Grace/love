@@ -208,7 +208,7 @@ export function bible_glyph_chapter_ezr03() {
           "began",
           "to",
           "offer",
-          "burnt",
+          "$burnt_offering",
           "offerings",
           "to",
           "the",
