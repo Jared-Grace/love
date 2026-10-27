@@ -555,7 +555,7 @@ export function bible_glyph_chapter_gen40() {
         words: [
           "On",
           "the",
-          "third",
+          "$third_place",
           "$sun,",
           "which",
           "was",
