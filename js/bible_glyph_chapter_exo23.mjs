@@ -325,7 +325,7 @@ export function bible_glyph_chapter_exo23() {
           "$son",
           "of",
           "your",
-          "maidservant",
+          "$broom",
           "and",
           "the",
           "$foreigner",
