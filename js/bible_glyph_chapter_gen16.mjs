@@ -481,7 +481,7 @@ export function bible_glyph_chapter_gen16() {
         words: [
           "$proper_name$Abram",
           "was",
-          "eighty",
+          "$eight+zero",
           "six",
           "$year",
           "old",
