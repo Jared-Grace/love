@@ -984,7 +984,7 @@ export function bible_glyph_chapter_gen26() {
           "And",
           "when",
           "Esau",
-          "was",
+          "$link",
           "forty",
           "years",
           "$son,",
