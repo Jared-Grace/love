@@ -115,7 +115,7 @@ export function bible_glyph_chapter_psa121() {
           "$sun+manner,",
           "nor",
           "the",
-          "moon",
+          "$moon",
           "by",
           "$night.",
         ],
