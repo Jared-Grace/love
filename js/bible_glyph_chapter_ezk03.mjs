@@ -176,7 +176,7 @@ export function bible_glyph_chapter_ezk03() {
           "you",
           "to",
           "them,",
-          "they",
+          "$pointing_back",
           "would",
           "have",
           "$ear",
