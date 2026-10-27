@@ -1252,7 +1252,7 @@ export function bible_glyph_chapter_1ki18() {
           "of",
           "the",
           "$i_am",
-          "fell",
+          "$person+pointing_down",
           "and",
           "consumed",
           "the",
