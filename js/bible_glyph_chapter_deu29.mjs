@@ -207,7 +207,7 @@ export function bible_glyph_chapter_deu29() {
           "against",
           "us",
           "in",
-          "battle,",
+          "$crossed_swords,",
           "but",
           "we",
           "defeated",
