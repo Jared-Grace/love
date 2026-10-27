@@ -481,7 +481,7 @@ export function bible_glyph_chapter_deu28() {
           "not",
           "$walking",
           "$next_track",
-          "other",
+          "$plus+one",
           "$moai",
           "to",
           "$kneeling+doing",
