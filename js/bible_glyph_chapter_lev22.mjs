@@ -398,7 +398,7 @@ export function bible_glyph_chapter_lev22() {
           "$seed,",
           "and",
           "$turn_back",
-          "to",
+          "$toward",
           "the",
           "$house",
           "of",
