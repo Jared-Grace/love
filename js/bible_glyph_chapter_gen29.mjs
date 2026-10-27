@@ -265,7 +265,7 @@ export function bible_glyph_chapter_gen29() {
           "her",
           "$father",
           "$sheep,",
-          "for",
+          "$pointing",
           "she",
           "was",
           "a",
