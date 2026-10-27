@@ -318,7 +318,7 @@ export function bible_glyph_chapter_zec04() {
           "and",
           "on",
           "the",
-          "left?",
+          "$hand+away?",
         ],
       },
       {
