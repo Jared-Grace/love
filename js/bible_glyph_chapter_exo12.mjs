@@ -147,7 +147,7 @@ export function bible_glyph_chapter_exo12() {
           "must",
           "$guard+thing",
           "it",
-          "until",
+          "$finish",
           "the",
           "fourteenth",
           "$sun",
