@@ -265,7 +265,7 @@ export function bible_glyph_chapter_isa07() {
           "$proper_name$Damascus,",
           "and",
           "the",
-          "head",
+          "$person_gesturing_ok",
           "of",
           "$proper_name$Damascus",
           "is",
