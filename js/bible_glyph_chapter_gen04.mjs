@@ -679,7 +679,7 @@ export function bible_glyph_chapter_gen04() {
       {
         verse_number: 24,
         words: [
-          "If",
+          "$pointing",
           "$proper_name$Cain",
           "is",
           "avenged",
