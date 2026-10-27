@@ -322,7 +322,7 @@ export function bible_glyph_chapter_jos07() {
         words: [
           "$pleading_face+manner",
           "$crown,",
-          "what",
+          "$flashlight+question",
           "can",
           "I",
           "$speech",
