@@ -467,7 +467,7 @@ export function bible_glyph_chapter_2ki22() {
           "the",
           "$i_am",
           "that",
-          "burns",
+          "$fire+hand",
           "against",
           "us,",
           "because",
