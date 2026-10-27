@@ -572,7 +572,7 @@ export function bible_glyph_chapter_neh08() {
           "wild",
           "olive,",
           "$herb+white_flower,",
-          "palm,",
+          "$palm_tree,",
           "and",
           "other",
           "leafy",
