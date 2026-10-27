@@ -593,7 +593,7 @@ export function bible_glyph_chapter_num06() {
           "on",
           "the",
           "$fire",
-          "under",
+          "$down_arrow",
           "the",
           "peace",
           "offering.",
