@@ -339,7 +339,7 @@ export function bible_glyph_chapter_hab01() {
           "execute",
           "$scales+thing;",
           "O",
-          "Rock,",
+          "$rock,",
           "You",
           "have",
           "established",
