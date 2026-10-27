@@ -59,7 +59,7 @@ export function bible_glyph_chapter_1sa02() {
           "like",
           "the",
           "$i_am.",
-          "Indeed,",
+          "$pointing,",
           "there",
           "is",
           "no",
