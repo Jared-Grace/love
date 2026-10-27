@@ -724,7 +724,7 @@ export function bible_glyph_chapter_gen21() {
           "$father+king,",
           "and",
           "the",
-          "two",
+          "$two",
           "men",
           "$scissors",
           "a",
