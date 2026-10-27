@@ -355,7 +355,7 @@ export function bible_glyph_chapter_deu07() {
           "He",
           "will",
           "$no_entry",
-          "hesitate",
+          "$turtle+doing",
           "to",
           "repay",
           "to",
