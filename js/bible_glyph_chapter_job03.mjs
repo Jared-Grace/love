@@ -360,7 +360,7 @@ export function bible_glyph_chapter_job03() {
           "from",
           "raging,",
           "and",
-          "there",
+          "$telescope",
           "the",
           "weary",
           "of",
