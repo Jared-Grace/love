@@ -744,7 +744,7 @@ export function bible_glyph_chapter_lev11() {
           "or",
           "$garment,",
           "or",
-          "leather,",
+          "$cow_face+coat,",
           "or",
           "$sackcloth,",
           "or",
