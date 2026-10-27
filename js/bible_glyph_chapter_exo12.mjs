@@ -805,7 +805,7 @@ export function bible_glyph_chapter_exo12() {
           "as",
           "a",
           "$hourglass",
-          "statute",
+          "$locked_with_pen",
           "for",
           "you",
           "and",
