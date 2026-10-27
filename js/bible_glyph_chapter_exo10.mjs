@@ -306,7 +306,7 @@ export function bible_glyph_chapter_exo10() {
           "$proper_name$Aaron",
           "were",
           "$turn_back",
-          "to",
+          "$toward",
           "$house+proper_name,",
           "and",
           "he",
