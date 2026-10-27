@@ -192,7 +192,7 @@ export function bible_glyph_chapter_psa116() {
         words: [
           "I",
           "$anchor,",
-          "therefore",
+          "$pointing",
           "I",
           "$mouth,",
           "I",
