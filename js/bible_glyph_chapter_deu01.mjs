@@ -1043,7 +1043,7 @@ export function bible_glyph_chapter_deu01() {
           "the",
           "$man_beard$s",
           "of",
-          "this",
+          "$flashlight",
           "$thumbs_down",
           "$dna",
           "shall",
