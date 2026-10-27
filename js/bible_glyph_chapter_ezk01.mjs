@@ -642,7 +642,7 @@ export function bible_glyph_chapter_ezk01() {
           "$man_beard",
           "also",
           "had",
-          "two",
+          "$two",
           "wings",
           "covering",
           "its",
