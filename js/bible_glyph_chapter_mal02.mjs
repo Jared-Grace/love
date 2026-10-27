@@ -520,7 +520,7 @@ export function bible_glyph_chapter_mal02() {
           "the",
           "$wind?",
           "And",
-          "why",
+          "$flashlight+question",
           "$one?",
           "Because",
           "He",
