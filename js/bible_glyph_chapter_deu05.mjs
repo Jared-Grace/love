@@ -592,7 +592,7 @@ export function bible_glyph_chapter_deu05() {
           "The",
           "$i_am",
           "$mouth",
-          "these",
+          "$flashlight+flashlight",
           "$speech",
           "to",
           "your",
