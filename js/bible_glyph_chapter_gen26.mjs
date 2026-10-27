@@ -459,7 +459,7 @@ export function bible_glyph_chapter_gen26() {
           "And",
           "$father+king",
           "$speech",
-          "to",
+          "$toward",
           "$laughing+proper_name,",
           "$walking",
           "from",
