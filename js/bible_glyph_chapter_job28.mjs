@@ -443,7 +443,7 @@ export function bible_glyph_chapter_job28() {
           "its",
           "$road,",
           "and",
-          "He",
+          "$pointing_back",
           "$lightbulb",
           "its",
           "$place.",
