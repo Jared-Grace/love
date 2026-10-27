@@ -793,7 +793,7 @@ export function bible_glyph_chapter_gen45() {
           "$eye",
           "the",
           "wagons",
-          "that",
+          "$back+flashlight",
           "$i_am+plus",
           "had",
           "sent",
