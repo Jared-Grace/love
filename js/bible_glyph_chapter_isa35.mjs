@@ -70,7 +70,7 @@ export function bible_glyph_chapter_isa35() {
           "the",
           "$i_am,",
           "the",
-          "splendor",
+          "$crown+sparkles",
           "of",
           "our",
           "$heart_on_fire.",
