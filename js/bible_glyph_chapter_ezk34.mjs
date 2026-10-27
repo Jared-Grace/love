@@ -231,7 +231,7 @@ export function bible_glyph_chapter_ezk34() {
           "and",
           "food",
           "for",
-          "every",
+          "$all",
           "$field",
           "$sprout,",
           "and",
