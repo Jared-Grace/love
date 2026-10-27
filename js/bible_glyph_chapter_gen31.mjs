@@ -841,7 +841,7 @@ export function bible_glyph_chapter_gen31() {
           "With",
           "whoever",
           "you",
-          "find",
+          "$magnifying_glass+exclamation",
           "your",
           "$moai,",
           "he",
