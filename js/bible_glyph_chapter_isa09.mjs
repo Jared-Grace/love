@@ -330,7 +330,7 @@ export function bible_glyph_chapter_isa09() {
           "rebuild",
           "with",
           "finished",
-          "stone;",
+          "$stone+axe;",
           "the",
           "sycamores",
           "have",
