@@ -932,7 +932,7 @@ export function bible_glyph_chapter_deu29() {
           "we",
           "may",
           "$hammer+doing",
-          "all",
+          "$all",
           "the",
           "$speech",
           "of",
