@@ -287,7 +287,7 @@ export function bible_glyph_chapter_lev07() {
           "shall",
           "offer",
           "unleavened",
-          "cakes",
+          "$bagel",
           "mixed",
           "with",
           "olive",
