@@ -529,7 +529,7 @@ export function bible_glyph_chapter_2ch34() {
           "$handshake",
           "were",
           "secretaries,",
-          "officers",
+          "$guard+scroll",
           "and",
           "gatekeepers.",
         ],
