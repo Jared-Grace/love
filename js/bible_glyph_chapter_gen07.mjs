@@ -166,7 +166,7 @@ export function bible_glyph_chapter_gen07() {
         verse_number: 6,
         words: [
           "Now",
-          "Noah",
+          "$seat+proper_name",
           "was",
           "600",
           "$year",
