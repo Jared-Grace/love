@@ -495,7 +495,7 @@ export function bible_glyph_chapter_job03() {
           "and",
           "my",
           "groans",
-          "pour",
+          "$pouring_liquid+down_arrow+doing",
           "out",
           "like",
           "$water.",
