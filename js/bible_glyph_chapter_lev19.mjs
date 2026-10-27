@@ -27,7 +27,7 @@ export function bible_glyph_chapter_lev19() {
           "and",
           "$speech",
           "them,",
-          "Be",
+          "$link",
           "$sparkle",
           "because",
           "I,",
