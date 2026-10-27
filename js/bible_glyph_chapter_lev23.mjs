@@ -141,7 +141,7 @@ export function bible_glyph_chapter_lev23() {
           "$new_moon",
           "begins",
           "the",
-          "Feast",
+          "$party_popper",
           "of",
           "Unleavened",
           "Bread",
