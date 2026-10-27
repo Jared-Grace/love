@@ -295,7 +295,7 @@ export function bible_glyph_chapter_psa034() {
           "and",
           "$hammer+doing",
           "$thumbs_up;",
-          "seek",
+          "$magnifying_glass",
           "$peace",
           "and",
           "pursue",
