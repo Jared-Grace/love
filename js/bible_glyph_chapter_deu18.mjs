@@ -593,7 +593,7 @@ export function bible_glyph_chapter_deu18() {
           "the",
           "$name_tag",
           "of",
-          "other",
+          "$plus+one",
           "$moai,",
           "that",
           "$megaphone",
