@@ -155,7 +155,7 @@ export function bible_glyph_chapter_pro04() {
           "will",
           "$up_arrow",
           "you;",
-          "if",
+          "$pointing",
           "you",
           "embrace",
           "her,",
