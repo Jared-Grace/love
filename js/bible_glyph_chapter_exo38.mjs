@@ -682,7 +682,7 @@ export function bible_glyph_chapter_exo38() {
           "$input_numbers+all",
           "a",
           "hundred",
-          "talents",
+          "$flying_disc",
           "and",
           "one",
           "thousand",
