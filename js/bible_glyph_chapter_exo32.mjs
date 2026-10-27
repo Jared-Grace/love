@@ -311,7 +311,7 @@ export function bible_glyph_chapter_exo32() {
           "$i_am",
           "also",
           "$speech",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name,",
           "I",
           "have",
