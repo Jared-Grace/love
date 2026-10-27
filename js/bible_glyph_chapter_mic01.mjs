@@ -201,7 +201,7 @@ export function bible_glyph_chapter_mic01() {
           "$vineyard.",
           "I",
           "will",
-          "pour",
+          "$water_wave+down_arrow+hand+doing",
           "her",
           "stones",
           "into",
