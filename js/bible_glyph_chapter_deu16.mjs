@@ -207,7 +207,7 @@ export function bible_glyph_chapter_deu16() {
           "You",
           "must",
           "only",
-          "offer",
+          "$sacrifice",
           "the",
           "Passover",
           "sacrifice",
