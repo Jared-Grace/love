@@ -239,7 +239,7 @@ export function bible_glyph_chapter_isa49() {
       {
         verse_number: 7,
         words: [
-          "Thus",
+          "$flashlight+manner",
           "$speech",
           "the",
           "$i_am,",
