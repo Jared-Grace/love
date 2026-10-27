@@ -115,7 +115,7 @@ export function bible_glyph_chapter_ezk37() {
           "me,",
           "$megaphone+doing",
           "concerning",
-          "these",
+          "$flashlight+flashlight",
           "$bone",
           "and",
           "$speech",
