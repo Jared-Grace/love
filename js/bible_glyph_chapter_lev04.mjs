@@ -478,7 +478,7 @@ export function bible_glyph_chapter_lev04() {
           "$hands_giving",
           "$tray_out",
           "$blood",
-          "on",
+          "$pointing_up",
           "$horn",
           "of",
           "$altar",
