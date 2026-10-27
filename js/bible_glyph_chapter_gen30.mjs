@@ -1107,7 +1107,7 @@ export function bible_glyph_chapter_gen30() {
       {
         verse_number: 41,
         words: [
-          "Whenever",
+          "$all",
           "the",
           "stronger",
           "of",
