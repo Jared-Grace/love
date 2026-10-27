@@ -1125,7 +1125,7 @@ export function bible_glyph_chapter_1ki12() {
           "of",
           "the",
           "eighth",
-          "month,",
+          "$new_moon,",
           "a",
           "month",
           "of",
