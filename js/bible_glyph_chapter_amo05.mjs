@@ -127,7 +127,7 @@ export function bible_glyph_chapter_amo05() {
         verse_number: 5,
         words: [
           "$no_entry",
-          "seek",
+          "$magnifying_glass+question",
           "Bethel",
           "or",
           "$footprints",
