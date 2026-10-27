@@ -782,7 +782,7 @@ export function bible_glyph_chapter_gen29() {
           "$kneeling+doing",
           "for",
           "$repeat",
-          "another",
+          "$plus+one",
           "$seven",
           "$year.",
         ],
