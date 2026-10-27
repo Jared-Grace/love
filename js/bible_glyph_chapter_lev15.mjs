@@ -238,7 +238,7 @@ export function bible_glyph_chapter_lev15() {
         words: [
           "Any",
           "$horse_racing+seat",
-          "on",
+          "$pointing_up",
           "$back+flashlight",
           "the",
           "man",
