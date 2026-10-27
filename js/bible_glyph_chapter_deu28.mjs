@@ -1756,7 +1756,7 @@ export function bible_glyph_chapter_deu28() {
           "$puzzle_piece+doing",
           "in",
           "the",
-          "siege",
+          "$city+around+thing",
           "and",
           "distress",
           "that",
