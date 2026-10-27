@@ -22,7 +22,7 @@ export function bible_glyph_chapter_num21() {
           "lived",
           "in",
           "the",
-          "Negev,",
+          "$compass+down_arrow,",
           "$ear",
           "that",
           "$wrestling+heart_on_fire",
