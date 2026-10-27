@@ -383,7 +383,7 @@ export function bible_glyph_chapter_lev02() {
           "heads",
           "of",
           "new",
-          "grain",
+          "$barley+sprout",
           "roasted",
           "on",
           "the",
