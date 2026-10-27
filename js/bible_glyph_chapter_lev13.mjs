@@ -323,7 +323,7 @@ export function bible_glyph_chapter_lev13() {
           "pronounce",
           "him",
           "$soap+no_entry;",
-          "it",
+          "$pointing_back",
           "is",
           "a",
           "skin",
