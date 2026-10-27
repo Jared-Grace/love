@@ -148,7 +148,7 @@ export function bible_glyph_chapter_num20() {
           "no",
           "$water",
           "to",
-          "drink.",
+          "$cup_with_straw.",
         ],
       },
       {
