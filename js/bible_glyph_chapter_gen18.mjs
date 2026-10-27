@@ -824,7 +824,7 @@ export function bible_glyph_chapter_gen18() {
           "You",
           "$collision",
           "the",
-          "whole",
+          "$all",
           "$city",
           "for",
           "the",
