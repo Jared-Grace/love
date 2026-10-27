@@ -943,7 +943,7 @@ export function bible_glyph_chapter_exo36() {
           "$hook,",
           "and",
           "he",
-          "cast",
+          "$pouring_liquid+fire",
           "for",
           "the",
           "posts",
