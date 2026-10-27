@@ -398,7 +398,7 @@ export function bible_glyph_chapter_exo02() {
           "in",
           "the",
           "$thumbs_down,",
-          "Why",
+          "$flashlight+question",
           "are",
           "you",
           "attacking",
