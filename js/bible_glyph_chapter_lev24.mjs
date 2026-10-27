@@ -578,7 +578,7 @@ export function bible_glyph_chapter_lev24() {
           "native",
           "born,",
           "for",
-          "I",
+          "$me",
           "am",
           "$i_am",
           "your",
