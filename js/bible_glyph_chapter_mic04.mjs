@@ -499,7 +499,7 @@ export function bible_glyph_chapter_mic04() {
           "will",
           "$bomb+altar+doing",
           "their",
-          "gain",
+          "$money_bag+hand_receiving",
           "to",
           "the",
           "$i_am,",
