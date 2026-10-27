@@ -147,7 +147,7 @@ export function bible_glyph_chapter_2sa05() {
           "$castle+doing",
           "over",
           "$hands_raised+proper_name",
-          "seven",
+          "$seven",
           "$year",
           "and",
           "six",
