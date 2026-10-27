@@ -425,7 +425,7 @@ export function bible_glyph_chapter_gen41() {
           "you",
           "$ear",
           "a",
-          "dream",
+          "$dream",
           "you",
           "can",
           "interpret",
