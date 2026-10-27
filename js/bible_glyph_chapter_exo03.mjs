@@ -276,7 +276,7 @@ export function bible_glyph_chapter_exo03() {
           "with",
           "$milk",
           "and",
-          "honey,",
+          "$honey,",
           "the",
           "home",
           "of",
