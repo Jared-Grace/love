@@ -390,7 +390,7 @@ export function bible_glyph_chapter_deu33() {
           "above",
           "and",
           "the",
-          "deep",
+          "$sea+down_arrow",
           "waters",
           "that",
           "lie",
