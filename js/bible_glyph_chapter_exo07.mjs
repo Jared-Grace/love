@@ -407,7 +407,7 @@ export function bible_glyph_chapter_exo07() {
           "to",
           "the",
           "$water.",
-          "Wait",
+          "$person+up_arrow",
           "to",
           "meet",
           "him",
