@@ -362,7 +362,7 @@ export function bible_glyph_chapter_exo23() {
           "$no_entry",
           "be",
           "$ear",
-          "on",
+          "$pointing_up",
           "your",
           "lips.",
         ],
