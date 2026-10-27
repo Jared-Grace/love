@@ -301,7 +301,7 @@ export function bible_glyph_chapter_deu11() {
           "$seed,",
           "an",
           "$earth",
-          "flowing",
+          "$water+right_arrow",
           "with",
           "$milk",
           "and",
