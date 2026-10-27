@@ -441,7 +441,7 @@ export function bible_glyph_chapter_gen24() {
           "that",
           "I",
           "may",
-          "drink,",
+          "$cup_with_straw,",
           "and",
           "who",
           "$speech,",
