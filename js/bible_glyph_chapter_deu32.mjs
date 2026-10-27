@@ -1311,7 +1311,7 @@ export function bible_glyph_chapter_deu32() {
           "they",
           "are",
           "$no_entry",
-          "idle",
+          "$tray_out+droplet+describing",
           "$speech",
           "to",
           "you,",
