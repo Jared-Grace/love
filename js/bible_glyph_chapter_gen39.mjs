@@ -641,7 +641,7 @@ export function bible_glyph_chapter_gen39() {
           "prisoners",
           "in",
           "the",
-          "prison",
+          "$locked+house",
           "under",
           "$i_am+plus's",
           "care,",
