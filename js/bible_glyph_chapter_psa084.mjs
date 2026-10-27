@@ -117,7 +117,7 @@ export function bible_glyph_chapter_psa084() {
           "ever",
           "praising",
           "You.",
-          "Selah",
+          "$pause_button",
         ],
       },
       {
