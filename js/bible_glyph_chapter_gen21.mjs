@@ -611,7 +611,7 @@ export function bible_glyph_chapter_gen21() {
       {
         verse_number: 23,
         words: [
-          "Now,",
+          "$watch,",
           "therefore,",
           "swear",
           "to",
