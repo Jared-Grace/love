@@ -284,7 +284,7 @@ export function bible_glyph_chapter_ecc01() {
           "my",
           "$heart_organ",
           "to",
-          "seek",
+          "$magnifying_glass+question",
           "and",
           "explore",
           "by",
