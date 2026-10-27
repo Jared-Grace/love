@@ -223,7 +223,7 @@ export function bible_glyph_chapter_exo12() {
           "unleavened",
           "bread",
           "and",
-          "bitter",
+          "$lemon+herb",
           "herbs.",
         ],
       },
