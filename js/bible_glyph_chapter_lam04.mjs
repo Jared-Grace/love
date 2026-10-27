@@ -518,7 +518,7 @@ export function bible_glyph_chapter_lam04() {
           "stalked",
           "our",
           "every",
-          "step,",
+          "$foot+right_arrow+thing,",
           "so",
           "that",
           "we",
