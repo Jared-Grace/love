@@ -430,7 +430,7 @@ export function bible_glyph_chapter_num20() {
           "$all",
           "the",
           "hardship",
-          "that",
+          "$back+flashlight",
           "has",
           "befallen",
           "us,",
