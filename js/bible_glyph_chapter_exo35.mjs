@@ -717,7 +717,7 @@ export function bible_glyph_chapter_exo35() {
           "$woman",
           "whose",
           "$heart_organ",
-          "prompted",
+          "$heart_hands+doing",
           "them",
           "$footprints",
           "for",
