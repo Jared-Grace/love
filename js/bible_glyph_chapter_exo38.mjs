@@ -393,7 +393,7 @@ export function bible_glyph_chapter_exo38() {
       {
         verse_number: 16,
         words: [
-          "All",
+          "$all",
           "the",
           "curtains",
           "around",
