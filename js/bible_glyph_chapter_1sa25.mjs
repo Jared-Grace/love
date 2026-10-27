@@ -747,7 +747,7 @@ export function bible_glyph_chapter_1sa25() {
           "leave",
           "alive",
           "$all",
-          "male",
+          "$back+flashlight",
           "belonging",
           "to",
           "Nabal.",
