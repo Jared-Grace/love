@@ -446,7 +446,7 @@ export function bible_glyph_chapter_mic05() {
           "root",
           "out",
           "the",
-          "Asherah",
+          "$wood+imp",
           "poles",
           "from",
           "your",
