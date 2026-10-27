@@ -178,7 +178,7 @@ export function bible_glyph_chapter_2sa05() {
           "$walking",
           "to",
           "$city+peace",
-          "against",
+          "$toward",
           "the",
           "$proper_name$Jebusites",
           "who",
