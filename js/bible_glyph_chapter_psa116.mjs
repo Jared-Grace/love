@@ -300,7 +300,7 @@ export function bible_glyph_chapter_psa116() {
           "am",
           "Your",
           "$kneeling;",
-          "I",
+          "$me",
           "am",
           "Your",
           "$kneeling,",
