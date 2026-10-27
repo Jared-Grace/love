@@ -736,7 +736,7 @@ export function bible_glyph_chapter_1sa20() {
           "on",
           "this",
           "side",
-          "of",
+          "$tray_out",
           "you,",
           "$hand_receiving",
           "them,",
