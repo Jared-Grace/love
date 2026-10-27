@@ -1591,7 +1591,7 @@ export function bible_glyph_chapter_deu28() {
           "new",
           "$wine",
           "or",
-          "oil,",
+          "$oil+new_button,",
           "no",
           "calves",
           "of",
