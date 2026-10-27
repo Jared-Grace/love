@@ -637,7 +637,7 @@ export function bible_glyph_chapter_exo28() {
           "corners",
           "of",
           "the",
-          "breastpiece,",
+          "$gem_stone+t_shirt,",
         ],
       },
       {
