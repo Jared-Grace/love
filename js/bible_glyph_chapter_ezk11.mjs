@@ -32,7 +32,7 @@ export function bible_glyph_chapter_ezk11() {
           "$i_am",
           "that",
           "faces",
-          "east.",
+          "$compass+right_arrow+thing.",
           "And",
           "there",
           "at",
