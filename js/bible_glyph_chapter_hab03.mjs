@@ -144,7 +144,7 @@ export function bible_glyph_chapter_hab03() {
           "$map;",
           "the",
           "ancient",
-          "mountains",
+          "$mountain+top",
           "$confetti_ball;",
           "the",
           "$hourglass",
