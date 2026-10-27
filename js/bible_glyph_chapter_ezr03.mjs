@@ -235,7 +235,7 @@ export function bible_glyph_chapter_ezr03() {
           "Then",
           "they",
           "$hands_giving",
-          "money",
+          "$silver",
           "to",
           "the",
           "masons",
