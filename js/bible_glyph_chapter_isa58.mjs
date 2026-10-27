@@ -529,7 +529,7 @@ export function bible_glyph_chapter_isa58() {
       {
         verse_number: 14,
         words: [
-          "then",
+          "$telescope+clock",
           "you",
           "will",
           "delight",
