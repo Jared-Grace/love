@@ -211,7 +211,7 @@ export function bible_glyph_chapter_hos14() {
         words: [
           "O",
           "Ephraim,",
-          "what",
+          "$flashlight+question",
           "have",
           "I",
           "to",
