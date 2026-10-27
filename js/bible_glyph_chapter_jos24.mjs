@@ -567,7 +567,7 @@ export function bible_glyph_chapter_jos24() {
           "from",
           "us",
           "to",
-          "forsake",
+          "$derelict_house+doing",
           "the",
           "$i_am",
           "to",
