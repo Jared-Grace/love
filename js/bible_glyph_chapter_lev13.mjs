@@ -960,7 +960,7 @@ export function bible_glyph_chapter_lev13() {
           "him",
           "clean,",
           "for",
-          "it",
+          "$pointing_back",
           "is",
           "only",
           "the",
