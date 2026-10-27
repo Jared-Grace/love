@@ -161,7 +161,7 @@ export function bible_glyph_chapter_num09() {
           "men",
           "$back+flashlight",
           "were",
-          "unclean,",
+          "$soap+no_entry,",
           "$person_other",
           "made",
           "so",
