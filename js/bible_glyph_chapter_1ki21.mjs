@@ -305,7 +305,7 @@ export function bible_glyph_chapter_1ki21() {
           "and",
           "sent",
           "them",
-          "to",
+          "$toward",
           "the",
           "elders",
           "and",
