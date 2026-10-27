@@ -164,7 +164,7 @@ export function bible_glyph_chapter_gen08() {
           "$proper_name$Noah",
           "$unlocked",
           "the",
-          "window",
+          "$window",
           "he",
           "had",
           "$hammer+doing",
