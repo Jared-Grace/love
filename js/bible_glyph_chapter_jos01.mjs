@@ -45,7 +45,7 @@ export function bible_glyph_chapter_jos01() {
           "$kneeling",
           "is",
           "$skull+doing.",
-          "Now",
+          "$watch",
           "therefore",
           "arise,",
           "you",
