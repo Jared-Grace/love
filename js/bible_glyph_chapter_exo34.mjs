@@ -816,7 +816,7 @@ export function bible_glyph_chapter_exo34() {
           "any",
           "of",
           "the",
-          "sacrifice",
+          "$sacrifice",
           "from",
           "the",
           "Passover",
