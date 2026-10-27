@@ -160,7 +160,7 @@ export function bible_glyph_chapter_lam02() {
           "He",
           "has",
           "killed",
-          "all",
+          "$all",
           "who",
           "were",
           "pleasing",
