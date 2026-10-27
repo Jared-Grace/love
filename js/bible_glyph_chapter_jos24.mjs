@@ -467,7 +467,7 @@ export function bible_glyph_chapter_jos24() {
         words: [
           "$watch",
           "therefore",
-          "fear",
+          "$fear+doing",
           "the",
           "$i_am",
           "and",
