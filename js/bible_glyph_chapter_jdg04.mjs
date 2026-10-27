@@ -391,7 +391,7 @@ export function bible_glyph_chapter_jdg04() {
           "of",
           "his",
           "iron",
-          "chariots",
+          "$chariot",
           "and",
           "all",
           "the",
