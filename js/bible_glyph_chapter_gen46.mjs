@@ -688,7 +688,7 @@ export function bible_glyph_chapter_gen46() {
         verse_number: 29,
         words: [
           "$i_am+plus",
-          "prepared",
+          "$knot",
           "his",
           "$chariot",
           "and",
