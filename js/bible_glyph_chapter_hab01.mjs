@@ -478,7 +478,7 @@ export function bible_glyph_chapter_hab01() {
           "Will",
           "he",
           "then",
-          "empty",
+          "$tray_out+droplet+doing",
           "his",
           "net",
           "and",
