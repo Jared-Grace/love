@@ -158,7 +158,7 @@ export function bible_glyph_chapter_1ki22() {
           "$king",
           "of",
           "$wrestling+heart_on_fire",
-          "assembled",
+          "$tray_in+doing",
           "the",
           "$megaphone,",
           "about",
