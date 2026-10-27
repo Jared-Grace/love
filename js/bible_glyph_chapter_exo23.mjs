@@ -604,7 +604,7 @@ export function bible_glyph_chapter_exo23() {
           "his",
           "$voice.",
           "$no_entry",
-          "defy",
+          "$lemon+doing",
           "him,",
           "for",
           "he",
