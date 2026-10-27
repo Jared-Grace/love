@@ -189,7 +189,7 @@ export function bible_glyph_chapter_gen44() {
           "my",
           "$crown",
           "$mouth",
-          "these",
+          "$flashlight+flashlight",
           "$speech?",
           "Your",
           "$kneeling",
