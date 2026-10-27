@@ -1071,7 +1071,7 @@ export function bible_glyph_chapter_exo12() {
           "And",
           "the",
           "$clamp+proper_name",
-          "urged",
+          "$might+up_arrow",
           "the",
           "$family",
           "on",
