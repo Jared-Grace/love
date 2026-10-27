@@ -571,7 +571,7 @@ export function bible_glyph_chapter_est01() {
           "$proper_name$Persia",
           "and",
           "$proper_name$Media",
-          "who",
+          "$back+flashlight",
           "have",
           "$ear",
           "$pointing_down",
