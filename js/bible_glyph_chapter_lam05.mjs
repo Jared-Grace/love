@@ -279,7 +279,7 @@ export function bible_glyph_chapter_lam05() {
           "from",
           "our",
           "$person_gesturing_ok.",
-          "Woe",
+          "$weary_face",
           "to",
           "us,",
           "for",
