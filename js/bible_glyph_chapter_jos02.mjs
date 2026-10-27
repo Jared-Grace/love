@@ -370,7 +370,7 @@ export function bible_glyph_chapter_jos02() {
           "$ear,",
           "our",
           "$heart_organ",
-          "melted",
+          "$melting_face",
           "and",
           "$no_entry",
           "courage",
