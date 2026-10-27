@@ -974,7 +974,7 @@ export function bible_glyph_chapter_jdg11() {
           "the",
           "$i_am,",
           "$speech,",
-          "If",
+          "$traffic_light",
           "You",
           "will",
           "$hands_giving",
