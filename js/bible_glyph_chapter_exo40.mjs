@@ -916,7 +916,7 @@ export function bible_glyph_chapter_exo40() {
           "the",
           "$tent+house",
           "by",
-          "day,",
+          "$sun+manner,",
           "and",
           "$fire",
           "was",
