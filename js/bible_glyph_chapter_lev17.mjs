@@ -590,7 +590,7 @@ export function bible_glyph_chapter_lev17() {
           "and",
           "does",
           "$no_entry",
-          "bathe",
+          "$bathtub+doing",
           "his",
           "$meat,",
           "then",
