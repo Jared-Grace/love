@@ -1246,7 +1246,7 @@ export function bible_glyph_chapter_exo12() {
           "of",
           "$clamp+proper_name,",
           "into",
-          "unleavened",
+          "$flatbread",
           "$flatbread+fire.",
           "Since",
           "they",
