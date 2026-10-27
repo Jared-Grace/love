@@ -29,7 +29,7 @@ export function bible_glyph_chapter_gen29() {
           "people",
           "of",
           "the",
-          "east.",
+          "$compass+right_arrow.",
         ],
       },
       {
