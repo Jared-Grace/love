@@ -1307,7 +1307,7 @@ export function bible_glyph_chapter_neh09() {
           "the",
           "abundant",
           "goodness",
-          "that",
+          "$back+flashlight",
           "You",
           "had",
           "$hands_giving",
