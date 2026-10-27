@@ -694,7 +694,7 @@ export function bible_glyph_chapter_isa07() {
           "were",
           "a",
           "$ten+all",
-          "vines",
+          "$vine",
           "worth",
           "a",
           "$ten+all",
