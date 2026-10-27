@@ -446,7 +446,7 @@ export function bible_glyph_chapter_exo03() {
           "they",
           "$speech",
           "me,",
-          "What",
+          "$flashlight+question",
           "is",
           "His",
           "$name_tag?",
