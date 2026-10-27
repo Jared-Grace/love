@@ -99,7 +99,7 @@ export function bible_glyph_chapter_lev09() {
           "sacrifice",
           "for",
           "a",
-          "peace",
+          "$peace+gift",
           "offering",
           "before",
           "$i_am,",
