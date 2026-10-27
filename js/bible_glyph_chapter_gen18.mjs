@@ -112,7 +112,7 @@ export function bible_glyph_chapter_gen18() {
           "that",
           "you",
           "may",
-          "wash",
+          "$bathtub+doing",
           "your",
           "feet",
           "and",
