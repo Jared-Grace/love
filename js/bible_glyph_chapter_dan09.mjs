@@ -945,7 +945,7 @@ export function bible_glyph_chapter_dan09() {
           "and",
           "will",
           "have",
-          "nothing.",
+          "$dotted_line_face.",
           "Then",
           "the",
           "$family",
