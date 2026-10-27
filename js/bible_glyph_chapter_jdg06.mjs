@@ -786,7 +786,7 @@ export function bible_glyph_chapter_jdg06() {
         verse_number: 24,
         words: [
           "So",
-          "Gideon",
+          "$axe+proper_name",
           "$brick",
           "an",
           "$altar",
