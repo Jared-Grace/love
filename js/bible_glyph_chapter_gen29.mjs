@@ -44,7 +44,7 @@ export function bible_glyph_chapter_gen29() {
           "the",
           "$field,",
           "and",
-          "three",
+          "$three",
           "flocks",
           "of",
           "$sheep",
