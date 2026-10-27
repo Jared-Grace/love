@@ -933,7 +933,7 @@ export function bible_glyph_chapter_dan09() {
           "Then",
           "after",
           "the",
-          "sixty",
+          "$six+zero",
           "two",
           "$seven+sun",
           "the",
