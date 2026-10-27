@@ -370,7 +370,7 @@ export function bible_glyph_chapter_gen50() {
           "$field",
           "at",
           "$proper_name$Machpelah,",
-          "which",
+          "$back+flashlight",
           "$father+map",
           "had",
           "purchased",
