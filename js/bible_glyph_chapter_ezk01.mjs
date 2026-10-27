@@ -449,7 +449,7 @@ export function bible_glyph_chapter_ezk01() {
           "had",
           "the",
           "same",
-          "likeness.",
+          "$likeness+thing.",
           "Their",
           "workmanship",
           "looked",
