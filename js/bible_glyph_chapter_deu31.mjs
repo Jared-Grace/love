@@ -94,7 +94,7 @@ export function bible_glyph_chapter_deu31() {
           "them.",
           "$i_am+rescue",
           "will",
-          "cross",
+          "$bridge",
           "ahead",
           "of",
           "you,",
