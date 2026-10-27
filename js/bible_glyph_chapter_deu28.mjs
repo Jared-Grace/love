@@ -621,7 +621,7 @@ export function bible_glyph_chapter_deu28() {
           "$hand_sending",
           "$speech+thumbs_down+thing",
           "and",
-          "confusion",
+          "$megaphone+crowd+thing",
           "and",
           "reproof",
           "upon",
