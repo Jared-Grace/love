@@ -726,7 +726,7 @@ export function bible_glyph_chapter_jdg02() {
           "will",
           "$no_entry",
           "$plus+doing",
-          "drive",
+          "$triangular_flag",
           "out",
           "before",
           "them",
