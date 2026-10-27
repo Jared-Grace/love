@@ -177,7 +177,7 @@ export function bible_glyph_chapter_isa26() {
         words: [
           "$plus+exclamation,",
           "we",
-          "wait",
+          "$crossed_fingers+doing",
           "for",
           "You,",
           "O",
