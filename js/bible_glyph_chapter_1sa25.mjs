@@ -455,7 +455,7 @@ export function bible_glyph_chapter_1sa25() {
         verse_number: 14,
         words: [
           "Meanwhile,",
-          "one",
+          "$one",
           "of",
           "the",
           "young",
