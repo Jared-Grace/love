@@ -1011,7 +1011,7 @@ export function bible_glyph_chapter_num15() {
           "So",
           "the",
           "$all",
-          "congregation",
+          "$witness+crowd",
           "$walking+tray_out",
           "him",
           "outside",
