@@ -25,6 +25,7 @@ import { list_filter } from "./list_filter.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
+import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
@@ -137,7 +138,7 @@ export function app_code_lesson_while_total() {
     return once;
   }
   function backwards_decoys(question, answer) {
-    "the same program compared against one more, so it runs once more";
+    "the same program compared against one more, so it runs once more; or, when it already runs as often as a while lesson allows, against one less, so it runs once fewer";
     let numbers2 = text_integers(answer);
     let start3 = list_get(numbers2, 1);
     let bound3 = list_get(numbers2, 2);
@@ -146,6 +147,11 @@ export function app_code_lesson_while_total() {
       ended2 = bound3;
     }
     let sum3 = add(ended2, 1);
+    let runs = subtract(ended2, start3);
+    let a = app_code_while_runs_max();
+    if (less_than_equal(a, runs)) {
+      sum3 = subtract(ended2, 1);
+    }
     let code4 = program_get(start3, sum3);
     let found2 = [code4];
     return found2;

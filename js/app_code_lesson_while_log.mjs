@@ -26,6 +26,9 @@ import { subtract } from "./subtract.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
+import { list_last } from "./list_last.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
@@ -142,7 +145,7 @@ export function app_code_lesson_while_log() {
     return once;
   }
   function backwards_decoys(question, answer) {
-    "the same program compared against a number past where n ends, so it runs once more";
+    "the same program compared against a number past where n ends, so it runs once more; or, when it already runs as often as a while lesson allows, against the last value it writes out, so it runs once fewer";
     let numbers2 = text_integers(answer);
     let start3 = list_get(numbers2, 0);
     let bound3 = list_get(numbers2, 1);
@@ -152,6 +155,10 @@ export function app_code_lesson_while_log() {
     let right2 = multiply(left, added3);
     let ended2 = add(start3, right2);
     let sum = add(ended2, 1);
+    let a2 = app_code_while_runs_max();
+    if (less_than_equal(a2, left)) {
+      sum = list_last(values3);
+    }
     let code4 = program_get(start3, sum, added3);
     let found2 = [code4];
     return found2;

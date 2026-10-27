@@ -18,6 +18,11 @@ import { list_filter } from "./list_filter.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
+import { not } from "./not.mjs";
+import { equal } from "./equal.mjs";
+import { add } from "./add.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -87,13 +92,23 @@ export function app_code_lesson_while_generic(params) {
     return once;
   }
   function backwards_decoys(question, answer) {
-    "the same program compared against a bound just past what it writes out, so it runs once more";
+    "the same program compared against a bound just past what it writes out, so it runs once more; or, when it already runs as often as a while lesson allows, against the value n held before its last run, so it runs once fewer";
     let numbers2 = text_integers(answer);
     let start3 = list_get(numbers2, 0);
     let amount3 = list_get(numbers2, 2);
     let written = eval_console_log_lines(answer);
     let ended2 = json_from(written);
+    let runs = 0;
+    let value = start3;
+    while (not(equal(value, ended2))) {
+      value = step(value, amount3);
+      runs = add(runs, 1);
+    }
     let v = bound_past(ended2);
+    let a = app_code_while_runs_max();
+    if (less_than_equal(a, runs)) {
+      v = step_back(ended2, amount3);
+    }
     let code4 = program_get(start3, v, amount3);
     let found2 = [code4];
     return found2;
