@@ -443,7 +443,7 @@ export function bible_glyph_chapter_num20() {
           "our",
           "$father",
           "went",
-          "down",
+          "$walking+pointing_down",
           "to",
           "$clamp+proper_name,",
           "and",
