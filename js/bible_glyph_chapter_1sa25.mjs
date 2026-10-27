@@ -278,7 +278,7 @@ export function bible_glyph_chapter_1sa25() {
           "$sun.",
           "$pleading",
           "$hands_giving",
-          "whatever",
+          "$back+flashlight",
           "your",
           "$hand",
           "finds",
