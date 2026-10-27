@@ -58,7 +58,7 @@ export function bible_glyph_chapter_jos06() {
           "$king",
           "and",
           "its",
-          "mighty",
+          "$might+person",
           "men",
           "of",
           "valor.",
