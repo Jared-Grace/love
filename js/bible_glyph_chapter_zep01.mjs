@@ -111,7 +111,7 @@ export function bible_glyph_chapter_zep01() {
           "$person",
           "from",
           "the",
-          "face",
+          "$face",
           "of",
           "the",
           "earth,",
