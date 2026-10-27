@@ -374,7 +374,7 @@ export function bible_glyph_chapter_psa034() {
           "The",
           "$i_am",
           "is",
-          "near",
+          "$magnet",
           "to",
           "those",
           "broken",
