@@ -213,7 +213,7 @@ export function bible_glyph_chapter_deu19() {
           "a",
           "$heart_organ",
           "rage,",
-          "overtake",
+          "$running+hand_receiving+doing",
           "him",
           "if",
           "the",
