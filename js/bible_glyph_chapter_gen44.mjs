@@ -516,7 +516,7 @@ export function bible_glyph_chapter_gen44() {
         words: [
           "Then",
           "$hands_raised+proper_name",
-          "approached",
+          "$walking+toward",
           "him",
           "and",
           "$speech,",
