@@ -251,7 +251,7 @@ export function bible_glyph_chapter_hos11() {
           "fury",
           "of",
           "My",
-          "anger;",
+          "$nose+fire;",
           "I",
           "will",
           "$no_entry",
