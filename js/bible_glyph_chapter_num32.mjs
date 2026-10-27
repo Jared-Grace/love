@@ -792,7 +792,7 @@ export function bible_glyph_chapter_num32() {
           "$i_am",
           "to",
           "the",
-          "battle,",
+          "$crossed_swords,",
           "just",
           "as",
           "$crown",
