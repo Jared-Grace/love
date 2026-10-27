@@ -195,7 +195,7 @@ export function bible_glyph_chapter_jdg11() {
           "Did",
           "you",
           "$no_entry",
-          "hate",
+          "$heart_red+thumbs_down",
           "me",
           "and",
           "expel",
