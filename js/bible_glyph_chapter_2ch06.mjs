@@ -602,7 +602,7 @@ export function bible_glyph_chapter_2ch06() {
           "But",
           "will",
           "$heart_on_fire",
-          "indeed",
+          "$anchor+manner",
           "$person+house",
           "with",
           "$person",
