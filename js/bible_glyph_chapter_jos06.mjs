@@ -405,7 +405,7 @@ export function bible_glyph_chapter_jos06() {
         words: [
           "And",
           "the",
-          "seven",
+          "$seven",
           "$priest",
           "$lifting",
           "seven",
