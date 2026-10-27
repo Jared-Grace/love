@@ -30,7 +30,7 @@ export function bible_glyph_chapter_deu08() {
           "may",
           "$sprout+doing",
           "and",
-          "multiply",
+          "$multiply+doing",
           "and",
           "$footprints",
           "and",
