@@ -41,7 +41,7 @@ export function bible_glyph_chapter_zep02() {
           "$wheat+dashing_away,",
           "$clock+back",
           "the",
-          "burning",
+          "$angry_face+thing",
           "anger",
           "of",
           "the",
