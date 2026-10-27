@@ -67,7 +67,7 @@ export function bible_glyph_chapter_gen04() {
           "$proper_name$Cain",
           "$kneeling+doing",
           "the",
-          "soil.",
+          "$brown_square.",
         ],
       },
       {
