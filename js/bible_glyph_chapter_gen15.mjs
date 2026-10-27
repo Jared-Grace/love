@@ -314,7 +314,7 @@ export function bible_glyph_chapter_gen15() {
           "$proper_name$Abram",
           "drove",
           "them",
-          "away.",
+          "$wind+away+doing.",
         ],
       },
       {
