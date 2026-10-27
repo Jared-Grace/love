@@ -768,7 +768,7 @@ export function bible_glyph_chapter_gen24() {
           "$speech,",
           "We",
           "have",
-          "plenty",
+          "$multiply",
           "of",
           "$wheat+scissors",
           "and",
