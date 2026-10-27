@@ -126,7 +126,7 @@ export function bible_glyph_chapter_1ki08() {
           "of",
           "$alarm_clock",
           "with",
-          "all",
+          "$all",
           "its",
           "$sparkle+thing",
           "furnishings.",
