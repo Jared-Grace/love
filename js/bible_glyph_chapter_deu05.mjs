@@ -421,7 +421,7 @@ export function bible_glyph_chapter_deu05() {
           "and",
           "$broom",
           "may",
-          "rest",
+          "$seat+doing",
           "as",
           "you",
           "do.",
