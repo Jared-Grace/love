@@ -999,7 +999,7 @@ export function bible_glyph_chapter_2ki17() {
           "he",
           "began",
           "to",
-          "teach",
+          "$bow+toward",
           "them",
           "how",
           "they",
