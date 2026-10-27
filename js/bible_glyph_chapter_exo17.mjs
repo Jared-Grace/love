@@ -32,7 +32,7 @@ export function bible_glyph_chapter_exo17() {
           "as",
           "the",
           "$i_am",
-          "commanded.",
+          "$face_with_open_mouth.",
           "They",
           "camped",
           "at",
