@@ -460,7 +460,7 @@ export function bible_glyph_chapter_exo40() {
           "in",
           "the",
           "$ark,",
-          "attaching",
+          "$palm_down",
           "the",
           "poles",
           "to",
