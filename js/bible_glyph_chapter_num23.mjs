@@ -449,7 +449,7 @@ export function bible_glyph_chapter_num23() {
           "your",
           "$burnt_offering",
           "while",
-          "I",
+          "$me",
           "meet",
           "the",
           "LORD",
