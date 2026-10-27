@@ -440,7 +440,7 @@ export function bible_glyph_chapter_nam01() {
           "who",
           "$ear",
           "$peace!",
-          "Celebrate",
+          "$party_popper+doing",
           "your",
           "feasts,",
           "O",
