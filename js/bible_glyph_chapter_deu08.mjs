@@ -355,7 +355,7 @@ export function bible_glyph_chapter_deu08() {
           "and",
           "statutes",
           "$back+flashlight",
-          "I",
+          "$me",
           "am",
           "giving",
           "you",
