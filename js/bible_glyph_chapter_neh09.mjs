@@ -518,7 +518,7 @@ export function bible_glyph_chapter_neh09() {
           "and",
           "in",
           "their",
-          "thirst",
+          "$tongue+desert+thing",
           "You",
           "brought",
           "them",
