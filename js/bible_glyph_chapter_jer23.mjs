@@ -1001,7 +1001,7 @@ export function bible_glyph_chapter_jer23() {
           "$no_entry",
           "like",
           "$fire,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am,",
           "and",
