@@ -409,7 +409,7 @@ export function bible_glyph_chapter_deu05() {
           "$paw_prints,",
           "nor",
           "the",
-          "foreigner",
+          "$foreigner",
           "within",
           "your",
           "gates",
