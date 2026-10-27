@@ -364,7 +364,7 @@ export function bible_glyph_chapter_gen49() {
           "$donkey,",
           "lying",
           "$sheep+down_arrow+doing",
-          "between",
+          "$brain+arrow_both_ways",
           "the",
           "sheepfolds.",
         ],
