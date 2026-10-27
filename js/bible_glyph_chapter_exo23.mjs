@@ -474,7 +474,7 @@ export function bible_glyph_chapter_exo23() {
           "$year,",
           "when",
           "you",
-          "gather",
+          "$crowd+doing",
           "your",
           "produce",
           "$tray_out",
