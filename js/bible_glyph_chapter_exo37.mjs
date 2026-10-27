@@ -319,7 +319,7 @@ export function bible_glyph_chapter_exo37() {
           "for",
           "the",
           "table",
-          "four",
+          "$four",
           "$gold",
           "$ring",
           "and",
