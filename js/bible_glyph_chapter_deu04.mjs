@@ -1075,7 +1075,7 @@ export function bible_glyph_chapter_deu04() {
           "distress",
           "and",
           "all",
-          "these",
+          "$flashlight+flashlight",
           "$speech",
           "have",
           "happened",
