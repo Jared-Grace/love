@@ -784,7 +784,7 @@ export function bible_glyph_chapter_exo40() {
           "he",
           "$hands_giving",
           "the",
-          "curtain",
+          "$umbrella+door",
           "for",
           "the",
           "entrance",
