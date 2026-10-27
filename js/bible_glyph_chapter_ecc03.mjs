@@ -211,7 +211,7 @@ export function bible_glyph_chapter_ecc03() {
           "$takeout_box+up_arrow",
           "from",
           "his",
-          "toil?",
+          "$hot_face+person?",
         ],
       },
       {
