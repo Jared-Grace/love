@@ -401,7 +401,7 @@ export function bible_glyph_chapter_mic01() {
         words: [
           "$horse+link+doing",
           "the",
-          "chariot",
+          "$chariot",
           "horses,",
           "O",
           "dweller",
