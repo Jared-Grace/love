@@ -212,7 +212,7 @@ export function bible_glyph_chapter_job19() {
           "His",
           "troops",
           "$footprints",
-          "together;",
+          "$linked_paperclips+manner;",
           "they",
           "construct",
           "a",
