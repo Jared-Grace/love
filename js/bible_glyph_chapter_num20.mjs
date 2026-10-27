@@ -172,7 +172,7 @@ export function bible_glyph_chapter_num20() {
           "the",
           "$tent",
           "of",
-          "Meeting.",
+          "$alarm_clock.",
           "They",
           "fell",
           "facedown,",
