@@ -76,7 +76,7 @@ export function bible_glyph_chapter_jdg04() {
           "$pointing",
           "Jabin",
           "had",
-          "nine",
+          "$nine",
           "hundred",
           "chariots",
           "of",
