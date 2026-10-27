@@ -639,7 +639,7 @@ export function bible_glyph_chapter_exo18() {
           "among",
           "the",
           "$family",
-          "capable",
+          "$raised_fist",
           "men",
           "who",
           "fear",
