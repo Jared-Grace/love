@@ -972,7 +972,7 @@ export function bible_glyph_chapter_gen24() {
           "camels",
           "were",
           "unloaded.",
-          "Straw",
+          "$wheat+scissors",
           "and",
           "feed",
           "were",
