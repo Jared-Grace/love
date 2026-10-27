@@ -1110,7 +1110,7 @@ export function bible_glyph_chapter_jdg16() {
           "for",
           "the",
           "$two",
-          "central",
+          "$radio_button",
           "$candle",
           "supporting",
           "the",
