@@ -550,7 +550,7 @@ export function bible_glyph_chapter_gen21() {
           "became",
           "a",
           "great",
-          "archer.",
+          "$bow+wood+doer.",
         ],
       },
       {
