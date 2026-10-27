@@ -151,7 +151,7 @@ export function bible_glyph_chapter_lev10() {
           "their",
           "tunics,",
           "to",
-          "outside",
+          "$sun_behind_small_cloud",
           "$camp,",
           "as",
           "$fishing_pole+proper_name",
