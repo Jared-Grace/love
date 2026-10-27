@@ -387,7 +387,7 @@ export function bible_glyph_chapter_jos06() {
           "$morning+doing",
           "the",
           "next",
-          "morning,",
+          "$morning,",
           "and",
           "the",
           "$priest",
