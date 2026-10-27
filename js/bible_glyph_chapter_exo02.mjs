@@ -550,7 +550,7 @@ export function bible_glyph_chapter_exo02() {
           "he",
           "$speech",
           "them,",
-          "Why",
+          "$flashlight+question+lightbulb",
           "have",
           "you",
           "$footprints",
