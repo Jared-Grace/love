@@ -553,7 +553,7 @@ export function bible_glyph_chapter_exo24() {
           "$mountain,",
           "and",
           "$fishing_pole+proper_name",
-          "remained",
+          "$link",
           "on",
           "the",
           "$mountain",
