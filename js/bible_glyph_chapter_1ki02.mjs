@@ -214,7 +214,7 @@ export function bible_glyph_chapter_1ki02() {
           "the",
           "$blood",
           "of",
-          "war",
+          "$crossed_swords",
           "on",
           "the",
           "belt",
