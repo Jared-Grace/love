@@ -873,7 +873,7 @@ export function bible_glyph_chapter_exo22() {
           "You",
           "shall",
           "$hammer+doing",
-          "likewise",
+          "$right_arrow",
           "with",
           "your",
           "$ox",
