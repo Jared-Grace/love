@@ -1145,7 +1145,7 @@ export function bible_glyph_chapter_exo12() {
           "of",
           "$silver",
           "and",
-          "gold",
+          "$gold",
           "and",
           "for",
           "clothing.",
