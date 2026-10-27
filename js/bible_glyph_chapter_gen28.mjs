@@ -554,7 +554,7 @@ export function bible_glyph_chapter_gen28() {
           "$morning+doing",
           "the",
           "next",
-          "morning",
+          "$morning",
           "$hand+foot",
           "$hand_receiving",
           "the",
