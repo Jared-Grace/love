@@ -138,7 +138,7 @@ export function bible_glyph_chapter_gen26() {
           "$hands_giving",
           "your",
           "$seed",
-          "all",
+          "$all",
           "these",
           "$earth.",
           "And",
