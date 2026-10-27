@@ -716,7 +716,7 @@ export function bible_glyph_chapter_zec14() {
         words: [
           "Indeed,",
           "every",
-          "pot",
+          "$pot_of_food",
           "in",
           "$city+peace",
           "and",
