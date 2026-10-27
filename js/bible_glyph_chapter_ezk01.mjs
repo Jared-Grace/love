@@ -213,7 +213,7 @@ export function bible_glyph_chapter_ezk01() {
           "$down_arrow",
           "their",
           "wings",
-          "on",
+          "$pointing_up",
           "their",
           "four",
           "sides",
