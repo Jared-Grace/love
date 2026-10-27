@@ -27,7 +27,7 @@ export function bible_glyph_chapter_gen20() {
           "south,",
           "and",
           "settled",
-          "between",
+          "$brain+arrow_both_ways",
           "$proper_name$Kadesh",
           "and",
           "$proper_name$Shur,",
