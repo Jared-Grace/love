@@ -798,7 +798,7 @@ export function bible_glyph_chapter_lev16() {
           "$person_gesturing_ok",
           "of",
           "the",
-          "goat",
+          "$goat+man_beard",
           "and",
           "send",
           "it",
