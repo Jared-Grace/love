@@ -765,7 +765,7 @@ export function bible_glyph_chapter_num23() {
           "$hand_receiving",
           "you",
           "to",
-          "another",
+          "$plus+one",
           "$place.",
           "Perhaps",
           "it",
