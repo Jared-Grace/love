@@ -58,7 +58,7 @@ export function bible_glyph_chapter_deu15() {
           "neighbor",
           "or",
           "$brother,",
-          "because",
+          "$pointing",
           "the",
           "$i_am's",
           "time",
