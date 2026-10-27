@@ -366,7 +366,7 @@ export function bible_glyph_chapter_num32() {
           "anger",
           "of",
           "$i_am",
-          "burned",
+          "$angry_face+doing",
           "against",
           "$wrestling+heart_on_fire,",
           "and",
