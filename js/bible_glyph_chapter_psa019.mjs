@@ -287,7 +287,7 @@ export function bible_glyph_chapter_psa019() {
           "Keep",
           "Your",
           "$kneeling",
-          "also",
+          "$plus",
           "from",
           "willful",
           "sins;",
