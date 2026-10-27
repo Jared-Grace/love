@@ -584,7 +584,7 @@ export function bible_glyph_chapter_lev13() {
           "person",
           "clean;",
           "then",
-          "he",
+          "$pointing_back",
           "is",
           "clean.",
         ],
