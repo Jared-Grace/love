@@ -2270,7 +2270,7 @@ export function bible_glyph_chapter_1ki08() {
           "with",
           "him,",
           "a",
-          "great",
+          "$top",
           "$church",
           "from",
           "$proper_name$Lebo-hamath",
