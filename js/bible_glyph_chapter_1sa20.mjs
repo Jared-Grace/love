@@ -431,7 +431,7 @@ export function bible_glyph_chapter_1sa20() {
           "the",
           "next",
           "day.",
-          "If",
+          "$exclamation",
           "he",
           "is",
           "$thumbs_up",
