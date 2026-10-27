@@ -1409,7 +1409,7 @@ export function bible_glyph_chapter_lev14() {
           "the",
           "$house",
           "scraped",
-          "completely,",
+          "$around,",
           "and",
           "the",
           "$dust",
