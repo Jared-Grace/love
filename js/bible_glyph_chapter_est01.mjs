@@ -742,7 +742,7 @@ export function bible_glyph_chapter_est01() {
           "$man_beard",
           "should",
           "be",
-          "master",
+          "$crown+hand+doing",
           "of",
           "his",
           "own",
