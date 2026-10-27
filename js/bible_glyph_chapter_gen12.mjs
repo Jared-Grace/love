@@ -269,7 +269,7 @@ export function bible_glyph_chapter_gen12() {
           "$proper_name$Ai",
           "to",
           "the",
-          "east.",
+          "$compass+right_arrow.",
           "$telescope",
           "he",
           "built",
