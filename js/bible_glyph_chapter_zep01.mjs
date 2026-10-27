@@ -133,7 +133,7 @@ export function bible_glyph_chapter_zep01() {
           "$hands_raised+proper_name",
           "and",
           "against",
-          "all",
+          "$all",
           "who",
           "$person+house",
           "in",
