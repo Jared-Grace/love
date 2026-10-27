@@ -807,7 +807,7 @@ export function bible_glyph_chapter_gen42() {
           "$brother,",
           "and",
           "$speech,",
-          "What",
+          "$flashlight+question",
           "is",
           "this",
           "that",
