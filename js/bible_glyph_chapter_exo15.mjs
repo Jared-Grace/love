@@ -150,7 +150,7 @@ export function bible_glyph_chapter_exo15() {
           "O",
           "$i_am,",
           "is",
-          "majestic",
+          "$sparkles+up_arrow+doing",
           "in",
           "$lightning;",
           "Your",
