@@ -1023,7 +1023,7 @@ export function bible_glyph_chapter_num32() {
           "$city",
           "of",
           "the",
-          "surrounding",
+          "$around",
           "$earth.",
         ],
       },
