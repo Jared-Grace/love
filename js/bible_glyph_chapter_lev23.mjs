@@ -568,7 +568,7 @@ export function bible_glyph_chapter_lev23() {
           "$bow",
           "offering,",
           "and",
-          "two",
+          "$two",
           "$lamb,",
           "each",
           "a",
