@@ -293,7 +293,7 @@ export function bible_glyph_chapter_lev23() {
           "$priest",
           "is",
           "to",
-          "wave",
+          "$hand+up_down_arrow+doing",
           "it.",
         ],
       },
