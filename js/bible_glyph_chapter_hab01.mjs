@@ -452,7 +452,7 @@ export function bible_glyph_chapter_hab01() {
           "dragnet",
           "and",
           "burns",
-          "incense",
+          "$incense+doing",
           "to",
           "his",
           "fishing",
