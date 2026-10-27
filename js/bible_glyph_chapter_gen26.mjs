@@ -349,7 +349,7 @@ export function bible_glyph_chapter_gen26() {
           "$family,",
           "Whoever",
           "touches",
-          "this",
+          "$flashlight",
           "$man_beard",
           "or",
           "his",
