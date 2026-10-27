@@ -839,7 +839,7 @@ export function bible_glyph_chapter_exo09() {
           "and",
           "$speech,",
           "This",
-          "time",
+          "$drum",
           "I",
           "have",
           "$bow+doing.",
