@@ -157,7 +157,7 @@ export function bible_glyph_chapter_psa110() {
           "$axe+collision+doing",
           "the",
           "leaders",
-          "far",
+          "$pointing_up",
           "and",
           "wide.",
         ],
