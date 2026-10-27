@@ -290,7 +290,7 @@ export function bible_glyph_chapter_num27() {
           "kin",
           "from",
           "his",
-          "clan,",
+          "$houses,",
           "that",
           "he",
           "may",
