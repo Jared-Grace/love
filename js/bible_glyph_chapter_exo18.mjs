@@ -266,7 +266,7 @@ export function bible_glyph_chapter_exo18() {
         words: [
           "And",
           "Jethro",
-          "rejoiced",
+          "$confetti_ball+doing",
           "over",
           "all",
           "the",
