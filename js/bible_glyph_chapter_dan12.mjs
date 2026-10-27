@@ -332,7 +332,7 @@ export function bible_glyph_chapter_dan12() {
           "sealed",
           "$finish",
           "the",
-          "time",
+          "$clock",
           "of",
           "the",
           "end.",
