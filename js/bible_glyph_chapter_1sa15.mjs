@@ -492,7 +492,7 @@ export function bible_glyph_chapter_1sa15() {
           "the",
           "$sheep",
           "and",
-          "cattle",
+          "$cow_face",
           "to",
           "sacrifice",
           "to",
