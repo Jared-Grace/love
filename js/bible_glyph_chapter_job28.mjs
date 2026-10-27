@@ -476,7 +476,7 @@ export function bible_glyph_chapter_job28() {
           "God",
           "$hammer+doing",
           "the",
-          "weight",
+          "$coin+thing",
           "of",
           "the",
           "$wind",
