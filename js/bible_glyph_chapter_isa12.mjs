@@ -84,7 +84,7 @@ export function bible_glyph_chapter_isa12() {
           "joy",
           "you",
           "will",
-          "draw",
+          "$bucket+doing",
           "$water",
           "from",
           "the",
