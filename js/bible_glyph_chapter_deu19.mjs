@@ -390,7 +390,7 @@ export function bible_glyph_chapter_deu19() {
           "$toward",
           "$one",
           "of",
-          "these",
+          "$flashlight+flashlight",
           "$city$s,",
         ],
       },
