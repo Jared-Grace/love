@@ -534,7 +534,7 @@ export function bible_glyph_chapter_isa40() {
           "$nesting_dolls",
           "that",
           "a",
-          "craftsman",
+          "$hammer_and_wrench+doer",
           "$pouring_liquid+wine",
           "and",
           "a",
