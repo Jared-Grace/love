@@ -243,7 +243,7 @@ export function bible_glyph_chapter_gen17() {
       {
         verse_number: 10,
         words: [
-          "This",
+          "$flashlight",
           "is",
           "My",
           "$covenant,",
