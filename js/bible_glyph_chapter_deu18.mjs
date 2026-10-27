@@ -55,7 +55,7 @@ export function bible_glyph_chapter_deu18() {
           "they",
           "have",
           "$no_entry",
-          "inheritance",
+          "$inheritance",
           "among",
           "their",
           "$brother,",
