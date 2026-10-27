@@ -250,7 +250,7 @@ export function bible_glyph_chapter_nam02() {
           "$star",
           "of",
           "$all",
-          "precious",
+          "$heart_eyes",
           "$toolbox.",
         ],
       },
