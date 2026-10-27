@@ -261,7 +261,7 @@ export function bible_glyph_chapter_num25() {
           "$woman.",
           "So",
           "the",
-          "plague",
+          "$fist+microbe+thing",
           "against",
           "the",
           "$son",
