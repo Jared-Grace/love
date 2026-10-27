@@ -117,7 +117,7 @@ export function bible_glyph_chapter_exo07() {
           "mighty",
           "acts",
           "of",
-          "judgment",
+          "$scales+thing",
           "I",
           "will",
           "$walking+tray_out",
