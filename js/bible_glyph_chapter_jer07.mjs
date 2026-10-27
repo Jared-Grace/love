@@ -68,7 +68,7 @@ export function bible_glyph_chapter_jer07() {
       {
         verse_number: 3,
         words: [
-          "Thus",
+          "$flashlight+manner",
           "$speech",
           "$i_am",
           "of",
