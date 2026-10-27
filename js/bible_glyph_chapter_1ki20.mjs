@@ -1488,7 +1488,7 @@ export function bible_glyph_chapter_1ki20() {
           "a",
           "$flying_disc",
           "of",
-          "silver.",
+          "$silver.",
         ],
       },
       {
