@@ -298,7 +298,7 @@ export function bible_glyph_chapter_mic05() {
           "beasts",
           "of",
           "the",
-          "forest,",
+          "$tree+tree,",
           "like",
           "a",
           "young",
