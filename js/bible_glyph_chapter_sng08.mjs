@@ -238,7 +238,7 @@ export function bible_glyph_chapter_sng08() {
           "have",
           "a",
           "little",
-          "sister,",
+          "$sister,",
           "and",
           "her",
           "breasts",
