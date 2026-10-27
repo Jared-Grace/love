@@ -1,23 +1,19 @@
-import { list_property_exists_not_error } from "./list_property_exists_not_error.mjs";
-import { json_compress_object } from "./json_compress_object.mjs";
-import { object_merge_set } from "./object_merge_set.mjs";
-import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { file_read } from "./file_read.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { app_a_download_paths } from "./app_a_download_paths.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_property_exists_not_error } from "./list_property_exists_not_error.mjs";
 export async function app_a_download() {
+  ("Only the names of the files are handed over. Sending every file's contents up front took minutes, which is too long to wait on a phone; each file is fetched instead the first time the page reads it, by ",
+    fn_name("app_a_download_file"),
+    ".");
   let filtered = await app_a_download_paths();
-  async function lambda(path) {
-    let contents = await file_read(path);
-    let data = {
-      versions: [contents],
-    };
-    let c = await json_compress_object(data);
-    object_merge_set(c, {
+  function lambda(path) {
+    let r = {
       key: path,
-    });
-    return c;
+    };
+    return r;
   }
-  let files = await list_map_unordered_async(filtered, lambda);
+  let files = list_map(filtered, lambda);
   list_property_exists_not_error(files, "key");
   return files;
 }
