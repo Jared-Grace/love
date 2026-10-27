@@ -889,7 +889,7 @@ export function bible_glyph_chapter_num10() {
           "over",
           "them",
           "by",
-          "day",
+          "$sun+manner",
           "when",
           "they",
           "set",
