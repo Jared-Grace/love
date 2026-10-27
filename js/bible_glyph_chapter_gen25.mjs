@@ -165,7 +165,7 @@ export function bible_glyph_chapter_gen25() {
           "he",
           "was",
           "gathered",
-          "to",
+          "$toward",
           "his",
           "$family.",
         ],
