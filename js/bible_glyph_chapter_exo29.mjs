@@ -420,7 +420,7 @@ export function bible_glyph_chapter_exo29() {
           "lay",
           "their",
           "$hand",
-          "on",
+          "$pointing_up",
           "the",
           "head",
           "of",
