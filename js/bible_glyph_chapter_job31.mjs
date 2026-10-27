@@ -223,7 +223,7 @@ export function bible_glyph_chapter_job31() {
           "heinous",
           "crime,",
           "an",
-          "iniquity",
+          "$cyclone",
           "to",
           "be",
           "judged.",
