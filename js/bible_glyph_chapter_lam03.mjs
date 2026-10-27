@@ -842,7 +842,7 @@ export function bible_glyph_chapter_lam03() {
           "$divide+water",
           "of",
           "$water",
-          "flow",
+          "$walking+pointing_down",
           "from",
           "my",
           "$eyes",
