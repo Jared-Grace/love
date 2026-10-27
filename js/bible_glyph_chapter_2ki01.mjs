@@ -652,7 +652,7 @@ export function bible_glyph_chapter_2ki01() {
           "of",
           "His",
           "$speech?",
-          "Therefore",
+          "$right_arrow",
           "you",
           "will",
           "$no_entry",
