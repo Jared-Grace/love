@@ -476,7 +476,7 @@ export function bible_glyph_chapter_exo09() {
         words: [
           "But",
           "for",
-          "this",
+          "$flashlight",
           "very",
           "purpose",
           "I",
