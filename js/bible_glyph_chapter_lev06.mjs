@@ -87,7 +87,7 @@ export function bible_glyph_chapter_lev06() {
           "he",
           "has",
           "stolen",
-          "or",
+          "$shuffle",
           "taken",
           "by",
           "extortion,",
