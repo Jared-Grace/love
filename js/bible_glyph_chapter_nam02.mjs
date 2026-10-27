@@ -148,7 +148,7 @@ export function bible_glyph_chapter_nam02() {
           "race",
           "to",
           "its",
-          "wall;",
+          "$brick+shield;",
           "the",
           "protective",
           "shield",
