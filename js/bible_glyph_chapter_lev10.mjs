@@ -224,7 +224,7 @@ export function bible_glyph_chapter_lev10() {
           "$pointing",
           "the",
           "anointing",
-          "oil",
+          "$lotion_bottle",
           "of",
           "$i_am",
           "is",
