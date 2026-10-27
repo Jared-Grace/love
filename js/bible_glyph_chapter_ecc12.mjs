@@ -87,7 +87,7 @@ export function bible_glyph_chapter_ecc12() {
           "and",
           "the",
           "strong",
-          "men",
+          "$man_beard",
           "$scales+shuffle+doing,",
           "when",
           "those",
