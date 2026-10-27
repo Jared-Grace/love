@@ -743,7 +743,7 @@ export function bible_glyph_chapter_exo07() {
           "the",
           "$clamp+person",
           "$pick+magnifying_glass+doing",
-          "around",
+          "$around",
           "the",
           "Nile",
           "for",
