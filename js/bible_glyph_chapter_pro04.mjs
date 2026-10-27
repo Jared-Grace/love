@@ -407,7 +407,7 @@ export function bible_glyph_chapter_pro04() {
           "to",
           "my",
           "$speech;",
-          "incline",
+          "$white_cane+doing",
           "your",
           "ear",
           "to",
