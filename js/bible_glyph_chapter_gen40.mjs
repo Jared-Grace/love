@@ -208,7 +208,7 @@ export function bible_glyph_chapter_gen40() {
           "is",
           "nobody",
           "to",
-          "interpret",
+          "$dream+unlocked+doing",
           "it.",
           "Then",
           "$i_am+plus",
