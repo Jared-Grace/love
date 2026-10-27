@@ -955,7 +955,7 @@ export function bible_glyph_chapter_lev16() {
           "$goat+man_beard",
           "as",
           "the",
-          "scapegoat",
+          "$goat+away",
           "must",
           "wash",
           "his",
