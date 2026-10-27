@@ -1240,7 +1240,7 @@ export function bible_glyph_chapter_2ki10() {
           "and",
           "$proper_name$Manasseh,",
           "and",
-          "from",
+          "$tray_out",
           "$proper_name$Aroer",
           "by",
           "the",
