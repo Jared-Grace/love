@@ -479,7 +479,7 @@ export function bible_glyph_chapter_jdg16() {
           "$hair+curly_loop",
           "of",
           "my",
-          "head",
+          "$person_gesturing_ok",
           "into",
           "the",
           "web",
