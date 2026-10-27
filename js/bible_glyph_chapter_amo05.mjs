@@ -380,7 +380,7 @@ export function bible_glyph_chapter_amo05() {
           "in",
           "such",
           "times,",
-          "for",
+          "$pointing",
           "the",
           "days",
           "are",
