@@ -164,7 +164,7 @@ export function bible_glyph_chapter_exo08() {
         verse_number: 6,
         words: [
           "So",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "stretched",
           "out",
           "his",
