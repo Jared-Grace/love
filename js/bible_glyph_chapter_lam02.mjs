@@ -783,7 +783,7 @@ export function bible_glyph_chapter_lam02() {
       {
         verse_number: 19,
         words: [
-          "Arise,",
+          "$person+pointing_up,",
           "cry",
           "out",
           "in",
