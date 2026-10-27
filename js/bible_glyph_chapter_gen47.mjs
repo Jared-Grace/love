@@ -681,7 +681,7 @@ export function bible_glyph_chapter_gen47() {
           "may",
           "$no_entry",
           "become",
-          "desolate.",
+          "$field+desert+doing.",
         ],
       },
       {
