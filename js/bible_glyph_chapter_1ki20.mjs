@@ -388,7 +388,7 @@ export function bible_glyph_chapter_1ki20() {
           "armor",
           "should",
           "$no_entry",
-          "boast",
+          "$clapping_hands",
           "like",
           "the",
           "one",
