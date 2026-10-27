@@ -90,7 +90,7 @@ export function bible_glyph_chapter_deu01() {
           "of",
           "Israel",
           "$all",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "had",
