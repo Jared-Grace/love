@@ -752,7 +752,7 @@ export function bible_glyph_chapter_lam02() {
           "the",
           "$crown.",
           "O",
-          "wall",
+          "$brick+shield",
           "of",
           "the",
           "$woman",
