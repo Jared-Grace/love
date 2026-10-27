@@ -155,7 +155,7 @@ export function bible_glyph_chapter_exo35() {
         verse_number: 6,
         words: [
           "$blue_circle,",
-          "purple",
+          "$purple_circle",
           "and",
           "scarlet",
           "yarn,",
