@@ -190,7 +190,7 @@ export function bible_glyph_chapter_dan09() {
           "$military_medal,",
           "$father,",
           "and",
-          "all",
+          "$all",
           "the",
           "$family",
           "of",
