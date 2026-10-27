@@ -566,7 +566,7 @@ export function bible_glyph_chapter_isa26() {
           "yourselves",
           "a",
           "little",
-          "while",
+          "$winking_face",
           "until",
           "the",
           "wrath",
