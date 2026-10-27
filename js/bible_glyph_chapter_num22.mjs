@@ -305,7 +305,7 @@ export function bible_glyph_chapter_num22() {
           "$speech,",
           "$person+question",
           "are",
-          "these",
+          "$flashlight+flashlight",
           "$man_beard",
           "with",
           "you?",
