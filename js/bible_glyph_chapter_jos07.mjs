@@ -874,7 +874,7 @@ export function bible_glyph_chapter_jos07() {
           "it",
           "all",
           "was,",
-          "hidden",
+          "$pick+tray_in+doing",
           "in",
           "his",
           "$tent",
