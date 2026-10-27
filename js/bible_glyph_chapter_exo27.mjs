@@ -335,7 +335,7 @@ export function bible_glyph_chapter_exo27() {
           "to",
           "be",
           "$five+zero",
-          "cubits",
+          "$triangular_ruler",
           "$arrow_both_ways.",
         ],
       },
