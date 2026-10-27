@@ -82,7 +82,7 @@ export function bible_glyph_chapter_deu08() {
           "in",
           "your",
           "$heart_organ,",
-          "whether",
+          "$traffic_light",
           "or",
           "$no_entry",
           "you",
