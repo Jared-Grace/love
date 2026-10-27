@@ -182,7 +182,7 @@ export function bible_glyph_chapter_lev11() {
           "divided,",
           "does",
           "$no_entry",
-          "chew",
+          "$cow_face+clockwise_arrows+doing",
           "the",
           "$cow_face+clockwise_arrows+thing;",
           "$pointing_back",
