@@ -110,7 +110,7 @@ export function bible_glyph_chapter_jos06() {
           "seventh",
           "$sun,",
           "march",
-          "around",
+          "$around+doing",
           "the",
           "$city",
           "$seven",
