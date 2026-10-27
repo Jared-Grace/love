@@ -35,7 +35,7 @@ export function bible_glyph_chapter_lam04() {
           "on",
           "every",
           "street",
-          "corner.",
+          "$person_gesturing_ok.",
         ],
       },
       {
