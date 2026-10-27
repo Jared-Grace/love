@@ -473,7 +473,7 @@ export function bible_glyph_chapter_ezk01() {
           "any",
           "of",
           "the",
-          "four",
+          "$four",
           "directions",
           "$no_entry",
           "pivoting",
