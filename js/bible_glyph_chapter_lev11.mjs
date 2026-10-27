@@ -611,7 +611,7 @@ export function bible_glyph_chapter_lev11() {
           "for",
           "you;",
           "whoever",
-          "touches",
+          "$hand+doing",
           "their",
           "carcasses",
           "will",
