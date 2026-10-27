@@ -129,7 +129,7 @@ export function bible_glyph_chapter_dan01() {
           "$thumbs_up",
           "in",
           "appearance,",
-          "gifted",
+          "$nerd_face",
           "in",
           "all",
           "$wisdom,",
