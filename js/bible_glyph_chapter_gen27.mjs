@@ -1351,7 +1351,7 @@ export function bible_glyph_chapter_gen27() {
           "you",
           "back",
           "from",
-          "there.",
+          "$telescope.",
           "Why",
           "should",
           "I",
