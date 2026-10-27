@@ -305,7 +305,7 @@ export function bible_glyph_chapter_neh08() {
           "the",
           "people",
           "could",
-          "understand",
+          "$brain",
           "what",
           "was",
           "being",
