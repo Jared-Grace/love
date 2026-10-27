@@ -1442,7 +1442,7 @@ export function bible_glyph_chapter_num16() {
           "seeing",
           "that",
           "the",
-          "plague",
+          "$fist+microbe+thing",
           "had",
           "begun",
           "among",
