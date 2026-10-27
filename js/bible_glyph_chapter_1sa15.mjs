@@ -514,7 +514,7 @@ export function bible_glyph_chapter_1sa15() {
         words: [
           "$ear+heart_on_fire",
           "$speech,",
-          "Stop.",
+          "$palm_down+doing.",
           "Let",
           "me",
           "tell",
