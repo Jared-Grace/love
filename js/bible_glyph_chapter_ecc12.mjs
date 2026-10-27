@@ -117,7 +117,7 @@ export function bible_glyph_chapter_ecc12() {
           "the",
           "street",
           "are",
-          "shut",
+          "$locked+doing",
           "and",
           "the",
           "$voice",
