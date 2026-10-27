@@ -648,7 +648,7 @@ export function bible_glyph_chapter_gen09() {
           "$no_entry",
           "$eye",
           "the",
-          "nakedness",
+          "$face_with_peeking_eye",
           "of",
           "their",
           "$father.",
