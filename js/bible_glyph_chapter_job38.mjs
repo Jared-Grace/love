@@ -766,7 +766,7 @@ export function bible_glyph_chapter_job38() {
           "you",
           "$net+deer+doing",
           "the",
-          "prey",
+          "$wolf+thing",
           "for",
           "a",
           "$lion+female_sign",
