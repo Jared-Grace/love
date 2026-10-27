@@ -336,7 +336,7 @@ export function bible_glyph_chapter_1sa02() {
           "to",
           "the",
           "$i_am",
-          "before",
+          "$face",
           "$pointing_up+proper_name",
           "the",
           "$priest.",
