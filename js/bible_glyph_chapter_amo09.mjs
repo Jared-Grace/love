@@ -345,7 +345,7 @@ export function bible_glyph_chapter_amo09() {
           "will",
           "give",
           "the",
-          "command,",
+          "$speech+scroll,",
           "and",
           "I",
           "will",
