@@ -60,7 +60,7 @@ export function bible_glyph_chapter_1ki02() {
         verse_number: 3,
         words: [
           "And",
-          "keep",
+          "$guard",
           "the",
           "charge",
           "of",
