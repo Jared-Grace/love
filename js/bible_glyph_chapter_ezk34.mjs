@@ -411,7 +411,7 @@ export function bible_glyph_chapter_ezk34() {
           "the",
           "$family",
           "and",
-          "gather",
+          "$tray_in+doing",
           "them",
           "$tray_out",
           "the",
