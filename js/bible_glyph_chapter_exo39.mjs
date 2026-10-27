@@ -668,7 +668,7 @@ export function bible_glyph_chapter_exo39() {
           "$dress+down_arrow",
           "of",
           "$cloak,",
-          "between",
+          "$radio_button",
           "the",
           "pomegranates.",
         ],
