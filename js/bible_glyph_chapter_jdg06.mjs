@@ -144,7 +144,7 @@ export function bible_glyph_chapter_jdg06() {
           "like",
           "a",
           "great",
-          "swarm",
+          "$check+all",
           "of",
           "locusts.",
           "They",
