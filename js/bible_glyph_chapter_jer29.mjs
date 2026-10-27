@@ -753,7 +753,7 @@ export function bible_glyph_chapter_jer29() {
           "May",
           "the",
           "$i_am",
-          "make",
+          "$palm_down",
           "you",
           "like",
           "$ruler+i_am",
