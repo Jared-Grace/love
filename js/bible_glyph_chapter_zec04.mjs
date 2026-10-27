@@ -55,7 +55,7 @@ export function bible_glyph_chapter_zec04() {
           "$lamp+thing",
           "with",
           "a",
-          "bowl",
+          "$fountain+ring",
           "at",
           "the",
           "top",
