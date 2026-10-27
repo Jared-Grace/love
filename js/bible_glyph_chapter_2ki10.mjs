@@ -685,7 +685,7 @@ export function bible_glyph_chapter_2ki10() {
           "all",
           "the",
           "$family",
-          "together",
+          "$tray_in+doing",
           "and",
           "$speech,",
           "$proper_name$Ahab",
