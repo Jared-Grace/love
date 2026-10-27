@@ -1239,7 +1239,7 @@ export function bible_glyph_chapter_deu32() {
           "the",
           "$speech",
           "of",
-          "this",
+          "$flashlight",
           "$song",
           "in",
           "the",
