@@ -146,7 +146,7 @@ export function bible_glyph_chapter_jos02() {
           "$no_entry",
           "$lightbulb",
           "$question+round_pushpin+tray_out",
-          "they",
+          "$pointing_back",
           "had",
           "come",
           "from.",
