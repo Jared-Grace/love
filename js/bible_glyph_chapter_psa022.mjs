@@ -70,7 +70,7 @@ export function bible_glyph_chapter_psa022() {
         verse_number: 3,
         words: [
           "Yet",
-          "You",
+          "$you",
           "are",
           "$sparkle,",
           "$person+house",
