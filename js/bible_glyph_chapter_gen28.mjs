@@ -473,7 +473,7 @@ export function bible_glyph_chapter_gen28() {
           "will",
           "$turn_back",
           "you",
-          "to",
+          "$toward",
           "this",
           "land.",
           "For",
