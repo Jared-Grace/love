@@ -892,7 +892,7 @@ export function bible_glyph_chapter_deu29() {
           "$angry_face+collision,",
           "and",
           "He",
-          "cast",
+          "$throwing",
           "them",
           "into",
           "another",
