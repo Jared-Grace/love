@@ -182,18 +182,18 @@ export function app_code_lesson_statement_name_rectangle_inside() {
     function draw(box) {
       let across2 = spans(0, 1);
       let down2 = spans(2, 3);
-      app_code_rectangles_edges_colored_draw(
-        box,
-        5,
-        7,
-        first_edges,
+      app_code_rectangles_edges_colored_draw({
+        parent: box,
+        columns: 5,
+        rows: 7,
+        first: first_edges,
         second,
-        across2,
-        down2,
-        null,
-        second_color,
-        null,
-      );
+        across: across2,
+        down: down2,
+        marked: null,
+        overlap_color: second_color,
+        corner: null,
+      });
     }
     return draw;
   }

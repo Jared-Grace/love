@@ -141,21 +141,21 @@ export function app_code_lesson_statement_name_rectangle_above() {
     let first_edges = [1, 3, 1, 3];
     let second_edges = [2, 4, top, bottom2];
     function draw(box) {
-      app_code_rectangles_edges_colored_draw(
-        box,
-        5,
+      app_code_rectangles_edges_colored_draw({
+        parent: box,
+        columns: 5,
         rows,
-        first_edges,
-        second_edges,
-        null,
-        [
+        first: first_edges,
+        second: second_edges,
+        across: null,
+        down: [
           [1, 3],
           [top, bottom2],
         ],
-        null,
+        marked: null,
         overlap_color,
-        null,
-      );
+        corner: null,
+      });
     }
     return draw;
   }

@@ -148,24 +148,24 @@ export function app_code_lesson_statement_name_rectangles_cover_edges() {
   }
   function rectangles_draw(box) {
     "the two rectangles of How many squares two rectangles cover together, with every edge numbered in its colour";
-    app_code_rectangles_edges_colored_draw(
-      box,
-      5,
-      5,
-      [1, 3, 1, 3],
-      [2, 4, 1, 4],
-      [
+    app_code_rectangles_edges_colored_draw({
+      parent: box,
+      columns: 5,
+      rows: 5,
+      first: [1, 3, 1, 3],
+      second: [2, 4, 1, 4],
+      across: [
         [1, 3],
         [2, 4],
       ],
-      [
+      down: [
         [1, 3],
         [1, 4],
       ],
-      null,
+      marked: null,
       overlap_color,
-      null,
-    );
+      corner: null,
+    });
   }
   function rectangle_said(rectangle, left, right, top, bottom) {
     "Suppose the rectangle goes across from left to right, and down from top to bottom";

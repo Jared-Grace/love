@@ -120,18 +120,18 @@ export function app_code_lesson_statement_name_rectangles_join_across() {
   function rectangles_draw(across) {
     "the first rectangle, 1 to 3 across and down, and the second 2 to 4 across and down, the picture of the down lesson, with the across edges in across coloured";
     function draw(box) {
-      app_code_rectangles_edges_colored_draw(
-        box,
-        5,
-        5,
-        [1, 3, 1, 3],
-        [2, 4, 2, 4],
+      app_code_rectangles_edges_colored_draw({
+        parent: box,
+        columns: 5,
+        rows: 5,
+        first: [1, 3, 1, 3],
+        second: [2, 4, 2, 4],
         across,
-        null,
-        null,
+        down: null,
+        marked: null,
         overlap_color,
-        null,
-      );
+        corner: null,
+      });
     }
     return draw;
   }

@@ -145,18 +145,18 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
   function rectangle_draw(marked, corner) {
     "the rectangle from 1 to 4 across and 1 to 3 down, with the marked squares filled in the square's colour and the corner's lines drawn in it, either null for none";
     function draw_box(box) {
-      app_code_rectangles_edges_colored_draw(
-        box,
-        5,
-        4,
-        [1, 4, 1, 3],
-        [0, 0, 0, 0],
-        [[1, 4]],
-        [[1, 3]],
+      app_code_rectangles_edges_colored_draw({
+        parent: box,
+        columns: 5,
+        rows: 4,
+        first: [1, 4, 1, 3],
+        second: [0, 0, 0, 0],
+        across: [[1, 4]],
+        down: [[1, 3]],
         marked,
-        square_color,
+        overlap_color: square_color,
         corner,
-      );
+      });
     }
     return draw_box;
   }

@@ -140,18 +140,18 @@ export function app_code_lesson_statement_name_rectangles_cover_together() {
   );
   function rectangles_draw(box) {
     "the first rectangle, 1 to 3 across and down, 4 squares, and the second 2 to 4 across and 1 to 4 down, 6 squares, sharing the 2 squares of column 2";
-    app_code_rectangles_edges_colored_draw(
-      box,
-      5,
-      5,
-      [1, 3, 1, 3],
-      [2, 4, 1, 4],
-      null,
-      null,
-      null,
+    app_code_rectangles_edges_colored_draw({
+      parent: box,
+      columns: 5,
+      rows: 5,
+      first: [1, 3, 1, 3],
+      second: [2, 4, 1, 4],
+      across: null,
+      down: null,
+      marked: null,
       overlap_color,
-      null,
-    );
+      corner: null,
+    });
   }
   let first_rectangle = one("first rectangle");
   let first = one("first");

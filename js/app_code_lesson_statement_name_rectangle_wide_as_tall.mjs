@@ -140,18 +140,18 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
   function rectangle_draw(edges, across_inner, down_inner) {
     "one rectangle with the given edges on a 5 by 5 grid, its edge numbers coloured";
     function draw(box) {
-      app_code_rectangles_edges_colored_draw(
-        box,
-        5,
-        5,
-        edges,
-        [0, 0, 0, 0],
-        [across_inner],
-        [down_inner],
-        null,
+      app_code_rectangles_edges_colored_draw({
+        parent: box,
+        columns: 5,
+        rows: 5,
+        first: edges,
+        second: [0, 0, 0, 0],
+        across: [across_inner],
+        down: [down_inner],
+        marked: null,
         overlap_color,
-        null,
-      );
+        corner: null,
+      });
     }
     return draw;
   }

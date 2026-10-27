@@ -18,17 +18,17 @@ export function app_code_rectangles_edges_marked_draw(
   ("marked is [left, right, top, bottom] of squares filled with the overlap colour whether or not both rectangles cover them, or null for none - asked by the human 2026-10-04 to show the square a wrong answer counts, between two rectangles that share none");
   ("The numbers sit on the lines and not on the squares, unlike the grid lessons' headings, because a meeting from 9 to 11 is two hours: the numbers are the edges, and left < right reads true exactly when a rectangle has a square between them.");
   let overlap_color = app_code_highlight_color_third();
-  let grid = app_code_rectangles_edges_colored_draw(
+  let grid = app_code_rectangles_edges_colored_draw({
     parent,
     columns,
     rows,
     first,
     second,
-    null_is(across) ? null : [across],
-    null_is(down) ? null : [down],
+    across: null_is(across) ? null : [across],
+    down: null_is(down) ? null : [down],
     marked,
     overlap_color,
-    null,
-  );
+    corner: null,
+  });
   return grid;
 }

@@ -30,7 +30,7 @@ import { less_than } from "./less_than.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { not } from "./not.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-export function app_code_rectangles_edges_colored_draw(
+export function app_code_rectangles_edges_colored_draw({
   parent,
   columns,
   rows,
@@ -41,8 +41,8 @@ export function app_code_rectangles_edges_colored_draw(
   marked,
   overlap_color,
   corner,
-) {
-  arguments_assert(arguments, 10);
+}) {
+  arguments_assert(arguments, 1);
   ("corner is [x, y], the line on the left of a square and the line above it, drawn and numbered in the overlap colour, or null for none - asked by the human 2026-10-04 to show red lines at 2 and 2 under the square that starts there");
   ("overlap_color fills the squares both rectangles cover and the marked ones: the overlap colour when two rectangles cross, or the second rectangle's own colour when it sits inside the first, asked by the human 2026-10-04 for a rectangle inside a rectangle");
   ("a picture of two rectangles of squares, with the lines between squares numbered as a ruler is, so a rectangle's edges can be read off it: the numbers across the top count the lines from the left, the numbers down the left count them from the top. first and second are each [left, right, top, bottom] in those numbers, and the squares both cover are filled with the overlap colour");

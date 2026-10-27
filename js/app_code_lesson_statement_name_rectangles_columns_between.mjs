@@ -138,21 +138,21 @@ export function app_code_lesson_statement_name_rectangles_columns_between() {
     let first_edges = [1, 3, 1, 3];
     let second_edges = [left, right2, 2, 4];
     function draw(box) {
-      app_code_rectangles_edges_colored_draw(
-        box,
+      app_code_rectangles_edges_colored_draw({
+        parent: box,
         columns,
-        5,
-        first_edges,
-        second_edges,
-        [
+        rows: 5,
+        first: first_edges,
+        second: second_edges,
+        across: [
           [1, 3],
           [left, right2],
         ],
-        null,
-        null,
-        columns_color,
-        null,
-      );
+        down: null,
+        marked: null,
+        overlap_color: columns_color,
+        corner: null,
+      });
     }
     return draw;
   }
