@@ -121,7 +121,7 @@ export function bible_glyph_chapter_mal03() {
           "like",
           "gold",
           "and",
-          "silver.",
+          "$silver.",
           "Then",
           "they",
           "will",
