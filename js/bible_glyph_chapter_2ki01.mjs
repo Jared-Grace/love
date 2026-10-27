@@ -88,7 +88,7 @@ export function bible_glyph_chapter_2ki01() {
           "$walking+pointing_up",
           "up",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "the",
           "messengers",
           "of",
