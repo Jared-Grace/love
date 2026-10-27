@@ -322,7 +322,7 @@ export function bible_glyph_chapter_lam01() {
           "she",
           "did",
           "$no_entry",
-          "consider",
+          "$reminder_ribbon",
           "her",
           "end.",
           "Her",
