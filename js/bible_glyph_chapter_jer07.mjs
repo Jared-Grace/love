@@ -439,7 +439,7 @@ export function bible_glyph_chapter_jer07() {
           "out",
           "of",
           "My",
-          "presence,",
+          "$face,",
           "just",
           "as",
           "I",
