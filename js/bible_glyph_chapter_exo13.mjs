@@ -70,7 +70,7 @@ export function bible_glyph_chapter_exo13() {
           "$house",
           "of",
           "$kneeling,",
-          "for",
+          "$pointing",
           "$i_am",
           "brought",
           "you",
