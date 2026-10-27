@@ -585,7 +585,7 @@ export function bible_glyph_chapter_lev08() {
           "on",
           "their",
           "right",
-          "earlobes,",
+          "$ear+end_arrow,",
           "on",
           "the",
           "thumbs",
