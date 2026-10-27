@@ -871,7 +871,7 @@ export function bible_glyph_chapter_2sa12() {
         words: [
           "Meanwhile,",
           "Joab",
-          "fought",
+          "$crossed_swords+doing",
           "against",
           "$multiply+proper_name",
           "of",
