@@ -107,7 +107,7 @@ export function bible_glyph_chapter_num17() {
           "$witness+thing,",
           "where",
           "I",
-          "meet",
+          "$alarm_clock+doing",
           "with",
           "you.",
         ],
