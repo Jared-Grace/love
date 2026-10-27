@@ -418,7 +418,7 @@ export function bible_glyph_chapter_exo12() {
         verse_number: 14,
         words: [
           "And",
-          "this",
+          "$flashlight",
           "$sun",
           "will",
           "be",
