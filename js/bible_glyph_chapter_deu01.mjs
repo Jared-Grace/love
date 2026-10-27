@@ -128,7 +128,7 @@ export function bible_glyph_chapter_deu01() {
           "$king",
           "of",
           "$proper_name$Bashan,",
-          "who",
+          "$back+flashlight",
           "$person+house",
           "in",
           "$proper_name$Ashtaroth.",
