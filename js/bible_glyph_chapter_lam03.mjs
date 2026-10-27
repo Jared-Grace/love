@@ -862,7 +862,7 @@ export function bible_glyph_chapter_lam03() {
         words: [
           "My",
           "$eyes",
-          "overflow",
+          "$water_wave+down_arrow+hand+doing",
           "$no_entry",
           "ceasing,",
           "without",
