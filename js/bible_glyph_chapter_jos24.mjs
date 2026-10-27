@@ -655,7 +655,7 @@ export function bible_glyph_chapter_jos24() {
           "$kneeling+doing",
           "the",
           "$i_am,",
-          "because",
+          "$pointing",
           "He",
           "is",
           "our",
