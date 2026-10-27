@@ -649,7 +649,7 @@ export function bible_glyph_chapter_gen18() {
           "$father+map",
           "$repeat",
           "$person+round_pushpin",
-          "before",
+          "$face",
           "the",
           "$i_am.",
         ],
