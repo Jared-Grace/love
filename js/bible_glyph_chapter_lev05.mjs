@@ -55,7 +55,7 @@ export function bible_glyph_chapter_lev05() {
           "an",
           "unclean",
           "$sprout,",
-          "or",
+          "$shuffle",
           "of",
           "unclean",
           "livestock,",
