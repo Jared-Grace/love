@@ -483,7 +483,7 @@ export function bible_glyph_chapter_psa022() {
         words: [
           "You",
           "who",
-          "fear",
+          "$fear+describing",
           "the",
           "$i_am,",
           "praise",
