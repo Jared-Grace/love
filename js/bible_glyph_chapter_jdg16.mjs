@@ -1207,7 +1207,7 @@ export function bible_glyph_chapter_jdg16() {
           "and",
           "buried",
           "him",
-          "between",
+          "$brain+arrow_both_ways",
           "$proper_name$Zorah",
           "and",
           "$proper_name$Eshtaol",
