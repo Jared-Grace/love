@@ -495,7 +495,7 @@ export function bible_glyph_chapter_1sa17() {
           "cheese",
           "to",
           "the",
-          "commander",
+          "$military_medal",
           "of",
           "their",
           "unit.",
