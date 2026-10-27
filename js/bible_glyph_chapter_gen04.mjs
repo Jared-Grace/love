@@ -333,7 +333,7 @@ export function bible_glyph_chapter_gen04() {
           "you",
           "$kneeling+doing",
           "the",
-          "ground,",
+          "$brown_square,",
           "it",
           "will",
           "$no_entry",
