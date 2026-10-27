@@ -343,7 +343,7 @@ export function bible_glyph_chapter_exo05() {
           "$back+flashlight",
           "you",
           "can",
-          "find",
+          "$magnifying_glass+exclamation",
           "it,",
           "but",
           "your",
