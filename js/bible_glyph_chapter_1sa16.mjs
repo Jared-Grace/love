@@ -711,7 +711,7 @@ export function bible_glyph_chapter_1sa16() {
           "$speech,",
           "Let",
           "$two_hearts+proper_name",
-          "remain",
+          "$person+round_pushpin",
           "in",
           "my",
           "service,",
