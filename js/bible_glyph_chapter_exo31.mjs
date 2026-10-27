@@ -54,7 +54,7 @@ export function bible_glyph_chapter_exo31() {
           "$heart_on_fire,",
           "with",
           "$wisdom,",
-          "ability",
+          "$brain+thing",
           "and",
           "knowledge",
           "in",
