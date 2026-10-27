@@ -477,7 +477,7 @@ export function bible_glyph_chapter_hab02() {
           "You",
           "too",
           "must",
-          "drink",
+          "$cup_with_straw",
           "and",
           "expose",
           "your",
