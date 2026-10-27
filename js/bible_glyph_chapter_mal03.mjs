@@ -481,7 +481,7 @@ export function bible_glyph_chapter_mal03() {
           "to",
           "$kneeling+doing",
           "$heart_on_fire.",
-          "What",
+          "$flashlight+question",
           "have",
           "we",
           "gained",
