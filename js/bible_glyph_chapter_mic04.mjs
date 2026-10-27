@@ -173,7 +173,7 @@ export function bible_glyph_chapter_mic04() {
           "under",
           "his",
           "own",
-          "vine",
+          "$vine",
           "and",
           "under",
           "his",
