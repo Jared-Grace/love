@@ -223,7 +223,7 @@ export function bible_glyph_chapter_num10() {
           "will",
           "be",
           "remembered",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "your",
