@@ -432,7 +432,7 @@ export function bible_glyph_chapter_pro08() {
           "forth,",
           "when",
           "no",
-          "springs",
+          "$spring",
           "were",
           "overflowing",
           "with",
