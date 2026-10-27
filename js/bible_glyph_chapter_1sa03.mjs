@@ -223,7 +223,7 @@ export function bible_glyph_chapter_1sa03() {
           "$plus+doing,",
           "for",
           "the",
-          "third",
+          "$third_place",
           "time,",
           "the",
           "$i_am",
