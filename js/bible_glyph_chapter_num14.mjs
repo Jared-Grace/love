@@ -768,7 +768,7 @@ export function bible_glyph_chapter_num14() {
           "has",
           "followed",
           "Me",
-          "wholeheartedly,",
+          "$battery,",
           "I",
           "will",
           "$footprints",
