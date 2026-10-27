@@ -756,7 +756,7 @@ export function bible_glyph_chapter_exo19() {
           "and",
           "bring",
           "$proper_name$Aaron",
-          "with",
+          "$linked_paperclips",
           "$you.",
           "But",
           "the",
