@@ -679,7 +679,7 @@ export function bible_glyph_chapter_exo16() {
         verse_number: 21,
         words: [
           "Every",
-          "morning",
+          "$morning",
           "each",
           "$man_beard",
           "$hand+sheaf_of_rice+doing",
