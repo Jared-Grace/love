@@ -22,7 +22,7 @@ export function bible_glyph_chapter_psa046() {
           "$proper_name$Korah.",
           "According",
           "to",
-          "Alamoth.",
+          "$girl+veil+musical_score.",
           "A",
           "song.",
           "$heart_on_fire",
