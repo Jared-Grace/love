@@ -1062,7 +1062,7 @@ export function bible_glyph_chapter_jer32() {
           "of",
           "their",
           "$hand,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
