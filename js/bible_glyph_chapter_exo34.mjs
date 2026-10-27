@@ -53,7 +53,7 @@ export function bible_glyph_chapter_exo34() {
           "$pin+doing",
           "in",
           "the",
-          "morning,",
+          "$morning,",
           "and",
           "$walking+pointing_up",
           "up",
