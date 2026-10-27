@@ -181,7 +181,7 @@ export function bible_glyph_chapter_exo21() {
           "$ear",
           "with",
           "an",
-          "awl.",
+          "$sewing_needle+ear.",
           "Then",
           "he",
           "shall",
