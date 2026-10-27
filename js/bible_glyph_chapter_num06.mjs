@@ -134,7 +134,7 @@ export function bible_glyph_chapter_num06() {
           "pass",
           "over",
           "his",
-          "head.",
+          "$person_gesturing_ok.",
           "He",
           "must",
           "be",
