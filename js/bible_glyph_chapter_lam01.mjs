@@ -703,7 +703,7 @@ export function bible_glyph_chapter_lam01() {
           "$priest",
           "and",
           "elders",
-          "perished",
+          "$wind+skull+doing",
           "in",
           "the",
           "$city",
