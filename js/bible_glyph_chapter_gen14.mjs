@@ -428,7 +428,7 @@ export function bible_glyph_chapter_gen14() {
           "the",
           "$night",
           "he",
-          "divided",
+          "$pizza+doing",
           "his",
           "$kneeling",
           "against",
