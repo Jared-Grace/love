@@ -318,7 +318,7 @@ export function bible_glyph_chapter_gen50() {
           "solemn",
           "ceremony",
           "of",
-          "mourning",
+          "$loudly_crying+coffin+thing",
           "by",
           "the",
           "$clamp+proper_name.",
