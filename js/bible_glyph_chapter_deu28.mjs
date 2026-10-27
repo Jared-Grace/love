@@ -1172,7 +1172,7 @@ export function bible_glyph_chapter_deu28() {
           "you",
           "will",
           "$kneeling+doing",
-          "other",
+          "$plus+one",
           "$moai",
           "of",
           "$tree",
