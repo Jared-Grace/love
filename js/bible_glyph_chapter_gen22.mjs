@@ -88,7 +88,7 @@ export function bible_glyph_chapter_gen22() {
           "$donkey,",
           "and",
           "$hand_receiving",
-          "along",
+          "$safety_pin",
           "$two",
           "of",
           "his",
