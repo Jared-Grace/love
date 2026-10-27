@@ -85,7 +85,7 @@ export function bible_glyph_chapter_2ki04() {
           "Your",
           "servant",
           "has",
-          "nothing",
+          "$dotted_line_face",
           "in",
           "the",
           "$house",
