@@ -255,7 +255,7 @@ export function bible_glyph_chapter_1ki01() {
           "$proper_name$Rei,",
           "and",
           "$two_hearts+proper_name",
-          "mighty",
+          "$might+person",
           "men",
           "would",
           "$no_entry",
