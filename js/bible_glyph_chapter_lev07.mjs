@@ -882,7 +882,7 @@ export function bible_glyph_chapter_lev07() {
       {
         verse_number: 35,
         words: [
-          "This",
+          "$flashlight",
           "is",
           "the",
           "portion",
