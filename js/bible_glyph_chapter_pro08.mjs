@@ -52,7 +52,7 @@ export function bible_glyph_chapter_pro08() {
           "gates",
           "to",
           "the",
-          "city,",
+          "$city+gate,",
           "at",
           "the",
           "entrances,",
