@@ -527,7 +527,7 @@ export function bible_glyph_chapter_lev26() {
           "when",
           "no",
           "one",
-          "pursues",
+          "$running+toward",
           "you.",
         ],
       },
