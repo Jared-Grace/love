@@ -239,7 +239,7 @@ export function bible_glyph_chapter_hos02() {
         verse_number: 8,
         words: [
           "For",
-          "she",
+          "$pointing_back",
           "does",
           "$no_entry",
           "$lightbulb",
