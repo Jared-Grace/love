@@ -439,7 +439,7 @@ export function bible_glyph_chapter_lev01() {
           "to",
           "$away+doing",
           "the",
-          "crop",
+          "$bird+balloon",
           "with",
           "its",
           "contents",
