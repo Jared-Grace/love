@@ -1060,7 +1060,7 @@ export function bible_glyph_chapter_deu31() {
           "will",
           "become",
           "utterly",
-          "corrupt",
+          "$collision",
           "and",
           "turn",
           "$tray_out",
