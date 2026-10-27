@@ -453,7 +453,7 @@ export function bible_glyph_chapter_deu01() {
         words: [
           "At",
           "that",
-          "time",
+          "$clock",
           "I",
           "charged",
           "your",
