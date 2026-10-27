@@ -451,7 +451,7 @@ export function bible_glyph_chapter_gen09() {
           "$eye",
           "it",
           "and",
-          "remember",
+          "$reminder_ribbon",
           "the",
           "$hourglass",
           "$covenant",
