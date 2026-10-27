@@ -341,7 +341,7 @@ export function bible_glyph_chapter_dan12() {
       {
         verse_number: 10,
         words: [
-          "Many",
+          "$multiply",
           "will",
           "be",
           "purified,",
