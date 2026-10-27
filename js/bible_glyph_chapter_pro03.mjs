@@ -83,7 +83,7 @@ export function bible_glyph_chapter_pro03() {
           "Then",
           "you",
           "will",
-          "find",
+          "$magnifying_glass+exclamation",
           "favor",
           "and",
           "high",
