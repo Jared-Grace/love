@@ -215,7 +215,7 @@ export function bible_glyph_chapter_exo02() {
           "and",
           "$waving_hand",
           "one",
-          "of",
+          "$tray_out",
           "the",
           "$proper_name$Hebrew",
           "$woman",
