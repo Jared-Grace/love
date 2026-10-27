@@ -460,7 +460,7 @@ export function bible_glyph_chapter_deu33() {
           "in",
           "the",
           "burning",
-          "bush.",
+          "$thorns+herb.",
           "May",
           "these",
           "$footprints",
