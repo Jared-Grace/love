@@ -545,7 +545,7 @@ export function bible_glyph_chapter_gen25() {
           "birth,",
           "there",
           "were",
-          "twins",
+          "$two+baby",
           "in",
           "her",
           "womb.",
