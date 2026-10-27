@@ -303,7 +303,7 @@ export function bible_glyph_chapter_1ch29() {
           "thousand",
           "$flying_disc",
           "of",
-          "iron.",
+          "$iron.",
         ],
       },
       {
