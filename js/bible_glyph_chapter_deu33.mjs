@@ -131,7 +131,7 @@ export function bible_glyph_chapter_deu33() {
           "of",
           "the",
           "$family",
-          "gathered,",
+          "$crowd+doing,",
           "when",
           "the",
           "tribes",
