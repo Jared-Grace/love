@@ -243,7 +243,7 @@ export function bible_glyph_chapter_exo26() {
           "the",
           "sixth",
           "curtain",
-          "double",
+          "$page_with_curl+doing",
           "at",
           "the",
           "front",
