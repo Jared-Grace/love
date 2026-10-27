@@ -149,7 +149,7 @@ export function bible_glyph_chapter_jos06() {
           "give",
           "a",
           "mighty",
-          "shout.",
+          "$public_address.",
           "Then",
           "the",
           "wall",
