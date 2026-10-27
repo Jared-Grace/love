@@ -925,7 +925,7 @@ export function bible_glyph_chapter_jdg06() {
           "he",
           "was",
           "too",
-          "afraid",
+          "$fear+doing",
           "of",
           "the",
           "$house",
