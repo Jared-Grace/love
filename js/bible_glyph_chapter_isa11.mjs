@@ -47,7 +47,7 @@ export function bible_glyph_chapter_isa11() {
           "the",
           "$i_am",
           "will",
-          "rest",
+          "$seat+doing",
           "on",
           "Him,",
           "the",
