@@ -818,7 +818,7 @@ export function bible_glyph_chapter_1ch29() {
           "that",
           "$sun",
           "with",
-          "great",
+          "$top",
           "$beaming.",
           "Then",
           "for",
