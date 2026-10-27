@@ -703,7 +703,7 @@ export function bible_glyph_chapter_jdg06() {
           "$walking+pointing_up",
           "$tray_out",
           "the",
-          "rock",
+          "$rock",
           "and",
           "consumed",
           "the",
