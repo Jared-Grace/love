@@ -56,7 +56,7 @@ export function bible_glyph_chapter_deu10() {
           "And",
           "I",
           "will",
-          "write",
+          "$writing_hand",
           "on",
           "the",
           "tablets",
