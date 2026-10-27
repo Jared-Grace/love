@@ -478,7 +478,7 @@ export function bible_glyph_chapter_nam03() {
           "When",
           "the",
           "$sun_with_face",
-          "rises,",
+          "$sun+up_arrow+doing,",
           "they",
           "fly",
           "away,",
