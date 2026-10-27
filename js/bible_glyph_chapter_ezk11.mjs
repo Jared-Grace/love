@@ -601,7 +601,7 @@ export function bible_glyph_chapter_ezk11() {
           "detestable",
           "things",
           "and",
-          "all",
+          "$all",
           "its",
           "abominations.",
         ],
