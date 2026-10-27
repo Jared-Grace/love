@@ -16,7 +16,7 @@ export function bible_glyph_chapter_lev25() {
           "Then",
           "$i_am",
           "$mouth",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name",
           "on",
           "$mountain",
