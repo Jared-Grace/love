@@ -831,7 +831,7 @@ export function bible_glyph_chapter_gen30() {
           "and",
           "every",
           "$brown_square+describing",
-          "lamb,",
+          "$lamb,",
           "and",
           "the",
           "$black_circle+white_circle+doing",
