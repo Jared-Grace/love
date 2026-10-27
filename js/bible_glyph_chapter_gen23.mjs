@@ -373,7 +373,7 @@ export function bible_glyph_chapter_gen23() {
           "$father+map",
           "$bowing",
           "again",
-          "before",
+          "$face",
           "the",
           "$family",
           "of",
