@@ -503,7 +503,7 @@ export function bible_glyph_chapter_deu04() {
           "commanded",
           "me",
           "to",
-          "teach",
+          "$learner+doing",
           "you",
           "the",
           "statutes",
