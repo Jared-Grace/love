@@ -698,7 +698,7 @@ export function bible_glyph_chapter_deu11() {
           "that",
           "the",
           "$i_am",
-          "swore",
+          "$raised_back_of_hand+doing",
           "to",
           "$hands_giving",
           "your",
