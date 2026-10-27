@@ -660,7 +660,7 @@ export function bible_glyph_chapter_jdg02() {
           "their",
           "$father,",
           "$walking",
-          "after",
+          "$next_track",
           "other",
           "$moai",
           "to",
