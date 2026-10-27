@@ -871,7 +871,7 @@ export function bible_glyph_chapter_gen29() {
           "has",
           "$hands_giving",
           "me",
-          "this",
+          "$flashlight",
           "one",
           "as",
           "well.",
