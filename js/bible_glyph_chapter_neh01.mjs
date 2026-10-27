@@ -187,7 +187,7 @@ export function bible_glyph_chapter_neh01() {
           "and",
           "Your",
           "ears",
-          "attentive",
+          "$ear_with_hearing_aid+describing",
           "to",
           "$ear",
           "the",
