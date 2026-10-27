@@ -346,7 +346,7 @@ export function bible_glyph_chapter_ezk37() {
           "bones",
           "are",
           "the",
-          "whole",
+          "$all",
           "$house",
           "of",
           "$wrestling+heart_on_fire.",
