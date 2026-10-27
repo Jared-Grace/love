@@ -467,7 +467,7 @@ export function bible_glyph_chapter_num27() {
           "$i_am",
           "will",
           "$no_entry",
-          "be",
+          "$link",
           "like",
           "$sheep",
           "without",
