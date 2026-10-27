@@ -147,7 +147,7 @@ export function bible_glyph_chapter_isa58() {
           "viciously",
           "with",
           "your",
-          "fist.",
+          "$fist+locked.",
           "You",
           "$no_entry",
           "$eating+locked+doing",
