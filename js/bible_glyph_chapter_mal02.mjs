@@ -151,7 +151,7 @@ export function bible_glyph_chapter_mal02() {
           "$covenant",
           "with",
           "him",
-          "was",
+          "$link",
           "one",
           "of",
           "$sprout",
