@@ -926,7 +926,7 @@ export function bible_glyph_chapter_num22() {
           "my",
           "$hand",
           "right",
-          "now,",
+          "$watch,",
           "I",
           "would",
           "kill",
