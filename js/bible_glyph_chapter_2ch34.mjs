@@ -291,7 +291,7 @@ export function bible_glyph_chapter_2ch34() {
           "$house,",
           "Josiah",
           "sent",
-          "Shaphan",
+          "$badger",
           "$son",
           "of",
           "$proper_name$Azaliah,",
