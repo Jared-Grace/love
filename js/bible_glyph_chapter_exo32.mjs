@@ -258,7 +258,7 @@ export function bible_glyph_chapter_exo32() {
           "they",
           "have",
           "turned",
-          "aside",
+          "$away+doing",
           "$tray_out",
           "the",
           "$road",
