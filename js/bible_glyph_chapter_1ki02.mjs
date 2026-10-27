@@ -604,7 +604,7 @@ export function bible_glyph_chapter_1ki02() {
           "$girl+family+raised_back_of_hand+proper_name",
           "$speech,",
           "$thumbs_up.",
-          "I",
+          "$me",
           "will",
           "$mouth",
           "for",
