@@ -822,7 +822,7 @@ export function bible_glyph_chapter_ezk01() {
           "rainbow",
           "in",
           "a",
-          "cloud",
+          "$cloud",
           "on",
           "a",
           "rainy",
