@@ -495,7 +495,7 @@ export function bible_glyph_chapter_dan01() {
         verse_number: 17,
         words: [
           "To",
-          "these",
+          "$flashlight+flashlight",
           "four",
           "$child",
           "$heart_on_fire",
