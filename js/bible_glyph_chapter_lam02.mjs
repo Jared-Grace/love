@@ -454,7 +454,7 @@ export function bible_glyph_chapter_lam02() {
           "I",
           "am",
           "churning",
-          "within.",
+          "$tray_in+heart_organ.",
           "My",
           "heart",
           "is",
