@@ -376,7 +376,7 @@ export function bible_glyph_chapter_1ki01() {
           "and",
           "let",
           "me",
-          "advise",
+          "$person_tipping_hand+doing",
           "you.",
           "Save",
           "your",
