@@ -596,7 +596,7 @@ export function bible_glyph_chapter_exo10() {
         verse_number: 16,
         words: [
           "$house+proper_name",
-          "quickly",
+          "$fast_forward+doing",
           "summoned",
           "$fishing_pole+proper_name",
           "and",
