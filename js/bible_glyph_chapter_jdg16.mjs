@@ -221,7 +221,7 @@ export function bible_glyph_chapter_jdg16() {
           "$toward",
           "$proper_name$Samson,",
           "Please",
-          "tell",
+          "$newspaper",
           "me",
           "the",
           "source",
