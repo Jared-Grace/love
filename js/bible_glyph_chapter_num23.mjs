@@ -782,7 +782,7 @@ export function bible_glyph_chapter_num23() {
           "for",
           "me",
           "from",
-          "there.",
+          "$telescope.",
         ],
       },
       {
