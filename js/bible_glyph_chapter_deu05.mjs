@@ -240,7 +240,7 @@ export function bible_glyph_chapter_deu05() {
           "$no_entry",
           "$kneeling+doing",
           "them;",
-          "for",
+          "$pointing",
           "I,",
           "the",
           "$i_am",
