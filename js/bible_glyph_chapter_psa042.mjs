@@ -316,7 +316,7 @@ export function bible_glyph_chapter_psa042() {
           "O",
           "my",
           "$person_other?",
-          "Why",
+          "$flashlight+question",
           "the",
           "unease",
           "within",
