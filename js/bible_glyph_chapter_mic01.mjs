@@ -66,7 +66,7 @@ export function bible_glyph_chapter_mic01() {
           "the",
           "$crown",
           "$i_am",
-          "bear",
+          "$link",
           "$witness",
           "against",
           "you,",
