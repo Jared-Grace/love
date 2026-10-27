@@ -735,7 +735,7 @@ export function bible_glyph_chapter_gen35() {
           "$toward",
           "his",
           "$family,",
-          "old",
+          "$old_man",
           "and",
           "full",
           "of",
