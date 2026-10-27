@@ -175,7 +175,7 @@ export function bible_glyph_chapter_ezr03() {
           "for",
           "all",
           "the",
-          "appointed",
+          "$alarm_clock",
           "$sparkle+doing",
           "of",
           "the",
