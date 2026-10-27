@@ -552,7 +552,7 @@ export function bible_glyph_chapter_2sa11() {
           "So",
           "as",
           "$i_am+father",
-          "besieged",
+          "$guard",
           "the",
           "$city,",
           "he",
