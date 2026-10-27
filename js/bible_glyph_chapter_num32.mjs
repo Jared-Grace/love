@@ -861,7 +861,7 @@ export function bible_glyph_chapter_num32() {
           "man",
           "armed",
           "for",
-          "battle",
+          "$crossed_swords",
           "before",
           "$i_am,",
           "and",
