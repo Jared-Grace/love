@@ -739,7 +739,7 @@ export function bible_glyph_chapter_exo12() {
           "of",
           "his",
           "$house",
-          "until",
+          "$finish",
           "morning.",
         ],
       },
