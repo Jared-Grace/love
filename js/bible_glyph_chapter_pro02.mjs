@@ -362,7 +362,7 @@ export function bible_glyph_chapter_pro02() {
       {
         verse_number: 20,
         words: [
-          "So",
+          "$right_arrow+toward",
           "you",
           "will",
           "$walking",
