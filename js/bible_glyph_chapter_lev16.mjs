@@ -408,7 +408,7 @@ export function bible_glyph_chapter_lev16() {
           "on",
           "the",
           "$fire",
-          "before",
+          "$face",
           "the",
           "$i_am,",
           "and",
