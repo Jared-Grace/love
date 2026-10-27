@@ -972,7 +972,7 @@ export function bible_glyph_chapter_1ki08() {
           "$name_tag",
           "shall",
           "be",
-          "there,",
+          "$telescope,",
           "so",
           "that",
           "You",
