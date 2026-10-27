@@ -402,7 +402,7 @@ export function bible_glyph_chapter_zec14() {
           "with",
           "which",
           "$i_am",
-          "strikes",
+          "$fist+microbe",
           "all",
           "the",
           "$family",
