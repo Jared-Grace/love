@@ -262,7 +262,7 @@ export function bible_glyph_chapter_1sa17() {
           "your",
           "$kneeling.",
           "But",
-          "if",
+          "$traffic_light",
           "I",
           "prevail",
           "against",
