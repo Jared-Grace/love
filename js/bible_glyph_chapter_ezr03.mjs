@@ -50,7 +50,7 @@ export function bible_glyph_chapter_ezr03() {
           "$priest",
           "$person+pointing_up",
           "to",
-          "build",
+          "$brick",
           "the",
           "$altar",
           "of",
