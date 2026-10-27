@@ -200,7 +200,7 @@ export function bible_glyph_chapter_1sa20() {
           "supposed",
           "to",
           "dine",
-          "with",
+          "$linked_paperclips",
           "the",
           "$king.",
           "Instead,",
