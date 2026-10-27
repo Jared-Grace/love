@@ -642,7 +642,7 @@ export function bible_glyph_chapter_exo37() {
           "and",
           "a",
           "cubit",
-          "wide.",
+          "$arrow_both_ways.",
           "It",
           "was",
           "square,",
