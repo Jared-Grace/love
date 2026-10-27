@@ -635,7 +635,7 @@ export function bible_glyph_chapter_deu31() {
           "come",
           "upon",
           "us",
-          "because",
+          "$pointing_up",
           "our",
           "$heart_on_fire",
           "is",
