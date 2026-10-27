@@ -469,7 +469,7 @@ export function bible_glyph_chapter_2sa05() {
           "the",
           "Philistines",
           "$ear",
-          "that",
+          "$pointing",
           "$two_hearts+proper_name",
           "had",
           "been",
