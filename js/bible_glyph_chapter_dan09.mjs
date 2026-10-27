@@ -905,7 +905,7 @@ export function bible_glyph_chapter_dan09() {
           "there",
           "will",
           "be",
-          "seven",
+          "$seven",
           "$seven+sun",
           "and",
           "sixty",
