@@ -851,7 +851,7 @@ export function bible_glyph_chapter_num18() {
           "generations",
           "to",
           "come",
-          "among",
+          "$radio_button",
           "the",
           "$son",
           "of",
