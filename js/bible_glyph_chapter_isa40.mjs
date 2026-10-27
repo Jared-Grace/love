@@ -458,7 +458,7 @@ export function bible_glyph_chapter_isa40() {
           "dust",
           "on",
           "the",
-          "scales;",
+          "$scales+two;",
           "He",
           "lifts",
           "up",
