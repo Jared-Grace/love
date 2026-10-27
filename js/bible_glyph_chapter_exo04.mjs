@@ -545,7 +545,7 @@ export function bible_glyph_chapter_exo04() {
           "But",
           "$hand_receiving",
           "this",
-          "staff",
+          "$white_cane",
           "in",
           "your",
           "$hand",
