@@ -384,7 +384,7 @@ export function bible_glyph_chapter_1sa17() {
           "was",
           "$heart_on_fire+father,",
           "the",
-          "second",
+          "$two+multiply",
           "was",
           "$proper_name$Abinadab,",
           "and",
