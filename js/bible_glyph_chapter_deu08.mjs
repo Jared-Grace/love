@@ -574,7 +574,7 @@ export function bible_glyph_chapter_deu08() {
           "$father,",
           "even",
           "to",
-          "this",
+          "$flashlight",
           "$sun.",
         ],
       },
