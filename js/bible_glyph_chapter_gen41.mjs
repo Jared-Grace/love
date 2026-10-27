@@ -405,7 +405,7 @@ export function bible_glyph_chapter_gen41() {
           '"I',
           "had",
           "a",
-          "dream,",
+          "$dream,",
           "and",
           "no",
           "one",
