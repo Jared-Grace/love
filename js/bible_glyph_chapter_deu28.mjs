@@ -514,7 +514,7 @@ export function bible_glyph_chapter_deu28() {
           "and",
           "statutes",
           "that",
-          "I",
+          "$me",
           "am",
           "giving",
           "you",
