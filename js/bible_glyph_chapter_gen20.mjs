@@ -269,7 +269,7 @@ export function bible_glyph_chapter_gen20() {
           "$morning",
           "and",
           "called",
-          "all",
+          "$all",
           "his",
           "$kneeling",
           "and",
