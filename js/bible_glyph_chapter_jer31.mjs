@@ -124,7 +124,7 @@ export function bible_glyph_chapter_jer31() {
           "out",
           "in",
           "joyful",
-          "dancing.",
+          "$woman_dancing+around.",
         ],
       },
       {
