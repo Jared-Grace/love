@@ -572,7 +572,7 @@ export function bible_glyph_chapter_zec09() {
           "will",
           "be,",
           "and",
-          "how",
+          "$flashlight+question",
           "beautiful!",
           "Grain",
           "will",
