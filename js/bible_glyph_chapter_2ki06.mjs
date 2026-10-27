@@ -1036,7 +1036,7 @@ export function bible_glyph_chapter_2ki06() {
           "$son",
           "of",
           "$proper_name$Shaphat",
-          "remains",
+          "$person+round_pushpin",
           "on",
           "his",
           "shoulders",
