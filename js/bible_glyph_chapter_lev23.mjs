@@ -455,7 +455,7 @@ export function bible_glyph_chapter_lev23() {
           "$sabbath,",
           "and",
           "then",
-          "present",
+          "$magnet+doing",
           "an",
           "offering",
           "of",
