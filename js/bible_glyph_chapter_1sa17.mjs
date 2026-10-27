@@ -322,7 +322,7 @@ export function bible_glyph_chapter_1sa17() {
           "were",
           "$anxious_face_with_sweat",
           "and",
-          "greatly",
+          "$double_exclamation",
           "$fear+doing.",
         ],
       },
