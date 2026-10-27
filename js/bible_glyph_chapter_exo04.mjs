@@ -323,7 +323,7 @@ export function bible_glyph_chapter_exo04() {
         words: [
           "$fishing_pole+proper_name",
           "$speech,",
-          '"Please,',
+          '"$pleading_face+manner,',
           "$crown,",
           "I",
           "have",
