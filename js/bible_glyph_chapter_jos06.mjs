@@ -877,7 +877,7 @@ export function bible_glyph_chapter_jos06() {
           "$magnet+thing",
           "Israel",
           "to",
-          "this",
+          "$flashlight",
           "$sun,",
           "because",
           "she",
