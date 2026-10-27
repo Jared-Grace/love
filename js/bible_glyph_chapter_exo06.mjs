@@ -62,7 +62,7 @@ export function bible_glyph_chapter_exo06() {
           "$mouth",
           "to",
           "$fishing_pole+proper_name,",
-          "I",
+          "$me",
           "am",
           "$i_am.",
         ],
