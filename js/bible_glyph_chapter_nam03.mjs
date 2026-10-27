@@ -24,7 +24,7 @@ export function bible_glyph_chapter_nam03() {
           "lies,",
           "full",
           "of",
-          "plunder,",
+          "$divide+road,",
           "$no_entry",
           "without",
           "prey.",
