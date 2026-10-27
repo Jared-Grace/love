@@ -34,7 +34,7 @@ export function bible_glyph_chapter_ezr01() {
           "$up_arrow+i_am,",
           "the",
           "$i_am",
-          "stirred",
+          "$rooster",
           "the",
           "$wind",
           "of",
