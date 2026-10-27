@@ -82,7 +82,7 @@ export function bible_glyph_chapter_sng08() {
         verse_number: 3,
         words: [
           "His",
-          "left",
+          "$hand+away",
           "hand",
           "is",
           "under",
