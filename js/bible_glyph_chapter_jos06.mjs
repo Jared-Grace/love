@@ -740,7 +740,7 @@ export function bible_glyph_chapter_jos06() {
           "$i_am+rescue",
           "$speech",
           "the",
-          "two",
+          "$two",
           "men",
           "who",
           "had",
