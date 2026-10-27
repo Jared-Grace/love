@@ -695,7 +695,7 @@ export function bible_glyph_chapter_lam03() {
       {
         verse_number: 39,
         words: [
-          "Why",
+          "$flashlight+question",
           "should",
           "any",
           "$sprout",
