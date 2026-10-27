@@ -189,7 +189,7 @@ export function bible_glyph_chapter_gen07() {
           "the",
           "ark,",
           "and",
-          "with",
+          "$safety_pin",
           "him",
           "his",
           "$son,",
