@@ -1261,7 +1261,7 @@ export function bible_glyph_chapter_deu32() {
           "these",
           "$speech",
           "to",
-          "all",
+          "$all",
           "$wrestling+heart_on_fire,",
         ],
       },
