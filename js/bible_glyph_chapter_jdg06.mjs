@@ -479,7 +479,7 @@ export function bible_glyph_chapter_jdg06() {
           "$pleading_face+manner,",
           "my",
           "$crown,",
-          "how",
+          "$flashlight+question",
           "can",
           "I",
           "save",
