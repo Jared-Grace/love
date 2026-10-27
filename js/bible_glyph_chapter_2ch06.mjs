@@ -549,7 +549,7 @@ export function bible_glyph_chapter_2ch06() {
           "$person+house",
           "before",
           "Me",
-          "on",
+          "$pointing_up",
           "the",
           "$throne",
           "of",
