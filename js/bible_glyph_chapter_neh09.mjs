@@ -1257,7 +1257,7 @@ export function bible_glyph_chapter_neh09() {
           "$hammer+doing",
           "$check,",
           "while",
-          "we",
+          "$me",
           "have",
           "acted",
           "wickedly.",
