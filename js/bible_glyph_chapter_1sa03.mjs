@@ -406,7 +406,7 @@ export function bible_glyph_chapter_1sa03() {
           "he",
           "did",
           "$no_entry",
-          "restrain",
+          "$dim_button+eye",
           "them.",
         ],
       },
