@@ -322,7 +322,7 @@ export function bible_glyph_chapter_gen40() {
           "the",
           "meaning.",
           "The",
-          "three",
+          "$three",
           "branches",
           "are",
           "three",
