@@ -136,7 +136,7 @@ export function bible_glyph_chapter_jos06() {
           "of",
           "the",
           "rams",
-          "horn",
+          "$horn",
           "and",
           "you",
           "$ear",
