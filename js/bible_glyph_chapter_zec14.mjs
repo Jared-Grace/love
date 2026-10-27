@@ -54,7 +54,7 @@ export function bible_glyph_chapter_zec14() {
           "captured,",
           "the",
           "$house",
-          "looted,",
+          "$money_bag+fist+doing,",
           "and",
           "the",
           "$woman",
