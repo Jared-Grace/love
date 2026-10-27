@@ -370,7 +370,7 @@ export function bible_glyph_chapter_job01() {
           "man",
           "himself.",
           "Then",
-          "Satan",
+          "$smiling_face_with_horns",
           "went",
           "out",
           "from",
