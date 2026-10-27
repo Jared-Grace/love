@@ -1299,7 +1299,7 @@ export function bible_glyph_chapter_lev14() {
           "$wall",
           "consists",
           "of",
-          "green",
+          "$leaf+lemon+describing",
           "or",
           "red",
           "$brick+down_arrow",
