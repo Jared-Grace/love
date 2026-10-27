@@ -848,7 +848,7 @@ export function bible_glyph_chapter_num35() {
           "may",
           "he",
           "$turn_back",
-          "to",
+          "$toward",
           "the",
           "$earth",
           "he",
