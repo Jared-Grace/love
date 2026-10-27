@@ -267,7 +267,7 @@ export function bible_glyph_chapter_exo18() {
           "And",
           "$trophy+proper_name",
           "$confetti_ball+doing",
-          "over",
+          "$pointing_up",
           "all",
           "the",
           "$thumbs_up",
