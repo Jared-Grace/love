@@ -374,7 +374,7 @@ export function bible_glyph_chapter_job03() {
         words: [
           "The",
           "captives",
-          "enjoy",
+          "$linked_paperclips+manner",
           "their",
           "ease.",
           "They",
