@@ -396,7 +396,7 @@ export function bible_glyph_chapter_2ki17() {
           "shall",
           "$no_entry",
           "$hammer+doing",
-          "this",
+          "$flashlight",
           "$speech.",
         ],
       },
