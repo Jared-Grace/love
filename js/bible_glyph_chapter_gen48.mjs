@@ -695,7 +695,7 @@ export function bible_glyph_chapter_gen48() {
           "to",
           "$i_am+plus,",
           "$exclamation,",
-          "I",
+          "$me",
           "am",
           "about",
           "to",
