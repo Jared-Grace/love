@@ -746,7 +746,7 @@ export function bible_glyph_chapter_num23() {
           "you",
           "$speech",
           "that",
-          "whatever",
+          "$all",
           "$i_am",
           "$mouth",
           "I",
