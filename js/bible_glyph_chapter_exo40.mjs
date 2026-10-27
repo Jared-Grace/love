@@ -521,7 +521,7 @@ export function bible_glyph_chapter_exo40() {
           "$hand_sending+thing",
           "in",
           "the",
-          "Tent",
+          "$tent",
           "of",
           "Meeting",
           "on",
