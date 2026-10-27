@@ -712,7 +712,7 @@ export function bible_glyph_chapter_1ki18() {
           "the",
           "$fire.",
           "And",
-          "I",
+          "$me",
           "will",
           "$hammer+doing",
           "the",
