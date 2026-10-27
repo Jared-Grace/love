@@ -1196,7 +1196,7 @@ export function bible_glyph_chapter_jdg06() {
           "rallied",
           "the",
           "$proper_name$Abiezrites",
-          "behind",
+          "$next_track",
           "him.",
         ],
       },
