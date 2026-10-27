@@ -126,7 +126,7 @@ export function bible_glyph_chapter_neh08() {
           "attentively",
           "to",
           "the",
-          "Book",
+          "$closed_book",
           "of",
           "the",
           "$scroll.",
