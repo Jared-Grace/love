@@ -186,7 +186,7 @@ export function bible_glyph_chapter_psa063() {
         words: [
           "My",
           "$person_other",
-          "clings",
+          "$paperclip",
           "to",
           "You;",
           "Your",
