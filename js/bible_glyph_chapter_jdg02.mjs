@@ -692,7 +692,7 @@ export function bible_glyph_chapter_jdg02() {
           "of",
           "the",
           "$i_am",
-          "burned",
+          "$angry_face+doing",
           "against",
           "$wrestling+heart_on_fire,",
           "and",
