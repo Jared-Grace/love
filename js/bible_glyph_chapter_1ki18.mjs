@@ -1222,7 +1222,7 @@ export function bible_glyph_chapter_1ki18() {
           "me,",
           "so",
           "that",
-          "this",
+          "$flashlight",
           "$family",
           "will",
           "$lightbulb",
