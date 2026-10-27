@@ -265,7 +265,7 @@ export function bible_glyph_chapter_deu09() {
       {
         verse_number: 7,
         words: [
-          "Remember",
+          "$reminder_ribbon",
           "this",
           "and",
           "$no_entry",
