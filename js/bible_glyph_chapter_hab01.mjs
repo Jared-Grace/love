@@ -206,7 +206,7 @@ export function bible_glyph_chapter_hab01() {
           "swifter",
           "than",
           "leopards,",
-          "fiercer",
+          "$kitchen_knife+sparkle+doing",
           "than",
           "wolves",
           "of",
