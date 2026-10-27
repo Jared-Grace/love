@@ -706,7 +706,7 @@ export function bible_glyph_chapter_num20() {
           "$proper_name$Hor,",
           "near",
           "the",
-          "border",
+          "$passport_control",
           "of",
           "the",
           "$earth",
