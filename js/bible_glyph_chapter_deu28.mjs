@@ -519,7 +519,7 @@ export function bible_glyph_chapter_deu28() {
           "giving",
           "you",
           "$sun,",
-          "all",
+          "$all",
           "these",
           "curses",
           "will",
