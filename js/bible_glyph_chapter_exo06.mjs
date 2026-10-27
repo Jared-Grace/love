@@ -252,7 +252,7 @@ export function bible_glyph_chapter_exo06() {
           "into",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "I",
           "swore",
           "with",
