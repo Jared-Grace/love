@@ -242,7 +242,7 @@ export function bible_glyph_chapter_jer29() {
       {
         verse_number: 8,
         words: [
-          "For",
+          "$pointing",
           "this",
           "is",
           "what",
