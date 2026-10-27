@@ -28,7 +28,7 @@ export function bible_glyph_chapter_zec05() {
           "before",
           "me",
           "a",
-          "flying",
+          "$bird+doing",
           "$page_with_curl.",
         ],
       },
