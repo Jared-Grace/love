@@ -154,7 +154,7 @@ export function bible_glyph_chapter_1ki19() {
           "he",
           "lay",
           "down",
-          "under",
+          "$down_arrow",
           "the",
           "broom",
           "tree",
