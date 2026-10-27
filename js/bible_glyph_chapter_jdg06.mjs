@@ -565,7 +565,7 @@ export function bible_glyph_chapter_jdg06() {
           "from",
           "$flashlight",
           "place",
-          "until",
+          "$finish",
           "I",
           "$footprints",
           "back",
