@@ -15,7 +15,7 @@ export function bible_glyph_chapter_exo17() {
         words: [
           "Then",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "of",
           "$wrestling+heart_on_fire",
