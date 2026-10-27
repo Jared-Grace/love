@@ -219,7 +219,7 @@ export function bible_glyph_chapter_mal03() {
       {
         verse_number: 6,
         words: [
-          "Because",
+          "$pointing",
           "I,",
           "the",
           "$i_am,",
