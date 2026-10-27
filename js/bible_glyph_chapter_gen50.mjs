@@ -706,7 +706,7 @@ export function bible_glyph_chapter_gen50() {
           "you",
           "up",
           "$tray_out",
-          "this",
+          "$flashlight",
           "$earth",
           "to",
           "the",
