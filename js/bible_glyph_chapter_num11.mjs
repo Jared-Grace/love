@@ -1067,7 +1067,7 @@ export function bible_glyph_chapter_num11() {
           "$brown_square+water,",
           "and",
           "they",
-          "spread",
+          "$arrow_both_ways+field+doing",
           "them",
           "out",
           "all",
