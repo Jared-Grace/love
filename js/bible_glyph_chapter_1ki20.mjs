@@ -1486,7 +1486,7 @@ export function bible_glyph_chapter_1ki20() {
           "weigh",
           "out",
           "a",
-          "talent",
+          "$flying_disc",
           "of",
           "silver.",
         ],
