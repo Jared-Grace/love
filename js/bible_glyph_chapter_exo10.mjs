@@ -767,7 +767,7 @@ export function bible_glyph_chapter_exo10() {
           "of",
           "$clamp+proper_name",
           "for",
-          "three",
+          "$three",
           "$sun.",
         ],
       },
