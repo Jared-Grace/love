@@ -19,10 +19,14 @@ export async function function_new_from_temp(f_name) {
     "A new function's draft holding anything beside its imports and its function is refused, because this writer carries the function alone and the rest would vanish without a word; a new unit has no state to keep that cannot live inside it.";
     let held = list_empty_not_is(extras);
     if (held) {
+      function lambda(item) {
+        let code = js_unparse(item);
+        return code;
+      }
       error_json({
         hint: "the draft holds more than its imports and its one function, and only the function would be carried; move the rest inside the function",
         base,
-        extras: extras.map(js_unparse),
+        extras: extras.map(lambda),
       });
     }
     await function_new_declaration_from(declaration);
