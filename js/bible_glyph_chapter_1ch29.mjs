@@ -538,7 +538,7 @@ export function bible_glyph_chapter_1ch29() {
         verse_number: 15,
         words: [
           "$pointing",
-          "we",
+          "$me",
           "are",
           "foreigners",
           "and",
