@@ -238,7 +238,7 @@ export function bible_glyph_chapter_lev10() {
       },
       {
         verse_number: 8,
-        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Aaron", "$speech."],
+        words: ["Then", "$i_am", "$mouth", "$toward", "$proper_name$Aaron", "$speech."],
       },
       {
         verse_number: 9,
