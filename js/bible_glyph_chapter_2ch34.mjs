@@ -1073,7 +1073,7 @@ export function bible_glyph_chapter_2ch34() {
           "have",
           "$ear",
           "you,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
