@@ -335,7 +335,7 @@ export function bible_glyph_chapter_lev26() {
           "I",
           "will",
           "$walking",
-          "among",
+          "$radio_button",
           "you",
           "and",
           "be",
