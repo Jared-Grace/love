@@ -785,7 +785,7 @@ export function bible_glyph_chapter_lev23() {
           "the",
           "Day",
           "of",
-          "Atonement.",
+          "$umbrella+thing.",
           "You",
           "shall",
           "hold",
