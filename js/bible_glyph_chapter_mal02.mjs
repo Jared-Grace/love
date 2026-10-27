@@ -97,7 +97,7 @@ export function bible_glyph_chapter_mal02() {
           "will",
           "spread",
           "dung",
-          "on",
+          "$pointing_up",
           "your",
           "faces,",
           "the",
