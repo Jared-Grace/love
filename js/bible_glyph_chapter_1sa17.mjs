@@ -1445,7 +1445,7 @@ export function bible_glyph_chapter_1sa17() {
           "$earth.",
           "Then",
           "the",
-          "whole",
+          "$all",
           "$earth",
           "will",
           "$lightbulb",
