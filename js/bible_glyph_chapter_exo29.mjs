@@ -657,7 +657,7 @@ export function bible_glyph_chapter_exo29() {
           "the",
           "$meat+brown_square,",
           "$two",
-          "kidneys",
+          "$heart_organ+two",
           "with",
           "the",
           "fat",
