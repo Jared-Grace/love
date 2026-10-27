@@ -331,7 +331,7 @@ export function bible_glyph_chapter_exo18() {
       {
         verse_number: 11,
         words: [
-          "Now",
+          "$watch",
           "I",
           "$lightbulb",
           "that",
