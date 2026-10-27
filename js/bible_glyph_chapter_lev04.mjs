@@ -165,7 +165,7 @@ export function bible_glyph_chapter_lev04() {
           "$i_am",
           "$tent",
           "of",
-          "Meeting.",
+          "$alarm_clock.",
           "And",
           "the",
           "rest",
