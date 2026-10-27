@@ -389,7 +389,7 @@ export function bible_glyph_chapter_1sa24() {
           "corner",
           "of",
           "your",
-          "robe",
+          "$cloak",
           "in",
           "my",
           "$hand.",
