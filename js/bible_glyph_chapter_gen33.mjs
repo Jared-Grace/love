@@ -402,7 +402,7 @@ export function bible_glyph_chapter_gen33() {
           "$finish",
           "I",
           "$footprints",
-          "to",
+          "$toward",
           "my",
           "$crown",
           "at",
