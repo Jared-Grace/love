@@ -25,7 +25,7 @@ export function bible_glyph_chapter_lev24() {
           "$hand_receiving",
           "to",
           "you",
-          "pure",
+          "$sparkles+droplet",
           "$lotion_bottle",
           "of",
           "pressed",
