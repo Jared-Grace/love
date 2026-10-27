@@ -903,7 +903,7 @@ export function bible_glyph_chapter_exo34() {
           "$four+zero",
           "$sun",
           "and",
-          "forty",
+          "$four+zero",
           "$night,",
           "$no_entry",
           "$eating",
