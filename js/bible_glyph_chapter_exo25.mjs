@@ -627,7 +627,7 @@ export function bible_glyph_chapter_exo25() {
           "on",
           "the",
           "$four",
-          "corners",
+          "$straight_ruler+round_pushpin",
           "that",
           "are",
           "at",
