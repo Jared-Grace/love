@@ -1234,7 +1234,7 @@ export function bible_glyph_chapter_2ch20() {
           "made",
           "an",
           "alliance",
-          "with",
+          "$linked_paperclips",
           "$proper_name$Ahaziah",
           "$king",
           "of",
