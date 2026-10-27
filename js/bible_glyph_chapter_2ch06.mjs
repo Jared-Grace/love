@@ -308,7 +308,7 @@ export function bible_glyph_chapter_2ch06() {
           "and",
           "I",
           "$person+house",
-          "on",
+          "$pointing_up",
           "the",
           "$throne",
           "of",
