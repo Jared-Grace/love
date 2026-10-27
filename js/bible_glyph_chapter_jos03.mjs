@@ -469,7 +469,7 @@ export function bible_glyph_chapter_jos03() {
           "Now",
           "the",
           "$pointing_down+proper_name",
-          "overflows",
+          "$battery",
           "its",
           "banks",
           "throughout",
