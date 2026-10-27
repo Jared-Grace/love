@@ -246,7 +246,7 @@ export function bible_glyph_chapter_jdg02() {
           "$eye",
           "all",
           "the",
-          "great",
+          "$top",
           "works",
           "the",
           "$i_am",
