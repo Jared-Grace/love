@@ -2,7 +2,7 @@ import { text_trim } from "./text_trim.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_operators_dot_numbers } from "./app_code_lesson_operators_dot_numbers.mjs";
-import { html_div_code_multiple } from "./html_div_code_multiple.mjs";
+import { app_code_div_code_multiple } from "./app_code_div_code_multiple.mjs";
 import { app_code_lesson_validity_operator } from "./app_code_lesson_validity_operator.mjs";
 import { app_code_lesson_operators_dot_batch_numbers } from "./app_code_lesson_operators_dot_batch_numbers.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -39,7 +39,7 @@ export function app_code_lesson_operators_dot_missing() {
     );
     let example = example_get();
     let pattern = js_code_binary("left", operator, "right");
-    html_div_code_multiple(card, [example, pattern]);
+    app_code_div_code_multiple(card, [example, pattern]);
     app_code_lesson_operators_asterisk_generic_minus(root, operator, context);
     app_code_lesson_operators_asterisk_generic_invalid(
       root,

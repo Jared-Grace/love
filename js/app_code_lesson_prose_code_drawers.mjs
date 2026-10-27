@@ -8,7 +8,7 @@ export function app_code_lesson_prose_code_drawers() {
   let drawers = [
     fn_name("html_div_code"),
     fn_name("html_div_code_lines"),
-    fn_name("html_div_code_multiple"),
+    fn_name("app_code_div_code_multiple"),
     fn_name("app_code_code_lines_writes_out"),
   ];
   return drawers;

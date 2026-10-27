@@ -1,5 +1,5 @@
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
-import { html_div_code_multiple } from "./html_div_code_multiple.mjs";
+import { app_code_div_code_multiple } from "./app_code_div_code_multiple.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -19,5 +19,5 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
   let left = "left";
   let combined = code_to(left, operator, right);
   let first = example_get();
-  html_div_code_multiple(c, [first, combined]);
+  app_code_div_code_multiple(c, [first, combined]);
 }

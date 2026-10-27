@@ -2,7 +2,7 @@ import { app_code_lesson_validity_operator } from "./app_code_lesson_validity_op
 import { app_code_lesson_operators_dot_batch_numbers } from "./app_code_lesson_operators_dot_batch_numbers.mjs";
 import { app_code_lesson_operators_dot_numbers_example } from "./app_code_lesson_operators_dot_numbers_example.mjs";
 import { app_code_lesson_operators_dot_numbers_both_sides_text } from "./app_code_lesson_operators_dot_numbers_both_sides_text.mjs";
-import { html_div_code_multiple } from "./html_div_code_multiple.mjs";
+import { app_code_div_code_multiple } from "./app_code_div_code_multiple.mjs";
 import { number_pi_truncated_text } from "./number_pi_truncated_text.mjs";
 import { digit_random } from "./digit_random.mjs";
 import { js_code_binary } from "./js_code_binary.mjs";
@@ -57,7 +57,7 @@ export function app_code_lesson_operators_dot_numbers() {
       operator,
       " with identifiers:",
     ]);
-    html_div_code_multiple(c2, ["person.name", "book.chapters"]);
+    app_code_div_code_multiple(c2, ["person.name", "book.chapters"]);
     let example_get = app_code_lesson_operators_dot_numbers_example(operator);
     let text_before = app_code_lesson_operators_dot_numbers_both_sides_text();
     app_code_lesson_operators_minus_generic_container_both_sides(
