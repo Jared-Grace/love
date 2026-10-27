@@ -167,7 +167,7 @@ export function bible_glyph_chapter_exo11() {
           "$house+proper_name",
           "who",
           "sits",
-          "on",
+          "$pointing_up",
           "his",
           "$throne,",
           "to",
