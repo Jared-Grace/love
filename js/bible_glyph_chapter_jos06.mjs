@@ -470,7 +470,7 @@ export function bible_glyph_chapter_jos06() {
           "$camp.",
           "They",
           "$hammer+doing",
-          "this",
+          "$flashlight+manner",
           "for",
           "six",
           "$sun.",
