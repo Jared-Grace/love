@@ -1223,7 +1223,7 @@ export function bible_glyph_chapter_exo12() {
           "great",
           "droves",
           "of",
-          "livestock,",
+          "$coin+cow_face,",
           "both",
           "$sheep",
           "and",
