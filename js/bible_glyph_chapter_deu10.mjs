@@ -97,7 +97,7 @@ export function bible_glyph_chapter_deu10() {
           "chiselled",
           "out",
           "$two",
-          "tablets",
+          "$stone+writing_hand",
           "of",
           "$stone",
           "like",
