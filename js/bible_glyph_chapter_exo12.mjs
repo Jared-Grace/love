@@ -870,7 +870,7 @@ export function bible_glyph_chapter_exo12() {
           "to",
           "the",
           "$i_am,",
-          "who",
+          "$back+flashlight",
           "passed",
           "over",
           "the",
