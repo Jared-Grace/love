@@ -500,7 +500,7 @@ export function bible_glyph_chapter_2ki04() {
           "$alarm_clock",
           "next",
           "year",
-          "you",
+          "$you",
           "will",
           "hold",
           "a",
