@@ -161,7 +161,7 @@ export function bible_glyph_chapter_1ki21() {
           "turned",
           "his",
           "face",
-          "away,",
+          "$around+doing,",
           "and",
           "would",
           "$no_entry",
