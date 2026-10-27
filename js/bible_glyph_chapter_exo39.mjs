@@ -631,7 +631,7 @@ export function bible_glyph_chapter_exo39() {
         words: [
           "They",
           "$hammer+doing",
-          "on",
+          "$pointing_up",
           "the",
           "lower",
           "hem",
