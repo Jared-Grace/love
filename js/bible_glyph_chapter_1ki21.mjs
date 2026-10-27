@@ -561,7 +561,7 @@ export function bible_glyph_chapter_1ki21() {
           "up",
           "and",
           "went",
-          "down",
+          "$toward",
           "to",
           "take",
           "possession",
