@@ -410,7 +410,7 @@ export function bible_glyph_chapter_deu33() {
           "and",
           "the",
           "abundant",
-          "yield",
+          "$sprout+leftwards_pushing_hand+thing",
           "of",
           "the",
           "seasons,",
