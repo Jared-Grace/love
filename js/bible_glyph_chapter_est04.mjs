@@ -196,7 +196,7 @@ export function bible_glyph_chapter_est04() {
           "in",
           "the",
           "$city",
-          "square,",
+          "$arrow_both_ways+thing,",
           "in",
           "front",
           "of",
