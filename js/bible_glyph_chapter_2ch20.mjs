@@ -914,7 +914,7 @@ export function bible_glyph_chapter_2ch20() {
           "carry",
           "off",
           "the",
-          "plunder,",
+          "$plunder,",
           "and",
           "they",
           "found",
