@@ -274,7 +274,7 @@ export function bible_glyph_chapter_lev22() {
           "guilt",
           "and",
           "$skull+doing",
-          "because",
+          "$pointing",
           "they",
           "profane",
           "it.",
