@@ -262,7 +262,7 @@ export function bible_glyph_chapter_gen13() {
         verse_number: 10,
         words: [
           "And",
-          "Lot",
+          "$veil+proper_name",
           "lifted",
           "up",
           "his",
