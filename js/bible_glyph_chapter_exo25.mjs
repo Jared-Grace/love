@@ -548,7 +548,7 @@ export function bible_glyph_chapter_exo25() {
           "And",
           "$hammer+doing",
           "a",
-          "table",
+          "$hand_sending+thing",
           "of",
           "acacia",
           "$tree,",
