@@ -276,7 +276,7 @@ export function bible_glyph_chapter_jdg04() {
           "you",
           "$no_entry",
           "$ribbon,",
-          "because",
+          "$pointing",
           "the",
           "$i_am",
           "will",
