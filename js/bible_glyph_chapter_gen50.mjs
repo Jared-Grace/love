@@ -434,7 +434,7 @@ export function bible_glyph_chapter_gen50() {
           "$i_am+plus",
           "bears",
           "a",
-          "grudge?",
+          "$angry_face+person+doing?",
           "Then",
           "he",
           "will",
