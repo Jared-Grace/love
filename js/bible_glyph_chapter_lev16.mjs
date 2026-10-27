@@ -413,7 +413,7 @@ export function bible_glyph_chapter_lev16() {
           "$i_am,",
           "and",
           "the",
-          "cloud",
+          "$cloud",
           "of",
           "$incense",
           "will",
