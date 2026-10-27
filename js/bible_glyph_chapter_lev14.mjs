@@ -86,7 +86,7 @@ export function bible_glyph_chapter_lev14() {
           "that",
           "$two",
           "$sprout",
-          "clean",
+          "$soap+describing",
           "$bird+pinching_hand,",
           "$cedar",
           "$tree,",
