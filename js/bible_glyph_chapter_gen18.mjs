@@ -699,7 +699,7 @@ export function bible_glyph_chapter_gen18() {
           "$place",
           "for",
           "the",
-          "sake",
+          "$right_arrow+toward",
           "of",
           "the",
           "$five+zero",
