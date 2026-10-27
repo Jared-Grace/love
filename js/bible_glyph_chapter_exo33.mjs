@@ -576,7 +576,7 @@ export function bible_glyph_chapter_exo33() {
           "$family",
           "on",
           "the",
-          "face",
+          "$face",
           "of",
           "the",
           "earth?",
