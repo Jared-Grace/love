@@ -808,7 +808,7 @@ export function bible_glyph_chapter_gen21() {
           "them",
           "swore",
           "an",
-          "oath.",
+          "$raised_back_of_hand+doing.",
         ],
       },
       {
