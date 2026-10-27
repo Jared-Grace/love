@@ -1303,7 +1303,7 @@ export function bible_glyph_chapter_1ki20() {
           "$i_am,",
           "a",
           "$man_beard,",
-          "one",
+          "$one",
           "of",
           "the",
           "$son",
