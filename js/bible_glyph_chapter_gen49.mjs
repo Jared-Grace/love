@@ -235,7 +235,7 @@ export function bible_glyph_chapter_gen49() {
           "crouches",
           "and",
           "lies",
-          "down",
+          "$sheep+down_arrow+doing",
           "like",
           "a",
           "$lion,",
