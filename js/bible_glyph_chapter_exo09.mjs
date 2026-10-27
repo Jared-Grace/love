@@ -958,7 +958,7 @@ export function bible_glyph_chapter_exo09() {
         words: [
           "Now",
           "the",
-          "flax",
+          "$herb+thread",
           "and",
           "$barley",
           "were",
