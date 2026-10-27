@@ -1763,7 +1763,7 @@ export function bible_glyph_chapter_gen24() {
           "you",
           "$walking",
           "$linked_paperclips",
-          "this",
+          "$flashlight",
           "$man_beard?",
           "I",
           "will",
