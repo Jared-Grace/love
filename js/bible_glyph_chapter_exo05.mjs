@@ -558,7 +558,7 @@ export function bible_glyph_chapter_exo05() {
         verse_number: 19,
         words: [
           "The",
-          "foremen",
+          "$guard+scroll",
           "of",
           "the",
           "$son",
