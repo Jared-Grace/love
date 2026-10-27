@@ -198,7 +198,7 @@ export function bible_glyph_chapter_1ki17() {
           "of",
           "the",
           "$i_am",
-          "came",
+          "$link",
           "to",
           "Elijah:",
         ],
