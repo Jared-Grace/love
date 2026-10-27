@@ -385,7 +385,7 @@ export function bible_glyph_chapter_deu29() {
       {
         verse_number: 14,
         words: [
-          "I",
+          "$me",
           "am",
           "making",
           "this",
