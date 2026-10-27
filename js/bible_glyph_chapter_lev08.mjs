@@ -945,7 +945,7 @@ export function bible_glyph_chapter_lev08() {
           "$person+house",
           "at",
           "the",
-          "entrance",
+          "$door",
           "$tent",
           "of",
           "Meeting",
