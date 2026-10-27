@@ -39,7 +39,7 @@ export function bible_glyph_chapter_pro04() {
           "$thumbs_up",
           "$hand_receiving+open_book;",
           "$no_entry",
-          "abandon",
+          "$derelict_house+doing",
           "my",
           "$scroll.",
         ],
