@@ -1075,7 +1075,7 @@ export function bible_glyph_chapter_jdg11() {
           "With",
           "a",
           "great",
-          "blow",
+          "$fist+thing",
           "the",
           "$son",
           "of",
