@@ -537,7 +537,7 @@ export function bible_glyph_chapter_jer01() {
           "fortified",
           "$city,",
           "an",
-          "iron",
+          "$iron",
           "$candle,",
           "and",
           "bronze",
