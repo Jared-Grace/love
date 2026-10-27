@@ -634,7 +634,7 @@ export function bible_glyph_chapter_exo10() {
           "He",
           "may",
           "$away+doing",
-          "this",
+          "$flashlight",
           "$skull",
           "from",
           "me.",
