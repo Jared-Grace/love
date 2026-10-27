@@ -1220,7 +1220,7 @@ export function bible_glyph_chapter_jer23() {
           "But",
           "refer",
           "$no_entry",
-          "more",
+          "$repeat",
           "to",
           "the",
           "burden",
