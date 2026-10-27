@@ -769,7 +769,7 @@ export function bible_glyph_chapter_exo26() {
           "$hands_giving",
           "it",
           "on",
-          "four",
+          "$four",
           "posts",
           "of",
           "acacia",
