@@ -860,7 +860,7 @@ export function bible_glyph_chapter_lev16() {
           "take",
           "off",
           "the",
-          "linen",
+          "$thread",
           "$garment",
           "he",
           "put",
