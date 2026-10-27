@@ -252,7 +252,7 @@ export function bible_glyph_chapter_hos06() {
           "of",
           "$priest;",
           "they",
-          "murder",
+          "$sword+coffin",
           "on",
           "the",
           "$road",
