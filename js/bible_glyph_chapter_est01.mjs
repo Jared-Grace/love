@@ -32,7 +32,7 @@ export function bible_glyph_chapter_est01() {
           "$finish",
           "$proper_name$Cush,",
           "$seven",
-          "provinces.",
+          "$map+crown.",
         ],
       },
       {
