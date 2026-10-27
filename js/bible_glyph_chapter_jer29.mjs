@@ -573,7 +573,7 @@ export function bible_glyph_chapter_jer29() {
           "and",
           "$famine",
           "and",
-          "plague.",
+          "$face_with_medical_mask.",
           "I",
           "will",
           "$hands_giving",
