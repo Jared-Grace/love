@@ -540,7 +540,7 @@ export function bible_glyph_chapter_job19() {
           "of",
           "the",
           "$speech",
-          "lies",
+          "$magnifying_glass+exclamation",
           "with",
           "him,",
         ],
