@@ -620,7 +620,7 @@ export function bible_glyph_chapter_num08() {
           "$proper_name$Aaron",
           "also",
           "made",
-          "atonement",
+          "$umbrella+doing",
           "for",
           "them",
           "to",
