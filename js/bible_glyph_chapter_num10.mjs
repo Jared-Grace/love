@@ -349,7 +349,7 @@ export function bible_glyph_chapter_num10() {
           "set",
           "out",
           "this",
-          "first",
+          "$first_place",
           "time",
           "according",
           "to",
