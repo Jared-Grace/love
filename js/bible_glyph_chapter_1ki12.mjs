@@ -553,7 +553,7 @@ export function bible_glyph_chapter_1ki12() {
           "O",
           "$wrestling+heart_on_fire.",
           "$eye",
-          "now",
+          "$watch",
           "to",
           "your",
           "own",
