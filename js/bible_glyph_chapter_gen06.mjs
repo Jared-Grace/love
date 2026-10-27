@@ -511,7 +511,7 @@ export function bible_glyph_chapter_gen06() {
           "will",
           "$footprints",
           "the",
-          "ark,",
+          "$package,",
           "you",
           "and",
           "your",
