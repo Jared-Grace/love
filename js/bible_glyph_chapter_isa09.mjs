@@ -268,7 +268,7 @@ export function bible_glyph_chapter_isa09() {
           "Hosts",
           "will",
           "$hammer+doing",
-          "this.",
+          "$flashlight.",
         ],
       },
       {
