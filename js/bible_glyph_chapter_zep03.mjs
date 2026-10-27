@@ -114,7 +114,7 @@ export function bible_glyph_chapter_zep03() {
           "$scales+thing",
           "$morning",
           "by",
-          "morning;",
+          "$morning;",
           "He",
           "does",
           "$no_entry",
