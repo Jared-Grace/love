@@ -589,7 +589,7 @@ export function bible_glyph_chapter_jos07() {
           "$back+flashlight",
           "the",
           "$i_am",
-          "selects",
+          "$net+doing",
           "shall",
           "come",
           "forward",
