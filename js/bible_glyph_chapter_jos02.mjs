@@ -547,7 +547,7 @@ export function bible_glyph_chapter_jos02() {
           "$see_no_evil_monkey+doing",
           "yourselves",
           "$telescope",
-          "three",
+          "$three",
           "$sun",
           "until",
           "they",
