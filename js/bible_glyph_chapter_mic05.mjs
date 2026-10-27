@@ -402,7 +402,7 @@ export function bible_glyph_chapter_mic05() {
           "will",
           "have",
           "$no_entry",
-          "fortune-tellers.",
+          "$cloud+doing.",
         ],
       },
       {
