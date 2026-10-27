@@ -513,7 +513,7 @@ export function bible_glyph_chapter_1ki18() {
           "him,",
           "Is",
           "that",
-          "you,",
+          "$you,",
           "O",
           "troubler",
           "of",
