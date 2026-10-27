@@ -540,7 +540,7 @@ export function bible_glyph_chapter_2sa06() {
           "$place",
           "$radio_button",
           "the",
-          "tent",
+          "$tent",
           "that",
           "$two_hearts+proper_name",
           "had",
