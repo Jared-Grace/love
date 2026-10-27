@@ -772,7 +772,7 @@ export function bible_glyph_chapter_lam02() {
           "$hands_giving",
           "yourself",
           "$no_entry",
-          "relief;",
+          "$heart_red+cold_face+thing;",
           "give",
           "your",
           "$eyes",
