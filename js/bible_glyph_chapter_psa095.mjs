@@ -24,7 +24,7 @@ export function bible_glyph_chapter_psa095() {
           "$i_am.",
           "Let",
           "us",
-          "shout",
+          "$public_address",
           "in",
           "triumph",
           "to",
