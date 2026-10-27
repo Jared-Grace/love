@@ -94,7 +94,7 @@ export function bible_glyph_chapter_deu16() {
           "with",
           "it;",
           "for",
-          "seven",
+          "$seven",
           "$sun",
           "you",
           "are",
