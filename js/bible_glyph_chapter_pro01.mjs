@@ -320,7 +320,7 @@ export function bible_glyph_chapter_pro01() {
           "$net",
           "where",
           "any",
-          "bird",
+          "$key",
           "can",
           "$eyes",
           "it!",
