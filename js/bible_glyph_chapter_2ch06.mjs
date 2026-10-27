@@ -1570,7 +1570,7 @@ export function bible_glyph_chapter_2ch06() {
           "Your",
           "$oil",
           "one.",
-          "Remember",
+          "$reminder_ribbon",
           "Your",
           "$gift",
           "to",
