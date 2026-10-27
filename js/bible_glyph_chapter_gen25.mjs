@@ -89,7 +89,7 @@ export function bible_glyph_chapter_gen25() {
         words: [
           "$father+map",
           "$hands_giving",
-          "everything",
+          "$all",
           "he",
           "owned",
           "to",
