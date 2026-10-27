@@ -1039,7 +1039,7 @@ export function bible_glyph_chapter_jer23() {
       {
         verse_number: 31,
         words: [
-          "Yes,",
+          "$exclamation,",
           "I",
           "am",
           "against",
