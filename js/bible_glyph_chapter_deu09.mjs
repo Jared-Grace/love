@@ -199,7 +199,7 @@ export function bible_glyph_chapter_deu09() {
           "because",
           "of",
           "the",
-          "wickedness",
+          "$thumbs_down+person+thing",
           "of",
           "these",
           "$map",
