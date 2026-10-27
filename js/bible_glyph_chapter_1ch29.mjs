@@ -500,7 +500,7 @@ export function bible_glyph_chapter_1ch29() {
           "But",
           "who",
           "am",
-          "I,",
+          "$me,",
           "and",
           "who",
           "are",
