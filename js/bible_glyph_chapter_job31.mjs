@@ -248,7 +248,7 @@ export function bible_glyph_chapter_job31() {
           "out",
           "my",
           "entire",
-          "harvest.",
+          "$fruit+basket.",
         ],
       },
       {
