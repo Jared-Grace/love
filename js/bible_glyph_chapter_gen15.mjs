@@ -245,7 +245,7 @@ export function bible_glyph_chapter_gen15() {
           "a",
           "heifer,",
           "a",
-          "goat,",
+          "$goat,",
           "and",
           "a",
           "ram,",
