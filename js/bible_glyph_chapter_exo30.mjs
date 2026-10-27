@@ -416,7 +416,7 @@ export function bible_glyph_chapter_exo30() {
           "less",
           "than",
           "the",
-          "half",
+          "$divide+thing",
           "shekel",
           "in",
           "$hands_giving",
