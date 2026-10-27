@@ -184,7 +184,7 @@ export function bible_glyph_chapter_isa11() {
           "$wolf",
           "will",
           "live",
-          "with",
+          "$linked_paperclips",
           "the",
           "lamb,",
           "and",
