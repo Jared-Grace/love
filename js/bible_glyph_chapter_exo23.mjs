@@ -166,7 +166,7 @@ export function bible_glyph_chapter_exo23() {
           "or",
           "the",
           "$ruler,",
-          "for",
+          "$pointing",
           "I",
           "will",
           "$no_entry",
