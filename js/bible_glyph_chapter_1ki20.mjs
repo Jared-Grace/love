@@ -1263,7 +1263,7 @@ export function bible_glyph_chapter_1ki20() {
           "up",
           "your",
           "own",
-          "marketplaces",
+          "$sun_behind_small_cloud",
           "in",
           "$proper_name$Damascus,",
           "as",
