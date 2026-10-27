@@ -16,7 +16,7 @@ export function bible_glyph_chapter_deu05() {
         verse_number: 1,
         words: [
           "Then",
-          "Moses",
+          "$fishing_pole+proper_name",
           "$waving_hand",
           "all",
           "$wrestling+heart_on_fire",
