@@ -618,7 +618,7 @@ export function bible_glyph_chapter_jdg06() {
           "$meat",
           "in",
           "a",
-          "basket",
+          "$basket",
           "and",
           "the",
           "broth",
