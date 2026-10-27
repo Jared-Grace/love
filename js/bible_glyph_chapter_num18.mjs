@@ -55,7 +55,7 @@ export function bible_glyph_chapter_num18() {
         verse_number: 2,
         words: [
           "But",
-          "bring",
+          "$magnet+doing",
           "with",
           "you",
           "$plus",
