@@ -569,7 +569,7 @@ export function bible_glyph_chapter_lev07() {
           "animal",
           "or",
           "any",
-          "unclean",
+          "$soap+no_entry",
           "detestable",
           "thing,",
           "and",
