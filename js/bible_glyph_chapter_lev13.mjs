@@ -950,7 +950,7 @@ export function bible_glyph_chapter_lev13() {
           "swelling",
           "from",
           "the",
-          "burn,",
+          "$fire+adhesive_bandage,",
           "and",
           "the",
           "$priest",
