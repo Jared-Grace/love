@@ -448,7 +448,7 @@ export function bible_glyph_chapter_num18() {
           "$hourglass",
           "$locked_with_pen.",
           "Every",
-          "clean",
+          "$soap+describing",
           "person",
           "in",
           "your",
