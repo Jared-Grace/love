@@ -94,7 +94,7 @@ export function bible_glyph_chapter_lev06() {
           "$shuffle",
           "the",
           "deposit",
-          "entrusted",
+          "$clipboard+doing",
           "to",
           "him,",
           "$shuffle",
