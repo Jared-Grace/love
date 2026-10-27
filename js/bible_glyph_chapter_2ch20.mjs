@@ -395,7 +395,7 @@ export function bible_glyph_chapter_2ch20() {
           "we",
           "are",
           "$lightning",
-          "before",
+          "$face",
           "this",
           "vast",
           "army",
