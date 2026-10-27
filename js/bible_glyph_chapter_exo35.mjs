@@ -313,7 +313,7 @@ export function bible_glyph_chapter_exo35() {
           "oil",
           "for",
           "the",
-          "light,",
+          "$light+thing,",
         ],
       },
       {
