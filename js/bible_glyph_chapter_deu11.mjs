@@ -568,7 +568,7 @@ export function bible_glyph_chapter_deu11() {
           "$rain,",
           "and",
           "the",
-          "land",
+          "$brown_square",
           "will",
           "$no_entry",
           "$hands_giving",
