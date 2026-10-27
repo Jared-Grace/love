@@ -235,7 +235,7 @@ export function bible_glyph_chapter_psa145() {
           "$star",
           "of",
           "Your",
-          "kingdom,",
+          "$castle,",
           "and",
           "$mouth",
           "of",
