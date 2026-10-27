@@ -910,7 +910,7 @@ export function bible_glyph_chapter_exo36() {
           "and",
           "finely",
           "spun",
-          "linen,",
+          "$thread+white_circle,",
           "$hammer",
           "skillfully",
           "with",
