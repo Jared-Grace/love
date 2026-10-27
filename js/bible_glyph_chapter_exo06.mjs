@@ -273,7 +273,7 @@ export function bible_glyph_chapter_exo06() {
           "you",
           "as",
           "a",
-          "possession.",
+          "$hand_receiving+brown_square+thing.",
           "I",
           "am",
           "$i_am.",
