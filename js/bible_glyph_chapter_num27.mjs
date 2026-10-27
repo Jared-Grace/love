@@ -208,7 +208,7 @@ export function bible_glyph_chapter_num27() {
       {
         verse_number: 8,
         words: [
-          "Furthermore,",
+          "$toward,",
           "$mouth",
           "to",
           "the",
