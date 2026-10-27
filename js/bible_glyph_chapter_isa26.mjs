@@ -518,7 +518,7 @@ export function bible_glyph_chapter_isa26() {
           "bodies",
           "will",
           "rise.",
-          "Awake",
+          "$sun+eyes",
           "and",
           "sing,",
           "you",
