@@ -236,7 +236,7 @@ export function bible_glyph_chapter_pro03() {
       {
         verse_number: 12,
         words: [
-          "for",
+          "$pointing",
           "the",
           "$i_am",
           "disciplines",
