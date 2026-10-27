@@ -269,7 +269,7 @@ export function bible_glyph_chapter_nam02() {
           "$zero+doing!",
           "$heart_organ",
           "$melting_face,",
-          "knees",
+          "$kneeling+leg",
           "$leg+shaking_face,",
           "bodies",
           "tremble,",
