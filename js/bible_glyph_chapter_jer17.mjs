@@ -517,7 +517,7 @@ export function bible_glyph_chapter_jer17() {
           "spoken",
           "in",
           "Your",
-          "presence.",
+          "$face.",
         ],
       },
       {
