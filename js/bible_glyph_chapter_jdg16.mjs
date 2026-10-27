@@ -406,7 +406,7 @@ export function bible_glyph_chapter_jdg16() {
           "So",
           "$battery+down_arrow+female_sign+proper_name",
           "$hand_receiving",
-          "new",
+          "$new_button",
           "ropes",
           "and",
           "tied",
