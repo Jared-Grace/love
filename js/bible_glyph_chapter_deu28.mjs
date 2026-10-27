@@ -1967,7 +1967,7 @@ export function bible_glyph_chapter_deu28() {
           "$no_entry",
           "$writing_hand",
           "in",
-          "this",
+          "$flashlight",
           "$closed_book",
           "of",
           "the",
