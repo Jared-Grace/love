@@ -97,7 +97,7 @@ export function bible_glyph_chapter_job31() {
           "have",
           "$walking",
           "in",
-          "falsehood",
+          "$bubbles",
           "or",
           "my",
           "$foot",
