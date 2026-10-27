@@ -350,7 +350,7 @@ export function bible_glyph_chapter_gen43() {
           "$grain_offering,",
           "a",
           "little",
-          "balm",
+          "$droplet+bandage",
           "and",
           "a",
           "little",
