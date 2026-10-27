@@ -955,7 +955,7 @@ export function bible_glyph_chapter_jer31() {
           "it",
           "will",
           "$no_entry",
-          "longer",
+          "$repeat",
           "be",
           "$speech:",
           "The",
