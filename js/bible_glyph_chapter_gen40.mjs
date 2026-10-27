@@ -443,7 +443,7 @@ export function bible_glyph_chapter_gen40() {
           "When",
           "the",
           "chief",
-          "baker",
+          "$bread+fire",
           "$eye",
           "that",
           "the",
