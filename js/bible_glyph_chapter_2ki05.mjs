@@ -859,7 +859,7 @@ export function bible_glyph_chapter_2ki05() {
           "of",
           "the",
           "$megaphone.",
-          "Please",
+          "$pleading",
           "$hands_giving",
           "them",
           "a",
