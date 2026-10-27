@@ -198,7 +198,7 @@ export function bible_glyph_chapter_exo06() {
           "mighty",
           "acts",
           "of",
-          "judgment.",
+          "$scales+thing.",
         ],
       },
       {
