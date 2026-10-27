@@ -93,7 +93,7 @@ export function bible_glyph_chapter_jos06() {
         verse_number: 4,
         words: [
           "Have",
-          "seven",
+          "$seven",
           "$priest",
           "$lifting",
           "seven",
