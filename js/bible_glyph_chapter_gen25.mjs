@@ -586,7 +586,7 @@ export function bible_glyph_chapter_gen25() {
           "$hand",
           "gripping",
           "the",
-          "heel",
+          "$foot+end_arrow",
           "of",
           "Esau,",
           "so",
