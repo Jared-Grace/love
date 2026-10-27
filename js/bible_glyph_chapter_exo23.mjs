@@ -295,7 +295,7 @@ export function bible_glyph_chapter_exo23() {
         verse_number: 12,
         words: [
           "For",
-          "six",
+          "$six",
           "$sun",
           "you",
           "are",
