@@ -353,7 +353,7 @@ export function bible_glyph_chapter_dan09() {
           "and",
           "the",
           "curse",
-          "written",
+          "$writing_hand",
           "in",
           "the",
           "$scroll",
