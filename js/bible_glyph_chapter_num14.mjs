@@ -297,7 +297,7 @@ export function bible_glyph_chapter_num14() {
           "But",
           "the",
           "whole",
-          "congregation",
+          "$witness+crowd",
           "$speech",
           "to",
           "stone",
