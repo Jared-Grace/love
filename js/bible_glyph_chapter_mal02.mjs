@@ -227,7 +227,7 @@ export function bible_glyph_chapter_mal02() {
           "and",
           "people",
           "should",
-          "seek",
+          "$magnifying_glass",
           "$scroll",
           "from",
           "his",
