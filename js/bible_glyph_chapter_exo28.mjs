@@ -515,7 +515,7 @@ export function bible_glyph_chapter_exo28() {
           "$third_place",
           "$straight_ruler+repeat",
           "a",
-          "jacinth,",
+          "$gem_stone+heart_orange,",
           "an",
           "agate",
           "and",
