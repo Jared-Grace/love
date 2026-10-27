@@ -504,7 +504,7 @@ export function bible_glyph_chapter_exo19() {
         words: [
           "On",
           "the",
-          "third",
+          "$third_place",
           "$sun,",
           "when",
           "morning",
