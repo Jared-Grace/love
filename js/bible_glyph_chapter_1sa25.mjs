@@ -552,7 +552,7 @@ export function bible_glyph_chapter_1sa25() {
           "you",
           "must",
           "$hammer+doing,",
-          "because",
+          "$pointing",
           "$thumbs_down",
           "looms",
           "over",
