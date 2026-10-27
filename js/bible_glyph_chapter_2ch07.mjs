@@ -468,7 +468,7 @@ export function bible_glyph_chapter_2ch07() {
           "I",
           "$hand_sending",
           "a",
-          "plague",
+          "$face_with_medical_mask",
           "among",
           "My",
           "$family,",
