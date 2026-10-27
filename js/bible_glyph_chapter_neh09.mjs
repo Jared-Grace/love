@@ -453,7 +453,7 @@ export function bible_glyph_chapter_neh09() {
           "You",
           "came",
           "down",
-          "on",
+          "$pointing_up",
           "$mountain",
           "$proper_name$Sinai",
           "and",
