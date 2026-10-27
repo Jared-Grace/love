@@ -481,7 +481,7 @@ export function bible_glyph_chapter_num30() {
           "has",
           "confirmed",
           "them,",
-          "because",
+          "$pointing",
           "he",
           "said",
           "nothing",
