@@ -47,7 +47,7 @@ export function bible_glyph_chapter_isa53() {
           "and",
           "like",
           "a",
-          "root",
+          "$ginger_root",
           "out",
           "of",
           "dry",
