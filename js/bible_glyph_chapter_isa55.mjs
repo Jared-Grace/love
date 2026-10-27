@@ -37,7 +37,7 @@ export function bible_glyph_chapter_isa55() {
           "and",
           "milk",
           "$no_entry",
-          "money",
+          "$silver",
           "and",
           "$no_entry",
           "cost!",
