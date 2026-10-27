@@ -183,7 +183,7 @@ export function bible_glyph_chapter_psa051() {
           "be",
           "whiter",
           "than",
-          "snow.",
+          "$snow.",
         ],
       },
       {
