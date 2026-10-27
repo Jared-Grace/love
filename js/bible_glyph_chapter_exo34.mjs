@@ -628,7 +628,7 @@ export function bible_glyph_chapter_exo34() {
         words: [
           "You",
           "must",
-          "redeem",
+          "$coin+turn_back",
           "the",
           "firstborn",
           "of",
