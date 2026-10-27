@@ -99,7 +99,7 @@ export function bible_glyph_chapter_exo05() {
           "met",
           "with",
           "us.",
-          "Please",
+          "$pleading",
           "let",
           "us",
           "$walking",
