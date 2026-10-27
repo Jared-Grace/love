@@ -577,7 +577,7 @@ export function bible_glyph_chapter_exo05() {
           "You",
           "must",
           "$no_entry",
-          "reduce",
+          "$scissors+down_arrow+doing",
           "your",
           "$speech",
           "of",
