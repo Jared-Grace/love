@@ -262,7 +262,7 @@ export function bible_glyph_chapter_psa145() {
           "$crown+sparkles",
           "of",
           "Your",
-          "kingdom.",
+          "$castle.",
         ],
       },
       {
