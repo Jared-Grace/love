@@ -666,7 +666,7 @@ export function bible_glyph_chapter_isa07() {
           "$eating",
           "$milk+brick;",
           "$pointing",
-          "all",
+          "$all",
           "who",
           "remain",
           "in",
