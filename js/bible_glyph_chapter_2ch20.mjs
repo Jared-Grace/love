@@ -952,7 +952,7 @@ export function bible_glyph_chapter_2ch20() {
         words: [
           "On",
           "the",
-          "fourth",
+          "$four+describing",
           "$sun",
           "they",
           "assembled",
