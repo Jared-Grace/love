@@ -794,7 +794,7 @@ export function bible_glyph_chapter_1sa02() {
           "against",
           "the",
           "$i_am,",
-          "who",
+          "$person+question",
           "can",
           "$hands_praying",
           "for",
