@@ -612,7 +612,7 @@ export function bible_glyph_chapter_lev06() {
       {
         verse_number: 23,
         words: [
-          "Every",
+          "$all",
           "$grain_offering",
           "$priest",
           "shall",
