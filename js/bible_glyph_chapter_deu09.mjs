@@ -582,7 +582,7 @@ export function bible_glyph_chapter_deu09() {
           "And",
           "I",
           "$eye",
-          "how",
+          "$exclamation",
           "you",
           "had",
           "$bow+doing",
