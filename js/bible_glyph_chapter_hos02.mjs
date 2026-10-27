@@ -297,7 +297,7 @@ export function bible_glyph_chapter_hos02() {
           "take",
           "$hand+rescue",
           "My",
-          "wool",
+          "$yarn",
           "and",
           "linen,",
           "which",
