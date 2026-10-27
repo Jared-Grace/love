@@ -1194,7 +1194,7 @@ export function bible_glyph_chapter_gen27() {
           "$yoke",
           "from",
           "your",
-          'neck."',
+          "$scarf",
         ],
       },
       {
