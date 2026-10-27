@@ -100,7 +100,7 @@ export function bible_glyph_chapter_est04() {
           "$menorah.",
           "They",
           "fasted,",
-          "wept,",
+          "$loudly_crying+thing,",
           "and",
           "lamented,",
           "and",
