@@ -702,7 +702,7 @@ export function bible_glyph_chapter_gen18() {
           "sake",
           "of",
           "the",
-          "fifty",
+          "$five+zero",
           "$ruler",
           "who",
           "are",
