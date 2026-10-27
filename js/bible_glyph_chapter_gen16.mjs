@@ -54,7 +54,7 @@ export function bible_glyph_chapter_gen16() {
           "bearing.",
           "Please",
           "$footprints",
-          "to",
+          "$toward",
           "my",
           "maidservant.",
           "Perhaps",
