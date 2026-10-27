@@ -232,7 +232,7 @@ export function bible_glyph_chapter_exo09() {
           "$hand_receiving",
           "$battery+thing",
           "of",
-          "soot",
+          "$dust+dashing_away",
           "from",
           "the",
           "furnace,",
