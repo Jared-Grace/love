@@ -712,7 +712,7 @@ export function bible_glyph_chapter_lev15() {
           "her",
           "menstrual",
           "flow",
-          "touches",
+          "$link",
           "him,",
           "he",
           "will",
