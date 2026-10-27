@@ -237,7 +237,7 @@ export function bible_glyph_chapter_lev15() {
         verse_number: 9,
         words: [
           "Any",
-          "saddle",
+          "$horse_racing+seat",
           "on",
           "which",
           "the",
