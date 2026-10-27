@@ -706,7 +706,7 @@ export function bible_glyph_chapter_exo09() {
           "$hands_giving",
           "$voice",
           "and",
-          "hail,",
+          "$ice,",
           "and",
           "lightning",
           "$walking",
