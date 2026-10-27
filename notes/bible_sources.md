@@ -451,6 +451,29 @@ be shipped has to cover the whole shelf, and a licence check that knows one cata
 reports a permitted text as forbidden with exactly the confidence it reports a forbidden
 one.
 
+## What a name means: one source carries terms, read 2026-10-27
+
+The picture tables spell a name by what it says in Hebrew, so a written
+meaning to check them against was looked for. Three sources were read.
+
+**STEPBible's Hebrew lexicon is labelled CC BY, but its name meanings are not.**
+The meanings in TBESH (`§ Joshua = "Jehovah is salvation"`) come from Online
+Bible's abridged BDB, and the file's own header says "Permission should be
+gained from Online Bible before these definitions are applied in any project."
+It also asks that the data not be shared on. The Greek lexicon (TBESG) gives no
+name meanings at all.
+
+**Brown, Driver and Briggs, as laid out by Open Scriptures, is what we use.**
+The 1906 text is public domain, and the files (`openscriptures/HebrewLexicon`)
+are CC BY 4.0, credited to the Open Scriptures Hebrew Bible Project. Its index
+joins each entry to a Strong's number, which is how the picture tables are
+keyed. The layout is an outline: about a quarter of its 2,500 names carry a
+meaning. `$fn bible_bdb_names_meanings_cache` holds the join.
+
+**Hitchcock's Bible Names (1869) is public domain but weaker** — "a savior"
+for Joshua, with no Yahweh in it — and it is keyed by English spelling, not by
+number. Kept as a fallback, not used.
+
 ## A recorded reading has two licences, not one — read 2026-08-23
 
 A generated audio file is downstream of **the words** and **the engine that spoke
