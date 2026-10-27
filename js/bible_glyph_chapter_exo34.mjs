@@ -351,7 +351,7 @@ export function bible_glyph_chapter_exo34() {
           "the",
           "$i_am,",
           "$pointing",
-          "it",
+          "$pointing_back",
           "is",
           "an",
           "awesome",
