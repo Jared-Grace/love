@@ -265,7 +265,7 @@ export function bible_glyph_chapter_2ki06() {
           "are",
           "going",
           "down",
-          "there.",
+          "$telescope.",
         ],
       },
       {
