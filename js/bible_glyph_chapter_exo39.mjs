@@ -111,7 +111,7 @@ export function bible_glyph_chapter_exo39() {
           "joined",
           "at",
           "its",
-          "two",
+          "$two",
           "corners",
           "so",
           "it",
