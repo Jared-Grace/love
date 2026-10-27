@@ -395,7 +395,7 @@ export function bible_glyph_chapter_deu11() {
           "$i_am",
           "your",
           "$heart_on_fire",
-          "cares.",
+          "$magnifying_glass+question.",
           "The",
           "$eyes",
           "of",
