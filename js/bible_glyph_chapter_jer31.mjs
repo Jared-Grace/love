@@ -55,7 +55,7 @@ export function bible_glyph_chapter_jer31() {
           "the",
           "$sword",
           "$magnifying_glass+exclamation",
-          "favor",
+          "$heart_orange",
           "in",
           "the",
           "$wilderness",
