@@ -334,7 +334,7 @@ export function bible_glyph_chapter_hos11() {
           "in",
           "their",
           "$house,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
