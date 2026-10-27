@@ -227,7 +227,7 @@ export function bible_glyph_chapter_pro04() {
           "lead",
           "you",
           "on",
-          "straight",
+          "$straight_ruler+thumbs_up+thing",
           "$road+wheel.",
         ],
       },
