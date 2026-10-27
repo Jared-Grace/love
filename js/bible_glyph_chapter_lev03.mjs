@@ -457,7 +457,7 @@ export function bible_glyph_chapter_lev03() {
           "food",
           "offering,",
           "a",
-          "pleasing",
+          "$nose+thumbs_up",
           "$nose.",
           "All",
           "the",
