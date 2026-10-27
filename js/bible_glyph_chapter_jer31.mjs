@@ -1327,7 +1327,7 @@ export function bible_glyph_chapter_jer31() {
           "to",
           "the",
           "Corner",
-          "Gate.",
+          "$gate.",
         ],
       },
       {
