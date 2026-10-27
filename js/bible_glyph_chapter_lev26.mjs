@@ -574,7 +574,7 @@ export function bible_glyph_chapter_lev26() {
           "your",
           "$sky",
           "like",
-          "iron",
+          "$iron",
           "and",
           "your",
           "$earth",
