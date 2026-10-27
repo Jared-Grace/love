@@ -80,7 +80,7 @@ export function bible_glyph_chapter_mic02() {
           "I",
           "am",
           "planning",
-          "against",
+          "$pointing_up",
           "this",
           "nation",
           "a",
