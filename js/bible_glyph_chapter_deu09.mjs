@@ -70,7 +70,7 @@ export function bible_glyph_chapter_deu09() {
           "said:",
           "$person+question",
           "can",
-          "stand",
+          "$person+round_pushpin+anchor+doing",
           "up",
           "to",
           "$son",
