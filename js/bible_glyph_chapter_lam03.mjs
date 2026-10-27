@@ -220,7 +220,7 @@ export function bible_glyph_chapter_lam03() {
           "He",
           "bent",
           "His",
-          "bow",
+          "$bow+wood",
           "and",
           "set",
           "me",
