@@ -344,7 +344,7 @@ export function bible_glyph_chapter_ezr01() {
         verse_number: 10,
         words: [
           "thirty",
-          "gold",
+          "$gold",
           "$snow+umbrella,",
           "four",
           "hundred",
