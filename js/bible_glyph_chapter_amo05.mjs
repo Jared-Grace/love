@@ -650,7 +650,7 @@ export function bible_glyph_chapter_amo05() {
           "I",
           "will",
           "$no_entry",
-          "accept",
+          "$smiling_face_with_smiling_eyes+doing",
           "them;",
           "for",
           "your",
