@@ -747,7 +747,7 @@ export function bible_glyph_chapter_gen09() {
       {
         verse_number: 28,
         words: [
-          "After",
+          "$next_track",
           "the",
           "flood",
           "$proper_name$Noah",
