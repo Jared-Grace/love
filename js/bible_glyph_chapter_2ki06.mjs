@@ -171,7 +171,7 @@ export function bible_glyph_chapter_2ki06() {
           "man",
           "of",
           "God",
-          "cut",
+          "$axe+wood+doing",
           "a",
           "$tree,",
           "threw",
