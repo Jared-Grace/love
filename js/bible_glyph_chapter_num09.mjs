@@ -369,7 +369,7 @@ export function bible_glyph_chapter_num09() {
           "if",
           "a",
           "$man_beard",
-          "who",
+          "$back+flashlight",
           "is",
           "ceremonially",
           "clean",
