@@ -322,7 +322,7 @@ export function bible_glyph_chapter_zep01() {
           "from",
           "the",
           "$fish",
-          "Gate,",
+          "$gate,",
           "a",
           "wail",
           "$tray_out",
