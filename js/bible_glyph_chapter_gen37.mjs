@@ -398,7 +398,7 @@ export function bible_glyph_chapter_gen37() {
           "$speech",
           "him,",
           "$walking",
-          "now",
+          "$pleading",
           "and",
           "$eye",
           "how",
