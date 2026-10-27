@@ -1458,7 +1458,7 @@ export function bible_glyph_chapter_1ki22() {
           "how",
           "he",
           "waged",
-          "war,",
+          "$crossed_swords+doing,",
           "are",
           "they",
           "$no_entry",
