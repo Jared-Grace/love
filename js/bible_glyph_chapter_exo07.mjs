@@ -769,7 +769,7 @@ export function bible_glyph_chapter_exo07() {
           "seven",
           "full",
           "$sun",
-          "passed",
+          "$battery",
           "after",
           "$i_am",
           "had",
