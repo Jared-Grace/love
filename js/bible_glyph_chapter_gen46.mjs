@@ -541,7 +541,7 @@ export function bible_glyph_chapter_gen46() {
           "$hand+foot",
           "by",
           "$proper_name$Rachel,",
-          "fourteen",
+          "$four",
           "$person_other",
           "in",
           "all.",
