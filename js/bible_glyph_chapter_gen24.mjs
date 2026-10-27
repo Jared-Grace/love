@@ -1963,7 +1963,7 @@ export function bible_glyph_chapter_gen24() {
           "$abacus",
           "$laughing+proper_name",
           "$all",
-          "that",
+          "$back+flashlight",
           "he",
           "had",
           "$hammer+doing.",
