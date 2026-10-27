@@ -638,7 +638,7 @@ export function bible_glyph_chapter_exo32() {
           "Moses",
           "approached",
           "the",
-          "camp",
+          "$camp",
           "and",
           "$eye",
           "the",
