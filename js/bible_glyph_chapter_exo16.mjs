@@ -1076,7 +1076,7 @@ export function bible_glyph_chapter_exo16() {
         verse_number: 34,
         words: [
           "And",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "placed",
           "it",
           "in",
