@@ -36,7 +36,7 @@ export function bible_glyph_chapter_num08() {
           "$lamp",
           "are",
           "to",
-          "light",
+          "$light+doing",
           "the",
           "area",
           "in",
