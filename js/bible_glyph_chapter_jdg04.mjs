@@ -634,7 +634,7 @@ export function bible_glyph_chapter_jdg04() {
           "$person+round_pushpin",
           "at",
           "the",
-          "entrance",
+          "$door",
           "to",
           "the",
           "tent,",
