@@ -714,7 +714,7 @@ export function bible_glyph_chapter_exo25() {
         words: [
           "And",
           "$hands_giving",
-          "on",
+          "$pointing_up",
           "the",
           "table",
           "the",
