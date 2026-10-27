@@ -406,7 +406,7 @@ export function bible_glyph_chapter_2ch06() {
           "wide",
           "and",
           "three",
-          "cubits",
+          "$triangular_ruler",
           "high,",
           "and",
           "had",
