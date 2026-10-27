@@ -685,7 +685,7 @@ export function bible_glyph_chapter_2ki01() {
           "of",
           "the",
           "$i_am",
-          "that",
+          "$back+flashlight",
           "$heart_on_fire+i_am",
           "had",
           "$mouth.",
