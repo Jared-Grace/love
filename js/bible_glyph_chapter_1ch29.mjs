@@ -823,7 +823,7 @@ export function bible_glyph_chapter_1ch29() {
           "Then",
           "for",
           "a",
-          "second",
+          "$second_place",
           "time",
           "they",
           "made",
