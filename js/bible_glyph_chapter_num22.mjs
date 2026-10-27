@@ -560,7 +560,7 @@ export function bible_glyph_chapter_num22() {
           "$house",
           "$battery+thing",
           "of",
-          "silver",
+          "$silver",
           "and",
           "gold,",
           "I",
