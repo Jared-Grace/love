@@ -23,7 +23,7 @@ export function bible_glyph_chapter_gen42() {
           "$wheat+coin",
           "in",
           "$clamp+proper_name,",
-          "he",
+          "$hand+foot",
           "$speech",
           "to",
           "his",
