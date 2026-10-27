@@ -1075,7 +1075,7 @@ export function bible_glyph_chapter_1ki18() {
           "arranged",
           "the",
           "$tree,",
-          "cut",
+          "$kitchen_knife+meat+doing",
           "up",
           "the",
           "bull,",
