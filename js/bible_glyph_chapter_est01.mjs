@@ -600,7 +600,7 @@ export function bible_glyph_chapter_est01() {
         verse_number: 19,
         words: [
           "So",
-          "if",
+          "$traffic_light",
           "it",
           "$thumbs_up",
           "the",
