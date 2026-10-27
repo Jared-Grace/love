@@ -44,7 +44,7 @@ export function bible_glyph_chapter_num12() {
           "Has",
           "$i_am",
           "$mouth",
-          "only",
+          "$one+check",
           "through",
           "$fishing_pole+proper_name?",
           "Has",
