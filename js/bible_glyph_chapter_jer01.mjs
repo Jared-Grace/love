@@ -124,7 +124,7 @@ export function bible_glyph_chapter_jer01() {
           "you",
           "in",
           "the",
-          "womb",
+          "$baby+house",
           "I",
           "$lightbulb",
           "you,",
