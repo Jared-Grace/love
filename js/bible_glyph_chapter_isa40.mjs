@@ -782,7 +782,7 @@ export function bible_glyph_chapter_isa40() {
           "you",
           "$speech,",
           "O",
-          "Jacob,",
+          "$hand+foot,",
           "and",
           "why",
           "do",
