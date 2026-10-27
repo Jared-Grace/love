@@ -164,7 +164,7 @@ export function bible_glyph_chapter_deu16() {
           "$sacrifice",
           "in",
           "the",
-          "evening",
+          "$sunset",
           "of",
           "the",
           "first",
