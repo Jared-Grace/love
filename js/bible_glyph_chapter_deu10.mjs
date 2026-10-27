@@ -522,7 +522,7 @@ export function bible_glyph_chapter_deu10() {
           "you,",
           "their",
           "$seed",
-          "after",
+          "$next_track",
           "them,",
           "above",
           "all",
