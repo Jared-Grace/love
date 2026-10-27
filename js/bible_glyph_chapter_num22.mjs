@@ -87,7 +87,7 @@ export function bible_glyph_chapter_num22() {
           "the",
           "Moabites",
           "$speech",
-          "to",
+          "$toward",
           "the",
           "elders",
           "of",
