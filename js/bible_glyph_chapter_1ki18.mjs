@@ -63,7 +63,7 @@ export function bible_glyph_chapter_1ki18() {
           "$proper_name$Ahab.",
           "Now",
           "the",
-          "famine",
+          "$famine",
           "was",
           "severe",
           "in",
