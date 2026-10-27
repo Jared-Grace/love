@@ -84,7 +84,7 @@ export function bible_glyph_chapter_2ki17() {
           "$kneeling",
           "and",
           "$turn_back",
-          "tribute",
+          "$grain_offering",
           "to",
           "him.",
         ],
