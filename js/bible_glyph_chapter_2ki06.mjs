@@ -859,7 +859,7 @@ export function bible_glyph_chapter_2ki06() {
           "was",
           "passing",
           "by",
-          "on",
+          "$pointing_up",
           "the",
           "wall,",
           "a",
