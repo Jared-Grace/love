@@ -45,7 +45,7 @@ export function bible_glyph_chapter_1sa20() {
           "against",
           "your",
           "$father,",
-          "that",
+          "$pointing",
           "he",
           "wants",
           "to",
