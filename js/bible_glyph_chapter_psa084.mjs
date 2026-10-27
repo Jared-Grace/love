@@ -86,7 +86,7 @@ export function bible_glyph_chapter_psa084() {
           "she",
           "places",
           "her",
-          "young",
+          "$nest_with_eggs+hatching_chick",
           "near",
           "Your",
           "$altar,",
