@@ -483,7 +483,7 @@ export function bible_glyph_chapter_1ki12() {
           "turn",
           "of",
           "events",
-          "was",
+          "$link",
           "from",
           "the",
           "$i_am,",
