@@ -153,7 +153,7 @@ export function bible_glyph_chapter_lev15() {
           "was",
           "sitting",
           "must",
-          "wash",
+          "$bubbles+t_shirt+doing",
           "his",
           "$garment",
           "and",
