@@ -1029,7 +1029,7 @@ export function bible_glyph_chapter_exo08() {
           "his",
           "$heart_organ",
           "this",
-          "time",
+          "$drum",
           "as",
           "well,",
           "and",
