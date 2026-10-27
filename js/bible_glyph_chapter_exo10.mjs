@@ -405,7 +405,7 @@ export function bible_glyph_chapter_exo10() {
           "that",
           "is",
           "what",
-          "you",
+          "$you",
           "have",
           "been",
           "requesting.",
