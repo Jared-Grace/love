@@ -558,7 +558,7 @@ export function bible_glyph_chapter_gen08() {
           "$paw_prints",
           "and",
           "every",
-          "clean",
+          "$soap+describing",
           "$bird,",
           "he",
           "offered",
