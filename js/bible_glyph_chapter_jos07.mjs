@@ -820,7 +820,7 @@ export function bible_glyph_chapter_jos07() {
           "spoils",
           "a",
           "$thumbs_up",
-          "cloak",
+          "$cloak+sparkles",
           "from",
           "$proper_name$Shinar,",
           "two",
