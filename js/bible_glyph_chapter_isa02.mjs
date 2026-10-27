@@ -109,7 +109,7 @@ export function bible_glyph_chapter_isa02() {
           "in",
           "His",
           "paths.",
-          "For",
+          "$pointing",
           "from",
           "$proper_name$Zion",
           "will",
