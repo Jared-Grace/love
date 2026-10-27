@@ -232,7 +232,7 @@ export function bible_glyph_chapter_1sa24() {
           "these",
           "$speech",
           "$two_hearts+proper_name",
-          "restrained",
+          "$palm_up_hand+divide+doing",
           "his",
           "$man_beard,",
           "and",
