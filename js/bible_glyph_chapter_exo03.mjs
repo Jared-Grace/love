@@ -630,7 +630,7 @@ export function bible_glyph_chapter_exo03() {
           "$proper_name$Jebusites,",
           "a",
           "$earth",
-          "flowing",
+          "$water+right_arrow",
           "with",
           "milk",
           "and",
