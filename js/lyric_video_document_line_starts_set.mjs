@@ -18,7 +18,11 @@ export async function lyric_video_document_line_starts_set(name, starts_said) {
   ("Moves every line of a timing document at once, to the moments handed to it in passage order, and lays the document out again around them.");
   ("★ IT EXISTS BECAUSE RETIMING A WHOLE SONG ONE LINE AT A TIME IS A LOOP OF THE COMMAND NEXT DOOR. A forty-line psalm took forty calls, each laying the document out again, and each one could be refused halfway for an order that only held once its neighbours had moved too. Handing every moment over together checks the order once, against the finished list.");
   ("★ THE COUNT MUST MATCH THE LINES. A list one short would shift every later moment onto the wrong words and still read as a success, so a list of any other length is refused rather than lined up from the front.");
-  let starts = text_split_comma(starts_said).map(number_from_text);
+  function lambda(item) {
+    let number = number_from_text(item);
+    return number;
+  }
+  let starts = text_split_comma(starts_said).map(lambda);
   let found = await lyric_video_document_name_found(name);
   let unknown = equal(found, null);
   if (unknown) {
