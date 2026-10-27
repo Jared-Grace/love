@@ -361,7 +361,7 @@ export function bible_glyph_chapter_exo13() {
       {
         verse_number: 13,
         words: [
-          "Every",
+          "$all",
           "firstborn",
           "$donkey",
           "you",
