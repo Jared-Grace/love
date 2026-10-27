@@ -390,7 +390,7 @@ export function bible_glyph_chapter_ecc03() {
           "$eye",
           "$down_arrow",
           "the",
-          "sun",
+          "$sun_with_face",
           "that",
           "in",
           "the",
