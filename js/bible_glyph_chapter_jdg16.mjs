@@ -475,7 +475,7 @@ export function bible_glyph_chapter_jdg16() {
           "you",
           "$yarn+doing",
           "the",
-          "seven",
+          "$seven",
           "braids",
           "of",
           "my",
