@@ -151,7 +151,7 @@ export function bible_glyph_chapter_psa008() {
           "have",
           "placed",
           "$all",
-          "under",
+          "$down_arrow",
           "his",
           "feet:",
         ],
