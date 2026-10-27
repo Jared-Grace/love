@@ -215,7 +215,7 @@ export function bible_glyph_chapter_est04() {
           "$newspaper",
           "him",
           "$all",
-          "that",
+          "$back+flashlight",
           "had",
           "happened",
           "to",
