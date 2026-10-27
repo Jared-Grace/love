@@ -291,7 +291,7 @@ export function bible_glyph_chapter_dan01() {
           "from",
           "the",
           "chief",
-          "official,",
+          "$castle+kneeling,",
         ],
       },
       {
