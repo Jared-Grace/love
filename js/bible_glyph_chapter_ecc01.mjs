@@ -367,7 +367,7 @@ export function bible_glyph_chapter_ecc01() {
           "$mouth",
           "to",
           "$heart_organ,",
-          "Behold,",
+          "$exclamation,",
           "$me",
           "have",
           "grown",
