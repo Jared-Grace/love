@@ -427,7 +427,7 @@ export function bible_glyph_chapter_gen23() {
       },
       {
         verse_number: 14,
-        words: ["$proper_name$Ephron", "answered", "$father+map,", "$speech", "to", "him,"],
+        words: ["$proper_name$Ephron", "$speech+turn_back", "$father+map,", "$speech", "to", "him,"],
       },
       {
         verse_number: 15,
