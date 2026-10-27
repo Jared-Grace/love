@@ -363,7 +363,7 @@ export function bible_glyph_chapter_1ki02() {
           "hold",
           "him",
           "guiltless,",
-          "for",
+          "$pointing",
           "you",
           "are",
           "a",
