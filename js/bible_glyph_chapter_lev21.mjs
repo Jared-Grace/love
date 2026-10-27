@@ -501,7 +501,7 @@ export function bible_glyph_chapter_lev21() {
           "$person_with_white_cane+describing",
           "or",
           "$manual_wheelchair,",
-          "disfigured",
+          "$bomb+altar+doing",
           "or",
           "deformed,",
         ],
