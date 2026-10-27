@@ -200,7 +200,7 @@ export function bible_glyph_chapter_psa095() {
           "they",
           "tried",
           "Me,",
-          "though",
+          "$plus",
           "they",
           "had",
           "$eye",
