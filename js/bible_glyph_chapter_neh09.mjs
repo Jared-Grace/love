@@ -1099,7 +1099,7 @@ export function bible_glyph_chapter_neh09() {
           "stubbornly",
           "$hands_giving",
           "their",
-          "shoulder,",
+          "$person_shrugging,",
           "they",
           "stiffened",
           "their",
