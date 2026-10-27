@@ -365,7 +365,7 @@ export function bible_glyph_chapter_psa022() {
           "I",
           "can",
           "$abacus",
-          "all",
+          "$all",
           "my",
           "bones;",
           "they",
