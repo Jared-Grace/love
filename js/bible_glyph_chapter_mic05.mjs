@@ -259,7 +259,7 @@ export function bible_glyph_chapter_mic05() {
           "$pointing_up",
           "the",
           "grass,",
-          "which",
+          "$back+flashlight",
           "do",
           "$no_entry",
           "wait",
