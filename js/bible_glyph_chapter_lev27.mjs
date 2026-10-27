@@ -564,7 +564,7 @@ export function bible_glyph_chapter_lev27() {
           "to",
           "the",
           "years",
-          "left",
+          "$takeout_box+doing",
           "until",
           "the",
           "next",
