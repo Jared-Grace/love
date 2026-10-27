@@ -273,7 +273,7 @@ export function bible_glyph_chapter_psa145() {
           "is",
           "an",
           "$hourglass",
-          "kingdom,",
+          "$castle,",
           "and",
           "Your",
           "dominion",
