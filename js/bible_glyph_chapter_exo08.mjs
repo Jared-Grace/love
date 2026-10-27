@@ -850,7 +850,7 @@ export function bible_glyph_chapter_exo08() {
           "to",
           "the",
           "$clamp+proper_name.",
-          "If",
+          "$exclamation",
           "we",
           "offer",
           "sacrifices",
