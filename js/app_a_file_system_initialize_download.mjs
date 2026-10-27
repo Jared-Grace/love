@@ -5,7 +5,8 @@ import { fn_name } from "./fn_name.mjs";
 import { list_property_exists_not_error } from "./list_property_exists_not_error.mjs";
 import { list_to_dictionary_property } from "./list_to_dictionary_property.mjs";
 import { browser_files_store } from "./browser_files_store.mjs";
-import { indexeddb_put_multiple_backend } from "./indexeddb_put_multiple_backend.mjs";
+import { indexeddb_put_multiple } from "./indexeddb_put_multiple.mjs";
+import { property_get } from "./property_get.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
 import { app_a } from "./app_a.mjs";
 import { indexeddb_get_all } from "./indexeddb_get_all.mjs";
@@ -20,9 +21,14 @@ export async function app_a_file_system_initialize_download() {
   list_property_exists_not_error(r, "key");
   let dictionary = list_to_dictionary_property(r, "key");
   let store = browser_files_store();
-  ("Waits for the disk write itself: the flag below says the files are here, and a tab closed before a background write lands would keep the flag and lose every file.");
-  await indexeddb_put_multiple_backend(db_get, store, dictionary);
-  storage_local_set(app_a, fn_name("app_a_file_system_initialize"), true);
+  ("The screen can open as soon as the names are here, but the flag saying they are kept waits for the disk write: a tab closed before it lands would keep the flag and lose every file.");
+  ("Unflagged, the next visit just downloads again.");
+  let put = await indexeddb_put_multiple(db_get, store, dictionary);
+  async function kept_flag() {
+    await property_get(put, "written");
+    storage_local_set(app_a, fn_name("app_a_file_system_initialize"), true);
+  }
+  kept_flag();
   let all = await indexeddb_get_all(db_get, store);
   list_property_exists_not_error(all, "key");
 }
