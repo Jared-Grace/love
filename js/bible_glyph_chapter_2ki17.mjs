@@ -856,7 +856,7 @@ export function bible_glyph_chapter_2ki17() {
           "settlers",
           "first",
           "$person+house",
-          "there,",
+          "$telescope,",
           "they",
           "did",
           "$no_entry",
