@@ -19,7 +19,7 @@ export function bible_glyph_chapter_psa110() {
           "$two_hearts+proper_name.",
           "The",
           "$i_am",
-          "said",
+          "$microphone",
           "to",
           "my",
           "$crown:",
