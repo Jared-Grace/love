@@ -28,7 +28,7 @@ export function bible_glyph_chapter_deu10() {
           "Chisel",
           "out",
           "$two",
-          "tablets",
+          "$stone+writing_hand",
           "of",
           "$stone",
           "like",
