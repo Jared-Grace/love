@@ -143,7 +143,7 @@ export function bible_glyph_chapter_lev15() {
           "sits",
           "$pointing_up",
           "furniture",
-          "on",
+          "$pointing_up",
           "which",
           "the",
           "man",
