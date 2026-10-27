@@ -277,7 +277,7 @@ export function bible_glyph_chapter_mic07() {
       {
         verse_number: 9,
         words: [
-          "Because",
+          "$pointing",
           "I",
           "have",
           "$bow+doing",
