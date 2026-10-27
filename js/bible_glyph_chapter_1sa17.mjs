@@ -1276,7 +1276,7 @@ export function bible_glyph_chapter_1sa17() {
           "When",
           "the",
           "Philistine",
-          "looked",
+          "$face_with_monocle",
           "and",
           "$eye",
           "$two_hearts+proper_name,",
