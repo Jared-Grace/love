@@ -200,7 +200,7 @@ export function bible_glyph_chapter_exo04() {
           "his",
           "$hand",
           "was",
-          "leprous,",
+          "$microbe+describing,",
           "white",
           "as",
           "snow.",
