@@ -972,7 +972,7 @@ export function bible_glyph_chapter_1ki01() {
         words: [
           "$girl+family+raised_back_of_hand+proper_name",
           "$bowing+down_arrow+doing",
-          "facedown",
+          "$nose+fire",
           "to",
           "the",
           "$earth",
