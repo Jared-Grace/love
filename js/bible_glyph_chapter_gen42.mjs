@@ -416,7 +416,7 @@ export function bible_glyph_chapter_gen42() {
         verse_number: 16,
         words: [
           "$hand_sending",
-          "one",
+          "$one",
           "of",
           "your",
           "number",
