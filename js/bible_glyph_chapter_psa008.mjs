@@ -18,7 +18,7 @@ export function bible_glyph_chapter_psa008() {
           "our",
           "$crown,",
           "$flashlight+question",
-          "majestic",
+          "$crown+mountain",
           "is",
           "Your",
           "$name_tag",
