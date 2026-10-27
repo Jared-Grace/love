@@ -324,7 +324,7 @@ export function bible_glyph_chapter_2ki11() {
           "duty,",
           "and",
           "$footprints",
-          "to",
+          "$toward",
           "$i_am+lightbulb",
           "the",
           "$priest.",
