@@ -613,7 +613,7 @@ export function bible_glyph_chapter_num09() {
           "the",
           "$tent+house",
           "for",
-          "many",
+          "$multiply",
           "$sun,",
           "the",
           "$son",
