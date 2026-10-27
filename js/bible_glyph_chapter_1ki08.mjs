@@ -919,7 +919,7 @@ export function bible_glyph_chapter_1ki08() {
           "the",
           "$hands_praying+thing",
           "and",
-          "plea",
+          "$heart_orange+pleading",
           "of",
           "Your",
           "$kneeling,",
