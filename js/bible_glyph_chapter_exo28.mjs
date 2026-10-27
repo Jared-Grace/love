@@ -1027,7 +1027,7 @@ export function bible_glyph_chapter_exo28() {
           "it",
           "a",
           "blue",
-          "cord",
+          "$wrestling+thread",
           "to",
           "mount",
           "it",
