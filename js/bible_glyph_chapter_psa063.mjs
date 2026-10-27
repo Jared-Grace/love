@@ -86,7 +86,7 @@ export function bible_glyph_chapter_psa063() {
           "than",
           "$sprout,",
           "my",
-          "lips",
+          "$kiss_mark",
           "will",
           "glorify",
           "You.",
