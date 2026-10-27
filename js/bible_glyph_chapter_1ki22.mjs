@@ -1411,7 +1411,7 @@ export function bible_glyph_chapter_1ki22() {
           "and",
           "the",
           "$family",
-          "still",
+          "$repeat",
           "sacrificed",
           "and",
           "burned",
