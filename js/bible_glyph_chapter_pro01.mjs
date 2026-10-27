@@ -590,7 +590,7 @@ export function bible_glyph_chapter_pro01() {
           "$no_entry",
           "of",
           "my",
-          "counsel;",
+          "$person_tipping_hand;",
           "they",
           "despised",
           "all",
