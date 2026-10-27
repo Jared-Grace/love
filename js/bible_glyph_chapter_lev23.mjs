@@ -999,7 +999,7 @@ export function bible_glyph_chapter_lev23() {
           "be",
           "a",
           "$sparkle+thing",
-          "assembly.",
+          "$waving_hand+thing.",
           "You",
           "must",
           "$no_entry",
