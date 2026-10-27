@@ -338,7 +338,7 @@ export function bible_glyph_chapter_lev08() {
           "it",
           "with",
           "his",
-          "finger",
+          "$index_pointing_up",
           "to",
           "all",
           "four",
