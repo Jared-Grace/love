@@ -573,7 +573,7 @@ export function bible_glyph_chapter_jer23() {
           "$megaphone",
           "of",
           "$city+peace",
-          "ungodliness",
+          "$dust+heart_red+thing",
           "has",
           "spread",
           "throughout",
