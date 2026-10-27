@@ -616,7 +616,7 @@ export function bible_glyph_chapter_gen25() {
           "$link",
           "a",
           "$lightbulb",
-          "hunter,",
+          "$net+deer,",
           "a",
           "$man_beard",
           "of",
