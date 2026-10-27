@@ -479,7 +479,7 @@ export function bible_glyph_chapter_num14() {
           "day",
           "and",
           "a",
-          "pillar",
+          "$candle",
           "of",
           "$fire",
           "by",
