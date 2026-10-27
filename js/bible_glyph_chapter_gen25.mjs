@@ -713,7 +713,7 @@ export function bible_glyph_chapter_gen25() {
         words: [
           "$hand+foot",
           "$speech,",
-          "Sell",
+          "$coin+hands_giving",
           "me",
           "your",
           "birthright",
