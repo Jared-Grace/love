@@ -111,7 +111,7 @@ export function bible_glyph_chapter_num35() {
           "extend",
           "a",
           "$ten+all",
-          "cubits",
+          "$triangular_ruler",
           "out",
           "from",
           "the",
