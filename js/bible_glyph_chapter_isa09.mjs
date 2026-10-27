@@ -589,7 +589,7 @@ export function bible_glyph_chapter_isa09() {
           "the",
           "$family",
           "are",
-          "fuel",
+          "$eating+fire",
           "for",
           "the",
           "$fire.",
