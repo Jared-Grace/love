@@ -1043,7 +1043,7 @@ export function bible_glyph_chapter_jdg16() {
           "$telescope,",
           "and",
           "about",
-          "three",
+          "$three",
           "thousand",
           "$man_beard",
           "and",
