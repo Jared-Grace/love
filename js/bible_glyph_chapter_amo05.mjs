@@ -88,7 +88,7 @@ export function bible_glyph_chapter_amo05() {
           "marches",
           "out",
           "a",
-          "hundred",
+          "$input_numbers+all",
           "strong",
           "will",
           "have",
