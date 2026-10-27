@@ -66,7 +66,7 @@ export function bible_glyph_chapter_isa26() {
         words: [
           "You",
           "will",
-          "keep",
+          "$guard+shield+doing",
           "in",
           "perfect",
           "$peace",
