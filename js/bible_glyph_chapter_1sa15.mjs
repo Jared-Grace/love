@@ -736,7 +736,7 @@ export function bible_glyph_chapter_1sa15() {
           "of",
           "the",
           "$i_am?",
-          "Behold,",
+          "$exclamation,",
           "$ear",
           "is",
           "$thumbs_up",
