@@ -106,7 +106,7 @@ export function bible_glyph_chapter_psa110() {
           "change",
           "His",
           "mind:",
-          "You",
+          "$you",
           "are",
           "a",
           "$priest",
