@@ -597,7 +597,7 @@ export function bible_glyph_chapter_deu07() {
           "in",
           "your",
           "$heart_organ,",
-          "These",
+          "$flashlight+flashlight",
           "$map",
           "are",
           "greater",
