@@ -469,7 +469,7 @@ export function bible_glyph_chapter_gen37() {
           "please",
           "$newspaper",
           "me",
-          "where",
+          "$map+question",
           "they",
           "are",
           "$person+sheep?",
