@@ -404,7 +404,7 @@ export function bible_glyph_chapter_1sa17() {
           "youngest.",
           "The",
           "$three",
-          "oldest",
+          "$top",
           "had",
           "$walking",
           "$proper_name$Saul,",
