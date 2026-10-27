@@ -543,7 +543,7 @@ export function bible_glyph_chapter_pro01() {
       {
         verse_number: 28,
         words: [
-          "Then",
+          "$telescope+clock",
           "they",
           "will",
           "call",
