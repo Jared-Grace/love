@@ -280,7 +280,7 @@ export function bible_glyph_chapter_deu05() {
           "$gift",
           "to",
           "a",
-          "thousand",
+          "$ten+all",
           "generations",
           "of",
           "those",
