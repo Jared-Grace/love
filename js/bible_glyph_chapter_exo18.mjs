@@ -764,7 +764,7 @@ export function bible_glyph_chapter_exo18() {
         words: [
           "So",
           "$fishing_pole+proper_name",
-          "chose",
+          "$check_box",
           "capable",
           "men",
           "from",
