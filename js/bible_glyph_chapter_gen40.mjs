@@ -506,7 +506,7 @@ export function bible_glyph_chapter_gen40() {
         words: [
           "$i_am+plus",
           "$speech,",
-          "This",
+          "$flashlight",
           "is",
           "the",
           "meaning.",
