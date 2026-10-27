@@ -416,7 +416,7 @@ export function bible_glyph_chapter_num12() {
           "$no_entry",
           "move",
           "on",
-          "until",
+          "$finish",
           "she",
           "was",
           "brought",
