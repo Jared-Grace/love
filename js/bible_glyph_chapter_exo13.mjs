@@ -200,7 +200,7 @@ export function bible_glyph_chapter_exo13() {
           "$no_entry",
           "shall",
           "your",
-          "leaven",
+          "$bubbles+bread+pinching_hand",
           "be",
           "$eye",
           "anywhere",
