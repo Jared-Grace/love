@@ -540,7 +540,7 @@ export function bible_glyph_chapter_gen27() {
           "did",
           "you",
           "ever",
-          "find",
+          "$magnifying_glass+exclamation",
           "it",
           "so",
           "$fast_forward+doing,",
