@@ -243,7 +243,7 @@ export function bible_glyph_chapter_lev02() {
           "offering,",
           "a",
           "pleasing",
-          "aroma",
+          "$nose",
           "$i_am.",
         ],
       },
