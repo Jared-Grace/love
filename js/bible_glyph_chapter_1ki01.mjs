@@ -971,7 +971,7 @@ export function bible_glyph_chapter_1ki01() {
         verse_number: 31,
         words: [
           "Bathsheba",
-          "bowed",
+          "$bowing+down_arrow+doing",
           "facedown",
           "to",
           "the",
