@@ -261,7 +261,7 @@ export function bible_glyph_chapter_gen31() {
           "and",
           "$black_circle+describing",
           "and",
-          "spotted.",
+          "$ice+rain+describing.",
         ],
       },
       {
