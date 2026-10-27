@@ -569,7 +569,7 @@ export function bible_glyph_chapter_jdg07() {
           "$bowing.",
           "He",
           "$turn_back",
-          "to",
+          "$toward",
           "the",
           "camp",
           "of",
