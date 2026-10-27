@@ -199,7 +199,7 @@ export function bible_glyph_chapter_est01() {
           "of",
           "porphyry,",
           "marble,",
-          "mother-of-pearl",
+          "$white_circle+gem_stone",
           "and",
           "other",
           "costly",
