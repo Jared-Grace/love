@@ -730,7 +730,7 @@ export function bible_glyph_chapter_exo18() {
           "be",
           "$might+doing",
           "to",
-          "endure,",
+          "$person+round_pushpin,",
           "and",
           "all",
           "these",
