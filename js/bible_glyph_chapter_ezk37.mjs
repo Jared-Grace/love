@@ -963,7 +963,7 @@ export function bible_glyph_chapter_ezk37() {
           "their",
           "$heart_on_fire,",
           "and",
-          "they",
+          "$pointing_back",
           "will",
           "be",
           "My",
