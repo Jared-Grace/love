@@ -342,7 +342,7 @@ export function bible_glyph_chapter_pro16() {
           "more",
           "desirable",
           "than",
-          "silver.",
+          "$silver.",
         ],
       },
       {
