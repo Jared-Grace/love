@@ -1003,7 +1003,7 @@ export function bible_glyph_chapter_exo16() {
           "$i_am",
           "has",
           "commanded:",
-          "Keep",
+          "$guard+thing",
           "an",
           "omer",
           "$tray_out",
