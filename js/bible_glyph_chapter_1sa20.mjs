@@ -59,7 +59,7 @@ export function bible_glyph_chapter_1sa20() {
         words: [
           "Jonathan",
           "$speech,",
-          "Far",
+          "$person_gesturing_no+exclamation",
           "from",
           "it.",
           "You",
