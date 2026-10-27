@@ -1219,7 +1219,7 @@ export function bible_glyph_chapter_jdg16() {
           "his",
           "$father.",
           "And",
-          "he",
+          "$pointing_back",
           "had",
           "judged",
           "$wrestling+heart_on_fire",
