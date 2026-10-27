@@ -1411,7 +1411,7 @@ export function bible_glyph_chapter_lev25() {
       {
         verse_number: 47,
         words: [
-          "If",
+          "$pointing",
           "a",
           "$foreigner",
           "residing",
