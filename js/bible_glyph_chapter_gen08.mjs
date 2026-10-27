@@ -36,7 +36,7 @@ export function bible_glyph_chapter_gen08() {
           "sent",
           "a",
           "$wind",
-          "over",
+          "$pointing_up",
           "the",
           "$earth,",
           "and",
