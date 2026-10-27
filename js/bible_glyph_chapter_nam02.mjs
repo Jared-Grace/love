@@ -162,7 +162,7 @@ export function bible_glyph_chapter_nam02() {
         verse_number: 6,
         words: [
           "The",
-          "river",
+          "$water+national_park",
           "$gate",
           "are",
           "thrown",
