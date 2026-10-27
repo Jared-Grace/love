@@ -252,7 +252,7 @@ export function bible_glyph_chapter_1sa20() {
           "for",
           "his",
           "$all",
-          "clan",
+          "$houses",
           "is",
           "$telescope.",
         ],
