@@ -19,7 +19,7 @@ export function bible_glyph_chapter_job03() {
           "$next_track",
           "this,",
           "$proper_name$Job",
-          "opened",
+          "$unlocked",
           "his",
           "mouth",
           "and",
