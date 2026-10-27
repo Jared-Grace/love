@@ -245,7 +245,7 @@ export function bible_glyph_chapter_pro04() {
           "impeded;",
           "when",
           "you",
-          "run,",
+          "$running,",
           "you",
           "will",
           "$no_entry",
