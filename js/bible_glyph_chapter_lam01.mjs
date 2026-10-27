@@ -56,7 +56,7 @@ export function bible_glyph_chapter_lam01() {
           "$night,",
           "with",
           "$loudly_crying+water",
-          "upon",
+          "$pointing_up",
           "her",
           "cheeks.",
           "Among",
