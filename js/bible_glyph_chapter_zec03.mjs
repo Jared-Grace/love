@@ -66,7 +66,7 @@ export function bible_glyph_chapter_zec03() {
           "you!",
           "Is",
           "$no_entry",
-          "this",
+          "$flashlight",
           "man",
           "a",
           "firebrand",
