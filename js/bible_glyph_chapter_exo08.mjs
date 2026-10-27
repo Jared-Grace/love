@@ -377,7 +377,7 @@ export function bible_glyph_chapter_exo08() {
           "of",
           "the",
           "$frog",
-          "that",
+          "$back+flashlight",
           "He",
           "had",
           "brought",
