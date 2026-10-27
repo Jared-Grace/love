@@ -593,7 +593,7 @@ export function bible_glyph_chapter_2sa11() {
           "$kneeling",
           "of",
           "$two_hearts+proper_name,",
-          "fell,",
+          "$person+pointing_down,",
           "and",
           "$proper_name$Uriah",
           "the",
