@@ -266,7 +266,7 @@ export function bible_glyph_chapter_mic05() {
           "for",
           "$man_beard",
           "$no_entry",
-          "linger",
+          "$hourglass+crossed_fingers",
           "for",
           "$son.",
         ],
