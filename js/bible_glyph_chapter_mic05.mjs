@@ -467,7 +467,7 @@ export function bible_glyph_chapter_mic05() {
           "in",
           "$nose+fire",
           "and",
-          "wrath",
+          "$angry_face",
           "upon",
           "the",
           "$map",
