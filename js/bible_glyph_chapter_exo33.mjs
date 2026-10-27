@@ -301,7 +301,7 @@ export function bible_glyph_chapter_exo33() {
           "$fishing_pole+proper_name",
           "$footprints",
           "the",
-          "tent,",
+          "$tent,",
           "the",
           "pillar",
           "of",
