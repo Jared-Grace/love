@@ -541,7 +541,7 @@ export function bible_glyph_chapter_1ki01() {
           "after",
           "me,",
           "and",
-          "he",
+          "$pointing_back",
           "will",
           "$person+house",
           "on",
