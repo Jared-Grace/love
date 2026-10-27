@@ -1661,7 +1661,7 @@ export function bible_glyph_chapter_deu04() {
         words: [
           "They",
           "took",
-          "possession",
+          "$triangular_flag",
           "of",
           "his",
           "$earth",
