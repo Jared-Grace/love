@@ -743,7 +743,7 @@ export function bible_glyph_chapter_jos02() {
           "$mountain",
           "and",
           "stayed",
-          "there",
+          "$telescope",
           "three",
           "$sun,",
           "until",
