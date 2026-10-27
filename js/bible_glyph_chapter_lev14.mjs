@@ -1378,7 +1378,7 @@ export function bible_glyph_chapter_lev14() {
           "$priest",
           "must",
           "order",
-          "that",
+          "$back+flashlight",
           "the",
           "contaminated",
           "$stone",
