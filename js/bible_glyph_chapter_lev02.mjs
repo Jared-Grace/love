@@ -114,7 +114,7 @@ export function bible_glyph_chapter_lev02() {
           "you",
           "$magnet+doing",
           "$grain_offering",
-          "baked",
+          "$bread+fire+thing",
           "in",
           "an",
           "oven,",
