@@ -110,7 +110,7 @@ export function bible_glyph_chapter_psa073() {
       {
         verse_number: 6,
         words: [
-          "Therefore",
+          "$right_arrow",
           "pride",
           "is",
           "their",
