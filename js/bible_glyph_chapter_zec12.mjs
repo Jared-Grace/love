@@ -224,7 +224,7 @@ export function bible_glyph_chapter_zec12() {
           "they",
           "will",
           "$eating",
-          "all",
+          "$all",
           "the",
           "$family",
           "around",
