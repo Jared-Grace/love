@@ -759,7 +759,7 @@ export function bible_glyph_chapter_lev25() {
           "his",
           "$hand",
           "acquires",
-          "enough",
+          "$check+all",
           "to",
           "redeem",
           "his",
