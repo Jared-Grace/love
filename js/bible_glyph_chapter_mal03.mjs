@@ -312,7 +312,7 @@ export function bible_glyph_chapter_mal03() {
       {
         verse_number: 9,
         words: [
-          "You",
+          "$you",
           "are",
           "$speech+thumbs_down",
           "with",
