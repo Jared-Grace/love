@@ -1861,7 +1861,7 @@ export function bible_glyph_chapter_lev13() {
           "in",
           "the",
           "$garment,",
-          "weave,",
+          "$yarn+round_pushpin,",
           "$shuffle",
           "knit,",
           "$shuffle",
