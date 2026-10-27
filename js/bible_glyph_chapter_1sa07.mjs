@@ -271,7 +271,7 @@ export function bible_glyph_chapter_1sa07() {
           "of",
           "Israel",
           "$speech",
-          "to",
+          "$toward",
           "$ear+heart_on_fire,",
           "Do",
           "$no_entry",
