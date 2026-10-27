@@ -32,7 +32,7 @@ export function bible_glyph_chapter_1sa16() {
           "him",
           "as",
           "$castle+doing",
-          "over",
+          "$pointing_up",
           "$wrestling+heart_on_fire?",
           "Fill",
           "your",
