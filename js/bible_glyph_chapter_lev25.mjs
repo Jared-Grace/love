@@ -671,7 +671,7 @@ export function bible_glyph_chapter_lev25() {
           "$no_entry",
           "be",
           "sold",
-          "permanently,",
+          "$scissors+infinity,",
           "because",
           "the",
           "$earth",
