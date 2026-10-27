@@ -942,7 +942,7 @@ export function bible_glyph_chapter_exo09() {
           "$kneeling,",
           "I",
           "$lightbulb",
-          "that",
+          "$pointing",
           "you",
           "still",
           "do",
