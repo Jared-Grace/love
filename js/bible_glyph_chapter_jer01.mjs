@@ -544,7 +544,7 @@ export function bible_glyph_chapter_jer01() {
           "$brick+shield",
           "against",
           "the",
-          "whole",
+          "$all",
           "$earth,",
           "against",
           "the",
