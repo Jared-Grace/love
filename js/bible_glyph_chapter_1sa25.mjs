@@ -670,7 +670,7 @@ export function bible_glyph_chapter_1sa25() {
           "into",
           "a",
           "$mountain",
-          "ravine,",
+          "$see_no_evil_monkey+thing,",
           "$two_hearts+proper_name",
           "and",
           "his",
