@@ -69,7 +69,7 @@ export function bible_glyph_chapter_neh08() {
           "$footprints",
           "the",
           "$scroll",
-          "before",
+          "$face",
           "the",
           "$church",
           "of",
