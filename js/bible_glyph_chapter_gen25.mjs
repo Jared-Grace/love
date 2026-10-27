@@ -663,7 +663,7 @@ export function bible_glyph_chapter_gen25() {
           "$hand+foot",
           "was",
           "cooking",
-          "stew,",
+          "$pot_of_food+thing,",
           "$proper_name$Esau",
           "$footprints",
           "in",
