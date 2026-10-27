@@ -511,7 +511,7 @@ export function bible_glyph_chapter_jer23() {
           "in",
           "lies.",
           "They",
-          "strengthen",
+          "$might+up_arrow",
           "the",
           "$hand",
           "of",
