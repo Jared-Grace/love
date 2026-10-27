@@ -13,7 +13,7 @@ export function bible_glyph_chapter_isa40() {
       {
         verse_number: 1,
         words: [
-          "Comfort,",
+          "$hug+doing,",
           "comfort",
           "My",
           "$family,",
