@@ -617,7 +617,7 @@ export function bible_glyph_chapter_gen06() {
           "So",
           "$seat+proper_name",
           "$hammer+doing",
-          "everything",
+          "$all",
           "precisely",
           "as",
           "$heart_on_fire",
