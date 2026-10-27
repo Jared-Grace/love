@@ -634,7 +634,7 @@ export function bible_glyph_chapter_neh09() {
           "image",
           "of",
           "a",
-          "calf",
+          "$calf",
           "and",
           "$speech,",
           "This",
