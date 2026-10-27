@@ -1319,7 +1319,7 @@ export function bible_glyph_chapter_gen41() {
           "the",
           "$earth",
           "$hammer+doing",
-          "bountifully.",
+          "$fist+wheat.",
         ],
       },
       {
