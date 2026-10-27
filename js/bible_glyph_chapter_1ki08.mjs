@@ -2241,7 +2241,7 @@ export function bible_glyph_chapter_1ki08() {
           "offerings,",
           "since",
           "the",
-          "bronze",
+          "$bronze",
           "$altar",
           "before",
           "the",
