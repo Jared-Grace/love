@@ -560,7 +560,7 @@ export function bible_glyph_chapter_2ki01() {
           "their",
           "men.",
           "But",
-          "now",
+          "$watch",
           "may",
           "my",
           "$person_other",
