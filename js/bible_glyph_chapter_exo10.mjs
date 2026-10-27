@@ -242,7 +242,7 @@ export function bible_glyph_chapter_exo10() {
           "$link",
           "into",
           "this",
-          "land.",
+          "$brown_square.",
           "Then",
           "Moses",
           "turned",
