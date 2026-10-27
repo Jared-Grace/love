@@ -523,7 +523,7 @@ export function bible_glyph_chapter_jdg04() {
           "$foot",
           "$toward",
           "the",
-          "tent",
+          "$tent",
           "of",
           "$proper_name$Jael,",
           "the",
