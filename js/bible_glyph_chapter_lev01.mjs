@@ -144,7 +144,7 @@ export function bible_glyph_chapter_lev01() {
           "$priest",
           "are",
           "to",
-          "present",
+          "$magnet+doing",
           "$blood",
           "and",
           "splatter",
