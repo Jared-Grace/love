@@ -336,7 +336,7 @@ export function bible_glyph_chapter_lev06() {
           "portions",
           "of",
           "the",
-          "peace",
+          "$peace+gift",
           "offerings.",
         ],
       },
