@@ -370,7 +370,7 @@ export function bible_glyph_chapter_1sa17() {
         words: [
           "The",
           "$three",
-          "older",
+          "$top",
           "$son",
           "of",
           "$proper_name$Jesse",
