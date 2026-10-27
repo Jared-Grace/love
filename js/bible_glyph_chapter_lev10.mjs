@@ -540,7 +540,7 @@ export function bible_glyph_chapter_lev10() {
           "$umbrella+doing",
           "for",
           "them",
-          "before",
+          "$face",
           "$i_am.",
         ],
       },
