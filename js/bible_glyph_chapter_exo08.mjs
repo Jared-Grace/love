@@ -67,7 +67,7 @@ export function bible_glyph_chapter_exo08() {
         verse_number: 3,
         words: [
           "The",
-          "Nile",
+          "$crocodile",
           "will",
           "$lizard+crowd+doing",
           "with",
