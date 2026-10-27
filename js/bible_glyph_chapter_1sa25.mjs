@@ -305,7 +305,7 @@ export function bible_glyph_chapter_1sa25() {
           "$toward",
           "$proper_name$Nabal",
           "$all",
-          "these",
+          "$flashlight+flashlight",
           "$speech",
           "in",
           "the",
