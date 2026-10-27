@@ -613,7 +613,7 @@ export function bible_glyph_chapter_gen40() {
           "$cup",
           "into",
           "the",
-          "hand",
+          "$hand_with_fingers_splayed",
           "of",
           "$house+proper_name",
           "again,",
