@@ -284,7 +284,7 @@ export function bible_glyph_chapter_2ki04() {
           "her",
           "husband,",
           "$exclamation,",
-          "now",
+          "$pleading",
           "I",
           "$lightbulb",
           "that",
