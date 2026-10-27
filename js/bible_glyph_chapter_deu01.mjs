@@ -488,7 +488,7 @@ export function bible_glyph_chapter_deu01() {
           "$scales+thing;",
           "$ear",
           "both",
-          "small",
+          "$pinching_hand",
           "and",
           "great",
           "alike.",
