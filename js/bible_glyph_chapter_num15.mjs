@@ -638,7 +638,7 @@ export function bible_glyph_chapter_num15() {
           "congregation,",
           "then",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "is",
           "to",
