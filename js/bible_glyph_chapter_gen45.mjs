@@ -293,7 +293,7 @@ export function bible_glyph_chapter_gen45() {
           "to",
           "me",
           "$no_entry",
-          "delay.",
+          "$person+round_pushpin.",
         ],
       },
       {
