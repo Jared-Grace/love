@@ -675,7 +675,7 @@ export function bible_glyph_chapter_deu31() {
       {
         verse_number: 19,
         words: [
-          "Now",
+          "$watch",
           "therefore",
           "write",
           "down",
