@@ -394,7 +394,7 @@ export function bible_glyph_chapter_gen08() {
           "surface",
           "of",
           "the",
-          "ground",
+          "$brown_square",
           "was",
           "dry.",
         ],
