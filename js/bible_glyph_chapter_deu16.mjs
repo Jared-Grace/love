@@ -22,7 +22,7 @@ export function bible_glyph_chapter_deu16() {
           "and",
           "$hammer+doing",
           "the",
-          "Passover",
+          "$lamb+door",
           "to",
           "the",
           "$i_am",
