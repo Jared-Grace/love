@@ -510,7 +510,7 @@ export function bible_glyph_chapter_1ki02() {
         words: [
           "He",
           "$speech,",
-          "You",
+          "$you",
           "$lightbulb",
           "that",
           "the",
