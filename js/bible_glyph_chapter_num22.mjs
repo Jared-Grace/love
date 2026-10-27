@@ -1219,7 +1219,7 @@ export function bible_glyph_chapter_num22() {
           "I",
           "really",
           "$no_entry",
-          "able",
+          "$might+doing",
           "to",
           "reward",
           "you",
