@@ -1373,7 +1373,7 @@ export function bible_glyph_chapter_jdg06() {
           "$earth",
           "$all",
           "with",
-          "dew.",
+          "$dew.",
         ],
       },
       {
