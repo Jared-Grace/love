@@ -573,7 +573,7 @@ export function bible_glyph_chapter_deu11() {
           "$no_entry",
           "$hands_giving",
           "its",
-          "produce,",
+          "$earth+fruit,",
           "and",
           "you",
           "will",
