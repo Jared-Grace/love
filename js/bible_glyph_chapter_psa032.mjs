@@ -232,7 +232,7 @@ export function bible_glyph_chapter_psa032() {
           "be",
           "controlled",
           "with",
-          "bit",
+          "$horse+mouth+chains",
           "and",
           "bridle",
           "to",
