@@ -186,7 +186,7 @@ export function bible_glyph_chapter_lev08() {
           "$gold",
           "$blossom,",
           "$sparkle+thing",
-          "diadem,",
+          "$crown+soap,",
           "on",
           "the",
           "$vs_button",
