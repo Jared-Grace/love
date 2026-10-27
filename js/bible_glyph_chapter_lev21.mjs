@@ -415,7 +415,7 @@ export function bible_glyph_chapter_lev21() {
           "to",
           "$hand_receiving",
           "a",
-          "virgin",
+          "$girl+white_flower",
           "$woman",
           "from",
           "his",
