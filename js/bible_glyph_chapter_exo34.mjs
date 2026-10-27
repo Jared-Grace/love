@@ -837,7 +837,7 @@ export function bible_glyph_chapter_exo34() {
           "$first_place+sprout",
           "of",
           "your",
-          "soil",
+          "$brown_square",
           "to",
           "the",
           "$house",
