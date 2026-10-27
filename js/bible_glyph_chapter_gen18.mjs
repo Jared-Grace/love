@@ -94,7 +94,7 @@ export function bible_glyph_chapter_gen18() {
           "$pleading",
           "do",
           "$no_entry",
-          "pass",
+          "$bridge",
           "your",
           "$kneeling",
           "by.",
