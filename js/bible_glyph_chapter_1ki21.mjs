@@ -584,7 +584,7 @@ export function bible_glyph_chapter_1ki21() {
           "the",
           "$i_am",
           "$link",
-          "to",
+          "$toward",
           "$heart_on_fire+i_am",
           "the",
           "$proper_name$Tishbite,",
