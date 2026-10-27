@@ -201,7 +201,7 @@ export function bible_glyph_chapter_ecc01() {
           "there",
           "is",
           "$dotted_line_face",
-          "new",
+          "$new_button",
           "under",
           "the",
           "sun.",
