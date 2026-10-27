@@ -876,7 +876,7 @@ export function bible_glyph_chapter_exo08() {
           "a",
           "$road",
           "of",
-          "three",
+          "$three",
           "$sun",
           "into",
           "the",
