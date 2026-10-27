@@ -113,7 +113,7 @@ export function bible_glyph_chapter_1ki12() {
           "and",
           "the",
           "heavy",
-          "yoke",
+          "$yoke",
           "he",
           "$hands_giving",
           "on",
