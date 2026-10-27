@@ -1073,7 +1073,7 @@ export function bible_glyph_chapter_jer23() {
           "prophesy",
           "false",
           "$dream,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am,",
           "and",
