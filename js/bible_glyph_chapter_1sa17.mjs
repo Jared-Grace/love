@@ -434,7 +434,7 @@ export function bible_glyph_chapter_1sa17() {
         verse_number: 16,
         words: [
           "For",
-          "forty",
+          "$four+zero",
           "$sun",
           "the",
           "$proper_name$Philistine",
