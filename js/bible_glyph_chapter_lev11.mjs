@@ -507,7 +507,7 @@ export function bible_glyph_chapter_lev11() {
           "$lizard+crowd",
           "$back+flashlight",
           "have",
-          "four",
+          "$four",
           "$foot",
           "are",
           "detestable",
