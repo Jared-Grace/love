@@ -258,7 +258,7 @@ export function bible_glyph_chapter_zec04() {
       {
         verse_number: 10,
         words: [
-          "For",
+          "$pointing",
           "who",
           "has",
           "despised",
