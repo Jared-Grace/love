@@ -195,7 +195,7 @@ export function bible_glyph_chapter_1sa20() {
           "New",
           "Moon,",
           "and",
-          "I",
+          "$me",
           "am",
           "supposed",
           "to",
