@@ -95,7 +95,7 @@ export function bible_glyph_chapter_exo03() {
           "and",
           "$eye",
           "this",
-          "marvelous",
+          "$top",
           "sight.",
           "Why",
           "is",
