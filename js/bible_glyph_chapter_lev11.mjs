@@ -920,7 +920,7 @@ export function bible_glyph_chapter_lev11() {
           "$seed",
           "and",
           "a",
-          "carcass",
+          "$skull+bone",
           "$person+pointing_down",
           "on",
           "it,",
