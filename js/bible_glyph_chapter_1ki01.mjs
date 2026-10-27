@@ -452,7 +452,7 @@ export function bible_glyph_chapter_1ki01() {
           "$linked_paperclips",
           "the",
           "$king,",
-          "I",
+          "$me",
           "will",
           "$footprints",
           "in",
