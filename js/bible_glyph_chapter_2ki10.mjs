@@ -58,7 +58,7 @@ export function bible_glyph_chapter_2ki10() {
           "this",
           "letter",
           "$footprints,",
-          "since",
+          "$watch",
           "the",
           "$son",
           "of",
