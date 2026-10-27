@@ -152,7 +152,7 @@ export function bible_glyph_chapter_psa032() {
           "may",
           "be",
           "found.",
-          "Surely",
+          "$one+check",
           "when",
           "great",
           "$water",
