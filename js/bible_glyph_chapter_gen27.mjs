@@ -1012,7 +1012,7 @@ export function bible_glyph_chapter_gen27() {
           '"Your',
           "$brother",
           "$footprints",
-          "deceitfully",
+          "$lying_face+mouse_trap",
           "and",
           "$hand_receiving",
           "your",
