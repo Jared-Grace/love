@@ -583,7 +583,7 @@ export function bible_glyph_chapter_deu06() {
           "when",
           "your",
           "$son",
-          "asks,",
+          "$question,",
           "$speech,",
           "What",
           "is",
