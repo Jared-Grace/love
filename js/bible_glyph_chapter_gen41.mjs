@@ -919,7 +919,7 @@ export function bible_glyph_chapter_gen41() {
           "and",
           "appoint",
           "$clipboard+doer",
-          "over",
+          "$pointing_up",
           "the",
           "$earth",
           "to",
