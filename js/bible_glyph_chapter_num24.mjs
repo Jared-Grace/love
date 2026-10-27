@@ -722,7 +722,7 @@ export function bible_glyph_chapter_num24() {
           "$place,",
           "and",
           "$proper_name$Balak",
-          "also",
+          "$plus",
           "$walking",
           "on",
           "his",
