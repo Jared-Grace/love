@@ -182,7 +182,7 @@ export function bible_glyph_chapter_num32() {
           "$brother",
           "$footprints",
           "to",
-          "war",
+          "$crossed_swords",
           "while",
           "you",
           "$person+house",
