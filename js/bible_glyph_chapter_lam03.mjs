@@ -173,7 +173,7 @@ export function bible_glyph_chapter_lam03() {
           "made",
           "my",
           "paths",
-          "crooked.",
+          "$cyclone+doing.",
         ],
       },
       {
