@@ -744,7 +744,7 @@ export function bible_glyph_chapter_1ki19() {
           "$proper_name$Elijah",
           "replied,",
           "$pointing",
-          "what",
+          "$flashlight+question",
           "have",
           "I",
           "$hammer+doing",
