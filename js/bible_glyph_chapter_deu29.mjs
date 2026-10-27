@@ -610,7 +610,7 @@ export function bible_glyph_chapter_deu29() {
           "$man_beard,",
           "and",
           "$all",
-          "curse",
+          "$speech+raised_back_of_hand",
           "written",
           "in",
           "this",
