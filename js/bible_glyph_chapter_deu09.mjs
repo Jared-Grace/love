@@ -969,7 +969,7 @@ export function bible_glyph_chapter_deu09() {
       {
         verse_number: 28,
         words: [
-          "Otherwise",
+          "$no_entry+traffic_light",
           "those",
           "in",
           "the",
