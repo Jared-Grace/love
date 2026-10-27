@@ -315,7 +315,7 @@ export function bible_glyph_chapter_2ki10() {
           "$palm_down",
           "them",
           "in",
-          "two",
+          "$two",
           "heaps",
           "at",
           "the",
