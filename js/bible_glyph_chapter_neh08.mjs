@@ -552,7 +552,7 @@ export function bible_glyph_chapter_neh08() {
           "spread",
           "this",
           "$voice",
-          "throughout",
+          "$all",
           "their",
           "$city",
           "and",
