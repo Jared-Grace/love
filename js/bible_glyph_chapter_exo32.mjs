@@ -717,7 +717,7 @@ export function bible_glyph_chapter_exo32() {
           "$speech",
           "to",
           "$proper_name$Aaron,",
-          "What",
+          "$flashlight+question",
           "did",
           "this",
           "$family",
