@@ -736,7 +736,7 @@ export function bible_glyph_chapter_exo30() {
           "of",
           "$burnt_offering",
           "and",
-          "all",
+          "$all",
           "its",
           "utensils,",
           "and",
