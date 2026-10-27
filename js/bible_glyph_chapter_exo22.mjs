@@ -31,7 +31,7 @@ export function bible_glyph_chapter_exo22() {
           "he",
           "must",
           "repay",
-          "five",
+          "$five",
           "oxen",
           "for",
           "the",
