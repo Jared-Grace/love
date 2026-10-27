@@ -707,7 +707,7 @@ export function bible_glyph_chapter_num23() {
           "$blood",
           "of",
           "the",
-          "slain.",
+          "$sword+skull.",
         ],
       },
       {
