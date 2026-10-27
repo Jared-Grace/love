@@ -128,7 +128,7 @@ export function bible_glyph_chapter_lev08() {
           "$cloak,",
           "$hands_giving",
           "the",
-          "ephod",
+          "$safety_vest",
           "on",
           "him,",
           "tied",
