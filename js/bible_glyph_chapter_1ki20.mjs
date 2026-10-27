@@ -746,7 +746,7 @@ export function bible_glyph_chapter_1ki20() {
           "$speech,",
           "$walking",
           "and",
-          "strengthen",
+          "$might+up_arrow",
           "your",
           "position.",
           "$lightbulb",
