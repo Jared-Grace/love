@@ -268,7 +268,7 @@ export function bible_glyph_chapter_jer17() {
           "leaves",
           "are",
           "always",
-          "green.",
+          "$tree+leaf+describing.",
           "It",
           "does",
           "$no_entry",
