@@ -335,7 +335,7 @@ export function bible_glyph_chapter_1ki08() {
           "$sparkle+thing,",
           "the",
           "$cloud",
-          "filled",
+          "$battery",
           "the",
           "$house",
           "of",
