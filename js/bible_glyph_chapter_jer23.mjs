@@ -1255,7 +1255,7 @@ export function bible_glyph_chapter_jer23() {
       {
         verse_number: 37,
         words: [
-          "Thus",
+          "$flashlight+manner",
           "you",
           "are",
           "to",
