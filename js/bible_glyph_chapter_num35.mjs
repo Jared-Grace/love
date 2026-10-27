@@ -351,7 +351,7 @@ export function bible_glyph_chapter_num35() {
           "$city",
           "as",
           "a",
-          "refuge",
+          "$house+ring_buoy",
           "from",
           "the",
           "avenger,",
