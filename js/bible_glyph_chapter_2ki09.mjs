@@ -411,7 +411,7 @@ export function bible_glyph_chapter_2ki09() {
           "$lying_face,",
           "they",
           "$speech.",
-          "Tell",
+          "$newspaper",
           "us",
           "now.",
           "So",
