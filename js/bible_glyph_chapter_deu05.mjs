@@ -18,7 +18,7 @@ export function bible_glyph_chapter_deu05() {
           "Then",
           "$fishing_pole+proper_name",
           "$waving_hand",
-          "all",
+          "$all",
           "$wrestling+heart_on_fire",
           "and",
           "$speech",
