@@ -1449,7 +1449,7 @@ export function bible_glyph_chapter_1ki18() {
           "as",
           "a",
           "$man_beard",
-          "hand",
+          "$hand_with_fingers_splayed",
           "rising",
           "from",
           "the",
