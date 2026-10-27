@@ -263,7 +263,7 @@ export function bible_glyph_chapter_mal01() {
           "When",
           "you",
           "offer",
-          "blind",
+          "$person_with_white_cane+describing",
           "animals",
           "for",
           "sacrifice,",
