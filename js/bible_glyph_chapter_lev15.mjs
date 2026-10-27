@@ -102,7 +102,7 @@ export function bible_glyph_chapter_lev15() {
           "any",
           "furniture",
           "on",
-          "which",
+          "$back+flashlight",
           "he",
           "sits",
           "will",
