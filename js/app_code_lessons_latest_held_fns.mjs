@@ -1,8 +1,4 @@
 import { fn_name } from "./fn_name.mjs";
-import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
-import { app_code_lesson_while_down } from "./app_code_lesson_while_down.mjs";
-import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
-import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 export function app_code_lessons_latest_held_fns() {
   "the lessons kept off latest while every other lesson is shown there, asked for by the human 2026-09-30: deploy through lesson 204 and skip 205, the 24-hour clock, which is not ready to hand over yet";
   "A list of lessons rather than a cut at a number, for the same reason the released list is one: a lesson put in above would move a number, and a list names the lesson itself. Empty it to show every lesson on latest again. Since 2026-10-24 the working copy leaves these out too, so what this holds decides both.";
@@ -107,11 +103,7 @@ export function app_code_lessons_latest_held_fns() {
     " and ",
     fn_name("app_code_lesson_if_thrice"),
     " shown again");
-  let fns = [
-    app_code_lesson_while_log,
-    app_code_lesson_while_down,
-    app_code_lesson_while_total,
-    app_code_lesson_while,
-  ];
+  ("2026-10-27: the four while lessons released by the human, to try them on the working copy: nothing held");
+  let fns = [];
   return fns;
 }
