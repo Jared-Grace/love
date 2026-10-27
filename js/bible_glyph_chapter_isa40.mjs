@@ -873,7 +873,7 @@ export function bible_glyph_chapter_isa40() {
           "$weary_face+wing+doing",
           "tired",
           "and",
-          "weary,",
+          "$weary_face+doing,",
           "and",
           "young",
           "men",
