@@ -71,7 +71,7 @@ export function bible_glyph_chapter_exo37() {
         words: [
           "And",
           "he",
-          "cast",
+          "$pouring_liquid+fire",
           "four",
           "$gold",
           "$ring",
