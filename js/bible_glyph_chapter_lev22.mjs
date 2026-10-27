@@ -91,7 +91,7 @@ export function bible_glyph_chapter_lev22() {
           "off",
           "from",
           "My",
-          "presence.",
+          "$face.",
           "I",
           "am",
           "$i_am.",
