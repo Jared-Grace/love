@@ -22,7 +22,7 @@ export function bible_glyph_chapter_jer23() {
           "who",
           "$wilted_flower",
           "and",
-          "scatter",
+          "$confetti_ball",
           "the",
           "$sheep",
           "of",
