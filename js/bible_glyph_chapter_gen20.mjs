@@ -47,7 +47,7 @@ export function bible_glyph_chapter_gen20() {
           "$proper_name$Sarah",
           "his",
           "$woman,",
-          "She",
+          "$pointing_back",
           "is",
           "my",
           "$sister.",
