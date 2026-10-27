@@ -445,7 +445,7 @@ export function bible_glyph_chapter_deu12() {
           "the",
           "$i_am",
           "will",
-          "choose",
+          "$check_box",
           "in",
           "one",
           "of",
