@@ -412,7 +412,7 @@ export function bible_glyph_chapter_psa051() {
       {
         verse_number: 19,
         words: [
-          "Then",
+          "$telescope+clock",
           "You",
           "will",
           "delight",
