@@ -174,7 +174,7 @@ export function bible_glyph_chapter_hos02() {
           "$exclamation,",
           "I",
           "will",
-          "hedge",
+          "$thorns+around+doing",
           "up",
           "her",
           "$road",
