@@ -537,7 +537,7 @@ export function bible_glyph_chapter_lev22() {
           "living",
           "among",
           "them,",
-          "who",
+          "$back+flashlight",
           "presents",
           "a",
           "gift,",
