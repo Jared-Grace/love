@@ -414,7 +414,7 @@ export function bible_glyph_chapter_deu15() {
           "and",
           "$kneeling+doing",
           "you",
-          "six",
+          "$six",
           "years,",
           "then",
           "in",
