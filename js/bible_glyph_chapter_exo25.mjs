@@ -639,7 +639,7 @@ export function bible_glyph_chapter_exo25() {
       {
         verse_number: 27,
         words: [
-          "Close",
+          "$arrow_both_ways+round_pushpin",
           "to",
           "the",
           "rim",
