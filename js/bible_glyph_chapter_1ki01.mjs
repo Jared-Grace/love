@@ -1617,7 +1617,7 @@ export function bible_glyph_chapter_1ki01() {
           "to",
           "$peace+proper_name,",
           "$speech,",
-          "Behold,",
+          "$exclamation,",
           "$proper_name$Adonijah",
           "fears",
           "$king",
