@@ -456,7 +456,7 @@ export function bible_glyph_chapter_hab02() {
           "in",
           "order",
           "to",
-          "gaze",
+          "$face_with_monocle",
           "at",
           "their",
           "nakedness!",
