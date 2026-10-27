@@ -71,7 +71,7 @@ export function bible_glyph_chapter_hab01() {
           "do",
           "You",
           "tolerate",
-          "wrongdoing?",
+          "$hot_face?",
           "Destruction",
           "and",
           "violence",
