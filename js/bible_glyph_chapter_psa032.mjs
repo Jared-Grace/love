@@ -38,7 +38,7 @@ export function bible_glyph_chapter_psa032() {
           "the",
           "$person",
           "whose",
-          "iniquity",
+          "$cyclone",
           "the",
           "$i_am",
           "does",
