@@ -1132,7 +1132,7 @@ export function bible_glyph_chapter_gen31() {
           "By",
           "$sun",
           "the",
-          "heat",
+          "$desert+sun",
           "ate",
           "me",
           "and",
