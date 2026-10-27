@@ -978,7 +978,7 @@ export function bible_glyph_chapter_1sa17() {
           "You",
           "$no_entry",
           "$walking",
-          "against",
+          "$toward",
           "this",
           "$proper_name$Philistine",
           "to",
