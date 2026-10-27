@@ -567,7 +567,7 @@ export function bible_glyph_chapter_2ki10() {
           "was",
           "coming",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "him.",
           "Jehu",
           "$speech+thumbs_up",
