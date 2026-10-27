@@ -642,7 +642,7 @@ export function bible_glyph_chapter_ezk34() {
           "have",
           "trampled,",
           "and",
-          "drink",
+          "$cup_with_straw",
           "what",
           "your",
           "feet",
