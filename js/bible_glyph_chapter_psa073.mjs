@@ -525,7 +525,7 @@ export function bible_glyph_chapter_psa073() {
           "$crown",
           "$i_am",
           "my",
-          "refuge,",
+          "$hut+place,",
           "that",
           "I",
           "may",
