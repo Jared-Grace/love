@@ -809,7 +809,7 @@ export function bible_glyph_chapter_gen44() {
           "$no_entry",
           "$eye",
           "him",
-          "since.",
+          "$round_pushpin+pointing_down.",
         ],
       },
       {
