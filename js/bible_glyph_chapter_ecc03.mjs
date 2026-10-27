@@ -414,7 +414,7 @@ export function bible_glyph_chapter_ecc03() {
       {
         verse_number: 17,
         words: [
-          "I",
+          "$me",
           "$speech",
           "in",
           "my",
