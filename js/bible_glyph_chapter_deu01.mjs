@@ -942,7 +942,7 @@ export function bible_glyph_chapter_deu01() {
           "carries",
           "his",
           "$son,",
-          "all",
+          "$all",
           "the",
           "$road",
           "by",
