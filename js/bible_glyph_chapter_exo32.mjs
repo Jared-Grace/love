@@ -1126,7 +1126,7 @@ export function bible_glyph_chapter_exo32() {
       {
         verse_number: 34,
         words: [
-          "Now",
+          "$watch",
           "$walking,",
           "lead",
           "the",
