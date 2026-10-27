@@ -181,7 +181,7 @@ export function bible_glyph_chapter_neh09() {
           "be",
           "exalted",
           "$pointing_up",
-          "all",
+          "$all",
           "blessing",
           "and",
           "praise.",
