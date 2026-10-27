@@ -725,7 +725,7 @@ export function bible_glyph_chapter_exo19() {
           "up",
           "$mountain",
           "$proper_name$Sinai,",
-          "for",
+          "$pointing",
           "You",
           "solemnly",
           "$witness+doing",
