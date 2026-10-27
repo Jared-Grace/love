@@ -221,7 +221,7 @@ export function bible_glyph_chapter_ezk34() {
           "because",
           "My",
           "$sheep",
-          "lacks",
+          "$dotted_line_face",
           "a",
           "shepherd",
           "and",
