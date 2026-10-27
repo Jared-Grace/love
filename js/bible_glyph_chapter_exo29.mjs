@@ -221,7 +221,7 @@ export function bible_glyph_chapter_exo29() {
           "$son",
           "and",
           "tie",
-          "headbands",
+          "$person_wearing_turban+mountain",
           "on",
           "them.",
           "The",
