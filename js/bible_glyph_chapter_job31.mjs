@@ -482,7 +482,7 @@ export function bible_glyph_chapter_job31() {
           "calamity",
           "from",
           "$heart_on_fire",
-          "terrifies",
+          "$fearful_face",
           "me,",
           "and",
           "His",
