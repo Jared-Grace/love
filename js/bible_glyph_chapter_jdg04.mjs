@@ -121,7 +121,7 @@ export function bible_glyph_chapter_jdg04() {
           "$person+house",
           "$down_arrow",
           "the",
-          "Palm",
+          "$palm_tree+wood",
           "of",
           "$proper_name$Deborah",
           "between",
