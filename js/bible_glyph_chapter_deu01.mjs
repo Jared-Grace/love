@@ -81,7 +81,7 @@ export function bible_glyph_chapter_deu01() {
           "of",
           "the",
           "eleventh",
-          "month,",
+          "$new_moon,",
           "$fishing_pole+proper_name",
           "$mouth",
           "to",
