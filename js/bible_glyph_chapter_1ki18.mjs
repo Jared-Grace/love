@@ -109,7 +109,7 @@ export function bible_glyph_chapter_1ki18() {
           "had",
           "$hand_receiving",
           "a",
-          "hundred",
+          "$input_numbers+all",
           "$megaphone",
           "and",
           "hidden",
