@@ -189,7 +189,7 @@ export function bible_glyph_chapter_deu34() {
           "$earth",
           "of",
           "$father+proper_name,",
-          "facing",
+          "$vs_button",
           "Beth-peor,",
           "and",
           "$no_entry",
