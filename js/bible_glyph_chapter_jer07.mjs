@@ -566,7 +566,7 @@ export function bible_glyph_chapter_jer07() {
           "they",
           "are",
           "provoking?",
-          "declares",
+          "$microphone",
           "$i_am.",
           "Is",
           "it",
