@@ -410,7 +410,7 @@ export function bible_glyph_chapter_jdg06() {
           "which",
           "our",
           "$father",
-          "told",
+          "$abacus",
           "us,",
           "$speech,",
           "Has",
