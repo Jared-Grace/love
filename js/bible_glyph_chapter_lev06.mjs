@@ -123,7 +123,7 @@ export function bible_glyph_chapter_lev06() {
           "restitution",
           "in",
           "full,",
-          "add",
+          "$plus+doing",
           "a",
           "fifth",
           "of",
