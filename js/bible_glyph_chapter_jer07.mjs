@@ -99,7 +99,7 @@ export function bible_glyph_chapter_jer07() {
         words: [
           "Do",
           "$no_entry",
-          "trust",
+          "$anchor+doing",
           "in",
           "deceptive",
           "$speech,",
