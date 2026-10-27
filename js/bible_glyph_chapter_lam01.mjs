@@ -583,7 +583,7 @@ export function bible_glyph_chapter_lam01() {
           "For",
           "$flashlight+flashlight",
           "things",
-          "I",
+          "$me",
           "weep;",
           "my",
           "$eyes",
