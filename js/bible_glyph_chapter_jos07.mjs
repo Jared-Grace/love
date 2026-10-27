@@ -827,7 +827,7 @@ export function bible_glyph_chapter_jos07() {
           "$input_numbers+all",
           "$coin",
           "of",
-          "silver,",
+          "$silver,",
           "and",
           "a",
           "bar",
