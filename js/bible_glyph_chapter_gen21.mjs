@@ -534,7 +534,7 @@ export function bible_glyph_chapter_gen21() {
           "And",
           "$heart_on_fire",
           "was",
-          "with",
+          "$safety_pin",
           "the",
           "boy,",
           "and",
