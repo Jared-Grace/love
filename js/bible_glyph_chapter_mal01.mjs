@@ -321,7 +321,7 @@ export function bible_glyph_chapter_mal01() {
           "Will",
           "He",
           "be",
-          "gracious?",
+          "$heart_orange+doing?",
           "Since",
           "this",
           "has",
