@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_expression_choose_order_questions_generic } from "./app_code_lesson_expression_choose_order_questions_generic.mjs";
 import { app_code_lesson_expression_choose_order_reason_run } from "./app_code_lesson_expression_choose_order_reason_run.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
+import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { app_code_lesson_expression_choose_order_decoys_generic } from "./app_code_lesson_expression_choose_order_decoys_generic.mjs";
@@ -51,7 +51,7 @@ export function app_code_lesson_expression_choose_order_twin_read_generic(
   }
   function paint(parent) {
     "the home title: the twin's own words with Solve in front";
-    html_cycle_code(parent, title_words);
+    app_code_cycle_code(parent, title_words);
   }
   let left = app_code_category_expressions();
   let name_id = app_code_lesson_name_id_category_then(left, paint);

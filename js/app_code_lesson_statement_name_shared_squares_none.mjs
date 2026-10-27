@@ -26,7 +26,7 @@ import { html_div } from "./html_div.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
 import { app_code_lesson_statement_name_overlap_hours } from "./app_code_lesson_statement_name_overlap_hours.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
+import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_shared_squares } from "./app_code_lesson_statement_name_shared_squares.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
@@ -233,7 +233,7 @@ export function app_code_lesson_statement_name_shared_squares_none() {
       context,
       app_code_lesson_statement_name_overlap_hours,
     );
-    html_cycle_code(line, [
+    app_code_cycle_code(line, [
       ", we used ",
       max_name,
       " to change all negative lengths to ",

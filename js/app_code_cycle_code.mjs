@@ -5,7 +5,7 @@ import { each_index } from "./each_index.mjs";
 import { modulo } from "./modulo.mjs";
 import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function html_cycle_code(parent, parts) {
+export function app_code_cycle_code(parent, parts) {
   arguments_assert(arguments, 2);
   ("this is likely interweaving text and code, so code should not wrap");
   ("a code part goes through ",

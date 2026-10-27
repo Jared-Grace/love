@@ -1,7 +1,7 @@
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
+import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
@@ -15,7 +15,7 @@ export function app_code_lesson_expression_not_pair_title_name_id() {
   let and_symbol = js_operator_and_symbol();
   let or_symbol = js_operator_or_symbol();
   function paint(parent) {
-    html_cycle_code(parent, [
+    app_code_cycle_code(parent, [
       "",
       symbol,
       " around ",

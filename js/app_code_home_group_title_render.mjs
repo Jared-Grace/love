@@ -4,7 +4,7 @@ import { html_clear } from "./html_clear.mjs";
 import { emoji_check } from "./emoji_check.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_space } from "./html_span_space.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
+import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { app_code_lessons_range_text } from "./app_code_lessons_range_text.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_wrap_parenthesis } from "./text_wrap_parenthesis.mjs";
@@ -23,7 +23,7 @@ export function app_code_home_group_title_render(entry) {
     html_span_space(title_mark);
   }
   let parts = property_get(entry, "parts");
-  html_cycle_code(title_mark, parts);
+  app_code_cycle_code(title_mark, parts);
   let first = property_get(entry, "first");
   let last = property_get(entry, "last");
   let range_span = app_code_lessons_range_text(first, last);

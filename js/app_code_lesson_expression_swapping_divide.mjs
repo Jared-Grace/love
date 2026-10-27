@@ -3,7 +3,7 @@ import { app_code_lesson_expression_swapping_add } from "./app_code_lesson_expre
 import { app_code_lesson_swapping_same_numbers_line } from "./app_code_lesson_swapping_same_numbers_line.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
+import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { app_code_lesson_swapping_generic } from "./app_code_lesson_swapping_generic.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
@@ -21,7 +21,7 @@ export function app_code_lesson_expression_swapping_divide() {
   function title_name_id() {
     "the home title: swapping / % **, an Expressions lesson";
     function paint(parent) {
-      html_cycle_code(parent, ["Swapping ", "/", " ", "%", " ", "**"]);
+      app_code_cycle_code(parent, ["Swapping ", "/", " ", "%", " ", "**"]);
     }
     let left = app_code_category_expressions();
     let built = app_code_lesson_name_id_category_then(left, paint);

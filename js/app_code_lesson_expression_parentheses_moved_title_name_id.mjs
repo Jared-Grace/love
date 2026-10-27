@@ -2,7 +2,7 @@ import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
+import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 export function app_code_lesson_expression_parentheses_moved_title_name_id() {
   arguments_assert(arguments, 0);
@@ -10,7 +10,7 @@ export function app_code_lesson_expression_parentheses_moved_title_name_id() {
   function paint(parent) {
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();
-    html_cycle_code(parent, ["Moving the ", open, " and ", close]);
+    app_code_cycle_code(parent, ["Moving the ", open, " and ", close]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);

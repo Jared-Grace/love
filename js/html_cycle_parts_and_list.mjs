@@ -9,11 +9,11 @@ import { ternary } from "./ternary.mjs";
 export function html_cycle_parts_and_list(codes) {
   arguments_assert(arguments, 1);
   ("a list of code words written out as the alternating plain-then-code parts ",
-    fn_name("html_cycle_code"),
+    fn_name("app_code_cycle_code"),
     " takes, joined the way English joins a list - handed the three arithmetic symbols it gives back the parts that paint + , - and /, each symbol as code and the punctuation between them as plain text");
   ("IT IS BUILT FROM THE LIST RATHER THAN TYPED OUT, which is the whole of why it exists: a row that names every one of something can then be built from the very list the rest of the code draws from, and cannot go on naming three of them after a fourth is added to that list.");
   ("The separator stands BEFORE each word rather than after it, because that is what puts an empty plain piece at the front. ",
-    fn_name("html_cycle_code"),
+    fn_name("app_code_cycle_code"),
     " paints the even places as prose and the odd places as code, so a parts list opening with a code word would have that word painted as prose and every piece after it painted as the wrong one of the two.");
   let parts_built = [];
   let last_index = list_size_subtract(codes, 1);

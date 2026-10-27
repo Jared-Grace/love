@@ -1,12 +1,12 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
+import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 export function app_code_lesson_expression_choose_order_both_sides_any_comparison_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: solving both sides of a line one step at a time whatever comparison stands between them, an Expressions lesson");
   function paint(parent) {
-    html_cycle_code(parent, ["Solve both sides with any comparison"]);
+    app_code_cycle_code(parent, ["Solve both sides with any comparison"]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);

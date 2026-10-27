@@ -2,7 +2,7 @@ import { app_code_first_decimal_digit_words } from "./app_code_first_decimal_dig
 import { list_size_subtract } from "./list_size_subtract.mjs";
 import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
+import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { subtract } from "./subtract.mjs";
@@ -42,6 +42,6 @@ export function app_code_lesson_expression_round_nearest_rule_line(
   parts.push("Math.round");
   parts.push(" is like ");
   parts.push(like_name);
-  html_cycle_code(div, parts);
+  app_code_cycle_code(div, parts);
   return div;
 }

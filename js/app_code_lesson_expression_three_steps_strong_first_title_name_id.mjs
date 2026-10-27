@@ -3,7 +3,7 @@ import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
+import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 export function app_code_lesson_expression_three_steps_strong_first_title_name_id() {
@@ -16,7 +16,7 @@ export function app_code_lesson_expression_three_steps_strong_first_title_name_i
   let plus = js_operator_plus_symbol();
   let minus = js_operator_minus_symbol();
   function paint(parent) {
-    html_cycle_code(parent, [
+    app_code_cycle_code(parent, [
       "Three steps, ",
       times,
       " ",

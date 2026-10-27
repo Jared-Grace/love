@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
+import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 export function app_code_lesson_expression_choose_order_and_before_or_title_name_id() {
@@ -7,7 +7,7 @@ export function app_code_lesson_expression_choose_order_and_before_or_title_name
   ("the home title: solve && before ||, an Expressions lesson. Solve in front says a learner presses one step at a time here; the twin below wears the same words without it");
   ("The title paints the two symbols and spells the two words, the same way every other lesson about a symbol does: the lesson is about the symbols, and the words are only what the address is written with, where a symbol cannot go.");
   function paint(parent) {
-    html_cycle_code(parent, ["Solve ", "&&", " before ", "||"]);
+    app_code_cycle_code(parent, ["Solve ", "&&", " before ", "||"]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);

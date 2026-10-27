@@ -78,7 +78,7 @@ import { app_shared_button_background } from "./app_shared_button_background.mjs
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 import { promise_later_catch_ignore } from "./promise_later_catch_ignore.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
+import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { app_code_program_step_guide_line_next } from "./app_code_program_step_guide_line_next.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
@@ -507,7 +507,7 @@ export function app_code_program_step_through_generic(
     if (null_is(reason_words)) {
       return;
     }
-    html_cycle_code(reason_box, reason_words);
+    app_code_cycle_code(reason_box, reason_words);
   }
   function program_left_words() {
     "2026-10-23, at the human's asking: the program said complete too soon says why with a sign on the screen - the last line the computer runs, which has not run yet. Not picked: naming the next line to run, which hands over the answer to the question asked";
@@ -1056,7 +1056,7 @@ export function app_code_program_step_through_generic(
       if (null_is(reason_words)) {
         return;
       }
-      html_cycle_code(reason_box, reason_words);
+      app_code_cycle_code(reason_box, reason_words);
     }
     for (let option of options) {
       let option_kind = list_get(option, 0);

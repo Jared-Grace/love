@@ -1,7 +1,7 @@
 import { html_div } from "./html_div.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
+import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
@@ -146,7 +146,7 @@ export function app_code_lesson_statement_name_meetings_join() {
       context,
       app_code_lesson_statement_name_meetings_overlap,
     );
-    html_cycle_code(line, [
+    app_code_cycle_code(line, [
       ", we used the later start and the earlier end, so we used ",
       max_name,
       " for the start and ",

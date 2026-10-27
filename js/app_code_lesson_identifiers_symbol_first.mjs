@@ -10,7 +10,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { list_map } from "./list_map.mjs";
 import { text_combine_space_right } from "./text_combine_space_right.mjs";
 import { html_div_text_multiple } from "./html_div_text_multiple.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
+import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { list_concat_single } from "./list_concat_single.mjs";
 import { html_div } from "./html_div.mjs";
 import { list_between_space } from "./list_between_space.mjs";
@@ -100,7 +100,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     html_span_text(div, "And ");
     function lambda4(item) {
       let l = list_is(item);
-      let result = ternary(l, html_cycle_code, html_span_text_padded_space);
+      let result = ternary(l, app_code_cycle_code, html_span_text_padded_space);
       result(div, item);
     }
     each(concated, lambda4);

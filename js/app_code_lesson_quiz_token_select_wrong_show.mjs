@@ -4,7 +4,7 @@ import { app_code_quiz_token_run_together_parts } from "./app_code_quiz_token_ru
 import { null_is } from "./null_is.mjs";
 import { app_code_lesson_quiz_pieces_later_parts } from "./app_code_lesson_quiz_pieces_later_parts.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
+import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 export function app_code_lesson_quiz_token_select_wrong_show(
   b,
   note_div,
@@ -28,6 +28,6 @@ export function app_code_lesson_quiz_token_select_wrong_show(
     parts = app_code_lesson_quiz_pieces_later_parts(variations, chosen, token);
   }
   html_clear(note_div);
-  html_cycle_code(note_div, parts);
+  app_code_cycle_code(note_div, parts);
   on_wrong();
 }

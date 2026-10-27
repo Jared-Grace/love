@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { list_is } from "./list_is.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
+import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
 import { each } from "./each.mjs";
@@ -12,7 +12,7 @@ export function app_code_div_braces_painted(parent, pieces) {
   function piece_add(piece) {
     let l = list_is(piece);
     if (l) {
-      html_cycle_code(div, piece);
+      app_code_cycle_code(div, piece);
       return;
     }
     let brace = property_get(piece, "brace");

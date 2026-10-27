@@ -3,7 +3,7 @@ import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
+import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 export function app_code_lesson_expression_parentheses_one_side_title_name_id() {
   arguments_assert(arguments, 0);
@@ -14,7 +14,7 @@ export function app_code_lesson_expression_parentheses_one_side_title_name_id() 
     ("the title names what is inside the parentheses, which is a comparison - any of ===, !==, < or >, since ",
       fn_name("app_code_comparison_side"),
       " draws from all four. It used to read === / !== inside ( and ), which was wrong twice over: those two are the OUTER operator, sitting between the parentheses and never in them, and the two it left out are half the operators the lesson actually shows");
-    html_cycle_code(parent, ["A comparison inside ", open, " and ", close]);
+    app_code_cycle_code(parent, ["A comparison inside ", open, " and ", close]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);
