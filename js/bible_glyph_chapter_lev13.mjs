@@ -1694,7 +1694,7 @@ export function bible_glyph_chapter_lev13() {
           "contaminated",
           "item",
           "is",
-          "wool",
+          "$yarn",
           "or",
           "linen",
           "or",
