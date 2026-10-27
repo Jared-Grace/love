@@ -42,7 +42,7 @@ export function bible_glyph_chapter_gen05() {
       {
         verse_number: 2,
         words: [
-          "Male",
+          "$reminder_ribbon+thing",
           "and",
           "female",
           "he",
