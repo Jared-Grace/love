@@ -362,7 +362,7 @@ export function bible_glyph_chapter_deu04() {
           "$speech",
           "to",
           "me,",
-          "Gather",
+          "$church+doing",
           "the",
           "$family",
           "before",
