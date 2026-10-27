@@ -24,7 +24,7 @@ export function bible_glyph_chapter_deu12() {
           "careful",
           "to",
           "$hammer+doing",
-          "all",
+          "$all",
           "the",
           "$sun",
           "you",
