@@ -381,7 +381,7 @@ export function bible_glyph_chapter_sng02() {
           "is",
           "mine",
           "and",
-          "I",
+          "$me",
           "am",
           "his;",
           "he",
