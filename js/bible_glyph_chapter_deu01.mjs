@@ -365,7 +365,7 @@ export function bible_glyph_chapter_deu01() {
       {
         verse_number: 13,
         words: [
-          "Choose",
+          "$hands_giving+up_arrow",
           "for",
           "yourselves",
           "wise,",
