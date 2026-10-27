@@ -959,7 +959,7 @@ export function bible_glyph_chapter_1ki12() {
           "$city+peace",
           "is",
           "too",
-          "much",
+          "$multiply",
           "for",
           "you.",
           "Here",
