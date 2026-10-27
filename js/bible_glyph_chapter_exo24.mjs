@@ -248,7 +248,7 @@ export function bible_glyph_chapter_exo24() {
           "the",
           "$blood",
           "and",
-          "splattered",
+          "$shower",
           "it",
           "on",
           "the",
