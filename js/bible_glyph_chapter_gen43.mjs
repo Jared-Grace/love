@@ -305,7 +305,7 @@ export function bible_glyph_chapter_gen43() {
           "could",
           "have",
           "$turn_back",
-          "twice.",
+          "$drum.",
         ],
       },
       {
