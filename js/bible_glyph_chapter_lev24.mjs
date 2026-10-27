@@ -54,7 +54,7 @@ export function bible_glyph_chapter_lev24() {
           "the",
           "$tent",
           "of",
-          "Meeting,",
+          "$alarm_clock,",
           "$proper_name$Aaron",
           "is",
           "to",
