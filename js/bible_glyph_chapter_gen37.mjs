@@ -736,7 +736,7 @@ export function bible_glyph_chapter_gen37() {
           "camels",
           "were",
           "carrying",
-          "spices,",
+          "$herb+droplet,",
           "balm,",
           "and",
           "myrrh",
