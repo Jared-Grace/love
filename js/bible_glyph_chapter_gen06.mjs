@@ -148,7 +148,7 @@ export function bible_glyph_chapter_gen06() {
           "and",
           "that",
           "every",
-          "inclination",
+          "$artist+thing",
           "of",
           "the",
           "thoughts",
