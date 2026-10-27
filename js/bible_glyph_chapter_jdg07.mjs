@@ -548,7 +548,7 @@ export function bible_glyph_chapter_jdg07() {
           "and",
           "the",
           "$all",
-          "camp",
+          "$camp",
           "into",
           "his",
           "$hand.",
