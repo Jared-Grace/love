@@ -357,7 +357,7 @@ export function bible_glyph_chapter_isa53() {
           "the",
           "$i_am",
           "will",
-          "prosper",
+          "$chart_increasing",
           "in",
           "His",
           "$hand.",
