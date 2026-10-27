@@ -1112,7 +1112,7 @@ export function bible_glyph_chapter_2ki09() {
           "painted",
           "her",
           "$eyes,",
-          "adorned",
+          "$thumbs_up+doing",
           "her",
           "head,",
           "and",
