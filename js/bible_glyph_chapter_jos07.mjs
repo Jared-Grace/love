@@ -453,7 +453,7 @@ export function bible_glyph_chapter_jos07() {
           "of",
           "Israel",
           "$no_entry",
-          "stand",
+          "$person+pointing_up",
           "against",
           "their",
           "enemies.",
