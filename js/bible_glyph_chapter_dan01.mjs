@@ -287,7 +287,7 @@ export function bible_glyph_chapter_dan01() {
           "$proper_name$Daniel",
           "$gift",
           "and",
-          "compassion",
+          "$hugging_face",
           "from",
           "the",
           "chief",
