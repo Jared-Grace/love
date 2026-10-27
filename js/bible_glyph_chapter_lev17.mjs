@@ -222,7 +222,7 @@ export function bible_glyph_chapter_lev17() {
           "They",
           "must",
           "$no_entry",
-          "offer",
+          "$sacrifice",
           "their",
           "$sacrifice",
           "any",
