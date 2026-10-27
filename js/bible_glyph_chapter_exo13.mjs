@@ -366,7 +366,7 @@ export function bible_glyph_chapter_exo13() {
           "$donkey",
           "you",
           "must",
-          "redeem",
+          "$coin+turn_back",
           "with",
           "a",
           "lamb,",
