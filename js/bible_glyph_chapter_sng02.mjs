@@ -243,7 +243,7 @@ export function bible_glyph_chapter_sng02() {
           "$pointing",
           "$exclamation",
           "the",
-          "winter",
+          "$snow+darkness",
           "is",
           "past;",
           "the",
