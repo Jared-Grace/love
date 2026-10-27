@@ -382,7 +382,7 @@ export function bible_glyph_chapter_job31() {
           "from",
           "my",
           "mother's",
-          "womb",
+          "$baby+house",
           "I",
           "guided",
           "the",
