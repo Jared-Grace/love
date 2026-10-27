@@ -378,7 +378,7 @@ export function bible_glyph_chapter_exo27() {
           "long,",
           "with",
           "three",
-          "posts",
+          "$candle",
           "and",
           "three",
           "bases.",
