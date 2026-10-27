@@ -77,7 +77,7 @@ export function bible_glyph_chapter_1sa25() {
           "and",
           "a",
           "$ten+all",
-          "goats,",
+          "$goat,",
           "and",
           "he",
           "was",
