@@ -200,7 +200,7 @@ export function bible_glyph_chapter_lev25() {
           "in",
           "your",
           "$earth.",
-          "All",
+          "$all",
           "its",
           "growth",
           "may",
