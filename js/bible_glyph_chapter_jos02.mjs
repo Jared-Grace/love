@@ -651,7 +651,7 @@ export function bible_glyph_chapter_jos02() {
           "own",
           "head,",
           "and",
-          "we",
+          "$me",
           "will",
           "be",
           "innocent.",
