@@ -487,7 +487,7 @@ export function bible_glyph_chapter_gen23() {
           "Heth,",
           "$four",
           "$input_numbers+all",
-          "shekels",
+          "$coin",
           "of",
           "$silver,",
           "at",
