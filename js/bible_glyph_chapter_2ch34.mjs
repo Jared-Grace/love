@@ -583,7 +583,7 @@ export function bible_glyph_chapter_2ch34() {
           "$toward",
           "$badger",
           "the",
-          "scribe,",
+          "$abacus,",
           "I",
           "have",
           "found",
