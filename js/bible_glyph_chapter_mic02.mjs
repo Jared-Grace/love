@@ -22,7 +22,7 @@ export function bible_glyph_chapter_mic02() {
           "and",
           "plot",
           "$thumbs_down",
-          "on",
+          "$pointing_up",
           "their",
           "beds!",
           "At",
