@@ -297,7 +297,7 @@ export function bible_glyph_chapter_gen07() {
           "of",
           "the",
           "month,",
-          "all",
+          "$all",
           "the",
           "fountains",
           "of",
