@@ -29,7 +29,7 @@ export function bible_glyph_chapter_psa042() {
           "$deer",
           "pants",
           "for",
-          "streams",
+          "$water_wave+road",
           "of",
           "$water,",
           "so",
