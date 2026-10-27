@@ -687,7 +687,7 @@ export function bible_glyph_chapter_isa07() {
           "that",
           "$sun,",
           "in",
-          "every",
+          "$all",
           "$place",
           "where",
           "there",
