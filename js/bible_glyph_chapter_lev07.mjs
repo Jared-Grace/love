@@ -833,7 +833,7 @@ export function bible_glyph_chapter_lev07() {
           "have",
           "the",
           "right",
-          "thigh",
+          "$leg",
           "as",
           "a",
           "portion.",
