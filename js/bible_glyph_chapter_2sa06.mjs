@@ -437,7 +437,7 @@ export function bible_glyph_chapter_2sa06() {
           "all",
           "his",
           "might",
-          "before",
+          "$face",
           "the",
           "$i_am,",
           "wearing",
