@@ -1022,7 +1022,7 @@ export function bible_glyph_chapter_ezk34() {
           "My",
           "$person,",
           "and",
-          "I",
+          "$me",
           "am",
           "your",
           "$heart_on_fire,",
