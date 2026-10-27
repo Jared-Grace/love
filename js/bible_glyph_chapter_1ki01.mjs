@@ -1075,7 +1075,7 @@ export function bible_glyph_chapter_1ki01() {
           "You",
           "are",
           "to",
-          "blow",
+          "$trumpet+doing",
           "the",
           "ram",
           "horn",
