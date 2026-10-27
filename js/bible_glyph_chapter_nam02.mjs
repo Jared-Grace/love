@@ -166,7 +166,7 @@ export function bible_glyph_chapter_nam02() {
           "$gate",
           "are",
           "thrown",
-          "open",
+          "$unlocked",
           "and",
           "the",
           "palace",
