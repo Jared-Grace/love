@@ -257,7 +257,7 @@ export function bible_glyph_chapter_gen18() {
           "$person+round_pushpin",
           "by",
           "them",
-          "under",
+          "$down_arrow",
           "the",
           "$tree",
           "as",
