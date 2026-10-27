@@ -445,7 +445,7 @@ export function bible_glyph_chapter_jdg07() {
           "settled",
           "in",
           "the",
-          "valley",
+          "$valley",
           "like",
           "a",
           "swarm",
