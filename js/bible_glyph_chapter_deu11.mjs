@@ -157,7 +157,7 @@ export function bible_glyph_chapter_deu11() {
           "in",
           "the",
           "$wilderness",
-          "until",
+          "$finish",
           "you",
           "$footprints",
           "this",
