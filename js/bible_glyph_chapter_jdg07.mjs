@@ -440,7 +440,7 @@ export function bible_glyph_chapter_jdg07() {
           "$son",
           "of",
           "the",
-          "east",
+          "$compass+right_arrow",
           "had",
           "settled",
           "in",
