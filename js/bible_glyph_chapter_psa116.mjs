@@ -73,7 +73,7 @@ export function bible_glyph_chapter_psa116() {
           "by",
           "trouble",
           "and",
-          "sorrow.",
+          "$crying_face+thing.",
         ],
       },
       {
