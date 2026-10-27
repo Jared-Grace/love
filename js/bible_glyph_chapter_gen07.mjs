@@ -358,7 +358,7 @@ export function bible_glyph_chapter_gen07() {
           "$woman",
           "and",
           "the",
-          "three",
+          "$three",
           "$woman",
           "of",
           "his",
