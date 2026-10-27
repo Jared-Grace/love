@@ -88,7 +88,7 @@ export function bible_glyph_chapter_jer17() {
           "along",
           "with",
           "your",
-          "high",
+          "$snow_capped_mountain",
           "places,",
           "because",
           "of",
