@@ -723,7 +723,7 @@ export function bible_glyph_chapter_2sa07() {
           "$family",
           "$wrestling+heart_on_fire,",
           "the",
-          "one",
+          "$one",
           "$map",
           "on",
           "$earth",
