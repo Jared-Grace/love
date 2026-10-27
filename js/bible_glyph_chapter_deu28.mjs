@@ -1234,7 +1234,7 @@ export function bible_glyph_chapter_deu28() {
         words: [
           "You",
           "will",
-          "plant",
+          "$sprout+down_arrow+doing",
           "$vineyard",
           "and",
           "$kneeling+doing",
