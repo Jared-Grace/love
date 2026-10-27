@@ -49,7 +49,7 @@ export function bible_glyph_chapter_psa008() {
           "You",
           "have",
           "ordained",
-          "praise",
+          "$mechanical_arm",
           "on",
           "account",
           "of",
