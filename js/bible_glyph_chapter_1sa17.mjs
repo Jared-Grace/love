@@ -1548,7 +1548,7 @@ export function bible_glyph_chapter_1sa17() {
           "sank",
           "into",
           "his",
-          "forehead,",
+          "$face+top,",
           "and",
           "he",
           "fell",
