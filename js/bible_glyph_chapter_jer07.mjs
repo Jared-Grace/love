@@ -996,7 +996,7 @@ export function bible_glyph_chapter_jer07() {
           "something",
           "I",
           "$no_entry",
-          "commanded,",
+          "$speech+scroll,",
           "$no_entry",
           "did",
           "it",
