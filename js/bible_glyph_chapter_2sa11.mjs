@@ -671,7 +671,7 @@ export function bible_glyph_chapter_2sa11() {
           "$lightbulb",
           "they",
           "would",
-          "shoot",
+          "$bow+toward",
           "from",
           "atop",
           "the",
