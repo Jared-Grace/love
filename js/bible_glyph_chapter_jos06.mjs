@@ -17,7 +17,7 @@ export function bible_glyph_chapter_jos06() {
           "$city+moon",
           "was",
           "tightly",
-          "shut",
+          "$locked+doing",
           "up",
           "because",
           "of",
