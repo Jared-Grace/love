@@ -56,7 +56,7 @@ export function bible_glyph_chapter_jer17() {
           "poles",
           "by",
           "the",
-          "green",
+          "$tree+leaf+describing",
           "$tree",
           "and",
           "on",
