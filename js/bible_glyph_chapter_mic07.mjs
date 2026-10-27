@@ -593,7 +593,7 @@ export function bible_glyph_chapter_mic07() {
           "$no_entry",
           "$might+up_arrow",
           "His",
-          "anger",
+          "$nose+fire",
           "$clock+all,",
           "because",
           "He",
