@@ -241,7 +241,7 @@ export function bible_glyph_chapter_nam01() {
       {
         verse_number: 9,
         words: [
-          "Whatever",
+          "$flashlight+question",
           "you",
           "plot",
           "against",
