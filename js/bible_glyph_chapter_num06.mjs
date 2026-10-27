@@ -439,7 +439,7 @@ export function bible_glyph_chapter_num06() {
           "$i_am",
           "of",
           "an",
-          "unblemished",
+          "$full_moon+describing",
           "$son",
           "of",
           "a",
