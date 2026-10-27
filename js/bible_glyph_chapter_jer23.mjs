@@ -212,7 +212,7 @@ export function bible_glyph_chapter_jer23() {
           "and",
           "$wrestling+heart_on_fire",
           "will",
-          "dwell",
+          "$tent+doing",
           "securely.",
           "And",
           "this",
