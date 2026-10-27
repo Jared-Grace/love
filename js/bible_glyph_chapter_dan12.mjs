@@ -36,7 +36,7 @@ export function bible_glyph_chapter_dan12() {
           "will",
           "be",
           "a",
-          "time",
+          "$clock",
           "of",
           "distress",
           "the",
