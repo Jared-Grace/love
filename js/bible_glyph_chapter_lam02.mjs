@@ -493,7 +493,7 @@ export function bible_glyph_chapter_lam02() {
           "to",
           "their",
           "mothers:",
-          "Where",
+          "$question+round_pushpin",
           "is",
           "the",
           "grain",
