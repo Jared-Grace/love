@@ -1318,7 +1318,7 @@ export function bible_glyph_chapter_2ki09() {
         words: [
           "And",
           "Jezebel's",
-          "body",
+          "$skull+bone",
           "will",
           "lie",
           "like",
