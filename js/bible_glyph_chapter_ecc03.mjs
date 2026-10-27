@@ -208,7 +208,7 @@ export function bible_glyph_chapter_ecc03() {
           "does",
           "the",
           "$hammer+doing",
-          "gain",
+          "$takeout_box+up_arrow",
           "from",
           "his",
           "toil?",
