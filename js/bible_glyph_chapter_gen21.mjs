@@ -166,7 +166,7 @@ export function bible_glyph_chapter_gen21() {
           "$son",
           "in",
           "his",
-          "old",
+          "$old_man+thing",
           "age.",
         ],
       },
