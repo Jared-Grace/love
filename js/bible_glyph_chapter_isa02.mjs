@@ -251,7 +251,7 @@ export function bible_glyph_chapter_isa02() {
           "is",
           "$battery",
           "of",
-          "horses,",
+          "$horse,",
           "with",
           "no",
           "$end_arrow+round_pushpin",
