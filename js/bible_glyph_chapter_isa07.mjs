@@ -700,7 +700,7 @@ export function bible_glyph_chapter_isa07() {
           "$ten+all",
           "shekels",
           "of",
-          "silver,",
+          "$silver,",
           "only",
           "briers",
           "and",
