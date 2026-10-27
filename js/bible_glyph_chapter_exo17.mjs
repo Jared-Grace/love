@@ -140,7 +140,7 @@ export function bible_glyph_chapter_exo17() {
           "and",
           "they",
           "will",
-          "stone",
+          "$stone+throwing+doing",
           "me.",
         ],
       },
