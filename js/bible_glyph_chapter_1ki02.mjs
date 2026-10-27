@@ -1540,7 +1540,7 @@ export function bible_glyph_chapter_1ki02() {
           "have",
           "you",
           "$no_entry",
-          "kept",
+          "$guard",
           "your",
           "oath",
           "to",
