@@ -1405,7 +1405,7 @@ export function bible_glyph_chapter_1sa20() {
           "with",
           "his",
           "friend,",
-          "though",
+          "$finish",
           "$two_hearts+proper_name",
           "wept",
           "the",
