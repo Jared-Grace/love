@@ -1300,7 +1300,7 @@ export function bible_glyph_chapter_1sa17() {
           "Am",
           "I",
           "a",
-          "dog,",
+          "$dog,",
           "he",
           "$speech",
           "to",
