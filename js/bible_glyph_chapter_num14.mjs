@@ -896,7 +896,7 @@ export function bible_glyph_chapter_num14() {
           "will",
           "fall",
           "in",
-          "this",
+          "$flashlight",
           "$wilderness,",
           "all",
           "of",
