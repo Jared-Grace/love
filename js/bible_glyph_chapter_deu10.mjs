@@ -691,7 +691,7 @@ export function bible_glyph_chapter_deu10() {
           "down",
           "to",
           "$clamp+proper_name",
-          "seventy",
+          "$seven+zero",
           "$person_other",
           "in",
           "number,",
