@@ -211,7 +211,7 @@ export function bible_glyph_chapter_nam03() {
           "$crocodile",
           "with",
           "$water",
-          "around",
+          "$around",
           "her,",
           "whose",
           "rampart",
