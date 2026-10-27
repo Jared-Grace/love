@@ -564,7 +564,7 @@ export function bible_glyph_chapter_2ki05() {
           "$man_beard",
           "of",
           "$heart_on_fire,",
-          "stood",
+          "$person+round_pushpin",
           "before",
           "him,",
           "and",
