@@ -253,7 +253,7 @@ export function bible_glyph_chapter_1sa01() {
           "to",
           "you",
           "than",
-          "ten",
+          "$ten",
           "$son?",
         ],
       },
