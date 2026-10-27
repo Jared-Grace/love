@@ -242,7 +242,7 @@ export function bible_glyph_chapter_gen08() {
           "him",
           "in",
           "the",
-          "ark,",
+          "$package,",
           "because",
           "the",
           "$water",
