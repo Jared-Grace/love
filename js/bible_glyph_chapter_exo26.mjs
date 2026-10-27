@@ -747,7 +747,7 @@ export function bible_glyph_chapter_exo26() {
           "$veil",
           "of",
           "$blue_circle,",
-          "purple",
+          "$purple_circle",
           "and",
           "scarlet",
           "yarn",
