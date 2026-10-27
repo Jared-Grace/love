@@ -70,7 +70,7 @@ export function bible_glyph_chapter_hos06() {
           "$sprout+doing",
           "in",
           "His",
-          "presence.",
+          "$face.",
         ],
       },
       {
