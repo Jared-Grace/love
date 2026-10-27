@@ -1017,7 +1017,7 @@ export function bible_glyph_chapter_exo32() {
           "day",
           "$fishing_pole+proper_name",
           "$speech",
-          "to",
+          "$toward",
           "the",
           "$family,",
           "You",
