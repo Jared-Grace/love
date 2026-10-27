@@ -32,7 +32,7 @@ export function bible_glyph_chapter_exo21() {
         words: [
           "$pointing",
           "you",
-          "buy",
+          "$coin+hand_receiving",
           "a",
           "$proper_name$Hebrew",
           "$kneeling,",
