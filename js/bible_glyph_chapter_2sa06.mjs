@@ -696,7 +696,7 @@ export function bible_glyph_chapter_2sa06() {
           "the",
           "$i_am,",
           "$back+flashlight",
-          "chose",
+          "$check_box",
           "me",
           "over",
           "your",
