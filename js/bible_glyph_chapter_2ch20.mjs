@@ -107,7 +107,7 @@ export function bible_glyph_chapter_2ch20() {
           "$hands_raised+proper_name",
           "$tray_in+doing",
           "to",
-          "seek",
+          "$magnifying_glass",
           "the",
           "$i_am;",
           "and",
