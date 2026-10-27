@@ -115,7 +115,7 @@ export function bible_glyph_chapter_1ch29() {
           "and",
           "slabs",
           "of",
-          "marble,",
+          "$white_circle+rock,",
           "all",
           "in",
           "abundance.",
