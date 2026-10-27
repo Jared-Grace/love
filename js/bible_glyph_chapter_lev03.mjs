@@ -182,7 +182,7 @@ export function bible_glyph_chapter_lev03() {
           "present",
           "a",
           "male",
-          "or",
+          "$shuffle",
           "female",
           "without",
           "blemish.",
