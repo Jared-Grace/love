@@ -716,7 +716,7 @@ export function bible_glyph_chapter_amo05() {
           "you",
           "bring",
           "Me",
-          "sacrifices",
+          "$sacrifice",
           "and",
           "offerings",
           "forty",
