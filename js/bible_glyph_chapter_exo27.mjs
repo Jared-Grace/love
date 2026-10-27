@@ -417,7 +417,7 @@ export function bible_glyph_chapter_exo27() {
           "$four",
           "$candle",
           "and",
-          "four",
+          "$four",
           "bases.",
         ],
       },
