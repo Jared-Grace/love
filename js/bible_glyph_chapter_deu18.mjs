@@ -157,7 +157,7 @@ export function bible_glyph_chapter_deu18() {
           "to",
           "$person+round_pushpin",
           "and",
-          "minister",
+          "$bellhop_bell+doing",
           "in",
           "$i_am",
           "$name_tag",
