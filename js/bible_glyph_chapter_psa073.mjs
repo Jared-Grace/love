@@ -295,7 +295,7 @@ export function bible_glyph_chapter_psa073() {
           "$lightbulb",
           "all",
           "$flashlight,",
-          "it",
+          "$pointing_back",
           "was",
           "troublesome",
           "in",
