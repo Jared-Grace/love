@@ -145,7 +145,7 @@ export function bible_glyph_chapter_num35() {
           "$ten+all",
           "on",
           "the",
-          "south,",
+          "$compass+down_arrow,",
           "two",
           "$ten+all",
           "on",
