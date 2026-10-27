@@ -900,7 +900,7 @@ export function bible_glyph_chapter_1ki08() {
           "highest",
           "$sky,",
           "$no_entry",
-          "contain",
+          "$package+hand+doing",
           "You,",
           "much",
           "less",
