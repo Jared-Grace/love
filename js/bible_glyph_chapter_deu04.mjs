@@ -319,7 +319,7 @@ export function bible_glyph_chapter_deu04() {
           "they",
           "do",
           "not",
-          "slip",
+          "$away+doing",
           "from",
           "your",
           "$heart_organ",
