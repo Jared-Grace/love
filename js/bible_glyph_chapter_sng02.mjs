@@ -208,7 +208,7 @@ export function bible_glyph_chapter_sng02() {
           "$next_track",
           "our",
           "$wall+back,",
-          "gazing",
+          "$eye+window+doing",
           "$tray_out",
           "the",
           "windows,",
