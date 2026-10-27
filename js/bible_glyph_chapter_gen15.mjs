@@ -259,7 +259,7 @@ export function bible_glyph_chapter_gen15() {
           "$dove+ring",
           "and",
           "a",
-          "young",
+          "$hatching_chick",
           "pigeon.",
         ],
       },
