@@ -903,7 +903,7 @@ export function bible_glyph_chapter_jos06() {
           "invoked",
           "this",
           "solemn",
-          "oath,",
+          "$raised_back_of_hand+doing,",
           "$speech+thumbs_down",
           "is",
           "the",
