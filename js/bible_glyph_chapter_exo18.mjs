@@ -79,7 +79,7 @@ export function bible_glyph_chapter_exo18() {
           "her",
           "$two",
           "$son.",
-          "One",
+          "$one",
           "$back+flashlight",
           "was",
           "$name_tag",
