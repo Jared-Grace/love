@@ -700,7 +700,7 @@ export function bible_glyph_chapter_gen37() {
           "the",
           "$hole+droplet",
           "was",
-          "empty,",
+          "$tray_out+droplet+describing,",
           "with",
           "no",
           "$water",
