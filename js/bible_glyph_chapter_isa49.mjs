@@ -719,7 +719,7 @@ export function bible_glyph_chapter_isa49() {
           "has",
           "reared",
           "them?",
-          "Look,",
+          "$exclamation,",
           "I",
           "was",
           "left",
