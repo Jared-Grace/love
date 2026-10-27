@@ -35,7 +35,7 @@ export function bible_glyph_chapter_exo27() {
           "and",
           "$three",
           "$triangular_ruler",
-          "high.",
+          "$person+pointing_up.",
         ],
       },
       {
