@@ -273,7 +273,7 @@ export function bible_glyph_chapter_dan01() {
           "permission",
           "$no_entry",
           "to",
-          "defile",
+          "$nauseated_face+doing",
           "himself.",
         ],
       },
