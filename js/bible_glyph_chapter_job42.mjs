@@ -267,7 +267,7 @@ export function bible_glyph_chapter_job42() {
           "Job",
           "had",
           "$hands_praying",
-          "for",
+          "$back+person",
           "his",
           "friends,",
           "the",
