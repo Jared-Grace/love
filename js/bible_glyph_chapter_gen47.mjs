@@ -753,7 +753,7 @@ export function bible_glyph_chapter_gen47() {
           "portion",
           "of",
           "the",
-          "land,",
+          "$brown_square,",
           "for",
           "the",
           "$priest",
