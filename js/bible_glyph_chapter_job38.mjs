@@ -764,7 +764,7 @@ export function bible_glyph_chapter_job38() {
         words: [
           "Can",
           "you",
-          "hunt",
+          "$net+deer+doing",
           "the",
           "prey",
           "for",
