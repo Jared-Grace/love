@@ -282,7 +282,7 @@ export function bible_glyph_chapter_lam03() {
           "intoxicated",
           "me",
           "with",
-          "wormwood.",
+          "$herb+lemon.",
         ],
       },
       {
