@@ -450,7 +450,7 @@ export function bible_glyph_chapter_job03() {
         verse_number: 22,
         words: [
           "who",
-          "rejoice",
+          "$beaming+describing",
           "and",
           "greatly",
           "exult",
