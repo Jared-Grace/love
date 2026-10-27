@@ -827,7 +827,7 @@ export function bible_glyph_chapter_jer31() {
           "in",
           "the",
           "land",
-          "together,",
+          "$linked_paperclips+manner,",
           "the",
           "farmers",
           "and",
