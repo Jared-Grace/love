@@ -163,7 +163,7 @@ export function bible_glyph_chapter_lev14() {
           "and",
           "was",
           "slaughtered",
-          "over",
+          "$pointing_up",
           "the",
           "$sprout",
           "$water.",
