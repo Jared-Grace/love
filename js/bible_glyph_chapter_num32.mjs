@@ -475,7 +475,7 @@ export function bible_glyph_chapter_num32() {
           "$brick",
           "$sheep",
           "folds",
-          "here",
+          "$flashlight+round_pushpin",
           "for",
           "our",
           "livestock",
