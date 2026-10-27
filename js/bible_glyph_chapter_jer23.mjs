@@ -844,7 +844,7 @@ export function bible_glyph_chapter_jer23() {
           "Can",
           "a",
           "$man_beard",
-          "hide",
+          "$see_no_evil_monkey",
           "in",
           "secret",
           "places",
