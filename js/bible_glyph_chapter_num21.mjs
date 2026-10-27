@@ -454,7 +454,7 @@ export function bible_glyph_chapter_num21() {
           "lie",
           "along",
           "the",
-          "border",
+          "$passport_control",
           "of",
           "$father+proper_name.",
         ],
