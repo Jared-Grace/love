@@ -331,7 +331,7 @@ export function bible_glyph_chapter_mic05() {
           "will",
           "be",
           "lifted",
-          "over",
+          "$pointing_up",
           "your",
           "foes,",
           "and",
