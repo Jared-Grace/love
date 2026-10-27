@@ -1267,7 +1267,7 @@ export function bible_glyph_chapter_num14() {
           "$speech,",
           "$flashlight+question",
           "are",
-          "you",
+          "$you",
           "transgressing",
           "the",
           "commandment",
