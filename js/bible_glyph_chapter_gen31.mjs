@@ -306,7 +306,7 @@ export function bible_glyph_chapter_gen31() {
           "are",
           "streaked",
           "and",
-          "speckled",
+          "$black_circle+describing",
           "and",
           "spotted,",
           "for",
