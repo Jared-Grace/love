@@ -300,7 +300,7 @@ export function bible_glyph_chapter_1ki20() {
           "your",
           "$kneeling",
           "the",
-          "first",
+          "$first_place",
           "time",
           "I",
           "will",
