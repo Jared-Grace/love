@@ -259,7 +259,7 @@ export function bible_glyph_chapter_num19() {
           "and",
           "store",
           "them",
-          "outside",
+          "$sun_behind_small_cloud",
           "the",
           "$camp",
           "in",
