@@ -172,7 +172,7 @@ export function bible_glyph_chapter_psa090() {
           "sins",
           "in",
           "the",
-          "light",
+          "$light+thing",
           "of",
           "Your",
           "presence.",
