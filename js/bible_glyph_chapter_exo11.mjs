@@ -50,7 +50,7 @@ export function bible_glyph_chapter_exo11() {
           "drive",
           "you",
           "out",
-          "completely.",
+          "$end_arrow+thing.",
         ],
       },
       {
