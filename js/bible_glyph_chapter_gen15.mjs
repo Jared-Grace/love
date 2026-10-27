@@ -406,7 +406,7 @@ export function bible_glyph_chapter_gen15() {
           "however,",
           "will",
           "$footprints",
-          "to",
+          "$toward",
           "your",
           "$father",
           "in",
