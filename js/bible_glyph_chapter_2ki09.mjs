@@ -153,7 +153,7 @@ export function bible_glyph_chapter_2ki09() {
           "commanders",
           "of",
           "the",
-          "army",
+          "$raised_fist",
           "were",
           "sitting",
           "together,",
