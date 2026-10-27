@@ -167,7 +167,7 @@ export function bible_glyph_chapter_exo37() {
           "two",
           "$cherub",
           "of",
-          "hammered",
+          "$hammer+curly_loop",
           "$gold,",
           "$hammer+doing",
           "at",
