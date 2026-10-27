@@ -172,7 +172,7 @@ export function bible_glyph_chapter_2sa06() {
           "When",
           "they",
           "$footprints",
-          "to",
+          "$finish",
           "the",
           "threshing",
           "floor",
