@@ -496,7 +496,7 @@ export function bible_glyph_chapter_pro03() {
           "or",
           "the",
           "$tornado+collision",
-          "that",
+          "$pointing",
           "$footprints",
           "the",
           "$thumbs_down,",
