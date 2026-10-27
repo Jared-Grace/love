@@ -233,7 +233,7 @@ export function bible_glyph_chapter_pro16() {
           "from",
           "the",
           "$i_am;",
-          "all",
+          "$all",
           "the",
           "weights",
           "in",
