@@ -790,7 +790,7 @@ export function bible_glyph_chapter_deu11() {
           "of",
           "your",
           "$foot",
-          "treads",
+          "$hiking_boot",
           "will",
           "be",
           "yours.",
