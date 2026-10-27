@@ -58,7 +58,7 @@ export function bible_glyph_chapter_isa43() {
         words: [
           "When",
           "you",
-          "pass",
+          "$bridge",
           "through",
           "the",
           "$water,",
