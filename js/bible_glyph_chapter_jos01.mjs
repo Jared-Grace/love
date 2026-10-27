@@ -111,7 +111,7 @@ export function bible_glyph_chapter_jos01() {
           "$proper_name$Lebanon",
           "to",
           "the",
-          "great",
+          "$top",
           "River",
           "$proper_name$Euphrates,",
           "all",
