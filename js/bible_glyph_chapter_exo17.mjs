@@ -180,7 +180,7 @@ export function bible_glyph_chapter_exo17() {
           "you",
           "struck",
           "the",
-          "Nile,",
+          "$crocodile,",
           "and",
           "go.",
         ],
