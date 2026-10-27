@@ -259,7 +259,7 @@ export function bible_glyph_chapter_zec12() {
           "tents",
           "of",
           "$hands_raised+proper_name",
-          "first,",
+          "$first_place,",
           "so",
           "that",
           "the",
