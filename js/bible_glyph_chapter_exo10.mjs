@@ -862,7 +862,7 @@ export function bible_glyph_chapter_exo10() {
       {
         verse_number: 26,
         words: [
-          "Even",
+          "$plus",
           "our",
           "livestock",
           "must",
