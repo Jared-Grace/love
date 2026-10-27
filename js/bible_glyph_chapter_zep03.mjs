@@ -636,7 +636,7 @@ export function bible_glyph_chapter_zep03() {
           "will",
           "$tray_in+doing",
           "you.",
-          "For",
+          "$pointing",
           "I",
           "will",
           "$hands_giving",
