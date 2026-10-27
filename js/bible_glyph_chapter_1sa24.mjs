@@ -104,7 +104,7 @@ export function bible_glyph_chapter_1sa24() {
           "recesses",
           "of",
           "the",
-          "cave.",
+          "$cave.",
         ],
       },
       {
