@@ -1047,7 +1047,7 @@ export function bible_glyph_chapter_gen43() {
           "at",
           "one",
           "$man_beard",
-          "another",
+          "$person+sheep",
           "in",
           "astonishment.",
         ],
