@@ -145,7 +145,7 @@ export function bible_glyph_chapter_gen13() {
           "them",
           "dwelling",
           "together,",
-          "for",
+          "$pointing",
           "their",
           "possessions",
           "were",
