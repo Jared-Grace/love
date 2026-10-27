@@ -677,7 +677,7 @@ export function bible_glyph_chapter_lev15() {
         verse_number: 23,
         words: [
           "And",
-          "whether",
+          "$traffic_light",
           "it",
           "is",
           "a",
