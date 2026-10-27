@@ -791,7 +791,7 @@ export function bible_glyph_chapter_gen31() {
           "you",
           "$walking",
           "$walking",
-          "because",
+          "$pointing",
           "you",
           "longed",
           "for",
