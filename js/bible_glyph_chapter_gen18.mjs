@@ -837,7 +837,7 @@ export function bible_glyph_chapter_gen18() {
           "I",
           "$magnifying_glass+exclamation",
           "forty-five",
-          "there,",
+          "$telescope,",
           "I",
           "will",
           "$no_entry",
