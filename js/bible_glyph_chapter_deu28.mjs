@@ -623,7 +623,7 @@ export function bible_glyph_chapter_deu28() {
           "and",
           "$megaphone+crowd+thing",
           "and",
-          "reproof",
+          "$pointing+anger_symbol+thing",
           "upon",
           "you",
           "in",
