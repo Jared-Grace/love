@@ -647,7 +647,7 @@ export function bible_glyph_chapter_gen39() {
           "care,",
           "so",
           "that",
-          "he",
+          "$pointing_back",
           "was",
           "$hammer+doing",
           "for",
