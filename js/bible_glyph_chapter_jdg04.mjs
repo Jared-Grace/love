@@ -306,7 +306,7 @@ export function bible_glyph_chapter_jdg04() {
         words: [
           "where",
           "he",
-          "summoned",
+          "$loudspeaker+mouth",
           "$proper_name$Zebulun",
           "and",
           "$proper_name$Naphtali,",
