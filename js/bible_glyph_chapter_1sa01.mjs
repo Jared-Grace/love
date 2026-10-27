@@ -151,7 +151,7 @@ export function bible_glyph_chapter_1sa01() {
           "$hands_giving",
           "a",
           "double",
-          "portion,",
+          "$input_numbers+thing,",
           "for",
           "he",
           "$heart_red+doing",
