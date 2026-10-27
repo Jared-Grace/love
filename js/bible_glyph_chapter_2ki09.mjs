@@ -408,7 +408,7 @@ export function bible_glyph_chapter_2ki09() {
           "That",
           "is",
           "a",
-          "lie,",
+          "$lying_face,",
           "they",
           "$speech.",
           "Tell",
