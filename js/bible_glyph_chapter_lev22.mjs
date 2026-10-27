@@ -626,7 +626,7 @@ export function bible_glyph_chapter_lev22() {
           "fulfil",
           "a",
           "$saluting_face,",
-          "or",
+          "$shuffle",
           "as",
           "a",
           "freewill",
