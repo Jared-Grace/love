@@ -374,7 +374,7 @@ export function bible_glyph_chapter_job42() {
           "he",
           "also",
           "had",
-          "seven",
+          "$seven",
           "$son",
           "and",
           "three",
