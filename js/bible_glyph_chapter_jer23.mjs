@@ -187,7 +187,7 @@ export function bible_glyph_chapter_jer23() {
           "$castle+doing",
           "as",
           "$king",
-          "wisely,",
+          "$nerd_face,",
           "and",
           "will",
           "$hammer+doing",
