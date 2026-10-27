@@ -330,7 +330,7 @@ export function bible_glyph_chapter_dan12() {
           "up",
           "and",
           "sealed",
-          "until",
+          "$finish",
           "the",
           "time",
           "of",
