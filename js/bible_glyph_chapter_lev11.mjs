@@ -136,7 +136,7 @@ export function bible_glyph_chapter_lev11() {
           "a",
           "divided",
           "hoof;",
-          "it",
+          "$pointing_back",
           "is",
           "unclean",
           "for",
