@@ -32,7 +32,7 @@ export function bible_glyph_chapter_sng02() {
           "Like",
           "a",
           "$white_flower",
-          "among",
+          "$brain+arrow_both_ways",
           "the",
           "thorns",
           "is",
