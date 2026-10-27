@@ -384,7 +384,7 @@ export function bible_glyph_chapter_zep01() {
           "men",
           "$ice+doing",
           "in",
-          "complacency,",
+          "$wine+dust,",
           "who",
           "$speech",
           "to",
