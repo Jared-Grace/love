@@ -728,7 +728,7 @@ export function bible_glyph_chapter_2ki06() {
           "may",
           "$eating",
           "and",
-          "drink",
+          "$cup_with_straw",
           "and",
           "then",
           "$walking",
