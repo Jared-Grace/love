@@ -59,7 +59,7 @@ export function bible_glyph_chapter_nam03() {
           "$sword,",
           "$cloud_with_lightning",
           "$spear,",
-          "heaps",
+          "$multiply+thing",
           "of",
           "slain,",
           "mounds",
