@@ -504,7 +504,7 @@ export function bible_glyph_chapter_deu19() {
           "to",
           "establish",
           "any",
-          "wrongdoing",
+          "$cyclone",
           "or",
           "$bow",
           "against",
