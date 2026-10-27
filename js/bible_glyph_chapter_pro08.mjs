@@ -287,7 +287,7 @@ export function bible_glyph_chapter_pro08() {
           "$crown+hand+doing,",
           "and",
           "all",
-          "nobles",
+          "$heart_red+crown",
           "who",
           "govern",
           "$ruler+thing.",
