@@ -436,7 +436,7 @@ export function bible_glyph_chapter_2ki17() {
           "the",
           "entire",
           "$scroll",
-          "that",
+          "$back+flashlight",
           "I",
           "commanded",
           "your",
