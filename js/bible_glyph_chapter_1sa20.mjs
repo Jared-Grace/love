@@ -693,7 +693,7 @@ export function bible_glyph_chapter_1sa20() {
           "$arrow",
           "to",
           "the",
-          "side",
+          "$pointing+person",
           "of",
           "it,",
           "as",
