@@ -234,7 +234,7 @@ export function bible_glyph_chapter_lev25() {
           "years",
           "amount",
           "to",
-          "forty",
+          "$four+zero",
           "nine",
           "years.",
         ],
