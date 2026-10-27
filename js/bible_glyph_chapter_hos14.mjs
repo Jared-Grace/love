@@ -114,7 +114,7 @@ export function bible_glyph_chapter_hos14() {
           "freely",
           "$heart_red+doing",
           "them,",
-          "for",
+          "$pointing",
           "My",
           "anger",
           "has",
