@@ -312,7 +312,7 @@ export function bible_glyph_chapter_num11() {
           "I",
           "$no_entry",
           "$magnifying_glass+exclamation",
-          "favor",
+          "$heart_orange",
           "in",
           "Your",
           "$eyes,",
