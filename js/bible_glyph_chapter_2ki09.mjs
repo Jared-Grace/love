@@ -201,7 +201,7 @@ export function bible_glyph_chapter_2ki09() {
           "$lotion_bottle",
           "on",
           "his",
-          "head",
+          "$person_gesturing_ok",
           "and",
           "$speech,",
           "This",
