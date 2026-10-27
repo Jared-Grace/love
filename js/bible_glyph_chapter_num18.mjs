@@ -137,7 +137,7 @@ export function bible_glyph_chapter_num18() {
           "They",
           "are",
           "to",
-          "join",
+          "$paperclip+doing",
           "you",
           "and",
           "attend",
