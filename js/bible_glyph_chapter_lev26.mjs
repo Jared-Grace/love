@@ -935,7 +935,7 @@ export function bible_glyph_chapter_lev26() {
           "smell",
           "the",
           "pleasing",
-          "aroma",
+          "$nose",
           "of",
           "your",
           "sacrifices.",
