@@ -160,7 +160,7 @@ export function bible_glyph_chapter_2sa12() {
         verse_number: 5,
         words: [
           "$two_hearts+proper_name",
-          "burned",
+          "$angry_face+doing",
           "with",
           "anger",
           "against",
