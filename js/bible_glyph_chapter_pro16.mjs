@@ -275,7 +275,7 @@ export function bible_glyph_chapter_pro16() {
           "he",
           "who",
           "$mouth",
-          "honestly",
+          "$up_arrow+ruler",
           "is",
           "$heart_red+doing.",
         ],
