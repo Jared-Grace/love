@@ -926,7 +926,7 @@ export function bible_glyph_chapter_exo39() {
         verse_number: 36,
         words: [
           "the",
-          "table",
+          "$hand_sending+thing",
           "with",
           "all",
           "its",
