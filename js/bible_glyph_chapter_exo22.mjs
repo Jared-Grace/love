@@ -662,7 +662,7 @@ export function bible_glyph_chapter_exo22() {
           "You",
           "must",
           "$no_entry",
-          "mistreat",
+          "$persevering_face+doing",
           "any",
           "$widow",
           "or",
