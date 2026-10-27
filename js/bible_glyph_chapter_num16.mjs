@@ -1268,7 +1268,7 @@ export function bible_glyph_chapter_num16() {
           "$son",
           "of",
           "$wrestling+heart_on_fire",
-          "grumbled",
+          "$night+doing",
           "against",
           "$fishing_pole+proper_name",
           "and",
