@@ -98,7 +98,7 @@ export function bible_glyph_chapter_exo40() {
         words: [
           "$hands_giving",
           "the",
-          "gold",
+          "$gold",
           "$altar",
           "of",
           "incense",
