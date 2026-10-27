@@ -800,7 +800,7 @@ export function bible_glyph_chapter_lev15() {
           "any",
           "furniture",
           "on",
-          "which",
+          "$back+flashlight",
           "she",
           "sits",
           "during",
