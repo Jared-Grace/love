@@ -1180,7 +1180,7 @@ export function bible_glyph_chapter_num22() {
           "the",
           "$father+proper_name",
           "$city",
-          "on",
+          "$pointing_up",
           "the",
           "$proper_name$Arnon",
           "border,",
