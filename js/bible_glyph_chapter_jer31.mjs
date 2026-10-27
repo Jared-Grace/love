@@ -1338,7 +1338,7 @@ export function bible_glyph_chapter_jer31() {
           "line",
           "will",
           "once",
-          "again",
+          "$repeat",
           "stretch",
           "out",
           "straight",
