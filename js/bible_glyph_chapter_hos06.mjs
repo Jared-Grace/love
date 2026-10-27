@@ -296,7 +296,7 @@ export function bible_glyph_chapter_hos06() {
           "O",
           "Judah,",
           "a",
-          "harvest",
+          "$harvest",
           "is",
           "appointed",
           "for",
