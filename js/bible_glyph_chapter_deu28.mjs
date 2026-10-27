@@ -2203,7 +2203,7 @@ export function bible_glyph_chapter_deu28() {
           "of",
           "the",
           "terrifying",
-          "sights",
+          "$eyes+thing",
           "your",
           "$eyes",
           "will",
