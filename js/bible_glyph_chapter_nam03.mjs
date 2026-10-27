@@ -269,7 +269,7 @@ export function bible_glyph_chapter_nam03() {
           "$sun_behind_small_cloud.",
           "They",
           "$throwing+lots+doing",
-          "lots",
+          "$lots",
           "for",
           "her",
           "dignitaries,",
