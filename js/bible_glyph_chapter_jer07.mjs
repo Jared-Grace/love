@@ -57,7 +57,7 @@ export function bible_glyph_chapter_jer07() {
           "who",
           "$footprints",
           "through",
-          "these",
+          "$flashlight+flashlight",
           "$gate",
           "to",
           "$bowing",
