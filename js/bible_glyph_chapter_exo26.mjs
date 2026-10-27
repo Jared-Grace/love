@@ -64,7 +64,7 @@ export function bible_glyph_chapter_exo26() {
       {
         verse_number: 3,
         words: [
-          "Five",
+          "$five",
           "of",
           "the",
           "curtains",
