@@ -894,7 +894,7 @@ export function bible_glyph_chapter_neh09() {
           "already",
           "dug,",
           "$vineyard,",
-          "olive",
+          "$olive",
           "groves,",
           "and",
           "fruit",
