@@ -511,7 +511,7 @@ export function bible_glyph_chapter_lev24() {
       {
         verse_number: 20,
         words: [
-          "fracture",
+          "$broken_chain+thing",
           "for",
           "fracture,",
           "$eyes",
