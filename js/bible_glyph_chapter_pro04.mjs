@@ -77,7 +77,7 @@ export function bible_glyph_chapter_pro04() {
           "your",
           "$heart_organ",
           "lay",
-          "hold",
+          "$hand+up_arrow+doing",
           "of",
           "my",
           "$speech;",
