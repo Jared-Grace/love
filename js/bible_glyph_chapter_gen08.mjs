@@ -44,7 +44,7 @@ export function bible_glyph_chapter_gen08() {
           "$water",
           "began",
           "to",
-          "subside.",
+          "$water+down_arrow+doing.",
         ],
       },
       {
