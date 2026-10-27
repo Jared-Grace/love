@@ -543,7 +543,7 @@ export function bible_glyph_chapter_exo02() {
           "the",
           "daughters",
           "$footprints",
-          "to",
+          "$toward",
           "$proper_name$Reuel",
           "their",
           "$father,",
