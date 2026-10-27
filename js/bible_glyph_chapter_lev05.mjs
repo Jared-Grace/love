@@ -183,7 +183,7 @@ export function bible_glyph_chapter_lev05() {
           "$bow",
           "$bow+doing,",
           "a",
-          "female",
+          "$female_sign",
           "$tray_out",
           "$sheep,",
           "a",
