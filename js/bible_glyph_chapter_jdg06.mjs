@@ -549,7 +549,7 @@ export function bible_glyph_chapter_jdg06() {
           "that",
           "it",
           "is",
-          "You",
+          "$you",
           "$mouth",
           "with",
           "me.",
