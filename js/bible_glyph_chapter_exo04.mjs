@@ -521,7 +521,7 @@ export function bible_glyph_chapter_exo04() {
           "$family",
           "for",
           "you.",
-          "He",
+          "$pointing_back",
           "will",
           "be",
           "your",
