@@ -1319,7 +1319,7 @@ export function bible_glyph_chapter_num14() {
           "and",
           "you",
           "will",
-          "fall",
+          "$person+pointing_down",
           "by",
           "the",
           "$sword.",
