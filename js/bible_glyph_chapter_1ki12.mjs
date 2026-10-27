@@ -162,7 +162,7 @@ export function bible_glyph_chapter_1ki12() {
           "his",
           "$father",
           "$peace+proper_name",
-          "during",
+          "$link",
           "his",
           "$sprout.",
           "He",
