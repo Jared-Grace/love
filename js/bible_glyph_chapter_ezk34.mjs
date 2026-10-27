@@ -752,7 +752,7 @@ export function bible_glyph_chapter_ezk34() {
           "$person+sheep",
           "them",
           "and",
-          "be",
+          "$link",
           "their",
           "$person+sheep.",
         ],
