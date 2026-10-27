@@ -679,7 +679,7 @@ export function bible_glyph_chapter_isa43() {
           "Me,",
           "O",
           "$hand+foot,",
-          "because",
+          "$pointing",
           "you",
           "have",
           "grown",
