@@ -79,7 +79,7 @@ export function bible_glyph_chapter_jos01() {
           "have",
           "$hands_giving",
           "you",
-          "every",
+          "$all",
           "$place",
           "where",
           "the",
