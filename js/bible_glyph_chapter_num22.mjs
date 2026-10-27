@@ -562,7 +562,7 @@ export function bible_glyph_chapter_num22() {
           "of",
           "$silver",
           "and",
-          "gold,",
+          "$gold,",
           "I",
           "could",
           "$no_entry",
