@@ -325,7 +325,7 @@ export function bible_glyph_chapter_psa073() {
         words: [
           "$check+exclamation",
           "You",
-          "set",
+          "$palm_down+round_pushpin+doing",
           "them",
           "on",
           "slick",
