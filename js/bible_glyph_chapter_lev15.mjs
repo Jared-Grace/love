@@ -550,7 +550,7 @@ export function bible_glyph_chapter_lev15() {
           "$seed,",
           "both",
           "must",
-          "bathe",
+          "$bathtub+doing",
           "with",
           "$water,",
           "and",
