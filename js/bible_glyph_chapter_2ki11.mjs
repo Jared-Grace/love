@@ -730,7 +730,7 @@ export function bible_glyph_chapter_2ki11() {
           "took",
           "his",
           "seat",
-          "on",
+          "$pointing_up",
           "the",
           "$king",
           "$throne.",
