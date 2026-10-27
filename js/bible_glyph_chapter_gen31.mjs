@@ -818,7 +818,7 @@ export function bible_glyph_chapter_gen31() {
           "Because",
           "I",
           "was",
-          "afraid.",
+          "$fear+doing.",
           "For",
           "I",
           "$speech",
