@@ -188,7 +188,7 @@ export function bible_glyph_chapter_exo17() {
       {
         verse_number: 6,
         words: [
-          "Behold,",
+          "$exclamation,",
           "I",
           "will",
           "stand",
