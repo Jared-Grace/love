@@ -707,7 +707,7 @@ export function bible_glyph_chapter_exo39() {
         words: [
           "They",
           "$hammer",
-          "tunics",
+          "$dress+thread",
           "of",
           "fine",
           "linen,",
