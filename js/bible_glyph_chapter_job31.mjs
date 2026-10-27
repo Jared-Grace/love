@@ -752,7 +752,7 @@ export function bible_glyph_chapter_job31() {
           "let",
           "my",
           "accuser",
-          "compose",
+          "$writing_hand",
           "an",
           "indictment.",
         ],
