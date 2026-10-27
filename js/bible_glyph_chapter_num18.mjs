@@ -32,7 +32,7 @@ export function bible_glyph_chapter_num18() {
           "must",
           "$lifting",
           "the",
-          "iniquity",
+          "$cyclone",
           "of",
           "the",
           "sanctuary.",
