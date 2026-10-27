@@ -738,7 +738,7 @@ export function bible_glyph_chapter_2ki04() {
           "to",
           "her",
           "servant,",
-          "Drive",
+          "$horse+right_arrow+doing",
           "$walking;",
           "$no_entry",
           "slow",
