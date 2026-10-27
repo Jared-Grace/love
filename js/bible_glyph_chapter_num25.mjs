@@ -221,7 +221,7 @@ export function bible_glyph_chapter_num25() {
           "assembly,",
           "$hand_receiving",
           "a",
-          "spear",
+          "$spear+throwing",
           "in",
           "his",
           "$hand,",
