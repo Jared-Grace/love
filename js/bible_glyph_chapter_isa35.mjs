@@ -113,7 +113,7 @@ export function bible_glyph_chapter_isa35() {
           "$sword+turn_back+thing.",
           "With",
           "the",
-          "retribution",
+          "$turn_back+gift+thing",
           "of",
           "$heart_on_fire",
           "He",
