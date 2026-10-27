@@ -792,7 +792,7 @@ export function bible_glyph_chapter_gen37() {
           "$hand",
           "on",
           "him;",
-          "for",
+          "$pointing",
           "he",
           "is",
           "our",
