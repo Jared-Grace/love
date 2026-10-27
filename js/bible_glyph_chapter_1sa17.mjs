@@ -529,7 +529,7 @@ export function bible_glyph_chapter_1sa17() {
           "$wrestling+heart_on_fire",
           "in",
           "the",
-          "Valley",
+          "$valley",
           "of",
           "$proper_name$Elah,",
           "fighting",
