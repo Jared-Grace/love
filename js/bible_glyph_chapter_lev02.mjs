@@ -27,7 +27,7 @@ export function bible_glyph_chapter_lev02() {
           "He",
           "is",
           "to",
-          "pour",
+          "$pouring_liquid+fire",
           "olive",
           "oil",
           "on",
