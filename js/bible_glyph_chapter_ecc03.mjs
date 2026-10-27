@@ -59,7 +59,7 @@ export function bible_glyph_chapter_ecc03() {
           "a",
           "$clock",
           "to",
-          "kill",
+          "$fist+skull",
           "and",
           "a",
           "$clock",
