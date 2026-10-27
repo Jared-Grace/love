@@ -581,7 +581,7 @@ export function bible_glyph_chapter_gen22() {
           "up",
           "and",
           "$walking",
-          "together",
+          "$linked_paperclips+manner",
           "for",
           "Beersheba.",
           "And",
