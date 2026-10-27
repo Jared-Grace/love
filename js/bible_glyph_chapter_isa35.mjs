@@ -56,7 +56,7 @@ export function bible_glyph_chapter_isa35() {
           "to",
           "it,",
           "the",
-          "splendor",
+          "$crown+sparkles",
           "of",
           "$proper_name$Carmel",
           "and",
