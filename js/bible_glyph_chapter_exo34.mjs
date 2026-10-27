@@ -715,7 +715,7 @@ export function bible_glyph_chapter_exo34() {
           "of",
           "the",
           "wheat",
-          "harvest,",
+          "$harvest,",
           "and",
           "the",
           "$party_popper",
