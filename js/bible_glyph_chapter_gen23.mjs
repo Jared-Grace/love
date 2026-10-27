@@ -485,7 +485,7 @@ export function bible_glyph_chapter_gen23() {
           "$son",
           "of",
           "Heth,",
-          "four",
+          "$four",
           "hundred",
           "shekels",
           "of",
