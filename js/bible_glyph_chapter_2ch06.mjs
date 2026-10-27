@@ -1548,7 +1548,7 @@ export function bible_glyph_chapter_2ch06() {
           "Your",
           "godly",
           "ones",
-          "rejoice",
+          "$beaming+doing",
           "in",
           "Your",
           "$thumbs_up.",
