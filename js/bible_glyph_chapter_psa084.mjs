@@ -277,7 +277,7 @@ export function bible_glyph_chapter_psa084() {
           "the",
           "$i_am",
           "$hands_giving",
-          "grace",
+          "$heart_orange",
           "and",
           "$star.",
           "He",
