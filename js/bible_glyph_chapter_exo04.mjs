@@ -486,7 +486,7 @@ export function bible_glyph_chapter_exo04() {
           "to",
           "him",
           "and",
-          "put",
+          "$palm_down",
           "the",
           "$speech",
           "in",
