@@ -656,7 +656,7 @@ export function bible_glyph_chapter_2ki10() {
           "belonging",
           "to",
           "$proper_name$Ahab,",
-          "until",
+          "$finish",
           "he",
           "had",
           "destroyed",
