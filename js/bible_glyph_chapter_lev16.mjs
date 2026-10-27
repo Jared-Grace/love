@@ -208,7 +208,7 @@ export function bible_glyph_chapter_lev16() {
           "to",
           "$magnet+doing",
           "the",
-          "bull",
+          "$bull",
           "for",
           "his",
           "$bow",
