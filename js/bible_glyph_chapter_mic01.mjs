@@ -322,7 +322,7 @@ export function bible_glyph_chapter_mic01() {
         words: [
           "Do",
           "$no_entry",
-          "tell",
+          "$newspaper",
           "it",
           "in",
           "$proper_name$Gath;",
