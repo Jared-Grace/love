@@ -403,7 +403,7 @@ export function bible_glyph_chapter_lev23() {
           "generations",
           "to",
           "come,",
-          "wherever",
+          "$all",
           "you",
           "live.",
         ],
