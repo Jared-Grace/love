@@ -637,7 +637,7 @@ export function bible_glyph_chapter_jdg04() {
           "$door",
           "to",
           "the",
-          "tent,",
+          "$tent,",
           "and",
           "if",
           "$man_beard",
