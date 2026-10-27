@@ -381,7 +381,7 @@ export function bible_glyph_chapter_gen06() {
           "$tree+ark",
           "$tree.",
           "$hammer+doing",
-          "rooms",
+          "$nest_with_eggs",
           "in",
           "the",
           "$package,",
