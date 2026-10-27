@@ -299,7 +299,7 @@ export function bible_glyph_chapter_2ki11() {
           "of",
           "hundreds",
           "$hammer+doing",
-          "everything",
+          "$all",
           "that",
           "$i_am+lightbulb",
           "the",
