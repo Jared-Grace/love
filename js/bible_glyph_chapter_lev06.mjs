@@ -404,7 +404,7 @@ export function bible_glyph_chapter_lev06() {
           "$white_circle+incense",
           "$grain_offering,",
           "and",
-          "burn",
+          "$incense+doing",
           "the",
           "memorial",
           "portion",
