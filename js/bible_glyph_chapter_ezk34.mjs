@@ -983,7 +983,7 @@ export function bible_glyph_chapter_ezk34() {
           "will",
           "$lightbulb",
           "that",
-          "I,",
+          "$me,",
           "the",
           "$i_am",
           "their",
