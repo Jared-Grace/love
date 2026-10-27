@@ -812,7 +812,7 @@ export function bible_glyph_chapter_deu04() {
           "you",
           "do",
           "not",
-          "forget",
+          "$reminder_ribbon+no_entry",
           "the",
           "$covenant",
           "of",
