@@ -866,7 +866,7 @@ export function bible_glyph_chapter_exo39() {
           "$footprints",
           "the",
           "tabernacle",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name:",
           "$tent",
           "with",
