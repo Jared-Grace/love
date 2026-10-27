@@ -118,7 +118,7 @@ export function bible_glyph_chapter_gen20() {
           "kill",
           "a",
           "$map",
-          "even",
+          "$plus",
           "when",
           "it",
           "is",
