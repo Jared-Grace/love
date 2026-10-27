@@ -394,7 +394,7 @@ export function bible_glyph_chapter_zec14() {
         verse_number: 12,
         words: [
           "And",
-          "this",
+          "$flashlight",
           "will",
           "be",
           "the",
