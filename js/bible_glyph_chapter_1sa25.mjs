@@ -560,7 +560,7 @@ export function bible_glyph_chapter_1sa25() {
           "$crown",
           "and",
           "over",
-          "all",
+          "$all",
           "his",
           "$house.",
           "For",
