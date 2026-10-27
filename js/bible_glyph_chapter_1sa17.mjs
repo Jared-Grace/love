@@ -1156,7 +1156,7 @@ export function bible_glyph_chapter_1sa17() {
           "tunic,",
           "$hands_giving",
           "a",
-          "bronze",
+          "$bronze",
           "$military_helmet+top",
           "on",
           "his",
