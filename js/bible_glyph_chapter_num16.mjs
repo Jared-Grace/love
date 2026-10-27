@@ -513,7 +513,7 @@ export function bible_glyph_chapter_num16() {
           "$speech",
           "to",
           "$proper_name$Korah,",
-          "You",
+          "$you",
           "and",
           "all",
           "your",
