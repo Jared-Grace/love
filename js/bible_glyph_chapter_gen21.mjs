@@ -289,7 +289,7 @@ export function bible_glyph_chapter_gen21() {
           "$proper_name$Sarah",
           "$speech",
           "you,",
-          "for",
+          "$pointing",
           "through",
           "$laughing+proper_name",
           "your",
