@@ -558,7 +558,7 @@ export function bible_glyph_chapter_num22() {
           "me",
           "his",
           "$house",
-          "full",
+          "$battery+thing",
           "of",
           "silver",
           "and",
