@@ -212,7 +212,7 @@ export function bible_glyph_chapter_est04() {
         words: [
           "And",
           "$proper_name$Mordecai",
-          "told",
+          "$newspaper",
           "him",
           "all",
           "that",
