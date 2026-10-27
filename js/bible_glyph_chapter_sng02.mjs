@@ -240,7 +240,7 @@ export function bible_glyph_chapter_sng02() {
       {
         verse_number: 11,
         words: [
-          "For",
+          "$pointing",
           "now",
           "the",
           "winter",
