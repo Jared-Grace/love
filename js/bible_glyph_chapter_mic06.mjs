@@ -256,7 +256,7 @@ export function bible_glyph_chapter_mic06() {
           "does",
           "the",
           "$i_am",
-          "require",
+          "$magnifying_glass+question",
           "$tray_out",
           "you",
           "but",
