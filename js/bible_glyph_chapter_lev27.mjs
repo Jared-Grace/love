@@ -985,7 +985,7 @@ export function bible_glyph_chapter_lev27() {
           "animal",
           "from",
           "the",
-          "herd",
+          "$cow_face",
           "or",
           "the",
           "$sheep",
