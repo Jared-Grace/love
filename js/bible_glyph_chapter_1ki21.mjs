@@ -929,7 +929,7 @@ export function bible_glyph_chapter_1ki21() {
           "When",
           "$brother+father+proper_name",
           "$ear",
-          "these",
+          "$flashlight+flashlight",
           "$speech,",
           "he",
           "tore",
