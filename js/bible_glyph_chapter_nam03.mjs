@@ -321,7 +321,7 @@ export function bible_glyph_chapter_nam03() {
           "when",
           "$up_down_arrow+doing,",
           "they",
-          "fall",
+          "$person+pointing_down",
           "into",
           "the",
           "mouth",
