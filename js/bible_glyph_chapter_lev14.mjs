@@ -1250,7 +1250,7 @@ export function bible_glyph_chapter_lev14() {
           "$house",
           "be",
           "cleared",
-          "before",
+          "$clock+back",
           "the",
           "$priest",
           "$footprints",
