@@ -1329,7 +1329,7 @@ export function bible_glyph_chapter_1ki18() {
           "brought",
           "them",
           "$walking+pointing_down",
-          "to",
+          "$toward",
           "the",
           "$proper_name$Kishon",
           "Valley",
