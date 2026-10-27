@@ -42,7 +42,7 @@ export function bible_glyph_chapter_nam03() {
           "$voice",
           "of",
           "the",
-          "wheel,",
+          "$wheel+counterclockwise_arrows_button,",
           "galloping",
           "horse",
           "and",
