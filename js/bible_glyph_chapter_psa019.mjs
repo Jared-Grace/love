@@ -325,7 +325,7 @@ export function bible_glyph_chapter_psa019() {
           "my",
           "$heart_organ",
           "$link",
-          "pleasing",
+          "$smiling_face_with_smiling_eyes",
           "in",
           "Your",
           "sight,",
