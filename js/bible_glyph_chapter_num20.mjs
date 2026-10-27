@@ -126,7 +126,7 @@ export function bible_glyph_chapter_num20() {
           "$footprints",
           "us",
           "to",
-          "this",
+          "$flashlight",
           "$thumbs_down",
           "$place?",
           "It",
