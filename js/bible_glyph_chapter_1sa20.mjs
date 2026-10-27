@@ -75,7 +75,7 @@ export function bible_glyph_chapter_1sa20() {
           "thing,",
           "whether",
           "$speech",
-          "great",
+          "$top",
           "or",
           "$speech",
           "small,",
