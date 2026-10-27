@@ -250,7 +250,7 @@ export function bible_glyph_chapter_2sa06() {
           "named",
           "that",
           "$place",
-          "Perez-uzzah,",
+          "$wall+collision+mechanical_arm+female_sign+proper_name,",
           "as",
           "it",
           "is",
