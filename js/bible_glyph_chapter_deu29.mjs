@@ -54,7 +54,7 @@ export function bible_glyph_chapter_deu29() {
         verse_number: 2,
         words: [
           "$fishing_pole+proper_name",
-          "summoned",
+          "$waving_hand",
           "all",
           "$wrestling+heart_on_fire",
           "and",
