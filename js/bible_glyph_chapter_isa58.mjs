@@ -459,7 +459,7 @@ export function bible_glyph_chapter_isa58() {
           "will",
           "be",
           "called",
-          "Repairer",
+          "$wall+around+doing",
           "of",
           "the",
           "Breach,",
