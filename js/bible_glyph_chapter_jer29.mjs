@@ -566,7 +566,7 @@ export function bible_glyph_chapter_jer29() {
         words: [
           "I",
           "will",
-          "pursue",
+          "$running+toward",
           "them",
           "with",
           "$sword",
