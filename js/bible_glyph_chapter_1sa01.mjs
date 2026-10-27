@@ -122,7 +122,7 @@ export function bible_glyph_chapter_1sa01() {
           "to",
           "present",
           "his",
-          "sacrifice,",
+          "$sacrifice,",
           "he",
           "would",
           "$hands_giving",
