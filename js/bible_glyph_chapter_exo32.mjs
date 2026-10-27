@@ -1120,7 +1120,7 @@ export function bible_glyph_chapter_exo32() {
           "out",
           "of",
           "My",
-          "book.",
+          "$closed_book.",
         ],
       },
       {
