@@ -806,7 +806,7 @@ export function bible_glyph_chapter_ezk03() {
           "and",
           "$speech,",
           "$footprints,",
-          "shut",
+          "$locked+doing",
           "yourself",
           "inside",
           "your",
