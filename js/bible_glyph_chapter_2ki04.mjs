@@ -328,7 +328,7 @@ export function bible_glyph_chapter_2ki04() {
           "chair",
           "and",
           "a",
-          "lamp.",
+          "$lamp+thing.",
           "Then",
           "when",
           "he",
