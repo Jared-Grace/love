@@ -321,7 +321,7 @@ export function bible_glyph_chapter_job23() {
           "made",
           "my",
           "$heart_organ",
-          "faint;",
+          "$sponge+heart_red+doing;",
           "the",
           "$might",
           "has",
