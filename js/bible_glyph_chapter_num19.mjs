@@ -378,7 +378,7 @@ export function bible_glyph_chapter_num19() {
           "he",
           "will",
           "be",
-          "clean.",
+          "$soap+doing.",
           "But",
           "if",
           "he",
