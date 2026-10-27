@@ -147,7 +147,7 @@ export function bible_glyph_chapter_gen13() {
           "together,",
           "$pointing",
           "their",
-          "possessions",
+          "$package+money_bag",
           "were",
           "so",
           "great",
