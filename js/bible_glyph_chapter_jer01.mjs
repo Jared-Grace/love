@@ -541,7 +541,7 @@ export function bible_glyph_chapter_jer01() {
           "$candle,",
           "and",
           "bronze",
-          "walls",
+          "$brick+shield",
           "against",
           "the",
           "whole",
