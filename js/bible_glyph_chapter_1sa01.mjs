@@ -152,7 +152,7 @@ export function bible_glyph_chapter_1sa01() {
           "a",
           "$nose+fire",
           "$input_numbers+thing,",
-          "for",
+          "$pointing",
           "he",
           "$heart_red+doing",
           "her,",
