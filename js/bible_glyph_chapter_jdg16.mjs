@@ -79,7 +79,7 @@ export function bible_glyph_chapter_jdg16() {
           "then",
           "we",
           "will",
-          "kill",
+          "$fist+skull",
           "him.",
         ],
       },
