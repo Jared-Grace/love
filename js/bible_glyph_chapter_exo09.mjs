@@ -171,7 +171,7 @@ export function bible_glyph_chapter_exo09() {
           "$skull+doing,",
           "but",
           "$no_entry",
-          "one",
+          "$one",
           "animal",
           "belonging",
           "to",
