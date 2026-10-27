@@ -487,7 +487,7 @@ export function bible_glyph_chapter_mic04() {
           "and",
           "hooves",
           "of",
-          "bronze",
+          "$bronze",
           "to",
           "break",
           "to",
