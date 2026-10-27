@@ -662,7 +662,7 @@ export function bible_glyph_chapter_jdg11() {
           "So",
           "he",
           "$crowd+doing",
-          "all",
+          "$all",
           "his",
           "$family,",
           "encamped",
