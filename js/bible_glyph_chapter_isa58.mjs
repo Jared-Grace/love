@@ -228,7 +228,7 @@ export function bible_glyph_chapter_isa58() {
           "the",
           "chains",
           "of",
-          "wickedness,",
+          "$thumbs_down+person+thing,",
           "to",
           "untie",
           "the",
