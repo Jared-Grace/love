@@ -253,7 +253,7 @@ export function bible_glyph_chapter_deu08() {
           "of",
           "$wheat",
           "and",
-          "barley,",
+          "$barley,",
           "of",
           "vines",
           "and",
