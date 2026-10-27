@@ -140,7 +140,7 @@ export function bible_glyph_chapter_2ch06() {
           "in",
           "which",
           "to",
-          "build",
+          "$brick",
           "a",
           "$house",
           "so",
