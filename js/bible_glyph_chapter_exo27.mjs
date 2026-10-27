@@ -457,7 +457,7 @@ export function bible_glyph_chapter_exo27() {
           "and",
           "fifty",
           "cubits",
-          "wide",
+          "$arrow_both_ways",
           "and",
           "five",
           "cubits",
