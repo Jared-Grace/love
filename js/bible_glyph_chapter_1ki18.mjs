@@ -799,7 +799,7 @@ export function bible_glyph_chapter_1ki18() {
           "and",
           "$hammer+doing",
           "it",
-          "first.",
+          "$first_place.",
           "Then",
           "call",
           "on",
