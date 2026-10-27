@@ -559,7 +559,7 @@ export function bible_glyph_chapter_exo26() {
         words: [
           "$hammer+doing",
           "two",
-          "frames",
+          "$skateboard",
           "for",
           "the",
           "two",
