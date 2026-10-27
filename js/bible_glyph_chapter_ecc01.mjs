@@ -48,7 +48,7 @@ export function bible_glyph_chapter_ecc01() {
       {
         verse_number: 3,
         words: [
-          "What",
+          "$flashlight+question",
           "does",
           "a",
           "$person",
