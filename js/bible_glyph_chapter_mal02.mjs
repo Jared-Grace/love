@@ -86,7 +86,7 @@ export function bible_glyph_chapter_mal02() {
       {
         verse_number: 3,
         words: [
-          "Behold,",
+          "$exclamation,",
           "I",
           "will",
           "rebuke",
