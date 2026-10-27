@@ -460,7 +460,7 @@ export function bible_glyph_chapter_job42() {
           "so",
           "Job",
           "$skull+doing,",
-          "old",
+          "$old_man",
           "and",
           "full",
           "of",
