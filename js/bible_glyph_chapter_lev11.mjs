@@ -874,7 +874,7 @@ export function bible_glyph_chapter_lev11() {
           "$water",
           "will",
           "remain",
-          "clean,",
+          "$soap+describing,",
           "but",
           "one",
           "who",
