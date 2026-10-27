@@ -300,7 +300,7 @@ export function bible_glyph_chapter_ezk47() {
           "there",
           "will",
           "be",
-          "swarms",
+          "$lizard+crowd+doing",
           "of",
           "$person_other",
           "$sprout,",
