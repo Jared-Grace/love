@@ -398,7 +398,7 @@ export function bible_glyph_chapter_2ch20() {
           "$face",
           "this",
           "vast",
-          "army",
+          "$crowd+loudspeaker",
           "that",
           "$footprints",
           "against",
