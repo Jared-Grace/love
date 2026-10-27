@@ -971,7 +971,7 @@ export function bible_glyph_chapter_deu04() {
           "the",
           "$i_am",
           "will",
-          "scatter",
+          "$confetti_ball",
           "you",
           "among",
           "the",
