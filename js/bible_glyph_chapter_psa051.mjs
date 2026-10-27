@@ -62,7 +62,7 @@ export function bible_glyph_chapter_psa051() {
           "away",
           "all",
           "my",
-          "iniquity",
+          "$cyclone",
           "and",
           "cleanse",
           "me",
