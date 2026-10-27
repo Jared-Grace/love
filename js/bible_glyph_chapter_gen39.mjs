@@ -607,7 +607,7 @@ export function bible_glyph_chapter_gen39() {
         words: [
           "the",
           "$i_am",
-          "was",
+          "$link",
           "with",
           "him",
           "and",
