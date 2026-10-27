@@ -872,7 +872,7 @@ export function bible_glyph_chapter_1ki20() {
           "we",
           "will",
           "surely",
-          "prevail.",
+          "$might+up_arrow.",
           "And",
           "he",
           "$ear",
