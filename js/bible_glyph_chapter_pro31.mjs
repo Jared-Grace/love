@@ -300,7 +300,7 @@ export function bible_glyph_chapter_pro31() {
           "$night",
           "to",
           "$hands_giving",
-          "food",
+          "$wolf+thing",
           "for",
           "her",
           "$house,",
