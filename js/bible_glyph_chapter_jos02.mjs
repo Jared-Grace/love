@@ -104,7 +104,7 @@ export function bible_glyph_chapter_jos02() {
           "$footprints",
           "your",
           "$house,",
-          "for",
+          "$pointing",
           "they",
           "have",
           "$footprints",
