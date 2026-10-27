@@ -55,7 +55,7 @@ export function bible_glyph_chapter_hos02() {
           "adultery",
           "from",
           "her",
-          "face",
+          "$face",
           "and",
           "the",
           "unfaithfulness",
