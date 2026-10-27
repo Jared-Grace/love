@@ -409,7 +409,7 @@ export function bible_glyph_chapter_sng02() {
           "be",
           "$likeness+doing",
           "a",
-          "gazelle",
+          "$deer+sparkles",
           "or",
           "a",
           "young",
