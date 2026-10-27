@@ -767,7 +767,7 @@ export function bible_glyph_chapter_jos07() {
           "Him",
           "a",
           "confession.",
-          "Tell",
+          "$newspaper",
           "me",
           "what",
           "you",
