@@ -291,7 +291,7 @@ export function bible_glyph_chapter_isa40() {
           "His",
           "$joystick.",
           "His",
-          "reward",
+          "$coin+hammer",
           "is",
           "with",
           "Him,",
