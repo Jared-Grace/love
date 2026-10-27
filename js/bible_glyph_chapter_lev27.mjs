@@ -570,7 +570,7 @@ export function bible_glyph_chapter_lev27() {
           "next",
           "Year",
           "of",
-          "Jubilee,",
+          "$horn+party_popper,",
           "and",
           "your",
           "valuation",
