@@ -86,7 +86,7 @@ export function bible_glyph_chapter_lev08() {
           "to",
           "them,",
           "$speech",
-          "This",
+          "$flashlight",
           "is",
           "what",
           "$i_am",
