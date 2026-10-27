@@ -108,7 +108,7 @@ export function bible_glyph_chapter_job19() {
         words: [
           "Though",
           "I",
-          "cry",
+          "$loudspeaker+mouth",
           "out,",
           "Violence!",
           "I",
