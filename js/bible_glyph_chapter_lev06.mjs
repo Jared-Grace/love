@@ -283,7 +283,7 @@ export function bible_glyph_chapter_lev06() {
           "and",
           "put",
           "on",
-          "other",
+          "$plus+one",
           "$garment,",
           "and",
           "carry",
