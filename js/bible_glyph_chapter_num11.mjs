@@ -953,7 +953,7 @@ export function bible_glyph_chapter_num11() {
           "$face_steam+doing",
           "on",
           "my",
-          "account?",
+          "$person+question?",
           "I",
           "wish",
           "that",
