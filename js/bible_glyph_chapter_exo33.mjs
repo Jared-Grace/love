@@ -376,7 +376,7 @@ export function bible_glyph_chapter_exo33() {
           "a",
           "$man_beard",
           "$mouth",
-          "to",
+          "$toward",
           "his",
           "friend.",
           "Then",
