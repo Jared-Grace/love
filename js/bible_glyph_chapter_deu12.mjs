@@ -741,7 +741,7 @@ export function bible_glyph_chapter_deu12() {
       {
         verse_number: 22,
         words: [
-          "Indeed,",
+          "$check+exclamation,",
           "you",
           "may",
           "$eating",
