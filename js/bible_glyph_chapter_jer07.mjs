@@ -402,7 +402,7 @@ export function bible_glyph_chapter_jer07() {
           "the",
           "$house",
           "which",
-          "bears",
+          "$waving_hand",
           "My",
           "$name_tag,",
           "the",
