@@ -659,7 +659,7 @@ export function bible_glyph_chapter_exo12() {
           "to",
           "$eating",
           "anything",
-          "leavened",
+          "$bread+bubbles",
           "in",
           "all",
           "your",
