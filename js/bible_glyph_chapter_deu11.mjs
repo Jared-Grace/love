@@ -903,7 +903,7 @@ export function bible_glyph_chapter_deu11() {
         words: [
           "but",
           "the",
-          "curse",
+          "$balloon+speech",
           "if",
           "you",
           "do",
