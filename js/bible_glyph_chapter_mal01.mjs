@@ -91,7 +91,7 @@ export function bible_glyph_chapter_mal01() {
       {
         verse_number: 4,
         words: [
-          "Though",
+          "$pointing",
           "$proper_name$Edom",
           "may",
           "$speech,",
