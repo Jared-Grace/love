@@ -239,7 +239,7 @@ export function bible_glyph_chapter_num36() {
       {
         verse_number: 6,
         words: [
-          "This",
+          "$flashlight",
           "is",
           "the",
           "$speech",
