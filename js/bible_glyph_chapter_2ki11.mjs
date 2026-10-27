@@ -498,7 +498,7 @@ export function bible_glyph_chapter_2ki11() {
           "trumpets.",
           "Then",
           "Athaliah",
-          "tore",
+          "$t_shirt+scissors+doing",
           "her",
           "$garment",
           "and",
