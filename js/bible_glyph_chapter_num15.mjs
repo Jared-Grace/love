@@ -376,7 +376,7 @@ export function bible_glyph_chapter_num15() {
           "$shuffle",
           "someone",
           "else",
-          "among",
+          "$radio_button",
           "you",
           "wants",
           "to",
