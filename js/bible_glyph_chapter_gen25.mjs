@@ -239,7 +239,7 @@ export function bible_glyph_chapter_gen25() {
           "and",
           "$proper_name$Isaac",
           "$person+house",
-          "near",
+          "$linked_paperclips",
           "Beer",
           "Lahai",
           "Roi.",
