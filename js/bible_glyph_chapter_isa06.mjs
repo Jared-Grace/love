@@ -303,7 +303,7 @@ export function bible_glyph_chapter_isa06() {
           "close",
           "their",
           "$eyes.",
-          "Otherwise",
+          "$no_entry+traffic_light",
           "they",
           "might",
           "$eye",
