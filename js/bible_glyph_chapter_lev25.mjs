@@ -592,7 +592,7 @@ export function bible_glyph_chapter_lev25() {
           "the",
           "seventh",
           "$year",
-          "if",
+          "$exclamation",
           "we",
           "do",
           "$no_entry",
