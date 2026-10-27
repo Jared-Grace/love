@@ -60,7 +60,7 @@ export function bible_glyph_chapter_psa027() {
           "enemies",
           "and",
           "foes",
-          "stumbled",
+          "$hiking_boot+rock",
           "and",
           "fell.",
         ],
