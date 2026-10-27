@@ -184,7 +184,7 @@ export function bible_glyph_chapter_isa58() {
           "deny",
           "$person_other,",
           "to",
-          "bow",
+          "$curving_up+person+doing",
           "his",
           "head",
           "like",
