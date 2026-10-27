@@ -418,7 +418,7 @@ export function bible_glyph_chapter_sng08() {
           "a",
           "young",
           "$deer",
-          "on",
+          "$pointing_up",
           "the",
           "$mountain",
           "of",
