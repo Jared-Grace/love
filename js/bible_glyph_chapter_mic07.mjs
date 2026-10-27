@@ -33,7 +33,7 @@ export function bible_glyph_chapter_mic07() {
           "there",
           "is",
           "no",
-          "cluster",
+          "$grapes+bouquet",
           "to",
           "$eating,",
           "no",
