@@ -293,7 +293,7 @@ export function bible_glyph_chapter_mal02() {
           "all",
           "the",
           "$family,",
-          "because",
+          "$face_with_open_mouth",
           "you",
           "have",
           "not",
