@@ -506,7 +506,7 @@ export function bible_glyph_chapter_hab03() {
           "$crown",
           "is",
           "my",
-          "strength;",
+          "$raised_fist;",
           "He",
           "makes",
           "my",
