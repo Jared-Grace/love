@@ -540,7 +540,7 @@ export function bible_glyph_chapter_num08() {
           "make",
           "atonement",
           "on",
-          "behalf",
+          "$pointing_up",
           "of",
           "$son",
           "of",
