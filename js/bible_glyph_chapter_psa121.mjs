@@ -98,7 +98,7 @@ export function bible_glyph_chapter_psa121() {
           "$umbrella_on_ground",
           "$pointing_up",
           "your",
-          "right",
+          "$hand+right_arrow",
           "$hand.",
         ],
       },
