@@ -531,7 +531,7 @@ export function bible_glyph_chapter_exo29() {
       {
         verse_number: 20,
         words: [
-          "Slaughter",
+          "$kitchen_knife+doing",
           "the",
           "$ram,",
           "$hand_receiving",
