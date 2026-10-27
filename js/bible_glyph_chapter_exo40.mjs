@@ -527,7 +527,7 @@ export function bible_glyph_chapter_exo40() {
           "$pointing_up",
           "the",
           "north",
-          "side",
+          "$poultry_leg",
           "of",
           "the",
           "tabernacle,",
