@@ -927,7 +927,7 @@ export function bible_glyph_chapter_1ki21() {
         verse_number: 27,
         words: [
           "When",
-          "Ahab",
+          "$brother+father+proper_name",
           "$ear",
           "these",
           "$speech,",
