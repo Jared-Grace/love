@@ -1056,7 +1056,7 @@ export function bible_glyph_chapter_1ch29() {
           "details",
           "of",
           "his",
-          "reign,",
+          "$castle,",
           "his",
           "might,",
           "and",
