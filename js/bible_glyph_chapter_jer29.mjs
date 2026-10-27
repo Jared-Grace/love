@@ -800,7 +800,7 @@ export function bible_glyph_chapter_jer29() {
           "I",
           "did",
           "$no_entry",
-          "command",
+          "$speech+scroll",
           "them.",
           "I",
           "am",
