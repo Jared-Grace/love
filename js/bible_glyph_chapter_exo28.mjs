@@ -647,7 +647,7 @@ export function bible_glyph_chapter_exo28() {
           "$hands_giving",
           "the",
           "other",
-          "ends",
+          "$end_arrow+triangular_ruler",
           "of",
           "the",
           "two",
