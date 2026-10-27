@@ -755,7 +755,7 @@ export function bible_glyph_chapter_num11() {
           "you",
           "will",
           "$eye",
-          "whether",
+          "$traffic_light",
           "or",
           "$no_entry",
           "My",
