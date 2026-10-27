@@ -566,7 +566,7 @@ export function bible_glyph_chapter_deu09() {
           "$fire,",
           "with",
           "the",
-          "two",
+          "$two",
           "tablets",
           "of",
           "the",
