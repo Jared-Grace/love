@@ -280,7 +280,7 @@ export function bible_glyph_chapter_2ki04() {
           "Then",
           "she",
           "$speech",
-          "to",
+          "$toward",
           "her",
           "husband,",
           "Behold,",
