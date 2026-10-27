@@ -349,7 +349,7 @@ export function bible_glyph_chapter_ecc12() {
           "$son,",
           "be",
           "further",
-          "warned:",
+          "$rotating_light+doing:",
           "to",
           "the",
           "$hammer+doing",
