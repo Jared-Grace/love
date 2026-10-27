@@ -89,7 +89,7 @@ export function bible_glyph_chapter_mal02() {
           "$exclamation,",
           "I",
           "will",
-          "rebuke",
+          "$pointing+anger_symbol+doing",
           "your",
           "$seed,",
           "and",
