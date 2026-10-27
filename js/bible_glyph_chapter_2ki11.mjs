@@ -183,7 +183,7 @@ export function bible_glyph_chapter_2ki11() {
           "to",
           "$hammer+doing.",
           "A",
-          "third",
+          "$third_place",
           "of",
           "you",
           "who",
