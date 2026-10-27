@@ -140,7 +140,7 @@ export function bible_glyph_chapter_exo24() {
           "along",
           "with",
           "twelve",
-          "pillars",
+          "$rock+up_arrow",
           "for",
           "the",
           "twelve",
