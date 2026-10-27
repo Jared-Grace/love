@@ -339,7 +339,7 @@ export function bible_glyph_chapter_isa55() {
           "$turn_back",
           "to",
           "Me",
-          "empty,",
+          "$hand+zero+manner,",
           "but",
           "it",
           "will",
