@@ -1044,7 +1044,7 @@ export function bible_glyph_chapter_jdg16() {
           "and",
           "about",
           "$three",
-          "thousand",
+          "$ten+all",
           "$man_beard",
           "and",
           "$woman",
