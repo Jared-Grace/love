@@ -65,7 +65,7 @@ export function bible_glyph_chapter_neh01() {
           "of",
           "the",
           "$menorah",
-          "who",
+          "$back+flashlight",
           "had",
           "survived",
           "the",
