@@ -625,7 +625,7 @@ export function bible_glyph_chapter_deu08() {
           "destroyed",
           "before",
           "you,",
-          "so",
+          "$right_arrow",
           "you",
           "will",
           "perish",
