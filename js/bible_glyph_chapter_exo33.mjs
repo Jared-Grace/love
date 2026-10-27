@@ -604,7 +604,7 @@ export function bible_glyph_chapter_exo33() {
           "you",
           "have",
           "found",
-          "favor",
+          "$heart_orange",
           "in",
           "My",
           "$eyes,",
