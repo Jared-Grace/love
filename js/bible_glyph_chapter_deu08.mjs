@@ -473,7 +473,7 @@ export function bible_glyph_chapter_deu08() {
           "$water",
           "from",
           "the",
-          "rock",
+          "$rock",
           "of",
           "flint.",
         ],
