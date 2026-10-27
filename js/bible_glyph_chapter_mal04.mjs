@@ -150,7 +150,7 @@ export function bible_glyph_chapter_mal04() {
           "at",
           "$proper_name$Horeb",
           "for",
-          "all",
+          "$all",
           "$wrestling+heart_on_fire.",
         ],
       },
