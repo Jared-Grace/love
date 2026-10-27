@@ -442,7 +442,7 @@ export function bible_glyph_chapter_dan12() {
           "inheritance",
           "at",
           "the",
-          "end",
+          "$stop_sign",
           "of",
           "the",
           "$sun.",
