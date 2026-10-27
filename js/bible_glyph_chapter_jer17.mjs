@@ -820,7 +820,7 @@ export function bible_glyph_chapter_jer17() {
           "$throne",
           "of",
           "$two_hearts+proper_name,",
-          "riding",
+          "$horse_racing+doing",
           "in",
           "chariots",
           "and",
