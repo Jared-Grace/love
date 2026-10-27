@@ -277,7 +277,7 @@ export function bible_glyph_chapter_hab03() {
           "of",
           "Your",
           "$walking",
-          "arrows,",
+          "$arrow,",
           "at",
           "the",
           "brightness",
