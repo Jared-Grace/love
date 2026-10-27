@@ -684,7 +684,7 @@ export function bible_glyph_chapter_isa07() {
         words: [
           "And",
           "on",
-          "that",
+          "$back+flashlight",
           "$sun,",
           "in",
           "$all",
