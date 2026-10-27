@@ -345,7 +345,7 @@ export function bible_glyph_chapter_exo19() {
           "for",
           "on",
           "the",
-          "third",
+          "$third_place",
           "$sun",
           "the",
           "$i_am",
