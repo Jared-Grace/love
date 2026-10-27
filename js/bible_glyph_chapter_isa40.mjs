@@ -107,7 +107,7 @@ export function bible_glyph_chapter_isa40() {
           "and",
           "$mountain+pinching_hand",
           "made",
-          "low;",
+          "$down_arrow+mountain+doing;",
           "the",
           "uneven",
           "ground",
