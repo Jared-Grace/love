@@ -723,7 +723,7 @@ export function bible_glyph_chapter_gen24() {
           "he",
           "$speech.",
           "Please",
-          "tell",
+          "$newspaper",
           "me,",
           "is",
           "there",
