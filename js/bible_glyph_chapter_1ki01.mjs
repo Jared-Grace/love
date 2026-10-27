@@ -521,7 +521,7 @@ export function bible_glyph_chapter_1ki01() {
           "$speech,",
           "My",
           "$crown,",
-          "you",
+          "$you",
           "yourself",
           "swore",
           "by",
