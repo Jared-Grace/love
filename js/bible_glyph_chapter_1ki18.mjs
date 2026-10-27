@@ -756,7 +756,7 @@ export function bible_glyph_chapter_1ki18() {
           "$i_am.",
           "The",
           "$heart_on_fire",
-          "who",
+          "$back+flashlight",
           "answers",
           "by",
           "$fire,",
