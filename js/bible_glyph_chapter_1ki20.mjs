@@ -1353,7 +1353,7 @@ export function bible_glyph_chapter_1ki20() {
           "from",
           "me",
           "a",
-          "lion",
+          "$lion",
           "will",
           "kill",
           "you.",
