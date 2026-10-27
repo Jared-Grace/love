@@ -13,7 +13,7 @@ export function bible_glyph_chapter_ecc12() {
       {
         verse_number: 1,
         words: [
-          "Remember",
+          "$reminder_ribbon",
           "your",
           "Creator",
           "in",
