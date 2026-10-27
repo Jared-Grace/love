@@ -124,7 +124,7 @@ export function bible_glyph_chapter_ezk11() {
       {
         verse_number: 4,
         words: [
-          "Therefore",
+          "$right_arrow",
           "prophesy",
           "against",
           "them.",
