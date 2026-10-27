@@ -125,7 +125,7 @@ export function bible_glyph_chapter_deu07() {
           "turn",
           "your",
           "$son",
-          "away",
+          "$away+doing",
           "from",
           "following",
           "Me",
