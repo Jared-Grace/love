@@ -281,7 +281,7 @@ export function bible_glyph_chapter_gen47() {
           "hundred",
           "and",
           "thirty.",
-          "Few",
+          "$pinching_hand+input_numbers",
           "and",
           "$thumbs_down",
           "have",
