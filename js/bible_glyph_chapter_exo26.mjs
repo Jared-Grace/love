@@ -910,7 +910,7 @@ export function bible_glyph_chapter_exo26() {
           "for",
           "the",
           "$umbrella+door,",
-          "overlay",
+          "$top+brown_square+doing",
           "them",
           "with",
           "$gold,",
