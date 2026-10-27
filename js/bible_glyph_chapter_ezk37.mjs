@@ -742,7 +742,7 @@ export function bible_glyph_chapter_ezk37() {
           "will",
           "$hammer+doing",
           "them",
-          "one",
+          "$one",
           "$map",
           "in",
           "the",
