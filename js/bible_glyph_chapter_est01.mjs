@@ -521,7 +521,7 @@ export function bible_glyph_chapter_est01() {
       {
         verse_number: 17,
         words: [
-          "For",
+          "$pointing",
           "the",
           "$speech",
           "of",
