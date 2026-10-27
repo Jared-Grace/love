@@ -177,7 +177,7 @@ export function bible_glyph_chapter_num15() {
           "hin",
           "of",
           "olive",
-          "oil,",
+          "$lotion_bottle,",
         ],
       },
       {
