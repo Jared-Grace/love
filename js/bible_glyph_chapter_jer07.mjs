@@ -410,7 +410,7 @@ export function bible_glyph_chapter_jer07() {
           "in",
           "which",
           "you",
-          "trust,",
+          "$anchor+doing,",
           "the",
           "$place",
           "that",
