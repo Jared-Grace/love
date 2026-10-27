@@ -939,7 +939,7 @@ export function bible_glyph_chapter_lam02() {
           "of",
           "the",
           "$i_am",
-          "anger",
+          "$nose+fire",
           "$no_entry",
           "one",
           "escaped",
