@@ -987,7 +987,7 @@ export function bible_glyph_chapter_2ki09() {
           "the",
           "plot",
           "of",
-          "ground,",
+          "$field+pizza,",
           "according",
           "to",
           "the",
