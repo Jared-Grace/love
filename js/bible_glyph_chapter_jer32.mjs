@@ -1447,7 +1447,7 @@ export function bible_glyph_chapter_jer32() {
           "with",
           "all",
           "My",
-          "soul.",
+          "$person_other.",
         ],
       },
       {
