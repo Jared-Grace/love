@@ -335,7 +335,7 @@ export function bible_glyph_chapter_zep02() {
           "their",
           "$peacock,",
           "for",
-          "taunting",
+          "$face_with_rolling_eyes+doing",
           "and",
           "mocking",
           "the",
