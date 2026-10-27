@@ -20,7 +20,7 @@ export function bible_glyph_chapter_2ki01() {
           "of",
           "$proper_name$Ahab,",
           "$father+proper_name",
-          "rebelled",
+          "$black_flag+doing",
           "against",
           "$wrestling+heart_on_fire.",
         ],
