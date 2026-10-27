@@ -446,7 +446,7 @@ export function bible_glyph_chapter_lev11() {
       {
         verse_number: 21,
         words: [
-          "However,",
+          "$check+exclamation,",
           "you",
           "may",
           "$eating",
