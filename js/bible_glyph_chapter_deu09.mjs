@@ -115,7 +115,7 @@ export function bible_glyph_chapter_deu09() {
           "and",
           "annihilate",
           "them",
-          "swiftly,",
+          "$fast_forward+manner,",
           "as",
           "$i_am",
           "has",
