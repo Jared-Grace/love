@@ -596,7 +596,7 @@ export function bible_glyph_chapter_ezk11() {
           "$away+doing",
           "$tray_out",
           "it",
-          "all",
+          "$all",
           "its",
           "detestable",
           "things",
