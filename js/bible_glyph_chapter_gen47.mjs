@@ -916,7 +916,7 @@ export function bible_glyph_chapter_gen47() {
           "Only",
           "the",
           "$priest",
-          "land",
+          "$brown_square",
           "does",
           "$no_entry",
           "belong",
