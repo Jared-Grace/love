@@ -700,7 +700,7 @@ export function bible_glyph_chapter_num24() {
           "$proper_name$Asshur",
           "and",
           "$proper_name$Eber",
-          "too,",
+          "$plus,",
           "but",
           "they",
           "will",
