@@ -457,7 +457,7 @@ export function bible_glyph_chapter_mic07() {
           "woodland",
           "surrounded",
           "by",
-          "pastures.",
+          "$vineyard+wheat.",
           "Let",
           "them",
           "graze",
