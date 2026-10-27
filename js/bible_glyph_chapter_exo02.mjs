@@ -158,7 +158,7 @@ export function bible_glyph_chapter_exo02() {
           "she",
           "sent",
           "her",
-          "maidservant",
+          "$broom",
           "to",
           "$hand_receiving",
           "it.",
