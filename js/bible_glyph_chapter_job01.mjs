@@ -473,7 +473,7 @@ export function bible_glyph_chapter_job01() {
           "$fire",
           "of",
           "$heart_on_fire",
-          "fell",
+          "$person+pointing_down",
           "from",
           "the",
           "$sky.",
