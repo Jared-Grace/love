@@ -421,7 +421,7 @@ export function bible_glyph_chapter_psa051() {
           "$sacrifice,",
           "in",
           "whole",
-          "burnt",
+          "$burnt_offering",
           "offerings;",
           "$telescope+clock",
           "bulls",
