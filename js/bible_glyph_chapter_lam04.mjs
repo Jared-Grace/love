@@ -290,7 +290,7 @@ export function bible_glyph_chapter_lam04() {
           "food",
           "in",
           "the",
-          "destruction",
+          "$broken_chain+thing",
           "of",
           "the",
           "$woman",
