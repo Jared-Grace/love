@@ -21,6 +21,12 @@ export function bible_glyph_roots_split_pairs() {
     ["thumbs_up", "agathos", "kalos"],
     ["walking", "peripateo", "poreuomai"],
     ["woman", "bath:daughter", "ishshah"],
+    ["eye", "ophthalmos", "horao"],
+    ["eye", "ayin:eye", "raah:see"],
+    ["ear", "ous", "akouo"],
+    ["ear", "ozen", "shama:hear"],
+    ["mouth", "laleo", "dabar"],
   ];
+  ("THE LAST FIVE NEVER SAT IN THE SHARED-PICTURES RECORD, because the verb wore the organ's picture before the organ had a root of its own: to see wore the eye, to hear the ear, and to speak the mouth, in both languages. On 2026-10-03 the organs were given roots and the verbs were moved off, which is the same split, and the chapters kept the old marks the same way. The mouth pair is the Greek and the Hebrew word for speak, the two roots that wore it; the mouth's own root, stoma, draws nothing else, so it would add nothing a mark could become.");
   return pairs;
 }
