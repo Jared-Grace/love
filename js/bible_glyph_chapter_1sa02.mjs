@@ -942,7 +942,7 @@ export function bible_glyph_chapter_1sa02() {
           "then",
           "do",
           "you",
-          "kick",
+          "$foot+collision+doing",
           "at",
           "My",
           "sacrifice",
