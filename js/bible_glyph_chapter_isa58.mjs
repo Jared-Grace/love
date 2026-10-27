@@ -51,7 +51,7 @@ export function bible_glyph_chapter_isa58() {
           "after",
           "$sun",
           "they",
-          "seek",
+          "$magnifying_glass+question",
           "Me",
           "and",
           "delight",
