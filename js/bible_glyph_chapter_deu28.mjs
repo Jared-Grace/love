@@ -2038,7 +2038,7 @@ export function bible_glyph_chapter_deu28() {
           "annihilate",
           "you",
           "and",
-          "destroy",
+          "$bomb",
           "you.",
           "And",
           "you",
