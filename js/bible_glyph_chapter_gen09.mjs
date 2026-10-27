@@ -27,7 +27,7 @@ export function bible_glyph_chapter_gen09() {
           "Be",
           "fruitful",
           "and",
-          "multiply",
+          "$multiply+doing",
           "and",
           "fill",
           "the",
