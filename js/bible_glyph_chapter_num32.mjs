@@ -1017,7 +1017,7 @@ export function bible_glyph_chapter_num32() {
           "$city,",
           "and",
           "the",
-          "territory",
+          "$passport_control+place",
           "of",
           "the",
           "$city",
