@@ -1014,7 +1014,7 @@ export function bible_glyph_chapter_deu11() {
       {
         verse_number: 31,
         words: [
-          "For",
+          "$pointing",
           "you",
           "are",
           "about",
