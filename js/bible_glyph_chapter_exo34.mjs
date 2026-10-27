@@ -733,7 +733,7 @@ export function bible_glyph_chapter_exo34() {
         verse_number: 23,
         words: [
           "$three",
-          "times",
+          "$drum",
           "a",
           "$year",
           "all",
