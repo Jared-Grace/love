@@ -427,7 +427,7 @@ export function bible_glyph_chapter_neh08() {
           "$speech,",
           "Be",
           "still,",
-          "since",
+          "$pointing",
           "$sun",
           "is",
           "$sparkle.",
