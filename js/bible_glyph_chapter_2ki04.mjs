@@ -531,7 +531,7 @@ export function bible_glyph_chapter_2ki04() {
           "the",
           "$woman",
           "did",
-          "conceive,",
+          "$pregnant_woman+doing,",
           "and",
           "at",
           "that",
