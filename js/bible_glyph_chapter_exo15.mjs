@@ -270,7 +270,7 @@ export function bible_glyph_chapter_exo15() {
           "They",
           "sank",
           "like",
-          "lead",
+          "$anchor+dust",
           "in",
           "the",
           "mighty",
