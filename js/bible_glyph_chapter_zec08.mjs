@@ -746,7 +746,7 @@ export function bible_glyph_chapter_zec08() {
           "men",
           "of",
           "$all",
-          "tongue",
+          "$tongue",
           "from",
           "the",
           "$map",
