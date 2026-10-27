@@ -308,7 +308,7 @@ export function bible_glyph_chapter_exo27() {
           "courtyard",
           "shall",
           "be",
-          "fifty",
+          "$five+zero",
           "cubits",
           "$arrow_both_ways,",
           "with",
