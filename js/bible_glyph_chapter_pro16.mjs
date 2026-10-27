@@ -135,7 +135,7 @@ export function bible_glyph_chapter_pro16() {
           "and",
           "by",
           "the",
-          "fear",
+          "$fear",
           "of",
           "the",
           "$i_am",
