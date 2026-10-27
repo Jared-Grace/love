@@ -102,7 +102,7 @@ export function bible_glyph_chapter_est01() {
           "$eye",
           "the",
           "$star",
-          "riches",
+          "$money_bag",
           "of",
           "his",
           "kingdom",
