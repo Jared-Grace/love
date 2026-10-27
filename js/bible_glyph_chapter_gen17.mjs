@@ -621,7 +621,7 @@ export function bible_glyph_chapter_gen17() {
           "you",
           "at",
           "this",
-          "time",
+          "$alarm_clock",
           "next",
           '$year."',
         ],
