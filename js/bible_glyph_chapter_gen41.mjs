@@ -467,7 +467,7 @@ export function bible_glyph_chapter_gen41() {
           "I",
           "was",
           "standing",
-          "on",
+          "$pointing_up",
           "the",
           "bank",
           "of",
