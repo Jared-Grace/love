@@ -956,7 +956,7 @@ export function bible_glyph_chapter_1ki02() {
           "fulfilled",
           "the",
           "$speech",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "had",
