@@ -493,7 +493,7 @@ export function bible_glyph_chapter_gen15() {
           "I",
           "have",
           "$hands_giving",
-          "this",
+          "$flashlight",
           "$earth,",
           "from",
           "the",
