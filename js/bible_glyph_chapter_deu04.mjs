@@ -578,7 +578,7 @@ export function bible_glyph_chapter_deu04() {
           "any",
           "$framed_picture+person",
           "or",
-          "shape,",
+          "$moai+likeness,",
           "whether",
           "in",
           "the",
