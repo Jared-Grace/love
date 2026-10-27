@@ -361,7 +361,7 @@ export function bible_glyph_chapter_ezk37() {
           "up,",
           "and",
           "our",
-          "hope",
+          "$crossed_fingers",
           "has",
           "perished;",
           "we",
