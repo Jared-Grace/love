@@ -530,7 +530,7 @@ export function bible_glyph_chapter_lev09() {
           "lifted",
           "up",
           "$hand",
-          "toward",
+          "$toward",
           "$family",
           "$speech+thumbs_up.",
           "And",
