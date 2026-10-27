@@ -463,7 +463,7 @@ export function bible_glyph_chapter_num35() {
           "with",
           "an",
           "$iron",
-          "object",
+          "$toolbox",
           "and",
           "$skull+doing",
           "him,",
