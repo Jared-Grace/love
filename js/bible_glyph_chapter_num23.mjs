@@ -283,7 +283,7 @@ export function bible_glyph_chapter_num23() {
           "of",
           "$hand+foot",
           "or",
-          "number",
+          "$input_numbers",
           "even",
           "a",
           "fourth",
