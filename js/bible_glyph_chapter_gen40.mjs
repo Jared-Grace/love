@@ -461,7 +461,7 @@ export function bible_glyph_chapter_gen40() {
           "$dream.",
           "There",
           "were",
-          "three",
+          "$three",
           "$basket",
           "of",
           "white",
