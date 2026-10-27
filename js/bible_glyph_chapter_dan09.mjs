@@ -971,7 +971,7 @@ export function bible_glyph_chapter_dan09() {
           "a",
           "flood,",
           "and",
-          "until",
+          "$finish",
           "the",
           "$stop_sign",
           "there",
