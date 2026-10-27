@@ -188,7 +188,7 @@ export function bible_glyph_chapter_mic05() {
           "shepherds,",
           "even",
           "$eight",
-          "leaders",
+          "$pouring_liquid+wine+thing",
           "of",
           "$person.",
         ],
