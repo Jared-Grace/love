@@ -900,7 +900,7 @@ export function bible_glyph_chapter_neh09() {
           "fruit",
           "$tree",
           "in",
-          "abundance.",
+          "$multiply+thing.",
           "So",
           "they",
           "ate",
