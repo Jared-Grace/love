@@ -470,7 +470,7 @@ export function bible_glyph_chapter_gen12() {
           "acquired",
           "$sheep",
           "and",
-          "cattle,",
+          "$cow_face,",
           "male",
           "and",
           "female",
