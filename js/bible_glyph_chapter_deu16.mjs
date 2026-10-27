@@ -596,7 +596,7 @@ export function bible_glyph_chapter_deu16() {
           "Weeks,",
           "and",
           "the",
-          "Feast",
+          "$party_popper",
           "of",
           "Tabernacles.",
           "$no_entry",
