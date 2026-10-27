@@ -69,7 +69,7 @@ export function bible_glyph_chapter_dan12() {
           "$writing_hand",
           "in",
           "the",
-          "book.",
+          "$closed_book.",
         ],
       },
       {
