@@ -1089,7 +1089,7 @@ export function bible_glyph_chapter_2ki04() {
           "$child,",
           "$face_with_open_mouth",
           "to",
-          "mouth,",
+          "$face_with_open_mouth,",
           "$eyes",
           "to",
           "$eyes,",
