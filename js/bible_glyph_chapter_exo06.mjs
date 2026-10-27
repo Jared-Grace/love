@@ -583,7 +583,7 @@ export function bible_glyph_chapter_exo06() {
           "$proper_name$Amram",
           "$sprout",
           "$seven",
-          "years.",
+          "$year.",
         ],
       },
       {
