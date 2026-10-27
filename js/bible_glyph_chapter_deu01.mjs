@@ -888,7 +888,7 @@ export function bible_glyph_chapter_deu01() {
           "Do",
           "$no_entry",
           "be",
-          "terrified",
+          "$fearful_face+shaking_face+doing",
           "or",
           "afraid",
           "of",
