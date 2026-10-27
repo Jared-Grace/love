@@ -354,7 +354,7 @@ export function bible_glyph_chapter_jos06() {
           "he",
           "had",
           "the",
-          "ark",
+          "$ark",
           "of",
           "the",
           "$i_am",
