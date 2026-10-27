@@ -674,7 +674,7 @@ export function bible_glyph_chapter_lev23() {
           "your",
           "$earth,",
           "$no_entry",
-          "reap",
+          "$sheaf_of_rice+scissors+doing",
           "all",
           "the",
           "way",
