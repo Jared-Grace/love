@@ -978,7 +978,7 @@ export function bible_glyph_chapter_jdg06() {
           "pole",
           "beside",
           "it",
-          "cut",
+          "$scissors",
           "down,",
           "and",
           "the",
