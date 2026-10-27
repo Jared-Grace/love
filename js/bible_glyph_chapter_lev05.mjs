@@ -113,7 +113,7 @@ export function bible_glyph_chapter_lev05() {
           "$shuffle",
           "if",
           "$person_other",
-          "swears",
+          "$raised_back_of_hand+doing",
           "thoughtlessly",
           "with",
           "his",
