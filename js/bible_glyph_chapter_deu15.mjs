@@ -129,7 +129,7 @@ export function bible_glyph_chapter_deu15() {
       {
         verse_number: 5,
         words: [
-          "if",
+          "$traffic_light",
           "$one+check",
           "you",
           "$ear",
