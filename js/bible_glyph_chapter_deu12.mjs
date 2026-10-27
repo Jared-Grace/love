@@ -927,7 +927,7 @@ export function bible_glyph_chapter_deu12() {
           "to",
           "$ear",
           "$all",
-          "these",
+          "$flashlight+flashlight",
           "$speech",
           "I",
           "command",
