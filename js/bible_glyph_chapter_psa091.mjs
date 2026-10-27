@@ -236,7 +236,7 @@ export function bible_glyph_chapter_psa091() {
           "$pointing",
           "He",
           "will",
-          "command",
+          "$speech+scroll",
           "His",
           "$angel",
           "concerning",
