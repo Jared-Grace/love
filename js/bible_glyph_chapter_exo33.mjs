@@ -98,7 +98,7 @@ export function bible_glyph_chapter_exo33() {
           "with",
           "$milk",
           "and",
-          "honey.",
+          "$honey.",
           "But",
           "I",
           "will",
