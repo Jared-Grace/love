@@ -653,7 +653,7 @@ export function bible_glyph_chapter_num23() {
           "there",
           "is",
           "$no_entry",
-          "spell",
+          "$crystal_ball+thing",
           "against",
           "$hand+foot",
           "and",
