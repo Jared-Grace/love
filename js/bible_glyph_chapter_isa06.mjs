@@ -25,7 +25,7 @@ export function bible_glyph_chapter_isa06() {
           "the",
           "$crown",
           "$person+house",
-          "on",
+          "$pointing_up",
           "a",
           "$throne,",
           "high",
