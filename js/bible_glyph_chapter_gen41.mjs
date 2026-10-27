@@ -791,7 +791,7 @@ export function bible_glyph_chapter_gen41() {
           "$year",
           "of",
           "great",
-          "abundance",
+          "$eating+top+multiply",
           "are",
           "$footprints",
           "throughout",
