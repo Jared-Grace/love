@@ -384,7 +384,7 @@ export function bible_glyph_chapter_deu04() {
           "$sun",
           "they",
           "$sprout",
-          "on",
+          "$pointing_up",
           "the",
           "earth,",
           "and",
