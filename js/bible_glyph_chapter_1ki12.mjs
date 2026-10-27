@@ -17,7 +17,7 @@ export function bible_glyph_chapter_1ki12() {
         verse_number: 1,
         words: [
           "Then",
-          "Rehoboam",
+          "$arrow_both_ways+family+proper_name",
           "$walking",
           "to",
           "$proper_name$Shechem,",
