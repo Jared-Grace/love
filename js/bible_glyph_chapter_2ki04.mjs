@@ -643,7 +643,7 @@ export function bible_glyph_chapter_2ki04() {
           "him",
           "$pointing_up",
           "the",
-          "bed",
+          "$bed",
           "of",
           "the",
           "$man_beard",
