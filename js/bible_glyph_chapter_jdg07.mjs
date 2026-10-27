@@ -265,7 +265,7 @@ export function bible_glyph_chapter_jdg07() {
           "With",
           "the",
           "$three",
-          "hundred",
+          "$input_numbers+all",
           "$man_beard",
           "who",
           "lapped",
