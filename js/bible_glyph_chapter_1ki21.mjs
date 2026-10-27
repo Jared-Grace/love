@@ -946,7 +946,7 @@ export function bible_glyph_chapter_1ki21() {
           "lay",
           "down",
           "in",
-          "sackcloth",
+          "$sackcloth",
           "and",
           "$walking",
           "around",
