@@ -664,7 +664,7 @@ export function bible_glyph_chapter_deu28() {
           "make",
           "the",
           "plague",
-          "cling",
+          "$paperclip",
           "to",
           "you",
           "until",
