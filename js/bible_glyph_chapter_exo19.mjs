@@ -555,7 +555,7 @@ export function bible_glyph_chapter_exo19() {
           "the",
           "camp",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "with",
           "$heart_on_fire,",
           "and",
