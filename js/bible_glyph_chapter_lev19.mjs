@@ -71,7 +71,7 @@ export function bible_glyph_chapter_lev19() {
           "Do",
           "$no_entry",
           "$curving_right+doing",
-          "to",
+          "$toward",
           "idols",
           "or",
           "$hammer+doing",
