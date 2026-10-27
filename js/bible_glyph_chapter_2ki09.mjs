@@ -73,7 +73,7 @@ export function bible_glyph_chapter_2ki09() {
           "$proper_name$Nimshi.",
           "$footprints",
           "in,",
-          "get",
+          "$person+pointing_up",
           "him",
           "away",
           "from",
