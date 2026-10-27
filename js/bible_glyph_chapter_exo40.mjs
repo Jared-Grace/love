@@ -113,7 +113,7 @@ export function bible_glyph_chapter_exo40() {
           "and",
           "hang",
           "the",
-          "curtain",
+          "$umbrella+door",
           "at",
           "the",
           "entrance",
