@@ -157,7 +157,7 @@ export function bible_glyph_chapter_pro04() {
           "you;",
           "$pointing",
           "you",
-          "embrace",
+          "$people_hugging",
           "her,",
           "she",
           "will",
