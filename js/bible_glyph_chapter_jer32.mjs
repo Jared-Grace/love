@@ -1566,7 +1566,7 @@ export function bible_glyph_chapter_jer32() {
           "foothills,",
           "and",
           "the",
-          "Negev,",
+          "$compass+down_arrow,",
           "because",
           "I",
           "will",
