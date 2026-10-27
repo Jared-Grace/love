@@ -48,7 +48,7 @@ export function bible_glyph_chapter_mic05() {
         words: [
           "But",
           "you,",
-          "Bethlehem",
+          "$house+bread+proper_name",
           "$proper_name$Ephrathah,",
           "who",
           "are",
