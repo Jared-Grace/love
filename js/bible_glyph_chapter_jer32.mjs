@@ -792,7 +792,7 @@ export function bible_glyph_chapter_jer32() {
           "$no_entry",
           "to",
           "$hammer+doing",
-          "all",
+          "$all",
           "that",
           "You",
           "commanded",
