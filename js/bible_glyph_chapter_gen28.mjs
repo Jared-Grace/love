@@ -510,7 +510,7 @@ export function bible_glyph_chapter_gen28() {
           "$flashlight",
           "$place,",
           "and",
-          "I",
+          "$me",
           "did",
           "$no_entry",
           "$lightbulb",
