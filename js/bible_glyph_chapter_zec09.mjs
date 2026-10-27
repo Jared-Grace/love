@@ -434,7 +434,7 @@ export function bible_glyph_chapter_zec09() {
           "$son,",
           "O",
           "Zion,",
-          "against",
+          "$pointing_up",
           "the",
           "$son",
           "of",
