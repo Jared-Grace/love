@@ -735,7 +735,7 @@ export function bible_glyph_chapter_exo33() {
           "you",
           "in",
           "a",
-          "cleft",
+          "$rock+hole",
           "of",
           "the",
           "rock",
