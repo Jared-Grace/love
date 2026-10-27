@@ -58,7 +58,7 @@ export function bible_glyph_chapter_gen11() {
           "$speech",
           "one",
           "$man_beard",
-          "to",
+          "$toward",
           "another,",
           "Come,",
           "let",
