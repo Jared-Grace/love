@@ -797,7 +797,7 @@ export function bible_glyph_chapter_isa49() {
           "$bowing",
           "to",
           "you",
-          "facedown",
+          "$nose+fire",
           "and",
           "lick",
           "the",
