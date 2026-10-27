@@ -1309,7 +1309,7 @@ export function bible_glyph_chapter_num22() {
           "him",
           "up",
           "to",
-          "Bamoth-baal.",
+          "$key+proper_name.",
           "From",
           "there",
           "he",
