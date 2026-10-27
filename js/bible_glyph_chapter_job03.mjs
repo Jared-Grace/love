@@ -148,7 +148,7 @@ export function bible_glyph_chapter_job03() {
           "may",
           "that",
           "$night",
-          "be",
+          "$link",
           "barren.",
           "May",
           "$no_entry",
