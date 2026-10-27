@@ -380,7 +380,7 @@ export function bible_glyph_chapter_isa61() {
           "$crown+sparkles+thing,",
           "as",
           "a",
-          "bride",
+          "$bouquet",
           "adorns",
           "herself",
           "with",
