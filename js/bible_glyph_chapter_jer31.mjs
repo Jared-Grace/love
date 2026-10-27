@@ -1280,7 +1280,7 @@ export function bible_glyph_chapter_jer31() {
           "of",
           "the",
           "$earth",
-          "below",
+          "$down_arrow+manner",
           "searched",
           "out,",
           "would",
