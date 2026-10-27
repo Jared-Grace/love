@@ -785,7 +785,7 @@ export function bible_glyph_chapter_2sa12() {
           "he",
           "is",
           "$skull+doing,",
-          "why",
+          "$flashlight+question",
           "should",
           "I",
           "fast?",
