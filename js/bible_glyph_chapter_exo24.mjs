@@ -118,7 +118,7 @@ export function bible_glyph_chapter_exo24() {
           "$fishing_pole+proper_name",
           "wrote",
           "down",
-          "all",
+          "$all",
           "the",
           "$speech",
           "of",
