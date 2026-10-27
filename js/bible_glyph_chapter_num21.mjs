@@ -60,7 +60,7 @@ export function bible_glyph_chapter_num21() {
           "You",
           "will",
           "$hands_giving",
-          "this",
+          "$flashlight",
           "$family",
           "into",
           "our",
