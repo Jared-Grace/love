@@ -156,7 +156,7 @@ export function bible_glyph_chapter_exo07() {
           "out",
           "My",
           "$hand",
-          "against",
+          "$pointing_up",
           "$clamp+proper_name",
           "and",
           "$walking+tray_out",
