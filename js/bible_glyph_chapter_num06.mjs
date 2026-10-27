@@ -738,7 +738,7 @@ export function bible_glyph_chapter_num06() {
       },
       {
         verse_number: 22,
-        words: ["Then", "the", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,"],
+        words: ["Then", "the", "$i_am", "$mouth", "$toward", "$fishing_pole+proper_name,"],
       },
       {
         verse_number: 23,
