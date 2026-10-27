@@ -27,7 +27,7 @@ export function bible_glyph_chapter_jdg07() {
           "$family",
           "with",
           "him",
-          "camped",
+          "$camp+doing",
           "beside",
           "the",
           "spring",
