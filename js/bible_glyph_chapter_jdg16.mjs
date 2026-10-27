@@ -1002,7 +1002,7 @@ export function bible_glyph_chapter_jdg16() {
           "held",
           "his",
           "$hand,",
-          "Lead",
+          "$seat+doing",
           "me",
           "where",
           "I",
