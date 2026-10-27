@@ -311,7 +311,7 @@ export function bible_glyph_chapter_1ki18() {
           "$castle",
           "or",
           "$map",
-          "swear",
+          "$raised_back_of_hand+doing",
           "that",
           "they",
           "had",
