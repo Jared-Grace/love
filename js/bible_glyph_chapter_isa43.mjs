@@ -324,7 +324,7 @@ export function bible_glyph_chapter_isa43() {
           "are",
           "My",
           "$witness,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am,",
           "and",
