@@ -316,7 +316,7 @@ export function bible_glyph_chapter_num14() {
           "the",
           "$tent",
           "of",
-          "Meeting",
+          "$alarm_clock",
           "by",
           "all",
           "the",
