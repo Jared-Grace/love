@@ -297,7 +297,7 @@ export function bible_glyph_chapter_gen28() {
           "the",
           "$night+doing",
           "$telescope,",
-          "because",
+          "$pointing",
           "the",
           "sun",
           "had",
