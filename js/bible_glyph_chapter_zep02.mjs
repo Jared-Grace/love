@@ -42,7 +42,7 @@ export function bible_glyph_chapter_zep02() {
           "$clock+back",
           "the",
           "$angry_face+thing",
-          "anger",
+          "$nose+fire",
           "of",
           "the",
           "$i_am",
