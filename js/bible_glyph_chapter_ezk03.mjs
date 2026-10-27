@@ -261,7 +261,7 @@ export function bible_glyph_chapter_ezk03() {
           "Do",
           "$no_entry",
           "be",
-          "afraid",
+          "$fear+doing",
           "of",
           "them",
           "$no_entry",
