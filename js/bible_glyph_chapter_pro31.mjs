@@ -210,7 +210,7 @@ export function bible_glyph_chapter_pro31() {
           "character,",
           "$person+question",
           "can",
-          "find?",
+          "$magnifying_glass+exclamation?",
           "She",
           "is",
           "far",
