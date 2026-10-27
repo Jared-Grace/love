@@ -388,7 +388,7 @@ export function bible_glyph_chapter_deu29() {
           "$me",
           "am",
           "making",
-          "this",
+          "$flashlight",
           "$covenant",
           "and",
           "this",
