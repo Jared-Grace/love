@@ -577,7 +577,7 @@ export function bible_glyph_chapter_gen08() {
           "$i_am",
           "$nose+doing",
           "the",
-          "pleasing",
+          "$nose+thumbs_up",
           "$nose,",
           "$i_am",
           "$speech",
