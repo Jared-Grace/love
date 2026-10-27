@@ -131,7 +131,7 @@ export function bible_glyph_chapter_isa55() {
           "the",
           "nations,",
           "a",
-          "leader",
+          "$first_place+person",
           "and",
           "commander",
           "of",
