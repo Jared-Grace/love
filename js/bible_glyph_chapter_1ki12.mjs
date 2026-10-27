@@ -984,7 +984,7 @@ export function bible_glyph_chapter_1ki12() {
         verse_number: 29,
         words: [
           "He",
-          "set",
+          "$palm_down",
           "up",
           "one",
           "calf",
