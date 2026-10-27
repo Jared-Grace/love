@@ -656,7 +656,7 @@ export function bible_glyph_chapter_exo30() {
           "$coin,",
           "and",
           "a",
-          "hin",
+          "$jar+straight_ruler",
           "of",
           "$olive",
           "$lotion_bottle.",
