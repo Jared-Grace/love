@@ -530,7 +530,7 @@ export function bible_glyph_chapter_deu01() {
           "I",
           "commanded",
           "you",
-          "all",
+          "$all",
           "the",
           "$speech",
           "you",
