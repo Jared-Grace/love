@@ -870,7 +870,7 @@ export function bible_glyph_chapter_2sa12() {
         verse_number: 26,
         words: [
           "Meanwhile,",
-          "Joab",
+          "$i_am+father",
           "$crossed_swords+doing",
           "against",
           "$multiply+proper_name",
