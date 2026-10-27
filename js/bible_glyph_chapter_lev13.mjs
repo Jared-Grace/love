@@ -442,7 +442,7 @@ export function bible_glyph_chapter_lev13() {
           "person",
           "from",
           "$person_gesturing_ok",
-          "to",
+          "$finish",
           "$foot,",
           "as",
           "far",
