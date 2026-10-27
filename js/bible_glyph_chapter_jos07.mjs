@@ -834,7 +834,7 @@ export function bible_glyph_chapter_jos07() {
           "of",
           "$gold",
           "weighing",
-          "fifty",
+          "$five+zero",
           "$coin,",
           "I",
           "coveted",
