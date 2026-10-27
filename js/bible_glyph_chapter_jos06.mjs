@@ -694,7 +694,7 @@ export function bible_glyph_chapter_jos06() {
           "the",
           "$family",
           "$walking+pointing_up",
-          "straight",
+          "$newspaper+thing",
           "into",
           "the",
           "$city",
