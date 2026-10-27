@@ -304,7 +304,7 @@ export function bible_glyph_chapter_2ch20() {
           "$ear",
           "us",
           "and",
-          "save",
+          "$rescue",
           "us.'",
         ],
       },
