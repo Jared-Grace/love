@@ -561,7 +561,7 @@ export function bible_glyph_chapter_est01() {
       {
         verse_number: 18,
         words: [
-          "This",
+          "$flashlight",
           "very",
           "$sun",
           "the",
