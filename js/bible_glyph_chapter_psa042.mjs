@@ -47,7 +47,7 @@ export function bible_glyph_chapter_psa042() {
         words: [
           "My",
           "$person_other",
-          "thirsts",
+          "$tongue+desert+doing",
           "for",
           "$heart_on_fire,",
           "for",
