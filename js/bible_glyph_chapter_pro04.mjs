@@ -427,7 +427,7 @@ export function bible_glyph_chapter_pro04() {
           "$eyes;",
           "$guard",
           "them",
-          "within",
+          "$radio_button",
           "your",
           "$heart_organ.",
         ],
