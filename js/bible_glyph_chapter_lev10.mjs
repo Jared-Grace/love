@@ -486,7 +486,7 @@ export function bible_glyph_chapter_lev10() {
           "$goat+man_beard",
           "$bow,",
           "and",
-          "behold,",
+          "$exclamation,",
           "it",
           "had",
           "been",
