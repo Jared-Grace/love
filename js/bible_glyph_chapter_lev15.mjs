@@ -377,7 +377,7 @@ export function bible_glyph_chapter_lev15() {
           "$sun",
           "for",
           "his",
-          "cleansing,",
+          "$soap+sparkles,",
           "wash",
           "his",
           "$garment,",
