@@ -968,7 +968,7 @@ export function bible_glyph_chapter_jer23() {
           "has",
           "a",
           "dream",
-          "retell",
+          "$abacus",
           "it,",
           "but",
           "let",
