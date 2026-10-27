@@ -1335,7 +1335,7 @@ export function bible_glyph_chapter_neh09() {
           "from",
           "their",
           "$thumbs_down",
-          "ways.",
+          "$clapper_board.",
         ],
       },
       {
