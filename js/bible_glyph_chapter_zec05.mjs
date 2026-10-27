@@ -271,7 +271,7 @@ export function bible_glyph_chapter_zec05() {
           "$eyes",
           "and",
           "$eye",
-          "two",
+          "$two",
           "$woman",
           "$walking+tray_out,",
           "with",
