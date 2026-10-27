@@ -496,7 +496,7 @@ export function bible_glyph_chapter_num20() {
           "$city",
           "on",
           "the",
-          "edge",
+          "$end_arrow+round_pushpin",
           "of",
           "your",
           "territory.",
