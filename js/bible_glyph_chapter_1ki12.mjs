@@ -1097,7 +1097,7 @@ export function bible_glyph_chapter_1ki12() {
           "$priest",
           "for",
           "the",
-          "high",
+          "$snow_capped_mountain",
           "places",
           "he",
           "had",
