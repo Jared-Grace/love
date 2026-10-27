@@ -1015,7 +1015,7 @@ export function bible_glyph_chapter_2ki04() {
           "$voice",
           "and",
           "no",
-          "response.",
+          "$ear_with_hearing_aid+thing.",
           "So",
           "he",
           "$turn_back",
