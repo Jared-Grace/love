@@ -2235,7 +2235,7 @@ export function bible_glyph_chapter_deu28() {
           "There",
           "you",
           "will",
-          "sell",
+          "$coin+hands_giving",
           "yourselves",
           "to",
           "your",
