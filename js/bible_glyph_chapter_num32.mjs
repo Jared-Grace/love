@@ -1050,7 +1050,7 @@ export function bible_glyph_chapter_num32() {
       {
         verse_number: 36,
         words: [
-          "Beth-nimrah",
+          "$house+leopard+proper_name",
           "and",
           "Beth-haran",
           "as",
