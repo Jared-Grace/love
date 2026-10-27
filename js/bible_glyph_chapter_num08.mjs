@@ -52,7 +52,7 @@ export function bible_glyph_chapter_num08() {
           "And",
           "Aaron",
           "$hammer+doing",
-          "so;",
+          "$right_arrow;",
           "he",
           "set",
           "up",
