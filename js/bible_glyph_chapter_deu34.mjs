@@ -63,7 +63,7 @@ export function bible_glyph_chapter_deu34() {
           "$fruit",
           "and",
           "$proper_name$Manasseh,",
-          "all",
+          "$all",
           "the",
           "$earth",
           "of",
