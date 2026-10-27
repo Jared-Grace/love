@@ -805,7 +805,7 @@ export function bible_glyph_chapter_exo04() {
           "you",
           "are",
           "a",
-          "bridegroom",
+          "$man_in_tuxedo",
           "of",
           "$blood",
           "to",
