@@ -106,7 +106,7 @@ export function bible_glyph_chapter_exo15() {
           "$house+proper_name",
           "$chariot",
           "and",
-          "army",
+          "$raised_fist",
           "He",
           "has",
           "cast",
