@@ -156,7 +156,7 @@ export function bible_glyph_chapter_deu08() {
           "feet",
           "did",
           "$no_entry",
-          "swell",
+          "$foot+balloon+doing",
           "during",
           "these",
           "forty",
