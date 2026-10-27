@@ -411,7 +411,7 @@ export function bible_glyph_chapter_num22() {
           "up",
           "the",
           "next",
-          "morning",
+          "$morning",
           "and",
           "$speech",
           "to",
