@@ -916,7 +916,7 @@ export function bible_glyph_chapter_gen24() {
           "$footprints",
           "the",
           "$man_beard",
-          "standing",
+          "$person+round_pushpin",
           "by",
           "the",
           "camels",
