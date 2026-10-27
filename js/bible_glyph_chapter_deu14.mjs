@@ -659,7 +659,7 @@ export function bible_glyph_chapter_deu14() {
           "And",
           "do",
           "$no_entry",
-          "neglect",
+          "$derelict_house+doing",
           "the",
           "$handshake",
           "within",
