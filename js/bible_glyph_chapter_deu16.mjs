@@ -602,7 +602,7 @@ export function bible_glyph_chapter_deu16() {
           "$no_entry",
           "should",
           "$eye",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "empty-handed.",
