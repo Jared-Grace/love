@@ -979,7 +979,7 @@ export function bible_glyph_chapter_exo39() {
           "$incense,",
           "and",
           "the",
-          "curtain",
+          "$umbrella+door",
           "for",
           "the",
           "entrance",
