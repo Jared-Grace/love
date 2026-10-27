@@ -166,7 +166,7 @@ export function bible_glyph_chapter_gen04() {
           "has",
           "your",
           "countenance",
-          "fallen?",
+          "$person+pointing_down?",
         ],
       },
       {
