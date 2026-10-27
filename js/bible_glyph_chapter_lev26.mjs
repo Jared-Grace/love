@@ -1282,7 +1282,7 @@ export function bible_glyph_chapter_lev26() {
           "then",
           "I",
           "will",
-          "remember",
+          "$reminder_ribbon",
           "My",
           "$covenant",
           "with",
