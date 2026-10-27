@@ -194,7 +194,7 @@ export function bible_glyph_chapter_jer07() {
           "in",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "I",
           "$hands_giving",
           "to",
