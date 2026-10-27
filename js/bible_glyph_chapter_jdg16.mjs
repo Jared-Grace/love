@@ -795,7 +795,7 @@ export function bible_glyph_chapter_jdg16() {
           "awoke",
           "from",
           "his",
-          "sleep,",
+          "$sleeping_face+thing,",
           "he",
           "$speech,",
           "I",
