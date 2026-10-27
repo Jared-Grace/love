@@ -1045,7 +1045,7 @@ export function bible_glyph_chapter_2ki04() {
           "the",
           "boy,",
           "$skull+doing,",
-          "lying",
+          "$bed+doing",
           "on",
           "his",
           "bed.",
