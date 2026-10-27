@@ -725,7 +725,7 @@ export function bible_glyph_chapter_deu07() {
           "you",
           "is",
           "a",
-          "great",
+          "$top",
           "and",
           "awesome",
           "$heart_on_fire.",
