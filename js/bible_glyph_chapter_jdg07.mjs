@@ -151,7 +151,7 @@ export function bible_glyph_chapter_jdg07() {
           "for",
           "you",
           "there.",
-          "If",
+          "$back+flashlight",
           "I",
           "$speech",
           "to",
