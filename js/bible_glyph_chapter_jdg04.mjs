@@ -599,7 +599,7 @@ export function bible_glyph_chapter_jdg04() {
           "little",
           "$water",
           "to",
-          "drink,",
+          "$cup+hands_giving,",
           "he",
           "$speech",
           "to",
