@@ -232,7 +232,7 @@ export function bible_glyph_chapter_exo32() {
           "down",
           "at",
           "once,",
-          "for",
+          "$pointing",
           "your",
           "$family,",
           "whom",
