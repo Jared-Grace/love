@@ -1524,7 +1524,7 @@ export function bible_glyph_chapter_deu04() {
           "$sprout+doing",
           "he",
           "could",
-          "flee",
+          "$running+dashing_away",
           "to",
           "one",
           "$tray_out",
