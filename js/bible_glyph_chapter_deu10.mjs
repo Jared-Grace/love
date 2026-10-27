@@ -223,7 +223,7 @@ export function bible_glyph_chapter_deu10() {
           "succeeded",
           "him",
           "as",
-          "priest.",
+          "$priest+doing.",
         ],
       },
       {
