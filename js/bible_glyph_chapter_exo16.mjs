@@ -447,7 +447,7 @@ export function bible_glyph_chapter_exo16() {
           "a",
           "layer",
           "of",
-          "dew",
+          "$dew",
           "around",
           "the",
           "$camp.",
