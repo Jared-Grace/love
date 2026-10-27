@@ -262,7 +262,7 @@ export function bible_glyph_chapter_exo28() {
         words: [
           "$hand_receiving",
           "$two",
-          "onyx",
+          "$gem_stone+stone",
           "$stone",
           "and",
           "engrave",
