@@ -169,7 +169,7 @@ export function bible_glyph_chapter_job03() {
           "by",
           "those",
           "who",
-          "curse",
+          "$speech+kitchen_knife+doing",
           "the",
           "$sun,",
           "those",
