@@ -628,7 +628,7 @@ export function bible_glyph_chapter_1ki18() {
           "$leg+up_arrow+doing",
           "between",
           "$two",
-          "opinions?",
+          "$thinking+divide?",
           "If",
           "the",
           "$i_am",
