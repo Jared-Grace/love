@@ -502,7 +502,7 @@ export function bible_glyph_chapter_ezr03() {
           "$handshake",
           "and",
           "$father",
-          "heads,",
+          "$person_gesturing_ok,",
           "who",
           "had",
           "$eye",
