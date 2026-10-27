@@ -384,7 +384,7 @@ export function bible_glyph_chapter_mic01() {
           "but",
           "$thumbs_down",
           "came",
-          "down",
+          "$walking+pointing_down",
           "from",
           "the",
           "$i_am,",
