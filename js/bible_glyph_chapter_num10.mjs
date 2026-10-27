@@ -768,7 +768,7 @@ export function bible_glyph_chapter_num10() {
           "will",
           "$no_entry",
           "$walking.",
-          "Instead,",
+          "$pointing,",
           "I",
           "am",
           "$walking",
