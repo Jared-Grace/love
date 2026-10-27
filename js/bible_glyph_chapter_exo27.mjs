@@ -400,7 +400,7 @@ export function bible_glyph_chapter_exo27() {
           "cubits",
           "long,",
           "with",
-          "blue,",
+          "$blue_circle,",
           "purple",
           "and",
           "scarlet",
