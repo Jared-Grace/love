@@ -15,7 +15,7 @@ export function bible_glyph_chapter_num23() {
         verse_number: 1,
         words: [
           "Then",
-          "Balaam",
+          "$foreigner+proper_name",
           "$speech",
           "to",
           "$proper_name$Balak,",
