@@ -706,7 +706,7 @@ export function bible_glyph_chapter_jos24() {
         words: [
           "$pointing",
           "you",
-          "forsake",
+          "$derelict_house+doing",
           "the",
           "$i_am",
           "and",
