@@ -41,7 +41,7 @@ export function bible_glyph_chapter_gen14() {
         words: [
           "$hammer+doing",
           "$crossed_swords",
-          "against",
+          "$safety_pin",
           "$proper_name$Bera",
           "$king",
           "of",
