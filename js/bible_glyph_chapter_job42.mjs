@@ -431,7 +431,7 @@ export function bible_glyph_chapter_job42() {
       {
         verse_number: 16,
         words: [
-          "After",
+          "$next_track",
           "this",
           "$proper_name$Job",
           "$sprout+doing",
