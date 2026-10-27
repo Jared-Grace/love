@@ -768,7 +768,7 @@ export function bible_glyph_chapter_exo25() {
         verse_number: 32,
         words: [
           "And",
-          "six",
+          "$six",
           "branches",
           "shall",
           "come",
