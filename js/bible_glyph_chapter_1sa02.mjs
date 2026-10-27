@@ -557,7 +557,7 @@ export function bible_glyph_chapter_1sa02() {
           "treating",
           "the",
           "$i_am",
-          "offering",
+          "$grain_offering",
           "with",
           "contempt.",
         ],
