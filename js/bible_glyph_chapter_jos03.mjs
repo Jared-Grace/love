@@ -476,7 +476,7 @@ export function bible_glyph_chapter_jos03() {
           "the",
           "$sun",
           "of",
-          "harvest.",
+          "$harvest.",
           "But",
           "as",
           "soon",
