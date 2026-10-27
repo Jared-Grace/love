@@ -167,7 +167,7 @@ export function bible_glyph_chapter_deu16() {
           "$sunset",
           "of",
           "the",
-          "first",
+          "$first_place",
           "$sun",
           "shall",
           "remain",
