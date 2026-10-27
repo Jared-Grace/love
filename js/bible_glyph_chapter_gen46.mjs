@@ -637,7 +637,7 @@ export function bible_glyph_chapter_gen46() {
           "in",
           "$clamp+proper_name",
           "were",
-          "two",
+          "$two",
           "$person_other.",
           "So",
           "all",
