@@ -94,7 +94,7 @@ export function bible_glyph_chapter_deu12() {
           "burn",
           "up",
           "their",
-          "Asherah",
+          "$wood+imp",
           "poles,",
           "cut",
           "down",
