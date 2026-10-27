@@ -33,7 +33,7 @@ export function bible_glyph_chapter_mal02() {
           "$no_entry",
           "$ear,",
           "and",
-          "if",
+          "$traffic_light",
           "you",
           "do",
           "$no_entry",
