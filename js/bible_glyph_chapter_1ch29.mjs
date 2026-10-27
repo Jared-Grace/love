@@ -782,7 +782,7 @@ export function bible_glyph_chapter_1ch29() {
           "$bull,",
           "a",
           "$ten+all",
-          "rams",
+          "$ram",
           "and",
           "a",
           "$ten+all",
