@@ -270,7 +270,7 @@ export function bible_glyph_chapter_mic06() {
           "to",
           "$walking",
           "$walking+bowing",
-          "with",
+          "$linked_paperclips",
           "your",
           "$heart_on_fire?",
         ],
