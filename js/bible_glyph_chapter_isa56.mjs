@@ -205,7 +205,7 @@ export function bible_glyph_chapter_isa56() {
           "the",
           "$i_am",
           "to",
-          "minister",
+          "$bellhop_bell+doing",
           "to",
           "Him,",
           "to",
