@@ -822,7 +822,7 @@ export function bible_glyph_chapter_gen37() {
           "$i_am+plus",
           "$tray_out",
           "the",
-          "pit",
+          "$hole+droplet",
           "and",
           "sold",
           "him",
