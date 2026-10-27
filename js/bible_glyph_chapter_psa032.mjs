@@ -112,7 +112,7 @@ export function bible_glyph_chapter_psa032() {
           "and",
           "did",
           "$no_entry",
-          "hide",
+          "$coat+doing",
           "my",
           "iniquity.",
           "I",
