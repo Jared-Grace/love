@@ -412,7 +412,7 @@ export function bible_glyph_chapter_deu10() {
           "$i_am",
           "your",
           "$heart_on_fire",
-          "ask",
+          "$question",
           "of",
           "you,",
           "but",
