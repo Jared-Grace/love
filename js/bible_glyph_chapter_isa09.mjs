@@ -559,7 +559,7 @@ export function bible_glyph_chapter_isa09() {
           "and",
           "kindles",
           "the",
-          "forest",
+          "$tree+tree",
           "$herb+knot,",
           "which",
           "roll",
