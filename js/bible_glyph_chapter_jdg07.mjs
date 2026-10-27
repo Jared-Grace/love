@@ -373,7 +373,7 @@ export function bible_glyph_chapter_jdg07() {
           "$traffic_light",
           "you",
           "are",
-          "afraid",
+          "$fear+describing",
           "to",
           "do",
           "so,",
