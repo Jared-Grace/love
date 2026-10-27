@@ -85,7 +85,7 @@ export function bible_glyph_chapter_lev04() {
           "$alarm_clock",
           "$face",
           "$i_am,",
-          "lay",
+          "$crutch",
           "$hand",
           "on",
           "the",
