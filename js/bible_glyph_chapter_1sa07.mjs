@@ -214,7 +214,7 @@ export function bible_glyph_chapter_1sa07() {
           "$i_am.",
           "And",
           "$ear+heart_on_fire",
-          "judged",
+          "$scales",
           "the",
           "$son",
           "of",
