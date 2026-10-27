@@ -125,7 +125,7 @@ export function bible_glyph_chapter_ezk11() {
         verse_number: 4,
         words: [
           "$right_arrow",
-          "prophesy",
+          "$megaphone+doing",
           "against",
           "them.",
           "Prophesy,",
