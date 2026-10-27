@@ -1069,7 +1069,7 @@ export function bible_glyph_chapter_gen31() {
         verse_number: 38,
         words: [
           "These",
-          "twenty",
+          "$two+zero",
           "years",
           "I",
           "have",
