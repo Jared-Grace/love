@@ -543,7 +543,7 @@ export function bible_glyph_chapter_2ki03() {
           "$speech:",
           "$hammer+doing",
           "this",
-          "valley",
+          "$national_park",
           "full",
           "of",
           "ditches.",
