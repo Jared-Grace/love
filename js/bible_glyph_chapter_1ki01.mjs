@@ -791,7 +791,7 @@ export function bible_glyph_chapter_1ki01() {
           "commanders",
           "of",
           "the",
-          "army,",
+          "$military_helmet,",
           "and",
           "$proper_name$Abiathar",
           "the",
