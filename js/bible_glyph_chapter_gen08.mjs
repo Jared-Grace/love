@@ -180,7 +180,7 @@ export function bible_glyph_chapter_gen08() {
           "sent",
           "out",
           "a",
-          "raven.",
+          "$raven.",
           "It",
           "kept",
           "flying",
