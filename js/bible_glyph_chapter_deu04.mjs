@@ -454,7 +454,7 @@ export function bible_glyph_chapter_deu04() {
           "but",
           "you",
           "$eye",
-          "no",
+          "$dotted_line_face",
           "$framed_picture+person;",
           "there",
           "was",
