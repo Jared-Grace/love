@@ -416,7 +416,7 @@ export function bible_glyph_chapter_isa09() {
           "they",
           "did",
           "$no_entry",
-          "seek",
+          "$magnifying_glass+question",
           "the",
           "$i_am",
           "of",
