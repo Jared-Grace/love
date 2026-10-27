@@ -811,7 +811,7 @@ export function bible_glyph_chapter_exo28() {
           "as",
           "a",
           "continual",
-          "reminder",
+          "$reminder_ribbon+thing",
           "before",
           "$i_am.",
         ],
