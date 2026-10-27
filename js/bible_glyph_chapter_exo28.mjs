@@ -933,7 +933,7 @@ export function bible_glyph_chapter_exo28() {
           "$dress+down_arrow,",
           "with",
           "$gold",
-          "bells",
+          "$bell",
           "between",
           "them,",
         ],
