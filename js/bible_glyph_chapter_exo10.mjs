@@ -468,7 +468,7 @@ export function bible_glyph_chapter_exo10() {
           "stretched",
           "out",
           "his",
-          "staff",
+          "$white_cane",
           "over",
           "the",
           "$earth",
