@@ -506,7 +506,7 @@ export function bible_glyph_chapter_hab02() {
       {
         verse_number: 17,
         words: [
-          "For",
+          "$pointing",
           "your",
           "violence",
           "against",
