@@ -142,7 +142,7 @@ export function bible_glyph_chapter_psa130() {
           "$wrestling+heart_on_fire,",
           "put",
           "your",
-          "hope",
+          "$hourglass+crossed_fingers",
           "in",
           "the",
           "$i_am,",
