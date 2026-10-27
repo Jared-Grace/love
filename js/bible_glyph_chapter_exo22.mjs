@@ -629,7 +629,7 @@ export function bible_glyph_chapter_exo22() {
           "set",
           "apart",
           "for",
-          "destruction.",
+          "$bomb+altar+doing.",
         ],
       },
       {
