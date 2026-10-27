@@ -196,7 +196,7 @@ export function bible_glyph_chapter_deu01() {
           "$proper_name$Amorites;",
           "go",
           "to",
-          "all",
+          "$all",
           "the",
           "neighboring",
           "peoples",
