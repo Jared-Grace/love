@@ -1355,7 +1355,7 @@ export function bible_glyph_chapter_jer32() {
           "$one",
           "$heart_organ",
           "and",
-          "one",
+          "$one",
           "$road,",
           "so",
           "that",
