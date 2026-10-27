@@ -336,7 +336,7 @@ export function bible_glyph_chapter_mic03() {
           "practice",
           "divination",
           "for",
-          "money.",
+          "$silver.",
           "Yet",
           "they",
           "lean",
