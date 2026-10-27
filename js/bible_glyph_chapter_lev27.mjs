@@ -139,7 +139,7 @@ export function bible_glyph_chapter_lev27() {
           "$son",
           "from",
           "one",
-          "month",
+          "$new_moon",
           "to",
           "five",
           "$son",
