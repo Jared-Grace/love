@@ -392,7 +392,7 @@ export function bible_glyph_chapter_1sa20() {
           "$field.",
           "So",
           "the",
-          "two",
+          "$two",
           "of",
           "them",
           "went",
