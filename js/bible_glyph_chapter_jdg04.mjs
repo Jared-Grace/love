@@ -678,7 +678,7 @@ export function bible_glyph_chapter_jdg04() {
           "She",
           "drove",
           "the",
-          "peg",
+          "$tent+wood",
           "through",
           "his",
           "temple",
