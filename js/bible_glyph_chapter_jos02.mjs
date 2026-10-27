@@ -315,7 +315,7 @@ export function bible_glyph_chapter_jos02() {
       {
         verse_number: 10,
         words: [
-          "For",
+          "$pointing",
           "we",
           "have",
           "$ear",
