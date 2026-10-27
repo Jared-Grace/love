@@ -833,7 +833,7 @@ export function bible_glyph_chapter_lam03() {
           "us,",
           "$wind+derelict_house+thing",
           "and",
-          "destruction.",
+          "$broken_chain+thing.",
         ],
       },
       {
