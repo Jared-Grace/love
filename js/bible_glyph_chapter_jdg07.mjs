@@ -203,7 +203,7 @@ export function bible_glyph_chapter_jdg07() {
           "Separate",
           "those",
           "who",
-          "lap",
+          "$tongue+droplet+doing",
           "the",
           "$water",
           "with",
