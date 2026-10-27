@@ -465,7 +465,7 @@ export function bible_glyph_chapter_1ki22() {
           "the",
           "$i_am",
           "$sprout,",
-          "whatever",
+          "$back+flashlight",
           "the",
           "$i_am",
           "$speech",
