@@ -613,7 +613,7 @@ export function bible_glyph_chapter_num14() {
         words: [
           "$sponge,",
           "I",
-          "pray,",
+          "$pleading,",
           "the",
           "iniquity",
           "of",
