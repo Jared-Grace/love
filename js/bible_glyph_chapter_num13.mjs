@@ -440,7 +440,7 @@ export function bible_glyph_chapter_num13() {
           "up",
           "through",
           "the",
-          "Negev",
+          "$compass+down_arrow",
           "and",
           "$footprints",
           "to",
