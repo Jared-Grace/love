@@ -131,7 +131,7 @@ export function bible_glyph_chapter_lev12() {
           "woman",
           "will",
           "be",
-          "unclean",
+          "$soap+no_entry",
           "for",
           "two",
           "weeks,",
