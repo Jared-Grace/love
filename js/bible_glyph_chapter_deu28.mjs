@@ -569,7 +569,7 @@ export function bible_glyph_chapter_deu28() {
           "fruit",
           "of",
           "your",
-          "womb",
+          "$baby+house",
           "will",
           "be",
           "$speech+thumbs_down,",
