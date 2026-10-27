@@ -544,7 +544,7 @@ export function bible_glyph_chapter_jos02() {
           "not",
           "$toward+person+doing",
           "you.",
-          "Hide",
+          "$see_no_evil_monkey+doing",
           "yourselves",
           "there",
           "three",
