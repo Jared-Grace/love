@@ -469,7 +469,7 @@ export function bible_glyph_chapter_mic04() {
       {
         verse_number: 13,
         words: [
-          "Rise",
+          "$person+pointing_up",
           "and",
           "thresh,",
           "O",
