@@ -533,7 +533,7 @@ export function bible_glyph_chapter_jer17() {
           "You",
           "are",
           "my",
-          "refuge",
+          "$hut+place",
           "in",
           "the",
           "$sun",
