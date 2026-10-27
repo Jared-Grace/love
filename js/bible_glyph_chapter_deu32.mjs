@@ -187,7 +187,7 @@ export function bible_glyph_chapter_deu32() {
           "and",
           "he",
           "will",
-          "tell",
+          "$newspaper",
           "you,",
           "your",
           "elders,",
