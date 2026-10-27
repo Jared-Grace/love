@@ -56,7 +56,7 @@ export function bible_glyph_chapter_gen39() {
           "the",
           "$i_am",
           "was",
-          "with",
+          "$safety_pin",
           "$i_am+plus,",
           "and",
           "he",
