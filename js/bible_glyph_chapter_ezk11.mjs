@@ -78,7 +78,7 @@ export function bible_glyph_chapter_ezk11() {
           "$son",
           "of",
           "$person,",
-          "these",
+          "$flashlight+flashlight",
           "are",
           "the",
           "men",
