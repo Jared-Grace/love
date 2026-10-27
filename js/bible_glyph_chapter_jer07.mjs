@@ -434,7 +434,7 @@ export function bible_glyph_chapter_jer07() {
           "And",
           "I",
           "will",
-          "cast",
+          "$throwing",
           "you",
           "out",
           "of",
