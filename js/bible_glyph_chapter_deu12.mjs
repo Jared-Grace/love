@@ -754,7 +754,7 @@ export function bible_glyph_chapter_deu12() {
           "$deer+sparkles",
           "or",
           "$deer;",
-          "both",
+          "$linked_paperclips+manner",
           "the",
           "ceremonially",
           "$soap+no_entry",
