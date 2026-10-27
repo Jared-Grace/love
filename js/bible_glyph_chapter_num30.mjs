@@ -53,7 +53,7 @@ export function bible_glyph_chapter_num30() {
           "$saluting_face",
           "to",
           "$i_am,",
-          "or",
+          "$shuffle",
           "swears",
           "an",
           "oath",
