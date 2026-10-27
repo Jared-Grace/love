@@ -585,7 +585,7 @@ export function bible_glyph_chapter_gen21() {
         words: [
           "At",
           "that",
-          "time",
+          "$clock",
           "$father+king",
           "and",
           "$proper_name$Phicol",
