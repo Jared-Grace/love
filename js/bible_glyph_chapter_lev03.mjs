@@ -435,7 +435,7 @@ export function bible_glyph_chapter_lev03() {
           "he",
           "is",
           "to",
-          "remove",
+          "$away+doing",
           "with",
           "the",
           "$heart_organ+two.",
