@@ -440,7 +440,7 @@ export function bible_glyph_chapter_hab03() {
           "tree",
           "does",
           "$no_entry",
-          "bud",
+          "$cherry_blossom",
           "and",
           "no",
           "fruit",
