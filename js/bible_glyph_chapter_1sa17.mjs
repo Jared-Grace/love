@@ -1047,7 +1047,7 @@ export function bible_glyph_chapter_1sa17() {
           "lamb",
           "from",
           "its",
-          "mouth.",
+          "$face_with_open_mouth.",
           "If",
           "it",
           "reared",
