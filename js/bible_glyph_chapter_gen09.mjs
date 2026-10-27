@@ -514,7 +514,7 @@ export function bible_glyph_chapter_gen09() {
           "$tray_out",
           "the",
           "ark",
-          "were",
+          "$link",
           "$proper_name$Shem,",
           "$proper_name$Ham",
           "and",
