@@ -29,7 +29,7 @@ export function bible_glyph_chapter_deu18() {
           "$no_entry",
           "$pizza",
           "or",
-          "inheritance",
+          "$inheritance",
           "with",
           "$wrestling+heart_on_fire.",
           "They",
