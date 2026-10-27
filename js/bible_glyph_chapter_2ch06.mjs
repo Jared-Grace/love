@@ -1093,7 +1093,7 @@ export function bible_glyph_chapter_2ch06() {
           "-",
           "$pointing",
           "You",
-          "alone",
+          "$one+person",
           "$lightbulb",
           "the",
           "$heart_organ",
