@@ -56,7 +56,7 @@ export function bible_glyph_chapter_lev15() {
         words: [
           "$flashlight",
           "uncleanness",
-          "is",
+          "$link",
           "from",
           "his",
           "discharge,",
