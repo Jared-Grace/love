@@ -188,7 +188,7 @@ export function bible_glyph_chapter_gen18() {
           "of",
           "$flour",
           "$wheat+flour,",
-          "knead",
+          "$flour+hand+doing",
           "it,",
           "and",
           "$hammer+doing",
