@@ -123,7 +123,7 @@ export function bible_glyph_chapter_mic01() {
           "apart,",
           "like",
           "$candle+droplet",
-          "before",
+          "$face",
           "the",
           "$fire,",
           "like",
