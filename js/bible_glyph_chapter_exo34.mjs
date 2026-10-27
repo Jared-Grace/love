@@ -1121,7 +1121,7 @@ export function bible_glyph_chapter_exo34() {
           "Israel",
           "would",
           "$eye",
-          "that",
+          "$pointing",
           "the",
           "$face",
           "of",
