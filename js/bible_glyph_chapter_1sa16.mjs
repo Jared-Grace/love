@@ -546,7 +546,7 @@ export function bible_glyph_chapter_1sa16() {
           "he",
           "is",
           "to",
-          "play",
+          "$harp+hand+doing",
           "it,",
           "and",
           "you",
