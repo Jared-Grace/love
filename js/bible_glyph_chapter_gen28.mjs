@@ -277,7 +277,7 @@ export function bible_glyph_chapter_gen28() {
           "Meanwhile",
           "$hand+foot",
           "$walking+tray_out",
-          "Beersheba",
+          "$well+seven+proper_name",
           "and",
           "$walking",
           "for",
