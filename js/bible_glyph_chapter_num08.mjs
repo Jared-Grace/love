@@ -328,7 +328,7 @@ export function bible_glyph_chapter_num08() {
           "have",
           "the",
           "$handshake",
-          "stand",
+          "$person+round_pushpin",
           "before",
           "$proper_name$Aaron",
           "and",
