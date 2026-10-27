@@ -1111,7 +1111,7 @@ export function bible_glyph_chapter_exo12() {
           "$bread+bubbles+doing,",
           "wrapped",
           "in",
-          "kneading",
+          "$bread+bucket",
           "bowls",
           "in",
           "clothing,",
