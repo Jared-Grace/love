@@ -611,7 +611,7 @@ export function bible_glyph_chapter_job38() {
           "the",
           "$star+seven",
           "$shuffle",
-          "loosen",
+          "$unlocked",
           "the",
           "belt",
           "of",
