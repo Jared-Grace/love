@@ -1434,7 +1434,7 @@ export function bible_glyph_chapter_jer32() {
           "I",
           "will",
           "$check",
-          "plant",
+          "$sprout+down_arrow+doing",
           "them",
           "in",
           "this",
