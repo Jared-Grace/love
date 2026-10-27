@@ -188,7 +188,7 @@ export function bible_glyph_chapter_gen41() {
           "it",
           "was",
           "a",
-          "dream.",
+          "$dream.",
         ],
       },
       {
