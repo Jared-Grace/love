@@ -86,7 +86,7 @@ export function bible_glyph_chapter_sng02() {
           "has",
           "$footprints",
           "me",
-          "to",
+          "$toward",
           "the",
           "$house",
           "of",
