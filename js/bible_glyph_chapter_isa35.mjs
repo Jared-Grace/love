@@ -141,7 +141,7 @@ export function bible_glyph_chapter_isa35() {
           "ears",
           "of",
           "the",
-          "deaf",
+          "$deaf_person",
           "unstopped.",
         ],
       },
