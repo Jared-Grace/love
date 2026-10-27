@@ -137,7 +137,7 @@ export function bible_glyph_chapter_ecc01() {
           "$sea",
           "is",
           "never",
-          "full.",
+          "$battery+describing.",
           "To",
           "the",
           "$place",
