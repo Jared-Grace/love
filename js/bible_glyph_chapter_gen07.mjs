@@ -321,7 +321,7 @@ export function bible_glyph_chapter_gen07() {
         words: [
           "And",
           "the",
-          "rain",
+          "$rain+water_wave",
           "$link",
           "upon",
           "the",
