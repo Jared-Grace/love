@@ -554,7 +554,7 @@ export function bible_glyph_chapter_1sa08() {
           "that",
           "we",
           "will",
-          "be",
+          "$link",
           "like",
           "all",
           "the",
