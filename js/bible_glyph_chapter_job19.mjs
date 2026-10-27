@@ -163,7 +163,7 @@ export function bible_glyph_chapter_job19() {
           "$crown+thing",
           "from",
           "my",
-          "head.",
+          "$person_gesturing_ok.",
         ],
       },
       {
