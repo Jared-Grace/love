@@ -53,7 +53,7 @@ export function bible_glyph_chapter_exo18() {
       {
         verse_number: 2,
         words: [
-          "After",
+          "$next_track",
           "Moses",
           "had",
           "sent",
