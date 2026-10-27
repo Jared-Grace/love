@@ -501,7 +501,7 @@ export function bible_glyph_chapter_gen07() {
           "Finally",
           "the",
           "$water",
-          "prevailed",
+          "$might+man_beard+doing",
           "completely",
           "upon",
           "the",
