@@ -1080,7 +1080,7 @@ export function bible_glyph_chapter_2ki06() {
           "Do",
           "you",
           "$eye",
-          "how",
+          "$pointing",
           "this",
           "$son",
           "of",
