@@ -702,7 +702,7 @@ export function bible_glyph_chapter_gen24() {
           "a",
           "beka,",
           "and",
-          "two",
+          "$two",
           "$gold",
           "bracelets",
           "$coin+thing",
