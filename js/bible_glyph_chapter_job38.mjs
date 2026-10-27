@@ -710,7 +710,7 @@ export function bible_glyph_chapter_job38() {
           "in",
           "the",
           "heart,",
-          "or",
+          "$shuffle",
           "$hands_giving",
           "understanding",
           "to",
