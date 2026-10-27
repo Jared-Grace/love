@@ -544,7 +544,7 @@ export function bible_glyph_chapter_isa09() {
       {
         verse_number: 18,
         words: [
-          "For",
+          "$pointing",
           "wickedness",
           "burns",
           "like",
