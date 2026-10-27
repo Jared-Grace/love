@@ -71,7 +71,7 @@ export function bible_glyph_chapter_1sa25() {
           "$top",
           "$man_beard",
           "with",
-          "three",
+          "$three",
           "thousand",
           "$sheep",
           "and",
