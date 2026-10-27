@@ -1190,7 +1190,7 @@ export function bible_glyph_chapter_neh09() {
           "the",
           "$top",
           "and",
-          "mighty",
+          "$might+person",
           "and",
           "awesome",
           "$heart_on_fire",
