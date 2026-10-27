@@ -379,7 +379,7 @@ export function bible_glyph_chapter_deu19() {
           "lies",
           "in",
           "wait,",
-          "attacks",
+          "$person+pointing_up",
           "him",
           "and",
           "$skull+doing",
