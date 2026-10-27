@@ -729,7 +729,7 @@ export function bible_glyph_chapter_neh09() {
           "$water",
           "for",
           "their",
-          "thirst.",
+          "$tongue+desert+thing.",
         ],
       },
       {
