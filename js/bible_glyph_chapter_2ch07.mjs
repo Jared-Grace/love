@@ -320,7 +320,7 @@ export function bible_glyph_chapter_2ch07() {
           "$sun",
           "and",
           "the",
-          "feast",
+          "$party_popper",
           "$seven",
           "$sun",
           "more.",
