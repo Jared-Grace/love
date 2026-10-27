@@ -197,7 +197,7 @@ export function bible_glyph_chapter_exo40() {
           "and",
           "$oil+doing",
           "the",
-          "tabernacle",
+          "$tent+house",
           "and",
           "everything",
           "in",
