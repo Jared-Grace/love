@@ -185,7 +185,7 @@ export function bible_glyph_chapter_nam03() {
           "devastated;",
           "who",
           "will",
-          "grieve",
+          "$walking+around+doing",
           "for",
           "her?",
           "Where",
