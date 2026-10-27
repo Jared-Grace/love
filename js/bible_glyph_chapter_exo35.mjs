@@ -29,7 +29,7 @@ export function bible_glyph_chapter_exo35() {
           "$speech",
           "to",
           "them,",
-          "These",
+          "$flashlight+flashlight",
           "are",
           "the",
           "$speech",
