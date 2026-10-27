@@ -432,7 +432,7 @@ export function bible_glyph_chapter_jer01() {
           "thrones",
           "at",
           "the",
-          "entrance",
+          "$door",
           "of",
           "the",
           "gates",
