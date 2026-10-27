@@ -540,7 +540,7 @@ export function bible_glyph_chapter_num19() {
           "$tomb,",
           "will",
           "be",
-          "unclean",
+          "$soap+no_entry",
           "for",
           "seven",
           "$sun.",
