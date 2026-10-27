@@ -1250,7 +1250,7 @@ export function bible_glyph_chapter_deu28() {
           "the",
           "grapes,",
           "$pointing",
-          "worms",
+          "$worm",
           "will",
           "$eating",
           "them.",
