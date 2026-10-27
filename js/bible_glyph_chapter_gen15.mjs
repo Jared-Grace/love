@@ -279,7 +279,7 @@ export function bible_glyph_chapter_gen15() {
           "them",
           "down",
           "the",
-          "middle,",
+          "$radio_button,",
           "and",
           "$hands_giving",
           "the",
