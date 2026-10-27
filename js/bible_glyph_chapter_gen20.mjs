@@ -235,7 +235,7 @@ export function bible_glyph_chapter_gen20() {
           "will",
           "$sprout+doing.",
           "And",
-          "if",
+          "$traffic_light",
           "you",
           "are",
           "not",
