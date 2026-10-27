@@ -82,7 +82,7 @@ export function bible_glyph_chapter_psa046() {
           "in",
           "the",
           "surge.",
-          "Selah",
+          "$pause_button",
         ],
       },
       {
