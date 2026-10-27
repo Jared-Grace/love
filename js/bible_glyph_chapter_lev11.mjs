@@ -208,7 +208,7 @@ export function bible_glyph_chapter_lev11() {
           "$hand+doing",
           "their",
           "carcasses;",
-          "they",
+          "$pointing_back",
           "are",
           "$soap+no_entry",
           "for",
