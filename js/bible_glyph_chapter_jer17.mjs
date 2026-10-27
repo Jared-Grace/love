@@ -530,7 +530,7 @@ export function bible_glyph_chapter_jer17() {
           "$derelict_house+fearful_face",
           "to",
           "me;",
-          "You",
+          "$you",
           "are",
           "my",
           "$hut+place",
