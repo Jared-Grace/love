@@ -787,7 +787,7 @@ export function bible_glyph_chapter_deu09() {
           "$dust",
           "into",
           "the",
-          "stream",
+          "$national_park",
           "that",
           "came",
           "down",
