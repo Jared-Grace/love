@@ -17,7 +17,7 @@ export function bible_glyph_chapter_exo22() {
           "$pointing",
           "a",
           "$man_beard",
-          "steals",
+          "$ninja+doing",
           "an",
           "$ox",
           "or",
