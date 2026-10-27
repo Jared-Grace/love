@@ -1189,7 +1189,7 @@ export function bible_glyph_chapter_deu28() {
           "an",
           "object",
           "of",
-          "horror",
+          "$astonished+thing",
           "and",
           "scorn",
           "and",
