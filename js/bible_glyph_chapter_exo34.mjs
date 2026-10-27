@@ -758,7 +758,7 @@ export function bible_glyph_chapter_exo34() {
           "$pointing",
           "I",
           "will",
-          "drive",
+          "$triangular_flag",
           "out",
           "the",
           "$map",
