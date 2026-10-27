@@ -549,7 +549,7 @@ export function bible_glyph_chapter_1sa24() {
           "had",
           "finished",
           "$mouth",
-          "these",
+          "$flashlight+flashlight",
           "$speech",
           "to",
           "$proper_name$Saul,",
