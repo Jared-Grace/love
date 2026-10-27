@@ -760,7 +760,7 @@ export function bible_glyph_chapter_exo38() {
           "$link",
           "used",
           "to",
-          "cast",
+          "$pouring_liquid+fire",
           "the",
           "bases",
           "of",
