@@ -537,7 +537,7 @@ export function bible_glyph_chapter_num13() {
         verse_number: 25,
         words: [
           "After",
-          "forty",
+          "$four+zero",
           "$sun",
           "the",
           "men",
