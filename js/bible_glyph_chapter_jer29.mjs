@@ -792,7 +792,7 @@ export function bible_glyph_chapter_jer29() {
           "neighbours",
           "and",
           "$mouth",
-          "lies",
+          "$lying_face",
           "in",
           "My",
           "$name_tag,",
