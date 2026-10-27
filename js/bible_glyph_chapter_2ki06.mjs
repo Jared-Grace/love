@@ -362,7 +362,7 @@ export function bible_glyph_chapter_2ki06() {
           "$crown",
           "the",
           "$king.",
-          "For",
+          "$pointing",
           "$heart_on_fire+rescue,",
           "the",
           "$megaphone",
