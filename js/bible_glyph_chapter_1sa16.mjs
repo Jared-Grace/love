@@ -474,7 +474,7 @@ export function bible_glyph_chapter_1sa16() {
           "of",
           "the",
           "$i_am",
-          "departed",
+          "$away+doing",
           "from",
           "$proper_name$Saul,",
           "and",
