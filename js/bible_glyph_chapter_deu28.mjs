@@ -674,7 +674,7 @@ export function bible_glyph_chapter_deu28() {
           "you",
           "from",
           "the",
-          "land",
+          "$brown_square",
           "you",
           "are",
           "$footprints",
