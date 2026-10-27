@@ -217,7 +217,7 @@ export function bible_glyph_chapter_jos06() {
           "Advance",
           "and",
           "march",
-          "around",
+          "$around+doing",
           "the",
           "$city,",
           "with",
