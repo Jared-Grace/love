@@ -109,7 +109,7 @@ export function bible_glyph_chapter_gen41() {
           "the",
           "$seven",
           "$face+sparkle,",
-          "well-fed",
+          "$meat+describing",
           "cows.",
           "Then",
           "$house+proper_name",
