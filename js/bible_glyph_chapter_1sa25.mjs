@@ -1201,7 +1201,7 @@ export function bible_glyph_chapter_1sa25() {
           "me,",
           "then",
           "by",
-          "morning",
+          "$morning",
           "$light",
           "not",
           "one",
