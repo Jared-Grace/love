@@ -301,7 +301,7 @@ export function bible_glyph_chapter_2ki17() {
           "that",
           "were",
           "$no_entry",
-          "right",
+          "$right_arrow",
           "against",
           "the",
           "$i_am",
