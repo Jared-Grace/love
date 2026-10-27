@@ -601,7 +601,7 @@ export function bible_glyph_chapter_1sa02() {
           "when",
           "she",
           "went",
-          "with",
+          "$safety_pin",
           "her",
           "$man_beard",
           "to",
