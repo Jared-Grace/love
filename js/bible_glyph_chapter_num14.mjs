@@ -1106,7 +1106,7 @@ export function bible_glyph_chapter_num14() {
           "this",
           "$wilderness,",
           "and",
-          "there",
+          "$telescope",
           "they",
           "will",
           "$skull+doing.",
