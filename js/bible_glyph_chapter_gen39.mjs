@@ -384,7 +384,7 @@ export function bible_glyph_chapter_gen39() {
           "escaped",
           "and",
           "ran",
-          "outside.",
+          "$sun_behind_small_cloud.",
         ],
       },
       {
