@@ -743,7 +743,7 @@ export function bible_glyph_chapter_gen47() {
       {
         verse_number: 22,
         words: [
-          "However,",
+          "$one+check,",
           "he",
           "did",
           "$no_entry",
