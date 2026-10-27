@@ -216,7 +216,7 @@ export function bible_glyph_chapter_deu07() {
           "all",
           "the",
           "$family",
-          "on",
+          "$pointing_up",
           "the",
           "face",
           "of",
