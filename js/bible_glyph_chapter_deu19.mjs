@@ -651,7 +651,7 @@ export function bible_glyph_chapter_deu19() {
           "they",
           "will",
           "$no_entry",
-          "again",
+          "$plus+doing",
           "$hammer+doing",
           "$speech",
           "so",
