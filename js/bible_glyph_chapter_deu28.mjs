@@ -619,7 +619,7 @@ export function bible_glyph_chapter_deu28() {
           "$i_am",
           "will",
           "$hand_sending",
-          "curses",
+          "$speech+thumbs_down+thing",
           "and",
           "confusion",
           "and",
