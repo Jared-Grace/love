@@ -1046,7 +1046,7 @@ export function bible_glyph_chapter_num22() {
         verse_number: 33,
         words: [
           "The",
-          "donkey",
+          "$donkey",
           "$eye",
           "me",
           "and",
