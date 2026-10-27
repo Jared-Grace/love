@@ -308,7 +308,7 @@ export function bible_glyph_chapter_isa40() {
           "He",
           "$person+sheep",
           "His",
-          "flock",
+          "$sheep+crowd",
           "like",
           "a",
           "$person+sheep;",
