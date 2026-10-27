@@ -83,7 +83,7 @@ export function bible_glyph_chapter_exo37() {
           "$ring",
           "on",
           "one",
-          "side",
+          "$x_ray",
           "and",
           "$two",
           "$ring",
