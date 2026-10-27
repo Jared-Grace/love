@@ -122,7 +122,7 @@ export function bible_glyph_chapter_mic05() {
         words: [
           "He",
           "will",
-          "stand",
+          "$person+round_pushpin",
           "and",
           "$person+sheep",
           "His",
