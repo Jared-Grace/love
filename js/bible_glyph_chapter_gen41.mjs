@@ -628,7 +628,7 @@ export function bible_glyph_chapter_gen41() {
           "scorched",
           "by",
           "the",
-          "east",
+          "$compass+right_arrow+thing",
           "wind.",
         ],
       },
