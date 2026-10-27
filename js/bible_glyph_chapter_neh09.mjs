@@ -617,7 +617,7 @@ export function bible_glyph_chapter_neh09() {
           "You",
           "did",
           "$no_entry",
-          "forsake",
+          "$derelict_house+doing",
           "them.",
         ],
       },
