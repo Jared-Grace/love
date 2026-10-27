@@ -143,7 +143,7 @@ export function bible_glyph_chapter_lam04() {
           "those",
           "$anchor",
           "in",
-          "crimson",
+          "$worm",
           "huddle",
           "in",
           "ash",
