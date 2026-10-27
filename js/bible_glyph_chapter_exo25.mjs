@@ -49,7 +49,7 @@ export function bible_glyph_chapter_exo25() {
         verse_number: 3,
         words: [
           "And",
-          "this",
+          "$flashlight",
           "is",
           "the",
           "offering",
