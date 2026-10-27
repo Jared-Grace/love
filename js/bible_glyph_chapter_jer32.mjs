@@ -262,7 +262,7 @@ export function bible_glyph_chapter_jer32() {
           "of",
           "redemption",
           "to",
-          "buy",
+          "$coin+hand_receiving",
           "it.",
         ],
       },
