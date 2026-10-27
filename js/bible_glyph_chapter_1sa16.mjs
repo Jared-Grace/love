@@ -523,7 +523,7 @@ export function bible_glyph_chapter_1sa16() {
           "$kneeling",
           "$face",
           "will",
-          "seek",
+          "$magnifying_glass",
           "out",
           "a",
           "$man_beard",
