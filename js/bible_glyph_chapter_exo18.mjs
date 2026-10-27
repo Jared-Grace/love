@@ -476,7 +476,7 @@ export function bible_glyph_chapter_exo18() {
         words: [
           "$fishing_pole+proper_name",
           "$speech,",
-          "Because",
+          "$pointing",
           "the",
           "$family",
           "$footprints",
