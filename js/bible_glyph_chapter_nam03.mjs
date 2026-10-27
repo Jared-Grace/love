@@ -90,7 +90,7 @@ export function bible_glyph_chapter_nam03() {
           "seductive",
           "harlot,",
           "the",
-          "mistress",
+          "$key+female_sign",
           "of",
           "sorcery,",
           "who",
