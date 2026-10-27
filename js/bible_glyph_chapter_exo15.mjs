@@ -195,7 +195,7 @@ export function bible_glyph_chapter_exo15() {
           "blast",
           "of",
           "Your",
-          "nostrils",
+          "$nose+fire",
           "the",
           "$water",
           "piled",
