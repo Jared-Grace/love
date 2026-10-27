@@ -1048,7 +1048,7 @@ export function bible_glyph_chapter_lev13() {
           "$eye",
           "the",
           "scaly",
-          "infection",
+          "$face_with_head_bandage",
           "and",
           "it",
           "does",
