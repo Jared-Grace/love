@@ -116,7 +116,7 @@ export function bible_glyph_chapter_2ki01() {
           "your",
           "$walking",
           "to",
-          "inquire",
+          "$magnifying_glass+question",
           "of",
           "Baal",
           "zebub,",
