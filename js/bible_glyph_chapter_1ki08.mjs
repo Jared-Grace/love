@@ -390,7 +390,7 @@ export function bible_glyph_chapter_1ki08() {
           "$tent+doing",
           "in",
           "the",
-          "thick",
+          "$cloud+black_circle",
           "cloud.",
         ],
       },
