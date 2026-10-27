@@ -135,7 +135,7 @@ export function bible_glyph_chapter_num32() {
           "And",
           "they",
           "$speech,",
-          "If",
+          "$traffic_light",
           "we",
           "have",
           "found",
