@@ -180,7 +180,7 @@ export function bible_glyph_chapter_isa49() {
           "$heart_on_fire",
           "$link",
           "My",
-          "strength",
+          "$mechanical_arm",
           "-",
         ],
       },
