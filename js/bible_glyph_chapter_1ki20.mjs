@@ -186,7 +186,7 @@ export function bible_glyph_chapter_1ki20() {
           "your",
           "$kneeling.",
           "Everything",
-          "precious",
+          "$heart_eyes+thing",
           "in",
           "your",
           "$eyes",
