@@ -457,7 +457,7 @@ export function bible_glyph_chapter_gen15() {
           "$sunset+cloud",
           "had",
           "fallen,",
-          "behold,",
+          "$exclamation,",
           "a",
           "smoking",
           "firepot",
