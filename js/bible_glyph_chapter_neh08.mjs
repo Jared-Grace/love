@@ -700,7 +700,7 @@ export function bible_glyph_chapter_neh08() {
           "Israelites",
           "$hammer+doing",
           "the",
-          "feast",
+          "$party_popper",
           "for",
           "seven",
           "$sun,",
