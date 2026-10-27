@@ -66,7 +66,7 @@ export function bible_glyph_chapter_exo12() {
           "day",
           "of",
           "this",
-          "month",
+          "$new_moon",
           "each",
           "$man_beard",
           "must",
