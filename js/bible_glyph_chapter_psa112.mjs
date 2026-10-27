@@ -202,7 +202,7 @@ export function bible_glyph_chapter_psa112() {
         verse_number: 10,
         words: [
           "The",
-          "$thumbs_down",
+          "$thumbs_down+person",
           "man",
           "will",
           "$eye",
@@ -221,7 +221,7 @@ export function bible_glyph_chapter_psa112() {
           "desires",
           "of",
           "the",
-          "$thumbs_down",
+          "$thumbs_down+person",
           "will",
           "$wilted_flower.",
         ],

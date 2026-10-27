@@ -176,7 +176,7 @@ export function bible_glyph_chapter_lev12() {
           "$shuffle",
           "for",
           "a",
-          "$woman,",
+          "$girl+family,",
           "she",
           "is",
           "to",

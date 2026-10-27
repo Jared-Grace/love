@@ -382,7 +382,7 @@ export function bible_glyph_chapter_luk24() {
           "$arrow_both_ways",
           "as",
           "you",
-          "$walking",
+          "$walking+clockwise_arrows",
           "along?",
           "$plus",
           "they",

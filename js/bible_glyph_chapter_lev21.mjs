@@ -61,7 +61,7 @@ export function bible_glyph_chapter_lev21() {
           "his",
           "$son,",
           "his",
-          "$woman,",
+          "$girl+family,",
           "or",
           "his",
           "$brother,",
@@ -247,7 +247,7 @@ export function bible_glyph_chapter_lev21() {
         words: [
           "$pointing",
           "the",
-          "$woman",
+          "$girl+family",
           "of",
           "a",
           "$man_beard",

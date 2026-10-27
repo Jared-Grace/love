@@ -420,7 +420,7 @@ export function bible_glyph_chapter_psa139() {
           "would",
           "$sword+skull+doing",
           "the",
-          "$thumbs_down,",
+          "$thumbs_down+person,",
           "O",
           "God!",
           "$away+doing",

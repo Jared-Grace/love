@@ -106,7 +106,7 @@ export function bible_glyph_chapter_2sa12() {
           "was",
           "like",
           "a",
-          "$woman",
+          "$girl+family",
           "to",
           "him.",
         ],

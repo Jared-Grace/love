@@ -103,7 +103,7 @@ export function bible_glyph_chapter_sng08() {
           "adjure",
           "you,",
           "O",
-          "$woman",
+          "$girl+family",
           "of",
           "$city+peace,",
           "do",

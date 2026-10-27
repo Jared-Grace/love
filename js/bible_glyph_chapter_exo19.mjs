@@ -189,7 +189,7 @@ export function bible_glyph_chapter_exo19() {
           "$flashlight+flashlight",
           "are",
           "the",
-          "$speech",
+          "$voice+doing",
           "$back+flashlight",
           "you",
           "are",
@@ -303,7 +303,7 @@ export function bible_glyph_chapter_exo19() {
           "the",
           "$family",
           "had",
-          "$speech.",
+          "$voice+doing.",
         ],
       },
       {

@@ -97,7 +97,7 @@ export function bible_glyph_chapter_1th01() {
         verse_number: 4,
         words: [
           "We",
-          "$lightbulb,",
+          "$eyes+lightbulb,",
           "$brother",
           "$heart_red+doing",
           "$down_arrow",
@@ -135,7 +135,7 @@ export function bible_glyph_chapter_1th01() {
           "$multiply",
           "$battery+shopping_cart+thing.",
           "You",
-          "$lightbulb",
+          "$eyes+lightbulb",
           "how",
           "we",
           "lived",

@@ -1279,7 +1279,7 @@ export function bible_glyph_chapter_2ki09() {
           "This",
           "is",
           "the",
-          "$speech",
+          "$voice+doing",
           "of",
           "the",
           "$i_am",

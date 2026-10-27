@@ -23,7 +23,7 @@ export function bible_glyph_chapter_job03() {
           "his",
           "$face_with_open_mouth",
           "and",
-          "$speech+thumbs_down",
+          "$balloon+speech+doing",
           "the",
           "$sun",
           "of",
@@ -355,7 +355,7 @@ export function bible_glyph_chapter_job03() {
         words: [
           "$telescope",
           "the",
-          "$thumbs_down",
+          "$thumbs_down+person",
           "$stop_button",
           "from",
           "raging,",

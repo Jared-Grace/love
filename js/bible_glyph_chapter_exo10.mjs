@@ -342,7 +342,7 @@ export function bible_glyph_chapter_exo10() {
           "$son",
           "and",
           "our",
-          "$woman,",
+          "$girl+family,",
           "with",
           "our",
           "$sheep",

@@ -133,7 +133,7 @@ export function bible_glyph_chapter_deu10() {
           "$first_place,",
           "the",
           "$ten",
-          "$speech",
+          "$voice+doing",
           "$back+flashlight",
           "the",
           "$i_am",

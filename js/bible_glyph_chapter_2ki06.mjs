@@ -375,7 +375,7 @@ export function bible_glyph_chapter_2ki06() {
           "$wrestling+heart_on_fire",
           "the",
           "very",
-          "$speech",
+          "$voice+doing",
           "you",
           "$mouth",
           "in",

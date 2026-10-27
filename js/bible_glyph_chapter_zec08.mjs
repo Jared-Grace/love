@@ -529,7 +529,7 @@ export function bible_glyph_chapter_zec08() {
           "$flashlight+flashlight",
           "are",
           "the",
-          "$speech",
+          "$voice+doing",
           "you",
           "must",
           "$hammer+doing:",

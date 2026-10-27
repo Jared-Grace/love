@@ -246,7 +246,7 @@ export function bible_glyph_chapter_isa26() {
           "shown",
           "to",
           "the",
-          "$thumbs_down",
+          "$thumbs_down+person",
           "man,",
           "he",
           "does",

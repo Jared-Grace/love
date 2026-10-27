@@ -407,7 +407,7 @@ export function bible_glyph_chapter_lev10() {
           "and",
           "$son",
           "and",
-          "$woman",
+          "$girl+family",
           "may",
           "$eating",
           "in",

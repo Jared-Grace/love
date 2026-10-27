@@ -330,7 +330,7 @@ export function bible_glyph_chapter_hab03() {
           "$house",
           "of",
           "the",
-          "$thumbs_down",
+          "$thumbs_down+person",
           "and",
           "stripped",
           "him",

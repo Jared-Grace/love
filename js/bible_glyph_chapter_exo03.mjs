@@ -816,7 +816,7 @@ export function bible_glyph_chapter_exo03() {
           "your",
           "$son",
           "and",
-          "$woman.",
+          "$girl+family.",
           "So",
           "you",
           "will",

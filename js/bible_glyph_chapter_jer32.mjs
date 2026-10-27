@@ -1213,7 +1213,7 @@ export function bible_glyph_chapter_jer32() {
           "their",
           "$son",
           "and",
-          "$woman",
+          "$girl+family",
           "$bridge",
           "through",
           "the",

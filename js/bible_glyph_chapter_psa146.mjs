@@ -199,7 +199,7 @@ export function bible_glyph_chapter_psa146() {
           "$road",
           "of",
           "the",
-          "$thumbs_down",
+          "$thumbs_down+person",
           "He",
           "frustrates.",
         ],

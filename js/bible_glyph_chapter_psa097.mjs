@@ -152,7 +152,7 @@ export function bible_glyph_chapter_psa097() {
           "rejoices,",
           "and",
           "the",
-          "$woman",
+          "$girl+family",
           "of",
           "$hands_raised+proper_name",
           "$woman_dancing,",
@@ -212,7 +212,7 @@ export function bible_glyph_chapter_psa097() {
           "the",
           "$hand",
           "of",
-          "$thumbs_down.",
+          "$thumbs_down+person.",
         ],
       },
       {

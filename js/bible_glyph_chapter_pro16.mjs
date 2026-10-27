@@ -89,7 +89,7 @@ export function bible_glyph_chapter_pro16() {
           "purpose,",
           "$plus",
           "the",
-          "$thumbs_down",
+          "$thumbs_down+person",
           "for",
           "the",
           "$sun",

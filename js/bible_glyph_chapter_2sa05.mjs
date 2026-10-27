@@ -426,7 +426,7 @@ export function bible_glyph_chapter_2sa05() {
           "$repeat",
           "$son",
           "and",
-          "$woman",
+          "$girl+family",
           "were",
           "born",
           "to",

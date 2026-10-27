@@ -27,7 +27,7 @@ export function bible_glyph_chapter_exo23() {
           "$hand",
           "with",
           "the",
-          "$thumbs_down",
+          "$thumbs_down+person",
           "by",
           "being",
           "a",
@@ -172,7 +172,7 @@ export function bible_glyph_chapter_exo23() {
           "$no_entry",
           "$ruler+doing",
           "the",
-          "$thumbs_down.",
+          "$thumbs_down+person.",
         ],
       },
       {

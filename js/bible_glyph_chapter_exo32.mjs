@@ -91,7 +91,7 @@ export function bible_glyph_chapter_exo32() {
           "$son",
           "and",
           "your",
-          "$woman,",
+          "$girl+family,",
           "and",
           "$footprints",
           "them",

@@ -205,7 +205,7 @@ export function bible_glyph_chapter_isa55() {
         words: [
           "Let",
           "the",
-          "$thumbs_down",
+          "$thumbs_down+person",
           "$derelict_house+doing",
           "his",
           "$road",

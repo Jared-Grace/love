@@ -406,7 +406,7 @@ export function bible_glyph_chapter_pro02() {
         words: [
           "but",
           "the",
-          "$thumbs_down",
+          "$thumbs_down+person",
           "will",
           "be",
           "$scissors",

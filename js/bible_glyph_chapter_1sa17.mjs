@@ -665,7 +665,7 @@ export function bible_glyph_chapter_1sa17() {
           "$mouth",
           "his",
           "usual",
-          "$speech,",
+          "$voice+doing,",
           "which",
           "$two_hearts+proper_name",
           "also",

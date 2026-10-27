@@ -15,7 +15,7 @@ export function bible_glyph_chapter_mic05() {
         words: [
           "$watch,",
           "O",
-          "$woman",
+          "$girl+family",
           "of",
           "troops,",
           "mobilize",

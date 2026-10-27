@@ -16,7 +16,7 @@ export function bible_glyph_chapter_deu01() {
           "$flashlight+flashlight",
           "are",
           "the",
-          "$speech",
+          "$voice+doing",
           "$back+flashlight",
           "$fishing_pole+proper_name",
           "$mouth",

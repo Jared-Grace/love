@@ -385,7 +385,7 @@ export function bible_glyph_chapter_dan09() {
           "carried",
           "out",
           "the",
-          "$speech",
+          "$voice+doing",
           "$mouth",
           "against",
           "us",

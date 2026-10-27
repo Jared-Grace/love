@@ -107,7 +107,7 @@ export function bible_glyph_chapter_jhn14() {
         words: [
           "$plus",
           "you",
-          "$lightbulb",
+          "$eyes+lightbulb",
           "the",
           "$road",
           "to",

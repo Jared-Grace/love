@@ -378,7 +378,7 @@ export function bible_glyph_chapter_job42() {
           "$son",
           "and",
           "$three",
-          "$woman.",
+          "$girl+family.",
         ],
       },
       {
@@ -415,7 +415,7 @@ export function bible_glyph_chapter_job42() {
           "$face+sparkle",
           "as",
           "$proper_name$Job's",
-          "$woman,",
+          "$girl+family,",
           "and",
           "their",
           "$father",

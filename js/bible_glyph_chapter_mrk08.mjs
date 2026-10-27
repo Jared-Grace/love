@@ -616,7 +616,7 @@ export function bible_glyph_chapter_mrk08() {
           "$eye",
           "$likeness",
           "$tree",
-          "$walking",
+          "$walking+clockwise_arrows",
           "around.",
         ],
       },

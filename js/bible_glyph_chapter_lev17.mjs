@@ -30,7 +30,7 @@ export function bible_glyph_chapter_lev17() {
           "of",
           "Israel,",
           "and",
-          "$speech",
+          "$voice+doing",
           "to",
           "them,",
           "$flashlight",

@@ -378,7 +378,7 @@ export function bible_glyph_chapter_lev11() {
         verse_number: 16,
         words: [
           "the",
-          "$woman",
+          "$girl+family",
           "of",
           "the",
           "$bird+desert,",

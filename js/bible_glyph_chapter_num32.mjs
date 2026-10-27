@@ -1187,7 +1187,7 @@ export function bible_glyph_chapter_num32() {
           "captured",
           "$proper_name$Kenath",
           "and",
-          "$woman,",
+          "$girl+family,",
           "and",
           "called",
           "it",

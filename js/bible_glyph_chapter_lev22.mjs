@@ -351,7 +351,7 @@ export function bible_glyph_chapter_lev22() {
         words: [
           "$pointing",
           "the",
-          "$woman",
+          "$girl+family",
           "of",
           "a",
           "$priest",
@@ -382,7 +382,7 @@ export function bible_glyph_chapter_lev22() {
           "But",
           "if",
           "the",
-          "$woman",
+          "$girl+family",
           "of",
           "a",
           "$priest",

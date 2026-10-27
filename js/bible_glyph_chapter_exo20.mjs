@@ -249,7 +249,7 @@ export function bible_glyph_chapter_exo20() {
           "your",
           "$son",
           "or",
-          "$woman,",
+          "$girl+family,",
           "nor",
           "your",
           "$kneeling",

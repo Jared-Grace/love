@@ -317,7 +317,7 @@ export function bible_glyph_chapter_lev14() {
           "that",
           "is",
           "a",
-          "$woman",
+          "$girl+family",
           "of",
           "a",
           "year,",

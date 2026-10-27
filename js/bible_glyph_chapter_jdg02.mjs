@@ -148,7 +148,7 @@ export function bible_glyph_chapter_jdg02() {
           "had",
           "$mouth",
           "$flashlight+flashlight",
-          "$speech",
+          "$voice+doing",
           "$toward",
           "$all",
           "the",

@@ -201,7 +201,7 @@ export function bible_glyph_chapter_psa101() {
           "remove",
           "all",
           "the",
-          "$thumbs_down",
+          "$thumbs_down+person",
           "of",
           "the",
           "$earth,",

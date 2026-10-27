@@ -132,7 +132,7 @@ export function bible_glyph_chapter_1ki21() {
           "because",
           "of",
           "the",
-          "$speech",
+          "$voice+doing",
           "that",
           "$proper_name$Naboth",
           "the",

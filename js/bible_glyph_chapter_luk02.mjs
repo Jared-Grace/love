@@ -876,7 +876,7 @@ export function bible_glyph_chapter_luk02() {
       words: [
         "$plus",
         "a",
-        "$sword",
+        "$sword+top",
         "will",
         "pierce",
         "$pointing_back",
@@ -1265,7 +1265,7 @@ export function bible_glyph_chapter_luk02() {
         "Did",
         "you",
         "$no_entry",
-        "$lightbulb",
+        "$eyes+lightbulb",
         "$pointing",
         "I",
         "had",

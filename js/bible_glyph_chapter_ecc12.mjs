@@ -138,7 +138,7 @@ export function bible_glyph_chapter_ecc12() {
           "and",
           "all",
           "the",
-          "$woman",
+          "$girl+family",
           "of",
           "$song",
           "grow",

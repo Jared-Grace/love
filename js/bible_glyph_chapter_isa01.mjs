@@ -236,7 +236,7 @@ export function bible_glyph_chapter_isa01() {
         words: [
           "And",
           "the",
-          "$woman",
+          "$girl+family",
           "of",
           "$proper_name$Zion",
           "is",

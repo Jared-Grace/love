@@ -493,7 +493,7 @@ export function bible_glyph_chapter_rev01() {
           "a",
           "$kitchen_knife+describing",
           "$two+mouth",
-          "$sword.",
+          "$sword+top.",
           "$plus",
           "$pointing_back",
           "face",

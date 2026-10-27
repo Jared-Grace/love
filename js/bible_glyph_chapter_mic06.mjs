@@ -320,7 +320,7 @@ export function bible_glyph_chapter_mic06() {
           "$house",
           "of",
           "the",
-          "$thumbs_down,",
+          "$thumbs_down+person,",
           "the",
           "treasures",
           "of",

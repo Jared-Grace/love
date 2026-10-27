@@ -596,7 +596,7 @@ export function bible_glyph_chapter_exo33() {
           "$hammer+doing",
           "$flashlight",
           "very",
-          "$speech",
+          "$voice+doing",
           "you",
           "have",
           "$mouth,",

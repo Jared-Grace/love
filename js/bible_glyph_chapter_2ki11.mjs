@@ -42,7 +42,7 @@ export function bible_glyph_chapter_2ki11() {
           "But",
           "$i_am+raised_back_of_hand,",
           "the",
-          "$woman",
+          "$girl+family",
           "of",
           "$king",
           "$proper_name$Joram",

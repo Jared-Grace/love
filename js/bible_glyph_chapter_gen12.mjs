@@ -81,7 +81,7 @@ export function bible_glyph_chapter_gen12() {
           "$speech+thumbs_up",
           "you,",
           "and",
-          "$speech+thumbs_down",
+          "$balloon+speech+doing",
           "those",
           "who",
           "$speech+thumbs_down",

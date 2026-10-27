@@ -896,7 +896,7 @@ export function bible_glyph_chapter_jol02() {
           "Your",
           "$son",
           "and",
-          "$woman",
+          "$girl+family",
           "will",
           "prophesy,",
           "your",

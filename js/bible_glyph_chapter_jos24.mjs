@@ -321,7 +321,7 @@ export function bible_glyph_chapter_jos24() {
           "of",
           "$proper_name$Beor",
           "to",
-          "$speech+thumbs_down",
+          "$balloon+speech+doing",
           "you.",
         ],
       },

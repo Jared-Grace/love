@@ -639,7 +639,7 @@ export function bible_glyph_chapter_luk07() {
         "sight,",
         "the",
         "$foot+bandage",
-        "$walking,",
+        "$walking+clockwise_arrows,",
         "the",
         "lepers",
         "are",

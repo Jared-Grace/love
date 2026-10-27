@@ -153,7 +153,7 @@ export function bible_glyph_chapter_num12() {
           "$speech,",
           "$ear",
           "$pleading",
-          "$speech.",
+          "$voice+doing.",
           "$traffic_light",
           "there",
           "is",

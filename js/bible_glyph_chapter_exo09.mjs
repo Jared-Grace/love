@@ -852,7 +852,7 @@ export function bible_glyph_chapter_exo09() {
           "my",
           "$family",
           "are",
-          "$thumbs_down.",
+          "$thumbs_down+person.",
         ],
       },
       {

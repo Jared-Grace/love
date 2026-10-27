@@ -415,7 +415,7 @@ export function bible_glyph_chapter_mic01() {
           "$bow",
           "to",
           "the",
-          "$woman",
+          "$girl+family",
           "of",
           "$proper_name$Zion,",
           "$pointing",

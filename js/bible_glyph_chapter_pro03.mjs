@@ -499,7 +499,7 @@ export function bible_glyph_chapter_pro03() {
           "$pointing",
           "$footprints",
           "the",
-          "$thumbs_down,",
+          "$thumbs_down+person,",
         ],
       },
       {
@@ -655,7 +655,7 @@ export function bible_glyph_chapter_pro03() {
           "$house",
           "of",
           "the",
-          "$thumbs_down,",
+          "$thumbs_down+person,",
           "but",
           "He",
           "$speech+thumbs_up",

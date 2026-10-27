@@ -28,7 +28,7 @@ export function bible_glyph_chapter_isa09() {
           "the",
           "past",
           "He",
-          "$speech+thumbs_down",
+          "$balloon+speech+doing",
           "the",
           "$earth",
           "of",

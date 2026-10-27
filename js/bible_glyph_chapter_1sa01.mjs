@@ -137,7 +137,7 @@ export function bible_glyph_chapter_1sa01() {
           "her",
           "$son",
           "and",
-          "$woman.",
+          "$girl+family.",
         ],
       },
       {
@@ -484,7 +484,7 @@ export function bible_glyph_chapter_1sa01() {
           "for",
           "a",
           "wicked",
-          "$woman;",
+          "$girl+family;",
           "out",
           "of",
           "the",

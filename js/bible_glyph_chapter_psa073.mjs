@@ -67,7 +67,7 @@ export function bible_glyph_chapter_psa073() {
           "prosperity",
           "of",
           "the",
-          "$thumbs_down.",
+          "$thumbs_down+person.",
         ],
       },
       {
@@ -218,7 +218,7 @@ export function bible_glyph_chapter_psa073() {
           "$flashlight+flashlight",
           "are",
           "the",
-          "$thumbs_down,",
+          "$thumbs_down+person,",
           "$hourglass",
           "$person_in_lotus_position+describing",
           "as",

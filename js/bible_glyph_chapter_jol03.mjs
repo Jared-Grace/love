@@ -229,7 +229,7 @@ export function bible_glyph_chapter_jol03() {
           "your",
           "$son",
           "and",
-          "$woman",
+          "$girl+family",
           "into",
           "the",
           "$hand",

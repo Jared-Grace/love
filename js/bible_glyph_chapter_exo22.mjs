@@ -829,7 +829,7 @@ export function bible_glyph_chapter_exo22() {
           "You",
           "must",
           "$no_entry",
-          "$speech+thumbs_down",
+          "$balloon+speech+doing",
           "$heart_on_fire,",
           "or",
           "$no_entry",

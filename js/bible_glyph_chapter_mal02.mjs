@@ -376,7 +376,7 @@ export function bible_glyph_chapter_mal02() {
           "by",
           "marrying",
           "the",
-          "$woman",
+          "$girl+family",
           "of",
           "a",
           "$detective+thing",

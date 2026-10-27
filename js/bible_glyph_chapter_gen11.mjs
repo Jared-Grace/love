@@ -323,7 +323,7 @@ export function bible_glyph_chapter_gen11() {
           "other",
           "$son",
           "and",
-          "$woman.",
+          "$girl+family.",
         ],
       },
       {
@@ -367,7 +367,7 @@ export function bible_glyph_chapter_gen11() {
           "other",
           "$son",
           "and",
-          "$woman.",
+          "$girl+family.",
         ],
       },
       {
@@ -410,7 +410,7 @@ export function bible_glyph_chapter_gen11() {
           "other",
           "$son",
           "and",
-          "$woman.",
+          "$girl+family.",
         ],
       },
       {
@@ -454,7 +454,7 @@ export function bible_glyph_chapter_gen11() {
           "other",
           "$son",
           "and",
-          "$woman.",
+          "$girl+family.",
         ],
       },
       {
@@ -497,7 +497,7 @@ export function bible_glyph_chapter_gen11() {
           "other",
           "$son",
           "and",
-          "$woman.",
+          "$girl+family.",
         ],
       },
       {
@@ -541,7 +541,7 @@ export function bible_glyph_chapter_gen11() {
           "other",
           "$son",
           "and",
-          "$woman.",
+          "$girl+family.",
         ],
       },
       {
@@ -582,7 +582,7 @@ export function bible_glyph_chapter_gen11() {
           "other",
           "$son",
           "and",
-          "$woman.",
+          "$girl+family.",
         ],
       },
       {
@@ -626,7 +626,7 @@ export function bible_glyph_chapter_gen11() {
           "other",
           "$son",
           "and",
-          "$woman.",
+          "$girl+family.",
         ],
       },
       {
@@ -730,7 +730,7 @@ export function bible_glyph_chapter_gen11() {
           "She",
           "was",
           "the",
-          "$woman",
+          "$girl+family",
           "of",
           "$proper_name$Haran,",
           "the",

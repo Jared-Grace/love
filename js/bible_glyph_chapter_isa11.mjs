@@ -154,7 +154,7 @@ export function bible_glyph_chapter_isa11() {
           "will",
           "$skull+doing",
           "the",
-          "$thumbs_down.",
+          "$thumbs_down+person.",
         ],
       },
       {

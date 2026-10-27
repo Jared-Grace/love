@@ -189,7 +189,7 @@ export function bible_glyph_chapter_psa091() {
           "punishment",
           "of",
           "the",
-          "$thumbs_down.",
+          "$thumbs_down+person.",
         ],
       },
       {

@@ -252,7 +252,7 @@ export function bible_glyph_chapter_psa032() {
           "sorrows",
           "of",
           "the",
-          "$thumbs_down,",
+          "$thumbs_down+person,",
           "but",
           "$gift",
           "surrounds",

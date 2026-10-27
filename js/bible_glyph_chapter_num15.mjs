@@ -771,7 +771,7 @@ export function bible_glyph_chapter_num15() {
           "female",
           "$goat,",
           "a",
-          "$woman",
+          "$girl+family",
           "of",
           "a",
           "year,",

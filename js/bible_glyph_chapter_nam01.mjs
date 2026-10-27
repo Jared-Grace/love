@@ -418,7 +418,7 @@ export function bible_glyph_chapter_nam01() {
           "$pointing",
           "you",
           "are",
-          "$speech+thumbs_down.",
+          "$balloon+speech+doing.",
         ],
       },
       {

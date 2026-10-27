@@ -105,7 +105,7 @@ export function bible_glyph_chapter_mal04() {
           "will",
           "$foot+down_arrow+doing",
           "the",
-          "$thumbs_down,",
+          "$thumbs_down+person,",
           "$pointing",
           "they",
           "will",

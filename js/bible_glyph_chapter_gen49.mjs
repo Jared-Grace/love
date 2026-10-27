@@ -521,7 +521,7 @@ export function bible_glyph_chapter_gen49() {
           "of",
           "water,",
           "whose",
-          "$woman",
+          "$girl+family",
           "climb",
           "over",
           "the",

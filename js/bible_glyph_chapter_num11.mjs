@@ -779,7 +779,7 @@ export function bible_glyph_chapter_num11() {
           "the",
           "$family",
           "the",
-          "$speech",
+          "$voice+doing",
           "of",
           "the",
           "$i_am,",

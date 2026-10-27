@@ -423,7 +423,7 @@ export function bible_glyph_chapter_gen25() {
           "$hand_receiving",
           "$proper_name$Rebekah,",
           "the",
-          "$woman",
+          "$girl+family",
           "of",
           "$proper_name$Bethuel",
           "the",

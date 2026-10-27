@@ -41,7 +41,7 @@ export function bible_glyph_chapter_job01() {
       },
       {
         verse_number: 2,
-        words: ["He", "had", "$seven", "$son", "and", "$three", "$woman."],
+        words: ["He", "had", "$seven", "$son", "and", "$three", "$girl+family."],
       },
       {
         verse_number: 3,
@@ -390,7 +390,7 @@ export function bible_glyph_chapter_job01() {
           "the",
           "$son",
           "and",
-          "$woman",
+          "$girl+family",
           "of",
           "Job",
           "were",
@@ -552,7 +552,7 @@ export function bible_glyph_chapter_job01() {
           "Your",
           "$son",
           "and",
-          "$woman",
+          "$girl+family",
           "were",
           "eating",
           "and",

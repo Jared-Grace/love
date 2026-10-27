@@ -571,7 +571,7 @@ export function bible_glyph_chapter_pro31() {
         verse_number: 29,
         words: [
           "$multiply",
-          "$woman",
+          "$girl+family",
           "have",
           "$hammer+doing",
           "noble",

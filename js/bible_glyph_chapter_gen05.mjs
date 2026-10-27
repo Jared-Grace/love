@@ -115,7 +115,7 @@ export function bible_glyph_chapter_gen05() {
           "fathered",
           "$son",
           "and",
-          "$woman.",
+          "$girl+family.",
         ],
       },
       {
@@ -177,7 +177,7 @@ export function bible_glyph_chapter_gen05() {
           "fathered",
           "$son",
           "and",
-          "$woman.",
+          "$girl+family.",
         ],
       },
       {
@@ -233,7 +233,7 @@ export function bible_glyph_chapter_gen05() {
           "fathered",
           "$son",
           "and",
-          "$woman.",
+          "$girl+family.",
         ],
       },
       {
@@ -289,7 +289,7 @@ export function bible_glyph_chapter_gen05() {
           "fathered",
           "$son",
           "and",
-          "$woman.",
+          "$girl+family.",
         ],
       },
       {
@@ -347,7 +347,7 @@ export function bible_glyph_chapter_gen05() {
           "fathered",
           "$son",
           "and",
-          "$woman.",
+          "$girl+family.",
         ],
       },
       {
@@ -408,7 +408,7 @@ export function bible_glyph_chapter_gen05() {
           "fathered",
           "$son",
           "and",
-          "$woman.",
+          "$girl+family.",
         ],
       },
       {
@@ -468,7 +468,7 @@ export function bible_glyph_chapter_gen05() {
           "fathered",
           "$son",
           "and",
-          "$woman.",
+          "$girl+family.",
         ],
       },
       {
@@ -549,7 +549,7 @@ export function bible_glyph_chapter_gen05() {
           "fathered",
           "$son",
           "and",
-          "$woman.",
+          "$girl+family.",
         ],
       },
       {
@@ -648,7 +648,7 @@ export function bible_glyph_chapter_gen05() {
           "fathered",
           "$son",
           "and",
-          "$woman.",
+          "$girl+family.",
         ],
       },
       {

@@ -450,7 +450,7 @@ export function bible_glyph_chapter_deu04() {
           "$voice",
           "of",
           "the",
-          "$speech,",
+          "$voice+doing,",
           "but",
           "you",
           "$eye",

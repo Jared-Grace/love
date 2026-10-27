@@ -288,7 +288,7 @@ export function bible_glyph_chapter_isa53() {
           "$tomb",
           "with",
           "the",
-          "$thumbs_down,",
+          "$thumbs_down+person,",
           "and",
           "with",
           "a",

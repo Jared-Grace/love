@@ -29,7 +29,7 @@ export function bible_glyph_chapter_1ki03() {
           "by",
           "$hand_receiving",
           "his",
-          "$woman.",
+          "$girl+family.",
           "He",
           "$footprints",
           "her",

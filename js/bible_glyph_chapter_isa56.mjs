@@ -173,7 +173,7 @@ export function bible_glyph_chapter_isa56() {
           "of",
           "$son",
           "and",
-          "$woman.",
+          "$girl+family.",
           "I",
           "will",
           "$hands_giving",
