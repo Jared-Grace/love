@@ -289,7 +289,7 @@ export function bible_glyph_chapter_num22() {
           "of",
           "$father+proper_name",
           "$person+house",
-          "with",
+          "$linked_paperclips",
           "$proper_name$Balaam.",
         ],
       },
