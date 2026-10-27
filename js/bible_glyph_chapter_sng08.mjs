@@ -205,7 +205,7 @@ export function bible_glyph_chapter_sng08() {
           "$no_entry",
           "$fire+no_entry+doing",
           "$heart_red;",
-          "rivers",
+          "$water+national_park",
           "$no_entry",
           "sweep",
           "it",
