@@ -598,7 +598,7 @@ export function bible_glyph_chapter_exo12() {
           "the",
           "fourteenth",
           "$sun",
-          "until",
+          "$finish",
           "the",
           "$sunset",
           "of",
