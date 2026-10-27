@@ -516,7 +516,7 @@ export function bible_glyph_chapter_exo16() {
           "is",
           "the",
           "$bread",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "has",
