@@ -409,7 +409,7 @@ export function bible_glyph_chapter_gen08() {
           "$sun",
           "of",
           "the",
-          "second",
+          "$second_place",
           "$new_moon,",
           "the",
           "$earth",
