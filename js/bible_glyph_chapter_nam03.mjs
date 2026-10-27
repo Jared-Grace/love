@@ -363,7 +363,7 @@ export function bible_glyph_chapter_nam03() {
       {
         verse_number: 14,
         words: [
-          "Draw",
+          "$bucket+doing",
           "your",
           "$water",
           "for",
