@@ -1084,7 +1084,7 @@ export function bible_glyph_chapter_1ki22() {
           "a",
           "certain",
           "$man_beard",
-          "drew",
+          "$hook+doing",
           "his",
           "bow",
           "without",
