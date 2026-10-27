@@ -416,7 +416,7 @@ export function bible_glyph_chapter_isa07() {
           "you",
           "a",
           "$placard:",
-          "Behold,",
+          "$exclamation,",
           "the",
           "virgin",
           "will",
