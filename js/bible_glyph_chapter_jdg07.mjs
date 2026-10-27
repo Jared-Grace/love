@@ -571,7 +571,7 @@ export function bible_glyph_chapter_jdg07() {
           "$turn_back",
           "$toward",
           "the",
-          "camp",
+          "$camp",
           "of",
           "$wrestling+heart_on_fire",
           "and",
