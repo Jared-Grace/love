@@ -148,7 +148,7 @@ export function bible_glyph_chapter_1ch29() {
           "over",
           "and",
           "above",
-          "all",
+          "$all",
           "that",
           "I",
           "have",
