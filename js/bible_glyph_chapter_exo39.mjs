@@ -561,7 +561,7 @@ export function bible_glyph_chapter_exo39() {
           "waistband,",
           "and",
           "the",
-          "breastpiece",
+          "$gem_stone+t_shirt",
           "$no_entry",
           "swing",
           "out",
