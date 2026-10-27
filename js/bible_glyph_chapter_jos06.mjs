@@ -683,7 +683,7 @@ export function bible_glyph_chapter_jos06() {
           "$family",
           "gave",
           "a",
-          "great",
+          "$top",
           "shout,",
           "and",
           "the",
