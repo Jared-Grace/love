@@ -338,7 +338,7 @@ export function bible_glyph_chapter_isa07() {
           "$heart_on_fire",
           "for",
           "a",
-          "sign,",
+          "$placard,",
           "whether",
           "from",
           "the",
