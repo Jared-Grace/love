@@ -863,7 +863,7 @@ export function bible_glyph_chapter_2ki04() {
           "Leave",
           "her",
           "alone,",
-          "for",
+          "$pointing",
           "her",
           "$person_other",
           "is",
