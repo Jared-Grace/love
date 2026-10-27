@@ -665,7 +665,7 @@ export function bible_glyph_chapter_lev22() {
           "anything",
           "that",
           "is",
-          "blind",
+          "$person_with_white_cane+eye+thing",
           "or",
           "injured",
           "or",
