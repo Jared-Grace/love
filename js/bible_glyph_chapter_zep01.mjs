@@ -456,7 +456,7 @@ export function bible_glyph_chapter_zep01() {
           "$i_am!",
           "Then",
           "the",
-          "cry",
+          "$loudspeaker+sparkle+doing",
           "of",
           "the",
           "mighty",
