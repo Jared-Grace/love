@@ -119,7 +119,7 @@ export function bible_glyph_chapter_gen31() {
           "your",
           "$father's",
           "face,",
-          "that",
+          "$pointing",
           "it",
           "is",
           "not",
