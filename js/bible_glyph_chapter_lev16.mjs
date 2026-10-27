@@ -404,7 +404,7 @@ export function bible_glyph_chapter_lev16() {
           "to",
           "$hands_giving",
           "the",
-          "incense",
+          "$incense",
           "on",
           "the",
           "$fire",
