@@ -662,7 +662,7 @@ export function bible_glyph_chapter_gen37() {
           "when",
           "$i_am+plus",
           "$footprints",
-          "to",
+          "$toward",
           "his",
           "$brother,",
           "they",
