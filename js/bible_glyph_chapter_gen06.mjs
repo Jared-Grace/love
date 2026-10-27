@@ -470,7 +470,7 @@ export function bible_glyph_chapter_gen06() {
           "I",
           "will",
           "$footprints",
-          "floodwaters",
+          "$water_wave+earth",
           "upon",
           "the",
           "$earth,",
