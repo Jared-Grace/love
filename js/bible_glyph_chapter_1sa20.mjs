@@ -989,7 +989,7 @@ export function bible_glyph_chapter_1sa20() {
           "there.",
           "So",
           "$watch,",
-          "if",
+          "$traffic_light",
           "I",
           "have",
           "found",
