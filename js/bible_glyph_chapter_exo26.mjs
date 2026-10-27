@@ -599,7 +599,7 @@ export function bible_glyph_chapter_exo26() {
           "as",
           "the",
           "two",
-          "corners.",
+          "$triangular_ruler+round_pushpin.",
         ],
       },
       {
