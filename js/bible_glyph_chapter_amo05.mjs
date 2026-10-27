@@ -294,7 +294,7 @@ export function bible_glyph_chapter_amo05() {
         verse_number: 11,
         words: [
           "$right_arrow,",
-          "because",
+          "$information",
           "you",
           "trample",
           "on",
