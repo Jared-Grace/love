@@ -106,7 +106,7 @@ export function bible_glyph_chapter_deu08() {
           "gave",
           "you",
           "manna,",
-          "which",
+          "$back+flashlight",
           "you",
           "had",
           "$no_entry",
