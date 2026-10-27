@@ -896,7 +896,7 @@ export function bible_glyph_chapter_lev08() {
           "for",
           "$seven",
           "$sun,",
-          "until",
+          "$finish",
           "$sun",
           "$sun",
           "of",
