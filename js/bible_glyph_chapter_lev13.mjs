@@ -34,7 +34,7 @@ export function bible_glyph_chapter_lev13() {
           "a",
           "swelling",
           "$shuffle",
-          "rash",
+          "$microbe+hair+down_arrow",
           "$shuffle",
           "bright",
           "spot",
