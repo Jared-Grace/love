@@ -266,7 +266,7 @@ export function bible_glyph_chapter_num15() {
         words: [
           "Also",
           "$magnet+doing",
-          "half",
+          "$divide",
           "a",
           "hin",
           "of",
