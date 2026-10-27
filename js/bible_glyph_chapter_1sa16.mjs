@@ -521,7 +521,7 @@ export function bible_glyph_chapter_1sa16() {
           "and",
           "your",
           "$kneeling",
-          "here",
+          "$face",
           "will",
           "seek",
           "out",
