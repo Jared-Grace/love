@@ -621,7 +621,7 @@ export function bible_glyph_chapter_jdg07() {
           "$jar",
           "with",
           "a",
-          "torch",
+          "$fire+hand+wood",
           "inside",
           "it.",
         ],
