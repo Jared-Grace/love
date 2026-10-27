@@ -921,7 +921,7 @@ export function bible_glyph_chapter_exo29() {
           "wear",
           "them",
           "for",
-          "seven",
+          "$seven",
           "$sun",
           "when",
           "he",
