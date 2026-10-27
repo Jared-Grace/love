@@ -108,7 +108,7 @@ export function bible_glyph_chapter_num23() {
         words: [
           "And",
           "$heart_on_fire",
-          "met",
+          "$footprints+lots+doing",
           "with",
           "him,",
           "and",
