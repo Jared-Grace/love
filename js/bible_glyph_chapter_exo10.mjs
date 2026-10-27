@@ -519,7 +519,7 @@ export function bible_glyph_chapter_exo10() {
           "of",
           "$clamp+proper_name.",
           "$no_entry",
-          "before",
+          "$face",
           "had",
           "there",
           "been",
