@@ -282,7 +282,7 @@ export function bible_glyph_chapter_num06() {
           "$two",
           "turtledoves",
           "or",
-          "two",
+          "$two",
           "$son",
           "of",
           "a",
