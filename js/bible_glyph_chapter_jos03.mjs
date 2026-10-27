@@ -472,7 +472,7 @@ export function bible_glyph_chapter_jos03() {
           "$battery",
           "its",
           "banks",
-          "throughout",
+          "$all",
           "the",
           "$sun",
           "of",
