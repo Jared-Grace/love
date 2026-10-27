@@ -492,7 +492,7 @@ export function bible_glyph_chapter_gen08() {
         verse_number: 18,
         words: [
           "So",
-          "Noah",
+          "$seat+proper_name",
           "came",
           "out,",
           "along",
