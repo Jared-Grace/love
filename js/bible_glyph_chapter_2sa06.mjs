@@ -541,7 +541,7 @@ export function bible_glyph_chapter_2sa06() {
           "$radio_button",
           "the",
           "$tent",
-          "that",
+          "$back+flashlight",
           "$two_hearts+proper_name",
           "had",
           "pitched",
