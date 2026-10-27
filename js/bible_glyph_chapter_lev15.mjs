@@ -239,7 +239,7 @@ export function bible_glyph_chapter_lev15() {
           "Any",
           "$horse_racing+seat",
           "on",
-          "which",
+          "$back+flashlight",
           "the",
           "man",
           "with",
