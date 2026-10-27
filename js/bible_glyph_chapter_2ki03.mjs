@@ -445,7 +445,7 @@ export function bible_glyph_chapter_2ki03() {
           "$wrestling+heart_on_fire",
           "$speech,",
           "$no_entry,",
-          "for",
+          "$pointing",
           "it",
           "is",
           "$i_am",
