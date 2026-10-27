@@ -48,7 +48,7 @@ export function bible_glyph_chapter_gen04() {
       {
         verse_number: 2,
         words: [
-          "Later",
+          "$plus+doing",
           "she",
           "gave",
           "birth",
