@@ -855,7 +855,7 @@ export function bible_glyph_chapter_isa40() {
           "$lightning",
           "to",
           "the",
-          "faint",
+          "$tired_face+describing",
           "and",
           "increases",
           "the",
