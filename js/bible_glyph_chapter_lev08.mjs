@@ -244,7 +244,7 @@ export function bible_glyph_chapter_lev08() {
           "utensils",
           "and",
           "the",
-          "basin",
+          "$bucket+soap",
           "with",
           "its",
           "stand,",
