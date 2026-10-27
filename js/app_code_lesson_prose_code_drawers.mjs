@@ -6,7 +6,7 @@ export function app_code_lesson_prose_code_drawers() {
   ("A span is not one of them, and leaving it out is the whole of what this list decides. A span goes inside a line that is already being written, so the writing above it may be a sentence that has finished and the span may be a step of its own standing beside it; a block sits under the writing and is the thing the writing was pointing at. That difference is what a colon marks, so a sweep treating the two alike would put a colon on a sentence that was not introducing anything.");
   ("A line of writing may still end in a colon with a span under it, and one of them does. That is not a contradiction: this list says where a colon is owed, never where one is allowed, and nothing reading it takes a colon away.");
   let drawers = [
-    fn_name("html_div_code"),
+    fn_name("app_code_div_code"),
     fn_name("html_div_code_lines"),
     fn_name("app_code_div_code_multiple"),
     fn_name("app_code_code_lines_writes_out"),
