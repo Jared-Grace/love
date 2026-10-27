@@ -893,7 +893,7 @@ export function bible_glyph_chapter_jdg11() {
           "Judge,",
           "decide",
           "$sun",
-          "between",
+          "$brain+arrow_both_ways",
           "the",
           "$son",
           "of",
