@@ -118,7 +118,7 @@ export function bible_glyph_chapter_exo01() {
           "and",
           "became",
           "exceedingly",
-          "numerous,",
+          "$bone+might+doing,",
           "so",
           "that",
           "the",
