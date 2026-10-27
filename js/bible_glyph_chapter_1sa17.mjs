@@ -1755,7 +1755,7 @@ export function bible_glyph_chapter_1sa17() {
           "the",
           "$military_helmet,",
           "$father+lamp,",
-          "whose",
+          "$person+question",
           "$son",
           "is",
           "this",
