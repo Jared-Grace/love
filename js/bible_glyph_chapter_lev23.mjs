@@ -50,7 +50,7 @@ export function bible_glyph_chapter_lev23() {
         verse_number: 3,
         words: [
           "For",
-          "six",
+          "$six",
           "$sun",
           "$tools",
           "may",
