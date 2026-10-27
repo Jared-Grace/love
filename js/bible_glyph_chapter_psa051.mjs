@@ -401,7 +401,7 @@ export function bible_glyph_chapter_psa051() {
           "$proper_name$Zion",
           "to",
           "prosper;",
-          "build",
+          "$brick",
           "up",
           "the",
           "walls",
