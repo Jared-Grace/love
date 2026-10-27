@@ -116,7 +116,7 @@ export function bible_glyph_chapter_2ch34() {
           "$wood+imp",
           "poles,",
           "the",
-          "carved",
+          "$carpentry_saw+moai",
           "idols",
           "and",
           "the",
