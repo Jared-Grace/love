@@ -1641,7 +1641,7 @@ export function bible_glyph_chapter_lev25() {
           "in",
           "any",
           "of",
-          "these",
+          "$flashlight+flashlight",
           "ways,",
           "he",
           "and",
