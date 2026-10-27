@@ -862,7 +862,7 @@ export function bible_glyph_chapter_1sa17() {
           "$me",
           "$lightbulb",
           "your",
-          "pride",
+          "$peacock+fire",
           "and",
           "wickedness",
           "of",
