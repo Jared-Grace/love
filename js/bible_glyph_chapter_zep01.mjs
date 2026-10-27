@@ -416,7 +416,7 @@ export function bible_glyph_chapter_zep01() {
           "waste.",
           "They",
           "will",
-          "build",
+          "$brick",
           "$house",
           "but",
           "$no_entry",
