@@ -207,7 +207,7 @@ export function bible_glyph_chapter_deu28() {
           "$one",
           "$road",
           "but",
-          "flee",
+          "$running+dashing_away",
           "from",
           "you",
           "on",
