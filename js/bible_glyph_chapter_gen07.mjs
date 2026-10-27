@@ -322,7 +322,7 @@ export function bible_glyph_chapter_gen07() {
           "And",
           "the",
           "rain",
-          "fell",
+          "$link",
           "upon",
           "the",
           "$earth",
