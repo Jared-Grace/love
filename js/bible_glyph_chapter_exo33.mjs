@@ -319,7 +319,7 @@ export function bible_glyph_chapter_exo33() {
           "LORD",
           "would",
           "$mouth",
-          "with",
+          "$linked_paperclips",
           "$fishing_pole+proper_name.",
         ],
       },
