@@ -561,7 +561,7 @@ export function bible_glyph_chapter_num13() {
           "$proper_name$Aaron",
           "and",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "of",
           "$wrestling+heart_on_fire",
