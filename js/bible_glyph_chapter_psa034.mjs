@@ -166,7 +166,7 @@ export function bible_glyph_chapter_psa034() {
       {
         verse_number: 8,
         words: [
-          "Taste",
+          "$face_savoring_food+doing",
           "and",
           "$eye",
           "that",
