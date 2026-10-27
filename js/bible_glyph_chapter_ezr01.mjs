@@ -46,7 +46,7 @@ export function bible_glyph_chapter_ezr01() {
           "send",
           "a",
           "$voice",
-          "throughout",
+          "$all",
           "his",
           "kingdom",
           "and",
