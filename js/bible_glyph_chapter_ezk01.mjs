@@ -577,7 +577,7 @@ export function bible_glyph_chapter_ezk01() {
           "the",
           "wheels",
           "stood",
-          "still;",
+          "$person+round_pushpin;",
           "and",
           "when",
           "they",
