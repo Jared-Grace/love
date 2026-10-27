@@ -286,7 +286,7 @@ export function bible_glyph_chapter_2ki22() {
           "$hands_giving",
           "it",
           "to",
-          "Shaphan,",
+          "$badger,",
           "who",
           "read",
           "it.",
