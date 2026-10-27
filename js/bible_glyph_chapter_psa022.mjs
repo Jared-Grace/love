@@ -295,7 +295,7 @@ export function bible_glyph_chapter_psa022() {
           "disjointed.",
           "My",
           "$heart_organ",
-          "is",
+          "$link",
           "like",
           "wax;",
           "it",
