@@ -1187,7 +1187,7 @@ export function bible_glyph_chapter_1ki18() {
           "this",
           "$sun",
           "that",
-          "You",
+          "$you",
           "are",
           "$heart_on_fire",
           "in",
