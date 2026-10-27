@@ -491,7 +491,7 @@ export function bible_glyph_chapter_jos01() {
           "and",
           "your",
           "brothers",
-          "also",
+          "$plus",
           "possess",
           "the",
           "$earth",
