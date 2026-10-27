@@ -85,7 +85,7 @@ export function bible_glyph_chapter_mal01() {
           "to",
           "the",
           "$wilderness",
-          "jackals.",
+          "$dog+desert.",
         ],
       },
       {
