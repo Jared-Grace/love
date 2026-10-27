@@ -270,7 +270,7 @@ export function bible_glyph_chapter_ecc03() {
           "from",
           "beginning",
           "$finish",
-          "end.",
+          "$stop_button+end_arrow.",
         ],
       },
       {
