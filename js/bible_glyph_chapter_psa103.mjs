@@ -283,7 +283,7 @@ export function bible_glyph_chapter_psa103() {
           "that",
           "we",
           "are",
-          "dust.",
+          "$dust.",
         ],
       },
       {
