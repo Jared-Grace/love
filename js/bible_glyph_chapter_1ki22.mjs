@@ -1683,7 +1683,7 @@ export function bible_glyph_chapter_1ki22() {
         words: [
           "He",
           "$kneeling+doing",
-          "Baal",
+          "$key+proper_name",
           "and",
           "$bowing",
           "him,",
