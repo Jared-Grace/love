@@ -229,7 +229,7 @@ export function bible_glyph_chapter_exo23() {
         verse_number: 10,
         words: [
           "For",
-          "six",
+          "$six",
           "$year",
           "you",
           "are",
