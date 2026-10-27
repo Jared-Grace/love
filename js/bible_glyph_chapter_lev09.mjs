@@ -151,7 +151,7 @@ export function bible_glyph_chapter_lev09() {
           "$fishing_pole+proper_name",
           "$speech,",
           "$speech",
-          "This",
+          "$flashlight",
           "is",
           "what",
           "$i_am",
