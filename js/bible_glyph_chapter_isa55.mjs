@@ -413,7 +413,7 @@ export function bible_glyph_chapter_isa55() {
           "the",
           "brier,",
           "the",
-          "myrtle",
+          "$herb+white_flower",
           "will",
           "spring",
           "up;",
