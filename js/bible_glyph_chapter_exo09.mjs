@@ -656,7 +656,7 @@ export function bible_glyph_chapter_exo09() {
           "$speech",
           "$toward",
           "$fishing_pole+proper_name,",
-          "Stretch",
+          "$white_cane+doing",
           "out",
           "your",
           "$hand",
