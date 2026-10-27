@@ -21,7 +21,7 @@ export function bible_glyph_chapter_deu04() {
           "and",
           "the",
           "$scales+thing",
-          "I",
+          "$me",
           "am",
           "teaching",
           "you",
