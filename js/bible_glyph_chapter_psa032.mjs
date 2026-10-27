@@ -195,7 +195,7 @@ export function bible_glyph_chapter_psa032() {
           "instruct",
           "you",
           "and",
-          "teach",
+          "$bow+toward",
           "you",
           "the",
           "$road",
