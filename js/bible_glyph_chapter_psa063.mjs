@@ -263,7 +263,7 @@ export function bible_glyph_chapter_psa063() {
           "$mouth",
           "will",
           "be",
-          "shut.",
+          "$hand+locked+doing.",
         ],
       },
     ],
