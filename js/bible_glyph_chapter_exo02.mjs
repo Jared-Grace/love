@@ -310,7 +310,7 @@ export function bible_glyph_chapter_exo02() {
           "drew",
           "him",
           "out",
-          "of",
+          "$tray_out",
           "the",
           "$water.",
         ],
