@@ -125,7 +125,7 @@ export function bible_glyph_chapter_psa034() {
         verse_number: 6,
         words: [
           "$flashlight",
-          "poor",
+          "$persevering_face+describing",
           "man",
           "called",
           "out,",
