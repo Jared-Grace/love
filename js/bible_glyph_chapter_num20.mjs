@@ -34,7 +34,7 @@ export function bible_glyph_chapter_num20() {
           "$person+house",
           "in",
           "$proper_name$Kadesh.",
-          "There",
+          "$telescope",
           "$proper_name$Miriam",
           "$skull+doing",
           "and",
