@@ -130,7 +130,7 @@ export function bible_glyph_chapter_deu32() {
           "but",
           "of",
           "a",
-          "perverse",
+          "$curly_loop+describing",
           "and",
           "crooked",
           "$dna.",
