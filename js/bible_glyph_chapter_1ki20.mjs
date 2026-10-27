@@ -756,7 +756,7 @@ export function bible_glyph_chapter_1ki20() {
           "you",
           "must",
           "$hammer+doing,",
-          "for",
+          "$pointing",
           "in",
           "the",
           "spring",
