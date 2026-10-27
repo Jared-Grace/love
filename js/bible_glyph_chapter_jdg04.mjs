@@ -736,7 +736,7 @@ export function bible_glyph_chapter_jdg04() {
           "and",
           "there",
           "$proper_name$Sisera",
-          "lay",
+          "$person+pointing_down",
           "$skull+doing",
           "with",
           "a",
