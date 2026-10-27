@@ -908,7 +908,7 @@ export function bible_glyph_chapter_jos06() {
           "is",
           "the",
           "$man_beard",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "who",
