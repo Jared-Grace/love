@@ -289,7 +289,7 @@ export function bible_glyph_chapter_hab01() {
       {
         verse_number: 11,
         words: [
-          "Then",
+          "$telescope+clock",
           "they",
           "sweep",
           "by",
