@@ -886,7 +886,7 @@ export function bible_glyph_chapter_lev26() {
           "your",
           "$snow_capped_mountain",
           "places,",
-          "cut",
+          "$scissors",
           "down",
           "your",
           "incense",
