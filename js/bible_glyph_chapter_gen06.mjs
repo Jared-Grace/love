@@ -600,7 +600,7 @@ export function bible_glyph_chapter_gen06() {
           "is",
           "eaten,",
           "and",
-          "gather",
+          "$crowd+doing",
           "it",
           "for",
           "yourselves",
