@@ -344,7 +344,7 @@ export function bible_glyph_chapter_exo15() {
           "$toward",
           "Your",
           "$sparkle+thing",
-          "dwelling.",
+          "$sheep+house.",
         ],
       },
       {
