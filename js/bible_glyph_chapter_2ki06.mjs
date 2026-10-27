@@ -544,7 +544,7 @@ export function bible_glyph_chapter_2ki06() {
           "were",
           "$battery",
           "of",
-          "horses",
+          "$horse",
           "and",
           "chariots",
           "of",
