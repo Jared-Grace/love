@@ -895,7 +895,7 @@ export function bible_glyph_chapter_exo39() {
           "$ram",
           "$cow_face+coat",
           "dyed",
-          "red,",
+          "$red_circle+doing,",
           "the",
           "covering",
           "of",
