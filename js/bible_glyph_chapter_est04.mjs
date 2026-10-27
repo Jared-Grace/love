@@ -214,7 +214,7 @@ export function bible_glyph_chapter_est04() {
           "$proper_name$Mordecai",
           "$newspaper",
           "him",
-          "all",
+          "$all",
           "that",
           "had",
           "happened",
