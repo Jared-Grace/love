@@ -418,7 +418,7 @@ export function bible_glyph_chapter_psa073() {
           "You",
           "hold",
           "my",
-          "right",
+          "$hand+right_arrow",
           "$hand.",
         ],
       },
