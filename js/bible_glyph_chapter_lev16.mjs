@@ -455,7 +455,7 @@ export function bible_glyph_chapter_lev16() {
           "$index_pointing_up",
           "on",
           "the",
-          "east",
+          "$compass+right_arrow",
           "side",
           "of",
           "the",
