@@ -795,7 +795,7 @@ export function bible_glyph_chapter_lev13() {
           "$fire+adhesive_bandage",
           "becomes",
           "reddish-white",
-          "or",
+          "$shuffle",
           "white,",
         ],
       },
