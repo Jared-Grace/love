@@ -408,7 +408,7 @@ export function bible_glyph_chapter_job38() {
           "Surely",
           "you",
           "$lightbulb,",
-          "for",
+          "$pointing",
           "you",
           "were",
           "already",
