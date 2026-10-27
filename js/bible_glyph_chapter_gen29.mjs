@@ -886,7 +886,7 @@ export function bible_glyph_chapter_gen29() {
         verse_number: 34,
         words: [
           "Once",
-          "again",
+          "$repeat",
           "Leah",
           "conceived",
           "and",
