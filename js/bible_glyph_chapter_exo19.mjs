@@ -15,7 +15,7 @@ export function bible_glyph_chapter_exo19() {
           "In",
           "the",
           "third",
-          "month,",
+          "$new_moon,",
           "on",
           "the",
           "same",
