@@ -402,7 +402,7 @@ export function bible_glyph_chapter_jer18() {
           "Or",
           "do",
           "its",
-          "cool",
+          "$cold_face+describing",
           "$water",
           "flowing",
           "from",
