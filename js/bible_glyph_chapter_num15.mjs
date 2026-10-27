@@ -139,7 +139,7 @@ export function bible_glyph_chapter_num15() {
           "$hammer+doing",
           "a",
           "quarter",
-          "hin",
+          "$jar+straight_ruler",
           "of",
           "$wine",
           "as",
