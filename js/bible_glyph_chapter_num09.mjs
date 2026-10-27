@@ -389,7 +389,7 @@ export function bible_glyph_chapter_num09() {
           "$person_other",
           "must",
           "be",
-          "cut",
+          "$scissors",
           "off",
           "from",
           "his",
