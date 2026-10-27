@@ -576,7 +576,7 @@ export function bible_glyph_chapter_mal02() {
           "of",
           "Hosts.",
           "So",
-          "guard",
+          "$guard",
           "yourselves",
           "in",
           "your",
