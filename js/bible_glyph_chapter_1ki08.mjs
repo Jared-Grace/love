@@ -994,7 +994,7 @@ export function bible_glyph_chapter_1ki08() {
         words: [
           "$ear",
           "the",
-          "plea",
+          "$heart_orange+pleading",
           "of",
           "Your",
           "$kneeling",
