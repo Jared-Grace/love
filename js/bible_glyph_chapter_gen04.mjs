@@ -337,7 +337,7 @@ export function bible_glyph_chapter_gen04() {
           "it",
           "will",
           "$no_entry",
-          "longer",
+          "$plus+doing",
           "$hands_giving",
           "you",
           "its",
