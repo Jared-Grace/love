@@ -348,7 +348,7 @@ export function bible_glyph_chapter_zec05() {
           "will",
           "be",
           "set",
-          "there",
+          "$telescope",
           "on",
           "its",
           "pedestal.",
