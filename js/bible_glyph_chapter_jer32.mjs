@@ -578,7 +578,7 @@ export function bible_glyph_chapter_jer32() {
           "$lightning",
           "and",
           "outstretched",
-          "arm.",
+          "$hand+might.",
           "$no_entry",
           "is",
           "too",
