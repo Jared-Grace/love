@@ -412,7 +412,7 @@ export function bible_glyph_chapter_num14() {
           "$lightning",
           "You",
           "brought",
-          "this",
+          "$flashlight",
           "$family",
           "from",
           "among",
