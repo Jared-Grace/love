@@ -107,7 +107,7 @@ export function bible_glyph_chapter_lev27() {
           "$son",
           "of",
           "age",
-          "to",
+          "$finish",
           "twenty",
           "$son,",
           "then",
