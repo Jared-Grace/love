@@ -1881,7 +1881,7 @@ export function bible_glyph_chapter_gen24() {
           "Early",
           "in",
           "the",
-          "evening,",
+          "$sunset,",
           "$laughing+proper_name",
           "went",
           "out",
