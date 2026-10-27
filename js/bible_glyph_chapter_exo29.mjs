@@ -473,7 +473,7 @@ export function bible_glyph_chapter_exo29() {
           "and",
           "the",
           "other",
-          "pieces.",
+          "$kitchen_knife+meat.",
         ],
       },
       {
