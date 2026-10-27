@@ -354,7 +354,7 @@ export function bible_glyph_chapter_isa58() {
           "you",
           "$away+doing",
           "the",
-          "yoke",
+          "$cow_face+wood",
           "from",
           "your",
           "$radio_button,",
