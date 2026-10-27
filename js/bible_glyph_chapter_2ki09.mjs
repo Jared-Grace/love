@@ -574,7 +574,7 @@ export function bible_glyph_chapter_2ki09() {
           "$walking",
           "to",
           "$proper_name$Jezreel,",
-          "because",
+          "$pointing",
           "$proper_name$Joram",
           "was",
           "laid",
