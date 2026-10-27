@@ -183,7 +183,7 @@ export function bible_glyph_chapter_mic06() {
           "the",
           "$heart_on_fire",
           "on",
-          "high?",
+          "$up_arrow+thing?",
           "Should",
           "I",
           "come",
