@@ -102,7 +102,7 @@ export function bible_glyph_chapter_lev11() {
           "The",
           "$camel,",
           "$pointing",
-          "it",
+          "$pointing_back",
           "chews",
           "the",
           "$cow_face+clockwise_arrows+thing,",
