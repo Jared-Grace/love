@@ -1355,7 +1355,7 @@ export function bible_glyph_chapter_num16() {
           "away",
           "from",
           "this",
-          "congregation,",
+          "$witness+crowd,",
           "so",
           "that",
           "I",
