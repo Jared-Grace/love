@@ -829,7 +829,7 @@ export function bible_glyph_chapter_jdg07() {
           "army",
           "$running+dashing_away",
           "to",
-          "Beth-shittah",
+          "$house+tree+thorns+proper_name",
           "toward",
           "$proper_name$Zererah,",
           "as",
