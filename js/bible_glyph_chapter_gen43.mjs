@@ -221,7 +221,7 @@ export function bible_glyph_chapter_gen43() {
           "And",
           "Judah",
           "$speech",
-          "to",
+          "$toward",
           "$wrestling+heart_on_fire",
           "his",
           "$father,",
