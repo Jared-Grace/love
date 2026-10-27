@@ -687,7 +687,7 @@ export function bible_glyph_chapter_gen35() {
           "him",
           "in",
           "Paddan",
-          "Aram.",
+          "$up_arrow+earth+proper_name.",
         ],
       },
       {
