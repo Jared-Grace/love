@@ -649,7 +649,7 @@ export function bible_glyph_chapter_isa09() {
           "and",
           "$fruit",
           "$proper_name$Manasseh;",
-          "together",
+          "$linked_paperclips+manner",
           "they",
           "turn",
           "against",
