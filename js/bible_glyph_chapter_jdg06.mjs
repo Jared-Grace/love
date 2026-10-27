@@ -534,7 +534,7 @@ export function bible_glyph_chapter_jdg06() {
         words: [
           "Gideon",
           "$speech,",
-          "If",
+          "$traffic_light",
           "I",
           "have",
           "found",
