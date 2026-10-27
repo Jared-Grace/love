@@ -980,7 +980,7 @@ export function bible_glyph_chapter_gen30() {
           "Then",
           "$hand+foot",
           "$hand_receiving",
-          "fresh",
+          "$new_button+describing",
           "branches",
           "of",
           "poplar",
