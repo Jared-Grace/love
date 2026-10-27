@@ -619,7 +619,7 @@ export function bible_glyph_chapter_num22() {
           "$proper_name$Balaam",
           "and",
           "$speech,",
-          "Since",
+          "$traffic_light",
           "these",
           "men",
           "have",
