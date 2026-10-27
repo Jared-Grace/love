@@ -453,7 +453,7 @@ export function bible_glyph_chapter_isa26() {
           "woman",
           "with",
           "child",
-          "about",
+          "$magnet+doing",
           "to",
           "give",
           "birth",
