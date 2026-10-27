@@ -272,7 +272,7 @@ export function bible_glyph_chapter_psa034() {
       {
         verse_number: 13,
         words: [
-          "Keep",
+          "$guard+shield+doing",
           "your",
           "tongue",
           "from",
