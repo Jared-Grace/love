@@ -533,7 +533,7 @@ export function bible_glyph_chapter_deu18() {
           "them",
           "$all",
           "I",
-          "command",
+          "$speech+scroll",
           "him.",
         ],
       },
