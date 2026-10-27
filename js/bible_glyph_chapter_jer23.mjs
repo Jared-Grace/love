@@ -370,7 +370,7 @@ export function bible_glyph_chapter_jer23() {
           "the",
           "$earth",
           "is",
-          "full",
+          "$battery",
           "of",
           "$ring+no_entry+doing;",
           "because",
