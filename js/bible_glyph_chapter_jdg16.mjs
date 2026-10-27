@@ -1040,7 +1040,7 @@ export function bible_glyph_chapter_jdg16() {
           "the",
           "$proper_name$Philistines",
           "were",
-          "there,",
+          "$telescope,",
           "and",
           "about",
           "three",
