@@ -982,7 +982,7 @@ export function bible_glyph_chapter_jos07() {
           "$i_am",
           "will",
           "bring",
-          "trouble",
+          "$water+brown_square+doing",
           "upon",
           "you.",
           "And",
