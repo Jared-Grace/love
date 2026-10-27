@@ -1318,7 +1318,7 @@ export function bible_glyph_chapter_lev25() {
           "from",
           "the",
           "$map",
-          "around",
+          "$around",
           "you,",
           "from",
           "whom",
