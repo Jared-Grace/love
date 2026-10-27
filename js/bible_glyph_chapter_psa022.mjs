@@ -169,7 +169,7 @@ export function bible_glyph_chapter_psa022() {
           "let",
           "the",
           "LORD",
-          "deliver",
+          "$door+running+doing",
           "him;",
           "let",
           "the",
