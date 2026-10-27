@@ -333,7 +333,7 @@ export function bible_glyph_chapter_lev16() {
         words: [
           "When",
           "Aaron",
-          "presents",
+          "$magnet+doing",
           "the",
           "bull",
           "for",
