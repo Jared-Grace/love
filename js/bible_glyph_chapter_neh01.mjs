@@ -90,7 +90,7 @@ export function bible_glyph_chapter_neh01() {
           "the",
           "exile",
           "are",
-          "there",
+          "$telescope",
           "in",
           "the",
           "province,",
