@@ -601,7 +601,7 @@ export function bible_glyph_chapter_lev22() {
           "it",
           "will",
           "$no_entry",
-          "be",
+          "$link",
           "$smiling_face_with_smiling_eyes",
           "on",
           "your",
