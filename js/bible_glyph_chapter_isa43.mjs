@@ -674,7 +674,7 @@ export function bible_glyph_chapter_isa43() {
           "you",
           "have",
           "$no_entry",
-          "called",
+          "$waving_hand",
           "on",
           "Me,",
           "O",
