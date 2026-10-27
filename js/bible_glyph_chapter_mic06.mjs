@@ -341,7 +341,7 @@ export function bible_glyph_chapter_mic06() {
           "I",
           "excuse",
           "dishonest",
-          "scales",
+          "$scales+two",
           "or",
           "bags",
           "of",
