@@ -952,7 +952,7 @@ export function bible_glyph_chapter_jos06() {
           "the",
           "$i_am",
           "was",
-          "with",
+          "$safety_pin",
           "$i_am+rescue,",
           "and",
           "his",
