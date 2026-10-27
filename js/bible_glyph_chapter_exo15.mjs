@@ -376,7 +376,7 @@ export function bible_glyph_chapter_exo15() {
           "will",
           "be",
           "dismayed;",
-          "trembling",
+          "$shaking_face+thing",
           "will",
           "seize",
           "the",
