@@ -318,7 +318,7 @@ export function bible_glyph_chapter_exo30() {
           "must",
           "$hands_giving",
           "a",
-          "ransom",
+          "$umbrella+coin",
           "for",
           "his",
           "$person_other",
