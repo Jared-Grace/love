@@ -206,7 +206,7 @@ export function bible_glyph_chapter_psa116() {
         words: [
           "In",
           "my",
-          "alarm",
+          "$running+fearful_face+doing",
           "$me",
           "$speech,",
           "All",
