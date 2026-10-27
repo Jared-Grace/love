@@ -18,7 +18,7 @@ export function bible_glyph_chapter_1ki18() {
           "$sun,",
           "in",
           "the",
-          "third",
+          "$third_place",
           "$year",
           "of",
           "the",
