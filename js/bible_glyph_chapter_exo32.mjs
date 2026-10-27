@@ -1089,7 +1089,7 @@ export function bible_glyph_chapter_exo32() {
           "$traffic_light",
           "not,",
           "please",
-          "blot",
+          "$broom+doing",
           "me",
           "out",
           "of",
