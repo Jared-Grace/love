@@ -250,7 +250,7 @@ export function bible_glyph_chapter_exo12() {
           "the",
           "$fire,",
           "its",
-          "head",
+          "$person_gesturing_ok",
           "and",
           "legs",
           "and",
