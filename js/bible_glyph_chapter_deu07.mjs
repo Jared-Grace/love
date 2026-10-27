@@ -78,7 +78,7 @@ export function bible_glyph_chapter_deu07() {
           "to",
           "complete",
           "destruction.",
-          "Make",
+          "$scissors",
           "$no_entry",
           "$covenant",
           "with",
