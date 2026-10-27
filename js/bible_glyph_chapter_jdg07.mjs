@@ -418,7 +418,7 @@ export function bible_glyph_chapter_jdg07() {
           "the",
           "outposts",
           "where",
-          "armed",
+          "$military_helmet+person+describing",
           "men",
           "were",
           "guarding",
