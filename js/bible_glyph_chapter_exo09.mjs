@@ -530,7 +530,7 @@ export function bible_glyph_chapter_exo09() {
           "at",
           "this",
           "$clock",
-          "tomorrow",
+          "$sun+next_track",
           "I",
           "will",
           "rain",
