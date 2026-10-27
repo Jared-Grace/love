@@ -84,7 +84,7 @@ export function bible_glyph_chapter_ezk11() {
           "men",
           "who",
           "plot",
-          "evil",
+          "$thumbs_down+hole",
           "and",
           "give",
           "$thumbs_down",
