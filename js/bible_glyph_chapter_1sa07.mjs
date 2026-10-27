@@ -546,7 +546,7 @@ export function bible_glyph_chapter_1sa07() {
           "$wrestling+heart_on_fire",
           "in",
           "$all",
-          "these",
+          "$flashlight+flashlight",
           "$place.",
         ],
       },
