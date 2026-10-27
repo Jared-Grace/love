@@ -252,7 +252,7 @@ export function bible_glyph_chapter_exo17() {
           "the",
           "$i_am,",
           "$speech,",
-          "Is",
+          "$link",
           "the",
           "$i_am",
           "among",
