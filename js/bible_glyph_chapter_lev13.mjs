@@ -409,7 +409,7 @@ export function bible_glyph_chapter_lev13() {
           "$no_entry",
           "isolate",
           "him,",
-          "for",
+          "$pointing",
           "he",
           "is",
           "$soap+no_entry.",
