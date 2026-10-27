@@ -805,7 +805,7 @@ export function bible_glyph_chapter_ezk11() {
           "$mouth",
           "the",
           "exiles",
-          "everything",
+          "$all",
           "$i_am",
           "had",
           "$eye",
