@@ -129,7 +129,7 @@ export function bible_glyph_chapter_gen35() {
           "they",
           "$hands_giving",
           "$hand+foot",
-          "all",
+          "$all",
           "the",
           "foreign",
           "$moai",
