@@ -188,7 +188,7 @@ export function bible_glyph_chapter_1sa16() {
           "me",
           "to",
           "the",
-          "sacrifice.",
+          "$sacrifice.",
           "Then",
           "he",
           "$sparkle+doing",
