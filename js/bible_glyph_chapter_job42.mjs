@@ -350,7 +350,7 @@ export function bible_glyph_chapter_job42() {
           "more",
           "than",
           "his",
-          "first.",
+          "$first_place+thing.",
           "He",
           "owned",
           "14,000",
