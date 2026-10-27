@@ -279,7 +279,7 @@ export function bible_glyph_chapter_pro04() {
           "$footprints",
           "on",
           "the",
-          "path",
+          "$railway_track",
           "of",
           "the",
           "$thumbs_down,",
