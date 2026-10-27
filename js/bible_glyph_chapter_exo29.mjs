@@ -480,7 +480,7 @@ export function bible_glyph_chapter_exo29() {
         verse_number: 18,
         words: [
           "Then",
-          "burn",
+          "$incense+doing",
           "the",
           "entire",
           "$ram",
