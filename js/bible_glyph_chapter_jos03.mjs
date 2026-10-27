@@ -114,7 +114,7 @@ export function bible_glyph_chapter_jos03() {
           "about",
           "two",
           "$ten+all",
-          "cubits",
+          "$triangular_ruler",
           "between",
           "yourselves",
           "and",
