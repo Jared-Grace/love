@@ -449,7 +449,7 @@ export function bible_glyph_chapter_exo04() {
           "$brother?",
           "I",
           "$lightbulb",
-          "that",
+          "$pointing",
           "he",
           "can",
           "$mouth",
