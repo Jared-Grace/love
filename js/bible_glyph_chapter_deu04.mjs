@@ -1361,7 +1361,7 @@ export function bible_glyph_chapter_deu04() {
           "His",
           "$face",
           "and",
-          "great",
+          "$top",
           "$lightning,",
         ],
       },
