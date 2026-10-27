@@ -440,7 +440,7 @@ export function bible_glyph_chapter_1ki17() {
           "the",
           "jug",
           "of",
-          "oil",
+          "$lotion_bottle",
           "will",
           "$no_entry",
           "run",
