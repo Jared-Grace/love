@@ -361,7 +361,7 @@ export function bible_glyph_chapter_mic04() {
       {
         verse_number: 10,
         words: [
-          "Writhe",
+          "$dizzy",
           "in",
           "agony,",
           "O",
