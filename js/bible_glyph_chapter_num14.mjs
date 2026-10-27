@@ -461,7 +461,7 @@ export function bible_glyph_chapter_num14() {
           "that",
           "Your",
           "$cloud",
-          "stands",
+          "$person+round_pushpin",
           "over",
           "them,",
           "and",
