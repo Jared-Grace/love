@@ -115,7 +115,7 @@ export function bible_glyph_chapter_zec08() {
           "$old_man",
           "men",
           "and",
-          "old",
+          "$old_man",
           "women",
           "will",
           "$repeat",
