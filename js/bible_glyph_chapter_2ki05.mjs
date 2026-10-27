@@ -205,7 +205,7 @@ export function bible_glyph_chapter_2ki05() {
           "$wrestling+heart_on_fire",
           "$speech,",
           "With",
-          "this",
+          "$flashlight",
           "letter",
           "I",
           "am",
