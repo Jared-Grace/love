@@ -110,7 +110,7 @@ export function bible_glyph_chapter_lev05() {
       {
         verse_number: 4,
         words: [
-          "Or",
+          "$shuffle",
           "if",
           "$person_other",
           "swears",
