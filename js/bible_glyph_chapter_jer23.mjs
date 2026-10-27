@@ -1227,7 +1227,7 @@ export function bible_glyph_chapter_jer23() {
           "of",
           "the",
           "$i_am,",
-          "for",
+          "$pointing",
           "each",
           "$man_beard",
           "$speech",
