@@ -455,7 +455,7 @@ export function bible_glyph_chapter_mic06() {
           "grapes",
           "but",
           "$no_entry",
-          "drink",
+          "$cup_with_straw",
           "the",
           "wine.",
         ],
