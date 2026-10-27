@@ -268,7 +268,7 @@ export function bible_glyph_chapter_lev01() {
           "$tray_out",
           "the",
           "sheep",
-          "or",
+          "$shuffle",
           "$tray_out",
           "$goat,",
           "he",
