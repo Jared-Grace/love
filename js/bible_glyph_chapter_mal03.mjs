@@ -504,7 +504,7 @@ export function bible_glyph_chapter_mal03() {
         words: [
           "So",
           "$watch",
-          "we",
+          "$me",
           "call",
           "the",
           "arrogant",
