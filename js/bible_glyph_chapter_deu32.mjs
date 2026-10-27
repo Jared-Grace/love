@@ -288,7 +288,7 @@ export function bible_glyph_chapter_deu32() {
         words: [
           "As",
           "an",
-          "eagle",
+          "$eagle",
           "stirs",
           "up",
           "its",
