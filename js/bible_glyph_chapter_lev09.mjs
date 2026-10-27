@@ -401,7 +401,7 @@ export function bible_glyph_chapter_lev09() {
           "he",
           "presented",
           "$grain_offering,",
-          "took",
+          "$battery",
           "a",
           "handful",
           "$tray_out,",
