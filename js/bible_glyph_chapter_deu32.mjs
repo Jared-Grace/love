@@ -1190,7 +1190,7 @@ export function bible_glyph_chapter_deu32() {
           "with",
           "His",
           "$family,",
-          "for",
+          "$pointing",
           "He",
           "will",
           "avenge",
