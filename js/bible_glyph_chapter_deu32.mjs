@@ -403,7 +403,7 @@ export function bible_glyph_chapter_deu32() {
           "of",
           "the",
           "finest",
-          "grapes",
+          "$grapes",
           "you",
           "drank",
           "the",
