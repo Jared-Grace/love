@@ -512,7 +512,7 @@ export function bible_glyph_chapter_deu18() {
           "them",
           "a",
           "$megaphone",
-          "like",
+          "$likeness",
           "you",
           "from",
           "among",
