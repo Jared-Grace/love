@@ -753,7 +753,7 @@ export function bible_glyph_chapter_gen24() {
           "$proper_name$Bethuel,",
           "the",
           "$son",
-          "that",
+          "$back+flashlight",
           "$proper_name$Milcah",
           "$baby",
           "to",
