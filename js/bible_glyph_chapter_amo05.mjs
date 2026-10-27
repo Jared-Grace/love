@@ -428,7 +428,7 @@ export function bible_glyph_chapter_amo05() {
           "$scales+thing",
           "in",
           "the",
-          "gate.",
+          "$gate.",
           "Perhaps",
           "the",
           "$i_am,",
