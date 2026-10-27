@@ -79,7 +79,7 @@ export function bible_glyph_chapter_lev15() {
           "will",
           "bring",
           "about",
-          "uncleanness.",
+          "$soap+no_entry+thing.",
         ],
       },
       {
