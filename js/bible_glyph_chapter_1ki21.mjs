@@ -936,7 +936,7 @@ export function bible_glyph_chapter_1ki21() {
           "his",
           "$garment,",
           "$palm_down",
-          "sackcloth",
+          "$sackcloth",
           "on",
           "his",
           "$meat,",
