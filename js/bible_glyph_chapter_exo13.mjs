@@ -392,7 +392,7 @@ export function bible_glyph_chapter_exo13() {
           "$son",
           "you",
           "must",
-          "redeem.",
+          "$coin+turn_back.",
         ],
       },
       {
