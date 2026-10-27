@@ -658,7 +658,7 @@ export function bible_glyph_chapter_gen47() {
           "along",
           "with",
           "our",
-          "land,",
+          "$brown_square,",
           "will",
           "be",
           "$kneeling",
