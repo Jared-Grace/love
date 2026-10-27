@@ -1753,7 +1753,7 @@ export function bible_glyph_chapter_1sa17() {
           "$military_medal",
           "of",
           "the",
-          "army,",
+          "$military_helmet,",
           "$father+lamp,",
           "whose",
           "$son",
