@@ -920,7 +920,7 @@ export function bible_glyph_chapter_1ki20() {
           "$walking",
           "out",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "them.",
           "The",
           "$son",
