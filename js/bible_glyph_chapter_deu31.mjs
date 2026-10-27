@@ -969,7 +969,7 @@ export function bible_glyph_chapter_deu31() {
       {
         verse_number: 27,
         words: [
-          "For",
+          "$pointing",
           "I",
           "$lightbulb",
           "how",
