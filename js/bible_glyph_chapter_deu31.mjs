@@ -240,7 +240,7 @@ export function bible_glyph_chapter_deu31() {
           "$hands_giving",
           "them,",
           "and",
-          "you",
+          "$you",
           "shall",
           "divide",
           "it",
