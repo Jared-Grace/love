@@ -77,7 +77,7 @@ export function bible_glyph_chapter_1ki12() {
           "$footprints",
           "with",
           "the",
-          "whole",
+          "$all",
           "$church",
           "of",
           "$wrestling+heart_on_fire",
