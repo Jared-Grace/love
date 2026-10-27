@@ -756,7 +756,7 @@ export function bible_glyph_chapter_isa49() {
           "and",
           "raise",
           "My",
-          "banner",
+          "$triangular_flag+up_arrow",
           "$toward",
           "the",
           "$family$s.",
