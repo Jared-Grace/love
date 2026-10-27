@@ -21,7 +21,7 @@ export function bible_glyph_chapter_exo13() {
           "$sparkle+doing",
           "to",
           "Me",
-          "every",
+          "$all",
           "firstborn",
           "male.",
           "The",
