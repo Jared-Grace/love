@@ -50,7 +50,7 @@ export function bible_glyph_chapter_dan09() {
           "of",
           "his",
           "$castle+doing,",
-          "I,",
+          "$me,",
           "$proper_name$Daniel,",
           "understood",
           "from",
