@@ -346,7 +346,7 @@ export function bible_glyph_chapter_deu06() {
           "with",
           "vineyards",
           "and",
-          "olive",
+          "$olive",
           "groves",
           "that",
           "you",
