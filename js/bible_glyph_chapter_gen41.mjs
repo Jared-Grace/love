@@ -623,7 +623,7 @@ export function bible_glyph_chapter_gen41() {
           "sprouted,",
           "$wilted_flower+doing",
           "and",
-          "thin",
+          "$pinching_hand+describing",
           "and",
           "scorched",
           "by",
