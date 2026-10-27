@@ -780,7 +780,7 @@ export function bible_glyph_chapter_2sa12() {
         verse_number: 23,
         words: [
           "But",
-          "now",
+          "$watch",
           "that",
           "he",
           "is",
