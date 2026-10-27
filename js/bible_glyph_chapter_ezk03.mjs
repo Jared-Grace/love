@@ -458,7 +458,7 @@ export function bible_glyph_chapter_ezk03() {
           "I",
           "sat",
           "where",
-          "they",
+          "$pointing_back",
           "sat,",
           "and",
           "remained",
