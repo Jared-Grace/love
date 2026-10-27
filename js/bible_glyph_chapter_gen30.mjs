@@ -696,7 +696,7 @@ export function bible_glyph_chapter_gen30() {
           "And",
           "he",
           "$speech,",
-          "Name",
+          "$hole+right_arrow+doing",
           "your",
           "wages,",
           "and",
