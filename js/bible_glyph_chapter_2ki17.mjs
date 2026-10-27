@@ -342,7 +342,7 @@ export function bible_glyph_chapter_2ki17() {
           "and",
           "under",
           "$all",
-          "green",
+          "$tree+leaf+describing",
           "$tree.",
         ],
       },
