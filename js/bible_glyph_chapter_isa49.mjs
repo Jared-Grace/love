@@ -908,7 +908,7 @@ export function bible_glyph_chapter_isa49() {
           "they",
           "will",
           "be",
-          "drunk",
+          "$woozy_face+doing",
           "on",
           "their",
           "own",
