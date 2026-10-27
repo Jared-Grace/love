@@ -167,7 +167,7 @@ export function bible_glyph_chapter_mic07() {
           "in",
           "a",
           "companion.",
-          "Seal",
+          "$guard",
           "the",
           "doors",
           "of",
