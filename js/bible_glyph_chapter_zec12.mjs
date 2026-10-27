@@ -93,7 +93,7 @@ export function bible_glyph_chapter_zec12() {
           "of",
           "the",
           "$earth",
-          "gather",
+          "$crowd+doing",
           "against",
           "her,",
           "I",
