@@ -53,7 +53,7 @@ export function bible_glyph_chapter_pro02() {
         words: [
           "if",
           "you",
-          "truly",
+          "$pointing",
           "call",
           "out",
           "to",
