@@ -1125,7 +1125,7 @@ export function bible_glyph_chapter_jdg11() {
           "other",
           "$son",
           "or",
-          "daughter",
+          "$girl+family",
           "besides",
           "her.",
         ],
