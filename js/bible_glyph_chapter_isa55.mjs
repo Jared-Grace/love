@@ -311,7 +311,7 @@ export function bible_glyph_chapter_isa55() {
           "it",
           "bud",
           "and",
-          "sprout,",
+          "$sprout+up_arrow+doing,",
           "and",
           "$hands_giving",
           "$seed",
