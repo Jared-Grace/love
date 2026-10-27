@@ -768,7 +768,7 @@ export function bible_glyph_chapter_gen37() {
           "our",
           "$brother",
           "and",
-          "cover",
+          "$coat+doing",
           "up",
           "his",
           "$blood?",
