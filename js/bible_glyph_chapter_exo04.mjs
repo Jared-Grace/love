@@ -283,7 +283,7 @@ export function bible_glyph_chapter_exo04() {
           "$plus",
           "these",
           "$two",
-          "signs",
+          "$placard",
           "or",
           "$ear",
           "to",
