@@ -426,7 +426,7 @@ export function bible_glyph_chapter_mal02() {
         verse_number: 13,
         words: [
           "And",
-          "this",
+          "$flashlight",
           "is",
           "another",
           "thing",
