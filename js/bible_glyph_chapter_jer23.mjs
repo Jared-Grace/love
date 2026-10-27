@@ -815,7 +815,7 @@ export function bible_glyph_chapter_jer23() {
           "$thumbs_down",
           "$road",
           "and",
-          "deeds.",
+          "$clapper_board.",
         ],
       },
       {
