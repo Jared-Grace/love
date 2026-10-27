@@ -25,7 +25,7 @@ export function bible_glyph_chapter_num09() {
           "$proper_name$Sinai,",
           "in",
           "the",
-          "first",
+          "$first_place",
           "$new_moon",
           "of",
           "the",
