@@ -34,7 +34,7 @@ export function bible_glyph_chapter_job28() {
       {
         verse_number: 2,
         words: [
-          "Iron",
+          "$iron",
           "is",
           "$hand_receiving",
           "from",
