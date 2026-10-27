@@ -25,7 +25,7 @@ export function bible_glyph_chapter_exo38() {
           "$tree,",
           "$five",
           "$triangular_ruler",
-          "long",
+          "$up_down_arrow",
           "and",
           "$five",
           "$triangular_ruler",
