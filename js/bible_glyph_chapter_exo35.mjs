@@ -104,7 +104,7 @@ export function bible_glyph_chapter_exo35() {
           "$speech",
           "to",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "of",
           "the",
