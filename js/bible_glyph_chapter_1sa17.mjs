@@ -990,7 +990,7 @@ export function bible_glyph_chapter_1sa17() {
           "a",
           "boy,",
           "and",
-          "he",
+          "$pointing_back",
           "has",
           "been",
           "a",
