@@ -639,7 +639,7 @@ export function bible_glyph_chapter_exo04() {
           "them",
           "$pointing_up",
           "a",
-          "donkey,",
+          "$donkey,",
           "and",
           "headed",
           "$turn_back",
