@@ -497,7 +497,7 @@ export function bible_glyph_chapter_gen15() {
           "$earth,",
           "from",
           "the",
-          "river",
+          "$water+national_park",
           "of",
           "$clamp+proper_name",
           "to",
