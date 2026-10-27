@@ -51,7 +51,7 @@ export function bible_glyph_chapter_exo29() {
         words: [
           "along",
           "with",
-          "unleavened",
+          "$flatbread",
           "$bread,",
           "unleavened",
           "cakes",
