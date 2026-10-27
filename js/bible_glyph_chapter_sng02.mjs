@@ -353,7 +353,7 @@ export function bible_glyph_chapter_sng02() {
       {
         verse_number: 15,
         words: [
-          "Catch",
+          "$hand+clamp",
           "for",
           "us",
           "the",
