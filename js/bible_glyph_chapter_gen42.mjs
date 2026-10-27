@@ -509,7 +509,7 @@ export function bible_glyph_chapter_gen42() {
           "the",
           "rest",
           "of",
-          "you",
+          "$you",
           "$walking",
           "and",
           "$footprints",
