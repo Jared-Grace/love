@@ -1142,7 +1142,7 @@ export function bible_glyph_chapter_num22() {
           "are",
           "to",
           "$mouth",
-          "only",
+          "$end_arrow+zero",
           "the",
           "$speech",
           "that",
