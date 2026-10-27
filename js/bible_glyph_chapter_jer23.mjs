@@ -653,7 +653,7 @@ export function bible_glyph_chapter_jer23() {
           "$walking",
           "in",
           "the",
-          "stubbornness",
+          "$heart_red+mechanical_arm+thing",
           "of",
           "his",
           "own",
