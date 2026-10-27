@@ -1035,7 +1035,7 @@ export function bible_glyph_chapter_lev11() {
           "or",
           "$walking",
           "on",
-          "four",
+          "$four",
           "or",
           "more",
           "$foot,",
