@@ -479,7 +479,7 @@ export function bible_glyph_chapter_pro04() {
           "from",
           "your",
           "$face_with_open_mouth;",
-          "keep",
+          "$satellite+doing",
           "perverse",
           "speech",
           "far",
