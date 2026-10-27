@@ -156,7 +156,7 @@ export function bible_glyph_chapter_2ki06() {
           "of",
           "$heart_on_fire",
           "$speech,",
-          "Where",
+          "$question+right_arrow",
           "did",
           "it",
           "fall?",
