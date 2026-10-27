@@ -454,7 +454,7 @@ export function bible_glyph_chapter_jer31() {
           "and",
           "give",
           "them",
-          "comfort",
+          "$hug+doing",
           "and",
           "joy",
           "for",
