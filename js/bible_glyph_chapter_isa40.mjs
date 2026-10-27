@@ -56,7 +56,7 @@ export function bible_glyph_chapter_isa40() {
           "of",
           "the",
           "$i_am",
-          "double",
+          "$page_with_curl+thing",
           "for",
           "all",
           "her",
