@@ -676,7 +676,7 @@ export function bible_glyph_chapter_gen41() {
           "of",
           "$house+proper_name",
           "are",
-          "one",
+          "$one",
           "and",
           "the",
           "same.",
