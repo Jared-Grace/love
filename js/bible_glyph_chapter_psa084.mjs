@@ -264,7 +264,7 @@ export function bible_glyph_chapter_psa084() {
       {
         verse_number: 11,
         words: [
-          "For",
+          "$pointing",
           "the",
           "$i_am",
           "$heart_on_fire",
