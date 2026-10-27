@@ -778,7 +778,7 @@ export function bible_glyph_chapter_exo23() {
           "will",
           "$hand_sending",
           "My",
-          "terror",
+          "$fearful_face+thing",
           "ahead",
           "of",
           "you",
