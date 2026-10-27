@@ -934,7 +934,7 @@ export function bible_glyph_chapter_exo12() {
           "struck",
           "down",
           "every",
-          "firstborn",
+          "$first_place+baby",
           "male",
           "in",
           "the",
