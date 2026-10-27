@@ -191,7 +191,7 @@ export function bible_glyph_chapter_lev01() {
           "$pointing_up",
           "$altar",
           "and",
-          "arrange",
+          "$card_index_dividers",
           "$tree",
           "$pointing_up",
           "the",
