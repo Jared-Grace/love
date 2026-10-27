@@ -507,7 +507,7 @@ export function bible_glyph_chapter_gen28() {
           "$i_am",
           "$link",
           "in",
-          "this",
+          "$flashlight",
           "$place,",
           "and",
           "I",
