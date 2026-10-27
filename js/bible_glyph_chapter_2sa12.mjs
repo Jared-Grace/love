@@ -695,7 +695,7 @@ export function bible_glyph_chapter_2sa12() {
           "Then",
           "he",
           "$footprints",
-          "to",
+          "$toward",
           "his",
           "own",
           "$house,",
