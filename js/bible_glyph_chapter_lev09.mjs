@@ -475,7 +475,7 @@ export function bible_glyph_chapter_lev09() {
           "$heart_organ+two",
           "and",
           "the",
-          "lobe",
+          "$meat+brown_square+takeout_box",
           "of",
           "the",
           "liver.",
