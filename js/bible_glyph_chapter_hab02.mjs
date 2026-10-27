@@ -15,7 +15,7 @@ export function bible_glyph_chapter_hab02() {
         words: [
           "I",
           "will",
-          "stand",
+          "$person+round_pushpin",
           "at",
           "my",
           "$guard+thing",
