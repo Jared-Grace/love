@@ -69,7 +69,7 @@ export function bible_glyph_chapter_deu34() {
           "of",
           "$hands_raised+proper_name",
           "as",
-          "far",
+          "$finish",
           "as",
           "the",
           "Western",
