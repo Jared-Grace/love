@@ -356,7 +356,7 @@ export function bible_glyph_chapter_1sa01() {
           "to",
           "the",
           "$i_am",
-          "all",
+          "$all",
           "the",
           "$sun",
           "of",
