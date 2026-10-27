@@ -49,7 +49,7 @@ export function bible_glyph_chapter_num10() {
           "sounded,",
           "the",
           "$all",
-          "congregation",
+          "$witness+crowd",
           "is",
           "to",
           "assemble",
