@@ -498,7 +498,7 @@ export function bible_glyph_chapter_zec14() {
           "apparel",
           "in",
           "great",
-          "abundance.",
+          "$multiply+thing.",
         ],
       },
       {
