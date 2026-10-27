@@ -524,7 +524,7 @@ export function bible_glyph_chapter_lev11() {
           "make",
           "you",
           "$soap+no_entry.",
-          "Whoever",
+          "$all",
           "touches",
           "their",
           "carcasses",
