@@ -505,7 +505,7 @@ export function bible_glyph_chapter_num25() {
           "of",
           "a",
           "$proper_name$Midianite",
-          "leader,",
+          "$lifting+person,",
           "their",
           "$sister,",
           "the",
