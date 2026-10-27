@@ -597,7 +597,7 @@ export function bible_glyph_chapter_deu10() {
           "and",
           "$heart_red+doing",
           "the",
-          "foreigner,",
+          "$foreigner,",
           "$hands_giving",
           "him",
           "$bread",
