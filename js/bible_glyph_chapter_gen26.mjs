@@ -807,7 +807,7 @@ export function bible_glyph_chapter_gen26() {
           "$eye",
           "we",
           "have",
-          "that",
+          "$pointing",
           "$i_am",
           "has",
           "been",
