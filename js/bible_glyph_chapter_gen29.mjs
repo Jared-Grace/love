@@ -470,7 +470,7 @@ export function bible_glyph_chapter_gen29() {
           "$eyes,",
           "but",
           "$proper_name$Rachel",
-          "was",
+          "$link",
           "shapely",
           "and",
           "beautiful.",
