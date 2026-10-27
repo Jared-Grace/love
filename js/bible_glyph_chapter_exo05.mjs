@@ -533,7 +533,7 @@ export function bible_glyph_chapter_exo05() {
       {
         verse_number: 18,
         words: [
-          "Now",
+          "$watch",
           "$walking",
           "and",
           "$kneeling+doing.",
