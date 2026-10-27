@@ -529,7 +529,7 @@ export function bible_glyph_chapter_jer07() {
           "and",
           "the",
           "$woman",
-          "knead",
+          "$flour+hand+doing",
           "the",
           "dough",
           "to",
