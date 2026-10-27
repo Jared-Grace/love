@@ -272,7 +272,7 @@ export function bible_glyph_chapter_jer17() {
           "It",
           "does",
           "$no_entry",
-          "worry",
+          "$worried_face+doing",
           "in",
           "a",
           "$year",
