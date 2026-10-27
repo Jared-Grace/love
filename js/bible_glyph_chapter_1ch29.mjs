@@ -921,7 +921,7 @@ export function bible_glyph_chapter_1ch29() {
           "$hands_giving",
           "him",
           "royal",
-          "majesty",
+          "$sparkles+light",
           "such",
           "as",
           "had",
