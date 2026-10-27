@@ -492,7 +492,7 @@ export function bible_glyph_chapter_pro16() {
           "words",
           "are",
           "a",
-          "honeycomb,",
+          "$honey+house,",
           "sweet",
           "to",
           "the",
