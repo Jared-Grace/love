@@ -448,7 +448,7 @@ export function bible_glyph_chapter_num19() {
           "unclean,",
           "and",
           "his",
-          "uncleanness",
+          "$soap+no_entry+thing",
           "is",
           "$repeat",
           "on",
