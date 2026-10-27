@@ -107,7 +107,7 @@ export function bible_glyph_chapter_gen25() {
           "$sprout,",
           "$father+map",
           "$hands_giving",
-          "gifts",
+          "$hands_giving+thing",
           "to",
           "the",
           "$son",
