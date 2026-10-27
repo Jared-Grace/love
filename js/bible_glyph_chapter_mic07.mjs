@@ -291,7 +291,7 @@ export function bible_glyph_chapter_mic07() {
           "of",
           "the",
           "$i_am,",
-          "until",
+          "$finish",
           "He",
           "argues",
           "my",
