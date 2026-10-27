@@ -28,7 +28,7 @@ export function bible_glyph_chapter_gen42() {
           "to",
           "his",
           "$son,",
-          "Why",
+          "$flashlight+question",
           "do",
           "you",
           "$eye",
