@@ -894,7 +894,7 @@ export function bible_glyph_chapter_exo30() {
           "fragrant",
           "spices:",
           "gum",
-          "resin,",
+          "$droplet+incense,",
           "onycha",
           "and",
           "galbanum,",
