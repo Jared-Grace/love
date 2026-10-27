@@ -464,7 +464,7 @@ export function bible_glyph_chapter_job28() {
           "and",
           "$eye",
           "everything",
-          "under",
+          "$down_arrow",
           "the",
           "$sky.",
         ],
