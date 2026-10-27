@@ -1237,7 +1237,7 @@ export function bible_glyph_chapter_jer31() {
           "this",
           "fixed",
           "order",
-          "departed",
+          "$walking+away+doing",
           "from",
           "My",
           "presence,",
