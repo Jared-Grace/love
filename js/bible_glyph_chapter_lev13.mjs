@@ -1014,7 +1014,7 @@ export function bible_glyph_chapter_lev13() {
           "in",
           "it",
           "is",
-          "yellow",
+          "$gold+describing",
           "and",
           "thin,",
           "the",
