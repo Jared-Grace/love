@@ -605,7 +605,7 @@ export function bible_glyph_chapter_exo34() {
           "offspring",
           "of",
           "every",
-          "womb",
+          "$hugging_face+baby",
           "belongs",
           "to",
           "Me,",
