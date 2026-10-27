@@ -162,7 +162,7 @@ export function bible_glyph_chapter_exo28() {
           "along",
           "with",
           "the",
-          "blue,",
+          "$blue_circle,",
           "purple",
           "and",
           "scarlet",
