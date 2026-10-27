@@ -616,7 +616,7 @@ export function bible_glyph_chapter_job01() {
           "up,",
           "$t_shirt+scissors+doing",
           "his",
-          "robe,",
+          "$cloak,",
           "and",
           "shaved",
           "his",
