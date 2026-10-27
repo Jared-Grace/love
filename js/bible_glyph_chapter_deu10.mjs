@@ -329,7 +329,7 @@ export function bible_glyph_chapter_deu10() {
         verse_number: 10,
         words: [
           "$me",
-          "stayed",
+          "$person+round_pushpin",
           "on",
           "the",
           "$mountain",
