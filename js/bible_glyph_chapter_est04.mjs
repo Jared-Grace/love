@@ -577,7 +577,7 @@ export function bible_glyph_chapter_est04() {
         words: [
           "So",
           "Mordecai",
-          "went",
+          "$bridge",
           "and",
           "$hammer+doing",
           "all",
