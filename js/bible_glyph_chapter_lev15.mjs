@@ -605,7 +605,7 @@ export function bible_glyph_chapter_lev15() {
         words: [
           "$all",
           "on",
-          "which",
+          "$back+flashlight",
           "she",
           "lies",
           "or",
