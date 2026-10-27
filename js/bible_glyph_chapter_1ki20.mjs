@@ -1463,7 +1463,7 @@ export function bible_glyph_chapter_1ki20() {
           "and",
           "$speech,",
           "Guard",
-          "this",
+          "$flashlight",
           "$man_beard.",
           "If",
           "for",
