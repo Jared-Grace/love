@@ -816,7 +816,7 @@ export function bible_glyph_chapter_2ki06() {
           "$famine",
           "in",
           "$guard+proper_name.",
-          "Indeed,",
+          "$exclamation,",
           "they",
           "besieged",
           "the",
