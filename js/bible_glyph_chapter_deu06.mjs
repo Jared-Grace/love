@@ -465,7 +465,7 @@ export function bible_glyph_chapter_deu06() {
           "you",
           "off",
           "the",
-          "face",
+          "$face",
           "of",
           "the",
           "earth.",
