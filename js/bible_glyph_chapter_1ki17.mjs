@@ -500,7 +500,7 @@ export function bible_glyph_chapter_1ki17() {
           "$wheat+flour",
           "was",
           "$no_entry",
-          "exhausted",
+          "$end_arrow",
           "and",
           "the",
           "jug",
