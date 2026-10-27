@@ -304,7 +304,7 @@ export function bible_glyph_chapter_zec03() {
           "will",
           "remove",
           "the",
-          "iniquity",
+          "$cyclone",
           "of",
           "this",
           "$earth",
