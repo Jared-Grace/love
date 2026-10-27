@@ -160,7 +160,7 @@ export function bible_glyph_chapter_lev26() {
           "and",
           "will",
           "$person+house",
-          "securely",
+          "$anchor+thing",
           "in",
           "your",
           "$earth.",
