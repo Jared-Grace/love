@@ -193,7 +193,7 @@ export function bible_glyph_chapter_deu12() {
           "well",
           "as",
           "the",
-          "firstborn",
+          "$first_place+baby",
           "of",
           "your",
           "herds",
