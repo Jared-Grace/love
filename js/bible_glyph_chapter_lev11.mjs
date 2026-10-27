@@ -368,7 +368,7 @@ export function bible_glyph_chapter_lev11() {
       },
       {
         verse_number: 14,
-        words: ["the", "kite,", "any", "kind", "of", "falcon,"],
+        words: ["the", "$bird+fast_forward,", "any", "kind", "of", "falcon,"],
       },
       {
         verse_number: 15,
