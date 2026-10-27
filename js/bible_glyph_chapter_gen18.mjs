@@ -24,7 +24,7 @@ export function bible_glyph_chapter_gen18() {
           "of",
           "$proper_name$Mamre,",
           "while",
-          "he",
+          "$pointing_back",
           "was",
           "sitting",
           "at",
