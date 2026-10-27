@@ -216,7 +216,7 @@ export function bible_glyph_chapter_1sa02() {
           "He",
           "seats",
           "them",
-          "among",
+          "$linked_paperclips",
           "princes",
           "and",
           "bestows",
