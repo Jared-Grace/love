@@ -124,7 +124,7 @@ export function bible_glyph_chapter_exo17() {
           "$fishing_pole+proper_name",
           "cried",
           "out",
-          "to",
+          "$toward",
           "the",
           "$i_am,",
           "What",
