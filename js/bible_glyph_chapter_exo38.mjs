@@ -23,7 +23,7 @@ export function bible_glyph_chapter_exo38() {
           "from",
           "$tree+thorns",
           "$tree,",
-          "five",
+          "$five",
           "cubits",
           "long",
           "and",
