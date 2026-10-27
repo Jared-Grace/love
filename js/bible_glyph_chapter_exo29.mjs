@@ -701,7 +701,7 @@ export function bible_glyph_chapter_exo29() {
           "of",
           "unleavened",
           "bread",
-          "that",
+          "$back+flashlight",
           "is",
           "before",
           "$i_am.",
