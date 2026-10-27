@@ -145,7 +145,7 @@ export function bible_glyph_chapter_deu14() {
           "$cow_face+foot",
           "$palm_up_hand+divide+doing",
           "in",
-          "two",
+          "$two",
           "and",
           "that",
           "chews",
