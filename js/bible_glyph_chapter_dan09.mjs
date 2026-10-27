@@ -92,7 +92,7 @@ export function bible_glyph_chapter_dan09() {
           "$crown",
           "$heart_on_fire",
           "to",
-          "seek",
+          "$magnifying_glass",
           "Him",
           "by",
           "$hands_praying+thing",
