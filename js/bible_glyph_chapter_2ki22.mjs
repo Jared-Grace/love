@@ -266,7 +266,7 @@ export function bible_glyph_chapter_2ki22() {
           "to",
           "$badger",
           "the",
-          "scribe,",
+          "$abacus,",
           "I",
           "have",
           "found",
