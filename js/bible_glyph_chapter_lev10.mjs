@@ -221,7 +221,7 @@ export function bible_glyph_chapter_lev10() {
           "$alarm_clock,",
           "or",
           "$skull+doing,",
-          "for",
+          "$pointing",
           "the",
           "anointing",
           "oil",
