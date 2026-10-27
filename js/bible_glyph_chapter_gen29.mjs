@@ -421,7 +421,7 @@ export function bible_glyph_chapter_gen29() {
           "to",
           "him,",
           "Just",
-          "because",
+          "$pointing",
           "you",
           "are",
           "my",
