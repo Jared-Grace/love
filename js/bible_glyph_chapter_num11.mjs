@@ -121,7 +121,7 @@ export function bible_glyph_chapter_num11() {
           "$turn_back",
           "and",
           "$speech,",
-          "Who",
+          "$person+question",
           "will",
           "feed",
           "us",
