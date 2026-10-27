@@ -879,7 +879,7 @@ export function bible_glyph_chapter_1sa01() {
           "$bowing",
           "the",
           "$i_am",
-          "there.",
+          "$telescope.",
         ],
       },
     ],
