@@ -269,7 +269,7 @@ export function bible_glyph_chapter_gen33() {
           "one",
           "$eye",
           "the",
-          "face",
+          "$face",
           "of",
           "$heart_on_fire,",
           "and",
