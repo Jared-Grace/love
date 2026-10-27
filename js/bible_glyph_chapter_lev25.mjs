@@ -269,7 +269,7 @@ export function bible_glyph_chapter_lev25() {
           "sound",
           "the",
           "$trumpet",
-          "throughout",
+          "$all",
           "your",
           "$earth.",
         ],
