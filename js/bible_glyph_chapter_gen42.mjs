@@ -459,7 +459,7 @@ export function bible_glyph_chapter_gen42() {
       },
       {
         verse_number: 17,
-        words: ["So", "Joseph", "imprisoned", "them", "for", "three", "$sun."],
+        words: ["So", "Joseph", "imprisoned", "them", "for", "$three", "$sun."],
       },
       {
         verse_number: 18,
