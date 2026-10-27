@@ -269,7 +269,7 @@ export function bible_glyph_chapter_num36() {
           "marry",
           "within",
           "a",
-          "clan",
+          "$houses",
           "of",
           "the",
           "tribe",
