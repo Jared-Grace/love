@@ -256,7 +256,7 @@ export function bible_glyph_chapter_gen48() {
           "$speech,",
           "$person+question",
           "are",
-          "these?",
+          "$flashlight+flashlight?",
         ],
       },
       {
