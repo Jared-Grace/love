@@ -503,7 +503,7 @@ export function bible_glyph_chapter_num13() {
           "took",
           "$tray_out",
           "the",
-          "pomegranates",
+          "$fruit+red_circle",
           "and",
           "figs.",
         ],
