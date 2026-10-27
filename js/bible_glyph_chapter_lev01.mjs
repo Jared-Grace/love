@@ -56,7 +56,7 @@ export function bible_glyph_chapter_lev01() {
           "livestock,",
           "$tray_out",
           "the",
-          "herd",
+          "$cow_face",
           "$tray_out",
           "$sheep,",
           "as",
