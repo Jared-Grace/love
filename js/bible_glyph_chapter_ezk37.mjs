@@ -786,7 +786,7 @@ export function bible_glyph_chapter_ezk37() {
           "They",
           "will",
           "$no_entry",
-          "longer",
+          "$repeat",
           "defile",
           "themselves",
           "with",
