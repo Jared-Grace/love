@@ -23,7 +23,7 @@ export function bible_glyph_chapter_dan12() {
           "who",
           "stands",
           "watch",
-          "over",
+          "$pointing_up",
           "the",
           "$son",
           "of",
