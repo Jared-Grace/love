@@ -165,7 +165,7 @@ export function bible_glyph_chapter_pro02() {
       {
         verse_number: 9,
         words: [
-          "Then",
+          "$telescope+clock",
           "you",
           "will",
           "discern",
