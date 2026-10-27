@@ -447,7 +447,7 @@ export function bible_glyph_chapter_neh08() {
           "to",
           "$eating",
           "and",
-          "drink,",
+          "$cup_with_straw,",
           "to",
           "$hand_sending",
           "out",
