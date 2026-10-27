@@ -521,7 +521,7 @@ export function bible_glyph_chapter_ezk34() {
           "$turn_back",
           "the",
           "strays,",
-          "bind",
+          "$adhesive_bandage+doing",
           "up",
           "the",
           "broken,",
