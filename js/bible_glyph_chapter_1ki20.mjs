@@ -853,7 +853,7 @@ export function bible_glyph_chapter_1ki20() {
           "you",
           "have",
           "lost,",
-          "horse",
+          "$horse",
           "for",
           "horse",
           "and",
