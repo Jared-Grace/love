@@ -1033,7 +1033,7 @@ export function bible_glyph_chapter_num22() {
           "to",
           "oppose",
           "you,",
-          "because",
+          "$pointing",
           "your",
           "$road",
           "is",
