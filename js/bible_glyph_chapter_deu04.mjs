@@ -1699,7 +1699,7 @@ export function bible_glyph_chapter_deu04() {
           "$proper_name$Arnon",
           "$national_park",
           "as",
-          "far",
+          "$finish",
           "as",
           "$mountain",
           "$proper_name$Siyon,",
