@@ -324,7 +324,7 @@ export function bible_glyph_chapter_gen20() {
           "$castle",
           "a",
           "great",
-          "guilt?",
+          "$bow+thing?",
           "You",
           "have",
           "$hammer+doing",
