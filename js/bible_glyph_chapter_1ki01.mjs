@@ -920,7 +920,7 @@ export function bible_glyph_chapter_1ki01() {
           "$person_other",
           "from",
           "all",
-          "distress,",
+          "$clamp,",
         ],
       },
       {
