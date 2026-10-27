@@ -138,7 +138,7 @@ export function bible_glyph_chapter_lev24() {
           "of",
           "pure",
           "gold",
-          "before",
+          "$face",
           "$i_am.",
         ],
       },
