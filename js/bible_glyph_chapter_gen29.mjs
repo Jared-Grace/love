@@ -939,7 +939,7 @@ export function bible_glyph_chapter_gen29() {
           "and",
           "$speech,",
           "This",
-          "time",
+          "$drum",
           "I",
           "will",
           "$hands_raised",
