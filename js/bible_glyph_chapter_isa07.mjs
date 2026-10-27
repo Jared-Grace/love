@@ -658,7 +658,7 @@ export function bible_glyph_chapter_isa07() {
           "the",
           "$multiply+thing",
           "of",
-          "milk",
+          "$milk",
           "they",
           "$hammer+doing,",
           "he",
