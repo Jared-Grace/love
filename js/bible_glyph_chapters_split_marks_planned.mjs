@@ -1,14 +1,12 @@
 import { object_property_names } from "./object_property_names.mjs";
 import { equal } from "./equal.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { less_than } from "./less_than.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bible_glyph_roots } from "./bible_glyph_roots.mjs";
-import { bible_glyph_roots_hebrew } from "./bible_glyph_roots_hebrew.mjs";
-import { bible_glyph_roots_split_pairs } from "./bible_glyph_roots_split_pairs.mjs";
+import { bible_glyph_roots_split_families } from "./bible_glyph_roots_split_families.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
 import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
@@ -19,26 +17,8 @@ export async function bible_glyph_chapters_split_marks_planned() {
   ("Every verse that still draws a picture two roots used to share more often than the table now seats it, and which mark each of those drawn pictures should become - or why it cannot be said.");
   ("THE TABLES WERE SPLIT AND THE PAGES WERE NOT. Between the fifth and the thirteenth of October every picture two roots shared was given to one of them and the other root was moved onto a picture of its own, but the chapters already drawn kept the old mark. The collision walk cannot see those marks any more, because it asks the table which pictures are shared and the table now says none. So this asks the history instead: which pictures were once shared, and by which two roots.");
   ("THE CANDIDATES ARE THE OLD PICTURE AND EVERY PICTURE EITHER OF ITS TWO ROOTS NOW HAS THAT THE VERSE HAS NOT FULLY DRAWN YET. That is the seat split reading next door with one difference: there the new picture always began with the old one, and here the moved root may have gone anywhere - the Hebrew word for a word went from the speech bubble to the voice.");
-  ("THE ORDER RULE IS THE SEAT SPLIT READING'S OWN, ASKED IN THE SAME ORDER. If every candidate is the same mark, every old mark becomes it. If the candidates number exactly the marks drawn, they pair off by position in the original's order. If not, the words English gives nothing are set aside and both questions are asked again. Anything left is handed back as undecided rather than guessed, and a verse with no candidate at all is left to the overdrawn gate, because a mark drawn where neither root stands is not a split's leftover.");
-  let families = {};
-  let roots = [...bible_glyph_roots(), ...bible_glyph_roots_hebrew()];
-  for (let [glyph, first, second] of bible_glyph_roots_split_pairs()) {
-    families[glyph] ??= [];
-    for (let root of roots) {
-      let sharer = equal(root.root, first) || equal(root.root, second);
-      if (not(sharer)) {
-        continue;
-      }
-      for (let word of root.words) {
-        let fresh =
-          not_equal(word.glyph, glyph) &&
-          not(families[glyph].includes(word.glyph));
-        if (fresh) {
-          families[glyph].push(word.glyph);
-        }
-      }
-    }
-  }
+  ("THE ORDER RULE IS THE SEAT SPLIT READING'S OWN, ASKED IN THE SAME ORDER. If every candidate is the same mark, every old mark becomes it. If the candidates number exactly the marks drawn, they pair off by position in the original's order. If not, the words English gives nothing are set aside and both questions are asked again. Anything left is handed back as undecided rather than guessed, and a verse with no moved candidate at all is left to the overdrawn gate, because a mark drawn where the moved root does not stand is not a split's leftover.");
+  let families = bible_glyph_roots_split_families();
   let decided = [];
   let undecided = [];
   for (let chapter of bible_glyph_chapters()) {
@@ -87,13 +67,13 @@ export async function bible_glyph_chapters_split_marks_planned() {
           let n = not(absent);
           return n;
         }
-        let all = words.filter(candidate_is).map(glyph_of);
-        let spoken = words.filter(candidate_is).filter(spoken_is).map(glyph_of);
-        function lambda(name) {
+        function moved_is(name) {
           let neq = not_equal(name, glyph);
           return neq;
         }
-        let moved = all.filter(lambda);
+        let all = words.filter(candidate_is).map(glyph_of);
+        let spoken = words.filter(candidate_is).filter(spoken_is).map(glyph_of);
+        let moved = all.filter(moved_is);
         if (equal(moved.length, 0)) {
           continue;
         }
