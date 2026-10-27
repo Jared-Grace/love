@@ -656,7 +656,7 @@ export function bible_glyph_chapter_deu15() {
           "to",
           "shear",
           "the",
-          "firstborn",
+          "$first_place+baby",
           "of",
           "your",
           "$sheep.",
