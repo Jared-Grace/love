@@ -654,7 +654,7 @@ export function bible_glyph_chapter_1sa16() {
           "with",
           "$bread,",
           "a",
-          "skin",
+          "$goat+bucket",
           "of",
           "$wine",
           "and",
