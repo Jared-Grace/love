@@ -1114,7 +1114,7 @@ export function bible_glyph_chapter_jdg11() {
           "tambourines",
           "and",
           "dancing.",
-          "She",
+          "$pointing_back",
           "was",
           "his",
           "only",
