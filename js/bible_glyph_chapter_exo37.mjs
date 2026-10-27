@@ -403,7 +403,7 @@ export function bible_glyph_chapter_exo37() {
           "pitchers",
           "for",
           "pouring",
-          "drink",
+          "$pouring_liquid+wine",
           "offerings,",
           "out",
           "of",
