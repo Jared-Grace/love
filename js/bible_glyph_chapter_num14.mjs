@@ -711,7 +711,7 @@ export function bible_glyph_chapter_num14() {
           "tested",
           "Me",
           "these",
-          "ten",
+          "$ten",
           "times",
           "and",
           "have",
