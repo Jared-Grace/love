@@ -322,7 +322,7 @@ export function bible_glyph_chapter_1ki01() {
           "$megaphone,",
           "$brick+i_am,",
           "the",
-          "mighty",
+          "$might+person",
           "men,",
           "or",
           "his",
