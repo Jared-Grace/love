@@ -397,7 +397,7 @@ export function bible_glyph_chapter_jos24() {
           "I",
           "sent",
           "the",
-          "hornet",
+          "$fly+sewing_needle",
           "ahead",
           "of",
           "you,",
