@@ -302,7 +302,7 @@ export function bible_glyph_chapter_jer01() {
           "$speech,",
           "$flashlight+question",
           "do",
-          "you",
+          "$you",
           "$eye,",
           "$up_arrow+i_am?",
           "I",
