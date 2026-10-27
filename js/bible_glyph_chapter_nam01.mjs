@@ -358,7 +358,7 @@ export function bible_glyph_chapter_nam01() {
           "I",
           "will",
           "$watch",
-          "break",
+          "$broken_chain",
           "their",
           "yoke",
           "from",
