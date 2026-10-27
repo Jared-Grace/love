@@ -1319,7 +1319,7 @@ export function bible_glyph_chapter_jer32() {
           "will",
           "$turn_back",
           "to",
-          "this",
+          "$flashlight",
           "$place",
           "and",
           "make",
