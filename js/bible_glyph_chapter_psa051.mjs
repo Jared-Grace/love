@@ -344,7 +344,7 @@ export function bible_glyph_chapter_psa051() {
       {
         verse_number: 16,
         words: [
-          "For",
+          "$pointing",
           "You",
           "do",
           "$no_entry",
