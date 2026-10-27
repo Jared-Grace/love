@@ -824,7 +824,7 @@ export function bible_glyph_chapter_num06() {
           "$palm_down",
           "My",
           "$name_tag",
-          "on",
+          "$pointing_up",
           "the",
           "$son",
           "of",
