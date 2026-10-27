@@ -226,7 +226,7 @@ export function bible_glyph_chapter_exo33() {
           "to",
           "$hand_receiving",
           "the",
-          "tent",
+          "$tent",
           "and",
           "pitch",
           "it",
