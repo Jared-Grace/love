@@ -127,7 +127,7 @@ export function bible_glyph_chapter_ezr01() {
           "in",
           "$hands_raised+proper_name",
           "and",
-          "build",
+          "$brick",
           "the",
           "$house",
           "of",
