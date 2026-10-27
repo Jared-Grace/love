@@ -687,7 +687,7 @@ export function bible_glyph_chapter_isa40() {
           "their",
           "stems",
           "taken",
-          "root",
+          "$ginger_root+doing",
           "in",
           "the",
           "$earth,",
