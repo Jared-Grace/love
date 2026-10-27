@@ -1267,7 +1267,7 @@ export function bible_glyph_chapter_jer31() {
           "$i_am",
           "$speech:",
           "Only",
-          "if",
+          "$traffic_light",
           "the",
           "$sky",
           "above",
