@@ -48,7 +48,7 @@ export function bible_glyph_chapter_1ki02() {
           "$earth.",
           "So",
           "be",
-          "strong,",
+          "$might+up_arrow,",
           "and",
           "prove",
           "yourself",
