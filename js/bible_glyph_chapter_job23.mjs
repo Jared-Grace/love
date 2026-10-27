@@ -70,7 +70,7 @@ export function bible_glyph_chapter_job23() {
           "my",
           "$face_with_open_mouth",
           "with",
-          "arguments.",
+          "$you+exclamation+thing.",
         ],
       },
       {
