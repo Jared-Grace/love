@@ -169,7 +169,7 @@ export function bible_glyph_chapter_jdg06() {
           "$wrestling+heart_on_fire",
           "was",
           "greatly",
-          "impoverished",
+          "$battery+down_arrow+doing",
           "by",
           "$proper_name$Midian,",
           "and",
