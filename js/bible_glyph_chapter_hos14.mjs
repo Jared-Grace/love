@@ -236,7 +236,7 @@ export function bible_glyph_chapter_hos14() {
           "$tree+harp;",
           "your",
           "$fruit",
-          "comes",
+          "$magnifying_glass+exclamation",
           "$tray_out",
           "Me.",
         ],
