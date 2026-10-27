@@ -318,7 +318,7 @@ export function bible_glyph_chapter_1sa20() {
           "to",
           "$skull+doing",
           "yourself.",
-          "Why",
+          "$flashlight+question",
           "hand",
           "me",
           "over",
