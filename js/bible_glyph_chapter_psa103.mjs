@@ -265,7 +265,7 @@ export function bible_glyph_chapter_psa103() {
           "$pointing_up",
           "those",
           "who",
-          "fear",
+          "$fear+describing",
           "Him.",
         ],
       },
