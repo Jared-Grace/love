@@ -501,7 +501,7 @@ export function bible_glyph_chapter_lam03() {
           "Let",
           "him",
           "$person+house",
-          "alone",
+          "$person+one+describing",
           "in",
           "silence,",
           "for",
