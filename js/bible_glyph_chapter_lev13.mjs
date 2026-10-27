@@ -1763,7 +1763,7 @@ export function bible_glyph_chapter_lev13() {
       {
         verse_number: 55,
         words: [
-          "After",
+          "$next_track",
           "it",
           "has",
           "been",
