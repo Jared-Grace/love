@@ -72,7 +72,7 @@ export function bible_glyph_chapter_exo27() {
           "pots",
           "for",
           "removing",
-          "ashes,",
+          "$bacon+doing,",
           "its",
           "shovels,",
           "its",
