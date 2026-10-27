@@ -560,7 +560,7 @@ export function bible_glyph_chapter_num20() {
         verse_number: 18,
         words: [
           "But",
-          "Edom",
+          "$red_circle+map+proper_name",
           "$speech,",
           "You",
           "may",
