@@ -69,7 +69,7 @@ export function bible_glyph_chapter_num10() {
         verse_number: 4,
         words: [
           "But",
-          "if",
+          "$traffic_light",
           "only",
           "one",
           "is",
