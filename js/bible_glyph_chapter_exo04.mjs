@@ -674,7 +674,7 @@ export function bible_glyph_chapter_exo04() {
           "that",
           "you",
           "$hammer+doing",
-          "all",
+          "$all",
           "the",
           "wonders",
           "that",
