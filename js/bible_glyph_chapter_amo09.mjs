@@ -298,7 +298,7 @@ export function bible_glyph_chapter_amo09() {
       {
         verse_number: 8,
         words: [
-          "Surely",
+          "$exclamation",
           "the",
           "$eyes",
           "of",
