@@ -145,7 +145,7 @@ export function bible_glyph_chapter_zec04() {
           "$speech",
           "to",
           "me,",
-          "This",
+          "$flashlight",
           "is",
           "the",
           "$speech",
