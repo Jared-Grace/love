@@ -621,7 +621,7 @@ export function bible_glyph_chapter_1sa15() {
           "rush",
           "upon",
           "the",
-          "plunder",
+          "$plunder",
           "and",
           "$hammer+doing",
           "what",
