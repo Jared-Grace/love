@@ -483,7 +483,7 @@ export function bible_glyph_chapter_num19() {
           "$tent",
           "will",
           "be",
-          "unclean",
+          "$soap+no_entry",
           "for",
           "seven",
           "$sun.",
