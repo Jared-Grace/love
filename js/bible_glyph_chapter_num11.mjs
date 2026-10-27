@@ -812,7 +812,7 @@ export function bible_glyph_chapter_num11() {
           "$walking+pointing_down",
           "in",
           "the",
-          "cloud",
+          "$cloud",
           "and",
           "$mouth",
           "to",
