@@ -279,7 +279,7 @@ export function bible_glyph_chapter_sng08() {
           "tower",
           "of",
           "silver.",
-          "If",
+          "$traffic_light",
           "she",
           "is",
           "a",
