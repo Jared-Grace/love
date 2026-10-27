@@ -180,7 +180,7 @@ export function bible_glyph_chapter_pro03() {
           "$i_am",
           "with",
           "your",
-          "wealth",
+          "$money_bag+more",
           "and",
           "with",
           "the",
