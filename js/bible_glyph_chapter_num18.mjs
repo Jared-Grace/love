@@ -537,7 +537,7 @@ export function bible_glyph_chapter_num18() {
           "of",
           "every",
           "$meat,",
-          "whether",
+          "$back+flashlight",
           "$person",
           "or",
           "beast,",
