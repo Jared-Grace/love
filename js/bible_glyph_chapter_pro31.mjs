@@ -104,7 +104,7 @@ export function bible_glyph_chapter_pro31() {
           "they",
           "$cup_with_straw",
           "and",
-          "forget",
+          "$reminder_ribbon+no_entry",
           "what",
           "is",
           "decreed,",
