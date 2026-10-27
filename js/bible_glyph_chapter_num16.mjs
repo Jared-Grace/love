@@ -477,7 +477,7 @@ export function bible_glyph_chapter_num16() {
           "$angry_face+doing",
           "and",
           "$speech",
-          "to",
+          "$toward",
           "the",
           "$i_am,",
           "Do",
