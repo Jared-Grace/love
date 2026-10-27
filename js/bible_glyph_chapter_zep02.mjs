@@ -217,7 +217,7 @@ export function bible_glyph_chapter_zep02() {
           "down",
           "in",
           "the",
-          "evening,",
+          "$sunset,",
           "for",
           "the",
           "$i_am",
