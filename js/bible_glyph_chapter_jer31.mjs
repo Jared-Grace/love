@@ -646,7 +646,7 @@ export function bible_glyph_chapter_jer31() {
           "$flushed",
           "and",
           "$disappointed_face,",
-          "because",
+          "$pointing",
           "I",
           "bore",
           "the",
