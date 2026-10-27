@@ -599,7 +599,7 @@ export function bible_glyph_chapter_zep03() {
           "the",
           "lame",
           "and",
-          "gather",
+          "$tray_in+doing",
           "the",
           "scattered;",
           "and",
