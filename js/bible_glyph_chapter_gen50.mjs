@@ -58,7 +58,7 @@ export function bible_glyph_chapter_gen50() {
         words: [
           "This",
           "took",
-          "forty",
+          "$four+zero",
           "$sun,",
           "the",
           "time",
