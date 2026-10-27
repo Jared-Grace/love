@@ -516,7 +516,7 @@ export function bible_glyph_chapter_2ki01() {
           "$man_beard",
           "of",
           "$heart_on_fire,",
-          "please",
+          "$pleading",
           "may",
           "my",
           "$person_other",
