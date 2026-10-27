@@ -609,7 +609,7 @@ export function bible_glyph_chapter_num32() {
           "will",
           "arm",
           "yourselves",
-          "before",
+          "$face",
           "$i_am",
           "for",
           "battle,",
