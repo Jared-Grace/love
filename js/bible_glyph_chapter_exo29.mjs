@@ -1310,7 +1310,7 @@ export function bible_glyph_chapter_exo29() {
           "I",
           "will",
           "also",
-          "meet",
+          "$alarm_clock+doing",
           "there",
           "with",
           "the",
