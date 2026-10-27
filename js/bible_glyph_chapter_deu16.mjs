@@ -16,7 +16,7 @@ export function bible_glyph_chapter_deu16() {
         words: [
           "$guard",
           "the",
-          "month",
+          "$new_moon",
           "of",
           "Abib",
           "and",
