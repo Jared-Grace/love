@@ -776,7 +776,7 @@ export function bible_glyph_chapter_ezk37() {
           "be",
           "divided",
           "into",
-          "two",
+          "$two",
           "$castle.",
         ],
       },
