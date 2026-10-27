@@ -529,7 +529,7 @@ export function bible_glyph_chapter_2ch07() {
           "and",
           "My",
           "ears",
-          "attentive",
+          "$ear_with_hearing_aid+describing",
           "to",
           "the",
           "$hands_praying+thing",
