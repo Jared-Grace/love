@@ -1067,7 +1067,7 @@ export function bible_glyph_chapter_2ki06() {
           "sent",
           "a",
           "$man_beard",
-          "ahead,",
+          "$face,",
           "but",
           "before",
           "$angel",
