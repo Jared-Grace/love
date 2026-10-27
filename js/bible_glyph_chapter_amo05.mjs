@@ -192,7 +192,7 @@ export function bible_glyph_chapter_amo05() {
           "are",
           "those",
           "who",
-          "turn",
+          "$upside_down_face",
           "$scales+thing",
           "into",
           "wormwood",
