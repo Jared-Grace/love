@@ -154,7 +154,7 @@ export function bible_glyph_chapter_jer17() {
           "Cursed",
           "is",
           "the",
-          "man",
+          "$might+man_beard",
           "who",
           "trusts",
           "in",
