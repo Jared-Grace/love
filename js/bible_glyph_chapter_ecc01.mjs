@@ -439,7 +439,7 @@ export function bible_glyph_chapter_ecc01() {
           "as",
           "knowledge",
           "grows,",
-          "grief",
+          "$broken_heart+face_with_head_bandage",
           "increases.",
         ],
       },
