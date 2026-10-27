@@ -1314,7 +1314,7 @@ export function bible_glyph_chapter_1sa25() {
           "sober,",
           "his",
           "$woman",
-          "told",
+          "$newspaper",
           "him",
           "these",
           "$speech,",
