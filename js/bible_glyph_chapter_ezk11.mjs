@@ -22,7 +22,7 @@ export function bible_glyph_chapter_ezk11() {
           "and",
           "$footprints",
           "me",
-          "to",
+          "$toward",
           "the",
           "$gate",
           "of",
