@@ -1432,7 +1432,7 @@ export function bible_glyph_chapter_1ki02() {
         words: [
           "So",
           "Shimei",
-          "saddled",
+          "$adhesive_bandage+doing",
           "his",
           "donkey",
           "and",
