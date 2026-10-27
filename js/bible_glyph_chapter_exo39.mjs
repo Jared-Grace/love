@@ -740,7 +740,7 @@ export function bible_glyph_chapter_exo39() {
           "and",
           "the",
           "linen",
-          "undergarments",
+          "$briefs+two",
           "of",
           "finely",
           "spun",
