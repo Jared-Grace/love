@@ -1042,7 +1042,7 @@ export function bible_glyph_chapter_gen27() {
           "my",
           "birthright,",
           "and",
-          "now",
+          "$watch",
           "he",
           "has",
           "$hand_receiving",
