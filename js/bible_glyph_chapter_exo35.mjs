@@ -754,7 +754,7 @@ export function bible_glyph_chapter_exo35() {
           "Then",
           "$fishing_pole+proper_name",
           "$speech",
-          "to",
+          "$toward",
           "the",
           "$son",
           "of",
