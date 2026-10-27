@@ -174,7 +174,7 @@ export function bible_glyph_chapter_deu01() {
           "have",
           "stayed",
           "at",
-          "this",
+          "$flashlight",
           "$mountain",
           "long",
           "enough.",
