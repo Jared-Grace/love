@@ -1006,7 +1006,7 @@ export function bible_glyph_chapter_lev11() {
           "$earth",
           "is",
           "detestable;",
-          "it",
+          "$pointing_back",
           "must",
           "$no_entry",
           "be",
