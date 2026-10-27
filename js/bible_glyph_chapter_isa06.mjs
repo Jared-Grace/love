@@ -28,7 +28,7 @@ export function bible_glyph_chapter_isa06() {
           "$pointing_up",
           "a",
           "$throne,",
-          "high",
+          "$up_arrow",
           "and",
           "exalted;",
           "and",
