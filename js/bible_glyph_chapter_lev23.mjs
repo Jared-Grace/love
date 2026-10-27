@@ -1216,7 +1216,7 @@ export function bible_glyph_chapter_lev23() {
           "willows",
           "of",
           "the",
-          "brook.",
+          "$national_park.",
           "And",
           "you",
           "are",
