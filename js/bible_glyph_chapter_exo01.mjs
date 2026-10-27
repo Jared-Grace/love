@@ -151,7 +151,7 @@ export function bible_glyph_chapter_exo01() {
       {
         verse_number: 9,
         words: [
-          "Look,",
+          "$exclamation,",
           "he",
           "$speech",
           "$toward",
