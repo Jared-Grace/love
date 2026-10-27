@@ -242,7 +242,7 @@ export function bible_glyph_chapter_exo33() {
           "the",
           "$tent",
           "of",
-          "Meeting,",
+          "$alarm_clock,",
           "and",
           "anyone",
           "inquiring",
