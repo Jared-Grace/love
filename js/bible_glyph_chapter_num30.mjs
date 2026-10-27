@@ -402,7 +402,7 @@ export function bible_glyph_chapter_num30() {
           "came",
           "from",
           "her",
-          "lips,",
+          "$kiss_mark,",
           "whether",
           "her",
           "vows",
