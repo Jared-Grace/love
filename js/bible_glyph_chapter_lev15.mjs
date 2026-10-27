@@ -144,7 +144,7 @@ export function bible_glyph_chapter_lev15() {
           "$pointing_up",
           "$toolbox",
           "$pointing_up",
-          "which",
+          "$back+flashlight",
           "the",
           "man",
           "with",
