@@ -621,7 +621,7 @@ export function bible_glyph_chapter_num09() {
           "Israel",
           "$guard",
           "the",
-          "charge",
+          "$guard+thing",
           "of",
           "$i_am",
           "and",
