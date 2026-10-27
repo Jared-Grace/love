@@ -329,7 +329,7 @@ export function bible_glyph_chapter_hos02() {
           "$no_entry",
           "one",
           "will",
-          "deliver",
+          "$hand+rescue",
           "her",
           "out",
           "of",
