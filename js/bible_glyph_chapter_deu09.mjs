@@ -730,7 +730,7 @@ export function bible_glyph_chapter_deu09() {
           "$i_am",
           "was",
           "angry",
-          "enough",
+          "$double_exclamation",
           "with",
           "$proper_name$Aaron",
           "to",
