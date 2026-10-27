@@ -496,7 +496,7 @@ export function bible_glyph_chapter_exo01() {
           "throw",
           "into",
           "the",
-          "Nile,",
+          "$crocodile,",
           "but",
           "every",
           "$woman",
