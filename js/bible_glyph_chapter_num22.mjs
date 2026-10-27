@@ -138,7 +138,7 @@ export function bible_glyph_chapter_num22() {
           "$proper_name$Beor",
           "at",
           "$proper_name$Pethor,",
-          "which",
+          "$back+flashlight",
           "is",
           "by",
           "the",
