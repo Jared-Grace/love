@@ -893,7 +893,7 @@ export function bible_glyph_chapter_num22() {
           "$hammer+doing",
           "to",
           "you",
-          "that",
+          "$pointing",
           "you",
           "have",
           "beaten",
