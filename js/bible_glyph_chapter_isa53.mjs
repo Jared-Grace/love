@@ -210,7 +210,7 @@ export function bible_glyph_chapter_isa53() {
           "He",
           "did",
           "$no_entry",
-          "open",
+          "$unlocked",
           "His",
           "mouth.",
           "He",
