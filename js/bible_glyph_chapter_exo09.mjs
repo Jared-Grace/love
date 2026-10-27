@@ -53,7 +53,7 @@ export function bible_glyph_chapter_exo09() {
         words: [
           "But",
           "$traffic_light",
-          "you",
+          "$you",
           "$person_gesturing_no+describing",
           "to",
           "let",
