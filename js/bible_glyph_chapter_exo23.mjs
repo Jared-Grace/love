@@ -551,7 +551,7 @@ export function bible_glyph_chapter_exo23() {
           "You",
           "must",
           "$no_entry",
-          "cook",
+          "$pot_of_food+doing",
           "a",
           "young",
           "goat",
