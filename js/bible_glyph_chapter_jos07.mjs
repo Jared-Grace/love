@@ -645,7 +645,7 @@ export function bible_glyph_chapter_jos07() {
           "So",
           "$i_am+rescue",
           "arose",
-          "early",
+          "$morning+doing",
           "the",
           "next",
           "morning",
