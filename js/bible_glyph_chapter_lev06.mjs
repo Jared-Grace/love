@@ -52,7 +52,7 @@ export function bible_glyph_chapter_lev06() {
       {
         verse_number: 3,
         words: [
-          "or",
+          "$shuffle",
           "finds",
           "lost",
           "property",
