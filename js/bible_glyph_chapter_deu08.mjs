@@ -584,7 +584,7 @@ export function bible_glyph_chapter_deu08() {
           "$traffic_light",
           "you",
           "ever",
-          "forget",
+          "$reminder_ribbon+no_entry",
           "the",
           "$i_am",
           "your",
