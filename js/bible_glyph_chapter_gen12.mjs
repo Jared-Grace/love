@@ -551,7 +551,7 @@ export function bible_glyph_chapter_gen12() {
           "as",
           "my",
           "$woman?",
-          "Now",
+          "$watch",
           "then,",
           "here",
           "is",
