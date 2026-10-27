@@ -836,7 +836,7 @@ export function bible_glyph_chapter_exo35() {
           "he",
           "may",
           "$hammer+doing",
-          "every",
+          "$all",
           "kind",
           "of",
           "artistic",
