@@ -626,7 +626,7 @@ export function bible_glyph_chapter_1ch29() {
           "upright",
           "$heart_organ,",
           "$all",
-          "these",
+          "$flashlight+flashlight",
           "things.",
           "And",
           "now",
