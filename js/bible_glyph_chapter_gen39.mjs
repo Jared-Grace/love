@@ -487,7 +487,7 @@ export function bible_glyph_chapter_gen39() {
           "kept",
           "Joseph's",
           "cloak",
-          "beside",
+          "$children_crossing",
           "her",
           "until",
           "his",
