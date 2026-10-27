@@ -351,7 +351,7 @@ export function bible_glyph_chapter_hab03() {
           "You",
           "pierced",
           "his",
-          "head,",
+          "$person_gesturing_ok,",
           "when",
           "his",
           "warriors",
