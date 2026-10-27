@@ -274,7 +274,7 @@ export function bible_glyph_chapter_psa027() {
           "$hand_with_fingers_splayed+doing",
           "me",
           "$no_entry",
-          "forsake",
+          "$derelict_house+doing",
           "me,",
           "O",
           "$heart_on_fire",
