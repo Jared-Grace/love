@@ -859,7 +859,7 @@ export function bible_glyph_chapter_2ki09() {
           "$speech",
           "$toward",
           "$proper_name$Ahaziah,",
-          "Treachery,",
+          "$lying_face+mouse_trap,",
           "$proper_name$Ahaziah.",
         ],
       },
