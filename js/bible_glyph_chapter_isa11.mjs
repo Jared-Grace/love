@@ -432,7 +432,7 @@ export function bible_glyph_chapter_isa11() {
           "$hands_raised+proper_name",
           "will",
           "be",
-          "cut",
+          "$scissors",
           "off.",
           "$fruit",
           "will",
