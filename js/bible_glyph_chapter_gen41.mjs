@@ -1455,7 +1455,7 @@ export function bible_glyph_chapter_gen41() {
           "the",
           "$second_place",
           "$fruit,",
-          "saying,",
+          "$pointing,",
           '"$heart_on_fire',
           "has",
           "made",
