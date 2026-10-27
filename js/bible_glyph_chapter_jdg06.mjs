@@ -36,7 +36,7 @@ export function bible_glyph_chapter_jdg06() {
           "of",
           "$proper_name$Midian",
           "for",
-          "seven",
+          "$seven",
           "$year.",
         ],
       },
