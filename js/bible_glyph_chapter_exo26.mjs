@@ -533,7 +533,7 @@ export function bible_glyph_chapter_exo26() {
           "$two",
           "$down_arrow+brick",
           "$down_arrow",
-          "each",
+          "$one",
           "$skateboard.",
         ],
       },
