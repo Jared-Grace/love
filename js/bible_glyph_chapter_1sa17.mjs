@@ -875,7 +875,7 @@ export function bible_glyph_chapter_1sa17() {
           "to",
           "$eye",
           "the",
-          "battle!",
+          "$crossed_swords!",
         ],
       },
       {
