@@ -440,7 +440,7 @@ export function bible_glyph_chapter_2sa12() {
           "Then",
           "$two_hearts+proper_name",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Nathan,",
           "I",
           "have",
