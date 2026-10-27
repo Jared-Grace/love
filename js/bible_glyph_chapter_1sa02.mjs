@@ -1010,7 +1010,7 @@ export function bible_glyph_chapter_1sa02() {
           "Me",
           "$hourglass.",
           "But",
-          "now",
+          "$watch",
           "the",
           "$i_am",
           "$microphone:",
