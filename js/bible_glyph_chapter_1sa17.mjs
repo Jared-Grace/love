@@ -182,7 +182,7 @@ export function bible_glyph_chapter_1sa17() {
           "weighed",
           "$six",
           "$input_numbers+all",
-          "shekels.",
+          "$coin.",
           "In",
           "addition,",
           "his",
