@@ -220,7 +220,7 @@ export function bible_glyph_chapter_2sa11() {
           "to",
           "him,",
           "$two_hearts+proper_name",
-          "asked",
+          "$question",
           "how",
           "$i_am+father",
           "was",
