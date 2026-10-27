@@ -1688,7 +1688,7 @@ export function bible_glyph_chapter_lev13() {
           "$garment,",
           "$yarn+round_pushpin,",
           "or",
-          "knit,",
+          "$yarn+plus,",
           "whether",
           "the",
           "contaminated",
