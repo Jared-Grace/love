@@ -292,7 +292,7 @@ export function bible_glyph_chapter_2sa12() {
       {
         verse_number: 9,
         words: [
-          "Why",
+          "$flashlight+question+lightbulb",
           "then",
           "have",
           "you",
