@@ -462,7 +462,7 @@ export function bible_glyph_chapter_exo19() {
           "$tray_out",
           "the",
           "$mountain",
-          "to",
+          "$toward",
           "the",
           "$family,",
           "he",
