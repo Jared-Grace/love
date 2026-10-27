@@ -445,7 +445,7 @@ export function bible_glyph_chapter_gen18() {
           "I",
           "did",
           "$no_entry",
-          "laugh,",
+          "$laughing,",
           "for",
           "she",
           "was",
