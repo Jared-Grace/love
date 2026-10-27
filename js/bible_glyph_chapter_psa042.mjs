@@ -114,7 +114,7 @@ export function bible_glyph_chapter_psa042() {
           "with",
           "the",
           "multitude,",
-          "leading",
+          "$walking+turtle+doing",
           "the",
           "procession",
           "to",
