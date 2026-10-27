@@ -535,7 +535,7 @@ export function bible_glyph_chapter_num19() {
           "of",
           "a",
           "$person,",
-          "or",
+          "$shuffle",
           "a",
           "$tomb,",
           "will",
