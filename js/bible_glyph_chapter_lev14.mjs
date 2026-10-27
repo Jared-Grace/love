@@ -53,7 +53,7 @@ export function bible_glyph_chapter_lev14() {
           "is",
           "to",
           "$walking+tray_out",
-          "outside",
+          "$sun_behind_small_cloud",
           "the",
           "$camp",
           "to",
