@@ -464,7 +464,7 @@ export function bible_glyph_chapter_zec09() {
           "them,",
           "and",
           "His",
-          "arrow",
+          "$arrow",
           "will",
           "$walking+tray_out",
           "forth",
