@@ -11,7 +11,11 @@ export function js_module_extras_none_assert(ast, path) {
   let extras = js_module_extras(ast);
   let held = list_empty_not_is(extras);
   if (held) {
-    let codes = extras.map(js_unparse);
+    function lambda(item) {
+      let code = js_unparse(item);
+      return code;
+    }
+    let codes = extras.map(lambda);
     error_json({
       hint: "this file holds more than its imports and its one function, and writing the function alone would drop the rest; leave it alone here, or move what it holds inside the function first by a route that keeps the whole file",
       path,
