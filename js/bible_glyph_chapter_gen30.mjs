@@ -17,7 +17,7 @@ export function bible_glyph_chapter_gen30() {
           "When",
           "Rachel",
           "$eye",
-          "that",
+          "$pointing",
           "she",
           "was",
           "$no_entry",
