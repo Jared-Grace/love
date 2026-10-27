@@ -792,7 +792,7 @@ export function bible_glyph_chapter_num06() {
           "you",
           "and",
           "be",
-          "gracious",
+          "$heart_orange+doing",
           "to",
           "you;",
         ],
