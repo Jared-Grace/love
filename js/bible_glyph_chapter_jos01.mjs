@@ -419,7 +419,7 @@ export function bible_glyph_chapter_jos01() {
           "will",
           "$hands_giving",
           "you",
-          "this",
+          "$flashlight",
           "$earth.",
         ],
       },
