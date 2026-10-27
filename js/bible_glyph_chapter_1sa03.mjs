@@ -163,7 +163,7 @@ export function bible_glyph_chapter_1sa03() {
           "got",
           "up,",
           "$walking",
-          "to",
+          "$toward",
           "$proper_name$Eli",
           "and",
           "$speech,",
