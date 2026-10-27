@@ -1552,7 +1552,7 @@ export function bible_glyph_chapter_1sa17() {
           "and",
           "he",
           "fell",
-          "facedown",
+          "$face",
           "on",
           "the",
           "$earth.",
