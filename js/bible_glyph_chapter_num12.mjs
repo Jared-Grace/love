@@ -190,7 +190,7 @@ export function bible_glyph_chapter_num12() {
           "My",
           "$kneeling",
           "$fishing_pole+proper_name.",
-          "He",
+          "$pointing_back",
           "is",
           "$anchor",
           "in",
