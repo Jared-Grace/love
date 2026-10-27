@@ -251,7 +251,7 @@ export function bible_glyph_chapter_psa027() {
       {
         verse_number: 9,
         words: [
-          "Hide",
+          "$see_no_evil_monkey",
           "$no_entry",
           "Your",
           "face",
