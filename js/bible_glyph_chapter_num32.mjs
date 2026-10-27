@@ -631,7 +631,7 @@ export function bible_glyph_chapter_num32() {
           "$pointing_down+proper_name",
           "before",
           "$i_am",
-          "until",
+          "$finish",
           "He",
           "has",
           "driven",
