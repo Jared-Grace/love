@@ -1025,7 +1025,7 @@ export function bible_glyph_chapter_num11() {
           "direction",
           "around",
           "the",
-          "camp,",
+          "$camp,",
           "about",
           "two",
           "cubits",
