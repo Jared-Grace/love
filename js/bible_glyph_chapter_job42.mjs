@@ -221,7 +221,7 @@ export function bible_glyph_chapter_job42() {
           "$mouth",
           "about",
           "Me",
-          "accurately,",
+          "$pin+doing,",
           "as",
           "My",
           "$kneeling",
