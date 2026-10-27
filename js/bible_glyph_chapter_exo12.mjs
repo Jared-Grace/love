@@ -565,7 +565,7 @@ export function bible_glyph_chapter_exo12() {
           "You",
           "must",
           "$guard",
-          "this",
+          "$flashlight",
           "$sun",
           "as",
           "a",
