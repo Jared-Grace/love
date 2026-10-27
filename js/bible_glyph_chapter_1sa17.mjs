@@ -839,7 +839,7 @@ export function bible_glyph_chapter_1sa17() {
           "$angry_face+doing",
           "against",
           "$two_hearts+proper_name.",
-          "Why",
+          "$flashlight+question",
           "have",
           "you",
           "come",
