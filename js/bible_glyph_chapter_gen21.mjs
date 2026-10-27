@@ -344,7 +344,7 @@ export function bible_glyph_chapter_gen21() {
           "them",
           "$pointing_up",
           "the",
-          "shoulders",
+          "$backpack+person",
           "of",
           "$woman+dashing_away+proper_name,",
           "and",
