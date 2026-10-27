@@ -930,7 +930,7 @@ export function bible_glyph_chapter_jer29() {
         words: [
           "So",
           "$watch,",
-          "why",
+          "$flashlight+question",
           "have",
           "you",
           "$no_entry",
