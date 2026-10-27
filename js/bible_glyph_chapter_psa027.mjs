@@ -172,7 +172,7 @@ export function bible_glyph_chapter_psa027() {
           "high",
           "upon",
           "a",
-          "rock.",
+          "$rock.",
         ],
       },
       {
