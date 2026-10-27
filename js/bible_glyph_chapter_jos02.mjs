@@ -514,7 +514,7 @@ export function bible_glyph_chapter_jos02() {
           "the",
           "$house",
           "where",
-          "she",
+          "$pointing_back",
           "$person+house",
           "was",
           "built",
