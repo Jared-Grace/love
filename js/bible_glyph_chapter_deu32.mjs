@@ -1296,7 +1296,7 @@ export function bible_glyph_chapter_deu32() {
           "to",
           "carefully",
           "$hammer+doing",
-          "all",
+          "$all",
           "the",
           "$speech",
           "of",
