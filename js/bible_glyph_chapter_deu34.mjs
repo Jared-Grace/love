@@ -325,7 +325,7 @@ export function bible_glyph_chapter_deu34() {
           "$lightbulb",
           "$face",
           "to",
-          "face,",
+          "$face,",
         ],
       },
       {
