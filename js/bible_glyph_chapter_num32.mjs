@@ -786,7 +786,7 @@ export function bible_glyph_chapter_num32() {
           "for",
           "war,",
           "will",
-          "cross",
+          "$bridge",
           "over",
           "before",
           "$i_am",
