@@ -27,7 +27,7 @@ export function bible_glyph_chapter_deu18() {
           "shall",
           "have",
           "$no_entry",
-          "portion",
+          "$pizza",
           "or",
           "inheritance",
           "with",
