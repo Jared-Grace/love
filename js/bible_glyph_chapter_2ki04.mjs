@@ -138,7 +138,7 @@ export function bible_glyph_chapter_2ki04() {
           "into",
           "$all",
           "these",
-          "jars,",
+          "$toolbox,",
           "setting",
           "the",
           "full",
