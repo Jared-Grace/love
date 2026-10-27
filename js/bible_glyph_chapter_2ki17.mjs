@@ -644,7 +644,7 @@ export function bible_glyph_chapter_2ki17() {
         verse_number: 19,
         words: [
           "And",
-          "even",
+          "$plus",
           "$hands_raised+proper_name",
           "did",
           "$no_entry",
