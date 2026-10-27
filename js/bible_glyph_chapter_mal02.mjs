@@ -207,7 +207,7 @@ export function bible_glyph_chapter_mal02() {
           "and",
           "he",
           "$turn_back",
-          "many",
+          "$multiply",
           "from",
           "iniquity.",
         ],
