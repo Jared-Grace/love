@@ -112,7 +112,7 @@ export function bible_glyph_chapter_lev11() {
           "a",
           "divided",
           "$cow_face+foot;",
-          "it",
+          "$pointing_back",
           "is",
           "unclean",
           "for",
