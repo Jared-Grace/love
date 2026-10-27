@@ -190,7 +190,7 @@ export function bible_glyph_chapter_job03() {
           "dark.",
           "May",
           "it",
-          "wait",
+          "$crossed_fingers+doing",
           "for",
           "$light",
           "in",
