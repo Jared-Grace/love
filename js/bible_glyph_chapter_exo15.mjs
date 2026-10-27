@@ -424,7 +424,7 @@ export function bible_glyph_chapter_exo15() {
           "by,",
           "O",
           "$i_am,",
-          "until",
+          "$finish",
           "the",
           "$family",
           "You",
