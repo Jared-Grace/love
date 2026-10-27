@@ -1158,7 +1158,7 @@ export function bible_glyph_chapter_exo29() {
       {
         verse_number: 38,
         words: [
-          "This",
+          "$flashlight",
           "is",
           "what",
           "you",
