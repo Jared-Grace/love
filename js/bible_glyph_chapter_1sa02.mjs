@@ -27,7 +27,7 @@ export function bible_glyph_chapter_1sa02() {
           "the",
           "$i_am;",
           "my",
-          "horn",
+          "$horn",
           "is",
           "exalted",
           "in",
