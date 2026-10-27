@@ -252,7 +252,7 @@ export function bible_glyph_chapter_mic02() {
           "an",
           "$enemy:",
           "You",
-          "strip",
+          "$garment+tray_out+doing",
           "off",
           "the",
           "splendid",
