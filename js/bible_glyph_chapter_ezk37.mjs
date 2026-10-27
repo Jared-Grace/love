@@ -478,7 +478,7 @@ export function bible_glyph_chapter_ezk37() {
           "will",
           "$hammer+doing",
           "it,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
