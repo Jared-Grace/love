@@ -444,7 +444,7 @@ export function bible_glyph_chapter_lev01() {
           "its",
           "contents",
           "and",
-          "throw",
+          "$throwing",
           "it",
           "to",
           "the",
