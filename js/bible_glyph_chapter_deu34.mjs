@@ -80,7 +80,7 @@ export function bible_glyph_chapter_deu34() {
         verse_number: 3,
         words: [
           "the",
-          "Negev,",
+          "$compass+down_arrow,",
           "and",
           "the",
           "region",
