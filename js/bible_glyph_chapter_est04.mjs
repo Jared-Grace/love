@@ -457,7 +457,7 @@ export function bible_glyph_chapter_est04() {
           "remain",
           "silent",
           "at",
-          "this",
+          "$flashlight",
           "$clock,",
           "relief",
           "and",
