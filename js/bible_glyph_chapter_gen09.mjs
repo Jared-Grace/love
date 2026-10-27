@@ -29,7 +29,7 @@ export function bible_glyph_chapter_gen09() {
           "and",
           "$multiply+doing",
           "and",
-          "fill",
+          "$battery",
           "the",
           "$earth.",
         ],
