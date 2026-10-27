@@ -102,7 +102,7 @@ export function bible_glyph_chapter_2ki22() {
           "the",
           "$king",
           "$hand_sending",
-          "Shaphan",
+          "$badger",
           "$son",
           "of",
           "$proper_name$Azaliah,",
