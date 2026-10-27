@@ -246,7 +246,7 @@ export function bible_glyph_chapter_exo26() {
           "$page_with_curl+doing",
           "at",
           "the",
-          "front",
+          "$vs_button",
           "of",
           "the",
           "$tent.",
