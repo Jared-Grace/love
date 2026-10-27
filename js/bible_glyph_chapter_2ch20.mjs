@@ -371,7 +371,7 @@ export function bible_glyph_chapter_2ch20() {
           "out",
           "of",
           "the",
-          "possession",
+          "$triangular_flag+thing",
           "that",
           "You",
           "gave",
