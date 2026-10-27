@@ -19,7 +19,7 @@ export function bible_glyph_chapter_mal04() {
           "$sun",
           "is",
           "$footprints,",
-          "burning",
+          "$fire+wood",
           "like",
           "a",
           "furnace,",
