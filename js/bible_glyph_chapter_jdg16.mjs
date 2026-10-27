@@ -895,7 +895,7 @@ export function bible_glyph_chapter_jdg16() {
           "to",
           "offer",
           "a",
-          "great",
+          "$top",
           "sacrifice",
           "to",
           "$fish+proper_name",
