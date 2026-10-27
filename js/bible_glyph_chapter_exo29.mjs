@@ -330,7 +330,7 @@ export function bible_glyph_chapter_exo29() {
           "$altar",
           "with",
           "your",
-          "finger,",
+          "$index_pointing_up,",
           "then",
           "pour",
           "out",
