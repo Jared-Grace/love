@@ -62,7 +62,7 @@ export function bible_glyph_chapter_lev24() {
           "the",
           "lamps",
           "from",
-          "evening",
+          "$sunset",
           "until",
           "$morning",
           "before",
