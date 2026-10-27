@@ -13,7 +13,7 @@ export function bible_glyph_chapter_exo15() {
       {
         verse_number: 1,
         words: [
-          "Then",
+          "$telescope+clock",
           "$fishing_pole+proper_name",
           "and",
           "the",
