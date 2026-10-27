@@ -1668,7 +1668,7 @@ export function bible_glyph_chapter_lev25() {
           "are",
           "My",
           "$kneeling.",
-          "They",
+          "$pointing_back",
           "are",
           "My",
           "$kneeling,",
