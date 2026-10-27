@@ -1304,7 +1304,7 @@ export function bible_glyph_chapter_1ki22() {
         words: [
           "And",
           "Ahab",
-          "rested",
+          "$bed+doing",
           "with",
           "his",
           "$father,",
