@@ -53,7 +53,7 @@ export function bible_glyph_chapter_ecc12() {
           "$light",
           "of",
           "the",
-          "sun",
+          "$sun_with_face",
           "and",
           "the",
           "moon",
