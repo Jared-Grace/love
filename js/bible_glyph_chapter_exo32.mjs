@@ -525,7 +525,7 @@ export function bible_glyph_chapter_exo32() {
         words: [
           "Then",
           "$fishing_pole+proper_name",
-          "turned",
+          "$curving_right+doing",
           "and",
           "went",
           "down",
