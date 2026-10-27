@@ -1338,7 +1338,7 @@ export function bible_glyph_chapter_jer32() {
           "My",
           "$family,",
           "and",
-          "I",
+          "$me",
           "will",
           "be",
           "their",
