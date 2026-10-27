@@ -775,7 +775,7 @@ export function bible_glyph_chapter_deu29() {
           "great",
           "$angry_face+fire",
           "of",
-          "anger?",
+          "$nose+fire?",
         ],
       },
       {
