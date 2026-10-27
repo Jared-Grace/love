@@ -698,7 +698,7 @@ export function bible_glyph_chapter_gen24() {
           "a",
           "$gold",
           "$nose+ring",
-          "weighing",
+          "$coin+thing",
           "a",
           "beka,",
           "and",
