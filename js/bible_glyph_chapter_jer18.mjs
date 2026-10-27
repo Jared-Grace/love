@@ -40,7 +40,7 @@ export function bible_glyph_chapter_jer18() {
           "potter's",
           "$house,",
           "and",
-          "there",
+          "$telescope",
           "I",
           "will",
           "let",
