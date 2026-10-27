@@ -427,7 +427,7 @@ export function bible_glyph_chapter_mal01() {
           "$name_tag",
           "will",
           "be",
-          "great",
+          "$top",
           "among",
           "the",
           "$map,",
