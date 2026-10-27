@@ -655,7 +655,7 @@ export function bible_glyph_chapter_ezk11() {
           "in",
           "My",
           "$statute,",
-          "keep",
+          "$guard",
           "My",
           "$scales+thing",
           "and",
