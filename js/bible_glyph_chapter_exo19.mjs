@@ -337,7 +337,7 @@ export function bible_glyph_chapter_exo19() {
         words: [
           "and",
           "be",
-          "prepared",
+          "$pin+doing",
           "by",
           "the",
           "third",
