@@ -25,7 +25,7 @@ export function bible_glyph_chapter_ecc03() {
           "for",
           "every",
           "$smiling_face_with_hearts",
-          "under",
+          "$down_arrow",
           "$sky:",
         ],
       },
