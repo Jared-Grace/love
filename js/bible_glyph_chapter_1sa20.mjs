@@ -1299,7 +1299,7 @@ export function bible_glyph_chapter_1sa20() {
           "$i_am+hands_giving",
           "cried",
           "out,",
-          "Hurry,",
+          "$fast_forward+thing,",
           "make",
           "haste,",
           "do",
