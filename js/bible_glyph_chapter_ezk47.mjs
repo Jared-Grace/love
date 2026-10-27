@@ -743,7 +743,7 @@ export function bible_glyph_chapter_ezk47() {
           "it",
           "as",
           "an",
-          "inheritance",
+          "$inheritance",
           "for",
           "yourselves",
           "and",
