@@ -424,7 +424,7 @@ export function bible_glyph_chapter_nam01() {
       {
         verse_number: 15,
         words: [
-          "Look",
+          "$exclamation",
           "to",
           "the",
           "$mountain",
