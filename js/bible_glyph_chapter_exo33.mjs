@@ -499,7 +499,7 @@ export function bible_glyph_chapter_exo33() {
           "LORD",
           "$speech,",
           "My",
-          "Presence",
+          "$face",
           "will",
           "$walking",
           "with",
