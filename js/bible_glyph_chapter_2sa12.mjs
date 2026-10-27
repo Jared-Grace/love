@@ -987,7 +987,7 @@ export function bible_glyph_chapter_2sa12() {
           "a",
           "$flying_disc",
           "of",
-          "gold",
+          "$gold",
           "and",
           "was",
           "set",
