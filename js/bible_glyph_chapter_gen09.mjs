@@ -59,7 +59,7 @@ export function bible_glyph_chapter_gen09() {
           "every",
           "creature",
           "that",
-          "crawls",
+          "$lizard+doing",
           "on",
           "the",
           "ground,",
