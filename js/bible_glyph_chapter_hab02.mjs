@@ -317,7 +317,7 @@ export function bible_glyph_chapter_hab02() {
           "You",
           "have",
           "plotted",
-          "shame",
+          "$flushed+thing",
           "for",
           "your",
           "$house",
