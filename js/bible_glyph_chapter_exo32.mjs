@@ -434,7 +434,7 @@ export function bible_glyph_chapter_exo32() {
           "fierce",
           "$nose+fire",
           "and",
-          "relent",
+          "$hug+doing",
           "from",
           "doing",
           "$thumbs_down",
