@@ -684,7 +684,7 @@ export function bible_glyph_chapter_1ki08() {
           "that",
           "He",
           "made",
-          "with",
+          "$linked_paperclips",
           "our",
           "$father",
           "when",
