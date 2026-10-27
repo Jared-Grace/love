@@ -79,7 +79,7 @@ export function bible_glyph_chapter_num23() {
           "Perhaps",
           "$i_am",
           "will",
-          "meet",
+          "$footprints+toward+doing",
           "with",
           "me,",
           "$speech",
