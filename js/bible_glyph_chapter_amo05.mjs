@@ -337,7 +337,7 @@ export function bible_glyph_chapter_amo05() {
       {
         verse_number: 12,
         words: [
-          "For",
+          "$pointing",
           "I",
           "$lightbulb",
           "that",
