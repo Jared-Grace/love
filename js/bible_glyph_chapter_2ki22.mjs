@@ -531,7 +531,7 @@ export function bible_glyph_chapter_2ki22() {
           "$city+peace",
           "in",
           "the",
-          "Second",
+          "$two+multiply",
           "District,",
           "and",
           "they",
