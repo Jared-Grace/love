@@ -1073,7 +1073,7 @@ export function bible_glyph_chapter_jdg16() {
           "$crown",
           "$i_am,",
           "please",
-          "remember",
+          "$reminder_ribbon",
           "me.",
           "Strengthen",
           "me",
