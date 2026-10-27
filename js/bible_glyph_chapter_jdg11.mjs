@@ -127,7 +127,7 @@ export function bible_glyph_chapter_jdg11() {
           "of",
           "Ammon",
           "$crossed_swords+doing",
-          "against",
+          "$linked_paperclips",
           "$wrestling+heart_on_fire,",
         ],
       },
