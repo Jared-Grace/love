@@ -202,7 +202,7 @@ export function bible_glyph_chapter_psa063() {
           "But",
           "those",
           "who",
-          "seek",
+          "$magnifying_glass",
           "my",
           "$person_other",
           "to",
