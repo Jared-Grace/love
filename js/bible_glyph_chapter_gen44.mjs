@@ -281,7 +281,7 @@ export function bible_glyph_chapter_gen44() {
           "only",
           "the",
           "one",
-          "who",
+          "$back+flashlight",
           "is",
           "found",
           "with",
