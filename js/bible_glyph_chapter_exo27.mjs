@@ -447,7 +447,7 @@ export function bible_glyph_chapter_exo27() {
         words: [
           "The",
           "entire",
-          "courtyard",
+          "$house_with_garden",
           "shall",
           "be",
           "a",
