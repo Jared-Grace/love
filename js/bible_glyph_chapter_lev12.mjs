@@ -256,7 +256,7 @@ export function bible_glyph_chapter_lev12() {
           "to",
           "a",
           "male",
-          "or",
+          "$shuffle",
           "to",
           "a",
           "female.",
