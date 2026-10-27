@@ -1098,7 +1098,7 @@ export function bible_glyph_chapter_1sa02() {
           "ever",
           "again",
           "$link",
-          "old",
+          "$old_man",
           "age.",
         ],
       },
