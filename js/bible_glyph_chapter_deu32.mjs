@@ -690,7 +690,7 @@ export function bible_glyph_chapter_deu32() {
           "slither",
           "in",
           "the",
-          "dust.",
+          "$dust.",
         ],
       },
       {
