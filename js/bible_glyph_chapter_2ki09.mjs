@@ -599,7 +599,7 @@ export function bible_glyph_chapter_2ki09() {
           "Now",
           "the",
           "watchman",
-          "standing",
+          "$person+round_pushpin",
           "on",
           "the",
           "$tower",
