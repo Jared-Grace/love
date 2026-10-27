@@ -463,7 +463,7 @@ export function bible_glyph_chapter_1sa17() {
           "$two_hearts+proper_name,",
           "$hand_receiving",
           "this",
-          "ephah",
+          "$bucket+input_numbers",
           "of",
           "roasted",
           "grain",
