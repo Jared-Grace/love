@@ -201,7 +201,7 @@ export function bible_glyph_chapter_gen37() {
           "your",
           "sheaves",
           "gathered",
-          "around",
+          "$around+doing",
           "and",
           "$bowing",
           "to",
