@@ -663,7 +663,7 @@ export function bible_glyph_chapter_num22() {
           "$donkey,",
           "and",
           "$walking",
-          "with",
+          "$linked_paperclips",
           "the",
           "princes",
           "of",
