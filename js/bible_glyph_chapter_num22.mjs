@@ -1311,7 +1311,7 @@ export function bible_glyph_chapter_num22() {
           "to",
           "$key+proper_name.",
           "From",
-          "there",
+          "$telescope",
           "he",
           "could",
           "$eye",
