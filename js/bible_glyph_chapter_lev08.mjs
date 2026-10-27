@@ -550,7 +550,7 @@ export function bible_glyph_chapter_lev08() {
           "right",
           "$ear+end_arrow",
           "of",
-          "Aaron,",
+          "$white_cane+blossom+proper_name,",
           "on",
           "the",
           "thumb",
