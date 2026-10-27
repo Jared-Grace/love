@@ -1031,7 +1031,7 @@ export function bible_glyph_chapter_deu09() {
           "out",
           "by",
           "Your",
-          "great",
+          "$top",
           "$lightning",
           "and",
           "outstretched",
