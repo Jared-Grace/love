@@ -19,7 +19,7 @@ export function bible_glyph_chapter_deu29() {
           "of",
           "the",
           "$covenant",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "commanded",
