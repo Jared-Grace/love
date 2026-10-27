@@ -868,7 +868,7 @@ export function bible_glyph_chapter_2ki05() {
           "$silver",
           "and",
           "$two",
-          "sets",
+          "$clockwise_arrows+thing",
           "of",
           "clothing.",
         ],
