@@ -217,7 +217,7 @@ export function bible_glyph_chapter_mic02() {
           "of",
           "the",
           "$i_am",
-          "impatient?",
+          "$sheaf_of_rice+scissors+doing?",
           "Are",
           "these",
           "the",
