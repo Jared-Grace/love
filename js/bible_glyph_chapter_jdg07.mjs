@@ -513,7 +513,7 @@ export function bible_glyph_chapter_jdg07() {
           "hard",
           "that",
           "the",
-          "tent",
+          "$tent",
           "overturned",
           "and",
           "collapsed.",
