@@ -450,7 +450,7 @@ export function bible_glyph_chapter_gen49() {
           "its",
           "rider",
           "$person+pointing_down",
-          "backward.",
+          "$last_track.",
         ],
       },
       {
