@@ -672,7 +672,7 @@ export function bible_glyph_chapter_jdg04() {
           "hammer",
           "and",
           "$footprints",
-          "silently",
+          "$see_no_evil_monkey+manner",
           "to",
           "Sisera.",
           "She",
