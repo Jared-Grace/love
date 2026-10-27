@@ -579,7 +579,7 @@ export function bible_glyph_chapter_exo19() {
           "enveloped",
           "in",
           "smoke,",
-          "because",
+          "$face",
           "the",
           "$i_am",
           "had",
