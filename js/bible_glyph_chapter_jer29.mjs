@@ -804,7 +804,7 @@ export function bible_glyph_chapter_jer29() {
           "them.",
           "I",
           "am",
-          "He",
+          "$pointing_back",
           "who",
           "knows,",
           "and",
