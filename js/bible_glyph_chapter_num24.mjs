@@ -317,7 +317,7 @@ export function bible_glyph_chapter_num24() {
           "$dashing_away",
           "at",
           "once",
-          "to",
+          "$toward",
           "your",
           "$place.",
           "$speech",
