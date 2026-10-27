@@ -508,7 +508,7 @@ export function bible_glyph_chapter_1ki01() {
           "the",
           "$king",
           "$speech,",
-          "What",
+          "$flashlight+question",
           "is",
           "your",
           "desire?",
