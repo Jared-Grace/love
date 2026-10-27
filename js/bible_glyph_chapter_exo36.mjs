@@ -643,7 +643,7 @@ export function bible_glyph_chapter_exo36() {
           "for",
           "the",
           "south",
-          "side",
+          "$straight_ruler+round_pushpin",
           "of",
           "the",
           "tabernacle,",
