@@ -301,7 +301,7 @@ export function bible_glyph_chapter_num16() {
           "the",
           "congregation",
           "to",
-          "minister",
+          "$bellhop_bell+doing",
           "to",
           "them?",
         ],
