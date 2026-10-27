@@ -799,7 +799,7 @@ export function bible_glyph_chapter_num11() {
           "$person+round_pushpin",
           "$around",
           "the",
-          "tent.",
+          "$tent.",
         ],
       },
       {
