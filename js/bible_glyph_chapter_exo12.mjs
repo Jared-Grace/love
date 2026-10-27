@@ -1553,7 +1553,7 @@ export function bible_glyph_chapter_exo12() {
           "$foreigner",
           "who",
           "resides",
-          "among",
+          "$radio_button",
           "you.",
         ],
       },
