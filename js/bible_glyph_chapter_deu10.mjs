@@ -657,7 +657,7 @@ export function bible_glyph_chapter_deu10() {
       {
         verse_number: 21,
         words: [
-          "He",
+          "$pointing_back",
           "is",
           "your",
           "praise,",
