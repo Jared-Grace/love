@@ -197,7 +197,7 @@ export function bible_glyph_chapter_exo07() {
           "a",
           "$son",
           "of",
-          "eighty",
+          "$eight+zero",
           "years",
           "and",
           "$proper_name$Aaron",
