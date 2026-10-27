@@ -626,7 +626,7 @@ export function bible_glyph_chapter_deu05() {
           "them",
           "on",
           "$two",
-          "tablets",
+          "$stone+writing_hand",
           "of",
           "$stone",
           "and",
