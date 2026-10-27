@@ -295,7 +295,7 @@ export function bible_glyph_chapter_gen28() {
           "he",
           "spent",
           "the",
-          "night",
+          "$night+doing",
           "there,",
           "because",
           "the",
