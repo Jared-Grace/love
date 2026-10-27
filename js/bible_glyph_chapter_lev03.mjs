@@ -173,7 +173,7 @@ export function bible_glyph_chapter_lev03() {
           "however,",
           "$sacrifice",
           "of",
-          "peace",
+          "$peace+gift",
           "$i_am",
           "$tray_out",
           "$sheep,",
