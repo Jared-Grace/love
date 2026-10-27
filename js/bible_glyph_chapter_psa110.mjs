@@ -180,7 +180,7 @@ export function bible_glyph_chapter_psa110() {
           "$up_arrow",
           "up",
           "His",
-          "head.",
+          "$person_gesturing_ok.",
         ],
       },
     ],
