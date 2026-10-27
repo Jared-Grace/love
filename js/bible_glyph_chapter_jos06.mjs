@@ -722,7 +722,7 @@ export function bible_glyph_chapter_jos06() {
           "and",
           "$old_man,",
           "$ox,",
-          "sheep",
+          "$sheep+one",
           "and",
           "donkeys,",
           "with",
