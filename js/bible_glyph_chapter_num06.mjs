@@ -372,7 +372,7 @@ export function bible_glyph_chapter_num06() {
           "year,",
           "a",
           "male",
-          "lamb,",
+          "$lamb,",
           "as",
           "a",
           "guilt",
