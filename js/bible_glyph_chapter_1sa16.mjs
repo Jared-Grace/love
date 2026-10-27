@@ -77,7 +77,7 @@ export function bible_glyph_chapter_1sa16() {
           "of",
           "it",
           "and",
-          "kill",
+          "$fist+skull",
           "me.",
           "The",
           "$i_am",
