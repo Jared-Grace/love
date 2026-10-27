@@ -433,7 +433,7 @@ export function bible_glyph_chapter_jos03() {
           "up",
           "in",
           "a",
-          "heap.",
+          "$water_wave+mountain.",
         ],
       },
       {
