@@ -1445,7 +1445,7 @@ export function bible_glyph_chapter_gen24() {
           "him.",
           "So",
           "I",
-          "put",
+          "$palm_down",
           "the",
           "ring",
           "on",
