@@ -685,7 +685,7 @@ export function bible_glyph_chapter_2ch34() {
           "Moreover,",
           "Shaphan",
           "the",
-          "scribe",
+          "$abacus",
           "$newspaper",
           "the",
           "$king,",
