@@ -307,7 +307,7 @@ export function bible_glyph_chapter_ecc03() {
           "should",
           "$eating",
           "and",
-          "drink",
+          "$cup_with_straw",
           "and",
           "$eye",
           "$thumbs_up",
