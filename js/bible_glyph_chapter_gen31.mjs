@@ -568,7 +568,7 @@ export function bible_glyph_chapter_gen31() {
           "$proper_name$Laban",
           "was",
           "told",
-          "that",
+          "$pointing",
           "$hand+foot",
           "had",
           "fled.",
