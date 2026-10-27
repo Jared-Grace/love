@@ -957,7 +957,7 @@ export function bible_glyph_chapter_lev25() {
           "$walking+tray_out",
           "in",
           "the",
-          "Jubilee.",
+          "$horn+party_popper.",
         ],
       },
       {
