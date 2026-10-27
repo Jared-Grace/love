@@ -985,7 +985,7 @@ export function bible_glyph_chapter_gen26() {
           "when",
           "$hair+proper_name",
           "$link",
-          "forty",
+          "$four+zero",
           "years",
           "$son,",
           "he",
