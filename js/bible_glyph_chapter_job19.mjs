@@ -329,7 +329,7 @@ export function bible_glyph_chapter_job19() {
           "$plus",
           "little",
           "boys",
-          "scorn",
+          "$gesturing_no+throwing+doing",
           "me;",
           "when",
           "I",
