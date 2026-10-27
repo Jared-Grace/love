@@ -408,7 +408,7 @@ export function bible_glyph_chapter_2sa05() {
       {
         verse_number: 13,
         words: [
-          "After",
+          "$next_track",
           "he",
           "had",
           "$footprints",
