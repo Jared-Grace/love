@@ -254,7 +254,7 @@ export function bible_glyph_chapter_gen14() {
           "$proper_name$Ellasar,",
           "four",
           "$king",
-          "against",
+          "$safety_pin",
           "five.",
         ],
       },
