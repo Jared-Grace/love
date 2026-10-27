@@ -1297,7 +1297,7 @@ export function bible_glyph_chapter_num16() {
           "$fishing_pole+proper_name",
           "and",
           "$proper_name$Aaron",
-          "turned",
+          "$curving_right+doing",
           "toward",
           "the",
           "Tent",
