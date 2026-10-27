@@ -24,7 +24,7 @@ export function bible_glyph_chapter_gen17() {
           "the",
           "$i_am",
           "$eye",
-          "to",
+          "$toward",
           "him",
           "and",
           "$speech,",
