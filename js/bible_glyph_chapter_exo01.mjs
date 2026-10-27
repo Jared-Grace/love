@@ -333,7 +333,7 @@ export function bible_glyph_chapter_exo01() {
           "birth,",
           "$eye",
           "them",
-          "on",
+          "$pointing_up",
           "the",
           "birthstools.",
           "If",
