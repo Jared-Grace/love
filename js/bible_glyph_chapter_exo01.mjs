@@ -389,7 +389,7 @@ export function bible_glyph_chapter_exo01() {
           "$king",
           "of",
           "$clamp+proper_name",
-          "summoned",
+          "$waving_hand",
           "the",
           "midwives",
           "and",
