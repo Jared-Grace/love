@@ -337,7 +337,7 @@ export function bible_glyph_chapter_pro16() {
           "gold!",
           "To",
           "gain",
-          "understanding",
+          "$brain+thing",
           "is",
           "more",
           "desirable",
