@@ -153,7 +153,7 @@ export function bible_glyph_chapter_gen07() {
           "And",
           "$seat+proper_name",
           "$hammer+doing",
-          "all",
+          "$all",
           "that",
           "the",
           "$i_am",
