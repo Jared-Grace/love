@@ -624,7 +624,7 @@ export function bible_glyph_chapter_num18() {
           "must",
           "$no_entry",
           "$coin+turn_back.",
-          "They",
+          "$pointing_back",
           "are",
           "$sparkle+thing.",
           "You",
