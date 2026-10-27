@@ -976,7 +976,7 @@ export function bible_glyph_chapter_deu28() {
         verse_number: 31,
         words: [
           "Your",
-          "ox",
+          "$ox",
           "will",
           "be",
           "slaughtered",
