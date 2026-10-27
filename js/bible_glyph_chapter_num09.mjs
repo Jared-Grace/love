@@ -372,7 +372,7 @@ export function bible_glyph_chapter_num09() {
           "$back+flashlight",
           "is",
           "ceremonially",
-          "clean",
+          "$soap+describing",
           "and",
           "$no_entry",
           "away",
