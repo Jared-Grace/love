@@ -36,7 +36,7 @@ export function bible_glyph_chapter_gen15() {
           "$me",
           "am",
           "your",
-          "shield,",
+          "$shield,",
           "your",
           "very",
           "great",
