@@ -291,7 +291,7 @@ export function bible_glyph_chapter_zep01() {
           "$leg+up_arrow+up_arrow+doing",
           "$pointing_up",
           "the",
-          "threshold,",
+          "$door+down_arrow,",
           "who",
           "fill",
           "the",
