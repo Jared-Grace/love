@@ -578,7 +578,7 @@ export function bible_glyph_chapter_1ki18() {
           "Baal",
           "and",
           "the",
-          "four",
+          "$four",
           "hundred",
           "$megaphone",
           "of",
