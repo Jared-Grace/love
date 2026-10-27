@@ -532,7 +532,7 @@ export function bible_glyph_chapter_deu05() {
       },
       {
         verse_number: 19,
-        words: ["You", "shall", "$no_entry", "steal."],
+        words: ["You", "shall", "$no_entry", "$ninja+doing."],
       },
       {
         verse_number: 20,
