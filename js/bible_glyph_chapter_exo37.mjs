@@ -27,7 +27,7 @@ export function bible_glyph_chapter_exo37() {
           "two",
           "and",
           "a",
-          "half",
+          "$divide",
           "cubits",
           "long,",
           "a",
