@@ -339,7 +339,7 @@ export function bible_glyph_chapter_2ki03() {
           "$megaphone",
           "of",
           "$i_am",
-          "here,",
+          "$flashlight+round_pushpin,",
           "that",
           "we",
           "may",
