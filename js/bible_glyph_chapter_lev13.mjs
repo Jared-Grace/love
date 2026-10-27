@@ -1238,7 +1238,7 @@ export function bible_glyph_chapter_lev13() {
           "scaly",
           "outbreak",
           "has",
-          "spread",
+          "$microbe+arrow_both_ways+doing",
           "on",
           "the",
           "skin,",
