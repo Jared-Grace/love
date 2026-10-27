@@ -53,7 +53,7 @@ export function bible_glyph_chapter_2ki04() {
           "to",
           "$hand_receiving",
           "my",
-          "two",
+          "$two",
           "$child",
           "as",
           "his",
