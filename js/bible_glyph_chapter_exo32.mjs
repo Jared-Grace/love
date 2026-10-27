@@ -375,7 +375,7 @@ export function bible_glyph_chapter_exo32() {
           "$flashlight+question",
           "does",
           "Your",
-          "anger",
+          "$nose+fire",
           "$angry_face+doing",
           "against",
           "Your",
