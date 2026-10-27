@@ -1108,7 +1108,7 @@ export function bible_glyph_chapter_exo12() {
           "$clock+back",
           "it",
           "was",
-          "leavened,",
+          "$bread+bubbles+doing,",
           "wrapped",
           "in",
           "kneading",
