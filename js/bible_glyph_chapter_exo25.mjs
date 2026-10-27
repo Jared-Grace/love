@@ -531,7 +531,7 @@ export function bible_glyph_chapter_exo25() {
           "$witness+thing,",
           "of",
           "all",
-          "that",
+          "$back+flashlight",
           "I",
           "command",
           "you",
