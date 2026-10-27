@@ -468,7 +468,7 @@ export function bible_glyph_chapter_gen15() {
           "appeared",
           "and",
           "passed",
-          "between",
+          "$brain+arrow_both_ways",
           "the",
           "halves.",
         ],
