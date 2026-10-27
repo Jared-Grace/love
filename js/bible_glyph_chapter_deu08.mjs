@@ -422,7 +422,7 @@ export function bible_glyph_chapter_deu08() {
           "and",
           "you",
           "will",
-          "forget",
+          "$reminder_ribbon+no_entry",
           "the",
           "$i_am",
           "your",
