@@ -302,7 +302,7 @@ export function bible_glyph_chapter_lev10() {
           "$son",
           "of",
           "Israel",
-          "all",
+          "$all",
           "the",
           "statutes",
           "that",
