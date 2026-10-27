@@ -226,7 +226,7 @@ export function bible_glyph_chapter_gen07() {
           "everything",
           "$back+flashlight",
           "$lizard+doing",
-          "along",
+          "$pointing_up",
           "the",
           "ground,",
         ],
