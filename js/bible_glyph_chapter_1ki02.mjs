@@ -125,7 +125,7 @@ export function bible_glyph_chapter_1ki02() {
           "concerning",
           "me,",
           "$speech,",
-          "If",
+          "$traffic_light",
           "your",
           "$son",
           "take",
