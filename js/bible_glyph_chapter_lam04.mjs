@@ -561,7 +561,7 @@ export function bible_glyph_chapter_lam04() {
           "they",
           "pursued",
           "us",
-          "over",
+          "$pointing_up",
           "the",
           "$mountain",
           "and",
