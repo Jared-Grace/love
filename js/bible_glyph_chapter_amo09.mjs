@@ -110,7 +110,7 @@ export function bible_glyph_chapter_amo09() {
           "themselves",
           "$person_gesturing_ok",
           "$proper_name$Carmel,",
-          "there",
+          "$telescope",
           "I",
           "will",
           "track",
