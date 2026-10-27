@@ -662,7 +662,7 @@ export function bible_glyph_chapter_exo07() {
           "$clamp+person",
           "could",
           "$no_entry",
-          "drink",
+          "$cup_with_straw",
           "$water",
           "$tray_out",
           "it.",
