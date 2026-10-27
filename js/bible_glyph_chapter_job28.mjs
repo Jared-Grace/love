@@ -314,7 +314,7 @@ export function bible_glyph_chapter_job28() {
           "$proper_name$Ophir,",
           "in",
           "precious",
-          "onyx",
+          "$gem_stone+stone",
           "or",
           "sapphire.",
         ],
