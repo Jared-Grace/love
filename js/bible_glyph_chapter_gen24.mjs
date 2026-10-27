@@ -1741,7 +1741,7 @@ export function bible_glyph_chapter_gen24() {
           "$speech,",
           "We",
           "will",
-          "call",
+          "$waving_hand",
           "the",
           "$girl",
           "and",
