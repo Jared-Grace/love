@@ -722,7 +722,7 @@ export function bible_glyph_chapter_gen30() {
           "$kneeling+doing",
           "you,",
           "and",
-          "how",
+          "$back+flashlight",
           "your",
           "livestock",
           "has",
