@@ -588,7 +588,7 @@ export function bible_glyph_chapter_exo28() {
         words: [
           "For",
           "the",
-          "breastpiece",
+          "$gem_stone+t_shirt",
           "$hammer",
           "braided",
           "chains",
