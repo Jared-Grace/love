@@ -526,7 +526,7 @@ export function bible_glyph_chapter_2sa11() {
           "$proper_name$Uriah",
           "at",
           "the",
-          "front",
+          "$vs_button",
           "of",
           "the",
           "fiercest",
