@@ -1434,7 +1434,7 @@ export function bible_glyph_chapter_1ki02() {
           "Shimei",
           "$adhesive_bandage+doing",
           "his",
-          "donkey",
+          "$donkey",
           "and",
           "$walking",
           "to",
