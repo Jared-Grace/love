@@ -56,7 +56,7 @@ export function bible_glyph_chapter_ezk01() {
           "of",
           "the",
           "$new_moon,",
-          "it",
+          "$pointing_back",
           "was",
           "the",
           "fifth",
