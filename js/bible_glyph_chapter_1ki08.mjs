@@ -205,7 +205,7 @@ export function bible_glyph_chapter_1ki08() {
           "Most",
           "Holy",
           "$sparkle+thing,",
-          "beneath",
+          "$down_arrow",
           "the",
           "wings",
           "of",
