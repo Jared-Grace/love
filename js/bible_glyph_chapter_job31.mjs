@@ -367,7 +367,7 @@ export function bible_glyph_chapter_job31() {
       {
         verse_number: 18,
         words: [
-          "though",
+          "$pointing",
           "from",
           "my",
           "youth",
