@@ -189,7 +189,7 @@ export function bible_glyph_chapter_exo01() {
           "and",
           "if",
           "a",
-          "war",
+          "$crossed_swords",
           "breaks",
           "out,",
           "they",
