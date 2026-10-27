@@ -266,7 +266,7 @@ export function bible_glyph_chapter_nam01() {
       {
         verse_number: 10,
         words: [
-          "For",
+          "$pointing",
           "they",
           "will",
           "be",
