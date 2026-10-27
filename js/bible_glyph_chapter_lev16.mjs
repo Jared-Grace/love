@@ -518,7 +518,7 @@ export function bible_glyph_chapter_lev16() {
           "$blood",
           "of",
           "the",
-          "bull.",
+          "$bull.",
           "He",
           "is",
           "to",
