@@ -537,7 +537,7 @@ export function bible_glyph_chapter_deu14() {
           "$i_am",
           "your",
           "$heart_on_fire",
-          "always.",
+          "$all.",
         ],
       },
       {
