@@ -808,7 +808,7 @@ export function bible_glyph_chapter_exo23() {
           "will",
           "$hand_sending",
           "the",
-          "hornet",
+          "$fly+sewing_needle",
           "before",
           "you",
           "to",
