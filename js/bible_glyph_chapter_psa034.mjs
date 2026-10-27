@@ -392,7 +392,7 @@ export function bible_glyph_chapter_psa034() {
       {
         verse_number: 19,
         words: [
-          "Many",
+          "$multiply",
           "are",
           "the",
           "$thumbs_down",
