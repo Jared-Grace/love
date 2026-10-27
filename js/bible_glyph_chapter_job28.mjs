@@ -188,7 +188,7 @@ export function bible_glyph_chapter_job28() {
           "He",
           "hews",
           "out",
-          "channels",
+          "$crocodile",
           "in",
           "the",
           "rocks,",
