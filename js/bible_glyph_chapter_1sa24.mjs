@@ -673,7 +673,7 @@ export function bible_glyph_chapter_1sa24() {
       {
         verse_number: 20,
         words: [
-          "Now",
+          "$watch",
           "I",
           "$lightbulb",
           "for",
