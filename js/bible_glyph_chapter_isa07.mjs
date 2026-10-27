@@ -447,7 +447,7 @@ export function bible_glyph_chapter_isa07() {
           "$lightbulb",
           "enough",
           "to",
-          "reject",
+          "$gesturing_no+throwing+doing",
           "$thumbs_down",
           "and",
           "choose",
