@@ -350,7 +350,7 @@ export function bible_glyph_chapter_isa64() {
           "$i_am,",
           "will",
           "You",
-          "restrain",
+          "$heart_red+stop_sign+doing",
           "Yourself?",
           "Will",
           "You",
