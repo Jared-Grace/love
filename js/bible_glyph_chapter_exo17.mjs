@@ -127,7 +127,7 @@ export function bible_glyph_chapter_exo17() {
           "$toward",
           "the",
           "$i_am,",
-          "What",
+          "$flashlight+question",
           "should",
           "I",
           "$hammer+doing",
