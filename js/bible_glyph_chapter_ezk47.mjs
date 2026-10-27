@@ -605,7 +605,7 @@ export function bible_glyph_chapter_ezk47() {
           "be",
           "the",
           "northern",
-          "boundary.",
+          "$straight_ruler+round_pushpin.",
         ],
       },
       {
