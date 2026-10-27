@@ -517,7 +517,7 @@ export function bible_glyph_chapter_exo26() {
           "the",
           "tabernacle,",
           "the",
-          "north",
+          "$compass+up_arrow",
           "side,",
           "twenty",
           "frames,",
