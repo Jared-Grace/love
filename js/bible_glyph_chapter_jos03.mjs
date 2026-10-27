@@ -123,7 +123,7 @@ export function bible_glyph_chapter_jos03() {
           "Do",
           "$no_entry",
           "go",
-          "near",
+          "$magnet+doing",
           "it,",
           "so",
           "that",
