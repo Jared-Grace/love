@@ -613,7 +613,7 @@ export function bible_glyph_chapter_isa07() {
           "of",
           "$proper_name$Assyria,",
           "to",
-          "shave",
+          "$razor+doing",
           "your",
           "head",
           "and",
