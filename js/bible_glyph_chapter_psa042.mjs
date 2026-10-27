@@ -175,7 +175,7 @@ export function bible_glyph_chapter_psa042() {
           "$heart_on_fire,",
           "my",
           "$person_other",
-          "despairs",
+          "$bowing+hole+doing",
           "within",
           "me.",
           "Therefore",
