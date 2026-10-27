@@ -423,7 +423,7 @@ export function bible_glyph_chapter_gen07() {
           "and",
           "$female_sign",
           "of",
-          "every",
+          "$all",
           "living",
           "$meat",
           "$footprints",
