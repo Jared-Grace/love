@@ -910,7 +910,7 @@ export function bible_glyph_chapter_exo09() {
           "The",
           "$voice",
           "will",
-          "cease",
+          "$stop_button",
           "and",
           "there",
           "will",
