@@ -339,7 +339,7 @@ export function bible_glyph_chapter_exo11() {
           "and",
           "$proper_name$Aaron",
           "$hammer+doing",
-          "all",
+          "$all",
           "these",
           "wonders",
           "before",
