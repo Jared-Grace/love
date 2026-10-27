@@ -756,7 +756,7 @@ export function bible_glyph_chapter_num13() {
           "gave",
           "a",
           "bad",
-          "report",
+          "$left_speech_bubble+thumbs_down",
           "about",
           "the",
           "$earth",
