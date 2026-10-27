@@ -1143,7 +1143,7 @@ export function bible_glyph_chapter_1ki22() {
           "up",
           "in",
           "his",
-          "chariot",
+          "$chariot",
           "facing",
           "the",
           "$proper_name$Arameans.",
