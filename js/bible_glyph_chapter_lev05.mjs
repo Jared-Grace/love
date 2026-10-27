@@ -159,7 +159,7 @@ export function bible_glyph_chapter_lev05() {
           "incurs",
           "guilt",
           "in",
-          "one",
+          "$one",
           "of",
           "these",
           "ways,",
