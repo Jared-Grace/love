@@ -314,7 +314,7 @@ export function bible_glyph_chapter_zec05() {
           "me,",
           "$question+right_arrow",
           "are",
-          "they",
+          "$pointing_back",
           "$walking",
           "with",
           "the",
