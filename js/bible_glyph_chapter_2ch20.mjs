@@ -891,7 +891,7 @@ export function bible_glyph_chapter_2ch20() {
           "were",
           "only",
           "corpses",
-          "lying",
+          "$person+pointing_down",
           "on",
           "the",
           "$earth;",
