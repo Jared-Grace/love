@@ -503,7 +503,7 @@ export function bible_glyph_chapter_mal03() {
         verse_number: 15,
         words: [
           "So",
-          "now",
+          "$watch",
           "we",
           "call",
           "the",
