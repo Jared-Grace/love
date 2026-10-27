@@ -253,7 +253,7 @@ export function bible_glyph_chapter_exo38() {
           "and",
           "$two+zero",
           "$bronze",
-          "bases,",
+          "$down_arrow+brick,",
           "and",
           "with",
           "$silver",
