@@ -691,7 +691,7 @@ export function bible_glyph_chapter_lev14() {
           "the",
           "priest",
           "shall",
-          "slaughter",
+          "$kitchen_knife+doing",
           "the",
           "$burnt_offering",
         ],
