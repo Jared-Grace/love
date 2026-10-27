@@ -208,7 +208,7 @@ export function bible_glyph_chapter_lev01() {
           "$priest",
           "are",
           "to",
-          "arrange",
+          "$card_index_dividers",
           "the",
           "pieces,",
           "including",
