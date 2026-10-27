@@ -318,7 +318,7 @@ export function bible_glyph_chapter_hos02() {
           "will",
           "expose",
           "her",
-          "lewdness",
+          "$flushed+woman",
           "in",
           "the",
           "$eyes",
