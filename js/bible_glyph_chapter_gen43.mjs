@@ -441,7 +441,7 @@ export function bible_glyph_chapter_gen43() {
           "$back+flashlight",
           "I",
           "am",
-          "bereaved,",
+          "$baby+no_entry+doing,",
           "I",
           "am",
           "bereaved.",
