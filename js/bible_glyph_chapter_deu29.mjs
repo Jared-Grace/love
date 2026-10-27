@@ -113,7 +113,7 @@ export function bible_glyph_chapter_deu29() {
         words: [
           "Yet",
           "to",
-          "this",
+          "$flashlight",
           "$sun",
           "the",
           "$i_am",
