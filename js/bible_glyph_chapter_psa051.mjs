@@ -269,7 +269,7 @@ export function bible_glyph_chapter_psa051() {
           "to",
           "me",
           "the",
-          "joy",
+          "$grinning_face",
           "of",
           "Your",
           "salvation,",
