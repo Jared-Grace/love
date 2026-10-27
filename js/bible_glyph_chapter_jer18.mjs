@@ -466,7 +466,7 @@ export function bible_glyph_chapter_jer18() {
           "of",
           "$hourglass",
           "scorn;",
-          "all",
+          "$all",
           "who",
           "pass",
           "by",
