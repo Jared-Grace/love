@@ -524,7 +524,7 @@ export function bible_glyph_chapter_jer18() {
           "plans",
           "$pointing_up",
           "$up_arrow+i_am,",
-          "for",
+          "$pointing",
           "the",
           "$scroll",
           "will",
