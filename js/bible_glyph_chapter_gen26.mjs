@@ -277,7 +277,7 @@ export function bible_glyph_chapter_gen26() {
           "surely",
           "your",
           "$woman.",
-          "How",
+          "$question+likeness",
           "could",
           "you",
           "$speech,",
