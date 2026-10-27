@@ -848,7 +848,7 @@ export function bible_glyph_chapter_num11() {
           "never",
           "did",
           "so",
-          "again.",
+          "$plus+doing.",
         ],
       },
       {
