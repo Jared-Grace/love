@@ -291,7 +291,7 @@ export function bible_glyph_chapter_gen25() {
           "born:",
           "$proper_name$Nebaioth",
           "the",
-          "firstborn,",
+          "$first_place+baby,",
           "then",
           "$proper_name$Kedar,",
           "$proper_name$Adbeel,",
