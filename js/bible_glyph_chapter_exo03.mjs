@@ -294,7 +294,7 @@ export function bible_glyph_chapter_exo03() {
         verse_number: 9,
         words: [
           "And",
-          "now",
+          "$watch",
           "the",
           "cry",
           "of",
