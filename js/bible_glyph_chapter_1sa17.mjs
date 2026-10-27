@@ -480,7 +480,7 @@ export function bible_glyph_chapter_1sa17() {
           "hurry",
           "to",
           "their",
-          "camp.",
+          "$camp.",
         ],
       },
       {
