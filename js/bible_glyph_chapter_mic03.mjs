@@ -295,7 +295,7 @@ export function bible_glyph_chapter_mic03() {
           "$scales+thing",
           "and",
           "pervert",
-          "all",
+          "$all",
           "that",
           "is",
           "right,",
