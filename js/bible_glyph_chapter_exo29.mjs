@@ -158,7 +158,7 @@ export function bible_glyph_chapter_exo29() {
       {
         verse_number: 6,
         words: [
-          "Put",
+          "$palm_down",
           "the",
           "turban",
           "on",
