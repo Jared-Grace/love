@@ -331,7 +331,7 @@ export function bible_glyph_chapter_exo39() {
           "mounted",
           "in",
           "$gold",
-          "filigree",
+          "$yarn+gem_stone",
           "settings.",
         ],
       },
