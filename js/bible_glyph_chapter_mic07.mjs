@@ -619,7 +619,7 @@ export function bible_glyph_chapter_mic07() {
           "iniquities.",
           "You",
           "will",
-          "cast",
+          "$throwing",
           "out",
           "all",
           "our",
