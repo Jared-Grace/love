@@ -629,7 +629,7 @@ export function bible_glyph_chapter_1ch29() {
           "$flashlight+flashlight",
           "things.",
           "And",
-          "now",
+          "$watch",
           "Your",
           "$family",
           "who",
