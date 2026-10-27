@@ -34,7 +34,7 @@ export function bible_glyph_chapter_1sa15() {
           "His",
           "$family",
           "$wrestling+heart_on_fire.",
-          "Now",
+          "$watch",
           "therefore",
           "$ear",
           "to",
