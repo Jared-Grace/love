@@ -196,7 +196,7 @@ export function bible_glyph_chapter_exo29() {
       {
         verse_number: 8,
         words: [
-          "Present",
+          "$magnet+doing",
           "his",
           "$son",
           "as",
