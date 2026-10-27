@@ -404,7 +404,7 @@ export function bible_glyph_chapter_zep02() {
           "And",
           "He",
           "will",
-          "stretch",
+          "$white_cane+doing",
           "out",
           "His",
           "$hand",
