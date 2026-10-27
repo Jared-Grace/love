@@ -491,7 +491,7 @@ export function bible_glyph_chapter_isa40() {
       {
         verse_number: 17,
         words: [
-          "All",
+          "$all",
           "the",
           "$map",
           "are",
