@@ -632,7 +632,7 @@ export function bible_glyph_chapter_jos06() {
           "For",
           "all",
           "the",
-          "silver",
+          "$silver",
           "and",
           "gold",
           "and",
