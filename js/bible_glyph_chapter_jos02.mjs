@@ -477,7 +477,7 @@ export function bible_glyph_chapter_jos02() {
           "you",
           "do",
           "$no_entry",
-          "report",
+          "$newspaper",
           "our",
           "$speech,",
           "we",
