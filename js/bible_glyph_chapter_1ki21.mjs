@@ -104,7 +104,7 @@ export function bible_glyph_chapter_1ki21() {
           "$speech,",
           "The",
           "$i_am",
-          "forbid",
+          "$person_gesturing_no+exclamation",
           "that",
           "I",
           "should",
