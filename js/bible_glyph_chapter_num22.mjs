@@ -998,7 +998,7 @@ export function bible_glyph_chapter_num22() {
           "his",
           "$hand.",
           "And",
-          "Balaam",
+          "$foreigner+proper_name",
           "$bowing",
           "low",
           "and",
