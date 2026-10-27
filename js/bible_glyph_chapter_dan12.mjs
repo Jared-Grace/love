@@ -154,7 +154,7 @@ export function bible_glyph_chapter_dan12() {
           "roam",
           "to",
           "and",
-          "fro,",
+          "$walking+shuffle+doing,",
           "and",
           "knowledge",
           "will",
