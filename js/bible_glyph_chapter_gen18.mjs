@@ -332,7 +332,7 @@ export function bible_glyph_chapter_gen18() {
           "$proper_name$Sarah",
           "were",
           "already",
-          "old",
+          "$old_man",
           "and",
           "well",
           "$footprints",
