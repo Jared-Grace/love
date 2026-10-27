@@ -529,7 +529,7 @@ export function bible_glyph_chapter_exo28() {
           "and",
           "in",
           "the",
-          "fourth",
+          "$four+describing",
           "$straight_ruler+repeat",
           "a",
           "beryl,",
