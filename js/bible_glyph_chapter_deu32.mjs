@@ -71,7 +71,7 @@ export function bible_glyph_chapter_deu32() {
           "of",
           "the",
           "$i_am.",
-          "Ascribe",
+          "$hands_giving+up_arrow",
           "greatness",
           "to",
           "our",
