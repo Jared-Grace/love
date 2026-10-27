@@ -180,7 +180,7 @@ export function bible_glyph_chapter_jos07() {
           "but",
           "they",
           "fled",
-          "before",
+          "$face",
           "the",
           "men",
           "of",
