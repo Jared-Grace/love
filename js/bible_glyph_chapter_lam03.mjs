@@ -1084,7 +1084,7 @@ export function bible_glyph_chapter_lam03() {
           "assailants",
           "against",
           "me",
-          "all",
+          "$all",
           "$sun.",
         ],
       },
