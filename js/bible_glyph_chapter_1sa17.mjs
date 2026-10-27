@@ -357,7 +357,7 @@ export function bible_glyph_chapter_1sa17() {
           "$proper_name$Saul,",
           "$proper_name$Jesse",
           "was",
-          "old",
+          "$old_man+doing",
           "and",
           "well",
           "$footprints",
