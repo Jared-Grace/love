@@ -102,7 +102,7 @@ export function bible_glyph_chapter_exo24() {
           "All",
           "the",
           "$speech",
-          "that",
+          "$back+flashlight",
           "$i_am",
           "has",
           "$mouth,",
