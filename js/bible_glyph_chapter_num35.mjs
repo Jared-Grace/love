@@ -1017,7 +1017,7 @@ export function bible_glyph_chapter_num35() {
         verse_number: 34,
         words: [
           "$no_entry",
-          "defile",
+          "$soap+no_entry",
           "the",
           "$earth",
           "where",
