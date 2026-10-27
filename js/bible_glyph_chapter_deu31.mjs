@@ -561,7 +561,7 @@ export function bible_glyph_chapter_deu31() {
           "themselves",
           "with",
           "the",
-          "foreign",
+          "$detective+thing",
           "$moai",
           "of",
           "the",
