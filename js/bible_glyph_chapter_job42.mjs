@@ -172,7 +172,7 @@ export function bible_glyph_chapter_job42() {
         verse_number: 8,
         words: [
           "So",
-          "now",
+          "$watch",
           "$hand_receiving",
           "seven",
           "bulls",
