@@ -586,7 +586,7 @@ export function bible_glyph_chapter_deu16() {
           "$check_box:",
           "at",
           "the",
-          "Feast",
+          "$party_popper",
           "of",
           "Unleavened",
           "Bread,",
