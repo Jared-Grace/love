@@ -285,7 +285,7 @@ export function bible_glyph_chapter_gen07() {
           "the",
           "$sprout",
           "of",
-          "Noah,",
+          "$seat+proper_name,",
           "in",
           "the",
           "second",
