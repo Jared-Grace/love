@@ -794,7 +794,7 @@ export function bible_glyph_chapter_2ki02() {
           "$toward",
           "the",
           "spring,",
-          "cast",
+          "$throwing",
           "the",
           "salt",
           "into",
