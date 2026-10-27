@@ -294,7 +294,7 @@ export function bible_glyph_chapter_2ki03() {
           "or",
           "for",
           "the",
-          "animals",
+          "$paw_prints",
           "that",
           "followed",
           "at",
