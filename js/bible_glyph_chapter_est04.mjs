@@ -581,7 +581,7 @@ export function bible_glyph_chapter_est04() {
           "and",
           "$hammer+doing",
           "$all",
-          "that",
+          "$back+flashlight",
           "$proper_name$Esther",
           "had",
           "instructed",
