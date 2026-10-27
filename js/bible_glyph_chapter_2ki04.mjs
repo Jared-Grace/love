@@ -672,7 +672,7 @@ export function bible_glyph_chapter_2ki04() {
           "$pleading",
           "$hand_sending",
           "me",
-          "one",
+          "$one",
           "$tray_out",
           "the",
           "servants",
