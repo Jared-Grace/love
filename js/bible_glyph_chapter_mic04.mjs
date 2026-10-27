@@ -400,7 +400,7 @@ export function bible_glyph_chapter_mic04() {
           "the",
           "$i_am",
           "will",
-          "redeem",
+          "$currency_exchange",
           "you",
           "from",
           "the",
