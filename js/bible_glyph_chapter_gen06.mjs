@@ -475,7 +475,7 @@ export function bible_glyph_chapter_gen06() {
           "the",
           "$earth,",
           "to",
-          "destroy",
+          "$collision",
           "every",
           "$meat",
           "that",
