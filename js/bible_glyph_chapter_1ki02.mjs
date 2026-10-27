@@ -579,7 +579,7 @@ export function bible_glyph_chapter_1ki02() {
           "to",
           "$king",
           "$peace+proper_name,",
-          "since",
+          "$pointing",
           "he",
           "will",
           "$no_entry",
