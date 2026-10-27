@@ -328,7 +328,7 @@ export function bible_glyph_chapter_gen44() {
           "The",
           "steward",
           "searched,",
-          "beginning",
+          "$sewing_needle",
           "with",
           "the",
           "oldest",
