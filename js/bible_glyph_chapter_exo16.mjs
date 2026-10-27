@@ -980,7 +980,7 @@ export function bible_glyph_chapter_exo16() {
           "was",
           "white",
           "like",
-          "coriander",
+          "$seed+herb",
           "$seed",
           "and",
           "tasted",
