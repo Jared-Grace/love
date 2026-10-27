@@ -1165,7 +1165,7 @@ export function bible_glyph_chapter_exo29() {
           "are",
           "to",
           "$hammer+doing",
-          "on",
+          "$pointing_up",
           "the",
           "$altar",
           "regularly:",
