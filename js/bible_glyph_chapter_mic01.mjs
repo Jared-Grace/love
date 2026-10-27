@@ -186,7 +186,7 @@ export function bible_glyph_chapter_mic01() {
           "make",
           "$guard+proper_name",
           "a",
-          "heap",
+          "$derelict_house+thing",
           "of",
           "rubble",
           "in",
