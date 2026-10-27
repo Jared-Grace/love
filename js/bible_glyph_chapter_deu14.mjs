@@ -162,7 +162,7 @@ export function bible_glyph_chapter_deu14() {
           "that",
           "chew",
           "the",
-          "cud",
+          "$cow_face+clockwise_arrows+thing",
           "or",
           "have",
           "a",
