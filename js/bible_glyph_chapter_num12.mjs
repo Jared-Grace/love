@@ -75,7 +75,7 @@ export function bible_glyph_chapter_num12() {
           "than",
           "any",
           "$person",
-          "on",
+          "$pointing_up",
           "the",
           "face",
           "of",
