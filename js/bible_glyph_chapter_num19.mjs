@@ -331,7 +331,7 @@ export function bible_glyph_chapter_num19() {
           "for",
           "the",
           "$foreigner",
-          "residing",
+          "$luggage",
           "among",
           "them.",
         ],
