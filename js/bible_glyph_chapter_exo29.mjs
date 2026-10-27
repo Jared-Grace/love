@@ -1242,7 +1242,7 @@ export function bible_glyph_chapter_exo29() {
           "And",
           "$hammer+doing",
           "the",
-          "second",
+          "$second_place",
           "$lamb",
           "at",
           "twilight,",
