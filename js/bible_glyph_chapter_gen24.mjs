@@ -850,7 +850,7 @@ export function bible_glyph_chapter_gen24() {
         words: [
           "The",
           "$girl",
-          "ran",
+          "$running",
           "and",
           "told",
           "her",
