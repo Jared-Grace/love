@@ -189,7 +189,7 @@ export function bible_glyph_chapter_num18() {
           "$no_entry",
           "$link",
           "$repeat",
-          "on",
+          "$pointing_up",
           "the",
           "$son",
           "of",
