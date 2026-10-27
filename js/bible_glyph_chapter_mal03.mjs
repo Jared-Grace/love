@@ -32,7 +32,7 @@ export function bible_glyph_chapter_mal03() {
           "$crown",
           "whom",
           "$you",
-          "seek",
+          "$magnifying_glass",
           "will",
           "$lightning+manner",
           "$footprints",
