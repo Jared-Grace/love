@@ -170,7 +170,7 @@ export function bible_glyph_chapter_gen11() {
           "begun",
           "to",
           "$hammer+doing",
-          "this,",
+          "$flashlight,",
           "then",
           "$no_entry",
           "that",
