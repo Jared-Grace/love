@@ -332,7 +332,7 @@ export function bible_glyph_chapter_num15() {
       {
         verse_number: 13,
         words: [
-          "Everyone",
+          "$all",
           "who",
           "is",
           "native",
