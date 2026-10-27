@@ -332,7 +332,7 @@ export function bible_glyph_chapter_exo29() {
           "your",
           "$index_pointing_up,",
           "then",
-          "pour",
+          "$jar+down_arrow+doing",
           "out",
           "the",
           "rest",
