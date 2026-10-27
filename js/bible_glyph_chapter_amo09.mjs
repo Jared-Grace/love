@@ -538,7 +538,7 @@ export function bible_glyph_chapter_amo09() {
           "they",
           "will",
           "$hammer+doing",
-          "gardens",
+          "$garden",
           "and",
           "$eating",
           "their",
