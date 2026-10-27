@@ -414,7 +414,7 @@ export function bible_glyph_chapter_amo09() {
           "restore",
           "the",
           "fallen",
-          "tent",
+          "$hut+leaf",
           "of",
           "$two_hearts+proper_name.",
           "I",
