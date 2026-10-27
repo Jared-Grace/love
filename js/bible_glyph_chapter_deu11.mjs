@@ -988,7 +988,7 @@ export function bible_glyph_chapter_deu11() {
           "of",
           "the",
           "$road",
-          "toward",
+          "$next_track",
           "the",
           "sunset,",
           "in",
