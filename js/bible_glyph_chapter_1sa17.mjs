@@ -919,7 +919,7 @@ export function bible_glyph_chapter_1sa17() {
           "just",
           "as",
           "the",
-          "first",
+          "$first_place",
           "ones",
           "had",
           "$speech.",
