@@ -250,7 +250,7 @@ export function bible_glyph_chapter_num14() {
           "$check+exclamation",
           "do",
           "$no_entry",
-          "rebel",
+          "$raised_fist+crown+doing",
           "against",
           "the",
           "$i_am,",
