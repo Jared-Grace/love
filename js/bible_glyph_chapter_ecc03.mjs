@@ -39,7 +39,7 @@ export function bible_glyph_chapter_ecc03() {
           "born",
           "and",
           "a",
-          "time",
+          "$clock",
           "to",
           "$skull+doing,",
           "a",
