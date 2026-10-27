@@ -45,7 +45,7 @@ export function bible_glyph_chapter_num30() {
       {
         verse_number: 2,
         words: [
-          "If",
+          "$pointing",
           "a",
           "$man_beard",
           "makes",
