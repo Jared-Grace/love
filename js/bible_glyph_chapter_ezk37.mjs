@@ -422,7 +422,7 @@ export function bible_glyph_chapter_ezk37() {
           "$family,",
           "will",
           "$lightbulb",
-          "that",
+          "$pointing",
           "I",
           "am",
           "the",
