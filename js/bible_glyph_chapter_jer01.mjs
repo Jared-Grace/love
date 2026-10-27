@@ -247,7 +247,7 @@ export function bible_glyph_chapter_jer01() {
           "$speech",
           "to",
           "me,",
-          "Behold,",
+          "$exclamation,",
           "I",
           "have",
           "$hands_giving",
