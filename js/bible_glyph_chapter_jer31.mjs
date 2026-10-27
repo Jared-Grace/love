@@ -441,7 +441,7 @@ export function bible_glyph_chapter_jer31() {
           "young",
           "men",
           "and",
-          "old",
+          "$old_man",
           "as",
           "well.",
           "I",
