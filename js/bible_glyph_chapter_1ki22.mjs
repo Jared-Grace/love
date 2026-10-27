@@ -366,7 +366,7 @@ export function bible_glyph_chapter_1ki22() {
           "$flashlight+flashlight",
           "you",
           "shall",
-          "gore",
+          "$ox+horn+doing",
           "the",
           "$proper_name$Arameans",
           "until",
