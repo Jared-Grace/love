@@ -548,7 +548,7 @@ export function bible_glyph_chapter_2ki09() {
           "$no_entry",
           "let",
           "anyone",
-          "escape",
+          "$door+running+person",
           "from",
           "the",
           "$city",
