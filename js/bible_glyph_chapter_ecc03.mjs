@@ -68,7 +68,7 @@ export function bible_glyph_chapter_ecc03() {
           "a",
           "$clock",
           "to",
-          "break",
+          "$wall+collision+doing",
           "down",
           "and",
           "a",
