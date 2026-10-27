@@ -332,7 +332,7 @@ export function bible_glyph_chapter_lev16() {
         verse_number: 11,
         words: [
           "When",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "$magnet+doing",
           "the",
           "bull",
