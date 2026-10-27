@@ -145,7 +145,7 @@ export function bible_glyph_chapter_num11() {
           "the",
           "cucumbers,",
           "the",
-          "melons,",
+          "$fruit+water,",
           "the",
           "leeks,",
           "the",
