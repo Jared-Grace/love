@@ -474,7 +474,7 @@ export function bible_glyph_chapter_pro01() {
           "and",
           "no",
           "one",
-          "took",
+          "$ear_with_hearing_aid",
           "my",
           "outstretched",
           "$hand,",
