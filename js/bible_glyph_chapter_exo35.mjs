@@ -894,7 +894,7 @@ export function bible_glyph_chapter_exo35() {
           "$thinking+doing,",
           "$thread+sewing_needle+doing",
           "in",
-          "blue,",
+          "$blue_circle,",
           "purple",
           "and",
           "scarlet",
