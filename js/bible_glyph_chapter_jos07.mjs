@@ -78,7 +78,7 @@ export function bible_glyph_chapter_jos07() {
           "$proper_name$Jericho",
           "to",
           "$proper_name$Ai,",
-          "which",
+          "$back+flashlight",
           "is",
           "near",
           "Beth-aven",
