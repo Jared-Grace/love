@@ -270,7 +270,7 @@ export function bible_glyph_chapter_exo38() {
         words: [
           "The",
           "north",
-          "side",
+          "$straight_ruler+round_pushpin",
           "was",
           "also",
           "a",
