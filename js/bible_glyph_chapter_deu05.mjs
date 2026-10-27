@@ -209,7 +209,7 @@ export function bible_glyph_chapter_deu05() {
           "$nesting_dolls",
           "in",
           "the",
-          "form",
+          "$framed_picture+person",
           "of",
           "anything",
           "in",
