@@ -238,7 +238,7 @@ export function bible_glyph_chapter_ecc12() {
           "from",
           "which",
           "it",
-          "came,",
+          "$link,",
           "and",
           "the",
           "spirit",
