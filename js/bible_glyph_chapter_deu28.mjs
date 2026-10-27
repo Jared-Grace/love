@@ -926,7 +926,7 @@ export function bible_glyph_chapter_deu28() {
           "no",
           "one",
           "to",
-          "save",
+          "$rescue",
           "you.",
         ],
       },
