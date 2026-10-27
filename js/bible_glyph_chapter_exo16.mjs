@@ -470,7 +470,7 @@ export function bible_glyph_chapter_exo16() {
           "$face",
           "were",
           "thin",
-          "flakes,",
+          "$snow+pinching_hand,",
           "as",
           "fine",
           "as",
