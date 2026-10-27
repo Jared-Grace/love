@@ -460,7 +460,7 @@ export function bible_glyph_chapter_2sa11() {
           "he",
           "got",
           "him",
-          "drunk.",
+          "$woozy_face+doing.",
           "And",
           "in",
           "the",
