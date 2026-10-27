@@ -1157,7 +1157,7 @@ export function bible_glyph_chapter_jdg16() {
           "and",
           "the",
           "$house",
-          "fell",
+          "$person+pointing_down",
           "on",
           "the",
           "lords",
