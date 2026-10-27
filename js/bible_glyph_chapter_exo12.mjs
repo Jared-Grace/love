@@ -325,7 +325,7 @@ export function bible_glyph_chapter_exo12() {
           "is",
           "the",
           "$i_am",
-          "Passover.",
+          "$lamb+door.",
         ],
       },
       {
