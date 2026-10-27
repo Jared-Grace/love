@@ -107,7 +107,7 @@ export function bible_glyph_chapter_gen04() {
           "portions",
           "of",
           "the",
-          "firstborn",
+          "$first_place+baby",
           "of",
           "his",
           "$sheep.",
