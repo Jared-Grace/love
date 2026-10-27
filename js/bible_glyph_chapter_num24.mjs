@@ -360,7 +360,7 @@ export function bible_glyph_chapter_num24() {
         words: [
           "that",
           "even",
-          "if",
+          "$traffic_light",
           "$proper_name$Balak",
           "were",
           "to",
