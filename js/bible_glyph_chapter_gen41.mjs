@@ -621,7 +621,7 @@ export function bible_glyph_chapter_gen41() {
           "of",
           "$wheat+top",
           "sprouted,",
-          "withered",
+          "$wilted_flower+doing",
           "and",
           "thin",
           "and",
