@@ -211,7 +211,7 @@ export function bible_glyph_chapter_isa02() {
           "filled",
           "from",
           "the",
-          "east,",
+          "$compass+right_arrow,",
           "they",
           "are",
           "soothsayers",
