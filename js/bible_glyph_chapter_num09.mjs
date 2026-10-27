@@ -209,7 +209,7 @@ export function bible_glyph_chapter_num09() {
           "dead",
           "$person.",
           "But",
-          "why",
+          "$flashlight+question",
           "should",
           "we",
           "be",
