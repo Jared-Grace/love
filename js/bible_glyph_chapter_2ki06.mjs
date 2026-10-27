@@ -779,7 +779,7 @@ export function bible_glyph_chapter_2ki06() {
           "$earth",
           "of",
           "$wrestling+heart_on_fire",
-          "again.",
+          "$plus+doing.",
         ],
       },
       {
