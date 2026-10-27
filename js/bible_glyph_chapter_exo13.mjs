@@ -77,7 +77,7 @@ export function bible_glyph_chapter_exo13() {
           "out",
           "by",
           "the",
-          "strength",
+          "$might+money_bag",
           "of",
           "His",
           "$hand.",
