@@ -632,7 +632,7 @@ export function bible_glyph_chapter_exo12() {
           "$person_other",
           "must",
           "be",
-          "cut",
+          "$scissors",
           "off",
           "from",
           "the",
