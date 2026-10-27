@@ -441,7 +441,7 @@ export function bible_glyph_chapter_exo12() {
           "as",
           "a",
           "$hourglass",
-          "statute",
+          "$statute",
           "for",
           "the",
           "generations",
