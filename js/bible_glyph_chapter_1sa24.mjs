@@ -578,7 +578,7 @@ export function bible_glyph_chapter_1sa24() {
           "And",
           "he",
           "$speech",
-          "to",
+          "$toward",
           "$two_hearts+proper_name,",
           '"You',
           "are",
