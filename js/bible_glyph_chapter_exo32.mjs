@@ -719,7 +719,7 @@ export function bible_glyph_chapter_exo32() {
           "$proper_name$Aaron,",
           "$flashlight+question",
           "did",
-          "this",
+          "$flashlight",
           "$family",
           "$hammer+doing",
           "to",
