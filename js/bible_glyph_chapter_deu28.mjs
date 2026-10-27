@@ -1533,7 +1533,7 @@ export function bible_glyph_chapter_deu28() {
           "a",
           "$map",
           "whose",
-          "language",
+          "$tongue",
           "you",
           "will",
           "$no_entry",
