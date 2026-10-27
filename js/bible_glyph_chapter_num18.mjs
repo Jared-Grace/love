@@ -126,7 +126,7 @@ export function bible_glyph_chapter_num18() {
           "both",
           "they",
           "and",
-          "you",
+          "$you",
           "will",
           "$skull+doing.",
         ],
