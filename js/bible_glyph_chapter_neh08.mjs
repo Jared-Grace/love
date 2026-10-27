@@ -475,7 +475,7 @@ export function bible_glyph_chapter_neh08() {
         words: [
           "On",
           "the",
-          "second",
+          "$second_place",
           "$sun",
           "of",
           "the",
