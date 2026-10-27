@@ -365,7 +365,7 @@ export function bible_glyph_chapter_num17() {
       {
         verse_number: 13,
         words: [
-          "Anyone",
+          "$all",
           "who",
           "comes",
           "near",
