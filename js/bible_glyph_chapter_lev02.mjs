@@ -117,7 +117,7 @@ export function bible_glyph_chapter_lev02() {
           "$bread+fire+thing",
           "in",
           "an",
-          "oven,",
+          "$brick+fire,",
           "it",
           "must",
           "be",
