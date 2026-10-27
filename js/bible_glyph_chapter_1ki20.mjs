@@ -891,7 +891,7 @@ export function bible_glyph_chapter_1ki20() {
           "spring",
           "Ben",
           "hadad",
-          "mobilized",
+          "$clipboard+doing",
           "the",
           "$proper_name$Arameans",
           "and",
