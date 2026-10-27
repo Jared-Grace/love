@@ -665,7 +665,7 @@ export function bible_glyph_chapter_1sa02() {
           "gave",
           "birth",
           "to",
-          "three",
+          "$three",
           "$son",
           "and",
           "two",
