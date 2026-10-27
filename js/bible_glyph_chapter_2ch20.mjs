@@ -561,7 +561,7 @@ export function bible_glyph_chapter_2ch20() {
           "and",
           "you",
           "will",
-          "find",
+          "$magnifying_glass+exclamation",
           "them",
           "at",
           "the",
