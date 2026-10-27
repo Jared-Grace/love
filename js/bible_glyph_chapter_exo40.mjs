@@ -430,7 +430,7 @@ export function bible_glyph_chapter_exo40() {
           "$tent",
           "over",
           "the",
-          "tabernacle",
+          "$tent+house",
           "and",
           "put",
           "the",
