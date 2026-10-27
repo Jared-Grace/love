@@ -39,7 +39,7 @@ export function bible_glyph_chapter_exo10() {
           "I",
           "may",
           "perform",
-          "these",
+          "$flashlight+flashlight",
           "signs",
           "of",
           "Mine",
