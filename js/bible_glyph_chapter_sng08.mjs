@@ -280,7 +280,7 @@ export function bible_glyph_chapter_sng08() {
           "of",
           "silver.",
           "$traffic_light",
-          "she",
+          "$pointing_back",
           "is",
           "a",
           "door,",
