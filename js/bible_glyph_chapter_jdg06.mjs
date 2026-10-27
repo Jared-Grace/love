@@ -657,7 +657,7 @@ export function bible_glyph_chapter_jdg06() {
           "lay",
           "them",
           "on",
-          "this",
+          "$flashlight+double_exclamation",
           "$person_climbing,",
           "and",
           "pour",
