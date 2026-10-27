@@ -870,7 +870,7 @@ export function bible_glyph_chapter_lev11() {
           "$spring",
           "or",
           "cistern",
-          "containing",
+          "$water+tray_in",
           "$water",
           "will",
           "remain",
