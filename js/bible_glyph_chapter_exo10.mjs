@@ -894,7 +894,7 @@ export function bible_glyph_chapter_exo10() {
           "do",
           "$no_entry",
           "$lightbulb",
-          "how",
+          "$flashlight+question",
           "we",
           "are",
           "to",
