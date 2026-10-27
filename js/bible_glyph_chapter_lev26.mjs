@@ -685,7 +685,7 @@ export function bible_glyph_chapter_lev26() {
           "in",
           "spite",
           "of",
-          "these",
+          "$flashlight+flashlight",
           "things",
           "you",
           "do",
