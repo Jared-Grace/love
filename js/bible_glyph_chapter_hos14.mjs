@@ -185,7 +185,7 @@ export function bible_glyph_chapter_hos14() {
           "$person+house",
           "in",
           "his",
-          "shade;",
+          "$umbrella_on_ground;",
           "they",
           "will",
           "$sprout+doing",
