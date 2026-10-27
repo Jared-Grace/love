@@ -814,7 +814,7 @@ export function bible_glyph_chapter_gen45() {
       {
         verse_number: 28,
         words: [
-          "Enough!",
+          "$multiply!",
           "$speech",
           "$wrestling+heart_on_fire.",
           "My",
