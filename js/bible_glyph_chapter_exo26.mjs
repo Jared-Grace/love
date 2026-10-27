@@ -520,7 +520,7 @@ export function bible_glyph_chapter_exo26() {
           "$compass+up_arrow",
           "side,",
           "$two+zero",
-          "frames,",
+          "$skateboard,",
         ],
       },
       {
