@@ -160,7 +160,7 @@ export function bible_glyph_chapter_2ch06() {
           "to",
           "be",
           "$first_place+person",
-          "over",
+          "$pointing_up",
           "My",
           "$family",
           "$wrestling+heart_on_fire.",
