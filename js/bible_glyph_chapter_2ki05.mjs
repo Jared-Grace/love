@@ -811,7 +811,7 @@ export function bible_glyph_chapter_2ki05() {
           "the",
           "$chariot",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "him",
           "and",
           "$speech,",
