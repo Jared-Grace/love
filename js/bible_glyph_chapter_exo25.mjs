@@ -147,7 +147,7 @@ export function bible_glyph_chapter_exo25() {
           "that",
           "I",
           "may",
-          "dwell",
+          "$tent+doing",
           "among",
           "them.",
         ],
