@@ -367,7 +367,7 @@ export function bible_glyph_chapter_2sa06() {
           "of",
           "Obed-edom",
           "and",
-          "all",
+          "$all",
           "that",
           "belongs",
           "to",
