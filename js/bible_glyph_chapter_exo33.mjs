@@ -455,7 +455,7 @@ export function bible_glyph_chapter_exo33() {
       {
         verse_number: 13,
         words: [
-          "Now",
+          "$watch",
           "if",
           "I",
           "have",
