@@ -558,7 +558,7 @@ export function bible_glyph_chapter_1ki18() {
         words: [
           "$watch",
           "$hand_sending",
-          "all",
+          "$all",
           "$wrestling+heart_on_fire",
           "to",
           "meet",
