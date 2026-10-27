@@ -133,7 +133,7 @@ export function bible_glyph_chapter_sng08() {
           "$seat+back+doing",
           "on",
           "her",
-          "beloved?",
+          "$two_hearts?",
           "Under",
           "the",
           "apple",
