@@ -543,7 +543,7 @@ export function bible_glyph_chapter_gen45() {
       {
         verse_number: 19,
         words: [
-          "You",
+          "$you",
           "are",
           "also",
           "directed",
