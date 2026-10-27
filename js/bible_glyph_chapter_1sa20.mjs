@@ -1191,7 +1191,7 @@ export function bible_glyph_chapter_1sa20() {
           "$sun",
           "of",
           "the",
-          "month,",
+          "$new_moon,",
           "for",
           "he",
           "was",
