@@ -210,7 +210,7 @@ export function bible_glyph_chapter_sng08() {
           "sweep",
           "it",
           "away.",
-          "If",
+          "$traffic_light",
           "$man_beard",
           "were",
           "to",
