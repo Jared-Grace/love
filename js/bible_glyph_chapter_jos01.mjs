@@ -48,7 +48,7 @@ export function bible_glyph_chapter_jos01() {
           "$watch",
           "therefore",
           "$person+pointing_up,",
-          "you",
+          "$you",
           "and",
           "all",
           "these",
