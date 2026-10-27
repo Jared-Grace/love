@@ -87,7 +87,7 @@ export function bible_glyph_chapter_1sa20() {
           "would",
           "my",
           "$father",
-          "hide",
+          "$see_no_evil_monkey",
           "this",
           "$speech",
           "from",
