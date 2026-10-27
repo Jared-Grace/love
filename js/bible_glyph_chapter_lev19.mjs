@@ -305,7 +305,7 @@ export function bible_glyph_chapter_lev19() {
           "You",
           "must",
           "$no_entry",
-          "defraud",
+          "$fist+down_arrow+doing",
           "your",
           "neighbour",
           "$no_entry",
