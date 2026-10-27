@@ -462,7 +462,7 @@ export function bible_glyph_chapter_1sa03() {
           "was",
           "$fear+doing",
           "to",
-          "tell",
+          "$newspaper",
           "$pointing_up+proper_name",
           "the",
           "vision.",
