@@ -539,7 +539,7 @@ export function bible_glyph_chapter_num20() {
           "and",
           "will",
           "$no_entry",
-          "turn",
+          "$white_cane+doing",
           "to",
           "the",
           "right",
