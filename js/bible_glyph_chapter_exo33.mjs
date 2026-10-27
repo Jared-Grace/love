@@ -232,7 +232,7 @@ export function bible_glyph_chapter_exo33() {
           "it",
           "$tray_out",
           "the",
-          "camp,",
+          "$camp,",
           "at",
           "a",
           "distance.",
