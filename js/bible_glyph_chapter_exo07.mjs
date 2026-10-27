@@ -209,7 +209,7 @@ export function bible_glyph_chapter_exo07() {
           "when",
           "they",
           "$mouth",
-          "to",
+          "$toward",
           "$house+proper_name.",
         ],
       },
