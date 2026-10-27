@@ -545,7 +545,7 @@ export function bible_glyph_chapter_deu11() {
         words: [
           "or",
           "the",
-          "anger",
+          "$nose+fire",
           "of",
           "the",
           "$i_am",
