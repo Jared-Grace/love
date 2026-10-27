@@ -1005,7 +1005,7 @@ export function bible_glyph_chapter_lev16() {
           "must",
           "be",
           "taken",
-          "outside",
+          "$toward",
           "the",
           "camp;",
           "their",
