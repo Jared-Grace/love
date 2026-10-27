@@ -268,7 +268,7 @@ export function bible_glyph_chapter_gen37() {
           "the",
           "$sun_with_face",
           "and",
-          "moon",
+          "$moon",
           "and",
           "eleven",
           "stars",
