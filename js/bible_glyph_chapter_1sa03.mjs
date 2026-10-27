@@ -460,7 +460,7 @@ export function bible_glyph_chapter_1sa03() {
           "$i_am.",
           "$ear+heart_on_fire",
           "was",
-          "afraid",
+          "$fear+doing",
           "to",
           "tell",
           "$pointing_up+proper_name",
