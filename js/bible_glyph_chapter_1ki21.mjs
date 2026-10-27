@@ -534,7 +534,7 @@ export function bible_glyph_chapter_1ki21() {
           "to",
           "you",
           "for",
-          "silver.",
+          "$silver.",
           "For",
           "$proper_name$Naboth",
           "is",
