@@ -114,7 +114,7 @@ export function bible_glyph_chapter_num16() {
           "is",
           "in",
           "their",
-          "midst.",
+          "$radio_button.",
           "Why",
           "then",
           "do",
