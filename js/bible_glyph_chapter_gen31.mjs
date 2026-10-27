@@ -1405,7 +1405,7 @@ export function bible_glyph_chapter_gen31() {
           "$speech,",
           "May",
           "$i_am",
-          "watch",
+          "$guard+telescope+doing",
           "between",
           "me",
           "and",
