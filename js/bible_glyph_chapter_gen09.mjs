@@ -389,7 +389,7 @@ export function bible_glyph_chapter_gen09() {
           "I",
           "form",
           "clouds",
-          "over",
+          "$pointing_up",
           "the",
           "$earth",
           "and",
