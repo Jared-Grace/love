@@ -122,7 +122,7 @@ export function bible_glyph_chapter_lev27() {
           "male",
           "and",
           "ten",
-          "shekels",
+          "$coin",
           "for",
           "the",
           "female.",
