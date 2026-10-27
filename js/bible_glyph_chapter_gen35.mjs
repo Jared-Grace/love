@@ -695,7 +695,7 @@ export function bible_glyph_chapter_gen35() {
         words: [
           "$hand+foot",
           "$footprints",
-          "to",
+          "$toward",
           "$laughing+proper_name",
           "his",
           "$father",
