@@ -1000,7 +1000,7 @@ export function bible_glyph_chapter_2ki06() {
           "by",
           "on",
           "the",
-          "wall,",
+          "$brick+shield,",
           "the",
           "$family",
           "$eye",
