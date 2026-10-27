@@ -427,7 +427,7 @@ export function bible_glyph_chapter_mic05() {
           "you",
           "will",
           "$no_entry",
-          "longer",
+          "$repeat",
           "$bowing",
           "to",
           "the",
