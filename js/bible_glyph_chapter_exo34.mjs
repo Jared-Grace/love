@@ -718,7 +718,7 @@ export function bible_glyph_chapter_exo34() {
           "harvest,",
           "and",
           "the",
-          "Feast",
+          "$party_popper",
           "of",
           "Ingathering",
           "at",
