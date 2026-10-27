@@ -161,7 +161,7 @@ export function bible_glyph_chapter_lev11() {
           "$cow_face+foot;",
           "$pointing_back",
           "is",
-          "unclean",
+          "$soap+no_entry",
           "for",
           "you.",
         ],
