@@ -1358,7 +1358,7 @@ export function bible_glyph_chapter_lev14() {
           "and",
           "$eye",
           "it.",
-          "If",
+          "$exclamation",
           "the",
           "mildew",
           "has",
