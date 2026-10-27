@@ -106,7 +106,7 @@ export function bible_glyph_chapter_psa121() {
         verse_number: 6,
         words: [
           "The",
-          "sun",
+          "$sun_with_face",
           "will",
           "$no_entry",
           "$fist",
