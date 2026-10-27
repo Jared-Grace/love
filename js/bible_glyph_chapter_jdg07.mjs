@@ -648,7 +648,7 @@ export function bible_glyph_chapter_jdg07() {
           "outskirts",
           "of",
           "the",
-          "camp,",
+          "$camp,",
           "$hammer+doing",
           "exactly",
           "as",
