@@ -1012,7 +1012,7 @@ export function bible_glyph_chapter_1ki22() {
           "$crossed_swords+doing",
           "with",
           "anyone",
-          "small",
+          "$pinching_hand",
           "or",
           "great,",
           "except",
