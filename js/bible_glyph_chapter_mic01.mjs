@@ -119,7 +119,7 @@ export function bible_glyph_chapter_mic01() {
           "the",
           "valleys",
           "will",
-          "split",
+          "$carpentry_saw",
           "apart,",
           "like",
           "wax",
