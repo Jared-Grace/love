@@ -1331,7 +1331,7 @@ export function bible_glyph_chapter_gen41() {
           "$year,",
           "Joseph",
           "collected",
-          "all",
+          "$all",
           "the",
           "excess",
           "food",
