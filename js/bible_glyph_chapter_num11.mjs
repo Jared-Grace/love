@@ -52,7 +52,7 @@ export function bible_glyph_chapter_num11() {
           "outskirts",
           "of",
           "the",
-          "camp.",
+          "$camp.",
         ],
       },
       {
