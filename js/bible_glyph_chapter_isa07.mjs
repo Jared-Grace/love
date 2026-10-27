@@ -415,7 +415,7 @@ export function bible_glyph_chapter_isa07() {
           "$hands_giving",
           "you",
           "a",
-          "sign:",
+          "$placard:",
           "Behold,",
           "the",
           "virgin",
