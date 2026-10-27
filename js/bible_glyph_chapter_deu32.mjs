@@ -604,7 +604,7 @@ export function bible_glyph_chapter_deu32() {
       {
         verse_number: 22,
         words: [
-          "For",
+          "$pointing",
           "a",
           "$fire",
           "has",
