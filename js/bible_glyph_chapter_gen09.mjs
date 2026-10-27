@@ -496,7 +496,7 @@ export function bible_glyph_chapter_gen09() {
           "and",
           "$all",
           "$meat",
-          "on",
+          "$pointing_up",
           "the",
           "$earth.",
         ],
