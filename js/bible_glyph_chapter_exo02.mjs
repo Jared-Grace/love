@@ -54,7 +54,7 @@ export function bible_glyph_chapter_exo02() {
           "him",
           "for",
           "$three",
-          "months.",
+          "$moon+clock.",
         ],
       },
       {
