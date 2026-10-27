@@ -327,7 +327,7 @@ export function bible_glyph_chapter_gen07() {
           "the",
           "$earth",
           "for",
-          "forty",
+          "$four+zero",
           "$sun",
           "and",
           "forty",
