@@ -666,7 +666,7 @@ export function bible_glyph_chapter_1ki19() {
           "$face_with_open_mouth",
           "have",
           "$no_entry",
-          "kissed",
+          "$face_blowing_a_kiss",
           "him.",
         ],
       },
