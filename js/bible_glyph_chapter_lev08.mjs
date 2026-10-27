@@ -671,7 +671,7 @@ export function bible_glyph_chapter_lev08() {
           "unleavened",
           "bread,",
           "one",
-          "cake",
+          "$bagel",
           "$bread",
           "made",
           "with",
