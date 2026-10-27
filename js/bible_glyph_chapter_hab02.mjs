@@ -300,7 +300,7 @@ export function bible_glyph_chapter_hab02() {
           "to",
           "place",
           "his",
-          "nest",
+          "$nest_with_eggs",
           "on",
           "$up_arrow+thing",
           "and",
