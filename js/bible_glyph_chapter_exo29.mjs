@@ -63,7 +63,7 @@ export function bible_glyph_chapter_exo29() {
           "wafers",
           "$oil+doing",
           "with",
-          "oil.",
+          "$lotion_bottle.",
           "$hammer+doing",
           "them",
           "out",
