@@ -588,7 +588,7 @@ export function bible_glyph_chapter_num18() {
           "to",
           "your",
           "$receipt,",
-          "five",
+          "$five",
           "shekels",
           "of",
           "$silver,",
