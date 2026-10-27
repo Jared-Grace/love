@@ -58,7 +58,7 @@ export function bible_glyph_chapter_exo26() {
           "curtains",
           "the",
           "same",
-          "size.",
+          "$triangular_ruler+thing.",
         ],
       },
       {
