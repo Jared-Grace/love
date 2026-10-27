@@ -501,7 +501,7 @@ export function bible_glyph_chapter_lam02() {
           "$wine?",
           "as",
           "they",
-          "faint",
+          "$fog+doing",
           "like",
           "the",
           "wounded",
