@@ -314,7 +314,7 @@ export function bible_glyph_chapter_num24() {
         verse_number: 11,
         words: [
           "Therefore",
-          "flee",
+          "$dashing_away",
           "at",
           "once",
           "to",
