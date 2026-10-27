@@ -357,7 +357,7 @@ export function bible_glyph_chapter_hos02() {
           "Sabbaths",
           "all",
           "her",
-          "appointed",
+          "$alarm_clock",
           "feasts.",
         ],
       },
