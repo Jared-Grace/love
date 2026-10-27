@@ -121,7 +121,7 @@ export function bible_glyph_chapter_2ch20() {
           "they",
           "$footprints",
           "to",
-          "seek",
+          "$magnifying_glass",
           "the",
           "$i_am.",
         ],
