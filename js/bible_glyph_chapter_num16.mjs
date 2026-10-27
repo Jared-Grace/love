@@ -766,7 +766,7 @@ export function bible_glyph_chapter_num16() {
           "$speech,",
           "Move",
           "away",
-          "now",
+          "$pleading",
           "from",
           "the",
           "tents",
