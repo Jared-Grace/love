@@ -445,7 +445,7 @@ export function bible_glyph_chapter_hos02() {
       {
         verse_number: 14,
         words: [
-          "Therefore,",
+          "$right_arrow,",
           "behold,",
           "I",
           "will",
