@@ -439,7 +439,7 @@ export function bible_glyph_chapter_isa49() {
       {
         verse_number: 12,
         words: [
-          "Behold,",
+          "$exclamation,",
           "they",
           "will",
           "$footprints",
