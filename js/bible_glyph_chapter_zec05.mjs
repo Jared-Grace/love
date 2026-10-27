@@ -220,7 +220,7 @@ export function bible_glyph_chapter_zec05() {
           "the",
           "cover",
           "of",
-          "lead",
+          "$anchor+dust",
           "was",
           "raised,",
           "and",
