@@ -122,7 +122,7 @@ export function bible_glyph_chapter_exo22() {
           "or",
           "$donkey",
           "or",
-          "sheep,",
+          "$sheep+one,",
           "he",
           "must",
           "pay",
