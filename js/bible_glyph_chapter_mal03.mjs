@@ -337,7 +337,7 @@ export function bible_glyph_chapter_mal03() {
           "$footprints",
           "the",
           "full",
-          "tithe",
+          "$ten+hands_giving",
           "into",
           "the",
           "$house,",
