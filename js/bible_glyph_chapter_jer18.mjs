@@ -553,7 +553,7 @@ export function bible_glyph_chapter_jer18() {
           "and",
           "pay",
           "$no_entry",
-          "heed",
+          "$ear_with_hearing_aid",
           "to",
           "any",
           "of",
