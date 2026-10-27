@@ -413,7 +413,7 @@ export function bible_glyph_chapter_1sa02() {
           "$pot_of_food+three",
           "$shuffle",
           "cooking",
-          "pot.",
+          "$pot_of_food+fire.",
           "And",
           "the",
           "$priest",
