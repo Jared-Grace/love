@@ -682,7 +682,7 @@ export function bible_glyph_chapter_exo16() {
           "morning",
           "each",
           "$man_beard",
-          "gathered",
+          "$hand+sheaf_of_rice+doing",
           "as",
           "much",
           "as",
