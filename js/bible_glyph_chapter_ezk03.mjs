@@ -217,7 +217,7 @@ export function bible_glyph_chapter_ezk03() {
           "is",
           "hard-headed",
           "and",
-          "hard",
+          "$mechanical_arm+describing",
           "of",
           "$heart_organ.",
         ],
