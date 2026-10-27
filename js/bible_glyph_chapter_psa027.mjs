@@ -188,7 +188,7 @@ export function bible_glyph_chapter_psa027() {
           "$pointing_up",
           "my",
           "enemies",
-          "around",
+          "$around",
           "me.",
           "At",
           "His",
