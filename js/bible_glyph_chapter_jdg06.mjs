@@ -774,7 +774,7 @@ export function bible_glyph_chapter_jdg06() {
           "Do",
           "$no_entry",
           "be",
-          "afraid,",
+          "$fear+doing,",
           "for",
           "you",
           "will",
