@@ -395,7 +395,7 @@ export function bible_glyph_chapter_lev11() {
       },
       {
         verse_number: 17,
-        words: ["the", "$cup,", "the", "cormorant,", "the", "great", "owl,"],
+        words: ["the", "$cup,", "the", "cormorant,", "the", "great", "$bird+wind,"],
       },
       {
         verse_number: 18,
