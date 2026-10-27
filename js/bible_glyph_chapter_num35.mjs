@@ -227,7 +227,7 @@ export function bible_glyph_chapter_num35() {
           "$handshake",
           "will",
           "be",
-          "forty",
+          "$four+zero",
           "eight",
           "$city,",
           "with",
