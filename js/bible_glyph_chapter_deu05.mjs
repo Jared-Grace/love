@@ -719,7 +719,7 @@ export function bible_glyph_chapter_deu05() {
         words: [
           "But",
           "$watch,",
-          "why",
+          "$flashlight+question",
           "should",
           "we",
           "$skull+doing?",
