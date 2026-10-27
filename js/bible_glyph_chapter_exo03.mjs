@@ -613,7 +613,7 @@ export function bible_glyph_chapter_exo03() {
           "out",
           "of",
           "your",
-          "affliction",
+          "$persevering_face+thing",
           "in",
           "$clamp+proper_name,",
           "into",
