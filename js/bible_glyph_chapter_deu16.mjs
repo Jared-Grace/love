@@ -482,7 +482,7 @@ export function bible_glyph_chapter_deu16() {
           "$beaming+doing",
           "in",
           "your",
-          "feast",
+          "$party_popper",
           "-",
           "you,",
           "your",
