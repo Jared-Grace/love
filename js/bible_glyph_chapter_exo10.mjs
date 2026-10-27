@@ -168,7 +168,7 @@ export function bible_glyph_chapter_exo10() {
         words: [
           "They",
           "will",
-          "cover",
+          "$coat+doing",
           "the",
           "$eyes",
           "of",
