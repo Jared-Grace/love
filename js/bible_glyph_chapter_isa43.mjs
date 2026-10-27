@@ -631,7 +631,7 @@ export function bible_glyph_chapter_isa43() {
           "of",
           "the",
           "ostrich,",
-          "because",
+          "$pointing",
           "I",
           "$hands_giving",
           "$water",
