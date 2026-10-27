@@ -667,7 +667,7 @@ export function bible_glyph_chapter_num13() {
           "$earth",
           "of",
           "the",
-          "Negev;",
+          "$compass+down_arrow;",
           "the",
           "$proper_name$Hittites,",
           "$proper_name$Jebusites",
