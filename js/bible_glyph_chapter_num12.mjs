@@ -239,7 +239,7 @@ export function bible_glyph_chapter_num12() {
         words: [
           "So",
           "the",
-          "anger",
+          "$nose+fire",
           "of",
           "$i_am",
           "$angry_face+doing",
