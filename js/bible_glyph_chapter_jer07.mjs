@@ -290,7 +290,7 @@ export function bible_glyph_chapter_jer07() {
           "$flashlight",
           "$house",
           "$back+flashlight",
-          "bears",
+          "$waving_hand",
           "My",
           "$name_tag",
           "$link",
