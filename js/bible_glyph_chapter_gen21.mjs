@@ -401,7 +401,7 @@ export function bible_glyph_chapter_gen21() {
           "about",
           "a",
           "bowshot",
-          "away,",
+          "$satellite+doing,",
           "for",
           "she",
           "$speech,",
