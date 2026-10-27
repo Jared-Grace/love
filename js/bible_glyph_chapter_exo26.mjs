@@ -660,7 +660,7 @@ export function bible_glyph_chapter_exo26() {
           "on",
           "the",
           "rear",
-          "side",
+          "$x_ray",
           "of",
           "the",
           "tabernacle,",
