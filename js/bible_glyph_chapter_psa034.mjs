@@ -450,7 +450,7 @@ export function bible_glyph_chapter_psa034() {
         words: [
           "The",
           "$i_am",
-          "redeems",
+          "$coin+turn_back",
           "His",
           "$kneeling,",
           "and",
