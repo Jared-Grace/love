@@ -1698,7 +1698,7 @@ export function bible_glyph_chapter_lev13() {
           "or",
           "linen",
           "or",
-          "leather.",
+          "$cow_face+coat.",
           "Since",
           "the",
           "mildew",
