@@ -189,7 +189,7 @@ export function bible_glyph_chapter_mic03() {
           "without",
           "divination.",
           "The",
-          "sun",
+          "$sun_with_face",
           "will",
           "$footprints",
           "on",
