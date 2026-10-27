@@ -259,7 +259,7 @@ export function bible_glyph_chapter_deu10() {
           "set",
           "apart",
           "the",
-          "tribe",
+          "$wood",
           "of",
           "$handshake+proper_name",
           "to",
