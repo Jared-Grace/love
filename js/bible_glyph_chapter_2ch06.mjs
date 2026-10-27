@@ -606,7 +606,7 @@ export function bible_glyph_chapter_2ch06() {
           "$person+house",
           "$safety_pin",
           "$person",
-          "upon",
+          "$pointing_up",
           "the",
           "$earth?",
           "Even",
