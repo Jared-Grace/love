@@ -917,7 +917,7 @@ export function bible_glyph_chapter_2ki09() {
           "$proper_name$Naboth",
           "the",
           "$proper_name$Jezreelite.",
-          "Remember",
+          "$reminder_ribbon",
           "that",
           "when",
           "you",
