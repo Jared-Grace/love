@@ -113,7 +113,7 @@ export function bible_glyph_chapter_ecc03() {
           "a",
           "$clock",
           "to",
-          "gather",
+          "$package+tray_in+doing",
           "stones",
           "together,",
           "a",
