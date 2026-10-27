@@ -729,7 +729,7 @@ export function bible_glyph_chapter_jer23() {
         verse_number: 20,
         words: [
           "The",
-          "anger",
+          "$nose+fire",
           "of",
           "the",
           "$i_am",
