@@ -288,7 +288,7 @@ export function bible_glyph_chapter_job03() {
           "asleep",
           "and",
           "at",
-          "rest,",
+          "$seat+doing,",
         ],
       },
       {
