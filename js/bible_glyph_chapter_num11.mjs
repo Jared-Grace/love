@@ -382,7 +382,7 @@ export function bible_glyph_chapter_num11() {
           "get",
           "$meat",
           "for",
-          "all",
+          "$all",
           "these",
           "$family?",
           "For",
