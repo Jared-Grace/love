@@ -118,7 +118,7 @@ export function bible_glyph_chapter_isa12() {
           "among",
           "the",
           "$family,",
-          "declare",
+          "$reminder_ribbon",
           "that",
           "His",
           "$name_tag",
