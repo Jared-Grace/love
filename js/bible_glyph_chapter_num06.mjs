@@ -724,7 +724,7 @@ export function bible_glyph_chapter_num06() {
           "must",
           "$hammer+doing",
           "whatever",
-          "vow",
+          "$saluting_face",
           "he",
           "makes",
           "according",
