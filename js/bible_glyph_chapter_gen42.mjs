@@ -564,7 +564,7 @@ export function bible_glyph_chapter_gen42() {
           "to",
           "his",
           "$brother,",
-          "Surely",
+          "$check+double_exclamation",
           "we",
           "are",
           "being",
