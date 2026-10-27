@@ -909,7 +909,7 @@ export function bible_glyph_chapter_1sa20() {
           "New",
           "Moon,",
           "the",
-          "second",
+          "$second_place",
           "day,",
           "the",
           "$place",
