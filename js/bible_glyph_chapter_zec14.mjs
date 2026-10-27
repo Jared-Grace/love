@@ -148,7 +148,7 @@ export function bible_glyph_chapter_zec14() {
           "$walking+away+doing",
           "to",
           "the",
-          "north",
+          "$compass+up_arrow",
           "and",
           "half",
           "to",
