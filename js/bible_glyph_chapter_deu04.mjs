@@ -588,7 +588,7 @@ export function bible_glyph_chapter_deu04() {
           "male",
           "or",
           "a",
-          "female,",
+          "$female_sign,",
         ],
       },
       {
