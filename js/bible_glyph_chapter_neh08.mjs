@@ -455,7 +455,7 @@ export function bible_glyph_chapter_neh08() {
           "and",
           "$hammer+doing",
           "to",
-          "rejoice",
+          "$beaming",
           "greatly,",
           "because",
           "they",
