@@ -40,7 +40,7 @@ export function bible_glyph_chapter_ecc12() {
           "I",
           "find",
           "no",
-          "pleasure",
+          "$smiling_face_with_hearts",
           "in",
           "them;",
         ],
