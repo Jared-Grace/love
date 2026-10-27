@@ -497,7 +497,7 @@ export function bible_glyph_chapter_deu11() {
           "I",
           "will",
           "$hands_giving",
-          "grass",
+          "$herb",
           "in",
           "the",
           "$field",
