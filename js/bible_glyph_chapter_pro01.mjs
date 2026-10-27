@@ -249,7 +249,7 @@ export function bible_glyph_chapter_pro01() {
           "our",
           "$house",
           "with",
-          "plunder.",
+          "$plunder.",
         ],
       },
       {
