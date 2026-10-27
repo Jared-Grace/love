@@ -740,7 +740,7 @@ export function bible_glyph_chapter_jdg07() {
         verse_number: 20,
         words: [
           "The",
-          "three",
+          "$three",
           "companies",
           "$trumpet+doing",
           "their",
