@@ -131,7 +131,7 @@ export function bible_glyph_chapter_hos14() {
           "be",
           "like",
           "the",
-          "dew",
+          "$dew",
           "to",
           "$wrestling+heart_on_fire;",
           "he",
