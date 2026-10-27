@@ -238,7 +238,7 @@ export function bible_glyph_chapter_gen06() {
           "$proper_name$Noah,",
           "however,",
           "$magnifying_glass+exclamation",
-          "favor",
+          "$heart_orange",
           "in",
           "the",
           "$eyes",
