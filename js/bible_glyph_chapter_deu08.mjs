@@ -129,7 +129,7 @@ export function bible_glyph_chapter_deu08() {
           "$bread",
           "alone,",
           "but",
-          "on",
+          "$pointing_up",
           "every",
           "word",
           "that",
