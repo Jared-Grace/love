@@ -239,7 +239,7 @@ export function bible_glyph_chapter_zec08() {
           "them",
           "$footprints",
           "to",
-          "dwell",
+          "$tent+doing",
           "in",
           "$city+peace,",
           "where",
