@@ -1609,7 +1609,7 @@ export function bible_glyph_chapter_1ki20() {
           "to",
           "his",
           "$house,",
-          "sullen",
+          "$pouting_face+back+describing",
           "and",
           "angry,",
           "and",
