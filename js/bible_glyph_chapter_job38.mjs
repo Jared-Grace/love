@@ -652,7 +652,7 @@ export function bible_glyph_chapter_job38() {
           "$sky?",
           "Can",
           "you",
-          "set",
+          "$palm_down",
           "their",
           "dominion",
           "over",
