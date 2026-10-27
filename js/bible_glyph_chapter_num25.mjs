@@ -237,7 +237,7 @@ export function bible_glyph_chapter_num25() {
           "Israel",
           "into",
           "the",
-          "tent,",
+          "$tent+hollow_circle,",
           "and",
           "drove",
           "the",
