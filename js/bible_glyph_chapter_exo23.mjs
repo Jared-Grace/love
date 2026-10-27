@@ -839,7 +839,7 @@ export function bible_glyph_chapter_exo23() {
           "a",
           "single",
           "$year,",
-          "otherwise",
+          "$no_entry+traffic_light",
           "the",
           "$earth",
           "would",
