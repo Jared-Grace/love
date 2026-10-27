@@ -52,7 +52,7 @@ export function bible_glyph_chapter_mic05() {
           "$proper_name$Ephrathah,",
           "who",
           "are",
-          "small",
+          "$child+describing",
           "among",
           "the",
           "clans",
