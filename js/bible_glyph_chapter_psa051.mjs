@@ -33,7 +33,7 @@ export function bible_glyph_chapter_psa051() {
           "$footprints",
           "in",
           "to",
-          "Bathsheba.",
+          "$girl+family+raised_back_of_hand+proper_name.",
           "Have",
           "mercy",
           "on",
