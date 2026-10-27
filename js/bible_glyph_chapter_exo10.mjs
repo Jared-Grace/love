@@ -825,7 +825,7 @@ export function bible_glyph_chapter_exo10() {
           "must",
           "stay",
           "behind.",
-          "Even",
+          "$plus",
           "your",
           "little",
           "ones",
