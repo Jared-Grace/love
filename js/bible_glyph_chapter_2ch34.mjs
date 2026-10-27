@@ -945,7 +945,7 @@ export function bible_glyph_chapter_2ch34() {
       {
         verse_number: 25,
         words: [
-          "because",
+          "$down_arrow",
           "they",
           "have",
           "forsaken",
