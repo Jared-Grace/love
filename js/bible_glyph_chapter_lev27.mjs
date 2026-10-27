@@ -303,7 +303,7 @@ export function bible_glyph_chapter_lev27() {
           "$thumbs_up",
           "for",
           "$thumbs_down",
-          "or",
+          "$shuffle",
           "$thumbs_down",
           "for",
           "$thumbs_up.",
