@@ -574,7 +574,7 @@ export function bible_glyph_chapter_deu31() {
           "$derelict_house+doing",
           "Me",
           "and",
-          "break",
+          "$broken_chain+scroll+doing",
           "the",
           "$covenant",
           "I",
