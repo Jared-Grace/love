@@ -1134,7 +1134,7 @@ export function bible_glyph_chapter_deu04() {
           "to",
           "them",
           "by",
-          "oath.",
+          "$raised_back_of_hand+doing.",
         ],
       },
       {
