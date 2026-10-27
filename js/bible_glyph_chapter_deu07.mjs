@@ -571,7 +571,7 @@ export function bible_glyph_chapter_deu07() {
           "on",
           "them",
           "with",
-          "pity,",
+          "$pleading_face+eyes+doing,",
           "and",
           "do",
           "$no_entry",
