@@ -1280,7 +1280,7 @@ export function bible_glyph_chapter_gen41() {
           "Now",
           "$i_am+plus",
           "was",
-          "thirty",
+          "$three+zero",
           "years",
           "old",
           "when",
