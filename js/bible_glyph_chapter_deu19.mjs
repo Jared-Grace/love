@@ -200,7 +200,7 @@ export function bible_glyph_chapter_deu19() {
       {
         verse_number: 6,
         words: [
-          "Otherwise,",
+          "$no_entry+traffic_light,",
           "the",
           "avenger",
           "of",
