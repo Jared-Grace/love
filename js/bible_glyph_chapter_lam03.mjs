@@ -611,7 +611,7 @@ export function bible_glyph_chapter_lam03() {
           "To",
           "$stone+dust+doing",
           "$down_arrow",
-          "all",
+          "$all",
           "the",
           "prisoners",
           "of",
