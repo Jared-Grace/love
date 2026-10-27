@@ -37,7 +37,7 @@ export function bible_glyph_chapter_pro02() {
           "you",
           "incline",
           "your",
-          "ear",
+          "$ear",
           "to",
           "$wisdom",
           "and",
