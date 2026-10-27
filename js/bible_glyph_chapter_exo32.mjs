@@ -619,7 +619,7 @@ export function bible_glyph_chapter_exo32() {
           "the",
           "$voice",
           "of",
-          "defeat;",
+          "$person+down_arrow+thing;",
           "it",
           "is",
           "the",
