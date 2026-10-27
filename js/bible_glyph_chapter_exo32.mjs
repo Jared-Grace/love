@@ -199,7 +199,7 @@ export function bible_glyph_chapter_exo32() {
           "offerings,",
           "and",
           "presented",
-          "peace",
+          "$peace+gift",
           "offerings.",
           "And",
           "the",
