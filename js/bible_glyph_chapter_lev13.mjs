@@ -1270,7 +1270,7 @@ export function bible_glyph_chapter_lev13() {
           "is",
           "unchanged",
           "and",
-          "black",
+          "$black_circle",
           "$hair",
           "has",
           "grown",
