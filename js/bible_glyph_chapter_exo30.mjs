@@ -202,7 +202,7 @@ export function bible_glyph_chapter_exo30() {
           "the",
           "$lamp",
           "at",
-          "twilight,",
+          "$sunset,",
           "he",
           "must",
           "burn",
