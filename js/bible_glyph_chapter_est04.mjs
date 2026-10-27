@@ -417,7 +417,7 @@ export function bible_glyph_chapter_est04() {
           "$speech",
           "this",
           "$turn_back",
-          "to",
+          "$toward",
           "her:",
           "Do",
           "$no_entry",
