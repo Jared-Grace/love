@@ -463,7 +463,7 @@ export function bible_glyph_chapter_lev17() {
           "down",
           "a",
           "$sprout",
-          "animal",
+          "$net+deer",
           "or",
           "a",
           "$bird",
