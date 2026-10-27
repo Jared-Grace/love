@@ -61,7 +61,7 @@ export function bible_glyph_chapter_psa091() {
         verse_number: 3,
         words: [
           "$pointing",
-          "He",
+          "$pointing_back",
           "will",
           "deliver",
           "you",
