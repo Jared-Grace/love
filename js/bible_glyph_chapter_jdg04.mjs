@@ -203,7 +203,7 @@ export function bible_glyph_chapter_jdg04() {
           "$military_medal",
           "of",
           "Jabin",
-          "army,",
+          "$military_helmet,",
           "with",
           "his",
           "chariots",
