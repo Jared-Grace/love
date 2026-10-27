@@ -867,7 +867,7 @@ export function bible_glyph_chapter_ezk03() {
           "to",
           "$you+exclamation",
           "them,",
-          "though",
+          "$pointing",
           "they",
           "are",
           "a",
