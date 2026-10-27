@@ -1049,7 +1049,7 @@ export function bible_glyph_chapter_exo09() {
           "ceased,",
           "he",
           "$bow+doing",
-          "again",
+          "$plus+doing",
           "and",
           "hardened",
           "his",
