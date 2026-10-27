@@ -271,7 +271,7 @@ export function bible_glyph_chapter_est04() {
           "$proper_name$Esther",
           "and",
           "explain,",
-          "urging",
+          "$speech+scroll",
           "her",
           "to",
           "$footprints",
