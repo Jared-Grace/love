@@ -492,7 +492,7 @@ export function bible_glyph_chapter_gen42() {
           "are",
           "honest,",
           "leave",
-          "one",
+          "$one",
           "of",
           "your",
           "$brother",
