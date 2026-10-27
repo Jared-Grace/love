@@ -968,7 +968,7 @@ export function bible_glyph_chapter_deu11() {
           "$proper_name$Gerizim",
           "and",
           "the",
-          "curse",
+          "$balloon+speech",
           "$pointing_up",
           "$mountain",
           "$proper_name$Ebal.",
