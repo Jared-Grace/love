@@ -281,7 +281,7 @@ export function bible_glyph_chapter_zec08() {
           "who",
           "$sun",
           "$ear",
-          "these",
+          "$flashlight+flashlight",
           "$speech",
           "spoken",
           "by",
