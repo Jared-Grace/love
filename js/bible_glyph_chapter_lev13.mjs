@@ -250,7 +250,7 @@ export function bible_glyph_chapter_lev13() {
           "shall",
           "pronounce",
           "him",
-          "clean;",
+          "$soap+doing;",
           "it",
           "is",
           "a",
