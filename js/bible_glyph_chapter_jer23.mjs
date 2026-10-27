@@ -1298,7 +1298,7 @@ export function bible_glyph_chapter_jer23() {
           "the",
           "$i_am",
           "$speech:",
-          "Because",
+          "$information",
           "you",
           "have",
           "$speech,",
