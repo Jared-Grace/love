@@ -427,7 +427,7 @@ export function bible_glyph_chapter_exo31() {
       {
         verse_number: 17,
         words: [
-          "It",
+          "$pointing_back",
           "is",
           "a",
           "$placard",
