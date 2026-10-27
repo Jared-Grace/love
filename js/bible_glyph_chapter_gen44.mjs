@@ -774,7 +774,7 @@ export function bible_glyph_chapter_gen44() {
           "$speech",
           "to",
           "us,",
-          "You",
+          "$you",
           "$lightbulb",
           "that",
           "my",
