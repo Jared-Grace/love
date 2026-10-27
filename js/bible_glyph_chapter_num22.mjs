@@ -406,7 +406,7 @@ export function bible_glyph_chapter_num22() {
         verse_number: 13,
         words: [
           "So",
-          "Balaam",
+          "$foreigner+proper_name",
           "got",
           "up",
           "the",
