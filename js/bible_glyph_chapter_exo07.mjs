@@ -490,7 +490,7 @@ export function bible_glyph_chapter_exo07() {
           "$me",
           "am",
           "$i_am.",
-          "Behold,",
+          "$exclamation,",
           "$me",
           "will",
           "$fist",
