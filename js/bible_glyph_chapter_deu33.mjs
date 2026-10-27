@@ -432,7 +432,7 @@ export function bible_glyph_chapter_deu33() {
           "of",
           "the",
           "$hourglass",
-          "hills,",
+          "$mountain+pinching_hand,",
         ],
       },
       {
