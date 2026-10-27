@@ -234,7 +234,7 @@ export function bible_glyph_chapter_num11() {
           "baked",
           "with",
           "fine",
-          "oil.",
+          "$lotion_bottle.",
         ],
       },
       {
