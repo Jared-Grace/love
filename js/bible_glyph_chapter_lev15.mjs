@@ -974,7 +974,7 @@ export function bible_glyph_chapter_lev15() {
           "$tent+house,",
           "$back+flashlight",
           "is",
-          "among",
+          "$radio_button",
           "them.",
         ],
       },
