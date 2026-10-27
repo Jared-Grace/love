@@ -496,7 +496,7 @@ export function bible_glyph_chapter_lev25() {
           "number",
           "of",
           "$fruit+basket",
-          "he",
+          "$pointing_back",
           "is",
           "selling",
           "you.",
