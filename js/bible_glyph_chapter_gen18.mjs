@@ -522,7 +522,7 @@ export function bible_glyph_chapter_gen18() {
           "and",
           "through",
           "him",
-          "all",
+          "$all",
           "the",
           "$map",
           "of",
