@@ -361,7 +361,7 @@ export function bible_glyph_chapter_num13() {
           "the",
           "$city",
           "where",
-          "they",
+          "$pointing_back",
           "dwell",
           "open",
           "camps",
