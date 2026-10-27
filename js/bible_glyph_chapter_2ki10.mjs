@@ -1203,7 +1203,7 @@ export function bible_glyph_chapter_2ki10() {
           "$sun",
           "the",
           "$i_am",
-          "began",
+          "$sewing_needle",
           "to",
           "reduce",
           "the",
