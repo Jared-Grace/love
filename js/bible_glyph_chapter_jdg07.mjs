@@ -93,7 +93,7 @@ export function bible_glyph_chapter_jdg07() {
         words: [
           "Now",
           "$watch",
-          "proclaim",
+          "$waving_hand",
           "in",
           "the",
           "hearing",
