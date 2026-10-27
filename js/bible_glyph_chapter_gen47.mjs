@@ -702,7 +702,7 @@ export function bible_glyph_chapter_gen47() {
           "$man_beard",
           "and",
           "all,",
-          "sold",
+          "$coin+hands_giving",
           "their",
           "$field,",
           "because",
