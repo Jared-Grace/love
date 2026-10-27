@@ -810,7 +810,7 @@ export function bible_glyph_chapter_num16() {
           "$proper_name$Dathan",
           "and",
           "$father+up_arrow.",
-          "Meanwhile",
+          "$around",
           "$proper_name$Dathan",
           "and",
           "$father+up_arrow",
