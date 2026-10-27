@@ -370,7 +370,7 @@ export function bible_glyph_chapter_1ki18() {
           "he",
           "does",
           "$no_entry",
-          "find",
+          "$magnifying_glass+exclamation",
           "you,",
           "he",
           "will",
