@@ -466,7 +466,7 @@ export function bible_glyph_chapter_job31() {
           "fall",
           "from",
           "my",
-          "shoulder",
+          "$backpack+person+bone",
           "and",
           "be",
           "torn",
