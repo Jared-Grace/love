@@ -311,7 +311,7 @@ export function bible_glyph_chapter_lev04() {
           "rest",
           "of",
           "$bull",
-          "outside",
+          "$sun_behind_small_cloud",
           "$camp",
           "to",
           "a",
