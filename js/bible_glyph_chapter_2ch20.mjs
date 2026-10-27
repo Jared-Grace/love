@@ -1059,7 +1059,7 @@ export function bible_glyph_chapter_2ch20() {
           "$i_am",
           "had",
           "fought",
-          "against",
+          "$linked_paperclips",
           "the",
           "enemies",
           "of",
