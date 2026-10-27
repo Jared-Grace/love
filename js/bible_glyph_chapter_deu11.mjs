@@ -655,7 +655,7 @@ export function bible_glyph_chapter_deu11() {
           "and",
           "when",
           "you",
-          "get",
+          "$person+pointing_up",
           "up.",
         ],
       },
