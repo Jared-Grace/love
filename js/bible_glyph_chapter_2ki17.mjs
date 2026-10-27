@@ -153,7 +153,7 @@ export function bible_glyph_chapter_2ki17() {
           "$proper_name$Assyria",
           "invaded",
           "the",
-          "whole",
+          "$all",
           "$earth",
           "and",
           "marched",
