@@ -417,7 +417,7 @@ export function bible_glyph_chapter_deu04() {
           "$fire+wood",
           "with",
           "$fire",
-          "to",
+          "$finish",
           "the",
           "$heart_organ",
           "of",
