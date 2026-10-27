@@ -473,7 +473,7 @@ export function bible_glyph_chapter_gen22() {
           "$tray_out",
           "$sky",
           "a",
-          "second",
+          "$second_place",
           "time,",
         ],
       },
