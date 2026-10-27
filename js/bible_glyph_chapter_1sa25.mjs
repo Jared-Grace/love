@@ -823,7 +823,7 @@ export function bible_glyph_chapter_1sa25() {
           "his",
           "$heart_organ",
           "on",
-          "this",
+          "$flashlight",
           "$man_beard",
           "of",
           "Belial,",
