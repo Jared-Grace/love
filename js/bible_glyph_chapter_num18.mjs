@@ -1080,7 +1080,7 @@ export function bible_glyph_chapter_num18() {
       {
         verse_number: 31,
         words: [
-          "You",
+          "$you",
           "and",
           "your",
           "$house",
