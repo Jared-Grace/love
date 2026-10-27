@@ -900,7 +900,7 @@ export function bible_glyph_chapter_deu28() {
           "about",
           "$back+flashlight",
           "a",
-          "blind",
+          "$person_with_white_cane+describing",
           "man",
           "in",
           "the",
