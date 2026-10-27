@@ -56,7 +56,7 @@ export function bible_glyph_chapter_deu05() {
           "$i_am",
           "our",
           "$heart_on_fire",
-          "made",
+          "$scissors",
           "a",
           "$covenant",
           "with",
