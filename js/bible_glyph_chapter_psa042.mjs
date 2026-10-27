@@ -204,7 +204,7 @@ export function bible_glyph_chapter_psa042() {
           "$sea+down_arrow",
           "calls",
           "to",
-          "deep",
+          "$sea+down_arrow",
           "in",
           "the",
           "$voice",
