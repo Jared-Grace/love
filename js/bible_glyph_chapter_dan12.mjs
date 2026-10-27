@@ -58,7 +58,7 @@ export function bible_glyph_chapter_dan12() {
           "But",
           "at",
           "that",
-          "time",
+          "$clock",
           "your",
           "$family",
           "will",
