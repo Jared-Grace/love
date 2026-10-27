@@ -863,7 +863,7 @@ export function bible_glyph_chapter_isa49() {
           "captives",
           "of",
           "the",
-          "mighty",
+          "$might+person",
           "will",
           "be",
           "$hand_receiving,",
