@@ -74,7 +74,7 @@ export function bible_glyph_chapter_psa051() {
       {
         verse_number: 3,
         words: [
-          "For",
+          "$pointing",
           "I",
           "$lightbulb",
           "my",
