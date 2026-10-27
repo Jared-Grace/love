@@ -328,7 +328,7 @@ export function bible_glyph_chapter_exo35() {
           "poles,",
           "the",
           "anointing",
-          "oil",
+          "$lotion_bottle",
           "and",
           "the",
           "fragrant",
