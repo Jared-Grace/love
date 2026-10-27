@@ -543,7 +543,7 @@ export function bible_glyph_chapter_jos01() {
           "they",
           "answered",
           "$i_am+rescue,",
-          "Everything",
+          "$all",
           "you",
           "have",
           "commanded",
