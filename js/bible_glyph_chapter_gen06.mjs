@@ -340,7 +340,7 @@ export function bible_glyph_chapter_gen06() {
           "to",
           "$proper_name$Noah,",
           "The",
-          "end",
+          "$stop_sign",
           "of",
           "all",
           "$meat",
