@@ -1596,7 +1596,7 @@ export function bible_glyph_chapter_lev13() {
           "$shuffle",
           "$red_circle+describing,",
           "then",
-          "it",
+          "$pointing_back",
           "is",
           "contaminated",
           "with",
