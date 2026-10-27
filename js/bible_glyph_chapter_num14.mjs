@@ -438,7 +438,7 @@ export function bible_glyph_chapter_num14() {
           "already",
           "$ear",
           "that",
-          "You,",
+          "$you,",
           "O",
           "$i_am,",
           "are",
