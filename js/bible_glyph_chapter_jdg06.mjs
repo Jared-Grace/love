@@ -624,7 +624,7 @@ export function bible_glyph_chapter_jdg06() {
           "broth",
           "in",
           "a",
-          "pot,",
+          "$pot_of_food+fire,",
           "and",
           "brought",
           "them",
