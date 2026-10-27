@@ -1266,7 +1266,7 @@ export function bible_glyph_chapter_deu28() {
           "trees",
           "$all",
           "your",
-          "territory,",
+          "$passport_control,",
           "but",
           "will",
           "$no_entry",
