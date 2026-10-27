@@ -971,7 +971,7 @@ export function bible_glyph_chapter_2ch34() {
           "their",
           "$hand.",
           "My",
-          "wrath",
+          "$angry_face",
           "will",
           "be",
           "poured",
