@@ -96,7 +96,7 @@ export function bible_glyph_chapter_job01() {
           "take",
           "$walking",
           "$hammer+doing",
-          "feasts",
+          "$cup_with_straw+thing",
           "in",
           "their",
           "$house,",
