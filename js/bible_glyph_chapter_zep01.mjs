@@ -556,7 +556,7 @@ export function bible_glyph_chapter_zep01() {
           "poured",
           "out",
           "like",
-          "dust",
+          "$dust",
           "and",
           "their",
           "flesh",
