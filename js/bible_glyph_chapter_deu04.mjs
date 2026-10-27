@@ -1397,7 +1397,7 @@ export function bible_glyph_chapter_deu04() {
           "as",
           "it",
           "is",
-          "this",
+          "$flashlight",
           "$sun.",
         ],
       },
