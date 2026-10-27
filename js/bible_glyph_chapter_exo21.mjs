@@ -769,7 +769,7 @@ export function bible_glyph_chapter_exo21() {
           "$pointing",
           "an",
           "$ox",
-          "gores",
+          "$ox+horn+doing",
           "a",
           "$man_beard",
           "or",
