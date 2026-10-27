@@ -525,7 +525,7 @@ export function bible_glyph_chapter_jdg07() {
           "His",
           "friend",
           "replied,",
-          "This",
+          "$flashlight",
           "is",
           "$dotted_line_face",
           "less",
