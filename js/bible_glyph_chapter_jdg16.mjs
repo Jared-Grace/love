@@ -216,7 +216,7 @@ export function bible_glyph_chapter_jdg16() {
         verse_number: 6,
         words: [
           "So",
-          "Delilah",
+          "$battery+down_arrow+female_sign+proper_name",
           "$speech",
           "to",
           "$proper_name$Samson,",
