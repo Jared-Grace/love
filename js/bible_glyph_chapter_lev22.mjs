@@ -674,7 +674,7 @@ export function bible_glyph_chapter_lev22() {
           "anything",
           "with",
           "a",
-          "running",
+          "$microbe+droplet+describing",
           "sore,",
           "a",
           "festering",
