@@ -126,7 +126,7 @@ export function bible_glyph_chapter_gen42() {
           "to",
           "buy",
           "$wheat+coin+doing",
-          "among",
+          "$radio_button",
           "those",
           "who",
           "$footprints,",
