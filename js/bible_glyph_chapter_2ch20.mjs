@@ -975,7 +975,7 @@ export function bible_glyph_chapter_2ch20() {
           "$valley",
           "of",
           "$proper_name$Beracah",
-          "to",
+          "$finish",
           "this",
           "$sun.",
         ],
