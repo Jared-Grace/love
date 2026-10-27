@@ -34,7 +34,7 @@ export function bible_glyph_chapter_1ki22() {
           "$link,",
           "in",
           "the",
-          "third",
+          "$third_place",
           "$year,",
           "$i_am+scales",
           "$king",
