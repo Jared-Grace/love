@@ -185,7 +185,7 @@ export function bible_glyph_chapter_psa090() {
           "$all",
           "our",
           "$sun",
-          "decline",
+          "$curving_right+doing",
           "in",
           "Your",
           "fury;",
