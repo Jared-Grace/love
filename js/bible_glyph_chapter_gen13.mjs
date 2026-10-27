@@ -89,7 +89,7 @@ export function bible_glyph_chapter_gen13() {
       {
         verse_number: 4,
         words: [
-          "to",
+          "$toward",
           "the",
           "$place",
           "of",
