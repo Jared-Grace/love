@@ -58,7 +58,7 @@ export function bible_glyph_chapter_gen15() {
           "$hands_giving",
           "me,",
           "since",
-          "I",
+          "$me",
           "$walking",
           "childless,",
           "and",
