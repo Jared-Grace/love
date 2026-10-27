@@ -201,7 +201,7 @@ export function bible_glyph_chapter_psa022() {
           "at",
           "my",
           "mother's",
-          "breast.",
+          "$breast_feeding.",
         ],
       },
       {
