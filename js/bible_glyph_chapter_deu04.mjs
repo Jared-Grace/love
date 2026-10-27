@@ -15,7 +15,7 @@ export function bible_glyph_chapter_deu04() {
           "$ear",
           "$watch,",
           "O",
-          "Israel,",
+          "$wrestling+heart_on_fire,",
           "the",
           "statutes",
           "and",
