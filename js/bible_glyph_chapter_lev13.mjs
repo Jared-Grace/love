@@ -815,7 +815,7 @@ export function bible_glyph_chapter_lev13() {
           "spot",
           "has",
           "turned",
-          "white",
+          "$white_circle",
           "and",
           "the",
           "spot",
