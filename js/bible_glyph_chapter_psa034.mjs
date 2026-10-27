@@ -169,7 +169,7 @@ export function bible_glyph_chapter_psa034() {
           "$face_savoring_food+doing",
           "and",
           "$eye",
-          "that",
+          "$pointing",
           "the",
           "$i_am",
           "is",
