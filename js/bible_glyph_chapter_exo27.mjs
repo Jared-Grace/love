@@ -25,7 +25,7 @@ export function bible_glyph_chapter_exo27() {
           "long",
           "and",
           "$five",
-          "cubits",
+          "$triangular_ruler",
           "wide;",
           "the",
           "$altar",
