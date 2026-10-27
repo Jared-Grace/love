@@ -26,7 +26,7 @@ export function bible_glyph_chapter_jos24() {
           "summoned",
           "the",
           "elders,",
-          "leaders,",
+          "$person_gesturing_ok,",
           "judges",
           "and",
           "officers",
