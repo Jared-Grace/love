@@ -522,7 +522,7 @@ export function bible_glyph_chapter_jer18() {
           "us",
           "make",
           "plans",
-          "against",
+          "$pointing_up",
           "$up_arrow+i_am,",
           "for",
           "the",
