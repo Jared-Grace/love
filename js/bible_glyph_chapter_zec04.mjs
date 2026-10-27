@@ -346,7 +346,7 @@ export function bible_glyph_chapter_zec04() {
           "the",
           "golden",
           "oil",
-          "pours?",
+          "$tray_out+droplet+doing?",
         ],
       },
       {
