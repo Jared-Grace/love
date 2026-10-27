@@ -533,7 +533,7 @@ export function bible_glyph_chapter_job03() {
           "I",
           "am",
           "$no_entry",
-          "quiet,",
+          "$pause_button+doing,",
           "I",
           "have",
           "$no_entry",
