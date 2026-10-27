@@ -573,7 +573,7 @@ export function bible_glyph_chapter_zec09() {
           "be,",
           "and",
           "$flashlight+question",
-          "beautiful!",
+          "$face+sparkle+thing!",
           "Grain",
           "will",
           "make",
