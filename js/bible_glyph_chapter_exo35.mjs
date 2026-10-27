@@ -68,7 +68,7 @@ export function bible_glyph_chapter_exo35() {
           "rest",
           "to",
           "$i_am.",
-          "Whoever",
+          "$all",
           "$hammer+doing",
           "any",
           "$tools",
