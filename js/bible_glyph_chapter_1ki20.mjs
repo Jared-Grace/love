@@ -993,7 +993,7 @@ export function bible_glyph_chapter_1ki20() {
           "$hands_giving",
           "$all",
           "this",
-          "great",
+          "$top",
           "$crowd+loudspeaker",
           "into",
           "your",
