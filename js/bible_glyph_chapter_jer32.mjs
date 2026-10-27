@@ -1294,7 +1294,7 @@ export function bible_glyph_chapter_jer32() {
           "I",
           "will",
           "surely",
-          "gather",
+          "$tray_in+doing",
           "My",
           "people",
           "from",
