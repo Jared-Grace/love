@@ -243,7 +243,7 @@ export function bible_glyph_chapter_lam01() {
           "and",
           "wandering,",
           "$city+peace",
-          "remembers",
+          "$reminder_ribbon",
           "all",
           "the",
           "treasures",
