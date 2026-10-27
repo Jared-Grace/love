@@ -946,7 +946,7 @@ export function bible_glyph_chapter_exo09() {
           "you",
           "still",
           "do",
-          "not",
+          "$clock+back",
           "fear",
           "$i_am",
           "our",
