@@ -574,7 +574,7 @@ export function bible_glyph_chapter_psa022() {
           "the",
           "$i_am",
           "will",
-          "praise",
+          "$clapping_hands",
           "Him.",
           "May",
           "your",
