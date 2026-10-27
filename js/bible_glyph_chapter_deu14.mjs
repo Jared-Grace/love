@@ -575,7 +575,7 @@ export function bible_glyph_chapter_deu14() {
           "will",
           "$check_box",
           "to",
-          "put",
+          "$palm_down",
           "His",
           "$i_am",
           "is",
