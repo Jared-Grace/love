@@ -190,7 +190,7 @@ export function bible_glyph_chapter_num22() {
           "for",
           "me,",
           "because",
-          "they",
+          "$pointing_back",
           "are",
           "too",
           "$bone+describing",
