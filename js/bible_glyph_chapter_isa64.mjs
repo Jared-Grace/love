@@ -136,7 +136,7 @@ export function bible_glyph_chapter_isa64() {
           "$hammer+doing",
           "$ruler+thing,",
           "who",
-          "remember",
+          "$reminder_ribbon",
           "Your",
           "$road.",
           "Surely",
