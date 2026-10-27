@@ -314,7 +314,7 @@ export function bible_glyph_chapter_gen13() {
           "for",
           "himself",
           "the",
-          "whole",
+          "$all",
           "plain",
           "of",
           "the",
