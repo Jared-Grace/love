@@ -672,7 +672,7 @@ export function bible_glyph_chapter_2ch06() {
           "$eyes",
           "be",
           "$unlocked",
-          "toward",
+          "$toward",
           "this",
           "$house",
           "day",
