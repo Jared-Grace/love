@@ -570,7 +570,7 @@ export function bible_glyph_chapter_num24() {
           "will",
           "$hammer+doing",
           "with",
-          "valor.",
+          "$raised_fist.",
         ],
       },
       {
