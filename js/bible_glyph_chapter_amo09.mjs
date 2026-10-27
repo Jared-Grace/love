@@ -34,7 +34,7 @@ export function bible_glyph_chapter_amo09() {
           "that",
           "the",
           "thresholds",
-          "shake.",
+          "$earth+up_down_arrow+doing.",
           "Topple",
           "them",
           "on",
