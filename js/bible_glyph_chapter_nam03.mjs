@@ -523,7 +523,7 @@ export function bible_glyph_chapter_nam03() {
           "There",
           "is",
           "no",
-          "healing",
+          "$dim_button+female_sign",
           "for",
           "your",
           "injury;",
