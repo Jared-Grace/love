@@ -880,7 +880,7 @@ export function bible_glyph_chapter_2ch06() {
           "them",
           "to",
           "the",
-          "land",
+          "$brown_square",
           "that",
           "You",
           "$hands_giving",
