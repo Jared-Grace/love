@@ -56,7 +56,7 @@ export function bible_glyph_chapter_deu19() {
           "apart",
           "for",
           "yourselves",
-          "three",
+          "$three",
           "$city$s",
           "within",
           "the",
