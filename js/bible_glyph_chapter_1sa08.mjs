@@ -484,7 +484,7 @@ export function bible_glyph_chapter_1sa08() {
           "your",
           "$sheep,",
           "and",
-          "you",
+          "$you",
           "yourselves",
           "will",
           "become",
