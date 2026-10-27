@@ -217,7 +217,7 @@ export function bible_glyph_chapter_num19() {
           "heifer",
           "must",
           "also",
-          "wash",
+          "$bubbles+t_shirt+doing",
           "his",
           "$garment",
           "in",
