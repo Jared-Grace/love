@@ -160,7 +160,7 @@ export function bible_glyph_chapter_num24() {
           "groves,",
           "like",
           "$garden",
-          "beside",
+          "$pointing_up",
           "a",
           "stream,",
           "like",
