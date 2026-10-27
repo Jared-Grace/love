@@ -476,7 +476,7 @@ export function bible_glyph_chapter_job03() {
           "is",
           "hidden,",
           "whom",
-          "God",
+          "$heart_on_fire",
           "has",
           "hedged",
           "in?",
