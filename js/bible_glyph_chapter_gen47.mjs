@@ -641,7 +641,7 @@ export function bible_glyph_chapter_gen47() {
           "we",
           "and",
           "our",
-          "land",
+          "$brown_square",
           "as",
           "well?",
           "Buy",
