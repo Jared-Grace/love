@@ -197,7 +197,7 @@ export function bible_glyph_chapter_mic06() {
           "of",
           "a",
           "year",
-          "calves?",
+          "$calf?",
         ],
       },
       {
