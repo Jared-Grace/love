@@ -357,7 +357,7 @@ export function bible_glyph_chapter_lev05() {
           "$bow.",
           "He",
           "$no_entry",
-          "put",
+          "$palm_down",
           "olive",
           "oil",
           "on",
