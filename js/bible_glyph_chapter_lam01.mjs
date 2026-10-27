@@ -96,7 +96,7 @@ export function bible_glyph_chapter_lam01() {
           "and",
           "harsh",
           "$kneeling+thing;",
-          "she",
+          "$pointing_back",
           "$person+house",
           "among",
           "the",
