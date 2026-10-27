@@ -833,7 +833,7 @@ export function bible_glyph_chapter_ezk03() {
           "$no_entry",
           "$walking+tray_out",
           "out",
-          "among",
+          "$radio_button",
           "the",
           "people.",
         ],
