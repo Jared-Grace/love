@@ -422,7 +422,7 @@ export function bible_glyph_chapter_num23() {
           "where",
           "he",
           "built",
-          "seven",
+          "$seven",
           "$altar",
           "and",
           "offered",
