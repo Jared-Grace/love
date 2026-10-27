@@ -443,7 +443,7 @@ export function bible_glyph_chapter_gen23() {
           "worth",
           "$four",
           "$input_numbers+all",
-          "shekels",
+          "$coin",
           "of",
           "$silver,",
           "what",
