@@ -624,7 +624,7 @@ export function bible_glyph_chapter_num35() {
           "avenger",
           "of",
           "$blood",
-          "finds",
+          "$toward+person+doing",
           "the",
           "murderer,",
           "he",
