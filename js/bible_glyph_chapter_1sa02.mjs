@@ -1219,7 +1219,7 @@ export function bible_glyph_chapter_1sa02() {
         verse_number: 36,
         words: [
           "And",
-          "everyone",
+          "$all",
           "left",
           "in",
           "your",
