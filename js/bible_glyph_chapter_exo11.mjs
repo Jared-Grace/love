@@ -177,7 +177,7 @@ export function bible_glyph_chapter_exo11() {
           "the",
           "servant",
           "girl",
-          "behind",
+          "$next_track",
           "the",
           "hand",
           "mill,",
