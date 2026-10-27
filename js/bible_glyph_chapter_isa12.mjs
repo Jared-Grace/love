@@ -33,7 +33,7 @@ export function bible_glyph_chapter_isa12() {
           "with",
           "me,",
           "Your",
-          "anger",
+          "$nose+fire",
           "has",
           "$turn_back",
           "and",
