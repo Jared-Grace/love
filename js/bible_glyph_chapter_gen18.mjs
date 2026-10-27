@@ -779,7 +779,7 @@ export function bible_glyph_chapter_gen18() {
           "will",
           "spare",
           "the",
-          "whole",
+          "$all",
           "$place",
           "on",
           "their",
