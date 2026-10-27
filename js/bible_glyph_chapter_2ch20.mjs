@@ -582,7 +582,7 @@ export function bible_glyph_chapter_2ch20() {
           "You",
           "need",
           "$no_entry",
-          "fight",
+          "$crossed_swords+doing",
           "this",
           "battle.",
           "Take",
