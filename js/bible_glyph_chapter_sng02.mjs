@@ -298,7 +298,7 @@ export function bible_glyph_chapter_sng02() {
           "$hands_giving",
           "their",
           "fragrance.",
-          "Arise,",
+          "$person+pointing_up,",
           "$walking,",
           "my",
           "darling,",
