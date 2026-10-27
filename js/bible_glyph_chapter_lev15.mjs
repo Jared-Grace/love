@@ -68,7 +68,7 @@ export function bible_glyph_chapter_lev15() {
           "discharge",
           "to",
           "flow",
-          "or",
+          "$shuffle",
           "his",
           "$meat",
           "blocks",
