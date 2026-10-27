@@ -193,7 +193,7 @@ export function bible_glyph_chapter_gen37() {
           "suddenly",
           "my",
           "sheaf",
-          "rose",
+          "$person+pointing_up",
           "and",
           "stood",
           "upright,",
