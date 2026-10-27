@@ -1674,7 +1674,7 @@ export function bible_glyph_chapter_deu04() {
           "of",
           "$proper_name$Bashan,",
           "the",
-          "two",
+          "$two",
           "$proper_name$Amorite",
           "$king",
           "across",
