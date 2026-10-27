@@ -323,7 +323,7 @@ export function bible_glyph_chapter_isa02() {
           "$i_am",
           "and",
           "the",
-          "splendor",
+          "$crown+sparkles",
           "of",
           "His",
           "majesty.",
