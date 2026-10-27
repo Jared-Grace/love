@@ -1348,7 +1348,7 @@ export function bible_glyph_chapter_2ki17() {
           "your",
           "$heart_on_fire,",
           "and",
-          "He",
+          "$pointing_back",
           "will",
           "deliver",
           "you",
