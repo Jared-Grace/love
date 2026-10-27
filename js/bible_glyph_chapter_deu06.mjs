@@ -101,7 +101,7 @@ export function bible_glyph_chapter_deu06() {
         words: [
           "$ear,",
           "O",
-          "Israel,",
+          "$wrestling+heart_on_fire,",
           "and",
           "be",
           "careful",
