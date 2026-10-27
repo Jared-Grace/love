@@ -831,7 +831,7 @@ export function bible_glyph_chapter_exo32() {
           "$fire,",
           "out",
           "came",
-          "this",
+          "$flashlight",
           "$calf.",
         ],
       },
