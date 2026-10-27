@@ -289,7 +289,7 @@ export function bible_glyph_chapter_exo15() {
           "$moai,",
           "O",
           "$i_am?",
-          "Who",
+          "$person+question",
           "is",
           "like",
           "You,",
