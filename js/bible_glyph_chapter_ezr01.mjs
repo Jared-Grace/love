@@ -78,7 +78,7 @@ export function bible_glyph_chapter_ezr01() {
           "has",
           "$hands_giving",
           "me",
-          "all",
+          "$all",
           "the",
           "$castle",
           "of",
