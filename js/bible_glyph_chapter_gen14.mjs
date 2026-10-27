@@ -75,7 +75,7 @@ export function bible_glyph_chapter_gen14() {
           "these",
           "came",
           "together",
-          "to",
+          "$toward",
           "the",
           "$valley",
           "of",
