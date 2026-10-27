@@ -1788,7 +1788,7 @@ export function bible_glyph_chapter_deu28() {
           "she",
           "would",
           "$no_entry",
-          "venture",
+          "$test_tube",
           "to",
           "set",
           "the",
