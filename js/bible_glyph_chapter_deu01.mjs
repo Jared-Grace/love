@@ -874,7 +874,7 @@ export function bible_glyph_chapter_deu01() {
           "of",
           "the",
           "$proper_name$Anakim",
-          "there.",
+          "$telescope.",
         ],
       },
       {
