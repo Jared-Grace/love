@@ -386,7 +386,7 @@ export function bible_glyph_chapter_ezk03() {
           "creatures",
           "$face_blowing_a_kiss",
           "$woman",
-          "against",
+          "$toward",
           "another,",
           "and",
           "the",
