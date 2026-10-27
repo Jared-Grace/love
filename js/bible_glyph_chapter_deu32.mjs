@@ -140,7 +140,7 @@ export function bible_glyph_chapter_deu32() {
         verse_number: 6,
         words: [
           "Is",
-          "this",
+          "$flashlight",
           "how",
           "you",
           "repay",
