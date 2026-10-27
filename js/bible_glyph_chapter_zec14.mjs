@@ -139,7 +139,7 @@ export function bible_glyph_chapter_zec14() {
           "$sea,",
           "forming",
           "a",
-          "great",
+          "$top",
           "$valley,",
           "with",
           "half",
