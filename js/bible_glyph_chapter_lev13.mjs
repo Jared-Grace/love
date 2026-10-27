@@ -931,7 +931,7 @@ export function bible_glyph_chapter_lev13() {
           "But",
           "$traffic_light",
           "the",
-          "spot",
+          "$white_circle+round_pushpin",
           "is",
           "unchanged",
           "and",
