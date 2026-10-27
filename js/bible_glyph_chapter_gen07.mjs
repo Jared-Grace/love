@@ -323,7 +323,7 @@ export function bible_glyph_chapter_gen07() {
           "the",
           "$rain+water_wave",
           "$link",
-          "upon",
+          "$pointing_up",
           "the",
           "$earth",
           "for",
