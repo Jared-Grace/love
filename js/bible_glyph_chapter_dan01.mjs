@@ -496,7 +496,7 @@ export function bible_glyph_chapter_dan01() {
         words: [
           "To",
           "$flashlight+flashlight",
-          "four",
+          "$four",
           "$child",
           "$heart_on_fire",
           "$hands_giving",
