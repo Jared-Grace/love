@@ -411,7 +411,7 @@ export function bible_glyph_chapter_pro02() {
           "be",
           "$scissors",
           "off",
-          "from",
+          "$tray_out",
           "the",
           "$earth,",
           "and",
