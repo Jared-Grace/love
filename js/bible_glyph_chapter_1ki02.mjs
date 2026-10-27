@@ -794,7 +794,7 @@ export function bible_glyph_chapter_1ki02() {
           "has",
           "not",
           "$mouth",
-          "this",
+          "$flashlight",
           "$speech",
           "against",
           "his",
