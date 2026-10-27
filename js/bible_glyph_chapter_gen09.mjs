@@ -483,7 +483,7 @@ export function bible_glyph_chapter_gen09() {
           "$flashlight",
           "is",
           "the",
-          "sign",
+          "$placard",
           "of",
           "the",
           "$covenant",
