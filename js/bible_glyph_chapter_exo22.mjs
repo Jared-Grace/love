@@ -485,7 +485,7 @@ export function bible_glyph_chapter_exo22() {
           "$skull+doing",
           "while",
           "its",
-          "owner",
+          "$key",
           "is",
           "not",
           "present,",
