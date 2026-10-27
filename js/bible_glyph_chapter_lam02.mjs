@@ -667,7 +667,7 @@ export function bible_glyph_chapter_lam02() {
           "They",
           "hiss",
           "and",
-          "gnash",
+          "$grimacing_face+tooth+doing",
           "their",
           "teeth,",
           "$speech,",
