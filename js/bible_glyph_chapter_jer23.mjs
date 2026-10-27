@@ -1086,7 +1086,7 @@ export function bible_glyph_chapter_jer23() {
           "$shaking_face",
           "with",
           "their",
-          "reckless",
+          "$water+bubbles+thing",
           "lies.",
           "It",
           "was",
