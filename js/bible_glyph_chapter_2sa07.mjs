@@ -83,7 +83,7 @@ export function bible_glyph_chapter_2sa07() {
           "in",
           "your",
           "$heart_organ,",
-          "for",
+          "$pointing",
           "the",
           "$i_am",
           "is",
