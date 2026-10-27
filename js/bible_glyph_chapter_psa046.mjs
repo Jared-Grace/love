@@ -178,7 +178,7 @@ export function bible_glyph_chapter_psa046() {
           "the",
           "$i_am,",
           "$back+flashlight",
-          "brings",
+          "$palm_down",
           "devastation",
           "upon",
           "the",
