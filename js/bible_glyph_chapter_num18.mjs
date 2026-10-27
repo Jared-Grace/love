@@ -783,7 +783,7 @@ export function bible_glyph_chapter_num18() {
           "for",
           "the",
           "work",
-          "they",
+          "$pointing_back",
           "$kneeling+doing",
           "in",
           "the",
