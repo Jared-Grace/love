@@ -814,7 +814,7 @@ export function bible_glyph_chapter_jdg16() {
           "did",
           "$no_entry",
           "$lightbulb",
-          "that",
+          "$pointing",
           "the",
           "$i_am",
           "had",
