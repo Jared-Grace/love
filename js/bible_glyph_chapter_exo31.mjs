@@ -332,7 +332,7 @@ export function bible_glyph_chapter_exo31() {
           "$guard",
           "the",
           "$sabbath,",
-          "for",
+          "$pointing",
           "it",
           "is",
           "$sparkle+thing",
