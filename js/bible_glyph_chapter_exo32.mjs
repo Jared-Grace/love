@@ -675,7 +675,7 @@ export function bible_glyph_chapter_exo32() {
           "he",
           "$hand_receiving",
           "the",
-          "calf",
+          "$calf",
           "they",
           "had",
           "$hammer+doing,",
