@@ -57,7 +57,7 @@ export function bible_glyph_chapter_gen17() {
           "will",
           "$multiply+doing",
           "you",
-          'exceedingly."',
+          "$double_exclamation",
         ],
       },
       {
