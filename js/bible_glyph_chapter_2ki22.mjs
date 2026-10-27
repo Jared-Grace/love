@@ -776,7 +776,7 @@ export function bible_glyph_chapter_2ki22() {
           "$all",
           "the",
           "$thumbs_down",
-          "that",
+          "$back+flashlight",
           "I",
           "will",
           "$footprints",
