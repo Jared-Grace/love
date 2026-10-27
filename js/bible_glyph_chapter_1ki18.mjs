@@ -1054,7 +1054,7 @@ export function bible_glyph_chapter_1ki18() {
           "$hammer+doing",
           "a",
           "$water_wave+up_arrow+road",
-          "around",
+          "$around",
           "the",
           "$altar",
           "large",
