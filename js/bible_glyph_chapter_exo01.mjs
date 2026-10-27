@@ -154,7 +154,7 @@ export function bible_glyph_chapter_exo01() {
           "Look,",
           "he",
           "$speech",
-          "to",
+          "$toward",
           "his",
           "$family,",
           "the",
