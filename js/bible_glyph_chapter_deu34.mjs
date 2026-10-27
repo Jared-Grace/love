@@ -145,7 +145,7 @@ export function bible_glyph_chapter_deu34() {
           "you",
           "will",
           "$no_entry",
-          "cross",
+          "$bridge",
           "into",
           'it."',
         ],
