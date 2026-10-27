@@ -1155,7 +1155,7 @@ export function bible_glyph_chapter_2ki09() {
           "up",
           "at",
           "the",
-          "window",
+          "$window",
           "and",
           "$speech,",
           "Who",
