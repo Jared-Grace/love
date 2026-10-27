@@ -525,7 +525,7 @@ export function bible_glyph_chapter_deu18() {
           "$speech",
           "in",
           "his",
-          "mouth,",
+          "$face_with_open_mouth,",
           "and",
           "he",
           "will",
