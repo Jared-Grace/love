@@ -242,7 +242,7 @@ export function bible_glyph_chapter_ecc03() {
           "He",
           "has",
           "$hammer+doing",
-          "everything",
+          "$all",
           "beautiful",
           "in",
           "its",
