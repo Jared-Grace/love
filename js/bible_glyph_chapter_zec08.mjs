@@ -705,7 +705,7 @@ export function bible_glyph_chapter_zec08() {
         verse_number: 22,
         words: [
           "And",
-          "many",
+          "$multiply",
           "$family",
           "and",
           "strong",
