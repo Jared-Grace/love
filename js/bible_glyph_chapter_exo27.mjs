@@ -484,7 +484,7 @@ export function bible_glyph_chapter_exo27() {
           "$tent+house",
           "for",
           "every",
-          "use,",
+          "$kneeling+thing,",
           "including",
           "all",
           "its",
