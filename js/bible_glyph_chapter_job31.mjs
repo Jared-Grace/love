@@ -765,7 +765,7 @@ export function bible_glyph_chapter_job31() {
           "would",
           "$lifting",
           "it",
-          "on",
+          "$pointing_up",
           "my",
           "shoulder",
           "and",
