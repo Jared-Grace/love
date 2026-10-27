@@ -233,7 +233,7 @@ export function bible_glyph_chapter_isa26() {
           "of",
           "the",
           "$globe",
-          "learn",
+          "$learner+doing",
           "$ruler+thing.",
         ],
       },
