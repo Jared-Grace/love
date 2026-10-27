@@ -18,7 +18,7 @@ export function bible_glyph_chapter_lam03() {
           "$me",
           "am",
           "the",
-          "man",
+          "$might+man_beard",
           "who",
           "has",
           "$eye",
