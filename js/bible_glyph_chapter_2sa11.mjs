@@ -522,7 +522,7 @@ export function bible_glyph_chapter_2sa11() {
           "he",
           "wrote,",
           "$speech,",
-          "Put",
+          "$hands_giving+up_arrow",
           "$proper_name$Uriah",
           "at",
           "the",
