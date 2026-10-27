@@ -431,7 +431,7 @@ export function bible_glyph_chapter_num11() {
           "to",
           "$hammer+doing",
           "me,",
-          "please",
+          "$pleading",
           "kill",
           "me",
           "right",
