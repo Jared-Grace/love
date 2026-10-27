@@ -247,7 +247,7 @@ export function bible_glyph_chapter_jos02() {
           "the",
           "$gate",
           "was",
-          "shut.",
+          "$locked+doing.",
         ],
       },
       {
