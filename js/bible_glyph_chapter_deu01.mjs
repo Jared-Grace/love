@@ -1026,7 +1026,7 @@ export function bible_glyph_chapter_deu01() {
           "$speech,",
           "He",
           "grew",
-          "angry",
+          "$angry_face+collision+doing",
           "and",
           "swore",
           "an",
