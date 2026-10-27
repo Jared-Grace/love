@@ -184,7 +184,7 @@ export function bible_glyph_chapter_deu14() {
           "the",
           "rock",
           "$badger.",
-          "Although",
+          "$pointing",
           "they",
           "chew",
           "the",
