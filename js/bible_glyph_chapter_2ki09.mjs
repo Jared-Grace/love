@@ -360,7 +360,7 @@ export function bible_glyph_chapter_2ki09() {
           "prophet",
           "opened",
           "the",
-          "door",
+          "$door+thing",
           "and",
           "ran.",
         ],
