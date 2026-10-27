@@ -266,7 +266,7 @@ export function bible_glyph_chapter_gen16() {
           "$walking?",
           "She",
           "$speech,",
-          "I",
+          "$me",
           "am",
           "running",
           "away",
