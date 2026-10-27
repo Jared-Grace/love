@@ -471,7 +471,7 @@ export function bible_glyph_chapter_2ki17() {
           "like",
           "their",
           "$father,",
-          "who",
+          "$back+flashlight",
           "did",
           "$no_entry",
           "$anchor",
