@@ -1058,7 +1058,7 @@ export function bible_glyph_chapter_2ki04() {
           "he",
           "$footprints",
           "in,",
-          "closed",
+          "$locked+doing",
           "the",
           "door",
           "behind",
