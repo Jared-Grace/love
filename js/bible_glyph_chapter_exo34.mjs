@@ -114,7 +114,7 @@ export function bible_glyph_chapter_exo34() {
           "$fishing_pole+proper_name",
           "chiseled",
           "out",
-          "two",
+          "$two",
           "tablets",
           "of",
           "$stone",
