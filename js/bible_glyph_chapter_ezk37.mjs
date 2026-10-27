@@ -732,7 +732,7 @@ export function bible_glyph_chapter_ezk37() {
           "into",
           "their",
           "own",
-          "land.",
+          "$brown_square.",
         ],
       },
       {
