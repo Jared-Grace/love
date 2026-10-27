@@ -807,7 +807,7 @@ export function bible_glyph_chapter_deu32() {
           "wise,",
           "they",
           "would",
-          "understand",
+          "$nerd_face",
           "it;",
           "they",
           "would",
