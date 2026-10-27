@@ -809,7 +809,7 @@ export function bible_glyph_chapter_exo30() {
           "my",
           "$sparkle+thing",
           "anointing",
-          "oil",
+          "$lotion_bottle",
           "for",
           "the",
           "generations",
