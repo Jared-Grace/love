@@ -634,7 +634,7 @@ export function bible_glyph_chapter_2ki17() {
           "$puzzle_piece+doing",
           "except",
           "the",
-          "tribe",
+          "$wood",
           "of",
           "$hands_raised+proper_name",
           "alone.",
