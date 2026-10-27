@@ -549,7 +549,7 @@ export function bible_glyph_chapter_exo12() {
           "Bread,",
           "for",
           "on",
-          "this",
+          "$flashlight",
           "very",
           "$sun",
           "I",
