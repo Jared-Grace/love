@@ -633,7 +633,7 @@ export function bible_glyph_chapter_exo10() {
           "that",
           "He",
           "may",
-          "remove",
+          "$away+doing",
           "this",
           "$skull",
           "from",
