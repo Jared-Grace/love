@@ -392,7 +392,7 @@ export function bible_glyph_chapter_neh08() {
           "who",
           "have",
           "$dotted_line_face",
-          "prepared,",
+          "$pin+doing,",
           "since",
           "$sun",
           "is",
