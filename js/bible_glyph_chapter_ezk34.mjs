@@ -691,7 +691,7 @@ export function bible_glyph_chapter_ezk34() {
           "$ox+horn+doing",
           "$all",
           "the",
-          "weak",
+          "$thermometer_face+doing",
           "ones",
           "with",
           "your",
