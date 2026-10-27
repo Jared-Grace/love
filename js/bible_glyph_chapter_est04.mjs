@@ -341,7 +341,7 @@ export function bible_glyph_chapter_est04() {
           "$king",
           "$lightbulb",
           "that",
-          "one",
+          "$one",
           "law",
           "applies",
           "to",
