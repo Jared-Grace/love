@@ -162,7 +162,7 @@ export function bible_glyph_chapter_exo11() {
           "$skull+doing,",
           "from",
           "the",
-          "firstborn",
+          "$first_place+baby",
           "of",
           "$house+proper_name",
           "who",
