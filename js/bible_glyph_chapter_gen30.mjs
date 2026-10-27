@@ -868,7 +868,7 @@ export function bible_glyph_chapter_gen30() {
           "wages.",
           "Every",
           "one",
-          "that",
+          "$back+flashlight",
           "is",
           "not",
           "speckled",
