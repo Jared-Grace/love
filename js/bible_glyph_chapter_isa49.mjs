@@ -876,7 +876,7 @@ export function bible_glyph_chapter_isa49() {
           "will",
           "be",
           "retrieved;",
-          "I",
+          "$me",
           "will",
           "contend",
           "with",
