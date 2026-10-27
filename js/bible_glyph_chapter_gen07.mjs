@@ -405,7 +405,7 @@ export function bible_glyph_chapter_gen07() {
           "by",
           "$two",
           "of",
-          "every",
+          "$all",
           "$meat",
           "that",
           "has",
