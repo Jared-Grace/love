@@ -65,7 +65,7 @@ export function bible_glyph_chapter_pro16() {
           "$stone+wheel+doing",
           "your",
           "works",
-          "to",
+          "$toward",
           "the",
           "$i_am,",
           "and",
