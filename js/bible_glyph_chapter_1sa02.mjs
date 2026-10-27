@@ -1013,7 +1013,7 @@ export function bible_glyph_chapter_1sa02() {
           "now",
           "the",
           "$i_am",
-          "declares:",
+          "$microphone:",
           "Far",
           "be",
           "it",
