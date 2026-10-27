@@ -702,7 +702,7 @@ export function bible_glyph_chapter_1sa24() {
         words: [
           "So",
           "$watch",
-          "swear",
+          "$raised_back_of_hand+doing",
           "to",
           "me",
           "by",
