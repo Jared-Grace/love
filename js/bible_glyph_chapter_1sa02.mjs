@@ -1048,7 +1048,7 @@ export function bible_glyph_chapter_1sa02() {
           "when",
           "I",
           "will",
-          "cut",
+          "$axe+tree+doing",
           "off",
           "your",
           "strength",
