@@ -44,7 +44,7 @@ export function bible_glyph_chapter_psa073() {
           "feet",
           "had",
           "almost",
-          "stumbled;",
+          "$white_cane+doing;",
           "my",
           "steps",
           "had",
