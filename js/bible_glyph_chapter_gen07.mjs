@@ -127,7 +127,7 @@ export function bible_glyph_chapter_gen07() {
           "$four+zero",
           "$sun",
           "and",
-          "forty",
+          "$four+zero",
           "$night,",
           "and",
           "I",
