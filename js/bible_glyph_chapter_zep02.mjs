@@ -103,7 +103,7 @@ export function bible_glyph_chapter_zep02() {
           "$proper_name$Gaza",
           "will",
           "be",
-          "abandoned,",
+          "$derelict_house+doing,",
           "and",
           "$proper_name$Ashkelon",
           "left",
