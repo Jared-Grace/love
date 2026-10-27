@@ -553,7 +553,7 @@ export function bible_glyph_chapter_1ch29() {
           "$father.",
           "Our",
           "$sun",
-          "on",
+          "$pointing_up",
           "the",
           "$earth",
           "are",
