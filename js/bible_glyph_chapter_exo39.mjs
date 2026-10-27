@@ -733,7 +733,7 @@ export function bible_glyph_chapter_exo39() {
           "linen,",
           "the",
           "ornate",
-          "headbands",
+          "$person_wearing_turban+mountain",
           "of",
           "fine",
           "linen,",
