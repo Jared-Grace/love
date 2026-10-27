@@ -183,7 +183,7 @@ export function bible_glyph_chapter_1ki17() {
           "had",
           "been",
           "$no_entry",
-          "rain",
+          "$rain+water_wave",
           "in",
           "the",
           "$earth.",
