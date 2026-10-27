@@ -193,7 +193,7 @@ export function bible_glyph_chapter_jos06() {
           "$seven",
           "$priest",
           "carry",
-          "seven",
+          "$seven",
           "rams",
           "horns",
           "in",
