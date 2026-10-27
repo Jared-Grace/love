@@ -1097,7 +1097,7 @@ export function bible_glyph_chapter_num22() {
           "$no_entry",
           "$lightbulb",
           "that",
-          "you",
+          "$you",
           "were",
           "standing",
           "in",
