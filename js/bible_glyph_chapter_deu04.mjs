@@ -1485,7 +1485,7 @@ export function bible_glyph_chapter_deu04() {
       {
         verse_number: 41,
         words: [
-          "Then",
+          "$telescope+clock",
           "$fishing_pole+proper_name",
           "set",
           "aside",
