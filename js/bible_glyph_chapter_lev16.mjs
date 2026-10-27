@@ -703,7 +703,7 @@ export function bible_glyph_chapter_lev16() {
           "with",
           "his",
           "$index_pointing_up",
-          "seven",
+          "$seven",
           "times,",
           "to",
           "cleanse",
