@@ -362,7 +362,7 @@ export function bible_glyph_chapter_lev24() {
           "$walking+tray_out",
           "the",
           "$speech+thumbs_down",
-          "outside",
+          "$sun_behind_small_cloud",
           "the",
           "$camp,",
           "and",
