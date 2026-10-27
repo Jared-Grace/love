@@ -269,7 +269,7 @@ export function bible_glyph_chapter_mic01() {
           "will",
           "lament",
           "and",
-          "wail;",
+          "$crying_face+loudspeaker+doing;",
           "I",
           "will",
           "$walking",
