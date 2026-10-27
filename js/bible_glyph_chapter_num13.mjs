@@ -443,7 +443,7 @@ export function bible_glyph_chapter_num13() {
           "$compass+down_arrow",
           "and",
           "$footprints",
-          "to",
+          "$finish",
           "$proper_name$Hebron,",
           "where",
           "$proper_name$Ahiman,",
