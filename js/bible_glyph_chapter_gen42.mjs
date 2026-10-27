@@ -748,7 +748,7 @@ export function bible_glyph_chapter_gen42() {
           "lodged",
           "for",
           "the",
-          "night,",
+          "$night+thing,",
           "$one",
           "of",
           "them",
