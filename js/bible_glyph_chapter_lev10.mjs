@@ -36,7 +36,7 @@ export function bible_glyph_chapter_lev10() {
           "offered",
           "unauthorized",
           "$fire",
-          "before",
+          "$face",
           "$i_am,",
           "$no_entry",
           "His",
