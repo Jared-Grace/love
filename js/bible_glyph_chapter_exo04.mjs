@@ -171,7 +171,7 @@ export function bible_glyph_chapter_exo04() {
       {
         verse_number: 6,
         words: [
-          "Furthermore,",
+          "$repeat,",
           "the",
           "$i_am",
           "$speech",
