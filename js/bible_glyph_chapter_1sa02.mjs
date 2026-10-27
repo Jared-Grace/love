@@ -1187,7 +1187,7 @@ export function bible_glyph_chapter_1sa02() {
           "He",
           "will",
           "$hammer+doing",
-          "whatever",
+          "$back+flashlight",
           "is",
           "in",
           "My",
