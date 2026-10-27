@@ -91,7 +91,7 @@ export function bible_glyph_chapter_deu10() {
           "an",
           "$ark",
           "of",
-          "acacia",
+          "$tree+thorns",
           "$tree,",
           "and",
           "chiselled",
