@@ -1459,7 +1459,7 @@ export function bible_glyph_chapter_1sa25() {
           "serve",
           "and",
           "to",
-          "wash",
+          "$bathtub+doing",
           "the",
           "feet",
           "of",
