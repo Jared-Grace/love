@@ -943,7 +943,7 @@ export function bible_glyph_chapter_exo12() {
           "$clamp+proper_name,",
           "from",
           "the",
-          "firstborn",
+          "$first_place+baby",
           "of",
           "$house+proper_name",
           "who",
