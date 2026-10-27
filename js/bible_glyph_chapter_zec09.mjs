@@ -294,7 +294,7 @@ export function bible_glyph_chapter_zec09() {
           "$ruler",
           "and",
           "victorious,",
-          "humble",
+          "$persevering_face+describing",
           "and",
           "riding",
           "on",
