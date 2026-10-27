@@ -257,7 +257,7 @@ export function bible_glyph_chapter_lev14() {
           "$sun",
           "he",
           "must",
-          "shave",
+          "$razor+doing",
           "off",
           "all",
           "his",
