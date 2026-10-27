@@ -359,7 +359,7 @@ export function bible_glyph_chapter_jos02() {
           "you",
           "devoted",
           "to",
-          "destruction.",
+          "$bomb+altar+doing.",
         ],
       },
       {
