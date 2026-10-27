@@ -75,7 +75,7 @@ export function bible_glyph_chapter_deu31() {
           "$heart_on_fire",
           "Himself",
           "will",
-          "cross",
+          "$bridge",
           "over",
           "ahead",
           "of",
