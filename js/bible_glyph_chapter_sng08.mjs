@@ -246,7 +246,7 @@ export function bible_glyph_chapter_sng08() {
           "not",
           "yet",
           "grown.",
-          "What",
+          "$flashlight+question",
           "shall",
           "we",
           "$hammer+doing",
