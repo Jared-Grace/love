@@ -167,7 +167,7 @@ export function bible_glyph_chapter_jer31() {
           "of",
           "$fruit",
           "will",
-          "call",
+          "$waving_hand",
           "out,",
           "Arise,",
           "let",
