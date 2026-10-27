@@ -614,7 +614,7 @@ export function bible_glyph_chapter_pro16() {
           "who",
           "purses",
           "his",
-          "lips",
+          "$kiss_mark",
           "is",
           "bent",
           "on",
