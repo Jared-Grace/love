@@ -147,7 +147,7 @@ export function bible_glyph_chapter_2ch34() {
           "the",
           "incense",
           "altars",
-          "that",
+          "$back+flashlight",
           "were",
           "above",
           "them.",
