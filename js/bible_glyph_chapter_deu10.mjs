@@ -405,7 +405,7 @@ export function bible_glyph_chapter_deu10() {
         words: [
           "And",
           "$watch,",
-          "Israel,",
+          "$wrestling+heart_on_fire,",
           "what",
           "does",
           "the",
