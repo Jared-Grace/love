@@ -515,7 +515,7 @@ export function bible_glyph_chapter_exo21() {
           "$sun_behind_small_cloud",
           "with",
           "his",
-          "staff,",
+          "$white_cane+walking,",
           "the",
           "one",
           "who",
