@@ -1100,7 +1100,7 @@ export function bible_glyph_chapter_1ki20() {
           "we",
           "have",
           "$ear",
-          "that",
+          "$pointing",
           "the",
           "$king",
           "of",
