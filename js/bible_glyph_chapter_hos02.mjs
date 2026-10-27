@@ -209,7 +209,7 @@ export function bible_glyph_chapter_hos02() {
           "them;",
           "she",
           "will",
-          "seek",
+          "$magnifying_glass",
           "them",
           "but",
           "$no_entry",
