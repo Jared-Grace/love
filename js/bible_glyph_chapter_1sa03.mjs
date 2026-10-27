@@ -83,7 +83,7 @@ export function bible_glyph_chapter_1sa03() {
           "down",
           "in",
           "the",
-          "temple",
+          "$classical_building",
           "of",
           "the",
           "$i_am,",
