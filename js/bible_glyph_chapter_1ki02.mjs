@@ -75,7 +75,7 @@ export function bible_glyph_chapter_1ki02() {
           "$road,",
           "and",
           "to",
-          "keep",
+          "$guard",
           "His",
           "statutes,",
           "His",
