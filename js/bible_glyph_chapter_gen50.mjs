@@ -559,7 +559,7 @@ export function bible_glyph_chapter_gen50() {
           "be",
           "$fear+doing.",
           "Am",
-          "I",
+          "$me",
           "in",
           "the",
           "place",
