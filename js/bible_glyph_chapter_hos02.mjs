@@ -226,7 +226,7 @@ export function bible_glyph_chapter_hos02() {
           "my",
           "$first_place",
           "$man_beard,",
-          "for",
+          "$pointing",
           "I",
           "was",
           "$thumbs_up",
