@@ -80,7 +80,7 @@ export function bible_glyph_chapter_jdg04() {
           "$input_numbers+all",
           "$chariot",
           "of",
-          "iron,",
+          "$iron,",
           "and",
           "he",
           "had",
