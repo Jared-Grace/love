@@ -335,7 +335,7 @@ export function bible_glyph_chapter_mic07() {
           "$speech",
           "to",
           "me,",
-          "Where",
+          "$question+round_pushpin",
           "is",
           "the",
           "$i_am",
