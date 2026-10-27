@@ -900,7 +900,7 @@ export function bible_glyph_chapter_gen18() {
           "If",
           "I",
           "find",
-          "thirty",
+          "$three+zero",
           "$telescope,",
           "I",
           "will",
