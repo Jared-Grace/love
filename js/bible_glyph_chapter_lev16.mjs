@@ -468,7 +468,7 @@ export function bible_glyph_chapter_lev16() {
           "seat",
           "he",
           "shall",
-          "sprinkle",
+          "$droplet+hand+doing",
           "$tray_out",
           "some",
           "of",
