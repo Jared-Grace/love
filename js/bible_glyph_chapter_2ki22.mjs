@@ -711,7 +711,7 @@ export function bible_glyph_chapter_2ki22() {
           "I",
           "$mouth",
           "against",
-          "this",
+          "$flashlight",
           "$place",
           "and",
           "against",
