@@ -539,7 +539,7 @@ export function bible_glyph_chapter_exo30() {
           "$alarm_clock,",
           "they",
           "must",
-          "wash",
+          "$bathtub+doing",
           "with",
           "$water",
           "so",
