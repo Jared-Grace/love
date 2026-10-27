@@ -301,7 +301,7 @@ export function bible_glyph_chapter_hab01() {
           "through.",
           "They",
           "are",
-          "guilty;",
+          "$sacrifice+scales+doing;",
           "their",
           "own",
           "$lightning",
