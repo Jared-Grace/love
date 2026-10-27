@@ -104,7 +104,7 @@ export function bible_glyph_chapter_deu19() {
           "so",
           "that",
           "any",
-          "manslayer",
+          "$sword+coffin",
           "can",
           "$running+dashing_away",
           "to",
