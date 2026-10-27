@@ -139,7 +139,7 @@ export function bible_glyph_chapter_1ki22() {
           "of",
           "$wrestling+heart_on_fire,",
           "Please",
-          "inquire",
+          "$magnifying_glass+question",
           "this",
           "$sun",
           "for",
