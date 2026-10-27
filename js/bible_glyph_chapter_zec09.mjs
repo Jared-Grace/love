@@ -299,7 +299,7 @@ export function bible_glyph_chapter_zec09() {
           "riding",
           "$pointing_up",
           "a",
-          "donkey,",
+          "$donkey,",
           "$pointing_up",
           "a",
           "colt,",
