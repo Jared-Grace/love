@@ -23,7 +23,7 @@ export function bible_glyph_chapter_job31() {
           "with",
           "my",
           "$eyes.",
-          "How",
+          "$flashlight+question",
           "then",
           "could",
           "I",
