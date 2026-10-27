@@ -438,7 +438,7 @@ export function bible_glyph_chapter_mic06() {
           "$seed+doing",
           "but",
           "$no_entry",
-          "reap;",
+          "$sheaf_of_rice+scissors+doing;",
           "you",
           "will",
           "press",
