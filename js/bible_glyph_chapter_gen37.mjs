@@ -911,7 +911,7 @@ export function bible_glyph_chapter_gen37() {
           "They",
           "sent",
           "the",
-          "robe",
+          "$dress+thread",
           "of",
           "many",
           "colors",
