@@ -969,7 +969,7 @@ export function bible_glyph_chapter_1sa15() {
           "I",
           "have",
           "$bow+doing.",
-          "Please",
+          "$pleading",
           "honor",
           "me",
           "$watch",
