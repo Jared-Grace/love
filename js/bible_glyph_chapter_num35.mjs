@@ -200,7 +200,7 @@ export function bible_glyph_chapter_num35() {
           "a",
           "manslayer",
           "may",
-          "flee.",
+          "$running+dashing_away.",
           "In",
           "addition",
           "to",
