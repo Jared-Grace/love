@@ -435,7 +435,7 @@ export function bible_glyph_chapter_job42() {
           "$flashlight",
           "$proper_name$Job",
           "$sprout+doing",
-          "140",
+          "$input_numbers+all",
           "$year",
           "and",
           "$eye",
