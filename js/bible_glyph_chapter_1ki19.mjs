@@ -699,7 +699,7 @@ export function bible_glyph_chapter_1ki19() {
           "twelfth",
           "team.",
           "$heart_on_fire+i_am",
-          "passed",
+          "$bridge",
           "by",
           "him",
           "and",
