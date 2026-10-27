@@ -1315,7 +1315,7 @@ export function bible_glyph_chapter_1sa17() {
           "And",
           "the",
           "Philistine",
-          "cursed",
+          "$balloon+speech+doing",
           "$two_hearts+proper_name",
           "by",
           "his",
