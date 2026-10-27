@@ -325,7 +325,7 @@ export function bible_glyph_chapter_zec14() {
           "$proper_name$Geba",
           "to",
           "$proper_name$Rimmon",
-          "south",
+          "$compass+down_arrow",
           "of",
           "$proper_name$Jerusalem.",
           "But",
