@@ -218,7 +218,7 @@ export function bible_glyph_chapter_psa084() {
           "favor",
           "on",
           "the",
-          "face",
+          "$face",
           "of",
           "Your",
           "$oil.",
