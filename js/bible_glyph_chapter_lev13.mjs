@@ -1655,7 +1655,7 @@ export function bible_glyph_chapter_lev13() {
           "$garment,",
           "weave,",
           "knit,",
-          "or",
+          "$shuffle",
           "leather,",
           "then",
           "regardless",
