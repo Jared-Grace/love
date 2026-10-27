@@ -1067,7 +1067,7 @@ export function bible_glyph_chapter_1sa15() {
           "hacked",
           "$proper_name$Agag",
           "to",
-          "pieces",
+          "$kitchen_knife+collision+doing",
           "before",
           "the",
           "$i_am",
