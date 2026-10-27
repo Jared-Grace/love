@@ -751,7 +751,7 @@ export function bible_glyph_chapter_deu12() {
           "would",
           "$eating",
           "a",
-          "gazelle",
+          "$deer+sparkles",
           "or",
           "deer;",
           "both",
