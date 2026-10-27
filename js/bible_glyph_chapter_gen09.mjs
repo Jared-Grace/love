@@ -458,7 +458,7 @@ export function bible_glyph_chapter_gen09() {
           "between",
           "$heart_on_fire",
           "and",
-          "every",
+          "$all",
           "$person_other",
           "that",
           "$sprout",
