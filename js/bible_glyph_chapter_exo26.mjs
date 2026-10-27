@@ -159,7 +159,7 @@ export function bible_glyph_chapter_exo26() {
           "of",
           "$gold",
           "and",
-          "join",
+          "$link+doing",
           "the",
           "curtains",
           "$woman",
