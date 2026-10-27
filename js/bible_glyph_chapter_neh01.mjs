@@ -270,7 +270,7 @@ export function bible_glyph_chapter_neh01() {
         words: [
           "$reminder_ribbon,",
           "I",
-          "pray,",
+          "$pleading,",
           "the",
           "$speech",
           "that",
