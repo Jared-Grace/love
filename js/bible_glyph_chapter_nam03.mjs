@@ -192,7 +192,7 @@ export function bible_glyph_chapter_nam03() {
           "can",
           "I",
           "find",
-          "comforters",
+          "$hug+doing",
           "for",
           "you?",
         ],
