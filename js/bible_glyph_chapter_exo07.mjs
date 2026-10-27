@@ -766,7 +766,7 @@ export function bible_glyph_chapter_exo07() {
         verse_number: 25,
         words: [
           "And",
-          "seven",
+          "$seven",
           "full",
           "$sun",
           "$battery",
