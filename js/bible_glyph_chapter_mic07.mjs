@@ -512,7 +512,7 @@ export function bible_glyph_chapter_mic07() {
           "$palm_down",
           "their",
           "$hand",
-          "over",
+          "$pointing_up",
           "their",
           "mouths,",
           "and",
