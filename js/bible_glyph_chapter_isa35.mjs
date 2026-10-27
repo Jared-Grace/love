@@ -127,7 +127,7 @@ export function bible_glyph_chapter_isa35() {
       {
         verse_number: 5,
         words: [
-          "Then",
+          "$telescope+clock",
           "the",
           "$eyes",
           "of",
