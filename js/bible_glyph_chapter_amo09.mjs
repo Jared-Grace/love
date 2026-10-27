@@ -74,7 +74,7 @@ export function bible_glyph_chapter_amo09() {
         words: [
           "Though",
           "they",
-          "dig",
+          "$hole+pick+doing",
           "down",
           "to",
           "Sheol,",
