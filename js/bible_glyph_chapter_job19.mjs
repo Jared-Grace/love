@@ -87,7 +87,7 @@ export function bible_glyph_chapter_job19() {
         words: [
           "then",
           "$lightbulb",
-          "that",
+          "$pointing",
           "it",
           "is",
           "God",
