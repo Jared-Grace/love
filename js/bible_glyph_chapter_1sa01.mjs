@@ -287,7 +287,7 @@ export function bible_glyph_chapter_1sa01() {
           "$door+wood",
           "of",
           "the",
-          "temple",
+          "$classical_building",
           "of",
           "the",
           "$i_am.",
