@@ -530,7 +530,7 @@ export function bible_glyph_chapter_1sa25() {
           "and",
           "$sun+manner,",
           "the",
-          "whole",
+          "$all",
           "$sun",
           "we",
           "were",
