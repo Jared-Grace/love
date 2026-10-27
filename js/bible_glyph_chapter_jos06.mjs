@@ -574,7 +574,7 @@ export function bible_glyph_chapter_jos06() {
           "in",
           "her",
           "$house,",
-          "because",
+          "$pointing",
           "she",
           "hid",
           "the",
