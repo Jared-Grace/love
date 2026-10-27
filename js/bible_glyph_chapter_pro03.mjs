@@ -26,7 +26,7 @@ export function bible_glyph_chapter_pro03() {
           "let",
           "your",
           "$heart_organ",
-          "keep",
+          "$guard+shield+doing",
           "my",
           "$scroll;",
         ],
