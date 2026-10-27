@@ -669,7 +669,7 @@ export function bible_glyph_chapter_2ki11() {
           "Jehoiada",
           "the",
           "$priest",
-          "posted",
+          "$palm_down",
           "guards",
           "for",
           "the",
