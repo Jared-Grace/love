@@ -1135,7 +1135,7 @@ export function bible_glyph_chapter_gen42() {
           "$skull+doing",
           "and",
           "$pointing_back",
-          "alone",
+          "$one+person",
           "is",
           "left.",
           "If",
