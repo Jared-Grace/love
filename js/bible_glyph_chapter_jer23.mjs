@@ -123,7 +123,7 @@ export function bible_glyph_chapter_jer23() {
           "be",
           "fruitful",
           "and",
-          "multiply.",
+          "$multiply+doing.",
         ],
       },
       {
