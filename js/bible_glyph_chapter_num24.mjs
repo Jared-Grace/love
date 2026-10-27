@@ -606,7 +606,7 @@ export function bible_glyph_chapter_num24() {
           "$speech,",
           "$proper_name$Amalek",
           "was",
-          "first",
+          "$first_place+thing",
           "among",
           "the",
           "$map,",
