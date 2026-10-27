@@ -513,7 +513,7 @@ export function bible_glyph_chapter_lam01() {
           "draped",
           "$pointing_up",
           "my",
-          "neck,",
+          "$scarf,",
           "and",
           "the",
           "$crown",
