@@ -336,7 +336,7 @@ export function bible_glyph_chapter_exo10() {
           "young",
           "and",
           "our",
-          "old,",
+          "$old_man,",
           "with",
           "our",
           "$son",
