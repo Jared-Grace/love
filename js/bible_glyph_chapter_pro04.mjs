@@ -313,7 +313,7 @@ export function bible_glyph_chapter_pro04() {
       {
         verse_number: 16,
         words: [
-          "For",
+          "$pointing",
           "they",
           "$no_entry",
           "sleep",
