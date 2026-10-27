@@ -941,7 +941,7 @@ export function bible_glyph_chapter_lev23() {
           "until",
           "the",
           "following",
-          "evening",
+          "$sunset",
           "you",
           "are",
           "to",
