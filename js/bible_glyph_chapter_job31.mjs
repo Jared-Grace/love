@@ -799,7 +799,7 @@ export function bible_glyph_chapter_job31() {
       {
         verse_number: 38,
         words: [
-          "If",
+          "$traffic_light",
           "my",
           "land",
           "cries",
