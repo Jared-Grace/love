@@ -466,7 +466,7 @@ export function bible_glyph_chapter_jos07() {
           "from",
           "their",
           "enemies,",
-          "because",
+          "$pointing",
           "they",
           "themselves",
           "have",
