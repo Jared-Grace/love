@@ -631,7 +631,7 @@ export function bible_glyph_chapter_job38() {
           "their",
           "seasons,",
           "or",
-          "lead",
+          "$guide_dog",
           "out",
           "the",
           "$bear+star",
