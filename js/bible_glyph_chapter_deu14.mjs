@@ -271,7 +271,7 @@ export function bible_glyph_chapter_deu14() {
           "$no_entry",
           "$eating",
           "$all",
-          "that",
+          "$back+flashlight",
           "does",
           "not",
           "have",
