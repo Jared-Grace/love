@@ -534,7 +534,7 @@ export function bible_glyph_chapter_lam02() {
           "for",
           "you?",
           "To",
-          "what",
+          "$flashlight+question",
           "can",
           "I",
           "compare",
