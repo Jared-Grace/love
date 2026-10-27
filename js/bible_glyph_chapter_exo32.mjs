@@ -1020,7 +1020,7 @@ export function bible_glyph_chapter_exo32() {
           "$toward",
           "the",
           "$family,",
-          "You",
+          "$you",
           "have",
           "committed",
           "a",
