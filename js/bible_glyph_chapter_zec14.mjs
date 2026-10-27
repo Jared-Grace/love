@@ -140,7 +140,7 @@ export function bible_glyph_chapter_zec14() {
           "forming",
           "a",
           "great",
-          "valley,",
+          "$valley,",
           "with",
           "half",
           "the",
