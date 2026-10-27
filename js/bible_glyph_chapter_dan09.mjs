@@ -651,7 +651,7 @@ export function bible_glyph_chapter_dan09() {
           "Your",
           "$name_tag.",
           "For",
-          "we",
+          "$me",
           "are",
           "$no_entry",
           "presenting",
