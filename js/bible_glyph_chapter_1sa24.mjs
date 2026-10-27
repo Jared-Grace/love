@@ -666,7 +666,7 @@ export function bible_glyph_chapter_1sa24() {
           "$hammer+doing",
           "for",
           "me",
-          "this",
+          "$flashlight",
           "$sun.",
         ],
       },
