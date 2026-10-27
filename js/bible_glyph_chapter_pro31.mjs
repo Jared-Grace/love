@@ -558,7 +558,7 @@ export function bible_glyph_chapter_pro31() {
           "and",
           "call",
           "her",
-          "blessed;",
+          "$gift+smile+doing;",
           "her",
           "husband",
           "praises",
