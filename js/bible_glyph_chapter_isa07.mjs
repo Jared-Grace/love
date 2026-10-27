@@ -603,7 +603,7 @@ export function bible_glyph_chapter_isa07() {
           "use",
           "a",
           "$razor",
-          "hired",
+          "$coin+hammer+describing",
           "from",
           "beyond",
           "the",
