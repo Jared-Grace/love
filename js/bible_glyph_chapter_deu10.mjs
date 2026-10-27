@@ -274,7 +274,7 @@ export function bible_glyph_chapter_deu10() {
           "$i_am,",
           "to",
           "$person+round_pushpin",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "to",
