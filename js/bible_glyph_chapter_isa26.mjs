@@ -494,7 +494,7 @@ export function bible_glyph_chapter_isa26() {
           "have",
           "given",
           "no",
-          "salvation",
+          "$rescue+thing",
           "to",
           "the",
           "$earth,",
