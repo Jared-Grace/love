@@ -63,7 +63,7 @@ export function bible_glyph_chapter_lev15() {
           "whether",
           "his",
           "$meat",
-          "allows",
+          "$pouring_liquid+person+doing",
           "the",
           "discharge",
           "to",
