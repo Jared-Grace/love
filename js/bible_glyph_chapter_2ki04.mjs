@@ -923,7 +923,7 @@ export function bible_glyph_chapter_2ki04() {
           "garment,",
           "$hand_receiving",
           "my",
-          "staff",
+          "$white_cane+walking",
           "in",
           "your",
           "$hand",
