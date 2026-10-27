@@ -768,7 +768,7 @@ export function bible_glyph_chapter_jer23() {
           "these",
           "$megaphone,",
           "yet",
-          "they",
+          "$pointing_back",
           "have",
           "run",
           "with",
