@@ -85,7 +85,7 @@ export function bible_glyph_chapter_ezk47() {
           "to",
           "the",
           "outer",
-          "gate",
+          "$gate",
           "facing",
           "east,",
           "and",
