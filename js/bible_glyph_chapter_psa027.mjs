@@ -78,7 +78,7 @@ export function bible_glyph_chapter_psa027() {
           "$heart_organ",
           "will",
           "$no_entry",
-          "fear;",
+          "$fear+doing;",
           "$traffic_light",
           "a",
           "war",
