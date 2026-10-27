@@ -326,7 +326,7 @@ export function bible_glyph_chapter_ezk01() {
           "wings",
           "covering",
           "its",
-          "body.",
+          "$person+back+thing.",
         ],
       },
       {
