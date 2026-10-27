@@ -857,7 +857,7 @@ export function bible_glyph_chapter_2ki09() {
           "and",
           "fled,",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Ahaziah,",
           "Treachery,",
           "$proper_name$Ahaziah.",
