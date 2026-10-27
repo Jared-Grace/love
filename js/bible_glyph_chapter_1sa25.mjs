@@ -1289,7 +1289,7 @@ export function bible_glyph_chapter_1sa25() {
           "$woozy_face+doer.",
           "So",
           "she",
-          "told",
+          "$newspaper",
           "him",
           "$no_entry",
           "a",
