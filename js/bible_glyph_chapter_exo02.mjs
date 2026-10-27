@@ -413,7 +413,7 @@ export function bible_glyph_chapter_exo02() {
           "the",
           "man",
           "$speech,",
-          "Who",
+          "$person+question",
           "made",
           "you",
           "ruler",
