@@ -602,7 +602,7 @@ export function bible_glyph_chapter_2ki01() {
           "down",
           "with",
           "him",
-          "to",
+          "$toward",
           "the",
           "$king.",
         ],
