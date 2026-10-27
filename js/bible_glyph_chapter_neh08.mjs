@@ -164,7 +164,7 @@ export function bible_glyph_chapter_neh08() {
           "and",
           "at",
           "his",
-          "left",
+          "$hand+away",
           "were",
           "$proper_name$Pedaiah,",
           "$proper_name$Mishael,",
