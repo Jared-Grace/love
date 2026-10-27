@@ -916,7 +916,7 @@ export function bible_glyph_chapter_deu28() {
           "you",
           "will",
           "be",
-          "oppressed",
+          "$fist+down_arrow+doing",
           "and",
           "plundered",
           "$sun",
