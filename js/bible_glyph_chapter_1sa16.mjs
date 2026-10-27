@@ -22,7 +22,7 @@ export function bible_glyph_chapter_1sa16() {
           "long",
           "will",
           "you",
-          "mourn",
+          "$loudly_crying+coffin",
           "for",
           "$proper_name$Saul,",
           "since",
