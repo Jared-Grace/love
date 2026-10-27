@@ -17,7 +17,7 @@ export function bible_glyph_chapter_1sa03() {
           "the",
           "boy",
           "$ear+heart_on_fire",
-          "ministered",
+          "$bellhop_bell+doing",
           "to",
           "the",
           "$i_am",
