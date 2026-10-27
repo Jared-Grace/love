@@ -904,7 +904,7 @@ export function bible_glyph_chapter_1ki08() {
           "You,",
           "much",
           "less",
-          "this",
+          "$flashlight",
           "$house",
           "I",
           "have",
