@@ -744,7 +744,7 @@ export function bible_glyph_chapter_exo16() {
           "$i_am",
           "has",
           "$mouth:",
-          "Tomorrow",
+          "$sun+next_track",
           "is",
           "a",
           "day",
