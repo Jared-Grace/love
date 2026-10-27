@@ -236,7 +236,7 @@ export function bible_glyph_chapter_lev16() {
           "and",
           "present",
           "them",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "at",
