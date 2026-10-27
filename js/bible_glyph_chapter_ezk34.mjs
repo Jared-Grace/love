@@ -466,7 +466,7 @@ export function bible_glyph_chapter_ezk34() {
           "their",
           "grazing",
           "land.",
-          "There",
+          "$telescope",
           "they",
           "will",
           "lie",
