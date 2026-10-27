@@ -1528,7 +1528,7 @@ export function bible_glyph_chapter_gen24() {
           "I",
           "may",
           "go",
-          "elsewhere.",
+          "$pointing_up.",
         ],
       },
       {
