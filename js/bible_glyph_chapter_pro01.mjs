@@ -506,7 +506,7 @@ export function bible_glyph_chapter_pro01() {
           "will",
           "mock",
           "your",
-          "calamity;",
+          "$collision+exclamation;",
           "I",
           "will",
           "sneer",
