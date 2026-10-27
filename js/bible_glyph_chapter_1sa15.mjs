@@ -271,7 +271,7 @@ export function bible_glyph_chapter_1sa15() {
           "and",
           "his",
           "$family",
-          "spared",
+          "$pleading_face+doing",
           "$proper_name$Agag,",
           "along",
           "with",
