@@ -194,7 +194,7 @@ export function bible_glyph_chapter_exo03() {
           "$fishing_pole+proper_name",
           "$see_no_evil_monkey",
           "his",
-          "face,",
+          "$face,",
           "for",
           "he",
           "was",
