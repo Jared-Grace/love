@@ -1091,7 +1091,7 @@ export function bible_glyph_chapter_deu31() {
           "of",
           "$i_am",
           "to",
-          "provoke",
+          "$face_steam+right_anger_bubble",
           "Him",
           "to",
           "anger",
