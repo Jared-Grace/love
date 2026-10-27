@@ -675,7 +675,7 @@ export function bible_glyph_chapter_exo40() {
           "the",
           "$tent+house,",
           "the",
-          "Tent",
+          "$tent",
           "of",
           "Meeting,",
           "and",
