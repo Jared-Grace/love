@@ -681,7 +681,7 @@ export function bible_glyph_chapter_pro16() {
           "lap,",
           "but",
           "its",
-          "every",
+          "$all",
           "$scales+thing",
           "is",
           "from",
