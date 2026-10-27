@@ -226,7 +226,7 @@ export function bible_glyph_chapter_exo27() {
           "On",
           "the",
           "south",
-          "side,",
+          "$straight_ruler+round_pushpin,",
           "curtains",
           "of",
           "the",
