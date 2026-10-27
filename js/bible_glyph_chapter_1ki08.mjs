@@ -2319,7 +2319,7 @@ export function bible_glyph_chapter_1ki08() {
           "$king",
           "and",
           "$walking",
-          "home",
+          "$tent",
           "joyful",
           "and",
           "$thumbs_up",
