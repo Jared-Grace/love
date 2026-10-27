@@ -428,7 +428,7 @@ export function bible_glyph_chapter_zep03() {
           "to",
           "make",
           "them",
-          "tremble.",
+          "$fear+vibration_mode+doing.",
         ],
       },
       {
