@@ -512,7 +512,7 @@ export function bible_glyph_chapter_exo21() {
           "up",
           "and",
           "$walking",
-          "outside",
+          "$sun_behind_small_cloud",
           "with",
           "his",
           "staff,",
