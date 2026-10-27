@@ -75,7 +75,7 @@ export function bible_glyph_chapter_ezk03() {
           "stomach",
           "with",
           "this",
-          "scroll",
+          "$page_with_curl",
           "that",
           "I",
           "am",
