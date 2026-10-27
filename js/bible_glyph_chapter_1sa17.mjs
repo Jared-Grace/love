@@ -1369,7 +1369,7 @@ export function bible_glyph_chapter_1sa17() {
           "and",
           "$spear",
           "and",
-          "javelin,",
+          "$spear+pinching_hand,",
           "but",
           "I",
           "$footprints",
