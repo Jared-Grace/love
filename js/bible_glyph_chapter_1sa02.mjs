@@ -447,7 +447,7 @@ export function bible_glyph_chapter_1sa02() {
           "$plus",
           "$clock+back",
           "the",
-          "fat",
+          "$bacon",
           "was",
           "burned,",
           "the",
