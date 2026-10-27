@@ -243,7 +243,7 @@ export function bible_glyph_chapter_dan09() {
           "because",
           "of",
           "our",
-          "unfaithfulness",
+          "$handshake+broken_chain+thing",
           "to",
           "You.",
         ],
