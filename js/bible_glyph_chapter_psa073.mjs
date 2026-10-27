@@ -329,7 +329,7 @@ export function bible_glyph_chapter_psa073() {
           "them",
           "on",
           "slick",
-          "ground;",
+          "$field+pizza;",
           "You",
           "cast",
           "them",
