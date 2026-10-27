@@ -487,7 +487,7 @@ export function bible_glyph_chapter_lev14() {
           "it",
           "on",
           "the",
-          "right",
+          "$hand+right_arrow+describing",
           "$ear",
           "of",
           "the",
