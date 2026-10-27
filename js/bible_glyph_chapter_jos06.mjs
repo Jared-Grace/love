@@ -244,7 +244,7 @@ export function bible_glyph_chapter_jos06() {
           "$toward",
           "the",
           "$family,",
-          "seven",
+          "$seven",
           "$priest",
           "$lifting",
           "seven",
