@@ -162,7 +162,7 @@ export function bible_glyph_chapter_num22() {
           "of",
           "$clamp+proper_name.",
           "They",
-          "cover",
+          "$coat+doing",
           "the",
           "face",
           "of",
