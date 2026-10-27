@@ -121,7 +121,7 @@ export function bible_glyph_chapter_psa063() {
           "My",
           "$person_other",
           "is",
-          "satisfied",
+          "$eating+top",
           "$likeness",
           "with",
           "the",
