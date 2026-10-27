@@ -227,7 +227,7 @@ export function bible_glyph_chapter_lev26() {
       {
         verse_number: 8,
         words: [
-          "Five",
+          "$five",
           "of",
           "you",
           "will",
