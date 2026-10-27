@@ -459,7 +459,7 @@ export function bible_glyph_chapter_lev23() {
           "an",
           "offering",
           "of",
-          "new",
+          "$new_button",
           "$grain_offering",
           "to",
           "$i_am.",
