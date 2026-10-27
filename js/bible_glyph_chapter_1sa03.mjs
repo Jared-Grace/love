@@ -21,7 +21,7 @@ export function bible_glyph_chapter_1sa03() {
           "to",
           "the",
           "$i_am",
-          "before",
+          "$face",
           "$pointing_up+proper_name.",
           "Now",
           "in",
