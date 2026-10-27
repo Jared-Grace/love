@@ -513,7 +513,7 @@ export function bible_glyph_chapter_ezk01() {
           "$walking,",
           "the",
           "wheels",
-          "beside",
+          "$children_crossing",
           "them",
           "$walking,",
           "and",
