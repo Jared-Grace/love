@@ -46,7 +46,7 @@ export function bible_glyph_chapter_1ki12() {
           "this,",
           "he",
           "was",
-          "still",
+          "$repeat",
           "in",
           "$clamp+proper_name,",
           "where",
