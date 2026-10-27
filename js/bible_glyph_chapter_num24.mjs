@@ -385,7 +385,7 @@ export function bible_glyph_chapter_num24() {
           "to",
           "$hammer+doing",
           "$thumbs_up",
-          "or",
+          "$shuffle",
           "$thumbs_down",
           "out",
           "of",
