@@ -693,7 +693,7 @@ export function bible_glyph_chapter_exo15() {
           "for",
           "them",
           "a",
-          "statute",
+          "$locked_with_pen",
           "and",
           "an",
           "$scales+thing,",
