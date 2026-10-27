@@ -335,7 +335,7 @@ export function bible_glyph_chapter_lev16() {
           "$white_cane+blossom+proper_name",
           "$magnet+doing",
           "the",
-          "bull",
+          "$bull",
           "for",
           "his",
           "$bow",
