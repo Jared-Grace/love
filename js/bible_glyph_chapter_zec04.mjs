@@ -89,7 +89,7 @@ export function bible_glyph_chapter_zec04() {
           "right",
           "of",
           "the",
-          "bowl",
+          "$fountain+ring",
           "and",
           "the",
           "other",
