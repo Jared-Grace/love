@@ -942,7 +942,7 @@ export function bible_glyph_chapter_lev11() {
           "$back+flashlight",
           "you",
           "may",
-          "eat",
+          "$eating+thing",
           "is",
           "$skull+doing,",
           "anyone",
