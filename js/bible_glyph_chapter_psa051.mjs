@@ -228,7 +228,7 @@ export function bible_glyph_chapter_psa051() {
           "in",
           "me",
           "a",
-          "clean",
+          "$soap+describing",
           "$heart_organ,",
           "O",
           "$heart_on_fire,",
