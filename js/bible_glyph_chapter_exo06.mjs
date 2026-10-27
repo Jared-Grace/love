@@ -618,7 +618,7 @@ export function bible_glyph_chapter_exo06() {
         verse_number: 23,
         words: [
           "And",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "$hand_receiving",
           "$proper_name$Elisheba,",
           "the",
