@@ -255,7 +255,7 @@ export function bible_glyph_chapter_1sa16() {
           "as",
           "$person",
           "$eye.",
-          "For",
+          "$pointing",
           "$person",
           "$eye",
           "the",
