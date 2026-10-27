@@ -223,7 +223,7 @@ export function bible_glyph_chapter_num24() {
           "ox,",
           "to",
           "$eating",
-          "hostile",
+          "$clamp+thing",
           "$map,",
           "to",
           "crush",
