@@ -568,7 +568,7 @@ export function bible_glyph_chapter_lam02() {
           "as",
           "the",
           "$sea.",
-          "Who",
+          "$person+question",
           "can",
           "ever",
           "heal",
