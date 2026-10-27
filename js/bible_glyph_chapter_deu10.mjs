@@ -670,7 +670,7 @@ export function bible_glyph_chapter_deu10() {
           "$hammer+doing",
           "for",
           "you",
-          "these",
+          "$flashlight+flashlight",
           "$top",
           "and",
           "awesome",
