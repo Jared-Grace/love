@@ -446,7 +446,7 @@ export function bible_glyph_chapter_exo28() {
           "It",
           "must",
           "be",
-          "square",
+          "$four+straight_ruler+describing",
           "when",
           "folded",
           "over",
