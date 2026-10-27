@@ -568,7 +568,7 @@ export function bible_glyph_chapter_num14() {
           "The",
           "$i_am",
           "is",
-          "slow",
+          "$straight_ruler+clock+describing",
           "to",
           "anger",
           "and",
