@@ -413,7 +413,7 @@ export function bible_glyph_chapter_gen31() {
           "all",
           "the",
           "wealth",
-          "that",
+          "$back+flashlight",
           "$heart_on_fire",
           "took",
           "away",
