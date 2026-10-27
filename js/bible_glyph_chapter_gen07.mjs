@@ -22,7 +22,7 @@ export function bible_glyph_chapter_gen07() {
           "$footprints",
           "into",
           "the",
-          "ark,",
+          "$package,",
           "you",
           "and",
           "all",
