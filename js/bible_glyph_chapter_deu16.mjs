@@ -233,7 +233,7 @@ export function bible_glyph_chapter_deu16() {
           "$sunset",
           "as",
           "the",
-          "sun",
+          "$sun_with_face",
           "$footprints,",
           "at",
           "the",
