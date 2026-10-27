@@ -559,7 +559,7 @@ export function bible_glyph_chapter_2ki04() {
           "And",
           "the",
           "$child",
-          "grew,",
+          "$top+doing,",
           "and",
           "one",
           "$sun",
