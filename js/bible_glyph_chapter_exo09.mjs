@@ -141,7 +141,7 @@ export function bible_glyph_chapter_exo09() {
           "a",
           "$alarm_clock,",
           "$speech,",
-          "Tomorrow",
+          "$sun+next_track",
           "$i_am",
           "will",
           "$hammer+doing",
