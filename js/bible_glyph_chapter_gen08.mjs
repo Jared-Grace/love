@@ -35,7 +35,7 @@ export function bible_glyph_chapter_gen08() {
           "$heart_on_fire",
           "sent",
           "a",
-          "wind",
+          "$wind",
           "over",
           "the",
           "$earth,",
