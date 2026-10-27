@@ -496,7 +496,7 @@ export function bible_glyph_chapter_pro16() {
           "$candy",
           "to",
           "the",
-          "soul",
+          "$person_other",
           "and",
           "healing",
           "to",
