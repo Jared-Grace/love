@@ -579,7 +579,7 @@ export function bible_glyph_chapter_1ki18() {
           "and",
           "the",
           "$four",
-          "hundred",
+          "$input_numbers+all",
           "$megaphone",
           "of",
           "Asherah",
