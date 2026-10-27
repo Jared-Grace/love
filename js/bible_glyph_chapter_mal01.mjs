@@ -415,7 +415,7 @@ export function bible_glyph_chapter_mal01() {
           "$incense+doing",
           "and",
           "pure",
-          "offerings",
+          "$grain_offering",
           "will",
           "be",
           "presented",
