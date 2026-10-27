@@ -300,7 +300,7 @@ export function bible_glyph_chapter_psa091() {
       {
         verse_number: 14,
         words: [
-          "Because",
+          "$pointing",
           "he",
           "loves",
           "Me,",
