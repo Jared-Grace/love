@@ -50,7 +50,7 @@ export function bible_glyph_chapter_deu08() {
       {
         verse_number: 2,
         words: [
-          "Remember",
+          "$reminder_ribbon",
           "that",
           "the",
           "$i_am",
