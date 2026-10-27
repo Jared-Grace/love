@@ -370,7 +370,7 @@ export function bible_glyph_chapter_num15() {
           "$pointing",
           "a",
           "$foreigner",
-          "residing",
+          "$luggage",
           "with",
           "you",
           "or",
