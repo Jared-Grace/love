@@ -608,7 +608,7 @@ export function bible_glyph_chapter_exo15() {
           "the",
           "$wilderness",
           "$no_entry",
-          "finding",
+          "$magnifying_glass+exclamation",
           "$water.",
         ],
       },
