@@ -834,7 +834,7 @@ export function bible_glyph_chapter_gen21() {
           "up",
           "and",
           "$turn_back",
-          "to",
+          "$toward",
           "the",
           "$earth",
           "of",
