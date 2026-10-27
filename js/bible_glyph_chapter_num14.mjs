@@ -431,7 +431,7 @@ export function bible_glyph_chapter_num14() {
           "the",
           "inhabitants",
           "of",
-          "this",
+          "$flashlight",
           "$earth.",
           "They",
           "have",
