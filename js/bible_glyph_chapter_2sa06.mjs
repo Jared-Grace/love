@@ -569,7 +569,7 @@ export function bible_glyph_chapter_2sa06() {
           "finished",
           "$walking+pointing_up",
           "the",
-          "burnt",
+          "$burnt_offering",
           "offerings",
           "and",
           "peace",
