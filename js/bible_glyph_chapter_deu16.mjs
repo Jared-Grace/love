@@ -605,7 +605,7 @@ export function bible_glyph_chapter_deu16() {
           "$face",
           "the",
           "$i_am",
-          "empty-handed.",
+          "$hand+zero+manner.",
         ],
       },
       {
