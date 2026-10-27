@@ -861,7 +861,7 @@ export function bible_glyph_chapter_exo28() {
           "$pointing_up",
           "his",
           "$heart_organ",
-          "before",
+          "$face",
           "$i_am.",
         ],
       },
