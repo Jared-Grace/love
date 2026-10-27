@@ -1196,7 +1196,7 @@ export function bible_glyph_chapter_deu01() {
           "$you",
           "are",
           "to",
-          "turn",
+          "$curving_right+doing",
           "back",
           "and",
           "head",
