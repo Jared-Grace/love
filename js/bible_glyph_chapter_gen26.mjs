@@ -549,7 +549,7 @@ export function bible_glyph_chapter_gen26() {
           "$kneeling",
           "of",
           "$laughing+proper_name",
-          "dug",
+          "$pick+magnifying_glass+doing",
           "in",
           "the",
           "valley",
