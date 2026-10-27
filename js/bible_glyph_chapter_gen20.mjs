@@ -274,7 +274,7 @@ export function bible_glyph_chapter_gen20() {
           "$kneeling",
           "and",
           "$mouth",
-          "all",
+          "$all",
           "these",
           "$speech",
           "in",
