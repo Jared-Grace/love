@@ -245,7 +245,7 @@ export function bible_glyph_chapter_exo25() {
         verse_number: 12,
         words: [
           "And",
-          "cast",
+          "$pouring_liquid+fire",
           "for",
           "it",
           "four",
