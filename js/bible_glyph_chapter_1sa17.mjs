@@ -147,7 +147,7 @@ export function bible_glyph_chapter_1sa17() {
           "had",
           "armor",
           "of",
-          "bronze",
+          "$bronze",
           "on",
           "his",
           "legs",
