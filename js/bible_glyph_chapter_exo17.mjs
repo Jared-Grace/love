@@ -409,7 +409,7 @@ export function bible_glyph_chapter_exo17() {
           "$hand",
           "$link",
           "$anchor+check",
-          "until",
+          "$finish",
           "the",
           "sun",
           "$footprints",
