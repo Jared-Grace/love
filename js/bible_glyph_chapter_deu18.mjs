@@ -392,7 +392,7 @@ export function bible_glyph_chapter_deu18() {
           "dispossess,",
           "$ear",
           "to",
-          "conjurers",
+          "$cloud+doing",
           "and",
           "diviners,",
           "the",
