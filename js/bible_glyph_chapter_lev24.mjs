@@ -38,7 +38,7 @@ export function bible_glyph_chapter_lev24() {
           "the",
           "$lamp",
           "$walking+pointing_up",
-          "continually.",
+          "$clock+infinity.",
         ],
       },
       {
