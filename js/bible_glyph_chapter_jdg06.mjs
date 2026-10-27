@@ -393,7 +393,7 @@ export function bible_glyph_chapter_jdg06() {
           "$link",
           "with",
           "us,",
-          "why",
+          "$flashlight+question",
           "has",
           "all",
           "this",
