@@ -507,7 +507,7 @@ export function bible_glyph_chapter_zec09() {
           "slingstones;",
           "they",
           "will",
-          "drink",
+          "$cup_with_straw",
           "and",
           "roar",
           "as",
