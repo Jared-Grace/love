@@ -53,7 +53,7 @@ export function bible_glyph_chapter_gen06() {
           "$hand_receiving",
           "as",
           "$woman",
-          "whomever",
+          "$back+flashlight",
           "they",
           "chose.",
         ],
