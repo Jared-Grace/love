@@ -142,7 +142,7 @@ export function bible_glyph_chapter_ecc03() {
           "to",
           "count",
           "as",
-          "lost,",
+          "$wilted_flower,",
           "a",
           "$clock",
           "to",
