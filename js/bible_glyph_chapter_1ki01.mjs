@@ -1326,7 +1326,7 @@ export function bible_glyph_chapter_1ki01() {
           "loud",
           "$voice",
           "of",
-          "uproar",
+          "$crowd+loudspeaker+doing",
           "in",
           "the",
           "city?",
