@@ -1206,7 +1206,7 @@ export function bible_glyph_chapter_jdg06() {
           "Gideon",
           "sent",
           "$angel",
-          "throughout",
+          "$all",
           "$proper_name$Manasseh,",
           "calling",
           "them",
