@@ -1440,7 +1440,7 @@ export function bible_glyph_chapter_1sa20() {
           "May",
           "the",
           "$i_am",
-          "be",
+          "$link",
           "a",
           "witness",
           "between",
