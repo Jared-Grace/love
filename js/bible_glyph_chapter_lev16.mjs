@@ -746,7 +746,7 @@ export function bible_glyph_chapter_lev16() {
           "forward",
           "the",
           "$sprout",
-          "goat.",
+          "$goat+man_beard.",
         ],
       },
       {
