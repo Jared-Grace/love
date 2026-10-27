@@ -1369,7 +1369,7 @@ export function bible_glyph_chapter_num14() {
           "$walking+away+doing",
           "from",
           "the",
-          "camp.",
+          "$camp.",
         ],
       },
       {
