@@ -501,7 +501,7 @@ export function bible_glyph_chapter_num22() {
           "$pleading",
           "let",
           "$no_entry",
-          "hinder",
+          "$locked+hand+doing",
           "you",
           "from",
           "$walking",
