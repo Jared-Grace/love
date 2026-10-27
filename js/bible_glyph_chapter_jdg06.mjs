@@ -1237,7 +1237,7 @@ export function bible_glyph_chapter_jdg06() {
           "$speech",
           "to",
           "$heart_on_fire,",
-          "If",
+          "$traffic_light",
           "You",
           "are",
           "going",
