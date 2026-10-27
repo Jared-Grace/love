@@ -251,7 +251,7 @@ export function bible_glyph_chapter_1sa24() {
           "$proper_name$Saul",
           "left",
           "the",
-          "cave",
+          "$cave",
           "and",
           "$walking",
           "on",
