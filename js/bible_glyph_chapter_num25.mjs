@@ -177,7 +177,7 @@ export function bible_glyph_chapter_num25() {
           "$eyes",
           "of",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "of",
           "the",
