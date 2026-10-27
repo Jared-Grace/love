@@ -820,7 +820,7 @@ export function bible_glyph_chapter_num32() {
           "and",
           "to",
           "the",
-          "leaders",
+          "$person_gesturing_ok",
           "of",
           "the",
           "$father",
