@@ -631,7 +631,7 @@ export function bible_glyph_chapter_gen47() {
       {
         verse_number: 19,
         words: [
-          "Why",
+          "$flashlight+question",
           "should",
           "we",
           "$skull+doing",
