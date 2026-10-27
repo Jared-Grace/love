@@ -250,7 +250,7 @@ export function bible_glyph_chapter_2ch34() {
           "to",
           "powder",
           "and",
-          "cut",
+          "$axe+tree+doing",
           "to",
           "pieces",
           "all",
