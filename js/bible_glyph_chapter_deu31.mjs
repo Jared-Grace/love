@@ -1114,7 +1114,7 @@ export function bible_glyph_chapter_deu31() {
           "hearing",
           "of",
           "the",
-          "whole",
+          "$all",
           "$church",
           "of",
           "$wrestling+heart_on_fire",
