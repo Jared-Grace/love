@@ -861,7 +861,7 @@ export function bible_glyph_chapter_exo22() {
           "$hands_giving",
           "Me",
           "the",
-          "firstborn",
+          "$first_place+baby",
           "of",
           "your",
           "$son.",
