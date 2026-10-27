@@ -767,7 +767,7 @@ export function bible_glyph_chapter_num22() {
           "$person+round_pushpin",
           "in",
           "a",
-          "narrow",
+          "$road+pinching_hand",
           "passage",
           "between",
           "two",
