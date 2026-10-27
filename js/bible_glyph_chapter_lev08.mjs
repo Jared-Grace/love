@@ -975,7 +975,7 @@ export function bible_glyph_chapter_lev08() {
         verse_number: 36,
         words: [
           "So",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "and",
           "$son",
           "$hammer+doing",
