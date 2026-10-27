@@ -150,7 +150,7 @@ export function bible_glyph_chapter_2ch20() {
           "of",
           "the",
           "new",
-          "courtyard,",
+          "$house_with_garden,",
         ],
       },
       {
