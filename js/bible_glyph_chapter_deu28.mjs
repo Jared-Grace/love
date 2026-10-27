@@ -1972,7 +1972,7 @@ export function bible_glyph_chapter_deu28() {
           "of",
           "the",
           "$scroll,",
-          "until",
+          "$finish",
           "you",
           "are",
           "destroyed.",
