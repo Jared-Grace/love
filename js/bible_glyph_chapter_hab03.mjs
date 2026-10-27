@@ -420,7 +420,7 @@ export function bible_glyph_chapter_hab03() {
           "the",
           "$sun",
           "of",
-          "distress",
+          "$clamp",
           "to",
           "$walking+pointing_up",
           "upon",
