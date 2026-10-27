@@ -618,7 +618,7 @@ export function bible_glyph_chapter_exo12() {
           "must",
           "be",
           "$no_entry",
-          "leaven",
+          "$bubbles+bread+pinching_hand",
           "found",
           "in",
           "your",
