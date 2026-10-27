@@ -836,7 +836,7 @@ export function bible_glyph_chapter_2ch20() {
           "Moab",
           "rose",
           "up",
-          "against",
+          "$pointing_up",
           "the",
           "inhabitants",
           "of",
