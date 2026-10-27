@@ -656,7 +656,7 @@ export function bible_glyph_chapter_isa09() {
           "$hands_raised+proper_name.",
           "Despite",
           "all",
-          "this,",
+          "$flashlight,",
           "His",
           "anger",
           "is",
