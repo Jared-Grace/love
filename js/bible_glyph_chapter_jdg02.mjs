@@ -83,7 +83,7 @@ export function bible_glyph_chapter_jdg02() {
           "you",
           "shall",
           "tear",
-          "down",
+          "$wall+down_arrow+doing",
           "their",
           "$altar.",
           "Yet",
