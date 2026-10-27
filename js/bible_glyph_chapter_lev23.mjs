@@ -304,7 +304,7 @@ export function bible_glyph_chapter_lev23() {
           "the",
           "$sun",
           "you",
-          "wave",
+          "$hand+up_down_arrow+doing",
           "the",
           "sheaf,",
           "you",
