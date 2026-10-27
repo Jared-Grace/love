@@ -1108,7 +1108,7 @@ export function bible_glyph_chapter_2ch34() {
           "$all",
           "the",
           "$thumbs_down",
-          "that",
+          "$back+flashlight",
           "I",
           "will",
           "$footprints",
