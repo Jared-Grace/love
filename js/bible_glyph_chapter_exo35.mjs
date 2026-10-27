@@ -657,7 +657,7 @@ export function bible_glyph_chapter_exo35() {
           "stirred",
           "with",
           "$wisdom",
-          "spun",
+          "$clockwise_arrows+thread+doing",
           "the",
           "$goat",
           "hair.",
