@@ -127,7 +127,7 @@ export function bible_glyph_chapter_exo27() {
           "grate",
           "beneath",
           "the",
-          "ledge",
+          "$top+around",
           "of",
           "the",
           "$altar,",
