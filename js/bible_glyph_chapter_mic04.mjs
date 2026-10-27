@@ -157,7 +157,7 @@ export function bible_glyph_chapter_mic04() {
           "will",
           "they",
           "train",
-          "anymore",
+          "$repeat",
           "for",
           "war.",
         ],
