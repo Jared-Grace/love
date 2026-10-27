@@ -689,7 +689,7 @@ export function bible_glyph_chapter_exo39() {
           "round",
           "the",
           "lower",
-          "hem",
+          "$dress+down_arrow",
           "of",
           "$cloak",
           "for",
