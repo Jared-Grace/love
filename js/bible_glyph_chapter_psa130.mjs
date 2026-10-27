@@ -107,7 +107,7 @@ export function bible_glyph_chapter_psa130() {
           "I",
           "put",
           "my",
-          "hope.",
+          "$hourglass+crossed_fingers.",
         ],
       },
       {
