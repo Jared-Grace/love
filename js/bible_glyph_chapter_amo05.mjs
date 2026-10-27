@@ -654,7 +654,7 @@ export function bible_glyph_chapter_amo05() {
           "them;",
           "for",
           "your",
-          "peace",
+          "$peace+gift",
           "offerings",
           "of",
           "fattened",
