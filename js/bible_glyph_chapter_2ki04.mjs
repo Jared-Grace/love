@@ -137,7 +137,7 @@ export function bible_glyph_chapter_2ki04() {
           "oil",
           "into",
           "$all",
-          "these",
+          "$flashlight+flashlight",
           "$toolbox,",
           "setting",
           "the",
