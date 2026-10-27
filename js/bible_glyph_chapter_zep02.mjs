@@ -439,7 +439,7 @@ export function bible_glyph_chapter_zep02() {
           "$radio_button,",
           "$sprout",
           "of",
-          "every",
+          "$all",
           "kind.",
           "Both",
           "the",
