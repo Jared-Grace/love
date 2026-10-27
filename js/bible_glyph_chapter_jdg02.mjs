@@ -321,7 +321,7 @@ export function bible_glyph_chapter_jdg02() {
           "their",
           "$father,",
           "another",
-          "generation",
+          "$dna",
           "rose",
           "up",
           "who",
