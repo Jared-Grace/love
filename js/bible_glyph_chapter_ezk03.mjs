@@ -88,7 +88,7 @@ export function bible_glyph_chapter_ezk03() {
           "it",
           "was",
           "as",
-          "sweet",
+          "$candy",
           "as",
           "$honey",
           "in",
