@@ -674,7 +674,7 @@ export function bible_glyph_chapter_1ki18() {
           "but",
           "Baal",
           "has",
-          "four",
+          "$four",
           "hundred",
           "and",
           "fifty",
