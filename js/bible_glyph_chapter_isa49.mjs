@@ -548,7 +548,7 @@ export function bible_glyph_chapter_isa49() {
       {
         verse_number: 16,
         words: [
-          "Behold,",
+          "$exclamation,",
           "I",
           "have",
           "inscribed",
