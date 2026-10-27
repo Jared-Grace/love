@@ -335,7 +335,7 @@ export function bible_glyph_chapter_hab02() {
       {
         verse_number: 11,
         words: [
-          "For",
+          "$pointing",
           "the",
           "stones",
           "will",
