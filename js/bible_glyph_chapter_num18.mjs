@@ -683,7 +683,7 @@ export function bible_glyph_chapter_num18() {
           "$all",
           "the",
           "$sparkle+thing",
-          "offerings",
+          "$up_arrow+gift",
           "that",
           "the",
           "$son",
