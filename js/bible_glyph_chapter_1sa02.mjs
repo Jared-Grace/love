@@ -954,7 +954,7 @@ export function bible_glyph_chapter_1sa02() {
           "prescribed",
           "for",
           "My",
-          "dwelling",
+          "$house+bed",
           "place?",
           "You",
           "have",
