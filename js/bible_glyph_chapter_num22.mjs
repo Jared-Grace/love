@@ -182,7 +182,7 @@ export function bible_glyph_chapter_num22() {
           "So",
           "please",
           "$walking",
-          "now",
+          "$watch",
           "and",
           "$speech+thumbs_down",
           "this",
