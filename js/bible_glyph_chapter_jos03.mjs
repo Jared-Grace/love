@@ -561,7 +561,7 @@ export function bible_glyph_chapter_jos03() {
           "of",
           "the",
           "$i_am",
-          "stood",
+          "$person+round_pushpin",
           "firm",
           "on",
           "dry",
