@@ -907,7 +907,7 @@ export function bible_glyph_chapter_deu07() {
           "utterly",
           "$nauseated_face+no_entry+doing",
           "and",
-          "abhor",
+          "$vomiting+doing",
           "it,",
           "because",
           "it",
