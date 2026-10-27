@@ -502,7 +502,7 @@ export function bible_glyph_chapter_gen15() {
           "$clamp+proper_name",
           "to",
           "the",
-          "great",
+          "$top",
           "$water+national_park",
           "$proper_name$Euphrates:",
         ],
