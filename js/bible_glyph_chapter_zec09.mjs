@@ -509,7 +509,7 @@ export function bible_glyph_chapter_zec09() {
           "will",
           "$cup_with_straw",
           "and",
-          "roar",
+          "$crowd+loudspeaker+doing",
           "as",
           "with",
           "$wine,",
