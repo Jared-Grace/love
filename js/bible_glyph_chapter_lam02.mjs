@@ -27,7 +27,7 @@ export function bible_glyph_chapter_lam02() {
           "cloud",
           "of",
           "His",
-          "anger!",
+          "$nose+fire!",
           "He",
           "has",
           "cast",
