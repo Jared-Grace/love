@@ -1246,7 +1246,7 @@ export function bible_glyph_chapter_deu28() {
           "the",
           "$wine",
           "$no_entry",
-          "gather",
+          "$sheaf_of_rice+tray_in+doing",
           "the",
           "grapes,",
           "because",
