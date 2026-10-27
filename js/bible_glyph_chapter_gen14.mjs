@@ -569,7 +569,7 @@ export function bible_glyph_chapter_gen14() {
           "$heart_on_fire",
           "Most",
           "High,",
-          "who",
+          "$back+flashlight",
           "has",
           "delivered",
           "your",
