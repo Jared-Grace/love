@@ -439,7 +439,7 @@ export function bible_glyph_chapter_jdg04() {
           "So",
           "$proper_name$Barak",
           "came",
-          "down",
+          "$walking+pointing_down",
           "from",
           "$mountain",
           "$proper_name$Tabor",
