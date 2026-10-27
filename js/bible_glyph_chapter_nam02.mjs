@@ -328,7 +328,7 @@ export function bible_glyph_chapter_nam02() {
           "prey",
           "for",
           "the",
-          "lioness.",
+          "$lion+female_sign.",
           "It",
           "filled",
           "its",
