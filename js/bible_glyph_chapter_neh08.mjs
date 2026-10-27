@@ -433,7 +433,7 @@ export function bible_glyph_chapter_neh08() {
           "$sparkle.",
           "Do",
           "$no_entry",
-          "grieve.",
+          "$heart_red+kitchen_knife+doing.",
         ],
       },
       {
