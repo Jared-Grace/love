@@ -135,7 +135,7 @@ export function bible_glyph_chapter_gen07() {
           "wipe",
           "from",
           "the",
-          "face",
+          "$face",
           "of",
           "the",
           "earth",
