@@ -301,7 +301,7 @@ export function bible_glyph_chapter_1ki21() {
           "them",
           "with",
           "his",
-          "seal,",
+          "$ring+locked,",
           "and",
           "sent",
           "them",
