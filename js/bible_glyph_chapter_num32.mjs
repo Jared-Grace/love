@@ -675,7 +675,7 @@ export function bible_glyph_chapter_num32() {
           "as",
           "a",
           "possession",
-          "before",
+          "$face",
           "$i_am.",
         ],
       },
