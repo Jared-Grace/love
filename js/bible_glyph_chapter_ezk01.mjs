@@ -607,7 +607,7 @@ export function bible_glyph_chapter_ezk01() {
         words: [
           "Spread",
           "out",
-          "above",
+          "$pointing_up",
           "the",
           "heads",
           "of",
