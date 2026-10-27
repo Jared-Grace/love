@@ -66,7 +66,7 @@ export function bible_glyph_chapter_gen49() {
           "you",
           "are",
           "my",
-          "firstborn,",
+          "$first_place+baby,",
           "my",
           "$lightning",
           "and",
