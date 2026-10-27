@@ -493,7 +493,7 @@ export function bible_glyph_chapter_ezk01() {
           "awesome,",
           "and",
           "all",
-          "four",
+          "$four",
           "rims",
           "were",
           "$battery+describing",
