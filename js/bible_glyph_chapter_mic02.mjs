@@ -384,7 +384,7 @@ export function bible_glyph_chapter_mic02() {
           "$sheep+crowd",
           "in",
           "the",
-          "midst",
+          "$radio_button",
           "of",
           "its",
           "pasture",
