@@ -363,7 +363,7 @@ export function bible_glyph_chapter_ecc12() {
           "and",
           "much",
           "$open_book+brain",
-          "wearies",
+          "$weary_face+hammer+thing",
           "the",
           "$meat.",
         ],
