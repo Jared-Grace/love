@@ -476,7 +476,7 @@ export function bible_glyph_chapter_pro16() {
           "man",
           "$nerd_face",
           "his",
-          "mouth",
+          "$face_with_open_mouth",
           "and",
           "adds",
           "persuasiveness",
