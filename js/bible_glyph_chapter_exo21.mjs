@@ -292,7 +292,7 @@ export function bible_glyph_chapter_exo21() {
           "$traffic_light",
           "he",
           "$hand_receiving",
-          "another",
+          "$plus+one",
           "wife,",
           "he",
           "must",
