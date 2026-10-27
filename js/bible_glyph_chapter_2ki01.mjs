@@ -62,7 +62,7 @@ export function bible_glyph_chapter_2ki01() {
           "$moai",
           "of",
           "$proper_name$Ekron,",
-          "whether",
+          "$traffic_light",
           "I",
           "will",
           "$sprout+doing",
