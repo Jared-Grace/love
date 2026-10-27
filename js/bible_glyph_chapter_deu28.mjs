@@ -1223,7 +1223,7 @@ export function bible_glyph_chapter_deu28() {
           "$pinching_hand+input_numbers,",
           "$pointing",
           "the",
-          "locusts",
+          "$locusts",
           "will",
           "$locusts+doing",
           "it.",
