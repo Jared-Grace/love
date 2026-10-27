@@ -399,7 +399,7 @@ export function bible_glyph_chapter_gen40() {
           "me",
           "$tray_out",
           "of",
-          "this",
+          "$flashlight",
           "$house.",
         ],
       },
