@@ -45,7 +45,7 @@ export function bible_glyph_chapter_ezk11() {
           "$two+zero",
           "five",
           "$man_beard.",
-          "Among",
+          "$radio_button",
           "them",
           "I",
           "$eye",
