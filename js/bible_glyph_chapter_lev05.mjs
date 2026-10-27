@@ -244,7 +244,7 @@ export function bible_glyph_chapter_lev05() {
           "who",
           "shall",
           "first",
-          "present",
+          "$magnet+doing",
           "the",
           "one",
           "$bow.",
