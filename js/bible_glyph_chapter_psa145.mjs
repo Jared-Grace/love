@@ -305,7 +305,7 @@ export function bible_glyph_chapter_psa145() {
           "$crutch",
           "$all",
           "who",
-          "fall,",
+          "$person+pointing_down,",
           "and",
           "lifts",
           "up",
