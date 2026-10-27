@@ -739,7 +739,7 @@ export function bible_glyph_chapter_1ki12() {
           "$speech",
           "of",
           "$heart_on_fire",
-          "came",
+          "$link",
           "to",
           "$ear+i_am",
           "the",
