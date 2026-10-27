@@ -175,7 +175,7 @@ export function bible_glyph_chapter_isa06() {
           "$tray_out",
           "the",
           "seraphim",
-          "flew",
+          "$bird+doing",
           "to",
           "me,",
           "and",
