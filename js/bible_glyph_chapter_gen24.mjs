@@ -334,7 +334,7 @@ export function bible_glyph_chapter_gen24() {
           "the",
           "$city",
           "of",
-          "Nahor.",
+          "$sleeping_face+proper_name.",
         ],
       },
       {
