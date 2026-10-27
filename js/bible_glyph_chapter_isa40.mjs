@@ -113,7 +113,7 @@ export function bible_glyph_chapter_isa40() {
           "ground",
           "will",
           "become",
-          "smooth,",
+          "$mountain+straight_ruler,",
           "and",
           "the",
           "rugged",
