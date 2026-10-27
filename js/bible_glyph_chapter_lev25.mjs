@@ -1620,7 +1620,7 @@ export function bible_glyph_chapter_lev25() {
           "owner",
           "must",
           "$no_entry",
-          "rule",
+          "$crown+footprints+doing",
           "over",
           "him",
           "harshly",
