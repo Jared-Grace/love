@@ -418,7 +418,7 @@ export function bible_glyph_chapter_1ch29() {
           "and",
           "the",
           "splendor,",
-          "for",
+          "$pointing",
           "everything",
           "in",
           "$sky",
