@@ -78,7 +78,7 @@ export function bible_glyph_chapter_isa64() {
           "we",
           "did",
           "$no_entry",
-          "expect,",
+          "$crossed_fingers+doing,",
           "You",
           "came",
           "down,",
