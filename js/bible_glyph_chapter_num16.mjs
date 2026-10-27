@@ -1394,7 +1394,7 @@ export function bible_glyph_chapter_num16() {
           "add",
           "$incense.",
           "$walking",
-          "quickly",
+          "$fast_forward+thing",
           "$toward",
           "the",
           "congregation",
