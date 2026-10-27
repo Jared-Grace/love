@@ -220,7 +220,7 @@ export function bible_glyph_chapter_exo02() {
           "$proper_name$Hebrew",
           "$woman",
           "to",
-          "nurse",
+          "$breast_feeding+doing",
           "the",
           "$child",
           "for",
