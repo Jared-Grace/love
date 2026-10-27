@@ -39,7 +39,7 @@ export function bible_glyph_chapter_2ki22() {
           "was",
           "$proper_name$Jedidah,",
           "the",
-          "daughter",
+          "$girl+family",
           "of",
           "$proper_name$Adaiah,",
           "and",
