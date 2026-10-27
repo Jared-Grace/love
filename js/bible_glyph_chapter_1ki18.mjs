@@ -1373,7 +1373,7 @@ export function bible_glyph_chapter_1ki18() {
           "to",
           "$eating",
           "and",
-          "drink.",
+          "$cup_with_straw.",
           "But",
           "$heart_on_fire+i_am",
           "climbed",
