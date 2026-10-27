@@ -327,7 +327,7 @@ export function bible_glyph_chapter_deu19() {
           "$city$s",
           "to",
           "these",
-          "three.",
+          "$three.",
         ],
       },
       {
