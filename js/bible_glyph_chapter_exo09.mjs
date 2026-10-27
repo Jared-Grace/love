@@ -679,7 +679,7 @@ export function bible_glyph_chapter_exo09() {
           "$paw_prints",
           "and",
           "every",
-          "plant",
+          "$herb",
           "of",
           "the",
           "$field",
