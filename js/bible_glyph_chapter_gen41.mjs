@@ -1145,7 +1145,7 @@ export function bible_glyph_chapter_gen41() {
         words: [
           "Then",
           "$house+proper_name",
-          "removed",
+          "$away+doing",
           "the",
           "signet",
           "ring",
