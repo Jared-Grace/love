@@ -181,7 +181,7 @@ export function bible_glyph_chapter_ezk47() {
           "was",
           "a",
           "river",
-          "that",
+          "$back+flashlight",
           "I",
           "could",
           "$no_entry",
