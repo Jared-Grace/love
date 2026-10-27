@@ -1013,7 +1013,7 @@ export function bible_glyph_chapter_lev23() {
         verse_number: 36,
         words: [
           "For",
-          "seven",
+          "$seven",
           "$sun",
           "you",
           "are",
