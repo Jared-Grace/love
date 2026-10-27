@@ -541,7 +541,7 @@ export function bible_glyph_chapter_isa40() {
           "metalworker",
           "overlays",
           "with",
-          "gold",
+          "$gold",
           "and",
           "fits",
           "with",
