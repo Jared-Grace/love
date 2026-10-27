@@ -1310,7 +1310,7 @@ export function bible_glyph_chapter_jer32() {
           "in",
           "My",
           "furious",
-          "anger",
+          "$nose+fire",
           "and",
           "great",
           "wrath,",
