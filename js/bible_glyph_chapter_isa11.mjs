@@ -149,7 +149,7 @@ export function bible_glyph_chapter_isa11() {
           "$wind",
           "of",
           "His",
-          "lips",
+          "$kiss_mark",
           "He",
           "will",
           "$skull+doing",
