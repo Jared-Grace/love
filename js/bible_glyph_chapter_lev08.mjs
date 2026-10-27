@@ -955,7 +955,7 @@ export function bible_glyph_chapter_lev08() {
           "$seven",
           "$sun",
           "and",
-          "keep",
+          "$guard",
           "the",
           "charge",
           "$i_am,",
