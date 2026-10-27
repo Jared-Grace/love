@@ -293,7 +293,7 @@ export function bible_glyph_chapter_isa06() {
           "the",
           "$heart_organ",
           "of",
-          "this",
+          "$flashlight",
           "$family",
           "$lotion_bottle+doing;",
           "deafen",
