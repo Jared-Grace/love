@@ -463,7 +463,7 @@ export function bible_glyph_chapter_lev06() {
           "it",
           "as",
           "their",
-          "portion",
+          "$pizza",
           "of",
           "My",
           "food",
