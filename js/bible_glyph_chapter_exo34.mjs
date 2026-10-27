@@ -1062,7 +1062,7 @@ export function bible_glyph_chapter_exo34() {
           "he",
           "$hands_giving",
           "a",
-          "veil",
+          "$veil+face",
           "over",
           "his",
           "$face.",
