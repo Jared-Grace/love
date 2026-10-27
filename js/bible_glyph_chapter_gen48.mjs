@@ -734,7 +734,7 @@ export function bible_glyph_chapter_gen48() {
           "I",
           "$hands_giving",
           "the",
-          "ridge",
+          "$backpack+person",
           "of",
           "land",
           "that",
