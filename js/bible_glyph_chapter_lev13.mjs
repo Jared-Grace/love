@@ -1498,7 +1498,7 @@ export function bible_glyph_chapter_lev13() {
           "and",
           "he",
           "must",
-          "cover",
+          "$veil+doing",
           "his",
           "mouth",
           "and",
