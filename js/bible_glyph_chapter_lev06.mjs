@@ -412,7 +412,7 @@ export function bible_glyph_chapter_lev06() {
           "as",
           "a",
           "pleasing",
-          "aroma",
+          "$nose",
           "$i_am.",
         ],
       },
