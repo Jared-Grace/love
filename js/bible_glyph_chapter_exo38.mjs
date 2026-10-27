@@ -336,7 +336,7 @@ export function bible_glyph_chapter_exo38() {
           "$east",
           "was",
           "also",
-          "fifty",
+          "$five+zero",
           "cubits",
           "long.",
         ],
