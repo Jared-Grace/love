@@ -750,7 +750,7 @@ export function bible_glyph_chapter_lev22() {
           "testicles",
           "are",
           "bruised,",
-          "crushed,",
+          "$hammer+down_arrow+doing,",
           "torn,",
           "or",
           "cut.",
