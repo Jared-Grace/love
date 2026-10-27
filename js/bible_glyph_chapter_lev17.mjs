@@ -580,7 +580,7 @@ export function bible_glyph_chapter_lev17() {
         verse_number: 16,
         words: [
           "But",
-          "if",
+          "$traffic_light",
           "he",
           "does",
           "$no_entry",
