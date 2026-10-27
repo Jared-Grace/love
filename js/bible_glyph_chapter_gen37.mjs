@@ -541,7 +541,7 @@ export function bible_glyph_chapter_gen37() {
           "dreamer!",
           "they",
           "$speech",
-          "to",
+          "$toward",
           "one",
           "$man_beard",
           "and",
