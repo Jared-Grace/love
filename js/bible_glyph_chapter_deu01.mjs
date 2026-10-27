@@ -230,7 +230,7 @@ export function bible_glyph_chapter_deu01() {
           "$finish",
           "as",
           "the",
-          "great",
+          "$top",
           "$water+national_park",
           "$proper_name$Euphrates.",
         ],
