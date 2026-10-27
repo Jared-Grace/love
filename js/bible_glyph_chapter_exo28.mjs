@@ -723,7 +723,7 @@ export function bible_glyph_chapter_exo28() {
           "pieces",
           "of",
           "the",
-          "ephod",
+          "$safety_vest",
           "on",
           "its",
           "front,",
