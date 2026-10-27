@@ -700,7 +700,7 @@ export function bible_glyph_chapter_2ki05() {
           "$proper_name$Rimmon",
           "to",
           "$bowing",
-          "there,",
+          "$telescope,",
           "and",
           "he",
           "leans",
