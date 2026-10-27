@@ -186,7 +186,7 @@ export function bible_glyph_chapter_exo39() {
           "he",
           "fastened",
           "them",
-          "on",
+          "$pointing_up",
           "the",
           "shoulder",
           "pieces",
