@@ -447,7 +447,7 @@ export function bible_glyph_chapter_gen14() {
           "$finish",
           "as",
           "$proper_name$Hobah,",
-          "north",
+          "$hand+away",
           "of",
           "$proper_name$Damascus.",
         ],
