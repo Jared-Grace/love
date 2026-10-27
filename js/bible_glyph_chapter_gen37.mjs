@@ -974,7 +974,7 @@ export function bible_glyph_chapter_gen37() {
           "$t_shirt+scissors+doing",
           "his",
           "clothes,",
-          "put",
+          "$palm_down",
           "sackcloth",
           "around",
           "his",
