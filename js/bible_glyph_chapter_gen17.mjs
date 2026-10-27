@@ -313,7 +313,7 @@ export function bible_glyph_chapter_gen17() {
           "when",
           "he",
           "is",
-          "eight",
+          "$eight",
           "$sun",
           "old,",
           "including",
