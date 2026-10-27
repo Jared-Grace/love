@@ -313,7 +313,7 @@ export function bible_glyph_chapter_gen04() {
           "has",
           "opened",
           "its",
-          "mouth",
+          "$face_with_open_mouth",
           "to",
           "$hand_receiving",
           "the",
