@@ -1216,7 +1216,7 @@ export function bible_glyph_chapter_2ki10() {
           "$wrestling+heart_on_fire",
           "$all",
           "their",
-          "territory",
+          "$passport_control",
         ],
       },
       {
