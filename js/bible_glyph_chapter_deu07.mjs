@@ -899,7 +899,7 @@ export function bible_glyph_chapter_deu07() {
           "apart",
           "for",
           "destruction",
-          "like",
+          "$likeness",
           "it.",
           "You",
           "are",
