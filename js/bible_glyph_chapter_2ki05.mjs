@@ -1007,7 +1007,7 @@ export function bible_glyph_chapter_2ki05() {
           "his",
           "$chariot",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "you?",
           "Is",
           "this",
