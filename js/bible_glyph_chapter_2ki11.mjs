@@ -751,7 +751,7 @@ export function bible_glyph_chapter_2ki11() {
           "the",
           "$city",
           "was",
-          "quiet,",
+          "$pause_button+doing,",
           "because",
           "$proper_name$Athaliah",
           "had",
