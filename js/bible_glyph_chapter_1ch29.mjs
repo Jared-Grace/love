@@ -480,7 +480,7 @@ export function bible_glyph_chapter_1ch29() {
       {
         verse_number: 13,
         words: [
-          "Now",
+          "$watch",
           "therefore,",
           "our",
           "$heart_on_fire,",
