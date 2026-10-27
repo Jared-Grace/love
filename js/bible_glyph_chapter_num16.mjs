@@ -1422,7 +1422,7 @@ export function bible_glyph_chapter_num16() {
         verse_number: 47,
         words: [
           "So",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "$hand_receiving",
           "the",
           "censer",
