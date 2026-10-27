@@ -398,7 +398,7 @@ export function bible_glyph_chapter_2sa05() {
           "$castle",
           "for",
           "the",
-          "sake",
+          "$information+toward",
           "of",
           "His",
           "$family",
