@@ -171,7 +171,7 @@ export function bible_glyph_chapter_isa58() {
           "$link",
           "$flashlight",
           "the",
-          "fast",
+          "$eating+locked",
           "I",
           "have",
           "chosen,",
