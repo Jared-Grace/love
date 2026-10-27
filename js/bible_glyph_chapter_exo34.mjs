@@ -1137,7 +1137,7 @@ export function bible_glyph_chapter_exo34() {
           "$turn_back",
           "over",
           "his",
-          "face",
+          "$face",
           "until",
           "he",
           "$footprints",
