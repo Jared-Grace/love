@@ -80,7 +80,7 @@ export function bible_glyph_chapter_lev01() {
           "present",
           "an",
           "unblemished",
-          "male.",
+          "$reminder_ribbon+thing.",
           "He",
           "must",
           "bring",
