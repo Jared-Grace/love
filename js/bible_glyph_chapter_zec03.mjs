@@ -256,7 +256,7 @@ export function bible_glyph_chapter_zec03() {
           "a",
           "sign.",
           "For",
-          "behold,",
+          "$exclamation,",
           "I",
           "am",
           "going",
