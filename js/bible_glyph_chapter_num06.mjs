@@ -82,7 +82,7 @@ export function bible_glyph_chapter_num06() {
           "$grapes+pouring_liquid",
           "or",
           "$eating",
-          "fresh",
+          "$new_button+describing",
           "grapes",
           "or",
           "raisins.",
