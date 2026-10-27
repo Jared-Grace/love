@@ -319,7 +319,7 @@ export function bible_glyph_chapter_lev10() {
           "And",
           "$fishing_pole+proper_name",
           "$mouth",
-          "to",
+          "$toward",
           "$proper_name$Aaron",
           "and",
           "his",
