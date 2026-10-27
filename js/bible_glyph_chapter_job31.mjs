@@ -77,7 +77,7 @@ export function bible_glyph_chapter_job31() {
         verse_number: 4,
         words: [
           "Does",
-          "He",
+          "$pointing_back",
           "$no_entry",
           "$eye",
           "my",
