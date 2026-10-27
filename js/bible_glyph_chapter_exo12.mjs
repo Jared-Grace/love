@@ -56,7 +56,7 @@ export function bible_glyph_chapter_exo12() {
           "$mouth",
           "the",
           "$all",
-          "congregation",
+          "$witness+crowd",
           "of",
           "$wrestling+heart_on_fire",
           "that",
