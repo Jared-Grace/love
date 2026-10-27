@@ -279,7 +279,7 @@ export function bible_glyph_chapter_2sa11() {
         words: [
           "But",
           "Uriah",
-          "slept",
+          "$bed+doing",
           "at",
           "the",
           "door",
