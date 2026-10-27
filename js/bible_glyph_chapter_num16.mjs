@@ -524,7 +524,7 @@ export function bible_glyph_chapter_num16() {
           "$face",
           "the",
           "$i_am",
-          "tomorrow,",
+          "$sun+next_track,",
           "$you",
           "and",
           "$pointing_back",
