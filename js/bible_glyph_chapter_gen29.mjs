@@ -197,7 +197,7 @@ export function bible_glyph_chapter_gen29() {
           "is",
           "$no_entry",
           "yet",
-          "time",
+          "$clock",
           "to",
           "gather",
           "the",
