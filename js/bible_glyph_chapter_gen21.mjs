@@ -756,7 +756,7 @@ export function bible_glyph_chapter_gen21() {
           "you",
           "set",
           "apart",
-          "these",
+          "$flashlight+flashlight",
           "$seven",
           "ewe",
           "lambs?",
