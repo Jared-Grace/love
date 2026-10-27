@@ -1003,7 +1003,7 @@ export function bible_glyph_chapter_2ki04() {
           "and",
           "laid",
           "the",
-          "staff",
+          "$white_cane+walking",
           "on",
           "the",
           "boy's",
