@@ -439,7 +439,7 @@ export function bible_glyph_chapter_jos01() {
           "in",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "$fishing_pole+proper_name",
           "$hands_giving",
           "you",
