@@ -550,7 +550,7 @@ export function bible_glyph_chapter_2ki01() {
           "and",
           "consumed",
           "the",
-          "first",
+          "$first_place",
           "$two",
           "$military_medal",
           "of",
