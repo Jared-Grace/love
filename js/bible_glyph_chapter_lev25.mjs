@@ -1596,7 +1596,7 @@ export function bible_glyph_chapter_lev25() {
           "and",
           "$turn_back",
           "his",
-          "redemption.",
+          "$currency_exchange+thing.",
         ],
       },
       {
