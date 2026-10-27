@@ -49,7 +49,7 @@ export function bible_glyph_chapter_lev13() {
           "be",
           "an",
           "infectious",
-          "disease",
+          "$face_with_head_bandage",
           "of",
           "the",
           "skin",
