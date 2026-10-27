@@ -681,7 +681,7 @@ export function bible_glyph_chapter_jdg04() {
           "$tent+wood",
           "through",
           "his",
-          "temple",
+          "$face+ear+round_pushpin",
           "into",
           "the",
           "$earth",
