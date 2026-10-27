@@ -678,7 +678,7 @@ export function bible_glyph_chapter_num19() {
           "$water,",
           "and",
           "that",
-          "evening",
+          "$sunset",
           "he",
           "will",
           "be",
