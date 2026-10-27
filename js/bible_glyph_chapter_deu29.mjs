@@ -600,7 +600,7 @@ export function bible_glyph_chapter_deu29() {
           "him.",
           "$pointing,",
           "$i_am",
-          "anger",
+          "$nose+fire",
           "and",
           "$face_steam",
           "will",
