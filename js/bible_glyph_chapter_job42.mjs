@@ -333,7 +333,7 @@ export function bible_glyph_chapter_job42() {
           "silver",
           "and",
           "a",
-          "gold",
+          "$gold",
           "$nose+ring.",
         ],
       },
