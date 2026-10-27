@@ -745,7 +745,7 @@ export function bible_glyph_chapter_job38() {
         words: [
           "when",
           "the",
-          "dust",
+          "$dust",
           "$pouring_liquid+fire",
           "into",
           "a",
