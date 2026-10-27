@@ -67,7 +67,7 @@ export function bible_glyph_chapter_exo30() {
       {
         verse_number: 3,
         words: [
-          "Overlay",
+          "$top+brown_square+doing",
           "the",
           "top",
           "and",
