@@ -151,7 +151,7 @@ export function bible_glyph_chapter_2sa05() {
           "$year",
           "and",
           "$six",
-          "months,",
+          "$new_moon,",
           "and",
           "in",
           "$city+peace",
