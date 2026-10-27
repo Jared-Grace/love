@@ -757,7 +757,7 @@ export function bible_glyph_chapter_lev15() {
           "her",
           "menstrual",
           "period,",
-          "or",
+          "$shuffle",
           "if",
           "it",
           "continues",
