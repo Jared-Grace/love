@@ -1405,7 +1405,7 @@ export function bible_glyph_chapter_lev25() {
           "over",
           "his",
           "$brother",
-          "harshly.",
+          "$collision+thing.",
         ],
       },
       {
