@@ -254,7 +254,7 @@ export function bible_glyph_chapter_psa027() {
           "$see_no_evil_monkey",
           "$no_entry",
           "Your",
-          "face",
+          "$face",
           "$tray_out",
           "me,",
           "$no_entry",
