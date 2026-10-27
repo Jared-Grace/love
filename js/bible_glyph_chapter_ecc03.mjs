@@ -497,7 +497,7 @@ export function bible_glyph_chapter_ecc03() {
           "have",
           "the",
           "same",
-          "breath.",
+          "$wind.",
           "$person",
           "has",
           "no",
