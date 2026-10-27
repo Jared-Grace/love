@@ -91,7 +91,7 @@ export function bible_glyph_chapter_isa11() {
           "He",
           "will",
           "$no_entry",
-          "judge",
+          "$scales",
           "by",
           "what",
           "His",
