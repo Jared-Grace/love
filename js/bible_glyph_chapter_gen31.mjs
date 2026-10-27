@@ -563,7 +563,7 @@ export function bible_glyph_chapter_gen31() {
         words: [
           "On",
           "the",
-          "third",
+          "$third_place",
           "$sun",
           "$proper_name$Laban",
           "was",
