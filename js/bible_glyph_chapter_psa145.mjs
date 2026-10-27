@@ -43,7 +43,7 @@ export function bible_glyph_chapter_psa145() {
       {
         verse_number: 2,
         words: [
-          "Every",
+          "$all",
           "$sun",
           "I",
           "will",
