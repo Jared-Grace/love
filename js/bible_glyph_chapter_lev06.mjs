@@ -600,7 +600,7 @@ export function bible_glyph_chapter_lev06() {
           "it.",
           "As",
           "$hourglass",
-          "portion",
+          "$locked_with_pen",
           "$i_am",
           "it",
           "must",
