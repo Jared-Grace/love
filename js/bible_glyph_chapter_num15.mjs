@@ -174,7 +174,7 @@ export function bible_glyph_chapter_num15() {
           "$third_place",
           "of",
           "a",
-          "hin",
+          "$jar+straight_ruler",
           "of",
           "olive",
           "$lotion_bottle,",
