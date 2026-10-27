@@ -170,7 +170,7 @@ export function bible_glyph_chapter_isa43() {
           "Do",
           "$no_entry",
           "be",
-          "afraid,",
+          "$fear+doing,",
           "for",
           "I",
           "am",
