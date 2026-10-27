@@ -227,7 +227,7 @@ export function bible_glyph_chapter_1ki08() {
           "$place",
           "of",
           "the",
-          "ark",
+          "$ark",
           "and",
           "overshadowed",
           "the",
