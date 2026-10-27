@@ -134,7 +134,7 @@ export function bible_glyph_chapter_exo02() {
           "went",
           "$walking+pointing_down",
           "to",
-          "bathe",
+          "$bathtub+doing",
           "in",
           "the",
           "Nile,",
