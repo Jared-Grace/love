@@ -407,7 +407,7 @@ export function bible_glyph_chapter_lev25() {
           "to",
           "your",
           "neighbor,",
-          "or",
+          "$shuffle",
           "a",
           "purchase",
           "$hand",
