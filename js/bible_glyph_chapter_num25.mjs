@@ -281,7 +281,7 @@ export function bible_glyph_chapter_num25() {
           "in",
           "the",
           "$fist+microbe+thing",
-          "numbered",
+          "$four",
           "twenty",
           "four",
           "thousand.",
