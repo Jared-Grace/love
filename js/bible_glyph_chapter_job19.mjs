@@ -270,7 +270,7 @@ export function bible_glyph_chapter_job19() {
           "me",
           "as",
           "a",
-          "stranger;",
+          "$alien;",
           "I",
           "am",
           "a",
