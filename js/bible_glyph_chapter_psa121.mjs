@@ -22,7 +22,7 @@ export function bible_glyph_chapter_psa121() {
           "up",
           "my",
           "$eyes",
-          "to",
+          "$toward",
           "the",
           "$mountain.",
           "From",
