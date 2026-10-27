@@ -47,7 +47,7 @@ export function bible_glyph_chapter_exo30() {
           "is",
           "to",
           "be",
-          "square,",
+          "$four+straight_ruler+describing,",
           "and",
           "two",
           "cubits",
