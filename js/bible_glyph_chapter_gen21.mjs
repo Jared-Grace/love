@@ -595,7 +595,7 @@ export function bible_glyph_chapter_gen21() {
           "his",
           "$military_helmet",
           "$speech",
-          "to",
+          "$toward",
           "$father+map,",
           "$heart_on_fire",
           "is",
