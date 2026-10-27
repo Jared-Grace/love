@@ -561,7 +561,7 @@ export function bible_glyph_chapter_jdg06() {
           "$pleading",
           "do",
           "$no_entry",
-          "depart",
+          "$walking+away+doing",
           "from",
           "this",
           "place",
