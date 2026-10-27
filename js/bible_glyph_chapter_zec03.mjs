@@ -52,7 +52,7 @@ export function bible_glyph_chapter_zec03() {
           "$smiling_face_with_horns,",
           "The",
           "$i_am",
-          "rebukes",
+          "$pointing+anger_symbol+doing",
           "you,",
           "$smiling_face_with_horns!",
           "Indeed,",
