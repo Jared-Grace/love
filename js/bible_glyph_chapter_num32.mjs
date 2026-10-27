@@ -949,7 +949,7 @@ export function bible_glyph_chapter_num32() {
           "will",
           "$bridge",
           "over",
-          "armed",
+          "$hand+tray_out+doing",
           "before",
           "$i_am",
           "into",
