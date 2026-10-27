@@ -394,7 +394,7 @@ export function bible_glyph_chapter_lam02() {
           "$plus",
           "her",
           "$megaphone",
-          "find",
+          "$magnifying_glass+exclamation",
           "$no_entry",
           "vision",
           "from",
