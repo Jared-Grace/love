@@ -816,7 +816,7 @@ export function bible_glyph_chapter_2sa12() {
           "$hug+doing",
           "his",
           "$woman",
-          "Bathsheba,",
+          "$girl+family+raised_back_of_hand+proper_name,",
           "and",
           "he",
           "$footprints",
