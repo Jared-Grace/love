@@ -303,7 +303,7 @@ export function bible_glyph_chapter_isa07() {
           "$son",
           "of",
           "$proper_name$Remaliah.",
-          "If",
+          "$traffic_light",
           "you",
           "do",
           "$no_entry",
