@@ -1152,7 +1152,7 @@ export function bible_glyph_chapter_lam03() {
         words: [
           "You",
           "will",
-          "pursue",
+          "$running+toward",
           "them",
           "in",
           "anger",
