@@ -265,7 +265,7 @@ export function bible_glyph_chapter_gen23() {
           "$field.",
           "For",
           "the",
-          "full",
+          "$battery+describing",
           "$silver",
           "let",
           "him",
