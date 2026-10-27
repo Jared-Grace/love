@@ -337,7 +337,7 @@ export function bible_glyph_chapter_lev05() {
           "$traffic_light",
           "$hand",
           "$no_entry",
-          "afford",
+          "$running+hand_receiving+doing",
           "two",
           "turtledoves",
           "or",
