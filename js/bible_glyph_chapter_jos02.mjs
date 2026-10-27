@@ -347,7 +347,7 @@ export function bible_glyph_chapter_jos02() {
           "and",
           "$proper_name$Og,",
           "the",
-          "two",
+          "$two",
           "$king",
           "of",
           "the",
