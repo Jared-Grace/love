@@ -911,7 +911,7 @@ export function bible_glyph_chapter_exo21() {
           "$kneeling",
           "$shuffle",
           "a",
-          "maidservant,",
+          "$broom,",
           "the",
           "owner",
           "must",
