@@ -416,7 +416,7 @@ export function bible_glyph_chapter_num21() {
           "$speech",
           "in",
           "the",
-          "Book",
+          "$closed_book",
           "of",
           "the",
           "Wars",
