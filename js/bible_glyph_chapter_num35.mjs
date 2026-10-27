@@ -794,7 +794,7 @@ export function bible_glyph_chapter_num35() {
           "avenger",
           "of",
           "$blood",
-          "finds",
+          "$magnifying_glass+exclamation",
           "him",
           "outside",
           "his",
