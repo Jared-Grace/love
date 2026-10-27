@@ -355,7 +355,7 @@ export function bible_glyph_chapter_sng08() {
           "But",
           "my",
           "own",
-          "vineyard",
+          "$vineyard",
           "is",
           "mine",
           "to",
