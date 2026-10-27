@@ -949,7 +949,7 @@ export function bible_glyph_chapter_exo36() {
           "posts",
           "$four",
           "$silver",
-          "bases.",
+          "$down_arrow+brick.",
         ],
       },
       {
