@@ -561,7 +561,7 @@ export function bible_glyph_chapter_1ch29() {
           "a",
           "shadow,",
           "$dotted_line_face",
-          "hope.",
+          "$water+tray_in.",
         ],
       },
       {
