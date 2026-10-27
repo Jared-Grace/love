@@ -748,7 +748,7 @@ export function bible_glyph_chapter_lev06() {
         verse_number: 29,
         words: [
           "Any",
-          "male",
+          "$reminder_ribbon+thing",
           "$priest",
           "may",
           "$eating",
