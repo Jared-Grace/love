@@ -619,7 +619,7 @@ export function bible_glyph_chapter_gen37() {
           "shed",
           "his",
           "$blood.",
-          "Throw",
+          "$throwing",
           "him",
           "into",
           "this",
