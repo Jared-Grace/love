@@ -71,7 +71,7 @@ export function bible_glyph_chapter_2ki04() {
           "$hammer+doing",
           "for",
           "you?",
-          "Tell",
+          "$newspaper",
           "me,",
           "what",
           "do",
