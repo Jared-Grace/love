@@ -742,7 +742,7 @@ export function bible_glyph_chapter_exo23() {
           "will",
           "take",
           "away",
-          "sickness",
+          "$thermometer_face+thing",
           "from",
           "among",
           "you.",
