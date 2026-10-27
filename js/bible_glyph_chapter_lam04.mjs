@@ -420,7 +420,7 @@ export function bible_glyph_chapter_lam04() {
         words: [
           "Go",
           "away!",
-          "Unclean!",
+          "$soap+no_entry!",
           "men",
           "shouted",
           "at",
