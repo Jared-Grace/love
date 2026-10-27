@@ -640,7 +640,7 @@ export function bible_glyph_chapter_deu14() {
           "$telescope",
           "in",
           "the",
-          "presence",
+          "$face",
           "of",
           "the",
           "$i_am",
