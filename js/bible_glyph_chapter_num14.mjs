@@ -1277,7 +1277,7 @@ export function bible_glyph_chapter_num14() {
           "This",
           "will",
           "$no_entry",
-          "succeed.",
+          "$chart_increasing.",
         ],
       },
       {
