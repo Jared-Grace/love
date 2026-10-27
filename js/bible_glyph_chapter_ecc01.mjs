@@ -434,7 +434,7 @@ export function bible_glyph_chapter_ecc01() {
           "$wisdom",
           "comes",
           "much",
-          "sorrow,",
+          "$face_steam+right_anger_bubble+thing,",
           "and",
           "as",
           "knowledge",
