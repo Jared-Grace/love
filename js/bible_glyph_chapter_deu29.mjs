@@ -594,7 +594,7 @@ export function bible_glyph_chapter_deu29() {
           "will",
           "$no_entry",
           "be",
-          "willing",
+          "$heart_red+check+doing",
           "to",
           "forgive",
           "him.",
