@@ -1542,7 +1542,7 @@ export function bible_glyph_chapter_1ki02() {
           "$no_entry",
           "$guard",
           "your",
-          "oath",
+          "$raised_back_of_hand",
           "to",
           "the",
           "$i_am",
