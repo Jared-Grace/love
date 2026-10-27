@@ -671,7 +671,7 @@ export function bible_glyph_chapter_1sa16() {
           "$two_hearts+proper_name",
           "his",
           "$son",
-          "to",
+          "$toward",
           "$proper_name$Saul.",
         ],
       },
