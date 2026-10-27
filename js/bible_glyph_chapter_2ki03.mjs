@@ -643,7 +643,7 @@ export function bible_glyph_chapter_2ki03() {
           "$water,",
           "and",
           "ruin",
-          "every",
+          "$all",
           "$thumbs_up",
           "field",
           "with",
