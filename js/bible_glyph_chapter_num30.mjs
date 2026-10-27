@@ -202,7 +202,7 @@ export function bible_glyph_chapter_num30() {
           "while",
           "under",
           "a",
-          "vow,",
+          "$saluting_face,",
           "or",
           "a",
           "rash",
