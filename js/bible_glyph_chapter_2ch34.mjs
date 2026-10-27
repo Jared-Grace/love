@@ -17,7 +17,7 @@ export function bible_glyph_chapter_2ch34() {
         words: [
           "$proper_name$Josiah",
           "was",
-          "eight",
+          "$eight",
           "years",
           "old",
           "when",
