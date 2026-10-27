@@ -230,7 +230,7 @@ export function bible_glyph_chapter_mic03() {
           "there",
           "is",
           "no",
-          "answer",
+          "$speech+turn_back+thing",
           "from",
           "$heart_on_fire.",
         ],
