@@ -160,7 +160,7 @@ export function bible_glyph_chapter_isa12() {
           "citizen",
           "of",
           "$proper_name$Zion,",
-          "for",
+          "$pointing",
           "great",
           "among",
           "you",
