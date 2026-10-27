@@ -517,7 +517,7 @@ export function bible_glyph_chapter_exo28() {
           "a",
           "$gem_stone+heart_orange,",
           "an",
-          "agate",
+          "$gem_stone+brown_square",
           "and",
           "an",
           "amethyst;",
