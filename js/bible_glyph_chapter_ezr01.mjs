@@ -356,7 +356,7 @@ export function bible_glyph_chapter_ezr01() {
           "and",
           "a",
           "thousand",
-          "other",
+          "$plus+one",
           "$toolbox.",
         ],
       },
