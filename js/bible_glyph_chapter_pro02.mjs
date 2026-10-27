@@ -327,7 +327,7 @@ export function bible_glyph_chapter_pro02() {
           "$house",
           "sinks",
           "$person+hole+doing",
-          "to",
+          "$toward",
           "$skull,",
           "and",
           "her",
