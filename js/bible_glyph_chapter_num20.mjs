@@ -874,7 +874,7 @@ export function bible_glyph_chapter_num20() {
           "When",
           "the",
           "whole",
-          "congregation",
+          "$witness+crowd",
           "$eye",
           "that",
           "$proper_name$Aaron",
