@@ -232,7 +232,7 @@ export function bible_glyph_chapter_isa09() {
           "will",
           "be",
           "no",
-          "end.",
+          "$stop_sign.",
           "He",
           "will",
           "reign",
