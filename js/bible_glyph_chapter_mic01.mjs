@@ -473,7 +473,7 @@ export function bible_glyph_chapter_mic01() {
           "$wrestling+heart_on_fire",
           "will",
           "$footprints",
-          "to",
+          "$finish",
           "$proper_name$Adullam.",
         ],
       },
