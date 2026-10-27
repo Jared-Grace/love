@@ -186,7 +186,7 @@ export function bible_glyph_chapter_isa58() {
           "to",
           "$curving_up+person+doing",
           "his",
-          "head",
+          "$person_gesturing_ok",
           "like",
           "a",
           "reed",
