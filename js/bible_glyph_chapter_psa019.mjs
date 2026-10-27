@@ -294,7 +294,7 @@ export function bible_glyph_chapter_psa019() {
           "may",
           "they",
           "$no_entry",
-          "rule",
+          "$joystick",
           "over",
           "me.",
           "Then",
