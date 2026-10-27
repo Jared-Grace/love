@@ -26,7 +26,7 @@ export function bible_glyph_chapter_zec12() {
           "$pointing_up",
           "$wrestling+heart_on_fire.",
           "Thus",
-          "declares",
+          "$microphone",
           "the",
           "$i_am,",
           "who",
