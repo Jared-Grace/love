@@ -145,7 +145,7 @@ export function bible_glyph_chapter_pro03() {
           "your",
           "own",
           "$eyes;",
-          "fear",
+          "$fear+doing",
           "the",
           "$i_am",
           "and",
