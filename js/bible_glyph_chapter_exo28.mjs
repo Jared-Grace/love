@@ -822,7 +822,7 @@ export function bible_glyph_chapter_exo28() {
           "$hands_giving",
           "in",
           "the",
-          "breastpiece",
+          "$gem_stone+t_shirt",
           "of",
           "$scales+thing",
           "the",
