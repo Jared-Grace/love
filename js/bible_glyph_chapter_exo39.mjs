@@ -493,7 +493,7 @@ export function bible_glyph_chapter_exo39() {
           "next",
           "to",
           "the",
-          "ephod.",
+          "$safety_vest.",
         ],
       },
       {
