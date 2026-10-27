@@ -121,7 +121,7 @@ export function bible_glyph_chapter_num22() {
           "$father+proper_name",
           "at",
           "that",
-          "time.",
+          "$clock.",
         ],
       },
       {
