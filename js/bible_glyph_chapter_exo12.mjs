@@ -800,7 +800,7 @@ export function bible_glyph_chapter_exo12() {
           "are",
           "to",
           "$guard",
-          "this",
+          "$flashlight",
           "$speech",
           "as",
           "a",
