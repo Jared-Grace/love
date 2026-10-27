@@ -565,7 +565,7 @@ export function bible_glyph_chapter_num15() {
           "offering",
           "from",
           "the",
-          "first",
+          "$first_place+thing",
           "of",
           "your",
           "dough.",
