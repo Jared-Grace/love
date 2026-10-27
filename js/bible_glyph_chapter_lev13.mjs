@@ -1942,7 +1942,7 @@ export function bible_glyph_chapter_lev13() {
           "it",
           "$soap+doing",
           "$shuffle",
-          "unclean.",
+          "$soap+no_entry.",
         ],
       },
     ],
