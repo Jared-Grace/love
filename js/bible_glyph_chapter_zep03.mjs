@@ -270,7 +270,7 @@ export function bible_glyph_chapter_zep03() {
           "will",
           "restore",
           "pure",
-          "lips",
+          "$kiss_mark",
           "to",
           "the",
           "$family,",
