@@ -1221,7 +1221,7 @@ export function bible_glyph_chapter_lev23() {
           "you",
           "are",
           "to",
-          "rejoice",
+          "$beaming+doing",
           "before",
           "$i_am",
           "your",
