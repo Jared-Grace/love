@@ -2112,7 +2112,7 @@ export function bible_glyph_chapter_deu28() {
           "will",
           "find",
           "$no_entry",
-          "repose,",
+          "$water_wave+fast_forward+doing,",
           "$no_entry",
           "even",
           "a",
