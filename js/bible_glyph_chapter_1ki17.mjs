@@ -547,7 +547,7 @@ export function bible_glyph_chapter_1ki17() {
           "worse",
           "and",
           "worse,",
-          "until",
+          "$finish",
           "$no_entry",
           "breath",
           "remained",
