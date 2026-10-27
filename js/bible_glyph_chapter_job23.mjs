@@ -303,7 +303,7 @@ export function bible_glyph_chapter_job23() {
           "terrified",
           "in",
           "His",
-          "presence;",
+          "$face;",
           "when",
           "I",
           "consider",
