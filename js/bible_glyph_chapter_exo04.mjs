@@ -968,7 +968,7 @@ export function bible_glyph_chapter_exo04() {
           "had",
           "$eye",
           "their",
-          "affliction,",
+          "$persevering_face+thing,",
           "they",
           "bowed",
           "down",
