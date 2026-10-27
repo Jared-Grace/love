@@ -1413,7 +1413,7 @@ export function bible_glyph_chapter_jer32() {
           "they",
           "will",
           "never",
-          "turn",
+          "$away+doing",
           "away",
           "from",
           "Me.",
