@@ -397,7 +397,7 @@ export function bible_glyph_chapter_hab03() {
           "$baby+house;",
           "my",
           "lips",
-          "quivered",
+          "$ear+vibration_mode+doing",
           "at",
           "the",
           "$voice.",
