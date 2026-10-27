@@ -1130,7 +1130,7 @@ export function bible_glyph_chapter_exo28() {
           "the",
           "$son",
           "of",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "$hammer+doing",
           "tunics,",
           "and",
