@@ -517,7 +517,7 @@ export function bible_glyph_chapter_lev24() {
           "$eyes",
           "for",
           "$eyes,",
-          "tooth",
+          "$tooth",
           "for",
           "tooth.",
           "Just",
