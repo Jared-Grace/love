@@ -394,7 +394,7 @@ export function bible_glyph_chapter_lev04() {
           "and",
           "$footprints",
           "it",
-          "before",
+          "$face",
           "$tent",
           "of",
           "Meeting.",
