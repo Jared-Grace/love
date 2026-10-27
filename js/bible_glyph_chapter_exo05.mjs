@@ -605,7 +605,7 @@ export function bible_glyph_chapter_exo05() {
           "stood",
           "waiting",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "them.",
         ],
       },
