@@ -760,7 +760,7 @@ export function bible_glyph_chapter_1sa20() {
         verse_number: 22,
         words: [
           "But",
-          "if",
+          "$traffic_light",
           "I",
           "$speech",
           "to",
