@@ -764,7 +764,7 @@ export function bible_glyph_chapter_1sa01() {
           "three-year-old",
           "$bull,",
           "an",
-          "ephah",
+          "$bucket+input_numbers",
           "of",
           "flour",
           "and",
