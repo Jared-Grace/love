@@ -1234,7 +1234,7 @@ export function bible_glyph_chapter_1ki08() {
           "that",
           "You",
           "may",
-          "teach",
+          "$bow+toward",
           "them",
           "the",
           "$thumbs_up",
