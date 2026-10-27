@@ -143,7 +143,7 @@ export function bible_glyph_chapter_gen15() {
           "and",
           "$speech,",
           "Now",
-          "look",
+          "$face_with_monocle",
           "to",
           "the",
           "$sky",
