@@ -695,7 +695,7 @@ export function bible_glyph_chapter_gen21() {
           "$you",
           "did",
           "$no_entry",
-          "tell",
+          "$newspaper",
           "me,",
           "so",
           "I",
