@@ -308,7 +308,7 @@ export function bible_glyph_chapter_lev27() {
           "for",
           "$thumbs_up.",
           "But",
-          "if",
+          "$traffic_light",
           "he",
           "does",
           "substitute",
