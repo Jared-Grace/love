@@ -258,7 +258,7 @@ export function bible_glyph_chapter_lev16() {
           "lots",
           "for",
           "the",
-          "two",
+          "$two",
           "goats,",
           "one",
           "for",
