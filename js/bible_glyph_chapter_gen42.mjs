@@ -378,7 +378,7 @@ export function bible_glyph_chapter_gen42() {
           "as",
           "I",
           "$mouth.",
-          "You",
+          "$you",
           "are",
           "spies.",
         ],
