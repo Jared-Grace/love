@@ -413,7 +413,7 @@ export function bible_glyph_chapter_exo26() {
           "$tree+thorns",
           "$tree,",
           "standing",
-          "upright.",
+          "$person+round_pushpin.",
         ],
       },
       {
