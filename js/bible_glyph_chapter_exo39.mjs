@@ -542,7 +542,7 @@ export function bible_glyph_chapter_exo39() {
           "of",
           "the",
           "$gem_stone+t_shirt",
-          "to",
+          "$toward",
           "$ring",
           "of",
           "the",
