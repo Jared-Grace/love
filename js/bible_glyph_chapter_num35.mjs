@@ -365,7 +365,7 @@ export function bible_glyph_chapter_num35() {
           "$finish",
           "he",
           "stands",
-          "before",
+          "$face",
           "the",
           "assembly",
           "for",
