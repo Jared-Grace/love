@@ -1193,7 +1193,7 @@ export function bible_glyph_chapter_exo28() {
           "their",
           "$face_with_peeking_eye",
           "$meat,",
-          "extending",
+          "$link",
           "from",
           "the",
           "$briefs+round_pushpin",
