@@ -389,7 +389,7 @@ export function bible_glyph_chapter_exo37() {
           "utensils",
           "for",
           "the",
-          "table,",
+          "$hand_sending+thing,",
           "its",
           "plates",
           "and",
