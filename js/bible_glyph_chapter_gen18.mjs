@@ -65,7 +65,7 @@ export function bible_glyph_chapter_gen18() {
           "$door",
           "of",
           "his",
-          "tent",
+          "$tent",
           "to",
           "$footprints+toward+doing",
           "them",
