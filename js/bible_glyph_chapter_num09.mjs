@@ -445,7 +445,7 @@ export function bible_glyph_chapter_num09() {
           "$statute",
           "of",
           "the",
-          "Passover",
+          "$lamb+door",
           "and",
           "its",
           "$scales+thing.",
