@@ -669,7 +669,7 @@ export function bible_glyph_chapter_pro03() {
       {
         verse_number: 34,
         words: [
-          "He",
+          "$pointing_back",
           "mocks",
           "the",
           "mockers,",
