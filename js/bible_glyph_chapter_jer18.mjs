@@ -143,7 +143,7 @@ export function bible_glyph_chapter_jer18() {
           "$i_am.",
           "$exclamation",
           "as",
-          "clay",
+          "$brown_square+water",
           "is",
           "in",
           "the",
