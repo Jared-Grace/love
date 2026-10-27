@@ -874,7 +874,7 @@ export function bible_glyph_chapter_exo32() {
           "entrance",
           "to",
           "the",
-          "camp",
+          "$camp",
           "and",
           "$speech,",
           "Whoever",
