@@ -909,7 +909,7 @@ export function bible_glyph_chapter_exo26() {
           "wood",
           "for",
           "the",
-          "curtain,",
+          "$umbrella+door,",
           "overlay",
           "them",
           "with",
