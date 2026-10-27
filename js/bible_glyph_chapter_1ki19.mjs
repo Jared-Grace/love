@@ -300,7 +300,7 @@ export function bible_glyph_chapter_1ki19() {
           "are",
           "you",
           "doing",
-          "here,",
+          "$flashlight+round_pushpin,",
           "$heart_on_fire+i_am?",
         ],
       },
