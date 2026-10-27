@@ -591,7 +591,7 @@ export function bible_glyph_chapter_deu16() {
           "Unleavened",
           "Bread,",
           "the",
-          "Feast",
+          "$party_popper",
           "of",
           "Weeks,",
           "and",
