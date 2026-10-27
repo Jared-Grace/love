@@ -515,7 +515,7 @@ export function bible_glyph_chapter_lev09() {
           "a",
           "wave",
           "offering",
-          "before",
+          "$face",
           "$i_am,",
           "as",
           "$fishing_pole+proper_name",
