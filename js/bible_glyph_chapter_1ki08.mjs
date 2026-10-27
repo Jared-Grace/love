@@ -366,7 +366,7 @@ export function bible_glyph_chapter_1ki08() {
           "of",
           "the",
           "$i_am",
-          "filled",
+          "$battery",
           "the",
           "$house",
           "of",
