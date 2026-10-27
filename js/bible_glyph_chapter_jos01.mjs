@@ -273,7 +273,7 @@ export function bible_glyph_chapter_jos01() {
           "in",
           "it.",
           "$pointing",
-          "then",
+          "$telescope+clock",
           "you",
           "will",
           "prosper",
