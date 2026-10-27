@@ -1427,7 +1427,7 @@ export function bible_glyph_chapter_deu04() {
           "on",
           "the",
           "$earth",
-          "below;",
+          "$down_arrow;",
           "there",
           "is",
           "no",
