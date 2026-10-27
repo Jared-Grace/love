@@ -179,7 +179,7 @@ export function bible_glyph_chapter_deu10() {
           "tablets",
           "in",
           "the",
-          "ark",
+          "$ark",
           "that",
           "I",
           "had",
