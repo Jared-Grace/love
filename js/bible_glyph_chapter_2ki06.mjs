@@ -796,7 +796,7 @@ export function bible_glyph_chapter_2ki06() {
           "$tray_in+doing",
           "his",
           "entire",
-          "army",
+          "$camp",
           "and",
           "marched",
           "up",
