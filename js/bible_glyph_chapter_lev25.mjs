@@ -1453,7 +1453,7 @@ export function bible_glyph_chapter_lev25() {
           "right",
           "of",
           "redemption",
-          "after",
+          "$next_track",
           "he",
           "has",
           "sold",
