@@ -29,7 +29,7 @@ export function bible_glyph_chapter_exo11() {
           "and",
           "upon",
           "$clamp+proper_name.",
-          "After",
+          "$next_track",
           "that",
           "he",
           "will",
