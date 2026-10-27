@@ -52,7 +52,7 @@ export function bible_glyph_chapter_zec04() {
           "a",
           "solid",
           "gold",
-          "lampstand",
+          "$lamp+thing",
           "with",
           "a",
           "bowl",
