@@ -280,7 +280,7 @@ export function bible_glyph_chapter_deu14() {
           "scales;",
           "it",
           "is",
-          "unclean",
+          "$soap+no_entry",
           "for",
           "you.",
         ],
