@@ -202,7 +202,7 @@ export function bible_glyph_chapter_exo23() {
         verse_number: 9,
         words: [
           "$no_entry",
-          "oppress",
+          "$clamp+weary_face+doing",
           "a",
           "$foreigner,",
           "since",
