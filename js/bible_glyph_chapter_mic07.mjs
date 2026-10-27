@@ -102,7 +102,7 @@ export function bible_glyph_chapter_mic07() {
           "powerful",
           "$mouth",
           "his",
-          "evil",
+          "$derelict_house",
           "$person_other,",
           "they",
           "all",
