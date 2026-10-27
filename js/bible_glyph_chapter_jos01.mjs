@@ -476,7 +476,7 @@ export function bible_glyph_chapter_jos01() {
       {
         verse_number: 15,
         words: [
-          "until",
+          "$finish",
           "the",
           "$i_am",
           "gives",
