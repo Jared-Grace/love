@@ -62,7 +62,7 @@ export function bible_glyph_chapter_gen18() {
           "ran",
           "from",
           "the",
-          "entrance",
+          "$door",
           "of",
           "his",
           "tent",
