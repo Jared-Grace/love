@@ -61,7 +61,7 @@ export function bible_glyph_chapter_deu06() {
           "$heart_on_fire",
           "by",
           "keeping",
-          "all",
+          "$all",
           "His",
           "statutes",
           "and",
