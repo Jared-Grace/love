@@ -1351,7 +1351,7 @@ export function bible_glyph_chapter_num16() {
       {
         verse_number: 45,
         words: [
-          "Get",
+          "$person_climbing+doing",
           "away",
           "from",
           "this",
