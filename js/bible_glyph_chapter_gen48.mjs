@@ -539,7 +539,7 @@ export function bible_glyph_chapter_gen48() {
           "When",
           "$i_am+plus",
           "$eye",
-          "that",
+          "$pointing",
           "his",
           "$father",
           "had",
