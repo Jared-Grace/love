@@ -154,7 +154,7 @@ export function bible_glyph_chapter_num08() {
           "$all",
           "$meat,",
           "and",
-          "wash",
+          "$bubbles+t_shirt+doing",
           "their",
           "$garment,",
           "and",
