@@ -1275,7 +1275,7 @@ export function bible_glyph_chapter_deu28() {
           "with",
           "the",
           "$lotion_bottle,",
-          "because",
+          "$pointing",
           "the",
           "olives",
           "will",
