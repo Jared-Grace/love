@@ -202,7 +202,7 @@ export function bible_glyph_chapter_jer29() {
           "$telescope;",
           "do",
           "$no_entry",
-          "decrease.",
+          "$down_arrow+pinching_hand+doing.",
         ],
       },
       {
