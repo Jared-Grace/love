@@ -217,7 +217,7 @@ export function bible_glyph_chapter_gen24() {
           "$hands_giving",
           "$flashlight",
           "$earth,",
-          "He",
+          "$pointing_back",
           "will",
           "$hand_sending",
           "His",
