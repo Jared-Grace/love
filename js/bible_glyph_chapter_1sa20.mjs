@@ -372,7 +372,7 @@ export function bible_glyph_chapter_1sa20() {
           "if",
           "your",
           "$father",
-          "answers",
+          "$speech+turn_back",
           "you",
           "harshly?",
         ],
