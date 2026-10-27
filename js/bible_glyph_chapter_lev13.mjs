@@ -1926,7 +1926,7 @@ export function bible_glyph_chapter_lev13() {
           "$face_with_head_bandage",
           "in",
           "a",
-          "wool",
+          "$yarn",
           "or",
           "linen",
           "$garment,",
