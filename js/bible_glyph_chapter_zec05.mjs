@@ -252,7 +252,7 @@ export function bible_glyph_chapter_zec05() {
           "basket,",
           "pushing",
           "the",
-          "lead",
+          "$anchor+dust",
           "$stone",
           "down",
           "over",
