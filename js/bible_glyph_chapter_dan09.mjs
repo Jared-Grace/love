@@ -227,7 +227,7 @@ export function bible_glyph_chapter_dan09() {
           "and",
           "all",
           "$wrestling+heart_on_fire,",
-          "near",
+          "$magnet",
           "and",
           "far,",
           "in",
