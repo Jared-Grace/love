@@ -368,7 +368,7 @@ export function bible_glyph_chapter_2ki03() {
           "who",
           "used",
           "to",
-          "pour",
+          "$pouring_liquid+fire",
           "$water",
           "on",
           "the",
