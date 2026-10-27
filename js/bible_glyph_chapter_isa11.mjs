@@ -207,7 +207,7 @@ export function bible_glyph_chapter_isa11() {
           "fatling",
           "will",
           "be",
-          "together,",
+          "$linked_paperclips+manner,",
           "and",
           "a",
           "little",
