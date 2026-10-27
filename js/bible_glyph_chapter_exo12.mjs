@@ -434,7 +434,7 @@ export function bible_glyph_chapter_exo12() {
           "it",
           "as",
           "a",
-          "feast",
+          "$party_popper",
           "to",
           "the",
           "$i_am,",
