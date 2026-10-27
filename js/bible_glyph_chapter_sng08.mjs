@@ -27,7 +27,7 @@ export function bible_glyph_chapter_sng08() {
           "at",
           "my",
           "mother's",
-          "breasts.",
+          "$breast_feeding.",
           "If",
           "I",
           "found",
