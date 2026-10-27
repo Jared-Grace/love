@@ -368,7 +368,7 @@ export function bible_glyph_chapter_exo04() {
           "gave",
           "$person",
           "his",
-          "mouth?",
+          "$face_with_open_mouth?",
           "Or",
           "$person+question",
           "makes",
