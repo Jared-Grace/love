@@ -192,7 +192,7 @@ export function bible_glyph_chapter_lev09() {
           "$family.",
           "$hammer+doing",
           "the",
-          "offering",
+          "$magnet+gift",
           "of",
           "$family",
           "to",
