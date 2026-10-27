@@ -861,7 +861,7 @@ export function bible_glyph_chapter_2ch34() {
           "$city+peace",
           "in",
           "the",
-          "Second",
+          "$two+multiply",
           "District,",
           "and",
           "they",
