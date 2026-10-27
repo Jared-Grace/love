@@ -463,7 +463,7 @@ export function bible_glyph_chapter_lev10() {
           "a",
           "wave",
           "offering",
-          "before",
+          "$face",
           "$i_am.",
           "$hourglass",
           "to",
