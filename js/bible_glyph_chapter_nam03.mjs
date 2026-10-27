@@ -297,7 +297,7 @@ export function bible_glyph_chapter_nam03() {
           "into",
           "hiding",
           "and",
-          "seek",
+          "$magnifying_glass",
           "refuge",
           "from",
           "the",
