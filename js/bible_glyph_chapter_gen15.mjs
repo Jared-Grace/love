@@ -435,7 +435,7 @@ export function bible_glyph_chapter_gen15() {
           "$round_pushpin+pointing_down,",
           "$pointing",
           "the",
-          "iniquity",
+          "$cyclone",
           "of",
           "the",
           "$proper_name$Amorites",
