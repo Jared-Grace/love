@@ -320,7 +320,7 @@ export function bible_glyph_chapter_deu12() {
           "all",
           "the",
           "$enemy$s",
-          "around",
+          "$around",
           "you",
           "and",
           "you",
