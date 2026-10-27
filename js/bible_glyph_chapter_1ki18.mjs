@@ -1151,7 +1151,7 @@ export function bible_glyph_chapter_1ki18() {
           "$plus",
           "filled",
           "the",
-          "trench.",
+          "$water_wave+up_arrow+road.",
         ],
       },
       {
