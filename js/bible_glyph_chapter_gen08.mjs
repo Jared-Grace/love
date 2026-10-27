@@ -366,7 +366,7 @@ export function bible_glyph_chapter_gen08() {
           "on",
           "the",
           "first",
-          "day",
+          "$new_moon",
           "of",
           "the",
           "first",
