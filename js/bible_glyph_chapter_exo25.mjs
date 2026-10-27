@@ -265,7 +265,7 @@ export function bible_glyph_chapter_exo25() {
           "one",
           "side",
           "and",
-          "two",
+          "$two",
           "$ring",
           "on",
           "the",
