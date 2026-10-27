@@ -510,7 +510,7 @@ export function bible_glyph_chapter_mic01() {
           "$tray_out",
           "you",
           "into",
-          "exile.",
+          "$luggage+chains+doing.",
         ],
       },
     ],
