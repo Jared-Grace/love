@@ -615,7 +615,7 @@ export function bible_glyph_chapter_pro03() {
           "violent",
           "$man_beard,",
           "or",
-          "choose",
+          "$check_box",
           "any",
           "of",
           "his",
