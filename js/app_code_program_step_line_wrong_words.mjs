@@ -1,4 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { list_get } from "./list_get.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
@@ -18,7 +19,7 @@ export function app_code_program_step_line_wrong_words(
   ("Why a pressed line is not the next to run, by the rule that decides it: null when none of these rules is what decides it. lines is the program's lines, trace the lines it runs in order, index how many have run, and pressed the line pressed. Words and code take turns, text first");
   ("2026-10-23, at the human's asking, in nearly their words: the top line always runs first; after a line with no { }, the next line is the one right after it; after an if that was true, its { ... } runs and its else { ... } is skipped. Changed from their words: is ran said as runs; and There is no { } said as The previous line has no { }, since a line inside an if is itself inside a { }");
   ("Each is said only where it is so: the line right after is said only when the line due is the one right after, which it is not when a } stands between; and an if is taken as true only when the line due is the one right after it, which is where its { ... } starts");
-  let due = trace[index].line;
+  let due = list_get(trace, index).line;
   if (equal(index, 0)) {
     let r = {
       reason: "first_line",
@@ -28,8 +29,9 @@ export function app_code_program_step_line_wrong_words(
     };
     return r;
   }
-  let previous = trace[subtract(index, 1)].line;
-  let previous_text = lines[previous].trim();
+  let index2 = subtract(index, 1);
+  let previous = list_get(trace, index2).line;
+  let previous_text = list_get(lines, previous).trim();
   let braces = app_code_braces_dots();
   let opens = previous_text.endsWith("{");
   if (opens && previous_text.includes("if (")) {
@@ -42,7 +44,7 @@ export function app_code_program_step_line_wrong_words(
       less_than(j, lines.length) && equal(chain_end, -1);
       j++
     ) {
-      let text = lines[j];
+      let text = list_get(lines, j);
       for (let c = 0; less_than(c, text.length); c++) {
         if (equal(text[c], "{")) {
           depth++;
@@ -68,7 +70,7 @@ export function app_code_program_step_line_wrong_words(
     if (equal(block_end, -1) || equal(chain_end, -1)) {
       return null;
     }
-    let has_else = lines[block_end].trim().startsWith("} else");
+    let has_else = list_get(lines, block_end).trim().startsWith("} else");
     let b2 = equal(due, previous + 1);
     if (not(b2)) {
       ("2026-10-23, the human's words for an if that was false, with are ran said as run: the line due is not the one right after the if, so its { ... } was skipped");
@@ -90,7 +92,7 @@ export function app_code_program_step_line_wrong_words(
       ("2026-10-23, the human's words for pressing a later } else if line while an earlier one is due, with are ran said as run: each is checked in turn, so none is passed over. Said for any line pressed further down the chain, not only another } else if: a line inside a later branch is reached past the one due just the same");
       if (
         equal(due, block_end) &&
-        lines[due].trim().startsWith("} else if (") &&
+        list_get(lines, due).trim().startsWith("} else if (") &&
         greater_than(pressed, block_end) &&
         less_than_equal(pressed, chain_end)
       ) {

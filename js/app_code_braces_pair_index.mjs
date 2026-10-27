@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { equal } from "./equal.mjs";
+import { text_get } from "./text_get.mjs";
 import { js_code_brace_partner_index } from "./js_code_brace_partner_index.mjs";
 import { less_than } from "./less_than.mjs";
 export function app_code_braces_pair_index(code, index) {
@@ -10,12 +11,14 @@ export function app_code_braces_pair_index(code, index) {
   let left = js_code_brace_left();
   let right = js_code_brace_right();
   let opening = index;
-  if (equal(code[index], right)) {
+  let left2 = text_get(code, index);
+  if (equal(left2, right)) {
     opening = js_code_brace_partner_index(code, index);
   }
   let pair = 0;
   for (let j = 0; less_than(j, opening); j++) {
-    if (equal(code[j], left)) {
+    let left3 = text_get(code, j);
+    if (equal(left3, left)) {
       pair += 1;
     }
   }

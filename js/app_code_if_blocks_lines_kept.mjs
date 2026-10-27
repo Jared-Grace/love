@@ -1,5 +1,5 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { less_than } from "./less_than.mjs";
 import { app_code_if_block_reached } from "./app_code_if_block_reached.mjs";
 import { not } from "./not.mjs";
@@ -13,6 +13,7 @@ import { text_split_newline } from "./text_split_newline.mjs";
 import { text_size } from "./text_size.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_slice } from "./list_slice.mjs";
+import { text_get } from "./text_get.mjs";
 import { text_trim } from "./text_trim.mjs";
 export function app_code_if_blocks_lines_kept(code, blocks, count) {
   arguments_assert(arguments, 3);
@@ -73,7 +74,7 @@ export function app_code_if_blocks_lines_kept(code, blocks, count) {
     let outdented = list_slice(written, moved, to2);
     let text = "";
     for (let i of outdented) {
-      text = text + code[i];
+      text = text + text_get(code, i);
     }
     let trimmed = text_trim(text);
     if (not_equal(trimmed, "")) {

@@ -1,4 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { list_get } from "./list_get.mjs";
 import { app_code_program_line_enclosing } from "./app_code_program_line_enclosing.mjs";
 import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
@@ -13,17 +14,20 @@ export function app_code_program_step_line_never_words(lines, trace, pressed) {
     return r4;
   }
   let runs = trace.map(lambda);
-  if (runs.includes(pressed) || lines[pressed].trim().startsWith("}")) {
+  if (
+    runs.includes(pressed) ||
+    list_get(lines, pressed).trim().startsWith("}")
+  ) {
     return null;
   }
   for (let j of app_code_program_line_enclosing(lines, pressed)) {
-    let text = lines[j].trim();
+    let text = list_get(lines, j).trim();
     let entered = runs.includes(j + 1);
     if (text.startsWith("} else {")) {
       ("the ifs of the chain this else ends, found by walking back along each } to the line whose { it closes");
       let heads = [];
       let k = j;
-      while (lines[k].trim().startsWith("}")) {
+      while (list_get(lines, k).trim().startsWith("}")) {
         k = app_code_program_line_enclosing(lines, k)[0];
         heads.push(k);
       }
