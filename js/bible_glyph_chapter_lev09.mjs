@@ -291,7 +291,7 @@ export function bible_glyph_chapter_lev09() {
           "he",
           "burned",
           "up",
-          "outside",
+          "$sun_behind_small_cloud",
           "$camp.",
         ],
       },
