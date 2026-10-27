@@ -635,7 +635,7 @@ export function bible_glyph_chapter_lam04() {
           "you",
           "will",
           "get",
-          "drunk",
+          "$woozy_face+doing",
           "and",
           "expose",
           "yourself.",
