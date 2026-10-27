@@ -819,7 +819,7 @@ export function bible_glyph_chapter_gen31() {
           "I",
           "was",
           "$fear+doing.",
-          "For",
+          "$pointing",
           "I",
           "$speech",
           "to",
