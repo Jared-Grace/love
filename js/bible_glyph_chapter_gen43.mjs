@@ -558,7 +558,7 @@ export function bible_glyph_chapter_gen43() {
           "and",
           "they",
           "$speech,",
-          "We",
+          "$me",
           "have",
           "been",
           "$footprints",
