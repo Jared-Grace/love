@@ -433,7 +433,7 @@ export function bible_glyph_chapter_1sa24() {
           "to",
           "$hand_receiving",
           "my",
-          "life.",
+          "$person_other.",
         ],
       },
       {
