@@ -468,7 +468,7 @@ export function bible_glyph_chapter_lev08() {
           "and",
           "burned",
           "the",
-          "head,",
+          "$person_gesturing_ok,",
           "the",
           "$kitchen_knife+meat",
           "and",
