@@ -757,7 +757,7 @@ export function bible_glyph_chapter_gen21() {
           "set",
           "apart",
           "these",
-          "seven",
+          "$seven",
           "ewe",
           "lambs?",
         ],
