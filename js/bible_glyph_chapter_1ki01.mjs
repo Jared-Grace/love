@@ -410,7 +410,7 @@ export function bible_glyph_chapter_1ki01() {
           "the",
           "$king,",
           "did",
-          "you",
+          "$you",
           "$no_entry",
           "swear",
           "to",
