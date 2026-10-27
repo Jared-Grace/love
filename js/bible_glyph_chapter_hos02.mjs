@@ -744,7 +744,7 @@ export function bible_glyph_chapter_hos02() {
           "My",
           "$family,",
           "and",
-          "they",
+          "$pointing_back",
           "will",
           "$speech,",
           "You",
