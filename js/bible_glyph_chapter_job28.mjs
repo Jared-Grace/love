@@ -54,7 +54,7 @@ export function bible_glyph_chapter_job28() {
           "Man",
           "puts",
           "an",
-          "end",
+          "$stop_sign",
           "to",
           "the",
           "$darkness;",
