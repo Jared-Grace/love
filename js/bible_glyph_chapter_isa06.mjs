@@ -268,7 +268,7 @@ export function bible_glyph_chapter_isa06() {
           "$walking",
           "and",
           "$speech",
-          "this",
+          "$flashlight",
           "$family:",
           "Be",
           "ever",
