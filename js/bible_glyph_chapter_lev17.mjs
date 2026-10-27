@@ -58,7 +58,7 @@ export function bible_glyph_chapter_lev17() {
           "$house",
           "of",
           "$wrestling+heart_on_fire",
-          "who",
+          "$back+flashlight",
           "slaughters",
           "an",
           "$ox,",
