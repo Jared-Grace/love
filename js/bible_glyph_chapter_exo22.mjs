@@ -414,7 +414,7 @@ export function bible_glyph_chapter_exo22() {
           "and",
           "require",
           "$no_entry",
-          "restitution.",
+          "$peace+doing.",
         ],
       },
       {
