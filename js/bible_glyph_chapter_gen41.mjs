@@ -26,7 +26,7 @@ export function bible_glyph_chapter_gen41() {
           "$house+proper_name",
           "had",
           "a",
-          "dream.",
+          "$dream+doing.",
           "He",
           "was",
           "standing",
