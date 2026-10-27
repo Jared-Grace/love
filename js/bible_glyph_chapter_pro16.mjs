@@ -651,7 +651,7 @@ export function bible_glyph_chapter_pro16() {
           "is",
           "$straight_ruler+clock+describing",
           "to",
-          "anger",
+          "$nose+fire",
           "than",
           "a",
           "warrior,",
