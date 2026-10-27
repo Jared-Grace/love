@@ -58,7 +58,7 @@ export function bible_glyph_chapter_exo04() {
           "your",
           '$hand?"',
           '"A',
-          'staff,"',
+          "$white_cane",
           "he",
           "$speech.",
         ],
