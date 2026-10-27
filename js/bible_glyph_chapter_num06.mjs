@@ -178,7 +178,7 @@ export function bible_glyph_chapter_num06() {
           "must",
           "$no_entry",
           "$footprints",
-          "near",
+          "$pointing_up",
           "a",
           "$skull+doing",
           "$person_other.",
