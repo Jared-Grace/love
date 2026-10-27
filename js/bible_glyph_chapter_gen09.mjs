@@ -513,7 +513,7 @@ export function bible_glyph_chapter_gen09() {
           "out",
           "$tray_out",
           "the",
-          "ark",
+          "$package",
           "$link",
           "$proper_name$Shem,",
           "$proper_name$Ham",
