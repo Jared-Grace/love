@@ -48,7 +48,7 @@ export function bible_glyph_chapter_isa55() {
         words: [
           "$flashlight+question",
           "$scales+money_bag+doing",
-          "money",
+          "$silver",
           "on",
           "that",
           "which",
