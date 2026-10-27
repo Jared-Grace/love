@@ -531,7 +531,7 @@ export function bible_glyph_chapter_exo22() {
           "$fishing_pole+doing",
           "a",
           "$girl+white_flower",
-          "who",
+          "$back+flashlight",
           "is",
           "$no_entry",
           "pledged",
