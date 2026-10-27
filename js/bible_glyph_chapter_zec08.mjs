@@ -685,7 +685,7 @@ export function bible_glyph_chapter_zec08() {
           "once",
           "to",
           "plead",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "and",
