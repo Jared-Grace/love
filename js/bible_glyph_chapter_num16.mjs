@@ -1306,7 +1306,7 @@ export function bible_glyph_chapter_num16() {
           "and",
           "suddenly",
           "the",
-          "cloud",
+          "$cloud",
           "covered",
           "it,",
           "and",
