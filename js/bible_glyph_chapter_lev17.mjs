@@ -427,7 +427,7 @@ export function bible_glyph_chapter_lev17() {
           "and",
           "the",
           "$foreigner",
-          "living",
+          "$luggage",
           "among",
           "you",
           "may",
