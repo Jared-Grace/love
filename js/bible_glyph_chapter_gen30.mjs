@@ -32,7 +32,7 @@ export function bible_glyph_chapter_gen30() {
           "$speech",
           "$toward",
           "$hand+foot,",
-          "Give",
+          "$hands_giving+up_arrow",
           "me",
           "$son,",
           "or",
