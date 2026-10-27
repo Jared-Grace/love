@@ -49,7 +49,7 @@ export function bible_glyph_chapter_zep02() {
           "$footprints",
           "upon",
           "you,",
-          "before",
+          "$clock+back",
           "the",
           "$sun",
           "of",
