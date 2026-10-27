@@ -16,7 +16,7 @@ export function bible_glyph_chapter_lev02() {
         words: [
           "When",
           "$person_other",
-          "brings",
+          "$magnet+doing",
           "$grain_offering",
           "$i_am,",
           "his",
