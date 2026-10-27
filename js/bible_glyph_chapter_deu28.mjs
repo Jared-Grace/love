@@ -712,7 +712,7 @@ export function bible_glyph_chapter_deu28() {
           "will",
           "$running+toward",
           "you",
-          "until",
+          "$finish",
           "you",
           "perish.",
         ],
