@@ -779,7 +779,7 @@ export function bible_glyph_chapter_2ki05() {
           "$sprout,",
           "I",
           "will",
-          "run",
+          "$running",
           "after",
           "him",
           "and",
