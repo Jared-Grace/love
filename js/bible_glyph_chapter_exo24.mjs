@@ -144,7 +144,7 @@ export function bible_glyph_chapter_exo24() {
           "for",
           "the",
           "twelve",
-          "tribes",
+          "$wood",
           "of",
           "$wrestling+heart_on_fire.",
         ],
