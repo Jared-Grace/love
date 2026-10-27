@@ -353,7 +353,7 @@ export function bible_glyph_chapter_exo08() {
           "$crocodile",
           "will",
           "they",
-          "remain.",
+          "$puzzle_piece+doing.",
         ],
       },
       {
