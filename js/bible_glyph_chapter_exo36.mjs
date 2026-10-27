@@ -940,7 +940,7 @@ export function bible_glyph_chapter_exo36() {
           "$gold,",
           "with",
           "$gold",
-          "hooks,",
+          "$hook,",
           "and",
           "he",
           "cast",
