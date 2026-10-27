@@ -892,7 +892,7 @@ export function bible_glyph_chapter_1ki12() {
       {
         verse_number: 27,
         words: [
-          "If",
+          "$traffic_light",
           "these",
           "$family",
           "$walking+pointing_up",
