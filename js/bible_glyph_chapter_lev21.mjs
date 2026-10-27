@@ -53,7 +53,7 @@ export function bible_glyph_chapter_lev21() {
           "for",
           "his",
           "closest",
-          "family:",
+          "$meat+fork_and_knife:",
           "his",
           "$mother,",
           "his",
