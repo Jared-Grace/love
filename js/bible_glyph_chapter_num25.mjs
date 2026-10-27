@@ -23,7 +23,7 @@ export function bible_glyph_chapter_num25() {
           "$proper_name$Shittim,",
           "the",
           "$family",
-          "began",
+          "$sewing_needle",
           "to",
           "indulge",
           "in",
