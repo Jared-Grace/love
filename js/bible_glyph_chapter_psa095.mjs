@@ -146,7 +146,7 @@ export function bible_glyph_chapter_psa095() {
           "our",
           "$heart_on_fire,",
           "and",
-          "we",
+          "$me",
           "are",
           "the",
           "$family",
