@@ -17,7 +17,7 @@ export function bible_glyph_chapter_amo09() {
           "$eye",
           "the",
           "$crown",
-          "standing",
+          "$person+up_arrow",
           "beside",
           "the",
           "$altar,",
