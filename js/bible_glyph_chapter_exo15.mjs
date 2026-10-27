@@ -413,7 +413,7 @@ export function bible_glyph_chapter_exo15() {
           "will",
           "be",
           "as",
-          "still",
+          "$shushing_face+pause_button",
           "as",
           "a",
           "$stone,",
