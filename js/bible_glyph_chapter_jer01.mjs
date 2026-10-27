@@ -98,7 +98,7 @@ export function bible_glyph_chapter_jer01() {
           "$city+peace",
           "went",
           "into",
-          "exile.",
+          "$luggage+chains+doing.",
         ],
       },
       {
