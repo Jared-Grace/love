@@ -468,7 +468,7 @@ export function bible_glyph_chapter_exo18() {
           "$tray_out",
           "$morning",
           "$finish",
-          "evening?",
+          "$sunset?",
         ],
       },
       {
