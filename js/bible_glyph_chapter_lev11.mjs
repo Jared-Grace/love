@@ -455,7 +455,7 @@ export function bible_glyph_chapter_lev11() {
           "kinds",
           "of",
           "$bird",
-          "insects",
+          "$lizard+crowd",
           "that",
           "$walking",
           "on",
