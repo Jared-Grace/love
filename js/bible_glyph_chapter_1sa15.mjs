@@ -506,7 +506,7 @@ export function bible_glyph_chapter_1sa15() {
           "we",
           "devoted",
           "to",
-          "destruction.",
+          "$bomb+altar+doing.",
         ],
       },
       {
