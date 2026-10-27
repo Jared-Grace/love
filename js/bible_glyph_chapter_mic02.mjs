@@ -64,7 +64,7 @@ export function bible_glyph_chapter_mic02() {
           "$man_beard",
           "of",
           "his",
-          "inheritance.",
+          "$inheritance.",
         ],
       },
       {
