@@ -1085,7 +1085,7 @@ export function bible_glyph_chapter_1sa17() {
           "will",
           "be",
           "like",
-          "one",
+          "$one",
           "of",
           "them,",
           "for",
