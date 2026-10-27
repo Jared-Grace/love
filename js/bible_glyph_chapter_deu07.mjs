@@ -377,7 +377,7 @@ export function bible_glyph_chapter_deu07() {
           "$scroll",
           "and",
           "the",
-          "statutes",
+          "$locked_with_pen",
           "and",
           "the",
           "$scales+thing",
