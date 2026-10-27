@@ -754,7 +754,7 @@ export function bible_glyph_chapter_gen47() {
           "of",
           "the",
           "$brown_square,",
-          "for",
+          "$pointing",
           "the",
           "$priest",
           "had",
