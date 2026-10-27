@@ -184,7 +184,7 @@ export function bible_glyph_chapter_mal03() {
           "and",
           "adulterers",
           "and",
-          "perjurers,",
+          "$lying_face,",
           "against",
           "oppressors",
           "and",
