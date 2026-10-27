@@ -43,7 +43,7 @@ export function bible_glyph_chapter_zec04() {
           "me,",
           "$flashlight+question",
           "do",
-          "you",
+          "$you",
           "$eye?",
           "I",
           "$speech,",
