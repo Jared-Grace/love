@@ -193,7 +193,7 @@ export function bible_glyph_chapter_exo40() {
           "$hand_receiving",
           "the",
           "anointing",
-          "oil",
+          "$lotion_bottle",
           "and",
           "$oil+doing",
           "the",
