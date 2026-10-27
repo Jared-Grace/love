@@ -879,7 +879,7 @@ export function bible_glyph_chapter_2ki05() {
           "But",
           "$smile+describing+proper_name",
           "$speech,",
-          "Please",
+          "$person_gesturing_ok+doing",
           "$hand_receiving",
           "two",
           "talents.",
