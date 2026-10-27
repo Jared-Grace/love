@@ -223,7 +223,7 @@ export function bible_glyph_chapter_exo10() {
           "of",
           "every",
           "$clamp+person,",
-          "something",
+          "$back+flashlight",
           "$no_entry",
           "your",
           "$father",
