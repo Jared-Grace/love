@@ -1095,7 +1095,7 @@ export function bible_glyph_chapter_lev11() {
           "$person_other",
           "by",
           "any",
-          "creature",
+          "$lizard+crowd",
           "that",
           "crawls",
           "along",
