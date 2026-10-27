@@ -49,7 +49,7 @@ export function bible_glyph_chapter_psa051() {
           "Your",
           "great",
           "$hugging_face,",
-          "blot",
+          "$broom+doing",
           "out",
           "my",
           "transgressions.",
