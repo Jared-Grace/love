@@ -1948,7 +1948,7 @@ export function bible_glyph_chapter_gen24() {
           "she",
           "$hand_receiving",
           "her",
-          "veil",
+          "$veil+woman",
           "and",
           "covered",
           "herself.",
