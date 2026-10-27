@@ -721,7 +721,7 @@ export function bible_glyph_chapter_ezk37() {
           "and",
           "I",
           "will",
-          "gather",
+          "$tray_in+doing",
           "them",
           "from",
           "all",
