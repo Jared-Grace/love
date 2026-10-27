@@ -50,7 +50,7 @@ export function bible_glyph_chapter_zec08() {
           "$face_steam;",
           "with",
           "$top",
-          "fervor",
+          "$angry_face",
           "I",
           "am",
           "$face_steam+doing",
