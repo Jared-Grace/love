@@ -580,7 +580,7 @@ export function bible_glyph_chapter_gen37() {
           "shall",
           "$eye",
           "$flashlight+question",
-          "becomes",
+          "$link",
           "of",
           "his",
           "dreams!",
