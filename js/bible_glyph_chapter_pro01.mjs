@@ -266,7 +266,7 @@ export function bible_glyph_chapter_pro01() {
           "all",
           "share",
           "one",
-          "purse",
+          "$money_bag+scales",
         ],
       },
       {
