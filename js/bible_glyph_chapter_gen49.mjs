@@ -501,7 +501,7 @@ export function bible_glyph_chapter_gen49() {
           "that",
           "$hands_giving",
           "beautiful",
-          "fawns.",
+          "$speech+thing.",
         ],
       },
       {
