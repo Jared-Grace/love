@@ -216,7 +216,7 @@ export function bible_glyph_chapter_num24() {
           "of",
           "$clamp+proper_name",
           "with",
-          "strength",
+          "$tired_face+money_bag",
           "like",
           "a",
           "wild",
