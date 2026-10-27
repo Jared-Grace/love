@@ -109,7 +109,7 @@ export function bible_glyph_chapter_est01() {
           "and",
           "the",
           "magnificent",
-          "splendor",
+          "$gem_stone+crown",
           "of",
           "his",
           "greatness",
