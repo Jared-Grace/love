@@ -431,7 +431,7 @@ export function bible_glyph_chapter_gen29() {
           "$kneeling+doing",
           "for",
           "$heart_orange+manner?",
-          "Tell",
+          "$newspaper",
           "me",
           "what",
           "your",
