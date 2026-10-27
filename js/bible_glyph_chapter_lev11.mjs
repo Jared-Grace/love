@@ -484,7 +484,7 @@ export function bible_glyph_chapter_lev11() {
         verse_number: 22,
         words: [
           "Of",
-          "these",
+          "$flashlight+flashlight",
           "you",
           "may",
           "$eating",
