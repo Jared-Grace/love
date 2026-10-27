@@ -441,7 +441,7 @@ export function bible_glyph_chapter_gen49() {
           "that",
           "bites",
           "the",
-          "heels",
+          "$foot+end_arrow",
           "of",
           "the",
           "$horse",
