@@ -1396,7 +1396,7 @@ export function bible_glyph_chapter_jdg06() {
           "was",
           "covered",
           "with",
-          "dew.",
+          "$dew.",
         ],
       },
     ],
