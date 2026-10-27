@@ -1221,7 +1221,7 @@ export function bible_glyph_chapter_1ki08() {
           "from",
           "$sky",
           "and",
-          "forgive",
+          "$sponge",
           "the",
           "$bow",
           "of",
