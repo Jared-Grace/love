@@ -83,7 +83,7 @@ export function bible_glyph_chapter_gen26() {
           "I",
           "will",
           "be",
-          "with",
+          "$linked_paperclips",
           "you",
           "and",
           "$speech+thumbs_up",
