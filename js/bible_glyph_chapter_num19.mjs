@@ -495,7 +495,7 @@ export function bible_glyph_chapter_num19() {
           "And",
           "any",
           "open",
-          "container",
+          "$toolbox",
           "without",
           "a",
           "lid",
