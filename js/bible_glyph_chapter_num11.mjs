@@ -246,7 +246,7 @@ export function bible_glyph_chapter_num11() {
           "fell",
           "on",
           "the",
-          "camp",
+          "$camp",
           "at",
           "$night,",
           "the",
