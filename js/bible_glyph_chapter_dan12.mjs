@@ -322,7 +322,7 @@ export function bible_glyph_chapter_dan12() {
           "your",
           "$walking,",
           "$proper_name$Daniel,",
-          "for",
+          "$pointing",
           "the",
           "$speech",
           "are",
