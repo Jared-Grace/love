@@ -786,7 +786,7 @@ export function bible_glyph_chapter_gen27() {
           "the",
           "$earth,",
           "an",
-          "abundance",
+          "$multiply+thing",
           "of",
           "grain",
           "and",
