@@ -590,7 +590,7 @@ export function bible_glyph_chapter_2ki01() {
           "Do",
           "$no_entry",
           "be",
-          "afraid",
+          "$fear+doing",
           "of",
           "him.",
           "So",
