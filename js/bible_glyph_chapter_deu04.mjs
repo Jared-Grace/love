@@ -1619,7 +1619,7 @@ export function bible_glyph_chapter_deu04() {
           "in",
           "the",
           "$valley",
-          "across",
+          "$bridge+thing",
           "the",
           "$pointing_down+proper_name",
           "facing",
