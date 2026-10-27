@@ -459,7 +459,7 @@ export function bible_glyph_chapter_2ki05() {
           "away",
           "in",
           "a",
-          "rage.",
+          "$angry_face.",
         ],
       },
       {
