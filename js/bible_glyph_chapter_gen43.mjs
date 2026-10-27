@@ -158,7 +158,7 @@ export function bible_glyph_chapter_gen43() {
           "Why",
           "did",
           "you",
-          "tell",
+          "$newspaper",
           "the",
           "$man_beard",
           "you",
