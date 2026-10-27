@@ -377,7 +377,7 @@ export function bible_glyph_chapter_nam02() {
           "$scissors",
           "off",
           "your",
-          "prey",
+          "$wolf+thing",
           "from",
           "the",
           "$earth,",
