@@ -70,7 +70,7 @@ export function bible_glyph_chapter_jdg04() {
           "Israelites",
           "cried",
           "out",
-          "to",
+          "$toward",
           "the",
           "$i_am,",
           "because",
