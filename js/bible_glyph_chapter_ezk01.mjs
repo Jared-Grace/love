@@ -37,7 +37,7 @@ export function bible_glyph_chapter_ezk01() {
           "$proper_name$Kebar,",
           "the",
           "$sky",
-          "opened",
+          "$unlocked",
           "and",
           "I",
           "$eye",
