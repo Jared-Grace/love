@@ -1902,7 +1902,7 @@ export function bible_glyph_chapter_1ki08() {
           "he",
           "got",
           "up",
-          "before",
+          "$face",
           "the",
           "$altar",
           "of",
