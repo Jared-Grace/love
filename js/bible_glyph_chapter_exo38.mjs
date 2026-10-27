@@ -679,7 +679,7 @@ export function bible_glyph_chapter_exo38() {
           "among",
           "the",
           "congregation",
-          "totaled",
+          "$input_numbers+all",
           "a",
           "hundred",
           "talents",
