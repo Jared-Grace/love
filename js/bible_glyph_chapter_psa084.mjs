@@ -174,7 +174,7 @@ export function bible_glyph_chapter_psa084() {
           "from",
           "$raised_fist",
           "to",
-          "strength,",
+          "$raised_fist,",
           "until",
           "each",
           "$eye",
