@@ -400,7 +400,7 @@ export function bible_glyph_chapter_jos02() {
         words: [
           "$watch",
           "therefore,",
-          "please",
+          "$pleading",
           "$raised_back_of_hand+doing",
           "to",
           "me",
