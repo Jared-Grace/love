@@ -191,7 +191,7 @@ export function bible_glyph_chapter_deu29() {
           "When",
           "you",
           "$footprints",
-          "this",
+          "$flashlight",
           "$place,",
           "$proper_name$Sihon",
           "$king",
