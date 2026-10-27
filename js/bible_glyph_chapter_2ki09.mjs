@@ -198,7 +198,7 @@ export function bible_glyph_chapter_2ki09() {
           "prophet",
           "poured",
           "the",
-          "oil",
+          "$lotion_bottle",
           "on",
           "his",
           "head",
