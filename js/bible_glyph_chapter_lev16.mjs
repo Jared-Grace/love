@@ -986,7 +986,7 @@ export function bible_glyph_chapter_lev16() {
           "offering",
           "and",
           "the",
-          "goat",
+          "$goat+man_beard",
           "for",
           "the",
           "$bow",
