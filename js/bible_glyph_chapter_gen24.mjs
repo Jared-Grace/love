@@ -1688,7 +1688,7 @@ export function bible_glyph_chapter_gen24() {
           "$person+house",
           "with",
           "us",
-          "ten",
+          "$ten",
           "$sun",
           "$shuffle",
           "so.",
