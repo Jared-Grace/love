@@ -1025,7 +1025,7 @@ export function bible_glyph_chapter_lev27() {
           "any",
           "substitution.",
           "But",
-          "if",
+          "$traffic_light",
           "he",
           "does",
           "make",
