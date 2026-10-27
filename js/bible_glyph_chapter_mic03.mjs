@@ -162,7 +162,7 @@ export function bible_glyph_chapter_mic03() {
           "teeth,",
           "but",
           "$sparkle+doing",
-          "war",
+          "$crossed_swords",
           "against",
           "one",
           "who",
