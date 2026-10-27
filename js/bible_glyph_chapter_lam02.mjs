@@ -203,7 +203,7 @@ export function bible_glyph_chapter_lam02() {
           "has",
           "swallowed",
           "up",
-          "all",
+          "$all",
           "her",
           "palaces",
           "and",
