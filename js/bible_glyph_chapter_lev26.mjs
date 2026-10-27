@@ -692,7 +692,7 @@ export function bible_glyph_chapter_lev26() {
           "$no_entry",
           "accept",
           "My",
-          "discipline,",
+          "$teacher+exclamation+doing,",
           "but",
           "continue",
           "to",
