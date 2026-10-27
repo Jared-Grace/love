@@ -474,7 +474,7 @@ export function bible_glyph_chapter_exo40() {
           "seat",
           "atop",
           "the",
-          "ark.",
+          "$ark.",
         ],
       },
       {
