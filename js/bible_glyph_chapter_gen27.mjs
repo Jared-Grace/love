@@ -788,7 +788,7 @@ export function bible_glyph_chapter_gen27() {
           "an",
           "$multiply+thing",
           "of",
-          "grain",
+          "$wheat+barley",
           "and",
           "new",
           "$wine.",
