@@ -927,7 +927,7 @@ export function bible_glyph_chapter_num21() {
           "$proper_name$Amorites",
           "$back+flashlight",
           "were",
-          "there.",
+          "$telescope.",
         ],
       },
       {
