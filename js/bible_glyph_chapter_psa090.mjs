@@ -93,7 +93,7 @@ export function bible_glyph_chapter_psa090() {
           "$bridge,",
           "or",
           "a",
-          "watch",
+          "$guard+night",
           "of",
           "the",
           "$night.",
