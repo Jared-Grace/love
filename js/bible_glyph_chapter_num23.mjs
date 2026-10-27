@@ -144,7 +144,7 @@ export function bible_glyph_chapter_num23() {
           "$speech",
           "in",
           "the",
-          "mouth",
+          "$face_with_open_mouth",
           "of",
           "Balaam,",
           "$speech,",
