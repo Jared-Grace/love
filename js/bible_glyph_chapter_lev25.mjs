@@ -263,7 +263,7 @@ export function bible_glyph_chapter_lev25() {
           "the",
           "Day",
           "of",
-          "Atonement.",
+          "$umbrella+thing.",
           "You",
           "shall",
           "sound",
