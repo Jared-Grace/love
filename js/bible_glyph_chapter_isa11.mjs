@@ -543,7 +543,7 @@ export function bible_glyph_chapter_isa11() {
           "$road+up_arrow",
           "for",
           "the",
-          "remnant",
+          "$puzzle_piece+thing",
           "of",
           "His",
           "$family",
