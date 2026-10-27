@@ -37,7 +37,7 @@ export function bible_glyph_chapter_ezk11() {
           "there",
           "at",
           "the",
-          "entrance",
+          "$door",
           "of",
           "the",
           "$gate",
