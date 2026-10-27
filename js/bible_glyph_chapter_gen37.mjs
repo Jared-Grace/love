@@ -467,7 +467,7 @@ export function bible_glyph_chapter_gen37() {
           "Can",
           "you",
           "please",
-          "tell",
+          "$newspaper",
           "me",
           "where",
           "they",
