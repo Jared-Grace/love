@@ -1283,7 +1283,7 @@ export function bible_glyph_chapter_1sa17() {
           "he",
           "despised",
           "him",
-          "because",
+          "$pointing",
           "he",
           "was",
           "just",
