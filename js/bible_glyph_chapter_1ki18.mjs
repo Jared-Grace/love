@@ -594,7 +594,7 @@ export function bible_glyph_chapter_1ki18() {
         verse_number: 20,
         words: [
           "So",
-          "Ahab",
+          "$brother+father+proper_name",
           "$hand_sending",
           "all",
           "the",
