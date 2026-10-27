@@ -430,7 +430,7 @@ export function bible_glyph_chapter_1sa16() {
           "$ear+heart_on_fire",
           "$hand_receiving",
           "the",
-          "horn",
+          "$horn",
           "of",
           "oil",
           "and",
