@@ -307,7 +307,7 @@ export function bible_glyph_chapter_jer07() {
           "have",
           "$eye",
           "it,",
-          "declares",
+          "$microphone",
           "$i_am.",
         ],
       },
