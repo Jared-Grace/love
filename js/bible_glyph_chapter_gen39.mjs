@@ -596,7 +596,7 @@ export function bible_glyph_chapter_gen39() {
           "While",
           "Joseph",
           "was",
-          "there",
+          "$telescope",
           "in",
           "the",
           "$house,",
