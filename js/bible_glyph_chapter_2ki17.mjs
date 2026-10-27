@@ -215,7 +215,7 @@ export function bible_glyph_chapter_2ki17() {
           "All",
           "this",
           "happened",
-          "because",
+          "$pointing",
           "the",
           "$son",
           "of",
