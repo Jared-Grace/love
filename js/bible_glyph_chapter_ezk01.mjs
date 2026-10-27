@@ -833,7 +833,7 @@ export function bible_glyph_chapter_ezk01() {
           "appearance",
           "of",
           "the",
-          "likeness",
+          "$likeness+thing",
           "of",
           "the",
           "$star",
