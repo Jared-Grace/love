@@ -577,7 +577,7 @@ export function bible_glyph_chapter_zep01() {
           "be",
           "able",
           "to",
-          "deliver",
+          "$hand+rescue",
           "them",
           "on",
           "the",
