@@ -114,7 +114,7 @@ export function bible_glyph_chapter_2ki04() {
           "gather",
           "just",
           "a",
-          "few.",
+          "$down_arrow+pinching_hand+doing.",
         ],
       },
       {
