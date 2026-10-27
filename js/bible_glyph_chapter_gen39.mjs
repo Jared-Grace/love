@@ -180,7 +180,7 @@ export function bible_glyph_chapter_gen39() {
           "So",
           "Potiphar",
           "left",
-          "all",
+          "$all",
           "that",
           "he",
           "owned",
