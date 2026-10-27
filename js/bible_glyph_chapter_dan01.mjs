@@ -444,7 +444,7 @@ export function bible_glyph_chapter_dan01() {
           "the",
           "$end_arrow+straight_ruler",
           "of",
-          "ten",
+          "$ten",
           "$sun,",
           "they",
           "$eye",
