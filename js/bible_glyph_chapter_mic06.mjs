@@ -222,7 +222,7 @@ export function bible_glyph_chapter_mic06() {
           "I",
           "$hands_giving",
           "my",
-          "firstborn",
+          "$first_place+baby",
           "for",
           "my",
           "transgression,",
