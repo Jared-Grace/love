@@ -315,7 +315,7 @@ export function bible_glyph_chapter_num32() {
           "will",
           "$eye",
           "the",
-          "land",
+          "$brown_square",
           "that",
           "I",
           "swore",
