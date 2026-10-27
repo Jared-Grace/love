@@ -128,7 +128,7 @@ export function bible_glyph_chapter_num12() {
           "$person+round_pushpin",
           "at",
           "the",
-          "entrance",
+          "$door",
           "to",
           "the",
           "$tent,",
