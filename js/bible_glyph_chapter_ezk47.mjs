@@ -199,7 +199,7 @@ export function bible_glyph_chapter_ezk47() {
           "swimming,",
           "a",
           "river",
-          "that",
+          "$back+flashlight",
           "could",
           "$no_entry",
           "be",
