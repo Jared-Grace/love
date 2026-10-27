@@ -780,7 +780,7 @@ export function bible_glyph_chapter_jdg07() {
         words: [
           "Each",
           "$man_beard",
-          "took",
+          "$person+round_pushpin",
           "his",
           "position",
           "around",
