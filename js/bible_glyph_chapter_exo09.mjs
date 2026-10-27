@@ -1019,7 +1019,7 @@ export function bible_glyph_chapter_exo09() {
           "$voice",
           "and",
           "hail",
-          "ceased,",
+          "$stop_button,",
           "and",
           "the",
           "$rain",
