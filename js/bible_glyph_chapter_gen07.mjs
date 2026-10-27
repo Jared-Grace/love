@@ -94,7 +94,7 @@ export function bible_glyph_chapter_gen07() {
           "$sky,",
           "$reminder_ribbon+thing",
           "and",
-          "female,",
+          "$female_sign,",
           "to",
           "$sprout+doing",
           "their",
