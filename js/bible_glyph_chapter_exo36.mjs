@@ -848,7 +848,7 @@ export function bible_glyph_chapter_exo36() {
           "$hammer+doing",
           "the",
           "central",
-          "crossbar",
+          "$door+locked",
           "to",
           "run",
           "through",
