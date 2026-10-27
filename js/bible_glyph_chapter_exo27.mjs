@@ -274,7 +274,7 @@ export function bible_glyph_chapter_exo27() {
           "$straight_ruler+round_pushpin,",
           "curtains",
           "a",
-          "hundred",
+          "$input_numbers+all",
           "cubits",
           "long,",
           "with",
