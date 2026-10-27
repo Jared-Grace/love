@@ -255,7 +255,7 @@ export function bible_glyph_chapter_gen14() {
           "$four",
           "$king",
           "$safety_pin",
-          "five.",
+          "$five.",
         ],
       },
       {
