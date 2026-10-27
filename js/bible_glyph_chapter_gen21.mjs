@@ -751,7 +751,7 @@ export function bible_glyph_chapter_gen21() {
           "$father+king",
           "$speech",
           "him,",
-          "Why",
+          "$flashlight+question",
           "have",
           "you",
           "set",
