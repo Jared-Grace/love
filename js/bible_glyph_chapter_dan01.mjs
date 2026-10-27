@@ -147,7 +147,7 @@ export function bible_glyph_chapter_dan01() {
           "$classical_building,",
           "and",
           "to",
-          "teach",
+          "$learner+doing",
           "them",
           "the",
           "language",
