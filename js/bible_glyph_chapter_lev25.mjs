@@ -1576,7 +1576,7 @@ export function bible_glyph_chapter_lev25() {
           "$traffic_light",
           "only",
           "a",
-          "few",
+          "$pinching_hand+input_numbers",
           "years",
           "remain",
           "until",
