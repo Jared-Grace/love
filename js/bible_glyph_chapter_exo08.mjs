@@ -350,7 +350,7 @@ export function bible_glyph_chapter_exo08() {
           "$one+check",
           "in",
           "the",
-          "Nile",
+          "$crocodile",
           "will",
           "they",
           "remain.",
