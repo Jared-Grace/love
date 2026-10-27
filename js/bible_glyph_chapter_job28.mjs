@@ -533,7 +533,7 @@ export function bible_glyph_chapter_job28() {
           "$speech",
           "to",
           "$person,",
-          "Behold,",
+          "$exclamation,",
           "the",
           "fear",
           "of",
