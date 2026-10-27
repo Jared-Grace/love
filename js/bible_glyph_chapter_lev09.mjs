@@ -478,7 +478,7 @@ export function bible_glyph_chapter_lev09() {
           "$meat+brown_square+takeout_box",
           "of",
           "the",
-          "liver.",
+          "$meat+brown_square.",
         ],
       },
       {
