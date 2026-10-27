@@ -283,7 +283,7 @@ export function bible_glyph_chapter_jdg16() {
           "$proper_name$Philistines",
           "$walking+pointing_up",
           "her",
-          "seven",
+          "$seven",
           "fresh",
           "bowstrings",
           "that",
