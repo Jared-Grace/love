@@ -97,7 +97,7 @@ export function bible_glyph_chapter_gen09() {
           "gave",
           "you",
           "the",
-          "green",
+          "$leaf+describing",
           "plants,",
           "I",
           "now",
