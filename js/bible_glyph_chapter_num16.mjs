@@ -428,7 +428,7 @@ export function bible_glyph_chapter_num16() {
       {
         verse_number: 14,
         words: [
-          "Moreover,",
+          "$plus+exclamation,",
           "you",
           "have",
           "$no_entry",
