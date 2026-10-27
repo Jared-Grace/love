@@ -1019,7 +1019,7 @@ export function bible_glyph_chapter_1sa17() {
           "$lion",
           "or",
           "a",
-          "bear",
+          "$bear",
           "$footprints",
           "and",
           "carried",
