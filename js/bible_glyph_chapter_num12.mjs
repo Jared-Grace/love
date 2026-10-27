@@ -185,7 +185,7 @@ export function bible_glyph_chapter_num12() {
           "this",
           "is",
           "$no_entry",
-          "so",
+          "$right_arrow",
           "with",
           "My",
           "$kneeling",
