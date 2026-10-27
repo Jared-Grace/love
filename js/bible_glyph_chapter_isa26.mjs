@@ -408,7 +408,7 @@ export function bible_glyph_chapter_isa26() {
           "You",
           "have",
           "gained",
-          "glory",
+          "$star+doing",
           "for",
           "Yourself;",
           "You",
