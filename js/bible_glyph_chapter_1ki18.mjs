@@ -659,7 +659,7 @@ export function bible_glyph_chapter_1ki18() {
           "Then",
           "$heart_on_fire+i_am",
           "$speech",
-          "to",
+          "$toward",
           "the",
           "$family,",
           "I",
