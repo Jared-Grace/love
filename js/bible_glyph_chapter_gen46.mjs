@@ -814,7 +814,7 @@ export function bible_glyph_chapter_gen46() {
         words: [
           "When",
           "$house+proper_name",
-          "summons",
+          "$waving_hand",
           "you",
           "and",
           "$speech,",
