@@ -489,7 +489,7 @@ export function bible_glyph_chapter_lev16() {
           "then",
           "$kitchen_knife+doing",
           "the",
-          "goat",
+          "$goat+man_beard",
           "for",
           "the",
           "$bow",
