@@ -43,7 +43,7 @@ export function bible_glyph_chapter_lam02() {
           "has",
           "$no_entry",
           "His",
-          "footstool",
+          "$foot+seat",
           "in",
           "the",
           "$sun",
