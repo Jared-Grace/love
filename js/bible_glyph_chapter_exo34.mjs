@@ -581,7 +581,7 @@ export function bible_glyph_chapter_exo34() {
           "time",
           "in",
           "the",
-          "month",
+          "$new_moon",
           "of",
           "Abib,",
           "for",
