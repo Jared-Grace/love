@@ -164,7 +164,7 @@ export function bible_glyph_chapter_lev13() {
           "it",
           "has",
           "$no_entry",
-          "turned",
+          "$upside_down_face",
           "white,",
           "the",
           "$priest",
