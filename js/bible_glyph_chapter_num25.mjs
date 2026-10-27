@@ -349,7 +349,7 @@ export function bible_glyph_chapter_num25() {
       {
         verse_number: 12,
         words: [
-          "Therefore",
+          "$right_arrow",
           "$speech",
           "that",
           "I",
