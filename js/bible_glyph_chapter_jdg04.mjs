@@ -82,7 +82,7 @@ export function bible_glyph_chapter_jdg04() {
           "of",
           "$iron,",
           "and",
-          "he",
+          "$pointing_back",
           "had",
           "harshly",
           "oppressed",
