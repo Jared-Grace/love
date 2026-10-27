@@ -940,7 +940,7 @@ export function bible_glyph_chapter_exo21() {
           "If",
           "a",
           "$man_beard",
-          "opens",
+          "$unlocked",
           "a",
           "pit,",
           "or",
