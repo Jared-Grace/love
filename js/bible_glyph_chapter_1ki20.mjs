@@ -951,7 +951,7 @@ export function bible_glyph_chapter_1ki20() {
           "$man_beard",
           "of",
           "$heart_on_fire",
-          "approached",
+          "$walking+toward",
           "and",
           "$speech",
           "to",
