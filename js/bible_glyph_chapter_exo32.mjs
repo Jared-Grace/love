@@ -390,7 +390,7 @@ export function bible_glyph_chapter_exo32() {
           "of",
           "$clamp+proper_name",
           "with",
-          "great",
+          "$top",
           "$lightning",
           "and",
           "a",
