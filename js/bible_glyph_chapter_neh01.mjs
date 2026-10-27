@@ -253,7 +253,7 @@ export function bible_glyph_chapter_neh01() {
           "the",
           "$scroll,",
           "the",
-          "statutes",
+          "$locked_with_pen",
           "and",
           "the",
           "$scales+thing",
