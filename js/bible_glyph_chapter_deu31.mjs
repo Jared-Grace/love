@@ -759,7 +759,7 @@ export function bible_glyph_chapter_deu31() {
           "reject",
           "Me",
           "and",
-          "break",
+          "$broken_chain+scroll+doing",
           "My",
           "$covenant.",
         ],
