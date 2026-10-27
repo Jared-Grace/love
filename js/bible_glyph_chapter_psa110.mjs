@@ -177,7 +177,7 @@ export function bible_glyph_chapter_psa110() {
           "$pointing_up",
           "He",
           "will",
-          "lift",
+          "$up_arrow",
           "up",
           "His",
           "head.",
