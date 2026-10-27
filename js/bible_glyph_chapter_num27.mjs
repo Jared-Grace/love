@@ -362,7 +362,7 @@ export function bible_glyph_chapter_num27() {
           "will",
           "be",
           "gathered",
-          "to",
+          "$toward",
           "your",
           "$family,",
           "as",
