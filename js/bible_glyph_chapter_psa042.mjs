@@ -323,7 +323,7 @@ export function bible_glyph_chapter_psa042() {
           "me?",
           "Put",
           "your",
-          "hope",
+          "$hourglass+crossed_fingers",
           "in",
           "$heart_on_fire,",
           "for",
