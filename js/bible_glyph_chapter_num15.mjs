@@ -68,7 +68,7 @@ export function bible_glyph_chapter_num15() {
           "a",
           "freewill",
           "offering",
-          "or",
+          "$shuffle",
           "an",
           "appointed",
           "feast,",
