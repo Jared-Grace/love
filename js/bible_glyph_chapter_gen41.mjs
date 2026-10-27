@@ -80,7 +80,7 @@ export function bible_glyph_chapter_gen41() {
           "Nile",
           "and",
           "stood",
-          "beside",
+          "$children_crossing",
           "the",
           "well-fed",
           "cows",
