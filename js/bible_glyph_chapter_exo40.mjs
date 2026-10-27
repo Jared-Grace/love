@@ -705,7 +705,7 @@ export function bible_glyph_chapter_exo40() {
           "placed",
           "the",
           "$bucket+soap",
-          "between",
+          "$brain+arrow_both_ways",
           "the",
           "Tent",
           "of",
