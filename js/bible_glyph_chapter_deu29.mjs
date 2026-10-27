@@ -856,7 +856,7 @@ export function bible_glyph_chapter_deu29() {
           "of",
           "the",
           "$i_am",
-          "burned",
+          "$angry_face+doing",
           "against",
           "this",
           "$earth,",
