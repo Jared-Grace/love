@@ -630,7 +630,7 @@ export function bible_glyph_chapter_1sa02() {
           "you",
           "$seed",
           "by",
-          "this",
+          "$flashlight",
           "$woman",
           "in",
           "place",
