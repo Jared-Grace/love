@@ -645,7 +645,7 @@ export function bible_glyph_chapter_jdg16() {
           "$no_entry",
           "been",
           "cut,",
-          "because",
+          "$pointing",
           "I",
           "have",
           "been",
