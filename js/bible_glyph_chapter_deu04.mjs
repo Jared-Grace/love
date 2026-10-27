@@ -1227,7 +1227,7 @@ export function bible_glyph_chapter_deu04() {
           "has",
           "any",
           "$moai",
-          "tried",
+          "$test_tube",
           "to",
           "$footprints",
           "and",
