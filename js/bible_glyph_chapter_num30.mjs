@@ -85,7 +85,7 @@ export function bible_glyph_chapter_num30() {
           "if",
           "a",
           "$woman",
-          "makes",
+          "$saluting_face+doing",
           "a",
           "vow",
           "to",
