@@ -314,7 +314,7 @@ export function bible_glyph_chapter_exo21() {
       {
         verse_number: 11,
         words: [
-          "If,",
+          "$traffic_light,",
           "however,",
           "he",
           "does",
