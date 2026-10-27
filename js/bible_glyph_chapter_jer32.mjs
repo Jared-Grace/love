@@ -736,7 +736,7 @@ export function bible_glyph_chapter_jer32() {
           "and",
           "an",
           "outstretched",
-          "arm,",
+          "$hand+might,",
           "and",
           "with",
           "great",
