@@ -786,7 +786,7 @@ export function bible_glyph_chapter_num11() {
           "and",
           "he",
           "gathered",
-          "seventy",
+          "$seven+zero",
           "of",
           "the",
           "elders",
