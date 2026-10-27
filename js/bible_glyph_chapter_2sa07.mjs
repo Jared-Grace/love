@@ -329,7 +329,7 @@ export function bible_glyph_chapter_2sa07() {
           "be",
           "disturbed",
           "$no_entry",
-          "more.",
+          "$repeat.",
           "$no_entry",
           "longer",
           "will",
