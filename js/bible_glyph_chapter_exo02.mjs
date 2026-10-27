@@ -79,7 +79,7 @@ export function bible_glyph_chapter_exo02() {
           "coated",
           "it",
           "with",
-          "tar",
+          "$black_circle+oil",
           "and",
           "pitch.",
           "Then",
