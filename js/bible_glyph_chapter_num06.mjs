@@ -346,7 +346,7 @@ export function bible_glyph_chapter_num06() {
           "must",
           "$sparkle+doing",
           "his",
-          "head",
+          "$person_gesturing_ok",
           "again.",
         ],
       },
