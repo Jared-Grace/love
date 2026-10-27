@@ -133,7 +133,7 @@ export function bible_glyph_chapter_lev16() {
           "$dress+thread,",
           "with",
           "linen",
-          "undergarments",
+          "$briefs+two",
           "on",
           "his",
           "$meat.",
