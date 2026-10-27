@@ -18,7 +18,7 @@ export function bible_glyph_chapter_1sa08() {
           "When",
           "$ear+heart_on_fire",
           "grew",
-          "old,",
+          "$old_man+doing,",
           "he",
           "appointed",
           "his",
