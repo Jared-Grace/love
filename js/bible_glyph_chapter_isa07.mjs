@@ -646,7 +646,7 @@ export function bible_glyph_chapter_isa07() {
           "young",
           "cow",
           "and",
-          "two",
+          "$two",
           "$sheep.",
         ],
       },
