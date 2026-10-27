@@ -352,7 +352,7 @@ export function bible_glyph_chapter_ezk03() {
           "and",
           "I",
           "$ear",
-          "behind",
+          "$next_track",
           "me",
           "a",
           "great",
