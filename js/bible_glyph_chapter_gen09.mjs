@@ -632,7 +632,7 @@ export function bible_glyph_chapter_gen09() {
           "they",
           "covered",
           "the",
-          "nakedness",
+          "$face_with_peeking_eye",
           "of",
           "their",
           "$father.",
