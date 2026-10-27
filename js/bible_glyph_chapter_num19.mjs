@@ -47,7 +47,7 @@ export function bible_glyph_chapter_num19() {
           "$hand_receiving",
           "you",
           "a",
-          "red",
+          "$red_circle+describing",
           "$bull",
           "without",
           "blemish,",
