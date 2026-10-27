@@ -672,7 +672,7 @@ export function bible_glyph_chapter_1ki12() {
           "$wrestling+heart_on_fire.",
           "$no_entry",
           "one",
-          "followed",
+          "$next_track",
           "the",
           "$house",
           "of",
