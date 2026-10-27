@@ -1363,7 +1363,7 @@ export function bible_glyph_chapter_jer23() {
           "upon",
           "you",
           "$hourglass",
-          "shame",
+          "$face_with_rolling_eyes",
           "and",
           "$hourglass",
           "humiliation",
