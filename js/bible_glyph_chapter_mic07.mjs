@@ -70,7 +70,7 @@ export function bible_glyph_chapter_mic07() {
           "for",
           "$blood;",
           "they",
-          "hunt",
+          "$net+deer+doing",
           "$man_beard",
           "$brother",
           "with",
