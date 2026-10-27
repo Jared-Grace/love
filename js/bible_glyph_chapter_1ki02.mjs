@@ -278,7 +278,7 @@ export function bible_glyph_chapter_1ki02() {
           "at",
           "your",
           "table,",
-          "because",
+          "$pointing",
           "they",
           "stood",
           "by",
