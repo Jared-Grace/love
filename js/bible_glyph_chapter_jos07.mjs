@@ -974,7 +974,7 @@ export function bible_glyph_chapter_jos07() {
           "you",
           "brought",
           "this",
-          "trouble",
+          "$water+brown_square+doing",
           "upon",
           "us?",
           "$sun",
