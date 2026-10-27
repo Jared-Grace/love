@@ -315,7 +315,7 @@ export function bible_glyph_chapter_sng02() {
         words: [
           "O",
           "my",
-          "dove,",
+          "$dove,",
           "in",
           "the",
           "clefts",
