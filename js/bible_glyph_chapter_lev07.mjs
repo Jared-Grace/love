@@ -216,7 +216,7 @@ export function bible_glyph_chapter_lev07() {
           "or",
           "on",
           "a",
-          "griddle",
+          "$cooking+bread",
           "belongs",
           "to",
           "$priest",
