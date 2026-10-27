@@ -1814,7 +1814,7 @@ export function bible_glyph_chapter_lev13() {
       {
         verse_number: 56,
         words: [
-          "If",
+          "$traffic_light",
           "the",
           "$priest",
           "$eye",
