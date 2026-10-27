@@ -116,7 +116,7 @@ export function bible_glyph_chapter_1sa15() {
           "$ox",
           "and",
           "$sheep+one,",
-          "camels",
+          "$camel",
           "and",
           "donkeys.",
         ],
