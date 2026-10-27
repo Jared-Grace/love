@@ -111,7 +111,7 @@ export function bible_glyph_chapter_isa53() {
       {
         verse_number: 4,
         words: [
-          "Surely",
+          "$right_arrow",
           "He",
           "took",
           "up",
