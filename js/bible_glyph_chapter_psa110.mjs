@@ -34,7 +34,7 @@ export function bible_glyph_chapter_psa110() {
           "Your",
           "enemies",
           "a",
-          "footstool",
+          "$foot+seat",
           "for",
           "Your",
           "feet.",
