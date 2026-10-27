@@ -478,7 +478,7 @@ export function bible_glyph_chapter_exo10() {
           "$i_am",
           "$horse+right_arrow+doing",
           "an",
-          "east",
+          "$compass+right_arrow+thing",
           "$wind",
           "across",
           "the",
