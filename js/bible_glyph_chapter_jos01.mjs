@@ -340,7 +340,7 @@ export function bible_glyph_chapter_jos01() {
           "tell",
           "the",
           "$family,",
-          "Prepare",
+          "$pin+doing",
           "your",
           "provisions,",
           "for",
