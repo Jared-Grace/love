@@ -89,7 +89,7 @@ export function bible_glyph_chapter_exo23() {
           "of",
           "your",
           "$enemy,",
-          "or",
+          "$shuffle",
           "his",
           "$donkey,",
           "wandering",
