@@ -579,7 +579,7 @@ export function bible_glyph_chapter_deu12() {
       {
         verse_number: 18,
         words: [
-          "Instead,",
+          "$pointing,",
           "you",
           "must",
           "$eating",
