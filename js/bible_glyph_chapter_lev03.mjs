@@ -196,7 +196,7 @@ export function bible_glyph_chapter_lev03() {
           "is",
           "presenting",
           "a",
-          "lamb",
+          "$lamb",
           "for",
           "his",
           "offering,",
