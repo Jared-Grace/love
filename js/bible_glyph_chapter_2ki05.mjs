@@ -784,7 +784,7 @@ export function bible_glyph_chapter_2ki05() {
           "him",
           "and",
           "$hand_receiving",
-          "something",
+          "$package+question",
           "from",
           "him.",
         ],
